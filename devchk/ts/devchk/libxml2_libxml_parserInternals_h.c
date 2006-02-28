@@ -176,10 +176,6 @@ cnt++;
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15016,0);
 Msg("Find size of const xmlChar[8] (15016)\n");
@@ -238,10 +234,6 @@ Msg("Find size of xmlEnumerationPtr * (15019)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15020,0);
 Msg("Find size of fptr_parserInternals_407 (15020)\n");
@@ -269,10 +261,6 @@ Msg("Find size of xmlEntityReferenceFunc (15021)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15022,0);
 Msg("Find size of const xmlChar[5] (15022)\n");
@@ -293,10 +281,6 @@ Msg("Find size of const const xmlChar[5] (15023)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15024,0);
 Msg("Find size of const xmlChar[10] (15024)\n");

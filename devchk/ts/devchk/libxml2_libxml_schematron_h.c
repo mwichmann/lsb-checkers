@@ -34,14 +34,6 @@ CheckTypeSize(xmlSchematronValidCtxt,0, 14675, 2)
 CheckTypeSize(xmlSchematronValidCtxt,0, 14675, 11)
 #elif __ia64__
 CheckTypeSize(xmlSchematronValidCtxt,0, 14675, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchematronValidCtxt,0, 14675, 6)
-#elif __powerpc64__
-CheckTypeSize(xmlSchematronValidCtxt,0, 14675, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchematronValidCtxt,0, 14675, 10)
-#elif __s390x__
-CheckTypeSize(xmlSchematronValidCtxt,0, 14675, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14675,0);
 Msg("Find size of xmlSchematronValidCtxt (14675)\n");
@@ -91,14 +83,6 @@ CheckTypeSize(xmlSchematron,0, 14679, 2)
 CheckTypeSize(xmlSchematron,0, 14679, 11)
 #elif __ia64__
 CheckTypeSize(xmlSchematron,0, 14679, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchematron,0, 14679, 6)
-#elif __powerpc64__
-CheckTypeSize(xmlSchematron,0, 14679, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchematron,0, 14679, 10)
-#elif __s390x__
-CheckTypeSize(xmlSchematron,0, 14679, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14679,0);
 Msg("Find size of xmlSchematron (14679)\n");
@@ -148,14 +132,6 @@ CheckTypeSize(xmlSchematronParserCtxt,0, 14683, 2)
 CheckTypeSize(xmlSchematronParserCtxt,0, 14683, 11)
 #elif __ia64__
 CheckTypeSize(xmlSchematronParserCtxt,0, 14683, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchematronParserCtxt,0, 14683, 6)
-#elif __powerpc64__
-CheckTypeSize(xmlSchematronParserCtxt,0, 14683, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchematronParserCtxt,0, 14683, 10)
-#elif __s390x__
-CheckTypeSize(xmlSchematronParserCtxt,0, 14683, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14683,0);
 Msg("Find size of xmlSchematronParserCtxt (14683)\n");
@@ -214,34 +190,6 @@ CheckEnum("XML_SCHEMATRON_OUT_FILE",XML_SCHEMATRON_OUT_FILE,1 << 8);
 CheckEnum("XML_SCHEMATRON_OUT_BUFFER",XML_SCHEMATRON_OUT_BUFFER,1 << 9);
 CheckEnum("XML_SCHEMATRON_OUT_IO",XML_SCHEMATRON_OUT_IO,1 << 10);
 #elif __ia64__
-CheckEnum("XML_SCHEMATRON_OUT_QUIET",XML_SCHEMATRON_OUT_QUIET,1 << 0);
-CheckEnum("XML_SCHEMATRON_OUT_TEXT",XML_SCHEMATRON_OUT_TEXT,1 << 1);
-CheckEnum("XML_SCHEMATRON_OUT_XML",XML_SCHEMATRON_OUT_XML,1 << 2);
-CheckEnum("XML_SCHEMATRON_OUT_FILE",XML_SCHEMATRON_OUT_FILE,1 << 8);
-CheckEnum("XML_SCHEMATRON_OUT_BUFFER",XML_SCHEMATRON_OUT_BUFFER,1 << 9);
-CheckEnum("XML_SCHEMATRON_OUT_IO",XML_SCHEMATRON_OUT_IO,1 << 10);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("XML_SCHEMATRON_OUT_QUIET",XML_SCHEMATRON_OUT_QUIET,1 << 0);
-CheckEnum("XML_SCHEMATRON_OUT_TEXT",XML_SCHEMATRON_OUT_TEXT,1 << 1);
-CheckEnum("XML_SCHEMATRON_OUT_XML",XML_SCHEMATRON_OUT_XML,1 << 2);
-CheckEnum("XML_SCHEMATRON_OUT_FILE",XML_SCHEMATRON_OUT_FILE,1 << 8);
-CheckEnum("XML_SCHEMATRON_OUT_BUFFER",XML_SCHEMATRON_OUT_BUFFER,1 << 9);
-CheckEnum("XML_SCHEMATRON_OUT_IO",XML_SCHEMATRON_OUT_IO,1 << 10);
-#elif __powerpc64__
-CheckEnum("XML_SCHEMATRON_OUT_QUIET",XML_SCHEMATRON_OUT_QUIET,1 << 0);
-CheckEnum("XML_SCHEMATRON_OUT_TEXT",XML_SCHEMATRON_OUT_TEXT,1 << 1);
-CheckEnum("XML_SCHEMATRON_OUT_XML",XML_SCHEMATRON_OUT_XML,1 << 2);
-CheckEnum("XML_SCHEMATRON_OUT_FILE",XML_SCHEMATRON_OUT_FILE,1 << 8);
-CheckEnum("XML_SCHEMATRON_OUT_BUFFER",XML_SCHEMATRON_OUT_BUFFER,1 << 9);
-CheckEnum("XML_SCHEMATRON_OUT_IO",XML_SCHEMATRON_OUT_IO,1 << 10);
-#elif __s390__ && !__s390x__
-CheckEnum("XML_SCHEMATRON_OUT_QUIET",XML_SCHEMATRON_OUT_QUIET,1 << 0);
-CheckEnum("XML_SCHEMATRON_OUT_TEXT",XML_SCHEMATRON_OUT_TEXT,1 << 1);
-CheckEnum("XML_SCHEMATRON_OUT_XML",XML_SCHEMATRON_OUT_XML,1 << 2);
-CheckEnum("XML_SCHEMATRON_OUT_FILE",XML_SCHEMATRON_OUT_FILE,1 << 8);
-CheckEnum("XML_SCHEMATRON_OUT_BUFFER",XML_SCHEMATRON_OUT_BUFFER,1 << 9);
-CheckEnum("XML_SCHEMATRON_OUT_IO",XML_SCHEMATRON_OUT_IO,1 << 10);
-#elif __s390x__
 CheckEnum("XML_SCHEMATRON_OUT_QUIET",XML_SCHEMATRON_OUT_QUIET,1 << 0);
 CheckEnum("XML_SCHEMATRON_OUT_TEXT",XML_SCHEMATRON_OUT_TEXT,1 << 1);
 CheckEnum("XML_SCHEMATRON_OUT_XML",XML_SCHEMATRON_OUT_XML,1 << 2);

@@ -69,10 +69,6 @@ Msg("Find size of const xmlChar (14548)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14549,0);
 Msg("Find size of const xmlChar * (14549)\n");

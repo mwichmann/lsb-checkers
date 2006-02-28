@@ -383,14 +383,14 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9984,0);
 Msg("Find size of rpc_msg (9984)\n");
 #endif
 
-#if __s390__ && !__s390x__
-CheckTypeSize(struct rpc_msg *,4, 9985, 10)
+#if __i386__
+CheckTypeSize(struct rpc_msg *,4, 9985, 2)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(struct rpc_msg *,4, 9985, 6)
 #elif __powerpc64__
 CheckTypeSize(struct rpc_msg *,8, 9985, 9)
-#elif __i386__
-CheckTypeSize(struct rpc_msg *,4, 9985, 2)
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct rpc_msg *,4, 9985, 10)
 #elif __ia64__
 CheckTypeSize(struct rpc_msg *,8, 9985, 3)
 #endif

@@ -52,14 +52,6 @@ CheckTypeSize(xmlXPathCompExpr,0, 14856, 2)
 CheckTypeSize(xmlXPathCompExpr,0, 14856, 11)
 #elif __ia64__
 CheckTypeSize(xmlXPathCompExpr,0, 14856, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlXPathCompExpr,0, 14856, 6)
-#elif __powerpc64__
-CheckTypeSize(xmlXPathCompExpr,0, 14856, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlXPathCompExpr,0, 14856, 10)
-#elif __s390x__
-CheckTypeSize(xmlXPathCompExpr,0, 14856, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14856,0);
 Msg("Find size of xmlXPathCompExpr (14856)\n");
@@ -837,50 +829,6 @@ CheckEnum("XPATH_RANGE",XPATH_RANGE,6);
 CheckEnum("XPATH_LOCATIONSET",XPATH_LOCATIONSET,7);
 CheckEnum("XPATH_USERS",XPATH_USERS,8);
 CheckEnum("XPATH_XSLT_TREE",XPATH_XSLT_TREE,9);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("XPATH_UNDEFINED",XPATH_UNDEFINED,0);
-CheckEnum("XPATH_NODESET",XPATH_NODESET,1);
-CheckEnum("XPATH_BOOLEAN",XPATH_BOOLEAN,2);
-CheckEnum("XPATH_NUMBER",XPATH_NUMBER,3);
-CheckEnum("XPATH_STRING",XPATH_STRING,4);
-CheckEnum("XPATH_POINT",XPATH_POINT,5);
-CheckEnum("XPATH_RANGE",XPATH_RANGE,6);
-CheckEnum("XPATH_LOCATIONSET",XPATH_LOCATIONSET,7);
-CheckEnum("XPATH_USERS",XPATH_USERS,8);
-CheckEnum("XPATH_XSLT_TREE",XPATH_XSLT_TREE,9);
-#elif __powerpc64__
-CheckEnum("XPATH_UNDEFINED",XPATH_UNDEFINED,0);
-CheckEnum("XPATH_NODESET",XPATH_NODESET,1);
-CheckEnum("XPATH_BOOLEAN",XPATH_BOOLEAN,2);
-CheckEnum("XPATH_NUMBER",XPATH_NUMBER,3);
-CheckEnum("XPATH_STRING",XPATH_STRING,4);
-CheckEnum("XPATH_POINT",XPATH_POINT,5);
-CheckEnum("XPATH_RANGE",XPATH_RANGE,6);
-CheckEnum("XPATH_LOCATIONSET",XPATH_LOCATIONSET,7);
-CheckEnum("XPATH_USERS",XPATH_USERS,8);
-CheckEnum("XPATH_XSLT_TREE",XPATH_XSLT_TREE,9);
-#elif __s390__ && !__s390x__
-CheckEnum("XPATH_UNDEFINED",XPATH_UNDEFINED,0);
-CheckEnum("XPATH_NODESET",XPATH_NODESET,1);
-CheckEnum("XPATH_BOOLEAN",XPATH_BOOLEAN,2);
-CheckEnum("XPATH_NUMBER",XPATH_NUMBER,3);
-CheckEnum("XPATH_STRING",XPATH_STRING,4);
-CheckEnum("XPATH_POINT",XPATH_POINT,5);
-CheckEnum("XPATH_RANGE",XPATH_RANGE,6);
-CheckEnum("XPATH_LOCATIONSET",XPATH_LOCATIONSET,7);
-CheckEnum("XPATH_USERS",XPATH_USERS,8);
-CheckEnum("XPATH_XSLT_TREE",XPATH_XSLT_TREE,9);
-#elif __s390x__
-CheckEnum("XPATH_UNDEFINED",XPATH_UNDEFINED,0);
-CheckEnum("XPATH_NODESET",XPATH_NODESET,1);
-CheckEnum("XPATH_BOOLEAN",XPATH_BOOLEAN,2);
-CheckEnum("XPATH_NUMBER",XPATH_NUMBER,3);
-CheckEnum("XPATH_STRING",XPATH_STRING,4);
-CheckEnum("XPATH_POINT",XPATH_POINT,5);
-CheckEnum("XPATH_RANGE",XPATH_RANGE,6);
-CheckEnum("XPATH_LOCATIONSET",XPATH_LOCATIONSET,7);
-CheckEnum("XPATH_USERS",XPATH_USERS,8);
-CheckEnum("XPATH_XSLT_TREE",XPATH_XSLT_TREE,9);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14862,0);
 Msg("Find size of anon-libxml2/libxml/xpath.h-123 (14862)\n");
@@ -1069,10 +1017,6 @@ Msg("Find size of xmlXPathObjectPtr (14870)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14871,0);
 Msg("Find size of fptr_xpath_234 (14871)\n");
@@ -1482,10 +1426,6 @@ Msg("Find size of xmlXPathParserContextPtr (14884)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14885,0);
 Msg("Find size of fptr_xpath_319 (14885)\n");
@@ -1570,10 +1510,6 @@ Msg("Find size of xmlXPathAxisPtr (14889)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14890,0);
 Msg("Find size of fptr_xpath_276 (14890)\n");
@@ -1601,10 +1537,6 @@ Msg("Find size of xmlXPathVariableLookupFunc (14891)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14892,0);
 Msg("Find size of fptr_xpath_45 (14892)\n");
@@ -1632,10 +1564,6 @@ Msg("Find size of xmlXPathFunction (14893)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14894,0);
 Msg("Find size of fptr_xpath_315 (14894)\n");
@@ -1732,102 +1660,6 @@ CheckEnum("XPATH_UNDEF_PREFIX_ERROR",XPATH_UNDEF_PREFIX_ERROR,((((((((((((((((((
 CheckEnum("XPATH_ENCODING_ERROR",XPATH_ENCODING_ERROR,((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
 CheckEnum("XPATH_INVALID_CHAR_ERROR",XPATH_INVALID_CHAR_ERROR,(((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
 CheckEnum("XPATH_INVALID_CTXT",XPATH_INVALID_CTXT,((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("XPATH_EXPRESSION_OK",XPATH_EXPRESSION_OK,0);
-CheckEnum("XPATH_NUMBER_ERROR",XPATH_NUMBER_ERROR,(0) + 1);
-CheckEnum("XPATH_UNFINISHED_LITERAL_ERROR",XPATH_UNFINISHED_LITERAL_ERROR,((0) + 1) + 1);
-CheckEnum("XPATH_START_LITERAL_ERROR",XPATH_START_LITERAL_ERROR,(((0) + 1) + 1) + 1);
-CheckEnum("XPATH_VARIABLE_REF_ERROR",XPATH_VARIABLE_REF_ERROR,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_UNDEF_VARIABLE_ERROR",XPATH_UNDEF_VARIABLE_ERROR,(((((0) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_PREDICATE_ERROR",XPATH_INVALID_PREDICATE_ERROR,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_EXPR_ERROR",XPATH_EXPR_ERROR,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_UNCLOSED_ERROR",XPATH_UNCLOSED_ERROR,((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_UNKNOWN_FUNC_ERROR",XPATH_UNKNOWN_FUNC_ERROR,(((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_OPERAND",XPATH_INVALID_OPERAND,((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_TYPE",XPATH_INVALID_TYPE,(((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_ARITY",XPATH_INVALID_ARITY,((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_CTXT_SIZE",XPATH_INVALID_CTXT_SIZE,(((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_CTXT_POSITION",XPATH_INVALID_CTXT_POSITION,((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_MEMORY_ERROR",XPATH_MEMORY_ERROR,(((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPTR_SYNTAX_ERROR",XPTR_SYNTAX_ERROR,((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPTR_RESOURCE_ERROR",XPTR_RESOURCE_ERROR,(((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPTR_SUB_RESOURCE_ERROR",XPTR_SUB_RESOURCE_ERROR,((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_UNDEF_PREFIX_ERROR",XPATH_UNDEF_PREFIX_ERROR,(((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_ENCODING_ERROR",XPATH_ENCODING_ERROR,((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_CHAR_ERROR",XPATH_INVALID_CHAR_ERROR,(((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_CTXT",XPATH_INVALID_CTXT,((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-#elif __powerpc64__
-CheckEnum("XPATH_EXPRESSION_OK",XPATH_EXPRESSION_OK,0);
-CheckEnum("XPATH_NUMBER_ERROR",XPATH_NUMBER_ERROR,(0) + 1);
-CheckEnum("XPATH_UNFINISHED_LITERAL_ERROR",XPATH_UNFINISHED_LITERAL_ERROR,((0) + 1) + 1);
-CheckEnum("XPATH_START_LITERAL_ERROR",XPATH_START_LITERAL_ERROR,(((0) + 1) + 1) + 1);
-CheckEnum("XPATH_VARIABLE_REF_ERROR",XPATH_VARIABLE_REF_ERROR,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_UNDEF_VARIABLE_ERROR",XPATH_UNDEF_VARIABLE_ERROR,(((((0) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_PREDICATE_ERROR",XPATH_INVALID_PREDICATE_ERROR,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_EXPR_ERROR",XPATH_EXPR_ERROR,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_UNCLOSED_ERROR",XPATH_UNCLOSED_ERROR,((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_UNKNOWN_FUNC_ERROR",XPATH_UNKNOWN_FUNC_ERROR,(((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_OPERAND",XPATH_INVALID_OPERAND,((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_TYPE",XPATH_INVALID_TYPE,(((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_ARITY",XPATH_INVALID_ARITY,((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_CTXT_SIZE",XPATH_INVALID_CTXT_SIZE,(((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_CTXT_POSITION",XPATH_INVALID_CTXT_POSITION,((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_MEMORY_ERROR",XPATH_MEMORY_ERROR,(((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPTR_SYNTAX_ERROR",XPTR_SYNTAX_ERROR,((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPTR_RESOURCE_ERROR",XPTR_RESOURCE_ERROR,(((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPTR_SUB_RESOURCE_ERROR",XPTR_SUB_RESOURCE_ERROR,((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_UNDEF_PREFIX_ERROR",XPATH_UNDEF_PREFIX_ERROR,(((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_ENCODING_ERROR",XPATH_ENCODING_ERROR,((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_CHAR_ERROR",XPATH_INVALID_CHAR_ERROR,(((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_CTXT",XPATH_INVALID_CTXT,((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-#elif __s390__ && !__s390x__
-CheckEnum("XPATH_EXPRESSION_OK",XPATH_EXPRESSION_OK,0);
-CheckEnum("XPATH_NUMBER_ERROR",XPATH_NUMBER_ERROR,(0) + 1);
-CheckEnum("XPATH_UNFINISHED_LITERAL_ERROR",XPATH_UNFINISHED_LITERAL_ERROR,((0) + 1) + 1);
-CheckEnum("XPATH_START_LITERAL_ERROR",XPATH_START_LITERAL_ERROR,(((0) + 1) + 1) + 1);
-CheckEnum("XPATH_VARIABLE_REF_ERROR",XPATH_VARIABLE_REF_ERROR,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_UNDEF_VARIABLE_ERROR",XPATH_UNDEF_VARIABLE_ERROR,(((((0) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_PREDICATE_ERROR",XPATH_INVALID_PREDICATE_ERROR,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_EXPR_ERROR",XPATH_EXPR_ERROR,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_UNCLOSED_ERROR",XPATH_UNCLOSED_ERROR,((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_UNKNOWN_FUNC_ERROR",XPATH_UNKNOWN_FUNC_ERROR,(((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_OPERAND",XPATH_INVALID_OPERAND,((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_TYPE",XPATH_INVALID_TYPE,(((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_ARITY",XPATH_INVALID_ARITY,((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_CTXT_SIZE",XPATH_INVALID_CTXT_SIZE,(((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_CTXT_POSITION",XPATH_INVALID_CTXT_POSITION,((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_MEMORY_ERROR",XPATH_MEMORY_ERROR,(((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPTR_SYNTAX_ERROR",XPTR_SYNTAX_ERROR,((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPTR_RESOURCE_ERROR",XPTR_RESOURCE_ERROR,(((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPTR_SUB_RESOURCE_ERROR",XPTR_SUB_RESOURCE_ERROR,((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_UNDEF_PREFIX_ERROR",XPATH_UNDEF_PREFIX_ERROR,(((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_ENCODING_ERROR",XPATH_ENCODING_ERROR,((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_CHAR_ERROR",XPATH_INVALID_CHAR_ERROR,(((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_CTXT",XPATH_INVALID_CTXT,((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-#elif __s390x__
-CheckEnum("XPATH_EXPRESSION_OK",XPATH_EXPRESSION_OK,0);
-CheckEnum("XPATH_NUMBER_ERROR",XPATH_NUMBER_ERROR,(0) + 1);
-CheckEnum("XPATH_UNFINISHED_LITERAL_ERROR",XPATH_UNFINISHED_LITERAL_ERROR,((0) + 1) + 1);
-CheckEnum("XPATH_START_LITERAL_ERROR",XPATH_START_LITERAL_ERROR,(((0) + 1) + 1) + 1);
-CheckEnum("XPATH_VARIABLE_REF_ERROR",XPATH_VARIABLE_REF_ERROR,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_UNDEF_VARIABLE_ERROR",XPATH_UNDEF_VARIABLE_ERROR,(((((0) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_PREDICATE_ERROR",XPATH_INVALID_PREDICATE_ERROR,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_EXPR_ERROR",XPATH_EXPR_ERROR,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_UNCLOSED_ERROR",XPATH_UNCLOSED_ERROR,((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_UNKNOWN_FUNC_ERROR",XPATH_UNKNOWN_FUNC_ERROR,(((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_OPERAND",XPATH_INVALID_OPERAND,((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_TYPE",XPATH_INVALID_TYPE,(((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_ARITY",XPATH_INVALID_ARITY,((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_CTXT_SIZE",XPATH_INVALID_CTXT_SIZE,(((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_CTXT_POSITION",XPATH_INVALID_CTXT_POSITION,((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_MEMORY_ERROR",XPATH_MEMORY_ERROR,(((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPTR_SYNTAX_ERROR",XPTR_SYNTAX_ERROR,((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPTR_RESOURCE_ERROR",XPTR_RESOURCE_ERROR,(((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPTR_SUB_RESOURCE_ERROR",XPTR_SUB_RESOURCE_ERROR,((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_UNDEF_PREFIX_ERROR",XPATH_UNDEF_PREFIX_ERROR,(((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_ENCODING_ERROR",XPATH_ENCODING_ERROR,((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_CHAR_ERROR",XPATH_INVALID_CHAR_ERROR,(((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("XPATH_INVALID_CTXT",XPATH_INVALID_CTXT,((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15093,0);
 Msg("Find size of anonymous-xpath.h.types-0 (15093)\n");
@@ -1855,10 +1687,6 @@ Msg("Find size of xmlXPathError (15094)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15095,0);
 Msg("Find size of fptr_anonymous-xpath.h.types-2 (15095)\n");

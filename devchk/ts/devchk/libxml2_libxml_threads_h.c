@@ -33,14 +33,6 @@ CheckTypeSize(xmlRMutex,0, 14995, 2)
 CheckTypeSize(xmlRMutex,0, 14995, 11)
 #elif __ia64__
 CheckTypeSize(xmlRMutex,0, 14995, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlRMutex,0, 14995, 6)
-#elif __powerpc64__
-CheckTypeSize(xmlRMutex,0, 14995, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlRMutex,0, 14995, 10)
-#elif __s390x__
-CheckTypeSize(xmlRMutex,0, 14995, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14995,0);
 Msg("Find size of xmlRMutex (14995)\n");
@@ -90,14 +82,6 @@ CheckTypeSize(xmlMutex,0, 14999, 2)
 CheckTypeSize(xmlMutex,0, 14999, 11)
 #elif __ia64__
 CheckTypeSize(xmlMutex,0, 14999, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlMutex,0, 14999, 6)
-#elif __powerpc64__
-CheckTypeSize(xmlMutex,0, 14999, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlMutex,0, 14999, 10)
-#elif __s390x__
-CheckTypeSize(xmlMutex,0, 14999, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14999,0);
 Msg("Find size of xmlMutex (14999)\n");
