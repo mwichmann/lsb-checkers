@@ -237,7 +237,8 @@ sub writetest($$)
 
 	print TESTS "/*\n * Test of $Hname\n */\n";
 	print TESTS "#include \"hdrchk.h\"\n";
-	print TESTS "#include \"sys/types.h\"\n";
+	print TESTS "#include \<stdio.h\>\n";
+	print TESTS "#include \<sys/types.h\>\n";
 	print TESTS "#define _LSB_DEFAULT_ARCH 1\n";
 
 	open(INCS,"<$fname.inc");
@@ -738,8 +739,9 @@ print HARNESS "tcnt+=intrinsic();\n";
 
 print TESTS "/*\n * Test of intrinsic types\n */\n";
 print TESTS "#include \"hdrchk.h\"\n";
-print TESTS "#include \"sys/types.h\"\n";
-print TESTS "#include \"complex.h\"\n";
+print TESTS "#include \<stdio.h\>\n";
+print TESTS "#include \<sys/types.h\>\n";
+print TESTS "#include \<complex.h\>\n";
 print TESTS "\n\n\n";
 print TESTS "#ifdef TET_TEST\n";
 print TESTS "void intrinsic()\n{\n";
