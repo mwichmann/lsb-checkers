@@ -42,13 +42,13 @@ if( (efile=(ElfFile *)calloc(1,sizeof(ElfFile))) == NULL ) {
 	}
 
 if( (efile->fd=open(name, O_RDONLY, 0666)) < 0 ) {
-	perror( "unable to open() file" );
+	perror( "open failed" );
 	free(efile);
 	return NULL;
 	}
 
 if( fstat(efile->fd, &stat ) < 0 ) {
-	perror( "unable to stat() file" );
+	perror( "stat failed" );
 	close(efile->fd);
 	free(efile);
 	return NULL;
@@ -57,14 +57,14 @@ if( fstat(efile->fd, &stat ) < 0 ) {
 efile->size=stat.st_size;
 
 if( efile->size == 0 ) {
-	fprintf( stderr, "Zero length file\n" );
+	fprintf( stderr, "empty file\n" );
 	close(efile->fd);
 	free(efile);
 	exit(-1);	/* Silently exit */
 	}
 
 if( (efile->addr=mmap(0, efile->size, PROT_READ, MAP_PRIVATE, efile->fd, 0)) == (caddr_t)-1 ) {
-	perror( "unable to mmap() file" );
+	perror( "mmap failed" );
 	close(efile->fd);
 	free(efile);
 	return NULL;
