@@ -26,7 +26,7 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
 static const char *__attribute((unused)) appchk_revision =
-    "$Revision: 1.32 $";
+    "$Revision: 1.33 $";
 
 void
 usage(char *progname)
@@ -203,7 +203,9 @@ main(int argc, char *argv[])
 			       tmp_string);
 	    snprintf(tmp_string, TMP_STRING_SIZE, "Could not open %s",
 	                                           extra_lib_list[i]);
+	    /* error already printed by call:
 	    perror(tmp_string);
+	    */
 	    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 
 		               0, 0, 0, tmp_string);
 	    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
@@ -232,7 +234,9 @@ main(int argc, char *argv[])
 			       tmp_string);
 	    snprintf(tmp_string, TMP_STRING_SIZE, "Could not open %s",
 	                                           extra_lib_list[i]);
+	    /* error already printed by call:
 	    perror(tmp_string);
+	    */
 	    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 
 		               0, 0, 0, tmp_string);
 	    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
@@ -258,7 +262,9 @@ main(int argc, char *argv[])
 	    tetj_purpose_start(journal, tetj_activity_count, ++tetj_tp_count,
 			       tmp_string);
 	    snprintf(tmp_string, TMP_STRING_SIZE, "Could not open %s", argv[i]);
+	    /* error already printed by call:
 	    perror(tmp_string);
+	    */
 	    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 
 		               0, 0, 0, tmp_string);
 	    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
