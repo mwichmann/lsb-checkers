@@ -30,6 +30,7 @@ add_archive_symbols(char *libname, struct tetj_handle *journal)
   ElfFile	*file;
   Elf_Sym	*syms;
   int	i,numsyms,strtab;
+  size_t scnidx;
 
   if ((file = open_archive(libname, journal, 0)) == NULL)
      return -1;
@@ -65,10 +66,11 @@ add_archive_symbols(char *libname, struct tetj_handle *journal)
           if( ELF32_ST_BIND(syms[i].st_info) == STB_LOCAL ) continue;
           
           /* Skip over symbol references (ie unresolved) */
-          if( syms[i].st_shndx == SHN_UNDEF || 
-              (syms[i].st_shndx >= SHN_LORESERVE &&
-               syms[i].st_shndx <= SHN_HIRESERVE &&
-               syms[i].st_shndx != SHN_COMMON) ) continue;
+          scnidx = syms[i].st_shndx;
+          if( scnidx == SHN_UNDEF || 
+              (scnidx >= SHN_LORESERVE &&
+               scnidx <= SHN_HIRESERVE &&
+               scnidx != SHN_COMMON) ) continue;
       
           add_symbol( ElfGetStringIndex(file,syms[i].st_name, strtab));
         }
