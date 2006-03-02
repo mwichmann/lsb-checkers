@@ -664,5 +664,5 @@ struct modlib modlibs [] = {
 #if __i386__
 	{LSB_Core,"libz.so.1",libz_so_1,libz_so_1_classinfo},
 #endif
-{NULL,NULL,NULL,NULL}
+{0,NULL,NULL,NULL}
 };
