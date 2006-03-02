@@ -132,7 +132,7 @@ $select.= "LEFT JOIN Architecture ON Aid=ACaid ";
 $select.= "WHERE ACcid=".$$class{'CIid'}." ";
 $select.= "AND CVpos=$pos ";
 $vsth = $Dbh->query($select) || die $Dbh->errmsg();
-die "No ClassVtabs for ".$$class{'CIid'}."\n" if( $vsth->numrows == 0 );
+die "No ClassVtabs for ".$$class{'CIid'}." at position $pos\n" if( $vsth->numrows == 0 );
 $category=0;
 $rttiid=0;
 for(1..$vsth->numrows) {
