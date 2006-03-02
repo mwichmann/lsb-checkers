@@ -377,7 +377,7 @@ for(1..$sth->numrows) {
 		}
 }
 
-print LIBS "{NULL,NULL,NULL,NULL}\n";
+print LIBS "{0,NULL,NULL,NULL}\n";
 print LIBS "};\n";
 close(LIBS);
 close(LIBH);
