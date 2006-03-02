@@ -29,6 +29,7 @@ add_library_symbols(ElfFile *file, struct tetj_handle *journal)
 {
   Elf_Sym	*syms;
   int	i,numsyms;
+  size_t scnidx;
 
   if (file)
   {
@@ -40,18 +41,18 @@ add_library_symbols(ElfFile *file, struct tetj_handle *journal)
       if( ELF32_ST_BIND(syms[i].st_info) == STB_LOCAL ) continue;
       
       /* Skip over symbol references (ie unresolved) */
-      if( syms[i].st_shndx == SHN_UNDEF || 
-          (syms[i].st_shndx >= SHN_LORESERVE &&
-           syms[i].st_shndx <= SHN_HIRESERVE) ) continue;
+      scnidx = syms[i].st_shndx;
+      if( scnidx == SHN_UNDEF || 
+          (scnidx >= SHN_LORESERVE &&
+           scnidx <= SHN_HIRESERVE) ) continue;
       
-/*
-  fprintf(stderr,"%s %x %x %x\n",
-  ElfGetStringIndex(file,syms[i].st_name,file->dynsymhdr->sh_link),
-  ELF32_ST_BIND(syms[i].st_info),
-  ELF32_ST_TYPE(syms[i].st_info),
-  syms[i].st_shndx
-  );
-*/
+      /*
+      fprintf(stderr,"%s %x %x %x\n",
+              ElfGetStringIndex(file,syms[i].st_name,file->dynsymhdr->sh_link),
+              ELF32_ST_BIND(syms[i].st_info),
+              ELF32_ST_TYPE(syms[i].st_info),
+              syms[i].st_shndx);
+      */
       
       add_symbol( ElfGetStringIndex(file,syms[i].st_name,
                                   file->dynsymhdr->sh_link));
