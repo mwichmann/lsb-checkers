@@ -2,7 +2,8 @@
  * Test of libxml2/libxml/debugXML.h
  */
 #include "hdrchk.h"
-#include "sys/types.h"
+#include <stdio.h>
+#include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #include <libxml/xmlregexp.h>
 #include "libxml2/libxml/debugXML.h"

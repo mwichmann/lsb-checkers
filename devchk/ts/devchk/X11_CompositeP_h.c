@@ -2,7 +2,8 @@
  * Test of X11/CompositeP.h
  */
 #include "hdrchk.h"
-#include "sys/types.h"
+#include <stdio.h>
+#include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #include <wchar.h>
 #include <X11/X.h>

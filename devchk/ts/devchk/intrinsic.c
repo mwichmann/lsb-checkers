@@ -2,8 +2,9 @@
  * Test of intrinsic types
  */
 #include "hdrchk.h"
-#include "sys/types.h"
-#include "complex.h"
+#include <stdio.h>
+#include <sys/types.h>
+#include <complex.h>
 
 
 

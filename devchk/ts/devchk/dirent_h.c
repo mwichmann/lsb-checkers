@@ -2,7 +2,8 @@
  * Test of dirent.h
  */
 #include "hdrchk.h"
-#include "sys/types.h"
+#include <stdio.h>
+#include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 struct __dirstream {
 	};
