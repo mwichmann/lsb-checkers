@@ -6,16 +6,10 @@ struct versym libQtCore_so_4[] = {
 #if __powerpc__ && !__powerpc64__
 	{"_Z10qvsnprintfPcjPKcP13__va_list_tag","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __s390__ && !__s390x__
-	{"_Z10qvsnprintfPcjPKcP13__va_list_tag","",0,LSB_Toolkit_Qt,1,1},
-#endif
 #if __i386__
 	{"_Z10qvsnprintfPcjPKcS_","",0,LSB_Toolkit_Qt,4,1},
 #endif
-#if __ia64__
-	{"_Z10qvsnprintfPcmPKcP13__va_list_tag","",0,LSB_Toolkit_Qt,1,1},
-#endif
-#if __powerpc64__
+#if __s390__ && !__s390x__
 	{"_Z10qvsnprintfPcmPKcP13__va_list_tag","",0,LSB_Toolkit_Qt,1,1},
 #endif
 #if __x86_64__
@@ -23,6 +17,12 @@ struct versym libQtCore_so_4[] = {
 #endif
 #if __s390x__
 	{"_Z10qvsnprintfPcmPKcP13__va_list_tag","",0,LSB_Toolkit_Qt,1,1},
+#endif
+#if __ia64__
+	{"_Z10qvsnprintfPcmPKcPv","",0,LSB_Toolkit_Qt,1,1},
+#endif
+#if __powerpc64__
+	{"_Z10qvsnprintfPcmPKcS_","",0,LSB_Toolkit_Qt,1,1},
 #endif
 	{"_Z10scientificR11QTextStream","",0,LSB_Toolkit_Qt,0,1},
 	{"_Z11noforcesignR11QTextStream","",0,LSB_Toolkit_Qt,0,1},
@@ -82,13 +82,13 @@ struct versym libQtCore_so_4[] = {
 #if __powerpc__ && !__powerpc64__
 	{"_Z7qMallocj","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __s390__ && !__s390x__
-	{"_Z7qMallocj","",0,LSB_Toolkit_Qt,1,1},
-#endif
 #if __ia64__
 	{"_Z7qMallocm","",0,LSB_Toolkit_Qt,1,1},
 #endif
 #if __powerpc64__
+	{"_Z7qMallocm","",0,LSB_Toolkit_Qt,1,1},
+#endif
+#if __s390__ && !__s390x__
 	{"_Z7qMallocm","",0,LSB_Toolkit_Qt,1,1},
 #endif
 #if __x86_64__
@@ -103,13 +103,13 @@ struct versym libQtCore_so_4[] = {
 #if __powerpc__ && !__powerpc64__
 	{"_Z7qMemSetPvij","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __s390__ && !__s390x__
-	{"_Z7qMemSetPvij","",0,LSB_Toolkit_Qt,1,1},
-#endif
 #if __ia64__
 	{"_Z7qMemSetPvim","",0,LSB_Toolkit_Qt,1,1},
 #endif
 #if __powerpc64__
+	{"_Z7qMemSetPvim","",0,LSB_Toolkit_Qt,1,1},
+#endif
+#if __s390__ && !__s390x__
 	{"_Z7qMemSetPvim","",0,LSB_Toolkit_Qt,1,1},
 #endif
 #if __x86_64__
@@ -129,13 +129,13 @@ struct versym libQtCore_so_4[] = {
 #if __powerpc__ && !__powerpc64__
 	{"_Z8qMemCopyPvPKvj","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __s390__ && !__s390x__
-	{"_Z8qMemCopyPvPKvj","",0,LSB_Toolkit_Qt,1,1},
-#endif
 #if __ia64__
 	{"_Z8qMemCopyPvPKvm","",0,LSB_Toolkit_Qt,1,1},
 #endif
 #if __powerpc64__
+	{"_Z8qMemCopyPvPKvm","",0,LSB_Toolkit_Qt,1,1},
+#endif
+#if __s390__ && !__s390x__
 	{"_Z8qMemCopyPvPKvm","",0,LSB_Toolkit_Qt,1,1},
 #endif
 #if __x86_64__
@@ -150,13 +150,13 @@ struct versym libQtCore_so_4[] = {
 #if __powerpc__ && !__powerpc64__
 	{"_Z8qReallocPvj","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __s390__ && !__s390x__
-	{"_Z8qReallocPvj","",0,LSB_Toolkit_Qt,1,1},
-#endif
 #if __ia64__
 	{"_Z8qReallocPvm","",0,LSB_Toolkit_Qt,1,1},
 #endif
 #if __powerpc64__
+	{"_Z8qReallocPvm","",0,LSB_Toolkit_Qt,1,1},
+#endif
+#if __s390__ && !__s390x__
 	{"_Z8qReallocPvm","",0,LSB_Toolkit_Qt,1,1},
 #endif
 #if __x86_64__
@@ -180,13 +180,13 @@ struct versym libQtCore_so_4[] = {
 #if __powerpc__ && !__powerpc64__
 	{"_Z9qsnprintfPcjPKcz","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __s390__ && !__s390x__
-	{"_Z9qsnprintfPcjPKcz","",0,LSB_Toolkit_Qt,1,1},
-#endif
 #if __ia64__
 	{"_Z9qsnprintfPcmPKcz","",0,LSB_Toolkit_Qt,1,1},
 #endif
 #if __powerpc64__
+	{"_Z9qsnprintfPcmPKcz","",0,LSB_Toolkit_Qt,1,1},
+#endif
+#if __s390__ && !__s390x__
 	{"_Z9qsnprintfPcmPKcz","",0,LSB_Toolkit_Qt,1,1},
 #endif
 #if __x86_64__
