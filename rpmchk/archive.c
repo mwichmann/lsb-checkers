@@ -109,8 +109,8 @@ checkRpmArchive(RpmFile *file1, struct tetj_handle *journal, int check_app, int 
 {
 #define TMP_STRING_SIZE (400)
 char tmp_string[TMP_STRING_SIZE+1];
-char	md5sum[17],md5str[33];
-char	*fmd5=filemd5s,*flinktos=filelinktos;
+unsigned char	md5sum[17],md5str[33];
+unsigned char	*fmd5=filemd5s,*flinktos=filelinktos;
 gzFile	*zfile;
 RpmArchiveHeader ahdr;
 int	startoffset,endoffset;
