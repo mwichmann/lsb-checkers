@@ -2,7 +2,8 @@
  * Test of security/pam_appl.h
  */
 #include "hdrchk.h"
-#include "sys/types.h"
+#include <stdio.h>
+#include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 /*
  * This structure is not visible int he headers, so a dummy here keeps

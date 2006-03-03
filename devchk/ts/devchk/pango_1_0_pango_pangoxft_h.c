@@ -2,7 +2,8 @@
  * Test of pango-1.0/pango/pangoxft.h
  */
 #include "hdrchk.h"
-#include "sys/types.h"
+#include <stdio.h>
+#include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define G_DISABLE_DEPRECATED
 #define G_ERRORCHECK_MUTEXES

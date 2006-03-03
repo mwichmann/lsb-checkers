@@ -2,7 +2,8 @@
  * Test of libxml2/libxml/c14n.h
  */
 #include "hdrchk.h"
-#include "sys/types.h"
+#include <stdio.h>
+#include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #include <libxml/xmlversion.h>
 #include <libxml/xmlregexp.h>

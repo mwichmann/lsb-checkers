@@ -2,7 +2,8 @@
  * Test of gtk-2.0/gdk-pixbuf/gdk-pixbuf.h
  */
 #include "hdrchk.h"
-#include "sys/types.h"
+#include <stdio.h>
+#include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define G_DISABLE_DEPRECATED
 #define G_ERRORCHECK_MUTEXES

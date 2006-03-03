@@ -2,7 +2,8 @@
  * Test of fontconfig/fontconfig.h
  */
 #include "hdrchk.h"
-#include "sys/types.h"
+#include <stdio.h>
+#include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 struct _FcPattern {};
 struct _FcCharSet {};

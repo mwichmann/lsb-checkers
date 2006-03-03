@@ -2,7 +2,8 @@
  * Test of glib-2.0/glib/gstdio.h
  */
 #include "hdrchk.h"
-#include "sys/types.h"
+#include <stdio.h>
+#include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #include "glib-2.0/glib/gstdio.h"
 
