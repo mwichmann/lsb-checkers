@@ -388,26 +388,26 @@ const char *_9QGLWidget_vtable_name_1 [] = {
 #if __i386__
 	"_ZThn8_N9QGLWidgetD1Ev",
 #endif
-#if __ia64__
+#if __s390x__
 	"_ZThn16_N9QGLWidgetD1Ev",
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __x86_64__
+	"_ZThn16_N9QGLWidgetD1Ev",
+#endif
+#if __s390__ && !__s390x__
 	"_ZThn8_N9QGLWidgetD1Ev",
 #endif
 #if __powerpc64__
 	"_ZThn16_N9QGLWidgetD1Ev",
 #endif
-#if __s390__ && !__s390x__
+#if __powerpc__ && !__powerpc64__
 	"_ZThn8_N9QGLWidgetD1Ev",
 #endif
-#if __x86_64__
+#if __ia64__
 	"_ZThn16_N9QGLWidgetD1Ev",
 #endif
-#if __s390x__
-	"_ZThn16_N9QGLWidgetD1Ev",
-#endif
-#if __i386__
-	"_ZThn8_N9QGLWidgetD0Ev",
+#if __powerpc64__
+	"_ZThn16_N9QGLWidgetD0Ev",
 #endif
 #if __ia64__
 	"_ZThn16_N9QGLWidgetD0Ev",
@@ -415,20 +415,17 @@ const char *_9QGLWidget_vtable_name_1 [] = {
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_N9QGLWidgetD0Ev",
 #endif
-#if __powerpc64__
+#if __s390x__
+	"_ZThn16_N9QGLWidgetD0Ev",
+#endif
+#if __x86_64__
 	"_ZThn16_N9QGLWidgetD0Ev",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn8_N9QGLWidgetD0Ev",
 #endif
-#if __x86_64__
-	"_ZThn16_N9QGLWidgetD0Ev",
-#endif
-#if __s390x__
-	"_ZThn16_N9QGLWidgetD0Ev",
-#endif
 #if __i386__
-	"_ZThn8_NK7QWidget7devTypeEv",
+	"_ZThn8_N9QGLWidgetD0Ev",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_NK7QWidget7devTypeEv",
@@ -442,11 +439,20 @@ const char *_9QGLWidget_vtable_name_1 [] = {
 #if __powerpc64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
+#if __i386__
+	"_ZThn8_NK7QWidget7devTypeEv",
+#endif
+#if __s390x__
+	"_ZThn16_NK7QWidget7devTypeEv",
+#endif
 #if __x86_64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
 #if __s390x__
-	"_ZThn16_NK7QWidget7devTypeEv",
+	"_ZThn16_NK9QGLWidget11paintEngineEv",
+#endif
+#if __x86_64__
+	"_ZThn16_NK9QGLWidget11paintEngineEv",
 #endif
 #if __i386__
 	"_ZThn8_NK9QGLWidget11paintEngineEv",
@@ -463,19 +469,13 @@ const char *_9QGLWidget_vtable_name_1 [] = {
 #if __s390__ && !__s390x__
 	"_ZThn8_NK9QGLWidget11paintEngineEv",
 #endif
-#if __x86_64__
-	"_ZThn16_NK9QGLWidget11paintEngineEv",
-#endif
-#if __s390x__
-	"_ZThn16_NK9QGLWidget11paintEngineEv",
-#endif
-#if __i386__
+#if __s390__ && !__s390x__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
-#if __s390__ && !__s390x__
+#if __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if __ia64__
