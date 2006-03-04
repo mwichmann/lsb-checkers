@@ -9,6 +9,11 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 # Uncomment to trace SQL statments
 #$trace=1;
 
+# Temporary workarounds so hand-edited changes aren't lost
+# workaround for math functions that don't have protos on all architectures
+@mathsyms = qw/__finitel __isinfl __isnanl acoshl acosl asinhl asinl atan2l atanhl atanl cbrtl ceill copysignl coshl cosl dreml erfcl erfl expl expm1l fabsl fdiml finitel floorl fmal fmaxl fminl fmodl frexpl gammal hypotl ilogbl j0l j1l jnl ldexpl lgammal lgammal_r llrintl llroundl log10l log1pl log2l logbl logl lrintl lroundl modfl nanl nearbyintl nextafterl nexttowardl pow10l powl remainderl remquol rintl roundl scalbl scalblnl scalbnl significandl sincosl sinhl sinl sqrtl tanhl tanl tgammal truncl y0l y1l ynl/;
+$mathstring = "#if ! __powerpc__ && ! __s390__	/* hack */\n";
+
 # counter used to calculate test number
 $cnt = 0;
 
@@ -559,11 +564,17 @@ sub writetest($$) {
     # Interface testing
     #
     my $GlX11 = 0;
+    my $math = 0;
+    my $special;
 
     #print $Hname;
     if ( $Hname =~ /GL\// || $Hname =~ /X11\// ) {
         #print "Found GL or X11 header\n";
         $GlX11 = 1;
+    }
+    if ( $Hname =~ /math\.h/ ) {
+	#print "Found math header\n";
+	$mathhdr = 1;
     }
     if ( $GlX11 == 0 ) {    # ignore GL and X11 interfaces
         $select = "SELECT * FROM Interface ";
@@ -576,7 +587,9 @@ sub writetest($$) {
         $sth = $Dbh->query($select) || die $Dbh->errmsg();
 
         for ( 1 .. $sth->numrows ) {
+	    $special = 0;
             %entry = $sth->fetchhash;
+	    if ( $mathhdr ) { $special = grep /^$entry{'Iname'}$/, @mathsyms; }
             if ( $entry{'Itype'} eq "Function" ) {
                 if ( $entry{'Ttype'} eq 'FuncPtr' ) {
                     print STDERR "Skipping a global function pointer!!\n";
@@ -586,6 +599,9 @@ sub writetest($$) {
                     print TESTS "#if $entry{'Asymbol'}\n";
                     print TESTS "/* $entry{'Aname'} */\n";
                 }
+		elsif ( $special) {
+		    print TESTS $mathstring;
+		}
                 print TESTS "extern ";
                 displaytyperef( \%entry, 1 );
                 print TESTS " $entry{'Iname'}_db(";
@@ -618,6 +634,9 @@ sub writetest($$) {
                 if ( $entry{'Aid'} && $entry{'Aname'} ne "All" ) {
                     print TESTS "#endif\n";
                 }
+		elsif ( $special) {
+                    print TESTS "#endif		/* hack */\n";
+		}
             }
             #elsif ( $entry{'Itype'} eq "Data" ) {
             #    print TESTS "extern ";
@@ -961,7 +980,6 @@ print MAKEFILE "CFLAGS=-D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTE
 print MAKEFILE "ifdef LSB_PRODUCT\n";
 print MAKEFILE "CFLAGS=-DLSBCC_MODE -D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include -I/opt/lsb/include/glib-2.0 -I/opt/lsb/include/atk-1.0 -I/opt/lsb/include/pango-1.0 -I/opt/lsb/include/gtk-2.0 -I/usr/include/freetype2 -I/opt/lsb/include/libxml2 -I/opt/lsb/include/fontconfig\n";
 print MAKEFILE "endif\n\n";
-
 print MAKEFILE "CXXFLAGS = \$\(CFLAGS)\n\n";
 
 print MAKEFILE "ifdef TET_ROOT\n";
