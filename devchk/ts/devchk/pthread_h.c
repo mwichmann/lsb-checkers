@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#include "pthread.h"
 extern int pthread_setschedprio (pthread_t __target_thread, int __prio);
 extern int __register_atfork (void (*__prepare) (void),
                               void (*__parent) (void),

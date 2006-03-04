@@ -13,3 +13,12 @@ struct _PangoFcFontClass { };
 struct _PangoFontFamily { };
 struct _PangoFontFace { };
 struct _PangoFontset { };
+
+#ifdef LSBCC_MODE
+#include <ft2build.h>
+#include FT_FREETYPE_H
+#define _XFT_NO_COMPAT
+#define _XFTCOMPAT_H_
+#include <X11/Xlib.h>
+#include <X11/Xft/Xft.h>
+#endif

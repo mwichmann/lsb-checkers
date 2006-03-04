@@ -10,7 +10,9 @@
 #undef GOBJECT_COMPILATION
 #undef GETTEXT_PACKAGE
 
+#ifndef LSBCC_MODE
 #include <glibconfig.h>
+#endif
 
 struct _GStringChunk { };
 struct _GHashTable { };

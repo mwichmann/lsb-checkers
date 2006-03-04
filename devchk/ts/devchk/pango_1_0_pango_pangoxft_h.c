@@ -19,6 +19,16 @@ struct _PangoFcFont { };
 struct _PangoXftFont { };
 struct _PangoFcFontClass { };
 
+#ifdef LSBCC_MODE
+struct _PangoXftRenderer { };
+
+#include <ft2build.h>
+#include FT_FREETYPE_H
+#define _XFT_NO_COMPAT
+#define _XFTCOMPAT_H_
+#include <X11/Xlib.h>
+#include <X11/Xft/Xft.h>
+#endif
 #include "pango-1.0/pango/pangoxft.h"
 
 

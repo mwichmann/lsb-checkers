@@ -2,7 +2,8 @@
  * Test of sys/shm.h
  */
 #include "hdrchk.h"
-#include "sys/types.h"
+#include <stdio.h>
+#include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #include "sys/shm.h"
 
@@ -368,10 +369,8 @@ CheckMemberSize(struct shmid_ds,__unused5,8,11,40748)
 CheckOffset(struct shmid_ds,__unused5,104,11,40748)
 #endif
 
-#if !__ia64__
 extern int __getpagesize_db(void);
 CheckInterfacedef(__getpagesize,__getpagesize_db);
-#endif
 extern void * shmat_db(int, const void *, int);
 CheckInterfacedef(shmat,shmat_db);
 extern int shmctl_db(int, int, struct shmid_ds *);
