@@ -1488,68 +1488,68 @@ const char *_18QXmlDefaultHandler_vtable_name_1 [] = {
 #if __s390x__
 	"_ZThn8_N18QXmlDefaultHandlerD1Ev",
 #endif
-#if __i386__
-	"_ZThn4_N18QXmlDefaultHandlerD0Ev",
-#endif
-#if __ia64__
-	"_ZThn8_N18QXmlDefaultHandlerD0Ev",
-#endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn4_N18QXmlDefaultHandlerD0Ev",
-#endif
 #if __powerpc64__
 	"_ZThn8_N18QXmlDefaultHandlerD0Ev",
 #endif
-#if __s390__ && !__s390x__
+#if __i386__
 	"_ZThn4_N18QXmlDefaultHandlerD0Ev",
-#endif
-#if __x86_64__
-	"_ZThn8_N18QXmlDefaultHandlerD0Ev",
 #endif
 #if __s390x__
 	"_ZThn8_N18QXmlDefaultHandlerD0Ev",
 #endif
-#if __i386__
+#if __x86_64__
+	"_ZThn8_N18QXmlDefaultHandlerD0Ev",
+#endif
+#if __ia64__
+	"_ZThn8_N18QXmlDefaultHandlerD0Ev",
+#endif
+#if __s390__ && !__s390x__
+	"_ZThn4_N18QXmlDefaultHandlerD0Ev",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZThn4_N18QXmlDefaultHandlerD0Ev",
+#endif
+#if __powerpc__ && !__powerpc64__
 	"_ZThn4_N18QXmlDefaultHandler7warningERK18QXmlParseException",
 #endif
 #if __ia64__
 	"_ZThn8_N18QXmlDefaultHandler7warningERK18QXmlParseException",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn4_N18QXmlDefaultHandler7warningERK18QXmlParseException",
-#endif
-#if __powerpc64__
+#if __x86_64__
 	"_ZThn8_N18QXmlDefaultHandler7warningERK18QXmlParseException",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn4_N18QXmlDefaultHandler7warningERK18QXmlParseException",
-#endif
-#if __x86_64__
-	"_ZThn8_N18QXmlDefaultHandler7warningERK18QXmlParseException",
 #endif
 #if __s390x__
 	"_ZThn8_N18QXmlDefaultHandler7warningERK18QXmlParseException",
 #endif
 #if __i386__
-	"_ZThn4_N18QXmlDefaultHandler5errorERK18QXmlParseException",
-#endif
-#if __ia64__
-	"_ZThn8_N18QXmlDefaultHandler5errorERK18QXmlParseException",
-#endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn4_N18QXmlDefaultHandler5errorERK18QXmlParseException",
+	"_ZThn4_N18QXmlDefaultHandler7warningERK18QXmlParseException",
 #endif
 #if __powerpc64__
-	"_ZThn8_N18QXmlDefaultHandler5errorERK18QXmlParseException",
-#endif
-#if __s390__ && !__s390x__
-	"_ZThn4_N18QXmlDefaultHandler5errorERK18QXmlParseException",
+	"_ZThn8_N18QXmlDefaultHandler7warningERK18QXmlParseException",
 #endif
 #if __x86_64__
 	"_ZThn8_N18QXmlDefaultHandler5errorERK18QXmlParseException",
 #endif
 #if __s390x__
 	"_ZThn8_N18QXmlDefaultHandler5errorERK18QXmlParseException",
+#endif
+#if __ia64__
+	"_ZThn8_N18QXmlDefaultHandler5errorERK18QXmlParseException",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZThn4_N18QXmlDefaultHandler5errorERK18QXmlParseException",
+#endif
+#if __powerpc64__
+	"_ZThn8_N18QXmlDefaultHandler5errorERK18QXmlParseException",
+#endif
+#if __i386__
+	"_ZThn4_N18QXmlDefaultHandler5errorERK18QXmlParseException",
+#endif
+#if __s390__ && !__s390x__
+	"_ZThn4_N18QXmlDefaultHandler5errorERK18QXmlParseException",
 #endif
 #if __i386__
 	"_ZThn4_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException",
@@ -1563,14 +1563,14 @@ const char *_18QXmlDefaultHandler_vtable_name_1 [] = {
 #if __powerpc64__
 	"_ZThn8_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException",
 #endif
-#if __s390__ && !__s390x__
-	"_ZThn4_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException",
-#endif
 #if __x86_64__
 	"_ZThn8_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException",
 #endif
 #if __s390x__
 	"_ZThn8_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException",
+#endif
+#if __s390__ && !__s390x__
+	"_ZThn4_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException",
 #endif
 #if __i386__
 	"_ZThn4_NK18QXmlDefaultHandler11errorStringEv",
@@ -1581,16 +1581,16 @@ const char *_18QXmlDefaultHandler_vtable_name_1 [] = {
 #if __powerpc__ && !__powerpc64__
 	"_ZThn4_NK18QXmlDefaultHandler11errorStringEv",
 #endif
-#if __powerpc64__
+#if __s390x__
+	"_ZThn8_NK18QXmlDefaultHandler11errorStringEv",
+#endif
+#if __x86_64__
 	"_ZThn8_NK18QXmlDefaultHandler11errorStringEv",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn4_NK18QXmlDefaultHandler11errorStringEv",
 #endif
-#if __x86_64__
-	"_ZThn8_NK18QXmlDefaultHandler11errorStringEv",
-#endif
-#if __s390x__
+#if __powerpc64__
 	"_ZThn8_NK18QXmlDefaultHandler11errorStringEv",
 #endif
 	};
@@ -1617,9 +1617,6 @@ const char *_18QXmlDefaultHandler_vtable_name_2 [] = {
 #if __s390x__
 	"_ZThn16_N18QXmlDefaultHandlerD1Ev",
 #endif
-#if __i386__
-	"_ZThn8_N18QXmlDefaultHandlerD0Ev",
-#endif
 #if __ia64__
 	"_ZThn16_N18QXmlDefaultHandlerD0Ev",
 #endif
@@ -1639,37 +1636,40 @@ const char *_18QXmlDefaultHandler_vtable_name_2 [] = {
 	"_ZThn16_N18QXmlDefaultHandlerD0Ev",
 #endif
 #if __i386__
-	"_ZThn8_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
+	"_ZThn8_N18QXmlDefaultHandlerD0Ev",
 #endif
-#if __ia64__
+#if __s390x__
 	"_ZThn16_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn8_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
-#endif
-#if __powerpc64__
+#if __x86_64__
 	"_ZThn16_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn8_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
 #endif
-#if __x86_64__
+#if __powerpc64__
 	"_ZThn16_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
 #endif
-#if __s390x__
+#if __powerpc__ && !__powerpc64__
+	"_ZThn8_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
+#endif
+#if __ia64__
 	"_ZThn16_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
+#endif
+#if __i386__
+	"_ZThn8_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
 #endif
 #if __i386__
 	"_ZThn8_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_",
 #endif
+#if __powerpc64__
+	"_ZThn16_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_",
+#endif
 #if __ia64__
 	"_ZThn16_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_",
-#endif
-#if __powerpc64__
-	"_ZThn16_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn8_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_",
@@ -1683,7 +1683,7 @@ const char *_18QXmlDefaultHandler_vtable_name_2 [] = {
 #if __i386__
 	"_ZThn8_NK18QXmlDefaultHandler11errorStringEv",
 #endif
-#if __ia64__
+#if __s390x__
 	"_ZThn16_NK18QXmlDefaultHandler11errorStringEv",
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -1698,7 +1698,7 @@ const char *_18QXmlDefaultHandler_vtable_name_2 [] = {
 #if __x86_64__
 	"_ZThn16_NK18QXmlDefaultHandler11errorStringEv",
 #endif
-#if __s390x__
+#if __ia64__
 	"_ZThn16_NK18QXmlDefaultHandler11errorStringEv",
 #endif
 	};
@@ -1725,9 +1725,6 @@ const char *_18QXmlDefaultHandler_vtable_name_3 [] = {
 #if __s390x__
 	"_ZThn24_N18QXmlDefaultHandlerD1Ev",
 #endif
-#if __i386__
-	"_ZThn12_N18QXmlDefaultHandlerD0Ev",
-#endif
 #if __ia64__
 	"_ZThn24_N18QXmlDefaultHandlerD0Ev",
 #endif
@@ -1747,45 +1744,48 @@ const char *_18QXmlDefaultHandler_vtable_name_3 [] = {
 	"_ZThn24_N18QXmlDefaultHandlerD0Ev",
 #endif
 #if __i386__
+	"_ZThn12_N18QXmlDefaultHandlerD0Ev",
+#endif
+#if __s390__ && !__s390x__
+	"_ZThn12_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
+#endif
+#if __i386__
 	"_ZThn12_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
 #endif
 #if __ia64__
+	"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
+#endif
+#if __s390x__
+	"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
+#endif
+#if __x86_64__
 	"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn12_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
 #endif
 #if __powerpc64__
-	"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
-#endif
-#if __s390__ && !__s390x__
-	"_ZThn12_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
-#endif
-#if __x86_64__
-	"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
-#endif
-#if __s390x__
 	"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
 #endif
 #if __i386__
 	"_ZThn12_NK18QXmlDefaultHandler11errorStringEv",
 #endif
+#if __s390__ && !__s390x__
+	"_ZThn12_NK18QXmlDefaultHandler11errorStringEv",
+#endif
 #if __ia64__
 	"_ZThn24_NK18QXmlDefaultHandler11errorStringEv",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn12_NK18QXmlDefaultHandler11errorStringEv",
 #endif
+#if __s390x__
+	"_ZThn24_NK18QXmlDefaultHandler11errorStringEv",
+#endif
 #if __powerpc64__
 	"_ZThn24_NK18QXmlDefaultHandler11errorStringEv",
 #endif
-#if __s390__ && !__s390x__
-	"_ZThn12_NK18QXmlDefaultHandler11errorStringEv",
-#endif
 #if __x86_64__
-	"_ZThn24_NK18QXmlDefaultHandler11errorStringEv",
-#endif
-#if __s390x__
 	"_ZThn24_NK18QXmlDefaultHandler11errorStringEv",
 #endif
 	};
@@ -1794,6 +1794,9 @@ const char *_18QXmlDefaultHandler_vtable_name_4 [] = {
 #if __i386__
 	"_ZThn16_N18QXmlDefaultHandlerD1Ev",
 #endif
+#if __s390__ && !__s390x__
+	"_ZThn16_N18QXmlDefaultHandlerD1Ev",
+#endif
 #if __ia64__
 	"_ZThn32_N18QXmlDefaultHandlerD1Ev",
 #endif
@@ -1803,37 +1806,34 @@ const char *_18QXmlDefaultHandler_vtable_name_4 [] = {
 #if __powerpc64__
 	"_ZThn32_N18QXmlDefaultHandlerD1Ev",
 #endif
-#if __s390__ && !__s390x__
-	"_ZThn16_N18QXmlDefaultHandlerD1Ev",
-#endif
 #if __x86_64__
 	"_ZThn32_N18QXmlDefaultHandlerD1Ev",
 #endif
 #if __s390x__
 	"_ZThn32_N18QXmlDefaultHandlerD1Ev",
 #endif
-#if __i386__
-	"_ZThn16_N18QXmlDefaultHandlerD0Ev",
-#endif
 #if __ia64__
 	"_ZThn32_N18QXmlDefaultHandlerD0Ev",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn16_N18QXmlDefaultHandlerD0Ev",
-#endif
-#if __powerpc64__
-	"_ZThn32_N18QXmlDefaultHandlerD0Ev",
-#endif
-#if __s390__ && !__s390x__
+#if __i386__
 	"_ZThn16_N18QXmlDefaultHandlerD0Ev",
 #endif
 #if __x86_64__
 	"_ZThn32_N18QXmlDefaultHandlerD0Ev",
 #endif
+#if __s390__ && !__s390x__
+	"_ZThn16_N18QXmlDefaultHandlerD0Ev",
+#endif
+#if __powerpc64__
+	"_ZThn32_N18QXmlDefaultHandlerD0Ev",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZThn16_N18QXmlDefaultHandlerD0Ev",
+#endif
 #if __s390x__
 	"_ZThn32_N18QXmlDefaultHandlerD0Ev",
 #endif
-#if __i386__
+#if __s390__ && !__s390x__
 	"_ZThn16_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_",
 #endif
 #if __ia64__
@@ -1845,41 +1845,38 @@ const char *_18QXmlDefaultHandler_vtable_name_4 [] = {
 #if __powerpc64__
 	"_ZThn32_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_",
 #endif
-#if __s390__ && !__s390x__
+#if __x86_64__
+	"_ZThn32_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_",
+#endif
+#if __s390x__
+	"_ZThn32_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_",
+#endif
+#if __i386__
 	"_ZThn16_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_",
 #endif
-#if __x86_64__
-	"_ZThn32_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_",
-#endif
 #if __s390x__
-	"_ZThn32_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_",
-#endif
-#if __i386__
-	"_ZThn16_N18QXmlDefaultHandler6endDTDEv",
-#endif
-#if __ia64__
 	"_ZThn32_N18QXmlDefaultHandler6endDTDEv",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn16_N18QXmlDefaultHandler6endDTDEv",
-#endif
-#if __powerpc64__
+#if __x86_64__
 	"_ZThn32_N18QXmlDefaultHandler6endDTDEv",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn16_N18QXmlDefaultHandler6endDTDEv",
 #endif
-#if __x86_64__
+#if __powerpc64__
 	"_ZThn32_N18QXmlDefaultHandler6endDTDEv",
 #endif
-#if __s390x__
+#if __powerpc__ && !__powerpc64__
+	"_ZThn16_N18QXmlDefaultHandler6endDTDEv",
+#endif
+#if __ia64__
 	"_ZThn32_N18QXmlDefaultHandler6endDTDEv",
 #endif
 #if __i386__
-	"_ZThn16_N18QXmlDefaultHandler11startEntityERK7QString",
+	"_ZThn16_N18QXmlDefaultHandler6endDTDEv",
 #endif
-#if __ia64__
-	"_ZThn32_N18QXmlDefaultHandler11startEntityERK7QString",
+#if __s390__ && !__s390x__
+	"_ZThn16_N18QXmlDefaultHandler11startEntityERK7QString",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn16_N18QXmlDefaultHandler11startEntityERK7QString",
@@ -1887,14 +1884,17 @@ const char *_18QXmlDefaultHandler_vtable_name_4 [] = {
 #if __powerpc64__
 	"_ZThn32_N18QXmlDefaultHandler11startEntityERK7QString",
 #endif
-#if __s390__ && !__s390x__
-	"_ZThn16_N18QXmlDefaultHandler11startEntityERK7QString",
+#if __ia64__
+	"_ZThn32_N18QXmlDefaultHandler11startEntityERK7QString",
 #endif
 #if __x86_64__
 	"_ZThn32_N18QXmlDefaultHandler11startEntityERK7QString",
 #endif
 #if __s390x__
 	"_ZThn32_N18QXmlDefaultHandler11startEntityERK7QString",
+#endif
+#if __i386__
+	"_ZThn16_N18QXmlDefaultHandler11startEntityERK7QString",
 #endif
 #if __i386__
 	"_ZThn16_N18QXmlDefaultHandler9endEntityERK7QString",
@@ -1917,9 +1917,6 @@ const char *_18QXmlDefaultHandler_vtable_name_4 [] = {
 #if __s390x__
 	"_ZThn32_N18QXmlDefaultHandler9endEntityERK7QString",
 #endif
-#if __i386__
-	"_ZThn16_N18QXmlDefaultHandler10startCDATAEv",
-#endif
 #if __ia64__
 	"_ZThn32_N18QXmlDefaultHandler10startCDATAEv",
 #endif
@@ -1929,16 +1926,25 @@ const char *_18QXmlDefaultHandler_vtable_name_4 [] = {
 #if __powerpc64__
 	"_ZThn32_N18QXmlDefaultHandler10startCDATAEv",
 #endif
+#if __s390x__
+	"_ZThn32_N18QXmlDefaultHandler10startCDATAEv",
+#endif
 #if __s390__ && !__s390x__
+	"_ZThn16_N18QXmlDefaultHandler10startCDATAEv",
+#endif
+#if __i386__
 	"_ZThn16_N18QXmlDefaultHandler10startCDATAEv",
 #endif
 #if __x86_64__
 	"_ZThn32_N18QXmlDefaultHandler10startCDATAEv",
 #endif
-#if __s390x__
-	"_ZThn32_N18QXmlDefaultHandler10startCDATAEv",
-#endif
 #if __i386__
+	"_ZThn16_N18QXmlDefaultHandler8endCDATAEv",
+#endif
+#if __s390x__
+	"_ZThn32_N18QXmlDefaultHandler8endCDATAEv",
+#endif
+#if __s390__ && !__s390x__
 	"_ZThn16_N18QXmlDefaultHandler8endCDATAEv",
 #endif
 #if __ia64__
@@ -1950,20 +1956,20 @@ const char *_18QXmlDefaultHandler_vtable_name_4 [] = {
 #if __powerpc64__
 	"_ZThn32_N18QXmlDefaultHandler8endCDATAEv",
 #endif
-#if __s390__ && !__s390x__
-	"_ZThn16_N18QXmlDefaultHandler8endCDATAEv",
-#endif
 #if __x86_64__
 	"_ZThn32_N18QXmlDefaultHandler8endCDATAEv",
 #endif
-#if __s390x__
-	"_ZThn32_N18QXmlDefaultHandler8endCDATAEv",
+#if __x86_64__
+	"_ZThn32_N18QXmlDefaultHandler7commentERK7QString",
 #endif
 #if __i386__
 	"_ZThn16_N18QXmlDefaultHandler7commentERK7QString",
 #endif
-#if __ia64__
+#if __s390x__
 	"_ZThn32_N18QXmlDefaultHandler7commentERK7QString",
+#endif
+#if __s390__ && !__s390x__
+	"_ZThn16_N18QXmlDefaultHandler7commentERK7QString",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn16_N18QXmlDefaultHandler7commentERK7QString",
@@ -1971,35 +1977,29 @@ const char *_18QXmlDefaultHandler_vtable_name_4 [] = {
 #if __powerpc64__
 	"_ZThn32_N18QXmlDefaultHandler7commentERK7QString",
 #endif
-#if __s390__ && !__s390x__
-	"_ZThn16_N18QXmlDefaultHandler7commentERK7QString",
-#endif
-#if __x86_64__
-	"_ZThn32_N18QXmlDefaultHandler7commentERK7QString",
-#endif
-#if __s390x__
+#if __ia64__
 	"_ZThn32_N18QXmlDefaultHandler7commentERK7QString",
 #endif
 #if __i386__
 	"_ZThn16_NK18QXmlDefaultHandler11errorStringEv",
+#endif
+#if __s390x__
+	"_ZThn32_NK18QXmlDefaultHandler11errorStringEv",
+#endif
+#if __x86_64__
+	"_ZThn32_NK18QXmlDefaultHandler11errorStringEv",
+#endif
+#if __s390__ && !__s390x__
+	"_ZThn16_NK18QXmlDefaultHandler11errorStringEv",
+#endif
+#if __powerpc64__
+	"_ZThn32_NK18QXmlDefaultHandler11errorStringEv",
 #endif
 #if __ia64__
 	"_ZThn32_NK18QXmlDefaultHandler11errorStringEv",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn16_NK18QXmlDefaultHandler11errorStringEv",
-#endif
-#if __powerpc64__
-	"_ZThn32_NK18QXmlDefaultHandler11errorStringEv",
-#endif
-#if __s390__ && !__s390x__
-	"_ZThn16_NK18QXmlDefaultHandler11errorStringEv",
-#endif
-#if __x86_64__
-	"_ZThn32_NK18QXmlDefaultHandler11errorStringEv",
-#endif
-#if __s390x__
-	"_ZThn32_NK18QXmlDefaultHandler11errorStringEv",
 #endif
 	};
 
@@ -2025,16 +2025,13 @@ const char *_18QXmlDefaultHandler_vtable_name_5 [] = {
 #if __s390x__
 	"_ZThn40_N18QXmlDefaultHandlerD1Ev",
 #endif
-#if __i386__
-	"_ZThn20_N18QXmlDefaultHandlerD0Ev",
-#endif
-#if __ia64__
-	"_ZThn40_N18QXmlDefaultHandlerD0Ev",
-#endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn20_N18QXmlDefaultHandlerD0Ev",
 #endif
 #if __powerpc64__
+	"_ZThn40_N18QXmlDefaultHandlerD0Ev",
+#endif
+#if __ia64__
 	"_ZThn40_N18QXmlDefaultHandlerD0Ev",
 #endif
 #if __s390__ && !__s390x__
@@ -2047,49 +2044,55 @@ const char *_18QXmlDefaultHandler_vtable_name_5 [] = {
 	"_ZThn40_N18QXmlDefaultHandlerD0Ev",
 #endif
 #if __i386__
-	"_ZThn20_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
+	"_ZThn20_N18QXmlDefaultHandlerD0Ev",
 #endif
-#if __ia64__
+#if __x86_64__
 	"_ZThn40_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __i386__
 	"_ZThn20_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
 #endif
-#if __powerpc64__
+#if __s390x__
 	"_ZThn40_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn20_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
 #endif
-#if __x86_64__
+#if __powerpc64__
+	"_ZThn40_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZThn20_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
+#endif
+#if __ia64__
 	"_ZThn40_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
 #endif
 #if __s390x__
-	"_ZThn40_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
+	"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
 #endif
-#if __i386__
-	"_ZThn20_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
+#if __x86_64__
+	"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
 #endif
-#if __ia64__
+#if __powerpc64__
 	"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn20_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
 #endif
-#if __powerpc64__
+#if __ia64__
 	"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
+#endif
+#if __i386__
+	"_ZThn20_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn20_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
 #endif
-#if __x86_64__
-	"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
-#endif
-#if __s390x__
-	"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
-#endif
 #if __i386__
 	"_ZThn20_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
+#endif
+#if __x86_64__
+	"_ZThn40_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
 #endif
 #if __ia64__
 	"_ZThn40_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
@@ -2097,20 +2100,14 @@ const char *_18QXmlDefaultHandler_vtable_name_5 [] = {
 #if __powerpc__ && !__powerpc64__
 	"_ZThn20_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
 #endif
+#if __s390x__
+	"_ZThn40_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
+#endif
 #if __powerpc64__
 	"_ZThn40_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn20_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
-#endif
-#if __x86_64__
-	"_ZThn40_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
-#endif
-#if __s390x__
-	"_ZThn40_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
-#endif
-#if __i386__
-	"_ZThn20_NK18QXmlDefaultHandler11errorStringEv",
 #endif
 #if __ia64__
 	"_ZThn40_NK18QXmlDefaultHandler11errorStringEv",
@@ -2124,10 +2121,13 @@ const char *_18QXmlDefaultHandler_vtable_name_5 [] = {
 #if __s390__ && !__s390x__
 	"_ZThn20_NK18QXmlDefaultHandler11errorStringEv",
 #endif
-#if __x86_64__
-	"_ZThn40_NK18QXmlDefaultHandler11errorStringEv",
+#if __i386__
+	"_ZThn20_NK18QXmlDefaultHandler11errorStringEv",
 #endif
 #if __s390x__
+	"_ZThn40_NK18QXmlDefaultHandler11errorStringEv",
+#endif
+#if __x86_64__
 	"_ZThn40_NK18QXmlDefaultHandler11errorStringEv",
 #endif
 	};
@@ -2318,106 +2318,106 @@ struct base_type_info _18QXmlDefaultHandler_baseinfo[] = {
 #if __i386__
 	{"_ZTI16QXmlErrorHandler",	1026U},
 #endif
+#if __ia64__
+	{"_ZTI16QXmlErrorHandler",	2050U},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZTI16QXmlErrorHandler",	1026U},
 #endif
+#if __powerpc64__
+	{"_ZTI16QXmlErrorHandler",	2050U},
+#endif
 #if __s390__ && !__s390x__
 	{"_ZTI16QXmlErrorHandler",	1026U},
 #endif
-#if __s390x__
-	{"_ZTI16QXmlErrorHandler",	2050U},
-#endif
 #if __x86_64__
 	{"_ZTI16QXmlErrorHandler",	2050U},
 #endif
-#if __powerpc64__
-	{"_ZTI16QXmlErrorHandler",	2050U},
-#endif
-#if __ia64__
+#if __s390x__
 	{"_ZTI16QXmlErrorHandler",	2050U},
 #endif
 #if __i386__
 	{"_ZTI14QXmlDTDHandler",	2050U},
 #endif
+#if __ia64__
+	{"_ZTI14QXmlDTDHandler",	4098U},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZTI14QXmlDTDHandler",	2050U},
 #endif
+#if __powerpc64__
+	{"_ZTI14QXmlDTDHandler",	4098U},
+#endif
 #if __s390__ && !__s390x__
 	{"_ZTI14QXmlDTDHandler",	2050U},
 #endif
-#if __s390x__
-	{"_ZTI14QXmlDTDHandler",	4098U},
-#endif
 #if __x86_64__
 	{"_ZTI14QXmlDTDHandler",	4098U},
 #endif
-#if __powerpc64__
-	{"_ZTI14QXmlDTDHandler",	4098U},
-#endif
-#if __ia64__
+#if __s390x__
 	{"_ZTI14QXmlDTDHandler",	4098U},
 #endif
 #if __i386__
 	{"_ZTI18QXmlEntityResolver",	3074U},
 #endif
+#if __ia64__
+	{"_ZTI18QXmlEntityResolver",	6146U},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZTI18QXmlEntityResolver",	3074U},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZTI18QXmlEntityResolver",	3074U},
-#endif
-#if __s390x__
-	{"_ZTI18QXmlEntityResolver",	6146U},
-#endif
-#if __x86_64__
-	{"_ZTI18QXmlEntityResolver",	6146U},
 #endif
 #if __powerpc64__
 	{"_ZTI18QXmlEntityResolver",	6146U},
 #endif
-#if __ia64__
+#if __s390__ && !__s390x__
+	{"_ZTI18QXmlEntityResolver",	3074U},
+#endif
+#if __x86_64__
+	{"_ZTI18QXmlEntityResolver",	6146U},
+#endif
+#if __s390x__
 	{"_ZTI18QXmlEntityResolver",	6146U},
 #endif
 #if __i386__
 	{"_ZTI18QXmlLexicalHandler",	4098U},
 #endif
+#if __ia64__
+	{"_ZTI18QXmlLexicalHandler",	8194U},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZTI18QXmlLexicalHandler",	4098U},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZTI18QXmlLexicalHandler",	4098U},
-#endif
-#if __s390x__
-	{"_ZTI18QXmlLexicalHandler",	8194U},
-#endif
-#if __x86_64__
-	{"_ZTI18QXmlLexicalHandler",	8194U},
 #endif
 #if __powerpc64__
 	{"_ZTI18QXmlLexicalHandler",	8194U},
 #endif
-#if __ia64__
+#if __s390__ && !__s390x__
+	{"_ZTI18QXmlLexicalHandler",	4098U},
+#endif
+#if __x86_64__
+	{"_ZTI18QXmlLexicalHandler",	8194U},
+#endif
+#if __s390x__
 	{"_ZTI18QXmlLexicalHandler",	8194U},
 #endif
 #if __i386__
 	{"_ZTI15QXmlDeclHandler",	5122U},
 #endif
+#if __ia64__
+	{"_ZTI15QXmlDeclHandler",	10242U},
+#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZTI15QXmlDeclHandler",	5122U},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZTI15QXmlDeclHandler",	5122U},
-#endif
-#if __s390x__
-	{"_ZTI15QXmlDeclHandler",	10242U},
-#endif
-#if __x86_64__
-	{"_ZTI15QXmlDeclHandler",	10242U},
 #endif
 #if __powerpc64__
 	{"_ZTI15QXmlDeclHandler",	10242U},
 #endif
-#if __ia64__
+#if __s390__ && !__s390x__
+	{"_ZTI15QXmlDeclHandler",	5122U},
+#endif
+#if __x86_64__
+	{"_ZTI15QXmlDeclHandler",	10242U},
+#endif
+#if __s390x__
 	{"_ZTI15QXmlDeclHandler",	10242U},
 #endif
 	};
