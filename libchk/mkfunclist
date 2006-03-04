@@ -211,16 +211,16 @@ sub mklibsyms($$)
 {
 local($libname,$lid)=@_;
 
-$select = "SELECT DISTINCT * FROM Interface,LibGroup,LGInt ";
+$select = "SELECT DISTINCT * FROM Interface ";
+$select.= "INNER JOIN LGInt on Iid=LGIint ";
+$select.= "INNER JOIN LibGroup ON LGIlibg=LGid ";
 $select.= "LEFT JOIN ArchInt ON AIint=Iid ";
 $select.= "LEFT JOIN Architecture ON Aid=AIarch ";
 $select.= "LEFT JOIN Version ON Vid=AIversion ";
 $select.= "LEFT JOIN ArchType ON ATtid=Ireturn AND ATaid=Aid ";
 $select.= "LEFT JOIN ModLib ON MLlid=LGlib ";
 $select.= "LEFT JOIN Module ON MLmid=Mid ";
-$select.= "WHERE Interface.Iid=LGInt.LGIint ";
-$select.= "AND LGInt.LGIlibg=LibGroup.LGid ";
-$select.= "AND LibGroup.LGlib=$lid ";
+$select.= "WHERE LGlib=$lid ";
 $select.= "AND ( Istatus='Included' OR Istatus='Deprecated' ) ";
 $select.= "AND ( IArch != 8 ) "; # 8 == None
 $select.= "ORDER BY Iname,Aid ";
