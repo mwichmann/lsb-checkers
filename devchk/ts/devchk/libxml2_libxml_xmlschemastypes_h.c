@@ -5,9 +5,14 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#ifndef LSBCC_MODE
 #include <libxml/schemasInternals.h>
+#endif
 
 struct _xmlSchemaVal {} ;
+#ifdef LSBCC_MODE
+struct _xmlSchemaType {} ;
+#endif
 #include "libxml2/libxml/xmlschemastypes.h"
 
 

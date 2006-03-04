@@ -5,6 +5,10 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#ifdef LSBCC_MODE
+#include <ft2build.h>
+#include FT_FREETYPE_H
+#endif
 #include <fontconfig.h>
 #include "fontconfig/fcfreetype.h"
 

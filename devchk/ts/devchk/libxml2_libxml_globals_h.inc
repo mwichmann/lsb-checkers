@@ -31,3 +31,6 @@
 #undef  xmlLastError
 #undef  xmlParserInputBufferCreateFilenameValue
 #undef  xmlOutputBufferCreateFilenameValue
+#ifdef LSBCC_MODE
+struct _xmlGlobalState {};
+#endif
