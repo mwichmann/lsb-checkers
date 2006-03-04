@@ -574,20 +574,26 @@ extern int __finite_db(double);
 CheckInterfacedef(__finite,__finite_db);
 extern int __finitef_db(float);
 CheckInterfacedef(__finitef,__finitef_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern int __finitel_db(long double);
 CheckInterfacedef(__finitel,__finitel_db);
+#endif		/* hack */
 extern int __isinf_db(double);
 CheckInterfacedef(__isinf,__isinf_db);
 extern int __isinff_db(float);
 CheckInterfacedef(__isinff,__isinff_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern int __isinfl_db(long double);
 CheckInterfacedef(__isinfl,__isinfl_db);
+#endif		/* hack */
 extern int __isnan_db(double);
 CheckInterfacedef(__isnan,__isnan_db);
 extern int __isnanf_db(float);
 CheckInterfacedef(__isnanf,__isnanf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern int __isnanl_db(long double);
 CheckInterfacedef(__isnanl,__isnanl_db);
+#endif		/* hack */
 extern int __signbit_db(double);
 CheckInterfacedef(__signbit,__signbit_db);
 extern int __signbitf_db(float);
@@ -601,7 +607,6 @@ CheckInterfacedef(__fpclassifyf,__fpclassifyf_db);
 extern int __fpclassifyl_db(long double);
 CheckInterfacedef(__fpclassifyl,__fpclassifyl_db);
 #endif
-#if ! __powerpc__ && ! __s390__		/*XXX hand-edit */
 extern double copysign_db(double, double);
 CheckInterfacedef(copysign,copysign_db);
 extern int finite_db(double);
@@ -698,342 +703,479 @@ extern double yn_db(int, double);
 CheckInterfacedef(yn,yn_db);
 extern float copysignf_db(float, float);
 CheckInterfacedef(copysignf,copysignf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double copysignl_db(long double, long double);
 CheckInterfacedef(copysignl,copysignl_db);
+#endif		/* hack */
 extern int finitef_db(float);
 CheckInterfacedef(finitef,finitef_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern int finitel_db(long double);
 CheckInterfacedef(finitel,finitel_db);
+#endif		/* hack */
 extern float frexpf_db(float, int *);
 CheckInterfacedef(frexpf,frexpf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double frexpl_db(long double, int *);
 CheckInterfacedef(frexpl,frexpl_db);
+#endif		/* hack */
 extern float ldexpf_db(float, int);
 CheckInterfacedef(ldexpf,ldexpf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double ldexpl_db(long double, int);
 CheckInterfacedef(ldexpl,ldexpl_db);
+#endif		/* hack */
 extern float modff_db(float, float *);
 CheckInterfacedef(modff,modff_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double modfl_db(long double, long double *);
 CheckInterfacedef(modfl,modfl_db);
+#endif		/* hack */
 extern double scalbln_db(double, long int);
 CheckInterfacedef(scalbln,scalbln_db);
 extern float scalblnf_db(float, long int);
 CheckInterfacedef(scalblnf,scalblnf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double scalblnl_db(long double, long int);
 CheckInterfacedef(scalblnl,scalblnl_db);
+#endif		/* hack */
 extern double scalbn_db(double, int);
 CheckInterfacedef(scalbn,scalbn_db);
 extern float scalbnf_db(float, int);
 CheckInterfacedef(scalbnf,scalbnf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double scalbnl_db(long double, int);
 CheckInterfacedef(scalbnl,scalbnl_db);
+#endif		/* hack */
 extern float acosf_db(float);
 CheckInterfacedef(acosf,acosf_db);
 extern float acoshf_db(float);
 CheckInterfacedef(acoshf,acoshf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double acoshl_db(long double);
 CheckInterfacedef(acoshl,acoshl_db);
+#endif		/* hack */
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double acosl_db(long double);
 CheckInterfacedef(acosl,acosl_db);
+#endif		/* hack */
 extern float asinf_db(float);
 CheckInterfacedef(asinf,asinf_db);
 extern float asinhf_db(float);
 CheckInterfacedef(asinhf,asinhf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double asinhl_db(long double);
 CheckInterfacedef(asinhl,asinhl_db);
+#endif		/* hack */
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double asinl_db(long double);
 CheckInterfacedef(asinl,asinl_db);
+#endif		/* hack */
 extern float atan2f_db(float, float);
 CheckInterfacedef(atan2f,atan2f_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double atan2l_db(long double, long double);
 CheckInterfacedef(atan2l,atan2l_db);
+#endif		/* hack */
 extern float atanf_db(float);
 CheckInterfacedef(atanf,atanf_db);
 extern float atanhf_db(float);
 CheckInterfacedef(atanhf,atanhf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double atanhl_db(long double);
 CheckInterfacedef(atanhl,atanhl_db);
+#endif		/* hack */
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double atanl_db(long double);
 CheckInterfacedef(atanl,atanl_db);
+#endif		/* hack */
 extern float cbrtf_db(float);
 CheckInterfacedef(cbrtf,cbrtf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double cbrtl_db(long double);
 CheckInterfacedef(cbrtl,cbrtl_db);
+#endif		/* hack */
 extern float ceilf_db(float);
 CheckInterfacedef(ceilf,ceilf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double ceill_db(long double);
 CheckInterfacedef(ceill,ceill_db);
+#endif		/* hack */
 extern float cosf_db(float);
 CheckInterfacedef(cosf,cosf_db);
 extern float coshf_db(float);
 CheckInterfacedef(coshf,coshf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double coshl_db(long double);
 CheckInterfacedef(coshl,coshl_db);
+#endif		/* hack */
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double cosl_db(long double);
 CheckInterfacedef(cosl,cosl_db);
+#endif		/* hack */
 extern float dremf_db(float, float);
 CheckInterfacedef(dremf,dremf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double dreml_db(long double, long double);
 CheckInterfacedef(dreml,dreml_db);
+#endif		/* hack */
 extern float erfcf_db(float);
 CheckInterfacedef(erfcf,erfcf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double erfcl_db(long double);
 CheckInterfacedef(erfcl,erfcl_db);
+#endif		/* hack */
 extern float erff_db(float);
 CheckInterfacedef(erff,erff_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double erfl_db(long double);
 CheckInterfacedef(erfl,erfl_db);
+#endif		/* hack */
 extern double exp2_db(double);
 CheckInterfacedef(exp2,exp2_db);
 extern float exp2f_db(float);
 CheckInterfacedef(exp2f,exp2f_db);
-#endif					/*XXX hand-edit */
 #if __x86_64__
 /* x86-64 */
 extern long double exp2l_db(long double);
 CheckInterfacedef(exp2l,exp2l_db);
 #endif
-#if ! __powerpc__ && ! __s390__		/*XXX hand-edit */
 extern float expf_db(float);
 CheckInterfacedef(expf,expf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double expl_db(long double);
 CheckInterfacedef(expl,expl_db);
+#endif		/* hack */
 extern float expm1f_db(float);
 CheckInterfacedef(expm1f,expm1f_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double expm1l_db(long double);
 CheckInterfacedef(expm1l,expm1l_db);
+#endif		/* hack */
 extern float fabsf_db(float);
 CheckInterfacedef(fabsf,fabsf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double fabsl_db(long double);
 CheckInterfacedef(fabsl,fabsl_db);
+#endif		/* hack */
 extern double fdim_db(double, double);
 CheckInterfacedef(fdim,fdim_db);
 extern float fdimf_db(float, float);
 CheckInterfacedef(fdimf,fdimf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double fdiml_db(long double, long double);
 CheckInterfacedef(fdiml,fdiml_db);
+#endif		/* hack */
 extern float floorf_db(float);
 CheckInterfacedef(floorf,floorf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double floorl_db(long double);
 CheckInterfacedef(floorl,floorl_db);
+#endif		/* hack */
 extern double fma_db(double, double, double);
 CheckInterfacedef(fma,fma_db);
 extern float fmaf_db(float, float, float);
 CheckInterfacedef(fmaf,fmaf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double fmal_db(long double, long double, long double);
 CheckInterfacedef(fmal,fmal_db);
+#endif		/* hack */
 extern double fmax_db(double, double);
 CheckInterfacedef(fmax,fmax_db);
 extern float fmaxf_db(float, float);
 CheckInterfacedef(fmaxf,fmaxf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double fmaxl_db(long double, long double);
 CheckInterfacedef(fmaxl,fmaxl_db);
+#endif		/* hack */
 extern double fmin_db(double, double);
 CheckInterfacedef(fmin,fmin_db);
 extern float fminf_db(float, float);
 CheckInterfacedef(fminf,fminf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double fminl_db(long double, long double);
 CheckInterfacedef(fminl,fminl_db);
+#endif		/* hack */
 extern float fmodf_db(float, float);
 CheckInterfacedef(fmodf,fmodf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double fmodl_db(long double, long double);
 CheckInterfacedef(fmodl,fmodl_db);
+#endif		/* hack */
 extern float gammaf_db(float);
 CheckInterfacedef(gammaf,gammaf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double gammal_db(long double);
 CheckInterfacedef(gammal,gammal_db);
+#endif		/* hack */
 extern float hypotf_db(float, float);
 CheckInterfacedef(hypotf,hypotf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double hypotl_db(long double, long double);
 CheckInterfacedef(hypotl,hypotl_db);
+#endif		/* hack */
 extern int ilogbf_db(float);
 CheckInterfacedef(ilogbf,ilogbf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern int ilogbl_db(long double);
 CheckInterfacedef(ilogbl,ilogbl_db);
+#endif		/* hack */
 extern float j0f_db(float);
 CheckInterfacedef(j0f,j0f_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double j0l_db(long double);
 CheckInterfacedef(j0l,j0l_db);
+#endif		/* hack */
 extern float j1f_db(float);
 CheckInterfacedef(j1f,j1f_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double j1l_db(long double);
 CheckInterfacedef(j1l,j1l_db);
+#endif		/* hack */
 extern float jnf_db(int, float);
 CheckInterfacedef(jnf,jnf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double jnl_db(int, long double);
 CheckInterfacedef(jnl,jnl_db);
+#endif		/* hack */
 extern double lgamma_r_db(double, int *);
 CheckInterfacedef(lgamma_r,lgamma_r_db);
 extern float lgammaf_db(float);
 CheckInterfacedef(lgammaf,lgammaf_db);
 extern float lgammaf_r_db(float, int *);
 CheckInterfacedef(lgammaf_r,lgammaf_r_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double lgammal_db(long double);
 CheckInterfacedef(lgammal,lgammal_db);
+#endif		/* hack */
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double lgammal_r_db(long double, int *);
 CheckInterfacedef(lgammal_r,lgammal_r_db);
+#endif		/* hack */
 extern long long int llrint_db(double);
 CheckInterfacedef(llrint,llrint_db);
 extern long long int llrintf_db(float);
 CheckInterfacedef(llrintf,llrintf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long long int llrintl_db(long double);
 CheckInterfacedef(llrintl,llrintl_db);
+#endif		/* hack */
 extern long long int llround_db(double);
 CheckInterfacedef(llround,llround_db);
 extern long long int llroundf_db(float);
 CheckInterfacedef(llroundf,llroundf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long long int llroundl_db(long double);
 CheckInterfacedef(llroundl,llroundl_db);
+#endif		/* hack */
 extern float log10f_db(float);
 CheckInterfacedef(log10f,log10f_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double log10l_db(long double);
 CheckInterfacedef(log10l,log10l_db);
+#endif		/* hack */
 extern float log1pf_db(float);
 CheckInterfacedef(log1pf,log1pf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double log1pl_db(long double);
 CheckInterfacedef(log1pl,log1pl_db);
+#endif		/* hack */
 extern double log2_db(double);
 CheckInterfacedef(log2,log2_db);
 extern float log2f_db(float);
 CheckInterfacedef(log2f,log2f_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double log2l_db(long double);
 CheckInterfacedef(log2l,log2l_db);
+#endif		/* hack */
 extern float logbf_db(float);
 CheckInterfacedef(logbf,logbf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double logbl_db(long double);
 CheckInterfacedef(logbl,logbl_db);
+#endif		/* hack */
 extern float logf_db(float);
 CheckInterfacedef(logf,logf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double logl_db(long double);
 CheckInterfacedef(logl,logl_db);
+#endif		/* hack */
 extern long int lrint_db(double);
 CheckInterfacedef(lrint,lrint_db);
 extern long int lrintf_db(float);
 CheckInterfacedef(lrintf,lrintf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long int lrintl_db(long double);
 CheckInterfacedef(lrintl,lrintl_db);
+#endif		/* hack */
 extern long int lround_db(double);
 CheckInterfacedef(lround,lround_db);
 extern long int lroundf_db(float);
 CheckInterfacedef(lroundf,lroundf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long int lroundl_db(long double);
 CheckInterfacedef(lroundl,lroundl_db);
+#endif		/* hack */
 extern int matherr_db(struct exception *);
 CheckInterfacedef(matherr,matherr_db);
 extern double nan_db(const char *);
 CheckInterfacedef(nan,nan_db);
 extern float nanf_db(const char *);
 CheckInterfacedef(nanf,nanf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double nanl_db(const char *);
 CheckInterfacedef(nanl,nanl_db);
+#endif		/* hack */
 extern double nearbyint_db(double);
 CheckInterfacedef(nearbyint,nearbyint_db);
 extern float nearbyintf_db(float);
 CheckInterfacedef(nearbyintf,nearbyintf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double nearbyintl_db(long double);
 CheckInterfacedef(nearbyintl,nearbyintl_db);
+#endif		/* hack */
 extern float nextafterf_db(float, float);
 CheckInterfacedef(nextafterf,nextafterf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double nextafterl_db(long double, long double);
 CheckInterfacedef(nextafterl,nextafterl_db);
+#endif		/* hack */
 extern double nexttoward_db(double, long double);
 CheckInterfacedef(nexttoward,nexttoward_db);
 extern float nexttowardf_db(float, long double);
 CheckInterfacedef(nexttowardf,nexttowardf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double nexttowardl_db(long double, long double);
 CheckInterfacedef(nexttowardl,nexttowardl_db);
+#endif		/* hack */
 extern double pow10_db(double);
 CheckInterfacedef(pow10,pow10_db);
 extern float pow10f_db(float);
 CheckInterfacedef(pow10f,pow10f_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double pow10l_db(long double);
 CheckInterfacedef(pow10l,pow10l_db);
+#endif		/* hack */
 extern float powf_db(float, float);
 CheckInterfacedef(powf,powf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double powl_db(long double, long double);
 CheckInterfacedef(powl,powl_db);
+#endif		/* hack */
 extern float remainderf_db(float, float);
 CheckInterfacedef(remainderf,remainderf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double remainderl_db(long double, long double);
 CheckInterfacedef(remainderl,remainderl_db);
+#endif		/* hack */
 extern double remquo_db(double, double, int *);
 CheckInterfacedef(remquo,remquo_db);
 extern float remquof_db(float, float, int *);
 CheckInterfacedef(remquof,remquof_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double remquol_db(long double, long double, int *);
 CheckInterfacedef(remquol,remquol_db);
+#endif		/* hack */
 extern float rintf_db(float);
 CheckInterfacedef(rintf,rintf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double rintl_db(long double);
 CheckInterfacedef(rintl,rintl_db);
+#endif		/* hack */
 extern double round_db(double);
 CheckInterfacedef(round,round_db);
 extern float roundf_db(float);
 CheckInterfacedef(roundf,roundf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double roundl_db(long double);
 CheckInterfacedef(roundl,roundl_db);
+#endif		/* hack */
 extern float scalbf_db(float, float);
 CheckInterfacedef(scalbf,scalbf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double scalbl_db(long double, long double);
 CheckInterfacedef(scalbl,scalbl_db);
+#endif		/* hack */
 extern double significand_db(double);
 CheckInterfacedef(significand,significand_db);
 extern float significandf_db(float);
 CheckInterfacedef(significandf,significandf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double significandl_db(long double);
 CheckInterfacedef(significandl,significandl_db);
+#endif		/* hack */
 extern void sincos_db(double, double *, double *);
 CheckInterfacedef(sincos,sincos_db);
 extern void sincosf_db(float, float *, float *);
 CheckInterfacedef(sincosf,sincosf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern void sincosl_db(long double, long double *, long double *);
 CheckInterfacedef(sincosl,sincosl_db);
+#endif		/* hack */
 extern float sinf_db(float);
 CheckInterfacedef(sinf,sinf_db);
 extern float sinhf_db(float);
 CheckInterfacedef(sinhf,sinhf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double sinhl_db(long double);
 CheckInterfacedef(sinhl,sinhl_db);
+#endif		/* hack */
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double sinl_db(long double);
 CheckInterfacedef(sinl,sinl_db);
+#endif		/* hack */
 extern float sqrtf_db(float);
 CheckInterfacedef(sqrtf,sqrtf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double sqrtl_db(long double);
 CheckInterfacedef(sqrtl,sqrtl_db);
+#endif		/* hack */
 extern float tanf_db(float);
 CheckInterfacedef(tanf,tanf_db);
 extern float tanhf_db(float);
 CheckInterfacedef(tanhf,tanhf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double tanhl_db(long double);
 CheckInterfacedef(tanhl,tanhl_db);
+#endif		/* hack */
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double tanl_db(long double);
 CheckInterfacedef(tanl,tanl_db);
+#endif		/* hack */
 extern double tgamma_db(double);
 CheckInterfacedef(tgamma,tgamma_db);
 extern float tgammaf_db(float);
 CheckInterfacedef(tgammaf,tgammaf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double tgammal_db(long double);
 CheckInterfacedef(tgammal,tgammal_db);
+#endif		/* hack */
 extern double trunc_db(double);
 CheckInterfacedef(trunc,trunc_db);
 extern float truncf_db(float);
 CheckInterfacedef(truncf,truncf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double truncl_db(long double);
 CheckInterfacedef(truncl,truncl_db);
+#endif		/* hack */
 extern float y0f_db(float);
 CheckInterfacedef(y0f,y0f_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double y0l_db(long double);
 CheckInterfacedef(y0l,y0l_db);
+#endif		/* hack */
 extern float y1f_db(float);
 CheckInterfacedef(y1f,y1f_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double y1l_db(long double);
 CheckInterfacedef(y1l,y1l_db);
+#endif		/* hack */
 extern float ynf_db(int, float);
 CheckInterfacedef(ynf,ynf_db);
+#if ! __powerpc__ && ! __s390__	/* hack */
 extern long double ynl_db(int, long double);
 CheckInterfacedef(ynl,ynl_db);
-#endif					/*XXX hand-edit */
+#endif		/* hack */
 #if __x86_64__
 /* x86-64 */
 extern int __fpclassifyl_db(long double);
