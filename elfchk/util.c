@@ -126,13 +126,10 @@ getmoduleval(char *mod)
 {
 	struct lsb_module *m = LSB_Modules;
 	int flag = 0;
-	char *p = strdup(mod);
-	if(p == NULL) {
-		fprintf(stderr, "Unable to alloc needed memory\n");
-		return 0;
-	}
+	char *p;
 
-	while(NULL != (p = index(p, '-')))
+	p = strchr(mod, '-');
+	if (*p != NULL)
 		*p = '_';
 
 	while(m->name && 0 == flag) {
@@ -140,6 +137,5 @@ getmoduleval(char *mod)
 			flag = m->flag;
 		m++;
 	}
-	free(p);
 	return flag;
 }
