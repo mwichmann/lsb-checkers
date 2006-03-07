@@ -49,7 +49,7 @@ concat_string(char *input, char *addition)
 }
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
-static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.22 $";
+static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.23 $";
 
 int
 main(int argc, char *argv[])
@@ -116,7 +116,10 @@ main(int argc, char *argv[])
         break;
       case 'T':
 	if(strcasecmp(optarg, "desktop") == 0 || strcasecmp(optarg, "all") == 0)
+	{
 	    modules = LSB_All_Modules;
+	    is_desktop = 1;
+	}
 	else if (strcasecmp(optarg, "core") != 0) {
 	    fprintf(stderr, "error: product must be either core or desktop\n");
 	    usage(argv[0]);
