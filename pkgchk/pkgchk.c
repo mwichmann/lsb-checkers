@@ -17,7 +17,7 @@
 #include "rpmchk.h"
 
 /* modules to check against.  */
-int modules = LSB_Core | LSB_Graphics | LSB_Cpp;
+int modules = LSB_Core | LSB_Cpp;
 
 void
 usage(char *progname)
@@ -49,7 +49,7 @@ concat_string(char *input, char *addition)
 }
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
-static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.23 $";
+static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.24 $";
 
 int
 main(int argc, char *argv[])
@@ -73,8 +73,11 @@ main(int argc, char *argv[])
   }
 
   if(NULL != (p = getenv("LSB_PRODUCT"))) {
-    if(strcasecmp(p, "desktop") == 0 || strcasecmp(p, "all") == 0)
+    if(strcasecmp(p, "desktop") == 0 || strcasecmp(p, "all") == 0) {
       modules = LSB_All_Modules;
+      is_desktop = 1;
+      is_graphics = 1;
+    }
     else if(strcasecmp(p, "core") != 0) {
       fprintf(stderr, "warning: LSB_PRODUCT target '%s' is invalid, resetting to core\n", p);
     }
@@ -119,6 +122,7 @@ main(int argc, char *argv[])
 	{
 	    modules = LSB_All_Modules;
 	    is_desktop = 1;
+	    is_graphics = 1;
 	}
 	else if (strcasecmp(optarg, "core") != 0) {
 	    fprintf(stderr, "error: product must be either core or desktop\n");
@@ -129,6 +133,8 @@ main(int argc, char *argv[])
 	break;
       case 'M':
 	modules |= getmoduleval(optarg);
+	if (modules & LSB_Graphics)
+		is_graphics = 1;
 	printf("also checking symbols in module %s\n", optarg);
 	break;
       case 'j':
