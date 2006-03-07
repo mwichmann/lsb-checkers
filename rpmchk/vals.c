@@ -33,6 +33,7 @@ char *validos = "linux";
 char *lanananame = NULL;
 
 int is_noarch = 0;
+int is_desktop = 0;
 
 RpmRequireRec validdeps[] = {
 	{"rpmlib(VersionedDependencies)","3.0.3-1", 0, 0 },
@@ -71,6 +72,26 @@ RpmRequireRec noarchdeps[] = {
 	{"lsb-graphics-noarch",LSBVERSION, 0, 0 },
 };
 int numnoarchdeps = sizeof(noarchdeps)/sizeof(RpmRequireRec);
+
+RpmRequireRec desktopdeps[] = {
+	{"lsb-desktop-noarch",LSBVERSION, 0, 0 },
+#if __i386__
+	{"lsb-desktop-ia32",LSBVERSION, 0, 0 },
+#elif __ia64__
+	{"lsb-desktop-ia64",LSBVERSION, 0, 0 },
+#elif __x86_64__
+	{"lsb-desktop-amd64",LSBVERSION, 0, 0 },
+#elif __powerpc__ && !__powerpc64__
+	{"lsb-desktop-ppc32",LSBVERSION, 0, 0 },
+#elif __powerpc64__
+	{"lsb-desktop-ppc64",LSBVERSION, 0, 0 },
+#elif __s390__ && !__s390x__
+	{"lsb-desktop-s390",LSBVERSION, 0, 0 },
+#elif __s390x__
+	{"lsb-desktop-s390x",LSBVERSION, 0, 0 },
+#endif
+};
+int numdtdeps = sizeof(desktopdeps)/sizeof(RpmRequireRec);
 
 char *pkgname;
 int  lsbdepidx=-1;

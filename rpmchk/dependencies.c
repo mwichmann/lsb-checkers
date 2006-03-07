@@ -62,7 +62,7 @@ check_dependencies(struct tetj_handle *journal)
 	    }
 	}
 
-	if (d == numdeps) {
+	if (d == numdeps && !is_desktop) {
 	    snprintf(tmp_string, TMP_STRING_SIZE,
 		     "Unexpected dependency %s", name);
 	    fprintf(stderr, "Error: %s\n", tmp_string);
@@ -73,6 +73,27 @@ check_dependencies(struct tetj_handle *journal)
 	name += strlen(name) + 1;
 	vername += strlen(vername) + 1;
     }
+
+    if (is_desktop) {
+	for (d = 0; d < numdtdeps; d++) {
+	    if (strcmp(name, desktopdeps[d].reqname) == 0) {
+		if (strcmp(vername, desktopdeps[d].reqversion) == 0) {
+		    desktopdeps[d].seenit = 1;
+		}
+	    }
+	}
+	for (d = 0; d < numdtdeps; d++) {
+	    if (desktopdeps[d].isrequired && !desktopdeps[d].seenit) {
+		snprintf(tmp_string, TMP_STRING_SIZE,
+			 "Didn't see required dependency %s=%s",
+			 desktopdeps[d].reqname, desktopdeps[d].reqversion);
+		fprintf(stderr, "Error: %s\n", tmp_string);
+		fail = TETJ_FAIL;
+		tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+				   0, 0, 0, tmp_string);
+	    }
+        }
+   }
 
     /* this is kind of convoluted - may be an easier way.
      * if we found by earlier examination that we're a noarch pkg,
