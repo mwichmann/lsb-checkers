@@ -33,6 +33,7 @@ char *validos = "linux";
 char *lanananame = NULL;
 
 int is_noarch = 0;
+int is_graphics = 0;
 int is_desktop = 0;
 
 RpmRequireRec validdeps[] = {
@@ -41,28 +42,20 @@ RpmRequireRec validdeps[] = {
 	{"rpmlib(CompressedFileNames)","3.0.4-1", 0, 0 },
 	{"/bin/sh","", 0, 0 },
 	{"lsb-core-noarch",LSBVERSION, 0, 0 },
-	{"lsb-graphics-noarch",LSBVERSION, 0, 0 },
 #if __i386__
 	{"lsb-core-ia32",LSBVERSION, 0, 1 },
-	{"lsb-graphics-ia32",LSBVERSION, 0, 0 },
 #elif __ia64__
 	{"lsb-core-ia64",LSBVERSION, 0, 1 },
-	{"lsb-graphics-ia64",LSBVERSION, 0, 0 },
 #elif __x86_64__
 	{"lsb-core-amd64",LSBVERSION, 0, 1 },
-	{"lsb-graphics-amd64",LSBVERSION, 0, 0 },
 #elif __powerpc__ && !__powerpc64__
 	{"lsb-core-ppc32",LSBVERSION, 0, 1 },
-	{"lsb-graphics-ppc32",LSBVERSION, 0, 0 },
 #elif __powerpc64__
 	{"lsb-core-ppc64",LSBVERSION, 0, 1 },
-	{"lsb-graphics-ppc64",LSBVERSION, 0, 0 },
 #elif __s390__ && !__s390x__
 	{"lsb-core-s390",LSBVERSION, 0, 1 },
-	{"lsb-graphics-s390",LSBVERSION, 0, 0 },
 #elif __s390x__
 	{"lsb-core-s390x",LSBVERSION, 0, 1 },
-	{"lsb-graphics-s390x",LSBVERSION, 0, 0 },
 #endif
 };
 int numdeps = sizeof(validdeps)/sizeof(RpmRequireRec);
@@ -70,25 +63,44 @@ int numdeps = sizeof(validdeps)/sizeof(RpmRequireRec);
 RpmRequireRec noarchdeps[] = {
 	{"lsb-core-noarch",LSBVERSION, 0, 1 },
 	{"lsb-graphics-noarch",LSBVERSION, 0, 0 },
+	{"lsb-desktop-noarch",LSBVERSION, 0, 0 },
 };
 int numnoarchdeps = sizeof(noarchdeps)/sizeof(RpmRequireRec);
 
-RpmRequireRec desktopdeps[] = {
-	{"lsb-desktop-noarch",LSBVERSION, 0, 0 },
+RpmRequireRec graphicsdeps[] = {
 #if __i386__
-	{"lsb-desktop-ia32",LSBVERSION, 0, 0 },
+	{"lsb-graphics-ia32",LSBVERSION, 0, 1 },
 #elif __ia64__
-	{"lsb-desktop-ia64",LSBVERSION, 0, 0 },
+	{"lsb-graphics-ia64",LSBVERSION, 0, 1 },
 #elif __x86_64__
-	{"lsb-desktop-amd64",LSBVERSION, 0, 0 },
+	{"lsb-graphics-amd64",LSBVERSION, 0, 1 },
 #elif __powerpc__ && !__powerpc64__
-	{"lsb-desktop-ppc32",LSBVERSION, 0, 0 },
+	{"lsb-graphics-ppc32",LSBVERSION, 0, 1 },
 #elif __powerpc64__
-	{"lsb-desktop-ppc64",LSBVERSION, 0, 0 },
+	{"lsb-graphics-ppc64",LSBVERSION, 0, 1 },
 #elif __s390__ && !__s390x__
-	{"lsb-desktop-s390",LSBVERSION, 0, 0 },
+	{"lsb-graphics-s390",LSBVERSION, 0, 1 },
 #elif __s390x__
-	{"lsb-desktop-s390x",LSBVERSION, 0, 0 },
+	{"lsb-graphics-s390x",LSBVERSION, 0, 1 },
+#endif
+};
+int numgrdeps = sizeof(graphicsdeps)/sizeof(RpmRequireRec);
+
+RpmRequireRec desktopdeps[] = {
+#if __i386__
+	{"lsb-desktop-ia32",LSBVERSION, 0, 1 },
+#elif __ia64__
+	{"lsb-desktop-ia64",LSBVERSION, 0, 1 },
+#elif __x86_64__
+	{"lsb-desktop-amd64",LSBVERSION, 0, 1 },
+#elif __powerpc__ && !__powerpc64__
+	{"lsb-desktop-ppc32",LSBVERSION, 0, 1 },
+#elif __powerpc64__
+	{"lsb-desktop-ppc64",LSBVERSION, 0, 1 },
+#elif __s390__ && !__s390x__
+	{"lsb-desktop-s390",LSBVERSION, 0, 1 },
+#elif __s390x__
+	{"lsb-desktop-s390x",LSBVERSION, 0, 1 },
 #endif
 };
 int numdtdeps = sizeof(desktopdeps)/sizeof(RpmRequireRec);
