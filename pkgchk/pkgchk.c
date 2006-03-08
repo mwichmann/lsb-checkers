@@ -8,7 +8,6 @@
 #include <getopt.h>
 #include <string.h>
 #include <stdlib.h>
-#include <getopt.h>
 #include <libgen.h>
 #include <limits.h>
 #include "../tetj/tetj.h"
@@ -32,7 +31,11 @@ usage(char *progname)
 "  -T [core|desktop], --lsb-product [core|desktop]\n"
 "                                 target either core or desktop spec for tests\n" 
 "  -M MODULE, --module=MODULE     add MODULE to list of checked modules\n"
-"  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n", progname);
+"  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n"
+"  -d DEPENDENCY, --dependency=DEPENDENCY\n"
+"                                 add DEPENDENCY provided by another\n"
+"                                 customer provided package to list of\n"
+"                                 expected dependencies\n", progname);
 }
 
 char *
@@ -49,7 +52,7 @@ concat_string(char *input, char *addition)
 }
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
-static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.24 $";
+static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.25 $";
 
 int
 main(int argc, char *argv[])
@@ -92,11 +95,12 @@ main(int argc, char *argv[])
       {"lanana",   required_argument,  NULL, 'L'},
       {"module",   required_argument,  NULL, 'M'},
       {"journal",  required_argument,  NULL, 'j'},
+      {"dependency",  required_argument,  NULL, 'd'},
       {"lsb-product", required_argument, NULL, 'T'},
       {0, 0, 0, 0}
     };
 
-    c = getopt_long (argc, argv, "hvnL:tT:M:j:", long_options, &option_index);
+    c = getopt_long (argc, argv, "hvnL:tT:M:j:d:", long_options, &option_index);
     if (c == -1)
       break;
     switch (c) {
@@ -140,6 +144,11 @@ main(int argc, char *argv[])
       case 'j':
 	snprintf(journal_filename, TMP_STRING_SIZE, optarg);
 	overrideJournalFilename = 1;
+	break;
+      case 'd':
+	is_custom = 1;
+	customdeps[numcustdeps].reqname = strdup(optarg);
+	numcustdeps = numcustdeps + 1;
 	break;
       default:
 	usage(argv[0]);
