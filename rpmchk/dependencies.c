@@ -38,6 +38,13 @@ check_dependencies(struct tetj_handle *journal)
 	numalldeps = numalldeps + 1;
     }
 	
+    if (is_custom) {
+	for (i = 0; i < numcustdeps; i++) {
+		alldeps[numalldeps] = customdeps[i];
+		numalldeps = numalldeps + 1;
+	}
+    }
+	
     if (numrequirename != numrequireversion) {
 	snprintf(tmp_string, TMP_STRING_SIZE,
 "check_dependencies() different number of REQUIRENAME %d & REQUIREVERSION %d",
