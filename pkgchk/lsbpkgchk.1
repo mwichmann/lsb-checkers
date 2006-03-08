@@ -12,6 +12,8 @@ lsbpkgchk \- check LSB conformance of a package
 .IR MODULE "]... ]"
 .RB [ \-j
 .IR JOURNAL ]
+.RB [ \-d
+.IR DEPENDENCY ]
 .RI [ long-options ]
 .I pkgname
 .SH DESCRIPTION
@@ -54,6 +56,12 @@ LSB-Graphics and LSB-C++ (module names are not case-sensitive).
 \fB\-j \fIJOURNAL\fR, \fB--journal\fR=\fIJOURNAL\fR
 Write the journal file to \fIJOURNAL\fR
 instead of to the default filename in the current directory.
+.TP
+\fB\-d \fIDEPENDENCY\fR, \fB--dependency\fR=\fIDEPENDENCY\fR
+Add DEPENDENCY provided by another customer provided package to the
+list of expected dependencies. Without this option a package that has
+a dependency on another customer provided package will report that
+it has an unexpected dependency.
 .PP
 A journal file is created named 
 .BI journal.pkgchk. pkgname
