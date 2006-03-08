@@ -35,6 +35,7 @@ char *lanananame = NULL;
 int is_noarch = 0;
 int is_graphics = 0;
 int is_desktop = 0;
+int is_custom = 0;
 
 RpmRequireRec validdeps[] = {
 	{"rpmlib(VersionedDependencies)","3.0.3-1", 0, 0 },
@@ -104,6 +105,20 @@ RpmRequireRec desktopdeps[] = {
 #endif
 };
 int numdtdeps = sizeof(desktopdeps)/sizeof(RpmRequireRec);
+
+RpmRequireRec customdeps[] = {
+	{"","", 0, 0},
+	{"","", 0, 0},
+	{"","", 0, 0},
+	{"","", 0, 0},
+	{"","", 0, 0},
+	{"","", 0, 0},
+	{"","", 0, 0},
+	{"","", 0, 0},
+	{"","", 0, 0},
+	{"","", 0, 0},
+};
+int numcustdeps = 0;
 
 char *pkgname;
 int  lsbdepidx=-1;
