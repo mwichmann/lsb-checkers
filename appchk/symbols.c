@@ -11,7 +11,7 @@ checksymbols(ElfFile *file, struct tetj_handle *journal, int modules)
 {
   int	i, j, numsyms;
   Elf_Sym	*syms1;
-#define TMP_STRING_LENGTH 100  
+#define TMP_STRING_LENGTH 255  
   char tmp_string[TMP_STRING_LENGTH];
   char *symbol_name;
 
