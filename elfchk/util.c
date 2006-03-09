@@ -129,7 +129,7 @@ getmoduleval(char *mod)
 	char *p;
 
 	p = strchr(mod, '-');
-	if (*p != NULL)
+	if (p != NULL)
 		*p = '_';
 
 	while(m->name && 0 == flag) {
