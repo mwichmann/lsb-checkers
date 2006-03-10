@@ -132,6 +132,10 @@ Msg("Find size of _xmlShellCtxt (14904)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14905,0);
 Msg("Find size of fptr_debugXML_549 (14905)\n");
@@ -216,6 +220,10 @@ Msg("Find size of xmlShellCtxtPtr (14909)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15125,0);
 Msg("Find size of fptr_anonymous-debugXML.h.types-0 (15125)\n");

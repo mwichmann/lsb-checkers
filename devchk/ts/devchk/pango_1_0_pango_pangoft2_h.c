@@ -79,6 +79,14 @@ CheckTypeSize(PangoFT2FontMap,0, 12589, 2)
 CheckTypeSize(PangoFT2FontMap,0, 12589, 11)
 #elif __ia64__
 CheckTypeSize(PangoFT2FontMap,0, 12589, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(PangoFT2FontMap,0, 12589, 6)
+#elif __powerpc64__
+CheckTypeSize(PangoFT2FontMap,0, 12589, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(PangoFT2FontMap,0, 12589, 10)
+#elif __s390x__
+CheckTypeSize(PangoFT2FontMap,0, 12589, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12589,0);
 Msg("Find size of PangoFT2FontMap (12589)\n");

@@ -29,6 +29,10 @@ printf("Checking data structures in libxml2/libxml/xmlmemory.h\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14569,0);
 Msg("Find size of fptr_xmlmemory_372 (14569)\n");
@@ -56,6 +60,10 @@ Msg("Find size of xmlFreeFunc (14570)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14571,0);
 Msg("Find size of fptr_xmlmemory_132 (14571)\n");
@@ -83,6 +91,10 @@ Msg("Find size of xmlMallocFunc (14572)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14573,0);
 Msg("Find size of fptr_xmlmemory_521 (14573)\n");
@@ -110,6 +122,10 @@ Msg("Find size of xmlReallocFunc (14574)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14575,0);
 Msg("Find size of fptr_xmlmemory_29 (14575)\n");

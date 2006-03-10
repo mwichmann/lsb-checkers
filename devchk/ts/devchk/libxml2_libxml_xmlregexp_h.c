@@ -35,6 +35,14 @@ CheckTypeSize(xmlRegexp,0, 14690, 2)
 CheckTypeSize(xmlRegexp,0, 14690, 11)
 #elif __ia64__
 CheckTypeSize(xmlRegexp,0, 14690, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlRegexp,0, 14690, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlRegexp,0, 14690, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlRegexp,0, 14690, 10)
+#elif __s390x__
+CheckTypeSize(xmlRegexp,0, 14690, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14690,0);
 Msg("Find size of xmlRegexp (14690)\n");
@@ -84,6 +92,14 @@ CheckTypeSize(xmlRegExecCtxt,0, 14694, 2)
 CheckTypeSize(xmlRegExecCtxt,0, 14694, 11)
 #elif __ia64__
 CheckTypeSize(xmlRegExecCtxt,0, 14694, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlRegExecCtxt,0, 14694, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlRegExecCtxt,0, 14694, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlRegExecCtxt,0, 14694, 10)
+#elif __s390x__
+CheckTypeSize(xmlRegExecCtxt,0, 14694, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14694,0);
 Msg("Find size of xmlRegExecCtxt (14694)\n");
@@ -133,6 +149,14 @@ CheckTypeSize(xmlExpNode,0, 14698, 2)
 CheckTypeSize(xmlExpNode,0, 14698, 11)
 #elif __ia64__
 CheckTypeSize(xmlExpNode,0, 14698, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlExpNode,0, 14698, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlExpNode,0, 14698, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlExpNode,0, 14698, 10)
+#elif __s390x__
+CheckTypeSize(xmlExpNode,0, 14698, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14698,0);
 Msg("Find size of xmlExpNode (14698)\n");
@@ -179,6 +203,10 @@ Msg("Find size of xmlExpNodePtr (14700)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14701,0);
 Msg("Find size of fptr_xmlregexp_366 (14701)\n");
@@ -209,6 +237,14 @@ CheckTypeSize(xmlExpCtxt,0, 14704, 2)
 CheckTypeSize(xmlExpCtxt,0, 14704, 11)
 #elif __ia64__
 CheckTypeSize(xmlExpCtxt,0, 14704, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlExpCtxt,0, 14704, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlExpCtxt,0, 14704, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlExpCtxt,0, 14704, 10)
+#elif __s390x__
+CheckTypeSize(xmlExpCtxt,0, 14704, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14704,0);
 Msg("Find size of xmlExpCtxt (14704)\n");
@@ -255,6 +291,10 @@ Msg("Find size of xmlExpCtxtPtr (14706)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14707,0);
 Msg("Find size of const xmlChar * * (14707)\n");
@@ -275,6 +315,34 @@ CheckEnum("XML_EXP_SEQ",XML_EXP_SEQ,3);
 CheckEnum("XML_EXP_OR",XML_EXP_OR,4);
 CheckEnum("XML_EXP_COUNT",XML_EXP_COUNT,5);
 #elif __ia64__
+CheckEnum("XML_EXP_EMPTY",XML_EXP_EMPTY,0);
+CheckEnum("XML_EXP_FORBID",XML_EXP_FORBID,1);
+CheckEnum("XML_EXP_ATOM",XML_EXP_ATOM,2);
+CheckEnum("XML_EXP_SEQ",XML_EXP_SEQ,3);
+CheckEnum("XML_EXP_OR",XML_EXP_OR,4);
+CheckEnum("XML_EXP_COUNT",XML_EXP_COUNT,5);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("XML_EXP_EMPTY",XML_EXP_EMPTY,0);
+CheckEnum("XML_EXP_FORBID",XML_EXP_FORBID,1);
+CheckEnum("XML_EXP_ATOM",XML_EXP_ATOM,2);
+CheckEnum("XML_EXP_SEQ",XML_EXP_SEQ,3);
+CheckEnum("XML_EXP_OR",XML_EXP_OR,4);
+CheckEnum("XML_EXP_COUNT",XML_EXP_COUNT,5);
+#elif __powerpc64__
+CheckEnum("XML_EXP_EMPTY",XML_EXP_EMPTY,0);
+CheckEnum("XML_EXP_FORBID",XML_EXP_FORBID,1);
+CheckEnum("XML_EXP_ATOM",XML_EXP_ATOM,2);
+CheckEnum("XML_EXP_SEQ",XML_EXP_SEQ,3);
+CheckEnum("XML_EXP_OR",XML_EXP_OR,4);
+CheckEnum("XML_EXP_COUNT",XML_EXP_COUNT,5);
+#elif __s390__ && !__s390x__
+CheckEnum("XML_EXP_EMPTY",XML_EXP_EMPTY,0);
+CheckEnum("XML_EXP_FORBID",XML_EXP_FORBID,1);
+CheckEnum("XML_EXP_ATOM",XML_EXP_ATOM,2);
+CheckEnum("XML_EXP_SEQ",XML_EXP_SEQ,3);
+CheckEnum("XML_EXP_OR",XML_EXP_OR,4);
+CheckEnum("XML_EXP_COUNT",XML_EXP_COUNT,5);
+#elif __s390x__
 CheckEnum("XML_EXP_EMPTY",XML_EXP_EMPTY,0);
 CheckEnum("XML_EXP_FORBID",XML_EXP_FORBID,1);
 CheckEnum("XML_EXP_ATOM",XML_EXP_ATOM,2);

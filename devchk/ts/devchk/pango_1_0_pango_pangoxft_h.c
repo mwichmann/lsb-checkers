@@ -186,6 +186,10 @@ Msg("Find size of PangoXftRenderer * (12561)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12563,0);
 Msg("Find size of fptr_pangoxft_9 (12563)\n");
@@ -216,6 +220,14 @@ CheckTypeSize(PangoXftFontMap,0, 12566, 2)
 CheckTypeSize(PangoXftFontMap,0, 12566, 11)
 #elif __ia64__
 CheckTypeSize(PangoXftFontMap,0, 12566, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(PangoXftFontMap,0, 12566, 6)
+#elif __powerpc64__
+CheckTypeSize(PangoXftFontMap,0, 12566, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(PangoXftFontMap,0, 12566, 10)
+#elif __s390x__
+CheckTypeSize(PangoXftFontMap,0, 12566, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12566,0);
 Msg("Find size of PangoXftFontMap (12566)\n");
@@ -290,6 +302,10 @@ Msg("Find size of XTrapezoid * (12570)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12571,0);
 Msg("Find size of fptr_pangoxft_74 (12571)\n");
@@ -336,6 +352,10 @@ Msg("Find size of XftGlyphSpec * (12577)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12578,0);
 Msg("Find size of fptr_pangoxft_85 (12578)\n");
@@ -366,6 +386,14 @@ CheckTypeSize(PangoFcFontClass,0, 12581, 2)
 CheckTypeSize(PangoFcFontClass,0, 12581, 11)
 #elif __ia64__
 CheckTypeSize(PangoFcFontClass,0, 12581, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(PangoFcFontClass,0, 12581, 6)
+#elif __powerpc64__
+CheckTypeSize(PangoFcFontClass,0, 12581, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(PangoFcFontClass,0, 12581, 10)
+#elif __s390x__
+CheckTypeSize(PangoFcFontClass,0, 12581, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12581,0);
 Msg("Find size of PangoFcFontClass (12581)\n");
@@ -377,6 +405,14 @@ CheckTypeSize(PangoFcFont,0, 12583, 2)
 CheckTypeSize(PangoFcFont,0, 12583, 11)
 #elif __ia64__
 CheckTypeSize(PangoFcFont,0, 12583, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(PangoFcFont,0, 12583, 6)
+#elif __powerpc64__
+CheckTypeSize(PangoFcFont,0, 12583, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(PangoFcFont,0, 12583, 10)
+#elif __s390x__
+CheckTypeSize(PangoFcFont,0, 12583, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12583,0);
 Msg("Find size of PangoFcFont (12583)\n");
@@ -388,6 +424,14 @@ CheckTypeSize(PangoXftFont,0, 12585, 2)
 CheckTypeSize(PangoXftFont,0, 12585, 11)
 #elif __ia64__
 CheckTypeSize(PangoXftFont,0, 12585, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(PangoXftFont,0, 12585, 6)
+#elif __powerpc64__
+CheckTypeSize(PangoXftFont,0, 12585, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(PangoXftFont,0, 12585, 10)
+#elif __s390x__
+CheckTypeSize(PangoXftFont,0, 12585, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12585,0);
 Msg("Find size of PangoXftFont (12585)\n");
@@ -399,6 +443,14 @@ CheckTypeSize(PangoXftRendererPrivate,0, 12587, 2)
 CheckTypeSize(PangoXftRendererPrivate,0, 12587, 11)
 #elif __ia64__
 CheckTypeSize(PangoXftRendererPrivate,0, 12587, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(PangoXftRendererPrivate,0, 12587, 6)
+#elif __powerpc64__
+CheckTypeSize(PangoXftRendererPrivate,0, 12587, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(PangoXftRendererPrivate,0, 12587, 10)
+#elif __s390x__
+CheckTypeSize(PangoXftRendererPrivate,0, 12587, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12587,0);
 Msg("Find size of PangoXftRendererPrivate (12587)\n");
