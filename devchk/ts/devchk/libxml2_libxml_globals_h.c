@@ -172,6 +172,10 @@ printf("Checking data structures in libxml2/libxml/globals.h\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14916,0);
 Msg("Find size of fptr_globals_393 (14916)\n");
@@ -218,6 +222,10 @@ Msg("Find size of xmlOutputBufferCreateFilenameFunc * (14918)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14919,0);
 Msg("Find size of fptr_globals_411 (14919)\n");
@@ -245,6 +253,10 @@ Msg("Find size of xmlRegisterNodeFunc (14920)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14921,0);
 Msg("Find size of fptr_globals_491 (14921)\n");

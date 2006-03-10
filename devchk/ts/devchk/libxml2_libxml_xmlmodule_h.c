@@ -32,6 +32,14 @@ CheckTypeSize(xmlModule,0, 14544, 2)
 CheckTypeSize(xmlModule,0, 14544, 11)
 #elif __ia64__
 CheckTypeSize(xmlModule,0, 14544, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlModule,0, 14544, 6)
+#elif __powerpc64__
+CheckTypeSize(xmlModule,0, 14544, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlModule,0, 14544, 10)
+#elif __s390x__
+CheckTypeSize(xmlModule,0, 14544, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14544,0);
 Msg("Find size of xmlModule (14544)\n");
@@ -82,6 +90,18 @@ CheckEnum("XML_MODULE_LOCAL",XML_MODULE_LOCAL,2);
 CheckEnum("XML_MODULE_LAZY",XML_MODULE_LAZY,1);
 CheckEnum("XML_MODULE_LOCAL",XML_MODULE_LOCAL,2);
 #elif __ia64__
+CheckEnum("XML_MODULE_LAZY",XML_MODULE_LAZY,1);
+CheckEnum("XML_MODULE_LOCAL",XML_MODULE_LOCAL,2);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("XML_MODULE_LAZY",XML_MODULE_LAZY,1);
+CheckEnum("XML_MODULE_LOCAL",XML_MODULE_LOCAL,2);
+#elif __powerpc64__
+CheckEnum("XML_MODULE_LAZY",XML_MODULE_LAZY,1);
+CheckEnum("XML_MODULE_LOCAL",XML_MODULE_LOCAL,2);
+#elif __s390__ && !__s390x__
+CheckEnum("XML_MODULE_LAZY",XML_MODULE_LAZY,1);
+CheckEnum("XML_MODULE_LOCAL",XML_MODULE_LOCAL,2);
+#elif __s390x__
 CheckEnum("XML_MODULE_LAZY",XML_MODULE_LAZY,1);
 CheckEnum("XML_MODULE_LOCAL",XML_MODULE_LOCAL,2);
 #else

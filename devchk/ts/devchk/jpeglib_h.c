@@ -2186,6 +2186,10 @@ Msg("Find size of j_common_ptr (11255)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11256,0);
 Msg("Find size of fptr_jpeglib_528 (11256)\n");
@@ -2308,6 +2312,10 @@ Msg("Find size of JDIMENSION (11262)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11263,0);
 Msg("Find size of fptr_jpeglib_409 (11263)\n");
@@ -2433,6 +2441,10 @@ Msg("Find size of JBLOCKARRAY (11271)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11272,0);
 Msg("Find size of fptr_jpeglib_500 (11272)\n");
@@ -2498,6 +2510,10 @@ Msg("Find size of boolean (11276)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11277,0);
 Msg("Find size of fptr_jpeglib_750 (11277)\n");
@@ -2544,6 +2560,10 @@ Msg("Find size of jvirt_barray_ptr (11280)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11281,0);
 Msg("Find size of fptr_jpeglib_810 (11281)\n");
@@ -2552,6 +2572,10 @@ Msg("Find size of fptr_jpeglib_810 (11281)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11282,0);
 Msg("Find size of fptr_jpeglib_84 (11282)\n");
@@ -2560,6 +2584,10 @@ Msg("Find size of fptr_jpeglib_84 (11282)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11283,0);
 Msg("Find size of fptr_jpeglib_533 (11283)\n");
@@ -2568,6 +2596,10 @@ Msg("Find size of fptr_jpeglib_533 (11283)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11284,0);
 Msg("Find size of fptr_jpeglib_833 (11284)\n");
@@ -2576,6 +2608,10 @@ Msg("Find size of fptr_jpeglib_833 (11284)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11285,0);
 Msg("Find size of fptr_jpeglib_926 (11285)\n");
@@ -2697,6 +2733,10 @@ Msg("Find size of jpeg_progress_mgr * (11288)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11289,0);
 Msg("Find size of fptr_jpeglib_343 (11289)\n");
@@ -2711,6 +2751,10 @@ Msg("Find size of fptr_jpeglib_343 (11289)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11292,0);
 Msg("Find size of anon-jpeglib.h-202 (11292)\n");
@@ -2738,6 +2782,10 @@ Msg("Find size of const const char * (11293)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11294,0);
 Msg("Find size of const const char * * (11294)\n");
@@ -2887,6 +2935,10 @@ Msg("Find size of const JOCTET (11297)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11298,0);
 Msg("Find size of const JOCTET * (11298)\n");
@@ -2933,6 +2985,10 @@ Msg("Find size of j_decompress_ptr (11300)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11301,0);
 Msg("Find size of fptr_jpeglib_94 (11301)\n");
@@ -2941,6 +2997,10 @@ Msg("Find size of fptr_jpeglib_94 (11301)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11302,0);
 Msg("Find size of fptr_jpeglib_477 (11302)\n");
@@ -2949,6 +3009,10 @@ Msg("Find size of fptr_jpeglib_477 (11302)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11303,0);
 Msg("Find size of fptr_jpeglib_445 (11303)\n");
@@ -2957,6 +3021,10 @@ Msg("Find size of fptr_jpeglib_445 (11303)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11304,0);
 Msg("Find size of fptr_jpeglib_390 (11304)\n");
@@ -3002,6 +3070,34 @@ CheckEnum("JCS_RGB",JCS_RGB,2);
 CheckEnum("JCS_YCbCr",JCS_YCbCr,3);
 CheckEnum("JCS_CMYK",JCS_CMYK,4);
 CheckEnum("JCS_YCCK",JCS_YCCK,5);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("JCS_UNKNOWN",JCS_UNKNOWN,0);
+CheckEnum("JCS_GRAYSCALE",JCS_GRAYSCALE,1);
+CheckEnum("JCS_RGB",JCS_RGB,2);
+CheckEnum("JCS_YCbCr",JCS_YCbCr,3);
+CheckEnum("JCS_CMYK",JCS_CMYK,4);
+CheckEnum("JCS_YCCK",JCS_YCCK,5);
+#elif __powerpc64__
+CheckEnum("JCS_UNKNOWN",JCS_UNKNOWN,0);
+CheckEnum("JCS_GRAYSCALE",JCS_GRAYSCALE,1);
+CheckEnum("JCS_RGB",JCS_RGB,2);
+CheckEnum("JCS_YCbCr",JCS_YCbCr,3);
+CheckEnum("JCS_CMYK",JCS_CMYK,4);
+CheckEnum("JCS_YCCK",JCS_YCCK,5);
+#elif __s390__ && !__s390x__
+CheckEnum("JCS_UNKNOWN",JCS_UNKNOWN,0);
+CheckEnum("JCS_GRAYSCALE",JCS_GRAYSCALE,1);
+CheckEnum("JCS_RGB",JCS_RGB,2);
+CheckEnum("JCS_YCbCr",JCS_YCbCr,3);
+CheckEnum("JCS_CMYK",JCS_CMYK,4);
+CheckEnum("JCS_YCCK",JCS_YCCK,5);
+#elif __s390x__
+CheckEnum("JCS_UNKNOWN",JCS_UNKNOWN,0);
+CheckEnum("JCS_GRAYSCALE",JCS_GRAYSCALE,1);
+CheckEnum("JCS_RGB",JCS_RGB,2);
+CheckEnum("JCS_YCbCr",JCS_YCbCr,3);
+CheckEnum("JCS_CMYK",JCS_CMYK,4);
+CheckEnum("JCS_YCCK",JCS_YCCK,5);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11306,0);
 Msg("Find size of anon-jpeglib.h-199 (11306)\n");
@@ -3035,6 +3131,22 @@ CheckEnum("JDCT_ISLOW",JDCT_ISLOW,0);
 CheckEnum("JDCT_IFAST",JDCT_IFAST,1);
 CheckEnum("JDCT_FLOAT",JDCT_FLOAT,2);
 #elif __ia64__
+CheckEnum("JDCT_ISLOW",JDCT_ISLOW,0);
+CheckEnum("JDCT_IFAST",JDCT_IFAST,1);
+CheckEnum("JDCT_FLOAT",JDCT_FLOAT,2);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("JDCT_ISLOW",JDCT_ISLOW,0);
+CheckEnum("JDCT_IFAST",JDCT_IFAST,1);
+CheckEnum("JDCT_FLOAT",JDCT_FLOAT,2);
+#elif __powerpc64__
+CheckEnum("JDCT_ISLOW",JDCT_ISLOW,0);
+CheckEnum("JDCT_IFAST",JDCT_IFAST,1);
+CheckEnum("JDCT_FLOAT",JDCT_FLOAT,2);
+#elif __s390__ && !__s390x__
+CheckEnum("JDCT_ISLOW",JDCT_ISLOW,0);
+CheckEnum("JDCT_IFAST",JDCT_IFAST,1);
+CheckEnum("JDCT_FLOAT",JDCT_FLOAT,2);
+#elif __s390x__
 CheckEnum("JDCT_ISLOW",JDCT_ISLOW,0);
 CheckEnum("JDCT_IFAST",JDCT_IFAST,1);
 CheckEnum("JDCT_FLOAT",JDCT_FLOAT,2);
@@ -3074,6 +3186,22 @@ CheckEnum("JDITHER_FS",JDITHER_FS,2);
 CheckEnum("JDITHER_NONE",JDITHER_NONE,0);
 CheckEnum("JDITHER_ORDERED",JDITHER_ORDERED,1);
 CheckEnum("JDITHER_FS",JDITHER_FS,2);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("JDITHER_NONE",JDITHER_NONE,0);
+CheckEnum("JDITHER_ORDERED",JDITHER_ORDERED,1);
+CheckEnum("JDITHER_FS",JDITHER_FS,2);
+#elif __powerpc64__
+CheckEnum("JDITHER_NONE",JDITHER_NONE,0);
+CheckEnum("JDITHER_ORDERED",JDITHER_ORDERED,1);
+CheckEnum("JDITHER_FS",JDITHER_FS,2);
+#elif __s390__ && !__s390x__
+CheckEnum("JDITHER_NONE",JDITHER_NONE,0);
+CheckEnum("JDITHER_ORDERED",JDITHER_ORDERED,1);
+CheckEnum("JDITHER_FS",JDITHER_FS,2);
+#elif __s390x__
+CheckEnum("JDITHER_NONE",JDITHER_NONE,0);
+CheckEnum("JDITHER_ORDERED",JDITHER_ORDERED,1);
+CheckEnum("JDITHER_FS",JDITHER_FS,2);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11310,0);
 Msg("Find size of anon-jpeglib.h-201 (11310)\n");
@@ -3104,6 +3232,10 @@ Msg("Find size of J_DITHER_MODE (11311)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11313,0);
 Msg("Find size of int[64] * (11313)\n");
@@ -3134,6 +3266,10 @@ Msg("Find size of UINT16 (11314)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11316,0);
 Msg("Find size of anon-jpeglib.h-196 (11316)\n");
@@ -3208,6 +3344,10 @@ Msg("Find size of UINT8 (11320)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11323,0);
 Msg("Find size of anon-jpeglib.h-197 (11323)\n");
@@ -3257,6 +3397,10 @@ Msg("Find size of JHUFF_TBL * (11325)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11327,0);
 Msg("Find size of anon-jpeglib.h-198 (11327)\n");
@@ -4681,6 +4825,10 @@ Msg("Find size of j_compress_ptr (11362)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11363,0);
 Msg("Find size of fptr_jpeglib_804 (11363)\n");
@@ -4689,6 +4837,10 @@ Msg("Find size of fptr_jpeglib_804 (11363)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11364,0);
 Msg("Find size of fptr_jpeglib_230 (11364)\n");
@@ -4719,6 +4871,10 @@ Msg("Find size of jpeg_destination_mgr * (11365)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11367,0);
 Msg("Find size of anon-jpeglib.h-29 (11367)\n");
@@ -4765,6 +4921,10 @@ Msg("Find size of const jpeg_scan_info (11369)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11370,0);
 Msg("Find size of const jpeg_scan_info * (11370)\n");
@@ -5039,6 +5199,10 @@ Msg("Find size of jpeg_marker_parser_method (11393)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11394,0);
 Msg("Find size of const unsigned int (11394)\n");
@@ -5047,6 +5211,10 @@ Msg("Find size of const unsigned int (11394)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11395,0);
 Msg("Find size of const unsigned int * (11395)\n");

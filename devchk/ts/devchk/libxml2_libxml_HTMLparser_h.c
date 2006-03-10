@@ -56,6 +56,30 @@ CheckEnum("HTML_INVALID",HTML_INVALID,1);
 CheckEnum("HTML_DEPRECATED",HTML_DEPRECATED,2);
 CheckEnum("HTML_VALID",HTML_VALID,4);
 CheckEnum("HTML_REQUIRED",HTML_REQUIRED,12);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("HTML_NA",HTML_NA,0);
+CheckEnum("HTML_INVALID",HTML_INVALID,1);
+CheckEnum("HTML_DEPRECATED",HTML_DEPRECATED,2);
+CheckEnum("HTML_VALID",HTML_VALID,4);
+CheckEnum("HTML_REQUIRED",HTML_REQUIRED,12);
+#elif __powerpc64__
+CheckEnum("HTML_NA",HTML_NA,0);
+CheckEnum("HTML_INVALID",HTML_INVALID,1);
+CheckEnum("HTML_DEPRECATED",HTML_DEPRECATED,2);
+CheckEnum("HTML_VALID",HTML_VALID,4);
+CheckEnum("HTML_REQUIRED",HTML_REQUIRED,12);
+#elif __s390__ && !__s390x__
+CheckEnum("HTML_NA",HTML_NA,0);
+CheckEnum("HTML_INVALID",HTML_INVALID,1);
+CheckEnum("HTML_DEPRECATED",HTML_DEPRECATED,2);
+CheckEnum("HTML_VALID",HTML_VALID,4);
+CheckEnum("HTML_REQUIRED",HTML_REQUIRED,12);
+#elif __s390x__
+CheckEnum("HTML_NA",HTML_NA,0);
+CheckEnum("HTML_INVALID",HTML_INVALID,1);
+CheckEnum("HTML_DEPRECATED",HTML_DEPRECATED,2);
+CheckEnum("HTML_VALID",HTML_VALID,4);
+CheckEnum("HTML_REQUIRED",HTML_REQUIRED,12);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15002,0);
 Msg("Find size of anon-libxml2/libxml/HTMLparser.h-103 (15002)\n");
@@ -322,6 +346,10 @@ Msg("Find size of const htmlElemDesc (15006)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15007,0);
 Msg("Find size of const htmlElemDesc * (15007)\n");
@@ -472,6 +500,10 @@ Msg("Find size of const htmlEntityDesc (15013)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15014,0);
 Msg("Find size of const htmlEntityDesc * (15014)\n");
@@ -513,6 +545,38 @@ CheckEnum("HTML_PARSE_NOBLANKS",HTML_PARSE_NOBLANKS,1<<8);
 CheckEnum("HTML_PARSE_NONET",HTML_PARSE_NONET,1<<11);
 CheckEnum("HTML_PARSE_COMPACT",HTML_PARSE_COMPACT,1<<16);
 #elif __ia64__
+CheckEnum("HTML_PARSE_RECOVER",HTML_PARSE_RECOVER,1<<0);
+CheckEnum("HTML_PARSE_NOERROR",HTML_PARSE_NOERROR,1<<5);
+CheckEnum("HTML_PARSE_NOWARNING",HTML_PARSE_NOWARNING,1<<6);
+CheckEnum("HTML_PARSE_PEDANTIC",HTML_PARSE_PEDANTIC,1<<7);
+CheckEnum("HTML_PARSE_NOBLANKS",HTML_PARSE_NOBLANKS,1<<8);
+CheckEnum("HTML_PARSE_NONET",HTML_PARSE_NONET,1<<11);
+CheckEnum("HTML_PARSE_COMPACT",HTML_PARSE_COMPACT,1<<16);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("HTML_PARSE_RECOVER",HTML_PARSE_RECOVER,1<<0);
+CheckEnum("HTML_PARSE_NOERROR",HTML_PARSE_NOERROR,1<<5);
+CheckEnum("HTML_PARSE_NOWARNING",HTML_PARSE_NOWARNING,1<<6);
+CheckEnum("HTML_PARSE_PEDANTIC",HTML_PARSE_PEDANTIC,1<<7);
+CheckEnum("HTML_PARSE_NOBLANKS",HTML_PARSE_NOBLANKS,1<<8);
+CheckEnum("HTML_PARSE_NONET",HTML_PARSE_NONET,1<<11);
+CheckEnum("HTML_PARSE_COMPACT",HTML_PARSE_COMPACT,1<<16);
+#elif __powerpc64__
+CheckEnum("HTML_PARSE_RECOVER",HTML_PARSE_RECOVER,1<<0);
+CheckEnum("HTML_PARSE_NOERROR",HTML_PARSE_NOERROR,1<<5);
+CheckEnum("HTML_PARSE_NOWARNING",HTML_PARSE_NOWARNING,1<<6);
+CheckEnum("HTML_PARSE_PEDANTIC",HTML_PARSE_PEDANTIC,1<<7);
+CheckEnum("HTML_PARSE_NOBLANKS",HTML_PARSE_NOBLANKS,1<<8);
+CheckEnum("HTML_PARSE_NONET",HTML_PARSE_NONET,1<<11);
+CheckEnum("HTML_PARSE_COMPACT",HTML_PARSE_COMPACT,1<<16);
+#elif __s390__ && !__s390x__
+CheckEnum("HTML_PARSE_RECOVER",HTML_PARSE_RECOVER,1<<0);
+CheckEnum("HTML_PARSE_NOERROR",HTML_PARSE_NOERROR,1<<5);
+CheckEnum("HTML_PARSE_NOWARNING",HTML_PARSE_NOWARNING,1<<6);
+CheckEnum("HTML_PARSE_PEDANTIC",HTML_PARSE_PEDANTIC,1<<7);
+CheckEnum("HTML_PARSE_NOBLANKS",HTML_PARSE_NOBLANKS,1<<8);
+CheckEnum("HTML_PARSE_NONET",HTML_PARSE_NONET,1<<11);
+CheckEnum("HTML_PARSE_COMPACT",HTML_PARSE_COMPACT,1<<16);
+#elif __s390x__
 CheckEnum("HTML_PARSE_RECOVER",HTML_PARSE_RECOVER,1<<0);
 CheckEnum("HTML_PARSE_NOERROR",HTML_PARSE_NOERROR,1<<5);
 CheckEnum("HTML_PARSE_NOWARNING",HTML_PARSE_NOWARNING,1<<6);

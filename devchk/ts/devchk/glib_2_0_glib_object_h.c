@@ -1237,6 +1237,10 @@ Msg("Find size of gfloat (11843)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11844,0);
 Msg("Find size of anon-glib-2.0/glib-object.h-12 (11844)\n");
@@ -1286,6 +1290,10 @@ Msg("Find size of const GValue (11847)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11848,0);
 Msg("Find size of const GValue * (11848)\n");
@@ -1470,6 +1478,34 @@ CheckEnum("G_PARAM_CONSTRUCT_ONLY",G_PARAM_CONSTRUCT_ONLY,8);
 CheckEnum("G_PARAM_LAX_VALIDATION",G_PARAM_LAX_VALIDATION,16);
 CheckEnum("G_PARAM_PRIVATE",G_PARAM_PRIVATE,32);
 #elif __ia64__
+CheckEnum("G_PARAM_READABLE",G_PARAM_READABLE,1);
+CheckEnum("G_PARAM_WRITABLE",G_PARAM_WRITABLE,2);
+CheckEnum("G_PARAM_CONSTRUCT",G_PARAM_CONSTRUCT,4);
+CheckEnum("G_PARAM_CONSTRUCT_ONLY",G_PARAM_CONSTRUCT_ONLY,8);
+CheckEnum("G_PARAM_LAX_VALIDATION",G_PARAM_LAX_VALIDATION,16);
+CheckEnum("G_PARAM_PRIVATE",G_PARAM_PRIVATE,32);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("G_PARAM_READABLE",G_PARAM_READABLE,1);
+CheckEnum("G_PARAM_WRITABLE",G_PARAM_WRITABLE,2);
+CheckEnum("G_PARAM_CONSTRUCT",G_PARAM_CONSTRUCT,4);
+CheckEnum("G_PARAM_CONSTRUCT_ONLY",G_PARAM_CONSTRUCT_ONLY,8);
+CheckEnum("G_PARAM_LAX_VALIDATION",G_PARAM_LAX_VALIDATION,16);
+CheckEnum("G_PARAM_PRIVATE",G_PARAM_PRIVATE,32);
+#elif __powerpc64__
+CheckEnum("G_PARAM_READABLE",G_PARAM_READABLE,1);
+CheckEnum("G_PARAM_WRITABLE",G_PARAM_WRITABLE,2);
+CheckEnum("G_PARAM_CONSTRUCT",G_PARAM_CONSTRUCT,4);
+CheckEnum("G_PARAM_CONSTRUCT_ONLY",G_PARAM_CONSTRUCT_ONLY,8);
+CheckEnum("G_PARAM_LAX_VALIDATION",G_PARAM_LAX_VALIDATION,16);
+CheckEnum("G_PARAM_PRIVATE",G_PARAM_PRIVATE,32);
+#elif __s390__ && !__s390x__
+CheckEnum("G_PARAM_READABLE",G_PARAM_READABLE,1);
+CheckEnum("G_PARAM_WRITABLE",G_PARAM_WRITABLE,2);
+CheckEnum("G_PARAM_CONSTRUCT",G_PARAM_CONSTRUCT,4);
+CheckEnum("G_PARAM_CONSTRUCT_ONLY",G_PARAM_CONSTRUCT_ONLY,8);
+CheckEnum("G_PARAM_LAX_VALIDATION",G_PARAM_LAX_VALIDATION,16);
+CheckEnum("G_PARAM_PRIVATE",G_PARAM_PRIVATE,32);
+#elif __s390x__
 CheckEnum("G_PARAM_READABLE",G_PARAM_READABLE,1);
 CheckEnum("G_PARAM_WRITABLE",G_PARAM_WRITABLE,2);
 CheckEnum("G_PARAM_CONSTRUCT",G_PARAM_CONSTRUCT,4);
@@ -1757,6 +1793,10 @@ Msg("Find size of GObjectConstructParam * (11858)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11859,0);
 Msg("Find size of fptr_glib-object_75 (11859)\n");
@@ -1765,6 +1805,10 @@ Msg("Find size of fptr_glib-object_75 (11859)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11860,0);
 Msg("Find size of fptr_glib-object_99 (11860)\n");
@@ -1773,6 +1817,10 @@ Msg("Find size of fptr_glib-object_99 (11860)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11861,0);
 Msg("Find size of fptr_glib-object_62 (11861)\n");
@@ -1781,6 +1829,10 @@ Msg("Find size of fptr_glib-object_62 (11861)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11862,0);
 Msg("Find size of fptr_glib-object_74 (11862)\n");
@@ -1789,6 +1841,10 @@ Msg("Find size of fptr_glib-object_74 (11862)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11863,0);
 Msg("Find size of GParamSpec * * (11863)\n");
@@ -1797,6 +1853,10 @@ Msg("Find size of GParamSpec * * (11863)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11864,0);
 Msg("Find size of fptr_glib-object_66 (11864)\n");
@@ -1805,6 +1865,10 @@ Msg("Find size of fptr_glib-object_66 (11864)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11865,0);
 Msg("Find size of fptr_glib-object_90 (11865)\n");
@@ -1953,6 +2017,10 @@ Msg("Find size of GClosure * (11871)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11872,0);
 Msg("Find size of fptr_glib-object_71 (11872)\n");
@@ -1994,6 +2062,10 @@ Msg("Find size of _GClosureNotifyData (11873)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11874,0);
 Msg("Find size of fptr_glib-object_211 (11874)\n");
@@ -2364,6 +2436,14 @@ CheckTypeSize(GParamSpecPool,0, 11889, 2)
 CheckTypeSize(GParamSpecPool,0, 11889, 11)
 #elif __ia64__
 CheckTypeSize(GParamSpecPool,0, 11889, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GParamSpecPool,0, 11889, 6)
+#elif __powerpc64__
+CheckTypeSize(GParamSpecPool,0, 11889, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(GParamSpecPool,0, 11889, 10)
+#elif __s390x__
+CheckTypeSize(GParamSpecPool,0, 11889, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11889,0);
 Msg("Find size of GParamSpecPool (11889)\n");
@@ -2399,6 +2479,26 @@ CheckEnum("G_TYPE_DEBUG_OBJECTS",G_TYPE_DEBUG_OBJECTS,1);
 CheckEnum("G_TYPE_DEBUG_SIGNALS",G_TYPE_DEBUG_SIGNALS,2);
 CheckEnum("G_TYPE_DEBUG_MASK",G_TYPE_DEBUG_MASK,3);
 #elif __ia64__
+CheckEnum("G_TYPE_DEBUG_NONE",G_TYPE_DEBUG_NONE,0);
+CheckEnum("G_TYPE_DEBUG_OBJECTS",G_TYPE_DEBUG_OBJECTS,1);
+CheckEnum("G_TYPE_DEBUG_SIGNALS",G_TYPE_DEBUG_SIGNALS,2);
+CheckEnum("G_TYPE_DEBUG_MASK",G_TYPE_DEBUG_MASK,3);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("G_TYPE_DEBUG_NONE",G_TYPE_DEBUG_NONE,0);
+CheckEnum("G_TYPE_DEBUG_OBJECTS",G_TYPE_DEBUG_OBJECTS,1);
+CheckEnum("G_TYPE_DEBUG_SIGNALS",G_TYPE_DEBUG_SIGNALS,2);
+CheckEnum("G_TYPE_DEBUG_MASK",G_TYPE_DEBUG_MASK,3);
+#elif __powerpc64__
+CheckEnum("G_TYPE_DEBUG_NONE",G_TYPE_DEBUG_NONE,0);
+CheckEnum("G_TYPE_DEBUG_OBJECTS",G_TYPE_DEBUG_OBJECTS,1);
+CheckEnum("G_TYPE_DEBUG_SIGNALS",G_TYPE_DEBUG_SIGNALS,2);
+CheckEnum("G_TYPE_DEBUG_MASK",G_TYPE_DEBUG_MASK,3);
+#elif __s390__ && !__s390x__
+CheckEnum("G_TYPE_DEBUG_NONE",G_TYPE_DEBUG_NONE,0);
+CheckEnum("G_TYPE_DEBUG_OBJECTS",G_TYPE_DEBUG_OBJECTS,1);
+CheckEnum("G_TYPE_DEBUG_SIGNALS",G_TYPE_DEBUG_SIGNALS,2);
+CheckEnum("G_TYPE_DEBUG_MASK",G_TYPE_DEBUG_MASK,3);
+#elif __s390x__
 CheckEnum("G_TYPE_DEBUG_NONE",G_TYPE_DEBUG_NONE,0);
 CheckEnum("G_TYPE_DEBUG_OBJECTS",G_TYPE_DEBUG_OBJECTS,1);
 CheckEnum("G_TYPE_DEBUG_SIGNALS",G_TYPE_DEBUG_SIGNALS,2);
@@ -2487,6 +2587,10 @@ Msg("Find size of const GValueArray (11895)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11896,0);
 Msg("Find size of const GValueArray * (11896)\n");
@@ -2517,6 +2621,14 @@ CheckTypeSize(GTypePlugin,0, 11899, 2)
 CheckTypeSize(GTypePlugin,0, 11899, 11)
 #elif __ia64__
 CheckTypeSize(GTypePlugin,0, 11899, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GTypePlugin,0, 11899, 6)
+#elif __powerpc64__
+CheckTypeSize(GTypePlugin,0, 11899, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(GTypePlugin,0, 11899, 10)
+#elif __s390x__
+CheckTypeSize(GTypePlugin,0, 11899, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11899,0);
 Msg("Find size of GTypePlugin (11899)\n");
@@ -2582,6 +2694,10 @@ Msg("Find size of const GEnumValue (11902)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11903,0);
 Msg("Find size of const GEnumValue * (11903)\n");
@@ -2602,6 +2718,34 @@ CheckEnum("G_SIGNAL_MATCH_FUNC",G_SIGNAL_MATCH_FUNC,8);
 CheckEnum("G_SIGNAL_MATCH_DATA",G_SIGNAL_MATCH_DATA,16);
 CheckEnum("G_SIGNAL_MATCH_UNBLOCKED",G_SIGNAL_MATCH_UNBLOCKED,32);
 #elif __ia64__
+CheckEnum("G_SIGNAL_MATCH_ID",G_SIGNAL_MATCH_ID,1);
+CheckEnum("G_SIGNAL_MATCH_DETAIL",G_SIGNAL_MATCH_DETAIL,2);
+CheckEnum("G_SIGNAL_MATCH_CLOSURE",G_SIGNAL_MATCH_CLOSURE,4);
+CheckEnum("G_SIGNAL_MATCH_FUNC",G_SIGNAL_MATCH_FUNC,8);
+CheckEnum("G_SIGNAL_MATCH_DATA",G_SIGNAL_MATCH_DATA,16);
+CheckEnum("G_SIGNAL_MATCH_UNBLOCKED",G_SIGNAL_MATCH_UNBLOCKED,32);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("G_SIGNAL_MATCH_ID",G_SIGNAL_MATCH_ID,1);
+CheckEnum("G_SIGNAL_MATCH_DETAIL",G_SIGNAL_MATCH_DETAIL,2);
+CheckEnum("G_SIGNAL_MATCH_CLOSURE",G_SIGNAL_MATCH_CLOSURE,4);
+CheckEnum("G_SIGNAL_MATCH_FUNC",G_SIGNAL_MATCH_FUNC,8);
+CheckEnum("G_SIGNAL_MATCH_DATA",G_SIGNAL_MATCH_DATA,16);
+CheckEnum("G_SIGNAL_MATCH_UNBLOCKED",G_SIGNAL_MATCH_UNBLOCKED,32);
+#elif __powerpc64__
+CheckEnum("G_SIGNAL_MATCH_ID",G_SIGNAL_MATCH_ID,1);
+CheckEnum("G_SIGNAL_MATCH_DETAIL",G_SIGNAL_MATCH_DETAIL,2);
+CheckEnum("G_SIGNAL_MATCH_CLOSURE",G_SIGNAL_MATCH_CLOSURE,4);
+CheckEnum("G_SIGNAL_MATCH_FUNC",G_SIGNAL_MATCH_FUNC,8);
+CheckEnum("G_SIGNAL_MATCH_DATA",G_SIGNAL_MATCH_DATA,16);
+CheckEnum("G_SIGNAL_MATCH_UNBLOCKED",G_SIGNAL_MATCH_UNBLOCKED,32);
+#elif __s390__ && !__s390x__
+CheckEnum("G_SIGNAL_MATCH_ID",G_SIGNAL_MATCH_ID,1);
+CheckEnum("G_SIGNAL_MATCH_DETAIL",G_SIGNAL_MATCH_DETAIL,2);
+CheckEnum("G_SIGNAL_MATCH_CLOSURE",G_SIGNAL_MATCH_CLOSURE,4);
+CheckEnum("G_SIGNAL_MATCH_FUNC",G_SIGNAL_MATCH_FUNC,8);
+CheckEnum("G_SIGNAL_MATCH_DATA",G_SIGNAL_MATCH_DATA,16);
+CheckEnum("G_SIGNAL_MATCH_UNBLOCKED",G_SIGNAL_MATCH_UNBLOCKED,32);
+#elif __s390x__
 CheckEnum("G_SIGNAL_MATCH_ID",G_SIGNAL_MATCH_ID,1);
 CheckEnum("G_SIGNAL_MATCH_DETAIL",G_SIGNAL_MATCH_DETAIL,2);
 CheckEnum("G_SIGNAL_MATCH_CLOSURE",G_SIGNAL_MATCH_CLOSURE,4);
@@ -2720,6 +2864,10 @@ Msg("Find size of const GFlagsValue (11908)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11909,0);
 Msg("Find size of const GFlagsValue * (11909)\n");
@@ -2884,6 +3032,10 @@ Msg("Find size of GFlagsClass * (11915)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11916,0);
 Msg("Find size of fptr_glib-object_91 (11916)\n");
@@ -2979,6 +3131,38 @@ CheckEnum("G_SIGNAL_NO_RECURSE",G_SIGNAL_NO_RECURSE,8);
 CheckEnum("G_SIGNAL_DETAILED",G_SIGNAL_DETAILED,16);
 CheckEnum("G_SIGNAL_ACTION",G_SIGNAL_ACTION,32);
 CheckEnum("G_SIGNAL_NO_HOOKS",G_SIGNAL_NO_HOOKS,64);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("G_SIGNAL_RUN_FIRST",G_SIGNAL_RUN_FIRST,1);
+CheckEnum("G_SIGNAL_RUN_LAST",G_SIGNAL_RUN_LAST,2);
+CheckEnum("G_SIGNAL_RUN_CLEANUP",G_SIGNAL_RUN_CLEANUP,4);
+CheckEnum("G_SIGNAL_NO_RECURSE",G_SIGNAL_NO_RECURSE,8);
+CheckEnum("G_SIGNAL_DETAILED",G_SIGNAL_DETAILED,16);
+CheckEnum("G_SIGNAL_ACTION",G_SIGNAL_ACTION,32);
+CheckEnum("G_SIGNAL_NO_HOOKS",G_SIGNAL_NO_HOOKS,64);
+#elif __powerpc64__
+CheckEnum("G_SIGNAL_RUN_FIRST",G_SIGNAL_RUN_FIRST,1);
+CheckEnum("G_SIGNAL_RUN_LAST",G_SIGNAL_RUN_LAST,2);
+CheckEnum("G_SIGNAL_RUN_CLEANUP",G_SIGNAL_RUN_CLEANUP,4);
+CheckEnum("G_SIGNAL_NO_RECURSE",G_SIGNAL_NO_RECURSE,8);
+CheckEnum("G_SIGNAL_DETAILED",G_SIGNAL_DETAILED,16);
+CheckEnum("G_SIGNAL_ACTION",G_SIGNAL_ACTION,32);
+CheckEnum("G_SIGNAL_NO_HOOKS",G_SIGNAL_NO_HOOKS,64);
+#elif __s390__ && !__s390x__
+CheckEnum("G_SIGNAL_RUN_FIRST",G_SIGNAL_RUN_FIRST,1);
+CheckEnum("G_SIGNAL_RUN_LAST",G_SIGNAL_RUN_LAST,2);
+CheckEnum("G_SIGNAL_RUN_CLEANUP",G_SIGNAL_RUN_CLEANUP,4);
+CheckEnum("G_SIGNAL_NO_RECURSE",G_SIGNAL_NO_RECURSE,8);
+CheckEnum("G_SIGNAL_DETAILED",G_SIGNAL_DETAILED,16);
+CheckEnum("G_SIGNAL_ACTION",G_SIGNAL_ACTION,32);
+CheckEnum("G_SIGNAL_NO_HOOKS",G_SIGNAL_NO_HOOKS,64);
+#elif __s390x__
+CheckEnum("G_SIGNAL_RUN_FIRST",G_SIGNAL_RUN_FIRST,1);
+CheckEnum("G_SIGNAL_RUN_LAST",G_SIGNAL_RUN_LAST,2);
+CheckEnum("G_SIGNAL_RUN_CLEANUP",G_SIGNAL_RUN_CLEANUP,4);
+CheckEnum("G_SIGNAL_NO_RECURSE",G_SIGNAL_NO_RECURSE,8);
+CheckEnum("G_SIGNAL_DETAILED",G_SIGNAL_DETAILED,16);
+CheckEnum("G_SIGNAL_ACTION",G_SIGNAL_ACTION,32);
+CheckEnum("G_SIGNAL_NO_HOOKS",G_SIGNAL_NO_HOOKS,64);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11919,0);
 Msg("Find size of anon-glib-2.0/glib-object.h-30 (11919)\n");
@@ -3044,6 +3228,10 @@ Msg("Find size of GSignalInvocationHint * (11922)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11923,0);
 Msg("Find size of fptr_glib-object_174 (11923)\n");
@@ -3292,6 +3480,10 @@ Msg("Find size of GClassFinalizeFunc (11929)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11930,0);
 Msg("Find size of fptr_glib-object_142 (11930)\n");
@@ -3436,6 +3628,10 @@ Msg("Find size of _GTypeValueTable (11932)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11933,0);
 Msg("Find size of fptr_glib-object_32 (11933)\n");
@@ -3444,6 +3640,10 @@ Msg("Find size of fptr_glib-object_32 (11933)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11934,0);
 Msg("Find size of fptr_glib-object_175 (11934)\n");
@@ -3452,6 +3652,10 @@ Msg("Find size of fptr_glib-object_175 (11934)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11935,0);
 Msg("Find size of fptr_glib-object_96 (11935)\n");
@@ -3463,6 +3667,14 @@ CheckTypeSize(GTypeCValue,0, 11937, 2)
 CheckTypeSize(GTypeCValue,0, 11937, 11)
 #elif __ia64__
 CheckTypeSize(GTypeCValue,0, 11937, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GTypeCValue,0, 11937, 6)
+#elif __powerpc64__
+CheckTypeSize(GTypeCValue,0, 11937, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(GTypeCValue,0, 11937, 10)
+#elif __s390x__
+CheckTypeSize(GTypeCValue,0, 11937, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11937,0);
 Msg("Find size of GTypeCValue (11937)\n");
@@ -3490,6 +3702,10 @@ Msg("Find size of GTypeCValue * (11938)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11939,0);
 Msg("Find size of fptr_glib-object_197 (11939)\n");
@@ -3498,6 +3714,10 @@ Msg("Find size of fptr_glib-object_197 (11939)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11940,0);
 Msg("Find size of fptr_glib-object_196 (11940)\n");
@@ -3544,6 +3764,10 @@ Msg("Find size of const GTypeValueTable (11942)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11943,0);
 Msg("Find size of const GTypeValueTable * (11943)\n");
@@ -3590,6 +3814,10 @@ Msg("Find size of const GTypeInfo (11945)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11946,0);
 Msg("Find size of const GTypeInfo * (11946)\n");
@@ -3602,6 +3830,18 @@ CheckEnum("G_TYPE_FLAG_VALUE_ABSTRACT",G_TYPE_FLAG_VALUE_ABSTRACT,32);
 CheckEnum("G_TYPE_FLAG_ABSTRACT",G_TYPE_FLAG_ABSTRACT,16);
 CheckEnum("G_TYPE_FLAG_VALUE_ABSTRACT",G_TYPE_FLAG_VALUE_ABSTRACT,32);
 #elif __ia64__
+CheckEnum("G_TYPE_FLAG_ABSTRACT",G_TYPE_FLAG_ABSTRACT,16);
+CheckEnum("G_TYPE_FLAG_VALUE_ABSTRACT",G_TYPE_FLAG_VALUE_ABSTRACT,32);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("G_TYPE_FLAG_ABSTRACT",G_TYPE_FLAG_ABSTRACT,16);
+CheckEnum("G_TYPE_FLAG_VALUE_ABSTRACT",G_TYPE_FLAG_VALUE_ABSTRACT,32);
+#elif __powerpc64__
+CheckEnum("G_TYPE_FLAG_ABSTRACT",G_TYPE_FLAG_ABSTRACT,16);
+CheckEnum("G_TYPE_FLAG_VALUE_ABSTRACT",G_TYPE_FLAG_VALUE_ABSTRACT,32);
+#elif __s390__ && !__s390x__
+CheckEnum("G_TYPE_FLAG_ABSTRACT",G_TYPE_FLAG_ABSTRACT,16);
+CheckEnum("G_TYPE_FLAG_VALUE_ABSTRACT",G_TYPE_FLAG_VALUE_ABSTRACT,32);
+#elif __s390x__
 CheckEnum("G_TYPE_FLAG_ABSTRACT",G_TYPE_FLAG_ABSTRACT,16);
 CheckEnum("G_TYPE_FLAG_VALUE_ABSTRACT",G_TYPE_FLAG_VALUE_ABSTRACT,32);
 #else
@@ -3905,6 +4145,10 @@ Msg("Find size of GInterfaceInfo * (11958)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11959,0);
 Msg("Find size of fptr_glib-object_115 (11959)\n");
@@ -3955,6 +4199,18 @@ CheckEnum("G_CONNECT_SWAPPED",G_CONNECT_SWAPPED,2);
 CheckEnum("G_CONNECT_AFTER",G_CONNECT_AFTER,1);
 CheckEnum("G_CONNECT_SWAPPED",G_CONNECT_SWAPPED,2);
 #elif __ia64__
+CheckEnum("G_CONNECT_AFTER",G_CONNECT_AFTER,1);
+CheckEnum("G_CONNECT_SWAPPED",G_CONNECT_SWAPPED,2);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("G_CONNECT_AFTER",G_CONNECT_AFTER,1);
+CheckEnum("G_CONNECT_SWAPPED",G_CONNECT_SWAPPED,2);
+#elif __powerpc64__
+CheckEnum("G_CONNECT_AFTER",G_CONNECT_AFTER,1);
+CheckEnum("G_CONNECT_SWAPPED",G_CONNECT_SWAPPED,2);
+#elif __s390__ && !__s390x__
+CheckEnum("G_CONNECT_AFTER",G_CONNECT_AFTER,1);
+CheckEnum("G_CONNECT_SWAPPED",G_CONNECT_SWAPPED,2);
+#elif __s390x__
 CheckEnum("G_CONNECT_AFTER",G_CONNECT_AFTER,1);
 CheckEnum("G_CONNECT_SWAPPED",G_CONNECT_SWAPPED,2);
 #else
@@ -4029,6 +4285,26 @@ CheckEnum("G_TYPE_FLAG_CLASSED",G_TYPE_FLAG_CLASSED,1);
 CheckEnum("G_TYPE_FLAG_INSTANTIATABLE",G_TYPE_FLAG_INSTANTIATABLE,2);
 CheckEnum("G_TYPE_FLAG_DERIVABLE",G_TYPE_FLAG_DERIVABLE,4);
 CheckEnum("G_TYPE_FLAG_DEEP_DERIVABLE",G_TYPE_FLAG_DEEP_DERIVABLE,8);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("G_TYPE_FLAG_CLASSED",G_TYPE_FLAG_CLASSED,1);
+CheckEnum("G_TYPE_FLAG_INSTANTIATABLE",G_TYPE_FLAG_INSTANTIATABLE,2);
+CheckEnum("G_TYPE_FLAG_DERIVABLE",G_TYPE_FLAG_DERIVABLE,4);
+CheckEnum("G_TYPE_FLAG_DEEP_DERIVABLE",G_TYPE_FLAG_DEEP_DERIVABLE,8);
+#elif __powerpc64__
+CheckEnum("G_TYPE_FLAG_CLASSED",G_TYPE_FLAG_CLASSED,1);
+CheckEnum("G_TYPE_FLAG_INSTANTIATABLE",G_TYPE_FLAG_INSTANTIATABLE,2);
+CheckEnum("G_TYPE_FLAG_DERIVABLE",G_TYPE_FLAG_DERIVABLE,4);
+CheckEnum("G_TYPE_FLAG_DEEP_DERIVABLE",G_TYPE_FLAG_DEEP_DERIVABLE,8);
+#elif __s390__ && !__s390x__
+CheckEnum("G_TYPE_FLAG_CLASSED",G_TYPE_FLAG_CLASSED,1);
+CheckEnum("G_TYPE_FLAG_INSTANTIATABLE",G_TYPE_FLAG_INSTANTIATABLE,2);
+CheckEnum("G_TYPE_FLAG_DERIVABLE",G_TYPE_FLAG_DERIVABLE,4);
+CheckEnum("G_TYPE_FLAG_DEEP_DERIVABLE",G_TYPE_FLAG_DEEP_DERIVABLE,8);
+#elif __s390x__
+CheckEnum("G_TYPE_FLAG_CLASSED",G_TYPE_FLAG_CLASSED,1);
+CheckEnum("G_TYPE_FLAG_INSTANTIATABLE",G_TYPE_FLAG_INSTANTIATABLE,2);
+CheckEnum("G_TYPE_FLAG_DERIVABLE",G_TYPE_FLAG_DERIVABLE,4);
+CheckEnum("G_TYPE_FLAG_DEEP_DERIVABLE",G_TYPE_FLAG_DEEP_DERIVABLE,8);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11965,0);
 Msg("Find size of anon-glib-2.0/glib-object.h-48 (11965)\n");
@@ -4094,6 +4370,10 @@ Msg("Find size of const GTypeFundamentalInfo (11968)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11969,0);
 Msg("Find size of const GTypeFundamentalInfo * (11969)\n");
@@ -4201,6 +4481,10 @@ Msg("Find size of GTypeQuery * (11972)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11973,0);
 Msg("Find size of fptr_glib-object_22 (11973)\n");
@@ -4435,6 +4719,10 @@ Msg("Find size of _GParamSpecTypeInfo (11979)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11980,0);
 Msg("Find size of fptr_glib-object_15 (11980)\n");
@@ -4443,6 +4731,10 @@ Msg("Find size of fptr_glib-object_15 (11980)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11981,0);
 Msg("Find size of fptr_glib-object_145 (11981)\n");
@@ -4451,6 +4743,10 @@ Msg("Find size of fptr_glib-object_145 (11981)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11982,0);
 Msg("Find size of fptr_glib-object_57 (11982)\n");
@@ -4459,6 +4755,10 @@ Msg("Find size of fptr_glib-object_57 (11982)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11983,0);
 Msg("Find size of fptr_glib-object_31 (11983)\n");
@@ -4505,6 +4805,10 @@ Msg("Find size of const GParamSpecTypeInfo (11985)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11986,0);
 Msg("Find size of const GParamSpecTypeInfo * (11986)\n");
@@ -4532,6 +4836,10 @@ Msg("Find size of const GInterfaceInfo (11987)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11988,0);
 Msg("Find size of const GInterfaceInfo * (11988)\n");
@@ -4700,6 +5008,10 @@ Msg("Find size of const GType (11992)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11993,0);
 Msg("Find size of const GType * (11993)\n");
@@ -4798,6 +5110,10 @@ Msg("Find size of GTypeInterface (11997)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11998,0);
 Msg("Find size of fptr_glib-object_33 (11998)\n");
@@ -4877,6 +5193,10 @@ Msg("Find size of GParamSpecObject (12001)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12002,0);
 Msg("Find size of fptr_glib-object_165 (12002)\n");
@@ -4998,6 +5318,10 @@ Msg("Find size of GTypePluginUse (12005)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12006,0);
 Msg("Find size of fptr_glib-object_30 (12006)\n");
@@ -6384,6 +6708,10 @@ Msg("Find size of _GTypeModuleClass (12044)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12045,0);
 Msg("Find size of fptr_glib-object_55 (12045)\n");
@@ -6392,6 +6720,10 @@ Msg("Find size of fptr_glib-object_55 (12045)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12046,0);
 Msg("Find size of fptr_glib-object_81 (12046)\n");
@@ -6791,6 +7123,10 @@ Msg("Find size of GParamSpecBoolean (12057)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12058,0);
 Msg("Find size of fptr_anonymous-glib-object.h.types-0 (12058)\n");
@@ -6818,6 +7154,10 @@ Msg("Find size of GObjectFinalizeFunc (12059)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12060,0);
 Msg("Find size of fptr_anonymous-glib-object.h.types-2 (12060)\n");
@@ -6845,6 +7185,10 @@ Msg("Find size of GObjectGetPropertyFunc (12061)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12062,0);
 Msg("Find size of fptr_anonymous-glib-object.h.types-4 (12062)\n");

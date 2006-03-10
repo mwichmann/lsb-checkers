@@ -47,6 +47,14 @@ CheckTypeSize(GModule,0, 12066, 2)
 CheckTypeSize(GModule,0, 12066, 11)
 #elif __ia64__
 CheckTypeSize(GModule,0, 12066, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GModule,0, 12066, 6)
+#elif __powerpc64__
+CheckTypeSize(GModule,0, 12066, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(GModule,0, 12066, 10)
+#elif __s390x__
+CheckTypeSize(GModule,0, 12066, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12066,0);
 Msg("Find size of GModule (12066)\n");
@@ -83,6 +91,22 @@ CheckEnum("G_MODULE_BIND_MASK",G_MODULE_BIND_MASK,3);
 CheckEnum("G_MODULE_BIND_LAZY",G_MODULE_BIND_LAZY,1);
 CheckEnum("G_MODULE_BIND_LOCAL",G_MODULE_BIND_LOCAL,2);
 CheckEnum("G_MODULE_BIND_MASK",G_MODULE_BIND_MASK,3);
+#elif __powerpc__ && !__powerpc64__
+CheckEnum("G_MODULE_BIND_LAZY",G_MODULE_BIND_LAZY,1);
+CheckEnum("G_MODULE_BIND_LOCAL",G_MODULE_BIND_LOCAL,2);
+CheckEnum("G_MODULE_BIND_MASK",G_MODULE_BIND_MASK,3);
+#elif __powerpc64__
+CheckEnum("G_MODULE_BIND_LAZY",G_MODULE_BIND_LAZY,1);
+CheckEnum("G_MODULE_BIND_LOCAL",G_MODULE_BIND_LOCAL,2);
+CheckEnum("G_MODULE_BIND_MASK",G_MODULE_BIND_MASK,3);
+#elif __s390__ && !__s390x__
+CheckEnum("G_MODULE_BIND_LAZY",G_MODULE_BIND_LAZY,1);
+CheckEnum("G_MODULE_BIND_LOCAL",G_MODULE_BIND_LOCAL,2);
+CheckEnum("G_MODULE_BIND_MASK",G_MODULE_BIND_MASK,3);
+#elif __s390x__
+CheckEnum("G_MODULE_BIND_LAZY",G_MODULE_BIND_LAZY,1);
+CheckEnum("G_MODULE_BIND_LOCAL",G_MODULE_BIND_LOCAL,2);
+CheckEnum("G_MODULE_BIND_MASK",G_MODULE_BIND_MASK,3);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12068,0);
 Msg("Find size of anon-glib-2.0/gmodule.h-2 (12068)\n");
@@ -110,6 +134,10 @@ Msg("Find size of GModuleFlags (12069)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12070,0);
 Msg("Find size of fptr_gmodule_1 (12070)\n");
@@ -137,6 +165,10 @@ Msg("Find size of GModuleUnload (12071)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12072,0);
 Msg("Find size of fptr_gmodule_2 (12072)\n");

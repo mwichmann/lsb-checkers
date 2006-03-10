@@ -137,6 +137,10 @@ Msg("Find size of PangoFcDecoder * (12598)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12599,0);
 Msg("Find size of fptr_anonymous-pangofc_decoder.h.types-0 (12599)\n");
@@ -145,6 +149,10 @@ Msg("Find size of fptr_anonymous-pangofc_decoder.h.types-0 (12599)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12600,0);
 Msg("Find size of fptr_anonymous-pangofc_decoder.h.types-2 (12600)\n");

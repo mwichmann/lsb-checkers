@@ -5,10 +5,6 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#ifdef LSBCC_MODE
-struct png_struct_def {};
-struct png_info_struct {};
-#endif
 #include "png.h"
 
 
@@ -2333,6 +2329,10 @@ Msg("Find size of png_voidp (11180)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11181,0);
 Msg("Find size of fptr_png_24 (11181)\n");
@@ -2436,6 +2436,10 @@ Msg("Find size of png_uint_32 (11187)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11188,0);
 Msg("Find size of fptr_png_176 (11188)\n");
@@ -2827,6 +2831,10 @@ Msg("Find size of png_textp * (11203)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11204,0);
 Msg("Find size of png_byte * * (11204)\n");
@@ -3190,6 +3198,10 @@ Msg("Find size of png_const_charp (11220)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11221,0);
 Msg("Find size of fptr_png_122 (11221)\n");
@@ -3217,6 +3229,10 @@ Msg("Find size of png_error_ptr (11222)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11223,0);
 Msg("Find size of fptr_png_2 (11223)\n");
@@ -3466,6 +3482,10 @@ Msg("Find size of png_color_16p * (11232)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11233,0);
 Msg("Find size of fptr_png_124 (11233)\n");
@@ -3550,6 +3570,10 @@ Msg("Find size of png_bytep * (11237)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11238,0);
 Msg("Find size of png_struct * * (11238)\n");
@@ -3577,6 +3601,10 @@ Msg("Find size of png_structpp (11239)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11240,0);
 Msg("Find size of png_info * * (11240)\n");
@@ -3826,6 +3854,10 @@ Msg("Find size of png_uint_32p (16182)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16183,0);
 Msg("Find size of png_uint_16 * * (16183)\n");
@@ -4062,6 +4094,10 @@ Msg("Find size of png_int_16p (16195)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16196,0);
 Msg("Find size of png_int_16 * * (16196)\n");
@@ -4089,6 +4125,10 @@ Msg("Find size of png_int_16pp (16197)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16198,0);
 Msg("Find size of png_int_32 * * (16198)\n");
@@ -4116,6 +4156,10 @@ Msg("Find size of png_int_32pp (16199)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16200,0);
 Msg("Find size of png_uint_32 * * (16200)\n");
@@ -4143,6 +4187,10 @@ Msg("Find size of png_uint_32pp (16201)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16202,0);
 Msg("Find size of charf * * (16202)\n");
@@ -4284,6 +4332,10 @@ Msg("Find size of png_color_8pp (16212)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16213,0);
 Msg("Find size of png_fixed_point * * (16213)\n");
@@ -4311,6 +4363,10 @@ Msg("Find size of png_fixed_point_pp (16214)\n");
 #if __i386__
 #elif __x86_64__
 #elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16215,0);
 Msg("Find size of png_row_info * * (16215)\n");
