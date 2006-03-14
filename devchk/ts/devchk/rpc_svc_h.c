@@ -44,9 +44,9 @@ cnt++;
 #endif
 
 #if 1
-CheckEnum("XPRT_DIED",XPRT_DIED,0);
-CheckEnum("XPRT_MOREREQS",XPRT_MOREREQS,(0) + 1);
-CheckEnum("XPRT_IDLE",XPRT_IDLE,((0) + 1) + 1);
+CheckEnum("XPRT_DIED",XPRT_DIED,0,32222);
+CheckEnum("XPRT_MOREREQS",XPRT_MOREREQS,(0) + 1,32223);
+CheckEnum("XPRT_IDLE",XPRT_IDLE,((0) + 1) + 1,32224);
 #endif
 
 #if __i386__
