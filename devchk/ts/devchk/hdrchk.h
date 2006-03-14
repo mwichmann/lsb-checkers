@@ -154,11 +154,33 @@ int Log(char *f, ...);
 	} \
 }
 
-#define CheckEnum(enumnm,enumname,enumvalue) \
+#define CheckBitField(str,member,bitvalue,aid, tmid) \
+{ \
+	str foo; \
+        int bitfield;               \
+        foo.member=1;       \
+        for(bitfield=1; ;bitfield++) {       \
+            if((foo.member<<=1)==0) break;  \
+         } \
+         cnt++; \
+         Log("subtest %d\n", cnt); \
+         Log("Purpose: Check bitfield of  foo."#member " is %d\n", bitfield); \
+         if( bitfield != bitvalue ) { \
+                Msg("Bit-field for "#str"." #member " found %d instead of " #bitvalue " \n",bitfield); \
+		Msg("UPDATE TypeMember Set TMbitfield="#bitvalue" WHERE TMid=%d ;\n",tmid); \
+                HDRCHKTEST_FAIL \
+         } \
+         else { \
+                HDRCHKTEST_PASS \
+         } \
+}
+
+#define CheckEnum(enumnm,enumname,enumvalue,tmid) \
 { \
 	cnt++; \
 	if(enumname != enumvalue ) { \
 		Msg( "%s enumerator has value %d instead of expected %d\n",enumnm,enumvalue,enumname); \
+		Msg("UPDATE TypeMember Set TMarray=%d WHERE TMid=%d ;\n",enumname,tmid); \
 			HDRCHKTEST_FAIL \
 	} \
 	else { \
