@@ -105,24 +105,24 @@ Msg("Find size of reg_syntax_t (6941)\n");
 #endif
 
 #if 1
-CheckEnum("REG_ENOSYS",REG_ENOSYS,0);
-CheckEnum("REG_NOERROR",REG_NOERROR,(0) + 1);
-CheckEnum("REG_NOMATCH",REG_NOMATCH,((0) + 1) + 1);
-CheckEnum("REG_BADPAT",REG_BADPAT,(((0) + 1) + 1) + 1);
-CheckEnum("REG_ECOLLATE",REG_ECOLLATE,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("REG_ECTYPE",REG_ECTYPE,(((((0) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("REG_EESCAPE",REG_EESCAPE,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("REG_ESUBREG",REG_ESUBREG,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("REG_EBRACK",REG_EBRACK,((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("REG_EPAREN",REG_EPAREN,(((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("REG_EBRACE",REG_EBRACE,((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("REG_BADBR",REG_BADBR,(((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("REG_ERANGE",REG_ERANGE,((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("REG_ESPACE",REG_ESPACE,(((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("REG_BADRPT",REG_BADRPT,((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("REG_EEND",REG_EEND,(((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("REG_ESIZE",REG_ESIZE,((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("REG_ERPAREN",REG_ERPAREN,(((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("REG_ENOSYS",REG_ENOSYS,-1,30048);
+CheckEnum("REG_NOERROR",REG_NOERROR,0,30049);
+CheckEnum("REG_NOMATCH",REG_NOMATCH,1,30050);
+CheckEnum("REG_BADPAT",REG_BADPAT,2,30051);
+CheckEnum("REG_ECOLLATE",REG_ECOLLATE,3,30052);
+CheckEnum("REG_ECTYPE",REG_ECTYPE,4,30053);
+CheckEnum("REG_EESCAPE",REG_EESCAPE,5,30054);
+CheckEnum("REG_ESUBREG",REG_ESUBREG,6,30055);
+CheckEnum("REG_EBRACK",REG_EBRACK,7,30056);
+CheckEnum("REG_EPAREN",REG_EPAREN,8,30057);
+CheckEnum("REG_EBRACE",REG_EBRACE,9,30058);
+CheckEnum("REG_BADBR",REG_BADBR,10,30059);
+CheckEnum("REG_ERANGE",REG_ERANGE,11,30060);
+CheckEnum("REG_ESPACE",REG_ESPACE,12,30061);
+CheckEnum("REG_BADRPT",REG_BADRPT,13,30062);
+CheckEnum("REG_EEND",REG_EEND,14,30063);
+CheckEnum("REG_ESIZE",REG_ESIZE,15,30064);
+CheckEnum("REG_ERPAREN",REG_ERPAREN,16,30065);
 #endif
 
 #if 1

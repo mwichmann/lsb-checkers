@@ -97,101 +97,101 @@ cnt++;
 #endif
 
 #if __i386__
-CheckEnum("FTW_F",FTW_F,0);
-CheckEnum("FTW_D",FTW_D,(0) + 1);
-CheckEnum("FTW_DNR",FTW_DNR,((0) + 1) + 1);
-CheckEnum("FTW_NS",FTW_NS,(((0) + 1) + 1) + 1);
-CheckEnum("FTW_SL",FTW_SL,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("FTW_DP",FTW_DP,(((((0) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("FTW_SLN",FTW_SLN,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("FTW_F",FTW_F,0,29747);
+CheckEnum("FTW_D",FTW_D,(0) + 1,29748);
+CheckEnum("FTW_DNR",FTW_DNR,((0) + 1) + 1,29749);
+CheckEnum("FTW_NS",FTW_NS,(((0) + 1) + 1) + 1,29750);
+CheckEnum("FTW_SL",FTW_SL,((((0) + 1) + 1) + 1) + 1,29751);
+CheckEnum("FTW_DP",FTW_DP,(((((0) + 1) + 1) + 1) + 1) + 1,29752);
+CheckEnum("FTW_SLN",FTW_SLN,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,29753);
 #elif __ia64__
-CheckEnum("FTW_F",FTW_F,0);
-CheckEnum("FTW_D",FTW_D,(0) + 1);
-CheckEnum("FTW_DNR",FTW_DNR,((0) + 1) + 1);
-CheckEnum("FTW_NS",FTW_NS,(((0) + 1) + 1) + 1);
-CheckEnum("FTW_SL",FTW_SL,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("FTW_DP",FTW_DP,(((((0) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("FTW_SLN",FTW_SLN,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("FTW_F",FTW_F,0,29747);
+CheckEnum("FTW_D",FTW_D,(0) + 1,29748);
+CheckEnum("FTW_DNR",FTW_DNR,((0) + 1) + 1,29749);
+CheckEnum("FTW_NS",FTW_NS,(((0) + 1) + 1) + 1,29750);
+CheckEnum("FTW_SL",FTW_SL,((((0) + 1) + 1) + 1) + 1,29751);
+CheckEnum("FTW_DP",FTW_DP,(((((0) + 1) + 1) + 1) + 1) + 1,29752);
+CheckEnum("FTW_SLN",FTW_SLN,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,29753);
 #elif __powerpc__ && !__powerpc64__
-CheckEnum("FTW_F",FTW_F,0);
-CheckEnum("FTW_D",FTW_D,(0) + 1);
-CheckEnum("FTW_DNR",FTW_DNR,((0) + 1) + 1);
-CheckEnum("FTW_NS",FTW_NS,(((0) + 1) + 1) + 1);
-CheckEnum("FTW_SL",FTW_SL,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("FTW_DP",FTW_DP,(((((0) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("FTW_SLN",FTW_SLN,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("FTW_F",FTW_F,0,29747);
+CheckEnum("FTW_D",FTW_D,(0) + 1,29748);
+CheckEnum("FTW_DNR",FTW_DNR,((0) + 1) + 1,29749);
+CheckEnum("FTW_NS",FTW_NS,(((0) + 1) + 1) + 1,29750);
+CheckEnum("FTW_SL",FTW_SL,((((0) + 1) + 1) + 1) + 1,29751);
+CheckEnum("FTW_DP",FTW_DP,(((((0) + 1) + 1) + 1) + 1) + 1,29752);
+CheckEnum("FTW_SLN",FTW_SLN,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,29753);
 #elif __s390__ && !__s390x__
-CheckEnum("FTW_F",FTW_F,0);
-CheckEnum("FTW_D",FTW_D,(0) + 1);
-CheckEnum("FTW_DNR",FTW_DNR,((0) + 1) + 1);
-CheckEnum("FTW_NS",FTW_NS,(((0) + 1) + 1) + 1);
-CheckEnum("FTW_SL",FTW_SL,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("FTW_DP",FTW_DP,(((((0) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("FTW_SLN",FTW_SLN,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("FTW_F",FTW_F,0,29747);
+CheckEnum("FTW_D",FTW_D,(0) + 1,29748);
+CheckEnum("FTW_DNR",FTW_DNR,((0) + 1) + 1,29749);
+CheckEnum("FTW_NS",FTW_NS,(((0) + 1) + 1) + 1,29750);
+CheckEnum("FTW_SL",FTW_SL,((((0) + 1) + 1) + 1) + 1,29751);
+CheckEnum("FTW_DP",FTW_DP,(((((0) + 1) + 1) + 1) + 1) + 1,29752);
+CheckEnum("FTW_SLN",FTW_SLN,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,29753);
 #elif __powerpc64__
-CheckEnum("FTW_F",FTW_F,0);
-CheckEnum("FTW_D",FTW_D,(0) + 1);
-CheckEnum("FTW_DNR",FTW_DNR,((0) + 1) + 1);
-CheckEnum("FTW_NS",FTW_NS,(((0) + 1) + 1) + 1);
-CheckEnum("FTW_SL",FTW_SL,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("FTW_DP",FTW_DP,(((((0) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("FTW_SLN",FTW_SLN,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("FTW_F",FTW_F,0,29747);
+CheckEnum("FTW_D",FTW_D,(0) + 1,29748);
+CheckEnum("FTW_DNR",FTW_DNR,((0) + 1) + 1,29749);
+CheckEnum("FTW_NS",FTW_NS,(((0) + 1) + 1) + 1,29750);
+CheckEnum("FTW_SL",FTW_SL,((((0) + 1) + 1) + 1) + 1,29751);
+CheckEnum("FTW_DP",FTW_DP,(((((0) + 1) + 1) + 1) + 1) + 1,29752);
+CheckEnum("FTW_SLN",FTW_SLN,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,29753);
 #elif __s390x__
-CheckEnum("FTW_F",FTW_F,0);
-CheckEnum("FTW_D",FTW_D,(0) + 1);
-CheckEnum("FTW_DNR",FTW_DNR,((0) + 1) + 1);
-CheckEnum("FTW_NS",FTW_NS,(((0) + 1) + 1) + 1);
-CheckEnum("FTW_SL",FTW_SL,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("FTW_DP",FTW_DP,(((((0) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("FTW_SLN",FTW_SLN,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("FTW_F",FTW_F,0,29747);
+CheckEnum("FTW_D",FTW_D,(0) + 1,29748);
+CheckEnum("FTW_DNR",FTW_DNR,((0) + 1) + 1,29749);
+CheckEnum("FTW_NS",FTW_NS,(((0) + 1) + 1) + 1,29750);
+CheckEnum("FTW_SL",FTW_SL,((((0) + 1) + 1) + 1) + 1,29751);
+CheckEnum("FTW_DP",FTW_DP,(((((0) + 1) + 1) + 1) + 1) + 1,29752);
+CheckEnum("FTW_SLN",FTW_SLN,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,29753);
 #elif __x86_64__
-CheckEnum("FTW_F",FTW_F,0);
-CheckEnum("FTW_D",FTW_D,(0) + 1);
-CheckEnum("FTW_DNR",FTW_DNR,((0) + 1) + 1);
-CheckEnum("FTW_NS",FTW_NS,(((0) + 1) + 1) + 1);
-CheckEnum("FTW_SL",FTW_SL,((((0) + 1) + 1) + 1) + 1);
-CheckEnum("FTW_DP",FTW_DP,(((((0) + 1) + 1) + 1) + 1) + 1);
-CheckEnum("FTW_SLN",FTW_SLN,((((((0) + 1) + 1) + 1) + 1) + 1) + 1);
+CheckEnum("FTW_F",FTW_F,0,29747);
+CheckEnum("FTW_D",FTW_D,(0) + 1,29748);
+CheckEnum("FTW_DNR",FTW_DNR,((0) + 1) + 1,29749);
+CheckEnum("FTW_NS",FTW_NS,(((0) + 1) + 1) + 1,29750);
+CheckEnum("FTW_SL",FTW_SL,((((0) + 1) + 1) + 1) + 1,29751);
+CheckEnum("FTW_DP",FTW_DP,(((((0) + 1) + 1) + 1) + 1) + 1,29752);
+CheckEnum("FTW_SLN",FTW_SLN,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,29753);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8989,0);
 Msg("Find size of anon-ftw.h-13 (8989)\n");
 #endif
 
 #if __i386__
-CheckEnum("FTW_PHYS",FTW_PHYS,0);
-CheckEnum("FTW_MOUNT",FTW_MOUNT,(0) + 1);
-CheckEnum("FTW_CHDIR",FTW_CHDIR,((0) + 1) + 1);
-CheckEnum("FTW_DEPTH",FTW_DEPTH,(((0) + 1) + 1) + 1);
+CheckEnum("FTW_PHYS",FTW_PHYS,1,29754);
+CheckEnum("FTW_MOUNT",FTW_MOUNT,2,29755);
+CheckEnum("FTW_CHDIR",FTW_CHDIR,4,29756);
+CheckEnum("FTW_DEPTH",FTW_DEPTH,8,29757);
 #elif __ia64__
-CheckEnum("FTW_PHYS",FTW_PHYS,0);
-CheckEnum("FTW_MOUNT",FTW_MOUNT,(0) + 1);
-CheckEnum("FTW_CHDIR",FTW_CHDIR,((0) + 1) + 1);
-CheckEnum("FTW_DEPTH",FTW_DEPTH,(((0) + 1) + 1) + 1);
+CheckEnum("FTW_PHYS",FTW_PHYS,1,29754);
+CheckEnum("FTW_MOUNT",FTW_MOUNT,2,29755);
+CheckEnum("FTW_CHDIR",FTW_CHDIR,4,29756);
+CheckEnum("FTW_DEPTH",FTW_DEPTH,8,29757);
 #elif __powerpc__ && !__powerpc64__
-CheckEnum("FTW_PHYS",FTW_PHYS,0);
-CheckEnum("FTW_MOUNT",FTW_MOUNT,(0) + 1);
-CheckEnum("FTW_CHDIR",FTW_CHDIR,((0) + 1) + 1);
-CheckEnum("FTW_DEPTH",FTW_DEPTH,(((0) + 1) + 1) + 1);
+CheckEnum("FTW_PHYS",FTW_PHYS,1,29754);
+CheckEnum("FTW_MOUNT",FTW_MOUNT,2,29755);
+CheckEnum("FTW_CHDIR",FTW_CHDIR,4,29756);
+CheckEnum("FTW_DEPTH",FTW_DEPTH,8,29757);
 #elif __s390__ && !__s390x__
-CheckEnum("FTW_PHYS",FTW_PHYS,0);
-CheckEnum("FTW_MOUNT",FTW_MOUNT,(0) + 1);
-CheckEnum("FTW_CHDIR",FTW_CHDIR,((0) + 1) + 1);
-CheckEnum("FTW_DEPTH",FTW_DEPTH,(((0) + 1) + 1) + 1);
+CheckEnum("FTW_PHYS",FTW_PHYS,1,29754);
+CheckEnum("FTW_MOUNT",FTW_MOUNT,2,29755);
+CheckEnum("FTW_CHDIR",FTW_CHDIR,4,29756);
+CheckEnum("FTW_DEPTH",FTW_DEPTH,8,29757);
 #elif __powerpc64__
-CheckEnum("FTW_PHYS",FTW_PHYS,0);
-CheckEnum("FTW_MOUNT",FTW_MOUNT,(0) + 1);
-CheckEnum("FTW_CHDIR",FTW_CHDIR,((0) + 1) + 1);
-CheckEnum("FTW_DEPTH",FTW_DEPTH,(((0) + 1) + 1) + 1);
+CheckEnum("FTW_PHYS",FTW_PHYS,1,29754);
+CheckEnum("FTW_MOUNT",FTW_MOUNT,2,29755);
+CheckEnum("FTW_CHDIR",FTW_CHDIR,4,29756);
+CheckEnum("FTW_DEPTH",FTW_DEPTH,8,29757);
 #elif __s390x__
-CheckEnum("FTW_PHYS",FTW_PHYS,0);
-CheckEnum("FTW_MOUNT",FTW_MOUNT,(0) + 1);
-CheckEnum("FTW_CHDIR",FTW_CHDIR,((0) + 1) + 1);
-CheckEnum("FTW_DEPTH",FTW_DEPTH,(((0) + 1) + 1) + 1);
+CheckEnum("FTW_PHYS",FTW_PHYS,1,29754);
+CheckEnum("FTW_MOUNT",FTW_MOUNT,2,29755);
+CheckEnum("FTW_CHDIR",FTW_CHDIR,4,29756);
+CheckEnum("FTW_DEPTH",FTW_DEPTH,8,29757);
 #elif __x86_64__
-CheckEnum("FTW_PHYS",FTW_PHYS,0);
-CheckEnum("FTW_MOUNT",FTW_MOUNT,(0) + 1);
-CheckEnum("FTW_CHDIR",FTW_CHDIR,((0) + 1) + 1);
-CheckEnum("FTW_DEPTH",FTW_DEPTH,(((0) + 1) + 1) + 1);
+CheckEnum("FTW_PHYS",FTW_PHYS,1,29754);
+CheckEnum("FTW_MOUNT",FTW_MOUNT,2,29755);
+CheckEnum("FTW_CHDIR",FTW_CHDIR,4,29756);
+CheckEnum("FTW_DEPTH",FTW_DEPTH,8,29757);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8990,0);
 Msg("Find size of anon-ftw.h-34 (8990)\n");
