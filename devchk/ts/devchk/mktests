@@ -439,19 +439,32 @@ sub writetest($$) {
                     print TESTS "CheckOffset($type $tentry{'Tname'},$mentry{'TMname'},$mentry{'ATMoffset'},$Aid,$mentry{'TMid'})\n";
                 }
             } else {
-                print TESTS "Msg(\"Missing member data for $Tname on $Aname\\n\");\n";
-
-                # Get the members that are supposed to be there
-                $select = "SELECT DISTINCT * FROM TypeMember ";
+	        #Checking Structure Member Bit-Field value
+		$select = "SELECT DISTINCT * FROM TypeMember ";
                 $select .= "WHERE TMmemberof=$Tid ";
-                $select .= "AND TMbitfield = 0 ";
+                $select .= "AND TMbitfield > 0 ";
                 $select .= "ORDER BY TMposition ";
                 print $select, "\n" if $trace;
                 $mth = $Dbh->query($select) || die $Dbh->errmsg();
-                for ( 1 .. $mth->numrows ) {
+		if($mth->numrows){
+	          for ( 1 .. $mth->numrows ) {
                     %mentry = $mth->fetchhash;
-                    print TESTS "CheckOffset($type $tentry{'Tname'},$mentry{'TMname'},0,$Aid,$mentry{'TMid'})\n";
-                }
+		    print TESTS "CheckBitField($type $tentry{'Tname'},$mentry{'TMname'},$mentry{'TMbitfield'},$Aid,$mentry{'TMid'})\n";
+                   }
+		}else{
+	                # Get the members that are supposed to be there
+        	        $select = "SELECT DISTINCT * FROM TypeMember ";
+                	$select .= "WHERE TMmemberof=$Tid ";
+	                $select .= "AND TMbitfield = 0 ";
+        	        $select .= "ORDER BY TMposition ";
+                	print $select, "\n" if $trace;
+	                $mth = $Dbh->query($select) || die $Dbh->errmsg();
+        	        print TESTS "Msg(\"Missing member data for $Tname on $Aname\\n\");\n";
+                	  for ( 1 .. $mth->numrows ) {
+	                    %mentry = $mth->fetchhash;
+        	            print TESTS "CheckOffset($type $tentry{'Tname'},$mentry{'TMname'},0,$Aid,$mentry{'TMid'})\n";
+                  }
+		}
             }
             next;
         }
@@ -490,14 +503,14 @@ sub writetest($$) {
                 %tmentry = $tmh->fetchhash;
                 if ( $tmentry{'TMarray'} ne '' ) {
                     $lastvalue = "$tmentry{'TMarray'}";
-                    print TESTS "CheckEnum(\"$tmentry{'TMname'}\",$tmentry{'TMname'},$tmentry{'TMarray'});\n";
+                    print TESTS "CheckEnum(\"$tmentry{'TMname'}\",$tmentry{'TMname'},$tmentry{'TMarray'},$tmentry{'TMid'});\n";
                 } else {
                     if ( $_ == 1 ) {
                         $lastvalue = "0";
                     } else {
                         $lastvalue = "(" . $lastvalue . ") + 1";
                     }
-                    print TESTS "CheckEnum(\"$tmentry{'TMname'}\",$tmentry{'TMname'},$lastvalue);\n";
+                    print TESTS "CheckEnum(\"$tmentry{'TMname'}\",$tmentry{'TMname'},$lastvalue,$tmentry{'TMid'});\n";
                 }
             }
             next;
@@ -976,7 +989,7 @@ print MAKEFILE "else\n";
 print MAKEFILE "EXTRALIBS =\n";
 print MAKEFILE "endif\n\n";
 
-print MAKEFILE "CFLAGS=-D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include -I/usr/include/glib-2.0 -I/usr/include/atk-1.0 -I/usr/include/pango-1.0 -I/usr/include/gtk-2.0 -I/usr/include/freetype2 -I/usr/lib/gtk-2.0/include -I/usr/lib64/gtk-2.0/include -I/usr/lib/glib-2.0/include -I/usr/lib64/glib-2.0/include -I/usr/include/libxml2 -I/usr/include/fontconfig\n\n";
+print MAKEFILE "CFLAGS=-D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include -I/usr/include/glib-2.0 -I/usr/include/atk-1.0 -I/usr/include/pango-1.0 -I/usr/include/gtk-2.0 -I/usr/include/freetype2 -I/usr/lib/gtk-2.0/include -I/usr/lib64/gtk-2.0/include -I/usr/lib/glib-2.0/include -I/usr/lib64/glib-2.0/include -I/usr/include/libxml2 -I/usr/include/fontconfig -I/usr/include/cairo \n\n";
 print MAKEFILE "ifdef LSB_PRODUCT\n";
 print MAKEFILE "CFLAGS=-DLSBCC_MODE -D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include -I/opt/lsb/include/glib-2.0 -I/opt/lsb/include/atk-1.0 -I/opt/lsb/include/pango-1.0 -I/opt/lsb/include/gtk-2.0 -I/usr/include/freetype2 -I/opt/lsb/include/libxml2 -I/opt/lsb/include/fontconfig\n";
 print MAKEFILE "endif\n\n";
