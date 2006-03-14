@@ -26,27 +26,27 @@ Msg("Checking data structures in rpc/rpc_msg.h\n");
 
 printf("Checking data structures in rpc/rpc_msg.h\n");
 #if 1
-CheckEnum("CALL",CALL,0);
-CheckEnum("REPLY",REPLY,1);
+CheckEnum("CALL",CALL,0,34788);
+CheckEnum("REPLY",REPLY,1,34789);
 #endif
 
 #if 1
-CheckEnum("MSG_ACCEPTED",MSG_ACCEPTED,0);
-CheckEnum("MSG_DENIED",MSG_DENIED,1);
+CheckEnum("MSG_ACCEPTED",MSG_ACCEPTED,0,34790);
+CheckEnum("MSG_DENIED",MSG_DENIED,1,34791);
 #endif
 
 #if 1
-CheckEnum("SUCCESS",SUCCESS,0);
-CheckEnum("PROG_UNAVAIL",PROG_UNAVAIL,1);
-CheckEnum("PROG_MISMATCH",PROG_MISMATCH,2);
-CheckEnum("PROC_UNAVAIL",PROC_UNAVAIL,3);
-CheckEnum("GARBAGE_ARGS",GARBAGE_ARGS,4);
-CheckEnum("SYSTEM_ERR",SYSTEM_ERR,5);
+CheckEnum("SUCCESS",SUCCESS,0,34792);
+CheckEnum("PROG_UNAVAIL",PROG_UNAVAIL,1,34793);
+CheckEnum("PROG_MISMATCH",PROG_MISMATCH,2,34794);
+CheckEnum("PROC_UNAVAIL",PROC_UNAVAIL,3,34795);
+CheckEnum("GARBAGE_ARGS",GARBAGE_ARGS,4,34796);
+CheckEnum("SYSTEM_ERR",SYSTEM_ERR,5,34797);
 #endif
 
 #if 1
-CheckEnum("RPC_MISMATCH",RPC_MISMATCH,0);
-CheckEnum("AUTH_ERROR",AUTH_ERROR,1);
+CheckEnum("RPC_MISMATCH",RPC_MISMATCH,0,34798);
+CheckEnum("AUTH_ERROR",AUTH_ERROR,1,34799);
 #endif
 
 #if __i386__

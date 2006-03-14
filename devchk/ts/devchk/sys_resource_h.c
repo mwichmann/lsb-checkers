@@ -533,9 +533,9 @@ Msg("Find size of rusage (9125)\n");
 #endif
 
 #if 1
-CheckEnum("PRIO_PROCESS",PRIO_PROCESS,0);
-CheckEnum("PRIO_PGRP",PRIO_PGRP,1);
-CheckEnum("PRIO_USER",PRIO_USER,2);
+CheckEnum("PRIO_PROCESS",PRIO_PROCESS,0,40835);
+CheckEnum("PRIO_PGRP",PRIO_PGRP,1,40836);
+CheckEnum("PRIO_USER",PRIO_USER,2,40837);
 #endif
 
 #if 1

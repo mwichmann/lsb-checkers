@@ -369,10 +369,8 @@ CheckMemberSize(struct shmid_ds,__unused5,8,11,40748)
 CheckOffset(struct shmid_ds,__unused5,104,11,40748)
 #endif
 
-#if !__ia64__		/*XXX hand-edit */
 extern int __getpagesize_db(void);
 CheckInterfacedef(__getpagesize,__getpagesize_db);
-#endif			/*XXX hand-edit */
 extern void * shmat_db(int, const void *, int);
 CheckInterfacedef(shmat,shmat_db);
 extern int shmctl_db(int, int, struct shmid_ds *);

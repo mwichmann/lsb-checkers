@@ -1039,75 +1039,75 @@ Msg("Find size of _FcValue (11082)\n");
 #endif
 
 #if __i386__
-CheckEnum("FcTypeVoid",FcTypeVoid,0);
-CheckEnum("FcTypeInteger",FcTypeInteger,1);
-CheckEnum("FcTypeDouble",FcTypeDouble,2);
-CheckEnum("FcTypeString",FcTypeString,3);
-CheckEnum("FcTypeBool",FcTypeBool,4);
-CheckEnum("FcTypeMatrix",FcTypeMatrix,5);
-CheckEnum("FcTypeCharSet",FcTypeCharSet,6);
-CheckEnum("FcTypeFTFace",FcTypeFTFace,7);
-CheckEnum("FcTypeLangSet",FcTypeLangSet,8);
+CheckEnum("FcTypeVoid",FcTypeVoid,0,40912);
+CheckEnum("FcTypeInteger",FcTypeInteger,1,40913);
+CheckEnum("FcTypeDouble",FcTypeDouble,2,40914);
+CheckEnum("FcTypeString",FcTypeString,3,40915);
+CheckEnum("FcTypeBool",FcTypeBool,4,40916);
+CheckEnum("FcTypeMatrix",FcTypeMatrix,5,40917);
+CheckEnum("FcTypeCharSet",FcTypeCharSet,6,40918);
+CheckEnum("FcTypeFTFace",FcTypeFTFace,7,40919);
+CheckEnum("FcTypeLangSet",FcTypeLangSet,8,40920);
 #elif __x86_64__
-CheckEnum("FcTypeVoid",FcTypeVoid,0);
-CheckEnum("FcTypeInteger",FcTypeInteger,1);
-CheckEnum("FcTypeDouble",FcTypeDouble,2);
-CheckEnum("FcTypeString",FcTypeString,3);
-CheckEnum("FcTypeBool",FcTypeBool,4);
-CheckEnum("FcTypeMatrix",FcTypeMatrix,5);
-CheckEnum("FcTypeCharSet",FcTypeCharSet,6);
-CheckEnum("FcTypeFTFace",FcTypeFTFace,7);
-CheckEnum("FcTypeLangSet",FcTypeLangSet,8);
+CheckEnum("FcTypeVoid",FcTypeVoid,0,40912);
+CheckEnum("FcTypeInteger",FcTypeInteger,1,40913);
+CheckEnum("FcTypeDouble",FcTypeDouble,2,40914);
+CheckEnum("FcTypeString",FcTypeString,3,40915);
+CheckEnum("FcTypeBool",FcTypeBool,4,40916);
+CheckEnum("FcTypeMatrix",FcTypeMatrix,5,40917);
+CheckEnum("FcTypeCharSet",FcTypeCharSet,6,40918);
+CheckEnum("FcTypeFTFace",FcTypeFTFace,7,40919);
+CheckEnum("FcTypeLangSet",FcTypeLangSet,8,40920);
 #elif __ia64__
-CheckEnum("FcTypeVoid",FcTypeVoid,0);
-CheckEnum("FcTypeInteger",FcTypeInteger,1);
-CheckEnum("FcTypeDouble",FcTypeDouble,2);
-CheckEnum("FcTypeString",FcTypeString,3);
-CheckEnum("FcTypeBool",FcTypeBool,4);
-CheckEnum("FcTypeMatrix",FcTypeMatrix,5);
-CheckEnum("FcTypeCharSet",FcTypeCharSet,6);
-CheckEnum("FcTypeFTFace",FcTypeFTFace,7);
-CheckEnum("FcTypeLangSet",FcTypeLangSet,8);
+CheckEnum("FcTypeVoid",FcTypeVoid,0,40912);
+CheckEnum("FcTypeInteger",FcTypeInteger,1,40913);
+CheckEnum("FcTypeDouble",FcTypeDouble,2,40914);
+CheckEnum("FcTypeString",FcTypeString,3,40915);
+CheckEnum("FcTypeBool",FcTypeBool,4,40916);
+CheckEnum("FcTypeMatrix",FcTypeMatrix,5,40917);
+CheckEnum("FcTypeCharSet",FcTypeCharSet,6,40918);
+CheckEnum("FcTypeFTFace",FcTypeFTFace,7,40919);
+CheckEnum("FcTypeLangSet",FcTypeLangSet,8,40920);
 #elif __powerpc__ && !__powerpc64__
-CheckEnum("FcTypeVoid",FcTypeVoid,0);
-CheckEnum("FcTypeInteger",FcTypeInteger,1);
-CheckEnum("FcTypeDouble",FcTypeDouble,2);
-CheckEnum("FcTypeString",FcTypeString,3);
-CheckEnum("FcTypeBool",FcTypeBool,4);
-CheckEnum("FcTypeMatrix",FcTypeMatrix,5);
-CheckEnum("FcTypeCharSet",FcTypeCharSet,6);
-CheckEnum("FcTypeFTFace",FcTypeFTFace,7);
-CheckEnum("FcTypeLangSet",FcTypeLangSet,8);
+CheckEnum("FcTypeVoid",FcTypeVoid,0,40912);
+CheckEnum("FcTypeInteger",FcTypeInteger,1,40913);
+CheckEnum("FcTypeDouble",FcTypeDouble,2,40914);
+CheckEnum("FcTypeString",FcTypeString,3,40915);
+CheckEnum("FcTypeBool",FcTypeBool,4,40916);
+CheckEnum("FcTypeMatrix",FcTypeMatrix,5,40917);
+CheckEnum("FcTypeCharSet",FcTypeCharSet,6,40918);
+CheckEnum("FcTypeFTFace",FcTypeFTFace,7,40919);
+CheckEnum("FcTypeLangSet",FcTypeLangSet,8,40920);
 #elif __powerpc64__
-CheckEnum("FcTypeVoid",FcTypeVoid,0);
-CheckEnum("FcTypeInteger",FcTypeInteger,1);
-CheckEnum("FcTypeDouble",FcTypeDouble,2);
-CheckEnum("FcTypeString",FcTypeString,3);
-CheckEnum("FcTypeBool",FcTypeBool,4);
-CheckEnum("FcTypeMatrix",FcTypeMatrix,5);
-CheckEnum("FcTypeCharSet",FcTypeCharSet,6);
-CheckEnum("FcTypeFTFace",FcTypeFTFace,7);
-CheckEnum("FcTypeLangSet",FcTypeLangSet,8);
+CheckEnum("FcTypeVoid",FcTypeVoid,0,40912);
+CheckEnum("FcTypeInteger",FcTypeInteger,1,40913);
+CheckEnum("FcTypeDouble",FcTypeDouble,2,40914);
+CheckEnum("FcTypeString",FcTypeString,3,40915);
+CheckEnum("FcTypeBool",FcTypeBool,4,40916);
+CheckEnum("FcTypeMatrix",FcTypeMatrix,5,40917);
+CheckEnum("FcTypeCharSet",FcTypeCharSet,6,40918);
+CheckEnum("FcTypeFTFace",FcTypeFTFace,7,40919);
+CheckEnum("FcTypeLangSet",FcTypeLangSet,8,40920);
 #elif __s390__ && !__s390x__
-CheckEnum("FcTypeVoid",FcTypeVoid,0);
-CheckEnum("FcTypeInteger",FcTypeInteger,1);
-CheckEnum("FcTypeDouble",FcTypeDouble,2);
-CheckEnum("FcTypeString",FcTypeString,3);
-CheckEnum("FcTypeBool",FcTypeBool,4);
-CheckEnum("FcTypeMatrix",FcTypeMatrix,5);
-CheckEnum("FcTypeCharSet",FcTypeCharSet,6);
-CheckEnum("FcTypeFTFace",FcTypeFTFace,7);
-CheckEnum("FcTypeLangSet",FcTypeLangSet,8);
+CheckEnum("FcTypeVoid",FcTypeVoid,0,40912);
+CheckEnum("FcTypeInteger",FcTypeInteger,1,40913);
+CheckEnum("FcTypeDouble",FcTypeDouble,2,40914);
+CheckEnum("FcTypeString",FcTypeString,3,40915);
+CheckEnum("FcTypeBool",FcTypeBool,4,40916);
+CheckEnum("FcTypeMatrix",FcTypeMatrix,5,40917);
+CheckEnum("FcTypeCharSet",FcTypeCharSet,6,40918);
+CheckEnum("FcTypeFTFace",FcTypeFTFace,7,40919);
+CheckEnum("FcTypeLangSet",FcTypeLangSet,8,40920);
 #elif __s390x__
-CheckEnum("FcTypeVoid",FcTypeVoid,0);
-CheckEnum("FcTypeInteger",FcTypeInteger,1);
-CheckEnum("FcTypeDouble",FcTypeDouble,2);
-CheckEnum("FcTypeString",FcTypeString,3);
-CheckEnum("FcTypeBool",FcTypeBool,4);
-CheckEnum("FcTypeMatrix",FcTypeMatrix,5);
-CheckEnum("FcTypeCharSet",FcTypeCharSet,6);
-CheckEnum("FcTypeFTFace",FcTypeFTFace,7);
-CheckEnum("FcTypeLangSet",FcTypeLangSet,8);
+CheckEnum("FcTypeVoid",FcTypeVoid,0,40912);
+CheckEnum("FcTypeInteger",FcTypeInteger,1,40913);
+CheckEnum("FcTypeDouble",FcTypeDouble,2,40914);
+CheckEnum("FcTypeString",FcTypeString,3,40915);
+CheckEnum("FcTypeBool",FcTypeBool,4,40916);
+CheckEnum("FcTypeMatrix",FcTypeMatrix,5,40917);
+CheckEnum("FcTypeCharSet",FcTypeCharSet,6,40918);
+CheckEnum("FcTypeFTFace",FcTypeFTFace,7,40919);
+CheckEnum("FcTypeLangSet",FcTypeLangSet,8,40920);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11083,0);
 Msg("Find size of _FcType (11083)\n");
@@ -1608,26 +1608,26 @@ Msg("Find size of FcLangSet * (11114)\n");
 #endif
 
 #if __i386__
-CheckEnum("FcMatchPattern",FcMatchPattern,0);
-CheckEnum("FcMatchFont",FcMatchFont,1);
+CheckEnum("FcMatchPattern",FcMatchPattern,0,40936);
+CheckEnum("FcMatchFont",FcMatchFont,1,40937);
 #elif __x86_64__
-CheckEnum("FcMatchPattern",FcMatchPattern,0);
-CheckEnum("FcMatchFont",FcMatchFont,1);
+CheckEnum("FcMatchPattern",FcMatchPattern,0,40936);
+CheckEnum("FcMatchFont",FcMatchFont,1,40937);
 #elif __ia64__
-CheckEnum("FcMatchPattern",FcMatchPattern,0);
-CheckEnum("FcMatchFont",FcMatchFont,1);
+CheckEnum("FcMatchPattern",FcMatchPattern,0,40936);
+CheckEnum("FcMatchFont",FcMatchFont,1,40937);
 #elif __powerpc__ && !__powerpc64__
-CheckEnum("FcMatchPattern",FcMatchPattern,0);
-CheckEnum("FcMatchFont",FcMatchFont,1);
+CheckEnum("FcMatchPattern",FcMatchPattern,0,40936);
+CheckEnum("FcMatchFont",FcMatchFont,1,40937);
 #elif __powerpc64__
-CheckEnum("FcMatchPattern",FcMatchPattern,0);
-CheckEnum("FcMatchFont",FcMatchFont,1);
+CheckEnum("FcMatchPattern",FcMatchPattern,0,40936);
+CheckEnum("FcMatchFont",FcMatchFont,1,40937);
 #elif __s390__ && !__s390x__
-CheckEnum("FcMatchPattern",FcMatchPattern,0);
-CheckEnum("FcMatchFont",FcMatchFont,1);
+CheckEnum("FcMatchPattern",FcMatchPattern,0,40936);
+CheckEnum("FcMatchFont",FcMatchFont,1,40937);
 #elif __s390x__
-CheckEnum("FcMatchPattern",FcMatchPattern,0);
-CheckEnum("FcMatchFont",FcMatchFont,1);
+CheckEnum("FcMatchPattern",FcMatchPattern,0,40936);
+CheckEnum("FcMatchFont",FcMatchFont,1,40937);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11115,0);
 Msg("Find size of _FcMatchKind (11115)\n");
@@ -1738,26 +1738,26 @@ Msg("Find size of FcObjectSet * (11119)\n");
 #endif
 
 #if __i386__
-CheckEnum("FcEndianBig",FcEndianBig,0);
-CheckEnum("FcEndianLittle",FcEndianLittle,1);
+CheckEnum("FcEndianBig",FcEndianBig,0,40941);
+CheckEnum("FcEndianLittle",FcEndianLittle,1,40942);
 #elif __x86_64__
-CheckEnum("FcEndianBig",FcEndianBig,0);
-CheckEnum("FcEndianLittle",FcEndianLittle,1);
+CheckEnum("FcEndianBig",FcEndianBig,0,40941);
+CheckEnum("FcEndianLittle",FcEndianLittle,1,40942);
 #elif __ia64__
-CheckEnum("FcEndianBig",FcEndianBig,0);
-CheckEnum("FcEndianLittle",FcEndianLittle,1);
+CheckEnum("FcEndianBig",FcEndianBig,0,40941);
+CheckEnum("FcEndianLittle",FcEndianLittle,1,40942);
 #elif __powerpc__ && !__powerpc64__
-CheckEnum("FcEndianBig",FcEndianBig,0);
-CheckEnum("FcEndianLittle",FcEndianLittle,1);
+CheckEnum("FcEndianBig",FcEndianBig,0,40941);
+CheckEnum("FcEndianLittle",FcEndianLittle,1,40942);
 #elif __powerpc64__
-CheckEnum("FcEndianBig",FcEndianBig,0);
-CheckEnum("FcEndianLittle",FcEndianLittle,1);
+CheckEnum("FcEndianBig",FcEndianBig,0,40941);
+CheckEnum("FcEndianLittle",FcEndianLittle,1,40942);
 #elif __s390__ && !__s390x__
-CheckEnum("FcEndianBig",FcEndianBig,0);
-CheckEnum("FcEndianLittle",FcEndianLittle,1);
+CheckEnum("FcEndianBig",FcEndianBig,0,40941);
+CheckEnum("FcEndianLittle",FcEndianLittle,1,40942);
 #elif __s390x__
-CheckEnum("FcEndianBig",FcEndianBig,0);
-CheckEnum("FcEndianLittle",FcEndianLittle,1);
+CheckEnum("FcEndianBig",FcEndianBig,0,40941);
+CheckEnum("FcEndianLittle",FcEndianLittle,1,40942);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11120,0);
 Msg("Find size of anon-fontconfig/fontconfig.h-239 (11120)\n");
@@ -2034,26 +2034,26 @@ Msg("Find size of FcFontSet * (11133)\n");
 #endif
 
 #if __i386__
-CheckEnum("FcSetSystem",FcSetSystem,0);
-CheckEnum("FcSetApplication",FcSetApplication,1);
+CheckEnum("FcSetSystem",FcSetSystem,0,40949);
+CheckEnum("FcSetApplication",FcSetApplication,1,40950);
 #elif __x86_64__
-CheckEnum("FcSetSystem",FcSetSystem,0);
-CheckEnum("FcSetApplication",FcSetApplication,1);
+CheckEnum("FcSetSystem",FcSetSystem,0,40949);
+CheckEnum("FcSetApplication",FcSetApplication,1,40950);
 #elif __ia64__
-CheckEnum("FcSetSystem",FcSetSystem,0);
-CheckEnum("FcSetApplication",FcSetApplication,1);
+CheckEnum("FcSetSystem",FcSetSystem,0,40949);
+CheckEnum("FcSetApplication",FcSetApplication,1,40950);
 #elif __powerpc__ && !__powerpc64__
-CheckEnum("FcSetSystem",FcSetSystem,0);
-CheckEnum("FcSetApplication",FcSetApplication,1);
+CheckEnum("FcSetSystem",FcSetSystem,0,40949);
+CheckEnum("FcSetApplication",FcSetApplication,1,40950);
 #elif __powerpc64__
-CheckEnum("FcSetSystem",FcSetSystem,0);
-CheckEnum("FcSetApplication",FcSetApplication,1);
+CheckEnum("FcSetSystem",FcSetSystem,0,40949);
+CheckEnum("FcSetApplication",FcSetApplication,1,40950);
 #elif __s390__ && !__s390x__
-CheckEnum("FcSetSystem",FcSetSystem,0);
-CheckEnum("FcSetApplication",FcSetApplication,1);
+CheckEnum("FcSetSystem",FcSetSystem,0,40949);
+CheckEnum("FcSetApplication",FcSetApplication,1,40950);
 #elif __s390x__
-CheckEnum("FcSetSystem",FcSetSystem,0);
-CheckEnum("FcSetApplication",FcSetApplication,1);
+CheckEnum("FcSetSystem",FcSetSystem,0,40949);
+CheckEnum("FcSetApplication",FcSetApplication,1,40950);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11134,0);
 Msg("Find size of _FcSetName (11134)\n");
@@ -2155,47 +2155,47 @@ Msg("Find size of FcBlanks * (11140)\n");
 #endif
 
 #if __i386__
-CheckEnum("FcResultMatch",FcResultMatch,0);
-CheckEnum("FcResultNoMatch",FcResultNoMatch,1);
-CheckEnum("FcResultTypeMismatch",FcResultTypeMismatch,2);
-CheckEnum("FcResultNoId",FcResultNoId,3);
-CheckEnum("FcResultOutOfMemory",FcResultOutOfMemory,4);
+CheckEnum("FcResultMatch",FcResultMatch,0,40951);
+CheckEnum("FcResultNoMatch",FcResultNoMatch,1,40952);
+CheckEnum("FcResultTypeMismatch",FcResultTypeMismatch,2,40953);
+CheckEnum("FcResultNoId",FcResultNoId,3,40954);
+CheckEnum("FcResultOutOfMemory",FcResultOutOfMemory,4,40955);
 #elif __x86_64__
-CheckEnum("FcResultMatch",FcResultMatch,0);
-CheckEnum("FcResultNoMatch",FcResultNoMatch,1);
-CheckEnum("FcResultTypeMismatch",FcResultTypeMismatch,2);
-CheckEnum("FcResultNoId",FcResultNoId,3);
-CheckEnum("FcResultOutOfMemory",FcResultOutOfMemory,4);
+CheckEnum("FcResultMatch",FcResultMatch,0,40951);
+CheckEnum("FcResultNoMatch",FcResultNoMatch,1,40952);
+CheckEnum("FcResultTypeMismatch",FcResultTypeMismatch,2,40953);
+CheckEnum("FcResultNoId",FcResultNoId,3,40954);
+CheckEnum("FcResultOutOfMemory",FcResultOutOfMemory,4,40955);
 #elif __ia64__
-CheckEnum("FcResultMatch",FcResultMatch,0);
-CheckEnum("FcResultNoMatch",FcResultNoMatch,1);
-CheckEnum("FcResultTypeMismatch",FcResultTypeMismatch,2);
-CheckEnum("FcResultNoId",FcResultNoId,3);
-CheckEnum("FcResultOutOfMemory",FcResultOutOfMemory,4);
+CheckEnum("FcResultMatch",FcResultMatch,0,40951);
+CheckEnum("FcResultNoMatch",FcResultNoMatch,1,40952);
+CheckEnum("FcResultTypeMismatch",FcResultTypeMismatch,2,40953);
+CheckEnum("FcResultNoId",FcResultNoId,3,40954);
+CheckEnum("FcResultOutOfMemory",FcResultOutOfMemory,4,40955);
 #elif __powerpc__ && !__powerpc64__
-CheckEnum("FcResultMatch",FcResultMatch,0);
-CheckEnum("FcResultNoMatch",FcResultNoMatch,1);
-CheckEnum("FcResultTypeMismatch",FcResultTypeMismatch,2);
-CheckEnum("FcResultNoId",FcResultNoId,3);
-CheckEnum("FcResultOutOfMemory",FcResultOutOfMemory,4);
+CheckEnum("FcResultMatch",FcResultMatch,0,40951);
+CheckEnum("FcResultNoMatch",FcResultNoMatch,1,40952);
+CheckEnum("FcResultTypeMismatch",FcResultTypeMismatch,2,40953);
+CheckEnum("FcResultNoId",FcResultNoId,3,40954);
+CheckEnum("FcResultOutOfMemory",FcResultOutOfMemory,4,40955);
 #elif __powerpc64__
-CheckEnum("FcResultMatch",FcResultMatch,0);
-CheckEnum("FcResultNoMatch",FcResultNoMatch,1);
-CheckEnum("FcResultTypeMismatch",FcResultTypeMismatch,2);
-CheckEnum("FcResultNoId",FcResultNoId,3);
-CheckEnum("FcResultOutOfMemory",FcResultOutOfMemory,4);
+CheckEnum("FcResultMatch",FcResultMatch,0,40951);
+CheckEnum("FcResultNoMatch",FcResultNoMatch,1,40952);
+CheckEnum("FcResultTypeMismatch",FcResultTypeMismatch,2,40953);
+CheckEnum("FcResultNoId",FcResultNoId,3,40954);
+CheckEnum("FcResultOutOfMemory",FcResultOutOfMemory,4,40955);
 #elif __s390__ && !__s390x__
-CheckEnum("FcResultMatch",FcResultMatch,0);
-CheckEnum("FcResultNoMatch",FcResultNoMatch,1);
-CheckEnum("FcResultTypeMismatch",FcResultTypeMismatch,2);
-CheckEnum("FcResultNoId",FcResultNoId,3);
-CheckEnum("FcResultOutOfMemory",FcResultOutOfMemory,4);
+CheckEnum("FcResultMatch",FcResultMatch,0,40951);
+CheckEnum("FcResultNoMatch",FcResultNoMatch,1,40952);
+CheckEnum("FcResultTypeMismatch",FcResultTypeMismatch,2,40953);
+CheckEnum("FcResultNoId",FcResultNoId,3,40954);
+CheckEnum("FcResultOutOfMemory",FcResultOutOfMemory,4,40955);
 #elif __s390x__
-CheckEnum("FcResultMatch",FcResultMatch,0);
-CheckEnum("FcResultNoMatch",FcResultNoMatch,1);
-CheckEnum("FcResultTypeMismatch",FcResultTypeMismatch,2);
-CheckEnum("FcResultNoId",FcResultNoId,3);
-CheckEnum("FcResultOutOfMemory",FcResultOutOfMemory,4);
+CheckEnum("FcResultMatch",FcResultMatch,0,40951);
+CheckEnum("FcResultNoMatch",FcResultNoMatch,1,40952);
+CheckEnum("FcResultTypeMismatch",FcResultTypeMismatch,2,40953);
+CheckEnum("FcResultNoId",FcResultNoId,3,40954);
+CheckEnum("FcResultOutOfMemory",FcResultOutOfMemory,4,40955);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11141,0);
 Msg("Find size of _FcResult (11141)\n");
@@ -2490,33 +2490,33 @@ Msg("Find size of const FcFontSet * (11159)\n");
 #endif
 
 #if __i386__
-CheckEnum("FcLangEqual",FcLangEqual,0);
-CheckEnum("FcLangDifferentCountry",FcLangDifferentCountry,1);
-CheckEnum("FcLangDifferentLang",FcLangDifferentLang,2);
+CheckEnum("FcLangEqual",FcLangEqual,0,40958);
+CheckEnum("FcLangDifferentCountry",FcLangDifferentCountry,1,40959);
+CheckEnum("FcLangDifferentLang",FcLangDifferentLang,2,40960);
 #elif __x86_64__
-CheckEnum("FcLangEqual",FcLangEqual,0);
-CheckEnum("FcLangDifferentCountry",FcLangDifferentCountry,1);
-CheckEnum("FcLangDifferentLang",FcLangDifferentLang,2);
+CheckEnum("FcLangEqual",FcLangEqual,0,40958);
+CheckEnum("FcLangDifferentCountry",FcLangDifferentCountry,1,40959);
+CheckEnum("FcLangDifferentLang",FcLangDifferentLang,2,40960);
 #elif __ia64__
-CheckEnum("FcLangEqual",FcLangEqual,0);
-CheckEnum("FcLangDifferentCountry",FcLangDifferentCountry,1);
-CheckEnum("FcLangDifferentLang",FcLangDifferentLang,2);
+CheckEnum("FcLangEqual",FcLangEqual,0,40958);
+CheckEnum("FcLangDifferentCountry",FcLangDifferentCountry,1,40959);
+CheckEnum("FcLangDifferentLang",FcLangDifferentLang,2,40960);
 #elif __powerpc__ && !__powerpc64__
-CheckEnum("FcLangEqual",FcLangEqual,0);
-CheckEnum("FcLangDifferentCountry",FcLangDifferentCountry,1);
-CheckEnum("FcLangDifferentLang",FcLangDifferentLang,2);
+CheckEnum("FcLangEqual",FcLangEqual,0,40958);
+CheckEnum("FcLangDifferentCountry",FcLangDifferentCountry,1,40959);
+CheckEnum("FcLangDifferentLang",FcLangDifferentLang,2,40960);
 #elif __powerpc64__
-CheckEnum("FcLangEqual",FcLangEqual,0);
-CheckEnum("FcLangDifferentCountry",FcLangDifferentCountry,1);
-CheckEnum("FcLangDifferentLang",FcLangDifferentLang,2);
+CheckEnum("FcLangEqual",FcLangEqual,0,40958);
+CheckEnum("FcLangDifferentCountry",FcLangDifferentCountry,1,40959);
+CheckEnum("FcLangDifferentLang",FcLangDifferentLang,2,40960);
 #elif __s390__ && !__s390x__
-CheckEnum("FcLangEqual",FcLangEqual,0);
-CheckEnum("FcLangDifferentCountry",FcLangDifferentCountry,1);
-CheckEnum("FcLangDifferentLang",FcLangDifferentLang,2);
+CheckEnum("FcLangEqual",FcLangEqual,0,40958);
+CheckEnum("FcLangDifferentCountry",FcLangDifferentCountry,1,40959);
+CheckEnum("FcLangDifferentLang",FcLangDifferentLang,2,40960);
 #elif __s390x__
-CheckEnum("FcLangEqual",FcLangEqual,0);
-CheckEnum("FcLangDifferentCountry",FcLangDifferentCountry,1);
-CheckEnum("FcLangDifferentLang",FcLangDifferentLang,2);
+CheckEnum("FcLangEqual",FcLangEqual,0,40958);
+CheckEnum("FcLangDifferentCountry",FcLangDifferentCountry,1,40959);
+CheckEnum("FcLangDifferentLang",FcLangDifferentLang,2,40960);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11160,0);
 Msg("Find size of _FcLangResult (11160)\n");

@@ -26,33 +26,33 @@ Msg("Checking data structures in rpc/xdr.h\n");
 
 printf("Checking data structures in rpc/xdr.h\n");
 #if __i386__
-CheckEnum("XDR_ENCODE",XDR_ENCODE,0);
-CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1);
-CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1);
+CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159);
+CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160);
+CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161);
 #elif __s390__ && !__s390x__
-CheckEnum("XDR_ENCODE",XDR_ENCODE,0);
-CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1);
-CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1);
+CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159);
+CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160);
+CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161);
 #elif __ia64__
-CheckEnum("XDR_ENCODE",XDR_ENCODE,0);
-CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1);
-CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1);
+CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159);
+CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160);
+CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161);
 #elif __powerpc__ && !__powerpc64__
-CheckEnum("XDR_ENCODE",XDR_ENCODE,0);
-CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1);
-CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1);
+CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159);
+CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160);
+CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161);
 #elif __powerpc64__
-CheckEnum("XDR_ENCODE",XDR_ENCODE,0);
-CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1);
-CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1);
+CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159);
+CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160);
+CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161);
 #elif __s390x__
-CheckEnum("XDR_ENCODE",XDR_ENCODE,0);
-CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1);
-CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1);
+CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159);
+CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160);
+CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161);
 #elif __x86_64__
-CheckEnum("XDR_ENCODE",XDR_ENCODE,0);
-CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1);
-CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1);
+CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159);
+CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160);
+CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161);
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9933,0);
 Msg("Find size of xdr_op (9933)\n");
