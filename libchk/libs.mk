@@ -16,7 +16,7 @@ LIBOBJS = \
 	libgcc_s_so_1.o \
 	libgdk_x11_2_0_so_0.o \
 	libgdk_pixbuf_2_0_so_0.o \
-	libgdk_pixbuf_xlib_2_0_so.o \
+	libgdk_pixbuf_xlib_2_0_so_0.o \
 	libGL_so_1.o \
 	libglib_2_0_so_0.o \
 	libgmodule_2_0_so_0.o \
