@@ -23,6 +23,27 @@ char *DtNeeded[] = {
 #endif /* __x86_64__ */
 	"libatk-1.0.so.0",
 #if __i386__
+	"libatk-1.0.so.0",
+#endif /* __i386__ */
+#if __ia64__
+	"libatk-1.0.so.0",
+#endif /* __ia64__ */
+#if __powerpc__ && !__powerpc64__
+	"libatk-1.0.so.0",
+#endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	"libatk-1.0.so.0",
+#endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	"libatk-1.0.so.0",
+#endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libatk-1.0.so.0",
+#endif /* __x86_64__ */
+#if __s390x__
+	"libatk-1.0.so.0",
+#endif /* __s390x__ */
+#if __i386__
 	"libc.so.6",
 #endif /* __i386__ */
 #if __powerpc__ && !__powerpc64__
@@ -117,14 +138,182 @@ char *DtNeeded[] = {
 	"libgcc_s.so.1",
 #endif /* __s390x__ */
 	"libgdk-x11-2.0.so.0",
+#if __i386__
+	"libgdk-x11-2.0.so.0",
+#endif /* __i386__ */
+#if __ia64__
+	"libgdk-x11-2.0.so.0",
+#endif /* __ia64__ */
+#if __powerpc__ && !__powerpc64__
+	"libgdk-x11-2.0.so.0",
+#endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	"libgdk-x11-2.0.so.0",
+#endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	"libgdk-x11-2.0.so.0",
+#endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libgdk-x11-2.0.so.0",
+#endif /* __x86_64__ */
+#if __s390x__
+	"libgdk-x11-2.0.so.0",
+#endif /* __s390x__ */
 	"libgdk_pixbuf-2.0.so.0",
-	"libgdk_pixbuf_xlib-2.0.so",
+#if __i386__
+	"libgdk_pixbuf-2.0.so.0",
+#endif /* __i386__ */
+#if __ia64__
+	"libgdk_pixbuf-2.0.so.0",
+#endif /* __ia64__ */
+#if __powerpc__ && !__powerpc64__
+	"libgdk_pixbuf-2.0.so.0",
+#endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	"libgdk_pixbuf-2.0.so.0",
+#endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	"libgdk_pixbuf-2.0.so.0",
+#endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libgdk_pixbuf-2.0.so.0",
+#endif /* __x86_64__ */
+#if __s390x__
+	"libgdk_pixbuf-2.0.so.0",
+#endif /* __s390x__ */
+	"libgdk_pixbuf_xlib-2.0.so.0",
+#if __i386__
+	"libgdk_pixbuf_xlib-2.0.so.0",
+#endif /* __i386__ */
+#if __ia64__
+	"libgdk_pixbuf_xlib-2.0.so.0",
+#endif /* __ia64__ */
+#if __powerpc__ && !__powerpc64__
+	"libgdk_pixbuf_xlib-2.0.so.0",
+#endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	"libgdk_pixbuf_xlib-2.0.so.0",
+#endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	"libgdk_pixbuf_xlib-2.0.so.0",
+#endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libgdk_pixbuf_xlib-2.0.so.0",
+#endif /* __x86_64__ */
+#if __s390x__
+	"libgdk_pixbuf_xlib-2.0.so.0",
+#endif /* __s390x__ */
 	"libGL.so.1",
 	"libglib-2.0.so.0",
+#if __i386__
+	"libglib-2.0.so.0",
+#endif /* __i386__ */
+#if __ia64__
+	"libglib-2.0.so.0",
+#endif /* __ia64__ */
+#if __powerpc__ && !__powerpc64__
+	"libglib-2.0.so.0",
+#endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	"libglib-2.0.so.0",
+#endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	"libglib-2.0.so.0",
+#endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libglib-2.0.so.0",
+#endif /* __x86_64__ */
+#if __s390x__
+	"libglib-2.0.so.0",
+#endif /* __s390x__ */
 	"libgmodule-2.0.so.0",
+#if __i386__
+	"libgmodule-2.0.so.0",
+#endif /* __i386__ */
+#if __ia64__
+	"libgmodule-2.0.so.0",
+#endif /* __ia64__ */
+#if __powerpc__ && !__powerpc64__
+	"libgmodule-2.0.so.0",
+#endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	"libgmodule-2.0.so.0",
+#endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	"libgmodule-2.0.so.0",
+#endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libgmodule-2.0.so.0",
+#endif /* __x86_64__ */
+#if __s390x__
+	"libgmodule-2.0.so.0",
+#endif /* __s390x__ */
 	"libgobject-2.0.so.0",
+#if __i386__
+	"libgobject-2.0.so.0",
+#endif /* __i386__ */
+#if __ia64__
+	"libgobject-2.0.so.0",
+#endif /* __ia64__ */
+#if __powerpc__ && !__powerpc64__
+	"libgobject-2.0.so.0",
+#endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	"libgobject-2.0.so.0",
+#endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	"libgobject-2.0.so.0",
+#endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libgobject-2.0.so.0",
+#endif /* __x86_64__ */
+#if __s390x__
+	"libgobject-2.0.so.0",
+#endif /* __s390x__ */
 	"libgthread-2.0.so.0",
+#if __i386__
+	"libgthread-2.0.so.0",
+#endif /* __i386__ */
+#if __ia64__
+	"libgthread-2.0.so.0",
+#endif /* __ia64__ */
+#if __powerpc__ && !__powerpc64__
+	"libgthread-2.0.so.0",
+#endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	"libgthread-2.0.so.0",
+#endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	"libgthread-2.0.so.0",
+#endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libgthread-2.0.so.0",
+#endif /* __x86_64__ */
+#if __s390x__
+	"libgthread-2.0.so.0",
+#endif /* __s390x__ */
 	"libgtk-x11-2.0.so.0",
+#if __i386__
+	"libgtk-x11-2.0.so.0",
+#endif /* __i386__ */
+#if __ia64__
+	"libgtk-x11-2.0.so.0",
+#endif /* __ia64__ */
+#if __powerpc__ && !__powerpc64__
+	"libgtk-x11-2.0.so.0",
+#endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	"libgtk-x11-2.0.so.0",
+#endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	"libgtk-x11-2.0.so.0",
+#endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libgtk-x11-2.0.so.0",
+#endif /* __x86_64__ */
+#if __s390x__
+	"libgtk-x11-2.0.so.0",
+#endif /* __s390x__ */
 	"libICE.so.6",
 	"libjpeg.so.62",
 #if __i386__
@@ -175,8 +364,71 @@ char *DtNeeded[] = {
 #endif /* __s390x__ */
 	"libpam.so.0",
 	"libpango-1.0.so.0",
+#if __i386__
+	"libpango-1.0.so.0",
+#endif /* __i386__ */
+#if __ia64__
+	"libpango-1.0.so.0",
+#endif /* __ia64__ */
+#if __powerpc__ && !__powerpc64__
+	"libpango-1.0.so.0",
+#endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	"libpango-1.0.so.0",
+#endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	"libpango-1.0.so.0",
+#endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libpango-1.0.so.0",
+#endif /* __x86_64__ */
+#if __s390x__
+	"libpango-1.0.so.0",
+#endif /* __s390x__ */
 	"libpangoft2-1.0.so.0",
+#if __i386__
+	"libpangoft2-1.0.so.0",
+#endif /* __i386__ */
+#if __ia64__
+	"libpangoft2-1.0.so.0",
+#endif /* __ia64__ */
+#if __powerpc__ && !__powerpc64__
+	"libpangoft2-1.0.so.0",
+#endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	"libpangoft2-1.0.so.0",
+#endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	"libpangoft2-1.0.so.0",
+#endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libpangoft2-1.0.so.0",
+#endif /* __x86_64__ */
+#if __s390x__
+	"libpangoft2-1.0.so.0",
+#endif /* __s390x__ */
 	"libpangoxft-1.0.so.0",
+#if __i386__
+	"libpangoxft-1.0.so.0",
+#endif /* __i386__ */
+#if __ia64__
+	"libpangoxft-1.0.so.0",
+#endif /* __ia64__ */
+#if __powerpc__ && !__powerpc64__
+	"libpangoxft-1.0.so.0",
+#endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	"libpangoxft-1.0.so.0",
+#endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	"libpangoxft-1.0.so.0",
+#endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libpangoxft-1.0.so.0",
+#endif /* __x86_64__ */
+#if __s390x__
+	"libpangoxft-1.0.so.0",
+#endif /* __s390x__ */
 	"libpng12.so.0",
 	"libpthread.so.0",
 #if __i386__
