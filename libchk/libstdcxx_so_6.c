@@ -11778,26 +11778,26 @@ const char *_N10__cxxabiv117__class_type_infoE_vtable_name_0 [] = {
 	"_ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj",
 	"_ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv",
 	"_ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE",
-#if __i386__
-	"_ZNK10__cxxabiv117__class_type_info12__do_dyncastEiNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE",
-#endif
-#if __ia64__
+#if __s390x__
 	"_ZNK10__cxxabiv117__class_type_info12__do_dyncastElNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE",
-#endif
-#if __powerpc__ && !__powerpc64__
-	"_ZNK10__cxxabiv117__class_type_info12__do_dyncastEiNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE",
-#endif
-#if __powerpc64__
-	"_ZNK10__cxxabiv117__class_type_info12__do_dyncastElNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE",
-#endif
-#if __s390__ && !__s390x__
-	"_ZNK10__cxxabiv117__class_type_info12__do_dyncastEiNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE",
 #endif
 #if __x86_64__
 	"_ZNK10__cxxabiv117__class_type_info12__do_dyncastElNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE",
 #endif
-#if __s390x__
+#if __powerpc64__
 	"_ZNK10__cxxabiv117__class_type_info12__do_dyncastElNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE",
+#endif
+#if __ia64__
+	"_ZNK10__cxxabiv117__class_type_info12__do_dyncastElNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNK10__cxxabiv117__class_type_info12__do_dyncastEiNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNK10__cxxabiv117__class_type_info12__do_dyncastEiNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE",
+#endif
+#if __i386__
+	"_ZNK10__cxxabiv117__class_type_info12__do_dyncastEiNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE",
 #endif
 #if __i386__
 	"_ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_S2_",
@@ -11808,11 +11808,11 @@ const char *_N10__cxxabiv117__class_type_infoE_vtable_name_0 [] = {
 #if __powerpc__ && !__powerpc64__
 	"_ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_S2_",
 #endif
-#if __powerpc64__
-	"_ZNK10__cxxabiv117__class_type_info20__do_find_public_srcElPKvPKS0_S2_",
-#endif
 #if __s390__ && !__s390x__
 	"_ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_S2_",
+#endif
+#if __powerpc64__
+	"_ZNK10__cxxabiv117__class_type_info20__do_find_public_srcElPKvPKS0_S2_",
 #endif
 #if __x86_64__
 	"_ZNK10__cxxabiv117__class_type_info20__do_find_public_srcElPKvPKS0_S2_",
@@ -12015,26 +12015,26 @@ const char *_N10__cxxabiv120__si_class_type_infoE_vtable_name_0 [] = {
 	"_ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj",
 	"_ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv",
 	"_ZNK10__cxxabiv120__si_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE",
-#if __i386__
-	"_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
-#endif
-#if __ia64__
+#if __s390x__
 	"_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastElNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
-#endif
-#if __powerpc__ && !__powerpc64__
-	"_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
-#endif
-#if __powerpc64__
-	"_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastElNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
-#endif
-#if __s390__ && !__s390x__
-	"_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
 #endif
 #if __x86_64__
 	"_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastElNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
 #endif
-#if __s390x__
+#if __powerpc64__
 	"_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastElNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
+#endif
+#if __ia64__
+	"_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastElNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
+#endif
+#if __i386__
+	"_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
 #endif
 #if __i386__
 	"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_",
@@ -12045,11 +12045,11 @@ const char *_N10__cxxabiv120__si_class_type_infoE_vtable_name_0 [] = {
 #if __powerpc__ && !__powerpc64__
 	"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_",
 #endif
-#if __powerpc64__
-	"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_",
-#endif
 #if __s390__ && !__s390x__
 	"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_",
+#endif
+#if __powerpc64__
+	"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_",
 #endif
 #if __x86_64__
 	"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_",
@@ -12106,26 +12106,26 @@ const char *_N10__cxxabiv121__vmi_class_type_infoE_vtable_name_0 [] = {
 	"_ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj",
 	"_ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv",
 	"_ZNK10__cxxabiv121__vmi_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE",
-#if __s390x__
+#if __i386__
+	"_ZNK10__cxxabiv121__vmi_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
+#endif
+#if __ia64__
 	"_ZNK10__cxxabiv121__vmi_class_type_info12__do_dyncastElNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNK10__cxxabiv121__vmi_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
+#endif
+#if __powerpc64__
+	"_ZNK10__cxxabiv121__vmi_class_type_info12__do_dyncastElNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNK10__cxxabiv121__vmi_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
 #endif
 #if __x86_64__
 	"_ZNK10__cxxabiv121__vmi_class_type_info12__do_dyncastElNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
 #endif
-#if __powerpc64__
+#if __s390x__
 	"_ZNK10__cxxabiv121__vmi_class_type_info12__do_dyncastElNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
-#endif
-#if __ia64__
-	"_ZNK10__cxxabiv121__vmi_class_type_info12__do_dyncastElNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
-#endif
-#if __s390__ && !__s390x__
-	"_ZNK10__cxxabiv121__vmi_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
-#endif
-#if __powerpc__ && !__powerpc64__
-	"_ZNK10__cxxabiv121__vmi_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
-#endif
-#if __i386__
-	"_ZNK10__cxxabiv121__vmi_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
 #endif
 #if __i386__
 	"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_",
@@ -12136,11 +12136,11 @@ const char *_N10__cxxabiv121__vmi_class_type_infoE_vtable_name_0 [] = {
 #if __powerpc__ && !__powerpc64__
 	"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_",
 #endif
-#if __s390__ && !__s390x__
-	"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_",
-#endif
 #if __powerpc64__
 	"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_",
 #endif
 #if __x86_64__
 	"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_",
@@ -12290,26 +12290,26 @@ const char *_N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_vtable_name_0 [] =
 	"",
 	"",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE5imbueERKSt6locale",
-#if __i386__
-	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPci",
-#endif
-#if __ia64__
+#if __s390x__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPcl",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPci",
+#if __x86_64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPcl",
 #endif
 #if __powerpc64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPcl",
+#endif
+#if __ia64__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPcl",
 #endif
 #if __s390__ && !__s390x__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPci",
 #endif
-#if __x86_64__
-	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPcl",
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPci",
 #endif
-#if __s390x__
-	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPcl",
+#if __i386__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPci",
 #endif
 	"",
 	"",
@@ -12942,20 +12942,17 @@ const char *_St13basic_filebufIcSt11char_traitsIcEE_vtable_name_0 [] = {
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEED1Ev",
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEED0Ev",
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE5imbueERKSt6locale",
-#if __i386__
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPci",
+#endif
+#if __s390__ && !__s390x__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPci",
 #endif
 #if __ia64__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPcl",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPci",
-#endif
 #if __powerpc64__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPcl",
-#endif
-#if __s390__ && !__s390x__
-	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPci",
 #endif
 #if __x86_64__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPcl",
@@ -12964,7 +12961,13 @@ const char *_St13basic_filebufIcSt11char_traitsIcEE_vtable_name_0 [] = {
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPcl",
 #endif
 #if __i386__
-	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPci",
+#endif
+#if __powerpc64__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
+#endif
+#if __s390x__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
 #if __ia64__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
@@ -12972,64 +12975,61 @@ const char *_St13basic_filebufIcSt11char_traitsIcEE_vtable_name_0 [] = {
 #if __powerpc__ && !__powerpc64__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
-#if __powerpc64__
-	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
-#endif
-#if __s390__ && !__s390x__
-	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
-#endif
 #if __x86_64__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
-#if __s390x__
-	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
+#if __i386__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekposESt4fposI11__mbstate_tESt13_Ios_Openmode",
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE4syncEv",
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE9showmanycEv",
-#if __i386__
-	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPci",
-#endif
-#if __ia64__
-	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPcl",
-#endif
 #if __powerpc__ && !__powerpc64__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPci",
-#endif
-#if __powerpc64__
-	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPcl",
 #endif
 #if __s390__ && !__s390x__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPci",
 #endif
+#if __s390x__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPcl",
+#endif
 #if __x86_64__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPcl",
 #endif
-#if __s390x__
+#if __ia64__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPcl",
+#endif
+#if __powerpc64__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPcl",
+#endif
+#if __i386__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPci",
 #endif
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE9underflowEv",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE5uflowEv",
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE9pbackfailEi",
-#if __i386__
-	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKci",
-#endif
-#if __ia64__
-	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKcl",
-#endif
-#if __powerpc__ && !__powerpc64__
+#if __s390__ && !__s390x__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKci",
 #endif
 #if __powerpc64__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKcl",
 #endif
-#if __s390__ && !__s390x__
+#if __s390x__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKcl",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKci",
+#endif
+#if __ia64__
+	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKcl",
+#endif
+#if __i386__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKci",
 #endif
 #if __x86_64__
-	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKcl",
-#endif
-#if __s390x__
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKcl",
 #endif
 	"_ZNSt13basic_filebufIcSt11char_traitsIcEE8overflowEi",
@@ -13078,23 +13078,23 @@ const char *_St13basic_filebufIwSt11char_traitsIwEE_vtable_name_0 [] = {
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEED1Ev",
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEED0Ev",
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE5imbueERKSt6locale",
-#if __i386__
-	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwi",
-#endif
-#if __ia64__
+#if __x86_64__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwl",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwi",
-#endif
 #if __powerpc64__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwl",
+#endif
+#if __ia64__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwl",
 #endif
 #if __s390__ && !__s390x__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwi",
 #endif
-#if __x86_64__
-	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwl",
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwi",
+#endif
+#if __i386__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwi",
 #endif
 #if __s390x__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwl",
@@ -13102,56 +13102,56 @@ const char *_St13basic_filebufIwSt11char_traitsIwEE_vtable_name_0 [] = {
 #if __i386__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
-#if __ia64__
+#if __s390x__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZNSt13basic_filebufIwSt11char_traitsIwEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
-#endif
 #if __powerpc64__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
+#endif
+#if __ia64__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
 #if __s390__ && !__s390x__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
-#if __x86_64__
-	"_ZNSt13basic_filebufIwSt11char_traitsIwEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
-#if __s390x__
+#if __x86_64__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE7seekposESt4fposI11__mbstate_tESt13_Ios_Openmode",
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE4syncEv",
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE9showmanycEv",
-#if __i386__
-	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwi",
-#endif
 #if __ia64__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwl",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwi",
-#endif
-#if __powerpc64__
+#if __s390x__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwl",
 #endif
 #if __s390__ && !__s390x__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwi",
 #endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwi",
+#endif
+#if __i386__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwi",
+#endif
 #if __x86_64__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwl",
 #endif
-#if __s390x__
+#if __powerpc64__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwl",
 #endif
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE9underflowEv",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE5uflowEv",
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE9pbackfailEj",
-#if __i386__
-	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsputnEPKwi",
-#endif
-#if __ia64__
+#if __s390x__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsputnEPKwl",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsputnEPKwi",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsputnEPKwi",
@@ -13159,13 +13159,13 @@ const char *_St13basic_filebufIwSt11char_traitsIwEE_vtable_name_0 [] = {
 #if __powerpc64__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsputnEPKwl",
 #endif
-#if __s390__ && !__s390x__
+#if __i386__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsputnEPKwi",
 #endif
-#if __x86_64__
+#if __ia64__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsputnEPKwl",
 #endif
-#if __s390x__
+#if __x86_64__
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsputnEPKwl",
 #endif
 	"_ZNSt13basic_filebufIwSt11char_traitsIwEE8overflowEj",
@@ -14095,26 +14095,38 @@ const char *_St14basic_ofstreamIcSt11char_traitsIcEE_vtable_name_0 [] = {
 	};
 
 const char *_St14basic_ofstreamIcSt11char_traitsIcEE_vtable_name_1 [] = {
+#if __powerpc64__
+	"_ZTv0_n24_NSt14basic_ofstreamIcSt11char_traitsIcEED1Ev",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZTv0_n12_NSt14basic_ofstreamIcSt11char_traitsIcEED1Ev",
+#endif
 #if __i386__
 	"_ZTv0_n12_NSt14basic_ofstreamIcSt11char_traitsIcEED1Ev",
 #endif
 #if __ia64__
 	"_ZTv0_n24_NSt14basic_ofstreamIcSt11char_traitsIcEED1Ev",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZTv0_n12_NSt14basic_ofstreamIcSt11char_traitsIcEED1Ev",
+#if __s390x__
+	"_ZTv0_n24_NSt14basic_ofstreamIcSt11char_traitsIcEED1Ev",
 #endif
-#if __powerpc64__
+#if __x86_64__
 	"_ZTv0_n24_NSt14basic_ofstreamIcSt11char_traitsIcEED1Ev",
 #endif
 #if __s390__ && !__s390x__
 	"_ZTv0_n12_NSt14basic_ofstreamIcSt11char_traitsIcEED1Ev",
 #endif
-#if __x86_64__
-	"_ZTv0_n24_NSt14basic_ofstreamIcSt11char_traitsIcEED1Ev",
-#endif
 #if __s390x__
-	"_ZTv0_n24_NSt14basic_ofstreamIcSt11char_traitsIcEED1Ev",
+	"_ZTv0_n24_NSt14basic_ofstreamIcSt11char_traitsIcEED0Ev",
+#endif
+#if __x86_64__
+	"_ZTv0_n24_NSt14basic_ofstreamIcSt11char_traitsIcEED0Ev",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZTv0_n12_NSt14basic_ofstreamIcSt11char_traitsIcEED0Ev",
+#endif
+#if __powerpc64__
+	"_ZTv0_n24_NSt14basic_ofstreamIcSt11char_traitsIcEED0Ev",
 #endif
 #if __i386__
 	"_ZTv0_n12_NSt14basic_ofstreamIcSt11char_traitsIcEED0Ev",
@@ -14122,20 +14134,8 @@ const char *_St14basic_ofstreamIcSt11char_traitsIcEE_vtable_name_1 [] = {
 #if __ia64__
 	"_ZTv0_n24_NSt14basic_ofstreamIcSt11char_traitsIcEED0Ev",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZTv0_n12_NSt14basic_ofstreamIcSt11char_traitsIcEED0Ev",
-#endif
-#if __powerpc64__
-	"_ZTv0_n24_NSt14basic_ofstreamIcSt11char_traitsIcEED0Ev",
-#endif
 #if __s390__ && !__s390x__
 	"_ZTv0_n12_NSt14basic_ofstreamIcSt11char_traitsIcEED0Ev",
-#endif
-#if __x86_64__
-	"_ZTv0_n24_NSt14basic_ofstreamIcSt11char_traitsIcEED0Ev",
-#endif
-#if __s390x__
-	"_ZTv0_n24_NSt14basic_ofstreamIcSt11char_traitsIcEED0Ev",
 #endif
 	};
 
@@ -14260,11 +14260,14 @@ const char *_St14basic_ofstreamIwSt11char_traitsIwEE_vtable_name_0 [] = {
 	};
 
 const char *_St14basic_ofstreamIwSt11char_traitsIwEE_vtable_name_1 [] = {
-#if __i386__
-	"_ZTv0_n12_NSt14basic_ofstreamIwSt11char_traitsIwEED1Ev",
-#endif
-#if __ia64__
+#if __s390x__
 	"_ZTv0_n24_NSt14basic_ofstreamIwSt11char_traitsIwEED1Ev",
+#endif
+#if __x86_64__
+	"_ZTv0_n24_NSt14basic_ofstreamIwSt11char_traitsIwEED1Ev",
+#endif
+#if __s390__ && !__s390x__
+	"_ZTv0_n12_NSt14basic_ofstreamIwSt11char_traitsIwEED1Ev",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZTv0_n12_NSt14basic_ofstreamIwSt11char_traitsIwEED1Ev",
@@ -14272,20 +14275,20 @@ const char *_St14basic_ofstreamIwSt11char_traitsIwEE_vtable_name_1 [] = {
 #if __powerpc64__
 	"_ZTv0_n24_NSt14basic_ofstreamIwSt11char_traitsIwEED1Ev",
 #endif
-#if __s390__ && !__s390x__
-	"_ZTv0_n12_NSt14basic_ofstreamIwSt11char_traitsIwEED1Ev",
-#endif
-#if __x86_64__
-	"_ZTv0_n24_NSt14basic_ofstreamIwSt11char_traitsIwEED1Ev",
-#endif
-#if __s390x__
+#if __ia64__
 	"_ZTv0_n24_NSt14basic_ofstreamIwSt11char_traitsIwEED1Ev",
 #endif
 #if __i386__
-	"_ZTv0_n12_NSt14basic_ofstreamIwSt11char_traitsIwEED0Ev",
+	"_ZTv0_n12_NSt14basic_ofstreamIwSt11char_traitsIwEED1Ev",
 #endif
-#if __ia64__
+#if __s390x__
 	"_ZTv0_n24_NSt14basic_ofstreamIwSt11char_traitsIwEED0Ev",
+#endif
+#if __x86_64__
+	"_ZTv0_n24_NSt14basic_ofstreamIwSt11char_traitsIwEED0Ev",
+#endif
+#if __i386__
+	"_ZTv0_n12_NSt14basic_ofstreamIwSt11char_traitsIwEED0Ev",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZTv0_n12_NSt14basic_ofstreamIwSt11char_traitsIwEED0Ev",
@@ -14293,14 +14296,11 @@ const char *_St14basic_ofstreamIwSt11char_traitsIwEE_vtable_name_1 [] = {
 #if __powerpc64__
 	"_ZTv0_n24_NSt14basic_ofstreamIwSt11char_traitsIwEED0Ev",
 #endif
+#if __ia64__
+	"_ZTv0_n24_NSt14basic_ofstreamIwSt11char_traitsIwEED0Ev",
+#endif
 #if __s390__ && !__s390x__
 	"_ZTv0_n12_NSt14basic_ofstreamIwSt11char_traitsIwEED0Ev",
-#endif
-#if __x86_64__
-	"_ZTv0_n24_NSt14basic_ofstreamIwSt11char_traitsIwEED0Ev",
-#endif
-#if __s390x__
-	"_ZTv0_n24_NSt14basic_ofstreamIwSt11char_traitsIwEED0Ev",
 #endif
 	};
 
@@ -14427,22 +14427,22 @@ const char *_St14codecvt_bynameIcc11__mbstate_tE_vtable_name_0 [] = {
 	"_ZNKSt7codecvtIcc11__mbstate_tE5do_inERS0_PKcS4_RS4_PcS6_RS6_",
 	"_ZNKSt7codecvtIcc11__mbstate_tE11do_encodingEv",
 	"_ZNKSt7codecvtIcc11__mbstate_tE16do_always_noconvEv",
-#if __i386__
-	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_j",
-#endif
-#if __ia64__
-	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_m",
-#endif
-#if __powerpc__ && !__powerpc64__
-	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_j",
-#endif
-#if __powerpc64__
+#if __x86_64__
 	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_m",
 #endif
 #if __s390__ && !__s390x__
 	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_m",
 #endif
-#if __x86_64__
+#if __powerpc64__
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_m",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_j",
+#endif
+#if __i386__
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_j",
+#endif
+#if __ia64__
 	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_m",
 #endif
 #if __s390x__
@@ -14498,20 +14498,20 @@ const char *_St14codecvt_bynameIwc11__mbstate_tE_vtable_name_0 [] = {
 	"_ZNKSt7codecvtIwc11__mbstate_tE5do_inERS0_PKcS4_RS4_PwS6_RS6_",
 	"_ZNKSt7codecvtIwc11__mbstate_tE11do_encodingEv",
 	"_ZNKSt7codecvtIwc11__mbstate_tE16do_always_noconvEv",
-#if __i386__
-	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_j",
+#if __s390__ && !__s390x__
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_m",
 #endif
-#if __ia64__
+#if __powerpc64__
 	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_m",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_j",
 #endif
-#if __powerpc64__
+#if __ia64__
 	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_m",
 #endif
-#if __s390__ && !__s390x__
-	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_m",
+#if __i386__
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_j",
 #endif
 #if __x86_64__
 	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_m",
@@ -14707,28 +14707,34 @@ const char *_St15basic_stringbufIcSt11char_traitsIcESaIcEE_vtable_name_0 [] = {
 #if __i386__
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPci",
 #endif
-#if __ia64__
-	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPcl",
-#endif
 #if __powerpc__ && !__powerpc64__
+	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPci",
+#endif
+#if __s390__ && !__s390x__
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPci",
 #endif
 #if __powerpc64__
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPcl",
 #endif
-#if __s390__ && !__s390x__
-	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPci",
-#endif
 #if __x86_64__
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPcl",
 #endif
 #if __s390x__
+	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPcl",
+#endif
+#if __ia64__
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPcl",
 #endif
 #if __i386__
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
-#if __ia64__
+#if __s390__ && !__s390x__
+	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
+#endif
+#if __x86_64__
+	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
+#endif
+#if __s390x__
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -14737,34 +14743,28 @@ const char *_St15basic_stringbufIcSt11char_traitsIcESaIcEE_vtable_name_0 [] = {
 #if __powerpc64__
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
-#if __s390__ && !__s390x__
-	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
-#endif
-#if __x86_64__
-	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
-#endif
-#if __s390x__
+#if __ia64__
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekposESt4fposI11__mbstate_tESt13_Ios_Openmode",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE4syncEv",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE9showmanycEv",
-#if __i386__
-	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci",
-#endif
 #if __ia64__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci",
 #endif
-#if __powerpc64__
+#if __x86_64__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl",
 #endif
 #if __s390__ && !__s390x__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci",
 #endif
-#if __x86_64__
+#if __i386__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci",
+#endif
+#if __powerpc64__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl",
 #endif
 #if __s390x__
@@ -14773,17 +14773,17 @@ const char *_St15basic_stringbufIcSt11char_traitsIcESaIcEE_vtable_name_0 [] = {
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE9underflowEv",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE5uflowEv",
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE9pbackfailEi",
-#if __i386__
-	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci",
+#if __powerpc64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKcl",
 #endif
 #if __ia64__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKcl",
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __i386__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci",
 #endif
-#if __powerpc64__
-	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKcl",
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci",
 #endif
 #if __s390__ && !__s390x__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci",
@@ -14840,11 +14840,8 @@ const char *_St15basic_stringbufIwSt11char_traitsIwESaIwEE_vtable_name_0 [] = {
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEED1Ev",
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEED0Ev",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE5imbueERKSt6locale",
-#if __i386__
+#if __s390__ && !__s390x__
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwi",
-#endif
-#if __ia64__
-	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwl",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwi",
@@ -14852,25 +14849,28 @@ const char *_St15basic_stringbufIwSt11char_traitsIwESaIwEE_vtable_name_0 [] = {
 #if __powerpc64__
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwl",
 #endif
-#if __s390__ && !__s390x__
-	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwi",
+#if __s390x__
+	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwl",
 #endif
 #if __x86_64__
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwl",
 #endif
-#if __s390x__
-	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwl",
-#endif
 #if __i386__
-	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
+	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwi",
 #endif
 #if __ia64__
+	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwl",
+#endif
+#if __ia64__
+	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
+#endif
+#if __powerpc64__
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
-#if __powerpc64__
+#if __s390x__
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
 #if __s390__ && !__s390x__
@@ -14879,20 +14879,14 @@ const char *_St15basic_stringbufIwSt11char_traitsIwESaIwEE_vtable_name_0 [] = {
 #if __x86_64__
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
-#if __s390x__
-	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
+#if __i386__
+	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7seekposESt4fposI11__mbstate_tESt13_Ios_Openmode",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE4syncEv",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE9showmanycEv",
-#if __i386__
-	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi",
-#endif
-#if __ia64__
+#if __s390x__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwl",
-#endif
-#if __powerpc__ && !__powerpc64__
-	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi",
 #endif
 #if __powerpc64__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwl",
@@ -14900,35 +14894,41 @@ const char *_St15basic_stringbufIwSt11char_traitsIwESaIwEE_vtable_name_0 [] = {
 #if __s390__ && !__s390x__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi",
 #endif
-#if __x86_64__
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi",
+#endif
+#if __i386__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi",
+#endif
+#if __ia64__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwl",
 #endif
-#if __s390x__
+#if __x86_64__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwl",
 #endif
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE9underflowEv",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE5uflowEv",
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE9pbackfailEj",
-#if __i386__
-	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwi",
+#if __s390x__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwl",
 #endif
-#if __ia64__
+#if __x86_64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwl",
+#endif
+#if __powerpc64__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwl",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwi",
 #endif
-#if __powerpc64__
-	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwl",
-#endif
 #if __s390__ && !__s390x__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwi",
 #endif
-#if __x86_64__
+#if __ia64__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwl",
 #endif
-#if __s390x__
-	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwl",
+#if __i386__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwi",
 #endif
 	"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE8overflowEj",
 	};
@@ -16166,44 +16166,44 @@ const char *_St19basic_istringstreamIcSt11char_traitsIcESaIcEE_vtable_name_0 [] 
 	};
 
 const char *_St19basic_istringstreamIcSt11char_traitsIcESaIcEE_vtable_name_1 [] = {
-#if __i386__
-	"_ZTv0_n12_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
-#endif
-#if __ia64__
-	"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
-#endif
-#if __powerpc__ && !__powerpc64__
-	"_ZTv0_n12_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
-#endif
-#if __powerpc64__
-	"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
-#endif
-#if __s390__ && !__s390x__
-	"_ZTv0_n12_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
-#endif
-#if __x86_64__
-	"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
-#endif
 #if __s390x__
 	"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
 #endif
-#if __i386__
-	"_ZTv0_n12_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED0Ev",
+#if __x86_64__
+	"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
 #endif
-#if __ia64__
-	"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED0Ev",
+#if __s390__ && !__s390x__
+	"_ZTv0_n12_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
 #endif
 #if __powerpc__ && !__powerpc64__
-	"_ZTv0_n12_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED0Ev",
+	"_ZTv0_n12_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
 #endif
 #if __powerpc64__
+	"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
+#endif
+#if __i386__
+	"_ZTv0_n12_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
+#endif
+#if __ia64__
+	"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev",
+#endif
+#if __x86_64__
 	"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED0Ev",
 #endif
 #if __s390__ && !__s390x__
 	"_ZTv0_n12_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED0Ev",
 #endif
-#if __x86_64__
+#if __ia64__
 	"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED0Ev",
+#endif
+#if __powerpc64__
+	"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED0Ev",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZTv0_n12_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED0Ev",
+#endif
+#if __i386__
+	"_ZTv0_n12_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED0Ev",
 #endif
 #if __s390x__
 	"_ZTv0_n24_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED0Ev",
@@ -16936,25 +16936,25 @@ const char *_St7codecvtIcc11__mbstate_tE_vtable_name_0 [] = {
 	"_ZNKSt7codecvtIcc11__mbstate_tE5do_inERS0_PKcS4_RS4_PcS6_RS6_",
 	"_ZNKSt7codecvtIcc11__mbstate_tE11do_encodingEv",
 	"_ZNKSt7codecvtIcc11__mbstate_tE16do_always_noconvEv",
-#if __i386__
-	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_j",
+#if __s390__ && !__s390x__
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_m",
 #endif
-#if __ia64__
+#if __powerpc64__
 	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_m",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_j",
 #endif
-#if __powerpc64__
+#if __ia64__
 	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_m",
 #endif
-#if __s390__ && !__s390x__
+#if __i386__
+	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_j",
+#endif
+#if __s390x__
 	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_m",
 #endif
 #if __x86_64__
-	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_m",
-#endif
-#if __s390x__
 	"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_m",
 #endif
 	"_ZNKSt7codecvtIcc11__mbstate_tE13do_max_lengthEv",
@@ -17007,8 +17007,14 @@ const char *_St7codecvtIwc11__mbstate_tE_vtable_name_0 [] = {
 	"_ZNKSt7codecvtIwc11__mbstate_tE5do_inERS0_PKcS4_RS4_PwS6_RS6_",
 	"_ZNKSt7codecvtIwc11__mbstate_tE11do_encodingEv",
 	"_ZNKSt7codecvtIwc11__mbstate_tE16do_always_noconvEv",
-#if __i386__
-	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_j",
+#if __s390x__
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_m",
+#endif
+#if __s390__ && !__s390x__
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_m",
+#endif
+#if __powerpc64__
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_m",
 #endif
 #if __ia64__
 	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_m",
@@ -17016,16 +17022,10 @@ const char *_St7codecvtIwc11__mbstate_tE_vtable_name_0 [] = {
 #if __powerpc__ && !__powerpc64__
 	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_j",
 #endif
-#if __powerpc64__
-	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_m",
-#endif
-#if __s390__ && !__s390x__
-	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_m",
+#if __i386__
+	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_j",
 #endif
 #if __x86_64__
-	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_m",
-#endif
-#if __s390x__
 	"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_m",
 #endif
 	"_ZNKSt7codecvtIwc11__mbstate_tE13do_max_lengthEv",
@@ -17542,10 +17542,10 @@ const char *_Si_vtable_name_0 [] = {
 	};
 
 const char *_Si_vtable_name_1 [] = {
-#if __i386__
+#if __s390__ && !__s390x__
 	"_ZTv0_n12_NSiD1Ev",
 #endif
-#if __ia64__
+#if __x86_64__
 	"_ZTv0_n24_NSiD1Ev",
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -17554,19 +17554,22 @@ const char *_Si_vtable_name_1 [] = {
 #if __powerpc64__
 	"_ZTv0_n24_NSiD1Ev",
 #endif
-#if __s390__ && !__s390x__
+#if __i386__
 	"_ZTv0_n12_NSiD1Ev",
 #endif
-#if __x86_64__
+#if __ia64__
 	"_ZTv0_n24_NSiD1Ev",
 #endif
 #if __s390x__
 	"_ZTv0_n24_NSiD1Ev",
 #endif
-#if __i386__
+#if __s390__ && !__s390x__
 	"_ZTv0_n12_NSiD0Ev",
 #endif
-#if __ia64__
+#if __s390x__
+	"_ZTv0_n24_NSiD0Ev",
+#endif
+#if __x86_64__
 	"_ZTv0_n24_NSiD0Ev",
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -17575,13 +17578,10 @@ const char *_Si_vtable_name_1 [] = {
 #if __powerpc64__
 	"_ZTv0_n24_NSiD0Ev",
 #endif
-#if __s390__ && !__s390x__
+#if __i386__
 	"_ZTv0_n12_NSiD0Ev",
 #endif
-#if __x86_64__
-	"_ZTv0_n24_NSiD0Ev",
-#endif
-#if __s390x__
+#if __ia64__
 	"_ZTv0_n24_NSiD0Ev",
 #endif
 	};
@@ -17734,44 +17734,44 @@ const char *_So_vtable_name_0 [] = {
 	};
 
 const char *_So_vtable_name_1 [] = {
-#if __i386__
-	"_ZTv0_n12_NSoD1Ev",
-#endif
-#if __ia64__
-	"_ZTv0_n24_NSoD1Ev",
-#endif
-#if __powerpc__ && !__powerpc64__
-	"_ZTv0_n12_NSoD1Ev",
-#endif
-#if __powerpc64__
-	"_ZTv0_n24_NSoD1Ev",
-#endif
-#if __s390__ && !__s390x__
-	"_ZTv0_n12_NSoD1Ev",
-#endif
-#if __x86_64__
-	"_ZTv0_n24_NSoD1Ev",
-#endif
 #if __s390x__
 	"_ZTv0_n24_NSoD1Ev",
 #endif
-#if __i386__
-	"_ZTv0_n12_NSoD0Ev",
+#if __x86_64__
+	"_ZTv0_n24_NSoD1Ev",
 #endif
-#if __ia64__
-	"_ZTv0_n24_NSoD0Ev",
+#if __s390__ && !__s390x__
+	"_ZTv0_n12_NSoD1Ev",
 #endif
 #if __powerpc__ && !__powerpc64__
-	"_ZTv0_n12_NSoD0Ev",
+	"_ZTv0_n12_NSoD1Ev",
 #endif
 #if __powerpc64__
+	"_ZTv0_n24_NSoD1Ev",
+#endif
+#if __i386__
+	"_ZTv0_n12_NSoD1Ev",
+#endif
+#if __ia64__
+	"_ZTv0_n24_NSoD1Ev",
+#endif
+#if __x86_64__
 	"_ZTv0_n24_NSoD0Ev",
 #endif
 #if __s390__ && !__s390x__
 	"_ZTv0_n12_NSoD0Ev",
 #endif
-#if __x86_64__
+#if __ia64__
 	"_ZTv0_n24_NSoD0Ev",
+#endif
+#if __powerpc64__
+	"_ZTv0_n24_NSoD0Ev",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZTv0_n12_NSoD0Ev",
+#endif
+#if __i386__
+	"_ZTv0_n12_NSoD0Ev",
 #endif
 #if __s390x__
 	"_ZTv0_n24_NSoD0Ev",
@@ -17926,29 +17926,32 @@ const char *_St13basic_istreamIwSt11char_traitsIwEE_vtable_name_0 [] = {
 	};
 
 const char *_St13basic_istreamIwSt11char_traitsIwEE_vtable_name_1 [] = {
+#if __x86_64__
+	"_ZTv0_n24_NSt13basic_istreamIwSt11char_traitsIwEED1Ev",
+#endif
+#if __s390__ && !__s390x__
+	"_ZTv0_n12_NSt13basic_istreamIwSt11char_traitsIwEED1Ev",
+#endif
+#if __s390x__
+	"_ZTv0_n24_NSt13basic_istreamIwSt11char_traitsIwEED1Ev",
+#endif
+#if __powerpc64__
+	"_ZTv0_n24_NSt13basic_istreamIwSt11char_traitsIwEED1Ev",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZTv0_n12_NSt13basic_istreamIwSt11char_traitsIwEED1Ev",
+#endif
 #if __i386__
 	"_ZTv0_n12_NSt13basic_istreamIwSt11char_traitsIwEED1Ev",
 #endif
 #if __ia64__
 	"_ZTv0_n24_NSt13basic_istreamIwSt11char_traitsIwEED1Ev",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZTv0_n12_NSt13basic_istreamIwSt11char_traitsIwEED1Ev",
-#endif
-#if __powerpc64__
-	"_ZTv0_n24_NSt13basic_istreamIwSt11char_traitsIwEED1Ev",
-#endif
-#if __s390__ && !__s390x__
-	"_ZTv0_n12_NSt13basic_istreamIwSt11char_traitsIwEED1Ev",
+#if __s390x__
+	"_ZTv0_n24_NSt13basic_istreamIwSt11char_traitsIwEED0Ev",
 #endif
 #if __x86_64__
-	"_ZTv0_n24_NSt13basic_istreamIwSt11char_traitsIwEED1Ev",
-#endif
-#if __s390x__
-	"_ZTv0_n24_NSt13basic_istreamIwSt11char_traitsIwEED1Ev",
-#endif
-#if __i386__
-	"_ZTv0_n12_NSt13basic_istreamIwSt11char_traitsIwEED0Ev",
+	"_ZTv0_n24_NSt13basic_istreamIwSt11char_traitsIwEED0Ev",
 #endif
 #if __ia64__
 	"_ZTv0_n24_NSt13basic_istreamIwSt11char_traitsIwEED0Ev",
@@ -17959,14 +17962,11 @@ const char *_St13basic_istreamIwSt11char_traitsIwEE_vtable_name_1 [] = {
 #if __powerpc64__
 	"_ZTv0_n24_NSt13basic_istreamIwSt11char_traitsIwEED0Ev",
 #endif
-#if __s390__ && !__s390x__
+#if __i386__
 	"_ZTv0_n12_NSt13basic_istreamIwSt11char_traitsIwEED0Ev",
 #endif
-#if __x86_64__
-	"_ZTv0_n24_NSt13basic_istreamIwSt11char_traitsIwEED0Ev",
-#endif
-#if __s390x__
-	"_ZTv0_n24_NSt13basic_istreamIwSt11char_traitsIwEED0Ev",
+#if __s390__ && !__s390x__
+	"_ZTv0_n12_NSt13basic_istreamIwSt11char_traitsIwEED0Ev",
 #endif
 	};
 
@@ -18118,29 +18118,32 @@ const char *_St13basic_ostreamIwSt11char_traitsIwEE_vtable_name_0 [] = {
 	};
 
 const char *_St13basic_ostreamIwSt11char_traitsIwEE_vtable_name_1 [] = {
+#if __x86_64__
+	"_ZTv0_n24_NSt13basic_ostreamIwSt11char_traitsIwEED1Ev",
+#endif
+#if __s390__ && !__s390x__
+	"_ZTv0_n12_NSt13basic_ostreamIwSt11char_traitsIwEED1Ev",
+#endif
+#if __s390x__
+	"_ZTv0_n24_NSt13basic_ostreamIwSt11char_traitsIwEED1Ev",
+#endif
+#if __powerpc64__
+	"_ZTv0_n24_NSt13basic_ostreamIwSt11char_traitsIwEED1Ev",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZTv0_n12_NSt13basic_ostreamIwSt11char_traitsIwEED1Ev",
+#endif
 #if __i386__
 	"_ZTv0_n12_NSt13basic_ostreamIwSt11char_traitsIwEED1Ev",
 #endif
 #if __ia64__
 	"_ZTv0_n24_NSt13basic_ostreamIwSt11char_traitsIwEED1Ev",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZTv0_n12_NSt13basic_ostreamIwSt11char_traitsIwEED1Ev",
-#endif
-#if __powerpc64__
-	"_ZTv0_n24_NSt13basic_ostreamIwSt11char_traitsIwEED1Ev",
-#endif
-#if __s390__ && !__s390x__
-	"_ZTv0_n12_NSt13basic_ostreamIwSt11char_traitsIwEED1Ev",
+#if __s390x__
+	"_ZTv0_n24_NSt13basic_ostreamIwSt11char_traitsIwEED0Ev",
 #endif
 #if __x86_64__
-	"_ZTv0_n24_NSt13basic_ostreamIwSt11char_traitsIwEED1Ev",
-#endif
-#if __s390x__
-	"_ZTv0_n24_NSt13basic_ostreamIwSt11char_traitsIwEED1Ev",
-#endif
-#if __i386__
-	"_ZTv0_n12_NSt13basic_ostreamIwSt11char_traitsIwEED0Ev",
+	"_ZTv0_n24_NSt13basic_ostreamIwSt11char_traitsIwEED0Ev",
 #endif
 #if __ia64__
 	"_ZTv0_n24_NSt13basic_ostreamIwSt11char_traitsIwEED0Ev",
@@ -18151,14 +18154,11 @@ const char *_St13basic_ostreamIwSt11char_traitsIwEE_vtable_name_1 [] = {
 #if __powerpc64__
 	"_ZTv0_n24_NSt13basic_ostreamIwSt11char_traitsIwEED0Ev",
 #endif
-#if __s390__ && !__s390x__
+#if __i386__
 	"_ZTv0_n12_NSt13basic_ostreamIwSt11char_traitsIwEED0Ev",
 #endif
-#if __x86_64__
-	"_ZTv0_n24_NSt13basic_ostreamIwSt11char_traitsIwEED0Ev",
-#endif
-#if __s390x__
-	"_ZTv0_n24_NSt13basic_ostreamIwSt11char_traitsIwEED0Ev",
+#if __s390__ && !__s390x__
+	"_ZTv0_n12_NSt13basic_ostreamIwSt11char_traitsIwEED0Ev",
 #endif
 	};
 
@@ -19973,17 +19973,17 @@ const char *_St15basic_streambufIwSt11char_traitsIwEE_vtable_name_0 [] = {
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEED1Ev",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEED0Ev",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE5imbueERKSt6locale",
-#if __i386__
-	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwi",
-#endif
-#if __ia64__
-	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwl",
-#endif
 #if __powerpc__ && !__powerpc64__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwi",
 #endif
 #if __powerpc64__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwl",
+#endif
+#if __ia64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwl",
+#endif
+#if __i386__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwi",
 #endif
 #if __s390__ && !__s390x__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwi",
@@ -19994,23 +19994,23 @@ const char *_St15basic_streambufIwSt11char_traitsIwEE_vtable_name_0 [] = {
 #if __s390x__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwl",
 #endif
-#if __i386__
-	"_ZNSt15basic_streambufIwSt11char_traitsIwEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
-#endif
-#if __ia64__
-	"_ZNSt15basic_streambufIwSt11char_traitsIwEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
-#endif
-#if __powerpc__ && !__powerpc64__
-	"_ZNSt15basic_streambufIwSt11char_traitsIwEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
-#endif
-#if __powerpc64__
-	"_ZNSt15basic_streambufIwSt11char_traitsIwEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
-#endif
 #if __s390__ && !__s390x__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
 #if __x86_64__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
+#endif
+#if __powerpc64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
+#endif
+#if __ia64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
+#endif
+#if __i386__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
 #if __s390x__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
@@ -20018,12 +20018,6 @@ const char *_St15basic_streambufIwSt11char_traitsIwEE_vtable_name_0 [] = {
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE7seekposESt4fposI11__mbstate_tESt13_Ios_Openmode",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE4syncEv",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE9showmanycEv",
-#if __i386__
-	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi",
-#endif
-#if __ia64__
-	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwl",
-#endif
 #if __powerpc__ && !__powerpc64__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi",
 #endif
@@ -20039,26 +20033,32 @@ const char *_St15basic_streambufIwSt11char_traitsIwEE_vtable_name_0 [] = {
 #if __s390x__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwl",
 #endif
+#if __ia64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwl",
+#endif
+#if __i386__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi",
+#endif
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE9underflowEv",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE5uflowEv",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE9pbackfailEj",
-#if __i386__
-	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwi",
-#endif
 #if __ia64__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwl",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwi",
-#endif
-#if __powerpc64__
+#if __x86_64__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwl",
 #endif
 #if __s390__ && !__s390x__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwi",
 #endif
-#if __x86_64__
+#if __powerpc64__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwl",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwi",
+#endif
+#if __i386__
+	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwi",
 #endif
 #if __s390x__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwl",

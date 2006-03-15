@@ -11942,24 +11942,27 @@ const char *_14QDragMoveEvent_vtable_name_1 [] = {
 #if __i386__
 	"_ZThn12_N14QDragMoveEventD1Ev",
 #endif
-#if __ia64__
+#if __s390x__
 	"_ZThn24_N14QDragMoveEventD1Ev",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn12_N14QDragMoveEventD1Ev",
-#endif
-#if __powerpc64__
+#if __x86_64__
 	"_ZThn24_N14QDragMoveEventD1Ev",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn12_N14QDragMoveEventD1Ev",
 #endif
-#if __x86_64__
+#if __powerpc64__
 	"_ZThn24_N14QDragMoveEventD1Ev",
 #endif
-#if __s390x__
+#if __powerpc__ && !__powerpc64__
+	"_ZThn12_N14QDragMoveEventD1Ev",
+#endif
+#if __ia64__
 	"_ZThn24_N14QDragMoveEventD1Ev",
 #endif
+#if __powerpc64__
+	"_ZThn24_N14QDragMoveEventD0Ev",
+#endif
 #if __i386__
 	"_ZThn12_N14QDragMoveEventD0Ev",
 #endif
@@ -11969,28 +11972,19 @@ const char *_14QDragMoveEvent_vtable_name_1 [] = {
 #if __powerpc__ && !__powerpc64__
 	"_ZThn12_N14QDragMoveEventD0Ev",
 #endif
-#if __powerpc64__
+#if __s390x__
+	"_ZThn24_N14QDragMoveEventD0Ev",
+#endif
+#if __x86_64__
 	"_ZThn24_N14QDragMoveEventD0Ev",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn12_N14QDragMoveEventD0Ev",
 #endif
-#if __x86_64__
-	"_ZThn24_N14QDragMoveEventD0Ev",
-#endif
-#if __s390x__
-	"_ZThn24_N14QDragMoveEventD0Ev",
-#endif
-#if __i386__
-	"_ZThn12_NK10QDropEvent6formatEi",
-#endif
-#if __ia64__
-	"_ZThn24_NK10QDropEvent6formatEi",
-#endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn12_NK10QDropEvent6formatEi",
 #endif
-#if __powerpc64__
+#if __ia64__
 	"_ZThn24_NK10QDropEvent6formatEi",
 #endif
 #if __s390__ && !__s390x__
@@ -12002,46 +11996,52 @@ const char *_14QDragMoveEvent_vtable_name_1 [] = {
 #if __s390x__
 	"_ZThn24_NK10QDropEvent6formatEi",
 #endif
+#if __powerpc64__
+	"_ZThn24_NK10QDropEvent6formatEi",
+#endif
 #if __i386__
-	"_ZThn12_NK10QDropEvent8providesEPKc",
+	"_ZThn12_NK10QDropEvent6formatEi",
 #endif
 #if __ia64__
 	"_ZThn24_NK10QDropEvent8providesEPKc",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn12_NK10QDropEvent8providesEPKc",
-#endif
 #if __powerpc64__
+	"_ZThn24_NK10QDropEvent8providesEPKc",
+#endif
+#if __x86_64__
 	"_ZThn24_NK10QDropEvent8providesEPKc",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn12_NK10QDropEvent8providesEPKc",
 #endif
-#if __x86_64__
-	"_ZThn24_NK10QDropEvent8providesEPKc",
+#if __powerpc__ && !__powerpc64__
+	"_ZThn12_NK10QDropEvent8providesEPKc",
 #endif
 #if __s390x__
 	"_ZThn24_NK10QDropEvent8providesEPKc",
 #endif
 #if __i386__
-	"_ZThn12_NK10QDropEvent11encodedDataEPKc",
+	"_ZThn12_NK10QDropEvent8providesEPKc",
 #endif
-#if __ia64__
+#if __s390x__
 	"_ZThn24_NK10QDropEvent11encodedDataEPKc",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn12_NK10QDropEvent11encodedDataEPKc",
-#endif
-#if __powerpc64__
+#if __x86_64__
 	"_ZThn24_NK10QDropEvent11encodedDataEPKc",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn12_NK10QDropEvent11encodedDataEPKc",
 #endif
-#if __x86_64__
+#if __powerpc64__
 	"_ZThn24_NK10QDropEvent11encodedDataEPKc",
 #endif
-#if __s390x__
+#if __powerpc__ && !__powerpc64__
+	"_ZThn12_NK10QDropEvent11encodedDataEPKc",
+#endif
+#if __i386__
+	"_ZThn12_NK10QDropEvent11encodedDataEPKc",
+#endif
+#if __ia64__
 	"_ZThn24_NK10QDropEvent11encodedDataEPKc",
 #endif
 	};
@@ -12132,24 +12132,27 @@ const char *_15QDragEnterEvent_vtable_name_1 [] = {
 #if __i386__
 	"_ZThn12_N15QDragEnterEventD1Ev",
 #endif
-#if __ia64__
+#if __s390x__
 	"_ZThn24_N15QDragEnterEventD1Ev",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn12_N15QDragEnterEventD1Ev",
-#endif
-#if __powerpc64__
+#if __x86_64__
 	"_ZThn24_N15QDragEnterEventD1Ev",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn12_N15QDragEnterEventD1Ev",
 #endif
-#if __x86_64__
+#if __powerpc64__
 	"_ZThn24_N15QDragEnterEventD1Ev",
 #endif
-#if __s390x__
+#if __powerpc__ && !__powerpc64__
+	"_ZThn12_N15QDragEnterEventD1Ev",
+#endif
+#if __ia64__
 	"_ZThn24_N15QDragEnterEventD1Ev",
 #endif
+#if __powerpc64__
+	"_ZThn24_N15QDragEnterEventD0Ev",
+#endif
 #if __i386__
 	"_ZThn12_N15QDragEnterEventD0Ev",
 #endif
@@ -12159,28 +12162,19 @@ const char *_15QDragEnterEvent_vtable_name_1 [] = {
 #if __powerpc__ && !__powerpc64__
 	"_ZThn12_N15QDragEnterEventD0Ev",
 #endif
-#if __powerpc64__
+#if __s390x__
+	"_ZThn24_N15QDragEnterEventD0Ev",
+#endif
+#if __x86_64__
 	"_ZThn24_N15QDragEnterEventD0Ev",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn12_N15QDragEnterEventD0Ev",
 #endif
-#if __x86_64__
-	"_ZThn24_N15QDragEnterEventD0Ev",
-#endif
-#if __s390x__
-	"_ZThn24_N15QDragEnterEventD0Ev",
-#endif
-#if __i386__
-	"_ZThn12_NK10QDropEvent6formatEi",
-#endif
-#if __ia64__
-	"_ZThn24_NK10QDropEvent6formatEi",
-#endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn12_NK10QDropEvent6formatEi",
 #endif
-#if __powerpc64__
+#if __ia64__
 	"_ZThn24_NK10QDropEvent6formatEi",
 #endif
 #if __s390__ && !__s390x__
@@ -12192,46 +12186,52 @@ const char *_15QDragEnterEvent_vtable_name_1 [] = {
 #if __s390x__
 	"_ZThn24_NK10QDropEvent6formatEi",
 #endif
+#if __powerpc64__
+	"_ZThn24_NK10QDropEvent6formatEi",
+#endif
 #if __i386__
-	"_ZThn12_NK10QDropEvent8providesEPKc",
+	"_ZThn12_NK10QDropEvent6formatEi",
 #endif
 #if __ia64__
 	"_ZThn24_NK10QDropEvent8providesEPKc",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn12_NK10QDropEvent8providesEPKc",
-#endif
 #if __powerpc64__
+	"_ZThn24_NK10QDropEvent8providesEPKc",
+#endif
+#if __x86_64__
 	"_ZThn24_NK10QDropEvent8providesEPKc",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn12_NK10QDropEvent8providesEPKc",
 #endif
-#if __x86_64__
-	"_ZThn24_NK10QDropEvent8providesEPKc",
+#if __powerpc__ && !__powerpc64__
+	"_ZThn12_NK10QDropEvent8providesEPKc",
 #endif
 #if __s390x__
 	"_ZThn24_NK10QDropEvent8providesEPKc",
 #endif
 #if __i386__
-	"_ZThn12_NK10QDropEvent11encodedDataEPKc",
+	"_ZThn12_NK10QDropEvent8providesEPKc",
 #endif
-#if __ia64__
+#if __s390x__
 	"_ZThn24_NK10QDropEvent11encodedDataEPKc",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn12_NK10QDropEvent11encodedDataEPKc",
-#endif
-#if __powerpc64__
+#if __x86_64__
 	"_ZThn24_NK10QDropEvent11encodedDataEPKc",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn12_NK10QDropEvent11encodedDataEPKc",
 #endif
-#if __x86_64__
+#if __powerpc64__
 	"_ZThn24_NK10QDropEvent11encodedDataEPKc",
 #endif
-#if __s390x__
+#if __powerpc__ && !__powerpc64__
+	"_ZThn12_NK10QDropEvent11encodedDataEPKc",
+#endif
+#if __i386__
+	"_ZThn12_NK10QDropEvent11encodedDataEPKc",
+#endif
+#if __ia64__
 	"_ZThn24_NK10QDropEvent11encodedDataEPKc",
 #endif
 	};
@@ -24618,12 +24618,12 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if __i386__
 	"_ZThn8_N11QGridLayoutD1Ev",
 #endif
+#if __ia64__
+	"_ZThn16_N11QGridLayoutD1Ev",
+#endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_N11QGridLayoutD1Ev",
 #endif
-#if __ia64__
-	"_ZThn16_N11QGridLayoutD1Ev",
-#endif
 #if __powerpc64__
 	"_ZThn16_N11QGridLayoutD1Ev",
 #endif
@@ -24636,8 +24636,8 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if __s390x__
 	"_ZThn16_N11QGridLayoutD1Ev",
 #endif
-#if __powerpc64__
-	"_ZThn16_N11QGridLayoutD0Ev",
+#if __i386__
+	"_ZThn8_N11QGridLayoutD0Ev",
 #endif
 #if __ia64__
 	"_ZThn16_N11QGridLayoutD0Ev",
@@ -24645,8 +24645,8 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_N11QGridLayoutD0Ev",
 #endif
-#if __i386__
-	"_ZThn8_N11QGridLayoutD0Ev",
+#if __powerpc64__
+	"_ZThn16_N11QGridLayoutD0Ev",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn8_N11QGridLayoutD0Ev",
@@ -24656,12 +24656,6 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #endif
 #if __s390x__
 	"_ZThn16_N11QGridLayoutD0Ev",
-#endif
-#if __x86_64__
-	"_ZThn16_NK11QGridLayout8sizeHintEv",
-#endif
-#if __s390x__
-	"_ZThn16_NK11QGridLayout8sizeHintEv",
 #endif
 #if __i386__
 	"_ZThn8_NK11QGridLayout8sizeHintEv",
@@ -24678,35 +24672,35 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if __s390__ && !__s390x__
 	"_ZThn8_NK11QGridLayout8sizeHintEv",
 #endif
+#if __x86_64__
+	"_ZThn16_NK11QGridLayout8sizeHintEv",
+#endif
+#if __s390x__
+	"_ZThn16_NK11QGridLayout8sizeHintEv",
+#endif
+#if __i386__
+	"_ZThn8_NK11QGridLayout11minimumSizeEv",
+#endif
 #if __ia64__
 	"_ZThn16_NK11QGridLayout11minimumSizeEv",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_NK11QGridLayout11minimumSizeEv",
 #endif
-#if __i386__
+#if __powerpc64__
+	"_ZThn16_NK11QGridLayout11minimumSizeEv",
+#endif
+#if __s390__ && !__s390x__
 	"_ZThn8_NK11QGridLayout11minimumSizeEv",
 #endif
-#if __s390__ && !__s390x__
-	"_ZThn8_NK11QGridLayout11minimumSizeEv",
-#endif
 #if __x86_64__
 	"_ZThn16_NK11QGridLayout11minimumSizeEv",
 #endif
 #if __s390x__
 	"_ZThn16_NK11QGridLayout11minimumSizeEv",
 #endif
-#if __powerpc64__
-	"_ZThn16_NK11QGridLayout11minimumSizeEv",
-#endif
 #if __i386__
 	"_ZThn8_NK11QGridLayout11maximumSizeEv",
-#endif
-#if __s390__ && !__s390x__
-	"_ZThn8_NK11QGridLayout11maximumSizeEv",
-#endif
-#if __x86_64__
-	"_ZThn16_NK11QGridLayout11maximumSizeEv",
 #endif
 #if __ia64__
 	"_ZThn16_NK11QGridLayout11maximumSizeEv",
@@ -24717,38 +24711,38 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if __powerpc64__
 	"_ZThn16_NK11QGridLayout11maximumSizeEv",
 #endif
+#if __s390__ && !__s390x__
+	"_ZThn8_NK11QGridLayout11maximumSizeEv",
+#endif
+#if __x86_64__
+	"_ZThn16_NK11QGridLayout11maximumSizeEv",
+#endif
 #if __s390x__
 	"_ZThn16_NK11QGridLayout11maximumSizeEv",
 #endif
-#if __x86_64__
-	"_ZThn16_NK11QGridLayout19expandingDirectionsEv",
+#if __i386__
+	"_ZThn8_NK11QGridLayout19expandingDirectionsEv",
 #endif
 #if __ia64__
-	"_ZThn16_NK11QGridLayout19expandingDirectionsEv",
-#endif
-#if __powerpc64__
-	"_ZThn16_NK11QGridLayout19expandingDirectionsEv",
-#endif
-#if __s390x__
 	"_ZThn16_NK11QGridLayout19expandingDirectionsEv",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_NK11QGridLayout19expandingDirectionsEv",
 #endif
+#if __powerpc64__
+	"_ZThn16_NK11QGridLayout19expandingDirectionsEv",
+#endif
 #if __s390__ && !__s390x__
 	"_ZThn8_NK11QGridLayout19expandingDirectionsEv",
 #endif
-#if __i386__
-	"_ZThn8_NK11QGridLayout19expandingDirectionsEv",
-#endif
 #if __x86_64__
-	"_ZThn16_N11QGridLayout11setGeometryERK5QRect",
+	"_ZThn16_NK11QGridLayout19expandingDirectionsEv",
+#endif
+#if __s390x__
+	"_ZThn16_NK11QGridLayout19expandingDirectionsEv",
 #endif
 #if __i386__
 	"_ZThn8_N11QGridLayout11setGeometryERK5QRect",
-#endif
-#if __powerpc64__
-	"_ZThn16_N11QGridLayout11setGeometryERK5QRect",
 #endif
 #if __ia64__
 	"_ZThn16_N11QGridLayout11setGeometryERK5QRect",
@@ -24756,14 +24750,20 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_N11QGridLayout11setGeometryERK5QRect",
 #endif
+#if __powerpc64__
+	"_ZThn16_N11QGridLayout11setGeometryERK5QRect",
+#endif
 #if __s390__ && !__s390x__
 	"_ZThn8_N11QGridLayout11setGeometryERK5QRect",
+#endif
+#if __x86_64__
+	"_ZThn16_N11QGridLayout11setGeometryERK5QRect",
 #endif
 #if __s390x__
 	"_ZThn16_N11QGridLayout11setGeometryERK5QRect",
 #endif
-#if __s390x__
-	"_ZThn16_NK7QLayout8geometryEv",
+#if __i386__
+	"_ZThn8_NK7QLayout8geometryEv",
 #endif
 #if __ia64__
 	"_ZThn16_NK7QLayout8geometryEv",
@@ -24774,26 +24774,23 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if __powerpc64__
 	"_ZThn16_NK7QLayout8geometryEv",
 #endif
+#if __s390__ && !__s390x__
+	"_ZThn8_NK7QLayout8geometryEv",
+#endif
 #if __x86_64__
 	"_ZThn16_NK7QLayout8geometryEv",
 #endif
-#if __i386__
-	"_ZThn8_NK7QLayout8geometryEv",
-#endif
-#if __s390__ && !__s390x__
-	"_ZThn8_NK7QLayout8geometryEv",
+#if __s390x__
+	"_ZThn16_NK7QLayout8geometryEv",
 #endif
 #if __i386__
-	"_ZThn8_NK7QLayout7isEmptyEv",
-#endif
-#if __x86_64__
-	"_ZThn16_NK7QLayout7isEmptyEv",
-#endif
-#if __powerpc__ && !__powerpc64__
 	"_ZThn8_NK7QLayout7isEmptyEv",
 #endif
 #if __ia64__
 	"_ZThn16_NK7QLayout7isEmptyEv",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZThn8_NK7QLayout7isEmptyEv",
 #endif
 #if __powerpc64__
 	"_ZThn16_NK7QLayout7isEmptyEv",
@@ -24801,65 +24798,53 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if __s390__ && !__s390x__
 	"_ZThn8_NK7QLayout7isEmptyEv",
 #endif
+#if __x86_64__
+	"_ZThn16_NK7QLayout7isEmptyEv",
+#endif
 #if __s390x__
 	"_ZThn16_NK7QLayout7isEmptyEv",
 #endif
 #if __i386__
 	"_ZThn8_NK11QGridLayout17hasHeightForWidthEv",
 #endif
-#if __s390x__
-	"_ZThn16_NK11QGridLayout17hasHeightForWidthEv",
-#endif
-#if __x86_64__
-	"_ZThn16_NK11QGridLayout17hasHeightForWidthEv",
-#endif
-#if __s390__ && !__s390x__
-	"_ZThn8_NK11QGridLayout17hasHeightForWidthEv",
-#endif
-#if __powerpc64__
+#if __ia64__
 	"_ZThn16_NK11QGridLayout17hasHeightForWidthEv",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_NK11QGridLayout17hasHeightForWidthEv",
 #endif
-#if __ia64__
+#if __powerpc64__
+	"_ZThn16_NK11QGridLayout17hasHeightForWidthEv",
+#endif
+#if __s390__ && !__s390x__
+	"_ZThn8_NK11QGridLayout17hasHeightForWidthEv",
+#endif
+#if __x86_64__
+	"_ZThn16_NK11QGridLayout17hasHeightForWidthEv",
+#endif
+#if __s390x__
 	"_ZThn16_NK11QGridLayout17hasHeightForWidthEv",
 #endif
 #if __i386__
 	"_ZThn8_NK11QGridLayout14heightForWidthEi",
 #endif
-#if __s390x__
-	"_ZThn16_NK11QGridLayout14heightForWidthEi",
-#endif
-#if __x86_64__
-	"_ZThn16_NK11QGridLayout14heightForWidthEi",
-#endif
-#if __s390__ && !__s390x__
-	"_ZThn8_NK11QGridLayout14heightForWidthEi",
-#endif
-#if __powerpc64__
-	"_ZThn16_NK11QGridLayout14heightForWidthEi",
-#endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn8_NK11QGridLayout14heightForWidthEi",
-#endif
 #if __ia64__
 	"_ZThn16_NK11QGridLayout14heightForWidthEi",
 #endif
-#if __s390x__
-	"_ZThn16_NK11QGridLayout21minimumHeightForWidthEi",
-#endif
-#if __x86_64__
-	"_ZThn16_NK11QGridLayout21minimumHeightForWidthEi",
-#endif
-#if __s390__ && !__s390x__
-	"_ZThn8_NK11QGridLayout21minimumHeightForWidthEi",
+#if __powerpc__ && !__powerpc64__
+	"_ZThn8_NK11QGridLayout14heightForWidthEi",
 #endif
 #if __powerpc64__
-	"_ZThn16_NK11QGridLayout21minimumHeightForWidthEi",
+	"_ZThn16_NK11QGridLayout14heightForWidthEi",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn8_NK11QGridLayout21minimumHeightForWidthEi",
+#if __s390__ && !__s390x__
+	"_ZThn8_NK11QGridLayout14heightForWidthEi",
+#endif
+#if __x86_64__
+	"_ZThn16_NK11QGridLayout14heightForWidthEi",
+#endif
+#if __s390x__
+	"_ZThn16_NK11QGridLayout14heightForWidthEi",
 #endif
 #if __i386__
 	"_ZThn8_NK11QGridLayout21minimumHeightForWidthEi",
@@ -24867,7 +24852,31 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if __ia64__
 	"_ZThn16_NK11QGridLayout21minimumHeightForWidthEi",
 #endif
+#if __powerpc__ && !__powerpc64__
+	"_ZThn8_NK11QGridLayout21minimumHeightForWidthEi",
+#endif
+#if __powerpc64__
+	"_ZThn16_NK11QGridLayout21minimumHeightForWidthEi",
+#endif
+#if __s390__ && !__s390x__
+	"_ZThn8_NK11QGridLayout21minimumHeightForWidthEi",
+#endif
+#if __x86_64__
+	"_ZThn16_NK11QGridLayout21minimumHeightForWidthEi",
+#endif
 #if __s390x__
+	"_ZThn16_NK11QGridLayout21minimumHeightForWidthEi",
+#endif
+#if __i386__
+	"_ZThn8_N11QGridLayout10invalidateEv",
+#endif
+#if __ia64__
+	"_ZThn16_N11QGridLayout10invalidateEv",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZThn8_N11QGridLayout10invalidateEv",
+#endif
+#if __powerpc64__
 	"_ZThn16_N11QGridLayout10invalidateEv",
 #endif
 #if __s390__ && !__s390x__
@@ -24876,26 +24885,11 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if __x86_64__
 	"_ZThn16_N11QGridLayout10invalidateEv",
 #endif
-#if __powerpc64__
+#if __s390x__
 	"_ZThn16_N11QGridLayout10invalidateEv",
-#endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn8_N11QGridLayout10invalidateEv",
-#endif
-#if __ia64__
-	"_ZThn16_N11QGridLayout10invalidateEv",
-#endif
-#if __i386__
-	"_ZThn8_N11QGridLayout10invalidateEv",
 #endif
 	"_ZN11QLayoutItem6widgetEv",
-#if __s390x__
-	"_ZThn16_N7QLayout6layoutEv",
-#endif
-#if __x86_64__
-	"_ZThn16_N7QLayout6layoutEv",
-#endif
-#if __s390__ && !__s390x__
+#if __i386__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
 #if __ia64__
@@ -24904,10 +24898,16 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
-#if __i386__
+#if __powerpc64__
+	"_ZThn16_N7QLayout6layoutEv",
+#endif
+#if __s390__ && !__s390x__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
-#if __powerpc64__
+#if __x86_64__
+	"_ZThn16_N7QLayout6layoutEv",
+#endif
+#if __s390x__
 	"_ZThn16_N7QLayout6layoutEv",
 #endif
 	"_ZN11QLayoutItem10spacerItemEv",
@@ -25023,12 +25023,12 @@ const char *_10QBoxLayout_vtable_name_1 [] = {
 #if __i386__
 	"_ZThn8_N10QBoxLayoutD1Ev",
 #endif
-#if __ia64__
-	"_ZThn16_N10QBoxLayoutD1Ev",
-#endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_N10QBoxLayoutD1Ev",
 #endif
+#if __ia64__
+	"_ZThn16_N10QBoxLayoutD1Ev",
+#endif
 #if __powerpc64__
 	"_ZThn16_N10QBoxLayoutD1Ev",
 #endif
@@ -25041,8 +25041,8 @@ const char *_10QBoxLayout_vtable_name_1 [] = {
 #if __s390x__
 	"_ZThn16_N10QBoxLayoutD1Ev",
 #endif
-#if __i386__
-	"_ZThn8_N10QBoxLayoutD0Ev",
+#if __powerpc64__
+	"_ZThn16_N10QBoxLayoutD0Ev",
 #endif
 #if __ia64__
 	"_ZThn16_N10QBoxLayoutD0Ev",
@@ -25050,8 +25050,8 @@ const char *_10QBoxLayout_vtable_name_1 [] = {
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_N10QBoxLayoutD0Ev",
 #endif
-#if __powerpc64__
-	"_ZThn16_N10QBoxLayoutD0Ev",
+#if __i386__
+	"_ZThn8_N10QBoxLayoutD0Ev",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn8_N10QBoxLayoutD0Ev",
@@ -25061,6 +25061,12 @@ const char *_10QBoxLayout_vtable_name_1 [] = {
 #endif
 #if __s390x__
 	"_ZThn16_N10QBoxLayoutD0Ev",
+#endif
+#if __x86_64__
+	"_ZThn16_NK10QBoxLayout8sizeHintEv",
+#endif
+#if __s390x__
+	"_ZThn16_NK10QBoxLayout8sizeHintEv",
 #endif
 #if __i386__
 	"_ZThn8_NK10QBoxLayout8sizeHintEv",
@@ -25077,23 +25083,14 @@ const char *_10QBoxLayout_vtable_name_1 [] = {
 #if __s390__ && !__s390x__
 	"_ZThn8_NK10QBoxLayout8sizeHintEv",
 #endif
-#if __x86_64__
-	"_ZThn16_NK10QBoxLayout8sizeHintEv",
-#endif
-#if __s390x__
-	"_ZThn16_NK10QBoxLayout8sizeHintEv",
-#endif
-#if __i386__
-	"_ZThn8_NK10QBoxLayout11minimumSizeEv",
-#endif
 #if __ia64__
 	"_ZThn16_NK10QBoxLayout11minimumSizeEv",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_NK10QBoxLayout11minimumSizeEv",
 #endif
-#if __powerpc64__
-	"_ZThn16_NK10QBoxLayout11minimumSizeEv",
+#if __i386__
+	"_ZThn8_NK10QBoxLayout11minimumSizeEv",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn8_NK10QBoxLayout11minimumSizeEv",
@@ -25104,17 +25101,11 @@ const char *_10QBoxLayout_vtable_name_1 [] = {
 #if __s390x__
 	"_ZThn16_NK10QBoxLayout11minimumSizeEv",
 #endif
+#if __powerpc64__
+	"_ZThn16_NK10QBoxLayout11minimumSizeEv",
+#endif
 #if __i386__
 	"_ZThn8_NK10QBoxLayout11maximumSizeEv",
-#endif
-#if __ia64__
-	"_ZThn16_NK10QBoxLayout11maximumSizeEv",
-#endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn8_NK10QBoxLayout11maximumSizeEv",
-#endif
-#if __powerpc64__
-	"_ZThn16_NK10QBoxLayout11maximumSizeEv",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn8_NK10QBoxLayout11maximumSizeEv",
@@ -25122,32 +25113,47 @@ const char *_10QBoxLayout_vtable_name_1 [] = {
 #if __x86_64__
 	"_ZThn16_NK10QBoxLayout11maximumSizeEv",
 #endif
+#if __ia64__
+	"_ZThn16_NK10QBoxLayout11maximumSizeEv",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZThn8_NK10QBoxLayout11maximumSizeEv",
+#endif
+#if __powerpc64__
+	"_ZThn16_NK10QBoxLayout11maximumSizeEv",
+#endif
 #if __s390x__
 	"_ZThn16_NK10QBoxLayout11maximumSizeEv",
 #endif
-#if __i386__
-	"_ZThn8_NK10QBoxLayout19expandingDirectionsEv",
+#if __x86_64__
+	"_ZThn16_NK10QBoxLayout19expandingDirectionsEv",
 #endif
 #if __ia64__
 	"_ZThn16_NK10QBoxLayout19expandingDirectionsEv",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn8_NK10QBoxLayout19expandingDirectionsEv",
-#endif
 #if __powerpc64__
-	"_ZThn16_NK10QBoxLayout19expandingDirectionsEv",
-#endif
-#if __s390__ && !__s390x__
-	"_ZThn8_NK10QBoxLayout19expandingDirectionsEv",
-#endif
-#if __x86_64__
 	"_ZThn16_NK10QBoxLayout19expandingDirectionsEv",
 #endif
 #if __s390x__
 	"_ZThn16_NK10QBoxLayout19expandingDirectionsEv",
 #endif
+#if __powerpc__ && !__powerpc64__
+	"_ZThn8_NK10QBoxLayout19expandingDirectionsEv",
+#endif
+#if __s390__ && !__s390x__
+	"_ZThn8_NK10QBoxLayout19expandingDirectionsEv",
+#endif
+#if __i386__
+	"_ZThn8_NK10QBoxLayout19expandingDirectionsEv",
+#endif
+#if __x86_64__
+	"_ZThn16_N10QBoxLayout11setGeometryERK5QRect",
+#endif
 #if __i386__
 	"_ZThn8_N10QBoxLayout11setGeometryERK5QRect",
+#endif
+#if __powerpc64__
+	"_ZThn16_N10QBoxLayout11setGeometryERK5QRect",
 #endif
 #if __ia64__
 	"_ZThn16_N10QBoxLayout11setGeometryERK5QRect",
@@ -25155,56 +25161,50 @@ const char *_10QBoxLayout_vtable_name_1 [] = {
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_N10QBoxLayout11setGeometryERK5QRect",
 #endif
-#if __powerpc64__
-	"_ZThn16_N10QBoxLayout11setGeometryERK5QRect",
-#endif
 #if __s390__ && !__s390x__
 	"_ZThn8_N10QBoxLayout11setGeometryERK5QRect",
-#endif
-#if __x86_64__
-	"_ZThn16_N10QBoxLayout11setGeometryERK5QRect",
 #endif
 #if __s390x__
 	"_ZThn16_N10QBoxLayout11setGeometryERK5QRect",
 #endif
-#if __i386__
-	"_ZThn8_NK7QLayout8geometryEv",
-#endif
-#if __ia64__
-	"_ZThn16_NK7QLayout8geometryEv",
-#endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn8_NK7QLayout8geometryEv",
-#endif
-#if __powerpc64__
-	"_ZThn16_NK7QLayout8geometryEv",
-#endif
-#if __s390__ && !__s390x__
-	"_ZThn8_NK7QLayout8geometryEv",
-#endif
-#if __x86_64__
-	"_ZThn16_NK7QLayout8geometryEv",
-#endif
 #if __s390x__
 	"_ZThn16_NK7QLayout8geometryEv",
 #endif
+#if __ia64__
+	"_ZThn16_NK7QLayout8geometryEv",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZThn8_NK7QLayout8geometryEv",
+#endif
+#if __powerpc64__
+	"_ZThn16_NK7QLayout8geometryEv",
+#endif
+#if __x86_64__
+	"_ZThn16_NK7QLayout8geometryEv",
+#endif
+#if __i386__
+	"_ZThn8_NK7QLayout8geometryEv",
+#endif
+#if __s390__ && !__s390x__
+	"_ZThn8_NK7QLayout8geometryEv",
+#endif
 #if __i386__
 	"_ZThn8_NK7QLayout7isEmptyEv",
 #endif
-#if __ia64__
+#if __x86_64__
 	"_ZThn16_NK7QLayout7isEmptyEv",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_NK7QLayout7isEmptyEv",
+#endif
+#if __ia64__
+	"_ZThn16_NK7QLayout7isEmptyEv",
 #endif
 #if __powerpc64__
 	"_ZThn16_NK7QLayout7isEmptyEv",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn8_NK7QLayout7isEmptyEv",
-#endif
-#if __x86_64__
-	"_ZThn16_NK7QLayout7isEmptyEv",
 #endif
 #if __s390x__
 	"_ZThn16_NK7QLayout7isEmptyEv",
@@ -25212,76 +25212,67 @@ const char *_10QBoxLayout_vtable_name_1 [] = {
 #if __i386__
 	"_ZThn8_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
-#if __ia64__
+#if __s390x__
 	"_ZThn16_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn8_NK10QBoxLayout17hasHeightForWidthEv",
-#endif
-#if __powerpc64__
+#if __x86_64__
 	"_ZThn16_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn8_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
-#if __x86_64__
+#if __powerpc64__
 	"_ZThn16_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
-#if __s390x__
+#if __powerpc__ && !__powerpc64__
+	"_ZThn8_NK10QBoxLayout17hasHeightForWidthEv",
+#endif
+#if __ia64__
 	"_ZThn16_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
 #if __i386__
 	"_ZThn8_NK10QBoxLayout14heightForWidthEi",
 #endif
-#if __ia64__
+#if __s390x__
 	"_ZThn16_NK10QBoxLayout14heightForWidthEi",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn8_NK10QBoxLayout14heightForWidthEi",
-#endif
-#if __powerpc64__
+#if __x86_64__
 	"_ZThn16_NK10QBoxLayout14heightForWidthEi",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn8_NK10QBoxLayout14heightForWidthEi",
 #endif
-#if __x86_64__
+#if __powerpc64__
+	"_ZThn16_NK10QBoxLayout14heightForWidthEi",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZThn8_NK10QBoxLayout14heightForWidthEi",
+#endif
+#if __ia64__
 	"_ZThn16_NK10QBoxLayout14heightForWidthEi",
 #endif
 #if __s390x__
-	"_ZThn16_NK10QBoxLayout14heightForWidthEi",
-#endif
-#if __i386__
-	"_ZThn8_NK10QBoxLayout21minimumHeightForWidthEi",
-#endif
-#if __ia64__
 	"_ZThn16_NK10QBoxLayout21minimumHeightForWidthEi",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn8_NK10QBoxLayout21minimumHeightForWidthEi",
-#endif
-#if __powerpc64__
+#if __x86_64__
 	"_ZThn16_NK10QBoxLayout21minimumHeightForWidthEi",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn8_NK10QBoxLayout21minimumHeightForWidthEi",
 #endif
-#if __x86_64__
+#if __powerpc64__
+	"_ZThn16_NK10QBoxLayout21minimumHeightForWidthEi",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZThn8_NK10QBoxLayout21minimumHeightForWidthEi",
+#endif
+#if __i386__
+	"_ZThn8_NK10QBoxLayout21minimumHeightForWidthEi",
+#endif
+#if __ia64__
 	"_ZThn16_NK10QBoxLayout21minimumHeightForWidthEi",
 #endif
 #if __s390x__
-	"_ZThn16_NK10QBoxLayout21minimumHeightForWidthEi",
-#endif
-#if __i386__
-	"_ZThn8_N10QBoxLayout10invalidateEv",
-#endif
-#if __ia64__
-	"_ZThn16_N10QBoxLayout10invalidateEv",
-#endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn8_N10QBoxLayout10invalidateEv",
-#endif
-#if __powerpc64__
 	"_ZThn16_N10QBoxLayout10invalidateEv",
 #endif
 #if __s390__ && !__s390x__
@@ -25290,11 +25281,26 @@ const char *_10QBoxLayout_vtable_name_1 [] = {
 #if __x86_64__
 	"_ZThn16_N10QBoxLayout10invalidateEv",
 #endif
-#if __s390x__
+#if __powerpc64__
 	"_ZThn16_N10QBoxLayout10invalidateEv",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZThn8_N10QBoxLayout10invalidateEv",
+#endif
+#if __ia64__
+	"_ZThn16_N10QBoxLayout10invalidateEv",
+#endif
+#if __i386__
+	"_ZThn8_N10QBoxLayout10invalidateEv",
 #endif
 	"_ZN11QLayoutItem6widgetEv",
-#if __i386__
+#if __s390x__
+	"_ZThn16_N7QLayout6layoutEv",
+#endif
+#if __x86_64__
+	"_ZThn16_N7QLayout6layoutEv",
+#endif
+#if __s390__ && !__s390x__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
 #if __ia64__
@@ -25303,16 +25309,10 @@ const char *_10QBoxLayout_vtable_name_1 [] = {
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
-#if __powerpc64__
-	"_ZThn16_N7QLayout6layoutEv",
-#endif
-#if __s390__ && !__s390x__
+#if __i386__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
-#if __x86_64__
-	"_ZThn16_N7QLayout6layoutEv",
-#endif
-#if __s390x__
+#if __powerpc64__
 	"_ZThn16_N7QLayout6layoutEv",
 #endif
 	"_ZN11QLayoutItem10spacerItemEv",
@@ -26589,8 +26589,8 @@ const char *_14QStackedLayout_vtable_name_1 [] = {
 #if __s390x__
 	"_ZThn16_N14QStackedLayoutD1Ev",
 #endif
-#if __x86_64__
-	"_ZThn16_N14QStackedLayoutD0Ev",
+#if __i386__
+	"_ZThn8_N14QStackedLayoutD0Ev",
 #endif
 #if __ia64__
 	"_ZThn16_N14QStackedLayoutD0Ev",
@@ -26604,20 +26604,26 @@ const char *_14QStackedLayout_vtable_name_1 [] = {
 #if __s390__ && !__s390x__
 	"_ZThn8_N14QStackedLayoutD0Ev",
 #endif
+#if __x86_64__
+	"_ZThn16_N14QStackedLayoutD0Ev",
+#endif
 #if __s390x__
 	"_ZThn16_N14QStackedLayoutD0Ev",
 #endif
 #if __i386__
-	"_ZThn8_N14QStackedLayoutD0Ev",
+	"_ZThn8_NK14QStackedLayout8sizeHintEv",
+#endif
+#if __ia64__
+	"_ZThn16_NK14QStackedLayout8sizeHintEv",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_NK14QStackedLayout8sizeHintEv",
 #endif
-#if __s390__ && !__s390x__
-	"_ZThn8_NK14QStackedLayout8sizeHintEv",
-#endif
 #if __powerpc64__
 	"_ZThn16_NK14QStackedLayout8sizeHintEv",
+#endif
+#if __s390__ && !__s390x__
+	"_ZThn8_NK14QStackedLayout8sizeHintEv",
 #endif
 #if __x86_64__
 	"_ZThn16_NK14QStackedLayout8sizeHintEv",
@@ -26625,32 +26631,26 @@ const char *_14QStackedLayout_vtable_name_1 [] = {
 #if __s390x__
 	"_ZThn16_NK14QStackedLayout8sizeHintEv",
 #endif
-#if __ia64__
-	"_ZThn16_NK14QStackedLayout8sizeHintEv",
-#endif
-#if __i386__
-	"_ZThn8_NK14QStackedLayout8sizeHintEv",
-#endif
-#if __ia64__
-	"_ZThn16_NK14QStackedLayout11minimumSizeEv",
-#endif
 #if __i386__
 	"_ZThn8_NK14QStackedLayout11minimumSizeEv",
 #endif
-#if __s390x__
+#if __ia64__
 	"_ZThn16_NK14QStackedLayout11minimumSizeEv",
 #endif
-#if __x86_64__
-	"_ZThn16_NK14QStackedLayout11minimumSizeEv",
-#endif
-#if __s390__ && !__s390x__
+#if __powerpc__ && !__powerpc64__
 	"_ZThn8_NK14QStackedLayout11minimumSizeEv",
 #endif
 #if __powerpc64__
 	"_ZThn16_NK14QStackedLayout11minimumSizeEv",
 #endif
-#if __powerpc__ && !__powerpc64__
+#if __s390__ && !__s390x__
 	"_ZThn8_NK14QStackedLayout11minimumSizeEv",
+#endif
+#if __x86_64__
+	"_ZThn16_NK14QStackedLayout11minimumSizeEv",
+#endif
+#if __s390x__
+	"_ZThn16_NK14QStackedLayout11minimumSizeEv",
 #endif
 #if __i386__
 	"_ZThn8_NK7QLayout11maximumSizeEv",
@@ -26661,19 +26661,19 @@ const char *_14QStackedLayout_vtable_name_1 [] = {
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_NK7QLayout11maximumSizeEv",
 #endif
+#if __powerpc64__
+	"_ZThn16_NK7QLayout11maximumSizeEv",
+#endif
 #if __s390__ && !__s390x__
 	"_ZThn8_NK7QLayout11maximumSizeEv",
 #endif
 #if __x86_64__
 	"_ZThn16_NK7QLayout11maximumSizeEv",
 #endif
-#if __powerpc64__
-	"_ZThn16_NK7QLayout11maximumSizeEv",
-#endif
 #if __s390x__
 	"_ZThn16_NK7QLayout11maximumSizeEv",
 #endif
-#if __s390__ && !__s390x__
+#if __i386__
 	"_ZThn8_NK7QLayout19expandingDirectionsEv",
 #endif
 #if __ia64__
@@ -26682,29 +26682,17 @@ const char *_14QStackedLayout_vtable_name_1 [] = {
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_NK7QLayout19expandingDirectionsEv",
 #endif
-#if __i386__
-	"_ZThn8_NK7QLayout19expandingDirectionsEv",
-#endif
 #if __powerpc64__
 	"_ZThn16_NK7QLayout19expandingDirectionsEv",
 #endif
-#if __s390x__
-	"_ZThn16_NK7QLayout19expandingDirectionsEv",
+#if __s390__ && !__s390x__
+	"_ZThn8_NK7QLayout19expandingDirectionsEv",
 #endif
 #if __x86_64__
 	"_ZThn16_NK7QLayout19expandingDirectionsEv",
 #endif
-#if __powerpc64__
-	"_ZThn16_N14QStackedLayout11setGeometryERK5QRect",
-#endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn8_N14QStackedLayout11setGeometryERK5QRect",
-#endif
-#if __s390__ && !__s390x__
-	"_ZThn8_N14QStackedLayout11setGeometryERK5QRect",
-#endif
 #if __s390x__
-	"_ZThn16_N14QStackedLayout11setGeometryERK5QRect",
+	"_ZThn16_NK7QLayout19expandingDirectionsEv",
 #endif
 #if __i386__
 	"_ZThn8_N14QStackedLayout11setGeometryERK5QRect",
@@ -26712,22 +26700,28 @@ const char *_14QStackedLayout_vtable_name_1 [] = {
 #if __ia64__
 	"_ZThn16_N14QStackedLayout11setGeometryERK5QRect",
 #endif
+#if __powerpc__ && !__powerpc64__
+	"_ZThn8_N14QStackedLayout11setGeometryERK5QRect",
+#endif
+#if __powerpc64__
+	"_ZThn16_N14QStackedLayout11setGeometryERK5QRect",
+#endif
+#if __s390__ && !__s390x__
+	"_ZThn8_N14QStackedLayout11setGeometryERK5QRect",
+#endif
 #if __x86_64__
 	"_ZThn16_N14QStackedLayout11setGeometryERK5QRect",
 #endif
-#if __ia64__
-	"_ZThn16_NK7QLayout8geometryEv",
-#endif
 #if __s390x__
-	"_ZThn16_NK7QLayout8geometryEv",
+	"_ZThn16_N14QStackedLayout11setGeometryERK5QRect",
 #endif
-#if __x86_64__
-	"_ZThn16_NK7QLayout8geometryEv",
-#endif
-#if __powerpc__ && !__powerpc64__
+#if __i386__
 	"_ZThn8_NK7QLayout8geometryEv",
 #endif
-#if __i386__
+#if __ia64__
+	"_ZThn16_NK7QLayout8geometryEv",
+#endif
+#if __powerpc__ && !__powerpc64__
 	"_ZThn8_NK7QLayout8geometryEv",
 #endif
 #if __powerpc64__
@@ -26736,11 +26730,11 @@ const char *_14QStackedLayout_vtable_name_1 [] = {
 #if __s390__ && !__s390x__
 	"_ZThn8_NK7QLayout8geometryEv",
 #endif
-#if __s390x__
-	"_ZThn16_NK7QLayout7isEmptyEv",
-#endif
 #if __x86_64__
-	"_ZThn16_NK7QLayout7isEmptyEv",
+	"_ZThn16_NK7QLayout8geometryEv",
+#endif
+#if __s390x__
+	"_ZThn16_NK7QLayout8geometryEv",
 #endif
 #if __i386__
 	"_ZThn8_NK7QLayout7isEmptyEv",
@@ -26748,59 +26742,65 @@ const char *_14QStackedLayout_vtable_name_1 [] = {
 #if __ia64__
 	"_ZThn16_NK7QLayout7isEmptyEv",
 #endif
-#if __powerpc64__
-	"_ZThn16_NK7QLayout7isEmptyEv",
-#endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_NK7QLayout7isEmptyEv",
 #endif
+#if __powerpc64__
+	"_ZThn16_NK7QLayout7isEmptyEv",
+#endif
 #if __s390__ && !__s390x__
 	"_ZThn8_NK7QLayout7isEmptyEv",
+#endif
+#if __x86_64__
+	"_ZThn16_NK7QLayout7isEmptyEv",
+#endif
+#if __s390x__
+	"_ZThn16_NK7QLayout7isEmptyEv",
 #endif
 	"_ZNK11QLayoutItem17hasHeightForWidthEv",
 	"_ZNK11QLayoutItem14heightForWidthEi",
 	"_ZNK11QLayoutItem21minimumHeightForWidthEi",
-#if __ia64__
-	"_ZThn16_N7QLayout10invalidateEv",
-#endif
-#if __s390x__
-	"_ZThn16_N7QLayout10invalidateEv",
-#endif
-#if __x86_64__
-	"_ZThn16_N7QLayout10invalidateEv",
-#endif
-#if __s390__ && !__s390x__
+#if __i386__
 	"_ZThn8_N7QLayout10invalidateEv",
 #endif
-#if __powerpc64__
+#if __ia64__
 	"_ZThn16_N7QLayout10invalidateEv",
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn8_N7QLayout10invalidateEv",
 #endif
-#if __i386__
+#if __powerpc64__
+	"_ZThn16_N7QLayout10invalidateEv",
+#endif
+#if __s390__ && !__s390x__
 	"_ZThn8_N7QLayout10invalidateEv",
+#endif
+#if __x86_64__
+	"_ZThn16_N7QLayout10invalidateEv",
+#endif
+#if __s390x__
+	"_ZThn16_N7QLayout10invalidateEv",
 #endif
 	"_ZN11QLayoutItem6widgetEv",
 #if __i386__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn8_N7QLayout6layoutEv",
-#endif
 #if __ia64__
 	"_ZThn16_N7QLayout6layoutEv",
 #endif
-#if __s390x__
-	"_ZThn16_N7QLayout6layoutEv",
+#if __powerpc__ && !__powerpc64__
+	"_ZThn8_N7QLayout6layoutEv",
 #endif
-#if __x86_64__
+#if __powerpc64__
 	"_ZThn16_N7QLayout6layoutEv",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
-#if __powerpc64__
+#if __x86_64__
+	"_ZThn16_N7QLayout6layoutEv",
+#endif
+#if __s390x__
 	"_ZThn16_N7QLayout6layoutEv",
 #endif
 	"_ZN11QLayoutItem10spacerItemEv",

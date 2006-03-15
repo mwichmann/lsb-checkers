@@ -236,32 +236,32 @@ extern struct versym libgdk_pixbuf_2_0_so_0[];
 extern struct classinfo libgdk_pixbuf_2_0_so_0_classinfo[];
 #endif
 #if __s390x__
-extern struct versym libgdk_pixbuf_xlib_2_0_so[];
-extern struct classinfo libgdk_pixbuf_xlib_2_0_so_classinfo[];
+extern struct versym libgdk_pixbuf_xlib_2_0_so_0[];
+extern struct classinfo libgdk_pixbuf_xlib_2_0_so_0_classinfo[];
 #endif
 #if __x86_64__
-extern struct versym libgdk_pixbuf_xlib_2_0_so[];
-extern struct classinfo libgdk_pixbuf_xlib_2_0_so_classinfo[];
+extern struct versym libgdk_pixbuf_xlib_2_0_so_0[];
+extern struct classinfo libgdk_pixbuf_xlib_2_0_so_0_classinfo[];
 #endif
 #if __s390__ && !__s390x__
-extern struct versym libgdk_pixbuf_xlib_2_0_so[];
-extern struct classinfo libgdk_pixbuf_xlib_2_0_so_classinfo[];
+extern struct versym libgdk_pixbuf_xlib_2_0_so_0[];
+extern struct classinfo libgdk_pixbuf_xlib_2_0_so_0_classinfo[];
 #endif
 #if __powerpc64__
-extern struct versym libgdk_pixbuf_xlib_2_0_so[];
-extern struct classinfo libgdk_pixbuf_xlib_2_0_so_classinfo[];
+extern struct versym libgdk_pixbuf_xlib_2_0_so_0[];
+extern struct classinfo libgdk_pixbuf_xlib_2_0_so_0_classinfo[];
 #endif
 #if __powerpc__ && !__powerpc64__
-extern struct versym libgdk_pixbuf_xlib_2_0_so[];
-extern struct classinfo libgdk_pixbuf_xlib_2_0_so_classinfo[];
+extern struct versym libgdk_pixbuf_xlib_2_0_so_0[];
+extern struct classinfo libgdk_pixbuf_xlib_2_0_so_0_classinfo[];
 #endif
 #if __ia64__
-extern struct versym libgdk_pixbuf_xlib_2_0_so[];
-extern struct classinfo libgdk_pixbuf_xlib_2_0_so_classinfo[];
+extern struct versym libgdk_pixbuf_xlib_2_0_so_0[];
+extern struct classinfo libgdk_pixbuf_xlib_2_0_so_0_classinfo[];
 #endif
 #if __i386__
-extern struct versym libgdk_pixbuf_xlib_2_0_so[];
-extern struct classinfo libgdk_pixbuf_xlib_2_0_so_classinfo[];
+extern struct versym libgdk_pixbuf_xlib_2_0_so_0[];
+extern struct classinfo libgdk_pixbuf_xlib_2_0_so_0_classinfo[];
 #endif
 extern struct versym libGL_so_1[];
 extern struct classinfo libGL_so_1_classinfo[];
