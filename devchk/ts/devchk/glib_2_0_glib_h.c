@@ -718,7 +718,15 @@ Msg( "No definition for GLIB_SIZEOF_SIZE_T (5845, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5845,%d);\n", architecture, GLIB_SIZEOF_SIZE_T);
 #endif
 #endif
-#if _LSB_DEFAULT_ARCH
+#if __powerpc64__
+#ifdef G_GSIZE_MODIFIER
+	CompareStringConstant(G_GSIZE_MODIFIER,"l")
+#else
+Msg( "Error: Constant not found: G_GSIZE_MODIFIER\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef G_GSIZE_MODIFIER
 	CompareStringConstant(G_GSIZE_MODIFIER,"")
 #else
@@ -726,9 +734,61 @@ Msg( "Error: Constant not found: G_GSIZE_MODIFIER\n");
 cnt++;
 #endif
 
+#elif __ia64__
+#ifdef G_GSIZE_MODIFIER
+	CompareStringConstant(G_GSIZE_MODIFIER,"l")
+#else
+Msg( "Error: Constant not found: G_GSIZE_MODIFIER\n");
+cnt++;
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#elif __i386__
+#ifdef G_GSIZE_MODIFIER
+	CompareStringConstant(G_GSIZE_MODIFIER,"")
+#else
+Msg( "Error: Constant not found: G_GSIZE_MODIFIER\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef G_GSIZE_MODIFIER
+	CompareStringConstant(G_GSIZE_MODIFIER,"l")
+#else
+Msg( "Error: Constant not found: G_GSIZE_MODIFIER\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef G_GSIZE_MODIFIER
+	CompareStringConstant(G_GSIZE_MODIFIER,"l")
+#else
+Msg( "Error: Constant not found: G_GSIZE_MODIFIER\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef G_GSIZE_MODIFIER
+	CompareStringConstant(G_GSIZE_MODIFIER,"")
+#else
+Msg( "Error: Constant not found: G_GSIZE_MODIFIER\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for G_GSIZE_MODIFIER (5846, string) in db\n");
+#ifdef G_GSIZE_MODIFIER
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5846,%s);\n", architecture, G_GSIZE_MODIFIER);
+#endif
+#endif
+#if __powerpc64__
+#ifdef G_GSSIZE_FORMAT
+	CompareStringConstant(G_GSSIZE_FORMAT,"li")
+#else
+Msg( "Error: Constant not found: G_GSSIZE_FORMAT\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef G_GSSIZE_FORMAT
 	CompareStringConstant(G_GSSIZE_FORMAT,"i")
 #else
@@ -736,9 +796,61 @@ Msg( "Error: Constant not found: G_GSSIZE_FORMAT\n");
 cnt++;
 #endif
 
+#elif __ia64__
+#ifdef G_GSSIZE_FORMAT
+	CompareStringConstant(G_GSSIZE_FORMAT,"li")
+#else
+Msg( "Error: Constant not found: G_GSSIZE_FORMAT\n");
+cnt++;
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#elif __i386__
+#ifdef G_GSSIZE_FORMAT
+	CompareStringConstant(G_GSSIZE_FORMAT,"i")
+#else
+Msg( "Error: Constant not found: G_GSSIZE_FORMAT\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef G_GSSIZE_FORMAT
+	CompareStringConstant(G_GSSIZE_FORMAT,"li")
+#else
+Msg( "Error: Constant not found: G_GSSIZE_FORMAT\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef G_GSSIZE_FORMAT
+	CompareStringConstant(G_GSSIZE_FORMAT,"li")
+#else
+Msg( "Error: Constant not found: G_GSSIZE_FORMAT\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef G_GSSIZE_FORMAT
+	CompareStringConstant(G_GSSIZE_FORMAT,"i")
+#else
+Msg( "Error: Constant not found: G_GSSIZE_FORMAT\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for G_GSSIZE_FORMAT (5847, string) in db\n");
+#ifdef G_GSSIZE_FORMAT
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5847,%s);\n", architecture, G_GSSIZE_FORMAT);
+#endif
+#endif
+#if __powerpc64__
+#ifdef G_GSIZE_FORMAT
+	CompareStringConstant(G_GSIZE_FORMAT,"lu")
+#else
+Msg( "Error: Constant not found: G_GSIZE_FORMAT\n");
+cnt++;
+#endif
+
+#elif __powerpc__ && !__powerpc64__
 #ifdef G_GSIZE_FORMAT
 	CompareStringConstant(G_GSIZE_FORMAT,"u")
 #else
@@ -746,8 +858,52 @@ Msg( "Error: Constant not found: G_GSIZE_FORMAT\n");
 cnt++;
 #endif
 
+#elif __ia64__
+#ifdef G_GSIZE_FORMAT
+	CompareStringConstant(G_GSIZE_FORMAT,"lu")
+#else
+Msg( "Error: Constant not found: G_GSIZE_FORMAT\n");
+cnt++;
 #endif
 
+#elif __i386__
+#ifdef G_GSIZE_FORMAT
+	CompareStringConstant(G_GSIZE_FORMAT,"u")
+#else
+Msg( "Error: Constant not found: G_GSIZE_FORMAT\n");
+cnt++;
+#endif
+
+#elif __s390x__
+#ifdef G_GSIZE_FORMAT
+	CompareStringConstant(G_GSIZE_FORMAT,"lu")
+#else
+Msg( "Error: Constant not found: G_GSIZE_FORMAT\n");
+cnt++;
+#endif
+
+#elif __x86_64__
+#ifdef G_GSIZE_FORMAT
+	CompareStringConstant(G_GSIZE_FORMAT,"lu")
+#else
+Msg( "Error: Constant not found: G_GSIZE_FORMAT\n");
+cnt++;
+#endif
+
+#elif __s390__ && !__s390x__
+#ifdef G_GSIZE_FORMAT
+	CompareStringConstant(G_GSIZE_FORMAT,"u")
+#else
+Msg( "Error: Constant not found: G_GSIZE_FORMAT\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for G_GSIZE_FORMAT (5848, string) in db\n");
+#ifdef G_GSIZE_FORMAT
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5848,%s);\n", architecture, G_GSIZE_FORMAT);
+#endif
+#endif
 #if __powerpc64__
 /* No test for G_MAXSIZE */
 #elif __powerpc__ && !__powerpc64__
