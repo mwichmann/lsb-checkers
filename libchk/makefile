@@ -25,7 +25,7 @@ LSBLIBPATHS=-L/opt/lsb/lib$(LIB64)
 # lsb-dev libs (like for testing against newer libstdcxx) use this instead
 #LSBLIBPATHS=-L/usr/X11R6/lib
 dummy_link: dummy_link.o makefile
-	$(CXX) -nostdlib -Wl,--dynamic-linker=$(LSB_LINKER) $(LSBLIBPATHS) dummy_link.o -lGL -lICE -lSM -lX11 -lXi -lXext -lXt -lc -lrt -lcrypt -ldl -lgcc_s -lm -lncurses -lpam -lglib-2.0 -lgobject-2.0 -lgmodule-2.0 -lgthread-2.0 -latk-1.0 -lpango-1.0 -lpangoxft-1.0 -lpangoft2-1.0 -lgdk_pixbuf-2.0 -lgdk_pixbuf_xlib-2.0 -lgdk-x11-2.0 -lgtk-x11-2.0 -lQtCore -lQtGui -lQtNetwork -lQtXml -lQtOpenGL -lQtSql -lQtSvg -lfontconfig -lpng12 -ljpeg -lxml2 -lpthread -lutil -lz -lstdc++  -o $@
+	$(CXX) -nostdlib -Wl,--dynamic-linker=$(LSB_LINKER) $(LSBLIBPATHS) dummy_link.o -lGL -lICE -lSM -lX11 -lXi -lXext -lXt -lc -lrt -lcrypt -ldl -lgcc_s -lm -lncurses -lpam -lglib-2.0 -lgobject-2.0 -lgmodule-2.0 -lgthread-2.0 -latk-1.0 -lpango-1.0 -lpangoxft-1.0 -lpangoft2-1.0 -lgdk_pixbuf-2.0 -lgdk_pixbuf_xlib-2.0 -lgdk-x11-2.0 -lgtk-x11-2.0 -lQtCore -lQtGui -lQtNetwork -lQtXml -lQtOpenGL -lQtSql -lQtSvg -lfontconfig -lpng12 -ljpeg -lxml2 -lpthread -lutil -lz -lstdc++ -lqt-mt -o $@
 	@echo "IGNORE \"cannot find entry symbol _start\" WARNING, dummy_link is not executable"
 
 dummy_link.o: dummy_link.c
