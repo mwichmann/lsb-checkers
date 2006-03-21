@@ -34,6 +34,7 @@ LIBOBJS = \
 	libpangoxft_1_0_so_0.o \
 	libpng12_so_0.o \
 	libpthread_so_0.o \
+	libqt_mt_so_3.o \
 	libQtCore_so_4.o \
 	libQtGui_so_4.o \
 	libQtNetwork_so_4.o \

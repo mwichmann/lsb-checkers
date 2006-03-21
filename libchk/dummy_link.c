@@ -172,6 +172,9 @@ int main()
     /* libQtXml */
     _ZN11QDomCommentC2Ev();
 
+    /* libqt-mt */
+    _ZThn40_N11QGridLayoutD0Ev();
+
 	exit(0);
 }
 

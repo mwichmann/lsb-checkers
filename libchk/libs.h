@@ -586,6 +586,34 @@ extern struct versym libpthread_so_0[];
 extern struct classinfo libpthread_so_0_classinfo[];
 #endif
 #if __s390x__
+extern struct versym libqt_mt_so_3[];
+extern struct classinfo libqt_mt_so_3_classinfo[];
+#endif
+#if __x86_64__
+extern struct versym libqt_mt_so_3[];
+extern struct classinfo libqt_mt_so_3_classinfo[];
+#endif
+#if __s390__ && !__s390x__
+extern struct versym libqt_mt_so_3[];
+extern struct classinfo libqt_mt_so_3_classinfo[];
+#endif
+#if __powerpc64__
+extern struct versym libqt_mt_so_3[];
+extern struct classinfo libqt_mt_so_3_classinfo[];
+#endif
+#if __powerpc__ && !__powerpc64__
+extern struct versym libqt_mt_so_3[];
+extern struct classinfo libqt_mt_so_3_classinfo[];
+#endif
+#if __ia64__
+extern struct versym libqt_mt_so_3[];
+extern struct classinfo libqt_mt_so_3_classinfo[];
+#endif
+#if __i386__
+extern struct versym libqt_mt_so_3[];
+extern struct classinfo libqt_mt_so_3_classinfo[];
+#endif
+#if __s390x__
 extern struct versym libQtCore_so_4[];
 extern struct classinfo libQtCore_so_4_classinfo[];
 #endif

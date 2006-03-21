@@ -442,6 +442,27 @@ struct modlib modlibs [] = {
 	{LSB_Core,"libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo},
 #endif
 #if __s390x__
+	{LSB_Toolkit_Qt3,"libqt-mt.so.3",libqt_mt_so_3,libqt_mt_so_3_classinfo},
+#endif
+#if __x86_64__
+	{LSB_Toolkit_Qt3,"libqt-mt.so.3",libqt_mt_so_3,libqt_mt_so_3_classinfo},
+#endif
+#if __s390__ && !__s390x__
+	{LSB_Toolkit_Qt3,"libqt-mt.so.3",libqt_mt_so_3,libqt_mt_so_3_classinfo},
+#endif
+#if __powerpc64__
+	{LSB_Toolkit_Qt3,"libqt-mt.so.3",libqt_mt_so_3,libqt_mt_so_3_classinfo},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{LSB_Toolkit_Qt3,"libqt-mt.so.3",libqt_mt_so_3,libqt_mt_so_3_classinfo},
+#endif
+#if __ia64__
+	{LSB_Toolkit_Qt3,"libqt-mt.so.3",libqt_mt_so_3,libqt_mt_so_3_classinfo},
+#endif
+#if __i386__
+	{LSB_Toolkit_Qt3,"libqt-mt.so.3",libqt_mt_so_3,libqt_mt_so_3_classinfo},
+#endif
+#if __s390x__
 	{LSB_Toolkit_Qt,"libQtCore.so.4",libQtCore_so_4,libQtCore_so_4_classinfo},
 #endif
 #if __x86_64__
