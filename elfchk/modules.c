@@ -3,6 +3,7 @@
 
 struct lsb_module LSB_Modules[] = {
 	{"LSB_XML",	LSB_XML},
+	{"LSB_Toolkit_Qt3",	LSB_Toolkit_Qt3},
 	{"LSB_Toolkit_Qt",	LSB_Toolkit_Qt},
 	{"LSB_Toolkit_Gtk",	LSB_Toolkit_Gtk},
 	{"LSB_Graphics_Ext",	LSB_Graphics_Ext},

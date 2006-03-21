@@ -16,7 +16,8 @@ extern struct lsb_module LSB_Modules[];
 #define LSB_Graphics_Ext	0x8
 #define LSB_Toolkit_Gtk	0x10
 #define LSB_Toolkit_Qt	0x20
-#define LSB_XML	0x40
-#define LSB_All_Modules 0xff
+#define LSB_Toolkit_Qt3	0x40
+#define LSB_XML	0x80
+#define LSB_All_Modules 0xffff
 
 #endif

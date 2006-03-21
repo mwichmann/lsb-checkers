@@ -452,6 +452,28 @@ char *DtNeeded[] = {
 #if __s390x__
 	"libpthread.so.0",
 #endif /* __s390x__ */
+	"libqt-mt.so.3",
+#if __i386__
+	"libqt-mt.so.3",
+#endif /* __i386__ */
+#if __ia64__
+	"libqt-mt.so.3",
+#endif /* __ia64__ */
+#if __powerpc__ && !__powerpc64__
+	"libqt-mt.so.3",
+#endif /* __powerpc__ && !__powerpc64__ */
+#if __powerpc64__
+	"libqt-mt.so.3",
+#endif /* __powerpc64__ */
+#if __s390__ && !__s390x__
+	"libqt-mt.so.3",
+#endif /* __s390__ && !__s390x__ */
+#if __x86_64__
+	"libqt-mt.so.3",
+#endif /* __x86_64__ */
+#if __s390x__
+	"libqt-mt.so.3",
+#endif /* __s390x__ */
 	"libQtCore.so.4",
 #if __i386__
 	"libQtCore.so.4",
