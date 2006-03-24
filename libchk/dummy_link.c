@@ -35,6 +35,7 @@ extern void xlib_draw_gray_image(void);
 extern void gdk_beep(void);
 extern void gtk_accel_group_find(void);
 extern void htmlCtxtReadDoc(void);
+
 extern void _Z10forcepointR11QTextStream(void);
 extern void _ZN10QHideEventD2Ev (void);
 extern void _ZN10QTcpServerD1Ev(void);
@@ -42,6 +43,8 @@ extern void _ZN10QGLContext5resetEv(void);
 extern void _ZN10QSqlDriverD0Ev(void);
 extern void _ZN10QSvgWidgetD2Ev(void);
 extern void _ZN11QDomCommentC2Ev(void);
+
+extern void _ZN7QString6removeE5QChar(void);
 
 int main()
 {
@@ -173,7 +176,7 @@ int main()
     _ZN11QDomCommentC2Ev();
 
     /* libqt-mt */
-    _ZThn40_N11QGridLayoutD0Ev();
+    _ZN7QString6removeE5QChar();
 
 	exit(0);
 }
