@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.68 $
+ * This is $Revision: 1.69 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.69  2006/03/30 18:41:07  heffler
+ * change libchk so it handles module sets better
+ *
  * Revision 1.68  2006/01/31 01:49:05  mats
  * Changes for bug 986.  The underlying files have changed a bit since
  * the patches were submitted, hopefully these changes were still
@@ -253,7 +256,7 @@ static struct libpath *library_paths = NULL;
 static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.68 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.69 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -802,15 +805,17 @@ main(int argc, char *argv[])
   char *s = getenv("LSB_PRODUCT");
   if(s) {
     if(strcasecmp(s, "core") == 0)
-      module = LSB_Core | LSB_Graphics | LSB_Cpp;
-    else if(strcasecmp(s, "desktop") == 0 || strcasecmp(s, "all") == 0)
+      module = LSB_Core_Modules;
+    else if(strcasecmp(s, "desktop") == 0)
+      module = LSB_Desktop_Modules;
+    else if(strcasecmp(s, "all") == 0)
       module = LSB_All_Modules;
     else {
       printf("warning: env var LSB_PRODUCT specifies an invalid product, ignoring it.\n");
-      module = LSB_Core | LSB_Graphics | LSB_Cpp;;
+      module = LSB_Core_Modules;
     }
   } else
-    module = LSB_Core | LSB_Graphics | LSB_Cpp;
+    module = LSB_Core_Modules;
 
   if ((ptr = getenv("LIBCHK_DEBUG")) != NULL) {
     libchk_debug = strtod(ptr,NULL);
@@ -845,8 +850,10 @@ main(int argc, char *argv[])
 	break;
       case 'T':
 	if(strcasecmp(optarg, "core") == 0)
-	  module |= LSB_Core | LSB_Graphics | LSB_Cpp;
-	else if(strcasecmp(optarg, "desktop") == 0 || strcasecmp(optarg, "all") == 0)
+	  module |= LSB_Core_Modules;
+	else if(strcasecmp(optarg, "desktop") == 0)
+	  module |= LSB_Desktop_Modules;
+	else if(strcasecmp(optarg, "all") == 0)
 	  module |= LSB_All_Modules;
 	else {
 	  printf("product '%s' is not valid!\n", optarg);

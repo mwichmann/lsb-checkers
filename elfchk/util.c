@@ -110,7 +110,11 @@ getmodulename(int mod)
     buf[0] = '\0';
     /* special casing */
 	while(m->name) {
-		if(mod & m->flag && m->flag != LSB_All_Modules) {
+		/* only print names of individual modules */
+		if(strcasecmp(m->name, "LSB_Core_Modules") == 0 ||
+		   strcasecmp(m->name, "LSB_Desktop_Modules") == 0 ||
+		   strcasecmp(m->name, "LSB_All_Modules") == 0);
+		else if(mod & m->flag) {
 			if(count)
 				strcat(buf, " ");
 			strcat(buf, m->name);
