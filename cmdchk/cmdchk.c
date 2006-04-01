@@ -5,7 +5,7 @@
  *
  * Stuart Anderson (anderson@freestandards.org)
  *
- * This is $Revision: 1.25 $
+ * This is $Revision: 1.26 $
  */
 
 #include <unistd.h>
@@ -34,7 +34,7 @@ char prefix[TMP_STRING_SIZE + 1];
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
 static const char *__attribute((unused)) cmdchk_revision =
-    "$Revision: 1.25 $";
+    "$Revision: 1.26 $";
 
 void check_cmd(struct cmds *cp, struct tetj_handle *journal)
 {
@@ -148,9 +148,9 @@ void usage(char *progname)
 	   "  -v, --version                  show version and LSB version\n"
 	   "  -n, --nojournal                do not write a journal file\n"
 	   "  -j JOURNAL, --version=JOURNAL  use JOURNAL as file/path for journal file\n"
-	   "  -p PREFIX, --prefix=PREFIX     prefix to append to all paths\n"
-	   "  -T [core|desktop], --lsb-product [core|desktop]\n"
-	   "                                 Lsb product/spec to target\n",
+	   "  -p PREFIX, --prefix=PREFIX     prefix to append to all paths\n",
+//	   "  -T [core|desktop], --lsb-product [core|desktop]\n"
+//	   "                                 Lsb product/spec to target\n",
     progname);
 }
 
@@ -162,10 +162,11 @@ int main(int argc, char *argv[])
     char journal_filename[TMP_STRING_SIZE + 1];
     int i, j;
     int option_index = 0;
-    int desktop_mode = 0;
+    int desktop_mode = 1; // default to all modules in cert
     char *p;
     struct utsname unameb;
 
+/* ignore LSB_PRODUCT for LSB 3.1
     if(NULL != (p = getenv("LSB_PRODUCT"))) {
 	if(strcasecmp(p, "desktop") == 0 || strcasecmp(p, "all") == 0)
 	    desktop_mode = 1;
@@ -174,7 +175,7 @@ int main(int argc, char *argv[])
 		"must be one of [core|desktop]- reverting to core.\n", p);
 	}
     }
-
+*/
 
     snprintf(journal_filename, TMP_STRING_SIZE, "journal.lsbcmdchk");
     for (i = 0; i < argc; i++) {
@@ -216,6 +217,7 @@ int main(int argc, char *argv[])
 	    strcpy(prefix, optarg);
 	    break;
 	case 'T':
+/* Ignore -T completely for LSB 3.1
 	    if(strcasecmp(optarg, "desktop") == 0 || strcasecmp(optarg, "all") == 0) 
 		desktop_mode = 1;
 	    else if (strcasecmp(optarg, "core") != 0) {
@@ -223,6 +225,7 @@ int main(int argc, char *argv[])
 		usage(argv[0]);
 		exit(1);
 	    }
+*/
 	    break;
 	default:
 	    usage(argv[0]);
