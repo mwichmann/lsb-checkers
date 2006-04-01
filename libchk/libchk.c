@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.69 $
+ * This is $Revision: 1.70 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.70  2006/04/01 00:08:03  rajesh
+ * removed -T option and made desktop as the default
+ *
  * Revision 1.69  2006/03/30 18:41:07  heffler
  * change libchk so it handles module sets better
  *
@@ -256,7 +259,7 @@ static struct libpath *library_paths = NULL;
 static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.69 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.70 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -787,8 +790,8 @@ usage(char *progname)
 "  -h, --help                     show this help message and exit\n"
 "  -v, --version                  show version and LSB version\n"
 "  -n, --nojournal                do not write a journal file\n"
-"  -T, --lsb-product=[core|desktop]\n"
-"                                 target product to load modules for\n"
+//"  -T, --lsb-product=[core|desktop]\n"
+//"                                 target product to load modules for\n"
 "  -M MODULE, --module=MODULE     check only the libraries found in MODULE\n"
 "  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n",
 progname);
@@ -802,6 +805,7 @@ main(int argc, char *argv[])
   char journal_filename[TMP_STRING_SIZE+1];
   int option_index = 0;
   
+/* Ignore LSB_PRODUCT env variable for LSB 3.1
   char *s = getenv("LSB_PRODUCT");
   if(s) {
     if(strcasecmp(s, "core") == 0)
@@ -816,7 +820,9 @@ main(int argc, char *argv[])
     }
   } else
     module = LSB_Core_Modules;
+*/
 
+  module = LSB_Desktop_Modules;	// default to all modules in cert program
   if ((ptr = getenv("LIBCHK_DEBUG")) != NULL) {
     libchk_debug = strtod(ptr,NULL);
   }
@@ -849,6 +855,7 @@ main(int argc, char *argv[])
 	snprintf(journal_filename, TMP_STRING_SIZE, "/dev/null");
 	break;
       case 'T':
+/* Ignore -T completely for LSB 3.1
 	if(strcasecmp(optarg, "core") == 0)
 	  module |= LSB_Core_Modules;
 	else if(strcasecmp(optarg, "desktop") == 0)
@@ -860,6 +867,7 @@ main(int argc, char *argv[])
 	  usage(argv[0]);
 	  exit(1);
 	}
+*/
 	break;
       case 'M':
 	module |= getmoduleval(optarg);
