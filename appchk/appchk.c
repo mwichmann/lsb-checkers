@@ -26,7 +26,7 @@ concat_string(char *input, char *addition)
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
 static const char *__attribute((unused)) appchk_revision =
-    "$Revision: 1.33 $";
+    "$Revision: 1.34 $";
 
 void
 usage(char *progname)
@@ -35,8 +35,8 @@ usage(char *progname)
 "  -h, --help                     show this help message and exit\n"
 "  -v, --version                  show version and LSB version\n"
 "  -n, --nojournal                do not write a journal file\n"
-"  -T, --lsb-product=[core|desktop]\n"
-"                                 target product to load modules for\n"
+//"  -T, --lsb-product=[core|desktop]\n"
+//"                                 target product to load modules for\n"
 "  -M MODULE, --module=MODULE     add MODULE to list of checked modules\n"
 "  -L LIB                         add LIB to list of checked libraries\n"
 "  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n",
@@ -61,6 +61,7 @@ main(int argc, char *argv[])
     int option_index = 0;
 
 
+/* Ignore LSB_PRODUCT env variable for LSB 3.1
     char *s = getenv("LSB_PRODUCT");
     if(s) {
         if(strcasecmp(s, "core") == 0)
@@ -73,7 +74,8 @@ main(int argc, char *argv[])
         }
     } else
         modules = LSB_Core | LSB_Graphics | LSB_Cpp;
-
+*/
+    modules = LSB_Desktop_Modules;   // default to all modules in cert program
     extra_libraries = strdup("EXTRA_LIBRARIES=");
 
     for (i = 0; i < argc; i++) {
@@ -109,6 +111,7 @@ main(int argc, char *argv[])
 	      overrideJournalFilename = 1;
 	      break;
 	   case 'T':
+/* Ignore -T completely for LSB 3.1
 	      if(strcasecmp(optarg, "core") == 0)
 		modules = LSB_Core | LSB_Graphics | LSB_Cpp;
 	      else if(strcasecmp(optarg, "desktop") == 0 || strcasecmp(optarg, "all") == 0)
@@ -118,6 +121,7 @@ main(int argc, char *argv[])
 		usage(argv[0]);
 		exit(1);
 	      }
+*/
 	      break;
 	  case 'M':
 	      modules |= getmoduleval(optarg);
