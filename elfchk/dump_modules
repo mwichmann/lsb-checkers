@@ -38,6 +38,10 @@ for(1..$sth->numrows) {
 	$count++;
 }
 $count = (2 ** ($count + 8 - ($count % 8))) - 1;
+printf $fd "#define LSB_Core_Modules 	LSB_Core | LSB_Cpp\n";
+
+printf $fd "#define LSB_Desktop_Modules LSB_Core_Modules | LSB_Graphics | LSB_Graphics_Ext | LSB_Toolkit_Gtk | LSB_Toolkit_Qt3 | LSB_XML\n";
+
 printf $fd  "#define LSB_All_Modules 0x%x\n\n#endif\n", $count;
 close($fd);
 open($fd, ">modules.c");
@@ -53,6 +57,8 @@ while (@defines) {
 	my $row = pop(@defines);
 	print $fd "\t{\"$row\",\t$name},\n";
 }
+print $fd "\t{\"LSB_Core_Modules\",\tLSB_Core_Modules},\n";
+print $fd "\t{\"LSB_Desktop_Modules\",\tLSB_Desktop_Modules},\n";
 print $fd "\t{\"LSB_All_Modules\",\tLSB_All_Modules},\n";
 print $fd q(	{NULL, 0},
 };
