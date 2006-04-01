@@ -2,6 +2,9 @@
 #include "modules.h"
 
 struct lsb_module LSB_Modules[] = {
+	{"LSB_All_Modules",	LSB_All_Modules},
+	{"LSB_Modules",	LSB_Desktop_Modules},
+	{"LSB_Core_Modules",	LSB_Core_Modules},
 	{"LSB_XML",	LSB_XML},
 	{"LSB_Toolkit_Qt3",	LSB_Toolkit_Qt3},
 	{"LSB_Toolkit_Qt",	LSB_Toolkit_Qt},
@@ -10,8 +13,5 @@ struct lsb_module LSB_Modules[] = {
 	{"LSB_Graphics",	LSB_Graphics},
 	{"LSB_Cpp",	LSB_Cpp},
 	{"LSB_Core",	LSB_Core},
-	{"LSB_Core_Modules",	LSB_Core_Modules},
-	{"LSB_Desktop_Modules",	LSB_Desktop_Modules},
-	{"LSB_All_Modules",	LSB_All_Modules},
 	{NULL, 0},
 };
