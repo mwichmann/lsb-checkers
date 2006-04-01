@@ -33,8 +33,8 @@ char *validos = "linux";
 char *lanananame = NULL;
 
 int is_noarch = 0;
-int is_graphics = 0;
-int is_desktop = 0;
+int is_graphics = 1;
+int is_desktop = 1;
 int is_custom = 0;
 
 RpmRequireRec validdeps[] = {

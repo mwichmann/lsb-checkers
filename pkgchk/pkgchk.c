@@ -16,7 +16,7 @@
 #include "rpmchk.h"
 
 /* modules to check against.  */
-int modules = LSB_Core | LSB_Cpp;
+int modules = LSB_Desktop_Modules;	// default to all modules in cert program
 
 void
 usage(char *progname)
@@ -28,8 +28,8 @@ usage(char *progname)
 "  -L LANANANAME, --lanana=LANANANAME\n"
 "                                 use LANANANAME as package or provider name\n"
 "  -t                             check LSB conformance of payload files\n"
-"  -T [core|desktop], --lsb-product [core|desktop]\n"
-"                                 target either core or desktop spec for tests\n" 
+//"  -T [core|desktop], --lsb-product [core|desktop]\n"
+//"                                 target either core or desktop spec for tests\n" 
 "  -M MODULE, --module=MODULE     add MODULE to list of checked modules\n"
 "  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n"
 "  -d DEPENDENCY, --dependency=DEPENDENCY\n"
@@ -52,7 +52,7 @@ concat_string(char *input, char *addition)
 }
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
-static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.25 $";
+static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.26 $";
 
 int
 main(int argc, char *argv[])
@@ -75,6 +75,7 @@ main(int argc, char *argv[])
     command_line = concat_string(command_line, " ");
   }
 
+/* Ignore LSB_PRODUCT env variable for LSB 3.1
   if(NULL != (p = getenv("LSB_PRODUCT"))) {
     if(strcasecmp(p, "desktop") == 0 || strcasecmp(p, "all") == 0) {
       modules = LSB_All_Modules;
@@ -85,6 +86,7 @@ main(int argc, char *argv[])
       fprintf(stderr, "warning: LSB_PRODUCT target '%s' is invalid, resetting to core\n", p);
     }
   }
+*/
 
   while (1) {
     int c;
@@ -122,6 +124,7 @@ main(int argc, char *argv[])
         check_app = 1;
         break;
       case 'T':
+/* Ignore -T completely for LSB 3.1
 	if(strcasecmp(optarg, "desktop") == 0 || strcasecmp(optarg, "all") == 0)
 	{
 	    modules = LSB_All_Modules;
@@ -134,6 +137,7 @@ main(int argc, char *argv[])
 	    exit(EXIT_FAILURE);
 	} else
 	    modules = LSB_Core | LSB_Graphics | LSB_Cpp;
+*/
 	break;
       case 'M':
 	modules |= getmoduleval(optarg);
