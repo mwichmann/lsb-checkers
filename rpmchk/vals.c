@@ -33,8 +33,10 @@ char *validos = "linux";
 char *lanananame = NULL;
 
 int is_noarch = 0;
+/* Ignore is_graphics and is_desktop for LSB 3.1
 int is_graphics = 1;
 int is_desktop = 1;
+*/
 int is_custom = 0;
 
 RpmRequireRec validdeps[] = {
@@ -68,6 +70,7 @@ RpmRequireRec noarchdeps[] = {
 };
 int numnoarchdeps = sizeof(noarchdeps)/sizeof(RpmRequireRec);
 
+/* Ignore lsb-graphics and lsb-desktop for LSB 3.1
 RpmRequireRec graphicsdeps[] = {
 #if __i386__
 	{"lsb-graphics-ia32",LSBVERSION, 0, 1 },
@@ -105,6 +108,7 @@ RpmRequireRec desktopdeps[] = {
 #endif
 };
 int numdtdeps = sizeof(desktopdeps)/sizeof(RpmRequireRec);
+*/
 
 RpmRequireRec customdeps[] = {
 	{"","", 0, 0},

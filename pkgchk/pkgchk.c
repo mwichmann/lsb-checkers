@@ -52,7 +52,7 @@ concat_string(char *input, char *addition)
 }
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
-static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.26 $";
+static const char * __attribute((unused)) pkgchk_revision = "$Revision: 1.27 $";
 
 int
 main(int argc, char *argv[])
@@ -68,7 +68,9 @@ main(int argc, char *argv[])
   int check_app = 0;
   int overrideJournalFilename = 0;
   int option_index = 0;
+/* Ignore LSB_PRODUCT env variable for LSB 3.1
   char *p;
+*/
 
   for (i=0; i<argc; i++) {
     command_line = concat_string(command_line, argv[i]);
@@ -141,8 +143,10 @@ main(int argc, char *argv[])
 	break;
       case 'M':
 	modules |= getmoduleval(optarg);
+/* Ignore the use of is_graphics for LSB 3.1
 	if (modules & LSB_Graphics)
 		is_graphics = 1;
+*/
 	printf("also checking symbols in module %s\n", optarg);
 	break;
       case 'j':
