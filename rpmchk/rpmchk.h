@@ -218,8 +218,10 @@ extern int numgrdeps;
 extern int numdtdeps;
 extern int numcustdeps;
 extern int is_noarch;
+/* Ignore is_graphics and is_desktop for LSB 3.1
 extern int is_graphics;
 extern int is_desktop;
+*/
 extern int is_custom;
 extern char *pkgname;
 extern unsigned char *sigdata;

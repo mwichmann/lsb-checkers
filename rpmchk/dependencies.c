@@ -28,6 +28,7 @@ check_dependencies(struct tetj_handle *journal)
 	alldeps[i] = validdeps[i];
     }
 
+/* Ignore is_graphics and is_desktop for LSB 3.1
     if (is_graphics) {
 	alldeps[numalldeps] = graphicsdeps[0];
 	numalldeps = numalldeps + 1;
@@ -37,6 +38,7 @@ check_dependencies(struct tetj_handle *journal)
 	alldeps[numalldeps] = desktopdeps[0];
 	numalldeps = numalldeps + 1;
     }
+*/
 	
     if (is_custom) {
 	for (i = 0; i < numcustdeps; i++) {
