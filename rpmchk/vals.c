@@ -44,6 +44,7 @@ RpmRequireRec validdeps[] = {
 	{"rpmlib(PayloadFilesHavePrefix)","4.0-1", 0, 0 },
 	{"rpmlib(CompressedFileNames)","3.0.4-1", 0, 0 },
 	{"/bin/sh","", 0, 0 },
+	{"lsb",LSBVERSION, 0, 1 },
 	{"lsb-core-noarch",LSBVERSION, 0, 0 },
 #if __i386__
 	{"lsb-core-ia32",LSBVERSION, 0, 1 },
