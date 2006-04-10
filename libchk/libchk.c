@@ -6,9 +6,15 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.70 $
+ * This is $Revision: 1.71 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.71  2006/04/10 18:58:30  mats
+ * Partial fix for bug 1122 - if symbols are expected unversioned, but found
+ * versioned, that should be okay. Case where there are multiple version
+ * symbols in library not handled yet. Also, case where symbol expected
+ * versioned and found unversioned is changed to an error from a warning.
+ *
  * Revision 1.70  2006/04/01 00:08:03  rajesh
  * removed -T option and made desktop as the default
  *
@@ -259,7 +265,7 @@ static struct libpath *library_paths = NULL;
 static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.70 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.71 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -297,7 +303,7 @@ check_symbol(ElfFile *file, struct versym *entry)
   int i, j;
   char *symbol_name;
   int foundit=0;
-  /* See if this symbol is in the dynsyn section of the library */
+  /* See if this symbol is in the dynsym section of the library */
 
   /* printf("Looking for %s\n", entry->name); */
   for (j=0; j<file->numsyms; j++) 
@@ -333,8 +339,7 @@ check_symbol(ElfFile *file, struct versym *entry)
 
       /* This bit means it's internal */
       Elf32_Half vers = file->vers[j];
-      if (vers & 0x8000)
-      {
+      if (vers & 0x8000) {
         vers = vers & 0x7FFF;
       }
 
@@ -343,28 +348,24 @@ check_symbol(ElfFile *file, struct versym *entry)
         continue;
 
       /* One means the symbol is defined & available, but not versioned */
-      if (vers == 1) 
-      {
-        if (entry->vername[0] != '\000')
-        {
-            printf("    Warning!!! Found unversioned symbol %s,"
-                   "but expecting version %s\n",
+      if (vers == 1) {
+        if (entry->vername[0] != '\000') {
+	    /* this was a warning before, but it's really an error */
+            printf("    Error: found unversioned symbol %s,"
+                   "expecting version %s\n",
                    ElfGetStringIndex(file,file->syms[j].st_name,
                                      file->symhdr->sh_link),
                    entry->vername);
-          continue;
-        }
-        else
-        {
-          /* Found and expected unversioned symbol */
+	  return 0;
+        } else {
+          /* Found an expected unversioned symbol */
           return 1;
         }
       }
 
       /* This is just a sanity check, which should never be hit */
-      if (vers > file->numverdefs) 
-      {
-          printf("    Warning!!! Found version %x, for %s which is too big\n",
+      if (vers > file->numverdefs) {
+          printf("    Warning: found version %x for %s which is too big\n",
                  vers,
                  ElfGetStringIndex(file,file->syms[j].st_name,
                                    file->symhdr->sh_link));
@@ -381,46 +382,52 @@ check_symbol(ElfFile *file, struct versym *entry)
       /* Convert the Version from the DB into a numerical value so we can do
          more interesting comparisons */
 
-
       if( file->numverdefs == 2 ) {
-	  /* The library only has a single version, which is the default */
-	  if( strcmp(file->versionnames[2], entry->vername) != 0 ) {
-              printf("    Warning!!! Did not find version tag %s in library!\n",
-                     entry->vername);
-              if (libchk_debug & (LIBCHK_DEBUG_NEWVERS | LIBCHK_DEBUG_OLDVERS))
-                  printf("    only available version is %s\n", file->versionnames[2]);
-	      return 0;
-            }
-	  i=2; 
+	/* The library only has a single version, which is the default */
+        if (entry->vername[0] == '\000') {
+	  printf("    Warning: expected unversioned symbol %s in library\n",
+                 ElfGetStringIndex(file,file->syms[j].st_name,
+                                   file->symhdr->sh_link));
+	  if (libchk_debug & (LIBCHK_DEBUG_NEWVERS | LIBCHK_DEBUG_OLDVERS))
+	    printf("        found version %s\n", file->versionnames[2]);
+	} else if( strcmp(file->versionnames[2], entry->vername) != 0 ) {
+	  printf("    Warning: did not find version tag %s in library\n",
+		 entry->vername);
+	  if (libchk_debug & (LIBCHK_DEBUG_NEWVERS | LIBCHK_DEBUG_OLDVERS))
+	    printf("        only available version is %s\n", file->versionnames[2]);
+	  return 0;
+	}
+	i=2; 
       } else {
-	  /* The library has multiple versions, check each one */
+          /* The library has multiple versions, check each one */
 
-	  /*
-	   * Note that the Versions are stored with a bias of 2. There are
-	   * 2 entries a the bottom of the array that are not included in
-	   * the count for how many version are available. The symbols use
-	   * the bias also, we we'll just adjust the loop start & end conditions
-	   * to match this bias.
-	   */
-          for(i=2;i<=file->numverdefs;i++)
-          {
-	    if( strcmp(file->versionnames[i], entry->vername) == 0 )
-		break;
+          /*
+           * Note that the Versions are stored with a bias of 2. There are
+           * two entries at the bottom of the array that are not included in
+           * the count for how many version are available. The symbols use
+           * the bias also, we we'll just adjust the loop start & end conditions
+           * to match this bias.
+           */
+          for(i=2;i<=file->numverdefs;i++) {
+            if( strcmp(file->versionnames[i], entry->vername) == 0 )
+                break;
           }
 
-          /* Check to make sure we found the version at all */
-          if( i > file->numverdefs )
-          {
-            printf("    Warning!!! Did not find version tag %s in library!\n",
+	  /*XXX what do we do if the symbols are expected to be unversioned,
+	   * the library is now versioned, and there's more than one
+	   * version tag in there? the simple case is handled above...
+	   */
+          if( i > file->numverdefs ) {
+            printf("    Warning: did not find version tag %s in library\n",
                    entry->vername);
             if (libchk_debug & (LIBCHK_DEBUG_NEWVERS | LIBCHK_DEBUG_OLDVERS))
-	      printf("    available version is %s\n", file->versionnames[vers]);
+              printf("        available version is %s\n", file->versionnames[vers]);
           }
       }
 
       /* If the version matches, stop, we are done */
       if (vers == i)
-	foundit=1;
+        foundit=1;
 
       /* If the version in the library is greater (newer) then warn if
          in maintainer mode */
@@ -653,69 +660,59 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
     tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
                        tmp_string);
 
-    if(check_symbol(file, entries+i))
-    {
+    if(check_symbol(file, entries+i)) {
       tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
-    }
-    else
-    {
+    } else {
       /* Failed to match */
-			snprintf(tmp_string, TMP_STRING_SIZE, "Did not find %s (%s) in %s",
-							 entries[i].name,
-							 strlen(entries[i].vername)>0 ? entries[i].vername : 
-							   "(unversioned)",
-							 libname);
-			printf("%s\n", tmp_string);
-			tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-												 0, 0, 0, tmp_string);
-
+      snprintf(tmp_string, TMP_STRING_SIZE, "Did not find %s (%s) in %s",
+	       entries[i].name,
+	       strlen(entries[i].vername) > 0 ? entries[i].vername :
+						"unversioned",
+	       libname);
+      printf("%s\n", tmp_string);
+      tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+			 0, 0, 0, tmp_string);
       tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
     }
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+
     /* Check the symbol size, if it's an OBJT */
     snprintf(tmp_string, TMP_STRING_SIZE, "%s (%s)",
-            entries[i].name, entries[i].vername>0 ? entries[i].vername :
-            "unversioned");
+             entries[i].name, entries[i].vername > 0 ? entries[i].vername :
+						       "unversioned");
     switch(check_size(file, entries+i)) {
 	case 0: /* Not an obj */
-			break;
+	    break;
 	case 1: /* Passed */
-    {
-      tetj_tp_count++;
-      tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
-                       tmp_string);
-      tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
-      tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
-	  break;
-    }
+	    tetj_tp_count++;
+	    tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
+			       tmp_string);
+	    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+	    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+	    break;
 	case -1: /* Failed */
-    {
-      tetj_tp_count++;
-      tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
-                       tmp_string);
+	    tetj_tp_count++;
+	    tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
+			       tmp_string);
 #if 0
-      /* Failed to match */
-			snprintf(tmp_string, TMP_STRING_SIZE, "Did not find %s (%s) in %s",
-							 entries[i].name,
-							 strlen(entries[i].vername)>0 ? entries[i].vername : 
-							   "(unversioned)",
-							 libname);
-			printf("%s\n", tmp_string);
-			tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-												 0, 0, 0, tmp_string);
+	    /* Failed to match */
+	    snprintf(tmp_string, TMP_STRING_SIZE, "Did not find %s (%s) in %s",
+		     entries[i].name,
+		     strlen(entries[i].vername)>0 ? entries[i].vername : 
+						    "unversioned",
+		     libname);
+	    printf("%s\n", tmp_string);
+	    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+			       0, 0, 0, tmp_string);
 #endif
-
-      tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-      tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
-    }
-   }
+	    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+	    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+     }
   }
 
-/*   printf("Checking Class Information in %s\n", filename ); */
-
+/*  printf("Checking Class Information in %s\n", filename ); */
   check_class_info(file,filename,classes,journal);
-
-	tetj_testcase_end(journal, tetj_activity_count, 0, "");
+  tetj_testcase_end(journal, tetj_activity_count, 0, "");
 
 }
 
