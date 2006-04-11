@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.72 $
+ * This is $Revision: 1.73 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.73  2006/04/10 23:26:00  mats
+ * misc. cleanup (no functional changes)
+ *
  * Revision 1.72  2006/04/10 20:27:02  mats
  * other half of bug 1122
  *
@@ -268,7 +271,7 @@ static struct libpath *library_paths = NULL;
 static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.72 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.73 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -309,8 +312,7 @@ check_symbol(ElfFile *file, struct versym *entry)
   /* See if this symbol is in the dynsym section of the library */
 
   /* printf("Looking for %s\n", entry->name); */
-  for (j=0; j<file->numsyms; j++) 
-  {
+  for (j=0; j<file->numsyms; j++) {
     if (! (ELF32_ST_TYPE(file->syms[j].st_info) == STT_FUNC ||
            ELF32_ST_TYPE(file->syms[j].st_info) == STT_OBJECT))
     {
@@ -326,17 +328,19 @@ check_symbol(ElfFile *file, struct versym *entry)
     symbol_name = ElfGetStringIndex(file,file->syms[j].st_name,
 				    file->symhdr->sh_link);
 #if __powerpc64__
-    /* On PPC64 systems the real text for functions is stored in a symbol
-       of the same name, but prepended with a '.'. Since in the LSB DB
-       we store the names of the functions without a '.' we need this horrible
-       horrible hack so libchk can match against the correct symbols */
-    if (symbol_name[0]=='.' && ELF32_ST_TYPE(file->syms[j].st_info)==STT_FUNC) 
-    {
+    /*
+     * On PPC64 systems the real text for functions is stored in a symbol
+     * of the same name, but prepended with a '.'. Since in the LSB DB
+     * we store the names of the functions without a '.' we need this horrible
+     * horrible hack so libchk can match against the correct symbols
+     * Note: this is now fixed on ppc64, but leave hack for a while
+     * until systems generally catch up
+     */
+    if (symbol_name[0]=='.' && ELF32_ST_TYPE(file->syms[j].st_info)==STT_FUNC) {
 	symbol_name++;
     }
 #endif
-    if (strcmp(symbol_name,entry->name) == 0)
-    {
+    if (strcmp(symbol_name,entry->name) == 0) {
 
       /* Now, check to see if it has the right version associated with it */
 
@@ -353,13 +357,13 @@ check_symbol(ElfFile *file, struct versym *entry)
       /* One means the symbol is defined & available, but not versioned */
       if (vers == 1) {
         if (entry->vername[0] != '\000') {
-	    /* this was a warning before, but it's really an error */
+            /* this was a warning before, but it's really an error */
             printf("    Error: found unversioned symbol %s,"
                    "expecting version %s\n",
                    ElfGetStringIndex(file,file->syms[j].st_name,
                                      file->symhdr->sh_link),
                    entry->vername);
-	  return 0;
+          return 0;
         } else {
           /* Found an expected unversioned symbol */
           return 1;
@@ -386,21 +390,21 @@ check_symbol(ElfFile *file, struct versym *entry)
          more interesting comparisons */
 
       if( file->numverdefs == 2 ) {
-	/* The library only has a single version, which is the default */
+        /* The library only has a single version, which is the default */
         if (entry->vername[0] == '\000') {
-	  printf("    Warning: expected unversioned symbol %s in library\n",
+          printf("    Warning: expected unversioned symbol %s in library\n",
                  ElfGetStringIndex(file,file->syms[j].st_name,
                                    file->symhdr->sh_link));
-	  if (libchk_debug & (LIBCHK_DEBUG_NEWVERS | LIBCHK_DEBUG_OLDVERS))
-	    printf("        found version %s\n", file->versionnames[2]);
-	} else if( strcmp(file->versionnames[2], entry->vername) != 0 ) {
-	  printf("    Warning: did not find version tag %s in library\n",
-		 entry->vername);
-	  if (libchk_debug & (LIBCHK_DEBUG_NEWVERS | LIBCHK_DEBUG_OLDVERS))
-	    printf("        only available version is %s\n", file->versionnames[2]);
-	  return 0;
-	}
-	i=2; 
+          if (libchk_debug & (LIBCHK_DEBUG_NEWVERS | LIBCHK_DEBUG_OLDVERS))
+            printf("        found version %s\n", file->versionnames[2]);
+        } else if( strcmp(file->versionnames[2], entry->vername) != 0 ) {
+          printf("    Warning: did not find version tag %s in library\n",
+                 entry->vername);
+          if (libchk_debug & (LIBCHK_DEBUG_NEWVERS | LIBCHK_DEBUG_OLDVERS))
+            printf("        only available version is %s\n", file->versionnames[2]);
+          return 0;
+        }
+        i=2; 
       } else {
           /* The library has multiple versions, check each one */
 
@@ -416,24 +420,19 @@ check_symbol(ElfFile *file, struct versym *entry)
                 break;
           }
 
-	  /*XXX what do we do if the symbols are expected to be unversioned,
-	   * the library is now versioned, and there's more than one
-	   * version tag in there? the simple case is handled above...
-	   */
           if( i > file->numverdefs ) {
-	    if (entry->vername[0] == '\000') {
-	      printf("    Warning: expected unversioned symbol %s in library\n",
-		     ElfGetStringIndex(file,file->syms[j].st_name,
-				       file->symhdr->sh_link));
-	      foundit = 1;  /* pretend this is okay */
-	      if (libchk_debug & (LIBCHK_DEBUG_NEWVERS | LIBCHK_DEBUG_OLDVERS))
-		printf("        found version %s\n", file->versionnames[vers]);
-	      foundit=1;	/* pretend vers was found */
-	    } else {
-	      printf("    Warning: did not find version tag %s in library\n",
-		     entry->vername);
-	      if (libchk_debug & (LIBCHK_DEBUG_NEWVERS | LIBCHK_DEBUG_OLDVERS))
-		printf("        available version is %s\n", file->versionnames[vers]);
+            if (entry->vername[0] == '\000') {
+              printf("    Warning: expected unversioned symbol %s in library\n",
+                     ElfGetStringIndex(file,file->syms[j].st_name,
+                                       file->symhdr->sh_link));
+              if (libchk_debug & (LIBCHK_DEBUG_NEWVERS | LIBCHK_DEBUG_OLDVERS))
+                printf("        found version %s\n", file->versionnames[vers]);
+              foundit=1;	/* pretend vers was found */
+            } else {
+              printf("    Warning: did not find version tag %s in library\n",
+                     entry->vername);
+              if (libchk_debug & (LIBCHK_DEBUG_NEWVERS | LIBCHK_DEBUG_OLDVERS))
+                printf("        available version is %s\n", file->versionnames[vers]);
 	    }
           }
       }
@@ -467,10 +466,8 @@ check_size(ElfFile *file, struct versym *entry)
   /* See if this symbol is in the dynsyn section of the library */
 
   /* printf("Looking for %s\n", entry->name); */
-  for (j=0; j<file->numsyms; j++) 
-  {
-    if ( !(ELF32_ST_TYPE(file->syms[j].st_info) == STT_OBJECT) )
-    {
+  for (j=0; j<file->numsyms; j++) {
+    if ( !(ELF32_ST_TYPE(file->syms[j].st_info) == STT_OBJECT) ) {
       continue;
     }
 #ifdef DEBUG
@@ -483,35 +480,36 @@ check_size(ElfFile *file, struct versym *entry)
     symbol_name = ElfGetStringIndex(file,file->syms[j].st_name,
 				    file->symhdr->sh_link);
 #if __powerpc64__
-    /* On PPC64 systems the real text for functions is stored in a symbol
-       of the same name, but prepended with a '.'. Since in the LSB DB
-       we store the names of the functions without a '.' we need this horrible
-       horrible hack so libchk can match against the correct symbols */
-    if (symbol_name[0]=='.' && ELF32_ST_TYPE(file->syms[j].st_info)==STT_FUNC) 
-    {
+    /*
+     * On PPC64 systems the real text for functions is stored in a symbol
+     * of the same name, but prepended with a '.'. Since in the LSB DB
+     * we store the names of the functions without a '.' we need this horrible
+     * horrible hack so libchk can match against the correct symbols
+     * Note: this is now fixed on ppc64, but leave hack for a while
+     * until systems generally catch up
+     */
+    if (symbol_name[0]=='.' && ELF32_ST_TYPE(file->syms[j].st_info)==STT_FUNC) {
 	symbol_name++;
     }
 #endif
-    if (strcmp(symbol_name,entry->name) == 0)
-    {
-    /* Now, check to see if it has the right size associated with it */
+    if (strcmp(symbol_name,entry->name) == 0) {
+      /* Now, check to see if it has the right size associated with it */
 
-	if( entry->size == 0 ) {
-		/* Until the DB is fully populated, skip the check is the size is 0 */
-		return 0;
-	}
-	if( file->syms[j].st_size != entry->size ) {
-			fprintf(stderr, "size for %s doesn't match %ld vs %d\n",
-						symbol_name, (u_long)file->syms[j].st_size, entry->size );
-			return -1;
-	} else {
+      if( entry->size == 0 ) {
+	/* Until the DB is fully populated, skip the check is the size is 0 */
+	return 0;
+      }
+      if( file->syms[j].st_size != entry->size ) {
+	fprintf(stderr, "size for %s doesn't match %ld vs %d\n",
+		symbol_name, (u_long)file->syms[j].st_size, entry->size );
+	return -1;
+      } else {
 #ifdef DEBUG
-			fprintf(stderr, "size for %s does match %ld vs %d\n",
-						symbol_name, (u_long)file->syms[j].st_size, entry->size );
+	fprintf(stderr, "size for %s does match %ld vs %d\n",
+		symbol_name, (u_long)file->syms[j].st_size, entry->size );
 #endif
-			return 1;
-	}
-
+	return 1;
+      }
     }
   }
 
@@ -528,10 +526,8 @@ get_size(ElfFile *file, char *symname)
   /* See if this symbol is in the dynsyn section of the library */
 
   /* printf("Looking for %s\n", entry->name); */
-  for (j=0; j<file->numsyms; j++) 
-  {
-    if ( !(ELF32_ST_TYPE(file->syms[j].st_info) == STT_OBJECT) )
-    {
+  for (j=0; j<file->numsyms; j++) {
+    if ( !(ELF32_ST_TYPE(file->syms[j].st_info) == STT_OBJECT) ) {
       continue;
     }
 #ifdef DEBUG
@@ -544,19 +540,20 @@ get_size(ElfFile *file, char *symname)
     symbol_name = ElfGetStringIndex(file,file->syms[j].st_name,
 				    file->symhdr->sh_link);
 #if __powerpc64__
-    /* On PPC64 systems the real text for functions is stored in a symbol
-       of the same name, but prepended with a '.'. Since in the LSB DB
-       we store the names of the functions without a '.' we need this horrible
-       horrible hack so libchk can match against the correct symbols */
-    if (symbol_name[0]=='.' && ELF32_ST_TYPE(file->syms[j].st_info)==STT_FUNC) 
-    {
+    /*
+     * On PPC64 systems the real text for functions is stored in a symbol
+     * of the same name, but prepended with a '.'. Since in the LSB DB
+     * we store the names of the functions without a '.' we need this horrible
+     * horrible hack so libchk can match against the correct symbols
+     * Note: this is now fixed on ppc64, but leave hack for a while
+     * until systems generally catch up
+     */
+    if (symbol_name[0]=='.' && ELF32_ST_TYPE(file->syms[j].st_info)==STT_FUNC) {
 	symbol_name++;
     }
 #endif
-    if (strcmp(symbol_name,symname) == 0)
-    {
-	    return file->syms[j].st_size;
-
+    if (strcmp(symbol_name,symname) == 0) {
+      return file->syms[j].st_size;
     }
   }
 
@@ -815,7 +812,8 @@ main(int argc, char *argv[])
   char journal_filename[TMP_STRING_SIZE+1];
   int option_index = 0;
   
-/* Ignore LSB_PRODUCT env variable for LSB 3.1
+#if 0
+  /* Ignore LSB_PRODUCT env variable for LSB 3.1 */
   char *s = getenv("LSB_PRODUCT");
   if(s) {
     if(strcasecmp(s, "core") == 0)
@@ -830,7 +828,7 @@ main(int argc, char *argv[])
     }
   } else
     module = LSB_Core_Modules;
-*/
+#endif
 
   module = LSB_Desktop_Modules;	// default to all modules in cert program
   if ((ptr = getenv("LIBCHK_DEBUG")) != NULL) {
@@ -865,7 +863,8 @@ main(int argc, char *argv[])
 	snprintf(journal_filename, TMP_STRING_SIZE, "/dev/null");
 	break;
       case 'T':
-/* Ignore -T completely for LSB 3.1
+#if 0
+	/* Ignore -T completely for LSB 3.1 */
 	if(strcasecmp(optarg, "core") == 0)
 	  module |= LSB_Core_Modules;
 	else if(strcasecmp(optarg, "desktop") == 0)
@@ -877,7 +876,7 @@ main(int argc, char *argv[])
 	  usage(argv[0]);
 	  exit(1);
 	}
-*/
+#endif
 	break;
       case 'M':
 	module |= getmoduleval(optarg);
