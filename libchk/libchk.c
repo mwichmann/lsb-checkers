@@ -6,9 +6,12 @@
  * Stuart Anderson (anderson@freestandards.org)
  * Chris Yeoh (yeohc@au.ibm.com)
  *
- * This is $Revision: 1.71 $
+ * This is $Revision: 1.72 $
  *
  * $Log: libchk.c,v $
+ * Revision 1.72  2006/04/10 20:27:02  mats
+ * other half of bug 1122
+ *
  * Revision 1.71  2006/04/10 18:58:30  mats
  * Partial fix for bug 1122 - if symbols are expected unversioned, but found
  * versioned, that should be okay. Case where there are multiple version
@@ -265,7 +268,7 @@ static struct libpath *library_paths = NULL;
 static int library_path_count = 0;
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
-static const char * __attribute((unused)) libchk_revision = "$Revision: 1.71 $";
+static const char * __attribute((unused)) libchk_revision = "$Revision: 1.72 $";
 
 /*
  * Some debugging bits which are useful to maintainers,
@@ -418,10 +421,20 @@ check_symbol(ElfFile *file, struct versym *entry)
 	   * version tag in there? the simple case is handled above...
 	   */
           if( i > file->numverdefs ) {
-            printf("    Warning: did not find version tag %s in library\n",
-                   entry->vername);
-            if (libchk_debug & (LIBCHK_DEBUG_NEWVERS | LIBCHK_DEBUG_OLDVERS))
-              printf("        available version is %s\n", file->versionnames[vers]);
+	    if (entry->vername[0] == '\000') {
+	      printf("    Warning: expected unversioned symbol %s in library\n",
+		     ElfGetStringIndex(file,file->syms[j].st_name,
+				       file->symhdr->sh_link));
+	      foundit = 1;  /* pretend this is okay */
+	      if (libchk_debug & (LIBCHK_DEBUG_NEWVERS | LIBCHK_DEBUG_OLDVERS))
+		printf("        found version %s\n", file->versionnames[vers]);
+	      foundit=1;	/* pretend vers was found */
+	    } else {
+	      printf("    Warning: did not find version tag %s in library\n",
+		     entry->vername);
+	      if (libchk_debug & (LIBCHK_DEBUG_NEWVERS | LIBCHK_DEBUG_OLDVERS))
+		printf("        available version is %s\n", file->versionnames[vers]);
+	    }
           }
       }
 
