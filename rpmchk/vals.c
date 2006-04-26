@@ -48,18 +48,25 @@ RpmRequireRec validdeps[] = {
 	{"lsb-core-noarch","3.0", 0, 0 },
 #if __i386__
 	{"lsb-core-ia32","3.0", 0, 0 },
+	{"lsb-graphics-ia32","3.0", 0, 0 },
 #elif __ia64__
 	{"lsb-core-ia64","3.0", 0, 0 },
+	{"lsb-graphics-ia64","3.0", 0, 0 },
 #elif __x86_64__
 	{"lsb-core-amd64","3.0", 0, 0 },
+	{"lsb-graphics-amd64","3.0", 0, 0 },
 #elif __powerpc__ && !__powerpc64__
 	{"lsb-core-ppc32","3.0", 0, 0 },
+	{"lsb-graphics-ppc32","3.0", 0, 0 },
 #elif __powerpc64__
 	{"lsb-core-ppc64","3.0", 0, 0 },
+	{"lsb-graphics-ppc64","3.0", 0, 0 },
 #elif __s390__ && !__s390x__
 	{"lsb-core-s390","3.0", 0, 0 },
+	{"lsb-graphics-s390","3.0", 0, 0 },
 #elif __s390x__
 	{"lsb-core-s390x","3.0", 0, 0 },
+	{"lsb-graphics-s390x","3.0", 0, 0 },
 #endif
 };
 int numdeps = sizeof(validdeps)/sizeof(RpmRequireRec);
@@ -67,7 +74,6 @@ int numdeps = sizeof(validdeps)/sizeof(RpmRequireRec);
 RpmRequireRec noarchdeps[] = {
 	{"lsb-core-noarch","3.0", 0, 0 },
 	{"lsb-graphics-noarch","3.0", 0, 0 },
-	{"lsb-desktop-noarch","3.0", 0, 0 },
 };
 int numnoarchdeps = sizeof(noarchdeps)/sizeof(RpmRequireRec);
 
