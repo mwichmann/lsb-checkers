@@ -1,3 +1,825 @@
+2006-04-26	Marvin Heffler <heffler_at_us.ibm.com>
+	* rpmchk/vals.c
+	   remove lsb-desktop-noarch as a valid dependency and add
+	   lsb-graphics-<arch> as an optional dependency
+
+2006-04-18	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* libchk/libchk.c
+	   bug 1241: logic change in case the first instance of a symbol is
+	   unversioned but we're expecting versioned - keep looking!
+
+2006-04-10	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* libchk/libchk.c
+	   misc. cleanup (no functional changes)
+
+2006-04-04	Marvin Heffler <heffler_at_us.ibm.com>
+	* rpmchk/vals.c
+	  pkgchk/pkgchk.c
+	  rpmchk/dependencies.c
+	  rpmchk/rpmchk.h
+	  rpmchk/vals.c
+	   comment out all is_graphics and is_desktop processing since LSB
+	   3.1 defaults to desktop
+
+2006-04-01	Rajesh Banginwar <rajesh.banginwar_at_intel.com>
+	* rpmchk/vals.c
+	  appchk/appchk.c
+	  appchk/lsbappchk.1
+	  cmdchk/cmdchk.c
+	  cmdchk/lsbcmdchk.1
+	  elfchk/dump_modules
+	  elfchk/modules.c
+	  elfchk/modules.h
+	  elfchk/util.c
+	  libchk/libchk.c
+	  libchk/lsblibchk.1
+	  pkgchk/lsbpkgchk.1
+	  pkgchk/pkgchk.c
+	   undocument -T and make desktop default. clean-up to simplify
+	   appchk messages
+
+2006-03-30	Marvin Heffler <heffler_at_us.ibm.com>
+	* libchk/libchk.c
+	  elfchk/modules.c
+	  elfchk/modules.h
+	  elfchk/util.c
+	   change libchk so it handles module sets better
+
+2006-03-24	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* libchk/dummy_link.c
+	   try a qt-mt symbol that isn't arch-specific
+
+2006-03-21	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* libchk/libqt_mt_so_3.c
+	   Added missing file for Qt3
+
+2006-03-21	Rajesh Banginwar <rajesh.banginwar_at_intel.com>
+	* libchk/makefile
+	  elfchk/dtneeded.c
+	  elfchk/dynsyms.c
+	  elfchk/modules.c
+	  elfchk/modules.h
+	  libchk/dummy_link.c
+	  libchk/libs.c
+	  libchk/libs.h
+	  libchk/libs.mk
+	   sync with DB. enabling for Qt3
+
+2006-03-15	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* libchk/libstdcxx_so_6.c
+	  devchk/ts/devchk/glib_2_0_glib_h.c
+	  elfchk/dtneeded.c
+	  libchk/libQtGui_so_4.c
+	  libchk/libgdk_pixbuf_xlib_2_0_so_0.c
+	  libchk/libs.c
+	  libchk/libs.h
+	  libchk/libs.mk
+	   regen for bug 1288
+
+2006-03-13	Marvin Heffler <heffler_at_us.ibm.com>
+	* devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/png_h.c
+	   restore hand edit workaround to get png_h.c to compile with
+	   lsbcc
+
+2006-03-13	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* devchk/ts/devchk/wordexp_h.c
+	  devchk/ts/devchk/atk_1_0_atk_atk_h.c
+	  devchk/ts/devchk/ctype_h.c
+	  devchk/ts/devchk/fontconfig_fontconfig_h.c
+	  devchk/ts/devchk/ftw_h.c
+	  devchk/ts/devchk/glib_2_0_glib_h.c
+	  devchk/ts/devchk/glib_2_0_glib_object_h.c
+	  devchk/ts/devchk/glib_2_0_gmodule_h.c
+	  devchk/ts/devchk/glib_2_0_gobject_gvaluecollector_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_gdk_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_pixbuf_gdk_pixbuf_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_pixbuf_gdk_pixdata_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_pixbuf_xlib_gdk_pixbuf_xlib_h.c
+	  devchk/ts/devchk/gtk_2_0_gtk_gtk_h.c
+	  devchk/ts/devchk/hdrchk.h
+	  devchk/ts/devchk/jpeglib_h.c
+	  devchk/ts/devchk/libxml2_libxml_HTMLparser_h.c
+	  devchk/ts/devchk/libxml2_libxml_SAX2_h.c
+	  devchk/ts/devchk/libxml2_libxml_catalog_h.c
+	  devchk/ts/devchk/libxml2_libxml_encoding_h.c
+	  devchk/ts/devchk/libxml2_libxml_entities_h.c
+	  devchk/ts/devchk/libxml2_libxml_parser_h.c
+	  devchk/ts/devchk/libxml2_libxml_pattern_h.c
+	  devchk/ts/devchk/libxml2_libxml_relaxng_h.c
+	  devchk/ts/devchk/libxml2_libxml_schematron_h.c
+	  devchk/ts/devchk/libxml2_libxml_tree_h.c
+	  devchk/ts/devchk/libxml2_libxml_valid_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlIO_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlerror_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlmodule_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlreader_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlregexp_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlsave_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlschemas_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlschemastypes_h.c
+	  devchk/ts/devchk/libxml2_libxml_xpath_h.c
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/pango_1_0_pango_pango_h.c
+	  devchk/ts/devchk/png_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/rpc_auth_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/rpc_rpc_msg_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/rpc_xdr_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	   sync after mktests changes for bug 1277,1278
+
+2006-03-09	Brian Harring <brianx.d.harring_at_intel.com>
+	* elfchk/util.c
+	   fixed potential segfault; don't deref the ptr if testing it to
+	   see if it's null.
+
+2006-03-09	Marvin Heffler <heffler_at_us.ibm.com>
+	* libchk/libstdcxx_so_6.c
+	  devchk/ts/devchk/atk_1_0_atk_atk_h.c
+	  devchk/ts/devchk/fontconfig_fontconfig_h.c
+	  devchk/ts/devchk/glib_2_0_glib_h.c
+	  devchk/ts/devchk/glib_2_0_glib_object_h.c
+	  devchk/ts/devchk/glib_2_0_gmodule_h.c
+	  devchk/ts/devchk/glib_2_0_gobject_gvaluecollector_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_gdk_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_pixbuf_gdk_pixbuf_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_pixbuf_gdk_pixdata_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_pixbuf_xlib_gdk_pixbuf_xlib_h.c
+	  devchk/ts/devchk/gtk_2_0_gtk_gtk_h.c
+	  devchk/ts/devchk/jpeglib_h.c
+	  devchk/ts/devchk/libxml2_libxml_HTMLparser_h.c
+	  devchk/ts/devchk/libxml2_libxml_SAX2_h.c
+	  devchk/ts/devchk/libxml2_libxml_c14n_h.c
+	  devchk/ts/devchk/libxml2_libxml_catalog_h.c
+	  devchk/ts/devchk/libxml2_libxml_debugXML_h.c
+	  devchk/ts/devchk/libxml2_libxml_dict_h.c
+	  devchk/ts/devchk/libxml2_libxml_encoding_h.c
+	  devchk/ts/devchk/libxml2_libxml_entities_h.c
+	  devchk/ts/devchk/libxml2_libxml_globals_h.c
+	  devchk/ts/devchk/libxml2_libxml_hash_h.c
+	  devchk/ts/devchk/libxml2_libxml_list_h.c
+	  devchk/ts/devchk/libxml2_libxml_parserInternals_h.c
+	  devchk/ts/devchk/libxml2_libxml_parser_h.c
+	  devchk/ts/devchk/libxml2_libxml_pattern_h.c
+	  devchk/ts/devchk/libxml2_libxml_relaxng_h.c
+	  devchk/ts/devchk/libxml2_libxml_schematron_h.c
+	  devchk/ts/devchk/libxml2_libxml_threads_h.c
+	  devchk/ts/devchk/libxml2_libxml_tree_h.c
+	  devchk/ts/devchk/libxml2_libxml_valid_h.c
+	  devchk/ts/devchk/libxml2_libxml_xinclude_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlIO_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlautomata_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlerror_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlmemory_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlmodule_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlreader_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlregexp_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlsave_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlschemas_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlschemastypes_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlstring_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlwriter_h.c
+	  devchk/ts/devchk/libxml2_libxml_xpath_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pango_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangofc_decoder_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangofc_fontmap_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangoft2_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangoxft_h.c
+	  devchk/ts/devchk/png_h.c
+	  libchk/libQtGui_so_4.c
+	   sync devchk with db changes for ibm archs
+
+2006-03-08	Brian Harring <brianx.d.harring_at_intel.com>
+	* appchk/symbols.c
+	   bump the char buffer size to 255 so that truncation doesn't
+	   occur as easily.
+
+2006-03-07	Marvin Heffler <heffler_at_us.ibm.com>
+	* rpmchk/vals.c
+	  elfchk/util.c
+	  pkgchk/lsbpkgchk.1
+	  pkgchk/pkgchk.c
+	  rpmchk/dependencies.c
+	  rpmchk/rpmchk.h
+	  rpmchk/vals.c
+	   correct processing of module name given on command line
+
+2006-03-06	Marvin Heffler <heffler_at_us.ibm.com>
+	* rpmchk/vals.c
+	  pkgchk/pkgchk.c
+	  rpmchk/dependencies.c
+	  rpmchk/rpmchk.h
+	   fix pkgchk to check for and recognize the lsb-desktop dependency
+	   when checking a desktop package
+
+2006-03-04	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* libchk/mkfunclist
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/sys_shm_h.c
+	  libchk/libQtCore_so_4.c
+	  libchk/libQtGui_so_4.c
+	  libchk/libQtOpenGL_so_4.c
+	  libchk/libQtSql_so_4.c
+	  libchk/libQtSvg_so_4.c
+	  libchk/libQtXml_so_4.c
+	  libchk/libstdcxx_so_6.c
+	   generate math workaround until we find a way to fix bug 1273
+
+2006-03-03	Marvin Heffler <heffler_at_us.ibm.com>
+	* rpmchk/archive.c
+	   revert to using unsigned char when handling the md5sum
+	   operations
+
+2006-03-03	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* devchk/ts/devchk/zlib_h.c
+	  devchk/ts/devchk/GL_gl_h.c
+	  devchk/ts/devchk/GL_glx_h.c
+	  devchk/ts/devchk/X11_CompositeP_h.c
+	  devchk/ts/devchk/X11_Composite_h.c
+	  devchk/ts/devchk/X11_ConstrainP_h.c
+	  devchk/ts/devchk/X11_Constraint_h.c
+	  devchk/ts/devchk/X11_ICE_ICElib_h.c
+	  devchk/ts/devchk/X11_ICE_ICEutil_h.c
+	  devchk/ts/devchk/X11_Intrinsic_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_SM_SMlib_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/X11_Xauth_h.c
+	  devchk/ts/devchk/X11_Xcms_h.c
+	  devchk/ts/devchk/X11_Xlib_h.c
+	  devchk/ts/devchk/X11_Xutil_h.c
+	  devchk/ts/devchk/X11_extensions_XEVI_h.c
+	  devchk/ts/devchk/X11_extensions_security_h.c
+	  devchk/ts/devchk/X11_extensions_sync_h.c
+	  devchk/ts/devchk/atk_1_0_atk_atk_enum_types_h.c
+	  devchk/ts/devchk/atk_1_0_atk_atk_h.c
+	  devchk/ts/devchk/complex_h.c
+	  devchk/ts/devchk/cpio_h.c
+	  devchk/ts/devchk/ctype_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/dirent_h.c
+	  devchk/ts/devchk/dlfcn_h.c
+	  devchk/ts/devchk/errno_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/fenv_h.c
+	  devchk/ts/devchk/fmtmsg_h.c
+	  devchk/ts/devchk/fnmatch_h.c
+	  devchk/ts/devchk/fontconfig_fcfreetype_h.c
+	  devchk/ts/devchk/fontconfig_fcprivate_h.c
+	  devchk/ts/devchk/fontconfig_fontconfig_h.c
+	  devchk/ts/devchk/ftw_h.c
+	  devchk/ts/devchk/getopt_h.c
+	  devchk/ts/devchk/glib_2_0_glib_gstdio_h.c
+	  devchk/ts/devchk/glib_2_0_glib_h.c
+	  devchk/ts/devchk/glib_2_0_glib_object_h.c
+	  devchk/ts/devchk/glib_2_0_gmodule_h.c
+	  devchk/ts/devchk/glib_2_0_gobject_gvaluecollector_h.c
+	  devchk/ts/devchk/glob_h.c
+	  devchk/ts/devchk/grp_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_gdk_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_gdkkeysyms_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_gdkx_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_pixbuf_gdk_pixbuf_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_pixbuf_gdk_pixdata_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_pixbuf_xlib_gdk_pixbuf_xlib_h.c
+	  devchk/ts/devchk/gtk_2_0_gtk_gtk_h.c
+	  devchk/ts/devchk/iconv_h.c
+	  devchk/ts/devchk/intrinsic.c
+	  devchk/ts/devchk/inttypes_h.c
+	  devchk/ts/devchk/jpeglib_h.c
+	  devchk/ts/devchk/langinfo_h.c
+	  devchk/ts/devchk/libxml2_libxml_HTMLparser_h.c
+	  devchk/ts/devchk/libxml2_libxml_HTMLtree_h.c
+	  devchk/ts/devchk/libxml2_libxml_SAX2_h.c
+	  devchk/ts/devchk/libxml2_libxml_c14n_h.c
+	  devchk/ts/devchk/libxml2_libxml_catalog_h.c
+	  devchk/ts/devchk/libxml2_libxml_debugXML_h.c
+	  devchk/ts/devchk/libxml2_libxml_dict_h.c
+	  devchk/ts/devchk/libxml2_libxml_encoding_h.c
+	  devchk/ts/devchk/libxml2_libxml_entities_h.c
+	  devchk/ts/devchk/libxml2_libxml_globals_h.c
+	  devchk/ts/devchk/libxml2_libxml_hash_h.c
+	  devchk/ts/devchk/libxml2_libxml_list_h.c
+	  devchk/ts/devchk/libxml2_libxml_parserInternals_h.c
+	  devchk/ts/devchk/libxml2_libxml_parser_h.c
+	  devchk/ts/devchk/libxml2_libxml_pattern_h.c
+	  devchk/ts/devchk/libxml2_libxml_relaxng_h.c
+	  devchk/ts/devchk/libxml2_libxml_schematron_h.c
+	  devchk/ts/devchk/libxml2_libxml_threads_h.c
+	  devchk/ts/devchk/libxml2_libxml_tree_h.c
+	  devchk/ts/devchk/libxml2_libxml_uri_h.c
+	  devchk/ts/devchk/libxml2_libxml_valid_h.c
+	  devchk/ts/devchk/libxml2_libxml_xinclude_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlIO_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlautomata_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlerror_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlexports_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlmemory_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlmodule_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlreader_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlregexp_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlsave_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlschemas_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlschemastypes_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlstring_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlversion_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlwriter_h.c
+	  devchk/ts/devchk/libxml2_libxml_xpathInternals_h.c
+	  devchk/ts/devchk/libxml2_libxml_xpath_h.c
+	  devchk/ts/devchk/libxml2_libxml_xpointer_h.c
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/netinet_ip_h.c
+	  devchk/ts/devchk/netinet_tcp_h.c
+	  devchk/ts/devchk/netinet_udp_h.c
+	  devchk/ts/devchk/nl_types_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pango_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pango_utils_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangofc_decoder_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangofc_fontmap_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangoft2_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangoxft_h.c
+	  devchk/ts/devchk/png_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/pwd_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/rpc_auth_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/rpc_rpc_msg_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/rpc_types_h.c
+	  devchk/ts/devchk/rpc_xdr_h.c
+	  devchk/ts/devchk/sched_h.c
+	  devchk/ts/devchk/search_h.c
+	  devchk/ts/devchk/security_pam_appl_h.c
+	  devchk/ts/devchk/semaphore_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stddef_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_file_h.c
+	  devchk/ts/devchk/sys_ioctl_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_mman_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/sys_param_h.c
+	  devchk/ts/devchk/sys_poll_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_statvfs_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_timeb_h.c
+	  devchk/ts/devchk/sys_times_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_un_h.c
+	  devchk/ts/devchk/sys_utsname_h.c
+	  devchk/ts/devchk/sys_wait_h.c
+	  devchk/ts/devchk/syslog_h.c
+	  devchk/ts/devchk/tar_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/ulimit_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utime_h.c
+	  devchk/ts/devchk/utmp_h.c
+	  devchk/ts/devchk/utmpx_h.c
+	  devchk/ts/devchk/wchar_h.c
+	  devchk/ts/devchk/wctype_h.c
+	  devchk/ts/devchk/wordexp_h.c
+	   Regenerated headers with modified mktests - now includes stdio.h
+	   for printf
+
+2006-03-03	Rajesh Banginwar <rajesh.banginwar_at_intel.com>
+	* devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/fontconfig_fcfreetype_h.c
+	  devchk/ts/devchk/fontconfig_fcfreetype_h.inc
+	  devchk/ts/devchk/glib_2_0_glib_h.c
+	  devchk/ts/devchk/glib_2_0_glib_h.inc
+	  devchk/ts/devchk/libxml2_libxml_globals_h.c
+	  devchk/ts/devchk/libxml2_libxml_globals_h.inc
+	  devchk/ts/devchk/libxml2_libxml_xmlschemas_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlschemas_h.inc
+	  devchk/ts/devchk/libxml2_libxml_xmlschemastypes_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlschemastypes_h.inc
+	  devchk/ts/devchk/makefile
+	  devchk/ts/devchk/mktests
+	  devchk/ts/devchk/pango_1_0_pango_pangofc_decoder_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangofc_decoder_h.inc
+	  devchk/ts/devchk/pango_1_0_pango_pangofc_fontmap_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangofc_fontmap_h.inc
+	  devchk/ts/devchk/pango_1_0_pango_pangoft2_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangoft2_h.inc
+	  devchk/ts/devchk/pango_1_0_pango_pangoxft_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangoxft_h.inc
+	  devchk/ts/devchk/png_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/pthread_h.inc
+	   lsbcc build works now when compiled as: CC=lsbcc CXX=lsbc++
+	   LSB_PRODUCT=desktop make
+
+2006-03-02	Harald Fernengel <harald_at_trolltech.com>
+	* libchk/mkfunclist
+	   more verbose error message
+
+2006-03-02	Marvin Heffler <heffler_at_us.ibm.com>
+	* libchk/libQtCore_so_4.c
+	   sync libQtCore_so_4.c with latest fixes from the db
+
+2006-03-02	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* libchk/mkfunclist
+	  appchk/libraries.c
+	  archk/libraries.c
+	  libchk/libs.c
+	   clean compiler warning
+
+2006-03-01	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* rpmchk/archive.c
+	  appchk/appchk.c
+	  devchk/ts/devchk/mktests
+	  elfchk/util.c
+	   bug 1263: don't call perror if OpenElfFile fails; it will
+	   already have done that
+
+2006-02-28	Marvin Heffler <heffler_at_us.ibm.com>
+	* devchk/ts/devchk/utmpx_h.c
+	  devchk/ts/devchk/X11_ICE_ICElib_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_Xcms_h.c
+	  devchk/ts/devchk/atk_1_0_atk_atk_h.c
+	  devchk/ts/devchk/fontconfig_fontconfig_h.c
+	  devchk/ts/devchk/glib_2_0_glib_h.c
+	  devchk/ts/devchk/glib_2_0_glib_object_h.c
+	  devchk/ts/devchk/glib_2_0_gmodule_h.c
+	  devchk/ts/devchk/glib_2_0_gobject_gvaluecollector_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_gdk_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_pixbuf_gdk_pixbuf_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_pixbuf_gdk_pixdata_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_pixbuf_xlib_gdk_pixbuf_xlib_h.c
+	  devchk/ts/devchk/gtk_2_0_gtk_gtk_h.c
+	  devchk/ts/devchk/jpeglib_h.c
+	  devchk/ts/devchk/libxml2_libxml_HTMLparser_h.c
+	  devchk/ts/devchk/libxml2_libxml_SAX2_h.c
+	  devchk/ts/devchk/libxml2_libxml_c14n_h.c
+	  devchk/ts/devchk/libxml2_libxml_catalog_h.c
+	  devchk/ts/devchk/libxml2_libxml_debugXML_h.c
+	  devchk/ts/devchk/libxml2_libxml_dict_h.c
+	  devchk/ts/devchk/libxml2_libxml_encoding_h.c
+	  devchk/ts/devchk/libxml2_libxml_entities_h.c
+	  devchk/ts/devchk/libxml2_libxml_globals_h.c
+	  devchk/ts/devchk/libxml2_libxml_hash_h.c
+	  devchk/ts/devchk/libxml2_libxml_list_h.c
+	  devchk/ts/devchk/libxml2_libxml_parserInternals_h.c
+	  devchk/ts/devchk/libxml2_libxml_parser_h.c
+	  devchk/ts/devchk/libxml2_libxml_pattern_h.c
+	  devchk/ts/devchk/libxml2_libxml_relaxng_h.c
+	  devchk/ts/devchk/libxml2_libxml_schematron_h.c
+	  devchk/ts/devchk/libxml2_libxml_threads_h.c
+	  devchk/ts/devchk/libxml2_libxml_tree_h.c
+	  devchk/ts/devchk/libxml2_libxml_valid_h.c
+	  devchk/ts/devchk/libxml2_libxml_xinclude_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlIO_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlautomata_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlerror_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlmemory_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlmodule_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlreader_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlregexp_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlsave_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlschemas_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlschemastypes_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlstring_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlwriter_h.c
+	  devchk/ts/devchk/libxml2_libxml_xpath_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pango_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangofc_decoder_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangofc_fontmap_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangoft2_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangoxft_h.c
+	  devchk/ts/devchk/png_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/rpc_rpc_msg_h.c
+	   sync devchk source files with db changes made on 2-27-06
+
+2006-02-27	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* pkgchk/pkgchk.c
+	  elfchk/dwarf.c
+	  elfchk/progbits.c
+	  elfchk/sections.c
+	   clean up types that lead to compiler warnings
+
+2006-02-25	Marvin Heffler <heffler_at_us.ibm.com>
+	* libchk/libstdcxx_so_6.c
+	  devchk/ts/devchk/X11_ICE_ICElib_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_Xcms_h.c
+	  devchk/ts/devchk/atk_1_0_atk_atk_h.c
+	  devchk/ts/devchk/glib_2_0_glib_h.c
+	  devchk/ts/devchk/glib_2_0_glib_object_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_gdk_h.c
+	  devchk/ts/devchk/gtk_2_0_gtk_gtk_h.c
+	  devchk/ts/devchk/intrinsic.c
+	  devchk/ts/devchk/libxml2_libxml_HTMLparser_h.c
+	  devchk/ts/devchk/libxml2_libxml_debugXML_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlschemastypes_h.c
+	  devchk/ts/devchk/libxml2_libxml_xpath_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangofc_decoder_h.c
+	  devchk/ts/devchk/png_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/rpc_rpc_msg_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/utmpx_h.c
+	  libchk/libQtCore_so_4.c
+	  libchk/libQtGui_so_4.c
+	  libchk/libQtOpenGL_so_4.c
+	  libchk/libQtSql_so_4.c
+	  libchk/libQtSvg_so_4.c
+	  libchk/libQtXml_so_4.c
+	  libchk/libc_so_6.c
+	  libchk/libc_so_6_1.c
+	  libchk/libs.c
+	  libchk/libs.h
+	   sync devchk source files with latest db changes
+
+2006-02-24	Marvin Heffler <heffler_at_us.ibm.com>
+	* devchk/ts/devchk/utmpx_h.c
+	  devchk/ts/devchk/X11_ICE_ICElib_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_Xcms_h.c
+	  devchk/ts/devchk/atk_1_0_atk_atk_h.c
+	  devchk/ts/devchk/fontconfig_fcfreetype_h.c
+	  devchk/ts/devchk/fontconfig_fontconfig_h.c
+	  devchk/ts/devchk/glib_2_0_glib_h.c
+	  devchk/ts/devchk/glib_2_0_glib_object_h.c
+	  devchk/ts/devchk/glib_2_0_gmodule_h.c
+	  devchk/ts/devchk/glib_2_0_gobject_gvaluecollector_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_gdk_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_pixbuf_gdk_pixbuf_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_pixbuf_gdk_pixdata_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_pixbuf_xlib_gdk_pixbuf_xlib_h.c
+	  devchk/ts/devchk/gtk_2_0_gtk_gtk_h.c
+	  devchk/ts/devchk/intrinsic.c
+	  devchk/ts/devchk/jpeglib_h.c
+	  devchk/ts/devchk/libxml2_libxml_HTMLparser_h.c
+	  devchk/ts/devchk/libxml2_libxml_SAX2_h.c
+	  devchk/ts/devchk/libxml2_libxml_c14n_h.c
+	  devchk/ts/devchk/libxml2_libxml_catalog_h.c
+	  devchk/ts/devchk/libxml2_libxml_debugXML_h.c
+	  devchk/ts/devchk/libxml2_libxml_dict_h.c
+	  devchk/ts/devchk/libxml2_libxml_encoding_h.c
+	  devchk/ts/devchk/libxml2_libxml_entities_h.c
+	  devchk/ts/devchk/libxml2_libxml_globals_h.c
+	  devchk/ts/devchk/libxml2_libxml_hash_h.c
+	  devchk/ts/devchk/libxml2_libxml_list_h.c
+	  devchk/ts/devchk/libxml2_libxml_parserInternals_h.c
+	  devchk/ts/devchk/libxml2_libxml_parser_h.c
+	  devchk/ts/devchk/libxml2_libxml_pattern_h.c
+	  devchk/ts/devchk/libxml2_libxml_relaxng_h.c
+	  devchk/ts/devchk/libxml2_libxml_schematron_h.c
+	  devchk/ts/devchk/libxml2_libxml_threads_h.c
+	  devchk/ts/devchk/libxml2_libxml_tree_h.c
+	  devchk/ts/devchk/libxml2_libxml_uri_h.c
+	  devchk/ts/devchk/libxml2_libxml_valid_h.c
+	  devchk/ts/devchk/libxml2_libxml_xinclude_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlIO_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlautomata_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlerror_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlmemory_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlmodule_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlreader_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlregexp_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlsave_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlschemas_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlschemastypes_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlstring_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlwriter_h.c
+	  devchk/ts/devchk/libxml2_libxml_xpath_h.c
+	  devchk/ts/devchk/libxml2_libxml_xpointer_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pango_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pango_utils_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangofc_decoder_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangofc_fontmap_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangoft2_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangoxft_h.c
+	  devchk/ts/devchk/png_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/rpc_rpc_msg_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/signal_h.c
+	   sync devchk files with latest db changes
+
+2006-02-23	Marvin Heffler <heffler_at_us.ibm.com>
+	* devchk/ts/devchk/math_h.c
+	   temporary workaround for problems related to the math.h header
+	   on ppc32, ppc64, s390, and s390x, as described in bug 1164.
+	   these should be removed once the database has been corrected
+
+2006-02-22	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* pkgchk/pkgchk.c
+	   typos
+
+2006-02-21	Marvin Heffler <heffler_at_us.ibm.com>
+	* devchk/ts/devchk/mktests
+	  devchk/ts/devchk/makefile
+	   add /usr/lib64/gtk-2.0/include and /usr/lib64/glib-2.0/include
+	   to header search path in CFLAGS for lib64 systems
+
+2006-02-18	Brian Harring <brianx.d.harring_at_intel.com>
+	* elfchk/util.c
+	   bug #1232, when multiple modules are specified, return the
+	   concatted module names instead of Unknown Module
+
+2006-02-17	Marvin Heffler <heffler_at_us.ibm.com>
+	* devchk/ts/devchk/mktests
+	  devchk/ts/devchk/makefile
+	   sync with change made to mktests
+
+2006-02-17	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* devchk/ts/devchk/zlib_h.c
+	  devchk/ts/devchk/X11_ICE_ICElib_h.c
+	  devchk/ts/devchk/X11_ObjectP_h.c
+	  devchk/ts/devchk/X11_X_h.c
+	  devchk/ts/devchk/X11_Xauth_h.c
+	  devchk/ts/devchk/X11_Xcms_h.c
+	  devchk/ts/devchk/X11_Xlib_h.c
+	  devchk/ts/devchk/X11_Xutil_h.c
+	  devchk/ts/devchk/X11_extensions_XEVI_h.c
+	  devchk/ts/devchk/X11_extensions_security_h.c
+	  devchk/ts/devchk/X11_extensions_sync_h.c
+	  devchk/ts/devchk/atk_1_0_atk_atk_h.c
+	  devchk/ts/devchk/complex_h.c
+	  devchk/ts/devchk/cpio_h.c
+	  devchk/ts/devchk/ctype_h.c
+	  devchk/ts/devchk/curses_h.c
+	  devchk/ts/devchk/dirent_h.c
+	  devchk/ts/devchk/dlfcn_h.c
+	  devchk/ts/devchk/errno_h.c
+	  devchk/ts/devchk/fcntl_h.c
+	  devchk/ts/devchk/fenv_h.c
+	  devchk/ts/devchk/fmtmsg_h.c
+	  devchk/ts/devchk/fnmatch_h.c
+	  devchk/ts/devchk/fontconfig_fcfreetype_h.c
+	  devchk/ts/devchk/fontconfig_fontconfig_h.c
+	  devchk/ts/devchk/ftw_h.c
+	  devchk/ts/devchk/getopt_h.c
+	  devchk/ts/devchk/glib_2_0_glib_h.c
+	  devchk/ts/devchk/glib_2_0_glib_object_h.c
+	  devchk/ts/devchk/glib_2_0_gmodule_h.c
+	  devchk/ts/devchk/glib_2_0_gobject_gvaluecollector_h.c
+	  devchk/ts/devchk/glob_h.c
+	  devchk/ts/devchk/grp_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_gdk_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_gdkx_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_pixbuf_gdk_pixbuf_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_pixbuf_gdk_pixdata_h.c
+	  devchk/ts/devchk/gtk_2_0_gdk_pixbuf_xlib_gdk_pixbuf_xlib_h.c
+	  devchk/ts/devchk/gtk_2_0_gtk_gtk_h.c
+	  devchk/ts/devchk/hdrchk.c
+	  devchk/ts/devchk/hdrchk_tet.h
+	  devchk/ts/devchk/iconv_h.c
+	  devchk/ts/devchk/intrinsic.c
+	  devchk/ts/devchk/inttypes_h.c
+	  devchk/ts/devchk/jpeglib_h.c
+	  devchk/ts/devchk/langinfo_h.c
+	  devchk/ts/devchk/libxml2_libxml_HTMLparser_h.c
+	  devchk/ts/devchk/libxml2_libxml_SAX2_h.c
+	  devchk/ts/devchk/libxml2_libxml_c14n_h.c
+	  devchk/ts/devchk/libxml2_libxml_catalog_h.c
+	  devchk/ts/devchk/libxml2_libxml_debugXML_h.c
+	  devchk/ts/devchk/libxml2_libxml_dict_h.c
+	  devchk/ts/devchk/libxml2_libxml_encoding_h.c
+	  devchk/ts/devchk/libxml2_libxml_entities_h.c
+	  devchk/ts/devchk/libxml2_libxml_globals_h.c
+	  devchk/ts/devchk/libxml2_libxml_hash_h.c
+	  devchk/ts/devchk/libxml2_libxml_list_h.c
+	  devchk/ts/devchk/libxml2_libxml_parserInternals_h.c
+	  devchk/ts/devchk/libxml2_libxml_parser_h.c
+	  devchk/ts/devchk/libxml2_libxml_pattern_h.c
+	  devchk/ts/devchk/libxml2_libxml_relaxng_h.c
+	  devchk/ts/devchk/libxml2_libxml_schematron_h.c
+	  devchk/ts/devchk/libxml2_libxml_threads_h.c
+	  devchk/ts/devchk/libxml2_libxml_tree_h.c
+	  devchk/ts/devchk/libxml2_libxml_uri_h.c
+	  devchk/ts/devchk/libxml2_libxml_valid_h.c
+	  devchk/ts/devchk/libxml2_libxml_xinclude_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlIO_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlautomata_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlerror_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlmemory_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlmodule_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlreader_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlregexp_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlsave_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlschemas_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlschemastypes_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlstring_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlversion_h.c
+	  devchk/ts/devchk/libxml2_libxml_xmlwriter_h.c
+	  devchk/ts/devchk/libxml2_libxml_xpath_h.c
+	  devchk/ts/devchk/libxml2_libxml_xpointer_h.c
+	  devchk/ts/devchk/limits_h.c
+	  devchk/ts/devchk/locale_h.c
+	  devchk/ts/devchk/math_h.c
+	  devchk/ts/devchk/net_if_h.c
+	  devchk/ts/devchk/netdb_h.c
+	  devchk/ts/devchk/netinet_in_h.c
+	  devchk/ts/devchk/netinet_ip_h.c
+	  devchk/ts/devchk/netinet_tcp_h.c
+	  devchk/ts/devchk/netinet_udp_h.c
+	  devchk/ts/devchk/nl_types_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pango_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pango_utils_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangofc_decoder_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangofc_fontmap_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangoft2_h.c
+	  devchk/ts/devchk/pango_1_0_pango_pangoxft_h.c
+	  devchk/ts/devchk/png_h.c
+	  devchk/ts/devchk/pthread_h.c
+	  devchk/ts/devchk/pwd_h.c
+	  devchk/ts/devchk/regex_h.c
+	  devchk/ts/devchk/rpc_auth_h.c
+	  devchk/ts/devchk/rpc_clnt_h.c
+	  devchk/ts/devchk/rpc_rpc_msg_h.c
+	  devchk/ts/devchk/rpc_svc_h.c
+	  devchk/ts/devchk/rpc_types_h.c
+	  devchk/ts/devchk/rpc_xdr_h.c
+	  devchk/ts/devchk/sched_h.c
+	  devchk/ts/devchk/search_h.c
+	  devchk/ts/devchk/security_pam_appl_h.c
+	  devchk/ts/devchk/semaphore_h.c
+	  devchk/ts/devchk/setjmp_h.c
+	  devchk/ts/devchk/signal_h.c
+	  devchk/ts/devchk/stddef_h.c
+	  devchk/ts/devchk/stdio_h.c
+	  devchk/ts/devchk/stdlib_h.c
+	  devchk/ts/devchk/sys_file_h.c
+	  devchk/ts/devchk/sys_ioctl_h.c
+	  devchk/ts/devchk/sys_ipc_h.c
+	  devchk/ts/devchk/sys_mman_h.c
+	  devchk/ts/devchk/sys_msg_h.c
+	  devchk/ts/devchk/sys_param_h.c
+	  devchk/ts/devchk/sys_poll_h.c
+	  devchk/ts/devchk/sys_resource_h.c
+	  devchk/ts/devchk/sys_sem_h.c
+	  devchk/ts/devchk/sys_shm_h.c
+	  devchk/ts/devchk/sys_socket_h.c
+	  devchk/ts/devchk/sys_stat_h.c
+	  devchk/ts/devchk/sys_statvfs_h.c
+	  devchk/ts/devchk/sys_time_h.c
+	  devchk/ts/devchk/sys_timeb_h.c
+	  devchk/ts/devchk/sys_times_h.c
+	  devchk/ts/devchk/sys_types_h.c
+	  devchk/ts/devchk/sys_un_h.c
+	  devchk/ts/devchk/sys_utsname_h.c
+	  devchk/ts/devchk/sys_wait_h.c
+	  devchk/ts/devchk/syslog_h.c
+	  devchk/ts/devchk/tar_h.c
+	  devchk/ts/devchk/termios_h.c
+	  devchk/ts/devchk/testdefs.h
+	  devchk/ts/devchk/time_h.c
+	  devchk/ts/devchk/ucontext_h.c
+	  devchk/ts/devchk/ulimit_h.c
+	  devchk/ts/devchk/unistd_h.c
+	  devchk/ts/devchk/utime_h.c
+	  devchk/ts/devchk/utmp_h.c
+	  devchk/ts/devchk/utmpx_h.c
+	  devchk/ts/devchk/wchar_h.c
+	  devchk/ts/devchk/wctype_h.c
+	  devchk/ts/devchk/wordexp_h.c
+	   Tests regenerated with current DB / mktests script
+
+2006-02-16	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* libchk/mkfunclist
+	  ChangeLog.1
+	  elfchk/dynsyms.c
+	  libchk/libQtCore_so_4.c
+	  libchk/libQtGui_so_4.c
+	  libchk/libQtNetwork_so_4.c
+	  libchk/libQtOpenGL_so_4.c
+	  libchk/libQtSql_so_4.c
+	  libchk/libQtSvg_so_4.c
+	  libchk/libQtXml_so_4.c
+	  libchk/libgdk_x11_2_0_so_0.c
+	  libchk/libgtk_x11_2_0_so_0.c
+	  libchk/libstdcxx_so_6.c
+	   split ChangeLog file for easier handling
+
 2006-02-14	Nick Stoughton <nick_at_usenix.org>
 	* devchk/ts/devchk/mktests
 	   tidied up sql to work around MySQL 5.x bug with joins
@@ -260,6 +1082,9 @@
 	  cmdchk/cmdchk.py
 	  pkgchk/pkgchk.c
 	   cleanup '30' lines and drop $Log: ChangeLog,v $
+	   cleanup '30' lines and drop Revision 1.9  2006/06/22 17:39:45  mats
+	   cleanup '30' lines and drop update ChangeLogs
+	   cleanup '30' lines and drop
 	   cleanup '30' lines and drop Revision 1.8  2006/02/16 00:44:24  mats
 	   cleanup '30' lines and drop split ChangeLog file for easier handling
 	   cleanup '30' lines and drop
@@ -14103,4 +14928,4 @@
 
 See ChangeLog.1 for earlier changes.
 
-1140050065
+1150997005
