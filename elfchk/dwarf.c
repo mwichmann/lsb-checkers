@@ -566,13 +566,14 @@ check_FDE(CIEFrame * cie_list, unsigned char *ptr, int *error)
 }
 
 int
-check_CFInformation(unsigned char *ptr, int *error)
+check_CFInformation(unsigned char *ptr, unsigned long size, int *error)
 {
     int used, numused = 0;
     CIEFrameImage *frameimg;
     *error = 0;
     frameimg = (CIEFrameImage *) ptr;
     CIEFrame *cie_list = 0;
+    unsigned char *end = ptr + size;
 
     while (frameimg->length != 0) {
 	/*
@@ -602,6 +603,8 @@ check_CFInformation(unsigned char *ptr, int *error)
 	}
 	numused += used;
 	ptr += used;
+        if (ptr >= end)		/* don't go past end of section */
+	    break;
 	frameimg = (CIEFrameImage *) ptr;
     }
     return numused;

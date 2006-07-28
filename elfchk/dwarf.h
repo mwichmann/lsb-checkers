@@ -125,7 +125,8 @@ extern unsigned long int read_leb128(unsigned char *data,
 extern int check_CFI(unsigned char *ptr, int *error, int ptr_encoding);
 extern int check_FDE(CIEFrame * cie_list, unsigned char *ptr, int *error);
 extern int check_CIE(CIEFrame ** cie_list, unsigned char *ptr, int *error);
-extern int check_CFInformation(unsigned char *ptr, int *error);
+extern int check_CFInformation(unsigned char *ptr, unsigned long size,
+			       int *error);
 extern void *read_FDE_encoded(unsigned char *ptr, unsigned char encoding,
 			      int *numused);
 

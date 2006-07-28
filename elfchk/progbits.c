@@ -64,7 +64,7 @@ checkPROGBITS_eh_frame(ElfFile * file1, Elf_Shdr * hdr1,
      * but the GNU tools seem to reduce things to a single CIE record.
      */
     check_CFInformation((unsigned char *) (file1->addr) + hdr1->sh_offset,
-			&error);
+			(u_long) hdr1->sh_size, &error);
 
     if (error) {
 	printf
