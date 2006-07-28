@@ -1,3 +1,10 @@
+2006-07-27	Mats Wichmann <mats.d.wichmann_at_intel.com>
+	* elfchk/progbits.c
+	  elfchk/dwarf.c
+	  elfchk/dwarf.h
+	  elfchk/progbits.c
+	   don't fall off end of eh_frame section (bug 1444)
+
 2006-04-26	Marvin Heffler <heffler_at_us.ibm.com>
 	* rpmchk/vals.c
 	   remove lsb-desktop-noarch as a valid dependency and add
@@ -1082,6 +1089,9 @@
 	  cmdchk/cmdchk.py
 	  pkgchk/pkgchk.c
 	   cleanup '30' lines and drop $Log: ChangeLog,v $
+	   cleanup '30' lines and drop Revision 1.10  2006/07/27 20:49:39  mats
+	   cleanup '30' lines and drop update changelog after 1444
+	   cleanup '30' lines and drop
 	   cleanup '30' lines and drop Revision 1.9  2006/06/22 17:39:45  mats
 	   cleanup '30' lines and drop update ChangeLogs
 	   cleanup '30' lines and drop
@@ -14928,4 +14938,4 @@
 
 See ChangeLog.1 for earlier changes.
 
-1150997005
+1154032923
