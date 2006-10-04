@@ -290,6 +290,28 @@ int libchk_debug=LIBCHK_DEBUG_CXXHUSH|LIBCHK_DEBUG_NEWVERS;
 int module = 0;
 
 
+/* Find the absolute path of an ELF file. */
+int
+find_elf_file(char *libname, char *filename, int maxlen)
+{
+  int i;
+
+  if (libname[0] != '/') {
+    /* Find the library */
+    for (i=0; i<library_path_count; i++) {
+      if (strcmp(libname, library_paths[i].library) == 0) {
+	strncpy(filename, library_paths[i].fullpath, maxlen);
+	break;
+      }
+    }
+  } else {
+    /* absolute path given so we don't do a search through the library paths */
+    strncpy(filename, libname, maxlen);
+  }
+
+  return access(filename, R_OK);
+}
+
 /* dump info on extra versions in library (maintainer mode) */
 void
 extra_vers(ElfFile * file, int index, int vers, char *msg, char *vername)
@@ -598,26 +620,8 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
   snprintf(tmp_string, TMP_STRING_SIZE, "Looking for library %s", libname);
   tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, tmp_string);
 
-  if (libname[0] != '/') {
-    /* Find the library */
-    for (i=0; i<library_path_count; i++) {
-      if (strcmp(libname, library_paths[i].library) == 0) {
-	snprintf(tmp_string, TMP_STRING_SIZE, "Found match for %s as %s",
-	         library_paths[i].library, library_paths[i].fullpath);
-	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-	                   0, 0, 0, tmp_string);
-	file = OpenElfFile(library_paths[i].fullpath);
-	strncpy(filename, library_paths[i].fullpath, PATH_MAX);
-	break;
-      }
-    }
-  } else {
-    /* absolute path given so we don't do a search through the library paths */
-    strncpy(filename, libname, PATH_MAX);
-    if (access(filename,R_OK) == 0) {
-      file=OpenElfFile(filename);
-    }
-  }
+  find_elf_file(libname, filename, PATH_MAX);
+  file = OpenElfFile(filename);
 
   if(file==NULL) {
     snprintf(tmp_string, TMP_STRING_SIZE, "Unable to find library %s",
