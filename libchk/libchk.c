@@ -327,6 +327,64 @@ extra_vers(ElfFile * file, int index, int vers, char *msg, char *vername)
 	printf("(db unversioned)\n");
 }
 
+/* Retrieve the list of dependencies for a ELF file. */
+ElfFile **
+get_dt_needed(ElfFile *file)
+{
+  int i, size;
+  ElfFile **results = NULL;
+  char *symbol_str;
+  char needed_fn[PATH_MAX];
+
+  for (i = 0; i < file->numdynents; i++) {
+    /* Skip all symbols except DT_NEEDED. */
+    if (file->dyns[i].d_tag != DT_NEEDED)
+      continue;
+
+    /* Find the library referenced in the symbol. */
+    symbol_str = ElfGetStringIndex(file, file->dyns[i].d_un.d_val, 
+                                   file->dynhdr->sh_link);
+    find_elf_file(symbol_str, needed_fn, PATH_MAX);
+
+    if (access(needed_fn, R_OK) != 0)
+      continue;
+
+    /* Open the library, and add it to the results. */
+    if (results != NULL) {
+      for (size = 0; results[size] != NULL; size++) ;
+      results = (ElfFile **) realloc(results, sizeof(ElfFile *) * (size + 2));
+    } else {
+      size = 0;
+      results = (ElfFile **) malloc(sizeof(ElfFile *) * 2);
+    }
+
+    if (results == NULL) {
+      perror("error finding dependency");
+      exit(1);
+    }
+
+    results[size] = OpenElfFile(needed_fn);
+    results[size + 1] = NULL;
+  }
+
+  return results;
+}
+
+/* Free DT_NEEDED file lists returned by get_dt_needed() */
+void
+free_dt_needed(ElfFile **needed)
+{
+  int index;
+
+  if (needed != NULL) {
+    for (index = 0; needed[index] != NULL; index++) {
+      CloseElfFile(needed[index]);
+    }
+
+    free(needed);
+  }
+}
+
 /* Returns 1 on match, 0 otherwise */
 int
 check_symbol(ElfFile *file, struct versym *entry)
@@ -334,7 +392,10 @@ check_symbol(ElfFile *file, struct versym *entry)
   int i, j;
   char *symbol_name;
   int foundit=0;
+  int checkedit=0;
   int pendingerr=0;
+  static ElfFile **checked_files = NULL;
+  ElfFile **needed_files;
 
   /* See if this symbol is in the dynsym section of the library */
 
@@ -479,6 +540,61 @@ check_symbol(ElfFile *file, struct versym *entry)
          in maintainer mode. */
       if (vers < i && (libchk_debug&LIBCHK_DEBUG_OLDVERS))
           extra_vers(file, j, vers, "older", entry->vername);
+    }
+  }
+
+  /* if not in this library, check its deps */
+  if (!foundit && !pendingerr && (needed_files != NULL)) {
+    needed_files = get_dt_needed(file);
+    if (needed_files != NULL) {
+      for (i = 0; needed_files[i] != NULL; i++) {
+        /* Make sure we haven't checked this one before. */
+        checkedit = 0;
+        if (checked_files != NULL) {
+          for (j = 0; checked_files[j] != NULL; j++) {
+            if (needed_files[i] == checked_files[j]) {
+              checkedit = 1;
+              break;
+            }
+          }
+        }
+
+        if (checkedit)
+          continue;
+
+        /* Add the current library to the list of the already-checked. */
+        if (checked_files != NULL) {
+          for (j = 0; checked_files[j] != NULL; j++) ;
+          checked_files =
+            (ElfFile **) realloc(checked_files, sizeof(ElfFile *) * (j + 2));
+        } else {
+          j = 0;
+          checked_files = (ElfFile **) malloc(sizeof(ElfFile *) * 2);
+        }
+
+        if (checked_files == NULL) {
+          perror("error checking dependency");
+          exit(1);
+        }
+
+        checked_files[j] = file;
+        checked_files[j + 1] = NULL;
+
+        /* Look for the symbol in the dep. */
+        foundit = check_symbol(needed_files[i], entry);
+
+        /* Clean up. */
+        if (j == 0) {
+          free(checked_files);
+          checked_files = NULL;
+        }
+
+        /* Stop if we've found what we're looking for. */
+        if (foundit)
+          break;
+      }
+
+      free_dt_needed(needed_files);
     }
   }
 
