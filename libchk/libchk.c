@@ -258,6 +258,7 @@
 #include "elfchk.h"
 #include "libchk.h"
 #include "hdr.h"
+#include "symvers.h"
 #include "tetj.h"
 
 #ifdef _CXXABICHK_
@@ -310,6 +311,30 @@ find_elf_file(char *libname, char *filename, int maxlen)
   }
 
   return access(filename, R_OK);
+}
+
+/* Finish initialization on ElfFile after open. */
+
+void
+init_elf_file(ElfFile *file)
+{
+  Elf_Ehdr *hdr1 = (Elf_Ehdr *)file->addr;
+
+  if( hdr1->e_phoff ) {
+    file->paddr=(Elf_Phdr *)((caddr_t)file->addr+hdr1->e_phoff);
+    file->numph = hdr1->e_phnum;
+  }
+  if( hdr1->e_shoff ) {
+    file->saddr=(Elf_Shdr *)((caddr_t)file->addr+hdr1->e_shoff);
+    file->numsh = hdr1->e_shnum;
+  }
+
+  if( hdr1->e_shstrndx != SHN_UNDEF ) {
+    file->straddr = file->addr+file->saddr[hdr1->e_shstrndx].sh_offset;
+  }
+  file->strndx = hdr1->e_shstrndx;
+
+  getSymbolVersionInfo(file);
 }
 
 /* dump info on extra versions in library (maintainer mode) */
@@ -365,6 +390,8 @@ get_dt_needed(ElfFile *file)
 
     results[size] = OpenElfFile(needed_fn);
     results[size + 1] = NULL;
+
+    init_elf_file(results[size]);
   }
 
   return results;
