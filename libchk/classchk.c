@@ -13,6 +13,29 @@
 #include "libchk.h"
 
 /*
+ * Interface to the demangler.  Due to possible license issues, we
+ * want to make it easy to replace.  This function returns the
+ * demangled name as a heap-allocated string (or NULL for problems),
+ * meaning that the caller is reponsible for freeing it.  This works
+ * well with our current demangler; if we switch, we should expect
+ * that callers will try to free() the returned string.
+ */
+
+#ifdef USE_LIBIBERTY_DEMANGLE
+#include "demangle.h"
+#endif
+
+char *
+demangle(char *mangled_name)
+{
+#ifdef USE_LIBIBERTY_DEMANGLE
+  return cplus_demangle(mangled_name, DMGL_PARAMS | DMGL_ANSI | DMGL_VERBOSE);
+#else
+  return NULL;
+#endif
+}
+
+/*
  * Some architectures treat function pointers as structures which contains the
  * address of the function, plus some adjustment value which must be taken into
  * consideration. This is visible in the structures we are using (ie vtables),
