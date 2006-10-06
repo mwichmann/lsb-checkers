@@ -26,7 +26,7 @@
 #endif
 
 char *
-demangle(char *mangled_name)
+demangle(const char *mangled_name)
 {
 #ifdef USE_LIBIBERTY_DEMANGLE
   return cplus_demangle(mangled_name, DMGL_PARAMS | DMGL_ANSI | DMGL_VERBOSE);
@@ -107,6 +107,7 @@ check_class_info(ElfFile * file, char *libname,
   int vtableinc, vtablesize, fndvtabsize;
   int fndvttsize;
   char tmp_string[TMP_STRING_SIZE + 1];
+  char *demangled_expect, *demangled_found;
   int test_failed;
 
   if (classes == NULL)
@@ -355,7 +356,27 @@ check_class_info(ElfFile * file, char *libname,
 			       "doesn't match %s (found)", v,
 			       j, classp->vtable[v].virtfuncs[j],
 			       dlainfo.dli_sname);
-	      test_failed = 1;
+
+              /*
+               * This could be an override, which doesn't break binary
+               * compatibility.  Check some common cases for that.
+               */
+              demangled_expect = demangle(classp->vtable[v].virtfuncs[j]);
+              demangled_found = demangle(dlainfo.dli_sname);
+              if (demangled_expect == NULL) {
+                TETJ_REPORT_INFO("Could not demangle expected function name");
+                test_failed = 1;
+              } else if (demangled_found == NULL) {
+                TETJ_REPORT_INFO("Could not demangle found function name");
+                free(demangled_expect);
+                test_failed = 1;
+              } else {
+                /* XXX: Finish this case. */
+                test_failed = 1;
+
+                free(demangled_expect);
+                free(demangled_found);
+              }
 	    }
 	  }
 	  tetj_result(journal, tetj_activity_count, tetj_tp_count,
