@@ -2,9 +2,9 @@ LSBLIBCHK_VERSION=unofficial
 
 include libs.mk
 
-OBJS = libchk.o libs.o classchk.o $(LIBOBJS)
+OBJS = libchk.o libs.o classchk.o cp-demangle.o $(LIBOBJS)
 
-CFLAGS=-g -I../elfchk -I../tetj -DLSBVERSION=\"$$LSBVERSION\" -DLSBLIBCHK_VERSION=\"$(LSBLIBCHK_VERSION)\" -Wall
+CFLAGS=-g -I../elfchk -I../tetj -DUSE_LIBIBERTY_DEMANGLE -DLSBVERSION=\"$$LSBVERSION\" -DLSBLIBCHK_VERSION=\"$(LSBLIBCHK_VERSION)\" -Wall
 
 all:: libchk dummy_link
 
