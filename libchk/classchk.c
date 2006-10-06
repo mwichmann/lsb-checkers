@@ -108,7 +108,7 @@ check_class_info(ElfFile * file, char *libname,
   int vtableinc, vtablesize, fndvtabsize;
   int fndvttsize;
   char tmp_string[TMP_STRING_SIZE + 1];
-  char *demangled_expect, *demangled_found;
+  char *demangled_class, *demangled_found;
   int test_failed;
 
   if (classes == NULL)
@@ -361,21 +361,31 @@ check_class_info(ElfFile * file, char *libname,
               /*
                * This could be an override, which doesn't break binary
                * compatibility.  Check some common cases for that.
+               * We assume the test fails unless we find evidence to
+               * the contrary.
                */
-              demangled_expect = demangle(classp->vtable[v].virtfuncs[j]);
+              test_failed = 1;
+              demangled_class = demangle(classp->name);
               demangled_found = demangle(dlainfo.dli_sname);
-              if (demangled_expect == NULL) {
-                TETJ_REPORT_INFO("Could not demangle expected function name");
-                test_failed = 1;
+              if (demangled_class == NULL) {
+                TETJ_REPORT_INFO("Could not demangle class name");
               } else if (demangled_found == NULL) {
                 TETJ_REPORT_INFO("Could not demangle found function name");
-                free(demangled_expect);
-                test_failed = 1;
+                free(demangled_class);
               } else {
-                /* XXX: Finish this case. */
-                test_failed = 1;
+                /* If the found class matches the class name, assume
+                   we have a new override from a base class. */
+                if (strlen(demangled_found) > strlen(demangled_class)) {
+                  if (strncmp(demangled_found, demangled_class,
+                              strlen(demangled_class)) == 0) {
+                    TETJ_REPORT_INFO("Unmangled class: %s", demangled_class);
+                    TETJ_REPORT_INFO("Unmangled found function: %s", demangled_found);
+                    TETJ_REPORT_INFO("Unmangled function's class matches tested class");
+                    test_failed = 0;
+                  }
+                }
 
-                free(demangled_expect);
+                free(demangled_class);
                 free(demangled_found);
               }
 	    }
