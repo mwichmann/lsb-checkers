@@ -29,7 +29,8 @@ char *
 demangle(const char *mangled_name)
 {
 #ifdef USE_LIBIBERTY_DEMANGLE
-  return cplus_demangle(mangled_name, DMGL_PARAMS | DMGL_ANSI | DMGL_VERBOSE);
+  return cplus_demangle_v3(mangled_name, 
+                           DMGL_PARAMS | DMGL_ANSI | DMGL_VERBOSE);
 #else
   return NULL;
 #endif
