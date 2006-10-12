@@ -21,16 +21,24 @@
  * that callers will try to free() the returned string.
  */
 
-#ifdef USE_LIBIBERTY_DEMANGLE
+#if defined(USE_LIBIBERTY_DEMANGLE)
 #include "demangle.h"
+#elif defined(USE_CXXABI_DEMANGLE)
+/* No good way to include C++ headers in C code, even if the header
+   provides a C function that's interesting to us. */
+/* #include <cxxabi.h> */
+char* __cxa_demangle(const char* __mangled_name, char* __output_buffer,
+                     size_t* __length, int* __status);
 #endif
 
 char *
 demangle(const char *mangled_name)
 {
-#ifdef USE_LIBIBERTY_DEMANGLE
+#if defined(USE_LIBIBERTY_DEMANGLE)
   return cplus_demangle_v3(mangled_name, 
                            DMGL_PARAMS | DMGL_ANSI | DMGL_VERBOSE);
+#elif defined(USE_CXXABI_DEMANGLE)
+  return __cxa_demangle(mangled_name, NULL, 0, NULL);
 #else
   return NULL;
 #endif
