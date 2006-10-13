@@ -1,7 +1,7 @@
 LSBAPPCHK_VERSION=unofficial
 CFLAGS=-g -DLSBVERSION=\"$$LSBVERSION\" -DLSBAPPCHK_VERSION=\"$(LSBAPPCHK_VERSION)\" -Wall -I../elfchk
 
-OBJS=libraries.o symbols.o check_file.o
+OBJS=libraries.o symbols.o check_file.o output.o
 LIBS=../rpmchk/librpmchk.a ../elfchk/libelfchk.a ../tetj/libtetj.a
 LIB=libappchk.a
 

@@ -8,6 +8,7 @@
 #include "check_file.h"
 #include "libraries.h"
 #include "symbols.h"
+#include "output.h"
 
 
 char *
@@ -48,7 +49,6 @@ int
 main(int argc, char *argv[])
 {
     ElfFile *elffile;
-    struct tetj_handle *journal;
     char *command_line = NULL;
     int i;
     char *extra_libraries;
@@ -57,7 +57,6 @@ main(int argc, char *argv[])
 #define TMP_STRING_SIZE (PATH_MAX+20)
     char tmp_string[TMP_STRING_SIZE + 1];
     char output_filename[TMP_STRING_SIZE + 1];
-    int do_journal = 0;
     int modules = 0;
     int option_index = 0;
 
@@ -79,7 +78,8 @@ main(int argc, char *argv[])
     modules = LSB_Desktop_Modules;   // default to all modules in cert program
     extra_libraries = strdup("EXTRA_LIBRARIES=");
 
-    /* Flag to indicate default filename. */
+    /* Set defaults. */
+    do_journal = 0;
     output_filename[0] = '\0';
 
     for (i = 0; i < argc; i++) {
