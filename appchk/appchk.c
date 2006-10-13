@@ -219,37 +219,36 @@ main(int argc, char *argv[])
 
     /* Add symbols from extra libs to list */
     for (i = 0; i < extra_lib_count; i++) {
-	tetj_testcase_start(journal, tetj_activity_count, extra_lib_list[i],"");
+	TESTCASE_START(tetj_activity_count, extra_lib_list[i],"");
 	tetj_tp_count = 0;
 	elffile = OpenElfFile(extra_lib_list[i]);
 	if (elffile == NULL) {
 	    /* make a dummy container if it failed to open */
 	    snprintf(tmp_string, TMP_STRING_SIZE, "Opening lib %s",
 	                                          extra_lib_list[i]);
-	    tetj_purpose_start(journal, tetj_activity_count, ++tetj_tp_count,
-			       tmp_string);
+	    PURPOSE_START(tetj_activity_count, ++tetj_tp_count, tmp_string);
 	    snprintf(tmp_string, TMP_STRING_SIZE, "Could not open %s",
 	                                           extra_lib_list[i]);
 	    /* error already printed by call:
 	    perror(tmp_string);
 	    */
-	    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 
-		               0, 0, 0, tmp_string);
-	    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-	    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
-	    tetj_testcase_end(journal, tetj_activity_count++, 0, "");
+	    TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
+                          tmp_string);
+	    RESULT(tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+	    PURPOSE_END(tetj_activity_count, tetj_tp_count);
+	    TESTCASE_END(tetj_activity_count++, 0, "");
 	    continue;
 	}
 	check_file(elffile, journal, ELF_IS_DSO);
 	add_library_symbols(elffile, journal, modules);
-	tetj_testcase_end(journal, tetj_activity_count++, 0, "");
+	TESTCASE_END(tetj_activity_count++, 0, "");
 	CloseElfFile(elffile);
     }
 
     /* Check all extra libs */
     for (i = 0; i < extra_lib_count; i++) {
 	snprintf(tmp_string, TMP_STRING_SIZE, "%s-pass2", extra_lib_list[i]);
-	tetj_testcase_start(journal, tetj_activity_count, tmp_string,"");
+	TESTCASE_START(tetj_activity_count, tmp_string,"");
 	tetj_tp_count = 0;
 
 	elffile = OpenElfFile(extra_lib_list[i]);
@@ -257,53 +256,57 @@ main(int argc, char *argv[])
 	    /* make a dummy container if it failed to open */
 	    snprintf(tmp_string, TMP_STRING_SIZE, "Opening lib %s",
 	                                           extra_lib_list[i]);
-	    tetj_purpose_start(journal, tetj_activity_count, ++tetj_tp_count,
-			       tmp_string);
+	    PURPOSE_START(tetj_activity_count, ++tetj_tp_count,
+                          tmp_string);
 	    snprintf(tmp_string, TMP_STRING_SIZE, "Could not open %s",
 	                                           extra_lib_list[i]);
 	    /* error already printed by call:
 	    perror(tmp_string);
 	    */
-	    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 
-		               0, 0, 0, tmp_string);
-	    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-	    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
-	    tetj_testcase_end(journal, tetj_activity_count++, 0, "");
+	    TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
+                          tmp_string);
+	    RESULT(tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+	    PURPOSE_END(tetj_activity_count, tetj_tp_count);
+	    TESTCASE_END(tetj_activity_count++, 0, "");
 	    continue;
 	}
 	check_lib(elffile, journal, ELF_IS_DSO, modules);
-	tetj_testcase_end(journal, tetj_activity_count++, 0, "");
+	TESTCASE_END(tetj_activity_count++, 0, "");
 	CloseElfFile(elffile);
     }
 
     /* Check binary */
     for (i = optind; i < argc; i++) {
 	printf("Checking binary %s\n", argv[i]);
-	tetj_testcase_start(journal, tetj_activity_count, argv[i], "");
+	TESTCASE_START(tetj_activity_count, argv[i], "");
 	tetj_tp_count = 0;
 
 	elffile = OpenElfFile(argv[i]);
 	if (elffile == NULL) {
 	    /* make a dummy container if it failed to open */
 	    snprintf(tmp_string, TMP_STRING_SIZE, "Opening binary %s", argv[i]);
-	    tetj_purpose_start(journal, tetj_activity_count, ++tetj_tp_count,
-			       tmp_string);
+	    PURPOSE_START(tetj_activity_count, ++tetj_tp_count, tmp_string);
 	    snprintf(tmp_string, TMP_STRING_SIZE, "Could not open %s", argv[i]);
 	    /* error already printed by call:
 	    perror(tmp_string);
 	    */
-	    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 
-		               0, 0, 0, tmp_string);
-	    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-	    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
-	    tetj_testcase_end(journal, tetj_activity_count++, 0, "");
+	    TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
+                          tmp_string);
+	    RESULT(tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+	    PURPOSE_END(tetj_activity_count, tetj_tp_count);
+	    TESTCASE_END(tetj_activity_count++, 0, "");
 	    continue;
 	}
 	check_file(elffile, journal, ELF_IS_EXEC);
 	checksymbols(elffile, journal, modules);
-	tetj_testcase_end(journal, tetj_activity_count++, 0, "");
+	TESTCASE_END(tetj_activity_count++, 0, "");
 	CloseElfFile(elffile);
     }
-    tetj_close_journal(journal);
+
+    if (do_journal)
+        tetj_close_journal(journal);
+    else
+        output_close();
+
     exit(0);
 }
