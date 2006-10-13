@@ -10,8 +10,25 @@
 
 #include "output.h"
 
-int do_journal;
-struct tetj_handle *journal;
+/* Extern variables used by the macros. */
+
+int do_journal = 0;
+struct tetj_handle *journal = NULL;
+
+/* Shared variables. */
+
+FILE *output_file = NULL;
+
+int output_open(const char *filename)
+{
+    output_file = fopen(filename, "w");
+    return (output_file != NULL);
+}
+
+void output_use(FILE *file)
+{
+    output_file = file;
+}
 
 void output_info(unsigned int activity, unsigned int tpnumber,
                  unsigned int context, unsigned int block,

@@ -158,8 +158,8 @@ main(int argc, char *argv[])
     }
 
     /* Start journal logging */
-    if (output_filename[0] == '\0') {
-        if (do_journal) {
+    if (do_journal) {
+        if (output_filename[0] == '\0') {
             if (optind >= argc && extra_lib_count) {
                 /* No binary supplied on command line */
                 if (extra_lib_count == 1) {
@@ -172,34 +172,46 @@ main(int argc, char *argv[])
                 snprintf(output_filename, TMP_STRING_SIZE, "journal.appchk.%s",
                          basename(argv[optind]));
             }
-        } else {
-            snprintf(output_filename, TMP_STRING_SIZE, "/dev/null");
         }
-    }
-    if (tetj_start_journal(output_filename, &journal, command_line) != 0) {
-	snprintf(tmp_string, TMP_STRING_SIZE, "Could not open journal file %s",
-		 output_filename);
-	perror(tmp_string);
-	printf("Use -o FILE to specify an alternate location for the journal file\n");
-	exit(1);
+
+        if (tetj_start_journal(output_filename, &journal, command_line) != 0) {
+            snprintf(tmp_string, TMP_STRING_SIZE, "Could not open journal file %s",
+                     output_filename);
+            perror(tmp_string);
+            printf("Use -o FILE to specify an alternate location for the journal file\n");
+            exit(1);
+        }
+
+        /*
+         * new journal standard requires arch in the
+         * VSX_NAME line in order to fetch waiver files correctly
+         */
+        snprintf(tmp_string, TMP_STRING_SIZE,
+                 "VSX_NAME=lsbappchk %s (%s)", LSBAPPCHK_VERSION, tetj_arch);
+        tetj_add_config(journal, tmp_string);
+        snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION=%s", LSBVERSION);
+        tetj_add_config(journal, tmp_string);
+        snprintf(tmp_string, TMP_STRING_SIZE, "LSB_MODULES=%s",
+                 getmodulename(modules));
+        tetj_add_config(journal, tmp_string);
+
+        /* Log extra libraries to look for symbols in */
+        if (extra_lib_count)
+            tetj_add_config(journal, extra_libraries);
     }
 
-    /*
-     * new journal standard requires arch in the
-     * VSX_NAME line in order to fetch waiver files correctly
-     */
-    snprintf(tmp_string, TMP_STRING_SIZE,
-	     "VSX_NAME=lsbappchk %s (%s)", LSBAPPCHK_VERSION, tetj_arch);
-    tetj_add_config(journal, tmp_string);
-    snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION=%s", LSBVERSION);
-    tetj_add_config(journal, tmp_string);
-    snprintf(tmp_string, TMP_STRING_SIZE, "LSB_MODULES=%s",
-	     getmodulename(modules));
-    tetj_add_config(journal, tmp_string);
+    /* Or, if no journal logging, set up report output. */
+    else {
+        if (output_filename[0] == '\0') {
+            output_use(stdout);
+        } else {
+            output_open(output_filename);
+        }
 
-    /* Log extra libraries to look for symbols in */
-    if (extra_lib_count)
-	tetj_add_config(journal, extra_libraries);
+        /* XXX: Open a fake journal file.  Needed only while we
+           transition to the new macros. */
+        tetj_start_journal("/dev/null", &journal, command_line);
+    }
 
     /* Add all extra libs to DT_NEEDED list */
     for (i = 0; i < extra_lib_count; i++)
