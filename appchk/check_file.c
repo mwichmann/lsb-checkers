@@ -9,12 +9,12 @@
 #include <string.h>
 #include "check_file.h"
 #include "symbols.h"
+#include "output.h"
 #include "../rpmchk/md5.h"
 
 MD5_CTX md5ctx;
 
-int check_file(ElfFile *elffile, struct tetj_handle *journal,
-                Elf_type fileType)
+int check_file(ElfFile *elffile, Elf_type fileType)
 {
 #define TMP_STRING_SIZE (PATH_MAX+20)
   char tmp_string[TMP_STRING_SIZE+1];
@@ -25,19 +25,18 @@ int check_file(ElfFile *elffile, struct tetj_handle *journal,
   int elfType = ELF_UNKNOWN;
   
   /* Log binary file size */
-  tetj_purpose_start(journal, tetj_activity_count, ++tetj_tp_count,
-		     "check file details");
+  PURPOSE_START(tetj_activity_count, ++tetj_tp_count, "check file details");
   if (fstat(elffile->fd, &stat_info)==-1) {
     snprintf(tmp_string, TMP_STRING_SIZE, "Could not stat file");
     perror(tmp_string);
-    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0,
-		       tmp_string);
-    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+    TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0,
+                  tmp_string);
+    RESULT(tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+    PURPOSE_END(tetj_activity_count, tetj_tp_count);
     return elfType;
   }
   snprintf(tmp_string, TMP_STRING_SIZE, "FILE_SIZE %lu", stat_info.st_size);
-  tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string);
+  TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string);
 
   /* md5sum of binary */
   MD5Init(&md5ctx);
@@ -49,9 +48,9 @@ int check_file(ElfFile *elffile, struct tetj_handle *journal,
 
   tmp_string[32] = 0;
   snprintf(tmp_string2, TMP_STRING_SIZE, "BINARY_MD5SUM=%s", tmp_string);
-  tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string2);
-  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
-  tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+  TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string2);
+  RESULT(tetj_activity_count, tetj_tp_count, TETJ_PASS);
+  PURPOSE_END(tetj_activity_count, tetj_tp_count);
 
   elfType = checkElf(elffile, fileType, journal);
   /* FIXME
@@ -67,7 +66,7 @@ int check_file(ElfFile *elffile, struct tetj_handle *journal,
   return elfType;
 }
 
-void check_lib(ElfFile *elffile, struct tetj_handle *journal, Elf_type fileType, int modules)
+void check_lib(ElfFile *elffile, Elf_type fileType, int modules)
 {
   int i;
   Elf_Shdr	*hdr1;

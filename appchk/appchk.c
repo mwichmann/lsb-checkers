@@ -239,7 +239,7 @@ main(int argc, char *argv[])
 	    TESTCASE_END(tetj_activity_count++, 0, "");
 	    continue;
 	}
-	check_file(elffile, journal, ELF_IS_DSO);
+	check_file(elffile, ELF_IS_DSO);
 	add_library_symbols(elffile, journal, modules);
 	TESTCASE_END(tetj_activity_count++, 0, "");
 	CloseElfFile(elffile);
@@ -270,7 +270,7 @@ main(int argc, char *argv[])
 	    TESTCASE_END(tetj_activity_count++, 0, "");
 	    continue;
 	}
-	check_lib(elffile, journal, ELF_IS_DSO, modules);
+	check_lib(elffile, ELF_IS_DSO, modules);
 	TESTCASE_END(tetj_activity_count++, 0, "");
 	CloseElfFile(elffile);
     }
@@ -297,7 +297,7 @@ main(int argc, char *argv[])
 	    TESTCASE_END(tetj_activity_count++, 0, "");
 	    continue;
 	}
-	check_file(elffile, journal, ELF_IS_EXEC);
+	check_file(elffile, ELF_IS_EXEC);
 	checksymbols(elffile, modules);
 	TESTCASE_END(tetj_activity_count++, 0, "");
 	CloseElfFile(elffile);
