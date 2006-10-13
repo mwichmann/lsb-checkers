@@ -11,10 +11,15 @@
 #ifndef __OUTPUT_H
 #define __OUTPUT_H
 
+#include <stdio.h>
 #include "../tetj/tetj.h"
 
 extern int do_journal;
 extern struct tetj_handle *journal;
+
+int output_open(const char *filename);
+
+void output_use(FILE *file);
 
 void output_info(unsigned int activity, unsigned int tpnumber,
                  unsigned int context, unsigned int block,
