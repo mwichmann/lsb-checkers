@@ -130,7 +130,6 @@ main(int argc, char *argv[])
 	      printf("also checking symbols in module %s\n", optarg);
 	      break;
 	  case 'L':
-	      printf("Adding symbols for library %s\n", optarg);
 	      extra_lib_count++;
 	      extra_lib_list = realloc(extra_lib_list, 
 				       sizeof(char *)*extra_lib_count);
@@ -277,7 +276,6 @@ main(int argc, char *argv[])
 
     /* Check binary */
     for (i = optind; i < argc; i++) {
-	printf("Checking binary %s\n", argv[i]);
 	TESTCASE_START(tetj_activity_count, argv[i], "");
 	tetj_tp_count = 0;
 
