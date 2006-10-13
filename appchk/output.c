@@ -88,7 +88,7 @@ void output_info(unsigned int activity, unsigned int tpnumber,
                  unsigned int sequence, const char *message)
 {
     fprintf(output_file, 
-            "INFO: activity %u, num %u, context %u, block %u, seq %u\n  %s",
+            "INFO: activity %u, num %u, context %u, block %u, seq %u\n  %s\n",
             activity, tpnumber, context, block, sequence, message);
 }
 
