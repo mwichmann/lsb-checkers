@@ -88,7 +88,7 @@ void check_lib(ElfFile *elffile, struct tetj_handle *journal, Elf_type fileType,
   }
 
   /* Check dynamic symbols needed by extra lib */
-  checksymbols(elffile, journal, modules);
+  checksymbols(elffile, modules);
 
   return;
 }

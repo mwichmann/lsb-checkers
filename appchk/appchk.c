@@ -298,7 +298,7 @@ main(int argc, char *argv[])
 	    continue;
 	}
 	check_file(elffile, journal, ELF_IS_EXEC);
-	checksymbols(elffile, journal, modules);
+	checksymbols(elffile, modules);
 	TESTCASE_END(tetj_activity_count++, 0, "");
 	CloseElfFile(elffile);
     }
