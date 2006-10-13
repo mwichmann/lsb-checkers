@@ -34,12 +34,13 @@ usage(char *progname)
   printf("usage: %s [options] appname ...\n"
 "  -h, --help                     show this help message and exit\n"
 "  -v, --version                  show version and LSB version\n"
-"  -n, --nojournal                do not write a journal file\n"
+"  -j, --journal                  write a journal file\n"
+"  -n, --no-journal               do not write a journal file\n"
 //"  -T, --lsb-product=[core|desktop]\n"
 //"                                 target product to load modules for\n"
 "  -M MODULE, --module=MODULE     add MODULE to list of checked modules\n"
 "  -L LIB                         add LIB to list of checked libraries\n"
-"  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n",
+"  -o FILE, --output-file=FILE    write output to FILE\n",
 progname);
 }
 
@@ -55,8 +56,8 @@ main(int argc, char *argv[])
     int extra_lib_count = 0;
 #define TMP_STRING_SIZE (PATH_MAX+20)
     char tmp_string[TMP_STRING_SIZE + 1];
-    char journal_filename[TMP_STRING_SIZE + 1];
-    int overrideJournalFilename = 0;
+    char output_filename[TMP_STRING_SIZE + 1];
+    int do_journal = 0;
     int modules = 0;
     int option_index = 0;
 
@@ -78,6 +79,9 @@ main(int argc, char *argv[])
     modules = LSB_Desktop_Modules;   // default to all modules in cert program
     extra_libraries = strdup("EXTRA_LIBRARIES=");
 
+    /* Flag to indicate default filename. */
+    output_filename[0] = '\0';
+
     for (i = 0; i < argc; i++) {
 	command_line = concat_string(command_line, argv[i]);
 	command_line = concat_string(command_line, " ");
@@ -86,16 +90,18 @@ main(int argc, char *argv[])
     while (1) {
 	int c;
 	static struct option long_options[] = {
-	    {"help",     no_argument,        NULL, 'h'},
-	    {"version",  no_argument,        NULL, 'v'},
-	    {"nojournal",no_argument,        NULL, 'n'},
-	    {"module",   required_argument,  NULL, 'M'},
-	    {"journal",  required_argument,  NULL, 'j'},
-	    {"lsb-product", required_argument,  NULL, 'T'},
+	    {"help",     no_argument,          NULL, 'h'},
+	    {"version",  no_argument,          NULL, 'v'},
+	    {"journal",  no_argument,          NULL, 'j'},
+            {"no-journal", no_argument,        NULL, 'n'},
+	    {"output-file", required_argument, NULL, 'o'},
+	    {"module",   required_argument,    NULL, 'M'},
+	    {"lsb-product", required_argument, NULL, 'T'},
 	    {0, 0, 0, 0}
       };
 
-      c = getopt_long (argc, argv, "hvnAM:L:j:T:", long_options, &option_index);
+      c = getopt_long (argc, argv, "hnjvAo:M:L:T:", 
+                       long_options, &option_index);
       if (c == -1)
 	  break;
       switch (c) {
@@ -105,10 +111,6 @@ main(int argc, char *argv[])
 	  case 'v':
 	      printf("%s %s for LSB Specification %s\n", argv[0],
 		     LSBAPPCHK_VERSION, LSBVERSION);
-	      break;
-	  case 'n':
-	      snprintf(journal_filename, TMP_STRING_SIZE, "/dev/null");
-	      overrideJournalFilename = 1;
 	      break;
 	   case 'T':
 /* Ignore -T completely for LSB 3.1
@@ -136,10 +138,15 @@ main(int argc, char *argv[])
 	      extra_libraries = concat_string(extra_libraries, optarg);
 	      extra_libraries = concat_string(extra_libraries, " ");
 	      break;
+          case 'o':
+              snprintf(output_filename, TMP_STRING_SIZE, optarg);
+              break;
 	  case 'j':
-	      snprintf(journal_filename, TMP_STRING_SIZE, optarg);
-	      overrideJournalFilename = 1;
+              do_journal = 1;
 	      break;
+          case 'n':
+              do_journal = 0;
+              break;
 	  default:
 	      usage(argv[0]);
 	      exit (0);
@@ -151,25 +158,29 @@ main(int argc, char *argv[])
     }
 
     /* Start journal logging */
-    if (!overrideJournalFilename) {
-	if (optind >= argc && extra_lib_count) {
-	    /* No binary supplied on command line */
-	    if (extra_lib_count == 1) {
-		snprintf(journal_filename, TMP_STRING_SIZE, "journal.appchk.%s",
-			 basename(extra_lib_list[0]));
-	    } else {
-	       snprintf(journal_filename, TMP_STRING_SIZE, "journal.appchk.DSO");
-	    }
-	} else {
-	    snprintf(journal_filename, TMP_STRING_SIZE, "journal.appchk.%s",
-	     basename(argv[optind]));
-	}
+    if (output_filename[0] == '\0') {
+        if (do_journal) {
+            if (optind >= argc && extra_lib_count) {
+                /* No binary supplied on command line */
+                if (extra_lib_count == 1) {
+                    snprintf(output_filename, TMP_STRING_SIZE, "journal.appchk.%s",
+                             basename(extra_lib_list[0]));
+                } else {
+                    snprintf(output_filename, TMP_STRING_SIZE, "journal.appchk.DSO");
+                }
+            } else {
+                snprintf(output_filename, TMP_STRING_SIZE, "journal.appchk.%s",
+                         basename(argv[optind]));
+            }
+        } else {
+            snprintf(output_filename, TMP_STRING_SIZE, "/dev/null");
+        }
     }
-    if (tetj_start_journal(journal_filename, &journal, command_line) != 0) {
+    if (tetj_start_journal(output_filename, &journal, command_line) != 0) {
 	snprintf(tmp_string, TMP_STRING_SIZE, "Could not open journal file %s",
-		 journal_filename);
+		 output_filename);
 	perror(tmp_string);
-	printf("Use -j JOURNAL to specify an alternate location for the journal file\n");
+	printf("Use -o FILE to specify an alternate location for the journal file\n");
 	exit(1);
     }
 
