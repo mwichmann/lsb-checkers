@@ -3,11 +3,12 @@
 #include "symbols.h"
 #include "libraries.h"
 #include "elfchk.h"
+#include "output.h"
 
 /* extern int modules; */
 
 int
-checksymbols(ElfFile *file, struct tetj_handle *journal, int modules)
+checksymbols(ElfFile *file, int modules)
 {
   int	i, j, numsyms;
   Elf_Sym	*syms1;
@@ -29,8 +30,7 @@ checksymbols(ElfFile *file, struct tetj_handle *journal, int modules)
     symbol_name = ElfGetStringIndex(file, syms1[i].st_name, 
                                     file->dynsymhdr->sh_link);
     
-    tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
-                       symbol_name);
+    PURPOSE_START(tetj_activity_count, tetj_tp_count, symbol_name);
 
     if ((ELF32_ST_BIND(syms1[i].st_info) != STB_LOCAL) /* Static Symbols */
         && (ELF32_ST_BIND(syms1[i].st_info) != STB_WEAK)     /* Weak Symbols 
@@ -68,10 +68,10 @@ checksymbols(ElfFile *file, struct tetj_handle *journal, int modules)
                    "Symbol %s used, but not part of %s",
                    symbol_name,getmodulename(modules));
           fprintf(stderr, "%s\n", tmp_string);
-          tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 
-                             0, 0, tmp_string);
-          tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-          tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+          TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
+                        tmp_string);
+          RESULT(tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+          PURPOSE_END(tetj_activity_count, tetj_tp_count);
           continue;
         } 
         else
@@ -104,12 +104,11 @@ checksymbols(ElfFile *file, struct tetj_handle *journal, int modules)
                      symbol_name,
                      file->versionnames[file->vers[i]], DynSyms[j].vername);
             printf("%s\n", tmp_string);
-            tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0,
-                               0, 0, tmp_string);
-            tetj_result(journal, tetj_activity_count, tetj_tp_count, 
-                        TETJ_FAIL);
-            tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
-						continue;
+            TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
+                          tmp_string);
+            RESULT(tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+            PURPOSE_END(tetj_activity_count, tetj_tp_count);
+            continue;
           }
         }
 
@@ -122,11 +121,10 @@ checksymbols(ElfFile *file, struct tetj_handle *journal, int modules)
                      "Symbol %s has been deprecated",
                      DynSyms[j].name);
             printf("%s\n", tmp_string);
-            tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0,
-                               0, 0, tmp_string);
-            tetj_result(journal, tetj_activity_count, tetj_tp_count, 
-                        TETJ_WARNING);
-            tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+            TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
+                          tmp_string);
+            RESULT(tetj_activity_count, tetj_tp_count, TETJ_WARNING);
+            PURPOSE_END(tetj_activity_count, tetj_tp_count);
           }
 	/*
 	 * Check to see if the symbol is "ioctl". If so, issue a special 
@@ -136,18 +134,17 @@ checksymbols(ElfFile *file, struct tetj_handle *journal, int modules)
             snprintf(tmp_string, TMP_STRING_LENGTH,
                      "Unable to determine if parameters to ioctl() are used in accordance with the LSB. ");
             printf("%s\n", tmp_string);
-            tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0,
-                               0, 0, tmp_string);
-            tetj_result(journal, tetj_activity_count, tetj_tp_count, 
-                        TETJ_FIP);
-            tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
-						continue;
+            TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
+                          tmp_string);
+            RESULT(tetj_activity_count, tetj_tp_count, TETJ_FIP);
+            PURPOSE_END(tetj_activity_count, tetj_tp_count);
+            continue;
           }
       }
     }
 
-    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
-    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+    RESULT(tetj_activity_count, tetj_tp_count, TETJ_PASS);
+    PURPOSE_END(tetj_activity_count, tetj_tp_count);
 
   } /* i */
   return 0; 
