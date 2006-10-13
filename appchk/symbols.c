@@ -67,7 +67,6 @@ checksymbols(ElfFile *file, int modules)
           snprintf(tmp_string, TMP_STRING_LENGTH, 
                    "Symbol %s used, but not part of %s",
                    symbol_name,getmodulename(modules));
-          fprintf(stderr, "%s\n", tmp_string);
           TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
                         tmp_string);
           RESULT(tetj_activity_count, tetj_tp_count, TETJ_FAIL);
@@ -133,7 +132,6 @@ checksymbols(ElfFile *file, int modules)
 	if( strcmp( DynSyms[j].name, "ioctl" ) == 0 ) {
             snprintf(tmp_string, TMP_STRING_LENGTH,
                      "Unable to determine if parameters to ioctl() are used in accordance with the LSB. ");
-            printf("%s\n", tmp_string);
             TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
                           tmp_string);
             RESULT(tetj_activity_count, tetj_tp_count, TETJ_FIP);
