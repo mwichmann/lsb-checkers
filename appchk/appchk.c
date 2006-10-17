@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <libgen.h>
 #include <limits.h>
+#include <sys/types.h>
+#include <dirent.h>
 #include "../tetj/tetj.h"
 #include "check_file.h"
 #include "libraries.h"
@@ -25,6 +27,54 @@ concat_string(char *input, char *addition)
     }
 }
 
+/* 
+ * Add all the libraries in a directory to the library list.
+ * "path" is the directory's path, "list" is a list of extra libs
+ * allocated on the heap (and thus resizeable via realloc), and
+ * "list_size" is the current size of the list.  Returns the new
+ * size of the list, or -1 if there is an error.
+ */
+int
+add_library_dir(const char *path, char ***list, int list_size)
+{
+  struct dirent *direntry;
+  DIR *dir = opendir(path);
+  int found_lib;
+  int count = list_size;
+  char *suffix;
+  char buf[PATH_MAX + 1];
+
+  if (dir == NULL) {
+    perror("could not open library dir");
+    return -1;
+  }
+
+  for (direntry = readdir(dir); direntry != NULL; direntry = readdir(dir)) {
+    found_lib = 0;
+
+    suffix = direntry->d_name;
+    while (*suffix) suffix++;
+    suffix -= 3;
+    if (suffix < direntry->d_name)
+      continue;
+    if (strcmp(suffix, ".so") == 0)
+      found_lib = 1;
+
+    if (found_lib) {
+      strncpy(buf, path, PATH_MAX - strlen(direntry->d_name) - 1);
+      if (buf[strlen(buf) - 1] != '/')
+        strcat(buf, "/");
+      strncat(buf, direntry->d_name, PATH_MAX - strlen(path) - 1);
+
+      count++;
+      *list = realloc(*list, sizeof(char *) * count);
+      (*list)[count - 1] = strdup(buf);
+    }
+  }
+
+  return count;
+}
+
 /* Real CVS revision number so we can strings it from the binary if necessary */
 static const char *__attribute((unused)) appchk_revision =
     "$Revision: 1.34 $";
@@ -41,6 +91,7 @@ usage(char *progname)
 //"                                 target product to load modules for\n"
 "  -M MODULE, --module=MODULE     add MODULE to list of checked modules\n"
 "  -L LIB                         add LIB to list of checked libraries\n"
+"  -D DIR, --add-library-dir=DIR  add all libs in DIR to checked lib list\n"
 "  -o FILE, --output-file=FILE    write output to FILE\n",
 progname);
 }
@@ -76,7 +127,6 @@ main(int argc, char *argv[])
         modules = LSB_Core | LSB_Graphics | LSB_Cpp;
 */
     modules = LSB_Desktop_Modules;   // default to all modules in cert program
-    extra_libraries = strdup("EXTRA_LIBRARIES=");
 
     /* Set defaults. */
     do_journal = 0;
@@ -97,10 +147,11 @@ main(int argc, char *argv[])
 	    {"output-file", required_argument, NULL, 'o'},
 	    {"module",   required_argument,    NULL, 'M'},
 	    {"lsb-product", required_argument, NULL, 'T'},
+	    {"add-library-dir", required_argument, NULL, 'D'},
 	    {0, 0, 0, 0}
       };
 
-      c = getopt_long (argc, argv, "hnjvAo:M:L:T:", 
+      c = getopt_long (argc, argv, "hnjvAo:M:L:T:D:", 
                        long_options, &option_index);
       if (c == -1)
 	  break;
@@ -134,9 +185,13 @@ main(int argc, char *argv[])
 	      extra_lib_list = realloc(extra_lib_list, 
 				       sizeof(char *)*extra_lib_count);
 	      extra_lib_list[extra_lib_count-1] = strdup(optarg);
-	      extra_libraries = concat_string(extra_libraries, optarg);
-	      extra_libraries = concat_string(extra_libraries, " ");
 	      break;
+          case 'D':
+              extra_lib_count = add_library_dir(optarg, &extra_lib_list, 
+                                                extra_lib_count);
+              if (extra_lib_count < 0)
+                exit(1);
+              break;
           case 'o':
               snprintf(output_filename, TMP_STRING_SIZE, optarg);
               break;
@@ -154,6 +209,12 @@ main(int argc, char *argv[])
     if (optind >= argc && !extra_lib_count) {
 	usage(argv[0]);
 	exit (1);
+    }
+
+    extra_libraries = strdup("EXTRA_LIBRARIES=");
+    for (i = 0; i < extra_lib_count; i++) {
+      extra_libraries = concat_string(extra_libraries, extra_lib_list[i]);
+      extra_libraries = concat_string(extra_libraries, " ");
     }
 
     /* Start journal logging */
