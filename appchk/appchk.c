@@ -91,7 +91,7 @@ usage(char *progname)
 //"                                 target product to load modules for\n"
 "  -M MODULE, --module=MODULE     add MODULE to list of checked modules\n"
 "  -L LIB                         add LIB to list of checked libraries\n"
-"  -D DIR, --add-library-dir=DIR  add all libs in DIR to checked lib list\n"
+"  -D DIR, --shared-libpath=DIR   add all libs in DIR to checked lib list\n"
 "  -o FILE, --output-file=FILE    write output to FILE\n",
 progname);
 }
@@ -147,7 +147,7 @@ main(int argc, char *argv[])
 	    {"output-file", required_argument, NULL, 'o'},
 	    {"module",   required_argument,    NULL, 'M'},
 	    {"lsb-product", required_argument, NULL, 'T'},
-	    {"add-library-dir", required_argument, NULL, 'D'},
+	    {"shared-libpath", required_argument, NULL, 'D'},
 	    {0, 0, 0, 0}
       };
 
