@@ -91,7 +91,8 @@ usage(char *progname)
 //"                                 target product to load modules for\n"
 "  -M MODULE, --module=MODULE     add MODULE to list of checked modules\n"
 "  -L LIB                         add LIB to list of checked libraries\n"
-"  -D DIR, --shared-libpath=DIR   add all libs in DIR to checked lib list\n"
+"  -D DIR[:DIR...], --shared-libpath=DIR[:DIR...]\n"
+"                                 add all libs in DIR to checked lib list\n"
 "  -o FILE, --output-file=FILE    write output to FILE\n",
 progname);
 }
@@ -101,6 +102,7 @@ main(int argc, char *argv[])
 {
     ElfFile *elffile;
     char *command_line = NULL;
+    char *token;
     int i;
     char *extra_libraries;
     char **extra_lib_list = NULL;
@@ -187,10 +189,13 @@ main(int argc, char *argv[])
 	      extra_lib_list[extra_lib_count-1] = strdup(optarg);
 	      break;
           case 'D':
-              extra_lib_count = add_library_dir(optarg, &extra_lib_list, 
-                                                extra_lib_count);
-              if (extra_lib_count < 0)
-                exit(1);
+              for (token = strtok(optarg, ":"); token != NULL; 
+                   token = strtok(NULL, ":")) {
+                extra_lib_count = add_library_dir(token, &extra_lib_list, 
+                                                  extra_lib_count);
+                if (extra_lib_count < 0)
+                  exit(1);
+              }
               break;
           case 'o':
               snprintf(output_filename, TMP_STRING_SIZE, optarg);
