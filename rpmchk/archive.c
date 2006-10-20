@@ -550,10 +550,10 @@ if( filesizesum != rpmtagsize ) {
 
                 if (elfFiles[i]->filetype == ET_EXEC) {
                    checkElf(elfFile, ELF_IS_EXEC, journal); 
-                   checksymbols(elfFile, journal, modules); 
+                   checksymbols(elfFile, modules); 
 				} else if (elfFiles[i]->filetype == ET_DYN) {
                    checkElf(elfFile, ELF_IS_DSO, journal); 
-				   check_lib(elfFile, journal, ELF_IS_DSO, modules);
+				   check_lib(elfFile, ELF_IS_DSO, modules);
 				}
              } else {
                 fprintf(stderr, "Unable to alloc memory for uncompressed file %s\n", 
