@@ -5,6 +5,7 @@
 #include <libgen.h>
 #include <limits.h>
 #include "../tetj/tetj.h"
+#include "../appchk/output.h"
 #include "check_archive.h"
 #include "libraries.h"
 
@@ -45,7 +46,6 @@ usage(char *progname)
 int
 main(int argc, char *argv[])
 {
-  struct tetj_handle *journal;
   char *command_line = NULL;
   int i;
   char *extra_libraries;
@@ -133,6 +133,7 @@ main(int argc, char *argv[])
     printf("Use -j JOURNAL to specify an alternate location for the journal file\n");
     exit(1);
   }
+  do_journal = 1;
 
   /*
    * new journal standard requires arch in the
