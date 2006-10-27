@@ -23,6 +23,17 @@ void output_use(FILE *file);
 
 void output_close();
 
+void output_testcase_start(unsigned int activity, const char *testcase,
+                           const char *message);
+
+void output_testcase_end(unsigned int activity, unsigned int status,
+                         const char *message);
+
+void output_purpose_start(unsigned int activity, unsigned int tpnumber,
+                          const char *message);
+
+void output_purpose_end(unsigned int activity, unsigned int tpnumber);
+
 void output_info(unsigned int activity, unsigned int tpnumber,
                  unsigned int context, unsigned int block,
                  unsigned int sequence, const char *message);
@@ -31,16 +42,28 @@ void output_result(unsigned int activity, unsigned int tpnumber,
                    enum testcase_results result);
 
 #define TESTCASE_START(activity, tcase, msg) \
-    if (do_journal) tetj_testcase_start(journal, activity, tcase, msg)
+    if (do_journal) \
+        tetj_testcase_start(journal, activity, tcase, msg); \
+    else \
+        output_testcase_start(activity, tcase, msg)
 
 #define PURPOSE_START(activity, tpnum, msg) \
-    if (do_journal) tetj_purpose_start(journal, activity, tpnum, msg)
+    if (do_journal) \
+        tetj_purpose_start(journal, activity, tpnum, msg); \
+    else \
+        output_purpose_start(activity, tpnum, msg)
 
 #define PURPOSE_END(activity, tpnum) \
-    if (do_journal) tetj_purpose_end(journal, activity, tpnum)
+    if (do_journal) \
+        tetj_purpose_end(journal, activity, tpnum); \
+    else \
+        output_purpose_end(activity, tpnum)
 
 #define TESTCASE_END(activity, status, msg) \
-    if (do_journal) tetj_testcase_end(journal, activity, status, msg)
+    if (do_journal) \
+        tetj_testcase_end(journal, activity, status, msg); \
+    else \
+        output_testcase_end(activity, status, msg)
 
 #define TESTCASE_INFO(activity, tpnum, context, block, seq, msg) \
     if (do_journal) \
