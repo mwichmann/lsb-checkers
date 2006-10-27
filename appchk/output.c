@@ -9,6 +9,7 @@
  */
 
 #include "output.h"
+#include <string.h>
 
 /* Extern variables used by the macros. */
 
@@ -81,6 +82,42 @@ void output_use(FILE *file)
 void output_close()
 {
     fclose(output_file);
+}
+
+void output_testcase_start(unsigned int activity, const char *testcase,
+                           const char *message)
+{
+    fprintf(output_file,
+            "TESTCASE: starting testcase %s (activity %u)\n",
+            testcase, activity);
+    if ((message != NULL) && (strlen(message) > 0))
+        fprintf(output_file, "  %s\n", message);
+}
+
+void output_testcase_end(unsigned int activity, unsigned int status,
+                         const char *message)
+{
+    fprintf(output_file,
+            "TESTCASE: ending testcase (activity %u, status %u)\n",
+            activity, status);
+    if ((message != NULL) && (strlen(message) > 0))
+        fprintf(output_file, "  %s\n", message);
+}
+
+void output_purpose_start(unsigned int activity, unsigned int tpnumber,
+                          const char *message)
+{
+    fprintf(output_file,
+            "PURPOSE: starting purpose %u (activity %u)\n",
+            tpnumber, activity);
+    if ((message != NULL) && (strlen(message) > 0))
+        fprintf(output_file, "  %s\n", message);
+}
+
+void output_purpose_end(unsigned int activity, unsigned int tpnumber)
+{
+    fprintf(output_file, "PURPOSE: ending purpose %u (activity %u)\n",
+            tpnumber, activity);
 }
 
 void output_info(unsigned int activity, unsigned int tpnumber,
