@@ -136,14 +136,18 @@ main(int argc, char *argv[])
     output_filename[0] = '\0';
 
     /* Prime setttings from the environment. */
-    env = strdup(getenv("LSB_SHAREDLIBPATH"));
-    for (token = strtok(env, ":"); token != NULL; token = strtok(NULL, ":")) {
-      extra_lib_count = add_library_dir(token, &extra_lib_list, 
-                                        extra_lib_count);
-      if (extra_lib_count < 0)
-        exit(1);
+    env = getenv("LSB_SHAREDLIBPATH");
+    if (env != NULL) {
+        env = strdup(env);
+        for (token = strtok(env, ":"); token != NULL; 
+             token = strtok(NULL, ":")) {
+            extra_lib_count = add_library_dir(token, &extra_lib_list, 
+                                              extra_lib_count);
+            if (extra_lib_count < 0)
+                exit(1);
+        }
+        free(env);
     }
-    free(env);
 
     for (i = 0; i < argc; i++) {
 	command_line = concat_string(command_line, argv[i]);
