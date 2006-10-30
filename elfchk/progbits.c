@@ -162,9 +162,6 @@ checkPROGBITS_interp(ElfFile * file1, Elf_Shdr * hdr1,
     if (strcmp(iname, ProgInterp) == 0) {
 	return 1;
     }
-    fprintf(stderr, "Found wrong intepreter in .interp section: %s ",
-	    iname);
-    fprintf(stderr, "instead of: %s\n", ProgInterp);
     return 0;
 }
 
