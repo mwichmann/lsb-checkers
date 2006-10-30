@@ -550,8 +550,6 @@ for(i=0;i<numProgHeaders;i++){
 				index, Headers[i].name );
 			break;
 		case -1: /* Fail */
-			fprintf( stderr, "Header[%2d] %-15.15s Failed\n",
-				index, Headers[i].name );
 			break;
 			}
 		break;  /* Found it. Don't need to look any further */
