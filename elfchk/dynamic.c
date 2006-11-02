@@ -77,7 +77,6 @@ checkDT_NEEDED(ElfFile *file1, Elf_Shdr *hdr1, Elf_Dyn *dyn1, struct tetj_handle
       snprintf(tmp_string, TMP_STRING_SIZE,
                "DT_NEEDED: %s is used, but not part of the LSB", 
                ElfGetStringIndex(file1,dyn1->d_un.d_val, hdr1->sh_link));
-      fprintf(stderr, "%s\n", tmp_string);
       tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
                          0, 0, 0, tmp_string);
       return 0;
