@@ -7,7 +7,7 @@ GENOBJS=$(shell echo $(GENSRCS) | sed s/\\.c/.o/g)
 LIBS= ../tetj/libtetj.a
 LIB=libelfchk.a
 
-CFLAGS_APPCHK=-DAPPCHK
+CFLAGS_APPCHK=-include appchk_untetj.h
 OBJS_APPCHK=$(shell echo $(OBJS) | perl -pe 's/(\S+)\.o/\1_appchk.o/g')
 LIB_APPCHK=libelfchk_appchk.a
 
