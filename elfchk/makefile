@@ -16,7 +16,7 @@ all: modules.c $(LIB) $(LIB_APPCHK) test
 install:
 
 %_appchk.o: %.c
-	cc $(CFLAGS) $(CFLAGS_APPCHK) -c -o $@ $<
+	$(CC) $(CFLAGS) $(CFLAGS_APPCHK) -c -o $@ $<
 
 $(LIB): $(OBJS) $(GENOBJS)
 	rm -f $(LIB);ar clq $(LIB) $(OBJS) $(GENOBJS)
