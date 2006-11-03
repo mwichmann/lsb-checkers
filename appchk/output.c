@@ -27,6 +27,7 @@ unsigned int current_tpnum;
 enum testcase_results current_result;
 char *current_testcase = NULL;
 char *current_purpose = NULL;
+int is_blank_report = 1;
 
 struct message_list {
     char *message;
@@ -185,6 +186,10 @@ void output_use(FILE *file)
 
 void output_close()
 {
+    if (is_blank_report) {
+        fprintf(output_file, "No LSB compliance issues were found.\n");
+    }
+
     fclose(output_file);
     output_cleanup();
 }
@@ -226,6 +231,7 @@ void output_purpose_end(unsigned int activity, unsigned int tpnumber)
              prepared, tpnumber, translate_result(current_result));
 
     if (current_result != TETJ_PASS) {
+        is_blank_report = 0;
         if (current_purpose != NULL) {
             fprintf(output_file, "%s %u (%s) - %s\n", current_testcase,
                     tpnumber, current_purpose, 
