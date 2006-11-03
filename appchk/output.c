@@ -225,13 +225,14 @@ void output_purpose_end(unsigned int activity, unsigned int tpnumber)
     char urlbuf[PATH_MAX];
     char purposebuf[PATH_MAX];
 
-    prepared = stringprep(current_testcase);
-    snprintf(urlbuf, PATH_MAX, 
-             "http://developer.freestandards.org/lsbchk_redirect.php?suite=appchk&testcase=%s&tpnum=%u&result=%s",
-             prepared, tpnumber, translate_result(current_result));
-
     if (current_result != TETJ_PASS) {
         is_blank_report = 0;
+
+        prepared = stringprep(current_testcase);
+        snprintf(urlbuf, PATH_MAX, 
+                 "http://developer.freestandards.org/lsbchk_redirect.php?suite=appchk&testcase=%s&tpnum=%u&result=%s",
+                 prepared, tpnumber, translate_result(current_result));
+
         if (current_purpose != NULL) {
             fprintf(output_file, "%s %u (%s) - %s\n", current_testcase,
                     tpnumber, current_purpose, 
