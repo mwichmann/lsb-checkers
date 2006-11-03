@@ -11,6 +11,7 @@
 #include "output.h"
 #include <string.h>
 #include <stdlib.h>
+#include <limits.h>
 
 /* Extern variables used by the macros. */
 
@@ -31,6 +32,35 @@ struct message_list {
     char *message;
     struct message_list *next;
 } *current_messages = NULL;
+
+char *stringprep(const char *src)
+{
+    char *result = strdup(src);
+    int index = 0;
+    char newchars[80];
+    char *valid_chars = "1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz:/._-$(){}~";
+
+    while (result[index] != '\0') {
+        newchars[0] = '\0';
+
+        if (strchr(valid_chars, result[index]) == NULL) {
+            snprintf(newchars, 80, "%%%02hhX", result[index]);
+        }
+
+        if (newchars[0] != '\0') {
+            result = (char *)realloc(result,
+                                     strlen(result) + strlen(newchars) + 1);
+            memmove(result + index + strlen(newchars), result + index + 1,
+                    strlen(result) - index);
+            memcpy(result + index, newchars, strlen(newchars));
+            index += strlen(newchars);
+        } else {
+            index++;
+        }
+    }
+
+    return result;
+}
 
 char *translate_result(enum testcase_results result)
 {
@@ -186,15 +216,29 @@ void output_purpose_start(unsigned int activity, unsigned int tpnumber,
 void output_purpose_end(unsigned int activity, unsigned int tpnumber)
 {
     struct message_list *m;
+    char *prepared;
+    char urlbuf[PATH_MAX];
+    char purposebuf[PATH_MAX];
+
+    prepared = stringprep(current_testcase);
+    snprintf(urlbuf, PATH_MAX, 
+             "http://developer.freestandards.org/lsbchk_redirect.php?suite=appchk&testcase=%s&tpnum=%u&result=%s",
+             prepared, tpnumber, translate_result(current_result));
 
     if (current_result != TETJ_PASS) {
-        if (current_purpose != NULL)
+        if (current_purpose != NULL) {
             fprintf(output_file, "%s %u (%s) - %s\n", current_testcase,
                     tpnumber, current_purpose, 
                     translate_result(current_result));
-        else
+
+            prepared = stringprep(current_purpose);
+            snprintf(purposebuf, PATH_MAX, "&purpose=%s", prepared);
+            strncat(urlbuf, purposebuf, PATH_MAX);
+        } else {
             fprintf(output_file, "%s %u - %s\n", current_testcase,
                     tpnumber, translate_result(current_result));
+        }
+        fprintf(output_file, "URL: %s\n", urlbuf);
         for (m = current_messages; m != NULL; m = m->next) {
             fprintf(output_file, "  %s\n", m->message);
         }
