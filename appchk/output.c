@@ -127,17 +127,30 @@ void output_cleanup()
     }
 }
 
+void output_header()
+{
+    fprintf(output_file,
+"LSB Application Checker Report\n"
+"==============================\n\n");
+}
+
 int output_open(const char *filename)
 {
     output_cleanup();
     output_file = fopen(filename, "w");
-    return (output_file != NULL);
+    if (output_file != NULL) {
+        output_header();
+        return 1;
+    } else {
+        return 0;
+    }
 }
 
 void output_use(FILE *file)
 {
     output_cleanup();
     output_file = file;
+    output_header();
 }
 
 void output_close()
