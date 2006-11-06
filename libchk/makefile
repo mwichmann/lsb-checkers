@@ -4,12 +4,12 @@ include libs.mk
 
 OBJS = libchk.o libs.o classchk.o $(LIBOBJS)
 
-CFLAGS=-g -I../elfchk -I../tetj -DLSBVERSION=\"$$LSBVERSION\" -DLSBLIBCHK_VERSION=\"$(LSBLIBCHK_VERSION)\" -Wall
+CFLAGS=-g -I../elfchk -I../tetj -DUSE_CXXABI_DEMANGLE -DLSBVERSION=\"$$LSBVERSION\" -DLSBLIBCHK_VERSION=\"$(LSBLIBCHK_VERSION)\" -Wall
 
 all:: libchk dummy_link
 
 libchk: $(OBJS) ../elfchk/libelfchk.a ../tetj/libtetj.a
-	$(CC) $(CFLAGS) -o libchk $(OBJS) -L../elfchk -L ../tetj -lelfchk -ltetj -ldl
+	$(CC) $(CFLAGS) -o libchk $(OBJS) -L../elfchk -L ../tetj -lelfchk -ltetj -lstdc++ -ldl
 
 libs.c:
 	./mkfunclist
