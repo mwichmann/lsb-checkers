@@ -39,14 +39,6 @@ printf("Checking data structures in jpeglib.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for HAVE_STDDEF_H */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for HAVE_STDLIB_H */
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef BITS_IN_JSAMPLE
 	CompareConstant(BITS_IN_JSAMPLE,8,5740,architecture)
 #else

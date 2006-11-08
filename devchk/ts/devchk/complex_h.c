@@ -103,6 +103,8 @@ extern long double cimagl_db(long double complex);
 CheckInterfacedef(cimagl,cimagl_db);
 extern double complex clog_db(double complex);
 CheckInterfacedef(clog,clog_db);
+extern double complex clog10_db(void);
+CheckInterfacedef(clog10,clog10_db);
 extern float complex clog10f_db(float complex);
 CheckInterfacedef(clog10f,clog10f_db);
 extern long double complex clog10l_db(long double complex);
