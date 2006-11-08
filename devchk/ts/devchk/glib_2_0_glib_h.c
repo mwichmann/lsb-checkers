@@ -1300,10 +1300,25 @@ Msg( "No definition for GULONG_TO_BE(val) (5889, Unknown) in db\n");
 /* No test for GUINT_TO_BE(val) */
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#if __powerpc64__
 /* No test for G_BYTE_ORDER */
+#elif __powerpc__ && !__powerpc64__
+/* No test for G_BYTE_ORDER */
+#elif __ia64__
+/* No test for G_BYTE_ORDER */
+#elif __i386__
+/* No test for G_BYTE_ORDER */
+#elif __s390x__
+/* No test for G_BYTE_ORDER */
+#elif __x86_64__
+/* No test for G_BYTE_ORDER */
+#elif __s390__ && !__s390x__
+/* No test for G_BYTE_ORDER */
+#else
+Msg( "No definition for G_BYTE_ORDER (5894, Unknown) in db\n");
+#ifdef G_BYTE_ORDER
 #endif
-
+#endif
 #if _LSB_DEFAULT_ARCH
 /* No test for GLIB_SYSDEF_POLLIN */
 #endif

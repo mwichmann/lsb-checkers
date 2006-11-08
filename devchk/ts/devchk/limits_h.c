@@ -310,16 +310,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef __INT_MAX__
-	CompareConstant(__INT_MAX__,2147483647,3600,architecture)
-#else
-Msg( "Error: Constant not found: __INT_MAX__\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef CHAR_BIT
 	CompareConstant(CHAR_BIT,8,4,architecture)
 #else

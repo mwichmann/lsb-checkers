@@ -6,13 +6,6 @@
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #include "pthread.h"
-extern int pthread_setschedprio (pthread_t __target_thread, int __prio);
-extern int __register_atfork (void (*__prepare) (void),
-                              void (*__parent) (void),
-                              void (*__child) (void),
-                              void *__dso_handle);
-
-#include "pthread.h"
 
 
 
@@ -194,7 +187,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PTHREAD_MUTEX_DEFAULT
-	CompareConstant(PTHREAD_MUTEX_DEFAULT,1,5002,architecture)
+	CompareConstant(PTHREAD_MUTEX_DEFAULT,0,5002,architecture)
 #else
 Msg( "Error: Constant not found: PTHREAD_MUTEX_DEFAULT\n");
 cnt++;
@@ -204,7 +197,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PTHREAD_MUTEX_ERRORCHECK
-	CompareConstant(PTHREAD_MUTEX_ERRORCHECK,3,5003,architecture)
+	CompareConstant(PTHREAD_MUTEX_ERRORCHECK,2,5003,architecture)
 #else
 Msg( "Error: Constant not found: PTHREAD_MUTEX_ERRORCHECK\n");
 cnt++;
@@ -214,7 +207,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PTHREAD_MUTEX_NORMAL
-	CompareConstant(PTHREAD_MUTEX_NORMAL,1,5004,architecture)
+	CompareConstant(PTHREAD_MUTEX_NORMAL,0,5004,architecture)
 #else
 Msg( "Error: Constant not found: PTHREAD_MUTEX_NORMAL\n");
 cnt++;
@@ -224,7 +217,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PTHREAD_MUTEX_RECURSIVE
-	CompareConstant(PTHREAD_MUTEX_RECURSIVE,2,5005,architecture)
+	CompareConstant(PTHREAD_MUTEX_RECURSIVE,1,5005,architecture)
 #else
 Msg( "Error: Constant not found: PTHREAD_MUTEX_RECURSIVE\n");
 cnt++;
