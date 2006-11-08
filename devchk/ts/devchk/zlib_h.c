@@ -321,6 +321,16 @@ cnt++;
 
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifdef Z_BLOCK
+	CompareConstant(Z_BLOCK,5,9494,architecture)
+#else
+Msg( "Error: Constant not found: Z_BLOCK\n");
+cnt++;
+#endif
+
+#endif
+
 #if __i386__
 CheckTypeSize(charf,1, 10167, 2)
 #elif __ia64__
