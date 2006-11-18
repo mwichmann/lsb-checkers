@@ -34,6 +34,26 @@ struct message_list {
     struct message_list *next;
 } *current_messages = NULL;
 
+/* Architecture setting. */
+
+#if __i386__
+#define ARCH "IA32"
+#elif __x86_64__
+#define ARCH "AMD64"
+#elif __powerpc__ && __powerpc64__
+#define ARCH "PPC64"
+#elif __powerpc__
+#define ARCH "PPC32"
+#elif __ia64__
+#define ARCH "IA64"
+#elif __s390__ && _s390x__
+#define ARCH "S390X"
+#elif __s390__
+#define ARCH "S390"
+#else
+#define ARCH "UNKNOWN"
+#endif
+
 char *stringprep(const char *src)
 {
     char *result = strdup(src);
@@ -230,8 +250,8 @@ void output_purpose_end(unsigned int activity, unsigned int tpnumber)
 
         prepared = stringprep(current_testcase);
         snprintf(urlbuf, PATH_MAX, 
-                 "http://developer.freestandards.org/lsbchk?suite=appchk&testcase=%s&tpnum=%u&result=%s",
-                 prepared, tpnumber, translate_result(current_result));
+                 "http://developer.freestandards.org/lsbchk?suite=appchk&arch=%s&testcase=%s&tpnum=%u&result=%s",
+                 ARCH, prepared, tpnumber, translate_result(current_result));
 
         if (current_purpose != NULL) {
             fprintf(output_file, "%s %u (%s) - %s\n", current_testcase,
