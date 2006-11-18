@@ -230,7 +230,7 @@ void output_purpose_end(unsigned int activity, unsigned int tpnumber)
 
         prepared = stringprep(current_testcase);
         snprintf(urlbuf, PATH_MAX, 
-                 "http://developer.freestandards.org/lsbchk_redirect.php?suite=appchk&testcase=%s&tpnum=%u&result=%s",
+                 "http://developer.freestandards.org/lsbchk?suite=appchk&testcase=%s&tpnum=%u&result=%s",
                  prepared, tpnumber, translate_result(current_result));
 
         if (current_purpose != NULL) {
