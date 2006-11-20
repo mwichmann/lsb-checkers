@@ -9,7 +9,7 @@ $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::d
 
 $select = "SELECT DISTINCT * FROM DynamicEntries ";
 $select.= "LEFT JOIN Architecture ON Aid=DEarch ";
-$select.= "WHERE DEstatus='Included' ";
+$select.= "WHERE DEstdstatus='Included' ";
 $select.= "ORDER BY DEname,Aid ";
 
 #print $select;

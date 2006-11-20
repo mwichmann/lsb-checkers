@@ -133,7 +133,7 @@ my $int_q = $dbh->prepare(
 'SELECT Iid, Ireturn, Asymbol, Iversion
 FROM Interface, Architecture
 WHERE Iname = ?
-  AND Istatus = "Included"
+  AND Istdstatus = "Included"
   AND Aid = Iarch 
 GROUP BY Iid ORDER BY Iarch'
 ) or die "Couldn't prepare int query: " . DBI ->errstr;
@@ -142,7 +142,7 @@ my $int_name_q = $dbh->prepare(
 'SELECT Iname, Lname
 FROM Interface, Header, Library' . $int_FROM_add .
 'WHERE Itype = "Function" 
-   AND Istatus = "Included"
+   AND Istdstatus = "Included"
    AND Iheader = Hid
    AND Hlib = Lid'
   . $int_WHERE_add .
@@ -489,7 +489,7 @@ sub get_param_type # ($param_pos, $param_int)
 	my($type, $type_id, $is_const) = $get_param_type_q->fetchrow_array();
 
 	my($left_string, $right_string) = get_type_string($type_id, $param_pos, $param_int);
-	$left_string = "const ". $left_string if ($is_const eq 'Y');
+	$left_string = "const ". $left_string if ($is_const eq 'Yes');
 
 	return ($left_string,$right_string);
 }
@@ -569,11 +569,11 @@ sub write_int_wrapper
 		unless($is_lsb) #I should be able to remove the is_lsb controls, if the flag system works.
 		{
 			my($typetype, $dereference) = get_param_typetype($param_pos, $param_int);
-			if( $param_null eq 'Y' ) {
+			if( $param_null eq 'Yes' ) {
 				print $fh "\t\tif( arg$i ) {\n";
 			}
 			write_addy_checker($fh, $typeid, "arg$i", "", "$func_name");
-			if( $param_null eq 'Y' ) {
+			if( $param_null eq 'Yes' ) {
 				print $fh "\t\t}\n";
 			}
 

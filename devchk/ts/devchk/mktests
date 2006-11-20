@@ -21,7 +21,7 @@ sub displaytyperef($$) {
     local ( $param, $enableConst ) = @_;
     local ( %select, $sth, %type );
 
-    if ( $$param{'Pconst'} eq "Y" ) {
+    if ( $$param{'Pconst'} eq "Yes" ) {
         print TESTS "const ";
     }
 
@@ -160,7 +160,7 @@ sub writetest($$) {
     #
     $select = "SELECT Ireturn FROM Interface ";
     $select .= "WHERE Iheader=$Hid ";
-    $select .= "AND Istatus='Included' ";
+    $select .= "AND Istdstatus='Included' ";
 
     #$select.= "AND Iarch=$Aid";
     print $select, "\n" if $trace;
@@ -176,7 +176,7 @@ sub writetest($$) {
     $select = "SELECT Ptype FROM Interface,Parameter ";
     $select .= "WHERE Iheader=$Hid ";
     $select .= "AND Pint=Iid ";
-    $select .= "AND Istatus='Included' ";
+    $select .= "AND Istdstatus='Included' ";
 
     #$select.= "AND Iarch=$Aid";
     print $select, "\n" if $trace;
@@ -216,7 +216,7 @@ sub writetest($$) {
     $select .= "LEFT JOIN ArchConst ON ACcid=Cid ";
     $select .= "LEFT JOIN Architecture ON Aid=ACaid ";
     $select .= "WHERE HGheader=$Hid ";
-    $select .= "AND Cstd='Yes' ";
+    $select .= "AND Cstdstatus='Included' ";
     $select .= "ORDER BY Cheadgroup,Cname,ACvalue ";
     $cth = $Dbh->query($select) || die $Dbh->errmsg();
 
@@ -595,7 +595,7 @@ sub writetest($$) {
         $select .= "LEFT JOIN Type ON Ireturn=Tid ";
         $select .= "LEFT JOIN ArchType ON ATtid=Tid AND ATaid=Iarch ";
         $select .= "LEFT JOIN Architecture ON Iarch=Aid ";
-        $select .= "WHERE ( Istatus='Included' OR Istatus='SrcOnly' )";
+        $select .= "WHERE ( Istdstatus='Included' OR Istdstatus='SrcOnly' )";
         $select .= "AND Hid=$Hid";
         $sth = $Dbh->query($select) || die $Dbh->errmsg();
 
@@ -692,7 +692,7 @@ $Dbh->selectdb("lsb") || die $Dbh->errmsg();
 
 if ( $ARGV[0] ne "" ) {
     $select = "SELECT DISTINCT * FROM Header ";
-    $select .= "WHERE Hstd='Yes' ";
+    $select .= "WHERE Hstdstatus='Included' ";
     $select .= "AND Hname='" . $ARGV[0] . "'";
     $hth = $Dbh->query($select) || die $Dbh->errmsg();
     %entry = $hth->fetchhash;
@@ -755,7 +755,7 @@ print TET_HDR "struct tet_testlist tet_testlist[] = {\n";
 open( SUBDEFS, ">testdefs.h" ) || die "Can't open testdefs.h for writing";
 
 $select = "SELECT DISTINCT * FROM Header ";
-$select .= "WHERE Hstd='Yes' ";
+$select .= "WHERE Hstdstatus='Included' ";
 $select .= "ORDER BY Hname ";
 
 #
