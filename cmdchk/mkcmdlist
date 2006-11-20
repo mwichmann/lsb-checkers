@@ -33,7 +33,7 @@ print CMDS "};\nstruct cmds core_cmdlist[] = {\n";
 
 $select = "SELECT DISTINCT Cid,Cname,Cpath FROM Command ";
 $select.= "LEFT JOIN ModCmd ON MCcid=Cid "; 
-$select.= "WHERE Cstatus='Included' AND MCmid=1 ";
+$select.= "WHERE Cstdstatus='Included' AND Cbuiltin !='Yes' AND MCmid=1 ";
 $select.= "ORDER BY Cname ";
 
 #print $select;
@@ -48,7 +48,7 @@ print CMDS "};\n\nstruct cmds desktop_cmdlist[] = {\n";
 
 $select = "SELECT DISTINCT Cid,Cname,Cpath FROM Command ";
 $select.= "LEFT JOIN ModCmd ON MCcid=Cid "; 
-$select.= "WHERE Cstatus='Included' AND MCmid=6 ";
+$select.= "WHERE Cstdstatus='Included' AND Cbuiltin != 'Yes' AND MCmid=6 ";
 $select.= "ORDER BY Cname ";
 
 #print $select;

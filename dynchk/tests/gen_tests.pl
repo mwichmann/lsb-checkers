@@ -73,7 +73,7 @@ WHERE Ttype = "Struct"
   AND HGheader = Hid
   AND Tstatus != "Excluded"
   AND Tstatus != "Indirect"
-  AND Hstd = "Yes"
+  AND Hstdstatus = "Included"
   AND (Tarch = 1 OR Tarch = '.$Arch.')
 GROUP BY Tname'
 							 )
@@ -114,7 +114,7 @@ my $get_funcptr_declaration_q = $dbh->prepare(
 
 my $header_q = $dbh->prepare(
 'select Hname from Header, HeaderGroup, Type where
-Tstatus != "Excluded" and Theadergroup = HGid and HGheader=Hid and Hstd ="Yes" GROUP BY Hname')
+Tstatus != "Excluded" and Theadergroup = HGid and HGheader=Hid and Hstdstatus ="Included" GROUP BY Hname')
 	or die "Couldn't prepare header query: ".DBI->errstr;
 
 ################################################################################

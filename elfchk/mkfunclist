@@ -7,7 +7,7 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
-$select = "SELECT DISTINCT Iname,Istatus,Vname,Asymbol,Aname,Mname FROM Interface ";
+$select = "SELECT DISTINCT Iname,Istdstatus,Iisdeprecated,Vname,Asymbol,Aname,Mname FROM Interface ";
 $select.= "LEFT JOIN LGInt ON Iid=LGIint ";
 $select.= "LEFT JOIN LibGroup ON LGid=LGIlibg ";
 $select.= "LEFT JOIN Library ON Lid=LGlib ";
@@ -17,7 +17,7 @@ $select.= "LEFT OUTER JOIN ArchInt ON Iid=AIint ";
 $select.= "LEFT OUTER JOIN Architecture ON Aid=AIarch ";
 $select.= "LEFT OUTER JOIN Version ON Vid=AIversion ";
 $select.= "WHERE Interface.Iid=LGInt.LGIint ";
-$select.= "AND Library.Lstd='Yes' ";
+$select.= "AND Library.Lstdstatus='Included' ";
 $select.= "ORDER BY Iname,Aid,Vid ";
 
 #print $select;
@@ -34,7 +34,7 @@ for(1..$sth->numrows) {
           print "#if $entry{'Asymbol'}\n";
         }
 	printf "\t{\"%s\",\"%s\",",$entry{'Iname'},$entry{'Vname'};
-	if( $entry{'Istatus'} eq 'Deprecated' ) {
+	if( ($entry{'Iisdeprecated'} eq 'Yes') && ($entry{'Istdstatus'} eq 'Included') ) {
 		printf "1";
 	} else {
 		printf "0";

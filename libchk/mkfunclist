@@ -60,7 +60,8 @@ $select.= "ORDER BY BTpos";
 print $LIB "char *".$typeinfoname."_name[] = {\n";
 $vsth = $Dbh->query($select) || die $Dbh->errmsg();
 $numtypeinfofuns=0;
-for(1..$$class{'CInumbasetype'}) {
+#for(1..$$class{'CInumbasetype'}) {
+if( $$class{'CInumbasetype'} == '1' ) {
 	%entry=$vsth->fetchhash;
 	print $LIB "\t\"".getinterfacename($entry{'BTrttiid'})."\",\n";
 	$numtypeinfofuns++;
@@ -221,7 +222,7 @@ $select.= "LEFT JOIN ArchType ON ATtid=Ireturn AND ATaid=Aid ";
 $select.= "LEFT JOIN ModLib ON MLlid=LGlib ";
 $select.= "LEFT JOIN Module ON MLmid=Mid ";
 $select.= "WHERE LGlib=$lid ";
-$select.= "AND ( Istatus='Included' OR Istatus='Deprecated' ) ";
+$select.= "AND Istdstatus='Included' ";
 $select.= "AND ( IArch != 8 ) "; # 8 == None
 $select.= "ORDER BY Iname,Aid ";
 
@@ -331,7 +332,7 @@ $select.= "LEFT JOIN ModLib ON MLmid=Mid ";
 $select.= "LEFT JOIN Library ON Lid=MLlid ";
 $select.= "LEFT JOIN ArchLib ON ALlid=Lid ";
 $select.= "LEFT JOIN Architecture ON ALaid=Aid ";
-$select.= "WHERE Lstd='Yes' ";
+$select.= "WHERE Lstdstatus='Included' ";
 $select.= "AND Aname!='None' ";
 #$select.= "AND Lname='libstdcxx' ";
 $select.= "ORDER BY ALrunname,Aid DESC ";
