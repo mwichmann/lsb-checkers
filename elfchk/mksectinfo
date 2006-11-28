@@ -7,8 +7,8 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
-$select = "SELECT DISTINCT * FROM ElfSections,SectionTypes ";
-$select.= "LEFT JOIN Architecture ON Aid=ESarch ";
+$select = "SELECT DISTINCT * FROM SectionTypes, (ElfSections ";
+$select.= "LEFT JOIN Architecture ON Aid=ESarch) ";
 $select.= "WHERE EStype=STid ";
 $select.= "ORDER BY ESname ";
 

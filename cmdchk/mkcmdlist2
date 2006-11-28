@@ -29,7 +29,7 @@ print CMDS "# Generated file\n";
 print CMDS "# List of LSB commands for the Python cmdchk\n";
 
 $select = "SELECT DISTINCT Cid,Cname,Cpath FROM Command ";
-$select.= "WHERE Cstatus='Included' ";
+$select.= "WHERE Cstdstatus='Included' AND Cbuiltin!='Yes' ";
 $select.= "ORDER BY Cname ";
 
 #print $select;
