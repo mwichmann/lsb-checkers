@@ -24,6 +24,7 @@ FILE *output_file = NULL;
 
 unsigned int current_activity;
 unsigned int current_tpnum;
+unsigned int current_failures;
 enum testcase_results current_result;
 char *current_testcase = NULL;
 char *current_purpose = NULL;
@@ -226,6 +227,7 @@ void output_testcase_start(unsigned int activity, const char *testcase,
 {
     current_activity = activity;
     current_testcase = strdup(testcase);
+    current_failures = 0;
     output_subheader(testcase);
 }
 
@@ -234,6 +236,11 @@ void output_testcase_end(unsigned int activity, unsigned int status,
 {
     free(current_testcase);
     current_testcase = NULL;
+
+    if (!current_failures) {
+        fprintf(output_file, "  No failures found.\n");
+    }
+
     fprintf(output_file, "\n");
 }
 
@@ -255,6 +262,8 @@ void output_purpose_end(unsigned int activity, unsigned int tpnumber)
     char purposebuf[PATH_MAX];
 
     if (current_result != TETJ_PASS) {
+        current_failures++;
+
         is_blank_report = 0;
 
         prepared = stringprep(current_testcase);
@@ -263,18 +272,12 @@ void output_purpose_end(unsigned int activity, unsigned int tpnumber)
                  ARCH, prepared, tpnumber, translate_result(current_result));
 
         if (current_purpose != NULL) {
-            fprintf(output_file, "  Test %u (%s) - %s\n",
-                    tpnumber, current_purpose, 
-                    translate_result(current_result));
-
             prepared = stringprep(current_purpose);
             snprintf(purposebuf, PATH_MAX, "&purpose=%s", prepared);
             strncat(urlbuf, purposebuf, PATH_MAX);
-        } else {
-            fprintf(output_file, "  Test %u - %s\n",
-                    tpnumber, translate_result(current_result));
         }
 
+        fprintf(output_file, "  %s\n", translate_result(current_result));
         for (m = current_messages; m != NULL; m = m->next) {
             fprintf(output_file, "  %s\n", m->message);
         }
