@@ -185,6 +185,13 @@ void output_header()
 "==============================\n\n");
 }
 
+void output_subheader(const char *testgroup_name)
+{
+    fprintf(output_file,
+            "Binary %s:\n\n", 
+            testgroup_name);
+}
+
 int output_open(const char *filename)
 {
     output_cleanup();
@@ -219,6 +226,7 @@ void output_testcase_start(unsigned int activity, const char *testcase,
 {
     current_activity = activity;
     current_testcase = strdup(testcase);
+    output_subheader(testcase);
 }
 
 void output_testcase_end(unsigned int activity, unsigned int status,
