@@ -265,10 +265,12 @@ void output_purpose_end(unsigned int activity, unsigned int tpnumber)
             fprintf(output_file, "%s %u - %s\n", current_testcase,
                     tpnumber, translate_result(current_result));
         }
-        fprintf(output_file, "URL: %s\n", urlbuf);
+
         for (m = current_messages; m != NULL; m = m->next) {
-            fprintf(output_file, "  %s\n", m->message);
+            fprintf(output_file, "Information: %s\n", m->message);
         }
+
+        fprintf(output_file, "URL: %s\n", urlbuf);
 
         fprintf(output_file, "\n");
     }
