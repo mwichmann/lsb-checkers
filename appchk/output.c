@@ -188,7 +188,7 @@ void output_header()
 void output_subheader(const char *testgroup_name)
 {
     fprintf(output_file,
-            "Binary %s:\n\n", 
+            "Binary %s:\n", 
             testgroup_name);
 }
 
@@ -234,6 +234,7 @@ void output_testcase_end(unsigned int activity, unsigned int status,
 {
     free(current_testcase);
     current_testcase = NULL;
+    fprintf(output_file, "\n");
 }
 
 void output_purpose_start(unsigned int activity, unsigned int tpnumber,
@@ -262,7 +263,7 @@ void output_purpose_end(unsigned int activity, unsigned int tpnumber)
                  ARCH, prepared, tpnumber, translate_result(current_result));
 
         if (current_purpose != NULL) {
-            fprintf(output_file, "%s %u (%s) - %s\n", current_testcase,
+            fprintf(output_file, "  Test %u (%s) - %s\n",
                     tpnumber, current_purpose, 
                     translate_result(current_result));
 
@@ -270,15 +271,15 @@ void output_purpose_end(unsigned int activity, unsigned int tpnumber)
             snprintf(purposebuf, PATH_MAX, "&purpose=%s", prepared);
             strncat(urlbuf, purposebuf, PATH_MAX);
         } else {
-            fprintf(output_file, "%s %u - %s\n", current_testcase,
+            fprintf(output_file, "  Test %u - %s\n",
                     tpnumber, translate_result(current_result));
         }
 
         for (m = current_messages; m != NULL; m = m->next) {
-            fprintf(output_file, "Information: %s\n", m->message);
+            fprintf(output_file, "  %s\n", m->message);
         }
 
-        fprintf(output_file, "URL: %s\n", urlbuf);
+        fprintf(output_file, "  URL: %s\n", urlbuf);
 
         fprintf(output_file, "\n");
     }
