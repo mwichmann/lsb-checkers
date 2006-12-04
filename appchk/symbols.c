@@ -65,8 +65,12 @@ checksymbols(ElfFile *file, int modules)
         if (!symbolinlibrary(symbol_name, journal))
         {
           snprintf(tmp_string, TMP_STRING_LENGTH, 
-                   "Symbol %s used, but not part of %s",
-                   symbol_name,getmodulename(modules));
+                   "Symbol %s is used, but is not part of the LSB",
+                   symbol_name);
+          TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
+                        tmp_string);
+          snprintf(tmp_string, TMP_STRING_LENGTH,
+                   "Module name: %s", getmodulename(modules));
           TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
                         tmp_string);
           RESULT(tetj_activity_count, tetj_tp_count, TETJ_FAIL);
