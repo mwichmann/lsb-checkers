@@ -30,6 +30,7 @@ enum testcase_results current_result;
 char *current_testcase = NULL;
 char *current_purpose = NULL;
 int is_blank_report = 1;
+int wrote_header = 0;
 
 struct message_list {
     char *message;
@@ -205,9 +206,15 @@ void output_cleanup()
 
 void output_header()
 {
-    fprintf(output_file,
+    if (alt_output_file) {
+        fprintf(output_file,
+"LSB Unknown Symbol Report\n"
+"=========================\n\n");
+    } else {
+        fprintf(output_file,
 "LSB Application Checker Report\n"
 "==============================\n\n");
+    }
 }
 
 void output_subheader(const char *testgroup_name)
@@ -233,6 +240,7 @@ void output_write_missing_symbols()
     while (s != NULL) {
         if (strcmp(this_testcase, s->testcase) != 0) {
             fprintf(alt_output_file, "\nTest %s:\n", s->testcase);
+            fprintf(alt_output_file, "The following symbols were found, but are not supported in the LSB:\n");
             this_testcase = s->testcase;
         }
         fprintf(alt_output_file, "  Symbol %s\n",
@@ -245,12 +253,7 @@ int output_open(const char *filename)
 {
     output_cleanup();
     output_file = fopen(filename, "w");
-    if (output_file != NULL) {
-        output_header();
-        return 1;
-    } else {
-        return 0;
-    }
+    return (output_file != NULL);
 }
 
 void output_use(FILE *file)
@@ -282,6 +285,11 @@ void output_close()
 void output_testcase_start(unsigned int activity, const char *testcase,
                            const char *message)
 {
+    if (!wrote_header) {
+        output_header();
+        wrote_header = 1;
+    }
+
     current_activity = activity;
     current_testcase = strdup(testcase);
     current_failures = 0;
