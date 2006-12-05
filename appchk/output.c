@@ -206,8 +206,8 @@ void output_cleanup()
 
 void output_header()
 {
-    if (alt_output_file) {
-        fprintf(output_file,
+    if (alt_output_file != NULL) {
+        fprintf(alt_output_file,
 "LSB Unknown Symbol Report\n"
 "=========================\n\n");
     } else {
@@ -236,15 +236,19 @@ void output_write_missing_symbols()
 
     output_sort_missing_symbols();
 
-    s = current_symbols;
-    while (s != NULL) {
-        if (strcmp(this_testcase, s->testcase) != 0) {
-            fprintf(alt_output_file, "\nTest %s:\n", s->testcase);
-            fprintf(alt_output_file, "The following symbols were found, but are not supported in the LSB:\n");
-            this_testcase = s->testcase;
+    if (current_symbols == NULL) {
+        fprintf(alt_output_file, "No unspecified symbols were found.\n");
+    } else {
+        s = current_symbols;
+        while (s != NULL) {
+            if (strcmp(this_testcase, s->testcase) != 0) {
+                fprintf(alt_output_file, "\nTest %s\n", s->testcase);
+                fprintf(alt_output_file, "The following symbols were found, but are not supported in the LSB:\n");
+                this_testcase = s->testcase;
+            }
+            fprintf(alt_output_file, "  %s\n", s->symbol);
+            s = s->next;
         }
-        fprintf(alt_output_file, "  Symbol %s\n", s->symbol);
-        s = s->next;
     }
 }
 
@@ -259,7 +263,6 @@ void output_use(FILE *file)
 {
     output_cleanup();
     output_file = file;
-    output_header();
 }
 
 void output_do_missing_symbols()
