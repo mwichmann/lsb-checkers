@@ -87,6 +87,7 @@ usage(char *progname)
 "  -v, --version                  show version and LSB version\n"
 "  -j, --journal                  write a journal file\n"
 "  -n, --no-journal               do not write a journal file\n"
+"  -s, --missing-symbols          report only on missing symbols\n"
 //"  -T, --lsb-product=[core|desktop]\n"
 //"                                 target product to load modules for\n"
 "  -M MODULE, --module=MODULE     add MODULE to list of checked modules\n"
@@ -113,6 +114,7 @@ main(int argc, char *argv[])
     char output_filename[TMP_STRING_SIZE + 1];
     int modules = 0;
     int option_index = 0;
+    int do_missing_symbol = 0;
 
 
 /* Ignore LSB_PRODUCT env variable for LSB 3.1
@@ -161,6 +163,7 @@ main(int argc, char *argv[])
 	    {"version",  no_argument,          NULL, 'v'},
 	    {"journal",  no_argument,          NULL, 'j'},
             {"no-journal", no_argument,        NULL, 'n'},
+            {"missing-symbols", no_argument,   NULL, 's'},
 	    {"output-file", required_argument, NULL, 'o'},
 	    {"module",   required_argument,    NULL, 'M'},
 	    {"lsb-product", required_argument, NULL, 'T'},
@@ -168,7 +171,7 @@ main(int argc, char *argv[])
 	    {0, 0, 0, 0}
       };
 
-      c = getopt_long (argc, argv, "hnjvAo:M:L:T:D:", 
+      c = getopt_long (argc, argv, "hnjsvAo:M:L:T:D:", 
                        long_options, &option_index);
       if (c == -1)
 	  break;
@@ -220,6 +223,9 @@ main(int argc, char *argv[])
 	      break;
           case 'n':
               do_journal = 0;
+              break;
+          case 's':
+              do_missing_symbol = 1;
               break;
 	  default:
 	      usage(argv[0]);
@@ -287,6 +293,10 @@ main(int argc, char *argv[])
         } else {
             output_open(output_filename);
         }
+
+        /* If requested, report only missing symbols. */
+        if (do_missing_symbol)
+            output_do_missing_symbols();
 
         /* XXX: Open a fake journal file.  Needed only while we
            transition to the new macros. */

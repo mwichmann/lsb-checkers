@@ -21,6 +21,8 @@ int output_open(const char *filename);
 
 void output_use(FILE *file);
 
+void output_do_missing_symbols();
+
 void output_close();
 
 void output_testcase_start(unsigned int activity, const char *testcase,
@@ -40,6 +42,8 @@ void output_info(unsigned int activity, unsigned int tpnumber,
 
 void output_result(unsigned int activity, unsigned int tpnumber,
                    enum testcase_results result);
+
+void output_report_missing_symbol(const char *symbol);
 
 #define TESTCASE_START(activity, tcase, msg) \
     if (do_journal) \

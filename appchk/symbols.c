@@ -64,6 +64,8 @@ checksymbols(ElfFile *file, int modules)
       {
         if (!symbolinlibrary(symbol_name, journal))
         {
+          output_report_missing_symbol(symbol_name);
+
           snprintf(tmp_string, TMP_STRING_LENGTH, 
                    "Symbol %s is used, but is not part of the LSB",
                    symbol_name);

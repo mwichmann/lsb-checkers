@@ -21,6 +21,7 @@ struct tetj_handle *journal = NULL;
 /* Shared variables. */
 
 FILE *output_file = NULL;
+FILE *alt_output_file = NULL;
 
 unsigned int current_activity;
 unsigned int current_tpnum;
@@ -34,6 +35,12 @@ struct message_list {
     char *message;
     struct message_list *next;
 } *current_messages = NULL;
+
+struct symbol_list {
+    char *testcase;
+    char *symbol;
+    struct symbol_list *next;
+} *current_symbols = NULL;
 
 /* Architecture setting. */
 
@@ -170,9 +177,26 @@ void free_messages()
     current_messages = NULL;
 }
 
+void free_symbols()
+{
+    struct symbol_list *s1, *s2;
+
+    s1 = s2 = current_symbols;
+    while (s1 != NULL) {
+        s2 = s1->next;
+        free(s1->testcase);
+        free(s1->symbol);
+        free(s1);
+        s1 = s2;
+    }
+
+    current_symbols = NULL;
+}
+
 void output_cleanup()
 {
     free_messages();
+    free_symbols();
     if (current_testcase != NULL) {
         free(current_testcase);
         current_testcase = NULL;
@@ -191,6 +215,18 @@ void output_subheader(const char *testgroup_name)
     fprintf(output_file,
             "Binary %s:\n", 
             testgroup_name);
+}
+
+void output_write_missing_symbols()
+{
+    struct symbol_list *s;
+
+    s = current_symbols;
+    while (s != NULL) {
+        fprintf(alt_output_file, "  Symbol %s, found in %s\n",
+                s->symbol, s->testcase);
+        s = s->next;
+    }
 }
 
 int output_open(const char *filename)
@@ -212,9 +248,18 @@ void output_use(FILE *file)
     output_header();
 }
 
+void output_do_missing_symbols()
+{
+    alt_output_file = output_file;
+    output_file = fopen("/dev/null", "w");
+}
+
 void output_close()
 {
-    if (is_blank_report) {
+    if (alt_output_file) {
+        output_write_missing_symbols();
+        fclose(alt_output_file);
+    } else if (is_blank_report) {
         fprintf(output_file, "No LSB compliance issues were found.\n");
     }
 
@@ -304,4 +349,33 @@ void output_result(unsigned int activity, unsigned int tpnumber,
                    enum testcase_results result)
 {
     current_result = result;
+}
+
+void output_report_missing_symbol(const char *symbol)
+{
+    struct symbol_list *s1, *s2;
+
+    s1 = (struct symbol_list *) malloc(sizeof(struct symbol_list));
+    if (s1 == NULL)
+        return;
+
+    s1->next = NULL;
+
+    s1->testcase = strdup(current_testcase);
+    s1->symbol = strdup(symbol);
+    if ((s1->testcase == NULL) || (s1->symbol == NULL)) {
+        if (s1->testcase != NULL) free(s1->testcase);
+        if (s1->symbol != NULL) free(s1->symbol);
+        free(s1);
+        return;
+    }
+
+    if (current_symbols == NULL) {
+        current_symbols = s1;
+    } else {
+        s2 = current_symbols;
+        while (s2->next != NULL)
+            s2 = s2->next;
+        s2->next = s1;
+    }
 }
