@@ -217,13 +217,25 @@ void output_subheader(const char *testgroup_name)
             testgroup_name);
 }
 
+void output_sort_missing_symbols()
+{
+    /* Nothing here yet - figure out the most requested sort options. */
+}
+
 void output_write_missing_symbols()
 {
     struct symbol_list *s;
+    char *this_testcase = "";
+
+    output_sort_missing_symbols();
 
     s = current_symbols;
     while (s != NULL) {
-        fprintf(alt_output_file, "  Symbol %s, found in %s\n",
+        if (strcmp(this_testcase, s->testcase) != 0) {
+            fprintf(alt_output_file, "\nTest %s:\n", s->testcase);
+            this_testcase = s->testcase;
+        }
+        fprintf(alt_output_file, "  Symbol %s\n",
                 s->symbol, s->testcase);
         s = s->next;
     }
