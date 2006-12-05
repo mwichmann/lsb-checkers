@@ -243,8 +243,7 @@ void output_write_missing_symbols()
             fprintf(alt_output_file, "The following symbols were found, but are not supported in the LSB:\n");
             this_testcase = s->testcase;
         }
-        fprintf(alt_output_file, "  Symbol %s\n",
-                s->symbol, s->testcase);
+        fprintf(alt_output_file, "  Symbol %s\n", s->symbol);
         s = s->next;
     }
 }
