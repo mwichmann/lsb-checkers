@@ -7,7 +7,7 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
-$select = "SELECT DISTINCT Iname,Istatus,Vname,Asymbol,Aname,Mname FROM Interface ";
+$select = "SELECT DISTINCT Iname,Istdstatus,Iisdeprecated,Vname,Asymbol,Aname,Mname FROM Interface ";
 $select.= "LEFT JOIN ArchInt ON Iid=AIint ";
 $select.= "LEFT JOIN Architecture ON Aid=AIarch ";
 $select.= "LEFT JOIN Version ON Vid=AIversion ";
@@ -16,7 +16,7 @@ $select.= "LEFT JOIN LibGroup ON LGid=LGIlibg ";
 $select.= "LEFT JOIN Library ON Lid=LGlib ";
 $select.= "LEFT JOIN ModLib ON MLlid=Lid ";
 $select.= "LEFT JOIN Module ON Mid=MLmid ";
-$select.= "WHERE ( Istatus='Included' OR Istatus='Deprecated' )";
+$select.= "WHERE ( Istdstatus='Included' )";
 $select.= "AND Mid!=0 ";
 $select.= "ORDER BY Iname,Aid,Vid ";
 
@@ -34,7 +34,7 @@ for(1..$sth->numrows) {
           print "#if $entry{'Asymbol'}\n";
         }
 	printf "\t{\"%s\",\"%s\",",$entry{'Iname'},$entry{'Vname'};
-	if( $entry{'Istatus'} eq 'Deprecated' ) {
+	if( $entry{'Iisdeprecated'} eq 'Yes' ) {
 		printf "1";
 	} else {
 		printf "0";
