@@ -1,3 +1,23 @@
+2006-11-20	Jeff Licquia <jeff_at_licquia.org>
+	* appchk/output.c
+	  appchk/output.h
+	  elfchk/appchk_untetj.h
+	  appchk/appchk.c
+	  appchk/check_file.c
+	  appchk/check_file.h
+	  appchk/makefile
+	  appchk/symbols.c
+	  appchk/symbols.h
+	  archk/archk.c
+	  archk/makefile
+	  elfchk/dynamic.c
+	  elfchk/makefile
+	  elfchk/progbits.c
+	  elfchk/proghdr.c
+	  pkgchk/pkgchk.c
+	  rpmchk/archive.c
+	   Create new report output, and make it default.
+	   Support --shared-libpath (add all libs in dir).
 2006-07-27	Mats Wichmann <mats.d.wichmann_at_intel.com>
 	* elfchk/progbits.c
 	  elfchk/dwarf.c
