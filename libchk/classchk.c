@@ -13,6 +13,38 @@
 #include "libchk.h"
 
 /*
+ * Interface to the demangler.  Due to possible license issues, we
+ * want to make it easy to replace.  This function returns the
+ * demangled name as a heap-allocated string (or NULL for problems),
+ * meaning that the caller is reponsible for freeing it.  This works
+ * well with our current demangler; if we switch, we should expect
+ * that callers will try to free() the returned string.
+ */
+
+#if defined(USE_LIBIBERTY_DEMANGLE)
+#include "demangle.h"
+#elif defined(USE_CXXABI_DEMANGLE)
+/* No good way to include C++ headers in C code, even if the header
+   provides a C function that's interesting to us. */
+/* #include <cxxabi.h> */
+char* __cxa_demangle(const char* __mangled_name, char* __output_buffer,
+                     size_t* __length, int* __status);
+#endif
+
+char *
+demangle(const char *mangled_name)
+{
+#if defined(USE_LIBIBERTY_DEMANGLE)
+  return cplus_demangle_v3(mangled_name, 
+                           DMGL_PARAMS | DMGL_ANSI | DMGL_VERBOSE);
+#elif defined(USE_CXXABI_DEMANGLE)
+  return __cxa_demangle(mangled_name, NULL, 0, NULL);
+#else
+  return NULL;
+#endif
+}
+
+/*
  * Some architectures treat function pointers as structures which contains the
  * address of the function, plus some adjustment value which must be taken into
  * consideration. This is visible in the structures we are using (ie vtables),
@@ -84,6 +116,7 @@ check_class_info(ElfFile * file, char *libname,
   int vtableinc, vtablesize, fndvtabsize;
   int fndvttsize;
   char tmp_string[TMP_STRING_SIZE + 1];
+  char *demangled_class, *demangled_found;
   int test_failed;
 
   if (classes == NULL)
@@ -332,7 +365,37 @@ check_class_info(ElfFile * file, char *libname,
 			       "doesn't match %s (found)", v,
 			       j, classp->vtable[v].virtfuncs[j],
 			       dlainfo.dli_sname);
-	      test_failed = 1;
+
+              /*
+               * This could be an override, which doesn't break binary
+               * compatibility.  Check some common cases for that.
+               * We assume the test fails unless we find evidence to
+               * the contrary.
+               */
+              test_failed = 1;
+              demangled_class = demangle(classp->name);
+              demangled_found = demangle(dlainfo.dli_sname);
+              if (demangled_class == NULL) {
+                TETJ_REPORT_INFO("Could not demangle class name");
+              } else if (demangled_found == NULL) {
+                TETJ_REPORT_INFO("Could not demangle found function name");
+                free(demangled_class);
+              } else {
+                /* If the found class matches the class name, assume
+                   we have a new override from a base class. */
+                if (strlen(demangled_found) > strlen(demangled_class)) {
+                  if (strncmp(demangled_found, demangled_class,
+                              strlen(demangled_class)) == 0) {
+                    TETJ_REPORT_INFO("Unmangled class: %s", demangled_class);
+                    TETJ_REPORT_INFO("Unmangled found function: %s", demangled_found);
+                    TETJ_REPORT_INFO("Unmangled function's class matches tested class");
+                    test_failed = 0;
+                  }
+                }
+
+                free(demangled_class);
+                free(demangled_found);
+              }
 	    }
 	  }
 	  tetj_result(journal, tetj_activity_count, tetj_tp_count,

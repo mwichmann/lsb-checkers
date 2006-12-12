@@ -258,6 +258,7 @@
 #include "elfchk.h"
 #include "libchk.h"
 #include "hdr.h"
+#include "symvers.h"
 #include "tetj.h"
 
 #ifdef _CXXABICHK_
@@ -290,6 +291,52 @@ int libchk_debug=LIBCHK_DEBUG_CXXHUSH|LIBCHK_DEBUG_NEWVERS;
 int module = 0;
 
 
+/* Find the absolute path of an ELF file. */
+int
+find_elf_file(char *libname, char *filename, int maxlen)
+{
+  int i;
+
+  if (libname[0] != '/') {
+    /* Find the library */
+    for (i=0; i<library_path_count; i++) {
+      if (strcmp(libname, library_paths[i].library) == 0) {
+	strncpy(filename, library_paths[i].fullpath, maxlen);
+	break;
+      }
+    }
+  } else {
+    /* absolute path given so we don't do a search through the library paths */
+    strncpy(filename, libname, maxlen);
+  }
+
+  return access(filename, R_OK);
+}
+
+/* Finish initialization on ElfFile after open. */
+
+void
+init_elf_file(ElfFile *file)
+{
+  Elf_Ehdr *hdr1 = (Elf_Ehdr *)file->addr;
+
+  if( hdr1->e_phoff ) {
+    file->paddr=(Elf_Phdr *)((caddr_t)file->addr+hdr1->e_phoff);
+    file->numph = hdr1->e_phnum;
+  }
+  if( hdr1->e_shoff ) {
+    file->saddr=(Elf_Shdr *)((caddr_t)file->addr+hdr1->e_shoff);
+    file->numsh = hdr1->e_shnum;
+  }
+
+  if( hdr1->e_shstrndx != SHN_UNDEF ) {
+    file->straddr = file->addr+file->saddr[hdr1->e_shstrndx].sh_offset;
+  }
+  file->strndx = hdr1->e_shstrndx;
+
+  getSymbolVersionInfo(file);
+}
+
 /* dump info on extra versions in library (maintainer mode) */
 void
 extra_vers(ElfFile * file, int index, int vers, char *msg, char *vername)
@@ -305,6 +352,66 @@ extra_vers(ElfFile * file, int index, int vers, char *msg, char *vername)
 	printf("(db unversioned)\n");
 }
 
+/* Retrieve the list of dependencies for a ELF file. */
+ElfFile **
+get_dt_needed(ElfFile *file)
+{
+  int i, size;
+  ElfFile **results = NULL;
+  char *symbol_str;
+  char needed_fn[PATH_MAX];
+
+  for (i = 0; i < file->numdynents; i++) {
+    /* Skip all symbols except DT_NEEDED. */
+    if (file->dyns[i].d_tag != DT_NEEDED)
+      continue;
+
+    /* Find the library referenced in the symbol. */
+    symbol_str = ElfGetStringIndex(file, file->dyns[i].d_un.d_val, 
+                                   file->dynhdr->sh_link);
+    find_elf_file(symbol_str, needed_fn, PATH_MAX);
+
+    if (access(needed_fn, R_OK) != 0)
+      continue;
+
+    /* Open the library, and add it to the results. */
+    if (results != NULL) {
+      for (size = 0; results[size] != NULL; size++) ;
+      results = (ElfFile **) realloc(results, sizeof(ElfFile *) * (size + 2));
+    } else {
+      size = 0;
+      results = (ElfFile **) malloc(sizeof(ElfFile *) * 2);
+    }
+
+    if (results == NULL) {
+      perror("error finding dependency");
+      exit(1);
+    }
+
+    results[size] = OpenElfFile(needed_fn);
+    results[size + 1] = NULL;
+
+    init_elf_file(results[size]);
+  }
+
+  return results;
+}
+
+/* Free DT_NEEDED file lists returned by get_dt_needed() */
+void
+free_dt_needed(ElfFile **needed)
+{
+  int index;
+
+  if (needed != NULL) {
+    for (index = 0; needed[index] != NULL; index++) {
+      CloseElfFile(needed[index]);
+    }
+
+    free(needed);
+  }
+}
+
 /* Returns 1 on match, 0 otherwise */
 int
 check_symbol(ElfFile *file, struct versym *entry)
@@ -312,7 +419,10 @@ check_symbol(ElfFile *file, struct versym *entry)
   int i, j;
   char *symbol_name;
   int foundit=0;
+  int checkedit=0;
   int pendingerr=0;
+  static ElfFile **checked_files = NULL;
+  ElfFile **needed_files;
 
   /* See if this symbol is in the dynsym section of the library */
 
@@ -460,6 +570,61 @@ check_symbol(ElfFile *file, struct versym *entry)
     }
   }
 
+  /* if not in this library, check its deps */
+  if (!foundit && !pendingerr && (needed_files != NULL)) {
+    needed_files = get_dt_needed(file);
+    if (needed_files != NULL) {
+      for (i = 0; needed_files[i] != NULL; i++) {
+        /* Make sure we haven't checked this one before. */
+        checkedit = 0;
+        if (checked_files != NULL) {
+          for (j = 0; checked_files[j] != NULL; j++) {
+            if (needed_files[i] == checked_files[j]) {
+              checkedit = 1;
+              break;
+            }
+          }
+        }
+
+        if (checkedit)
+          continue;
+
+        /* Add the current library to the list of the already-checked. */
+        if (checked_files != NULL) {
+          for (j = 0; checked_files[j] != NULL; j++) ;
+          checked_files =
+            (ElfFile **) realloc(checked_files, sizeof(ElfFile *) * (j + 2));
+        } else {
+          j = 0;
+          checked_files = (ElfFile **) malloc(sizeof(ElfFile *) * 2);
+        }
+
+        if (checked_files == NULL) {
+          perror("error checking dependency");
+          exit(1);
+        }
+
+        checked_files[j] = file;
+        checked_files[j + 1] = NULL;
+
+        /* Look for the symbol in the dep. */
+        foundit = check_symbol(needed_files[i], entry);
+
+        /* Clean up. */
+        if (j == 0) {
+          free(checked_files);
+          checked_files = NULL;
+        }
+
+        /* Stop if we've found what we're looking for. */
+        if (foundit)
+          break;
+      }
+
+      free_dt_needed(needed_files);
+    }
+  }
+
 
   /* check for possible error saved from above */
   if (!foundit && pendingerr) {
@@ -598,26 +763,8 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
   snprintf(tmp_string, TMP_STRING_SIZE, "Looking for library %s", libname);
   tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, tmp_string);
 
-  if (libname[0] != '/') {
-    /* Find the library */
-    for (i=0; i<library_path_count; i++) {
-      if (strcmp(libname, library_paths[i].library) == 0) {
-	snprintf(tmp_string, TMP_STRING_SIZE, "Found match for %s as %s",
-	         library_paths[i].library, library_paths[i].fullpath);
-	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-	                   0, 0, 0, tmp_string);
-	file = OpenElfFile(library_paths[i].fullpath);
-	strncpy(filename, library_paths[i].fullpath, PATH_MAX);
-	break;
-      }
-    }
-  } else {
-    /* absolute path given so we don't do a search through the library paths */
-    strncpy(filename, libname, PATH_MAX);
-    if (access(filename,R_OK) == 0) {
-      file=OpenElfFile(filename);
-    }
-  }
+  find_elf_file(libname, filename, PATH_MAX);
+  file = OpenElfFile(filename);
 
   if(file==NULL) {
     snprintf(tmp_string, TMP_STRING_SIZE, "Unable to find library %s",
