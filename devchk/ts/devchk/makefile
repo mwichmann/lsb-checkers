@@ -140,6 +140,7 @@ OBJS = hdrchk.o \
 	sys_shm_h.o \
 	sys_socket_h.o \
 	sys_stat_h.o \
+	sys_statfs_h.o \
 	sys_statvfs_h.o \
 	sys_time_h.o \
 	sys_timeb_h.o \
