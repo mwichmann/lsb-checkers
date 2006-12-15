@@ -40536,6 +40536,9 @@ const char *__Y15QDragEnterEvent_vtable_name_1 [] = {
 #if __s390x__
 	"_ZThn16_N15QDragEnterEventD1Ev",
 #endif
+#if __i386__
+	"_ZThn12_N15QDragEnterEventD0Ev",
+#endif
 #if __ia64__
 	"_ZThn16_N15QDragEnterEventD0Ev",
 #endif
@@ -40555,31 +40558,25 @@ const char *__Y15QDragEnterEvent_vtable_name_1 [] = {
 	"_ZThn16_N15QDragEnterEventD0Ev",
 #endif
 #if __i386__
-	"_ZThn12_N15QDragEnterEventD0Ev",
+	"_ZThn12_NK10QDropEvent6formatEi",
 #endif
 #if __ia64__
 	"_ZThn16_NK10QDropEvent6formatEi",
 #endif
-#if __x86_64__
+#if __powerpc__ && !__powerpc64__
+	"_ZThn12_NK10QDropEvent6formatEi",
+#endif
+#if __powerpc64__
 	"_ZThn16_NK10QDropEvent6formatEi",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn12_NK10QDropEvent6formatEi",
 #endif
-#if __powerpc64__
+#if __x86_64__
 	"_ZThn16_NK10QDropEvent6formatEi",
-#endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn12_NK10QDropEvent6formatEi",
-#endif
-#if __i386__
-	"_ZThn12_NK10QDropEvent6formatEi",
 #endif
 #if __s390x__
 	"_ZThn16_NK10QDropEvent6formatEi",
-#endif
-#if __powerpc64__
-	"_ZThn16_NK10QDropEvent8providesEPKc",
 #endif
 #if __i386__
 	"_ZThn12_NK10QDropEvent8providesEPKc",
@@ -40589,6 +40586,9 @@ const char *__Y15QDragEnterEvent_vtable_name_1 [] = {
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn12_NK10QDropEvent8providesEPKc",
+#endif
+#if __powerpc64__
+	"_ZThn16_NK10QDropEvent8providesEPKc",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn12_NK10QDropEvent8providesEPKc",
@@ -41222,9 +41222,6 @@ const char *__Y14QDragMoveEvent_vtable_name_1 [] = {
 #if __s390x__
 	"_ZThn16_N14QDragMoveEventD1Ev",
 #endif
-#if __i386__
-	"_ZThn12_N14QDragMoveEventD0Ev",
-#endif
 #if __ia64__
 	"_ZThn16_N14QDragMoveEventD0Ev",
 #endif
@@ -41244,25 +41241,31 @@ const char *__Y14QDragMoveEvent_vtable_name_1 [] = {
 	"_ZThn16_N14QDragMoveEventD0Ev",
 #endif
 #if __i386__
-	"_ZThn12_NK10QDropEvent6formatEi",
+	"_ZThn12_N14QDragMoveEventD0Ev",
 #endif
 #if __ia64__
 	"_ZThn16_NK10QDropEvent6formatEi",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn12_NK10QDropEvent6formatEi",
-#endif
-#if __powerpc64__
+#if __x86_64__
 	"_ZThn16_NK10QDropEvent6formatEi",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn12_NK10QDropEvent6formatEi",
 #endif
-#if __x86_64__
+#if __powerpc64__
 	"_ZThn16_NK10QDropEvent6formatEi",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZThn12_NK10QDropEvent6formatEi",
+#endif
+#if __i386__
+	"_ZThn12_NK10QDropEvent6formatEi",
 #endif
 #if __s390x__
 	"_ZThn16_NK10QDropEvent6formatEi",
+#endif
+#if __powerpc64__
+	"_ZThn16_NK10QDropEvent8providesEPKc",
 #endif
 #if __i386__
 	"_ZThn12_NK10QDropEvent8providesEPKc",
@@ -41272,9 +41275,6 @@ const char *__Y14QDragMoveEvent_vtable_name_1 [] = {
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn12_NK10QDropEvent8providesEPKc",
-#endif
-#if __powerpc64__
-	"_ZThn16_NK10QDropEvent8providesEPKc",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn12_NK10QDropEvent8providesEPKc",
@@ -41480,9 +41480,6 @@ const char *__Y10QDropEvent_vtable_name_1 [] = {
 #if __s390x__
 	"_ZThn16_N10QDropEventD1Ev",
 #endif
-#if __i386__
-	"_ZThn12_N10QDropEventD0Ev",
-#endif
 #if __ia64__
 	"_ZThn16_N10QDropEventD0Ev",
 #endif
@@ -41502,25 +41499,31 @@ const char *__Y10QDropEvent_vtable_name_1 [] = {
 	"_ZThn16_N10QDropEventD0Ev",
 #endif
 #if __i386__
-	"_ZThn12_NK10QDropEvent6formatEi",
+	"_ZThn12_N10QDropEventD0Ev",
 #endif
 #if __ia64__
 	"_ZThn16_NK10QDropEvent6formatEi",
 #endif
-#if __powerpc__ && !__powerpc64__
-	"_ZThn12_NK10QDropEvent6formatEi",
-#endif
-#if __powerpc64__
+#if __x86_64__
 	"_ZThn16_NK10QDropEvent6formatEi",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn12_NK10QDropEvent6formatEi",
 #endif
-#if __x86_64__
+#if __powerpc64__
 	"_ZThn16_NK10QDropEvent6formatEi",
+#endif
+#if __powerpc__ && !__powerpc64__
+	"_ZThn12_NK10QDropEvent6formatEi",
+#endif
+#if __i386__
+	"_ZThn12_NK10QDropEvent6formatEi",
 #endif
 #if __s390x__
 	"_ZThn16_NK10QDropEvent6formatEi",
+#endif
+#if __powerpc64__
+	"_ZThn16_NK10QDropEvent8providesEPKc",
 #endif
 #if __i386__
 	"_ZThn12_NK10QDropEvent8providesEPKc",
@@ -41530,9 +41533,6 @@ const char *__Y10QDropEvent_vtable_name_1 [] = {
 #endif
 #if __powerpc__ && !__powerpc64__
 	"_ZThn12_NK10QDropEvent8providesEPKc",
-#endif
-#if __powerpc64__
-	"_ZThn16_NK10QDropEvent8providesEPKc",
 #endif
 #if __s390__ && !__s390x__
 	"_ZThn12_NK10QDropEvent8providesEPKc",

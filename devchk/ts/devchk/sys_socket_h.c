@@ -720,6 +720,16 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef SIOCGIFNAME
+	CompareConstant(SIOCGIFNAME,0x8910,3380,architecture)
+#else
+Msg( "Error: Constant not found: SIOCGIFNAME\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef SIOCGIFCONF
 	CompareConstant(SIOCGIFCONF,0x8912,3382,architecture)
 #else
@@ -750,10 +760,50 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef SIOCGIFDSTADDR
+	CompareConstant(SIOCGIFDSTADDR,0x8917,3387,architecture)
+#else
+Msg( "Error: Constant not found: SIOCGIFDSTADDR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SIOCGIFBRDADDR
+	CompareConstant(SIOCGIFBRDADDR,0x8919,3389,architecture)
+#else
+Msg( "Error: Constant not found: SIOCGIFBRDADDR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef SIOCGIFNETMASK
 	CompareConstant(SIOCGIFNETMASK,0x891b,3391,architecture)
 #else
 Msg( "Error: Constant not found: SIOCGIFNETMASK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SIOCGIFMTU
+	CompareConstant(SIOCGIFMTU,0x8921,3397,architecture)
+#else
+Msg( "Error: Constant not found: SIOCGIFMTU\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SIOCGIFHWADDR
+	CompareConstant(SIOCGIFHWADDR,0x8927,3403,architecture)
+#else
+Msg( "Error: Constant not found: SIOCGIFHWADDR\n");
 cnt++;
 #endif
 
