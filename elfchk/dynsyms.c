@@ -56308,6 +56308,48 @@ struct versym DynSyms[] = {
 	{"fsetpos64","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __i386__
+	{"fstatfs","GLIBC_2.0",0,LSB_Core},
+#endif
+#if __ia64__
+	{"fstatfs","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"fstatfs","GLIBC_2.0",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"fstatfs","GLIBC_2.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"fstatfs","GLIBC_2.0",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"fstatfs","GLIBC_2.2.5",0,LSB_Core},
+#endif
+#if __s390x__
+	{"fstatfs","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __i386__
+	{"fstatfs64","GLIBC_2.1",0,LSB_Core},
+#endif
+#if __ia64__
+	{"fstatfs64","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"fstatfs64","GLIBC_2.1",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"fstatfs64","GLIBC_2.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"fstatfs64","GLIBC_2.1",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"fstatfs64","GLIBC_2.2.5",0,LSB_Core},
+#endif
+#if __s390x__
+	{"fstatfs64","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __i386__
 	{"fstatvfs","GLIBC_2.1",0,LSB_Core},
 #endif
 #if __ia64__
@@ -73729,6 +73771,48 @@ struct versym DynSyms[] = {
 	{"standend","",0,LSB_Core},
 	{"standout","",0,LSB_Core},
 	{"start_color","",0,LSB_Core},
+#if __i386__
+	{"statfs","GLIBC_2.0",0,LSB_Core},
+#endif
+#if __ia64__
+	{"statfs","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"statfs","GLIBC_2.0",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"statfs","GLIBC_2.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"statfs","GLIBC_2.0",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"statfs","GLIBC_2.2.5",0,LSB_Core},
+#endif
+#if __s390x__
+	{"statfs","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __i386__
+	{"statfs64","GLIBC_2.1",0,LSB_Core},
+#endif
+#if __ia64__
+	{"statfs64","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"statfs64","GLIBC_2.1",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"statfs64","GLIBC_2.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"statfs64","GLIBC_2.1",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"statfs64","GLIBC_2.2.5",0,LSB_Core},
+#endif
+#if __s390x__
+	{"statfs64","GLIBC_2.2",0,LSB_Core},
+#endif
 	{"static_QUType_Null","",0,LSB_Toolkit_Qt3},
 	{"static_QUType_QString","",0,LSB_Toolkit_Qt3},
 	{"static_QUType_QVariant","",0,LSB_Toolkit_Qt3},
