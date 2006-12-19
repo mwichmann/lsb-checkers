@@ -1,18 +1,28 @@
 CFLAGS=-g -Wall -I../tetj
 
-OBJS=dynsyms.o dynamic.o dyntags.o dtneeded.o elfchk.o hdr.o proghdr.o \
-	sectinfo.o sections.o symvers.o util.o proginterp.o progbits.o \
-	note.o dumpbytes.o dwarf.o secttype.o modules.o
-GENSRCS=dynsyms.c dtneeded.c sectinfo.c secttype.c dyntags.c dynsyms.c.chk modules.h modules.c
+OBJS=dynamic.o elfchk.o hdr.o proghdr.o sections.o symvers.o util.o \
+	proginterp.o progbits.o note.o dumpbytes.o dwarf.o
+GENSRCS=dynsyms.c dtneeded.c sectinfo.c secttype.c dyntags.c modules.c
+GENOBJS=$(shell echo $(GENSRCS) | sed s/\\.c/.o/g)
 LIBS= ../tetj/libtetj.a
 LIB=libelfchk.a
 
-all: modules.c $(LIB) test
+CFLAGS_APPCHK=-include appchk_untetj.h
+OBJS_APPCHK=$(shell echo $(OBJS) | perl -pe 's/(\S+)\.o/\1_appchk.o/g')
+LIB_APPCHK=libelfchk_appchk.a
+
+all: modules.c $(LIB) $(LIB_APPCHK) test
 
 install:
 
-$(LIB): $(OBJS)
-	rm -f $(LIB);ar clq $(LIB) $(OBJS)
+%_appchk.o: %.c
+	$(CC) $(CFLAGS) $(CFLAGS_APPCHK) -c -o $@ $<
+
+$(LIB): $(OBJS) $(GENOBJS)
+	rm -f $(LIB);ar clq $(LIB) $(OBJS) $(GENOBJS)
+
+$(LIB_APPCHK): $(OBJS_APPCHK)
+	rm -f $(LIB_APPCHK);ar clq $(LIB_APPCHK) $(OBJS_APPCHK)
 
 test: test.c $(LIB) $(LIBS)
 	cc -o test $(CFLAGS) test.c $(LIB) $(LIBS)
@@ -39,10 +49,10 @@ secttype.c:
 	./mksecttype >secttype.c
 
 clean:
-	rm -f $(OBJS) $(LIB) test
+	rm -f $(OBJS) $(GENOBJS) $(LIB) $(OBJS_APPCHK) $(LIB_APPCHK) test
 
 distclean: clean
-	rm -f $(GENSRCS)
+	rm -f $(GENSRCS) dynsyms.c.chk modules.h
 
 modules.c modules.h: dump_modules
 	./dump_modules

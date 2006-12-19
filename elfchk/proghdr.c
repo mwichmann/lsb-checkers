@@ -209,7 +209,6 @@ checkPT_INTERP(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
           file->addr+hdr->p_offset);
   tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 					 0, 0, 0, tmp_string);
-  fprintf(stderr, "%s\n", tmp_string);
   tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
   return -1;
@@ -550,8 +549,6 @@ for(i=0;i<numProgHeaders;i++){
 				index, Headers[i].name );
 			break;
 		case -1: /* Fail */
-			fprintf( stderr, "Header[%2d] %-15.15s Failed\n",
-				index, Headers[i].name );
 			break;
 			}
 		break;  /* Found it. Don't need to look any further */
