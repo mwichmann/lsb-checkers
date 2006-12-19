@@ -14,6 +14,7 @@
 #include "../fhschk/fhschk.h"
 #include "elfchk.h"
 #include "rpmchk.h"
+#include "../appchk/output.h"
 
 /* modules to check against.  */
 int modules = LSB_Desktop_Modules;	// default to all modules in cert program
@@ -58,7 +59,6 @@ int
 main(int argc, char *argv[])
 {
   const char	*ptr;
-  struct tetj_handle *journal;
   char *command_line = NULL;
   int i;
 #define TMP_STRING_SIZE (PATH_MAX+20)
@@ -195,6 +195,7 @@ main(int argc, char *argv[])
     printf("Use -j JOURNAL to specify an alternate location for the journal file\n");
     exit(1);
   }
+  do_journal = 1;
 
   /*
    * new journal standard requires arch in the
