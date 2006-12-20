@@ -6,6 +6,8 @@ LIBS=../rpmchk/librpmchk.a ../appchk/libappchk.a ../elfchk/libelfchk.a ../tetj/l
 
 all: archk
 
+include ../Makefile.common
+
 archk: $(OBJS) $(LIBS)
 	$(CC) $(CFLAGS) -o archk $(OBJS) $(LIBS)
 

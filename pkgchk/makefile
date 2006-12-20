@@ -6,6 +6,8 @@ LIB=../rpmchk/librpmchk.a ../appchk/libappchk.a ../elfchk/libelfchk.a ../tetj/li
 
 all: pkgchk
 
+include ../Makefile.common
+
 pkgchk: $(OBJS) $(LIB)
 	$(CC) $(CFLAGS) -o pkgchk $(OBJS) $(LIB) -lz
 
