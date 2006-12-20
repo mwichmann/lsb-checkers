@@ -1,0 +1,23 @@
+# Makefile.common for LSB misc-test build.
+# Copyright 2006 Free Standards Group.
+
+# This is intended to be included by the other makefiles in the
+# misc-test subprojects.  The idea is to provide rules for building
+# the requisite parts for each subproject without having to explicitly
+# go and build them separately.  For example, building libchk will
+# cause libelfchk and libtetj to be built.
+
+../tetj/libtetj.a:
+	cd ../tetj && $(MAKE)
+
+../fhschk/libfhschk.a:
+	cd ../fhschk && $(MAKE)
+
+../elfchk/libelfchk.a:
+	cd ../elfchk && $(MAKE)
+
+../appchk/libappchk.a:
+	cd ../appchk && $(MAKE) libappchk.a
+
+../rpmchk/librpmchk.a:
+	cd ../rpmchk && $(MAKE) librpmchk.a

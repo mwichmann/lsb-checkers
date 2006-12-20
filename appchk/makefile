@@ -8,6 +8,8 @@ LIB=libappchk.a
 
 all: $(LIB) appchk
 
+include ../Makefile.common
+
 $(LIB): $(OBJS)
 	rm -f $(LIB); ar clq $(LIB) $(OBJS)
 
