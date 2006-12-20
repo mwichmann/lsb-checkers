@@ -7,8 +7,17 @@
 # go and build them separately.  For example, building libchk will
 # cause libelfchk and libtetj to be built.
 
-../elfchk/libelfchk.a: ../tetj/libtetj.a
-	cd ../elfchk && $(MAKE)
-
 ../tetj/libtetj.a:
 	cd ../tetj && $(MAKE)
+
+../fhschk/libfhschk.a:
+	cd ../fhschk && $(MAKE)
+
+../elfchk/libelfchk.a:
+	cd ../elfchk && $(MAKE)
+
+../appchk/libappchk.a:
+	cd ../appchk && $(MAKE) libappchk.a
+
+../rpmchk/librpmchk.a:
+	cd ../rpmchk && $(MAKE) librpmchk.a
