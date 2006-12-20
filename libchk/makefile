@@ -8,6 +8,8 @@ CFLAGS=-g -I../elfchk -I../tetj -DUSE_CXXABI_DEMANGLE -DLSBVERSION=\"$$LSBVERSIO
 
 all:: libchk dummy_link
 
+include ../Makefile.common
+
 libchk: $(OBJS) ../elfchk/libelfchk.a ../tetj/libtetj.a
 	$(CC) $(CFLAGS) -o libchk $(OBJS) -L../elfchk -L ../tetj -lelfchk -ltetj -lstdc++ -ldl
 
