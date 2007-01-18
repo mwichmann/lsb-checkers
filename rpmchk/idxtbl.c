@@ -11,7 +11,7 @@ RpmIdxTagFuncRec SigTags[] = {
 {RPMSIGTAG_PAYLOADSIZE,	"RPMSIGTAG_PAYLOADSIZE",	INT32,	1,	checkRpmIdxPAYLOADSIZE,	Optional,	NotSeen},
 {RPMSIGTAG_SHA1,	"RPMSIGTAG_SHA1",	STRING,	1,	checkRpmIdxSHA1,	Optional,	NotSeen},
 {RPMSIGTAG_MD5,	"RPMSIGTAG_MD5",	BIN,	16,	checkRpmIdxMD5,	Required,	NotSeen},
-{RPMSIGTAG_DSA,	"RPMSIGTAG_DSA",	BIN,	1,	checkRpmIdxDSA,	Optional,	NotSeen},
+{RPMSIGTAG_DSA,	"RPMSIGTAG_DSA",	BIN,	65,	checkRpmIdxDSA,	Optional,	NotSeen},
 {RPMSIGTAG_RSA,	"RPMSIGTAG_RSA",	BIN,	1,	checkRpmIdxRSA,	Optional,	NotSeen},
 {RPMSIGTAG_PGP,	"RPMSIGTAG_PGP",	BIN,	1,	checkRpmIdxPGP,	Optional,	NotSeen},
 {RPMSIGTAG_GPG,	"RPMSIGTAG_GPG",	BIN,	65,	checkRpmIdxGPG,	Optional,	NotSeen},
