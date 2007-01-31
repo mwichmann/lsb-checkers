@@ -85,6 +85,9 @@ class Journal:
         self.journalfile.writelines(self.journal)
         self.journalfile.close()
 
+    def config_start(self):
+        self.journal.append("20||Config Start\n")
+
     def add_config(self, message):
         self.journal.append("30||%s\n" % message)
 
