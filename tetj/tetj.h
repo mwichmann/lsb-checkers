@@ -60,6 +60,9 @@ int tetj_start_journal(const char *pathname, struct tetj_handle **handle,
 /* Close journal */
 int tetj_close_journal(struct tetj_handle *handle);
 
+/* Start of config information */
+void tetj_config_start(struct tetj_handle *handle);
+
 /* Add Config information */
 void tetj_add_config(struct tetj_handle *handle, char *message);
 
