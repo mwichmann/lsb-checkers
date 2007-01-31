@@ -61,8 +61,10 @@ Any configuration information describing parameters
 that affect the execution of the test is recorded with
 one or more calls to the 
 .I tetj_add_config
-function; the end of this block of header information
-is signaled with a call to the
+function;  this block of header information should
+be preceded by a call to the
+.I tetj_config_start
+function and followed by a call to the
 .I tetj_config_end
 function.
 .PP
@@ -170,6 +172,7 @@ enum testcase_results { ... };
 int tetj_start_journal(const char *pathname, struct tetj_handle **handle,
                        char *command_run);
 int tetj_close_journal(struct tetj_handle *handle);
+void tetj_config_start(struct tetj_handle *handle);
 void tetj_add_config(struct tetj_handle *handle, char *message);
 void tetj_config_end(struct tetj_handle *handle);
 void tetj_scenario_info(struct tetj_handle *handle, char *message);

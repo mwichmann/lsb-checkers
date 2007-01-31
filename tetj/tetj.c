@@ -151,6 +151,13 @@ int tetj_close_journal(struct tetj_handle *handle)
   }
 }
 
+void tetj_config_start(struct tetj_handle *handle)
+{
+  if (handle) {
+    fprintf(handle->journal, "20||Config Start\n");
+  }
+}
+
 void tetj_add_config(struct tetj_handle *handle, char *message)
 {
   if (handle) {
