@@ -952,8 +952,8 @@ usage(char *progname)
 "  -h, --help                     show this help message and exit\n"
 "  -v, --version                  show version and LSB version\n"
 "  -n, --nojournal                do not write a journal file\n"
-//"  -T, --lsb-product=[core|desktop]\n"
-//"                                 target product to load modules for\n"
+"  -T, --lsb-product=[core|desktop]\n"
+"                                 target product to load modules for\n"
 "  -M MODULE, --module=MODULE     check only the libraries found in MODULE\n"
 "  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n",
 progname);
@@ -1018,10 +1018,9 @@ main(int argc, char *argv[])
 	snprintf(journal_filename, TMP_STRING_SIZE, "/dev/null");
 	break;
       case 'T':
-#if 0
 	/* Ignore -T completely for LSB 3.1 */
 	if(strcasecmp(optarg, "core") == 0)
-	  module |= LSB_Core_Modules;
+	  module = LSB_Core_Modules;
 	else if(strcasecmp(optarg, "desktop") == 0)
 	  module |= LSB_Desktop_Modules;
 	else if(strcasecmp(optarg, "all") == 0)
@@ -1031,7 +1030,6 @@ main(int argc, char *argv[])
 	  usage(argv[0]);
 	  exit(1);
 	}
-#endif
 	break;
       case 'M':
 	module |= getmoduleval(optarg);
