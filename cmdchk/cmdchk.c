@@ -217,15 +217,15 @@ int main(int argc, char *argv[])
 	    strcpy(prefix, optarg);
 	    break;
 	case 'T':
-/* Ignore -T completely for LSB 3.1
-	    if(strcasecmp(optarg, "desktop") == 0 || strcasecmp(optarg, "all") == 0) 
+	    if (strcasecmp(optarg, "core") == 0) {
+		desktop_mode = 0;
+	    } else if (strcasecmp(optarg, "desktop") == 0 || strcasecmp(optarg, "all") == 0) {
 		desktop_mode = 1;
-	    else if (strcasecmp(optarg, "core") != 0) {
+	    } else { 
 		fprintf(stderr, "--lsb-product arg must be one of [core|desktop]\n");
 		usage(argv[0]);
 		exit(1);
 	    }
-*/
 	    break;
 	default:
 	    usage(argv[0]);
