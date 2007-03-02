@@ -952,7 +952,7 @@ usage(char *progname)
 "  -h, --help                     show this help message and exit\n"
 "  -v, --version                  show version and LSB version\n"
 "  -n, --nojournal                do not write a journal file\n"
-"  -T, --lsb-product=[core|desktop]\n"
+"  -T, --lsb-product=[core,c++|core,c++,desktop]\n"
 "                                 target product to load modules for\n"
 "  -M MODULE, --module=MODULE     check only the libraries found in MODULE\n"
 "  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n",
@@ -1018,10 +1018,9 @@ main(int argc, char *argv[])
 	snprintf(journal_filename, TMP_STRING_SIZE, "/dev/null");
 	break;
       case 'T':
-	/* Ignore -T completely for LSB 3.1 */
-	if(strcasecmp(optarg, "core") == 0)
+	if(strcasecmp(optarg, "core,c++") == 0)
 	  module = LSB_Core_Modules;
-	else if(strcasecmp(optarg, "desktop") == 0)
+	else if(strcasecmp(optarg, "core,c++,desktop") == 0)
 	  module |= LSB_Desktop_Modules;
 	else if(strcasecmp(optarg, "all") == 0)
 	  module |= LSB_All_Modules;
