@@ -29,8 +29,8 @@ usage(char *progname)
 "  -L LANANANAME, --lanana=LANANANAME\n"
 "                                 use LANANANAME as package or provider name\n"
 "  -t                             check LSB conformance of payload files\n"
-//"  -T [core|desktop], --lsb-product [core|desktop]\n"
-//"                                 target either core or desktop spec for tests\n" 
+"  -T [core,c++|core,c++,desktop], --lsb-product [core,c++|core,c++,desktop]\n"
+"                                 target either core,c++ or core,c++,desktop spec for tests\n" 
 "  -M MODULE, --module=MODULE     add MODULE to list of checked modules\n"
 "  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n"
 "  -d DEPENDENCY, --dependency=DEPENDENCY\n"
@@ -126,20 +126,15 @@ main(int argc, char *argv[])
         check_app = 1;
         break;
       case 'T':
-/* Ignore -T completely for LSB 3.1
-	if(strcasecmp(optarg, "desktop") == 0 || strcasecmp(optarg, "all") == 0)
-	{
+	if(strcasecmp(optarg, "core,c++") == 0)
+	    modules = LSB_Core | LSB_Cpp;
+	else if(strcasecmp(optarg, "core,c++,desktop") == 0 || strcasecmp(optarg, "all") == 0)
 	    modules = LSB_All_Modules;
-	    is_desktop = 1;
-	    is_graphics = 1;
-	}
-	else if (strcasecmp(optarg, "core") != 0) {
-	    fprintf(stderr, "error: product must be either core or desktop\n");
+	else {
+	    fprintf(stderr, "error: product must be either core,c++ or core,c++,desktop\n");
 	    usage(argv[0]);
 	    exit(EXIT_FAILURE);
-	} else
-	    modules = LSB_Core | LSB_Graphics | LSB_Cpp;
-*/
+	} 
 	break;
       case 'M':
 	modules |= getmoduleval(optarg);

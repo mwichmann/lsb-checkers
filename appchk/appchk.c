@@ -88,8 +88,8 @@ usage(char *progname)
 "  -j, --journal                  write a journal file\n"
 "  -n, --no-journal               do not write a journal file\n"
 "  -s, --missing-symbols          report only on missing symbols\n"
-//"  -T, --lsb-product=[core|desktop]\n"
-//"                                 target product to load modules for\n"
+"  -T, --lsb-product=[core,c++|core,c++,desktop]\n"
+"                                 target product to load modules for\n"
 "  -M MODULE, --module=MODULE     add MODULE to list of checked modules\n"
 "  -L LIB                         add LIB to list of checked libraries\n"
 "  -D DIR[:DIR...], --shared-libpath=DIR[:DIR...]\n"
@@ -184,17 +184,15 @@ main(int argc, char *argv[])
 		     LSBAPPCHK_VERSION, LSBVERSION);
 	      break;
 	   case 'T':
-/* Ignore -T completely for LSB 3.1
-	      if(strcasecmp(optarg, "core") == 0)
-		modules = LSB_Core | LSB_Graphics | LSB_Cpp;
-	      else if(strcasecmp(optarg, "desktop") == 0 || strcasecmp(optarg, "all") == 0)
+	      if(strcasecmp(optarg, "core,c++") == 0)
+		modules = LSB_Core | LSB_Cpp;
+	      else if(strcasecmp(optarg, "core,c++,desktop") == 0 || strcasecmp(optarg, "all") == 0)
 		modules = LSB_All_Modules;
 	      else {
 		printf("product '%s' is not valid!\n", optarg);
 		usage(argv[0]);
 		exit(1);
 	      }
-*/
 	      break;
 	  case 'M':
 	      modules |= getmoduleval(optarg);
