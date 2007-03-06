@@ -383,7 +383,11 @@ void output_report_missing_symbol(const char *symbol)
 
     s1->next = NULL;
 
-    s1->testcase = strdup(current_testcase);
+    if (current_testcase == NULL) {
+        s1->testcase = NULL;
+    } else {
+        s1->testcase = strdup(current_testcase);
+    }
     s1->symbol = strdup(symbol);
     if ((s1->testcase == NULL) || (s1->symbol == NULL)) {
         if (s1->testcase != NULL) free(s1->testcase);
