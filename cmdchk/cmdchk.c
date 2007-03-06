@@ -149,8 +149,8 @@ void usage(char *progname)
 	   "  -n, --nojournal                do not write a journal file\n"
 	   "  -j JOURNAL, --version=JOURNAL  use JOURNAL as file/path for journal file\n"
 	   "  -p PREFIX, --prefix=PREFIX     prefix to append to all paths\n",
-//	   "  -T [core|desktop], --lsb-product [core|desktop]\n"
-//	   "                                 Lsb product/spec to target\n",
+	   "  -T [core,c++|core,c++,desktop], --lsb-product [core|desktop]\n"
+	   "                                 Lsb product/spec to target\n",
     progname);
 }
 
@@ -217,15 +217,15 @@ int main(int argc, char *argv[])
 	    strcpy(prefix, optarg);
 	    break;
 	case 'T':
-/* Ignore -T completely for LSB 3.1
-	    if(strcasecmp(optarg, "desktop") == 0 || strcasecmp(optarg, "all") == 0) 
+	    if (strcasecmp(optarg, "core,c++") == 0) {
+		desktop_mode = 0;
+	    } else if (strcasecmp(optarg, "core,c++,desktop") == 0 || strcasecmp(optarg, "all") == 0) {
 		desktop_mode = 1;
-	    else if (strcasecmp(optarg, "core") != 0) {
-		fprintf(stderr, "--lsb-product arg must be one of [core|desktop]\n");
+	    } else { 
+		fprintf(stderr, "--lsb-product arg must be one of [core,c++|core,c++,desktop]\n");
 		usage(argv[0]);
 		exit(1);
 	    }
-*/
 	    break;
 	default:
 	    usage(argv[0]);
