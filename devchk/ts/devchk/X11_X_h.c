@@ -396,6 +396,16 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef OwnerGrabButtonMask
+	CompareConstant(OwnerGrabButtonMask,(1L<<24),2008,architecture)
+#else
+Msg( "Error: Constant not found: OwnerGrabButtonMask\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef KeyPress
 	CompareConstant(KeyPress,2,2009,architecture)
 #else
@@ -2140,6 +2150,16 @@ cnt++;
 	CompareConstant(BottomIf,3,2183,architecture)
 #else
 Msg( "Error: Constant not found: BottomIf\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef Opposite
+	CompareConstant(Opposite,4,2184,architecture)
+#else
+Msg( "Error: Constant not found: Opposite\n");
 cnt++;
 #endif
 

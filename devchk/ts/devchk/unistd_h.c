@@ -1609,6 +1609,16 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef _SC_IPV6
+	CompareConstant(_SC_IPV6,235,5214,architecture)
+#else
+Msg( "Error: Constant not found: _SC_IPV6\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef _SC_LOGIN_NAME_MAX
 	CompareConstant(_SC_LOGIN_NAME_MAX,71,5215,architecture)
 #else
@@ -1623,6 +1633,16 @@ cnt++;
 	CompareConstant(_SC_MONOTONIC_CLOCK,149,5216,architecture)
 #else
 Msg( "Error: Constant not found: _SC_MONOTONIC_CLOCK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_RAW_SOCKETS
+	CompareConstant(_SC_RAW_SOCKETS,236,5218,architecture)
+#else
+Msg( "Error: Constant not found: _SC_RAW_SOCKETS\n");
 cnt++;
 #endif
 
@@ -1843,6 +1863,16 @@ cnt++;
 	CompareConstant(_SC_V6_LPBIG_OFFBIG,179,5246,architecture)
 #else
 Msg( "Error: Constant not found: _SC_V6_LPBIG_OFFBIG\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_2_PBS
+	CompareConstant(_SC_2_PBS,168,9495,architecture)
+#else
+Msg( "Error: Constant not found: _SC_2_PBS\n");
 cnt++;
 #endif
 
