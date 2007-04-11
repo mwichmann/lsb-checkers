@@ -580,6 +580,16 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef _SCROLLWIN
+	CompareConstant(_SCROLLWIN,0x08,2582,architecture)
+#else
+Msg( "Error: Constant not found: _SCROLLWIN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef _ISPAD
 	CompareConstant(_ISPAD,0x10,2583,architecture)
 #else

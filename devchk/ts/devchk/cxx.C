@@ -41,6 +41,2398 @@ int pcnt=0;
 #endif
 
 printf("Checking C++ types\n");
+#if 0
+#define TYPE QBoxLayout
+CheckTypeSize(TYPE,,16285,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16285,0);
+#endif
+
+#if 0
+#define TYPE QClipboard
+CheckTypeSize(TYPE,,16388,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16388,0);
+#endif
+
+#if 0
+#define TYPE QColorDrag
+CheckTypeSize(TYPE,,16329,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16329,0);
+#endif
+
+#if 0
+#define TYPE QDataTable
+CheckTypeSize(TYPE,,16400,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16400,0);
+#endif
+
+#if 0
+#define TYPE QDomEntity
+CheckTypeSize(TYPE,,16363,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16363,0);
+#endif
+
+#if 0
+#define TYPE QDropEvent
+CheckTypeSize(TYPE,,16403,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16403,0);
+#endif
+
+#if 0
+#define TYPE QEventLoop
+CheckTypeSize(TYPE,,16415,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16415,0);
+#endif
+
+#if 0
+#define TYPE QHGroupBox
+CheckTypeSize(TYPE,,16314,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16314,0);
+#endif
+
+#if 0
+#define TYPE QHideEvent
+CheckTypeSize(TYPE,,16428,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16428,0);
+#endif
+
+#if 0
+#define TYPE QImageDrag
+CheckTypeSize(TYPE,,16270,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16270,0);
+#endif
+
+#if 0
+#define TYPE QLCDNumber
+CheckTypeSize(TYPE,,16281,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16281,0);
+#endif
+
+#if 0
+#define TYPE QMoveEvent
+CheckTypeSize(TYPE,,16538,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16538,0);
+#endif
+
+#if 0
+#define TYPE QPopupMenu
+CheckTypeSize(TYPE,,16269,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16269,0);
+#endif
+
+#if 0
+#define TYPE QScrollBar
+CheckTypeSize(TYPE,,16341,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16341,0);
+#endif
+
+#if 0
+#define TYPE QSemaphore
+CheckTypeSize(TYPE,,16384,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16384,0);
+#endif
+
+#if 0
+#define TYPE QSemiModal
+CheckTypeSize(TYPE,,16308,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16308,0);
+#endif
+
+#if 0
+#define TYPE QShowEvent
+CheckTypeSize(TYPE,,16511,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16511,0);
+#endif
+
+#if 0
+#define TYPE QSignalVec
+CheckTypeSize(TYPE,,16461,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16461,0);
+#endif
+
+#if 0
+#define TYPE QSjisCodec
+CheckTypeSize(TYPE,,16411,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16411,0);
+#endif
+
+#if 0
+#define TYPE QSqlCursor
+CheckTypeSize(TYPE,,16528,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16528,0);
+#endif
+
+#if 0
+#define TYPE QSqlDriver
+CheckTypeSize(TYPE,,16296,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16296,0);
+#endif
+
+#if 0
+#define TYPE QSqlRecord
+CheckTypeSize(TYPE,,16382,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16382,0);
+#endif
+
+#if 0
+#define TYPE QSqlResult
+CheckTypeSize(TYPE,,16277,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16277,0);
+#endif
+
+#if 0
+#define TYPE QStatusBar
+CheckTypeSize(TYPE,,16405,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16405,0);
+#endif
+
+#if 0
+#define TYPE QTabDialog
+CheckTypeSize(TYPE,,16505,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16505,0);
+#endif
+
+#if 0
+#define TYPE QTabWidget
+CheckTypeSize(TYPE,,16294,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16294,0);
+#endif
+
+#if 0
+#define TYPE QTableItem
+CheckTypeSize(TYPE,,16297,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16297,0);
+#endif
+
+#if 0
+#define TYPE QTextCodec
+CheckTypeSize(TYPE,,16475,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16475,0);
+#endif
+
+#if 0
+#define TYPE QUtf8Codec
+CheckTypeSize(TYPE,,16246,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16246,0);
+#endif
+
+#if 0
+#define TYPE QVGroupBox
+CheckTypeSize(TYPE,,16543,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16543,0);
+#endif
+
+#if 0
+#define TYPE QValidator
+CheckTypeSize(TYPE,,16462,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16462,0);
+#endif
+
+#if 0
+#define TYPE QWhatsThis
+CheckTypeSize(TYPE,,16354,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16354,0);
+#endif
+
+#if 0
+#define TYPE QWorkspace
+CheckTypeSize(TYPE,,16504,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16504,0);
+#endif
+
+#if 0
+#define TYPE QXmlReader
+CheckTypeSize(TYPE,,16362,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16362,0);
+#endif
+
+#if 0
+#define TYPE QCanvasItem
+CheckTypeSize(TYPE,,16255,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16255,0);
+#endif
+
+#if 0
+#define TYPE QCanvasLine
+CheckTypeSize(TYPE,,16432,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16432,0);
+#endif
+
+#if 0
+#define TYPE QCanvasText
+CheckTypeSize(TYPE,,16497,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16497,0);
+#endif
+
+#if 0
+#define TYPE QCanvasView
+CheckTypeSize(TYPE,,16390,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16390,0);
+#endif
+
+#if 0
+#define TYPE QChildEvent
+CheckTypeSize(TYPE,,16459,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16459,0);
+#endif
+
+#if 0
+#define TYPE QCloseEvent
+CheckTypeSize(TYPE,,16544,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16544,0);
+#endif
+
+#if 0
+#define TYPE QDataSource
+CheckTypeSize(TYPE,,16254,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16254,0);
+#endif
+
+#if 0
+#define TYPE QDataStream
+CheckTypeSize(TYPE,,16520,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16520,0);
+#endif
+
+#if 0
+#define TYPE QDockWindow
+CheckTypeSize(TYPE,,16445,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16445,0);
+#endif
+
+#if 0
+#define TYPE QDomComment
+CheckTypeSize(TYPE,,16419,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16419,0);
+#endif
+
+#if 0
+#define TYPE QDomElement
+CheckTypeSize(TYPE,,16295,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16295,0);
+#endif
+
+#if 0
+#define TYPE QDragObject
+CheckTypeSize(TYPE,,16507,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16507,0);
+#endif
+
+#if 0
+#define TYPE QEucJpCodec
+CheckTypeSize(TYPE,,16447,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16447,0);
+#endif
+
+#if 0
+#define TYPE QEucKrCodec
+CheckTypeSize(TYPE,,16346,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16346,0);
+#endif
+
+#if 0
+#define TYPE QFileDialog
+CheckTypeSize(TYPE,,16327,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16327,0);
+#endif
+
+#if 0
+#define TYPE QFocusEvent
+CheckTypeSize(TYPE,,16453,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16453,0);
+#endif
+
+#if 0
+#define TYPE QFontDialog
+CheckTypeSize(TYPE,,16441,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16441,0);
+#endif
+
+#if 0
+#define TYPE QGridLayout
+CheckTypeSize(TYPE,,16463,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16463,0);
+#endif
+
+#if 0
+#define TYPE QHBoxLayout
+CheckTypeSize(TYPE,,16360,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16360,0);
+#endif
+
+#if 0
+#define TYPE QHttpHeader
+CheckTypeSize(TYPE,,16510,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16510,0);
+#endif
+
+#if 0
+#define TYPE QLayoutItem
+CheckTypeSize(TYPE,,16537,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16537,0);
+#endif
+
+#if 0
+#define TYPE QMainWindow
+CheckTypeSize(TYPE,,16404,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16404,0);
+#endif
+
+#if 0
+#define TYPE QMessageBox
+CheckTypeSize(TYPE,,16412,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16412,0);
+#endif
+
+#if 0
+#define TYPE QMetaObject
+CheckTypeSize(TYPE,,16364,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16364,0);
+#endif
+
+#if 0
+#define TYPE QMimeSource
+CheckTypeSize(TYPE,,16470,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16470,0);
+#endif
+
+#if 0
+#define TYPE QMouseEvent
+CheckTypeSize(TYPE,,16454,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16454,0);
+#endif
+
+#if 0
+#define TYPE QObjectList
+CheckTypeSize(TYPE,,16418,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16418,0);
+#endif
+
+#if 0
+#define TYPE QPaintEvent
+CheckTypeSize(TYPE,,16516,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16516,0);
+#endif
+
+#if 0
+#define TYPE QPointArray
+CheckTypeSize(TYPE,,16357,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16357,0);
+#endif
+
+#if 0
+#define TYPE QPushButton
+CheckTypeSize(TYPE,,16522,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16522,0);
+#endif
+
+#if 0
+#define TYPE QScrollView
+CheckTypeSize(TYPE,,16258,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16258,0);
+#endif
+
+#if 0
+#define TYPE QSpacerItem
+CheckTypeSize(TYPE,,16476,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16476,0);
+#endif
+
+#if 0
+#define TYPE QSpinWidget
+CheckTypeSize(TYPE,,16458,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16458,0);
+#endif
+
+#if 0
+#define TYPE QStoredDrag
+CheckTypeSize(TYPE,,16378,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16378,0);
+#endif
+
+#if 0
+#define TYPE QStyleSheet
+CheckTypeSize(TYPE,,16349,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16349,0);
+#endif
+
+#if 0
+#define TYPE QTextStream
+CheckTypeSize(TYPE,,16481,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16481,0);
+#endif
+
+#if 0
+#define TYPE QTimerEvent
+CheckTypeSize(TYPE,,16315,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16315,0);
+#endif
+
+#if 0
+#define TYPE QToolButton
+CheckTypeSize(TYPE,,16423,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16423,0);
+#endif
+
+#if 0
+#define TYPE QTranslator
+CheckTypeSize(TYPE,,16267,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16267,0);
+#endif
+
+#if 0
+#define TYPE QTsciiCodec
+CheckTypeSize(TYPE,,16407,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16407,0);
+#endif
+
+#if 0
+#define TYPE QUtf16Codec
+CheckTypeSize(TYPE,,16332,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16332,0);
+#endif
+
+#if 0
+#define TYPE QVBoxLayout
+CheckTypeSize(TYPE,,16371,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16371,0);
+#endif
+
+#if 0
+#define TYPE QWheelEvent
+CheckTypeSize(TYPE,,16531,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16531,0);
+#endif
+
+#if 0
+#define TYPE QWidgetItem
+CheckTypeSize(TYPE,,16437,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16437,0);
+#endif
+
+#if 0
+#define TYPE QWidgetList
+CheckTypeSize(TYPE,,16523,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16523,0);
+#endif
+
+#if 0
+#define TYPE QXmlLocator
+CheckTypeSize(TYPE,,16268,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16268,0);
+#endif
+
+#if 0
+#define TYPE QActionGroup
+CheckTypeSize(TYPE,,16399,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16399,0);
+#endif
+
+#if 0
+#define TYPE QApplication
+CheckTypeSize(TYPE,,16490,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16490,0);
+#endif
+
+#if 0
+#define TYPE QButtonGroup
+CheckTypeSize(TYPE,,16381,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16381,0);
+#endif
+
+#if 0
+#define TYPE QColorDialog
+CheckTypeSize(TYPE,,16488,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16488,0);
+#endif
+
+#if 0
+#define TYPE QCommonStyle
+CheckTypeSize(TYPE,,16305,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16305,0);
+#endif
+
+#if 0
+#define TYPE QCustomEvent
+CheckTypeSize(TYPE,,16350,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16350,0);
+#endif
+
+#if 0
+#define TYPE QDataBrowser
+CheckTypeSize(TYPE,,16532,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16532,0);
+#endif
+
+#if 0
+#define TYPE QDomDocument
+CheckTypeSize(TYPE,,16338,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16338,0);
+#endif
+
+#if 0
+#define TYPE QDomNodeList
+CheckTypeSize(TYPE,,16355,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16355,0);
+#endif
+
+#if 0
+#define TYPE QDomNotation
+CheckTypeSize(TYPE,,16426,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16426,0);
+#endif
+
+#if 0
+#define TYPE QDragManager
+CheckTypeSize(TYPE,,16352,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16352,0);
+#endif
+
+#if 0
+#define TYPE QFilePreview
+CheckTypeSize(TYPE,,16380,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16380,0);
+#endif
+
+#if 0
+#define TYPE QGb2312Codec
+CheckTypeSize(TYPE,,16452,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16452,0);
+#endif
+
+#if 0
+#define TYPE QHebrewCodec
+CheckTypeSize(TYPE,,16464,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16464,0);
+#endif
+
+#if 0
+#define TYPE QHostAddress
+CheckTypeSize(TYPE,,16530,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16530,0);
+#endif
+
+#if 0
+#define TYPE QIconFactory
+CheckTypeSize(TYPE,,16343,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16343,0);
+#endif
+
+#if 0
+#define TYPE QImageFormat
+CheckTypeSize(TYPE,,16266,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16266,0);
+#endif
+
+#if 0
+#define TYPE QInputDialog
+CheckTypeSize(TYPE,,16501,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16501,0);
+#endif
+
+#if 0
+#define TYPE QListBoxItem
+CheckTypeSize(TYPE,,16336,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16336,0);
+#endif
+
+#if 0
+#define TYPE QListBoxText
+CheckTypeSize(TYPE,,16272,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16272,0);
+#endif
+
+#if 0
+#define TYPE QPaintDevice
+CheckTypeSize(TYPE,,16303,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16303,0);
+#endif
+
+#if 0
+#define TYPE QPrintDialog
+CheckTypeSize(TYPE,,16477,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16477,0);
+#endif
+
+#if 0
+#define TYPE QProgressBar
+CheckTypeSize(TYPE,,16478,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16478,0);
+#endif
+
+#if 0
+#define TYPE QRadioButton
+CheckTypeSize(TYPE,,16393,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16393,0);
+#endif
+
+#if 0
+#define TYPE QResizeEvent
+CheckTypeSize(TYPE,,16430,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16430,0);
+#endif
+
+#if 0
+#define TYPE QSqlDatabase
+CheckTypeSize(TYPE,,16408,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16408,0);
+#endif
+
+#if 0
+#define TYPE QStylePlugin
+CheckTypeSize(TYPE,,16326,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16326,0);
+#endif
+
+#if 0
+#define TYPE QTabletEvent
+CheckTypeSize(TYPE,,16436,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16436,0);
+#endif
+
+#if 0
+#define TYPE QTextBrowser
+CheckTypeSize(TYPE,,16259,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16259,0);
+#endif
+
+#if 0
+#define TYPE QTextDecoder
+CheckTypeSize(TYPE,,16472,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16472,0);
+#endif
+
+#if 0
+#define TYPE QTextEncoder
+CheckTypeSize(TYPE,,16389,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16389,0);
+#endif
+
+#if 0
+#define TYPE QTextOStream
+CheckTypeSize(TYPE,,16460,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16460,0);
+#endif
+
+#if 0
+#define TYPE QUrlOperator
+CheckTypeSize(TYPE,,16282,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16282,0);
+#endif
+
+#if 0
+#define TYPE QWidgetStack
+CheckTypeSize(TYPE,,16347,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16347,0);
+#endif
+
+#if 0
+#define TYPE QCanvasPixmap
+CheckTypeSize(TYPE,,16409,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16409,0);
+#endif
+
+#if 0
+#define TYPE QCanvasSpline
+CheckTypeSize(TYPE,,16440,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16440,0);
+#endif
+
+#if 0
+#define TYPE QCanvasSprite
+CheckTypeSize(TYPE,,16260,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16260,0);
+#endif
+
+#if 0
+#define TYPE QDateTimeEdit
+CheckTypeSize(TYPE,,16276,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16276,0);
+#endif
+
+#if 0
+#define TYPE QErrorMessage
+CheckTypeSize(TYPE,,16365,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16365,0);
+#endif
+
+#if 0
+#define TYPE QGb18030Codec
+CheckTypeSize(TYPE,,16300,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16300,0);
+#endif
+
+#if 0
+#define TYPE QHButtonGroup
+CheckTypeSize(TYPE,,16328,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16328,0);
+#endif
+
+#if 0
+#define TYPE QIconDragItem
+CheckTypeSize(TYPE,,16534,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16534,0);
+#endif
+
+#if 0
+#define TYPE QIconViewItem
+CheckTypeSize(TYPE,,16479,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16479,0);
+#endif
+
+#if 0
+#define TYPE QIntValidator
+CheckTypeSize(TYPE,,16290,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16290,0);
+#endif
+
+#if 0
+#define TYPE QListViewItem
+CheckTypeSize(TYPE,,16491,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16491,0);
+#endif
+
+#if 0
+#define TYPE QRangeControl
+CheckTypeSize(TYPE,,16313,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16313,0);
+#endif
+
+#if 0
+#define TYPE QServerSocket
+CheckTypeSize(TYPE,,16450,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16450,0);
+#endif
+
+#if 0
+#define TYPE QSignalMapper
+CheckTypeSize(TYPE,,16483,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16483,0);
+#endif
+
+#if 0
+#define TYPE QSocketDevice
+CheckTypeSize(TYPE,,16361,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16361,0);
+#endif
+
+#if 0
+#define TYPE QSplashScreen
+CheckTypeSize(TYPE,,16318,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16318,0);
+#endif
+
+#if 0
+#define TYPE QSqlFieldInfo
+CheckTypeSize(TYPE,,16535,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16535,0);
+#endif
+
+#if 0
+#define TYPE QToolTipGroup
+CheckTypeSize(TYPE,,16508,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16508,0);
+#endif
+
+#if 0
+#define TYPE QVButtonGroup
+CheckTypeSize(TYPE,,16387,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16387,0);
+#endif
+
+#if 0
+#define TYPE QWidgetPlugin
+CheckTypeSize(TYPE,,16340,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16340,0);
+#endif
+
+#if 0
+#define TYPE QCanvasEllipse
+CheckTypeSize(TYPE,,16402,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16402,0);
+#endif
+
+#if 0
+#define TYPE QCanvasPolygon
+CheckTypeSize(TYPE,,16514,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16514,0);
+#endif
+
+#if 0
+#define TYPE QCheckListItem
+CheckTypeSize(TYPE,,16482,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16482,0);
+#endif
+
+#if 0
+#define TYPE QDesktopWidget
+CheckTypeSize(TYPE,,16330,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16330,0);
+#endif
+
+#if 0
+#define TYPE QDragMoveEvent
+CheckTypeSize(TYPE,,16401,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16401,0);
+#endif
+
+#if 0
+#define TYPE QEditorFactory
+CheckTypeSize(TYPE,,16414,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16414,0);
+#endif
+
+#if 0
+#define TYPE QImageConsumer
+CheckTypeSize(TYPE,,16456,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16456,0);
+#endif
+
+#if 0
+#define TYPE QJpUnicodeConv
+CheckTypeSize(TYPE,,16521,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16521,0);
+#endif
+
+#if 0
+#define TYPE QListBoxPixmap
+CheckTypeSize(TYPE,,16351,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16351,0);
+#endif
+
+#if 0
+#define TYPE QMultiLineEdit
+CheckTypeSize(TYPE,,16358,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16358,0);
+#endif
+
+#if 0
+#define TYPE QPtrCollection
+CheckTypeSize(TYPE,,16250,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16250,0);
+#endif
+
+#if 0
+#define TYPE QWaitCondition
+CheckTypeSize(TYPE,,16256,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16256,0);
+#endif
+
+#if 0
+#define TYPE QWidgetIntDict
+CheckTypeSize(TYPE,,16424,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16424,0);
+#endif
+
+#if 0
+#define TYPE QXmlAttributes
+CheckTypeSize(TYPE,,16433,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16433,0);
+#endif
+
+#if 0
+#define TYPE QXmlDTDHandler
+CheckTypeSize(TYPE,,16487,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16487,0);
+#endif
+
+#if 0
+#define TYPE QCheckTableItem
+CheckTypeSize(TYPE,,16304,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16304,0);
+#endif
+
+#if 0
+#define TYPE QComboTableItem
+CheckTypeSize(TYPE,,16493,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16493,0);
+#endif
+
+#if 0
+#define TYPE QConnectionList
+CheckTypeSize(TYPE,,16527,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16527,0);
+#endif
+
+#if 0
+#define TYPE QCustomMenuItem
+CheckTypeSize(TYPE,,16367,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16367,0);
+#endif
+
+#if 0
+#define TYPE QDockAreaLayout
+CheckTypeSize(TYPE,,16279,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16279,0);
+#endif
+
+#if 0
+#define TYPE QDragEnterEvent
+CheckTypeSize(TYPE,,16398,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16398,0);
+#endif
+
+#if 0
+#define TYPE QDragLeaveEvent
+CheckTypeSize(TYPE,,16280,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16280,0);
+#endif
+
+#if 0
+#define TYPE QIMComposeEvent
+CheckTypeSize(TYPE,,16471,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16471,0);
+#endif
+
+#if 0
+#define TYPE QIODeviceSource
+CheckTypeSize(TYPE,,16496,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16496,0);
+#endif
+
+#if 0
+#define TYPE QObjectUserData
+CheckTypeSize(TYPE,,16312,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16312,0);
+#endif
+
+#if 0
+#define TYPE QPolygonScanner
+CheckTypeSize(TYPE,,16310,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16310,0);
+#endif
+
+#if 0
+#define TYPE QProgressDialog
+CheckTypeSize(TYPE,,16275,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16275,0);
+#endif
+
+#if 0
+#define TYPE QSessionManager
+CheckTypeSize(TYPE,,16473,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16473,0);
+#endif
+
+#if 0
+#define TYPE QSocketNotifier
+CheckTypeSize(TYPE,,16288,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16288,0);
+#endif
+
+#if 0
+#define TYPE QSqlPropertyMap
+CheckTypeSize(TYPE,,16320,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16320,0);
+#endif
+
+#if 0
+#define TYPE QXmlDeclHandler
+CheckTypeSize(TYPE,,16370,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16370,0);
+#endif
+
+#if 0
+#define TYPE QXmlInputSource
+CheckTypeSize(TYPE,,16498,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16498,0);
+#endif
+
+#if 0
+#define TYPE QCanvasRectangle
+CheckTypeSize(TYPE,,16374,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16374,0);
+#endif
+
+#if 0
+#define TYPE QDomCDATASection
+CheckTypeSize(TYPE,,16480,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16480,0);
+#endif
+
+#if 0
+#define TYPE QDomDocumentType
+CheckTypeSize(TYPE,,16335,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16335,0);
+#endif
+
+#if 0
+#define TYPE QDoubleValidator
+CheckTypeSize(TYPE,,16499,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16499,0);
+#endif
+
+#if 0
+#define TYPE QGLayoutIterator
+CheckTypeSize(TYPE,,16435,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16435,0);
+#endif
+
+#if 0
+#define TYPE QImageFormatType
+CheckTypeSize(TYPE,,16474,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16474,0);
+#endif
+
+#if 0
+#define TYPE QNetworkProtocol
+CheckTypeSize(TYPE,,16311,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16311,0);
+#endif
+
+#if 0
+#define TYPE QRegExpValidator
+CheckTypeSize(TYPE,,16278,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16278,0);
+#endif
+
+#if 0
+#define TYPE QSqlDriverPlugin
+CheckTypeSize(TYPE,,16422,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16422,0);
+#endif
+
+#if 0
+#define TYPE QSqlResultShared
+CheckTypeSize(TYPE,,16448,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16448,0);
+#endif
+
+#if 0
+#define TYPE QSqlSelectCursor
+CheckTypeSize(TYPE,,16293,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16293,0);
+#endif
+
+#if 0
+#define TYPE QTextCodecPlugin
+CheckTypeSize(TYPE,,16339,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16339,0);
+#endif
+
+#if 0
+#define TYPE QXmlErrorHandler
+CheckTypeSize(TYPE,,16503,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16503,0);
+#endif
+
+#if 0
+#define TYPE QXmlSimpleReader
+CheckTypeSize(TYPE,,16427,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16427,0);
+#endif
+
+#if 0
+#define TYPE QContextMenuEvent
+CheckTypeSize(TYPE,,16264,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16264,0);
+#endif
+
+#if 0
+#define TYPE QDateTimeEditBase
+CheckTypeSize(TYPE,,16509,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16509,0);
+#endif
+
+#if 0
+#define TYPE QDomCharacterData
+CheckTypeSize(TYPE,,16397,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16397,0);
+#endif
+
+#if 0
+#define TYPE QFileIconProvider
+CheckTypeSize(TYPE,,16540,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16540,0);
+#endif
+
+#if 0
+#define TYPE QNetworkOperation
+CheckTypeSize(TYPE,,16466,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16466,0);
+#endif
+
+#if 0
+#define TYPE QSqlEditorFactory
+CheckTypeSize(TYPE,,16526,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16526,0);
+#endif
+
+#if 0
+#define TYPE QDomImplementation
+CheckTypeSize(TYPE,,16298,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16298,0);
+#endif
+
+#if 0
+#define TYPE QDragResponseEvent
+CheckTypeSize(TYPE,,16337,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16337,0);
+#endif
+
+#if 0
+#define TYPE QGuardedPtrPrivate
+CheckTypeSize(TYPE,,16489,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16489,0);
+#endif
+
+#if 0
+#define TYPE QHttpRequestHeader
+CheckTypeSize(TYPE,,16506,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16506,0);
+#endif
+
+#if 0
+#define TYPE QImageFormatPlugin
+CheckTypeSize(TYPE,,16446,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16446,0);
+#endif
+
+#if 0
+#define TYPE QMimeSourceFactory
+CheckTypeSize(TYPE,,16271,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16271,0);
+#endif
+
+#if 0
+#define TYPE QSyntaxHighlighter
+CheckTypeSize(TYPE,,16307,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16307,0);
+#endif
+
+#if 0
+#define TYPE QXmlContentHandler
+CheckTypeSize(TYPE,,16451,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16451,0);
+#endif
+
+#if 0
+#define TYPE QXmlDefaultHandler
+CheckTypeSize(TYPE,,16420,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16420,0);
+#endif
+
+#if 0
+#define TYPE QXmlEntityResolver
+CheckTypeSize(TYPE,,16248,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16248,0);
+#endif
+
+#if 0
+#define TYPE QXmlLexicalHandler
+CheckTypeSize(TYPE,,16431,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16431,0);
+#endif
+
+#if 0
+#define TYPE QDomEntityReference
+CheckTypeSize(TYPE,,16457,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16457,0);
+#endif
+
+#if 0
+#define TYPE QHttpResponseHeader
+CheckTypeSize(TYPE,,16396,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16396,0);
+#endif
+
+#if 0
+#define TYPE QCanvasPolygonalItem
+CheckTypeSize(TYPE,,16292,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16292,0);
+#endif
+
+#if 0
+#define TYPE QDomDocumentFragment
+CheckTypeSize(TYPE,,16519,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16519,0);
+#endif
+
+#if 0
+#define TYPE QObjectCleanupHandler
+CheckTypeSize(TYPE,,16249,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16249,0);
+#endif
+
+#if 0
+#define TYPE QDomProcessingInstruction
+CheckTypeSize(TYPE,,16439,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16439,0);
+#endif
+
+#if 0
+#define TYPE QNetworkProtocolFactoryBase
+CheckTypeSize(TYPE,,16359,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16359,0);
+#endif
+
+#if 0
+#define TYPE QDir
+CheckTypeSize(TYPE,,16438,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16438,0);
+#endif
+
+#if 0
+#define TYPE QDns
+CheckTypeSize(TYPE,,16495,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16495,0);
+#endif
+
+#if 0
+#define TYPE QFtp
+CheckTypeSize(TYPE,,16536,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16536,0);
+#endif
+
+#if 0
+#define TYPE QTab
+CheckTypeSize(TYPE,,16309,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16309,0);
+#endif
+
+#if 0
+#define TYPE QUrl
+CheckTypeSize(TYPE,,16324,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16324,0);
+#endif
+
+#if 0
+#define TYPE QDial
+CheckTypeSize(TYPE,,16323,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16323,0);
+#endif
+
+#if 0
+#define TYPE QFile
+CheckTypeSize(TYPE,,16334,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16334,0);
+#endif
+
+#if 0
+#define TYPE QGrid
+CheckTypeSize(TYPE,,16392,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16392,0);
+#endif
+
+#if 0
+#define TYPE QHBox
+CheckTypeSize(TYPE,,16251,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16251,0);
+#endif
+
+#if 0
+#define TYPE QHttp
+CheckTypeSize(TYPE,,16467,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16467,0);
+#endif
+
+#if 0
+#define TYPE QVBox
+CheckTypeSize(TYPE,,16263,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16263,0);
+#endif
+
+#if 0
+#define TYPE QAccel
+CheckTypeSize(TYPE,,16517,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16517,0);
+#endif
+
+#if 0
+#define TYPE QEvent
+CheckTypeSize(TYPE,,16469,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16469,0);
+#endif
+
+#if 0
+#define TYPE QFrame
+CheckTypeSize(TYPE,,16257,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16257,0);
+#endif
+
+#if 0
+#define TYPE QGDict
+CheckTypeSize(TYPE,,16502,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16502,0);
+#endif
+
+#if 0
+#define TYPE QGList
+CheckTypeSize(TYPE,,16301,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16301,0);
+#endif
+
+#if 0
+#define TYPE QLabel
+CheckTypeSize(TYPE,,16348,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16348,0);
+#endif
+
+#if 0
+#define TYPE QMutex
+CheckTypeSize(TYPE,,16319,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16319,0);
+#endif
+
+#if 0
+#define TYPE QSound
+CheckTypeSize(TYPE,,16413,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16413,0);
+#endif
+
+#if 0
+#define TYPE QStyle
+CheckTypeSize(TYPE,,16486,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16486,0);
+#endif
+
+#if 0
+#define TYPE QTable
+CheckTypeSize(TYPE,,16512,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16512,0);
+#endif
+
+#if 0
+#define TYPE QTimer
+CheckTypeSize(TYPE,,16247,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16247,0);
+#endif
+
+#if 0
+#define TYPE QAction
+CheckTypeSize(TYPE,,16529,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16529,0);
+#endif
+
+#if 0
+#define TYPE QBitmap
+CheckTypeSize(TYPE,,16342,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16342,0);
+#endif
+
+#if 0
+#define TYPE QBuffer
+CheckTypeSize(TYPE,,16373,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16373,0);
+#endif
+
+#if 0
+#define TYPE QButton
+CheckTypeSize(TYPE,,16289,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16289,0);
+#endif
+
+#if 0
+#define TYPE QCanvas
+CheckTypeSize(TYPE,,16518,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16518,0);
+#endif
+
+#if 0
+#define TYPE QDialog
+CheckTypeSize(TYPE,,16434,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16434,0);
+#endif
+
+#if 0
+#define TYPE QGArray
+CheckTypeSize(TYPE,,16442,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16442,0);
+#endif
+
+#if 0
+#define TYPE QGCache
+CheckTypeSize(TYPE,,16322,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16322,0);
+#endif
+
+#if 0
+#define TYPE QHeader
+CheckTypeSize(TYPE,,16316,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16316,0);
+#endif
+
+#if 0
+#define TYPE QLayout
+CheckTypeSize(TYPE,,16287,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16287,0);
+#endif
+
+#if 0
+#define TYPE QObject
+CheckTypeSize(TYPE,,16333,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16333,0);
+#endif
+
+#if 0
+#define TYPE QPixmap
+CheckTypeSize(TYPE,,16391,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16391,0);
+#endif
+
+#if 0
+#define TYPE QSignal
+CheckTypeSize(TYPE,,16416,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16416,0);
+#endif
+
+#if 0
+#define TYPE QSlider
+CheckTypeSize(TYPE,,16395,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16395,0);
+#endif
+
+#if 0
+#define TYPE QSocket
+CheckTypeSize(TYPE,,16283,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16283,0);
+#endif
+
+#if 0
+#define TYPE QTabBar
+CheckTypeSize(TYPE,,16425,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16425,0);
+#endif
+
+#if 0
+#define TYPE QThread
+CheckTypeSize(TYPE,,16377,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16377,0);
+#endif
+
+#if 0
+#define TYPE QWidget
+CheckTypeSize(TYPE,,16494,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16494,0);
+#endif
+
+#if 0
+#define TYPE QWizard
+CheckTypeSize(TYPE,,16291,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16291,0);
+#endif
+
+#if 0
+#define TYPE QAsyncIO
+CheckTypeSize(TYPE,,16394,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16394,0);
+#endif
+
+#if 0
+#define TYPE QCString
+CheckTypeSize(TYPE,,16485,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16485,0);
+#endif
+
+#if 0
+#define TYPE QDomAttr
+CheckTypeSize(TYPE,,16353,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16353,0);
+#endif
+
+#if 0
+#define TYPE QDomNode
+CheckTypeSize(TYPE,,16372,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16372,0);
+#endif
+
+#if 0
+#define TYPE QDomText
+CheckTypeSize(TYPE,,16386,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16386,0);
+#endif
+
+#if 0
+#define TYPE QGPlugin
+CheckTypeSize(TYPE,,16299,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16299,0);
+#endif
+
+#if 0
+#define TYPE QGVector
+CheckTypeSize(TYPE,,16252,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16252,0);
+#endif
+
+#if 0
+#define TYPE QIMEvent
+CheckTypeSize(TYPE,,16286,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16286,0);
+#endif
+
+#if 0
+#define TYPE QIconSet
+CheckTypeSize(TYPE,,16375,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16375,0);
+#endif
+
+#if 0
+#define TYPE QLibrary
+CheckTypeSize(TYPE,,16345,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16345,0);
+#endif
+
+#if 0
+#define TYPE QListBox
+CheckTypeSize(TYPE,,16366,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16366,0);
+#endif
+
+#if 0
+#define TYPE QLocalFs
+CheckTypeSize(TYPE,,16513,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16513,0);
+#endif
+
+#if 0
+#define TYPE QMenuBar
+CheckTypeSize(TYPE,,16274,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16274,0);
+#endif
+
+#if 0
+#define TYPE QPicture
+CheckTypeSize(TYPE,,16383,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16383,0);
+#endif
+
+#if 0
+#define TYPE QPrinter
+CheckTypeSize(TYPE,,16410,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16410,0);
+#endif
+
+#if 0
+#define TYPE QProcess
+CheckTypeSize(TYPE,,16265,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16265,0);
+#endif
+
+#if 0
+#define TYPE QSpinBox
+CheckTypeSize(TYPE,,16344,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16344,0);
+#endif
+
+#if 0
+#define TYPE QSqlForm
+CheckTypeSize(TYPE,,16468,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16468,0);
+#endif
+
+#if 0
+#define TYPE QStrList
+CheckTypeSize(TYPE,,16406,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16406,0);
+#endif
+
+#if 0
+#define TYPE QToolBar
+CheckTypeSize(TYPE,,16253,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16253,0);
+#endif
+
+#if 0
+#define TYPE QToolBox
+CheckTypeSize(TYPE,,16465,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16465,0);
+#endif
+
+#if 0
+#define TYPE QToolTip
+CheckTypeSize(TYPE,,16429,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16429,0);
+#endif
+
+#if 0
+#define TYPE QUriDrag
+CheckTypeSize(TYPE,,16369,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16369,0);
+#endif
+
+#if 0
+#define TYPE QUrlInfo
+CheckTypeSize(TYPE,,16455,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16455,0);
+#endif
+
+#if 0
+#define TYPE QBitArray
+CheckTypeSize(TYPE,,16443,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16443,0);
+#endif
+
+#if 0
+#define TYPE QCheckBox
+CheckTypeSize(TYPE,,16444,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16444,0);
+#endif
+
+#if 0
+#define TYPE QComboBox
+CheckTypeSize(TYPE,,16385,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16385,0);
+#endif
+
+#if 0
+#define TYPE QDataPump
+CheckTypeSize(TYPE,,16302,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16302,0);
+#endif
+
+#if 0
+#define TYPE QDataSink
+CheckTypeSize(TYPE,,16421,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16421,0);
+#endif
+
+#if 0
+#define TYPE QDataView
+CheckTypeSize(TYPE,,16525,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16525,0);
+#endif
+
+#if 0
+#define TYPE QDateEdit
+CheckTypeSize(TYPE,,16515,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16515,0);
+#endif
+
+#if 0
+#define TYPE QDockArea
+CheckTypeSize(TYPE,,16484,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16484,0);
+#endif
+
+#if 0
+#define TYPE QDropSite
+CheckTypeSize(TYPE,,16376,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16376,0);
+#endif
+
+#if 0
+#define TYPE QGbkCodec
+CheckTypeSize(TYPE,,16317,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16317,0);
+#endif
+
+#if 0
+#define TYPE QGridView
+CheckTypeSize(TYPE,,16284,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16284,0);
+#endif
+
+#if 0
+#define TYPE QGroupBox
+CheckTypeSize(TYPE,,16273,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16273,0);
+#endif
+
+#if 0
+#define TYPE QIODevice
+CheckTypeSize(TYPE,,16500,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16500,0);
+#endif
+
+#if 0
+#define TYPE QIconDrag
+CheckTypeSize(TYPE,,16368,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16368,0);
+#endif
+
+#if 0
+#define TYPE QIconView
+CheckTypeSize(TYPE,,16492,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16492,0);
+#endif
+
+#if 0
+#define TYPE QJisCodec
+CheckTypeSize(TYPE,,16356,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16356,0);
+#endif
+
+#if 0
+#define TYPE QKeyEvent
+CheckTypeSize(TYPE,,16321,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16321,0);
+#endif
+
+#if 0
+#define TYPE QLineEdit
+CheckTypeSize(TYPE,,16262,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16262,0);
+#endif
+
+#if 0
+#define TYPE QListView
+CheckTypeSize(TYPE,,16325,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16325,0);
+#endif
+
+#if 0
+#define TYPE QMenuData
+CheckTypeSize(TYPE,,16524,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16524,0);
+#endif
+
+#if 0
+#define TYPE QSizeGrip
+CheckTypeSize(TYPE,,16417,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16417,0);
+#endif
+
+#if 0
+#define TYPE QSplitter
+CheckTypeSize(TYPE,,16261,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16261,0);
+#endif
+
+#if 0
+#define TYPE QSqlError
+CheckTypeSize(TYPE,,16449,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16449,0);
+#endif
+
+#if 0
+#define TYPE QSqlField
+CheckTypeSize(TYPE,,16542,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16542,0);
+#endif
+
+#if 0
+#define TYPE QSqlIndex
+CheckTypeSize(TYPE,,16541,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16541,0);
+#endif
+
+#if 0
+#define TYPE QSqlQuery
+CheckTypeSize(TYPE,,16331,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16331,0);
+#endif
+
+#if 0
+#define TYPE QTextDrag
+CheckTypeSize(TYPE,,16379,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16379,0);
+#endif
+
+#if 0
+#define TYPE QTextEdit
+CheckTypeSize(TYPE,,16539,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16539,0);
+#endif
+
+#if 0
+#define TYPE QTextView
+CheckTypeSize(TYPE,,16306,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16306,0);
+#endif
+
+#if 0
+#define TYPE QTimeEdit
+CheckTypeSize(TYPE,,16533,)
+#undef TYPE
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16533,0);
+#endif
+
 #if __i386__
 #define TYPE __cxxabiv1::__enum_type_info
 CheckTypeSize(TYPE,8,10708,2)

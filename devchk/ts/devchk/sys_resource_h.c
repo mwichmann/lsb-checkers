@@ -46,16 +46,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef RUSAGE_BOTH
-	CompareConstant(RUSAGE_BOTH,(-2),3531,architecture)
-#else
-Msg( "Error: Constant not found: RUSAGE_BOTH\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef PRIO_PROCESS
 	CompareConstant(PRIO_PROCESS,PRIO_PROCESS,3534,architecture)
 #else
