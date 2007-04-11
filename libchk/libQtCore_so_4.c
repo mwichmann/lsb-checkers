@@ -178,22 +178,22 @@ struct versym libQtCore_so_4[] = {
 	{"_Z9qsnprintfPcjPKcz","",0,LSB_Toolkit_Qt,4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"_Z9qsnprintfPcjPKcz","",0,LSB_Toolkit_Qt,1,1},
+	{"_Z9qsnprintfPcjPKcz","",0,LSB_Toolkit_Qt,4,1},
 #endif
 #if __ia64__
-	{"_Z9qsnprintfPcmPKcz","",0,LSB_Toolkit_Qt,1,1},
+	{"_Z9qsnprintfPcmPKcz","",0,LSB_Toolkit_Qt,4,1},
 #endif
 #if __powerpc64__
-	{"_Z9qsnprintfPcmPKcz","",0,LSB_Toolkit_Qt,1,1},
+	{"_Z9qsnprintfPcmPKcz","",0,LSB_Toolkit_Qt,4,1},
 #endif
 #if __s390__ && !__s390x__
-	{"_Z9qsnprintfPcmPKcz","",0,LSB_Toolkit_Qt,1,1},
+	{"_Z9qsnprintfPcmPKcz","",0,LSB_Toolkit_Qt,4,1},
 #endif
 #if __x86_64__
-	{"_Z9qsnprintfPcmPKcz","",0,LSB_Toolkit_Qt,1,1},
+	{"_Z9qsnprintfPcmPKcz","",0,LSB_Toolkit_Qt,4,1},
 #endif
 #if __s390x__
-	{"_Z9qsnprintfPcmPKcz","",0,LSB_Toolkit_Qt,1,1},
+	{"_Z9qsnprintfPcmPKcz","",0,LSB_Toolkit_Qt,4,1},
 #endif
 	{"_Z9qstrnicmpPKcS0_j","",0,LSB_Toolkit_Qt,0,1},
 	{"_Z9qt_assertPKcS0_i","",0,LSB_Toolkit_Qt,0,1},

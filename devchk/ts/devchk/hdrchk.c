@@ -219,6 +219,7 @@ tcnt+=sys_sem_h();
 tcnt+=sys_shm_h();
 tcnt+=sys_socket_h();
 tcnt+=sys_stat_h();
+tcnt+=sys_statfs_h();
 tcnt+=sys_statvfs_h();
 tcnt+=sys_time_h();
 tcnt+=sys_timeb_h();
