@@ -31,19 +31,19 @@ check: dynsyms.c dynsyms.c.chk
 	diff dynsyms.c dynsyms.c.chk
 
 dynsyms.c:
-	./mkfunclist >dynsyms.c
+	./mkfunclist -v `cat LSB_VERSION` >dynsyms.c
 
 dynsyms.c.chk:
-	./mkfunclist2 >dynsyms.c.chk
+	./mkfunclist2 -v `cat LSB_VERSION` >dynsyms.c.chk
 
 dyntags.c:
-	./mkdyntags >dyntags.c
+	./mkdyntags -v `cat LSB_VERSION` >dyntags.c
 
 dtneeded.c:
-	./mkdtneededlist >dtneeded.c
+	./mkdtneededlist -v `cat LSB_VERSION` >dtneeded.c
 
 sectinfo.c:
-	./mksectinfo >sectinfo.c
+	./mksectinfo -v `cat LSB_VERSION` >sectinfo.c
 
 secttype.c:
 	./mksecttype >secttype.c

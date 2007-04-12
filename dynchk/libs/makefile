@@ -10,7 +10,7 @@ all:
 	for d in $(LIBS);do (cd $$d && make all CFLAGS="$(CFLAGS)" );done
 
 gensrc:
-	./gen_lib.pl -l $(COMMALIBS) -q 
+	./gen_lib.pl -v `cat LSB_VERSION` -l $(COMMALIBS) -q 
 	./build_version.sh
 
 #  nothing uses this.
