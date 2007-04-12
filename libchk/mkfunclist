@@ -2,14 +2,18 @@
 
 use CGI;
 use Mysql;
+use Getopt::Long;
 
 use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 sub usage()
 {
-print STDERR "mkfunclist -a <archname>\n";
+print STDERR "mkfunclist -a <archname> -v <lsbversion>\n";
 die;
 }
+
+GetOptions("v=s" => \$lsbversion);
+if( !$lsbversion ) { usage(); }
 
 # Uncomment to trace SQL statments
 #$trace=1;
@@ -83,11 +87,14 @@ foreach my $pos ( 0..$$class{'CInumvtab'}-1) {
 #
 $vtablename="_".$classbase."_vtable";
 
-$select = "SELECT Vtable.*,Architecture.*,Interface.Iid,Interface.Iarch,Interface.Iname FROM Vtable ";
+$select = "SELECT Vtable.*,Architecture.*,Interface.Iid,Interface.Iname,ArchInt.AIarch FROM Vtable ";
 $select.= "LEFT JOIN Architecture ON Aid=VTarch ";
 $select.= "LEFT JOIN Interface ON Iid=VTviid ";
+$select.= "LEFT JOIN ArchInt ON Iid=AIint ";
 $select.= "WHERE VTcid=".$$class{'CIid'}." ";
 $select.= "AND VTvtpos=$pos ";
+$select.= "AND AIarch IS NOT NULL ";
+# $select.= "AND AIarch = VTarch ";
 $select.= "ORDER BY VTpos";
 
 #print $select . "\n";
@@ -96,17 +103,31 @@ print $LIB "const char *".$vtablename."_name_$pos [] = {\n";
 $vsth = $Dbh->query($select) || die $Dbh->errmsg();
 for(1..$vsth->numrows) {
 	%entry=$vsth->fetchhash;
-	if( $entry{'VTarch'} != $entry{'Iarch'} ) {
+	if( $entry{'VTarch'} != $entry{'AIarch'} ) {
 	    # it's an arch mismatch only if the second join above worked...
 	    if( $entry{'Iname'} eq "" ) {
-		print STDERR "Interface ".$entry{'VTviid'}." referenced by ";
-		print STDERR "vtable for class ".$entry{'VTcid'}." missing\n";
-	    } else {
-		print STDERR "Arch mismatch for class ".$entry{'VTcid'}.":".$entry{'VTarch'}."!=".$entry{'Iarch'};
-		print STDERR ":".$entry{'Iname'}."(".$entry{'VTviid'}.")\n";
+			print STDERR "Interface ".$entry{'VTviid'}." referenced by ";
+			print STDERR "vtable for class ".$entry{'VTcid'}." missing\n";
+	    }
+		else {
+		#   This is a normal situation, since one entry from Interface table can be assigned to more
+		#   than one architecture. Maybe it would be better to correct the 'select' above
+		#	print STDERR "Arch mismatch for class ".$entry{'VTcid'}.":".$entry{'VTarch'}."!=".$entry{'AIarch'};
+		#	print STDERR ":".$entry{'Iname'}."(".$entry{'VTviid'}.")\n";
+			next;
 	    }
 	} 
 	if( $entry{'Aname'} eq "All" ) {
+		if( $entry{'Iid'} ) {
+			$selectNotGeneric = "SELECT AIarch FROM ArchInt ";
+			$selectNotGeneric.= "WHERE AIint=$entry{'Iid'} AND AIarch<>1";
+			$sthNotGeneric = $Dbh->query($selectNotGeneric) || die $Dbh->errmsg();
+			
+			# Some architecture specific records found - don't check generic information
+			if( $sthNotGeneric->numrows ) {
+				next;
+			}
+		}
 		print $LIB "\t\"".getinterfacename($entry{'VTviid'})."\",\n";
 	} else {
 		print $LIB "#if ".$entry{'Asymbol'}."\n";
@@ -179,6 +200,10 @@ print $LIB "struct base_type_info ".$baseinfoname."[] = {\n";
 $vsth = $Dbh->query($select) || die $Dbh->errmsg()."$select\n";
 for(1..$vsth->numrows) {
 	%entry=$vsth->fetchhash;
+	if (not $entry{'Aname'}) {
+		next; # unsupported architecture found
+	}
+	
 	if( $entry{'Aname'} eq "All" ) {
 		print $LIB "\t{\"".getinterfacename($entry{'VBTbasetype'})."\",";
 		print $LIB "\t".$entry{'VBTflags'}."U},\n";
@@ -222,8 +247,9 @@ $select.= "LEFT JOIN ArchType ON ATtid=Ireturn AND ATaid=Aid ";
 $select.= "LEFT JOIN ModLib ON MLlid=LGlib ";
 $select.= "LEFT JOIN Module ON MLmid=Mid ";
 $select.= "WHERE LGlib=$lid ";
-$select.= "AND Istdstatus='Included' ";
-$select.= "AND ( IArch != 8 ) "; # 8 == None
+$select .= "AND (AIappearedin <= '$lsbversion' and AIappearedin<>'') ";
+$select .= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin >'$lsbversion') ";
+$select.= "AND ( AIarch != 8 ) "; # 8 == None
 $select.= "ORDER BY Iname,Aid ";
 
 #print $select;
@@ -257,6 +283,19 @@ for(1..$lsth->numrows) {
 		printf LIB "},\n";
 		print LIB "#endif\n";
 	} else {
+		if( $entry{'Aid'} && $entry{'Aname'} eq 'All' ) {
+			if( $entry{'Iid'} ) {
+				$selectNotGeneric = "SELECT AIarch FROM ArchInt ";
+				$selectNotGeneric.= "WHERE AIint=$entry{'Iid'} AND AIarch<>1";
+				$sthNotGeneric = $Dbh->query($selectNotGeneric) || die $Dbh->errmsg();
+	
+				# Some architecture specific records found - don't check generic information
+				if( $sthNotGeneric->numrows )
+				{
+					next;
+				}
+			}
+		}
 		printf LIB "\t{\"%s\",\"%s\",",$entry{'Iname'},$entry{'Vname'};
 		printf LIB "0,%s,%s,",$entry{'Mname'},$entry{'ATsize'};
 		if( $entry{'Itype'} eq "Data" ) {
@@ -266,7 +305,7 @@ for(1..$lsth->numrows) {
 		}
 		printf LIB "},\n";
 		printf TXT $entry{'Iname'}."\n";
-		}
+	}
 }
 print LIB "\t{0,0}};\n\n";
 
@@ -332,7 +371,8 @@ $select.= "LEFT JOIN ModLib ON MLmid=Mid ";
 $select.= "LEFT JOIN Library ON Lid=MLlid ";
 $select.= "LEFT JOIN ArchLib ON ALlid=Lid ";
 $select.= "LEFT JOIN Architecture ON ALaid=Aid ";
-$select.= "WHERE Lstdstatus='Included' ";
+$select.= "WHERE ( (ALappearedin <= '$lsbversion' and ALappearedin<>'') ";
+$select.= "AND (ALwithdrawnin IS NULL OR ALwithdrawnin > '$lsbversion') ) ";
 $select.= "AND Aname!='None' ";
 #$select.= "AND Lname='libstdcxx' ";
 $select.= "ORDER BY ALrunname,Aid DESC ";

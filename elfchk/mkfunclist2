@@ -2,12 +2,22 @@
 
 use CGI;
 use Mysql;
+use Getopt::Long;
+
+sub usage()
+{
+print STDERR "mkfunclist2 -v <lsbversion>\n";
+die;
+}
+
+GetOptions("v=s" => \$lsbversion);
+if( !$lsbversion ) { usage(); }
 
 use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
-$select = "SELECT DISTINCT Iname,Istdstatus,Iisdeprecated,Vname,Asymbol,Aname,Mname FROM Interface ";
+$select = "SELECT DISTINCT Iid,Iname,Isrconly,Iisdeprecated,Vname,Asymbol,Aname,Mname FROM Interface ";
 $select.= "LEFT JOIN ArchInt ON Iid=AIint ";
 $select.= "LEFT JOIN Architecture ON Aid=AIarch ";
 $select.= "LEFT JOIN Version ON Vid=AIversion ";
@@ -16,11 +26,12 @@ $select.= "LEFT JOIN LibGroup ON LGid=LGIlibg ";
 $select.= "LEFT JOIN Library ON Lid=LGlib ";
 $select.= "LEFT JOIN ModLib ON MLlid=Lid ";
 $select.= "LEFT JOIN Module ON Mid=MLmid ";
-$select.= "WHERE ( Istdstatus='Included' )";
+$select .= "WHERE ( (AIappearedin <= '$lsbversion' and AIappearedin<>'') ";
+$select .= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin >'$lsbversion') ) ";
 $select.= "AND Mid!=0 ";
 $select.= "ORDER BY Iname,Aid,Vid ";
 
-#print $select;
+# print $select;
 
 $sth = $Dbh->query($select) || die $Dbh->errmsg();
 
@@ -29,10 +40,23 @@ print "#include \"elfchk.h\"\n";
 print "struct versym DynSyms[] = {\n";
 for(1..$sth->numrows) {
 	%entry=$sth->fetchhash;
-        if ($entry{'Aname'} && $entry{'Aname'} ne "All")
-        {
-          print "#if $entry{'Asymbol'}\n";
-        }
+	if ($entry{'Aname'} && $entry{'Aname'} ne "All")
+	{
+		print "#if $entry{'Asymbol'}\n";
+	}
+	elsif ($entry{'Aname'} && $entry{'Aname'} eq "All")
+	{
+		$selectNotGeneric = "SELECT AIarch FROM ArchInt ";
+		$selectNotGeneric.= "WHERE AIint=$entry{'Iid'} AND AIarch<>1";
+		$sthNotGeneric = $Dbh->query($selectNotGeneric) || die $Dbh->errmsg();
+		
+		# Some architecture specific records found - don't check generic information
+		if( $sthNotGeneric->numrows )
+		{
+			next;
+		}
+	}
+	
 	printf "\t{\"%s\",\"%s\",",$entry{'Iname'},$entry{'Vname'};
 	if( $entry{'Iisdeprecated'} eq 'Yes' ) {
 		printf "1";
@@ -41,10 +65,10 @@ for(1..$sth->numrows) {
 	}
 	printf ",%s",$entry{'Mname'};
 	printf "},\n";
-        if ($entry{'Aname'} && $entry{'Aname'} ne "All")
-        {
-          print "#endif\n";
-        }
+	if ($entry{'Aname'} && $entry{'Aname'} ne "All")
+	{
+		print "#endif\n";
+	}
 }
 print "\t};\n";
 print "int numDynSyms = sizeof(DynSyms)/sizeof(struct versym);\n";

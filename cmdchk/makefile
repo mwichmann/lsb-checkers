@@ -12,12 +12,12 @@ cmdchk: $(OBJS) ../tetj/libtetj.a
 	$(CC) $(CFLAGS) -o cmdchk $(OBJS) ../tetj/libtetj.a
 
 cmds.h:
-	./mkcmdlist
+	./mkcmdlist -v `cat LSB_VERSION`
 
 cmdchk.o: cmds.h
 
 cmdlist:
-	./mkcmdlist2
+	./mkcmdlist2 -v `cat LSB_VERSION`
 
 install:
 	install -d $(INSTALL_ROOT)/$(BINDIR)

@@ -2,14 +2,18 @@
 
 use CGI;
 use Mysql;
+use Getopt::Long;
 
 use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 sub usage()
 {
-print STDERR "mkcmdlist\n";
+print STDERR "mkcmdlist2 -v lsbversion\n";
 die;
 }
+
+GetOptions("v=s" => \$lsbversion);
+if( !$lsbversion ) { usage(); }
 
 # Uncomment to trace SQL statments
 #$trace=1;
@@ -29,7 +33,10 @@ print CMDS "# Generated file\n";
 print CMDS "# List of LSB commands for the Python cmdchk\n";
 
 $select = "SELECT DISTINCT Cid,Cname,Cpath FROM Command ";
-$select.= "WHERE Cstdstatus='Included' AND Cbuiltin!='Yes' ";
+$select.= "LEFT JOIN ModCmd ON MCcid=Cid ";
+$select.= "WHERE (MCappearedin <= '$lsbversion' and MCappearedin<>'') ";
+$select.= "AND (MCwithdrawnin IS NULL OR MCwithdrawnin > '$lsbversion') ";
+$select.= "AND Cbuiltin!='Yes' ";
 $select.= "ORDER BY Cname ";
 
 #print $select;
