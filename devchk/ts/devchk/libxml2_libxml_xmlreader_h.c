@@ -29,60 +29,57 @@ Msg("Checking data structures in libxml2/libxml/xmlreader.h\n");
 
 printf("Checking data structures in libxml2/libxml/xmlreader.h\n");
 #if __i386__
-CheckTypeSize(xmlTextReader,0, 15059, 2)
+CheckTypeSize(xmlTextReader,0, 15059, 2);
 #elif __x86_64__
-CheckTypeSize(xmlTextReader,0, 15059, 11)
+CheckTypeSize(xmlTextReader,0, 15059, 11);
 #elif __ia64__
-CheckTypeSize(xmlTextReader,0, 15059, 3)
+CheckTypeSize(xmlTextReader,0, 15059, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlTextReader,0, 15059, 6)
+CheckTypeSize(xmlTextReader,0, 15059, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlTextReader,0, 15059, 9)
+CheckTypeSize(xmlTextReader,0, 15059, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlTextReader,0, 15059, 10)
+CheckTypeSize(xmlTextReader,0, 15059, 10);
 #elif __s390x__
-CheckTypeSize(xmlTextReader,0, 15059, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15059,0);
-Msg("Find size of xmlTextReader (15059)\n");
+CheckTypeSize(xmlTextReader,0, 15059, 12);
+#elif 1
+CheckTypeSize(xmlTextReader,0, 15059, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlTextReader *,4, 15060, 2)
+CheckTypeSize(xmlTextReader *,4, 15060, 2);
 #elif __x86_64__
-CheckTypeSize(xmlTextReader *,8, 15060, 11)
+CheckTypeSize(xmlTextReader *,8, 15060, 11);
 #elif __ia64__
-CheckTypeSize(xmlTextReader *,8, 15060, 3)
+CheckTypeSize(xmlTextReader *,8, 15060, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlTextReader *,4, 15060, 6)
+CheckTypeSize(xmlTextReader *,4, 15060, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlTextReader *,8, 15060, 9)
+CheckTypeSize(xmlTextReader *,8, 15060, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlTextReader *,4, 15060, 10)
+CheckTypeSize(xmlTextReader *,4, 15060, 10);
 #elif __s390x__
-CheckTypeSize(xmlTextReader *,8, 15060, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15060,0);
-Msg("Find size of xmlTextReader * (15060)\n");
+CheckTypeSize(xmlTextReader *,8, 15060, 12);
+#elif 1
+CheckTypeSize(xmlTextReader *,0, 15060, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlTextReaderPtr,4, 15061, 2)
+CheckTypeSize(xmlTextReaderPtr,4, 15061, 2);
 #elif __x86_64__
-CheckTypeSize(xmlTextReaderPtr,8, 15061, 11)
+CheckTypeSize(xmlTextReaderPtr,8, 15061, 11);
 #elif __ia64__
-CheckTypeSize(xmlTextReaderPtr,8, 15061, 3)
+CheckTypeSize(xmlTextReaderPtr,8, 15061, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlTextReaderPtr,4, 15061, 6)
+CheckTypeSize(xmlTextReaderPtr,4, 15061, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlTextReaderPtr,8, 15061, 9)
+CheckTypeSize(xmlTextReaderPtr,8, 15061, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlTextReaderPtr,4, 15061, 10)
+CheckTypeSize(xmlTextReaderPtr,4, 15061, 10);
 #elif __s390x__
-CheckTypeSize(xmlTextReaderPtr,8, 15061, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15061,0);
-Msg("Find size of xmlTextReaderPtr (15061)\n");
+CheckTypeSize(xmlTextReaderPtr,8, 15061, 12);
+#elif 1
+CheckTypeSize(xmlTextReaderPtr,0, 15061, 1);
 #endif
 
 #if __i386__
@@ -120,47 +117,47 @@ CheckEnum("XML_PARSER_SEVERITY_VALIDITY_WARNING",XML_PARSER_SEVERITY_VALIDITY_WA
 CheckEnum("XML_PARSER_SEVERITY_VALIDITY_ERROR",XML_PARSER_SEVERITY_VALIDITY_ERROR,2,49997);
 CheckEnum("XML_PARSER_SEVERITY_WARNING",XML_PARSER_SEVERITY_WARNING,3,49998);
 CheckEnum("XML_PARSER_SEVERITY_ERROR",XML_PARSER_SEVERITY_ERROR,4,49999);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15062,0);
-Msg("Find size of anon-libxml2/libxml/xmlreader.h-238 (15062)\n");
+#elif 1
+CheckEnum("XML_PARSER_SEVERITY_VALIDITY_WARNING",XML_PARSER_SEVERITY_VALIDITY_WARNING,1,49996);
+CheckEnum("XML_PARSER_SEVERITY_VALIDITY_ERROR",XML_PARSER_SEVERITY_VALIDITY_ERROR,2,49997);
+CheckEnum("XML_PARSER_SEVERITY_WARNING",XML_PARSER_SEVERITY_WARNING,3,49998);
+CheckEnum("XML_PARSER_SEVERITY_ERROR",XML_PARSER_SEVERITY_ERROR,4,49999);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlParserSeverities,4, 15063, 2)
+CheckTypeSize(xmlParserSeverities,4, 15063, 2);
 #elif __x86_64__
-CheckTypeSize(xmlParserSeverities,4, 15063, 11)
+CheckTypeSize(xmlParserSeverities,4, 15063, 11);
 #elif __ia64__
-CheckTypeSize(xmlParserSeverities,4, 15063, 3)
+CheckTypeSize(xmlParserSeverities,4, 15063, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlParserSeverities,4, 15063, 6)
+CheckTypeSize(xmlParserSeverities,4, 15063, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlParserSeverities,4, 15063, 9)
+CheckTypeSize(xmlParserSeverities,4, 15063, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlParserSeverities,4, 15063, 10)
+CheckTypeSize(xmlParserSeverities,4, 15063, 10);
 #elif __s390x__
-CheckTypeSize(xmlParserSeverities,4, 15063, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15063,0);
-Msg("Find size of xmlParserSeverities (15063)\n");
+CheckTypeSize(xmlParserSeverities,4, 15063, 12);
+#elif 1
+CheckTypeSize(xmlParserSeverities,0, 15063, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlTextReaderLocatorPtr,4, 15064, 2)
+CheckTypeSize(xmlTextReaderLocatorPtr,4, 15064, 2);
 #elif __x86_64__
-CheckTypeSize(xmlTextReaderLocatorPtr,8, 15064, 11)
+CheckTypeSize(xmlTextReaderLocatorPtr,8, 15064, 11);
 #elif __ia64__
-CheckTypeSize(xmlTextReaderLocatorPtr,8, 15064, 3)
+CheckTypeSize(xmlTextReaderLocatorPtr,8, 15064, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlTextReaderLocatorPtr,4, 15064, 6)
+CheckTypeSize(xmlTextReaderLocatorPtr,4, 15064, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlTextReaderLocatorPtr,8, 15064, 9)
+CheckTypeSize(xmlTextReaderLocatorPtr,8, 15064, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlTextReaderLocatorPtr,4, 15064, 10)
+CheckTypeSize(xmlTextReaderLocatorPtr,4, 15064, 10);
 #elif __s390x__
-CheckTypeSize(xmlTextReaderLocatorPtr,8, 15064, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15064,0);
-Msg("Find size of xmlTextReaderLocatorPtr (15064)\n");
+CheckTypeSize(xmlTextReaderLocatorPtr,8, 15064, 12);
+#elif 1
+CheckTypeSize(xmlTextReaderLocatorPtr,0, 15064, 1);
 #endif
 
 #if __i386__
@@ -170,47 +167,43 @@ Msg("Find size of xmlTextReaderLocatorPtr (15064)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15065,0);
-Msg("Find size of fptr_xmlreader_140 (15065)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(xmlTextReaderErrorFunc,4, 15066, 2)
+CheckTypeSize(xmlTextReaderErrorFunc,4, 15066, 2);
 #elif __x86_64__
-CheckTypeSize(xmlTextReaderErrorFunc,8, 15066, 11)
+CheckTypeSize(xmlTextReaderErrorFunc,8, 15066, 11);
 #elif __ia64__
-CheckTypeSize(xmlTextReaderErrorFunc,8, 15066, 3)
+CheckTypeSize(xmlTextReaderErrorFunc,8, 15066, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlTextReaderErrorFunc,4, 15066, 6)
+CheckTypeSize(xmlTextReaderErrorFunc,4, 15066, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlTextReaderErrorFunc,8, 15066, 9)
+CheckTypeSize(xmlTextReaderErrorFunc,8, 15066, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlTextReaderErrorFunc,4, 15066, 10)
+CheckTypeSize(xmlTextReaderErrorFunc,4, 15066, 10);
 #elif __s390x__
-CheckTypeSize(xmlTextReaderErrorFunc,8, 15066, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15066,0);
-Msg("Find size of xmlTextReaderErrorFunc (15066)\n");
+CheckTypeSize(xmlTextReaderErrorFunc,8, 15066, 12);
+#elif 1
+CheckTypeSize(xmlTextReaderErrorFunc,0, 15066, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlTextReaderErrorFunc *,4, 15067, 2)
+CheckTypeSize(xmlTextReaderErrorFunc *,4, 15067, 2);
 #elif __x86_64__
-CheckTypeSize(xmlTextReaderErrorFunc *,8, 15067, 11)
+CheckTypeSize(xmlTextReaderErrorFunc *,8, 15067, 11);
 #elif __ia64__
-CheckTypeSize(xmlTextReaderErrorFunc *,8, 15067, 3)
+CheckTypeSize(xmlTextReaderErrorFunc *,8, 15067, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlTextReaderErrorFunc *,4, 15067, 6)
+CheckTypeSize(xmlTextReaderErrorFunc *,4, 15067, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlTextReaderErrorFunc *,8, 15067, 9)
+CheckTypeSize(xmlTextReaderErrorFunc *,8, 15067, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlTextReaderErrorFunc *,4, 15067, 10)
+CheckTypeSize(xmlTextReaderErrorFunc *,4, 15067, 10);
 #elif __s390x__
-CheckTypeSize(xmlTextReaderErrorFunc *,8, 15067, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15067,0);
-Msg("Find size of xmlTextReaderErrorFunc * (15067)\n");
+CheckTypeSize(xmlTextReaderErrorFunc *,8, 15067, 12);
+#elif 1
+CheckTypeSize(xmlTextReaderErrorFunc *,0, 15067, 1);
 #endif
 
 #if __i386__
@@ -248,28 +241,29 @@ CheckEnum("XML_PARSER_LOADDTD",XML_PARSER_LOADDTD,1,50130);
 CheckEnum("XML_PARSER_DEFAULTATTRS",XML_PARSER_DEFAULTATTRS,2,50131);
 CheckEnum("XML_PARSER_VALIDATE",XML_PARSER_VALIDATE,3,50132);
 CheckEnum("XML_PARSER_SUBST_ENTITIES",XML_PARSER_SUBST_ENTITIES,4,50133);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15119,0);
-Msg("Find size of anonymous-xmlreader.h.types-0 (15119)\n");
+#elif 1
+CheckEnum("XML_PARSER_LOADDTD",XML_PARSER_LOADDTD,1,50130);
+CheckEnum("XML_PARSER_DEFAULTATTRS",XML_PARSER_DEFAULTATTRS,2,50131);
+CheckEnum("XML_PARSER_VALIDATE",XML_PARSER_VALIDATE,3,50132);
+CheckEnum("XML_PARSER_SUBST_ENTITIES",XML_PARSER_SUBST_ENTITIES,4,50133);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlParserProperties,4, 15120, 2)
+CheckTypeSize(xmlParserProperties,4, 15120, 2);
 #elif __x86_64__
-CheckTypeSize(xmlParserProperties,4, 15120, 11)
+CheckTypeSize(xmlParserProperties,4, 15120, 11);
 #elif __ia64__
-CheckTypeSize(xmlParserProperties,4, 15120, 3)
+CheckTypeSize(xmlParserProperties,4, 15120, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlParserProperties,4, 15120, 6)
+CheckTypeSize(xmlParserProperties,4, 15120, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlParserProperties,4, 15120, 9)
+CheckTypeSize(xmlParserProperties,4, 15120, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlParserProperties,4, 15120, 10)
+CheckTypeSize(xmlParserProperties,4, 15120, 10);
 #elif __s390x__
-CheckTypeSize(xmlParserProperties,4, 15120, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15120,0);
-Msg("Find size of xmlParserProperties (15120)\n");
+CheckTypeSize(xmlParserProperties,4, 15120, 12);
+#elif 1
+CheckTypeSize(xmlParserProperties,0, 15120, 1);
 #endif
 
 #if __i386__
@@ -405,28 +399,43 @@ CheckEnum("XML_READER_TYPE_SIGNIFICANT_WHITESPACE",XML_READER_TYPE_SIGNIFICANT_W
 CheckEnum("XML_READER_TYPE_END_ELEMENT",XML_READER_TYPE_END_ELEMENT,15,50149);
 CheckEnum("XML_READER_TYPE_END_ENTITY",XML_READER_TYPE_END_ENTITY,16,50150);
 CheckEnum("XML_READER_TYPE_XML_DECLARATION",XML_READER_TYPE_XML_DECLARATION,17,50151);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15121,0);
-Msg("Find size of anonymous-xmlreader.h.types-2 (15121)\n");
+#elif 1
+CheckEnum("XML_READER_TYPE_NONE",XML_READER_TYPE_NONE,0,50134);
+CheckEnum("XML_READER_TYPE_ELEMENT",XML_READER_TYPE_ELEMENT,1,50135);
+CheckEnum("XML_READER_TYPE_ATTRIBUTE",XML_READER_TYPE_ATTRIBUTE,2,50136);
+CheckEnum("XML_READER_TYPE_TEXT",XML_READER_TYPE_TEXT,3,50137);
+CheckEnum("XML_READER_TYPE_CDATA",XML_READER_TYPE_CDATA,4,50138);
+CheckEnum("XML_READER_TYPE_ENTITY_REFERENCE",XML_READER_TYPE_ENTITY_REFERENCE,5,50139);
+CheckEnum("XML_READER_TYPE_ENTITY",XML_READER_TYPE_ENTITY,6,50140);
+CheckEnum("XML_READER_TYPE_PROCESSING_INSTRUCTION",XML_READER_TYPE_PROCESSING_INSTRUCTION,7,50141);
+CheckEnum("XML_READER_TYPE_COMMENT",XML_READER_TYPE_COMMENT,8,50142);
+CheckEnum("XML_READER_TYPE_DOCUMENT",XML_READER_TYPE_DOCUMENT,9,50143);
+CheckEnum("XML_READER_TYPE_DOCUMENT_TYPE",XML_READER_TYPE_DOCUMENT_TYPE,10,50144);
+CheckEnum("XML_READER_TYPE_DOCUMENT_FRAGMENT",XML_READER_TYPE_DOCUMENT_FRAGMENT,11,50145);
+CheckEnum("XML_READER_TYPE_NOTATION",XML_READER_TYPE_NOTATION,12,50146);
+CheckEnum("XML_READER_TYPE_WHITESPACE",XML_READER_TYPE_WHITESPACE,13,50147);
+CheckEnum("XML_READER_TYPE_SIGNIFICANT_WHITESPACE",XML_READER_TYPE_SIGNIFICANT_WHITESPACE,14,50148);
+CheckEnum("XML_READER_TYPE_END_ELEMENT",XML_READER_TYPE_END_ELEMENT,15,50149);
+CheckEnum("XML_READER_TYPE_END_ENTITY",XML_READER_TYPE_END_ENTITY,16,50150);
+CheckEnum("XML_READER_TYPE_XML_DECLARATION",XML_READER_TYPE_XML_DECLARATION,17,50151);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlReaderTypes,4, 15122, 2)
+CheckTypeSize(xmlReaderTypes,4, 15122, 2);
 #elif __x86_64__
-CheckTypeSize(xmlReaderTypes,4, 15122, 11)
+CheckTypeSize(xmlReaderTypes,4, 15122, 11);
 #elif __ia64__
-CheckTypeSize(xmlReaderTypes,4, 15122, 3)
+CheckTypeSize(xmlReaderTypes,4, 15122, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlReaderTypes,4, 15122, 6)
+CheckTypeSize(xmlReaderTypes,4, 15122, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlReaderTypes,4, 15122, 9)
+CheckTypeSize(xmlReaderTypes,4, 15122, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlReaderTypes,4, 15122, 10)
+CheckTypeSize(xmlReaderTypes,4, 15122, 10);
 #elif __s390x__
-CheckTypeSize(xmlReaderTypes,4, 15122, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15122,0);
-Msg("Find size of xmlReaderTypes (15122)\n");
+CheckTypeSize(xmlReaderTypes,4, 15122, 12);
+#elif 1
+CheckTypeSize(xmlReaderTypes,0, 15122, 1);
 #endif
 
 #if __i386__
@@ -478,28 +487,31 @@ CheckEnum("XML_TEXTREADER_MODE_ERROR",XML_TEXTREADER_MODE_ERROR,2,50154);
 CheckEnum("XML_TEXTREADER_MODE_EOF",XML_TEXTREADER_MODE_EOF,3,50155);
 CheckEnum("XML_TEXTREADER_MODE_CLOSED",XML_TEXTREADER_MODE_CLOSED,4,50156);
 CheckEnum("XML_TEXTREADER_MODE_READING",XML_TEXTREADER_MODE_READING,5,50157);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15123,0);
-Msg("Find size of anonymous-xmlreader.h.types-4 (15123)\n");
+#elif 1
+CheckEnum("XML_TEXTREADER_MODE_INITIAL",XML_TEXTREADER_MODE_INITIAL,0,50152);
+CheckEnum("XML_TEXTREADER_MODE_INTERACTIVE",XML_TEXTREADER_MODE_INTERACTIVE,1,50153);
+CheckEnum("XML_TEXTREADER_MODE_ERROR",XML_TEXTREADER_MODE_ERROR,2,50154);
+CheckEnum("XML_TEXTREADER_MODE_EOF",XML_TEXTREADER_MODE_EOF,3,50155);
+CheckEnum("XML_TEXTREADER_MODE_CLOSED",XML_TEXTREADER_MODE_CLOSED,4,50156);
+CheckEnum("XML_TEXTREADER_MODE_READING",XML_TEXTREADER_MODE_READING,5,50157);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlTextReaderMode,4, 15124, 2)
+CheckTypeSize(xmlTextReaderMode,4, 15124, 2);
 #elif __x86_64__
-CheckTypeSize(xmlTextReaderMode,4, 15124, 11)
+CheckTypeSize(xmlTextReaderMode,4, 15124, 11);
 #elif __ia64__
-CheckTypeSize(xmlTextReaderMode,4, 15124, 3)
+CheckTypeSize(xmlTextReaderMode,4, 15124, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlTextReaderMode,4, 15124, 6)
+CheckTypeSize(xmlTextReaderMode,4, 15124, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlTextReaderMode,4, 15124, 9)
+CheckTypeSize(xmlTextReaderMode,4, 15124, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlTextReaderMode,4, 15124, 10)
+CheckTypeSize(xmlTextReaderMode,4, 15124, 10);
 #elif __s390x__
-CheckTypeSize(xmlTextReaderMode,4, 15124, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15124,0);
-Msg("Find size of xmlTextReaderMode (15124)\n");
+CheckTypeSize(xmlTextReaderMode,4, 15124, 12);
+#elif 1
+CheckTypeSize(xmlTextReaderMode,0, 15124, 1);
 #endif
 
 extern xmlChar * xmlTextReaderNamespaceUri_db(xmlTextReaderPtr);

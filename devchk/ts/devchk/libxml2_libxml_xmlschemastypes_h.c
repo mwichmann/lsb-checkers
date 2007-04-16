@@ -34,136 +34,129 @@ Msg("Checking data structures in libxml2/libxml/xmlschemastypes.h\n");
 
 printf("Checking data structures in libxml2/libxml/xmlschemastypes.h\n");
 #if __i386__
-CheckTypeSize(xmlSchemaType,116, 15048, 2)
+CheckTypeSize(xmlSchemaType,116, 15048, 2);
 #elif __x86_64__
-CheckTypeSize(xmlSchemaType,216, 15048, 11)
+CheckTypeSize(xmlSchemaType,216, 15048, 11);
 #elif __ia64__
-CheckTypeSize(xmlSchemaType,216, 15048, 3)
+CheckTypeSize(xmlSchemaType,216, 15048, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaType,116, 15048, 6)
+CheckTypeSize(xmlSchemaType,116, 15048, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlSchemaType,216, 15048, 9)
+CheckTypeSize(xmlSchemaType,216, 15048, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaType,116, 15048, 10)
+CheckTypeSize(xmlSchemaType,116, 15048, 10);
 #elif __s390x__
-CheckTypeSize(xmlSchemaType,216, 15048, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15048,0);
-Msg("Find size of xmlSchemaType (15048)\n");
+CheckTypeSize(xmlSchemaType,216, 15048, 12);
+#elif 1
+CheckTypeSize(xmlSchemaType,0, 15048, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlSchemaType *,4, 15049, 2)
+CheckTypeSize(xmlSchemaType *,4, 15049, 2);
 #elif __x86_64__
-CheckTypeSize(xmlSchemaType *,8, 15049, 11)
+CheckTypeSize(xmlSchemaType *,8, 15049, 11);
 #elif __ia64__
-CheckTypeSize(xmlSchemaType *,8, 15049, 3)
+CheckTypeSize(xmlSchemaType *,8, 15049, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaType *,4, 15049, 6)
+CheckTypeSize(xmlSchemaType *,4, 15049, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlSchemaType *,8, 15049, 9)
+CheckTypeSize(xmlSchemaType *,8, 15049, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaType *,4, 15049, 10)
+CheckTypeSize(xmlSchemaType *,4, 15049, 10);
 #elif __s390x__
-CheckTypeSize(xmlSchemaType *,8, 15049, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15049,0);
-Msg("Find size of xmlSchemaType * (15049)\n");
+CheckTypeSize(xmlSchemaType *,8, 15049, 12);
+#elif 1
+CheckTypeSize(xmlSchemaType *,0, 15049, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlSchemaTypePtr,4, 15050, 2)
+CheckTypeSize(xmlSchemaTypePtr,4, 15050, 2);
 #elif __x86_64__
-CheckTypeSize(xmlSchemaTypePtr,8, 15050, 11)
+CheckTypeSize(xmlSchemaTypePtr,8, 15050, 11);
 #elif __ia64__
-CheckTypeSize(xmlSchemaTypePtr,8, 15050, 3)
+CheckTypeSize(xmlSchemaTypePtr,8, 15050, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaTypePtr,4, 15050, 6)
+CheckTypeSize(xmlSchemaTypePtr,4, 15050, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlSchemaTypePtr,8, 15050, 9)
+CheckTypeSize(xmlSchemaTypePtr,8, 15050, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaTypePtr,4, 15050, 10)
+CheckTypeSize(xmlSchemaTypePtr,4, 15050, 10);
 #elif __s390x__
-CheckTypeSize(xmlSchemaTypePtr,8, 15050, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15050,0);
-Msg("Find size of xmlSchemaTypePtr (15050)\n");
+CheckTypeSize(xmlSchemaTypePtr,8, 15050, 12);
+#elif 1
+CheckTypeSize(xmlSchemaTypePtr,0, 15050, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlSchemaVal,0, 15052, 2)
+CheckTypeSize(xmlSchemaVal,0, 15052, 2);
 #elif __x86_64__
-CheckTypeSize(xmlSchemaVal,0, 15052, 11)
+CheckTypeSize(xmlSchemaVal,0, 15052, 11);
 #elif __ia64__
-CheckTypeSize(xmlSchemaVal,0, 15052, 3)
+CheckTypeSize(xmlSchemaVal,0, 15052, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaVal,0, 15052, 6)
+CheckTypeSize(xmlSchemaVal,0, 15052, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlSchemaVal,0, 15052, 9)
+CheckTypeSize(xmlSchemaVal,0, 15052, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaVal,0, 15052, 10)
+CheckTypeSize(xmlSchemaVal,0, 15052, 10);
 #elif __s390x__
-CheckTypeSize(xmlSchemaVal,0, 15052, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15052,0);
-Msg("Find size of xmlSchemaVal (15052)\n");
+CheckTypeSize(xmlSchemaVal,0, 15052, 12);
+#elif 1
+CheckTypeSize(xmlSchemaVal,0, 15052, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlSchemaVal *,4, 15053, 2)
+CheckTypeSize(xmlSchemaVal *,4, 15053, 2);
 #elif __x86_64__
-CheckTypeSize(xmlSchemaVal *,8, 15053, 11)
+CheckTypeSize(xmlSchemaVal *,8, 15053, 11);
 #elif __ia64__
-CheckTypeSize(xmlSchemaVal *,8, 15053, 3)
+CheckTypeSize(xmlSchemaVal *,8, 15053, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaVal *,4, 15053, 6)
+CheckTypeSize(xmlSchemaVal *,4, 15053, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlSchemaVal *,8, 15053, 9)
+CheckTypeSize(xmlSchemaVal *,8, 15053, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaVal *,4, 15053, 10)
+CheckTypeSize(xmlSchemaVal *,4, 15053, 10);
 #elif __s390x__
-CheckTypeSize(xmlSchemaVal *,8, 15053, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15053,0);
-Msg("Find size of xmlSchemaVal * (15053)\n");
+CheckTypeSize(xmlSchemaVal *,8, 15053, 12);
+#elif 1
+CheckTypeSize(xmlSchemaVal *,0, 15053, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlSchemaValPtr,4, 15054, 2)
+CheckTypeSize(xmlSchemaValPtr,4, 15054, 2);
 #elif __x86_64__
-CheckTypeSize(xmlSchemaValPtr,8, 15054, 11)
+CheckTypeSize(xmlSchemaValPtr,8, 15054, 11);
 #elif __ia64__
-CheckTypeSize(xmlSchemaValPtr,8, 15054, 3)
+CheckTypeSize(xmlSchemaValPtr,8, 15054, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaValPtr,4, 15054, 6)
+CheckTypeSize(xmlSchemaValPtr,4, 15054, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlSchemaValPtr,8, 15054, 9)
+CheckTypeSize(xmlSchemaValPtr,8, 15054, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaValPtr,4, 15054, 10)
+CheckTypeSize(xmlSchemaValPtr,4, 15054, 10);
 #elif __s390x__
-CheckTypeSize(xmlSchemaValPtr,8, 15054, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15054,0);
-Msg("Find size of xmlSchemaValPtr (15054)\n");
+CheckTypeSize(xmlSchemaValPtr,8, 15054, 12);
+#elif 1
+CheckTypeSize(xmlSchemaValPtr,0, 15054, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlSchemaValPtr *,4, 15055, 2)
+CheckTypeSize(xmlSchemaValPtr *,4, 15055, 2);
 #elif __x86_64__
-CheckTypeSize(xmlSchemaValPtr *,8, 15055, 11)
+CheckTypeSize(xmlSchemaValPtr *,8, 15055, 11);
 #elif __ia64__
-CheckTypeSize(xmlSchemaValPtr *,8, 15055, 3)
+CheckTypeSize(xmlSchemaValPtr *,8, 15055, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaValPtr *,4, 15055, 6)
+CheckTypeSize(xmlSchemaValPtr *,4, 15055, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlSchemaValPtr *,8, 15055, 9)
+CheckTypeSize(xmlSchemaValPtr *,8, 15055, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaValPtr *,4, 15055, 10)
+CheckTypeSize(xmlSchemaValPtr *,4, 15055, 10);
 #elif __s390x__
-CheckTypeSize(xmlSchemaValPtr *,8, 15055, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15055,0);
-Msg("Find size of xmlSchemaValPtr * (15055)\n");
+CheckTypeSize(xmlSchemaValPtr *,8, 15055, 12);
+#elif 1
+CheckTypeSize(xmlSchemaValPtr *,0, 15055, 1);
 #endif
 
 #if __i386__
@@ -502,28 +495,72 @@ CheckEnum("XML_SCHEMAS_HEXBINARY",XML_SCHEMAS_HEXBINARY,43,49992);
 CheckEnum("XML_SCHEMAS_BASE64BINARY",XML_SCHEMAS_BASE64BINARY,44,49993);
 CheckEnum("XML_SCHEMAS_ANYTYPE",XML_SCHEMAS_ANYTYPE,45,49994);
 CheckEnum("XML_SCHEMAS_ANYSIMPLETYPE",XML_SCHEMAS_ANYSIMPLETYPE,46,49995);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15056,0);
-Msg("Find size of anon-libxml2/libxml/xmlschemastypes.h-220 (15056)\n");
+#elif 1
+CheckEnum("XML_SCHEMAS_UNKNOWN",XML_SCHEMAS_UNKNOWN,0,49949);
+CheckEnum("XML_SCHEMAS_STRING",XML_SCHEMAS_STRING,1,49950);
+CheckEnum("XML_SCHEMAS_NORMSTRING",XML_SCHEMAS_NORMSTRING,2,49951);
+CheckEnum("XML_SCHEMAS_DECIMAL",XML_SCHEMAS_DECIMAL,3,49952);
+CheckEnum("XML_SCHEMAS_TIME",XML_SCHEMAS_TIME,4,49953);
+CheckEnum("XML_SCHEMAS_GDAY",XML_SCHEMAS_GDAY,5,49954);
+CheckEnum("XML_SCHEMAS_GMONTH",XML_SCHEMAS_GMONTH,6,49955);
+CheckEnum("XML_SCHEMAS_GMONTHDAY",XML_SCHEMAS_GMONTHDAY,7,49956);
+CheckEnum("XML_SCHEMAS_GYEAR",XML_SCHEMAS_GYEAR,8,49957);
+CheckEnum("XML_SCHEMAS_GYEARMONTH",XML_SCHEMAS_GYEARMONTH,9,49958);
+CheckEnum("XML_SCHEMAS_DATE",XML_SCHEMAS_DATE,10,49959);
+CheckEnum("XML_SCHEMAS_DATETIME",XML_SCHEMAS_DATETIME,11,49960);
+CheckEnum("XML_SCHEMAS_DURATION",XML_SCHEMAS_DURATION,12,49961);
+CheckEnum("XML_SCHEMAS_FLOAT",XML_SCHEMAS_FLOAT,13,49962);
+CheckEnum("XML_SCHEMAS_DOUBLE",XML_SCHEMAS_DOUBLE,14,49963);
+CheckEnum("XML_SCHEMAS_BOOLEAN",XML_SCHEMAS_BOOLEAN,15,49964);
+CheckEnum("XML_SCHEMAS_TOKEN",XML_SCHEMAS_TOKEN,16,49965);
+CheckEnum("XML_SCHEMAS_LANGUAGE",XML_SCHEMAS_LANGUAGE,17,49966);
+CheckEnum("XML_SCHEMAS_NMTOKEN",XML_SCHEMAS_NMTOKEN,18,49967);
+CheckEnum("XML_SCHEMAS_NMTOKENS",XML_SCHEMAS_NMTOKENS,19,49968);
+CheckEnum("XML_SCHEMAS_NAME",XML_SCHEMAS_NAME,20,49969);
+CheckEnum("XML_SCHEMAS_QNAME",XML_SCHEMAS_QNAME,21,49970);
+CheckEnum("XML_SCHEMAS_NCNAME",XML_SCHEMAS_NCNAME,22,49971);
+CheckEnum("XML_SCHEMAS_ID",XML_SCHEMAS_ID,23,49972);
+CheckEnum("XML_SCHEMAS_IDREF",XML_SCHEMAS_IDREF,24,49973);
+CheckEnum("XML_SCHEMAS_IDREFS",XML_SCHEMAS_IDREFS,25,49974);
+CheckEnum("XML_SCHEMAS_ENTITY",XML_SCHEMAS_ENTITY,26,49975);
+CheckEnum("XML_SCHEMAS_ENTITIES",XML_SCHEMAS_ENTITIES,27,49976);
+CheckEnum("XML_SCHEMAS_NOTATION",XML_SCHEMAS_NOTATION,28,49977);
+CheckEnum("XML_SCHEMAS_ANYURI",XML_SCHEMAS_ANYURI,29,49978);
+CheckEnum("XML_SCHEMAS_INTEGER",XML_SCHEMAS_INTEGER,30,49979);
+CheckEnum("XML_SCHEMAS_NPINTEGER",XML_SCHEMAS_NPINTEGER,31,49980);
+CheckEnum("XML_SCHEMAS_NINTEGER",XML_SCHEMAS_NINTEGER,32,49981);
+CheckEnum("XML_SCHEMAS_NNINTEGER",XML_SCHEMAS_NNINTEGER,33,49982);
+CheckEnum("XML_SCHEMAS_PINTEGER",XML_SCHEMAS_PINTEGER,34,49983);
+CheckEnum("XML_SCHEMAS_INT",XML_SCHEMAS_INT,35,49984);
+CheckEnum("XML_SCHEMAS_UINT",XML_SCHEMAS_UINT,36,49985);
+CheckEnum("XML_SCHEMAS_LONG",XML_SCHEMAS_LONG,37,49986);
+CheckEnum("XML_SCHEMAS_ULONG",XML_SCHEMAS_ULONG,38,49987);
+CheckEnum("XML_SCHEMAS_SHORT",XML_SCHEMAS_SHORT,39,49988);
+CheckEnum("XML_SCHEMAS_USHORT",XML_SCHEMAS_USHORT,40,49989);
+CheckEnum("XML_SCHEMAS_BYTE",XML_SCHEMAS_BYTE,41,49990);
+CheckEnum("XML_SCHEMAS_UBYTE",XML_SCHEMAS_UBYTE,42,49991);
+CheckEnum("XML_SCHEMAS_HEXBINARY",XML_SCHEMAS_HEXBINARY,43,49992);
+CheckEnum("XML_SCHEMAS_BASE64BINARY",XML_SCHEMAS_BASE64BINARY,44,49993);
+CheckEnum("XML_SCHEMAS_ANYTYPE",XML_SCHEMAS_ANYTYPE,45,49994);
+CheckEnum("XML_SCHEMAS_ANYSIMPLETYPE",XML_SCHEMAS_ANYSIMPLETYPE,46,49995);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlSchemaValType,4, 15057, 2)
+CheckTypeSize(xmlSchemaValType,4, 15057, 2);
 #elif __x86_64__
-CheckTypeSize(xmlSchemaValType,4, 15057, 11)
+CheckTypeSize(xmlSchemaValType,4, 15057, 11);
 #elif __ia64__
-CheckTypeSize(xmlSchemaValType,4, 15057, 3)
+CheckTypeSize(xmlSchemaValType,4, 15057, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaValType,4, 15057, 6)
+CheckTypeSize(xmlSchemaValType,4, 15057, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlSchemaValType,4, 15057, 9)
+CheckTypeSize(xmlSchemaValType,4, 15057, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaValType,4, 15057, 10)
+CheckTypeSize(xmlSchemaValType,4, 15057, 10);
 #elif __s390x__
-CheckTypeSize(xmlSchemaValType,4, 15057, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15057,0);
-Msg("Find size of xmlSchemaValType (15057)\n");
+CheckTypeSize(xmlSchemaValType,4, 15057, 12);
+#elif 1
+CheckTypeSize(xmlSchemaValType,0, 15057, 1);
 #endif
 
 extern int xmlSchemaValPredefTypeNode_db(xmlSchemaTypePtr, const xmlChar *, xmlSchemaValPtr *, xmlNodePtr);

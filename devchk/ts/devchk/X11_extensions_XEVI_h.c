@@ -60,22 +60,21 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(ExtendedVisualInfo,36, 11068, 2)
+CheckTypeSize(ExtendedVisualInfo,36, 11068, 2);
 #elif __ia64__
-CheckTypeSize(ExtendedVisualInfo,48, 11068, 3)
+CheckTypeSize(ExtendedVisualInfo,48, 11068, 3);
 #elif __powerpc64__
-CheckTypeSize(ExtendedVisualInfo,48, 11068, 9)
+CheckTypeSize(ExtendedVisualInfo,48, 11068, 9);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(ExtendedVisualInfo,36, 11068, 6)
+CheckTypeSize(ExtendedVisualInfo,36, 11068, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(ExtendedVisualInfo,36, 11068, 10)
+CheckTypeSize(ExtendedVisualInfo,36, 11068, 10);
 #elif __x86_64__
-CheckTypeSize(ExtendedVisualInfo,48, 11068, 11)
+CheckTypeSize(ExtendedVisualInfo,48, 11068, 11);
 #elif __s390x__
-CheckTypeSize(ExtendedVisualInfo,48, 11068, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11068,0);
-Msg("Find size of ExtendedVisualInfo (11068)\n");
+CheckTypeSize(ExtendedVisualInfo,48, 11068, 12);
+#elif 1
+CheckTypeSize(ExtendedVisualInfo,0, 11068, 1);
 #endif
 
 #ifdef TET_TEST

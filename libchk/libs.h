@@ -163,14 +163,6 @@ extern struct classinfo libgcc_s_so_1_classinfo[];
 extern struct versym libgcc_s_so_1[];
 extern struct classinfo libgcc_s_so_1_classinfo[];
 #endif
-#if __mc68000__
-extern struct versym libgcc_s_so_1[];
-extern struct classinfo libgcc_s_so_1_classinfo[];
-#endif
-#if __arm__
-extern struct versym libgcc_s_so_1[];
-extern struct classinfo libgcc_s_so_1_classinfo[];
-#endif
 #if __ia64__
 extern struct versym libgcc_s_so_1[];
 extern struct classinfo libgcc_s_so_1_classinfo[];
@@ -454,10 +446,6 @@ extern struct versym libncurses_so_5[];
 extern struct classinfo libncurses_so_5_classinfo[];
 #endif
 #if __powerpc__ && !__powerpc64__
-extern struct versym libncurses_so_5[];
-extern struct classinfo libncurses_so_5_classinfo[];
-#endif
-#if __arm__
 extern struct versym libncurses_so_5[];
 extern struct classinfo libncurses_so_5_classinfo[];
 #endif
@@ -861,10 +849,6 @@ extern struct classinfo libutil_so_1_classinfo[];
 extern struct versym libutil_so_1[];
 extern struct classinfo libutil_so_1_classinfo[];
 #endif
-#if __arm__
-extern struct versym libutil_so_1[];
-extern struct classinfo libutil_so_1_classinfo[];
-#endif
 #if __ia64__
 extern struct versym libutil_so_1[];
 extern struct classinfo libutil_so_1_classinfo[];
@@ -900,10 +884,6 @@ extern struct versym libz_so_1[];
 extern struct classinfo libz_so_1_classinfo[];
 #endif
 #if __powerpc__ && !__powerpc64__
-extern struct versym libz_so_1[];
-extern struct classinfo libz_so_1_classinfo[];
-#endif
-#if __arm__
 extern struct versym libz_so_1[];
 extern struct classinfo libz_so_1_classinfo[];
 #endif

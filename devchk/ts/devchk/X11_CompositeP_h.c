@@ -61,41 +61,39 @@ cnt++;
 #endif
 
 #if __ia64__
-CheckTypeSize(CompositeClassPart,40, 10244, 3)
+CheckTypeSize(CompositeClassPart,40, 10244, 3);
 #elif __i386__
-CheckTypeSize(CompositeClassPart,20, 10244, 2)
+CheckTypeSize(CompositeClassPart,20, 10244, 2);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(CompositeClassPart,20, 10244, 6)
+CheckTypeSize(CompositeClassPart,20, 10244, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(CompositeClassPart,20, 10244, 10)
+CheckTypeSize(CompositeClassPart,20, 10244, 10);
 #elif __powerpc64__
-CheckTypeSize(CompositeClassPart,40, 10244, 9)
+CheckTypeSize(CompositeClassPart,40, 10244, 9);
 #elif __s390x__
-CheckTypeSize(CompositeClassPart,40, 10244, 12)
+CheckTypeSize(CompositeClassPart,40, 10244, 12);
 #elif __x86_64__
-CheckTypeSize(CompositeClassPart,40, 10244, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10244,0);
-Msg("Find size of CompositeClassPart (10244)\n");
+CheckTypeSize(CompositeClassPart,40, 10244, 11);
+#elif 1
+CheckTypeSize(CompositeClassPart,0, 10244, 1);
 #endif
 
 #if __ia64__
-CheckTypeSize(CompositeClassRec,264, 10240, 3)
+CheckTypeSize(CompositeClassRec,264, 10240, 3);
 #elif __i386__
-CheckTypeSize(CompositeClassRec,136, 10240, 2)
+CheckTypeSize(CompositeClassRec,136, 10240, 2);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(CompositeClassRec,136, 10240, 6)
+CheckTypeSize(CompositeClassRec,136, 10240, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(CompositeClassRec,136, 10240, 10)
+CheckTypeSize(CompositeClassRec,136, 10240, 10);
 #elif __powerpc64__
-CheckTypeSize(CompositeClassRec,264, 10240, 9)
+CheckTypeSize(CompositeClassRec,264, 10240, 9);
 #elif __s390x__
-CheckTypeSize(CompositeClassRec,264, 10240, 12)
+CheckTypeSize(CompositeClassRec,264, 10240, 12);
 #elif __x86_64__
-CheckTypeSize(CompositeClassRec,264, 10240, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10240,0);
-Msg("Find size of CompositeClassRec (10240)\n");
+CheckTypeSize(CompositeClassRec,264, 10240, 11);
+#elif 1
+CheckTypeSize(CompositeClassRec,0, 10240, 1);
 #endif
 
 #ifdef TET_TEST

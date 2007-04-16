@@ -739,552 +739,579 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkDrawable,12, 12672, 2)
+CheckTypeSize(struct _GdkDrawable,12, 12672, 2);
 Msg("Missing member data for _GdkDrawable on IA32\n");
-CheckOffset(struct _GdkDrawable,parent_instance,0,2,43426)
+CheckOffset(struct _GdkDrawable,parent_instance,0,2,43426);
 #elif __x86_64__
-CheckTypeSize(struct _GdkDrawable,24, 12672, 11)
+CheckTypeSize(struct _GdkDrawable,24, 12672, 11);
 Msg("Missing member data for _GdkDrawable on x86-64\n");
-CheckOffset(struct _GdkDrawable,parent_instance,0,11,43426)
+CheckOffset(struct _GdkDrawable,parent_instance,0,11,43426);
 #elif __ia64__
-CheckTypeSize(struct _GdkDrawable,24, 12672, 3)
+CheckTypeSize(struct _GdkDrawable,24, 12672, 3);
 Msg("Missing member data for _GdkDrawable on IA64\n");
-CheckOffset(struct _GdkDrawable,parent_instance,0,3,43426)
+CheckOffset(struct _GdkDrawable,parent_instance,0,3,43426);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkDrawable,12, 12672, 6)
+CheckTypeSize(struct _GdkDrawable,12, 12672, 6);
 Msg("Missing member data for _GdkDrawable on PPC32\n");
-CheckOffset(struct _GdkDrawable,parent_instance,0,6,43426)
+CheckOffset(struct _GdkDrawable,parent_instance,0,6,43426);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkDrawable,24, 12672, 9)
+CheckTypeSize(struct _GdkDrawable,24, 12672, 9);
 Msg("Missing member data for _GdkDrawable on PPC64\n");
-CheckOffset(struct _GdkDrawable,parent_instance,0,9,43426)
+CheckOffset(struct _GdkDrawable,parent_instance,0,9,43426);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkDrawable,12, 12672, 10)
+CheckTypeSize(struct _GdkDrawable,12, 12672, 10);
 Msg("Missing member data for _GdkDrawable on S390\n");
-CheckOffset(struct _GdkDrawable,parent_instance,0,10,43426)
+CheckOffset(struct _GdkDrawable,parent_instance,0,10,43426);
 #elif __s390x__
-CheckTypeSize(struct _GdkDrawable,24, 12672, 12)
+CheckTypeSize(struct _GdkDrawable,24, 12672, 12);
 Msg("Missing member data for _GdkDrawable on S390X\n");
-CheckOffset(struct _GdkDrawable,parent_instance,0,12,43426)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12672,0);
-Msg("Find size of _GdkDrawable (12672)\n");
+CheckOffset(struct _GdkDrawable,parent_instance,0,12,43426);
+#elif 1
+CheckTypeSize(struct _GdkDrawable,0, 12672, 1);
+Msg("Missing member data for _GdkDrawable on All\n");
+CheckOffset(struct _GdkDrawable,parent_instance,0,1,43426);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkWindow,12, 12673, 2)
+CheckTypeSize(GdkWindow,12, 12673, 2);
 #elif __x86_64__
-CheckTypeSize(GdkWindow,24, 12673, 11)
+CheckTypeSize(GdkWindow,24, 12673, 11);
 #elif __ia64__
-CheckTypeSize(GdkWindow,24, 12673, 3)
+CheckTypeSize(GdkWindow,24, 12673, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkWindow,12, 12673, 6)
+CheckTypeSize(GdkWindow,12, 12673, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkWindow,24, 12673, 9)
+CheckTypeSize(GdkWindow,24, 12673, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkWindow,12, 12673, 10)
+CheckTypeSize(GdkWindow,12, 12673, 10);
 #elif __s390x__
-CheckTypeSize(GdkWindow,24, 12673, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12673,0);
-Msg("Find size of GdkWindow (12673)\n");
+CheckTypeSize(GdkWindow,24, 12673, 12);
+#elif 1
+CheckTypeSize(GdkWindow,0, 12673, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkWindow *,4, 12674, 2)
+CheckTypeSize(GdkWindow *,4, 12674, 2);
 #elif __x86_64__
-CheckTypeSize(GdkWindow *,8, 12674, 11)
+CheckTypeSize(GdkWindow *,8, 12674, 11);
 #elif __ia64__
-CheckTypeSize(GdkWindow *,8, 12674, 3)
+CheckTypeSize(GdkWindow *,8, 12674, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkWindow *,4, 12674, 6)
+CheckTypeSize(GdkWindow *,4, 12674, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkWindow *,8, 12674, 9)
+CheckTypeSize(GdkWindow *,8, 12674, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkWindow *,4, 12674, 10)
+CheckTypeSize(GdkWindow *,4, 12674, 10);
 #elif __s390x__
-CheckTypeSize(GdkWindow *,8, 12674, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12674,0);
-Msg("Find size of GdkWindow * (12674)\n");
+CheckTypeSize(GdkWindow *,8, 12674, 12);
+#elif 1
+CheckTypeSize(GdkWindow *,0, 12674, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkGC,32, 12675, 2)
-CheckMemberSize(struct _GdkGC,clip_x_origin,4,2,43428)
-CheckOffset(struct _GdkGC,clip_x_origin,12,2,43428)
-CheckMemberSize(struct _GdkGC,clip_y_origin,4,2,43429)
-CheckOffset(struct _GdkGC,clip_y_origin,16,2,43429)
-CheckMemberSize(struct _GdkGC,ts_x_origin,4,2,43430)
-CheckOffset(struct _GdkGC,ts_x_origin,20,2,43430)
-CheckMemberSize(struct _GdkGC,ts_y_origin,4,2,43431)
-CheckOffset(struct _GdkGC,ts_y_origin,24,2,43431)
-CheckMemberSize(struct _GdkGC,colormap,4,2,43464)
-CheckOffset(struct _GdkGC,colormap,28,2,43464)
+CheckTypeSize(struct _GdkGC,32, 12675, 2);
+CheckMemberSize(struct _GdkGC,clip_x_origin,4,2,43428);
+CheckOffset(struct _GdkGC,clip_x_origin,12,2,43428);
+CheckMemberSize(struct _GdkGC,clip_y_origin,4,2,43429);
+CheckOffset(struct _GdkGC,clip_y_origin,16,2,43429);
+CheckMemberSize(struct _GdkGC,ts_x_origin,4,2,43430);
+CheckOffset(struct _GdkGC,ts_x_origin,20,2,43430);
+CheckMemberSize(struct _GdkGC,ts_y_origin,4,2,43431);
+CheckOffset(struct _GdkGC,ts_y_origin,24,2,43431);
+CheckMemberSize(struct _GdkGC,colormap,4,2,43464);
+CheckOffset(struct _GdkGC,colormap,28,2,43464);
 #elif __x86_64__
-CheckTypeSize(struct _GdkGC,48, 12675, 11)
-CheckMemberSize(struct _GdkGC,clip_x_origin,4,11,43428)
-CheckOffset(struct _GdkGC,clip_x_origin,24,11,43428)
-CheckMemberSize(struct _GdkGC,clip_y_origin,4,11,43429)
-CheckOffset(struct _GdkGC,clip_y_origin,28,11,43429)
-CheckMemberSize(struct _GdkGC,ts_x_origin,4,11,43430)
-CheckOffset(struct _GdkGC,ts_x_origin,32,11,43430)
-CheckMemberSize(struct _GdkGC,ts_y_origin,4,11,43431)
-CheckOffset(struct _GdkGC,ts_y_origin,36,11,43431)
-CheckMemberSize(struct _GdkGC,colormap,8,11,43464)
-CheckOffset(struct _GdkGC,colormap,40,11,43464)
+CheckTypeSize(struct _GdkGC,48, 12675, 11);
+CheckMemberSize(struct _GdkGC,clip_x_origin,4,11,43428);
+CheckOffset(struct _GdkGC,clip_x_origin,24,11,43428);
+CheckMemberSize(struct _GdkGC,clip_y_origin,4,11,43429);
+CheckOffset(struct _GdkGC,clip_y_origin,28,11,43429);
+CheckMemberSize(struct _GdkGC,ts_x_origin,4,11,43430);
+CheckOffset(struct _GdkGC,ts_x_origin,32,11,43430);
+CheckMemberSize(struct _GdkGC,ts_y_origin,4,11,43431);
+CheckOffset(struct _GdkGC,ts_y_origin,36,11,43431);
+CheckMemberSize(struct _GdkGC,colormap,8,11,43464);
+CheckOffset(struct _GdkGC,colormap,40,11,43464);
 #elif __ia64__
-CheckTypeSize(struct _GdkGC,48, 12675, 3)
-CheckMemberSize(struct _GdkGC,clip_x_origin,4,3,43428)
-CheckOffset(struct _GdkGC,clip_x_origin,24,3,43428)
-CheckMemberSize(struct _GdkGC,clip_y_origin,4,3,43429)
-CheckOffset(struct _GdkGC,clip_y_origin,28,3,43429)
-CheckMemberSize(struct _GdkGC,ts_x_origin,4,3,43430)
-CheckOffset(struct _GdkGC,ts_x_origin,32,3,43430)
-CheckMemberSize(struct _GdkGC,ts_y_origin,4,3,43431)
-CheckOffset(struct _GdkGC,ts_y_origin,36,3,43431)
-CheckMemberSize(struct _GdkGC,colormap,8,3,43464)
-CheckOffset(struct _GdkGC,colormap,40,3,43464)
+CheckTypeSize(struct _GdkGC,48, 12675, 3);
+CheckMemberSize(struct _GdkGC,clip_x_origin,4,3,43428);
+CheckOffset(struct _GdkGC,clip_x_origin,24,3,43428);
+CheckMemberSize(struct _GdkGC,clip_y_origin,4,3,43429);
+CheckOffset(struct _GdkGC,clip_y_origin,28,3,43429);
+CheckMemberSize(struct _GdkGC,ts_x_origin,4,3,43430);
+CheckOffset(struct _GdkGC,ts_x_origin,32,3,43430);
+CheckMemberSize(struct _GdkGC,ts_y_origin,4,3,43431);
+CheckOffset(struct _GdkGC,ts_y_origin,36,3,43431);
+CheckMemberSize(struct _GdkGC,colormap,8,3,43464);
+CheckOffset(struct _GdkGC,colormap,40,3,43464);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkGC,32, 12675, 6)
-CheckMemberSize(struct _GdkGC,clip_x_origin,4,6,43428)
-CheckOffset(struct _GdkGC,clip_x_origin,12,6,43428)
-CheckMemberSize(struct _GdkGC,clip_y_origin,4,6,43429)
-CheckOffset(struct _GdkGC,clip_y_origin,16,6,43429)
-CheckMemberSize(struct _GdkGC,ts_x_origin,4,6,43430)
-CheckOffset(struct _GdkGC,ts_x_origin,20,6,43430)
-CheckMemberSize(struct _GdkGC,ts_y_origin,4,6,43431)
-CheckOffset(struct _GdkGC,ts_y_origin,24,6,43431)
-CheckMemberSize(struct _GdkGC,colormap,4,6,43464)
-CheckOffset(struct _GdkGC,colormap,28,6,43464)
+CheckTypeSize(struct _GdkGC,32, 12675, 6);
+CheckMemberSize(struct _GdkGC,clip_x_origin,4,6,43428);
+CheckOffset(struct _GdkGC,clip_x_origin,12,6,43428);
+CheckMemberSize(struct _GdkGC,clip_y_origin,4,6,43429);
+CheckOffset(struct _GdkGC,clip_y_origin,16,6,43429);
+CheckMemberSize(struct _GdkGC,ts_x_origin,4,6,43430);
+CheckOffset(struct _GdkGC,ts_x_origin,20,6,43430);
+CheckMemberSize(struct _GdkGC,ts_y_origin,4,6,43431);
+CheckOffset(struct _GdkGC,ts_y_origin,24,6,43431);
+CheckMemberSize(struct _GdkGC,colormap,4,6,43464);
+CheckOffset(struct _GdkGC,colormap,28,6,43464);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkGC,48, 12675, 9)
-CheckMemberSize(struct _GdkGC,clip_x_origin,4,9,43428)
-CheckOffset(struct _GdkGC,clip_x_origin,24,9,43428)
-CheckMemberSize(struct _GdkGC,clip_y_origin,4,9,43429)
-CheckOffset(struct _GdkGC,clip_y_origin,28,9,43429)
-CheckMemberSize(struct _GdkGC,ts_x_origin,4,9,43430)
-CheckOffset(struct _GdkGC,ts_x_origin,32,9,43430)
-CheckMemberSize(struct _GdkGC,ts_y_origin,4,9,43431)
-CheckOffset(struct _GdkGC,ts_y_origin,36,9,43431)
-CheckMemberSize(struct _GdkGC,colormap,8,9,43464)
-CheckOffset(struct _GdkGC,colormap,40,9,43464)
+CheckTypeSize(struct _GdkGC,48, 12675, 9);
+CheckMemberSize(struct _GdkGC,clip_x_origin,4,9,43428);
+CheckOffset(struct _GdkGC,clip_x_origin,24,9,43428);
+CheckMemberSize(struct _GdkGC,clip_y_origin,4,9,43429);
+CheckOffset(struct _GdkGC,clip_y_origin,28,9,43429);
+CheckMemberSize(struct _GdkGC,ts_x_origin,4,9,43430);
+CheckOffset(struct _GdkGC,ts_x_origin,32,9,43430);
+CheckMemberSize(struct _GdkGC,ts_y_origin,4,9,43431);
+CheckOffset(struct _GdkGC,ts_y_origin,36,9,43431);
+CheckMemberSize(struct _GdkGC,colormap,8,9,43464);
+CheckOffset(struct _GdkGC,colormap,40,9,43464);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkGC,32, 12675, 10)
-CheckMemberSize(struct _GdkGC,clip_x_origin,4,10,43428)
-CheckOffset(struct _GdkGC,clip_x_origin,12,10,43428)
-CheckMemberSize(struct _GdkGC,clip_y_origin,4,10,43429)
-CheckOffset(struct _GdkGC,clip_y_origin,16,10,43429)
-CheckMemberSize(struct _GdkGC,ts_x_origin,4,10,43430)
-CheckOffset(struct _GdkGC,ts_x_origin,20,10,43430)
-CheckMemberSize(struct _GdkGC,ts_y_origin,4,10,43431)
-CheckOffset(struct _GdkGC,ts_y_origin,24,10,43431)
-CheckMemberSize(struct _GdkGC,colormap,4,10,43464)
-CheckOffset(struct _GdkGC,colormap,28,10,43464)
+CheckTypeSize(struct _GdkGC,32, 12675, 10);
+CheckMemberSize(struct _GdkGC,clip_x_origin,4,10,43428);
+CheckOffset(struct _GdkGC,clip_x_origin,12,10,43428);
+CheckMemberSize(struct _GdkGC,clip_y_origin,4,10,43429);
+CheckOffset(struct _GdkGC,clip_y_origin,16,10,43429);
+CheckMemberSize(struct _GdkGC,ts_x_origin,4,10,43430);
+CheckOffset(struct _GdkGC,ts_x_origin,20,10,43430);
+CheckMemberSize(struct _GdkGC,ts_y_origin,4,10,43431);
+CheckOffset(struct _GdkGC,ts_y_origin,24,10,43431);
+CheckMemberSize(struct _GdkGC,colormap,4,10,43464);
+CheckOffset(struct _GdkGC,colormap,28,10,43464);
 #elif __s390x__
-CheckTypeSize(struct _GdkGC,48, 12675, 12)
-CheckMemberSize(struct _GdkGC,clip_x_origin,4,12,43428)
-CheckOffset(struct _GdkGC,clip_x_origin,24,12,43428)
-CheckMemberSize(struct _GdkGC,clip_y_origin,4,12,43429)
-CheckOffset(struct _GdkGC,clip_y_origin,28,12,43429)
-CheckMemberSize(struct _GdkGC,ts_x_origin,4,12,43430)
-CheckOffset(struct _GdkGC,ts_x_origin,32,12,43430)
-CheckMemberSize(struct _GdkGC,ts_y_origin,4,12,43431)
-CheckOffset(struct _GdkGC,ts_y_origin,36,12,43431)
-CheckMemberSize(struct _GdkGC,colormap,8,12,43464)
-CheckOffset(struct _GdkGC,colormap,40,12,43464)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12675,0);
-Msg("Find size of _GdkGC (12675)\n");
+CheckTypeSize(struct _GdkGC,48, 12675, 12);
+CheckMemberSize(struct _GdkGC,clip_x_origin,4,12,43428);
+CheckOffset(struct _GdkGC,clip_x_origin,24,12,43428);
+CheckMemberSize(struct _GdkGC,clip_y_origin,4,12,43429);
+CheckOffset(struct _GdkGC,clip_y_origin,28,12,43429);
+CheckMemberSize(struct _GdkGC,ts_x_origin,4,12,43430);
+CheckOffset(struct _GdkGC,ts_x_origin,32,12,43430);
+CheckMemberSize(struct _GdkGC,ts_y_origin,4,12,43431);
+CheckOffset(struct _GdkGC,ts_y_origin,36,12,43431);
+CheckMemberSize(struct _GdkGC,colormap,8,12,43464);
+CheckOffset(struct _GdkGC,colormap,40,12,43464);
+#elif 1
+CheckTypeSize(struct _GdkGC,0, 12675, 1);
+Msg("Missing member data for _GdkGC on All\n");
+CheckOffset(struct _GdkGC,parent_instance,0,1,43427);
+CheckOffset(struct _GdkGC,clip_x_origin,0,1,43428);
+CheckOffset(struct _GdkGC,clip_y_origin,0,1,43429);
+CheckOffset(struct _GdkGC,ts_x_origin,0,1,43430);
+CheckOffset(struct _GdkGC,ts_y_origin,0,1,43431);
+CheckOffset(struct _GdkGC,colormap,0,1,43464);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkColormap,28, 12676, 2)
-CheckMemberSize(struct _GdkColormap,size,4,2,43433)
-CheckOffset(struct _GdkColormap,size,12,2,43433)
-CheckMemberSize(struct _GdkColormap,colors,4,2,43438)
-CheckOffset(struct _GdkColormap,colors,16,2,43438)
-CheckMemberSize(struct _GdkColormap,visual,4,2,43462)
-CheckOffset(struct _GdkColormap,visual,20,2,43462)
-CheckMemberSize(struct _GdkColormap,windowing_data,4,2,43463)
-CheckOffset(struct _GdkColormap,windowing_data,24,2,43463)
+CheckTypeSize(struct _GdkColormap,28, 12676, 2);
+CheckMemberSize(struct _GdkColormap,size,4,2,43433);
+CheckOffset(struct _GdkColormap,size,12,2,43433);
+CheckMemberSize(struct _GdkColormap,colors,4,2,43438);
+CheckOffset(struct _GdkColormap,colors,16,2,43438);
+CheckMemberSize(struct _GdkColormap,visual,4,2,43462);
+CheckOffset(struct _GdkColormap,visual,20,2,43462);
+CheckMemberSize(struct _GdkColormap,windowing_data,4,2,43463);
+CheckOffset(struct _GdkColormap,windowing_data,24,2,43463);
 #elif __x86_64__
-CheckTypeSize(struct _GdkColormap,56, 12676, 11)
-CheckMemberSize(struct _GdkColormap,size,4,11,43433)
-CheckOffset(struct _GdkColormap,size,24,11,43433)
-CheckMemberSize(struct _GdkColormap,colors,8,11,43438)
-CheckOffset(struct _GdkColormap,colors,32,11,43438)
-CheckMemberSize(struct _GdkColormap,visual,8,11,43462)
-CheckOffset(struct _GdkColormap,visual,40,11,43462)
-CheckMemberSize(struct _GdkColormap,windowing_data,8,11,43463)
-CheckOffset(struct _GdkColormap,windowing_data,48,11,43463)
+CheckTypeSize(struct _GdkColormap,56, 12676, 11);
+CheckMemberSize(struct _GdkColormap,size,4,11,43433);
+CheckOffset(struct _GdkColormap,size,24,11,43433);
+CheckMemberSize(struct _GdkColormap,colors,8,11,43438);
+CheckOffset(struct _GdkColormap,colors,32,11,43438);
+CheckMemberSize(struct _GdkColormap,visual,8,11,43462);
+CheckOffset(struct _GdkColormap,visual,40,11,43462);
+CheckMemberSize(struct _GdkColormap,windowing_data,8,11,43463);
+CheckOffset(struct _GdkColormap,windowing_data,48,11,43463);
 #elif __ia64__
-CheckTypeSize(struct _GdkColormap,56, 12676, 3)
-CheckMemberSize(struct _GdkColormap,size,4,3,43433)
-CheckOffset(struct _GdkColormap,size,24,3,43433)
-CheckMemberSize(struct _GdkColormap,colors,8,3,43438)
-CheckOffset(struct _GdkColormap,colors,32,3,43438)
-CheckMemberSize(struct _GdkColormap,visual,8,3,43462)
-CheckOffset(struct _GdkColormap,visual,40,3,43462)
-CheckMemberSize(struct _GdkColormap,windowing_data,8,3,43463)
-CheckOffset(struct _GdkColormap,windowing_data,48,3,43463)
+CheckTypeSize(struct _GdkColormap,56, 12676, 3);
+CheckMemberSize(struct _GdkColormap,size,4,3,43433);
+CheckOffset(struct _GdkColormap,size,24,3,43433);
+CheckMemberSize(struct _GdkColormap,colors,8,3,43438);
+CheckOffset(struct _GdkColormap,colors,32,3,43438);
+CheckMemberSize(struct _GdkColormap,visual,8,3,43462);
+CheckOffset(struct _GdkColormap,visual,40,3,43462);
+CheckMemberSize(struct _GdkColormap,windowing_data,8,3,43463);
+CheckOffset(struct _GdkColormap,windowing_data,48,3,43463);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkColormap,28, 12676, 6)
-CheckMemberSize(struct _GdkColormap,size,4,6,43433)
-CheckOffset(struct _GdkColormap,size,12,6,43433)
-CheckMemberSize(struct _GdkColormap,colors,4,6,43438)
-CheckOffset(struct _GdkColormap,colors,16,6,43438)
-CheckMemberSize(struct _GdkColormap,visual,4,6,43462)
-CheckOffset(struct _GdkColormap,visual,20,6,43462)
-CheckMemberSize(struct _GdkColormap,windowing_data,4,6,43463)
-CheckOffset(struct _GdkColormap,windowing_data,24,6,43463)
+CheckTypeSize(struct _GdkColormap,28, 12676, 6);
+CheckMemberSize(struct _GdkColormap,size,4,6,43433);
+CheckOffset(struct _GdkColormap,size,12,6,43433);
+CheckMemberSize(struct _GdkColormap,colors,4,6,43438);
+CheckOffset(struct _GdkColormap,colors,16,6,43438);
+CheckMemberSize(struct _GdkColormap,visual,4,6,43462);
+CheckOffset(struct _GdkColormap,visual,20,6,43462);
+CheckMemberSize(struct _GdkColormap,windowing_data,4,6,43463);
+CheckOffset(struct _GdkColormap,windowing_data,24,6,43463);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkColormap,56, 12676, 9)
-CheckMemberSize(struct _GdkColormap,size,4,9,43433)
-CheckOffset(struct _GdkColormap,size,24,9,43433)
-CheckMemberSize(struct _GdkColormap,colors,8,9,43438)
-CheckOffset(struct _GdkColormap,colors,32,9,43438)
-CheckMemberSize(struct _GdkColormap,visual,8,9,43462)
-CheckOffset(struct _GdkColormap,visual,40,9,43462)
-CheckMemberSize(struct _GdkColormap,windowing_data,8,9,43463)
-CheckOffset(struct _GdkColormap,windowing_data,48,9,43463)
+CheckTypeSize(struct _GdkColormap,56, 12676, 9);
+CheckMemberSize(struct _GdkColormap,size,4,9,43433);
+CheckOffset(struct _GdkColormap,size,24,9,43433);
+CheckMemberSize(struct _GdkColormap,colors,8,9,43438);
+CheckOffset(struct _GdkColormap,colors,32,9,43438);
+CheckMemberSize(struct _GdkColormap,visual,8,9,43462);
+CheckOffset(struct _GdkColormap,visual,40,9,43462);
+CheckMemberSize(struct _GdkColormap,windowing_data,8,9,43463);
+CheckOffset(struct _GdkColormap,windowing_data,48,9,43463);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkColormap,28, 12676, 10)
-CheckMemberSize(struct _GdkColormap,size,4,10,43433)
-CheckOffset(struct _GdkColormap,size,12,10,43433)
-CheckMemberSize(struct _GdkColormap,colors,4,10,43438)
-CheckOffset(struct _GdkColormap,colors,16,10,43438)
-CheckMemberSize(struct _GdkColormap,visual,4,10,43462)
-CheckOffset(struct _GdkColormap,visual,20,10,43462)
-CheckMemberSize(struct _GdkColormap,windowing_data,4,10,43463)
-CheckOffset(struct _GdkColormap,windowing_data,24,10,43463)
+CheckTypeSize(struct _GdkColormap,28, 12676, 10);
+CheckMemberSize(struct _GdkColormap,size,4,10,43433);
+CheckOffset(struct _GdkColormap,size,12,10,43433);
+CheckMemberSize(struct _GdkColormap,colors,4,10,43438);
+CheckOffset(struct _GdkColormap,colors,16,10,43438);
+CheckMemberSize(struct _GdkColormap,visual,4,10,43462);
+CheckOffset(struct _GdkColormap,visual,20,10,43462);
+CheckMemberSize(struct _GdkColormap,windowing_data,4,10,43463);
+CheckOffset(struct _GdkColormap,windowing_data,24,10,43463);
 #elif __s390x__
-CheckTypeSize(struct _GdkColormap,56, 12676, 12)
-CheckMemberSize(struct _GdkColormap,size,4,12,43433)
-CheckOffset(struct _GdkColormap,size,24,12,43433)
-CheckMemberSize(struct _GdkColormap,colors,8,12,43438)
-CheckOffset(struct _GdkColormap,colors,32,12,43438)
-CheckMemberSize(struct _GdkColormap,visual,8,12,43462)
-CheckOffset(struct _GdkColormap,visual,40,12,43462)
-CheckMemberSize(struct _GdkColormap,windowing_data,8,12,43463)
-CheckOffset(struct _GdkColormap,windowing_data,48,12,43463)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12676,0);
-Msg("Find size of _GdkColormap (12676)\n");
+CheckTypeSize(struct _GdkColormap,56, 12676, 12);
+CheckMemberSize(struct _GdkColormap,size,4,12,43433);
+CheckOffset(struct _GdkColormap,size,24,12,43433);
+CheckMemberSize(struct _GdkColormap,colors,8,12,43438);
+CheckOffset(struct _GdkColormap,colors,32,12,43438);
+CheckMemberSize(struct _GdkColormap,visual,8,12,43462);
+CheckOffset(struct _GdkColormap,visual,40,12,43462);
+CheckMemberSize(struct _GdkColormap,windowing_data,8,12,43463);
+CheckOffset(struct _GdkColormap,windowing_data,48,12,43463);
+#elif 1
+CheckTypeSize(struct _GdkColormap,0, 12676, 1);
+Msg("Missing member data for _GdkColormap on All\n");
+CheckOffset(struct _GdkColormap,parent_instance,0,1,43432);
+CheckOffset(struct _GdkColormap,size,0,1,43433);
+CheckOffset(struct _GdkColormap,colors,0,1,43438);
+CheckOffset(struct _GdkColormap,visual,0,1,43462);
+CheckOffset(struct _GdkColormap,windowing_data,0,1,43463);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkColor,12, 12677, 2)
-CheckMemberSize(struct _GdkColor,red,2,2,43435)
-CheckOffset(struct _GdkColor,red,4,2,43435)
-CheckMemberSize(struct _GdkColor,green,2,2,43436)
-CheckOffset(struct _GdkColor,green,6,2,43436)
-CheckMemberSize(struct _GdkColor,blue,2,2,43437)
-CheckOffset(struct _GdkColor,blue,8,2,43437)
+CheckTypeSize(struct _GdkColor,12, 12677, 2);
+CheckMemberSize(struct _GdkColor,red,2,2,43435);
+CheckOffset(struct _GdkColor,red,4,2,43435);
+CheckMemberSize(struct _GdkColor,green,2,2,43436);
+CheckOffset(struct _GdkColor,green,6,2,43436);
+CheckMemberSize(struct _GdkColor,blue,2,2,43437);
+CheckOffset(struct _GdkColor,blue,8,2,43437);
 #elif __x86_64__
-CheckTypeSize(struct _GdkColor,12, 12677, 11)
-CheckMemberSize(struct _GdkColor,red,2,11,43435)
-CheckOffset(struct _GdkColor,red,4,11,43435)
-CheckMemberSize(struct _GdkColor,green,2,11,43436)
-CheckOffset(struct _GdkColor,green,6,11,43436)
-CheckMemberSize(struct _GdkColor,blue,2,11,43437)
-CheckOffset(struct _GdkColor,blue,8,11,43437)
+CheckTypeSize(struct _GdkColor,12, 12677, 11);
+CheckMemberSize(struct _GdkColor,red,2,11,43435);
+CheckOffset(struct _GdkColor,red,4,11,43435);
+CheckMemberSize(struct _GdkColor,green,2,11,43436);
+CheckOffset(struct _GdkColor,green,6,11,43436);
+CheckMemberSize(struct _GdkColor,blue,2,11,43437);
+CheckOffset(struct _GdkColor,blue,8,11,43437);
 #elif __ia64__
-CheckTypeSize(struct _GdkColor,12, 12677, 3)
-CheckMemberSize(struct _GdkColor,red,2,3,43435)
-CheckOffset(struct _GdkColor,red,4,3,43435)
-CheckMemberSize(struct _GdkColor,green,2,3,43436)
-CheckOffset(struct _GdkColor,green,6,3,43436)
-CheckMemberSize(struct _GdkColor,blue,2,3,43437)
-CheckOffset(struct _GdkColor,blue,8,3,43437)
+CheckTypeSize(struct _GdkColor,12, 12677, 3);
+CheckMemberSize(struct _GdkColor,red,2,3,43435);
+CheckOffset(struct _GdkColor,red,4,3,43435);
+CheckMemberSize(struct _GdkColor,green,2,3,43436);
+CheckOffset(struct _GdkColor,green,6,3,43436);
+CheckMemberSize(struct _GdkColor,blue,2,3,43437);
+CheckOffset(struct _GdkColor,blue,8,3,43437);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkColor,12, 12677, 6)
-CheckMemberSize(struct _GdkColor,red,2,6,43435)
-CheckOffset(struct _GdkColor,red,4,6,43435)
-CheckMemberSize(struct _GdkColor,green,2,6,43436)
-CheckOffset(struct _GdkColor,green,6,6,43436)
-CheckMemberSize(struct _GdkColor,blue,2,6,43437)
-CheckOffset(struct _GdkColor,blue,8,6,43437)
+CheckTypeSize(struct _GdkColor,12, 12677, 6);
+CheckMemberSize(struct _GdkColor,red,2,6,43435);
+CheckOffset(struct _GdkColor,red,4,6,43435);
+CheckMemberSize(struct _GdkColor,green,2,6,43436);
+CheckOffset(struct _GdkColor,green,6,6,43436);
+CheckMemberSize(struct _GdkColor,blue,2,6,43437);
+CheckOffset(struct _GdkColor,blue,8,6,43437);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkColor,12, 12677, 9)
-CheckMemberSize(struct _GdkColor,red,2,9,43435)
-CheckOffset(struct _GdkColor,red,4,9,43435)
-CheckMemberSize(struct _GdkColor,green,2,9,43436)
-CheckOffset(struct _GdkColor,green,6,9,43436)
-CheckMemberSize(struct _GdkColor,blue,2,9,43437)
-CheckOffset(struct _GdkColor,blue,8,9,43437)
+CheckTypeSize(struct _GdkColor,12, 12677, 9);
+CheckMemberSize(struct _GdkColor,red,2,9,43435);
+CheckOffset(struct _GdkColor,red,4,9,43435);
+CheckMemberSize(struct _GdkColor,green,2,9,43436);
+CheckOffset(struct _GdkColor,green,6,9,43436);
+CheckMemberSize(struct _GdkColor,blue,2,9,43437);
+CheckOffset(struct _GdkColor,blue,8,9,43437);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkColor,12, 12677, 10)
-CheckMemberSize(struct _GdkColor,red,2,10,43435)
-CheckOffset(struct _GdkColor,red,4,10,43435)
-CheckMemberSize(struct _GdkColor,green,2,10,43436)
-CheckOffset(struct _GdkColor,green,6,10,43436)
-CheckMemberSize(struct _GdkColor,blue,2,10,43437)
-CheckOffset(struct _GdkColor,blue,8,10,43437)
+CheckTypeSize(struct _GdkColor,12, 12677, 10);
+CheckMemberSize(struct _GdkColor,red,2,10,43435);
+CheckOffset(struct _GdkColor,red,4,10,43435);
+CheckMemberSize(struct _GdkColor,green,2,10,43436);
+CheckOffset(struct _GdkColor,green,6,10,43436);
+CheckMemberSize(struct _GdkColor,blue,2,10,43437);
+CheckOffset(struct _GdkColor,blue,8,10,43437);
 #elif __s390x__
-CheckTypeSize(struct _GdkColor,12, 12677, 12)
-CheckMemberSize(struct _GdkColor,red,2,12,43435)
-CheckOffset(struct _GdkColor,red,4,12,43435)
-CheckMemberSize(struct _GdkColor,green,2,12,43436)
-CheckOffset(struct _GdkColor,green,6,12,43436)
-CheckMemberSize(struct _GdkColor,blue,2,12,43437)
-CheckOffset(struct _GdkColor,blue,8,12,43437)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12677,0);
-Msg("Find size of _GdkColor (12677)\n");
+CheckTypeSize(struct _GdkColor,12, 12677, 12);
+CheckMemberSize(struct _GdkColor,red,2,12,43435);
+CheckOffset(struct _GdkColor,red,4,12,43435);
+CheckMemberSize(struct _GdkColor,green,2,12,43436);
+CheckOffset(struct _GdkColor,green,6,12,43436);
+CheckMemberSize(struct _GdkColor,blue,2,12,43437);
+CheckOffset(struct _GdkColor,blue,8,12,43437);
+#elif 1
+CheckTypeSize(struct _GdkColor,0, 12677, 1);
+Msg("Missing member data for _GdkColor on All\n");
+CheckOffset(struct _GdkColor,pixel,0,1,43434);
+CheckOffset(struct _GdkColor,red,0,1,43435);
+CheckOffset(struct _GdkColor,green,0,1,43436);
+CheckOffset(struct _GdkColor,blue,0,1,43437);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkColor,12, 12678, 2)
+CheckTypeSize(GdkColor,12, 12678, 2);
 #elif __x86_64__
-CheckTypeSize(GdkColor,12, 12678, 11)
+CheckTypeSize(GdkColor,12, 12678, 11);
 #elif __ia64__
-CheckTypeSize(GdkColor,12, 12678, 3)
+CheckTypeSize(GdkColor,12, 12678, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkColor,12, 12678, 6)
+CheckTypeSize(GdkColor,12, 12678, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkColor,12, 12678, 9)
+CheckTypeSize(GdkColor,12, 12678, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkColor,12, 12678, 10)
+CheckTypeSize(GdkColor,12, 12678, 10);
 #elif __s390x__
-CheckTypeSize(GdkColor,12, 12678, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12678,0);
-Msg("Find size of GdkColor (12678)\n");
+CheckTypeSize(GdkColor,12, 12678, 12);
+#elif 1
+CheckTypeSize(GdkColor,0, 12678, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkColor *,4, 12679, 2)
+CheckTypeSize(GdkColor *,4, 12679, 2);
 #elif __x86_64__
-CheckTypeSize(GdkColor *,8, 12679, 11)
+CheckTypeSize(GdkColor *,8, 12679, 11);
 #elif __ia64__
-CheckTypeSize(GdkColor *,8, 12679, 3)
+CheckTypeSize(GdkColor *,8, 12679, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkColor *,4, 12679, 6)
+CheckTypeSize(GdkColor *,4, 12679, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkColor *,8, 12679, 9)
+CheckTypeSize(GdkColor *,8, 12679, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkColor *,4, 12679, 10)
+CheckTypeSize(GdkColor *,4, 12679, 10);
 #elif __s390x__
-CheckTypeSize(GdkColor *,8, 12679, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12679,0);
-Msg("Find size of GdkColor * (12679)\n");
+CheckTypeSize(GdkColor *,8, 12679, 12);
+#elif 1
+CheckTypeSize(GdkColor *,0, 12679, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkVisual,68, 12680, 2)
-CheckMemberSize(struct _GdkVisual,type,4,2,43446)
-CheckOffset(struct _GdkVisual,type,12,2,43446)
-CheckMemberSize(struct _GdkVisual,depth,4,2,43447)
-CheckOffset(struct _GdkVisual,depth,16,2,43447)
-CheckMemberSize(struct _GdkVisual,byte_order,4,2,43450)
-CheckOffset(struct _GdkVisual,byte_order,20,2,43450)
-CheckMemberSize(struct _GdkVisual,colormap_size,4,2,43451)
-CheckOffset(struct _GdkVisual,colormap_size,24,2,43451)
-CheckMemberSize(struct _GdkVisual,bits_per_rgb,4,2,43452)
-CheckOffset(struct _GdkVisual,bits_per_rgb,28,2,43452)
-CheckMemberSize(struct _GdkVisual,red_mask,4,2,43453)
-CheckOffset(struct _GdkVisual,red_mask,32,2,43453)
-CheckMemberSize(struct _GdkVisual,red_shift,4,2,43454)
-CheckOffset(struct _GdkVisual,red_shift,36,2,43454)
-CheckMemberSize(struct _GdkVisual,red_prec,4,2,43455)
-CheckOffset(struct _GdkVisual,red_prec,40,2,43455)
-CheckMemberSize(struct _GdkVisual,green_mask,4,2,43456)
-CheckOffset(struct _GdkVisual,green_mask,44,2,43456)
-CheckMemberSize(struct _GdkVisual,green_shift,4,2,43457)
-CheckOffset(struct _GdkVisual,green_shift,48,2,43457)
-CheckMemberSize(struct _GdkVisual,green_prec,4,2,43458)
-CheckOffset(struct _GdkVisual,green_prec,52,2,43458)
-CheckMemberSize(struct _GdkVisual,blue_mask,4,2,43459)
-CheckOffset(struct _GdkVisual,blue_mask,56,2,43459)
-CheckMemberSize(struct _GdkVisual,blue_shift,4,2,43460)
-CheckOffset(struct _GdkVisual,blue_shift,60,2,43460)
-CheckMemberSize(struct _GdkVisual,blue_prec,4,2,43461)
-CheckOffset(struct _GdkVisual,blue_prec,64,2,43461)
+CheckTypeSize(struct _GdkVisual,68, 12680, 2);
+CheckMemberSize(struct _GdkVisual,type,4,2,43446);
+CheckOffset(struct _GdkVisual,type,12,2,43446);
+CheckMemberSize(struct _GdkVisual,depth,4,2,43447);
+CheckOffset(struct _GdkVisual,depth,16,2,43447);
+CheckMemberSize(struct _GdkVisual,byte_order,4,2,43450);
+CheckOffset(struct _GdkVisual,byte_order,20,2,43450);
+CheckMemberSize(struct _GdkVisual,colormap_size,4,2,43451);
+CheckOffset(struct _GdkVisual,colormap_size,24,2,43451);
+CheckMemberSize(struct _GdkVisual,bits_per_rgb,4,2,43452);
+CheckOffset(struct _GdkVisual,bits_per_rgb,28,2,43452);
+CheckMemberSize(struct _GdkVisual,red_mask,4,2,43453);
+CheckOffset(struct _GdkVisual,red_mask,32,2,43453);
+CheckMemberSize(struct _GdkVisual,red_shift,4,2,43454);
+CheckOffset(struct _GdkVisual,red_shift,36,2,43454);
+CheckMemberSize(struct _GdkVisual,red_prec,4,2,43455);
+CheckOffset(struct _GdkVisual,red_prec,40,2,43455);
+CheckMemberSize(struct _GdkVisual,green_mask,4,2,43456);
+CheckOffset(struct _GdkVisual,green_mask,44,2,43456);
+CheckMemberSize(struct _GdkVisual,green_shift,4,2,43457);
+CheckOffset(struct _GdkVisual,green_shift,48,2,43457);
+CheckMemberSize(struct _GdkVisual,green_prec,4,2,43458);
+CheckOffset(struct _GdkVisual,green_prec,52,2,43458);
+CheckMemberSize(struct _GdkVisual,blue_mask,4,2,43459);
+CheckOffset(struct _GdkVisual,blue_mask,56,2,43459);
+CheckMemberSize(struct _GdkVisual,blue_shift,4,2,43460);
+CheckOffset(struct _GdkVisual,blue_shift,60,2,43460);
+CheckMemberSize(struct _GdkVisual,blue_prec,4,2,43461);
+CheckOffset(struct _GdkVisual,blue_prec,64,2,43461);
 #elif __x86_64__
-CheckTypeSize(struct _GdkVisual,80, 12680, 11)
-CheckMemberSize(struct _GdkVisual,type,4,11,43446)
-CheckOffset(struct _GdkVisual,type,24,11,43446)
-CheckMemberSize(struct _GdkVisual,depth,4,11,43447)
-CheckOffset(struct _GdkVisual,depth,28,11,43447)
-CheckMemberSize(struct _GdkVisual,byte_order,4,11,43450)
-CheckOffset(struct _GdkVisual,byte_order,32,11,43450)
-CheckMemberSize(struct _GdkVisual,colormap_size,4,11,43451)
-CheckOffset(struct _GdkVisual,colormap_size,36,11,43451)
-CheckMemberSize(struct _GdkVisual,bits_per_rgb,4,11,43452)
-CheckOffset(struct _GdkVisual,bits_per_rgb,40,11,43452)
-CheckMemberSize(struct _GdkVisual,red_mask,4,11,43453)
-CheckOffset(struct _GdkVisual,red_mask,44,11,43453)
-CheckMemberSize(struct _GdkVisual,red_shift,4,11,43454)
-CheckOffset(struct _GdkVisual,red_shift,48,11,43454)
-CheckMemberSize(struct _GdkVisual,red_prec,4,11,43455)
-CheckOffset(struct _GdkVisual,red_prec,52,11,43455)
-CheckMemberSize(struct _GdkVisual,green_mask,4,11,43456)
-CheckOffset(struct _GdkVisual,green_mask,56,11,43456)
-CheckMemberSize(struct _GdkVisual,green_shift,4,11,43457)
-CheckOffset(struct _GdkVisual,green_shift,60,11,43457)
-CheckMemberSize(struct _GdkVisual,green_prec,4,11,43458)
-CheckOffset(struct _GdkVisual,green_prec,64,11,43458)
-CheckMemberSize(struct _GdkVisual,blue_mask,4,11,43459)
-CheckOffset(struct _GdkVisual,blue_mask,68,11,43459)
-CheckMemberSize(struct _GdkVisual,blue_shift,4,11,43460)
-CheckOffset(struct _GdkVisual,blue_shift,72,11,43460)
-CheckMemberSize(struct _GdkVisual,blue_prec,4,11,43461)
-CheckOffset(struct _GdkVisual,blue_prec,76,11,43461)
+CheckTypeSize(struct _GdkVisual,80, 12680, 11);
+CheckMemberSize(struct _GdkVisual,type,4,11,43446);
+CheckOffset(struct _GdkVisual,type,24,11,43446);
+CheckMemberSize(struct _GdkVisual,depth,4,11,43447);
+CheckOffset(struct _GdkVisual,depth,28,11,43447);
+CheckMemberSize(struct _GdkVisual,byte_order,4,11,43450);
+CheckOffset(struct _GdkVisual,byte_order,32,11,43450);
+CheckMemberSize(struct _GdkVisual,colormap_size,4,11,43451);
+CheckOffset(struct _GdkVisual,colormap_size,36,11,43451);
+CheckMemberSize(struct _GdkVisual,bits_per_rgb,4,11,43452);
+CheckOffset(struct _GdkVisual,bits_per_rgb,40,11,43452);
+CheckMemberSize(struct _GdkVisual,red_mask,4,11,43453);
+CheckOffset(struct _GdkVisual,red_mask,44,11,43453);
+CheckMemberSize(struct _GdkVisual,red_shift,4,11,43454);
+CheckOffset(struct _GdkVisual,red_shift,48,11,43454);
+CheckMemberSize(struct _GdkVisual,red_prec,4,11,43455);
+CheckOffset(struct _GdkVisual,red_prec,52,11,43455);
+CheckMemberSize(struct _GdkVisual,green_mask,4,11,43456);
+CheckOffset(struct _GdkVisual,green_mask,56,11,43456);
+CheckMemberSize(struct _GdkVisual,green_shift,4,11,43457);
+CheckOffset(struct _GdkVisual,green_shift,60,11,43457);
+CheckMemberSize(struct _GdkVisual,green_prec,4,11,43458);
+CheckOffset(struct _GdkVisual,green_prec,64,11,43458);
+CheckMemberSize(struct _GdkVisual,blue_mask,4,11,43459);
+CheckOffset(struct _GdkVisual,blue_mask,68,11,43459);
+CheckMemberSize(struct _GdkVisual,blue_shift,4,11,43460);
+CheckOffset(struct _GdkVisual,blue_shift,72,11,43460);
+CheckMemberSize(struct _GdkVisual,blue_prec,4,11,43461);
+CheckOffset(struct _GdkVisual,blue_prec,76,11,43461);
 #elif __ia64__
-CheckTypeSize(struct _GdkVisual,80, 12680, 3)
-CheckMemberSize(struct _GdkVisual,type,4,3,43446)
-CheckOffset(struct _GdkVisual,type,24,3,43446)
-CheckMemberSize(struct _GdkVisual,depth,4,3,43447)
-CheckOffset(struct _GdkVisual,depth,28,3,43447)
-CheckMemberSize(struct _GdkVisual,byte_order,4,3,43450)
-CheckOffset(struct _GdkVisual,byte_order,32,3,43450)
-CheckMemberSize(struct _GdkVisual,colormap_size,4,3,43451)
-CheckOffset(struct _GdkVisual,colormap_size,36,3,43451)
-CheckMemberSize(struct _GdkVisual,bits_per_rgb,4,3,43452)
-CheckOffset(struct _GdkVisual,bits_per_rgb,40,3,43452)
-CheckMemberSize(struct _GdkVisual,red_mask,4,3,43453)
-CheckOffset(struct _GdkVisual,red_mask,44,3,43453)
-CheckMemberSize(struct _GdkVisual,red_shift,4,3,43454)
-CheckOffset(struct _GdkVisual,red_shift,48,3,43454)
-CheckMemberSize(struct _GdkVisual,red_prec,4,3,43455)
-CheckOffset(struct _GdkVisual,red_prec,52,3,43455)
-CheckMemberSize(struct _GdkVisual,green_mask,4,3,43456)
-CheckOffset(struct _GdkVisual,green_mask,56,3,43456)
-CheckMemberSize(struct _GdkVisual,green_shift,4,3,43457)
-CheckOffset(struct _GdkVisual,green_shift,60,3,43457)
-CheckMemberSize(struct _GdkVisual,green_prec,4,3,43458)
-CheckOffset(struct _GdkVisual,green_prec,64,3,43458)
-CheckMemberSize(struct _GdkVisual,blue_mask,4,3,43459)
-CheckOffset(struct _GdkVisual,blue_mask,68,3,43459)
-CheckMemberSize(struct _GdkVisual,blue_shift,4,3,43460)
-CheckOffset(struct _GdkVisual,blue_shift,72,3,43460)
-CheckMemberSize(struct _GdkVisual,blue_prec,4,3,43461)
-CheckOffset(struct _GdkVisual,blue_prec,76,3,43461)
+CheckTypeSize(struct _GdkVisual,80, 12680, 3);
+CheckMemberSize(struct _GdkVisual,type,4,3,43446);
+CheckOffset(struct _GdkVisual,type,24,3,43446);
+CheckMemberSize(struct _GdkVisual,depth,4,3,43447);
+CheckOffset(struct _GdkVisual,depth,28,3,43447);
+CheckMemberSize(struct _GdkVisual,byte_order,4,3,43450);
+CheckOffset(struct _GdkVisual,byte_order,32,3,43450);
+CheckMemberSize(struct _GdkVisual,colormap_size,4,3,43451);
+CheckOffset(struct _GdkVisual,colormap_size,36,3,43451);
+CheckMemberSize(struct _GdkVisual,bits_per_rgb,4,3,43452);
+CheckOffset(struct _GdkVisual,bits_per_rgb,40,3,43452);
+CheckMemberSize(struct _GdkVisual,red_mask,4,3,43453);
+CheckOffset(struct _GdkVisual,red_mask,44,3,43453);
+CheckMemberSize(struct _GdkVisual,red_shift,4,3,43454);
+CheckOffset(struct _GdkVisual,red_shift,48,3,43454);
+CheckMemberSize(struct _GdkVisual,red_prec,4,3,43455);
+CheckOffset(struct _GdkVisual,red_prec,52,3,43455);
+CheckMemberSize(struct _GdkVisual,green_mask,4,3,43456);
+CheckOffset(struct _GdkVisual,green_mask,56,3,43456);
+CheckMemberSize(struct _GdkVisual,green_shift,4,3,43457);
+CheckOffset(struct _GdkVisual,green_shift,60,3,43457);
+CheckMemberSize(struct _GdkVisual,green_prec,4,3,43458);
+CheckOffset(struct _GdkVisual,green_prec,64,3,43458);
+CheckMemberSize(struct _GdkVisual,blue_mask,4,3,43459);
+CheckOffset(struct _GdkVisual,blue_mask,68,3,43459);
+CheckMemberSize(struct _GdkVisual,blue_shift,4,3,43460);
+CheckOffset(struct _GdkVisual,blue_shift,72,3,43460);
+CheckMemberSize(struct _GdkVisual,blue_prec,4,3,43461);
+CheckOffset(struct _GdkVisual,blue_prec,76,3,43461);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkVisual,68, 12680, 6)
-CheckMemberSize(struct _GdkVisual,type,4,6,43446)
-CheckOffset(struct _GdkVisual,type,12,6,43446)
-CheckMemberSize(struct _GdkVisual,depth,4,6,43447)
-CheckOffset(struct _GdkVisual,depth,16,6,43447)
-CheckMemberSize(struct _GdkVisual,byte_order,4,6,43450)
-CheckOffset(struct _GdkVisual,byte_order,20,6,43450)
-CheckMemberSize(struct _GdkVisual,colormap_size,4,6,43451)
-CheckOffset(struct _GdkVisual,colormap_size,24,6,43451)
-CheckMemberSize(struct _GdkVisual,bits_per_rgb,4,6,43452)
-CheckOffset(struct _GdkVisual,bits_per_rgb,28,6,43452)
-CheckMemberSize(struct _GdkVisual,red_mask,4,6,43453)
-CheckOffset(struct _GdkVisual,red_mask,32,6,43453)
-CheckMemberSize(struct _GdkVisual,red_shift,4,6,43454)
-CheckOffset(struct _GdkVisual,red_shift,36,6,43454)
-CheckMemberSize(struct _GdkVisual,red_prec,4,6,43455)
-CheckOffset(struct _GdkVisual,red_prec,40,6,43455)
-CheckMemberSize(struct _GdkVisual,green_mask,4,6,43456)
-CheckOffset(struct _GdkVisual,green_mask,44,6,43456)
-CheckMemberSize(struct _GdkVisual,green_shift,4,6,43457)
-CheckOffset(struct _GdkVisual,green_shift,48,6,43457)
-CheckMemberSize(struct _GdkVisual,green_prec,4,6,43458)
-CheckOffset(struct _GdkVisual,green_prec,52,6,43458)
-CheckMemberSize(struct _GdkVisual,blue_mask,4,6,43459)
-CheckOffset(struct _GdkVisual,blue_mask,56,6,43459)
-CheckMemberSize(struct _GdkVisual,blue_shift,4,6,43460)
-CheckOffset(struct _GdkVisual,blue_shift,60,6,43460)
-CheckMemberSize(struct _GdkVisual,blue_prec,4,6,43461)
-CheckOffset(struct _GdkVisual,blue_prec,64,6,43461)
+CheckTypeSize(struct _GdkVisual,68, 12680, 6);
+CheckMemberSize(struct _GdkVisual,type,4,6,43446);
+CheckOffset(struct _GdkVisual,type,12,6,43446);
+CheckMemberSize(struct _GdkVisual,depth,4,6,43447);
+CheckOffset(struct _GdkVisual,depth,16,6,43447);
+CheckMemberSize(struct _GdkVisual,byte_order,4,6,43450);
+CheckOffset(struct _GdkVisual,byte_order,20,6,43450);
+CheckMemberSize(struct _GdkVisual,colormap_size,4,6,43451);
+CheckOffset(struct _GdkVisual,colormap_size,24,6,43451);
+CheckMemberSize(struct _GdkVisual,bits_per_rgb,4,6,43452);
+CheckOffset(struct _GdkVisual,bits_per_rgb,28,6,43452);
+CheckMemberSize(struct _GdkVisual,red_mask,4,6,43453);
+CheckOffset(struct _GdkVisual,red_mask,32,6,43453);
+CheckMemberSize(struct _GdkVisual,red_shift,4,6,43454);
+CheckOffset(struct _GdkVisual,red_shift,36,6,43454);
+CheckMemberSize(struct _GdkVisual,red_prec,4,6,43455);
+CheckOffset(struct _GdkVisual,red_prec,40,6,43455);
+CheckMemberSize(struct _GdkVisual,green_mask,4,6,43456);
+CheckOffset(struct _GdkVisual,green_mask,44,6,43456);
+CheckMemberSize(struct _GdkVisual,green_shift,4,6,43457);
+CheckOffset(struct _GdkVisual,green_shift,48,6,43457);
+CheckMemberSize(struct _GdkVisual,green_prec,4,6,43458);
+CheckOffset(struct _GdkVisual,green_prec,52,6,43458);
+CheckMemberSize(struct _GdkVisual,blue_mask,4,6,43459);
+CheckOffset(struct _GdkVisual,blue_mask,56,6,43459);
+CheckMemberSize(struct _GdkVisual,blue_shift,4,6,43460);
+CheckOffset(struct _GdkVisual,blue_shift,60,6,43460);
+CheckMemberSize(struct _GdkVisual,blue_prec,4,6,43461);
+CheckOffset(struct _GdkVisual,blue_prec,64,6,43461);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkVisual,80, 12680, 9)
-CheckMemberSize(struct _GdkVisual,type,4,9,43446)
-CheckOffset(struct _GdkVisual,type,24,9,43446)
-CheckMemberSize(struct _GdkVisual,depth,4,9,43447)
-CheckOffset(struct _GdkVisual,depth,28,9,43447)
-CheckMemberSize(struct _GdkVisual,byte_order,4,9,43450)
-CheckOffset(struct _GdkVisual,byte_order,32,9,43450)
-CheckMemberSize(struct _GdkVisual,colormap_size,4,9,43451)
-CheckOffset(struct _GdkVisual,colormap_size,36,9,43451)
-CheckMemberSize(struct _GdkVisual,bits_per_rgb,4,9,43452)
-CheckOffset(struct _GdkVisual,bits_per_rgb,40,9,43452)
-CheckMemberSize(struct _GdkVisual,red_mask,4,9,43453)
-CheckOffset(struct _GdkVisual,red_mask,44,9,43453)
-CheckMemberSize(struct _GdkVisual,red_shift,4,9,43454)
-CheckOffset(struct _GdkVisual,red_shift,48,9,43454)
-CheckMemberSize(struct _GdkVisual,red_prec,4,9,43455)
-CheckOffset(struct _GdkVisual,red_prec,52,9,43455)
-CheckMemberSize(struct _GdkVisual,green_mask,4,9,43456)
-CheckOffset(struct _GdkVisual,green_mask,56,9,43456)
-CheckMemberSize(struct _GdkVisual,green_shift,4,9,43457)
-CheckOffset(struct _GdkVisual,green_shift,60,9,43457)
-CheckMemberSize(struct _GdkVisual,green_prec,4,9,43458)
-CheckOffset(struct _GdkVisual,green_prec,64,9,43458)
-CheckMemberSize(struct _GdkVisual,blue_mask,4,9,43459)
-CheckOffset(struct _GdkVisual,blue_mask,68,9,43459)
-CheckMemberSize(struct _GdkVisual,blue_shift,4,9,43460)
-CheckOffset(struct _GdkVisual,blue_shift,72,9,43460)
-CheckMemberSize(struct _GdkVisual,blue_prec,4,9,43461)
-CheckOffset(struct _GdkVisual,blue_prec,76,9,43461)
+CheckTypeSize(struct _GdkVisual,80, 12680, 9);
+CheckMemberSize(struct _GdkVisual,type,4,9,43446);
+CheckOffset(struct _GdkVisual,type,24,9,43446);
+CheckMemberSize(struct _GdkVisual,depth,4,9,43447);
+CheckOffset(struct _GdkVisual,depth,28,9,43447);
+CheckMemberSize(struct _GdkVisual,byte_order,4,9,43450);
+CheckOffset(struct _GdkVisual,byte_order,32,9,43450);
+CheckMemberSize(struct _GdkVisual,colormap_size,4,9,43451);
+CheckOffset(struct _GdkVisual,colormap_size,36,9,43451);
+CheckMemberSize(struct _GdkVisual,bits_per_rgb,4,9,43452);
+CheckOffset(struct _GdkVisual,bits_per_rgb,40,9,43452);
+CheckMemberSize(struct _GdkVisual,red_mask,4,9,43453);
+CheckOffset(struct _GdkVisual,red_mask,44,9,43453);
+CheckMemberSize(struct _GdkVisual,red_shift,4,9,43454);
+CheckOffset(struct _GdkVisual,red_shift,48,9,43454);
+CheckMemberSize(struct _GdkVisual,red_prec,4,9,43455);
+CheckOffset(struct _GdkVisual,red_prec,52,9,43455);
+CheckMemberSize(struct _GdkVisual,green_mask,4,9,43456);
+CheckOffset(struct _GdkVisual,green_mask,56,9,43456);
+CheckMemberSize(struct _GdkVisual,green_shift,4,9,43457);
+CheckOffset(struct _GdkVisual,green_shift,60,9,43457);
+CheckMemberSize(struct _GdkVisual,green_prec,4,9,43458);
+CheckOffset(struct _GdkVisual,green_prec,64,9,43458);
+CheckMemberSize(struct _GdkVisual,blue_mask,4,9,43459);
+CheckOffset(struct _GdkVisual,blue_mask,68,9,43459);
+CheckMemberSize(struct _GdkVisual,blue_shift,4,9,43460);
+CheckOffset(struct _GdkVisual,blue_shift,72,9,43460);
+CheckMemberSize(struct _GdkVisual,blue_prec,4,9,43461);
+CheckOffset(struct _GdkVisual,blue_prec,76,9,43461);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkVisual,68, 12680, 10)
-CheckMemberSize(struct _GdkVisual,type,4,10,43446)
-CheckOffset(struct _GdkVisual,type,12,10,43446)
-CheckMemberSize(struct _GdkVisual,depth,4,10,43447)
-CheckOffset(struct _GdkVisual,depth,16,10,43447)
-CheckMemberSize(struct _GdkVisual,byte_order,4,10,43450)
-CheckOffset(struct _GdkVisual,byte_order,20,10,43450)
-CheckMemberSize(struct _GdkVisual,colormap_size,4,10,43451)
-CheckOffset(struct _GdkVisual,colormap_size,24,10,43451)
-CheckMemberSize(struct _GdkVisual,bits_per_rgb,4,10,43452)
-CheckOffset(struct _GdkVisual,bits_per_rgb,28,10,43452)
-CheckMemberSize(struct _GdkVisual,red_mask,4,10,43453)
-CheckOffset(struct _GdkVisual,red_mask,32,10,43453)
-CheckMemberSize(struct _GdkVisual,red_shift,4,10,43454)
-CheckOffset(struct _GdkVisual,red_shift,36,10,43454)
-CheckMemberSize(struct _GdkVisual,red_prec,4,10,43455)
-CheckOffset(struct _GdkVisual,red_prec,40,10,43455)
-CheckMemberSize(struct _GdkVisual,green_mask,4,10,43456)
-CheckOffset(struct _GdkVisual,green_mask,44,10,43456)
-CheckMemberSize(struct _GdkVisual,green_shift,4,10,43457)
-CheckOffset(struct _GdkVisual,green_shift,48,10,43457)
-CheckMemberSize(struct _GdkVisual,green_prec,4,10,43458)
-CheckOffset(struct _GdkVisual,green_prec,52,10,43458)
-CheckMemberSize(struct _GdkVisual,blue_mask,4,10,43459)
-CheckOffset(struct _GdkVisual,blue_mask,56,10,43459)
-CheckMemberSize(struct _GdkVisual,blue_shift,4,10,43460)
-CheckOffset(struct _GdkVisual,blue_shift,60,10,43460)
-CheckMemberSize(struct _GdkVisual,blue_prec,4,10,43461)
-CheckOffset(struct _GdkVisual,blue_prec,64,10,43461)
+CheckTypeSize(struct _GdkVisual,68, 12680, 10);
+CheckMemberSize(struct _GdkVisual,type,4,10,43446);
+CheckOffset(struct _GdkVisual,type,12,10,43446);
+CheckMemberSize(struct _GdkVisual,depth,4,10,43447);
+CheckOffset(struct _GdkVisual,depth,16,10,43447);
+CheckMemberSize(struct _GdkVisual,byte_order,4,10,43450);
+CheckOffset(struct _GdkVisual,byte_order,20,10,43450);
+CheckMemberSize(struct _GdkVisual,colormap_size,4,10,43451);
+CheckOffset(struct _GdkVisual,colormap_size,24,10,43451);
+CheckMemberSize(struct _GdkVisual,bits_per_rgb,4,10,43452);
+CheckOffset(struct _GdkVisual,bits_per_rgb,28,10,43452);
+CheckMemberSize(struct _GdkVisual,red_mask,4,10,43453);
+CheckOffset(struct _GdkVisual,red_mask,32,10,43453);
+CheckMemberSize(struct _GdkVisual,red_shift,4,10,43454);
+CheckOffset(struct _GdkVisual,red_shift,36,10,43454);
+CheckMemberSize(struct _GdkVisual,red_prec,4,10,43455);
+CheckOffset(struct _GdkVisual,red_prec,40,10,43455);
+CheckMemberSize(struct _GdkVisual,green_mask,4,10,43456);
+CheckOffset(struct _GdkVisual,green_mask,44,10,43456);
+CheckMemberSize(struct _GdkVisual,green_shift,4,10,43457);
+CheckOffset(struct _GdkVisual,green_shift,48,10,43457);
+CheckMemberSize(struct _GdkVisual,green_prec,4,10,43458);
+CheckOffset(struct _GdkVisual,green_prec,52,10,43458);
+CheckMemberSize(struct _GdkVisual,blue_mask,4,10,43459);
+CheckOffset(struct _GdkVisual,blue_mask,56,10,43459);
+CheckMemberSize(struct _GdkVisual,blue_shift,4,10,43460);
+CheckOffset(struct _GdkVisual,blue_shift,60,10,43460);
+CheckMemberSize(struct _GdkVisual,blue_prec,4,10,43461);
+CheckOffset(struct _GdkVisual,blue_prec,64,10,43461);
 #elif __s390x__
-CheckTypeSize(struct _GdkVisual,80, 12680, 12)
-CheckMemberSize(struct _GdkVisual,type,4,12,43446)
-CheckOffset(struct _GdkVisual,type,24,12,43446)
-CheckMemberSize(struct _GdkVisual,depth,4,12,43447)
-CheckOffset(struct _GdkVisual,depth,28,12,43447)
-CheckMemberSize(struct _GdkVisual,byte_order,4,12,43450)
-CheckOffset(struct _GdkVisual,byte_order,32,12,43450)
-CheckMemberSize(struct _GdkVisual,colormap_size,4,12,43451)
-CheckOffset(struct _GdkVisual,colormap_size,36,12,43451)
-CheckMemberSize(struct _GdkVisual,bits_per_rgb,4,12,43452)
-CheckOffset(struct _GdkVisual,bits_per_rgb,40,12,43452)
-CheckMemberSize(struct _GdkVisual,red_mask,4,12,43453)
-CheckOffset(struct _GdkVisual,red_mask,44,12,43453)
-CheckMemberSize(struct _GdkVisual,red_shift,4,12,43454)
-CheckOffset(struct _GdkVisual,red_shift,48,12,43454)
-CheckMemberSize(struct _GdkVisual,red_prec,4,12,43455)
-CheckOffset(struct _GdkVisual,red_prec,52,12,43455)
-CheckMemberSize(struct _GdkVisual,green_mask,4,12,43456)
-CheckOffset(struct _GdkVisual,green_mask,56,12,43456)
-CheckMemberSize(struct _GdkVisual,green_shift,4,12,43457)
-CheckOffset(struct _GdkVisual,green_shift,60,12,43457)
-CheckMemberSize(struct _GdkVisual,green_prec,4,12,43458)
-CheckOffset(struct _GdkVisual,green_prec,64,12,43458)
-CheckMemberSize(struct _GdkVisual,blue_mask,4,12,43459)
-CheckOffset(struct _GdkVisual,blue_mask,68,12,43459)
-CheckMemberSize(struct _GdkVisual,blue_shift,4,12,43460)
-CheckOffset(struct _GdkVisual,blue_shift,72,12,43460)
-CheckMemberSize(struct _GdkVisual,blue_prec,4,12,43461)
-CheckOffset(struct _GdkVisual,blue_prec,76,12,43461)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12680,0);
-Msg("Find size of _GdkVisual (12680)\n");
+CheckTypeSize(struct _GdkVisual,80, 12680, 12);
+CheckMemberSize(struct _GdkVisual,type,4,12,43446);
+CheckOffset(struct _GdkVisual,type,24,12,43446);
+CheckMemberSize(struct _GdkVisual,depth,4,12,43447);
+CheckOffset(struct _GdkVisual,depth,28,12,43447);
+CheckMemberSize(struct _GdkVisual,byte_order,4,12,43450);
+CheckOffset(struct _GdkVisual,byte_order,32,12,43450);
+CheckMemberSize(struct _GdkVisual,colormap_size,4,12,43451);
+CheckOffset(struct _GdkVisual,colormap_size,36,12,43451);
+CheckMemberSize(struct _GdkVisual,bits_per_rgb,4,12,43452);
+CheckOffset(struct _GdkVisual,bits_per_rgb,40,12,43452);
+CheckMemberSize(struct _GdkVisual,red_mask,4,12,43453);
+CheckOffset(struct _GdkVisual,red_mask,44,12,43453);
+CheckMemberSize(struct _GdkVisual,red_shift,4,12,43454);
+CheckOffset(struct _GdkVisual,red_shift,48,12,43454);
+CheckMemberSize(struct _GdkVisual,red_prec,4,12,43455);
+CheckOffset(struct _GdkVisual,red_prec,52,12,43455);
+CheckMemberSize(struct _GdkVisual,green_mask,4,12,43456);
+CheckOffset(struct _GdkVisual,green_mask,56,12,43456);
+CheckMemberSize(struct _GdkVisual,green_shift,4,12,43457);
+CheckOffset(struct _GdkVisual,green_shift,60,12,43457);
+CheckMemberSize(struct _GdkVisual,green_prec,4,12,43458);
+CheckOffset(struct _GdkVisual,green_prec,64,12,43458);
+CheckMemberSize(struct _GdkVisual,blue_mask,4,12,43459);
+CheckOffset(struct _GdkVisual,blue_mask,68,12,43459);
+CheckMemberSize(struct _GdkVisual,blue_shift,4,12,43460);
+CheckOffset(struct _GdkVisual,blue_shift,72,12,43460);
+CheckMemberSize(struct _GdkVisual,blue_prec,4,12,43461);
+CheckOffset(struct _GdkVisual,blue_prec,76,12,43461);
+#elif 1
+CheckTypeSize(struct _GdkVisual,0, 12680, 1);
+Msg("Missing member data for _GdkVisual on All\n");
+CheckOffset(struct _GdkVisual,parent_instance,0,1,43439);
+CheckOffset(struct _GdkVisual,type,0,1,43446);
+CheckOffset(struct _GdkVisual,depth,0,1,43447);
+CheckOffset(struct _GdkVisual,byte_order,0,1,43450);
+CheckOffset(struct _GdkVisual,colormap_size,0,1,43451);
+CheckOffset(struct _GdkVisual,bits_per_rgb,0,1,43452);
+CheckOffset(struct _GdkVisual,red_mask,0,1,43453);
+CheckOffset(struct _GdkVisual,red_shift,0,1,43454);
+CheckOffset(struct _GdkVisual,red_prec,0,1,43455);
+CheckOffset(struct _GdkVisual,green_mask,0,1,43456);
+CheckOffset(struct _GdkVisual,green_shift,0,1,43457);
+CheckOffset(struct _GdkVisual,green_prec,0,1,43458);
+CheckOffset(struct _GdkVisual,blue_mask,0,1,43459);
+CheckOffset(struct _GdkVisual,blue_shift,0,1,43460);
+CheckOffset(struct _GdkVisual,blue_prec,0,1,43461);
 #endif
 
 #if __i386__
@@ -1336,28 +1363,31 @@ CheckEnum("GDK_VISUAL_STATIC_COLOR",GDK_VISUAL_STATIC_COLOR,2,43442);
 CheckEnum("GDK_VISUAL_PSEUDO_COLOR",GDK_VISUAL_PSEUDO_COLOR,3,43443);
 CheckEnum("GDK_VISUAL_TRUE_COLOR",GDK_VISUAL_TRUE_COLOR,4,43444);
 CheckEnum("GDK_VISUAL_DIRECT_COLOR",GDK_VISUAL_DIRECT_COLOR,5,43445);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12681,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-87 (12681)\n");
+#elif 1
+CheckEnum("GDK_VISUAL_STATIC_GRAY",GDK_VISUAL_STATIC_GRAY,0,43440);
+CheckEnum("GDK_VISUAL_GRAYSCALE",GDK_VISUAL_GRAYSCALE,1,43441);
+CheckEnum("GDK_VISUAL_STATIC_COLOR",GDK_VISUAL_STATIC_COLOR,2,43442);
+CheckEnum("GDK_VISUAL_PSEUDO_COLOR",GDK_VISUAL_PSEUDO_COLOR,3,43443);
+CheckEnum("GDK_VISUAL_TRUE_COLOR",GDK_VISUAL_TRUE_COLOR,4,43444);
+CheckEnum("GDK_VISUAL_DIRECT_COLOR",GDK_VISUAL_DIRECT_COLOR,5,43445);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkVisualType,4, 12682, 2)
+CheckTypeSize(GdkVisualType,4, 12682, 2);
 #elif __x86_64__
-CheckTypeSize(GdkVisualType,4, 12682, 11)
+CheckTypeSize(GdkVisualType,4, 12682, 11);
 #elif __ia64__
-CheckTypeSize(GdkVisualType,4, 12682, 3)
+CheckTypeSize(GdkVisualType,4, 12682, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkVisualType,4, 12682, 6)
+CheckTypeSize(GdkVisualType,4, 12682, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkVisualType,4, 12682, 9)
+CheckTypeSize(GdkVisualType,4, 12682, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkVisualType,4, 12682, 10)
+CheckTypeSize(GdkVisualType,4, 12682, 10);
 #elif __s390x__
-CheckTypeSize(GdkVisualType,4, 12682, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12682,0);
-Msg("Find size of GdkVisualType (12682)\n");
+CheckTypeSize(GdkVisualType,4, 12682, 12);
+#elif 1
+CheckTypeSize(GdkVisualType,0, 12682, 1);
 #endif
 
 #if __i386__
@@ -1381,353 +1411,344 @@ CheckEnum("GDK_MSB_FIRST",GDK_MSB_FIRST,1,43449);
 #elif __s390x__
 CheckEnum("GDK_LSB_FIRST",GDK_LSB_FIRST,0,43448);
 CheckEnum("GDK_MSB_FIRST",GDK_MSB_FIRST,1,43449);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12683,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-78 (12683)\n");
+#elif 1
+CheckEnum("GDK_LSB_FIRST",GDK_LSB_FIRST,0,43448);
+CheckEnum("GDK_MSB_FIRST",GDK_MSB_FIRST,1,43449);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkByteOrder,4, 12684, 2)
+CheckTypeSize(GdkByteOrder,4, 12684, 2);
 #elif __x86_64__
-CheckTypeSize(GdkByteOrder,4, 12684, 11)
+CheckTypeSize(GdkByteOrder,4, 12684, 11);
 #elif __ia64__
-CheckTypeSize(GdkByteOrder,4, 12684, 3)
+CheckTypeSize(GdkByteOrder,4, 12684, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkByteOrder,4, 12684, 6)
+CheckTypeSize(GdkByteOrder,4, 12684, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkByteOrder,4, 12684, 9)
+CheckTypeSize(GdkByteOrder,4, 12684, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkByteOrder,4, 12684, 10)
+CheckTypeSize(GdkByteOrder,4, 12684, 10);
 #elif __s390x__
-CheckTypeSize(GdkByteOrder,4, 12684, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12684,0);
-Msg("Find size of GdkByteOrder (12684)\n");
+CheckTypeSize(GdkByteOrder,4, 12684, 12);
+#elif 1
+CheckTypeSize(GdkByteOrder,0, 12684, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkVisual,68, 12685, 2)
+CheckTypeSize(GdkVisual,68, 12685, 2);
 #elif __x86_64__
-CheckTypeSize(GdkVisual,80, 12685, 11)
+CheckTypeSize(GdkVisual,80, 12685, 11);
 #elif __ia64__
-CheckTypeSize(GdkVisual,80, 12685, 3)
+CheckTypeSize(GdkVisual,80, 12685, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkVisual,68, 12685, 6)
+CheckTypeSize(GdkVisual,68, 12685, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkVisual,80, 12685, 9)
+CheckTypeSize(GdkVisual,80, 12685, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkVisual,68, 12685, 10)
+CheckTypeSize(GdkVisual,68, 12685, 10);
 #elif __s390x__
-CheckTypeSize(GdkVisual,80, 12685, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12685,0);
-Msg("Find size of GdkVisual (12685)\n");
+CheckTypeSize(GdkVisual,80, 12685, 12);
+#elif 1
+CheckTypeSize(GdkVisual,0, 12685, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkVisual *,4, 12686, 2)
+CheckTypeSize(GdkVisual *,4, 12686, 2);
 #elif __x86_64__
-CheckTypeSize(GdkVisual *,8, 12686, 11)
+CheckTypeSize(GdkVisual *,8, 12686, 11);
 #elif __ia64__
-CheckTypeSize(GdkVisual *,8, 12686, 3)
+CheckTypeSize(GdkVisual *,8, 12686, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkVisual *,4, 12686, 6)
+CheckTypeSize(GdkVisual *,4, 12686, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkVisual *,8, 12686, 9)
+CheckTypeSize(GdkVisual *,8, 12686, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkVisual *,4, 12686, 10)
+CheckTypeSize(GdkVisual *,4, 12686, 10);
 #elif __s390x__
-CheckTypeSize(GdkVisual *,8, 12686, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12686,0);
-Msg("Find size of GdkVisual * (12686)\n");
+CheckTypeSize(GdkVisual *,8, 12686, 12);
+#elif 1
+CheckTypeSize(GdkVisual *,0, 12686, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkColormap,28, 12687, 2)
+CheckTypeSize(GdkColormap,28, 12687, 2);
 #elif __x86_64__
-CheckTypeSize(GdkColormap,56, 12687, 11)
+CheckTypeSize(GdkColormap,56, 12687, 11);
 #elif __ia64__
-CheckTypeSize(GdkColormap,56, 12687, 3)
+CheckTypeSize(GdkColormap,56, 12687, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkColormap,28, 12687, 6)
+CheckTypeSize(GdkColormap,28, 12687, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkColormap,56, 12687, 9)
+CheckTypeSize(GdkColormap,56, 12687, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkColormap,28, 12687, 10)
+CheckTypeSize(GdkColormap,28, 12687, 10);
 #elif __s390x__
-CheckTypeSize(GdkColormap,56, 12687, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12687,0);
-Msg("Find size of GdkColormap (12687)\n");
+CheckTypeSize(GdkColormap,56, 12687, 12);
+#elif 1
+CheckTypeSize(GdkColormap,0, 12687, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkColormap *,4, 12688, 2)
+CheckTypeSize(GdkColormap *,4, 12688, 2);
 #elif __x86_64__
-CheckTypeSize(GdkColormap *,8, 12688, 11)
+CheckTypeSize(GdkColormap *,8, 12688, 11);
 #elif __ia64__
-CheckTypeSize(GdkColormap *,8, 12688, 3)
+CheckTypeSize(GdkColormap *,8, 12688, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkColormap *,4, 12688, 6)
+CheckTypeSize(GdkColormap *,4, 12688, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkColormap *,8, 12688, 9)
+CheckTypeSize(GdkColormap *,8, 12688, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkColormap *,4, 12688, 10)
+CheckTypeSize(GdkColormap *,4, 12688, 10);
 #elif __s390x__
-CheckTypeSize(GdkColormap *,8, 12688, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12688,0);
-Msg("Find size of GdkColormap * (12688)\n");
+CheckTypeSize(GdkColormap *,8, 12688, 12);
+#elif 1
+CheckTypeSize(GdkColormap *,0, 12688, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkGC,32, 12689, 2)
+CheckTypeSize(GdkGC,32, 12689, 2);
 #elif __x86_64__
-CheckTypeSize(GdkGC,48, 12689, 11)
+CheckTypeSize(GdkGC,48, 12689, 11);
 #elif __ia64__
-CheckTypeSize(GdkGC,48, 12689, 3)
+CheckTypeSize(GdkGC,48, 12689, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkGC,32, 12689, 6)
+CheckTypeSize(GdkGC,32, 12689, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkGC,48, 12689, 9)
+CheckTypeSize(GdkGC,48, 12689, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkGC,32, 12689, 10)
+CheckTypeSize(GdkGC,32, 12689, 10);
 #elif __s390x__
-CheckTypeSize(GdkGC,48, 12689, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12689,0);
-Msg("Find size of GdkGC (12689)\n");
+CheckTypeSize(GdkGC,48, 12689, 12);
+#elif 1
+CheckTypeSize(GdkGC,0, 12689, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkGC *,4, 12690, 2)
+CheckTypeSize(GdkGC *,4, 12690, 2);
 #elif __x86_64__
-CheckTypeSize(GdkGC *,8, 12690, 11)
+CheckTypeSize(GdkGC *,8, 12690, 11);
 #elif __ia64__
-CheckTypeSize(GdkGC *,8, 12690, 3)
+CheckTypeSize(GdkGC *,8, 12690, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkGC *,4, 12690, 6)
+CheckTypeSize(GdkGC *,4, 12690, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkGC *,8, 12690, 9)
+CheckTypeSize(GdkGC *,8, 12690, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkGC *,4, 12690, 10)
+CheckTypeSize(GdkGC *,4, 12690, 10);
 #elif __s390x__
-CheckTypeSize(GdkGC *,8, 12690, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12690,0);
-Msg("Find size of GdkGC * (12690)\n");
+CheckTypeSize(GdkGC *,8, 12690, 12);
+#elif 1
+CheckTypeSize(GdkGC *,0, 12690, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkDrawable,12, 12691, 2)
+CheckTypeSize(GdkDrawable,12, 12691, 2);
 #elif __x86_64__
-CheckTypeSize(GdkDrawable,24, 12691, 11)
+CheckTypeSize(GdkDrawable,24, 12691, 11);
 #elif __ia64__
-CheckTypeSize(GdkDrawable,24, 12691, 3)
+CheckTypeSize(GdkDrawable,24, 12691, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkDrawable,12, 12691, 6)
+CheckTypeSize(GdkDrawable,12, 12691, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkDrawable,24, 12691, 9)
+CheckTypeSize(GdkDrawable,24, 12691, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkDrawable,12, 12691, 10)
+CheckTypeSize(GdkDrawable,12, 12691, 10);
 #elif __s390x__
-CheckTypeSize(GdkDrawable,24, 12691, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12691,0);
-Msg("Find size of GdkDrawable (12691)\n");
+CheckTypeSize(GdkDrawable,24, 12691, 12);
+#elif 1
+CheckTypeSize(GdkDrawable,0, 12691, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkDrawable *,4, 12692, 2)
+CheckTypeSize(GdkDrawable *,4, 12692, 2);
 #elif __x86_64__
-CheckTypeSize(GdkDrawable *,8, 12692, 11)
+CheckTypeSize(GdkDrawable *,8, 12692, 11);
 #elif __ia64__
-CheckTypeSize(GdkDrawable *,8, 12692, 3)
+CheckTypeSize(GdkDrawable *,8, 12692, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkDrawable *,4, 12692, 6)
+CheckTypeSize(GdkDrawable *,4, 12692, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkDrawable *,8, 12692, 9)
+CheckTypeSize(GdkDrawable *,8, 12692, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkDrawable *,4, 12692, 10)
+CheckTypeSize(GdkDrawable *,4, 12692, 10);
 #elif __s390x__
-CheckTypeSize(GdkDrawable *,8, 12692, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12692,0);
-Msg("Find size of GdkDrawable * (12692)\n");
+CheckTypeSize(GdkDrawable *,8, 12692, 12);
+#elif 1
+CheckTypeSize(GdkDrawable *,0, 12692, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkDisplay,80, 12693, 2)
-CheckMemberSize(struct _GdkDisplay,queued_events,4,2,43466)
-CheckOffset(struct _GdkDisplay,queued_events,12,2,43466)
-CheckMemberSize(struct _GdkDisplay,queued_tail,4,2,43467)
-CheckOffset(struct _GdkDisplay,queued_tail,16,2,43467)
-CheckMemberSize(struct _GdkDisplay,button_click_time,8,2,43468)
-CheckOffset(struct _GdkDisplay,button_click_time,20,2,43468)
-CheckMemberSize(struct _GdkDisplay,button_window,8,2,43469)
-CheckOffset(struct _GdkDisplay,button_window,28,2,43469)
-CheckMemberSize(struct _GdkDisplay,button_number,8,2,43470)
-CheckOffset(struct _GdkDisplay,button_number,36,2,43470)
-CheckMemberSize(struct _GdkDisplay,double_click_time,4,2,43471)
-CheckOffset(struct _GdkDisplay,double_click_time,44,2,43471)
-CheckMemberSize(struct _GdkDisplay,core_pointer,4,2,43516)
-CheckOffset(struct _GdkDisplay,core_pointer,48,2,43516)
-CheckMemberSize(struct _GdkDisplay,pointer_hooks,4,2,43537)
-CheckOffset(struct _GdkDisplay,pointer_hooks,52,2,43537)
-CheckMemberSize(struct _GdkDisplay,double_click_distance,4,2,43539)
-CheckOffset(struct _GdkDisplay,double_click_distance,60,2,43539)
-CheckMemberSize(struct _GdkDisplay,button_x,8,2,43540)
-CheckOffset(struct _GdkDisplay,button_x,64,2,43540)
-CheckMemberSize(struct _GdkDisplay,button_y,8,2,43541)
-CheckOffset(struct _GdkDisplay,button_y,72,2,43541)
+CheckTypeSize(struct _GdkDisplay,80, 12693, 2);
+CheckMemberSize(struct _GdkDisplay,queued_events,4,2,43466);
+CheckOffset(struct _GdkDisplay,queued_events,12,2,43466);
+CheckMemberSize(struct _GdkDisplay,queued_tail,4,2,43467);
+CheckOffset(struct _GdkDisplay,queued_tail,16,2,43467);
+CheckMemberSize(struct _GdkDisplay,button_click_time,8,2,43468);
+CheckOffset(struct _GdkDisplay,button_click_time,20,2,43468);
+CheckMemberSize(struct _GdkDisplay,button_window,8,2,43469);
+CheckOffset(struct _GdkDisplay,button_window,28,2,43469);
+CheckMemberSize(struct _GdkDisplay,button_number,8,2,43470);
+CheckOffset(struct _GdkDisplay,button_number,36,2,43470);
+CheckMemberSize(struct _GdkDisplay,double_click_time,4,2,43471);
+CheckOffset(struct _GdkDisplay,double_click_time,44,2,43471);
+CheckMemberSize(struct _GdkDisplay,core_pointer,4,2,43516);
+CheckOffset(struct _GdkDisplay,core_pointer,48,2,43516);
+CheckMemberSize(struct _GdkDisplay,pointer_hooks,4,2,43537);
+CheckOffset(struct _GdkDisplay,pointer_hooks,52,2,43537);
+CheckMemberSize(struct _GdkDisplay,double_click_distance,4,2,43539);
+CheckOffset(struct _GdkDisplay,double_click_distance,60,2,43539);
+CheckMemberSize(struct _GdkDisplay,button_x,8,2,43540);
+CheckOffset(struct _GdkDisplay,button_x,64,2,43540);
+CheckMemberSize(struct _GdkDisplay,button_y,8,2,43541);
+CheckOffset(struct _GdkDisplay,button_y,72,2,43541);
 #elif __x86_64__
-CheckTypeSize(struct _GdkDisplay,120, 12693, 11)
-CheckMemberSize(struct _GdkDisplay,queued_events,8,11,43466)
-CheckOffset(struct _GdkDisplay,queued_events,24,11,43466)
-CheckMemberSize(struct _GdkDisplay,queued_tail,8,11,43467)
-CheckOffset(struct _GdkDisplay,queued_tail,32,11,43467)
-CheckMemberSize(struct _GdkDisplay,button_click_time,8,11,43468)
-CheckOffset(struct _GdkDisplay,button_click_time,40,11,43468)
-CheckMemberSize(struct _GdkDisplay,button_window,16,11,43469)
-CheckOffset(struct _GdkDisplay,button_window,48,11,43469)
-CheckMemberSize(struct _GdkDisplay,button_number,8,11,43470)
-CheckOffset(struct _GdkDisplay,button_number,64,11,43470)
-CheckMemberSize(struct _GdkDisplay,double_click_time,4,11,43471)
-CheckOffset(struct _GdkDisplay,double_click_time,72,11,43471)
-CheckMemberSize(struct _GdkDisplay,core_pointer,8,11,43516)
-CheckOffset(struct _GdkDisplay,core_pointer,80,11,43516)
-CheckMemberSize(struct _GdkDisplay,pointer_hooks,8,11,43537)
-CheckOffset(struct _GdkDisplay,pointer_hooks,88,11,43537)
-CheckMemberSize(struct _GdkDisplay,double_click_distance,4,11,43539)
-CheckOffset(struct _GdkDisplay,double_click_distance,100,11,43539)
-CheckMemberSize(struct _GdkDisplay,button_x,8,11,43540)
-CheckOffset(struct _GdkDisplay,button_x,104,11,43540)
-CheckMemberSize(struct _GdkDisplay,button_y,8,11,43541)
-CheckOffset(struct _GdkDisplay,button_y,112,11,43541)
+CheckTypeSize(struct _GdkDisplay,120, 12693, 11);
+CheckMemberSize(struct _GdkDisplay,queued_events,8,11,43466);
+CheckOffset(struct _GdkDisplay,queued_events,24,11,43466);
+CheckMemberSize(struct _GdkDisplay,queued_tail,8,11,43467);
+CheckOffset(struct _GdkDisplay,queued_tail,32,11,43467);
+CheckMemberSize(struct _GdkDisplay,button_click_time,8,11,43468);
+CheckOffset(struct _GdkDisplay,button_click_time,40,11,43468);
+CheckMemberSize(struct _GdkDisplay,button_window,16,11,43469);
+CheckOffset(struct _GdkDisplay,button_window,48,11,43469);
+CheckMemberSize(struct _GdkDisplay,button_number,8,11,43470);
+CheckOffset(struct _GdkDisplay,button_number,64,11,43470);
+CheckMemberSize(struct _GdkDisplay,double_click_time,4,11,43471);
+CheckOffset(struct _GdkDisplay,double_click_time,72,11,43471);
+CheckMemberSize(struct _GdkDisplay,core_pointer,8,11,43516);
+CheckOffset(struct _GdkDisplay,core_pointer,80,11,43516);
+CheckMemberSize(struct _GdkDisplay,pointer_hooks,8,11,43537);
+CheckOffset(struct _GdkDisplay,pointer_hooks,88,11,43537);
+CheckMemberSize(struct _GdkDisplay,double_click_distance,4,11,43539);
+CheckOffset(struct _GdkDisplay,double_click_distance,100,11,43539);
+CheckMemberSize(struct _GdkDisplay,button_x,8,11,43540);
+CheckOffset(struct _GdkDisplay,button_x,104,11,43540);
+CheckMemberSize(struct _GdkDisplay,button_y,8,11,43541);
+CheckOffset(struct _GdkDisplay,button_y,112,11,43541);
 #elif __ia64__
-CheckTypeSize(struct _GdkDisplay,120, 12693, 3)
-CheckMemberSize(struct _GdkDisplay,queued_events,8,3,43466)
-CheckOffset(struct _GdkDisplay,queued_events,24,3,43466)
-CheckMemberSize(struct _GdkDisplay,queued_tail,8,3,43467)
-CheckOffset(struct _GdkDisplay,queued_tail,32,3,43467)
-CheckMemberSize(struct _GdkDisplay,button_click_time,8,3,43468)
-CheckOffset(struct _GdkDisplay,button_click_time,40,3,43468)
-CheckMemberSize(struct _GdkDisplay,button_window,16,3,43469)
-CheckOffset(struct _GdkDisplay,button_window,48,3,43469)
-CheckMemberSize(struct _GdkDisplay,button_number,8,3,43470)
-CheckOffset(struct _GdkDisplay,button_number,64,3,43470)
-CheckMemberSize(struct _GdkDisplay,double_click_time,4,3,43471)
-CheckOffset(struct _GdkDisplay,double_click_time,72,3,43471)
-CheckMemberSize(struct _GdkDisplay,core_pointer,8,3,43516)
-CheckOffset(struct _GdkDisplay,core_pointer,80,3,43516)
-CheckMemberSize(struct _GdkDisplay,pointer_hooks,8,3,43537)
-CheckOffset(struct _GdkDisplay,pointer_hooks,88,3,43537)
-CheckMemberSize(struct _GdkDisplay,double_click_distance,4,3,43539)
-CheckOffset(struct _GdkDisplay,double_click_distance,100,3,43539)
-CheckMemberSize(struct _GdkDisplay,button_x,8,3,43540)
-CheckOffset(struct _GdkDisplay,button_x,104,3,43540)
-CheckMemberSize(struct _GdkDisplay,button_y,8,3,43541)
-CheckOffset(struct _GdkDisplay,button_y,112,3,43541)
+CheckTypeSize(struct _GdkDisplay,120, 12693, 3);
+CheckMemberSize(struct _GdkDisplay,queued_events,8,3,43466);
+CheckOffset(struct _GdkDisplay,queued_events,24,3,43466);
+CheckMemberSize(struct _GdkDisplay,queued_tail,8,3,43467);
+CheckOffset(struct _GdkDisplay,queued_tail,32,3,43467);
+CheckMemberSize(struct _GdkDisplay,button_click_time,8,3,43468);
+CheckOffset(struct _GdkDisplay,button_click_time,40,3,43468);
+CheckMemberSize(struct _GdkDisplay,button_window,16,3,43469);
+CheckOffset(struct _GdkDisplay,button_window,48,3,43469);
+CheckMemberSize(struct _GdkDisplay,button_number,8,3,43470);
+CheckOffset(struct _GdkDisplay,button_number,64,3,43470);
+CheckMemberSize(struct _GdkDisplay,double_click_time,4,3,43471);
+CheckOffset(struct _GdkDisplay,double_click_time,72,3,43471);
+CheckMemberSize(struct _GdkDisplay,core_pointer,8,3,43516);
+CheckOffset(struct _GdkDisplay,core_pointer,80,3,43516);
+CheckMemberSize(struct _GdkDisplay,pointer_hooks,8,3,43537);
+CheckOffset(struct _GdkDisplay,pointer_hooks,88,3,43537);
+CheckMemberSize(struct _GdkDisplay,double_click_distance,4,3,43539);
+CheckOffset(struct _GdkDisplay,double_click_distance,100,3,43539);
+CheckMemberSize(struct _GdkDisplay,button_x,8,3,43540);
+CheckOffset(struct _GdkDisplay,button_x,104,3,43540);
+CheckMemberSize(struct _GdkDisplay,button_y,8,3,43541);
+CheckOffset(struct _GdkDisplay,button_y,112,3,43541);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkDisplay,80, 12693, 6)
-CheckMemberSize(struct _GdkDisplay,queued_events,4,6,43466)
-CheckOffset(struct _GdkDisplay,queued_events,12,6,43466)
-CheckMemberSize(struct _GdkDisplay,queued_tail,4,6,43467)
-CheckOffset(struct _GdkDisplay,queued_tail,16,6,43467)
-CheckMemberSize(struct _GdkDisplay,button_click_time,8,6,43468)
-CheckOffset(struct _GdkDisplay,button_click_time,20,6,43468)
-CheckMemberSize(struct _GdkDisplay,button_window,8,6,43469)
-CheckOffset(struct _GdkDisplay,button_window,28,6,43469)
-CheckMemberSize(struct _GdkDisplay,button_number,8,6,43470)
-CheckOffset(struct _GdkDisplay,button_number,36,6,43470)
-CheckMemberSize(struct _GdkDisplay,double_click_time,4,6,43471)
-CheckOffset(struct _GdkDisplay,double_click_time,44,6,43471)
-CheckMemberSize(struct _GdkDisplay,core_pointer,4,6,43516)
-CheckOffset(struct _GdkDisplay,core_pointer,48,6,43516)
-CheckMemberSize(struct _GdkDisplay,pointer_hooks,4,6,43537)
-CheckOffset(struct _GdkDisplay,pointer_hooks,52,6,43537)
-CheckMemberSize(struct _GdkDisplay,double_click_distance,4,6,43539)
-CheckOffset(struct _GdkDisplay,double_click_distance,60,6,43539)
-CheckMemberSize(struct _GdkDisplay,button_x,8,6,43540)
-CheckOffset(struct _GdkDisplay,button_x,64,6,43540)
-CheckMemberSize(struct _GdkDisplay,button_y,8,6,43541)
-CheckOffset(struct _GdkDisplay,button_y,72,6,43541)
+CheckTypeSize(struct _GdkDisplay,80, 12693, 6);
+CheckMemberSize(struct _GdkDisplay,queued_events,4,6,43466);
+CheckOffset(struct _GdkDisplay,queued_events,12,6,43466);
+CheckMemberSize(struct _GdkDisplay,queued_tail,4,6,43467);
+CheckOffset(struct _GdkDisplay,queued_tail,16,6,43467);
+CheckMemberSize(struct _GdkDisplay,button_click_time,8,6,43468);
+CheckOffset(struct _GdkDisplay,button_click_time,20,6,43468);
+CheckMemberSize(struct _GdkDisplay,button_window,8,6,43469);
+CheckOffset(struct _GdkDisplay,button_window,28,6,43469);
+CheckMemberSize(struct _GdkDisplay,button_number,8,6,43470);
+CheckOffset(struct _GdkDisplay,button_number,36,6,43470);
+CheckMemberSize(struct _GdkDisplay,double_click_time,4,6,43471);
+CheckOffset(struct _GdkDisplay,double_click_time,44,6,43471);
+CheckMemberSize(struct _GdkDisplay,core_pointer,4,6,43516);
+CheckOffset(struct _GdkDisplay,core_pointer,48,6,43516);
+CheckMemberSize(struct _GdkDisplay,pointer_hooks,4,6,43537);
+CheckOffset(struct _GdkDisplay,pointer_hooks,52,6,43537);
+CheckMemberSize(struct _GdkDisplay,double_click_distance,4,6,43539);
+CheckOffset(struct _GdkDisplay,double_click_distance,60,6,43539);
+CheckMemberSize(struct _GdkDisplay,button_x,8,6,43540);
+CheckOffset(struct _GdkDisplay,button_x,64,6,43540);
+CheckMemberSize(struct _GdkDisplay,button_y,8,6,43541);
+CheckOffset(struct _GdkDisplay,button_y,72,6,43541);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkDisplay,120, 12693, 9)
-CheckMemberSize(struct _GdkDisplay,queued_events,8,9,43466)
-CheckOffset(struct _GdkDisplay,queued_events,24,9,43466)
-CheckMemberSize(struct _GdkDisplay,queued_tail,8,9,43467)
-CheckOffset(struct _GdkDisplay,queued_tail,32,9,43467)
-CheckMemberSize(struct _GdkDisplay,button_click_time,8,9,43468)
-CheckOffset(struct _GdkDisplay,button_click_time,40,9,43468)
-CheckMemberSize(struct _GdkDisplay,button_window,16,9,43469)
-CheckOffset(struct _GdkDisplay,button_window,48,9,43469)
-CheckMemberSize(struct _GdkDisplay,button_number,8,9,43470)
-CheckOffset(struct _GdkDisplay,button_number,64,9,43470)
-CheckMemberSize(struct _GdkDisplay,double_click_time,4,9,43471)
-CheckOffset(struct _GdkDisplay,double_click_time,72,9,43471)
-CheckMemberSize(struct _GdkDisplay,core_pointer,8,9,43516)
-CheckOffset(struct _GdkDisplay,core_pointer,80,9,43516)
-CheckMemberSize(struct _GdkDisplay,pointer_hooks,8,9,43537)
-CheckOffset(struct _GdkDisplay,pointer_hooks,88,9,43537)
-CheckMemberSize(struct _GdkDisplay,double_click_distance,4,9,43539)
-CheckOffset(struct _GdkDisplay,double_click_distance,100,9,43539)
-CheckMemberSize(struct _GdkDisplay,button_x,8,9,43540)
-CheckOffset(struct _GdkDisplay,button_x,104,9,43540)
-CheckMemberSize(struct _GdkDisplay,button_y,8,9,43541)
-CheckOffset(struct _GdkDisplay,button_y,112,9,43541)
+CheckTypeSize(struct _GdkDisplay,120, 12693, 9);
+CheckMemberSize(struct _GdkDisplay,queued_events,8,9,43466);
+CheckOffset(struct _GdkDisplay,queued_events,24,9,43466);
+CheckMemberSize(struct _GdkDisplay,queued_tail,8,9,43467);
+CheckOffset(struct _GdkDisplay,queued_tail,32,9,43467);
+CheckMemberSize(struct _GdkDisplay,button_click_time,8,9,43468);
+CheckOffset(struct _GdkDisplay,button_click_time,40,9,43468);
+CheckMemberSize(struct _GdkDisplay,button_window,16,9,43469);
+CheckOffset(struct _GdkDisplay,button_window,48,9,43469);
+CheckMemberSize(struct _GdkDisplay,button_number,8,9,43470);
+CheckOffset(struct _GdkDisplay,button_number,64,9,43470);
+CheckMemberSize(struct _GdkDisplay,double_click_time,4,9,43471);
+CheckOffset(struct _GdkDisplay,double_click_time,72,9,43471);
+CheckMemberSize(struct _GdkDisplay,core_pointer,8,9,43516);
+CheckOffset(struct _GdkDisplay,core_pointer,80,9,43516);
+CheckMemberSize(struct _GdkDisplay,pointer_hooks,8,9,43537);
+CheckOffset(struct _GdkDisplay,pointer_hooks,88,9,43537);
+CheckMemberSize(struct _GdkDisplay,double_click_distance,4,9,43539);
+CheckOffset(struct _GdkDisplay,double_click_distance,100,9,43539);
+CheckMemberSize(struct _GdkDisplay,button_x,8,9,43540);
+CheckOffset(struct _GdkDisplay,button_x,104,9,43540);
+CheckMemberSize(struct _GdkDisplay,button_y,8,9,43541);
+CheckOffset(struct _GdkDisplay,button_y,112,9,43541);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkDisplay,80, 12693, 10)
-CheckMemberSize(struct _GdkDisplay,queued_events,4,10,43466)
-CheckOffset(struct _GdkDisplay,queued_events,12,10,43466)
-CheckMemberSize(struct _GdkDisplay,queued_tail,4,10,43467)
-CheckOffset(struct _GdkDisplay,queued_tail,16,10,43467)
-CheckMemberSize(struct _GdkDisplay,button_click_time,8,10,43468)
-CheckOffset(struct _GdkDisplay,button_click_time,20,10,43468)
-CheckMemberSize(struct _GdkDisplay,button_window,8,10,43469)
-CheckOffset(struct _GdkDisplay,button_window,28,10,43469)
-CheckMemberSize(struct _GdkDisplay,button_number,8,10,43470)
-CheckOffset(struct _GdkDisplay,button_number,36,10,43470)
-CheckMemberSize(struct _GdkDisplay,double_click_time,4,10,43471)
-CheckOffset(struct _GdkDisplay,double_click_time,44,10,43471)
-CheckMemberSize(struct _GdkDisplay,core_pointer,4,10,43516)
-CheckOffset(struct _GdkDisplay,core_pointer,48,10,43516)
-CheckMemberSize(struct _GdkDisplay,pointer_hooks,4,10,43537)
-CheckOffset(struct _GdkDisplay,pointer_hooks,52,10,43537)
-CheckMemberSize(struct _GdkDisplay,double_click_distance,4,10,43539)
-CheckOffset(struct _GdkDisplay,double_click_distance,60,10,43539)
-CheckMemberSize(struct _GdkDisplay,button_x,8,10,43540)
-CheckOffset(struct _GdkDisplay,button_x,64,10,43540)
-CheckMemberSize(struct _GdkDisplay,button_y,8,10,43541)
-CheckOffset(struct _GdkDisplay,button_y,72,10,43541)
+CheckTypeSize(struct _GdkDisplay,80, 12693, 10);
+CheckMemberSize(struct _GdkDisplay,queued_events,4,10,43466);
+CheckOffset(struct _GdkDisplay,queued_events,12,10,43466);
+CheckMemberSize(struct _GdkDisplay,queued_tail,4,10,43467);
+CheckOffset(struct _GdkDisplay,queued_tail,16,10,43467);
+CheckMemberSize(struct _GdkDisplay,button_click_time,8,10,43468);
+CheckOffset(struct _GdkDisplay,button_click_time,20,10,43468);
+CheckMemberSize(struct _GdkDisplay,button_window,8,10,43469);
+CheckOffset(struct _GdkDisplay,button_window,28,10,43469);
+CheckMemberSize(struct _GdkDisplay,button_number,8,10,43470);
+CheckOffset(struct _GdkDisplay,button_number,36,10,43470);
+CheckMemberSize(struct _GdkDisplay,double_click_time,4,10,43471);
+CheckOffset(struct _GdkDisplay,double_click_time,44,10,43471);
+CheckMemberSize(struct _GdkDisplay,core_pointer,4,10,43516);
+CheckOffset(struct _GdkDisplay,core_pointer,48,10,43516);
+CheckMemberSize(struct _GdkDisplay,pointer_hooks,4,10,43537);
+CheckOffset(struct _GdkDisplay,pointer_hooks,52,10,43537);
+CheckMemberSize(struct _GdkDisplay,double_click_distance,4,10,43539);
+CheckOffset(struct _GdkDisplay,double_click_distance,60,10,43539);
+CheckMemberSize(struct _GdkDisplay,button_x,8,10,43540);
+CheckOffset(struct _GdkDisplay,button_x,64,10,43540);
+CheckMemberSize(struct _GdkDisplay,button_y,8,10,43541);
+CheckOffset(struct _GdkDisplay,button_y,72,10,43541);
 #elif __s390x__
-CheckTypeSize(struct _GdkDisplay,120, 12693, 12)
-CheckMemberSize(struct _GdkDisplay,queued_events,8,12,43466)
-CheckOffset(struct _GdkDisplay,queued_events,24,12,43466)
-CheckMemberSize(struct _GdkDisplay,queued_tail,8,12,43467)
-CheckOffset(struct _GdkDisplay,queued_tail,32,12,43467)
-CheckMemberSize(struct _GdkDisplay,button_click_time,8,12,43468)
-CheckOffset(struct _GdkDisplay,button_click_time,40,12,43468)
-CheckMemberSize(struct _GdkDisplay,button_window,16,12,43469)
-CheckOffset(struct _GdkDisplay,button_window,48,12,43469)
-CheckMemberSize(struct _GdkDisplay,button_number,8,12,43470)
-CheckOffset(struct _GdkDisplay,button_number,64,12,43470)
-CheckMemberSize(struct _GdkDisplay,double_click_time,4,12,43471)
-CheckOffset(struct _GdkDisplay,double_click_time,72,12,43471)
-CheckMemberSize(struct _GdkDisplay,core_pointer,8,12,43516)
-CheckOffset(struct _GdkDisplay,core_pointer,80,12,43516)
-CheckMemberSize(struct _GdkDisplay,pointer_hooks,8,12,43537)
-CheckOffset(struct _GdkDisplay,pointer_hooks,88,12,43537)
-CheckMemberSize(struct _GdkDisplay,double_click_distance,4,12,43539)
-CheckOffset(struct _GdkDisplay,double_click_distance,100,12,43539)
-CheckMemberSize(struct _GdkDisplay,button_x,8,12,43540)
-CheckOffset(struct _GdkDisplay,button_x,104,12,43540)
-CheckMemberSize(struct _GdkDisplay,button_y,8,12,43541)
-CheckOffset(struct _GdkDisplay,button_y,112,12,43541)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12693,0);
-Msg("Find size of _GdkDisplay (12693)\n");
+CheckTypeSize(struct _GdkDisplay,120, 12693, 12);
+CheckMemberSize(struct _GdkDisplay,queued_events,8,12,43466);
+CheckOffset(struct _GdkDisplay,queued_events,24,12,43466);
+CheckMemberSize(struct _GdkDisplay,queued_tail,8,12,43467);
+CheckOffset(struct _GdkDisplay,queued_tail,32,12,43467);
+CheckMemberSize(struct _GdkDisplay,button_click_time,8,12,43468);
+CheckOffset(struct _GdkDisplay,button_click_time,40,12,43468);
+CheckMemberSize(struct _GdkDisplay,button_window,16,12,43469);
+CheckOffset(struct _GdkDisplay,button_window,48,12,43469);
+CheckMemberSize(struct _GdkDisplay,button_number,8,12,43470);
+CheckOffset(struct _GdkDisplay,button_number,64,12,43470);
+CheckMemberSize(struct _GdkDisplay,double_click_time,4,12,43471);
+CheckOffset(struct _GdkDisplay,double_click_time,72,12,43471);
+CheckMemberSize(struct _GdkDisplay,core_pointer,8,12,43516);
+CheckOffset(struct _GdkDisplay,core_pointer,80,12,43516);
+CheckMemberSize(struct _GdkDisplay,pointer_hooks,8,12,43537);
+CheckOffset(struct _GdkDisplay,pointer_hooks,88,12,43537);
+CheckMemberSize(struct _GdkDisplay,double_click_distance,4,12,43539);
+CheckOffset(struct _GdkDisplay,double_click_distance,100,12,43539);
+CheckMemberSize(struct _GdkDisplay,button_x,8,12,43540);
+CheckOffset(struct _GdkDisplay,button_x,104,12,43540);
+CheckMemberSize(struct _GdkDisplay,button_y,8,12,43541);
+CheckOffset(struct _GdkDisplay,button_y,112,12,43541);
+#elif 1
+CheckTypeSize(struct _GdkDisplay,0, 12693, 1);
+CheckBitField(struct _GdkDisplay,closed,1,1,43538)
 #endif
 
 #if 1
@@ -1740,134 +1761,143 @@ Msg("Find size of _GdkDisplay (12693)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkDevice,44, 12697, 2)
-CheckMemberSize(struct _GdkDevice,name,4,2,43473)
-CheckOffset(struct _GdkDevice,name,12,2,43473)
-CheckMemberSize(struct _GdkDevice,source,4,2,43478)
-CheckOffset(struct _GdkDevice,source,16,2,43478)
-CheckMemberSize(struct _GdkDevice,mode,4,2,43482)
-CheckOffset(struct _GdkDevice,mode,20,2,43482)
-CheckMemberSize(struct _GdkDevice,has_cursor,4,2,43483)
-CheckOffset(struct _GdkDevice,has_cursor,24,2,43483)
-CheckMemberSize(struct _GdkDevice,num_axes,4,2,43484)
-CheckOffset(struct _GdkDevice,num_axes,28,2,43484)
-CheckMemberSize(struct _GdkDevice,axes,4,2,43496)
-CheckOffset(struct _GdkDevice,axes,32,2,43496)
-CheckMemberSize(struct _GdkDevice,num_keys,4,2,43497)
-CheckOffset(struct _GdkDevice,num_keys,36,2,43497)
-CheckMemberSize(struct _GdkDevice,keys,4,2,43515)
-CheckOffset(struct _GdkDevice,keys,40,2,43515)
+CheckTypeSize(struct _GdkDevice,44, 12697, 2);
+CheckMemberSize(struct _GdkDevice,name,4,2,43473);
+CheckOffset(struct _GdkDevice,name,12,2,43473);
+CheckMemberSize(struct _GdkDevice,source,4,2,43478);
+CheckOffset(struct _GdkDevice,source,16,2,43478);
+CheckMemberSize(struct _GdkDevice,mode,4,2,43482);
+CheckOffset(struct _GdkDevice,mode,20,2,43482);
+CheckMemberSize(struct _GdkDevice,has_cursor,4,2,43483);
+CheckOffset(struct _GdkDevice,has_cursor,24,2,43483);
+CheckMemberSize(struct _GdkDevice,num_axes,4,2,43484);
+CheckOffset(struct _GdkDevice,num_axes,28,2,43484);
+CheckMemberSize(struct _GdkDevice,axes,4,2,43496);
+CheckOffset(struct _GdkDevice,axes,32,2,43496);
+CheckMemberSize(struct _GdkDevice,num_keys,4,2,43497);
+CheckOffset(struct _GdkDevice,num_keys,36,2,43497);
+CheckMemberSize(struct _GdkDevice,keys,4,2,43515);
+CheckOffset(struct _GdkDevice,keys,40,2,43515);
 #elif __x86_64__
-CheckTypeSize(struct _GdkDevice,72, 12697, 11)
-CheckMemberSize(struct _GdkDevice,name,8,11,43473)
-CheckOffset(struct _GdkDevice,name,24,11,43473)
-CheckMemberSize(struct _GdkDevice,source,4,11,43478)
-CheckOffset(struct _GdkDevice,source,32,11,43478)
-CheckMemberSize(struct _GdkDevice,mode,4,11,43482)
-CheckOffset(struct _GdkDevice,mode,36,11,43482)
-CheckMemberSize(struct _GdkDevice,has_cursor,4,11,43483)
-CheckOffset(struct _GdkDevice,has_cursor,40,11,43483)
-CheckMemberSize(struct _GdkDevice,num_axes,4,11,43484)
-CheckOffset(struct _GdkDevice,num_axes,44,11,43484)
-CheckMemberSize(struct _GdkDevice,axes,8,11,43496)
-CheckOffset(struct _GdkDevice,axes,48,11,43496)
-CheckMemberSize(struct _GdkDevice,num_keys,4,11,43497)
-CheckOffset(struct _GdkDevice,num_keys,56,11,43497)
-CheckMemberSize(struct _GdkDevice,keys,8,11,43515)
-CheckOffset(struct _GdkDevice,keys,64,11,43515)
+CheckTypeSize(struct _GdkDevice,72, 12697, 11);
+CheckMemberSize(struct _GdkDevice,name,8,11,43473);
+CheckOffset(struct _GdkDevice,name,24,11,43473);
+CheckMemberSize(struct _GdkDevice,source,4,11,43478);
+CheckOffset(struct _GdkDevice,source,32,11,43478);
+CheckMemberSize(struct _GdkDevice,mode,4,11,43482);
+CheckOffset(struct _GdkDevice,mode,36,11,43482);
+CheckMemberSize(struct _GdkDevice,has_cursor,4,11,43483);
+CheckOffset(struct _GdkDevice,has_cursor,40,11,43483);
+CheckMemberSize(struct _GdkDevice,num_axes,4,11,43484);
+CheckOffset(struct _GdkDevice,num_axes,44,11,43484);
+CheckMemberSize(struct _GdkDevice,axes,8,11,43496);
+CheckOffset(struct _GdkDevice,axes,48,11,43496);
+CheckMemberSize(struct _GdkDevice,num_keys,4,11,43497);
+CheckOffset(struct _GdkDevice,num_keys,56,11,43497);
+CheckMemberSize(struct _GdkDevice,keys,8,11,43515);
+CheckOffset(struct _GdkDevice,keys,64,11,43515);
 #elif __ia64__
-CheckTypeSize(struct _GdkDevice,72, 12697, 3)
-CheckMemberSize(struct _GdkDevice,name,8,3,43473)
-CheckOffset(struct _GdkDevice,name,24,3,43473)
-CheckMemberSize(struct _GdkDevice,source,4,3,43478)
-CheckOffset(struct _GdkDevice,source,32,3,43478)
-CheckMemberSize(struct _GdkDevice,mode,4,3,43482)
-CheckOffset(struct _GdkDevice,mode,36,3,43482)
-CheckMemberSize(struct _GdkDevice,has_cursor,4,3,43483)
-CheckOffset(struct _GdkDevice,has_cursor,40,3,43483)
-CheckMemberSize(struct _GdkDevice,num_axes,4,3,43484)
-CheckOffset(struct _GdkDevice,num_axes,44,3,43484)
-CheckMemberSize(struct _GdkDevice,axes,8,3,43496)
-CheckOffset(struct _GdkDevice,axes,48,3,43496)
-CheckMemberSize(struct _GdkDevice,num_keys,4,3,43497)
-CheckOffset(struct _GdkDevice,num_keys,56,3,43497)
-CheckMemberSize(struct _GdkDevice,keys,8,3,43515)
-CheckOffset(struct _GdkDevice,keys,64,3,43515)
+CheckTypeSize(struct _GdkDevice,72, 12697, 3);
+CheckMemberSize(struct _GdkDevice,name,8,3,43473);
+CheckOffset(struct _GdkDevice,name,24,3,43473);
+CheckMemberSize(struct _GdkDevice,source,4,3,43478);
+CheckOffset(struct _GdkDevice,source,32,3,43478);
+CheckMemberSize(struct _GdkDevice,mode,4,3,43482);
+CheckOffset(struct _GdkDevice,mode,36,3,43482);
+CheckMemberSize(struct _GdkDevice,has_cursor,4,3,43483);
+CheckOffset(struct _GdkDevice,has_cursor,40,3,43483);
+CheckMemberSize(struct _GdkDevice,num_axes,4,3,43484);
+CheckOffset(struct _GdkDevice,num_axes,44,3,43484);
+CheckMemberSize(struct _GdkDevice,axes,8,3,43496);
+CheckOffset(struct _GdkDevice,axes,48,3,43496);
+CheckMemberSize(struct _GdkDevice,num_keys,4,3,43497);
+CheckOffset(struct _GdkDevice,num_keys,56,3,43497);
+CheckMemberSize(struct _GdkDevice,keys,8,3,43515);
+CheckOffset(struct _GdkDevice,keys,64,3,43515);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkDevice,44, 12697, 6)
-CheckMemberSize(struct _GdkDevice,name,4,6,43473)
-CheckOffset(struct _GdkDevice,name,12,6,43473)
-CheckMemberSize(struct _GdkDevice,source,4,6,43478)
-CheckOffset(struct _GdkDevice,source,16,6,43478)
-CheckMemberSize(struct _GdkDevice,mode,4,6,43482)
-CheckOffset(struct _GdkDevice,mode,20,6,43482)
-CheckMemberSize(struct _GdkDevice,has_cursor,4,6,43483)
-CheckOffset(struct _GdkDevice,has_cursor,24,6,43483)
-CheckMemberSize(struct _GdkDevice,num_axes,4,6,43484)
-CheckOffset(struct _GdkDevice,num_axes,28,6,43484)
-CheckMemberSize(struct _GdkDevice,axes,4,6,43496)
-CheckOffset(struct _GdkDevice,axes,32,6,43496)
-CheckMemberSize(struct _GdkDevice,num_keys,4,6,43497)
-CheckOffset(struct _GdkDevice,num_keys,36,6,43497)
-CheckMemberSize(struct _GdkDevice,keys,4,6,43515)
-CheckOffset(struct _GdkDevice,keys,40,6,43515)
+CheckTypeSize(struct _GdkDevice,44, 12697, 6);
+CheckMemberSize(struct _GdkDevice,name,4,6,43473);
+CheckOffset(struct _GdkDevice,name,12,6,43473);
+CheckMemberSize(struct _GdkDevice,source,4,6,43478);
+CheckOffset(struct _GdkDevice,source,16,6,43478);
+CheckMemberSize(struct _GdkDevice,mode,4,6,43482);
+CheckOffset(struct _GdkDevice,mode,20,6,43482);
+CheckMemberSize(struct _GdkDevice,has_cursor,4,6,43483);
+CheckOffset(struct _GdkDevice,has_cursor,24,6,43483);
+CheckMemberSize(struct _GdkDevice,num_axes,4,6,43484);
+CheckOffset(struct _GdkDevice,num_axes,28,6,43484);
+CheckMemberSize(struct _GdkDevice,axes,4,6,43496);
+CheckOffset(struct _GdkDevice,axes,32,6,43496);
+CheckMemberSize(struct _GdkDevice,num_keys,4,6,43497);
+CheckOffset(struct _GdkDevice,num_keys,36,6,43497);
+CheckMemberSize(struct _GdkDevice,keys,4,6,43515);
+CheckOffset(struct _GdkDevice,keys,40,6,43515);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkDevice,72, 12697, 9)
-CheckMemberSize(struct _GdkDevice,name,8,9,43473)
-CheckOffset(struct _GdkDevice,name,24,9,43473)
-CheckMemberSize(struct _GdkDevice,source,4,9,43478)
-CheckOffset(struct _GdkDevice,source,32,9,43478)
-CheckMemberSize(struct _GdkDevice,mode,4,9,43482)
-CheckOffset(struct _GdkDevice,mode,36,9,43482)
-CheckMemberSize(struct _GdkDevice,has_cursor,4,9,43483)
-CheckOffset(struct _GdkDevice,has_cursor,40,9,43483)
-CheckMemberSize(struct _GdkDevice,num_axes,4,9,43484)
-CheckOffset(struct _GdkDevice,num_axes,44,9,43484)
-CheckMemberSize(struct _GdkDevice,axes,8,9,43496)
-CheckOffset(struct _GdkDevice,axes,48,9,43496)
-CheckMemberSize(struct _GdkDevice,num_keys,4,9,43497)
-CheckOffset(struct _GdkDevice,num_keys,56,9,43497)
-CheckMemberSize(struct _GdkDevice,keys,8,9,43515)
-CheckOffset(struct _GdkDevice,keys,64,9,43515)
+CheckTypeSize(struct _GdkDevice,72, 12697, 9);
+CheckMemberSize(struct _GdkDevice,name,8,9,43473);
+CheckOffset(struct _GdkDevice,name,24,9,43473);
+CheckMemberSize(struct _GdkDevice,source,4,9,43478);
+CheckOffset(struct _GdkDevice,source,32,9,43478);
+CheckMemberSize(struct _GdkDevice,mode,4,9,43482);
+CheckOffset(struct _GdkDevice,mode,36,9,43482);
+CheckMemberSize(struct _GdkDevice,has_cursor,4,9,43483);
+CheckOffset(struct _GdkDevice,has_cursor,40,9,43483);
+CheckMemberSize(struct _GdkDevice,num_axes,4,9,43484);
+CheckOffset(struct _GdkDevice,num_axes,44,9,43484);
+CheckMemberSize(struct _GdkDevice,axes,8,9,43496);
+CheckOffset(struct _GdkDevice,axes,48,9,43496);
+CheckMemberSize(struct _GdkDevice,num_keys,4,9,43497);
+CheckOffset(struct _GdkDevice,num_keys,56,9,43497);
+CheckMemberSize(struct _GdkDevice,keys,8,9,43515);
+CheckOffset(struct _GdkDevice,keys,64,9,43515);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkDevice,44, 12697, 10)
-CheckMemberSize(struct _GdkDevice,name,4,10,43473)
-CheckOffset(struct _GdkDevice,name,12,10,43473)
-CheckMemberSize(struct _GdkDevice,source,4,10,43478)
-CheckOffset(struct _GdkDevice,source,16,10,43478)
-CheckMemberSize(struct _GdkDevice,mode,4,10,43482)
-CheckOffset(struct _GdkDevice,mode,20,10,43482)
-CheckMemberSize(struct _GdkDevice,has_cursor,4,10,43483)
-CheckOffset(struct _GdkDevice,has_cursor,24,10,43483)
-CheckMemberSize(struct _GdkDevice,num_axes,4,10,43484)
-CheckOffset(struct _GdkDevice,num_axes,28,10,43484)
-CheckMemberSize(struct _GdkDevice,axes,4,10,43496)
-CheckOffset(struct _GdkDevice,axes,32,10,43496)
-CheckMemberSize(struct _GdkDevice,num_keys,4,10,43497)
-CheckOffset(struct _GdkDevice,num_keys,36,10,43497)
-CheckMemberSize(struct _GdkDevice,keys,4,10,43515)
-CheckOffset(struct _GdkDevice,keys,40,10,43515)
+CheckTypeSize(struct _GdkDevice,44, 12697, 10);
+CheckMemberSize(struct _GdkDevice,name,4,10,43473);
+CheckOffset(struct _GdkDevice,name,12,10,43473);
+CheckMemberSize(struct _GdkDevice,source,4,10,43478);
+CheckOffset(struct _GdkDevice,source,16,10,43478);
+CheckMemberSize(struct _GdkDevice,mode,4,10,43482);
+CheckOffset(struct _GdkDevice,mode,20,10,43482);
+CheckMemberSize(struct _GdkDevice,has_cursor,4,10,43483);
+CheckOffset(struct _GdkDevice,has_cursor,24,10,43483);
+CheckMemberSize(struct _GdkDevice,num_axes,4,10,43484);
+CheckOffset(struct _GdkDevice,num_axes,28,10,43484);
+CheckMemberSize(struct _GdkDevice,axes,4,10,43496);
+CheckOffset(struct _GdkDevice,axes,32,10,43496);
+CheckMemberSize(struct _GdkDevice,num_keys,4,10,43497);
+CheckOffset(struct _GdkDevice,num_keys,36,10,43497);
+CheckMemberSize(struct _GdkDevice,keys,4,10,43515);
+CheckOffset(struct _GdkDevice,keys,40,10,43515);
 #elif __s390x__
-CheckTypeSize(struct _GdkDevice,72, 12697, 12)
-CheckMemberSize(struct _GdkDevice,name,8,12,43473)
-CheckOffset(struct _GdkDevice,name,24,12,43473)
-CheckMemberSize(struct _GdkDevice,source,4,12,43478)
-CheckOffset(struct _GdkDevice,source,32,12,43478)
-CheckMemberSize(struct _GdkDevice,mode,4,12,43482)
-CheckOffset(struct _GdkDevice,mode,36,12,43482)
-CheckMemberSize(struct _GdkDevice,has_cursor,4,12,43483)
-CheckOffset(struct _GdkDevice,has_cursor,40,12,43483)
-CheckMemberSize(struct _GdkDevice,num_axes,4,12,43484)
-CheckOffset(struct _GdkDevice,num_axes,44,12,43484)
-CheckMemberSize(struct _GdkDevice,axes,8,12,43496)
-CheckOffset(struct _GdkDevice,axes,48,12,43496)
-CheckMemberSize(struct _GdkDevice,num_keys,4,12,43497)
-CheckOffset(struct _GdkDevice,num_keys,56,12,43497)
-CheckMemberSize(struct _GdkDevice,keys,8,12,43515)
-CheckOffset(struct _GdkDevice,keys,64,12,43515)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12697,0);
-Msg("Find size of _GdkDevice (12697)\n");
+CheckTypeSize(struct _GdkDevice,72, 12697, 12);
+CheckMemberSize(struct _GdkDevice,name,8,12,43473);
+CheckOffset(struct _GdkDevice,name,24,12,43473);
+CheckMemberSize(struct _GdkDevice,source,4,12,43478);
+CheckOffset(struct _GdkDevice,source,32,12,43478);
+CheckMemberSize(struct _GdkDevice,mode,4,12,43482);
+CheckOffset(struct _GdkDevice,mode,36,12,43482);
+CheckMemberSize(struct _GdkDevice,has_cursor,4,12,43483);
+CheckOffset(struct _GdkDevice,has_cursor,40,12,43483);
+CheckMemberSize(struct _GdkDevice,num_axes,4,12,43484);
+CheckOffset(struct _GdkDevice,num_axes,44,12,43484);
+CheckMemberSize(struct _GdkDevice,axes,8,12,43496);
+CheckOffset(struct _GdkDevice,axes,48,12,43496);
+CheckMemberSize(struct _GdkDevice,num_keys,4,12,43497);
+CheckOffset(struct _GdkDevice,num_keys,56,12,43497);
+CheckMemberSize(struct _GdkDevice,keys,8,12,43515);
+CheckOffset(struct _GdkDevice,keys,64,12,43515);
+#elif 1
+CheckTypeSize(struct _GdkDevice,0, 12697, 1);
+Msg("Missing member data for _GdkDevice on All\n");
+CheckOffset(struct _GdkDevice,parent_instance,0,1,43472);
+CheckOffset(struct _GdkDevice,name,0,1,43473);
+CheckOffset(struct _GdkDevice,source,0,1,43478);
+CheckOffset(struct _GdkDevice,mode,0,1,43482);
+CheckOffset(struct _GdkDevice,has_cursor,0,1,43483);
+CheckOffset(struct _GdkDevice,num_axes,0,1,43484);
+CheckOffset(struct _GdkDevice,axes,0,1,43496);
+CheckOffset(struct _GdkDevice,num_keys,0,1,43497);
+CheckOffset(struct _GdkDevice,keys,0,1,43515);
 #endif
 
 #if __i386__
@@ -1905,28 +1935,29 @@ CheckEnum("GDK_SOURCE_MOUSE",GDK_SOURCE_MOUSE,0,43474);
 CheckEnum("GDK_SOURCE_PEN",GDK_SOURCE_PEN,1,43475);
 CheckEnum("GDK_SOURCE_ERASER",GDK_SOURCE_ERASER,2,43476);
 CheckEnum("GDK_SOURCE_CURSOR",GDK_SOURCE_CURSOR,3,43477);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12698,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-17 (12698)\n");
+#elif 1
+CheckEnum("GDK_SOURCE_MOUSE",GDK_SOURCE_MOUSE,0,43474);
+CheckEnum("GDK_SOURCE_PEN",GDK_SOURCE_PEN,1,43475);
+CheckEnum("GDK_SOURCE_ERASER",GDK_SOURCE_ERASER,2,43476);
+CheckEnum("GDK_SOURCE_CURSOR",GDK_SOURCE_CURSOR,3,43477);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkInputSource,4, 12699, 2)
+CheckTypeSize(GdkInputSource,4, 12699, 2);
 #elif __x86_64__
-CheckTypeSize(GdkInputSource,4, 12699, 11)
+CheckTypeSize(GdkInputSource,4, 12699, 11);
 #elif __ia64__
-CheckTypeSize(GdkInputSource,4, 12699, 3)
+CheckTypeSize(GdkInputSource,4, 12699, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkInputSource,4, 12699, 6)
+CheckTypeSize(GdkInputSource,4, 12699, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkInputSource,4, 12699, 9)
+CheckTypeSize(GdkInputSource,4, 12699, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkInputSource,4, 12699, 10)
+CheckTypeSize(GdkInputSource,4, 12699, 10);
 #elif __s390x__
-CheckTypeSize(GdkInputSource,4, 12699, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12699,0);
-Msg("Find size of GdkInputSource (12699)\n");
+CheckTypeSize(GdkInputSource,4, 12699, 12);
+#elif 1
+CheckTypeSize(GdkInputSource,0, 12699, 1);
 #endif
 
 #if __i386__
@@ -1957,75 +1988,78 @@ CheckEnum("GDK_MODE_WINDOW",GDK_MODE_WINDOW,2,43481);
 CheckEnum("GDK_MODE_DISABLED",GDK_MODE_DISABLED,0,43479);
 CheckEnum("GDK_MODE_SCREEN",GDK_MODE_SCREEN,1,43480);
 CheckEnum("GDK_MODE_WINDOW",GDK_MODE_WINDOW,2,43481);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12700,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-18 (12700)\n");
+#elif 1
+CheckEnum("GDK_MODE_DISABLED",GDK_MODE_DISABLED,0,43479);
+CheckEnum("GDK_MODE_SCREEN",GDK_MODE_SCREEN,1,43480);
+CheckEnum("GDK_MODE_WINDOW",GDK_MODE_WINDOW,2,43481);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkInputMode,4, 12701, 2)
+CheckTypeSize(GdkInputMode,4, 12701, 2);
 #elif __x86_64__
-CheckTypeSize(GdkInputMode,4, 12701, 11)
+CheckTypeSize(GdkInputMode,4, 12701, 11);
 #elif __ia64__
-CheckTypeSize(GdkInputMode,4, 12701, 3)
+CheckTypeSize(GdkInputMode,4, 12701, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkInputMode,4, 12701, 6)
+CheckTypeSize(GdkInputMode,4, 12701, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkInputMode,4, 12701, 9)
+CheckTypeSize(GdkInputMode,4, 12701, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkInputMode,4, 12701, 10)
+CheckTypeSize(GdkInputMode,4, 12701, 10);
 #elif __s390x__
-CheckTypeSize(GdkInputMode,4, 12701, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12701,0);
-Msg("Find size of GdkInputMode (12701)\n");
+CheckTypeSize(GdkInputMode,4, 12701, 12);
+#elif 1
+CheckTypeSize(GdkInputMode,0, 12701, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkDeviceAxis,20, 12702, 2)
-CheckMemberSize(struct _GdkDeviceAxis,min,8,2,43494)
-CheckOffset(struct _GdkDeviceAxis,min,4,2,43494)
-CheckMemberSize(struct _GdkDeviceAxis,max,8,2,43495)
-CheckOffset(struct _GdkDeviceAxis,max,12,2,43495)
+CheckTypeSize(struct _GdkDeviceAxis,20, 12702, 2);
+CheckMemberSize(struct _GdkDeviceAxis,min,8,2,43494);
+CheckOffset(struct _GdkDeviceAxis,min,4,2,43494);
+CheckMemberSize(struct _GdkDeviceAxis,max,8,2,43495);
+CheckOffset(struct _GdkDeviceAxis,max,12,2,43495);
 #elif __x86_64__
-CheckTypeSize(struct _GdkDeviceAxis,24, 12702, 11)
-CheckMemberSize(struct _GdkDeviceAxis,min,8,11,43494)
-CheckOffset(struct _GdkDeviceAxis,min,8,11,43494)
-CheckMemberSize(struct _GdkDeviceAxis,max,8,11,43495)
-CheckOffset(struct _GdkDeviceAxis,max,16,11,43495)
+CheckTypeSize(struct _GdkDeviceAxis,24, 12702, 11);
+CheckMemberSize(struct _GdkDeviceAxis,min,8,11,43494);
+CheckOffset(struct _GdkDeviceAxis,min,8,11,43494);
+CheckMemberSize(struct _GdkDeviceAxis,max,8,11,43495);
+CheckOffset(struct _GdkDeviceAxis,max,16,11,43495);
 #elif __ia64__
-CheckTypeSize(struct _GdkDeviceAxis,24, 12702, 3)
-CheckMemberSize(struct _GdkDeviceAxis,min,8,3,43494)
-CheckOffset(struct _GdkDeviceAxis,min,8,3,43494)
-CheckMemberSize(struct _GdkDeviceAxis,max,8,3,43495)
-CheckOffset(struct _GdkDeviceAxis,max,16,3,43495)
+CheckTypeSize(struct _GdkDeviceAxis,24, 12702, 3);
+CheckMemberSize(struct _GdkDeviceAxis,min,8,3,43494);
+CheckOffset(struct _GdkDeviceAxis,min,8,3,43494);
+CheckMemberSize(struct _GdkDeviceAxis,max,8,3,43495);
+CheckOffset(struct _GdkDeviceAxis,max,16,3,43495);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkDeviceAxis,24, 12702, 6)
-CheckMemberSize(struct _GdkDeviceAxis,min,8,6,43494)
-CheckOffset(struct _GdkDeviceAxis,min,8,6,43494)
-CheckMemberSize(struct _GdkDeviceAxis,max,8,6,43495)
-CheckOffset(struct _GdkDeviceAxis,max,16,6,43495)
+CheckTypeSize(struct _GdkDeviceAxis,24, 12702, 6);
+CheckMemberSize(struct _GdkDeviceAxis,min,8,6,43494);
+CheckOffset(struct _GdkDeviceAxis,min,8,6,43494);
+CheckMemberSize(struct _GdkDeviceAxis,max,8,6,43495);
+CheckOffset(struct _GdkDeviceAxis,max,16,6,43495);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkDeviceAxis,24, 12702, 9)
-CheckMemberSize(struct _GdkDeviceAxis,min,8,9,43494)
-CheckOffset(struct _GdkDeviceAxis,min,8,9,43494)
-CheckMemberSize(struct _GdkDeviceAxis,max,8,9,43495)
-CheckOffset(struct _GdkDeviceAxis,max,16,9,43495)
+CheckTypeSize(struct _GdkDeviceAxis,24, 12702, 9);
+CheckMemberSize(struct _GdkDeviceAxis,min,8,9,43494);
+CheckOffset(struct _GdkDeviceAxis,min,8,9,43494);
+CheckMemberSize(struct _GdkDeviceAxis,max,8,9,43495);
+CheckOffset(struct _GdkDeviceAxis,max,16,9,43495);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkDeviceAxis,24, 12702, 10)
-CheckMemberSize(struct _GdkDeviceAxis,min,8,10,43494)
-CheckOffset(struct _GdkDeviceAxis,min,8,10,43494)
-CheckMemberSize(struct _GdkDeviceAxis,max,8,10,43495)
-CheckOffset(struct _GdkDeviceAxis,max,16,10,43495)
+CheckTypeSize(struct _GdkDeviceAxis,24, 12702, 10);
+CheckMemberSize(struct _GdkDeviceAxis,min,8,10,43494);
+CheckOffset(struct _GdkDeviceAxis,min,8,10,43494);
+CheckMemberSize(struct _GdkDeviceAxis,max,8,10,43495);
+CheckOffset(struct _GdkDeviceAxis,max,16,10,43495);
 #elif __s390x__
-CheckTypeSize(struct _GdkDeviceAxis,24, 12702, 12)
-CheckMemberSize(struct _GdkDeviceAxis,min,8,12,43494)
-CheckOffset(struct _GdkDeviceAxis,min,8,12,43494)
-CheckMemberSize(struct _GdkDeviceAxis,max,8,12,43495)
-CheckOffset(struct _GdkDeviceAxis,max,16,12,43495)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12702,0);
-Msg("Find size of _GdkDeviceAxis (12702)\n");
+CheckTypeSize(struct _GdkDeviceAxis,24, 12702, 12);
+CheckMemberSize(struct _GdkDeviceAxis,min,8,12,43494);
+CheckOffset(struct _GdkDeviceAxis,min,8,12,43494);
+CheckMemberSize(struct _GdkDeviceAxis,max,8,12,43495);
+CheckOffset(struct _GdkDeviceAxis,max,16,12,43495);
+#elif 1
+CheckTypeSize(struct _GdkDeviceAxis,0, 12702, 1);
+Msg("Missing member data for _GdkDeviceAxis on All\n");
+CheckOffset(struct _GdkDeviceAxis,use,0,1,43493);
+CheckOffset(struct _GdkDeviceAxis,min,0,1,43494);
+CheckOffset(struct _GdkDeviceAxis,max,0,1,43495);
 #endif
 
 #if __i386__
@@ -2091,99 +2125,104 @@ CheckEnum("GDK_AXIS_XTILT",GDK_AXIS_XTILT,4,43489);
 CheckEnum("GDK_AXIS_YTILT",GDK_AXIS_YTILT,5,43490);
 CheckEnum("GDK_AXIS_WHEEL",GDK_AXIS_WHEEL,6,43491);
 CheckEnum("GDK_AXIS_LAST",GDK_AXIS_LAST,7,43492);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12703,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-19 (12703)\n");
+#elif 1
+CheckEnum("GDK_AXIS_IGNORE",GDK_AXIS_IGNORE,0,43485);
+CheckEnum("GDK_AXIS_X",GDK_AXIS_X,1,43486);
+CheckEnum("GDK_AXIS_Y",GDK_AXIS_Y,2,43487);
+CheckEnum("GDK_AXIS_PRESSURE",GDK_AXIS_PRESSURE,3,43488);
+CheckEnum("GDK_AXIS_XTILT",GDK_AXIS_XTILT,4,43489);
+CheckEnum("GDK_AXIS_YTILT",GDK_AXIS_YTILT,5,43490);
+CheckEnum("GDK_AXIS_WHEEL",GDK_AXIS_WHEEL,6,43491);
+CheckEnum("GDK_AXIS_LAST",GDK_AXIS_LAST,7,43492);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkAxisUse,4, 12704, 2)
+CheckTypeSize(GdkAxisUse,4, 12704, 2);
 #elif __x86_64__
-CheckTypeSize(GdkAxisUse,4, 12704, 11)
+CheckTypeSize(GdkAxisUse,4, 12704, 11);
 #elif __ia64__
-CheckTypeSize(GdkAxisUse,4, 12704, 3)
+CheckTypeSize(GdkAxisUse,4, 12704, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkAxisUse,4, 12704, 6)
+CheckTypeSize(GdkAxisUse,4, 12704, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkAxisUse,4, 12704, 9)
+CheckTypeSize(GdkAxisUse,4, 12704, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkAxisUse,4, 12704, 10)
+CheckTypeSize(GdkAxisUse,4, 12704, 10);
 #elif __s390x__
-CheckTypeSize(GdkAxisUse,4, 12704, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12704,0);
-Msg("Find size of GdkAxisUse (12704)\n");
+CheckTypeSize(GdkAxisUse,4, 12704, 12);
+#elif 1
+CheckTypeSize(GdkAxisUse,0, 12704, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkDeviceAxis,20, 12705, 2)
+CheckTypeSize(GdkDeviceAxis,20, 12705, 2);
 #elif __x86_64__
-CheckTypeSize(GdkDeviceAxis,24, 12705, 11)
+CheckTypeSize(GdkDeviceAxis,24, 12705, 11);
 #elif __ia64__
-CheckTypeSize(GdkDeviceAxis,24, 12705, 3)
+CheckTypeSize(GdkDeviceAxis,24, 12705, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkDeviceAxis,24, 12705, 6)
+CheckTypeSize(GdkDeviceAxis,24, 12705, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkDeviceAxis,24, 12705, 9)
+CheckTypeSize(GdkDeviceAxis,24, 12705, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkDeviceAxis,24, 12705, 10)
+CheckTypeSize(GdkDeviceAxis,24, 12705, 10);
 #elif __s390x__
-CheckTypeSize(GdkDeviceAxis,24, 12705, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12705,0);
-Msg("Find size of GdkDeviceAxis (12705)\n");
+CheckTypeSize(GdkDeviceAxis,24, 12705, 12);
+#elif 1
+CheckTypeSize(GdkDeviceAxis,0, 12705, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkDeviceAxis *,4, 12706, 2)
+CheckTypeSize(GdkDeviceAxis *,4, 12706, 2);
 #elif __x86_64__
-CheckTypeSize(GdkDeviceAxis *,8, 12706, 11)
+CheckTypeSize(GdkDeviceAxis *,8, 12706, 11);
 #elif __ia64__
-CheckTypeSize(GdkDeviceAxis *,8, 12706, 3)
+CheckTypeSize(GdkDeviceAxis *,8, 12706, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkDeviceAxis *,4, 12706, 6)
+CheckTypeSize(GdkDeviceAxis *,4, 12706, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkDeviceAxis *,8, 12706, 9)
+CheckTypeSize(GdkDeviceAxis *,8, 12706, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkDeviceAxis *,4, 12706, 10)
+CheckTypeSize(GdkDeviceAxis *,4, 12706, 10);
 #elif __s390x__
-CheckTypeSize(GdkDeviceAxis *,8, 12706, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12706,0);
-Msg("Find size of GdkDeviceAxis * (12706)\n");
+CheckTypeSize(GdkDeviceAxis *,8, 12706, 12);
+#elif 1
+CheckTypeSize(GdkDeviceAxis *,0, 12706, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkDeviceKey,8, 12707, 2)
-CheckMemberSize(struct _GdkDeviceKey,modifiers,4,2,43514)
-CheckOffset(struct _GdkDeviceKey,modifiers,4,2,43514)
+CheckTypeSize(struct _GdkDeviceKey,8, 12707, 2);
+CheckMemberSize(struct _GdkDeviceKey,modifiers,4,2,43514);
+CheckOffset(struct _GdkDeviceKey,modifiers,4,2,43514);
 #elif __x86_64__
-CheckTypeSize(struct _GdkDeviceKey,8, 12707, 11)
-CheckMemberSize(struct _GdkDeviceKey,modifiers,4,11,43514)
-CheckOffset(struct _GdkDeviceKey,modifiers,4,11,43514)
+CheckTypeSize(struct _GdkDeviceKey,8, 12707, 11);
+CheckMemberSize(struct _GdkDeviceKey,modifiers,4,11,43514);
+CheckOffset(struct _GdkDeviceKey,modifiers,4,11,43514);
 #elif __ia64__
-CheckTypeSize(struct _GdkDeviceKey,8, 12707, 3)
-CheckMemberSize(struct _GdkDeviceKey,modifiers,4,3,43514)
-CheckOffset(struct _GdkDeviceKey,modifiers,4,3,43514)
+CheckTypeSize(struct _GdkDeviceKey,8, 12707, 3);
+CheckMemberSize(struct _GdkDeviceKey,modifiers,4,3,43514);
+CheckOffset(struct _GdkDeviceKey,modifiers,4,3,43514);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkDeviceKey,8, 12707, 6)
-CheckMemberSize(struct _GdkDeviceKey,modifiers,4,6,43514)
-CheckOffset(struct _GdkDeviceKey,modifiers,4,6,43514)
+CheckTypeSize(struct _GdkDeviceKey,8, 12707, 6);
+CheckMemberSize(struct _GdkDeviceKey,modifiers,4,6,43514);
+CheckOffset(struct _GdkDeviceKey,modifiers,4,6,43514);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkDeviceKey,8, 12707, 9)
-CheckMemberSize(struct _GdkDeviceKey,modifiers,4,9,43514)
-CheckOffset(struct _GdkDeviceKey,modifiers,4,9,43514)
+CheckTypeSize(struct _GdkDeviceKey,8, 12707, 9);
+CheckMemberSize(struct _GdkDeviceKey,modifiers,4,9,43514);
+CheckOffset(struct _GdkDeviceKey,modifiers,4,9,43514);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkDeviceKey,8, 12707, 10)
-CheckMemberSize(struct _GdkDeviceKey,modifiers,4,10,43514)
-CheckOffset(struct _GdkDeviceKey,modifiers,4,10,43514)
+CheckTypeSize(struct _GdkDeviceKey,8, 12707, 10);
+CheckMemberSize(struct _GdkDeviceKey,modifiers,4,10,43514);
+CheckOffset(struct _GdkDeviceKey,modifiers,4,10,43514);
 #elif __s390x__
-CheckTypeSize(struct _GdkDeviceKey,8, 12707, 12)
-CheckMemberSize(struct _GdkDeviceKey,modifiers,4,12,43514)
-CheckOffset(struct _GdkDeviceKey,modifiers,4,12,43514)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12707,0);
-Msg("Find size of _GdkDeviceKey (12707)\n");
+CheckTypeSize(struct _GdkDeviceKey,8, 12707, 12);
+CheckMemberSize(struct _GdkDeviceKey,modifiers,4,12,43514);
+CheckOffset(struct _GdkDeviceKey,modifiers,4,12,43514);
+#elif 1
+CheckTypeSize(struct _GdkDeviceKey,0, 12707, 1);
+Msg("Missing member data for _GdkDeviceKey on All\n");
+CheckOffset(struct _GdkDeviceKey,keyval,0,1,43498);
+CheckOffset(struct _GdkDeviceKey,modifiers,0,1,43514);
 #endif
 
 #if __i386__
@@ -2298,308 +2337,284 @@ CheckEnum("GDK_BUTTON4_MASK",GDK_BUTTON4_MASK,2048,43510);
 CheckEnum("GDK_BUTTON5_MASK",GDK_BUTTON5_MASK,4096,43511);
 CheckEnum("GDK_RELEASE_MASK",GDK_RELEASE_MASK,1073741824,43512);
 CheckEnum("GDK_MODIFIER_MASK",GDK_MODIFIER_MASK,1073750015,43513);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12708,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-14 (12708)\n");
+#elif 1
+CheckEnum("GDK_SHIFT_MASK",GDK_SHIFT_MASK,1,43499);
+CheckEnum("GDK_LOCK_MASK",GDK_LOCK_MASK,2,43500);
+CheckEnum("GDK_CONTROL_MASK",GDK_CONTROL_MASK,4,43501);
+CheckEnum("GDK_MOD1_MASK",GDK_MOD1_MASK,8,43502);
+CheckEnum("GDK_MOD2_MASK",GDK_MOD2_MASK,16,43503);
+CheckEnum("GDK_MOD3_MASK",GDK_MOD3_MASK,32,43504);
+CheckEnum("GDK_MOD4_MASK",GDK_MOD4_MASK,64,43505);
+CheckEnum("GDK_MOD5_MASK",GDK_MOD5_MASK,128,43506);
+CheckEnum("GDK_BUTTON1_MASK",GDK_BUTTON1_MASK,256,43507);
+CheckEnum("GDK_BUTTON2_MASK",GDK_BUTTON2_MASK,512,43508);
+CheckEnum("GDK_BUTTON3_MASK",GDK_BUTTON3_MASK,1024,43509);
+CheckEnum("GDK_BUTTON4_MASK",GDK_BUTTON4_MASK,2048,43510);
+CheckEnum("GDK_BUTTON5_MASK",GDK_BUTTON5_MASK,4096,43511);
+CheckEnum("GDK_RELEASE_MASK",GDK_RELEASE_MASK,1073741824,43512);
+CheckEnum("GDK_MODIFIER_MASK",GDK_MODIFIER_MASK,1073750015,43513);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkModifierType,4, 12709, 2)
+CheckTypeSize(GdkModifierType,4, 12709, 2);
 #elif __x86_64__
-CheckTypeSize(GdkModifierType,4, 12709, 11)
+CheckTypeSize(GdkModifierType,4, 12709, 11);
 #elif __ia64__
-CheckTypeSize(GdkModifierType,4, 12709, 3)
+CheckTypeSize(GdkModifierType,4, 12709, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkModifierType,4, 12709, 6)
+CheckTypeSize(GdkModifierType,4, 12709, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkModifierType,4, 12709, 9)
+CheckTypeSize(GdkModifierType,4, 12709, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkModifierType,4, 12709, 10)
+CheckTypeSize(GdkModifierType,4, 12709, 10);
 #elif __s390x__
-CheckTypeSize(GdkModifierType,4, 12709, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12709,0);
-Msg("Find size of GdkModifierType (12709)\n");
+CheckTypeSize(GdkModifierType,4, 12709, 12);
+#elif 1
+CheckTypeSize(GdkModifierType,0, 12709, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkDeviceKey,8, 12710, 2)
+CheckTypeSize(GdkDeviceKey,8, 12710, 2);
 #elif __x86_64__
-CheckTypeSize(GdkDeviceKey,8, 12710, 11)
+CheckTypeSize(GdkDeviceKey,8, 12710, 11);
 #elif __ia64__
-CheckTypeSize(GdkDeviceKey,8, 12710, 3)
+CheckTypeSize(GdkDeviceKey,8, 12710, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkDeviceKey,8, 12710, 6)
+CheckTypeSize(GdkDeviceKey,8, 12710, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkDeviceKey,8, 12710, 9)
+CheckTypeSize(GdkDeviceKey,8, 12710, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkDeviceKey,8, 12710, 10)
+CheckTypeSize(GdkDeviceKey,8, 12710, 10);
 #elif __s390x__
-CheckTypeSize(GdkDeviceKey,8, 12710, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12710,0);
-Msg("Find size of GdkDeviceKey (12710)\n");
+CheckTypeSize(GdkDeviceKey,8, 12710, 12);
+#elif 1
+CheckTypeSize(GdkDeviceKey,0, 12710, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkDeviceKey *,4, 12711, 2)
+CheckTypeSize(GdkDeviceKey *,4, 12711, 2);
 #elif __x86_64__
-CheckTypeSize(GdkDeviceKey *,8, 12711, 11)
+CheckTypeSize(GdkDeviceKey *,8, 12711, 11);
 #elif __ia64__
-CheckTypeSize(GdkDeviceKey *,8, 12711, 3)
+CheckTypeSize(GdkDeviceKey *,8, 12711, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkDeviceKey *,4, 12711, 6)
+CheckTypeSize(GdkDeviceKey *,4, 12711, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkDeviceKey *,8, 12711, 9)
+CheckTypeSize(GdkDeviceKey *,8, 12711, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkDeviceKey *,4, 12711, 10)
+CheckTypeSize(GdkDeviceKey *,4, 12711, 10);
 #elif __s390x__
-CheckTypeSize(GdkDeviceKey *,8, 12711, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12711,0);
-Msg("Find size of GdkDeviceKey * (12711)\n");
+CheckTypeSize(GdkDeviceKey *,8, 12711, 12);
+#elif 1
+CheckTypeSize(GdkDeviceKey *,0, 12711, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkDevice,44, 12712, 2)
+CheckTypeSize(GdkDevice,44, 12712, 2);
 #elif __x86_64__
-CheckTypeSize(GdkDevice,72, 12712, 11)
+CheckTypeSize(GdkDevice,72, 12712, 11);
 #elif __ia64__
-CheckTypeSize(GdkDevice,72, 12712, 3)
+CheckTypeSize(GdkDevice,72, 12712, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkDevice,44, 12712, 6)
+CheckTypeSize(GdkDevice,44, 12712, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkDevice,72, 12712, 9)
+CheckTypeSize(GdkDevice,72, 12712, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkDevice,44, 12712, 10)
+CheckTypeSize(GdkDevice,44, 12712, 10);
 #elif __s390x__
-CheckTypeSize(GdkDevice,72, 12712, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12712,0);
-Msg("Find size of GdkDevice (12712)\n");
+CheckTypeSize(GdkDevice,72, 12712, 12);
+#elif 1
+CheckTypeSize(GdkDevice,0, 12712, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkDevice *,4, 12713, 2)
+CheckTypeSize(GdkDevice *,4, 12713, 2);
 #elif __x86_64__
-CheckTypeSize(GdkDevice *,8, 12713, 11)
+CheckTypeSize(GdkDevice *,8, 12713, 11);
 #elif __ia64__
-CheckTypeSize(GdkDevice *,8, 12713, 3)
+CheckTypeSize(GdkDevice *,8, 12713, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkDevice *,4, 12713, 6)
+CheckTypeSize(GdkDevice *,4, 12713, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkDevice *,8, 12713, 9)
+CheckTypeSize(GdkDevice *,8, 12713, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkDevice *,4, 12713, 10)
+CheckTypeSize(GdkDevice *,4, 12713, 10);
 #elif __s390x__
-CheckTypeSize(GdkDevice *,8, 12713, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12713,0);
-Msg("Find size of GdkDevice * (12713)\n");
+CheckTypeSize(GdkDevice *,8, 12713, 12);
+#elif 1
+CheckTypeSize(GdkDevice *,0, 12713, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkDisplayPointerHooks,12, 12714, 2)
-CheckMemberSize(struct _GdkDisplayPointerHooks,window_get_pointer,4,2,43532)
-CheckOffset(struct _GdkDisplayPointerHooks,window_get_pointer,4,2,43532)
-CheckMemberSize(struct _GdkDisplayPointerHooks,window_at_pointer,4,2,43536)
-CheckOffset(struct _GdkDisplayPointerHooks,window_at_pointer,8,2,43536)
+CheckTypeSize(struct _GdkDisplayPointerHooks,12, 12714, 2);
+CheckMemberSize(struct _GdkDisplayPointerHooks,window_get_pointer,4,2,43532);
+CheckOffset(struct _GdkDisplayPointerHooks,window_get_pointer,4,2,43532);
+CheckMemberSize(struct _GdkDisplayPointerHooks,window_at_pointer,4,2,43536);
+CheckOffset(struct _GdkDisplayPointerHooks,window_at_pointer,8,2,43536);
 #elif __x86_64__
-CheckTypeSize(struct _GdkDisplayPointerHooks,24, 12714, 11)
-CheckMemberSize(struct _GdkDisplayPointerHooks,window_get_pointer,8,11,43532)
-CheckOffset(struct _GdkDisplayPointerHooks,window_get_pointer,8,11,43532)
-CheckMemberSize(struct _GdkDisplayPointerHooks,window_at_pointer,8,11,43536)
-CheckOffset(struct _GdkDisplayPointerHooks,window_at_pointer,16,11,43536)
+CheckTypeSize(struct _GdkDisplayPointerHooks,24, 12714, 11);
+CheckMemberSize(struct _GdkDisplayPointerHooks,window_get_pointer,8,11,43532);
+CheckOffset(struct _GdkDisplayPointerHooks,window_get_pointer,8,11,43532);
+CheckMemberSize(struct _GdkDisplayPointerHooks,window_at_pointer,8,11,43536);
+CheckOffset(struct _GdkDisplayPointerHooks,window_at_pointer,16,11,43536);
 #elif __ia64__
-CheckTypeSize(struct _GdkDisplayPointerHooks,24, 12714, 3)
-CheckMemberSize(struct _GdkDisplayPointerHooks,window_get_pointer,8,3,43532)
-CheckOffset(struct _GdkDisplayPointerHooks,window_get_pointer,8,3,43532)
-CheckMemberSize(struct _GdkDisplayPointerHooks,window_at_pointer,8,3,43536)
-CheckOffset(struct _GdkDisplayPointerHooks,window_at_pointer,16,3,43536)
+CheckTypeSize(struct _GdkDisplayPointerHooks,24, 12714, 3);
+CheckMemberSize(struct _GdkDisplayPointerHooks,window_get_pointer,8,3,43532);
+CheckOffset(struct _GdkDisplayPointerHooks,window_get_pointer,8,3,43532);
+CheckMemberSize(struct _GdkDisplayPointerHooks,window_at_pointer,8,3,43536);
+CheckOffset(struct _GdkDisplayPointerHooks,window_at_pointer,16,3,43536);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkDisplayPointerHooks,12, 12714, 6)
-CheckMemberSize(struct _GdkDisplayPointerHooks,window_get_pointer,4,6,43532)
-CheckOffset(struct _GdkDisplayPointerHooks,window_get_pointer,4,6,43532)
-CheckMemberSize(struct _GdkDisplayPointerHooks,window_at_pointer,4,6,43536)
-CheckOffset(struct _GdkDisplayPointerHooks,window_at_pointer,8,6,43536)
+CheckTypeSize(struct _GdkDisplayPointerHooks,12, 12714, 6);
+CheckMemberSize(struct _GdkDisplayPointerHooks,window_get_pointer,4,6,43532);
+CheckOffset(struct _GdkDisplayPointerHooks,window_get_pointer,4,6,43532);
+CheckMemberSize(struct _GdkDisplayPointerHooks,window_at_pointer,4,6,43536);
+CheckOffset(struct _GdkDisplayPointerHooks,window_at_pointer,8,6,43536);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkDisplayPointerHooks,24, 12714, 9)
-CheckMemberSize(struct _GdkDisplayPointerHooks,window_get_pointer,8,9,43532)
-CheckOffset(struct _GdkDisplayPointerHooks,window_get_pointer,8,9,43532)
-CheckMemberSize(struct _GdkDisplayPointerHooks,window_at_pointer,8,9,43536)
-CheckOffset(struct _GdkDisplayPointerHooks,window_at_pointer,16,9,43536)
+CheckTypeSize(struct _GdkDisplayPointerHooks,24, 12714, 9);
+CheckMemberSize(struct _GdkDisplayPointerHooks,window_get_pointer,8,9,43532);
+CheckOffset(struct _GdkDisplayPointerHooks,window_get_pointer,8,9,43532);
+CheckMemberSize(struct _GdkDisplayPointerHooks,window_at_pointer,8,9,43536);
+CheckOffset(struct _GdkDisplayPointerHooks,window_at_pointer,16,9,43536);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkDisplayPointerHooks,12, 12714, 10)
-CheckMemberSize(struct _GdkDisplayPointerHooks,window_get_pointer,4,10,43532)
-CheckOffset(struct _GdkDisplayPointerHooks,window_get_pointer,4,10,43532)
-CheckMemberSize(struct _GdkDisplayPointerHooks,window_at_pointer,4,10,43536)
-CheckOffset(struct _GdkDisplayPointerHooks,window_at_pointer,8,10,43536)
+CheckTypeSize(struct _GdkDisplayPointerHooks,12, 12714, 10);
+CheckMemberSize(struct _GdkDisplayPointerHooks,window_get_pointer,4,10,43532);
+CheckOffset(struct _GdkDisplayPointerHooks,window_get_pointer,4,10,43532);
+CheckMemberSize(struct _GdkDisplayPointerHooks,window_at_pointer,4,10,43536);
+CheckOffset(struct _GdkDisplayPointerHooks,window_at_pointer,8,10,43536);
 #elif __s390x__
-CheckTypeSize(struct _GdkDisplayPointerHooks,24, 12714, 12)
-CheckMemberSize(struct _GdkDisplayPointerHooks,window_get_pointer,8,12,43532)
-CheckOffset(struct _GdkDisplayPointerHooks,window_get_pointer,8,12,43532)
-CheckMemberSize(struct _GdkDisplayPointerHooks,window_at_pointer,8,12,43536)
-CheckOffset(struct _GdkDisplayPointerHooks,window_at_pointer,16,12,43536)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12714,0);
-Msg("Find size of _GdkDisplayPointerHooks (12714)\n");
+CheckTypeSize(struct _GdkDisplayPointerHooks,24, 12714, 12);
+CheckMemberSize(struct _GdkDisplayPointerHooks,window_get_pointer,8,12,43532);
+CheckOffset(struct _GdkDisplayPointerHooks,window_get_pointer,8,12,43532);
+CheckMemberSize(struct _GdkDisplayPointerHooks,window_at_pointer,8,12,43536);
+CheckOffset(struct _GdkDisplayPointerHooks,window_at_pointer,16,12,43536);
+#elif 1
+CheckTypeSize(struct _GdkDisplayPointerHooks,0, 12714, 1);
+Msg("Missing member data for _GdkDisplayPointerHooks on All\n");
+CheckOffset(struct _GdkDisplayPointerHooks,get_pointer,0,1,43526);
+CheckOffset(struct _GdkDisplayPointerHooks,window_get_pointer,0,1,43532);
+CheckOffset(struct _GdkDisplayPointerHooks,window_at_pointer,0,1,43536);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkDisplay,80, 12715, 2)
+CheckTypeSize(GdkDisplay,80, 12715, 2);
 #elif __x86_64__
-CheckTypeSize(GdkDisplay,120, 12715, 11)
+CheckTypeSize(GdkDisplay,120, 12715, 11);
 #elif __ia64__
-CheckTypeSize(GdkDisplay,120, 12715, 3)
+CheckTypeSize(GdkDisplay,120, 12715, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkDisplay,80, 12715, 6)
+CheckTypeSize(GdkDisplay,80, 12715, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkDisplay,120, 12715, 9)
+CheckTypeSize(GdkDisplay,120, 12715, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkDisplay,80, 12715, 10)
+CheckTypeSize(GdkDisplay,80, 12715, 10);
 #elif __s390x__
-CheckTypeSize(GdkDisplay,120, 12715, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12715,0);
-Msg("Find size of GdkDisplay (12715)\n");
+CheckTypeSize(GdkDisplay,120, 12715, 12);
+#elif 1
+CheckTypeSize(GdkDisplay,0, 12715, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkDisplay *,4, 12716, 2)
+CheckTypeSize(GdkDisplay *,4, 12716, 2);
 #elif __x86_64__
-CheckTypeSize(GdkDisplay *,8, 12716, 11)
+CheckTypeSize(GdkDisplay *,8, 12716, 11);
 #elif __ia64__
-CheckTypeSize(GdkDisplay *,8, 12716, 3)
+CheckTypeSize(GdkDisplay *,8, 12716, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkDisplay *,4, 12716, 6)
+CheckTypeSize(GdkDisplay *,4, 12716, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkDisplay *,8, 12716, 9)
+CheckTypeSize(GdkDisplay *,8, 12716, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkDisplay *,4, 12716, 10)
+CheckTypeSize(GdkDisplay *,4, 12716, 10);
 #elif __s390x__
-CheckTypeSize(GdkDisplay *,8, 12716, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12716,0);
-Msg("Find size of GdkDisplay * (12716)\n");
+CheckTypeSize(GdkDisplay *,8, 12716, 12);
+#elif 1
+CheckTypeSize(GdkDisplay *,0, 12716, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkScreen,272, 12717, 2)
-CheckMemberSize(struct _GdkScreen,normal_gcs,128,2,43519)
-CheckOffset(struct _GdkScreen,normal_gcs,16,2,43519)
-CheckMemberSize(struct _GdkScreen,exposure_gcs,128,2,43520)
-CheckOffset(struct _GdkScreen,exposure_gcs,144,2,43520)
+CheckTypeSize(struct _GdkScreen,272, 12717, 2);
+CheckMemberSize(struct _GdkScreen,normal_gcs,128,2,43519);
+CheckOffset(struct _GdkScreen,normal_gcs,16,2,43519);
+CheckMemberSize(struct _GdkScreen,exposure_gcs,128,2,43520);
+CheckOffset(struct _GdkScreen,exposure_gcs,144,2,43520);
 #elif __x86_64__
-CheckTypeSize(struct _GdkScreen,544, 12717, 11)
-CheckMemberSize(struct _GdkScreen,normal_gcs,256,11,43519)
-CheckOffset(struct _GdkScreen,normal_gcs,32,11,43519)
-CheckMemberSize(struct _GdkScreen,exposure_gcs,256,11,43520)
-CheckOffset(struct _GdkScreen,exposure_gcs,288,11,43520)
+CheckTypeSize(struct _GdkScreen,544, 12717, 11);
+CheckMemberSize(struct _GdkScreen,normal_gcs,256,11,43519);
+CheckOffset(struct _GdkScreen,normal_gcs,32,11,43519);
+CheckMemberSize(struct _GdkScreen,exposure_gcs,256,11,43520);
+CheckOffset(struct _GdkScreen,exposure_gcs,288,11,43520);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkScreen,272, 12717, 6)
-CheckMemberSize(struct _GdkScreen,normal_gcs,128,6,43519)
-CheckOffset(struct _GdkScreen,normal_gcs,16,6,43519)
-CheckMemberSize(struct _GdkScreen,exposure_gcs,128,6,43520)
-CheckOffset(struct _GdkScreen,exposure_gcs,144,6,43520)
+CheckTypeSize(struct _GdkScreen,272, 12717, 6);
+CheckMemberSize(struct _GdkScreen,normal_gcs,128,6,43519);
+CheckOffset(struct _GdkScreen,normal_gcs,16,6,43519);
+CheckMemberSize(struct _GdkScreen,exposure_gcs,128,6,43520);
+CheckOffset(struct _GdkScreen,exposure_gcs,144,6,43520);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkScreen,544, 12717, 9)
-CheckMemberSize(struct _GdkScreen,normal_gcs,256,9,43519)
-CheckOffset(struct _GdkScreen,normal_gcs,32,9,43519)
-CheckMemberSize(struct _GdkScreen,exposure_gcs,256,9,43520)
-CheckOffset(struct _GdkScreen,exposure_gcs,288,9,43520)
+CheckTypeSize(struct _GdkScreen,544, 12717, 9);
+CheckMemberSize(struct _GdkScreen,normal_gcs,256,9,43519);
+CheckOffset(struct _GdkScreen,normal_gcs,32,9,43519);
+CheckMemberSize(struct _GdkScreen,exposure_gcs,256,9,43520);
+CheckOffset(struct _GdkScreen,exposure_gcs,288,9,43520);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkScreen,272, 12717, 10)
-CheckMemberSize(struct _GdkScreen,normal_gcs,128,10,43519)
-CheckOffset(struct _GdkScreen,normal_gcs,16,10,43519)
-CheckMemberSize(struct _GdkScreen,exposure_gcs,128,10,43520)
-CheckOffset(struct _GdkScreen,exposure_gcs,144,10,43520)
+CheckTypeSize(struct _GdkScreen,272, 12717, 10);
+CheckMemberSize(struct _GdkScreen,normal_gcs,128,10,43519);
+CheckOffset(struct _GdkScreen,normal_gcs,16,10,43519);
+CheckMemberSize(struct _GdkScreen,exposure_gcs,128,10,43520);
+CheckOffset(struct _GdkScreen,exposure_gcs,144,10,43520);
 #elif __s390x__
-CheckTypeSize(struct _GdkScreen,544, 12717, 12)
-CheckMemberSize(struct _GdkScreen,normal_gcs,256,12,43519)
-CheckOffset(struct _GdkScreen,normal_gcs,32,12,43519)
-CheckMemberSize(struct _GdkScreen,exposure_gcs,256,12,43520)
-CheckOffset(struct _GdkScreen,exposure_gcs,288,12,43520)
+CheckTypeSize(struct _GdkScreen,544, 12717, 12);
+CheckMemberSize(struct _GdkScreen,normal_gcs,256,12,43519);
+CheckOffset(struct _GdkScreen,normal_gcs,32,12,43519);
+CheckMemberSize(struct _GdkScreen,exposure_gcs,256,12,43520);
+CheckOffset(struct _GdkScreen,exposure_gcs,288,12,43520);
 #elif __ia64__
-CheckTypeSize(struct _GdkScreen,544, 12717, 3)
-CheckMemberSize(struct _GdkScreen,normal_gcs,256,3,43519)
-CheckOffset(struct _GdkScreen,normal_gcs,32,3,43519)
-CheckMemberSize(struct _GdkScreen,exposure_gcs,256,3,43520)
-CheckOffset(struct _GdkScreen,exposure_gcs,288,3,43520)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12717,0);
-Msg("Find size of _GdkScreen (12717)\n");
+CheckTypeSize(struct _GdkScreen,544, 12717, 3);
+CheckMemberSize(struct _GdkScreen,normal_gcs,256,3,43519);
+CheckOffset(struct _GdkScreen,normal_gcs,32,3,43519);
+CheckMemberSize(struct _GdkScreen,exposure_gcs,256,3,43520);
+CheckOffset(struct _GdkScreen,exposure_gcs,288,3,43520);
+#elif 1
+CheckTypeSize(struct _GdkScreen,0, 12717, 1);
+CheckBitField(struct _GdkScreen,closed,1,1,43518)
 #endif
 
 #if 1
 #endif
 
 #if __i386__
-CheckTypeSize(GdkScreen,272, 12719, 2)
+CheckTypeSize(GdkScreen,272, 12719, 2);
 #elif __x86_64__
-CheckTypeSize(GdkScreen,544, 12719, 11)
+CheckTypeSize(GdkScreen,544, 12719, 11);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkScreen,272, 12719, 6)
+CheckTypeSize(GdkScreen,272, 12719, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkScreen,544, 12719, 9)
+CheckTypeSize(GdkScreen,544, 12719, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkScreen,272, 12719, 10)
+CheckTypeSize(GdkScreen,272, 12719, 10);
 #elif __s390x__
-CheckTypeSize(GdkScreen,544, 12719, 12)
+CheckTypeSize(GdkScreen,544, 12719, 12);
 #elif __ia64__
-CheckTypeSize(GdkScreen,544, 12719, 3)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12719,0);
-Msg("Find size of GdkScreen (12719)\n");
+CheckTypeSize(GdkScreen,544, 12719, 3);
+#elif 1
+CheckTypeSize(GdkScreen,0, 12719, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkScreen *,4, 12720, 2)
+CheckTypeSize(GdkScreen *,4, 12720, 2);
 #elif __x86_64__
-CheckTypeSize(GdkScreen *,8, 12720, 11)
+CheckTypeSize(GdkScreen *,8, 12720, 11);
 #elif __ia64__
-CheckTypeSize(GdkScreen *,8, 12720, 3)
+CheckTypeSize(GdkScreen *,8, 12720, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkScreen *,4, 12720, 6)
+CheckTypeSize(GdkScreen *,4, 12720, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkScreen *,8, 12720, 9)
+CheckTypeSize(GdkScreen *,8, 12720, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkScreen *,4, 12720, 10)
+CheckTypeSize(GdkScreen *,4, 12720, 10);
 #elif __s390x__
-CheckTypeSize(GdkScreen *,8, 12720, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12720,0);
-Msg("Find size of GdkScreen * (12720)\n");
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12721,0);
-Msg("Find size of GdkScreen * * (12721)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GdkModifierType *,4, 12722, 2)
-#elif __x86_64__
-CheckTypeSize(GdkModifierType *,8, 12722, 11)
-#elif __ia64__
-CheckTypeSize(GdkModifierType *,8, 12722, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkModifierType *,4, 12722, 6)
-#elif __powerpc64__
-CheckTypeSize(GdkModifierType *,8, 12722, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkModifierType *,4, 12722, 10)
-#elif __s390x__
-CheckTypeSize(GdkModifierType *,8, 12722, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12722,0);
-Msg("Find size of GdkModifierType * (12722)\n");
+CheckTypeSize(GdkScreen *,8, 12720, 12);
+#elif 1
+CheckTypeSize(GdkScreen *,0, 12720, 1);
 #endif
 
 #if __i386__
@@ -2609,9 +2624,25 @@ Msg("Find size of GdkModifierType * (12722)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12723,0);
-Msg("Find size of fptr_gdk_738 (12723)\n");
+#elif 1
+#endif
+
+#if __i386__
+CheckTypeSize(GdkModifierType *,4, 12722, 2);
+#elif __x86_64__
+CheckTypeSize(GdkModifierType *,8, 12722, 11);
+#elif __ia64__
+CheckTypeSize(GdkModifierType *,8, 12722, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkModifierType *,4, 12722, 6);
+#elif __powerpc64__
+CheckTypeSize(GdkModifierType *,8, 12722, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GdkModifierType *,4, 12722, 10);
+#elif __s390x__
+CheckTypeSize(GdkModifierType *,8, 12722, 12);
+#elif 1
+CheckTypeSize(GdkModifierType *,0, 12722, 1);
 #endif
 
 #if __i386__
@@ -2621,9 +2652,7 @@ Msg("Find size of fptr_gdk_738 (12723)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12724,0);
-Msg("Find size of fptr_gdk_433 (12724)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -2633,47 +2662,7 @@ Msg("Find size of fptr_gdk_433 (12724)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12725,0);
-Msg("Find size of fptr_gdk_594 (12725)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GdkDisplayPointerHooks,12, 12726, 2)
-#elif __x86_64__
-CheckTypeSize(GdkDisplayPointerHooks,24, 12726, 11)
-#elif __ia64__
-CheckTypeSize(GdkDisplayPointerHooks,24, 12726, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkDisplayPointerHooks,12, 12726, 6)
-#elif __powerpc64__
-CheckTypeSize(GdkDisplayPointerHooks,24, 12726, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkDisplayPointerHooks,12, 12726, 10)
-#elif __s390x__
-CheckTypeSize(GdkDisplayPointerHooks,24, 12726, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12726,0);
-Msg("Find size of GdkDisplayPointerHooks (12726)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(const GdkDisplayPointerHooks,12, 12727, 2)
-#elif __x86_64__
-CheckTypeSize(const GdkDisplayPointerHooks,24, 12727, 11)
-#elif __ia64__
-CheckTypeSize(const GdkDisplayPointerHooks,24, 12727, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(const GdkDisplayPointerHooks,12, 12727, 6)
-#elif __powerpc64__
-CheckTypeSize(const GdkDisplayPointerHooks,24, 12727, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(const GdkDisplayPointerHooks,12, 12727, 10)
-#elif __s390x__
-CheckTypeSize(const GdkDisplayPointerHooks,24, 12727, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12727,0);
-Msg("Find size of const GdkDisplayPointerHooks (12727)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -2683,9 +2672,53 @@ Msg("Find size of const GdkDisplayPointerHooks (12727)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12728,0);
-Msg("Find size of const GdkDisplayPointerHooks * (12728)\n");
+#elif 1
+#endif
+
+#if __i386__
+CheckTypeSize(GdkDisplayPointerHooks,12, 12726, 2);
+#elif __x86_64__
+CheckTypeSize(GdkDisplayPointerHooks,24, 12726, 11);
+#elif __ia64__
+CheckTypeSize(GdkDisplayPointerHooks,24, 12726, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkDisplayPointerHooks,12, 12726, 6);
+#elif __powerpc64__
+CheckTypeSize(GdkDisplayPointerHooks,24, 12726, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GdkDisplayPointerHooks,12, 12726, 10);
+#elif __s390x__
+CheckTypeSize(GdkDisplayPointerHooks,24, 12726, 12);
+#elif 1
+CheckTypeSize(GdkDisplayPointerHooks,0, 12726, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(const GdkDisplayPointerHooks,12, 12727, 2);
+#elif __x86_64__
+CheckTypeSize(const GdkDisplayPointerHooks,24, 12727, 11);
+#elif __ia64__
+CheckTypeSize(const GdkDisplayPointerHooks,24, 12727, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const GdkDisplayPointerHooks,12, 12727, 6);
+#elif __powerpc64__
+CheckTypeSize(const GdkDisplayPointerHooks,24, 12727, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(const GdkDisplayPointerHooks,12, 12727, 10);
+#elif __s390x__
+CheckTypeSize(const GdkDisplayPointerHooks,24, 12727, 12);
+#elif 1
+CheckTypeSize(const GdkDisplayPointerHooks,0, 12727, 1);
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
+#elif 1
 #endif
 
 #if __i386__
@@ -2849,61 +2882,82 @@ CheckEnum("GDK_PROXIMITY_OUT_MASK",GDK_PROXIMITY_OUT_MASK,524288,43560);
 CheckEnum("GDK_SUBSTRUCTURE_MASK",GDK_SUBSTRUCTURE_MASK,1048576,43561);
 CheckEnum("GDK_SCROLL_MASK",GDK_SCROLL_MASK,2097152,43562);
 CheckEnum("GDK_ALL_EVENTS_MASK",GDK_ALL_EVENTS_MASK,4194302,43563);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12729,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-934 (12729)\n");
+#elif 1
+CheckEnum("GDK_EXPOSURE_MASK",GDK_EXPOSURE_MASK,2,43542);
+CheckEnum("GDK_POINTER_MOTION_MASK",GDK_POINTER_MOTION_MASK,4,43543);
+CheckEnum("GDK_POINTER_MOTION_HINT_MASK",GDK_POINTER_MOTION_HINT_MASK,8,43544);
+CheckEnum("GDK_BUTTON_MOTION_MASK",GDK_BUTTON_MOTION_MASK,16,43545);
+CheckEnum("GDK_BUTTON1_MOTION_MASK",GDK_BUTTON1_MOTION_MASK,32,43546);
+CheckEnum("GDK_BUTTON2_MOTION_MASK",GDK_BUTTON2_MOTION_MASK,64,43547);
+CheckEnum("GDK_BUTTON3_MOTION_MASK",GDK_BUTTON3_MOTION_MASK,128,43548);
+CheckEnum("GDK_BUTTON_PRESS_MASK",GDK_BUTTON_PRESS_MASK,256,43549);
+CheckEnum("GDK_BUTTON_RELEASE_MASK",GDK_BUTTON_RELEASE_MASK,512,43550);
+CheckEnum("GDK_KEY_PRESS_MASK",GDK_KEY_PRESS_MASK,1024,43551);
+CheckEnum("GDK_KEY_RELEASE_MASK",GDK_KEY_RELEASE_MASK,2048,43552);
+CheckEnum("GDK_ENTER_NOTIFY_MASK",GDK_ENTER_NOTIFY_MASK,4096,43553);
+CheckEnum("GDK_LEAVE_NOTIFY_MASK",GDK_LEAVE_NOTIFY_MASK,8192,43554);
+CheckEnum("GDK_FOCUS_CHANGE_MASK",GDK_FOCUS_CHANGE_MASK,16384,43555);
+CheckEnum("GDK_STRUCTURE_MASK",GDK_STRUCTURE_MASK,32768,43556);
+CheckEnum("GDK_PROPERTY_CHANGE_MASK",GDK_PROPERTY_CHANGE_MASK,65536,43557);
+CheckEnum("GDK_VISIBILITY_NOTIFY_MASK",GDK_VISIBILITY_NOTIFY_MASK,131072,43558);
+CheckEnum("GDK_PROXIMITY_IN_MASK",GDK_PROXIMITY_IN_MASK,262144,43559);
+CheckEnum("GDK_PROXIMITY_OUT_MASK",GDK_PROXIMITY_OUT_MASK,524288,43560);
+CheckEnum("GDK_SUBSTRUCTURE_MASK",GDK_SUBSTRUCTURE_MASK,1048576,43561);
+CheckEnum("GDK_SCROLL_MASK",GDK_SCROLL_MASK,2097152,43562);
+CheckEnum("GDK_ALL_EVENTS_MASK",GDK_ALL_EVENTS_MASK,4194302,43563);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkEventMask,4, 12730, 2)
+CheckTypeSize(GdkEventMask,4, 12730, 2);
 #elif __x86_64__
-CheckTypeSize(GdkEventMask,4, 12730, 11)
+CheckTypeSize(GdkEventMask,4, 12730, 11);
 #elif __ia64__
-CheckTypeSize(GdkEventMask,4, 12730, 3)
+CheckTypeSize(GdkEventMask,4, 12730, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkEventMask,4, 12730, 6)
+CheckTypeSize(GdkEventMask,4, 12730, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkEventMask,4, 12730, 9)
+CheckTypeSize(GdkEventMask,4, 12730, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkEventMask,4, 12730, 10)
+CheckTypeSize(GdkEventMask,4, 12730, 10);
 #elif __s390x__
-CheckTypeSize(GdkEventMask,4, 12730, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12730,0);
-Msg("Find size of GdkEventMask (12730)\n");
+CheckTypeSize(GdkEventMask,4, 12730, 12);
+#elif 1
+CheckTypeSize(GdkEventMask,0, 12730, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkCursor,8, 12731, 2)
-CheckMemberSize(struct _GdkCursor,ref_count,4,2,43644)
-CheckOffset(struct _GdkCursor,ref_count,4,2,43644)
+CheckTypeSize(struct _GdkCursor,8, 12731, 2);
+CheckMemberSize(struct _GdkCursor,ref_count,4,2,43644);
+CheckOffset(struct _GdkCursor,ref_count,4,2,43644);
 #elif __x86_64__
-CheckTypeSize(struct _GdkCursor,8, 12731, 11)
-CheckMemberSize(struct _GdkCursor,ref_count,4,11,43644)
-CheckOffset(struct _GdkCursor,ref_count,4,11,43644)
+CheckTypeSize(struct _GdkCursor,8, 12731, 11);
+CheckMemberSize(struct _GdkCursor,ref_count,4,11,43644);
+CheckOffset(struct _GdkCursor,ref_count,4,11,43644);
 #elif __ia64__
-CheckTypeSize(struct _GdkCursor,8, 12731, 3)
-CheckMemberSize(struct _GdkCursor,ref_count,4,3,43644)
-CheckOffset(struct _GdkCursor,ref_count,4,3,43644)
+CheckTypeSize(struct _GdkCursor,8, 12731, 3);
+CheckMemberSize(struct _GdkCursor,ref_count,4,3,43644);
+CheckOffset(struct _GdkCursor,ref_count,4,3,43644);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkCursor,8, 12731, 6)
-CheckMemberSize(struct _GdkCursor,ref_count,4,6,43644)
-CheckOffset(struct _GdkCursor,ref_count,4,6,43644)
+CheckTypeSize(struct _GdkCursor,8, 12731, 6);
+CheckMemberSize(struct _GdkCursor,ref_count,4,6,43644);
+CheckOffset(struct _GdkCursor,ref_count,4,6,43644);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkCursor,8, 12731, 9)
-CheckMemberSize(struct _GdkCursor,ref_count,4,9,43644)
-CheckOffset(struct _GdkCursor,ref_count,4,9,43644)
+CheckTypeSize(struct _GdkCursor,8, 12731, 9);
+CheckMemberSize(struct _GdkCursor,ref_count,4,9,43644);
+CheckOffset(struct _GdkCursor,ref_count,4,9,43644);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkCursor,8, 12731, 10)
-CheckMemberSize(struct _GdkCursor,ref_count,4,10,43644)
-CheckOffset(struct _GdkCursor,ref_count,4,10,43644)
+CheckTypeSize(struct _GdkCursor,8, 12731, 10);
+CheckMemberSize(struct _GdkCursor,ref_count,4,10,43644);
+CheckOffset(struct _GdkCursor,ref_count,4,10,43644);
 #elif __s390x__
-CheckTypeSize(struct _GdkCursor,8, 12731, 12)
-CheckMemberSize(struct _GdkCursor,ref_count,4,12,43644)
-CheckOffset(struct _GdkCursor,ref_count,4,12,43644)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12731,0);
-Msg("Find size of _GdkCursor (12731)\n");
+CheckTypeSize(struct _GdkCursor,8, 12731, 12);
+CheckMemberSize(struct _GdkCursor,ref_count,4,12,43644);
+CheckOffset(struct _GdkCursor,ref_count,4,12,43644);
+#elif 1
+CheckTypeSize(struct _GdkCursor,0, 12731, 1);
+Msg("Missing member data for _GdkCursor on All\n");
+CheckOffset(struct _GdkCursor,type,0,1,43643);
+CheckOffset(struct _GdkCursor,ref_count,0,1,43644);
 #endif
 
 #if __i386__
@@ -3466,175 +3520,247 @@ CheckEnum("GDK_WATCH",GDK_WATCH,150,43639);
 CheckEnum("GDK_XTERM",GDK_XTERM,152,43640);
 CheckEnum("GDK_LAST_CURSOR",GDK_LAST_CURSOR,153,43641);
 CheckEnum("GDK_CURSOR_IS_PIXMAP",GDK_CURSOR_IS_PIXMAP,-1,43642);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12732,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-329 (12732)\n");
+#elif 1
+CheckEnum("GDK_X_CURSOR",GDK_X_CURSOR,0,43564);
+CheckEnum("GDK_ARROW",GDK_ARROW,2,43565);
+CheckEnum("GDK_BASED_ARROW_DOWN",GDK_BASED_ARROW_DOWN,4,43566);
+CheckEnum("GDK_BASED_ARROW_UP",GDK_BASED_ARROW_UP,6,43567);
+CheckEnum("GDK_BOAT",GDK_BOAT,8,43568);
+CheckEnum("GDK_BOGOSITY",GDK_BOGOSITY,10,43569);
+CheckEnum("GDK_BOTTOM_LEFT_CORNER",GDK_BOTTOM_LEFT_CORNER,12,43570);
+CheckEnum("GDK_BOTTOM_RIGHT_CORNER",GDK_BOTTOM_RIGHT_CORNER,14,43571);
+CheckEnum("GDK_BOTTOM_SIDE",GDK_BOTTOM_SIDE,16,43572);
+CheckEnum("GDK_BOTTOM_TEE",GDK_BOTTOM_TEE,18,43573);
+CheckEnum("GDK_BOX_SPIRAL",GDK_BOX_SPIRAL,20,43574);
+CheckEnum("GDK_CENTER_PTR",GDK_CENTER_PTR,22,43575);
+CheckEnum("GDK_CIRCLE",GDK_CIRCLE,24,43576);
+CheckEnum("GDK_CLOCK",GDK_CLOCK,26,43577);
+CheckEnum("GDK_COFFEE_MUG",GDK_COFFEE_MUG,28,43578);
+CheckEnum("GDK_CROSS",GDK_CROSS,30,43579);
+CheckEnum("GDK_CROSS_REVERSE",GDK_CROSS_REVERSE,32,43580);
+CheckEnum("GDK_CROSSHAIR",GDK_CROSSHAIR,34,43581);
+CheckEnum("GDK_DIAMOND_CROSS",GDK_DIAMOND_CROSS,36,43582);
+CheckEnum("GDK_DOT",GDK_DOT,38,43583);
+CheckEnum("GDK_DOTBOX",GDK_DOTBOX,40,43584);
+CheckEnum("GDK_DOUBLE_ARROW",GDK_DOUBLE_ARROW,42,43585);
+CheckEnum("GDK_DRAFT_LARGE",GDK_DRAFT_LARGE,44,43586);
+CheckEnum("GDK_DRAFT_SMALL",GDK_DRAFT_SMALL,46,43587);
+CheckEnum("GDK_DRAPED_BOX",GDK_DRAPED_BOX,48,43588);
+CheckEnum("GDK_EXCHANGE",GDK_EXCHANGE,50,43589);
+CheckEnum("GDK_FLEUR",GDK_FLEUR,52,43590);
+CheckEnum("GDK_GOBBLER",GDK_GOBBLER,54,43591);
+CheckEnum("GDK_GUMBY",GDK_GUMBY,56,43592);
+CheckEnum("GDK_HAND1",GDK_HAND1,58,43593);
+CheckEnum("GDK_HAND2",GDK_HAND2,60,43594);
+CheckEnum("GDK_HEART",GDK_HEART,62,43595);
+CheckEnum("GDK_ICON",GDK_ICON,64,43596);
+CheckEnum("GDK_IRON_CROSS",GDK_IRON_CROSS,66,43597);
+CheckEnum("GDK_LEFT_PTR",GDK_LEFT_PTR,68,43598);
+CheckEnum("GDK_LEFT_SIDE",GDK_LEFT_SIDE,70,43599);
+CheckEnum("GDK_LEFT_TEE",GDK_LEFT_TEE,72,43600);
+CheckEnum("GDK_LEFTBUTTON",GDK_LEFTBUTTON,74,43601);
+CheckEnum("GDK_LL_ANGLE",GDK_LL_ANGLE,76,43602);
+CheckEnum("GDK_LR_ANGLE",GDK_LR_ANGLE,78,43603);
+CheckEnum("GDK_MAN",GDK_MAN,80,43604);
+CheckEnum("GDK_MIDDLEBUTTON",GDK_MIDDLEBUTTON,82,43605);
+CheckEnum("GDK_MOUSE",GDK_MOUSE,84,43606);
+CheckEnum("GDK_PENCIL",GDK_PENCIL,86,43607);
+CheckEnum("GDK_PIRATE",GDK_PIRATE,88,43608);
+CheckEnum("GDK_PLUS",GDK_PLUS,90,43609);
+CheckEnum("GDK_QUESTION_ARROW",GDK_QUESTION_ARROW,92,43610);
+CheckEnum("GDK_RIGHT_PTR",GDK_RIGHT_PTR,94,43611);
+CheckEnum("GDK_RIGHT_SIDE",GDK_RIGHT_SIDE,96,43612);
+CheckEnum("GDK_RIGHT_TEE",GDK_RIGHT_TEE,98,43613);
+CheckEnum("GDK_RIGHTBUTTON",GDK_RIGHTBUTTON,100,43614);
+CheckEnum("GDK_RTL_LOGO",GDK_RTL_LOGO,102,43615);
+CheckEnum("GDK_SAILBOAT",GDK_SAILBOAT,104,43616);
+CheckEnum("GDK_SB_DOWN_ARROW",GDK_SB_DOWN_ARROW,106,43617);
+CheckEnum("GDK_SB_H_DOUBLE_ARROW",GDK_SB_H_DOUBLE_ARROW,108,43618);
+CheckEnum("GDK_SB_LEFT_ARROW",GDK_SB_LEFT_ARROW,110,43619);
+CheckEnum("GDK_SB_RIGHT_ARROW",GDK_SB_RIGHT_ARROW,112,43620);
+CheckEnum("GDK_SB_UP_ARROW",GDK_SB_UP_ARROW,114,43621);
+CheckEnum("GDK_SB_V_DOUBLE_ARROW",GDK_SB_V_DOUBLE_ARROW,116,43622);
+CheckEnum("GDK_SHUTTLE",GDK_SHUTTLE,118,43623);
+CheckEnum("GDK_SIZING",GDK_SIZING,120,43624);
+CheckEnum("GDK_SPIDER",GDK_SPIDER,122,43625);
+CheckEnum("GDK_SPRAYCAN",GDK_SPRAYCAN,124,43626);
+CheckEnum("GDK_STAR",GDK_STAR,126,43627);
+CheckEnum("GDK_TARGET",GDK_TARGET,128,43628);
+CheckEnum("GDK_TCROSS",GDK_TCROSS,130,43629);
+CheckEnum("GDK_TOP_LEFT_ARROW",GDK_TOP_LEFT_ARROW,132,43630);
+CheckEnum("GDK_TOP_LEFT_CORNER",GDK_TOP_LEFT_CORNER,134,43631);
+CheckEnum("GDK_TOP_RIGHT_CORNER",GDK_TOP_RIGHT_CORNER,136,43632);
+CheckEnum("GDK_TOP_SIDE",GDK_TOP_SIDE,138,43633);
+CheckEnum("GDK_TOP_TEE",GDK_TOP_TEE,140,43634);
+CheckEnum("GDK_TREK",GDK_TREK,142,43635);
+CheckEnum("GDK_UL_ANGLE",GDK_UL_ANGLE,144,43636);
+CheckEnum("GDK_UMBRELLA",GDK_UMBRELLA,146,43637);
+CheckEnum("GDK_UR_ANGLE",GDK_UR_ANGLE,148,43638);
+CheckEnum("GDK_WATCH",GDK_WATCH,150,43639);
+CheckEnum("GDK_XTERM",GDK_XTERM,152,43640);
+CheckEnum("GDK_LAST_CURSOR",GDK_LAST_CURSOR,153,43641);
+CheckEnum("GDK_CURSOR_IS_PIXMAP",GDK_CURSOR_IS_PIXMAP,-1,43642);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkCursorType,4, 12733, 2)
+CheckTypeSize(GdkCursorType,4, 12733, 2);
 #elif __x86_64__
-CheckTypeSize(GdkCursorType,4, 12733, 11)
+CheckTypeSize(GdkCursorType,4, 12733, 11);
 #elif __ia64__
-CheckTypeSize(GdkCursorType,4, 12733, 3)
+CheckTypeSize(GdkCursorType,4, 12733, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkCursorType,4, 12733, 6)
+CheckTypeSize(GdkCursorType,4, 12733, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkCursorType,4, 12733, 9)
+CheckTypeSize(GdkCursorType,4, 12733, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkCursorType,4, 12733, 10)
+CheckTypeSize(GdkCursorType,4, 12733, 10);
 #elif __s390x__
-CheckTypeSize(GdkCursorType,4, 12733, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12733,0);
-Msg("Find size of GdkCursorType (12733)\n");
+CheckTypeSize(GdkCursorType,4, 12733, 12);
+#elif 1
+CheckTypeSize(GdkCursorType,0, 12733, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkCursor,8, 12734, 2)
+CheckTypeSize(GdkCursor,8, 12734, 2);
 #elif __x86_64__
-CheckTypeSize(GdkCursor,8, 12734, 11)
+CheckTypeSize(GdkCursor,8, 12734, 11);
 #elif __ia64__
-CheckTypeSize(GdkCursor,8, 12734, 3)
+CheckTypeSize(GdkCursor,8, 12734, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkCursor,8, 12734, 6)
+CheckTypeSize(GdkCursor,8, 12734, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkCursor,8, 12734, 9)
+CheckTypeSize(GdkCursor,8, 12734, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkCursor,8, 12734, 10)
+CheckTypeSize(GdkCursor,8, 12734, 10);
 #elif __s390x__
-CheckTypeSize(GdkCursor,8, 12734, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12734,0);
-Msg("Find size of GdkCursor (12734)\n");
+CheckTypeSize(GdkCursor,8, 12734, 12);
+#elif 1
+CheckTypeSize(GdkCursor,0, 12734, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkCursor *,4, 12735, 2)
+CheckTypeSize(GdkCursor *,4, 12735, 2);
 #elif __x86_64__
-CheckTypeSize(GdkCursor *,8, 12735, 11)
+CheckTypeSize(GdkCursor *,8, 12735, 11);
 #elif __ia64__
-CheckTypeSize(GdkCursor *,8, 12735, 3)
+CheckTypeSize(GdkCursor *,8, 12735, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkCursor *,4, 12735, 6)
+CheckTypeSize(GdkCursor *,4, 12735, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkCursor *,8, 12735, 9)
+CheckTypeSize(GdkCursor *,8, 12735, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkCursor *,4, 12735, 10)
+CheckTypeSize(GdkCursor *,4, 12735, 10);
 #elif __s390x__
-CheckTypeSize(GdkCursor *,8, 12735, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12735,0);
-Msg("Find size of GdkCursor * (12735)\n");
+CheckTypeSize(GdkCursor *,8, 12735, 12);
+#elif 1
+CheckTypeSize(GdkCursor *,0, 12735, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkKeymap,16, 12736, 2)
-CheckMemberSize(struct _GdkKeymap,display,4,2,43646)
-CheckOffset(struct _GdkKeymap,display,12,2,43646)
+CheckTypeSize(struct _GdkKeymap,16, 12736, 2);
+CheckMemberSize(struct _GdkKeymap,display,4,2,43646);
+CheckOffset(struct _GdkKeymap,display,12,2,43646);
 #elif __x86_64__
-CheckTypeSize(struct _GdkKeymap,32, 12736, 11)
-CheckMemberSize(struct _GdkKeymap,display,8,11,43646)
-CheckOffset(struct _GdkKeymap,display,24,11,43646)
+CheckTypeSize(struct _GdkKeymap,32, 12736, 11);
+CheckMemberSize(struct _GdkKeymap,display,8,11,43646);
+CheckOffset(struct _GdkKeymap,display,24,11,43646);
 #elif __ia64__
-CheckTypeSize(struct _GdkKeymap,32, 12736, 3)
-CheckMemberSize(struct _GdkKeymap,display,8,3,43646)
-CheckOffset(struct _GdkKeymap,display,24,3,43646)
+CheckTypeSize(struct _GdkKeymap,32, 12736, 3);
+CheckMemberSize(struct _GdkKeymap,display,8,3,43646);
+CheckOffset(struct _GdkKeymap,display,24,3,43646);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkKeymap,16, 12736, 6)
-CheckMemberSize(struct _GdkKeymap,display,4,6,43646)
-CheckOffset(struct _GdkKeymap,display,12,6,43646)
+CheckTypeSize(struct _GdkKeymap,16, 12736, 6);
+CheckMemberSize(struct _GdkKeymap,display,4,6,43646);
+CheckOffset(struct _GdkKeymap,display,12,6,43646);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkKeymap,32, 12736, 9)
-CheckMemberSize(struct _GdkKeymap,display,8,9,43646)
-CheckOffset(struct _GdkKeymap,display,24,9,43646)
+CheckTypeSize(struct _GdkKeymap,32, 12736, 9);
+CheckMemberSize(struct _GdkKeymap,display,8,9,43646);
+CheckOffset(struct _GdkKeymap,display,24,9,43646);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkKeymap,16, 12736, 10)
-CheckMemberSize(struct _GdkKeymap,display,4,10,43646)
-CheckOffset(struct _GdkKeymap,display,12,10,43646)
+CheckTypeSize(struct _GdkKeymap,16, 12736, 10);
+CheckMemberSize(struct _GdkKeymap,display,4,10,43646);
+CheckOffset(struct _GdkKeymap,display,12,10,43646);
 #elif __s390x__
-CheckTypeSize(struct _GdkKeymap,32, 12736, 12)
-CheckMemberSize(struct _GdkKeymap,display,8,12,43646)
-CheckOffset(struct _GdkKeymap,display,24,12,43646)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12736,0);
-Msg("Find size of _GdkKeymap (12736)\n");
+CheckTypeSize(struct _GdkKeymap,32, 12736, 12);
+CheckMemberSize(struct _GdkKeymap,display,8,12,43646);
+CheckOffset(struct _GdkKeymap,display,24,12,43646);
+#elif 1
+CheckTypeSize(struct _GdkKeymap,0, 12736, 1);
+Msg("Missing member data for _GdkKeymap on All\n");
+CheckOffset(struct _GdkKeymap,parent_instance,0,1,43645);
+CheckOffset(struct _GdkKeymap,display,0,1,43646);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkKeymap,16, 12737, 2)
+CheckTypeSize(GdkKeymap,16, 12737, 2);
 #elif __x86_64__
-CheckTypeSize(GdkKeymap,32, 12737, 11)
+CheckTypeSize(GdkKeymap,32, 12737, 11);
 #elif __ia64__
-CheckTypeSize(GdkKeymap,32, 12737, 3)
+CheckTypeSize(GdkKeymap,32, 12737, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkKeymap,16, 12737, 6)
+CheckTypeSize(GdkKeymap,16, 12737, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkKeymap,32, 12737, 9)
+CheckTypeSize(GdkKeymap,32, 12737, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkKeymap,16, 12737, 10)
+CheckTypeSize(GdkKeymap,16, 12737, 10);
 #elif __s390x__
-CheckTypeSize(GdkKeymap,32, 12737, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12737,0);
-Msg("Find size of GdkKeymap (12737)\n");
+CheckTypeSize(GdkKeymap,32, 12737, 12);
+#elif 1
+CheckTypeSize(GdkKeymap,0, 12737, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkKeymap *,4, 12738, 2)
+CheckTypeSize(GdkKeymap *,4, 12738, 2);
 #elif __x86_64__
-CheckTypeSize(GdkKeymap *,8, 12738, 11)
+CheckTypeSize(GdkKeymap *,8, 12738, 11);
 #elif __ia64__
-CheckTypeSize(GdkKeymap *,8, 12738, 3)
+CheckTypeSize(GdkKeymap *,8, 12738, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkKeymap *,4, 12738, 6)
+CheckTypeSize(GdkKeymap *,4, 12738, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkKeymap *,8, 12738, 9)
+CheckTypeSize(GdkKeymap *,8, 12738, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkKeymap *,4, 12738, 10)
+CheckTypeSize(GdkKeymap *,4, 12738, 10);
 #elif __s390x__
-CheckTypeSize(GdkKeymap *,8, 12738, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12738,0);
-Msg("Find size of GdkKeymap * (12738)\n");
+CheckTypeSize(GdkKeymap *,8, 12738, 12);
+#elif 1
+CheckTypeSize(GdkKeymap *,0, 12738, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkAtom *,4, 12740, 2)
+CheckTypeSize(struct _GdkAtom *,4, 12740, 2);
 #elif __x86_64__
-CheckTypeSize(struct _GdkAtom *,8, 12740, 11)
+CheckTypeSize(struct _GdkAtom *,8, 12740, 11);
 #elif __ia64__
-CheckTypeSize(struct _GdkAtom *,8, 12740, 3)
+CheckTypeSize(struct _GdkAtom *,8, 12740, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkAtom *,4, 12740, 6)
+CheckTypeSize(struct _GdkAtom *,4, 12740, 6);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkAtom *,8, 12740, 9)
+CheckTypeSize(struct _GdkAtom *,8, 12740, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkAtom *,4, 12740, 10)
+CheckTypeSize(struct _GdkAtom *,4, 12740, 10);
 #elif __s390x__
-CheckTypeSize(struct _GdkAtom *,8, 12740, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12740,0);
-Msg("Find size of _GdkAtom * (12740)\n");
+CheckTypeSize(struct _GdkAtom *,8, 12740, 12);
+#elif 1
+CheckTypeSize(struct _GdkAtom *,0, 12740, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkAtom,4, 12741, 2)
+CheckTypeSize(GdkAtom,4, 12741, 2);
 #elif __x86_64__
-CheckTypeSize(GdkAtom,8, 12741, 11)
+CheckTypeSize(GdkAtom,8, 12741, 11);
 #elif __ia64__
-CheckTypeSize(GdkAtom,8, 12741, 3)
+CheckTypeSize(GdkAtom,8, 12741, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkAtom,4, 12741, 6)
+CheckTypeSize(GdkAtom,4, 12741, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkAtom,8, 12741, 9)
+CheckTypeSize(GdkAtom,8, 12741, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkAtom,4, 12741, 10)
+CheckTypeSize(GdkAtom,4, 12741, 10);
 #elif __s390x__
-CheckTypeSize(GdkAtom,8, 12741, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12741,0);
-Msg("Find size of GdkAtom (12741)\n");
+CheckTypeSize(GdkAtom,8, 12741, 12);
+#elif 1
+CheckTypeSize(GdkAtom,0, 12741, 1);
 #endif
 
 #if __i386__
@@ -3665,232 +3791,250 @@ CheckEnum("GDK_FILTER_REMOVE",GDK_FILTER_REMOVE,2,43649);
 CheckEnum("GDK_FILTER_CONTINUE",GDK_FILTER_CONTINUE,0,43647);
 CheckEnum("GDK_FILTER_TRANSLATE",GDK_FILTER_TRANSLATE,1,43648);
 CheckEnum("GDK_FILTER_REMOVE",GDK_FILTER_REMOVE,2,43649);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12742,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-500 (12742)\n");
+#elif 1
+CheckEnum("GDK_FILTER_CONTINUE",GDK_FILTER_CONTINUE,0,43647);
+CheckEnum("GDK_FILTER_TRANSLATE",GDK_FILTER_TRANSLATE,1,43648);
+CheckEnum("GDK_FILTER_REMOVE",GDK_FILTER_REMOVE,2,43649);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkFilterReturn,4, 12743, 2)
+CheckTypeSize(GdkFilterReturn,4, 12743, 2);
 #elif __x86_64__
-CheckTypeSize(GdkFilterReturn,4, 12743, 11)
+CheckTypeSize(GdkFilterReturn,4, 12743, 11);
 #elif __ia64__
-CheckTypeSize(GdkFilterReturn,4, 12743, 3)
+CheckTypeSize(GdkFilterReturn,4, 12743, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkFilterReturn,4, 12743, 6)
+CheckTypeSize(GdkFilterReturn,4, 12743, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkFilterReturn,4, 12743, 9)
+CheckTypeSize(GdkFilterReturn,4, 12743, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkFilterReturn,4, 12743, 10)
+CheckTypeSize(GdkFilterReturn,4, 12743, 10);
 #elif __s390x__
-CheckTypeSize(GdkFilterReturn,4, 12743, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12743,0);
-Msg("Find size of GdkFilterReturn (12743)\n");
+CheckTypeSize(GdkFilterReturn,4, 12743, 12);
+#elif 1
+CheckTypeSize(GdkFilterReturn,0, 12743, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkXEvent,1, 12744, 2)
+CheckTypeSize(GdkXEvent,1, 12744, 2);
 #elif __x86_64__
-CheckTypeSize(GdkXEvent,1, 12744, 11)
+CheckTypeSize(GdkXEvent,1, 12744, 11);
 #elif __ia64__
-CheckTypeSize(GdkXEvent,1, 12744, 3)
+CheckTypeSize(GdkXEvent,1, 12744, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkXEvent,1, 12744, 6)
+CheckTypeSize(GdkXEvent,1, 12744, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkXEvent,1, 12744, 9)
+CheckTypeSize(GdkXEvent,1, 12744, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkXEvent,1, 12744, 10)
+CheckTypeSize(GdkXEvent,1, 12744, 10);
 #elif __s390x__
-CheckTypeSize(GdkXEvent,1, 12744, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12744,0);
-Msg("Find size of GdkXEvent (12744)\n");
+CheckTypeSize(GdkXEvent,1, 12744, 12);
+#elif 1
+CheckTypeSize(GdkXEvent,0, 12744, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkXEvent *,4, 12745, 2)
+CheckTypeSize(GdkXEvent *,4, 12745, 2);
 #elif __x86_64__
-CheckTypeSize(GdkXEvent *,8, 12745, 11)
+CheckTypeSize(GdkXEvent *,8, 12745, 11);
 #elif __ia64__
-CheckTypeSize(GdkXEvent *,8, 12745, 3)
+CheckTypeSize(GdkXEvent *,8, 12745, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkXEvent *,4, 12745, 6)
+CheckTypeSize(GdkXEvent *,4, 12745, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkXEvent *,8, 12745, 9)
+CheckTypeSize(GdkXEvent *,8, 12745, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkXEvent *,4, 12745, 10)
+CheckTypeSize(GdkXEvent *,4, 12745, 10);
 #elif __s390x__
-CheckTypeSize(GdkXEvent *,8, 12745, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12745,0);
-Msg("Find size of GdkXEvent * (12745)\n");
+CheckTypeSize(GdkXEvent *,8, 12745, 12);
+#elif 1
+CheckTypeSize(GdkXEvent *,0, 12745, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(union _GdkEvent,68, 12746, 2)
+CheckTypeSize(union _GdkEvent,68, 12746, 2);
 Msg("Missing member data for _GdkEvent on IA32\n");
-CheckOffset(union _GdkEvent,type,0,2,43686)
-CheckOffset(union _GdkEvent,any,0,2,43690)
-CheckOffset(union _GdkEvent,expose,0,2,43701)
-CheckOffset(union _GdkEvent,no_expose,0,2,43705)
-CheckOffset(union _GdkEvent,visibility,0,2,43713)
-CheckOffset(union _GdkEvent,motion,0,2,43726)
-CheckOffset(union _GdkEvent,button,0,2,43739)
-CheckOffset(union _GdkEvent,scroll,0,2,43755)
-CheckOffset(union _GdkEvent,key,0,2,43766)
-CheckOffset(union _GdkEvent,crossing,0,2,43789)
-CheckOffset(union _GdkEvent,focus_change,0,2,43794)
-CheckOffset(union _GdkEvent,configure,0,2,43802)
-CheckOffset(union _GdkEvent,property,0,2,43809)
-CheckOffset(union _GdkEvent,selection,0,2,43818)
-CheckOffset(union _GdkEvent,owner_change,0,2,43830)
-CheckOffset(union _GdkEvent,proximity,0,2,43836)
-CheckOffset(union _GdkEvent,client,0,2,43846)
-CheckOffset(union _GdkEvent,dnd,0,2,43878)
-CheckOffset(union _GdkEvent,window_state,0,2,43891)
-CheckOffset(union _GdkEvent,setting,0,2,43900)
+CheckOffset(union _GdkEvent,type,0,2,43686);
+CheckOffset(union _GdkEvent,any,0,2,43690);
+CheckOffset(union _GdkEvent,expose,0,2,43701);
+CheckOffset(union _GdkEvent,no_expose,0,2,43705);
+CheckOffset(union _GdkEvent,visibility,0,2,43713);
+CheckOffset(union _GdkEvent,motion,0,2,43726);
+CheckOffset(union _GdkEvent,button,0,2,43739);
+CheckOffset(union _GdkEvent,scroll,0,2,43755);
+CheckOffset(union _GdkEvent,key,0,2,43766);
+CheckOffset(union _GdkEvent,crossing,0,2,43789);
+CheckOffset(union _GdkEvent,focus_change,0,2,43794);
+CheckOffset(union _GdkEvent,configure,0,2,43802);
+CheckOffset(union _GdkEvent,property,0,2,43809);
+CheckOffset(union _GdkEvent,selection,0,2,43818);
+CheckOffset(union _GdkEvent,owner_change,0,2,43830);
+CheckOffset(union _GdkEvent,proximity,0,2,43836);
+CheckOffset(union _GdkEvent,client,0,2,43846);
+CheckOffset(union _GdkEvent,dnd,0,2,43878);
+CheckOffset(union _GdkEvent,window_state,0,2,43891);
+CheckOffset(union _GdkEvent,setting,0,2,43900);
 #elif __x86_64__
-CheckTypeSize(union _GdkEvent,88, 12746, 11)
+CheckTypeSize(union _GdkEvent,88, 12746, 11);
 Msg("Missing member data for _GdkEvent on x86-64\n");
-CheckOffset(union _GdkEvent,type,0,11,43686)
-CheckOffset(union _GdkEvent,any,0,11,43690)
-CheckOffset(union _GdkEvent,expose,0,11,43701)
-CheckOffset(union _GdkEvent,no_expose,0,11,43705)
-CheckOffset(union _GdkEvent,visibility,0,11,43713)
-CheckOffset(union _GdkEvent,motion,0,11,43726)
-CheckOffset(union _GdkEvent,button,0,11,43739)
-CheckOffset(union _GdkEvent,scroll,0,11,43755)
-CheckOffset(union _GdkEvent,key,0,11,43766)
-CheckOffset(union _GdkEvent,crossing,0,11,43789)
-CheckOffset(union _GdkEvent,focus_change,0,11,43794)
-CheckOffset(union _GdkEvent,configure,0,11,43802)
-CheckOffset(union _GdkEvent,property,0,11,43809)
-CheckOffset(union _GdkEvent,selection,0,11,43818)
-CheckOffset(union _GdkEvent,owner_change,0,11,43830)
-CheckOffset(union _GdkEvent,proximity,0,11,43836)
-CheckOffset(union _GdkEvent,client,0,11,43846)
-CheckOffset(union _GdkEvent,dnd,0,11,43878)
-CheckOffset(union _GdkEvent,window_state,0,11,43891)
-CheckOffset(union _GdkEvent,setting,0,11,43900)
+CheckOffset(union _GdkEvent,type,0,11,43686);
+CheckOffset(union _GdkEvent,any,0,11,43690);
+CheckOffset(union _GdkEvent,expose,0,11,43701);
+CheckOffset(union _GdkEvent,no_expose,0,11,43705);
+CheckOffset(union _GdkEvent,visibility,0,11,43713);
+CheckOffset(union _GdkEvent,motion,0,11,43726);
+CheckOffset(union _GdkEvent,button,0,11,43739);
+CheckOffset(union _GdkEvent,scroll,0,11,43755);
+CheckOffset(union _GdkEvent,key,0,11,43766);
+CheckOffset(union _GdkEvent,crossing,0,11,43789);
+CheckOffset(union _GdkEvent,focus_change,0,11,43794);
+CheckOffset(union _GdkEvent,configure,0,11,43802);
+CheckOffset(union _GdkEvent,property,0,11,43809);
+CheckOffset(union _GdkEvent,selection,0,11,43818);
+CheckOffset(union _GdkEvent,owner_change,0,11,43830);
+CheckOffset(union _GdkEvent,proximity,0,11,43836);
+CheckOffset(union _GdkEvent,client,0,11,43846);
+CheckOffset(union _GdkEvent,dnd,0,11,43878);
+CheckOffset(union _GdkEvent,window_state,0,11,43891);
+CheckOffset(union _GdkEvent,setting,0,11,43900);
 #elif __ia64__
-CheckTypeSize(union _GdkEvent,88, 12746, 3)
+CheckTypeSize(union _GdkEvent,88, 12746, 3);
 Msg("Missing member data for _GdkEvent on IA64\n");
-CheckOffset(union _GdkEvent,type,0,3,43686)
-CheckOffset(union _GdkEvent,any,0,3,43690)
-CheckOffset(union _GdkEvent,expose,0,3,43701)
-CheckOffset(union _GdkEvent,no_expose,0,3,43705)
-CheckOffset(union _GdkEvent,visibility,0,3,43713)
-CheckOffset(union _GdkEvent,motion,0,3,43726)
-CheckOffset(union _GdkEvent,button,0,3,43739)
-CheckOffset(union _GdkEvent,scroll,0,3,43755)
-CheckOffset(union _GdkEvent,key,0,3,43766)
-CheckOffset(union _GdkEvent,crossing,0,3,43789)
-CheckOffset(union _GdkEvent,focus_change,0,3,43794)
-CheckOffset(union _GdkEvent,configure,0,3,43802)
-CheckOffset(union _GdkEvent,property,0,3,43809)
-CheckOffset(union _GdkEvent,selection,0,3,43818)
-CheckOffset(union _GdkEvent,owner_change,0,3,43830)
-CheckOffset(union _GdkEvent,proximity,0,3,43836)
-CheckOffset(union _GdkEvent,client,0,3,43846)
-CheckOffset(union _GdkEvent,dnd,0,3,43878)
-CheckOffset(union _GdkEvent,window_state,0,3,43891)
-CheckOffset(union _GdkEvent,setting,0,3,43900)
+CheckOffset(union _GdkEvent,type,0,3,43686);
+CheckOffset(union _GdkEvent,any,0,3,43690);
+CheckOffset(union _GdkEvent,expose,0,3,43701);
+CheckOffset(union _GdkEvent,no_expose,0,3,43705);
+CheckOffset(union _GdkEvent,visibility,0,3,43713);
+CheckOffset(union _GdkEvent,motion,0,3,43726);
+CheckOffset(union _GdkEvent,button,0,3,43739);
+CheckOffset(union _GdkEvent,scroll,0,3,43755);
+CheckOffset(union _GdkEvent,key,0,3,43766);
+CheckOffset(union _GdkEvent,crossing,0,3,43789);
+CheckOffset(union _GdkEvent,focus_change,0,3,43794);
+CheckOffset(union _GdkEvent,configure,0,3,43802);
+CheckOffset(union _GdkEvent,property,0,3,43809);
+CheckOffset(union _GdkEvent,selection,0,3,43818);
+CheckOffset(union _GdkEvent,owner_change,0,3,43830);
+CheckOffset(union _GdkEvent,proximity,0,3,43836);
+CheckOffset(union _GdkEvent,client,0,3,43846);
+CheckOffset(union _GdkEvent,dnd,0,3,43878);
+CheckOffset(union _GdkEvent,window_state,0,3,43891);
+CheckOffset(union _GdkEvent,setting,0,3,43900);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(union _GdkEvent,72, 12746, 6)
+CheckTypeSize(union _GdkEvent,72, 12746, 6);
 Msg("Missing member data for _GdkEvent on PPC32\n");
-CheckOffset(union _GdkEvent,type,0,6,43686)
-CheckOffset(union _GdkEvent,any,0,6,43690)
-CheckOffset(union _GdkEvent,expose,0,6,43701)
-CheckOffset(union _GdkEvent,no_expose,0,6,43705)
-CheckOffset(union _GdkEvent,visibility,0,6,43713)
-CheckOffset(union _GdkEvent,motion,0,6,43726)
-CheckOffset(union _GdkEvent,button,0,6,43739)
-CheckOffset(union _GdkEvent,scroll,0,6,43755)
-CheckOffset(union _GdkEvent,key,0,6,43766)
-CheckOffset(union _GdkEvent,crossing,0,6,43789)
-CheckOffset(union _GdkEvent,focus_change,0,6,43794)
-CheckOffset(union _GdkEvent,configure,0,6,43802)
-CheckOffset(union _GdkEvent,property,0,6,43809)
-CheckOffset(union _GdkEvent,selection,0,6,43818)
-CheckOffset(union _GdkEvent,owner_change,0,6,43830)
-CheckOffset(union _GdkEvent,proximity,0,6,43836)
-CheckOffset(union _GdkEvent,client,0,6,43846)
-CheckOffset(union _GdkEvent,dnd,0,6,43878)
-CheckOffset(union _GdkEvent,window_state,0,6,43891)
-CheckOffset(union _GdkEvent,setting,0,6,43900)
+CheckOffset(union _GdkEvent,type,0,6,43686);
+CheckOffset(union _GdkEvent,any,0,6,43690);
+CheckOffset(union _GdkEvent,expose,0,6,43701);
+CheckOffset(union _GdkEvent,no_expose,0,6,43705);
+CheckOffset(union _GdkEvent,visibility,0,6,43713);
+CheckOffset(union _GdkEvent,motion,0,6,43726);
+CheckOffset(union _GdkEvent,button,0,6,43739);
+CheckOffset(union _GdkEvent,scroll,0,6,43755);
+CheckOffset(union _GdkEvent,key,0,6,43766);
+CheckOffset(union _GdkEvent,crossing,0,6,43789);
+CheckOffset(union _GdkEvent,focus_change,0,6,43794);
+CheckOffset(union _GdkEvent,configure,0,6,43802);
+CheckOffset(union _GdkEvent,property,0,6,43809);
+CheckOffset(union _GdkEvent,selection,0,6,43818);
+CheckOffset(union _GdkEvent,owner_change,0,6,43830);
+CheckOffset(union _GdkEvent,proximity,0,6,43836);
+CheckOffset(union _GdkEvent,client,0,6,43846);
+CheckOffset(union _GdkEvent,dnd,0,6,43878);
+CheckOffset(union _GdkEvent,window_state,0,6,43891);
+CheckOffset(union _GdkEvent,setting,0,6,43900);
 #elif __powerpc64__
-CheckTypeSize(union _GdkEvent,88, 12746, 9)
+CheckTypeSize(union _GdkEvent,88, 12746, 9);
 Msg("Missing member data for _GdkEvent on PPC64\n");
-CheckOffset(union _GdkEvent,type,0,9,43686)
-CheckOffset(union _GdkEvent,any,0,9,43690)
-CheckOffset(union _GdkEvent,expose,0,9,43701)
-CheckOffset(union _GdkEvent,no_expose,0,9,43705)
-CheckOffset(union _GdkEvent,visibility,0,9,43713)
-CheckOffset(union _GdkEvent,motion,0,9,43726)
-CheckOffset(union _GdkEvent,button,0,9,43739)
-CheckOffset(union _GdkEvent,scroll,0,9,43755)
-CheckOffset(union _GdkEvent,key,0,9,43766)
-CheckOffset(union _GdkEvent,crossing,0,9,43789)
-CheckOffset(union _GdkEvent,focus_change,0,9,43794)
-CheckOffset(union _GdkEvent,configure,0,9,43802)
-CheckOffset(union _GdkEvent,property,0,9,43809)
-CheckOffset(union _GdkEvent,selection,0,9,43818)
-CheckOffset(union _GdkEvent,owner_change,0,9,43830)
-CheckOffset(union _GdkEvent,proximity,0,9,43836)
-CheckOffset(union _GdkEvent,client,0,9,43846)
-CheckOffset(union _GdkEvent,dnd,0,9,43878)
-CheckOffset(union _GdkEvent,window_state,0,9,43891)
-CheckOffset(union _GdkEvent,setting,0,9,43900)
+CheckOffset(union _GdkEvent,type,0,9,43686);
+CheckOffset(union _GdkEvent,any,0,9,43690);
+CheckOffset(union _GdkEvent,expose,0,9,43701);
+CheckOffset(union _GdkEvent,no_expose,0,9,43705);
+CheckOffset(union _GdkEvent,visibility,0,9,43713);
+CheckOffset(union _GdkEvent,motion,0,9,43726);
+CheckOffset(union _GdkEvent,button,0,9,43739);
+CheckOffset(union _GdkEvent,scroll,0,9,43755);
+CheckOffset(union _GdkEvent,key,0,9,43766);
+CheckOffset(union _GdkEvent,crossing,0,9,43789);
+CheckOffset(union _GdkEvent,focus_change,0,9,43794);
+CheckOffset(union _GdkEvent,configure,0,9,43802);
+CheckOffset(union _GdkEvent,property,0,9,43809);
+CheckOffset(union _GdkEvent,selection,0,9,43818);
+CheckOffset(union _GdkEvent,owner_change,0,9,43830);
+CheckOffset(union _GdkEvent,proximity,0,9,43836);
+CheckOffset(union _GdkEvent,client,0,9,43846);
+CheckOffset(union _GdkEvent,dnd,0,9,43878);
+CheckOffset(union _GdkEvent,window_state,0,9,43891);
+CheckOffset(union _GdkEvent,setting,0,9,43900);
 #elif __s390__ && !__s390x__
-CheckTypeSize(union _GdkEvent,72, 12746, 10)
+CheckTypeSize(union _GdkEvent,72, 12746, 10);
 Msg("Missing member data for _GdkEvent on S390\n");
-CheckOffset(union _GdkEvent,type,0,10,43686)
-CheckOffset(union _GdkEvent,any,0,10,43690)
-CheckOffset(union _GdkEvent,expose,0,10,43701)
-CheckOffset(union _GdkEvent,no_expose,0,10,43705)
-CheckOffset(union _GdkEvent,visibility,0,10,43713)
-CheckOffset(union _GdkEvent,motion,0,10,43726)
-CheckOffset(union _GdkEvent,button,0,10,43739)
-CheckOffset(union _GdkEvent,scroll,0,10,43755)
-CheckOffset(union _GdkEvent,key,0,10,43766)
-CheckOffset(union _GdkEvent,crossing,0,10,43789)
-CheckOffset(union _GdkEvent,focus_change,0,10,43794)
-CheckOffset(union _GdkEvent,configure,0,10,43802)
-CheckOffset(union _GdkEvent,property,0,10,43809)
-CheckOffset(union _GdkEvent,selection,0,10,43818)
-CheckOffset(union _GdkEvent,owner_change,0,10,43830)
-CheckOffset(union _GdkEvent,proximity,0,10,43836)
-CheckOffset(union _GdkEvent,client,0,10,43846)
-CheckOffset(union _GdkEvent,dnd,0,10,43878)
-CheckOffset(union _GdkEvent,window_state,0,10,43891)
-CheckOffset(union _GdkEvent,setting,0,10,43900)
+CheckOffset(union _GdkEvent,type,0,10,43686);
+CheckOffset(union _GdkEvent,any,0,10,43690);
+CheckOffset(union _GdkEvent,expose,0,10,43701);
+CheckOffset(union _GdkEvent,no_expose,0,10,43705);
+CheckOffset(union _GdkEvent,visibility,0,10,43713);
+CheckOffset(union _GdkEvent,motion,0,10,43726);
+CheckOffset(union _GdkEvent,button,0,10,43739);
+CheckOffset(union _GdkEvent,scroll,0,10,43755);
+CheckOffset(union _GdkEvent,key,0,10,43766);
+CheckOffset(union _GdkEvent,crossing,0,10,43789);
+CheckOffset(union _GdkEvent,focus_change,0,10,43794);
+CheckOffset(union _GdkEvent,configure,0,10,43802);
+CheckOffset(union _GdkEvent,property,0,10,43809);
+CheckOffset(union _GdkEvent,selection,0,10,43818);
+CheckOffset(union _GdkEvent,owner_change,0,10,43830);
+CheckOffset(union _GdkEvent,proximity,0,10,43836);
+CheckOffset(union _GdkEvent,client,0,10,43846);
+CheckOffset(union _GdkEvent,dnd,0,10,43878);
+CheckOffset(union _GdkEvent,window_state,0,10,43891);
+CheckOffset(union _GdkEvent,setting,0,10,43900);
 #elif __s390x__
-CheckTypeSize(union _GdkEvent,88, 12746, 12)
+CheckTypeSize(union _GdkEvent,88, 12746, 12);
 Msg("Missing member data for _GdkEvent on S390X\n");
-CheckOffset(union _GdkEvent,type,0,12,43686)
-CheckOffset(union _GdkEvent,any,0,12,43690)
-CheckOffset(union _GdkEvent,expose,0,12,43701)
-CheckOffset(union _GdkEvent,no_expose,0,12,43705)
-CheckOffset(union _GdkEvent,visibility,0,12,43713)
-CheckOffset(union _GdkEvent,motion,0,12,43726)
-CheckOffset(union _GdkEvent,button,0,12,43739)
-CheckOffset(union _GdkEvent,scroll,0,12,43755)
-CheckOffset(union _GdkEvent,key,0,12,43766)
-CheckOffset(union _GdkEvent,crossing,0,12,43789)
-CheckOffset(union _GdkEvent,focus_change,0,12,43794)
-CheckOffset(union _GdkEvent,configure,0,12,43802)
-CheckOffset(union _GdkEvent,property,0,12,43809)
-CheckOffset(union _GdkEvent,selection,0,12,43818)
-CheckOffset(union _GdkEvent,owner_change,0,12,43830)
-CheckOffset(union _GdkEvent,proximity,0,12,43836)
-CheckOffset(union _GdkEvent,client,0,12,43846)
-CheckOffset(union _GdkEvent,dnd,0,12,43878)
-CheckOffset(union _GdkEvent,window_state,0,12,43891)
-CheckOffset(union _GdkEvent,setting,0,12,43900)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12746,0);
-Msg("Find size of _GdkEvent (12746)\n");
+CheckOffset(union _GdkEvent,type,0,12,43686);
+CheckOffset(union _GdkEvent,any,0,12,43690);
+CheckOffset(union _GdkEvent,expose,0,12,43701);
+CheckOffset(union _GdkEvent,no_expose,0,12,43705);
+CheckOffset(union _GdkEvent,visibility,0,12,43713);
+CheckOffset(union _GdkEvent,motion,0,12,43726);
+CheckOffset(union _GdkEvent,button,0,12,43739);
+CheckOffset(union _GdkEvent,scroll,0,12,43755);
+CheckOffset(union _GdkEvent,key,0,12,43766);
+CheckOffset(union _GdkEvent,crossing,0,12,43789);
+CheckOffset(union _GdkEvent,focus_change,0,12,43794);
+CheckOffset(union _GdkEvent,configure,0,12,43802);
+CheckOffset(union _GdkEvent,property,0,12,43809);
+CheckOffset(union _GdkEvent,selection,0,12,43818);
+CheckOffset(union _GdkEvent,owner_change,0,12,43830);
+CheckOffset(union _GdkEvent,proximity,0,12,43836);
+CheckOffset(union _GdkEvent,client,0,12,43846);
+CheckOffset(union _GdkEvent,dnd,0,12,43878);
+CheckOffset(union _GdkEvent,window_state,0,12,43891);
+CheckOffset(union _GdkEvent,setting,0,12,43900);
+#elif 1
+CheckTypeSize(union _GdkEvent,0, 12746, 1);
+Msg("Missing member data for _GdkEvent on All\n");
+CheckOffset(union _GdkEvent,type,0,1,43686);
+CheckOffset(union _GdkEvent,any,0,1,43690);
+CheckOffset(union _GdkEvent,expose,0,1,43701);
+CheckOffset(union _GdkEvent,no_expose,0,1,43705);
+CheckOffset(union _GdkEvent,visibility,0,1,43713);
+CheckOffset(union _GdkEvent,motion,0,1,43726);
+CheckOffset(union _GdkEvent,button,0,1,43739);
+CheckOffset(union _GdkEvent,scroll,0,1,43755);
+CheckOffset(union _GdkEvent,key,0,1,43766);
+CheckOffset(union _GdkEvent,crossing,0,1,43789);
+CheckOffset(union _GdkEvent,focus_change,0,1,43794);
+CheckOffset(union _GdkEvent,configure,0,1,43802);
+CheckOffset(union _GdkEvent,property,0,1,43809);
+CheckOffset(union _GdkEvent,selection,0,1,43818);
+CheckOffset(union _GdkEvent,owner_change,0,1,43830);
+CheckOffset(union _GdkEvent,proximity,0,1,43836);
+CheckOffset(union _GdkEvent,client,0,1,43846);
+CheckOffset(union _GdkEvent,dnd,0,1,43878);
+CheckOffset(union _GdkEvent,window_state,0,1,43891);
+CheckOffset(union _GdkEvent,setting,0,1,43900);
 #endif
 
 #if __i386__
@@ -4152,447 +4296,494 @@ CheckEnum("GDK_SCROLL",GDK_SCROLL,31,43682);
 CheckEnum("GDK_WINDOW_STATE",GDK_WINDOW_STATE,32,43683);
 CheckEnum("GDK_SETTING",GDK_SETTING,33,43684);
 CheckEnum("GDK_OWNER_CHANGE",GDK_OWNER_CHANGE,34,43685);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12747,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-501 (12747)\n");
+#elif 1
+CheckEnum("GDK_NOTHING",GDK_NOTHING,-1,43650);
+CheckEnum("GDK_DELETE",GDK_DELETE,0,43651);
+CheckEnum("GDK_DESTROY",GDK_DESTROY,1,43652);
+CheckEnum("GDK_EXPOSE",GDK_EXPOSE,2,43653);
+CheckEnum("GDK_MOTION_NOTIFY",GDK_MOTION_NOTIFY,3,43654);
+CheckEnum("GDK_BUTTON_PRESS",GDK_BUTTON_PRESS,4,43655);
+CheckEnum("GDK_2BUTTON_PRESS",GDK_2BUTTON_PRESS,5,43656);
+CheckEnum("GDK_3BUTTON_PRESS",GDK_3BUTTON_PRESS,6,43657);
+CheckEnum("GDK_BUTTON_RELEASE",GDK_BUTTON_RELEASE,7,43658);
+CheckEnum("GDK_KEY_PRESS",GDK_KEY_PRESS,8,43659);
+CheckEnum("GDK_KEY_RELEASE",GDK_KEY_RELEASE,9,43660);
+CheckEnum("GDK_ENTER_NOTIFY",GDK_ENTER_NOTIFY,10,43661);
+CheckEnum("GDK_LEAVE_NOTIFY",GDK_LEAVE_NOTIFY,11,43662);
+CheckEnum("GDK_FOCUS_CHANGE",GDK_FOCUS_CHANGE,12,43663);
+CheckEnum("GDK_CONFIGURE",GDK_CONFIGURE,13,43664);
+CheckEnum("GDK_MAP",GDK_MAP,14,43665);
+CheckEnum("GDK_UNMAP",GDK_UNMAP,15,43666);
+CheckEnum("GDK_PROPERTY_NOTIFY",GDK_PROPERTY_NOTIFY,16,43667);
+CheckEnum("GDK_SELECTION_CLEAR",GDK_SELECTION_CLEAR,17,43668);
+CheckEnum("GDK_SELECTION_REQUEST",GDK_SELECTION_REQUEST,18,43669);
+CheckEnum("GDK_SELECTION_NOTIFY",GDK_SELECTION_NOTIFY,19,43670);
+CheckEnum("GDK_PROXIMITY_IN",GDK_PROXIMITY_IN,20,43671);
+CheckEnum("GDK_PROXIMITY_OUT",GDK_PROXIMITY_OUT,21,43672);
+CheckEnum("GDK_DRAG_ENTER",GDK_DRAG_ENTER,22,43673);
+CheckEnum("GDK_DRAG_LEAVE",GDK_DRAG_LEAVE,23,43674);
+CheckEnum("GDK_DRAG_MOTION",GDK_DRAG_MOTION,24,43675);
+CheckEnum("GDK_DRAG_STATUS",GDK_DRAG_STATUS,25,43676);
+CheckEnum("GDK_DROP_START",GDK_DROP_START,26,43677);
+CheckEnum("GDK_DROP_FINISHED",GDK_DROP_FINISHED,27,43678);
+CheckEnum("GDK_CLIENT_EVENT",GDK_CLIENT_EVENT,28,43679);
+CheckEnum("GDK_VISIBILITY_NOTIFY",GDK_VISIBILITY_NOTIFY,29,43680);
+CheckEnum("GDK_NO_EXPOSE",GDK_NO_EXPOSE,30,43681);
+CheckEnum("GDK_SCROLL",GDK_SCROLL,31,43682);
+CheckEnum("GDK_WINDOW_STATE",GDK_WINDOW_STATE,32,43683);
+CheckEnum("GDK_SETTING",GDK_SETTING,33,43684);
+CheckEnum("GDK_OWNER_CHANGE",GDK_OWNER_CHANGE,34,43685);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkEventType,4, 12748, 2)
+CheckTypeSize(GdkEventType,4, 12748, 2);
 #elif __x86_64__
-CheckTypeSize(GdkEventType,4, 12748, 11)
+CheckTypeSize(GdkEventType,4, 12748, 11);
 #elif __ia64__
-CheckTypeSize(GdkEventType,4, 12748, 3)
+CheckTypeSize(GdkEventType,4, 12748, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkEventType,4, 12748, 6)
+CheckTypeSize(GdkEventType,4, 12748, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkEventType,4, 12748, 9)
+CheckTypeSize(GdkEventType,4, 12748, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkEventType,4, 12748, 10)
+CheckTypeSize(GdkEventType,4, 12748, 10);
 #elif __s390x__
-CheckTypeSize(GdkEventType,4, 12748, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12748,0);
-Msg("Find size of GdkEventType (12748)\n");
+CheckTypeSize(GdkEventType,4, 12748, 12);
+#elif 1
+CheckTypeSize(GdkEventType,0, 12748, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkEventAny,12, 12749, 2)
-CheckMemberSize(struct _GdkEventAny,window,4,2,43688)
-CheckOffset(struct _GdkEventAny,window,4,2,43688)
-CheckMemberSize(struct _GdkEventAny,send_event,1,2,43689)
-CheckOffset(struct _GdkEventAny,send_event,8,2,43689)
+CheckTypeSize(struct _GdkEventAny,12, 12749, 2);
+CheckMemberSize(struct _GdkEventAny,window,4,2,43688);
+CheckOffset(struct _GdkEventAny,window,4,2,43688);
+CheckMemberSize(struct _GdkEventAny,send_event,1,2,43689);
+CheckOffset(struct _GdkEventAny,send_event,8,2,43689);
 #elif __x86_64__
-CheckTypeSize(struct _GdkEventAny,24, 12749, 11)
-CheckMemberSize(struct _GdkEventAny,window,8,11,43688)
-CheckOffset(struct _GdkEventAny,window,8,11,43688)
-CheckMemberSize(struct _GdkEventAny,send_event,1,11,43689)
-CheckOffset(struct _GdkEventAny,send_event,16,11,43689)
+CheckTypeSize(struct _GdkEventAny,24, 12749, 11);
+CheckMemberSize(struct _GdkEventAny,window,8,11,43688);
+CheckOffset(struct _GdkEventAny,window,8,11,43688);
+CheckMemberSize(struct _GdkEventAny,send_event,1,11,43689);
+CheckOffset(struct _GdkEventAny,send_event,16,11,43689);
 #elif __ia64__
-CheckTypeSize(struct _GdkEventAny,24, 12749, 3)
-CheckMemberSize(struct _GdkEventAny,window,8,3,43688)
-CheckOffset(struct _GdkEventAny,window,8,3,43688)
-CheckMemberSize(struct _GdkEventAny,send_event,1,3,43689)
-CheckOffset(struct _GdkEventAny,send_event,16,3,43689)
+CheckTypeSize(struct _GdkEventAny,24, 12749, 3);
+CheckMemberSize(struct _GdkEventAny,window,8,3,43688);
+CheckOffset(struct _GdkEventAny,window,8,3,43688);
+CheckMemberSize(struct _GdkEventAny,send_event,1,3,43689);
+CheckOffset(struct _GdkEventAny,send_event,16,3,43689);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkEventAny,12, 12749, 6)
-CheckMemberSize(struct _GdkEventAny,window,4,6,43688)
-CheckOffset(struct _GdkEventAny,window,4,6,43688)
-CheckMemberSize(struct _GdkEventAny,send_event,1,6,43689)
-CheckOffset(struct _GdkEventAny,send_event,8,6,43689)
+CheckTypeSize(struct _GdkEventAny,12, 12749, 6);
+CheckMemberSize(struct _GdkEventAny,window,4,6,43688);
+CheckOffset(struct _GdkEventAny,window,4,6,43688);
+CheckMemberSize(struct _GdkEventAny,send_event,1,6,43689);
+CheckOffset(struct _GdkEventAny,send_event,8,6,43689);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkEventAny,24, 12749, 9)
-CheckMemberSize(struct _GdkEventAny,window,8,9,43688)
-CheckOffset(struct _GdkEventAny,window,8,9,43688)
-CheckMemberSize(struct _GdkEventAny,send_event,1,9,43689)
-CheckOffset(struct _GdkEventAny,send_event,16,9,43689)
+CheckTypeSize(struct _GdkEventAny,24, 12749, 9);
+CheckMemberSize(struct _GdkEventAny,window,8,9,43688);
+CheckOffset(struct _GdkEventAny,window,8,9,43688);
+CheckMemberSize(struct _GdkEventAny,send_event,1,9,43689);
+CheckOffset(struct _GdkEventAny,send_event,16,9,43689);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkEventAny,12, 12749, 10)
-CheckMemberSize(struct _GdkEventAny,window,4,10,43688)
-CheckOffset(struct _GdkEventAny,window,4,10,43688)
-CheckMemberSize(struct _GdkEventAny,send_event,1,10,43689)
-CheckOffset(struct _GdkEventAny,send_event,8,10,43689)
+CheckTypeSize(struct _GdkEventAny,12, 12749, 10);
+CheckMemberSize(struct _GdkEventAny,window,4,10,43688);
+CheckOffset(struct _GdkEventAny,window,4,10,43688);
+CheckMemberSize(struct _GdkEventAny,send_event,1,10,43689);
+CheckOffset(struct _GdkEventAny,send_event,8,10,43689);
 #elif __s390x__
-CheckTypeSize(struct _GdkEventAny,24, 12749, 12)
-CheckMemberSize(struct _GdkEventAny,window,8,12,43688)
-CheckOffset(struct _GdkEventAny,window,8,12,43688)
-CheckMemberSize(struct _GdkEventAny,send_event,1,12,43689)
-CheckOffset(struct _GdkEventAny,send_event,16,12,43689)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12749,0);
-Msg("Find size of _GdkEventAny (12749)\n");
+CheckTypeSize(struct _GdkEventAny,24, 12749, 12);
+CheckMemberSize(struct _GdkEventAny,window,8,12,43688);
+CheckOffset(struct _GdkEventAny,window,8,12,43688);
+CheckMemberSize(struct _GdkEventAny,send_event,1,12,43689);
+CheckOffset(struct _GdkEventAny,send_event,16,12,43689);
+#elif 1
+CheckTypeSize(struct _GdkEventAny,0, 12749, 1);
+Msg("Missing member data for _GdkEventAny on All\n");
+CheckOffset(struct _GdkEventAny,type,0,1,43687);
+CheckOffset(struct _GdkEventAny,window,0,1,43688);
+CheckOffset(struct _GdkEventAny,send_event,0,1,43689);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkEventAny,12, 12750, 2)
+CheckTypeSize(GdkEventAny,12, 12750, 2);
 #elif __x86_64__
-CheckTypeSize(GdkEventAny,24, 12750, 11)
+CheckTypeSize(GdkEventAny,24, 12750, 11);
 #elif __ia64__
-CheckTypeSize(GdkEventAny,24, 12750, 3)
+CheckTypeSize(GdkEventAny,24, 12750, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkEventAny,12, 12750, 6)
+CheckTypeSize(GdkEventAny,12, 12750, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkEventAny,24, 12750, 9)
+CheckTypeSize(GdkEventAny,24, 12750, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkEventAny,12, 12750, 10)
+CheckTypeSize(GdkEventAny,12, 12750, 10);
 #elif __s390x__
-CheckTypeSize(GdkEventAny,24, 12750, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12750,0);
-Msg("Find size of GdkEventAny (12750)\n");
+CheckTypeSize(GdkEventAny,24, 12750, 12);
+#elif 1
+CheckTypeSize(GdkEventAny,0, 12750, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkEventExpose,36, 12751, 2)
-CheckMemberSize(struct _GdkEventExpose,window,4,2,43692)
-CheckOffset(struct _GdkEventExpose,window,4,2,43692)
-CheckMemberSize(struct _GdkEventExpose,send_event,1,2,43693)
-CheckOffset(struct _GdkEventExpose,send_event,8,2,43693)
-CheckMemberSize(struct _GdkEventExpose,area,16,2,43698)
-CheckOffset(struct _GdkEventExpose,area,12,2,43698)
-CheckMemberSize(struct _GdkEventExpose,region,4,2,43699)
-CheckOffset(struct _GdkEventExpose,region,28,2,43699)
-CheckMemberSize(struct _GdkEventExpose,count,4,2,43700)
-CheckOffset(struct _GdkEventExpose,count,32,2,43700)
+CheckTypeSize(struct _GdkEventExpose,36, 12751, 2);
+CheckMemberSize(struct _GdkEventExpose,window,4,2,43692);
+CheckOffset(struct _GdkEventExpose,window,4,2,43692);
+CheckMemberSize(struct _GdkEventExpose,send_event,1,2,43693);
+CheckOffset(struct _GdkEventExpose,send_event,8,2,43693);
+CheckMemberSize(struct _GdkEventExpose,area,16,2,43698);
+CheckOffset(struct _GdkEventExpose,area,12,2,43698);
+CheckMemberSize(struct _GdkEventExpose,region,4,2,43699);
+CheckOffset(struct _GdkEventExpose,region,28,2,43699);
+CheckMemberSize(struct _GdkEventExpose,count,4,2,43700);
+CheckOffset(struct _GdkEventExpose,count,32,2,43700);
 #elif __x86_64__
-CheckTypeSize(struct _GdkEventExpose,56, 12751, 11)
-CheckMemberSize(struct _GdkEventExpose,window,8,11,43692)
-CheckOffset(struct _GdkEventExpose,window,8,11,43692)
-CheckMemberSize(struct _GdkEventExpose,send_event,1,11,43693)
-CheckOffset(struct _GdkEventExpose,send_event,16,11,43693)
-CheckMemberSize(struct _GdkEventExpose,area,16,11,43698)
-CheckOffset(struct _GdkEventExpose,area,20,11,43698)
-CheckMemberSize(struct _GdkEventExpose,region,8,11,43699)
-CheckOffset(struct _GdkEventExpose,region,40,11,43699)
-CheckMemberSize(struct _GdkEventExpose,count,4,11,43700)
-CheckOffset(struct _GdkEventExpose,count,48,11,43700)
+CheckTypeSize(struct _GdkEventExpose,56, 12751, 11);
+CheckMemberSize(struct _GdkEventExpose,window,8,11,43692);
+CheckOffset(struct _GdkEventExpose,window,8,11,43692);
+CheckMemberSize(struct _GdkEventExpose,send_event,1,11,43693);
+CheckOffset(struct _GdkEventExpose,send_event,16,11,43693);
+CheckMemberSize(struct _GdkEventExpose,area,16,11,43698);
+CheckOffset(struct _GdkEventExpose,area,20,11,43698);
+CheckMemberSize(struct _GdkEventExpose,region,8,11,43699);
+CheckOffset(struct _GdkEventExpose,region,40,11,43699);
+CheckMemberSize(struct _GdkEventExpose,count,4,11,43700);
+CheckOffset(struct _GdkEventExpose,count,48,11,43700);
 #elif __ia64__
-CheckTypeSize(struct _GdkEventExpose,56, 12751, 3)
-CheckMemberSize(struct _GdkEventExpose,window,8,3,43692)
-CheckOffset(struct _GdkEventExpose,window,8,3,43692)
-CheckMemberSize(struct _GdkEventExpose,send_event,1,3,43693)
-CheckOffset(struct _GdkEventExpose,send_event,16,3,43693)
-CheckMemberSize(struct _GdkEventExpose,area,16,3,43698)
-CheckOffset(struct _GdkEventExpose,area,20,3,43698)
-CheckMemberSize(struct _GdkEventExpose,region,8,3,43699)
-CheckOffset(struct _GdkEventExpose,region,40,3,43699)
-CheckMemberSize(struct _GdkEventExpose,count,4,3,43700)
-CheckOffset(struct _GdkEventExpose,count,48,3,43700)
+CheckTypeSize(struct _GdkEventExpose,56, 12751, 3);
+CheckMemberSize(struct _GdkEventExpose,window,8,3,43692);
+CheckOffset(struct _GdkEventExpose,window,8,3,43692);
+CheckMemberSize(struct _GdkEventExpose,send_event,1,3,43693);
+CheckOffset(struct _GdkEventExpose,send_event,16,3,43693);
+CheckMemberSize(struct _GdkEventExpose,area,16,3,43698);
+CheckOffset(struct _GdkEventExpose,area,20,3,43698);
+CheckMemberSize(struct _GdkEventExpose,region,8,3,43699);
+CheckOffset(struct _GdkEventExpose,region,40,3,43699);
+CheckMemberSize(struct _GdkEventExpose,count,4,3,43700);
+CheckOffset(struct _GdkEventExpose,count,48,3,43700);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkEventExpose,36, 12751, 6)
-CheckMemberSize(struct _GdkEventExpose,window,4,6,43692)
-CheckOffset(struct _GdkEventExpose,window,4,6,43692)
-CheckMemberSize(struct _GdkEventExpose,send_event,1,6,43693)
-CheckOffset(struct _GdkEventExpose,send_event,8,6,43693)
-CheckMemberSize(struct _GdkEventExpose,area,16,6,43698)
-CheckOffset(struct _GdkEventExpose,area,12,6,43698)
-CheckMemberSize(struct _GdkEventExpose,region,4,6,43699)
-CheckOffset(struct _GdkEventExpose,region,28,6,43699)
-CheckMemberSize(struct _GdkEventExpose,count,4,6,43700)
-CheckOffset(struct _GdkEventExpose,count,32,6,43700)
+CheckTypeSize(struct _GdkEventExpose,36, 12751, 6);
+CheckMemberSize(struct _GdkEventExpose,window,4,6,43692);
+CheckOffset(struct _GdkEventExpose,window,4,6,43692);
+CheckMemberSize(struct _GdkEventExpose,send_event,1,6,43693);
+CheckOffset(struct _GdkEventExpose,send_event,8,6,43693);
+CheckMemberSize(struct _GdkEventExpose,area,16,6,43698);
+CheckOffset(struct _GdkEventExpose,area,12,6,43698);
+CheckMemberSize(struct _GdkEventExpose,region,4,6,43699);
+CheckOffset(struct _GdkEventExpose,region,28,6,43699);
+CheckMemberSize(struct _GdkEventExpose,count,4,6,43700);
+CheckOffset(struct _GdkEventExpose,count,32,6,43700);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkEventExpose,56, 12751, 9)
-CheckMemberSize(struct _GdkEventExpose,window,8,9,43692)
-CheckOffset(struct _GdkEventExpose,window,8,9,43692)
-CheckMemberSize(struct _GdkEventExpose,send_event,1,9,43693)
-CheckOffset(struct _GdkEventExpose,send_event,16,9,43693)
-CheckMemberSize(struct _GdkEventExpose,area,16,9,43698)
-CheckOffset(struct _GdkEventExpose,area,20,9,43698)
-CheckMemberSize(struct _GdkEventExpose,region,8,9,43699)
-CheckOffset(struct _GdkEventExpose,region,40,9,43699)
-CheckMemberSize(struct _GdkEventExpose,count,4,9,43700)
-CheckOffset(struct _GdkEventExpose,count,48,9,43700)
+CheckTypeSize(struct _GdkEventExpose,56, 12751, 9);
+CheckMemberSize(struct _GdkEventExpose,window,8,9,43692);
+CheckOffset(struct _GdkEventExpose,window,8,9,43692);
+CheckMemberSize(struct _GdkEventExpose,send_event,1,9,43693);
+CheckOffset(struct _GdkEventExpose,send_event,16,9,43693);
+CheckMemberSize(struct _GdkEventExpose,area,16,9,43698);
+CheckOffset(struct _GdkEventExpose,area,20,9,43698);
+CheckMemberSize(struct _GdkEventExpose,region,8,9,43699);
+CheckOffset(struct _GdkEventExpose,region,40,9,43699);
+CheckMemberSize(struct _GdkEventExpose,count,4,9,43700);
+CheckOffset(struct _GdkEventExpose,count,48,9,43700);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkEventExpose,36, 12751, 10)
-CheckMemberSize(struct _GdkEventExpose,window,4,10,43692)
-CheckOffset(struct _GdkEventExpose,window,4,10,43692)
-CheckMemberSize(struct _GdkEventExpose,send_event,1,10,43693)
-CheckOffset(struct _GdkEventExpose,send_event,8,10,43693)
-CheckMemberSize(struct _GdkEventExpose,area,16,10,43698)
-CheckOffset(struct _GdkEventExpose,area,12,10,43698)
-CheckMemberSize(struct _GdkEventExpose,region,4,10,43699)
-CheckOffset(struct _GdkEventExpose,region,28,10,43699)
-CheckMemberSize(struct _GdkEventExpose,count,4,10,43700)
-CheckOffset(struct _GdkEventExpose,count,32,10,43700)
+CheckTypeSize(struct _GdkEventExpose,36, 12751, 10);
+CheckMemberSize(struct _GdkEventExpose,window,4,10,43692);
+CheckOffset(struct _GdkEventExpose,window,4,10,43692);
+CheckMemberSize(struct _GdkEventExpose,send_event,1,10,43693);
+CheckOffset(struct _GdkEventExpose,send_event,8,10,43693);
+CheckMemberSize(struct _GdkEventExpose,area,16,10,43698);
+CheckOffset(struct _GdkEventExpose,area,12,10,43698);
+CheckMemberSize(struct _GdkEventExpose,region,4,10,43699);
+CheckOffset(struct _GdkEventExpose,region,28,10,43699);
+CheckMemberSize(struct _GdkEventExpose,count,4,10,43700);
+CheckOffset(struct _GdkEventExpose,count,32,10,43700);
 #elif __s390x__
-CheckTypeSize(struct _GdkEventExpose,56, 12751, 12)
-CheckMemberSize(struct _GdkEventExpose,window,8,12,43692)
-CheckOffset(struct _GdkEventExpose,window,8,12,43692)
-CheckMemberSize(struct _GdkEventExpose,send_event,1,12,43693)
-CheckOffset(struct _GdkEventExpose,send_event,16,12,43693)
-CheckMemberSize(struct _GdkEventExpose,area,16,12,43698)
-CheckOffset(struct _GdkEventExpose,area,20,12,43698)
-CheckMemberSize(struct _GdkEventExpose,region,8,12,43699)
-CheckOffset(struct _GdkEventExpose,region,40,12,43699)
-CheckMemberSize(struct _GdkEventExpose,count,4,12,43700)
-CheckOffset(struct _GdkEventExpose,count,48,12,43700)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12751,0);
-Msg("Find size of _GdkEventExpose (12751)\n");
+CheckTypeSize(struct _GdkEventExpose,56, 12751, 12);
+CheckMemberSize(struct _GdkEventExpose,window,8,12,43692);
+CheckOffset(struct _GdkEventExpose,window,8,12,43692);
+CheckMemberSize(struct _GdkEventExpose,send_event,1,12,43693);
+CheckOffset(struct _GdkEventExpose,send_event,16,12,43693);
+CheckMemberSize(struct _GdkEventExpose,area,16,12,43698);
+CheckOffset(struct _GdkEventExpose,area,20,12,43698);
+CheckMemberSize(struct _GdkEventExpose,region,8,12,43699);
+CheckOffset(struct _GdkEventExpose,region,40,12,43699);
+CheckMemberSize(struct _GdkEventExpose,count,4,12,43700);
+CheckOffset(struct _GdkEventExpose,count,48,12,43700);
+#elif 1
+CheckTypeSize(struct _GdkEventExpose,0, 12751, 1);
+Msg("Missing member data for _GdkEventExpose on All\n");
+CheckOffset(struct _GdkEventExpose,type,0,1,43691);
+CheckOffset(struct _GdkEventExpose,window,0,1,43692);
+CheckOffset(struct _GdkEventExpose,send_event,0,1,43693);
+CheckOffset(struct _GdkEventExpose,area,0,1,43698);
+CheckOffset(struct _GdkEventExpose,region,0,1,43699);
+CheckOffset(struct _GdkEventExpose,count,0,1,43700);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkRectangle,16, 12752, 2)
-CheckMemberSize(struct _GdkRectangle,y,4,2,43695)
-CheckOffset(struct _GdkRectangle,y,4,2,43695)
-CheckMemberSize(struct _GdkRectangle,width,4,2,43696)
-CheckOffset(struct _GdkRectangle,width,8,2,43696)
-CheckMemberSize(struct _GdkRectangle,height,4,2,43697)
-CheckOffset(struct _GdkRectangle,height,12,2,43697)
+CheckTypeSize(struct _GdkRectangle,16, 12752, 2);
+CheckMemberSize(struct _GdkRectangle,y,4,2,43695);
+CheckOffset(struct _GdkRectangle,y,4,2,43695);
+CheckMemberSize(struct _GdkRectangle,width,4,2,43696);
+CheckOffset(struct _GdkRectangle,width,8,2,43696);
+CheckMemberSize(struct _GdkRectangle,height,4,2,43697);
+CheckOffset(struct _GdkRectangle,height,12,2,43697);
 #elif __x86_64__
-CheckTypeSize(struct _GdkRectangle,16, 12752, 11)
-CheckMemberSize(struct _GdkRectangle,y,4,11,43695)
-CheckOffset(struct _GdkRectangle,y,4,11,43695)
-CheckMemberSize(struct _GdkRectangle,width,4,11,43696)
-CheckOffset(struct _GdkRectangle,width,8,11,43696)
-CheckMemberSize(struct _GdkRectangle,height,4,11,43697)
-CheckOffset(struct _GdkRectangle,height,12,11,43697)
+CheckTypeSize(struct _GdkRectangle,16, 12752, 11);
+CheckMemberSize(struct _GdkRectangle,y,4,11,43695);
+CheckOffset(struct _GdkRectangle,y,4,11,43695);
+CheckMemberSize(struct _GdkRectangle,width,4,11,43696);
+CheckOffset(struct _GdkRectangle,width,8,11,43696);
+CheckMemberSize(struct _GdkRectangle,height,4,11,43697);
+CheckOffset(struct _GdkRectangle,height,12,11,43697);
 #elif __ia64__
-CheckTypeSize(struct _GdkRectangle,16, 12752, 3)
-CheckMemberSize(struct _GdkRectangle,y,4,3,43695)
-CheckOffset(struct _GdkRectangle,y,4,3,43695)
-CheckMemberSize(struct _GdkRectangle,width,4,3,43696)
-CheckOffset(struct _GdkRectangle,width,8,3,43696)
-CheckMemberSize(struct _GdkRectangle,height,4,3,43697)
-CheckOffset(struct _GdkRectangle,height,12,3,43697)
+CheckTypeSize(struct _GdkRectangle,16, 12752, 3);
+CheckMemberSize(struct _GdkRectangle,y,4,3,43695);
+CheckOffset(struct _GdkRectangle,y,4,3,43695);
+CheckMemberSize(struct _GdkRectangle,width,4,3,43696);
+CheckOffset(struct _GdkRectangle,width,8,3,43696);
+CheckMemberSize(struct _GdkRectangle,height,4,3,43697);
+CheckOffset(struct _GdkRectangle,height,12,3,43697);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkRectangle,16, 12752, 6)
-CheckMemberSize(struct _GdkRectangle,y,4,6,43695)
-CheckOffset(struct _GdkRectangle,y,4,6,43695)
-CheckMemberSize(struct _GdkRectangle,width,4,6,43696)
-CheckOffset(struct _GdkRectangle,width,8,6,43696)
-CheckMemberSize(struct _GdkRectangle,height,4,6,43697)
-CheckOffset(struct _GdkRectangle,height,12,6,43697)
+CheckTypeSize(struct _GdkRectangle,16, 12752, 6);
+CheckMemberSize(struct _GdkRectangle,y,4,6,43695);
+CheckOffset(struct _GdkRectangle,y,4,6,43695);
+CheckMemberSize(struct _GdkRectangle,width,4,6,43696);
+CheckOffset(struct _GdkRectangle,width,8,6,43696);
+CheckMemberSize(struct _GdkRectangle,height,4,6,43697);
+CheckOffset(struct _GdkRectangle,height,12,6,43697);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkRectangle,16, 12752, 9)
-CheckMemberSize(struct _GdkRectangle,y,4,9,43695)
-CheckOffset(struct _GdkRectangle,y,4,9,43695)
-CheckMemberSize(struct _GdkRectangle,width,4,9,43696)
-CheckOffset(struct _GdkRectangle,width,8,9,43696)
-CheckMemberSize(struct _GdkRectangle,height,4,9,43697)
-CheckOffset(struct _GdkRectangle,height,12,9,43697)
+CheckTypeSize(struct _GdkRectangle,16, 12752, 9);
+CheckMemberSize(struct _GdkRectangle,y,4,9,43695);
+CheckOffset(struct _GdkRectangle,y,4,9,43695);
+CheckMemberSize(struct _GdkRectangle,width,4,9,43696);
+CheckOffset(struct _GdkRectangle,width,8,9,43696);
+CheckMemberSize(struct _GdkRectangle,height,4,9,43697);
+CheckOffset(struct _GdkRectangle,height,12,9,43697);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkRectangle,16, 12752, 10)
-CheckMemberSize(struct _GdkRectangle,y,4,10,43695)
-CheckOffset(struct _GdkRectangle,y,4,10,43695)
-CheckMemberSize(struct _GdkRectangle,width,4,10,43696)
-CheckOffset(struct _GdkRectangle,width,8,10,43696)
-CheckMemberSize(struct _GdkRectangle,height,4,10,43697)
-CheckOffset(struct _GdkRectangle,height,12,10,43697)
+CheckTypeSize(struct _GdkRectangle,16, 12752, 10);
+CheckMemberSize(struct _GdkRectangle,y,4,10,43695);
+CheckOffset(struct _GdkRectangle,y,4,10,43695);
+CheckMemberSize(struct _GdkRectangle,width,4,10,43696);
+CheckOffset(struct _GdkRectangle,width,8,10,43696);
+CheckMemberSize(struct _GdkRectangle,height,4,10,43697);
+CheckOffset(struct _GdkRectangle,height,12,10,43697);
 #elif __s390x__
-CheckTypeSize(struct _GdkRectangle,16, 12752, 12)
-CheckMemberSize(struct _GdkRectangle,y,4,12,43695)
-CheckOffset(struct _GdkRectangle,y,4,12,43695)
-CheckMemberSize(struct _GdkRectangle,width,4,12,43696)
-CheckOffset(struct _GdkRectangle,width,8,12,43696)
-CheckMemberSize(struct _GdkRectangle,height,4,12,43697)
-CheckOffset(struct _GdkRectangle,height,12,12,43697)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12752,0);
-Msg("Find size of _GdkRectangle (12752)\n");
+CheckTypeSize(struct _GdkRectangle,16, 12752, 12);
+CheckMemberSize(struct _GdkRectangle,y,4,12,43695);
+CheckOffset(struct _GdkRectangle,y,4,12,43695);
+CheckMemberSize(struct _GdkRectangle,width,4,12,43696);
+CheckOffset(struct _GdkRectangle,width,8,12,43696);
+CheckMemberSize(struct _GdkRectangle,height,4,12,43697);
+CheckOffset(struct _GdkRectangle,height,12,12,43697);
+#elif 1
+CheckTypeSize(struct _GdkRectangle,0, 12752, 1);
+Msg("Missing member data for _GdkRectangle on All\n");
+CheckOffset(struct _GdkRectangle,x,0,1,43694);
+CheckOffset(struct _GdkRectangle,y,0,1,43695);
+CheckOffset(struct _GdkRectangle,width,0,1,43696);
+CheckOffset(struct _GdkRectangle,height,0,1,43697);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkRectangle,16, 12753, 2)
+CheckTypeSize(GdkRectangle,16, 12753, 2);
 #elif __x86_64__
-CheckTypeSize(GdkRectangle,16, 12753, 11)
+CheckTypeSize(GdkRectangle,16, 12753, 11);
 #elif __ia64__
-CheckTypeSize(GdkRectangle,16, 12753, 3)
+CheckTypeSize(GdkRectangle,16, 12753, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkRectangle,16, 12753, 6)
+CheckTypeSize(GdkRectangle,16, 12753, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkRectangle,16, 12753, 9)
+CheckTypeSize(GdkRectangle,16, 12753, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkRectangle,16, 12753, 10)
+CheckTypeSize(GdkRectangle,16, 12753, 10);
 #elif __s390x__
-CheckTypeSize(GdkRectangle,16, 12753, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12753,0);
-Msg("Find size of GdkRectangle (12753)\n");
+CheckTypeSize(GdkRectangle,16, 12753, 12);
+#elif 1
+CheckTypeSize(GdkRectangle,0, 12753, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkRegion,0, 12755, 2)
+CheckTypeSize(GdkRegion,0, 12755, 2);
 #elif __x86_64__
-CheckTypeSize(GdkRegion,0, 12755, 11)
+CheckTypeSize(GdkRegion,0, 12755, 11);
 #elif __ia64__
-CheckTypeSize(GdkRegion,0, 12755, 3)
+CheckTypeSize(GdkRegion,0, 12755, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkRegion,0, 12755, 6)
+CheckTypeSize(GdkRegion,0, 12755, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkRegion,0, 12755, 9)
+CheckTypeSize(GdkRegion,0, 12755, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkRegion,0, 12755, 10)
+CheckTypeSize(GdkRegion,0, 12755, 10);
 #elif __s390x__
-CheckTypeSize(GdkRegion,0, 12755, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12755,0);
-Msg("Find size of GdkRegion (12755)\n");
+CheckTypeSize(GdkRegion,0, 12755, 12);
+#elif 1
+CheckTypeSize(GdkRegion,0, 12755, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkRegion *,4, 12756, 2)
+CheckTypeSize(GdkRegion *,4, 12756, 2);
 #elif __x86_64__
-CheckTypeSize(GdkRegion *,8, 12756, 11)
+CheckTypeSize(GdkRegion *,8, 12756, 11);
 #elif __ia64__
-CheckTypeSize(GdkRegion *,8, 12756, 3)
+CheckTypeSize(GdkRegion *,8, 12756, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkRegion *,4, 12756, 6)
+CheckTypeSize(GdkRegion *,4, 12756, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkRegion *,8, 12756, 9)
+CheckTypeSize(GdkRegion *,8, 12756, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkRegion *,4, 12756, 10)
+CheckTypeSize(GdkRegion *,4, 12756, 10);
 #elif __s390x__
-CheckTypeSize(GdkRegion *,8, 12756, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12756,0);
-Msg("Find size of GdkRegion * (12756)\n");
+CheckTypeSize(GdkRegion *,8, 12756, 12);
+#elif 1
+CheckTypeSize(GdkRegion *,0, 12756, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkEventExpose,36, 12757, 2)
+CheckTypeSize(GdkEventExpose,36, 12757, 2);
 #elif __x86_64__
-CheckTypeSize(GdkEventExpose,56, 12757, 11)
+CheckTypeSize(GdkEventExpose,56, 12757, 11);
 #elif __ia64__
-CheckTypeSize(GdkEventExpose,56, 12757, 3)
+CheckTypeSize(GdkEventExpose,56, 12757, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkEventExpose,36, 12757, 6)
+CheckTypeSize(GdkEventExpose,36, 12757, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkEventExpose,56, 12757, 9)
+CheckTypeSize(GdkEventExpose,56, 12757, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkEventExpose,36, 12757, 10)
+CheckTypeSize(GdkEventExpose,36, 12757, 10);
 #elif __s390x__
-CheckTypeSize(GdkEventExpose,56, 12757, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12757,0);
-Msg("Find size of GdkEventExpose (12757)\n");
+CheckTypeSize(GdkEventExpose,56, 12757, 12);
+#elif 1
+CheckTypeSize(GdkEventExpose,0, 12757, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkEventNoExpose,12, 12758, 2)
-CheckMemberSize(struct _GdkEventNoExpose,window,4,2,43703)
-CheckOffset(struct _GdkEventNoExpose,window,4,2,43703)
-CheckMemberSize(struct _GdkEventNoExpose,send_event,1,2,43704)
-CheckOffset(struct _GdkEventNoExpose,send_event,8,2,43704)
+CheckTypeSize(struct _GdkEventNoExpose,12, 12758, 2);
+CheckMemberSize(struct _GdkEventNoExpose,window,4,2,43703);
+CheckOffset(struct _GdkEventNoExpose,window,4,2,43703);
+CheckMemberSize(struct _GdkEventNoExpose,send_event,1,2,43704);
+CheckOffset(struct _GdkEventNoExpose,send_event,8,2,43704);
 #elif __x86_64__
-CheckTypeSize(struct _GdkEventNoExpose,24, 12758, 11)
-CheckMemberSize(struct _GdkEventNoExpose,window,8,11,43703)
-CheckOffset(struct _GdkEventNoExpose,window,8,11,43703)
-CheckMemberSize(struct _GdkEventNoExpose,send_event,1,11,43704)
-CheckOffset(struct _GdkEventNoExpose,send_event,16,11,43704)
+CheckTypeSize(struct _GdkEventNoExpose,24, 12758, 11);
+CheckMemberSize(struct _GdkEventNoExpose,window,8,11,43703);
+CheckOffset(struct _GdkEventNoExpose,window,8,11,43703);
+CheckMemberSize(struct _GdkEventNoExpose,send_event,1,11,43704);
+CheckOffset(struct _GdkEventNoExpose,send_event,16,11,43704);
 #elif __ia64__
-CheckTypeSize(struct _GdkEventNoExpose,24, 12758, 3)
-CheckMemberSize(struct _GdkEventNoExpose,window,8,3,43703)
-CheckOffset(struct _GdkEventNoExpose,window,8,3,43703)
-CheckMemberSize(struct _GdkEventNoExpose,send_event,1,3,43704)
-CheckOffset(struct _GdkEventNoExpose,send_event,16,3,43704)
+CheckTypeSize(struct _GdkEventNoExpose,24, 12758, 3);
+CheckMemberSize(struct _GdkEventNoExpose,window,8,3,43703);
+CheckOffset(struct _GdkEventNoExpose,window,8,3,43703);
+CheckMemberSize(struct _GdkEventNoExpose,send_event,1,3,43704);
+CheckOffset(struct _GdkEventNoExpose,send_event,16,3,43704);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkEventNoExpose,12, 12758, 6)
-CheckMemberSize(struct _GdkEventNoExpose,window,4,6,43703)
-CheckOffset(struct _GdkEventNoExpose,window,4,6,43703)
-CheckMemberSize(struct _GdkEventNoExpose,send_event,1,6,43704)
-CheckOffset(struct _GdkEventNoExpose,send_event,8,6,43704)
+CheckTypeSize(struct _GdkEventNoExpose,12, 12758, 6);
+CheckMemberSize(struct _GdkEventNoExpose,window,4,6,43703);
+CheckOffset(struct _GdkEventNoExpose,window,4,6,43703);
+CheckMemberSize(struct _GdkEventNoExpose,send_event,1,6,43704);
+CheckOffset(struct _GdkEventNoExpose,send_event,8,6,43704);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkEventNoExpose,24, 12758, 9)
-CheckMemberSize(struct _GdkEventNoExpose,window,8,9,43703)
-CheckOffset(struct _GdkEventNoExpose,window,8,9,43703)
-CheckMemberSize(struct _GdkEventNoExpose,send_event,1,9,43704)
-CheckOffset(struct _GdkEventNoExpose,send_event,16,9,43704)
+CheckTypeSize(struct _GdkEventNoExpose,24, 12758, 9);
+CheckMemberSize(struct _GdkEventNoExpose,window,8,9,43703);
+CheckOffset(struct _GdkEventNoExpose,window,8,9,43703);
+CheckMemberSize(struct _GdkEventNoExpose,send_event,1,9,43704);
+CheckOffset(struct _GdkEventNoExpose,send_event,16,9,43704);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkEventNoExpose,12, 12758, 10)
-CheckMemberSize(struct _GdkEventNoExpose,window,4,10,43703)
-CheckOffset(struct _GdkEventNoExpose,window,4,10,43703)
-CheckMemberSize(struct _GdkEventNoExpose,send_event,1,10,43704)
-CheckOffset(struct _GdkEventNoExpose,send_event,8,10,43704)
+CheckTypeSize(struct _GdkEventNoExpose,12, 12758, 10);
+CheckMemberSize(struct _GdkEventNoExpose,window,4,10,43703);
+CheckOffset(struct _GdkEventNoExpose,window,4,10,43703);
+CheckMemberSize(struct _GdkEventNoExpose,send_event,1,10,43704);
+CheckOffset(struct _GdkEventNoExpose,send_event,8,10,43704);
 #elif __s390x__
-CheckTypeSize(struct _GdkEventNoExpose,24, 12758, 12)
-CheckMemberSize(struct _GdkEventNoExpose,window,8,12,43703)
-CheckOffset(struct _GdkEventNoExpose,window,8,12,43703)
-CheckMemberSize(struct _GdkEventNoExpose,send_event,1,12,43704)
-CheckOffset(struct _GdkEventNoExpose,send_event,16,12,43704)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12758,0);
-Msg("Find size of _GdkEventNoExpose (12758)\n");
+CheckTypeSize(struct _GdkEventNoExpose,24, 12758, 12);
+CheckMemberSize(struct _GdkEventNoExpose,window,8,12,43703);
+CheckOffset(struct _GdkEventNoExpose,window,8,12,43703);
+CheckMemberSize(struct _GdkEventNoExpose,send_event,1,12,43704);
+CheckOffset(struct _GdkEventNoExpose,send_event,16,12,43704);
+#elif 1
+CheckTypeSize(struct _GdkEventNoExpose,0, 12758, 1);
+Msg("Missing member data for _GdkEventNoExpose on All\n");
+CheckOffset(struct _GdkEventNoExpose,type,0,1,43702);
+CheckOffset(struct _GdkEventNoExpose,window,0,1,43703);
+CheckOffset(struct _GdkEventNoExpose,send_event,0,1,43704);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkEventNoExpose,12, 12759, 2)
+CheckTypeSize(GdkEventNoExpose,12, 12759, 2);
 #elif __x86_64__
-CheckTypeSize(GdkEventNoExpose,24, 12759, 11)
+CheckTypeSize(GdkEventNoExpose,24, 12759, 11);
 #elif __ia64__
-CheckTypeSize(GdkEventNoExpose,24, 12759, 3)
+CheckTypeSize(GdkEventNoExpose,24, 12759, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkEventNoExpose,12, 12759, 6)
+CheckTypeSize(GdkEventNoExpose,12, 12759, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkEventNoExpose,24, 12759, 9)
+CheckTypeSize(GdkEventNoExpose,24, 12759, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkEventNoExpose,12, 12759, 10)
+CheckTypeSize(GdkEventNoExpose,12, 12759, 10);
 #elif __s390x__
-CheckTypeSize(GdkEventNoExpose,24, 12759, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12759,0);
-Msg("Find size of GdkEventNoExpose (12759)\n");
+CheckTypeSize(GdkEventNoExpose,24, 12759, 12);
+#elif 1
+CheckTypeSize(GdkEventNoExpose,0, 12759, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkEventVisibility,16, 12760, 2)
-CheckMemberSize(struct _GdkEventVisibility,window,4,2,43707)
-CheckOffset(struct _GdkEventVisibility,window,4,2,43707)
-CheckMemberSize(struct _GdkEventVisibility,send_event,1,2,43708)
-CheckOffset(struct _GdkEventVisibility,send_event,8,2,43708)
-CheckMemberSize(struct _GdkEventVisibility,state,4,2,43712)
-CheckOffset(struct _GdkEventVisibility,state,12,2,43712)
+CheckTypeSize(struct _GdkEventVisibility,16, 12760, 2);
+CheckMemberSize(struct _GdkEventVisibility,window,4,2,43707);
+CheckOffset(struct _GdkEventVisibility,window,4,2,43707);
+CheckMemberSize(struct _GdkEventVisibility,send_event,1,2,43708);
+CheckOffset(struct _GdkEventVisibility,send_event,8,2,43708);
+CheckMemberSize(struct _GdkEventVisibility,state,4,2,43712);
+CheckOffset(struct _GdkEventVisibility,state,12,2,43712);
 #elif __x86_64__
-CheckTypeSize(struct _GdkEventVisibility,24, 12760, 11)
-CheckMemberSize(struct _GdkEventVisibility,window,8,11,43707)
-CheckOffset(struct _GdkEventVisibility,window,8,11,43707)
-CheckMemberSize(struct _GdkEventVisibility,send_event,1,11,43708)
-CheckOffset(struct _GdkEventVisibility,send_event,16,11,43708)
-CheckMemberSize(struct _GdkEventVisibility,state,4,11,43712)
-CheckOffset(struct _GdkEventVisibility,state,20,11,43712)
+CheckTypeSize(struct _GdkEventVisibility,24, 12760, 11);
+CheckMemberSize(struct _GdkEventVisibility,window,8,11,43707);
+CheckOffset(struct _GdkEventVisibility,window,8,11,43707);
+CheckMemberSize(struct _GdkEventVisibility,send_event,1,11,43708);
+CheckOffset(struct _GdkEventVisibility,send_event,16,11,43708);
+CheckMemberSize(struct _GdkEventVisibility,state,4,11,43712);
+CheckOffset(struct _GdkEventVisibility,state,20,11,43712);
 #elif __ia64__
-CheckTypeSize(struct _GdkEventVisibility,24, 12760, 3)
-CheckMemberSize(struct _GdkEventVisibility,window,8,3,43707)
-CheckOffset(struct _GdkEventVisibility,window,8,3,43707)
-CheckMemberSize(struct _GdkEventVisibility,send_event,1,3,43708)
-CheckOffset(struct _GdkEventVisibility,send_event,16,3,43708)
-CheckMemberSize(struct _GdkEventVisibility,state,4,3,43712)
-CheckOffset(struct _GdkEventVisibility,state,20,3,43712)
+CheckTypeSize(struct _GdkEventVisibility,24, 12760, 3);
+CheckMemberSize(struct _GdkEventVisibility,window,8,3,43707);
+CheckOffset(struct _GdkEventVisibility,window,8,3,43707);
+CheckMemberSize(struct _GdkEventVisibility,send_event,1,3,43708);
+CheckOffset(struct _GdkEventVisibility,send_event,16,3,43708);
+CheckMemberSize(struct _GdkEventVisibility,state,4,3,43712);
+CheckOffset(struct _GdkEventVisibility,state,20,3,43712);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkEventVisibility,16, 12760, 6)
-CheckMemberSize(struct _GdkEventVisibility,window,4,6,43707)
-CheckOffset(struct _GdkEventVisibility,window,4,6,43707)
-CheckMemberSize(struct _GdkEventVisibility,send_event,1,6,43708)
-CheckOffset(struct _GdkEventVisibility,send_event,8,6,43708)
-CheckMemberSize(struct _GdkEventVisibility,state,4,6,43712)
-CheckOffset(struct _GdkEventVisibility,state,12,6,43712)
+CheckTypeSize(struct _GdkEventVisibility,16, 12760, 6);
+CheckMemberSize(struct _GdkEventVisibility,window,4,6,43707);
+CheckOffset(struct _GdkEventVisibility,window,4,6,43707);
+CheckMemberSize(struct _GdkEventVisibility,send_event,1,6,43708);
+CheckOffset(struct _GdkEventVisibility,send_event,8,6,43708);
+CheckMemberSize(struct _GdkEventVisibility,state,4,6,43712);
+CheckOffset(struct _GdkEventVisibility,state,12,6,43712);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkEventVisibility,24, 12760, 9)
-CheckMemberSize(struct _GdkEventVisibility,window,8,9,43707)
-CheckOffset(struct _GdkEventVisibility,window,8,9,43707)
-CheckMemberSize(struct _GdkEventVisibility,send_event,1,9,43708)
-CheckOffset(struct _GdkEventVisibility,send_event,16,9,43708)
-CheckMemberSize(struct _GdkEventVisibility,state,4,9,43712)
-CheckOffset(struct _GdkEventVisibility,state,20,9,43712)
+CheckTypeSize(struct _GdkEventVisibility,24, 12760, 9);
+CheckMemberSize(struct _GdkEventVisibility,window,8,9,43707);
+CheckOffset(struct _GdkEventVisibility,window,8,9,43707);
+CheckMemberSize(struct _GdkEventVisibility,send_event,1,9,43708);
+CheckOffset(struct _GdkEventVisibility,send_event,16,9,43708);
+CheckMemberSize(struct _GdkEventVisibility,state,4,9,43712);
+CheckOffset(struct _GdkEventVisibility,state,20,9,43712);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkEventVisibility,16, 12760, 10)
-CheckMemberSize(struct _GdkEventVisibility,window,4,10,43707)
-CheckOffset(struct _GdkEventVisibility,window,4,10,43707)
-CheckMemberSize(struct _GdkEventVisibility,send_event,1,10,43708)
-CheckOffset(struct _GdkEventVisibility,send_event,8,10,43708)
-CheckMemberSize(struct _GdkEventVisibility,state,4,10,43712)
-CheckOffset(struct _GdkEventVisibility,state,12,10,43712)
+CheckTypeSize(struct _GdkEventVisibility,16, 12760, 10);
+CheckMemberSize(struct _GdkEventVisibility,window,4,10,43707);
+CheckOffset(struct _GdkEventVisibility,window,4,10,43707);
+CheckMemberSize(struct _GdkEventVisibility,send_event,1,10,43708);
+CheckOffset(struct _GdkEventVisibility,send_event,8,10,43708);
+CheckMemberSize(struct _GdkEventVisibility,state,4,10,43712);
+CheckOffset(struct _GdkEventVisibility,state,12,10,43712);
 #elif __s390x__
-CheckTypeSize(struct _GdkEventVisibility,24, 12760, 12)
-CheckMemberSize(struct _GdkEventVisibility,window,8,12,43707)
-CheckOffset(struct _GdkEventVisibility,window,8,12,43707)
-CheckMemberSize(struct _GdkEventVisibility,send_event,1,12,43708)
-CheckOffset(struct _GdkEventVisibility,send_event,16,12,43708)
-CheckMemberSize(struct _GdkEventVisibility,state,4,12,43712)
-CheckOffset(struct _GdkEventVisibility,state,20,12,43712)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12760,0);
-Msg("Find size of _GdkEventVisibility (12760)\n");
+CheckTypeSize(struct _GdkEventVisibility,24, 12760, 12);
+CheckMemberSize(struct _GdkEventVisibility,window,8,12,43707);
+CheckOffset(struct _GdkEventVisibility,window,8,12,43707);
+CheckMemberSize(struct _GdkEventVisibility,send_event,1,12,43708);
+CheckOffset(struct _GdkEventVisibility,send_event,16,12,43708);
+CheckMemberSize(struct _GdkEventVisibility,state,4,12,43712);
+CheckOffset(struct _GdkEventVisibility,state,20,12,43712);
+#elif 1
+CheckTypeSize(struct _GdkEventVisibility,0, 12760, 1);
+Msg("Missing member data for _GdkEventVisibility on All\n");
+CheckOffset(struct _GdkEventVisibility,type,0,1,43706);
+CheckOffset(struct _GdkEventVisibility,window,0,1,43707);
+CheckOffset(struct _GdkEventVisibility,send_event,0,1,43708);
+CheckOffset(struct _GdkEventVisibility,state,0,1,43712);
 #endif
 
 #if __i386__
@@ -4623,609 +4814,640 @@ CheckEnum("GDK_VISIBILITY_FULLY_OBSCURED",GDK_VISIBILITY_FULLY_OBSCURED,2,43711)
 CheckEnum("GDK_VISIBILITY_UNOBSCURED",GDK_VISIBILITY_UNOBSCURED,0,43709);
 CheckEnum("GDK_VISIBILITY_PARTIAL",GDK_VISIBILITY_PARTIAL,1,43710);
 CheckEnum("GDK_VISIBILITY_FULLY_OBSCURED",GDK_VISIBILITY_FULLY_OBSCURED,2,43711);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12761,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-503 (12761)\n");
+#elif 1
+CheckEnum("GDK_VISIBILITY_UNOBSCURED",GDK_VISIBILITY_UNOBSCURED,0,43709);
+CheckEnum("GDK_VISIBILITY_PARTIAL",GDK_VISIBILITY_PARTIAL,1,43710);
+CheckEnum("GDK_VISIBILITY_FULLY_OBSCURED",GDK_VISIBILITY_FULLY_OBSCURED,2,43711);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkVisibilityState,4, 12762, 2)
+CheckTypeSize(GdkVisibilityState,4, 12762, 2);
 #elif __x86_64__
-CheckTypeSize(GdkVisibilityState,4, 12762, 11)
+CheckTypeSize(GdkVisibilityState,4, 12762, 11);
 #elif __ia64__
-CheckTypeSize(GdkVisibilityState,4, 12762, 3)
+CheckTypeSize(GdkVisibilityState,4, 12762, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkVisibilityState,4, 12762, 6)
+CheckTypeSize(GdkVisibilityState,4, 12762, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkVisibilityState,4, 12762, 9)
+CheckTypeSize(GdkVisibilityState,4, 12762, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkVisibilityState,4, 12762, 10)
+CheckTypeSize(GdkVisibilityState,4, 12762, 10);
 #elif __s390x__
-CheckTypeSize(GdkVisibilityState,4, 12762, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12762,0);
-Msg("Find size of GdkVisibilityState (12762)\n");
+CheckTypeSize(GdkVisibilityState,4, 12762, 12);
+#elif 1
+CheckTypeSize(GdkVisibilityState,0, 12762, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkEventVisibility,16, 12763, 2)
+CheckTypeSize(GdkEventVisibility,16, 12763, 2);
 #elif __x86_64__
-CheckTypeSize(GdkEventVisibility,24, 12763, 11)
+CheckTypeSize(GdkEventVisibility,24, 12763, 11);
 #elif __ia64__
-CheckTypeSize(GdkEventVisibility,24, 12763, 3)
+CheckTypeSize(GdkEventVisibility,24, 12763, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkEventVisibility,16, 12763, 6)
+CheckTypeSize(GdkEventVisibility,16, 12763, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkEventVisibility,24, 12763, 9)
+CheckTypeSize(GdkEventVisibility,24, 12763, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkEventVisibility,16, 12763, 10)
+CheckTypeSize(GdkEventVisibility,16, 12763, 10);
 #elif __s390x__
-CheckTypeSize(GdkEventVisibility,24, 12763, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12763,0);
-Msg("Find size of GdkEventVisibility (12763)\n");
+CheckTypeSize(GdkEventVisibility,24, 12763, 12);
+#elif 1
+CheckTypeSize(GdkEventVisibility,0, 12763, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkEventMotion,64, 12764, 2)
-CheckMemberSize(struct _GdkEventMotion,window,4,2,43715)
-CheckOffset(struct _GdkEventMotion,window,4,2,43715)
-CheckMemberSize(struct _GdkEventMotion,send_event,1,2,43716)
-CheckOffset(struct _GdkEventMotion,send_event,8,2,43716)
-CheckMemberSize(struct _GdkEventMotion,time,4,2,43717)
-CheckOffset(struct _GdkEventMotion,time,12,2,43717)
-CheckMemberSize(struct _GdkEventMotion,x,8,2,43718)
-CheckOffset(struct _GdkEventMotion,x,16,2,43718)
-CheckMemberSize(struct _GdkEventMotion,y,8,2,43719)
-CheckOffset(struct _GdkEventMotion,y,24,2,43719)
-CheckMemberSize(struct _GdkEventMotion,axes,4,2,43720)
-CheckOffset(struct _GdkEventMotion,axes,32,2,43720)
-CheckMemberSize(struct _GdkEventMotion,state,4,2,43721)
-CheckOffset(struct _GdkEventMotion,state,36,2,43721)
-CheckMemberSize(struct _GdkEventMotion,is_hint,2,2,43722)
-CheckOffset(struct _GdkEventMotion,is_hint,40,2,43722)
-CheckMemberSize(struct _GdkEventMotion,device,4,2,43723)
-CheckOffset(struct _GdkEventMotion,device,44,2,43723)
-CheckMemberSize(struct _GdkEventMotion,x_root,8,2,43724)
-CheckOffset(struct _GdkEventMotion,x_root,48,2,43724)
-CheckMemberSize(struct _GdkEventMotion,y_root,8,2,43725)
-CheckOffset(struct _GdkEventMotion,y_root,56,2,43725)
+CheckTypeSize(struct _GdkEventMotion,64, 12764, 2);
+CheckMemberSize(struct _GdkEventMotion,window,4,2,43715);
+CheckOffset(struct _GdkEventMotion,window,4,2,43715);
+CheckMemberSize(struct _GdkEventMotion,send_event,1,2,43716);
+CheckOffset(struct _GdkEventMotion,send_event,8,2,43716);
+CheckMemberSize(struct _GdkEventMotion,time,4,2,43717);
+CheckOffset(struct _GdkEventMotion,time,12,2,43717);
+CheckMemberSize(struct _GdkEventMotion,x,8,2,43718);
+CheckOffset(struct _GdkEventMotion,x,16,2,43718);
+CheckMemberSize(struct _GdkEventMotion,y,8,2,43719);
+CheckOffset(struct _GdkEventMotion,y,24,2,43719);
+CheckMemberSize(struct _GdkEventMotion,axes,4,2,43720);
+CheckOffset(struct _GdkEventMotion,axes,32,2,43720);
+CheckMemberSize(struct _GdkEventMotion,state,4,2,43721);
+CheckOffset(struct _GdkEventMotion,state,36,2,43721);
+CheckMemberSize(struct _GdkEventMotion,is_hint,2,2,43722);
+CheckOffset(struct _GdkEventMotion,is_hint,40,2,43722);
+CheckMemberSize(struct _GdkEventMotion,device,4,2,43723);
+CheckOffset(struct _GdkEventMotion,device,44,2,43723);
+CheckMemberSize(struct _GdkEventMotion,x_root,8,2,43724);
+CheckOffset(struct _GdkEventMotion,x_root,48,2,43724);
+CheckMemberSize(struct _GdkEventMotion,y_root,8,2,43725);
+CheckOffset(struct _GdkEventMotion,y_root,56,2,43725);
 #elif __x86_64__
-CheckTypeSize(struct _GdkEventMotion,80, 12764, 11)
-CheckMemberSize(struct _GdkEventMotion,window,8,11,43715)
-CheckOffset(struct _GdkEventMotion,window,8,11,43715)
-CheckMemberSize(struct _GdkEventMotion,send_event,1,11,43716)
-CheckOffset(struct _GdkEventMotion,send_event,16,11,43716)
-CheckMemberSize(struct _GdkEventMotion,time,4,11,43717)
-CheckOffset(struct _GdkEventMotion,time,20,11,43717)
-CheckMemberSize(struct _GdkEventMotion,x,8,11,43718)
-CheckOffset(struct _GdkEventMotion,x,24,11,43718)
-CheckMemberSize(struct _GdkEventMotion,y,8,11,43719)
-CheckOffset(struct _GdkEventMotion,y,32,11,43719)
-CheckMemberSize(struct _GdkEventMotion,axes,8,11,43720)
-CheckOffset(struct _GdkEventMotion,axes,40,11,43720)
-CheckMemberSize(struct _GdkEventMotion,state,4,11,43721)
-CheckOffset(struct _GdkEventMotion,state,48,11,43721)
-CheckMemberSize(struct _GdkEventMotion,is_hint,2,11,43722)
-CheckOffset(struct _GdkEventMotion,is_hint,52,11,43722)
-CheckMemberSize(struct _GdkEventMotion,device,8,11,43723)
-CheckOffset(struct _GdkEventMotion,device,56,11,43723)
-CheckMemberSize(struct _GdkEventMotion,x_root,8,11,43724)
-CheckOffset(struct _GdkEventMotion,x_root,64,11,43724)
-CheckMemberSize(struct _GdkEventMotion,y_root,8,11,43725)
-CheckOffset(struct _GdkEventMotion,y_root,72,11,43725)
+CheckTypeSize(struct _GdkEventMotion,80, 12764, 11);
+CheckMemberSize(struct _GdkEventMotion,window,8,11,43715);
+CheckOffset(struct _GdkEventMotion,window,8,11,43715);
+CheckMemberSize(struct _GdkEventMotion,send_event,1,11,43716);
+CheckOffset(struct _GdkEventMotion,send_event,16,11,43716);
+CheckMemberSize(struct _GdkEventMotion,time,4,11,43717);
+CheckOffset(struct _GdkEventMotion,time,20,11,43717);
+CheckMemberSize(struct _GdkEventMotion,x,8,11,43718);
+CheckOffset(struct _GdkEventMotion,x,24,11,43718);
+CheckMemberSize(struct _GdkEventMotion,y,8,11,43719);
+CheckOffset(struct _GdkEventMotion,y,32,11,43719);
+CheckMemberSize(struct _GdkEventMotion,axes,8,11,43720);
+CheckOffset(struct _GdkEventMotion,axes,40,11,43720);
+CheckMemberSize(struct _GdkEventMotion,state,4,11,43721);
+CheckOffset(struct _GdkEventMotion,state,48,11,43721);
+CheckMemberSize(struct _GdkEventMotion,is_hint,2,11,43722);
+CheckOffset(struct _GdkEventMotion,is_hint,52,11,43722);
+CheckMemberSize(struct _GdkEventMotion,device,8,11,43723);
+CheckOffset(struct _GdkEventMotion,device,56,11,43723);
+CheckMemberSize(struct _GdkEventMotion,x_root,8,11,43724);
+CheckOffset(struct _GdkEventMotion,x_root,64,11,43724);
+CheckMemberSize(struct _GdkEventMotion,y_root,8,11,43725);
+CheckOffset(struct _GdkEventMotion,y_root,72,11,43725);
 #elif __ia64__
-CheckTypeSize(struct _GdkEventMotion,80, 12764, 3)
-CheckMemberSize(struct _GdkEventMotion,window,8,3,43715)
-CheckOffset(struct _GdkEventMotion,window,8,3,43715)
-CheckMemberSize(struct _GdkEventMotion,send_event,1,3,43716)
-CheckOffset(struct _GdkEventMotion,send_event,16,3,43716)
-CheckMemberSize(struct _GdkEventMotion,time,4,3,43717)
-CheckOffset(struct _GdkEventMotion,time,20,3,43717)
-CheckMemberSize(struct _GdkEventMotion,x,8,3,43718)
-CheckOffset(struct _GdkEventMotion,x,24,3,43718)
-CheckMemberSize(struct _GdkEventMotion,y,8,3,43719)
-CheckOffset(struct _GdkEventMotion,y,32,3,43719)
-CheckMemberSize(struct _GdkEventMotion,axes,8,3,43720)
-CheckOffset(struct _GdkEventMotion,axes,40,3,43720)
-CheckMemberSize(struct _GdkEventMotion,state,4,3,43721)
-CheckOffset(struct _GdkEventMotion,state,48,3,43721)
-CheckMemberSize(struct _GdkEventMotion,is_hint,2,3,43722)
-CheckOffset(struct _GdkEventMotion,is_hint,52,3,43722)
-CheckMemberSize(struct _GdkEventMotion,device,8,3,43723)
-CheckOffset(struct _GdkEventMotion,device,56,3,43723)
-CheckMemberSize(struct _GdkEventMotion,x_root,8,3,43724)
-CheckOffset(struct _GdkEventMotion,x_root,64,3,43724)
-CheckMemberSize(struct _GdkEventMotion,y_root,8,3,43725)
-CheckOffset(struct _GdkEventMotion,y_root,72,3,43725)
+CheckTypeSize(struct _GdkEventMotion,80, 12764, 3);
+CheckMemberSize(struct _GdkEventMotion,window,8,3,43715);
+CheckOffset(struct _GdkEventMotion,window,8,3,43715);
+CheckMemberSize(struct _GdkEventMotion,send_event,1,3,43716);
+CheckOffset(struct _GdkEventMotion,send_event,16,3,43716);
+CheckMemberSize(struct _GdkEventMotion,time,4,3,43717);
+CheckOffset(struct _GdkEventMotion,time,20,3,43717);
+CheckMemberSize(struct _GdkEventMotion,x,8,3,43718);
+CheckOffset(struct _GdkEventMotion,x,24,3,43718);
+CheckMemberSize(struct _GdkEventMotion,y,8,3,43719);
+CheckOffset(struct _GdkEventMotion,y,32,3,43719);
+CheckMemberSize(struct _GdkEventMotion,axes,8,3,43720);
+CheckOffset(struct _GdkEventMotion,axes,40,3,43720);
+CheckMemberSize(struct _GdkEventMotion,state,4,3,43721);
+CheckOffset(struct _GdkEventMotion,state,48,3,43721);
+CheckMemberSize(struct _GdkEventMotion,is_hint,2,3,43722);
+CheckOffset(struct _GdkEventMotion,is_hint,52,3,43722);
+CheckMemberSize(struct _GdkEventMotion,device,8,3,43723);
+CheckOffset(struct _GdkEventMotion,device,56,3,43723);
+CheckMemberSize(struct _GdkEventMotion,x_root,8,3,43724);
+CheckOffset(struct _GdkEventMotion,x_root,64,3,43724);
+CheckMemberSize(struct _GdkEventMotion,y_root,8,3,43725);
+CheckOffset(struct _GdkEventMotion,y_root,72,3,43725);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkEventMotion,64, 12764, 6)
-CheckMemberSize(struct _GdkEventMotion,window,4,6,43715)
-CheckOffset(struct _GdkEventMotion,window,4,6,43715)
-CheckMemberSize(struct _GdkEventMotion,send_event,1,6,43716)
-CheckOffset(struct _GdkEventMotion,send_event,8,6,43716)
-CheckMemberSize(struct _GdkEventMotion,time,4,6,43717)
-CheckOffset(struct _GdkEventMotion,time,12,6,43717)
-CheckMemberSize(struct _GdkEventMotion,x,8,6,43718)
-CheckOffset(struct _GdkEventMotion,x,16,6,43718)
-CheckMemberSize(struct _GdkEventMotion,y,8,6,43719)
-CheckOffset(struct _GdkEventMotion,y,24,6,43719)
-CheckMemberSize(struct _GdkEventMotion,axes,4,6,43720)
-CheckOffset(struct _GdkEventMotion,axes,32,6,43720)
-CheckMemberSize(struct _GdkEventMotion,state,4,6,43721)
-CheckOffset(struct _GdkEventMotion,state,36,6,43721)
-CheckMemberSize(struct _GdkEventMotion,is_hint,2,6,43722)
-CheckOffset(struct _GdkEventMotion,is_hint,40,6,43722)
-CheckMemberSize(struct _GdkEventMotion,device,4,6,43723)
-CheckOffset(struct _GdkEventMotion,device,44,6,43723)
-CheckMemberSize(struct _GdkEventMotion,x_root,8,6,43724)
-CheckOffset(struct _GdkEventMotion,x_root,48,6,43724)
-CheckMemberSize(struct _GdkEventMotion,y_root,8,6,43725)
-CheckOffset(struct _GdkEventMotion,y_root,56,6,43725)
+CheckTypeSize(struct _GdkEventMotion,64, 12764, 6);
+CheckMemberSize(struct _GdkEventMotion,window,4,6,43715);
+CheckOffset(struct _GdkEventMotion,window,4,6,43715);
+CheckMemberSize(struct _GdkEventMotion,send_event,1,6,43716);
+CheckOffset(struct _GdkEventMotion,send_event,8,6,43716);
+CheckMemberSize(struct _GdkEventMotion,time,4,6,43717);
+CheckOffset(struct _GdkEventMotion,time,12,6,43717);
+CheckMemberSize(struct _GdkEventMotion,x,8,6,43718);
+CheckOffset(struct _GdkEventMotion,x,16,6,43718);
+CheckMemberSize(struct _GdkEventMotion,y,8,6,43719);
+CheckOffset(struct _GdkEventMotion,y,24,6,43719);
+CheckMemberSize(struct _GdkEventMotion,axes,4,6,43720);
+CheckOffset(struct _GdkEventMotion,axes,32,6,43720);
+CheckMemberSize(struct _GdkEventMotion,state,4,6,43721);
+CheckOffset(struct _GdkEventMotion,state,36,6,43721);
+CheckMemberSize(struct _GdkEventMotion,is_hint,2,6,43722);
+CheckOffset(struct _GdkEventMotion,is_hint,40,6,43722);
+CheckMemberSize(struct _GdkEventMotion,device,4,6,43723);
+CheckOffset(struct _GdkEventMotion,device,44,6,43723);
+CheckMemberSize(struct _GdkEventMotion,x_root,8,6,43724);
+CheckOffset(struct _GdkEventMotion,x_root,48,6,43724);
+CheckMemberSize(struct _GdkEventMotion,y_root,8,6,43725);
+CheckOffset(struct _GdkEventMotion,y_root,56,6,43725);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkEventMotion,80, 12764, 9)
-CheckMemberSize(struct _GdkEventMotion,window,8,9,43715)
-CheckOffset(struct _GdkEventMotion,window,8,9,43715)
-CheckMemberSize(struct _GdkEventMotion,send_event,1,9,43716)
-CheckOffset(struct _GdkEventMotion,send_event,16,9,43716)
-CheckMemberSize(struct _GdkEventMotion,time,4,9,43717)
-CheckOffset(struct _GdkEventMotion,time,20,9,43717)
-CheckMemberSize(struct _GdkEventMotion,x,8,9,43718)
-CheckOffset(struct _GdkEventMotion,x,24,9,43718)
-CheckMemberSize(struct _GdkEventMotion,y,8,9,43719)
-CheckOffset(struct _GdkEventMotion,y,32,9,43719)
-CheckMemberSize(struct _GdkEventMotion,axes,8,9,43720)
-CheckOffset(struct _GdkEventMotion,axes,40,9,43720)
-CheckMemberSize(struct _GdkEventMotion,state,4,9,43721)
-CheckOffset(struct _GdkEventMotion,state,48,9,43721)
-CheckMemberSize(struct _GdkEventMotion,is_hint,2,9,43722)
-CheckOffset(struct _GdkEventMotion,is_hint,52,9,43722)
-CheckMemberSize(struct _GdkEventMotion,device,8,9,43723)
-CheckOffset(struct _GdkEventMotion,device,56,9,43723)
-CheckMemberSize(struct _GdkEventMotion,x_root,8,9,43724)
-CheckOffset(struct _GdkEventMotion,x_root,64,9,43724)
-CheckMemberSize(struct _GdkEventMotion,y_root,8,9,43725)
-CheckOffset(struct _GdkEventMotion,y_root,72,9,43725)
+CheckTypeSize(struct _GdkEventMotion,80, 12764, 9);
+CheckMemberSize(struct _GdkEventMotion,window,8,9,43715);
+CheckOffset(struct _GdkEventMotion,window,8,9,43715);
+CheckMemberSize(struct _GdkEventMotion,send_event,1,9,43716);
+CheckOffset(struct _GdkEventMotion,send_event,16,9,43716);
+CheckMemberSize(struct _GdkEventMotion,time,4,9,43717);
+CheckOffset(struct _GdkEventMotion,time,20,9,43717);
+CheckMemberSize(struct _GdkEventMotion,x,8,9,43718);
+CheckOffset(struct _GdkEventMotion,x,24,9,43718);
+CheckMemberSize(struct _GdkEventMotion,y,8,9,43719);
+CheckOffset(struct _GdkEventMotion,y,32,9,43719);
+CheckMemberSize(struct _GdkEventMotion,axes,8,9,43720);
+CheckOffset(struct _GdkEventMotion,axes,40,9,43720);
+CheckMemberSize(struct _GdkEventMotion,state,4,9,43721);
+CheckOffset(struct _GdkEventMotion,state,48,9,43721);
+CheckMemberSize(struct _GdkEventMotion,is_hint,2,9,43722);
+CheckOffset(struct _GdkEventMotion,is_hint,52,9,43722);
+CheckMemberSize(struct _GdkEventMotion,device,8,9,43723);
+CheckOffset(struct _GdkEventMotion,device,56,9,43723);
+CheckMemberSize(struct _GdkEventMotion,x_root,8,9,43724);
+CheckOffset(struct _GdkEventMotion,x_root,64,9,43724);
+CheckMemberSize(struct _GdkEventMotion,y_root,8,9,43725);
+CheckOffset(struct _GdkEventMotion,y_root,72,9,43725);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkEventMotion,64, 12764, 10)
-CheckMemberSize(struct _GdkEventMotion,window,4,10,43715)
-CheckOffset(struct _GdkEventMotion,window,4,10,43715)
-CheckMemberSize(struct _GdkEventMotion,send_event,1,10,43716)
-CheckOffset(struct _GdkEventMotion,send_event,8,10,43716)
-CheckMemberSize(struct _GdkEventMotion,time,4,10,43717)
-CheckOffset(struct _GdkEventMotion,time,12,10,43717)
-CheckMemberSize(struct _GdkEventMotion,x,8,10,43718)
-CheckOffset(struct _GdkEventMotion,x,16,10,43718)
-CheckMemberSize(struct _GdkEventMotion,y,8,10,43719)
-CheckOffset(struct _GdkEventMotion,y,24,10,43719)
-CheckMemberSize(struct _GdkEventMotion,axes,4,10,43720)
-CheckOffset(struct _GdkEventMotion,axes,32,10,43720)
-CheckMemberSize(struct _GdkEventMotion,state,4,10,43721)
-CheckOffset(struct _GdkEventMotion,state,36,10,43721)
-CheckMemberSize(struct _GdkEventMotion,is_hint,2,10,43722)
-CheckOffset(struct _GdkEventMotion,is_hint,40,10,43722)
-CheckMemberSize(struct _GdkEventMotion,device,4,10,43723)
-CheckOffset(struct _GdkEventMotion,device,44,10,43723)
-CheckMemberSize(struct _GdkEventMotion,x_root,8,10,43724)
-CheckOffset(struct _GdkEventMotion,x_root,48,10,43724)
-CheckMemberSize(struct _GdkEventMotion,y_root,8,10,43725)
-CheckOffset(struct _GdkEventMotion,y_root,56,10,43725)
+CheckTypeSize(struct _GdkEventMotion,64, 12764, 10);
+CheckMemberSize(struct _GdkEventMotion,window,4,10,43715);
+CheckOffset(struct _GdkEventMotion,window,4,10,43715);
+CheckMemberSize(struct _GdkEventMotion,send_event,1,10,43716);
+CheckOffset(struct _GdkEventMotion,send_event,8,10,43716);
+CheckMemberSize(struct _GdkEventMotion,time,4,10,43717);
+CheckOffset(struct _GdkEventMotion,time,12,10,43717);
+CheckMemberSize(struct _GdkEventMotion,x,8,10,43718);
+CheckOffset(struct _GdkEventMotion,x,16,10,43718);
+CheckMemberSize(struct _GdkEventMotion,y,8,10,43719);
+CheckOffset(struct _GdkEventMotion,y,24,10,43719);
+CheckMemberSize(struct _GdkEventMotion,axes,4,10,43720);
+CheckOffset(struct _GdkEventMotion,axes,32,10,43720);
+CheckMemberSize(struct _GdkEventMotion,state,4,10,43721);
+CheckOffset(struct _GdkEventMotion,state,36,10,43721);
+CheckMemberSize(struct _GdkEventMotion,is_hint,2,10,43722);
+CheckOffset(struct _GdkEventMotion,is_hint,40,10,43722);
+CheckMemberSize(struct _GdkEventMotion,device,4,10,43723);
+CheckOffset(struct _GdkEventMotion,device,44,10,43723);
+CheckMemberSize(struct _GdkEventMotion,x_root,8,10,43724);
+CheckOffset(struct _GdkEventMotion,x_root,48,10,43724);
+CheckMemberSize(struct _GdkEventMotion,y_root,8,10,43725);
+CheckOffset(struct _GdkEventMotion,y_root,56,10,43725);
 #elif __s390x__
-CheckTypeSize(struct _GdkEventMotion,80, 12764, 12)
-CheckMemberSize(struct _GdkEventMotion,window,8,12,43715)
-CheckOffset(struct _GdkEventMotion,window,8,12,43715)
-CheckMemberSize(struct _GdkEventMotion,send_event,1,12,43716)
-CheckOffset(struct _GdkEventMotion,send_event,16,12,43716)
-CheckMemberSize(struct _GdkEventMotion,time,4,12,43717)
-CheckOffset(struct _GdkEventMotion,time,20,12,43717)
-CheckMemberSize(struct _GdkEventMotion,x,8,12,43718)
-CheckOffset(struct _GdkEventMotion,x,24,12,43718)
-CheckMemberSize(struct _GdkEventMotion,y,8,12,43719)
-CheckOffset(struct _GdkEventMotion,y,32,12,43719)
-CheckMemberSize(struct _GdkEventMotion,axes,8,12,43720)
-CheckOffset(struct _GdkEventMotion,axes,40,12,43720)
-CheckMemberSize(struct _GdkEventMotion,state,4,12,43721)
-CheckOffset(struct _GdkEventMotion,state,48,12,43721)
-CheckMemberSize(struct _GdkEventMotion,is_hint,2,12,43722)
-CheckOffset(struct _GdkEventMotion,is_hint,52,12,43722)
-CheckMemberSize(struct _GdkEventMotion,device,8,12,43723)
-CheckOffset(struct _GdkEventMotion,device,56,12,43723)
-CheckMemberSize(struct _GdkEventMotion,x_root,8,12,43724)
-CheckOffset(struct _GdkEventMotion,x_root,64,12,43724)
-CheckMemberSize(struct _GdkEventMotion,y_root,8,12,43725)
-CheckOffset(struct _GdkEventMotion,y_root,72,12,43725)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12764,0);
-Msg("Find size of _GdkEventMotion (12764)\n");
+CheckTypeSize(struct _GdkEventMotion,80, 12764, 12);
+CheckMemberSize(struct _GdkEventMotion,window,8,12,43715);
+CheckOffset(struct _GdkEventMotion,window,8,12,43715);
+CheckMemberSize(struct _GdkEventMotion,send_event,1,12,43716);
+CheckOffset(struct _GdkEventMotion,send_event,16,12,43716);
+CheckMemberSize(struct _GdkEventMotion,time,4,12,43717);
+CheckOffset(struct _GdkEventMotion,time,20,12,43717);
+CheckMemberSize(struct _GdkEventMotion,x,8,12,43718);
+CheckOffset(struct _GdkEventMotion,x,24,12,43718);
+CheckMemberSize(struct _GdkEventMotion,y,8,12,43719);
+CheckOffset(struct _GdkEventMotion,y,32,12,43719);
+CheckMemberSize(struct _GdkEventMotion,axes,8,12,43720);
+CheckOffset(struct _GdkEventMotion,axes,40,12,43720);
+CheckMemberSize(struct _GdkEventMotion,state,4,12,43721);
+CheckOffset(struct _GdkEventMotion,state,48,12,43721);
+CheckMemberSize(struct _GdkEventMotion,is_hint,2,12,43722);
+CheckOffset(struct _GdkEventMotion,is_hint,52,12,43722);
+CheckMemberSize(struct _GdkEventMotion,device,8,12,43723);
+CheckOffset(struct _GdkEventMotion,device,56,12,43723);
+CheckMemberSize(struct _GdkEventMotion,x_root,8,12,43724);
+CheckOffset(struct _GdkEventMotion,x_root,64,12,43724);
+CheckMemberSize(struct _GdkEventMotion,y_root,8,12,43725);
+CheckOffset(struct _GdkEventMotion,y_root,72,12,43725);
+#elif 1
+CheckTypeSize(struct _GdkEventMotion,0, 12764, 1);
+Msg("Missing member data for _GdkEventMotion on All\n");
+CheckOffset(struct _GdkEventMotion,type,0,1,43714);
+CheckOffset(struct _GdkEventMotion,window,0,1,43715);
+CheckOffset(struct _GdkEventMotion,send_event,0,1,43716);
+CheckOffset(struct _GdkEventMotion,time,0,1,43717);
+CheckOffset(struct _GdkEventMotion,x,0,1,43718);
+CheckOffset(struct _GdkEventMotion,y,0,1,43719);
+CheckOffset(struct _GdkEventMotion,axes,0,1,43720);
+CheckOffset(struct _GdkEventMotion,state,0,1,43721);
+CheckOffset(struct _GdkEventMotion,is_hint,0,1,43722);
+CheckOffset(struct _GdkEventMotion,device,0,1,43723);
+CheckOffset(struct _GdkEventMotion,x_root,0,1,43724);
+CheckOffset(struct _GdkEventMotion,y_root,0,1,43725);
 #endif
 
 #if __i386__
-CheckTypeSize(gdouble *,4, 12765, 2)
+CheckTypeSize(gdouble *,4, 12765, 2);
 #elif __x86_64__
-CheckTypeSize(gdouble *,8, 12765, 11)
+CheckTypeSize(gdouble *,8, 12765, 11);
 #elif __ia64__
-CheckTypeSize(gdouble *,8, 12765, 3)
+CheckTypeSize(gdouble *,8, 12765, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(gdouble *,4, 12765, 6)
+CheckTypeSize(gdouble *,4, 12765, 6);
 #elif __powerpc64__
-CheckTypeSize(gdouble *,8, 12765, 9)
+CheckTypeSize(gdouble *,8, 12765, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(gdouble *,4, 12765, 10)
+CheckTypeSize(gdouble *,4, 12765, 10);
 #elif __s390x__
-CheckTypeSize(gdouble *,8, 12765, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12765,0);
-Msg("Find size of gdouble * (12765)\n");
+CheckTypeSize(gdouble *,8, 12765, 12);
+#elif 1
+CheckTypeSize(gdouble *,0, 12765, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkEventMotion,64, 12766, 2)
+CheckTypeSize(GdkEventMotion,64, 12766, 2);
 #elif __x86_64__
-CheckTypeSize(GdkEventMotion,80, 12766, 11)
+CheckTypeSize(GdkEventMotion,80, 12766, 11);
 #elif __ia64__
-CheckTypeSize(GdkEventMotion,80, 12766, 3)
+CheckTypeSize(GdkEventMotion,80, 12766, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkEventMotion,64, 12766, 6)
+CheckTypeSize(GdkEventMotion,64, 12766, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkEventMotion,80, 12766, 9)
+CheckTypeSize(GdkEventMotion,80, 12766, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkEventMotion,64, 12766, 10)
+CheckTypeSize(GdkEventMotion,64, 12766, 10);
 #elif __s390x__
-CheckTypeSize(GdkEventMotion,80, 12766, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12766,0);
-Msg("Find size of GdkEventMotion (12766)\n");
+CheckTypeSize(GdkEventMotion,80, 12766, 12);
+#elif 1
+CheckTypeSize(GdkEventMotion,0, 12766, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkEventButton,64, 12767, 2)
-CheckMemberSize(struct _GdkEventButton,window,4,2,43728)
-CheckOffset(struct _GdkEventButton,window,4,2,43728)
-CheckMemberSize(struct _GdkEventButton,send_event,1,2,43729)
-CheckOffset(struct _GdkEventButton,send_event,8,2,43729)
-CheckMemberSize(struct _GdkEventButton,time,4,2,43730)
-CheckOffset(struct _GdkEventButton,time,12,2,43730)
-CheckMemberSize(struct _GdkEventButton,x,8,2,43731)
-CheckOffset(struct _GdkEventButton,x,16,2,43731)
-CheckMemberSize(struct _GdkEventButton,y,8,2,43732)
-CheckOffset(struct _GdkEventButton,y,24,2,43732)
-CheckMemberSize(struct _GdkEventButton,axes,4,2,43733)
-CheckOffset(struct _GdkEventButton,axes,32,2,43733)
-CheckMemberSize(struct _GdkEventButton,state,4,2,43734)
-CheckOffset(struct _GdkEventButton,state,36,2,43734)
-CheckMemberSize(struct _GdkEventButton,button,4,2,43735)
-CheckOffset(struct _GdkEventButton,button,40,2,43735)
-CheckMemberSize(struct _GdkEventButton,device,4,2,43736)
-CheckOffset(struct _GdkEventButton,device,44,2,43736)
-CheckMemberSize(struct _GdkEventButton,x_root,8,2,43737)
-CheckOffset(struct _GdkEventButton,x_root,48,2,43737)
-CheckMemberSize(struct _GdkEventButton,y_root,8,2,43738)
-CheckOffset(struct _GdkEventButton,y_root,56,2,43738)
+CheckTypeSize(struct _GdkEventButton,64, 12767, 2);
+CheckMemberSize(struct _GdkEventButton,window,4,2,43728);
+CheckOffset(struct _GdkEventButton,window,4,2,43728);
+CheckMemberSize(struct _GdkEventButton,send_event,1,2,43729);
+CheckOffset(struct _GdkEventButton,send_event,8,2,43729);
+CheckMemberSize(struct _GdkEventButton,time,4,2,43730);
+CheckOffset(struct _GdkEventButton,time,12,2,43730);
+CheckMemberSize(struct _GdkEventButton,x,8,2,43731);
+CheckOffset(struct _GdkEventButton,x,16,2,43731);
+CheckMemberSize(struct _GdkEventButton,y,8,2,43732);
+CheckOffset(struct _GdkEventButton,y,24,2,43732);
+CheckMemberSize(struct _GdkEventButton,axes,4,2,43733);
+CheckOffset(struct _GdkEventButton,axes,32,2,43733);
+CheckMemberSize(struct _GdkEventButton,state,4,2,43734);
+CheckOffset(struct _GdkEventButton,state,36,2,43734);
+CheckMemberSize(struct _GdkEventButton,button,4,2,43735);
+CheckOffset(struct _GdkEventButton,button,40,2,43735);
+CheckMemberSize(struct _GdkEventButton,device,4,2,43736);
+CheckOffset(struct _GdkEventButton,device,44,2,43736);
+CheckMemberSize(struct _GdkEventButton,x_root,8,2,43737);
+CheckOffset(struct _GdkEventButton,x_root,48,2,43737);
+CheckMemberSize(struct _GdkEventButton,y_root,8,2,43738);
+CheckOffset(struct _GdkEventButton,y_root,56,2,43738);
 #elif __x86_64__
-CheckTypeSize(struct _GdkEventButton,80, 12767, 11)
-CheckMemberSize(struct _GdkEventButton,window,8,11,43728)
-CheckOffset(struct _GdkEventButton,window,8,11,43728)
-CheckMemberSize(struct _GdkEventButton,send_event,1,11,43729)
-CheckOffset(struct _GdkEventButton,send_event,16,11,43729)
-CheckMemberSize(struct _GdkEventButton,time,4,11,43730)
-CheckOffset(struct _GdkEventButton,time,20,11,43730)
-CheckMemberSize(struct _GdkEventButton,x,8,11,43731)
-CheckOffset(struct _GdkEventButton,x,24,11,43731)
-CheckMemberSize(struct _GdkEventButton,y,8,11,43732)
-CheckOffset(struct _GdkEventButton,y,32,11,43732)
-CheckMemberSize(struct _GdkEventButton,axes,8,11,43733)
-CheckOffset(struct _GdkEventButton,axes,40,11,43733)
-CheckMemberSize(struct _GdkEventButton,state,4,11,43734)
-CheckOffset(struct _GdkEventButton,state,48,11,43734)
-CheckMemberSize(struct _GdkEventButton,button,4,11,43735)
-CheckOffset(struct _GdkEventButton,button,52,11,43735)
-CheckMemberSize(struct _GdkEventButton,device,8,11,43736)
-CheckOffset(struct _GdkEventButton,device,56,11,43736)
-CheckMemberSize(struct _GdkEventButton,x_root,8,11,43737)
-CheckOffset(struct _GdkEventButton,x_root,64,11,43737)
-CheckMemberSize(struct _GdkEventButton,y_root,8,11,43738)
-CheckOffset(struct _GdkEventButton,y_root,72,11,43738)
+CheckTypeSize(struct _GdkEventButton,80, 12767, 11);
+CheckMemberSize(struct _GdkEventButton,window,8,11,43728);
+CheckOffset(struct _GdkEventButton,window,8,11,43728);
+CheckMemberSize(struct _GdkEventButton,send_event,1,11,43729);
+CheckOffset(struct _GdkEventButton,send_event,16,11,43729);
+CheckMemberSize(struct _GdkEventButton,time,4,11,43730);
+CheckOffset(struct _GdkEventButton,time,20,11,43730);
+CheckMemberSize(struct _GdkEventButton,x,8,11,43731);
+CheckOffset(struct _GdkEventButton,x,24,11,43731);
+CheckMemberSize(struct _GdkEventButton,y,8,11,43732);
+CheckOffset(struct _GdkEventButton,y,32,11,43732);
+CheckMemberSize(struct _GdkEventButton,axes,8,11,43733);
+CheckOffset(struct _GdkEventButton,axes,40,11,43733);
+CheckMemberSize(struct _GdkEventButton,state,4,11,43734);
+CheckOffset(struct _GdkEventButton,state,48,11,43734);
+CheckMemberSize(struct _GdkEventButton,button,4,11,43735);
+CheckOffset(struct _GdkEventButton,button,52,11,43735);
+CheckMemberSize(struct _GdkEventButton,device,8,11,43736);
+CheckOffset(struct _GdkEventButton,device,56,11,43736);
+CheckMemberSize(struct _GdkEventButton,x_root,8,11,43737);
+CheckOffset(struct _GdkEventButton,x_root,64,11,43737);
+CheckMemberSize(struct _GdkEventButton,y_root,8,11,43738);
+CheckOffset(struct _GdkEventButton,y_root,72,11,43738);
 #elif __ia64__
-CheckTypeSize(struct _GdkEventButton,80, 12767, 3)
-CheckMemberSize(struct _GdkEventButton,window,8,3,43728)
-CheckOffset(struct _GdkEventButton,window,8,3,43728)
-CheckMemberSize(struct _GdkEventButton,send_event,1,3,43729)
-CheckOffset(struct _GdkEventButton,send_event,16,3,43729)
-CheckMemberSize(struct _GdkEventButton,time,4,3,43730)
-CheckOffset(struct _GdkEventButton,time,20,3,43730)
-CheckMemberSize(struct _GdkEventButton,x,8,3,43731)
-CheckOffset(struct _GdkEventButton,x,24,3,43731)
-CheckMemberSize(struct _GdkEventButton,y,8,3,43732)
-CheckOffset(struct _GdkEventButton,y,32,3,43732)
-CheckMemberSize(struct _GdkEventButton,axes,8,3,43733)
-CheckOffset(struct _GdkEventButton,axes,40,3,43733)
-CheckMemberSize(struct _GdkEventButton,state,4,3,43734)
-CheckOffset(struct _GdkEventButton,state,48,3,43734)
-CheckMemberSize(struct _GdkEventButton,button,4,3,43735)
-CheckOffset(struct _GdkEventButton,button,52,3,43735)
-CheckMemberSize(struct _GdkEventButton,device,8,3,43736)
-CheckOffset(struct _GdkEventButton,device,56,3,43736)
-CheckMemberSize(struct _GdkEventButton,x_root,8,3,43737)
-CheckOffset(struct _GdkEventButton,x_root,64,3,43737)
-CheckMemberSize(struct _GdkEventButton,y_root,8,3,43738)
-CheckOffset(struct _GdkEventButton,y_root,72,3,43738)
+CheckTypeSize(struct _GdkEventButton,80, 12767, 3);
+CheckMemberSize(struct _GdkEventButton,window,8,3,43728);
+CheckOffset(struct _GdkEventButton,window,8,3,43728);
+CheckMemberSize(struct _GdkEventButton,send_event,1,3,43729);
+CheckOffset(struct _GdkEventButton,send_event,16,3,43729);
+CheckMemberSize(struct _GdkEventButton,time,4,3,43730);
+CheckOffset(struct _GdkEventButton,time,20,3,43730);
+CheckMemberSize(struct _GdkEventButton,x,8,3,43731);
+CheckOffset(struct _GdkEventButton,x,24,3,43731);
+CheckMemberSize(struct _GdkEventButton,y,8,3,43732);
+CheckOffset(struct _GdkEventButton,y,32,3,43732);
+CheckMemberSize(struct _GdkEventButton,axes,8,3,43733);
+CheckOffset(struct _GdkEventButton,axes,40,3,43733);
+CheckMemberSize(struct _GdkEventButton,state,4,3,43734);
+CheckOffset(struct _GdkEventButton,state,48,3,43734);
+CheckMemberSize(struct _GdkEventButton,button,4,3,43735);
+CheckOffset(struct _GdkEventButton,button,52,3,43735);
+CheckMemberSize(struct _GdkEventButton,device,8,3,43736);
+CheckOffset(struct _GdkEventButton,device,56,3,43736);
+CheckMemberSize(struct _GdkEventButton,x_root,8,3,43737);
+CheckOffset(struct _GdkEventButton,x_root,64,3,43737);
+CheckMemberSize(struct _GdkEventButton,y_root,8,3,43738);
+CheckOffset(struct _GdkEventButton,y_root,72,3,43738);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkEventButton,64, 12767, 6)
-CheckMemberSize(struct _GdkEventButton,window,4,6,43728)
-CheckOffset(struct _GdkEventButton,window,4,6,43728)
-CheckMemberSize(struct _GdkEventButton,send_event,1,6,43729)
-CheckOffset(struct _GdkEventButton,send_event,8,6,43729)
-CheckMemberSize(struct _GdkEventButton,time,4,6,43730)
-CheckOffset(struct _GdkEventButton,time,12,6,43730)
-CheckMemberSize(struct _GdkEventButton,x,8,6,43731)
-CheckOffset(struct _GdkEventButton,x,16,6,43731)
-CheckMemberSize(struct _GdkEventButton,y,8,6,43732)
-CheckOffset(struct _GdkEventButton,y,24,6,43732)
-CheckMemberSize(struct _GdkEventButton,axes,4,6,43733)
-CheckOffset(struct _GdkEventButton,axes,32,6,43733)
-CheckMemberSize(struct _GdkEventButton,state,4,6,43734)
-CheckOffset(struct _GdkEventButton,state,36,6,43734)
-CheckMemberSize(struct _GdkEventButton,button,4,6,43735)
-CheckOffset(struct _GdkEventButton,button,40,6,43735)
-CheckMemberSize(struct _GdkEventButton,device,4,6,43736)
-CheckOffset(struct _GdkEventButton,device,44,6,43736)
-CheckMemberSize(struct _GdkEventButton,x_root,8,6,43737)
-CheckOffset(struct _GdkEventButton,x_root,48,6,43737)
-CheckMemberSize(struct _GdkEventButton,y_root,8,6,43738)
-CheckOffset(struct _GdkEventButton,y_root,56,6,43738)
+CheckTypeSize(struct _GdkEventButton,64, 12767, 6);
+CheckMemberSize(struct _GdkEventButton,window,4,6,43728);
+CheckOffset(struct _GdkEventButton,window,4,6,43728);
+CheckMemberSize(struct _GdkEventButton,send_event,1,6,43729);
+CheckOffset(struct _GdkEventButton,send_event,8,6,43729);
+CheckMemberSize(struct _GdkEventButton,time,4,6,43730);
+CheckOffset(struct _GdkEventButton,time,12,6,43730);
+CheckMemberSize(struct _GdkEventButton,x,8,6,43731);
+CheckOffset(struct _GdkEventButton,x,16,6,43731);
+CheckMemberSize(struct _GdkEventButton,y,8,6,43732);
+CheckOffset(struct _GdkEventButton,y,24,6,43732);
+CheckMemberSize(struct _GdkEventButton,axes,4,6,43733);
+CheckOffset(struct _GdkEventButton,axes,32,6,43733);
+CheckMemberSize(struct _GdkEventButton,state,4,6,43734);
+CheckOffset(struct _GdkEventButton,state,36,6,43734);
+CheckMemberSize(struct _GdkEventButton,button,4,6,43735);
+CheckOffset(struct _GdkEventButton,button,40,6,43735);
+CheckMemberSize(struct _GdkEventButton,device,4,6,43736);
+CheckOffset(struct _GdkEventButton,device,44,6,43736);
+CheckMemberSize(struct _GdkEventButton,x_root,8,6,43737);
+CheckOffset(struct _GdkEventButton,x_root,48,6,43737);
+CheckMemberSize(struct _GdkEventButton,y_root,8,6,43738);
+CheckOffset(struct _GdkEventButton,y_root,56,6,43738);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkEventButton,80, 12767, 9)
-CheckMemberSize(struct _GdkEventButton,window,8,9,43728)
-CheckOffset(struct _GdkEventButton,window,8,9,43728)
-CheckMemberSize(struct _GdkEventButton,send_event,1,9,43729)
-CheckOffset(struct _GdkEventButton,send_event,16,9,43729)
-CheckMemberSize(struct _GdkEventButton,time,4,9,43730)
-CheckOffset(struct _GdkEventButton,time,20,9,43730)
-CheckMemberSize(struct _GdkEventButton,x,8,9,43731)
-CheckOffset(struct _GdkEventButton,x,24,9,43731)
-CheckMemberSize(struct _GdkEventButton,y,8,9,43732)
-CheckOffset(struct _GdkEventButton,y,32,9,43732)
-CheckMemberSize(struct _GdkEventButton,axes,8,9,43733)
-CheckOffset(struct _GdkEventButton,axes,40,9,43733)
-CheckMemberSize(struct _GdkEventButton,state,4,9,43734)
-CheckOffset(struct _GdkEventButton,state,48,9,43734)
-CheckMemberSize(struct _GdkEventButton,button,4,9,43735)
-CheckOffset(struct _GdkEventButton,button,52,9,43735)
-CheckMemberSize(struct _GdkEventButton,device,8,9,43736)
-CheckOffset(struct _GdkEventButton,device,56,9,43736)
-CheckMemberSize(struct _GdkEventButton,x_root,8,9,43737)
-CheckOffset(struct _GdkEventButton,x_root,64,9,43737)
-CheckMemberSize(struct _GdkEventButton,y_root,8,9,43738)
-CheckOffset(struct _GdkEventButton,y_root,72,9,43738)
+CheckTypeSize(struct _GdkEventButton,80, 12767, 9);
+CheckMemberSize(struct _GdkEventButton,window,8,9,43728);
+CheckOffset(struct _GdkEventButton,window,8,9,43728);
+CheckMemberSize(struct _GdkEventButton,send_event,1,9,43729);
+CheckOffset(struct _GdkEventButton,send_event,16,9,43729);
+CheckMemberSize(struct _GdkEventButton,time,4,9,43730);
+CheckOffset(struct _GdkEventButton,time,20,9,43730);
+CheckMemberSize(struct _GdkEventButton,x,8,9,43731);
+CheckOffset(struct _GdkEventButton,x,24,9,43731);
+CheckMemberSize(struct _GdkEventButton,y,8,9,43732);
+CheckOffset(struct _GdkEventButton,y,32,9,43732);
+CheckMemberSize(struct _GdkEventButton,axes,8,9,43733);
+CheckOffset(struct _GdkEventButton,axes,40,9,43733);
+CheckMemberSize(struct _GdkEventButton,state,4,9,43734);
+CheckOffset(struct _GdkEventButton,state,48,9,43734);
+CheckMemberSize(struct _GdkEventButton,button,4,9,43735);
+CheckOffset(struct _GdkEventButton,button,52,9,43735);
+CheckMemberSize(struct _GdkEventButton,device,8,9,43736);
+CheckOffset(struct _GdkEventButton,device,56,9,43736);
+CheckMemberSize(struct _GdkEventButton,x_root,8,9,43737);
+CheckOffset(struct _GdkEventButton,x_root,64,9,43737);
+CheckMemberSize(struct _GdkEventButton,y_root,8,9,43738);
+CheckOffset(struct _GdkEventButton,y_root,72,9,43738);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkEventButton,64, 12767, 10)
-CheckMemberSize(struct _GdkEventButton,window,4,10,43728)
-CheckOffset(struct _GdkEventButton,window,4,10,43728)
-CheckMemberSize(struct _GdkEventButton,send_event,1,10,43729)
-CheckOffset(struct _GdkEventButton,send_event,8,10,43729)
-CheckMemberSize(struct _GdkEventButton,time,4,10,43730)
-CheckOffset(struct _GdkEventButton,time,12,10,43730)
-CheckMemberSize(struct _GdkEventButton,x,8,10,43731)
-CheckOffset(struct _GdkEventButton,x,16,10,43731)
-CheckMemberSize(struct _GdkEventButton,y,8,10,43732)
-CheckOffset(struct _GdkEventButton,y,24,10,43732)
-CheckMemberSize(struct _GdkEventButton,axes,4,10,43733)
-CheckOffset(struct _GdkEventButton,axes,32,10,43733)
-CheckMemberSize(struct _GdkEventButton,state,4,10,43734)
-CheckOffset(struct _GdkEventButton,state,36,10,43734)
-CheckMemberSize(struct _GdkEventButton,button,4,10,43735)
-CheckOffset(struct _GdkEventButton,button,40,10,43735)
-CheckMemberSize(struct _GdkEventButton,device,4,10,43736)
-CheckOffset(struct _GdkEventButton,device,44,10,43736)
-CheckMemberSize(struct _GdkEventButton,x_root,8,10,43737)
-CheckOffset(struct _GdkEventButton,x_root,48,10,43737)
-CheckMemberSize(struct _GdkEventButton,y_root,8,10,43738)
-CheckOffset(struct _GdkEventButton,y_root,56,10,43738)
+CheckTypeSize(struct _GdkEventButton,64, 12767, 10);
+CheckMemberSize(struct _GdkEventButton,window,4,10,43728);
+CheckOffset(struct _GdkEventButton,window,4,10,43728);
+CheckMemberSize(struct _GdkEventButton,send_event,1,10,43729);
+CheckOffset(struct _GdkEventButton,send_event,8,10,43729);
+CheckMemberSize(struct _GdkEventButton,time,4,10,43730);
+CheckOffset(struct _GdkEventButton,time,12,10,43730);
+CheckMemberSize(struct _GdkEventButton,x,8,10,43731);
+CheckOffset(struct _GdkEventButton,x,16,10,43731);
+CheckMemberSize(struct _GdkEventButton,y,8,10,43732);
+CheckOffset(struct _GdkEventButton,y,24,10,43732);
+CheckMemberSize(struct _GdkEventButton,axes,4,10,43733);
+CheckOffset(struct _GdkEventButton,axes,32,10,43733);
+CheckMemberSize(struct _GdkEventButton,state,4,10,43734);
+CheckOffset(struct _GdkEventButton,state,36,10,43734);
+CheckMemberSize(struct _GdkEventButton,button,4,10,43735);
+CheckOffset(struct _GdkEventButton,button,40,10,43735);
+CheckMemberSize(struct _GdkEventButton,device,4,10,43736);
+CheckOffset(struct _GdkEventButton,device,44,10,43736);
+CheckMemberSize(struct _GdkEventButton,x_root,8,10,43737);
+CheckOffset(struct _GdkEventButton,x_root,48,10,43737);
+CheckMemberSize(struct _GdkEventButton,y_root,8,10,43738);
+CheckOffset(struct _GdkEventButton,y_root,56,10,43738);
 #elif __s390x__
-CheckTypeSize(struct _GdkEventButton,80, 12767, 12)
-CheckMemberSize(struct _GdkEventButton,window,8,12,43728)
-CheckOffset(struct _GdkEventButton,window,8,12,43728)
-CheckMemberSize(struct _GdkEventButton,send_event,1,12,43729)
-CheckOffset(struct _GdkEventButton,send_event,16,12,43729)
-CheckMemberSize(struct _GdkEventButton,time,4,12,43730)
-CheckOffset(struct _GdkEventButton,time,20,12,43730)
-CheckMemberSize(struct _GdkEventButton,x,8,12,43731)
-CheckOffset(struct _GdkEventButton,x,24,12,43731)
-CheckMemberSize(struct _GdkEventButton,y,8,12,43732)
-CheckOffset(struct _GdkEventButton,y,32,12,43732)
-CheckMemberSize(struct _GdkEventButton,axes,8,12,43733)
-CheckOffset(struct _GdkEventButton,axes,40,12,43733)
-CheckMemberSize(struct _GdkEventButton,state,4,12,43734)
-CheckOffset(struct _GdkEventButton,state,48,12,43734)
-CheckMemberSize(struct _GdkEventButton,button,4,12,43735)
-CheckOffset(struct _GdkEventButton,button,52,12,43735)
-CheckMemberSize(struct _GdkEventButton,device,8,12,43736)
-CheckOffset(struct _GdkEventButton,device,56,12,43736)
-CheckMemberSize(struct _GdkEventButton,x_root,8,12,43737)
-CheckOffset(struct _GdkEventButton,x_root,64,12,43737)
-CheckMemberSize(struct _GdkEventButton,y_root,8,12,43738)
-CheckOffset(struct _GdkEventButton,y_root,72,12,43738)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12767,0);
-Msg("Find size of _GdkEventButton (12767)\n");
+CheckTypeSize(struct _GdkEventButton,80, 12767, 12);
+CheckMemberSize(struct _GdkEventButton,window,8,12,43728);
+CheckOffset(struct _GdkEventButton,window,8,12,43728);
+CheckMemberSize(struct _GdkEventButton,send_event,1,12,43729);
+CheckOffset(struct _GdkEventButton,send_event,16,12,43729);
+CheckMemberSize(struct _GdkEventButton,time,4,12,43730);
+CheckOffset(struct _GdkEventButton,time,20,12,43730);
+CheckMemberSize(struct _GdkEventButton,x,8,12,43731);
+CheckOffset(struct _GdkEventButton,x,24,12,43731);
+CheckMemberSize(struct _GdkEventButton,y,8,12,43732);
+CheckOffset(struct _GdkEventButton,y,32,12,43732);
+CheckMemberSize(struct _GdkEventButton,axes,8,12,43733);
+CheckOffset(struct _GdkEventButton,axes,40,12,43733);
+CheckMemberSize(struct _GdkEventButton,state,4,12,43734);
+CheckOffset(struct _GdkEventButton,state,48,12,43734);
+CheckMemberSize(struct _GdkEventButton,button,4,12,43735);
+CheckOffset(struct _GdkEventButton,button,52,12,43735);
+CheckMemberSize(struct _GdkEventButton,device,8,12,43736);
+CheckOffset(struct _GdkEventButton,device,56,12,43736);
+CheckMemberSize(struct _GdkEventButton,x_root,8,12,43737);
+CheckOffset(struct _GdkEventButton,x_root,64,12,43737);
+CheckMemberSize(struct _GdkEventButton,y_root,8,12,43738);
+CheckOffset(struct _GdkEventButton,y_root,72,12,43738);
+#elif 1
+CheckTypeSize(struct _GdkEventButton,0, 12767, 1);
+Msg("Missing member data for _GdkEventButton on All\n");
+CheckOffset(struct _GdkEventButton,type,0,1,43727);
+CheckOffset(struct _GdkEventButton,window,0,1,43728);
+CheckOffset(struct _GdkEventButton,send_event,0,1,43729);
+CheckOffset(struct _GdkEventButton,time,0,1,43730);
+CheckOffset(struct _GdkEventButton,x,0,1,43731);
+CheckOffset(struct _GdkEventButton,y,0,1,43732);
+CheckOffset(struct _GdkEventButton,axes,0,1,43733);
+CheckOffset(struct _GdkEventButton,state,0,1,43734);
+CheckOffset(struct _GdkEventButton,button,0,1,43735);
+CheckOffset(struct _GdkEventButton,device,0,1,43736);
+CheckOffset(struct _GdkEventButton,x_root,0,1,43737);
+CheckOffset(struct _GdkEventButton,y_root,0,1,43738);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkEventButton,64, 12768, 2)
+CheckTypeSize(GdkEventButton,64, 12768, 2);
 #elif __x86_64__
-CheckTypeSize(GdkEventButton,80, 12768, 11)
+CheckTypeSize(GdkEventButton,80, 12768, 11);
 #elif __ia64__
-CheckTypeSize(GdkEventButton,80, 12768, 3)
+CheckTypeSize(GdkEventButton,80, 12768, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkEventButton,64, 12768, 6)
+CheckTypeSize(GdkEventButton,64, 12768, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkEventButton,80, 12768, 9)
+CheckTypeSize(GdkEventButton,80, 12768, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkEventButton,64, 12768, 10)
+CheckTypeSize(GdkEventButton,64, 12768, 10);
 #elif __s390x__
-CheckTypeSize(GdkEventButton,80, 12768, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12768,0);
-Msg("Find size of GdkEventButton (12768)\n");
+CheckTypeSize(GdkEventButton,80, 12768, 12);
+#elif 1
+CheckTypeSize(GdkEventButton,0, 12768, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkEventScroll,60, 12769, 2)
-CheckMemberSize(struct _GdkEventScroll,window,4,2,43741)
-CheckOffset(struct _GdkEventScroll,window,4,2,43741)
-CheckMemberSize(struct _GdkEventScroll,send_event,1,2,43742)
-CheckOffset(struct _GdkEventScroll,send_event,8,2,43742)
-CheckMemberSize(struct _GdkEventScroll,time,4,2,43743)
-CheckOffset(struct _GdkEventScroll,time,12,2,43743)
-CheckMemberSize(struct _GdkEventScroll,x,8,2,43744)
-CheckOffset(struct _GdkEventScroll,x,16,2,43744)
-CheckMemberSize(struct _GdkEventScroll,y,8,2,43745)
-CheckOffset(struct _GdkEventScroll,y,24,2,43745)
-CheckMemberSize(struct _GdkEventScroll,state,4,2,43746)
-CheckOffset(struct _GdkEventScroll,state,32,2,43746)
-CheckMemberSize(struct _GdkEventScroll,direction,4,2,43751)
-CheckOffset(struct _GdkEventScroll,direction,36,2,43751)
-CheckMemberSize(struct _GdkEventScroll,device,4,2,43752)
-CheckOffset(struct _GdkEventScroll,device,40,2,43752)
-CheckMemberSize(struct _GdkEventScroll,x_root,8,2,43753)
-CheckOffset(struct _GdkEventScroll,x_root,44,2,43753)
-CheckMemberSize(struct _GdkEventScroll,y_root,8,2,43754)
-CheckOffset(struct _GdkEventScroll,y_root,52,2,43754)
+CheckTypeSize(struct _GdkEventScroll,60, 12769, 2);
+CheckMemberSize(struct _GdkEventScroll,window,4,2,43741);
+CheckOffset(struct _GdkEventScroll,window,4,2,43741);
+CheckMemberSize(struct _GdkEventScroll,send_event,1,2,43742);
+CheckOffset(struct _GdkEventScroll,send_event,8,2,43742);
+CheckMemberSize(struct _GdkEventScroll,time,4,2,43743);
+CheckOffset(struct _GdkEventScroll,time,12,2,43743);
+CheckMemberSize(struct _GdkEventScroll,x,8,2,43744);
+CheckOffset(struct _GdkEventScroll,x,16,2,43744);
+CheckMemberSize(struct _GdkEventScroll,y,8,2,43745);
+CheckOffset(struct _GdkEventScroll,y,24,2,43745);
+CheckMemberSize(struct _GdkEventScroll,state,4,2,43746);
+CheckOffset(struct _GdkEventScroll,state,32,2,43746);
+CheckMemberSize(struct _GdkEventScroll,direction,4,2,43751);
+CheckOffset(struct _GdkEventScroll,direction,36,2,43751);
+CheckMemberSize(struct _GdkEventScroll,device,4,2,43752);
+CheckOffset(struct _GdkEventScroll,device,40,2,43752);
+CheckMemberSize(struct _GdkEventScroll,x_root,8,2,43753);
+CheckOffset(struct _GdkEventScroll,x_root,44,2,43753);
+CheckMemberSize(struct _GdkEventScroll,y_root,8,2,43754);
+CheckOffset(struct _GdkEventScroll,y_root,52,2,43754);
 #elif __x86_64__
-CheckTypeSize(struct _GdkEventScroll,72, 12769, 11)
-CheckMemberSize(struct _GdkEventScroll,window,8,11,43741)
-CheckOffset(struct _GdkEventScroll,window,8,11,43741)
-CheckMemberSize(struct _GdkEventScroll,send_event,1,11,43742)
-CheckOffset(struct _GdkEventScroll,send_event,16,11,43742)
-CheckMemberSize(struct _GdkEventScroll,time,4,11,43743)
-CheckOffset(struct _GdkEventScroll,time,20,11,43743)
-CheckMemberSize(struct _GdkEventScroll,x,8,11,43744)
-CheckOffset(struct _GdkEventScroll,x,24,11,43744)
-CheckMemberSize(struct _GdkEventScroll,y,8,11,43745)
-CheckOffset(struct _GdkEventScroll,y,32,11,43745)
-CheckMemberSize(struct _GdkEventScroll,state,4,11,43746)
-CheckOffset(struct _GdkEventScroll,state,40,11,43746)
-CheckMemberSize(struct _GdkEventScroll,direction,4,11,43751)
-CheckOffset(struct _GdkEventScroll,direction,44,11,43751)
-CheckMemberSize(struct _GdkEventScroll,device,8,11,43752)
-CheckOffset(struct _GdkEventScroll,device,48,11,43752)
-CheckMemberSize(struct _GdkEventScroll,x_root,8,11,43753)
-CheckOffset(struct _GdkEventScroll,x_root,56,11,43753)
-CheckMemberSize(struct _GdkEventScroll,y_root,8,11,43754)
-CheckOffset(struct _GdkEventScroll,y_root,64,11,43754)
+CheckTypeSize(struct _GdkEventScroll,72, 12769, 11);
+CheckMemberSize(struct _GdkEventScroll,window,8,11,43741);
+CheckOffset(struct _GdkEventScroll,window,8,11,43741);
+CheckMemberSize(struct _GdkEventScroll,send_event,1,11,43742);
+CheckOffset(struct _GdkEventScroll,send_event,16,11,43742);
+CheckMemberSize(struct _GdkEventScroll,time,4,11,43743);
+CheckOffset(struct _GdkEventScroll,time,20,11,43743);
+CheckMemberSize(struct _GdkEventScroll,x,8,11,43744);
+CheckOffset(struct _GdkEventScroll,x,24,11,43744);
+CheckMemberSize(struct _GdkEventScroll,y,8,11,43745);
+CheckOffset(struct _GdkEventScroll,y,32,11,43745);
+CheckMemberSize(struct _GdkEventScroll,state,4,11,43746);
+CheckOffset(struct _GdkEventScroll,state,40,11,43746);
+CheckMemberSize(struct _GdkEventScroll,direction,4,11,43751);
+CheckOffset(struct _GdkEventScroll,direction,44,11,43751);
+CheckMemberSize(struct _GdkEventScroll,device,8,11,43752);
+CheckOffset(struct _GdkEventScroll,device,48,11,43752);
+CheckMemberSize(struct _GdkEventScroll,x_root,8,11,43753);
+CheckOffset(struct _GdkEventScroll,x_root,56,11,43753);
+CheckMemberSize(struct _GdkEventScroll,y_root,8,11,43754);
+CheckOffset(struct _GdkEventScroll,y_root,64,11,43754);
 #elif __ia64__
-CheckTypeSize(struct _GdkEventScroll,72, 12769, 3)
-CheckMemberSize(struct _GdkEventScroll,window,8,3,43741)
-CheckOffset(struct _GdkEventScroll,window,8,3,43741)
-CheckMemberSize(struct _GdkEventScroll,send_event,1,3,43742)
-CheckOffset(struct _GdkEventScroll,send_event,16,3,43742)
-CheckMemberSize(struct _GdkEventScroll,time,4,3,43743)
-CheckOffset(struct _GdkEventScroll,time,20,3,43743)
-CheckMemberSize(struct _GdkEventScroll,x,8,3,43744)
-CheckOffset(struct _GdkEventScroll,x,24,3,43744)
-CheckMemberSize(struct _GdkEventScroll,y,8,3,43745)
-CheckOffset(struct _GdkEventScroll,y,32,3,43745)
-CheckMemberSize(struct _GdkEventScroll,state,4,3,43746)
-CheckOffset(struct _GdkEventScroll,state,40,3,43746)
-CheckMemberSize(struct _GdkEventScroll,direction,4,3,43751)
-CheckOffset(struct _GdkEventScroll,direction,44,3,43751)
-CheckMemberSize(struct _GdkEventScroll,device,8,3,43752)
-CheckOffset(struct _GdkEventScroll,device,48,3,43752)
-CheckMemberSize(struct _GdkEventScroll,x_root,8,3,43753)
-CheckOffset(struct _GdkEventScroll,x_root,56,3,43753)
-CheckMemberSize(struct _GdkEventScroll,y_root,8,3,43754)
-CheckOffset(struct _GdkEventScroll,y_root,64,3,43754)
+CheckTypeSize(struct _GdkEventScroll,72, 12769, 3);
+CheckMemberSize(struct _GdkEventScroll,window,8,3,43741);
+CheckOffset(struct _GdkEventScroll,window,8,3,43741);
+CheckMemberSize(struct _GdkEventScroll,send_event,1,3,43742);
+CheckOffset(struct _GdkEventScroll,send_event,16,3,43742);
+CheckMemberSize(struct _GdkEventScroll,time,4,3,43743);
+CheckOffset(struct _GdkEventScroll,time,20,3,43743);
+CheckMemberSize(struct _GdkEventScroll,x,8,3,43744);
+CheckOffset(struct _GdkEventScroll,x,24,3,43744);
+CheckMemberSize(struct _GdkEventScroll,y,8,3,43745);
+CheckOffset(struct _GdkEventScroll,y,32,3,43745);
+CheckMemberSize(struct _GdkEventScroll,state,4,3,43746);
+CheckOffset(struct _GdkEventScroll,state,40,3,43746);
+CheckMemberSize(struct _GdkEventScroll,direction,4,3,43751);
+CheckOffset(struct _GdkEventScroll,direction,44,3,43751);
+CheckMemberSize(struct _GdkEventScroll,device,8,3,43752);
+CheckOffset(struct _GdkEventScroll,device,48,3,43752);
+CheckMemberSize(struct _GdkEventScroll,x_root,8,3,43753);
+CheckOffset(struct _GdkEventScroll,x_root,56,3,43753);
+CheckMemberSize(struct _GdkEventScroll,y_root,8,3,43754);
+CheckOffset(struct _GdkEventScroll,y_root,64,3,43754);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkEventScroll,64, 12769, 6)
-CheckMemberSize(struct _GdkEventScroll,window,4,6,43741)
-CheckOffset(struct _GdkEventScroll,window,4,6,43741)
-CheckMemberSize(struct _GdkEventScroll,send_event,1,6,43742)
-CheckOffset(struct _GdkEventScroll,send_event,8,6,43742)
-CheckMemberSize(struct _GdkEventScroll,time,4,6,43743)
-CheckOffset(struct _GdkEventScroll,time,12,6,43743)
-CheckMemberSize(struct _GdkEventScroll,x,8,6,43744)
-CheckOffset(struct _GdkEventScroll,x,16,6,43744)
-CheckMemberSize(struct _GdkEventScroll,y,8,6,43745)
-CheckOffset(struct _GdkEventScroll,y,24,6,43745)
-CheckMemberSize(struct _GdkEventScroll,state,4,6,43746)
-CheckOffset(struct _GdkEventScroll,state,32,6,43746)
-CheckMemberSize(struct _GdkEventScroll,direction,4,6,43751)
-CheckOffset(struct _GdkEventScroll,direction,36,6,43751)
-CheckMemberSize(struct _GdkEventScroll,device,4,6,43752)
-CheckOffset(struct _GdkEventScroll,device,40,6,43752)
-CheckMemberSize(struct _GdkEventScroll,x_root,8,6,43753)
-CheckOffset(struct _GdkEventScroll,x_root,48,6,43753)
-CheckMemberSize(struct _GdkEventScroll,y_root,8,6,43754)
-CheckOffset(struct _GdkEventScroll,y_root,56,6,43754)
+CheckTypeSize(struct _GdkEventScroll,64, 12769, 6);
+CheckMemberSize(struct _GdkEventScroll,window,4,6,43741);
+CheckOffset(struct _GdkEventScroll,window,4,6,43741);
+CheckMemberSize(struct _GdkEventScroll,send_event,1,6,43742);
+CheckOffset(struct _GdkEventScroll,send_event,8,6,43742);
+CheckMemberSize(struct _GdkEventScroll,time,4,6,43743);
+CheckOffset(struct _GdkEventScroll,time,12,6,43743);
+CheckMemberSize(struct _GdkEventScroll,x,8,6,43744);
+CheckOffset(struct _GdkEventScroll,x,16,6,43744);
+CheckMemberSize(struct _GdkEventScroll,y,8,6,43745);
+CheckOffset(struct _GdkEventScroll,y,24,6,43745);
+CheckMemberSize(struct _GdkEventScroll,state,4,6,43746);
+CheckOffset(struct _GdkEventScroll,state,32,6,43746);
+CheckMemberSize(struct _GdkEventScroll,direction,4,6,43751);
+CheckOffset(struct _GdkEventScroll,direction,36,6,43751);
+CheckMemberSize(struct _GdkEventScroll,device,4,6,43752);
+CheckOffset(struct _GdkEventScroll,device,40,6,43752);
+CheckMemberSize(struct _GdkEventScroll,x_root,8,6,43753);
+CheckOffset(struct _GdkEventScroll,x_root,48,6,43753);
+CheckMemberSize(struct _GdkEventScroll,y_root,8,6,43754);
+CheckOffset(struct _GdkEventScroll,y_root,56,6,43754);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkEventScroll,72, 12769, 9)
-CheckMemberSize(struct _GdkEventScroll,window,8,9,43741)
-CheckOffset(struct _GdkEventScroll,window,8,9,43741)
-CheckMemberSize(struct _GdkEventScroll,send_event,1,9,43742)
-CheckOffset(struct _GdkEventScroll,send_event,16,9,43742)
-CheckMemberSize(struct _GdkEventScroll,time,4,9,43743)
-CheckOffset(struct _GdkEventScroll,time,20,9,43743)
-CheckMemberSize(struct _GdkEventScroll,x,8,9,43744)
-CheckOffset(struct _GdkEventScroll,x,24,9,43744)
-CheckMemberSize(struct _GdkEventScroll,y,8,9,43745)
-CheckOffset(struct _GdkEventScroll,y,32,9,43745)
-CheckMemberSize(struct _GdkEventScroll,state,4,9,43746)
-CheckOffset(struct _GdkEventScroll,state,40,9,43746)
-CheckMemberSize(struct _GdkEventScroll,direction,4,9,43751)
-CheckOffset(struct _GdkEventScroll,direction,44,9,43751)
-CheckMemberSize(struct _GdkEventScroll,device,8,9,43752)
-CheckOffset(struct _GdkEventScroll,device,48,9,43752)
-CheckMemberSize(struct _GdkEventScroll,x_root,8,9,43753)
-CheckOffset(struct _GdkEventScroll,x_root,56,9,43753)
-CheckMemberSize(struct _GdkEventScroll,y_root,8,9,43754)
-CheckOffset(struct _GdkEventScroll,y_root,64,9,43754)
+CheckTypeSize(struct _GdkEventScroll,72, 12769, 9);
+CheckMemberSize(struct _GdkEventScroll,window,8,9,43741);
+CheckOffset(struct _GdkEventScroll,window,8,9,43741);
+CheckMemberSize(struct _GdkEventScroll,send_event,1,9,43742);
+CheckOffset(struct _GdkEventScroll,send_event,16,9,43742);
+CheckMemberSize(struct _GdkEventScroll,time,4,9,43743);
+CheckOffset(struct _GdkEventScroll,time,20,9,43743);
+CheckMemberSize(struct _GdkEventScroll,x,8,9,43744);
+CheckOffset(struct _GdkEventScroll,x,24,9,43744);
+CheckMemberSize(struct _GdkEventScroll,y,8,9,43745);
+CheckOffset(struct _GdkEventScroll,y,32,9,43745);
+CheckMemberSize(struct _GdkEventScroll,state,4,9,43746);
+CheckOffset(struct _GdkEventScroll,state,40,9,43746);
+CheckMemberSize(struct _GdkEventScroll,direction,4,9,43751);
+CheckOffset(struct _GdkEventScroll,direction,44,9,43751);
+CheckMemberSize(struct _GdkEventScroll,device,8,9,43752);
+CheckOffset(struct _GdkEventScroll,device,48,9,43752);
+CheckMemberSize(struct _GdkEventScroll,x_root,8,9,43753);
+CheckOffset(struct _GdkEventScroll,x_root,56,9,43753);
+CheckMemberSize(struct _GdkEventScroll,y_root,8,9,43754);
+CheckOffset(struct _GdkEventScroll,y_root,64,9,43754);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkEventScroll,64, 12769, 10)
-CheckMemberSize(struct _GdkEventScroll,window,4,10,43741)
-CheckOffset(struct _GdkEventScroll,window,4,10,43741)
-CheckMemberSize(struct _GdkEventScroll,send_event,1,10,43742)
-CheckOffset(struct _GdkEventScroll,send_event,8,10,43742)
-CheckMemberSize(struct _GdkEventScroll,time,4,10,43743)
-CheckOffset(struct _GdkEventScroll,time,12,10,43743)
-CheckMemberSize(struct _GdkEventScroll,x,8,10,43744)
-CheckOffset(struct _GdkEventScroll,x,16,10,43744)
-CheckMemberSize(struct _GdkEventScroll,y,8,10,43745)
-CheckOffset(struct _GdkEventScroll,y,24,10,43745)
-CheckMemberSize(struct _GdkEventScroll,state,4,10,43746)
-CheckOffset(struct _GdkEventScroll,state,32,10,43746)
-CheckMemberSize(struct _GdkEventScroll,direction,4,10,43751)
-CheckOffset(struct _GdkEventScroll,direction,36,10,43751)
-CheckMemberSize(struct _GdkEventScroll,device,4,10,43752)
-CheckOffset(struct _GdkEventScroll,device,40,10,43752)
-CheckMemberSize(struct _GdkEventScroll,x_root,8,10,43753)
-CheckOffset(struct _GdkEventScroll,x_root,48,10,43753)
-CheckMemberSize(struct _GdkEventScroll,y_root,8,10,43754)
-CheckOffset(struct _GdkEventScroll,y_root,56,10,43754)
+CheckTypeSize(struct _GdkEventScroll,64, 12769, 10);
+CheckMemberSize(struct _GdkEventScroll,window,4,10,43741);
+CheckOffset(struct _GdkEventScroll,window,4,10,43741);
+CheckMemberSize(struct _GdkEventScroll,send_event,1,10,43742);
+CheckOffset(struct _GdkEventScroll,send_event,8,10,43742);
+CheckMemberSize(struct _GdkEventScroll,time,4,10,43743);
+CheckOffset(struct _GdkEventScroll,time,12,10,43743);
+CheckMemberSize(struct _GdkEventScroll,x,8,10,43744);
+CheckOffset(struct _GdkEventScroll,x,16,10,43744);
+CheckMemberSize(struct _GdkEventScroll,y,8,10,43745);
+CheckOffset(struct _GdkEventScroll,y,24,10,43745);
+CheckMemberSize(struct _GdkEventScroll,state,4,10,43746);
+CheckOffset(struct _GdkEventScroll,state,32,10,43746);
+CheckMemberSize(struct _GdkEventScroll,direction,4,10,43751);
+CheckOffset(struct _GdkEventScroll,direction,36,10,43751);
+CheckMemberSize(struct _GdkEventScroll,device,4,10,43752);
+CheckOffset(struct _GdkEventScroll,device,40,10,43752);
+CheckMemberSize(struct _GdkEventScroll,x_root,8,10,43753);
+CheckOffset(struct _GdkEventScroll,x_root,48,10,43753);
+CheckMemberSize(struct _GdkEventScroll,y_root,8,10,43754);
+CheckOffset(struct _GdkEventScroll,y_root,56,10,43754);
 #elif __s390x__
-CheckTypeSize(struct _GdkEventScroll,72, 12769, 12)
-CheckMemberSize(struct _GdkEventScroll,window,8,12,43741)
-CheckOffset(struct _GdkEventScroll,window,8,12,43741)
-CheckMemberSize(struct _GdkEventScroll,send_event,1,12,43742)
-CheckOffset(struct _GdkEventScroll,send_event,16,12,43742)
-CheckMemberSize(struct _GdkEventScroll,time,4,12,43743)
-CheckOffset(struct _GdkEventScroll,time,20,12,43743)
-CheckMemberSize(struct _GdkEventScroll,x,8,12,43744)
-CheckOffset(struct _GdkEventScroll,x,24,12,43744)
-CheckMemberSize(struct _GdkEventScroll,y,8,12,43745)
-CheckOffset(struct _GdkEventScroll,y,32,12,43745)
-CheckMemberSize(struct _GdkEventScroll,state,4,12,43746)
-CheckOffset(struct _GdkEventScroll,state,40,12,43746)
-CheckMemberSize(struct _GdkEventScroll,direction,4,12,43751)
-CheckOffset(struct _GdkEventScroll,direction,44,12,43751)
-CheckMemberSize(struct _GdkEventScroll,device,8,12,43752)
-CheckOffset(struct _GdkEventScroll,device,48,12,43752)
-CheckMemberSize(struct _GdkEventScroll,x_root,8,12,43753)
-CheckOffset(struct _GdkEventScroll,x_root,56,12,43753)
-CheckMemberSize(struct _GdkEventScroll,y_root,8,12,43754)
-CheckOffset(struct _GdkEventScroll,y_root,64,12,43754)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12769,0);
-Msg("Find size of _GdkEventScroll (12769)\n");
+CheckTypeSize(struct _GdkEventScroll,72, 12769, 12);
+CheckMemberSize(struct _GdkEventScroll,window,8,12,43741);
+CheckOffset(struct _GdkEventScroll,window,8,12,43741);
+CheckMemberSize(struct _GdkEventScroll,send_event,1,12,43742);
+CheckOffset(struct _GdkEventScroll,send_event,16,12,43742);
+CheckMemberSize(struct _GdkEventScroll,time,4,12,43743);
+CheckOffset(struct _GdkEventScroll,time,20,12,43743);
+CheckMemberSize(struct _GdkEventScroll,x,8,12,43744);
+CheckOffset(struct _GdkEventScroll,x,24,12,43744);
+CheckMemberSize(struct _GdkEventScroll,y,8,12,43745);
+CheckOffset(struct _GdkEventScroll,y,32,12,43745);
+CheckMemberSize(struct _GdkEventScroll,state,4,12,43746);
+CheckOffset(struct _GdkEventScroll,state,40,12,43746);
+CheckMemberSize(struct _GdkEventScroll,direction,4,12,43751);
+CheckOffset(struct _GdkEventScroll,direction,44,12,43751);
+CheckMemberSize(struct _GdkEventScroll,device,8,12,43752);
+CheckOffset(struct _GdkEventScroll,device,48,12,43752);
+CheckMemberSize(struct _GdkEventScroll,x_root,8,12,43753);
+CheckOffset(struct _GdkEventScroll,x_root,56,12,43753);
+CheckMemberSize(struct _GdkEventScroll,y_root,8,12,43754);
+CheckOffset(struct _GdkEventScroll,y_root,64,12,43754);
+#elif 1
+CheckTypeSize(struct _GdkEventScroll,0, 12769, 1);
+Msg("Missing member data for _GdkEventScroll on All\n");
+CheckOffset(struct _GdkEventScroll,type,0,1,43740);
+CheckOffset(struct _GdkEventScroll,window,0,1,43741);
+CheckOffset(struct _GdkEventScroll,send_event,0,1,43742);
+CheckOffset(struct _GdkEventScroll,time,0,1,43743);
+CheckOffset(struct _GdkEventScroll,x,0,1,43744);
+CheckOffset(struct _GdkEventScroll,y,0,1,43745);
+CheckOffset(struct _GdkEventScroll,state,0,1,43746);
+CheckOffset(struct _GdkEventScroll,direction,0,1,43751);
+CheckOffset(struct _GdkEventScroll,device,0,1,43752);
+CheckOffset(struct _GdkEventScroll,x_root,0,1,43753);
+CheckOffset(struct _GdkEventScroll,y_root,0,1,43754);
 #endif
 
 #if __i386__
@@ -5263,398 +5485,420 @@ CheckEnum("GDK_SCROLL_UP",GDK_SCROLL_UP,0,43747);
 CheckEnum("GDK_SCROLL_DOWN",GDK_SCROLL_DOWN,1,43748);
 CheckEnum("GDK_SCROLL_LEFT",GDK_SCROLL_LEFT,2,43749);
 CheckEnum("GDK_SCROLL_RIGHT",GDK_SCROLL_RIGHT,3,43750);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12770,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-504 (12770)\n");
+#elif 1
+CheckEnum("GDK_SCROLL_UP",GDK_SCROLL_UP,0,43747);
+CheckEnum("GDK_SCROLL_DOWN",GDK_SCROLL_DOWN,1,43748);
+CheckEnum("GDK_SCROLL_LEFT",GDK_SCROLL_LEFT,2,43749);
+CheckEnum("GDK_SCROLL_RIGHT",GDK_SCROLL_RIGHT,3,43750);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkScrollDirection,4, 12771, 2)
+CheckTypeSize(GdkScrollDirection,4, 12771, 2);
 #elif __x86_64__
-CheckTypeSize(GdkScrollDirection,4, 12771, 11)
+CheckTypeSize(GdkScrollDirection,4, 12771, 11);
 #elif __ia64__
-CheckTypeSize(GdkScrollDirection,4, 12771, 3)
+CheckTypeSize(GdkScrollDirection,4, 12771, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkScrollDirection,4, 12771, 6)
+CheckTypeSize(GdkScrollDirection,4, 12771, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkScrollDirection,4, 12771, 9)
+CheckTypeSize(GdkScrollDirection,4, 12771, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkScrollDirection,4, 12771, 10)
+CheckTypeSize(GdkScrollDirection,4, 12771, 10);
 #elif __s390x__
-CheckTypeSize(GdkScrollDirection,4, 12771, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12771,0);
-Msg("Find size of GdkScrollDirection (12771)\n");
+CheckTypeSize(GdkScrollDirection,4, 12771, 12);
+#elif 1
+CheckTypeSize(GdkScrollDirection,0, 12771, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkEventScroll,60, 12772, 2)
+CheckTypeSize(GdkEventScroll,60, 12772, 2);
 #elif __x86_64__
-CheckTypeSize(GdkEventScroll,72, 12772, 11)
+CheckTypeSize(GdkEventScroll,72, 12772, 11);
 #elif __ia64__
-CheckTypeSize(GdkEventScroll,72, 12772, 3)
+CheckTypeSize(GdkEventScroll,72, 12772, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkEventScroll,64, 12772, 6)
+CheckTypeSize(GdkEventScroll,64, 12772, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkEventScroll,72, 12772, 9)
+CheckTypeSize(GdkEventScroll,72, 12772, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkEventScroll,64, 12772, 10)
+CheckTypeSize(GdkEventScroll,64, 12772, 10);
 #elif __s390x__
-CheckTypeSize(GdkEventScroll,72, 12772, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12772,0);
-Msg("Find size of GdkEventScroll (12772)\n");
+CheckTypeSize(GdkEventScroll,72, 12772, 12);
+#elif 1
+CheckTypeSize(GdkEventScroll,0, 12772, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkEventKey,36, 12773, 2)
-CheckMemberSize(struct _GdkEventKey,window,4,2,43757)
-CheckOffset(struct _GdkEventKey,window,4,2,43757)
-CheckMemberSize(struct _GdkEventKey,send_event,1,2,43758)
-CheckOffset(struct _GdkEventKey,send_event,8,2,43758)
-CheckMemberSize(struct _GdkEventKey,time,4,2,43759)
-CheckOffset(struct _GdkEventKey,time,12,2,43759)
-CheckMemberSize(struct _GdkEventKey,state,4,2,43760)
-CheckOffset(struct _GdkEventKey,state,16,2,43760)
-CheckMemberSize(struct _GdkEventKey,keyval,4,2,43761)
-CheckOffset(struct _GdkEventKey,keyval,20,2,43761)
-CheckMemberSize(struct _GdkEventKey,length,4,2,43762)
-CheckOffset(struct _GdkEventKey,length,24,2,43762)
-CheckMemberSize(struct _GdkEventKey,string,4,2,43763)
-CheckOffset(struct _GdkEventKey,string,28,2,43763)
-CheckMemberSize(struct _GdkEventKey,hardware_keycode,2,2,43764)
-CheckOffset(struct _GdkEventKey,hardware_keycode,32,2,43764)
-CheckMemberSize(struct _GdkEventKey,group,1,2,43765)
-CheckOffset(struct _GdkEventKey,group,34,2,43765)
+CheckTypeSize(struct _GdkEventKey,36, 12773, 2);
+CheckMemberSize(struct _GdkEventKey,window,4,2,43757);
+CheckOffset(struct _GdkEventKey,window,4,2,43757);
+CheckMemberSize(struct _GdkEventKey,send_event,1,2,43758);
+CheckOffset(struct _GdkEventKey,send_event,8,2,43758);
+CheckMemberSize(struct _GdkEventKey,time,4,2,43759);
+CheckOffset(struct _GdkEventKey,time,12,2,43759);
+CheckMemberSize(struct _GdkEventKey,state,4,2,43760);
+CheckOffset(struct _GdkEventKey,state,16,2,43760);
+CheckMemberSize(struct _GdkEventKey,keyval,4,2,43761);
+CheckOffset(struct _GdkEventKey,keyval,20,2,43761);
+CheckMemberSize(struct _GdkEventKey,length,4,2,43762);
+CheckOffset(struct _GdkEventKey,length,24,2,43762);
+CheckMemberSize(struct _GdkEventKey,string,4,2,43763);
+CheckOffset(struct _GdkEventKey,string,28,2,43763);
+CheckMemberSize(struct _GdkEventKey,hardware_keycode,2,2,43764);
+CheckOffset(struct _GdkEventKey,hardware_keycode,32,2,43764);
+CheckMemberSize(struct _GdkEventKey,group,1,2,43765);
+CheckOffset(struct _GdkEventKey,group,34,2,43765);
 #elif __x86_64__
-CheckTypeSize(struct _GdkEventKey,56, 12773, 11)
-CheckMemberSize(struct _GdkEventKey,window,8,11,43757)
-CheckOffset(struct _GdkEventKey,window,8,11,43757)
-CheckMemberSize(struct _GdkEventKey,send_event,1,11,43758)
-CheckOffset(struct _GdkEventKey,send_event,16,11,43758)
-CheckMemberSize(struct _GdkEventKey,time,4,11,43759)
-CheckOffset(struct _GdkEventKey,time,20,11,43759)
-CheckMemberSize(struct _GdkEventKey,state,4,11,43760)
-CheckOffset(struct _GdkEventKey,state,24,11,43760)
-CheckMemberSize(struct _GdkEventKey,keyval,4,11,43761)
-CheckOffset(struct _GdkEventKey,keyval,28,11,43761)
-CheckMemberSize(struct _GdkEventKey,length,4,11,43762)
-CheckOffset(struct _GdkEventKey,length,32,11,43762)
-CheckMemberSize(struct _GdkEventKey,string,8,11,43763)
-CheckOffset(struct _GdkEventKey,string,40,11,43763)
-CheckMemberSize(struct _GdkEventKey,hardware_keycode,2,11,43764)
-CheckOffset(struct _GdkEventKey,hardware_keycode,48,11,43764)
-CheckMemberSize(struct _GdkEventKey,group,1,11,43765)
-CheckOffset(struct _GdkEventKey,group,50,11,43765)
+CheckTypeSize(struct _GdkEventKey,56, 12773, 11);
+CheckMemberSize(struct _GdkEventKey,window,8,11,43757);
+CheckOffset(struct _GdkEventKey,window,8,11,43757);
+CheckMemberSize(struct _GdkEventKey,send_event,1,11,43758);
+CheckOffset(struct _GdkEventKey,send_event,16,11,43758);
+CheckMemberSize(struct _GdkEventKey,time,4,11,43759);
+CheckOffset(struct _GdkEventKey,time,20,11,43759);
+CheckMemberSize(struct _GdkEventKey,state,4,11,43760);
+CheckOffset(struct _GdkEventKey,state,24,11,43760);
+CheckMemberSize(struct _GdkEventKey,keyval,4,11,43761);
+CheckOffset(struct _GdkEventKey,keyval,28,11,43761);
+CheckMemberSize(struct _GdkEventKey,length,4,11,43762);
+CheckOffset(struct _GdkEventKey,length,32,11,43762);
+CheckMemberSize(struct _GdkEventKey,string,8,11,43763);
+CheckOffset(struct _GdkEventKey,string,40,11,43763);
+CheckMemberSize(struct _GdkEventKey,hardware_keycode,2,11,43764);
+CheckOffset(struct _GdkEventKey,hardware_keycode,48,11,43764);
+CheckMemberSize(struct _GdkEventKey,group,1,11,43765);
+CheckOffset(struct _GdkEventKey,group,50,11,43765);
 #elif __ia64__
-CheckTypeSize(struct _GdkEventKey,56, 12773, 3)
-CheckMemberSize(struct _GdkEventKey,window,8,3,43757)
-CheckOffset(struct _GdkEventKey,window,8,3,43757)
-CheckMemberSize(struct _GdkEventKey,send_event,1,3,43758)
-CheckOffset(struct _GdkEventKey,send_event,16,3,43758)
-CheckMemberSize(struct _GdkEventKey,time,4,3,43759)
-CheckOffset(struct _GdkEventKey,time,20,3,43759)
-CheckMemberSize(struct _GdkEventKey,state,4,3,43760)
-CheckOffset(struct _GdkEventKey,state,24,3,43760)
-CheckMemberSize(struct _GdkEventKey,keyval,4,3,43761)
-CheckOffset(struct _GdkEventKey,keyval,28,3,43761)
-CheckMemberSize(struct _GdkEventKey,length,4,3,43762)
-CheckOffset(struct _GdkEventKey,length,32,3,43762)
-CheckMemberSize(struct _GdkEventKey,string,8,3,43763)
-CheckOffset(struct _GdkEventKey,string,40,3,43763)
-CheckMemberSize(struct _GdkEventKey,hardware_keycode,2,3,43764)
-CheckOffset(struct _GdkEventKey,hardware_keycode,48,3,43764)
-CheckMemberSize(struct _GdkEventKey,group,1,3,43765)
-CheckOffset(struct _GdkEventKey,group,50,3,43765)
+CheckTypeSize(struct _GdkEventKey,56, 12773, 3);
+CheckMemberSize(struct _GdkEventKey,window,8,3,43757);
+CheckOffset(struct _GdkEventKey,window,8,3,43757);
+CheckMemberSize(struct _GdkEventKey,send_event,1,3,43758);
+CheckOffset(struct _GdkEventKey,send_event,16,3,43758);
+CheckMemberSize(struct _GdkEventKey,time,4,3,43759);
+CheckOffset(struct _GdkEventKey,time,20,3,43759);
+CheckMemberSize(struct _GdkEventKey,state,4,3,43760);
+CheckOffset(struct _GdkEventKey,state,24,3,43760);
+CheckMemberSize(struct _GdkEventKey,keyval,4,3,43761);
+CheckOffset(struct _GdkEventKey,keyval,28,3,43761);
+CheckMemberSize(struct _GdkEventKey,length,4,3,43762);
+CheckOffset(struct _GdkEventKey,length,32,3,43762);
+CheckMemberSize(struct _GdkEventKey,string,8,3,43763);
+CheckOffset(struct _GdkEventKey,string,40,3,43763);
+CheckMemberSize(struct _GdkEventKey,hardware_keycode,2,3,43764);
+CheckOffset(struct _GdkEventKey,hardware_keycode,48,3,43764);
+CheckMemberSize(struct _GdkEventKey,group,1,3,43765);
+CheckOffset(struct _GdkEventKey,group,50,3,43765);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkEventKey,36, 12773, 6)
-CheckMemberSize(struct _GdkEventKey,window,4,6,43757)
-CheckOffset(struct _GdkEventKey,window,4,6,43757)
-CheckMemberSize(struct _GdkEventKey,send_event,1,6,43758)
-CheckOffset(struct _GdkEventKey,send_event,8,6,43758)
-CheckMemberSize(struct _GdkEventKey,time,4,6,43759)
-CheckOffset(struct _GdkEventKey,time,12,6,43759)
-CheckMemberSize(struct _GdkEventKey,state,4,6,43760)
-CheckOffset(struct _GdkEventKey,state,16,6,43760)
-CheckMemberSize(struct _GdkEventKey,keyval,4,6,43761)
-CheckOffset(struct _GdkEventKey,keyval,20,6,43761)
-CheckMemberSize(struct _GdkEventKey,length,4,6,43762)
-CheckOffset(struct _GdkEventKey,length,24,6,43762)
-CheckMemberSize(struct _GdkEventKey,string,4,6,43763)
-CheckOffset(struct _GdkEventKey,string,28,6,43763)
-CheckMemberSize(struct _GdkEventKey,hardware_keycode,2,6,43764)
-CheckOffset(struct _GdkEventKey,hardware_keycode,32,6,43764)
-CheckMemberSize(struct _GdkEventKey,group,1,6,43765)
-CheckOffset(struct _GdkEventKey,group,34,6,43765)
+CheckTypeSize(struct _GdkEventKey,36, 12773, 6);
+CheckMemberSize(struct _GdkEventKey,window,4,6,43757);
+CheckOffset(struct _GdkEventKey,window,4,6,43757);
+CheckMemberSize(struct _GdkEventKey,send_event,1,6,43758);
+CheckOffset(struct _GdkEventKey,send_event,8,6,43758);
+CheckMemberSize(struct _GdkEventKey,time,4,6,43759);
+CheckOffset(struct _GdkEventKey,time,12,6,43759);
+CheckMemberSize(struct _GdkEventKey,state,4,6,43760);
+CheckOffset(struct _GdkEventKey,state,16,6,43760);
+CheckMemberSize(struct _GdkEventKey,keyval,4,6,43761);
+CheckOffset(struct _GdkEventKey,keyval,20,6,43761);
+CheckMemberSize(struct _GdkEventKey,length,4,6,43762);
+CheckOffset(struct _GdkEventKey,length,24,6,43762);
+CheckMemberSize(struct _GdkEventKey,string,4,6,43763);
+CheckOffset(struct _GdkEventKey,string,28,6,43763);
+CheckMemberSize(struct _GdkEventKey,hardware_keycode,2,6,43764);
+CheckOffset(struct _GdkEventKey,hardware_keycode,32,6,43764);
+CheckMemberSize(struct _GdkEventKey,group,1,6,43765);
+CheckOffset(struct _GdkEventKey,group,34,6,43765);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkEventKey,56, 12773, 9)
-CheckMemberSize(struct _GdkEventKey,window,8,9,43757)
-CheckOffset(struct _GdkEventKey,window,8,9,43757)
-CheckMemberSize(struct _GdkEventKey,send_event,1,9,43758)
-CheckOffset(struct _GdkEventKey,send_event,16,9,43758)
-CheckMemberSize(struct _GdkEventKey,time,4,9,43759)
-CheckOffset(struct _GdkEventKey,time,20,9,43759)
-CheckMemberSize(struct _GdkEventKey,state,4,9,43760)
-CheckOffset(struct _GdkEventKey,state,24,9,43760)
-CheckMemberSize(struct _GdkEventKey,keyval,4,9,43761)
-CheckOffset(struct _GdkEventKey,keyval,28,9,43761)
-CheckMemberSize(struct _GdkEventKey,length,4,9,43762)
-CheckOffset(struct _GdkEventKey,length,32,9,43762)
-CheckMemberSize(struct _GdkEventKey,string,8,9,43763)
-CheckOffset(struct _GdkEventKey,string,40,9,43763)
-CheckMemberSize(struct _GdkEventKey,hardware_keycode,2,9,43764)
-CheckOffset(struct _GdkEventKey,hardware_keycode,48,9,43764)
-CheckMemberSize(struct _GdkEventKey,group,1,9,43765)
-CheckOffset(struct _GdkEventKey,group,50,9,43765)
+CheckTypeSize(struct _GdkEventKey,56, 12773, 9);
+CheckMemberSize(struct _GdkEventKey,window,8,9,43757);
+CheckOffset(struct _GdkEventKey,window,8,9,43757);
+CheckMemberSize(struct _GdkEventKey,send_event,1,9,43758);
+CheckOffset(struct _GdkEventKey,send_event,16,9,43758);
+CheckMemberSize(struct _GdkEventKey,time,4,9,43759);
+CheckOffset(struct _GdkEventKey,time,20,9,43759);
+CheckMemberSize(struct _GdkEventKey,state,4,9,43760);
+CheckOffset(struct _GdkEventKey,state,24,9,43760);
+CheckMemberSize(struct _GdkEventKey,keyval,4,9,43761);
+CheckOffset(struct _GdkEventKey,keyval,28,9,43761);
+CheckMemberSize(struct _GdkEventKey,length,4,9,43762);
+CheckOffset(struct _GdkEventKey,length,32,9,43762);
+CheckMemberSize(struct _GdkEventKey,string,8,9,43763);
+CheckOffset(struct _GdkEventKey,string,40,9,43763);
+CheckMemberSize(struct _GdkEventKey,hardware_keycode,2,9,43764);
+CheckOffset(struct _GdkEventKey,hardware_keycode,48,9,43764);
+CheckMemberSize(struct _GdkEventKey,group,1,9,43765);
+CheckOffset(struct _GdkEventKey,group,50,9,43765);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkEventKey,36, 12773, 10)
-CheckMemberSize(struct _GdkEventKey,window,4,10,43757)
-CheckOffset(struct _GdkEventKey,window,4,10,43757)
-CheckMemberSize(struct _GdkEventKey,send_event,1,10,43758)
-CheckOffset(struct _GdkEventKey,send_event,8,10,43758)
-CheckMemberSize(struct _GdkEventKey,time,4,10,43759)
-CheckOffset(struct _GdkEventKey,time,12,10,43759)
-CheckMemberSize(struct _GdkEventKey,state,4,10,43760)
-CheckOffset(struct _GdkEventKey,state,16,10,43760)
-CheckMemberSize(struct _GdkEventKey,keyval,4,10,43761)
-CheckOffset(struct _GdkEventKey,keyval,20,10,43761)
-CheckMemberSize(struct _GdkEventKey,length,4,10,43762)
-CheckOffset(struct _GdkEventKey,length,24,10,43762)
-CheckMemberSize(struct _GdkEventKey,string,4,10,43763)
-CheckOffset(struct _GdkEventKey,string,28,10,43763)
-CheckMemberSize(struct _GdkEventKey,hardware_keycode,2,10,43764)
-CheckOffset(struct _GdkEventKey,hardware_keycode,32,10,43764)
-CheckMemberSize(struct _GdkEventKey,group,1,10,43765)
-CheckOffset(struct _GdkEventKey,group,34,10,43765)
+CheckTypeSize(struct _GdkEventKey,36, 12773, 10);
+CheckMemberSize(struct _GdkEventKey,window,4,10,43757);
+CheckOffset(struct _GdkEventKey,window,4,10,43757);
+CheckMemberSize(struct _GdkEventKey,send_event,1,10,43758);
+CheckOffset(struct _GdkEventKey,send_event,8,10,43758);
+CheckMemberSize(struct _GdkEventKey,time,4,10,43759);
+CheckOffset(struct _GdkEventKey,time,12,10,43759);
+CheckMemberSize(struct _GdkEventKey,state,4,10,43760);
+CheckOffset(struct _GdkEventKey,state,16,10,43760);
+CheckMemberSize(struct _GdkEventKey,keyval,4,10,43761);
+CheckOffset(struct _GdkEventKey,keyval,20,10,43761);
+CheckMemberSize(struct _GdkEventKey,length,4,10,43762);
+CheckOffset(struct _GdkEventKey,length,24,10,43762);
+CheckMemberSize(struct _GdkEventKey,string,4,10,43763);
+CheckOffset(struct _GdkEventKey,string,28,10,43763);
+CheckMemberSize(struct _GdkEventKey,hardware_keycode,2,10,43764);
+CheckOffset(struct _GdkEventKey,hardware_keycode,32,10,43764);
+CheckMemberSize(struct _GdkEventKey,group,1,10,43765);
+CheckOffset(struct _GdkEventKey,group,34,10,43765);
 #elif __s390x__
-CheckTypeSize(struct _GdkEventKey,56, 12773, 12)
-CheckMemberSize(struct _GdkEventKey,window,8,12,43757)
-CheckOffset(struct _GdkEventKey,window,8,12,43757)
-CheckMemberSize(struct _GdkEventKey,send_event,1,12,43758)
-CheckOffset(struct _GdkEventKey,send_event,16,12,43758)
-CheckMemberSize(struct _GdkEventKey,time,4,12,43759)
-CheckOffset(struct _GdkEventKey,time,20,12,43759)
-CheckMemberSize(struct _GdkEventKey,state,4,12,43760)
-CheckOffset(struct _GdkEventKey,state,24,12,43760)
-CheckMemberSize(struct _GdkEventKey,keyval,4,12,43761)
-CheckOffset(struct _GdkEventKey,keyval,28,12,43761)
-CheckMemberSize(struct _GdkEventKey,length,4,12,43762)
-CheckOffset(struct _GdkEventKey,length,32,12,43762)
-CheckMemberSize(struct _GdkEventKey,string,8,12,43763)
-CheckOffset(struct _GdkEventKey,string,40,12,43763)
-CheckMemberSize(struct _GdkEventKey,hardware_keycode,2,12,43764)
-CheckOffset(struct _GdkEventKey,hardware_keycode,48,12,43764)
-CheckMemberSize(struct _GdkEventKey,group,1,12,43765)
-CheckOffset(struct _GdkEventKey,group,50,12,43765)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12773,0);
-Msg("Find size of _GdkEventKey (12773)\n");
+CheckTypeSize(struct _GdkEventKey,56, 12773, 12);
+CheckMemberSize(struct _GdkEventKey,window,8,12,43757);
+CheckOffset(struct _GdkEventKey,window,8,12,43757);
+CheckMemberSize(struct _GdkEventKey,send_event,1,12,43758);
+CheckOffset(struct _GdkEventKey,send_event,16,12,43758);
+CheckMemberSize(struct _GdkEventKey,time,4,12,43759);
+CheckOffset(struct _GdkEventKey,time,20,12,43759);
+CheckMemberSize(struct _GdkEventKey,state,4,12,43760);
+CheckOffset(struct _GdkEventKey,state,24,12,43760);
+CheckMemberSize(struct _GdkEventKey,keyval,4,12,43761);
+CheckOffset(struct _GdkEventKey,keyval,28,12,43761);
+CheckMemberSize(struct _GdkEventKey,length,4,12,43762);
+CheckOffset(struct _GdkEventKey,length,32,12,43762);
+CheckMemberSize(struct _GdkEventKey,string,8,12,43763);
+CheckOffset(struct _GdkEventKey,string,40,12,43763);
+CheckMemberSize(struct _GdkEventKey,hardware_keycode,2,12,43764);
+CheckOffset(struct _GdkEventKey,hardware_keycode,48,12,43764);
+CheckMemberSize(struct _GdkEventKey,group,1,12,43765);
+CheckOffset(struct _GdkEventKey,group,50,12,43765);
+#elif 1
+CheckTypeSize(struct _GdkEventKey,0, 12773, 1);
+Msg("Missing member data for _GdkEventKey on All\n");
+CheckOffset(struct _GdkEventKey,type,0,1,43756);
+CheckOffset(struct _GdkEventKey,window,0,1,43757);
+CheckOffset(struct _GdkEventKey,send_event,0,1,43758);
+CheckOffset(struct _GdkEventKey,time,0,1,43759);
+CheckOffset(struct _GdkEventKey,state,0,1,43760);
+CheckOffset(struct _GdkEventKey,keyval,0,1,43761);
+CheckOffset(struct _GdkEventKey,length,0,1,43762);
+CheckOffset(struct _GdkEventKey,string,0,1,43763);
+CheckOffset(struct _GdkEventKey,hardware_keycode,0,1,43764);
+CheckOffset(struct _GdkEventKey,group,0,1,43765);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkEventKey,36, 12774, 2)
+CheckTypeSize(GdkEventKey,36, 12774, 2);
 #elif __x86_64__
-CheckTypeSize(GdkEventKey,56, 12774, 11)
+CheckTypeSize(GdkEventKey,56, 12774, 11);
 #elif __ia64__
-CheckTypeSize(GdkEventKey,56, 12774, 3)
+CheckTypeSize(GdkEventKey,56, 12774, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkEventKey,36, 12774, 6)
+CheckTypeSize(GdkEventKey,36, 12774, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkEventKey,56, 12774, 9)
+CheckTypeSize(GdkEventKey,56, 12774, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkEventKey,36, 12774, 10)
+CheckTypeSize(GdkEventKey,36, 12774, 10);
 #elif __s390x__
-CheckTypeSize(GdkEventKey,56, 12774, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12774,0);
-Msg("Find size of GdkEventKey (12774)\n");
+CheckTypeSize(GdkEventKey,56, 12774, 12);
+#elif 1
+CheckTypeSize(GdkEventKey,0, 12774, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkEventCrossing,68, 12775, 2)
-CheckMemberSize(struct _GdkEventCrossing,window,4,2,43768)
-CheckOffset(struct _GdkEventCrossing,window,4,2,43768)
-CheckMemberSize(struct _GdkEventCrossing,send_event,1,2,43769)
-CheckOffset(struct _GdkEventCrossing,send_event,8,2,43769)
-CheckMemberSize(struct _GdkEventCrossing,subwindow,4,2,43770)
-CheckOffset(struct _GdkEventCrossing,subwindow,12,2,43770)
-CheckMemberSize(struct _GdkEventCrossing,time,4,2,43771)
-CheckOffset(struct _GdkEventCrossing,time,16,2,43771)
-CheckMemberSize(struct _GdkEventCrossing,x,8,2,43772)
-CheckOffset(struct _GdkEventCrossing,x,20,2,43772)
-CheckMemberSize(struct _GdkEventCrossing,y,8,2,43773)
-CheckOffset(struct _GdkEventCrossing,y,28,2,43773)
-CheckMemberSize(struct _GdkEventCrossing,x_root,8,2,43774)
-CheckOffset(struct _GdkEventCrossing,x_root,36,2,43774)
-CheckMemberSize(struct _GdkEventCrossing,y_root,8,2,43775)
-CheckOffset(struct _GdkEventCrossing,y_root,44,2,43775)
-CheckMemberSize(struct _GdkEventCrossing,mode,4,2,43779)
-CheckOffset(struct _GdkEventCrossing,mode,52,2,43779)
-CheckMemberSize(struct _GdkEventCrossing,detail,4,2,43786)
-CheckOffset(struct _GdkEventCrossing,detail,56,2,43786)
-CheckMemberSize(struct _GdkEventCrossing,focus,4,2,43787)
-CheckOffset(struct _GdkEventCrossing,focus,60,2,43787)
-CheckMemberSize(struct _GdkEventCrossing,state,4,2,43788)
-CheckOffset(struct _GdkEventCrossing,state,64,2,43788)
+CheckTypeSize(struct _GdkEventCrossing,68, 12775, 2);
+CheckMemberSize(struct _GdkEventCrossing,window,4,2,43768);
+CheckOffset(struct _GdkEventCrossing,window,4,2,43768);
+CheckMemberSize(struct _GdkEventCrossing,send_event,1,2,43769);
+CheckOffset(struct _GdkEventCrossing,send_event,8,2,43769);
+CheckMemberSize(struct _GdkEventCrossing,subwindow,4,2,43770);
+CheckOffset(struct _GdkEventCrossing,subwindow,12,2,43770);
+CheckMemberSize(struct _GdkEventCrossing,time,4,2,43771);
+CheckOffset(struct _GdkEventCrossing,time,16,2,43771);
+CheckMemberSize(struct _GdkEventCrossing,x,8,2,43772);
+CheckOffset(struct _GdkEventCrossing,x,20,2,43772);
+CheckMemberSize(struct _GdkEventCrossing,y,8,2,43773);
+CheckOffset(struct _GdkEventCrossing,y,28,2,43773);
+CheckMemberSize(struct _GdkEventCrossing,x_root,8,2,43774);
+CheckOffset(struct _GdkEventCrossing,x_root,36,2,43774);
+CheckMemberSize(struct _GdkEventCrossing,y_root,8,2,43775);
+CheckOffset(struct _GdkEventCrossing,y_root,44,2,43775);
+CheckMemberSize(struct _GdkEventCrossing,mode,4,2,43779);
+CheckOffset(struct _GdkEventCrossing,mode,52,2,43779);
+CheckMemberSize(struct _GdkEventCrossing,detail,4,2,43786);
+CheckOffset(struct _GdkEventCrossing,detail,56,2,43786);
+CheckMemberSize(struct _GdkEventCrossing,focus,4,2,43787);
+CheckOffset(struct _GdkEventCrossing,focus,60,2,43787);
+CheckMemberSize(struct _GdkEventCrossing,state,4,2,43788);
+CheckOffset(struct _GdkEventCrossing,state,64,2,43788);
 #elif __x86_64__
-CheckTypeSize(struct _GdkEventCrossing,88, 12775, 11)
-CheckMemberSize(struct _GdkEventCrossing,window,8,11,43768)
-CheckOffset(struct _GdkEventCrossing,window,8,11,43768)
-CheckMemberSize(struct _GdkEventCrossing,send_event,1,11,43769)
-CheckOffset(struct _GdkEventCrossing,send_event,16,11,43769)
-CheckMemberSize(struct _GdkEventCrossing,subwindow,8,11,43770)
-CheckOffset(struct _GdkEventCrossing,subwindow,24,11,43770)
-CheckMemberSize(struct _GdkEventCrossing,time,4,11,43771)
-CheckOffset(struct _GdkEventCrossing,time,32,11,43771)
-CheckMemberSize(struct _GdkEventCrossing,x,8,11,43772)
-CheckOffset(struct _GdkEventCrossing,x,40,11,43772)
-CheckMemberSize(struct _GdkEventCrossing,y,8,11,43773)
-CheckOffset(struct _GdkEventCrossing,y,48,11,43773)
-CheckMemberSize(struct _GdkEventCrossing,x_root,8,11,43774)
-CheckOffset(struct _GdkEventCrossing,x_root,56,11,43774)
-CheckMemberSize(struct _GdkEventCrossing,y_root,8,11,43775)
-CheckOffset(struct _GdkEventCrossing,y_root,64,11,43775)
-CheckMemberSize(struct _GdkEventCrossing,mode,4,11,43779)
-CheckOffset(struct _GdkEventCrossing,mode,72,11,43779)
-CheckMemberSize(struct _GdkEventCrossing,detail,4,11,43786)
-CheckOffset(struct _GdkEventCrossing,detail,76,11,43786)
-CheckMemberSize(struct _GdkEventCrossing,focus,4,11,43787)
-CheckOffset(struct _GdkEventCrossing,focus,80,11,43787)
-CheckMemberSize(struct _GdkEventCrossing,state,4,11,43788)
-CheckOffset(struct _GdkEventCrossing,state,84,11,43788)
+CheckTypeSize(struct _GdkEventCrossing,88, 12775, 11);
+CheckMemberSize(struct _GdkEventCrossing,window,8,11,43768);
+CheckOffset(struct _GdkEventCrossing,window,8,11,43768);
+CheckMemberSize(struct _GdkEventCrossing,send_event,1,11,43769);
+CheckOffset(struct _GdkEventCrossing,send_event,16,11,43769);
+CheckMemberSize(struct _GdkEventCrossing,subwindow,8,11,43770);
+CheckOffset(struct _GdkEventCrossing,subwindow,24,11,43770);
+CheckMemberSize(struct _GdkEventCrossing,time,4,11,43771);
+CheckOffset(struct _GdkEventCrossing,time,32,11,43771);
+CheckMemberSize(struct _GdkEventCrossing,x,8,11,43772);
+CheckOffset(struct _GdkEventCrossing,x,40,11,43772);
+CheckMemberSize(struct _GdkEventCrossing,y,8,11,43773);
+CheckOffset(struct _GdkEventCrossing,y,48,11,43773);
+CheckMemberSize(struct _GdkEventCrossing,x_root,8,11,43774);
+CheckOffset(struct _GdkEventCrossing,x_root,56,11,43774);
+CheckMemberSize(struct _GdkEventCrossing,y_root,8,11,43775);
+CheckOffset(struct _GdkEventCrossing,y_root,64,11,43775);
+CheckMemberSize(struct _GdkEventCrossing,mode,4,11,43779);
+CheckOffset(struct _GdkEventCrossing,mode,72,11,43779);
+CheckMemberSize(struct _GdkEventCrossing,detail,4,11,43786);
+CheckOffset(struct _GdkEventCrossing,detail,76,11,43786);
+CheckMemberSize(struct _GdkEventCrossing,focus,4,11,43787);
+CheckOffset(struct _GdkEventCrossing,focus,80,11,43787);
+CheckMemberSize(struct _GdkEventCrossing,state,4,11,43788);
+CheckOffset(struct _GdkEventCrossing,state,84,11,43788);
 #elif __ia64__
-CheckTypeSize(struct _GdkEventCrossing,88, 12775, 3)
-CheckMemberSize(struct _GdkEventCrossing,window,8,3,43768)
-CheckOffset(struct _GdkEventCrossing,window,8,3,43768)
-CheckMemberSize(struct _GdkEventCrossing,send_event,1,3,43769)
-CheckOffset(struct _GdkEventCrossing,send_event,16,3,43769)
-CheckMemberSize(struct _GdkEventCrossing,subwindow,8,3,43770)
-CheckOffset(struct _GdkEventCrossing,subwindow,24,3,43770)
-CheckMemberSize(struct _GdkEventCrossing,time,4,3,43771)
-CheckOffset(struct _GdkEventCrossing,time,32,3,43771)
-CheckMemberSize(struct _GdkEventCrossing,x,8,3,43772)
-CheckOffset(struct _GdkEventCrossing,x,40,3,43772)
-CheckMemberSize(struct _GdkEventCrossing,y,8,3,43773)
-CheckOffset(struct _GdkEventCrossing,y,48,3,43773)
-CheckMemberSize(struct _GdkEventCrossing,x_root,8,3,43774)
-CheckOffset(struct _GdkEventCrossing,x_root,56,3,43774)
-CheckMemberSize(struct _GdkEventCrossing,y_root,8,3,43775)
-CheckOffset(struct _GdkEventCrossing,y_root,64,3,43775)
-CheckMemberSize(struct _GdkEventCrossing,mode,4,3,43779)
-CheckOffset(struct _GdkEventCrossing,mode,72,3,43779)
-CheckMemberSize(struct _GdkEventCrossing,detail,4,3,43786)
-CheckOffset(struct _GdkEventCrossing,detail,76,3,43786)
-CheckMemberSize(struct _GdkEventCrossing,focus,4,3,43787)
-CheckOffset(struct _GdkEventCrossing,focus,80,3,43787)
-CheckMemberSize(struct _GdkEventCrossing,state,4,3,43788)
-CheckOffset(struct _GdkEventCrossing,state,84,3,43788)
+CheckTypeSize(struct _GdkEventCrossing,88, 12775, 3);
+CheckMemberSize(struct _GdkEventCrossing,window,8,3,43768);
+CheckOffset(struct _GdkEventCrossing,window,8,3,43768);
+CheckMemberSize(struct _GdkEventCrossing,send_event,1,3,43769);
+CheckOffset(struct _GdkEventCrossing,send_event,16,3,43769);
+CheckMemberSize(struct _GdkEventCrossing,subwindow,8,3,43770);
+CheckOffset(struct _GdkEventCrossing,subwindow,24,3,43770);
+CheckMemberSize(struct _GdkEventCrossing,time,4,3,43771);
+CheckOffset(struct _GdkEventCrossing,time,32,3,43771);
+CheckMemberSize(struct _GdkEventCrossing,x,8,3,43772);
+CheckOffset(struct _GdkEventCrossing,x,40,3,43772);
+CheckMemberSize(struct _GdkEventCrossing,y,8,3,43773);
+CheckOffset(struct _GdkEventCrossing,y,48,3,43773);
+CheckMemberSize(struct _GdkEventCrossing,x_root,8,3,43774);
+CheckOffset(struct _GdkEventCrossing,x_root,56,3,43774);
+CheckMemberSize(struct _GdkEventCrossing,y_root,8,3,43775);
+CheckOffset(struct _GdkEventCrossing,y_root,64,3,43775);
+CheckMemberSize(struct _GdkEventCrossing,mode,4,3,43779);
+CheckOffset(struct _GdkEventCrossing,mode,72,3,43779);
+CheckMemberSize(struct _GdkEventCrossing,detail,4,3,43786);
+CheckOffset(struct _GdkEventCrossing,detail,76,3,43786);
+CheckMemberSize(struct _GdkEventCrossing,focus,4,3,43787);
+CheckOffset(struct _GdkEventCrossing,focus,80,3,43787);
+CheckMemberSize(struct _GdkEventCrossing,state,4,3,43788);
+CheckOffset(struct _GdkEventCrossing,state,84,3,43788);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkEventCrossing,72, 12775, 6)
-CheckMemberSize(struct _GdkEventCrossing,window,4,6,43768)
-CheckOffset(struct _GdkEventCrossing,window,4,6,43768)
-CheckMemberSize(struct _GdkEventCrossing,send_event,1,6,43769)
-CheckOffset(struct _GdkEventCrossing,send_event,8,6,43769)
-CheckMemberSize(struct _GdkEventCrossing,subwindow,4,6,43770)
-CheckOffset(struct _GdkEventCrossing,subwindow,12,6,43770)
-CheckMemberSize(struct _GdkEventCrossing,time,4,6,43771)
-CheckOffset(struct _GdkEventCrossing,time,16,6,43771)
-CheckMemberSize(struct _GdkEventCrossing,x,8,6,43772)
-CheckOffset(struct _GdkEventCrossing,x,24,6,43772)
-CheckMemberSize(struct _GdkEventCrossing,y,8,6,43773)
-CheckOffset(struct _GdkEventCrossing,y,32,6,43773)
-CheckMemberSize(struct _GdkEventCrossing,x_root,8,6,43774)
-CheckOffset(struct _GdkEventCrossing,x_root,40,6,43774)
-CheckMemberSize(struct _GdkEventCrossing,y_root,8,6,43775)
-CheckOffset(struct _GdkEventCrossing,y_root,48,6,43775)
-CheckMemberSize(struct _GdkEventCrossing,mode,4,6,43779)
-CheckOffset(struct _GdkEventCrossing,mode,56,6,43779)
-CheckMemberSize(struct _GdkEventCrossing,detail,4,6,43786)
-CheckOffset(struct _GdkEventCrossing,detail,60,6,43786)
-CheckMemberSize(struct _GdkEventCrossing,focus,4,6,43787)
-CheckOffset(struct _GdkEventCrossing,focus,64,6,43787)
-CheckMemberSize(struct _GdkEventCrossing,state,4,6,43788)
-CheckOffset(struct _GdkEventCrossing,state,68,6,43788)
+CheckTypeSize(struct _GdkEventCrossing,72, 12775, 6);
+CheckMemberSize(struct _GdkEventCrossing,window,4,6,43768);
+CheckOffset(struct _GdkEventCrossing,window,4,6,43768);
+CheckMemberSize(struct _GdkEventCrossing,send_event,1,6,43769);
+CheckOffset(struct _GdkEventCrossing,send_event,8,6,43769);
+CheckMemberSize(struct _GdkEventCrossing,subwindow,4,6,43770);
+CheckOffset(struct _GdkEventCrossing,subwindow,12,6,43770);
+CheckMemberSize(struct _GdkEventCrossing,time,4,6,43771);
+CheckOffset(struct _GdkEventCrossing,time,16,6,43771);
+CheckMemberSize(struct _GdkEventCrossing,x,8,6,43772);
+CheckOffset(struct _GdkEventCrossing,x,24,6,43772);
+CheckMemberSize(struct _GdkEventCrossing,y,8,6,43773);
+CheckOffset(struct _GdkEventCrossing,y,32,6,43773);
+CheckMemberSize(struct _GdkEventCrossing,x_root,8,6,43774);
+CheckOffset(struct _GdkEventCrossing,x_root,40,6,43774);
+CheckMemberSize(struct _GdkEventCrossing,y_root,8,6,43775);
+CheckOffset(struct _GdkEventCrossing,y_root,48,6,43775);
+CheckMemberSize(struct _GdkEventCrossing,mode,4,6,43779);
+CheckOffset(struct _GdkEventCrossing,mode,56,6,43779);
+CheckMemberSize(struct _GdkEventCrossing,detail,4,6,43786);
+CheckOffset(struct _GdkEventCrossing,detail,60,6,43786);
+CheckMemberSize(struct _GdkEventCrossing,focus,4,6,43787);
+CheckOffset(struct _GdkEventCrossing,focus,64,6,43787);
+CheckMemberSize(struct _GdkEventCrossing,state,4,6,43788);
+CheckOffset(struct _GdkEventCrossing,state,68,6,43788);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkEventCrossing,88, 12775, 9)
-CheckMemberSize(struct _GdkEventCrossing,window,8,9,43768)
-CheckOffset(struct _GdkEventCrossing,window,8,9,43768)
-CheckMemberSize(struct _GdkEventCrossing,send_event,1,9,43769)
-CheckOffset(struct _GdkEventCrossing,send_event,16,9,43769)
-CheckMemberSize(struct _GdkEventCrossing,subwindow,8,9,43770)
-CheckOffset(struct _GdkEventCrossing,subwindow,24,9,43770)
-CheckMemberSize(struct _GdkEventCrossing,time,4,9,43771)
-CheckOffset(struct _GdkEventCrossing,time,32,9,43771)
-CheckMemberSize(struct _GdkEventCrossing,x,8,9,43772)
-CheckOffset(struct _GdkEventCrossing,x,40,9,43772)
-CheckMemberSize(struct _GdkEventCrossing,y,8,9,43773)
-CheckOffset(struct _GdkEventCrossing,y,48,9,43773)
-CheckMemberSize(struct _GdkEventCrossing,x_root,8,9,43774)
-CheckOffset(struct _GdkEventCrossing,x_root,56,9,43774)
-CheckMemberSize(struct _GdkEventCrossing,y_root,8,9,43775)
-CheckOffset(struct _GdkEventCrossing,y_root,64,9,43775)
-CheckMemberSize(struct _GdkEventCrossing,mode,4,9,43779)
-CheckOffset(struct _GdkEventCrossing,mode,72,9,43779)
-CheckMemberSize(struct _GdkEventCrossing,detail,4,9,43786)
-CheckOffset(struct _GdkEventCrossing,detail,76,9,43786)
-CheckMemberSize(struct _GdkEventCrossing,focus,4,9,43787)
-CheckOffset(struct _GdkEventCrossing,focus,80,9,43787)
-CheckMemberSize(struct _GdkEventCrossing,state,4,9,43788)
-CheckOffset(struct _GdkEventCrossing,state,84,9,43788)
+CheckTypeSize(struct _GdkEventCrossing,88, 12775, 9);
+CheckMemberSize(struct _GdkEventCrossing,window,8,9,43768);
+CheckOffset(struct _GdkEventCrossing,window,8,9,43768);
+CheckMemberSize(struct _GdkEventCrossing,send_event,1,9,43769);
+CheckOffset(struct _GdkEventCrossing,send_event,16,9,43769);
+CheckMemberSize(struct _GdkEventCrossing,subwindow,8,9,43770);
+CheckOffset(struct _GdkEventCrossing,subwindow,24,9,43770);
+CheckMemberSize(struct _GdkEventCrossing,time,4,9,43771);
+CheckOffset(struct _GdkEventCrossing,time,32,9,43771);
+CheckMemberSize(struct _GdkEventCrossing,x,8,9,43772);
+CheckOffset(struct _GdkEventCrossing,x,40,9,43772);
+CheckMemberSize(struct _GdkEventCrossing,y,8,9,43773);
+CheckOffset(struct _GdkEventCrossing,y,48,9,43773);
+CheckMemberSize(struct _GdkEventCrossing,x_root,8,9,43774);
+CheckOffset(struct _GdkEventCrossing,x_root,56,9,43774);
+CheckMemberSize(struct _GdkEventCrossing,y_root,8,9,43775);
+CheckOffset(struct _GdkEventCrossing,y_root,64,9,43775);
+CheckMemberSize(struct _GdkEventCrossing,mode,4,9,43779);
+CheckOffset(struct _GdkEventCrossing,mode,72,9,43779);
+CheckMemberSize(struct _GdkEventCrossing,detail,4,9,43786);
+CheckOffset(struct _GdkEventCrossing,detail,76,9,43786);
+CheckMemberSize(struct _GdkEventCrossing,focus,4,9,43787);
+CheckOffset(struct _GdkEventCrossing,focus,80,9,43787);
+CheckMemberSize(struct _GdkEventCrossing,state,4,9,43788);
+CheckOffset(struct _GdkEventCrossing,state,84,9,43788);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkEventCrossing,72, 12775, 10)
-CheckMemberSize(struct _GdkEventCrossing,window,4,10,43768)
-CheckOffset(struct _GdkEventCrossing,window,4,10,43768)
-CheckMemberSize(struct _GdkEventCrossing,send_event,1,10,43769)
-CheckOffset(struct _GdkEventCrossing,send_event,8,10,43769)
-CheckMemberSize(struct _GdkEventCrossing,subwindow,4,10,43770)
-CheckOffset(struct _GdkEventCrossing,subwindow,12,10,43770)
-CheckMemberSize(struct _GdkEventCrossing,time,4,10,43771)
-CheckOffset(struct _GdkEventCrossing,time,16,10,43771)
-CheckMemberSize(struct _GdkEventCrossing,x,8,10,43772)
-CheckOffset(struct _GdkEventCrossing,x,24,10,43772)
-CheckMemberSize(struct _GdkEventCrossing,y,8,10,43773)
-CheckOffset(struct _GdkEventCrossing,y,32,10,43773)
-CheckMemberSize(struct _GdkEventCrossing,x_root,8,10,43774)
-CheckOffset(struct _GdkEventCrossing,x_root,40,10,43774)
-CheckMemberSize(struct _GdkEventCrossing,y_root,8,10,43775)
-CheckOffset(struct _GdkEventCrossing,y_root,48,10,43775)
-CheckMemberSize(struct _GdkEventCrossing,mode,4,10,43779)
-CheckOffset(struct _GdkEventCrossing,mode,56,10,43779)
-CheckMemberSize(struct _GdkEventCrossing,detail,4,10,43786)
-CheckOffset(struct _GdkEventCrossing,detail,60,10,43786)
-CheckMemberSize(struct _GdkEventCrossing,focus,4,10,43787)
-CheckOffset(struct _GdkEventCrossing,focus,64,10,43787)
-CheckMemberSize(struct _GdkEventCrossing,state,4,10,43788)
-CheckOffset(struct _GdkEventCrossing,state,68,10,43788)
+CheckTypeSize(struct _GdkEventCrossing,72, 12775, 10);
+CheckMemberSize(struct _GdkEventCrossing,window,4,10,43768);
+CheckOffset(struct _GdkEventCrossing,window,4,10,43768);
+CheckMemberSize(struct _GdkEventCrossing,send_event,1,10,43769);
+CheckOffset(struct _GdkEventCrossing,send_event,8,10,43769);
+CheckMemberSize(struct _GdkEventCrossing,subwindow,4,10,43770);
+CheckOffset(struct _GdkEventCrossing,subwindow,12,10,43770);
+CheckMemberSize(struct _GdkEventCrossing,time,4,10,43771);
+CheckOffset(struct _GdkEventCrossing,time,16,10,43771);
+CheckMemberSize(struct _GdkEventCrossing,x,8,10,43772);
+CheckOffset(struct _GdkEventCrossing,x,24,10,43772);
+CheckMemberSize(struct _GdkEventCrossing,y,8,10,43773);
+CheckOffset(struct _GdkEventCrossing,y,32,10,43773);
+CheckMemberSize(struct _GdkEventCrossing,x_root,8,10,43774);
+CheckOffset(struct _GdkEventCrossing,x_root,40,10,43774);
+CheckMemberSize(struct _GdkEventCrossing,y_root,8,10,43775);
+CheckOffset(struct _GdkEventCrossing,y_root,48,10,43775);
+CheckMemberSize(struct _GdkEventCrossing,mode,4,10,43779);
+CheckOffset(struct _GdkEventCrossing,mode,56,10,43779);
+CheckMemberSize(struct _GdkEventCrossing,detail,4,10,43786);
+CheckOffset(struct _GdkEventCrossing,detail,60,10,43786);
+CheckMemberSize(struct _GdkEventCrossing,focus,4,10,43787);
+CheckOffset(struct _GdkEventCrossing,focus,64,10,43787);
+CheckMemberSize(struct _GdkEventCrossing,state,4,10,43788);
+CheckOffset(struct _GdkEventCrossing,state,68,10,43788);
 #elif __s390x__
-CheckTypeSize(struct _GdkEventCrossing,88, 12775, 12)
-CheckMemberSize(struct _GdkEventCrossing,window,8,12,43768)
-CheckOffset(struct _GdkEventCrossing,window,8,12,43768)
-CheckMemberSize(struct _GdkEventCrossing,send_event,1,12,43769)
-CheckOffset(struct _GdkEventCrossing,send_event,16,12,43769)
-CheckMemberSize(struct _GdkEventCrossing,subwindow,8,12,43770)
-CheckOffset(struct _GdkEventCrossing,subwindow,24,12,43770)
-CheckMemberSize(struct _GdkEventCrossing,time,4,12,43771)
-CheckOffset(struct _GdkEventCrossing,time,32,12,43771)
-CheckMemberSize(struct _GdkEventCrossing,x,8,12,43772)
-CheckOffset(struct _GdkEventCrossing,x,40,12,43772)
-CheckMemberSize(struct _GdkEventCrossing,y,8,12,43773)
-CheckOffset(struct _GdkEventCrossing,y,48,12,43773)
-CheckMemberSize(struct _GdkEventCrossing,x_root,8,12,43774)
-CheckOffset(struct _GdkEventCrossing,x_root,56,12,43774)
-CheckMemberSize(struct _GdkEventCrossing,y_root,8,12,43775)
-CheckOffset(struct _GdkEventCrossing,y_root,64,12,43775)
-CheckMemberSize(struct _GdkEventCrossing,mode,4,12,43779)
-CheckOffset(struct _GdkEventCrossing,mode,72,12,43779)
-CheckMemberSize(struct _GdkEventCrossing,detail,4,12,43786)
-CheckOffset(struct _GdkEventCrossing,detail,76,12,43786)
-CheckMemberSize(struct _GdkEventCrossing,focus,4,12,43787)
-CheckOffset(struct _GdkEventCrossing,focus,80,12,43787)
-CheckMemberSize(struct _GdkEventCrossing,state,4,12,43788)
-CheckOffset(struct _GdkEventCrossing,state,84,12,43788)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12775,0);
-Msg("Find size of _GdkEventCrossing (12775)\n");
+CheckTypeSize(struct _GdkEventCrossing,88, 12775, 12);
+CheckMemberSize(struct _GdkEventCrossing,window,8,12,43768);
+CheckOffset(struct _GdkEventCrossing,window,8,12,43768);
+CheckMemberSize(struct _GdkEventCrossing,send_event,1,12,43769);
+CheckOffset(struct _GdkEventCrossing,send_event,16,12,43769);
+CheckMemberSize(struct _GdkEventCrossing,subwindow,8,12,43770);
+CheckOffset(struct _GdkEventCrossing,subwindow,24,12,43770);
+CheckMemberSize(struct _GdkEventCrossing,time,4,12,43771);
+CheckOffset(struct _GdkEventCrossing,time,32,12,43771);
+CheckMemberSize(struct _GdkEventCrossing,x,8,12,43772);
+CheckOffset(struct _GdkEventCrossing,x,40,12,43772);
+CheckMemberSize(struct _GdkEventCrossing,y,8,12,43773);
+CheckOffset(struct _GdkEventCrossing,y,48,12,43773);
+CheckMemberSize(struct _GdkEventCrossing,x_root,8,12,43774);
+CheckOffset(struct _GdkEventCrossing,x_root,56,12,43774);
+CheckMemberSize(struct _GdkEventCrossing,y_root,8,12,43775);
+CheckOffset(struct _GdkEventCrossing,y_root,64,12,43775);
+CheckMemberSize(struct _GdkEventCrossing,mode,4,12,43779);
+CheckOffset(struct _GdkEventCrossing,mode,72,12,43779);
+CheckMemberSize(struct _GdkEventCrossing,detail,4,12,43786);
+CheckOffset(struct _GdkEventCrossing,detail,76,12,43786);
+CheckMemberSize(struct _GdkEventCrossing,focus,4,12,43787);
+CheckOffset(struct _GdkEventCrossing,focus,80,12,43787);
+CheckMemberSize(struct _GdkEventCrossing,state,4,12,43788);
+CheckOffset(struct _GdkEventCrossing,state,84,12,43788);
+#elif 1
+CheckTypeSize(struct _GdkEventCrossing,0, 12775, 1);
+Msg("Missing member data for _GdkEventCrossing on All\n");
+CheckOffset(struct _GdkEventCrossing,type,0,1,43767);
+CheckOffset(struct _GdkEventCrossing,window,0,1,43768);
+CheckOffset(struct _GdkEventCrossing,send_event,0,1,43769);
+CheckOffset(struct _GdkEventCrossing,subwindow,0,1,43770);
+CheckOffset(struct _GdkEventCrossing,time,0,1,43771);
+CheckOffset(struct _GdkEventCrossing,x,0,1,43772);
+CheckOffset(struct _GdkEventCrossing,y,0,1,43773);
+CheckOffset(struct _GdkEventCrossing,x_root,0,1,43774);
+CheckOffset(struct _GdkEventCrossing,y_root,0,1,43775);
+CheckOffset(struct _GdkEventCrossing,mode,0,1,43779);
+CheckOffset(struct _GdkEventCrossing,detail,0,1,43786);
+CheckOffset(struct _GdkEventCrossing,focus,0,1,43787);
+CheckOffset(struct _GdkEventCrossing,state,0,1,43788);
 #endif
 
 #if __i386__
@@ -5685,28 +5929,28 @@ CheckEnum("GDK_CROSSING_UNGRAB",GDK_CROSSING_UNGRAB,2,43778);
 CheckEnum("GDK_CROSSING_NORMAL",GDK_CROSSING_NORMAL,0,43776);
 CheckEnum("GDK_CROSSING_GRAB",GDK_CROSSING_GRAB,1,43777);
 CheckEnum("GDK_CROSSING_UNGRAB",GDK_CROSSING_UNGRAB,2,43778);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12776,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-506 (12776)\n");
+#elif 1
+CheckEnum("GDK_CROSSING_NORMAL",GDK_CROSSING_NORMAL,0,43776);
+CheckEnum("GDK_CROSSING_GRAB",GDK_CROSSING_GRAB,1,43777);
+CheckEnum("GDK_CROSSING_UNGRAB",GDK_CROSSING_UNGRAB,2,43778);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkCrossingMode,4, 12777, 2)
+CheckTypeSize(GdkCrossingMode,4, 12777, 2);
 #elif __x86_64__
-CheckTypeSize(GdkCrossingMode,4, 12777, 11)
+CheckTypeSize(GdkCrossingMode,4, 12777, 11);
 #elif __ia64__
-CheckTypeSize(GdkCrossingMode,4, 12777, 3)
+CheckTypeSize(GdkCrossingMode,4, 12777, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkCrossingMode,4, 12777, 6)
+CheckTypeSize(GdkCrossingMode,4, 12777, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkCrossingMode,4, 12777, 9)
+CheckTypeSize(GdkCrossingMode,4, 12777, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkCrossingMode,4, 12777, 10)
+CheckTypeSize(GdkCrossingMode,4, 12777, 10);
 #elif __s390x__
-CheckTypeSize(GdkCrossingMode,4, 12777, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12777,0);
-Msg("Find size of GdkCrossingMode (12777)\n");
+CheckTypeSize(GdkCrossingMode,4, 12777, 12);
+#elif 1
+CheckTypeSize(GdkCrossingMode,0, 12777, 1);
 #endif
 
 #if __i386__
@@ -5758,629 +6002,659 @@ CheckEnum("GDK_NOTIFY_INFERIOR",GDK_NOTIFY_INFERIOR,2,43782);
 CheckEnum("GDK_NOTIFY_NONLINEAR",GDK_NOTIFY_NONLINEAR,3,43783);
 CheckEnum("GDK_NOTIFY_NONLINEAR_VIRTUAL",GDK_NOTIFY_NONLINEAR_VIRTUAL,4,43784);
 CheckEnum("GDK_NOTIFY_UNKNOWN",GDK_NOTIFY_UNKNOWN,5,43785);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12778,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-505 (12778)\n");
+#elif 1
+CheckEnum("GDK_NOTIFY_ANCESTOR",GDK_NOTIFY_ANCESTOR,0,43780);
+CheckEnum("GDK_NOTIFY_VIRTUAL",GDK_NOTIFY_VIRTUAL,1,43781);
+CheckEnum("GDK_NOTIFY_INFERIOR",GDK_NOTIFY_INFERIOR,2,43782);
+CheckEnum("GDK_NOTIFY_NONLINEAR",GDK_NOTIFY_NONLINEAR,3,43783);
+CheckEnum("GDK_NOTIFY_NONLINEAR_VIRTUAL",GDK_NOTIFY_NONLINEAR_VIRTUAL,4,43784);
+CheckEnum("GDK_NOTIFY_UNKNOWN",GDK_NOTIFY_UNKNOWN,5,43785);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkNotifyType,4, 12779, 2)
+CheckTypeSize(GdkNotifyType,4, 12779, 2);
 #elif __x86_64__
-CheckTypeSize(GdkNotifyType,4, 12779, 11)
+CheckTypeSize(GdkNotifyType,4, 12779, 11);
 #elif __ia64__
-CheckTypeSize(GdkNotifyType,4, 12779, 3)
+CheckTypeSize(GdkNotifyType,4, 12779, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkNotifyType,4, 12779, 6)
+CheckTypeSize(GdkNotifyType,4, 12779, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkNotifyType,4, 12779, 9)
+CheckTypeSize(GdkNotifyType,4, 12779, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkNotifyType,4, 12779, 10)
+CheckTypeSize(GdkNotifyType,4, 12779, 10);
 #elif __s390x__
-CheckTypeSize(GdkNotifyType,4, 12779, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12779,0);
-Msg("Find size of GdkNotifyType (12779)\n");
+CheckTypeSize(GdkNotifyType,4, 12779, 12);
+#elif 1
+CheckTypeSize(GdkNotifyType,0, 12779, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkEventCrossing,68, 12780, 2)
+CheckTypeSize(GdkEventCrossing,68, 12780, 2);
 #elif __x86_64__
-CheckTypeSize(GdkEventCrossing,88, 12780, 11)
+CheckTypeSize(GdkEventCrossing,88, 12780, 11);
 #elif __ia64__
-CheckTypeSize(GdkEventCrossing,88, 12780, 3)
+CheckTypeSize(GdkEventCrossing,88, 12780, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkEventCrossing,72, 12780, 6)
+CheckTypeSize(GdkEventCrossing,72, 12780, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkEventCrossing,88, 12780, 9)
+CheckTypeSize(GdkEventCrossing,88, 12780, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkEventCrossing,72, 12780, 10)
+CheckTypeSize(GdkEventCrossing,72, 12780, 10);
 #elif __s390x__
-CheckTypeSize(GdkEventCrossing,88, 12780, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12780,0);
-Msg("Find size of GdkEventCrossing (12780)\n");
+CheckTypeSize(GdkEventCrossing,88, 12780, 12);
+#elif 1
+CheckTypeSize(GdkEventCrossing,0, 12780, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkEventFocus,12, 12781, 2)
-CheckMemberSize(struct _GdkEventFocus,window,4,2,43791)
-CheckOffset(struct _GdkEventFocus,window,4,2,43791)
-CheckMemberSize(struct _GdkEventFocus,send_event,1,2,43792)
-CheckOffset(struct _GdkEventFocus,send_event,8,2,43792)
-CheckMemberSize(struct _GdkEventFocus,in,2,2,43793)
-CheckOffset(struct _GdkEventFocus,in,10,2,43793)
+CheckTypeSize(struct _GdkEventFocus,12, 12781, 2);
+CheckMemberSize(struct _GdkEventFocus,window,4,2,43791);
+CheckOffset(struct _GdkEventFocus,window,4,2,43791);
+CheckMemberSize(struct _GdkEventFocus,send_event,1,2,43792);
+CheckOffset(struct _GdkEventFocus,send_event,8,2,43792);
+CheckMemberSize(struct _GdkEventFocus,in,2,2,43793);
+CheckOffset(struct _GdkEventFocus,in,10,2,43793);
 #elif __x86_64__
-CheckTypeSize(struct _GdkEventFocus,24, 12781, 11)
-CheckMemberSize(struct _GdkEventFocus,window,8,11,43791)
-CheckOffset(struct _GdkEventFocus,window,8,11,43791)
-CheckMemberSize(struct _GdkEventFocus,send_event,1,11,43792)
-CheckOffset(struct _GdkEventFocus,send_event,16,11,43792)
-CheckMemberSize(struct _GdkEventFocus,in,2,11,43793)
-CheckOffset(struct _GdkEventFocus,in,18,11,43793)
+CheckTypeSize(struct _GdkEventFocus,24, 12781, 11);
+CheckMemberSize(struct _GdkEventFocus,window,8,11,43791);
+CheckOffset(struct _GdkEventFocus,window,8,11,43791);
+CheckMemberSize(struct _GdkEventFocus,send_event,1,11,43792);
+CheckOffset(struct _GdkEventFocus,send_event,16,11,43792);
+CheckMemberSize(struct _GdkEventFocus,in,2,11,43793);
+CheckOffset(struct _GdkEventFocus,in,18,11,43793);
 #elif __ia64__
-CheckTypeSize(struct _GdkEventFocus,24, 12781, 3)
-CheckMemberSize(struct _GdkEventFocus,window,8,3,43791)
-CheckOffset(struct _GdkEventFocus,window,8,3,43791)
-CheckMemberSize(struct _GdkEventFocus,send_event,1,3,43792)
-CheckOffset(struct _GdkEventFocus,send_event,16,3,43792)
-CheckMemberSize(struct _GdkEventFocus,in,2,3,43793)
-CheckOffset(struct _GdkEventFocus,in,18,3,43793)
+CheckTypeSize(struct _GdkEventFocus,24, 12781, 3);
+CheckMemberSize(struct _GdkEventFocus,window,8,3,43791);
+CheckOffset(struct _GdkEventFocus,window,8,3,43791);
+CheckMemberSize(struct _GdkEventFocus,send_event,1,3,43792);
+CheckOffset(struct _GdkEventFocus,send_event,16,3,43792);
+CheckMemberSize(struct _GdkEventFocus,in,2,3,43793);
+CheckOffset(struct _GdkEventFocus,in,18,3,43793);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkEventFocus,12, 12781, 6)
-CheckMemberSize(struct _GdkEventFocus,window,4,6,43791)
-CheckOffset(struct _GdkEventFocus,window,4,6,43791)
-CheckMemberSize(struct _GdkEventFocus,send_event,1,6,43792)
-CheckOffset(struct _GdkEventFocus,send_event,8,6,43792)
-CheckMemberSize(struct _GdkEventFocus,in,2,6,43793)
-CheckOffset(struct _GdkEventFocus,in,10,6,43793)
+CheckTypeSize(struct _GdkEventFocus,12, 12781, 6);
+CheckMemberSize(struct _GdkEventFocus,window,4,6,43791);
+CheckOffset(struct _GdkEventFocus,window,4,6,43791);
+CheckMemberSize(struct _GdkEventFocus,send_event,1,6,43792);
+CheckOffset(struct _GdkEventFocus,send_event,8,6,43792);
+CheckMemberSize(struct _GdkEventFocus,in,2,6,43793);
+CheckOffset(struct _GdkEventFocus,in,10,6,43793);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkEventFocus,24, 12781, 9)
-CheckMemberSize(struct _GdkEventFocus,window,8,9,43791)
-CheckOffset(struct _GdkEventFocus,window,8,9,43791)
-CheckMemberSize(struct _GdkEventFocus,send_event,1,9,43792)
-CheckOffset(struct _GdkEventFocus,send_event,16,9,43792)
-CheckMemberSize(struct _GdkEventFocus,in,2,9,43793)
-CheckOffset(struct _GdkEventFocus,in,18,9,43793)
+CheckTypeSize(struct _GdkEventFocus,24, 12781, 9);
+CheckMemberSize(struct _GdkEventFocus,window,8,9,43791);
+CheckOffset(struct _GdkEventFocus,window,8,9,43791);
+CheckMemberSize(struct _GdkEventFocus,send_event,1,9,43792);
+CheckOffset(struct _GdkEventFocus,send_event,16,9,43792);
+CheckMemberSize(struct _GdkEventFocus,in,2,9,43793);
+CheckOffset(struct _GdkEventFocus,in,18,9,43793);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkEventFocus,12, 12781, 10)
-CheckMemberSize(struct _GdkEventFocus,window,4,10,43791)
-CheckOffset(struct _GdkEventFocus,window,4,10,43791)
-CheckMemberSize(struct _GdkEventFocus,send_event,1,10,43792)
-CheckOffset(struct _GdkEventFocus,send_event,8,10,43792)
-CheckMemberSize(struct _GdkEventFocus,in,2,10,43793)
-CheckOffset(struct _GdkEventFocus,in,10,10,43793)
+CheckTypeSize(struct _GdkEventFocus,12, 12781, 10);
+CheckMemberSize(struct _GdkEventFocus,window,4,10,43791);
+CheckOffset(struct _GdkEventFocus,window,4,10,43791);
+CheckMemberSize(struct _GdkEventFocus,send_event,1,10,43792);
+CheckOffset(struct _GdkEventFocus,send_event,8,10,43792);
+CheckMemberSize(struct _GdkEventFocus,in,2,10,43793);
+CheckOffset(struct _GdkEventFocus,in,10,10,43793);
 #elif __s390x__
-CheckTypeSize(struct _GdkEventFocus,24, 12781, 12)
-CheckMemberSize(struct _GdkEventFocus,window,8,12,43791)
-CheckOffset(struct _GdkEventFocus,window,8,12,43791)
-CheckMemberSize(struct _GdkEventFocus,send_event,1,12,43792)
-CheckOffset(struct _GdkEventFocus,send_event,16,12,43792)
-CheckMemberSize(struct _GdkEventFocus,in,2,12,43793)
-CheckOffset(struct _GdkEventFocus,in,18,12,43793)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12781,0);
-Msg("Find size of _GdkEventFocus (12781)\n");
+CheckTypeSize(struct _GdkEventFocus,24, 12781, 12);
+CheckMemberSize(struct _GdkEventFocus,window,8,12,43791);
+CheckOffset(struct _GdkEventFocus,window,8,12,43791);
+CheckMemberSize(struct _GdkEventFocus,send_event,1,12,43792);
+CheckOffset(struct _GdkEventFocus,send_event,16,12,43792);
+CheckMemberSize(struct _GdkEventFocus,in,2,12,43793);
+CheckOffset(struct _GdkEventFocus,in,18,12,43793);
+#elif 1
+CheckTypeSize(struct _GdkEventFocus,0, 12781, 1);
+Msg("Missing member data for _GdkEventFocus on All\n");
+CheckOffset(struct _GdkEventFocus,type,0,1,43790);
+CheckOffset(struct _GdkEventFocus,window,0,1,43791);
+CheckOffset(struct _GdkEventFocus,send_event,0,1,43792);
+CheckOffset(struct _GdkEventFocus,in,0,1,43793);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkEventFocus,12, 12782, 2)
+CheckTypeSize(GdkEventFocus,12, 12782, 2);
 #elif __x86_64__
-CheckTypeSize(GdkEventFocus,24, 12782, 11)
+CheckTypeSize(GdkEventFocus,24, 12782, 11);
 #elif __ia64__
-CheckTypeSize(GdkEventFocus,24, 12782, 3)
+CheckTypeSize(GdkEventFocus,24, 12782, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkEventFocus,12, 12782, 6)
+CheckTypeSize(GdkEventFocus,12, 12782, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkEventFocus,24, 12782, 9)
+CheckTypeSize(GdkEventFocus,24, 12782, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkEventFocus,12, 12782, 10)
+CheckTypeSize(GdkEventFocus,12, 12782, 10);
 #elif __s390x__
-CheckTypeSize(GdkEventFocus,24, 12782, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12782,0);
-Msg("Find size of GdkEventFocus (12782)\n");
+CheckTypeSize(GdkEventFocus,24, 12782, 12);
+#elif 1
+CheckTypeSize(GdkEventFocus,0, 12782, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkEventConfigure,28, 12783, 2)
-CheckMemberSize(struct _GdkEventConfigure,window,4,2,43796)
-CheckOffset(struct _GdkEventConfigure,window,4,2,43796)
-CheckMemberSize(struct _GdkEventConfigure,send_event,1,2,43797)
-CheckOffset(struct _GdkEventConfigure,send_event,8,2,43797)
-CheckMemberSize(struct _GdkEventConfigure,x,4,2,43798)
-CheckOffset(struct _GdkEventConfigure,x,12,2,43798)
-CheckMemberSize(struct _GdkEventConfigure,y,4,2,43799)
-CheckOffset(struct _GdkEventConfigure,y,16,2,43799)
-CheckMemberSize(struct _GdkEventConfigure,width,4,2,43800)
-CheckOffset(struct _GdkEventConfigure,width,20,2,43800)
-CheckMemberSize(struct _GdkEventConfigure,height,4,2,43801)
-CheckOffset(struct _GdkEventConfigure,height,24,2,43801)
+CheckTypeSize(struct _GdkEventConfigure,28, 12783, 2);
+CheckMemberSize(struct _GdkEventConfigure,window,4,2,43796);
+CheckOffset(struct _GdkEventConfigure,window,4,2,43796);
+CheckMemberSize(struct _GdkEventConfigure,send_event,1,2,43797);
+CheckOffset(struct _GdkEventConfigure,send_event,8,2,43797);
+CheckMemberSize(struct _GdkEventConfigure,x,4,2,43798);
+CheckOffset(struct _GdkEventConfigure,x,12,2,43798);
+CheckMemberSize(struct _GdkEventConfigure,y,4,2,43799);
+CheckOffset(struct _GdkEventConfigure,y,16,2,43799);
+CheckMemberSize(struct _GdkEventConfigure,width,4,2,43800);
+CheckOffset(struct _GdkEventConfigure,width,20,2,43800);
+CheckMemberSize(struct _GdkEventConfigure,height,4,2,43801);
+CheckOffset(struct _GdkEventConfigure,height,24,2,43801);
 #elif __x86_64__
-CheckTypeSize(struct _GdkEventConfigure,40, 12783, 11)
-CheckMemberSize(struct _GdkEventConfigure,window,8,11,43796)
-CheckOffset(struct _GdkEventConfigure,window,8,11,43796)
-CheckMemberSize(struct _GdkEventConfigure,send_event,1,11,43797)
-CheckOffset(struct _GdkEventConfigure,send_event,16,11,43797)
-CheckMemberSize(struct _GdkEventConfigure,x,4,11,43798)
-CheckOffset(struct _GdkEventConfigure,x,20,11,43798)
-CheckMemberSize(struct _GdkEventConfigure,y,4,11,43799)
-CheckOffset(struct _GdkEventConfigure,y,24,11,43799)
-CheckMemberSize(struct _GdkEventConfigure,width,4,11,43800)
-CheckOffset(struct _GdkEventConfigure,width,28,11,43800)
-CheckMemberSize(struct _GdkEventConfigure,height,4,11,43801)
-CheckOffset(struct _GdkEventConfigure,height,32,11,43801)
+CheckTypeSize(struct _GdkEventConfigure,40, 12783, 11);
+CheckMemberSize(struct _GdkEventConfigure,window,8,11,43796);
+CheckOffset(struct _GdkEventConfigure,window,8,11,43796);
+CheckMemberSize(struct _GdkEventConfigure,send_event,1,11,43797);
+CheckOffset(struct _GdkEventConfigure,send_event,16,11,43797);
+CheckMemberSize(struct _GdkEventConfigure,x,4,11,43798);
+CheckOffset(struct _GdkEventConfigure,x,20,11,43798);
+CheckMemberSize(struct _GdkEventConfigure,y,4,11,43799);
+CheckOffset(struct _GdkEventConfigure,y,24,11,43799);
+CheckMemberSize(struct _GdkEventConfigure,width,4,11,43800);
+CheckOffset(struct _GdkEventConfigure,width,28,11,43800);
+CheckMemberSize(struct _GdkEventConfigure,height,4,11,43801);
+CheckOffset(struct _GdkEventConfigure,height,32,11,43801);
 #elif __ia64__
-CheckTypeSize(struct _GdkEventConfigure,40, 12783, 3)
-CheckMemberSize(struct _GdkEventConfigure,window,8,3,43796)
-CheckOffset(struct _GdkEventConfigure,window,8,3,43796)
-CheckMemberSize(struct _GdkEventConfigure,send_event,1,3,43797)
-CheckOffset(struct _GdkEventConfigure,send_event,16,3,43797)
-CheckMemberSize(struct _GdkEventConfigure,x,4,3,43798)
-CheckOffset(struct _GdkEventConfigure,x,20,3,43798)
-CheckMemberSize(struct _GdkEventConfigure,y,4,3,43799)
-CheckOffset(struct _GdkEventConfigure,y,24,3,43799)
-CheckMemberSize(struct _GdkEventConfigure,width,4,3,43800)
-CheckOffset(struct _GdkEventConfigure,width,28,3,43800)
-CheckMemberSize(struct _GdkEventConfigure,height,4,3,43801)
-CheckOffset(struct _GdkEventConfigure,height,32,3,43801)
+CheckTypeSize(struct _GdkEventConfigure,40, 12783, 3);
+CheckMemberSize(struct _GdkEventConfigure,window,8,3,43796);
+CheckOffset(struct _GdkEventConfigure,window,8,3,43796);
+CheckMemberSize(struct _GdkEventConfigure,send_event,1,3,43797);
+CheckOffset(struct _GdkEventConfigure,send_event,16,3,43797);
+CheckMemberSize(struct _GdkEventConfigure,x,4,3,43798);
+CheckOffset(struct _GdkEventConfigure,x,20,3,43798);
+CheckMemberSize(struct _GdkEventConfigure,y,4,3,43799);
+CheckOffset(struct _GdkEventConfigure,y,24,3,43799);
+CheckMemberSize(struct _GdkEventConfigure,width,4,3,43800);
+CheckOffset(struct _GdkEventConfigure,width,28,3,43800);
+CheckMemberSize(struct _GdkEventConfigure,height,4,3,43801);
+CheckOffset(struct _GdkEventConfigure,height,32,3,43801);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkEventConfigure,28, 12783, 6)
-CheckMemberSize(struct _GdkEventConfigure,window,4,6,43796)
-CheckOffset(struct _GdkEventConfigure,window,4,6,43796)
-CheckMemberSize(struct _GdkEventConfigure,send_event,1,6,43797)
-CheckOffset(struct _GdkEventConfigure,send_event,8,6,43797)
-CheckMemberSize(struct _GdkEventConfigure,x,4,6,43798)
-CheckOffset(struct _GdkEventConfigure,x,12,6,43798)
-CheckMemberSize(struct _GdkEventConfigure,y,4,6,43799)
-CheckOffset(struct _GdkEventConfigure,y,16,6,43799)
-CheckMemberSize(struct _GdkEventConfigure,width,4,6,43800)
-CheckOffset(struct _GdkEventConfigure,width,20,6,43800)
-CheckMemberSize(struct _GdkEventConfigure,height,4,6,43801)
-CheckOffset(struct _GdkEventConfigure,height,24,6,43801)
+CheckTypeSize(struct _GdkEventConfigure,28, 12783, 6);
+CheckMemberSize(struct _GdkEventConfigure,window,4,6,43796);
+CheckOffset(struct _GdkEventConfigure,window,4,6,43796);
+CheckMemberSize(struct _GdkEventConfigure,send_event,1,6,43797);
+CheckOffset(struct _GdkEventConfigure,send_event,8,6,43797);
+CheckMemberSize(struct _GdkEventConfigure,x,4,6,43798);
+CheckOffset(struct _GdkEventConfigure,x,12,6,43798);
+CheckMemberSize(struct _GdkEventConfigure,y,4,6,43799);
+CheckOffset(struct _GdkEventConfigure,y,16,6,43799);
+CheckMemberSize(struct _GdkEventConfigure,width,4,6,43800);
+CheckOffset(struct _GdkEventConfigure,width,20,6,43800);
+CheckMemberSize(struct _GdkEventConfigure,height,4,6,43801);
+CheckOffset(struct _GdkEventConfigure,height,24,6,43801);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkEventConfigure,40, 12783, 9)
-CheckMemberSize(struct _GdkEventConfigure,window,8,9,43796)
-CheckOffset(struct _GdkEventConfigure,window,8,9,43796)
-CheckMemberSize(struct _GdkEventConfigure,send_event,1,9,43797)
-CheckOffset(struct _GdkEventConfigure,send_event,16,9,43797)
-CheckMemberSize(struct _GdkEventConfigure,x,4,9,43798)
-CheckOffset(struct _GdkEventConfigure,x,20,9,43798)
-CheckMemberSize(struct _GdkEventConfigure,y,4,9,43799)
-CheckOffset(struct _GdkEventConfigure,y,24,9,43799)
-CheckMemberSize(struct _GdkEventConfigure,width,4,9,43800)
-CheckOffset(struct _GdkEventConfigure,width,28,9,43800)
-CheckMemberSize(struct _GdkEventConfigure,height,4,9,43801)
-CheckOffset(struct _GdkEventConfigure,height,32,9,43801)
+CheckTypeSize(struct _GdkEventConfigure,40, 12783, 9);
+CheckMemberSize(struct _GdkEventConfigure,window,8,9,43796);
+CheckOffset(struct _GdkEventConfigure,window,8,9,43796);
+CheckMemberSize(struct _GdkEventConfigure,send_event,1,9,43797);
+CheckOffset(struct _GdkEventConfigure,send_event,16,9,43797);
+CheckMemberSize(struct _GdkEventConfigure,x,4,9,43798);
+CheckOffset(struct _GdkEventConfigure,x,20,9,43798);
+CheckMemberSize(struct _GdkEventConfigure,y,4,9,43799);
+CheckOffset(struct _GdkEventConfigure,y,24,9,43799);
+CheckMemberSize(struct _GdkEventConfigure,width,4,9,43800);
+CheckOffset(struct _GdkEventConfigure,width,28,9,43800);
+CheckMemberSize(struct _GdkEventConfigure,height,4,9,43801);
+CheckOffset(struct _GdkEventConfigure,height,32,9,43801);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkEventConfigure,28, 12783, 10)
-CheckMemberSize(struct _GdkEventConfigure,window,4,10,43796)
-CheckOffset(struct _GdkEventConfigure,window,4,10,43796)
-CheckMemberSize(struct _GdkEventConfigure,send_event,1,10,43797)
-CheckOffset(struct _GdkEventConfigure,send_event,8,10,43797)
-CheckMemberSize(struct _GdkEventConfigure,x,4,10,43798)
-CheckOffset(struct _GdkEventConfigure,x,12,10,43798)
-CheckMemberSize(struct _GdkEventConfigure,y,4,10,43799)
-CheckOffset(struct _GdkEventConfigure,y,16,10,43799)
-CheckMemberSize(struct _GdkEventConfigure,width,4,10,43800)
-CheckOffset(struct _GdkEventConfigure,width,20,10,43800)
-CheckMemberSize(struct _GdkEventConfigure,height,4,10,43801)
-CheckOffset(struct _GdkEventConfigure,height,24,10,43801)
+CheckTypeSize(struct _GdkEventConfigure,28, 12783, 10);
+CheckMemberSize(struct _GdkEventConfigure,window,4,10,43796);
+CheckOffset(struct _GdkEventConfigure,window,4,10,43796);
+CheckMemberSize(struct _GdkEventConfigure,send_event,1,10,43797);
+CheckOffset(struct _GdkEventConfigure,send_event,8,10,43797);
+CheckMemberSize(struct _GdkEventConfigure,x,4,10,43798);
+CheckOffset(struct _GdkEventConfigure,x,12,10,43798);
+CheckMemberSize(struct _GdkEventConfigure,y,4,10,43799);
+CheckOffset(struct _GdkEventConfigure,y,16,10,43799);
+CheckMemberSize(struct _GdkEventConfigure,width,4,10,43800);
+CheckOffset(struct _GdkEventConfigure,width,20,10,43800);
+CheckMemberSize(struct _GdkEventConfigure,height,4,10,43801);
+CheckOffset(struct _GdkEventConfigure,height,24,10,43801);
 #elif __s390x__
-CheckTypeSize(struct _GdkEventConfigure,40, 12783, 12)
-CheckMemberSize(struct _GdkEventConfigure,window,8,12,43796)
-CheckOffset(struct _GdkEventConfigure,window,8,12,43796)
-CheckMemberSize(struct _GdkEventConfigure,send_event,1,12,43797)
-CheckOffset(struct _GdkEventConfigure,send_event,16,12,43797)
-CheckMemberSize(struct _GdkEventConfigure,x,4,12,43798)
-CheckOffset(struct _GdkEventConfigure,x,20,12,43798)
-CheckMemberSize(struct _GdkEventConfigure,y,4,12,43799)
-CheckOffset(struct _GdkEventConfigure,y,24,12,43799)
-CheckMemberSize(struct _GdkEventConfigure,width,4,12,43800)
-CheckOffset(struct _GdkEventConfigure,width,28,12,43800)
-CheckMemberSize(struct _GdkEventConfigure,height,4,12,43801)
-CheckOffset(struct _GdkEventConfigure,height,32,12,43801)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12783,0);
-Msg("Find size of _GdkEventConfigure (12783)\n");
+CheckTypeSize(struct _GdkEventConfigure,40, 12783, 12);
+CheckMemberSize(struct _GdkEventConfigure,window,8,12,43796);
+CheckOffset(struct _GdkEventConfigure,window,8,12,43796);
+CheckMemberSize(struct _GdkEventConfigure,send_event,1,12,43797);
+CheckOffset(struct _GdkEventConfigure,send_event,16,12,43797);
+CheckMemberSize(struct _GdkEventConfigure,x,4,12,43798);
+CheckOffset(struct _GdkEventConfigure,x,20,12,43798);
+CheckMemberSize(struct _GdkEventConfigure,y,4,12,43799);
+CheckOffset(struct _GdkEventConfigure,y,24,12,43799);
+CheckMemberSize(struct _GdkEventConfigure,width,4,12,43800);
+CheckOffset(struct _GdkEventConfigure,width,28,12,43800);
+CheckMemberSize(struct _GdkEventConfigure,height,4,12,43801);
+CheckOffset(struct _GdkEventConfigure,height,32,12,43801);
+#elif 1
+CheckTypeSize(struct _GdkEventConfigure,0, 12783, 1);
+Msg("Missing member data for _GdkEventConfigure on All\n");
+CheckOffset(struct _GdkEventConfigure,type,0,1,43795);
+CheckOffset(struct _GdkEventConfigure,window,0,1,43796);
+CheckOffset(struct _GdkEventConfigure,send_event,0,1,43797);
+CheckOffset(struct _GdkEventConfigure,x,0,1,43798);
+CheckOffset(struct _GdkEventConfigure,y,0,1,43799);
+CheckOffset(struct _GdkEventConfigure,width,0,1,43800);
+CheckOffset(struct _GdkEventConfigure,height,0,1,43801);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkEventConfigure,28, 12784, 2)
+CheckTypeSize(GdkEventConfigure,28, 12784, 2);
 #elif __x86_64__
-CheckTypeSize(GdkEventConfigure,40, 12784, 11)
+CheckTypeSize(GdkEventConfigure,40, 12784, 11);
 #elif __ia64__
-CheckTypeSize(GdkEventConfigure,40, 12784, 3)
+CheckTypeSize(GdkEventConfigure,40, 12784, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkEventConfigure,28, 12784, 6)
+CheckTypeSize(GdkEventConfigure,28, 12784, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkEventConfigure,40, 12784, 9)
+CheckTypeSize(GdkEventConfigure,40, 12784, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkEventConfigure,28, 12784, 10)
+CheckTypeSize(GdkEventConfigure,28, 12784, 10);
 #elif __s390x__
-CheckTypeSize(GdkEventConfigure,40, 12784, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12784,0);
-Msg("Find size of GdkEventConfigure (12784)\n");
+CheckTypeSize(GdkEventConfigure,40, 12784, 12);
+#elif 1
+CheckTypeSize(GdkEventConfigure,0, 12784, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkEventProperty,24, 12785, 2)
-CheckMemberSize(struct _GdkEventProperty,window,4,2,43804)
-CheckOffset(struct _GdkEventProperty,window,4,2,43804)
-CheckMemberSize(struct _GdkEventProperty,send_event,1,2,43805)
-CheckOffset(struct _GdkEventProperty,send_event,8,2,43805)
-CheckMemberSize(struct _GdkEventProperty,atom,4,2,43806)
-CheckOffset(struct _GdkEventProperty,atom,12,2,43806)
-CheckMemberSize(struct _GdkEventProperty,time,4,2,43807)
-CheckOffset(struct _GdkEventProperty,time,16,2,43807)
-CheckMemberSize(struct _GdkEventProperty,state,4,2,43808)
-CheckOffset(struct _GdkEventProperty,state,20,2,43808)
+CheckTypeSize(struct _GdkEventProperty,24, 12785, 2);
+CheckMemberSize(struct _GdkEventProperty,window,4,2,43804);
+CheckOffset(struct _GdkEventProperty,window,4,2,43804);
+CheckMemberSize(struct _GdkEventProperty,send_event,1,2,43805);
+CheckOffset(struct _GdkEventProperty,send_event,8,2,43805);
+CheckMemberSize(struct _GdkEventProperty,atom,4,2,43806);
+CheckOffset(struct _GdkEventProperty,atom,12,2,43806);
+CheckMemberSize(struct _GdkEventProperty,time,4,2,43807);
+CheckOffset(struct _GdkEventProperty,time,16,2,43807);
+CheckMemberSize(struct _GdkEventProperty,state,4,2,43808);
+CheckOffset(struct _GdkEventProperty,state,20,2,43808);
 #elif __x86_64__
-CheckTypeSize(struct _GdkEventProperty,40, 12785, 11)
-CheckMemberSize(struct _GdkEventProperty,window,8,11,43804)
-CheckOffset(struct _GdkEventProperty,window,8,11,43804)
-CheckMemberSize(struct _GdkEventProperty,send_event,1,11,43805)
-CheckOffset(struct _GdkEventProperty,send_event,16,11,43805)
-CheckMemberSize(struct _GdkEventProperty,atom,8,11,43806)
-CheckOffset(struct _GdkEventProperty,atom,24,11,43806)
-CheckMemberSize(struct _GdkEventProperty,time,4,11,43807)
-CheckOffset(struct _GdkEventProperty,time,32,11,43807)
-CheckMemberSize(struct _GdkEventProperty,state,4,11,43808)
-CheckOffset(struct _GdkEventProperty,state,36,11,43808)
+CheckTypeSize(struct _GdkEventProperty,40, 12785, 11);
+CheckMemberSize(struct _GdkEventProperty,window,8,11,43804);
+CheckOffset(struct _GdkEventProperty,window,8,11,43804);
+CheckMemberSize(struct _GdkEventProperty,send_event,1,11,43805);
+CheckOffset(struct _GdkEventProperty,send_event,16,11,43805);
+CheckMemberSize(struct _GdkEventProperty,atom,8,11,43806);
+CheckOffset(struct _GdkEventProperty,atom,24,11,43806);
+CheckMemberSize(struct _GdkEventProperty,time,4,11,43807);
+CheckOffset(struct _GdkEventProperty,time,32,11,43807);
+CheckMemberSize(struct _GdkEventProperty,state,4,11,43808);
+CheckOffset(struct _GdkEventProperty,state,36,11,43808);
 #elif __ia64__
-CheckTypeSize(struct _GdkEventProperty,40, 12785, 3)
-CheckMemberSize(struct _GdkEventProperty,window,8,3,43804)
-CheckOffset(struct _GdkEventProperty,window,8,3,43804)
-CheckMemberSize(struct _GdkEventProperty,send_event,1,3,43805)
-CheckOffset(struct _GdkEventProperty,send_event,16,3,43805)
-CheckMemberSize(struct _GdkEventProperty,atom,8,3,43806)
-CheckOffset(struct _GdkEventProperty,atom,24,3,43806)
-CheckMemberSize(struct _GdkEventProperty,time,4,3,43807)
-CheckOffset(struct _GdkEventProperty,time,32,3,43807)
-CheckMemberSize(struct _GdkEventProperty,state,4,3,43808)
-CheckOffset(struct _GdkEventProperty,state,36,3,43808)
+CheckTypeSize(struct _GdkEventProperty,40, 12785, 3);
+CheckMemberSize(struct _GdkEventProperty,window,8,3,43804);
+CheckOffset(struct _GdkEventProperty,window,8,3,43804);
+CheckMemberSize(struct _GdkEventProperty,send_event,1,3,43805);
+CheckOffset(struct _GdkEventProperty,send_event,16,3,43805);
+CheckMemberSize(struct _GdkEventProperty,atom,8,3,43806);
+CheckOffset(struct _GdkEventProperty,atom,24,3,43806);
+CheckMemberSize(struct _GdkEventProperty,time,4,3,43807);
+CheckOffset(struct _GdkEventProperty,time,32,3,43807);
+CheckMemberSize(struct _GdkEventProperty,state,4,3,43808);
+CheckOffset(struct _GdkEventProperty,state,36,3,43808);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkEventProperty,24, 12785, 6)
-CheckMemberSize(struct _GdkEventProperty,window,4,6,43804)
-CheckOffset(struct _GdkEventProperty,window,4,6,43804)
-CheckMemberSize(struct _GdkEventProperty,send_event,1,6,43805)
-CheckOffset(struct _GdkEventProperty,send_event,8,6,43805)
-CheckMemberSize(struct _GdkEventProperty,atom,4,6,43806)
-CheckOffset(struct _GdkEventProperty,atom,12,6,43806)
-CheckMemberSize(struct _GdkEventProperty,time,4,6,43807)
-CheckOffset(struct _GdkEventProperty,time,16,6,43807)
-CheckMemberSize(struct _GdkEventProperty,state,4,6,43808)
-CheckOffset(struct _GdkEventProperty,state,20,6,43808)
+CheckTypeSize(struct _GdkEventProperty,24, 12785, 6);
+CheckMemberSize(struct _GdkEventProperty,window,4,6,43804);
+CheckOffset(struct _GdkEventProperty,window,4,6,43804);
+CheckMemberSize(struct _GdkEventProperty,send_event,1,6,43805);
+CheckOffset(struct _GdkEventProperty,send_event,8,6,43805);
+CheckMemberSize(struct _GdkEventProperty,atom,4,6,43806);
+CheckOffset(struct _GdkEventProperty,atom,12,6,43806);
+CheckMemberSize(struct _GdkEventProperty,time,4,6,43807);
+CheckOffset(struct _GdkEventProperty,time,16,6,43807);
+CheckMemberSize(struct _GdkEventProperty,state,4,6,43808);
+CheckOffset(struct _GdkEventProperty,state,20,6,43808);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkEventProperty,40, 12785, 9)
-CheckMemberSize(struct _GdkEventProperty,window,8,9,43804)
-CheckOffset(struct _GdkEventProperty,window,8,9,43804)
-CheckMemberSize(struct _GdkEventProperty,send_event,1,9,43805)
-CheckOffset(struct _GdkEventProperty,send_event,16,9,43805)
-CheckMemberSize(struct _GdkEventProperty,atom,8,9,43806)
-CheckOffset(struct _GdkEventProperty,atom,24,9,43806)
-CheckMemberSize(struct _GdkEventProperty,time,4,9,43807)
-CheckOffset(struct _GdkEventProperty,time,32,9,43807)
-CheckMemberSize(struct _GdkEventProperty,state,4,9,43808)
-CheckOffset(struct _GdkEventProperty,state,36,9,43808)
+CheckTypeSize(struct _GdkEventProperty,40, 12785, 9);
+CheckMemberSize(struct _GdkEventProperty,window,8,9,43804);
+CheckOffset(struct _GdkEventProperty,window,8,9,43804);
+CheckMemberSize(struct _GdkEventProperty,send_event,1,9,43805);
+CheckOffset(struct _GdkEventProperty,send_event,16,9,43805);
+CheckMemberSize(struct _GdkEventProperty,atom,8,9,43806);
+CheckOffset(struct _GdkEventProperty,atom,24,9,43806);
+CheckMemberSize(struct _GdkEventProperty,time,4,9,43807);
+CheckOffset(struct _GdkEventProperty,time,32,9,43807);
+CheckMemberSize(struct _GdkEventProperty,state,4,9,43808);
+CheckOffset(struct _GdkEventProperty,state,36,9,43808);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkEventProperty,24, 12785, 10)
-CheckMemberSize(struct _GdkEventProperty,window,4,10,43804)
-CheckOffset(struct _GdkEventProperty,window,4,10,43804)
-CheckMemberSize(struct _GdkEventProperty,send_event,1,10,43805)
-CheckOffset(struct _GdkEventProperty,send_event,8,10,43805)
-CheckMemberSize(struct _GdkEventProperty,atom,4,10,43806)
-CheckOffset(struct _GdkEventProperty,atom,12,10,43806)
-CheckMemberSize(struct _GdkEventProperty,time,4,10,43807)
-CheckOffset(struct _GdkEventProperty,time,16,10,43807)
-CheckMemberSize(struct _GdkEventProperty,state,4,10,43808)
-CheckOffset(struct _GdkEventProperty,state,20,10,43808)
+CheckTypeSize(struct _GdkEventProperty,24, 12785, 10);
+CheckMemberSize(struct _GdkEventProperty,window,4,10,43804);
+CheckOffset(struct _GdkEventProperty,window,4,10,43804);
+CheckMemberSize(struct _GdkEventProperty,send_event,1,10,43805);
+CheckOffset(struct _GdkEventProperty,send_event,8,10,43805);
+CheckMemberSize(struct _GdkEventProperty,atom,4,10,43806);
+CheckOffset(struct _GdkEventProperty,atom,12,10,43806);
+CheckMemberSize(struct _GdkEventProperty,time,4,10,43807);
+CheckOffset(struct _GdkEventProperty,time,16,10,43807);
+CheckMemberSize(struct _GdkEventProperty,state,4,10,43808);
+CheckOffset(struct _GdkEventProperty,state,20,10,43808);
 #elif __s390x__
-CheckTypeSize(struct _GdkEventProperty,40, 12785, 12)
-CheckMemberSize(struct _GdkEventProperty,window,8,12,43804)
-CheckOffset(struct _GdkEventProperty,window,8,12,43804)
-CheckMemberSize(struct _GdkEventProperty,send_event,1,12,43805)
-CheckOffset(struct _GdkEventProperty,send_event,16,12,43805)
-CheckMemberSize(struct _GdkEventProperty,atom,8,12,43806)
-CheckOffset(struct _GdkEventProperty,atom,24,12,43806)
-CheckMemberSize(struct _GdkEventProperty,time,4,12,43807)
-CheckOffset(struct _GdkEventProperty,time,32,12,43807)
-CheckMemberSize(struct _GdkEventProperty,state,4,12,43808)
-CheckOffset(struct _GdkEventProperty,state,36,12,43808)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12785,0);
-Msg("Find size of _GdkEventProperty (12785)\n");
+CheckTypeSize(struct _GdkEventProperty,40, 12785, 12);
+CheckMemberSize(struct _GdkEventProperty,window,8,12,43804);
+CheckOffset(struct _GdkEventProperty,window,8,12,43804);
+CheckMemberSize(struct _GdkEventProperty,send_event,1,12,43805);
+CheckOffset(struct _GdkEventProperty,send_event,16,12,43805);
+CheckMemberSize(struct _GdkEventProperty,atom,8,12,43806);
+CheckOffset(struct _GdkEventProperty,atom,24,12,43806);
+CheckMemberSize(struct _GdkEventProperty,time,4,12,43807);
+CheckOffset(struct _GdkEventProperty,time,32,12,43807);
+CheckMemberSize(struct _GdkEventProperty,state,4,12,43808);
+CheckOffset(struct _GdkEventProperty,state,36,12,43808);
+#elif 1
+CheckTypeSize(struct _GdkEventProperty,0, 12785, 1);
+Msg("Missing member data for _GdkEventProperty on All\n");
+CheckOffset(struct _GdkEventProperty,type,0,1,43803);
+CheckOffset(struct _GdkEventProperty,window,0,1,43804);
+CheckOffset(struct _GdkEventProperty,send_event,0,1,43805);
+CheckOffset(struct _GdkEventProperty,atom,0,1,43806);
+CheckOffset(struct _GdkEventProperty,time,0,1,43807);
+CheckOffset(struct _GdkEventProperty,state,0,1,43808);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkEventProperty,24, 12786, 2)
+CheckTypeSize(GdkEventProperty,24, 12786, 2);
 #elif __x86_64__
-CheckTypeSize(GdkEventProperty,40, 12786, 11)
+CheckTypeSize(GdkEventProperty,40, 12786, 11);
 #elif __ia64__
-CheckTypeSize(GdkEventProperty,40, 12786, 3)
+CheckTypeSize(GdkEventProperty,40, 12786, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkEventProperty,24, 12786, 6)
+CheckTypeSize(GdkEventProperty,24, 12786, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkEventProperty,40, 12786, 9)
+CheckTypeSize(GdkEventProperty,40, 12786, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkEventProperty,24, 12786, 10)
+CheckTypeSize(GdkEventProperty,24, 12786, 10);
 #elif __s390x__
-CheckTypeSize(GdkEventProperty,40, 12786, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12786,0);
-Msg("Find size of GdkEventProperty (12786)\n");
+CheckTypeSize(GdkEventProperty,40, 12786, 12);
+#elif 1
+CheckTypeSize(GdkEventProperty,0, 12786, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkEventSelection,32, 12787, 2)
-CheckMemberSize(struct _GdkEventSelection,window,4,2,43811)
-CheckOffset(struct _GdkEventSelection,window,4,2,43811)
-CheckMemberSize(struct _GdkEventSelection,send_event,1,2,43812)
-CheckOffset(struct _GdkEventSelection,send_event,8,2,43812)
-CheckMemberSize(struct _GdkEventSelection,selection,4,2,43813)
-CheckOffset(struct _GdkEventSelection,selection,12,2,43813)
-CheckMemberSize(struct _GdkEventSelection,target,4,2,43814)
-CheckOffset(struct _GdkEventSelection,target,16,2,43814)
-CheckMemberSize(struct _GdkEventSelection,property,4,2,43815)
-CheckOffset(struct _GdkEventSelection,property,20,2,43815)
-CheckMemberSize(struct _GdkEventSelection,time,4,2,43816)
-CheckOffset(struct _GdkEventSelection,time,24,2,43816)
-CheckMemberSize(struct _GdkEventSelection,requestor,4,2,43817)
-CheckOffset(struct _GdkEventSelection,requestor,28,2,43817)
+CheckTypeSize(struct _GdkEventSelection,32, 12787, 2);
+CheckMemberSize(struct _GdkEventSelection,window,4,2,43811);
+CheckOffset(struct _GdkEventSelection,window,4,2,43811);
+CheckMemberSize(struct _GdkEventSelection,send_event,1,2,43812);
+CheckOffset(struct _GdkEventSelection,send_event,8,2,43812);
+CheckMemberSize(struct _GdkEventSelection,selection,4,2,43813);
+CheckOffset(struct _GdkEventSelection,selection,12,2,43813);
+CheckMemberSize(struct _GdkEventSelection,target,4,2,43814);
+CheckOffset(struct _GdkEventSelection,target,16,2,43814);
+CheckMemberSize(struct _GdkEventSelection,property,4,2,43815);
+CheckOffset(struct _GdkEventSelection,property,20,2,43815);
+CheckMemberSize(struct _GdkEventSelection,time,4,2,43816);
+CheckOffset(struct _GdkEventSelection,time,24,2,43816);
+CheckMemberSize(struct _GdkEventSelection,requestor,4,2,43817);
+CheckOffset(struct _GdkEventSelection,requestor,28,2,43817);
 #elif __x86_64__
-CheckTypeSize(struct _GdkEventSelection,56, 12787, 11)
-CheckMemberSize(struct _GdkEventSelection,window,8,11,43811)
-CheckOffset(struct _GdkEventSelection,window,8,11,43811)
-CheckMemberSize(struct _GdkEventSelection,send_event,1,11,43812)
-CheckOffset(struct _GdkEventSelection,send_event,16,11,43812)
-CheckMemberSize(struct _GdkEventSelection,selection,8,11,43813)
-CheckOffset(struct _GdkEventSelection,selection,24,11,43813)
-CheckMemberSize(struct _GdkEventSelection,target,8,11,43814)
-CheckOffset(struct _GdkEventSelection,target,32,11,43814)
-CheckMemberSize(struct _GdkEventSelection,property,8,11,43815)
-CheckOffset(struct _GdkEventSelection,property,40,11,43815)
-CheckMemberSize(struct _GdkEventSelection,time,4,11,43816)
-CheckOffset(struct _GdkEventSelection,time,48,11,43816)
-CheckMemberSize(struct _GdkEventSelection,requestor,4,11,43817)
-CheckOffset(struct _GdkEventSelection,requestor,52,11,43817)
+CheckTypeSize(struct _GdkEventSelection,56, 12787, 11);
+CheckMemberSize(struct _GdkEventSelection,window,8,11,43811);
+CheckOffset(struct _GdkEventSelection,window,8,11,43811);
+CheckMemberSize(struct _GdkEventSelection,send_event,1,11,43812);
+CheckOffset(struct _GdkEventSelection,send_event,16,11,43812);
+CheckMemberSize(struct _GdkEventSelection,selection,8,11,43813);
+CheckOffset(struct _GdkEventSelection,selection,24,11,43813);
+CheckMemberSize(struct _GdkEventSelection,target,8,11,43814);
+CheckOffset(struct _GdkEventSelection,target,32,11,43814);
+CheckMemberSize(struct _GdkEventSelection,property,8,11,43815);
+CheckOffset(struct _GdkEventSelection,property,40,11,43815);
+CheckMemberSize(struct _GdkEventSelection,time,4,11,43816);
+CheckOffset(struct _GdkEventSelection,time,48,11,43816);
+CheckMemberSize(struct _GdkEventSelection,requestor,4,11,43817);
+CheckOffset(struct _GdkEventSelection,requestor,52,11,43817);
 #elif __ia64__
-CheckTypeSize(struct _GdkEventSelection,56, 12787, 3)
-CheckMemberSize(struct _GdkEventSelection,window,8,3,43811)
-CheckOffset(struct _GdkEventSelection,window,8,3,43811)
-CheckMemberSize(struct _GdkEventSelection,send_event,1,3,43812)
-CheckOffset(struct _GdkEventSelection,send_event,16,3,43812)
-CheckMemberSize(struct _GdkEventSelection,selection,8,3,43813)
-CheckOffset(struct _GdkEventSelection,selection,24,3,43813)
-CheckMemberSize(struct _GdkEventSelection,target,8,3,43814)
-CheckOffset(struct _GdkEventSelection,target,32,3,43814)
-CheckMemberSize(struct _GdkEventSelection,property,8,3,43815)
-CheckOffset(struct _GdkEventSelection,property,40,3,43815)
-CheckMemberSize(struct _GdkEventSelection,time,4,3,43816)
-CheckOffset(struct _GdkEventSelection,time,48,3,43816)
-CheckMemberSize(struct _GdkEventSelection,requestor,4,3,43817)
-CheckOffset(struct _GdkEventSelection,requestor,52,3,43817)
+CheckTypeSize(struct _GdkEventSelection,56, 12787, 3);
+CheckMemberSize(struct _GdkEventSelection,window,8,3,43811);
+CheckOffset(struct _GdkEventSelection,window,8,3,43811);
+CheckMemberSize(struct _GdkEventSelection,send_event,1,3,43812);
+CheckOffset(struct _GdkEventSelection,send_event,16,3,43812);
+CheckMemberSize(struct _GdkEventSelection,selection,8,3,43813);
+CheckOffset(struct _GdkEventSelection,selection,24,3,43813);
+CheckMemberSize(struct _GdkEventSelection,target,8,3,43814);
+CheckOffset(struct _GdkEventSelection,target,32,3,43814);
+CheckMemberSize(struct _GdkEventSelection,property,8,3,43815);
+CheckOffset(struct _GdkEventSelection,property,40,3,43815);
+CheckMemberSize(struct _GdkEventSelection,time,4,3,43816);
+CheckOffset(struct _GdkEventSelection,time,48,3,43816);
+CheckMemberSize(struct _GdkEventSelection,requestor,4,3,43817);
+CheckOffset(struct _GdkEventSelection,requestor,52,3,43817);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkEventSelection,32, 12787, 6)
-CheckMemberSize(struct _GdkEventSelection,window,4,6,43811)
-CheckOffset(struct _GdkEventSelection,window,4,6,43811)
-CheckMemberSize(struct _GdkEventSelection,send_event,1,6,43812)
-CheckOffset(struct _GdkEventSelection,send_event,8,6,43812)
-CheckMemberSize(struct _GdkEventSelection,selection,4,6,43813)
-CheckOffset(struct _GdkEventSelection,selection,12,6,43813)
-CheckMemberSize(struct _GdkEventSelection,target,4,6,43814)
-CheckOffset(struct _GdkEventSelection,target,16,6,43814)
-CheckMemberSize(struct _GdkEventSelection,property,4,6,43815)
-CheckOffset(struct _GdkEventSelection,property,20,6,43815)
-CheckMemberSize(struct _GdkEventSelection,time,4,6,43816)
-CheckOffset(struct _GdkEventSelection,time,24,6,43816)
-CheckMemberSize(struct _GdkEventSelection,requestor,4,6,43817)
-CheckOffset(struct _GdkEventSelection,requestor,28,6,43817)
+CheckTypeSize(struct _GdkEventSelection,32, 12787, 6);
+CheckMemberSize(struct _GdkEventSelection,window,4,6,43811);
+CheckOffset(struct _GdkEventSelection,window,4,6,43811);
+CheckMemberSize(struct _GdkEventSelection,send_event,1,6,43812);
+CheckOffset(struct _GdkEventSelection,send_event,8,6,43812);
+CheckMemberSize(struct _GdkEventSelection,selection,4,6,43813);
+CheckOffset(struct _GdkEventSelection,selection,12,6,43813);
+CheckMemberSize(struct _GdkEventSelection,target,4,6,43814);
+CheckOffset(struct _GdkEventSelection,target,16,6,43814);
+CheckMemberSize(struct _GdkEventSelection,property,4,6,43815);
+CheckOffset(struct _GdkEventSelection,property,20,6,43815);
+CheckMemberSize(struct _GdkEventSelection,time,4,6,43816);
+CheckOffset(struct _GdkEventSelection,time,24,6,43816);
+CheckMemberSize(struct _GdkEventSelection,requestor,4,6,43817);
+CheckOffset(struct _GdkEventSelection,requestor,28,6,43817);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkEventSelection,56, 12787, 9)
-CheckMemberSize(struct _GdkEventSelection,window,8,9,43811)
-CheckOffset(struct _GdkEventSelection,window,8,9,43811)
-CheckMemberSize(struct _GdkEventSelection,send_event,1,9,43812)
-CheckOffset(struct _GdkEventSelection,send_event,16,9,43812)
-CheckMemberSize(struct _GdkEventSelection,selection,8,9,43813)
-CheckOffset(struct _GdkEventSelection,selection,24,9,43813)
-CheckMemberSize(struct _GdkEventSelection,target,8,9,43814)
-CheckOffset(struct _GdkEventSelection,target,32,9,43814)
-CheckMemberSize(struct _GdkEventSelection,property,8,9,43815)
-CheckOffset(struct _GdkEventSelection,property,40,9,43815)
-CheckMemberSize(struct _GdkEventSelection,time,4,9,43816)
-CheckOffset(struct _GdkEventSelection,time,48,9,43816)
-CheckMemberSize(struct _GdkEventSelection,requestor,4,9,43817)
-CheckOffset(struct _GdkEventSelection,requestor,52,9,43817)
+CheckTypeSize(struct _GdkEventSelection,56, 12787, 9);
+CheckMemberSize(struct _GdkEventSelection,window,8,9,43811);
+CheckOffset(struct _GdkEventSelection,window,8,9,43811);
+CheckMemberSize(struct _GdkEventSelection,send_event,1,9,43812);
+CheckOffset(struct _GdkEventSelection,send_event,16,9,43812);
+CheckMemberSize(struct _GdkEventSelection,selection,8,9,43813);
+CheckOffset(struct _GdkEventSelection,selection,24,9,43813);
+CheckMemberSize(struct _GdkEventSelection,target,8,9,43814);
+CheckOffset(struct _GdkEventSelection,target,32,9,43814);
+CheckMemberSize(struct _GdkEventSelection,property,8,9,43815);
+CheckOffset(struct _GdkEventSelection,property,40,9,43815);
+CheckMemberSize(struct _GdkEventSelection,time,4,9,43816);
+CheckOffset(struct _GdkEventSelection,time,48,9,43816);
+CheckMemberSize(struct _GdkEventSelection,requestor,4,9,43817);
+CheckOffset(struct _GdkEventSelection,requestor,52,9,43817);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkEventSelection,32, 12787, 10)
-CheckMemberSize(struct _GdkEventSelection,window,4,10,43811)
-CheckOffset(struct _GdkEventSelection,window,4,10,43811)
-CheckMemberSize(struct _GdkEventSelection,send_event,1,10,43812)
-CheckOffset(struct _GdkEventSelection,send_event,8,10,43812)
-CheckMemberSize(struct _GdkEventSelection,selection,4,10,43813)
-CheckOffset(struct _GdkEventSelection,selection,12,10,43813)
-CheckMemberSize(struct _GdkEventSelection,target,4,10,43814)
-CheckOffset(struct _GdkEventSelection,target,16,10,43814)
-CheckMemberSize(struct _GdkEventSelection,property,4,10,43815)
-CheckOffset(struct _GdkEventSelection,property,20,10,43815)
-CheckMemberSize(struct _GdkEventSelection,time,4,10,43816)
-CheckOffset(struct _GdkEventSelection,time,24,10,43816)
-CheckMemberSize(struct _GdkEventSelection,requestor,4,10,43817)
-CheckOffset(struct _GdkEventSelection,requestor,28,10,43817)
+CheckTypeSize(struct _GdkEventSelection,32, 12787, 10);
+CheckMemberSize(struct _GdkEventSelection,window,4,10,43811);
+CheckOffset(struct _GdkEventSelection,window,4,10,43811);
+CheckMemberSize(struct _GdkEventSelection,send_event,1,10,43812);
+CheckOffset(struct _GdkEventSelection,send_event,8,10,43812);
+CheckMemberSize(struct _GdkEventSelection,selection,4,10,43813);
+CheckOffset(struct _GdkEventSelection,selection,12,10,43813);
+CheckMemberSize(struct _GdkEventSelection,target,4,10,43814);
+CheckOffset(struct _GdkEventSelection,target,16,10,43814);
+CheckMemberSize(struct _GdkEventSelection,property,4,10,43815);
+CheckOffset(struct _GdkEventSelection,property,20,10,43815);
+CheckMemberSize(struct _GdkEventSelection,time,4,10,43816);
+CheckOffset(struct _GdkEventSelection,time,24,10,43816);
+CheckMemberSize(struct _GdkEventSelection,requestor,4,10,43817);
+CheckOffset(struct _GdkEventSelection,requestor,28,10,43817);
 #elif __s390x__
-CheckTypeSize(struct _GdkEventSelection,56, 12787, 12)
-CheckMemberSize(struct _GdkEventSelection,window,8,12,43811)
-CheckOffset(struct _GdkEventSelection,window,8,12,43811)
-CheckMemberSize(struct _GdkEventSelection,send_event,1,12,43812)
-CheckOffset(struct _GdkEventSelection,send_event,16,12,43812)
-CheckMemberSize(struct _GdkEventSelection,selection,8,12,43813)
-CheckOffset(struct _GdkEventSelection,selection,24,12,43813)
-CheckMemberSize(struct _GdkEventSelection,target,8,12,43814)
-CheckOffset(struct _GdkEventSelection,target,32,12,43814)
-CheckMemberSize(struct _GdkEventSelection,property,8,12,43815)
-CheckOffset(struct _GdkEventSelection,property,40,12,43815)
-CheckMemberSize(struct _GdkEventSelection,time,4,12,43816)
-CheckOffset(struct _GdkEventSelection,time,48,12,43816)
-CheckMemberSize(struct _GdkEventSelection,requestor,4,12,43817)
-CheckOffset(struct _GdkEventSelection,requestor,52,12,43817)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12787,0);
-Msg("Find size of _GdkEventSelection (12787)\n");
+CheckTypeSize(struct _GdkEventSelection,56, 12787, 12);
+CheckMemberSize(struct _GdkEventSelection,window,8,12,43811);
+CheckOffset(struct _GdkEventSelection,window,8,12,43811);
+CheckMemberSize(struct _GdkEventSelection,send_event,1,12,43812);
+CheckOffset(struct _GdkEventSelection,send_event,16,12,43812);
+CheckMemberSize(struct _GdkEventSelection,selection,8,12,43813);
+CheckOffset(struct _GdkEventSelection,selection,24,12,43813);
+CheckMemberSize(struct _GdkEventSelection,target,8,12,43814);
+CheckOffset(struct _GdkEventSelection,target,32,12,43814);
+CheckMemberSize(struct _GdkEventSelection,property,8,12,43815);
+CheckOffset(struct _GdkEventSelection,property,40,12,43815);
+CheckMemberSize(struct _GdkEventSelection,time,4,12,43816);
+CheckOffset(struct _GdkEventSelection,time,48,12,43816);
+CheckMemberSize(struct _GdkEventSelection,requestor,4,12,43817);
+CheckOffset(struct _GdkEventSelection,requestor,52,12,43817);
+#elif 1
+CheckTypeSize(struct _GdkEventSelection,0, 12787, 1);
+Msg("Missing member data for _GdkEventSelection on All\n");
+CheckOffset(struct _GdkEventSelection,type,0,1,43810);
+CheckOffset(struct _GdkEventSelection,window,0,1,43811);
+CheckOffset(struct _GdkEventSelection,send_event,0,1,43812);
+CheckOffset(struct _GdkEventSelection,selection,0,1,43813);
+CheckOffset(struct _GdkEventSelection,target,0,1,43814);
+CheckOffset(struct _GdkEventSelection,property,0,1,43815);
+CheckOffset(struct _GdkEventSelection,time,0,1,43816);
+CheckOffset(struct _GdkEventSelection,requestor,0,1,43817);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkNativeWindow,4, 12788, 2)
+CheckTypeSize(GdkNativeWindow,4, 12788, 2);
 #elif __x86_64__
-CheckTypeSize(GdkNativeWindow,4, 12788, 11)
+CheckTypeSize(GdkNativeWindow,4, 12788, 11);
 #elif __ia64__
-CheckTypeSize(GdkNativeWindow,4, 12788, 3)
+CheckTypeSize(GdkNativeWindow,4, 12788, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkNativeWindow,4, 12788, 6)
+CheckTypeSize(GdkNativeWindow,4, 12788, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkNativeWindow,4, 12788, 9)
+CheckTypeSize(GdkNativeWindow,4, 12788, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkNativeWindow,4, 12788, 10)
+CheckTypeSize(GdkNativeWindow,4, 12788, 10);
 #elif __s390x__
-CheckTypeSize(GdkNativeWindow,4, 12788, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12788,0);
-Msg("Find size of GdkNativeWindow (12788)\n");
+CheckTypeSize(GdkNativeWindow,4, 12788, 12);
+#elif 1
+CheckTypeSize(GdkNativeWindow,0, 12788, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkEventSelection,32, 12789, 2)
+CheckTypeSize(GdkEventSelection,32, 12789, 2);
 #elif __x86_64__
-CheckTypeSize(GdkEventSelection,56, 12789, 11)
+CheckTypeSize(GdkEventSelection,56, 12789, 11);
 #elif __ia64__
-CheckTypeSize(GdkEventSelection,56, 12789, 3)
+CheckTypeSize(GdkEventSelection,56, 12789, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkEventSelection,32, 12789, 6)
+CheckTypeSize(GdkEventSelection,32, 12789, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkEventSelection,56, 12789, 9)
+CheckTypeSize(GdkEventSelection,56, 12789, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkEventSelection,32, 12789, 10)
+CheckTypeSize(GdkEventSelection,32, 12789, 10);
 #elif __s390x__
-CheckTypeSize(GdkEventSelection,56, 12789, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12789,0);
-Msg("Find size of GdkEventSelection (12789)\n");
+CheckTypeSize(GdkEventSelection,56, 12789, 12);
+#elif 1
+CheckTypeSize(GdkEventSelection,0, 12789, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkEventOwnerChange,32, 12790, 2)
-CheckMemberSize(struct _GdkEventOwnerChange,window,4,2,43820)
-CheckOffset(struct _GdkEventOwnerChange,window,4,2,43820)
-CheckMemberSize(struct _GdkEventOwnerChange,send_event,1,2,43821)
-CheckOffset(struct _GdkEventOwnerChange,send_event,8,2,43821)
-CheckMemberSize(struct _GdkEventOwnerChange,owner,4,2,43822)
-CheckOffset(struct _GdkEventOwnerChange,owner,12,2,43822)
-CheckMemberSize(struct _GdkEventOwnerChange,reason,4,2,43826)
-CheckOffset(struct _GdkEventOwnerChange,reason,16,2,43826)
-CheckMemberSize(struct _GdkEventOwnerChange,selection,4,2,43827)
-CheckOffset(struct _GdkEventOwnerChange,selection,20,2,43827)
-CheckMemberSize(struct _GdkEventOwnerChange,time,4,2,43828)
-CheckOffset(struct _GdkEventOwnerChange,time,24,2,43828)
-CheckMemberSize(struct _GdkEventOwnerChange,selection_time,4,2,43829)
-CheckOffset(struct _GdkEventOwnerChange,selection_time,28,2,43829)
+CheckTypeSize(struct _GdkEventOwnerChange,32, 12790, 2);
+CheckMemberSize(struct _GdkEventOwnerChange,window,4,2,43820);
+CheckOffset(struct _GdkEventOwnerChange,window,4,2,43820);
+CheckMemberSize(struct _GdkEventOwnerChange,send_event,1,2,43821);
+CheckOffset(struct _GdkEventOwnerChange,send_event,8,2,43821);
+CheckMemberSize(struct _GdkEventOwnerChange,owner,4,2,43822);
+CheckOffset(struct _GdkEventOwnerChange,owner,12,2,43822);
+CheckMemberSize(struct _GdkEventOwnerChange,reason,4,2,43826);
+CheckOffset(struct _GdkEventOwnerChange,reason,16,2,43826);
+CheckMemberSize(struct _GdkEventOwnerChange,selection,4,2,43827);
+CheckOffset(struct _GdkEventOwnerChange,selection,20,2,43827);
+CheckMemberSize(struct _GdkEventOwnerChange,time,4,2,43828);
+CheckOffset(struct _GdkEventOwnerChange,time,24,2,43828);
+CheckMemberSize(struct _GdkEventOwnerChange,selection_time,4,2,43829);
+CheckOffset(struct _GdkEventOwnerChange,selection_time,28,2,43829);
 #elif __x86_64__
-CheckTypeSize(struct _GdkEventOwnerChange,48, 12790, 11)
-CheckMemberSize(struct _GdkEventOwnerChange,window,8,11,43820)
-CheckOffset(struct _GdkEventOwnerChange,window,8,11,43820)
-CheckMemberSize(struct _GdkEventOwnerChange,send_event,1,11,43821)
-CheckOffset(struct _GdkEventOwnerChange,send_event,16,11,43821)
-CheckMemberSize(struct _GdkEventOwnerChange,owner,4,11,43822)
-CheckOffset(struct _GdkEventOwnerChange,owner,20,11,43822)
-CheckMemberSize(struct _GdkEventOwnerChange,reason,4,11,43826)
-CheckOffset(struct _GdkEventOwnerChange,reason,24,11,43826)
-CheckMemberSize(struct _GdkEventOwnerChange,selection,8,11,43827)
-CheckOffset(struct _GdkEventOwnerChange,selection,32,11,43827)
-CheckMemberSize(struct _GdkEventOwnerChange,time,4,11,43828)
-CheckOffset(struct _GdkEventOwnerChange,time,40,11,43828)
-CheckMemberSize(struct _GdkEventOwnerChange,selection_time,4,11,43829)
-CheckOffset(struct _GdkEventOwnerChange,selection_time,44,11,43829)
+CheckTypeSize(struct _GdkEventOwnerChange,48, 12790, 11);
+CheckMemberSize(struct _GdkEventOwnerChange,window,8,11,43820);
+CheckOffset(struct _GdkEventOwnerChange,window,8,11,43820);
+CheckMemberSize(struct _GdkEventOwnerChange,send_event,1,11,43821);
+CheckOffset(struct _GdkEventOwnerChange,send_event,16,11,43821);
+CheckMemberSize(struct _GdkEventOwnerChange,owner,4,11,43822);
+CheckOffset(struct _GdkEventOwnerChange,owner,20,11,43822);
+CheckMemberSize(struct _GdkEventOwnerChange,reason,4,11,43826);
+CheckOffset(struct _GdkEventOwnerChange,reason,24,11,43826);
+CheckMemberSize(struct _GdkEventOwnerChange,selection,8,11,43827);
+CheckOffset(struct _GdkEventOwnerChange,selection,32,11,43827);
+CheckMemberSize(struct _GdkEventOwnerChange,time,4,11,43828);
+CheckOffset(struct _GdkEventOwnerChange,time,40,11,43828);
+CheckMemberSize(struct _GdkEventOwnerChange,selection_time,4,11,43829);
+CheckOffset(struct _GdkEventOwnerChange,selection_time,44,11,43829);
 #elif __ia64__
-CheckTypeSize(struct _GdkEventOwnerChange,48, 12790, 3)
-CheckMemberSize(struct _GdkEventOwnerChange,window,8,3,43820)
-CheckOffset(struct _GdkEventOwnerChange,window,8,3,43820)
-CheckMemberSize(struct _GdkEventOwnerChange,send_event,1,3,43821)
-CheckOffset(struct _GdkEventOwnerChange,send_event,16,3,43821)
-CheckMemberSize(struct _GdkEventOwnerChange,owner,4,3,43822)
-CheckOffset(struct _GdkEventOwnerChange,owner,20,3,43822)
-CheckMemberSize(struct _GdkEventOwnerChange,reason,4,3,43826)
-CheckOffset(struct _GdkEventOwnerChange,reason,24,3,43826)
-CheckMemberSize(struct _GdkEventOwnerChange,selection,8,3,43827)
-CheckOffset(struct _GdkEventOwnerChange,selection,32,3,43827)
-CheckMemberSize(struct _GdkEventOwnerChange,time,4,3,43828)
-CheckOffset(struct _GdkEventOwnerChange,time,40,3,43828)
-CheckMemberSize(struct _GdkEventOwnerChange,selection_time,4,3,43829)
-CheckOffset(struct _GdkEventOwnerChange,selection_time,44,3,43829)
+CheckTypeSize(struct _GdkEventOwnerChange,48, 12790, 3);
+CheckMemberSize(struct _GdkEventOwnerChange,window,8,3,43820);
+CheckOffset(struct _GdkEventOwnerChange,window,8,3,43820);
+CheckMemberSize(struct _GdkEventOwnerChange,send_event,1,3,43821);
+CheckOffset(struct _GdkEventOwnerChange,send_event,16,3,43821);
+CheckMemberSize(struct _GdkEventOwnerChange,owner,4,3,43822);
+CheckOffset(struct _GdkEventOwnerChange,owner,20,3,43822);
+CheckMemberSize(struct _GdkEventOwnerChange,reason,4,3,43826);
+CheckOffset(struct _GdkEventOwnerChange,reason,24,3,43826);
+CheckMemberSize(struct _GdkEventOwnerChange,selection,8,3,43827);
+CheckOffset(struct _GdkEventOwnerChange,selection,32,3,43827);
+CheckMemberSize(struct _GdkEventOwnerChange,time,4,3,43828);
+CheckOffset(struct _GdkEventOwnerChange,time,40,3,43828);
+CheckMemberSize(struct _GdkEventOwnerChange,selection_time,4,3,43829);
+CheckOffset(struct _GdkEventOwnerChange,selection_time,44,3,43829);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkEventOwnerChange,32, 12790, 6)
-CheckMemberSize(struct _GdkEventOwnerChange,window,4,6,43820)
-CheckOffset(struct _GdkEventOwnerChange,window,4,6,43820)
-CheckMemberSize(struct _GdkEventOwnerChange,send_event,1,6,43821)
-CheckOffset(struct _GdkEventOwnerChange,send_event,8,6,43821)
-CheckMemberSize(struct _GdkEventOwnerChange,owner,4,6,43822)
-CheckOffset(struct _GdkEventOwnerChange,owner,12,6,43822)
-CheckMemberSize(struct _GdkEventOwnerChange,reason,4,6,43826)
-CheckOffset(struct _GdkEventOwnerChange,reason,16,6,43826)
-CheckMemberSize(struct _GdkEventOwnerChange,selection,4,6,43827)
-CheckOffset(struct _GdkEventOwnerChange,selection,20,6,43827)
-CheckMemberSize(struct _GdkEventOwnerChange,time,4,6,43828)
-CheckOffset(struct _GdkEventOwnerChange,time,24,6,43828)
-CheckMemberSize(struct _GdkEventOwnerChange,selection_time,4,6,43829)
-CheckOffset(struct _GdkEventOwnerChange,selection_time,28,6,43829)
+CheckTypeSize(struct _GdkEventOwnerChange,32, 12790, 6);
+CheckMemberSize(struct _GdkEventOwnerChange,window,4,6,43820);
+CheckOffset(struct _GdkEventOwnerChange,window,4,6,43820);
+CheckMemberSize(struct _GdkEventOwnerChange,send_event,1,6,43821);
+CheckOffset(struct _GdkEventOwnerChange,send_event,8,6,43821);
+CheckMemberSize(struct _GdkEventOwnerChange,owner,4,6,43822);
+CheckOffset(struct _GdkEventOwnerChange,owner,12,6,43822);
+CheckMemberSize(struct _GdkEventOwnerChange,reason,4,6,43826);
+CheckOffset(struct _GdkEventOwnerChange,reason,16,6,43826);
+CheckMemberSize(struct _GdkEventOwnerChange,selection,4,6,43827);
+CheckOffset(struct _GdkEventOwnerChange,selection,20,6,43827);
+CheckMemberSize(struct _GdkEventOwnerChange,time,4,6,43828);
+CheckOffset(struct _GdkEventOwnerChange,time,24,6,43828);
+CheckMemberSize(struct _GdkEventOwnerChange,selection_time,4,6,43829);
+CheckOffset(struct _GdkEventOwnerChange,selection_time,28,6,43829);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkEventOwnerChange,48, 12790, 9)
-CheckMemberSize(struct _GdkEventOwnerChange,window,8,9,43820)
-CheckOffset(struct _GdkEventOwnerChange,window,8,9,43820)
-CheckMemberSize(struct _GdkEventOwnerChange,send_event,1,9,43821)
-CheckOffset(struct _GdkEventOwnerChange,send_event,16,9,43821)
-CheckMemberSize(struct _GdkEventOwnerChange,owner,4,9,43822)
-CheckOffset(struct _GdkEventOwnerChange,owner,20,9,43822)
-CheckMemberSize(struct _GdkEventOwnerChange,reason,4,9,43826)
-CheckOffset(struct _GdkEventOwnerChange,reason,24,9,43826)
-CheckMemberSize(struct _GdkEventOwnerChange,selection,8,9,43827)
-CheckOffset(struct _GdkEventOwnerChange,selection,32,9,43827)
-CheckMemberSize(struct _GdkEventOwnerChange,time,4,9,43828)
-CheckOffset(struct _GdkEventOwnerChange,time,40,9,43828)
-CheckMemberSize(struct _GdkEventOwnerChange,selection_time,4,9,43829)
-CheckOffset(struct _GdkEventOwnerChange,selection_time,44,9,43829)
+CheckTypeSize(struct _GdkEventOwnerChange,48, 12790, 9);
+CheckMemberSize(struct _GdkEventOwnerChange,window,8,9,43820);
+CheckOffset(struct _GdkEventOwnerChange,window,8,9,43820);
+CheckMemberSize(struct _GdkEventOwnerChange,send_event,1,9,43821);
+CheckOffset(struct _GdkEventOwnerChange,send_event,16,9,43821);
+CheckMemberSize(struct _GdkEventOwnerChange,owner,4,9,43822);
+CheckOffset(struct _GdkEventOwnerChange,owner,20,9,43822);
+CheckMemberSize(struct _GdkEventOwnerChange,reason,4,9,43826);
+CheckOffset(struct _GdkEventOwnerChange,reason,24,9,43826);
+CheckMemberSize(struct _GdkEventOwnerChange,selection,8,9,43827);
+CheckOffset(struct _GdkEventOwnerChange,selection,32,9,43827);
+CheckMemberSize(struct _GdkEventOwnerChange,time,4,9,43828);
+CheckOffset(struct _GdkEventOwnerChange,time,40,9,43828);
+CheckMemberSize(struct _GdkEventOwnerChange,selection_time,4,9,43829);
+CheckOffset(struct _GdkEventOwnerChange,selection_time,44,9,43829);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkEventOwnerChange,32, 12790, 10)
-CheckMemberSize(struct _GdkEventOwnerChange,window,4,10,43820)
-CheckOffset(struct _GdkEventOwnerChange,window,4,10,43820)
-CheckMemberSize(struct _GdkEventOwnerChange,send_event,1,10,43821)
-CheckOffset(struct _GdkEventOwnerChange,send_event,8,10,43821)
-CheckMemberSize(struct _GdkEventOwnerChange,owner,4,10,43822)
-CheckOffset(struct _GdkEventOwnerChange,owner,12,10,43822)
-CheckMemberSize(struct _GdkEventOwnerChange,reason,4,10,43826)
-CheckOffset(struct _GdkEventOwnerChange,reason,16,10,43826)
-CheckMemberSize(struct _GdkEventOwnerChange,selection,4,10,43827)
-CheckOffset(struct _GdkEventOwnerChange,selection,20,10,43827)
-CheckMemberSize(struct _GdkEventOwnerChange,time,4,10,43828)
-CheckOffset(struct _GdkEventOwnerChange,time,24,10,43828)
-CheckMemberSize(struct _GdkEventOwnerChange,selection_time,4,10,43829)
-CheckOffset(struct _GdkEventOwnerChange,selection_time,28,10,43829)
+CheckTypeSize(struct _GdkEventOwnerChange,32, 12790, 10);
+CheckMemberSize(struct _GdkEventOwnerChange,window,4,10,43820);
+CheckOffset(struct _GdkEventOwnerChange,window,4,10,43820);
+CheckMemberSize(struct _GdkEventOwnerChange,send_event,1,10,43821);
+CheckOffset(struct _GdkEventOwnerChange,send_event,8,10,43821);
+CheckMemberSize(struct _GdkEventOwnerChange,owner,4,10,43822);
+CheckOffset(struct _GdkEventOwnerChange,owner,12,10,43822);
+CheckMemberSize(struct _GdkEventOwnerChange,reason,4,10,43826);
+CheckOffset(struct _GdkEventOwnerChange,reason,16,10,43826);
+CheckMemberSize(struct _GdkEventOwnerChange,selection,4,10,43827);
+CheckOffset(struct _GdkEventOwnerChange,selection,20,10,43827);
+CheckMemberSize(struct _GdkEventOwnerChange,time,4,10,43828);
+CheckOffset(struct _GdkEventOwnerChange,time,24,10,43828);
+CheckMemberSize(struct _GdkEventOwnerChange,selection_time,4,10,43829);
+CheckOffset(struct _GdkEventOwnerChange,selection_time,28,10,43829);
 #elif __s390x__
-CheckTypeSize(struct _GdkEventOwnerChange,48, 12790, 12)
-CheckMemberSize(struct _GdkEventOwnerChange,window,8,12,43820)
-CheckOffset(struct _GdkEventOwnerChange,window,8,12,43820)
-CheckMemberSize(struct _GdkEventOwnerChange,send_event,1,12,43821)
-CheckOffset(struct _GdkEventOwnerChange,send_event,16,12,43821)
-CheckMemberSize(struct _GdkEventOwnerChange,owner,4,12,43822)
-CheckOffset(struct _GdkEventOwnerChange,owner,20,12,43822)
-CheckMemberSize(struct _GdkEventOwnerChange,reason,4,12,43826)
-CheckOffset(struct _GdkEventOwnerChange,reason,24,12,43826)
-CheckMemberSize(struct _GdkEventOwnerChange,selection,8,12,43827)
-CheckOffset(struct _GdkEventOwnerChange,selection,32,12,43827)
-CheckMemberSize(struct _GdkEventOwnerChange,time,4,12,43828)
-CheckOffset(struct _GdkEventOwnerChange,time,40,12,43828)
-CheckMemberSize(struct _GdkEventOwnerChange,selection_time,4,12,43829)
-CheckOffset(struct _GdkEventOwnerChange,selection_time,44,12,43829)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12790,0);
-Msg("Find size of _GdkEventOwnerChange (12790)\n");
+CheckTypeSize(struct _GdkEventOwnerChange,48, 12790, 12);
+CheckMemberSize(struct _GdkEventOwnerChange,window,8,12,43820);
+CheckOffset(struct _GdkEventOwnerChange,window,8,12,43820);
+CheckMemberSize(struct _GdkEventOwnerChange,send_event,1,12,43821);
+CheckOffset(struct _GdkEventOwnerChange,send_event,16,12,43821);
+CheckMemberSize(struct _GdkEventOwnerChange,owner,4,12,43822);
+CheckOffset(struct _GdkEventOwnerChange,owner,20,12,43822);
+CheckMemberSize(struct _GdkEventOwnerChange,reason,4,12,43826);
+CheckOffset(struct _GdkEventOwnerChange,reason,24,12,43826);
+CheckMemberSize(struct _GdkEventOwnerChange,selection,8,12,43827);
+CheckOffset(struct _GdkEventOwnerChange,selection,32,12,43827);
+CheckMemberSize(struct _GdkEventOwnerChange,time,4,12,43828);
+CheckOffset(struct _GdkEventOwnerChange,time,40,12,43828);
+CheckMemberSize(struct _GdkEventOwnerChange,selection_time,4,12,43829);
+CheckOffset(struct _GdkEventOwnerChange,selection_time,44,12,43829);
+#elif 1
+CheckTypeSize(struct _GdkEventOwnerChange,0, 12790, 1);
+Msg("Missing member data for _GdkEventOwnerChange on All\n");
+CheckOffset(struct _GdkEventOwnerChange,type,0,1,43819);
+CheckOffset(struct _GdkEventOwnerChange,window,0,1,43820);
+CheckOffset(struct _GdkEventOwnerChange,send_event,0,1,43821);
+CheckOffset(struct _GdkEventOwnerChange,owner,0,1,43822);
+CheckOffset(struct _GdkEventOwnerChange,reason,0,1,43826);
+CheckOffset(struct _GdkEventOwnerChange,selection,0,1,43827);
+CheckOffset(struct _GdkEventOwnerChange,time,0,1,43828);
+CheckOffset(struct _GdkEventOwnerChange,selection_time,0,1,43829);
 #endif
 
 #if __i386__
@@ -6411,230 +6685,239 @@ CheckEnum("GDK_OWNER_CHANGE_CLOSE",GDK_OWNER_CHANGE_CLOSE,2,43825);
 CheckEnum("GDK_OWNER_CHANGE_NEW_OWNER",GDK_OWNER_CHANGE_NEW_OWNER,0,43823);
 CheckEnum("GDK_OWNER_CHANGE_DESTROY",GDK_OWNER_CHANGE_DESTROY,1,43824);
 CheckEnum("GDK_OWNER_CHANGE_CLOSE",GDK_OWNER_CHANGE_CLOSE,2,43825);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12791,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-509 (12791)\n");
+#elif 1
+CheckEnum("GDK_OWNER_CHANGE_NEW_OWNER",GDK_OWNER_CHANGE_NEW_OWNER,0,43823);
+CheckEnum("GDK_OWNER_CHANGE_DESTROY",GDK_OWNER_CHANGE_DESTROY,1,43824);
+CheckEnum("GDK_OWNER_CHANGE_CLOSE",GDK_OWNER_CHANGE_CLOSE,2,43825);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkOwnerChange,4, 12792, 2)
+CheckTypeSize(GdkOwnerChange,4, 12792, 2);
 #elif __x86_64__
-CheckTypeSize(GdkOwnerChange,4, 12792, 11)
+CheckTypeSize(GdkOwnerChange,4, 12792, 11);
 #elif __ia64__
-CheckTypeSize(GdkOwnerChange,4, 12792, 3)
+CheckTypeSize(GdkOwnerChange,4, 12792, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkOwnerChange,4, 12792, 6)
+CheckTypeSize(GdkOwnerChange,4, 12792, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkOwnerChange,4, 12792, 9)
+CheckTypeSize(GdkOwnerChange,4, 12792, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkOwnerChange,4, 12792, 10)
+CheckTypeSize(GdkOwnerChange,4, 12792, 10);
 #elif __s390x__
-CheckTypeSize(GdkOwnerChange,4, 12792, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12792,0);
-Msg("Find size of GdkOwnerChange (12792)\n");
+CheckTypeSize(GdkOwnerChange,4, 12792, 12);
+#elif 1
+CheckTypeSize(GdkOwnerChange,0, 12792, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkEventOwnerChange,32, 12793, 2)
+CheckTypeSize(GdkEventOwnerChange,32, 12793, 2);
 #elif __x86_64__
-CheckTypeSize(GdkEventOwnerChange,48, 12793, 11)
+CheckTypeSize(GdkEventOwnerChange,48, 12793, 11);
 #elif __ia64__
-CheckTypeSize(GdkEventOwnerChange,48, 12793, 3)
+CheckTypeSize(GdkEventOwnerChange,48, 12793, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkEventOwnerChange,32, 12793, 6)
+CheckTypeSize(GdkEventOwnerChange,32, 12793, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkEventOwnerChange,48, 12793, 9)
+CheckTypeSize(GdkEventOwnerChange,48, 12793, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkEventOwnerChange,32, 12793, 10)
+CheckTypeSize(GdkEventOwnerChange,32, 12793, 10);
 #elif __s390x__
-CheckTypeSize(GdkEventOwnerChange,48, 12793, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12793,0);
-Msg("Find size of GdkEventOwnerChange (12793)\n");
+CheckTypeSize(GdkEventOwnerChange,48, 12793, 12);
+#elif 1
+CheckTypeSize(GdkEventOwnerChange,0, 12793, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkEventProximity,20, 12794, 2)
-CheckMemberSize(struct _GdkEventProximity,window,4,2,43832)
-CheckOffset(struct _GdkEventProximity,window,4,2,43832)
-CheckMemberSize(struct _GdkEventProximity,send_event,1,2,43833)
-CheckOffset(struct _GdkEventProximity,send_event,8,2,43833)
-CheckMemberSize(struct _GdkEventProximity,time,4,2,43834)
-CheckOffset(struct _GdkEventProximity,time,12,2,43834)
-CheckMemberSize(struct _GdkEventProximity,device,4,2,43835)
-CheckOffset(struct _GdkEventProximity,device,16,2,43835)
+CheckTypeSize(struct _GdkEventProximity,20, 12794, 2);
+CheckMemberSize(struct _GdkEventProximity,window,4,2,43832);
+CheckOffset(struct _GdkEventProximity,window,4,2,43832);
+CheckMemberSize(struct _GdkEventProximity,send_event,1,2,43833);
+CheckOffset(struct _GdkEventProximity,send_event,8,2,43833);
+CheckMemberSize(struct _GdkEventProximity,time,4,2,43834);
+CheckOffset(struct _GdkEventProximity,time,12,2,43834);
+CheckMemberSize(struct _GdkEventProximity,device,4,2,43835);
+CheckOffset(struct _GdkEventProximity,device,16,2,43835);
 #elif __x86_64__
-CheckTypeSize(struct _GdkEventProximity,32, 12794, 11)
-CheckMemberSize(struct _GdkEventProximity,window,8,11,43832)
-CheckOffset(struct _GdkEventProximity,window,8,11,43832)
-CheckMemberSize(struct _GdkEventProximity,send_event,1,11,43833)
-CheckOffset(struct _GdkEventProximity,send_event,16,11,43833)
-CheckMemberSize(struct _GdkEventProximity,time,4,11,43834)
-CheckOffset(struct _GdkEventProximity,time,20,11,43834)
-CheckMemberSize(struct _GdkEventProximity,device,8,11,43835)
-CheckOffset(struct _GdkEventProximity,device,24,11,43835)
+CheckTypeSize(struct _GdkEventProximity,32, 12794, 11);
+CheckMemberSize(struct _GdkEventProximity,window,8,11,43832);
+CheckOffset(struct _GdkEventProximity,window,8,11,43832);
+CheckMemberSize(struct _GdkEventProximity,send_event,1,11,43833);
+CheckOffset(struct _GdkEventProximity,send_event,16,11,43833);
+CheckMemberSize(struct _GdkEventProximity,time,4,11,43834);
+CheckOffset(struct _GdkEventProximity,time,20,11,43834);
+CheckMemberSize(struct _GdkEventProximity,device,8,11,43835);
+CheckOffset(struct _GdkEventProximity,device,24,11,43835);
 #elif __ia64__
-CheckTypeSize(struct _GdkEventProximity,32, 12794, 3)
-CheckMemberSize(struct _GdkEventProximity,window,8,3,43832)
-CheckOffset(struct _GdkEventProximity,window,8,3,43832)
-CheckMemberSize(struct _GdkEventProximity,send_event,1,3,43833)
-CheckOffset(struct _GdkEventProximity,send_event,16,3,43833)
-CheckMemberSize(struct _GdkEventProximity,time,4,3,43834)
-CheckOffset(struct _GdkEventProximity,time,20,3,43834)
-CheckMemberSize(struct _GdkEventProximity,device,8,3,43835)
-CheckOffset(struct _GdkEventProximity,device,24,3,43835)
+CheckTypeSize(struct _GdkEventProximity,32, 12794, 3);
+CheckMemberSize(struct _GdkEventProximity,window,8,3,43832);
+CheckOffset(struct _GdkEventProximity,window,8,3,43832);
+CheckMemberSize(struct _GdkEventProximity,send_event,1,3,43833);
+CheckOffset(struct _GdkEventProximity,send_event,16,3,43833);
+CheckMemberSize(struct _GdkEventProximity,time,4,3,43834);
+CheckOffset(struct _GdkEventProximity,time,20,3,43834);
+CheckMemberSize(struct _GdkEventProximity,device,8,3,43835);
+CheckOffset(struct _GdkEventProximity,device,24,3,43835);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkEventProximity,20, 12794, 6)
-CheckMemberSize(struct _GdkEventProximity,window,4,6,43832)
-CheckOffset(struct _GdkEventProximity,window,4,6,43832)
-CheckMemberSize(struct _GdkEventProximity,send_event,1,6,43833)
-CheckOffset(struct _GdkEventProximity,send_event,8,6,43833)
-CheckMemberSize(struct _GdkEventProximity,time,4,6,43834)
-CheckOffset(struct _GdkEventProximity,time,12,6,43834)
-CheckMemberSize(struct _GdkEventProximity,device,4,6,43835)
-CheckOffset(struct _GdkEventProximity,device,16,6,43835)
+CheckTypeSize(struct _GdkEventProximity,20, 12794, 6);
+CheckMemberSize(struct _GdkEventProximity,window,4,6,43832);
+CheckOffset(struct _GdkEventProximity,window,4,6,43832);
+CheckMemberSize(struct _GdkEventProximity,send_event,1,6,43833);
+CheckOffset(struct _GdkEventProximity,send_event,8,6,43833);
+CheckMemberSize(struct _GdkEventProximity,time,4,6,43834);
+CheckOffset(struct _GdkEventProximity,time,12,6,43834);
+CheckMemberSize(struct _GdkEventProximity,device,4,6,43835);
+CheckOffset(struct _GdkEventProximity,device,16,6,43835);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkEventProximity,32, 12794, 9)
-CheckMemberSize(struct _GdkEventProximity,window,8,9,43832)
-CheckOffset(struct _GdkEventProximity,window,8,9,43832)
-CheckMemberSize(struct _GdkEventProximity,send_event,1,9,43833)
-CheckOffset(struct _GdkEventProximity,send_event,16,9,43833)
-CheckMemberSize(struct _GdkEventProximity,time,4,9,43834)
-CheckOffset(struct _GdkEventProximity,time,20,9,43834)
-CheckMemberSize(struct _GdkEventProximity,device,8,9,43835)
-CheckOffset(struct _GdkEventProximity,device,24,9,43835)
+CheckTypeSize(struct _GdkEventProximity,32, 12794, 9);
+CheckMemberSize(struct _GdkEventProximity,window,8,9,43832);
+CheckOffset(struct _GdkEventProximity,window,8,9,43832);
+CheckMemberSize(struct _GdkEventProximity,send_event,1,9,43833);
+CheckOffset(struct _GdkEventProximity,send_event,16,9,43833);
+CheckMemberSize(struct _GdkEventProximity,time,4,9,43834);
+CheckOffset(struct _GdkEventProximity,time,20,9,43834);
+CheckMemberSize(struct _GdkEventProximity,device,8,9,43835);
+CheckOffset(struct _GdkEventProximity,device,24,9,43835);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkEventProximity,20, 12794, 10)
-CheckMemberSize(struct _GdkEventProximity,window,4,10,43832)
-CheckOffset(struct _GdkEventProximity,window,4,10,43832)
-CheckMemberSize(struct _GdkEventProximity,send_event,1,10,43833)
-CheckOffset(struct _GdkEventProximity,send_event,8,10,43833)
-CheckMemberSize(struct _GdkEventProximity,time,4,10,43834)
-CheckOffset(struct _GdkEventProximity,time,12,10,43834)
-CheckMemberSize(struct _GdkEventProximity,device,4,10,43835)
-CheckOffset(struct _GdkEventProximity,device,16,10,43835)
+CheckTypeSize(struct _GdkEventProximity,20, 12794, 10);
+CheckMemberSize(struct _GdkEventProximity,window,4,10,43832);
+CheckOffset(struct _GdkEventProximity,window,4,10,43832);
+CheckMemberSize(struct _GdkEventProximity,send_event,1,10,43833);
+CheckOffset(struct _GdkEventProximity,send_event,8,10,43833);
+CheckMemberSize(struct _GdkEventProximity,time,4,10,43834);
+CheckOffset(struct _GdkEventProximity,time,12,10,43834);
+CheckMemberSize(struct _GdkEventProximity,device,4,10,43835);
+CheckOffset(struct _GdkEventProximity,device,16,10,43835);
 #elif __s390x__
-CheckTypeSize(struct _GdkEventProximity,32, 12794, 12)
-CheckMemberSize(struct _GdkEventProximity,window,8,12,43832)
-CheckOffset(struct _GdkEventProximity,window,8,12,43832)
-CheckMemberSize(struct _GdkEventProximity,send_event,1,12,43833)
-CheckOffset(struct _GdkEventProximity,send_event,16,12,43833)
-CheckMemberSize(struct _GdkEventProximity,time,4,12,43834)
-CheckOffset(struct _GdkEventProximity,time,20,12,43834)
-CheckMemberSize(struct _GdkEventProximity,device,8,12,43835)
-CheckOffset(struct _GdkEventProximity,device,24,12,43835)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12794,0);
-Msg("Find size of _GdkEventProximity (12794)\n");
+CheckTypeSize(struct _GdkEventProximity,32, 12794, 12);
+CheckMemberSize(struct _GdkEventProximity,window,8,12,43832);
+CheckOffset(struct _GdkEventProximity,window,8,12,43832);
+CheckMemberSize(struct _GdkEventProximity,send_event,1,12,43833);
+CheckOffset(struct _GdkEventProximity,send_event,16,12,43833);
+CheckMemberSize(struct _GdkEventProximity,time,4,12,43834);
+CheckOffset(struct _GdkEventProximity,time,20,12,43834);
+CheckMemberSize(struct _GdkEventProximity,device,8,12,43835);
+CheckOffset(struct _GdkEventProximity,device,24,12,43835);
+#elif 1
+CheckTypeSize(struct _GdkEventProximity,0, 12794, 1);
+Msg("Missing member data for _GdkEventProximity on All\n");
+CheckOffset(struct _GdkEventProximity,type,0,1,43831);
+CheckOffset(struct _GdkEventProximity,window,0,1,43832);
+CheckOffset(struct _GdkEventProximity,send_event,0,1,43833);
+CheckOffset(struct _GdkEventProximity,time,0,1,43834);
+CheckOffset(struct _GdkEventProximity,device,0,1,43835);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkEventProximity,20, 12795, 2)
+CheckTypeSize(GdkEventProximity,20, 12795, 2);
 #elif __x86_64__
-CheckTypeSize(GdkEventProximity,32, 12795, 11)
+CheckTypeSize(GdkEventProximity,32, 12795, 11);
 #elif __ia64__
-CheckTypeSize(GdkEventProximity,32, 12795, 3)
+CheckTypeSize(GdkEventProximity,32, 12795, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkEventProximity,20, 12795, 6)
+CheckTypeSize(GdkEventProximity,20, 12795, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkEventProximity,32, 12795, 9)
+CheckTypeSize(GdkEventProximity,32, 12795, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkEventProximity,20, 12795, 10)
+CheckTypeSize(GdkEventProximity,20, 12795, 10);
 #elif __s390x__
-CheckTypeSize(GdkEventProximity,32, 12795, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12795,0);
-Msg("Find size of GdkEventProximity (12795)\n");
+CheckTypeSize(GdkEventProximity,32, 12795, 12);
+#elif 1
+CheckTypeSize(GdkEventProximity,0, 12795, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkEventClient,40, 12796, 2)
-CheckMemberSize(struct _GdkEventClient,window,4,2,43838)
-CheckOffset(struct _GdkEventClient,window,4,2,43838)
-CheckMemberSize(struct _GdkEventClient,send_event,1,2,43839)
-CheckOffset(struct _GdkEventClient,send_event,8,2,43839)
-CheckMemberSize(struct _GdkEventClient,message_type,4,2,43840)
-CheckOffset(struct _GdkEventClient,message_type,12,2,43840)
-CheckMemberSize(struct _GdkEventClient,data_format,2,2,43841)
-CheckOffset(struct _GdkEventClient,data_format,16,2,43841)
-CheckMemberSize(struct _GdkEventClient,data,20,2,43845)
-CheckOffset(struct _GdkEventClient,data,20,2,43845)
+CheckTypeSize(struct _GdkEventClient,40, 12796, 2);
+CheckMemberSize(struct _GdkEventClient,window,4,2,43838);
+CheckOffset(struct _GdkEventClient,window,4,2,43838);
+CheckMemberSize(struct _GdkEventClient,send_event,1,2,43839);
+CheckOffset(struct _GdkEventClient,send_event,8,2,43839);
+CheckMemberSize(struct _GdkEventClient,message_type,4,2,43840);
+CheckOffset(struct _GdkEventClient,message_type,12,2,43840);
+CheckMemberSize(struct _GdkEventClient,data_format,2,2,43841);
+CheckOffset(struct _GdkEventClient,data_format,16,2,43841);
+CheckMemberSize(struct _GdkEventClient,data,20,2,43845);
+CheckOffset(struct _GdkEventClient,data,20,2,43845);
 #elif __x86_64__
-CheckTypeSize(struct _GdkEventClient,80, 12796, 11)
-CheckMemberSize(struct _GdkEventClient,window,8,11,43838)
-CheckOffset(struct _GdkEventClient,window,8,11,43838)
-CheckMemberSize(struct _GdkEventClient,send_event,1,11,43839)
-CheckOffset(struct _GdkEventClient,send_event,16,11,43839)
-CheckMemberSize(struct _GdkEventClient,message_type,8,11,43840)
-CheckOffset(struct _GdkEventClient,message_type,24,11,43840)
-CheckMemberSize(struct _GdkEventClient,data_format,2,11,43841)
-CheckOffset(struct _GdkEventClient,data_format,32,11,43841)
-CheckMemberSize(struct _GdkEventClient,data,40,11,43845)
-CheckOffset(struct _GdkEventClient,data,40,11,43845)
+CheckTypeSize(struct _GdkEventClient,80, 12796, 11);
+CheckMemberSize(struct _GdkEventClient,window,8,11,43838);
+CheckOffset(struct _GdkEventClient,window,8,11,43838);
+CheckMemberSize(struct _GdkEventClient,send_event,1,11,43839);
+CheckOffset(struct _GdkEventClient,send_event,16,11,43839);
+CheckMemberSize(struct _GdkEventClient,message_type,8,11,43840);
+CheckOffset(struct _GdkEventClient,message_type,24,11,43840);
+CheckMemberSize(struct _GdkEventClient,data_format,2,11,43841);
+CheckOffset(struct _GdkEventClient,data_format,32,11,43841);
+CheckMemberSize(struct _GdkEventClient,data,40,11,43845);
+CheckOffset(struct _GdkEventClient,data,40,11,43845);
 #elif __ia64__
-CheckTypeSize(struct _GdkEventClient,80, 12796, 3)
-CheckMemberSize(struct _GdkEventClient,window,8,3,43838)
-CheckOffset(struct _GdkEventClient,window,8,3,43838)
-CheckMemberSize(struct _GdkEventClient,send_event,1,3,43839)
-CheckOffset(struct _GdkEventClient,send_event,16,3,43839)
-CheckMemberSize(struct _GdkEventClient,message_type,8,3,43840)
-CheckOffset(struct _GdkEventClient,message_type,24,3,43840)
-CheckMemberSize(struct _GdkEventClient,data_format,2,3,43841)
-CheckOffset(struct _GdkEventClient,data_format,32,3,43841)
-CheckMemberSize(struct _GdkEventClient,data,40,3,43845)
-CheckOffset(struct _GdkEventClient,data,40,3,43845)
+CheckTypeSize(struct _GdkEventClient,80, 12796, 3);
+CheckMemberSize(struct _GdkEventClient,window,8,3,43838);
+CheckOffset(struct _GdkEventClient,window,8,3,43838);
+CheckMemberSize(struct _GdkEventClient,send_event,1,3,43839);
+CheckOffset(struct _GdkEventClient,send_event,16,3,43839);
+CheckMemberSize(struct _GdkEventClient,message_type,8,3,43840);
+CheckOffset(struct _GdkEventClient,message_type,24,3,43840);
+CheckMemberSize(struct _GdkEventClient,data_format,2,3,43841);
+CheckOffset(struct _GdkEventClient,data_format,32,3,43841);
+CheckMemberSize(struct _GdkEventClient,data,40,3,43845);
+CheckOffset(struct _GdkEventClient,data,40,3,43845);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkEventClient,40, 12796, 6)
-CheckMemberSize(struct _GdkEventClient,window,4,6,43838)
-CheckOffset(struct _GdkEventClient,window,4,6,43838)
-CheckMemberSize(struct _GdkEventClient,send_event,1,6,43839)
-CheckOffset(struct _GdkEventClient,send_event,8,6,43839)
-CheckMemberSize(struct _GdkEventClient,message_type,4,6,43840)
-CheckOffset(struct _GdkEventClient,message_type,12,6,43840)
-CheckMemberSize(struct _GdkEventClient,data_format,2,6,43841)
-CheckOffset(struct _GdkEventClient,data_format,16,6,43841)
-CheckMemberSize(struct _GdkEventClient,data,20,6,43845)
-CheckOffset(struct _GdkEventClient,data,20,6,43845)
+CheckTypeSize(struct _GdkEventClient,40, 12796, 6);
+CheckMemberSize(struct _GdkEventClient,window,4,6,43838);
+CheckOffset(struct _GdkEventClient,window,4,6,43838);
+CheckMemberSize(struct _GdkEventClient,send_event,1,6,43839);
+CheckOffset(struct _GdkEventClient,send_event,8,6,43839);
+CheckMemberSize(struct _GdkEventClient,message_type,4,6,43840);
+CheckOffset(struct _GdkEventClient,message_type,12,6,43840);
+CheckMemberSize(struct _GdkEventClient,data_format,2,6,43841);
+CheckOffset(struct _GdkEventClient,data_format,16,6,43841);
+CheckMemberSize(struct _GdkEventClient,data,20,6,43845);
+CheckOffset(struct _GdkEventClient,data,20,6,43845);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkEventClient,80, 12796, 9)
-CheckMemberSize(struct _GdkEventClient,window,8,9,43838)
-CheckOffset(struct _GdkEventClient,window,8,9,43838)
-CheckMemberSize(struct _GdkEventClient,send_event,1,9,43839)
-CheckOffset(struct _GdkEventClient,send_event,16,9,43839)
-CheckMemberSize(struct _GdkEventClient,message_type,8,9,43840)
-CheckOffset(struct _GdkEventClient,message_type,24,9,43840)
-CheckMemberSize(struct _GdkEventClient,data_format,2,9,43841)
-CheckOffset(struct _GdkEventClient,data_format,32,9,43841)
-CheckMemberSize(struct _GdkEventClient,data,40,9,43845)
-CheckOffset(struct _GdkEventClient,data,40,9,43845)
+CheckTypeSize(struct _GdkEventClient,80, 12796, 9);
+CheckMemberSize(struct _GdkEventClient,window,8,9,43838);
+CheckOffset(struct _GdkEventClient,window,8,9,43838);
+CheckMemberSize(struct _GdkEventClient,send_event,1,9,43839);
+CheckOffset(struct _GdkEventClient,send_event,16,9,43839);
+CheckMemberSize(struct _GdkEventClient,message_type,8,9,43840);
+CheckOffset(struct _GdkEventClient,message_type,24,9,43840);
+CheckMemberSize(struct _GdkEventClient,data_format,2,9,43841);
+CheckOffset(struct _GdkEventClient,data_format,32,9,43841);
+CheckMemberSize(struct _GdkEventClient,data,40,9,43845);
+CheckOffset(struct _GdkEventClient,data,40,9,43845);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkEventClient,40, 12796, 10)
-CheckMemberSize(struct _GdkEventClient,window,4,10,43838)
-CheckOffset(struct _GdkEventClient,window,4,10,43838)
-CheckMemberSize(struct _GdkEventClient,send_event,1,10,43839)
-CheckOffset(struct _GdkEventClient,send_event,8,10,43839)
-CheckMemberSize(struct _GdkEventClient,message_type,4,10,43840)
-CheckOffset(struct _GdkEventClient,message_type,12,10,43840)
-CheckMemberSize(struct _GdkEventClient,data_format,2,10,43841)
-CheckOffset(struct _GdkEventClient,data_format,16,10,43841)
-CheckMemberSize(struct _GdkEventClient,data,20,10,43845)
-CheckOffset(struct _GdkEventClient,data,20,10,43845)
+CheckTypeSize(struct _GdkEventClient,40, 12796, 10);
+CheckMemberSize(struct _GdkEventClient,window,4,10,43838);
+CheckOffset(struct _GdkEventClient,window,4,10,43838);
+CheckMemberSize(struct _GdkEventClient,send_event,1,10,43839);
+CheckOffset(struct _GdkEventClient,send_event,8,10,43839);
+CheckMemberSize(struct _GdkEventClient,message_type,4,10,43840);
+CheckOffset(struct _GdkEventClient,message_type,12,10,43840);
+CheckMemberSize(struct _GdkEventClient,data_format,2,10,43841);
+CheckOffset(struct _GdkEventClient,data_format,16,10,43841);
+CheckMemberSize(struct _GdkEventClient,data,20,10,43845);
+CheckOffset(struct _GdkEventClient,data,20,10,43845);
 #elif __s390x__
-CheckTypeSize(struct _GdkEventClient,80, 12796, 12)
-CheckMemberSize(struct _GdkEventClient,window,8,12,43838)
-CheckOffset(struct _GdkEventClient,window,8,12,43838)
-CheckMemberSize(struct _GdkEventClient,send_event,1,12,43839)
-CheckOffset(struct _GdkEventClient,send_event,16,12,43839)
-CheckMemberSize(struct _GdkEventClient,message_type,8,12,43840)
-CheckOffset(struct _GdkEventClient,message_type,24,12,43840)
-CheckMemberSize(struct _GdkEventClient,data_format,2,12,43841)
-CheckOffset(struct _GdkEventClient,data_format,32,12,43841)
-CheckMemberSize(struct _GdkEventClient,data,40,12,43845)
-CheckOffset(struct _GdkEventClient,data,40,12,43845)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12796,0);
-Msg("Find size of _GdkEventClient (12796)\n");
+CheckTypeSize(struct _GdkEventClient,80, 12796, 12);
+CheckMemberSize(struct _GdkEventClient,window,8,12,43838);
+CheckOffset(struct _GdkEventClient,window,8,12,43838);
+CheckMemberSize(struct _GdkEventClient,send_event,1,12,43839);
+CheckOffset(struct _GdkEventClient,send_event,16,12,43839);
+CheckMemberSize(struct _GdkEventClient,message_type,8,12,43840);
+CheckOffset(struct _GdkEventClient,message_type,24,12,43840);
+CheckMemberSize(struct _GdkEventClient,data_format,2,12,43841);
+CheckOffset(struct _GdkEventClient,data_format,32,12,43841);
+CheckMemberSize(struct _GdkEventClient,data,40,12,43845);
+CheckOffset(struct _GdkEventClient,data,40,12,43845);
+#elif 1
+CheckTypeSize(struct _GdkEventClient,0, 12796, 1);
+Msg("Missing member data for _GdkEventClient on All\n");
+CheckOffset(struct _GdkEventClient,type,0,1,43837);
+CheckOffset(struct _GdkEventClient,window,0,1,43838);
+CheckOffset(struct _GdkEventClient,send_event,0,1,43839);
+CheckOffset(struct _GdkEventClient,message_type,0,1,43840);
+CheckOffset(struct _GdkEventClient,data_format,0,1,43841);
+CheckOffset(struct _GdkEventClient,data,0,1,43845);
 #endif
 
 #if 1
@@ -6650,290 +6933,305 @@ Msg("Find size of _GdkEventClient (12796)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12799,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-510 (12799)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(GdkEventClient,40, 12800, 2)
+CheckTypeSize(GdkEventClient,40, 12800, 2);
 #elif __x86_64__
-CheckTypeSize(GdkEventClient,80, 12800, 11)
+CheckTypeSize(GdkEventClient,80, 12800, 11);
 #elif __ia64__
-CheckTypeSize(GdkEventClient,80, 12800, 3)
+CheckTypeSize(GdkEventClient,80, 12800, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkEventClient,40, 12800, 6)
+CheckTypeSize(GdkEventClient,40, 12800, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkEventClient,80, 12800, 9)
+CheckTypeSize(GdkEventClient,80, 12800, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkEventClient,40, 12800, 10)
+CheckTypeSize(GdkEventClient,40, 12800, 10);
 #elif __s390x__
-CheckTypeSize(GdkEventClient,80, 12800, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12800,0);
-Msg("Find size of GdkEventClient (12800)\n");
+CheckTypeSize(GdkEventClient,80, 12800, 12);
+#elif 1
+CheckTypeSize(GdkEventClient,0, 12800, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkEventDND,24, 12801, 2)
-CheckMemberSize(struct _GdkEventDND,window,4,2,43848)
-CheckOffset(struct _GdkEventDND,window,4,2,43848)
-CheckMemberSize(struct _GdkEventDND,send_event,1,2,43849)
-CheckOffset(struct _GdkEventDND,send_event,8,2,43849)
-CheckMemberSize(struct _GdkEventDND,context,4,2,43874)
-CheckOffset(struct _GdkEventDND,context,12,2,43874)
-CheckMemberSize(struct _GdkEventDND,time,4,2,43875)
-CheckOffset(struct _GdkEventDND,time,16,2,43875)
-CheckMemberSize(struct _GdkEventDND,x_root,2,2,43876)
-CheckOffset(struct _GdkEventDND,x_root,20,2,43876)
-CheckMemberSize(struct _GdkEventDND,y_root,2,2,43877)
-CheckOffset(struct _GdkEventDND,y_root,22,2,43877)
+CheckTypeSize(struct _GdkEventDND,24, 12801, 2);
+CheckMemberSize(struct _GdkEventDND,window,4,2,43848);
+CheckOffset(struct _GdkEventDND,window,4,2,43848);
+CheckMemberSize(struct _GdkEventDND,send_event,1,2,43849);
+CheckOffset(struct _GdkEventDND,send_event,8,2,43849);
+CheckMemberSize(struct _GdkEventDND,context,4,2,43874);
+CheckOffset(struct _GdkEventDND,context,12,2,43874);
+CheckMemberSize(struct _GdkEventDND,time,4,2,43875);
+CheckOffset(struct _GdkEventDND,time,16,2,43875);
+CheckMemberSize(struct _GdkEventDND,x_root,2,2,43876);
+CheckOffset(struct _GdkEventDND,x_root,20,2,43876);
+CheckMemberSize(struct _GdkEventDND,y_root,2,2,43877);
+CheckOffset(struct _GdkEventDND,y_root,22,2,43877);
 #elif __x86_64__
-CheckTypeSize(struct _GdkEventDND,40, 12801, 11)
-CheckMemberSize(struct _GdkEventDND,window,8,11,43848)
-CheckOffset(struct _GdkEventDND,window,8,11,43848)
-CheckMemberSize(struct _GdkEventDND,send_event,1,11,43849)
-CheckOffset(struct _GdkEventDND,send_event,16,11,43849)
-CheckMemberSize(struct _GdkEventDND,context,8,11,43874)
-CheckOffset(struct _GdkEventDND,context,24,11,43874)
-CheckMemberSize(struct _GdkEventDND,time,4,11,43875)
-CheckOffset(struct _GdkEventDND,time,32,11,43875)
-CheckMemberSize(struct _GdkEventDND,x_root,2,11,43876)
-CheckOffset(struct _GdkEventDND,x_root,36,11,43876)
-CheckMemberSize(struct _GdkEventDND,y_root,2,11,43877)
-CheckOffset(struct _GdkEventDND,y_root,38,11,43877)
+CheckTypeSize(struct _GdkEventDND,40, 12801, 11);
+CheckMemberSize(struct _GdkEventDND,window,8,11,43848);
+CheckOffset(struct _GdkEventDND,window,8,11,43848);
+CheckMemberSize(struct _GdkEventDND,send_event,1,11,43849);
+CheckOffset(struct _GdkEventDND,send_event,16,11,43849);
+CheckMemberSize(struct _GdkEventDND,context,8,11,43874);
+CheckOffset(struct _GdkEventDND,context,24,11,43874);
+CheckMemberSize(struct _GdkEventDND,time,4,11,43875);
+CheckOffset(struct _GdkEventDND,time,32,11,43875);
+CheckMemberSize(struct _GdkEventDND,x_root,2,11,43876);
+CheckOffset(struct _GdkEventDND,x_root,36,11,43876);
+CheckMemberSize(struct _GdkEventDND,y_root,2,11,43877);
+CheckOffset(struct _GdkEventDND,y_root,38,11,43877);
 #elif __ia64__
-CheckTypeSize(struct _GdkEventDND,40, 12801, 3)
-CheckMemberSize(struct _GdkEventDND,window,8,3,43848)
-CheckOffset(struct _GdkEventDND,window,8,3,43848)
-CheckMemberSize(struct _GdkEventDND,send_event,1,3,43849)
-CheckOffset(struct _GdkEventDND,send_event,16,3,43849)
-CheckMemberSize(struct _GdkEventDND,context,8,3,43874)
-CheckOffset(struct _GdkEventDND,context,24,3,43874)
-CheckMemberSize(struct _GdkEventDND,time,4,3,43875)
-CheckOffset(struct _GdkEventDND,time,32,3,43875)
-CheckMemberSize(struct _GdkEventDND,x_root,2,3,43876)
-CheckOffset(struct _GdkEventDND,x_root,36,3,43876)
-CheckMemberSize(struct _GdkEventDND,y_root,2,3,43877)
-CheckOffset(struct _GdkEventDND,y_root,38,3,43877)
+CheckTypeSize(struct _GdkEventDND,40, 12801, 3);
+CheckMemberSize(struct _GdkEventDND,window,8,3,43848);
+CheckOffset(struct _GdkEventDND,window,8,3,43848);
+CheckMemberSize(struct _GdkEventDND,send_event,1,3,43849);
+CheckOffset(struct _GdkEventDND,send_event,16,3,43849);
+CheckMemberSize(struct _GdkEventDND,context,8,3,43874);
+CheckOffset(struct _GdkEventDND,context,24,3,43874);
+CheckMemberSize(struct _GdkEventDND,time,4,3,43875);
+CheckOffset(struct _GdkEventDND,time,32,3,43875);
+CheckMemberSize(struct _GdkEventDND,x_root,2,3,43876);
+CheckOffset(struct _GdkEventDND,x_root,36,3,43876);
+CheckMemberSize(struct _GdkEventDND,y_root,2,3,43877);
+CheckOffset(struct _GdkEventDND,y_root,38,3,43877);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkEventDND,24, 12801, 6)
-CheckMemberSize(struct _GdkEventDND,window,4,6,43848)
-CheckOffset(struct _GdkEventDND,window,4,6,43848)
-CheckMemberSize(struct _GdkEventDND,send_event,1,6,43849)
-CheckOffset(struct _GdkEventDND,send_event,8,6,43849)
-CheckMemberSize(struct _GdkEventDND,context,4,6,43874)
-CheckOffset(struct _GdkEventDND,context,12,6,43874)
-CheckMemberSize(struct _GdkEventDND,time,4,6,43875)
-CheckOffset(struct _GdkEventDND,time,16,6,43875)
-CheckMemberSize(struct _GdkEventDND,x_root,2,6,43876)
-CheckOffset(struct _GdkEventDND,x_root,20,6,43876)
-CheckMemberSize(struct _GdkEventDND,y_root,2,6,43877)
-CheckOffset(struct _GdkEventDND,y_root,22,6,43877)
+CheckTypeSize(struct _GdkEventDND,24, 12801, 6);
+CheckMemberSize(struct _GdkEventDND,window,4,6,43848);
+CheckOffset(struct _GdkEventDND,window,4,6,43848);
+CheckMemberSize(struct _GdkEventDND,send_event,1,6,43849);
+CheckOffset(struct _GdkEventDND,send_event,8,6,43849);
+CheckMemberSize(struct _GdkEventDND,context,4,6,43874);
+CheckOffset(struct _GdkEventDND,context,12,6,43874);
+CheckMemberSize(struct _GdkEventDND,time,4,6,43875);
+CheckOffset(struct _GdkEventDND,time,16,6,43875);
+CheckMemberSize(struct _GdkEventDND,x_root,2,6,43876);
+CheckOffset(struct _GdkEventDND,x_root,20,6,43876);
+CheckMemberSize(struct _GdkEventDND,y_root,2,6,43877);
+CheckOffset(struct _GdkEventDND,y_root,22,6,43877);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkEventDND,40, 12801, 9)
-CheckMemberSize(struct _GdkEventDND,window,8,9,43848)
-CheckOffset(struct _GdkEventDND,window,8,9,43848)
-CheckMemberSize(struct _GdkEventDND,send_event,1,9,43849)
-CheckOffset(struct _GdkEventDND,send_event,16,9,43849)
-CheckMemberSize(struct _GdkEventDND,context,8,9,43874)
-CheckOffset(struct _GdkEventDND,context,24,9,43874)
-CheckMemberSize(struct _GdkEventDND,time,4,9,43875)
-CheckOffset(struct _GdkEventDND,time,32,9,43875)
-CheckMemberSize(struct _GdkEventDND,x_root,2,9,43876)
-CheckOffset(struct _GdkEventDND,x_root,36,9,43876)
-CheckMemberSize(struct _GdkEventDND,y_root,2,9,43877)
-CheckOffset(struct _GdkEventDND,y_root,38,9,43877)
+CheckTypeSize(struct _GdkEventDND,40, 12801, 9);
+CheckMemberSize(struct _GdkEventDND,window,8,9,43848);
+CheckOffset(struct _GdkEventDND,window,8,9,43848);
+CheckMemberSize(struct _GdkEventDND,send_event,1,9,43849);
+CheckOffset(struct _GdkEventDND,send_event,16,9,43849);
+CheckMemberSize(struct _GdkEventDND,context,8,9,43874);
+CheckOffset(struct _GdkEventDND,context,24,9,43874);
+CheckMemberSize(struct _GdkEventDND,time,4,9,43875);
+CheckOffset(struct _GdkEventDND,time,32,9,43875);
+CheckMemberSize(struct _GdkEventDND,x_root,2,9,43876);
+CheckOffset(struct _GdkEventDND,x_root,36,9,43876);
+CheckMemberSize(struct _GdkEventDND,y_root,2,9,43877);
+CheckOffset(struct _GdkEventDND,y_root,38,9,43877);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkEventDND,24, 12801, 10)
-CheckMemberSize(struct _GdkEventDND,window,4,10,43848)
-CheckOffset(struct _GdkEventDND,window,4,10,43848)
-CheckMemberSize(struct _GdkEventDND,send_event,1,10,43849)
-CheckOffset(struct _GdkEventDND,send_event,8,10,43849)
-CheckMemberSize(struct _GdkEventDND,context,4,10,43874)
-CheckOffset(struct _GdkEventDND,context,12,10,43874)
-CheckMemberSize(struct _GdkEventDND,time,4,10,43875)
-CheckOffset(struct _GdkEventDND,time,16,10,43875)
-CheckMemberSize(struct _GdkEventDND,x_root,2,10,43876)
-CheckOffset(struct _GdkEventDND,x_root,20,10,43876)
-CheckMemberSize(struct _GdkEventDND,y_root,2,10,43877)
-CheckOffset(struct _GdkEventDND,y_root,22,10,43877)
+CheckTypeSize(struct _GdkEventDND,24, 12801, 10);
+CheckMemberSize(struct _GdkEventDND,window,4,10,43848);
+CheckOffset(struct _GdkEventDND,window,4,10,43848);
+CheckMemberSize(struct _GdkEventDND,send_event,1,10,43849);
+CheckOffset(struct _GdkEventDND,send_event,8,10,43849);
+CheckMemberSize(struct _GdkEventDND,context,4,10,43874);
+CheckOffset(struct _GdkEventDND,context,12,10,43874);
+CheckMemberSize(struct _GdkEventDND,time,4,10,43875);
+CheckOffset(struct _GdkEventDND,time,16,10,43875);
+CheckMemberSize(struct _GdkEventDND,x_root,2,10,43876);
+CheckOffset(struct _GdkEventDND,x_root,20,10,43876);
+CheckMemberSize(struct _GdkEventDND,y_root,2,10,43877);
+CheckOffset(struct _GdkEventDND,y_root,22,10,43877);
 #elif __s390x__
-CheckTypeSize(struct _GdkEventDND,40, 12801, 12)
-CheckMemberSize(struct _GdkEventDND,window,8,12,43848)
-CheckOffset(struct _GdkEventDND,window,8,12,43848)
-CheckMemberSize(struct _GdkEventDND,send_event,1,12,43849)
-CheckOffset(struct _GdkEventDND,send_event,16,12,43849)
-CheckMemberSize(struct _GdkEventDND,context,8,12,43874)
-CheckOffset(struct _GdkEventDND,context,24,12,43874)
-CheckMemberSize(struct _GdkEventDND,time,4,12,43875)
-CheckOffset(struct _GdkEventDND,time,32,12,43875)
-CheckMemberSize(struct _GdkEventDND,x_root,2,12,43876)
-CheckOffset(struct _GdkEventDND,x_root,36,12,43876)
-CheckMemberSize(struct _GdkEventDND,y_root,2,12,43877)
-CheckOffset(struct _GdkEventDND,y_root,38,12,43877)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12801,0);
-Msg("Find size of _GdkEventDND (12801)\n");
+CheckTypeSize(struct _GdkEventDND,40, 12801, 12);
+CheckMemberSize(struct _GdkEventDND,window,8,12,43848);
+CheckOffset(struct _GdkEventDND,window,8,12,43848);
+CheckMemberSize(struct _GdkEventDND,send_event,1,12,43849);
+CheckOffset(struct _GdkEventDND,send_event,16,12,43849);
+CheckMemberSize(struct _GdkEventDND,context,8,12,43874);
+CheckOffset(struct _GdkEventDND,context,24,12,43874);
+CheckMemberSize(struct _GdkEventDND,time,4,12,43875);
+CheckOffset(struct _GdkEventDND,time,32,12,43875);
+CheckMemberSize(struct _GdkEventDND,x_root,2,12,43876);
+CheckOffset(struct _GdkEventDND,x_root,36,12,43876);
+CheckMemberSize(struct _GdkEventDND,y_root,2,12,43877);
+CheckOffset(struct _GdkEventDND,y_root,38,12,43877);
+#elif 1
+CheckTypeSize(struct _GdkEventDND,0, 12801, 1);
+Msg("Missing member data for _GdkEventDND on All\n");
+CheckOffset(struct _GdkEventDND,type,0,1,43847);
+CheckOffset(struct _GdkEventDND,window,0,1,43848);
+CheckOffset(struct _GdkEventDND,send_event,0,1,43849);
+CheckOffset(struct _GdkEventDND,context,0,1,43874);
+CheckOffset(struct _GdkEventDND,time,0,1,43875);
+CheckOffset(struct _GdkEventDND,x_root,0,1,43876);
+CheckOffset(struct _GdkEventDND,y_root,0,1,43877);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkDragContext,52, 12802, 2)
-CheckMemberSize(struct _GdkDragContext,protocol,4,2,43858)
-CheckOffset(struct _GdkDragContext,protocol,12,2,43858)
-CheckMemberSize(struct _GdkDragContext,is_source,4,2,43859)
-CheckOffset(struct _GdkDragContext,is_source,16,2,43859)
-CheckMemberSize(struct _GdkDragContext,source_window,4,2,43860)
-CheckOffset(struct _GdkDragContext,source_window,20,2,43860)
-CheckMemberSize(struct _GdkDragContext,dest_window,4,2,43861)
-CheckOffset(struct _GdkDragContext,dest_window,24,2,43861)
-CheckMemberSize(struct _GdkDragContext,targets,4,2,43862)
-CheckOffset(struct _GdkDragContext,targets,28,2,43862)
-CheckMemberSize(struct _GdkDragContext,actions,4,2,43869)
-CheckOffset(struct _GdkDragContext,actions,32,2,43869)
-CheckMemberSize(struct _GdkDragContext,suggested_action,4,2,43870)
-CheckOffset(struct _GdkDragContext,suggested_action,36,2,43870)
-CheckMemberSize(struct _GdkDragContext,action,4,2,43871)
-CheckOffset(struct _GdkDragContext,action,40,2,43871)
-CheckMemberSize(struct _GdkDragContext,start_time,4,2,43872)
-CheckOffset(struct _GdkDragContext,start_time,44,2,43872)
-CheckMemberSize(struct _GdkDragContext,windowing_data,4,2,43873)
-CheckOffset(struct _GdkDragContext,windowing_data,48,2,43873)
+CheckTypeSize(struct _GdkDragContext,52, 12802, 2);
+CheckMemberSize(struct _GdkDragContext,protocol,4,2,43858);
+CheckOffset(struct _GdkDragContext,protocol,12,2,43858);
+CheckMemberSize(struct _GdkDragContext,is_source,4,2,43859);
+CheckOffset(struct _GdkDragContext,is_source,16,2,43859);
+CheckMemberSize(struct _GdkDragContext,source_window,4,2,43860);
+CheckOffset(struct _GdkDragContext,source_window,20,2,43860);
+CheckMemberSize(struct _GdkDragContext,dest_window,4,2,43861);
+CheckOffset(struct _GdkDragContext,dest_window,24,2,43861);
+CheckMemberSize(struct _GdkDragContext,targets,4,2,43862);
+CheckOffset(struct _GdkDragContext,targets,28,2,43862);
+CheckMemberSize(struct _GdkDragContext,actions,4,2,43869);
+CheckOffset(struct _GdkDragContext,actions,32,2,43869);
+CheckMemberSize(struct _GdkDragContext,suggested_action,4,2,43870);
+CheckOffset(struct _GdkDragContext,suggested_action,36,2,43870);
+CheckMemberSize(struct _GdkDragContext,action,4,2,43871);
+CheckOffset(struct _GdkDragContext,action,40,2,43871);
+CheckMemberSize(struct _GdkDragContext,start_time,4,2,43872);
+CheckOffset(struct _GdkDragContext,start_time,44,2,43872);
+CheckMemberSize(struct _GdkDragContext,windowing_data,4,2,43873);
+CheckOffset(struct _GdkDragContext,windowing_data,48,2,43873);
 #elif __x86_64__
-CheckTypeSize(struct _GdkDragContext,80, 12802, 11)
-CheckMemberSize(struct _GdkDragContext,protocol,4,11,43858)
-CheckOffset(struct _GdkDragContext,protocol,24,11,43858)
-CheckMemberSize(struct _GdkDragContext,is_source,4,11,43859)
-CheckOffset(struct _GdkDragContext,is_source,28,11,43859)
-CheckMemberSize(struct _GdkDragContext,source_window,8,11,43860)
-CheckOffset(struct _GdkDragContext,source_window,32,11,43860)
-CheckMemberSize(struct _GdkDragContext,dest_window,8,11,43861)
-CheckOffset(struct _GdkDragContext,dest_window,40,11,43861)
-CheckMemberSize(struct _GdkDragContext,targets,8,11,43862)
-CheckOffset(struct _GdkDragContext,targets,48,11,43862)
-CheckMemberSize(struct _GdkDragContext,actions,4,11,43869)
-CheckOffset(struct _GdkDragContext,actions,56,11,43869)
-CheckMemberSize(struct _GdkDragContext,suggested_action,4,11,43870)
-CheckOffset(struct _GdkDragContext,suggested_action,60,11,43870)
-CheckMemberSize(struct _GdkDragContext,action,4,11,43871)
-CheckOffset(struct _GdkDragContext,action,64,11,43871)
-CheckMemberSize(struct _GdkDragContext,start_time,4,11,43872)
-CheckOffset(struct _GdkDragContext,start_time,68,11,43872)
-CheckMemberSize(struct _GdkDragContext,windowing_data,8,11,43873)
-CheckOffset(struct _GdkDragContext,windowing_data,72,11,43873)
+CheckTypeSize(struct _GdkDragContext,80, 12802, 11);
+CheckMemberSize(struct _GdkDragContext,protocol,4,11,43858);
+CheckOffset(struct _GdkDragContext,protocol,24,11,43858);
+CheckMemberSize(struct _GdkDragContext,is_source,4,11,43859);
+CheckOffset(struct _GdkDragContext,is_source,28,11,43859);
+CheckMemberSize(struct _GdkDragContext,source_window,8,11,43860);
+CheckOffset(struct _GdkDragContext,source_window,32,11,43860);
+CheckMemberSize(struct _GdkDragContext,dest_window,8,11,43861);
+CheckOffset(struct _GdkDragContext,dest_window,40,11,43861);
+CheckMemberSize(struct _GdkDragContext,targets,8,11,43862);
+CheckOffset(struct _GdkDragContext,targets,48,11,43862);
+CheckMemberSize(struct _GdkDragContext,actions,4,11,43869);
+CheckOffset(struct _GdkDragContext,actions,56,11,43869);
+CheckMemberSize(struct _GdkDragContext,suggested_action,4,11,43870);
+CheckOffset(struct _GdkDragContext,suggested_action,60,11,43870);
+CheckMemberSize(struct _GdkDragContext,action,4,11,43871);
+CheckOffset(struct _GdkDragContext,action,64,11,43871);
+CheckMemberSize(struct _GdkDragContext,start_time,4,11,43872);
+CheckOffset(struct _GdkDragContext,start_time,68,11,43872);
+CheckMemberSize(struct _GdkDragContext,windowing_data,8,11,43873);
+CheckOffset(struct _GdkDragContext,windowing_data,72,11,43873);
 #elif __ia64__
-CheckTypeSize(struct _GdkDragContext,80, 12802, 3)
-CheckMemberSize(struct _GdkDragContext,protocol,4,3,43858)
-CheckOffset(struct _GdkDragContext,protocol,24,3,43858)
-CheckMemberSize(struct _GdkDragContext,is_source,4,3,43859)
-CheckOffset(struct _GdkDragContext,is_source,28,3,43859)
-CheckMemberSize(struct _GdkDragContext,source_window,8,3,43860)
-CheckOffset(struct _GdkDragContext,source_window,32,3,43860)
-CheckMemberSize(struct _GdkDragContext,dest_window,8,3,43861)
-CheckOffset(struct _GdkDragContext,dest_window,40,3,43861)
-CheckMemberSize(struct _GdkDragContext,targets,8,3,43862)
-CheckOffset(struct _GdkDragContext,targets,48,3,43862)
-CheckMemberSize(struct _GdkDragContext,actions,4,3,43869)
-CheckOffset(struct _GdkDragContext,actions,56,3,43869)
-CheckMemberSize(struct _GdkDragContext,suggested_action,4,3,43870)
-CheckOffset(struct _GdkDragContext,suggested_action,60,3,43870)
-CheckMemberSize(struct _GdkDragContext,action,4,3,43871)
-CheckOffset(struct _GdkDragContext,action,64,3,43871)
-CheckMemberSize(struct _GdkDragContext,start_time,4,3,43872)
-CheckOffset(struct _GdkDragContext,start_time,68,3,43872)
-CheckMemberSize(struct _GdkDragContext,windowing_data,8,3,43873)
-CheckOffset(struct _GdkDragContext,windowing_data,72,3,43873)
+CheckTypeSize(struct _GdkDragContext,80, 12802, 3);
+CheckMemberSize(struct _GdkDragContext,protocol,4,3,43858);
+CheckOffset(struct _GdkDragContext,protocol,24,3,43858);
+CheckMemberSize(struct _GdkDragContext,is_source,4,3,43859);
+CheckOffset(struct _GdkDragContext,is_source,28,3,43859);
+CheckMemberSize(struct _GdkDragContext,source_window,8,3,43860);
+CheckOffset(struct _GdkDragContext,source_window,32,3,43860);
+CheckMemberSize(struct _GdkDragContext,dest_window,8,3,43861);
+CheckOffset(struct _GdkDragContext,dest_window,40,3,43861);
+CheckMemberSize(struct _GdkDragContext,targets,8,3,43862);
+CheckOffset(struct _GdkDragContext,targets,48,3,43862);
+CheckMemberSize(struct _GdkDragContext,actions,4,3,43869);
+CheckOffset(struct _GdkDragContext,actions,56,3,43869);
+CheckMemberSize(struct _GdkDragContext,suggested_action,4,3,43870);
+CheckOffset(struct _GdkDragContext,suggested_action,60,3,43870);
+CheckMemberSize(struct _GdkDragContext,action,4,3,43871);
+CheckOffset(struct _GdkDragContext,action,64,3,43871);
+CheckMemberSize(struct _GdkDragContext,start_time,4,3,43872);
+CheckOffset(struct _GdkDragContext,start_time,68,3,43872);
+CheckMemberSize(struct _GdkDragContext,windowing_data,8,3,43873);
+CheckOffset(struct _GdkDragContext,windowing_data,72,3,43873);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkDragContext,52, 12802, 6)
-CheckMemberSize(struct _GdkDragContext,protocol,4,6,43858)
-CheckOffset(struct _GdkDragContext,protocol,12,6,43858)
-CheckMemberSize(struct _GdkDragContext,is_source,4,6,43859)
-CheckOffset(struct _GdkDragContext,is_source,16,6,43859)
-CheckMemberSize(struct _GdkDragContext,source_window,4,6,43860)
-CheckOffset(struct _GdkDragContext,source_window,20,6,43860)
-CheckMemberSize(struct _GdkDragContext,dest_window,4,6,43861)
-CheckOffset(struct _GdkDragContext,dest_window,24,6,43861)
-CheckMemberSize(struct _GdkDragContext,targets,4,6,43862)
-CheckOffset(struct _GdkDragContext,targets,28,6,43862)
-CheckMemberSize(struct _GdkDragContext,actions,4,6,43869)
-CheckOffset(struct _GdkDragContext,actions,32,6,43869)
-CheckMemberSize(struct _GdkDragContext,suggested_action,4,6,43870)
-CheckOffset(struct _GdkDragContext,suggested_action,36,6,43870)
-CheckMemberSize(struct _GdkDragContext,action,4,6,43871)
-CheckOffset(struct _GdkDragContext,action,40,6,43871)
-CheckMemberSize(struct _GdkDragContext,start_time,4,6,43872)
-CheckOffset(struct _GdkDragContext,start_time,44,6,43872)
-CheckMemberSize(struct _GdkDragContext,windowing_data,4,6,43873)
-CheckOffset(struct _GdkDragContext,windowing_data,48,6,43873)
+CheckTypeSize(struct _GdkDragContext,52, 12802, 6);
+CheckMemberSize(struct _GdkDragContext,protocol,4,6,43858);
+CheckOffset(struct _GdkDragContext,protocol,12,6,43858);
+CheckMemberSize(struct _GdkDragContext,is_source,4,6,43859);
+CheckOffset(struct _GdkDragContext,is_source,16,6,43859);
+CheckMemberSize(struct _GdkDragContext,source_window,4,6,43860);
+CheckOffset(struct _GdkDragContext,source_window,20,6,43860);
+CheckMemberSize(struct _GdkDragContext,dest_window,4,6,43861);
+CheckOffset(struct _GdkDragContext,dest_window,24,6,43861);
+CheckMemberSize(struct _GdkDragContext,targets,4,6,43862);
+CheckOffset(struct _GdkDragContext,targets,28,6,43862);
+CheckMemberSize(struct _GdkDragContext,actions,4,6,43869);
+CheckOffset(struct _GdkDragContext,actions,32,6,43869);
+CheckMemberSize(struct _GdkDragContext,suggested_action,4,6,43870);
+CheckOffset(struct _GdkDragContext,suggested_action,36,6,43870);
+CheckMemberSize(struct _GdkDragContext,action,4,6,43871);
+CheckOffset(struct _GdkDragContext,action,40,6,43871);
+CheckMemberSize(struct _GdkDragContext,start_time,4,6,43872);
+CheckOffset(struct _GdkDragContext,start_time,44,6,43872);
+CheckMemberSize(struct _GdkDragContext,windowing_data,4,6,43873);
+CheckOffset(struct _GdkDragContext,windowing_data,48,6,43873);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkDragContext,80, 12802, 9)
-CheckMemberSize(struct _GdkDragContext,protocol,4,9,43858)
-CheckOffset(struct _GdkDragContext,protocol,24,9,43858)
-CheckMemberSize(struct _GdkDragContext,is_source,4,9,43859)
-CheckOffset(struct _GdkDragContext,is_source,28,9,43859)
-CheckMemberSize(struct _GdkDragContext,source_window,8,9,43860)
-CheckOffset(struct _GdkDragContext,source_window,32,9,43860)
-CheckMemberSize(struct _GdkDragContext,dest_window,8,9,43861)
-CheckOffset(struct _GdkDragContext,dest_window,40,9,43861)
-CheckMemberSize(struct _GdkDragContext,targets,8,9,43862)
-CheckOffset(struct _GdkDragContext,targets,48,9,43862)
-CheckMemberSize(struct _GdkDragContext,actions,4,9,43869)
-CheckOffset(struct _GdkDragContext,actions,56,9,43869)
-CheckMemberSize(struct _GdkDragContext,suggested_action,4,9,43870)
-CheckOffset(struct _GdkDragContext,suggested_action,60,9,43870)
-CheckMemberSize(struct _GdkDragContext,action,4,9,43871)
-CheckOffset(struct _GdkDragContext,action,64,9,43871)
-CheckMemberSize(struct _GdkDragContext,start_time,4,9,43872)
-CheckOffset(struct _GdkDragContext,start_time,68,9,43872)
-CheckMemberSize(struct _GdkDragContext,windowing_data,8,9,43873)
-CheckOffset(struct _GdkDragContext,windowing_data,72,9,43873)
+CheckTypeSize(struct _GdkDragContext,80, 12802, 9);
+CheckMemberSize(struct _GdkDragContext,protocol,4,9,43858);
+CheckOffset(struct _GdkDragContext,protocol,24,9,43858);
+CheckMemberSize(struct _GdkDragContext,is_source,4,9,43859);
+CheckOffset(struct _GdkDragContext,is_source,28,9,43859);
+CheckMemberSize(struct _GdkDragContext,source_window,8,9,43860);
+CheckOffset(struct _GdkDragContext,source_window,32,9,43860);
+CheckMemberSize(struct _GdkDragContext,dest_window,8,9,43861);
+CheckOffset(struct _GdkDragContext,dest_window,40,9,43861);
+CheckMemberSize(struct _GdkDragContext,targets,8,9,43862);
+CheckOffset(struct _GdkDragContext,targets,48,9,43862);
+CheckMemberSize(struct _GdkDragContext,actions,4,9,43869);
+CheckOffset(struct _GdkDragContext,actions,56,9,43869);
+CheckMemberSize(struct _GdkDragContext,suggested_action,4,9,43870);
+CheckOffset(struct _GdkDragContext,suggested_action,60,9,43870);
+CheckMemberSize(struct _GdkDragContext,action,4,9,43871);
+CheckOffset(struct _GdkDragContext,action,64,9,43871);
+CheckMemberSize(struct _GdkDragContext,start_time,4,9,43872);
+CheckOffset(struct _GdkDragContext,start_time,68,9,43872);
+CheckMemberSize(struct _GdkDragContext,windowing_data,8,9,43873);
+CheckOffset(struct _GdkDragContext,windowing_data,72,9,43873);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkDragContext,52, 12802, 10)
-CheckMemberSize(struct _GdkDragContext,protocol,4,10,43858)
-CheckOffset(struct _GdkDragContext,protocol,12,10,43858)
-CheckMemberSize(struct _GdkDragContext,is_source,4,10,43859)
-CheckOffset(struct _GdkDragContext,is_source,16,10,43859)
-CheckMemberSize(struct _GdkDragContext,source_window,4,10,43860)
-CheckOffset(struct _GdkDragContext,source_window,20,10,43860)
-CheckMemberSize(struct _GdkDragContext,dest_window,4,10,43861)
-CheckOffset(struct _GdkDragContext,dest_window,24,10,43861)
-CheckMemberSize(struct _GdkDragContext,targets,4,10,43862)
-CheckOffset(struct _GdkDragContext,targets,28,10,43862)
-CheckMemberSize(struct _GdkDragContext,actions,4,10,43869)
-CheckOffset(struct _GdkDragContext,actions,32,10,43869)
-CheckMemberSize(struct _GdkDragContext,suggested_action,4,10,43870)
-CheckOffset(struct _GdkDragContext,suggested_action,36,10,43870)
-CheckMemberSize(struct _GdkDragContext,action,4,10,43871)
-CheckOffset(struct _GdkDragContext,action,40,10,43871)
-CheckMemberSize(struct _GdkDragContext,start_time,4,10,43872)
-CheckOffset(struct _GdkDragContext,start_time,44,10,43872)
-CheckMemberSize(struct _GdkDragContext,windowing_data,4,10,43873)
-CheckOffset(struct _GdkDragContext,windowing_data,48,10,43873)
+CheckTypeSize(struct _GdkDragContext,52, 12802, 10);
+CheckMemberSize(struct _GdkDragContext,protocol,4,10,43858);
+CheckOffset(struct _GdkDragContext,protocol,12,10,43858);
+CheckMemberSize(struct _GdkDragContext,is_source,4,10,43859);
+CheckOffset(struct _GdkDragContext,is_source,16,10,43859);
+CheckMemberSize(struct _GdkDragContext,source_window,4,10,43860);
+CheckOffset(struct _GdkDragContext,source_window,20,10,43860);
+CheckMemberSize(struct _GdkDragContext,dest_window,4,10,43861);
+CheckOffset(struct _GdkDragContext,dest_window,24,10,43861);
+CheckMemberSize(struct _GdkDragContext,targets,4,10,43862);
+CheckOffset(struct _GdkDragContext,targets,28,10,43862);
+CheckMemberSize(struct _GdkDragContext,actions,4,10,43869);
+CheckOffset(struct _GdkDragContext,actions,32,10,43869);
+CheckMemberSize(struct _GdkDragContext,suggested_action,4,10,43870);
+CheckOffset(struct _GdkDragContext,suggested_action,36,10,43870);
+CheckMemberSize(struct _GdkDragContext,action,4,10,43871);
+CheckOffset(struct _GdkDragContext,action,40,10,43871);
+CheckMemberSize(struct _GdkDragContext,start_time,4,10,43872);
+CheckOffset(struct _GdkDragContext,start_time,44,10,43872);
+CheckMemberSize(struct _GdkDragContext,windowing_data,4,10,43873);
+CheckOffset(struct _GdkDragContext,windowing_data,48,10,43873);
 #elif __s390x__
-CheckTypeSize(struct _GdkDragContext,80, 12802, 12)
-CheckMemberSize(struct _GdkDragContext,protocol,4,12,43858)
-CheckOffset(struct _GdkDragContext,protocol,24,12,43858)
-CheckMemberSize(struct _GdkDragContext,is_source,4,12,43859)
-CheckOffset(struct _GdkDragContext,is_source,28,12,43859)
-CheckMemberSize(struct _GdkDragContext,source_window,8,12,43860)
-CheckOffset(struct _GdkDragContext,source_window,32,12,43860)
-CheckMemberSize(struct _GdkDragContext,dest_window,8,12,43861)
-CheckOffset(struct _GdkDragContext,dest_window,40,12,43861)
-CheckMemberSize(struct _GdkDragContext,targets,8,12,43862)
-CheckOffset(struct _GdkDragContext,targets,48,12,43862)
-CheckMemberSize(struct _GdkDragContext,actions,4,12,43869)
-CheckOffset(struct _GdkDragContext,actions,56,12,43869)
-CheckMemberSize(struct _GdkDragContext,suggested_action,4,12,43870)
-CheckOffset(struct _GdkDragContext,suggested_action,60,12,43870)
-CheckMemberSize(struct _GdkDragContext,action,4,12,43871)
-CheckOffset(struct _GdkDragContext,action,64,12,43871)
-CheckMemberSize(struct _GdkDragContext,start_time,4,12,43872)
-CheckOffset(struct _GdkDragContext,start_time,68,12,43872)
-CheckMemberSize(struct _GdkDragContext,windowing_data,8,12,43873)
-CheckOffset(struct _GdkDragContext,windowing_data,72,12,43873)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12802,0);
-Msg("Find size of _GdkDragContext (12802)\n");
+CheckTypeSize(struct _GdkDragContext,80, 12802, 12);
+CheckMemberSize(struct _GdkDragContext,protocol,4,12,43858);
+CheckOffset(struct _GdkDragContext,protocol,24,12,43858);
+CheckMemberSize(struct _GdkDragContext,is_source,4,12,43859);
+CheckOffset(struct _GdkDragContext,is_source,28,12,43859);
+CheckMemberSize(struct _GdkDragContext,source_window,8,12,43860);
+CheckOffset(struct _GdkDragContext,source_window,32,12,43860);
+CheckMemberSize(struct _GdkDragContext,dest_window,8,12,43861);
+CheckOffset(struct _GdkDragContext,dest_window,40,12,43861);
+CheckMemberSize(struct _GdkDragContext,targets,8,12,43862);
+CheckOffset(struct _GdkDragContext,targets,48,12,43862);
+CheckMemberSize(struct _GdkDragContext,actions,4,12,43869);
+CheckOffset(struct _GdkDragContext,actions,56,12,43869);
+CheckMemberSize(struct _GdkDragContext,suggested_action,4,12,43870);
+CheckOffset(struct _GdkDragContext,suggested_action,60,12,43870);
+CheckMemberSize(struct _GdkDragContext,action,4,12,43871);
+CheckOffset(struct _GdkDragContext,action,64,12,43871);
+CheckMemberSize(struct _GdkDragContext,start_time,4,12,43872);
+CheckOffset(struct _GdkDragContext,start_time,68,12,43872);
+CheckMemberSize(struct _GdkDragContext,windowing_data,8,12,43873);
+CheckOffset(struct _GdkDragContext,windowing_data,72,12,43873);
+#elif 1
+CheckTypeSize(struct _GdkDragContext,0, 12802, 1);
+Msg("Missing member data for _GdkDragContext on All\n");
+CheckOffset(struct _GdkDragContext,parent_instance,0,1,43850);
+CheckOffset(struct _GdkDragContext,protocol,0,1,43858);
+CheckOffset(struct _GdkDragContext,is_source,0,1,43859);
+CheckOffset(struct _GdkDragContext,source_window,0,1,43860);
+CheckOffset(struct _GdkDragContext,dest_window,0,1,43861);
+CheckOffset(struct _GdkDragContext,targets,0,1,43862);
+CheckOffset(struct _GdkDragContext,actions,0,1,43869);
+CheckOffset(struct _GdkDragContext,suggested_action,0,1,43870);
+CheckOffset(struct _GdkDragContext,action,0,1,43871);
+CheckOffset(struct _GdkDragContext,start_time,0,1,43872);
+CheckOffset(struct _GdkDragContext,windowing_data,0,1,43873);
 #endif
 
 #if __i386__
@@ -6992,28 +7290,32 @@ CheckEnum("GDK_DRAG_PROTO_NONE",GDK_DRAG_PROTO_NONE,3,43854);
 CheckEnum("GDK_DRAG_PROTO_WIN32_DROPFILES",GDK_DRAG_PROTO_WIN32_DROPFILES,4,43855);
 CheckEnum("GDK_DRAG_PROTO_OLE2",GDK_DRAG_PROTO_OLE2,5,43856);
 CheckEnum("GDK_DRAG_PROTO_LOCAL",GDK_DRAG_PROTO_LOCAL,6,43857);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12803,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-496 (12803)\n");
+#elif 1
+CheckEnum("GDK_DRAG_PROTO_MOTIF",GDK_DRAG_PROTO_MOTIF,0,43851);
+CheckEnum("GDK_DRAG_PROTO_XDND",GDK_DRAG_PROTO_XDND,1,43852);
+CheckEnum("GDK_DRAG_PROTO_ROOTWIN",GDK_DRAG_PROTO_ROOTWIN,2,43853);
+CheckEnum("GDK_DRAG_PROTO_NONE",GDK_DRAG_PROTO_NONE,3,43854);
+CheckEnum("GDK_DRAG_PROTO_WIN32_DROPFILES",GDK_DRAG_PROTO_WIN32_DROPFILES,4,43855);
+CheckEnum("GDK_DRAG_PROTO_OLE2",GDK_DRAG_PROTO_OLE2,5,43856);
+CheckEnum("GDK_DRAG_PROTO_LOCAL",GDK_DRAG_PROTO_LOCAL,6,43857);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkDragProtocol,4, 12804, 2)
+CheckTypeSize(GdkDragProtocol,4, 12804, 2);
 #elif __x86_64__
-CheckTypeSize(GdkDragProtocol,4, 12804, 11)
+CheckTypeSize(GdkDragProtocol,4, 12804, 11);
 #elif __ia64__
-CheckTypeSize(GdkDragProtocol,4, 12804, 3)
+CheckTypeSize(GdkDragProtocol,4, 12804, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkDragProtocol,4, 12804, 6)
+CheckTypeSize(GdkDragProtocol,4, 12804, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkDragProtocol,4, 12804, 9)
+CheckTypeSize(GdkDragProtocol,4, 12804, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkDragProtocol,4, 12804, 10)
+CheckTypeSize(GdkDragProtocol,4, 12804, 10);
 #elif __s390x__
-CheckTypeSize(GdkDragProtocol,4, 12804, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12804,0);
-Msg("Find size of GdkDragProtocol (12804)\n");
+CheckTypeSize(GdkDragProtocol,4, 12804, 12);
+#elif 1
+CheckTypeSize(GdkDragProtocol,0, 12804, 1);
 #endif
 
 #if __i386__
@@ -7065,179 +7367,183 @@ CheckEnum("GDK_ACTION_MOVE",GDK_ACTION_MOVE,4,43865);
 CheckEnum("GDK_ACTION_LINK",GDK_ACTION_LINK,8,43866);
 CheckEnum("GDK_ACTION_PRIVATE",GDK_ACTION_PRIVATE,16,43867);
 CheckEnum("GDK_ACTION_ASK",GDK_ACTION_ASK,32,43868);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12805,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-495 (12805)\n");
+#elif 1
+CheckEnum("GDK_ACTION_DEFAULT",GDK_ACTION_DEFAULT,1,43863);
+CheckEnum("GDK_ACTION_COPY",GDK_ACTION_COPY,2,43864);
+CheckEnum("GDK_ACTION_MOVE",GDK_ACTION_MOVE,4,43865);
+CheckEnum("GDK_ACTION_LINK",GDK_ACTION_LINK,8,43866);
+CheckEnum("GDK_ACTION_PRIVATE",GDK_ACTION_PRIVATE,16,43867);
+CheckEnum("GDK_ACTION_ASK",GDK_ACTION_ASK,32,43868);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkDragAction,4, 12806, 2)
+CheckTypeSize(GdkDragAction,4, 12806, 2);
 #elif __x86_64__
-CheckTypeSize(GdkDragAction,4, 12806, 11)
+CheckTypeSize(GdkDragAction,4, 12806, 11);
 #elif __ia64__
-CheckTypeSize(GdkDragAction,4, 12806, 3)
+CheckTypeSize(GdkDragAction,4, 12806, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkDragAction,4, 12806, 6)
+CheckTypeSize(GdkDragAction,4, 12806, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkDragAction,4, 12806, 9)
+CheckTypeSize(GdkDragAction,4, 12806, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkDragAction,4, 12806, 10)
+CheckTypeSize(GdkDragAction,4, 12806, 10);
 #elif __s390x__
-CheckTypeSize(GdkDragAction,4, 12806, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12806,0);
-Msg("Find size of GdkDragAction (12806)\n");
+CheckTypeSize(GdkDragAction,4, 12806, 12);
+#elif 1
+CheckTypeSize(GdkDragAction,0, 12806, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkDragContext,52, 12807, 2)
+CheckTypeSize(GdkDragContext,52, 12807, 2);
 #elif __x86_64__
-CheckTypeSize(GdkDragContext,80, 12807, 11)
+CheckTypeSize(GdkDragContext,80, 12807, 11);
 #elif __ia64__
-CheckTypeSize(GdkDragContext,80, 12807, 3)
+CheckTypeSize(GdkDragContext,80, 12807, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkDragContext,52, 12807, 6)
+CheckTypeSize(GdkDragContext,52, 12807, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkDragContext,80, 12807, 9)
+CheckTypeSize(GdkDragContext,80, 12807, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkDragContext,52, 12807, 10)
+CheckTypeSize(GdkDragContext,52, 12807, 10);
 #elif __s390x__
-CheckTypeSize(GdkDragContext,80, 12807, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12807,0);
-Msg("Find size of GdkDragContext (12807)\n");
+CheckTypeSize(GdkDragContext,80, 12807, 12);
+#elif 1
+CheckTypeSize(GdkDragContext,0, 12807, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkDragContext *,4, 12808, 2)
+CheckTypeSize(GdkDragContext *,4, 12808, 2);
 #elif __x86_64__
-CheckTypeSize(GdkDragContext *,8, 12808, 11)
+CheckTypeSize(GdkDragContext *,8, 12808, 11);
 #elif __ia64__
-CheckTypeSize(GdkDragContext *,8, 12808, 3)
+CheckTypeSize(GdkDragContext *,8, 12808, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkDragContext *,4, 12808, 6)
+CheckTypeSize(GdkDragContext *,4, 12808, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkDragContext *,8, 12808, 9)
+CheckTypeSize(GdkDragContext *,8, 12808, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkDragContext *,4, 12808, 10)
+CheckTypeSize(GdkDragContext *,4, 12808, 10);
 #elif __s390x__
-CheckTypeSize(GdkDragContext *,8, 12808, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12808,0);
-Msg("Find size of GdkDragContext * (12808)\n");
+CheckTypeSize(GdkDragContext *,8, 12808, 12);
+#elif 1
+CheckTypeSize(GdkDragContext *,0, 12808, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(gshort,2, 12809, 2)
+CheckTypeSize(gshort,2, 12809, 2);
 #elif __x86_64__
-CheckTypeSize(gshort,2, 12809, 11)
+CheckTypeSize(gshort,2, 12809, 11);
 #elif __ia64__
-CheckTypeSize(gshort,2, 12809, 3)
+CheckTypeSize(gshort,2, 12809, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(gshort,2, 12809, 6)
+CheckTypeSize(gshort,2, 12809, 6);
 #elif __powerpc64__
-CheckTypeSize(gshort,2, 12809, 9)
+CheckTypeSize(gshort,2, 12809, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(gshort,2, 12809, 10)
+CheckTypeSize(gshort,2, 12809, 10);
 #elif __s390x__
-CheckTypeSize(gshort,2, 12809, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12809,0);
-Msg("Find size of gshort (12809)\n");
+CheckTypeSize(gshort,2, 12809, 12);
+#elif 1
+CheckTypeSize(gshort,0, 12809, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkEventDND,24, 12810, 2)
+CheckTypeSize(GdkEventDND,24, 12810, 2);
 #elif __x86_64__
-CheckTypeSize(GdkEventDND,40, 12810, 11)
+CheckTypeSize(GdkEventDND,40, 12810, 11);
 #elif __ia64__
-CheckTypeSize(GdkEventDND,40, 12810, 3)
+CheckTypeSize(GdkEventDND,40, 12810, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkEventDND,24, 12810, 6)
+CheckTypeSize(GdkEventDND,24, 12810, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkEventDND,40, 12810, 9)
+CheckTypeSize(GdkEventDND,40, 12810, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkEventDND,24, 12810, 10)
+CheckTypeSize(GdkEventDND,24, 12810, 10);
 #elif __s390x__
-CheckTypeSize(GdkEventDND,40, 12810, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12810,0);
-Msg("Find size of GdkEventDND (12810)\n");
+CheckTypeSize(GdkEventDND,40, 12810, 12);
+#elif 1
+CheckTypeSize(GdkEventDND,0, 12810, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkEventWindowState,20, 12811, 2)
-CheckMemberSize(struct _GdkEventWindowState,window,4,2,43880)
-CheckOffset(struct _GdkEventWindowState,window,4,2,43880)
-CheckMemberSize(struct _GdkEventWindowState,send_event,1,2,43881)
-CheckOffset(struct _GdkEventWindowState,send_event,8,2,43881)
-CheckMemberSize(struct _GdkEventWindowState,changed_mask,4,2,43889)
-CheckOffset(struct _GdkEventWindowState,changed_mask,12,2,43889)
-CheckMemberSize(struct _GdkEventWindowState,new_window_state,4,2,43890)
-CheckOffset(struct _GdkEventWindowState,new_window_state,16,2,43890)
+CheckTypeSize(struct _GdkEventWindowState,20, 12811, 2);
+CheckMemberSize(struct _GdkEventWindowState,window,4,2,43880);
+CheckOffset(struct _GdkEventWindowState,window,4,2,43880);
+CheckMemberSize(struct _GdkEventWindowState,send_event,1,2,43881);
+CheckOffset(struct _GdkEventWindowState,send_event,8,2,43881);
+CheckMemberSize(struct _GdkEventWindowState,changed_mask,4,2,43889);
+CheckOffset(struct _GdkEventWindowState,changed_mask,12,2,43889);
+CheckMemberSize(struct _GdkEventWindowState,new_window_state,4,2,43890);
+CheckOffset(struct _GdkEventWindowState,new_window_state,16,2,43890);
 #elif __x86_64__
-CheckTypeSize(struct _GdkEventWindowState,32, 12811, 11)
-CheckMemberSize(struct _GdkEventWindowState,window,8,11,43880)
-CheckOffset(struct _GdkEventWindowState,window,8,11,43880)
-CheckMemberSize(struct _GdkEventWindowState,send_event,1,11,43881)
-CheckOffset(struct _GdkEventWindowState,send_event,16,11,43881)
-CheckMemberSize(struct _GdkEventWindowState,changed_mask,4,11,43889)
-CheckOffset(struct _GdkEventWindowState,changed_mask,20,11,43889)
-CheckMemberSize(struct _GdkEventWindowState,new_window_state,4,11,43890)
-CheckOffset(struct _GdkEventWindowState,new_window_state,24,11,43890)
+CheckTypeSize(struct _GdkEventWindowState,32, 12811, 11);
+CheckMemberSize(struct _GdkEventWindowState,window,8,11,43880);
+CheckOffset(struct _GdkEventWindowState,window,8,11,43880);
+CheckMemberSize(struct _GdkEventWindowState,send_event,1,11,43881);
+CheckOffset(struct _GdkEventWindowState,send_event,16,11,43881);
+CheckMemberSize(struct _GdkEventWindowState,changed_mask,4,11,43889);
+CheckOffset(struct _GdkEventWindowState,changed_mask,20,11,43889);
+CheckMemberSize(struct _GdkEventWindowState,new_window_state,4,11,43890);
+CheckOffset(struct _GdkEventWindowState,new_window_state,24,11,43890);
 #elif __ia64__
-CheckTypeSize(struct _GdkEventWindowState,32, 12811, 3)
-CheckMemberSize(struct _GdkEventWindowState,window,8,3,43880)
-CheckOffset(struct _GdkEventWindowState,window,8,3,43880)
-CheckMemberSize(struct _GdkEventWindowState,send_event,1,3,43881)
-CheckOffset(struct _GdkEventWindowState,send_event,16,3,43881)
-CheckMemberSize(struct _GdkEventWindowState,changed_mask,4,3,43889)
-CheckOffset(struct _GdkEventWindowState,changed_mask,20,3,43889)
-CheckMemberSize(struct _GdkEventWindowState,new_window_state,4,3,43890)
-CheckOffset(struct _GdkEventWindowState,new_window_state,24,3,43890)
+CheckTypeSize(struct _GdkEventWindowState,32, 12811, 3);
+CheckMemberSize(struct _GdkEventWindowState,window,8,3,43880);
+CheckOffset(struct _GdkEventWindowState,window,8,3,43880);
+CheckMemberSize(struct _GdkEventWindowState,send_event,1,3,43881);
+CheckOffset(struct _GdkEventWindowState,send_event,16,3,43881);
+CheckMemberSize(struct _GdkEventWindowState,changed_mask,4,3,43889);
+CheckOffset(struct _GdkEventWindowState,changed_mask,20,3,43889);
+CheckMemberSize(struct _GdkEventWindowState,new_window_state,4,3,43890);
+CheckOffset(struct _GdkEventWindowState,new_window_state,24,3,43890);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkEventWindowState,20, 12811, 6)
-CheckMemberSize(struct _GdkEventWindowState,window,4,6,43880)
-CheckOffset(struct _GdkEventWindowState,window,4,6,43880)
-CheckMemberSize(struct _GdkEventWindowState,send_event,1,6,43881)
-CheckOffset(struct _GdkEventWindowState,send_event,8,6,43881)
-CheckMemberSize(struct _GdkEventWindowState,changed_mask,4,6,43889)
-CheckOffset(struct _GdkEventWindowState,changed_mask,12,6,43889)
-CheckMemberSize(struct _GdkEventWindowState,new_window_state,4,6,43890)
-CheckOffset(struct _GdkEventWindowState,new_window_state,16,6,43890)
+CheckTypeSize(struct _GdkEventWindowState,20, 12811, 6);
+CheckMemberSize(struct _GdkEventWindowState,window,4,6,43880);
+CheckOffset(struct _GdkEventWindowState,window,4,6,43880);
+CheckMemberSize(struct _GdkEventWindowState,send_event,1,6,43881);
+CheckOffset(struct _GdkEventWindowState,send_event,8,6,43881);
+CheckMemberSize(struct _GdkEventWindowState,changed_mask,4,6,43889);
+CheckOffset(struct _GdkEventWindowState,changed_mask,12,6,43889);
+CheckMemberSize(struct _GdkEventWindowState,new_window_state,4,6,43890);
+CheckOffset(struct _GdkEventWindowState,new_window_state,16,6,43890);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkEventWindowState,32, 12811, 9)
-CheckMemberSize(struct _GdkEventWindowState,window,8,9,43880)
-CheckOffset(struct _GdkEventWindowState,window,8,9,43880)
-CheckMemberSize(struct _GdkEventWindowState,send_event,1,9,43881)
-CheckOffset(struct _GdkEventWindowState,send_event,16,9,43881)
-CheckMemberSize(struct _GdkEventWindowState,changed_mask,4,9,43889)
-CheckOffset(struct _GdkEventWindowState,changed_mask,20,9,43889)
-CheckMemberSize(struct _GdkEventWindowState,new_window_state,4,9,43890)
-CheckOffset(struct _GdkEventWindowState,new_window_state,24,9,43890)
+CheckTypeSize(struct _GdkEventWindowState,32, 12811, 9);
+CheckMemberSize(struct _GdkEventWindowState,window,8,9,43880);
+CheckOffset(struct _GdkEventWindowState,window,8,9,43880);
+CheckMemberSize(struct _GdkEventWindowState,send_event,1,9,43881);
+CheckOffset(struct _GdkEventWindowState,send_event,16,9,43881);
+CheckMemberSize(struct _GdkEventWindowState,changed_mask,4,9,43889);
+CheckOffset(struct _GdkEventWindowState,changed_mask,20,9,43889);
+CheckMemberSize(struct _GdkEventWindowState,new_window_state,4,9,43890);
+CheckOffset(struct _GdkEventWindowState,new_window_state,24,9,43890);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkEventWindowState,20, 12811, 10)
-CheckMemberSize(struct _GdkEventWindowState,window,4,10,43880)
-CheckOffset(struct _GdkEventWindowState,window,4,10,43880)
-CheckMemberSize(struct _GdkEventWindowState,send_event,1,10,43881)
-CheckOffset(struct _GdkEventWindowState,send_event,8,10,43881)
-CheckMemberSize(struct _GdkEventWindowState,changed_mask,4,10,43889)
-CheckOffset(struct _GdkEventWindowState,changed_mask,12,10,43889)
-CheckMemberSize(struct _GdkEventWindowState,new_window_state,4,10,43890)
-CheckOffset(struct _GdkEventWindowState,new_window_state,16,10,43890)
+CheckTypeSize(struct _GdkEventWindowState,20, 12811, 10);
+CheckMemberSize(struct _GdkEventWindowState,window,4,10,43880);
+CheckOffset(struct _GdkEventWindowState,window,4,10,43880);
+CheckMemberSize(struct _GdkEventWindowState,send_event,1,10,43881);
+CheckOffset(struct _GdkEventWindowState,send_event,8,10,43881);
+CheckMemberSize(struct _GdkEventWindowState,changed_mask,4,10,43889);
+CheckOffset(struct _GdkEventWindowState,changed_mask,12,10,43889);
+CheckMemberSize(struct _GdkEventWindowState,new_window_state,4,10,43890);
+CheckOffset(struct _GdkEventWindowState,new_window_state,16,10,43890);
 #elif __s390x__
-CheckTypeSize(struct _GdkEventWindowState,32, 12811, 12)
-CheckMemberSize(struct _GdkEventWindowState,window,8,12,43880)
-CheckOffset(struct _GdkEventWindowState,window,8,12,43880)
-CheckMemberSize(struct _GdkEventWindowState,send_event,1,12,43881)
-CheckOffset(struct _GdkEventWindowState,send_event,16,12,43881)
-CheckMemberSize(struct _GdkEventWindowState,changed_mask,4,12,43889)
-CheckOffset(struct _GdkEventWindowState,changed_mask,20,12,43889)
-CheckMemberSize(struct _GdkEventWindowState,new_window_state,4,12,43890)
-CheckOffset(struct _GdkEventWindowState,new_window_state,24,12,43890)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12811,0);
-Msg("Find size of _GdkEventWindowState (12811)\n");
+CheckTypeSize(struct _GdkEventWindowState,32, 12811, 12);
+CheckMemberSize(struct _GdkEventWindowState,window,8,12,43880);
+CheckOffset(struct _GdkEventWindowState,window,8,12,43880);
+CheckMemberSize(struct _GdkEventWindowState,send_event,1,12,43881);
+CheckOffset(struct _GdkEventWindowState,send_event,16,12,43881);
+CheckMemberSize(struct _GdkEventWindowState,changed_mask,4,12,43889);
+CheckOffset(struct _GdkEventWindowState,changed_mask,20,12,43889);
+CheckMemberSize(struct _GdkEventWindowState,new_window_state,4,12,43890);
+CheckOffset(struct _GdkEventWindowState,new_window_state,24,12,43890);
+#elif 1
+CheckTypeSize(struct _GdkEventWindowState,0, 12811, 1);
+Msg("Missing member data for _GdkEventWindowState on All\n");
+CheckOffset(struct _GdkEventWindowState,type,0,1,43879);
+CheckOffset(struct _GdkEventWindowState,window,0,1,43880);
+CheckOffset(struct _GdkEventWindowState,send_event,0,1,43881);
+CheckOffset(struct _GdkEventWindowState,changed_mask,0,1,43889);
+CheckOffset(struct _GdkEventWindowState,new_window_state,0,1,43890);
 #endif
 
 #if __i386__
@@ -7296,122 +7602,130 @@ CheckEnum("GDK_WINDOW_STATE_STICKY",GDK_WINDOW_STATE_STICKY,8,43885);
 CheckEnum("GDK_WINDOW_STATE_FULLSCREEN",GDK_WINDOW_STATE_FULLSCREEN,16,43886);
 CheckEnum("GDK_WINDOW_STATE_ABOVE",GDK_WINDOW_STATE_ABOVE,32,43887);
 CheckEnum("GDK_WINDOW_STATE_BELOW",GDK_WINDOW_STATE_BELOW,64,43888);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12812,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-507 (12812)\n");
+#elif 1
+CheckEnum("GDK_WINDOW_STATE_WITHDRAWN",GDK_WINDOW_STATE_WITHDRAWN,1,43882);
+CheckEnum("GDK_WINDOW_STATE_ICONIFIED",GDK_WINDOW_STATE_ICONIFIED,2,43883);
+CheckEnum("GDK_WINDOW_STATE_MAXIMIZED",GDK_WINDOW_STATE_MAXIMIZED,4,43884);
+CheckEnum("GDK_WINDOW_STATE_STICKY",GDK_WINDOW_STATE_STICKY,8,43885);
+CheckEnum("GDK_WINDOW_STATE_FULLSCREEN",GDK_WINDOW_STATE_FULLSCREEN,16,43886);
+CheckEnum("GDK_WINDOW_STATE_ABOVE",GDK_WINDOW_STATE_ABOVE,32,43887);
+CheckEnum("GDK_WINDOW_STATE_BELOW",GDK_WINDOW_STATE_BELOW,64,43888);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkWindowState,4, 12813, 2)
+CheckTypeSize(GdkWindowState,4, 12813, 2);
 #elif __x86_64__
-CheckTypeSize(GdkWindowState,4, 12813, 11)
+CheckTypeSize(GdkWindowState,4, 12813, 11);
 #elif __ia64__
-CheckTypeSize(GdkWindowState,4, 12813, 3)
+CheckTypeSize(GdkWindowState,4, 12813, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkWindowState,4, 12813, 6)
+CheckTypeSize(GdkWindowState,4, 12813, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkWindowState,4, 12813, 9)
+CheckTypeSize(GdkWindowState,4, 12813, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkWindowState,4, 12813, 10)
+CheckTypeSize(GdkWindowState,4, 12813, 10);
 #elif __s390x__
-CheckTypeSize(GdkWindowState,4, 12813, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12813,0);
-Msg("Find size of GdkWindowState (12813)\n");
+CheckTypeSize(GdkWindowState,4, 12813, 12);
+#elif 1
+CheckTypeSize(GdkWindowState,0, 12813, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkEventWindowState,20, 12814, 2)
+CheckTypeSize(GdkEventWindowState,20, 12814, 2);
 #elif __x86_64__
-CheckTypeSize(GdkEventWindowState,32, 12814, 11)
+CheckTypeSize(GdkEventWindowState,32, 12814, 11);
 #elif __ia64__
-CheckTypeSize(GdkEventWindowState,32, 12814, 3)
+CheckTypeSize(GdkEventWindowState,32, 12814, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkEventWindowState,20, 12814, 6)
+CheckTypeSize(GdkEventWindowState,20, 12814, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkEventWindowState,32, 12814, 9)
+CheckTypeSize(GdkEventWindowState,32, 12814, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkEventWindowState,20, 12814, 10)
+CheckTypeSize(GdkEventWindowState,20, 12814, 10);
 #elif __s390x__
-CheckTypeSize(GdkEventWindowState,32, 12814, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12814,0);
-Msg("Find size of GdkEventWindowState (12814)\n");
+CheckTypeSize(GdkEventWindowState,32, 12814, 12);
+#elif 1
+CheckTypeSize(GdkEventWindowState,0, 12814, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkEventSetting,20, 12815, 2)
-CheckMemberSize(struct _GdkEventSetting,window,4,2,43893)
-CheckOffset(struct _GdkEventSetting,window,4,2,43893)
-CheckMemberSize(struct _GdkEventSetting,send_event,1,2,43894)
-CheckOffset(struct _GdkEventSetting,send_event,8,2,43894)
-CheckMemberSize(struct _GdkEventSetting,action,4,2,43898)
-CheckOffset(struct _GdkEventSetting,action,12,2,43898)
-CheckMemberSize(struct _GdkEventSetting,name,4,2,43899)
-CheckOffset(struct _GdkEventSetting,name,16,2,43899)
+CheckTypeSize(struct _GdkEventSetting,20, 12815, 2);
+CheckMemberSize(struct _GdkEventSetting,window,4,2,43893);
+CheckOffset(struct _GdkEventSetting,window,4,2,43893);
+CheckMemberSize(struct _GdkEventSetting,send_event,1,2,43894);
+CheckOffset(struct _GdkEventSetting,send_event,8,2,43894);
+CheckMemberSize(struct _GdkEventSetting,action,4,2,43898);
+CheckOffset(struct _GdkEventSetting,action,12,2,43898);
+CheckMemberSize(struct _GdkEventSetting,name,4,2,43899);
+CheckOffset(struct _GdkEventSetting,name,16,2,43899);
 #elif __x86_64__
-CheckTypeSize(struct _GdkEventSetting,32, 12815, 11)
-CheckMemberSize(struct _GdkEventSetting,window,8,11,43893)
-CheckOffset(struct _GdkEventSetting,window,8,11,43893)
-CheckMemberSize(struct _GdkEventSetting,send_event,1,11,43894)
-CheckOffset(struct _GdkEventSetting,send_event,16,11,43894)
-CheckMemberSize(struct _GdkEventSetting,action,4,11,43898)
-CheckOffset(struct _GdkEventSetting,action,20,11,43898)
-CheckMemberSize(struct _GdkEventSetting,name,8,11,43899)
-CheckOffset(struct _GdkEventSetting,name,24,11,43899)
+CheckTypeSize(struct _GdkEventSetting,32, 12815, 11);
+CheckMemberSize(struct _GdkEventSetting,window,8,11,43893);
+CheckOffset(struct _GdkEventSetting,window,8,11,43893);
+CheckMemberSize(struct _GdkEventSetting,send_event,1,11,43894);
+CheckOffset(struct _GdkEventSetting,send_event,16,11,43894);
+CheckMemberSize(struct _GdkEventSetting,action,4,11,43898);
+CheckOffset(struct _GdkEventSetting,action,20,11,43898);
+CheckMemberSize(struct _GdkEventSetting,name,8,11,43899);
+CheckOffset(struct _GdkEventSetting,name,24,11,43899);
 #elif __ia64__
-CheckTypeSize(struct _GdkEventSetting,32, 12815, 3)
-CheckMemberSize(struct _GdkEventSetting,window,8,3,43893)
-CheckOffset(struct _GdkEventSetting,window,8,3,43893)
-CheckMemberSize(struct _GdkEventSetting,send_event,1,3,43894)
-CheckOffset(struct _GdkEventSetting,send_event,16,3,43894)
-CheckMemberSize(struct _GdkEventSetting,action,4,3,43898)
-CheckOffset(struct _GdkEventSetting,action,20,3,43898)
-CheckMemberSize(struct _GdkEventSetting,name,8,3,43899)
-CheckOffset(struct _GdkEventSetting,name,24,3,43899)
+CheckTypeSize(struct _GdkEventSetting,32, 12815, 3);
+CheckMemberSize(struct _GdkEventSetting,window,8,3,43893);
+CheckOffset(struct _GdkEventSetting,window,8,3,43893);
+CheckMemberSize(struct _GdkEventSetting,send_event,1,3,43894);
+CheckOffset(struct _GdkEventSetting,send_event,16,3,43894);
+CheckMemberSize(struct _GdkEventSetting,action,4,3,43898);
+CheckOffset(struct _GdkEventSetting,action,20,3,43898);
+CheckMemberSize(struct _GdkEventSetting,name,8,3,43899);
+CheckOffset(struct _GdkEventSetting,name,24,3,43899);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkEventSetting,20, 12815, 6)
-CheckMemberSize(struct _GdkEventSetting,window,4,6,43893)
-CheckOffset(struct _GdkEventSetting,window,4,6,43893)
-CheckMemberSize(struct _GdkEventSetting,send_event,1,6,43894)
-CheckOffset(struct _GdkEventSetting,send_event,8,6,43894)
-CheckMemberSize(struct _GdkEventSetting,action,4,6,43898)
-CheckOffset(struct _GdkEventSetting,action,12,6,43898)
-CheckMemberSize(struct _GdkEventSetting,name,4,6,43899)
-CheckOffset(struct _GdkEventSetting,name,16,6,43899)
+CheckTypeSize(struct _GdkEventSetting,20, 12815, 6);
+CheckMemberSize(struct _GdkEventSetting,window,4,6,43893);
+CheckOffset(struct _GdkEventSetting,window,4,6,43893);
+CheckMemberSize(struct _GdkEventSetting,send_event,1,6,43894);
+CheckOffset(struct _GdkEventSetting,send_event,8,6,43894);
+CheckMemberSize(struct _GdkEventSetting,action,4,6,43898);
+CheckOffset(struct _GdkEventSetting,action,12,6,43898);
+CheckMemberSize(struct _GdkEventSetting,name,4,6,43899);
+CheckOffset(struct _GdkEventSetting,name,16,6,43899);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkEventSetting,32, 12815, 9)
-CheckMemberSize(struct _GdkEventSetting,window,8,9,43893)
-CheckOffset(struct _GdkEventSetting,window,8,9,43893)
-CheckMemberSize(struct _GdkEventSetting,send_event,1,9,43894)
-CheckOffset(struct _GdkEventSetting,send_event,16,9,43894)
-CheckMemberSize(struct _GdkEventSetting,action,4,9,43898)
-CheckOffset(struct _GdkEventSetting,action,20,9,43898)
-CheckMemberSize(struct _GdkEventSetting,name,8,9,43899)
-CheckOffset(struct _GdkEventSetting,name,24,9,43899)
+CheckTypeSize(struct _GdkEventSetting,32, 12815, 9);
+CheckMemberSize(struct _GdkEventSetting,window,8,9,43893);
+CheckOffset(struct _GdkEventSetting,window,8,9,43893);
+CheckMemberSize(struct _GdkEventSetting,send_event,1,9,43894);
+CheckOffset(struct _GdkEventSetting,send_event,16,9,43894);
+CheckMemberSize(struct _GdkEventSetting,action,4,9,43898);
+CheckOffset(struct _GdkEventSetting,action,20,9,43898);
+CheckMemberSize(struct _GdkEventSetting,name,8,9,43899);
+CheckOffset(struct _GdkEventSetting,name,24,9,43899);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkEventSetting,20, 12815, 10)
-CheckMemberSize(struct _GdkEventSetting,window,4,10,43893)
-CheckOffset(struct _GdkEventSetting,window,4,10,43893)
-CheckMemberSize(struct _GdkEventSetting,send_event,1,10,43894)
-CheckOffset(struct _GdkEventSetting,send_event,8,10,43894)
-CheckMemberSize(struct _GdkEventSetting,action,4,10,43898)
-CheckOffset(struct _GdkEventSetting,action,12,10,43898)
-CheckMemberSize(struct _GdkEventSetting,name,4,10,43899)
-CheckOffset(struct _GdkEventSetting,name,16,10,43899)
+CheckTypeSize(struct _GdkEventSetting,20, 12815, 10);
+CheckMemberSize(struct _GdkEventSetting,window,4,10,43893);
+CheckOffset(struct _GdkEventSetting,window,4,10,43893);
+CheckMemberSize(struct _GdkEventSetting,send_event,1,10,43894);
+CheckOffset(struct _GdkEventSetting,send_event,8,10,43894);
+CheckMemberSize(struct _GdkEventSetting,action,4,10,43898);
+CheckOffset(struct _GdkEventSetting,action,12,10,43898);
+CheckMemberSize(struct _GdkEventSetting,name,4,10,43899);
+CheckOffset(struct _GdkEventSetting,name,16,10,43899);
 #elif __s390x__
-CheckTypeSize(struct _GdkEventSetting,32, 12815, 12)
-CheckMemberSize(struct _GdkEventSetting,window,8,12,43893)
-CheckOffset(struct _GdkEventSetting,window,8,12,43893)
-CheckMemberSize(struct _GdkEventSetting,send_event,1,12,43894)
-CheckOffset(struct _GdkEventSetting,send_event,16,12,43894)
-CheckMemberSize(struct _GdkEventSetting,action,4,12,43898)
-CheckOffset(struct _GdkEventSetting,action,20,12,43898)
-CheckMemberSize(struct _GdkEventSetting,name,8,12,43899)
-CheckOffset(struct _GdkEventSetting,name,24,12,43899)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12815,0);
-Msg("Find size of _GdkEventSetting (12815)\n");
+CheckTypeSize(struct _GdkEventSetting,32, 12815, 12);
+CheckMemberSize(struct _GdkEventSetting,window,8,12,43893);
+CheckOffset(struct _GdkEventSetting,window,8,12,43893);
+CheckMemberSize(struct _GdkEventSetting,send_event,1,12,43894);
+CheckOffset(struct _GdkEventSetting,send_event,16,12,43894);
+CheckMemberSize(struct _GdkEventSetting,action,4,12,43898);
+CheckOffset(struct _GdkEventSetting,action,20,12,43898);
+CheckMemberSize(struct _GdkEventSetting,name,8,12,43899);
+CheckOffset(struct _GdkEventSetting,name,24,12,43899);
+#elif 1
+CheckTypeSize(struct _GdkEventSetting,0, 12815, 1);
+Msg("Missing member data for _GdkEventSetting on All\n");
+CheckOffset(struct _GdkEventSetting,type,0,1,43892);
+CheckOffset(struct _GdkEventSetting,window,0,1,43893);
+CheckOffset(struct _GdkEventSetting,send_event,0,1,43894);
+CheckOffset(struct _GdkEventSetting,action,0,1,43898);
+CheckOffset(struct _GdkEventSetting,name,0,1,43899);
 #endif
 
 #if __i386__
@@ -7442,192 +7756,82 @@ CheckEnum("GDK_SETTING_ACTION_DELETED",GDK_SETTING_ACTION_DELETED,2,43897);
 CheckEnum("GDK_SETTING_ACTION_NEW",GDK_SETTING_ACTION_NEW,0,43895);
 CheckEnum("GDK_SETTING_ACTION_CHANGED",GDK_SETTING_ACTION_CHANGED,1,43896);
 CheckEnum("GDK_SETTING_ACTION_DELETED",GDK_SETTING_ACTION_DELETED,2,43897);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12816,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-508 (12816)\n");
+#elif 1
+CheckEnum("GDK_SETTING_ACTION_NEW",GDK_SETTING_ACTION_NEW,0,43895);
+CheckEnum("GDK_SETTING_ACTION_CHANGED",GDK_SETTING_ACTION_CHANGED,1,43896);
+CheckEnum("GDK_SETTING_ACTION_DELETED",GDK_SETTING_ACTION_DELETED,2,43897);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkSettingAction,4, 12817, 2)
+CheckTypeSize(GdkSettingAction,4, 12817, 2);
 #elif __x86_64__
-CheckTypeSize(GdkSettingAction,4, 12817, 11)
+CheckTypeSize(GdkSettingAction,4, 12817, 11);
 #elif __ia64__
-CheckTypeSize(GdkSettingAction,4, 12817, 3)
+CheckTypeSize(GdkSettingAction,4, 12817, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkSettingAction,4, 12817, 6)
+CheckTypeSize(GdkSettingAction,4, 12817, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkSettingAction,4, 12817, 9)
+CheckTypeSize(GdkSettingAction,4, 12817, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkSettingAction,4, 12817, 10)
+CheckTypeSize(GdkSettingAction,4, 12817, 10);
 #elif __s390x__
-CheckTypeSize(GdkSettingAction,4, 12817, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12817,0);
-Msg("Find size of GdkSettingAction (12817)\n");
+CheckTypeSize(GdkSettingAction,4, 12817, 12);
+#elif 1
+CheckTypeSize(GdkSettingAction,0, 12817, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkEventSetting,20, 12818, 2)
+CheckTypeSize(GdkEventSetting,20, 12818, 2);
 #elif __x86_64__
-CheckTypeSize(GdkEventSetting,32, 12818, 11)
+CheckTypeSize(GdkEventSetting,32, 12818, 11);
 #elif __ia64__
-CheckTypeSize(GdkEventSetting,32, 12818, 3)
+CheckTypeSize(GdkEventSetting,32, 12818, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkEventSetting,20, 12818, 6)
+CheckTypeSize(GdkEventSetting,20, 12818, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkEventSetting,32, 12818, 9)
+CheckTypeSize(GdkEventSetting,32, 12818, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkEventSetting,20, 12818, 10)
+CheckTypeSize(GdkEventSetting,20, 12818, 10);
 #elif __s390x__
-CheckTypeSize(GdkEventSetting,32, 12818, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12818,0);
-Msg("Find size of GdkEventSetting (12818)\n");
+CheckTypeSize(GdkEventSetting,32, 12818, 12);
+#elif 1
+CheckTypeSize(GdkEventSetting,0, 12818, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkEvent,68, 12819, 2)
+CheckTypeSize(GdkEvent,68, 12819, 2);
 #elif __x86_64__
-CheckTypeSize(GdkEvent,88, 12819, 11)
+CheckTypeSize(GdkEvent,88, 12819, 11);
 #elif __ia64__
-CheckTypeSize(GdkEvent,88, 12819, 3)
+CheckTypeSize(GdkEvent,88, 12819, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkEvent,72, 12819, 6)
+CheckTypeSize(GdkEvent,72, 12819, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkEvent,88, 12819, 9)
+CheckTypeSize(GdkEvent,88, 12819, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkEvent,72, 12819, 10)
+CheckTypeSize(GdkEvent,72, 12819, 10);
 #elif __s390x__
-CheckTypeSize(GdkEvent,88, 12819, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12819,0);
-Msg("Find size of GdkEvent (12819)\n");
+CheckTypeSize(GdkEvent,88, 12819, 12);
+#elif 1
+CheckTypeSize(GdkEvent,0, 12819, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkEvent *,4, 12820, 2)
+CheckTypeSize(GdkEvent *,4, 12820, 2);
 #elif __x86_64__
-CheckTypeSize(GdkEvent *,8, 12820, 11)
+CheckTypeSize(GdkEvent *,8, 12820, 11);
 #elif __ia64__
-CheckTypeSize(GdkEvent *,8, 12820, 3)
+CheckTypeSize(GdkEvent *,8, 12820, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkEvent *,4, 12820, 6)
+CheckTypeSize(GdkEvent *,4, 12820, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkEvent *,8, 12820, 9)
+CheckTypeSize(GdkEvent *,8, 12820, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkEvent *,4, 12820, 10)
+CheckTypeSize(GdkEvent *,4, 12820, 10);
 #elif __s390x__
-CheckTypeSize(GdkEvent *,8, 12820, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12820,0);
-Msg("Find size of GdkEvent * (12820)\n");
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12821,0);
-Msg("Find size of fptr_gdk_29 (12821)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GdkFilterFunc,4, 12822, 2)
-#elif __x86_64__
-CheckTypeSize(GdkFilterFunc,8, 12822, 11)
-#elif __ia64__
-CheckTypeSize(GdkFilterFunc,8, 12822, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkFilterFunc,4, 12822, 6)
-#elif __powerpc64__
-CheckTypeSize(GdkFilterFunc,8, 12822, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkFilterFunc,4, 12822, 10)
-#elif __s390x__
-CheckTypeSize(GdkFilterFunc,8, 12822, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12822,0);
-Msg("Find size of GdkFilterFunc (12822)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GdkPixmap,12, 12823, 2)
-#elif __x86_64__
-CheckTypeSize(GdkPixmap,24, 12823, 11)
-#elif __ia64__
-CheckTypeSize(GdkPixmap,24, 12823, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixmap,12, 12823, 6)
-#elif __powerpc64__
-CheckTypeSize(GdkPixmap,24, 12823, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixmap,12, 12823, 10)
-#elif __s390x__
-CheckTypeSize(GdkPixmap,24, 12823, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12823,0);
-Msg("Find size of GdkPixmap (12823)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GdkPixmap *,4, 12824, 2)
-#elif __x86_64__
-CheckTypeSize(GdkPixmap *,8, 12824, 11)
-#elif __ia64__
-CheckTypeSize(GdkPixmap *,8, 12824, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixmap *,4, 12824, 6)
-#elif __powerpc64__
-CheckTypeSize(GdkPixmap *,8, 12824, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixmap *,4, 12824, 10)
-#elif __s390x__
-CheckTypeSize(GdkPixmap *,8, 12824, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12824,0);
-Msg("Find size of GdkPixmap * (12824)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GdkBitmap,12, 12825, 2)
-#elif __x86_64__
-CheckTypeSize(GdkBitmap,24, 12825, 11)
-#elif __ia64__
-CheckTypeSize(GdkBitmap,24, 12825, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkBitmap,12, 12825, 6)
-#elif __powerpc64__
-CheckTypeSize(GdkBitmap,24, 12825, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkBitmap,12, 12825, 10)
-#elif __s390x__
-CheckTypeSize(GdkBitmap,24, 12825, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12825,0);
-Msg("Find size of GdkBitmap (12825)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GdkBitmap *,4, 12826, 2)
-#elif __x86_64__
-CheckTypeSize(GdkBitmap *,8, 12826, 11)
-#elif __ia64__
-CheckTypeSize(GdkBitmap *,8, 12826, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkBitmap *,4, 12826, 6)
-#elif __powerpc64__
-CheckTypeSize(GdkBitmap *,8, 12826, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkBitmap *,4, 12826, 10)
-#elif __s390x__
-CheckTypeSize(GdkBitmap *,8, 12826, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12826,0);
-Msg("Find size of GdkBitmap * (12826)\n");
+CheckTypeSize(GdkEvent *,8, 12820, 12);
+#elif 1
+CheckTypeSize(GdkEvent *,0, 12820, 1);
 #endif
 
 #if __i386__
@@ -7637,28 +7841,97 @@ Msg("Find size of GdkBitmap * (12826)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12827,0);
-Msg("Find size of GdkBitmap * * (12827)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(const GdkColor,12, 12828, 2)
+CheckTypeSize(GdkFilterFunc,4, 12822, 2);
 #elif __x86_64__
-CheckTypeSize(const GdkColor,12, 12828, 11)
+CheckTypeSize(GdkFilterFunc,8, 12822, 11);
 #elif __ia64__
-CheckTypeSize(const GdkColor,12, 12828, 3)
+CheckTypeSize(GdkFilterFunc,8, 12822, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(const GdkColor,12, 12828, 6)
+CheckTypeSize(GdkFilterFunc,4, 12822, 6);
 #elif __powerpc64__
-CheckTypeSize(const GdkColor,12, 12828, 9)
+CheckTypeSize(GdkFilterFunc,8, 12822, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(const GdkColor,12, 12828, 10)
+CheckTypeSize(GdkFilterFunc,4, 12822, 10);
 #elif __s390x__
-CheckTypeSize(const GdkColor,12, 12828, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12828,0);
-Msg("Find size of const GdkColor (12828)\n");
+CheckTypeSize(GdkFilterFunc,8, 12822, 12);
+#elif 1
+CheckTypeSize(GdkFilterFunc,0, 12822, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(GdkPixmap,12, 12823, 2);
+#elif __x86_64__
+CheckTypeSize(GdkPixmap,24, 12823, 11);
+#elif __ia64__
+CheckTypeSize(GdkPixmap,24, 12823, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkPixmap,12, 12823, 6);
+#elif __powerpc64__
+CheckTypeSize(GdkPixmap,24, 12823, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GdkPixmap,12, 12823, 10);
+#elif __s390x__
+CheckTypeSize(GdkPixmap,24, 12823, 12);
+#elif 1
+CheckTypeSize(GdkPixmap,0, 12823, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(GdkPixmap *,4, 12824, 2);
+#elif __x86_64__
+CheckTypeSize(GdkPixmap *,8, 12824, 11);
+#elif __ia64__
+CheckTypeSize(GdkPixmap *,8, 12824, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkPixmap *,4, 12824, 6);
+#elif __powerpc64__
+CheckTypeSize(GdkPixmap *,8, 12824, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GdkPixmap *,4, 12824, 10);
+#elif __s390x__
+CheckTypeSize(GdkPixmap *,8, 12824, 12);
+#elif 1
+CheckTypeSize(GdkPixmap *,0, 12824, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(GdkBitmap,12, 12825, 2);
+#elif __x86_64__
+CheckTypeSize(GdkBitmap,24, 12825, 11);
+#elif __ia64__
+CheckTypeSize(GdkBitmap,24, 12825, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkBitmap,12, 12825, 6);
+#elif __powerpc64__
+CheckTypeSize(GdkBitmap,24, 12825, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GdkBitmap,12, 12825, 10);
+#elif __s390x__
+CheckTypeSize(GdkBitmap,24, 12825, 12);
+#elif 1
+CheckTypeSize(GdkBitmap,0, 12825, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(GdkBitmap *,4, 12826, 2);
+#elif __x86_64__
+CheckTypeSize(GdkBitmap *,8, 12826, 11);
+#elif __ia64__
+CheckTypeSize(GdkBitmap *,8, 12826, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkBitmap *,4, 12826, 6);
+#elif __powerpc64__
+CheckTypeSize(GdkBitmap *,8, 12826, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GdkBitmap *,4, 12826, 10);
+#elif __s390x__
+CheckTypeSize(GdkBitmap *,8, 12826, 12);
+#elif 1
+CheckTypeSize(GdkBitmap *,0, 12826, 1);
 #endif
 
 #if __i386__
@@ -7668,47 +7941,71 @@ Msg("Find size of const GdkColor (12828)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12829,0);
-Msg("Find size of const GdkColor * (12829)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(GdkDisplayManager,0, 12831, 2)
+CheckTypeSize(const GdkColor,12, 12828, 2);
 #elif __x86_64__
-CheckTypeSize(GdkDisplayManager,0, 12831, 11)
+CheckTypeSize(const GdkColor,12, 12828, 11);
 #elif __ia64__
-CheckTypeSize(GdkDisplayManager,0, 12831, 3)
+CheckTypeSize(const GdkColor,12, 12828, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkDisplayManager,0, 12831, 6)
+CheckTypeSize(const GdkColor,12, 12828, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkDisplayManager,0, 12831, 9)
+CheckTypeSize(const GdkColor,12, 12828, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkDisplayManager,0, 12831, 10)
+CheckTypeSize(const GdkColor,12, 12828, 10);
 #elif __s390x__
-CheckTypeSize(GdkDisplayManager,0, 12831, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12831,0);
-Msg("Find size of GdkDisplayManager (12831)\n");
+CheckTypeSize(const GdkColor,12, 12828, 12);
+#elif 1
+CheckTypeSize(const GdkColor,0, 12828, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkDisplayManager *,4, 12832, 2)
 #elif __x86_64__
-CheckTypeSize(GdkDisplayManager *,8, 12832, 11)
 #elif __ia64__
-CheckTypeSize(GdkDisplayManager *,8, 12832, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkDisplayManager *,4, 12832, 6)
 #elif __powerpc64__
-CheckTypeSize(GdkDisplayManager *,8, 12832, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkDisplayManager *,4, 12832, 10)
 #elif __s390x__
-CheckTypeSize(GdkDisplayManager *,8, 12832, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12832,0);
-Msg("Find size of GdkDisplayManager * (12832)\n");
+#elif 1
+#endif
+
+#if __i386__
+CheckTypeSize(GdkDisplayManager,0, 12831, 2);
+#elif __x86_64__
+CheckTypeSize(GdkDisplayManager,0, 12831, 11);
+#elif __ia64__
+CheckTypeSize(GdkDisplayManager,0, 12831, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkDisplayManager,0, 12831, 6);
+#elif __powerpc64__
+CheckTypeSize(GdkDisplayManager,0, 12831, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GdkDisplayManager,0, 12831, 10);
+#elif __s390x__
+CheckTypeSize(GdkDisplayManager,0, 12831, 12);
+#elif 1
+CheckTypeSize(GdkDisplayManager,0, 12831, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(GdkDisplayManager *,4, 12832, 2);
+#elif __x86_64__
+CheckTypeSize(GdkDisplayManager *,8, 12832, 11);
+#elif __ia64__
+CheckTypeSize(GdkDisplayManager *,8, 12832, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkDisplayManager *,4, 12832, 6);
+#elif __powerpc64__
+CheckTypeSize(GdkDisplayManager *,8, 12832, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GdkDisplayManager *,4, 12832, 10);
+#elif __s390x__
+CheckTypeSize(GdkDisplayManager *,8, 12832, 12);
+#elif 1
+CheckTypeSize(GdkDisplayManager *,0, 12832, 1);
 #endif
 
 #if __i386__
@@ -7732,28 +8029,27 @@ CheckEnum("GDK_INCLUDE_INFERIORS",GDK_INCLUDE_INFERIORS,1,43905);
 #elif __s390x__
 CheckEnum("GDK_CLIP_BY_CHILDREN",GDK_CLIP_BY_CHILDREN,0,43904);
 CheckEnum("GDK_INCLUDE_INFERIORS",GDK_INCLUDE_INFERIORS,1,43905);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12833,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-84 (12833)\n");
+#elif 1
+CheckEnum("GDK_CLIP_BY_CHILDREN",GDK_CLIP_BY_CHILDREN,0,43904);
+CheckEnum("GDK_INCLUDE_INFERIORS",GDK_INCLUDE_INFERIORS,1,43905);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkSubwindowMode,4, 12834, 2)
+CheckTypeSize(GdkSubwindowMode,4, 12834, 2);
 #elif __x86_64__
-CheckTypeSize(GdkSubwindowMode,4, 12834, 11)
+CheckTypeSize(GdkSubwindowMode,4, 12834, 11);
 #elif __ia64__
-CheckTypeSize(GdkSubwindowMode,4, 12834, 3)
+CheckTypeSize(GdkSubwindowMode,4, 12834, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkSubwindowMode,4, 12834, 6)
+CheckTypeSize(GdkSubwindowMode,4, 12834, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkSubwindowMode,4, 12834, 9)
+CheckTypeSize(GdkSubwindowMode,4, 12834, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkSubwindowMode,4, 12834, 10)
+CheckTypeSize(GdkSubwindowMode,4, 12834, 10);
 #elif __s390x__
-CheckTypeSize(GdkSubwindowMode,4, 12834, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12834,0);
-Msg("Find size of GdkSubwindowMode (12834)\n");
+CheckTypeSize(GdkSubwindowMode,4, 12834, 12);
+#elif 1
+CheckTypeSize(GdkSubwindowMode,0, 12834, 1);
 #endif
 
 #if __i386__
@@ -7819,215 +8115,233 @@ CheckEnum("GDK_WINDOW_EDGE_EAST",GDK_WINDOW_EDGE_EAST,4,43910);
 CheckEnum("GDK_WINDOW_EDGE_SOUTH_WEST",GDK_WINDOW_EDGE_SOUTH_WEST,5,43911);
 CheckEnum("GDK_WINDOW_EDGE_SOUTH",GDK_WINDOW_EDGE_SOUTH,6,43912);
 CheckEnum("GDK_WINDOW_EDGE_SOUTH_EAST",GDK_WINDOW_EDGE_SOUTH_EAST,7,43913);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12835,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-954 (12835)\n");
+#elif 1
+CheckEnum("GDK_WINDOW_EDGE_NORTH_WEST",GDK_WINDOW_EDGE_NORTH_WEST,0,43906);
+CheckEnum("GDK_WINDOW_EDGE_NORTH",GDK_WINDOW_EDGE_NORTH,1,43907);
+CheckEnum("GDK_WINDOW_EDGE_NORTH_EAST",GDK_WINDOW_EDGE_NORTH_EAST,2,43908);
+CheckEnum("GDK_WINDOW_EDGE_WEST",GDK_WINDOW_EDGE_WEST,3,43909);
+CheckEnum("GDK_WINDOW_EDGE_EAST",GDK_WINDOW_EDGE_EAST,4,43910);
+CheckEnum("GDK_WINDOW_EDGE_SOUTH_WEST",GDK_WINDOW_EDGE_SOUTH_WEST,5,43911);
+CheckEnum("GDK_WINDOW_EDGE_SOUTH",GDK_WINDOW_EDGE_SOUTH,6,43912);
+CheckEnum("GDK_WINDOW_EDGE_SOUTH_EAST",GDK_WINDOW_EDGE_SOUTH_EAST,7,43913);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkWindowEdge,4, 12836, 2)
+CheckTypeSize(GdkWindowEdge,4, 12836, 2);
 #elif __x86_64__
-CheckTypeSize(GdkWindowEdge,4, 12836, 11)
+CheckTypeSize(GdkWindowEdge,4, 12836, 11);
 #elif __ia64__
-CheckTypeSize(GdkWindowEdge,4, 12836, 3)
+CheckTypeSize(GdkWindowEdge,4, 12836, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkWindowEdge,4, 12836, 6)
+CheckTypeSize(GdkWindowEdge,4, 12836, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkWindowEdge,4, 12836, 9)
+CheckTypeSize(GdkWindowEdge,4, 12836, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkWindowEdge,4, 12836, 10)
+CheckTypeSize(GdkWindowEdge,4, 12836, 10);
 #elif __s390x__
-CheckTypeSize(GdkWindowEdge,4, 12836, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12836,0);
-Msg("Find size of GdkWindowEdge (12836)\n");
+CheckTypeSize(GdkWindowEdge,4, 12836, 12);
+#elif 1
+CheckTypeSize(GdkWindowEdge,0, 12836, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkImage,52, 12837, 2)
-CheckMemberSize(struct _GdkImage,type,4,2,43918)
-CheckOffset(struct _GdkImage,type,12,2,43918)
-CheckMemberSize(struct _GdkImage,visual,4,2,43919)
-CheckOffset(struct _GdkImage,visual,16,2,43919)
-CheckMemberSize(struct _GdkImage,byte_order,4,2,43920)
-CheckOffset(struct _GdkImage,byte_order,20,2,43920)
-CheckMemberSize(struct _GdkImage,width,4,2,43921)
-CheckOffset(struct _GdkImage,width,24,2,43921)
-CheckMemberSize(struct _GdkImage,height,4,2,43922)
-CheckOffset(struct _GdkImage,height,28,2,43922)
-CheckMemberSize(struct _GdkImage,depth,2,2,43923)
-CheckOffset(struct _GdkImage,depth,32,2,43923)
-CheckMemberSize(struct _GdkImage,bpp,2,2,43924)
-CheckOffset(struct _GdkImage,bpp,34,2,43924)
-CheckMemberSize(struct _GdkImage,bpl,2,2,43925)
-CheckOffset(struct _GdkImage,bpl,36,2,43925)
-CheckMemberSize(struct _GdkImage,bits_per_pixel,2,2,43926)
-CheckOffset(struct _GdkImage,bits_per_pixel,38,2,43926)
-CheckMemberSize(struct _GdkImage,mem,4,2,43927)
-CheckOffset(struct _GdkImage,mem,40,2,43927)
-CheckMemberSize(struct _GdkImage,colormap,4,2,43928)
-CheckOffset(struct _GdkImage,colormap,44,2,43928)
-CheckMemberSize(struct _GdkImage,windowing_data,4,2,43929)
-CheckOffset(struct _GdkImage,windowing_data,48,2,43929)
+CheckTypeSize(struct _GdkImage,52, 12837, 2);
+CheckMemberSize(struct _GdkImage,type,4,2,43918);
+CheckOffset(struct _GdkImage,type,12,2,43918);
+CheckMemberSize(struct _GdkImage,visual,4,2,43919);
+CheckOffset(struct _GdkImage,visual,16,2,43919);
+CheckMemberSize(struct _GdkImage,byte_order,4,2,43920);
+CheckOffset(struct _GdkImage,byte_order,20,2,43920);
+CheckMemberSize(struct _GdkImage,width,4,2,43921);
+CheckOffset(struct _GdkImage,width,24,2,43921);
+CheckMemberSize(struct _GdkImage,height,4,2,43922);
+CheckOffset(struct _GdkImage,height,28,2,43922);
+CheckMemberSize(struct _GdkImage,depth,2,2,43923);
+CheckOffset(struct _GdkImage,depth,32,2,43923);
+CheckMemberSize(struct _GdkImage,bpp,2,2,43924);
+CheckOffset(struct _GdkImage,bpp,34,2,43924);
+CheckMemberSize(struct _GdkImage,bpl,2,2,43925);
+CheckOffset(struct _GdkImage,bpl,36,2,43925);
+CheckMemberSize(struct _GdkImage,bits_per_pixel,2,2,43926);
+CheckOffset(struct _GdkImage,bits_per_pixel,38,2,43926);
+CheckMemberSize(struct _GdkImage,mem,4,2,43927);
+CheckOffset(struct _GdkImage,mem,40,2,43927);
+CheckMemberSize(struct _GdkImage,colormap,4,2,43928);
+CheckOffset(struct _GdkImage,colormap,44,2,43928);
+CheckMemberSize(struct _GdkImage,windowing_data,4,2,43929);
+CheckOffset(struct _GdkImage,windowing_data,48,2,43929);
 #elif __x86_64__
-CheckTypeSize(struct _GdkImage,88, 12837, 11)
-CheckMemberSize(struct _GdkImage,type,4,11,43918)
-CheckOffset(struct _GdkImage,type,24,11,43918)
-CheckMemberSize(struct _GdkImage,visual,8,11,43919)
-CheckOffset(struct _GdkImage,visual,32,11,43919)
-CheckMemberSize(struct _GdkImage,byte_order,4,11,43920)
-CheckOffset(struct _GdkImage,byte_order,40,11,43920)
-CheckMemberSize(struct _GdkImage,width,4,11,43921)
-CheckOffset(struct _GdkImage,width,44,11,43921)
-CheckMemberSize(struct _GdkImage,height,4,11,43922)
-CheckOffset(struct _GdkImage,height,48,11,43922)
-CheckMemberSize(struct _GdkImage,depth,2,11,43923)
-CheckOffset(struct _GdkImage,depth,52,11,43923)
-CheckMemberSize(struct _GdkImage,bpp,2,11,43924)
-CheckOffset(struct _GdkImage,bpp,54,11,43924)
-CheckMemberSize(struct _GdkImage,bpl,2,11,43925)
-CheckOffset(struct _GdkImage,bpl,56,11,43925)
-CheckMemberSize(struct _GdkImage,bits_per_pixel,2,11,43926)
-CheckOffset(struct _GdkImage,bits_per_pixel,58,11,43926)
-CheckMemberSize(struct _GdkImage,mem,8,11,43927)
-CheckOffset(struct _GdkImage,mem,64,11,43927)
-CheckMemberSize(struct _GdkImage,colormap,8,11,43928)
-CheckOffset(struct _GdkImage,colormap,72,11,43928)
-CheckMemberSize(struct _GdkImage,windowing_data,8,11,43929)
-CheckOffset(struct _GdkImage,windowing_data,80,11,43929)
+CheckTypeSize(struct _GdkImage,88, 12837, 11);
+CheckMemberSize(struct _GdkImage,type,4,11,43918);
+CheckOffset(struct _GdkImage,type,24,11,43918);
+CheckMemberSize(struct _GdkImage,visual,8,11,43919);
+CheckOffset(struct _GdkImage,visual,32,11,43919);
+CheckMemberSize(struct _GdkImage,byte_order,4,11,43920);
+CheckOffset(struct _GdkImage,byte_order,40,11,43920);
+CheckMemberSize(struct _GdkImage,width,4,11,43921);
+CheckOffset(struct _GdkImage,width,44,11,43921);
+CheckMemberSize(struct _GdkImage,height,4,11,43922);
+CheckOffset(struct _GdkImage,height,48,11,43922);
+CheckMemberSize(struct _GdkImage,depth,2,11,43923);
+CheckOffset(struct _GdkImage,depth,52,11,43923);
+CheckMemberSize(struct _GdkImage,bpp,2,11,43924);
+CheckOffset(struct _GdkImage,bpp,54,11,43924);
+CheckMemberSize(struct _GdkImage,bpl,2,11,43925);
+CheckOffset(struct _GdkImage,bpl,56,11,43925);
+CheckMemberSize(struct _GdkImage,bits_per_pixel,2,11,43926);
+CheckOffset(struct _GdkImage,bits_per_pixel,58,11,43926);
+CheckMemberSize(struct _GdkImage,mem,8,11,43927);
+CheckOffset(struct _GdkImage,mem,64,11,43927);
+CheckMemberSize(struct _GdkImage,colormap,8,11,43928);
+CheckOffset(struct _GdkImage,colormap,72,11,43928);
+CheckMemberSize(struct _GdkImage,windowing_data,8,11,43929);
+CheckOffset(struct _GdkImage,windowing_data,80,11,43929);
 #elif __ia64__
-CheckTypeSize(struct _GdkImage,88, 12837, 3)
-CheckMemberSize(struct _GdkImage,type,4,3,43918)
-CheckOffset(struct _GdkImage,type,24,3,43918)
-CheckMemberSize(struct _GdkImage,visual,8,3,43919)
-CheckOffset(struct _GdkImage,visual,32,3,43919)
-CheckMemberSize(struct _GdkImage,byte_order,4,3,43920)
-CheckOffset(struct _GdkImage,byte_order,40,3,43920)
-CheckMemberSize(struct _GdkImage,width,4,3,43921)
-CheckOffset(struct _GdkImage,width,44,3,43921)
-CheckMemberSize(struct _GdkImage,height,4,3,43922)
-CheckOffset(struct _GdkImage,height,48,3,43922)
-CheckMemberSize(struct _GdkImage,depth,2,3,43923)
-CheckOffset(struct _GdkImage,depth,52,3,43923)
-CheckMemberSize(struct _GdkImage,bpp,2,3,43924)
-CheckOffset(struct _GdkImage,bpp,54,3,43924)
-CheckMemberSize(struct _GdkImage,bpl,2,3,43925)
-CheckOffset(struct _GdkImage,bpl,56,3,43925)
-CheckMemberSize(struct _GdkImage,bits_per_pixel,2,3,43926)
-CheckOffset(struct _GdkImage,bits_per_pixel,58,3,43926)
-CheckMemberSize(struct _GdkImage,mem,8,3,43927)
-CheckOffset(struct _GdkImage,mem,64,3,43927)
-CheckMemberSize(struct _GdkImage,colormap,8,3,43928)
-CheckOffset(struct _GdkImage,colormap,72,3,43928)
-CheckMemberSize(struct _GdkImage,windowing_data,8,3,43929)
-CheckOffset(struct _GdkImage,windowing_data,80,3,43929)
+CheckTypeSize(struct _GdkImage,88, 12837, 3);
+CheckMemberSize(struct _GdkImage,type,4,3,43918);
+CheckOffset(struct _GdkImage,type,24,3,43918);
+CheckMemberSize(struct _GdkImage,visual,8,3,43919);
+CheckOffset(struct _GdkImage,visual,32,3,43919);
+CheckMemberSize(struct _GdkImage,byte_order,4,3,43920);
+CheckOffset(struct _GdkImage,byte_order,40,3,43920);
+CheckMemberSize(struct _GdkImage,width,4,3,43921);
+CheckOffset(struct _GdkImage,width,44,3,43921);
+CheckMemberSize(struct _GdkImage,height,4,3,43922);
+CheckOffset(struct _GdkImage,height,48,3,43922);
+CheckMemberSize(struct _GdkImage,depth,2,3,43923);
+CheckOffset(struct _GdkImage,depth,52,3,43923);
+CheckMemberSize(struct _GdkImage,bpp,2,3,43924);
+CheckOffset(struct _GdkImage,bpp,54,3,43924);
+CheckMemberSize(struct _GdkImage,bpl,2,3,43925);
+CheckOffset(struct _GdkImage,bpl,56,3,43925);
+CheckMemberSize(struct _GdkImage,bits_per_pixel,2,3,43926);
+CheckOffset(struct _GdkImage,bits_per_pixel,58,3,43926);
+CheckMemberSize(struct _GdkImage,mem,8,3,43927);
+CheckOffset(struct _GdkImage,mem,64,3,43927);
+CheckMemberSize(struct _GdkImage,colormap,8,3,43928);
+CheckOffset(struct _GdkImage,colormap,72,3,43928);
+CheckMemberSize(struct _GdkImage,windowing_data,8,3,43929);
+CheckOffset(struct _GdkImage,windowing_data,80,3,43929);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkImage,52, 12837, 6)
-CheckMemberSize(struct _GdkImage,type,4,6,43918)
-CheckOffset(struct _GdkImage,type,12,6,43918)
-CheckMemberSize(struct _GdkImage,visual,4,6,43919)
-CheckOffset(struct _GdkImage,visual,16,6,43919)
-CheckMemberSize(struct _GdkImage,byte_order,4,6,43920)
-CheckOffset(struct _GdkImage,byte_order,20,6,43920)
-CheckMemberSize(struct _GdkImage,width,4,6,43921)
-CheckOffset(struct _GdkImage,width,24,6,43921)
-CheckMemberSize(struct _GdkImage,height,4,6,43922)
-CheckOffset(struct _GdkImage,height,28,6,43922)
-CheckMemberSize(struct _GdkImage,depth,2,6,43923)
-CheckOffset(struct _GdkImage,depth,32,6,43923)
-CheckMemberSize(struct _GdkImage,bpp,2,6,43924)
-CheckOffset(struct _GdkImage,bpp,34,6,43924)
-CheckMemberSize(struct _GdkImage,bpl,2,6,43925)
-CheckOffset(struct _GdkImage,bpl,36,6,43925)
-CheckMemberSize(struct _GdkImage,bits_per_pixel,2,6,43926)
-CheckOffset(struct _GdkImage,bits_per_pixel,38,6,43926)
-CheckMemberSize(struct _GdkImage,mem,4,6,43927)
-CheckOffset(struct _GdkImage,mem,40,6,43927)
-CheckMemberSize(struct _GdkImage,colormap,4,6,43928)
-CheckOffset(struct _GdkImage,colormap,44,6,43928)
-CheckMemberSize(struct _GdkImage,windowing_data,4,6,43929)
-CheckOffset(struct _GdkImage,windowing_data,48,6,43929)
+CheckTypeSize(struct _GdkImage,52, 12837, 6);
+CheckMemberSize(struct _GdkImage,type,4,6,43918);
+CheckOffset(struct _GdkImage,type,12,6,43918);
+CheckMemberSize(struct _GdkImage,visual,4,6,43919);
+CheckOffset(struct _GdkImage,visual,16,6,43919);
+CheckMemberSize(struct _GdkImage,byte_order,4,6,43920);
+CheckOffset(struct _GdkImage,byte_order,20,6,43920);
+CheckMemberSize(struct _GdkImage,width,4,6,43921);
+CheckOffset(struct _GdkImage,width,24,6,43921);
+CheckMemberSize(struct _GdkImage,height,4,6,43922);
+CheckOffset(struct _GdkImage,height,28,6,43922);
+CheckMemberSize(struct _GdkImage,depth,2,6,43923);
+CheckOffset(struct _GdkImage,depth,32,6,43923);
+CheckMemberSize(struct _GdkImage,bpp,2,6,43924);
+CheckOffset(struct _GdkImage,bpp,34,6,43924);
+CheckMemberSize(struct _GdkImage,bpl,2,6,43925);
+CheckOffset(struct _GdkImage,bpl,36,6,43925);
+CheckMemberSize(struct _GdkImage,bits_per_pixel,2,6,43926);
+CheckOffset(struct _GdkImage,bits_per_pixel,38,6,43926);
+CheckMemberSize(struct _GdkImage,mem,4,6,43927);
+CheckOffset(struct _GdkImage,mem,40,6,43927);
+CheckMemberSize(struct _GdkImage,colormap,4,6,43928);
+CheckOffset(struct _GdkImage,colormap,44,6,43928);
+CheckMemberSize(struct _GdkImage,windowing_data,4,6,43929);
+CheckOffset(struct _GdkImage,windowing_data,48,6,43929);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkImage,88, 12837, 9)
-CheckMemberSize(struct _GdkImage,type,4,9,43918)
-CheckOffset(struct _GdkImage,type,24,9,43918)
-CheckMemberSize(struct _GdkImage,visual,8,9,43919)
-CheckOffset(struct _GdkImage,visual,32,9,43919)
-CheckMemberSize(struct _GdkImage,byte_order,4,9,43920)
-CheckOffset(struct _GdkImage,byte_order,40,9,43920)
-CheckMemberSize(struct _GdkImage,width,4,9,43921)
-CheckOffset(struct _GdkImage,width,44,9,43921)
-CheckMemberSize(struct _GdkImage,height,4,9,43922)
-CheckOffset(struct _GdkImage,height,48,9,43922)
-CheckMemberSize(struct _GdkImage,depth,2,9,43923)
-CheckOffset(struct _GdkImage,depth,52,9,43923)
-CheckMemberSize(struct _GdkImage,bpp,2,9,43924)
-CheckOffset(struct _GdkImage,bpp,54,9,43924)
-CheckMemberSize(struct _GdkImage,bpl,2,9,43925)
-CheckOffset(struct _GdkImage,bpl,56,9,43925)
-CheckMemberSize(struct _GdkImage,bits_per_pixel,2,9,43926)
-CheckOffset(struct _GdkImage,bits_per_pixel,58,9,43926)
-CheckMemberSize(struct _GdkImage,mem,8,9,43927)
-CheckOffset(struct _GdkImage,mem,64,9,43927)
-CheckMemberSize(struct _GdkImage,colormap,8,9,43928)
-CheckOffset(struct _GdkImage,colormap,72,9,43928)
-CheckMemberSize(struct _GdkImage,windowing_data,8,9,43929)
-CheckOffset(struct _GdkImage,windowing_data,80,9,43929)
+CheckTypeSize(struct _GdkImage,88, 12837, 9);
+CheckMemberSize(struct _GdkImage,type,4,9,43918);
+CheckOffset(struct _GdkImage,type,24,9,43918);
+CheckMemberSize(struct _GdkImage,visual,8,9,43919);
+CheckOffset(struct _GdkImage,visual,32,9,43919);
+CheckMemberSize(struct _GdkImage,byte_order,4,9,43920);
+CheckOffset(struct _GdkImage,byte_order,40,9,43920);
+CheckMemberSize(struct _GdkImage,width,4,9,43921);
+CheckOffset(struct _GdkImage,width,44,9,43921);
+CheckMemberSize(struct _GdkImage,height,4,9,43922);
+CheckOffset(struct _GdkImage,height,48,9,43922);
+CheckMemberSize(struct _GdkImage,depth,2,9,43923);
+CheckOffset(struct _GdkImage,depth,52,9,43923);
+CheckMemberSize(struct _GdkImage,bpp,2,9,43924);
+CheckOffset(struct _GdkImage,bpp,54,9,43924);
+CheckMemberSize(struct _GdkImage,bpl,2,9,43925);
+CheckOffset(struct _GdkImage,bpl,56,9,43925);
+CheckMemberSize(struct _GdkImage,bits_per_pixel,2,9,43926);
+CheckOffset(struct _GdkImage,bits_per_pixel,58,9,43926);
+CheckMemberSize(struct _GdkImage,mem,8,9,43927);
+CheckOffset(struct _GdkImage,mem,64,9,43927);
+CheckMemberSize(struct _GdkImage,colormap,8,9,43928);
+CheckOffset(struct _GdkImage,colormap,72,9,43928);
+CheckMemberSize(struct _GdkImage,windowing_data,8,9,43929);
+CheckOffset(struct _GdkImage,windowing_data,80,9,43929);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkImage,52, 12837, 10)
-CheckMemberSize(struct _GdkImage,type,4,10,43918)
-CheckOffset(struct _GdkImage,type,12,10,43918)
-CheckMemberSize(struct _GdkImage,visual,4,10,43919)
-CheckOffset(struct _GdkImage,visual,16,10,43919)
-CheckMemberSize(struct _GdkImage,byte_order,4,10,43920)
-CheckOffset(struct _GdkImage,byte_order,20,10,43920)
-CheckMemberSize(struct _GdkImage,width,4,10,43921)
-CheckOffset(struct _GdkImage,width,24,10,43921)
-CheckMemberSize(struct _GdkImage,height,4,10,43922)
-CheckOffset(struct _GdkImage,height,28,10,43922)
-CheckMemberSize(struct _GdkImage,depth,2,10,43923)
-CheckOffset(struct _GdkImage,depth,32,10,43923)
-CheckMemberSize(struct _GdkImage,bpp,2,10,43924)
-CheckOffset(struct _GdkImage,bpp,34,10,43924)
-CheckMemberSize(struct _GdkImage,bpl,2,10,43925)
-CheckOffset(struct _GdkImage,bpl,36,10,43925)
-CheckMemberSize(struct _GdkImage,bits_per_pixel,2,10,43926)
-CheckOffset(struct _GdkImage,bits_per_pixel,38,10,43926)
-CheckMemberSize(struct _GdkImage,mem,4,10,43927)
-CheckOffset(struct _GdkImage,mem,40,10,43927)
-CheckMemberSize(struct _GdkImage,colormap,4,10,43928)
-CheckOffset(struct _GdkImage,colormap,44,10,43928)
-CheckMemberSize(struct _GdkImage,windowing_data,4,10,43929)
-CheckOffset(struct _GdkImage,windowing_data,48,10,43929)
+CheckTypeSize(struct _GdkImage,52, 12837, 10);
+CheckMemberSize(struct _GdkImage,type,4,10,43918);
+CheckOffset(struct _GdkImage,type,12,10,43918);
+CheckMemberSize(struct _GdkImage,visual,4,10,43919);
+CheckOffset(struct _GdkImage,visual,16,10,43919);
+CheckMemberSize(struct _GdkImage,byte_order,4,10,43920);
+CheckOffset(struct _GdkImage,byte_order,20,10,43920);
+CheckMemberSize(struct _GdkImage,width,4,10,43921);
+CheckOffset(struct _GdkImage,width,24,10,43921);
+CheckMemberSize(struct _GdkImage,height,4,10,43922);
+CheckOffset(struct _GdkImage,height,28,10,43922);
+CheckMemberSize(struct _GdkImage,depth,2,10,43923);
+CheckOffset(struct _GdkImage,depth,32,10,43923);
+CheckMemberSize(struct _GdkImage,bpp,2,10,43924);
+CheckOffset(struct _GdkImage,bpp,34,10,43924);
+CheckMemberSize(struct _GdkImage,bpl,2,10,43925);
+CheckOffset(struct _GdkImage,bpl,36,10,43925);
+CheckMemberSize(struct _GdkImage,bits_per_pixel,2,10,43926);
+CheckOffset(struct _GdkImage,bits_per_pixel,38,10,43926);
+CheckMemberSize(struct _GdkImage,mem,4,10,43927);
+CheckOffset(struct _GdkImage,mem,40,10,43927);
+CheckMemberSize(struct _GdkImage,colormap,4,10,43928);
+CheckOffset(struct _GdkImage,colormap,44,10,43928);
+CheckMemberSize(struct _GdkImage,windowing_data,4,10,43929);
+CheckOffset(struct _GdkImage,windowing_data,48,10,43929);
 #elif __s390x__
-CheckTypeSize(struct _GdkImage,88, 12837, 12)
-CheckMemberSize(struct _GdkImage,type,4,12,43918)
-CheckOffset(struct _GdkImage,type,24,12,43918)
-CheckMemberSize(struct _GdkImage,visual,8,12,43919)
-CheckOffset(struct _GdkImage,visual,32,12,43919)
-CheckMemberSize(struct _GdkImage,byte_order,4,12,43920)
-CheckOffset(struct _GdkImage,byte_order,40,12,43920)
-CheckMemberSize(struct _GdkImage,width,4,12,43921)
-CheckOffset(struct _GdkImage,width,44,12,43921)
-CheckMemberSize(struct _GdkImage,height,4,12,43922)
-CheckOffset(struct _GdkImage,height,48,12,43922)
-CheckMemberSize(struct _GdkImage,depth,2,12,43923)
-CheckOffset(struct _GdkImage,depth,52,12,43923)
-CheckMemberSize(struct _GdkImage,bpp,2,12,43924)
-CheckOffset(struct _GdkImage,bpp,54,12,43924)
-CheckMemberSize(struct _GdkImage,bpl,2,12,43925)
-CheckOffset(struct _GdkImage,bpl,56,12,43925)
-CheckMemberSize(struct _GdkImage,bits_per_pixel,2,12,43926)
-CheckOffset(struct _GdkImage,bits_per_pixel,58,12,43926)
-CheckMemberSize(struct _GdkImage,mem,8,12,43927)
-CheckOffset(struct _GdkImage,mem,64,12,43927)
-CheckMemberSize(struct _GdkImage,colormap,8,12,43928)
-CheckOffset(struct _GdkImage,colormap,72,12,43928)
-CheckMemberSize(struct _GdkImage,windowing_data,8,12,43929)
-CheckOffset(struct _GdkImage,windowing_data,80,12,43929)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12837,0);
-Msg("Find size of _GdkImage (12837)\n");
+CheckTypeSize(struct _GdkImage,88, 12837, 12);
+CheckMemberSize(struct _GdkImage,type,4,12,43918);
+CheckOffset(struct _GdkImage,type,24,12,43918);
+CheckMemberSize(struct _GdkImage,visual,8,12,43919);
+CheckOffset(struct _GdkImage,visual,32,12,43919);
+CheckMemberSize(struct _GdkImage,byte_order,4,12,43920);
+CheckOffset(struct _GdkImage,byte_order,40,12,43920);
+CheckMemberSize(struct _GdkImage,width,4,12,43921);
+CheckOffset(struct _GdkImage,width,44,12,43921);
+CheckMemberSize(struct _GdkImage,height,4,12,43922);
+CheckOffset(struct _GdkImage,height,48,12,43922);
+CheckMemberSize(struct _GdkImage,depth,2,12,43923);
+CheckOffset(struct _GdkImage,depth,52,12,43923);
+CheckMemberSize(struct _GdkImage,bpp,2,12,43924);
+CheckOffset(struct _GdkImage,bpp,54,12,43924);
+CheckMemberSize(struct _GdkImage,bpl,2,12,43925);
+CheckOffset(struct _GdkImage,bpl,56,12,43925);
+CheckMemberSize(struct _GdkImage,bits_per_pixel,2,12,43926);
+CheckOffset(struct _GdkImage,bits_per_pixel,58,12,43926);
+CheckMemberSize(struct _GdkImage,mem,8,12,43927);
+CheckOffset(struct _GdkImage,mem,64,12,43927);
+CheckMemberSize(struct _GdkImage,colormap,8,12,43928);
+CheckOffset(struct _GdkImage,colormap,72,12,43928);
+CheckMemberSize(struct _GdkImage,windowing_data,8,12,43929);
+CheckOffset(struct _GdkImage,windowing_data,80,12,43929);
+#elif 1
+CheckTypeSize(struct _GdkImage,0, 12837, 1);
+Msg("Missing member data for _GdkImage on All\n");
+CheckOffset(struct _GdkImage,parent_instance,0,1,43914);
+CheckOffset(struct _GdkImage,type,0,1,43918);
+CheckOffset(struct _GdkImage,visual,0,1,43919);
+CheckOffset(struct _GdkImage,byte_order,0,1,43920);
+CheckOffset(struct _GdkImage,width,0,1,43921);
+CheckOffset(struct _GdkImage,height,0,1,43922);
+CheckOffset(struct _GdkImage,depth,0,1,43923);
+CheckOffset(struct _GdkImage,bpp,0,1,43924);
+CheckOffset(struct _GdkImage,bpl,0,1,43925);
+CheckOffset(struct _GdkImage,bits_per_pixel,0,1,43926);
+CheckOffset(struct _GdkImage,mem,0,1,43927);
+CheckOffset(struct _GdkImage,colormap,0,1,43928);
+CheckOffset(struct _GdkImage,windowing_data,0,1,43929);
 #endif
 
 #if __i386__
@@ -8058,213 +8372,207 @@ CheckEnum("GDK_IMAGE_FASTEST",GDK_IMAGE_FASTEST,2,43917);
 CheckEnum("GDK_IMAGE_NORMAL",GDK_IMAGE_NORMAL,0,43915);
 CheckEnum("GDK_IMAGE_SHARED",GDK_IMAGE_SHARED,1,43916);
 CheckEnum("GDK_IMAGE_FASTEST",GDK_IMAGE_FASTEST,2,43917);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12838,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-97 (12838)\n");
+#elif 1
+CheckEnum("GDK_IMAGE_NORMAL",GDK_IMAGE_NORMAL,0,43915);
+CheckEnum("GDK_IMAGE_SHARED",GDK_IMAGE_SHARED,1,43916);
+CheckEnum("GDK_IMAGE_FASTEST",GDK_IMAGE_FASTEST,2,43917);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkImageType,4, 12839, 2)
+CheckTypeSize(GdkImageType,4, 12839, 2);
 #elif __x86_64__
-CheckTypeSize(GdkImageType,4, 12839, 11)
+CheckTypeSize(GdkImageType,4, 12839, 11);
 #elif __ia64__
-CheckTypeSize(GdkImageType,4, 12839, 3)
+CheckTypeSize(GdkImageType,4, 12839, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkImageType,4, 12839, 6)
+CheckTypeSize(GdkImageType,4, 12839, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkImageType,4, 12839, 9)
+CheckTypeSize(GdkImageType,4, 12839, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkImageType,4, 12839, 10)
+CheckTypeSize(GdkImageType,4, 12839, 10);
 #elif __s390x__
-CheckTypeSize(GdkImageType,4, 12839, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12839,0);
-Msg("Find size of GdkImageType (12839)\n");
+CheckTypeSize(GdkImageType,4, 12839, 12);
+#elif 1
+CheckTypeSize(GdkImageType,0, 12839, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkImage,52, 12840, 2)
+CheckTypeSize(GdkImage,52, 12840, 2);
 #elif __x86_64__
-CheckTypeSize(GdkImage,88, 12840, 11)
+CheckTypeSize(GdkImage,88, 12840, 11);
 #elif __ia64__
-CheckTypeSize(GdkImage,88, 12840, 3)
+CheckTypeSize(GdkImage,88, 12840, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkImage,52, 12840, 6)
+CheckTypeSize(GdkImage,52, 12840, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkImage,88, 12840, 9)
+CheckTypeSize(GdkImage,88, 12840, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkImage,52, 12840, 10)
+CheckTypeSize(GdkImage,52, 12840, 10);
 #elif __s390x__
-CheckTypeSize(GdkImage,88, 12840, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12840,0);
-Msg("Find size of GdkImage (12840)\n");
+CheckTypeSize(GdkImage,88, 12840, 12);
+#elif 1
+CheckTypeSize(GdkImage,0, 12840, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkImage *,4, 12841, 2)
+CheckTypeSize(GdkImage *,4, 12841, 2);
 #elif __x86_64__
-CheckTypeSize(GdkImage *,8, 12841, 11)
+CheckTypeSize(GdkImage *,8, 12841, 11);
 #elif __ia64__
-CheckTypeSize(GdkImage *,8, 12841, 3)
+CheckTypeSize(GdkImage *,8, 12841, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkImage *,4, 12841, 6)
+CheckTypeSize(GdkImage *,4, 12841, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkImage *,8, 12841, 9)
+CheckTypeSize(GdkImage *,8, 12841, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkImage *,4, 12841, 10)
+CheckTypeSize(GdkImage *,4, 12841, 10);
 #elif __s390x__
-CheckTypeSize(GdkImage *,8, 12841, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12841,0);
-Msg("Find size of GdkImage * (12841)\n");
+CheckTypeSize(GdkImage *,8, 12841, 12);
+#elif 1
+CheckTypeSize(GdkImage *,0, 12841, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkRectangle *,4, 12842, 2)
+CheckTypeSize(GdkRectangle *,4, 12842, 2);
 #elif __x86_64__
-CheckTypeSize(GdkRectangle *,8, 12842, 11)
+CheckTypeSize(GdkRectangle *,8, 12842, 11);
 #elif __ia64__
-CheckTypeSize(GdkRectangle *,8, 12842, 3)
+CheckTypeSize(GdkRectangle *,8, 12842, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkRectangle *,4, 12842, 6)
+CheckTypeSize(GdkRectangle *,4, 12842, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkRectangle *,8, 12842, 9)
+CheckTypeSize(GdkRectangle *,8, 12842, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkRectangle *,4, 12842, 10)
+CheckTypeSize(GdkRectangle *,4, 12842, 10);
 #elif __s390x__
-CheckTypeSize(GdkRectangle *,8, 12842, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12842,0);
-Msg("Find size of GdkRectangle * (12842)\n");
+CheckTypeSize(GdkRectangle *,8, 12842, 12);
+#elif 1
+CheckTypeSize(GdkRectangle *,0, 12842, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(gint8 *,4, 12843, 2)
+CheckTypeSize(gint8 *,4, 12843, 2);
 #elif __x86_64__
-CheckTypeSize(gint8 *,8, 12843, 11)
+CheckTypeSize(gint8 *,8, 12843, 11);
 #elif __ia64__
-CheckTypeSize(gint8 *,8, 12843, 3)
+CheckTypeSize(gint8 *,8, 12843, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(gint8 *,4, 12843, 6)
+CheckTypeSize(gint8 *,4, 12843, 6);
 #elif __powerpc64__
-CheckTypeSize(gint8 *,8, 12843, 9)
+CheckTypeSize(gint8 *,8, 12843, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(gint8 *,4, 12843, 10)
+CheckTypeSize(gint8 *,4, 12843, 10);
 #elif __s390x__
-CheckTypeSize(gint8 *,8, 12843, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12843,0);
-Msg("Find size of gint8 * (12843)\n");
+CheckTypeSize(gint8 *,8, 12843, 12);
+#elif 1
+CheckTypeSize(gint8 *,0, 12843, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkPangoRenderer,36, 12844, 2)
-CheckMemberSize(struct _GdkPangoRenderer,priv,4,2,43931)
-CheckOffset(struct _GdkPangoRenderer,priv,32,2,43931)
+CheckTypeSize(struct _GdkPangoRenderer,36, 12844, 2);
+CheckMemberSize(struct _GdkPangoRenderer,priv,4,2,43931);
+CheckOffset(struct _GdkPangoRenderer,priv,32,2,43931);
 #elif __x86_64__
-CheckTypeSize(struct _GdkPangoRenderer,64, 12844, 11)
-CheckMemberSize(struct _GdkPangoRenderer,priv,8,11,43931)
-CheckOffset(struct _GdkPangoRenderer,priv,56,11,43931)
+CheckTypeSize(struct _GdkPangoRenderer,64, 12844, 11);
+CheckMemberSize(struct _GdkPangoRenderer,priv,8,11,43931);
+CheckOffset(struct _GdkPangoRenderer,priv,56,11,43931);
 #elif __ia64__
-CheckTypeSize(struct _GdkPangoRenderer,64, 12844, 3)
-CheckMemberSize(struct _GdkPangoRenderer,priv,8,3,43931)
-CheckOffset(struct _GdkPangoRenderer,priv,56,3,43931)
+CheckTypeSize(struct _GdkPangoRenderer,64, 12844, 3);
+CheckMemberSize(struct _GdkPangoRenderer,priv,8,3,43931);
+CheckOffset(struct _GdkPangoRenderer,priv,56,3,43931);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkPangoRenderer,36, 12844, 6)
-CheckMemberSize(struct _GdkPangoRenderer,priv,4,6,43931)
-CheckOffset(struct _GdkPangoRenderer,priv,32,6,43931)
+CheckTypeSize(struct _GdkPangoRenderer,36, 12844, 6);
+CheckMemberSize(struct _GdkPangoRenderer,priv,4,6,43931);
+CheckOffset(struct _GdkPangoRenderer,priv,32,6,43931);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkPangoRenderer,64, 12844, 9)
-CheckMemberSize(struct _GdkPangoRenderer,priv,8,9,43931)
-CheckOffset(struct _GdkPangoRenderer,priv,56,9,43931)
+CheckTypeSize(struct _GdkPangoRenderer,64, 12844, 9);
+CheckMemberSize(struct _GdkPangoRenderer,priv,8,9,43931);
+CheckOffset(struct _GdkPangoRenderer,priv,56,9,43931);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkPangoRenderer,36, 12844, 10)
-CheckMemberSize(struct _GdkPangoRenderer,priv,4,10,43931)
-CheckOffset(struct _GdkPangoRenderer,priv,32,10,43931)
+CheckTypeSize(struct _GdkPangoRenderer,36, 12844, 10);
+CheckMemberSize(struct _GdkPangoRenderer,priv,4,10,43931);
+CheckOffset(struct _GdkPangoRenderer,priv,32,10,43931);
 #elif __s390x__
-CheckTypeSize(struct _GdkPangoRenderer,64, 12844, 12)
-CheckMemberSize(struct _GdkPangoRenderer,priv,8,12,43931)
-CheckOffset(struct _GdkPangoRenderer,priv,56,12,43931)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12844,0);
-Msg("Find size of _GdkPangoRenderer (12844)\n");
+CheckTypeSize(struct _GdkPangoRenderer,64, 12844, 12);
+CheckMemberSize(struct _GdkPangoRenderer,priv,8,12,43931);
+CheckOffset(struct _GdkPangoRenderer,priv,56,12,43931);
+#elif 1
+CheckTypeSize(struct _GdkPangoRenderer,0, 12844, 1);
+Msg("Missing member data for _GdkPangoRenderer on All\n");
+CheckOffset(struct _GdkPangoRenderer,parent_instance,0,1,43930);
+CheckOffset(struct _GdkPangoRenderer,priv,0,1,43931);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPangoRendererPrivate,0, 12846, 2)
+CheckTypeSize(GdkPangoRendererPrivate,0, 12846, 2);
 #elif __x86_64__
-CheckTypeSize(GdkPangoRendererPrivate,0, 12846, 11)
+CheckTypeSize(GdkPangoRendererPrivate,0, 12846, 11);
 #elif __ia64__
-CheckTypeSize(GdkPangoRendererPrivate,0, 12846, 3)
+CheckTypeSize(GdkPangoRendererPrivate,0, 12846, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPangoRendererPrivate,0, 12846, 6)
+CheckTypeSize(GdkPangoRendererPrivate,0, 12846, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkPangoRendererPrivate,0, 12846, 9)
+CheckTypeSize(GdkPangoRendererPrivate,0, 12846, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPangoRendererPrivate,0, 12846, 10)
+CheckTypeSize(GdkPangoRendererPrivate,0, 12846, 10);
 #elif __s390x__
-CheckTypeSize(GdkPangoRendererPrivate,0, 12846, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12846,0);
-Msg("Find size of GdkPangoRendererPrivate (12846)\n");
+CheckTypeSize(GdkPangoRendererPrivate,0, 12846, 12);
+#elif 1
+CheckTypeSize(GdkPangoRendererPrivate,0, 12846, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPangoRendererPrivate *,4, 12847, 2)
+CheckTypeSize(GdkPangoRendererPrivate *,4, 12847, 2);
 #elif __x86_64__
-CheckTypeSize(GdkPangoRendererPrivate *,8, 12847, 11)
+CheckTypeSize(GdkPangoRendererPrivate *,8, 12847, 11);
 #elif __ia64__
-CheckTypeSize(GdkPangoRendererPrivate *,8, 12847, 3)
+CheckTypeSize(GdkPangoRendererPrivate *,8, 12847, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPangoRendererPrivate *,4, 12847, 6)
+CheckTypeSize(GdkPangoRendererPrivate *,4, 12847, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkPangoRendererPrivate *,8, 12847, 9)
+CheckTypeSize(GdkPangoRendererPrivate *,8, 12847, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPangoRendererPrivate *,4, 12847, 10)
+CheckTypeSize(GdkPangoRendererPrivate *,4, 12847, 10);
 #elif __s390x__
-CheckTypeSize(GdkPangoRendererPrivate *,8, 12847, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12847,0);
-Msg("Find size of GdkPangoRendererPrivate * (12847)\n");
+CheckTypeSize(GdkPangoRendererPrivate *,8, 12847, 12);
+#elif 1
+CheckTypeSize(GdkPangoRendererPrivate *,0, 12847, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPangoRenderer,36, 12848, 2)
+CheckTypeSize(GdkPangoRenderer,36, 12848, 2);
 #elif __x86_64__
-CheckTypeSize(GdkPangoRenderer,64, 12848, 11)
+CheckTypeSize(GdkPangoRenderer,64, 12848, 11);
 #elif __ia64__
-CheckTypeSize(GdkPangoRenderer,64, 12848, 3)
+CheckTypeSize(GdkPangoRenderer,64, 12848, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPangoRenderer,36, 12848, 6)
+CheckTypeSize(GdkPangoRenderer,36, 12848, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkPangoRenderer,64, 12848, 9)
+CheckTypeSize(GdkPangoRenderer,64, 12848, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPangoRenderer,36, 12848, 10)
+CheckTypeSize(GdkPangoRenderer,36, 12848, 10);
 #elif __s390x__
-CheckTypeSize(GdkPangoRenderer,64, 12848, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12848,0);
-Msg("Find size of GdkPangoRenderer (12848)\n");
+CheckTypeSize(GdkPangoRenderer,64, 12848, 12);
+#elif 1
+CheckTypeSize(GdkPangoRenderer,0, 12848, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPangoRenderer *,4, 12849, 2)
+CheckTypeSize(GdkPangoRenderer *,4, 12849, 2);
 #elif __x86_64__
-CheckTypeSize(GdkPangoRenderer *,8, 12849, 11)
+CheckTypeSize(GdkPangoRenderer *,8, 12849, 11);
 #elif __ia64__
-CheckTypeSize(GdkPangoRenderer *,8, 12849, 3)
+CheckTypeSize(GdkPangoRenderer *,8, 12849, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPangoRenderer *,4, 12849, 6)
+CheckTypeSize(GdkPangoRenderer *,4, 12849, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkPangoRenderer *,8, 12849, 9)
+CheckTypeSize(GdkPangoRenderer *,8, 12849, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPangoRenderer *,4, 12849, 10)
+CheckTypeSize(GdkPangoRenderer *,4, 12849, 10);
 #elif __s390x__
-CheckTypeSize(GdkPangoRenderer *,8, 12849, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12849,0);
-Msg("Find size of GdkPangoRenderer * (12849)\n");
+CheckTypeSize(GdkPangoRenderer *,8, 12849, 12);
+#elif 1
+CheckTypeSize(GdkPangoRenderer *,0, 12849, 1);
 #endif
 
 #if __i386__
@@ -8309,28 +8617,30 @@ CheckEnum("GDK_GRAB_ALREADY_GRABBED",GDK_GRAB_ALREADY_GRABBED,1,43933);
 CheckEnum("GDK_GRAB_INVALID_TIME",GDK_GRAB_INVALID_TIME,2,43934);
 CheckEnum("GDK_GRAB_NOT_VIEWABLE",GDK_GRAB_NOT_VIEWABLE,3,43935);
 CheckEnum("GDK_GRAB_FROZEN",GDK_GRAB_FROZEN,4,43936);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12850,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-739 (12850)\n");
+#elif 1
+CheckEnum("GDK_GRAB_SUCCESS",GDK_GRAB_SUCCESS,0,43932);
+CheckEnum("GDK_GRAB_ALREADY_GRABBED",GDK_GRAB_ALREADY_GRABBED,1,43933);
+CheckEnum("GDK_GRAB_INVALID_TIME",GDK_GRAB_INVALID_TIME,2,43934);
+CheckEnum("GDK_GRAB_NOT_VIEWABLE",GDK_GRAB_NOT_VIEWABLE,3,43935);
+CheckEnum("GDK_GRAB_FROZEN",GDK_GRAB_FROZEN,4,43936);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkGrabStatus,4, 12851, 2)
+CheckTypeSize(GdkGrabStatus,4, 12851, 2);
 #elif __x86_64__
-CheckTypeSize(GdkGrabStatus,4, 12851, 11)
+CheckTypeSize(GdkGrabStatus,4, 12851, 11);
 #elif __ia64__
-CheckTypeSize(GdkGrabStatus,4, 12851, 3)
+CheckTypeSize(GdkGrabStatus,4, 12851, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkGrabStatus,4, 12851, 6)
+CheckTypeSize(GdkGrabStatus,4, 12851, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkGrabStatus,4, 12851, 9)
+CheckTypeSize(GdkGrabStatus,4, 12851, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkGrabStatus,4, 12851, 10)
+CheckTypeSize(GdkGrabStatus,4, 12851, 10);
 #elif __s390x__
-CheckTypeSize(GdkGrabStatus,4, 12851, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12851,0);
-Msg("Find size of GdkGrabStatus (12851)\n");
+CheckTypeSize(GdkGrabStatus,4, 12851, 12);
+#elif 1
+CheckTypeSize(GdkGrabStatus,0, 12851, 1);
 #endif
 
 #if __i386__
@@ -8368,47 +8678,47 @@ CheckEnum("GDK_SOLID",GDK_SOLID,0,43937);
 CheckEnum("GDK_TILED",GDK_TILED,1,43938);
 CheckEnum("GDK_STIPPLED",GDK_STIPPLED,2,43939);
 CheckEnum("GDK_OPAQUE_STIPPLED",GDK_OPAQUE_STIPPLED,3,43940);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12852,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-80 (12852)\n");
+#elif 1
+CheckEnum("GDK_SOLID",GDK_SOLID,0,43937);
+CheckEnum("GDK_TILED",GDK_TILED,1,43938);
+CheckEnum("GDK_STIPPLED",GDK_STIPPLED,2,43939);
+CheckEnum("GDK_OPAQUE_STIPPLED",GDK_OPAQUE_STIPPLED,3,43940);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkFill,4, 12853, 2)
+CheckTypeSize(GdkFill,4, 12853, 2);
 #elif __x86_64__
-CheckTypeSize(GdkFill,4, 12853, 11)
+CheckTypeSize(GdkFill,4, 12853, 11);
 #elif __ia64__
-CheckTypeSize(GdkFill,4, 12853, 3)
+CheckTypeSize(GdkFill,4, 12853, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkFill,4, 12853, 6)
+CheckTypeSize(GdkFill,4, 12853, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkFill,4, 12853, 9)
+CheckTypeSize(GdkFill,4, 12853, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkFill,4, 12853, 10)
+CheckTypeSize(GdkFill,4, 12853, 10);
 #elif __s390x__
-CheckTypeSize(GdkFill,4, 12853, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12853,0);
-Msg("Find size of GdkFill (12853)\n");
+CheckTypeSize(GdkFill,4, 12853, 12);
+#elif 1
+CheckTypeSize(GdkFill,0, 12853, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkAtom *,4, 12854, 2)
+CheckTypeSize(GdkAtom *,4, 12854, 2);
 #elif __x86_64__
-CheckTypeSize(GdkAtom *,8, 12854, 11)
+CheckTypeSize(GdkAtom *,8, 12854, 11);
 #elif __ia64__
-CheckTypeSize(GdkAtom *,8, 12854, 3)
+CheckTypeSize(GdkAtom *,8, 12854, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkAtom *,4, 12854, 6)
+CheckTypeSize(GdkAtom *,4, 12854, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkAtom *,8, 12854, 9)
+CheckTypeSize(GdkAtom *,8, 12854, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkAtom *,4, 12854, 10)
+CheckTypeSize(GdkAtom *,4, 12854, 10);
 #elif __s390x__
-CheckTypeSize(GdkAtom *,8, 12854, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12854,0);
-Msg("Find size of GdkAtom * (12854)\n");
+CheckTypeSize(GdkAtom *,8, 12854, 12);
+#elif 1
+CheckTypeSize(GdkAtom *,0, 12854, 1);
 #endif
 
 #if __i386__
@@ -8474,242 +8784,125 @@ CheckEnum("GDK_WINDOW_TYPE_HINT_SPLASHSCREEN",GDK_WINDOW_TYPE_HINT_SPLASHSCREEN,
 CheckEnum("GDK_WINDOW_TYPE_HINT_UTILITY",GDK_WINDOW_TYPE_HINT_UTILITY,5,43946);
 CheckEnum("GDK_WINDOW_TYPE_HINT_DOCK",GDK_WINDOW_TYPE_HINT_DOCK,6,43947);
 CheckEnum("GDK_WINDOW_TYPE_HINT_DESKTOP",GDK_WINDOW_TYPE_HINT_DESKTOP,7,43948);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12855,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-950 (12855)\n");
+#elif 1
+CheckEnum("GDK_WINDOW_TYPE_HINT_NORMAL",GDK_WINDOW_TYPE_HINT_NORMAL,0,43941);
+CheckEnum("GDK_WINDOW_TYPE_HINT_DIALOG",GDK_WINDOW_TYPE_HINT_DIALOG,1,43942);
+CheckEnum("GDK_WINDOW_TYPE_HINT_MENU",GDK_WINDOW_TYPE_HINT_MENU,2,43943);
+CheckEnum("GDK_WINDOW_TYPE_HINT_TOOLBAR",GDK_WINDOW_TYPE_HINT_TOOLBAR,3,43944);
+CheckEnum("GDK_WINDOW_TYPE_HINT_SPLASHSCREEN",GDK_WINDOW_TYPE_HINT_SPLASHSCREEN,4,43945);
+CheckEnum("GDK_WINDOW_TYPE_HINT_UTILITY",GDK_WINDOW_TYPE_HINT_UTILITY,5,43946);
+CheckEnum("GDK_WINDOW_TYPE_HINT_DOCK",GDK_WINDOW_TYPE_HINT_DOCK,6,43947);
+CheckEnum("GDK_WINDOW_TYPE_HINT_DESKTOP",GDK_WINDOW_TYPE_HINT_DESKTOP,7,43948);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkWindowTypeHint,4, 12856, 2)
+CheckTypeSize(GdkWindowTypeHint,4, 12856, 2);
 #elif __x86_64__
-CheckTypeSize(GdkWindowTypeHint,4, 12856, 11)
+CheckTypeSize(GdkWindowTypeHint,4, 12856, 11);
 #elif __ia64__
-CheckTypeSize(GdkWindowTypeHint,4, 12856, 3)
+CheckTypeSize(GdkWindowTypeHint,4, 12856, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkWindowTypeHint,4, 12856, 6)
+CheckTypeSize(GdkWindowTypeHint,4, 12856, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkWindowTypeHint,4, 12856, 9)
+CheckTypeSize(GdkWindowTypeHint,4, 12856, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkWindowTypeHint,4, 12856, 10)
+CheckTypeSize(GdkWindowTypeHint,4, 12856, 10);
 #elif __s390x__
-CheckTypeSize(GdkWindowTypeHint,4, 12856, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12856,0);
-Msg("Find size of GdkWindowTypeHint (12856)\n");
+CheckTypeSize(GdkWindowTypeHint,4, 12856, 12);
+#elif 1
+CheckTypeSize(GdkWindowTypeHint,0, 12856, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkDisplayPointerHooks *,4, 12857, 2)
+CheckTypeSize(GdkDisplayPointerHooks *,4, 12857, 2);
 #elif __x86_64__
-CheckTypeSize(GdkDisplayPointerHooks *,8, 12857, 11)
+CheckTypeSize(GdkDisplayPointerHooks *,8, 12857, 11);
 #elif __ia64__
-CheckTypeSize(GdkDisplayPointerHooks *,8, 12857, 3)
+CheckTypeSize(GdkDisplayPointerHooks *,8, 12857, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkDisplayPointerHooks *,4, 12857, 6)
+CheckTypeSize(GdkDisplayPointerHooks *,4, 12857, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkDisplayPointerHooks *,8, 12857, 9)
+CheckTypeSize(GdkDisplayPointerHooks *,8, 12857, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkDisplayPointerHooks *,4, 12857, 10)
+CheckTypeSize(GdkDisplayPointerHooks *,4, 12857, 10);
 #elif __s390x__
-CheckTypeSize(GdkDisplayPointerHooks *,8, 12857, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12857,0);
-Msg("Find size of GdkDisplayPointerHooks * (12857)\n");
+CheckTypeSize(GdkDisplayPointerHooks *,8, 12857, 12);
+#elif 1
+CheckTypeSize(GdkDisplayPointerHooks *,0, 12857, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkTimeCoord,1028, 12858, 2)
-CheckMemberSize(struct _GdkTimeCoord,axes,1024,2,43950)
-CheckOffset(struct _GdkTimeCoord,axes,4,2,43950)
+CheckTypeSize(struct _GdkTimeCoord,1028, 12858, 2);
+CheckMemberSize(struct _GdkTimeCoord,axes,1024,2,43950);
+CheckOffset(struct _GdkTimeCoord,axes,4,2,43950);
 #elif __x86_64__
-CheckTypeSize(struct _GdkTimeCoord,1032, 12858, 11)
-CheckMemberSize(struct _GdkTimeCoord,axes,1024,11,43950)
-CheckOffset(struct _GdkTimeCoord,axes,8,11,43950)
+CheckTypeSize(struct _GdkTimeCoord,1032, 12858, 11);
+CheckMemberSize(struct _GdkTimeCoord,axes,1024,11,43950);
+CheckOffset(struct _GdkTimeCoord,axes,8,11,43950);
 #elif __ia64__
-CheckTypeSize(struct _GdkTimeCoord,1032, 12858, 3)
-CheckMemberSize(struct _GdkTimeCoord,axes,1024,3,43950)
-CheckOffset(struct _GdkTimeCoord,axes,8,3,43950)
+CheckTypeSize(struct _GdkTimeCoord,1032, 12858, 3);
+CheckMemberSize(struct _GdkTimeCoord,axes,1024,3,43950);
+CheckOffset(struct _GdkTimeCoord,axes,8,3,43950);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkTimeCoord,1032, 12858, 6)
-CheckMemberSize(struct _GdkTimeCoord,axes,1024,6,43950)
-CheckOffset(struct _GdkTimeCoord,axes,8,6,43950)
+CheckTypeSize(struct _GdkTimeCoord,1032, 12858, 6);
+CheckMemberSize(struct _GdkTimeCoord,axes,1024,6,43950);
+CheckOffset(struct _GdkTimeCoord,axes,8,6,43950);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkTimeCoord,1032, 12858, 9)
-CheckMemberSize(struct _GdkTimeCoord,axes,1024,9,43950)
-CheckOffset(struct _GdkTimeCoord,axes,8,9,43950)
+CheckTypeSize(struct _GdkTimeCoord,1032, 12858, 9);
+CheckMemberSize(struct _GdkTimeCoord,axes,1024,9,43950);
+CheckOffset(struct _GdkTimeCoord,axes,8,9,43950);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkTimeCoord,1032, 12858, 10)
-CheckMemberSize(struct _GdkTimeCoord,axes,1024,10,43950)
-CheckOffset(struct _GdkTimeCoord,axes,8,10,43950)
+CheckTypeSize(struct _GdkTimeCoord,1032, 12858, 10);
+CheckMemberSize(struct _GdkTimeCoord,axes,1024,10,43950);
+CheckOffset(struct _GdkTimeCoord,axes,8,10,43950);
 #elif __s390x__
-CheckTypeSize(struct _GdkTimeCoord,1032, 12858, 12)
-CheckMemberSize(struct _GdkTimeCoord,axes,1024,12,43950)
-CheckOffset(struct _GdkTimeCoord,axes,8,12,43950)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12858,0);
-Msg("Find size of _GdkTimeCoord (12858)\n");
+CheckTypeSize(struct _GdkTimeCoord,1032, 12858, 12);
+CheckMemberSize(struct _GdkTimeCoord,axes,1024,12,43950);
+CheckOffset(struct _GdkTimeCoord,axes,8,12,43950);
+#elif 1
+CheckTypeSize(struct _GdkTimeCoord,0, 12858, 1);
+Msg("Missing member data for _GdkTimeCoord on All\n");
+CheckOffset(struct _GdkTimeCoord,time,0,1,43949);
+CheckOffset(struct _GdkTimeCoord,axes,0,1,43950);
 #endif
 
 #if 1
 #endif
 
 #if __i386__
-CheckTypeSize(GdkTimeCoord,1028, 12860, 2)
+CheckTypeSize(GdkTimeCoord,1028, 12860, 2);
 #elif __x86_64__
-CheckTypeSize(GdkTimeCoord,1032, 12860, 11)
+CheckTypeSize(GdkTimeCoord,1032, 12860, 11);
 #elif __ia64__
-CheckTypeSize(GdkTimeCoord,1032, 12860, 3)
+CheckTypeSize(GdkTimeCoord,1032, 12860, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkTimeCoord,1032, 12860, 6)
+CheckTypeSize(GdkTimeCoord,1032, 12860, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkTimeCoord,1032, 12860, 9)
+CheckTypeSize(GdkTimeCoord,1032, 12860, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkTimeCoord,1032, 12860, 10)
+CheckTypeSize(GdkTimeCoord,1032, 12860, 10);
 #elif __s390x__
-CheckTypeSize(GdkTimeCoord,1032, 12860, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12860,0);
-Msg("Find size of GdkTimeCoord (12860)\n");
+CheckTypeSize(GdkTimeCoord,1032, 12860, 12);
+#elif 1
+CheckTypeSize(GdkTimeCoord,0, 12860, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkTimeCoord *,4, 12861, 2)
+CheckTypeSize(GdkTimeCoord *,4, 12861, 2);
 #elif __x86_64__
-CheckTypeSize(GdkTimeCoord *,8, 12861, 11)
+CheckTypeSize(GdkTimeCoord *,8, 12861, 11);
 #elif __ia64__
-CheckTypeSize(GdkTimeCoord *,8, 12861, 3)
+CheckTypeSize(GdkTimeCoord *,8, 12861, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkTimeCoord *,4, 12861, 6)
+CheckTypeSize(GdkTimeCoord *,4, 12861, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkTimeCoord *,8, 12861, 9)
+CheckTypeSize(GdkTimeCoord *,8, 12861, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkTimeCoord *,4, 12861, 10)
+CheckTypeSize(GdkTimeCoord *,4, 12861, 10);
 #elif __s390x__
-CheckTypeSize(GdkTimeCoord *,8, 12861, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12861,0);
-Msg("Find size of GdkTimeCoord * (12861)\n");
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12862,0);
-Msg("Find size of GdkTimeCoord * * (12862)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(struct _GdkPoint,8, 12863, 2)
-CheckMemberSize(struct _GdkPoint,y,4,2,43952)
-CheckOffset(struct _GdkPoint,y,4,2,43952)
-#elif __x86_64__
-CheckTypeSize(struct _GdkPoint,8, 12863, 11)
-CheckMemberSize(struct _GdkPoint,y,4,11,43952)
-CheckOffset(struct _GdkPoint,y,4,11,43952)
-#elif __ia64__
-CheckTypeSize(struct _GdkPoint,8, 12863, 3)
-CheckMemberSize(struct _GdkPoint,y,4,3,43952)
-CheckOffset(struct _GdkPoint,y,4,3,43952)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkPoint,8, 12863, 6)
-CheckMemberSize(struct _GdkPoint,y,4,6,43952)
-CheckOffset(struct _GdkPoint,y,4,6,43952)
-#elif __powerpc64__
-CheckTypeSize(struct _GdkPoint,8, 12863, 9)
-CheckMemberSize(struct _GdkPoint,y,4,9,43952)
-CheckOffset(struct _GdkPoint,y,4,9,43952)
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkPoint,8, 12863, 10)
-CheckMemberSize(struct _GdkPoint,y,4,10,43952)
-CheckOffset(struct _GdkPoint,y,4,10,43952)
-#elif __s390x__
-CheckTypeSize(struct _GdkPoint,8, 12863, 12)
-CheckMemberSize(struct _GdkPoint,y,4,12,43952)
-CheckOffset(struct _GdkPoint,y,4,12,43952)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12863,0);
-Msg("Find size of _GdkPoint (12863)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GdkPoint,8, 12864, 2)
-#elif __x86_64__
-CheckTypeSize(GdkPoint,8, 12864, 11)
-#elif __ia64__
-CheckTypeSize(GdkPoint,8, 12864, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPoint,8, 12864, 6)
-#elif __powerpc64__
-CheckTypeSize(GdkPoint,8, 12864, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkPoint,8, 12864, 10)
-#elif __s390x__
-CheckTypeSize(GdkPoint,8, 12864, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12864,0);
-Msg("Find size of GdkPoint (12864)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GdkPoint *,4, 12865, 2)
-#elif __x86_64__
-CheckTypeSize(GdkPoint *,8, 12865, 11)
-#elif __ia64__
-CheckTypeSize(GdkPoint *,8, 12865, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPoint *,4, 12865, 6)
-#elif __powerpc64__
-CheckTypeSize(GdkPoint *,8, 12865, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkPoint *,4, 12865, 10)
-#elif __s390x__
-CheckTypeSize(GdkPoint *,8, 12865, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12865,0);
-Msg("Find size of GdkPoint * (12865)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GdkFont,0, 12867, 2)
-#elif __x86_64__
-CheckTypeSize(GdkFont,0, 12867, 11)
-#elif __ia64__
-CheckTypeSize(GdkFont,0, 12867, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkFont,0, 12867, 6)
-#elif __powerpc64__
-CheckTypeSize(GdkFont,0, 12867, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkFont,0, 12867, 10)
-#elif __s390x__
-CheckTypeSize(GdkFont,0, 12867, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12867,0);
-Msg("Find size of GdkFont (12867)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(const GdkFont,0, 12868, 2)
-#elif __x86_64__
-CheckTypeSize(const GdkFont,0, 12868, 11)
-#elif __ia64__
-CheckTypeSize(const GdkFont,0, 12868, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(const GdkFont,0, 12868, 6)
-#elif __powerpc64__
-CheckTypeSize(const GdkFont,0, 12868, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(const GdkFont,0, 12868, 10)
-#elif __s390x__
-CheckTypeSize(const GdkFont,0, 12868, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12868,0);
-Msg("Find size of const GdkFont (12868)\n");
+CheckTypeSize(GdkTimeCoord *,8, 12861, 12);
+#elif 1
+CheckTypeSize(GdkTimeCoord *,0, 12861, 1);
 #endif
 
 #if __i386__
@@ -8719,9 +8912,124 @@ Msg("Find size of const GdkFont (12868)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12869,0);
-Msg("Find size of const GdkFont * (12869)\n");
+#elif 1
+#endif
+
+#if __i386__
+CheckTypeSize(struct _GdkPoint,8, 12863, 2);
+CheckMemberSize(struct _GdkPoint,y,4,2,43952);
+CheckOffset(struct _GdkPoint,y,4,2,43952);
+#elif __x86_64__
+CheckTypeSize(struct _GdkPoint,8, 12863, 11);
+CheckMemberSize(struct _GdkPoint,y,4,11,43952);
+CheckOffset(struct _GdkPoint,y,4,11,43952);
+#elif __ia64__
+CheckTypeSize(struct _GdkPoint,8, 12863, 3);
+CheckMemberSize(struct _GdkPoint,y,4,3,43952);
+CheckOffset(struct _GdkPoint,y,4,3,43952);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _GdkPoint,8, 12863, 6);
+CheckMemberSize(struct _GdkPoint,y,4,6,43952);
+CheckOffset(struct _GdkPoint,y,4,6,43952);
+#elif __powerpc64__
+CheckTypeSize(struct _GdkPoint,8, 12863, 9);
+CheckMemberSize(struct _GdkPoint,y,4,9,43952);
+CheckOffset(struct _GdkPoint,y,4,9,43952);
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _GdkPoint,8, 12863, 10);
+CheckMemberSize(struct _GdkPoint,y,4,10,43952);
+CheckOffset(struct _GdkPoint,y,4,10,43952);
+#elif __s390x__
+CheckTypeSize(struct _GdkPoint,8, 12863, 12);
+CheckMemberSize(struct _GdkPoint,y,4,12,43952);
+CheckOffset(struct _GdkPoint,y,4,12,43952);
+#elif 1
+CheckTypeSize(struct _GdkPoint,0, 12863, 1);
+Msg("Missing member data for _GdkPoint on All\n");
+CheckOffset(struct _GdkPoint,x,0,1,43951);
+CheckOffset(struct _GdkPoint,y,0,1,43952);
+#endif
+
+#if __i386__
+CheckTypeSize(GdkPoint,8, 12864, 2);
+#elif __x86_64__
+CheckTypeSize(GdkPoint,8, 12864, 11);
+#elif __ia64__
+CheckTypeSize(GdkPoint,8, 12864, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkPoint,8, 12864, 6);
+#elif __powerpc64__
+CheckTypeSize(GdkPoint,8, 12864, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GdkPoint,8, 12864, 10);
+#elif __s390x__
+CheckTypeSize(GdkPoint,8, 12864, 12);
+#elif 1
+CheckTypeSize(GdkPoint,0, 12864, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(GdkPoint *,4, 12865, 2);
+#elif __x86_64__
+CheckTypeSize(GdkPoint *,8, 12865, 11);
+#elif __ia64__
+CheckTypeSize(GdkPoint *,8, 12865, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkPoint *,4, 12865, 6);
+#elif __powerpc64__
+CheckTypeSize(GdkPoint *,8, 12865, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GdkPoint *,4, 12865, 10);
+#elif __s390x__
+CheckTypeSize(GdkPoint *,8, 12865, 12);
+#elif 1
+CheckTypeSize(GdkPoint *,0, 12865, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(GdkFont,0, 12867, 2);
+#elif __x86_64__
+CheckTypeSize(GdkFont,0, 12867, 11);
+#elif __ia64__
+CheckTypeSize(GdkFont,0, 12867, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkFont,0, 12867, 6);
+#elif __powerpc64__
+CheckTypeSize(GdkFont,0, 12867, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GdkFont,0, 12867, 10);
+#elif __s390x__
+CheckTypeSize(GdkFont,0, 12867, 12);
+#elif 1
+CheckTypeSize(GdkFont,0, 12867, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(const GdkFont,0, 12868, 2);
+#elif __x86_64__
+CheckTypeSize(const GdkFont,0, 12868, 11);
+#elif __ia64__
+CheckTypeSize(const GdkFont,0, 12868, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const GdkFont,0, 12868, 6);
+#elif __powerpc64__
+CheckTypeSize(const GdkFont,0, 12868, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(const GdkFont,0, 12868, 10);
+#elif __s390x__
+CheckTypeSize(const GdkFont,0, 12868, 12);
+#elif 1
+CheckTypeSize(const GdkFont,0, 12868, 1);
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
+#elif 1
 #endif
 
 #if __i386__
@@ -8780,28 +9088,32 @@ CheckEnum("GDK_DECOR_TITLE",GDK_DECOR_TITLE,8,43956);
 CheckEnum("GDK_DECOR_MENU",GDK_DECOR_MENU,16,43957);
 CheckEnum("GDK_DECOR_MINIMIZE",GDK_DECOR_MINIMIZE,32,43958);
 CheckEnum("GDK_DECOR_MAXIMIZE",GDK_DECOR_MAXIMIZE,64,43959);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12870,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-951 (12870)\n");
+#elif 1
+CheckEnum("GDK_DECOR_ALL",GDK_DECOR_ALL,1,43953);
+CheckEnum("GDK_DECOR_BORDER",GDK_DECOR_BORDER,2,43954);
+CheckEnum("GDK_DECOR_RESIZEH",GDK_DECOR_RESIZEH,4,43955);
+CheckEnum("GDK_DECOR_TITLE",GDK_DECOR_TITLE,8,43956);
+CheckEnum("GDK_DECOR_MENU",GDK_DECOR_MENU,16,43957);
+CheckEnum("GDK_DECOR_MINIMIZE",GDK_DECOR_MINIMIZE,32,43958);
+CheckEnum("GDK_DECOR_MAXIMIZE",GDK_DECOR_MAXIMIZE,64,43959);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkWMDecoration,4, 12871, 2)
+CheckTypeSize(GdkWMDecoration,4, 12871, 2);
 #elif __x86_64__
-CheckTypeSize(GdkWMDecoration,4, 12871, 11)
+CheckTypeSize(GdkWMDecoration,4, 12871, 11);
 #elif __ia64__
-CheckTypeSize(GdkWMDecoration,4, 12871, 3)
+CheckTypeSize(GdkWMDecoration,4, 12871, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkWMDecoration,4, 12871, 6)
+CheckTypeSize(GdkWMDecoration,4, 12871, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkWMDecoration,4, 12871, 9)
+CheckTypeSize(GdkWMDecoration,4, 12871, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkWMDecoration,4, 12871, 10)
+CheckTypeSize(GdkWMDecoration,4, 12871, 10);
 #elif __s390x__
-CheckTypeSize(GdkWMDecoration,4, 12871, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12871,0);
-Msg("Find size of GdkWMDecoration (12871)\n");
+CheckTypeSize(GdkWMDecoration,4, 12871, 12);
+#elif 1
+CheckTypeSize(GdkWMDecoration,0, 12871, 1);
 #endif
 
 #if __i386__
@@ -8853,125 +9165,31 @@ CheckEnum("GDK_FUNC_MOVE",GDK_FUNC_MOVE,4,43962);
 CheckEnum("GDK_FUNC_MINIMIZE",GDK_FUNC_MINIMIZE,8,43963);
 CheckEnum("GDK_FUNC_MAXIMIZE",GDK_FUNC_MAXIMIZE,16,43964);
 CheckEnum("GDK_FUNC_CLOSE",GDK_FUNC_CLOSE,32,43965);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12872,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-952 (12872)\n");
+#elif 1
+CheckEnum("GDK_FUNC_ALL",GDK_FUNC_ALL,1,43960);
+CheckEnum("GDK_FUNC_RESIZE",GDK_FUNC_RESIZE,2,43961);
+CheckEnum("GDK_FUNC_MOVE",GDK_FUNC_MOVE,4,43962);
+CheckEnum("GDK_FUNC_MINIMIZE",GDK_FUNC_MINIMIZE,8,43963);
+CheckEnum("GDK_FUNC_MAXIMIZE",GDK_FUNC_MAXIMIZE,16,43964);
+CheckEnum("GDK_FUNC_CLOSE",GDK_FUNC_CLOSE,32,43965);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkWMFunction,4, 12873, 2)
+CheckTypeSize(GdkWMFunction,4, 12873, 2);
 #elif __x86_64__
-CheckTypeSize(GdkWMFunction,4, 12873, 11)
+CheckTypeSize(GdkWMFunction,4, 12873, 11);
 #elif __ia64__
-CheckTypeSize(GdkWMFunction,4, 12873, 3)
+CheckTypeSize(GdkWMFunction,4, 12873, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkWMFunction,4, 12873, 6)
+CheckTypeSize(GdkWMFunction,4, 12873, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkWMFunction,4, 12873, 9)
+CheckTypeSize(GdkWMFunction,4, 12873, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkWMFunction,4, 12873, 10)
+CheckTypeSize(GdkWMFunction,4, 12873, 10);
 #elif __s390x__
-CheckTypeSize(GdkWMFunction,4, 12873, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12873,0);
-Msg("Find size of GdkWMFunction (12873)\n");
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12874,0);
-Msg("Find size of fptr_gdk_65 (12874)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(struct _GdkKeymapKey,12, 12875, 2)
-CheckMemberSize(struct _GdkKeymapKey,group,4,2,43969)
-CheckOffset(struct _GdkKeymapKey,group,4,2,43969)
-CheckMemberSize(struct _GdkKeymapKey,level,4,2,43970)
-CheckOffset(struct _GdkKeymapKey,level,8,2,43970)
-#elif __x86_64__
-CheckTypeSize(struct _GdkKeymapKey,12, 12875, 11)
-CheckMemberSize(struct _GdkKeymapKey,group,4,11,43969)
-CheckOffset(struct _GdkKeymapKey,group,4,11,43969)
-CheckMemberSize(struct _GdkKeymapKey,level,4,11,43970)
-CheckOffset(struct _GdkKeymapKey,level,8,11,43970)
-#elif __ia64__
-CheckTypeSize(struct _GdkKeymapKey,12, 12875, 3)
-CheckMemberSize(struct _GdkKeymapKey,group,4,3,43969)
-CheckOffset(struct _GdkKeymapKey,group,4,3,43969)
-CheckMemberSize(struct _GdkKeymapKey,level,4,3,43970)
-CheckOffset(struct _GdkKeymapKey,level,8,3,43970)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkKeymapKey,12, 12875, 6)
-CheckMemberSize(struct _GdkKeymapKey,group,4,6,43969)
-CheckOffset(struct _GdkKeymapKey,group,4,6,43969)
-CheckMemberSize(struct _GdkKeymapKey,level,4,6,43970)
-CheckOffset(struct _GdkKeymapKey,level,8,6,43970)
-#elif __powerpc64__
-CheckTypeSize(struct _GdkKeymapKey,12, 12875, 9)
-CheckMemberSize(struct _GdkKeymapKey,group,4,9,43969)
-CheckOffset(struct _GdkKeymapKey,group,4,9,43969)
-CheckMemberSize(struct _GdkKeymapKey,level,4,9,43970)
-CheckOffset(struct _GdkKeymapKey,level,8,9,43970)
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkKeymapKey,12, 12875, 10)
-CheckMemberSize(struct _GdkKeymapKey,group,4,10,43969)
-CheckOffset(struct _GdkKeymapKey,group,4,10,43969)
-CheckMemberSize(struct _GdkKeymapKey,level,4,10,43970)
-CheckOffset(struct _GdkKeymapKey,level,8,10,43970)
-#elif __s390x__
-CheckTypeSize(struct _GdkKeymapKey,12, 12875, 12)
-CheckMemberSize(struct _GdkKeymapKey,group,4,12,43969)
-CheckOffset(struct _GdkKeymapKey,group,4,12,43969)
-CheckMemberSize(struct _GdkKeymapKey,level,4,12,43970)
-CheckOffset(struct _GdkKeymapKey,level,8,12,43970)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12875,0);
-Msg("Find size of _GdkKeymapKey (12875)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GdkKeymapKey,12, 12876, 2)
-#elif __x86_64__
-CheckTypeSize(GdkKeymapKey,12, 12876, 11)
-#elif __ia64__
-CheckTypeSize(GdkKeymapKey,12, 12876, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkKeymapKey,12, 12876, 6)
-#elif __powerpc64__
-CheckTypeSize(GdkKeymapKey,12, 12876, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkKeymapKey,12, 12876, 10)
-#elif __s390x__
-CheckTypeSize(GdkKeymapKey,12, 12876, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12876,0);
-Msg("Find size of GdkKeymapKey (12876)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GdkKeymapKey *,4, 12877, 2)
-#elif __x86_64__
-CheckTypeSize(GdkKeymapKey *,8, 12877, 11)
-#elif __ia64__
-CheckTypeSize(GdkKeymapKey *,8, 12877, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkKeymapKey *,4, 12877, 6)
-#elif __powerpc64__
-CheckTypeSize(GdkKeymapKey *,8, 12877, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkKeymapKey *,4, 12877, 10)
-#elif __s390x__
-CheckTypeSize(GdkKeymapKey *,8, 12877, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12877,0);
-Msg("Find size of GdkKeymapKey * (12877)\n");
+CheckTypeSize(GdkWMFunction,4, 12873, 12);
+#elif 1
+CheckTypeSize(GdkWMFunction,0, 12873, 1);
 #endif
 
 #if __i386__
@@ -8981,9 +9199,93 @@ Msg("Find size of GdkKeymapKey * (12877)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12878,0);
-Msg("Find size of GdkKeymapKey * * (12878)\n");
+#elif 1
+#endif
+
+#if __i386__
+CheckTypeSize(struct _GdkKeymapKey,12, 12875, 2);
+CheckMemberSize(struct _GdkKeymapKey,group,4,2,43969);
+CheckOffset(struct _GdkKeymapKey,group,4,2,43969);
+CheckMemberSize(struct _GdkKeymapKey,level,4,2,43970);
+CheckOffset(struct _GdkKeymapKey,level,8,2,43970);
+#elif __x86_64__
+CheckTypeSize(struct _GdkKeymapKey,12, 12875, 11);
+CheckMemberSize(struct _GdkKeymapKey,group,4,11,43969);
+CheckOffset(struct _GdkKeymapKey,group,4,11,43969);
+CheckMemberSize(struct _GdkKeymapKey,level,4,11,43970);
+CheckOffset(struct _GdkKeymapKey,level,8,11,43970);
+#elif __ia64__
+CheckTypeSize(struct _GdkKeymapKey,12, 12875, 3);
+CheckMemberSize(struct _GdkKeymapKey,group,4,3,43969);
+CheckOffset(struct _GdkKeymapKey,group,4,3,43969);
+CheckMemberSize(struct _GdkKeymapKey,level,4,3,43970);
+CheckOffset(struct _GdkKeymapKey,level,8,3,43970);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _GdkKeymapKey,12, 12875, 6);
+CheckMemberSize(struct _GdkKeymapKey,group,4,6,43969);
+CheckOffset(struct _GdkKeymapKey,group,4,6,43969);
+CheckMemberSize(struct _GdkKeymapKey,level,4,6,43970);
+CheckOffset(struct _GdkKeymapKey,level,8,6,43970);
+#elif __powerpc64__
+CheckTypeSize(struct _GdkKeymapKey,12, 12875, 9);
+CheckMemberSize(struct _GdkKeymapKey,group,4,9,43969);
+CheckOffset(struct _GdkKeymapKey,group,4,9,43969);
+CheckMemberSize(struct _GdkKeymapKey,level,4,9,43970);
+CheckOffset(struct _GdkKeymapKey,level,8,9,43970);
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _GdkKeymapKey,12, 12875, 10);
+CheckMemberSize(struct _GdkKeymapKey,group,4,10,43969);
+CheckOffset(struct _GdkKeymapKey,group,4,10,43969);
+CheckMemberSize(struct _GdkKeymapKey,level,4,10,43970);
+CheckOffset(struct _GdkKeymapKey,level,8,10,43970);
+#elif __s390x__
+CheckTypeSize(struct _GdkKeymapKey,12, 12875, 12);
+CheckMemberSize(struct _GdkKeymapKey,group,4,12,43969);
+CheckOffset(struct _GdkKeymapKey,group,4,12,43969);
+CheckMemberSize(struct _GdkKeymapKey,level,4,12,43970);
+CheckOffset(struct _GdkKeymapKey,level,8,12,43970);
+#elif 1
+CheckTypeSize(struct _GdkKeymapKey,0, 12875, 1);
+Msg("Missing member data for _GdkKeymapKey on All\n");
+CheckOffset(struct _GdkKeymapKey,keycode,0,1,43968);
+CheckOffset(struct _GdkKeymapKey,group,0,1,43969);
+CheckOffset(struct _GdkKeymapKey,level,0,1,43970);
+#endif
+
+#if __i386__
+CheckTypeSize(GdkKeymapKey,12, 12876, 2);
+#elif __x86_64__
+CheckTypeSize(GdkKeymapKey,12, 12876, 11);
+#elif __ia64__
+CheckTypeSize(GdkKeymapKey,12, 12876, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkKeymapKey,12, 12876, 6);
+#elif __powerpc64__
+CheckTypeSize(GdkKeymapKey,12, 12876, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GdkKeymapKey,12, 12876, 10);
+#elif __s390x__
+CheckTypeSize(GdkKeymapKey,12, 12876, 12);
+#elif 1
+CheckTypeSize(GdkKeymapKey,0, 12876, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(GdkKeymapKey *,4, 12877, 2);
+#elif __x86_64__
+CheckTypeSize(GdkKeymapKey *,8, 12877, 11);
+#elif __ia64__
+CheckTypeSize(GdkKeymapKey *,8, 12877, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkKeymapKey *,4, 12877, 6);
+#elif __powerpc64__
+CheckTypeSize(GdkKeymapKey *,8, 12877, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GdkKeymapKey *,4, 12877, 10);
+#elif __s390x__
+CheckTypeSize(GdkKeymapKey *,8, 12877, 12);
+#elif 1
+CheckTypeSize(GdkKeymapKey *,0, 12877, 1);
 #endif
 
 #if __i386__
@@ -8993,9 +9295,17 @@ Msg("Find size of GdkKeymapKey * * (12878)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12879,0);
-Msg("Find size of GdkPixmap * * (12879)\n");
+#elif 1
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
+#elif 1
 #endif
 
 #if __i386__
@@ -9026,411 +9336,428 @@ CheckEnum("GDK_RGB_DITHER_MAX",GDK_RGB_DITHER_MAX,2,43973);
 CheckEnum("GDK_RGB_DITHER_NONE",GDK_RGB_DITHER_NONE,0,43971);
 CheckEnum("GDK_RGB_DITHER_NORMAL",GDK_RGB_DITHER_NORMAL,1,43972);
 CheckEnum("GDK_RGB_DITHER_MAX",GDK_RGB_DITHER_MAX,2,43973);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12880,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-43 (12880)\n");
+#elif 1
+CheckEnum("GDK_RGB_DITHER_NONE",GDK_RGB_DITHER_NONE,0,43971);
+CheckEnum("GDK_RGB_DITHER_NORMAL",GDK_RGB_DITHER_NORMAL,1,43972);
+CheckEnum("GDK_RGB_DITHER_MAX",GDK_RGB_DITHER_MAX,2,43973);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkRgbDither,4, 12881, 2)
+CheckTypeSize(GdkRgbDither,4, 12881, 2);
 #elif __x86_64__
-CheckTypeSize(GdkRgbDither,4, 12881, 11)
+CheckTypeSize(GdkRgbDither,4, 12881, 11);
 #elif __ia64__
-CheckTypeSize(GdkRgbDither,4, 12881, 3)
+CheckTypeSize(GdkRgbDither,4, 12881, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkRgbDither,4, 12881, 6)
+CheckTypeSize(GdkRgbDither,4, 12881, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkRgbDither,4, 12881, 9)
+CheckTypeSize(GdkRgbDither,4, 12881, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkRgbDither,4, 12881, 10)
+CheckTypeSize(GdkRgbDither,4, 12881, 10);
 #elif __s390x__
-CheckTypeSize(GdkRgbDither,4, 12881, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12881,0);
-Msg("Find size of GdkRgbDither (12881)\n");
+CheckTypeSize(GdkRgbDither,4, 12881, 12);
+#elif 1
+CheckTypeSize(GdkRgbDither,0, 12881, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkRgbCmap,1032, 12882, 2)
-CheckMemberSize(struct _GdkRgbCmap,n_colors,4,2,43975)
-CheckOffset(struct _GdkRgbCmap,n_colors,1024,2,43975)
-CheckMemberSize(struct _GdkRgbCmap,info_list,4,2,43976)
-CheckOffset(struct _GdkRgbCmap,info_list,1028,2,43976)
+CheckTypeSize(struct _GdkRgbCmap,1032, 12882, 2);
+CheckMemberSize(struct _GdkRgbCmap,n_colors,4,2,43975);
+CheckOffset(struct _GdkRgbCmap,n_colors,1024,2,43975);
+CheckMemberSize(struct _GdkRgbCmap,info_list,4,2,43976);
+CheckOffset(struct _GdkRgbCmap,info_list,1028,2,43976);
 #elif __x86_64__
-CheckTypeSize(struct _GdkRgbCmap,1040, 12882, 11)
-CheckMemberSize(struct _GdkRgbCmap,n_colors,4,11,43975)
-CheckOffset(struct _GdkRgbCmap,n_colors,1024,11,43975)
-CheckMemberSize(struct _GdkRgbCmap,info_list,8,11,43976)
-CheckOffset(struct _GdkRgbCmap,info_list,1032,11,43976)
+CheckTypeSize(struct _GdkRgbCmap,1040, 12882, 11);
+CheckMemberSize(struct _GdkRgbCmap,n_colors,4,11,43975);
+CheckOffset(struct _GdkRgbCmap,n_colors,1024,11,43975);
+CheckMemberSize(struct _GdkRgbCmap,info_list,8,11,43976);
+CheckOffset(struct _GdkRgbCmap,info_list,1032,11,43976);
 #elif __ia64__
-CheckTypeSize(struct _GdkRgbCmap,1040, 12882, 3)
-CheckMemberSize(struct _GdkRgbCmap,n_colors,4,3,43975)
-CheckOffset(struct _GdkRgbCmap,n_colors,1024,3,43975)
-CheckMemberSize(struct _GdkRgbCmap,info_list,8,3,43976)
-CheckOffset(struct _GdkRgbCmap,info_list,1032,3,43976)
+CheckTypeSize(struct _GdkRgbCmap,1040, 12882, 3);
+CheckMemberSize(struct _GdkRgbCmap,n_colors,4,3,43975);
+CheckOffset(struct _GdkRgbCmap,n_colors,1024,3,43975);
+CheckMemberSize(struct _GdkRgbCmap,info_list,8,3,43976);
+CheckOffset(struct _GdkRgbCmap,info_list,1032,3,43976);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkRgbCmap,1032, 12882, 6)
-CheckMemberSize(struct _GdkRgbCmap,n_colors,4,6,43975)
-CheckOffset(struct _GdkRgbCmap,n_colors,1024,6,43975)
-CheckMemberSize(struct _GdkRgbCmap,info_list,4,6,43976)
-CheckOffset(struct _GdkRgbCmap,info_list,1028,6,43976)
+CheckTypeSize(struct _GdkRgbCmap,1032, 12882, 6);
+CheckMemberSize(struct _GdkRgbCmap,n_colors,4,6,43975);
+CheckOffset(struct _GdkRgbCmap,n_colors,1024,6,43975);
+CheckMemberSize(struct _GdkRgbCmap,info_list,4,6,43976);
+CheckOffset(struct _GdkRgbCmap,info_list,1028,6,43976);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkRgbCmap,1040, 12882, 9)
-CheckMemberSize(struct _GdkRgbCmap,n_colors,4,9,43975)
-CheckOffset(struct _GdkRgbCmap,n_colors,1024,9,43975)
-CheckMemberSize(struct _GdkRgbCmap,info_list,8,9,43976)
-CheckOffset(struct _GdkRgbCmap,info_list,1032,9,43976)
+CheckTypeSize(struct _GdkRgbCmap,1040, 12882, 9);
+CheckMemberSize(struct _GdkRgbCmap,n_colors,4,9,43975);
+CheckOffset(struct _GdkRgbCmap,n_colors,1024,9,43975);
+CheckMemberSize(struct _GdkRgbCmap,info_list,8,9,43976);
+CheckOffset(struct _GdkRgbCmap,info_list,1032,9,43976);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkRgbCmap,1032, 12882, 10)
-CheckMemberSize(struct _GdkRgbCmap,n_colors,4,10,43975)
-CheckOffset(struct _GdkRgbCmap,n_colors,1024,10,43975)
-CheckMemberSize(struct _GdkRgbCmap,info_list,4,10,43976)
-CheckOffset(struct _GdkRgbCmap,info_list,1028,10,43976)
+CheckTypeSize(struct _GdkRgbCmap,1032, 12882, 10);
+CheckMemberSize(struct _GdkRgbCmap,n_colors,4,10,43975);
+CheckOffset(struct _GdkRgbCmap,n_colors,1024,10,43975);
+CheckMemberSize(struct _GdkRgbCmap,info_list,4,10,43976);
+CheckOffset(struct _GdkRgbCmap,info_list,1028,10,43976);
 #elif __s390x__
-CheckTypeSize(struct _GdkRgbCmap,1040, 12882, 12)
-CheckMemberSize(struct _GdkRgbCmap,n_colors,4,12,43975)
-CheckOffset(struct _GdkRgbCmap,n_colors,1024,12,43975)
-CheckMemberSize(struct _GdkRgbCmap,info_list,8,12,43976)
-CheckOffset(struct _GdkRgbCmap,info_list,1032,12,43976)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12882,0);
-Msg("Find size of _GdkRgbCmap (12882)\n");
+CheckTypeSize(struct _GdkRgbCmap,1040, 12882, 12);
+CheckMemberSize(struct _GdkRgbCmap,n_colors,4,12,43975);
+CheckOffset(struct _GdkRgbCmap,n_colors,1024,12,43975);
+CheckMemberSize(struct _GdkRgbCmap,info_list,8,12,43976);
+CheckOffset(struct _GdkRgbCmap,info_list,1032,12,43976);
+#elif 1
+CheckTypeSize(struct _GdkRgbCmap,0, 12882, 1);
+Msg("Missing member data for _GdkRgbCmap on All\n");
+CheckOffset(struct _GdkRgbCmap,colors,0,1,43974);
+CheckOffset(struct _GdkRgbCmap,n_colors,0,1,43975);
+CheckOffset(struct _GdkRgbCmap,info_list,0,1,43976);
 #endif
 
 #if 1
 #endif
 
 #if __i386__
-CheckTypeSize(GdkRgbCmap,1032, 12884, 2)
+CheckTypeSize(GdkRgbCmap,1032, 12884, 2);
 #elif __x86_64__
-CheckTypeSize(GdkRgbCmap,1040, 12884, 11)
+CheckTypeSize(GdkRgbCmap,1040, 12884, 11);
 #elif __ia64__
-CheckTypeSize(GdkRgbCmap,1040, 12884, 3)
+CheckTypeSize(GdkRgbCmap,1040, 12884, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkRgbCmap,1032, 12884, 6)
+CheckTypeSize(GdkRgbCmap,1032, 12884, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkRgbCmap,1040, 12884, 9)
+CheckTypeSize(GdkRgbCmap,1040, 12884, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkRgbCmap,1032, 12884, 10)
+CheckTypeSize(GdkRgbCmap,1032, 12884, 10);
 #elif __s390x__
-CheckTypeSize(GdkRgbCmap,1040, 12884, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12884,0);
-Msg("Find size of GdkRgbCmap (12884)\n");
+CheckTypeSize(GdkRgbCmap,1040, 12884, 12);
+#elif 1
+CheckTypeSize(GdkRgbCmap,0, 12884, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkRgbCmap *,4, 12885, 2)
+CheckTypeSize(GdkRgbCmap *,4, 12885, 2);
 #elif __x86_64__
-CheckTypeSize(GdkRgbCmap *,8, 12885, 11)
+CheckTypeSize(GdkRgbCmap *,8, 12885, 11);
 #elif __ia64__
-CheckTypeSize(GdkRgbCmap *,8, 12885, 3)
+CheckTypeSize(GdkRgbCmap *,8, 12885, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkRgbCmap *,4, 12885, 6)
+CheckTypeSize(GdkRgbCmap *,4, 12885, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkRgbCmap *,8, 12885, 9)
+CheckTypeSize(GdkRgbCmap *,8, 12885, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkRgbCmap *,4, 12885, 10)
+CheckTypeSize(GdkRgbCmap *,4, 12885, 10);
 #elif __s390x__
-CheckTypeSize(GdkRgbCmap *,8, 12885, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12885,0);
-Msg("Find size of GdkRgbCmap * (12885)\n");
+CheckTypeSize(GdkRgbCmap *,8, 12885, 12);
+#elif 1
+CheckTypeSize(GdkRgbCmap *,0, 12885, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkFont *,4, 12886, 2)
+CheckTypeSize(GdkFont *,4, 12886, 2);
 #elif __x86_64__
-CheckTypeSize(GdkFont *,8, 12886, 11)
+CheckTypeSize(GdkFont *,8, 12886, 11);
 #elif __ia64__
-CheckTypeSize(GdkFont *,8, 12886, 3)
+CheckTypeSize(GdkFont *,8, 12886, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkFont *,4, 12886, 6)
+CheckTypeSize(GdkFont *,4, 12886, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkFont *,8, 12886, 9)
+CheckTypeSize(GdkFont *,8, 12886, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkFont *,4, 12886, 10)
+CheckTypeSize(GdkFont *,4, 12886, 10);
 #elif __s390x__
-CheckTypeSize(GdkFont *,8, 12886, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12886,0);
-Msg("Find size of GdkFont * (12886)\n");
+CheckTypeSize(GdkFont *,8, 12886, 12);
+#elif 1
+CheckTypeSize(GdkFont *,0, 12886, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkDragProtocol *,4, 12887, 2)
+CheckTypeSize(GdkDragProtocol *,4, 12887, 2);
 #elif __x86_64__
-CheckTypeSize(GdkDragProtocol *,8, 12887, 11)
+CheckTypeSize(GdkDragProtocol *,8, 12887, 11);
 #elif __ia64__
-CheckTypeSize(GdkDragProtocol *,8, 12887, 3)
+CheckTypeSize(GdkDragProtocol *,8, 12887, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkDragProtocol *,4, 12887, 6)
+CheckTypeSize(GdkDragProtocol *,4, 12887, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkDragProtocol *,8, 12887, 9)
+CheckTypeSize(GdkDragProtocol *,8, 12887, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkDragProtocol *,4, 12887, 10)
+CheckTypeSize(GdkDragProtocol *,4, 12887, 10);
 #elif __s390x__
-CheckTypeSize(GdkDragProtocol *,8, 12887, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12887,0);
-Msg("Find size of GdkDragProtocol * (12887)\n");
+CheckTypeSize(GdkDragProtocol *,8, 12887, 12);
+#elif 1
+CheckTypeSize(GdkDragProtocol *,0, 12887, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkGCValues,88, 12888, 2)
-CheckMemberSize(struct _GdkGCValues,background,12,2,43978)
-CheckOffset(struct _GdkGCValues,background,12,2,43978)
-CheckMemberSize(struct _GdkGCValues,font,4,2,43979)
-CheckOffset(struct _GdkGCValues,font,24,2,43979)
-CheckMemberSize(struct _GdkGCValues,function,4,2,43996)
-CheckOffset(struct _GdkGCValues,function,28,2,43996)
-CheckMemberSize(struct _GdkGCValues,fill,4,2,43997)
-CheckOffset(struct _GdkGCValues,fill,32,2,43997)
-CheckMemberSize(struct _GdkGCValues,tile,4,2,43998)
-CheckOffset(struct _GdkGCValues,tile,36,2,43998)
-CheckMemberSize(struct _GdkGCValues,stipple,4,2,43999)
-CheckOffset(struct _GdkGCValues,stipple,40,2,43999)
-CheckMemberSize(struct _GdkGCValues,clip_mask,4,2,44000)
-CheckOffset(struct _GdkGCValues,clip_mask,44,2,44000)
-CheckMemberSize(struct _GdkGCValues,subwindow_mode,4,2,44001)
-CheckOffset(struct _GdkGCValues,subwindow_mode,48,2,44001)
-CheckMemberSize(struct _GdkGCValues,ts_x_origin,4,2,44002)
-CheckOffset(struct _GdkGCValues,ts_x_origin,52,2,44002)
-CheckMemberSize(struct _GdkGCValues,ts_y_origin,4,2,44003)
-CheckOffset(struct _GdkGCValues,ts_y_origin,56,2,44003)
-CheckMemberSize(struct _GdkGCValues,clip_x_origin,4,2,44004)
-CheckOffset(struct _GdkGCValues,clip_x_origin,60,2,44004)
-CheckMemberSize(struct _GdkGCValues,clip_y_origin,4,2,44005)
-CheckOffset(struct _GdkGCValues,clip_y_origin,64,2,44005)
-CheckMemberSize(struct _GdkGCValues,graphics_exposures,4,2,44006)
-CheckOffset(struct _GdkGCValues,graphics_exposures,68,2,44006)
-CheckMemberSize(struct _GdkGCValues,line_width,4,2,44007)
-CheckOffset(struct _GdkGCValues,line_width,72,2,44007)
-CheckMemberSize(struct _GdkGCValues,line_style,4,2,44011)
-CheckOffset(struct _GdkGCValues,line_style,76,2,44011)
-CheckMemberSize(struct _GdkGCValues,cap_style,4,2,44016)
-CheckOffset(struct _GdkGCValues,cap_style,80,2,44016)
-CheckMemberSize(struct _GdkGCValues,join_style,4,2,44020)
-CheckOffset(struct _GdkGCValues,join_style,84,2,44020)
+CheckTypeSize(struct _GdkGCValues,88, 12888, 2);
+CheckMemberSize(struct _GdkGCValues,background,12,2,43978);
+CheckOffset(struct _GdkGCValues,background,12,2,43978);
+CheckMemberSize(struct _GdkGCValues,font,4,2,43979);
+CheckOffset(struct _GdkGCValues,font,24,2,43979);
+CheckMemberSize(struct _GdkGCValues,function,4,2,43996);
+CheckOffset(struct _GdkGCValues,function,28,2,43996);
+CheckMemberSize(struct _GdkGCValues,fill,4,2,43997);
+CheckOffset(struct _GdkGCValues,fill,32,2,43997);
+CheckMemberSize(struct _GdkGCValues,tile,4,2,43998);
+CheckOffset(struct _GdkGCValues,tile,36,2,43998);
+CheckMemberSize(struct _GdkGCValues,stipple,4,2,43999);
+CheckOffset(struct _GdkGCValues,stipple,40,2,43999);
+CheckMemberSize(struct _GdkGCValues,clip_mask,4,2,44000);
+CheckOffset(struct _GdkGCValues,clip_mask,44,2,44000);
+CheckMemberSize(struct _GdkGCValues,subwindow_mode,4,2,44001);
+CheckOffset(struct _GdkGCValues,subwindow_mode,48,2,44001);
+CheckMemberSize(struct _GdkGCValues,ts_x_origin,4,2,44002);
+CheckOffset(struct _GdkGCValues,ts_x_origin,52,2,44002);
+CheckMemberSize(struct _GdkGCValues,ts_y_origin,4,2,44003);
+CheckOffset(struct _GdkGCValues,ts_y_origin,56,2,44003);
+CheckMemberSize(struct _GdkGCValues,clip_x_origin,4,2,44004);
+CheckOffset(struct _GdkGCValues,clip_x_origin,60,2,44004);
+CheckMemberSize(struct _GdkGCValues,clip_y_origin,4,2,44005);
+CheckOffset(struct _GdkGCValues,clip_y_origin,64,2,44005);
+CheckMemberSize(struct _GdkGCValues,graphics_exposures,4,2,44006);
+CheckOffset(struct _GdkGCValues,graphics_exposures,68,2,44006);
+CheckMemberSize(struct _GdkGCValues,line_width,4,2,44007);
+CheckOffset(struct _GdkGCValues,line_width,72,2,44007);
+CheckMemberSize(struct _GdkGCValues,line_style,4,2,44011);
+CheckOffset(struct _GdkGCValues,line_style,76,2,44011);
+CheckMemberSize(struct _GdkGCValues,cap_style,4,2,44016);
+CheckOffset(struct _GdkGCValues,cap_style,80,2,44016);
+CheckMemberSize(struct _GdkGCValues,join_style,4,2,44020);
+CheckOffset(struct _GdkGCValues,join_style,84,2,44020);
 #elif __x86_64__
-CheckTypeSize(struct _GdkGCValues,104, 12888, 11)
-CheckMemberSize(struct _GdkGCValues,background,12,11,43978)
-CheckOffset(struct _GdkGCValues,background,12,11,43978)
-CheckMemberSize(struct _GdkGCValues,font,8,11,43979)
-CheckOffset(struct _GdkGCValues,font,24,11,43979)
-CheckMemberSize(struct _GdkGCValues,function,4,11,43996)
-CheckOffset(struct _GdkGCValues,function,32,11,43996)
-CheckMemberSize(struct _GdkGCValues,fill,4,11,43997)
-CheckOffset(struct _GdkGCValues,fill,36,11,43997)
-CheckMemberSize(struct _GdkGCValues,tile,8,11,43998)
-CheckOffset(struct _GdkGCValues,tile,40,11,43998)
-CheckMemberSize(struct _GdkGCValues,stipple,8,11,43999)
-CheckOffset(struct _GdkGCValues,stipple,48,11,43999)
-CheckMemberSize(struct _GdkGCValues,clip_mask,8,11,44000)
-CheckOffset(struct _GdkGCValues,clip_mask,56,11,44000)
-CheckMemberSize(struct _GdkGCValues,subwindow_mode,4,11,44001)
-CheckOffset(struct _GdkGCValues,subwindow_mode,64,11,44001)
-CheckMemberSize(struct _GdkGCValues,ts_x_origin,4,11,44002)
-CheckOffset(struct _GdkGCValues,ts_x_origin,68,11,44002)
-CheckMemberSize(struct _GdkGCValues,ts_y_origin,4,11,44003)
-CheckOffset(struct _GdkGCValues,ts_y_origin,72,11,44003)
-CheckMemberSize(struct _GdkGCValues,clip_x_origin,4,11,44004)
-CheckOffset(struct _GdkGCValues,clip_x_origin,76,11,44004)
-CheckMemberSize(struct _GdkGCValues,clip_y_origin,4,11,44005)
-CheckOffset(struct _GdkGCValues,clip_y_origin,80,11,44005)
-CheckMemberSize(struct _GdkGCValues,graphics_exposures,4,11,44006)
-CheckOffset(struct _GdkGCValues,graphics_exposures,84,11,44006)
-CheckMemberSize(struct _GdkGCValues,line_width,4,11,44007)
-CheckOffset(struct _GdkGCValues,line_width,88,11,44007)
-CheckMemberSize(struct _GdkGCValues,line_style,4,11,44011)
-CheckOffset(struct _GdkGCValues,line_style,92,11,44011)
-CheckMemberSize(struct _GdkGCValues,cap_style,4,11,44016)
-CheckOffset(struct _GdkGCValues,cap_style,96,11,44016)
-CheckMemberSize(struct _GdkGCValues,join_style,4,11,44020)
-CheckOffset(struct _GdkGCValues,join_style,100,11,44020)
+CheckTypeSize(struct _GdkGCValues,104, 12888, 11);
+CheckMemberSize(struct _GdkGCValues,background,12,11,43978);
+CheckOffset(struct _GdkGCValues,background,12,11,43978);
+CheckMemberSize(struct _GdkGCValues,font,8,11,43979);
+CheckOffset(struct _GdkGCValues,font,24,11,43979);
+CheckMemberSize(struct _GdkGCValues,function,4,11,43996);
+CheckOffset(struct _GdkGCValues,function,32,11,43996);
+CheckMemberSize(struct _GdkGCValues,fill,4,11,43997);
+CheckOffset(struct _GdkGCValues,fill,36,11,43997);
+CheckMemberSize(struct _GdkGCValues,tile,8,11,43998);
+CheckOffset(struct _GdkGCValues,tile,40,11,43998);
+CheckMemberSize(struct _GdkGCValues,stipple,8,11,43999);
+CheckOffset(struct _GdkGCValues,stipple,48,11,43999);
+CheckMemberSize(struct _GdkGCValues,clip_mask,8,11,44000);
+CheckOffset(struct _GdkGCValues,clip_mask,56,11,44000);
+CheckMemberSize(struct _GdkGCValues,subwindow_mode,4,11,44001);
+CheckOffset(struct _GdkGCValues,subwindow_mode,64,11,44001);
+CheckMemberSize(struct _GdkGCValues,ts_x_origin,4,11,44002);
+CheckOffset(struct _GdkGCValues,ts_x_origin,68,11,44002);
+CheckMemberSize(struct _GdkGCValues,ts_y_origin,4,11,44003);
+CheckOffset(struct _GdkGCValues,ts_y_origin,72,11,44003);
+CheckMemberSize(struct _GdkGCValues,clip_x_origin,4,11,44004);
+CheckOffset(struct _GdkGCValues,clip_x_origin,76,11,44004);
+CheckMemberSize(struct _GdkGCValues,clip_y_origin,4,11,44005);
+CheckOffset(struct _GdkGCValues,clip_y_origin,80,11,44005);
+CheckMemberSize(struct _GdkGCValues,graphics_exposures,4,11,44006);
+CheckOffset(struct _GdkGCValues,graphics_exposures,84,11,44006);
+CheckMemberSize(struct _GdkGCValues,line_width,4,11,44007);
+CheckOffset(struct _GdkGCValues,line_width,88,11,44007);
+CheckMemberSize(struct _GdkGCValues,line_style,4,11,44011);
+CheckOffset(struct _GdkGCValues,line_style,92,11,44011);
+CheckMemberSize(struct _GdkGCValues,cap_style,4,11,44016);
+CheckOffset(struct _GdkGCValues,cap_style,96,11,44016);
+CheckMemberSize(struct _GdkGCValues,join_style,4,11,44020);
+CheckOffset(struct _GdkGCValues,join_style,100,11,44020);
 #elif __ia64__
-CheckTypeSize(struct _GdkGCValues,104, 12888, 3)
-CheckMemberSize(struct _GdkGCValues,background,12,3,43978)
-CheckOffset(struct _GdkGCValues,background,12,3,43978)
-CheckMemberSize(struct _GdkGCValues,font,8,3,43979)
-CheckOffset(struct _GdkGCValues,font,24,3,43979)
-CheckMemberSize(struct _GdkGCValues,function,4,3,43996)
-CheckOffset(struct _GdkGCValues,function,32,3,43996)
-CheckMemberSize(struct _GdkGCValues,fill,4,3,43997)
-CheckOffset(struct _GdkGCValues,fill,36,3,43997)
-CheckMemberSize(struct _GdkGCValues,tile,8,3,43998)
-CheckOffset(struct _GdkGCValues,tile,40,3,43998)
-CheckMemberSize(struct _GdkGCValues,stipple,8,3,43999)
-CheckOffset(struct _GdkGCValues,stipple,48,3,43999)
-CheckMemberSize(struct _GdkGCValues,clip_mask,8,3,44000)
-CheckOffset(struct _GdkGCValues,clip_mask,56,3,44000)
-CheckMemberSize(struct _GdkGCValues,subwindow_mode,4,3,44001)
-CheckOffset(struct _GdkGCValues,subwindow_mode,64,3,44001)
-CheckMemberSize(struct _GdkGCValues,ts_x_origin,4,3,44002)
-CheckOffset(struct _GdkGCValues,ts_x_origin,68,3,44002)
-CheckMemberSize(struct _GdkGCValues,ts_y_origin,4,3,44003)
-CheckOffset(struct _GdkGCValues,ts_y_origin,72,3,44003)
-CheckMemberSize(struct _GdkGCValues,clip_x_origin,4,3,44004)
-CheckOffset(struct _GdkGCValues,clip_x_origin,76,3,44004)
-CheckMemberSize(struct _GdkGCValues,clip_y_origin,4,3,44005)
-CheckOffset(struct _GdkGCValues,clip_y_origin,80,3,44005)
-CheckMemberSize(struct _GdkGCValues,graphics_exposures,4,3,44006)
-CheckOffset(struct _GdkGCValues,graphics_exposures,84,3,44006)
-CheckMemberSize(struct _GdkGCValues,line_width,4,3,44007)
-CheckOffset(struct _GdkGCValues,line_width,88,3,44007)
-CheckMemberSize(struct _GdkGCValues,line_style,4,3,44011)
-CheckOffset(struct _GdkGCValues,line_style,92,3,44011)
-CheckMemberSize(struct _GdkGCValues,cap_style,4,3,44016)
-CheckOffset(struct _GdkGCValues,cap_style,96,3,44016)
-CheckMemberSize(struct _GdkGCValues,join_style,4,3,44020)
-CheckOffset(struct _GdkGCValues,join_style,100,3,44020)
+CheckTypeSize(struct _GdkGCValues,104, 12888, 3);
+CheckMemberSize(struct _GdkGCValues,background,12,3,43978);
+CheckOffset(struct _GdkGCValues,background,12,3,43978);
+CheckMemberSize(struct _GdkGCValues,font,8,3,43979);
+CheckOffset(struct _GdkGCValues,font,24,3,43979);
+CheckMemberSize(struct _GdkGCValues,function,4,3,43996);
+CheckOffset(struct _GdkGCValues,function,32,3,43996);
+CheckMemberSize(struct _GdkGCValues,fill,4,3,43997);
+CheckOffset(struct _GdkGCValues,fill,36,3,43997);
+CheckMemberSize(struct _GdkGCValues,tile,8,3,43998);
+CheckOffset(struct _GdkGCValues,tile,40,3,43998);
+CheckMemberSize(struct _GdkGCValues,stipple,8,3,43999);
+CheckOffset(struct _GdkGCValues,stipple,48,3,43999);
+CheckMemberSize(struct _GdkGCValues,clip_mask,8,3,44000);
+CheckOffset(struct _GdkGCValues,clip_mask,56,3,44000);
+CheckMemberSize(struct _GdkGCValues,subwindow_mode,4,3,44001);
+CheckOffset(struct _GdkGCValues,subwindow_mode,64,3,44001);
+CheckMemberSize(struct _GdkGCValues,ts_x_origin,4,3,44002);
+CheckOffset(struct _GdkGCValues,ts_x_origin,68,3,44002);
+CheckMemberSize(struct _GdkGCValues,ts_y_origin,4,3,44003);
+CheckOffset(struct _GdkGCValues,ts_y_origin,72,3,44003);
+CheckMemberSize(struct _GdkGCValues,clip_x_origin,4,3,44004);
+CheckOffset(struct _GdkGCValues,clip_x_origin,76,3,44004);
+CheckMemberSize(struct _GdkGCValues,clip_y_origin,4,3,44005);
+CheckOffset(struct _GdkGCValues,clip_y_origin,80,3,44005);
+CheckMemberSize(struct _GdkGCValues,graphics_exposures,4,3,44006);
+CheckOffset(struct _GdkGCValues,graphics_exposures,84,3,44006);
+CheckMemberSize(struct _GdkGCValues,line_width,4,3,44007);
+CheckOffset(struct _GdkGCValues,line_width,88,3,44007);
+CheckMemberSize(struct _GdkGCValues,line_style,4,3,44011);
+CheckOffset(struct _GdkGCValues,line_style,92,3,44011);
+CheckMemberSize(struct _GdkGCValues,cap_style,4,3,44016);
+CheckOffset(struct _GdkGCValues,cap_style,96,3,44016);
+CheckMemberSize(struct _GdkGCValues,join_style,4,3,44020);
+CheckOffset(struct _GdkGCValues,join_style,100,3,44020);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkGCValues,88, 12888, 6)
-CheckMemberSize(struct _GdkGCValues,background,12,6,43978)
-CheckOffset(struct _GdkGCValues,background,12,6,43978)
-CheckMemberSize(struct _GdkGCValues,font,4,6,43979)
-CheckOffset(struct _GdkGCValues,font,24,6,43979)
-CheckMemberSize(struct _GdkGCValues,function,4,6,43996)
-CheckOffset(struct _GdkGCValues,function,28,6,43996)
-CheckMemberSize(struct _GdkGCValues,fill,4,6,43997)
-CheckOffset(struct _GdkGCValues,fill,32,6,43997)
-CheckMemberSize(struct _GdkGCValues,tile,4,6,43998)
-CheckOffset(struct _GdkGCValues,tile,36,6,43998)
-CheckMemberSize(struct _GdkGCValues,stipple,4,6,43999)
-CheckOffset(struct _GdkGCValues,stipple,40,6,43999)
-CheckMemberSize(struct _GdkGCValues,clip_mask,4,6,44000)
-CheckOffset(struct _GdkGCValues,clip_mask,44,6,44000)
-CheckMemberSize(struct _GdkGCValues,subwindow_mode,4,6,44001)
-CheckOffset(struct _GdkGCValues,subwindow_mode,48,6,44001)
-CheckMemberSize(struct _GdkGCValues,ts_x_origin,4,6,44002)
-CheckOffset(struct _GdkGCValues,ts_x_origin,52,6,44002)
-CheckMemberSize(struct _GdkGCValues,ts_y_origin,4,6,44003)
-CheckOffset(struct _GdkGCValues,ts_y_origin,56,6,44003)
-CheckMemberSize(struct _GdkGCValues,clip_x_origin,4,6,44004)
-CheckOffset(struct _GdkGCValues,clip_x_origin,60,6,44004)
-CheckMemberSize(struct _GdkGCValues,clip_y_origin,4,6,44005)
-CheckOffset(struct _GdkGCValues,clip_y_origin,64,6,44005)
-CheckMemberSize(struct _GdkGCValues,graphics_exposures,4,6,44006)
-CheckOffset(struct _GdkGCValues,graphics_exposures,68,6,44006)
-CheckMemberSize(struct _GdkGCValues,line_width,4,6,44007)
-CheckOffset(struct _GdkGCValues,line_width,72,6,44007)
-CheckMemberSize(struct _GdkGCValues,line_style,4,6,44011)
-CheckOffset(struct _GdkGCValues,line_style,76,6,44011)
-CheckMemberSize(struct _GdkGCValues,cap_style,4,6,44016)
-CheckOffset(struct _GdkGCValues,cap_style,80,6,44016)
-CheckMemberSize(struct _GdkGCValues,join_style,4,6,44020)
-CheckOffset(struct _GdkGCValues,join_style,84,6,44020)
+CheckTypeSize(struct _GdkGCValues,88, 12888, 6);
+CheckMemberSize(struct _GdkGCValues,background,12,6,43978);
+CheckOffset(struct _GdkGCValues,background,12,6,43978);
+CheckMemberSize(struct _GdkGCValues,font,4,6,43979);
+CheckOffset(struct _GdkGCValues,font,24,6,43979);
+CheckMemberSize(struct _GdkGCValues,function,4,6,43996);
+CheckOffset(struct _GdkGCValues,function,28,6,43996);
+CheckMemberSize(struct _GdkGCValues,fill,4,6,43997);
+CheckOffset(struct _GdkGCValues,fill,32,6,43997);
+CheckMemberSize(struct _GdkGCValues,tile,4,6,43998);
+CheckOffset(struct _GdkGCValues,tile,36,6,43998);
+CheckMemberSize(struct _GdkGCValues,stipple,4,6,43999);
+CheckOffset(struct _GdkGCValues,stipple,40,6,43999);
+CheckMemberSize(struct _GdkGCValues,clip_mask,4,6,44000);
+CheckOffset(struct _GdkGCValues,clip_mask,44,6,44000);
+CheckMemberSize(struct _GdkGCValues,subwindow_mode,4,6,44001);
+CheckOffset(struct _GdkGCValues,subwindow_mode,48,6,44001);
+CheckMemberSize(struct _GdkGCValues,ts_x_origin,4,6,44002);
+CheckOffset(struct _GdkGCValues,ts_x_origin,52,6,44002);
+CheckMemberSize(struct _GdkGCValues,ts_y_origin,4,6,44003);
+CheckOffset(struct _GdkGCValues,ts_y_origin,56,6,44003);
+CheckMemberSize(struct _GdkGCValues,clip_x_origin,4,6,44004);
+CheckOffset(struct _GdkGCValues,clip_x_origin,60,6,44004);
+CheckMemberSize(struct _GdkGCValues,clip_y_origin,4,6,44005);
+CheckOffset(struct _GdkGCValues,clip_y_origin,64,6,44005);
+CheckMemberSize(struct _GdkGCValues,graphics_exposures,4,6,44006);
+CheckOffset(struct _GdkGCValues,graphics_exposures,68,6,44006);
+CheckMemberSize(struct _GdkGCValues,line_width,4,6,44007);
+CheckOffset(struct _GdkGCValues,line_width,72,6,44007);
+CheckMemberSize(struct _GdkGCValues,line_style,4,6,44011);
+CheckOffset(struct _GdkGCValues,line_style,76,6,44011);
+CheckMemberSize(struct _GdkGCValues,cap_style,4,6,44016);
+CheckOffset(struct _GdkGCValues,cap_style,80,6,44016);
+CheckMemberSize(struct _GdkGCValues,join_style,4,6,44020);
+CheckOffset(struct _GdkGCValues,join_style,84,6,44020);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkGCValues,104, 12888, 9)
-CheckMemberSize(struct _GdkGCValues,background,12,9,43978)
-CheckOffset(struct _GdkGCValues,background,12,9,43978)
-CheckMemberSize(struct _GdkGCValues,font,8,9,43979)
-CheckOffset(struct _GdkGCValues,font,24,9,43979)
-CheckMemberSize(struct _GdkGCValues,function,4,9,43996)
-CheckOffset(struct _GdkGCValues,function,32,9,43996)
-CheckMemberSize(struct _GdkGCValues,fill,4,9,43997)
-CheckOffset(struct _GdkGCValues,fill,36,9,43997)
-CheckMemberSize(struct _GdkGCValues,tile,8,9,43998)
-CheckOffset(struct _GdkGCValues,tile,40,9,43998)
-CheckMemberSize(struct _GdkGCValues,stipple,8,9,43999)
-CheckOffset(struct _GdkGCValues,stipple,48,9,43999)
-CheckMemberSize(struct _GdkGCValues,clip_mask,8,9,44000)
-CheckOffset(struct _GdkGCValues,clip_mask,56,9,44000)
-CheckMemberSize(struct _GdkGCValues,subwindow_mode,4,9,44001)
-CheckOffset(struct _GdkGCValues,subwindow_mode,64,9,44001)
-CheckMemberSize(struct _GdkGCValues,ts_x_origin,4,9,44002)
-CheckOffset(struct _GdkGCValues,ts_x_origin,68,9,44002)
-CheckMemberSize(struct _GdkGCValues,ts_y_origin,4,9,44003)
-CheckOffset(struct _GdkGCValues,ts_y_origin,72,9,44003)
-CheckMemberSize(struct _GdkGCValues,clip_x_origin,4,9,44004)
-CheckOffset(struct _GdkGCValues,clip_x_origin,76,9,44004)
-CheckMemberSize(struct _GdkGCValues,clip_y_origin,4,9,44005)
-CheckOffset(struct _GdkGCValues,clip_y_origin,80,9,44005)
-CheckMemberSize(struct _GdkGCValues,graphics_exposures,4,9,44006)
-CheckOffset(struct _GdkGCValues,graphics_exposures,84,9,44006)
-CheckMemberSize(struct _GdkGCValues,line_width,4,9,44007)
-CheckOffset(struct _GdkGCValues,line_width,88,9,44007)
-CheckMemberSize(struct _GdkGCValues,line_style,4,9,44011)
-CheckOffset(struct _GdkGCValues,line_style,92,9,44011)
-CheckMemberSize(struct _GdkGCValues,cap_style,4,9,44016)
-CheckOffset(struct _GdkGCValues,cap_style,96,9,44016)
-CheckMemberSize(struct _GdkGCValues,join_style,4,9,44020)
-CheckOffset(struct _GdkGCValues,join_style,100,9,44020)
+CheckTypeSize(struct _GdkGCValues,104, 12888, 9);
+CheckMemberSize(struct _GdkGCValues,background,12,9,43978);
+CheckOffset(struct _GdkGCValues,background,12,9,43978);
+CheckMemberSize(struct _GdkGCValues,font,8,9,43979);
+CheckOffset(struct _GdkGCValues,font,24,9,43979);
+CheckMemberSize(struct _GdkGCValues,function,4,9,43996);
+CheckOffset(struct _GdkGCValues,function,32,9,43996);
+CheckMemberSize(struct _GdkGCValues,fill,4,9,43997);
+CheckOffset(struct _GdkGCValues,fill,36,9,43997);
+CheckMemberSize(struct _GdkGCValues,tile,8,9,43998);
+CheckOffset(struct _GdkGCValues,tile,40,9,43998);
+CheckMemberSize(struct _GdkGCValues,stipple,8,9,43999);
+CheckOffset(struct _GdkGCValues,stipple,48,9,43999);
+CheckMemberSize(struct _GdkGCValues,clip_mask,8,9,44000);
+CheckOffset(struct _GdkGCValues,clip_mask,56,9,44000);
+CheckMemberSize(struct _GdkGCValues,subwindow_mode,4,9,44001);
+CheckOffset(struct _GdkGCValues,subwindow_mode,64,9,44001);
+CheckMemberSize(struct _GdkGCValues,ts_x_origin,4,9,44002);
+CheckOffset(struct _GdkGCValues,ts_x_origin,68,9,44002);
+CheckMemberSize(struct _GdkGCValues,ts_y_origin,4,9,44003);
+CheckOffset(struct _GdkGCValues,ts_y_origin,72,9,44003);
+CheckMemberSize(struct _GdkGCValues,clip_x_origin,4,9,44004);
+CheckOffset(struct _GdkGCValues,clip_x_origin,76,9,44004);
+CheckMemberSize(struct _GdkGCValues,clip_y_origin,4,9,44005);
+CheckOffset(struct _GdkGCValues,clip_y_origin,80,9,44005);
+CheckMemberSize(struct _GdkGCValues,graphics_exposures,4,9,44006);
+CheckOffset(struct _GdkGCValues,graphics_exposures,84,9,44006);
+CheckMemberSize(struct _GdkGCValues,line_width,4,9,44007);
+CheckOffset(struct _GdkGCValues,line_width,88,9,44007);
+CheckMemberSize(struct _GdkGCValues,line_style,4,9,44011);
+CheckOffset(struct _GdkGCValues,line_style,92,9,44011);
+CheckMemberSize(struct _GdkGCValues,cap_style,4,9,44016);
+CheckOffset(struct _GdkGCValues,cap_style,96,9,44016);
+CheckMemberSize(struct _GdkGCValues,join_style,4,9,44020);
+CheckOffset(struct _GdkGCValues,join_style,100,9,44020);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkGCValues,88, 12888, 10)
-CheckMemberSize(struct _GdkGCValues,background,12,10,43978)
-CheckOffset(struct _GdkGCValues,background,12,10,43978)
-CheckMemberSize(struct _GdkGCValues,font,4,10,43979)
-CheckOffset(struct _GdkGCValues,font,24,10,43979)
-CheckMemberSize(struct _GdkGCValues,function,4,10,43996)
-CheckOffset(struct _GdkGCValues,function,28,10,43996)
-CheckMemberSize(struct _GdkGCValues,fill,4,10,43997)
-CheckOffset(struct _GdkGCValues,fill,32,10,43997)
-CheckMemberSize(struct _GdkGCValues,tile,4,10,43998)
-CheckOffset(struct _GdkGCValues,tile,36,10,43998)
-CheckMemberSize(struct _GdkGCValues,stipple,4,10,43999)
-CheckOffset(struct _GdkGCValues,stipple,40,10,43999)
-CheckMemberSize(struct _GdkGCValues,clip_mask,4,10,44000)
-CheckOffset(struct _GdkGCValues,clip_mask,44,10,44000)
-CheckMemberSize(struct _GdkGCValues,subwindow_mode,4,10,44001)
-CheckOffset(struct _GdkGCValues,subwindow_mode,48,10,44001)
-CheckMemberSize(struct _GdkGCValues,ts_x_origin,4,10,44002)
-CheckOffset(struct _GdkGCValues,ts_x_origin,52,10,44002)
-CheckMemberSize(struct _GdkGCValues,ts_y_origin,4,10,44003)
-CheckOffset(struct _GdkGCValues,ts_y_origin,56,10,44003)
-CheckMemberSize(struct _GdkGCValues,clip_x_origin,4,10,44004)
-CheckOffset(struct _GdkGCValues,clip_x_origin,60,10,44004)
-CheckMemberSize(struct _GdkGCValues,clip_y_origin,4,10,44005)
-CheckOffset(struct _GdkGCValues,clip_y_origin,64,10,44005)
-CheckMemberSize(struct _GdkGCValues,graphics_exposures,4,10,44006)
-CheckOffset(struct _GdkGCValues,graphics_exposures,68,10,44006)
-CheckMemberSize(struct _GdkGCValues,line_width,4,10,44007)
-CheckOffset(struct _GdkGCValues,line_width,72,10,44007)
-CheckMemberSize(struct _GdkGCValues,line_style,4,10,44011)
-CheckOffset(struct _GdkGCValues,line_style,76,10,44011)
-CheckMemberSize(struct _GdkGCValues,cap_style,4,10,44016)
-CheckOffset(struct _GdkGCValues,cap_style,80,10,44016)
-CheckMemberSize(struct _GdkGCValues,join_style,4,10,44020)
-CheckOffset(struct _GdkGCValues,join_style,84,10,44020)
+CheckTypeSize(struct _GdkGCValues,88, 12888, 10);
+CheckMemberSize(struct _GdkGCValues,background,12,10,43978);
+CheckOffset(struct _GdkGCValues,background,12,10,43978);
+CheckMemberSize(struct _GdkGCValues,font,4,10,43979);
+CheckOffset(struct _GdkGCValues,font,24,10,43979);
+CheckMemberSize(struct _GdkGCValues,function,4,10,43996);
+CheckOffset(struct _GdkGCValues,function,28,10,43996);
+CheckMemberSize(struct _GdkGCValues,fill,4,10,43997);
+CheckOffset(struct _GdkGCValues,fill,32,10,43997);
+CheckMemberSize(struct _GdkGCValues,tile,4,10,43998);
+CheckOffset(struct _GdkGCValues,tile,36,10,43998);
+CheckMemberSize(struct _GdkGCValues,stipple,4,10,43999);
+CheckOffset(struct _GdkGCValues,stipple,40,10,43999);
+CheckMemberSize(struct _GdkGCValues,clip_mask,4,10,44000);
+CheckOffset(struct _GdkGCValues,clip_mask,44,10,44000);
+CheckMemberSize(struct _GdkGCValues,subwindow_mode,4,10,44001);
+CheckOffset(struct _GdkGCValues,subwindow_mode,48,10,44001);
+CheckMemberSize(struct _GdkGCValues,ts_x_origin,4,10,44002);
+CheckOffset(struct _GdkGCValues,ts_x_origin,52,10,44002);
+CheckMemberSize(struct _GdkGCValues,ts_y_origin,4,10,44003);
+CheckOffset(struct _GdkGCValues,ts_y_origin,56,10,44003);
+CheckMemberSize(struct _GdkGCValues,clip_x_origin,4,10,44004);
+CheckOffset(struct _GdkGCValues,clip_x_origin,60,10,44004);
+CheckMemberSize(struct _GdkGCValues,clip_y_origin,4,10,44005);
+CheckOffset(struct _GdkGCValues,clip_y_origin,64,10,44005);
+CheckMemberSize(struct _GdkGCValues,graphics_exposures,4,10,44006);
+CheckOffset(struct _GdkGCValues,graphics_exposures,68,10,44006);
+CheckMemberSize(struct _GdkGCValues,line_width,4,10,44007);
+CheckOffset(struct _GdkGCValues,line_width,72,10,44007);
+CheckMemberSize(struct _GdkGCValues,line_style,4,10,44011);
+CheckOffset(struct _GdkGCValues,line_style,76,10,44011);
+CheckMemberSize(struct _GdkGCValues,cap_style,4,10,44016);
+CheckOffset(struct _GdkGCValues,cap_style,80,10,44016);
+CheckMemberSize(struct _GdkGCValues,join_style,4,10,44020);
+CheckOffset(struct _GdkGCValues,join_style,84,10,44020);
 #elif __s390x__
-CheckTypeSize(struct _GdkGCValues,104, 12888, 12)
-CheckMemberSize(struct _GdkGCValues,background,12,12,43978)
-CheckOffset(struct _GdkGCValues,background,12,12,43978)
-CheckMemberSize(struct _GdkGCValues,font,8,12,43979)
-CheckOffset(struct _GdkGCValues,font,24,12,43979)
-CheckMemberSize(struct _GdkGCValues,function,4,12,43996)
-CheckOffset(struct _GdkGCValues,function,32,12,43996)
-CheckMemberSize(struct _GdkGCValues,fill,4,12,43997)
-CheckOffset(struct _GdkGCValues,fill,36,12,43997)
-CheckMemberSize(struct _GdkGCValues,tile,8,12,43998)
-CheckOffset(struct _GdkGCValues,tile,40,12,43998)
-CheckMemberSize(struct _GdkGCValues,stipple,8,12,43999)
-CheckOffset(struct _GdkGCValues,stipple,48,12,43999)
-CheckMemberSize(struct _GdkGCValues,clip_mask,8,12,44000)
-CheckOffset(struct _GdkGCValues,clip_mask,56,12,44000)
-CheckMemberSize(struct _GdkGCValues,subwindow_mode,4,12,44001)
-CheckOffset(struct _GdkGCValues,subwindow_mode,64,12,44001)
-CheckMemberSize(struct _GdkGCValues,ts_x_origin,4,12,44002)
-CheckOffset(struct _GdkGCValues,ts_x_origin,68,12,44002)
-CheckMemberSize(struct _GdkGCValues,ts_y_origin,4,12,44003)
-CheckOffset(struct _GdkGCValues,ts_y_origin,72,12,44003)
-CheckMemberSize(struct _GdkGCValues,clip_x_origin,4,12,44004)
-CheckOffset(struct _GdkGCValues,clip_x_origin,76,12,44004)
-CheckMemberSize(struct _GdkGCValues,clip_y_origin,4,12,44005)
-CheckOffset(struct _GdkGCValues,clip_y_origin,80,12,44005)
-CheckMemberSize(struct _GdkGCValues,graphics_exposures,4,12,44006)
-CheckOffset(struct _GdkGCValues,graphics_exposures,84,12,44006)
-CheckMemberSize(struct _GdkGCValues,line_width,4,12,44007)
-CheckOffset(struct _GdkGCValues,line_width,88,12,44007)
-CheckMemberSize(struct _GdkGCValues,line_style,4,12,44011)
-CheckOffset(struct _GdkGCValues,line_style,92,12,44011)
-CheckMemberSize(struct _GdkGCValues,cap_style,4,12,44016)
-CheckOffset(struct _GdkGCValues,cap_style,96,12,44016)
-CheckMemberSize(struct _GdkGCValues,join_style,4,12,44020)
-CheckOffset(struct _GdkGCValues,join_style,100,12,44020)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12888,0);
-Msg("Find size of _GdkGCValues (12888)\n");
+CheckTypeSize(struct _GdkGCValues,104, 12888, 12);
+CheckMemberSize(struct _GdkGCValues,background,12,12,43978);
+CheckOffset(struct _GdkGCValues,background,12,12,43978);
+CheckMemberSize(struct _GdkGCValues,font,8,12,43979);
+CheckOffset(struct _GdkGCValues,font,24,12,43979);
+CheckMemberSize(struct _GdkGCValues,function,4,12,43996);
+CheckOffset(struct _GdkGCValues,function,32,12,43996);
+CheckMemberSize(struct _GdkGCValues,fill,4,12,43997);
+CheckOffset(struct _GdkGCValues,fill,36,12,43997);
+CheckMemberSize(struct _GdkGCValues,tile,8,12,43998);
+CheckOffset(struct _GdkGCValues,tile,40,12,43998);
+CheckMemberSize(struct _GdkGCValues,stipple,8,12,43999);
+CheckOffset(struct _GdkGCValues,stipple,48,12,43999);
+CheckMemberSize(struct _GdkGCValues,clip_mask,8,12,44000);
+CheckOffset(struct _GdkGCValues,clip_mask,56,12,44000);
+CheckMemberSize(struct _GdkGCValues,subwindow_mode,4,12,44001);
+CheckOffset(struct _GdkGCValues,subwindow_mode,64,12,44001);
+CheckMemberSize(struct _GdkGCValues,ts_x_origin,4,12,44002);
+CheckOffset(struct _GdkGCValues,ts_x_origin,68,12,44002);
+CheckMemberSize(struct _GdkGCValues,ts_y_origin,4,12,44003);
+CheckOffset(struct _GdkGCValues,ts_y_origin,72,12,44003);
+CheckMemberSize(struct _GdkGCValues,clip_x_origin,4,12,44004);
+CheckOffset(struct _GdkGCValues,clip_x_origin,76,12,44004);
+CheckMemberSize(struct _GdkGCValues,clip_y_origin,4,12,44005);
+CheckOffset(struct _GdkGCValues,clip_y_origin,80,12,44005);
+CheckMemberSize(struct _GdkGCValues,graphics_exposures,4,12,44006);
+CheckOffset(struct _GdkGCValues,graphics_exposures,84,12,44006);
+CheckMemberSize(struct _GdkGCValues,line_width,4,12,44007);
+CheckOffset(struct _GdkGCValues,line_width,88,12,44007);
+CheckMemberSize(struct _GdkGCValues,line_style,4,12,44011);
+CheckOffset(struct _GdkGCValues,line_style,92,12,44011);
+CheckMemberSize(struct _GdkGCValues,cap_style,4,12,44016);
+CheckOffset(struct _GdkGCValues,cap_style,96,12,44016);
+CheckMemberSize(struct _GdkGCValues,join_style,4,12,44020);
+CheckOffset(struct _GdkGCValues,join_style,100,12,44020);
+#elif 1
+CheckTypeSize(struct _GdkGCValues,0, 12888, 1);
+Msg("Missing member data for _GdkGCValues on All\n");
+CheckOffset(struct _GdkGCValues,foreground,0,1,43977);
+CheckOffset(struct _GdkGCValues,background,0,1,43978);
+CheckOffset(struct _GdkGCValues,font,0,1,43979);
+CheckOffset(struct _GdkGCValues,function,0,1,43996);
+CheckOffset(struct _GdkGCValues,fill,0,1,43997);
+CheckOffset(struct _GdkGCValues,tile,0,1,43998);
+CheckOffset(struct _GdkGCValues,stipple,0,1,43999);
+CheckOffset(struct _GdkGCValues,clip_mask,0,1,44000);
+CheckOffset(struct _GdkGCValues,subwindow_mode,0,1,44001);
+CheckOffset(struct _GdkGCValues,ts_x_origin,0,1,44002);
+CheckOffset(struct _GdkGCValues,ts_y_origin,0,1,44003);
+CheckOffset(struct _GdkGCValues,clip_x_origin,0,1,44004);
+CheckOffset(struct _GdkGCValues,clip_y_origin,0,1,44005);
+CheckOffset(struct _GdkGCValues,graphics_exposures,0,1,44006);
+CheckOffset(struct _GdkGCValues,line_width,0,1,44007);
+CheckOffset(struct _GdkGCValues,line_style,0,1,44011);
+CheckOffset(struct _GdkGCValues,cap_style,0,1,44016);
+CheckOffset(struct _GdkGCValues,join_style,0,1,44020);
 #endif
 
 #if __i386__
@@ -9552,28 +9879,41 @@ CheckEnum("GDK_OR_INVERT",GDK_OR_INVERT,12,43992);
 CheckEnum("GDK_NAND",GDK_NAND,13,43993);
 CheckEnum("GDK_NOR",GDK_NOR,14,43994);
 CheckEnum("GDK_SET",GDK_SET,15,43995);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12889,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-81 (12889)\n");
+#elif 1
+CheckEnum("GDK_COPY",GDK_COPY,0,43980);
+CheckEnum("GDK_INVERT",GDK_INVERT,1,43981);
+CheckEnum("GDK_XOR",GDK_XOR,2,43982);
+CheckEnum("GDK_CLEAR",GDK_CLEAR,3,43983);
+CheckEnum("GDK_AND",GDK_AND,4,43984);
+CheckEnum("GDK_AND_REVERSE",GDK_AND_REVERSE,5,43985);
+CheckEnum("GDK_AND_INVERT",GDK_AND_INVERT,6,43986);
+CheckEnum("GDK_NOOP",GDK_NOOP,7,43987);
+CheckEnum("GDK_OR",GDK_OR,8,43988);
+CheckEnum("GDK_EQUIV",GDK_EQUIV,9,43989);
+CheckEnum("GDK_OR_REVERSE",GDK_OR_REVERSE,10,43990);
+CheckEnum("GDK_COPY_INVERT",GDK_COPY_INVERT,11,43991);
+CheckEnum("GDK_OR_INVERT",GDK_OR_INVERT,12,43992);
+CheckEnum("GDK_NAND",GDK_NAND,13,43993);
+CheckEnum("GDK_NOR",GDK_NOR,14,43994);
+CheckEnum("GDK_SET",GDK_SET,15,43995);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkFunction,4, 12890, 2)
+CheckTypeSize(GdkFunction,4, 12890, 2);
 #elif __x86_64__
-CheckTypeSize(GdkFunction,4, 12890, 11)
+CheckTypeSize(GdkFunction,4, 12890, 11);
 #elif __ia64__
-CheckTypeSize(GdkFunction,4, 12890, 3)
+CheckTypeSize(GdkFunction,4, 12890, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkFunction,4, 12890, 6)
+CheckTypeSize(GdkFunction,4, 12890, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkFunction,4, 12890, 9)
+CheckTypeSize(GdkFunction,4, 12890, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkFunction,4, 12890, 10)
+CheckTypeSize(GdkFunction,4, 12890, 10);
 #elif __s390x__
-CheckTypeSize(GdkFunction,4, 12890, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12890,0);
-Msg("Find size of GdkFunction (12890)\n");
+CheckTypeSize(GdkFunction,4, 12890, 12);
+#elif 1
+CheckTypeSize(GdkFunction,0, 12890, 1);
 #endif
 
 #if __i386__
@@ -9604,28 +9944,28 @@ CheckEnum("GDK_LINE_DOUBLE_DASH",GDK_LINE_DOUBLE_DASH,2,44010);
 CheckEnum("GDK_LINE_SOLID",GDK_LINE_SOLID,0,44008);
 CheckEnum("GDK_LINE_ON_OFF_DASH",GDK_LINE_ON_OFF_DASH,1,44009);
 CheckEnum("GDK_LINE_DOUBLE_DASH",GDK_LINE_DOUBLE_DASH,2,44010);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12891,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-83 (12891)\n");
+#elif 1
+CheckEnum("GDK_LINE_SOLID",GDK_LINE_SOLID,0,44008);
+CheckEnum("GDK_LINE_ON_OFF_DASH",GDK_LINE_ON_OFF_DASH,1,44009);
+CheckEnum("GDK_LINE_DOUBLE_DASH",GDK_LINE_DOUBLE_DASH,2,44010);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkLineStyle,4, 12892, 2)
+CheckTypeSize(GdkLineStyle,4, 12892, 2);
 #elif __x86_64__
-CheckTypeSize(GdkLineStyle,4, 12892, 11)
+CheckTypeSize(GdkLineStyle,4, 12892, 11);
 #elif __ia64__
-CheckTypeSize(GdkLineStyle,4, 12892, 3)
+CheckTypeSize(GdkLineStyle,4, 12892, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkLineStyle,4, 12892, 6)
+CheckTypeSize(GdkLineStyle,4, 12892, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkLineStyle,4, 12892, 9)
+CheckTypeSize(GdkLineStyle,4, 12892, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkLineStyle,4, 12892, 10)
+CheckTypeSize(GdkLineStyle,4, 12892, 10);
 #elif __s390x__
-CheckTypeSize(GdkLineStyle,4, 12892, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12892,0);
-Msg("Find size of GdkLineStyle (12892)\n");
+CheckTypeSize(GdkLineStyle,4, 12892, 12);
+#elif 1
+CheckTypeSize(GdkLineStyle,0, 12892, 1);
 #endif
 
 #if __i386__
@@ -9663,28 +10003,29 @@ CheckEnum("GDK_CAP_NOT_LAST",GDK_CAP_NOT_LAST,0,44012);
 CheckEnum("GDK_CAP_BUTT",GDK_CAP_BUTT,1,44013);
 CheckEnum("GDK_CAP_ROUND",GDK_CAP_ROUND,2,44014);
 CheckEnum("GDK_CAP_PROJECTING",GDK_CAP_PROJECTING,3,44015);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12893,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-79 (12893)\n");
+#elif 1
+CheckEnum("GDK_CAP_NOT_LAST",GDK_CAP_NOT_LAST,0,44012);
+CheckEnum("GDK_CAP_BUTT",GDK_CAP_BUTT,1,44013);
+CheckEnum("GDK_CAP_ROUND",GDK_CAP_ROUND,2,44014);
+CheckEnum("GDK_CAP_PROJECTING",GDK_CAP_PROJECTING,3,44015);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkCapStyle,4, 12894, 2)
+CheckTypeSize(GdkCapStyle,4, 12894, 2);
 #elif __x86_64__
-CheckTypeSize(GdkCapStyle,4, 12894, 11)
+CheckTypeSize(GdkCapStyle,4, 12894, 11);
 #elif __ia64__
-CheckTypeSize(GdkCapStyle,4, 12894, 3)
+CheckTypeSize(GdkCapStyle,4, 12894, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkCapStyle,4, 12894, 6)
+CheckTypeSize(GdkCapStyle,4, 12894, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkCapStyle,4, 12894, 9)
+CheckTypeSize(GdkCapStyle,4, 12894, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkCapStyle,4, 12894, 10)
+CheckTypeSize(GdkCapStyle,4, 12894, 10);
 #elif __s390x__
-CheckTypeSize(GdkCapStyle,4, 12894, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12894,0);
-Msg("Find size of GdkCapStyle (12894)\n");
+CheckTypeSize(GdkCapStyle,4, 12894, 12);
+#elif 1
+CheckTypeSize(GdkCapStyle,0, 12894, 1);
 #endif
 
 #if __i386__
@@ -9715,66 +10056,64 @@ CheckEnum("GDK_JOIN_BEVEL",GDK_JOIN_BEVEL,2,44019);
 CheckEnum("GDK_JOIN_MITER",GDK_JOIN_MITER,0,44017);
 CheckEnum("GDK_JOIN_ROUND",GDK_JOIN_ROUND,1,44018);
 CheckEnum("GDK_JOIN_BEVEL",GDK_JOIN_BEVEL,2,44019);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12895,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-82 (12895)\n");
+#elif 1
+CheckEnum("GDK_JOIN_MITER",GDK_JOIN_MITER,0,44017);
+CheckEnum("GDK_JOIN_ROUND",GDK_JOIN_ROUND,1,44018);
+CheckEnum("GDK_JOIN_BEVEL",GDK_JOIN_BEVEL,2,44019);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkJoinStyle,4, 12896, 2)
+CheckTypeSize(GdkJoinStyle,4, 12896, 2);
 #elif __x86_64__
-CheckTypeSize(GdkJoinStyle,4, 12896, 11)
+CheckTypeSize(GdkJoinStyle,4, 12896, 11);
 #elif __ia64__
-CheckTypeSize(GdkJoinStyle,4, 12896, 3)
+CheckTypeSize(GdkJoinStyle,4, 12896, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkJoinStyle,4, 12896, 6)
+CheckTypeSize(GdkJoinStyle,4, 12896, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkJoinStyle,4, 12896, 9)
+CheckTypeSize(GdkJoinStyle,4, 12896, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkJoinStyle,4, 12896, 10)
+CheckTypeSize(GdkJoinStyle,4, 12896, 10);
 #elif __s390x__
-CheckTypeSize(GdkJoinStyle,4, 12896, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12896,0);
-Msg("Find size of GdkJoinStyle (12896)\n");
+CheckTypeSize(GdkJoinStyle,4, 12896, 12);
+#elif 1
+CheckTypeSize(GdkJoinStyle,0, 12896, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkGCValues,88, 12897, 2)
+CheckTypeSize(GdkGCValues,88, 12897, 2);
 #elif __x86_64__
-CheckTypeSize(GdkGCValues,104, 12897, 11)
+CheckTypeSize(GdkGCValues,104, 12897, 11);
 #elif __ia64__
-CheckTypeSize(GdkGCValues,104, 12897, 3)
+CheckTypeSize(GdkGCValues,104, 12897, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkGCValues,88, 12897, 6)
+CheckTypeSize(GdkGCValues,88, 12897, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkGCValues,104, 12897, 9)
+CheckTypeSize(GdkGCValues,104, 12897, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkGCValues,88, 12897, 10)
+CheckTypeSize(GdkGCValues,88, 12897, 10);
 #elif __s390x__
-CheckTypeSize(GdkGCValues,104, 12897, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12897,0);
-Msg("Find size of GdkGCValues (12897)\n");
+CheckTypeSize(GdkGCValues,104, 12897, 12);
+#elif 1
+CheckTypeSize(GdkGCValues,0, 12897, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkGCValues *,4, 12898, 2)
+CheckTypeSize(GdkGCValues *,4, 12898, 2);
 #elif __x86_64__
-CheckTypeSize(GdkGCValues *,8, 12898, 11)
+CheckTypeSize(GdkGCValues *,8, 12898, 11);
 #elif __ia64__
-CheckTypeSize(GdkGCValues *,8, 12898, 3)
+CheckTypeSize(GdkGCValues *,8, 12898, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkGCValues *,4, 12898, 6)
+CheckTypeSize(GdkGCValues *,4, 12898, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkGCValues *,8, 12898, 9)
+CheckTypeSize(GdkGCValues *,8, 12898, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkGCValues *,4, 12898, 10)
+CheckTypeSize(GdkGCValues *,4, 12898, 10);
 #elif __s390x__
-CheckTypeSize(GdkGCValues *,8, 12898, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12898,0);
-Msg("Find size of GdkGCValues * (12898)\n");
+CheckTypeSize(GdkGCValues *,8, 12898, 12);
+#elif 1
+CheckTypeSize(GdkGCValues *,0, 12898, 1);
 #endif
 
 #if __i386__
@@ -9910,28 +10249,43 @@ CheckEnum("GDK_GC_LINE_WIDTH",GDK_GC_LINE_WIDTH,16384,44035);
 CheckEnum("GDK_GC_LINE_STYLE",GDK_GC_LINE_STYLE,32768,44036);
 CheckEnum("GDK_GC_CAP_STYLE",GDK_GC_CAP_STYLE,65536,44037);
 CheckEnum("GDK_GC_JOIN_STYLE",GDK_GC_JOIN_STYLE,131072,44038);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12899,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-85 (12899)\n");
+#elif 1
+CheckEnum("GDK_GC_FOREGROUND",GDK_GC_FOREGROUND,1,44021);
+CheckEnum("GDK_GC_BACKGROUND",GDK_GC_BACKGROUND,2,44022);
+CheckEnum("GDK_GC_FONT",GDK_GC_FONT,4,44023);
+CheckEnum("GDK_GC_FUNCTION",GDK_GC_FUNCTION,8,44024);
+CheckEnum("GDK_GC_FILL",GDK_GC_FILL,16,44025);
+CheckEnum("GDK_GC_TILE",GDK_GC_TILE,32,44026);
+CheckEnum("GDK_GC_STIPPLE",GDK_GC_STIPPLE,64,44027);
+CheckEnum("GDK_GC_CLIP_MASK",GDK_GC_CLIP_MASK,128,44028);
+CheckEnum("GDK_GC_SUBWINDOW",GDK_GC_SUBWINDOW,256,44029);
+CheckEnum("GDK_GC_TS_X_ORIGIN",GDK_GC_TS_X_ORIGIN,512,44030);
+CheckEnum("GDK_GC_TS_Y_ORIGIN",GDK_GC_TS_Y_ORIGIN,1024,44031);
+CheckEnum("GDK_GC_CLIP_X_ORIGIN",GDK_GC_CLIP_X_ORIGIN,2048,44032);
+CheckEnum("GDK_GC_CLIP_Y_ORIGIN",GDK_GC_CLIP_Y_ORIGIN,4096,44033);
+CheckEnum("GDK_GC_EXPOSURES",GDK_GC_EXPOSURES,8192,44034);
+CheckEnum("GDK_GC_LINE_WIDTH",GDK_GC_LINE_WIDTH,16384,44035);
+CheckEnum("GDK_GC_LINE_STYLE",GDK_GC_LINE_STYLE,32768,44036);
+CheckEnum("GDK_GC_CAP_STYLE",GDK_GC_CAP_STYLE,65536,44037);
+CheckEnum("GDK_GC_JOIN_STYLE",GDK_GC_JOIN_STYLE,131072,44038);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkGCValuesMask,4, 12900, 2)
+CheckTypeSize(GdkGCValuesMask,4, 12900, 2);
 #elif __x86_64__
-CheckTypeSize(GdkGCValuesMask,4, 12900, 11)
+CheckTypeSize(GdkGCValuesMask,4, 12900, 11);
 #elif __ia64__
-CheckTypeSize(GdkGCValuesMask,4, 12900, 3)
+CheckTypeSize(GdkGCValuesMask,4, 12900, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkGCValuesMask,4, 12900, 6)
+CheckTypeSize(GdkGCValuesMask,4, 12900, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkGCValuesMask,4, 12900, 9)
+CheckTypeSize(GdkGCValuesMask,4, 12900, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkGCValuesMask,4, 12900, 10)
+CheckTypeSize(GdkGCValuesMask,4, 12900, 10);
 #elif __s390x__
-CheckTypeSize(GdkGCValuesMask,4, 12900, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12900,0);
-Msg("Find size of GdkGCValuesMask (12900)\n");
+CheckTypeSize(GdkGCValuesMask,4, 12900, 12);
+#elif 1
+CheckTypeSize(GdkGCValuesMask,0, 12900, 1);
 #endif
 
 #if __i386__
@@ -9941,9 +10295,7 @@ Msg("Find size of GdkGCValuesMask (12900)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12901,0);
-Msg("Find size of GdkWindow * * (12901)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -9995,125 +10347,31 @@ CheckEnum("GDK_WINDOW_CHILD",GDK_WINDOW_CHILD,2,44041);
 CheckEnum("GDK_WINDOW_DIALOG",GDK_WINDOW_DIALOG,3,44042);
 CheckEnum("GDK_WINDOW_TEMP",GDK_WINDOW_TEMP,4,44043);
 CheckEnum("GDK_WINDOW_FOREIGN",GDK_WINDOW_FOREIGN,5,44044);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12902,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-183 (12902)\n");
+#elif 1
+CheckEnum("GDK_WINDOW_ROOT",GDK_WINDOW_ROOT,0,44039);
+CheckEnum("GDK_WINDOW_TOPLEVEL",GDK_WINDOW_TOPLEVEL,1,44040);
+CheckEnum("GDK_WINDOW_CHILD",GDK_WINDOW_CHILD,2,44041);
+CheckEnum("GDK_WINDOW_DIALOG",GDK_WINDOW_DIALOG,3,44042);
+CheckEnum("GDK_WINDOW_TEMP",GDK_WINDOW_TEMP,4,44043);
+CheckEnum("GDK_WINDOW_FOREIGN",GDK_WINDOW_FOREIGN,5,44044);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkWindowType,4, 12903, 2)
+CheckTypeSize(GdkWindowType,4, 12903, 2);
 #elif __x86_64__
-CheckTypeSize(GdkWindowType,4, 12903, 11)
+CheckTypeSize(GdkWindowType,4, 12903, 11);
 #elif __ia64__
-CheckTypeSize(GdkWindowType,4, 12903, 3)
+CheckTypeSize(GdkWindowType,4, 12903, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkWindowType,4, 12903, 6)
+CheckTypeSize(GdkWindowType,4, 12903, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkWindowType,4, 12903, 9)
+CheckTypeSize(GdkWindowType,4, 12903, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkWindowType,4, 12903, 10)
+CheckTypeSize(GdkWindowType,4, 12903, 10);
 #elif __s390x__
-CheckTypeSize(GdkWindowType,4, 12903, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12903,0);
-Msg("Find size of GdkWindowType (12903)\n");
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12904,0);
-Msg("Find size of guint * * (12904)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(struct _GdkSpan,12, 12905, 2)
-CheckMemberSize(struct _GdkSpan,y,4,2,44046)
-CheckOffset(struct _GdkSpan,y,4,2,44046)
-CheckMemberSize(struct _GdkSpan,width,4,2,44047)
-CheckOffset(struct _GdkSpan,width,8,2,44047)
-#elif __x86_64__
-CheckTypeSize(struct _GdkSpan,12, 12905, 11)
-CheckMemberSize(struct _GdkSpan,y,4,11,44046)
-CheckOffset(struct _GdkSpan,y,4,11,44046)
-CheckMemberSize(struct _GdkSpan,width,4,11,44047)
-CheckOffset(struct _GdkSpan,width,8,11,44047)
-#elif __ia64__
-CheckTypeSize(struct _GdkSpan,12, 12905, 3)
-CheckMemberSize(struct _GdkSpan,y,4,3,44046)
-CheckOffset(struct _GdkSpan,y,4,3,44046)
-CheckMemberSize(struct _GdkSpan,width,4,3,44047)
-CheckOffset(struct _GdkSpan,width,8,3,44047)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkSpan,12, 12905, 6)
-CheckMemberSize(struct _GdkSpan,y,4,6,44046)
-CheckOffset(struct _GdkSpan,y,4,6,44046)
-CheckMemberSize(struct _GdkSpan,width,4,6,44047)
-CheckOffset(struct _GdkSpan,width,8,6,44047)
-#elif __powerpc64__
-CheckTypeSize(struct _GdkSpan,12, 12905, 9)
-CheckMemberSize(struct _GdkSpan,y,4,9,44046)
-CheckOffset(struct _GdkSpan,y,4,9,44046)
-CheckMemberSize(struct _GdkSpan,width,4,9,44047)
-CheckOffset(struct _GdkSpan,width,8,9,44047)
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkSpan,12, 12905, 10)
-CheckMemberSize(struct _GdkSpan,y,4,10,44046)
-CheckOffset(struct _GdkSpan,y,4,10,44046)
-CheckMemberSize(struct _GdkSpan,width,4,10,44047)
-CheckOffset(struct _GdkSpan,width,8,10,44047)
-#elif __s390x__
-CheckTypeSize(struct _GdkSpan,12, 12905, 12)
-CheckMemberSize(struct _GdkSpan,y,4,12,44046)
-CheckOffset(struct _GdkSpan,y,4,12,44046)
-CheckMemberSize(struct _GdkSpan,width,4,12,44047)
-CheckOffset(struct _GdkSpan,width,8,12,44047)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12905,0);
-Msg("Find size of _GdkSpan (12905)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GdkSpan,12, 12906, 2)
-#elif __x86_64__
-CheckTypeSize(GdkSpan,12, 12906, 11)
-#elif __ia64__
-CheckTypeSize(GdkSpan,12, 12906, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkSpan,12, 12906, 6)
-#elif __powerpc64__
-CheckTypeSize(GdkSpan,12, 12906, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkSpan,12, 12906, 10)
-#elif __s390x__
-CheckTypeSize(GdkSpan,12, 12906, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12906,0);
-Msg("Find size of GdkSpan (12906)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GdkSpan *,4, 12907, 2)
-#elif __x86_64__
-CheckTypeSize(GdkSpan *,8, 12907, 11)
-#elif __ia64__
-CheckTypeSize(GdkSpan *,8, 12907, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkSpan *,4, 12907, 6)
-#elif __powerpc64__
-CheckTypeSize(GdkSpan *,8, 12907, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkSpan *,4, 12907, 10)
-#elif __s390x__
-CheckTypeSize(GdkSpan *,8, 12907, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12907,0);
-Msg("Find size of GdkSpan * (12907)\n");
+CheckTypeSize(GdkWindowType,4, 12903, 12);
+#elif 1
+CheckTypeSize(GdkWindowType,0, 12903, 1);
 #endif
 
 #if __i386__
@@ -10123,187 +10381,291 @@ Msg("Find size of GdkSpan * (12907)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12908,0);
-Msg("Find size of fptr_gdk_27 (12908)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(GdkSpanFunc,4, 12909, 2)
+CheckTypeSize(struct _GdkSpan,12, 12905, 2);
+CheckMemberSize(struct _GdkSpan,y,4,2,44046);
+CheckOffset(struct _GdkSpan,y,4,2,44046);
+CheckMemberSize(struct _GdkSpan,width,4,2,44047);
+CheckOffset(struct _GdkSpan,width,8,2,44047);
 #elif __x86_64__
-CheckTypeSize(GdkSpanFunc,8, 12909, 11)
+CheckTypeSize(struct _GdkSpan,12, 12905, 11);
+CheckMemberSize(struct _GdkSpan,y,4,11,44046);
+CheckOffset(struct _GdkSpan,y,4,11,44046);
+CheckMemberSize(struct _GdkSpan,width,4,11,44047);
+CheckOffset(struct _GdkSpan,width,8,11,44047);
 #elif __ia64__
-CheckTypeSize(GdkSpanFunc,8, 12909, 3)
+CheckTypeSize(struct _GdkSpan,12, 12905, 3);
+CheckMemberSize(struct _GdkSpan,y,4,3,44046);
+CheckOffset(struct _GdkSpan,y,4,3,44046);
+CheckMemberSize(struct _GdkSpan,width,4,3,44047);
+CheckOffset(struct _GdkSpan,width,8,3,44047);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkSpanFunc,4, 12909, 6)
+CheckTypeSize(struct _GdkSpan,12, 12905, 6);
+CheckMemberSize(struct _GdkSpan,y,4,6,44046);
+CheckOffset(struct _GdkSpan,y,4,6,44046);
+CheckMemberSize(struct _GdkSpan,width,4,6,44047);
+CheckOffset(struct _GdkSpan,width,8,6,44047);
 #elif __powerpc64__
-CheckTypeSize(GdkSpanFunc,8, 12909, 9)
+CheckTypeSize(struct _GdkSpan,12, 12905, 9);
+CheckMemberSize(struct _GdkSpan,y,4,9,44046);
+CheckOffset(struct _GdkSpan,y,4,9,44046);
+CheckMemberSize(struct _GdkSpan,width,4,9,44047);
+CheckOffset(struct _GdkSpan,width,8,9,44047);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkSpanFunc,4, 12909, 10)
+CheckTypeSize(struct _GdkSpan,12, 12905, 10);
+CheckMemberSize(struct _GdkSpan,y,4,10,44046);
+CheckOffset(struct _GdkSpan,y,4,10,44046);
+CheckMemberSize(struct _GdkSpan,width,4,10,44047);
+CheckOffset(struct _GdkSpan,width,8,10,44047);
 #elif __s390x__
-CheckTypeSize(GdkSpanFunc,8, 12909, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12909,0);
-Msg("Find size of GdkSpanFunc (12909)\n");
+CheckTypeSize(struct _GdkSpan,12, 12905, 12);
+CheckMemberSize(struct _GdkSpan,y,4,12,44046);
+CheckOffset(struct _GdkSpan,y,4,12,44046);
+CheckMemberSize(struct _GdkSpan,width,4,12,44047);
+CheckOffset(struct _GdkSpan,width,8,12,44047);
+#elif 1
+CheckTypeSize(struct _GdkSpan,0, 12905, 1);
+Msg("Missing member data for _GdkSpan on All\n");
+CheckOffset(struct _GdkSpan,x,0,1,44045);
+CheckOffset(struct _GdkSpan,y,0,1,44046);
+CheckOffset(struct _GdkSpan,width,0,1,44047);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkGeometry,52, 12910, 2)
-CheckMemberSize(struct _GdkGeometry,min_height,4,2,44051)
-CheckOffset(struct _GdkGeometry,min_height,4,2,44051)
-CheckMemberSize(struct _GdkGeometry,max_width,4,2,44052)
-CheckOffset(struct _GdkGeometry,max_width,8,2,44052)
-CheckMemberSize(struct _GdkGeometry,max_height,4,2,44053)
-CheckOffset(struct _GdkGeometry,max_height,12,2,44053)
-CheckMemberSize(struct _GdkGeometry,base_width,4,2,44054)
-CheckOffset(struct _GdkGeometry,base_width,16,2,44054)
-CheckMemberSize(struct _GdkGeometry,base_height,4,2,44055)
-CheckOffset(struct _GdkGeometry,base_height,20,2,44055)
-CheckMemberSize(struct _GdkGeometry,width_inc,4,2,44056)
-CheckOffset(struct _GdkGeometry,width_inc,24,2,44056)
-CheckMemberSize(struct _GdkGeometry,height_inc,4,2,44057)
-CheckOffset(struct _GdkGeometry,height_inc,28,2,44057)
-CheckMemberSize(struct _GdkGeometry,min_aspect,8,2,44058)
-CheckOffset(struct _GdkGeometry,min_aspect,32,2,44058)
-CheckMemberSize(struct _GdkGeometry,max_aspect,8,2,44059)
-CheckOffset(struct _GdkGeometry,max_aspect,40,2,44059)
-CheckMemberSize(struct _GdkGeometry,win_gravity,4,2,44070)
-CheckOffset(struct _GdkGeometry,win_gravity,48,2,44070)
+CheckTypeSize(GdkSpan,12, 12906, 2);
 #elif __x86_64__
-CheckTypeSize(struct _GdkGeometry,56, 12910, 11)
-CheckMemberSize(struct _GdkGeometry,min_height,4,11,44051)
-CheckOffset(struct _GdkGeometry,min_height,4,11,44051)
-CheckMemberSize(struct _GdkGeometry,max_width,4,11,44052)
-CheckOffset(struct _GdkGeometry,max_width,8,11,44052)
-CheckMemberSize(struct _GdkGeometry,max_height,4,11,44053)
-CheckOffset(struct _GdkGeometry,max_height,12,11,44053)
-CheckMemberSize(struct _GdkGeometry,base_width,4,11,44054)
-CheckOffset(struct _GdkGeometry,base_width,16,11,44054)
-CheckMemberSize(struct _GdkGeometry,base_height,4,11,44055)
-CheckOffset(struct _GdkGeometry,base_height,20,11,44055)
-CheckMemberSize(struct _GdkGeometry,width_inc,4,11,44056)
-CheckOffset(struct _GdkGeometry,width_inc,24,11,44056)
-CheckMemberSize(struct _GdkGeometry,height_inc,4,11,44057)
-CheckOffset(struct _GdkGeometry,height_inc,28,11,44057)
-CheckMemberSize(struct _GdkGeometry,min_aspect,8,11,44058)
-CheckOffset(struct _GdkGeometry,min_aspect,32,11,44058)
-CheckMemberSize(struct _GdkGeometry,max_aspect,8,11,44059)
-CheckOffset(struct _GdkGeometry,max_aspect,40,11,44059)
-CheckMemberSize(struct _GdkGeometry,win_gravity,4,11,44070)
-CheckOffset(struct _GdkGeometry,win_gravity,48,11,44070)
+CheckTypeSize(GdkSpan,12, 12906, 11);
 #elif __ia64__
-CheckTypeSize(struct _GdkGeometry,56, 12910, 3)
-CheckMemberSize(struct _GdkGeometry,min_height,4,3,44051)
-CheckOffset(struct _GdkGeometry,min_height,4,3,44051)
-CheckMemberSize(struct _GdkGeometry,max_width,4,3,44052)
-CheckOffset(struct _GdkGeometry,max_width,8,3,44052)
-CheckMemberSize(struct _GdkGeometry,max_height,4,3,44053)
-CheckOffset(struct _GdkGeometry,max_height,12,3,44053)
-CheckMemberSize(struct _GdkGeometry,base_width,4,3,44054)
-CheckOffset(struct _GdkGeometry,base_width,16,3,44054)
-CheckMemberSize(struct _GdkGeometry,base_height,4,3,44055)
-CheckOffset(struct _GdkGeometry,base_height,20,3,44055)
-CheckMemberSize(struct _GdkGeometry,width_inc,4,3,44056)
-CheckOffset(struct _GdkGeometry,width_inc,24,3,44056)
-CheckMemberSize(struct _GdkGeometry,height_inc,4,3,44057)
-CheckOffset(struct _GdkGeometry,height_inc,28,3,44057)
-CheckMemberSize(struct _GdkGeometry,min_aspect,8,3,44058)
-CheckOffset(struct _GdkGeometry,min_aspect,32,3,44058)
-CheckMemberSize(struct _GdkGeometry,max_aspect,8,3,44059)
-CheckOffset(struct _GdkGeometry,max_aspect,40,3,44059)
-CheckMemberSize(struct _GdkGeometry,win_gravity,4,3,44070)
-CheckOffset(struct _GdkGeometry,win_gravity,48,3,44070)
+CheckTypeSize(GdkSpan,12, 12906, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkGeometry,56, 12910, 6)
-CheckMemberSize(struct _GdkGeometry,min_height,4,6,44051)
-CheckOffset(struct _GdkGeometry,min_height,4,6,44051)
-CheckMemberSize(struct _GdkGeometry,max_width,4,6,44052)
-CheckOffset(struct _GdkGeometry,max_width,8,6,44052)
-CheckMemberSize(struct _GdkGeometry,max_height,4,6,44053)
-CheckOffset(struct _GdkGeometry,max_height,12,6,44053)
-CheckMemberSize(struct _GdkGeometry,base_width,4,6,44054)
-CheckOffset(struct _GdkGeometry,base_width,16,6,44054)
-CheckMemberSize(struct _GdkGeometry,base_height,4,6,44055)
-CheckOffset(struct _GdkGeometry,base_height,20,6,44055)
-CheckMemberSize(struct _GdkGeometry,width_inc,4,6,44056)
-CheckOffset(struct _GdkGeometry,width_inc,24,6,44056)
-CheckMemberSize(struct _GdkGeometry,height_inc,4,6,44057)
-CheckOffset(struct _GdkGeometry,height_inc,28,6,44057)
-CheckMemberSize(struct _GdkGeometry,min_aspect,8,6,44058)
-CheckOffset(struct _GdkGeometry,min_aspect,32,6,44058)
-CheckMemberSize(struct _GdkGeometry,max_aspect,8,6,44059)
-CheckOffset(struct _GdkGeometry,max_aspect,40,6,44059)
-CheckMemberSize(struct _GdkGeometry,win_gravity,4,6,44070)
-CheckOffset(struct _GdkGeometry,win_gravity,48,6,44070)
+CheckTypeSize(GdkSpan,12, 12906, 6);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkGeometry,56, 12910, 9)
-CheckMemberSize(struct _GdkGeometry,min_height,4,9,44051)
-CheckOffset(struct _GdkGeometry,min_height,4,9,44051)
-CheckMemberSize(struct _GdkGeometry,max_width,4,9,44052)
-CheckOffset(struct _GdkGeometry,max_width,8,9,44052)
-CheckMemberSize(struct _GdkGeometry,max_height,4,9,44053)
-CheckOffset(struct _GdkGeometry,max_height,12,9,44053)
-CheckMemberSize(struct _GdkGeometry,base_width,4,9,44054)
-CheckOffset(struct _GdkGeometry,base_width,16,9,44054)
-CheckMemberSize(struct _GdkGeometry,base_height,4,9,44055)
-CheckOffset(struct _GdkGeometry,base_height,20,9,44055)
-CheckMemberSize(struct _GdkGeometry,width_inc,4,9,44056)
-CheckOffset(struct _GdkGeometry,width_inc,24,9,44056)
-CheckMemberSize(struct _GdkGeometry,height_inc,4,9,44057)
-CheckOffset(struct _GdkGeometry,height_inc,28,9,44057)
-CheckMemberSize(struct _GdkGeometry,min_aspect,8,9,44058)
-CheckOffset(struct _GdkGeometry,min_aspect,32,9,44058)
-CheckMemberSize(struct _GdkGeometry,max_aspect,8,9,44059)
-CheckOffset(struct _GdkGeometry,max_aspect,40,9,44059)
-CheckMemberSize(struct _GdkGeometry,win_gravity,4,9,44070)
-CheckOffset(struct _GdkGeometry,win_gravity,48,9,44070)
+CheckTypeSize(GdkSpan,12, 12906, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkGeometry,56, 12910, 10)
-CheckMemberSize(struct _GdkGeometry,min_height,4,10,44051)
-CheckOffset(struct _GdkGeometry,min_height,4,10,44051)
-CheckMemberSize(struct _GdkGeometry,max_width,4,10,44052)
-CheckOffset(struct _GdkGeometry,max_width,8,10,44052)
-CheckMemberSize(struct _GdkGeometry,max_height,4,10,44053)
-CheckOffset(struct _GdkGeometry,max_height,12,10,44053)
-CheckMemberSize(struct _GdkGeometry,base_width,4,10,44054)
-CheckOffset(struct _GdkGeometry,base_width,16,10,44054)
-CheckMemberSize(struct _GdkGeometry,base_height,4,10,44055)
-CheckOffset(struct _GdkGeometry,base_height,20,10,44055)
-CheckMemberSize(struct _GdkGeometry,width_inc,4,10,44056)
-CheckOffset(struct _GdkGeometry,width_inc,24,10,44056)
-CheckMemberSize(struct _GdkGeometry,height_inc,4,10,44057)
-CheckOffset(struct _GdkGeometry,height_inc,28,10,44057)
-CheckMemberSize(struct _GdkGeometry,min_aspect,8,10,44058)
-CheckOffset(struct _GdkGeometry,min_aspect,32,10,44058)
-CheckMemberSize(struct _GdkGeometry,max_aspect,8,10,44059)
-CheckOffset(struct _GdkGeometry,max_aspect,40,10,44059)
-CheckMemberSize(struct _GdkGeometry,win_gravity,4,10,44070)
-CheckOffset(struct _GdkGeometry,win_gravity,48,10,44070)
+CheckTypeSize(GdkSpan,12, 12906, 10);
 #elif __s390x__
-CheckTypeSize(struct _GdkGeometry,56, 12910, 12)
-CheckMemberSize(struct _GdkGeometry,min_height,4,12,44051)
-CheckOffset(struct _GdkGeometry,min_height,4,12,44051)
-CheckMemberSize(struct _GdkGeometry,max_width,4,12,44052)
-CheckOffset(struct _GdkGeometry,max_width,8,12,44052)
-CheckMemberSize(struct _GdkGeometry,max_height,4,12,44053)
-CheckOffset(struct _GdkGeometry,max_height,12,12,44053)
-CheckMemberSize(struct _GdkGeometry,base_width,4,12,44054)
-CheckOffset(struct _GdkGeometry,base_width,16,12,44054)
-CheckMemberSize(struct _GdkGeometry,base_height,4,12,44055)
-CheckOffset(struct _GdkGeometry,base_height,20,12,44055)
-CheckMemberSize(struct _GdkGeometry,width_inc,4,12,44056)
-CheckOffset(struct _GdkGeometry,width_inc,24,12,44056)
-CheckMemberSize(struct _GdkGeometry,height_inc,4,12,44057)
-CheckOffset(struct _GdkGeometry,height_inc,28,12,44057)
-CheckMemberSize(struct _GdkGeometry,min_aspect,8,12,44058)
-CheckOffset(struct _GdkGeometry,min_aspect,32,12,44058)
-CheckMemberSize(struct _GdkGeometry,max_aspect,8,12,44059)
-CheckOffset(struct _GdkGeometry,max_aspect,40,12,44059)
-CheckMemberSize(struct _GdkGeometry,win_gravity,4,12,44070)
-CheckOffset(struct _GdkGeometry,win_gravity,48,12,44070)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12910,0);
-Msg("Find size of _GdkGeometry (12910)\n");
+CheckTypeSize(GdkSpan,12, 12906, 12);
+#elif 1
+CheckTypeSize(GdkSpan,0, 12906, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(GdkSpan *,4, 12907, 2);
+#elif __x86_64__
+CheckTypeSize(GdkSpan *,8, 12907, 11);
+#elif __ia64__
+CheckTypeSize(GdkSpan *,8, 12907, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkSpan *,4, 12907, 6);
+#elif __powerpc64__
+CheckTypeSize(GdkSpan *,8, 12907, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GdkSpan *,4, 12907, 10);
+#elif __s390x__
+CheckTypeSize(GdkSpan *,8, 12907, 12);
+#elif 1
+CheckTypeSize(GdkSpan *,0, 12907, 1);
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
+#elif 1
+#endif
+
+#if __i386__
+CheckTypeSize(GdkSpanFunc,4, 12909, 2);
+#elif __x86_64__
+CheckTypeSize(GdkSpanFunc,8, 12909, 11);
+#elif __ia64__
+CheckTypeSize(GdkSpanFunc,8, 12909, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkSpanFunc,4, 12909, 6);
+#elif __powerpc64__
+CheckTypeSize(GdkSpanFunc,8, 12909, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GdkSpanFunc,4, 12909, 10);
+#elif __s390x__
+CheckTypeSize(GdkSpanFunc,8, 12909, 12);
+#elif 1
+CheckTypeSize(GdkSpanFunc,0, 12909, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(struct _GdkGeometry,52, 12910, 2);
+CheckMemberSize(struct _GdkGeometry,min_height,4,2,44051);
+CheckOffset(struct _GdkGeometry,min_height,4,2,44051);
+CheckMemberSize(struct _GdkGeometry,max_width,4,2,44052);
+CheckOffset(struct _GdkGeometry,max_width,8,2,44052);
+CheckMemberSize(struct _GdkGeometry,max_height,4,2,44053);
+CheckOffset(struct _GdkGeometry,max_height,12,2,44053);
+CheckMemberSize(struct _GdkGeometry,base_width,4,2,44054);
+CheckOffset(struct _GdkGeometry,base_width,16,2,44054);
+CheckMemberSize(struct _GdkGeometry,base_height,4,2,44055);
+CheckOffset(struct _GdkGeometry,base_height,20,2,44055);
+CheckMemberSize(struct _GdkGeometry,width_inc,4,2,44056);
+CheckOffset(struct _GdkGeometry,width_inc,24,2,44056);
+CheckMemberSize(struct _GdkGeometry,height_inc,4,2,44057);
+CheckOffset(struct _GdkGeometry,height_inc,28,2,44057);
+CheckMemberSize(struct _GdkGeometry,min_aspect,8,2,44058);
+CheckOffset(struct _GdkGeometry,min_aspect,32,2,44058);
+CheckMemberSize(struct _GdkGeometry,max_aspect,8,2,44059);
+CheckOffset(struct _GdkGeometry,max_aspect,40,2,44059);
+CheckMemberSize(struct _GdkGeometry,win_gravity,4,2,44070);
+CheckOffset(struct _GdkGeometry,win_gravity,48,2,44070);
+#elif __x86_64__
+CheckTypeSize(struct _GdkGeometry,56, 12910, 11);
+CheckMemberSize(struct _GdkGeometry,min_height,4,11,44051);
+CheckOffset(struct _GdkGeometry,min_height,4,11,44051);
+CheckMemberSize(struct _GdkGeometry,max_width,4,11,44052);
+CheckOffset(struct _GdkGeometry,max_width,8,11,44052);
+CheckMemberSize(struct _GdkGeometry,max_height,4,11,44053);
+CheckOffset(struct _GdkGeometry,max_height,12,11,44053);
+CheckMemberSize(struct _GdkGeometry,base_width,4,11,44054);
+CheckOffset(struct _GdkGeometry,base_width,16,11,44054);
+CheckMemberSize(struct _GdkGeometry,base_height,4,11,44055);
+CheckOffset(struct _GdkGeometry,base_height,20,11,44055);
+CheckMemberSize(struct _GdkGeometry,width_inc,4,11,44056);
+CheckOffset(struct _GdkGeometry,width_inc,24,11,44056);
+CheckMemberSize(struct _GdkGeometry,height_inc,4,11,44057);
+CheckOffset(struct _GdkGeometry,height_inc,28,11,44057);
+CheckMemberSize(struct _GdkGeometry,min_aspect,8,11,44058);
+CheckOffset(struct _GdkGeometry,min_aspect,32,11,44058);
+CheckMemberSize(struct _GdkGeometry,max_aspect,8,11,44059);
+CheckOffset(struct _GdkGeometry,max_aspect,40,11,44059);
+CheckMemberSize(struct _GdkGeometry,win_gravity,4,11,44070);
+CheckOffset(struct _GdkGeometry,win_gravity,48,11,44070);
+#elif __ia64__
+CheckTypeSize(struct _GdkGeometry,56, 12910, 3);
+CheckMemberSize(struct _GdkGeometry,min_height,4,3,44051);
+CheckOffset(struct _GdkGeometry,min_height,4,3,44051);
+CheckMemberSize(struct _GdkGeometry,max_width,4,3,44052);
+CheckOffset(struct _GdkGeometry,max_width,8,3,44052);
+CheckMemberSize(struct _GdkGeometry,max_height,4,3,44053);
+CheckOffset(struct _GdkGeometry,max_height,12,3,44053);
+CheckMemberSize(struct _GdkGeometry,base_width,4,3,44054);
+CheckOffset(struct _GdkGeometry,base_width,16,3,44054);
+CheckMemberSize(struct _GdkGeometry,base_height,4,3,44055);
+CheckOffset(struct _GdkGeometry,base_height,20,3,44055);
+CheckMemberSize(struct _GdkGeometry,width_inc,4,3,44056);
+CheckOffset(struct _GdkGeometry,width_inc,24,3,44056);
+CheckMemberSize(struct _GdkGeometry,height_inc,4,3,44057);
+CheckOffset(struct _GdkGeometry,height_inc,28,3,44057);
+CheckMemberSize(struct _GdkGeometry,min_aspect,8,3,44058);
+CheckOffset(struct _GdkGeometry,min_aspect,32,3,44058);
+CheckMemberSize(struct _GdkGeometry,max_aspect,8,3,44059);
+CheckOffset(struct _GdkGeometry,max_aspect,40,3,44059);
+CheckMemberSize(struct _GdkGeometry,win_gravity,4,3,44070);
+CheckOffset(struct _GdkGeometry,win_gravity,48,3,44070);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _GdkGeometry,56, 12910, 6);
+CheckMemberSize(struct _GdkGeometry,min_height,4,6,44051);
+CheckOffset(struct _GdkGeometry,min_height,4,6,44051);
+CheckMemberSize(struct _GdkGeometry,max_width,4,6,44052);
+CheckOffset(struct _GdkGeometry,max_width,8,6,44052);
+CheckMemberSize(struct _GdkGeometry,max_height,4,6,44053);
+CheckOffset(struct _GdkGeometry,max_height,12,6,44053);
+CheckMemberSize(struct _GdkGeometry,base_width,4,6,44054);
+CheckOffset(struct _GdkGeometry,base_width,16,6,44054);
+CheckMemberSize(struct _GdkGeometry,base_height,4,6,44055);
+CheckOffset(struct _GdkGeometry,base_height,20,6,44055);
+CheckMemberSize(struct _GdkGeometry,width_inc,4,6,44056);
+CheckOffset(struct _GdkGeometry,width_inc,24,6,44056);
+CheckMemberSize(struct _GdkGeometry,height_inc,4,6,44057);
+CheckOffset(struct _GdkGeometry,height_inc,28,6,44057);
+CheckMemberSize(struct _GdkGeometry,min_aspect,8,6,44058);
+CheckOffset(struct _GdkGeometry,min_aspect,32,6,44058);
+CheckMemberSize(struct _GdkGeometry,max_aspect,8,6,44059);
+CheckOffset(struct _GdkGeometry,max_aspect,40,6,44059);
+CheckMemberSize(struct _GdkGeometry,win_gravity,4,6,44070);
+CheckOffset(struct _GdkGeometry,win_gravity,48,6,44070);
+#elif __powerpc64__
+CheckTypeSize(struct _GdkGeometry,56, 12910, 9);
+CheckMemberSize(struct _GdkGeometry,min_height,4,9,44051);
+CheckOffset(struct _GdkGeometry,min_height,4,9,44051);
+CheckMemberSize(struct _GdkGeometry,max_width,4,9,44052);
+CheckOffset(struct _GdkGeometry,max_width,8,9,44052);
+CheckMemberSize(struct _GdkGeometry,max_height,4,9,44053);
+CheckOffset(struct _GdkGeometry,max_height,12,9,44053);
+CheckMemberSize(struct _GdkGeometry,base_width,4,9,44054);
+CheckOffset(struct _GdkGeometry,base_width,16,9,44054);
+CheckMemberSize(struct _GdkGeometry,base_height,4,9,44055);
+CheckOffset(struct _GdkGeometry,base_height,20,9,44055);
+CheckMemberSize(struct _GdkGeometry,width_inc,4,9,44056);
+CheckOffset(struct _GdkGeometry,width_inc,24,9,44056);
+CheckMemberSize(struct _GdkGeometry,height_inc,4,9,44057);
+CheckOffset(struct _GdkGeometry,height_inc,28,9,44057);
+CheckMemberSize(struct _GdkGeometry,min_aspect,8,9,44058);
+CheckOffset(struct _GdkGeometry,min_aspect,32,9,44058);
+CheckMemberSize(struct _GdkGeometry,max_aspect,8,9,44059);
+CheckOffset(struct _GdkGeometry,max_aspect,40,9,44059);
+CheckMemberSize(struct _GdkGeometry,win_gravity,4,9,44070);
+CheckOffset(struct _GdkGeometry,win_gravity,48,9,44070);
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _GdkGeometry,56, 12910, 10);
+CheckMemberSize(struct _GdkGeometry,min_height,4,10,44051);
+CheckOffset(struct _GdkGeometry,min_height,4,10,44051);
+CheckMemberSize(struct _GdkGeometry,max_width,4,10,44052);
+CheckOffset(struct _GdkGeometry,max_width,8,10,44052);
+CheckMemberSize(struct _GdkGeometry,max_height,4,10,44053);
+CheckOffset(struct _GdkGeometry,max_height,12,10,44053);
+CheckMemberSize(struct _GdkGeometry,base_width,4,10,44054);
+CheckOffset(struct _GdkGeometry,base_width,16,10,44054);
+CheckMemberSize(struct _GdkGeometry,base_height,4,10,44055);
+CheckOffset(struct _GdkGeometry,base_height,20,10,44055);
+CheckMemberSize(struct _GdkGeometry,width_inc,4,10,44056);
+CheckOffset(struct _GdkGeometry,width_inc,24,10,44056);
+CheckMemberSize(struct _GdkGeometry,height_inc,4,10,44057);
+CheckOffset(struct _GdkGeometry,height_inc,28,10,44057);
+CheckMemberSize(struct _GdkGeometry,min_aspect,8,10,44058);
+CheckOffset(struct _GdkGeometry,min_aspect,32,10,44058);
+CheckMemberSize(struct _GdkGeometry,max_aspect,8,10,44059);
+CheckOffset(struct _GdkGeometry,max_aspect,40,10,44059);
+CheckMemberSize(struct _GdkGeometry,win_gravity,4,10,44070);
+CheckOffset(struct _GdkGeometry,win_gravity,48,10,44070);
+#elif __s390x__
+CheckTypeSize(struct _GdkGeometry,56, 12910, 12);
+CheckMemberSize(struct _GdkGeometry,min_height,4,12,44051);
+CheckOffset(struct _GdkGeometry,min_height,4,12,44051);
+CheckMemberSize(struct _GdkGeometry,max_width,4,12,44052);
+CheckOffset(struct _GdkGeometry,max_width,8,12,44052);
+CheckMemberSize(struct _GdkGeometry,max_height,4,12,44053);
+CheckOffset(struct _GdkGeometry,max_height,12,12,44053);
+CheckMemberSize(struct _GdkGeometry,base_width,4,12,44054);
+CheckOffset(struct _GdkGeometry,base_width,16,12,44054);
+CheckMemberSize(struct _GdkGeometry,base_height,4,12,44055);
+CheckOffset(struct _GdkGeometry,base_height,20,12,44055);
+CheckMemberSize(struct _GdkGeometry,width_inc,4,12,44056);
+CheckOffset(struct _GdkGeometry,width_inc,24,12,44056);
+CheckMemberSize(struct _GdkGeometry,height_inc,4,12,44057);
+CheckOffset(struct _GdkGeometry,height_inc,28,12,44057);
+CheckMemberSize(struct _GdkGeometry,min_aspect,8,12,44058);
+CheckOffset(struct _GdkGeometry,min_aspect,32,12,44058);
+CheckMemberSize(struct _GdkGeometry,max_aspect,8,12,44059);
+CheckOffset(struct _GdkGeometry,max_aspect,40,12,44059);
+CheckMemberSize(struct _GdkGeometry,win_gravity,4,12,44070);
+CheckOffset(struct _GdkGeometry,win_gravity,48,12,44070);
+#elif 1
+CheckTypeSize(struct _GdkGeometry,0, 12910, 1);
+Msg("Missing member data for _GdkGeometry on All\n");
+CheckOffset(struct _GdkGeometry,min_width,0,1,44050);
+CheckOffset(struct _GdkGeometry,min_height,0,1,44051);
+CheckOffset(struct _GdkGeometry,max_width,0,1,44052);
+CheckOffset(struct _GdkGeometry,max_height,0,1,44053);
+CheckOffset(struct _GdkGeometry,base_width,0,1,44054);
+CheckOffset(struct _GdkGeometry,base_height,0,1,44055);
+CheckOffset(struct _GdkGeometry,width_inc,0,1,44056);
+CheckOffset(struct _GdkGeometry,height_inc,0,1,44057);
+CheckOffset(struct _GdkGeometry,min_aspect,0,1,44058);
+CheckOffset(struct _GdkGeometry,max_aspect,0,1,44059);
+CheckOffset(struct _GdkGeometry,win_gravity,0,1,44070);
 #endif
 
 #if __i386__
@@ -10383,66 +10745,71 @@ CheckEnum("GDK_GRAVITY_SOUTH_WEST",GDK_GRAVITY_SOUTH_WEST,7,44066);
 CheckEnum("GDK_GRAVITY_SOUTH",GDK_GRAVITY_SOUTH,8,44067);
 CheckEnum("GDK_GRAVITY_SOUTH_EAST",GDK_GRAVITY_SOUTH_EAST,9,44068);
 CheckEnum("GDK_GRAVITY_STATIC",GDK_GRAVITY_STATIC,10,44069);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12911,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-953 (12911)\n");
+#elif 1
+CheckEnum("GDK_GRAVITY_NORTH_WEST",GDK_GRAVITY_NORTH_WEST,1,44060);
+CheckEnum("GDK_GRAVITY_NORTH",GDK_GRAVITY_NORTH,2,44061);
+CheckEnum("GDK_GRAVITY_NORTH_EAST",GDK_GRAVITY_NORTH_EAST,3,44062);
+CheckEnum("GDK_GRAVITY_WEST",GDK_GRAVITY_WEST,4,44063);
+CheckEnum("GDK_GRAVITY_CENTER",GDK_GRAVITY_CENTER,5,44064);
+CheckEnum("GDK_GRAVITY_EAST",GDK_GRAVITY_EAST,6,44065);
+CheckEnum("GDK_GRAVITY_SOUTH_WEST",GDK_GRAVITY_SOUTH_WEST,7,44066);
+CheckEnum("GDK_GRAVITY_SOUTH",GDK_GRAVITY_SOUTH,8,44067);
+CheckEnum("GDK_GRAVITY_SOUTH_EAST",GDK_GRAVITY_SOUTH_EAST,9,44068);
+CheckEnum("GDK_GRAVITY_STATIC",GDK_GRAVITY_STATIC,10,44069);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkGravity,4, 12912, 2)
+CheckTypeSize(GdkGravity,4, 12912, 2);
 #elif __x86_64__
-CheckTypeSize(GdkGravity,4, 12912, 11)
+CheckTypeSize(GdkGravity,4, 12912, 11);
 #elif __ia64__
-CheckTypeSize(GdkGravity,4, 12912, 3)
+CheckTypeSize(GdkGravity,4, 12912, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkGravity,4, 12912, 6)
+CheckTypeSize(GdkGravity,4, 12912, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkGravity,4, 12912, 9)
+CheckTypeSize(GdkGravity,4, 12912, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkGravity,4, 12912, 10)
+CheckTypeSize(GdkGravity,4, 12912, 10);
 #elif __s390x__
-CheckTypeSize(GdkGravity,4, 12912, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12912,0);
-Msg("Find size of GdkGravity (12912)\n");
+CheckTypeSize(GdkGravity,4, 12912, 12);
+#elif 1
+CheckTypeSize(GdkGravity,0, 12912, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkGeometry,52, 12913, 2)
+CheckTypeSize(GdkGeometry,52, 12913, 2);
 #elif __x86_64__
-CheckTypeSize(GdkGeometry,56, 12913, 11)
+CheckTypeSize(GdkGeometry,56, 12913, 11);
 #elif __ia64__
-CheckTypeSize(GdkGeometry,56, 12913, 3)
+CheckTypeSize(GdkGeometry,56, 12913, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkGeometry,56, 12913, 6)
+CheckTypeSize(GdkGeometry,56, 12913, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkGeometry,56, 12913, 9)
+CheckTypeSize(GdkGeometry,56, 12913, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkGeometry,56, 12913, 10)
+CheckTypeSize(GdkGeometry,56, 12913, 10);
 #elif __s390x__
-CheckTypeSize(GdkGeometry,56, 12913, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12913,0);
-Msg("Find size of GdkGeometry (12913)\n");
+CheckTypeSize(GdkGeometry,56, 12913, 12);
+#elif 1
+CheckTypeSize(GdkGeometry,0, 12913, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkGeometry *,4, 12914, 2)
+CheckTypeSize(GdkGeometry *,4, 12914, 2);
 #elif __x86_64__
-CheckTypeSize(GdkGeometry *,8, 12914, 11)
+CheckTypeSize(GdkGeometry *,8, 12914, 11);
 #elif __ia64__
-CheckTypeSize(GdkGeometry *,8, 12914, 3)
+CheckTypeSize(GdkGeometry *,8, 12914, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkGeometry *,4, 12914, 6)
+CheckTypeSize(GdkGeometry *,4, 12914, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkGeometry *,8, 12914, 9)
+CheckTypeSize(GdkGeometry *,8, 12914, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkGeometry *,4, 12914, 10)
+CheckTypeSize(GdkGeometry *,4, 12914, 10);
 #elif __s390x__
-CheckTypeSize(GdkGeometry *,8, 12914, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12914,0);
-Msg("Find size of GdkGeometry * (12914)\n");
+CheckTypeSize(GdkGeometry *,8, 12914, 12);
+#elif 1
+CheckTypeSize(GdkGeometry *,0, 12914, 1);
 #endif
 
 #if __i386__
@@ -10515,28 +10882,34 @@ CheckEnum("GDK_HINT_RESIZE_INC",GDK_HINT_RESIZE_INC,32,44076);
 CheckEnum("GDK_HINT_WIN_GRAVITY",GDK_HINT_WIN_GRAVITY,64,44077);
 CheckEnum("GDK_HINT_USER_POS",GDK_HINT_USER_POS,128,44078);
 CheckEnum("GDK_HINT_USER_SIZE",GDK_HINT_USER_SIZE,256,44079);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12915,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-949 (12915)\n");
+#elif 1
+CheckEnum("GDK_HINT_POS",GDK_HINT_POS,1,44071);
+CheckEnum("GDK_HINT_MIN_SIZE",GDK_HINT_MIN_SIZE,2,44072);
+CheckEnum("GDK_HINT_MAX_SIZE",GDK_HINT_MAX_SIZE,4,44073);
+CheckEnum("GDK_HINT_BASE_SIZE",GDK_HINT_BASE_SIZE,8,44074);
+CheckEnum("GDK_HINT_ASPECT",GDK_HINT_ASPECT,16,44075);
+CheckEnum("GDK_HINT_RESIZE_INC",GDK_HINT_RESIZE_INC,32,44076);
+CheckEnum("GDK_HINT_WIN_GRAVITY",GDK_HINT_WIN_GRAVITY,64,44077);
+CheckEnum("GDK_HINT_USER_POS",GDK_HINT_USER_POS,128,44078);
+CheckEnum("GDK_HINT_USER_SIZE",GDK_HINT_USER_SIZE,256,44079);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkWindowHints,4, 12916, 2)
+CheckTypeSize(GdkWindowHints,4, 12916, 2);
 #elif __x86_64__
-CheckTypeSize(GdkWindowHints,4, 12916, 11)
+CheckTypeSize(GdkWindowHints,4, 12916, 11);
 #elif __ia64__
-CheckTypeSize(GdkWindowHints,4, 12916, 3)
+CheckTypeSize(GdkWindowHints,4, 12916, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkWindowHints,4, 12916, 6)
+CheckTypeSize(GdkWindowHints,4, 12916, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkWindowHints,4, 12916, 9)
+CheckTypeSize(GdkWindowHints,4, 12916, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkWindowHints,4, 12916, 10)
+CheckTypeSize(GdkWindowHints,4, 12916, 10);
 #elif __s390x__
-CheckTypeSize(GdkWindowHints,4, 12916, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12916,0);
-Msg("Find size of GdkWindowHints (12916)\n");
+CheckTypeSize(GdkWindowHints,4, 12916, 12);
+#elif 1
+CheckTypeSize(GdkWindowHints,0, 12916, 1);
 #endif
 
 #if __i386__
@@ -10546,28 +10919,25 @@ Msg("Find size of GdkWindowHints (12916)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12917,0);
-Msg("Find size of fptr_gdk_331 (12917)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(GdkEventFunc,4, 12918, 2)
+CheckTypeSize(GdkEventFunc,4, 12918, 2);
 #elif __x86_64__
-CheckTypeSize(GdkEventFunc,8, 12918, 11)
+CheckTypeSize(GdkEventFunc,8, 12918, 11);
 #elif __ia64__
-CheckTypeSize(GdkEventFunc,8, 12918, 3)
+CheckTypeSize(GdkEventFunc,8, 12918, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkEventFunc,4, 12918, 6)
+CheckTypeSize(GdkEventFunc,4, 12918, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkEventFunc,8, 12918, 9)
+CheckTypeSize(GdkEventFunc,8, 12918, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkEventFunc,4, 12918, 10)
+CheckTypeSize(GdkEventFunc,4, 12918, 10);
 #elif __s390x__
-CheckTypeSize(GdkEventFunc,8, 12918, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12918,0);
-Msg("Find size of GdkEventFunc (12918)\n");
+CheckTypeSize(GdkEventFunc,8, 12918, 12);
+#elif 1
+CheckTypeSize(GdkEventFunc,0, 12918, 1);
 #endif
 
 #if __i386__
@@ -10598,127 +10968,129 @@ CheckEnum("GDK_OVERLAP_RECTANGLE_PART",GDK_OVERLAP_RECTANGLE_PART,2,44084);
 CheckEnum("GDK_OVERLAP_RECTANGLE_IN",GDK_OVERLAP_RECTANGLE_IN,0,44082);
 CheckEnum("GDK_OVERLAP_RECTANGLE_OUT",GDK_OVERLAP_RECTANGLE_OUT,1,44083);
 CheckEnum("GDK_OVERLAP_RECTANGLE_PART",GDK_OVERLAP_RECTANGLE_PART,2,44084);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12919,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-148 (12919)\n");
+#elif 1
+CheckEnum("GDK_OVERLAP_RECTANGLE_IN",GDK_OVERLAP_RECTANGLE_IN,0,44082);
+CheckEnum("GDK_OVERLAP_RECTANGLE_OUT",GDK_OVERLAP_RECTANGLE_OUT,1,44083);
+CheckEnum("GDK_OVERLAP_RECTANGLE_PART",GDK_OVERLAP_RECTANGLE_PART,2,44084);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkOverlapType,4, 12920, 2)
+CheckTypeSize(GdkOverlapType,4, 12920, 2);
 #elif __x86_64__
-CheckTypeSize(GdkOverlapType,4, 12920, 11)
+CheckTypeSize(GdkOverlapType,4, 12920, 11);
 #elif __ia64__
-CheckTypeSize(GdkOverlapType,4, 12920, 3)
+CheckTypeSize(GdkOverlapType,4, 12920, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkOverlapType,4, 12920, 6)
+CheckTypeSize(GdkOverlapType,4, 12920, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkOverlapType,4, 12920, 9)
+CheckTypeSize(GdkOverlapType,4, 12920, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkOverlapType,4, 12920, 10)
+CheckTypeSize(GdkOverlapType,4, 12920, 10);
 #elif __s390x__
-CheckTypeSize(GdkOverlapType,4, 12920, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12920,0);
-Msg("Find size of GdkOverlapType (12920)\n");
+CheckTypeSize(GdkOverlapType,4, 12920, 12);
+#elif 1
+CheckTypeSize(GdkOverlapType,0, 12920, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkSegment,16, 12921, 2)
-CheckMemberSize(struct _GdkSegment,y1,4,2,44086)
-CheckOffset(struct _GdkSegment,y1,4,2,44086)
-CheckMemberSize(struct _GdkSegment,x2,4,2,44087)
-CheckOffset(struct _GdkSegment,x2,8,2,44087)
-CheckMemberSize(struct _GdkSegment,y2,4,2,44088)
-CheckOffset(struct _GdkSegment,y2,12,2,44088)
+CheckTypeSize(struct _GdkSegment,16, 12921, 2);
+CheckMemberSize(struct _GdkSegment,y1,4,2,44086);
+CheckOffset(struct _GdkSegment,y1,4,2,44086);
+CheckMemberSize(struct _GdkSegment,x2,4,2,44087);
+CheckOffset(struct _GdkSegment,x2,8,2,44087);
+CheckMemberSize(struct _GdkSegment,y2,4,2,44088);
+CheckOffset(struct _GdkSegment,y2,12,2,44088);
 #elif __x86_64__
-CheckTypeSize(struct _GdkSegment,16, 12921, 11)
-CheckMemberSize(struct _GdkSegment,y1,4,11,44086)
-CheckOffset(struct _GdkSegment,y1,4,11,44086)
-CheckMemberSize(struct _GdkSegment,x2,4,11,44087)
-CheckOffset(struct _GdkSegment,x2,8,11,44087)
-CheckMemberSize(struct _GdkSegment,y2,4,11,44088)
-CheckOffset(struct _GdkSegment,y2,12,11,44088)
+CheckTypeSize(struct _GdkSegment,16, 12921, 11);
+CheckMemberSize(struct _GdkSegment,y1,4,11,44086);
+CheckOffset(struct _GdkSegment,y1,4,11,44086);
+CheckMemberSize(struct _GdkSegment,x2,4,11,44087);
+CheckOffset(struct _GdkSegment,x2,8,11,44087);
+CheckMemberSize(struct _GdkSegment,y2,4,11,44088);
+CheckOffset(struct _GdkSegment,y2,12,11,44088);
 #elif __ia64__
-CheckTypeSize(struct _GdkSegment,16, 12921, 3)
-CheckMemberSize(struct _GdkSegment,y1,4,3,44086)
-CheckOffset(struct _GdkSegment,y1,4,3,44086)
-CheckMemberSize(struct _GdkSegment,x2,4,3,44087)
-CheckOffset(struct _GdkSegment,x2,8,3,44087)
-CheckMemberSize(struct _GdkSegment,y2,4,3,44088)
-CheckOffset(struct _GdkSegment,y2,12,3,44088)
+CheckTypeSize(struct _GdkSegment,16, 12921, 3);
+CheckMemberSize(struct _GdkSegment,y1,4,3,44086);
+CheckOffset(struct _GdkSegment,y1,4,3,44086);
+CheckMemberSize(struct _GdkSegment,x2,4,3,44087);
+CheckOffset(struct _GdkSegment,x2,8,3,44087);
+CheckMemberSize(struct _GdkSegment,y2,4,3,44088);
+CheckOffset(struct _GdkSegment,y2,12,3,44088);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkSegment,16, 12921, 6)
-CheckMemberSize(struct _GdkSegment,y1,4,6,44086)
-CheckOffset(struct _GdkSegment,y1,4,6,44086)
-CheckMemberSize(struct _GdkSegment,x2,4,6,44087)
-CheckOffset(struct _GdkSegment,x2,8,6,44087)
-CheckMemberSize(struct _GdkSegment,y2,4,6,44088)
-CheckOffset(struct _GdkSegment,y2,12,6,44088)
+CheckTypeSize(struct _GdkSegment,16, 12921, 6);
+CheckMemberSize(struct _GdkSegment,y1,4,6,44086);
+CheckOffset(struct _GdkSegment,y1,4,6,44086);
+CheckMemberSize(struct _GdkSegment,x2,4,6,44087);
+CheckOffset(struct _GdkSegment,x2,8,6,44087);
+CheckMemberSize(struct _GdkSegment,y2,4,6,44088);
+CheckOffset(struct _GdkSegment,y2,12,6,44088);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkSegment,16, 12921, 9)
-CheckMemberSize(struct _GdkSegment,y1,4,9,44086)
-CheckOffset(struct _GdkSegment,y1,4,9,44086)
-CheckMemberSize(struct _GdkSegment,x2,4,9,44087)
-CheckOffset(struct _GdkSegment,x2,8,9,44087)
-CheckMemberSize(struct _GdkSegment,y2,4,9,44088)
-CheckOffset(struct _GdkSegment,y2,12,9,44088)
+CheckTypeSize(struct _GdkSegment,16, 12921, 9);
+CheckMemberSize(struct _GdkSegment,y1,4,9,44086);
+CheckOffset(struct _GdkSegment,y1,4,9,44086);
+CheckMemberSize(struct _GdkSegment,x2,4,9,44087);
+CheckOffset(struct _GdkSegment,x2,8,9,44087);
+CheckMemberSize(struct _GdkSegment,y2,4,9,44088);
+CheckOffset(struct _GdkSegment,y2,12,9,44088);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkSegment,16, 12921, 10)
-CheckMemberSize(struct _GdkSegment,y1,4,10,44086)
-CheckOffset(struct _GdkSegment,y1,4,10,44086)
-CheckMemberSize(struct _GdkSegment,x2,4,10,44087)
-CheckOffset(struct _GdkSegment,x2,8,10,44087)
-CheckMemberSize(struct _GdkSegment,y2,4,10,44088)
-CheckOffset(struct _GdkSegment,y2,12,10,44088)
+CheckTypeSize(struct _GdkSegment,16, 12921, 10);
+CheckMemberSize(struct _GdkSegment,y1,4,10,44086);
+CheckOffset(struct _GdkSegment,y1,4,10,44086);
+CheckMemberSize(struct _GdkSegment,x2,4,10,44087);
+CheckOffset(struct _GdkSegment,x2,8,10,44087);
+CheckMemberSize(struct _GdkSegment,y2,4,10,44088);
+CheckOffset(struct _GdkSegment,y2,12,10,44088);
 #elif __s390x__
-CheckTypeSize(struct _GdkSegment,16, 12921, 12)
-CheckMemberSize(struct _GdkSegment,y1,4,12,44086)
-CheckOffset(struct _GdkSegment,y1,4,12,44086)
-CheckMemberSize(struct _GdkSegment,x2,4,12,44087)
-CheckOffset(struct _GdkSegment,x2,8,12,44087)
-CheckMemberSize(struct _GdkSegment,y2,4,12,44088)
-CheckOffset(struct _GdkSegment,y2,12,12,44088)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12921,0);
-Msg("Find size of _GdkSegment (12921)\n");
+CheckTypeSize(struct _GdkSegment,16, 12921, 12);
+CheckMemberSize(struct _GdkSegment,y1,4,12,44086);
+CheckOffset(struct _GdkSegment,y1,4,12,44086);
+CheckMemberSize(struct _GdkSegment,x2,4,12,44087);
+CheckOffset(struct _GdkSegment,x2,8,12,44087);
+CheckMemberSize(struct _GdkSegment,y2,4,12,44088);
+CheckOffset(struct _GdkSegment,y2,12,12,44088);
+#elif 1
+CheckTypeSize(struct _GdkSegment,0, 12921, 1);
+Msg("Missing member data for _GdkSegment on All\n");
+CheckOffset(struct _GdkSegment,x1,0,1,44085);
+CheckOffset(struct _GdkSegment,y1,0,1,44086);
+CheckOffset(struct _GdkSegment,x2,0,1,44087);
+CheckOffset(struct _GdkSegment,y2,0,1,44088);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkSegment,16, 12922, 2)
+CheckTypeSize(GdkSegment,16, 12922, 2);
 #elif __x86_64__
-CheckTypeSize(GdkSegment,16, 12922, 11)
+CheckTypeSize(GdkSegment,16, 12922, 11);
 #elif __ia64__
-CheckTypeSize(GdkSegment,16, 12922, 3)
+CheckTypeSize(GdkSegment,16, 12922, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkSegment,16, 12922, 6)
+CheckTypeSize(GdkSegment,16, 12922, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkSegment,16, 12922, 9)
+CheckTypeSize(GdkSegment,16, 12922, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkSegment,16, 12922, 10)
+CheckTypeSize(GdkSegment,16, 12922, 10);
 #elif __s390x__
-CheckTypeSize(GdkSegment,16, 12922, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12922,0);
-Msg("Find size of GdkSegment (12922)\n");
+CheckTypeSize(GdkSegment,16, 12922, 12);
+#elif 1
+CheckTypeSize(GdkSegment,0, 12922, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkSegment *,4, 12923, 2)
+CheckTypeSize(GdkSegment *,4, 12923, 2);
 #elif __x86_64__
-CheckTypeSize(GdkSegment *,8, 12923, 11)
+CheckTypeSize(GdkSegment *,8, 12923, 11);
 #elif __ia64__
-CheckTypeSize(GdkSegment *,8, 12923, 3)
+CheckTypeSize(GdkSegment *,8, 12923, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkSegment *,4, 12923, 6)
+CheckTypeSize(GdkSegment *,4, 12923, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkSegment *,8, 12923, 9)
+CheckTypeSize(GdkSegment *,8, 12923, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkSegment *,4, 12923, 10)
+CheckTypeSize(GdkSegment *,4, 12923, 10);
 #elif __s390x__
-CheckTypeSize(GdkSegment *,8, 12923, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12923,0);
-Msg("Find size of GdkSegment * (12923)\n");
+CheckTypeSize(GdkSegment *,8, 12923, 12);
+#elif 1
+CheckTypeSize(GdkSegment *,0, 12923, 1);
 #endif
 
 #if __i386__
@@ -10749,229 +11121,243 @@ CheckEnum("GDK_PROP_MODE_APPEND",GDK_PROP_MODE_APPEND,2,44091);
 CheckEnum("GDK_PROP_MODE_REPLACE",GDK_PROP_MODE_REPLACE,0,44089);
 CheckEnum("GDK_PROP_MODE_PREPEND",GDK_PROP_MODE_PREPEND,1,44090);
 CheckEnum("GDK_PROP_MODE_APPEND",GDK_PROP_MODE_APPEND,2,44091);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12924,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-796 (12924)\n");
+#elif 1
+CheckEnum("GDK_PROP_MODE_REPLACE",GDK_PROP_MODE_REPLACE,0,44089);
+CheckEnum("GDK_PROP_MODE_PREPEND",GDK_PROP_MODE_PREPEND,1,44090);
+CheckEnum("GDK_PROP_MODE_APPEND",GDK_PROP_MODE_APPEND,2,44091);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPropMode,4, 12925, 2)
+CheckTypeSize(GdkPropMode,4, 12925, 2);
 #elif __x86_64__
-CheckTypeSize(GdkPropMode,4, 12925, 11)
+CheckTypeSize(GdkPropMode,4, 12925, 11);
 #elif __ia64__
-CheckTypeSize(GdkPropMode,4, 12925, 3)
+CheckTypeSize(GdkPropMode,4, 12925, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPropMode,4, 12925, 6)
+CheckTypeSize(GdkPropMode,4, 12925, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkPropMode,4, 12925, 9)
+CheckTypeSize(GdkPropMode,4, 12925, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPropMode,4, 12925, 10)
+CheckTypeSize(GdkPropMode,4, 12925, 10);
 #elif __s390x__
-CheckTypeSize(GdkPropMode,4, 12925, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12925,0);
-Msg("Find size of GdkPropMode (12925)\n");
+CheckTypeSize(GdkPropMode,4, 12925, 12);
+#elif 1
+CheckTypeSize(GdkPropMode,0, 12925, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkWindowAttr,56, 12926, 2)
-CheckMemberSize(struct _GdkWindowAttr,event_mask,4,2,44093)
-CheckOffset(struct _GdkWindowAttr,event_mask,4,2,44093)
-CheckMemberSize(struct _GdkWindowAttr,x,4,2,44094)
-CheckOffset(struct _GdkWindowAttr,x,8,2,44094)
-CheckMemberSize(struct _GdkWindowAttr,y,4,2,44095)
-CheckOffset(struct _GdkWindowAttr,y,12,2,44095)
-CheckMemberSize(struct _GdkWindowAttr,width,4,2,44096)
-CheckOffset(struct _GdkWindowAttr,width,16,2,44096)
-CheckMemberSize(struct _GdkWindowAttr,height,4,2,44097)
-CheckOffset(struct _GdkWindowAttr,height,20,2,44097)
-CheckMemberSize(struct _GdkWindowAttr,wclass,4,2,44100)
-CheckOffset(struct _GdkWindowAttr,wclass,24,2,44100)
-CheckMemberSize(struct _GdkWindowAttr,visual,4,2,44101)
-CheckOffset(struct _GdkWindowAttr,visual,28,2,44101)
-CheckMemberSize(struct _GdkWindowAttr,colormap,4,2,44102)
-CheckOffset(struct _GdkWindowAttr,colormap,32,2,44102)
-CheckMemberSize(struct _GdkWindowAttr,window_type,4,2,44103)
-CheckOffset(struct _GdkWindowAttr,window_type,36,2,44103)
-CheckMemberSize(struct _GdkWindowAttr,cursor,4,2,44104)
-CheckOffset(struct _GdkWindowAttr,cursor,40,2,44104)
-CheckMemberSize(struct _GdkWindowAttr,wmclass_name,4,2,44105)
-CheckOffset(struct _GdkWindowAttr,wmclass_name,44,2,44105)
-CheckMemberSize(struct _GdkWindowAttr,wmclass_class,4,2,44106)
-CheckOffset(struct _GdkWindowAttr,wmclass_class,48,2,44106)
-CheckMemberSize(struct _GdkWindowAttr,override_redirect,4,2,44107)
-CheckOffset(struct _GdkWindowAttr,override_redirect,52,2,44107)
+CheckTypeSize(struct _GdkWindowAttr,56, 12926, 2);
+CheckMemberSize(struct _GdkWindowAttr,event_mask,4,2,44093);
+CheckOffset(struct _GdkWindowAttr,event_mask,4,2,44093);
+CheckMemberSize(struct _GdkWindowAttr,x,4,2,44094);
+CheckOffset(struct _GdkWindowAttr,x,8,2,44094);
+CheckMemberSize(struct _GdkWindowAttr,y,4,2,44095);
+CheckOffset(struct _GdkWindowAttr,y,12,2,44095);
+CheckMemberSize(struct _GdkWindowAttr,width,4,2,44096);
+CheckOffset(struct _GdkWindowAttr,width,16,2,44096);
+CheckMemberSize(struct _GdkWindowAttr,height,4,2,44097);
+CheckOffset(struct _GdkWindowAttr,height,20,2,44097);
+CheckMemberSize(struct _GdkWindowAttr,wclass,4,2,44100);
+CheckOffset(struct _GdkWindowAttr,wclass,24,2,44100);
+CheckMemberSize(struct _GdkWindowAttr,visual,4,2,44101);
+CheckOffset(struct _GdkWindowAttr,visual,28,2,44101);
+CheckMemberSize(struct _GdkWindowAttr,colormap,4,2,44102);
+CheckOffset(struct _GdkWindowAttr,colormap,32,2,44102);
+CheckMemberSize(struct _GdkWindowAttr,window_type,4,2,44103);
+CheckOffset(struct _GdkWindowAttr,window_type,36,2,44103);
+CheckMemberSize(struct _GdkWindowAttr,cursor,4,2,44104);
+CheckOffset(struct _GdkWindowAttr,cursor,40,2,44104);
+CheckMemberSize(struct _GdkWindowAttr,wmclass_name,4,2,44105);
+CheckOffset(struct _GdkWindowAttr,wmclass_name,44,2,44105);
+CheckMemberSize(struct _GdkWindowAttr,wmclass_class,4,2,44106);
+CheckOffset(struct _GdkWindowAttr,wmclass_class,48,2,44106);
+CheckMemberSize(struct _GdkWindowAttr,override_redirect,4,2,44107);
+CheckOffset(struct _GdkWindowAttr,override_redirect,52,2,44107);
 #elif __x86_64__
-CheckTypeSize(struct _GdkWindowAttr,88, 12926, 11)
-CheckMemberSize(struct _GdkWindowAttr,event_mask,4,11,44093)
-CheckOffset(struct _GdkWindowAttr,event_mask,8,11,44093)
-CheckMemberSize(struct _GdkWindowAttr,x,4,11,44094)
-CheckOffset(struct _GdkWindowAttr,x,12,11,44094)
-CheckMemberSize(struct _GdkWindowAttr,y,4,11,44095)
-CheckOffset(struct _GdkWindowAttr,y,16,11,44095)
-CheckMemberSize(struct _GdkWindowAttr,width,4,11,44096)
-CheckOffset(struct _GdkWindowAttr,width,20,11,44096)
-CheckMemberSize(struct _GdkWindowAttr,height,4,11,44097)
-CheckOffset(struct _GdkWindowAttr,height,24,11,44097)
-CheckMemberSize(struct _GdkWindowAttr,wclass,4,11,44100)
-CheckOffset(struct _GdkWindowAttr,wclass,28,11,44100)
-CheckMemberSize(struct _GdkWindowAttr,visual,8,11,44101)
-CheckOffset(struct _GdkWindowAttr,visual,32,11,44101)
-CheckMemberSize(struct _GdkWindowAttr,colormap,8,11,44102)
-CheckOffset(struct _GdkWindowAttr,colormap,40,11,44102)
-CheckMemberSize(struct _GdkWindowAttr,window_type,4,11,44103)
-CheckOffset(struct _GdkWindowAttr,window_type,48,11,44103)
-CheckMemberSize(struct _GdkWindowAttr,cursor,8,11,44104)
-CheckOffset(struct _GdkWindowAttr,cursor,56,11,44104)
-CheckMemberSize(struct _GdkWindowAttr,wmclass_name,8,11,44105)
-CheckOffset(struct _GdkWindowAttr,wmclass_name,64,11,44105)
-CheckMemberSize(struct _GdkWindowAttr,wmclass_class,8,11,44106)
-CheckOffset(struct _GdkWindowAttr,wmclass_class,72,11,44106)
-CheckMemberSize(struct _GdkWindowAttr,override_redirect,4,11,44107)
-CheckOffset(struct _GdkWindowAttr,override_redirect,80,11,44107)
+CheckTypeSize(struct _GdkWindowAttr,88, 12926, 11);
+CheckMemberSize(struct _GdkWindowAttr,event_mask,4,11,44093);
+CheckOffset(struct _GdkWindowAttr,event_mask,8,11,44093);
+CheckMemberSize(struct _GdkWindowAttr,x,4,11,44094);
+CheckOffset(struct _GdkWindowAttr,x,12,11,44094);
+CheckMemberSize(struct _GdkWindowAttr,y,4,11,44095);
+CheckOffset(struct _GdkWindowAttr,y,16,11,44095);
+CheckMemberSize(struct _GdkWindowAttr,width,4,11,44096);
+CheckOffset(struct _GdkWindowAttr,width,20,11,44096);
+CheckMemberSize(struct _GdkWindowAttr,height,4,11,44097);
+CheckOffset(struct _GdkWindowAttr,height,24,11,44097);
+CheckMemberSize(struct _GdkWindowAttr,wclass,4,11,44100);
+CheckOffset(struct _GdkWindowAttr,wclass,28,11,44100);
+CheckMemberSize(struct _GdkWindowAttr,visual,8,11,44101);
+CheckOffset(struct _GdkWindowAttr,visual,32,11,44101);
+CheckMemberSize(struct _GdkWindowAttr,colormap,8,11,44102);
+CheckOffset(struct _GdkWindowAttr,colormap,40,11,44102);
+CheckMemberSize(struct _GdkWindowAttr,window_type,4,11,44103);
+CheckOffset(struct _GdkWindowAttr,window_type,48,11,44103);
+CheckMemberSize(struct _GdkWindowAttr,cursor,8,11,44104);
+CheckOffset(struct _GdkWindowAttr,cursor,56,11,44104);
+CheckMemberSize(struct _GdkWindowAttr,wmclass_name,8,11,44105);
+CheckOffset(struct _GdkWindowAttr,wmclass_name,64,11,44105);
+CheckMemberSize(struct _GdkWindowAttr,wmclass_class,8,11,44106);
+CheckOffset(struct _GdkWindowAttr,wmclass_class,72,11,44106);
+CheckMemberSize(struct _GdkWindowAttr,override_redirect,4,11,44107);
+CheckOffset(struct _GdkWindowAttr,override_redirect,80,11,44107);
 #elif __ia64__
-CheckTypeSize(struct _GdkWindowAttr,88, 12926, 3)
-CheckMemberSize(struct _GdkWindowAttr,event_mask,4,3,44093)
-CheckOffset(struct _GdkWindowAttr,event_mask,8,3,44093)
-CheckMemberSize(struct _GdkWindowAttr,x,4,3,44094)
-CheckOffset(struct _GdkWindowAttr,x,12,3,44094)
-CheckMemberSize(struct _GdkWindowAttr,y,4,3,44095)
-CheckOffset(struct _GdkWindowAttr,y,16,3,44095)
-CheckMemberSize(struct _GdkWindowAttr,width,4,3,44096)
-CheckOffset(struct _GdkWindowAttr,width,20,3,44096)
-CheckMemberSize(struct _GdkWindowAttr,height,4,3,44097)
-CheckOffset(struct _GdkWindowAttr,height,24,3,44097)
-CheckMemberSize(struct _GdkWindowAttr,wclass,4,3,44100)
-CheckOffset(struct _GdkWindowAttr,wclass,28,3,44100)
-CheckMemberSize(struct _GdkWindowAttr,visual,8,3,44101)
-CheckOffset(struct _GdkWindowAttr,visual,32,3,44101)
-CheckMemberSize(struct _GdkWindowAttr,colormap,8,3,44102)
-CheckOffset(struct _GdkWindowAttr,colormap,40,3,44102)
-CheckMemberSize(struct _GdkWindowAttr,window_type,4,3,44103)
-CheckOffset(struct _GdkWindowAttr,window_type,48,3,44103)
-CheckMemberSize(struct _GdkWindowAttr,cursor,8,3,44104)
-CheckOffset(struct _GdkWindowAttr,cursor,56,3,44104)
-CheckMemberSize(struct _GdkWindowAttr,wmclass_name,8,3,44105)
-CheckOffset(struct _GdkWindowAttr,wmclass_name,64,3,44105)
-CheckMemberSize(struct _GdkWindowAttr,wmclass_class,8,3,44106)
-CheckOffset(struct _GdkWindowAttr,wmclass_class,72,3,44106)
-CheckMemberSize(struct _GdkWindowAttr,override_redirect,4,3,44107)
-CheckOffset(struct _GdkWindowAttr,override_redirect,80,3,44107)
+CheckTypeSize(struct _GdkWindowAttr,88, 12926, 3);
+CheckMemberSize(struct _GdkWindowAttr,event_mask,4,3,44093);
+CheckOffset(struct _GdkWindowAttr,event_mask,8,3,44093);
+CheckMemberSize(struct _GdkWindowAttr,x,4,3,44094);
+CheckOffset(struct _GdkWindowAttr,x,12,3,44094);
+CheckMemberSize(struct _GdkWindowAttr,y,4,3,44095);
+CheckOffset(struct _GdkWindowAttr,y,16,3,44095);
+CheckMemberSize(struct _GdkWindowAttr,width,4,3,44096);
+CheckOffset(struct _GdkWindowAttr,width,20,3,44096);
+CheckMemberSize(struct _GdkWindowAttr,height,4,3,44097);
+CheckOffset(struct _GdkWindowAttr,height,24,3,44097);
+CheckMemberSize(struct _GdkWindowAttr,wclass,4,3,44100);
+CheckOffset(struct _GdkWindowAttr,wclass,28,3,44100);
+CheckMemberSize(struct _GdkWindowAttr,visual,8,3,44101);
+CheckOffset(struct _GdkWindowAttr,visual,32,3,44101);
+CheckMemberSize(struct _GdkWindowAttr,colormap,8,3,44102);
+CheckOffset(struct _GdkWindowAttr,colormap,40,3,44102);
+CheckMemberSize(struct _GdkWindowAttr,window_type,4,3,44103);
+CheckOffset(struct _GdkWindowAttr,window_type,48,3,44103);
+CheckMemberSize(struct _GdkWindowAttr,cursor,8,3,44104);
+CheckOffset(struct _GdkWindowAttr,cursor,56,3,44104);
+CheckMemberSize(struct _GdkWindowAttr,wmclass_name,8,3,44105);
+CheckOffset(struct _GdkWindowAttr,wmclass_name,64,3,44105);
+CheckMemberSize(struct _GdkWindowAttr,wmclass_class,8,3,44106);
+CheckOffset(struct _GdkWindowAttr,wmclass_class,72,3,44106);
+CheckMemberSize(struct _GdkWindowAttr,override_redirect,4,3,44107);
+CheckOffset(struct _GdkWindowAttr,override_redirect,80,3,44107);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkWindowAttr,56, 12926, 6)
-CheckMemberSize(struct _GdkWindowAttr,event_mask,4,6,44093)
-CheckOffset(struct _GdkWindowAttr,event_mask,4,6,44093)
-CheckMemberSize(struct _GdkWindowAttr,x,4,6,44094)
-CheckOffset(struct _GdkWindowAttr,x,8,6,44094)
-CheckMemberSize(struct _GdkWindowAttr,y,4,6,44095)
-CheckOffset(struct _GdkWindowAttr,y,12,6,44095)
-CheckMemberSize(struct _GdkWindowAttr,width,4,6,44096)
-CheckOffset(struct _GdkWindowAttr,width,16,6,44096)
-CheckMemberSize(struct _GdkWindowAttr,height,4,6,44097)
-CheckOffset(struct _GdkWindowAttr,height,20,6,44097)
-CheckMemberSize(struct _GdkWindowAttr,wclass,4,6,44100)
-CheckOffset(struct _GdkWindowAttr,wclass,24,6,44100)
-CheckMemberSize(struct _GdkWindowAttr,visual,4,6,44101)
-CheckOffset(struct _GdkWindowAttr,visual,28,6,44101)
-CheckMemberSize(struct _GdkWindowAttr,colormap,4,6,44102)
-CheckOffset(struct _GdkWindowAttr,colormap,32,6,44102)
-CheckMemberSize(struct _GdkWindowAttr,window_type,4,6,44103)
-CheckOffset(struct _GdkWindowAttr,window_type,36,6,44103)
-CheckMemberSize(struct _GdkWindowAttr,cursor,4,6,44104)
-CheckOffset(struct _GdkWindowAttr,cursor,40,6,44104)
-CheckMemberSize(struct _GdkWindowAttr,wmclass_name,4,6,44105)
-CheckOffset(struct _GdkWindowAttr,wmclass_name,44,6,44105)
-CheckMemberSize(struct _GdkWindowAttr,wmclass_class,4,6,44106)
-CheckOffset(struct _GdkWindowAttr,wmclass_class,48,6,44106)
-CheckMemberSize(struct _GdkWindowAttr,override_redirect,4,6,44107)
-CheckOffset(struct _GdkWindowAttr,override_redirect,52,6,44107)
+CheckTypeSize(struct _GdkWindowAttr,56, 12926, 6);
+CheckMemberSize(struct _GdkWindowAttr,event_mask,4,6,44093);
+CheckOffset(struct _GdkWindowAttr,event_mask,4,6,44093);
+CheckMemberSize(struct _GdkWindowAttr,x,4,6,44094);
+CheckOffset(struct _GdkWindowAttr,x,8,6,44094);
+CheckMemberSize(struct _GdkWindowAttr,y,4,6,44095);
+CheckOffset(struct _GdkWindowAttr,y,12,6,44095);
+CheckMemberSize(struct _GdkWindowAttr,width,4,6,44096);
+CheckOffset(struct _GdkWindowAttr,width,16,6,44096);
+CheckMemberSize(struct _GdkWindowAttr,height,4,6,44097);
+CheckOffset(struct _GdkWindowAttr,height,20,6,44097);
+CheckMemberSize(struct _GdkWindowAttr,wclass,4,6,44100);
+CheckOffset(struct _GdkWindowAttr,wclass,24,6,44100);
+CheckMemberSize(struct _GdkWindowAttr,visual,4,6,44101);
+CheckOffset(struct _GdkWindowAttr,visual,28,6,44101);
+CheckMemberSize(struct _GdkWindowAttr,colormap,4,6,44102);
+CheckOffset(struct _GdkWindowAttr,colormap,32,6,44102);
+CheckMemberSize(struct _GdkWindowAttr,window_type,4,6,44103);
+CheckOffset(struct _GdkWindowAttr,window_type,36,6,44103);
+CheckMemberSize(struct _GdkWindowAttr,cursor,4,6,44104);
+CheckOffset(struct _GdkWindowAttr,cursor,40,6,44104);
+CheckMemberSize(struct _GdkWindowAttr,wmclass_name,4,6,44105);
+CheckOffset(struct _GdkWindowAttr,wmclass_name,44,6,44105);
+CheckMemberSize(struct _GdkWindowAttr,wmclass_class,4,6,44106);
+CheckOffset(struct _GdkWindowAttr,wmclass_class,48,6,44106);
+CheckMemberSize(struct _GdkWindowAttr,override_redirect,4,6,44107);
+CheckOffset(struct _GdkWindowAttr,override_redirect,52,6,44107);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkWindowAttr,88, 12926, 9)
-CheckMemberSize(struct _GdkWindowAttr,event_mask,4,9,44093)
-CheckOffset(struct _GdkWindowAttr,event_mask,8,9,44093)
-CheckMemberSize(struct _GdkWindowAttr,x,4,9,44094)
-CheckOffset(struct _GdkWindowAttr,x,12,9,44094)
-CheckMemberSize(struct _GdkWindowAttr,y,4,9,44095)
-CheckOffset(struct _GdkWindowAttr,y,16,9,44095)
-CheckMemberSize(struct _GdkWindowAttr,width,4,9,44096)
-CheckOffset(struct _GdkWindowAttr,width,20,9,44096)
-CheckMemberSize(struct _GdkWindowAttr,height,4,9,44097)
-CheckOffset(struct _GdkWindowAttr,height,24,9,44097)
-CheckMemberSize(struct _GdkWindowAttr,wclass,4,9,44100)
-CheckOffset(struct _GdkWindowAttr,wclass,28,9,44100)
-CheckMemberSize(struct _GdkWindowAttr,visual,8,9,44101)
-CheckOffset(struct _GdkWindowAttr,visual,32,9,44101)
-CheckMemberSize(struct _GdkWindowAttr,colormap,8,9,44102)
-CheckOffset(struct _GdkWindowAttr,colormap,40,9,44102)
-CheckMemberSize(struct _GdkWindowAttr,window_type,4,9,44103)
-CheckOffset(struct _GdkWindowAttr,window_type,48,9,44103)
-CheckMemberSize(struct _GdkWindowAttr,cursor,8,9,44104)
-CheckOffset(struct _GdkWindowAttr,cursor,56,9,44104)
-CheckMemberSize(struct _GdkWindowAttr,wmclass_name,8,9,44105)
-CheckOffset(struct _GdkWindowAttr,wmclass_name,64,9,44105)
-CheckMemberSize(struct _GdkWindowAttr,wmclass_class,8,9,44106)
-CheckOffset(struct _GdkWindowAttr,wmclass_class,72,9,44106)
-CheckMemberSize(struct _GdkWindowAttr,override_redirect,4,9,44107)
-CheckOffset(struct _GdkWindowAttr,override_redirect,80,9,44107)
+CheckTypeSize(struct _GdkWindowAttr,88, 12926, 9);
+CheckMemberSize(struct _GdkWindowAttr,event_mask,4,9,44093);
+CheckOffset(struct _GdkWindowAttr,event_mask,8,9,44093);
+CheckMemberSize(struct _GdkWindowAttr,x,4,9,44094);
+CheckOffset(struct _GdkWindowAttr,x,12,9,44094);
+CheckMemberSize(struct _GdkWindowAttr,y,4,9,44095);
+CheckOffset(struct _GdkWindowAttr,y,16,9,44095);
+CheckMemberSize(struct _GdkWindowAttr,width,4,9,44096);
+CheckOffset(struct _GdkWindowAttr,width,20,9,44096);
+CheckMemberSize(struct _GdkWindowAttr,height,4,9,44097);
+CheckOffset(struct _GdkWindowAttr,height,24,9,44097);
+CheckMemberSize(struct _GdkWindowAttr,wclass,4,9,44100);
+CheckOffset(struct _GdkWindowAttr,wclass,28,9,44100);
+CheckMemberSize(struct _GdkWindowAttr,visual,8,9,44101);
+CheckOffset(struct _GdkWindowAttr,visual,32,9,44101);
+CheckMemberSize(struct _GdkWindowAttr,colormap,8,9,44102);
+CheckOffset(struct _GdkWindowAttr,colormap,40,9,44102);
+CheckMemberSize(struct _GdkWindowAttr,window_type,4,9,44103);
+CheckOffset(struct _GdkWindowAttr,window_type,48,9,44103);
+CheckMemberSize(struct _GdkWindowAttr,cursor,8,9,44104);
+CheckOffset(struct _GdkWindowAttr,cursor,56,9,44104);
+CheckMemberSize(struct _GdkWindowAttr,wmclass_name,8,9,44105);
+CheckOffset(struct _GdkWindowAttr,wmclass_name,64,9,44105);
+CheckMemberSize(struct _GdkWindowAttr,wmclass_class,8,9,44106);
+CheckOffset(struct _GdkWindowAttr,wmclass_class,72,9,44106);
+CheckMemberSize(struct _GdkWindowAttr,override_redirect,4,9,44107);
+CheckOffset(struct _GdkWindowAttr,override_redirect,80,9,44107);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkWindowAttr,56, 12926, 10)
-CheckMemberSize(struct _GdkWindowAttr,event_mask,4,10,44093)
-CheckOffset(struct _GdkWindowAttr,event_mask,4,10,44093)
-CheckMemberSize(struct _GdkWindowAttr,x,4,10,44094)
-CheckOffset(struct _GdkWindowAttr,x,8,10,44094)
-CheckMemberSize(struct _GdkWindowAttr,y,4,10,44095)
-CheckOffset(struct _GdkWindowAttr,y,12,10,44095)
-CheckMemberSize(struct _GdkWindowAttr,width,4,10,44096)
-CheckOffset(struct _GdkWindowAttr,width,16,10,44096)
-CheckMemberSize(struct _GdkWindowAttr,height,4,10,44097)
-CheckOffset(struct _GdkWindowAttr,height,20,10,44097)
-CheckMemberSize(struct _GdkWindowAttr,wclass,4,10,44100)
-CheckOffset(struct _GdkWindowAttr,wclass,24,10,44100)
-CheckMemberSize(struct _GdkWindowAttr,visual,4,10,44101)
-CheckOffset(struct _GdkWindowAttr,visual,28,10,44101)
-CheckMemberSize(struct _GdkWindowAttr,colormap,4,10,44102)
-CheckOffset(struct _GdkWindowAttr,colormap,32,10,44102)
-CheckMemberSize(struct _GdkWindowAttr,window_type,4,10,44103)
-CheckOffset(struct _GdkWindowAttr,window_type,36,10,44103)
-CheckMemberSize(struct _GdkWindowAttr,cursor,4,10,44104)
-CheckOffset(struct _GdkWindowAttr,cursor,40,10,44104)
-CheckMemberSize(struct _GdkWindowAttr,wmclass_name,4,10,44105)
-CheckOffset(struct _GdkWindowAttr,wmclass_name,44,10,44105)
-CheckMemberSize(struct _GdkWindowAttr,wmclass_class,4,10,44106)
-CheckOffset(struct _GdkWindowAttr,wmclass_class,48,10,44106)
-CheckMemberSize(struct _GdkWindowAttr,override_redirect,4,10,44107)
-CheckOffset(struct _GdkWindowAttr,override_redirect,52,10,44107)
+CheckTypeSize(struct _GdkWindowAttr,56, 12926, 10);
+CheckMemberSize(struct _GdkWindowAttr,event_mask,4,10,44093);
+CheckOffset(struct _GdkWindowAttr,event_mask,4,10,44093);
+CheckMemberSize(struct _GdkWindowAttr,x,4,10,44094);
+CheckOffset(struct _GdkWindowAttr,x,8,10,44094);
+CheckMemberSize(struct _GdkWindowAttr,y,4,10,44095);
+CheckOffset(struct _GdkWindowAttr,y,12,10,44095);
+CheckMemberSize(struct _GdkWindowAttr,width,4,10,44096);
+CheckOffset(struct _GdkWindowAttr,width,16,10,44096);
+CheckMemberSize(struct _GdkWindowAttr,height,4,10,44097);
+CheckOffset(struct _GdkWindowAttr,height,20,10,44097);
+CheckMemberSize(struct _GdkWindowAttr,wclass,4,10,44100);
+CheckOffset(struct _GdkWindowAttr,wclass,24,10,44100);
+CheckMemberSize(struct _GdkWindowAttr,visual,4,10,44101);
+CheckOffset(struct _GdkWindowAttr,visual,28,10,44101);
+CheckMemberSize(struct _GdkWindowAttr,colormap,4,10,44102);
+CheckOffset(struct _GdkWindowAttr,colormap,32,10,44102);
+CheckMemberSize(struct _GdkWindowAttr,window_type,4,10,44103);
+CheckOffset(struct _GdkWindowAttr,window_type,36,10,44103);
+CheckMemberSize(struct _GdkWindowAttr,cursor,4,10,44104);
+CheckOffset(struct _GdkWindowAttr,cursor,40,10,44104);
+CheckMemberSize(struct _GdkWindowAttr,wmclass_name,4,10,44105);
+CheckOffset(struct _GdkWindowAttr,wmclass_name,44,10,44105);
+CheckMemberSize(struct _GdkWindowAttr,wmclass_class,4,10,44106);
+CheckOffset(struct _GdkWindowAttr,wmclass_class,48,10,44106);
+CheckMemberSize(struct _GdkWindowAttr,override_redirect,4,10,44107);
+CheckOffset(struct _GdkWindowAttr,override_redirect,52,10,44107);
 #elif __s390x__
-CheckTypeSize(struct _GdkWindowAttr,88, 12926, 12)
-CheckMemberSize(struct _GdkWindowAttr,event_mask,4,12,44093)
-CheckOffset(struct _GdkWindowAttr,event_mask,8,12,44093)
-CheckMemberSize(struct _GdkWindowAttr,x,4,12,44094)
-CheckOffset(struct _GdkWindowAttr,x,12,12,44094)
-CheckMemberSize(struct _GdkWindowAttr,y,4,12,44095)
-CheckOffset(struct _GdkWindowAttr,y,16,12,44095)
-CheckMemberSize(struct _GdkWindowAttr,width,4,12,44096)
-CheckOffset(struct _GdkWindowAttr,width,20,12,44096)
-CheckMemberSize(struct _GdkWindowAttr,height,4,12,44097)
-CheckOffset(struct _GdkWindowAttr,height,24,12,44097)
-CheckMemberSize(struct _GdkWindowAttr,wclass,4,12,44100)
-CheckOffset(struct _GdkWindowAttr,wclass,28,12,44100)
-CheckMemberSize(struct _GdkWindowAttr,visual,8,12,44101)
-CheckOffset(struct _GdkWindowAttr,visual,32,12,44101)
-CheckMemberSize(struct _GdkWindowAttr,colormap,8,12,44102)
-CheckOffset(struct _GdkWindowAttr,colormap,40,12,44102)
-CheckMemberSize(struct _GdkWindowAttr,window_type,4,12,44103)
-CheckOffset(struct _GdkWindowAttr,window_type,48,12,44103)
-CheckMemberSize(struct _GdkWindowAttr,cursor,8,12,44104)
-CheckOffset(struct _GdkWindowAttr,cursor,56,12,44104)
-CheckMemberSize(struct _GdkWindowAttr,wmclass_name,8,12,44105)
-CheckOffset(struct _GdkWindowAttr,wmclass_name,64,12,44105)
-CheckMemberSize(struct _GdkWindowAttr,wmclass_class,8,12,44106)
-CheckOffset(struct _GdkWindowAttr,wmclass_class,72,12,44106)
-CheckMemberSize(struct _GdkWindowAttr,override_redirect,4,12,44107)
-CheckOffset(struct _GdkWindowAttr,override_redirect,80,12,44107)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12926,0);
-Msg("Find size of _GdkWindowAttr (12926)\n");
+CheckTypeSize(struct _GdkWindowAttr,88, 12926, 12);
+CheckMemberSize(struct _GdkWindowAttr,event_mask,4,12,44093);
+CheckOffset(struct _GdkWindowAttr,event_mask,8,12,44093);
+CheckMemberSize(struct _GdkWindowAttr,x,4,12,44094);
+CheckOffset(struct _GdkWindowAttr,x,12,12,44094);
+CheckMemberSize(struct _GdkWindowAttr,y,4,12,44095);
+CheckOffset(struct _GdkWindowAttr,y,16,12,44095);
+CheckMemberSize(struct _GdkWindowAttr,width,4,12,44096);
+CheckOffset(struct _GdkWindowAttr,width,20,12,44096);
+CheckMemberSize(struct _GdkWindowAttr,height,4,12,44097);
+CheckOffset(struct _GdkWindowAttr,height,24,12,44097);
+CheckMemberSize(struct _GdkWindowAttr,wclass,4,12,44100);
+CheckOffset(struct _GdkWindowAttr,wclass,28,12,44100);
+CheckMemberSize(struct _GdkWindowAttr,visual,8,12,44101);
+CheckOffset(struct _GdkWindowAttr,visual,32,12,44101);
+CheckMemberSize(struct _GdkWindowAttr,colormap,8,12,44102);
+CheckOffset(struct _GdkWindowAttr,colormap,40,12,44102);
+CheckMemberSize(struct _GdkWindowAttr,window_type,4,12,44103);
+CheckOffset(struct _GdkWindowAttr,window_type,48,12,44103);
+CheckMemberSize(struct _GdkWindowAttr,cursor,8,12,44104);
+CheckOffset(struct _GdkWindowAttr,cursor,56,12,44104);
+CheckMemberSize(struct _GdkWindowAttr,wmclass_name,8,12,44105);
+CheckOffset(struct _GdkWindowAttr,wmclass_name,64,12,44105);
+CheckMemberSize(struct _GdkWindowAttr,wmclass_class,8,12,44106);
+CheckOffset(struct _GdkWindowAttr,wmclass_class,72,12,44106);
+CheckMemberSize(struct _GdkWindowAttr,override_redirect,4,12,44107);
+CheckOffset(struct _GdkWindowAttr,override_redirect,80,12,44107);
+#elif 1
+CheckTypeSize(struct _GdkWindowAttr,0, 12926, 1);
+Msg("Missing member data for _GdkWindowAttr on All\n");
+CheckOffset(struct _GdkWindowAttr,title,0,1,44092);
+CheckOffset(struct _GdkWindowAttr,event_mask,0,1,44093);
+CheckOffset(struct _GdkWindowAttr,x,0,1,44094);
+CheckOffset(struct _GdkWindowAttr,y,0,1,44095);
+CheckOffset(struct _GdkWindowAttr,width,0,1,44096);
+CheckOffset(struct _GdkWindowAttr,height,0,1,44097);
+CheckOffset(struct _GdkWindowAttr,wclass,0,1,44100);
+CheckOffset(struct _GdkWindowAttr,visual,0,1,44101);
+CheckOffset(struct _GdkWindowAttr,colormap,0,1,44102);
+CheckOffset(struct _GdkWindowAttr,window_type,0,1,44103);
+CheckOffset(struct _GdkWindowAttr,cursor,0,1,44104);
+CheckOffset(struct _GdkWindowAttr,wmclass_name,0,1,44105);
+CheckOffset(struct _GdkWindowAttr,wmclass_class,0,1,44106);
+CheckOffset(struct _GdkWindowAttr,override_redirect,0,1,44107);
 #endif
 
 #if __i386__
@@ -10995,78 +11381,63 @@ CheckEnum("GDK_INPUT_ONLY",GDK_INPUT_ONLY,1,44099);
 #elif __s390x__
 CheckEnum("GDK_INPUT_OUTPUT",GDK_INPUT_OUTPUT,0,44098);
 CheckEnum("GDK_INPUT_ONLY",GDK_INPUT_ONLY,1,44099);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12927,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-947 (12927)\n");
+#elif 1
+CheckEnum("GDK_INPUT_OUTPUT",GDK_INPUT_OUTPUT,0,44098);
+CheckEnum("GDK_INPUT_ONLY",GDK_INPUT_ONLY,1,44099);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkWindowClass,4, 12928, 2)
+CheckTypeSize(GdkWindowClass,4, 12928, 2);
 #elif __x86_64__
-CheckTypeSize(GdkWindowClass,4, 12928, 11)
+CheckTypeSize(GdkWindowClass,4, 12928, 11);
 #elif __ia64__
-CheckTypeSize(GdkWindowClass,4, 12928, 3)
+CheckTypeSize(GdkWindowClass,4, 12928, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkWindowClass,4, 12928, 6)
+CheckTypeSize(GdkWindowClass,4, 12928, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkWindowClass,4, 12928, 9)
+CheckTypeSize(GdkWindowClass,4, 12928, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkWindowClass,4, 12928, 10)
+CheckTypeSize(GdkWindowClass,4, 12928, 10);
 #elif __s390x__
-CheckTypeSize(GdkWindowClass,4, 12928, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12928,0);
-Msg("Find size of GdkWindowClass (12928)\n");
+CheckTypeSize(GdkWindowClass,4, 12928, 12);
+#elif 1
+CheckTypeSize(GdkWindowClass,0, 12928, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkWindowAttr,56, 12929, 2)
+CheckTypeSize(GdkWindowAttr,56, 12929, 2);
 #elif __x86_64__
-CheckTypeSize(GdkWindowAttr,88, 12929, 11)
+CheckTypeSize(GdkWindowAttr,88, 12929, 11);
 #elif __ia64__
-CheckTypeSize(GdkWindowAttr,88, 12929, 3)
+CheckTypeSize(GdkWindowAttr,88, 12929, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkWindowAttr,56, 12929, 6)
+CheckTypeSize(GdkWindowAttr,56, 12929, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkWindowAttr,88, 12929, 9)
+CheckTypeSize(GdkWindowAttr,88, 12929, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkWindowAttr,56, 12929, 10)
+CheckTypeSize(GdkWindowAttr,56, 12929, 10);
 #elif __s390x__
-CheckTypeSize(GdkWindowAttr,88, 12929, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12929,0);
-Msg("Find size of GdkWindowAttr (12929)\n");
+CheckTypeSize(GdkWindowAttr,88, 12929, 12);
+#elif 1
+CheckTypeSize(GdkWindowAttr,0, 12929, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkWindowAttr *,4, 12930, 2)
+CheckTypeSize(GdkWindowAttr *,4, 12930, 2);
 #elif __x86_64__
-CheckTypeSize(GdkWindowAttr *,8, 12930, 11)
+CheckTypeSize(GdkWindowAttr *,8, 12930, 11);
 #elif __ia64__
-CheckTypeSize(GdkWindowAttr *,8, 12930, 3)
+CheckTypeSize(GdkWindowAttr *,8, 12930, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkWindowAttr *,4, 12930, 6)
+CheckTypeSize(GdkWindowAttr *,4, 12930, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkWindowAttr *,8, 12930, 9)
+CheckTypeSize(GdkWindowAttr *,8, 12930, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkWindowAttr *,4, 12930, 10)
+CheckTypeSize(GdkWindowAttr *,4, 12930, 10);
 #elif __s390x__
-CheckTypeSize(GdkWindowAttr *,8, 12930, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12930,0);
-Msg("Find size of GdkWindowAttr * (12930)\n");
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12931,0);
-Msg("Find size of GdkTimeCoord * * * (12931)\n");
+CheckTypeSize(GdkWindowAttr *,8, 12930, 12);
+#elif 1
+CheckTypeSize(GdkWindowAttr *,0, 12930, 1);
 #endif
 
 #if __i386__
@@ -11076,47 +11447,7 @@ Msg("Find size of GdkTimeCoord * * * (12931)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12932,0);
-Msg("Find size of GdkDrawable * * (12932)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(struct _GdkDrawable *,4, 12933, 2)
-#elif __x86_64__
-CheckTypeSize(struct _GdkDrawable *,8, 12933, 11)
-#elif __ia64__
-CheckTypeSize(struct _GdkDrawable *,8, 12933, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkDrawable *,4, 12933, 6)
-#elif __powerpc64__
-CheckTypeSize(struct _GdkDrawable *,8, 12933, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkDrawable *,4, 12933, 10)
-#elif __s390x__
-CheckTypeSize(struct _GdkDrawable *,8, 12933, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12933,0);
-Msg("Find size of _GdkDrawable * (12933)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GdkVisualType *,4, 12934, 2)
-#elif __x86_64__
-CheckTypeSize(GdkVisualType *,8, 12934, 11)
-#elif __ia64__
-CheckTypeSize(GdkVisualType *,8, 12934, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkVisualType *,4, 12934, 6)
-#elif __powerpc64__
-CheckTypeSize(GdkVisualType *,8, 12934, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkVisualType *,4, 12934, 10)
-#elif __s390x__
-CheckTypeSize(GdkVisualType *,8, 12934, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12934,0);
-Msg("Find size of GdkVisualType * (12934)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -11126,174 +11457,43 @@ Msg("Find size of GdkVisualType * (12934)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12935,0);
-Msg("Find size of GdkVisualType * * (12935)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkTrapezoid,48, 12936, 2)
-CheckMemberSize(struct _GdkTrapezoid,x11,8,2,44109)
-CheckOffset(struct _GdkTrapezoid,x11,8,2,44109)
-CheckMemberSize(struct _GdkTrapezoid,x21,8,2,44110)
-CheckOffset(struct _GdkTrapezoid,x21,16,2,44110)
-CheckMemberSize(struct _GdkTrapezoid,y2,8,2,44111)
-CheckOffset(struct _GdkTrapezoid,y2,24,2,44111)
-CheckMemberSize(struct _GdkTrapezoid,x12,8,2,44112)
-CheckOffset(struct _GdkTrapezoid,x12,32,2,44112)
-CheckMemberSize(struct _GdkTrapezoid,x22,8,2,44113)
-CheckOffset(struct _GdkTrapezoid,x22,40,2,44113)
+CheckTypeSize(struct _GdkDrawable *,4, 12933, 2);
 #elif __x86_64__
-CheckTypeSize(struct _GdkTrapezoid,48, 12936, 11)
-CheckMemberSize(struct _GdkTrapezoid,x11,8,11,44109)
-CheckOffset(struct _GdkTrapezoid,x11,8,11,44109)
-CheckMemberSize(struct _GdkTrapezoid,x21,8,11,44110)
-CheckOffset(struct _GdkTrapezoid,x21,16,11,44110)
-CheckMemberSize(struct _GdkTrapezoid,y2,8,11,44111)
-CheckOffset(struct _GdkTrapezoid,y2,24,11,44111)
-CheckMemberSize(struct _GdkTrapezoid,x12,8,11,44112)
-CheckOffset(struct _GdkTrapezoid,x12,32,11,44112)
-CheckMemberSize(struct _GdkTrapezoid,x22,8,11,44113)
-CheckOffset(struct _GdkTrapezoid,x22,40,11,44113)
+CheckTypeSize(struct _GdkDrawable *,8, 12933, 11);
 #elif __ia64__
-CheckTypeSize(struct _GdkTrapezoid,48, 12936, 3)
-CheckMemberSize(struct _GdkTrapezoid,x11,8,3,44109)
-CheckOffset(struct _GdkTrapezoid,x11,8,3,44109)
-CheckMemberSize(struct _GdkTrapezoid,x21,8,3,44110)
-CheckOffset(struct _GdkTrapezoid,x21,16,3,44110)
-CheckMemberSize(struct _GdkTrapezoid,y2,8,3,44111)
-CheckOffset(struct _GdkTrapezoid,y2,24,3,44111)
-CheckMemberSize(struct _GdkTrapezoid,x12,8,3,44112)
-CheckOffset(struct _GdkTrapezoid,x12,32,3,44112)
-CheckMemberSize(struct _GdkTrapezoid,x22,8,3,44113)
-CheckOffset(struct _GdkTrapezoid,x22,40,3,44113)
+CheckTypeSize(struct _GdkDrawable *,8, 12933, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkTrapezoid,48, 12936, 6)
-CheckMemberSize(struct _GdkTrapezoid,x11,8,6,44109)
-CheckOffset(struct _GdkTrapezoid,x11,8,6,44109)
-CheckMemberSize(struct _GdkTrapezoid,x21,8,6,44110)
-CheckOffset(struct _GdkTrapezoid,x21,16,6,44110)
-CheckMemberSize(struct _GdkTrapezoid,y2,8,6,44111)
-CheckOffset(struct _GdkTrapezoid,y2,24,6,44111)
-CheckMemberSize(struct _GdkTrapezoid,x12,8,6,44112)
-CheckOffset(struct _GdkTrapezoid,x12,32,6,44112)
-CheckMemberSize(struct _GdkTrapezoid,x22,8,6,44113)
-CheckOffset(struct _GdkTrapezoid,x22,40,6,44113)
+CheckTypeSize(struct _GdkDrawable *,4, 12933, 6);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkTrapezoid,48, 12936, 9)
-CheckMemberSize(struct _GdkTrapezoid,x11,8,9,44109)
-CheckOffset(struct _GdkTrapezoid,x11,8,9,44109)
-CheckMemberSize(struct _GdkTrapezoid,x21,8,9,44110)
-CheckOffset(struct _GdkTrapezoid,x21,16,9,44110)
-CheckMemberSize(struct _GdkTrapezoid,y2,8,9,44111)
-CheckOffset(struct _GdkTrapezoid,y2,24,9,44111)
-CheckMemberSize(struct _GdkTrapezoid,x12,8,9,44112)
-CheckOffset(struct _GdkTrapezoid,x12,32,9,44112)
-CheckMemberSize(struct _GdkTrapezoid,x22,8,9,44113)
-CheckOffset(struct _GdkTrapezoid,x22,40,9,44113)
+CheckTypeSize(struct _GdkDrawable *,8, 12933, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkTrapezoid,48, 12936, 10)
-CheckMemberSize(struct _GdkTrapezoid,x11,8,10,44109)
-CheckOffset(struct _GdkTrapezoid,x11,8,10,44109)
-CheckMemberSize(struct _GdkTrapezoid,x21,8,10,44110)
-CheckOffset(struct _GdkTrapezoid,x21,16,10,44110)
-CheckMemberSize(struct _GdkTrapezoid,y2,8,10,44111)
-CheckOffset(struct _GdkTrapezoid,y2,24,10,44111)
-CheckMemberSize(struct _GdkTrapezoid,x12,8,10,44112)
-CheckOffset(struct _GdkTrapezoid,x12,32,10,44112)
-CheckMemberSize(struct _GdkTrapezoid,x22,8,10,44113)
-CheckOffset(struct _GdkTrapezoid,x22,40,10,44113)
+CheckTypeSize(struct _GdkDrawable *,4, 12933, 10);
 #elif __s390x__
-CheckTypeSize(struct _GdkTrapezoid,48, 12936, 12)
-CheckMemberSize(struct _GdkTrapezoid,x11,8,12,44109)
-CheckOffset(struct _GdkTrapezoid,x11,8,12,44109)
-CheckMemberSize(struct _GdkTrapezoid,x21,8,12,44110)
-CheckOffset(struct _GdkTrapezoid,x21,16,12,44110)
-CheckMemberSize(struct _GdkTrapezoid,y2,8,12,44111)
-CheckOffset(struct _GdkTrapezoid,y2,24,12,44111)
-CheckMemberSize(struct _GdkTrapezoid,x12,8,12,44112)
-CheckOffset(struct _GdkTrapezoid,x12,32,12,44112)
-CheckMemberSize(struct _GdkTrapezoid,x22,8,12,44113)
-CheckOffset(struct _GdkTrapezoid,x22,40,12,44113)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12936,0);
-Msg("Find size of _GdkTrapezoid (12936)\n");
+CheckTypeSize(struct _GdkDrawable *,8, 12933, 12);
+#elif 1
+CheckTypeSize(struct _GdkDrawable *,0, 12933, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkTrapezoid,48, 12937, 2)
+CheckTypeSize(GdkVisualType *,4, 12934, 2);
 #elif __x86_64__
-CheckTypeSize(GdkTrapezoid,48, 12937, 11)
+CheckTypeSize(GdkVisualType *,8, 12934, 11);
 #elif __ia64__
-CheckTypeSize(GdkTrapezoid,48, 12937, 3)
+CheckTypeSize(GdkVisualType *,8, 12934, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkTrapezoid,48, 12937, 6)
+CheckTypeSize(GdkVisualType *,4, 12934, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkTrapezoid,48, 12937, 9)
+CheckTypeSize(GdkVisualType *,8, 12934, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkTrapezoid,48, 12937, 10)
+CheckTypeSize(GdkVisualType *,4, 12934, 10);
 #elif __s390x__
-CheckTypeSize(GdkTrapezoid,48, 12937, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12937,0);
-Msg("Find size of GdkTrapezoid (12937)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GdkTrapezoid *,4, 12938, 2)
-#elif __x86_64__
-CheckTypeSize(GdkTrapezoid *,8, 12938, 11)
-#elif __ia64__
-CheckTypeSize(GdkTrapezoid *,8, 12938, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkTrapezoid *,4, 12938, 6)
-#elif __powerpc64__
-CheckTypeSize(GdkTrapezoid *,8, 12938, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkTrapezoid *,4, 12938, 10)
-#elif __s390x__
-CheckTypeSize(GdkTrapezoid *,8, 12938, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12938,0);
-Msg("Find size of GdkTrapezoid * (12938)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GdkWMDecoration *,4, 12939, 2)
-#elif __x86_64__
-CheckTypeSize(GdkWMDecoration *,8, 12939, 11)
-#elif __ia64__
-CheckTypeSize(GdkWMDecoration *,8, 12939, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkWMDecoration *,4, 12939, 6)
-#elif __powerpc64__
-CheckTypeSize(GdkWMDecoration *,8, 12939, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkWMDecoration *,4, 12939, 10)
-#elif __s390x__
-CheckTypeSize(GdkWMDecoration *,8, 12939, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12939,0);
-Msg("Find size of GdkWMDecoration * (12939)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(const GdkKeymapKey,12, 12940, 2)
-#elif __x86_64__
-CheckTypeSize(const GdkKeymapKey,12, 12940, 11)
-#elif __ia64__
-CheckTypeSize(const GdkKeymapKey,12, 12940, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(const GdkKeymapKey,12, 12940, 6)
-#elif __powerpc64__
-CheckTypeSize(const GdkKeymapKey,12, 12940, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(const GdkKeymapKey,12, 12940, 10)
-#elif __s390x__
-CheckTypeSize(const GdkKeymapKey,12, 12940, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12940,0);
-Msg("Find size of const GdkKeymapKey (12940)\n");
+CheckTypeSize(GdkVisualType *,8, 12934, 12);
+#elif 1
+CheckTypeSize(GdkVisualType *,0, 12934, 1);
 #endif
 
 #if __i386__
@@ -11303,9 +11503,184 @@ Msg("Find size of const GdkKeymapKey (12940)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12941,0);
-Msg("Find size of const GdkKeymapKey * (12941)\n");
+#elif 1
+#endif
+
+#if __i386__
+CheckTypeSize(struct _GdkTrapezoid,48, 12936, 2);
+CheckMemberSize(struct _GdkTrapezoid,x11,8,2,44109);
+CheckOffset(struct _GdkTrapezoid,x11,8,2,44109);
+CheckMemberSize(struct _GdkTrapezoid,x21,8,2,44110);
+CheckOffset(struct _GdkTrapezoid,x21,16,2,44110);
+CheckMemberSize(struct _GdkTrapezoid,y2,8,2,44111);
+CheckOffset(struct _GdkTrapezoid,y2,24,2,44111);
+CheckMemberSize(struct _GdkTrapezoid,x12,8,2,44112);
+CheckOffset(struct _GdkTrapezoid,x12,32,2,44112);
+CheckMemberSize(struct _GdkTrapezoid,x22,8,2,44113);
+CheckOffset(struct _GdkTrapezoid,x22,40,2,44113);
+#elif __x86_64__
+CheckTypeSize(struct _GdkTrapezoid,48, 12936, 11);
+CheckMemberSize(struct _GdkTrapezoid,x11,8,11,44109);
+CheckOffset(struct _GdkTrapezoid,x11,8,11,44109);
+CheckMemberSize(struct _GdkTrapezoid,x21,8,11,44110);
+CheckOffset(struct _GdkTrapezoid,x21,16,11,44110);
+CheckMemberSize(struct _GdkTrapezoid,y2,8,11,44111);
+CheckOffset(struct _GdkTrapezoid,y2,24,11,44111);
+CheckMemberSize(struct _GdkTrapezoid,x12,8,11,44112);
+CheckOffset(struct _GdkTrapezoid,x12,32,11,44112);
+CheckMemberSize(struct _GdkTrapezoid,x22,8,11,44113);
+CheckOffset(struct _GdkTrapezoid,x22,40,11,44113);
+#elif __ia64__
+CheckTypeSize(struct _GdkTrapezoid,48, 12936, 3);
+CheckMemberSize(struct _GdkTrapezoid,x11,8,3,44109);
+CheckOffset(struct _GdkTrapezoid,x11,8,3,44109);
+CheckMemberSize(struct _GdkTrapezoid,x21,8,3,44110);
+CheckOffset(struct _GdkTrapezoid,x21,16,3,44110);
+CheckMemberSize(struct _GdkTrapezoid,y2,8,3,44111);
+CheckOffset(struct _GdkTrapezoid,y2,24,3,44111);
+CheckMemberSize(struct _GdkTrapezoid,x12,8,3,44112);
+CheckOffset(struct _GdkTrapezoid,x12,32,3,44112);
+CheckMemberSize(struct _GdkTrapezoid,x22,8,3,44113);
+CheckOffset(struct _GdkTrapezoid,x22,40,3,44113);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _GdkTrapezoid,48, 12936, 6);
+CheckMemberSize(struct _GdkTrapezoid,x11,8,6,44109);
+CheckOffset(struct _GdkTrapezoid,x11,8,6,44109);
+CheckMemberSize(struct _GdkTrapezoid,x21,8,6,44110);
+CheckOffset(struct _GdkTrapezoid,x21,16,6,44110);
+CheckMemberSize(struct _GdkTrapezoid,y2,8,6,44111);
+CheckOffset(struct _GdkTrapezoid,y2,24,6,44111);
+CheckMemberSize(struct _GdkTrapezoid,x12,8,6,44112);
+CheckOffset(struct _GdkTrapezoid,x12,32,6,44112);
+CheckMemberSize(struct _GdkTrapezoid,x22,8,6,44113);
+CheckOffset(struct _GdkTrapezoid,x22,40,6,44113);
+#elif __powerpc64__
+CheckTypeSize(struct _GdkTrapezoid,48, 12936, 9);
+CheckMemberSize(struct _GdkTrapezoid,x11,8,9,44109);
+CheckOffset(struct _GdkTrapezoid,x11,8,9,44109);
+CheckMemberSize(struct _GdkTrapezoid,x21,8,9,44110);
+CheckOffset(struct _GdkTrapezoid,x21,16,9,44110);
+CheckMemberSize(struct _GdkTrapezoid,y2,8,9,44111);
+CheckOffset(struct _GdkTrapezoid,y2,24,9,44111);
+CheckMemberSize(struct _GdkTrapezoid,x12,8,9,44112);
+CheckOffset(struct _GdkTrapezoid,x12,32,9,44112);
+CheckMemberSize(struct _GdkTrapezoid,x22,8,9,44113);
+CheckOffset(struct _GdkTrapezoid,x22,40,9,44113);
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _GdkTrapezoid,48, 12936, 10);
+CheckMemberSize(struct _GdkTrapezoid,x11,8,10,44109);
+CheckOffset(struct _GdkTrapezoid,x11,8,10,44109);
+CheckMemberSize(struct _GdkTrapezoid,x21,8,10,44110);
+CheckOffset(struct _GdkTrapezoid,x21,16,10,44110);
+CheckMemberSize(struct _GdkTrapezoid,y2,8,10,44111);
+CheckOffset(struct _GdkTrapezoid,y2,24,10,44111);
+CheckMemberSize(struct _GdkTrapezoid,x12,8,10,44112);
+CheckOffset(struct _GdkTrapezoid,x12,32,10,44112);
+CheckMemberSize(struct _GdkTrapezoid,x22,8,10,44113);
+CheckOffset(struct _GdkTrapezoid,x22,40,10,44113);
+#elif __s390x__
+CheckTypeSize(struct _GdkTrapezoid,48, 12936, 12);
+CheckMemberSize(struct _GdkTrapezoid,x11,8,12,44109);
+CheckOffset(struct _GdkTrapezoid,x11,8,12,44109);
+CheckMemberSize(struct _GdkTrapezoid,x21,8,12,44110);
+CheckOffset(struct _GdkTrapezoid,x21,16,12,44110);
+CheckMemberSize(struct _GdkTrapezoid,y2,8,12,44111);
+CheckOffset(struct _GdkTrapezoid,y2,24,12,44111);
+CheckMemberSize(struct _GdkTrapezoid,x12,8,12,44112);
+CheckOffset(struct _GdkTrapezoid,x12,32,12,44112);
+CheckMemberSize(struct _GdkTrapezoid,x22,8,12,44113);
+CheckOffset(struct _GdkTrapezoid,x22,40,12,44113);
+#elif 1
+CheckTypeSize(struct _GdkTrapezoid,0, 12936, 1);
+Msg("Missing member data for _GdkTrapezoid on All\n");
+CheckOffset(struct _GdkTrapezoid,y1,0,1,44108);
+CheckOffset(struct _GdkTrapezoid,x11,0,1,44109);
+CheckOffset(struct _GdkTrapezoid,x21,0,1,44110);
+CheckOffset(struct _GdkTrapezoid,y2,0,1,44111);
+CheckOffset(struct _GdkTrapezoid,x12,0,1,44112);
+CheckOffset(struct _GdkTrapezoid,x22,0,1,44113);
+#endif
+
+#if __i386__
+CheckTypeSize(GdkTrapezoid,48, 12937, 2);
+#elif __x86_64__
+CheckTypeSize(GdkTrapezoid,48, 12937, 11);
+#elif __ia64__
+CheckTypeSize(GdkTrapezoid,48, 12937, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkTrapezoid,48, 12937, 6);
+#elif __powerpc64__
+CheckTypeSize(GdkTrapezoid,48, 12937, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GdkTrapezoid,48, 12937, 10);
+#elif __s390x__
+CheckTypeSize(GdkTrapezoid,48, 12937, 12);
+#elif 1
+CheckTypeSize(GdkTrapezoid,0, 12937, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(GdkTrapezoid *,4, 12938, 2);
+#elif __x86_64__
+CheckTypeSize(GdkTrapezoid *,8, 12938, 11);
+#elif __ia64__
+CheckTypeSize(GdkTrapezoid *,8, 12938, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkTrapezoid *,4, 12938, 6);
+#elif __powerpc64__
+CheckTypeSize(GdkTrapezoid *,8, 12938, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GdkTrapezoid *,4, 12938, 10);
+#elif __s390x__
+CheckTypeSize(GdkTrapezoid *,8, 12938, 12);
+#elif 1
+CheckTypeSize(GdkTrapezoid *,0, 12938, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(GdkWMDecoration *,4, 12939, 2);
+#elif __x86_64__
+CheckTypeSize(GdkWMDecoration *,8, 12939, 11);
+#elif __ia64__
+CheckTypeSize(GdkWMDecoration *,8, 12939, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkWMDecoration *,4, 12939, 6);
+#elif __powerpc64__
+CheckTypeSize(GdkWMDecoration *,8, 12939, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GdkWMDecoration *,4, 12939, 10);
+#elif __s390x__
+CheckTypeSize(GdkWMDecoration *,8, 12939, 12);
+#elif 1
+CheckTypeSize(GdkWMDecoration *,0, 12939, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(const GdkKeymapKey,12, 12940, 2);
+#elif __x86_64__
+CheckTypeSize(const GdkKeymapKey,12, 12940, 11);
+#elif __ia64__
+CheckTypeSize(const GdkKeymapKey,12, 12940, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const GdkKeymapKey,12, 12940, 6);
+#elif __powerpc64__
+CheckTypeSize(const GdkKeymapKey,12, 12940, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(const GdkKeymapKey,12, 12940, 10);
+#elif __s390x__
+CheckTypeSize(const GdkKeymapKey,12, 12940, 12);
+#elif 1
+CheckTypeSize(const GdkKeymapKey,0, 12940, 1);
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
+#elif 1
 #endif
 
 #if __i386__
@@ -11329,73 +11704,62 @@ CheckEnum("GDK_WINDING_RULE",GDK_WINDING_RULE,1,44115);
 #elif __s390x__
 CheckEnum("GDK_EVEN_ODD_RULE",GDK_EVEN_ODD_RULE,0,44114);
 CheckEnum("GDK_WINDING_RULE",GDK_WINDING_RULE,1,44115);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12942,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-141 (12942)\n");
+#elif 1
+CheckEnum("GDK_EVEN_ODD_RULE",GDK_EVEN_ODD_RULE,0,44114);
+CheckEnum("GDK_WINDING_RULE",GDK_WINDING_RULE,1,44115);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkFillRule,4, 12943, 2)
+CheckTypeSize(GdkFillRule,4, 12943, 2);
 #elif __x86_64__
-CheckTypeSize(GdkFillRule,4, 12943, 11)
+CheckTypeSize(GdkFillRule,4, 12943, 11);
 #elif __ia64__
-CheckTypeSize(GdkFillRule,4, 12943, 3)
+CheckTypeSize(GdkFillRule,4, 12943, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkFillRule,4, 12943, 6)
+CheckTypeSize(GdkFillRule,4, 12943, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkFillRule,4, 12943, 9)
+CheckTypeSize(GdkFillRule,4, 12943, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkFillRule,4, 12943, 10)
+CheckTypeSize(GdkFillRule,4, 12943, 10);
 #elif __s390x__
-CheckTypeSize(GdkFillRule,4, 12943, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12943,0);
-Msg("Find size of GdkFillRule (12943)\n");
+CheckTypeSize(GdkFillRule,4, 12943, 12);
+#elif 1
+CheckTypeSize(GdkFillRule,0, 12943, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkPointerHooks,8, 12944, 2)
-CheckMemberSize(struct _GdkPointerHooks,window_at_pointer,4,2,44124)
-CheckOffset(struct _GdkPointerHooks,window_at_pointer,4,2,44124)
+CheckTypeSize(struct _GdkPointerHooks,8, 12944, 2);
+CheckMemberSize(struct _GdkPointerHooks,window_at_pointer,4,2,44124);
+CheckOffset(struct _GdkPointerHooks,window_at_pointer,4,2,44124);
 #elif __x86_64__
-CheckTypeSize(struct _GdkPointerHooks,16, 12944, 11)
-CheckMemberSize(struct _GdkPointerHooks,window_at_pointer,8,11,44124)
-CheckOffset(struct _GdkPointerHooks,window_at_pointer,8,11,44124)
+CheckTypeSize(struct _GdkPointerHooks,16, 12944, 11);
+CheckMemberSize(struct _GdkPointerHooks,window_at_pointer,8,11,44124);
+CheckOffset(struct _GdkPointerHooks,window_at_pointer,8,11,44124);
 #elif __ia64__
-CheckTypeSize(struct _GdkPointerHooks,16, 12944, 3)
-CheckMemberSize(struct _GdkPointerHooks,window_at_pointer,8,3,44124)
-CheckOffset(struct _GdkPointerHooks,window_at_pointer,8,3,44124)
+CheckTypeSize(struct _GdkPointerHooks,16, 12944, 3);
+CheckMemberSize(struct _GdkPointerHooks,window_at_pointer,8,3,44124);
+CheckOffset(struct _GdkPointerHooks,window_at_pointer,8,3,44124);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkPointerHooks,8, 12944, 6)
-CheckMemberSize(struct _GdkPointerHooks,window_at_pointer,4,6,44124)
-CheckOffset(struct _GdkPointerHooks,window_at_pointer,4,6,44124)
+CheckTypeSize(struct _GdkPointerHooks,8, 12944, 6);
+CheckMemberSize(struct _GdkPointerHooks,window_at_pointer,4,6,44124);
+CheckOffset(struct _GdkPointerHooks,window_at_pointer,4,6,44124);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkPointerHooks,16, 12944, 9)
-CheckMemberSize(struct _GdkPointerHooks,window_at_pointer,8,9,44124)
-CheckOffset(struct _GdkPointerHooks,window_at_pointer,8,9,44124)
+CheckTypeSize(struct _GdkPointerHooks,16, 12944, 9);
+CheckMemberSize(struct _GdkPointerHooks,window_at_pointer,8,9,44124);
+CheckOffset(struct _GdkPointerHooks,window_at_pointer,8,9,44124);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkPointerHooks,8, 12944, 10)
-CheckMemberSize(struct _GdkPointerHooks,window_at_pointer,4,10,44124)
-CheckOffset(struct _GdkPointerHooks,window_at_pointer,4,10,44124)
+CheckTypeSize(struct _GdkPointerHooks,8, 12944, 10);
+CheckMemberSize(struct _GdkPointerHooks,window_at_pointer,4,10,44124);
+CheckOffset(struct _GdkPointerHooks,window_at_pointer,4,10,44124);
 #elif __s390x__
-CheckTypeSize(struct _GdkPointerHooks,16, 12944, 12)
-CheckMemberSize(struct _GdkPointerHooks,window_at_pointer,8,12,44124)
-CheckOffset(struct _GdkPointerHooks,window_at_pointer,8,12,44124)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12944,0);
-Msg("Find size of _GdkPointerHooks (12944)\n");
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12945,0);
-Msg("Find size of fptr_gdk_253 (12945)\n");
+CheckTypeSize(struct _GdkPointerHooks,16, 12944, 12);
+CheckMemberSize(struct _GdkPointerHooks,window_at_pointer,8,12,44124);
+CheckOffset(struct _GdkPointerHooks,window_at_pointer,8,12,44124);
+#elif 1
+CheckTypeSize(struct _GdkPointerHooks,0, 12944, 1);
+Msg("Missing member data for _GdkPointerHooks on All\n");
+CheckOffset(struct _GdkPointerHooks,get_pointer,0,1,44120);
+CheckOffset(struct _GdkPointerHooks,window_at_pointer,0,1,44124);
 #endif
 
 #if __i386__
@@ -11405,66 +11769,7 @@ Msg("Find size of fptr_gdk_253 (12945)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12946,0);
-Msg("Find size of fptr_gdk_70 (12946)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GdkPointerHooks,8, 12947, 2)
-#elif __x86_64__
-CheckTypeSize(GdkPointerHooks,16, 12947, 11)
-#elif __ia64__
-CheckTypeSize(GdkPointerHooks,16, 12947, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPointerHooks,8, 12947, 6)
-#elif __powerpc64__
-CheckTypeSize(GdkPointerHooks,16, 12947, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkPointerHooks,8, 12947, 10)
-#elif __s390x__
-CheckTypeSize(GdkPointerHooks,16, 12947, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12947,0);
-Msg("Find size of GdkPointerHooks (12947)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GdkPointerHooks *,4, 12948, 2)
-#elif __x86_64__
-CheckTypeSize(GdkPointerHooks *,8, 12948, 11)
-#elif __ia64__
-CheckTypeSize(GdkPointerHooks *,8, 12948, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPointerHooks *,4, 12948, 6)
-#elif __powerpc64__
-CheckTypeSize(GdkPointerHooks *,8, 12948, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkPointerHooks *,4, 12948, 10)
-#elif __s390x__
-CheckTypeSize(GdkPointerHooks *,8, 12948, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12948,0);
-Msg("Find size of GdkPointerHooks * (12948)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(const GdkPointerHooks,8, 12949, 2)
-#elif __x86_64__
-CheckTypeSize(const GdkPointerHooks,16, 12949, 11)
-#elif __ia64__
-CheckTypeSize(const GdkPointerHooks,16, 12949, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(const GdkPointerHooks,8, 12949, 6)
-#elif __powerpc64__
-CheckTypeSize(const GdkPointerHooks,16, 12949, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(const GdkPointerHooks,8, 12949, 10)
-#elif __s390x__
-CheckTypeSize(const GdkPointerHooks,16, 12949, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12949,0);
-Msg("Find size of const GdkPointerHooks (12949)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -11474,9 +11779,61 @@ Msg("Find size of const GdkPointerHooks (12949)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12950,0);
-Msg("Find size of const GdkPointerHooks * (12950)\n");
+#elif 1
+#endif
+
+#if __i386__
+CheckTypeSize(GdkPointerHooks,8, 12947, 2);
+#elif __x86_64__
+CheckTypeSize(GdkPointerHooks,16, 12947, 11);
+#elif __ia64__
+CheckTypeSize(GdkPointerHooks,16, 12947, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkPointerHooks,8, 12947, 6);
+#elif __powerpc64__
+CheckTypeSize(GdkPointerHooks,16, 12947, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GdkPointerHooks,8, 12947, 10);
+#elif __s390x__
+CheckTypeSize(GdkPointerHooks,16, 12947, 12);
+#elif 1
+CheckTypeSize(GdkPointerHooks,0, 12947, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(GdkPointerHooks *,4, 12948, 2);
+#elif __x86_64__
+CheckTypeSize(GdkPointerHooks *,8, 12948, 11);
+#elif __ia64__
+CheckTypeSize(GdkPointerHooks *,8, 12948, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkPointerHooks *,4, 12948, 6);
+#elif __powerpc64__
+CheckTypeSize(GdkPointerHooks *,8, 12948, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GdkPointerHooks *,4, 12948, 10);
+#elif __s390x__
+CheckTypeSize(GdkPointerHooks *,8, 12948, 12);
+#elif 1
+CheckTypeSize(GdkPointerHooks *,0, 12948, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(const GdkPointerHooks,8, 12949, 2);
+#elif __x86_64__
+CheckTypeSize(const GdkPointerHooks,16, 12949, 11);
+#elif __ia64__
+CheckTypeSize(const GdkPointerHooks,16, 12949, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const GdkPointerHooks,8, 12949, 6);
+#elif __powerpc64__
+CheckTypeSize(const GdkPointerHooks,16, 12949, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(const GdkPointerHooks,8, 12949, 10);
+#elif __s390x__
+CheckTypeSize(const GdkPointerHooks,16, 12949, 12);
+#elif 1
+CheckTypeSize(const GdkPointerHooks,0, 12949, 1);
 #endif
 
 #if __i386__
@@ -11486,9 +11843,17 @@ Msg("Find size of const GdkPointerHooks * (12950)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12951,0);
-Msg("Find size of GdkRectangle * * (12951)\n");
+#elif 1
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
+#elif 1
 #endif
 
 #if __i386__
@@ -11519,370 +11884,375 @@ CheckEnum("GDK_EXTENSION_EVENTS_CURSOR",GDK_EXTENSION_EVENTS_CURSOR,2,44127);
 CheckEnum("GDK_EXTENSION_EVENTS_NONE",GDK_EXTENSION_EVENTS_NONE,0,44125);
 CheckEnum("GDK_EXTENSION_EVENTS_ALL",GDK_EXTENSION_EVENTS_ALL,1,44126);
 CheckEnum("GDK_EXTENSION_EVENTS_CURSOR",GDK_EXTENSION_EVENTS_CURSOR,2,44127);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12952,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-675 (12952)\n");
+#elif 1
+CheckEnum("GDK_EXTENSION_EVENTS_NONE",GDK_EXTENSION_EVENTS_NONE,0,44125);
+CheckEnum("GDK_EXTENSION_EVENTS_ALL",GDK_EXTENSION_EVENTS_ALL,1,44126);
+CheckEnum("GDK_EXTENSION_EVENTS_CURSOR",GDK_EXTENSION_EVENTS_CURSOR,2,44127);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkExtensionMode,4, 12953, 2)
+CheckTypeSize(GdkExtensionMode,4, 12953, 2);
 #elif __x86_64__
-CheckTypeSize(GdkExtensionMode,4, 12953, 11)
+CheckTypeSize(GdkExtensionMode,4, 12953, 11);
 #elif __ia64__
-CheckTypeSize(GdkExtensionMode,4, 12953, 3)
+CheckTypeSize(GdkExtensionMode,4, 12953, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkExtensionMode,4, 12953, 6)
+CheckTypeSize(GdkExtensionMode,4, 12953, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkExtensionMode,4, 12953, 9)
+CheckTypeSize(GdkExtensionMode,4, 12953, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkExtensionMode,4, 12953, 10)
+CheckTypeSize(GdkExtensionMode,4, 12953, 10);
 #elif __s390x__
-CheckTypeSize(GdkExtensionMode,4, 12953, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12953,0);
-Msg("Find size of GdkExtensionMode (12953)\n");
+CheckTypeSize(GdkExtensionMode,4, 12953, 12);
+#elif 1
+CheckTypeSize(GdkExtensionMode,0, 12953, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkWindowObject,88, 12954, 2)
-CheckMemberSize(struct _GdkWindowObject,impl,4,2,44129)
-CheckOffset(struct _GdkWindowObject,impl,12,2,44129)
-CheckMemberSize(struct _GdkWindowObject,parent,4,2,44130)
-CheckOffset(struct _GdkWindowObject,parent,16,2,44130)
-CheckMemberSize(struct _GdkWindowObject,user_data,4,2,44131)
-CheckOffset(struct _GdkWindowObject,user_data,20,2,44131)
-CheckMemberSize(struct _GdkWindowObject,x,4,2,44132)
-CheckOffset(struct _GdkWindowObject,x,24,2,44132)
-CheckMemberSize(struct _GdkWindowObject,y,4,2,44133)
-CheckOffset(struct _GdkWindowObject,y,28,2,44133)
-CheckMemberSize(struct _GdkWindowObject,extension_events,4,2,44134)
-CheckOffset(struct _GdkWindowObject,extension_events,32,2,44134)
-CheckMemberSize(struct _GdkWindowObject,filters,4,2,44135)
-CheckOffset(struct _GdkWindowObject,filters,36,2,44135)
-CheckMemberSize(struct _GdkWindowObject,children,4,2,44136)
-CheckOffset(struct _GdkWindowObject,children,40,2,44136)
-CheckMemberSize(struct _GdkWindowObject,bg_color,12,2,44137)
-CheckOffset(struct _GdkWindowObject,bg_color,44,2,44137)
-CheckMemberSize(struct _GdkWindowObject,bg_pixmap,4,2,44138)
-CheckOffset(struct _GdkWindowObject,bg_pixmap,56,2,44138)
-CheckMemberSize(struct _GdkWindowObject,paint_stack,4,2,44139)
-CheckOffset(struct _GdkWindowObject,paint_stack,60,2,44139)
-CheckMemberSize(struct _GdkWindowObject,update_area,4,2,44140)
-CheckOffset(struct _GdkWindowObject,update_area,64,2,44140)
-CheckMemberSize(struct _GdkWindowObject,update_freeze_count,4,2,44141)
-CheckOffset(struct _GdkWindowObject,update_freeze_count,68,2,44141)
-CheckMemberSize(struct _GdkWindowObject,window_type,1,2,44142)
-CheckOffset(struct _GdkWindowObject,window_type,72,2,44142)
-CheckMemberSize(struct _GdkWindowObject,depth,1,2,44143)
-CheckOffset(struct _GdkWindowObject,depth,73,2,44143)
-CheckMemberSize(struct _GdkWindowObject,resize_count,1,2,44144)
-CheckOffset(struct _GdkWindowObject,resize_count,74,2,44144)
-CheckMemberSize(struct _GdkWindowObject,state,4,2,44145)
-CheckOffset(struct _GdkWindowObject,state,76,2,44145)
-CheckMemberSize(struct _GdkWindowObject,event_mask,4,2,44152)
-CheckOffset(struct _GdkWindowObject,event_mask,84,2,44152)
+CheckTypeSize(struct _GdkWindowObject,88, 12954, 2);
+CheckMemberSize(struct _GdkWindowObject,impl,4,2,44129);
+CheckOffset(struct _GdkWindowObject,impl,12,2,44129);
+CheckMemberSize(struct _GdkWindowObject,parent,4,2,44130);
+CheckOffset(struct _GdkWindowObject,parent,16,2,44130);
+CheckMemberSize(struct _GdkWindowObject,user_data,4,2,44131);
+CheckOffset(struct _GdkWindowObject,user_data,20,2,44131);
+CheckMemberSize(struct _GdkWindowObject,x,4,2,44132);
+CheckOffset(struct _GdkWindowObject,x,24,2,44132);
+CheckMemberSize(struct _GdkWindowObject,y,4,2,44133);
+CheckOffset(struct _GdkWindowObject,y,28,2,44133);
+CheckMemberSize(struct _GdkWindowObject,extension_events,4,2,44134);
+CheckOffset(struct _GdkWindowObject,extension_events,32,2,44134);
+CheckMemberSize(struct _GdkWindowObject,filters,4,2,44135);
+CheckOffset(struct _GdkWindowObject,filters,36,2,44135);
+CheckMemberSize(struct _GdkWindowObject,children,4,2,44136);
+CheckOffset(struct _GdkWindowObject,children,40,2,44136);
+CheckMemberSize(struct _GdkWindowObject,bg_color,12,2,44137);
+CheckOffset(struct _GdkWindowObject,bg_color,44,2,44137);
+CheckMemberSize(struct _GdkWindowObject,bg_pixmap,4,2,44138);
+CheckOffset(struct _GdkWindowObject,bg_pixmap,56,2,44138);
+CheckMemberSize(struct _GdkWindowObject,paint_stack,4,2,44139);
+CheckOffset(struct _GdkWindowObject,paint_stack,60,2,44139);
+CheckMemberSize(struct _GdkWindowObject,update_area,4,2,44140);
+CheckOffset(struct _GdkWindowObject,update_area,64,2,44140);
+CheckMemberSize(struct _GdkWindowObject,update_freeze_count,4,2,44141);
+CheckOffset(struct _GdkWindowObject,update_freeze_count,68,2,44141);
+CheckMemberSize(struct _GdkWindowObject,window_type,1,2,44142);
+CheckOffset(struct _GdkWindowObject,window_type,72,2,44142);
+CheckMemberSize(struct _GdkWindowObject,depth,1,2,44143);
+CheckOffset(struct _GdkWindowObject,depth,73,2,44143);
+CheckMemberSize(struct _GdkWindowObject,resize_count,1,2,44144);
+CheckOffset(struct _GdkWindowObject,resize_count,74,2,44144);
+CheckMemberSize(struct _GdkWindowObject,state,4,2,44145);
+CheckOffset(struct _GdkWindowObject,state,76,2,44145);
+CheckMemberSize(struct _GdkWindowObject,event_mask,4,2,44152);
+CheckOffset(struct _GdkWindowObject,event_mask,84,2,44152);
 #elif __x86_64__
-CheckTypeSize(struct _GdkWindowObject,144, 12954, 11)
-CheckMemberSize(struct _GdkWindowObject,impl,8,11,44129)
-CheckOffset(struct _GdkWindowObject,impl,24,11,44129)
-CheckMemberSize(struct _GdkWindowObject,parent,8,11,44130)
-CheckOffset(struct _GdkWindowObject,parent,32,11,44130)
-CheckMemberSize(struct _GdkWindowObject,user_data,8,11,44131)
-CheckOffset(struct _GdkWindowObject,user_data,40,11,44131)
-CheckMemberSize(struct _GdkWindowObject,x,4,11,44132)
-CheckOffset(struct _GdkWindowObject,x,48,11,44132)
-CheckMemberSize(struct _GdkWindowObject,y,4,11,44133)
-CheckOffset(struct _GdkWindowObject,y,52,11,44133)
-CheckMemberSize(struct _GdkWindowObject,extension_events,4,11,44134)
-CheckOffset(struct _GdkWindowObject,extension_events,56,11,44134)
-CheckMemberSize(struct _GdkWindowObject,filters,8,11,44135)
-CheckOffset(struct _GdkWindowObject,filters,64,11,44135)
-CheckMemberSize(struct _GdkWindowObject,children,8,11,44136)
-CheckOffset(struct _GdkWindowObject,children,72,11,44136)
-CheckMemberSize(struct _GdkWindowObject,bg_color,12,11,44137)
-CheckOffset(struct _GdkWindowObject,bg_color,80,11,44137)
-CheckMemberSize(struct _GdkWindowObject,bg_pixmap,8,11,44138)
-CheckOffset(struct _GdkWindowObject,bg_pixmap,96,11,44138)
-CheckMemberSize(struct _GdkWindowObject,paint_stack,8,11,44139)
-CheckOffset(struct _GdkWindowObject,paint_stack,104,11,44139)
-CheckMemberSize(struct _GdkWindowObject,update_area,8,11,44140)
-CheckOffset(struct _GdkWindowObject,update_area,112,11,44140)
-CheckMemberSize(struct _GdkWindowObject,update_freeze_count,4,11,44141)
-CheckOffset(struct _GdkWindowObject,update_freeze_count,120,11,44141)
-CheckMemberSize(struct _GdkWindowObject,window_type,1,11,44142)
-CheckOffset(struct _GdkWindowObject,window_type,124,11,44142)
-CheckMemberSize(struct _GdkWindowObject,depth,1,11,44143)
-CheckOffset(struct _GdkWindowObject,depth,125,11,44143)
-CheckMemberSize(struct _GdkWindowObject,resize_count,1,11,44144)
-CheckOffset(struct _GdkWindowObject,resize_count,126,11,44144)
-CheckMemberSize(struct _GdkWindowObject,state,4,11,44145)
-CheckOffset(struct _GdkWindowObject,state,128,11,44145)
-CheckMemberSize(struct _GdkWindowObject,event_mask,4,11,44152)
-CheckOffset(struct _GdkWindowObject,event_mask,136,11,44152)
+CheckTypeSize(struct _GdkWindowObject,144, 12954, 11);
+CheckMemberSize(struct _GdkWindowObject,impl,8,11,44129);
+CheckOffset(struct _GdkWindowObject,impl,24,11,44129);
+CheckMemberSize(struct _GdkWindowObject,parent,8,11,44130);
+CheckOffset(struct _GdkWindowObject,parent,32,11,44130);
+CheckMemberSize(struct _GdkWindowObject,user_data,8,11,44131);
+CheckOffset(struct _GdkWindowObject,user_data,40,11,44131);
+CheckMemberSize(struct _GdkWindowObject,x,4,11,44132);
+CheckOffset(struct _GdkWindowObject,x,48,11,44132);
+CheckMemberSize(struct _GdkWindowObject,y,4,11,44133);
+CheckOffset(struct _GdkWindowObject,y,52,11,44133);
+CheckMemberSize(struct _GdkWindowObject,extension_events,4,11,44134);
+CheckOffset(struct _GdkWindowObject,extension_events,56,11,44134);
+CheckMemberSize(struct _GdkWindowObject,filters,8,11,44135);
+CheckOffset(struct _GdkWindowObject,filters,64,11,44135);
+CheckMemberSize(struct _GdkWindowObject,children,8,11,44136);
+CheckOffset(struct _GdkWindowObject,children,72,11,44136);
+CheckMemberSize(struct _GdkWindowObject,bg_color,12,11,44137);
+CheckOffset(struct _GdkWindowObject,bg_color,80,11,44137);
+CheckMemberSize(struct _GdkWindowObject,bg_pixmap,8,11,44138);
+CheckOffset(struct _GdkWindowObject,bg_pixmap,96,11,44138);
+CheckMemberSize(struct _GdkWindowObject,paint_stack,8,11,44139);
+CheckOffset(struct _GdkWindowObject,paint_stack,104,11,44139);
+CheckMemberSize(struct _GdkWindowObject,update_area,8,11,44140);
+CheckOffset(struct _GdkWindowObject,update_area,112,11,44140);
+CheckMemberSize(struct _GdkWindowObject,update_freeze_count,4,11,44141);
+CheckOffset(struct _GdkWindowObject,update_freeze_count,120,11,44141);
+CheckMemberSize(struct _GdkWindowObject,window_type,1,11,44142);
+CheckOffset(struct _GdkWindowObject,window_type,124,11,44142);
+CheckMemberSize(struct _GdkWindowObject,depth,1,11,44143);
+CheckOffset(struct _GdkWindowObject,depth,125,11,44143);
+CheckMemberSize(struct _GdkWindowObject,resize_count,1,11,44144);
+CheckOffset(struct _GdkWindowObject,resize_count,126,11,44144);
+CheckMemberSize(struct _GdkWindowObject,state,4,11,44145);
+CheckOffset(struct _GdkWindowObject,state,128,11,44145);
+CheckMemberSize(struct _GdkWindowObject,event_mask,4,11,44152);
+CheckOffset(struct _GdkWindowObject,event_mask,136,11,44152);
 #elif __ia64__
-CheckTypeSize(struct _GdkWindowObject,144, 12954, 3)
-CheckMemberSize(struct _GdkWindowObject,impl,8,3,44129)
-CheckOffset(struct _GdkWindowObject,impl,24,3,44129)
-CheckMemberSize(struct _GdkWindowObject,parent,8,3,44130)
-CheckOffset(struct _GdkWindowObject,parent,32,3,44130)
-CheckMemberSize(struct _GdkWindowObject,user_data,8,3,44131)
-CheckOffset(struct _GdkWindowObject,user_data,40,3,44131)
-CheckMemberSize(struct _GdkWindowObject,x,4,3,44132)
-CheckOffset(struct _GdkWindowObject,x,48,3,44132)
-CheckMemberSize(struct _GdkWindowObject,y,4,3,44133)
-CheckOffset(struct _GdkWindowObject,y,52,3,44133)
-CheckMemberSize(struct _GdkWindowObject,extension_events,4,3,44134)
-CheckOffset(struct _GdkWindowObject,extension_events,56,3,44134)
-CheckMemberSize(struct _GdkWindowObject,filters,8,3,44135)
-CheckOffset(struct _GdkWindowObject,filters,64,3,44135)
-CheckMemberSize(struct _GdkWindowObject,children,8,3,44136)
-CheckOffset(struct _GdkWindowObject,children,72,3,44136)
-CheckMemberSize(struct _GdkWindowObject,bg_color,12,3,44137)
-CheckOffset(struct _GdkWindowObject,bg_color,80,3,44137)
-CheckMemberSize(struct _GdkWindowObject,bg_pixmap,8,3,44138)
-CheckOffset(struct _GdkWindowObject,bg_pixmap,96,3,44138)
-CheckMemberSize(struct _GdkWindowObject,paint_stack,8,3,44139)
-CheckOffset(struct _GdkWindowObject,paint_stack,104,3,44139)
-CheckMemberSize(struct _GdkWindowObject,update_area,8,3,44140)
-CheckOffset(struct _GdkWindowObject,update_area,112,3,44140)
-CheckMemberSize(struct _GdkWindowObject,update_freeze_count,4,3,44141)
-CheckOffset(struct _GdkWindowObject,update_freeze_count,120,3,44141)
-CheckMemberSize(struct _GdkWindowObject,window_type,1,3,44142)
-CheckOffset(struct _GdkWindowObject,window_type,124,3,44142)
-CheckMemberSize(struct _GdkWindowObject,depth,1,3,44143)
-CheckOffset(struct _GdkWindowObject,depth,125,3,44143)
-CheckMemberSize(struct _GdkWindowObject,resize_count,1,3,44144)
-CheckOffset(struct _GdkWindowObject,resize_count,126,3,44144)
-CheckMemberSize(struct _GdkWindowObject,state,4,3,44145)
-CheckOffset(struct _GdkWindowObject,state,128,3,44145)
-CheckMemberSize(struct _GdkWindowObject,event_mask,4,3,44152)
-CheckOffset(struct _GdkWindowObject,event_mask,136,3,44152)
+CheckTypeSize(struct _GdkWindowObject,144, 12954, 3);
+CheckMemberSize(struct _GdkWindowObject,impl,8,3,44129);
+CheckOffset(struct _GdkWindowObject,impl,24,3,44129);
+CheckMemberSize(struct _GdkWindowObject,parent,8,3,44130);
+CheckOffset(struct _GdkWindowObject,parent,32,3,44130);
+CheckMemberSize(struct _GdkWindowObject,user_data,8,3,44131);
+CheckOffset(struct _GdkWindowObject,user_data,40,3,44131);
+CheckMemberSize(struct _GdkWindowObject,x,4,3,44132);
+CheckOffset(struct _GdkWindowObject,x,48,3,44132);
+CheckMemberSize(struct _GdkWindowObject,y,4,3,44133);
+CheckOffset(struct _GdkWindowObject,y,52,3,44133);
+CheckMemberSize(struct _GdkWindowObject,extension_events,4,3,44134);
+CheckOffset(struct _GdkWindowObject,extension_events,56,3,44134);
+CheckMemberSize(struct _GdkWindowObject,filters,8,3,44135);
+CheckOffset(struct _GdkWindowObject,filters,64,3,44135);
+CheckMemberSize(struct _GdkWindowObject,children,8,3,44136);
+CheckOffset(struct _GdkWindowObject,children,72,3,44136);
+CheckMemberSize(struct _GdkWindowObject,bg_color,12,3,44137);
+CheckOffset(struct _GdkWindowObject,bg_color,80,3,44137);
+CheckMemberSize(struct _GdkWindowObject,bg_pixmap,8,3,44138);
+CheckOffset(struct _GdkWindowObject,bg_pixmap,96,3,44138);
+CheckMemberSize(struct _GdkWindowObject,paint_stack,8,3,44139);
+CheckOffset(struct _GdkWindowObject,paint_stack,104,3,44139);
+CheckMemberSize(struct _GdkWindowObject,update_area,8,3,44140);
+CheckOffset(struct _GdkWindowObject,update_area,112,3,44140);
+CheckMemberSize(struct _GdkWindowObject,update_freeze_count,4,3,44141);
+CheckOffset(struct _GdkWindowObject,update_freeze_count,120,3,44141);
+CheckMemberSize(struct _GdkWindowObject,window_type,1,3,44142);
+CheckOffset(struct _GdkWindowObject,window_type,124,3,44142);
+CheckMemberSize(struct _GdkWindowObject,depth,1,3,44143);
+CheckOffset(struct _GdkWindowObject,depth,125,3,44143);
+CheckMemberSize(struct _GdkWindowObject,resize_count,1,3,44144);
+CheckOffset(struct _GdkWindowObject,resize_count,126,3,44144);
+CheckMemberSize(struct _GdkWindowObject,state,4,3,44145);
+CheckOffset(struct _GdkWindowObject,state,128,3,44145);
+CheckMemberSize(struct _GdkWindowObject,event_mask,4,3,44152);
+CheckOffset(struct _GdkWindowObject,event_mask,136,3,44152);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkWindowObject,88, 12954, 6)
-CheckMemberSize(struct _GdkWindowObject,impl,4,6,44129)
-CheckOffset(struct _GdkWindowObject,impl,12,6,44129)
-CheckMemberSize(struct _GdkWindowObject,parent,4,6,44130)
-CheckOffset(struct _GdkWindowObject,parent,16,6,44130)
-CheckMemberSize(struct _GdkWindowObject,user_data,4,6,44131)
-CheckOffset(struct _GdkWindowObject,user_data,20,6,44131)
-CheckMemberSize(struct _GdkWindowObject,x,4,6,44132)
-CheckOffset(struct _GdkWindowObject,x,24,6,44132)
-CheckMemberSize(struct _GdkWindowObject,y,4,6,44133)
-CheckOffset(struct _GdkWindowObject,y,28,6,44133)
-CheckMemberSize(struct _GdkWindowObject,extension_events,4,6,44134)
-CheckOffset(struct _GdkWindowObject,extension_events,32,6,44134)
-CheckMemberSize(struct _GdkWindowObject,filters,4,6,44135)
-CheckOffset(struct _GdkWindowObject,filters,36,6,44135)
-CheckMemberSize(struct _GdkWindowObject,children,4,6,44136)
-CheckOffset(struct _GdkWindowObject,children,40,6,44136)
-CheckMemberSize(struct _GdkWindowObject,bg_color,12,6,44137)
-CheckOffset(struct _GdkWindowObject,bg_color,44,6,44137)
-CheckMemberSize(struct _GdkWindowObject,bg_pixmap,4,6,44138)
-CheckOffset(struct _GdkWindowObject,bg_pixmap,56,6,44138)
-CheckMemberSize(struct _GdkWindowObject,paint_stack,4,6,44139)
-CheckOffset(struct _GdkWindowObject,paint_stack,60,6,44139)
-CheckMemberSize(struct _GdkWindowObject,update_area,4,6,44140)
-CheckOffset(struct _GdkWindowObject,update_area,64,6,44140)
-CheckMemberSize(struct _GdkWindowObject,update_freeze_count,4,6,44141)
-CheckOffset(struct _GdkWindowObject,update_freeze_count,68,6,44141)
-CheckMemberSize(struct _GdkWindowObject,window_type,1,6,44142)
-CheckOffset(struct _GdkWindowObject,window_type,72,6,44142)
-CheckMemberSize(struct _GdkWindowObject,depth,1,6,44143)
-CheckOffset(struct _GdkWindowObject,depth,73,6,44143)
-CheckMemberSize(struct _GdkWindowObject,resize_count,1,6,44144)
-CheckOffset(struct _GdkWindowObject,resize_count,74,6,44144)
-CheckMemberSize(struct _GdkWindowObject,state,4,6,44145)
-CheckOffset(struct _GdkWindowObject,state,76,6,44145)
-CheckMemberSize(struct _GdkWindowObject,event_mask,4,6,44152)
-CheckOffset(struct _GdkWindowObject,event_mask,84,6,44152)
+CheckTypeSize(struct _GdkWindowObject,88, 12954, 6);
+CheckMemberSize(struct _GdkWindowObject,impl,4,6,44129);
+CheckOffset(struct _GdkWindowObject,impl,12,6,44129);
+CheckMemberSize(struct _GdkWindowObject,parent,4,6,44130);
+CheckOffset(struct _GdkWindowObject,parent,16,6,44130);
+CheckMemberSize(struct _GdkWindowObject,user_data,4,6,44131);
+CheckOffset(struct _GdkWindowObject,user_data,20,6,44131);
+CheckMemberSize(struct _GdkWindowObject,x,4,6,44132);
+CheckOffset(struct _GdkWindowObject,x,24,6,44132);
+CheckMemberSize(struct _GdkWindowObject,y,4,6,44133);
+CheckOffset(struct _GdkWindowObject,y,28,6,44133);
+CheckMemberSize(struct _GdkWindowObject,extension_events,4,6,44134);
+CheckOffset(struct _GdkWindowObject,extension_events,32,6,44134);
+CheckMemberSize(struct _GdkWindowObject,filters,4,6,44135);
+CheckOffset(struct _GdkWindowObject,filters,36,6,44135);
+CheckMemberSize(struct _GdkWindowObject,children,4,6,44136);
+CheckOffset(struct _GdkWindowObject,children,40,6,44136);
+CheckMemberSize(struct _GdkWindowObject,bg_color,12,6,44137);
+CheckOffset(struct _GdkWindowObject,bg_color,44,6,44137);
+CheckMemberSize(struct _GdkWindowObject,bg_pixmap,4,6,44138);
+CheckOffset(struct _GdkWindowObject,bg_pixmap,56,6,44138);
+CheckMemberSize(struct _GdkWindowObject,paint_stack,4,6,44139);
+CheckOffset(struct _GdkWindowObject,paint_stack,60,6,44139);
+CheckMemberSize(struct _GdkWindowObject,update_area,4,6,44140);
+CheckOffset(struct _GdkWindowObject,update_area,64,6,44140);
+CheckMemberSize(struct _GdkWindowObject,update_freeze_count,4,6,44141);
+CheckOffset(struct _GdkWindowObject,update_freeze_count,68,6,44141);
+CheckMemberSize(struct _GdkWindowObject,window_type,1,6,44142);
+CheckOffset(struct _GdkWindowObject,window_type,72,6,44142);
+CheckMemberSize(struct _GdkWindowObject,depth,1,6,44143);
+CheckOffset(struct _GdkWindowObject,depth,73,6,44143);
+CheckMemberSize(struct _GdkWindowObject,resize_count,1,6,44144);
+CheckOffset(struct _GdkWindowObject,resize_count,74,6,44144);
+CheckMemberSize(struct _GdkWindowObject,state,4,6,44145);
+CheckOffset(struct _GdkWindowObject,state,76,6,44145);
+CheckMemberSize(struct _GdkWindowObject,event_mask,4,6,44152);
+CheckOffset(struct _GdkWindowObject,event_mask,84,6,44152);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkWindowObject,144, 12954, 9)
-CheckMemberSize(struct _GdkWindowObject,impl,8,9,44129)
-CheckOffset(struct _GdkWindowObject,impl,24,9,44129)
-CheckMemberSize(struct _GdkWindowObject,parent,8,9,44130)
-CheckOffset(struct _GdkWindowObject,parent,32,9,44130)
-CheckMemberSize(struct _GdkWindowObject,user_data,8,9,44131)
-CheckOffset(struct _GdkWindowObject,user_data,40,9,44131)
-CheckMemberSize(struct _GdkWindowObject,x,4,9,44132)
-CheckOffset(struct _GdkWindowObject,x,48,9,44132)
-CheckMemberSize(struct _GdkWindowObject,y,4,9,44133)
-CheckOffset(struct _GdkWindowObject,y,52,9,44133)
-CheckMemberSize(struct _GdkWindowObject,extension_events,4,9,44134)
-CheckOffset(struct _GdkWindowObject,extension_events,56,9,44134)
-CheckMemberSize(struct _GdkWindowObject,filters,8,9,44135)
-CheckOffset(struct _GdkWindowObject,filters,64,9,44135)
-CheckMemberSize(struct _GdkWindowObject,children,8,9,44136)
-CheckOffset(struct _GdkWindowObject,children,72,9,44136)
-CheckMemberSize(struct _GdkWindowObject,bg_color,12,9,44137)
-CheckOffset(struct _GdkWindowObject,bg_color,80,9,44137)
-CheckMemberSize(struct _GdkWindowObject,bg_pixmap,8,9,44138)
-CheckOffset(struct _GdkWindowObject,bg_pixmap,96,9,44138)
-CheckMemberSize(struct _GdkWindowObject,paint_stack,8,9,44139)
-CheckOffset(struct _GdkWindowObject,paint_stack,104,9,44139)
-CheckMemberSize(struct _GdkWindowObject,update_area,8,9,44140)
-CheckOffset(struct _GdkWindowObject,update_area,112,9,44140)
-CheckMemberSize(struct _GdkWindowObject,update_freeze_count,4,9,44141)
-CheckOffset(struct _GdkWindowObject,update_freeze_count,120,9,44141)
-CheckMemberSize(struct _GdkWindowObject,window_type,1,9,44142)
-CheckOffset(struct _GdkWindowObject,window_type,124,9,44142)
-CheckMemberSize(struct _GdkWindowObject,depth,1,9,44143)
-CheckOffset(struct _GdkWindowObject,depth,125,9,44143)
-CheckMemberSize(struct _GdkWindowObject,resize_count,1,9,44144)
-CheckOffset(struct _GdkWindowObject,resize_count,126,9,44144)
-CheckMemberSize(struct _GdkWindowObject,state,4,9,44145)
-CheckOffset(struct _GdkWindowObject,state,128,9,44145)
-CheckMemberSize(struct _GdkWindowObject,event_mask,4,9,44152)
-CheckOffset(struct _GdkWindowObject,event_mask,136,9,44152)
+CheckTypeSize(struct _GdkWindowObject,144, 12954, 9);
+CheckMemberSize(struct _GdkWindowObject,impl,8,9,44129);
+CheckOffset(struct _GdkWindowObject,impl,24,9,44129);
+CheckMemberSize(struct _GdkWindowObject,parent,8,9,44130);
+CheckOffset(struct _GdkWindowObject,parent,32,9,44130);
+CheckMemberSize(struct _GdkWindowObject,user_data,8,9,44131);
+CheckOffset(struct _GdkWindowObject,user_data,40,9,44131);
+CheckMemberSize(struct _GdkWindowObject,x,4,9,44132);
+CheckOffset(struct _GdkWindowObject,x,48,9,44132);
+CheckMemberSize(struct _GdkWindowObject,y,4,9,44133);
+CheckOffset(struct _GdkWindowObject,y,52,9,44133);
+CheckMemberSize(struct _GdkWindowObject,extension_events,4,9,44134);
+CheckOffset(struct _GdkWindowObject,extension_events,56,9,44134);
+CheckMemberSize(struct _GdkWindowObject,filters,8,9,44135);
+CheckOffset(struct _GdkWindowObject,filters,64,9,44135);
+CheckMemberSize(struct _GdkWindowObject,children,8,9,44136);
+CheckOffset(struct _GdkWindowObject,children,72,9,44136);
+CheckMemberSize(struct _GdkWindowObject,bg_color,12,9,44137);
+CheckOffset(struct _GdkWindowObject,bg_color,80,9,44137);
+CheckMemberSize(struct _GdkWindowObject,bg_pixmap,8,9,44138);
+CheckOffset(struct _GdkWindowObject,bg_pixmap,96,9,44138);
+CheckMemberSize(struct _GdkWindowObject,paint_stack,8,9,44139);
+CheckOffset(struct _GdkWindowObject,paint_stack,104,9,44139);
+CheckMemberSize(struct _GdkWindowObject,update_area,8,9,44140);
+CheckOffset(struct _GdkWindowObject,update_area,112,9,44140);
+CheckMemberSize(struct _GdkWindowObject,update_freeze_count,4,9,44141);
+CheckOffset(struct _GdkWindowObject,update_freeze_count,120,9,44141);
+CheckMemberSize(struct _GdkWindowObject,window_type,1,9,44142);
+CheckOffset(struct _GdkWindowObject,window_type,124,9,44142);
+CheckMemberSize(struct _GdkWindowObject,depth,1,9,44143);
+CheckOffset(struct _GdkWindowObject,depth,125,9,44143);
+CheckMemberSize(struct _GdkWindowObject,resize_count,1,9,44144);
+CheckOffset(struct _GdkWindowObject,resize_count,126,9,44144);
+CheckMemberSize(struct _GdkWindowObject,state,4,9,44145);
+CheckOffset(struct _GdkWindowObject,state,128,9,44145);
+CheckMemberSize(struct _GdkWindowObject,event_mask,4,9,44152);
+CheckOffset(struct _GdkWindowObject,event_mask,136,9,44152);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkWindowObject,88, 12954, 10)
-CheckMemberSize(struct _GdkWindowObject,impl,4,10,44129)
-CheckOffset(struct _GdkWindowObject,impl,12,10,44129)
-CheckMemberSize(struct _GdkWindowObject,parent,4,10,44130)
-CheckOffset(struct _GdkWindowObject,parent,16,10,44130)
-CheckMemberSize(struct _GdkWindowObject,user_data,4,10,44131)
-CheckOffset(struct _GdkWindowObject,user_data,20,10,44131)
-CheckMemberSize(struct _GdkWindowObject,x,4,10,44132)
-CheckOffset(struct _GdkWindowObject,x,24,10,44132)
-CheckMemberSize(struct _GdkWindowObject,y,4,10,44133)
-CheckOffset(struct _GdkWindowObject,y,28,10,44133)
-CheckMemberSize(struct _GdkWindowObject,extension_events,4,10,44134)
-CheckOffset(struct _GdkWindowObject,extension_events,32,10,44134)
-CheckMemberSize(struct _GdkWindowObject,filters,4,10,44135)
-CheckOffset(struct _GdkWindowObject,filters,36,10,44135)
-CheckMemberSize(struct _GdkWindowObject,children,4,10,44136)
-CheckOffset(struct _GdkWindowObject,children,40,10,44136)
-CheckMemberSize(struct _GdkWindowObject,bg_color,12,10,44137)
-CheckOffset(struct _GdkWindowObject,bg_color,44,10,44137)
-CheckMemberSize(struct _GdkWindowObject,bg_pixmap,4,10,44138)
-CheckOffset(struct _GdkWindowObject,bg_pixmap,56,10,44138)
-CheckMemberSize(struct _GdkWindowObject,paint_stack,4,10,44139)
-CheckOffset(struct _GdkWindowObject,paint_stack,60,10,44139)
-CheckMemberSize(struct _GdkWindowObject,update_area,4,10,44140)
-CheckOffset(struct _GdkWindowObject,update_area,64,10,44140)
-CheckMemberSize(struct _GdkWindowObject,update_freeze_count,4,10,44141)
-CheckOffset(struct _GdkWindowObject,update_freeze_count,68,10,44141)
-CheckMemberSize(struct _GdkWindowObject,window_type,1,10,44142)
-CheckOffset(struct _GdkWindowObject,window_type,72,10,44142)
-CheckMemberSize(struct _GdkWindowObject,depth,1,10,44143)
-CheckOffset(struct _GdkWindowObject,depth,73,10,44143)
-CheckMemberSize(struct _GdkWindowObject,resize_count,1,10,44144)
-CheckOffset(struct _GdkWindowObject,resize_count,74,10,44144)
-CheckMemberSize(struct _GdkWindowObject,state,4,10,44145)
-CheckOffset(struct _GdkWindowObject,state,76,10,44145)
-CheckMemberSize(struct _GdkWindowObject,event_mask,4,10,44152)
-CheckOffset(struct _GdkWindowObject,event_mask,84,10,44152)
+CheckTypeSize(struct _GdkWindowObject,88, 12954, 10);
+CheckMemberSize(struct _GdkWindowObject,impl,4,10,44129);
+CheckOffset(struct _GdkWindowObject,impl,12,10,44129);
+CheckMemberSize(struct _GdkWindowObject,parent,4,10,44130);
+CheckOffset(struct _GdkWindowObject,parent,16,10,44130);
+CheckMemberSize(struct _GdkWindowObject,user_data,4,10,44131);
+CheckOffset(struct _GdkWindowObject,user_data,20,10,44131);
+CheckMemberSize(struct _GdkWindowObject,x,4,10,44132);
+CheckOffset(struct _GdkWindowObject,x,24,10,44132);
+CheckMemberSize(struct _GdkWindowObject,y,4,10,44133);
+CheckOffset(struct _GdkWindowObject,y,28,10,44133);
+CheckMemberSize(struct _GdkWindowObject,extension_events,4,10,44134);
+CheckOffset(struct _GdkWindowObject,extension_events,32,10,44134);
+CheckMemberSize(struct _GdkWindowObject,filters,4,10,44135);
+CheckOffset(struct _GdkWindowObject,filters,36,10,44135);
+CheckMemberSize(struct _GdkWindowObject,children,4,10,44136);
+CheckOffset(struct _GdkWindowObject,children,40,10,44136);
+CheckMemberSize(struct _GdkWindowObject,bg_color,12,10,44137);
+CheckOffset(struct _GdkWindowObject,bg_color,44,10,44137);
+CheckMemberSize(struct _GdkWindowObject,bg_pixmap,4,10,44138);
+CheckOffset(struct _GdkWindowObject,bg_pixmap,56,10,44138);
+CheckMemberSize(struct _GdkWindowObject,paint_stack,4,10,44139);
+CheckOffset(struct _GdkWindowObject,paint_stack,60,10,44139);
+CheckMemberSize(struct _GdkWindowObject,update_area,4,10,44140);
+CheckOffset(struct _GdkWindowObject,update_area,64,10,44140);
+CheckMemberSize(struct _GdkWindowObject,update_freeze_count,4,10,44141);
+CheckOffset(struct _GdkWindowObject,update_freeze_count,68,10,44141);
+CheckMemberSize(struct _GdkWindowObject,window_type,1,10,44142);
+CheckOffset(struct _GdkWindowObject,window_type,72,10,44142);
+CheckMemberSize(struct _GdkWindowObject,depth,1,10,44143);
+CheckOffset(struct _GdkWindowObject,depth,73,10,44143);
+CheckMemberSize(struct _GdkWindowObject,resize_count,1,10,44144);
+CheckOffset(struct _GdkWindowObject,resize_count,74,10,44144);
+CheckMemberSize(struct _GdkWindowObject,state,4,10,44145);
+CheckOffset(struct _GdkWindowObject,state,76,10,44145);
+CheckMemberSize(struct _GdkWindowObject,event_mask,4,10,44152);
+CheckOffset(struct _GdkWindowObject,event_mask,84,10,44152);
 #elif __s390x__
-CheckTypeSize(struct _GdkWindowObject,144, 12954, 12)
-CheckMemberSize(struct _GdkWindowObject,impl,8,12,44129)
-CheckOffset(struct _GdkWindowObject,impl,24,12,44129)
-CheckMemberSize(struct _GdkWindowObject,parent,8,12,44130)
-CheckOffset(struct _GdkWindowObject,parent,32,12,44130)
-CheckMemberSize(struct _GdkWindowObject,user_data,8,12,44131)
-CheckOffset(struct _GdkWindowObject,user_data,40,12,44131)
-CheckMemberSize(struct _GdkWindowObject,x,4,12,44132)
-CheckOffset(struct _GdkWindowObject,x,48,12,44132)
-CheckMemberSize(struct _GdkWindowObject,y,4,12,44133)
-CheckOffset(struct _GdkWindowObject,y,52,12,44133)
-CheckMemberSize(struct _GdkWindowObject,extension_events,4,12,44134)
-CheckOffset(struct _GdkWindowObject,extension_events,56,12,44134)
-CheckMemberSize(struct _GdkWindowObject,filters,8,12,44135)
-CheckOffset(struct _GdkWindowObject,filters,64,12,44135)
-CheckMemberSize(struct _GdkWindowObject,children,8,12,44136)
-CheckOffset(struct _GdkWindowObject,children,72,12,44136)
-CheckMemberSize(struct _GdkWindowObject,bg_color,12,12,44137)
-CheckOffset(struct _GdkWindowObject,bg_color,80,12,44137)
-CheckMemberSize(struct _GdkWindowObject,bg_pixmap,8,12,44138)
-CheckOffset(struct _GdkWindowObject,bg_pixmap,96,12,44138)
-CheckMemberSize(struct _GdkWindowObject,paint_stack,8,12,44139)
-CheckOffset(struct _GdkWindowObject,paint_stack,104,12,44139)
-CheckMemberSize(struct _GdkWindowObject,update_area,8,12,44140)
-CheckOffset(struct _GdkWindowObject,update_area,112,12,44140)
-CheckMemberSize(struct _GdkWindowObject,update_freeze_count,4,12,44141)
-CheckOffset(struct _GdkWindowObject,update_freeze_count,120,12,44141)
-CheckMemberSize(struct _GdkWindowObject,window_type,1,12,44142)
-CheckOffset(struct _GdkWindowObject,window_type,124,12,44142)
-CheckMemberSize(struct _GdkWindowObject,depth,1,12,44143)
-CheckOffset(struct _GdkWindowObject,depth,125,12,44143)
-CheckMemberSize(struct _GdkWindowObject,resize_count,1,12,44144)
-CheckOffset(struct _GdkWindowObject,resize_count,126,12,44144)
-CheckMemberSize(struct _GdkWindowObject,state,4,12,44145)
-CheckOffset(struct _GdkWindowObject,state,128,12,44145)
-CheckMemberSize(struct _GdkWindowObject,event_mask,4,12,44152)
-CheckOffset(struct _GdkWindowObject,event_mask,136,12,44152)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12954,0);
-Msg("Find size of _GdkWindowObject (12954)\n");
+CheckTypeSize(struct _GdkWindowObject,144, 12954, 12);
+CheckMemberSize(struct _GdkWindowObject,impl,8,12,44129);
+CheckOffset(struct _GdkWindowObject,impl,24,12,44129);
+CheckMemberSize(struct _GdkWindowObject,parent,8,12,44130);
+CheckOffset(struct _GdkWindowObject,parent,32,12,44130);
+CheckMemberSize(struct _GdkWindowObject,user_data,8,12,44131);
+CheckOffset(struct _GdkWindowObject,user_data,40,12,44131);
+CheckMemberSize(struct _GdkWindowObject,x,4,12,44132);
+CheckOffset(struct _GdkWindowObject,x,48,12,44132);
+CheckMemberSize(struct _GdkWindowObject,y,4,12,44133);
+CheckOffset(struct _GdkWindowObject,y,52,12,44133);
+CheckMemberSize(struct _GdkWindowObject,extension_events,4,12,44134);
+CheckOffset(struct _GdkWindowObject,extension_events,56,12,44134);
+CheckMemberSize(struct _GdkWindowObject,filters,8,12,44135);
+CheckOffset(struct _GdkWindowObject,filters,64,12,44135);
+CheckMemberSize(struct _GdkWindowObject,children,8,12,44136);
+CheckOffset(struct _GdkWindowObject,children,72,12,44136);
+CheckMemberSize(struct _GdkWindowObject,bg_color,12,12,44137);
+CheckOffset(struct _GdkWindowObject,bg_color,80,12,44137);
+CheckMemberSize(struct _GdkWindowObject,bg_pixmap,8,12,44138);
+CheckOffset(struct _GdkWindowObject,bg_pixmap,96,12,44138);
+CheckMemberSize(struct _GdkWindowObject,paint_stack,8,12,44139);
+CheckOffset(struct _GdkWindowObject,paint_stack,104,12,44139);
+CheckMemberSize(struct _GdkWindowObject,update_area,8,12,44140);
+CheckOffset(struct _GdkWindowObject,update_area,112,12,44140);
+CheckMemberSize(struct _GdkWindowObject,update_freeze_count,4,12,44141);
+CheckOffset(struct _GdkWindowObject,update_freeze_count,120,12,44141);
+CheckMemberSize(struct _GdkWindowObject,window_type,1,12,44142);
+CheckOffset(struct _GdkWindowObject,window_type,124,12,44142);
+CheckMemberSize(struct _GdkWindowObject,depth,1,12,44143);
+CheckOffset(struct _GdkWindowObject,depth,125,12,44143);
+CheckMemberSize(struct _GdkWindowObject,resize_count,1,12,44144);
+CheckOffset(struct _GdkWindowObject,resize_count,126,12,44144);
+CheckMemberSize(struct _GdkWindowObject,state,4,12,44145);
+CheckOffset(struct _GdkWindowObject,state,128,12,44145);
+CheckMemberSize(struct _GdkWindowObject,event_mask,4,12,44152);
+CheckOffset(struct _GdkWindowObject,event_mask,136,12,44152);
+#elif 1
+CheckTypeSize(struct _GdkWindowObject,0, 12954, 1);
+CheckBitField(struct _GdkWindowObject,guffaw_gravity,1,1,44146)
+CheckBitField(struct _GdkWindowObject,input_only,1,1,44147)
+CheckBitField(struct _GdkWindowObject,modal_hint,1,1,44148)
+CheckBitField(struct _GdkWindowObject,destroyed,2,1,44149)
+CheckBitField(struct _GdkWindowObject,accept_focus,1,1,44150)
+CheckBitField(struct _GdkWindowObject,focus_on_map,1,1,44151)
 #endif
 
 #if __i386__
-CheckTypeSize(GdkWindowObject,88, 12955, 2)
+CheckTypeSize(GdkWindowObject,88, 12955, 2);
 #elif __x86_64__
-CheckTypeSize(GdkWindowObject,144, 12955, 11)
+CheckTypeSize(GdkWindowObject,144, 12955, 11);
 #elif __ia64__
-CheckTypeSize(GdkWindowObject,144, 12955, 3)
+CheckTypeSize(GdkWindowObject,144, 12955, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkWindowObject,88, 12955, 6)
+CheckTypeSize(GdkWindowObject,88, 12955, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkWindowObject,144, 12955, 9)
+CheckTypeSize(GdkWindowObject,144, 12955, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkWindowObject,88, 12955, 10)
+CheckTypeSize(GdkWindowObject,88, 12955, 10);
 #elif __s390x__
-CheckTypeSize(GdkWindowObject,144, 12955, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12955,0);
-Msg("Find size of GdkWindowObject (12955)\n");
+CheckTypeSize(GdkWindowObject,144, 12955, 12);
+#elif 1
+CheckTypeSize(GdkWindowObject,0, 12955, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkWindowObject *,4, 12956, 2)
+CheckTypeSize(GdkWindowObject *,4, 12956, 2);
 #elif __x86_64__
-CheckTypeSize(GdkWindowObject *,8, 12956, 11)
+CheckTypeSize(GdkWindowObject *,8, 12956, 11);
 #elif __ia64__
-CheckTypeSize(GdkWindowObject *,8, 12956, 3)
+CheckTypeSize(GdkWindowObject *,8, 12956, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkWindowObject *,4, 12956, 6)
+CheckTypeSize(GdkWindowObject *,4, 12956, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkWindowObject *,8, 12956, 9)
+CheckTypeSize(GdkWindowObject *,8, 12956, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkWindowObject *,4, 12956, 10)
+CheckTypeSize(GdkWindowObject *,4, 12956, 10);
 #elif __s390x__
-CheckTypeSize(GdkWindowObject *,8, 12956, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12956,0);
-Msg("Find size of GdkWindowObject * (12956)\n");
+CheckTypeSize(GdkWindowObject *,8, 12956, 12);
+#elif 1
+CheckTypeSize(GdkWindowObject *,0, 12956, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkScreenClass,72, 12957, 2)
-CheckMemberSize(struct _GdkScreenClass,size_changed,4,2,44155)
-CheckOffset(struct _GdkScreenClass,size_changed,68,2,44155)
+CheckTypeSize(struct _GdkScreenClass,72, 12957, 2);
+CheckMemberSize(struct _GdkScreenClass,size_changed,4,2,44155);
+CheckOffset(struct _GdkScreenClass,size_changed,68,2,44155);
 #elif __x86_64__
-CheckTypeSize(struct _GdkScreenClass,144, 12957, 11)
-CheckMemberSize(struct _GdkScreenClass,size_changed,8,11,44155)
-CheckOffset(struct _GdkScreenClass,size_changed,136,11,44155)
+CheckTypeSize(struct _GdkScreenClass,144, 12957, 11);
+CheckMemberSize(struct _GdkScreenClass,size_changed,8,11,44155);
+CheckOffset(struct _GdkScreenClass,size_changed,136,11,44155);
 #elif __ia64__
-CheckTypeSize(struct _GdkScreenClass,144, 12957, 3)
-CheckMemberSize(struct _GdkScreenClass,size_changed,8,3,44155)
-CheckOffset(struct _GdkScreenClass,size_changed,136,3,44155)
+CheckTypeSize(struct _GdkScreenClass,144, 12957, 3);
+CheckMemberSize(struct _GdkScreenClass,size_changed,8,3,44155);
+CheckOffset(struct _GdkScreenClass,size_changed,136,3,44155);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkScreenClass,72, 12957, 6)
-CheckMemberSize(struct _GdkScreenClass,size_changed,4,6,44155)
-CheckOffset(struct _GdkScreenClass,size_changed,68,6,44155)
+CheckTypeSize(struct _GdkScreenClass,72, 12957, 6);
+CheckMemberSize(struct _GdkScreenClass,size_changed,4,6,44155);
+CheckOffset(struct _GdkScreenClass,size_changed,68,6,44155);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkScreenClass,144, 12957, 9)
-CheckMemberSize(struct _GdkScreenClass,size_changed,8,9,44155)
-CheckOffset(struct _GdkScreenClass,size_changed,136,9,44155)
+CheckTypeSize(struct _GdkScreenClass,144, 12957, 9);
+CheckMemberSize(struct _GdkScreenClass,size_changed,8,9,44155);
+CheckOffset(struct _GdkScreenClass,size_changed,136,9,44155);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkScreenClass,72, 12957, 10)
-CheckMemberSize(struct _GdkScreenClass,size_changed,4,10,44155)
-CheckOffset(struct _GdkScreenClass,size_changed,68,10,44155)
+CheckTypeSize(struct _GdkScreenClass,72, 12957, 10);
+CheckMemberSize(struct _GdkScreenClass,size_changed,4,10,44155);
+CheckOffset(struct _GdkScreenClass,size_changed,68,10,44155);
 #elif __s390x__
-CheckTypeSize(struct _GdkScreenClass,144, 12957, 12)
-CheckMemberSize(struct _GdkScreenClass,size_changed,8,12,44155)
-CheckOffset(struct _GdkScreenClass,size_changed,136,12,44155)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12957,0);
-Msg("Find size of _GdkScreenClass (12957)\n");
+CheckTypeSize(struct _GdkScreenClass,144, 12957, 12);
+CheckMemberSize(struct _GdkScreenClass,size_changed,8,12,44155);
+CheckOffset(struct _GdkScreenClass,size_changed,136,12,44155);
+#elif 1
+CheckTypeSize(struct _GdkScreenClass,0, 12957, 1);
+Msg("Missing member data for _GdkScreenClass on All\n");
+CheckOffset(struct _GdkScreenClass,parent_class,0,1,44153);
+CheckOffset(struct _GdkScreenClass,size_changed,0,1,44155);
 #endif
 
 #if __i386__
@@ -11892,113 +12262,111 @@ Msg("Find size of _GdkScreenClass (12957)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12958,0);
-Msg("Find size of fptr_gdk_7 (12958)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(GdkScreenClass,72, 12959, 2)
+CheckTypeSize(GdkScreenClass,72, 12959, 2);
 #elif __x86_64__
-CheckTypeSize(GdkScreenClass,144, 12959, 11)
+CheckTypeSize(GdkScreenClass,144, 12959, 11);
 #elif __ia64__
-CheckTypeSize(GdkScreenClass,144, 12959, 3)
+CheckTypeSize(GdkScreenClass,144, 12959, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkScreenClass,72, 12959, 6)
+CheckTypeSize(GdkScreenClass,72, 12959, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkScreenClass,144, 12959, 9)
+CheckTypeSize(GdkScreenClass,144, 12959, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkScreenClass,72, 12959, 10)
+CheckTypeSize(GdkScreenClass,72, 12959, 10);
 #elif __s390x__
-CheckTypeSize(GdkScreenClass,144, 12959, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12959,0);
-Msg("Find size of GdkScreenClass (12959)\n");
+CheckTypeSize(GdkScreenClass,144, 12959, 12);
+#elif 1
+CheckTypeSize(GdkScreenClass,0, 12959, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkWChar,4, 12960, 2)
+CheckTypeSize(GdkWChar,4, 12960, 2);
 #elif __x86_64__
-CheckTypeSize(GdkWChar,4, 12960, 11)
+CheckTypeSize(GdkWChar,4, 12960, 11);
 #elif __ia64__
-CheckTypeSize(GdkWChar,4, 12960, 3)
+CheckTypeSize(GdkWChar,4, 12960, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkWChar,4, 12960, 6)
+CheckTypeSize(GdkWChar,4, 12960, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkWChar,4, 12960, 9)
+CheckTypeSize(GdkWChar,4, 12960, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkWChar,4, 12960, 10)
+CheckTypeSize(GdkWChar,4, 12960, 10);
 #elif __s390x__
-CheckTypeSize(GdkWChar,4, 12960, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12960,0);
-Msg("Find size of GdkWChar (12960)\n");
+CheckTypeSize(GdkWChar,4, 12960, 12);
+#elif 1
+CheckTypeSize(GdkWChar,0, 12960, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkPixmapObject,20, 12961, 2)
-CheckMemberSize(struct _GdkPixmapObject,impl,4,2,44157)
-CheckOffset(struct _GdkPixmapObject,impl,12,2,44157)
-CheckMemberSize(struct _GdkPixmapObject,depth,4,2,44158)
-CheckOffset(struct _GdkPixmapObject,depth,16,2,44158)
+CheckTypeSize(struct _GdkPixmapObject,20, 12961, 2);
+CheckMemberSize(struct _GdkPixmapObject,impl,4,2,44157);
+CheckOffset(struct _GdkPixmapObject,impl,12,2,44157);
+CheckMemberSize(struct _GdkPixmapObject,depth,4,2,44158);
+CheckOffset(struct _GdkPixmapObject,depth,16,2,44158);
 #elif __x86_64__
-CheckTypeSize(struct _GdkPixmapObject,40, 12961, 11)
-CheckMemberSize(struct _GdkPixmapObject,impl,8,11,44157)
-CheckOffset(struct _GdkPixmapObject,impl,24,11,44157)
-CheckMemberSize(struct _GdkPixmapObject,depth,4,11,44158)
-CheckOffset(struct _GdkPixmapObject,depth,32,11,44158)
+CheckTypeSize(struct _GdkPixmapObject,40, 12961, 11);
+CheckMemberSize(struct _GdkPixmapObject,impl,8,11,44157);
+CheckOffset(struct _GdkPixmapObject,impl,24,11,44157);
+CheckMemberSize(struct _GdkPixmapObject,depth,4,11,44158);
+CheckOffset(struct _GdkPixmapObject,depth,32,11,44158);
 #elif __ia64__
-CheckTypeSize(struct _GdkPixmapObject,40, 12961, 3)
-CheckMemberSize(struct _GdkPixmapObject,impl,8,3,44157)
-CheckOffset(struct _GdkPixmapObject,impl,24,3,44157)
-CheckMemberSize(struct _GdkPixmapObject,depth,4,3,44158)
-CheckOffset(struct _GdkPixmapObject,depth,32,3,44158)
+CheckTypeSize(struct _GdkPixmapObject,40, 12961, 3);
+CheckMemberSize(struct _GdkPixmapObject,impl,8,3,44157);
+CheckOffset(struct _GdkPixmapObject,impl,24,3,44157);
+CheckMemberSize(struct _GdkPixmapObject,depth,4,3,44158);
+CheckOffset(struct _GdkPixmapObject,depth,32,3,44158);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkPixmapObject,20, 12961, 6)
-CheckMemberSize(struct _GdkPixmapObject,impl,4,6,44157)
-CheckOffset(struct _GdkPixmapObject,impl,12,6,44157)
-CheckMemberSize(struct _GdkPixmapObject,depth,4,6,44158)
-CheckOffset(struct _GdkPixmapObject,depth,16,6,44158)
+CheckTypeSize(struct _GdkPixmapObject,20, 12961, 6);
+CheckMemberSize(struct _GdkPixmapObject,impl,4,6,44157);
+CheckOffset(struct _GdkPixmapObject,impl,12,6,44157);
+CheckMemberSize(struct _GdkPixmapObject,depth,4,6,44158);
+CheckOffset(struct _GdkPixmapObject,depth,16,6,44158);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkPixmapObject,40, 12961, 9)
-CheckMemberSize(struct _GdkPixmapObject,impl,8,9,44157)
-CheckOffset(struct _GdkPixmapObject,impl,24,9,44157)
-CheckMemberSize(struct _GdkPixmapObject,depth,4,9,44158)
-CheckOffset(struct _GdkPixmapObject,depth,32,9,44158)
+CheckTypeSize(struct _GdkPixmapObject,40, 12961, 9);
+CheckMemberSize(struct _GdkPixmapObject,impl,8,9,44157);
+CheckOffset(struct _GdkPixmapObject,impl,24,9,44157);
+CheckMemberSize(struct _GdkPixmapObject,depth,4,9,44158);
+CheckOffset(struct _GdkPixmapObject,depth,32,9,44158);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkPixmapObject,20, 12961, 10)
-CheckMemberSize(struct _GdkPixmapObject,impl,4,10,44157)
-CheckOffset(struct _GdkPixmapObject,impl,12,10,44157)
-CheckMemberSize(struct _GdkPixmapObject,depth,4,10,44158)
-CheckOffset(struct _GdkPixmapObject,depth,16,10,44158)
+CheckTypeSize(struct _GdkPixmapObject,20, 12961, 10);
+CheckMemberSize(struct _GdkPixmapObject,impl,4,10,44157);
+CheckOffset(struct _GdkPixmapObject,impl,12,10,44157);
+CheckMemberSize(struct _GdkPixmapObject,depth,4,10,44158);
+CheckOffset(struct _GdkPixmapObject,depth,16,10,44158);
 #elif __s390x__
-CheckTypeSize(struct _GdkPixmapObject,40, 12961, 12)
-CheckMemberSize(struct _GdkPixmapObject,impl,8,12,44157)
-CheckOffset(struct _GdkPixmapObject,impl,24,12,44157)
-CheckMemberSize(struct _GdkPixmapObject,depth,4,12,44158)
-CheckOffset(struct _GdkPixmapObject,depth,32,12,44158)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12961,0);
-Msg("Find size of _GdkPixmapObject (12961)\n");
+CheckTypeSize(struct _GdkPixmapObject,40, 12961, 12);
+CheckMemberSize(struct _GdkPixmapObject,impl,8,12,44157);
+CheckOffset(struct _GdkPixmapObject,impl,24,12,44157);
+CheckMemberSize(struct _GdkPixmapObject,depth,4,12,44158);
+CheckOffset(struct _GdkPixmapObject,depth,32,12,44158);
+#elif 1
+CheckTypeSize(struct _GdkPixmapObject,0, 12961, 1);
+Msg("Missing member data for _GdkPixmapObject on All\n");
+CheckOffset(struct _GdkPixmapObject,parent_instance,0,1,44156);
+CheckOffset(struct _GdkPixmapObject,impl,0,1,44157);
+CheckOffset(struct _GdkPixmapObject,depth,0,1,44158);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPixmapObject,20, 12962, 2)
+CheckTypeSize(GdkPixmapObject,20, 12962, 2);
 #elif __x86_64__
-CheckTypeSize(GdkPixmapObject,40, 12962, 11)
+CheckTypeSize(GdkPixmapObject,40, 12962, 11);
 #elif __ia64__
-CheckTypeSize(GdkPixmapObject,40, 12962, 3)
+CheckTypeSize(GdkPixmapObject,40, 12962, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixmapObject,20, 12962, 6)
+CheckTypeSize(GdkPixmapObject,20, 12962, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkPixmapObject,40, 12962, 9)
+CheckTypeSize(GdkPixmapObject,40, 12962, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixmapObject,20, 12962, 10)
+CheckTypeSize(GdkPixmapObject,20, 12962, 10);
 #elif __s390x__
-CheckTypeSize(GdkPixmapObject,40, 12962, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12962,0);
-Msg("Find size of GdkPixmapObject (12962)\n");
+CheckTypeSize(GdkPixmapObject,40, 12962, 12);
+#elif 1
+CheckTypeSize(GdkPixmapObject,0, 12962, 1);
 #endif
 
 #if __i386__
@@ -12029,28 +12397,28 @@ CheckEnum("GDK_INPUT_EXCEPTION",GDK_INPUT_EXCEPTION,4,44161);
 CheckEnum("GDK_INPUT_READ",GDK_INPUT_READ,1,44159);
 CheckEnum("GDK_INPUT_WRITE",GDK_INPUT_WRITE,2,44160);
 CheckEnum("GDK_INPUT_EXCEPTION",GDK_INPUT_EXCEPTION,4,44161);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12963,0);
-Msg("Find size of anon-gtk-2.0/gdk/gdk.h-59 (12963)\n");
+#elif 1
+CheckEnum("GDK_INPUT_READ",GDK_INPUT_READ,1,44159);
+CheckEnum("GDK_INPUT_WRITE",GDK_INPUT_WRITE,2,44160);
+CheckEnum("GDK_INPUT_EXCEPTION",GDK_INPUT_EXCEPTION,4,44161);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkInputCondition,4, 12964, 2)
+CheckTypeSize(GdkInputCondition,4, 12964, 2);
 #elif __x86_64__
-CheckTypeSize(GdkInputCondition,4, 12964, 11)
+CheckTypeSize(GdkInputCondition,4, 12964, 11);
 #elif __ia64__
-CheckTypeSize(GdkInputCondition,4, 12964, 3)
+CheckTypeSize(GdkInputCondition,4, 12964, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkInputCondition,4, 12964, 6)
+CheckTypeSize(GdkInputCondition,4, 12964, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkInputCondition,4, 12964, 9)
+CheckTypeSize(GdkInputCondition,4, 12964, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkInputCondition,4, 12964, 10)
+CheckTypeSize(GdkInputCondition,4, 12964, 10);
 #elif __s390x__
-CheckTypeSize(GdkInputCondition,4, 12964, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12964,0);
-Msg("Find size of GdkInputCondition (12964)\n");
+CheckTypeSize(GdkInputCondition,4, 12964, 12);
+#elif 1
+CheckTypeSize(GdkInputCondition,0, 12964, 1);
 #endif
 
 #if __i386__
@@ -12060,740 +12428,145 @@ Msg("Find size of GdkInputCondition (12964)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12965,0);
-Msg("Find size of fptr_gdk_604 (12965)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(GdkInputFunction,4, 12966, 2)
+CheckTypeSize(GdkInputFunction,4, 12966, 2);
 #elif __x86_64__
-CheckTypeSize(GdkInputFunction,8, 12966, 11)
+CheckTypeSize(GdkInputFunction,8, 12966, 11);
 #elif __ia64__
-CheckTypeSize(GdkInputFunction,8, 12966, 3)
+CheckTypeSize(GdkInputFunction,8, 12966, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkInputFunction,4, 12966, 6)
+CheckTypeSize(GdkInputFunction,4, 12966, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkInputFunction,8, 12966, 9)
+CheckTypeSize(GdkInputFunction,8, 12966, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkInputFunction,4, 12966, 10)
+CheckTypeSize(GdkInputFunction,4, 12966, 10);
 #elif __s390x__
-CheckTypeSize(GdkInputFunction,8, 12966, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12966,0);
-Msg("Find size of GdkInputFunction (12966)\n");
+CheckTypeSize(GdkInputFunction,8, 12966, 12);
+#elif 1
+CheckTypeSize(GdkInputFunction,0, 12966, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkImageClass,68, 12967, 2)
+CheckTypeSize(struct _GdkImageClass,68, 12967, 2);
 Msg("Missing member data for _GdkImageClass on IA32\n");
-CheckOffset(struct _GdkImageClass,parent_class,0,2,44165)
+CheckOffset(struct _GdkImageClass,parent_class,0,2,44165);
 #elif __x86_64__
-CheckTypeSize(struct _GdkImageClass,136, 12967, 11)
+CheckTypeSize(struct _GdkImageClass,136, 12967, 11);
 Msg("Missing member data for _GdkImageClass on x86-64\n");
-CheckOffset(struct _GdkImageClass,parent_class,0,11,44165)
+CheckOffset(struct _GdkImageClass,parent_class,0,11,44165);
 #elif __ia64__
-CheckTypeSize(struct _GdkImageClass,136, 12967, 3)
+CheckTypeSize(struct _GdkImageClass,136, 12967, 3);
 Msg("Missing member data for _GdkImageClass on IA64\n");
-CheckOffset(struct _GdkImageClass,parent_class,0,3,44165)
+CheckOffset(struct _GdkImageClass,parent_class,0,3,44165);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkImageClass,68, 12967, 6)
+CheckTypeSize(struct _GdkImageClass,68, 12967, 6);
 Msg("Missing member data for _GdkImageClass on PPC32\n");
-CheckOffset(struct _GdkImageClass,parent_class,0,6,44165)
+CheckOffset(struct _GdkImageClass,parent_class,0,6,44165);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkImageClass,136, 12967, 9)
+CheckTypeSize(struct _GdkImageClass,136, 12967, 9);
 Msg("Missing member data for _GdkImageClass on PPC64\n");
-CheckOffset(struct _GdkImageClass,parent_class,0,9,44165)
+CheckOffset(struct _GdkImageClass,parent_class,0,9,44165);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkImageClass,68, 12967, 10)
+CheckTypeSize(struct _GdkImageClass,68, 12967, 10);
 Msg("Missing member data for _GdkImageClass on S390\n");
-CheckOffset(struct _GdkImageClass,parent_class,0,10,44165)
+CheckOffset(struct _GdkImageClass,parent_class,0,10,44165);
 #elif __s390x__
-CheckTypeSize(struct _GdkImageClass,136, 12967, 12)
+CheckTypeSize(struct _GdkImageClass,136, 12967, 12);
 Msg("Missing member data for _GdkImageClass on S390X\n");
-CheckOffset(struct _GdkImageClass,parent_class,0,12,44165)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12967,0);
-Msg("Find size of _GdkImageClass (12967)\n");
+CheckOffset(struct _GdkImageClass,parent_class,0,12,44165);
+#elif 1
+CheckTypeSize(struct _GdkImageClass,0, 12967, 1);
+Msg("Missing member data for _GdkImageClass on All\n");
+CheckOffset(struct _GdkImageClass,parent_class,0,1,44165);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkImageClass,68, 12968, 2)
+CheckTypeSize(GdkImageClass,68, 12968, 2);
 #elif __x86_64__
-CheckTypeSize(GdkImageClass,136, 12968, 11)
+CheckTypeSize(GdkImageClass,136, 12968, 11);
 #elif __ia64__
-CheckTypeSize(GdkImageClass,136, 12968, 3)
+CheckTypeSize(GdkImageClass,136, 12968, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkImageClass,68, 12968, 6)
+CheckTypeSize(GdkImageClass,68, 12968, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkImageClass,136, 12968, 9)
+CheckTypeSize(GdkImageClass,136, 12968, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkImageClass,68, 12968, 10)
+CheckTypeSize(GdkImageClass,68, 12968, 10);
 #elif __s390x__
-CheckTypeSize(GdkImageClass,136, 12968, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12968,0);
-Msg("Find size of GdkImageClass (12968)\n");
+CheckTypeSize(GdkImageClass,136, 12968, 12);
+#elif 1
+CheckTypeSize(GdkImageClass,0, 12968, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkDestroyNotify,4, 12969, 2)
+CheckTypeSize(GdkDestroyNotify,4, 12969, 2);
 #elif __x86_64__
-CheckTypeSize(GdkDestroyNotify,8, 12969, 11)
+CheckTypeSize(GdkDestroyNotify,8, 12969, 11);
 #elif __ia64__
-CheckTypeSize(GdkDestroyNotify,8, 12969, 3)
+CheckTypeSize(GdkDestroyNotify,8, 12969, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkDestroyNotify,4, 12969, 6)
+CheckTypeSize(GdkDestroyNotify,4, 12969, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkDestroyNotify,8, 12969, 9)
+CheckTypeSize(GdkDestroyNotify,8, 12969, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkDestroyNotify,4, 12969, 10)
+CheckTypeSize(GdkDestroyNotify,4, 12969, 10);
 #elif __s390x__
-CheckTypeSize(GdkDestroyNotify,8, 12969, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12969,0);
-Msg("Find size of GdkDestroyNotify (12969)\n");
+CheckTypeSize(GdkDestroyNotify,8, 12969, 12);
+#elif 1
+CheckTypeSize(GdkDestroyNotify,0, 12969, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkKeymapClass,76, 12970, 2)
-CheckMemberSize(struct _GdkKeymapClass,direction_changed,4,2,44168)
-CheckOffset(struct _GdkKeymapClass,direction_changed,68,2,44168)
-CheckMemberSize(struct _GdkKeymapClass,keys_changed,4,2,44169)
-CheckOffset(struct _GdkKeymapClass,keys_changed,72,2,44169)
+CheckTypeSize(struct _GdkKeymapClass,76, 12970, 2);
+CheckMemberSize(struct _GdkKeymapClass,direction_changed,4,2,44168);
+CheckOffset(struct _GdkKeymapClass,direction_changed,68,2,44168);
+CheckMemberSize(struct _GdkKeymapClass,keys_changed,4,2,44169);
+CheckOffset(struct _GdkKeymapClass,keys_changed,72,2,44169);
 #elif __x86_64__
-CheckTypeSize(struct _GdkKeymapClass,152, 12970, 11)
-CheckMemberSize(struct _GdkKeymapClass,direction_changed,8,11,44168)
-CheckOffset(struct _GdkKeymapClass,direction_changed,136,11,44168)
-CheckMemberSize(struct _GdkKeymapClass,keys_changed,8,11,44169)
-CheckOffset(struct _GdkKeymapClass,keys_changed,144,11,44169)
+CheckTypeSize(struct _GdkKeymapClass,152, 12970, 11);
+CheckMemberSize(struct _GdkKeymapClass,direction_changed,8,11,44168);
+CheckOffset(struct _GdkKeymapClass,direction_changed,136,11,44168);
+CheckMemberSize(struct _GdkKeymapClass,keys_changed,8,11,44169);
+CheckOffset(struct _GdkKeymapClass,keys_changed,144,11,44169);
 #elif __ia64__
-CheckTypeSize(struct _GdkKeymapClass,152, 12970, 3)
-CheckMemberSize(struct _GdkKeymapClass,direction_changed,8,3,44168)
-CheckOffset(struct _GdkKeymapClass,direction_changed,136,3,44168)
-CheckMemberSize(struct _GdkKeymapClass,keys_changed,8,3,44169)
-CheckOffset(struct _GdkKeymapClass,keys_changed,144,3,44169)
+CheckTypeSize(struct _GdkKeymapClass,152, 12970, 3);
+CheckMemberSize(struct _GdkKeymapClass,direction_changed,8,3,44168);
+CheckOffset(struct _GdkKeymapClass,direction_changed,136,3,44168);
+CheckMemberSize(struct _GdkKeymapClass,keys_changed,8,3,44169);
+CheckOffset(struct _GdkKeymapClass,keys_changed,144,3,44169);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkKeymapClass,76, 12970, 6)
-CheckMemberSize(struct _GdkKeymapClass,direction_changed,4,6,44168)
-CheckOffset(struct _GdkKeymapClass,direction_changed,68,6,44168)
-CheckMemberSize(struct _GdkKeymapClass,keys_changed,4,6,44169)
-CheckOffset(struct _GdkKeymapClass,keys_changed,72,6,44169)
+CheckTypeSize(struct _GdkKeymapClass,76, 12970, 6);
+CheckMemberSize(struct _GdkKeymapClass,direction_changed,4,6,44168);
+CheckOffset(struct _GdkKeymapClass,direction_changed,68,6,44168);
+CheckMemberSize(struct _GdkKeymapClass,keys_changed,4,6,44169);
+CheckOffset(struct _GdkKeymapClass,keys_changed,72,6,44169);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkKeymapClass,152, 12970, 9)
-CheckMemberSize(struct _GdkKeymapClass,direction_changed,8,9,44168)
-CheckOffset(struct _GdkKeymapClass,direction_changed,136,9,44168)
-CheckMemberSize(struct _GdkKeymapClass,keys_changed,8,9,44169)
-CheckOffset(struct _GdkKeymapClass,keys_changed,144,9,44169)
+CheckTypeSize(struct _GdkKeymapClass,152, 12970, 9);
+CheckMemberSize(struct _GdkKeymapClass,direction_changed,8,9,44168);
+CheckOffset(struct _GdkKeymapClass,direction_changed,136,9,44168);
+CheckMemberSize(struct _GdkKeymapClass,keys_changed,8,9,44169);
+CheckOffset(struct _GdkKeymapClass,keys_changed,144,9,44169);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkKeymapClass,76, 12970, 10)
-CheckMemberSize(struct _GdkKeymapClass,direction_changed,4,10,44168)
-CheckOffset(struct _GdkKeymapClass,direction_changed,68,10,44168)
-CheckMemberSize(struct _GdkKeymapClass,keys_changed,4,10,44169)
-CheckOffset(struct _GdkKeymapClass,keys_changed,72,10,44169)
+CheckTypeSize(struct _GdkKeymapClass,76, 12970, 10);
+CheckMemberSize(struct _GdkKeymapClass,direction_changed,4,10,44168);
+CheckOffset(struct _GdkKeymapClass,direction_changed,68,10,44168);
+CheckMemberSize(struct _GdkKeymapClass,keys_changed,4,10,44169);
+CheckOffset(struct _GdkKeymapClass,keys_changed,72,10,44169);
 #elif __s390x__
-CheckTypeSize(struct _GdkKeymapClass,152, 12970, 12)
-CheckMemberSize(struct _GdkKeymapClass,direction_changed,8,12,44168)
-CheckOffset(struct _GdkKeymapClass,direction_changed,136,12,44168)
-CheckMemberSize(struct _GdkKeymapClass,keys_changed,8,12,44169)
-CheckOffset(struct _GdkKeymapClass,keys_changed,144,12,44169)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12970,0);
-Msg("Find size of _GdkKeymapClass (12970)\n");
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12971,0);
-Msg("Find size of fptr_gdk_215 (12971)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GdkKeymapClass,76, 12972, 2)
-#elif __x86_64__
-CheckTypeSize(GdkKeymapClass,152, 12972, 11)
-#elif __ia64__
-CheckTypeSize(GdkKeymapClass,152, 12972, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkKeymapClass,76, 12972, 6)
-#elif __powerpc64__
-CheckTypeSize(GdkKeymapClass,152, 12972, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkKeymapClass,76, 12972, 10)
-#elif __s390x__
-CheckTypeSize(GdkKeymapClass,152, 12972, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12972,0);
-Msg("Find size of GdkKeymapClass (12972)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(struct _GdkDrawableClass,224, 12973, 2)
-CheckMemberSize(struct _GdkDrawableClass,create_gc,4,2,44174)
-CheckOffset(struct _GdkDrawableClass,create_gc,68,2,44174)
-CheckMemberSize(struct _GdkDrawableClass,draw_rectangle,4,2,44182)
-CheckOffset(struct _GdkDrawableClass,draw_rectangle,72,2,44182)
-CheckMemberSize(struct _GdkDrawableClass,draw_arc,4,2,44192)
-CheckOffset(struct _GdkDrawableClass,draw_arc,76,2,44192)
-CheckMemberSize(struct _GdkDrawableClass,draw_polygon,4,2,44198)
-CheckOffset(struct _GdkDrawableClass,draw_polygon,80,2,44198)
-CheckMemberSize(struct _GdkDrawableClass,draw_text,4,2,44206)
-CheckOffset(struct _GdkDrawableClass,draw_text,84,2,44206)
-CheckMemberSize(struct _GdkDrawableClass,draw_text_wc,4,2,44214)
-CheckOffset(struct _GdkDrawableClass,draw_text_wc,88,2,44214)
-CheckMemberSize(struct _GdkDrawableClass,draw_drawable,4,2,44224)
-CheckOffset(struct _GdkDrawableClass,draw_drawable,92,2,44224)
-CheckMemberSize(struct _GdkDrawableClass,draw_points,4,2,44229)
-CheckOffset(struct _GdkDrawableClass,draw_points,96,2,44229)
-CheckMemberSize(struct _GdkDrawableClass,draw_segments,4,2,44234)
-CheckOffset(struct _GdkDrawableClass,draw_segments,100,2,44234)
-CheckMemberSize(struct _GdkDrawableClass,draw_lines,4,2,44235)
-CheckOffset(struct _GdkDrawableClass,draw_lines,104,2,44235)
-CheckMemberSize(struct _GdkDrawableClass,draw_glyphs,4,2,44242)
-CheckOffset(struct _GdkDrawableClass,draw_glyphs,108,2,44242)
-CheckMemberSize(struct _GdkDrawableClass,draw_image,4,2,44252)
-CheckOffset(struct _GdkDrawableClass,draw_image,112,2,44252)
-CheckMemberSize(struct _GdkDrawableClass,get_depth,4,2,44254)
-CheckOffset(struct _GdkDrawableClass,get_depth,116,2,44254)
-CheckMemberSize(struct _GdkDrawableClass,get_size,4,2,44258)
-CheckOffset(struct _GdkDrawableClass,get_size,120,2,44258)
-CheckMemberSize(struct _GdkDrawableClass,set_colormap,4,2,44261)
-CheckOffset(struct _GdkDrawableClass,set_colormap,124,2,44261)
-CheckMemberSize(struct _GdkDrawableClass,get_colormap,4,2,44263)
-CheckOffset(struct _GdkDrawableClass,get_colormap,128,2,44263)
-CheckMemberSize(struct _GdkDrawableClass,get_visual,4,2,44265)
-CheckOffset(struct _GdkDrawableClass,get_visual,132,2,44265)
-CheckMemberSize(struct _GdkDrawableClass,get_screen,4,2,44267)
-CheckOffset(struct _GdkDrawableClass,get_screen,136,2,44267)
-CheckMemberSize(struct _GdkDrawableClass,get_image,4,2,44273)
-CheckOffset(struct _GdkDrawableClass,get_image,140,2,44273)
-CheckMemberSize(struct _GdkDrawableClass,get_clip_region,4,2,44275)
-CheckOffset(struct _GdkDrawableClass,get_clip_region,144,2,44275)
-CheckMemberSize(struct _GdkDrawableClass,get_visible_region,4,2,44276)
-CheckOffset(struct _GdkDrawableClass,get_visible_region,148,2,44276)
-CheckMemberSize(struct _GdkDrawableClass,get_composite_drawable,4,2,44284)
-CheckOffset(struct _GdkDrawableClass,get_composite_drawable,152,2,44284)
-CheckMemberSize(struct _GdkDrawableClass,draw_pixbuf,4,2,44297)
-CheckOffset(struct _GdkDrawableClass,draw_pixbuf,156,2,44297)
-CheckMemberSize(struct _GdkDrawableClass,_copy_to_image,4,2,44306)
-CheckOffset(struct _GdkDrawableClass,_copy_to_image,160,2,44306)
-CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,4,2,44314)
-CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,164,2,44314)
-CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,4,2,44319)
-CheckOffset(struct _GdkDrawableClass,draw_trapezoids,168,2,44319)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved3,4,2,44320)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved3,172,2,44320)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,4,2,44321)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,176,2,44321)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,4,2,44322)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved5,180,2,44322)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved6,4,2,44323)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved6,184,2,44323)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved7,4,2,44324)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved7,188,2,44324)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved9,4,2,44325)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved9,192,2,44325)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved10,4,2,44326)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved10,196,2,44326)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved11,4,2,44327)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved11,200,2,44327)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved12,4,2,44328)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved12,204,2,44328)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved13,4,2,44329)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved13,208,2,44329)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved14,4,2,44330)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved14,212,2,44330)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved15,4,2,44331)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved15,216,2,44331)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved16,4,2,44332)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved16,220,2,44332)
-#elif __x86_64__
-CheckTypeSize(struct _GdkDrawableClass,448, 12973, 11)
-CheckMemberSize(struct _GdkDrawableClass,create_gc,8,11,44174)
-CheckOffset(struct _GdkDrawableClass,create_gc,136,11,44174)
-CheckMemberSize(struct _GdkDrawableClass,draw_rectangle,8,11,44182)
-CheckOffset(struct _GdkDrawableClass,draw_rectangle,144,11,44182)
-CheckMemberSize(struct _GdkDrawableClass,draw_arc,8,11,44192)
-CheckOffset(struct _GdkDrawableClass,draw_arc,152,11,44192)
-CheckMemberSize(struct _GdkDrawableClass,draw_polygon,8,11,44198)
-CheckOffset(struct _GdkDrawableClass,draw_polygon,160,11,44198)
-CheckMemberSize(struct _GdkDrawableClass,draw_text,8,11,44206)
-CheckOffset(struct _GdkDrawableClass,draw_text,168,11,44206)
-CheckMemberSize(struct _GdkDrawableClass,draw_text_wc,8,11,44214)
-CheckOffset(struct _GdkDrawableClass,draw_text_wc,176,11,44214)
-CheckMemberSize(struct _GdkDrawableClass,draw_drawable,8,11,44224)
-CheckOffset(struct _GdkDrawableClass,draw_drawable,184,11,44224)
-CheckMemberSize(struct _GdkDrawableClass,draw_points,8,11,44229)
-CheckOffset(struct _GdkDrawableClass,draw_points,192,11,44229)
-CheckMemberSize(struct _GdkDrawableClass,draw_segments,8,11,44234)
-CheckOffset(struct _GdkDrawableClass,draw_segments,200,11,44234)
-CheckMemberSize(struct _GdkDrawableClass,draw_lines,8,11,44235)
-CheckOffset(struct _GdkDrawableClass,draw_lines,208,11,44235)
-CheckMemberSize(struct _GdkDrawableClass,draw_glyphs,8,11,44242)
-CheckOffset(struct _GdkDrawableClass,draw_glyphs,216,11,44242)
-CheckMemberSize(struct _GdkDrawableClass,draw_image,8,11,44252)
-CheckOffset(struct _GdkDrawableClass,draw_image,224,11,44252)
-CheckMemberSize(struct _GdkDrawableClass,get_depth,8,11,44254)
-CheckOffset(struct _GdkDrawableClass,get_depth,232,11,44254)
-CheckMemberSize(struct _GdkDrawableClass,get_size,8,11,44258)
-CheckOffset(struct _GdkDrawableClass,get_size,240,11,44258)
-CheckMemberSize(struct _GdkDrawableClass,set_colormap,8,11,44261)
-CheckOffset(struct _GdkDrawableClass,set_colormap,248,11,44261)
-CheckMemberSize(struct _GdkDrawableClass,get_colormap,8,11,44263)
-CheckOffset(struct _GdkDrawableClass,get_colormap,256,11,44263)
-CheckMemberSize(struct _GdkDrawableClass,get_visual,8,11,44265)
-CheckOffset(struct _GdkDrawableClass,get_visual,264,11,44265)
-CheckMemberSize(struct _GdkDrawableClass,get_screen,8,11,44267)
-CheckOffset(struct _GdkDrawableClass,get_screen,272,11,44267)
-CheckMemberSize(struct _GdkDrawableClass,get_image,8,11,44273)
-CheckOffset(struct _GdkDrawableClass,get_image,280,11,44273)
-CheckMemberSize(struct _GdkDrawableClass,get_clip_region,8,11,44275)
-CheckOffset(struct _GdkDrawableClass,get_clip_region,288,11,44275)
-CheckMemberSize(struct _GdkDrawableClass,get_visible_region,8,11,44276)
-CheckOffset(struct _GdkDrawableClass,get_visible_region,296,11,44276)
-CheckMemberSize(struct _GdkDrawableClass,get_composite_drawable,8,11,44284)
-CheckOffset(struct _GdkDrawableClass,get_composite_drawable,304,11,44284)
-CheckMemberSize(struct _GdkDrawableClass,draw_pixbuf,8,11,44297)
-CheckOffset(struct _GdkDrawableClass,draw_pixbuf,312,11,44297)
-CheckMemberSize(struct _GdkDrawableClass,_copy_to_image,8,11,44306)
-CheckOffset(struct _GdkDrawableClass,_copy_to_image,320,11,44306)
-CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,8,11,44314)
-CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,328,11,44314)
-CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,8,11,44319)
-CheckOffset(struct _GdkDrawableClass,draw_trapezoids,336,11,44319)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved3,8,11,44320)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved3,344,11,44320)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,8,11,44321)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,352,11,44321)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,8,11,44322)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved5,360,11,44322)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved6,8,11,44323)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved6,368,11,44323)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved7,8,11,44324)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved7,376,11,44324)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved9,8,11,44325)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved9,384,11,44325)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved10,8,11,44326)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved10,392,11,44326)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved11,8,11,44327)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved11,400,11,44327)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved12,8,11,44328)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved12,408,11,44328)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved13,8,11,44329)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved13,416,11,44329)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved14,8,11,44330)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved14,424,11,44330)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved15,8,11,44331)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved15,432,11,44331)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved16,8,11,44332)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved16,440,11,44332)
-#elif __ia64__
-CheckTypeSize(struct _GdkDrawableClass,448, 12973, 3)
-CheckMemberSize(struct _GdkDrawableClass,create_gc,8,3,44174)
-CheckOffset(struct _GdkDrawableClass,create_gc,136,3,44174)
-CheckMemberSize(struct _GdkDrawableClass,draw_rectangle,8,3,44182)
-CheckOffset(struct _GdkDrawableClass,draw_rectangle,144,3,44182)
-CheckMemberSize(struct _GdkDrawableClass,draw_arc,8,3,44192)
-CheckOffset(struct _GdkDrawableClass,draw_arc,152,3,44192)
-CheckMemberSize(struct _GdkDrawableClass,draw_polygon,8,3,44198)
-CheckOffset(struct _GdkDrawableClass,draw_polygon,160,3,44198)
-CheckMemberSize(struct _GdkDrawableClass,draw_text,8,3,44206)
-CheckOffset(struct _GdkDrawableClass,draw_text,168,3,44206)
-CheckMemberSize(struct _GdkDrawableClass,draw_text_wc,8,3,44214)
-CheckOffset(struct _GdkDrawableClass,draw_text_wc,176,3,44214)
-CheckMemberSize(struct _GdkDrawableClass,draw_drawable,8,3,44224)
-CheckOffset(struct _GdkDrawableClass,draw_drawable,184,3,44224)
-CheckMemberSize(struct _GdkDrawableClass,draw_points,8,3,44229)
-CheckOffset(struct _GdkDrawableClass,draw_points,192,3,44229)
-CheckMemberSize(struct _GdkDrawableClass,draw_segments,8,3,44234)
-CheckOffset(struct _GdkDrawableClass,draw_segments,200,3,44234)
-CheckMemberSize(struct _GdkDrawableClass,draw_lines,8,3,44235)
-CheckOffset(struct _GdkDrawableClass,draw_lines,208,3,44235)
-CheckMemberSize(struct _GdkDrawableClass,draw_glyphs,8,3,44242)
-CheckOffset(struct _GdkDrawableClass,draw_glyphs,216,3,44242)
-CheckMemberSize(struct _GdkDrawableClass,draw_image,8,3,44252)
-CheckOffset(struct _GdkDrawableClass,draw_image,224,3,44252)
-CheckMemberSize(struct _GdkDrawableClass,get_depth,8,3,44254)
-CheckOffset(struct _GdkDrawableClass,get_depth,232,3,44254)
-CheckMemberSize(struct _GdkDrawableClass,get_size,8,3,44258)
-CheckOffset(struct _GdkDrawableClass,get_size,240,3,44258)
-CheckMemberSize(struct _GdkDrawableClass,set_colormap,8,3,44261)
-CheckOffset(struct _GdkDrawableClass,set_colormap,248,3,44261)
-CheckMemberSize(struct _GdkDrawableClass,get_colormap,8,3,44263)
-CheckOffset(struct _GdkDrawableClass,get_colormap,256,3,44263)
-CheckMemberSize(struct _GdkDrawableClass,get_visual,8,3,44265)
-CheckOffset(struct _GdkDrawableClass,get_visual,264,3,44265)
-CheckMemberSize(struct _GdkDrawableClass,get_screen,8,3,44267)
-CheckOffset(struct _GdkDrawableClass,get_screen,272,3,44267)
-CheckMemberSize(struct _GdkDrawableClass,get_image,8,3,44273)
-CheckOffset(struct _GdkDrawableClass,get_image,280,3,44273)
-CheckMemberSize(struct _GdkDrawableClass,get_clip_region,8,3,44275)
-CheckOffset(struct _GdkDrawableClass,get_clip_region,288,3,44275)
-CheckMemberSize(struct _GdkDrawableClass,get_visible_region,8,3,44276)
-CheckOffset(struct _GdkDrawableClass,get_visible_region,296,3,44276)
-CheckMemberSize(struct _GdkDrawableClass,get_composite_drawable,8,3,44284)
-CheckOffset(struct _GdkDrawableClass,get_composite_drawable,304,3,44284)
-CheckMemberSize(struct _GdkDrawableClass,draw_pixbuf,8,3,44297)
-CheckOffset(struct _GdkDrawableClass,draw_pixbuf,312,3,44297)
-CheckMemberSize(struct _GdkDrawableClass,_copy_to_image,8,3,44306)
-CheckOffset(struct _GdkDrawableClass,_copy_to_image,320,3,44306)
-CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,8,3,44314)
-CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,328,3,44314)
-CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,8,3,44319)
-CheckOffset(struct _GdkDrawableClass,draw_trapezoids,336,3,44319)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,8,3,44321)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,352,3,44321)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,8,3,44322)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved5,360,3,44322)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved6,8,3,44323)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved6,368,3,44323)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved7,8,3,44324)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved7,376,3,44324)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved9,8,3,44325)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved9,384,3,44325)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved10,8,3,44326)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved10,392,3,44326)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved11,8,3,44327)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved11,400,3,44327)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved12,8,3,44328)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved12,408,3,44328)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved13,8,3,44329)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved13,416,3,44329)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved14,8,3,44330)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved14,424,3,44330)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved15,8,3,44331)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved15,432,3,44331)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved16,8,3,44332)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved16,440,3,44332)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkDrawableClass,224, 12973, 6)
-CheckMemberSize(struct _GdkDrawableClass,create_gc,4,6,44174)
-CheckOffset(struct _GdkDrawableClass,create_gc,68,6,44174)
-CheckMemberSize(struct _GdkDrawableClass,draw_rectangle,4,6,44182)
-CheckOffset(struct _GdkDrawableClass,draw_rectangle,72,6,44182)
-CheckMemberSize(struct _GdkDrawableClass,draw_arc,4,6,44192)
-CheckOffset(struct _GdkDrawableClass,draw_arc,76,6,44192)
-CheckMemberSize(struct _GdkDrawableClass,draw_polygon,4,6,44198)
-CheckOffset(struct _GdkDrawableClass,draw_polygon,80,6,44198)
-CheckMemberSize(struct _GdkDrawableClass,draw_text,4,6,44206)
-CheckOffset(struct _GdkDrawableClass,draw_text,84,6,44206)
-CheckMemberSize(struct _GdkDrawableClass,draw_text_wc,4,6,44214)
-CheckOffset(struct _GdkDrawableClass,draw_text_wc,88,6,44214)
-CheckMemberSize(struct _GdkDrawableClass,draw_drawable,4,6,44224)
-CheckOffset(struct _GdkDrawableClass,draw_drawable,92,6,44224)
-CheckMemberSize(struct _GdkDrawableClass,draw_points,4,6,44229)
-CheckOffset(struct _GdkDrawableClass,draw_points,96,6,44229)
-CheckMemberSize(struct _GdkDrawableClass,draw_segments,4,6,44234)
-CheckOffset(struct _GdkDrawableClass,draw_segments,100,6,44234)
-CheckMemberSize(struct _GdkDrawableClass,draw_lines,4,6,44235)
-CheckOffset(struct _GdkDrawableClass,draw_lines,104,6,44235)
-CheckMemberSize(struct _GdkDrawableClass,draw_glyphs,4,6,44242)
-CheckOffset(struct _GdkDrawableClass,draw_glyphs,108,6,44242)
-CheckMemberSize(struct _GdkDrawableClass,draw_image,4,6,44252)
-CheckOffset(struct _GdkDrawableClass,draw_image,112,6,44252)
-CheckMemberSize(struct _GdkDrawableClass,get_depth,4,6,44254)
-CheckOffset(struct _GdkDrawableClass,get_depth,116,6,44254)
-CheckMemberSize(struct _GdkDrawableClass,get_size,4,6,44258)
-CheckOffset(struct _GdkDrawableClass,get_size,120,6,44258)
-CheckMemberSize(struct _GdkDrawableClass,set_colormap,4,6,44261)
-CheckOffset(struct _GdkDrawableClass,set_colormap,124,6,44261)
-CheckMemberSize(struct _GdkDrawableClass,get_colormap,4,6,44263)
-CheckOffset(struct _GdkDrawableClass,get_colormap,128,6,44263)
-CheckMemberSize(struct _GdkDrawableClass,get_visual,4,6,44265)
-CheckOffset(struct _GdkDrawableClass,get_visual,132,6,44265)
-CheckMemberSize(struct _GdkDrawableClass,get_screen,4,6,44267)
-CheckOffset(struct _GdkDrawableClass,get_screen,136,6,44267)
-CheckMemberSize(struct _GdkDrawableClass,get_image,4,6,44273)
-CheckOffset(struct _GdkDrawableClass,get_image,140,6,44273)
-CheckMemberSize(struct _GdkDrawableClass,get_clip_region,4,6,44275)
-CheckOffset(struct _GdkDrawableClass,get_clip_region,144,6,44275)
-CheckMemberSize(struct _GdkDrawableClass,get_visible_region,4,6,44276)
-CheckOffset(struct _GdkDrawableClass,get_visible_region,148,6,44276)
-CheckMemberSize(struct _GdkDrawableClass,get_composite_drawable,4,6,44284)
-CheckOffset(struct _GdkDrawableClass,get_composite_drawable,152,6,44284)
-CheckMemberSize(struct _GdkDrawableClass,draw_pixbuf,4,6,44297)
-CheckOffset(struct _GdkDrawableClass,draw_pixbuf,156,6,44297)
-CheckMemberSize(struct _GdkDrawableClass,_copy_to_image,4,6,44306)
-CheckOffset(struct _GdkDrawableClass,_copy_to_image,160,6,44306)
-CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,4,6,44314)
-CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,164,6,44314)
-CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,4,6,44319)
-CheckOffset(struct _GdkDrawableClass,draw_trapezoids,168,6,44319)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved3,4,6,44320)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved3,172,6,44320)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,4,6,44321)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,176,6,44321)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,4,6,44322)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved5,180,6,44322)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved6,4,6,44323)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved6,184,6,44323)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved7,4,6,44324)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved7,188,6,44324)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved9,4,6,44325)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved9,192,6,44325)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved10,4,6,44326)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved10,196,6,44326)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved11,4,6,44327)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved11,200,6,44327)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved12,4,6,44328)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved12,204,6,44328)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved13,4,6,44329)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved13,208,6,44329)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved14,4,6,44330)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved14,212,6,44330)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved15,4,6,44331)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved15,216,6,44331)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved16,4,6,44332)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved16,220,6,44332)
-#elif __powerpc64__
-CheckTypeSize(struct _GdkDrawableClass,448, 12973, 9)
-CheckMemberSize(struct _GdkDrawableClass,create_gc,8,9,44174)
-CheckOffset(struct _GdkDrawableClass,create_gc,136,9,44174)
-CheckMemberSize(struct _GdkDrawableClass,draw_rectangle,8,9,44182)
-CheckOffset(struct _GdkDrawableClass,draw_rectangle,144,9,44182)
-CheckMemberSize(struct _GdkDrawableClass,draw_arc,8,9,44192)
-CheckOffset(struct _GdkDrawableClass,draw_arc,152,9,44192)
-CheckMemberSize(struct _GdkDrawableClass,draw_polygon,8,9,44198)
-CheckOffset(struct _GdkDrawableClass,draw_polygon,160,9,44198)
-CheckMemberSize(struct _GdkDrawableClass,draw_text,8,9,44206)
-CheckOffset(struct _GdkDrawableClass,draw_text,168,9,44206)
-CheckMemberSize(struct _GdkDrawableClass,draw_text_wc,8,9,44214)
-CheckOffset(struct _GdkDrawableClass,draw_text_wc,176,9,44214)
-CheckMemberSize(struct _GdkDrawableClass,draw_drawable,8,9,44224)
-CheckOffset(struct _GdkDrawableClass,draw_drawable,184,9,44224)
-CheckMemberSize(struct _GdkDrawableClass,draw_points,8,9,44229)
-CheckOffset(struct _GdkDrawableClass,draw_points,192,9,44229)
-CheckMemberSize(struct _GdkDrawableClass,draw_segments,8,9,44234)
-CheckOffset(struct _GdkDrawableClass,draw_segments,200,9,44234)
-CheckMemberSize(struct _GdkDrawableClass,draw_lines,8,9,44235)
-CheckOffset(struct _GdkDrawableClass,draw_lines,208,9,44235)
-CheckMemberSize(struct _GdkDrawableClass,draw_glyphs,8,9,44242)
-CheckOffset(struct _GdkDrawableClass,draw_glyphs,216,9,44242)
-CheckMemberSize(struct _GdkDrawableClass,draw_image,8,9,44252)
-CheckOffset(struct _GdkDrawableClass,draw_image,224,9,44252)
-CheckMemberSize(struct _GdkDrawableClass,get_depth,8,9,44254)
-CheckOffset(struct _GdkDrawableClass,get_depth,232,9,44254)
-CheckMemberSize(struct _GdkDrawableClass,get_size,8,9,44258)
-CheckOffset(struct _GdkDrawableClass,get_size,240,9,44258)
-CheckMemberSize(struct _GdkDrawableClass,set_colormap,8,9,44261)
-CheckOffset(struct _GdkDrawableClass,set_colormap,248,9,44261)
-CheckMemberSize(struct _GdkDrawableClass,get_colormap,8,9,44263)
-CheckOffset(struct _GdkDrawableClass,get_colormap,256,9,44263)
-CheckMemberSize(struct _GdkDrawableClass,get_visual,8,9,44265)
-CheckOffset(struct _GdkDrawableClass,get_visual,264,9,44265)
-CheckMemberSize(struct _GdkDrawableClass,get_screen,8,9,44267)
-CheckOffset(struct _GdkDrawableClass,get_screen,272,9,44267)
-CheckMemberSize(struct _GdkDrawableClass,get_image,8,9,44273)
-CheckOffset(struct _GdkDrawableClass,get_image,280,9,44273)
-CheckMemberSize(struct _GdkDrawableClass,get_clip_region,8,9,44275)
-CheckOffset(struct _GdkDrawableClass,get_clip_region,288,9,44275)
-CheckMemberSize(struct _GdkDrawableClass,get_visible_region,8,9,44276)
-CheckOffset(struct _GdkDrawableClass,get_visible_region,296,9,44276)
-CheckMemberSize(struct _GdkDrawableClass,get_composite_drawable,8,9,44284)
-CheckOffset(struct _GdkDrawableClass,get_composite_drawable,304,9,44284)
-CheckMemberSize(struct _GdkDrawableClass,draw_pixbuf,8,9,44297)
-CheckOffset(struct _GdkDrawableClass,draw_pixbuf,312,9,44297)
-CheckMemberSize(struct _GdkDrawableClass,_copy_to_image,8,9,44306)
-CheckOffset(struct _GdkDrawableClass,_copy_to_image,320,9,44306)
-CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,8,9,44314)
-CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,328,9,44314)
-CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,8,9,44319)
-CheckOffset(struct _GdkDrawableClass,draw_trapezoids,336,9,44319)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved3,8,9,44320)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved3,344,9,44320)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,8,9,44321)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,352,9,44321)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,8,9,44322)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved5,360,9,44322)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved6,8,9,44323)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved6,368,9,44323)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved7,8,9,44324)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved7,376,9,44324)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved9,8,9,44325)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved9,384,9,44325)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved10,8,9,44326)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved10,392,9,44326)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved11,8,9,44327)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved11,400,9,44327)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved12,8,9,44328)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved12,408,9,44328)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved13,8,9,44329)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved13,416,9,44329)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved14,8,9,44330)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved14,424,9,44330)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved15,8,9,44331)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved15,432,9,44331)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved16,8,9,44332)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved16,440,9,44332)
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkDrawableClass,224, 12973, 10)
-CheckMemberSize(struct _GdkDrawableClass,create_gc,4,10,44174)
-CheckOffset(struct _GdkDrawableClass,create_gc,68,10,44174)
-CheckMemberSize(struct _GdkDrawableClass,draw_rectangle,4,10,44182)
-CheckOffset(struct _GdkDrawableClass,draw_rectangle,72,10,44182)
-CheckMemberSize(struct _GdkDrawableClass,draw_arc,4,10,44192)
-CheckOffset(struct _GdkDrawableClass,draw_arc,76,10,44192)
-CheckMemberSize(struct _GdkDrawableClass,draw_polygon,4,10,44198)
-CheckOffset(struct _GdkDrawableClass,draw_polygon,80,10,44198)
-CheckMemberSize(struct _GdkDrawableClass,draw_text,4,10,44206)
-CheckOffset(struct _GdkDrawableClass,draw_text,84,10,44206)
-CheckMemberSize(struct _GdkDrawableClass,draw_text_wc,4,10,44214)
-CheckOffset(struct _GdkDrawableClass,draw_text_wc,88,10,44214)
-CheckMemberSize(struct _GdkDrawableClass,draw_drawable,4,10,44224)
-CheckOffset(struct _GdkDrawableClass,draw_drawable,92,10,44224)
-CheckMemberSize(struct _GdkDrawableClass,draw_points,4,10,44229)
-CheckOffset(struct _GdkDrawableClass,draw_points,96,10,44229)
-CheckMemberSize(struct _GdkDrawableClass,draw_segments,4,10,44234)
-CheckOffset(struct _GdkDrawableClass,draw_segments,100,10,44234)
-CheckMemberSize(struct _GdkDrawableClass,draw_lines,4,10,44235)
-CheckOffset(struct _GdkDrawableClass,draw_lines,104,10,44235)
-CheckMemberSize(struct _GdkDrawableClass,draw_glyphs,4,10,44242)
-CheckOffset(struct _GdkDrawableClass,draw_glyphs,108,10,44242)
-CheckMemberSize(struct _GdkDrawableClass,draw_image,4,10,44252)
-CheckOffset(struct _GdkDrawableClass,draw_image,112,10,44252)
-CheckMemberSize(struct _GdkDrawableClass,get_depth,4,10,44254)
-CheckOffset(struct _GdkDrawableClass,get_depth,116,10,44254)
-CheckMemberSize(struct _GdkDrawableClass,get_size,4,10,44258)
-CheckOffset(struct _GdkDrawableClass,get_size,120,10,44258)
-CheckMemberSize(struct _GdkDrawableClass,set_colormap,4,10,44261)
-CheckOffset(struct _GdkDrawableClass,set_colormap,124,10,44261)
-CheckMemberSize(struct _GdkDrawableClass,get_colormap,4,10,44263)
-CheckOffset(struct _GdkDrawableClass,get_colormap,128,10,44263)
-CheckMemberSize(struct _GdkDrawableClass,get_visual,4,10,44265)
-CheckOffset(struct _GdkDrawableClass,get_visual,132,10,44265)
-CheckMemberSize(struct _GdkDrawableClass,get_screen,4,10,44267)
-CheckOffset(struct _GdkDrawableClass,get_screen,136,10,44267)
-CheckMemberSize(struct _GdkDrawableClass,get_image,4,10,44273)
-CheckOffset(struct _GdkDrawableClass,get_image,140,10,44273)
-CheckMemberSize(struct _GdkDrawableClass,get_clip_region,4,10,44275)
-CheckOffset(struct _GdkDrawableClass,get_clip_region,144,10,44275)
-CheckMemberSize(struct _GdkDrawableClass,get_visible_region,4,10,44276)
-CheckOffset(struct _GdkDrawableClass,get_visible_region,148,10,44276)
-CheckMemberSize(struct _GdkDrawableClass,get_composite_drawable,4,10,44284)
-CheckOffset(struct _GdkDrawableClass,get_composite_drawable,152,10,44284)
-CheckMemberSize(struct _GdkDrawableClass,draw_pixbuf,4,10,44297)
-CheckOffset(struct _GdkDrawableClass,draw_pixbuf,156,10,44297)
-CheckMemberSize(struct _GdkDrawableClass,_copy_to_image,4,10,44306)
-CheckOffset(struct _GdkDrawableClass,_copy_to_image,160,10,44306)
-CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,4,10,44314)
-CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,164,10,44314)
-CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,4,10,44319)
-CheckOffset(struct _GdkDrawableClass,draw_trapezoids,168,10,44319)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved3,4,10,44320)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved3,172,10,44320)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,4,10,44321)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,176,10,44321)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,4,10,44322)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved5,180,10,44322)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved6,4,10,44323)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved6,184,10,44323)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved7,4,10,44324)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved7,188,10,44324)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved9,4,10,44325)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved9,192,10,44325)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved10,4,10,44326)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved10,196,10,44326)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved11,4,10,44327)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved11,200,10,44327)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved12,4,10,44328)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved12,204,10,44328)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved13,4,10,44329)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved13,208,10,44329)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved14,4,10,44330)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved14,212,10,44330)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved15,4,10,44331)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved15,216,10,44331)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved16,4,10,44332)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved16,220,10,44332)
-#elif __s390x__
-CheckTypeSize(struct _GdkDrawableClass,448, 12973, 12)
-CheckMemberSize(struct _GdkDrawableClass,create_gc,8,12,44174)
-CheckOffset(struct _GdkDrawableClass,create_gc,136,12,44174)
-CheckMemberSize(struct _GdkDrawableClass,draw_rectangle,8,12,44182)
-CheckOffset(struct _GdkDrawableClass,draw_rectangle,144,12,44182)
-CheckMemberSize(struct _GdkDrawableClass,draw_arc,8,12,44192)
-CheckOffset(struct _GdkDrawableClass,draw_arc,152,12,44192)
-CheckMemberSize(struct _GdkDrawableClass,draw_polygon,8,12,44198)
-CheckOffset(struct _GdkDrawableClass,draw_polygon,160,12,44198)
-CheckMemberSize(struct _GdkDrawableClass,draw_text,8,12,44206)
-CheckOffset(struct _GdkDrawableClass,draw_text,168,12,44206)
-CheckMemberSize(struct _GdkDrawableClass,draw_text_wc,8,12,44214)
-CheckOffset(struct _GdkDrawableClass,draw_text_wc,176,12,44214)
-CheckMemberSize(struct _GdkDrawableClass,draw_drawable,8,12,44224)
-CheckOffset(struct _GdkDrawableClass,draw_drawable,184,12,44224)
-CheckMemberSize(struct _GdkDrawableClass,draw_points,8,12,44229)
-CheckOffset(struct _GdkDrawableClass,draw_points,192,12,44229)
-CheckMemberSize(struct _GdkDrawableClass,draw_segments,8,12,44234)
-CheckOffset(struct _GdkDrawableClass,draw_segments,200,12,44234)
-CheckMemberSize(struct _GdkDrawableClass,draw_lines,8,12,44235)
-CheckOffset(struct _GdkDrawableClass,draw_lines,208,12,44235)
-CheckMemberSize(struct _GdkDrawableClass,draw_glyphs,8,12,44242)
-CheckOffset(struct _GdkDrawableClass,draw_glyphs,216,12,44242)
-CheckMemberSize(struct _GdkDrawableClass,draw_image,8,12,44252)
-CheckOffset(struct _GdkDrawableClass,draw_image,224,12,44252)
-CheckMemberSize(struct _GdkDrawableClass,get_depth,8,12,44254)
-CheckOffset(struct _GdkDrawableClass,get_depth,232,12,44254)
-CheckMemberSize(struct _GdkDrawableClass,get_size,8,12,44258)
-CheckOffset(struct _GdkDrawableClass,get_size,240,12,44258)
-CheckMemberSize(struct _GdkDrawableClass,set_colormap,8,12,44261)
-CheckOffset(struct _GdkDrawableClass,set_colormap,248,12,44261)
-CheckMemberSize(struct _GdkDrawableClass,get_colormap,8,12,44263)
-CheckOffset(struct _GdkDrawableClass,get_colormap,256,12,44263)
-CheckMemberSize(struct _GdkDrawableClass,get_visual,8,12,44265)
-CheckOffset(struct _GdkDrawableClass,get_visual,264,12,44265)
-CheckMemberSize(struct _GdkDrawableClass,get_screen,8,12,44267)
-CheckOffset(struct _GdkDrawableClass,get_screen,272,12,44267)
-CheckMemberSize(struct _GdkDrawableClass,get_image,8,12,44273)
-CheckOffset(struct _GdkDrawableClass,get_image,280,12,44273)
-CheckMemberSize(struct _GdkDrawableClass,get_clip_region,8,12,44275)
-CheckOffset(struct _GdkDrawableClass,get_clip_region,288,12,44275)
-CheckMemberSize(struct _GdkDrawableClass,get_visible_region,8,12,44276)
-CheckOffset(struct _GdkDrawableClass,get_visible_region,296,12,44276)
-CheckMemberSize(struct _GdkDrawableClass,get_composite_drawable,8,12,44284)
-CheckOffset(struct _GdkDrawableClass,get_composite_drawable,304,12,44284)
-CheckMemberSize(struct _GdkDrawableClass,draw_pixbuf,8,12,44297)
-CheckOffset(struct _GdkDrawableClass,draw_pixbuf,312,12,44297)
-CheckMemberSize(struct _GdkDrawableClass,_copy_to_image,8,12,44306)
-CheckOffset(struct _GdkDrawableClass,_copy_to_image,320,12,44306)
-CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,8,12,44314)
-CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,328,12,44314)
-CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,8,12,44319)
-CheckOffset(struct _GdkDrawableClass,draw_trapezoids,336,12,44319)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved3,8,12,44320)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved3,344,12,44320)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,8,12,44321)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,352,12,44321)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,8,12,44322)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved5,360,12,44322)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved6,8,12,44323)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved6,368,12,44323)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved7,8,12,44324)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved7,376,12,44324)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved9,8,12,44325)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved9,384,12,44325)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved10,8,12,44326)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved10,392,12,44326)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved11,8,12,44327)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved11,400,12,44327)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved12,8,12,44328)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved12,408,12,44328)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved13,8,12,44329)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved13,416,12,44329)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved14,8,12,44330)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved14,424,12,44330)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved15,8,12,44331)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved15,432,12,44331)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved16,8,12,44332)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved16,440,12,44332)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12973,0);
-Msg("Find size of _GdkDrawableClass (12973)\n");
+CheckTypeSize(struct _GdkKeymapClass,152, 12970, 12);
+CheckMemberSize(struct _GdkKeymapClass,direction_changed,8,12,44168);
+CheckOffset(struct _GdkKeymapClass,direction_changed,136,12,44168);
+CheckMemberSize(struct _GdkKeymapClass,keys_changed,8,12,44169);
+CheckOffset(struct _GdkKeymapClass,keys_changed,144,12,44169);
+#elif 1
+CheckTypeSize(struct _GdkKeymapClass,0, 12970, 1);
+Msg("Missing member data for _GdkKeymapClass on All\n");
+CheckOffset(struct _GdkKeymapClass,parent_class,0,1,44166);
+CheckOffset(struct _GdkKeymapClass,direction_changed,0,1,44168);
+CheckOffset(struct _GdkKeymapClass,keys_changed,0,1,44169);
 #endif
 
 #if __i386__
@@ -12803,9 +12576,628 @@ Msg("Find size of _GdkDrawableClass (12973)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12974,0);
-Msg("Find size of fptr_gdk_206 (12974)\n");
+#elif 1
+#endif
+
+#if __i386__
+CheckTypeSize(GdkKeymapClass,76, 12972, 2);
+#elif __x86_64__
+CheckTypeSize(GdkKeymapClass,152, 12972, 11);
+#elif __ia64__
+CheckTypeSize(GdkKeymapClass,152, 12972, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkKeymapClass,76, 12972, 6);
+#elif __powerpc64__
+CheckTypeSize(GdkKeymapClass,152, 12972, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GdkKeymapClass,76, 12972, 10);
+#elif __s390x__
+CheckTypeSize(GdkKeymapClass,152, 12972, 12);
+#elif 1
+CheckTypeSize(GdkKeymapClass,0, 12972, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(struct _GdkDrawableClass,224, 12973, 2);
+CheckMemberSize(struct _GdkDrawableClass,create_gc,4,2,44174);
+CheckOffset(struct _GdkDrawableClass,create_gc,68,2,44174);
+CheckMemberSize(struct _GdkDrawableClass,draw_rectangle,4,2,44182);
+CheckOffset(struct _GdkDrawableClass,draw_rectangle,72,2,44182);
+CheckMemberSize(struct _GdkDrawableClass,draw_arc,4,2,44192);
+CheckOffset(struct _GdkDrawableClass,draw_arc,76,2,44192);
+CheckMemberSize(struct _GdkDrawableClass,draw_polygon,4,2,44198);
+CheckOffset(struct _GdkDrawableClass,draw_polygon,80,2,44198);
+CheckMemberSize(struct _GdkDrawableClass,draw_text,4,2,44206);
+CheckOffset(struct _GdkDrawableClass,draw_text,84,2,44206);
+CheckMemberSize(struct _GdkDrawableClass,draw_text_wc,4,2,44214);
+CheckOffset(struct _GdkDrawableClass,draw_text_wc,88,2,44214);
+CheckMemberSize(struct _GdkDrawableClass,draw_drawable,4,2,44224);
+CheckOffset(struct _GdkDrawableClass,draw_drawable,92,2,44224);
+CheckMemberSize(struct _GdkDrawableClass,draw_points,4,2,44229);
+CheckOffset(struct _GdkDrawableClass,draw_points,96,2,44229);
+CheckMemberSize(struct _GdkDrawableClass,draw_segments,4,2,44234);
+CheckOffset(struct _GdkDrawableClass,draw_segments,100,2,44234);
+CheckMemberSize(struct _GdkDrawableClass,draw_lines,4,2,44235);
+CheckOffset(struct _GdkDrawableClass,draw_lines,104,2,44235);
+CheckMemberSize(struct _GdkDrawableClass,draw_glyphs,4,2,44242);
+CheckOffset(struct _GdkDrawableClass,draw_glyphs,108,2,44242);
+CheckMemberSize(struct _GdkDrawableClass,draw_image,4,2,44252);
+CheckOffset(struct _GdkDrawableClass,draw_image,112,2,44252);
+CheckMemberSize(struct _GdkDrawableClass,get_depth,4,2,44254);
+CheckOffset(struct _GdkDrawableClass,get_depth,116,2,44254);
+CheckMemberSize(struct _GdkDrawableClass,get_size,4,2,44258);
+CheckOffset(struct _GdkDrawableClass,get_size,120,2,44258);
+CheckMemberSize(struct _GdkDrawableClass,set_colormap,4,2,44261);
+CheckOffset(struct _GdkDrawableClass,set_colormap,124,2,44261);
+CheckMemberSize(struct _GdkDrawableClass,get_colormap,4,2,44263);
+CheckOffset(struct _GdkDrawableClass,get_colormap,128,2,44263);
+CheckMemberSize(struct _GdkDrawableClass,get_visual,4,2,44265);
+CheckOffset(struct _GdkDrawableClass,get_visual,132,2,44265);
+CheckMemberSize(struct _GdkDrawableClass,get_screen,4,2,44267);
+CheckOffset(struct _GdkDrawableClass,get_screen,136,2,44267);
+CheckMemberSize(struct _GdkDrawableClass,get_image,4,2,44273);
+CheckOffset(struct _GdkDrawableClass,get_image,140,2,44273);
+CheckMemberSize(struct _GdkDrawableClass,get_clip_region,4,2,44275);
+CheckOffset(struct _GdkDrawableClass,get_clip_region,144,2,44275);
+CheckMemberSize(struct _GdkDrawableClass,get_visible_region,4,2,44276);
+CheckOffset(struct _GdkDrawableClass,get_visible_region,148,2,44276);
+CheckMemberSize(struct _GdkDrawableClass,get_composite_drawable,4,2,44284);
+CheckOffset(struct _GdkDrawableClass,get_composite_drawable,152,2,44284);
+CheckMemberSize(struct _GdkDrawableClass,draw_pixbuf,4,2,44297);
+CheckOffset(struct _GdkDrawableClass,draw_pixbuf,156,2,44297);
+CheckMemberSize(struct _GdkDrawableClass,_copy_to_image,4,2,44306);
+CheckOffset(struct _GdkDrawableClass,_copy_to_image,160,2,44306);
+CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,4,2,44314);
+CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,164,2,44314);
+CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,4,2,44319);
+CheckOffset(struct _GdkDrawableClass,draw_trapezoids,168,2,44319);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved3,4,2,44320);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved3,172,2,44320);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,4,2,44321);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,176,2,44321);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,4,2,44322);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved5,180,2,44322);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved6,4,2,44323);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved6,184,2,44323);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved7,4,2,44324);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved7,188,2,44324);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved9,4,2,44325);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved9,192,2,44325);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved10,4,2,44326);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved10,196,2,44326);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved11,4,2,44327);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved11,200,2,44327);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved12,4,2,44328);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved12,204,2,44328);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved13,4,2,44329);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved13,208,2,44329);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved14,4,2,44330);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved14,212,2,44330);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved15,4,2,44331);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved15,216,2,44331);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved16,4,2,44332);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved16,220,2,44332);
+#elif __x86_64__
+CheckTypeSize(struct _GdkDrawableClass,448, 12973, 11);
+CheckMemberSize(struct _GdkDrawableClass,create_gc,8,11,44174);
+CheckOffset(struct _GdkDrawableClass,create_gc,136,11,44174);
+CheckMemberSize(struct _GdkDrawableClass,draw_rectangle,8,11,44182);
+CheckOffset(struct _GdkDrawableClass,draw_rectangle,144,11,44182);
+CheckMemberSize(struct _GdkDrawableClass,draw_arc,8,11,44192);
+CheckOffset(struct _GdkDrawableClass,draw_arc,152,11,44192);
+CheckMemberSize(struct _GdkDrawableClass,draw_polygon,8,11,44198);
+CheckOffset(struct _GdkDrawableClass,draw_polygon,160,11,44198);
+CheckMemberSize(struct _GdkDrawableClass,draw_text,8,11,44206);
+CheckOffset(struct _GdkDrawableClass,draw_text,168,11,44206);
+CheckMemberSize(struct _GdkDrawableClass,draw_text_wc,8,11,44214);
+CheckOffset(struct _GdkDrawableClass,draw_text_wc,176,11,44214);
+CheckMemberSize(struct _GdkDrawableClass,draw_drawable,8,11,44224);
+CheckOffset(struct _GdkDrawableClass,draw_drawable,184,11,44224);
+CheckMemberSize(struct _GdkDrawableClass,draw_points,8,11,44229);
+CheckOffset(struct _GdkDrawableClass,draw_points,192,11,44229);
+CheckMemberSize(struct _GdkDrawableClass,draw_segments,8,11,44234);
+CheckOffset(struct _GdkDrawableClass,draw_segments,200,11,44234);
+CheckMemberSize(struct _GdkDrawableClass,draw_lines,8,11,44235);
+CheckOffset(struct _GdkDrawableClass,draw_lines,208,11,44235);
+CheckMemberSize(struct _GdkDrawableClass,draw_glyphs,8,11,44242);
+CheckOffset(struct _GdkDrawableClass,draw_glyphs,216,11,44242);
+CheckMemberSize(struct _GdkDrawableClass,draw_image,8,11,44252);
+CheckOffset(struct _GdkDrawableClass,draw_image,224,11,44252);
+CheckMemberSize(struct _GdkDrawableClass,get_depth,8,11,44254);
+CheckOffset(struct _GdkDrawableClass,get_depth,232,11,44254);
+CheckMemberSize(struct _GdkDrawableClass,get_size,8,11,44258);
+CheckOffset(struct _GdkDrawableClass,get_size,240,11,44258);
+CheckMemberSize(struct _GdkDrawableClass,set_colormap,8,11,44261);
+CheckOffset(struct _GdkDrawableClass,set_colormap,248,11,44261);
+CheckMemberSize(struct _GdkDrawableClass,get_colormap,8,11,44263);
+CheckOffset(struct _GdkDrawableClass,get_colormap,256,11,44263);
+CheckMemberSize(struct _GdkDrawableClass,get_visual,8,11,44265);
+CheckOffset(struct _GdkDrawableClass,get_visual,264,11,44265);
+CheckMemberSize(struct _GdkDrawableClass,get_screen,8,11,44267);
+CheckOffset(struct _GdkDrawableClass,get_screen,272,11,44267);
+CheckMemberSize(struct _GdkDrawableClass,get_image,8,11,44273);
+CheckOffset(struct _GdkDrawableClass,get_image,280,11,44273);
+CheckMemberSize(struct _GdkDrawableClass,get_clip_region,8,11,44275);
+CheckOffset(struct _GdkDrawableClass,get_clip_region,288,11,44275);
+CheckMemberSize(struct _GdkDrawableClass,get_visible_region,8,11,44276);
+CheckOffset(struct _GdkDrawableClass,get_visible_region,296,11,44276);
+CheckMemberSize(struct _GdkDrawableClass,get_composite_drawable,8,11,44284);
+CheckOffset(struct _GdkDrawableClass,get_composite_drawable,304,11,44284);
+CheckMemberSize(struct _GdkDrawableClass,draw_pixbuf,8,11,44297);
+CheckOffset(struct _GdkDrawableClass,draw_pixbuf,312,11,44297);
+CheckMemberSize(struct _GdkDrawableClass,_copy_to_image,8,11,44306);
+CheckOffset(struct _GdkDrawableClass,_copy_to_image,320,11,44306);
+CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,8,11,44314);
+CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,328,11,44314);
+CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,8,11,44319);
+CheckOffset(struct _GdkDrawableClass,draw_trapezoids,336,11,44319);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved3,8,11,44320);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved3,344,11,44320);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,8,11,44321);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,352,11,44321);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,8,11,44322);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved5,360,11,44322);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved6,8,11,44323);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved6,368,11,44323);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved7,8,11,44324);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved7,376,11,44324);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved9,8,11,44325);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved9,384,11,44325);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved10,8,11,44326);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved10,392,11,44326);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved11,8,11,44327);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved11,400,11,44327);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved12,8,11,44328);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved12,408,11,44328);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved13,8,11,44329);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved13,416,11,44329);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved14,8,11,44330);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved14,424,11,44330);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved15,8,11,44331);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved15,432,11,44331);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved16,8,11,44332);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved16,440,11,44332);
+#elif __ia64__
+CheckTypeSize(struct _GdkDrawableClass,448, 12973, 3);
+CheckMemberSize(struct _GdkDrawableClass,create_gc,8,3,44174);
+CheckOffset(struct _GdkDrawableClass,create_gc,136,3,44174);
+CheckMemberSize(struct _GdkDrawableClass,draw_rectangle,8,3,44182);
+CheckOffset(struct _GdkDrawableClass,draw_rectangle,144,3,44182);
+CheckMemberSize(struct _GdkDrawableClass,draw_arc,8,3,44192);
+CheckOffset(struct _GdkDrawableClass,draw_arc,152,3,44192);
+CheckMemberSize(struct _GdkDrawableClass,draw_polygon,8,3,44198);
+CheckOffset(struct _GdkDrawableClass,draw_polygon,160,3,44198);
+CheckMemberSize(struct _GdkDrawableClass,draw_text,8,3,44206);
+CheckOffset(struct _GdkDrawableClass,draw_text,168,3,44206);
+CheckMemberSize(struct _GdkDrawableClass,draw_text_wc,8,3,44214);
+CheckOffset(struct _GdkDrawableClass,draw_text_wc,176,3,44214);
+CheckMemberSize(struct _GdkDrawableClass,draw_drawable,8,3,44224);
+CheckOffset(struct _GdkDrawableClass,draw_drawable,184,3,44224);
+CheckMemberSize(struct _GdkDrawableClass,draw_points,8,3,44229);
+CheckOffset(struct _GdkDrawableClass,draw_points,192,3,44229);
+CheckMemberSize(struct _GdkDrawableClass,draw_segments,8,3,44234);
+CheckOffset(struct _GdkDrawableClass,draw_segments,200,3,44234);
+CheckMemberSize(struct _GdkDrawableClass,draw_lines,8,3,44235);
+CheckOffset(struct _GdkDrawableClass,draw_lines,208,3,44235);
+CheckMemberSize(struct _GdkDrawableClass,draw_glyphs,8,3,44242);
+CheckOffset(struct _GdkDrawableClass,draw_glyphs,216,3,44242);
+CheckMemberSize(struct _GdkDrawableClass,draw_image,8,3,44252);
+CheckOffset(struct _GdkDrawableClass,draw_image,224,3,44252);
+CheckMemberSize(struct _GdkDrawableClass,get_depth,8,3,44254);
+CheckOffset(struct _GdkDrawableClass,get_depth,232,3,44254);
+CheckMemberSize(struct _GdkDrawableClass,get_size,8,3,44258);
+CheckOffset(struct _GdkDrawableClass,get_size,240,3,44258);
+CheckMemberSize(struct _GdkDrawableClass,set_colormap,8,3,44261);
+CheckOffset(struct _GdkDrawableClass,set_colormap,248,3,44261);
+CheckMemberSize(struct _GdkDrawableClass,get_colormap,8,3,44263);
+CheckOffset(struct _GdkDrawableClass,get_colormap,256,3,44263);
+CheckMemberSize(struct _GdkDrawableClass,get_visual,8,3,44265);
+CheckOffset(struct _GdkDrawableClass,get_visual,264,3,44265);
+CheckMemberSize(struct _GdkDrawableClass,get_screen,8,3,44267);
+CheckOffset(struct _GdkDrawableClass,get_screen,272,3,44267);
+CheckMemberSize(struct _GdkDrawableClass,get_image,8,3,44273);
+CheckOffset(struct _GdkDrawableClass,get_image,280,3,44273);
+CheckMemberSize(struct _GdkDrawableClass,get_clip_region,8,3,44275);
+CheckOffset(struct _GdkDrawableClass,get_clip_region,288,3,44275);
+CheckMemberSize(struct _GdkDrawableClass,get_visible_region,8,3,44276);
+CheckOffset(struct _GdkDrawableClass,get_visible_region,296,3,44276);
+CheckMemberSize(struct _GdkDrawableClass,get_composite_drawable,8,3,44284);
+CheckOffset(struct _GdkDrawableClass,get_composite_drawable,304,3,44284);
+CheckMemberSize(struct _GdkDrawableClass,draw_pixbuf,8,3,44297);
+CheckOffset(struct _GdkDrawableClass,draw_pixbuf,312,3,44297);
+CheckMemberSize(struct _GdkDrawableClass,_copy_to_image,8,3,44306);
+CheckOffset(struct _GdkDrawableClass,_copy_to_image,320,3,44306);
+CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,8,3,44314);
+CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,328,3,44314);
+CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,8,3,44319);
+CheckOffset(struct _GdkDrawableClass,draw_trapezoids,336,3,44319);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,8,3,44321);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,352,3,44321);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,8,3,44322);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved5,360,3,44322);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved6,8,3,44323);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved6,368,3,44323);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved7,8,3,44324);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved7,376,3,44324);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved9,8,3,44325);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved9,384,3,44325);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved10,8,3,44326);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved10,392,3,44326);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved11,8,3,44327);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved11,400,3,44327);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved12,8,3,44328);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved12,408,3,44328);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved13,8,3,44329);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved13,416,3,44329);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved14,8,3,44330);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved14,424,3,44330);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved15,8,3,44331);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved15,432,3,44331);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved16,8,3,44332);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved16,440,3,44332);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _GdkDrawableClass,224, 12973, 6);
+CheckMemberSize(struct _GdkDrawableClass,create_gc,4,6,44174);
+CheckOffset(struct _GdkDrawableClass,create_gc,68,6,44174);
+CheckMemberSize(struct _GdkDrawableClass,draw_rectangle,4,6,44182);
+CheckOffset(struct _GdkDrawableClass,draw_rectangle,72,6,44182);
+CheckMemberSize(struct _GdkDrawableClass,draw_arc,4,6,44192);
+CheckOffset(struct _GdkDrawableClass,draw_arc,76,6,44192);
+CheckMemberSize(struct _GdkDrawableClass,draw_polygon,4,6,44198);
+CheckOffset(struct _GdkDrawableClass,draw_polygon,80,6,44198);
+CheckMemberSize(struct _GdkDrawableClass,draw_text,4,6,44206);
+CheckOffset(struct _GdkDrawableClass,draw_text,84,6,44206);
+CheckMemberSize(struct _GdkDrawableClass,draw_text_wc,4,6,44214);
+CheckOffset(struct _GdkDrawableClass,draw_text_wc,88,6,44214);
+CheckMemberSize(struct _GdkDrawableClass,draw_drawable,4,6,44224);
+CheckOffset(struct _GdkDrawableClass,draw_drawable,92,6,44224);
+CheckMemberSize(struct _GdkDrawableClass,draw_points,4,6,44229);
+CheckOffset(struct _GdkDrawableClass,draw_points,96,6,44229);
+CheckMemberSize(struct _GdkDrawableClass,draw_segments,4,6,44234);
+CheckOffset(struct _GdkDrawableClass,draw_segments,100,6,44234);
+CheckMemberSize(struct _GdkDrawableClass,draw_lines,4,6,44235);
+CheckOffset(struct _GdkDrawableClass,draw_lines,104,6,44235);
+CheckMemberSize(struct _GdkDrawableClass,draw_glyphs,4,6,44242);
+CheckOffset(struct _GdkDrawableClass,draw_glyphs,108,6,44242);
+CheckMemberSize(struct _GdkDrawableClass,draw_image,4,6,44252);
+CheckOffset(struct _GdkDrawableClass,draw_image,112,6,44252);
+CheckMemberSize(struct _GdkDrawableClass,get_depth,4,6,44254);
+CheckOffset(struct _GdkDrawableClass,get_depth,116,6,44254);
+CheckMemberSize(struct _GdkDrawableClass,get_size,4,6,44258);
+CheckOffset(struct _GdkDrawableClass,get_size,120,6,44258);
+CheckMemberSize(struct _GdkDrawableClass,set_colormap,4,6,44261);
+CheckOffset(struct _GdkDrawableClass,set_colormap,124,6,44261);
+CheckMemberSize(struct _GdkDrawableClass,get_colormap,4,6,44263);
+CheckOffset(struct _GdkDrawableClass,get_colormap,128,6,44263);
+CheckMemberSize(struct _GdkDrawableClass,get_visual,4,6,44265);
+CheckOffset(struct _GdkDrawableClass,get_visual,132,6,44265);
+CheckMemberSize(struct _GdkDrawableClass,get_screen,4,6,44267);
+CheckOffset(struct _GdkDrawableClass,get_screen,136,6,44267);
+CheckMemberSize(struct _GdkDrawableClass,get_image,4,6,44273);
+CheckOffset(struct _GdkDrawableClass,get_image,140,6,44273);
+CheckMemberSize(struct _GdkDrawableClass,get_clip_region,4,6,44275);
+CheckOffset(struct _GdkDrawableClass,get_clip_region,144,6,44275);
+CheckMemberSize(struct _GdkDrawableClass,get_visible_region,4,6,44276);
+CheckOffset(struct _GdkDrawableClass,get_visible_region,148,6,44276);
+CheckMemberSize(struct _GdkDrawableClass,get_composite_drawable,4,6,44284);
+CheckOffset(struct _GdkDrawableClass,get_composite_drawable,152,6,44284);
+CheckMemberSize(struct _GdkDrawableClass,draw_pixbuf,4,6,44297);
+CheckOffset(struct _GdkDrawableClass,draw_pixbuf,156,6,44297);
+CheckMemberSize(struct _GdkDrawableClass,_copy_to_image,4,6,44306);
+CheckOffset(struct _GdkDrawableClass,_copy_to_image,160,6,44306);
+CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,4,6,44314);
+CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,164,6,44314);
+CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,4,6,44319);
+CheckOffset(struct _GdkDrawableClass,draw_trapezoids,168,6,44319);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved3,4,6,44320);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved3,172,6,44320);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,4,6,44321);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,176,6,44321);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,4,6,44322);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved5,180,6,44322);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved6,4,6,44323);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved6,184,6,44323);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved7,4,6,44324);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved7,188,6,44324);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved9,4,6,44325);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved9,192,6,44325);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved10,4,6,44326);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved10,196,6,44326);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved11,4,6,44327);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved11,200,6,44327);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved12,4,6,44328);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved12,204,6,44328);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved13,4,6,44329);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved13,208,6,44329);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved14,4,6,44330);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved14,212,6,44330);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved15,4,6,44331);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved15,216,6,44331);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved16,4,6,44332);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved16,220,6,44332);
+#elif __powerpc64__
+CheckTypeSize(struct _GdkDrawableClass,448, 12973, 9);
+CheckMemberSize(struct _GdkDrawableClass,create_gc,8,9,44174);
+CheckOffset(struct _GdkDrawableClass,create_gc,136,9,44174);
+CheckMemberSize(struct _GdkDrawableClass,draw_rectangle,8,9,44182);
+CheckOffset(struct _GdkDrawableClass,draw_rectangle,144,9,44182);
+CheckMemberSize(struct _GdkDrawableClass,draw_arc,8,9,44192);
+CheckOffset(struct _GdkDrawableClass,draw_arc,152,9,44192);
+CheckMemberSize(struct _GdkDrawableClass,draw_polygon,8,9,44198);
+CheckOffset(struct _GdkDrawableClass,draw_polygon,160,9,44198);
+CheckMemberSize(struct _GdkDrawableClass,draw_text,8,9,44206);
+CheckOffset(struct _GdkDrawableClass,draw_text,168,9,44206);
+CheckMemberSize(struct _GdkDrawableClass,draw_text_wc,8,9,44214);
+CheckOffset(struct _GdkDrawableClass,draw_text_wc,176,9,44214);
+CheckMemberSize(struct _GdkDrawableClass,draw_drawable,8,9,44224);
+CheckOffset(struct _GdkDrawableClass,draw_drawable,184,9,44224);
+CheckMemberSize(struct _GdkDrawableClass,draw_points,8,9,44229);
+CheckOffset(struct _GdkDrawableClass,draw_points,192,9,44229);
+CheckMemberSize(struct _GdkDrawableClass,draw_segments,8,9,44234);
+CheckOffset(struct _GdkDrawableClass,draw_segments,200,9,44234);
+CheckMemberSize(struct _GdkDrawableClass,draw_lines,8,9,44235);
+CheckOffset(struct _GdkDrawableClass,draw_lines,208,9,44235);
+CheckMemberSize(struct _GdkDrawableClass,draw_glyphs,8,9,44242);
+CheckOffset(struct _GdkDrawableClass,draw_glyphs,216,9,44242);
+CheckMemberSize(struct _GdkDrawableClass,draw_image,8,9,44252);
+CheckOffset(struct _GdkDrawableClass,draw_image,224,9,44252);
+CheckMemberSize(struct _GdkDrawableClass,get_depth,8,9,44254);
+CheckOffset(struct _GdkDrawableClass,get_depth,232,9,44254);
+CheckMemberSize(struct _GdkDrawableClass,get_size,8,9,44258);
+CheckOffset(struct _GdkDrawableClass,get_size,240,9,44258);
+CheckMemberSize(struct _GdkDrawableClass,set_colormap,8,9,44261);
+CheckOffset(struct _GdkDrawableClass,set_colormap,248,9,44261);
+CheckMemberSize(struct _GdkDrawableClass,get_colormap,8,9,44263);
+CheckOffset(struct _GdkDrawableClass,get_colormap,256,9,44263);
+CheckMemberSize(struct _GdkDrawableClass,get_visual,8,9,44265);
+CheckOffset(struct _GdkDrawableClass,get_visual,264,9,44265);
+CheckMemberSize(struct _GdkDrawableClass,get_screen,8,9,44267);
+CheckOffset(struct _GdkDrawableClass,get_screen,272,9,44267);
+CheckMemberSize(struct _GdkDrawableClass,get_image,8,9,44273);
+CheckOffset(struct _GdkDrawableClass,get_image,280,9,44273);
+CheckMemberSize(struct _GdkDrawableClass,get_clip_region,8,9,44275);
+CheckOffset(struct _GdkDrawableClass,get_clip_region,288,9,44275);
+CheckMemberSize(struct _GdkDrawableClass,get_visible_region,8,9,44276);
+CheckOffset(struct _GdkDrawableClass,get_visible_region,296,9,44276);
+CheckMemberSize(struct _GdkDrawableClass,get_composite_drawable,8,9,44284);
+CheckOffset(struct _GdkDrawableClass,get_composite_drawable,304,9,44284);
+CheckMemberSize(struct _GdkDrawableClass,draw_pixbuf,8,9,44297);
+CheckOffset(struct _GdkDrawableClass,draw_pixbuf,312,9,44297);
+CheckMemberSize(struct _GdkDrawableClass,_copy_to_image,8,9,44306);
+CheckOffset(struct _GdkDrawableClass,_copy_to_image,320,9,44306);
+CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,8,9,44314);
+CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,328,9,44314);
+CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,8,9,44319);
+CheckOffset(struct _GdkDrawableClass,draw_trapezoids,336,9,44319);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved3,8,9,44320);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved3,344,9,44320);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,8,9,44321);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,352,9,44321);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,8,9,44322);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved5,360,9,44322);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved6,8,9,44323);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved6,368,9,44323);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved7,8,9,44324);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved7,376,9,44324);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved9,8,9,44325);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved9,384,9,44325);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved10,8,9,44326);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved10,392,9,44326);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved11,8,9,44327);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved11,400,9,44327);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved12,8,9,44328);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved12,408,9,44328);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved13,8,9,44329);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved13,416,9,44329);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved14,8,9,44330);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved14,424,9,44330);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved15,8,9,44331);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved15,432,9,44331);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved16,8,9,44332);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved16,440,9,44332);
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _GdkDrawableClass,224, 12973, 10);
+CheckMemberSize(struct _GdkDrawableClass,create_gc,4,10,44174);
+CheckOffset(struct _GdkDrawableClass,create_gc,68,10,44174);
+CheckMemberSize(struct _GdkDrawableClass,draw_rectangle,4,10,44182);
+CheckOffset(struct _GdkDrawableClass,draw_rectangle,72,10,44182);
+CheckMemberSize(struct _GdkDrawableClass,draw_arc,4,10,44192);
+CheckOffset(struct _GdkDrawableClass,draw_arc,76,10,44192);
+CheckMemberSize(struct _GdkDrawableClass,draw_polygon,4,10,44198);
+CheckOffset(struct _GdkDrawableClass,draw_polygon,80,10,44198);
+CheckMemberSize(struct _GdkDrawableClass,draw_text,4,10,44206);
+CheckOffset(struct _GdkDrawableClass,draw_text,84,10,44206);
+CheckMemberSize(struct _GdkDrawableClass,draw_text_wc,4,10,44214);
+CheckOffset(struct _GdkDrawableClass,draw_text_wc,88,10,44214);
+CheckMemberSize(struct _GdkDrawableClass,draw_drawable,4,10,44224);
+CheckOffset(struct _GdkDrawableClass,draw_drawable,92,10,44224);
+CheckMemberSize(struct _GdkDrawableClass,draw_points,4,10,44229);
+CheckOffset(struct _GdkDrawableClass,draw_points,96,10,44229);
+CheckMemberSize(struct _GdkDrawableClass,draw_segments,4,10,44234);
+CheckOffset(struct _GdkDrawableClass,draw_segments,100,10,44234);
+CheckMemberSize(struct _GdkDrawableClass,draw_lines,4,10,44235);
+CheckOffset(struct _GdkDrawableClass,draw_lines,104,10,44235);
+CheckMemberSize(struct _GdkDrawableClass,draw_glyphs,4,10,44242);
+CheckOffset(struct _GdkDrawableClass,draw_glyphs,108,10,44242);
+CheckMemberSize(struct _GdkDrawableClass,draw_image,4,10,44252);
+CheckOffset(struct _GdkDrawableClass,draw_image,112,10,44252);
+CheckMemberSize(struct _GdkDrawableClass,get_depth,4,10,44254);
+CheckOffset(struct _GdkDrawableClass,get_depth,116,10,44254);
+CheckMemberSize(struct _GdkDrawableClass,get_size,4,10,44258);
+CheckOffset(struct _GdkDrawableClass,get_size,120,10,44258);
+CheckMemberSize(struct _GdkDrawableClass,set_colormap,4,10,44261);
+CheckOffset(struct _GdkDrawableClass,set_colormap,124,10,44261);
+CheckMemberSize(struct _GdkDrawableClass,get_colormap,4,10,44263);
+CheckOffset(struct _GdkDrawableClass,get_colormap,128,10,44263);
+CheckMemberSize(struct _GdkDrawableClass,get_visual,4,10,44265);
+CheckOffset(struct _GdkDrawableClass,get_visual,132,10,44265);
+CheckMemberSize(struct _GdkDrawableClass,get_screen,4,10,44267);
+CheckOffset(struct _GdkDrawableClass,get_screen,136,10,44267);
+CheckMemberSize(struct _GdkDrawableClass,get_image,4,10,44273);
+CheckOffset(struct _GdkDrawableClass,get_image,140,10,44273);
+CheckMemberSize(struct _GdkDrawableClass,get_clip_region,4,10,44275);
+CheckOffset(struct _GdkDrawableClass,get_clip_region,144,10,44275);
+CheckMemberSize(struct _GdkDrawableClass,get_visible_region,4,10,44276);
+CheckOffset(struct _GdkDrawableClass,get_visible_region,148,10,44276);
+CheckMemberSize(struct _GdkDrawableClass,get_composite_drawable,4,10,44284);
+CheckOffset(struct _GdkDrawableClass,get_composite_drawable,152,10,44284);
+CheckMemberSize(struct _GdkDrawableClass,draw_pixbuf,4,10,44297);
+CheckOffset(struct _GdkDrawableClass,draw_pixbuf,156,10,44297);
+CheckMemberSize(struct _GdkDrawableClass,_copy_to_image,4,10,44306);
+CheckOffset(struct _GdkDrawableClass,_copy_to_image,160,10,44306);
+CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,4,10,44314);
+CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,164,10,44314);
+CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,4,10,44319);
+CheckOffset(struct _GdkDrawableClass,draw_trapezoids,168,10,44319);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved3,4,10,44320);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved3,172,10,44320);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,4,10,44321);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,176,10,44321);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,4,10,44322);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved5,180,10,44322);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved6,4,10,44323);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved6,184,10,44323);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved7,4,10,44324);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved7,188,10,44324);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved9,4,10,44325);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved9,192,10,44325);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved10,4,10,44326);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved10,196,10,44326);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved11,4,10,44327);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved11,200,10,44327);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved12,4,10,44328);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved12,204,10,44328);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved13,4,10,44329);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved13,208,10,44329);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved14,4,10,44330);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved14,212,10,44330);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved15,4,10,44331);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved15,216,10,44331);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved16,4,10,44332);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved16,220,10,44332);
+#elif __s390x__
+CheckTypeSize(struct _GdkDrawableClass,448, 12973, 12);
+CheckMemberSize(struct _GdkDrawableClass,create_gc,8,12,44174);
+CheckOffset(struct _GdkDrawableClass,create_gc,136,12,44174);
+CheckMemberSize(struct _GdkDrawableClass,draw_rectangle,8,12,44182);
+CheckOffset(struct _GdkDrawableClass,draw_rectangle,144,12,44182);
+CheckMemberSize(struct _GdkDrawableClass,draw_arc,8,12,44192);
+CheckOffset(struct _GdkDrawableClass,draw_arc,152,12,44192);
+CheckMemberSize(struct _GdkDrawableClass,draw_polygon,8,12,44198);
+CheckOffset(struct _GdkDrawableClass,draw_polygon,160,12,44198);
+CheckMemberSize(struct _GdkDrawableClass,draw_text,8,12,44206);
+CheckOffset(struct _GdkDrawableClass,draw_text,168,12,44206);
+CheckMemberSize(struct _GdkDrawableClass,draw_text_wc,8,12,44214);
+CheckOffset(struct _GdkDrawableClass,draw_text_wc,176,12,44214);
+CheckMemberSize(struct _GdkDrawableClass,draw_drawable,8,12,44224);
+CheckOffset(struct _GdkDrawableClass,draw_drawable,184,12,44224);
+CheckMemberSize(struct _GdkDrawableClass,draw_points,8,12,44229);
+CheckOffset(struct _GdkDrawableClass,draw_points,192,12,44229);
+CheckMemberSize(struct _GdkDrawableClass,draw_segments,8,12,44234);
+CheckOffset(struct _GdkDrawableClass,draw_segments,200,12,44234);
+CheckMemberSize(struct _GdkDrawableClass,draw_lines,8,12,44235);
+CheckOffset(struct _GdkDrawableClass,draw_lines,208,12,44235);
+CheckMemberSize(struct _GdkDrawableClass,draw_glyphs,8,12,44242);
+CheckOffset(struct _GdkDrawableClass,draw_glyphs,216,12,44242);
+CheckMemberSize(struct _GdkDrawableClass,draw_image,8,12,44252);
+CheckOffset(struct _GdkDrawableClass,draw_image,224,12,44252);
+CheckMemberSize(struct _GdkDrawableClass,get_depth,8,12,44254);
+CheckOffset(struct _GdkDrawableClass,get_depth,232,12,44254);
+CheckMemberSize(struct _GdkDrawableClass,get_size,8,12,44258);
+CheckOffset(struct _GdkDrawableClass,get_size,240,12,44258);
+CheckMemberSize(struct _GdkDrawableClass,set_colormap,8,12,44261);
+CheckOffset(struct _GdkDrawableClass,set_colormap,248,12,44261);
+CheckMemberSize(struct _GdkDrawableClass,get_colormap,8,12,44263);
+CheckOffset(struct _GdkDrawableClass,get_colormap,256,12,44263);
+CheckMemberSize(struct _GdkDrawableClass,get_visual,8,12,44265);
+CheckOffset(struct _GdkDrawableClass,get_visual,264,12,44265);
+CheckMemberSize(struct _GdkDrawableClass,get_screen,8,12,44267);
+CheckOffset(struct _GdkDrawableClass,get_screen,272,12,44267);
+CheckMemberSize(struct _GdkDrawableClass,get_image,8,12,44273);
+CheckOffset(struct _GdkDrawableClass,get_image,280,12,44273);
+CheckMemberSize(struct _GdkDrawableClass,get_clip_region,8,12,44275);
+CheckOffset(struct _GdkDrawableClass,get_clip_region,288,12,44275);
+CheckMemberSize(struct _GdkDrawableClass,get_visible_region,8,12,44276);
+CheckOffset(struct _GdkDrawableClass,get_visible_region,296,12,44276);
+CheckMemberSize(struct _GdkDrawableClass,get_composite_drawable,8,12,44284);
+CheckOffset(struct _GdkDrawableClass,get_composite_drawable,304,12,44284);
+CheckMemberSize(struct _GdkDrawableClass,draw_pixbuf,8,12,44297);
+CheckOffset(struct _GdkDrawableClass,draw_pixbuf,312,12,44297);
+CheckMemberSize(struct _GdkDrawableClass,_copy_to_image,8,12,44306);
+CheckOffset(struct _GdkDrawableClass,_copy_to_image,320,12,44306);
+CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,8,12,44314);
+CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,328,12,44314);
+CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,8,12,44319);
+CheckOffset(struct _GdkDrawableClass,draw_trapezoids,336,12,44319);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved3,8,12,44320);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved3,344,12,44320);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,8,12,44321);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,352,12,44321);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,8,12,44322);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved5,360,12,44322);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved6,8,12,44323);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved6,368,12,44323);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved7,8,12,44324);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved7,376,12,44324);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved9,8,12,44325);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved9,384,12,44325);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved10,8,12,44326);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved10,392,12,44326);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved11,8,12,44327);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved11,400,12,44327);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved12,8,12,44328);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved12,408,12,44328);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved13,8,12,44329);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved13,416,12,44329);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved14,8,12,44330);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved14,424,12,44330);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved15,8,12,44331);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved15,432,12,44331);
+CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved16,8,12,44332);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved16,440,12,44332);
+#elif 1
+CheckTypeSize(struct _GdkDrawableClass,0, 12973, 1);
+Msg("Missing member data for _GdkDrawableClass on All\n");
+CheckOffset(struct _GdkDrawableClass,parent_class,0,1,44170);
+CheckOffset(struct _GdkDrawableClass,create_gc,0,1,44174);
+CheckOffset(struct _GdkDrawableClass,draw_rectangle,0,1,44182);
+CheckOffset(struct _GdkDrawableClass,draw_arc,0,1,44192);
+CheckOffset(struct _GdkDrawableClass,draw_polygon,0,1,44198);
+CheckOffset(struct _GdkDrawableClass,draw_text,0,1,44206);
+CheckOffset(struct _GdkDrawableClass,draw_text_wc,0,1,44214);
+CheckOffset(struct _GdkDrawableClass,draw_drawable,0,1,44224);
+CheckOffset(struct _GdkDrawableClass,draw_points,0,1,44229);
+CheckOffset(struct _GdkDrawableClass,draw_segments,0,1,44234);
+CheckOffset(struct _GdkDrawableClass,draw_lines,0,1,44235);
+CheckOffset(struct _GdkDrawableClass,draw_glyphs,0,1,44242);
+CheckOffset(struct _GdkDrawableClass,draw_image,0,1,44252);
+CheckOffset(struct _GdkDrawableClass,get_depth,0,1,44254);
+CheckOffset(struct _GdkDrawableClass,get_size,0,1,44258);
+CheckOffset(struct _GdkDrawableClass,set_colormap,0,1,44261);
+CheckOffset(struct _GdkDrawableClass,get_colormap,0,1,44263);
+CheckOffset(struct _GdkDrawableClass,get_visual,0,1,44265);
+CheckOffset(struct _GdkDrawableClass,get_screen,0,1,44267);
+CheckOffset(struct _GdkDrawableClass,get_image,0,1,44273);
+CheckOffset(struct _GdkDrawableClass,get_clip_region,0,1,44275);
+CheckOffset(struct _GdkDrawableClass,get_visible_region,0,1,44276);
+CheckOffset(struct _GdkDrawableClass,get_composite_drawable,0,1,44284);
+CheckOffset(struct _GdkDrawableClass,draw_pixbuf,0,1,44297);
+CheckOffset(struct _GdkDrawableClass,_copy_to_image,0,1,44306);
+CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,0,1,44314);
+CheckOffset(struct _GdkDrawableClass,draw_trapezoids,0,1,44319);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved3,0,1,44320);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,0,1,44321);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved5,0,1,44322);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved6,0,1,44323);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved7,0,1,44324);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved9,0,1,44325);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved10,0,1,44326);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved11,0,1,44327);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved12,0,1,44328);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved13,0,1,44329);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved14,0,1,44330);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved15,0,1,44331);
+CheckOffset(struct _GdkDrawableClass,_gdk_reserved16,0,1,44332);
 #endif
 
 #if __i386__
@@ -12815,9 +13207,7 @@ Msg("Find size of fptr_gdk_206 (12974)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12975,0);
-Msg("Find size of fptr_gdk_51 (12975)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -12827,9 +13217,7 @@ Msg("Find size of fptr_gdk_51 (12975)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12976,0);
-Msg("Find size of fptr_gdk_619 (12976)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -12839,9 +13227,7 @@ Msg("Find size of fptr_gdk_619 (12976)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12977,0);
-Msg("Find size of fptr_gdk_8 (12977)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -12851,28 +13237,7 @@ Msg("Find size of fptr_gdk_8 (12977)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12978,0);
-Msg("Find size of fptr_gdk_56 (12978)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(const GdkWChar,4, 12979, 2)
-#elif __x86_64__
-CheckTypeSize(const GdkWChar,4, 12979, 11)
-#elif __ia64__
-CheckTypeSize(const GdkWChar,4, 12979, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(const GdkWChar,4, 12979, 6)
-#elif __powerpc64__
-CheckTypeSize(const GdkWChar,4, 12979, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(const GdkWChar,4, 12979, 10)
-#elif __s390x__
-CheckTypeSize(const GdkWChar,4, 12979, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12979,0);
-Msg("Find size of const GdkWChar (12979)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -12882,9 +13247,25 @@ Msg("Find size of const GdkWChar (12979)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12980,0);
-Msg("Find size of const GdkWChar * (12980)\n");
+#elif 1
+#endif
+
+#if __i386__
+CheckTypeSize(const GdkWChar,4, 12979, 2);
+#elif __x86_64__
+CheckTypeSize(const GdkWChar,4, 12979, 11);
+#elif __ia64__
+CheckTypeSize(const GdkWChar,4, 12979, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const GdkWChar,4, 12979, 6);
+#elif __powerpc64__
+CheckTypeSize(const GdkWChar,4, 12979, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(const GdkWChar,4, 12979, 10);
+#elif __s390x__
+CheckTypeSize(const GdkWChar,4, 12979, 12);
+#elif 1
+CheckTypeSize(const GdkWChar,0, 12979, 1);
 #endif
 
 #if __i386__
@@ -12894,9 +13275,7 @@ Msg("Find size of const GdkWChar * (12980)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12981,0);
-Msg("Find size of fptr_gdk_255 (12981)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -12906,9 +13285,7 @@ Msg("Find size of fptr_gdk_255 (12981)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12982,0);
-Msg("Find size of fptr_gdk_676 (12982)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -12918,9 +13295,7 @@ Msg("Find size of fptr_gdk_676 (12982)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12983,0);
-Msg("Find size of fptr_gdk_264 (12983)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -12930,9 +13305,7 @@ Msg("Find size of fptr_gdk_264 (12983)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12984,0);
-Msg("Find size of fptr_gdk_696 (12984)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -12942,9 +13315,7 @@ Msg("Find size of fptr_gdk_696 (12984)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12985,0);
-Msg("Find size of fptr_gdk_145 (12985)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -12954,9 +13325,7 @@ Msg("Find size of fptr_gdk_145 (12985)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12986,0);
-Msg("Find size of fptr_gdk_372 (12986)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -12966,9 +13335,7 @@ Msg("Find size of fptr_gdk_372 (12986)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12987,0);
-Msg("Find size of fptr_gdk_574 (12987)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -12978,9 +13345,7 @@ Msg("Find size of fptr_gdk_574 (12987)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12988,0);
-Msg("Find size of fptr_gdk_11 (12988)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -12990,9 +13355,7 @@ Msg("Find size of fptr_gdk_11 (12988)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12989,0);
-Msg("Find size of fptr_gdk_693 (12989)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -13002,9 +13365,7 @@ Msg("Find size of fptr_gdk_693 (12989)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12990,0);
-Msg("Find size of fptr_gdk_606 (12990)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -13014,9 +13375,7 @@ Msg("Find size of fptr_gdk_606 (12990)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12991,0);
-Msg("Find size of fptr_gdk_44 (12991)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -13026,9 +13385,7 @@ Msg("Find size of fptr_gdk_44 (12991)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12992,0);
-Msg("Find size of fptr_gdk_102 (12992)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -13038,9 +13395,7 @@ Msg("Find size of fptr_gdk_102 (12992)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12993,0);
-Msg("Find size of fptr_gdk_216 (12993)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -13050,9 +13405,7 @@ Msg("Find size of fptr_gdk_216 (12993)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12994,0);
-Msg("Find size of fptr_gdk_270 (12994)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -13062,9 +13415,7 @@ Msg("Find size of fptr_gdk_270 (12994)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12995,0);
-Msg("Find size of fptr_gdk_344 (12995)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -13074,9 +13425,7 @@ Msg("Find size of fptr_gdk_344 (12995)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12996,0);
-Msg("Find size of fptr_gdk_96 (12996)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -13086,9 +13435,7 @@ Msg("Find size of fptr_gdk_96 (12996)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12997,0);
-Msg("Find size of fptr_gdk_124 (12997)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -13098,9 +13445,7 @@ Msg("Find size of fptr_gdk_124 (12997)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12998,0);
-Msg("Find size of fptr_gdk_411 (12998)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -13110,113 +13455,7 @@ Msg("Find size of fptr_gdk_411 (12998)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12999,0);
-Msg("Find size of fptr_gdk_694 (12999)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GdkDrawableClass,224, 13000, 2)
-#elif __x86_64__
-CheckTypeSize(GdkDrawableClass,448, 13000, 11)
-#elif __ia64__
-CheckTypeSize(GdkDrawableClass,448, 13000, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkDrawableClass,224, 13000, 6)
-#elif __powerpc64__
-CheckTypeSize(GdkDrawableClass,448, 13000, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkDrawableClass,224, 13000, 10)
-#elif __s390x__
-CheckTypeSize(GdkDrawableClass,448, 13000, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13000,0);
-Msg("Find size of GdkDrawableClass (13000)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(struct _GdkPangoAttrEmbossed,16, 13001, 2)
-CheckMemberSize(struct _GdkPangoAttrEmbossed,embossed,4,2,44334)
-CheckOffset(struct _GdkPangoAttrEmbossed,embossed,12,2,44334)
-#elif __x86_64__
-CheckTypeSize(struct _GdkPangoAttrEmbossed,24, 13001, 11)
-CheckMemberSize(struct _GdkPangoAttrEmbossed,embossed,4,11,44334)
-CheckOffset(struct _GdkPangoAttrEmbossed,embossed,16,11,44334)
-#elif __ia64__
-CheckTypeSize(struct _GdkPangoAttrEmbossed,24, 13001, 3)
-CheckMemberSize(struct _GdkPangoAttrEmbossed,embossed,4,3,44334)
-CheckOffset(struct _GdkPangoAttrEmbossed,embossed,16,3,44334)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkPangoAttrEmbossed,16, 13001, 6)
-CheckMemberSize(struct _GdkPangoAttrEmbossed,embossed,4,6,44334)
-CheckOffset(struct _GdkPangoAttrEmbossed,embossed,12,6,44334)
-#elif __powerpc64__
-CheckTypeSize(struct _GdkPangoAttrEmbossed,24, 13001, 9)
-CheckMemberSize(struct _GdkPangoAttrEmbossed,embossed,4,9,44334)
-CheckOffset(struct _GdkPangoAttrEmbossed,embossed,16,9,44334)
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkPangoAttrEmbossed,16, 13001, 10)
-CheckMemberSize(struct _GdkPangoAttrEmbossed,embossed,4,10,44334)
-CheckOffset(struct _GdkPangoAttrEmbossed,embossed,12,10,44334)
-#elif __s390x__
-CheckTypeSize(struct _GdkPangoAttrEmbossed,24, 13001, 12)
-CheckMemberSize(struct _GdkPangoAttrEmbossed,embossed,4,12,44334)
-CheckOffset(struct _GdkPangoAttrEmbossed,embossed,16,12,44334)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13001,0);
-Msg("Find size of _GdkPangoAttrEmbossed (13001)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GdkPangoAttrEmbossed,16, 13002, 2)
-#elif __x86_64__
-CheckTypeSize(GdkPangoAttrEmbossed,24, 13002, 11)
-#elif __ia64__
-CheckTypeSize(GdkPangoAttrEmbossed,24, 13002, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPangoAttrEmbossed,16, 13002, 6)
-#elif __powerpc64__
-CheckTypeSize(GdkPangoAttrEmbossed,24, 13002, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkPangoAttrEmbossed,16, 13002, 10)
-#elif __s390x__
-CheckTypeSize(GdkPangoAttrEmbossed,24, 13002, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13002,0);
-Msg("Find size of GdkPangoAttrEmbossed (13002)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(struct _GdkDisplayManagerClass,72, 13003, 2)
-CheckMemberSize(struct _GdkDisplayManagerClass,display_opened,4,2,44338)
-CheckOffset(struct _GdkDisplayManagerClass,display_opened,68,2,44338)
-#elif __x86_64__
-CheckTypeSize(struct _GdkDisplayManagerClass,144, 13003, 11)
-CheckMemberSize(struct _GdkDisplayManagerClass,display_opened,8,11,44338)
-CheckOffset(struct _GdkDisplayManagerClass,display_opened,136,11,44338)
-#elif __ia64__
-CheckTypeSize(struct _GdkDisplayManagerClass,144, 13003, 3)
-CheckMemberSize(struct _GdkDisplayManagerClass,display_opened,8,3,44338)
-CheckOffset(struct _GdkDisplayManagerClass,display_opened,136,3,44338)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkDisplayManagerClass,72, 13003, 6)
-CheckMemberSize(struct _GdkDisplayManagerClass,display_opened,4,6,44338)
-CheckOffset(struct _GdkDisplayManagerClass,display_opened,68,6,44338)
-#elif __powerpc64__
-CheckTypeSize(struct _GdkDisplayManagerClass,144, 13003, 9)
-CheckMemberSize(struct _GdkDisplayManagerClass,display_opened,8,9,44338)
-CheckOffset(struct _GdkDisplayManagerClass,display_opened,136,9,44338)
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkDisplayManagerClass,72, 13003, 10)
-CheckMemberSize(struct _GdkDisplayManagerClass,display_opened,4,10,44338)
-CheckOffset(struct _GdkDisplayManagerClass,display_opened,68,10,44338)
-#elif __s390x__
-CheckTypeSize(struct _GdkDisplayManagerClass,144, 13003, 12)
-CheckMemberSize(struct _GdkDisplayManagerClass,display_opened,8,12,44338)
-CheckOffset(struct _GdkDisplayManagerClass,display_opened,136,12,44338)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13003,0);
-Msg("Find size of _GdkDisplayManagerClass (13003)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -13226,233 +13465,340 @@ Msg("Find size of _GdkDisplayManagerClass (13003)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13004,0);
-Msg("Find size of fptr_gdk_114 (13004)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(GdkDisplayManagerClass,72, 13005, 2)
+CheckTypeSize(GdkDrawableClass,224, 13000, 2);
 #elif __x86_64__
-CheckTypeSize(GdkDisplayManagerClass,144, 13005, 11)
+CheckTypeSize(GdkDrawableClass,448, 13000, 11);
 #elif __ia64__
-CheckTypeSize(GdkDisplayManagerClass,144, 13005, 3)
+CheckTypeSize(GdkDrawableClass,448, 13000, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkDisplayManagerClass,72, 13005, 6)
+CheckTypeSize(GdkDrawableClass,224, 13000, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkDisplayManagerClass,144, 13005, 9)
+CheckTypeSize(GdkDrawableClass,448, 13000, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkDisplayManagerClass,72, 13005, 10)
+CheckTypeSize(GdkDrawableClass,224, 13000, 10);
 #elif __s390x__
-CheckTypeSize(GdkDisplayManagerClass,144, 13005, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13005,0);
-Msg("Find size of GdkDisplayManagerClass (13005)\n");
+CheckTypeSize(GdkDrawableClass,448, 13000, 12);
+#elif 1
+CheckTypeSize(GdkDrawableClass,0, 13000, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkPixmapObjectClass,224, 13006, 2)
+CheckTypeSize(struct _GdkPangoAttrEmbossed,16, 13001, 2);
+CheckMemberSize(struct _GdkPangoAttrEmbossed,embossed,4,2,44334);
+CheckOffset(struct _GdkPangoAttrEmbossed,embossed,12,2,44334);
+#elif __x86_64__
+CheckTypeSize(struct _GdkPangoAttrEmbossed,24, 13001, 11);
+CheckMemberSize(struct _GdkPangoAttrEmbossed,embossed,4,11,44334);
+CheckOffset(struct _GdkPangoAttrEmbossed,embossed,16,11,44334);
+#elif __ia64__
+CheckTypeSize(struct _GdkPangoAttrEmbossed,24, 13001, 3);
+CheckMemberSize(struct _GdkPangoAttrEmbossed,embossed,4,3,44334);
+CheckOffset(struct _GdkPangoAttrEmbossed,embossed,16,3,44334);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _GdkPangoAttrEmbossed,16, 13001, 6);
+CheckMemberSize(struct _GdkPangoAttrEmbossed,embossed,4,6,44334);
+CheckOffset(struct _GdkPangoAttrEmbossed,embossed,12,6,44334);
+#elif __powerpc64__
+CheckTypeSize(struct _GdkPangoAttrEmbossed,24, 13001, 9);
+CheckMemberSize(struct _GdkPangoAttrEmbossed,embossed,4,9,44334);
+CheckOffset(struct _GdkPangoAttrEmbossed,embossed,16,9,44334);
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _GdkPangoAttrEmbossed,16, 13001, 10);
+CheckMemberSize(struct _GdkPangoAttrEmbossed,embossed,4,10,44334);
+CheckOffset(struct _GdkPangoAttrEmbossed,embossed,12,10,44334);
+#elif __s390x__
+CheckTypeSize(struct _GdkPangoAttrEmbossed,24, 13001, 12);
+CheckMemberSize(struct _GdkPangoAttrEmbossed,embossed,4,12,44334);
+CheckOffset(struct _GdkPangoAttrEmbossed,embossed,16,12,44334);
+#elif 1
+CheckTypeSize(struct _GdkPangoAttrEmbossed,0, 13001, 1);
+Msg("Missing member data for _GdkPangoAttrEmbossed on All\n");
+CheckOffset(struct _GdkPangoAttrEmbossed,attr,0,1,44333);
+CheckOffset(struct _GdkPangoAttrEmbossed,embossed,0,1,44334);
+#endif
+
+#if __i386__
+CheckTypeSize(GdkPangoAttrEmbossed,16, 13002, 2);
+#elif __x86_64__
+CheckTypeSize(GdkPangoAttrEmbossed,24, 13002, 11);
+#elif __ia64__
+CheckTypeSize(GdkPangoAttrEmbossed,24, 13002, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkPangoAttrEmbossed,16, 13002, 6);
+#elif __powerpc64__
+CheckTypeSize(GdkPangoAttrEmbossed,24, 13002, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GdkPangoAttrEmbossed,16, 13002, 10);
+#elif __s390x__
+CheckTypeSize(GdkPangoAttrEmbossed,24, 13002, 12);
+#elif 1
+CheckTypeSize(GdkPangoAttrEmbossed,0, 13002, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(struct _GdkDisplayManagerClass,72, 13003, 2);
+CheckMemberSize(struct _GdkDisplayManagerClass,display_opened,4,2,44338);
+CheckOffset(struct _GdkDisplayManagerClass,display_opened,68,2,44338);
+#elif __x86_64__
+CheckTypeSize(struct _GdkDisplayManagerClass,144, 13003, 11);
+CheckMemberSize(struct _GdkDisplayManagerClass,display_opened,8,11,44338);
+CheckOffset(struct _GdkDisplayManagerClass,display_opened,136,11,44338);
+#elif __ia64__
+CheckTypeSize(struct _GdkDisplayManagerClass,144, 13003, 3);
+CheckMemberSize(struct _GdkDisplayManagerClass,display_opened,8,3,44338);
+CheckOffset(struct _GdkDisplayManagerClass,display_opened,136,3,44338);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _GdkDisplayManagerClass,72, 13003, 6);
+CheckMemberSize(struct _GdkDisplayManagerClass,display_opened,4,6,44338);
+CheckOffset(struct _GdkDisplayManagerClass,display_opened,68,6,44338);
+#elif __powerpc64__
+CheckTypeSize(struct _GdkDisplayManagerClass,144, 13003, 9);
+CheckMemberSize(struct _GdkDisplayManagerClass,display_opened,8,9,44338);
+CheckOffset(struct _GdkDisplayManagerClass,display_opened,136,9,44338);
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _GdkDisplayManagerClass,72, 13003, 10);
+CheckMemberSize(struct _GdkDisplayManagerClass,display_opened,4,10,44338);
+CheckOffset(struct _GdkDisplayManagerClass,display_opened,68,10,44338);
+#elif __s390x__
+CheckTypeSize(struct _GdkDisplayManagerClass,144, 13003, 12);
+CheckMemberSize(struct _GdkDisplayManagerClass,display_opened,8,12,44338);
+CheckOffset(struct _GdkDisplayManagerClass,display_opened,136,12,44338);
+#elif 1
+CheckTypeSize(struct _GdkDisplayManagerClass,0, 13003, 1);
+Msg("Missing member data for _GdkDisplayManagerClass on All\n");
+CheckOffset(struct _GdkDisplayManagerClass,parent_class,0,1,44335);
+CheckOffset(struct _GdkDisplayManagerClass,display_opened,0,1,44338);
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
+#elif 1
+#endif
+
+#if __i386__
+CheckTypeSize(GdkDisplayManagerClass,72, 13005, 2);
+#elif __x86_64__
+CheckTypeSize(GdkDisplayManagerClass,144, 13005, 11);
+#elif __ia64__
+CheckTypeSize(GdkDisplayManagerClass,144, 13005, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkDisplayManagerClass,72, 13005, 6);
+#elif __powerpc64__
+CheckTypeSize(GdkDisplayManagerClass,144, 13005, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GdkDisplayManagerClass,72, 13005, 10);
+#elif __s390x__
+CheckTypeSize(GdkDisplayManagerClass,144, 13005, 12);
+#elif 1
+CheckTypeSize(GdkDisplayManagerClass,0, 13005, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(struct _GdkPixmapObjectClass,224, 13006, 2);
 Msg("Missing member data for _GdkPixmapObjectClass on IA32\n");
-CheckOffset(struct _GdkPixmapObjectClass,parent_class,0,2,44339)
+CheckOffset(struct _GdkPixmapObjectClass,parent_class,0,2,44339);
 #elif __x86_64__
-CheckTypeSize(struct _GdkPixmapObjectClass,448, 13006, 11)
+CheckTypeSize(struct _GdkPixmapObjectClass,448, 13006, 11);
 Msg("Missing member data for _GdkPixmapObjectClass on x86-64\n");
-CheckOffset(struct _GdkPixmapObjectClass,parent_class,0,11,44339)
+CheckOffset(struct _GdkPixmapObjectClass,parent_class,0,11,44339);
 #elif __ia64__
-CheckTypeSize(struct _GdkPixmapObjectClass,448, 13006, 3)
+CheckTypeSize(struct _GdkPixmapObjectClass,448, 13006, 3);
 Msg("Missing member data for _GdkPixmapObjectClass on IA64\n");
-CheckOffset(struct _GdkPixmapObjectClass,parent_class,0,3,44339)
+CheckOffset(struct _GdkPixmapObjectClass,parent_class,0,3,44339);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkPixmapObjectClass,224, 13006, 6)
+CheckTypeSize(struct _GdkPixmapObjectClass,224, 13006, 6);
 Msg("Missing member data for _GdkPixmapObjectClass on PPC32\n");
-CheckOffset(struct _GdkPixmapObjectClass,parent_class,0,6,44339)
+CheckOffset(struct _GdkPixmapObjectClass,parent_class,0,6,44339);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkPixmapObjectClass,448, 13006, 9)
+CheckTypeSize(struct _GdkPixmapObjectClass,448, 13006, 9);
 Msg("Missing member data for _GdkPixmapObjectClass on PPC64\n");
-CheckOffset(struct _GdkPixmapObjectClass,parent_class,0,9,44339)
+CheckOffset(struct _GdkPixmapObjectClass,parent_class,0,9,44339);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkPixmapObjectClass,224, 13006, 10)
+CheckTypeSize(struct _GdkPixmapObjectClass,224, 13006, 10);
 Msg("Missing member data for _GdkPixmapObjectClass on S390\n");
-CheckOffset(struct _GdkPixmapObjectClass,parent_class,0,10,44339)
+CheckOffset(struct _GdkPixmapObjectClass,parent_class,0,10,44339);
 #elif __s390x__
-CheckTypeSize(struct _GdkPixmapObjectClass,448, 13006, 12)
+CheckTypeSize(struct _GdkPixmapObjectClass,448, 13006, 12);
 Msg("Missing member data for _GdkPixmapObjectClass on S390X\n");
-CheckOffset(struct _GdkPixmapObjectClass,parent_class,0,12,44339)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13006,0);
-Msg("Find size of _GdkPixmapObjectClass (13006)\n");
+CheckOffset(struct _GdkPixmapObjectClass,parent_class,0,12,44339);
+#elif 1
+CheckTypeSize(struct _GdkPixmapObjectClass,0, 13006, 1);
+Msg("Missing member data for _GdkPixmapObjectClass on All\n");
+CheckOffset(struct _GdkPixmapObjectClass,parent_class,0,1,44339);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPixmapObjectClass,224, 13007, 2)
+CheckTypeSize(GdkPixmapObjectClass,224, 13007, 2);
 #elif __x86_64__
-CheckTypeSize(GdkPixmapObjectClass,448, 13007, 11)
+CheckTypeSize(GdkPixmapObjectClass,448, 13007, 11);
 #elif __ia64__
-CheckTypeSize(GdkPixmapObjectClass,448, 13007, 3)
+CheckTypeSize(GdkPixmapObjectClass,448, 13007, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixmapObjectClass,224, 13007, 6)
+CheckTypeSize(GdkPixmapObjectClass,224, 13007, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkPixmapObjectClass,448, 13007, 9)
+CheckTypeSize(GdkPixmapObjectClass,448, 13007, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixmapObjectClass,224, 13007, 10)
+CheckTypeSize(GdkPixmapObjectClass,224, 13007, 10);
 #elif __s390x__
-CheckTypeSize(GdkPixmapObjectClass,448, 13007, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13007,0);
-Msg("Find size of GdkPixmapObjectClass (13007)\n");
+CheckTypeSize(GdkPixmapObjectClass,448, 13007, 12);
+#elif 1
+CheckTypeSize(GdkPixmapObjectClass,0, 13007, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkPangoRendererClass,124, 13008, 2)
+CheckTypeSize(struct _GdkPangoRendererClass,124, 13008, 2);
 Msg("Missing member data for _GdkPangoRendererClass on IA32\n");
-CheckOffset(struct _GdkPangoRendererClass,parent_class,0,2,44340)
+CheckOffset(struct _GdkPangoRendererClass,parent_class,0,2,44340);
 #elif __x86_64__
-CheckTypeSize(struct _GdkPangoRendererClass,248, 13008, 11)
+CheckTypeSize(struct _GdkPangoRendererClass,248, 13008, 11);
 Msg("Missing member data for _GdkPangoRendererClass on x86-64\n");
-CheckOffset(struct _GdkPangoRendererClass,parent_class,0,11,44340)
+CheckOffset(struct _GdkPangoRendererClass,parent_class,0,11,44340);
 #elif __ia64__
-CheckTypeSize(struct _GdkPangoRendererClass,248, 13008, 3)
+CheckTypeSize(struct _GdkPangoRendererClass,248, 13008, 3);
 Msg("Missing member data for _GdkPangoRendererClass on IA64\n");
-CheckOffset(struct _GdkPangoRendererClass,parent_class,0,3,44340)
+CheckOffset(struct _GdkPangoRendererClass,parent_class,0,3,44340);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkPangoRendererClass,124, 13008, 6)
+CheckTypeSize(struct _GdkPangoRendererClass,124, 13008, 6);
 Msg("Missing member data for _GdkPangoRendererClass on PPC32\n");
-CheckOffset(struct _GdkPangoRendererClass,parent_class,0,6,44340)
+CheckOffset(struct _GdkPangoRendererClass,parent_class,0,6,44340);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkPangoRendererClass,248, 13008, 9)
+CheckTypeSize(struct _GdkPangoRendererClass,248, 13008, 9);
 Msg("Missing member data for _GdkPangoRendererClass on PPC64\n");
-CheckOffset(struct _GdkPangoRendererClass,parent_class,0,9,44340)
+CheckOffset(struct _GdkPangoRendererClass,parent_class,0,9,44340);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkPangoRendererClass,124, 13008, 10)
+CheckTypeSize(struct _GdkPangoRendererClass,124, 13008, 10);
 Msg("Missing member data for _GdkPangoRendererClass on S390\n");
-CheckOffset(struct _GdkPangoRendererClass,parent_class,0,10,44340)
+CheckOffset(struct _GdkPangoRendererClass,parent_class,0,10,44340);
 #elif __s390x__
-CheckTypeSize(struct _GdkPangoRendererClass,248, 13008, 12)
+CheckTypeSize(struct _GdkPangoRendererClass,248, 13008, 12);
 Msg("Missing member data for _GdkPangoRendererClass on S390X\n");
-CheckOffset(struct _GdkPangoRendererClass,parent_class,0,12,44340)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13008,0);
-Msg("Find size of _GdkPangoRendererClass (13008)\n");
+CheckOffset(struct _GdkPangoRendererClass,parent_class,0,12,44340);
+#elif 1
+CheckTypeSize(struct _GdkPangoRendererClass,0, 13008, 1);
+Msg("Missing member data for _GdkPangoRendererClass on All\n");
+CheckOffset(struct _GdkPangoRendererClass,parent_class,0,1,44340);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPangoRendererClass,124, 13009, 2)
+CheckTypeSize(GdkPangoRendererClass,124, 13009, 2);
 #elif __x86_64__
-CheckTypeSize(GdkPangoRendererClass,248, 13009, 11)
+CheckTypeSize(GdkPangoRendererClass,248, 13009, 11);
 #elif __ia64__
-CheckTypeSize(GdkPangoRendererClass,248, 13009, 3)
+CheckTypeSize(GdkPangoRendererClass,248, 13009, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPangoRendererClass,124, 13009, 6)
+CheckTypeSize(GdkPangoRendererClass,124, 13009, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkPangoRendererClass,248, 13009, 9)
+CheckTypeSize(GdkPangoRendererClass,248, 13009, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPangoRendererClass,124, 13009, 10)
+CheckTypeSize(GdkPangoRendererClass,124, 13009, 10);
 #elif __s390x__
-CheckTypeSize(GdkPangoRendererClass,248, 13009, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13009,0);
-Msg("Find size of GdkPangoRendererClass (13009)\n");
+CheckTypeSize(GdkPangoRendererClass,248, 13009, 12);
+#elif 1
+CheckTypeSize(GdkPangoRendererClass,0, 13009, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkDisplayClass,88, 13010, 2)
-CheckMemberSize(struct _GdkDisplayClass,get_display_name,4,2,44343)
-CheckOffset(struct _GdkDisplayClass,get_display_name,68,2,44343)
-CheckMemberSize(struct _GdkDisplayClass,get_n_screens,4,2,44345)
-CheckOffset(struct _GdkDisplayClass,get_n_screens,72,2,44345)
-CheckMemberSize(struct _GdkDisplayClass,get_screen,4,2,44348)
-CheckOffset(struct _GdkDisplayClass,get_screen,76,2,44348)
-CheckMemberSize(struct _GdkDisplayClass,get_default_screen,4,2,44350)
-CheckOffset(struct _GdkDisplayClass,get_default_screen,80,2,44350)
-CheckMemberSize(struct _GdkDisplayClass,closed,4,2,44353)
-CheckOffset(struct _GdkDisplayClass,closed,84,2,44353)
+CheckTypeSize(struct _GdkDisplayClass,88, 13010, 2);
+CheckMemberSize(struct _GdkDisplayClass,get_display_name,4,2,44343);
+CheckOffset(struct _GdkDisplayClass,get_display_name,68,2,44343);
+CheckMemberSize(struct _GdkDisplayClass,get_n_screens,4,2,44345);
+CheckOffset(struct _GdkDisplayClass,get_n_screens,72,2,44345);
+CheckMemberSize(struct _GdkDisplayClass,get_screen,4,2,44348);
+CheckOffset(struct _GdkDisplayClass,get_screen,76,2,44348);
+CheckMemberSize(struct _GdkDisplayClass,get_default_screen,4,2,44350);
+CheckOffset(struct _GdkDisplayClass,get_default_screen,80,2,44350);
+CheckMemberSize(struct _GdkDisplayClass,closed,4,2,44353);
+CheckOffset(struct _GdkDisplayClass,closed,84,2,44353);
 #elif __x86_64__
-CheckTypeSize(struct _GdkDisplayClass,176, 13010, 11)
-CheckMemberSize(struct _GdkDisplayClass,get_display_name,8,11,44343)
-CheckOffset(struct _GdkDisplayClass,get_display_name,136,11,44343)
-CheckMemberSize(struct _GdkDisplayClass,get_n_screens,8,11,44345)
-CheckOffset(struct _GdkDisplayClass,get_n_screens,144,11,44345)
-CheckMemberSize(struct _GdkDisplayClass,get_screen,8,11,44348)
-CheckOffset(struct _GdkDisplayClass,get_screen,152,11,44348)
-CheckMemberSize(struct _GdkDisplayClass,get_default_screen,8,11,44350)
-CheckOffset(struct _GdkDisplayClass,get_default_screen,160,11,44350)
-CheckMemberSize(struct _GdkDisplayClass,closed,8,11,44353)
-CheckOffset(struct _GdkDisplayClass,closed,168,11,44353)
+CheckTypeSize(struct _GdkDisplayClass,176, 13010, 11);
+CheckMemberSize(struct _GdkDisplayClass,get_display_name,8,11,44343);
+CheckOffset(struct _GdkDisplayClass,get_display_name,136,11,44343);
+CheckMemberSize(struct _GdkDisplayClass,get_n_screens,8,11,44345);
+CheckOffset(struct _GdkDisplayClass,get_n_screens,144,11,44345);
+CheckMemberSize(struct _GdkDisplayClass,get_screen,8,11,44348);
+CheckOffset(struct _GdkDisplayClass,get_screen,152,11,44348);
+CheckMemberSize(struct _GdkDisplayClass,get_default_screen,8,11,44350);
+CheckOffset(struct _GdkDisplayClass,get_default_screen,160,11,44350);
+CheckMemberSize(struct _GdkDisplayClass,closed,8,11,44353);
+CheckOffset(struct _GdkDisplayClass,closed,168,11,44353);
 #elif __ia64__
-CheckTypeSize(struct _GdkDisplayClass,176, 13010, 3)
-CheckMemberSize(struct _GdkDisplayClass,get_display_name,8,3,44343)
-CheckOffset(struct _GdkDisplayClass,get_display_name,136,3,44343)
-CheckMemberSize(struct _GdkDisplayClass,get_n_screens,8,3,44345)
-CheckOffset(struct _GdkDisplayClass,get_n_screens,144,3,44345)
-CheckMemberSize(struct _GdkDisplayClass,get_screen,8,3,44348)
-CheckOffset(struct _GdkDisplayClass,get_screen,152,3,44348)
-CheckMemberSize(struct _GdkDisplayClass,get_default_screen,8,3,44350)
-CheckOffset(struct _GdkDisplayClass,get_default_screen,160,3,44350)
-CheckMemberSize(struct _GdkDisplayClass,closed,8,3,44353)
-CheckOffset(struct _GdkDisplayClass,closed,168,3,44353)
+CheckTypeSize(struct _GdkDisplayClass,176, 13010, 3);
+CheckMemberSize(struct _GdkDisplayClass,get_display_name,8,3,44343);
+CheckOffset(struct _GdkDisplayClass,get_display_name,136,3,44343);
+CheckMemberSize(struct _GdkDisplayClass,get_n_screens,8,3,44345);
+CheckOffset(struct _GdkDisplayClass,get_n_screens,144,3,44345);
+CheckMemberSize(struct _GdkDisplayClass,get_screen,8,3,44348);
+CheckOffset(struct _GdkDisplayClass,get_screen,152,3,44348);
+CheckMemberSize(struct _GdkDisplayClass,get_default_screen,8,3,44350);
+CheckOffset(struct _GdkDisplayClass,get_default_screen,160,3,44350);
+CheckMemberSize(struct _GdkDisplayClass,closed,8,3,44353);
+CheckOffset(struct _GdkDisplayClass,closed,168,3,44353);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkDisplayClass,88, 13010, 6)
-CheckMemberSize(struct _GdkDisplayClass,get_display_name,4,6,44343)
-CheckOffset(struct _GdkDisplayClass,get_display_name,68,6,44343)
-CheckMemberSize(struct _GdkDisplayClass,get_n_screens,4,6,44345)
-CheckOffset(struct _GdkDisplayClass,get_n_screens,72,6,44345)
-CheckMemberSize(struct _GdkDisplayClass,get_screen,4,6,44348)
-CheckOffset(struct _GdkDisplayClass,get_screen,76,6,44348)
-CheckMemberSize(struct _GdkDisplayClass,get_default_screen,4,6,44350)
-CheckOffset(struct _GdkDisplayClass,get_default_screen,80,6,44350)
-CheckMemberSize(struct _GdkDisplayClass,closed,4,6,44353)
-CheckOffset(struct _GdkDisplayClass,closed,84,6,44353)
+CheckTypeSize(struct _GdkDisplayClass,88, 13010, 6);
+CheckMemberSize(struct _GdkDisplayClass,get_display_name,4,6,44343);
+CheckOffset(struct _GdkDisplayClass,get_display_name,68,6,44343);
+CheckMemberSize(struct _GdkDisplayClass,get_n_screens,4,6,44345);
+CheckOffset(struct _GdkDisplayClass,get_n_screens,72,6,44345);
+CheckMemberSize(struct _GdkDisplayClass,get_screen,4,6,44348);
+CheckOffset(struct _GdkDisplayClass,get_screen,76,6,44348);
+CheckMemberSize(struct _GdkDisplayClass,get_default_screen,4,6,44350);
+CheckOffset(struct _GdkDisplayClass,get_default_screen,80,6,44350);
+CheckMemberSize(struct _GdkDisplayClass,closed,4,6,44353);
+CheckOffset(struct _GdkDisplayClass,closed,84,6,44353);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkDisplayClass,176, 13010, 9)
-CheckMemberSize(struct _GdkDisplayClass,get_display_name,8,9,44343)
-CheckOffset(struct _GdkDisplayClass,get_display_name,136,9,44343)
-CheckMemberSize(struct _GdkDisplayClass,get_n_screens,8,9,44345)
-CheckOffset(struct _GdkDisplayClass,get_n_screens,144,9,44345)
-CheckMemberSize(struct _GdkDisplayClass,get_screen,8,9,44348)
-CheckOffset(struct _GdkDisplayClass,get_screen,152,9,44348)
-CheckMemberSize(struct _GdkDisplayClass,get_default_screen,8,9,44350)
-CheckOffset(struct _GdkDisplayClass,get_default_screen,160,9,44350)
-CheckMemberSize(struct _GdkDisplayClass,closed,8,9,44353)
-CheckOffset(struct _GdkDisplayClass,closed,168,9,44353)
+CheckTypeSize(struct _GdkDisplayClass,176, 13010, 9);
+CheckMemberSize(struct _GdkDisplayClass,get_display_name,8,9,44343);
+CheckOffset(struct _GdkDisplayClass,get_display_name,136,9,44343);
+CheckMemberSize(struct _GdkDisplayClass,get_n_screens,8,9,44345);
+CheckOffset(struct _GdkDisplayClass,get_n_screens,144,9,44345);
+CheckMemberSize(struct _GdkDisplayClass,get_screen,8,9,44348);
+CheckOffset(struct _GdkDisplayClass,get_screen,152,9,44348);
+CheckMemberSize(struct _GdkDisplayClass,get_default_screen,8,9,44350);
+CheckOffset(struct _GdkDisplayClass,get_default_screen,160,9,44350);
+CheckMemberSize(struct _GdkDisplayClass,closed,8,9,44353);
+CheckOffset(struct _GdkDisplayClass,closed,168,9,44353);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkDisplayClass,88, 13010, 10)
-CheckMemberSize(struct _GdkDisplayClass,get_display_name,4,10,44343)
-CheckOffset(struct _GdkDisplayClass,get_display_name,68,10,44343)
-CheckMemberSize(struct _GdkDisplayClass,get_n_screens,4,10,44345)
-CheckOffset(struct _GdkDisplayClass,get_n_screens,72,10,44345)
-CheckMemberSize(struct _GdkDisplayClass,get_screen,4,10,44348)
-CheckOffset(struct _GdkDisplayClass,get_screen,76,10,44348)
-CheckMemberSize(struct _GdkDisplayClass,get_default_screen,4,10,44350)
-CheckOffset(struct _GdkDisplayClass,get_default_screen,80,10,44350)
-CheckMemberSize(struct _GdkDisplayClass,closed,4,10,44353)
-CheckOffset(struct _GdkDisplayClass,closed,84,10,44353)
+CheckTypeSize(struct _GdkDisplayClass,88, 13010, 10);
+CheckMemberSize(struct _GdkDisplayClass,get_display_name,4,10,44343);
+CheckOffset(struct _GdkDisplayClass,get_display_name,68,10,44343);
+CheckMemberSize(struct _GdkDisplayClass,get_n_screens,4,10,44345);
+CheckOffset(struct _GdkDisplayClass,get_n_screens,72,10,44345);
+CheckMemberSize(struct _GdkDisplayClass,get_screen,4,10,44348);
+CheckOffset(struct _GdkDisplayClass,get_screen,76,10,44348);
+CheckMemberSize(struct _GdkDisplayClass,get_default_screen,4,10,44350);
+CheckOffset(struct _GdkDisplayClass,get_default_screen,80,10,44350);
+CheckMemberSize(struct _GdkDisplayClass,closed,4,10,44353);
+CheckOffset(struct _GdkDisplayClass,closed,84,10,44353);
 #elif __s390x__
-CheckTypeSize(struct _GdkDisplayClass,176, 13010, 12)
-CheckMemberSize(struct _GdkDisplayClass,get_display_name,8,12,44343)
-CheckOffset(struct _GdkDisplayClass,get_display_name,136,12,44343)
-CheckMemberSize(struct _GdkDisplayClass,get_n_screens,8,12,44345)
-CheckOffset(struct _GdkDisplayClass,get_n_screens,144,12,44345)
-CheckMemberSize(struct _GdkDisplayClass,get_screen,8,12,44348)
-CheckOffset(struct _GdkDisplayClass,get_screen,152,12,44348)
-CheckMemberSize(struct _GdkDisplayClass,get_default_screen,8,12,44350)
-CheckOffset(struct _GdkDisplayClass,get_default_screen,160,12,44350)
-CheckMemberSize(struct _GdkDisplayClass,closed,8,12,44353)
-CheckOffset(struct _GdkDisplayClass,closed,168,12,44353)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13010,0);
-Msg("Find size of _GdkDisplayClass (13010)\n");
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13011,0);
-Msg("Find size of fptr_gdk_708 (13011)\n");
+CheckTypeSize(struct _GdkDisplayClass,176, 13010, 12);
+CheckMemberSize(struct _GdkDisplayClass,get_display_name,8,12,44343);
+CheckOffset(struct _GdkDisplayClass,get_display_name,136,12,44343);
+CheckMemberSize(struct _GdkDisplayClass,get_n_screens,8,12,44345);
+CheckOffset(struct _GdkDisplayClass,get_n_screens,144,12,44345);
+CheckMemberSize(struct _GdkDisplayClass,get_screen,8,12,44348);
+CheckOffset(struct _GdkDisplayClass,get_screen,152,12,44348);
+CheckMemberSize(struct _GdkDisplayClass,get_default_screen,8,12,44350);
+CheckOffset(struct _GdkDisplayClass,get_default_screen,160,12,44350);
+CheckMemberSize(struct _GdkDisplayClass,closed,8,12,44353);
+CheckOffset(struct _GdkDisplayClass,closed,168,12,44353);
+#elif 1
+CheckTypeSize(struct _GdkDisplayClass,0, 13010, 1);
+Msg("Missing member data for _GdkDisplayClass on All\n");
+CheckOffset(struct _GdkDisplayClass,parent_class,0,1,44341);
+CheckOffset(struct _GdkDisplayClass,get_display_name,0,1,44343);
+CheckOffset(struct _GdkDisplayClass,get_n_screens,0,1,44345);
+CheckOffset(struct _GdkDisplayClass,get_screen,0,1,44348);
+CheckOffset(struct _GdkDisplayClass,get_default_screen,0,1,44350);
+CheckOffset(struct _GdkDisplayClass,closed,0,1,44353);
 #endif
 
 #if __i386__
@@ -13462,9 +13808,7 @@ Msg("Find size of fptr_gdk_708 (13011)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13012,0);
-Msg("Find size of fptr_gdk_382 (13012)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -13474,9 +13818,7 @@ Msg("Find size of fptr_gdk_382 (13012)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13013,0);
-Msg("Find size of fptr_gdk_672 (13013)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -13486,9 +13828,7 @@ Msg("Find size of fptr_gdk_672 (13013)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13014,0);
-Msg("Find size of fptr_gdk_498 (13014)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -13498,365 +13838,369 @@ Msg("Find size of fptr_gdk_498 (13014)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13015,0);
-Msg("Find size of fptr_gdk_509 (13015)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(GdkDisplayClass,88, 13016, 2)
 #elif __x86_64__
-CheckTypeSize(GdkDisplayClass,176, 13016, 11)
 #elif __ia64__
-CheckTypeSize(GdkDisplayClass,176, 13016, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkDisplayClass,88, 13016, 6)
 #elif __powerpc64__
-CheckTypeSize(GdkDisplayClass,176, 13016, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkDisplayClass,88, 13016, 10)
 #elif __s390x__
-CheckTypeSize(GdkDisplayClass,176, 13016, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13016,0);
-Msg("Find size of GdkDisplayClass (13016)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkPangoAttrStipple,16, 13017, 2)
-CheckMemberSize(struct _GdkPangoAttrStipple,stipple,4,2,44355)
-CheckOffset(struct _GdkPangoAttrStipple,stipple,12,2,44355)
+CheckTypeSize(GdkDisplayClass,88, 13016, 2);
 #elif __x86_64__
-CheckTypeSize(struct _GdkPangoAttrStipple,24, 13017, 11)
-CheckMemberSize(struct _GdkPangoAttrStipple,stipple,8,11,44355)
-CheckOffset(struct _GdkPangoAttrStipple,stipple,16,11,44355)
+CheckTypeSize(GdkDisplayClass,176, 13016, 11);
 #elif __ia64__
-CheckTypeSize(struct _GdkPangoAttrStipple,24, 13017, 3)
-CheckMemberSize(struct _GdkPangoAttrStipple,stipple,8,3,44355)
-CheckOffset(struct _GdkPangoAttrStipple,stipple,16,3,44355)
+CheckTypeSize(GdkDisplayClass,176, 13016, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkPangoAttrStipple,16, 13017, 6)
-CheckMemberSize(struct _GdkPangoAttrStipple,stipple,4,6,44355)
-CheckOffset(struct _GdkPangoAttrStipple,stipple,12,6,44355)
+CheckTypeSize(GdkDisplayClass,88, 13016, 6);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkPangoAttrStipple,24, 13017, 9)
-CheckMemberSize(struct _GdkPangoAttrStipple,stipple,8,9,44355)
-CheckOffset(struct _GdkPangoAttrStipple,stipple,16,9,44355)
+CheckTypeSize(GdkDisplayClass,176, 13016, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkPangoAttrStipple,16, 13017, 10)
-CheckMemberSize(struct _GdkPangoAttrStipple,stipple,4,10,44355)
-CheckOffset(struct _GdkPangoAttrStipple,stipple,12,10,44355)
+CheckTypeSize(GdkDisplayClass,88, 13016, 10);
 #elif __s390x__
-CheckTypeSize(struct _GdkPangoAttrStipple,24, 13017, 12)
-CheckMemberSize(struct _GdkPangoAttrStipple,stipple,8,12,44355)
-CheckOffset(struct _GdkPangoAttrStipple,stipple,16,12,44355)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13017,0);
-Msg("Find size of _GdkPangoAttrStipple (13017)\n");
+CheckTypeSize(GdkDisplayClass,176, 13016, 12);
+#elif 1
+CheckTypeSize(GdkDisplayClass,0, 13016, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPangoAttrStipple,16, 13018, 2)
+CheckTypeSize(struct _GdkPangoAttrStipple,16, 13017, 2);
+CheckMemberSize(struct _GdkPangoAttrStipple,stipple,4,2,44355);
+CheckOffset(struct _GdkPangoAttrStipple,stipple,12,2,44355);
 #elif __x86_64__
-CheckTypeSize(GdkPangoAttrStipple,24, 13018, 11)
+CheckTypeSize(struct _GdkPangoAttrStipple,24, 13017, 11);
+CheckMemberSize(struct _GdkPangoAttrStipple,stipple,8,11,44355);
+CheckOffset(struct _GdkPangoAttrStipple,stipple,16,11,44355);
 #elif __ia64__
-CheckTypeSize(GdkPangoAttrStipple,24, 13018, 3)
+CheckTypeSize(struct _GdkPangoAttrStipple,24, 13017, 3);
+CheckMemberSize(struct _GdkPangoAttrStipple,stipple,8,3,44355);
+CheckOffset(struct _GdkPangoAttrStipple,stipple,16,3,44355);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPangoAttrStipple,16, 13018, 6)
+CheckTypeSize(struct _GdkPangoAttrStipple,16, 13017, 6);
+CheckMemberSize(struct _GdkPangoAttrStipple,stipple,4,6,44355);
+CheckOffset(struct _GdkPangoAttrStipple,stipple,12,6,44355);
 #elif __powerpc64__
-CheckTypeSize(GdkPangoAttrStipple,24, 13018, 9)
+CheckTypeSize(struct _GdkPangoAttrStipple,24, 13017, 9);
+CheckMemberSize(struct _GdkPangoAttrStipple,stipple,8,9,44355);
+CheckOffset(struct _GdkPangoAttrStipple,stipple,16,9,44355);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPangoAttrStipple,16, 13018, 10)
+CheckTypeSize(struct _GdkPangoAttrStipple,16, 13017, 10);
+CheckMemberSize(struct _GdkPangoAttrStipple,stipple,4,10,44355);
+CheckOffset(struct _GdkPangoAttrStipple,stipple,12,10,44355);
 #elif __s390x__
-CheckTypeSize(GdkPangoAttrStipple,24, 13018, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13018,0);
-Msg("Find size of GdkPangoAttrStipple (13018)\n");
+CheckTypeSize(struct _GdkPangoAttrStipple,24, 13017, 12);
+CheckMemberSize(struct _GdkPangoAttrStipple,stipple,8,12,44355);
+CheckOffset(struct _GdkPangoAttrStipple,stipple,16,12,44355);
+#elif 1
+CheckTypeSize(struct _GdkPangoAttrStipple,0, 13017, 1);
+Msg("Missing member data for _GdkPangoAttrStipple on All\n");
+CheckOffset(struct _GdkPangoAttrStipple,attr,0,1,44354);
+CheckOffset(struct _GdkPangoAttrStipple,stipple,0,1,44355);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkColormapClass,68, 13019, 2)
+CheckTypeSize(GdkPangoAttrStipple,16, 13018, 2);
+#elif __x86_64__
+CheckTypeSize(GdkPangoAttrStipple,24, 13018, 11);
+#elif __ia64__
+CheckTypeSize(GdkPangoAttrStipple,24, 13018, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkPangoAttrStipple,16, 13018, 6);
+#elif __powerpc64__
+CheckTypeSize(GdkPangoAttrStipple,24, 13018, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GdkPangoAttrStipple,16, 13018, 10);
+#elif __s390x__
+CheckTypeSize(GdkPangoAttrStipple,24, 13018, 12);
+#elif 1
+CheckTypeSize(GdkPangoAttrStipple,0, 13018, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(struct _GdkColormapClass,68, 13019, 2);
 Msg("Missing member data for _GdkColormapClass on IA32\n");
-CheckOffset(struct _GdkColormapClass,parent_class,0,2,44356)
+CheckOffset(struct _GdkColormapClass,parent_class,0,2,44356);
 #elif __x86_64__
-CheckTypeSize(struct _GdkColormapClass,136, 13019, 11)
+CheckTypeSize(struct _GdkColormapClass,136, 13019, 11);
 Msg("Missing member data for _GdkColormapClass on x86-64\n");
-CheckOffset(struct _GdkColormapClass,parent_class,0,11,44356)
+CheckOffset(struct _GdkColormapClass,parent_class,0,11,44356);
 #elif __ia64__
-CheckTypeSize(struct _GdkColormapClass,136, 13019, 3)
+CheckTypeSize(struct _GdkColormapClass,136, 13019, 3);
 Msg("Missing member data for _GdkColormapClass on IA64\n");
-CheckOffset(struct _GdkColormapClass,parent_class,0,3,44356)
+CheckOffset(struct _GdkColormapClass,parent_class,0,3,44356);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkColormapClass,68, 13019, 6)
+CheckTypeSize(struct _GdkColormapClass,68, 13019, 6);
 Msg("Missing member data for _GdkColormapClass on PPC32\n");
-CheckOffset(struct _GdkColormapClass,parent_class,0,6,44356)
+CheckOffset(struct _GdkColormapClass,parent_class,0,6,44356);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkColormapClass,136, 13019, 9)
+CheckTypeSize(struct _GdkColormapClass,136, 13019, 9);
 Msg("Missing member data for _GdkColormapClass on PPC64\n");
-CheckOffset(struct _GdkColormapClass,parent_class,0,9,44356)
+CheckOffset(struct _GdkColormapClass,parent_class,0,9,44356);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkColormapClass,68, 13019, 10)
+CheckTypeSize(struct _GdkColormapClass,68, 13019, 10);
 Msg("Missing member data for _GdkColormapClass on S390\n");
-CheckOffset(struct _GdkColormapClass,parent_class,0,10,44356)
+CheckOffset(struct _GdkColormapClass,parent_class,0,10,44356);
 #elif __s390x__
-CheckTypeSize(struct _GdkColormapClass,136, 13019, 12)
+CheckTypeSize(struct _GdkColormapClass,136, 13019, 12);
 Msg("Missing member data for _GdkColormapClass on S390X\n");
-CheckOffset(struct _GdkColormapClass,parent_class,0,12,44356)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13019,0);
-Msg("Find size of _GdkColormapClass (13019)\n");
+CheckOffset(struct _GdkColormapClass,parent_class,0,12,44356);
+#elif 1
+CheckTypeSize(struct _GdkColormapClass,0, 13019, 1);
+Msg("Missing member data for _GdkColormapClass on All\n");
+CheckOffset(struct _GdkColormapClass,parent_class,0,1,44356);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkColormapClass,68, 13020, 2)
+CheckTypeSize(GdkColormapClass,68, 13020, 2);
 #elif __x86_64__
-CheckTypeSize(GdkColormapClass,136, 13020, 11)
+CheckTypeSize(GdkColormapClass,136, 13020, 11);
 #elif __ia64__
-CheckTypeSize(GdkColormapClass,136, 13020, 3)
+CheckTypeSize(GdkColormapClass,136, 13020, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkColormapClass,68, 13020, 6)
+CheckTypeSize(GdkColormapClass,68, 13020, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkColormapClass,136, 13020, 9)
+CheckTypeSize(GdkColormapClass,136, 13020, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkColormapClass,68, 13020, 10)
+CheckTypeSize(GdkColormapClass,68, 13020, 10);
 #elif __s390x__
-CheckTypeSize(GdkColormapClass,136, 13020, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13020,0);
-Msg("Find size of GdkColormapClass (13020)\n");
+CheckTypeSize(GdkColormapClass,136, 13020, 12);
+#elif 1
+CheckTypeSize(GdkColormapClass,0, 13020, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkDragContextClass,68, 13021, 2)
+CheckTypeSize(struct _GdkDragContextClass,68, 13021, 2);
 Msg("Missing member data for _GdkDragContextClass on IA32\n");
-CheckOffset(struct _GdkDragContextClass,parent_class,0,2,44357)
+CheckOffset(struct _GdkDragContextClass,parent_class,0,2,44357);
 #elif __x86_64__
-CheckTypeSize(struct _GdkDragContextClass,136, 13021, 11)
+CheckTypeSize(struct _GdkDragContextClass,136, 13021, 11);
 Msg("Missing member data for _GdkDragContextClass on x86-64\n");
-CheckOffset(struct _GdkDragContextClass,parent_class,0,11,44357)
+CheckOffset(struct _GdkDragContextClass,parent_class,0,11,44357);
 #elif __ia64__
-CheckTypeSize(struct _GdkDragContextClass,136, 13021, 3)
+CheckTypeSize(struct _GdkDragContextClass,136, 13021, 3);
 Msg("Missing member data for _GdkDragContextClass on IA64\n");
-CheckOffset(struct _GdkDragContextClass,parent_class,0,3,44357)
+CheckOffset(struct _GdkDragContextClass,parent_class,0,3,44357);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkDragContextClass,68, 13021, 6)
+CheckTypeSize(struct _GdkDragContextClass,68, 13021, 6);
 Msg("Missing member data for _GdkDragContextClass on PPC32\n");
-CheckOffset(struct _GdkDragContextClass,parent_class,0,6,44357)
+CheckOffset(struct _GdkDragContextClass,parent_class,0,6,44357);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkDragContextClass,136, 13021, 9)
+CheckTypeSize(struct _GdkDragContextClass,136, 13021, 9);
 Msg("Missing member data for _GdkDragContextClass on PPC64\n");
-CheckOffset(struct _GdkDragContextClass,parent_class,0,9,44357)
+CheckOffset(struct _GdkDragContextClass,parent_class,0,9,44357);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkDragContextClass,68, 13021, 10)
+CheckTypeSize(struct _GdkDragContextClass,68, 13021, 10);
 Msg("Missing member data for _GdkDragContextClass on S390\n");
-CheckOffset(struct _GdkDragContextClass,parent_class,0,10,44357)
+CheckOffset(struct _GdkDragContextClass,parent_class,0,10,44357);
 #elif __s390x__
-CheckTypeSize(struct _GdkDragContextClass,136, 13021, 12)
+CheckTypeSize(struct _GdkDragContextClass,136, 13021, 12);
 Msg("Missing member data for _GdkDragContextClass on S390X\n");
-CheckOffset(struct _GdkDragContextClass,parent_class,0,12,44357)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13021,0);
-Msg("Find size of _GdkDragContextClass (13021)\n");
+CheckOffset(struct _GdkDragContextClass,parent_class,0,12,44357);
+#elif 1
+CheckTypeSize(struct _GdkDragContextClass,0, 13021, 1);
+Msg("Missing member data for _GdkDragContextClass on All\n");
+CheckOffset(struct _GdkDragContextClass,parent_class,0,1,44357);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkDragContextClass,68, 13022, 2)
+CheckTypeSize(GdkDragContextClass,68, 13022, 2);
 #elif __x86_64__
-CheckTypeSize(GdkDragContextClass,136, 13022, 11)
+CheckTypeSize(GdkDragContextClass,136, 13022, 11);
 #elif __ia64__
-CheckTypeSize(GdkDragContextClass,136, 13022, 3)
+CheckTypeSize(GdkDragContextClass,136, 13022, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkDragContextClass,68, 13022, 6)
+CheckTypeSize(GdkDragContextClass,68, 13022, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkDragContextClass,136, 13022, 9)
+CheckTypeSize(GdkDragContextClass,136, 13022, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkDragContextClass,68, 13022, 10)
+CheckTypeSize(GdkDragContextClass,68, 13022, 10);
 #elif __s390x__
-CheckTypeSize(GdkDragContextClass,136, 13022, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13022,0);
-Msg("Find size of GdkDragContextClass (13022)\n");
+CheckTypeSize(GdkDragContextClass,136, 13022, 12);
+#elif 1
+CheckTypeSize(GdkDragContextClass,0, 13022, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkWindowObjectClass,224, 13023, 2)
+CheckTypeSize(struct _GdkWindowObjectClass,224, 13023, 2);
 Msg("Missing member data for _GdkWindowObjectClass on IA32\n");
-CheckOffset(struct _GdkWindowObjectClass,parent_class,0,2,44358)
+CheckOffset(struct _GdkWindowObjectClass,parent_class,0,2,44358);
 #elif __x86_64__
-CheckTypeSize(struct _GdkWindowObjectClass,448, 13023, 11)
+CheckTypeSize(struct _GdkWindowObjectClass,448, 13023, 11);
 Msg("Missing member data for _GdkWindowObjectClass on x86-64\n");
-CheckOffset(struct _GdkWindowObjectClass,parent_class,0,11,44358)
+CheckOffset(struct _GdkWindowObjectClass,parent_class,0,11,44358);
 #elif __ia64__
-CheckTypeSize(struct _GdkWindowObjectClass,448, 13023, 3)
+CheckTypeSize(struct _GdkWindowObjectClass,448, 13023, 3);
 Msg("Missing member data for _GdkWindowObjectClass on IA64\n");
-CheckOffset(struct _GdkWindowObjectClass,parent_class,0,3,44358)
+CheckOffset(struct _GdkWindowObjectClass,parent_class,0,3,44358);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkWindowObjectClass,224, 13023, 6)
+CheckTypeSize(struct _GdkWindowObjectClass,224, 13023, 6);
 Msg("Missing member data for _GdkWindowObjectClass on PPC32\n");
-CheckOffset(struct _GdkWindowObjectClass,parent_class,0,6,44358)
+CheckOffset(struct _GdkWindowObjectClass,parent_class,0,6,44358);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkWindowObjectClass,448, 13023, 9)
+CheckTypeSize(struct _GdkWindowObjectClass,448, 13023, 9);
 Msg("Missing member data for _GdkWindowObjectClass on PPC64\n");
-CheckOffset(struct _GdkWindowObjectClass,parent_class,0,9,44358)
+CheckOffset(struct _GdkWindowObjectClass,parent_class,0,9,44358);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkWindowObjectClass,224, 13023, 10)
+CheckTypeSize(struct _GdkWindowObjectClass,224, 13023, 10);
 Msg("Missing member data for _GdkWindowObjectClass on S390\n");
-CheckOffset(struct _GdkWindowObjectClass,parent_class,0,10,44358)
+CheckOffset(struct _GdkWindowObjectClass,parent_class,0,10,44358);
 #elif __s390x__
-CheckTypeSize(struct _GdkWindowObjectClass,448, 13023, 12)
+CheckTypeSize(struct _GdkWindowObjectClass,448, 13023, 12);
 Msg("Missing member data for _GdkWindowObjectClass on S390X\n");
-CheckOffset(struct _GdkWindowObjectClass,parent_class,0,12,44358)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13023,0);
-Msg("Find size of _GdkWindowObjectClass (13023)\n");
+CheckOffset(struct _GdkWindowObjectClass,parent_class,0,12,44358);
+#elif 1
+CheckTypeSize(struct _GdkWindowObjectClass,0, 13023, 1);
+Msg("Missing member data for _GdkWindowObjectClass on All\n");
+CheckOffset(struct _GdkWindowObjectClass,parent_class,0,1,44358);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkWindowObjectClass,224, 13024, 2)
+CheckTypeSize(GdkWindowObjectClass,224, 13024, 2);
 #elif __x86_64__
-CheckTypeSize(GdkWindowObjectClass,448, 13024, 11)
+CheckTypeSize(GdkWindowObjectClass,448, 13024, 11);
 #elif __ia64__
-CheckTypeSize(GdkWindowObjectClass,448, 13024, 3)
+CheckTypeSize(GdkWindowObjectClass,448, 13024, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkWindowObjectClass,224, 13024, 6)
+CheckTypeSize(GdkWindowObjectClass,224, 13024, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkWindowObjectClass,448, 13024, 9)
+CheckTypeSize(GdkWindowObjectClass,448, 13024, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkWindowObjectClass,224, 13024, 10)
+CheckTypeSize(GdkWindowObjectClass,224, 13024, 10);
 #elif __s390x__
-CheckTypeSize(GdkWindowObjectClass,448, 13024, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13024,0);
-Msg("Find size of GdkWindowObjectClass (13024)\n");
+CheckTypeSize(GdkWindowObjectClass,448, 13024, 12);
+#elif 1
+CheckTypeSize(GdkWindowObjectClass,0, 13024, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkGCClass,96, 13025, 2)
-CheckMemberSize(struct _GdkGCClass,get_values,4,2,44362)
-CheckOffset(struct _GdkGCClass,get_values,68,2,44362)
-CheckMemberSize(struct _GdkGCClass,set_values,4,2,44366)
-CheckOffset(struct _GdkGCClass,set_values,72,2,44366)
-CheckMemberSize(struct _GdkGCClass,set_dashes,4,2,44371)
-CheckOffset(struct _GdkGCClass,set_dashes,76,2,44371)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved1,4,2,44372)
-CheckOffset(struct _GdkGCClass,_gdk_reserved1,80,2,44372)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved2,4,2,44373)
-CheckOffset(struct _GdkGCClass,_gdk_reserved2,84,2,44373)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved3,4,2,44374)
-CheckOffset(struct _GdkGCClass,_gdk_reserved3,88,2,44374)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved4,4,2,44375)
-CheckOffset(struct _GdkGCClass,_gdk_reserved4,92,2,44375)
+CheckTypeSize(struct _GdkGCClass,96, 13025, 2);
+CheckMemberSize(struct _GdkGCClass,get_values,4,2,44362);
+CheckOffset(struct _GdkGCClass,get_values,68,2,44362);
+CheckMemberSize(struct _GdkGCClass,set_values,4,2,44366);
+CheckOffset(struct _GdkGCClass,set_values,72,2,44366);
+CheckMemberSize(struct _GdkGCClass,set_dashes,4,2,44371);
+CheckOffset(struct _GdkGCClass,set_dashes,76,2,44371);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved1,4,2,44372);
+CheckOffset(struct _GdkGCClass,_gdk_reserved1,80,2,44372);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved2,4,2,44373);
+CheckOffset(struct _GdkGCClass,_gdk_reserved2,84,2,44373);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved3,4,2,44374);
+CheckOffset(struct _GdkGCClass,_gdk_reserved3,88,2,44374);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved4,4,2,44375);
+CheckOffset(struct _GdkGCClass,_gdk_reserved4,92,2,44375);
 #elif __x86_64__
-CheckTypeSize(struct _GdkGCClass,192, 13025, 11)
-CheckMemberSize(struct _GdkGCClass,get_values,8,11,44362)
-CheckOffset(struct _GdkGCClass,get_values,136,11,44362)
-CheckMemberSize(struct _GdkGCClass,set_values,8,11,44366)
-CheckOffset(struct _GdkGCClass,set_values,144,11,44366)
-CheckMemberSize(struct _GdkGCClass,set_dashes,8,11,44371)
-CheckOffset(struct _GdkGCClass,set_dashes,152,11,44371)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved1,8,11,44372)
-CheckOffset(struct _GdkGCClass,_gdk_reserved1,160,11,44372)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved2,8,11,44373)
-CheckOffset(struct _GdkGCClass,_gdk_reserved2,168,11,44373)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved3,8,11,44374)
-CheckOffset(struct _GdkGCClass,_gdk_reserved3,176,11,44374)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved4,8,11,44375)
-CheckOffset(struct _GdkGCClass,_gdk_reserved4,184,11,44375)
+CheckTypeSize(struct _GdkGCClass,192, 13025, 11);
+CheckMemberSize(struct _GdkGCClass,get_values,8,11,44362);
+CheckOffset(struct _GdkGCClass,get_values,136,11,44362);
+CheckMemberSize(struct _GdkGCClass,set_values,8,11,44366);
+CheckOffset(struct _GdkGCClass,set_values,144,11,44366);
+CheckMemberSize(struct _GdkGCClass,set_dashes,8,11,44371);
+CheckOffset(struct _GdkGCClass,set_dashes,152,11,44371);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved1,8,11,44372);
+CheckOffset(struct _GdkGCClass,_gdk_reserved1,160,11,44372);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved2,8,11,44373);
+CheckOffset(struct _GdkGCClass,_gdk_reserved2,168,11,44373);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved3,8,11,44374);
+CheckOffset(struct _GdkGCClass,_gdk_reserved3,176,11,44374);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved4,8,11,44375);
+CheckOffset(struct _GdkGCClass,_gdk_reserved4,184,11,44375);
 #elif __ia64__
-CheckTypeSize(struct _GdkGCClass,192, 13025, 3)
-CheckMemberSize(struct _GdkGCClass,get_values,8,3,44362)
-CheckOffset(struct _GdkGCClass,get_values,136,3,44362)
-CheckMemberSize(struct _GdkGCClass,set_values,8,3,44366)
-CheckOffset(struct _GdkGCClass,set_values,144,3,44366)
-CheckMemberSize(struct _GdkGCClass,set_dashes,8,3,44371)
-CheckOffset(struct _GdkGCClass,set_dashes,152,3,44371)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved1,8,3,44372)
-CheckOffset(struct _GdkGCClass,_gdk_reserved1,160,3,44372)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved2,8,3,44373)
-CheckOffset(struct _GdkGCClass,_gdk_reserved2,168,3,44373)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved3,8,3,44374)
-CheckOffset(struct _GdkGCClass,_gdk_reserved3,176,3,44374)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved4,8,3,44375)
-CheckOffset(struct _GdkGCClass,_gdk_reserved4,184,3,44375)
+CheckTypeSize(struct _GdkGCClass,192, 13025, 3);
+CheckMemberSize(struct _GdkGCClass,get_values,8,3,44362);
+CheckOffset(struct _GdkGCClass,get_values,136,3,44362);
+CheckMemberSize(struct _GdkGCClass,set_values,8,3,44366);
+CheckOffset(struct _GdkGCClass,set_values,144,3,44366);
+CheckMemberSize(struct _GdkGCClass,set_dashes,8,3,44371);
+CheckOffset(struct _GdkGCClass,set_dashes,152,3,44371);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved1,8,3,44372);
+CheckOffset(struct _GdkGCClass,_gdk_reserved1,160,3,44372);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved2,8,3,44373);
+CheckOffset(struct _GdkGCClass,_gdk_reserved2,168,3,44373);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved3,8,3,44374);
+CheckOffset(struct _GdkGCClass,_gdk_reserved3,176,3,44374);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved4,8,3,44375);
+CheckOffset(struct _GdkGCClass,_gdk_reserved4,184,3,44375);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkGCClass,96, 13025, 6)
-CheckMemberSize(struct _GdkGCClass,get_values,4,6,44362)
-CheckOffset(struct _GdkGCClass,get_values,68,6,44362)
-CheckMemberSize(struct _GdkGCClass,set_values,4,6,44366)
-CheckOffset(struct _GdkGCClass,set_values,72,6,44366)
-CheckMemberSize(struct _GdkGCClass,set_dashes,4,6,44371)
-CheckOffset(struct _GdkGCClass,set_dashes,76,6,44371)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved1,4,6,44372)
-CheckOffset(struct _GdkGCClass,_gdk_reserved1,80,6,44372)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved2,4,6,44373)
-CheckOffset(struct _GdkGCClass,_gdk_reserved2,84,6,44373)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved3,4,6,44374)
-CheckOffset(struct _GdkGCClass,_gdk_reserved3,88,6,44374)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved4,4,6,44375)
-CheckOffset(struct _GdkGCClass,_gdk_reserved4,92,6,44375)
+CheckTypeSize(struct _GdkGCClass,96, 13025, 6);
+CheckMemberSize(struct _GdkGCClass,get_values,4,6,44362);
+CheckOffset(struct _GdkGCClass,get_values,68,6,44362);
+CheckMemberSize(struct _GdkGCClass,set_values,4,6,44366);
+CheckOffset(struct _GdkGCClass,set_values,72,6,44366);
+CheckMemberSize(struct _GdkGCClass,set_dashes,4,6,44371);
+CheckOffset(struct _GdkGCClass,set_dashes,76,6,44371);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved1,4,6,44372);
+CheckOffset(struct _GdkGCClass,_gdk_reserved1,80,6,44372);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved2,4,6,44373);
+CheckOffset(struct _GdkGCClass,_gdk_reserved2,84,6,44373);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved3,4,6,44374);
+CheckOffset(struct _GdkGCClass,_gdk_reserved3,88,6,44374);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved4,4,6,44375);
+CheckOffset(struct _GdkGCClass,_gdk_reserved4,92,6,44375);
 #elif __powerpc64__
-CheckTypeSize(struct _GdkGCClass,192, 13025, 9)
-CheckMemberSize(struct _GdkGCClass,get_values,8,9,44362)
-CheckOffset(struct _GdkGCClass,get_values,136,9,44362)
-CheckMemberSize(struct _GdkGCClass,set_values,8,9,44366)
-CheckOffset(struct _GdkGCClass,set_values,144,9,44366)
-CheckMemberSize(struct _GdkGCClass,set_dashes,8,9,44371)
-CheckOffset(struct _GdkGCClass,set_dashes,152,9,44371)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved1,8,9,44372)
-CheckOffset(struct _GdkGCClass,_gdk_reserved1,160,9,44372)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved2,8,9,44373)
-CheckOffset(struct _GdkGCClass,_gdk_reserved2,168,9,44373)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved3,8,9,44374)
-CheckOffset(struct _GdkGCClass,_gdk_reserved3,176,9,44374)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved4,8,9,44375)
-CheckOffset(struct _GdkGCClass,_gdk_reserved4,184,9,44375)
+CheckTypeSize(struct _GdkGCClass,192, 13025, 9);
+CheckMemberSize(struct _GdkGCClass,get_values,8,9,44362);
+CheckOffset(struct _GdkGCClass,get_values,136,9,44362);
+CheckMemberSize(struct _GdkGCClass,set_values,8,9,44366);
+CheckOffset(struct _GdkGCClass,set_values,144,9,44366);
+CheckMemberSize(struct _GdkGCClass,set_dashes,8,9,44371);
+CheckOffset(struct _GdkGCClass,set_dashes,152,9,44371);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved1,8,9,44372);
+CheckOffset(struct _GdkGCClass,_gdk_reserved1,160,9,44372);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved2,8,9,44373);
+CheckOffset(struct _GdkGCClass,_gdk_reserved2,168,9,44373);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved3,8,9,44374);
+CheckOffset(struct _GdkGCClass,_gdk_reserved3,176,9,44374);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved4,8,9,44375);
+CheckOffset(struct _GdkGCClass,_gdk_reserved4,184,9,44375);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkGCClass,96, 13025, 10)
-CheckMemberSize(struct _GdkGCClass,get_values,4,10,44362)
-CheckOffset(struct _GdkGCClass,get_values,68,10,44362)
-CheckMemberSize(struct _GdkGCClass,set_values,4,10,44366)
-CheckOffset(struct _GdkGCClass,set_values,72,10,44366)
-CheckMemberSize(struct _GdkGCClass,set_dashes,4,10,44371)
-CheckOffset(struct _GdkGCClass,set_dashes,76,10,44371)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved1,4,10,44372)
-CheckOffset(struct _GdkGCClass,_gdk_reserved1,80,10,44372)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved2,4,10,44373)
-CheckOffset(struct _GdkGCClass,_gdk_reserved2,84,10,44373)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved3,4,10,44374)
-CheckOffset(struct _GdkGCClass,_gdk_reserved3,88,10,44374)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved4,4,10,44375)
-CheckOffset(struct _GdkGCClass,_gdk_reserved4,92,10,44375)
+CheckTypeSize(struct _GdkGCClass,96, 13025, 10);
+CheckMemberSize(struct _GdkGCClass,get_values,4,10,44362);
+CheckOffset(struct _GdkGCClass,get_values,68,10,44362);
+CheckMemberSize(struct _GdkGCClass,set_values,4,10,44366);
+CheckOffset(struct _GdkGCClass,set_values,72,10,44366);
+CheckMemberSize(struct _GdkGCClass,set_dashes,4,10,44371);
+CheckOffset(struct _GdkGCClass,set_dashes,76,10,44371);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved1,4,10,44372);
+CheckOffset(struct _GdkGCClass,_gdk_reserved1,80,10,44372);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved2,4,10,44373);
+CheckOffset(struct _GdkGCClass,_gdk_reserved2,84,10,44373);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved3,4,10,44374);
+CheckOffset(struct _GdkGCClass,_gdk_reserved3,88,10,44374);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved4,4,10,44375);
+CheckOffset(struct _GdkGCClass,_gdk_reserved4,92,10,44375);
 #elif __s390x__
-CheckTypeSize(struct _GdkGCClass,192, 13025, 12)
-CheckMemberSize(struct _GdkGCClass,get_values,8,12,44362)
-CheckOffset(struct _GdkGCClass,get_values,136,12,44362)
-CheckMemberSize(struct _GdkGCClass,set_values,8,12,44366)
-CheckOffset(struct _GdkGCClass,set_values,144,12,44366)
-CheckMemberSize(struct _GdkGCClass,set_dashes,8,12,44371)
-CheckOffset(struct _GdkGCClass,set_dashes,152,12,44371)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved1,8,12,44372)
-CheckOffset(struct _GdkGCClass,_gdk_reserved1,160,12,44372)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved2,8,12,44373)
-CheckOffset(struct _GdkGCClass,_gdk_reserved2,168,12,44373)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved3,8,12,44374)
-CheckOffset(struct _GdkGCClass,_gdk_reserved3,176,12,44374)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved4,8,12,44375)
-CheckOffset(struct _GdkGCClass,_gdk_reserved4,184,12,44375)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13025,0);
-Msg("Find size of _GdkGCClass (13025)\n");
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13026,0);
-Msg("Find size of fptr_gdk_691 (13026)\n");
+CheckTypeSize(struct _GdkGCClass,192, 13025, 12);
+CheckMemberSize(struct _GdkGCClass,get_values,8,12,44362);
+CheckOffset(struct _GdkGCClass,get_values,136,12,44362);
+CheckMemberSize(struct _GdkGCClass,set_values,8,12,44366);
+CheckOffset(struct _GdkGCClass,set_values,144,12,44366);
+CheckMemberSize(struct _GdkGCClass,set_dashes,8,12,44371);
+CheckOffset(struct _GdkGCClass,set_dashes,152,12,44371);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved1,8,12,44372);
+CheckOffset(struct _GdkGCClass,_gdk_reserved1,160,12,44372);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved2,8,12,44373);
+CheckOffset(struct _GdkGCClass,_gdk_reserved2,168,12,44373);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved3,8,12,44374);
+CheckOffset(struct _GdkGCClass,_gdk_reserved3,176,12,44374);
+CheckMemberSize(struct _GdkGCClass,_gdk_reserved4,8,12,44375);
+CheckOffset(struct _GdkGCClass,_gdk_reserved4,184,12,44375);
+#elif 1
+CheckTypeSize(struct _GdkGCClass,0, 13025, 1);
+Msg("Missing member data for _GdkGCClass on All\n");
+CheckOffset(struct _GdkGCClass,parent_class,0,1,44359);
+CheckOffset(struct _GdkGCClass,get_values,0,1,44362);
+CheckOffset(struct _GdkGCClass,set_values,0,1,44366);
+CheckOffset(struct _GdkGCClass,set_dashes,0,1,44371);
+CheckOffset(struct _GdkGCClass,_gdk_reserved1,0,1,44372);
+CheckOffset(struct _GdkGCClass,_gdk_reserved2,0,1,44373);
+CheckOffset(struct _GdkGCClass,_gdk_reserved3,0,1,44374);
+CheckOffset(struct _GdkGCClass,_gdk_reserved4,0,1,44375);
 #endif
 
 #if __i386__
@@ -13866,9 +14210,7 @@ Msg("Find size of fptr_gdk_691 (13026)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13027,0);
-Msg("Find size of fptr_gdk_343 (13027)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -13878,66 +14220,71 @@ Msg("Find size of fptr_gdk_343 (13027)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13028,0);
-Msg("Find size of fptr_gdk_403 (13028)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(GdkGCClass,96, 13029, 2)
 #elif __x86_64__
-CheckTypeSize(GdkGCClass,192, 13029, 11)
 #elif __ia64__
-CheckTypeSize(GdkGCClass,192, 13029, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkGCClass,96, 13029, 6)
 #elif __powerpc64__
-CheckTypeSize(GdkGCClass,192, 13029, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkGCClass,96, 13029, 10)
 #elif __s390x__
-CheckTypeSize(GdkGCClass,192, 13029, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13029,0);
-Msg("Find size of GdkGCClass (13029)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(GdkDeviceClass,0, 13031, 2)
+CheckTypeSize(GdkGCClass,96, 13029, 2);
 #elif __x86_64__
-CheckTypeSize(GdkDeviceClass,0, 13031, 11)
+CheckTypeSize(GdkGCClass,192, 13029, 11);
 #elif __ia64__
-CheckTypeSize(GdkDeviceClass,0, 13031, 3)
+CheckTypeSize(GdkGCClass,192, 13029, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkDeviceClass,0, 13031, 6)
+CheckTypeSize(GdkGCClass,96, 13029, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkDeviceClass,0, 13031, 9)
+CheckTypeSize(GdkGCClass,192, 13029, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkDeviceClass,0, 13031, 10)
+CheckTypeSize(GdkGCClass,96, 13029, 10);
 #elif __s390x__
-CheckTypeSize(GdkDeviceClass,0, 13031, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13031,0);
-Msg("Find size of GdkDeviceClass (13031)\n");
+CheckTypeSize(GdkGCClass,192, 13029, 12);
+#elif 1
+CheckTypeSize(GdkGCClass,0, 13029, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkVisualClass,0, 13033, 2)
+CheckTypeSize(GdkDeviceClass,0, 13031, 2);
 #elif __x86_64__
-CheckTypeSize(GdkVisualClass,0, 13033, 11)
+CheckTypeSize(GdkDeviceClass,0, 13031, 11);
 #elif __ia64__
-CheckTypeSize(GdkVisualClass,0, 13033, 3)
+CheckTypeSize(GdkDeviceClass,0, 13031, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkVisualClass,0, 13033, 6)
+CheckTypeSize(GdkDeviceClass,0, 13031, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkVisualClass,0, 13033, 9)
+CheckTypeSize(GdkDeviceClass,0, 13031, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkVisualClass,0, 13033, 10)
+CheckTypeSize(GdkDeviceClass,0, 13031, 10);
 #elif __s390x__
-CheckTypeSize(GdkVisualClass,0, 13033, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13033,0);
-Msg("Find size of GdkVisualClass (13033)\n");
+CheckTypeSize(GdkDeviceClass,0, 13031, 12);
+#elif 1
+CheckTypeSize(GdkDeviceClass,0, 13031, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(GdkVisualClass,0, 13033, 2);
+#elif __x86_64__
+CheckTypeSize(GdkVisualClass,0, 13033, 11);
+#elif __ia64__
+CheckTypeSize(GdkVisualClass,0, 13033, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkVisualClass,0, 13033, 6);
+#elif __powerpc64__
+CheckTypeSize(GdkVisualClass,0, 13033, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GdkVisualClass,0, 13033, 10);
+#elif __s390x__
+CheckTypeSize(GdkVisualClass,0, 13033, 12);
+#elif 1
+CheckTypeSize(GdkVisualClass,0, 13033, 1);
 #endif
 
 #if __i386__
@@ -13982,28 +14329,30 @@ CheckEnum("GDK_ERROR",GDK_ERROR,-1,44377);
 CheckEnum("GDK_ERROR_PARAM",GDK_ERROR_PARAM,-2,44378);
 CheckEnum("GDK_ERROR_FILE",GDK_ERROR_FILE,-3,44379);
 CheckEnum("GDK_ERROR_MEM",GDK_ERROR_MEM,-4,44380);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13034,0);
-Msg("Find size of anonymous-gdk.h.types-4 (13034)\n");
+#elif 1
+CheckEnum("GDK_OK",GDK_OK,0,44376);
+CheckEnum("GDK_ERROR",GDK_ERROR,-1,44377);
+CheckEnum("GDK_ERROR_PARAM",GDK_ERROR_PARAM,-2,44378);
+CheckEnum("GDK_ERROR_FILE",GDK_ERROR_FILE,-3,44379);
+CheckEnum("GDK_ERROR_MEM",GDK_ERROR_MEM,-4,44380);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkStatus,4, 13035, 2)
+CheckTypeSize(GdkStatus,4, 13035, 2);
 #elif __x86_64__
-CheckTypeSize(GdkStatus,4, 13035, 11)
+CheckTypeSize(GdkStatus,4, 13035, 11);
 #elif __ia64__
-CheckTypeSize(GdkStatus,4, 13035, 3)
+CheckTypeSize(GdkStatus,4, 13035, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkStatus,4, 13035, 6)
+CheckTypeSize(GdkStatus,4, 13035, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkStatus,4, 13035, 9)
+CheckTypeSize(GdkStatus,4, 13035, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkStatus,4, 13035, 10)
+CheckTypeSize(GdkStatus,4, 13035, 10);
 #elif __s390x__
-CheckTypeSize(GdkStatus,4, 13035, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13035,0);
-Msg("Find size of GdkStatus (13035)\n");
+CheckTypeSize(GdkStatus,4, 13035, 12);
+#elif 1
+CheckTypeSize(GdkStatus,0, 13035, 1);
 #endif
 
 #if __i386__
@@ -14027,28 +14376,27 @@ CheckEnum("GDK_PROPERTY_DELETE",GDK_PROPERTY_DELETE,(0) + 1,44382);
 #elif __s390x__
 CheckEnum("GDK_PROPERTY_NEW_VALUE",GDK_PROPERTY_NEW_VALUE,0,44381);
 CheckEnum("GDK_PROPERTY_DELETE",GDK_PROPERTY_DELETE,(0) + 1,44382);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13036,0);
-Msg("Find size of anonymous-gdk.h.types-6 (13036)\n");
+#elif 1
+CheckEnum("GDK_PROPERTY_NEW_VALUE",GDK_PROPERTY_NEW_VALUE,0,44381);
+CheckEnum("GDK_PROPERTY_DELETE",GDK_PROPERTY_DELETE,(0) + 1,44382);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPropertyState,4, 13037, 2)
+CheckTypeSize(GdkPropertyState,4, 13037, 2);
 #elif __x86_64__
-CheckTypeSize(GdkPropertyState,4, 13037, 11)
+CheckTypeSize(GdkPropertyState,4, 13037, 11);
 #elif __ia64__
-CheckTypeSize(GdkPropertyState,4, 13037, 3)
+CheckTypeSize(GdkPropertyState,4, 13037, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPropertyState,4, 13037, 6)
+CheckTypeSize(GdkPropertyState,4, 13037, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkPropertyState,4, 13037, 9)
+CheckTypeSize(GdkPropertyState,4, 13037, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPropertyState,4, 13037, 10)
+CheckTypeSize(GdkPropertyState,4, 13037, 10);
 #elif __s390x__
-CheckTypeSize(GdkPropertyState,4, 13037, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13037,0);
-Msg("Find size of GdkPropertyState (13037)\n");
+CheckTypeSize(GdkPropertyState,4, 13037, 12);
+#elif 1
+CheckTypeSize(GdkPropertyState,0, 13037, 1);
 #endif
 
 #if __i386__
@@ -14114,28 +14462,33 @@ CheckEnum("GDK_WA_COLORMAP",GDK_WA_COLORMAP,1 << 5,44387);
 CheckEnum("GDK_WA_VISUAL",GDK_WA_VISUAL,1 << 6,44388);
 CheckEnum("GDK_WA_WMCLASS",GDK_WA_WMCLASS,1 << 7,44389);
 CheckEnum("GDK_WA_NOREDIR",GDK_WA_NOREDIR,1 << 8,44390);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13038,0);
-Msg("Find size of anonymous-gdk.h.types-8 (13038)\n");
+#elif 1
+CheckEnum("GDK_WA_TITLE",GDK_WA_TITLE,1 << 1,44383);
+CheckEnum("GDK_WA_X",GDK_WA_X,1 << 2,44384);
+CheckEnum("GDK_WA_Y",GDK_WA_Y,1 << 3,44385);
+CheckEnum("GDK_WA_CURSOR",GDK_WA_CURSOR,1 << 4,44386);
+CheckEnum("GDK_WA_COLORMAP",GDK_WA_COLORMAP,1 << 5,44387);
+CheckEnum("GDK_WA_VISUAL",GDK_WA_VISUAL,1 << 6,44388);
+CheckEnum("GDK_WA_WMCLASS",GDK_WA_WMCLASS,1 << 7,44389);
+CheckEnum("GDK_WA_NOREDIR",GDK_WA_NOREDIR,1 << 8,44390);
 #endif
 
 #if __i386__
-CheckTypeSize(GdkWindowAttributesType,4, 13039, 2)
+CheckTypeSize(GdkWindowAttributesType,4, 13039, 2);
 #elif __x86_64__
-CheckTypeSize(GdkWindowAttributesType,4, 13039, 11)
+CheckTypeSize(GdkWindowAttributesType,4, 13039, 11);
 #elif __ia64__
-CheckTypeSize(GdkWindowAttributesType,4, 13039, 3)
+CheckTypeSize(GdkWindowAttributesType,4, 13039, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkWindowAttributesType,4, 13039, 6)
+CheckTypeSize(GdkWindowAttributesType,4, 13039, 6);
 #elif __powerpc64__
-CheckTypeSize(GdkWindowAttributesType,4, 13039, 9)
+CheckTypeSize(GdkWindowAttributesType,4, 13039, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkWindowAttributesType,4, 13039, 10)
+CheckTypeSize(GdkWindowAttributesType,4, 13039, 10);
 #elif __s390x__
-CheckTypeSize(GdkWindowAttributesType,4, 13039, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,13039,0);
-Msg("Find size of GdkWindowAttributesType (13039)\n");
+CheckTypeSize(GdkWindowAttributesType,4, 13039, 12);
+#elif 1
+CheckTypeSize(GdkWindowAttributesType,0, 13039, 1);
 #endif
 
 extern void gdk_window_deiconify_db(GdkWindow *);

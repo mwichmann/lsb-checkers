@@ -9,24 +9,8 @@ int architecture=2;
 int architecture=3;
 #define __found_arch__
 #endif
-#if __arm__
-int architecture=4;
-#define __found_arch__
-#endif
-#if __mc68000__
-int architecture=5;
-#define __found_arch__
-#endif
 #if __powerpc__ && !__powerpc64__
 int architecture=6;
-#define __found_arch__
-#endif
-#if __alpha__
-int architecture=7;
-#define __found_arch__
-#endif
-#if __not_def__
-int architecture=8;
 #define __found_arch__
 #endif
 #if __powerpc64__
@@ -43,10 +27,6 @@ int architecture=11;
 #endif
 #if __s390x__
 int architecture=12;
-#define __found_arch__
-#endif
-#if __m32r__
-int architecture=13;
 #define __found_arch__
 #endif
 #ifndef __found_arch__

@@ -1609,16 +1609,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef _SC_IPV6
-	CompareConstant(_SC_IPV6,235,5214,architecture)
-#else
-Msg( "Error: Constant not found: _SC_IPV6\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef _SC_LOGIN_NAME_MAX
 	CompareConstant(_SC_LOGIN_NAME_MAX,71,5215,architecture)
 #else
@@ -1633,16 +1623,6 @@ cnt++;
 	CompareConstant(_SC_MONOTONIC_CLOCK,149,5216,architecture)
 #else
 Msg( "Error: Constant not found: _SC_MONOTONIC_CLOCK\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef _SC_RAW_SOCKETS
-	CompareConstant(_SC_RAW_SOCKETS,236,5218,architecture)
-#else
-Msg( "Error: Constant not found: _SC_RAW_SOCKETS\n");
 cnt++;
 #endif
 
@@ -1868,57 +1848,46 @@ cnt++;
 
 #endif
 
-#if _LSB_DEFAULT_ARCH
-#ifdef _SC_2_PBS
-	CompareConstant(_SC_2_PBS,168,9495,architecture)
-#else
-Msg( "Error: Constant not found: _SC_2_PBS\n");
-cnt++;
-#endif
-
-#endif
-
 #if __i386__
-CheckTypeSize(off64_t,8, 9112, 2)
+CheckTypeSize(off64_t,8, 9112, 2);
 #elif __ia64__
-CheckTypeSize(off64_t,8, 9112, 3)
+CheckTypeSize(off64_t,8, 9112, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(off64_t,8, 9112, 6)
+CheckTypeSize(off64_t,8, 9112, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(off64_t,8, 9112, 10)
+CheckTypeSize(off64_t,8, 9112, 10);
 #elif __powerpc64__
-CheckTypeSize(off64_t,8, 9112, 9)
+CheckTypeSize(off64_t,8, 9112, 9);
 #elif __s390x__
-CheckTypeSize(off64_t,8, 9112, 12)
+CheckTypeSize(off64_t,8, 9112, 12);
 #elif __x86_64__
-CheckTypeSize(off64_t,8, 9112, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9112,0);
-Msg("Find size of off64_t (9112)\n");
+CheckTypeSize(off64_t,8, 9112, 11);
+#elif 1
+CheckTypeSize(off64_t,0, 9112, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(intptr_t,4, 9196, 2)
+CheckTypeSize(intptr_t,4, 9196, 2);
 #endif
 
 #if __ia64__
-CheckTypeSize(intptr_t,8, 10513, 3)
+CheckTypeSize(intptr_t,8, 10513, 3);
 #endif
 
 #if __powerpc64__
-CheckTypeSize(intptr_t,8, 10514, 9)
+CheckTypeSize(intptr_t,8, 10514, 9);
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckTypeSize(intptr_t,4, 10515, 6)
+CheckTypeSize(intptr_t,4, 10515, 6);
 #endif
 
 #if __s390__ && !__s390x__
-CheckTypeSize(intptr_t,4, 10516, 10)
+CheckTypeSize(intptr_t,4, 10516, 10);
 #endif
 
 #if __x86_64__
-CheckTypeSize(intptr_t,8, 10786, 11)
+CheckTypeSize(intptr_t,8, 10786, 11);
 #endif
 
 extern pid_t __getpgid_db(pid_t);
