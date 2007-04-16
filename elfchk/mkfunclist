@@ -2,49 +2,103 @@
 
 use CGI;
 use Mysql;
+use Getopt::Long;
+
+sub usage()
+{
+print STDERR "mkfunclist -v <lsbversion>\n";
+die;
+}
+
+GetOptions("v=s" => \$lsbversion);
+if( !$lsbversion ) { usage(); }
 
 use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
-$select = "SELECT DISTINCT Iname,Istdstatus,Iisdeprecated,Vname,Asymbol,Aname,Mname FROM Interface ";
+$select = "SELECT DISTINCT Iid,Iname,Isrconly,Iisdeprecated,AIappearedin,AIwithdrawnin,Vname,Asymbol,Aname,Aid,Mname FROM Interface ";
 $select.= "LEFT JOIN LGInt ON Iid=LGIint ";
 $select.= "LEFT JOIN LibGroup ON LGid=LGIlibg ";
 $select.= "LEFT JOIN Library ON Lid=LGlib ";
 $select.= "LEFT JOIN ModLib ON MLlid=Lid ";
+$select.= "LEFT JOIN ArchLib ON ALlid=Lid ";
 $select.= "LEFT JOIN Module ON Mid=MLmid ";
 $select.= "LEFT OUTER JOIN ArchInt ON Iid=AIint ";
 $select.= "LEFT OUTER JOIN Architecture ON Aid=AIarch ";
 $select.= "LEFT OUTER JOIN Version ON Vid=AIversion ";
-$select.= "WHERE Interface.Iid=LGInt.LGIint ";
-$select.= "AND Library.Lstdstatus='Included' ";
+# $select.= "WHERE Interface.Iid=LGInt.LGIint ";
+# $select.= "AND AIarch=ALaid ";
+$select.= "WHERE ( (ALappearedin <= '$lsbversion' and ALappearedin<>'') ";
+$select.= "AND (ALwithdrawnin IS NULL OR ALwithdrawnin > '$lsbversion') ) ";
+$select.= "AND ( (AIappearedin <= '$lsbversion' and AIappearedin<>'') ";
+$select.= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin > '$lsbversion') ) ";
 $select.= "ORDER BY Iname,Aid,Vid ";
 
 #print $select;
 
 $sth = $Dbh->query($select) || die $Dbh->errmsg();
 
+my %processed;
+
 print "/* Generated file - Do Not Edit */\n";
 print "#include \"elfchk.h\"\n";
 print "struct versym DynSyms[] = {\n";
 for(1..$sth->numrows) {
 	%entry=$sth->fetchhash;
-        if ($entry{'Aname'} && $entry{'Aname'} ne "All")
-        {
-          print "#if $entry{'Asymbol'}\n";
-        }
+
+	if( $entry{'AIwithdrawnin'} ) {
+		# Let's check if there is an interface with newer version
+		$selectNewly = "SELECT AIint FROM ArchInt ";
+		$selectNewly.= "WHERE AIint=$entry{'Iid'} AND AIarch=$entry{'Aid'} ";
+		$selectNewly.= "AND AIappearedin > $entry{'AIappearedin'} ";
+	
+		$sthNewly = $Dbh->query($selectNewly) || die $Dbh->errmsg();
+		if( $sthNewly->numrows ) {
+			next;
+		}
+	}
+	
+	# There can be duplicated entries in the Interface table - skip them
+ 	if( $processed{ ($entry{'Aname'},$entry{'Iname'},$entry{'Mname'}) } ) {
+ 		next;
+ 	}
+ 	$processed{ ($entry{'Aname'},$entry{'Iname'},$entry{'Mname'}) } = 1;
+		
+	if (not $entry{'Aname'}) {
+		next; # unsupported architecture found
+	}
+	
+	if ($entry{'Aname'} && $entry{'Aname'} ne "All")
+	{
+		print "#if $entry{'Asymbol'}\n";
+	}
+	elsif ($entry{'Aname'} && $entry{'Aname'} eq "All")
+	{
+		$selectNotGeneric = "SELECT AIarch FROM ArchInt ";
+		$selectNotGeneric.= "WHERE AIint=$entry{'Iid'} AND AIarch<>1 ";
+#  		$selectNotGeneric.= "AND ( (AIappearedin <= '$lsbversion' and AIappearedin<>'') ";
+#  		$selectNotGeneric.= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin > '$lsbversion') ) ";
+		$sthNotGeneric = $Dbh->query($selectNotGeneric) || die $Dbh->errmsg();
+		
+		# Some architecture specific records found - don't check generic information
+		if( $sthNotGeneric->numrows )
+		{
+			next;
+		}
+	}
 	printf "\t{\"%s\",\"%s\",",$entry{'Iname'},$entry{'Vname'};
-	if( ($entry{'Iisdeprecated'} eq 'Yes') && ($entry{'Istdstatus'} eq 'Included') ) {
+	if( $entry{'Iisdeprecated'} eq 'Yes' ) {
 		printf "1";
 	} else {
 		printf "0";
 	}
 	printf ",%s",$entry{'Mname'};
 	printf "},\n";
-        if ($entry{'Aname'} && $entry{'Aname'} ne "All")
-        {
-          print "#endif\n";
-        }
+	if ($entry{'Aname'} && $entry{'Aname'} ne "All")
+	{
+		print "#endif\n";
+	}
 
 }
 print "\t};\n";

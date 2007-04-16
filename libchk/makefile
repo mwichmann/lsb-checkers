@@ -14,7 +14,7 @@ libchk: $(OBJS) ../elfchk/libelfchk.a ../tetj/libtetj.a
 	$(CC) $(CFLAGS) -o libchk $(OBJS) -L../elfchk -L ../tetj -lelfchk -ltetj -lstdc++ -ldl
 
 libs.c:
-	./mkfunclist
+	./mkfunclist -v `cat LSB_VERSION`
 
 LSB_LINKER=`./lsb_linker`
 
