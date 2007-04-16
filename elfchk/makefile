@@ -48,11 +48,11 @@ sectinfo.c:
 secttype.c:
 	./mksecttype >secttype.c
 
+modules.c modules.h: 
+	./dump_modules
+
 clean:
 	rm -f $(OBJS) $(GENOBJS) $(LIB) $(OBJS_APPCHK) $(LIB_APPCHK) test
 
 distclean: clean
 	rm -f $(GENSRCS) dynsyms.c.chk modules.h
-
-modules.c modules.h: dump_modules
-	./dump_modules
