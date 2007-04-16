@@ -30,16 +30,18 @@ my($DBUser) = $LSBUSER;
 my($DBPass) = $LSBDBPASSWD;
 my($DBHost) = $LSBDBHOST;
 my($Arch) = "2";
+my($lsbversion);
 
-getopts('d:u:p:o:ha:', \%options);
+getopts('v:d:u:p:o:ha:', \%options);
 
-if (exists($options{'h'}))
+if( (exists($options{'h'})) or (not exists($options{'v'})) )
 {
   print STDERR <<"EOM"
-$0: generate struct validation functions for the dynchk library from the 
+$0: generate struct validation functions for the dynchk library from the
 LSB standard database.
-Usage $0 [-d db_name] [-u username] [-p password] [-o hostname] [-h]
+Usage $0 -v lsbversion [-d db_name] [-u username] [-p password] [-o hostname] [-h]
     -h           Display this help
+    -v           Target LSB version
     -d db_name   Database name
     -u username  Name of user for DB access
     -p password  Password for DB access
@@ -49,6 +51,9 @@ EOM
     ;
   exit(1);
 }
+
+$lsbversion = $options{'v'};
+
 $DBUser = $options{'u'} if exists($options{'u'});
 $DBPass = $options{'p'} if exists($options{'p'});
 $DBHost = $options{'o'} if exists($options{'o'});
@@ -66,29 +71,40 @@ my $dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST,
 	or die "Couldn't connect to database: " . DBI->errstr;
 
 my $struct_q = $dbh->prepare(
-'SELECT Tname, Hname
-FROM Type, HeaderGroup, Header
+'SELECT Tid, Tname, Hname
+FROM HeaderGroup, Header, Type
+LEFT JOIN ArchType ON Tid=ATtid
 WHERE Ttype = "Struct"
   AND Theadergroup = HGid
   AND HGheader = Hid
-  AND Tstatus != "Excluded"
-  AND Tstatus != "Indirect"
-  AND Hstdstatus = "Included"
-  AND (Tarch = 1 OR Tarch = '.$Arch.')
-GROUP BY Tname'
-							 )
-	or die "Couldn't prepare struct query: " . DBI->errstr;
+  AND ( ( (ATappearedin <= \''.$lsbversion.'\' and ATappearedin<>\'\')
+  AND (ATwithdrawnin IS NULL OR ATwithdrawnin >\''.$lsbversion.'\') )
+  OR ( Tsrconly =\'Yes\' ) )
+  AND (Happearedin is not NULL and Happearedin <= \''.$lsbversion.'\' and Happearedin<>\'\')
+  AND (Hwithdrawnin IS NULL OR Hwithdrawnin > \''.$lsbversion.'\' )
+  AND (ATaid = 1 OR ATaid = '.$Arch.')
+  GROUP BY Tname'
+) or die "Couldn't prepare struct query: " . DBI->errstr;
 
 my $struct_arch_q = $dbh->prepare(
-'SELECT Tid, Asymbol
-FROM Architecture, Type
-WHERE Aid = Tarch
-  AND Tname = ?
+'SELECT Tid, Asymbol, Aid
+FROM Type
+LEFT JOIN ArchType ON ATtid=Tid
+LEFT JOIN Architecture ON Aid=ATaid
+WHERE Tname = ?
   AND Ttype = "Struct"
-  AND Tstatus != "Indirect"
-  AND Tstatus != "Excluded"
-ORDER BY Tarch'
+  AND ( ( (ATappearedin <= \''.$lsbversion.'\' and ATappearedin<>\'\')
+  AND (ATwithdrawnin IS NULL OR ATwithdrawnin >\''.$lsbversion.'\') )
+  OR ( Tsrconly =\'Yes\' ) )
+  ORDER BY ATaid'
 ) or die "Couldn't prepare struct_Arch query: ".DBI->errstr;
+
+my $generic_q = $dbh->prepare(
+'SELECT ATtid
+FROM ArchType
+WHERE ATtid = ?
+  AND ATaid = 1'
+) or die "Couldn't prepare struct query: " . DBI->errstr;
 
 # Warning - funkiness:  @write_body_q[] is not prepared here.
 # It is prepared dynamically in write_body_q to properly handle recursion
@@ -101,7 +117,8 @@ $dbh->prepare('SELECT TTname FROM TypeType WHERE TTid = ?' )
 	or die "Couldn't prepare member_typetype query: " . DBI->errstr;
 
 my $get_type_info_q =
-	$dbh->prepare('SELECT Tname, Ttype, Tbasetype, Tarray FROM Type WHERE Tid = ?' )
+	$dbh->prepare("SELECT Tname, Ttype, ATbasetype, Tarray FROM Type
+		LEFT JOIN ArchType ON ATtid=Tid WHERE Tid = ? ORDER BY ATaid" )
 	or die "Couldn't prepare type_info query: " . DBI->errstr;
 
 my $get_type_form_q = $dbh->prepare('SELECT Ttype FROM Type WHERE Tid = ?')
@@ -113,8 +130,14 @@ my $get_funcptr_declaration_q = $dbh->prepare(
 
 
 my $header_q = $dbh->prepare(
-'select Hname from Header, HeaderGroup, Type where
-Tstatus != "Excluded" and Theadergroup = HGid and HGheader=Hid and Hstdstatus ="Included" GROUP BY Hname')
+'select Hname from Header, HeaderGroup, Type left join ArchType on ATtid=Tid where
+  ( ( (ATappearedin <= \''.$lsbversion.'\' and ATappearedin<>\'\')
+  AND (ATwithdrawnin IS NULL OR ATwithdrawnin >\''.$lsbversion.'\') )
+  OR ( Tsrconly =\'Yes\' OR Tindirect = \'Yes\') )
+	and Theadergroup = HGid and HGheader=Hid
+	AND (Happearedin is not NULL and Happearedin <= \''.$lsbversion.'\' and Happearedin<>\'\')
+  	AND (Hwithdrawnin IS NULL OR Hwithdrawnin > \''.$lsbversion.'\')
+	GROUP BY Hname')
 	or die "Couldn't prepare header query: ".DBI->errstr;
 
 ################################################################################
@@ -124,13 +147,13 @@ Tstatus != "Excluded" and Theadergroup = HGid and HGheader=Hid and Hstdstatus ="
 ################################################################################
 
 sub get_type_string($);
-sub get_type_string($) 
+sub get_type_string($)
 {
 	my ($type_id)=@_;
 	my ($pre_type,$post_type) = ("","");
 	my $next_form;
 
-	$get_type_info_q->execute($type_id) 
+	$get_type_info_q->execute($type_id)
 		or die "Couldn't execute type_info query: " . DBI->errstr;
 	my ($name, $form, $basetype, $array_index) = $get_type_info_q->fetchrow_array();
 	$get_type_info_q->finish();
@@ -172,7 +195,7 @@ sub get_type_string($)
 	{
 		($pre_type,$post_type) = get_type_string($basetype);
 		$post_type .= "[". $array_index ."]";
-		return ($pre_type, $post_type); 
+		return ($pre_type, $post_type);
 	}
 	elsif($form eq "FuncPtr")
 	{
@@ -181,7 +204,7 @@ sub get_type_string($)
 		return ($pre_type,$post_type);
 	}
 }
-	
+
 sub get_funcptr_declaration($)
 {
 	# This might fail if nested function pointers occur. (nowhere in current LSB)
@@ -203,8 +226,8 @@ sub get_funcptr_declaration($)
 	$output.=")";
 	return $output;
 }
-	
-sub get_member_typetype 
+
+sub get_member_typetype
 {
 	my($type, $typeform, $base_type, $typetypeid) = @_;
 	my $type_array;
@@ -216,7 +239,7 @@ sub get_member_typetype
 		$get_member_typetype_q->finish;
 		return $typetype;
 	}
-   
+
 	return "ANONYMOUS" if($type =~ /\Aanon-/);
 	return "struct_".$type if($typeform eq "Struct");
 	return "NULL_TYPETYPE" if($typeform eq "Union"); ####################
@@ -268,18 +291,19 @@ sub write_body($$$$)
 	my($fh, $ref_tree, $struct_id, $depth) = @_;
 	my $typetype;
 	print $fh "{\nint failure = 0;\n" if($depth == 0);
-	
+
 	if($write_body_counter <= $depth)
 	{
 
 		$write_body_q[$write_body_counter] = $dbh->prepare(
-'SELECT TMname, TMtypetype, Tname, Ttype, Tbasetype, Tid
+"SELECT TMname, TMtypetype, Tname, Ttype, ATbasetype, Tid
 FROM TypeMember, Type
+LEFT JOIN ArchType ON ATtid=Tid
 WHERE TMmemberof = ?
   AND TMtypeid = Tid
-GROUP BY TMid
-ORDER BY TMposition'
-							 )   
+GROUP BY TMid,ATtid
+ORDER BY TMposition"
+							 )
 			or die "Couldn't prepare member query: " . DBI->errstr;
 		$write_body_counter ++;
 	}
@@ -301,16 +325,16 @@ ORDER BY TMposition'
 		}
 		else
 		{
-			print $fh "\tif(validate_$typetype($ref_tree $name,name ));\n";
+			print $fh "\tif(validate_$typetype($ref_tree $name,name ))\n";
 			print $fh "\t\tfailure = 1;\n";
 		}
 	}
 	print $fh "return failure;\n";
 	print $fh "}\n\n" if($depth == 0);
 }
-sub write_validate_declaration 
+sub write_validate_declaration
 {
-	my ($fh, $struct_name, $struct_id, $header_format) = @_;	
+	my ($fh, $struct_name, $struct_id, $header_format) = @_;
 	my($left_type, $right_type)=get_type_string($struct_id);
 	print $fh "extern " if($header_format);
 	print $fh "int validate_struct_" . $struct_name .
@@ -366,21 +390,20 @@ my $header_file = IO::Handle->new();
 open($header_file, '>struct_tests.h')
 	or die "Couldn't create file struct_tests.h: ".DBI->errstr;
 
- 
-STRUCT: while(my ($struct_name, $struct_header) = $struct_q->fetchrow_array())
+
+STRUCT: while(my ($struct_id, $struct_name, $struct_header) = $struct_q->fetchrow_array())
 {
 	# This needs to be fixed at some point:
-	# some structure types are apprently in subdirectories. 
+	# some structure types are apprently in subdirectories.
 	# I need a naming scheme that handles this.
-	next STRUCT if($struct_name =~ /\//); 
-	
+	next STRUCT if($struct_name =~ /\//);
+
 	# Type members whose Tname begins with "anon-" are anonymous structs.
 	# These don't get their own validator function.  (Should be handled recursively)
 	next STRUCT if($struct_name =~ /\Aanon-/);
-	
+
 	#skip X - the DB data is incomplete.
-	next STRUCT if($struct_header =~ /\AX11/);  
-	
+	next STRUCT if($struct_header =~ /\AX11/);
 
 	###################### Needs to be replaced if not validating a struct.
 	print STRUCT_MK "\t\\\nstruct/validate_struct_".$struct_name.".o";
@@ -393,12 +416,24 @@ STRUCT: while(my ($struct_name, $struct_header) = $struct_q->fetchrow_array())
 		or die "Couldn't execute struct_arch query: ".DBI->errstr;
 
 	write_header($validate_file, $struct_header, 1);
-	
-	while(my ($struct_id, $struct_arch) = $struct_arch_q->fetchrow_array())
+
+	while(my ($struct_id, $struct_arch, $struct_aid) = $struct_arch_q->fetchrow_array())
 	{
+		if( $struct_aid != 1 )
+		{
+			# There is no need to print architecture specific checks
+			# if the type is generic (i.e. if the record with ATaid=1
+			#  presents in ArchType for the given type)
+			$generic_q->execute($struct_id) or die "Couldn't execute generic query: " . DBI->errstr;
+			if( $generic_q->fetchrow_array() )
+			{
+				next;
+			}
+		}
+
 		open_arch($validate_file, $struct_arch);
 		write_validate_declaration($validate_file, $struct_name, $struct_id, 0);
-		write_body($validate_file, "input->", $struct_id, 0); 
+		write_body($validate_file, "input->", $struct_id, 0);
 		close_arch($validate_file, $struct_arch);
 
 		open_arch($header_file, $struct_arch);
@@ -419,7 +454,7 @@ open($header_header_file, '>header_list.h')
 
 $header_q->execute() or die "Couldn't execute header query: ".DBI->errstr;
 HEADERLIST: while(my ($header_name) = $header_q->fetchrow_array())
-{ 
+{
 	# write header requirement to struct_tests_h.h
 	write_header_to_struct_tests_h($header_header_file, $header_name) unless($header_name =~ /\AX11|\Aunwind\.h/);
 }

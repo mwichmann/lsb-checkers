@@ -1,5 +1,5 @@
-#!/usr/bin/perl -w 
- 
+#!/usr/bin/perl -w
+
 #Author: Matt Elder
 
 #I should refactor this.  Better design: For each interface, all the
@@ -25,6 +25,7 @@ my($DBPass) = $LSBDBPASSWD;
 my($DBHost) = $LSBDBHOST;
 my($generate_gen_file) = 1;
 my($be_quiet) = 0;
+my($lsbversion);
 
 ##############################
 # Option handlers
@@ -33,15 +34,16 @@ my($be_quiet) = 0;
 my (%options);
 my($int_WHERE_add); my($int_FROM_add);
 
-getopts('hwqd:u:p:o:l:g:i:', \%options);
+getopts('hwqd:v:u:p:o:l:g:i:', \%options);
 
-if (exists($options{'h'}))
+if( (exists($options{'h'})) or (not exists($options{'v'})) )
 {
 	print STDERR <<"EOM"
 $0: generate interface wrapper functions for the dynchk library.
 Usage $0 [-d db_name] [-u username] [-p password] [-o hostname] [-h]
  [-l lib1,lib2,lib3,...] [-g libgroup1,libgroup2,libgroup3,...]
     -h           Display this help message
+    -v           Target LSB version
     -w           Generate library without changing gen_funcs files.
     -q           Quiet.  Do not show progress dots or ending message.
     -d db_name   Database name
@@ -51,18 +53,18 @@ Usage $0 [-d db_name] [-u username] [-p password] [-o hostname] [-h]
     -i interface Comma-delimited list of interfaces
     -l l1,l2,... Comma-delimited list of libraries
     -g g1,g2,... Comma-delimited list of libgroups
-    
 
-	do not use -i with -l or -g. 
-         
+
+	do not use -i with -l or -g.
+
     If -l or -g are specified, every interface wrapper in
-	the listed libraries or libgroups will be generated.  
+	the listed libraries or libgroups will be generated.
 	Without either, all interface wrappers will be generated.
 
     Examples:
-    $0 -g "System Calls","X Windows System Interface"
-    $0 -l libc,libX11
-    $0 -l libm -g Curses,"String Functions"
+    $0 -v '3.1' -g "System Calls","X Windows System Interface"
+    $0 -v '3.0' -l libc,libX11
+    $0 -v '2.0' -l libm -g Curses,"String Functions"
 
     When using the -a option, arch should be one of the following values:
 	2   IA32	3   IA64
@@ -75,6 +77,8 @@ EOM
     ;
 	exit(1);
 }
+
+$lsbversion = $options{'v'};
 
 $DBUser = $options{'u'} if exists($options{'u'});
 $DBPass = $options{'p'} if exists($options{'p'});
@@ -130,19 +134,22 @@ my $dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST, $LSBUSE
 	or die "Couldn't connect to database: " . DBI->errstr;
 
 my $int_q = $dbh->prepare(
-'SELECT Iid, Ireturn, Asymbol, Iversion
-FROM Interface, Architecture
+'SELECT Iid, Ireturn, Asymbol, AIversion
+FROM Architecture, (Interface
+LEFT JOIN ArchInt ON Iid=AIint)
 WHERE Iname = ?
-  AND Istdstatus = "Included"
-  AND Aid = Iarch 
-GROUP BY Iid ORDER BY Iarch'
+  AND (AIappearedin <= \''.$lsbversion.'\' and AIappearedin<>\'\')
+  AND (AIwithdrawnin IS NULL OR AIwithdrawnin >\''.$lsbversion.'\')
+  AND Aid = AIarch
+GROUP BY Iid ORDER BY AIarch'
 ) or die "Couldn't prepare int query: " . DBI ->errstr;
 
 my $int_name_q = $dbh->prepare(
 'SELECT Iname, Lname
-FROM Interface, Header, Library' . $int_FROM_add .
-'WHERE Itype = "Function" 
-   AND Istdstatus = "Included"
+FROM Header, Library, Interface' . $int_FROM_add .
+'LEFT JOIN ArchInt ON AIint=Iid WHERE Itype = "Function"
+   AND (AIappearedin <= \''.$lsbversion.'\' and AIappearedin<>\'\')
+   AND (AIwithdrawnin IS NULL OR AIwithdrawnin >\''.$lsbversion.'\')
    AND Iheader = Hid
    AND Hlib = Lid'
   . $int_WHERE_add .
@@ -169,7 +176,7 @@ WHERE Ppos = ?
 my $get_param_typetype_q2 = $dbh->prepare(
 'SELECT TTname FROM TypeType WHERE TTid = ?')
 	or die "Couldn't prepare write_param_typetype query 2: " . DBI->errstr;
- 
+
 my $get_param_type_q = $dbh->prepare(
 'SELECT Tname, Tid, Pconst, Parsize FROM Parameter, Type
 WHERE Ppos = ?
@@ -178,7 +185,8 @@ WHERE Ppos = ?
 ) or die "Couldn't prepare write_param_type query: " . DBI->errstr;
 
 my $write_addy_checker_q = $dbh->prepare(
-'SELECT Tbasetype, Ttype from Type where Tid = ?')
+'SELECT ATbasetype, Ttype from Type
+	left join ArchType ON ATtid=Tid where Tid = ?')
 	or die "Couldn't prepare write_addy_checker query: ".DBI->errstr;
 
 my $get_param_typeid_q = $dbh->prepare(
@@ -203,7 +211,8 @@ WHERE Pint = ?
 ) or die "Couldn't prepare write_int_header query: " . DBI->errstr;
 
 my $basetype_header_q = $dbh->prepare(
-'Select Theadergroup, Tbasetype from Type where Tid = ?')
+'Select Theadergroup, ATbasetype from Type left join ArchType ON ATtid=Tid
+	where Tid = ? ')
 	or die "Couldn't prepare basetype_header query: ".DBI->errstr;
 
 my $header_name_q = $dbh->prepare(
@@ -220,11 +229,14 @@ my $write_argument_list_q = $dbh->prepare(
 	or die "Couldn't prepare write_argument list query: " . DBI->errstr;
 
 my $get_type_info_q =
-	$dbh->prepare('SELECT Tname, Ttype, Tbasetype FROM Type WHERE Tid = ?' )
+	$dbh->prepare('SELECT Tname, Ttype, ATbasetype
+		 FROM Type LEFT JOIN ArchType ON ATtid=Tid
+		 WHERE Tid = ?' )
 	or die "Couldn't prepare type_info query: " . DBI->errstr;
 
 my $get_ATsize_q =
-	$dbh->prepare('SELECT ATsize from Type, ArchType where Tid = ? and ATtid = Tid and ATaid = Tarch')
+# 	$dbh->prepare('SELECT ATsize from Type, ArchType where Tid = ? and ATtid = Tid and ATaid = Tarch')
+	$dbh->prepare('SELECT ATsize from Type, ArchType where Tid = ? and ATtid = Tid and ATaid = ?')
 	or die "Couldn't prepare ATsize query: ".DBI->errstr;
 
 my $get_parsize_q =
@@ -239,7 +251,7 @@ my $get_funcptr_declaration_q = $dbh->prepare(
 	or die "Couldn't prepare gen_funcptr_declaration query: " . DBI->errstr;
 
 ##############################
-# Subroutines 
+# Subroutines
 ##############################
 
 sub debug # (@some_list)
@@ -262,7 +274,7 @@ sub contains # ($first_arg, $other_args ... )
 }
 
 # true if 'interface' has a parameter with ellipses
-sub has_ellipsis # ($func_name)               
+sub has_ellipsis # ($func_name)
 {
 	my($func_name) = @_;
 	$has_ellipsis_q->execute($func_name);
@@ -296,7 +308,7 @@ sub init_vs_fh
 	    $vs_fh_isopen[$v_id] = 0;
 	}
     }
-    return 0;    
+    return 0;
 }
 
 sub open_vs_fh #(v_id)
@@ -307,7 +319,7 @@ sub open_vs_fh #(v_id)
 
     $vs_fh[$v_id] = new IO::File ">". $vs_fh_name[ $v_id ] . ".Version";
     print {$vs_fh[$v_id]} $vs_fh_name[$v_id]." {\n";
-    
+
     $vs_fh_isopen[$v_id] = 1;
     return 0;
 }
@@ -329,7 +341,7 @@ sub clean_vs_fh
 	close_vs_fh($i) if($vs_fh_isopen[$i] and $vs_fh_isopen[$i] == 1);
     }
 }
-	    
+
 sub write_int_vscript #(func_id, func_name, v_id)
 {
     my($func_id, $func_name, $v_id) = @_;
@@ -342,18 +354,19 @@ sub write_int_vscript #(func_id, func_name, v_id)
 #    Functions for getting C code right.
 ################################################################################
 
-sub get_type_string($$$);
+sub get_type_string($$$$);
 
-sub get_type_string($$$) 
+sub get_type_string($$$$)
 {
-	my ($type_id, $param_pos, $param_int)=@_;
+	my ($type_id, $param_pos, $param_int, $archId)=@_;
 	my ($pre_type,$post_type) = ("","");
 	my $next_form;
 
 	$param_pos = -1 if(!$param_pos);
 	$param_int = 0 if(!$param_int);
 
-	$get_type_info_q->execute($type_id) 
+# 	$get_type_info_q->execute($type_id,$archId)
+ 	$get_type_info_q->execute($type_id)
 		or die "Couldn't execute type_info query: " . DBI->errstr;
 	my ($name, $form, $basetype) = $get_type_info_q->fetchrow_array();
 	$get_type_info_q->finish();
@@ -365,7 +378,7 @@ sub get_type_string($$$)
 
 	if($basetype and $basetype!=$type_id and $form ne "Typedef")
 	{
-		($pre_type, $post_type) = get_type_string($basetype, -1, 0);
+		($pre_type, $post_type) = get_type_string($basetype, -1, 0, $archId);
 	}
 	else
 	{
@@ -405,7 +418,7 @@ sub get_type_string($$$)
 	}
 	elsif($form eq "Array")
 	{
-		$get_ATsize_q->execute($type_id)
+		$get_ATsize_q->execute($type_id,$archId)
 			or die "Couldn't execute ATsize query: ".DBI->errstr;
 		$get_parsize_q->execute($param_int, $param_pos)
 			or die "Couldn't execute parsize query: ".DBI->errstr;
@@ -415,34 +428,34 @@ sub get_type_string($$$)
 		{  $at_size = 0; }
 		unless(($parsize) = $get_parsize_q->fetchrow_array())
 		{  $parsize = "NULL"; }
-		
+
 		if($at_size != 0)
-		{	
+		{
 			$post_type .= "[". $at_size ."]";
 		}
-		elsif ($parsize ne "NULL" and $parsize != 0) 
-		{   
+		elsif ($parsize ne "NULL" and $parsize != 0)
+		{
 			$post_type .= "[" . $parsize . "]";
 		}
 		else
 		{
 			$post_type .="[]";
 		}
-		return ($pre_type, $post_type); 
+		return ($pre_type, $post_type);
 	}
 	elsif($form eq "FuncPtr")
 	{
 		$pre_type.="(*";
-		$post_type.=")".get_funcptr_declaration($type_id);
+		$post_type.=")".get_funcptr_declaration($type_id,$archId);
 		return ($pre_type,$post_type);
 	}
 }
-	
-sub get_funcptr_declaration($)
+
+sub get_funcptr_declaration($$)
 {
 	# This might fail if nested function pointers occur. (nowhere in current LSB)
 	# In that case, we can just use the dynamic query-preparation strategy, a la write_body()
-	my ($TMid) = @_;
+	my ($TMid,$archId) = @_;
 	my $i = 0;
 	my $output = "(";
 	$get_funcptr_declaration_q->execute($TMid)
@@ -451,7 +464,7 @@ sub get_funcptr_declaration($)
 	{
 		my($left,$right);
 		$output.=", " if ($i>0);
-		($left,$right)=get_type_string($type_id, 0, -1);
+		($left,$right)=get_type_string($type_id, 0, -1, $archId);
 		$output.=$left;
 		$i++;
 	}
@@ -474,7 +487,7 @@ sub get_param_typetype # ($param_pos, $param_int)
 		my($typetype) = $get_param_typetype_q2->fetchrow_array();
 		return ($typetype, "");
 	}
-   
+
 	return ("struct_".$type,"&") if($typeform eq "Struct");
 	# return ("union_".$type,"&") if($typeform eq "Union");
 	# Should I handle ($typeform eq "Pointer") ?
@@ -482,13 +495,13 @@ sub get_param_typetype # ($param_pos, $param_int)
 }
 
 # returns valid type-string of a parameter
-sub get_param_type # ($param_pos, $param_int)
+sub get_param_type # ($param_pos, $param_int, $archId)
 {
-	my($param_pos, $param_int) = @_;
+	my($param_pos, $param_int, $archId) = @_;
 	$get_param_type_q->execute($param_pos, $param_int);
 	my($type, $type_id, $is_const) = $get_param_type_q->fetchrow_array();
 
-	my($left_string, $right_string) = get_type_string($type_id, $param_pos, $param_int);
+	my($left_string, $right_string) = get_type_string($type_id, $param_pos, $param_int, $archId);
 	$left_string = "const ". $left_string if ($is_const eq 'Yes');
 
 	return ($left_string,$right_string);
@@ -501,10 +514,12 @@ sub get_param_type # ($param_pos, $param_int)
 # write code that checks the addresses of pointers.
 sub write_addy_checker
 {
-	my($fh, $type_id, $arg_name, $left_name, $func_name)=@_;
+	my($fh, $type_id, $arg_name, $left_name, $func_name, $func_arch)=@_;
+# 	$write_addy_checker_q->execute($type_id,$func_arch)
 	$write_addy_checker_q->execute($type_id)
 		or die "Couldn't execute write_addy_checker query: ".DBI->errstr;
 	my($basetype, $typeform) = $write_addy_checker_q->fetchrow_array();
+# 	$write_addy_checker_q->execute($basetype,$func_arch)
 	$write_addy_checker_q->execute($basetype)
 		or die "Couldn't execute write_addy_checker query: ".DBI->errstr;
 	my($basetype2, $typeform2) = $write_addy_checker_q->fetchrow_array();
@@ -532,7 +547,7 @@ sub write_addy_checker
 # if 'is_lsb', write code block for __lsb_* interface wrapper to 'fh'
 sub write_int_wrapper
 {
-	my($fh, $func_id, $func_name, $func_vid, $func_left_type, $func_right_type, $is_lsb) = @_;
+	my($fh, $func_id, $func_name, $func_vid, $func_left_type, $func_right_type, $is_lsb, $func_arch) = @_;
 	my $i = 0; my $j = 0;
 
 	print $fh "{\n";
@@ -541,7 +556,7 @@ sub write_int_wrapper
 
 	print $fh "\tif(!funcptr)\n";
 	if($func_vid == 0)
-	{   
+	{
 	    print $fh "\t\tfuncptr = dlsym(RTLD_NEXT, \"$func_name\");\n";
 	}
 	else
@@ -549,21 +564,21 @@ sub write_int_wrapper
 	    $get_func_version_q->execute($func_vid)
 		or die "Couldn't execute get_func_version_q: ".DBI->errstr;
 	    my($func_version_name) = $get_func_version_q->fetchrow_array();
-	    print $fh "\t\tfuncptr = dlvsym(RTLD_NEXT, \"$func_name\", \"$func_version_name\");\n"; 
+	    print $fh "\t\tfuncptr = dlvsym(RTLD_NEXT, \"$func_name\", \"$func_version_name\");\n";
 	}
 	$write_int_wrapper_q->execute($func_id)
 		or die "Couldn't execute write_int_wrapper query: " . DBI->errstr;
 
 	print $fh "\tif(__lsb_check_params)\n\t{\n";
 	print $fh "\t\t__lsb_check_params=0;\n";
-	print $fh "\t\t__lsb_output(4, \"$func_name()\");\n";	
-	
+	print $fh "\t\t__lsb_output(4, \"$func_name()\");\n";
+
 	VALCALL: while( my($param_pos, $param_int, $param_null) = $write_int_wrapper_q->fetchrow_array() )
 	{
 		$get_param_typeid_q->execute($param_pos, $param_int)
 			or die "Couldn't execute get_param_typeid query: " . DBI->errstr;
 		my($typeid) = $get_param_typeid_q->fetchrow_array();
-		
+
 		next VALCALL if($typeid == 1);
 
 		unless($is_lsb) #I should be able to remove the is_lsb controls, if the flag system works.
@@ -572,13 +587,13 @@ sub write_int_wrapper
 			if( $param_null eq 'Yes' ) {
 				print $fh "\t\tif( arg$i ) {\n";
 			}
-			write_addy_checker($fh, $typeid, "arg$i", "", "$func_name");
+			write_addy_checker($fh, $typeid, "arg$i", "", "$func_name", $func_arch);
 			if( $param_null eq 'Yes' ) {
 				print $fh "\t\t}\n";
 			}
 
 			print $fh "\t\tvalidate_$typetype( $dereference arg$i, \"$func_name - arg$i\");\n";
-			
+
 		}
 		$i++;
 	}
@@ -587,7 +602,7 @@ sub write_int_wrapper
 	print $fh "\t";
 	print $fh "ret_value = " unless($func_left_type eq "void");
 	print $fh "funcptr(";
-	
+
 	while($j < $i)
 	{
 		print $fh ", " unless ($j == 0);
@@ -605,9 +620,9 @@ my $simple_header_q = $dbh->prepare(
 	or die "Couldn't prepare simple_header query: ".DBI->errstr;
 
 # write generation comments and needed headers for 'interface' to 'fh'
-sub write_int_header 
+sub write_int_header
 {
-	my($fh, $left_type, $right_type, $func_name, $func_id)=@_;
+	my($fh, $left_type, $right_type, $func_name, $func_id, $func_arch)=@_;
 
 	$simple_header_q->execute($func_id)
 		or die "Couldn't execute simple_header query: ".DBI->errstr;
@@ -625,6 +640,7 @@ sub write_int_header
 	{
 		while($header_group_id == 0 and $base_type != 0)
 		{
+# 			$basetype_header_q->execute($base_type,$func_arch)
 			$basetype_header_q->execute($base_type)
 				or die "Couldn't execute basetype_header query: ".DBI->errstr;
 			($header_group_id,$base_type) = $basetype_header_q->fetchrow_array();
@@ -656,15 +672,15 @@ sub write_int_header
 
 # write argument list for a function declaration.
 # (This is the bit in the parentheses.)
-sub write_argument_list # ($fh, $func_id, $add_arg)
+sub write_argument_list # ($fh, $func_id, $add_arg, $archId)
 {
-	my($fh, $func_id, $add_arg) = @_;
+	my($fh, $func_id, $add_arg, $archId) = @_;
 	my $i = 0;
 	$write_argument_list_q->execute($func_id)
 		or die "Couldn't execute write_int_declaration query 2: " . DBI->errstr;
 	while( my($param_pos, $param_int) = $write_argument_list_q->fetchrow_array() )
 	{
-		my($l_type, $r_type) = get_param_type($param_pos, $param_int);
+		my($l_type, $r_type) = get_param_type($param_pos, $param_int, $archId);
 		unless($l_type eq "void")
 		{
 			print $fh ", " unless($i == 0);
@@ -678,21 +694,21 @@ sub write_argument_list # ($fh, $func_id, $add_arg)
 
 # write function declaration for 'interface' to 'fh'
 # if 'is_lsb', write the __lsb_* wrapper's declaration
-sub write_int_declaration 
+sub write_int_declaration
 {
-	my($fh, $func_id, $func_name, $func_left_type, $func_right_type, $is_lsb) = @_;
+	my($fh, $func_id, $func_name, $func_left_type, $func_right_type, $is_lsb, $archId) = @_;
 	print $fh $func_left_type . " ";
 	print $fh "__lsb_" if($is_lsb);
 	print $fh $func_name . $func_right_type . "(";
-	write_argument_list($fh, $func_id, 1);
-	
+	write_argument_list($fh, $func_id, 1, $archId);
+
 	print $fh ")\n";
 }
 
 sub write_arch_macro
 {
     my($fh, $arch_name) = @_;
-    if($arch_name =~ /^(\w+)\s*&&.*!\s*(\w+)/) 
+    if($arch_name =~ /^(\w+)\s*&&.*!\s*(\w+)/)
 	#If the architecture name _actually_ specifies that one token
 	#is declared and a second isn't ( <word> && !<word> ), then...
     {
@@ -704,7 +720,7 @@ sub write_arch_macro
 	print $fh "defined($arch_name)";
     }
 }
-    
+
 # add 'interface' to the gen.mk file in the correct library's directory
 my(@libs_seen);
 sub add_to_gen_mk # ($func_name, $lib_name)
@@ -758,7 +774,6 @@ open(DNG_FILE, "hand_coded")
 my @do_not_generate = <DNG_FILE>;
 close DNG_FILE;
 
-
 FUNC: while(my ($func_name, $func_lib) = $int_name_q->fetchrow_array())
 {
     my $gen_this = 1;
@@ -780,27 +795,27 @@ FUNC: while(my ($func_name, $func_lib) = $int_name_q->fetchrow_array())
 	# Create interface's .c file
 	open($int_file, ">" . $func_lib . "/" . $func_name . '.c')
 	    or die "Can't open output: $!";
-    }   
+    }
     $int_q->execute($func_name) or die "Can't execute int query: ".DBI->errstr;
     while(my ($func_id, $func_type, $func_arch, $func_vid) = $int_q->fetchrow_array())
     {
 	if($gen_this)
 	{
-	    my ($left_type_string, $right_type_string) = get_type_string($func_type, -1, 0);
-	    
+	    my ($left_type_string, $right_type_string) = get_type_string($func_type, -1, 0, $func_arch);
+
 	    # Add interface to the __lsb_* function header (This doesn't get used anymore)
 	    # write_int_declaration($lsb_h_file, $func_id, $func_name, $left_type_string, $right_type_string, 1);
-	    
+
 	    # Open conditional architecture magic
 	    unless($func_arch eq "1")
 	    {
 		print $int_file "#if "; write_arch_macro($int_file, $func_arch); print $int_file "\n";
 	    }
-	    
+
 	    # Write interface's .c file
-	    write_int_header($int_file, $left_type_string, $right_type_string, $func_name, $func_id);
-	    write_int_declaration($int_file, $func_id, $func_name, $left_type_string, $right_type_string, 0);
-	    write_int_wrapper($int_file, $func_id, $func_name, $func_vid, $left_type_string, $right_type_string, 0);
+	    write_int_header($int_file, $left_type_string, $right_type_string, $func_name, $func_id, $func_arch);
+	    write_int_declaration($int_file, $func_id, $func_name, $left_type_string, $right_type_string, 0, $func_arch);
+	    write_int_wrapper($int_file, $func_id, $func_name, $func_vid, $left_type_string, $right_type_string, 0, $func_arch);
 
 	    unless($func_arch eq "1")
 	    {
@@ -810,16 +825,16 @@ FUNC: while(my ($func_name, $func_lib) = $int_name_q->fetchrow_array())
 	# Put interface in version script
 	write_int_vscript($func_id, $func_name, $func_vid);
     }
-    
+
     $progress ++;
-    
+
     unless($be_quiet)
     {  print "." if ($progress % 50 == 0); }
 
     close($int_file);
 
 }
-	
+
 close($ell_file);
 #close($lsb_h_file);
 clean_vs_fh;

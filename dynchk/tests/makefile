@@ -13,7 +13,7 @@ all: $(TESTS)
 	ld -r -o tests.o $(TESTS)
 
 gensrc:
-	./gen_tests.pl
+	./gen_tests.pl -v `cat LSB_VERSION`
 
 clean:
 	rm -f $(TESTS) libtests.a tests.o

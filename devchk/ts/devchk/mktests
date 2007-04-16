@@ -3,11 +3,21 @@
 # Copyright (c) 2001-2006 The Free Standards Group Inc.
 
 use Mysql;
+use Getopt::Long;
 
 use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
+sub usage()
+{
+print STDERR "mktests -v lsbversion\n";
+die;
+}
+
 # Uncomment to trace SQL statments
 #$trace=1;
+
+GetOptions("v=s" => \$lsbversion);
+if( !$lsbversion ) { usage(); }
 
 # Temporary workarounds so hand-edited changes aren't lost
 # workaround for math functions that don't have protos on all architectures
@@ -17,8 +27,53 @@ $mathstring = "#if ! __powerpc__ && ! __s390__	/* hack */\n";
 # counter used to calculate test number
 $cnt = 0;
 
-sub displaytyperef($$) {
-    local ( $param, $enableConst ) = @_;
+sub
+getBaseTypeID($)
+{
+	local ($param) = @_;
+	if( $$param{'ATbasetype'} != '' ) {
+		$basetype = $$param{'ATbasetype'};
+	}
+	else {
+		$selectBase = "SELECT ATbasetype FROM ArchType ";
+		$selectBase.= "WHERE ATtid=".$$param{'Tid'}." ";
+		$selectBase.= "GROUP BY ATbasetype";
+		$sthBase = $Dbh->query($selectBase) || die $Dbh->errmsg();
+		if($sthBase->numrows != 1) {
+			die "Couldn't determine basetype for type ".$$param{'Tid'}." on $Aid architecture";
+		}
+
+		%base=$sthBase->fetchhash;
+		$basetype = $base{'ATbasetype'};
+	}
+
+	return $basetype;
+}
+
+sub
+getBaseTypeRecord($$)
+{
+ 	local ($basetype,$Aid) = @_;
+    $select = "SELECT * FROM Type ";
+    $select.= "LEFT JOIN ArchType ON ATtid=Tid ";
+    $select.= "WHERE Tid=".$basetype;
+    $select.= " AND ATaid IN (1,$Aid,0)"; # Note that even if there is two records here only first will be processed
+	$sth = $Dbh->query($select) || die $Dbh->errmsg();
+	if( !$sth->numrows ) {
+		# Hmm... Failed to get basetype on the current or generic architecture -
+		#  let's try to get basetype on any architecture (not good practice, but it's a usual situation
+		#  in the current db)
+		$select = "SELECT * FROM Type ";
+		$select.= "LEFT JOIN ArchType ON ATtid=Tid ";
+		$select.= "WHERE Tid=".$basetype;
+		$select.= " GROUP BY ATtid ";
+		$sth = $Dbh->query($select) || die $Dbh->errmsg();
+	}
+	return $sth;
+}
+
+sub displaytyperef($$$) {
+    local ( $param, $enableConst, $curArch ) = @_;
     local ( %select, $sth, %type );
 
     if ( $$param{'Pconst'} eq "Yes" ) {
@@ -34,24 +89,24 @@ sub displaytyperef($$) {
     }
 
     if ( $$param{'Ttype'} eq "Const" ) {
-        $select = "SELECT * FROM Type WHERE Tid=" . $$param{'Tbasetype'};
-        $sth    = $Dbh->query($select) || die $Dbh->errmsg();
-        %type   = $sth->fetchhash;
+		$basetype = getBaseTypeID($param);
+		$sth = getBaseTypeRecord($basetype,$curArch);
+		%type=$sth->fetchhash;
         if ( $type{'Ttype'} eq "Pointer" ) {
-            displaytyperef( \%type, $enableConst );
+            displaytyperef( \%type, $enableConst, $curArch );
             print TESTS "const " if $enableConst;
         } else {
             print TESTS "const " if $enableConst;
-            displaytyperef( \%type, $enableConst );
+            displaytyperef( \%type, $enableConst, $curArch );
         }
         return;
     }
 
     if ( $$param{'Ttype'} eq "Pointer" ) {
-        $select = "SELECT * FROM Type WHERE Tid=" . $$param{'Tbasetype'};
-        $sth    = $Dbh->query($select) || die $Dbh->errmsg();
-        %type   = $sth->fetchhash;
-        displaytyperef( \%type, $enableConst );
+		$basetype = getBaseTypeID($param);
+		$sth = getBaseTypeRecord($basetype,$curArch);
+		%type=$sth->fetchhash;
+        displaytyperef( \%type, $enableConst, $curArch );
         print TESTS " *";
         return;
     }
@@ -81,28 +136,25 @@ sub displaytyperef($$) {
     }
 
     if ( $$param{'Ttype'} eq "Array" ) {
-        $basetype = $$param{'Tbasetype'};
-        $tselect  = "SELECT * FROM Type WHERE Tid=$basetype";
-        $tth      = $Dbh->query($tselect) || die $Dbh->errmsg();
-        %type     = $tth->fetchhash;
+		$basetype = getBaseTypeID($param);
+		$sth = getBaseTypeRecord($basetype,$curArch);
+		%type=$sth->fetchhash;
         if ( !$nameonly ) {
-
             #$nameonly=1;
-            displaytyperef( \%type, $enableConst );
-
+            displaytyperef( \%type, $enableConst, $curArch );
             #$nameonly=0;
         } else {
-            displaytyperef( \%type, $enableConst );
+            displaytyperef( \%type, $enableConst, $curArch );
         }
         return;
     }
 
     if ( $$param{'Ttype'} eq "FuncPtr" ) {
-        $select = "SELECT * FROM Type WHERE Tid=" . $$param{'Tbasetype'};
-        $sth    = $Dbh->query($select) || die $Dbh->errmsg();
-        %type   = $sth->fetchhash;
+		$basetype = getBaseTypeID($param);
+		$sth = getBaseTypeRecord($basetype,$curArch);
+		%type=$sth->fetchhash;
         $Tid    = $$param{'Tid'};
-        displaytyperef( \%type, $enableConst );
+        displaytyperef( \%type, $enableConst, $curArch );
         print TESTS "(*";
         if ( $$param{'Tname'} =~ "fptr" ) {
             $$param{'Tname'} =~ s/fptr-//;
@@ -124,13 +176,13 @@ sub displaytyperef($$) {
             %tmentry  = $tmh->fetchhash;
             $TMtypeid = $tmentry{'TMtypeid'};
             $tselect  = "SELECT * FROM Type";
-            $tselect .= " LEFT JOIN ArchType ON ATaid=Tarch AND ATtid=Tid";
+            $tselect .= " LEFT JOIN ArchType ON ATaid=$curArch AND ATtid=Tid";
             $tselect .= " WHERE Tid=$TMtypeid";
             $th    = $Dbh->query($tselect) || die $Dbh->errmsg();
             %entry = $th->fetchhash;
 
             #$nameonly=1;
-            displaytyperef( \%entry, $enableConst );
+            displaytyperef( \%entry, $enableConst, $curArch );
 
             #print TESTS $tmentry{'TMname'};
             if ( $entry{'Ttype'} eq 'Array' ) {
@@ -159,10 +211,12 @@ sub writetest($$) {
     # Get the return types
     #
     $select = "SELECT Ireturn FROM Interface ";
+    $select .= "LEFT JOIN ArchInt ON Iid=AIint ";
     $select .= "WHERE Iheader=$Hid ";
-    $select .= "AND Istdstatus='Included' ";
+	$select .= "AND (AIappearedin <= '$lsbversion' and AIappearedin<>'') ";
+	$select .= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin >'$lsbversion')";
 
-    #$select.= "AND Iarch=$Aid";
+    #$select.= "AND AIarch=$Aid";
     print $select, "\n" if $trace;
     $sth = $Dbh->query($select) || die $Dbh->errmsg();
     for ( 1 .. $sth->numrows ) {
@@ -173,17 +227,20 @@ sub writetest($$) {
     #
     # Get the parameter types
     #
-    $select = "SELECT Ptype FROM Interface,Parameter ";
+    $select = "SELECT Ptype FROM Interface LEFT JOIN Parameter ON Pint=Iid ";
+    $select .= "LEFT JOIN ArchInt ON AIint=Iid ";
     $select .= "WHERE Iheader=$Hid ";
-    $select .= "AND Pint=Iid ";
-    $select .= "AND Istdstatus='Included' ";
+    $select .= "AND (AIappearedin <= '$lsbversion' and AIappearedin<>'') ";
+    $select .= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin >'$lsbversion')";
 
-    #$select.= "AND Iarch=$Aid";
+    #$select.= "AND AIarch=$Aid";
     print $select, "\n" if $trace;
     $sth = $Dbh->query($select) || die $Dbh->errmsg();
     for ( 1 .. $sth->numrows ) {
         %entry = $sth->fetchhash;
-        $type{ $entry{'Ptype'} } = 1;
+        if( $entry{'Ptype'} ) {
+        	$type{ $entry{'Ptype'} } = 1;
+        }
     }
 
     $typelist = join ',', keys(%type);
@@ -192,12 +249,13 @@ sub writetest($$) {
 
     # Get referenced types
     $select = "SELECT DISTINCT * FROM Type ";
+    $select.= "LEFT JOIN ArchType ON ATtid=Tid ";
     $select .= "WHERE Tid IN ($typelist) ";
     $select .= "AND Ttype = 'Pointer'";
     $sth = $Dbh->query($select) || die $Dbh->errmsg();
     for ( 1 .. $sth->numrows ) {
         %entry = $sth->fetchhash;
-        $type{ $entry{'Tbasetype'} } = 1;
+        $type{ $entry{'ATbasetype'} } = 1;
     }
 
     $typelist = join ',', keys(%type);
@@ -216,7 +274,8 @@ sub writetest($$) {
     $select .= "LEFT JOIN ArchConst ON ACcid=Cid ";
     $select .= "LEFT JOIN Architecture ON Aid=ACaid ";
     $select .= "WHERE HGheader=$Hid ";
-    $select .= "AND Cstdstatus='Included' ";
+    $select.= "AND (ACappearedin is not NULL and ACappearedin <= '$lsbversion' and ACappearedin<>'') ";
+    $select.= "AND (ACwithdrawnin IS NULL OR ACwithdrawnin > '$lsbversion') ";
     $select .= "ORDER BY Cheadgroup,Cname,ACvalue ";
     $cth = $Dbh->query($select) || die $Dbh->errmsg();
 
@@ -228,7 +287,9 @@ sub writetest($$) {
     $select .= "WHERE HGheader=$Hid ";
 
     #$select.= "AND Tid IN ($typelist) ";
-    $select .= "AND (Tstatus = 'Referenced' OR Tstatus = 'Indirect' OR Tstatus='Conly')";
+	$select.= "AND ( ( (ATappearedin <= '$lsbversion' AND ATappearedin<>'') ";
+	$select.= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin >'$lsbversion') ) ";
+    $select .= "OR (Tindirect = 'Yes' OR Tconly='Yes') )";
     $select .= "ORDER BY Theadergroup,Tid ";
     $tth = $Dbh->query($select) || die $Dbh->errmsg();
 
@@ -364,7 +425,6 @@ sub writetest($$) {
     $lastid = 0;
     for ( 1 .. $tth->numrows ) {
         %tentry = $tth->fetchhash;
-        if ( $tentry{'Tarch'} == 8 ) { next; }    # Arch None
         if ( !$tentry{'Asymbol'} )   {
             print STDERR "Type " . $tentry{'Tname'} . " is missing Arch\n";
             $tentry{'Asymbol'} = '__no_sym__';
@@ -380,12 +440,12 @@ sub writetest($$) {
                 # XXXSTU - This should probably only happen if previous cases
                 #   have dissimilar Tarch and ATaid values
 
-                if ( $lastarch == 1 && $lastaid != 1 ) {
-                    print TESTS "#else\n";
-                    print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
-                    print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
-                    print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
-                }
+#                 if ( $lastarch == 1 && $lastaid != 1 ) {
+#                     print TESTS "#else\n";
+#                     print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+#                     print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+#                     print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
+#                 }
                 print TESTS "#endif\n\n";
             }
 
@@ -397,7 +457,7 @@ sub writetest($$) {
         }
         $lastid   = $tentry{'Tid'};
         $lastaid  = $tentry{'Aid'};
-        $lastarch = $tentry{'Tarch'};
+#         $lastarch = $tentry{'Tarch'};
         $Tid      = $tentry{'Tid'};
         $Tname    = $tentry{'Tname'};
         $ATsize   = $tentry{'ATsize'};
@@ -416,42 +476,44 @@ sub writetest($$) {
             } else {
                 $type = "union";
             }
-            print TESTS "CheckTypeSize($type $Tname,$ATsize, $Tid, $Aid)\n";
+            print TESTS "CheckTypeSize($type $Tname,$ATsize, $Tid, $Aid);\n";
 
             # Get the members
-            $select = "SELECT DISTINCT * FROM TypeMember ";
-            $select .= "LEFT JOIN ArchTypeMem ON ATMtmid=TMid ";
-            $select .= "WHERE TMmemberof=$Tid ";
-            $select .= "AND TMbitfield = 0 ";
-            $select .= "AND ATMaid=$Aid ";
-            $select .= "ORDER BY TMposition ";
-            print $select, "\n" if $trace;
-            $mth = $Dbh->query($select) || die $Dbh->errmsg();
+			if( $Aid ) {
+				$select = "SELECT DISTINCT * FROM TypeMember ";
+				$select .= "LEFT JOIN ArchTypeMem ON ATMtmid=TMid ";
+				$select .= "WHERE TMmemberof=$Tid ";
+				$select .= "AND TMbitfield = 0 ";
+				$select .= "AND ATMaid=$Aid ";
+				$select .= "ORDER BY TMposition ";
+				print $select, "\n" if $trace;
+				$mth = $Dbh->query($select) || die $Dbh->errmsg();
+			}
 
             if ( $mth->numrows ) {
                 for ( 1 .. $mth->numrows ) {
-                    %mentry = $mth->fetchhash;
+					%mentry = $mth->fetchhash;
 
-                    # XXXSTU - We really should fetch the info for the member
-                    # type so we can validate the size in the DB
-                    #
-                    print TESTS "CheckMemberSize($type $tentry{'Tname'},$mentry{'TMname'},$mentry{'ATMsize'},$Aid,$mentry{'TMid'})\n";
-                    print TESTS "CheckOffset($type $tentry{'Tname'},$mentry{'TMname'},$mentry{'ATMoffset'},$Aid,$mentry{'TMid'})\n";
-                }
+					# XXXSTU - We really should fetch the info for the member
+					# type so we can validate the size in the DB
+					#
+					print TESTS "CheckMemberSize($type $tentry{'Tname'},$mentry{'TMname'},$mentry{'ATMsize'},$Aid,$mentry{'TMid'});\n";
+					print TESTS "CheckOffset($type $tentry{'Tname'},$mentry{'TMname'},$mentry{'ATMoffset'},$Aid,$mentry{'TMid'});\n";
+				}
             } else {
-	        #Checking Structure Member Bit-Field value
-		$select = "SELECT DISTINCT * FROM TypeMember ";
+	        	#Checking Structure Member Bit-Field value
+				$select = "SELECT DISTINCT * FROM TypeMember ";
                 $select .= "WHERE TMmemberof=$Tid ";
                 $select .= "AND TMbitfield > 0 ";
                 $select .= "ORDER BY TMposition ";
                 print $select, "\n" if $trace;
                 $mth = $Dbh->query($select) || die $Dbh->errmsg();
-		if($mth->numrows){
-	          for ( 1 .. $mth->numrows ) {
-                    %mentry = $mth->fetchhash;
-		    print TESTS "CheckBitField($type $tentry{'Tname'},$mentry{'TMname'},$mentry{'TMbitfield'},$Aid,$mentry{'TMid'})\n";
-                   }
-		}else{
+				if($mth->numrows){
+					for ( 1 .. $mth->numrows ) {
+						%mentry = $mth->fetchhash;
+						print TESTS "CheckBitField($type $tentry{'Tname'},$mentry{'TMname'},$mentry{'TMbitfield'},$Aid,$mentry{'TMid'})\n";
+					}
+				}else{
 	                # Get the members that are supposed to be there
         	        $select = "SELECT DISTINCT * FROM TypeMember ";
                 	$select .= "WHERE TMmemberof=$Tid ";
@@ -460,12 +522,12 @@ sub writetest($$) {
                 	print $select, "\n" if $trace;
 	                $mth = $Dbh->query($select) || die $Dbh->errmsg();
         	        print TESTS "Msg(\"Missing member data for $Tname on $Aname\\n\");\n";
-                	  for ( 1 .. $mth->numrows ) {
+                	for ( 1 .. $mth->numrows ) {
 	                    %mentry = $mth->fetchhash;
-        	            print TESTS "CheckOffset($type $tentry{'Tname'},$mentry{'TMname'},0,$Aid,$mentry{'TMid'})\n";
-                  }
-		}
-            }
+        	            print TESTS "CheckOffset($type $tentry{'Tname'},$mentry{'TMname'},0,$Aid,$mentry{'TMid'});\n";
+					}
+				}
+			}
             next;
         }
 
@@ -476,19 +538,19 @@ sub writetest($$) {
             $tselect = "SELECT * FROM Type ";
             $tselect .= "LEFT JOIN ArchType ON ATtid=Tid ";
             $tselect .= "LEFT JOIN Architecture ON Aid=ATaid ";
-            $tselect .= "WHERE Tid=" . $tentry{'Tbasetype'};
+            $tselect .= "WHERE Tid=" . $tentry{'ATbasetype'};
             $ttth = $Dbh->query($tselect) || die $Dbh->errmsg();
             %ttentry = $ttth->fetchhash;
             my $typeName;
 
             if ( $ttentry{'Ttype'} eq 'Struct' ) {
                 $typeName = "struct " . $Tname;
-                print TESTS "CheckTypeSize($typeName,$ATsize, $Tid, $Aid)\n";
+                print TESTS "CheckTypeSize($typeName,$ATsize, $Tid, $Aid);\n";
             } elsif ( $ttentry{'Ttype'} eq 'Union' ) {
                 $typeName = "union " . $Tname;
-                print TESTS "CheckTypeSize($typeName,$ATsize, $Tid, $Aid)\n";
+                print TESTS "CheckTypeSize($typeName,$ATsize, $Tid, $Aid);\n";
             } elsif ( $ttentry{'Ttype'} eq 'Typedef' ) {
-                print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
+                print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid);\n";
             }
             next;
         }
@@ -523,7 +585,7 @@ sub writetest($$) {
             $tselect = "SELECT * FROM Type ";
             $tselect .= "LEFT JOIN ArchType ON ATtid=Tid ";
             $tselect .= "LEFT JOIN Architecture ON Aid=ATaid ";
-            $tselect .= "WHERE Tid=" . $tentry{'Tbasetype'};
+            $tselect .= "WHERE Tid=" . $tentry{'ATbasetype'};
             $ttth    = $Dbh->query($tselect) || die $Dbh->errmsg();
             %ttentry = $ttth->fetchhash;
 
@@ -531,11 +593,11 @@ sub writetest($$) {
             #    print TESTS "CheckArrayTypeSize($Tname,"
             #      . $ttentry{'ATsize'}
             #      . ",$ATsize, $Tid, $Aid)\n";
-            #    print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
+            #    print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid);\n";
             #} else {
-            print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
+            print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid);\n";
             #}
-            
+
             next;
         }
 
@@ -546,7 +608,7 @@ sub writetest($$) {
             $tselect = "SELECT * FROM Type ";
             $tselect .= "LEFT JOIN ArchType ON ATtid=Tid ";
             $tselect .= "LEFT JOIN Architecture ON Aid=ATaid ";
-            $tselect .= "WHERE Tid=" . $tentry{'Tbasetype'};
+            $tselect .= "WHERE Tid=" . $tentry{'ATbasetype'};
             $ttth = $Dbh->query($tselect) || die $Dbh->errmsg();
             %ttentry = $ttth->fetchhash;
             my $typeName;
@@ -554,22 +616,22 @@ sub writetest($$) {
             if (   $ttentry{'Ttype'} eq 'Typedef'
                 || $ttentry{'Ttype'} eq 'Pointer' )
             {
-                print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
+                print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid);\n";
             }
             next;
         }
 
         # Default case
-        print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n"
-          if $tentry{'Ttype'} ne 'Array';
+		print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid);\n"
+		if $tentry{'Ttype'} ne 'Array';
     }
     if ( $lastid != 0 ) {
-        if ( $tentry{'Tarch'} == 1 && $lastaid != 1 ) {
-            print TESTS "#else\n";
-            print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
-            print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
-            print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
-        }
+#         if ( $tentry{'Tarch'} == 1 && $lastaid != 1 ) {
+#             print TESTS "#else\n";
+#             print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+#             print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+#             print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
+#         }
         print TESTS "#endif\n\n";
     }
 
@@ -590,67 +652,81 @@ sub writetest($$) {
 	$mathhdr = 1;
     }
     if ( $GlX11 == 0 ) {    # ignore GL and X11 interfaces
-        $select = "SELECT * FROM Interface ";
-        $select .= "LEFT JOIN Header ON Iheader=Hid ";
-        $select .= "LEFT JOIN Type ON Ireturn=Tid ";
-        $select .= "LEFT JOIN ArchType ON ATtid=Tid AND ATaid=Iarch ";
-        $select .= "LEFT JOIN Architecture ON Iarch=Aid ";
-        $select .= "WHERE ( Istdstatus='Included' OR Istdstatus='SrcOnly' )";
-        $select .= "AND Hid=$Hid";
-        $sth = $Dbh->query($select) || die $Dbh->errmsg();
+		$select = "SELECT * FROM Interface ";
+		$select .= "LEFT JOIN Header ON Iheader=Hid ";
+		$select .= "LEFT JOIN Type ON Ireturn=Tid ";
+		$select .= "LEFT JOIN ArchInt ON Iid=AIint ";
+		$select .= "LEFT JOIN ArchType ON ATtid=Tid AND ATaid=AIarch ";
+		$select .= "LEFT JOIN Architecture ON AIarch=Aid ";
+ 		$select .= "WHERE (Isrconly='Yes' OR (";
+		$select .= "(AIappearedin <= '$lsbversion' and AIappearedin<>'') ";
+		$select .= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin >'$lsbversion') ) )";
+		$select .= "AND Hid=$Hid";
+		$sth = $Dbh->query($select) || die $Dbh->errmsg();
 
-        for ( 1 .. $sth->numrows ) {
-	    $special = 0;
-            %entry = $sth->fetchhash;
-	    if ( $mathhdr ) { $special = grep /^$entry{'Iname'}$/, @mathsyms; }
-            if ( $entry{'Itype'} eq "Function" ) {
-                if ( $entry{'Ttype'} eq 'FuncPtr' ) {
-                    print STDERR "Skipping a global function pointer!!\n";
-                    next;
-                }
-                if ( $entry{'Aid'} && $entry{'Aname'} ne "All" ) {
-                    print TESTS "#if $entry{'Asymbol'}\n";
-                    print TESTS "/* $entry{'Aname'} */\n";
-                }
-		elsif ( $special) {
-		    print TESTS $mathstring;
-		}
-                print TESTS "extern ";
-                displaytyperef( \%entry, 1 );
-                print TESTS " $entry{'Iname'}_db(";
-                $select =
-"SELECT Tid,Tname,Ttype,Tbasetype,Parsize,Pconst FROM Type,Parameter ";
-                $select .= "WHERE Pint=" . $entry{'Iid'} . " AND Ptype=Tid ";
-                $select .= "ORDER BY  Ppos";
-                $sth2 = $Dbh->query($select) || die $Dbh->errmsg();
+		for ( 1 .. $sth->numrows ) {
+			$special = 0;
+			%entry = $sth->fetchhash;
+			if ( $mathhdr ) { $special = grep /^$entry{'Iname'}$/, @mathsyms; }
+			if ( $entry{'Itype'} eq "Function" ) {
+				if ( $entry{'Ttype'} eq 'FuncPtr' ) {
+					print STDERR "Skipping a global function pointer!!\n";
+					next;
+				}
 
-                if ( $sth2->numrows ) {
-                    for ( 1 .. $sth2->numrows ) {
-                        %entry2 = $sth2->fetchhash;
+				if ( $entry{'Aid'} && $entry{'Aname'} ne "All" ) {
+					$selectCheck ="SELECT Iid FROM Interface ";
+					$selectCheck.="LEFT JOIN ArchInt ON Iid=AIint ";
+					$selectCheck.="WHERE AIarch=1 AND Iname='$entry{'Iname'}'";
+					$sthCheck = $Dbh->query($selectCheck) || die $Dbh->errmsg();
+					if( $sthCheck->numrows ) {
+						next;
+					}
+				}
 
-                        #print TESTS ", ";
-                        displaytyperef( \%entry2, 1 );
-                        if ( $entry2{'Ttype'} eq "Array" ) {
-                            print TESTS "[";
-                            if ( $entry2{'Parsize'} != 0 ) {
-                                print TESTS "$entry2{'Parsize'}";
-                            }
-                            print TESTS "]";
-                        }
-                        if ( $_ != $sth2->numrows ) { print TESTS ", "; }
-                    }
-                } else {
-                    print TESTS "void";
-                }
-                print TESTS ");\n";
-                print TESTS "CheckInterfacedef($entry{'Iname'},$entry{'Iname'}_db);\n";
-                if ( $entry{'Aid'} && $entry{'Aname'} ne "All" ) {
-                    print TESTS "#endif\n";
-                }
-		elsif ( $special) {
-                    print TESTS "#endif		/* hack */\n";
-		}
-            }
+				if ( $entry{'Aid'} && $entry{'Aname'} ne "All" ) {
+					print TESTS "#if $entry{'Asymbol'}\n";
+					print TESTS "/* $entry{'Aname'} */\n";
+				}
+				elsif ( $special) {
+					print TESTS $mathstring;
+				}
+				print TESTS "extern ";
+				displaytyperef( \%entry, 1, $entry{'Aid'} );
+				print TESTS " $entry{'Iname'}_db(";
+				$select = "SELECT Tid,Tname,Ttype,ATbasetype,Parsize,Pconst FROM Parameter,Type ";
+				$select .= "LEFT JOIN ArchType ON ATtid=Tid ";
+				$select .= "WHERE Pint=" . $entry{'Iid'} . " AND Ptype=Tid ";
+				$select .= "GROUP BY Ppos ORDER BY Ppos";
+				$sth2 = $Dbh->query($select) || die $Dbh->errmsg();
+
+				if ( $sth2->numrows ) {
+					for ( 1 .. $sth2->numrows ) {
+						%entry2 = $sth2->fetchhash;
+
+						#print TESTS ", ";
+						displaytyperef( \%entry2, 1, $entry{'Aid'} );
+						if ( $entry2{'Ttype'} eq "Array" ) {
+							print TESTS "[";
+							if ( $entry2{'Parsize'} != 0 ) {
+								print TESTS "$entry2{'Parsize'}";
+							}
+							print TESTS "]";
+						}
+						if ( $_ != $sth2->numrows ) { print TESTS ", "; }
+					}
+				} else {
+					print TESTS "void";
+				}
+				print TESTS ");\n";
+				print TESTS "CheckInterfacedef($entry{'Iname'},$entry{'Iname'}_db);\n";
+				if ( $entry{'Aid'} && $entry{'Aname'} ne "All" ) {
+					print TESTS "#endif\n";
+				}
+				elsif ( $special) {
+					print TESTS "#endif		/* hack */\n";
+				}
+			}
             #elsif ( $entry{'Itype'} eq "Data" ) {
             #    print TESTS "extern ";
             #    displaytyperef( \%entry, 0 );
@@ -692,7 +768,8 @@ $Dbh->selectdb("lsb") || die $Dbh->errmsg();
 
 if ( $ARGV[0] ne "" ) {
     $select = "SELECT DISTINCT * FROM Header ";
-    $select .= "WHERE Hstdstatus='Included' ";
+	$select.= "WHERE (Happearedin <= '$lsbversion' and Happearedin<>\'\') ";
+	$select.= "AND (Hwithdrawnin IS NULL OR Hwithdrawnin > '$lsbversion' )",
     $select .= "AND Hname='" . $ARGV[0] . "'";
     $hth = $Dbh->query($select) || die $Dbh->errmsg();
     %entry = $hth->fetchhash;
@@ -755,7 +832,8 @@ print TET_HDR "struct tet_testlist tet_testlist[] = {\n";
 open( SUBDEFS, ">testdefs.h" ) || die "Can't open testdefs.h for writing";
 
 $select = "SELECT DISTINCT * FROM Header ";
-$select .= "WHERE Hstdstatus='Included' ";
+$select.= "WHERE (Happearedin is not NULL and Happearedin <= '$lsbversion' and Happearedin<>\'\') ";
+$select.= "AND (Hwithdrawnin IS NULL OR Hwithdrawnin > '$lsbversion' )",
 $select .= "ORDER BY Hname ";
 
 #
@@ -840,7 +918,7 @@ for ( 1 .. $tth->numrows ) {
     $ATsize = $tentry{'ATsize'};
     $Aid    = $tentry{'Aid'};
     $Tname  = $tentry{'Tname'};
-    print TESTS "CheckTypeSize($Tname,$ATsize,$Tid,$Aid)\n"
+    print TESTS "CheckTypeSize($Tname,$ATsize,$Tid,$Aid);\n"
       if $tentry{'Tname'} ne 'bool';
 }
 print TESTS "#else\n";
@@ -954,7 +1032,7 @@ for ( 1 .. $tth->numrows ) {
 
     # Unmangled types have commas, which confuse the preprocessor
     print TESTS "#define TYPE _Z" . "$Tname\n";
-    print TESTS "CheckTypeSize(TYPE,$ATsize,$Tid,$Aid)\n";
+    print TESTS "CheckTypeSize(TYPE,$ATsize,$Tid,$Aid);\n";
     print TESTS "#undef TYPE\n";
 }
 print TESTS "#else\n";
@@ -1007,7 +1085,7 @@ print MAKEFILE "hdrchk.o: hdrchk.c\n";
 print MAKEFILE "\t\$(CC) \$\(CFLAGS) -g -c hdrchk.c\n";
 print MAKEFILE "\n\n";
 print MAKEFILE "hdrchk.c:\n";
-print MAKEFILE "\t./mktests\n";
+print MAKEFILE "\t./mktests -v `cat LSB_VERSION`\n";
 print MAKEFILE "\n\n";
 print MAKEFILE "install:\n";
 print MAKEFILE "\n\n";

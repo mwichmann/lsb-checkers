@@ -21,10 +21,10 @@ test: test.c $(LIB) $(LIBS)
 idx.o: rpmtag.h
 
 rpmtag.h:
-	./mktaghdr >rpmtag.h
+	./mktaghdr -v `cat LSB_VERSION` >rpmtag.h
 
 idxtbl.c:
-	./mktagtbl >idxtbl.c
+	./mktagtbl -v `cat LSB_VERSION` >idxtbl.c
 
 clean:
 	rm -f $(OBJS) $(LIB)

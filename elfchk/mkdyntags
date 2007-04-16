@@ -2,14 +2,26 @@
 
 use CGI;
 use Mysql;
+use Getopt::Long;
 
 use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
+
+sub usage()
+{
+print STDERR "mkdyntags -v lsbversion\n";
+die;
+}
+
+GetOptions("v=s" => \$lsbversion);
+if( !$lsbversion ) { usage(); }
 
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
 $select = "SELECT DISTINCT * FROM DynamicEntries ";
-$select.= "LEFT JOIN Architecture ON Aid=DEarch ";
-$select.= "WHERE DEstdstatus='Included' ";
+$select.= "LEFT JOIN ArchDE ON ADEdeid=DEid ";
+$select.= "LEFT JOIN Architecture ON Aid=ADEaid ";
+$select.= "WHERE (ADEappearedin <= '$lsbversion' and ADEappearedin<>'') ";
+$select.= "AND (ADEwithdrawnin IS NULL OR ADEwithdrawnin > '$lsbversion') ";
 $select.= "ORDER BY DEname,Aid ";
 
 #print $select;
@@ -23,6 +35,10 @@ print "#include \"dynamic.h\"\n\n";
 print "struct DynamicInfo DynamicInfo[] = {\n";
 for(1..$sth->numrows) {
 	%entry=$sth->fetchhash;
+	if( not $entry{'Aname'} ) {
+		next;
+	}
+	
 	if( $entry{'Aname'} ne "All" ) {
 		print "#if ".$entry{'Asymbol'}."\n";
 	}

@@ -1,8 +1,18 @@
 #!/usr/bin/perl
 
 use Mysql;
+use Getopt::Long;
 
 use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
+
+sub usage()
+{
+print STDERR "mktagtbl -v <lsbversion>\n";
+die;
+}
+
+GetOptions("v=s" => \$lsbversion);
+if( !$lsbversion ) { usage(); }
 
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
@@ -12,7 +22,9 @@ dumptable($$)
 local($condition,$tname)=@_;
 
 $select = "SELECT DISTINCT * FROM RpmTag ";
-$select.= "WHERE Rgroup='Private' OR ".$condition." ";
+$select.= "WHERE (Rgroup='Private' OR ".$condition.") ";
+$select.= "AND (Rappearedin IS NOT NULL and Rappearedin <= '$lsbversion' and Rappearedin<>'') ";
+$select.= "AND (Rwithdrawnin IS NULL OR Rwithdrawnin > '$lsbversion') ";
 $select.= "ORDER BY Rgroup,Rtag ";
 
 #print "$select\n";

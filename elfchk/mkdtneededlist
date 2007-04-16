@@ -2,6 +2,16 @@
 
 use CGI;
 use Mysql;
+use Getopt::Long;
+
+sub usage()
+{
+print STDERR "mkdtneededlist -v <lsbversion>\n";
+die;
+}
+
+GetOptions("v=s" => \$lsbversion);
+if( !$lsbversion ) { usage(); }
 
 use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
@@ -10,7 +20,8 @@ $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::d
 $select = "SELECT DISTINCT * FROM Library ";
 $select.= "LEFT JOIN ArchLib ON Lid=ALlid ";
 $select.= "LEFT JOIN Architecture ON Aid=ALaid ";
-$select.= "WHERE Library.Lstdstatus='Included' ";
+$select.= "WHERE ( (ALappearedin <= '$lsbversion' and ALappearedin<>'') ";
+$select.= "AND (ALwithdrawnin IS NULL OR ALwithdrawnin > '$lsbversion') ) ";
 $select.= "AND Architecture.Aname!='None' ";
 $select.= "ORDER BY ALrunname,Aid ";
 
