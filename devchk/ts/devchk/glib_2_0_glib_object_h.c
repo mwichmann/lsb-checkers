@@ -956,282 +956,282 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GObject,12, 11833, 2)
-CheckMemberSize(struct _GObject,ref_count,4,2,41991)
-CheckOffset(struct _GObject,ref_count,4,2,41991)
-CheckMemberSize(struct _GObject,qdata,4,2,41992)
-CheckOffset(struct _GObject,qdata,8,2,41992)
+CheckTypeSize(struct _GObject,12, 11833, 2);
+CheckMemberSize(struct _GObject,ref_count,4,2,41991);
+CheckOffset(struct _GObject,ref_count,4,2,41991);
+CheckMemberSize(struct _GObject,qdata,4,2,41992);
+CheckOffset(struct _GObject,qdata,8,2,41992);
 #elif __x86_64__
-CheckTypeSize(struct _GObject,24, 11833, 11)
-CheckMemberSize(struct _GObject,ref_count,4,11,41991)
-CheckOffset(struct _GObject,ref_count,8,11,41991)
-CheckMemberSize(struct _GObject,qdata,8,11,41992)
-CheckOffset(struct _GObject,qdata,16,11,41992)
+CheckTypeSize(struct _GObject,24, 11833, 11);
+CheckMemberSize(struct _GObject,ref_count,4,11,41991);
+CheckOffset(struct _GObject,ref_count,8,11,41991);
+CheckMemberSize(struct _GObject,qdata,8,11,41992);
+CheckOffset(struct _GObject,qdata,16,11,41992);
 #elif __ia64__
-CheckTypeSize(struct _GObject,24, 11833, 3)
-CheckMemberSize(struct _GObject,ref_count,4,3,41991)
-CheckOffset(struct _GObject,ref_count,8,3,41991)
-CheckMemberSize(struct _GObject,qdata,8,3,41992)
-CheckOffset(struct _GObject,qdata,16,3,41992)
+CheckTypeSize(struct _GObject,24, 11833, 3);
+CheckMemberSize(struct _GObject,ref_count,4,3,41991);
+CheckOffset(struct _GObject,ref_count,8,3,41991);
+CheckMemberSize(struct _GObject,qdata,8,3,41992);
+CheckOffset(struct _GObject,qdata,16,3,41992);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GObject,12, 11833, 6)
-CheckMemberSize(struct _GObject,ref_count,4,6,41991)
-CheckOffset(struct _GObject,ref_count,4,6,41991)
-CheckMemberSize(struct _GObject,qdata,4,6,41992)
-CheckOffset(struct _GObject,qdata,8,6,41992)
+CheckTypeSize(struct _GObject,12, 11833, 6);
+CheckMemberSize(struct _GObject,ref_count,4,6,41991);
+CheckOffset(struct _GObject,ref_count,4,6,41991);
+CheckMemberSize(struct _GObject,qdata,4,6,41992);
+CheckOffset(struct _GObject,qdata,8,6,41992);
 #elif __powerpc64__
-CheckTypeSize(struct _GObject,24, 11833, 9)
-CheckMemberSize(struct _GObject,ref_count,4,9,41991)
-CheckOffset(struct _GObject,ref_count,8,9,41991)
-CheckMemberSize(struct _GObject,qdata,8,9,41992)
-CheckOffset(struct _GObject,qdata,16,9,41992)
+CheckTypeSize(struct _GObject,24, 11833, 9);
+CheckMemberSize(struct _GObject,ref_count,4,9,41991);
+CheckOffset(struct _GObject,ref_count,8,9,41991);
+CheckMemberSize(struct _GObject,qdata,8,9,41992);
+CheckOffset(struct _GObject,qdata,16,9,41992);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GObject,12, 11833, 10)
-CheckMemberSize(struct _GObject,ref_count,4,10,41991)
-CheckOffset(struct _GObject,ref_count,4,10,41991)
-CheckMemberSize(struct _GObject,qdata,4,10,41992)
-CheckOffset(struct _GObject,qdata,8,10,41992)
+CheckTypeSize(struct _GObject,12, 11833, 10);
+CheckMemberSize(struct _GObject,ref_count,4,10,41991);
+CheckOffset(struct _GObject,ref_count,4,10,41991);
+CheckMemberSize(struct _GObject,qdata,4,10,41992);
+CheckOffset(struct _GObject,qdata,8,10,41992);
 #elif __s390x__
-CheckTypeSize(struct _GObject,24, 11833, 12)
-CheckMemberSize(struct _GObject,ref_count,4,12,41991)
-CheckOffset(struct _GObject,ref_count,8,12,41991)
-CheckMemberSize(struct _GObject,qdata,8,12,41992)
-CheckOffset(struct _GObject,qdata,16,12,41992)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11833,0);
-Msg("Find size of _GObject (11833)\n");
+CheckTypeSize(struct _GObject,24, 11833, 12);
+CheckMemberSize(struct _GObject,ref_count,4,12,41991);
+CheckOffset(struct _GObject,ref_count,8,12,41991);
+CheckMemberSize(struct _GObject,qdata,8,12,41992);
+CheckOffset(struct _GObject,qdata,16,12,41992);
+#elif 1
+CheckTypeSize(struct _GObject,0, 11833, 1);
+Msg("Missing member data for _GObject on All\n");
+CheckOffset(struct _GObject,g_type_instance,0,1,41990);
+CheckOffset(struct _GObject,ref_count,0,1,41991);
+CheckOffset(struct _GObject,qdata,0,1,41992);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GTypeInstance,4, 11834, 2)
+CheckTypeSize(struct _GTypeInstance,4, 11834, 2);
 Msg("Missing member data for _GTypeInstance on IA32\n");
-CheckOffset(struct _GTypeInstance,g_class,0,2,41989)
+CheckOffset(struct _GTypeInstance,g_class,0,2,41989);
 #elif __x86_64__
-CheckTypeSize(struct _GTypeInstance,8, 11834, 11)
+CheckTypeSize(struct _GTypeInstance,8, 11834, 11);
 Msg("Missing member data for _GTypeInstance on x86-64\n");
-CheckOffset(struct _GTypeInstance,g_class,0,11,41989)
+CheckOffset(struct _GTypeInstance,g_class,0,11,41989);
 #elif __ia64__
-CheckTypeSize(struct _GTypeInstance,8, 11834, 3)
+CheckTypeSize(struct _GTypeInstance,8, 11834, 3);
 Msg("Missing member data for _GTypeInstance on IA64\n");
-CheckOffset(struct _GTypeInstance,g_class,0,3,41989)
+CheckOffset(struct _GTypeInstance,g_class,0,3,41989);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GTypeInstance,4, 11834, 6)
+CheckTypeSize(struct _GTypeInstance,4, 11834, 6);
 Msg("Missing member data for _GTypeInstance on PPC32\n");
-CheckOffset(struct _GTypeInstance,g_class,0,6,41989)
+CheckOffset(struct _GTypeInstance,g_class,0,6,41989);
 #elif __powerpc64__
-CheckTypeSize(struct _GTypeInstance,8, 11834, 9)
+CheckTypeSize(struct _GTypeInstance,8, 11834, 9);
 Msg("Missing member data for _GTypeInstance on PPC64\n");
-CheckOffset(struct _GTypeInstance,g_class,0,9,41989)
+CheckOffset(struct _GTypeInstance,g_class,0,9,41989);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GTypeInstance,4, 11834, 10)
+CheckTypeSize(struct _GTypeInstance,4, 11834, 10);
 Msg("Missing member data for _GTypeInstance on S390\n");
-CheckOffset(struct _GTypeInstance,g_class,0,10,41989)
+CheckOffset(struct _GTypeInstance,g_class,0,10,41989);
 #elif __s390x__
-CheckTypeSize(struct _GTypeInstance,8, 11834, 12)
+CheckTypeSize(struct _GTypeInstance,8, 11834, 12);
 Msg("Missing member data for _GTypeInstance on S390X\n");
-CheckOffset(struct _GTypeInstance,g_class,0,12,41989)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11834,0);
-Msg("Find size of _GTypeInstance (11834)\n");
+CheckOffset(struct _GTypeInstance,g_class,0,12,41989);
+#elif 1
+CheckTypeSize(struct _GTypeInstance,0, 11834, 1);
+Msg("Missing member data for _GTypeInstance on All\n");
+CheckOffset(struct _GTypeInstance,g_class,0,1,41989);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GTypeClass,4, 11835, 2)
+CheckTypeSize(struct _GTypeClass,4, 11835, 2);
 Msg("Missing member data for _GTypeClass on IA32\n");
-CheckOffset(struct _GTypeClass,g_type,0,2,41988)
+CheckOffset(struct _GTypeClass,g_type,0,2,41988);
 #elif __x86_64__
-CheckTypeSize(struct _GTypeClass,8, 11835, 11)
+CheckTypeSize(struct _GTypeClass,8, 11835, 11);
 Msg("Missing member data for _GTypeClass on x86-64\n");
-CheckOffset(struct _GTypeClass,g_type,0,11,41988)
+CheckOffset(struct _GTypeClass,g_type,0,11,41988);
 #elif __ia64__
-CheckTypeSize(struct _GTypeClass,8, 11835, 3)
+CheckTypeSize(struct _GTypeClass,8, 11835, 3);
 Msg("Missing member data for _GTypeClass on IA64\n");
-CheckOffset(struct _GTypeClass,g_type,0,3,41988)
+CheckOffset(struct _GTypeClass,g_type,0,3,41988);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GTypeClass,4, 11835, 6)
+CheckTypeSize(struct _GTypeClass,4, 11835, 6);
 Msg("Missing member data for _GTypeClass on PPC32\n");
-CheckOffset(struct _GTypeClass,g_type,0,6,41988)
+CheckOffset(struct _GTypeClass,g_type,0,6,41988);
 #elif __powerpc64__
-CheckTypeSize(struct _GTypeClass,8, 11835, 9)
+CheckTypeSize(struct _GTypeClass,8, 11835, 9);
 Msg("Missing member data for _GTypeClass on PPC64\n");
-CheckOffset(struct _GTypeClass,g_type,0,9,41988)
+CheckOffset(struct _GTypeClass,g_type,0,9,41988);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GTypeClass,4, 11835, 10)
+CheckTypeSize(struct _GTypeClass,4, 11835, 10);
 Msg("Missing member data for _GTypeClass on S390\n");
-CheckOffset(struct _GTypeClass,g_type,0,10,41988)
+CheckOffset(struct _GTypeClass,g_type,0,10,41988);
 #elif __s390x__
-CheckTypeSize(struct _GTypeClass,8, 11835, 12)
+CheckTypeSize(struct _GTypeClass,8, 11835, 12);
 Msg("Missing member data for _GTypeClass on S390X\n");
-CheckOffset(struct _GTypeClass,g_type,0,12,41988)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11835,0);
-Msg("Find size of _GTypeClass (11835)\n");
+CheckOffset(struct _GTypeClass,g_type,0,12,41988);
+#elif 1
+CheckTypeSize(struct _GTypeClass,0, 11835, 1);
+Msg("Missing member data for _GTypeClass on All\n");
+CheckOffset(struct _GTypeClass,g_type,0,1,41988);
 #endif
 
 #if __i386__
-CheckTypeSize(GType,4, 11836, 2)
+CheckTypeSize(GType,4, 11836, 2);
 #elif __x86_64__
-CheckTypeSize(GType,8, 11836, 11)
+CheckTypeSize(GType,8, 11836, 11);
 #elif __ia64__
-CheckTypeSize(GType,8, 11836, 3)
+CheckTypeSize(GType,8, 11836, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GType,4, 11836, 6)
+CheckTypeSize(GType,4, 11836, 6);
 #elif __powerpc64__
-CheckTypeSize(GType,8, 11836, 9)
+CheckTypeSize(GType,8, 11836, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GType,4, 11836, 10)
+CheckTypeSize(GType,4, 11836, 10);
 #elif __s390x__
-CheckTypeSize(GType,8, 11836, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11836,0);
-Msg("Find size of GType (11836)\n");
+CheckTypeSize(GType,8, 11836, 12);
+#elif 1
+CheckTypeSize(GType,0, 11836, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GTypeClass,4, 11837, 2)
+CheckTypeSize(GTypeClass,4, 11837, 2);
 #elif __x86_64__
-CheckTypeSize(GTypeClass,8, 11837, 11)
+CheckTypeSize(GTypeClass,8, 11837, 11);
 #elif __ia64__
-CheckTypeSize(GTypeClass,8, 11837, 3)
+CheckTypeSize(GTypeClass,8, 11837, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypeClass,4, 11837, 6)
+CheckTypeSize(GTypeClass,4, 11837, 6);
 #elif __powerpc64__
-CheckTypeSize(GTypeClass,8, 11837, 9)
+CheckTypeSize(GTypeClass,8, 11837, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GTypeClass,4, 11837, 10)
+CheckTypeSize(GTypeClass,4, 11837, 10);
 #elif __s390x__
-CheckTypeSize(GTypeClass,8, 11837, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11837,0);
-Msg("Find size of GTypeClass (11837)\n");
+CheckTypeSize(GTypeClass,8, 11837, 12);
+#elif 1
+CheckTypeSize(GTypeClass,0, 11837, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GTypeClass *,4, 11838, 2)
+CheckTypeSize(GTypeClass *,4, 11838, 2);
 #elif __x86_64__
-CheckTypeSize(GTypeClass *,8, 11838, 11)
+CheckTypeSize(GTypeClass *,8, 11838, 11);
 #elif __ia64__
-CheckTypeSize(GTypeClass *,8, 11838, 3)
+CheckTypeSize(GTypeClass *,8, 11838, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypeClass *,4, 11838, 6)
+CheckTypeSize(GTypeClass *,4, 11838, 6);
 #elif __powerpc64__
-CheckTypeSize(GTypeClass *,8, 11838, 9)
+CheckTypeSize(GTypeClass *,8, 11838, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GTypeClass *,4, 11838, 10)
+CheckTypeSize(GTypeClass *,4, 11838, 10);
 #elif __s390x__
-CheckTypeSize(GTypeClass *,8, 11838, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11838,0);
-Msg("Find size of GTypeClass * (11838)\n");
+CheckTypeSize(GTypeClass *,8, 11838, 12);
+#elif 1
+CheckTypeSize(GTypeClass *,0, 11838, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GTypeInstance,4, 11839, 2)
+CheckTypeSize(GTypeInstance,4, 11839, 2);
 #elif __x86_64__
-CheckTypeSize(GTypeInstance,8, 11839, 11)
+CheckTypeSize(GTypeInstance,8, 11839, 11);
 #elif __ia64__
-CheckTypeSize(GTypeInstance,8, 11839, 3)
+CheckTypeSize(GTypeInstance,8, 11839, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypeInstance,4, 11839, 6)
+CheckTypeSize(GTypeInstance,4, 11839, 6);
 #elif __powerpc64__
-CheckTypeSize(GTypeInstance,8, 11839, 9)
+CheckTypeSize(GTypeInstance,8, 11839, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GTypeInstance,4, 11839, 10)
+CheckTypeSize(GTypeInstance,4, 11839, 10);
 #elif __s390x__
-CheckTypeSize(GTypeInstance,8, 11839, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11839,0);
-Msg("Find size of GTypeInstance (11839)\n");
+CheckTypeSize(GTypeInstance,8, 11839, 12);
+#elif 1
+CheckTypeSize(GTypeInstance,0, 11839, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GObject,12, 11840, 2)
+CheckTypeSize(GObject,12, 11840, 2);
 #elif __x86_64__
-CheckTypeSize(GObject,24, 11840, 11)
+CheckTypeSize(GObject,24, 11840, 11);
 #elif __ia64__
-CheckTypeSize(GObject,24, 11840, 3)
+CheckTypeSize(GObject,24, 11840, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GObject,12, 11840, 6)
+CheckTypeSize(GObject,12, 11840, 6);
 #elif __powerpc64__
-CheckTypeSize(GObject,24, 11840, 9)
+CheckTypeSize(GObject,24, 11840, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GObject,12, 11840, 10)
+CheckTypeSize(GObject,12, 11840, 10);
 #elif __s390x__
-CheckTypeSize(GObject,24, 11840, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11840,0);
-Msg("Find size of GObject (11840)\n");
+CheckTypeSize(GObject,24, 11840, 12);
+#elif 1
+CheckTypeSize(GObject,0, 11840, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GObject *,4, 11841, 2)
+CheckTypeSize(GObject *,4, 11841, 2);
 #elif __x86_64__
-CheckTypeSize(GObject *,8, 11841, 11)
+CheckTypeSize(GObject *,8, 11841, 11);
 #elif __ia64__
-CheckTypeSize(GObject *,8, 11841, 3)
+CheckTypeSize(GObject *,8, 11841, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GObject *,4, 11841, 6)
+CheckTypeSize(GObject *,4, 11841, 6);
 #elif __powerpc64__
-CheckTypeSize(GObject *,8, 11841, 9)
+CheckTypeSize(GObject *,8, 11841, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GObject *,4, 11841, 10)
+CheckTypeSize(GObject *,4, 11841, 10);
 #elif __s390x__
-CheckTypeSize(GObject *,8, 11841, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11841,0);
-Msg("Find size of GObject * (11841)\n");
+CheckTypeSize(GObject *,8, 11841, 12);
+#elif 1
+CheckTypeSize(GObject *,0, 11841, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GValue,20, 11842, 2)
-CheckMemberSize(struct _GValue,data,16,2,42003)
-CheckOffset(struct _GValue,data,4,2,42003)
+CheckTypeSize(struct _GValue,20, 11842, 2);
+CheckMemberSize(struct _GValue,data,16,2,42003);
+CheckOffset(struct _GValue,data,4,2,42003);
 #elif __x86_64__
-CheckTypeSize(struct _GValue,24, 11842, 11)
-CheckMemberSize(struct _GValue,data,16,11,42003)
-CheckOffset(struct _GValue,data,8,11,42003)
+CheckTypeSize(struct _GValue,24, 11842, 11);
+CheckMemberSize(struct _GValue,data,16,11,42003);
+CheckOffset(struct _GValue,data,8,11,42003);
 #elif __ia64__
-CheckTypeSize(struct _GValue,24, 11842, 3)
-CheckMemberSize(struct _GValue,data,16,3,42003)
-CheckOffset(struct _GValue,data,8,3,42003)
+CheckTypeSize(struct _GValue,24, 11842, 3);
+CheckMemberSize(struct _GValue,data,16,3,42003);
+CheckOffset(struct _GValue,data,8,3,42003);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GValue,24, 11842, 6)
-CheckMemberSize(struct _GValue,data,16,6,42003)
-CheckOffset(struct _GValue,data,8,6,42003)
+CheckTypeSize(struct _GValue,24, 11842, 6);
+CheckMemberSize(struct _GValue,data,16,6,42003);
+CheckOffset(struct _GValue,data,8,6,42003);
 #elif __powerpc64__
-CheckTypeSize(struct _GValue,24, 11842, 9)
-CheckMemberSize(struct _GValue,data,16,9,42003)
-CheckOffset(struct _GValue,data,8,9,42003)
+CheckTypeSize(struct _GValue,24, 11842, 9);
+CheckMemberSize(struct _GValue,data,16,9,42003);
+CheckOffset(struct _GValue,data,8,9,42003);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GValue,24, 11842, 10)
-CheckMemberSize(struct _GValue,data,16,10,42003)
-CheckOffset(struct _GValue,data,8,10,42003)
+CheckTypeSize(struct _GValue,24, 11842, 10);
+CheckMemberSize(struct _GValue,data,16,10,42003);
+CheckOffset(struct _GValue,data,8,10,42003);
 #elif __s390x__
-CheckTypeSize(struct _GValue,24, 11842, 12)
-CheckMemberSize(struct _GValue,data,16,12,42003)
-CheckOffset(struct _GValue,data,8,12,42003)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11842,0);
-Msg("Find size of _GValue (11842)\n");
+CheckTypeSize(struct _GValue,24, 11842, 12);
+CheckMemberSize(struct _GValue,data,16,12,42003);
+CheckOffset(struct _GValue,data,8,12,42003);
+#elif 1
+CheckTypeSize(struct _GValue,0, 11842, 1);
+Msg("Missing member data for _GValue on All\n");
+CheckOffset(struct _GValue,g_type,0,1,41993);
+CheckOffset(struct _GValue,data,0,1,42003);
 #endif
 
 #if __i386__
-CheckTypeSize(gfloat,4, 11843, 2)
+CheckTypeSize(gfloat,4, 11843, 2);
 #elif __x86_64__
-CheckTypeSize(gfloat,4, 11843, 11)
+CheckTypeSize(gfloat,4, 11843, 11);
 #elif __ia64__
-CheckTypeSize(gfloat,4, 11843, 3)
+CheckTypeSize(gfloat,4, 11843, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(gfloat,4, 11843, 6)
+CheckTypeSize(gfloat,4, 11843, 6);
 #elif __powerpc64__
-CheckTypeSize(gfloat,4, 11843, 9)
+CheckTypeSize(gfloat,4, 11843, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(gfloat,4, 11843, 10)
+CheckTypeSize(gfloat,4, 11843, 10);
 #elif __s390x__
-CheckTypeSize(gfloat,4, 11843, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11843,0);
-Msg("Find size of gfloat (11843)\n");
+CheckTypeSize(gfloat,4, 11843, 12);
+#elif 1
+CheckTypeSize(gfloat,0, 11843, 1);
 #endif
 
 #if __i386__
@@ -1241,50 +1241,46 @@ Msg("Find size of gfloat (11843)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11844,0);
-Msg("Find size of anon-glib-2.0/glib-object.h-12 (11844)\n");
+#elif 1
 #endif
 
 #if 1
 #endif
 
 #if __i386__
-CheckTypeSize(GValue,20, 11846, 2)
+CheckTypeSize(GValue,20, 11846, 2);
 #elif __x86_64__
-CheckTypeSize(GValue,24, 11846, 11)
+CheckTypeSize(GValue,24, 11846, 11);
 #elif __ia64__
-CheckTypeSize(GValue,24, 11846, 3)
+CheckTypeSize(GValue,24, 11846, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GValue,24, 11846, 6)
+CheckTypeSize(GValue,24, 11846, 6);
 #elif __powerpc64__
-CheckTypeSize(GValue,24, 11846, 9)
+CheckTypeSize(GValue,24, 11846, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GValue,24, 11846, 10)
+CheckTypeSize(GValue,24, 11846, 10);
 #elif __s390x__
-CheckTypeSize(GValue,24, 11846, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11846,0);
-Msg("Find size of GValue (11846)\n");
+CheckTypeSize(GValue,24, 11846, 12);
+#elif 1
+CheckTypeSize(GValue,0, 11846, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(const GValue,20, 11847, 2)
+CheckTypeSize(const GValue,20, 11847, 2);
 #elif __x86_64__
-CheckTypeSize(const GValue,24, 11847, 11)
+CheckTypeSize(const GValue,24, 11847, 11);
 #elif __ia64__
-CheckTypeSize(const GValue,24, 11847, 3)
+CheckTypeSize(const GValue,24, 11847, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(const GValue,24, 11847, 6)
+CheckTypeSize(const GValue,24, 11847, 6);
 #elif __powerpc64__
-CheckTypeSize(const GValue,24, 11847, 9)
+CheckTypeSize(const GValue,24, 11847, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(const GValue,24, 11847, 10)
+CheckTypeSize(const GValue,24, 11847, 10);
 #elif __s390x__
-CheckTypeSize(const GValue,24, 11847, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11847,0);
-Msg("Find size of const GValue (11847)\n");
+CheckTypeSize(const GValue,24, 11847, 12);
+#elif 1
+CheckTypeSize(const GValue,0, 11847, 1);
 #endif
 
 #if __i386__
@@ -1294,173 +1290,180 @@ Msg("Find size of const GValue (11847)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11848,0);
-Msg("Find size of const GValue * (11848)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(GValue *,4, 11849, 2)
+CheckTypeSize(GValue *,4, 11849, 2);
 #elif __x86_64__
-CheckTypeSize(GValue *,8, 11849, 11)
+CheckTypeSize(GValue *,8, 11849, 11);
 #elif __ia64__
-CheckTypeSize(GValue *,8, 11849, 3)
+CheckTypeSize(GValue *,8, 11849, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GValue *,4, 11849, 6)
+CheckTypeSize(GValue *,4, 11849, 6);
 #elif __powerpc64__
-CheckTypeSize(GValue *,8, 11849, 9)
+CheckTypeSize(GValue *,8, 11849, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GValue *,4, 11849, 10)
+CheckTypeSize(GValue *,4, 11849, 10);
 #elif __s390x__
-CheckTypeSize(GValue *,8, 11849, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11849,0);
-Msg("Find size of GValue * (11849)\n");
+CheckTypeSize(GValue *,8, 11849, 12);
+#elif 1
+CheckTypeSize(GValue *,0, 11849, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GParamSpec,40, 11850, 2)
-CheckMemberSize(struct _GParamSpec,name,4,2,42005)
-CheckOffset(struct _GParamSpec,name,4,2,42005)
-CheckMemberSize(struct _GParamSpec,flags,4,2,42012)
-CheckOffset(struct _GParamSpec,flags,8,2,42012)
-CheckMemberSize(struct _GParamSpec,value_type,4,2,42013)
-CheckOffset(struct _GParamSpec,value_type,12,2,42013)
-CheckMemberSize(struct _GParamSpec,owner_type,4,2,42014)
-CheckOffset(struct _GParamSpec,owner_type,16,2,42014)
-CheckMemberSize(struct _GParamSpec,_nick,4,2,42015)
-CheckOffset(struct _GParamSpec,_nick,20,2,42015)
-CheckMemberSize(struct _GParamSpec,_blurb,4,2,42016)
-CheckOffset(struct _GParamSpec,_blurb,24,2,42016)
-CheckMemberSize(struct _GParamSpec,qdata,4,2,42017)
-CheckOffset(struct _GParamSpec,qdata,28,2,42017)
-CheckMemberSize(struct _GParamSpec,ref_count,4,2,42018)
-CheckOffset(struct _GParamSpec,ref_count,32,2,42018)
-CheckMemberSize(struct _GParamSpec,param_id,4,2,42019)
-CheckOffset(struct _GParamSpec,param_id,36,2,42019)
+CheckTypeSize(struct _GParamSpec,40, 11850, 2);
+CheckMemberSize(struct _GParamSpec,name,4,2,42005);
+CheckOffset(struct _GParamSpec,name,4,2,42005);
+CheckMemberSize(struct _GParamSpec,flags,4,2,42012);
+CheckOffset(struct _GParamSpec,flags,8,2,42012);
+CheckMemberSize(struct _GParamSpec,value_type,4,2,42013);
+CheckOffset(struct _GParamSpec,value_type,12,2,42013);
+CheckMemberSize(struct _GParamSpec,owner_type,4,2,42014);
+CheckOffset(struct _GParamSpec,owner_type,16,2,42014);
+CheckMemberSize(struct _GParamSpec,_nick,4,2,42015);
+CheckOffset(struct _GParamSpec,_nick,20,2,42015);
+CheckMemberSize(struct _GParamSpec,_blurb,4,2,42016);
+CheckOffset(struct _GParamSpec,_blurb,24,2,42016);
+CheckMemberSize(struct _GParamSpec,qdata,4,2,42017);
+CheckOffset(struct _GParamSpec,qdata,28,2,42017);
+CheckMemberSize(struct _GParamSpec,ref_count,4,2,42018);
+CheckOffset(struct _GParamSpec,ref_count,32,2,42018);
+CheckMemberSize(struct _GParamSpec,param_id,4,2,42019);
+CheckOffset(struct _GParamSpec,param_id,36,2,42019);
 #elif __x86_64__
-CheckTypeSize(struct _GParamSpec,72, 11850, 11)
-CheckMemberSize(struct _GParamSpec,name,8,11,42005)
-CheckOffset(struct _GParamSpec,name,8,11,42005)
-CheckMemberSize(struct _GParamSpec,flags,4,11,42012)
-CheckOffset(struct _GParamSpec,flags,16,11,42012)
-CheckMemberSize(struct _GParamSpec,value_type,8,11,42013)
-CheckOffset(struct _GParamSpec,value_type,24,11,42013)
-CheckMemberSize(struct _GParamSpec,owner_type,8,11,42014)
-CheckOffset(struct _GParamSpec,owner_type,32,11,42014)
-CheckMemberSize(struct _GParamSpec,_nick,8,11,42015)
-CheckOffset(struct _GParamSpec,_nick,40,11,42015)
-CheckMemberSize(struct _GParamSpec,_blurb,8,11,42016)
-CheckOffset(struct _GParamSpec,_blurb,48,11,42016)
-CheckMemberSize(struct _GParamSpec,qdata,8,11,42017)
-CheckOffset(struct _GParamSpec,qdata,56,11,42017)
-CheckMemberSize(struct _GParamSpec,ref_count,4,11,42018)
-CheckOffset(struct _GParamSpec,ref_count,64,11,42018)
-CheckMemberSize(struct _GParamSpec,param_id,4,11,42019)
-CheckOffset(struct _GParamSpec,param_id,68,11,42019)
+CheckTypeSize(struct _GParamSpec,72, 11850, 11);
+CheckMemberSize(struct _GParamSpec,name,8,11,42005);
+CheckOffset(struct _GParamSpec,name,8,11,42005);
+CheckMemberSize(struct _GParamSpec,flags,4,11,42012);
+CheckOffset(struct _GParamSpec,flags,16,11,42012);
+CheckMemberSize(struct _GParamSpec,value_type,8,11,42013);
+CheckOffset(struct _GParamSpec,value_type,24,11,42013);
+CheckMemberSize(struct _GParamSpec,owner_type,8,11,42014);
+CheckOffset(struct _GParamSpec,owner_type,32,11,42014);
+CheckMemberSize(struct _GParamSpec,_nick,8,11,42015);
+CheckOffset(struct _GParamSpec,_nick,40,11,42015);
+CheckMemberSize(struct _GParamSpec,_blurb,8,11,42016);
+CheckOffset(struct _GParamSpec,_blurb,48,11,42016);
+CheckMemberSize(struct _GParamSpec,qdata,8,11,42017);
+CheckOffset(struct _GParamSpec,qdata,56,11,42017);
+CheckMemberSize(struct _GParamSpec,ref_count,4,11,42018);
+CheckOffset(struct _GParamSpec,ref_count,64,11,42018);
+CheckMemberSize(struct _GParamSpec,param_id,4,11,42019);
+CheckOffset(struct _GParamSpec,param_id,68,11,42019);
 #elif __ia64__
-CheckTypeSize(struct _GParamSpec,72, 11850, 3)
-CheckMemberSize(struct _GParamSpec,name,8,3,42005)
-CheckOffset(struct _GParamSpec,name,8,3,42005)
-CheckMemberSize(struct _GParamSpec,flags,4,3,42012)
-CheckOffset(struct _GParamSpec,flags,16,3,42012)
-CheckMemberSize(struct _GParamSpec,value_type,8,3,42013)
-CheckOffset(struct _GParamSpec,value_type,24,3,42013)
-CheckMemberSize(struct _GParamSpec,owner_type,8,3,42014)
-CheckOffset(struct _GParamSpec,owner_type,32,3,42014)
-CheckMemberSize(struct _GParamSpec,_nick,8,3,42015)
-CheckOffset(struct _GParamSpec,_nick,40,3,42015)
-CheckMemberSize(struct _GParamSpec,_blurb,8,3,42016)
-CheckOffset(struct _GParamSpec,_blurb,48,3,42016)
-CheckMemberSize(struct _GParamSpec,qdata,8,3,42017)
-CheckOffset(struct _GParamSpec,qdata,56,3,42017)
-CheckMemberSize(struct _GParamSpec,ref_count,4,3,42018)
-CheckOffset(struct _GParamSpec,ref_count,64,3,42018)
-CheckMemberSize(struct _GParamSpec,param_id,4,3,42019)
-CheckOffset(struct _GParamSpec,param_id,68,3,42019)
+CheckTypeSize(struct _GParamSpec,72, 11850, 3);
+CheckMemberSize(struct _GParamSpec,name,8,3,42005);
+CheckOffset(struct _GParamSpec,name,8,3,42005);
+CheckMemberSize(struct _GParamSpec,flags,4,3,42012);
+CheckOffset(struct _GParamSpec,flags,16,3,42012);
+CheckMemberSize(struct _GParamSpec,value_type,8,3,42013);
+CheckOffset(struct _GParamSpec,value_type,24,3,42013);
+CheckMemberSize(struct _GParamSpec,owner_type,8,3,42014);
+CheckOffset(struct _GParamSpec,owner_type,32,3,42014);
+CheckMemberSize(struct _GParamSpec,_nick,8,3,42015);
+CheckOffset(struct _GParamSpec,_nick,40,3,42015);
+CheckMemberSize(struct _GParamSpec,_blurb,8,3,42016);
+CheckOffset(struct _GParamSpec,_blurb,48,3,42016);
+CheckMemberSize(struct _GParamSpec,qdata,8,3,42017);
+CheckOffset(struct _GParamSpec,qdata,56,3,42017);
+CheckMemberSize(struct _GParamSpec,ref_count,4,3,42018);
+CheckOffset(struct _GParamSpec,ref_count,64,3,42018);
+CheckMemberSize(struct _GParamSpec,param_id,4,3,42019);
+CheckOffset(struct _GParamSpec,param_id,68,3,42019);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GParamSpec,40, 11850, 6)
-CheckMemberSize(struct _GParamSpec,name,4,6,42005)
-CheckOffset(struct _GParamSpec,name,4,6,42005)
-CheckMemberSize(struct _GParamSpec,flags,4,6,42012)
-CheckOffset(struct _GParamSpec,flags,8,6,42012)
-CheckMemberSize(struct _GParamSpec,value_type,4,6,42013)
-CheckOffset(struct _GParamSpec,value_type,12,6,42013)
-CheckMemberSize(struct _GParamSpec,owner_type,4,6,42014)
-CheckOffset(struct _GParamSpec,owner_type,16,6,42014)
-CheckMemberSize(struct _GParamSpec,_nick,4,6,42015)
-CheckOffset(struct _GParamSpec,_nick,20,6,42015)
-CheckMemberSize(struct _GParamSpec,_blurb,4,6,42016)
-CheckOffset(struct _GParamSpec,_blurb,24,6,42016)
-CheckMemberSize(struct _GParamSpec,qdata,4,6,42017)
-CheckOffset(struct _GParamSpec,qdata,28,6,42017)
-CheckMemberSize(struct _GParamSpec,ref_count,4,6,42018)
-CheckOffset(struct _GParamSpec,ref_count,32,6,42018)
-CheckMemberSize(struct _GParamSpec,param_id,4,6,42019)
-CheckOffset(struct _GParamSpec,param_id,36,6,42019)
+CheckTypeSize(struct _GParamSpec,40, 11850, 6);
+CheckMemberSize(struct _GParamSpec,name,4,6,42005);
+CheckOffset(struct _GParamSpec,name,4,6,42005);
+CheckMemberSize(struct _GParamSpec,flags,4,6,42012);
+CheckOffset(struct _GParamSpec,flags,8,6,42012);
+CheckMemberSize(struct _GParamSpec,value_type,4,6,42013);
+CheckOffset(struct _GParamSpec,value_type,12,6,42013);
+CheckMemberSize(struct _GParamSpec,owner_type,4,6,42014);
+CheckOffset(struct _GParamSpec,owner_type,16,6,42014);
+CheckMemberSize(struct _GParamSpec,_nick,4,6,42015);
+CheckOffset(struct _GParamSpec,_nick,20,6,42015);
+CheckMemberSize(struct _GParamSpec,_blurb,4,6,42016);
+CheckOffset(struct _GParamSpec,_blurb,24,6,42016);
+CheckMemberSize(struct _GParamSpec,qdata,4,6,42017);
+CheckOffset(struct _GParamSpec,qdata,28,6,42017);
+CheckMemberSize(struct _GParamSpec,ref_count,4,6,42018);
+CheckOffset(struct _GParamSpec,ref_count,32,6,42018);
+CheckMemberSize(struct _GParamSpec,param_id,4,6,42019);
+CheckOffset(struct _GParamSpec,param_id,36,6,42019);
 #elif __powerpc64__
-CheckTypeSize(struct _GParamSpec,72, 11850, 9)
-CheckMemberSize(struct _GParamSpec,name,8,9,42005)
-CheckOffset(struct _GParamSpec,name,8,9,42005)
-CheckMemberSize(struct _GParamSpec,flags,4,9,42012)
-CheckOffset(struct _GParamSpec,flags,16,9,42012)
-CheckMemberSize(struct _GParamSpec,value_type,8,9,42013)
-CheckOffset(struct _GParamSpec,value_type,24,9,42013)
-CheckMemberSize(struct _GParamSpec,owner_type,8,9,42014)
-CheckOffset(struct _GParamSpec,owner_type,32,9,42014)
-CheckMemberSize(struct _GParamSpec,_nick,8,9,42015)
-CheckOffset(struct _GParamSpec,_nick,40,9,42015)
-CheckMemberSize(struct _GParamSpec,_blurb,8,9,42016)
-CheckOffset(struct _GParamSpec,_blurb,48,9,42016)
-CheckMemberSize(struct _GParamSpec,qdata,8,9,42017)
-CheckOffset(struct _GParamSpec,qdata,56,9,42017)
-CheckMemberSize(struct _GParamSpec,ref_count,4,9,42018)
-CheckOffset(struct _GParamSpec,ref_count,64,9,42018)
-CheckMemberSize(struct _GParamSpec,param_id,4,9,42019)
-CheckOffset(struct _GParamSpec,param_id,68,9,42019)
+CheckTypeSize(struct _GParamSpec,72, 11850, 9);
+CheckMemberSize(struct _GParamSpec,name,8,9,42005);
+CheckOffset(struct _GParamSpec,name,8,9,42005);
+CheckMemberSize(struct _GParamSpec,flags,4,9,42012);
+CheckOffset(struct _GParamSpec,flags,16,9,42012);
+CheckMemberSize(struct _GParamSpec,value_type,8,9,42013);
+CheckOffset(struct _GParamSpec,value_type,24,9,42013);
+CheckMemberSize(struct _GParamSpec,owner_type,8,9,42014);
+CheckOffset(struct _GParamSpec,owner_type,32,9,42014);
+CheckMemberSize(struct _GParamSpec,_nick,8,9,42015);
+CheckOffset(struct _GParamSpec,_nick,40,9,42015);
+CheckMemberSize(struct _GParamSpec,_blurb,8,9,42016);
+CheckOffset(struct _GParamSpec,_blurb,48,9,42016);
+CheckMemberSize(struct _GParamSpec,qdata,8,9,42017);
+CheckOffset(struct _GParamSpec,qdata,56,9,42017);
+CheckMemberSize(struct _GParamSpec,ref_count,4,9,42018);
+CheckOffset(struct _GParamSpec,ref_count,64,9,42018);
+CheckMemberSize(struct _GParamSpec,param_id,4,9,42019);
+CheckOffset(struct _GParamSpec,param_id,68,9,42019);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GParamSpec,40, 11850, 10)
-CheckMemberSize(struct _GParamSpec,name,4,10,42005)
-CheckOffset(struct _GParamSpec,name,4,10,42005)
-CheckMemberSize(struct _GParamSpec,flags,4,10,42012)
-CheckOffset(struct _GParamSpec,flags,8,10,42012)
-CheckMemberSize(struct _GParamSpec,value_type,4,10,42013)
-CheckOffset(struct _GParamSpec,value_type,12,10,42013)
-CheckMemberSize(struct _GParamSpec,owner_type,4,10,42014)
-CheckOffset(struct _GParamSpec,owner_type,16,10,42014)
-CheckMemberSize(struct _GParamSpec,_nick,4,10,42015)
-CheckOffset(struct _GParamSpec,_nick,20,10,42015)
-CheckMemberSize(struct _GParamSpec,_blurb,4,10,42016)
-CheckOffset(struct _GParamSpec,_blurb,24,10,42016)
-CheckMemberSize(struct _GParamSpec,qdata,4,10,42017)
-CheckOffset(struct _GParamSpec,qdata,28,10,42017)
-CheckMemberSize(struct _GParamSpec,ref_count,4,10,42018)
-CheckOffset(struct _GParamSpec,ref_count,32,10,42018)
-CheckMemberSize(struct _GParamSpec,param_id,4,10,42019)
-CheckOffset(struct _GParamSpec,param_id,36,10,42019)
+CheckTypeSize(struct _GParamSpec,40, 11850, 10);
+CheckMemberSize(struct _GParamSpec,name,4,10,42005);
+CheckOffset(struct _GParamSpec,name,4,10,42005);
+CheckMemberSize(struct _GParamSpec,flags,4,10,42012);
+CheckOffset(struct _GParamSpec,flags,8,10,42012);
+CheckMemberSize(struct _GParamSpec,value_type,4,10,42013);
+CheckOffset(struct _GParamSpec,value_type,12,10,42013);
+CheckMemberSize(struct _GParamSpec,owner_type,4,10,42014);
+CheckOffset(struct _GParamSpec,owner_type,16,10,42014);
+CheckMemberSize(struct _GParamSpec,_nick,4,10,42015);
+CheckOffset(struct _GParamSpec,_nick,20,10,42015);
+CheckMemberSize(struct _GParamSpec,_blurb,4,10,42016);
+CheckOffset(struct _GParamSpec,_blurb,24,10,42016);
+CheckMemberSize(struct _GParamSpec,qdata,4,10,42017);
+CheckOffset(struct _GParamSpec,qdata,28,10,42017);
+CheckMemberSize(struct _GParamSpec,ref_count,4,10,42018);
+CheckOffset(struct _GParamSpec,ref_count,32,10,42018);
+CheckMemberSize(struct _GParamSpec,param_id,4,10,42019);
+CheckOffset(struct _GParamSpec,param_id,36,10,42019);
 #elif __s390x__
-CheckTypeSize(struct _GParamSpec,72, 11850, 12)
-CheckMemberSize(struct _GParamSpec,name,8,12,42005)
-CheckOffset(struct _GParamSpec,name,8,12,42005)
-CheckMemberSize(struct _GParamSpec,flags,4,12,42012)
-CheckOffset(struct _GParamSpec,flags,16,12,42012)
-CheckMemberSize(struct _GParamSpec,value_type,8,12,42013)
-CheckOffset(struct _GParamSpec,value_type,24,12,42013)
-CheckMemberSize(struct _GParamSpec,owner_type,8,12,42014)
-CheckOffset(struct _GParamSpec,owner_type,32,12,42014)
-CheckMemberSize(struct _GParamSpec,_nick,8,12,42015)
-CheckOffset(struct _GParamSpec,_nick,40,12,42015)
-CheckMemberSize(struct _GParamSpec,_blurb,8,12,42016)
-CheckOffset(struct _GParamSpec,_blurb,48,12,42016)
-CheckMemberSize(struct _GParamSpec,qdata,8,12,42017)
-CheckOffset(struct _GParamSpec,qdata,56,12,42017)
-CheckMemberSize(struct _GParamSpec,ref_count,4,12,42018)
-CheckOffset(struct _GParamSpec,ref_count,64,12,42018)
-CheckMemberSize(struct _GParamSpec,param_id,4,12,42019)
-CheckOffset(struct _GParamSpec,param_id,68,12,42019)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11850,0);
-Msg("Find size of _GParamSpec (11850)\n");
+CheckTypeSize(struct _GParamSpec,72, 11850, 12);
+CheckMemberSize(struct _GParamSpec,name,8,12,42005);
+CheckOffset(struct _GParamSpec,name,8,12,42005);
+CheckMemberSize(struct _GParamSpec,flags,4,12,42012);
+CheckOffset(struct _GParamSpec,flags,16,12,42012);
+CheckMemberSize(struct _GParamSpec,value_type,8,12,42013);
+CheckOffset(struct _GParamSpec,value_type,24,12,42013);
+CheckMemberSize(struct _GParamSpec,owner_type,8,12,42014);
+CheckOffset(struct _GParamSpec,owner_type,32,12,42014);
+CheckMemberSize(struct _GParamSpec,_nick,8,12,42015);
+CheckOffset(struct _GParamSpec,_nick,40,12,42015);
+CheckMemberSize(struct _GParamSpec,_blurb,8,12,42016);
+CheckOffset(struct _GParamSpec,_blurb,48,12,42016);
+CheckMemberSize(struct _GParamSpec,qdata,8,12,42017);
+CheckOffset(struct _GParamSpec,qdata,56,12,42017);
+CheckMemberSize(struct _GParamSpec,ref_count,4,12,42018);
+CheckOffset(struct _GParamSpec,ref_count,64,12,42018);
+CheckMemberSize(struct _GParamSpec,param_id,4,12,42019);
+CheckOffset(struct _GParamSpec,param_id,68,12,42019);
+#elif 1
+CheckTypeSize(struct _GParamSpec,0, 11850, 1);
+Msg("Missing member data for _GParamSpec on All\n");
+CheckOffset(struct _GParamSpec,g_type_instance,0,1,42004);
+CheckOffset(struct _GParamSpec,name,0,1,42005);
+CheckOffset(struct _GParamSpec,flags,0,1,42012);
+CheckOffset(struct _GParamSpec,value_type,0,1,42013);
+CheckOffset(struct _GParamSpec,owner_type,0,1,42014);
+CheckOffset(struct _GParamSpec,_nick,0,1,42015);
+CheckOffset(struct _GParamSpec,_blurb,0,1,42016);
+CheckOffset(struct _GParamSpec,qdata,0,1,42017);
+CheckOffset(struct _GParamSpec,ref_count,0,1,42018);
+CheckOffset(struct _GParamSpec,param_id,0,1,42019);
 #endif
 
 #if __i386__
@@ -1512,306 +1515,293 @@ CheckEnum("G_PARAM_CONSTRUCT",G_PARAM_CONSTRUCT,4,42008);
 CheckEnum("G_PARAM_CONSTRUCT_ONLY",G_PARAM_CONSTRUCT_ONLY,8,42009);
 CheckEnum("G_PARAM_LAX_VALIDATION",G_PARAM_LAX_VALIDATION,16,42010);
 CheckEnum("G_PARAM_PRIVATE",G_PARAM_PRIVATE,32,42011);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11851,0);
-Msg("Find size of anon-glib-2.0/glib-object.h-22 (11851)\n");
+#elif 1
+CheckEnum("G_PARAM_READABLE",G_PARAM_READABLE,1,42006);
+CheckEnum("G_PARAM_WRITABLE",G_PARAM_WRITABLE,2,42007);
+CheckEnum("G_PARAM_CONSTRUCT",G_PARAM_CONSTRUCT,4,42008);
+CheckEnum("G_PARAM_CONSTRUCT_ONLY",G_PARAM_CONSTRUCT_ONLY,8,42009);
+CheckEnum("G_PARAM_LAX_VALIDATION",G_PARAM_LAX_VALIDATION,16,42010);
+CheckEnum("G_PARAM_PRIVATE",G_PARAM_PRIVATE,32,42011);
 #endif
 
 #if __i386__
-CheckTypeSize(GParamFlags,4, 11852, 2)
+CheckTypeSize(GParamFlags,4, 11852, 2);
 #elif __x86_64__
-CheckTypeSize(GParamFlags,4, 11852, 11)
+CheckTypeSize(GParamFlags,4, 11852, 11);
 #elif __ia64__
-CheckTypeSize(GParamFlags,4, 11852, 3)
+CheckTypeSize(GParamFlags,4, 11852, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamFlags,4, 11852, 6)
+CheckTypeSize(GParamFlags,4, 11852, 6);
 #elif __powerpc64__
-CheckTypeSize(GParamFlags,4, 11852, 9)
+CheckTypeSize(GParamFlags,4, 11852, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GParamFlags,4, 11852, 10)
+CheckTypeSize(GParamFlags,4, 11852, 10);
 #elif __s390x__
-CheckTypeSize(GParamFlags,4, 11852, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11852,0);
-Msg("Find size of GParamFlags (11852)\n");
+CheckTypeSize(GParamFlags,4, 11852, 12);
+#elif 1
+CheckTypeSize(GParamFlags,0, 11852, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GParamSpec,40, 11853, 2)
+CheckTypeSize(GParamSpec,40, 11853, 2);
 #elif __x86_64__
-CheckTypeSize(GParamSpec,72, 11853, 11)
+CheckTypeSize(GParamSpec,72, 11853, 11);
 #elif __ia64__
-CheckTypeSize(GParamSpec,72, 11853, 3)
+CheckTypeSize(GParamSpec,72, 11853, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpec,40, 11853, 6)
+CheckTypeSize(GParamSpec,40, 11853, 6);
 #elif __powerpc64__
-CheckTypeSize(GParamSpec,72, 11853, 9)
+CheckTypeSize(GParamSpec,72, 11853, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpec,40, 11853, 10)
+CheckTypeSize(GParamSpec,40, 11853, 10);
 #elif __s390x__
-CheckTypeSize(GParamSpec,72, 11853, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11853,0);
-Msg("Find size of GParamSpec (11853)\n");
+CheckTypeSize(GParamSpec,72, 11853, 12);
+#elif 1
+CheckTypeSize(GParamSpec,0, 11853, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GParamSpec *,4, 11854, 2)
+CheckTypeSize(GParamSpec *,4, 11854, 2);
 #elif __x86_64__
-CheckTypeSize(GParamSpec *,8, 11854, 11)
+CheckTypeSize(GParamSpec *,8, 11854, 11);
 #elif __ia64__
-CheckTypeSize(GParamSpec *,8, 11854, 3)
+CheckTypeSize(GParamSpec *,8, 11854, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpec *,4, 11854, 6)
+CheckTypeSize(GParamSpec *,4, 11854, 6);
 #elif __powerpc64__
-CheckTypeSize(GParamSpec *,8, 11854, 9)
+CheckTypeSize(GParamSpec *,8, 11854, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpec *,4, 11854, 10)
+CheckTypeSize(GParamSpec *,4, 11854, 10);
 #elif __s390x__
-CheckTypeSize(GParamSpec *,8, 11854, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11854,0);
-Msg("Find size of GParamSpec * (11854)\n");
+CheckTypeSize(GParamSpec *,8, 11854, 12);
+#elif 1
+CheckTypeSize(GParamSpec *,0, 11854, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GObjectClass,68, 11855, 2)
-CheckMemberSize(struct _GObjectClass,construct_properties,4,2,42021)
-CheckOffset(struct _GObjectClass,construct_properties,4,2,42021)
-CheckMemberSize(struct _GObjectClass,constructor,4,2,42027)
-CheckOffset(struct _GObjectClass,constructor,8,2,42027)
-CheckMemberSize(struct _GObjectClass,set_property,4,2,42032)
-CheckOffset(struct _GObjectClass,set_property,12,2,42032)
-CheckMemberSize(struct _GObjectClass,get_property,4,2,42037)
-CheckOffset(struct _GObjectClass,get_property,16,2,42037)
-CheckMemberSize(struct _GObjectClass,dispose,4,2,42039)
-CheckOffset(struct _GObjectClass,dispose,20,2,42039)
-CheckMemberSize(struct _GObjectClass,finalize,4,2,42040)
-CheckOffset(struct _GObjectClass,finalize,24,2,42040)
-CheckMemberSize(struct _GObjectClass,dispatch_properties_changed,4,2,42044)
-CheckOffset(struct _GObjectClass,dispatch_properties_changed,28,2,42044)
-CheckMemberSize(struct _GObjectClass,notify,4,2,42047)
-CheckOffset(struct _GObjectClass,notify,32,2,42047)
-CheckMemberSize(struct _GObjectClass,pdummy,32,2,42048)
-CheckOffset(struct _GObjectClass,pdummy,36,2,42048)
+CheckTypeSize(struct _GObjectClass,68, 11855, 2);
+CheckMemberSize(struct _GObjectClass,construct_properties,4,2,42021);
+CheckOffset(struct _GObjectClass,construct_properties,4,2,42021);
+CheckMemberSize(struct _GObjectClass,constructor,4,2,42027);
+CheckOffset(struct _GObjectClass,constructor,8,2,42027);
+CheckMemberSize(struct _GObjectClass,set_property,4,2,42032);
+CheckOffset(struct _GObjectClass,set_property,12,2,42032);
+CheckMemberSize(struct _GObjectClass,get_property,4,2,42037);
+CheckOffset(struct _GObjectClass,get_property,16,2,42037);
+CheckMemberSize(struct _GObjectClass,dispose,4,2,42039);
+CheckOffset(struct _GObjectClass,dispose,20,2,42039);
+CheckMemberSize(struct _GObjectClass,finalize,4,2,42040);
+CheckOffset(struct _GObjectClass,finalize,24,2,42040);
+CheckMemberSize(struct _GObjectClass,dispatch_properties_changed,4,2,42044);
+CheckOffset(struct _GObjectClass,dispatch_properties_changed,28,2,42044);
+CheckMemberSize(struct _GObjectClass,notify,4,2,42047);
+CheckOffset(struct _GObjectClass,notify,32,2,42047);
+CheckMemberSize(struct _GObjectClass,pdummy,32,2,42048);
+CheckOffset(struct _GObjectClass,pdummy,36,2,42048);
 #elif __x86_64__
-CheckTypeSize(struct _GObjectClass,136, 11855, 11)
-CheckMemberSize(struct _GObjectClass,construct_properties,8,11,42021)
-CheckOffset(struct _GObjectClass,construct_properties,8,11,42021)
-CheckMemberSize(struct _GObjectClass,constructor,8,11,42027)
-CheckOffset(struct _GObjectClass,constructor,16,11,42027)
-CheckMemberSize(struct _GObjectClass,set_property,8,11,42032)
-CheckOffset(struct _GObjectClass,set_property,24,11,42032)
-CheckMemberSize(struct _GObjectClass,get_property,8,11,42037)
-CheckOffset(struct _GObjectClass,get_property,32,11,42037)
-CheckMemberSize(struct _GObjectClass,dispose,8,11,42039)
-CheckOffset(struct _GObjectClass,dispose,40,11,42039)
-CheckMemberSize(struct _GObjectClass,finalize,8,11,42040)
-CheckOffset(struct _GObjectClass,finalize,48,11,42040)
-CheckMemberSize(struct _GObjectClass,dispatch_properties_changed,8,11,42044)
-CheckOffset(struct _GObjectClass,dispatch_properties_changed,56,11,42044)
-CheckMemberSize(struct _GObjectClass,notify,8,11,42047)
-CheckOffset(struct _GObjectClass,notify,64,11,42047)
-CheckMemberSize(struct _GObjectClass,pdummy,64,11,42048)
-CheckOffset(struct _GObjectClass,pdummy,72,11,42048)
+CheckTypeSize(struct _GObjectClass,136, 11855, 11);
+CheckMemberSize(struct _GObjectClass,construct_properties,8,11,42021);
+CheckOffset(struct _GObjectClass,construct_properties,8,11,42021);
+CheckMemberSize(struct _GObjectClass,constructor,8,11,42027);
+CheckOffset(struct _GObjectClass,constructor,16,11,42027);
+CheckMemberSize(struct _GObjectClass,set_property,8,11,42032);
+CheckOffset(struct _GObjectClass,set_property,24,11,42032);
+CheckMemberSize(struct _GObjectClass,get_property,8,11,42037);
+CheckOffset(struct _GObjectClass,get_property,32,11,42037);
+CheckMemberSize(struct _GObjectClass,dispose,8,11,42039);
+CheckOffset(struct _GObjectClass,dispose,40,11,42039);
+CheckMemberSize(struct _GObjectClass,finalize,8,11,42040);
+CheckOffset(struct _GObjectClass,finalize,48,11,42040);
+CheckMemberSize(struct _GObjectClass,dispatch_properties_changed,8,11,42044);
+CheckOffset(struct _GObjectClass,dispatch_properties_changed,56,11,42044);
+CheckMemberSize(struct _GObjectClass,notify,8,11,42047);
+CheckOffset(struct _GObjectClass,notify,64,11,42047);
+CheckMemberSize(struct _GObjectClass,pdummy,64,11,42048);
+CheckOffset(struct _GObjectClass,pdummy,72,11,42048);
 #elif __ia64__
-CheckTypeSize(struct _GObjectClass,136, 11855, 3)
-CheckMemberSize(struct _GObjectClass,construct_properties,8,3,42021)
-CheckOffset(struct _GObjectClass,construct_properties,8,3,42021)
-CheckMemberSize(struct _GObjectClass,constructor,8,3,42027)
-CheckOffset(struct _GObjectClass,constructor,16,3,42027)
-CheckMemberSize(struct _GObjectClass,set_property,8,3,42032)
-CheckOffset(struct _GObjectClass,set_property,24,3,42032)
-CheckMemberSize(struct _GObjectClass,get_property,8,3,42037)
-CheckOffset(struct _GObjectClass,get_property,32,3,42037)
-CheckMemberSize(struct _GObjectClass,dispose,8,3,42039)
-CheckOffset(struct _GObjectClass,dispose,40,3,42039)
-CheckMemberSize(struct _GObjectClass,finalize,8,3,42040)
-CheckOffset(struct _GObjectClass,finalize,48,3,42040)
-CheckMemberSize(struct _GObjectClass,dispatch_properties_changed,8,3,42044)
-CheckOffset(struct _GObjectClass,dispatch_properties_changed,56,3,42044)
-CheckMemberSize(struct _GObjectClass,notify,8,3,42047)
-CheckOffset(struct _GObjectClass,notify,64,3,42047)
-CheckMemberSize(struct _GObjectClass,pdummy,64,3,42048)
-CheckOffset(struct _GObjectClass,pdummy,72,3,42048)
+CheckTypeSize(struct _GObjectClass,136, 11855, 3);
+CheckMemberSize(struct _GObjectClass,construct_properties,8,3,42021);
+CheckOffset(struct _GObjectClass,construct_properties,8,3,42021);
+CheckMemberSize(struct _GObjectClass,constructor,8,3,42027);
+CheckOffset(struct _GObjectClass,constructor,16,3,42027);
+CheckMemberSize(struct _GObjectClass,set_property,8,3,42032);
+CheckOffset(struct _GObjectClass,set_property,24,3,42032);
+CheckMemberSize(struct _GObjectClass,get_property,8,3,42037);
+CheckOffset(struct _GObjectClass,get_property,32,3,42037);
+CheckMemberSize(struct _GObjectClass,dispose,8,3,42039);
+CheckOffset(struct _GObjectClass,dispose,40,3,42039);
+CheckMemberSize(struct _GObjectClass,finalize,8,3,42040);
+CheckOffset(struct _GObjectClass,finalize,48,3,42040);
+CheckMemberSize(struct _GObjectClass,dispatch_properties_changed,8,3,42044);
+CheckOffset(struct _GObjectClass,dispatch_properties_changed,56,3,42044);
+CheckMemberSize(struct _GObjectClass,notify,8,3,42047);
+CheckOffset(struct _GObjectClass,notify,64,3,42047);
+CheckMemberSize(struct _GObjectClass,pdummy,64,3,42048);
+CheckOffset(struct _GObjectClass,pdummy,72,3,42048);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GObjectClass,68, 11855, 6)
-CheckMemberSize(struct _GObjectClass,construct_properties,4,6,42021)
-CheckOffset(struct _GObjectClass,construct_properties,4,6,42021)
-CheckMemberSize(struct _GObjectClass,constructor,4,6,42027)
-CheckOffset(struct _GObjectClass,constructor,8,6,42027)
-CheckMemberSize(struct _GObjectClass,set_property,4,6,42032)
-CheckOffset(struct _GObjectClass,set_property,12,6,42032)
-CheckMemberSize(struct _GObjectClass,get_property,4,6,42037)
-CheckOffset(struct _GObjectClass,get_property,16,6,42037)
-CheckMemberSize(struct _GObjectClass,dispose,4,6,42039)
-CheckOffset(struct _GObjectClass,dispose,20,6,42039)
-CheckMemberSize(struct _GObjectClass,finalize,4,6,42040)
-CheckOffset(struct _GObjectClass,finalize,24,6,42040)
-CheckMemberSize(struct _GObjectClass,dispatch_properties_changed,4,6,42044)
-CheckOffset(struct _GObjectClass,dispatch_properties_changed,28,6,42044)
-CheckMemberSize(struct _GObjectClass,notify,4,6,42047)
-CheckOffset(struct _GObjectClass,notify,32,6,42047)
-CheckMemberSize(struct _GObjectClass,pdummy,32,6,42048)
-CheckOffset(struct _GObjectClass,pdummy,36,6,42048)
+CheckTypeSize(struct _GObjectClass,68, 11855, 6);
+CheckMemberSize(struct _GObjectClass,construct_properties,4,6,42021);
+CheckOffset(struct _GObjectClass,construct_properties,4,6,42021);
+CheckMemberSize(struct _GObjectClass,constructor,4,6,42027);
+CheckOffset(struct _GObjectClass,constructor,8,6,42027);
+CheckMemberSize(struct _GObjectClass,set_property,4,6,42032);
+CheckOffset(struct _GObjectClass,set_property,12,6,42032);
+CheckMemberSize(struct _GObjectClass,get_property,4,6,42037);
+CheckOffset(struct _GObjectClass,get_property,16,6,42037);
+CheckMemberSize(struct _GObjectClass,dispose,4,6,42039);
+CheckOffset(struct _GObjectClass,dispose,20,6,42039);
+CheckMemberSize(struct _GObjectClass,finalize,4,6,42040);
+CheckOffset(struct _GObjectClass,finalize,24,6,42040);
+CheckMemberSize(struct _GObjectClass,dispatch_properties_changed,4,6,42044);
+CheckOffset(struct _GObjectClass,dispatch_properties_changed,28,6,42044);
+CheckMemberSize(struct _GObjectClass,notify,4,6,42047);
+CheckOffset(struct _GObjectClass,notify,32,6,42047);
+CheckMemberSize(struct _GObjectClass,pdummy,32,6,42048);
+CheckOffset(struct _GObjectClass,pdummy,36,6,42048);
 #elif __powerpc64__
-CheckTypeSize(struct _GObjectClass,136, 11855, 9)
-CheckMemberSize(struct _GObjectClass,construct_properties,8,9,42021)
-CheckOffset(struct _GObjectClass,construct_properties,8,9,42021)
-CheckMemberSize(struct _GObjectClass,constructor,8,9,42027)
-CheckOffset(struct _GObjectClass,constructor,16,9,42027)
-CheckMemberSize(struct _GObjectClass,set_property,8,9,42032)
-CheckOffset(struct _GObjectClass,set_property,24,9,42032)
-CheckMemberSize(struct _GObjectClass,get_property,8,9,42037)
-CheckOffset(struct _GObjectClass,get_property,32,9,42037)
-CheckMemberSize(struct _GObjectClass,dispose,8,9,42039)
-CheckOffset(struct _GObjectClass,dispose,40,9,42039)
-CheckMemberSize(struct _GObjectClass,finalize,8,9,42040)
-CheckOffset(struct _GObjectClass,finalize,48,9,42040)
-CheckMemberSize(struct _GObjectClass,dispatch_properties_changed,8,9,42044)
-CheckOffset(struct _GObjectClass,dispatch_properties_changed,56,9,42044)
-CheckMemberSize(struct _GObjectClass,notify,8,9,42047)
-CheckOffset(struct _GObjectClass,notify,64,9,42047)
-CheckMemberSize(struct _GObjectClass,pdummy,64,9,42048)
-CheckOffset(struct _GObjectClass,pdummy,72,9,42048)
+CheckTypeSize(struct _GObjectClass,136, 11855, 9);
+CheckMemberSize(struct _GObjectClass,construct_properties,8,9,42021);
+CheckOffset(struct _GObjectClass,construct_properties,8,9,42021);
+CheckMemberSize(struct _GObjectClass,constructor,8,9,42027);
+CheckOffset(struct _GObjectClass,constructor,16,9,42027);
+CheckMemberSize(struct _GObjectClass,set_property,8,9,42032);
+CheckOffset(struct _GObjectClass,set_property,24,9,42032);
+CheckMemberSize(struct _GObjectClass,get_property,8,9,42037);
+CheckOffset(struct _GObjectClass,get_property,32,9,42037);
+CheckMemberSize(struct _GObjectClass,dispose,8,9,42039);
+CheckOffset(struct _GObjectClass,dispose,40,9,42039);
+CheckMemberSize(struct _GObjectClass,finalize,8,9,42040);
+CheckOffset(struct _GObjectClass,finalize,48,9,42040);
+CheckMemberSize(struct _GObjectClass,dispatch_properties_changed,8,9,42044);
+CheckOffset(struct _GObjectClass,dispatch_properties_changed,56,9,42044);
+CheckMemberSize(struct _GObjectClass,notify,8,9,42047);
+CheckOffset(struct _GObjectClass,notify,64,9,42047);
+CheckMemberSize(struct _GObjectClass,pdummy,64,9,42048);
+CheckOffset(struct _GObjectClass,pdummy,72,9,42048);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GObjectClass,68, 11855, 10)
-CheckMemberSize(struct _GObjectClass,construct_properties,4,10,42021)
-CheckOffset(struct _GObjectClass,construct_properties,4,10,42021)
-CheckMemberSize(struct _GObjectClass,constructor,4,10,42027)
-CheckOffset(struct _GObjectClass,constructor,8,10,42027)
-CheckMemberSize(struct _GObjectClass,set_property,4,10,42032)
-CheckOffset(struct _GObjectClass,set_property,12,10,42032)
-CheckMemberSize(struct _GObjectClass,get_property,4,10,42037)
-CheckOffset(struct _GObjectClass,get_property,16,10,42037)
-CheckMemberSize(struct _GObjectClass,dispose,4,10,42039)
-CheckOffset(struct _GObjectClass,dispose,20,10,42039)
-CheckMemberSize(struct _GObjectClass,finalize,4,10,42040)
-CheckOffset(struct _GObjectClass,finalize,24,10,42040)
-CheckMemberSize(struct _GObjectClass,dispatch_properties_changed,4,10,42044)
-CheckOffset(struct _GObjectClass,dispatch_properties_changed,28,10,42044)
-CheckMemberSize(struct _GObjectClass,notify,4,10,42047)
-CheckOffset(struct _GObjectClass,notify,32,10,42047)
-CheckMemberSize(struct _GObjectClass,pdummy,32,10,42048)
-CheckOffset(struct _GObjectClass,pdummy,36,10,42048)
+CheckTypeSize(struct _GObjectClass,68, 11855, 10);
+CheckMemberSize(struct _GObjectClass,construct_properties,4,10,42021);
+CheckOffset(struct _GObjectClass,construct_properties,4,10,42021);
+CheckMemberSize(struct _GObjectClass,constructor,4,10,42027);
+CheckOffset(struct _GObjectClass,constructor,8,10,42027);
+CheckMemberSize(struct _GObjectClass,set_property,4,10,42032);
+CheckOffset(struct _GObjectClass,set_property,12,10,42032);
+CheckMemberSize(struct _GObjectClass,get_property,4,10,42037);
+CheckOffset(struct _GObjectClass,get_property,16,10,42037);
+CheckMemberSize(struct _GObjectClass,dispose,4,10,42039);
+CheckOffset(struct _GObjectClass,dispose,20,10,42039);
+CheckMemberSize(struct _GObjectClass,finalize,4,10,42040);
+CheckOffset(struct _GObjectClass,finalize,24,10,42040);
+CheckMemberSize(struct _GObjectClass,dispatch_properties_changed,4,10,42044);
+CheckOffset(struct _GObjectClass,dispatch_properties_changed,28,10,42044);
+CheckMemberSize(struct _GObjectClass,notify,4,10,42047);
+CheckOffset(struct _GObjectClass,notify,32,10,42047);
+CheckMemberSize(struct _GObjectClass,pdummy,32,10,42048);
+CheckOffset(struct _GObjectClass,pdummy,36,10,42048);
 #elif __s390x__
-CheckTypeSize(struct _GObjectClass,136, 11855, 12)
-CheckMemberSize(struct _GObjectClass,construct_properties,8,12,42021)
-CheckOffset(struct _GObjectClass,construct_properties,8,12,42021)
-CheckMemberSize(struct _GObjectClass,constructor,8,12,42027)
-CheckOffset(struct _GObjectClass,constructor,16,12,42027)
-CheckMemberSize(struct _GObjectClass,set_property,8,12,42032)
-CheckOffset(struct _GObjectClass,set_property,24,12,42032)
-CheckMemberSize(struct _GObjectClass,get_property,8,12,42037)
-CheckOffset(struct _GObjectClass,get_property,32,12,42037)
-CheckMemberSize(struct _GObjectClass,dispose,8,12,42039)
-CheckOffset(struct _GObjectClass,dispose,40,12,42039)
-CheckMemberSize(struct _GObjectClass,finalize,8,12,42040)
-CheckOffset(struct _GObjectClass,finalize,48,12,42040)
-CheckMemberSize(struct _GObjectClass,dispatch_properties_changed,8,12,42044)
-CheckOffset(struct _GObjectClass,dispatch_properties_changed,56,12,42044)
-CheckMemberSize(struct _GObjectClass,notify,8,12,42047)
-CheckOffset(struct _GObjectClass,notify,64,12,42047)
-CheckMemberSize(struct _GObjectClass,pdummy,64,12,42048)
-CheckOffset(struct _GObjectClass,pdummy,72,12,42048)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11855,0);
-Msg("Find size of _GObjectClass (11855)\n");
+CheckTypeSize(struct _GObjectClass,136, 11855, 12);
+CheckMemberSize(struct _GObjectClass,construct_properties,8,12,42021);
+CheckOffset(struct _GObjectClass,construct_properties,8,12,42021);
+CheckMemberSize(struct _GObjectClass,constructor,8,12,42027);
+CheckOffset(struct _GObjectClass,constructor,16,12,42027);
+CheckMemberSize(struct _GObjectClass,set_property,8,12,42032);
+CheckOffset(struct _GObjectClass,set_property,24,12,42032);
+CheckMemberSize(struct _GObjectClass,get_property,8,12,42037);
+CheckOffset(struct _GObjectClass,get_property,32,12,42037);
+CheckMemberSize(struct _GObjectClass,dispose,8,12,42039);
+CheckOffset(struct _GObjectClass,dispose,40,12,42039);
+CheckMemberSize(struct _GObjectClass,finalize,8,12,42040);
+CheckOffset(struct _GObjectClass,finalize,48,12,42040);
+CheckMemberSize(struct _GObjectClass,dispatch_properties_changed,8,12,42044);
+CheckOffset(struct _GObjectClass,dispatch_properties_changed,56,12,42044);
+CheckMemberSize(struct _GObjectClass,notify,8,12,42047);
+CheckOffset(struct _GObjectClass,notify,64,12,42047);
+CheckMemberSize(struct _GObjectClass,pdummy,64,12,42048);
+CheckOffset(struct _GObjectClass,pdummy,72,12,42048);
+#elif 1
+CheckTypeSize(struct _GObjectClass,0, 11855, 1);
+Msg("Missing member data for _GObjectClass on All\n");
+CheckOffset(struct _GObjectClass,g_type_class,0,1,42020);
+CheckOffset(struct _GObjectClass,construct_properties,0,1,42021);
+CheckOffset(struct _GObjectClass,constructor,0,1,42027);
+CheckOffset(struct _GObjectClass,set_property,0,1,42032);
+CheckOffset(struct _GObjectClass,get_property,0,1,42037);
+CheckOffset(struct _GObjectClass,dispose,0,1,42039);
+CheckOffset(struct _GObjectClass,finalize,0,1,42040);
+CheckOffset(struct _GObjectClass,dispatch_properties_changed,0,1,42044);
+CheckOffset(struct _GObjectClass,notify,0,1,42047);
+CheckOffset(struct _GObjectClass,pdummy,0,1,42048);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GObjectConstructParam,8, 11856, 2)
-CheckMemberSize(struct _GObjectConstructParam,value,4,2,42023)
-CheckOffset(struct _GObjectConstructParam,value,4,2,42023)
+CheckTypeSize(struct _GObjectConstructParam,8, 11856, 2);
+CheckMemberSize(struct _GObjectConstructParam,value,4,2,42023);
+CheckOffset(struct _GObjectConstructParam,value,4,2,42023);
 #elif __x86_64__
-CheckTypeSize(struct _GObjectConstructParam,16, 11856, 11)
-CheckMemberSize(struct _GObjectConstructParam,value,8,11,42023)
-CheckOffset(struct _GObjectConstructParam,value,8,11,42023)
+CheckTypeSize(struct _GObjectConstructParam,16, 11856, 11);
+CheckMemberSize(struct _GObjectConstructParam,value,8,11,42023);
+CheckOffset(struct _GObjectConstructParam,value,8,11,42023);
 #elif __ia64__
-CheckTypeSize(struct _GObjectConstructParam,16, 11856, 3)
-CheckMemberSize(struct _GObjectConstructParam,value,8,3,42023)
-CheckOffset(struct _GObjectConstructParam,value,8,3,42023)
+CheckTypeSize(struct _GObjectConstructParam,16, 11856, 3);
+CheckMemberSize(struct _GObjectConstructParam,value,8,3,42023);
+CheckOffset(struct _GObjectConstructParam,value,8,3,42023);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GObjectConstructParam,8, 11856, 6)
-CheckMemberSize(struct _GObjectConstructParam,value,4,6,42023)
-CheckOffset(struct _GObjectConstructParam,value,4,6,42023)
+CheckTypeSize(struct _GObjectConstructParam,8, 11856, 6);
+CheckMemberSize(struct _GObjectConstructParam,value,4,6,42023);
+CheckOffset(struct _GObjectConstructParam,value,4,6,42023);
 #elif __powerpc64__
-CheckTypeSize(struct _GObjectConstructParam,16, 11856, 9)
-CheckMemberSize(struct _GObjectConstructParam,value,8,9,42023)
-CheckOffset(struct _GObjectConstructParam,value,8,9,42023)
+CheckTypeSize(struct _GObjectConstructParam,16, 11856, 9);
+CheckMemberSize(struct _GObjectConstructParam,value,8,9,42023);
+CheckOffset(struct _GObjectConstructParam,value,8,9,42023);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GObjectConstructParam,8, 11856, 10)
-CheckMemberSize(struct _GObjectConstructParam,value,4,10,42023)
-CheckOffset(struct _GObjectConstructParam,value,4,10,42023)
+CheckTypeSize(struct _GObjectConstructParam,8, 11856, 10);
+CheckMemberSize(struct _GObjectConstructParam,value,4,10,42023);
+CheckOffset(struct _GObjectConstructParam,value,4,10,42023);
 #elif __s390x__
-CheckTypeSize(struct _GObjectConstructParam,16, 11856, 12)
-CheckMemberSize(struct _GObjectConstructParam,value,8,12,42023)
-CheckOffset(struct _GObjectConstructParam,value,8,12,42023)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11856,0);
-Msg("Find size of _GObjectConstructParam (11856)\n");
+CheckTypeSize(struct _GObjectConstructParam,16, 11856, 12);
+CheckMemberSize(struct _GObjectConstructParam,value,8,12,42023);
+CheckOffset(struct _GObjectConstructParam,value,8,12,42023);
+#elif 1
+CheckTypeSize(struct _GObjectConstructParam,0, 11856, 1);
+Msg("Missing member data for _GObjectConstructParam on All\n");
+CheckOffset(struct _GObjectConstructParam,pspec,0,1,42022);
+CheckOffset(struct _GObjectConstructParam,value,0,1,42023);
 #endif
 
 #if __i386__
-CheckTypeSize(GObjectConstructParam,8, 11857, 2)
+CheckTypeSize(GObjectConstructParam,8, 11857, 2);
 #elif __x86_64__
-CheckTypeSize(GObjectConstructParam,16, 11857, 11)
+CheckTypeSize(GObjectConstructParam,16, 11857, 11);
 #elif __ia64__
-CheckTypeSize(GObjectConstructParam,16, 11857, 3)
+CheckTypeSize(GObjectConstructParam,16, 11857, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GObjectConstructParam,8, 11857, 6)
+CheckTypeSize(GObjectConstructParam,8, 11857, 6);
 #elif __powerpc64__
-CheckTypeSize(GObjectConstructParam,16, 11857, 9)
+CheckTypeSize(GObjectConstructParam,16, 11857, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GObjectConstructParam,8, 11857, 10)
+CheckTypeSize(GObjectConstructParam,8, 11857, 10);
 #elif __s390x__
-CheckTypeSize(GObjectConstructParam,16, 11857, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11857,0);
-Msg("Find size of GObjectConstructParam (11857)\n");
+CheckTypeSize(GObjectConstructParam,16, 11857, 12);
+#elif 1
+CheckTypeSize(GObjectConstructParam,0, 11857, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GObjectConstructParam *,4, 11858, 2)
+CheckTypeSize(GObjectConstructParam *,4, 11858, 2);
 #elif __x86_64__
-CheckTypeSize(GObjectConstructParam *,8, 11858, 11)
+CheckTypeSize(GObjectConstructParam *,8, 11858, 11);
 #elif __ia64__
-CheckTypeSize(GObjectConstructParam *,8, 11858, 3)
+CheckTypeSize(GObjectConstructParam *,8, 11858, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GObjectConstructParam *,4, 11858, 6)
+CheckTypeSize(GObjectConstructParam *,4, 11858, 6);
 #elif __powerpc64__
-CheckTypeSize(GObjectConstructParam *,8, 11858, 9)
+CheckTypeSize(GObjectConstructParam *,8, 11858, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GObjectConstructParam *,4, 11858, 10)
+CheckTypeSize(GObjectConstructParam *,4, 11858, 10);
 #elif __s390x__
-CheckTypeSize(GObjectConstructParam *,8, 11858, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11858,0);
-Msg("Find size of GObjectConstructParam * (11858)\n");
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11859,0);
-Msg("Find size of fptr_glib-object_75 (11859)\n");
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11860,0);
-Msg("Find size of fptr_glib-object_99 (11860)\n");
+CheckTypeSize(GObjectConstructParam *,8, 11858, 12);
+#elif 1
+CheckTypeSize(GObjectConstructParam *,0, 11858, 1);
 #endif
 
 #if __i386__
@@ -1821,9 +1811,7 @@ Msg("Find size of fptr_glib-object_99 (11860)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11861,0);
-Msg("Find size of fptr_glib-object_62 (11861)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -1833,9 +1821,7 @@ Msg("Find size of fptr_glib-object_62 (11861)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11862,0);
-Msg("Find size of fptr_glib-object_74 (11862)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -1845,9 +1831,7 @@ Msg("Find size of fptr_glib-object_74 (11862)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11863,0);
-Msg("Find size of GParamSpec * * (11863)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -1857,9 +1841,7 @@ Msg("Find size of GParamSpec * * (11863)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11864,0);
-Msg("Find size of fptr_glib-object_66 (11864)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -1869,194 +1851,172 @@ Msg("Find size of fptr_glib-object_66 (11864)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11865,0);
-Msg("Find size of fptr_glib-object_90 (11865)\n");
+#elif 1
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
+#elif 1
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
+#elif 1
 #endif
 
 #if 1
 #endif
 
 #if __i386__
-CheckTypeSize(GObjectClass,68, 11867, 2)
+CheckTypeSize(GObjectClass,68, 11867, 2);
 #elif __x86_64__
-CheckTypeSize(GObjectClass,136, 11867, 11)
+CheckTypeSize(GObjectClass,136, 11867, 11);
 #elif __ia64__
-CheckTypeSize(GObjectClass,136, 11867, 3)
+CheckTypeSize(GObjectClass,136, 11867, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GObjectClass,68, 11867, 6)
+CheckTypeSize(GObjectClass,68, 11867, 6);
 #elif __powerpc64__
-CheckTypeSize(GObjectClass,136, 11867, 9)
+CheckTypeSize(GObjectClass,136, 11867, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GObjectClass,68, 11867, 10)
+CheckTypeSize(GObjectClass,68, 11867, 10);
 #elif __s390x__
-CheckTypeSize(GObjectClass,136, 11867, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11867,0);
-Msg("Find size of GObjectClass (11867)\n");
+CheckTypeSize(GObjectClass,136, 11867, 12);
+#elif 1
+CheckTypeSize(GObjectClass,0, 11867, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GObjectClass *,4, 11868, 2)
+CheckTypeSize(GObjectClass *,4, 11868, 2);
 #elif __x86_64__
-CheckTypeSize(GObjectClass *,8, 11868, 11)
+CheckTypeSize(GObjectClass *,8, 11868, 11);
 #elif __ia64__
-CheckTypeSize(GObjectClass *,8, 11868, 3)
+CheckTypeSize(GObjectClass *,8, 11868, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GObjectClass *,4, 11868, 6)
+CheckTypeSize(GObjectClass *,4, 11868, 6);
 #elif __powerpc64__
-CheckTypeSize(GObjectClass *,8, 11868, 9)
+CheckTypeSize(GObjectClass *,8, 11868, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GObjectClass *,4, 11868, 10)
+CheckTypeSize(GObjectClass *,4, 11868, 10);
 #elif __s390x__
-CheckTypeSize(GObjectClass *,8, 11868, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11868,0);
-Msg("Find size of GObjectClass * (11868)\n");
+CheckTypeSize(GObjectClass *,8, 11868, 12);
+#elif 1
+CheckTypeSize(GObjectClass *,0, 11868, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GClosure,16, 11869, 2)
-CheckMemberSize(struct _GClosure,marshal,4,2,42065)
-CheckOffset(struct _GClosure,marshal,4,2,42065)
-CheckMemberSize(struct _GClosure,data,4,2,42066)
-CheckOffset(struct _GClosure,data,8,2,42066)
-CheckMemberSize(struct _GClosure,notifiers,4,2,42071)
-CheckOffset(struct _GClosure,notifiers,12,2,42071)
+CheckTypeSize(struct _GClosure,16, 11869, 2);
+CheckMemberSize(struct _GClosure,marshal,4,2,42065);
+CheckOffset(struct _GClosure,marshal,4,2,42065);
+CheckMemberSize(struct _GClosure,data,4,2,42066);
+CheckOffset(struct _GClosure,data,8,2,42066);
+CheckMemberSize(struct _GClosure,notifiers,4,2,42071);
+CheckOffset(struct _GClosure,notifiers,12,2,42071);
 #elif __x86_64__
-CheckTypeSize(struct _GClosure,32, 11869, 11)
-CheckMemberSize(struct _GClosure,marshal,8,11,42065)
-CheckOffset(struct _GClosure,marshal,8,11,42065)
-CheckMemberSize(struct _GClosure,data,8,11,42066)
-CheckOffset(struct _GClosure,data,16,11,42066)
-CheckMemberSize(struct _GClosure,notifiers,8,11,42071)
-CheckOffset(struct _GClosure,notifiers,24,11,42071)
+CheckTypeSize(struct _GClosure,32, 11869, 11);
+CheckMemberSize(struct _GClosure,marshal,8,11,42065);
+CheckOffset(struct _GClosure,marshal,8,11,42065);
+CheckMemberSize(struct _GClosure,data,8,11,42066);
+CheckOffset(struct _GClosure,data,16,11,42066);
+CheckMemberSize(struct _GClosure,notifiers,8,11,42071);
+CheckOffset(struct _GClosure,notifiers,24,11,42071);
 #elif __ia64__
-CheckTypeSize(struct _GClosure,32, 11869, 3)
-CheckMemberSize(struct _GClosure,marshal,8,3,42065)
-CheckOffset(struct _GClosure,marshal,8,3,42065)
-CheckMemberSize(struct _GClosure,data,8,3,42066)
-CheckOffset(struct _GClosure,data,16,3,42066)
-CheckMemberSize(struct _GClosure,notifiers,8,3,42071)
-CheckOffset(struct _GClosure,notifiers,24,3,42071)
+CheckTypeSize(struct _GClosure,32, 11869, 3);
+CheckMemberSize(struct _GClosure,marshal,8,3,42065);
+CheckOffset(struct _GClosure,marshal,8,3,42065);
+CheckMemberSize(struct _GClosure,data,8,3,42066);
+CheckOffset(struct _GClosure,data,16,3,42066);
+CheckMemberSize(struct _GClosure,notifiers,8,3,42071);
+CheckOffset(struct _GClosure,notifiers,24,3,42071);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GClosure,16, 11869, 6)
-CheckMemberSize(struct _GClosure,marshal,4,6,42065)
-CheckOffset(struct _GClosure,marshal,4,6,42065)
-CheckMemberSize(struct _GClosure,data,4,6,42066)
-CheckOffset(struct _GClosure,data,8,6,42066)
-CheckMemberSize(struct _GClosure,notifiers,4,6,42071)
-CheckOffset(struct _GClosure,notifiers,12,6,42071)
+CheckTypeSize(struct _GClosure,16, 11869, 6);
+CheckMemberSize(struct _GClosure,marshal,4,6,42065);
+CheckOffset(struct _GClosure,marshal,4,6,42065);
+CheckMemberSize(struct _GClosure,data,4,6,42066);
+CheckOffset(struct _GClosure,data,8,6,42066);
+CheckMemberSize(struct _GClosure,notifiers,4,6,42071);
+CheckOffset(struct _GClosure,notifiers,12,6,42071);
 #elif __powerpc64__
-CheckTypeSize(struct _GClosure,32, 11869, 9)
-CheckMemberSize(struct _GClosure,marshal,8,9,42065)
-CheckOffset(struct _GClosure,marshal,8,9,42065)
-CheckMemberSize(struct _GClosure,data,8,9,42066)
-CheckOffset(struct _GClosure,data,16,9,42066)
-CheckMemberSize(struct _GClosure,notifiers,8,9,42071)
-CheckOffset(struct _GClosure,notifiers,24,9,42071)
+CheckTypeSize(struct _GClosure,32, 11869, 9);
+CheckMemberSize(struct _GClosure,marshal,8,9,42065);
+CheckOffset(struct _GClosure,marshal,8,9,42065);
+CheckMemberSize(struct _GClosure,data,8,9,42066);
+CheckOffset(struct _GClosure,data,16,9,42066);
+CheckMemberSize(struct _GClosure,notifiers,8,9,42071);
+CheckOffset(struct _GClosure,notifiers,24,9,42071);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GClosure,16, 11869, 10)
-CheckMemberSize(struct _GClosure,marshal,4,10,42065)
-CheckOffset(struct _GClosure,marshal,4,10,42065)
-CheckMemberSize(struct _GClosure,data,4,10,42066)
-CheckOffset(struct _GClosure,data,8,10,42066)
-CheckMemberSize(struct _GClosure,notifiers,4,10,42071)
-CheckOffset(struct _GClosure,notifiers,12,10,42071)
+CheckTypeSize(struct _GClosure,16, 11869, 10);
+CheckMemberSize(struct _GClosure,marshal,4,10,42065);
+CheckOffset(struct _GClosure,marshal,4,10,42065);
+CheckMemberSize(struct _GClosure,data,4,10,42066);
+CheckOffset(struct _GClosure,data,8,10,42066);
+CheckMemberSize(struct _GClosure,notifiers,4,10,42071);
+CheckOffset(struct _GClosure,notifiers,12,10,42071);
 #elif __s390x__
-CheckTypeSize(struct _GClosure,32, 11869, 12)
-CheckMemberSize(struct _GClosure,marshal,8,12,42065)
-CheckOffset(struct _GClosure,marshal,8,12,42065)
-CheckMemberSize(struct _GClosure,data,8,12,42066)
-CheckOffset(struct _GClosure,data,16,12,42066)
-CheckMemberSize(struct _GClosure,notifiers,8,12,42071)
-CheckOffset(struct _GClosure,notifiers,24,12,42071)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11869,0);
-Msg("Find size of _GClosure (11869)\n");
+CheckTypeSize(struct _GClosure,32, 11869, 12);
+CheckMemberSize(struct _GClosure,marshal,8,12,42065);
+CheckOffset(struct _GClosure,marshal,8,12,42065);
+CheckMemberSize(struct _GClosure,data,8,12,42066);
+CheckOffset(struct _GClosure,data,16,12,42066);
+CheckMemberSize(struct _GClosure,notifiers,8,12,42071);
+CheckOffset(struct _GClosure,notifiers,24,12,42071);
+#elif 1
+CheckTypeSize(struct _GClosure,0, 11869, 1);
+CheckBitField(struct _GClosure,ref_count,15,1,42049)
+CheckBitField(struct _GClosure,meta_marshal,1,1,42050)
+CheckBitField(struct _GClosure,n_guards,1,1,42051)
+CheckBitField(struct _GClosure,n_fnotifiers,2,1,42052)
+CheckBitField(struct _GClosure,n_inotifiers,8,1,42053)
+CheckBitField(struct _GClosure,in_inotify,1,1,42054)
+CheckBitField(struct _GClosure,floating,1,1,42055)
+CheckBitField(struct _GClosure,derivative_flag,1,1,42056)
+CheckBitField(struct _GClosure,in_marshal,1,1,42057)
+CheckBitField(struct _GClosure,is_invalid,1,1,42058)
 #endif
 
 #if __i386__
-CheckTypeSize(GClosure,16, 11870, 2)
+CheckTypeSize(GClosure,16, 11870, 2);
 #elif __x86_64__
-CheckTypeSize(GClosure,32, 11870, 11)
+CheckTypeSize(GClosure,32, 11870, 11);
 #elif __ia64__
-CheckTypeSize(GClosure,32, 11870, 3)
+CheckTypeSize(GClosure,32, 11870, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GClosure,16, 11870, 6)
+CheckTypeSize(GClosure,16, 11870, 6);
 #elif __powerpc64__
-CheckTypeSize(GClosure,32, 11870, 9)
+CheckTypeSize(GClosure,32, 11870, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GClosure,16, 11870, 10)
+CheckTypeSize(GClosure,16, 11870, 10);
 #elif __s390x__
-CheckTypeSize(GClosure,32, 11870, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11870,0);
-Msg("Find size of GClosure (11870)\n");
+CheckTypeSize(GClosure,32, 11870, 12);
+#elif 1
+CheckTypeSize(GClosure,0, 11870, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GClosure *,4, 11871, 2)
+CheckTypeSize(GClosure *,4, 11871, 2);
 #elif __x86_64__
-CheckTypeSize(GClosure *,8, 11871, 11)
+CheckTypeSize(GClosure *,8, 11871, 11);
 #elif __ia64__
-CheckTypeSize(GClosure *,8, 11871, 3)
+CheckTypeSize(GClosure *,8, 11871, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GClosure *,4, 11871, 6)
+CheckTypeSize(GClosure *,4, 11871, 6);
 #elif __powerpc64__
-CheckTypeSize(GClosure *,8, 11871, 9)
+CheckTypeSize(GClosure *,8, 11871, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GClosure *,4, 11871, 10)
+CheckTypeSize(GClosure *,4, 11871, 10);
 #elif __s390x__
-CheckTypeSize(GClosure *,8, 11871, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11871,0);
-Msg("Find size of GClosure * (11871)\n");
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11872,0);
-Msg("Find size of fptr_glib-object_71 (11872)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(struct _GClosureNotifyData,8, 11873, 2)
-CheckMemberSize(struct _GClosureNotifyData,notify,4,2,42070)
-CheckOffset(struct _GClosureNotifyData,notify,4,2,42070)
-#elif __x86_64__
-CheckTypeSize(struct _GClosureNotifyData,16, 11873, 11)
-CheckMemberSize(struct _GClosureNotifyData,notify,8,11,42070)
-CheckOffset(struct _GClosureNotifyData,notify,8,11,42070)
-#elif __ia64__
-CheckTypeSize(struct _GClosureNotifyData,16, 11873, 3)
-CheckMemberSize(struct _GClosureNotifyData,notify,8,3,42070)
-CheckOffset(struct _GClosureNotifyData,notify,8,3,42070)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GClosureNotifyData,8, 11873, 6)
-CheckMemberSize(struct _GClosureNotifyData,notify,4,6,42070)
-CheckOffset(struct _GClosureNotifyData,notify,4,6,42070)
-#elif __powerpc64__
-CheckTypeSize(struct _GClosureNotifyData,16, 11873, 9)
-CheckMemberSize(struct _GClosureNotifyData,notify,8,9,42070)
-CheckOffset(struct _GClosureNotifyData,notify,8,9,42070)
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct _GClosureNotifyData,8, 11873, 10)
-CheckMemberSize(struct _GClosureNotifyData,notify,4,10,42070)
-CheckOffset(struct _GClosureNotifyData,notify,4,10,42070)
-#elif __s390x__
-CheckTypeSize(struct _GClosureNotifyData,16, 11873, 12)
-CheckMemberSize(struct _GClosureNotifyData,notify,8,12,42070)
-CheckOffset(struct _GClosureNotifyData,notify,8,12,42070)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11873,0);
-Msg("Find size of _GClosureNotifyData (11873)\n");
+CheckTypeSize(GClosure *,8, 11871, 12);
+#elif 1
+CheckTypeSize(GClosure *,0, 11871, 1);
 #endif
 
 #if __i386__
@@ -2066,406 +2026,448 @@ Msg("Find size of _GClosureNotifyData (11873)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11874,0);
-Msg("Find size of fptr_glib-object_211 (11874)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(GClosureNotify,4, 11875, 2)
+CheckTypeSize(struct _GClosureNotifyData,8, 11873, 2);
+CheckMemberSize(struct _GClosureNotifyData,notify,4,2,42070);
+CheckOffset(struct _GClosureNotifyData,notify,4,2,42070);
 #elif __x86_64__
-CheckTypeSize(GClosureNotify,8, 11875, 11)
+CheckTypeSize(struct _GClosureNotifyData,16, 11873, 11);
+CheckMemberSize(struct _GClosureNotifyData,notify,8,11,42070);
+CheckOffset(struct _GClosureNotifyData,notify,8,11,42070);
 #elif __ia64__
-CheckTypeSize(GClosureNotify,8, 11875, 3)
+CheckTypeSize(struct _GClosureNotifyData,16, 11873, 3);
+CheckMemberSize(struct _GClosureNotifyData,notify,8,3,42070);
+CheckOffset(struct _GClosureNotifyData,notify,8,3,42070);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GClosureNotify,4, 11875, 6)
+CheckTypeSize(struct _GClosureNotifyData,8, 11873, 6);
+CheckMemberSize(struct _GClosureNotifyData,notify,4,6,42070);
+CheckOffset(struct _GClosureNotifyData,notify,4,6,42070);
 #elif __powerpc64__
-CheckTypeSize(GClosureNotify,8, 11875, 9)
+CheckTypeSize(struct _GClosureNotifyData,16, 11873, 9);
+CheckMemberSize(struct _GClosureNotifyData,notify,8,9,42070);
+CheckOffset(struct _GClosureNotifyData,notify,8,9,42070);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GClosureNotify,4, 11875, 10)
+CheckTypeSize(struct _GClosureNotifyData,8, 11873, 10);
+CheckMemberSize(struct _GClosureNotifyData,notify,4,10,42070);
+CheckOffset(struct _GClosureNotifyData,notify,4,10,42070);
 #elif __s390x__
-CheckTypeSize(GClosureNotify,8, 11875, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11875,0);
-Msg("Find size of GClosureNotify (11875)\n");
+CheckTypeSize(struct _GClosureNotifyData,16, 11873, 12);
+CheckMemberSize(struct _GClosureNotifyData,notify,8,12,42070);
+CheckOffset(struct _GClosureNotifyData,notify,8,12,42070);
+#elif 1
+CheckTypeSize(struct _GClosureNotifyData,0, 11873, 1);
+Msg("Missing member data for _GClosureNotifyData on All\n");
+CheckOffset(struct _GClosureNotifyData,data,0,1,42067);
+CheckOffset(struct _GClosureNotifyData,notify,0,1,42070);
 #endif
 
 #if __i386__
-CheckTypeSize(GClosureNotifyData,8, 11876, 2)
 #elif __x86_64__
-CheckTypeSize(GClosureNotifyData,16, 11876, 11)
 #elif __ia64__
-CheckTypeSize(GClosureNotifyData,16, 11876, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GClosureNotifyData,8, 11876, 6)
 #elif __powerpc64__
-CheckTypeSize(GClosureNotifyData,16, 11876, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GClosureNotifyData,8, 11876, 10)
 #elif __s390x__
-CheckTypeSize(GClosureNotifyData,16, 11876, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11876,0);
-Msg("Find size of GClosureNotifyData (11876)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(GClosureNotifyData *,4, 11877, 2)
+CheckTypeSize(GClosureNotify,4, 11875, 2);
 #elif __x86_64__
-CheckTypeSize(GClosureNotifyData *,8, 11877, 11)
+CheckTypeSize(GClosureNotify,8, 11875, 11);
 #elif __ia64__
-CheckTypeSize(GClosureNotifyData *,8, 11877, 3)
+CheckTypeSize(GClosureNotify,8, 11875, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GClosureNotifyData *,4, 11877, 6)
+CheckTypeSize(GClosureNotify,4, 11875, 6);
 #elif __powerpc64__
-CheckTypeSize(GClosureNotifyData *,8, 11877, 9)
+CheckTypeSize(GClosureNotify,8, 11875, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GClosureNotifyData *,4, 11877, 10)
+CheckTypeSize(GClosureNotify,4, 11875, 10);
 #elif __s390x__
-CheckTypeSize(GClosureNotifyData *,8, 11877, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11877,0);
-Msg("Find size of GClosureNotifyData * (11877)\n");
+CheckTypeSize(GClosureNotify,8, 11875, 12);
+#elif 1
+CheckTypeSize(GClosureNotify,0, 11875, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GTypeInterfaceCheckFunc,4, 11878, 2)
+CheckTypeSize(GClosureNotifyData,8, 11876, 2);
 #elif __x86_64__
-CheckTypeSize(GTypeInterfaceCheckFunc,8, 11878, 11)
+CheckTypeSize(GClosureNotifyData,16, 11876, 11);
 #elif __ia64__
-CheckTypeSize(GTypeInterfaceCheckFunc,8, 11878, 3)
+CheckTypeSize(GClosureNotifyData,16, 11876, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypeInterfaceCheckFunc,4, 11878, 6)
+CheckTypeSize(GClosureNotifyData,8, 11876, 6);
 #elif __powerpc64__
-CheckTypeSize(GTypeInterfaceCheckFunc,8, 11878, 9)
+CheckTypeSize(GClosureNotifyData,16, 11876, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GTypeInterfaceCheckFunc,4, 11878, 10)
+CheckTypeSize(GClosureNotifyData,8, 11876, 10);
 #elif __s390x__
-CheckTypeSize(GTypeInterfaceCheckFunc,8, 11878, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11878,0);
-Msg("Find size of GTypeInterfaceCheckFunc (11878)\n");
+CheckTypeSize(GClosureNotifyData,16, 11876, 12);
+#elif 1
+CheckTypeSize(GClosureNotifyData,0, 11876, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GValueArray,12, 11879, 2)
-CheckMemberSize(struct _GValueArray,values,4,2,42073)
-CheckOffset(struct _GValueArray,values,4,2,42073)
-CheckMemberSize(struct _GValueArray,n_prealloced,4,2,42074)
-CheckOffset(struct _GValueArray,n_prealloced,8,2,42074)
+CheckTypeSize(GClosureNotifyData *,4, 11877, 2);
 #elif __x86_64__
-CheckTypeSize(struct _GValueArray,24, 11879, 11)
-CheckMemberSize(struct _GValueArray,values,8,11,42073)
-CheckOffset(struct _GValueArray,values,8,11,42073)
-CheckMemberSize(struct _GValueArray,n_prealloced,4,11,42074)
-CheckOffset(struct _GValueArray,n_prealloced,16,11,42074)
+CheckTypeSize(GClosureNotifyData *,8, 11877, 11);
 #elif __ia64__
-CheckTypeSize(struct _GValueArray,24, 11879, 3)
-CheckMemberSize(struct _GValueArray,values,8,3,42073)
-CheckOffset(struct _GValueArray,values,8,3,42073)
-CheckMemberSize(struct _GValueArray,n_prealloced,4,3,42074)
-CheckOffset(struct _GValueArray,n_prealloced,16,3,42074)
+CheckTypeSize(GClosureNotifyData *,8, 11877, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GValueArray,12, 11879, 6)
-CheckMemberSize(struct _GValueArray,values,4,6,42073)
-CheckOffset(struct _GValueArray,values,4,6,42073)
-CheckMemberSize(struct _GValueArray,n_prealloced,4,6,42074)
-CheckOffset(struct _GValueArray,n_prealloced,8,6,42074)
+CheckTypeSize(GClosureNotifyData *,4, 11877, 6);
 #elif __powerpc64__
-CheckTypeSize(struct _GValueArray,24, 11879, 9)
-CheckMemberSize(struct _GValueArray,values,8,9,42073)
-CheckOffset(struct _GValueArray,values,8,9,42073)
-CheckMemberSize(struct _GValueArray,n_prealloced,4,9,42074)
-CheckOffset(struct _GValueArray,n_prealloced,16,9,42074)
+CheckTypeSize(GClosureNotifyData *,8, 11877, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GValueArray,12, 11879, 10)
-CheckMemberSize(struct _GValueArray,values,4,10,42073)
-CheckOffset(struct _GValueArray,values,4,10,42073)
-CheckMemberSize(struct _GValueArray,n_prealloced,4,10,42074)
-CheckOffset(struct _GValueArray,n_prealloced,8,10,42074)
+CheckTypeSize(GClosureNotifyData *,4, 11877, 10);
 #elif __s390x__
-CheckTypeSize(struct _GValueArray,24, 11879, 12)
-CheckMemberSize(struct _GValueArray,values,8,12,42073)
-CheckOffset(struct _GValueArray,values,8,12,42073)
-CheckMemberSize(struct _GValueArray,n_prealloced,4,12,42074)
-CheckOffset(struct _GValueArray,n_prealloced,16,12,42074)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11879,0);
-Msg("Find size of _GValueArray (11879)\n");
+CheckTypeSize(GClosureNotifyData *,8, 11877, 12);
+#elif 1
+CheckTypeSize(GClosureNotifyData *,0, 11877, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GValueArray,12, 11880, 2)
+CheckTypeSize(GTypeInterfaceCheckFunc,4, 11878, 2);
 #elif __x86_64__
-CheckTypeSize(GValueArray,24, 11880, 11)
+CheckTypeSize(GTypeInterfaceCheckFunc,8, 11878, 11);
 #elif __ia64__
-CheckTypeSize(GValueArray,24, 11880, 3)
+CheckTypeSize(GTypeInterfaceCheckFunc,8, 11878, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GValueArray,12, 11880, 6)
+CheckTypeSize(GTypeInterfaceCheckFunc,4, 11878, 6);
 #elif __powerpc64__
-CheckTypeSize(GValueArray,24, 11880, 9)
+CheckTypeSize(GTypeInterfaceCheckFunc,8, 11878, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GValueArray,12, 11880, 10)
+CheckTypeSize(GTypeInterfaceCheckFunc,4, 11878, 10);
 #elif __s390x__
-CheckTypeSize(GValueArray,24, 11880, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11880,0);
-Msg("Find size of GValueArray (11880)\n");
+CheckTypeSize(GTypeInterfaceCheckFunc,8, 11878, 12);
+#elif 1
+CheckTypeSize(GTypeInterfaceCheckFunc,0, 11878, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GValueArray *,4, 11881, 2)
+CheckTypeSize(struct _GValueArray,12, 11879, 2);
+CheckMemberSize(struct _GValueArray,values,4,2,42073);
+CheckOffset(struct _GValueArray,values,4,2,42073);
+CheckMemberSize(struct _GValueArray,n_prealloced,4,2,42074);
+CheckOffset(struct _GValueArray,n_prealloced,8,2,42074);
 #elif __x86_64__
-CheckTypeSize(GValueArray *,8, 11881, 11)
+CheckTypeSize(struct _GValueArray,24, 11879, 11);
+CheckMemberSize(struct _GValueArray,values,8,11,42073);
+CheckOffset(struct _GValueArray,values,8,11,42073);
+CheckMemberSize(struct _GValueArray,n_prealloced,4,11,42074);
+CheckOffset(struct _GValueArray,n_prealloced,16,11,42074);
 #elif __ia64__
-CheckTypeSize(GValueArray *,8, 11881, 3)
+CheckTypeSize(struct _GValueArray,24, 11879, 3);
+CheckMemberSize(struct _GValueArray,values,8,3,42073);
+CheckOffset(struct _GValueArray,values,8,3,42073);
+CheckMemberSize(struct _GValueArray,n_prealloced,4,3,42074);
+CheckOffset(struct _GValueArray,n_prealloced,16,3,42074);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GValueArray *,4, 11881, 6)
+CheckTypeSize(struct _GValueArray,12, 11879, 6);
+CheckMemberSize(struct _GValueArray,values,4,6,42073);
+CheckOffset(struct _GValueArray,values,4,6,42073);
+CheckMemberSize(struct _GValueArray,n_prealloced,4,6,42074);
+CheckOffset(struct _GValueArray,n_prealloced,8,6,42074);
 #elif __powerpc64__
-CheckTypeSize(GValueArray *,8, 11881, 9)
+CheckTypeSize(struct _GValueArray,24, 11879, 9);
+CheckMemberSize(struct _GValueArray,values,8,9,42073);
+CheckOffset(struct _GValueArray,values,8,9,42073);
+CheckMemberSize(struct _GValueArray,n_prealloced,4,9,42074);
+CheckOffset(struct _GValueArray,n_prealloced,16,9,42074);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GValueArray *,4, 11881, 10)
+CheckTypeSize(struct _GValueArray,12, 11879, 10);
+CheckMemberSize(struct _GValueArray,values,4,10,42073);
+CheckOffset(struct _GValueArray,values,4,10,42073);
+CheckMemberSize(struct _GValueArray,n_prealloced,4,10,42074);
+CheckOffset(struct _GValueArray,n_prealloced,8,10,42074);
 #elif __s390x__
-CheckTypeSize(GValueArray *,8, 11881, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11881,0);
-Msg("Find size of GValueArray * (11881)\n");
+CheckTypeSize(struct _GValueArray,24, 11879, 12);
+CheckMemberSize(struct _GValueArray,values,8,12,42073);
+CheckOffset(struct _GValueArray,values,8,12,42073);
+CheckMemberSize(struct _GValueArray,n_prealloced,4,12,42074);
+CheckOffset(struct _GValueArray,n_prealloced,16,12,42074);
+#elif 1
+CheckTypeSize(struct _GValueArray,0, 11879, 1);
+Msg("Missing member data for _GValueArray on All\n");
+CheckOffset(struct _GValueArray,n_values,0,1,42072);
+CheckOffset(struct _GValueArray,values,0,1,42073);
+CheckOffset(struct _GValueArray,n_prealloced,0,1,42074);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GEnumValue,12, 11882, 2)
-CheckMemberSize(struct _GEnumValue,value_name,4,2,42076)
-CheckOffset(struct _GEnumValue,value_name,4,2,42076)
-CheckMemberSize(struct _GEnumValue,value_nick,4,2,42077)
-CheckOffset(struct _GEnumValue,value_nick,8,2,42077)
+CheckTypeSize(GValueArray,12, 11880, 2);
 #elif __x86_64__
-CheckTypeSize(struct _GEnumValue,24, 11882, 11)
-CheckMemberSize(struct _GEnumValue,value_name,8,11,42076)
-CheckOffset(struct _GEnumValue,value_name,8,11,42076)
-CheckMemberSize(struct _GEnumValue,value_nick,8,11,42077)
-CheckOffset(struct _GEnumValue,value_nick,16,11,42077)
+CheckTypeSize(GValueArray,24, 11880, 11);
 #elif __ia64__
-CheckTypeSize(struct _GEnumValue,24, 11882, 3)
-CheckMemberSize(struct _GEnumValue,value_name,8,3,42076)
-CheckOffset(struct _GEnumValue,value_name,8,3,42076)
-CheckMemberSize(struct _GEnumValue,value_nick,8,3,42077)
-CheckOffset(struct _GEnumValue,value_nick,16,3,42077)
+CheckTypeSize(GValueArray,24, 11880, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GEnumValue,12, 11882, 6)
-CheckMemberSize(struct _GEnumValue,value_name,4,6,42076)
-CheckOffset(struct _GEnumValue,value_name,4,6,42076)
-CheckMemberSize(struct _GEnumValue,value_nick,4,6,42077)
-CheckOffset(struct _GEnumValue,value_nick,8,6,42077)
+CheckTypeSize(GValueArray,12, 11880, 6);
 #elif __powerpc64__
-CheckTypeSize(struct _GEnumValue,24, 11882, 9)
-CheckMemberSize(struct _GEnumValue,value_name,8,9,42076)
-CheckOffset(struct _GEnumValue,value_name,8,9,42076)
-CheckMemberSize(struct _GEnumValue,value_nick,8,9,42077)
-CheckOffset(struct _GEnumValue,value_nick,16,9,42077)
+CheckTypeSize(GValueArray,24, 11880, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GEnumValue,12, 11882, 10)
-CheckMemberSize(struct _GEnumValue,value_name,4,10,42076)
-CheckOffset(struct _GEnumValue,value_name,4,10,42076)
-CheckMemberSize(struct _GEnumValue,value_nick,4,10,42077)
-CheckOffset(struct _GEnumValue,value_nick,8,10,42077)
+CheckTypeSize(GValueArray,12, 11880, 10);
 #elif __s390x__
-CheckTypeSize(struct _GEnumValue,24, 11882, 12)
-CheckMemberSize(struct _GEnumValue,value_name,8,12,42076)
-CheckOffset(struct _GEnumValue,value_name,8,12,42076)
-CheckMemberSize(struct _GEnumValue,value_nick,8,12,42077)
-CheckOffset(struct _GEnumValue,value_nick,16,12,42077)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11882,0);
-Msg("Find size of _GEnumValue (11882)\n");
+CheckTypeSize(GValueArray,24, 11880, 12);
+#elif 1
+CheckTypeSize(GValueArray,0, 11880, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GEnumValue,12, 11883, 2)
+CheckTypeSize(GValueArray *,4, 11881, 2);
 #elif __x86_64__
-CheckTypeSize(GEnumValue,24, 11883, 11)
+CheckTypeSize(GValueArray *,8, 11881, 11);
 #elif __ia64__
-CheckTypeSize(GEnumValue,24, 11883, 3)
+CheckTypeSize(GValueArray *,8, 11881, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GEnumValue,12, 11883, 6)
+CheckTypeSize(GValueArray *,4, 11881, 6);
 #elif __powerpc64__
-CheckTypeSize(GEnumValue,24, 11883, 9)
+CheckTypeSize(GValueArray *,8, 11881, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GEnumValue,12, 11883, 10)
+CheckTypeSize(GValueArray *,4, 11881, 10);
 #elif __s390x__
-CheckTypeSize(GEnumValue,24, 11883, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11883,0);
-Msg("Find size of GEnumValue (11883)\n");
+CheckTypeSize(GValueArray *,8, 11881, 12);
+#elif 1
+CheckTypeSize(GValueArray *,0, 11881, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GEnumValue *,4, 11884, 2)
+CheckTypeSize(struct _GEnumValue,12, 11882, 2);
+CheckMemberSize(struct _GEnumValue,value_name,4,2,42076);
+CheckOffset(struct _GEnumValue,value_name,4,2,42076);
+CheckMemberSize(struct _GEnumValue,value_nick,4,2,42077);
+CheckOffset(struct _GEnumValue,value_nick,8,2,42077);
 #elif __x86_64__
-CheckTypeSize(GEnumValue *,8, 11884, 11)
+CheckTypeSize(struct _GEnumValue,24, 11882, 11);
+CheckMemberSize(struct _GEnumValue,value_name,8,11,42076);
+CheckOffset(struct _GEnumValue,value_name,8,11,42076);
+CheckMemberSize(struct _GEnumValue,value_nick,8,11,42077);
+CheckOffset(struct _GEnumValue,value_nick,16,11,42077);
 #elif __ia64__
-CheckTypeSize(GEnumValue *,8, 11884, 3)
+CheckTypeSize(struct _GEnumValue,24, 11882, 3);
+CheckMemberSize(struct _GEnumValue,value_name,8,3,42076);
+CheckOffset(struct _GEnumValue,value_name,8,3,42076);
+CheckMemberSize(struct _GEnumValue,value_nick,8,3,42077);
+CheckOffset(struct _GEnumValue,value_nick,16,3,42077);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GEnumValue *,4, 11884, 6)
+CheckTypeSize(struct _GEnumValue,12, 11882, 6);
+CheckMemberSize(struct _GEnumValue,value_name,4,6,42076);
+CheckOffset(struct _GEnumValue,value_name,4,6,42076);
+CheckMemberSize(struct _GEnumValue,value_nick,4,6,42077);
+CheckOffset(struct _GEnumValue,value_nick,8,6,42077);
 #elif __powerpc64__
-CheckTypeSize(GEnumValue *,8, 11884, 9)
+CheckTypeSize(struct _GEnumValue,24, 11882, 9);
+CheckMemberSize(struct _GEnumValue,value_name,8,9,42076);
+CheckOffset(struct _GEnumValue,value_name,8,9,42076);
+CheckMemberSize(struct _GEnumValue,value_nick,8,9,42077);
+CheckOffset(struct _GEnumValue,value_nick,16,9,42077);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GEnumValue *,4, 11884, 10)
+CheckTypeSize(struct _GEnumValue,12, 11882, 10);
+CheckMemberSize(struct _GEnumValue,value_name,4,10,42076);
+CheckOffset(struct _GEnumValue,value_name,4,10,42076);
+CheckMemberSize(struct _GEnumValue,value_nick,4,10,42077);
+CheckOffset(struct _GEnumValue,value_nick,8,10,42077);
 #elif __s390x__
-CheckTypeSize(GEnumValue *,8, 11884, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11884,0);
-Msg("Find size of GEnumValue * (11884)\n");
+CheckTypeSize(struct _GEnumValue,24, 11882, 12);
+CheckMemberSize(struct _GEnumValue,value_name,8,12,42076);
+CheckOffset(struct _GEnumValue,value_name,8,12,42076);
+CheckMemberSize(struct _GEnumValue,value_nick,8,12,42077);
+CheckOffset(struct _GEnumValue,value_nick,16,12,42077);
+#elif 1
+CheckTypeSize(struct _GEnumValue,0, 11882, 1);
+Msg("Missing member data for _GEnumValue on All\n");
+CheckOffset(struct _GEnumValue,value,0,1,42075);
+CheckOffset(struct _GEnumValue,value_name,0,1,42076);
+CheckOffset(struct _GEnumValue,value_nick,0,1,42077);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GEnumClass,20, 11885, 2)
-CheckMemberSize(struct _GEnumClass,minimum,4,2,42079)
-CheckOffset(struct _GEnumClass,minimum,4,2,42079)
-CheckMemberSize(struct _GEnumClass,maximum,4,2,42080)
-CheckOffset(struct _GEnumClass,maximum,8,2,42080)
-CheckMemberSize(struct _GEnumClass,n_values,4,2,42081)
-CheckOffset(struct _GEnumClass,n_values,12,2,42081)
-CheckMemberSize(struct _GEnumClass,values,4,2,42082)
-CheckOffset(struct _GEnumClass,values,16,2,42082)
+CheckTypeSize(GEnumValue,12, 11883, 2);
 #elif __x86_64__
-CheckTypeSize(struct _GEnumClass,32, 11885, 11)
-CheckMemberSize(struct _GEnumClass,minimum,4,11,42079)
-CheckOffset(struct _GEnumClass,minimum,8,11,42079)
-CheckMemberSize(struct _GEnumClass,maximum,4,11,42080)
-CheckOffset(struct _GEnumClass,maximum,12,11,42080)
-CheckMemberSize(struct _GEnumClass,n_values,4,11,42081)
-CheckOffset(struct _GEnumClass,n_values,16,11,42081)
-CheckMemberSize(struct _GEnumClass,values,8,11,42082)
-CheckOffset(struct _GEnumClass,values,24,11,42082)
+CheckTypeSize(GEnumValue,24, 11883, 11);
 #elif __ia64__
-CheckTypeSize(struct _GEnumClass,32, 11885, 3)
-CheckMemberSize(struct _GEnumClass,minimum,4,3,42079)
-CheckOffset(struct _GEnumClass,minimum,8,3,42079)
-CheckMemberSize(struct _GEnumClass,maximum,4,3,42080)
-CheckOffset(struct _GEnumClass,maximum,12,3,42080)
-CheckMemberSize(struct _GEnumClass,n_values,4,3,42081)
-CheckOffset(struct _GEnumClass,n_values,16,3,42081)
-CheckMemberSize(struct _GEnumClass,values,8,3,42082)
-CheckOffset(struct _GEnumClass,values,24,3,42082)
+CheckTypeSize(GEnumValue,24, 11883, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GEnumClass,20, 11885, 6)
-CheckMemberSize(struct _GEnumClass,minimum,4,6,42079)
-CheckOffset(struct _GEnumClass,minimum,4,6,42079)
-CheckMemberSize(struct _GEnumClass,maximum,4,6,42080)
-CheckOffset(struct _GEnumClass,maximum,8,6,42080)
-CheckMemberSize(struct _GEnumClass,n_values,4,6,42081)
-CheckOffset(struct _GEnumClass,n_values,12,6,42081)
-CheckMemberSize(struct _GEnumClass,values,4,6,42082)
-CheckOffset(struct _GEnumClass,values,16,6,42082)
+CheckTypeSize(GEnumValue,12, 11883, 6);
 #elif __powerpc64__
-CheckTypeSize(struct _GEnumClass,32, 11885, 9)
-CheckMemberSize(struct _GEnumClass,minimum,4,9,42079)
-CheckOffset(struct _GEnumClass,minimum,8,9,42079)
-CheckMemberSize(struct _GEnumClass,maximum,4,9,42080)
-CheckOffset(struct _GEnumClass,maximum,12,9,42080)
-CheckMemberSize(struct _GEnumClass,n_values,4,9,42081)
-CheckOffset(struct _GEnumClass,n_values,16,9,42081)
-CheckMemberSize(struct _GEnumClass,values,8,9,42082)
-CheckOffset(struct _GEnumClass,values,24,9,42082)
+CheckTypeSize(GEnumValue,24, 11883, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GEnumClass,20, 11885, 10)
-CheckMemberSize(struct _GEnumClass,minimum,4,10,42079)
-CheckOffset(struct _GEnumClass,minimum,4,10,42079)
-CheckMemberSize(struct _GEnumClass,maximum,4,10,42080)
-CheckOffset(struct _GEnumClass,maximum,8,10,42080)
-CheckMemberSize(struct _GEnumClass,n_values,4,10,42081)
-CheckOffset(struct _GEnumClass,n_values,12,10,42081)
-CheckMemberSize(struct _GEnumClass,values,4,10,42082)
-CheckOffset(struct _GEnumClass,values,16,10,42082)
+CheckTypeSize(GEnumValue,12, 11883, 10);
 #elif __s390x__
-CheckTypeSize(struct _GEnumClass,32, 11885, 12)
-CheckMemberSize(struct _GEnumClass,minimum,4,12,42079)
-CheckOffset(struct _GEnumClass,minimum,8,12,42079)
-CheckMemberSize(struct _GEnumClass,maximum,4,12,42080)
-CheckOffset(struct _GEnumClass,maximum,12,12,42080)
-CheckMemberSize(struct _GEnumClass,n_values,4,12,42081)
-CheckOffset(struct _GEnumClass,n_values,16,12,42081)
-CheckMemberSize(struct _GEnumClass,values,8,12,42082)
-CheckOffset(struct _GEnumClass,values,24,12,42082)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11885,0);
-Msg("Find size of _GEnumClass (11885)\n");
+CheckTypeSize(GEnumValue,24, 11883, 12);
+#elif 1
+CheckTypeSize(GEnumValue,0, 11883, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GEnumClass,20, 11886, 2)
+CheckTypeSize(GEnumValue *,4, 11884, 2);
 #elif __x86_64__
-CheckTypeSize(GEnumClass,32, 11886, 11)
+CheckTypeSize(GEnumValue *,8, 11884, 11);
 #elif __ia64__
-CheckTypeSize(GEnumClass,32, 11886, 3)
+CheckTypeSize(GEnumValue *,8, 11884, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GEnumClass,20, 11886, 6)
+CheckTypeSize(GEnumValue *,4, 11884, 6);
 #elif __powerpc64__
-CheckTypeSize(GEnumClass,32, 11886, 9)
+CheckTypeSize(GEnumValue *,8, 11884, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GEnumClass,20, 11886, 10)
+CheckTypeSize(GEnumValue *,4, 11884, 10);
 #elif __s390x__
-CheckTypeSize(GEnumClass,32, 11886, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11886,0);
-Msg("Find size of GEnumClass (11886)\n");
+CheckTypeSize(GEnumValue *,8, 11884, 12);
+#elif 1
+CheckTypeSize(GEnumValue *,0, 11884, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GEnumClass *,4, 11887, 2)
+CheckTypeSize(struct _GEnumClass,20, 11885, 2);
+CheckMemberSize(struct _GEnumClass,minimum,4,2,42079);
+CheckOffset(struct _GEnumClass,minimum,4,2,42079);
+CheckMemberSize(struct _GEnumClass,maximum,4,2,42080);
+CheckOffset(struct _GEnumClass,maximum,8,2,42080);
+CheckMemberSize(struct _GEnumClass,n_values,4,2,42081);
+CheckOffset(struct _GEnumClass,n_values,12,2,42081);
+CheckMemberSize(struct _GEnumClass,values,4,2,42082);
+CheckOffset(struct _GEnumClass,values,16,2,42082);
 #elif __x86_64__
-CheckTypeSize(GEnumClass *,8, 11887, 11)
+CheckTypeSize(struct _GEnumClass,32, 11885, 11);
+CheckMemberSize(struct _GEnumClass,minimum,4,11,42079);
+CheckOffset(struct _GEnumClass,minimum,8,11,42079);
+CheckMemberSize(struct _GEnumClass,maximum,4,11,42080);
+CheckOffset(struct _GEnumClass,maximum,12,11,42080);
+CheckMemberSize(struct _GEnumClass,n_values,4,11,42081);
+CheckOffset(struct _GEnumClass,n_values,16,11,42081);
+CheckMemberSize(struct _GEnumClass,values,8,11,42082);
+CheckOffset(struct _GEnumClass,values,24,11,42082);
 #elif __ia64__
-CheckTypeSize(GEnumClass *,8, 11887, 3)
+CheckTypeSize(struct _GEnumClass,32, 11885, 3);
+CheckMemberSize(struct _GEnumClass,minimum,4,3,42079);
+CheckOffset(struct _GEnumClass,minimum,8,3,42079);
+CheckMemberSize(struct _GEnumClass,maximum,4,3,42080);
+CheckOffset(struct _GEnumClass,maximum,12,3,42080);
+CheckMemberSize(struct _GEnumClass,n_values,4,3,42081);
+CheckOffset(struct _GEnumClass,n_values,16,3,42081);
+CheckMemberSize(struct _GEnumClass,values,8,3,42082);
+CheckOffset(struct _GEnumClass,values,24,3,42082);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GEnumClass *,4, 11887, 6)
+CheckTypeSize(struct _GEnumClass,20, 11885, 6);
+CheckMemberSize(struct _GEnumClass,minimum,4,6,42079);
+CheckOffset(struct _GEnumClass,minimum,4,6,42079);
+CheckMemberSize(struct _GEnumClass,maximum,4,6,42080);
+CheckOffset(struct _GEnumClass,maximum,8,6,42080);
+CheckMemberSize(struct _GEnumClass,n_values,4,6,42081);
+CheckOffset(struct _GEnumClass,n_values,12,6,42081);
+CheckMemberSize(struct _GEnumClass,values,4,6,42082);
+CheckOffset(struct _GEnumClass,values,16,6,42082);
 #elif __powerpc64__
-CheckTypeSize(GEnumClass *,8, 11887, 9)
+CheckTypeSize(struct _GEnumClass,32, 11885, 9);
+CheckMemberSize(struct _GEnumClass,minimum,4,9,42079);
+CheckOffset(struct _GEnumClass,minimum,8,9,42079);
+CheckMemberSize(struct _GEnumClass,maximum,4,9,42080);
+CheckOffset(struct _GEnumClass,maximum,12,9,42080);
+CheckMemberSize(struct _GEnumClass,n_values,4,9,42081);
+CheckOffset(struct _GEnumClass,n_values,16,9,42081);
+CheckMemberSize(struct _GEnumClass,values,8,9,42082);
+CheckOffset(struct _GEnumClass,values,24,9,42082);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GEnumClass *,4, 11887, 10)
+CheckTypeSize(struct _GEnumClass,20, 11885, 10);
+CheckMemberSize(struct _GEnumClass,minimum,4,10,42079);
+CheckOffset(struct _GEnumClass,minimum,4,10,42079);
+CheckMemberSize(struct _GEnumClass,maximum,4,10,42080);
+CheckOffset(struct _GEnumClass,maximum,8,10,42080);
+CheckMemberSize(struct _GEnumClass,n_values,4,10,42081);
+CheckOffset(struct _GEnumClass,n_values,12,10,42081);
+CheckMemberSize(struct _GEnumClass,values,4,10,42082);
+CheckOffset(struct _GEnumClass,values,16,10,42082);
 #elif __s390x__
-CheckTypeSize(GEnumClass *,8, 11887, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11887,0);
-Msg("Find size of GEnumClass * (11887)\n");
+CheckTypeSize(struct _GEnumClass,32, 11885, 12);
+CheckMemberSize(struct _GEnumClass,minimum,4,12,42079);
+CheckOffset(struct _GEnumClass,minimum,8,12,42079);
+CheckMemberSize(struct _GEnumClass,maximum,4,12,42080);
+CheckOffset(struct _GEnumClass,maximum,12,12,42080);
+CheckMemberSize(struct _GEnumClass,n_values,4,12,42081);
+CheckOffset(struct _GEnumClass,n_values,16,12,42081);
+CheckMemberSize(struct _GEnumClass,values,8,12,42082);
+CheckOffset(struct _GEnumClass,values,24,12,42082);
+#elif 1
+CheckTypeSize(struct _GEnumClass,0, 11885, 1);
+Msg("Missing member data for _GEnumClass on All\n");
+CheckOffset(struct _GEnumClass,g_type_class,0,1,42078);
+CheckOffset(struct _GEnumClass,minimum,0,1,42079);
+CheckOffset(struct _GEnumClass,maximum,0,1,42080);
+CheckOffset(struct _GEnumClass,n_values,0,1,42081);
+CheckOffset(struct _GEnumClass,values,0,1,42082);
 #endif
 
 #if __i386__
-CheckTypeSize(GParamSpecPool,0, 11889, 2)
+CheckTypeSize(GEnumClass,20, 11886, 2);
 #elif __x86_64__
-CheckTypeSize(GParamSpecPool,0, 11889, 11)
+CheckTypeSize(GEnumClass,32, 11886, 11);
 #elif __ia64__
-CheckTypeSize(GParamSpecPool,0, 11889, 3)
+CheckTypeSize(GEnumClass,32, 11886, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpecPool,0, 11889, 6)
+CheckTypeSize(GEnumClass,20, 11886, 6);
 #elif __powerpc64__
-CheckTypeSize(GParamSpecPool,0, 11889, 9)
+CheckTypeSize(GEnumClass,32, 11886, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpecPool,0, 11889, 10)
+CheckTypeSize(GEnumClass,20, 11886, 10);
 #elif __s390x__
-CheckTypeSize(GParamSpecPool,0, 11889, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11889,0);
-Msg("Find size of GParamSpecPool (11889)\n");
+CheckTypeSize(GEnumClass,32, 11886, 12);
+#elif 1
+CheckTypeSize(GEnumClass,0, 11886, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GParamSpecPool *,4, 11890, 2)
+CheckTypeSize(GEnumClass *,4, 11887, 2);
 #elif __x86_64__
-CheckTypeSize(GParamSpecPool *,8, 11890, 11)
+CheckTypeSize(GEnumClass *,8, 11887, 11);
 #elif __ia64__
-CheckTypeSize(GParamSpecPool *,8, 11890, 3)
+CheckTypeSize(GEnumClass *,8, 11887, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpecPool *,4, 11890, 6)
+CheckTypeSize(GEnumClass *,4, 11887, 6);
 #elif __powerpc64__
-CheckTypeSize(GParamSpecPool *,8, 11890, 9)
+CheckTypeSize(GEnumClass *,8, 11887, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpecPool *,4, 11890, 10)
+CheckTypeSize(GEnumClass *,4, 11887, 10);
 #elif __s390x__
-CheckTypeSize(GParamSpecPool *,8, 11890, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11890,0);
-Msg("Find size of GParamSpecPool * (11890)\n");
+CheckTypeSize(GEnumClass *,8, 11887, 12);
+#elif 1
+CheckTypeSize(GEnumClass *,0, 11887, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(GParamSpecPool,0, 11889, 2);
+#elif __x86_64__
+CheckTypeSize(GParamSpecPool,0, 11889, 11);
+#elif __ia64__
+CheckTypeSize(GParamSpecPool,0, 11889, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GParamSpecPool,0, 11889, 6);
+#elif __powerpc64__
+CheckTypeSize(GParamSpecPool,0, 11889, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GParamSpecPool,0, 11889, 10);
+#elif __s390x__
+CheckTypeSize(GParamSpecPool,0, 11889, 12);
+#elif 1
+CheckTypeSize(GParamSpecPool,0, 11889, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(GParamSpecPool *,4, 11890, 2);
+#elif __x86_64__
+CheckTypeSize(GParamSpecPool *,8, 11890, 11);
+#elif __ia64__
+CheckTypeSize(GParamSpecPool *,8, 11890, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GParamSpecPool *,4, 11890, 6);
+#elif __powerpc64__
+CheckTypeSize(GParamSpecPool *,8, 11890, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GParamSpecPool *,4, 11890, 10);
+#elif __s390x__
+CheckTypeSize(GParamSpecPool *,8, 11890, 12);
+#elif 1
+CheckTypeSize(GParamSpecPool *,0, 11890, 1);
 #endif
 
 #if __i386__
@@ -2503,192 +2505,83 @@ CheckEnum("G_TYPE_DEBUG_NONE",G_TYPE_DEBUG_NONE,0,42083);
 CheckEnum("G_TYPE_DEBUG_OBJECTS",G_TYPE_DEBUG_OBJECTS,1,42084);
 CheckEnum("G_TYPE_DEBUG_SIGNALS",G_TYPE_DEBUG_SIGNALS,2,42085);
 CheckEnum("G_TYPE_DEBUG_MASK",G_TYPE_DEBUG_MASK,3,42086);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11891,0);
-Msg("Find size of anon-glib-2.0/glib-object.h-47 (11891)\n");
+#elif 1
+CheckEnum("G_TYPE_DEBUG_NONE",G_TYPE_DEBUG_NONE,0,42083);
+CheckEnum("G_TYPE_DEBUG_OBJECTS",G_TYPE_DEBUG_OBJECTS,1,42084);
+CheckEnum("G_TYPE_DEBUG_SIGNALS",G_TYPE_DEBUG_SIGNALS,2,42085);
+CheckEnum("G_TYPE_DEBUG_MASK",G_TYPE_DEBUG_MASK,3,42086);
 #endif
 
 #if __i386__
-CheckTypeSize(GTypeDebugFlags,4, 11892, 2)
+CheckTypeSize(GTypeDebugFlags,4, 11892, 2);
 #elif __x86_64__
-CheckTypeSize(GTypeDebugFlags,4, 11892, 11)
+CheckTypeSize(GTypeDebugFlags,4, 11892, 11);
 #elif __ia64__
-CheckTypeSize(GTypeDebugFlags,4, 11892, 3)
+CheckTypeSize(GTypeDebugFlags,4, 11892, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypeDebugFlags,4, 11892, 6)
+CheckTypeSize(GTypeDebugFlags,4, 11892, 6);
 #elif __powerpc64__
-CheckTypeSize(GTypeDebugFlags,4, 11892, 9)
+CheckTypeSize(GTypeDebugFlags,4, 11892, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GTypeDebugFlags,4, 11892, 10)
+CheckTypeSize(GTypeDebugFlags,4, 11892, 10);
 #elif __s390x__
-CheckTypeSize(GTypeDebugFlags,4, 11892, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11892,0);
-Msg("Find size of GTypeDebugFlags (11892)\n");
+CheckTypeSize(GTypeDebugFlags,4, 11892, 12);
+#elif 1
+CheckTypeSize(GTypeDebugFlags,0, 11892, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GType *,4, 11893, 2)
+CheckTypeSize(GType *,4, 11893, 2);
 #elif __x86_64__
-CheckTypeSize(GType *,8, 11893, 11)
+CheckTypeSize(GType *,8, 11893, 11);
 #elif __ia64__
-CheckTypeSize(GType *,8, 11893, 3)
+CheckTypeSize(GType *,8, 11893, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GType *,4, 11893, 6)
+CheckTypeSize(GType *,4, 11893, 6);
 #elif __powerpc64__
-CheckTypeSize(GType *,8, 11893, 9)
+CheckTypeSize(GType *,8, 11893, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GType *,4, 11893, 10)
+CheckTypeSize(GType *,4, 11893, 10);
 #elif __s390x__
-CheckTypeSize(GType *,8, 11893, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11893,0);
-Msg("Find size of GType * (11893)\n");
+CheckTypeSize(GType *,8, 11893, 12);
+#elif 1
+CheckTypeSize(GType *,0, 11893, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(guint *,4, 11894, 2)
+CheckTypeSize(guint *,4, 11894, 2);
 #elif __x86_64__
-CheckTypeSize(guint *,8, 11894, 11)
+CheckTypeSize(guint *,8, 11894, 11);
 #elif __ia64__
-CheckTypeSize(guint *,8, 11894, 3)
+CheckTypeSize(guint *,8, 11894, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(guint *,4, 11894, 6)
+CheckTypeSize(guint *,4, 11894, 6);
 #elif __powerpc64__
-CheckTypeSize(guint *,8, 11894, 9)
+CheckTypeSize(guint *,8, 11894, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(guint *,4, 11894, 10)
+CheckTypeSize(guint *,4, 11894, 10);
 #elif __s390x__
-CheckTypeSize(guint *,8, 11894, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11894,0);
-Msg("Find size of guint * (11894)\n");
+CheckTypeSize(guint *,8, 11894, 12);
+#elif 1
+CheckTypeSize(guint *,0, 11894, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(const GValueArray,12, 11895, 2)
+CheckTypeSize(const GValueArray,12, 11895, 2);
 #elif __x86_64__
-CheckTypeSize(const GValueArray,24, 11895, 11)
+CheckTypeSize(const GValueArray,24, 11895, 11);
 #elif __ia64__
-CheckTypeSize(const GValueArray,24, 11895, 3)
+CheckTypeSize(const GValueArray,24, 11895, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(const GValueArray,12, 11895, 6)
+CheckTypeSize(const GValueArray,12, 11895, 6);
 #elif __powerpc64__
-CheckTypeSize(const GValueArray,24, 11895, 9)
+CheckTypeSize(const GValueArray,24, 11895, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(const GValueArray,12, 11895, 10)
+CheckTypeSize(const GValueArray,12, 11895, 10);
 #elif __s390x__
-CheckTypeSize(const GValueArray,24, 11895, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11895,0);
-Msg("Find size of const GValueArray (11895)\n");
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11896,0);
-Msg("Find size of const GValueArray * (11896)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GTypeInstance *,4, 11897, 2)
-#elif __x86_64__
-CheckTypeSize(GTypeInstance *,8, 11897, 11)
-#elif __ia64__
-CheckTypeSize(GTypeInstance *,8, 11897, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypeInstance *,4, 11897, 6)
-#elif __powerpc64__
-CheckTypeSize(GTypeInstance *,8, 11897, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GTypeInstance *,4, 11897, 10)
-#elif __s390x__
-CheckTypeSize(GTypeInstance *,8, 11897, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11897,0);
-Msg("Find size of GTypeInstance * (11897)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GTypePlugin,0, 11899, 2)
-#elif __x86_64__
-CheckTypeSize(GTypePlugin,0, 11899, 11)
-#elif __ia64__
-CheckTypeSize(GTypePlugin,0, 11899, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypePlugin,0, 11899, 6)
-#elif __powerpc64__
-CheckTypeSize(GTypePlugin,0, 11899, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GTypePlugin,0, 11899, 10)
-#elif __s390x__
-CheckTypeSize(GTypePlugin,0, 11899, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11899,0);
-Msg("Find size of GTypePlugin (11899)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GTypePlugin *,4, 11900, 2)
-#elif __x86_64__
-CheckTypeSize(GTypePlugin *,8, 11900, 11)
-#elif __ia64__
-CheckTypeSize(GTypePlugin *,8, 11900, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypePlugin *,4, 11900, 6)
-#elif __powerpc64__
-CheckTypeSize(GTypePlugin *,8, 11900, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GTypePlugin *,4, 11900, 10)
-#elif __s390x__
-CheckTypeSize(GTypePlugin *,8, 11900, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11900,0);
-Msg("Find size of GTypePlugin * (11900)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GQuark *,4, 11901, 2)
-#elif __x86_64__
-CheckTypeSize(GQuark *,8, 11901, 11)
-#elif __ia64__
-CheckTypeSize(GQuark *,8, 11901, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GQuark *,4, 11901, 6)
-#elif __powerpc64__
-CheckTypeSize(GQuark *,8, 11901, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GQuark *,4, 11901, 10)
-#elif __s390x__
-CheckTypeSize(GQuark *,8, 11901, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11901,0);
-Msg("Find size of GQuark * (11901)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(const GEnumValue,12, 11902, 2)
-#elif __x86_64__
-CheckTypeSize(const GEnumValue,24, 11902, 11)
-#elif __ia64__
-CheckTypeSize(const GEnumValue,24, 11902, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(const GEnumValue,12, 11902, 6)
-#elif __powerpc64__
-CheckTypeSize(const GEnumValue,24, 11902, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(const GEnumValue,12, 11902, 10)
-#elif __s390x__
-CheckTypeSize(const GEnumValue,24, 11902, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11902,0);
-Msg("Find size of const GEnumValue (11902)\n");
+CheckTypeSize(const GValueArray,24, 11895, 12);
+#elif 1
+CheckTypeSize(const GValueArray,0, 11895, 1);
 #endif
 
 #if __i386__
@@ -2698,9 +2591,107 @@ Msg("Find size of const GEnumValue (11902)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11903,0);
-Msg("Find size of const GEnumValue * (11903)\n");
+#elif 1
+#endif
+
+#if __i386__
+CheckTypeSize(GTypeInstance *,4, 11897, 2);
+#elif __x86_64__
+CheckTypeSize(GTypeInstance *,8, 11897, 11);
+#elif __ia64__
+CheckTypeSize(GTypeInstance *,8, 11897, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GTypeInstance *,4, 11897, 6);
+#elif __powerpc64__
+CheckTypeSize(GTypeInstance *,8, 11897, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GTypeInstance *,4, 11897, 10);
+#elif __s390x__
+CheckTypeSize(GTypeInstance *,8, 11897, 12);
+#elif 1
+CheckTypeSize(GTypeInstance *,0, 11897, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(GTypePlugin,0, 11899, 2);
+#elif __x86_64__
+CheckTypeSize(GTypePlugin,0, 11899, 11);
+#elif __ia64__
+CheckTypeSize(GTypePlugin,0, 11899, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GTypePlugin,0, 11899, 6);
+#elif __powerpc64__
+CheckTypeSize(GTypePlugin,0, 11899, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GTypePlugin,0, 11899, 10);
+#elif __s390x__
+CheckTypeSize(GTypePlugin,0, 11899, 12);
+#elif 1
+CheckTypeSize(GTypePlugin,0, 11899, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(GTypePlugin *,4, 11900, 2);
+#elif __x86_64__
+CheckTypeSize(GTypePlugin *,8, 11900, 11);
+#elif __ia64__
+CheckTypeSize(GTypePlugin *,8, 11900, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GTypePlugin *,4, 11900, 6);
+#elif __powerpc64__
+CheckTypeSize(GTypePlugin *,8, 11900, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GTypePlugin *,4, 11900, 10);
+#elif __s390x__
+CheckTypeSize(GTypePlugin *,8, 11900, 12);
+#elif 1
+CheckTypeSize(GTypePlugin *,0, 11900, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(GQuark *,4, 11901, 2);
+#elif __x86_64__
+CheckTypeSize(GQuark *,8, 11901, 11);
+#elif __ia64__
+CheckTypeSize(GQuark *,8, 11901, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GQuark *,4, 11901, 6);
+#elif __powerpc64__
+CheckTypeSize(GQuark *,8, 11901, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GQuark *,4, 11901, 10);
+#elif __s390x__
+CheckTypeSize(GQuark *,8, 11901, 12);
+#elif 1
+CheckTypeSize(GQuark *,0, 11901, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(const GEnumValue,12, 11902, 2);
+#elif __x86_64__
+CheckTypeSize(const GEnumValue,24, 11902, 11);
+#elif __ia64__
+CheckTypeSize(const GEnumValue,24, 11902, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const GEnumValue,12, 11902, 6);
+#elif __powerpc64__
+CheckTypeSize(const GEnumValue,24, 11902, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(const GEnumValue,12, 11902, 10);
+#elif __s390x__
+CheckTypeSize(const GEnumValue,24, 11902, 12);
+#elif 1
+CheckTypeSize(const GEnumValue,0, 11902, 1);
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
+#elif 1
 #endif
 
 #if __i386__
@@ -2752,281 +2743,117 @@ CheckEnum("G_SIGNAL_MATCH_CLOSURE",G_SIGNAL_MATCH_CLOSURE,4,42089);
 CheckEnum("G_SIGNAL_MATCH_FUNC",G_SIGNAL_MATCH_FUNC,8,42090);
 CheckEnum("G_SIGNAL_MATCH_DATA",G_SIGNAL_MATCH_DATA,16,42091);
 CheckEnum("G_SIGNAL_MATCH_UNBLOCKED",G_SIGNAL_MATCH_UNBLOCKED,32,42092);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11904,0);
-Msg("Find size of anon-glib-2.0/glib-object.h-32 (11904)\n");
+#elif 1
+CheckEnum("G_SIGNAL_MATCH_ID",G_SIGNAL_MATCH_ID,1,42087);
+CheckEnum("G_SIGNAL_MATCH_DETAIL",G_SIGNAL_MATCH_DETAIL,2,42088);
+CheckEnum("G_SIGNAL_MATCH_CLOSURE",G_SIGNAL_MATCH_CLOSURE,4,42089);
+CheckEnum("G_SIGNAL_MATCH_FUNC",G_SIGNAL_MATCH_FUNC,8,42090);
+CheckEnum("G_SIGNAL_MATCH_DATA",G_SIGNAL_MATCH_DATA,16,42091);
+CheckEnum("G_SIGNAL_MATCH_UNBLOCKED",G_SIGNAL_MATCH_UNBLOCKED,32,42092);
 #endif
 
 #if __i386__
-CheckTypeSize(GSignalMatchType,4, 11905, 2)
+CheckTypeSize(GSignalMatchType,4, 11905, 2);
 #elif __x86_64__
-CheckTypeSize(GSignalMatchType,4, 11905, 11)
+CheckTypeSize(GSignalMatchType,4, 11905, 11);
 #elif __ia64__
-CheckTypeSize(GSignalMatchType,4, 11905, 3)
+CheckTypeSize(GSignalMatchType,4, 11905, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GSignalMatchType,4, 11905, 6)
+CheckTypeSize(GSignalMatchType,4, 11905, 6);
 #elif __powerpc64__
-CheckTypeSize(GSignalMatchType,4, 11905, 9)
+CheckTypeSize(GSignalMatchType,4, 11905, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GSignalMatchType,4, 11905, 10)
+CheckTypeSize(GSignalMatchType,4, 11905, 10);
 #elif __s390x__
-CheckTypeSize(GSignalMatchType,4, 11905, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11905,0);
-Msg("Find size of GSignalMatchType (11905)\n");
+CheckTypeSize(GSignalMatchType,4, 11905, 12);
+#elif 1
+CheckTypeSize(GSignalMatchType,0, 11905, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GFlagsValue,12, 11906, 2)
-CheckMemberSize(struct _GFlagsValue,value_name,4,2,42094)
-CheckOffset(struct _GFlagsValue,value_name,4,2,42094)
-CheckMemberSize(struct _GFlagsValue,value_nick,4,2,42095)
-CheckOffset(struct _GFlagsValue,value_nick,8,2,42095)
+CheckTypeSize(struct _GFlagsValue,12, 11906, 2);
+CheckMemberSize(struct _GFlagsValue,value_name,4,2,42094);
+CheckOffset(struct _GFlagsValue,value_name,4,2,42094);
+CheckMemberSize(struct _GFlagsValue,value_nick,4,2,42095);
+CheckOffset(struct _GFlagsValue,value_nick,8,2,42095);
 #elif __x86_64__
-CheckTypeSize(struct _GFlagsValue,24, 11906, 11)
-CheckMemberSize(struct _GFlagsValue,value_name,8,11,42094)
-CheckOffset(struct _GFlagsValue,value_name,8,11,42094)
-CheckMemberSize(struct _GFlagsValue,value_nick,8,11,42095)
-CheckOffset(struct _GFlagsValue,value_nick,16,11,42095)
+CheckTypeSize(struct _GFlagsValue,24, 11906, 11);
+CheckMemberSize(struct _GFlagsValue,value_name,8,11,42094);
+CheckOffset(struct _GFlagsValue,value_name,8,11,42094);
+CheckMemberSize(struct _GFlagsValue,value_nick,8,11,42095);
+CheckOffset(struct _GFlagsValue,value_nick,16,11,42095);
 #elif __ia64__
-CheckTypeSize(struct _GFlagsValue,24, 11906, 3)
-CheckMemberSize(struct _GFlagsValue,value_name,8,3,42094)
-CheckOffset(struct _GFlagsValue,value_name,8,3,42094)
-CheckMemberSize(struct _GFlagsValue,value_nick,8,3,42095)
-CheckOffset(struct _GFlagsValue,value_nick,16,3,42095)
+CheckTypeSize(struct _GFlagsValue,24, 11906, 3);
+CheckMemberSize(struct _GFlagsValue,value_name,8,3,42094);
+CheckOffset(struct _GFlagsValue,value_name,8,3,42094);
+CheckMemberSize(struct _GFlagsValue,value_nick,8,3,42095);
+CheckOffset(struct _GFlagsValue,value_nick,16,3,42095);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GFlagsValue,12, 11906, 6)
-CheckMemberSize(struct _GFlagsValue,value_name,4,6,42094)
-CheckOffset(struct _GFlagsValue,value_name,4,6,42094)
-CheckMemberSize(struct _GFlagsValue,value_nick,4,6,42095)
-CheckOffset(struct _GFlagsValue,value_nick,8,6,42095)
+CheckTypeSize(struct _GFlagsValue,12, 11906, 6);
+CheckMemberSize(struct _GFlagsValue,value_name,4,6,42094);
+CheckOffset(struct _GFlagsValue,value_name,4,6,42094);
+CheckMemberSize(struct _GFlagsValue,value_nick,4,6,42095);
+CheckOffset(struct _GFlagsValue,value_nick,8,6,42095);
 #elif __powerpc64__
-CheckTypeSize(struct _GFlagsValue,24, 11906, 9)
-CheckMemberSize(struct _GFlagsValue,value_name,8,9,42094)
-CheckOffset(struct _GFlagsValue,value_name,8,9,42094)
-CheckMemberSize(struct _GFlagsValue,value_nick,8,9,42095)
-CheckOffset(struct _GFlagsValue,value_nick,16,9,42095)
+CheckTypeSize(struct _GFlagsValue,24, 11906, 9);
+CheckMemberSize(struct _GFlagsValue,value_name,8,9,42094);
+CheckOffset(struct _GFlagsValue,value_name,8,9,42094);
+CheckMemberSize(struct _GFlagsValue,value_nick,8,9,42095);
+CheckOffset(struct _GFlagsValue,value_nick,16,9,42095);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GFlagsValue,12, 11906, 10)
-CheckMemberSize(struct _GFlagsValue,value_name,4,10,42094)
-CheckOffset(struct _GFlagsValue,value_name,4,10,42094)
-CheckMemberSize(struct _GFlagsValue,value_nick,4,10,42095)
-CheckOffset(struct _GFlagsValue,value_nick,8,10,42095)
+CheckTypeSize(struct _GFlagsValue,12, 11906, 10);
+CheckMemberSize(struct _GFlagsValue,value_name,4,10,42094);
+CheckOffset(struct _GFlagsValue,value_name,4,10,42094);
+CheckMemberSize(struct _GFlagsValue,value_nick,4,10,42095);
+CheckOffset(struct _GFlagsValue,value_nick,8,10,42095);
 #elif __s390x__
-CheckTypeSize(struct _GFlagsValue,24, 11906, 12)
-CheckMemberSize(struct _GFlagsValue,value_name,8,12,42094)
-CheckOffset(struct _GFlagsValue,value_name,8,12,42094)
-CheckMemberSize(struct _GFlagsValue,value_nick,8,12,42095)
-CheckOffset(struct _GFlagsValue,value_nick,16,12,42095)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11906,0);
-Msg("Find size of _GFlagsValue (11906)\n");
+CheckTypeSize(struct _GFlagsValue,24, 11906, 12);
+CheckMemberSize(struct _GFlagsValue,value_name,8,12,42094);
+CheckOffset(struct _GFlagsValue,value_name,8,12,42094);
+CheckMemberSize(struct _GFlagsValue,value_nick,8,12,42095);
+CheckOffset(struct _GFlagsValue,value_nick,16,12,42095);
+#elif 1
+CheckTypeSize(struct _GFlagsValue,0, 11906, 1);
+Msg("Missing member data for _GFlagsValue on All\n");
+CheckOffset(struct _GFlagsValue,value,0,1,42093);
+CheckOffset(struct _GFlagsValue,value_name,0,1,42094);
+CheckOffset(struct _GFlagsValue,value_nick,0,1,42095);
 #endif
 
 #if __i386__
-CheckTypeSize(GFlagsValue,12, 11907, 2)
+CheckTypeSize(GFlagsValue,12, 11907, 2);
 #elif __x86_64__
-CheckTypeSize(GFlagsValue,24, 11907, 11)
+CheckTypeSize(GFlagsValue,24, 11907, 11);
 #elif __ia64__
-CheckTypeSize(GFlagsValue,24, 11907, 3)
+CheckTypeSize(GFlagsValue,24, 11907, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GFlagsValue,12, 11907, 6)
+CheckTypeSize(GFlagsValue,12, 11907, 6);
 #elif __powerpc64__
-CheckTypeSize(GFlagsValue,24, 11907, 9)
+CheckTypeSize(GFlagsValue,24, 11907, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GFlagsValue,12, 11907, 10)
+CheckTypeSize(GFlagsValue,12, 11907, 10);
 #elif __s390x__
-CheckTypeSize(GFlagsValue,24, 11907, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11907,0);
-Msg("Find size of GFlagsValue (11907)\n");
+CheckTypeSize(GFlagsValue,24, 11907, 12);
+#elif 1
+CheckTypeSize(GFlagsValue,0, 11907, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(const GFlagsValue,12, 11908, 2)
+CheckTypeSize(const GFlagsValue,12, 11908, 2);
 #elif __x86_64__
-CheckTypeSize(const GFlagsValue,24, 11908, 11)
+CheckTypeSize(const GFlagsValue,24, 11908, 11);
 #elif __ia64__
-CheckTypeSize(const GFlagsValue,24, 11908, 3)
+CheckTypeSize(const GFlagsValue,24, 11908, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(const GFlagsValue,12, 11908, 6)
+CheckTypeSize(const GFlagsValue,12, 11908, 6);
 #elif __powerpc64__
-CheckTypeSize(const GFlagsValue,24, 11908, 9)
+CheckTypeSize(const GFlagsValue,24, 11908, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(const GFlagsValue,12, 11908, 10)
+CheckTypeSize(const GFlagsValue,12, 11908, 10);
 #elif __s390x__
-CheckTypeSize(const GFlagsValue,24, 11908, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11908,0);
-Msg("Find size of const GFlagsValue (11908)\n");
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11909,0);
-Msg("Find size of const GFlagsValue * (11909)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GClosureMarshal,4, 11910, 2)
-#elif __x86_64__
-CheckTypeSize(GClosureMarshal,8, 11910, 11)
-#elif __ia64__
-CheckTypeSize(GClosureMarshal,8, 11910, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GClosureMarshal,4, 11910, 6)
-#elif __powerpc64__
-CheckTypeSize(GClosureMarshal,8, 11910, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GClosureMarshal,4, 11910, 10)
-#elif __s390x__
-CheckTypeSize(GClosureMarshal,8, 11910, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11910,0);
-Msg("Find size of GClosureMarshal (11910)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GCallback,4, 11911, 2)
-#elif __x86_64__
-CheckTypeSize(GCallback,8, 11911, 11)
-#elif __ia64__
-CheckTypeSize(GCallback,8, 11911, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GCallback,4, 11911, 6)
-#elif __powerpc64__
-CheckTypeSize(GCallback,8, 11911, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GCallback,4, 11911, 10)
-#elif __s390x__
-CheckTypeSize(GCallback,8, 11911, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11911,0);
-Msg("Find size of GCallback (11911)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GFlagsValue *,4, 11912, 2)
-#elif __x86_64__
-CheckTypeSize(GFlagsValue *,8, 11912, 11)
-#elif __ia64__
-CheckTypeSize(GFlagsValue *,8, 11912, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GFlagsValue *,4, 11912, 6)
-#elif __powerpc64__
-CheckTypeSize(GFlagsValue *,8, 11912, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GFlagsValue *,4, 11912, 10)
-#elif __s390x__
-CheckTypeSize(GFlagsValue *,8, 11912, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11912,0);
-Msg("Find size of GFlagsValue * (11912)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(struct _GFlagsClass,16, 11913, 2)
-CheckMemberSize(struct _GFlagsClass,mask,4,2,42097)
-CheckOffset(struct _GFlagsClass,mask,4,2,42097)
-CheckMemberSize(struct _GFlagsClass,n_values,4,2,42098)
-CheckOffset(struct _GFlagsClass,n_values,8,2,42098)
-CheckMemberSize(struct _GFlagsClass,values,4,2,42099)
-CheckOffset(struct _GFlagsClass,values,12,2,42099)
-#elif __x86_64__
-CheckTypeSize(struct _GFlagsClass,24, 11913, 11)
-CheckMemberSize(struct _GFlagsClass,mask,4,11,42097)
-CheckOffset(struct _GFlagsClass,mask,8,11,42097)
-CheckMemberSize(struct _GFlagsClass,n_values,4,11,42098)
-CheckOffset(struct _GFlagsClass,n_values,12,11,42098)
-CheckMemberSize(struct _GFlagsClass,values,8,11,42099)
-CheckOffset(struct _GFlagsClass,values,16,11,42099)
-#elif __ia64__
-CheckTypeSize(struct _GFlagsClass,24, 11913, 3)
-CheckMemberSize(struct _GFlagsClass,mask,4,3,42097)
-CheckOffset(struct _GFlagsClass,mask,8,3,42097)
-CheckMemberSize(struct _GFlagsClass,n_values,4,3,42098)
-CheckOffset(struct _GFlagsClass,n_values,12,3,42098)
-CheckMemberSize(struct _GFlagsClass,values,8,3,42099)
-CheckOffset(struct _GFlagsClass,values,16,3,42099)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GFlagsClass,16, 11913, 6)
-CheckMemberSize(struct _GFlagsClass,mask,4,6,42097)
-CheckOffset(struct _GFlagsClass,mask,4,6,42097)
-CheckMemberSize(struct _GFlagsClass,n_values,4,6,42098)
-CheckOffset(struct _GFlagsClass,n_values,8,6,42098)
-CheckMemberSize(struct _GFlagsClass,values,4,6,42099)
-CheckOffset(struct _GFlagsClass,values,12,6,42099)
-#elif __powerpc64__
-CheckTypeSize(struct _GFlagsClass,24, 11913, 9)
-CheckMemberSize(struct _GFlagsClass,mask,4,9,42097)
-CheckOffset(struct _GFlagsClass,mask,8,9,42097)
-CheckMemberSize(struct _GFlagsClass,n_values,4,9,42098)
-CheckOffset(struct _GFlagsClass,n_values,12,9,42098)
-CheckMemberSize(struct _GFlagsClass,values,8,9,42099)
-CheckOffset(struct _GFlagsClass,values,16,9,42099)
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct _GFlagsClass,16, 11913, 10)
-CheckMemberSize(struct _GFlagsClass,mask,4,10,42097)
-CheckOffset(struct _GFlagsClass,mask,4,10,42097)
-CheckMemberSize(struct _GFlagsClass,n_values,4,10,42098)
-CheckOffset(struct _GFlagsClass,n_values,8,10,42098)
-CheckMemberSize(struct _GFlagsClass,values,4,10,42099)
-CheckOffset(struct _GFlagsClass,values,12,10,42099)
-#elif __s390x__
-CheckTypeSize(struct _GFlagsClass,24, 11913, 12)
-CheckMemberSize(struct _GFlagsClass,mask,4,12,42097)
-CheckOffset(struct _GFlagsClass,mask,8,12,42097)
-CheckMemberSize(struct _GFlagsClass,n_values,4,12,42098)
-CheckOffset(struct _GFlagsClass,n_values,12,12,42098)
-CheckMemberSize(struct _GFlagsClass,values,8,12,42099)
-CheckOffset(struct _GFlagsClass,values,16,12,42099)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11913,0);
-Msg("Find size of _GFlagsClass (11913)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GFlagsClass,16, 11914, 2)
-#elif __x86_64__
-CheckTypeSize(GFlagsClass,24, 11914, 11)
-#elif __ia64__
-CheckTypeSize(GFlagsClass,24, 11914, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GFlagsClass,16, 11914, 6)
-#elif __powerpc64__
-CheckTypeSize(GFlagsClass,24, 11914, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GFlagsClass,16, 11914, 10)
-#elif __s390x__
-CheckTypeSize(GFlagsClass,24, 11914, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11914,0);
-Msg("Find size of GFlagsClass (11914)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GFlagsClass *,4, 11915, 2)
-#elif __x86_64__
-CheckTypeSize(GFlagsClass *,8, 11915, 11)
-#elif __ia64__
-CheckTypeSize(GFlagsClass *,8, 11915, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GFlagsClass *,4, 11915, 6)
-#elif __powerpc64__
-CheckTypeSize(GFlagsClass *,8, 11915, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GFlagsClass *,4, 11915, 10)
-#elif __s390x__
-CheckTypeSize(GFlagsClass *,8, 11915, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11915,0);
-Msg("Find size of GFlagsClass * (11915)\n");
+CheckTypeSize(const GFlagsValue,24, 11908, 12);
+#elif 1
+CheckTypeSize(const GFlagsValue,0, 11908, 1);
 #endif
 
 #if __i386__
@@ -3036,75 +2863,240 @@ Msg("Find size of GFlagsClass * (11915)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11916,0);
-Msg("Find size of fptr_glib-object_91 (11916)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(GTypeClassCacheFunc,4, 11917, 2)
+CheckTypeSize(GClosureMarshal,4, 11910, 2);
 #elif __x86_64__
-CheckTypeSize(GTypeClassCacheFunc,8, 11917, 11)
+CheckTypeSize(GClosureMarshal,8, 11910, 11);
 #elif __ia64__
-CheckTypeSize(GTypeClassCacheFunc,8, 11917, 3)
+CheckTypeSize(GClosureMarshal,8, 11910, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypeClassCacheFunc,4, 11917, 6)
+CheckTypeSize(GClosureMarshal,4, 11910, 6);
 #elif __powerpc64__
-CheckTypeSize(GTypeClassCacheFunc,8, 11917, 9)
+CheckTypeSize(GClosureMarshal,8, 11910, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GTypeClassCacheFunc,4, 11917, 10)
+CheckTypeSize(GClosureMarshal,4, 11910, 10);
 #elif __s390x__
-CheckTypeSize(GTypeClassCacheFunc,8, 11917, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11917,0);
-Msg("Find size of GTypeClassCacheFunc (11917)\n");
+CheckTypeSize(GClosureMarshal,8, 11910, 12);
+#elif 1
+CheckTypeSize(GClosureMarshal,0, 11910, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GSignalInvocationHint,12, 11918, 2)
-CheckMemberSize(struct _GSignalInvocationHint,detail,4,2,42103)
-CheckOffset(struct _GSignalInvocationHint,detail,4,2,42103)
-CheckMemberSize(struct _GSignalInvocationHint,run_type,4,2,42111)
-CheckOffset(struct _GSignalInvocationHint,run_type,8,2,42111)
+CheckTypeSize(GCallback,4, 11911, 2);
 #elif __x86_64__
-CheckTypeSize(struct _GSignalInvocationHint,12, 11918, 11)
-CheckMemberSize(struct _GSignalInvocationHint,detail,4,11,42103)
-CheckOffset(struct _GSignalInvocationHint,detail,4,11,42103)
-CheckMemberSize(struct _GSignalInvocationHint,run_type,4,11,42111)
-CheckOffset(struct _GSignalInvocationHint,run_type,8,11,42111)
+CheckTypeSize(GCallback,8, 11911, 11);
 #elif __ia64__
-CheckTypeSize(struct _GSignalInvocationHint,12, 11918, 3)
-CheckMemberSize(struct _GSignalInvocationHint,detail,4,3,42103)
-CheckOffset(struct _GSignalInvocationHint,detail,4,3,42103)
-CheckMemberSize(struct _GSignalInvocationHint,run_type,4,3,42111)
-CheckOffset(struct _GSignalInvocationHint,run_type,8,3,42111)
+CheckTypeSize(GCallback,8, 11911, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GSignalInvocationHint,12, 11918, 6)
-CheckMemberSize(struct _GSignalInvocationHint,detail,4,6,42103)
-CheckOffset(struct _GSignalInvocationHint,detail,4,6,42103)
-CheckMemberSize(struct _GSignalInvocationHint,run_type,4,6,42111)
-CheckOffset(struct _GSignalInvocationHint,run_type,8,6,42111)
+CheckTypeSize(GCallback,4, 11911, 6);
 #elif __powerpc64__
-CheckTypeSize(struct _GSignalInvocationHint,12, 11918, 9)
-CheckMemberSize(struct _GSignalInvocationHint,detail,4,9,42103)
-CheckOffset(struct _GSignalInvocationHint,detail,4,9,42103)
-CheckMemberSize(struct _GSignalInvocationHint,run_type,4,9,42111)
-CheckOffset(struct _GSignalInvocationHint,run_type,8,9,42111)
+CheckTypeSize(GCallback,8, 11911, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GSignalInvocationHint,12, 11918, 10)
-CheckMemberSize(struct _GSignalInvocationHint,detail,4,10,42103)
-CheckOffset(struct _GSignalInvocationHint,detail,4,10,42103)
-CheckMemberSize(struct _GSignalInvocationHint,run_type,4,10,42111)
-CheckOffset(struct _GSignalInvocationHint,run_type,8,10,42111)
+CheckTypeSize(GCallback,4, 11911, 10);
 #elif __s390x__
-CheckTypeSize(struct _GSignalInvocationHint,12, 11918, 12)
-CheckMemberSize(struct _GSignalInvocationHint,detail,4,12,42103)
-CheckOffset(struct _GSignalInvocationHint,detail,4,12,42103)
-CheckMemberSize(struct _GSignalInvocationHint,run_type,4,12,42111)
-CheckOffset(struct _GSignalInvocationHint,run_type,8,12,42111)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11918,0);
-Msg("Find size of _GSignalInvocationHint (11918)\n");
+CheckTypeSize(GCallback,8, 11911, 12);
+#elif 1
+CheckTypeSize(GCallback,0, 11911, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(GFlagsValue *,4, 11912, 2);
+#elif __x86_64__
+CheckTypeSize(GFlagsValue *,8, 11912, 11);
+#elif __ia64__
+CheckTypeSize(GFlagsValue *,8, 11912, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GFlagsValue *,4, 11912, 6);
+#elif __powerpc64__
+CheckTypeSize(GFlagsValue *,8, 11912, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GFlagsValue *,4, 11912, 10);
+#elif __s390x__
+CheckTypeSize(GFlagsValue *,8, 11912, 12);
+#elif 1
+CheckTypeSize(GFlagsValue *,0, 11912, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(struct _GFlagsClass,16, 11913, 2);
+CheckMemberSize(struct _GFlagsClass,mask,4,2,42097);
+CheckOffset(struct _GFlagsClass,mask,4,2,42097);
+CheckMemberSize(struct _GFlagsClass,n_values,4,2,42098);
+CheckOffset(struct _GFlagsClass,n_values,8,2,42098);
+CheckMemberSize(struct _GFlagsClass,values,4,2,42099);
+CheckOffset(struct _GFlagsClass,values,12,2,42099);
+#elif __x86_64__
+CheckTypeSize(struct _GFlagsClass,24, 11913, 11);
+CheckMemberSize(struct _GFlagsClass,mask,4,11,42097);
+CheckOffset(struct _GFlagsClass,mask,8,11,42097);
+CheckMemberSize(struct _GFlagsClass,n_values,4,11,42098);
+CheckOffset(struct _GFlagsClass,n_values,12,11,42098);
+CheckMemberSize(struct _GFlagsClass,values,8,11,42099);
+CheckOffset(struct _GFlagsClass,values,16,11,42099);
+#elif __ia64__
+CheckTypeSize(struct _GFlagsClass,24, 11913, 3);
+CheckMemberSize(struct _GFlagsClass,mask,4,3,42097);
+CheckOffset(struct _GFlagsClass,mask,8,3,42097);
+CheckMemberSize(struct _GFlagsClass,n_values,4,3,42098);
+CheckOffset(struct _GFlagsClass,n_values,12,3,42098);
+CheckMemberSize(struct _GFlagsClass,values,8,3,42099);
+CheckOffset(struct _GFlagsClass,values,16,3,42099);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _GFlagsClass,16, 11913, 6);
+CheckMemberSize(struct _GFlagsClass,mask,4,6,42097);
+CheckOffset(struct _GFlagsClass,mask,4,6,42097);
+CheckMemberSize(struct _GFlagsClass,n_values,4,6,42098);
+CheckOffset(struct _GFlagsClass,n_values,8,6,42098);
+CheckMemberSize(struct _GFlagsClass,values,4,6,42099);
+CheckOffset(struct _GFlagsClass,values,12,6,42099);
+#elif __powerpc64__
+CheckTypeSize(struct _GFlagsClass,24, 11913, 9);
+CheckMemberSize(struct _GFlagsClass,mask,4,9,42097);
+CheckOffset(struct _GFlagsClass,mask,8,9,42097);
+CheckMemberSize(struct _GFlagsClass,n_values,4,9,42098);
+CheckOffset(struct _GFlagsClass,n_values,12,9,42098);
+CheckMemberSize(struct _GFlagsClass,values,8,9,42099);
+CheckOffset(struct _GFlagsClass,values,16,9,42099);
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _GFlagsClass,16, 11913, 10);
+CheckMemberSize(struct _GFlagsClass,mask,4,10,42097);
+CheckOffset(struct _GFlagsClass,mask,4,10,42097);
+CheckMemberSize(struct _GFlagsClass,n_values,4,10,42098);
+CheckOffset(struct _GFlagsClass,n_values,8,10,42098);
+CheckMemberSize(struct _GFlagsClass,values,4,10,42099);
+CheckOffset(struct _GFlagsClass,values,12,10,42099);
+#elif __s390x__
+CheckTypeSize(struct _GFlagsClass,24, 11913, 12);
+CheckMemberSize(struct _GFlagsClass,mask,4,12,42097);
+CheckOffset(struct _GFlagsClass,mask,8,12,42097);
+CheckMemberSize(struct _GFlagsClass,n_values,4,12,42098);
+CheckOffset(struct _GFlagsClass,n_values,12,12,42098);
+CheckMemberSize(struct _GFlagsClass,values,8,12,42099);
+CheckOffset(struct _GFlagsClass,values,16,12,42099);
+#elif 1
+CheckTypeSize(struct _GFlagsClass,0, 11913, 1);
+Msg("Missing member data for _GFlagsClass on All\n");
+CheckOffset(struct _GFlagsClass,g_type_class,0,1,42096);
+CheckOffset(struct _GFlagsClass,mask,0,1,42097);
+CheckOffset(struct _GFlagsClass,n_values,0,1,42098);
+CheckOffset(struct _GFlagsClass,values,0,1,42099);
+#endif
+
+#if __i386__
+CheckTypeSize(GFlagsClass,16, 11914, 2);
+#elif __x86_64__
+CheckTypeSize(GFlagsClass,24, 11914, 11);
+#elif __ia64__
+CheckTypeSize(GFlagsClass,24, 11914, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GFlagsClass,16, 11914, 6);
+#elif __powerpc64__
+CheckTypeSize(GFlagsClass,24, 11914, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GFlagsClass,16, 11914, 10);
+#elif __s390x__
+CheckTypeSize(GFlagsClass,24, 11914, 12);
+#elif 1
+CheckTypeSize(GFlagsClass,0, 11914, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(GFlagsClass *,4, 11915, 2);
+#elif __x86_64__
+CheckTypeSize(GFlagsClass *,8, 11915, 11);
+#elif __ia64__
+CheckTypeSize(GFlagsClass *,8, 11915, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GFlagsClass *,4, 11915, 6);
+#elif __powerpc64__
+CheckTypeSize(GFlagsClass *,8, 11915, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GFlagsClass *,4, 11915, 10);
+#elif __s390x__
+CheckTypeSize(GFlagsClass *,8, 11915, 12);
+#elif 1
+CheckTypeSize(GFlagsClass *,0, 11915, 1);
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
+#elif 1
+#endif
+
+#if __i386__
+CheckTypeSize(GTypeClassCacheFunc,4, 11917, 2);
+#elif __x86_64__
+CheckTypeSize(GTypeClassCacheFunc,8, 11917, 11);
+#elif __ia64__
+CheckTypeSize(GTypeClassCacheFunc,8, 11917, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GTypeClassCacheFunc,4, 11917, 6);
+#elif __powerpc64__
+CheckTypeSize(GTypeClassCacheFunc,8, 11917, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GTypeClassCacheFunc,4, 11917, 10);
+#elif __s390x__
+CheckTypeSize(GTypeClassCacheFunc,8, 11917, 12);
+#elif 1
+CheckTypeSize(GTypeClassCacheFunc,0, 11917, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(struct _GSignalInvocationHint,12, 11918, 2);
+CheckMemberSize(struct _GSignalInvocationHint,detail,4,2,42103);
+CheckOffset(struct _GSignalInvocationHint,detail,4,2,42103);
+CheckMemberSize(struct _GSignalInvocationHint,run_type,4,2,42111);
+CheckOffset(struct _GSignalInvocationHint,run_type,8,2,42111);
+#elif __x86_64__
+CheckTypeSize(struct _GSignalInvocationHint,12, 11918, 11);
+CheckMemberSize(struct _GSignalInvocationHint,detail,4,11,42103);
+CheckOffset(struct _GSignalInvocationHint,detail,4,11,42103);
+CheckMemberSize(struct _GSignalInvocationHint,run_type,4,11,42111);
+CheckOffset(struct _GSignalInvocationHint,run_type,8,11,42111);
+#elif __ia64__
+CheckTypeSize(struct _GSignalInvocationHint,12, 11918, 3);
+CheckMemberSize(struct _GSignalInvocationHint,detail,4,3,42103);
+CheckOffset(struct _GSignalInvocationHint,detail,4,3,42103);
+CheckMemberSize(struct _GSignalInvocationHint,run_type,4,3,42111);
+CheckOffset(struct _GSignalInvocationHint,run_type,8,3,42111);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _GSignalInvocationHint,12, 11918, 6);
+CheckMemberSize(struct _GSignalInvocationHint,detail,4,6,42103);
+CheckOffset(struct _GSignalInvocationHint,detail,4,6,42103);
+CheckMemberSize(struct _GSignalInvocationHint,run_type,4,6,42111);
+CheckOffset(struct _GSignalInvocationHint,run_type,8,6,42111);
+#elif __powerpc64__
+CheckTypeSize(struct _GSignalInvocationHint,12, 11918, 9);
+CheckMemberSize(struct _GSignalInvocationHint,detail,4,9,42103);
+CheckOffset(struct _GSignalInvocationHint,detail,4,9,42103);
+CheckMemberSize(struct _GSignalInvocationHint,run_type,4,9,42111);
+CheckOffset(struct _GSignalInvocationHint,run_type,8,9,42111);
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _GSignalInvocationHint,12, 11918, 10);
+CheckMemberSize(struct _GSignalInvocationHint,detail,4,10,42103);
+CheckOffset(struct _GSignalInvocationHint,detail,4,10,42103);
+CheckMemberSize(struct _GSignalInvocationHint,run_type,4,10,42111);
+CheckOffset(struct _GSignalInvocationHint,run_type,8,10,42111);
+#elif __s390x__
+CheckTypeSize(struct _GSignalInvocationHint,12, 11918, 12);
+CheckMemberSize(struct _GSignalInvocationHint,detail,4,12,42103);
+CheckOffset(struct _GSignalInvocationHint,detail,4,12,42103);
+CheckMemberSize(struct _GSignalInvocationHint,run_type,4,12,42111);
+CheckOffset(struct _GSignalInvocationHint,run_type,8,12,42111);
+#elif 1
+CheckTypeSize(struct _GSignalInvocationHint,0, 11918, 1);
+Msg("Missing member data for _GSignalInvocationHint on All\n");
+CheckOffset(struct _GSignalInvocationHint,signal_id,0,1,42102);
+CheckOffset(struct _GSignalInvocationHint,detail,0,1,42103);
+CheckOffset(struct _GSignalInvocationHint,run_type,0,1,42111);
 #endif
 
 #if __i386__
@@ -3163,318 +3155,68 @@ CheckEnum("G_SIGNAL_NO_RECURSE",G_SIGNAL_NO_RECURSE,8,42107);
 CheckEnum("G_SIGNAL_DETAILED",G_SIGNAL_DETAILED,16,42108);
 CheckEnum("G_SIGNAL_ACTION",G_SIGNAL_ACTION,32,42109);
 CheckEnum("G_SIGNAL_NO_HOOKS",G_SIGNAL_NO_HOOKS,64,42110);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11919,0);
-Msg("Find size of anon-glib-2.0/glib-object.h-30 (11919)\n");
+#elif 1
+CheckEnum("G_SIGNAL_RUN_FIRST",G_SIGNAL_RUN_FIRST,1,42104);
+CheckEnum("G_SIGNAL_RUN_LAST",G_SIGNAL_RUN_LAST,2,42105);
+CheckEnum("G_SIGNAL_RUN_CLEANUP",G_SIGNAL_RUN_CLEANUP,4,42106);
+CheckEnum("G_SIGNAL_NO_RECURSE",G_SIGNAL_NO_RECURSE,8,42107);
+CheckEnum("G_SIGNAL_DETAILED",G_SIGNAL_DETAILED,16,42108);
+CheckEnum("G_SIGNAL_ACTION",G_SIGNAL_ACTION,32,42109);
+CheckEnum("G_SIGNAL_NO_HOOKS",G_SIGNAL_NO_HOOKS,64,42110);
 #endif
 
 #if __i386__
-CheckTypeSize(GSignalFlags,4, 11920, 2)
+CheckTypeSize(GSignalFlags,4, 11920, 2);
 #elif __x86_64__
-CheckTypeSize(GSignalFlags,4, 11920, 11)
+CheckTypeSize(GSignalFlags,4, 11920, 11);
 #elif __ia64__
-CheckTypeSize(GSignalFlags,4, 11920, 3)
+CheckTypeSize(GSignalFlags,4, 11920, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GSignalFlags,4, 11920, 6)
+CheckTypeSize(GSignalFlags,4, 11920, 6);
 #elif __powerpc64__
-CheckTypeSize(GSignalFlags,4, 11920, 9)
+CheckTypeSize(GSignalFlags,4, 11920, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GSignalFlags,4, 11920, 10)
+CheckTypeSize(GSignalFlags,4, 11920, 10);
 #elif __s390x__
-CheckTypeSize(GSignalFlags,4, 11920, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11920,0);
-Msg("Find size of GSignalFlags (11920)\n");
+CheckTypeSize(GSignalFlags,4, 11920, 12);
+#elif 1
+CheckTypeSize(GSignalFlags,0, 11920, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GSignalInvocationHint,12, 11921, 2)
+CheckTypeSize(GSignalInvocationHint,12, 11921, 2);
 #elif __x86_64__
-CheckTypeSize(GSignalInvocationHint,12, 11921, 11)
+CheckTypeSize(GSignalInvocationHint,12, 11921, 11);
 #elif __ia64__
-CheckTypeSize(GSignalInvocationHint,12, 11921, 3)
+CheckTypeSize(GSignalInvocationHint,12, 11921, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GSignalInvocationHint,12, 11921, 6)
+CheckTypeSize(GSignalInvocationHint,12, 11921, 6);
 #elif __powerpc64__
-CheckTypeSize(GSignalInvocationHint,12, 11921, 9)
+CheckTypeSize(GSignalInvocationHint,12, 11921, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GSignalInvocationHint,12, 11921, 10)
+CheckTypeSize(GSignalInvocationHint,12, 11921, 10);
 #elif __s390x__
-CheckTypeSize(GSignalInvocationHint,12, 11921, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11921,0);
-Msg("Find size of GSignalInvocationHint (11921)\n");
+CheckTypeSize(GSignalInvocationHint,12, 11921, 12);
+#elif 1
+CheckTypeSize(GSignalInvocationHint,0, 11921, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GSignalInvocationHint *,4, 11922, 2)
+CheckTypeSize(GSignalInvocationHint *,4, 11922, 2);
 #elif __x86_64__
-CheckTypeSize(GSignalInvocationHint *,8, 11922, 11)
+CheckTypeSize(GSignalInvocationHint *,8, 11922, 11);
 #elif __ia64__
-CheckTypeSize(GSignalInvocationHint *,8, 11922, 3)
+CheckTypeSize(GSignalInvocationHint *,8, 11922, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GSignalInvocationHint *,4, 11922, 6)
+CheckTypeSize(GSignalInvocationHint *,4, 11922, 6);
 #elif __powerpc64__
-CheckTypeSize(GSignalInvocationHint *,8, 11922, 9)
+CheckTypeSize(GSignalInvocationHint *,8, 11922, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GSignalInvocationHint *,4, 11922, 10)
+CheckTypeSize(GSignalInvocationHint *,4, 11922, 10);
 #elif __s390x__
-CheckTypeSize(GSignalInvocationHint *,8, 11922, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11922,0);
-Msg("Find size of GSignalInvocationHint * (11922)\n");
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11923,0);
-Msg("Find size of fptr_glib-object_174 (11923)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GWeakNotify,4, 11924, 2)
-#elif __x86_64__
-CheckTypeSize(GWeakNotify,8, 11924, 11)
-#elif __ia64__
-CheckTypeSize(GWeakNotify,8, 11924, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GWeakNotify,4, 11924, 6)
-#elif __powerpc64__
-CheckTypeSize(GWeakNotify,8, 11924, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GWeakNotify,4, 11924, 10)
-#elif __s390x__
-CheckTypeSize(GWeakNotify,8, 11924, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11924,0);
-Msg("Find size of GWeakNotify (11924)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(struct _GTypeInfo,36, 11925, 2)
-CheckMemberSize(struct _GTypeInfo,base_init,4,2,42115)
-CheckOffset(struct _GTypeInfo,base_init,4,2,42115)
-CheckMemberSize(struct _GTypeInfo,base_finalize,4,2,42116)
-CheckOffset(struct _GTypeInfo,base_finalize,8,2,42116)
-CheckMemberSize(struct _GTypeInfo,class_init,4,2,42117)
-CheckOffset(struct _GTypeInfo,class_init,12,2,42117)
-CheckMemberSize(struct _GTypeInfo,class_finalize,4,2,42118)
-CheckOffset(struct _GTypeInfo,class_finalize,16,2,42118)
-CheckMemberSize(struct _GTypeInfo,class_data,4,2,42119)
-CheckOffset(struct _GTypeInfo,class_data,20,2,42119)
-CheckMemberSize(struct _GTypeInfo,instance_size,2,2,42120)
-CheckOffset(struct _GTypeInfo,instance_size,24,2,42120)
-CheckMemberSize(struct _GTypeInfo,n_preallocs,2,2,42121)
-CheckOffset(struct _GTypeInfo,n_preallocs,26,2,42121)
-CheckMemberSize(struct _GTypeInfo,instance_init,4,2,42124)
-CheckOffset(struct _GTypeInfo,instance_init,28,2,42124)
-CheckMemberSize(struct _GTypeInfo,value_table,4,2,42145)
-CheckOffset(struct _GTypeInfo,value_table,32,2,42145)
-#elif __x86_64__
-CheckTypeSize(struct _GTypeInfo,72, 11925, 11)
-CheckMemberSize(struct _GTypeInfo,base_init,8,11,42115)
-CheckOffset(struct _GTypeInfo,base_init,8,11,42115)
-CheckMemberSize(struct _GTypeInfo,base_finalize,8,11,42116)
-CheckOffset(struct _GTypeInfo,base_finalize,16,11,42116)
-CheckMemberSize(struct _GTypeInfo,class_init,8,11,42117)
-CheckOffset(struct _GTypeInfo,class_init,24,11,42117)
-CheckMemberSize(struct _GTypeInfo,class_finalize,8,11,42118)
-CheckOffset(struct _GTypeInfo,class_finalize,32,11,42118)
-CheckMemberSize(struct _GTypeInfo,class_data,8,11,42119)
-CheckOffset(struct _GTypeInfo,class_data,40,11,42119)
-CheckMemberSize(struct _GTypeInfo,instance_size,2,11,42120)
-CheckOffset(struct _GTypeInfo,instance_size,48,11,42120)
-CheckMemberSize(struct _GTypeInfo,n_preallocs,2,11,42121)
-CheckOffset(struct _GTypeInfo,n_preallocs,50,11,42121)
-CheckMemberSize(struct _GTypeInfo,instance_init,8,11,42124)
-CheckOffset(struct _GTypeInfo,instance_init,56,11,42124)
-CheckMemberSize(struct _GTypeInfo,value_table,8,11,42145)
-CheckOffset(struct _GTypeInfo,value_table,64,11,42145)
-#elif __ia64__
-CheckTypeSize(struct _GTypeInfo,72, 11925, 3)
-CheckMemberSize(struct _GTypeInfo,base_init,8,3,42115)
-CheckOffset(struct _GTypeInfo,base_init,8,3,42115)
-CheckMemberSize(struct _GTypeInfo,base_finalize,8,3,42116)
-CheckOffset(struct _GTypeInfo,base_finalize,16,3,42116)
-CheckMemberSize(struct _GTypeInfo,class_init,8,3,42117)
-CheckOffset(struct _GTypeInfo,class_init,24,3,42117)
-CheckMemberSize(struct _GTypeInfo,class_finalize,8,3,42118)
-CheckOffset(struct _GTypeInfo,class_finalize,32,3,42118)
-CheckMemberSize(struct _GTypeInfo,class_data,8,3,42119)
-CheckOffset(struct _GTypeInfo,class_data,40,3,42119)
-CheckMemberSize(struct _GTypeInfo,instance_size,2,3,42120)
-CheckOffset(struct _GTypeInfo,instance_size,48,3,42120)
-CheckMemberSize(struct _GTypeInfo,n_preallocs,2,3,42121)
-CheckOffset(struct _GTypeInfo,n_preallocs,50,3,42121)
-CheckMemberSize(struct _GTypeInfo,instance_init,8,3,42124)
-CheckOffset(struct _GTypeInfo,instance_init,56,3,42124)
-CheckMemberSize(struct _GTypeInfo,value_table,8,3,42145)
-CheckOffset(struct _GTypeInfo,value_table,64,3,42145)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GTypeInfo,36, 11925, 6)
-CheckMemberSize(struct _GTypeInfo,base_init,4,6,42115)
-CheckOffset(struct _GTypeInfo,base_init,4,6,42115)
-CheckMemberSize(struct _GTypeInfo,base_finalize,4,6,42116)
-CheckOffset(struct _GTypeInfo,base_finalize,8,6,42116)
-CheckMemberSize(struct _GTypeInfo,class_init,4,6,42117)
-CheckOffset(struct _GTypeInfo,class_init,12,6,42117)
-CheckMemberSize(struct _GTypeInfo,class_finalize,4,6,42118)
-CheckOffset(struct _GTypeInfo,class_finalize,16,6,42118)
-CheckMemberSize(struct _GTypeInfo,class_data,4,6,42119)
-CheckOffset(struct _GTypeInfo,class_data,20,6,42119)
-CheckMemberSize(struct _GTypeInfo,instance_size,2,6,42120)
-CheckOffset(struct _GTypeInfo,instance_size,24,6,42120)
-CheckMemberSize(struct _GTypeInfo,n_preallocs,2,6,42121)
-CheckOffset(struct _GTypeInfo,n_preallocs,26,6,42121)
-CheckMemberSize(struct _GTypeInfo,instance_init,4,6,42124)
-CheckOffset(struct _GTypeInfo,instance_init,28,6,42124)
-CheckMemberSize(struct _GTypeInfo,value_table,4,6,42145)
-CheckOffset(struct _GTypeInfo,value_table,32,6,42145)
-#elif __powerpc64__
-CheckTypeSize(struct _GTypeInfo,72, 11925, 9)
-CheckMemberSize(struct _GTypeInfo,base_init,8,9,42115)
-CheckOffset(struct _GTypeInfo,base_init,8,9,42115)
-CheckMemberSize(struct _GTypeInfo,base_finalize,8,9,42116)
-CheckOffset(struct _GTypeInfo,base_finalize,16,9,42116)
-CheckMemberSize(struct _GTypeInfo,class_init,8,9,42117)
-CheckOffset(struct _GTypeInfo,class_init,24,9,42117)
-CheckMemberSize(struct _GTypeInfo,class_finalize,8,9,42118)
-CheckOffset(struct _GTypeInfo,class_finalize,32,9,42118)
-CheckMemberSize(struct _GTypeInfo,class_data,8,9,42119)
-CheckOffset(struct _GTypeInfo,class_data,40,9,42119)
-CheckMemberSize(struct _GTypeInfo,instance_size,2,9,42120)
-CheckOffset(struct _GTypeInfo,instance_size,48,9,42120)
-CheckMemberSize(struct _GTypeInfo,n_preallocs,2,9,42121)
-CheckOffset(struct _GTypeInfo,n_preallocs,50,9,42121)
-CheckMemberSize(struct _GTypeInfo,instance_init,8,9,42124)
-CheckOffset(struct _GTypeInfo,instance_init,56,9,42124)
-CheckMemberSize(struct _GTypeInfo,value_table,8,9,42145)
-CheckOffset(struct _GTypeInfo,value_table,64,9,42145)
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct _GTypeInfo,36, 11925, 10)
-CheckMemberSize(struct _GTypeInfo,base_init,4,10,42115)
-CheckOffset(struct _GTypeInfo,base_init,4,10,42115)
-CheckMemberSize(struct _GTypeInfo,base_finalize,4,10,42116)
-CheckOffset(struct _GTypeInfo,base_finalize,8,10,42116)
-CheckMemberSize(struct _GTypeInfo,class_init,4,10,42117)
-CheckOffset(struct _GTypeInfo,class_init,12,10,42117)
-CheckMemberSize(struct _GTypeInfo,class_finalize,4,10,42118)
-CheckOffset(struct _GTypeInfo,class_finalize,16,10,42118)
-CheckMemberSize(struct _GTypeInfo,class_data,4,10,42119)
-CheckOffset(struct _GTypeInfo,class_data,20,10,42119)
-CheckMemberSize(struct _GTypeInfo,instance_size,2,10,42120)
-CheckOffset(struct _GTypeInfo,instance_size,24,10,42120)
-CheckMemberSize(struct _GTypeInfo,n_preallocs,2,10,42121)
-CheckOffset(struct _GTypeInfo,n_preallocs,26,10,42121)
-CheckMemberSize(struct _GTypeInfo,instance_init,4,10,42124)
-CheckOffset(struct _GTypeInfo,instance_init,28,10,42124)
-CheckMemberSize(struct _GTypeInfo,value_table,4,10,42145)
-CheckOffset(struct _GTypeInfo,value_table,32,10,42145)
-#elif __s390x__
-CheckTypeSize(struct _GTypeInfo,72, 11925, 12)
-CheckMemberSize(struct _GTypeInfo,base_init,8,12,42115)
-CheckOffset(struct _GTypeInfo,base_init,8,12,42115)
-CheckMemberSize(struct _GTypeInfo,base_finalize,8,12,42116)
-CheckOffset(struct _GTypeInfo,base_finalize,16,12,42116)
-CheckMemberSize(struct _GTypeInfo,class_init,8,12,42117)
-CheckOffset(struct _GTypeInfo,class_init,24,12,42117)
-CheckMemberSize(struct _GTypeInfo,class_finalize,8,12,42118)
-CheckOffset(struct _GTypeInfo,class_finalize,32,12,42118)
-CheckMemberSize(struct _GTypeInfo,class_data,8,12,42119)
-CheckOffset(struct _GTypeInfo,class_data,40,12,42119)
-CheckMemberSize(struct _GTypeInfo,instance_size,2,12,42120)
-CheckOffset(struct _GTypeInfo,instance_size,48,12,42120)
-CheckMemberSize(struct _GTypeInfo,n_preallocs,2,12,42121)
-CheckOffset(struct _GTypeInfo,n_preallocs,50,12,42121)
-CheckMemberSize(struct _GTypeInfo,instance_init,8,12,42124)
-CheckOffset(struct _GTypeInfo,instance_init,56,12,42124)
-CheckMemberSize(struct _GTypeInfo,value_table,8,12,42145)
-CheckOffset(struct _GTypeInfo,value_table,64,12,42145)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11925,0);
-Msg("Find size of _GTypeInfo (11925)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GBaseInitFunc,4, 11926, 2)
-#elif __x86_64__
-CheckTypeSize(GBaseInitFunc,8, 11926, 11)
-#elif __ia64__
-CheckTypeSize(GBaseInitFunc,8, 11926, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GBaseInitFunc,4, 11926, 6)
-#elif __powerpc64__
-CheckTypeSize(GBaseInitFunc,8, 11926, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GBaseInitFunc,4, 11926, 10)
-#elif __s390x__
-CheckTypeSize(GBaseInitFunc,8, 11926, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11926,0);
-Msg("Find size of GBaseInitFunc (11926)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GBaseFinalizeFunc,4, 11927, 2)
-#elif __x86_64__
-CheckTypeSize(GBaseFinalizeFunc,8, 11927, 11)
-#elif __ia64__
-CheckTypeSize(GBaseFinalizeFunc,8, 11927, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GBaseFinalizeFunc,4, 11927, 6)
-#elif __powerpc64__
-CheckTypeSize(GBaseFinalizeFunc,8, 11927, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GBaseFinalizeFunc,4, 11927, 10)
-#elif __s390x__
-CheckTypeSize(GBaseFinalizeFunc,8, 11927, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11927,0);
-Msg("Find size of GBaseFinalizeFunc (11927)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GClassInitFunc,4, 11928, 2)
-#elif __x86_64__
-CheckTypeSize(GClassInitFunc,8, 11928, 11)
-#elif __ia64__
-CheckTypeSize(GClassInitFunc,8, 11928, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GClassInitFunc,4, 11928, 6)
-#elif __powerpc64__
-CheckTypeSize(GClassInitFunc,8, 11928, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GClassInitFunc,4, 11928, 10)
-#elif __s390x__
-CheckTypeSize(GClassInitFunc,8, 11928, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11928,0);
-Msg("Find size of GClassInitFunc (11928)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GClassFinalizeFunc,4, 11929, 2)
-#elif __x86_64__
-CheckTypeSize(GClassFinalizeFunc,8, 11929, 11)
-#elif __ia64__
-CheckTypeSize(GClassFinalizeFunc,8, 11929, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GClassFinalizeFunc,4, 11929, 6)
-#elif __powerpc64__
-CheckTypeSize(GClassFinalizeFunc,8, 11929, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GClassFinalizeFunc,4, 11929, 10)
-#elif __s390x__
-CheckTypeSize(GClassFinalizeFunc,8, 11929, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11929,0);
-Msg("Find size of GClassFinalizeFunc (11929)\n");
+CheckTypeSize(GSignalInvocationHint *,8, 11922, 12);
+#elif 1
+CheckTypeSize(GSignalInvocationHint *,0, 11922, 1);
 #endif
 
 #if __i386__
@@ -3484,281 +3226,252 @@ Msg("Find size of GClassFinalizeFunc (11929)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11930,0);
-Msg("Find size of fptr_glib-object_142 (11930)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(GInstanceInitFunc,4, 11931, 2)
+CheckTypeSize(GWeakNotify,4, 11924, 2);
 #elif __x86_64__
-CheckTypeSize(GInstanceInitFunc,8, 11931, 11)
+CheckTypeSize(GWeakNotify,8, 11924, 11);
 #elif __ia64__
-CheckTypeSize(GInstanceInitFunc,8, 11931, 3)
+CheckTypeSize(GWeakNotify,8, 11924, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GInstanceInitFunc,4, 11931, 6)
+CheckTypeSize(GWeakNotify,4, 11924, 6);
 #elif __powerpc64__
-CheckTypeSize(GInstanceInitFunc,8, 11931, 9)
+CheckTypeSize(GWeakNotify,8, 11924, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GInstanceInitFunc,4, 11931, 10)
+CheckTypeSize(GWeakNotify,4, 11924, 10);
 #elif __s390x__
-CheckTypeSize(GInstanceInitFunc,8, 11931, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11931,0);
-Msg("Find size of GInstanceInitFunc (11931)\n");
+CheckTypeSize(GWeakNotify,8, 11924, 12);
+#elif 1
+CheckTypeSize(GWeakNotify,0, 11924, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GTypeValueTable,32, 11932, 2)
-CheckMemberSize(struct _GTypeValueTable,value_free,4,2,42127)
-CheckOffset(struct _GTypeValueTable,value_free,4,2,42127)
-CheckMemberSize(struct _GTypeValueTable,value_copy,4,2,42130)
-CheckOffset(struct _GTypeValueTable,value_copy,8,2,42130)
-CheckMemberSize(struct _GTypeValueTable,value_peek_pointer,4,2,42132)
-CheckOffset(struct _GTypeValueTable,value_peek_pointer,12,2,42132)
-CheckMemberSize(struct _GTypeValueTable,collect_format,4,2,42133)
-CheckOffset(struct _GTypeValueTable,collect_format,16,2,42133)
-CheckMemberSize(struct _GTypeValueTable,collect_value,4,2,42138)
-CheckOffset(struct _GTypeValueTable,collect_value,20,2,42138)
-CheckMemberSize(struct _GTypeValueTable,lcopy_format,4,2,42139)
-CheckOffset(struct _GTypeValueTable,lcopy_format,24,2,42139)
-CheckMemberSize(struct _GTypeValueTable,lcopy_value,4,2,42144)
-CheckOffset(struct _GTypeValueTable,lcopy_value,28,2,42144)
+CheckTypeSize(struct _GTypeInfo,36, 11925, 2);
+CheckMemberSize(struct _GTypeInfo,base_init,4,2,42115);
+CheckOffset(struct _GTypeInfo,base_init,4,2,42115);
+CheckMemberSize(struct _GTypeInfo,base_finalize,4,2,42116);
+CheckOffset(struct _GTypeInfo,base_finalize,8,2,42116);
+CheckMemberSize(struct _GTypeInfo,class_init,4,2,42117);
+CheckOffset(struct _GTypeInfo,class_init,12,2,42117);
+CheckMemberSize(struct _GTypeInfo,class_finalize,4,2,42118);
+CheckOffset(struct _GTypeInfo,class_finalize,16,2,42118);
+CheckMemberSize(struct _GTypeInfo,class_data,4,2,42119);
+CheckOffset(struct _GTypeInfo,class_data,20,2,42119);
+CheckMemberSize(struct _GTypeInfo,instance_size,2,2,42120);
+CheckOffset(struct _GTypeInfo,instance_size,24,2,42120);
+CheckMemberSize(struct _GTypeInfo,n_preallocs,2,2,42121);
+CheckOffset(struct _GTypeInfo,n_preallocs,26,2,42121);
+CheckMemberSize(struct _GTypeInfo,instance_init,4,2,42124);
+CheckOffset(struct _GTypeInfo,instance_init,28,2,42124);
+CheckMemberSize(struct _GTypeInfo,value_table,4,2,42145);
+CheckOffset(struct _GTypeInfo,value_table,32,2,42145);
 #elif __x86_64__
-CheckTypeSize(struct _GTypeValueTable,64, 11932, 11)
-CheckMemberSize(struct _GTypeValueTable,value_free,8,11,42127)
-CheckOffset(struct _GTypeValueTable,value_free,8,11,42127)
-CheckMemberSize(struct _GTypeValueTable,value_copy,8,11,42130)
-CheckOffset(struct _GTypeValueTable,value_copy,16,11,42130)
-CheckMemberSize(struct _GTypeValueTable,value_peek_pointer,8,11,42132)
-CheckOffset(struct _GTypeValueTable,value_peek_pointer,24,11,42132)
-CheckMemberSize(struct _GTypeValueTable,collect_format,8,11,42133)
-CheckOffset(struct _GTypeValueTable,collect_format,32,11,42133)
-CheckMemberSize(struct _GTypeValueTable,collect_value,8,11,42138)
-CheckOffset(struct _GTypeValueTable,collect_value,40,11,42138)
-CheckMemberSize(struct _GTypeValueTable,lcopy_format,8,11,42139)
-CheckOffset(struct _GTypeValueTable,lcopy_format,48,11,42139)
-CheckMemberSize(struct _GTypeValueTable,lcopy_value,8,11,42144)
-CheckOffset(struct _GTypeValueTable,lcopy_value,56,11,42144)
+CheckTypeSize(struct _GTypeInfo,72, 11925, 11);
+CheckMemberSize(struct _GTypeInfo,base_init,8,11,42115);
+CheckOffset(struct _GTypeInfo,base_init,8,11,42115);
+CheckMemberSize(struct _GTypeInfo,base_finalize,8,11,42116);
+CheckOffset(struct _GTypeInfo,base_finalize,16,11,42116);
+CheckMemberSize(struct _GTypeInfo,class_init,8,11,42117);
+CheckOffset(struct _GTypeInfo,class_init,24,11,42117);
+CheckMemberSize(struct _GTypeInfo,class_finalize,8,11,42118);
+CheckOffset(struct _GTypeInfo,class_finalize,32,11,42118);
+CheckMemberSize(struct _GTypeInfo,class_data,8,11,42119);
+CheckOffset(struct _GTypeInfo,class_data,40,11,42119);
+CheckMemberSize(struct _GTypeInfo,instance_size,2,11,42120);
+CheckOffset(struct _GTypeInfo,instance_size,48,11,42120);
+CheckMemberSize(struct _GTypeInfo,n_preallocs,2,11,42121);
+CheckOffset(struct _GTypeInfo,n_preallocs,50,11,42121);
+CheckMemberSize(struct _GTypeInfo,instance_init,8,11,42124);
+CheckOffset(struct _GTypeInfo,instance_init,56,11,42124);
+CheckMemberSize(struct _GTypeInfo,value_table,8,11,42145);
+CheckOffset(struct _GTypeInfo,value_table,64,11,42145);
 #elif __ia64__
-CheckTypeSize(struct _GTypeValueTable,64, 11932, 3)
-CheckMemberSize(struct _GTypeValueTable,value_free,8,3,42127)
-CheckOffset(struct _GTypeValueTable,value_free,8,3,42127)
-CheckMemberSize(struct _GTypeValueTable,value_copy,8,3,42130)
-CheckOffset(struct _GTypeValueTable,value_copy,16,3,42130)
-CheckMemberSize(struct _GTypeValueTable,value_peek_pointer,8,3,42132)
-CheckOffset(struct _GTypeValueTable,value_peek_pointer,24,3,42132)
-CheckMemberSize(struct _GTypeValueTable,collect_format,8,3,42133)
-CheckOffset(struct _GTypeValueTable,collect_format,32,3,42133)
-CheckMemberSize(struct _GTypeValueTable,collect_value,8,3,42138)
-CheckOffset(struct _GTypeValueTable,collect_value,40,3,42138)
-CheckMemberSize(struct _GTypeValueTable,lcopy_format,8,3,42139)
-CheckOffset(struct _GTypeValueTable,lcopy_format,48,3,42139)
-CheckMemberSize(struct _GTypeValueTable,lcopy_value,8,3,42144)
-CheckOffset(struct _GTypeValueTable,lcopy_value,56,3,42144)
+CheckTypeSize(struct _GTypeInfo,72, 11925, 3);
+CheckMemberSize(struct _GTypeInfo,base_init,8,3,42115);
+CheckOffset(struct _GTypeInfo,base_init,8,3,42115);
+CheckMemberSize(struct _GTypeInfo,base_finalize,8,3,42116);
+CheckOffset(struct _GTypeInfo,base_finalize,16,3,42116);
+CheckMemberSize(struct _GTypeInfo,class_init,8,3,42117);
+CheckOffset(struct _GTypeInfo,class_init,24,3,42117);
+CheckMemberSize(struct _GTypeInfo,class_finalize,8,3,42118);
+CheckOffset(struct _GTypeInfo,class_finalize,32,3,42118);
+CheckMemberSize(struct _GTypeInfo,class_data,8,3,42119);
+CheckOffset(struct _GTypeInfo,class_data,40,3,42119);
+CheckMemberSize(struct _GTypeInfo,instance_size,2,3,42120);
+CheckOffset(struct _GTypeInfo,instance_size,48,3,42120);
+CheckMemberSize(struct _GTypeInfo,n_preallocs,2,3,42121);
+CheckOffset(struct _GTypeInfo,n_preallocs,50,3,42121);
+CheckMemberSize(struct _GTypeInfo,instance_init,8,3,42124);
+CheckOffset(struct _GTypeInfo,instance_init,56,3,42124);
+CheckMemberSize(struct _GTypeInfo,value_table,8,3,42145);
+CheckOffset(struct _GTypeInfo,value_table,64,3,42145);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GTypeValueTable,32, 11932, 6)
-CheckMemberSize(struct _GTypeValueTable,value_free,4,6,42127)
-CheckOffset(struct _GTypeValueTable,value_free,4,6,42127)
-CheckMemberSize(struct _GTypeValueTable,value_copy,4,6,42130)
-CheckOffset(struct _GTypeValueTable,value_copy,8,6,42130)
-CheckMemberSize(struct _GTypeValueTable,value_peek_pointer,4,6,42132)
-CheckOffset(struct _GTypeValueTable,value_peek_pointer,12,6,42132)
-CheckMemberSize(struct _GTypeValueTable,collect_format,4,6,42133)
-CheckOffset(struct _GTypeValueTable,collect_format,16,6,42133)
-CheckMemberSize(struct _GTypeValueTable,collect_value,4,6,42138)
-CheckOffset(struct _GTypeValueTable,collect_value,20,6,42138)
-CheckMemberSize(struct _GTypeValueTable,lcopy_format,4,6,42139)
-CheckOffset(struct _GTypeValueTable,lcopy_format,24,6,42139)
-CheckMemberSize(struct _GTypeValueTable,lcopy_value,4,6,42144)
-CheckOffset(struct _GTypeValueTable,lcopy_value,28,6,42144)
+CheckTypeSize(struct _GTypeInfo,36, 11925, 6);
+CheckMemberSize(struct _GTypeInfo,base_init,4,6,42115);
+CheckOffset(struct _GTypeInfo,base_init,4,6,42115);
+CheckMemberSize(struct _GTypeInfo,base_finalize,4,6,42116);
+CheckOffset(struct _GTypeInfo,base_finalize,8,6,42116);
+CheckMemberSize(struct _GTypeInfo,class_init,4,6,42117);
+CheckOffset(struct _GTypeInfo,class_init,12,6,42117);
+CheckMemberSize(struct _GTypeInfo,class_finalize,4,6,42118);
+CheckOffset(struct _GTypeInfo,class_finalize,16,6,42118);
+CheckMemberSize(struct _GTypeInfo,class_data,4,6,42119);
+CheckOffset(struct _GTypeInfo,class_data,20,6,42119);
+CheckMemberSize(struct _GTypeInfo,instance_size,2,6,42120);
+CheckOffset(struct _GTypeInfo,instance_size,24,6,42120);
+CheckMemberSize(struct _GTypeInfo,n_preallocs,2,6,42121);
+CheckOffset(struct _GTypeInfo,n_preallocs,26,6,42121);
+CheckMemberSize(struct _GTypeInfo,instance_init,4,6,42124);
+CheckOffset(struct _GTypeInfo,instance_init,28,6,42124);
+CheckMemberSize(struct _GTypeInfo,value_table,4,6,42145);
+CheckOffset(struct _GTypeInfo,value_table,32,6,42145);
 #elif __powerpc64__
-CheckTypeSize(struct _GTypeValueTable,64, 11932, 9)
-CheckMemberSize(struct _GTypeValueTable,value_free,8,9,42127)
-CheckOffset(struct _GTypeValueTable,value_free,8,9,42127)
-CheckMemberSize(struct _GTypeValueTable,value_copy,8,9,42130)
-CheckOffset(struct _GTypeValueTable,value_copy,16,9,42130)
-CheckMemberSize(struct _GTypeValueTable,value_peek_pointer,8,9,42132)
-CheckOffset(struct _GTypeValueTable,value_peek_pointer,24,9,42132)
-CheckMemberSize(struct _GTypeValueTable,collect_format,8,9,42133)
-CheckOffset(struct _GTypeValueTable,collect_format,32,9,42133)
-CheckMemberSize(struct _GTypeValueTable,collect_value,8,9,42138)
-CheckOffset(struct _GTypeValueTable,collect_value,40,9,42138)
-CheckMemberSize(struct _GTypeValueTable,lcopy_format,8,9,42139)
-CheckOffset(struct _GTypeValueTable,lcopy_format,48,9,42139)
-CheckMemberSize(struct _GTypeValueTable,lcopy_value,8,9,42144)
-CheckOffset(struct _GTypeValueTable,lcopy_value,56,9,42144)
+CheckTypeSize(struct _GTypeInfo,72, 11925, 9);
+CheckMemberSize(struct _GTypeInfo,base_init,8,9,42115);
+CheckOffset(struct _GTypeInfo,base_init,8,9,42115);
+CheckMemberSize(struct _GTypeInfo,base_finalize,8,9,42116);
+CheckOffset(struct _GTypeInfo,base_finalize,16,9,42116);
+CheckMemberSize(struct _GTypeInfo,class_init,8,9,42117);
+CheckOffset(struct _GTypeInfo,class_init,24,9,42117);
+CheckMemberSize(struct _GTypeInfo,class_finalize,8,9,42118);
+CheckOffset(struct _GTypeInfo,class_finalize,32,9,42118);
+CheckMemberSize(struct _GTypeInfo,class_data,8,9,42119);
+CheckOffset(struct _GTypeInfo,class_data,40,9,42119);
+CheckMemberSize(struct _GTypeInfo,instance_size,2,9,42120);
+CheckOffset(struct _GTypeInfo,instance_size,48,9,42120);
+CheckMemberSize(struct _GTypeInfo,n_preallocs,2,9,42121);
+CheckOffset(struct _GTypeInfo,n_preallocs,50,9,42121);
+CheckMemberSize(struct _GTypeInfo,instance_init,8,9,42124);
+CheckOffset(struct _GTypeInfo,instance_init,56,9,42124);
+CheckMemberSize(struct _GTypeInfo,value_table,8,9,42145);
+CheckOffset(struct _GTypeInfo,value_table,64,9,42145);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GTypeValueTable,32, 11932, 10)
-CheckMemberSize(struct _GTypeValueTable,value_free,4,10,42127)
-CheckOffset(struct _GTypeValueTable,value_free,4,10,42127)
-CheckMemberSize(struct _GTypeValueTable,value_copy,4,10,42130)
-CheckOffset(struct _GTypeValueTable,value_copy,8,10,42130)
-CheckMemberSize(struct _GTypeValueTable,value_peek_pointer,4,10,42132)
-CheckOffset(struct _GTypeValueTable,value_peek_pointer,12,10,42132)
-CheckMemberSize(struct _GTypeValueTable,collect_format,4,10,42133)
-CheckOffset(struct _GTypeValueTable,collect_format,16,10,42133)
-CheckMemberSize(struct _GTypeValueTable,collect_value,4,10,42138)
-CheckOffset(struct _GTypeValueTable,collect_value,20,10,42138)
-CheckMemberSize(struct _GTypeValueTable,lcopy_format,4,10,42139)
-CheckOffset(struct _GTypeValueTable,lcopy_format,24,10,42139)
-CheckMemberSize(struct _GTypeValueTable,lcopy_value,4,10,42144)
-CheckOffset(struct _GTypeValueTable,lcopy_value,28,10,42144)
+CheckTypeSize(struct _GTypeInfo,36, 11925, 10);
+CheckMemberSize(struct _GTypeInfo,base_init,4,10,42115);
+CheckOffset(struct _GTypeInfo,base_init,4,10,42115);
+CheckMemberSize(struct _GTypeInfo,base_finalize,4,10,42116);
+CheckOffset(struct _GTypeInfo,base_finalize,8,10,42116);
+CheckMemberSize(struct _GTypeInfo,class_init,4,10,42117);
+CheckOffset(struct _GTypeInfo,class_init,12,10,42117);
+CheckMemberSize(struct _GTypeInfo,class_finalize,4,10,42118);
+CheckOffset(struct _GTypeInfo,class_finalize,16,10,42118);
+CheckMemberSize(struct _GTypeInfo,class_data,4,10,42119);
+CheckOffset(struct _GTypeInfo,class_data,20,10,42119);
+CheckMemberSize(struct _GTypeInfo,instance_size,2,10,42120);
+CheckOffset(struct _GTypeInfo,instance_size,24,10,42120);
+CheckMemberSize(struct _GTypeInfo,n_preallocs,2,10,42121);
+CheckOffset(struct _GTypeInfo,n_preallocs,26,10,42121);
+CheckMemberSize(struct _GTypeInfo,instance_init,4,10,42124);
+CheckOffset(struct _GTypeInfo,instance_init,28,10,42124);
+CheckMemberSize(struct _GTypeInfo,value_table,4,10,42145);
+CheckOffset(struct _GTypeInfo,value_table,32,10,42145);
 #elif __s390x__
-CheckTypeSize(struct _GTypeValueTable,64, 11932, 12)
-CheckMemberSize(struct _GTypeValueTable,value_free,8,12,42127)
-CheckOffset(struct _GTypeValueTable,value_free,8,12,42127)
-CheckMemberSize(struct _GTypeValueTable,value_copy,8,12,42130)
-CheckOffset(struct _GTypeValueTable,value_copy,16,12,42130)
-CheckMemberSize(struct _GTypeValueTable,value_peek_pointer,8,12,42132)
-CheckOffset(struct _GTypeValueTable,value_peek_pointer,24,12,42132)
-CheckMemberSize(struct _GTypeValueTable,collect_format,8,12,42133)
-CheckOffset(struct _GTypeValueTable,collect_format,32,12,42133)
-CheckMemberSize(struct _GTypeValueTable,collect_value,8,12,42138)
-CheckOffset(struct _GTypeValueTable,collect_value,40,12,42138)
-CheckMemberSize(struct _GTypeValueTable,lcopy_format,8,12,42139)
-CheckOffset(struct _GTypeValueTable,lcopy_format,48,12,42139)
-CheckMemberSize(struct _GTypeValueTable,lcopy_value,8,12,42144)
-CheckOffset(struct _GTypeValueTable,lcopy_value,56,12,42144)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11932,0);
-Msg("Find size of _GTypeValueTable (11932)\n");
+CheckTypeSize(struct _GTypeInfo,72, 11925, 12);
+CheckMemberSize(struct _GTypeInfo,base_init,8,12,42115);
+CheckOffset(struct _GTypeInfo,base_init,8,12,42115);
+CheckMemberSize(struct _GTypeInfo,base_finalize,8,12,42116);
+CheckOffset(struct _GTypeInfo,base_finalize,16,12,42116);
+CheckMemberSize(struct _GTypeInfo,class_init,8,12,42117);
+CheckOffset(struct _GTypeInfo,class_init,24,12,42117);
+CheckMemberSize(struct _GTypeInfo,class_finalize,8,12,42118);
+CheckOffset(struct _GTypeInfo,class_finalize,32,12,42118);
+CheckMemberSize(struct _GTypeInfo,class_data,8,12,42119);
+CheckOffset(struct _GTypeInfo,class_data,40,12,42119);
+CheckMemberSize(struct _GTypeInfo,instance_size,2,12,42120);
+CheckOffset(struct _GTypeInfo,instance_size,48,12,42120);
+CheckMemberSize(struct _GTypeInfo,n_preallocs,2,12,42121);
+CheckOffset(struct _GTypeInfo,n_preallocs,50,12,42121);
+CheckMemberSize(struct _GTypeInfo,instance_init,8,12,42124);
+CheckOffset(struct _GTypeInfo,instance_init,56,12,42124);
+CheckMemberSize(struct _GTypeInfo,value_table,8,12,42145);
+CheckOffset(struct _GTypeInfo,value_table,64,12,42145);
+#elif 1
+CheckTypeSize(struct _GTypeInfo,0, 11925, 1);
+Msg("Missing member data for _GTypeInfo on All\n");
+CheckOffset(struct _GTypeInfo,class_size,0,1,42114);
+CheckOffset(struct _GTypeInfo,base_init,0,1,42115);
+CheckOffset(struct _GTypeInfo,base_finalize,0,1,42116);
+CheckOffset(struct _GTypeInfo,class_init,0,1,42117);
+CheckOffset(struct _GTypeInfo,class_finalize,0,1,42118);
+CheckOffset(struct _GTypeInfo,class_data,0,1,42119);
+CheckOffset(struct _GTypeInfo,instance_size,0,1,42120);
+CheckOffset(struct _GTypeInfo,n_preallocs,0,1,42121);
+CheckOffset(struct _GTypeInfo,instance_init,0,1,42124);
+CheckOffset(struct _GTypeInfo,value_table,0,1,42145);
 #endif
 
 #if __i386__
+CheckTypeSize(GBaseInitFunc,4, 11926, 2);
 #elif __x86_64__
+CheckTypeSize(GBaseInitFunc,8, 11926, 11);
 #elif __ia64__
+CheckTypeSize(GBaseInitFunc,8, 11926, 3);
 #elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GBaseInitFunc,4, 11926, 6);
 #elif __powerpc64__
+CheckTypeSize(GBaseInitFunc,8, 11926, 9);
 #elif __s390__ && !__s390x__
+CheckTypeSize(GBaseInitFunc,4, 11926, 10);
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11933,0);
-Msg("Find size of fptr_glib-object_32 (11933)\n");
+CheckTypeSize(GBaseInitFunc,8, 11926, 12);
+#elif 1
+CheckTypeSize(GBaseInitFunc,0, 11926, 1);
 #endif
 
 #if __i386__
+CheckTypeSize(GBaseFinalizeFunc,4, 11927, 2);
 #elif __x86_64__
+CheckTypeSize(GBaseFinalizeFunc,8, 11927, 11);
 #elif __ia64__
+CheckTypeSize(GBaseFinalizeFunc,8, 11927, 3);
 #elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GBaseFinalizeFunc,4, 11927, 6);
 #elif __powerpc64__
+CheckTypeSize(GBaseFinalizeFunc,8, 11927, 9);
 #elif __s390__ && !__s390x__
+CheckTypeSize(GBaseFinalizeFunc,4, 11927, 10);
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11934,0);
-Msg("Find size of fptr_glib-object_175 (11934)\n");
+CheckTypeSize(GBaseFinalizeFunc,8, 11927, 12);
+#elif 1
+CheckTypeSize(GBaseFinalizeFunc,0, 11927, 1);
 #endif
 
 #if __i386__
+CheckTypeSize(GClassInitFunc,4, 11928, 2);
 #elif __x86_64__
+CheckTypeSize(GClassInitFunc,8, 11928, 11);
 #elif __ia64__
+CheckTypeSize(GClassInitFunc,8, 11928, 3);
 #elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GClassInitFunc,4, 11928, 6);
 #elif __powerpc64__
+CheckTypeSize(GClassInitFunc,8, 11928, 9);
 #elif __s390__ && !__s390x__
+CheckTypeSize(GClassInitFunc,4, 11928, 10);
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11935,0);
-Msg("Find size of fptr_glib-object_96 (11935)\n");
+CheckTypeSize(GClassInitFunc,8, 11928, 12);
+#elif 1
+CheckTypeSize(GClassInitFunc,0, 11928, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GTypeCValue,0, 11937, 2)
+CheckTypeSize(GClassFinalizeFunc,4, 11929, 2);
 #elif __x86_64__
-CheckTypeSize(GTypeCValue,0, 11937, 11)
+CheckTypeSize(GClassFinalizeFunc,8, 11929, 11);
 #elif __ia64__
-CheckTypeSize(GTypeCValue,0, 11937, 3)
+CheckTypeSize(GClassFinalizeFunc,8, 11929, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypeCValue,0, 11937, 6)
+CheckTypeSize(GClassFinalizeFunc,4, 11929, 6);
 #elif __powerpc64__
-CheckTypeSize(GTypeCValue,0, 11937, 9)
+CheckTypeSize(GClassFinalizeFunc,8, 11929, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GTypeCValue,0, 11937, 10)
+CheckTypeSize(GClassFinalizeFunc,4, 11929, 10);
 #elif __s390x__
-CheckTypeSize(GTypeCValue,0, 11937, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11937,0);
-Msg("Find size of GTypeCValue (11937)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GTypeCValue *,4, 11938, 2)
-#elif __x86_64__
-CheckTypeSize(GTypeCValue *,8, 11938, 11)
-#elif __ia64__
-CheckTypeSize(GTypeCValue *,8, 11938, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypeCValue *,4, 11938, 6)
-#elif __powerpc64__
-CheckTypeSize(GTypeCValue *,8, 11938, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GTypeCValue *,4, 11938, 10)
-#elif __s390x__
-CheckTypeSize(GTypeCValue *,8, 11938, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11938,0);
-Msg("Find size of GTypeCValue * (11938)\n");
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11939,0);
-Msg("Find size of fptr_glib-object_197 (11939)\n");
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11940,0);
-Msg("Find size of fptr_glib-object_196 (11940)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GTypeValueTable,32, 11941, 2)
-#elif __x86_64__
-CheckTypeSize(GTypeValueTable,64, 11941, 11)
-#elif __ia64__
-CheckTypeSize(GTypeValueTable,64, 11941, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypeValueTable,32, 11941, 6)
-#elif __powerpc64__
-CheckTypeSize(GTypeValueTable,64, 11941, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GTypeValueTable,32, 11941, 10)
-#elif __s390x__
-CheckTypeSize(GTypeValueTable,64, 11941, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11941,0);
-Msg("Find size of GTypeValueTable (11941)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(const GTypeValueTable,32, 11942, 2)
-#elif __x86_64__
-CheckTypeSize(const GTypeValueTable,64, 11942, 11)
-#elif __ia64__
-CheckTypeSize(const GTypeValueTable,64, 11942, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(const GTypeValueTable,32, 11942, 6)
-#elif __powerpc64__
-CheckTypeSize(const GTypeValueTable,64, 11942, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(const GTypeValueTable,32, 11942, 10)
-#elif __s390x__
-CheckTypeSize(const GTypeValueTable,64, 11942, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11942,0);
-Msg("Find size of const GTypeValueTable (11942)\n");
+CheckTypeSize(GClassFinalizeFunc,8, 11929, 12);
+#elif 1
+CheckTypeSize(GClassFinalizeFunc,0, 11929, 1);
 #endif
 
 #if __i386__
@@ -3768,47 +3481,150 @@ Msg("Find size of const GTypeValueTable (11942)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11943,0);
-Msg("Find size of const GTypeValueTable * (11943)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(GTypeInfo,36, 11944, 2)
+CheckTypeSize(GInstanceInitFunc,4, 11931, 2);
 #elif __x86_64__
-CheckTypeSize(GTypeInfo,72, 11944, 11)
+CheckTypeSize(GInstanceInitFunc,8, 11931, 11);
 #elif __ia64__
-CheckTypeSize(GTypeInfo,72, 11944, 3)
+CheckTypeSize(GInstanceInitFunc,8, 11931, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypeInfo,36, 11944, 6)
+CheckTypeSize(GInstanceInitFunc,4, 11931, 6);
 #elif __powerpc64__
-CheckTypeSize(GTypeInfo,72, 11944, 9)
+CheckTypeSize(GInstanceInitFunc,8, 11931, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GTypeInfo,36, 11944, 10)
+CheckTypeSize(GInstanceInitFunc,4, 11931, 10);
 #elif __s390x__
-CheckTypeSize(GTypeInfo,72, 11944, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11944,0);
-Msg("Find size of GTypeInfo (11944)\n");
+CheckTypeSize(GInstanceInitFunc,8, 11931, 12);
+#elif 1
+CheckTypeSize(GInstanceInitFunc,0, 11931, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(const GTypeInfo,36, 11945, 2)
+CheckTypeSize(struct _GTypeValueTable,32, 11932, 2);
+CheckMemberSize(struct _GTypeValueTable,value_free,4,2,42127);
+CheckOffset(struct _GTypeValueTable,value_free,4,2,42127);
+CheckMemberSize(struct _GTypeValueTable,value_copy,4,2,42130);
+CheckOffset(struct _GTypeValueTable,value_copy,8,2,42130);
+CheckMemberSize(struct _GTypeValueTable,value_peek_pointer,4,2,42132);
+CheckOffset(struct _GTypeValueTable,value_peek_pointer,12,2,42132);
+CheckMemberSize(struct _GTypeValueTable,collect_format,4,2,42133);
+CheckOffset(struct _GTypeValueTable,collect_format,16,2,42133);
+CheckMemberSize(struct _GTypeValueTable,collect_value,4,2,42138);
+CheckOffset(struct _GTypeValueTable,collect_value,20,2,42138);
+CheckMemberSize(struct _GTypeValueTable,lcopy_format,4,2,42139);
+CheckOffset(struct _GTypeValueTable,lcopy_format,24,2,42139);
+CheckMemberSize(struct _GTypeValueTable,lcopy_value,4,2,42144);
+CheckOffset(struct _GTypeValueTable,lcopy_value,28,2,42144);
 #elif __x86_64__
-CheckTypeSize(const GTypeInfo,72, 11945, 11)
+CheckTypeSize(struct _GTypeValueTable,64, 11932, 11);
+CheckMemberSize(struct _GTypeValueTable,value_free,8,11,42127);
+CheckOffset(struct _GTypeValueTable,value_free,8,11,42127);
+CheckMemberSize(struct _GTypeValueTable,value_copy,8,11,42130);
+CheckOffset(struct _GTypeValueTable,value_copy,16,11,42130);
+CheckMemberSize(struct _GTypeValueTable,value_peek_pointer,8,11,42132);
+CheckOffset(struct _GTypeValueTable,value_peek_pointer,24,11,42132);
+CheckMemberSize(struct _GTypeValueTable,collect_format,8,11,42133);
+CheckOffset(struct _GTypeValueTable,collect_format,32,11,42133);
+CheckMemberSize(struct _GTypeValueTable,collect_value,8,11,42138);
+CheckOffset(struct _GTypeValueTable,collect_value,40,11,42138);
+CheckMemberSize(struct _GTypeValueTable,lcopy_format,8,11,42139);
+CheckOffset(struct _GTypeValueTable,lcopy_format,48,11,42139);
+CheckMemberSize(struct _GTypeValueTable,lcopy_value,8,11,42144);
+CheckOffset(struct _GTypeValueTable,lcopy_value,56,11,42144);
 #elif __ia64__
-CheckTypeSize(const GTypeInfo,72, 11945, 3)
+CheckTypeSize(struct _GTypeValueTable,64, 11932, 3);
+CheckMemberSize(struct _GTypeValueTable,value_free,8,3,42127);
+CheckOffset(struct _GTypeValueTable,value_free,8,3,42127);
+CheckMemberSize(struct _GTypeValueTable,value_copy,8,3,42130);
+CheckOffset(struct _GTypeValueTable,value_copy,16,3,42130);
+CheckMemberSize(struct _GTypeValueTable,value_peek_pointer,8,3,42132);
+CheckOffset(struct _GTypeValueTable,value_peek_pointer,24,3,42132);
+CheckMemberSize(struct _GTypeValueTable,collect_format,8,3,42133);
+CheckOffset(struct _GTypeValueTable,collect_format,32,3,42133);
+CheckMemberSize(struct _GTypeValueTable,collect_value,8,3,42138);
+CheckOffset(struct _GTypeValueTable,collect_value,40,3,42138);
+CheckMemberSize(struct _GTypeValueTable,lcopy_format,8,3,42139);
+CheckOffset(struct _GTypeValueTable,lcopy_format,48,3,42139);
+CheckMemberSize(struct _GTypeValueTable,lcopy_value,8,3,42144);
+CheckOffset(struct _GTypeValueTable,lcopy_value,56,3,42144);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(const GTypeInfo,36, 11945, 6)
+CheckTypeSize(struct _GTypeValueTable,32, 11932, 6);
+CheckMemberSize(struct _GTypeValueTable,value_free,4,6,42127);
+CheckOffset(struct _GTypeValueTable,value_free,4,6,42127);
+CheckMemberSize(struct _GTypeValueTable,value_copy,4,6,42130);
+CheckOffset(struct _GTypeValueTable,value_copy,8,6,42130);
+CheckMemberSize(struct _GTypeValueTable,value_peek_pointer,4,6,42132);
+CheckOffset(struct _GTypeValueTable,value_peek_pointer,12,6,42132);
+CheckMemberSize(struct _GTypeValueTable,collect_format,4,6,42133);
+CheckOffset(struct _GTypeValueTable,collect_format,16,6,42133);
+CheckMemberSize(struct _GTypeValueTable,collect_value,4,6,42138);
+CheckOffset(struct _GTypeValueTable,collect_value,20,6,42138);
+CheckMemberSize(struct _GTypeValueTable,lcopy_format,4,6,42139);
+CheckOffset(struct _GTypeValueTable,lcopy_format,24,6,42139);
+CheckMemberSize(struct _GTypeValueTable,lcopy_value,4,6,42144);
+CheckOffset(struct _GTypeValueTable,lcopy_value,28,6,42144);
 #elif __powerpc64__
-CheckTypeSize(const GTypeInfo,72, 11945, 9)
+CheckTypeSize(struct _GTypeValueTable,64, 11932, 9);
+CheckMemberSize(struct _GTypeValueTable,value_free,8,9,42127);
+CheckOffset(struct _GTypeValueTable,value_free,8,9,42127);
+CheckMemberSize(struct _GTypeValueTable,value_copy,8,9,42130);
+CheckOffset(struct _GTypeValueTable,value_copy,16,9,42130);
+CheckMemberSize(struct _GTypeValueTable,value_peek_pointer,8,9,42132);
+CheckOffset(struct _GTypeValueTable,value_peek_pointer,24,9,42132);
+CheckMemberSize(struct _GTypeValueTable,collect_format,8,9,42133);
+CheckOffset(struct _GTypeValueTable,collect_format,32,9,42133);
+CheckMemberSize(struct _GTypeValueTable,collect_value,8,9,42138);
+CheckOffset(struct _GTypeValueTable,collect_value,40,9,42138);
+CheckMemberSize(struct _GTypeValueTable,lcopy_format,8,9,42139);
+CheckOffset(struct _GTypeValueTable,lcopy_format,48,9,42139);
+CheckMemberSize(struct _GTypeValueTable,lcopy_value,8,9,42144);
+CheckOffset(struct _GTypeValueTable,lcopy_value,56,9,42144);
 #elif __s390__ && !__s390x__
-CheckTypeSize(const GTypeInfo,36, 11945, 10)
+CheckTypeSize(struct _GTypeValueTable,32, 11932, 10);
+CheckMemberSize(struct _GTypeValueTable,value_free,4,10,42127);
+CheckOffset(struct _GTypeValueTable,value_free,4,10,42127);
+CheckMemberSize(struct _GTypeValueTable,value_copy,4,10,42130);
+CheckOffset(struct _GTypeValueTable,value_copy,8,10,42130);
+CheckMemberSize(struct _GTypeValueTable,value_peek_pointer,4,10,42132);
+CheckOffset(struct _GTypeValueTable,value_peek_pointer,12,10,42132);
+CheckMemberSize(struct _GTypeValueTable,collect_format,4,10,42133);
+CheckOffset(struct _GTypeValueTable,collect_format,16,10,42133);
+CheckMemberSize(struct _GTypeValueTable,collect_value,4,10,42138);
+CheckOffset(struct _GTypeValueTable,collect_value,20,10,42138);
+CheckMemberSize(struct _GTypeValueTable,lcopy_format,4,10,42139);
+CheckOffset(struct _GTypeValueTable,lcopy_format,24,10,42139);
+CheckMemberSize(struct _GTypeValueTable,lcopy_value,4,10,42144);
+CheckOffset(struct _GTypeValueTable,lcopy_value,28,10,42144);
 #elif __s390x__
-CheckTypeSize(const GTypeInfo,72, 11945, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11945,0);
-Msg("Find size of const GTypeInfo (11945)\n");
+CheckTypeSize(struct _GTypeValueTable,64, 11932, 12);
+CheckMemberSize(struct _GTypeValueTable,value_free,8,12,42127);
+CheckOffset(struct _GTypeValueTable,value_free,8,12,42127);
+CheckMemberSize(struct _GTypeValueTable,value_copy,8,12,42130);
+CheckOffset(struct _GTypeValueTable,value_copy,16,12,42130);
+CheckMemberSize(struct _GTypeValueTable,value_peek_pointer,8,12,42132);
+CheckOffset(struct _GTypeValueTable,value_peek_pointer,24,12,42132);
+CheckMemberSize(struct _GTypeValueTable,collect_format,8,12,42133);
+CheckOffset(struct _GTypeValueTable,collect_format,32,12,42133);
+CheckMemberSize(struct _GTypeValueTable,collect_value,8,12,42138);
+CheckOffset(struct _GTypeValueTable,collect_value,40,12,42138);
+CheckMemberSize(struct _GTypeValueTable,lcopy_format,8,12,42139);
+CheckOffset(struct _GTypeValueTable,lcopy_format,48,12,42139);
+CheckMemberSize(struct _GTypeValueTable,lcopy_value,8,12,42144);
+CheckOffset(struct _GTypeValueTable,lcopy_value,56,12,42144);
+#elif 1
+CheckTypeSize(struct _GTypeValueTable,0, 11932, 1);
+Msg("Missing member data for _GTypeValueTable on All\n");
+CheckOffset(struct _GTypeValueTable,value_init,0,1,42126);
+CheckOffset(struct _GTypeValueTable,value_free,0,1,42127);
+CheckOffset(struct _GTypeValueTable,value_copy,0,1,42130);
+CheckOffset(struct _GTypeValueTable,value_peek_pointer,0,1,42132);
+CheckOffset(struct _GTypeValueTable,collect_format,0,1,42133);
+CheckOffset(struct _GTypeValueTable,collect_value,0,1,42138);
+CheckOffset(struct _GTypeValueTable,lcopy_format,0,1,42139);
+CheckOffset(struct _GTypeValueTable,lcopy_value,0,1,42144);
 #endif
 
 #if __i386__
@@ -3818,9 +3634,175 @@ Msg("Find size of const GTypeInfo (11945)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11946,0);
-Msg("Find size of const GTypeInfo * (11946)\n");
+#elif 1
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
+#elif 1
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
+#elif 1
+#endif
+
+#if __i386__
+CheckTypeSize(GTypeCValue,0, 11937, 2);
+#elif __x86_64__
+CheckTypeSize(GTypeCValue,0, 11937, 11);
+#elif __ia64__
+CheckTypeSize(GTypeCValue,0, 11937, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GTypeCValue,0, 11937, 6);
+#elif __powerpc64__
+CheckTypeSize(GTypeCValue,0, 11937, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GTypeCValue,0, 11937, 10);
+#elif __s390x__
+CheckTypeSize(GTypeCValue,0, 11937, 12);
+#elif 1
+CheckTypeSize(GTypeCValue,0, 11937, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(GTypeCValue *,4, 11938, 2);
+#elif __x86_64__
+CheckTypeSize(GTypeCValue *,8, 11938, 11);
+#elif __ia64__
+CheckTypeSize(GTypeCValue *,8, 11938, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GTypeCValue *,4, 11938, 6);
+#elif __powerpc64__
+CheckTypeSize(GTypeCValue *,8, 11938, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GTypeCValue *,4, 11938, 10);
+#elif __s390x__
+CheckTypeSize(GTypeCValue *,8, 11938, 12);
+#elif 1
+CheckTypeSize(GTypeCValue *,0, 11938, 1);
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
+#elif 1
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
+#elif 1
+#endif
+
+#if __i386__
+CheckTypeSize(GTypeValueTable,32, 11941, 2);
+#elif __x86_64__
+CheckTypeSize(GTypeValueTable,64, 11941, 11);
+#elif __ia64__
+CheckTypeSize(GTypeValueTable,64, 11941, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GTypeValueTable,32, 11941, 6);
+#elif __powerpc64__
+CheckTypeSize(GTypeValueTable,64, 11941, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GTypeValueTable,32, 11941, 10);
+#elif __s390x__
+CheckTypeSize(GTypeValueTable,64, 11941, 12);
+#elif 1
+CheckTypeSize(GTypeValueTable,0, 11941, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(const GTypeValueTable,32, 11942, 2);
+#elif __x86_64__
+CheckTypeSize(const GTypeValueTable,64, 11942, 11);
+#elif __ia64__
+CheckTypeSize(const GTypeValueTable,64, 11942, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const GTypeValueTable,32, 11942, 6);
+#elif __powerpc64__
+CheckTypeSize(const GTypeValueTable,64, 11942, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(const GTypeValueTable,32, 11942, 10);
+#elif __s390x__
+CheckTypeSize(const GTypeValueTable,64, 11942, 12);
+#elif 1
+CheckTypeSize(const GTypeValueTable,0, 11942, 1);
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
+#elif 1
+#endif
+
+#if __i386__
+CheckTypeSize(GTypeInfo,36, 11944, 2);
+#elif __x86_64__
+CheckTypeSize(GTypeInfo,72, 11944, 11);
+#elif __ia64__
+CheckTypeSize(GTypeInfo,72, 11944, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GTypeInfo,36, 11944, 6);
+#elif __powerpc64__
+CheckTypeSize(GTypeInfo,72, 11944, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GTypeInfo,36, 11944, 10);
+#elif __s390x__
+CheckTypeSize(GTypeInfo,72, 11944, 12);
+#elif 1
+CheckTypeSize(GTypeInfo,0, 11944, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(const GTypeInfo,36, 11945, 2);
+#elif __x86_64__
+CheckTypeSize(const GTypeInfo,72, 11945, 11);
+#elif __ia64__
+CheckTypeSize(const GTypeInfo,72, 11945, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const GTypeInfo,36, 11945, 6);
+#elif __powerpc64__
+CheckTypeSize(const GTypeInfo,72, 11945, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(const GTypeInfo,36, 11945, 10);
+#elif __s390x__
+CheckTypeSize(const GTypeInfo,72, 11945, 12);
+#elif 1
+CheckTypeSize(const GTypeInfo,0, 11945, 1);
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
+#elif 1
 #endif
 
 #if __i386__
@@ -3844,302 +3826,301 @@ CheckEnum("G_TYPE_FLAG_VALUE_ABSTRACT",G_TYPE_FLAG_VALUE_ABSTRACT,32,42147);
 #elif __s390x__
 CheckEnum("G_TYPE_FLAG_ABSTRACT",G_TYPE_FLAG_ABSTRACT,16,42146);
 CheckEnum("G_TYPE_FLAG_VALUE_ABSTRACT",G_TYPE_FLAG_VALUE_ABSTRACT,32,42147);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11947,0);
-Msg("Find size of anon-glib-2.0/glib-object.h-49 (11947)\n");
+#elif 1
+CheckEnum("G_TYPE_FLAG_ABSTRACT",G_TYPE_FLAG_ABSTRACT,16,42146);
+CheckEnum("G_TYPE_FLAG_VALUE_ABSTRACT",G_TYPE_FLAG_VALUE_ABSTRACT,32,42147);
 #endif
 
 #if __i386__
-CheckTypeSize(GTypeFlags,4, 11948, 2)
+CheckTypeSize(GTypeFlags,4, 11948, 2);
 #elif __x86_64__
-CheckTypeSize(GTypeFlags,4, 11948, 11)
+CheckTypeSize(GTypeFlags,4, 11948, 11);
 #elif __ia64__
-CheckTypeSize(GTypeFlags,4, 11948, 3)
+CheckTypeSize(GTypeFlags,4, 11948, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypeFlags,4, 11948, 6)
+CheckTypeSize(GTypeFlags,4, 11948, 6);
 #elif __powerpc64__
-CheckTypeSize(GTypeFlags,4, 11948, 9)
+CheckTypeSize(GTypeFlags,4, 11948, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GTypeFlags,4, 11948, 10)
+CheckTypeSize(GTypeFlags,4, 11948, 10);
 #elif __s390x__
-CheckTypeSize(GTypeFlags,4, 11948, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11948,0);
-Msg("Find size of GTypeFlags (11948)\n");
+CheckTypeSize(GTypeFlags,4, 11948, 12);
+#elif 1
+CheckTypeSize(GTypeFlags,0, 11948, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GTypeModule,28, 11949, 2)
-CheckMemberSize(struct _GTypeModule,use_count,4,2,42149)
-CheckOffset(struct _GTypeModule,use_count,12,2,42149)
-CheckMemberSize(struct _GTypeModule,type_infos,4,2,42150)
-CheckOffset(struct _GTypeModule,type_infos,16,2,42150)
-CheckMemberSize(struct _GTypeModule,interface_infos,4,2,42151)
-CheckOffset(struct _GTypeModule,interface_infos,20,2,42151)
-CheckMemberSize(struct _GTypeModule,name,4,2,42152)
-CheckOffset(struct _GTypeModule,name,24,2,42152)
+CheckTypeSize(struct _GTypeModule,28, 11949, 2);
+CheckMemberSize(struct _GTypeModule,use_count,4,2,42149);
+CheckOffset(struct _GTypeModule,use_count,12,2,42149);
+CheckMemberSize(struct _GTypeModule,type_infos,4,2,42150);
+CheckOffset(struct _GTypeModule,type_infos,16,2,42150);
+CheckMemberSize(struct _GTypeModule,interface_infos,4,2,42151);
+CheckOffset(struct _GTypeModule,interface_infos,20,2,42151);
+CheckMemberSize(struct _GTypeModule,name,4,2,42152);
+CheckOffset(struct _GTypeModule,name,24,2,42152);
 #elif __x86_64__
-CheckTypeSize(struct _GTypeModule,56, 11949, 11)
-CheckMemberSize(struct _GTypeModule,use_count,4,11,42149)
-CheckOffset(struct _GTypeModule,use_count,24,11,42149)
-CheckMemberSize(struct _GTypeModule,type_infos,8,11,42150)
-CheckOffset(struct _GTypeModule,type_infos,32,11,42150)
-CheckMemberSize(struct _GTypeModule,interface_infos,8,11,42151)
-CheckOffset(struct _GTypeModule,interface_infos,40,11,42151)
-CheckMemberSize(struct _GTypeModule,name,8,11,42152)
-CheckOffset(struct _GTypeModule,name,48,11,42152)
+CheckTypeSize(struct _GTypeModule,56, 11949, 11);
+CheckMemberSize(struct _GTypeModule,use_count,4,11,42149);
+CheckOffset(struct _GTypeModule,use_count,24,11,42149);
+CheckMemberSize(struct _GTypeModule,type_infos,8,11,42150);
+CheckOffset(struct _GTypeModule,type_infos,32,11,42150);
+CheckMemberSize(struct _GTypeModule,interface_infos,8,11,42151);
+CheckOffset(struct _GTypeModule,interface_infos,40,11,42151);
+CheckMemberSize(struct _GTypeModule,name,8,11,42152);
+CheckOffset(struct _GTypeModule,name,48,11,42152);
 #elif __ia64__
-CheckTypeSize(struct _GTypeModule,56, 11949, 3)
-CheckMemberSize(struct _GTypeModule,use_count,4,3,42149)
-CheckOffset(struct _GTypeModule,use_count,24,3,42149)
-CheckMemberSize(struct _GTypeModule,type_infos,8,3,42150)
-CheckOffset(struct _GTypeModule,type_infos,32,3,42150)
-CheckMemberSize(struct _GTypeModule,interface_infos,8,3,42151)
-CheckOffset(struct _GTypeModule,interface_infos,40,3,42151)
-CheckMemberSize(struct _GTypeModule,name,8,3,42152)
-CheckOffset(struct _GTypeModule,name,48,3,42152)
+CheckTypeSize(struct _GTypeModule,56, 11949, 3);
+CheckMemberSize(struct _GTypeModule,use_count,4,3,42149);
+CheckOffset(struct _GTypeModule,use_count,24,3,42149);
+CheckMemberSize(struct _GTypeModule,type_infos,8,3,42150);
+CheckOffset(struct _GTypeModule,type_infos,32,3,42150);
+CheckMemberSize(struct _GTypeModule,interface_infos,8,3,42151);
+CheckOffset(struct _GTypeModule,interface_infos,40,3,42151);
+CheckMemberSize(struct _GTypeModule,name,8,3,42152);
+CheckOffset(struct _GTypeModule,name,48,3,42152);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GTypeModule,28, 11949, 6)
-CheckMemberSize(struct _GTypeModule,use_count,4,6,42149)
-CheckOffset(struct _GTypeModule,use_count,12,6,42149)
-CheckMemberSize(struct _GTypeModule,type_infos,4,6,42150)
-CheckOffset(struct _GTypeModule,type_infos,16,6,42150)
-CheckMemberSize(struct _GTypeModule,interface_infos,4,6,42151)
-CheckOffset(struct _GTypeModule,interface_infos,20,6,42151)
-CheckMemberSize(struct _GTypeModule,name,4,6,42152)
-CheckOffset(struct _GTypeModule,name,24,6,42152)
+CheckTypeSize(struct _GTypeModule,28, 11949, 6);
+CheckMemberSize(struct _GTypeModule,use_count,4,6,42149);
+CheckOffset(struct _GTypeModule,use_count,12,6,42149);
+CheckMemberSize(struct _GTypeModule,type_infos,4,6,42150);
+CheckOffset(struct _GTypeModule,type_infos,16,6,42150);
+CheckMemberSize(struct _GTypeModule,interface_infos,4,6,42151);
+CheckOffset(struct _GTypeModule,interface_infos,20,6,42151);
+CheckMemberSize(struct _GTypeModule,name,4,6,42152);
+CheckOffset(struct _GTypeModule,name,24,6,42152);
 #elif __powerpc64__
-CheckTypeSize(struct _GTypeModule,56, 11949, 9)
-CheckMemberSize(struct _GTypeModule,use_count,4,9,42149)
-CheckOffset(struct _GTypeModule,use_count,24,9,42149)
-CheckMemberSize(struct _GTypeModule,type_infos,8,9,42150)
-CheckOffset(struct _GTypeModule,type_infos,32,9,42150)
-CheckMemberSize(struct _GTypeModule,interface_infos,8,9,42151)
-CheckOffset(struct _GTypeModule,interface_infos,40,9,42151)
-CheckMemberSize(struct _GTypeModule,name,8,9,42152)
-CheckOffset(struct _GTypeModule,name,48,9,42152)
+CheckTypeSize(struct _GTypeModule,56, 11949, 9);
+CheckMemberSize(struct _GTypeModule,use_count,4,9,42149);
+CheckOffset(struct _GTypeModule,use_count,24,9,42149);
+CheckMemberSize(struct _GTypeModule,type_infos,8,9,42150);
+CheckOffset(struct _GTypeModule,type_infos,32,9,42150);
+CheckMemberSize(struct _GTypeModule,interface_infos,8,9,42151);
+CheckOffset(struct _GTypeModule,interface_infos,40,9,42151);
+CheckMemberSize(struct _GTypeModule,name,8,9,42152);
+CheckOffset(struct _GTypeModule,name,48,9,42152);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GTypeModule,28, 11949, 10)
-CheckMemberSize(struct _GTypeModule,use_count,4,10,42149)
-CheckOffset(struct _GTypeModule,use_count,12,10,42149)
-CheckMemberSize(struct _GTypeModule,type_infos,4,10,42150)
-CheckOffset(struct _GTypeModule,type_infos,16,10,42150)
-CheckMemberSize(struct _GTypeModule,interface_infos,4,10,42151)
-CheckOffset(struct _GTypeModule,interface_infos,20,10,42151)
-CheckMemberSize(struct _GTypeModule,name,4,10,42152)
-CheckOffset(struct _GTypeModule,name,24,10,42152)
+CheckTypeSize(struct _GTypeModule,28, 11949, 10);
+CheckMemberSize(struct _GTypeModule,use_count,4,10,42149);
+CheckOffset(struct _GTypeModule,use_count,12,10,42149);
+CheckMemberSize(struct _GTypeModule,type_infos,4,10,42150);
+CheckOffset(struct _GTypeModule,type_infos,16,10,42150);
+CheckMemberSize(struct _GTypeModule,interface_infos,4,10,42151);
+CheckOffset(struct _GTypeModule,interface_infos,20,10,42151);
+CheckMemberSize(struct _GTypeModule,name,4,10,42152);
+CheckOffset(struct _GTypeModule,name,24,10,42152);
 #elif __s390x__
-CheckTypeSize(struct _GTypeModule,56, 11949, 12)
-CheckMemberSize(struct _GTypeModule,use_count,4,12,42149)
-CheckOffset(struct _GTypeModule,use_count,24,12,42149)
-CheckMemberSize(struct _GTypeModule,type_infos,8,12,42150)
-CheckOffset(struct _GTypeModule,type_infos,32,12,42150)
-CheckMemberSize(struct _GTypeModule,interface_infos,8,12,42151)
-CheckOffset(struct _GTypeModule,interface_infos,40,12,42151)
-CheckMemberSize(struct _GTypeModule,name,8,12,42152)
-CheckOffset(struct _GTypeModule,name,48,12,42152)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11949,0);
-Msg("Find size of _GTypeModule (11949)\n");
+CheckTypeSize(struct _GTypeModule,56, 11949, 12);
+CheckMemberSize(struct _GTypeModule,use_count,4,12,42149);
+CheckOffset(struct _GTypeModule,use_count,24,12,42149);
+CheckMemberSize(struct _GTypeModule,type_infos,8,12,42150);
+CheckOffset(struct _GTypeModule,type_infos,32,12,42150);
+CheckMemberSize(struct _GTypeModule,interface_infos,8,12,42151);
+CheckOffset(struct _GTypeModule,interface_infos,40,12,42151);
+CheckMemberSize(struct _GTypeModule,name,8,12,42152);
+CheckOffset(struct _GTypeModule,name,48,12,42152);
+#elif 1
+CheckTypeSize(struct _GTypeModule,0, 11949, 1);
+Msg("Missing member data for _GTypeModule on All\n");
+CheckOffset(struct _GTypeModule,parent_instance,0,1,42148);
+CheckOffset(struct _GTypeModule,use_count,0,1,42149);
+CheckOffset(struct _GTypeModule,type_infos,0,1,42150);
+CheckOffset(struct _GTypeModule,interface_infos,0,1,42151);
+CheckOffset(struct _GTypeModule,name,0,1,42152);
 #endif
 
 #if __i386__
-CheckTypeSize(GTypeModule,28, 11950, 2)
+CheckTypeSize(GTypeModule,28, 11950, 2);
 #elif __x86_64__
-CheckTypeSize(GTypeModule,56, 11950, 11)
+CheckTypeSize(GTypeModule,56, 11950, 11);
 #elif __ia64__
-CheckTypeSize(GTypeModule,56, 11950, 3)
+CheckTypeSize(GTypeModule,56, 11950, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypeModule,28, 11950, 6)
+CheckTypeSize(GTypeModule,28, 11950, 6);
 #elif __powerpc64__
-CheckTypeSize(GTypeModule,56, 11950, 9)
+CheckTypeSize(GTypeModule,56, 11950, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GTypeModule,28, 11950, 10)
+CheckTypeSize(GTypeModule,28, 11950, 10);
 #elif __s390x__
-CheckTypeSize(GTypeModule,56, 11950, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11950,0);
-Msg("Find size of GTypeModule (11950)\n");
+CheckTypeSize(GTypeModule,56, 11950, 12);
+#elif 1
+CheckTypeSize(GTypeModule,0, 11950, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GTypeModule *,4, 11951, 2)
+CheckTypeSize(GTypeModule *,4, 11951, 2);
 #elif __x86_64__
-CheckTypeSize(GTypeModule *,8, 11951, 11)
+CheckTypeSize(GTypeModule *,8, 11951, 11);
 #elif __ia64__
-CheckTypeSize(GTypeModule *,8, 11951, 3)
+CheckTypeSize(GTypeModule *,8, 11951, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypeModule *,4, 11951, 6)
+CheckTypeSize(GTypeModule *,4, 11951, 6);
 #elif __powerpc64__
-CheckTypeSize(GTypeModule *,8, 11951, 9)
+CheckTypeSize(GTypeModule *,8, 11951, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GTypeModule *,4, 11951, 10)
+CheckTypeSize(GTypeModule *,4, 11951, 10);
 #elif __s390x__
-CheckTypeSize(GTypeModule *,8, 11951, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11951,0);
-Msg("Find size of GTypeModule * (11951)\n");
+CheckTypeSize(GTypeModule *,8, 11951, 12);
+#elif 1
+CheckTypeSize(GTypeModule *,0, 11951, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GTypeInfo *,4, 11952, 2)
+CheckTypeSize(GTypeInfo *,4, 11952, 2);
 #elif __x86_64__
-CheckTypeSize(GTypeInfo *,8, 11952, 11)
+CheckTypeSize(GTypeInfo *,8, 11952, 11);
 #elif __ia64__
-CheckTypeSize(GTypeInfo *,8, 11952, 3)
+CheckTypeSize(GTypeInfo *,8, 11952, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypeInfo *,4, 11952, 6)
+CheckTypeSize(GTypeInfo *,4, 11952, 6);
 #elif __powerpc64__
-CheckTypeSize(GTypeInfo *,8, 11952, 9)
+CheckTypeSize(GTypeInfo *,8, 11952, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GTypeInfo *,4, 11952, 10)
+CheckTypeSize(GTypeInfo *,4, 11952, 10);
 #elif __s390x__
-CheckTypeSize(GTypeInfo *,8, 11952, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11952,0);
-Msg("Find size of GTypeInfo * (11952)\n");
+CheckTypeSize(GTypeInfo *,8, 11952, 12);
+#elif 1
+CheckTypeSize(GTypeInfo *,0, 11952, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GTypeValueTable *,4, 11953, 2)
+CheckTypeSize(GTypeValueTable *,4, 11953, 2);
 #elif __x86_64__
-CheckTypeSize(GTypeValueTable *,8, 11953, 11)
+CheckTypeSize(GTypeValueTable *,8, 11953, 11);
 #elif __ia64__
-CheckTypeSize(GTypeValueTable *,8, 11953, 3)
+CheckTypeSize(GTypeValueTable *,8, 11953, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypeValueTable *,4, 11953, 6)
+CheckTypeSize(GTypeValueTable *,4, 11953, 6);
 #elif __powerpc64__
-CheckTypeSize(GTypeValueTable *,8, 11953, 9)
+CheckTypeSize(GTypeValueTable *,8, 11953, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GTypeValueTable *,4, 11953, 10)
+CheckTypeSize(GTypeValueTable *,4, 11953, 10);
 #elif __s390x__
-CheckTypeSize(GTypeValueTable *,8, 11953, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11953,0);
-Msg("Find size of GTypeValueTable * (11953)\n");
+CheckTypeSize(GTypeValueTable *,8, 11953, 12);
+#elif 1
+CheckTypeSize(GTypeValueTable *,0, 11953, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GInterfaceInfo,12, 11954, 2)
-CheckMemberSize(struct _GInterfaceInfo,interface_finalize,4,2,42154)
-CheckOffset(struct _GInterfaceInfo,interface_finalize,4,2,42154)
-CheckMemberSize(struct _GInterfaceInfo,interface_data,4,2,42155)
-CheckOffset(struct _GInterfaceInfo,interface_data,8,2,42155)
+CheckTypeSize(struct _GInterfaceInfo,12, 11954, 2);
+CheckMemberSize(struct _GInterfaceInfo,interface_finalize,4,2,42154);
+CheckOffset(struct _GInterfaceInfo,interface_finalize,4,2,42154);
+CheckMemberSize(struct _GInterfaceInfo,interface_data,4,2,42155);
+CheckOffset(struct _GInterfaceInfo,interface_data,8,2,42155);
 #elif __x86_64__
-CheckTypeSize(struct _GInterfaceInfo,24, 11954, 11)
-CheckMemberSize(struct _GInterfaceInfo,interface_finalize,8,11,42154)
-CheckOffset(struct _GInterfaceInfo,interface_finalize,8,11,42154)
-CheckMemberSize(struct _GInterfaceInfo,interface_data,8,11,42155)
-CheckOffset(struct _GInterfaceInfo,interface_data,16,11,42155)
+CheckTypeSize(struct _GInterfaceInfo,24, 11954, 11);
+CheckMemberSize(struct _GInterfaceInfo,interface_finalize,8,11,42154);
+CheckOffset(struct _GInterfaceInfo,interface_finalize,8,11,42154);
+CheckMemberSize(struct _GInterfaceInfo,interface_data,8,11,42155);
+CheckOffset(struct _GInterfaceInfo,interface_data,16,11,42155);
 #elif __ia64__
-CheckTypeSize(struct _GInterfaceInfo,24, 11954, 3)
-CheckMemberSize(struct _GInterfaceInfo,interface_finalize,8,3,42154)
-CheckOffset(struct _GInterfaceInfo,interface_finalize,8,3,42154)
-CheckMemberSize(struct _GInterfaceInfo,interface_data,8,3,42155)
-CheckOffset(struct _GInterfaceInfo,interface_data,16,3,42155)
+CheckTypeSize(struct _GInterfaceInfo,24, 11954, 3);
+CheckMemberSize(struct _GInterfaceInfo,interface_finalize,8,3,42154);
+CheckOffset(struct _GInterfaceInfo,interface_finalize,8,3,42154);
+CheckMemberSize(struct _GInterfaceInfo,interface_data,8,3,42155);
+CheckOffset(struct _GInterfaceInfo,interface_data,16,3,42155);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GInterfaceInfo,12, 11954, 6)
-CheckMemberSize(struct _GInterfaceInfo,interface_finalize,4,6,42154)
-CheckOffset(struct _GInterfaceInfo,interface_finalize,4,6,42154)
-CheckMemberSize(struct _GInterfaceInfo,interface_data,4,6,42155)
-CheckOffset(struct _GInterfaceInfo,interface_data,8,6,42155)
+CheckTypeSize(struct _GInterfaceInfo,12, 11954, 6);
+CheckMemberSize(struct _GInterfaceInfo,interface_finalize,4,6,42154);
+CheckOffset(struct _GInterfaceInfo,interface_finalize,4,6,42154);
+CheckMemberSize(struct _GInterfaceInfo,interface_data,4,6,42155);
+CheckOffset(struct _GInterfaceInfo,interface_data,8,6,42155);
 #elif __powerpc64__
-CheckTypeSize(struct _GInterfaceInfo,24, 11954, 9)
-CheckMemberSize(struct _GInterfaceInfo,interface_finalize,8,9,42154)
-CheckOffset(struct _GInterfaceInfo,interface_finalize,8,9,42154)
-CheckMemberSize(struct _GInterfaceInfo,interface_data,8,9,42155)
-CheckOffset(struct _GInterfaceInfo,interface_data,16,9,42155)
+CheckTypeSize(struct _GInterfaceInfo,24, 11954, 9);
+CheckMemberSize(struct _GInterfaceInfo,interface_finalize,8,9,42154);
+CheckOffset(struct _GInterfaceInfo,interface_finalize,8,9,42154);
+CheckMemberSize(struct _GInterfaceInfo,interface_data,8,9,42155);
+CheckOffset(struct _GInterfaceInfo,interface_data,16,9,42155);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GInterfaceInfo,12, 11954, 10)
-CheckMemberSize(struct _GInterfaceInfo,interface_finalize,4,10,42154)
-CheckOffset(struct _GInterfaceInfo,interface_finalize,4,10,42154)
-CheckMemberSize(struct _GInterfaceInfo,interface_data,4,10,42155)
-CheckOffset(struct _GInterfaceInfo,interface_data,8,10,42155)
+CheckTypeSize(struct _GInterfaceInfo,12, 11954, 10);
+CheckMemberSize(struct _GInterfaceInfo,interface_finalize,4,10,42154);
+CheckOffset(struct _GInterfaceInfo,interface_finalize,4,10,42154);
+CheckMemberSize(struct _GInterfaceInfo,interface_data,4,10,42155);
+CheckOffset(struct _GInterfaceInfo,interface_data,8,10,42155);
 #elif __s390x__
-CheckTypeSize(struct _GInterfaceInfo,24, 11954, 12)
-CheckMemberSize(struct _GInterfaceInfo,interface_finalize,8,12,42154)
-CheckOffset(struct _GInterfaceInfo,interface_finalize,8,12,42154)
-CheckMemberSize(struct _GInterfaceInfo,interface_data,8,12,42155)
-CheckOffset(struct _GInterfaceInfo,interface_data,16,12,42155)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11954,0);
-Msg("Find size of _GInterfaceInfo (11954)\n");
+CheckTypeSize(struct _GInterfaceInfo,24, 11954, 12);
+CheckMemberSize(struct _GInterfaceInfo,interface_finalize,8,12,42154);
+CheckOffset(struct _GInterfaceInfo,interface_finalize,8,12,42154);
+CheckMemberSize(struct _GInterfaceInfo,interface_data,8,12,42155);
+CheckOffset(struct _GInterfaceInfo,interface_data,16,12,42155);
+#elif 1
+CheckTypeSize(struct _GInterfaceInfo,0, 11954, 1);
+Msg("Missing member data for _GInterfaceInfo on All\n");
+CheckOffset(struct _GInterfaceInfo,interface_init,0,1,42153);
+CheckOffset(struct _GInterfaceInfo,interface_finalize,0,1,42154);
+CheckOffset(struct _GInterfaceInfo,interface_data,0,1,42155);
 #endif
 
 #if __i386__
-CheckTypeSize(GInterfaceInitFunc,4, 11955, 2)
+CheckTypeSize(GInterfaceInitFunc,4, 11955, 2);
 #elif __x86_64__
-CheckTypeSize(GInterfaceInitFunc,8, 11955, 11)
+CheckTypeSize(GInterfaceInitFunc,8, 11955, 11);
 #elif __ia64__
-CheckTypeSize(GInterfaceInitFunc,8, 11955, 3)
+CheckTypeSize(GInterfaceInitFunc,8, 11955, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GInterfaceInitFunc,4, 11955, 6)
+CheckTypeSize(GInterfaceInitFunc,4, 11955, 6);
 #elif __powerpc64__
-CheckTypeSize(GInterfaceInitFunc,8, 11955, 9)
+CheckTypeSize(GInterfaceInitFunc,8, 11955, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GInterfaceInitFunc,4, 11955, 10)
+CheckTypeSize(GInterfaceInitFunc,4, 11955, 10);
 #elif __s390x__
-CheckTypeSize(GInterfaceInitFunc,8, 11955, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11955,0);
-Msg("Find size of GInterfaceInitFunc (11955)\n");
+CheckTypeSize(GInterfaceInitFunc,8, 11955, 12);
+#elif 1
+CheckTypeSize(GInterfaceInitFunc,0, 11955, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GInterfaceFinalizeFunc,4, 11956, 2)
+CheckTypeSize(GInterfaceFinalizeFunc,4, 11956, 2);
 #elif __x86_64__
-CheckTypeSize(GInterfaceFinalizeFunc,8, 11956, 11)
+CheckTypeSize(GInterfaceFinalizeFunc,8, 11956, 11);
 #elif __ia64__
-CheckTypeSize(GInterfaceFinalizeFunc,8, 11956, 3)
+CheckTypeSize(GInterfaceFinalizeFunc,8, 11956, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GInterfaceFinalizeFunc,4, 11956, 6)
+CheckTypeSize(GInterfaceFinalizeFunc,4, 11956, 6);
 #elif __powerpc64__
-CheckTypeSize(GInterfaceFinalizeFunc,8, 11956, 9)
+CheckTypeSize(GInterfaceFinalizeFunc,8, 11956, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GInterfaceFinalizeFunc,4, 11956, 10)
+CheckTypeSize(GInterfaceFinalizeFunc,4, 11956, 10);
 #elif __s390x__
-CheckTypeSize(GInterfaceFinalizeFunc,8, 11956, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11956,0);
-Msg("Find size of GInterfaceFinalizeFunc (11956)\n");
+CheckTypeSize(GInterfaceFinalizeFunc,8, 11956, 12);
+#elif 1
+CheckTypeSize(GInterfaceFinalizeFunc,0, 11956, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GInterfaceInfo,12, 11957, 2)
+CheckTypeSize(GInterfaceInfo,12, 11957, 2);
 #elif __x86_64__
-CheckTypeSize(GInterfaceInfo,24, 11957, 11)
+CheckTypeSize(GInterfaceInfo,24, 11957, 11);
 #elif __ia64__
-CheckTypeSize(GInterfaceInfo,24, 11957, 3)
+CheckTypeSize(GInterfaceInfo,24, 11957, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GInterfaceInfo,12, 11957, 6)
+CheckTypeSize(GInterfaceInfo,12, 11957, 6);
 #elif __powerpc64__
-CheckTypeSize(GInterfaceInfo,24, 11957, 9)
+CheckTypeSize(GInterfaceInfo,24, 11957, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GInterfaceInfo,12, 11957, 10)
+CheckTypeSize(GInterfaceInfo,12, 11957, 10);
 #elif __s390x__
-CheckTypeSize(GInterfaceInfo,24, 11957, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11957,0);
-Msg("Find size of GInterfaceInfo (11957)\n");
+CheckTypeSize(GInterfaceInfo,24, 11957, 12);
+#elif 1
+CheckTypeSize(GInterfaceInfo,0, 11957, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GInterfaceInfo *,4, 11958, 2)
+CheckTypeSize(GInterfaceInfo *,4, 11958, 2);
 #elif __x86_64__
-CheckTypeSize(GInterfaceInfo *,8, 11958, 11)
+CheckTypeSize(GInterfaceInfo *,8, 11958, 11);
 #elif __ia64__
-CheckTypeSize(GInterfaceInfo *,8, 11958, 3)
+CheckTypeSize(GInterfaceInfo *,8, 11958, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GInterfaceInfo *,4, 11958, 6)
+CheckTypeSize(GInterfaceInfo *,4, 11958, 6);
 #elif __powerpc64__
-CheckTypeSize(GInterfaceInfo *,8, 11958, 9)
+CheckTypeSize(GInterfaceInfo *,8, 11958, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GInterfaceInfo *,4, 11958, 10)
+CheckTypeSize(GInterfaceInfo *,4, 11958, 10);
 #elif __s390x__
-CheckTypeSize(GInterfaceInfo *,8, 11958, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11958,0);
-Msg("Find size of GInterfaceInfo * (11958)\n");
+CheckTypeSize(GInterfaceInfo *,8, 11958, 12);
+#elif 1
+CheckTypeSize(GInterfaceInfo *,0, 11958, 1);
 #endif
 
 #if __i386__
@@ -4149,47 +4130,43 @@ Msg("Find size of GInterfaceInfo * (11958)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11959,0);
-Msg("Find size of fptr_glib-object_115 (11959)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(GSignalAccumulator,4, 11960, 2)
+CheckTypeSize(GSignalAccumulator,4, 11960, 2);
 #elif __x86_64__
-CheckTypeSize(GSignalAccumulator,8, 11960, 11)
+CheckTypeSize(GSignalAccumulator,8, 11960, 11);
 #elif __ia64__
-CheckTypeSize(GSignalAccumulator,8, 11960, 3)
+CheckTypeSize(GSignalAccumulator,8, 11960, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GSignalAccumulator,4, 11960, 6)
+CheckTypeSize(GSignalAccumulator,4, 11960, 6);
 #elif __powerpc64__
-CheckTypeSize(GSignalAccumulator,8, 11960, 9)
+CheckTypeSize(GSignalAccumulator,8, 11960, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GSignalAccumulator,4, 11960, 10)
+CheckTypeSize(GSignalAccumulator,4, 11960, 10);
 #elif __s390x__
-CheckTypeSize(GSignalAccumulator,8, 11960, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11960,0);
-Msg("Find size of GSignalAccumulator (11960)\n");
+CheckTypeSize(GSignalAccumulator,8, 11960, 12);
+#elif 1
+CheckTypeSize(GSignalAccumulator,0, 11960, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GSignalCMarshaller,4, 11961, 2)
+CheckTypeSize(GSignalCMarshaller,4, 11961, 2);
 #elif __x86_64__
-CheckTypeSize(GSignalCMarshaller,8, 11961, 11)
+CheckTypeSize(GSignalCMarshaller,8, 11961, 11);
 #elif __ia64__
-CheckTypeSize(GSignalCMarshaller,8, 11961, 3)
+CheckTypeSize(GSignalCMarshaller,8, 11961, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GSignalCMarshaller,4, 11961, 6)
+CheckTypeSize(GSignalCMarshaller,4, 11961, 6);
 #elif __powerpc64__
-CheckTypeSize(GSignalCMarshaller,8, 11961, 9)
+CheckTypeSize(GSignalCMarshaller,8, 11961, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GSignalCMarshaller,4, 11961, 10)
+CheckTypeSize(GSignalCMarshaller,4, 11961, 10);
 #elif __s390x__
-CheckTypeSize(GSignalCMarshaller,8, 11961, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11961,0);
-Msg("Find size of GSignalCMarshaller (11961)\n");
+CheckTypeSize(GSignalCMarshaller,8, 11961, 12);
+#elif 1
+CheckTypeSize(GSignalCMarshaller,0, 11961, 1);
 #endif
 
 #if __i386__
@@ -4213,61 +4190,61 @@ CheckEnum("G_CONNECT_SWAPPED",G_CONNECT_SWAPPED,2,42161);
 #elif __s390x__
 CheckEnum("G_CONNECT_AFTER",G_CONNECT_AFTER,1,42160);
 CheckEnum("G_CONNECT_SWAPPED",G_CONNECT_SWAPPED,2,42161);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11962,0);
-Msg("Find size of anon-glib-2.0/glib-object.h-31 (11962)\n");
+#elif 1
+CheckEnum("G_CONNECT_AFTER",G_CONNECT_AFTER,1,42160);
+CheckEnum("G_CONNECT_SWAPPED",G_CONNECT_SWAPPED,2,42161);
 #endif
 
 #if __i386__
-CheckTypeSize(GConnectFlags,4, 11963, 2)
+CheckTypeSize(GConnectFlags,4, 11963, 2);
 #elif __x86_64__
-CheckTypeSize(GConnectFlags,4, 11963, 11)
+CheckTypeSize(GConnectFlags,4, 11963, 11);
 #elif __ia64__
-CheckTypeSize(GConnectFlags,4, 11963, 3)
+CheckTypeSize(GConnectFlags,4, 11963, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GConnectFlags,4, 11963, 6)
+CheckTypeSize(GConnectFlags,4, 11963, 6);
 #elif __powerpc64__
-CheckTypeSize(GConnectFlags,4, 11963, 9)
+CheckTypeSize(GConnectFlags,4, 11963, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GConnectFlags,4, 11963, 10)
+CheckTypeSize(GConnectFlags,4, 11963, 10);
 #elif __s390x__
-CheckTypeSize(GConnectFlags,4, 11963, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11963,0);
-Msg("Find size of GConnectFlags (11963)\n");
+CheckTypeSize(GConnectFlags,4, 11963, 12);
+#elif 1
+CheckTypeSize(GConnectFlags,0, 11963, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GTypeFundamentalInfo,4, 11964, 2)
+CheckTypeSize(struct _GTypeFundamentalInfo,4, 11964, 2);
 Msg("Missing member data for _GTypeFundamentalInfo on IA32\n");
-CheckOffset(struct _GTypeFundamentalInfo,type_flags,0,2,42166)
+CheckOffset(struct _GTypeFundamentalInfo,type_flags,0,2,42166);
 #elif __x86_64__
-CheckTypeSize(struct _GTypeFundamentalInfo,4, 11964, 11)
+CheckTypeSize(struct _GTypeFundamentalInfo,4, 11964, 11);
 Msg("Missing member data for _GTypeFundamentalInfo on x86-64\n");
-CheckOffset(struct _GTypeFundamentalInfo,type_flags,0,11,42166)
+CheckOffset(struct _GTypeFundamentalInfo,type_flags,0,11,42166);
 #elif __ia64__
-CheckTypeSize(struct _GTypeFundamentalInfo,4, 11964, 3)
+CheckTypeSize(struct _GTypeFundamentalInfo,4, 11964, 3);
 Msg("Missing member data for _GTypeFundamentalInfo on IA64\n");
-CheckOffset(struct _GTypeFundamentalInfo,type_flags,0,3,42166)
+CheckOffset(struct _GTypeFundamentalInfo,type_flags,0,3,42166);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GTypeFundamentalInfo,4, 11964, 6)
+CheckTypeSize(struct _GTypeFundamentalInfo,4, 11964, 6);
 Msg("Missing member data for _GTypeFundamentalInfo on PPC32\n");
-CheckOffset(struct _GTypeFundamentalInfo,type_flags,0,6,42166)
+CheckOffset(struct _GTypeFundamentalInfo,type_flags,0,6,42166);
 #elif __powerpc64__
-CheckTypeSize(struct _GTypeFundamentalInfo,4, 11964, 9)
+CheckTypeSize(struct _GTypeFundamentalInfo,4, 11964, 9);
 Msg("Missing member data for _GTypeFundamentalInfo on PPC64\n");
-CheckOffset(struct _GTypeFundamentalInfo,type_flags,0,9,42166)
+CheckOffset(struct _GTypeFundamentalInfo,type_flags,0,9,42166);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GTypeFundamentalInfo,4, 11964, 10)
+CheckTypeSize(struct _GTypeFundamentalInfo,4, 11964, 10);
 Msg("Missing member data for _GTypeFundamentalInfo on S390\n");
-CheckOffset(struct _GTypeFundamentalInfo,type_flags,0,10,42166)
+CheckOffset(struct _GTypeFundamentalInfo,type_flags,0,10,42166);
 #elif __s390x__
-CheckTypeSize(struct _GTypeFundamentalInfo,4, 11964, 12)
+CheckTypeSize(struct _GTypeFundamentalInfo,4, 11964, 12);
 Msg("Missing member data for _GTypeFundamentalInfo on S390X\n");
-CheckOffset(struct _GTypeFundamentalInfo,type_flags,0,12,42166)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11964,0);
-Msg("Find size of _GTypeFundamentalInfo (11964)\n");
+CheckOffset(struct _GTypeFundamentalInfo,type_flags,0,12,42166);
+#elif 1
+CheckTypeSize(struct _GTypeFundamentalInfo,0, 11964, 1);
+Msg("Missing member data for _GTypeFundamentalInfo on All\n");
+CheckOffset(struct _GTypeFundamentalInfo,type_flags,0,1,42166);
 #endif
 
 #if __i386__
@@ -4305,177 +4282,65 @@ CheckEnum("G_TYPE_FLAG_CLASSED",G_TYPE_FLAG_CLASSED,1,42162);
 CheckEnum("G_TYPE_FLAG_INSTANTIATABLE",G_TYPE_FLAG_INSTANTIATABLE,2,42163);
 CheckEnum("G_TYPE_FLAG_DERIVABLE",G_TYPE_FLAG_DERIVABLE,4,42164);
 CheckEnum("G_TYPE_FLAG_DEEP_DERIVABLE",G_TYPE_FLAG_DEEP_DERIVABLE,8,42165);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11965,0);
-Msg("Find size of anon-glib-2.0/glib-object.h-48 (11965)\n");
+#elif 1
+CheckEnum("G_TYPE_FLAG_CLASSED",G_TYPE_FLAG_CLASSED,1,42162);
+CheckEnum("G_TYPE_FLAG_INSTANTIATABLE",G_TYPE_FLAG_INSTANTIATABLE,2,42163);
+CheckEnum("G_TYPE_FLAG_DERIVABLE",G_TYPE_FLAG_DERIVABLE,4,42164);
+CheckEnum("G_TYPE_FLAG_DEEP_DERIVABLE",G_TYPE_FLAG_DEEP_DERIVABLE,8,42165);
 #endif
 
 #if __i386__
-CheckTypeSize(GTypeFundamentalFlags,4, 11966, 2)
+CheckTypeSize(GTypeFundamentalFlags,4, 11966, 2);
 #elif __x86_64__
-CheckTypeSize(GTypeFundamentalFlags,4, 11966, 11)
+CheckTypeSize(GTypeFundamentalFlags,4, 11966, 11);
 #elif __ia64__
-CheckTypeSize(GTypeFundamentalFlags,4, 11966, 3)
+CheckTypeSize(GTypeFundamentalFlags,4, 11966, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypeFundamentalFlags,4, 11966, 6)
+CheckTypeSize(GTypeFundamentalFlags,4, 11966, 6);
 #elif __powerpc64__
-CheckTypeSize(GTypeFundamentalFlags,4, 11966, 9)
+CheckTypeSize(GTypeFundamentalFlags,4, 11966, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GTypeFundamentalFlags,4, 11966, 10)
+CheckTypeSize(GTypeFundamentalFlags,4, 11966, 10);
 #elif __s390x__
-CheckTypeSize(GTypeFundamentalFlags,4, 11966, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11966,0);
-Msg("Find size of GTypeFundamentalFlags (11966)\n");
+CheckTypeSize(GTypeFundamentalFlags,4, 11966, 12);
+#elif 1
+CheckTypeSize(GTypeFundamentalFlags,0, 11966, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GTypeFundamentalInfo,4, 11967, 2)
+CheckTypeSize(GTypeFundamentalInfo,4, 11967, 2);
 #elif __x86_64__
-CheckTypeSize(GTypeFundamentalInfo,4, 11967, 11)
+CheckTypeSize(GTypeFundamentalInfo,4, 11967, 11);
 #elif __ia64__
-CheckTypeSize(GTypeFundamentalInfo,4, 11967, 3)
+CheckTypeSize(GTypeFundamentalInfo,4, 11967, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypeFundamentalInfo,4, 11967, 6)
+CheckTypeSize(GTypeFundamentalInfo,4, 11967, 6);
 #elif __powerpc64__
-CheckTypeSize(GTypeFundamentalInfo,4, 11967, 9)
+CheckTypeSize(GTypeFundamentalInfo,4, 11967, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GTypeFundamentalInfo,4, 11967, 10)
+CheckTypeSize(GTypeFundamentalInfo,4, 11967, 10);
 #elif __s390x__
-CheckTypeSize(GTypeFundamentalInfo,4, 11967, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11967,0);
-Msg("Find size of GTypeFundamentalInfo (11967)\n");
+CheckTypeSize(GTypeFundamentalInfo,4, 11967, 12);
+#elif 1
+CheckTypeSize(GTypeFundamentalInfo,0, 11967, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(const GTypeFundamentalInfo,4, 11968, 2)
+CheckTypeSize(const GTypeFundamentalInfo,4, 11968, 2);
 #elif __x86_64__
-CheckTypeSize(const GTypeFundamentalInfo,4, 11968, 11)
+CheckTypeSize(const GTypeFundamentalInfo,4, 11968, 11);
 #elif __ia64__
-CheckTypeSize(const GTypeFundamentalInfo,4, 11968, 3)
+CheckTypeSize(const GTypeFundamentalInfo,4, 11968, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(const GTypeFundamentalInfo,4, 11968, 6)
+CheckTypeSize(const GTypeFundamentalInfo,4, 11968, 6);
 #elif __powerpc64__
-CheckTypeSize(const GTypeFundamentalInfo,4, 11968, 9)
+CheckTypeSize(const GTypeFundamentalInfo,4, 11968, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(const GTypeFundamentalInfo,4, 11968, 10)
+CheckTypeSize(const GTypeFundamentalInfo,4, 11968, 10);
 #elif __s390x__
-CheckTypeSize(const GTypeFundamentalInfo,4, 11968, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11968,0);
-Msg("Find size of const GTypeFundamentalInfo (11968)\n");
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11969,0);
-Msg("Find size of const GTypeFundamentalInfo * (11969)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(struct _GTypeQuery,16, 11970, 2)
-CheckMemberSize(struct _GTypeQuery,type_name,4,2,42168)
-CheckOffset(struct _GTypeQuery,type_name,4,2,42168)
-CheckMemberSize(struct _GTypeQuery,class_size,4,2,42169)
-CheckOffset(struct _GTypeQuery,class_size,8,2,42169)
-CheckMemberSize(struct _GTypeQuery,instance_size,4,2,42170)
-CheckOffset(struct _GTypeQuery,instance_size,12,2,42170)
-#elif __x86_64__
-CheckTypeSize(struct _GTypeQuery,24, 11970, 11)
-CheckMemberSize(struct _GTypeQuery,type_name,8,11,42168)
-CheckOffset(struct _GTypeQuery,type_name,8,11,42168)
-CheckMemberSize(struct _GTypeQuery,class_size,4,11,42169)
-CheckOffset(struct _GTypeQuery,class_size,16,11,42169)
-CheckMemberSize(struct _GTypeQuery,instance_size,4,11,42170)
-CheckOffset(struct _GTypeQuery,instance_size,20,11,42170)
-#elif __ia64__
-CheckTypeSize(struct _GTypeQuery,24, 11970, 3)
-CheckMemberSize(struct _GTypeQuery,type_name,8,3,42168)
-CheckOffset(struct _GTypeQuery,type_name,8,3,42168)
-CheckMemberSize(struct _GTypeQuery,class_size,4,3,42169)
-CheckOffset(struct _GTypeQuery,class_size,16,3,42169)
-CheckMemberSize(struct _GTypeQuery,instance_size,4,3,42170)
-CheckOffset(struct _GTypeQuery,instance_size,20,3,42170)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GTypeQuery,16, 11970, 6)
-CheckMemberSize(struct _GTypeQuery,type_name,4,6,42168)
-CheckOffset(struct _GTypeQuery,type_name,4,6,42168)
-CheckMemberSize(struct _GTypeQuery,class_size,4,6,42169)
-CheckOffset(struct _GTypeQuery,class_size,8,6,42169)
-CheckMemberSize(struct _GTypeQuery,instance_size,4,6,42170)
-CheckOffset(struct _GTypeQuery,instance_size,12,6,42170)
-#elif __powerpc64__
-CheckTypeSize(struct _GTypeQuery,24, 11970, 9)
-CheckMemberSize(struct _GTypeQuery,type_name,8,9,42168)
-CheckOffset(struct _GTypeQuery,type_name,8,9,42168)
-CheckMemberSize(struct _GTypeQuery,class_size,4,9,42169)
-CheckOffset(struct _GTypeQuery,class_size,16,9,42169)
-CheckMemberSize(struct _GTypeQuery,instance_size,4,9,42170)
-CheckOffset(struct _GTypeQuery,instance_size,20,9,42170)
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct _GTypeQuery,16, 11970, 10)
-CheckMemberSize(struct _GTypeQuery,type_name,4,10,42168)
-CheckOffset(struct _GTypeQuery,type_name,4,10,42168)
-CheckMemberSize(struct _GTypeQuery,class_size,4,10,42169)
-CheckOffset(struct _GTypeQuery,class_size,8,10,42169)
-CheckMemberSize(struct _GTypeQuery,instance_size,4,10,42170)
-CheckOffset(struct _GTypeQuery,instance_size,12,10,42170)
-#elif __s390x__
-CheckTypeSize(struct _GTypeQuery,24, 11970, 12)
-CheckMemberSize(struct _GTypeQuery,type_name,8,12,42168)
-CheckOffset(struct _GTypeQuery,type_name,8,12,42168)
-CheckMemberSize(struct _GTypeQuery,class_size,4,12,42169)
-CheckOffset(struct _GTypeQuery,class_size,16,12,42169)
-CheckMemberSize(struct _GTypeQuery,instance_size,4,12,42170)
-CheckOffset(struct _GTypeQuery,instance_size,20,12,42170)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11970,0);
-Msg("Find size of _GTypeQuery (11970)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GTypeQuery,16, 11971, 2)
-#elif __x86_64__
-CheckTypeSize(GTypeQuery,24, 11971, 11)
-#elif __ia64__
-CheckTypeSize(GTypeQuery,24, 11971, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypeQuery,16, 11971, 6)
-#elif __powerpc64__
-CheckTypeSize(GTypeQuery,24, 11971, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GTypeQuery,16, 11971, 10)
-#elif __s390x__
-CheckTypeSize(GTypeQuery,24, 11971, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11971,0);
-Msg("Find size of GTypeQuery (11971)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GTypeQuery *,4, 11972, 2)
-#elif __x86_64__
-CheckTypeSize(GTypeQuery *,8, 11972, 11)
-#elif __ia64__
-CheckTypeSize(GTypeQuery *,8, 11972, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypeQuery *,4, 11972, 6)
-#elif __powerpc64__
-CheckTypeSize(GTypeQuery *,8, 11972, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GTypeQuery *,4, 11972, 10)
-#elif __s390x__
-CheckTypeSize(GTypeQuery *,8, 11972, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11972,0);
-Msg("Find size of GTypeQuery * (11972)\n");
+CheckTypeSize(const GTypeFundamentalInfo,4, 11968, 12);
+#elif 1
+CheckTypeSize(const GTypeFundamentalInfo,0, 11968, 1);
 #endif
 
 #if __i386__
@@ -4485,235 +4350,108 @@ Msg("Find size of GTypeQuery * (11972)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11973,0);
-Msg("Find size of fptr_glib-object_22 (11973)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(GSignalEmissionHook,4, 11974, 2)
+CheckTypeSize(struct _GTypeQuery,16, 11970, 2);
+CheckMemberSize(struct _GTypeQuery,type_name,4,2,42168);
+CheckOffset(struct _GTypeQuery,type_name,4,2,42168);
+CheckMemberSize(struct _GTypeQuery,class_size,4,2,42169);
+CheckOffset(struct _GTypeQuery,class_size,8,2,42169);
+CheckMemberSize(struct _GTypeQuery,instance_size,4,2,42170);
+CheckOffset(struct _GTypeQuery,instance_size,12,2,42170);
 #elif __x86_64__
-CheckTypeSize(GSignalEmissionHook,8, 11974, 11)
+CheckTypeSize(struct _GTypeQuery,24, 11970, 11);
+CheckMemberSize(struct _GTypeQuery,type_name,8,11,42168);
+CheckOffset(struct _GTypeQuery,type_name,8,11,42168);
+CheckMemberSize(struct _GTypeQuery,class_size,4,11,42169);
+CheckOffset(struct _GTypeQuery,class_size,16,11,42169);
+CheckMemberSize(struct _GTypeQuery,instance_size,4,11,42170);
+CheckOffset(struct _GTypeQuery,instance_size,20,11,42170);
 #elif __ia64__
-CheckTypeSize(GSignalEmissionHook,8, 11974, 3)
+CheckTypeSize(struct _GTypeQuery,24, 11970, 3);
+CheckMemberSize(struct _GTypeQuery,type_name,8,3,42168);
+CheckOffset(struct _GTypeQuery,type_name,8,3,42168);
+CheckMemberSize(struct _GTypeQuery,class_size,4,3,42169);
+CheckOffset(struct _GTypeQuery,class_size,16,3,42169);
+CheckMemberSize(struct _GTypeQuery,instance_size,4,3,42170);
+CheckOffset(struct _GTypeQuery,instance_size,20,3,42170);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GSignalEmissionHook,4, 11974, 6)
+CheckTypeSize(struct _GTypeQuery,16, 11970, 6);
+CheckMemberSize(struct _GTypeQuery,type_name,4,6,42168);
+CheckOffset(struct _GTypeQuery,type_name,4,6,42168);
+CheckMemberSize(struct _GTypeQuery,class_size,4,6,42169);
+CheckOffset(struct _GTypeQuery,class_size,8,6,42169);
+CheckMemberSize(struct _GTypeQuery,instance_size,4,6,42170);
+CheckOffset(struct _GTypeQuery,instance_size,12,6,42170);
 #elif __powerpc64__
-CheckTypeSize(GSignalEmissionHook,8, 11974, 9)
+CheckTypeSize(struct _GTypeQuery,24, 11970, 9);
+CheckMemberSize(struct _GTypeQuery,type_name,8,9,42168);
+CheckOffset(struct _GTypeQuery,type_name,8,9,42168);
+CheckMemberSize(struct _GTypeQuery,class_size,4,9,42169);
+CheckOffset(struct _GTypeQuery,class_size,16,9,42169);
+CheckMemberSize(struct _GTypeQuery,instance_size,4,9,42170);
+CheckOffset(struct _GTypeQuery,instance_size,20,9,42170);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GSignalEmissionHook,4, 11974, 10)
+CheckTypeSize(struct _GTypeQuery,16, 11970, 10);
+CheckMemberSize(struct _GTypeQuery,type_name,4,10,42168);
+CheckOffset(struct _GTypeQuery,type_name,4,10,42168);
+CheckMemberSize(struct _GTypeQuery,class_size,4,10,42169);
+CheckOffset(struct _GTypeQuery,class_size,8,10,42169);
+CheckMemberSize(struct _GTypeQuery,instance_size,4,10,42170);
+CheckOffset(struct _GTypeQuery,instance_size,12,10,42170);
 #elif __s390x__
-CheckTypeSize(GSignalEmissionHook,8, 11974, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11974,0);
-Msg("Find size of GSignalEmissionHook (11974)\n");
+CheckTypeSize(struct _GTypeQuery,24, 11970, 12);
+CheckMemberSize(struct _GTypeQuery,type_name,8,12,42168);
+CheckOffset(struct _GTypeQuery,type_name,8,12,42168);
+CheckMemberSize(struct _GTypeQuery,class_size,4,12,42169);
+CheckOffset(struct _GTypeQuery,class_size,16,12,42169);
+CheckMemberSize(struct _GTypeQuery,instance_size,4,12,42170);
+CheckOffset(struct _GTypeQuery,instance_size,20,12,42170);
+#elif 1
+CheckTypeSize(struct _GTypeQuery,0, 11970, 1);
+Msg("Missing member data for _GTypeQuery on All\n");
+CheckOffset(struct _GTypeQuery,type,0,1,42167);
+CheckOffset(struct _GTypeQuery,type_name,0,1,42168);
+CheckOffset(struct _GTypeQuery,class_size,0,1,42169);
+CheckOffset(struct _GTypeQuery,instance_size,0,1,42170);
 #endif
 
 #if __i386__
-CheckTypeSize(GValueTransform,4, 11975, 2)
+CheckTypeSize(GTypeQuery,16, 11971, 2);
 #elif __x86_64__
-CheckTypeSize(GValueTransform,8, 11975, 11)
+CheckTypeSize(GTypeQuery,24, 11971, 11);
 #elif __ia64__
-CheckTypeSize(GValueTransform,8, 11975, 3)
+CheckTypeSize(GTypeQuery,24, 11971, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GValueTransform,4, 11975, 6)
+CheckTypeSize(GTypeQuery,16, 11971, 6);
 #elif __powerpc64__
-CheckTypeSize(GValueTransform,8, 11975, 9)
+CheckTypeSize(GTypeQuery,24, 11971, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GValueTransform,4, 11975, 10)
+CheckTypeSize(GTypeQuery,16, 11971, 10);
 #elif __s390x__
-CheckTypeSize(GValueTransform,8, 11975, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11975,0);
-Msg("Find size of GValueTransform (11975)\n");
+CheckTypeSize(GTypeQuery,24, 11971, 12);
+#elif 1
+CheckTypeSize(GTypeQuery,0, 11971, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GParameter,24, 11976, 2)
-CheckMemberSize(struct _GParameter,value,20,2,42176)
-CheckOffset(struct _GParameter,value,4,2,42176)
+CheckTypeSize(GTypeQuery *,4, 11972, 2);
 #elif __x86_64__
-CheckTypeSize(struct _GParameter,32, 11976, 11)
-CheckMemberSize(struct _GParameter,value,24,11,42176)
-CheckOffset(struct _GParameter,value,8,11,42176)
+CheckTypeSize(GTypeQuery *,8, 11972, 11);
 #elif __ia64__
-CheckTypeSize(struct _GParameter,32, 11976, 3)
-CheckMemberSize(struct _GParameter,value,24,3,42176)
-CheckOffset(struct _GParameter,value,8,3,42176)
+CheckTypeSize(GTypeQuery *,8, 11972, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GParameter,32, 11976, 6)
-CheckMemberSize(struct _GParameter,value,24,6,42176)
-CheckOffset(struct _GParameter,value,8,6,42176)
+CheckTypeSize(GTypeQuery *,4, 11972, 6);
 #elif __powerpc64__
-CheckTypeSize(struct _GParameter,32, 11976, 9)
-CheckMemberSize(struct _GParameter,value,24,9,42176)
-CheckOffset(struct _GParameter,value,8,9,42176)
+CheckTypeSize(GTypeQuery *,8, 11972, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GParameter,32, 11976, 10)
-CheckMemberSize(struct _GParameter,value,24,10,42176)
-CheckOffset(struct _GParameter,value,8,10,42176)
+CheckTypeSize(GTypeQuery *,4, 11972, 10);
 #elif __s390x__
-CheckTypeSize(struct _GParameter,32, 11976, 12)
-CheckMemberSize(struct _GParameter,value,24,12,42176)
-CheckOffset(struct _GParameter,value,8,12,42176)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11976,0);
-Msg("Find size of _GParameter (11976)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GParameter,24, 11977, 2)
-#elif __x86_64__
-CheckTypeSize(GParameter,32, 11977, 11)
-#elif __ia64__
-CheckTypeSize(GParameter,32, 11977, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParameter,32, 11977, 6)
-#elif __powerpc64__
-CheckTypeSize(GParameter,32, 11977, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GParameter,32, 11977, 10)
-#elif __s390x__
-CheckTypeSize(GParameter,32, 11977, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11977,0);
-Msg("Find size of GParameter (11977)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GParameter *,4, 11978, 2)
-#elif __x86_64__
-CheckTypeSize(GParameter *,8, 11978, 11)
-#elif __ia64__
-CheckTypeSize(GParameter *,8, 11978, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParameter *,4, 11978, 6)
-#elif __powerpc64__
-CheckTypeSize(GParameter *,8, 11978, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GParameter *,4, 11978, 10)
-#elif __s390x__
-CheckTypeSize(GParameter *,8, 11978, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11978,0);
-Msg("Find size of GParameter * (11978)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(struct _GParamSpecTypeInfo,28, 11979, 2)
-CheckMemberSize(struct _GParamSpecTypeInfo,n_preallocs,2,2,42178)
-CheckOffset(struct _GParamSpecTypeInfo,n_preallocs,2,2,42178)
-CheckMemberSize(struct _GParamSpecTypeInfo,instance_init,4,2,42180)
-CheckOffset(struct _GParamSpecTypeInfo,instance_init,4,2,42180)
-CheckMemberSize(struct _GParamSpecTypeInfo,value_type,4,2,42181)
-CheckOffset(struct _GParamSpecTypeInfo,value_type,8,2,42181)
-CheckMemberSize(struct _GParamSpecTypeInfo,finalize,4,2,42182)
-CheckOffset(struct _GParamSpecTypeInfo,finalize,12,2,42182)
-CheckMemberSize(struct _GParamSpecTypeInfo,value_set_default,4,2,42185)
-CheckOffset(struct _GParamSpecTypeInfo,value_set_default,16,2,42185)
-CheckMemberSize(struct _GParamSpecTypeInfo,value_validate,4,2,42188)
-CheckOffset(struct _GParamSpecTypeInfo,value_validate,20,2,42188)
-CheckMemberSize(struct _GParamSpecTypeInfo,values_cmp,4,2,42192)
-CheckOffset(struct _GParamSpecTypeInfo,values_cmp,24,2,42192)
-#elif __x86_64__
-CheckTypeSize(struct _GParamSpecTypeInfo,56, 11979, 11)
-CheckMemberSize(struct _GParamSpecTypeInfo,n_preallocs,2,11,42178)
-CheckOffset(struct _GParamSpecTypeInfo,n_preallocs,2,11,42178)
-CheckMemberSize(struct _GParamSpecTypeInfo,instance_init,8,11,42180)
-CheckOffset(struct _GParamSpecTypeInfo,instance_init,8,11,42180)
-CheckMemberSize(struct _GParamSpecTypeInfo,value_type,8,11,42181)
-CheckOffset(struct _GParamSpecTypeInfo,value_type,16,11,42181)
-CheckMemberSize(struct _GParamSpecTypeInfo,finalize,8,11,42182)
-CheckOffset(struct _GParamSpecTypeInfo,finalize,24,11,42182)
-CheckMemberSize(struct _GParamSpecTypeInfo,value_set_default,8,11,42185)
-CheckOffset(struct _GParamSpecTypeInfo,value_set_default,32,11,42185)
-CheckMemberSize(struct _GParamSpecTypeInfo,value_validate,8,11,42188)
-CheckOffset(struct _GParamSpecTypeInfo,value_validate,40,11,42188)
-CheckMemberSize(struct _GParamSpecTypeInfo,values_cmp,8,11,42192)
-CheckOffset(struct _GParamSpecTypeInfo,values_cmp,48,11,42192)
-#elif __ia64__
-CheckTypeSize(struct _GParamSpecTypeInfo,56, 11979, 3)
-CheckMemberSize(struct _GParamSpecTypeInfo,n_preallocs,2,3,42178)
-CheckOffset(struct _GParamSpecTypeInfo,n_preallocs,2,3,42178)
-CheckMemberSize(struct _GParamSpecTypeInfo,instance_init,8,3,42180)
-CheckOffset(struct _GParamSpecTypeInfo,instance_init,8,3,42180)
-CheckMemberSize(struct _GParamSpecTypeInfo,value_type,8,3,42181)
-CheckOffset(struct _GParamSpecTypeInfo,value_type,16,3,42181)
-CheckMemberSize(struct _GParamSpecTypeInfo,finalize,8,3,42182)
-CheckOffset(struct _GParamSpecTypeInfo,finalize,24,3,42182)
-CheckMemberSize(struct _GParamSpecTypeInfo,value_set_default,8,3,42185)
-CheckOffset(struct _GParamSpecTypeInfo,value_set_default,32,3,42185)
-CheckMemberSize(struct _GParamSpecTypeInfo,value_validate,8,3,42188)
-CheckOffset(struct _GParamSpecTypeInfo,value_validate,40,3,42188)
-CheckMemberSize(struct _GParamSpecTypeInfo,values_cmp,8,3,42192)
-CheckOffset(struct _GParamSpecTypeInfo,values_cmp,48,3,42192)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GParamSpecTypeInfo,28, 11979, 6)
-CheckMemberSize(struct _GParamSpecTypeInfo,n_preallocs,2,6,42178)
-CheckOffset(struct _GParamSpecTypeInfo,n_preallocs,2,6,42178)
-CheckMemberSize(struct _GParamSpecTypeInfo,instance_init,4,6,42180)
-CheckOffset(struct _GParamSpecTypeInfo,instance_init,4,6,42180)
-CheckMemberSize(struct _GParamSpecTypeInfo,value_type,4,6,42181)
-CheckOffset(struct _GParamSpecTypeInfo,value_type,8,6,42181)
-CheckMemberSize(struct _GParamSpecTypeInfo,finalize,4,6,42182)
-CheckOffset(struct _GParamSpecTypeInfo,finalize,12,6,42182)
-CheckMemberSize(struct _GParamSpecTypeInfo,value_set_default,4,6,42185)
-CheckOffset(struct _GParamSpecTypeInfo,value_set_default,16,6,42185)
-CheckMemberSize(struct _GParamSpecTypeInfo,value_validate,4,6,42188)
-CheckOffset(struct _GParamSpecTypeInfo,value_validate,20,6,42188)
-CheckMemberSize(struct _GParamSpecTypeInfo,values_cmp,4,6,42192)
-CheckOffset(struct _GParamSpecTypeInfo,values_cmp,24,6,42192)
-#elif __powerpc64__
-CheckTypeSize(struct _GParamSpecTypeInfo,56, 11979, 9)
-CheckMemberSize(struct _GParamSpecTypeInfo,n_preallocs,2,9,42178)
-CheckOffset(struct _GParamSpecTypeInfo,n_preallocs,2,9,42178)
-CheckMemberSize(struct _GParamSpecTypeInfo,instance_init,8,9,42180)
-CheckOffset(struct _GParamSpecTypeInfo,instance_init,8,9,42180)
-CheckMemberSize(struct _GParamSpecTypeInfo,value_type,8,9,42181)
-CheckOffset(struct _GParamSpecTypeInfo,value_type,16,9,42181)
-CheckMemberSize(struct _GParamSpecTypeInfo,finalize,8,9,42182)
-CheckOffset(struct _GParamSpecTypeInfo,finalize,24,9,42182)
-CheckMemberSize(struct _GParamSpecTypeInfo,value_set_default,8,9,42185)
-CheckOffset(struct _GParamSpecTypeInfo,value_set_default,32,9,42185)
-CheckMemberSize(struct _GParamSpecTypeInfo,value_validate,8,9,42188)
-CheckOffset(struct _GParamSpecTypeInfo,value_validate,40,9,42188)
-CheckMemberSize(struct _GParamSpecTypeInfo,values_cmp,8,9,42192)
-CheckOffset(struct _GParamSpecTypeInfo,values_cmp,48,9,42192)
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct _GParamSpecTypeInfo,28, 11979, 10)
-CheckMemberSize(struct _GParamSpecTypeInfo,n_preallocs,2,10,42178)
-CheckOffset(struct _GParamSpecTypeInfo,n_preallocs,2,10,42178)
-CheckMemberSize(struct _GParamSpecTypeInfo,instance_init,4,10,42180)
-CheckOffset(struct _GParamSpecTypeInfo,instance_init,4,10,42180)
-CheckMemberSize(struct _GParamSpecTypeInfo,value_type,4,10,42181)
-CheckOffset(struct _GParamSpecTypeInfo,value_type,8,10,42181)
-CheckMemberSize(struct _GParamSpecTypeInfo,finalize,4,10,42182)
-CheckOffset(struct _GParamSpecTypeInfo,finalize,12,10,42182)
-CheckMemberSize(struct _GParamSpecTypeInfo,value_set_default,4,10,42185)
-CheckOffset(struct _GParamSpecTypeInfo,value_set_default,16,10,42185)
-CheckMemberSize(struct _GParamSpecTypeInfo,value_validate,4,10,42188)
-CheckOffset(struct _GParamSpecTypeInfo,value_validate,20,10,42188)
-CheckMemberSize(struct _GParamSpecTypeInfo,values_cmp,4,10,42192)
-CheckOffset(struct _GParamSpecTypeInfo,values_cmp,24,10,42192)
-#elif __s390x__
-CheckTypeSize(struct _GParamSpecTypeInfo,56, 11979, 12)
-CheckMemberSize(struct _GParamSpecTypeInfo,n_preallocs,2,12,42178)
-CheckOffset(struct _GParamSpecTypeInfo,n_preallocs,2,12,42178)
-CheckMemberSize(struct _GParamSpecTypeInfo,instance_init,8,12,42180)
-CheckOffset(struct _GParamSpecTypeInfo,instance_init,8,12,42180)
-CheckMemberSize(struct _GParamSpecTypeInfo,value_type,8,12,42181)
-CheckOffset(struct _GParamSpecTypeInfo,value_type,16,12,42181)
-CheckMemberSize(struct _GParamSpecTypeInfo,finalize,8,12,42182)
-CheckOffset(struct _GParamSpecTypeInfo,finalize,24,12,42182)
-CheckMemberSize(struct _GParamSpecTypeInfo,value_set_default,8,12,42185)
-CheckOffset(struct _GParamSpecTypeInfo,value_set_default,32,12,42185)
-CheckMemberSize(struct _GParamSpecTypeInfo,value_validate,8,12,42188)
-CheckOffset(struct _GParamSpecTypeInfo,value_validate,40,12,42188)
-CheckMemberSize(struct _GParamSpecTypeInfo,values_cmp,8,12,42192)
-CheckOffset(struct _GParamSpecTypeInfo,values_cmp,48,12,42192)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11979,0);
-Msg("Find size of _GParamSpecTypeInfo (11979)\n");
+CheckTypeSize(GTypeQuery *,8, 11972, 12);
+#elif 1
+CheckTypeSize(GTypeQuery *,0, 11972, 1);
 #endif
 
 #if __i386__
@@ -4723,9 +4461,239 @@ Msg("Find size of _GParamSpecTypeInfo (11979)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11980,0);
-Msg("Find size of fptr_glib-object_15 (11980)\n");
+#elif 1
+#endif
+
+#if __i386__
+CheckTypeSize(GSignalEmissionHook,4, 11974, 2);
+#elif __x86_64__
+CheckTypeSize(GSignalEmissionHook,8, 11974, 11);
+#elif __ia64__
+CheckTypeSize(GSignalEmissionHook,8, 11974, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GSignalEmissionHook,4, 11974, 6);
+#elif __powerpc64__
+CheckTypeSize(GSignalEmissionHook,8, 11974, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GSignalEmissionHook,4, 11974, 10);
+#elif __s390x__
+CheckTypeSize(GSignalEmissionHook,8, 11974, 12);
+#elif 1
+CheckTypeSize(GSignalEmissionHook,0, 11974, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(GValueTransform,4, 11975, 2);
+#elif __x86_64__
+CheckTypeSize(GValueTransform,8, 11975, 11);
+#elif __ia64__
+CheckTypeSize(GValueTransform,8, 11975, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GValueTransform,4, 11975, 6);
+#elif __powerpc64__
+CheckTypeSize(GValueTransform,8, 11975, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GValueTransform,4, 11975, 10);
+#elif __s390x__
+CheckTypeSize(GValueTransform,8, 11975, 12);
+#elif 1
+CheckTypeSize(GValueTransform,0, 11975, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(struct _GParameter,24, 11976, 2);
+CheckMemberSize(struct _GParameter,value,20,2,42176);
+CheckOffset(struct _GParameter,value,4,2,42176);
+#elif __x86_64__
+CheckTypeSize(struct _GParameter,32, 11976, 11);
+CheckMemberSize(struct _GParameter,value,24,11,42176);
+CheckOffset(struct _GParameter,value,8,11,42176);
+#elif __ia64__
+CheckTypeSize(struct _GParameter,32, 11976, 3);
+CheckMemberSize(struct _GParameter,value,24,3,42176);
+CheckOffset(struct _GParameter,value,8,3,42176);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _GParameter,32, 11976, 6);
+CheckMemberSize(struct _GParameter,value,24,6,42176);
+CheckOffset(struct _GParameter,value,8,6,42176);
+#elif __powerpc64__
+CheckTypeSize(struct _GParameter,32, 11976, 9);
+CheckMemberSize(struct _GParameter,value,24,9,42176);
+CheckOffset(struct _GParameter,value,8,9,42176);
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _GParameter,32, 11976, 10);
+CheckMemberSize(struct _GParameter,value,24,10,42176);
+CheckOffset(struct _GParameter,value,8,10,42176);
+#elif __s390x__
+CheckTypeSize(struct _GParameter,32, 11976, 12);
+CheckMemberSize(struct _GParameter,value,24,12,42176);
+CheckOffset(struct _GParameter,value,8,12,42176);
+#elif 1
+CheckTypeSize(struct _GParameter,0, 11976, 1);
+Msg("Missing member data for _GParameter on All\n");
+CheckOffset(struct _GParameter,name,0,1,42175);
+CheckOffset(struct _GParameter,value,0,1,42176);
+#endif
+
+#if __i386__
+CheckTypeSize(GParameter,24, 11977, 2);
+#elif __x86_64__
+CheckTypeSize(GParameter,32, 11977, 11);
+#elif __ia64__
+CheckTypeSize(GParameter,32, 11977, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GParameter,32, 11977, 6);
+#elif __powerpc64__
+CheckTypeSize(GParameter,32, 11977, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GParameter,32, 11977, 10);
+#elif __s390x__
+CheckTypeSize(GParameter,32, 11977, 12);
+#elif 1
+CheckTypeSize(GParameter,0, 11977, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(GParameter *,4, 11978, 2);
+#elif __x86_64__
+CheckTypeSize(GParameter *,8, 11978, 11);
+#elif __ia64__
+CheckTypeSize(GParameter *,8, 11978, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GParameter *,4, 11978, 6);
+#elif __powerpc64__
+CheckTypeSize(GParameter *,8, 11978, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GParameter *,4, 11978, 10);
+#elif __s390x__
+CheckTypeSize(GParameter *,8, 11978, 12);
+#elif 1
+CheckTypeSize(GParameter *,0, 11978, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(struct _GParamSpecTypeInfo,28, 11979, 2);
+CheckMemberSize(struct _GParamSpecTypeInfo,n_preallocs,2,2,42178);
+CheckOffset(struct _GParamSpecTypeInfo,n_preallocs,2,2,42178);
+CheckMemberSize(struct _GParamSpecTypeInfo,instance_init,4,2,42180);
+CheckOffset(struct _GParamSpecTypeInfo,instance_init,4,2,42180);
+CheckMemberSize(struct _GParamSpecTypeInfo,value_type,4,2,42181);
+CheckOffset(struct _GParamSpecTypeInfo,value_type,8,2,42181);
+CheckMemberSize(struct _GParamSpecTypeInfo,finalize,4,2,42182);
+CheckOffset(struct _GParamSpecTypeInfo,finalize,12,2,42182);
+CheckMemberSize(struct _GParamSpecTypeInfo,value_set_default,4,2,42185);
+CheckOffset(struct _GParamSpecTypeInfo,value_set_default,16,2,42185);
+CheckMemberSize(struct _GParamSpecTypeInfo,value_validate,4,2,42188);
+CheckOffset(struct _GParamSpecTypeInfo,value_validate,20,2,42188);
+CheckMemberSize(struct _GParamSpecTypeInfo,values_cmp,4,2,42192);
+CheckOffset(struct _GParamSpecTypeInfo,values_cmp,24,2,42192);
+#elif __x86_64__
+CheckTypeSize(struct _GParamSpecTypeInfo,56, 11979, 11);
+CheckMemberSize(struct _GParamSpecTypeInfo,n_preallocs,2,11,42178);
+CheckOffset(struct _GParamSpecTypeInfo,n_preallocs,2,11,42178);
+CheckMemberSize(struct _GParamSpecTypeInfo,instance_init,8,11,42180);
+CheckOffset(struct _GParamSpecTypeInfo,instance_init,8,11,42180);
+CheckMemberSize(struct _GParamSpecTypeInfo,value_type,8,11,42181);
+CheckOffset(struct _GParamSpecTypeInfo,value_type,16,11,42181);
+CheckMemberSize(struct _GParamSpecTypeInfo,finalize,8,11,42182);
+CheckOffset(struct _GParamSpecTypeInfo,finalize,24,11,42182);
+CheckMemberSize(struct _GParamSpecTypeInfo,value_set_default,8,11,42185);
+CheckOffset(struct _GParamSpecTypeInfo,value_set_default,32,11,42185);
+CheckMemberSize(struct _GParamSpecTypeInfo,value_validate,8,11,42188);
+CheckOffset(struct _GParamSpecTypeInfo,value_validate,40,11,42188);
+CheckMemberSize(struct _GParamSpecTypeInfo,values_cmp,8,11,42192);
+CheckOffset(struct _GParamSpecTypeInfo,values_cmp,48,11,42192);
+#elif __ia64__
+CheckTypeSize(struct _GParamSpecTypeInfo,56, 11979, 3);
+CheckMemberSize(struct _GParamSpecTypeInfo,n_preallocs,2,3,42178);
+CheckOffset(struct _GParamSpecTypeInfo,n_preallocs,2,3,42178);
+CheckMemberSize(struct _GParamSpecTypeInfo,instance_init,8,3,42180);
+CheckOffset(struct _GParamSpecTypeInfo,instance_init,8,3,42180);
+CheckMemberSize(struct _GParamSpecTypeInfo,value_type,8,3,42181);
+CheckOffset(struct _GParamSpecTypeInfo,value_type,16,3,42181);
+CheckMemberSize(struct _GParamSpecTypeInfo,finalize,8,3,42182);
+CheckOffset(struct _GParamSpecTypeInfo,finalize,24,3,42182);
+CheckMemberSize(struct _GParamSpecTypeInfo,value_set_default,8,3,42185);
+CheckOffset(struct _GParamSpecTypeInfo,value_set_default,32,3,42185);
+CheckMemberSize(struct _GParamSpecTypeInfo,value_validate,8,3,42188);
+CheckOffset(struct _GParamSpecTypeInfo,value_validate,40,3,42188);
+CheckMemberSize(struct _GParamSpecTypeInfo,values_cmp,8,3,42192);
+CheckOffset(struct _GParamSpecTypeInfo,values_cmp,48,3,42192);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _GParamSpecTypeInfo,28, 11979, 6);
+CheckMemberSize(struct _GParamSpecTypeInfo,n_preallocs,2,6,42178);
+CheckOffset(struct _GParamSpecTypeInfo,n_preallocs,2,6,42178);
+CheckMemberSize(struct _GParamSpecTypeInfo,instance_init,4,6,42180);
+CheckOffset(struct _GParamSpecTypeInfo,instance_init,4,6,42180);
+CheckMemberSize(struct _GParamSpecTypeInfo,value_type,4,6,42181);
+CheckOffset(struct _GParamSpecTypeInfo,value_type,8,6,42181);
+CheckMemberSize(struct _GParamSpecTypeInfo,finalize,4,6,42182);
+CheckOffset(struct _GParamSpecTypeInfo,finalize,12,6,42182);
+CheckMemberSize(struct _GParamSpecTypeInfo,value_set_default,4,6,42185);
+CheckOffset(struct _GParamSpecTypeInfo,value_set_default,16,6,42185);
+CheckMemberSize(struct _GParamSpecTypeInfo,value_validate,4,6,42188);
+CheckOffset(struct _GParamSpecTypeInfo,value_validate,20,6,42188);
+CheckMemberSize(struct _GParamSpecTypeInfo,values_cmp,4,6,42192);
+CheckOffset(struct _GParamSpecTypeInfo,values_cmp,24,6,42192);
+#elif __powerpc64__
+CheckTypeSize(struct _GParamSpecTypeInfo,56, 11979, 9);
+CheckMemberSize(struct _GParamSpecTypeInfo,n_preallocs,2,9,42178);
+CheckOffset(struct _GParamSpecTypeInfo,n_preallocs,2,9,42178);
+CheckMemberSize(struct _GParamSpecTypeInfo,instance_init,8,9,42180);
+CheckOffset(struct _GParamSpecTypeInfo,instance_init,8,9,42180);
+CheckMemberSize(struct _GParamSpecTypeInfo,value_type,8,9,42181);
+CheckOffset(struct _GParamSpecTypeInfo,value_type,16,9,42181);
+CheckMemberSize(struct _GParamSpecTypeInfo,finalize,8,9,42182);
+CheckOffset(struct _GParamSpecTypeInfo,finalize,24,9,42182);
+CheckMemberSize(struct _GParamSpecTypeInfo,value_set_default,8,9,42185);
+CheckOffset(struct _GParamSpecTypeInfo,value_set_default,32,9,42185);
+CheckMemberSize(struct _GParamSpecTypeInfo,value_validate,8,9,42188);
+CheckOffset(struct _GParamSpecTypeInfo,value_validate,40,9,42188);
+CheckMemberSize(struct _GParamSpecTypeInfo,values_cmp,8,9,42192);
+CheckOffset(struct _GParamSpecTypeInfo,values_cmp,48,9,42192);
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _GParamSpecTypeInfo,28, 11979, 10);
+CheckMemberSize(struct _GParamSpecTypeInfo,n_preallocs,2,10,42178);
+CheckOffset(struct _GParamSpecTypeInfo,n_preallocs,2,10,42178);
+CheckMemberSize(struct _GParamSpecTypeInfo,instance_init,4,10,42180);
+CheckOffset(struct _GParamSpecTypeInfo,instance_init,4,10,42180);
+CheckMemberSize(struct _GParamSpecTypeInfo,value_type,4,10,42181);
+CheckOffset(struct _GParamSpecTypeInfo,value_type,8,10,42181);
+CheckMemberSize(struct _GParamSpecTypeInfo,finalize,4,10,42182);
+CheckOffset(struct _GParamSpecTypeInfo,finalize,12,10,42182);
+CheckMemberSize(struct _GParamSpecTypeInfo,value_set_default,4,10,42185);
+CheckOffset(struct _GParamSpecTypeInfo,value_set_default,16,10,42185);
+CheckMemberSize(struct _GParamSpecTypeInfo,value_validate,4,10,42188);
+CheckOffset(struct _GParamSpecTypeInfo,value_validate,20,10,42188);
+CheckMemberSize(struct _GParamSpecTypeInfo,values_cmp,4,10,42192);
+CheckOffset(struct _GParamSpecTypeInfo,values_cmp,24,10,42192);
+#elif __s390x__
+CheckTypeSize(struct _GParamSpecTypeInfo,56, 11979, 12);
+CheckMemberSize(struct _GParamSpecTypeInfo,n_preallocs,2,12,42178);
+CheckOffset(struct _GParamSpecTypeInfo,n_preallocs,2,12,42178);
+CheckMemberSize(struct _GParamSpecTypeInfo,instance_init,8,12,42180);
+CheckOffset(struct _GParamSpecTypeInfo,instance_init,8,12,42180);
+CheckMemberSize(struct _GParamSpecTypeInfo,value_type,8,12,42181);
+CheckOffset(struct _GParamSpecTypeInfo,value_type,16,12,42181);
+CheckMemberSize(struct _GParamSpecTypeInfo,finalize,8,12,42182);
+CheckOffset(struct _GParamSpecTypeInfo,finalize,24,12,42182);
+CheckMemberSize(struct _GParamSpecTypeInfo,value_set_default,8,12,42185);
+CheckOffset(struct _GParamSpecTypeInfo,value_set_default,32,12,42185);
+CheckMemberSize(struct _GParamSpecTypeInfo,value_validate,8,12,42188);
+CheckOffset(struct _GParamSpecTypeInfo,value_validate,40,12,42188);
+CheckMemberSize(struct _GParamSpecTypeInfo,values_cmp,8,12,42192);
+CheckOffset(struct _GParamSpecTypeInfo,values_cmp,48,12,42192);
+#elif 1
+CheckTypeSize(struct _GParamSpecTypeInfo,0, 11979, 1);
+Msg("Missing member data for _GParamSpecTypeInfo on All\n");
+CheckOffset(struct _GParamSpecTypeInfo,instance_size,0,1,42177);
+CheckOffset(struct _GParamSpecTypeInfo,n_preallocs,0,1,42178);
+CheckOffset(struct _GParamSpecTypeInfo,instance_init,0,1,42180);
+CheckOffset(struct _GParamSpecTypeInfo,value_type,0,1,42181);
+CheckOffset(struct _GParamSpecTypeInfo,finalize,0,1,42182);
+CheckOffset(struct _GParamSpecTypeInfo,value_set_default,0,1,42185);
+CheckOffset(struct _GParamSpecTypeInfo,value_validate,0,1,42188);
+CheckOffset(struct _GParamSpecTypeInfo,values_cmp,0,1,42192);
 #endif
 
 #if __i386__
@@ -4735,9 +4703,7 @@ Msg("Find size of fptr_glib-object_15 (11980)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11981,0);
-Msg("Find size of fptr_glib-object_145 (11981)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -4747,9 +4713,7 @@ Msg("Find size of fptr_glib-object_145 (11981)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11982,0);
-Msg("Find size of fptr_glib-object_57 (11982)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -4759,47 +4723,7 @@ Msg("Find size of fptr_glib-object_57 (11982)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11983,0);
-Msg("Find size of fptr_glib-object_31 (11983)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GParamSpecTypeInfo,28, 11984, 2)
-#elif __x86_64__
-CheckTypeSize(GParamSpecTypeInfo,56, 11984, 11)
-#elif __ia64__
-CheckTypeSize(GParamSpecTypeInfo,56, 11984, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpecTypeInfo,28, 11984, 6)
-#elif __powerpc64__
-CheckTypeSize(GParamSpecTypeInfo,56, 11984, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpecTypeInfo,28, 11984, 10)
-#elif __s390x__
-CheckTypeSize(GParamSpecTypeInfo,56, 11984, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11984,0);
-Msg("Find size of GParamSpecTypeInfo (11984)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(const GParamSpecTypeInfo,28, 11985, 2)
-#elif __x86_64__
-CheckTypeSize(const GParamSpecTypeInfo,56, 11985, 11)
-#elif __ia64__
-CheckTypeSize(const GParamSpecTypeInfo,56, 11985, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(const GParamSpecTypeInfo,28, 11985, 6)
-#elif __powerpc64__
-CheckTypeSize(const GParamSpecTypeInfo,56, 11985, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(const GParamSpecTypeInfo,28, 11985, 10)
-#elif __s390x__
-CheckTypeSize(const GParamSpecTypeInfo,56, 11985, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11985,0);
-Msg("Find size of const GParamSpecTypeInfo (11985)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -4809,200 +4733,43 @@ Msg("Find size of const GParamSpecTypeInfo (11985)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11986,0);
-Msg("Find size of const GParamSpecTypeInfo * (11986)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(const GInterfaceInfo,12, 11987, 2)
+CheckTypeSize(GParamSpecTypeInfo,28, 11984, 2);
 #elif __x86_64__
-CheckTypeSize(const GInterfaceInfo,24, 11987, 11)
+CheckTypeSize(GParamSpecTypeInfo,56, 11984, 11);
 #elif __ia64__
-CheckTypeSize(const GInterfaceInfo,24, 11987, 3)
+CheckTypeSize(GParamSpecTypeInfo,56, 11984, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(const GInterfaceInfo,12, 11987, 6)
+CheckTypeSize(GParamSpecTypeInfo,28, 11984, 6);
 #elif __powerpc64__
-CheckTypeSize(const GInterfaceInfo,24, 11987, 9)
+CheckTypeSize(GParamSpecTypeInfo,56, 11984, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(const GInterfaceInfo,12, 11987, 10)
+CheckTypeSize(GParamSpecTypeInfo,28, 11984, 10);
 #elif __s390x__
-CheckTypeSize(const GInterfaceInfo,24, 11987, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11987,0);
-Msg("Find size of const GInterfaceInfo (11987)\n");
+CheckTypeSize(GParamSpecTypeInfo,56, 11984, 12);
+#elif 1
+CheckTypeSize(GParamSpecTypeInfo,0, 11984, 1);
 #endif
 
 #if __i386__
+CheckTypeSize(const GParamSpecTypeInfo,28, 11985, 2);
 #elif __x86_64__
+CheckTypeSize(const GParamSpecTypeInfo,56, 11985, 11);
 #elif __ia64__
+CheckTypeSize(const GParamSpecTypeInfo,56, 11985, 3);
 #elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const GParamSpecTypeInfo,28, 11985, 6);
 #elif __powerpc64__
+CheckTypeSize(const GParamSpecTypeInfo,56, 11985, 9);
 #elif __s390__ && !__s390x__
+CheckTypeSize(const GParamSpecTypeInfo,28, 11985, 10);
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11988,0);
-Msg("Find size of const GInterfaceInfo * (11988)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GBoxedCopyFunc,4, 11989, 2)
-#elif __x86_64__
-CheckTypeSize(GBoxedCopyFunc,8, 11989, 11)
-#elif __ia64__
-CheckTypeSize(GBoxedCopyFunc,8, 11989, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GBoxedCopyFunc,4, 11989, 6)
-#elif __powerpc64__
-CheckTypeSize(GBoxedCopyFunc,8, 11989, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GBoxedCopyFunc,4, 11989, 10)
-#elif __s390x__
-CheckTypeSize(GBoxedCopyFunc,8, 11989, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11989,0);
-Msg("Find size of GBoxedCopyFunc (11989)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GBoxedFreeFunc,4, 11990, 2)
-#elif __x86_64__
-CheckTypeSize(GBoxedFreeFunc,8, 11990, 11)
-#elif __ia64__
-CheckTypeSize(GBoxedFreeFunc,8, 11990, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GBoxedFreeFunc,4, 11990, 6)
-#elif __powerpc64__
-CheckTypeSize(GBoxedFreeFunc,8, 11990, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GBoxedFreeFunc,4, 11990, 10)
-#elif __s390x__
-CheckTypeSize(GBoxedFreeFunc,8, 11990, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11990,0);
-Msg("Find size of GBoxedFreeFunc (11990)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(struct _GSignalQuery,28, 11991, 2)
-CheckMemberSize(struct _GSignalQuery,signal_name,4,2,42194)
-CheckOffset(struct _GSignalQuery,signal_name,4,2,42194)
-CheckMemberSize(struct _GSignalQuery,itype,4,2,42195)
-CheckOffset(struct _GSignalQuery,itype,8,2,42195)
-CheckMemberSize(struct _GSignalQuery,signal_flags,4,2,42196)
-CheckOffset(struct _GSignalQuery,signal_flags,12,2,42196)
-CheckMemberSize(struct _GSignalQuery,return_type,4,2,42197)
-CheckOffset(struct _GSignalQuery,return_type,16,2,42197)
-CheckMemberSize(struct _GSignalQuery,n_params,4,2,42198)
-CheckOffset(struct _GSignalQuery,n_params,20,2,42198)
-CheckMemberSize(struct _GSignalQuery,param_types,4,2,42199)
-CheckOffset(struct _GSignalQuery,param_types,24,2,42199)
-#elif __x86_64__
-CheckTypeSize(struct _GSignalQuery,56, 11991, 11)
-CheckMemberSize(struct _GSignalQuery,signal_name,8,11,42194)
-CheckOffset(struct _GSignalQuery,signal_name,8,11,42194)
-CheckMemberSize(struct _GSignalQuery,itype,8,11,42195)
-CheckOffset(struct _GSignalQuery,itype,16,11,42195)
-CheckMemberSize(struct _GSignalQuery,signal_flags,4,11,42196)
-CheckOffset(struct _GSignalQuery,signal_flags,24,11,42196)
-CheckMemberSize(struct _GSignalQuery,return_type,8,11,42197)
-CheckOffset(struct _GSignalQuery,return_type,32,11,42197)
-CheckMemberSize(struct _GSignalQuery,n_params,4,11,42198)
-CheckOffset(struct _GSignalQuery,n_params,40,11,42198)
-CheckMemberSize(struct _GSignalQuery,param_types,8,11,42199)
-CheckOffset(struct _GSignalQuery,param_types,48,11,42199)
-#elif __ia64__
-CheckTypeSize(struct _GSignalQuery,56, 11991, 3)
-CheckMemberSize(struct _GSignalQuery,signal_name,8,3,42194)
-CheckOffset(struct _GSignalQuery,signal_name,8,3,42194)
-CheckMemberSize(struct _GSignalQuery,itype,8,3,42195)
-CheckOffset(struct _GSignalQuery,itype,16,3,42195)
-CheckMemberSize(struct _GSignalQuery,signal_flags,4,3,42196)
-CheckOffset(struct _GSignalQuery,signal_flags,24,3,42196)
-CheckMemberSize(struct _GSignalQuery,return_type,8,3,42197)
-CheckOffset(struct _GSignalQuery,return_type,32,3,42197)
-CheckMemberSize(struct _GSignalQuery,n_params,4,3,42198)
-CheckOffset(struct _GSignalQuery,n_params,40,3,42198)
-CheckMemberSize(struct _GSignalQuery,param_types,8,3,42199)
-CheckOffset(struct _GSignalQuery,param_types,48,3,42199)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GSignalQuery,28, 11991, 6)
-CheckMemberSize(struct _GSignalQuery,signal_name,4,6,42194)
-CheckOffset(struct _GSignalQuery,signal_name,4,6,42194)
-CheckMemberSize(struct _GSignalQuery,itype,4,6,42195)
-CheckOffset(struct _GSignalQuery,itype,8,6,42195)
-CheckMemberSize(struct _GSignalQuery,signal_flags,4,6,42196)
-CheckOffset(struct _GSignalQuery,signal_flags,12,6,42196)
-CheckMemberSize(struct _GSignalQuery,return_type,4,6,42197)
-CheckOffset(struct _GSignalQuery,return_type,16,6,42197)
-CheckMemberSize(struct _GSignalQuery,n_params,4,6,42198)
-CheckOffset(struct _GSignalQuery,n_params,20,6,42198)
-CheckMemberSize(struct _GSignalQuery,param_types,4,6,42199)
-CheckOffset(struct _GSignalQuery,param_types,24,6,42199)
-#elif __powerpc64__
-CheckTypeSize(struct _GSignalQuery,56, 11991, 9)
-CheckMemberSize(struct _GSignalQuery,signal_name,8,9,42194)
-CheckOffset(struct _GSignalQuery,signal_name,8,9,42194)
-CheckMemberSize(struct _GSignalQuery,itype,8,9,42195)
-CheckOffset(struct _GSignalQuery,itype,16,9,42195)
-CheckMemberSize(struct _GSignalQuery,signal_flags,4,9,42196)
-CheckOffset(struct _GSignalQuery,signal_flags,24,9,42196)
-CheckMemberSize(struct _GSignalQuery,return_type,8,9,42197)
-CheckOffset(struct _GSignalQuery,return_type,32,9,42197)
-CheckMemberSize(struct _GSignalQuery,n_params,4,9,42198)
-CheckOffset(struct _GSignalQuery,n_params,40,9,42198)
-CheckMemberSize(struct _GSignalQuery,param_types,8,9,42199)
-CheckOffset(struct _GSignalQuery,param_types,48,9,42199)
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct _GSignalQuery,28, 11991, 10)
-CheckMemberSize(struct _GSignalQuery,signal_name,4,10,42194)
-CheckOffset(struct _GSignalQuery,signal_name,4,10,42194)
-CheckMemberSize(struct _GSignalQuery,itype,4,10,42195)
-CheckOffset(struct _GSignalQuery,itype,8,10,42195)
-CheckMemberSize(struct _GSignalQuery,signal_flags,4,10,42196)
-CheckOffset(struct _GSignalQuery,signal_flags,12,10,42196)
-CheckMemberSize(struct _GSignalQuery,return_type,4,10,42197)
-CheckOffset(struct _GSignalQuery,return_type,16,10,42197)
-CheckMemberSize(struct _GSignalQuery,n_params,4,10,42198)
-CheckOffset(struct _GSignalQuery,n_params,20,10,42198)
-CheckMemberSize(struct _GSignalQuery,param_types,4,10,42199)
-CheckOffset(struct _GSignalQuery,param_types,24,10,42199)
-#elif __s390x__
-CheckTypeSize(struct _GSignalQuery,56, 11991, 12)
-CheckMemberSize(struct _GSignalQuery,signal_name,8,12,42194)
-CheckOffset(struct _GSignalQuery,signal_name,8,12,42194)
-CheckMemberSize(struct _GSignalQuery,itype,8,12,42195)
-CheckOffset(struct _GSignalQuery,itype,16,12,42195)
-CheckMemberSize(struct _GSignalQuery,signal_flags,4,12,42196)
-CheckOffset(struct _GSignalQuery,signal_flags,24,12,42196)
-CheckMemberSize(struct _GSignalQuery,return_type,8,12,42197)
-CheckOffset(struct _GSignalQuery,return_type,32,12,42197)
-CheckMemberSize(struct _GSignalQuery,n_params,4,12,42198)
-CheckOffset(struct _GSignalQuery,n_params,40,12,42198)
-CheckMemberSize(struct _GSignalQuery,param_types,8,12,42199)
-CheckOffset(struct _GSignalQuery,param_types,48,12,42199)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11991,0);
-Msg("Find size of _GSignalQuery (11991)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(const GType,4, 11992, 2)
-#elif __x86_64__
-CheckTypeSize(const GType,8, 11992, 11)
-#elif __ia64__
-CheckTypeSize(const GType,8, 11992, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(const GType,4, 11992, 6)
-#elif __powerpc64__
-CheckTypeSize(const GType,8, 11992, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(const GType,4, 11992, 10)
-#elif __s390x__
-CheckTypeSize(const GType,8, 11992, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11992,0);
-Msg("Find size of const GType (11992)\n");
+CheckTypeSize(const GParamSpecTypeInfo,56, 11985, 12);
+#elif 1
+CheckTypeSize(const GParamSpecTypeInfo,0, 11985, 1);
 #endif
 
 #if __i386__
@@ -5012,99 +4779,25 @@ Msg("Find size of const GType (11992)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11993,0);
-Msg("Find size of const GType * (11993)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(GSignalQuery,28, 11994, 2)
+CheckTypeSize(const GInterfaceInfo,12, 11987, 2);
 #elif __x86_64__
-CheckTypeSize(GSignalQuery,56, 11994, 11)
+CheckTypeSize(const GInterfaceInfo,24, 11987, 11);
 #elif __ia64__
-CheckTypeSize(GSignalQuery,56, 11994, 3)
+CheckTypeSize(const GInterfaceInfo,24, 11987, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GSignalQuery,28, 11994, 6)
+CheckTypeSize(const GInterfaceInfo,12, 11987, 6);
 #elif __powerpc64__
-CheckTypeSize(GSignalQuery,56, 11994, 9)
+CheckTypeSize(const GInterfaceInfo,24, 11987, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GSignalQuery,28, 11994, 10)
+CheckTypeSize(const GInterfaceInfo,12, 11987, 10);
 #elif __s390x__
-CheckTypeSize(GSignalQuery,56, 11994, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11994,0);
-Msg("Find size of GSignalQuery (11994)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GSignalQuery *,4, 11995, 2)
-#elif __x86_64__
-CheckTypeSize(GSignalQuery *,8, 11995, 11)
-#elif __ia64__
-CheckTypeSize(GSignalQuery *,8, 11995, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GSignalQuery *,4, 11995, 6)
-#elif __powerpc64__
-CheckTypeSize(GSignalQuery *,8, 11995, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GSignalQuery *,4, 11995, 10)
-#elif __s390x__
-CheckTypeSize(GSignalQuery *,8, 11995, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11995,0);
-Msg("Find size of GSignalQuery * (11995)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(struct _GTypeInterface,8, 11996, 2)
-CheckMemberSize(struct _GTypeInterface,g_instance_type,4,2,42201)
-CheckOffset(struct _GTypeInterface,g_instance_type,4,2,42201)
-#elif __x86_64__
-CheckTypeSize(struct _GTypeInterface,16, 11996, 11)
-CheckMemberSize(struct _GTypeInterface,g_instance_type,8,11,42201)
-CheckOffset(struct _GTypeInterface,g_instance_type,8,11,42201)
-#elif __ia64__
-CheckTypeSize(struct _GTypeInterface,16, 11996, 3)
-CheckMemberSize(struct _GTypeInterface,g_instance_type,8,3,42201)
-CheckOffset(struct _GTypeInterface,g_instance_type,8,3,42201)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GTypeInterface,8, 11996, 6)
-CheckMemberSize(struct _GTypeInterface,g_instance_type,4,6,42201)
-CheckOffset(struct _GTypeInterface,g_instance_type,4,6,42201)
-#elif __powerpc64__
-CheckTypeSize(struct _GTypeInterface,16, 11996, 9)
-CheckMemberSize(struct _GTypeInterface,g_instance_type,8,9,42201)
-CheckOffset(struct _GTypeInterface,g_instance_type,8,9,42201)
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct _GTypeInterface,8, 11996, 10)
-CheckMemberSize(struct _GTypeInterface,g_instance_type,4,10,42201)
-CheckOffset(struct _GTypeInterface,g_instance_type,4,10,42201)
-#elif __s390x__
-CheckTypeSize(struct _GTypeInterface,16, 11996, 12)
-CheckMemberSize(struct _GTypeInterface,g_instance_type,8,12,42201)
-CheckOffset(struct _GTypeInterface,g_instance_type,8,12,42201)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11996,0);
-Msg("Find size of _GTypeInterface (11996)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GTypeInterface,8, 11997, 2)
-#elif __x86_64__
-CheckTypeSize(GTypeInterface,16, 11997, 11)
-#elif __ia64__
-CheckTypeSize(GTypeInterface,16, 11997, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypeInterface,8, 11997, 6)
-#elif __powerpc64__
-CheckTypeSize(GTypeInterface,16, 11997, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GTypeInterface,8, 11997, 10)
-#elif __s390x__
-CheckTypeSize(GTypeInterface,16, 11997, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11997,0);
-Msg("Find size of GTypeInterface (11997)\n");
+CheckTypeSize(const GInterfaceInfo,24, 11987, 12);
+#elif 1
+CheckTypeSize(const GInterfaceInfo,0, 11987, 1);
 #endif
 
 #if __i386__
@@ -5114,205 +4807,350 @@ Msg("Find size of GTypeInterface (11997)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11998,0);
-Msg("Find size of fptr_glib-object_33 (11998)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(GTypePluginCompleteInterfaceInfo,4, 11999, 2)
+CheckTypeSize(GBoxedCopyFunc,4, 11989, 2);
 #elif __x86_64__
-CheckTypeSize(GTypePluginCompleteInterfaceInfo,8, 11999, 11)
+CheckTypeSize(GBoxedCopyFunc,8, 11989, 11);
 #elif __ia64__
-CheckTypeSize(GTypePluginCompleteInterfaceInfo,8, 11999, 3)
+CheckTypeSize(GBoxedCopyFunc,8, 11989, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypePluginCompleteInterfaceInfo,4, 11999, 6)
+CheckTypeSize(GBoxedCopyFunc,4, 11989, 6);
 #elif __powerpc64__
-CheckTypeSize(GTypePluginCompleteInterfaceInfo,8, 11999, 9)
+CheckTypeSize(GBoxedCopyFunc,8, 11989, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GTypePluginCompleteInterfaceInfo,4, 11999, 10)
+CheckTypeSize(GBoxedCopyFunc,4, 11989, 10);
 #elif __s390x__
-CheckTypeSize(GTypePluginCompleteInterfaceInfo,8, 11999, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11999,0);
-Msg("Find size of GTypePluginCompleteInterfaceInfo (11999)\n");
+CheckTypeSize(GBoxedCopyFunc,8, 11989, 12);
+#elif 1
+CheckTypeSize(GBoxedCopyFunc,0, 11989, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GParamSpecObject,40, 12000, 2)
+CheckTypeSize(GBoxedFreeFunc,4, 11990, 2);
+#elif __x86_64__
+CheckTypeSize(GBoxedFreeFunc,8, 11990, 11);
+#elif __ia64__
+CheckTypeSize(GBoxedFreeFunc,8, 11990, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GBoxedFreeFunc,4, 11990, 6);
+#elif __powerpc64__
+CheckTypeSize(GBoxedFreeFunc,8, 11990, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GBoxedFreeFunc,4, 11990, 10);
+#elif __s390x__
+CheckTypeSize(GBoxedFreeFunc,8, 11990, 12);
+#elif 1
+CheckTypeSize(GBoxedFreeFunc,0, 11990, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(struct _GSignalQuery,28, 11991, 2);
+CheckMemberSize(struct _GSignalQuery,signal_name,4,2,42194);
+CheckOffset(struct _GSignalQuery,signal_name,4,2,42194);
+CheckMemberSize(struct _GSignalQuery,itype,4,2,42195);
+CheckOffset(struct _GSignalQuery,itype,8,2,42195);
+CheckMemberSize(struct _GSignalQuery,signal_flags,4,2,42196);
+CheckOffset(struct _GSignalQuery,signal_flags,12,2,42196);
+CheckMemberSize(struct _GSignalQuery,return_type,4,2,42197);
+CheckOffset(struct _GSignalQuery,return_type,16,2,42197);
+CheckMemberSize(struct _GSignalQuery,n_params,4,2,42198);
+CheckOffset(struct _GSignalQuery,n_params,20,2,42198);
+CheckMemberSize(struct _GSignalQuery,param_types,4,2,42199);
+CheckOffset(struct _GSignalQuery,param_types,24,2,42199);
+#elif __x86_64__
+CheckTypeSize(struct _GSignalQuery,56, 11991, 11);
+CheckMemberSize(struct _GSignalQuery,signal_name,8,11,42194);
+CheckOffset(struct _GSignalQuery,signal_name,8,11,42194);
+CheckMemberSize(struct _GSignalQuery,itype,8,11,42195);
+CheckOffset(struct _GSignalQuery,itype,16,11,42195);
+CheckMemberSize(struct _GSignalQuery,signal_flags,4,11,42196);
+CheckOffset(struct _GSignalQuery,signal_flags,24,11,42196);
+CheckMemberSize(struct _GSignalQuery,return_type,8,11,42197);
+CheckOffset(struct _GSignalQuery,return_type,32,11,42197);
+CheckMemberSize(struct _GSignalQuery,n_params,4,11,42198);
+CheckOffset(struct _GSignalQuery,n_params,40,11,42198);
+CheckMemberSize(struct _GSignalQuery,param_types,8,11,42199);
+CheckOffset(struct _GSignalQuery,param_types,48,11,42199);
+#elif __ia64__
+CheckTypeSize(struct _GSignalQuery,56, 11991, 3);
+CheckMemberSize(struct _GSignalQuery,signal_name,8,3,42194);
+CheckOffset(struct _GSignalQuery,signal_name,8,3,42194);
+CheckMemberSize(struct _GSignalQuery,itype,8,3,42195);
+CheckOffset(struct _GSignalQuery,itype,16,3,42195);
+CheckMemberSize(struct _GSignalQuery,signal_flags,4,3,42196);
+CheckOffset(struct _GSignalQuery,signal_flags,24,3,42196);
+CheckMemberSize(struct _GSignalQuery,return_type,8,3,42197);
+CheckOffset(struct _GSignalQuery,return_type,32,3,42197);
+CheckMemberSize(struct _GSignalQuery,n_params,4,3,42198);
+CheckOffset(struct _GSignalQuery,n_params,40,3,42198);
+CheckMemberSize(struct _GSignalQuery,param_types,8,3,42199);
+CheckOffset(struct _GSignalQuery,param_types,48,3,42199);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _GSignalQuery,28, 11991, 6);
+CheckMemberSize(struct _GSignalQuery,signal_name,4,6,42194);
+CheckOffset(struct _GSignalQuery,signal_name,4,6,42194);
+CheckMemberSize(struct _GSignalQuery,itype,4,6,42195);
+CheckOffset(struct _GSignalQuery,itype,8,6,42195);
+CheckMemberSize(struct _GSignalQuery,signal_flags,4,6,42196);
+CheckOffset(struct _GSignalQuery,signal_flags,12,6,42196);
+CheckMemberSize(struct _GSignalQuery,return_type,4,6,42197);
+CheckOffset(struct _GSignalQuery,return_type,16,6,42197);
+CheckMemberSize(struct _GSignalQuery,n_params,4,6,42198);
+CheckOffset(struct _GSignalQuery,n_params,20,6,42198);
+CheckMemberSize(struct _GSignalQuery,param_types,4,6,42199);
+CheckOffset(struct _GSignalQuery,param_types,24,6,42199);
+#elif __powerpc64__
+CheckTypeSize(struct _GSignalQuery,56, 11991, 9);
+CheckMemberSize(struct _GSignalQuery,signal_name,8,9,42194);
+CheckOffset(struct _GSignalQuery,signal_name,8,9,42194);
+CheckMemberSize(struct _GSignalQuery,itype,8,9,42195);
+CheckOffset(struct _GSignalQuery,itype,16,9,42195);
+CheckMemberSize(struct _GSignalQuery,signal_flags,4,9,42196);
+CheckOffset(struct _GSignalQuery,signal_flags,24,9,42196);
+CheckMemberSize(struct _GSignalQuery,return_type,8,9,42197);
+CheckOffset(struct _GSignalQuery,return_type,32,9,42197);
+CheckMemberSize(struct _GSignalQuery,n_params,4,9,42198);
+CheckOffset(struct _GSignalQuery,n_params,40,9,42198);
+CheckMemberSize(struct _GSignalQuery,param_types,8,9,42199);
+CheckOffset(struct _GSignalQuery,param_types,48,9,42199);
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _GSignalQuery,28, 11991, 10);
+CheckMemberSize(struct _GSignalQuery,signal_name,4,10,42194);
+CheckOffset(struct _GSignalQuery,signal_name,4,10,42194);
+CheckMemberSize(struct _GSignalQuery,itype,4,10,42195);
+CheckOffset(struct _GSignalQuery,itype,8,10,42195);
+CheckMemberSize(struct _GSignalQuery,signal_flags,4,10,42196);
+CheckOffset(struct _GSignalQuery,signal_flags,12,10,42196);
+CheckMemberSize(struct _GSignalQuery,return_type,4,10,42197);
+CheckOffset(struct _GSignalQuery,return_type,16,10,42197);
+CheckMemberSize(struct _GSignalQuery,n_params,4,10,42198);
+CheckOffset(struct _GSignalQuery,n_params,20,10,42198);
+CheckMemberSize(struct _GSignalQuery,param_types,4,10,42199);
+CheckOffset(struct _GSignalQuery,param_types,24,10,42199);
+#elif __s390x__
+CheckTypeSize(struct _GSignalQuery,56, 11991, 12);
+CheckMemberSize(struct _GSignalQuery,signal_name,8,12,42194);
+CheckOffset(struct _GSignalQuery,signal_name,8,12,42194);
+CheckMemberSize(struct _GSignalQuery,itype,8,12,42195);
+CheckOffset(struct _GSignalQuery,itype,16,12,42195);
+CheckMemberSize(struct _GSignalQuery,signal_flags,4,12,42196);
+CheckOffset(struct _GSignalQuery,signal_flags,24,12,42196);
+CheckMemberSize(struct _GSignalQuery,return_type,8,12,42197);
+CheckOffset(struct _GSignalQuery,return_type,32,12,42197);
+CheckMemberSize(struct _GSignalQuery,n_params,4,12,42198);
+CheckOffset(struct _GSignalQuery,n_params,40,12,42198);
+CheckMemberSize(struct _GSignalQuery,param_types,8,12,42199);
+CheckOffset(struct _GSignalQuery,param_types,48,12,42199);
+#elif 1
+CheckTypeSize(struct _GSignalQuery,0, 11991, 1);
+Msg("Missing member data for _GSignalQuery on All\n");
+CheckOffset(struct _GSignalQuery,signal_id,0,1,42193);
+CheckOffset(struct _GSignalQuery,signal_name,0,1,42194);
+CheckOffset(struct _GSignalQuery,itype,0,1,42195);
+CheckOffset(struct _GSignalQuery,signal_flags,0,1,42196);
+CheckOffset(struct _GSignalQuery,return_type,0,1,42197);
+CheckOffset(struct _GSignalQuery,n_params,0,1,42198);
+CheckOffset(struct _GSignalQuery,param_types,0,1,42199);
+#endif
+
+#if __i386__
+CheckTypeSize(const GType,4, 11992, 2);
+#elif __x86_64__
+CheckTypeSize(const GType,8, 11992, 11);
+#elif __ia64__
+CheckTypeSize(const GType,8, 11992, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(const GType,4, 11992, 6);
+#elif __powerpc64__
+CheckTypeSize(const GType,8, 11992, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(const GType,4, 11992, 10);
+#elif __s390x__
+CheckTypeSize(const GType,8, 11992, 12);
+#elif 1
+CheckTypeSize(const GType,0, 11992, 1);
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
+#elif 1
+#endif
+
+#if __i386__
+CheckTypeSize(GSignalQuery,28, 11994, 2);
+#elif __x86_64__
+CheckTypeSize(GSignalQuery,56, 11994, 11);
+#elif __ia64__
+CheckTypeSize(GSignalQuery,56, 11994, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GSignalQuery,28, 11994, 6);
+#elif __powerpc64__
+CheckTypeSize(GSignalQuery,56, 11994, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GSignalQuery,28, 11994, 10);
+#elif __s390x__
+CheckTypeSize(GSignalQuery,56, 11994, 12);
+#elif 1
+CheckTypeSize(GSignalQuery,0, 11994, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(GSignalQuery *,4, 11995, 2);
+#elif __x86_64__
+CheckTypeSize(GSignalQuery *,8, 11995, 11);
+#elif __ia64__
+CheckTypeSize(GSignalQuery *,8, 11995, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GSignalQuery *,4, 11995, 6);
+#elif __powerpc64__
+CheckTypeSize(GSignalQuery *,8, 11995, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GSignalQuery *,4, 11995, 10);
+#elif __s390x__
+CheckTypeSize(GSignalQuery *,8, 11995, 12);
+#elif 1
+CheckTypeSize(GSignalQuery *,0, 11995, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(struct _GTypeInterface,8, 11996, 2);
+CheckMemberSize(struct _GTypeInterface,g_instance_type,4,2,42201);
+CheckOffset(struct _GTypeInterface,g_instance_type,4,2,42201);
+#elif __x86_64__
+CheckTypeSize(struct _GTypeInterface,16, 11996, 11);
+CheckMemberSize(struct _GTypeInterface,g_instance_type,8,11,42201);
+CheckOffset(struct _GTypeInterface,g_instance_type,8,11,42201);
+#elif __ia64__
+CheckTypeSize(struct _GTypeInterface,16, 11996, 3);
+CheckMemberSize(struct _GTypeInterface,g_instance_type,8,3,42201);
+CheckOffset(struct _GTypeInterface,g_instance_type,8,3,42201);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _GTypeInterface,8, 11996, 6);
+CheckMemberSize(struct _GTypeInterface,g_instance_type,4,6,42201);
+CheckOffset(struct _GTypeInterface,g_instance_type,4,6,42201);
+#elif __powerpc64__
+CheckTypeSize(struct _GTypeInterface,16, 11996, 9);
+CheckMemberSize(struct _GTypeInterface,g_instance_type,8,9,42201);
+CheckOffset(struct _GTypeInterface,g_instance_type,8,9,42201);
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _GTypeInterface,8, 11996, 10);
+CheckMemberSize(struct _GTypeInterface,g_instance_type,4,10,42201);
+CheckOffset(struct _GTypeInterface,g_instance_type,4,10,42201);
+#elif __s390x__
+CheckTypeSize(struct _GTypeInterface,16, 11996, 12);
+CheckMemberSize(struct _GTypeInterface,g_instance_type,8,12,42201);
+CheckOffset(struct _GTypeInterface,g_instance_type,8,12,42201);
+#elif 1
+CheckTypeSize(struct _GTypeInterface,0, 11996, 1);
+Msg("Missing member data for _GTypeInterface on All\n");
+CheckOffset(struct _GTypeInterface,g_type,0,1,42200);
+CheckOffset(struct _GTypeInterface,g_instance_type,0,1,42201);
+#endif
+
+#if __i386__
+CheckTypeSize(GTypeInterface,8, 11997, 2);
+#elif __x86_64__
+CheckTypeSize(GTypeInterface,16, 11997, 11);
+#elif __ia64__
+CheckTypeSize(GTypeInterface,16, 11997, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GTypeInterface,8, 11997, 6);
+#elif __powerpc64__
+CheckTypeSize(GTypeInterface,16, 11997, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GTypeInterface,8, 11997, 10);
+#elif __s390x__
+CheckTypeSize(GTypeInterface,16, 11997, 12);
+#elif 1
+CheckTypeSize(GTypeInterface,0, 11997, 1);
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
+#elif 1
+#endif
+
+#if __i386__
+CheckTypeSize(GTypePluginCompleteInterfaceInfo,4, 11999, 2);
+#elif __x86_64__
+CheckTypeSize(GTypePluginCompleteInterfaceInfo,8, 11999, 11);
+#elif __ia64__
+CheckTypeSize(GTypePluginCompleteInterfaceInfo,8, 11999, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GTypePluginCompleteInterfaceInfo,4, 11999, 6);
+#elif __powerpc64__
+CheckTypeSize(GTypePluginCompleteInterfaceInfo,8, 11999, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GTypePluginCompleteInterfaceInfo,4, 11999, 10);
+#elif __s390x__
+CheckTypeSize(GTypePluginCompleteInterfaceInfo,8, 11999, 12);
+#elif 1
+CheckTypeSize(GTypePluginCompleteInterfaceInfo,0, 11999, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(struct _GParamSpecObject,40, 12000, 2);
 Msg("Missing member data for _GParamSpecObject on IA32\n");
-CheckOffset(struct _GParamSpecObject,parent_instance,0,2,42206)
+CheckOffset(struct _GParamSpecObject,parent_instance,0,2,42206);
 #elif __x86_64__
-CheckTypeSize(struct _GParamSpecObject,72, 12000, 11)
+CheckTypeSize(struct _GParamSpecObject,72, 12000, 11);
 Msg("Missing member data for _GParamSpecObject on x86-64\n");
-CheckOffset(struct _GParamSpecObject,parent_instance,0,11,42206)
+CheckOffset(struct _GParamSpecObject,parent_instance,0,11,42206);
 #elif __ia64__
-CheckTypeSize(struct _GParamSpecObject,72, 12000, 3)
+CheckTypeSize(struct _GParamSpecObject,72, 12000, 3);
 Msg("Missing member data for _GParamSpecObject on IA64\n");
-CheckOffset(struct _GParamSpecObject,parent_instance,0,3,42206)
+CheckOffset(struct _GParamSpecObject,parent_instance,0,3,42206);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GParamSpecObject,40, 12000, 6)
+CheckTypeSize(struct _GParamSpecObject,40, 12000, 6);
 Msg("Missing member data for _GParamSpecObject on PPC32\n");
-CheckOffset(struct _GParamSpecObject,parent_instance,0,6,42206)
+CheckOffset(struct _GParamSpecObject,parent_instance,0,6,42206);
 #elif __powerpc64__
-CheckTypeSize(struct _GParamSpecObject,72, 12000, 9)
+CheckTypeSize(struct _GParamSpecObject,72, 12000, 9);
 Msg("Missing member data for _GParamSpecObject on PPC64\n");
-CheckOffset(struct _GParamSpecObject,parent_instance,0,9,42206)
+CheckOffset(struct _GParamSpecObject,parent_instance,0,9,42206);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GParamSpecObject,40, 12000, 10)
+CheckTypeSize(struct _GParamSpecObject,40, 12000, 10);
 Msg("Missing member data for _GParamSpecObject on S390\n");
-CheckOffset(struct _GParamSpecObject,parent_instance,0,10,42206)
+CheckOffset(struct _GParamSpecObject,parent_instance,0,10,42206);
 #elif __s390x__
-CheckTypeSize(struct _GParamSpecObject,72, 12000, 12)
+CheckTypeSize(struct _GParamSpecObject,72, 12000, 12);
 Msg("Missing member data for _GParamSpecObject on S390X\n");
-CheckOffset(struct _GParamSpecObject,parent_instance,0,12,42206)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12000,0);
-Msg("Find size of _GParamSpecObject (12000)\n");
+CheckOffset(struct _GParamSpecObject,parent_instance,0,12,42206);
+#elif 1
+CheckTypeSize(struct _GParamSpecObject,0, 12000, 1);
+Msg("Missing member data for _GParamSpecObject on All\n");
+CheckOffset(struct _GParamSpecObject,parent_instance,0,1,42206);
 #endif
 
 #if __i386__
-CheckTypeSize(GParamSpecObject,40, 12001, 2)
+CheckTypeSize(GParamSpecObject,40, 12001, 2);
 #elif __x86_64__
-CheckTypeSize(GParamSpecObject,72, 12001, 11)
+CheckTypeSize(GParamSpecObject,72, 12001, 11);
 #elif __ia64__
-CheckTypeSize(GParamSpecObject,72, 12001, 3)
+CheckTypeSize(GParamSpecObject,72, 12001, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpecObject,40, 12001, 6)
+CheckTypeSize(GParamSpecObject,40, 12001, 6);
 #elif __powerpc64__
-CheckTypeSize(GParamSpecObject,72, 12001, 9)
+CheckTypeSize(GParamSpecObject,72, 12001, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpecObject,40, 12001, 10)
+CheckTypeSize(GParamSpecObject,40, 12001, 10);
 #elif __s390x__
-CheckTypeSize(GParamSpecObject,72, 12001, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12001,0);
-Msg("Find size of GParamSpecObject (12001)\n");
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12002,0);
-Msg("Find size of fptr_glib-object_165 (12002)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GTypePluginUnuse,4, 12003, 2)
-#elif __x86_64__
-CheckTypeSize(GTypePluginUnuse,8, 12003, 11)
-#elif __ia64__
-CheckTypeSize(GTypePluginUnuse,8, 12003, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypePluginUnuse,4, 12003, 6)
-#elif __powerpc64__
-CheckTypeSize(GTypePluginUnuse,8, 12003, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GTypePluginUnuse,4, 12003, 10)
-#elif __s390x__
-CheckTypeSize(GTypePluginUnuse,8, 12003, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12003,0);
-Msg("Find size of GTypePluginUnuse (12003)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(struct _GTypePluginClass,24, 12004, 2)
-CheckMemberSize(struct _GTypePluginClass,use_plugin,4,2,42209)
-CheckOffset(struct _GTypePluginClass,use_plugin,8,2,42209)
-CheckMemberSize(struct _GTypePluginClass,unuse_plugin,4,2,42210)
-CheckOffset(struct _GTypePluginClass,unuse_plugin,12,2,42210)
-CheckMemberSize(struct _GTypePluginClass,complete_type_info,4,2,42215)
-CheckOffset(struct _GTypePluginClass,complete_type_info,16,2,42215)
-CheckMemberSize(struct _GTypePluginClass,complete_interface_info,4,2,42216)
-CheckOffset(struct _GTypePluginClass,complete_interface_info,20,2,42216)
-#elif __x86_64__
-CheckTypeSize(struct _GTypePluginClass,48, 12004, 11)
-CheckMemberSize(struct _GTypePluginClass,use_plugin,8,11,42209)
-CheckOffset(struct _GTypePluginClass,use_plugin,16,11,42209)
-CheckMemberSize(struct _GTypePluginClass,unuse_plugin,8,11,42210)
-CheckOffset(struct _GTypePluginClass,unuse_plugin,24,11,42210)
-CheckMemberSize(struct _GTypePluginClass,complete_type_info,8,11,42215)
-CheckOffset(struct _GTypePluginClass,complete_type_info,32,11,42215)
-CheckMemberSize(struct _GTypePluginClass,complete_interface_info,8,11,42216)
-CheckOffset(struct _GTypePluginClass,complete_interface_info,40,11,42216)
-#elif __ia64__
-CheckTypeSize(struct _GTypePluginClass,48, 12004, 3)
-CheckMemberSize(struct _GTypePluginClass,use_plugin,8,3,42209)
-CheckOffset(struct _GTypePluginClass,use_plugin,16,3,42209)
-CheckMemberSize(struct _GTypePluginClass,unuse_plugin,8,3,42210)
-CheckOffset(struct _GTypePluginClass,unuse_plugin,24,3,42210)
-CheckMemberSize(struct _GTypePluginClass,complete_type_info,8,3,42215)
-CheckOffset(struct _GTypePluginClass,complete_type_info,32,3,42215)
-CheckMemberSize(struct _GTypePluginClass,complete_interface_info,8,3,42216)
-CheckOffset(struct _GTypePluginClass,complete_interface_info,40,3,42216)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GTypePluginClass,24, 12004, 6)
-CheckMemberSize(struct _GTypePluginClass,use_plugin,4,6,42209)
-CheckOffset(struct _GTypePluginClass,use_plugin,8,6,42209)
-CheckMemberSize(struct _GTypePluginClass,unuse_plugin,4,6,42210)
-CheckOffset(struct _GTypePluginClass,unuse_plugin,12,6,42210)
-CheckMemberSize(struct _GTypePluginClass,complete_type_info,4,6,42215)
-CheckOffset(struct _GTypePluginClass,complete_type_info,16,6,42215)
-CheckMemberSize(struct _GTypePluginClass,complete_interface_info,4,6,42216)
-CheckOffset(struct _GTypePluginClass,complete_interface_info,20,6,42216)
-#elif __powerpc64__
-CheckTypeSize(struct _GTypePluginClass,48, 12004, 9)
-CheckMemberSize(struct _GTypePluginClass,use_plugin,8,9,42209)
-CheckOffset(struct _GTypePluginClass,use_plugin,16,9,42209)
-CheckMemberSize(struct _GTypePluginClass,unuse_plugin,8,9,42210)
-CheckOffset(struct _GTypePluginClass,unuse_plugin,24,9,42210)
-CheckMemberSize(struct _GTypePluginClass,complete_type_info,8,9,42215)
-CheckOffset(struct _GTypePluginClass,complete_type_info,32,9,42215)
-CheckMemberSize(struct _GTypePluginClass,complete_interface_info,8,9,42216)
-CheckOffset(struct _GTypePluginClass,complete_interface_info,40,9,42216)
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct _GTypePluginClass,24, 12004, 10)
-CheckMemberSize(struct _GTypePluginClass,use_plugin,4,10,42209)
-CheckOffset(struct _GTypePluginClass,use_plugin,8,10,42209)
-CheckMemberSize(struct _GTypePluginClass,unuse_plugin,4,10,42210)
-CheckOffset(struct _GTypePluginClass,unuse_plugin,12,10,42210)
-CheckMemberSize(struct _GTypePluginClass,complete_type_info,4,10,42215)
-CheckOffset(struct _GTypePluginClass,complete_type_info,16,10,42215)
-CheckMemberSize(struct _GTypePluginClass,complete_interface_info,4,10,42216)
-CheckOffset(struct _GTypePluginClass,complete_interface_info,20,10,42216)
-#elif __s390x__
-CheckTypeSize(struct _GTypePluginClass,48, 12004, 12)
-CheckMemberSize(struct _GTypePluginClass,use_plugin,8,12,42209)
-CheckOffset(struct _GTypePluginClass,use_plugin,16,12,42209)
-CheckMemberSize(struct _GTypePluginClass,unuse_plugin,8,12,42210)
-CheckOffset(struct _GTypePluginClass,unuse_plugin,24,12,42210)
-CheckMemberSize(struct _GTypePluginClass,complete_type_info,8,12,42215)
-CheckOffset(struct _GTypePluginClass,complete_type_info,32,12,42215)
-CheckMemberSize(struct _GTypePluginClass,complete_interface_info,8,12,42216)
-CheckOffset(struct _GTypePluginClass,complete_interface_info,40,12,42216)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12004,0);
-Msg("Find size of _GTypePluginClass (12004)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GTypePluginUse,4, 12005, 2)
-#elif __x86_64__
-CheckTypeSize(GTypePluginUse,8, 12005, 11)
-#elif __ia64__
-CheckTypeSize(GTypePluginUse,8, 12005, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypePluginUse,4, 12005, 6)
-#elif __powerpc64__
-CheckTypeSize(GTypePluginUse,8, 12005, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GTypePluginUse,4, 12005, 10)
-#elif __s390x__
-CheckTypeSize(GTypePluginUse,8, 12005, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12005,0);
-Msg("Find size of GTypePluginUse (12005)\n");
+CheckTypeSize(GParamSpecObject,72, 12001, 12);
+#elif 1
+CheckTypeSize(GParamSpecObject,0, 12001, 1);
 #endif
 
 #if __i386__
@@ -5322,1802 +5160,1551 @@ Msg("Find size of GTypePluginUse (12005)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12006,0);
-Msg("Find size of fptr_glib-object_30 (12006)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(GTypePluginCompleteTypeInfo,4, 12007, 2)
+CheckTypeSize(GTypePluginUnuse,4, 12003, 2);
 #elif __x86_64__
-CheckTypeSize(GTypePluginCompleteTypeInfo,8, 12007, 11)
+CheckTypeSize(GTypePluginUnuse,8, 12003, 11);
 #elif __ia64__
-CheckTypeSize(GTypePluginCompleteTypeInfo,8, 12007, 3)
+CheckTypeSize(GTypePluginUnuse,8, 12003, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypePluginCompleteTypeInfo,4, 12007, 6)
+CheckTypeSize(GTypePluginUnuse,4, 12003, 6);
 #elif __powerpc64__
-CheckTypeSize(GTypePluginCompleteTypeInfo,8, 12007, 9)
+CheckTypeSize(GTypePluginUnuse,8, 12003, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GTypePluginCompleteTypeInfo,4, 12007, 10)
+CheckTypeSize(GTypePluginUnuse,4, 12003, 10);
 #elif __s390x__
-CheckTypeSize(GTypePluginCompleteTypeInfo,8, 12007, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12007,0);
-Msg("Find size of GTypePluginCompleteTypeInfo (12007)\n");
+CheckTypeSize(GTypePluginUnuse,8, 12003, 12);
+#elif 1
+CheckTypeSize(GTypePluginUnuse,0, 12003, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GTypePluginClass,24, 12008, 2)
+CheckTypeSize(struct _GTypePluginClass,24, 12004, 2);
+CheckMemberSize(struct _GTypePluginClass,use_plugin,4,2,42209);
+CheckOffset(struct _GTypePluginClass,use_plugin,8,2,42209);
+CheckMemberSize(struct _GTypePluginClass,unuse_plugin,4,2,42210);
+CheckOffset(struct _GTypePluginClass,unuse_plugin,12,2,42210);
+CheckMemberSize(struct _GTypePluginClass,complete_type_info,4,2,42215);
+CheckOffset(struct _GTypePluginClass,complete_type_info,16,2,42215);
+CheckMemberSize(struct _GTypePluginClass,complete_interface_info,4,2,42216);
+CheckOffset(struct _GTypePluginClass,complete_interface_info,20,2,42216);
 #elif __x86_64__
-CheckTypeSize(GTypePluginClass,48, 12008, 11)
+CheckTypeSize(struct _GTypePluginClass,48, 12004, 11);
+CheckMemberSize(struct _GTypePluginClass,use_plugin,8,11,42209);
+CheckOffset(struct _GTypePluginClass,use_plugin,16,11,42209);
+CheckMemberSize(struct _GTypePluginClass,unuse_plugin,8,11,42210);
+CheckOffset(struct _GTypePluginClass,unuse_plugin,24,11,42210);
+CheckMemberSize(struct _GTypePluginClass,complete_type_info,8,11,42215);
+CheckOffset(struct _GTypePluginClass,complete_type_info,32,11,42215);
+CheckMemberSize(struct _GTypePluginClass,complete_interface_info,8,11,42216);
+CheckOffset(struct _GTypePluginClass,complete_interface_info,40,11,42216);
 #elif __ia64__
-CheckTypeSize(GTypePluginClass,48, 12008, 3)
+CheckTypeSize(struct _GTypePluginClass,48, 12004, 3);
+CheckMemberSize(struct _GTypePluginClass,use_plugin,8,3,42209);
+CheckOffset(struct _GTypePluginClass,use_plugin,16,3,42209);
+CheckMemberSize(struct _GTypePluginClass,unuse_plugin,8,3,42210);
+CheckOffset(struct _GTypePluginClass,unuse_plugin,24,3,42210);
+CheckMemberSize(struct _GTypePluginClass,complete_type_info,8,3,42215);
+CheckOffset(struct _GTypePluginClass,complete_type_info,32,3,42215);
+CheckMemberSize(struct _GTypePluginClass,complete_interface_info,8,3,42216);
+CheckOffset(struct _GTypePluginClass,complete_interface_info,40,3,42216);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypePluginClass,24, 12008, 6)
+CheckTypeSize(struct _GTypePluginClass,24, 12004, 6);
+CheckMemberSize(struct _GTypePluginClass,use_plugin,4,6,42209);
+CheckOffset(struct _GTypePluginClass,use_plugin,8,6,42209);
+CheckMemberSize(struct _GTypePluginClass,unuse_plugin,4,6,42210);
+CheckOffset(struct _GTypePluginClass,unuse_plugin,12,6,42210);
+CheckMemberSize(struct _GTypePluginClass,complete_type_info,4,6,42215);
+CheckOffset(struct _GTypePluginClass,complete_type_info,16,6,42215);
+CheckMemberSize(struct _GTypePluginClass,complete_interface_info,4,6,42216);
+CheckOffset(struct _GTypePluginClass,complete_interface_info,20,6,42216);
 #elif __powerpc64__
-CheckTypeSize(GTypePluginClass,48, 12008, 9)
+CheckTypeSize(struct _GTypePluginClass,48, 12004, 9);
+CheckMemberSize(struct _GTypePluginClass,use_plugin,8,9,42209);
+CheckOffset(struct _GTypePluginClass,use_plugin,16,9,42209);
+CheckMemberSize(struct _GTypePluginClass,unuse_plugin,8,9,42210);
+CheckOffset(struct _GTypePluginClass,unuse_plugin,24,9,42210);
+CheckMemberSize(struct _GTypePluginClass,complete_type_info,8,9,42215);
+CheckOffset(struct _GTypePluginClass,complete_type_info,32,9,42215);
+CheckMemberSize(struct _GTypePluginClass,complete_interface_info,8,9,42216);
+CheckOffset(struct _GTypePluginClass,complete_interface_info,40,9,42216);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GTypePluginClass,24, 12008, 10)
+CheckTypeSize(struct _GTypePluginClass,24, 12004, 10);
+CheckMemberSize(struct _GTypePluginClass,use_plugin,4,10,42209);
+CheckOffset(struct _GTypePluginClass,use_plugin,8,10,42209);
+CheckMemberSize(struct _GTypePluginClass,unuse_plugin,4,10,42210);
+CheckOffset(struct _GTypePluginClass,unuse_plugin,12,10,42210);
+CheckMemberSize(struct _GTypePluginClass,complete_type_info,4,10,42215);
+CheckOffset(struct _GTypePluginClass,complete_type_info,16,10,42215);
+CheckMemberSize(struct _GTypePluginClass,complete_interface_info,4,10,42216);
+CheckOffset(struct _GTypePluginClass,complete_interface_info,20,10,42216);
 #elif __s390x__
-CheckTypeSize(GTypePluginClass,48, 12008, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12008,0);
-Msg("Find size of GTypePluginClass (12008)\n");
+CheckTypeSize(struct _GTypePluginClass,48, 12004, 12);
+CheckMemberSize(struct _GTypePluginClass,use_plugin,8,12,42209);
+CheckOffset(struct _GTypePluginClass,use_plugin,16,12,42209);
+CheckMemberSize(struct _GTypePluginClass,unuse_plugin,8,12,42210);
+CheckOffset(struct _GTypePluginClass,unuse_plugin,24,12,42210);
+CheckMemberSize(struct _GTypePluginClass,complete_type_info,8,12,42215);
+CheckOffset(struct _GTypePluginClass,complete_type_info,32,12,42215);
+CheckMemberSize(struct _GTypePluginClass,complete_interface_info,8,12,42216);
+CheckOffset(struct _GTypePluginClass,complete_interface_info,40,12,42216);
+#elif 1
+CheckTypeSize(struct _GTypePluginClass,0, 12004, 1);
+Msg("Missing member data for _GTypePluginClass on All\n");
+CheckOffset(struct _GTypePluginClass,base_iface,0,1,42208);
+CheckOffset(struct _GTypePluginClass,use_plugin,0,1,42209);
+CheckOffset(struct _GTypePluginClass,unuse_plugin,0,1,42210);
+CheckOffset(struct _GTypePluginClass,complete_type_info,0,1,42215);
+CheckOffset(struct _GTypePluginClass,complete_interface_info,0,1,42216);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GCClosure,20, 12009, 2)
-CheckMemberSize(struct _GCClosure,callback,4,2,42218)
-CheckOffset(struct _GCClosure,callback,16,2,42218)
+CheckTypeSize(GTypePluginUse,4, 12005, 2);
 #elif __x86_64__
-CheckTypeSize(struct _GCClosure,40, 12009, 11)
-CheckMemberSize(struct _GCClosure,callback,8,11,42218)
-CheckOffset(struct _GCClosure,callback,32,11,42218)
+CheckTypeSize(GTypePluginUse,8, 12005, 11);
 #elif __ia64__
-CheckTypeSize(struct _GCClosure,40, 12009, 3)
-CheckMemberSize(struct _GCClosure,callback,8,3,42218)
-CheckOffset(struct _GCClosure,callback,32,3,42218)
+CheckTypeSize(GTypePluginUse,8, 12005, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GCClosure,20, 12009, 6)
-CheckMemberSize(struct _GCClosure,callback,4,6,42218)
-CheckOffset(struct _GCClosure,callback,16,6,42218)
+CheckTypeSize(GTypePluginUse,4, 12005, 6);
 #elif __powerpc64__
-CheckTypeSize(struct _GCClosure,40, 12009, 9)
-CheckMemberSize(struct _GCClosure,callback,8,9,42218)
-CheckOffset(struct _GCClosure,callback,32,9,42218)
+CheckTypeSize(GTypePluginUse,8, 12005, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GCClosure,20, 12009, 10)
-CheckMemberSize(struct _GCClosure,callback,4,10,42218)
-CheckOffset(struct _GCClosure,callback,16,10,42218)
+CheckTypeSize(GTypePluginUse,4, 12005, 10);
 #elif __s390x__
-CheckTypeSize(struct _GCClosure,40, 12009, 12)
-CheckMemberSize(struct _GCClosure,callback,8,12,42218)
-CheckOffset(struct _GCClosure,callback,32,12,42218)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12009,0);
-Msg("Find size of _GCClosure (12009)\n");
+CheckTypeSize(GTypePluginUse,8, 12005, 12);
+#elif 1
+CheckTypeSize(GTypePluginUse,0, 12005, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GCClosure,20, 12010, 2)
 #elif __x86_64__
-CheckTypeSize(GCClosure,40, 12010, 11)
 #elif __ia64__
-CheckTypeSize(GCClosure,40, 12010, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GCClosure,20, 12010, 6)
 #elif __powerpc64__
-CheckTypeSize(GCClosure,40, 12010, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GCClosure,20, 12010, 10)
 #elif __s390x__
-CheckTypeSize(GCClosure,40, 12010, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12010,0);
-Msg("Find size of GCClosure (12010)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GParamSpecUnichar,44, 12011, 2)
-CheckMemberSize(struct _GParamSpecUnichar,default_value,4,2,42220)
-CheckOffset(struct _GParamSpecUnichar,default_value,40,2,42220)
+CheckTypeSize(GTypePluginCompleteTypeInfo,4, 12007, 2);
 #elif __x86_64__
-CheckTypeSize(struct _GParamSpecUnichar,80, 12011, 11)
-CheckMemberSize(struct _GParamSpecUnichar,default_value,4,11,42220)
-CheckOffset(struct _GParamSpecUnichar,default_value,72,11,42220)
+CheckTypeSize(GTypePluginCompleteTypeInfo,8, 12007, 11);
 #elif __ia64__
-CheckTypeSize(struct _GParamSpecUnichar,80, 12011, 3)
-CheckMemberSize(struct _GParamSpecUnichar,default_value,4,3,42220)
-CheckOffset(struct _GParamSpecUnichar,default_value,72,3,42220)
+CheckTypeSize(GTypePluginCompleteTypeInfo,8, 12007, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GParamSpecUnichar,44, 12011, 6)
-CheckMemberSize(struct _GParamSpecUnichar,default_value,4,6,42220)
-CheckOffset(struct _GParamSpecUnichar,default_value,40,6,42220)
+CheckTypeSize(GTypePluginCompleteTypeInfo,4, 12007, 6);
 #elif __powerpc64__
-CheckTypeSize(struct _GParamSpecUnichar,80, 12011, 9)
-CheckMemberSize(struct _GParamSpecUnichar,default_value,4,9,42220)
-CheckOffset(struct _GParamSpecUnichar,default_value,72,9,42220)
+CheckTypeSize(GTypePluginCompleteTypeInfo,8, 12007, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GParamSpecUnichar,44, 12011, 10)
-CheckMemberSize(struct _GParamSpecUnichar,default_value,4,10,42220)
-CheckOffset(struct _GParamSpecUnichar,default_value,40,10,42220)
+CheckTypeSize(GTypePluginCompleteTypeInfo,4, 12007, 10);
 #elif __s390x__
-CheckTypeSize(struct _GParamSpecUnichar,80, 12011, 12)
-CheckMemberSize(struct _GParamSpecUnichar,default_value,4,12,42220)
-CheckOffset(struct _GParamSpecUnichar,default_value,72,12,42220)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12011,0);
-Msg("Find size of _GParamSpecUnichar (12011)\n");
+CheckTypeSize(GTypePluginCompleteTypeInfo,8, 12007, 12);
+#elif 1
+CheckTypeSize(GTypePluginCompleteTypeInfo,0, 12007, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(GParamSpecUnichar,44, 12012, 2)
+CheckTypeSize(GTypePluginClass,24, 12008, 2);
 #elif __x86_64__
-CheckTypeSize(GParamSpecUnichar,80, 12012, 11)
+CheckTypeSize(GTypePluginClass,48, 12008, 11);
 #elif __ia64__
-CheckTypeSize(GParamSpecUnichar,80, 12012, 3)
+CheckTypeSize(GTypePluginClass,48, 12008, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpecUnichar,44, 12012, 6)
+CheckTypeSize(GTypePluginClass,24, 12008, 6);
 #elif __powerpc64__
-CheckTypeSize(GParamSpecUnichar,80, 12012, 9)
+CheckTypeSize(GTypePluginClass,48, 12008, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpecUnichar,44, 12012, 10)
+CheckTypeSize(GTypePluginClass,24, 12008, 10);
 #elif __s390x__
-CheckTypeSize(GParamSpecUnichar,80, 12012, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12012,0);
-Msg("Find size of GParamSpecUnichar (12012)\n");
+CheckTypeSize(GTypePluginClass,48, 12008, 12);
+#elif 1
+CheckTypeSize(GTypePluginClass,0, 12008, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GParamSpecUInt64,64, 12013, 2)
-CheckMemberSize(struct _GParamSpecUInt64,minimum,8,2,42222)
-CheckOffset(struct _GParamSpecUInt64,minimum,40,2,42222)
-CheckMemberSize(struct _GParamSpecUInt64,maximum,8,2,42223)
-CheckOffset(struct _GParamSpecUInt64,maximum,48,2,42223)
-CheckMemberSize(struct _GParamSpecUInt64,default_value,8,2,42224)
-CheckOffset(struct _GParamSpecUInt64,default_value,56,2,42224)
+CheckTypeSize(struct _GCClosure,20, 12009, 2);
+CheckMemberSize(struct _GCClosure,callback,4,2,42218);
+CheckOffset(struct _GCClosure,callback,16,2,42218);
 #elif __x86_64__
-CheckTypeSize(struct _GParamSpecUInt64,96, 12013, 11)
-CheckMemberSize(struct _GParamSpecUInt64,minimum,8,11,42222)
-CheckOffset(struct _GParamSpecUInt64,minimum,72,11,42222)
-CheckMemberSize(struct _GParamSpecUInt64,maximum,8,11,42223)
-CheckOffset(struct _GParamSpecUInt64,maximum,80,11,42223)
-CheckMemberSize(struct _GParamSpecUInt64,default_value,8,11,42224)
-CheckOffset(struct _GParamSpecUInt64,default_value,88,11,42224)
+CheckTypeSize(struct _GCClosure,40, 12009, 11);
+CheckMemberSize(struct _GCClosure,callback,8,11,42218);
+CheckOffset(struct _GCClosure,callback,32,11,42218);
 #elif __ia64__
-CheckTypeSize(struct _GParamSpecUInt64,96, 12013, 3)
-CheckMemberSize(struct _GParamSpecUInt64,minimum,8,3,42222)
-CheckOffset(struct _GParamSpecUInt64,minimum,72,3,42222)
-CheckMemberSize(struct _GParamSpecUInt64,maximum,8,3,42223)
-CheckOffset(struct _GParamSpecUInt64,maximum,80,3,42223)
-CheckMemberSize(struct _GParamSpecUInt64,default_value,8,3,42224)
-CheckOffset(struct _GParamSpecUInt64,default_value,88,3,42224)
+CheckTypeSize(struct _GCClosure,40, 12009, 3);
+CheckMemberSize(struct _GCClosure,callback,8,3,42218);
+CheckOffset(struct _GCClosure,callback,32,3,42218);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GParamSpecUInt64,64, 12013, 6)
-CheckMemberSize(struct _GParamSpecUInt64,minimum,8,6,42222)
-CheckOffset(struct _GParamSpecUInt64,minimum,40,6,42222)
-CheckMemberSize(struct _GParamSpecUInt64,maximum,8,6,42223)
-CheckOffset(struct _GParamSpecUInt64,maximum,48,6,42223)
-CheckMemberSize(struct _GParamSpecUInt64,default_value,8,6,42224)
-CheckOffset(struct _GParamSpecUInt64,default_value,56,6,42224)
+CheckTypeSize(struct _GCClosure,20, 12009, 6);
+CheckMemberSize(struct _GCClosure,callback,4,6,42218);
+CheckOffset(struct _GCClosure,callback,16,6,42218);
 #elif __powerpc64__
-CheckTypeSize(struct _GParamSpecUInt64,96, 12013, 9)
-CheckMemberSize(struct _GParamSpecUInt64,minimum,8,9,42222)
-CheckOffset(struct _GParamSpecUInt64,minimum,72,9,42222)
-CheckMemberSize(struct _GParamSpecUInt64,maximum,8,9,42223)
-CheckOffset(struct _GParamSpecUInt64,maximum,80,9,42223)
-CheckMemberSize(struct _GParamSpecUInt64,default_value,8,9,42224)
-CheckOffset(struct _GParamSpecUInt64,default_value,88,9,42224)
+CheckTypeSize(struct _GCClosure,40, 12009, 9);
+CheckMemberSize(struct _GCClosure,callback,8,9,42218);
+CheckOffset(struct _GCClosure,callback,32,9,42218);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GParamSpecUInt64,64, 12013, 10)
-CheckMemberSize(struct _GParamSpecUInt64,minimum,8,10,42222)
-CheckOffset(struct _GParamSpecUInt64,minimum,40,10,42222)
-CheckMemberSize(struct _GParamSpecUInt64,maximum,8,10,42223)
-CheckOffset(struct _GParamSpecUInt64,maximum,48,10,42223)
-CheckMemberSize(struct _GParamSpecUInt64,default_value,8,10,42224)
-CheckOffset(struct _GParamSpecUInt64,default_value,56,10,42224)
+CheckTypeSize(struct _GCClosure,20, 12009, 10);
+CheckMemberSize(struct _GCClosure,callback,4,10,42218);
+CheckOffset(struct _GCClosure,callback,16,10,42218);
 #elif __s390x__
-CheckTypeSize(struct _GParamSpecUInt64,96, 12013, 12)
-CheckMemberSize(struct _GParamSpecUInt64,minimum,8,12,42222)
-CheckOffset(struct _GParamSpecUInt64,minimum,72,12,42222)
-CheckMemberSize(struct _GParamSpecUInt64,maximum,8,12,42223)
-CheckOffset(struct _GParamSpecUInt64,maximum,80,12,42223)
-CheckMemberSize(struct _GParamSpecUInt64,default_value,8,12,42224)
-CheckOffset(struct _GParamSpecUInt64,default_value,88,12,42224)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12013,0);
-Msg("Find size of _GParamSpecUInt64 (12013)\n");
+CheckTypeSize(struct _GCClosure,40, 12009, 12);
+CheckMemberSize(struct _GCClosure,callback,8,12,42218);
+CheckOffset(struct _GCClosure,callback,32,12,42218);
+#elif 1
+CheckTypeSize(struct _GCClosure,0, 12009, 1);
+Msg("Missing member data for _GCClosure on All\n");
+CheckOffset(struct _GCClosure,closure,0,1,42217);
+CheckOffset(struct _GCClosure,callback,0,1,42218);
 #endif
 
 #if __i386__
-CheckTypeSize(GParamSpecUInt64,64, 12014, 2)
+CheckTypeSize(GCClosure,20, 12010, 2);
 #elif __x86_64__
-CheckTypeSize(GParamSpecUInt64,96, 12014, 11)
+CheckTypeSize(GCClosure,40, 12010, 11);
 #elif __ia64__
-CheckTypeSize(GParamSpecUInt64,96, 12014, 3)
+CheckTypeSize(GCClosure,40, 12010, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpecUInt64,64, 12014, 6)
+CheckTypeSize(GCClosure,20, 12010, 6);
 #elif __powerpc64__
-CheckTypeSize(GParamSpecUInt64,96, 12014, 9)
+CheckTypeSize(GCClosure,40, 12010, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpecUInt64,64, 12014, 10)
+CheckTypeSize(GCClosure,20, 12010, 10);
 #elif __s390x__
-CheckTypeSize(GParamSpecUInt64,96, 12014, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12014,0);
-Msg("Find size of GParamSpecUInt64 (12014)\n");
+CheckTypeSize(GCClosure,40, 12010, 12);
+#elif 1
+CheckTypeSize(GCClosure,0, 12010, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GParamSpecBoxed,40, 12015, 2)
+CheckTypeSize(struct _GParamSpecUnichar,44, 12011, 2);
+CheckMemberSize(struct _GParamSpecUnichar,default_value,4,2,42220);
+CheckOffset(struct _GParamSpecUnichar,default_value,40,2,42220);
+#elif __x86_64__
+CheckTypeSize(struct _GParamSpecUnichar,80, 12011, 11);
+CheckMemberSize(struct _GParamSpecUnichar,default_value,4,11,42220);
+CheckOffset(struct _GParamSpecUnichar,default_value,72,11,42220);
+#elif __ia64__
+CheckTypeSize(struct _GParamSpecUnichar,80, 12011, 3);
+CheckMemberSize(struct _GParamSpecUnichar,default_value,4,3,42220);
+CheckOffset(struct _GParamSpecUnichar,default_value,72,3,42220);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _GParamSpecUnichar,44, 12011, 6);
+CheckMemberSize(struct _GParamSpecUnichar,default_value,4,6,42220);
+CheckOffset(struct _GParamSpecUnichar,default_value,40,6,42220);
+#elif __powerpc64__
+CheckTypeSize(struct _GParamSpecUnichar,80, 12011, 9);
+CheckMemberSize(struct _GParamSpecUnichar,default_value,4,9,42220);
+CheckOffset(struct _GParamSpecUnichar,default_value,72,9,42220);
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _GParamSpecUnichar,44, 12011, 10);
+CheckMemberSize(struct _GParamSpecUnichar,default_value,4,10,42220);
+CheckOffset(struct _GParamSpecUnichar,default_value,40,10,42220);
+#elif __s390x__
+CheckTypeSize(struct _GParamSpecUnichar,80, 12011, 12);
+CheckMemberSize(struct _GParamSpecUnichar,default_value,4,12,42220);
+CheckOffset(struct _GParamSpecUnichar,default_value,72,12,42220);
+#elif 1
+CheckTypeSize(struct _GParamSpecUnichar,0, 12011, 1);
+Msg("Missing member data for _GParamSpecUnichar on All\n");
+CheckOffset(struct _GParamSpecUnichar,parent_instance,0,1,42219);
+CheckOffset(struct _GParamSpecUnichar,default_value,0,1,42220);
+#endif
+
+#if __i386__
+CheckTypeSize(GParamSpecUnichar,44, 12012, 2);
+#elif __x86_64__
+CheckTypeSize(GParamSpecUnichar,80, 12012, 11);
+#elif __ia64__
+CheckTypeSize(GParamSpecUnichar,80, 12012, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GParamSpecUnichar,44, 12012, 6);
+#elif __powerpc64__
+CheckTypeSize(GParamSpecUnichar,80, 12012, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GParamSpecUnichar,44, 12012, 10);
+#elif __s390x__
+CheckTypeSize(GParamSpecUnichar,80, 12012, 12);
+#elif 1
+CheckTypeSize(GParamSpecUnichar,0, 12012, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(struct _GParamSpecUInt64,64, 12013, 2);
+CheckMemberSize(struct _GParamSpecUInt64,minimum,8,2,42222);
+CheckOffset(struct _GParamSpecUInt64,minimum,40,2,42222);
+CheckMemberSize(struct _GParamSpecUInt64,maximum,8,2,42223);
+CheckOffset(struct _GParamSpecUInt64,maximum,48,2,42223);
+CheckMemberSize(struct _GParamSpecUInt64,default_value,8,2,42224);
+CheckOffset(struct _GParamSpecUInt64,default_value,56,2,42224);
+#elif __x86_64__
+CheckTypeSize(struct _GParamSpecUInt64,96, 12013, 11);
+CheckMemberSize(struct _GParamSpecUInt64,minimum,8,11,42222);
+CheckOffset(struct _GParamSpecUInt64,minimum,72,11,42222);
+CheckMemberSize(struct _GParamSpecUInt64,maximum,8,11,42223);
+CheckOffset(struct _GParamSpecUInt64,maximum,80,11,42223);
+CheckMemberSize(struct _GParamSpecUInt64,default_value,8,11,42224);
+CheckOffset(struct _GParamSpecUInt64,default_value,88,11,42224);
+#elif __ia64__
+CheckTypeSize(struct _GParamSpecUInt64,96, 12013, 3);
+CheckMemberSize(struct _GParamSpecUInt64,minimum,8,3,42222);
+CheckOffset(struct _GParamSpecUInt64,minimum,72,3,42222);
+CheckMemberSize(struct _GParamSpecUInt64,maximum,8,3,42223);
+CheckOffset(struct _GParamSpecUInt64,maximum,80,3,42223);
+CheckMemberSize(struct _GParamSpecUInt64,default_value,8,3,42224);
+CheckOffset(struct _GParamSpecUInt64,default_value,88,3,42224);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _GParamSpecUInt64,64, 12013, 6);
+CheckMemberSize(struct _GParamSpecUInt64,minimum,8,6,42222);
+CheckOffset(struct _GParamSpecUInt64,minimum,40,6,42222);
+CheckMemberSize(struct _GParamSpecUInt64,maximum,8,6,42223);
+CheckOffset(struct _GParamSpecUInt64,maximum,48,6,42223);
+CheckMemberSize(struct _GParamSpecUInt64,default_value,8,6,42224);
+CheckOffset(struct _GParamSpecUInt64,default_value,56,6,42224);
+#elif __powerpc64__
+CheckTypeSize(struct _GParamSpecUInt64,96, 12013, 9);
+CheckMemberSize(struct _GParamSpecUInt64,minimum,8,9,42222);
+CheckOffset(struct _GParamSpecUInt64,minimum,72,9,42222);
+CheckMemberSize(struct _GParamSpecUInt64,maximum,8,9,42223);
+CheckOffset(struct _GParamSpecUInt64,maximum,80,9,42223);
+CheckMemberSize(struct _GParamSpecUInt64,default_value,8,9,42224);
+CheckOffset(struct _GParamSpecUInt64,default_value,88,9,42224);
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _GParamSpecUInt64,64, 12013, 10);
+CheckMemberSize(struct _GParamSpecUInt64,minimum,8,10,42222);
+CheckOffset(struct _GParamSpecUInt64,minimum,40,10,42222);
+CheckMemberSize(struct _GParamSpecUInt64,maximum,8,10,42223);
+CheckOffset(struct _GParamSpecUInt64,maximum,48,10,42223);
+CheckMemberSize(struct _GParamSpecUInt64,default_value,8,10,42224);
+CheckOffset(struct _GParamSpecUInt64,default_value,56,10,42224);
+#elif __s390x__
+CheckTypeSize(struct _GParamSpecUInt64,96, 12013, 12);
+CheckMemberSize(struct _GParamSpecUInt64,minimum,8,12,42222);
+CheckOffset(struct _GParamSpecUInt64,minimum,72,12,42222);
+CheckMemberSize(struct _GParamSpecUInt64,maximum,8,12,42223);
+CheckOffset(struct _GParamSpecUInt64,maximum,80,12,42223);
+CheckMemberSize(struct _GParamSpecUInt64,default_value,8,12,42224);
+CheckOffset(struct _GParamSpecUInt64,default_value,88,12,42224);
+#elif 1
+CheckTypeSize(struct _GParamSpecUInt64,0, 12013, 1);
+Msg("Missing member data for _GParamSpecUInt64 on All\n");
+CheckOffset(struct _GParamSpecUInt64,parent_instance,0,1,42221);
+CheckOffset(struct _GParamSpecUInt64,minimum,0,1,42222);
+CheckOffset(struct _GParamSpecUInt64,maximum,0,1,42223);
+CheckOffset(struct _GParamSpecUInt64,default_value,0,1,42224);
+#endif
+
+#if __i386__
+CheckTypeSize(GParamSpecUInt64,64, 12014, 2);
+#elif __x86_64__
+CheckTypeSize(GParamSpecUInt64,96, 12014, 11);
+#elif __ia64__
+CheckTypeSize(GParamSpecUInt64,96, 12014, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GParamSpecUInt64,64, 12014, 6);
+#elif __powerpc64__
+CheckTypeSize(GParamSpecUInt64,96, 12014, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GParamSpecUInt64,64, 12014, 10);
+#elif __s390x__
+CheckTypeSize(GParamSpecUInt64,96, 12014, 12);
+#elif 1
+CheckTypeSize(GParamSpecUInt64,0, 12014, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(struct _GParamSpecBoxed,40, 12015, 2);
 Msg("Missing member data for _GParamSpecBoxed on IA32\n");
-CheckOffset(struct _GParamSpecBoxed,parent_instance,0,2,42225)
+CheckOffset(struct _GParamSpecBoxed,parent_instance,0,2,42225);
 #elif __x86_64__
-CheckTypeSize(struct _GParamSpecBoxed,72, 12015, 11)
+CheckTypeSize(struct _GParamSpecBoxed,72, 12015, 11);
 Msg("Missing member data for _GParamSpecBoxed on x86-64\n");
-CheckOffset(struct _GParamSpecBoxed,parent_instance,0,11,42225)
+CheckOffset(struct _GParamSpecBoxed,parent_instance,0,11,42225);
 #elif __ia64__
-CheckTypeSize(struct _GParamSpecBoxed,72, 12015, 3)
+CheckTypeSize(struct _GParamSpecBoxed,72, 12015, 3);
 Msg("Missing member data for _GParamSpecBoxed on IA64\n");
-CheckOffset(struct _GParamSpecBoxed,parent_instance,0,3,42225)
+CheckOffset(struct _GParamSpecBoxed,parent_instance,0,3,42225);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GParamSpecBoxed,40, 12015, 6)
+CheckTypeSize(struct _GParamSpecBoxed,40, 12015, 6);
 Msg("Missing member data for _GParamSpecBoxed on PPC32\n");
-CheckOffset(struct _GParamSpecBoxed,parent_instance,0,6,42225)
+CheckOffset(struct _GParamSpecBoxed,parent_instance,0,6,42225);
 #elif __powerpc64__
-CheckTypeSize(struct _GParamSpecBoxed,72, 12015, 9)
+CheckTypeSize(struct _GParamSpecBoxed,72, 12015, 9);
 Msg("Missing member data for _GParamSpecBoxed on PPC64\n");
-CheckOffset(struct _GParamSpecBoxed,parent_instance,0,9,42225)
+CheckOffset(struct _GParamSpecBoxed,parent_instance,0,9,42225);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GParamSpecBoxed,40, 12015, 10)
+CheckTypeSize(struct _GParamSpecBoxed,40, 12015, 10);
 Msg("Missing member data for _GParamSpecBoxed on S390\n");
-CheckOffset(struct _GParamSpecBoxed,parent_instance,0,10,42225)
+CheckOffset(struct _GParamSpecBoxed,parent_instance,0,10,42225);
 #elif __s390x__
-CheckTypeSize(struct _GParamSpecBoxed,72, 12015, 12)
+CheckTypeSize(struct _GParamSpecBoxed,72, 12015, 12);
 Msg("Missing member data for _GParamSpecBoxed on S390X\n");
-CheckOffset(struct _GParamSpecBoxed,parent_instance,0,12,42225)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12015,0);
-Msg("Find size of _GParamSpecBoxed (12015)\n");
+CheckOffset(struct _GParamSpecBoxed,parent_instance,0,12,42225);
+#elif 1
+CheckTypeSize(struct _GParamSpecBoxed,0, 12015, 1);
+Msg("Missing member data for _GParamSpecBoxed on All\n");
+CheckOffset(struct _GParamSpecBoxed,parent_instance,0,1,42225);
 #endif
 
 #if __i386__
-CheckTypeSize(GParamSpecBoxed,40, 12016, 2)
+CheckTypeSize(GParamSpecBoxed,40, 12016, 2);
 #elif __x86_64__
-CheckTypeSize(GParamSpecBoxed,72, 12016, 11)
+CheckTypeSize(GParamSpecBoxed,72, 12016, 11);
 #elif __ia64__
-CheckTypeSize(GParamSpecBoxed,72, 12016, 3)
+CheckTypeSize(GParamSpecBoxed,72, 12016, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpecBoxed,40, 12016, 6)
+CheckTypeSize(GParamSpecBoxed,40, 12016, 6);
 #elif __powerpc64__
-CheckTypeSize(GParamSpecBoxed,72, 12016, 9)
+CheckTypeSize(GParamSpecBoxed,72, 12016, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpecBoxed,40, 12016, 10)
+CheckTypeSize(GParamSpecBoxed,40, 12016, 10);
 #elif __s390x__
-CheckTypeSize(GParamSpecBoxed,72, 12016, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12016,0);
-Msg("Find size of GParamSpecBoxed (12016)\n");
+CheckTypeSize(GParamSpecBoxed,72, 12016, 12);
+#elif 1
+CheckTypeSize(GParamSpecBoxed,0, 12016, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GParamSpecOverride,44, 12017, 2)
-CheckMemberSize(struct _GParamSpecOverride,overridden,4,2,42227)
-CheckOffset(struct _GParamSpecOverride,overridden,40,2,42227)
+CheckTypeSize(struct _GParamSpecOverride,44, 12017, 2);
+CheckMemberSize(struct _GParamSpecOverride,overridden,4,2,42227);
+CheckOffset(struct _GParamSpecOverride,overridden,40,2,42227);
 #elif __x86_64__
-CheckTypeSize(struct _GParamSpecOverride,80, 12017, 11)
-CheckMemberSize(struct _GParamSpecOverride,overridden,8,11,42227)
-CheckOffset(struct _GParamSpecOverride,overridden,72,11,42227)
+CheckTypeSize(struct _GParamSpecOverride,80, 12017, 11);
+CheckMemberSize(struct _GParamSpecOverride,overridden,8,11,42227);
+CheckOffset(struct _GParamSpecOverride,overridden,72,11,42227);
 #elif __ia64__
-CheckTypeSize(struct _GParamSpecOverride,80, 12017, 3)
-CheckMemberSize(struct _GParamSpecOverride,overridden,8,3,42227)
-CheckOffset(struct _GParamSpecOverride,overridden,72,3,42227)
+CheckTypeSize(struct _GParamSpecOverride,80, 12017, 3);
+CheckMemberSize(struct _GParamSpecOverride,overridden,8,3,42227);
+CheckOffset(struct _GParamSpecOverride,overridden,72,3,42227);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GParamSpecOverride,44, 12017, 6)
-CheckMemberSize(struct _GParamSpecOverride,overridden,4,6,42227)
-CheckOffset(struct _GParamSpecOverride,overridden,40,6,42227)
+CheckTypeSize(struct _GParamSpecOverride,44, 12017, 6);
+CheckMemberSize(struct _GParamSpecOverride,overridden,4,6,42227);
+CheckOffset(struct _GParamSpecOverride,overridden,40,6,42227);
 #elif __powerpc64__
-CheckTypeSize(struct _GParamSpecOverride,80, 12017, 9)
-CheckMemberSize(struct _GParamSpecOverride,overridden,8,9,42227)
-CheckOffset(struct _GParamSpecOverride,overridden,72,9,42227)
+CheckTypeSize(struct _GParamSpecOverride,80, 12017, 9);
+CheckMemberSize(struct _GParamSpecOverride,overridden,8,9,42227);
+CheckOffset(struct _GParamSpecOverride,overridden,72,9,42227);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GParamSpecOverride,44, 12017, 10)
-CheckMemberSize(struct _GParamSpecOverride,overridden,4,10,42227)
-CheckOffset(struct _GParamSpecOverride,overridden,40,10,42227)
+CheckTypeSize(struct _GParamSpecOverride,44, 12017, 10);
+CheckMemberSize(struct _GParamSpecOverride,overridden,4,10,42227);
+CheckOffset(struct _GParamSpecOverride,overridden,40,10,42227);
 #elif __s390x__
-CheckTypeSize(struct _GParamSpecOverride,80, 12017, 12)
-CheckMemberSize(struct _GParamSpecOverride,overridden,8,12,42227)
-CheckOffset(struct _GParamSpecOverride,overridden,72,12,42227)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12017,0);
-Msg("Find size of _GParamSpecOverride (12017)\n");
+CheckTypeSize(struct _GParamSpecOverride,80, 12017, 12);
+CheckMemberSize(struct _GParamSpecOverride,overridden,8,12,42227);
+CheckOffset(struct _GParamSpecOverride,overridden,72,12,42227);
+#elif 1
+CheckTypeSize(struct _GParamSpecOverride,0, 12017, 1);
+Msg("Missing member data for _GParamSpecOverride on All\n");
+CheckOffset(struct _GParamSpecOverride,parent_instance,0,1,42226);
+CheckOffset(struct _GParamSpecOverride,overridden,0,1,42227);
 #endif
 
 #if __i386__
-CheckTypeSize(GParamSpecOverride,44, 12018, 2)
+CheckTypeSize(GParamSpecOverride,44, 12018, 2);
 #elif __x86_64__
-CheckTypeSize(GParamSpecOverride,80, 12018, 11)
+CheckTypeSize(GParamSpecOverride,80, 12018, 11);
 #elif __ia64__
-CheckTypeSize(GParamSpecOverride,80, 12018, 3)
+CheckTypeSize(GParamSpecOverride,80, 12018, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpecOverride,44, 12018, 6)
+CheckTypeSize(GParamSpecOverride,44, 12018, 6);
 #elif __powerpc64__
-CheckTypeSize(GParamSpecOverride,80, 12018, 9)
+CheckTypeSize(GParamSpecOverride,80, 12018, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpecOverride,44, 12018, 10)
+CheckTypeSize(GParamSpecOverride,44, 12018, 10);
 #elif __s390x__
-CheckTypeSize(GParamSpecOverride,80, 12018, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12018,0);
-Msg("Find size of GParamSpecOverride (12018)\n");
+CheckTypeSize(GParamSpecOverride,80, 12018, 12);
+#elif 1
+CheckTypeSize(GParamSpecOverride,0, 12018, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GParamSpecClass,40, 12019, 2)
-CheckMemberSize(struct _GParamSpecClass,value_type,4,2,42229)
-CheckOffset(struct _GParamSpecClass,value_type,4,2,42229)
-CheckMemberSize(struct _GParamSpecClass,finalize,4,2,42230)
-CheckOffset(struct _GParamSpecClass,finalize,8,2,42230)
-CheckMemberSize(struct _GParamSpecClass,value_set_default,4,2,42231)
-CheckOffset(struct _GParamSpecClass,value_set_default,12,2,42231)
-CheckMemberSize(struct _GParamSpecClass,value_validate,4,2,42232)
-CheckOffset(struct _GParamSpecClass,value_validate,16,2,42232)
-CheckMemberSize(struct _GParamSpecClass,values_cmp,4,2,42233)
-CheckOffset(struct _GParamSpecClass,values_cmp,20,2,42233)
-CheckMemberSize(struct _GParamSpecClass,dummy,16,2,42234)
-CheckOffset(struct _GParamSpecClass,dummy,24,2,42234)
+CheckTypeSize(struct _GParamSpecClass,40, 12019, 2);
+CheckMemberSize(struct _GParamSpecClass,value_type,4,2,42229);
+CheckOffset(struct _GParamSpecClass,value_type,4,2,42229);
+CheckMemberSize(struct _GParamSpecClass,finalize,4,2,42230);
+CheckOffset(struct _GParamSpecClass,finalize,8,2,42230);
+CheckMemberSize(struct _GParamSpecClass,value_set_default,4,2,42231);
+CheckOffset(struct _GParamSpecClass,value_set_default,12,2,42231);
+CheckMemberSize(struct _GParamSpecClass,value_validate,4,2,42232);
+CheckOffset(struct _GParamSpecClass,value_validate,16,2,42232);
+CheckMemberSize(struct _GParamSpecClass,values_cmp,4,2,42233);
+CheckOffset(struct _GParamSpecClass,values_cmp,20,2,42233);
+CheckMemberSize(struct _GParamSpecClass,dummy,16,2,42234);
+CheckOffset(struct _GParamSpecClass,dummy,24,2,42234);
 #elif __x86_64__
-CheckTypeSize(struct _GParamSpecClass,80, 12019, 11)
-CheckMemberSize(struct _GParamSpecClass,value_type,8,11,42229)
-CheckOffset(struct _GParamSpecClass,value_type,8,11,42229)
-CheckMemberSize(struct _GParamSpecClass,finalize,8,11,42230)
-CheckOffset(struct _GParamSpecClass,finalize,16,11,42230)
-CheckMemberSize(struct _GParamSpecClass,value_set_default,8,11,42231)
-CheckOffset(struct _GParamSpecClass,value_set_default,24,11,42231)
-CheckMemberSize(struct _GParamSpecClass,value_validate,8,11,42232)
-CheckOffset(struct _GParamSpecClass,value_validate,32,11,42232)
-CheckMemberSize(struct _GParamSpecClass,values_cmp,8,11,42233)
-CheckOffset(struct _GParamSpecClass,values_cmp,40,11,42233)
-CheckMemberSize(struct _GParamSpecClass,dummy,32,11,42234)
-CheckOffset(struct _GParamSpecClass,dummy,48,11,42234)
+CheckTypeSize(struct _GParamSpecClass,80, 12019, 11);
+CheckMemberSize(struct _GParamSpecClass,value_type,8,11,42229);
+CheckOffset(struct _GParamSpecClass,value_type,8,11,42229);
+CheckMemberSize(struct _GParamSpecClass,finalize,8,11,42230);
+CheckOffset(struct _GParamSpecClass,finalize,16,11,42230);
+CheckMemberSize(struct _GParamSpecClass,value_set_default,8,11,42231);
+CheckOffset(struct _GParamSpecClass,value_set_default,24,11,42231);
+CheckMemberSize(struct _GParamSpecClass,value_validate,8,11,42232);
+CheckOffset(struct _GParamSpecClass,value_validate,32,11,42232);
+CheckMemberSize(struct _GParamSpecClass,values_cmp,8,11,42233);
+CheckOffset(struct _GParamSpecClass,values_cmp,40,11,42233);
+CheckMemberSize(struct _GParamSpecClass,dummy,32,11,42234);
+CheckOffset(struct _GParamSpecClass,dummy,48,11,42234);
 #elif __ia64__
-CheckTypeSize(struct _GParamSpecClass,80, 12019, 3)
-CheckMemberSize(struct _GParamSpecClass,value_type,8,3,42229)
-CheckOffset(struct _GParamSpecClass,value_type,8,3,42229)
-CheckMemberSize(struct _GParamSpecClass,finalize,8,3,42230)
-CheckOffset(struct _GParamSpecClass,finalize,16,3,42230)
-CheckMemberSize(struct _GParamSpecClass,value_set_default,8,3,42231)
-CheckOffset(struct _GParamSpecClass,value_set_default,24,3,42231)
-CheckMemberSize(struct _GParamSpecClass,value_validate,8,3,42232)
-CheckOffset(struct _GParamSpecClass,value_validate,32,3,42232)
-CheckMemberSize(struct _GParamSpecClass,values_cmp,8,3,42233)
-CheckOffset(struct _GParamSpecClass,values_cmp,40,3,42233)
-CheckMemberSize(struct _GParamSpecClass,dummy,32,3,42234)
-CheckOffset(struct _GParamSpecClass,dummy,48,3,42234)
+CheckTypeSize(struct _GParamSpecClass,80, 12019, 3);
+CheckMemberSize(struct _GParamSpecClass,value_type,8,3,42229);
+CheckOffset(struct _GParamSpecClass,value_type,8,3,42229);
+CheckMemberSize(struct _GParamSpecClass,finalize,8,3,42230);
+CheckOffset(struct _GParamSpecClass,finalize,16,3,42230);
+CheckMemberSize(struct _GParamSpecClass,value_set_default,8,3,42231);
+CheckOffset(struct _GParamSpecClass,value_set_default,24,3,42231);
+CheckMemberSize(struct _GParamSpecClass,value_validate,8,3,42232);
+CheckOffset(struct _GParamSpecClass,value_validate,32,3,42232);
+CheckMemberSize(struct _GParamSpecClass,values_cmp,8,3,42233);
+CheckOffset(struct _GParamSpecClass,values_cmp,40,3,42233);
+CheckMemberSize(struct _GParamSpecClass,dummy,32,3,42234);
+CheckOffset(struct _GParamSpecClass,dummy,48,3,42234);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GParamSpecClass,40, 12019, 6)
-CheckMemberSize(struct _GParamSpecClass,value_type,4,6,42229)
-CheckOffset(struct _GParamSpecClass,value_type,4,6,42229)
-CheckMemberSize(struct _GParamSpecClass,finalize,4,6,42230)
-CheckOffset(struct _GParamSpecClass,finalize,8,6,42230)
-CheckMemberSize(struct _GParamSpecClass,value_set_default,4,6,42231)
-CheckOffset(struct _GParamSpecClass,value_set_default,12,6,42231)
-CheckMemberSize(struct _GParamSpecClass,value_validate,4,6,42232)
-CheckOffset(struct _GParamSpecClass,value_validate,16,6,42232)
-CheckMemberSize(struct _GParamSpecClass,values_cmp,4,6,42233)
-CheckOffset(struct _GParamSpecClass,values_cmp,20,6,42233)
-CheckMemberSize(struct _GParamSpecClass,dummy,16,6,42234)
-CheckOffset(struct _GParamSpecClass,dummy,24,6,42234)
+CheckTypeSize(struct _GParamSpecClass,40, 12019, 6);
+CheckMemberSize(struct _GParamSpecClass,value_type,4,6,42229);
+CheckOffset(struct _GParamSpecClass,value_type,4,6,42229);
+CheckMemberSize(struct _GParamSpecClass,finalize,4,6,42230);
+CheckOffset(struct _GParamSpecClass,finalize,8,6,42230);
+CheckMemberSize(struct _GParamSpecClass,value_set_default,4,6,42231);
+CheckOffset(struct _GParamSpecClass,value_set_default,12,6,42231);
+CheckMemberSize(struct _GParamSpecClass,value_validate,4,6,42232);
+CheckOffset(struct _GParamSpecClass,value_validate,16,6,42232);
+CheckMemberSize(struct _GParamSpecClass,values_cmp,4,6,42233);
+CheckOffset(struct _GParamSpecClass,values_cmp,20,6,42233);
+CheckMemberSize(struct _GParamSpecClass,dummy,16,6,42234);
+CheckOffset(struct _GParamSpecClass,dummy,24,6,42234);
 #elif __powerpc64__
-CheckTypeSize(struct _GParamSpecClass,80, 12019, 9)
-CheckMemberSize(struct _GParamSpecClass,value_type,8,9,42229)
-CheckOffset(struct _GParamSpecClass,value_type,8,9,42229)
-CheckMemberSize(struct _GParamSpecClass,finalize,8,9,42230)
-CheckOffset(struct _GParamSpecClass,finalize,16,9,42230)
-CheckMemberSize(struct _GParamSpecClass,value_set_default,8,9,42231)
-CheckOffset(struct _GParamSpecClass,value_set_default,24,9,42231)
-CheckMemberSize(struct _GParamSpecClass,value_validate,8,9,42232)
-CheckOffset(struct _GParamSpecClass,value_validate,32,9,42232)
-CheckMemberSize(struct _GParamSpecClass,values_cmp,8,9,42233)
-CheckOffset(struct _GParamSpecClass,values_cmp,40,9,42233)
-CheckMemberSize(struct _GParamSpecClass,dummy,32,9,42234)
-CheckOffset(struct _GParamSpecClass,dummy,48,9,42234)
+CheckTypeSize(struct _GParamSpecClass,80, 12019, 9);
+CheckMemberSize(struct _GParamSpecClass,value_type,8,9,42229);
+CheckOffset(struct _GParamSpecClass,value_type,8,9,42229);
+CheckMemberSize(struct _GParamSpecClass,finalize,8,9,42230);
+CheckOffset(struct _GParamSpecClass,finalize,16,9,42230);
+CheckMemberSize(struct _GParamSpecClass,value_set_default,8,9,42231);
+CheckOffset(struct _GParamSpecClass,value_set_default,24,9,42231);
+CheckMemberSize(struct _GParamSpecClass,value_validate,8,9,42232);
+CheckOffset(struct _GParamSpecClass,value_validate,32,9,42232);
+CheckMemberSize(struct _GParamSpecClass,values_cmp,8,9,42233);
+CheckOffset(struct _GParamSpecClass,values_cmp,40,9,42233);
+CheckMemberSize(struct _GParamSpecClass,dummy,32,9,42234);
+CheckOffset(struct _GParamSpecClass,dummy,48,9,42234);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GParamSpecClass,40, 12019, 10)
-CheckMemberSize(struct _GParamSpecClass,value_type,4,10,42229)
-CheckOffset(struct _GParamSpecClass,value_type,4,10,42229)
-CheckMemberSize(struct _GParamSpecClass,finalize,4,10,42230)
-CheckOffset(struct _GParamSpecClass,finalize,8,10,42230)
-CheckMemberSize(struct _GParamSpecClass,value_set_default,4,10,42231)
-CheckOffset(struct _GParamSpecClass,value_set_default,12,10,42231)
-CheckMemberSize(struct _GParamSpecClass,value_validate,4,10,42232)
-CheckOffset(struct _GParamSpecClass,value_validate,16,10,42232)
-CheckMemberSize(struct _GParamSpecClass,values_cmp,4,10,42233)
-CheckOffset(struct _GParamSpecClass,values_cmp,20,10,42233)
-CheckMemberSize(struct _GParamSpecClass,dummy,16,10,42234)
-CheckOffset(struct _GParamSpecClass,dummy,24,10,42234)
+CheckTypeSize(struct _GParamSpecClass,40, 12019, 10);
+CheckMemberSize(struct _GParamSpecClass,value_type,4,10,42229);
+CheckOffset(struct _GParamSpecClass,value_type,4,10,42229);
+CheckMemberSize(struct _GParamSpecClass,finalize,4,10,42230);
+CheckOffset(struct _GParamSpecClass,finalize,8,10,42230);
+CheckMemberSize(struct _GParamSpecClass,value_set_default,4,10,42231);
+CheckOffset(struct _GParamSpecClass,value_set_default,12,10,42231);
+CheckMemberSize(struct _GParamSpecClass,value_validate,4,10,42232);
+CheckOffset(struct _GParamSpecClass,value_validate,16,10,42232);
+CheckMemberSize(struct _GParamSpecClass,values_cmp,4,10,42233);
+CheckOffset(struct _GParamSpecClass,values_cmp,20,10,42233);
+CheckMemberSize(struct _GParamSpecClass,dummy,16,10,42234);
+CheckOffset(struct _GParamSpecClass,dummy,24,10,42234);
 #elif __s390x__
-CheckTypeSize(struct _GParamSpecClass,80, 12019, 12)
-CheckMemberSize(struct _GParamSpecClass,value_type,8,12,42229)
-CheckOffset(struct _GParamSpecClass,value_type,8,12,42229)
-CheckMemberSize(struct _GParamSpecClass,finalize,8,12,42230)
-CheckOffset(struct _GParamSpecClass,finalize,16,12,42230)
-CheckMemberSize(struct _GParamSpecClass,value_set_default,8,12,42231)
-CheckOffset(struct _GParamSpecClass,value_set_default,24,12,42231)
-CheckMemberSize(struct _GParamSpecClass,value_validate,8,12,42232)
-CheckOffset(struct _GParamSpecClass,value_validate,32,12,42232)
-CheckMemberSize(struct _GParamSpecClass,values_cmp,8,12,42233)
-CheckOffset(struct _GParamSpecClass,values_cmp,40,12,42233)
-CheckMemberSize(struct _GParamSpecClass,dummy,32,12,42234)
-CheckOffset(struct _GParamSpecClass,dummy,48,12,42234)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12019,0);
-Msg("Find size of _GParamSpecClass (12019)\n");
+CheckTypeSize(struct _GParamSpecClass,80, 12019, 12);
+CheckMemberSize(struct _GParamSpecClass,value_type,8,12,42229);
+CheckOffset(struct _GParamSpecClass,value_type,8,12,42229);
+CheckMemberSize(struct _GParamSpecClass,finalize,8,12,42230);
+CheckOffset(struct _GParamSpecClass,finalize,16,12,42230);
+CheckMemberSize(struct _GParamSpecClass,value_set_default,8,12,42231);
+CheckOffset(struct _GParamSpecClass,value_set_default,24,12,42231);
+CheckMemberSize(struct _GParamSpecClass,value_validate,8,12,42232);
+CheckOffset(struct _GParamSpecClass,value_validate,32,12,42232);
+CheckMemberSize(struct _GParamSpecClass,values_cmp,8,12,42233);
+CheckOffset(struct _GParamSpecClass,values_cmp,40,12,42233);
+CheckMemberSize(struct _GParamSpecClass,dummy,32,12,42234);
+CheckOffset(struct _GParamSpecClass,dummy,48,12,42234);
+#elif 1
+CheckTypeSize(struct _GParamSpecClass,0, 12019, 1);
+Msg("Missing member data for _GParamSpecClass on All\n");
+CheckOffset(struct _GParamSpecClass,g_type_class,0,1,42228);
+CheckOffset(struct _GParamSpecClass,value_type,0,1,42229);
+CheckOffset(struct _GParamSpecClass,finalize,0,1,42230);
+CheckOffset(struct _GParamSpecClass,value_set_default,0,1,42231);
+CheckOffset(struct _GParamSpecClass,value_validate,0,1,42232);
+CheckOffset(struct _GParamSpecClass,values_cmp,0,1,42233);
+CheckOffset(struct _GParamSpecClass,dummy,0,1,42234);
 #endif
 
 #if 1
 #endif
 
 #if __i386__
-CheckTypeSize(GParamSpecClass,40, 12021, 2)
+CheckTypeSize(GParamSpecClass,40, 12021, 2);
 #elif __x86_64__
-CheckTypeSize(GParamSpecClass,80, 12021, 11)
+CheckTypeSize(GParamSpecClass,80, 12021, 11);
 #elif __ia64__
-CheckTypeSize(GParamSpecClass,80, 12021, 3)
+CheckTypeSize(GParamSpecClass,80, 12021, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpecClass,40, 12021, 6)
+CheckTypeSize(GParamSpecClass,40, 12021, 6);
 #elif __powerpc64__
-CheckTypeSize(GParamSpecClass,80, 12021, 9)
+CheckTypeSize(GParamSpecClass,80, 12021, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpecClass,40, 12021, 10)
+CheckTypeSize(GParamSpecClass,40, 12021, 10);
 #elif __s390x__
-CheckTypeSize(GParamSpecClass,80, 12021, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12021,0);
-Msg("Find size of GParamSpecClass (12021)\n");
+CheckTypeSize(GParamSpecClass,80, 12021, 12);
+#elif 1
+CheckTypeSize(GParamSpecClass,0, 12021, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GParamSpecLong,52, 12022, 2)
-CheckMemberSize(struct _GParamSpecLong,minimum,4,2,42236)
-CheckOffset(struct _GParamSpecLong,minimum,40,2,42236)
-CheckMemberSize(struct _GParamSpecLong,maximum,4,2,42237)
-CheckOffset(struct _GParamSpecLong,maximum,44,2,42237)
-CheckMemberSize(struct _GParamSpecLong,default_value,4,2,42238)
-CheckOffset(struct _GParamSpecLong,default_value,48,2,42238)
+CheckTypeSize(struct _GParamSpecLong,52, 12022, 2);
+CheckMemberSize(struct _GParamSpecLong,minimum,4,2,42236);
+CheckOffset(struct _GParamSpecLong,minimum,40,2,42236);
+CheckMemberSize(struct _GParamSpecLong,maximum,4,2,42237);
+CheckOffset(struct _GParamSpecLong,maximum,44,2,42237);
+CheckMemberSize(struct _GParamSpecLong,default_value,4,2,42238);
+CheckOffset(struct _GParamSpecLong,default_value,48,2,42238);
 #elif __x86_64__
-CheckTypeSize(struct _GParamSpecLong,96, 12022, 11)
-CheckMemberSize(struct _GParamSpecLong,minimum,8,11,42236)
-CheckOffset(struct _GParamSpecLong,minimum,72,11,42236)
-CheckMemberSize(struct _GParamSpecLong,maximum,8,11,42237)
-CheckOffset(struct _GParamSpecLong,maximum,80,11,42237)
-CheckMemberSize(struct _GParamSpecLong,default_value,8,11,42238)
-CheckOffset(struct _GParamSpecLong,default_value,88,11,42238)
+CheckTypeSize(struct _GParamSpecLong,96, 12022, 11);
+CheckMemberSize(struct _GParamSpecLong,minimum,8,11,42236);
+CheckOffset(struct _GParamSpecLong,minimum,72,11,42236);
+CheckMemberSize(struct _GParamSpecLong,maximum,8,11,42237);
+CheckOffset(struct _GParamSpecLong,maximum,80,11,42237);
+CheckMemberSize(struct _GParamSpecLong,default_value,8,11,42238);
+CheckOffset(struct _GParamSpecLong,default_value,88,11,42238);
 #elif __ia64__
-CheckTypeSize(struct _GParamSpecLong,96, 12022, 3)
-CheckMemberSize(struct _GParamSpecLong,minimum,8,3,42236)
-CheckOffset(struct _GParamSpecLong,minimum,72,3,42236)
-CheckMemberSize(struct _GParamSpecLong,maximum,8,3,42237)
-CheckOffset(struct _GParamSpecLong,maximum,80,3,42237)
-CheckMemberSize(struct _GParamSpecLong,default_value,8,3,42238)
-CheckOffset(struct _GParamSpecLong,default_value,88,3,42238)
+CheckTypeSize(struct _GParamSpecLong,96, 12022, 3);
+CheckMemberSize(struct _GParamSpecLong,minimum,8,3,42236);
+CheckOffset(struct _GParamSpecLong,minimum,72,3,42236);
+CheckMemberSize(struct _GParamSpecLong,maximum,8,3,42237);
+CheckOffset(struct _GParamSpecLong,maximum,80,3,42237);
+CheckMemberSize(struct _GParamSpecLong,default_value,8,3,42238);
+CheckOffset(struct _GParamSpecLong,default_value,88,3,42238);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GParamSpecLong,52, 12022, 6)
-CheckMemberSize(struct _GParamSpecLong,minimum,4,6,42236)
-CheckOffset(struct _GParamSpecLong,minimum,40,6,42236)
-CheckMemberSize(struct _GParamSpecLong,maximum,4,6,42237)
-CheckOffset(struct _GParamSpecLong,maximum,44,6,42237)
-CheckMemberSize(struct _GParamSpecLong,default_value,4,6,42238)
-CheckOffset(struct _GParamSpecLong,default_value,48,6,42238)
+CheckTypeSize(struct _GParamSpecLong,52, 12022, 6);
+CheckMemberSize(struct _GParamSpecLong,minimum,4,6,42236);
+CheckOffset(struct _GParamSpecLong,minimum,40,6,42236);
+CheckMemberSize(struct _GParamSpecLong,maximum,4,6,42237);
+CheckOffset(struct _GParamSpecLong,maximum,44,6,42237);
+CheckMemberSize(struct _GParamSpecLong,default_value,4,6,42238);
+CheckOffset(struct _GParamSpecLong,default_value,48,6,42238);
 #elif __powerpc64__
-CheckTypeSize(struct _GParamSpecLong,96, 12022, 9)
-CheckMemberSize(struct _GParamSpecLong,minimum,8,9,42236)
-CheckOffset(struct _GParamSpecLong,minimum,72,9,42236)
-CheckMemberSize(struct _GParamSpecLong,maximum,8,9,42237)
-CheckOffset(struct _GParamSpecLong,maximum,80,9,42237)
-CheckMemberSize(struct _GParamSpecLong,default_value,8,9,42238)
-CheckOffset(struct _GParamSpecLong,default_value,88,9,42238)
+CheckTypeSize(struct _GParamSpecLong,96, 12022, 9);
+CheckMemberSize(struct _GParamSpecLong,minimum,8,9,42236);
+CheckOffset(struct _GParamSpecLong,minimum,72,9,42236);
+CheckMemberSize(struct _GParamSpecLong,maximum,8,9,42237);
+CheckOffset(struct _GParamSpecLong,maximum,80,9,42237);
+CheckMemberSize(struct _GParamSpecLong,default_value,8,9,42238);
+CheckOffset(struct _GParamSpecLong,default_value,88,9,42238);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GParamSpecLong,52, 12022, 10)
-CheckMemberSize(struct _GParamSpecLong,minimum,4,10,42236)
-CheckOffset(struct _GParamSpecLong,minimum,40,10,42236)
-CheckMemberSize(struct _GParamSpecLong,maximum,4,10,42237)
-CheckOffset(struct _GParamSpecLong,maximum,44,10,42237)
-CheckMemberSize(struct _GParamSpecLong,default_value,4,10,42238)
-CheckOffset(struct _GParamSpecLong,default_value,48,10,42238)
+CheckTypeSize(struct _GParamSpecLong,52, 12022, 10);
+CheckMemberSize(struct _GParamSpecLong,minimum,4,10,42236);
+CheckOffset(struct _GParamSpecLong,minimum,40,10,42236);
+CheckMemberSize(struct _GParamSpecLong,maximum,4,10,42237);
+CheckOffset(struct _GParamSpecLong,maximum,44,10,42237);
+CheckMemberSize(struct _GParamSpecLong,default_value,4,10,42238);
+CheckOffset(struct _GParamSpecLong,default_value,48,10,42238);
 #elif __s390x__
-CheckTypeSize(struct _GParamSpecLong,96, 12022, 12)
-CheckMemberSize(struct _GParamSpecLong,minimum,8,12,42236)
-CheckOffset(struct _GParamSpecLong,minimum,72,12,42236)
-CheckMemberSize(struct _GParamSpecLong,maximum,8,12,42237)
-CheckOffset(struct _GParamSpecLong,maximum,80,12,42237)
-CheckMemberSize(struct _GParamSpecLong,default_value,8,12,42238)
-CheckOffset(struct _GParamSpecLong,default_value,88,12,42238)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12022,0);
-Msg("Find size of _GParamSpecLong (12022)\n");
+CheckTypeSize(struct _GParamSpecLong,96, 12022, 12);
+CheckMemberSize(struct _GParamSpecLong,minimum,8,12,42236);
+CheckOffset(struct _GParamSpecLong,minimum,72,12,42236);
+CheckMemberSize(struct _GParamSpecLong,maximum,8,12,42237);
+CheckOffset(struct _GParamSpecLong,maximum,80,12,42237);
+CheckMemberSize(struct _GParamSpecLong,default_value,8,12,42238);
+CheckOffset(struct _GParamSpecLong,default_value,88,12,42238);
+#elif 1
+CheckTypeSize(struct _GParamSpecLong,0, 12022, 1);
+Msg("Missing member data for _GParamSpecLong on All\n");
+CheckOffset(struct _GParamSpecLong,parent_instance,0,1,42235);
+CheckOffset(struct _GParamSpecLong,minimum,0,1,42236);
+CheckOffset(struct _GParamSpecLong,maximum,0,1,42237);
+CheckOffset(struct _GParamSpecLong,default_value,0,1,42238);
 #endif
 
 #if __i386__
-CheckTypeSize(GParamSpecLong,52, 12023, 2)
+CheckTypeSize(GParamSpecLong,52, 12023, 2);
 #elif __x86_64__
-CheckTypeSize(GParamSpecLong,96, 12023, 11)
+CheckTypeSize(GParamSpecLong,96, 12023, 11);
 #elif __ia64__
-CheckTypeSize(GParamSpecLong,96, 12023, 3)
+CheckTypeSize(GParamSpecLong,96, 12023, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpecLong,52, 12023, 6)
+CheckTypeSize(GParamSpecLong,52, 12023, 6);
 #elif __powerpc64__
-CheckTypeSize(GParamSpecLong,96, 12023, 9)
+CheckTypeSize(GParamSpecLong,96, 12023, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpecLong,52, 12023, 10)
+CheckTypeSize(GParamSpecLong,52, 12023, 10);
 #elif __s390x__
-CheckTypeSize(GParamSpecLong,96, 12023, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12023,0);
-Msg("Find size of GParamSpecLong (12023)\n");
+CheckTypeSize(GParamSpecLong,96, 12023, 12);
+#elif 1
+CheckTypeSize(GParamSpecLong,0, 12023, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GParamSpecEnum,48, 12024, 2)
-CheckMemberSize(struct _GParamSpecEnum,enum_class,4,2,42240)
-CheckOffset(struct _GParamSpecEnum,enum_class,40,2,42240)
-CheckMemberSize(struct _GParamSpecEnum,default_value,4,2,42241)
-CheckOffset(struct _GParamSpecEnum,default_value,44,2,42241)
+CheckTypeSize(struct _GParamSpecEnum,48, 12024, 2);
+CheckMemberSize(struct _GParamSpecEnum,enum_class,4,2,42240);
+CheckOffset(struct _GParamSpecEnum,enum_class,40,2,42240);
+CheckMemberSize(struct _GParamSpecEnum,default_value,4,2,42241);
+CheckOffset(struct _GParamSpecEnum,default_value,44,2,42241);
 #elif __x86_64__
-CheckTypeSize(struct _GParamSpecEnum,88, 12024, 11)
-CheckMemberSize(struct _GParamSpecEnum,enum_class,8,11,42240)
-CheckOffset(struct _GParamSpecEnum,enum_class,72,11,42240)
-CheckMemberSize(struct _GParamSpecEnum,default_value,4,11,42241)
-CheckOffset(struct _GParamSpecEnum,default_value,80,11,42241)
+CheckTypeSize(struct _GParamSpecEnum,88, 12024, 11);
+CheckMemberSize(struct _GParamSpecEnum,enum_class,8,11,42240);
+CheckOffset(struct _GParamSpecEnum,enum_class,72,11,42240);
+CheckMemberSize(struct _GParamSpecEnum,default_value,4,11,42241);
+CheckOffset(struct _GParamSpecEnum,default_value,80,11,42241);
 #elif __ia64__
-CheckTypeSize(struct _GParamSpecEnum,88, 12024, 3)
-CheckMemberSize(struct _GParamSpecEnum,enum_class,8,3,42240)
-CheckOffset(struct _GParamSpecEnum,enum_class,72,3,42240)
-CheckMemberSize(struct _GParamSpecEnum,default_value,4,3,42241)
-CheckOffset(struct _GParamSpecEnum,default_value,80,3,42241)
+CheckTypeSize(struct _GParamSpecEnum,88, 12024, 3);
+CheckMemberSize(struct _GParamSpecEnum,enum_class,8,3,42240);
+CheckOffset(struct _GParamSpecEnum,enum_class,72,3,42240);
+CheckMemberSize(struct _GParamSpecEnum,default_value,4,3,42241);
+CheckOffset(struct _GParamSpecEnum,default_value,80,3,42241);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GParamSpecEnum,48, 12024, 6)
-CheckMemberSize(struct _GParamSpecEnum,enum_class,4,6,42240)
-CheckOffset(struct _GParamSpecEnum,enum_class,40,6,42240)
-CheckMemberSize(struct _GParamSpecEnum,default_value,4,6,42241)
-CheckOffset(struct _GParamSpecEnum,default_value,44,6,42241)
+CheckTypeSize(struct _GParamSpecEnum,48, 12024, 6);
+CheckMemberSize(struct _GParamSpecEnum,enum_class,4,6,42240);
+CheckOffset(struct _GParamSpecEnum,enum_class,40,6,42240);
+CheckMemberSize(struct _GParamSpecEnum,default_value,4,6,42241);
+CheckOffset(struct _GParamSpecEnum,default_value,44,6,42241);
 #elif __powerpc64__
-CheckTypeSize(struct _GParamSpecEnum,88, 12024, 9)
-CheckMemberSize(struct _GParamSpecEnum,enum_class,8,9,42240)
-CheckOffset(struct _GParamSpecEnum,enum_class,72,9,42240)
-CheckMemberSize(struct _GParamSpecEnum,default_value,4,9,42241)
-CheckOffset(struct _GParamSpecEnum,default_value,80,9,42241)
+CheckTypeSize(struct _GParamSpecEnum,88, 12024, 9);
+CheckMemberSize(struct _GParamSpecEnum,enum_class,8,9,42240);
+CheckOffset(struct _GParamSpecEnum,enum_class,72,9,42240);
+CheckMemberSize(struct _GParamSpecEnum,default_value,4,9,42241);
+CheckOffset(struct _GParamSpecEnum,default_value,80,9,42241);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GParamSpecEnum,48, 12024, 10)
-CheckMemberSize(struct _GParamSpecEnum,enum_class,4,10,42240)
-CheckOffset(struct _GParamSpecEnum,enum_class,40,10,42240)
-CheckMemberSize(struct _GParamSpecEnum,default_value,4,10,42241)
-CheckOffset(struct _GParamSpecEnum,default_value,44,10,42241)
+CheckTypeSize(struct _GParamSpecEnum,48, 12024, 10);
+CheckMemberSize(struct _GParamSpecEnum,enum_class,4,10,42240);
+CheckOffset(struct _GParamSpecEnum,enum_class,40,10,42240);
+CheckMemberSize(struct _GParamSpecEnum,default_value,4,10,42241);
+CheckOffset(struct _GParamSpecEnum,default_value,44,10,42241);
 #elif __s390x__
-CheckTypeSize(struct _GParamSpecEnum,88, 12024, 12)
-CheckMemberSize(struct _GParamSpecEnum,enum_class,8,12,42240)
-CheckOffset(struct _GParamSpecEnum,enum_class,72,12,42240)
-CheckMemberSize(struct _GParamSpecEnum,default_value,4,12,42241)
-CheckOffset(struct _GParamSpecEnum,default_value,80,12,42241)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12024,0);
-Msg("Find size of _GParamSpecEnum (12024)\n");
+CheckTypeSize(struct _GParamSpecEnum,88, 12024, 12);
+CheckMemberSize(struct _GParamSpecEnum,enum_class,8,12,42240);
+CheckOffset(struct _GParamSpecEnum,enum_class,72,12,42240);
+CheckMemberSize(struct _GParamSpecEnum,default_value,4,12,42241);
+CheckOffset(struct _GParamSpecEnum,default_value,80,12,42241);
+#elif 1
+CheckTypeSize(struct _GParamSpecEnum,0, 12024, 1);
+Msg("Missing member data for _GParamSpecEnum on All\n");
+CheckOffset(struct _GParamSpecEnum,parent_instance,0,1,42239);
+CheckOffset(struct _GParamSpecEnum,enum_class,0,1,42240);
+CheckOffset(struct _GParamSpecEnum,default_value,0,1,42241);
 #endif
 
 #if __i386__
-CheckTypeSize(GParamSpecEnum,48, 12025, 2)
+CheckTypeSize(GParamSpecEnum,48, 12025, 2);
 #elif __x86_64__
-CheckTypeSize(GParamSpecEnum,88, 12025, 11)
+CheckTypeSize(GParamSpecEnum,88, 12025, 11);
 #elif __ia64__
-CheckTypeSize(GParamSpecEnum,88, 12025, 3)
+CheckTypeSize(GParamSpecEnum,88, 12025, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpecEnum,48, 12025, 6)
+CheckTypeSize(GParamSpecEnum,48, 12025, 6);
 #elif __powerpc64__
-CheckTypeSize(GParamSpecEnum,88, 12025, 9)
+CheckTypeSize(GParamSpecEnum,88, 12025, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpecEnum,48, 12025, 10)
+CheckTypeSize(GParamSpecEnum,48, 12025, 10);
 #elif __s390x__
-CheckTypeSize(GParamSpecEnum,88, 12025, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12025,0);
-Msg("Find size of GParamSpecEnum (12025)\n");
+CheckTypeSize(GParamSpecEnum,88, 12025, 12);
+#elif 1
+CheckTypeSize(GParamSpecEnum,0, 12025, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GParamSpecFloat,56, 12026, 2)
-CheckMemberSize(struct _GParamSpecFloat,minimum,4,2,42243)
-CheckOffset(struct _GParamSpecFloat,minimum,40,2,42243)
-CheckMemberSize(struct _GParamSpecFloat,maximum,4,2,42244)
-CheckOffset(struct _GParamSpecFloat,maximum,44,2,42244)
-CheckMemberSize(struct _GParamSpecFloat,default_value,4,2,42245)
-CheckOffset(struct _GParamSpecFloat,default_value,48,2,42245)
-CheckMemberSize(struct _GParamSpecFloat,epsilon,4,2,42246)
-CheckOffset(struct _GParamSpecFloat,epsilon,52,2,42246)
+CheckTypeSize(struct _GParamSpecFloat,56, 12026, 2);
+CheckMemberSize(struct _GParamSpecFloat,minimum,4,2,42243);
+CheckOffset(struct _GParamSpecFloat,minimum,40,2,42243);
+CheckMemberSize(struct _GParamSpecFloat,maximum,4,2,42244);
+CheckOffset(struct _GParamSpecFloat,maximum,44,2,42244);
+CheckMemberSize(struct _GParamSpecFloat,default_value,4,2,42245);
+CheckOffset(struct _GParamSpecFloat,default_value,48,2,42245);
+CheckMemberSize(struct _GParamSpecFloat,epsilon,4,2,42246);
+CheckOffset(struct _GParamSpecFloat,epsilon,52,2,42246);
 #elif __x86_64__
-CheckTypeSize(struct _GParamSpecFloat,88, 12026, 11)
-CheckMemberSize(struct _GParamSpecFloat,minimum,4,11,42243)
-CheckOffset(struct _GParamSpecFloat,minimum,72,11,42243)
-CheckMemberSize(struct _GParamSpecFloat,maximum,4,11,42244)
-CheckOffset(struct _GParamSpecFloat,maximum,76,11,42244)
-CheckMemberSize(struct _GParamSpecFloat,default_value,4,11,42245)
-CheckOffset(struct _GParamSpecFloat,default_value,80,11,42245)
-CheckMemberSize(struct _GParamSpecFloat,epsilon,4,11,42246)
-CheckOffset(struct _GParamSpecFloat,epsilon,84,11,42246)
+CheckTypeSize(struct _GParamSpecFloat,88, 12026, 11);
+CheckMemberSize(struct _GParamSpecFloat,minimum,4,11,42243);
+CheckOffset(struct _GParamSpecFloat,minimum,72,11,42243);
+CheckMemberSize(struct _GParamSpecFloat,maximum,4,11,42244);
+CheckOffset(struct _GParamSpecFloat,maximum,76,11,42244);
+CheckMemberSize(struct _GParamSpecFloat,default_value,4,11,42245);
+CheckOffset(struct _GParamSpecFloat,default_value,80,11,42245);
+CheckMemberSize(struct _GParamSpecFloat,epsilon,4,11,42246);
+CheckOffset(struct _GParamSpecFloat,epsilon,84,11,42246);
 #elif __ia64__
-CheckTypeSize(struct _GParamSpecFloat,88, 12026, 3)
-CheckMemberSize(struct _GParamSpecFloat,minimum,4,3,42243)
-CheckOffset(struct _GParamSpecFloat,minimum,72,3,42243)
-CheckMemberSize(struct _GParamSpecFloat,maximum,4,3,42244)
-CheckOffset(struct _GParamSpecFloat,maximum,76,3,42244)
-CheckMemberSize(struct _GParamSpecFloat,default_value,4,3,42245)
-CheckOffset(struct _GParamSpecFloat,default_value,80,3,42245)
-CheckMemberSize(struct _GParamSpecFloat,epsilon,4,3,42246)
-CheckOffset(struct _GParamSpecFloat,epsilon,84,3,42246)
+CheckTypeSize(struct _GParamSpecFloat,88, 12026, 3);
+CheckMemberSize(struct _GParamSpecFloat,minimum,4,3,42243);
+CheckOffset(struct _GParamSpecFloat,minimum,72,3,42243);
+CheckMemberSize(struct _GParamSpecFloat,maximum,4,3,42244);
+CheckOffset(struct _GParamSpecFloat,maximum,76,3,42244);
+CheckMemberSize(struct _GParamSpecFloat,default_value,4,3,42245);
+CheckOffset(struct _GParamSpecFloat,default_value,80,3,42245);
+CheckMemberSize(struct _GParamSpecFloat,epsilon,4,3,42246);
+CheckOffset(struct _GParamSpecFloat,epsilon,84,3,42246);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GParamSpecFloat,56, 12026, 6)
-CheckMemberSize(struct _GParamSpecFloat,minimum,4,6,42243)
-CheckOffset(struct _GParamSpecFloat,minimum,40,6,42243)
-CheckMemberSize(struct _GParamSpecFloat,maximum,4,6,42244)
-CheckOffset(struct _GParamSpecFloat,maximum,44,6,42244)
-CheckMemberSize(struct _GParamSpecFloat,default_value,4,6,42245)
-CheckOffset(struct _GParamSpecFloat,default_value,48,6,42245)
-CheckMemberSize(struct _GParamSpecFloat,epsilon,4,6,42246)
-CheckOffset(struct _GParamSpecFloat,epsilon,52,6,42246)
+CheckTypeSize(struct _GParamSpecFloat,56, 12026, 6);
+CheckMemberSize(struct _GParamSpecFloat,minimum,4,6,42243);
+CheckOffset(struct _GParamSpecFloat,minimum,40,6,42243);
+CheckMemberSize(struct _GParamSpecFloat,maximum,4,6,42244);
+CheckOffset(struct _GParamSpecFloat,maximum,44,6,42244);
+CheckMemberSize(struct _GParamSpecFloat,default_value,4,6,42245);
+CheckOffset(struct _GParamSpecFloat,default_value,48,6,42245);
+CheckMemberSize(struct _GParamSpecFloat,epsilon,4,6,42246);
+CheckOffset(struct _GParamSpecFloat,epsilon,52,6,42246);
 #elif __powerpc64__
-CheckTypeSize(struct _GParamSpecFloat,88, 12026, 9)
-CheckMemberSize(struct _GParamSpecFloat,minimum,4,9,42243)
-CheckOffset(struct _GParamSpecFloat,minimum,72,9,42243)
-CheckMemberSize(struct _GParamSpecFloat,maximum,4,9,42244)
-CheckOffset(struct _GParamSpecFloat,maximum,76,9,42244)
-CheckMemberSize(struct _GParamSpecFloat,default_value,4,9,42245)
-CheckOffset(struct _GParamSpecFloat,default_value,80,9,42245)
-CheckMemberSize(struct _GParamSpecFloat,epsilon,4,9,42246)
-CheckOffset(struct _GParamSpecFloat,epsilon,84,9,42246)
+CheckTypeSize(struct _GParamSpecFloat,88, 12026, 9);
+CheckMemberSize(struct _GParamSpecFloat,minimum,4,9,42243);
+CheckOffset(struct _GParamSpecFloat,minimum,72,9,42243);
+CheckMemberSize(struct _GParamSpecFloat,maximum,4,9,42244);
+CheckOffset(struct _GParamSpecFloat,maximum,76,9,42244);
+CheckMemberSize(struct _GParamSpecFloat,default_value,4,9,42245);
+CheckOffset(struct _GParamSpecFloat,default_value,80,9,42245);
+CheckMemberSize(struct _GParamSpecFloat,epsilon,4,9,42246);
+CheckOffset(struct _GParamSpecFloat,epsilon,84,9,42246);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GParamSpecFloat,56, 12026, 10)
-CheckMemberSize(struct _GParamSpecFloat,minimum,4,10,42243)
-CheckOffset(struct _GParamSpecFloat,minimum,40,10,42243)
-CheckMemberSize(struct _GParamSpecFloat,maximum,4,10,42244)
-CheckOffset(struct _GParamSpecFloat,maximum,44,10,42244)
-CheckMemberSize(struct _GParamSpecFloat,default_value,4,10,42245)
-CheckOffset(struct _GParamSpecFloat,default_value,48,10,42245)
-CheckMemberSize(struct _GParamSpecFloat,epsilon,4,10,42246)
-CheckOffset(struct _GParamSpecFloat,epsilon,52,10,42246)
+CheckTypeSize(struct _GParamSpecFloat,56, 12026, 10);
+CheckMemberSize(struct _GParamSpecFloat,minimum,4,10,42243);
+CheckOffset(struct _GParamSpecFloat,minimum,40,10,42243);
+CheckMemberSize(struct _GParamSpecFloat,maximum,4,10,42244);
+CheckOffset(struct _GParamSpecFloat,maximum,44,10,42244);
+CheckMemberSize(struct _GParamSpecFloat,default_value,4,10,42245);
+CheckOffset(struct _GParamSpecFloat,default_value,48,10,42245);
+CheckMemberSize(struct _GParamSpecFloat,epsilon,4,10,42246);
+CheckOffset(struct _GParamSpecFloat,epsilon,52,10,42246);
 #elif __s390x__
-CheckTypeSize(struct _GParamSpecFloat,88, 12026, 12)
-CheckMemberSize(struct _GParamSpecFloat,minimum,4,12,42243)
-CheckOffset(struct _GParamSpecFloat,minimum,72,12,42243)
-CheckMemberSize(struct _GParamSpecFloat,maximum,4,12,42244)
-CheckOffset(struct _GParamSpecFloat,maximum,76,12,42244)
-CheckMemberSize(struct _GParamSpecFloat,default_value,4,12,42245)
-CheckOffset(struct _GParamSpecFloat,default_value,80,12,42245)
-CheckMemberSize(struct _GParamSpecFloat,epsilon,4,12,42246)
-CheckOffset(struct _GParamSpecFloat,epsilon,84,12,42246)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12026,0);
-Msg("Find size of _GParamSpecFloat (12026)\n");
+CheckTypeSize(struct _GParamSpecFloat,88, 12026, 12);
+CheckMemberSize(struct _GParamSpecFloat,minimum,4,12,42243);
+CheckOffset(struct _GParamSpecFloat,minimum,72,12,42243);
+CheckMemberSize(struct _GParamSpecFloat,maximum,4,12,42244);
+CheckOffset(struct _GParamSpecFloat,maximum,76,12,42244);
+CheckMemberSize(struct _GParamSpecFloat,default_value,4,12,42245);
+CheckOffset(struct _GParamSpecFloat,default_value,80,12,42245);
+CheckMemberSize(struct _GParamSpecFloat,epsilon,4,12,42246);
+CheckOffset(struct _GParamSpecFloat,epsilon,84,12,42246);
+#elif 1
+CheckTypeSize(struct _GParamSpecFloat,0, 12026, 1);
+Msg("Missing member data for _GParamSpecFloat on All\n");
+CheckOffset(struct _GParamSpecFloat,parent_instance,0,1,42242);
+CheckOffset(struct _GParamSpecFloat,minimum,0,1,42243);
+CheckOffset(struct _GParamSpecFloat,maximum,0,1,42244);
+CheckOffset(struct _GParamSpecFloat,default_value,0,1,42245);
+CheckOffset(struct _GParamSpecFloat,epsilon,0,1,42246);
 #endif
 
 #if __i386__
-CheckTypeSize(GParamSpecFloat,56, 12027, 2)
+CheckTypeSize(GParamSpecFloat,56, 12027, 2);
 #elif __x86_64__
-CheckTypeSize(GParamSpecFloat,88, 12027, 11)
+CheckTypeSize(GParamSpecFloat,88, 12027, 11);
 #elif __ia64__
-CheckTypeSize(GParamSpecFloat,88, 12027, 3)
+CheckTypeSize(GParamSpecFloat,88, 12027, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpecFloat,56, 12027, 6)
+CheckTypeSize(GParamSpecFloat,56, 12027, 6);
 #elif __powerpc64__
-CheckTypeSize(GParamSpecFloat,88, 12027, 9)
+CheckTypeSize(GParamSpecFloat,88, 12027, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpecFloat,56, 12027, 10)
+CheckTypeSize(GParamSpecFloat,56, 12027, 10);
 #elif __s390x__
-CheckTypeSize(GParamSpecFloat,88, 12027, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12027,0);
-Msg("Find size of GParamSpecFloat (12027)\n");
+CheckTypeSize(GParamSpecFloat,88, 12027, 12);
+#elif 1
+CheckTypeSize(GParamSpecFloat,0, 12027, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GParamSpecString,56, 12028, 2)
-CheckMemberSize(struct _GParamSpecString,default_value,4,2,42248)
-CheckOffset(struct _GParamSpecString,default_value,40,2,42248)
-CheckMemberSize(struct _GParamSpecString,cset_first,4,2,42249)
-CheckOffset(struct _GParamSpecString,cset_first,44,2,42249)
-CheckMemberSize(struct _GParamSpecString,cset_nth,4,2,42250)
-CheckOffset(struct _GParamSpecString,cset_nth,48,2,42250)
-CheckMemberSize(struct _GParamSpecString,substitutor,1,2,42251)
-CheckOffset(struct _GParamSpecString,substitutor,52,2,42251)
+CheckTypeSize(struct _GParamSpecString,56, 12028, 2);
+CheckMemberSize(struct _GParamSpecString,default_value,4,2,42248);
+CheckOffset(struct _GParamSpecString,default_value,40,2,42248);
+CheckMemberSize(struct _GParamSpecString,cset_first,4,2,42249);
+CheckOffset(struct _GParamSpecString,cset_first,44,2,42249);
+CheckMemberSize(struct _GParamSpecString,cset_nth,4,2,42250);
+CheckOffset(struct _GParamSpecString,cset_nth,48,2,42250);
+CheckMemberSize(struct _GParamSpecString,substitutor,1,2,42251);
+CheckOffset(struct _GParamSpecString,substitutor,52,2,42251);
 #elif __x86_64__
-CheckTypeSize(struct _GParamSpecString,104, 12028, 11)
-CheckMemberSize(struct _GParamSpecString,default_value,8,11,42248)
-CheckOffset(struct _GParamSpecString,default_value,72,11,42248)
-CheckMemberSize(struct _GParamSpecString,cset_first,8,11,42249)
-CheckOffset(struct _GParamSpecString,cset_first,80,11,42249)
-CheckMemberSize(struct _GParamSpecString,cset_nth,8,11,42250)
-CheckOffset(struct _GParamSpecString,cset_nth,88,11,42250)
-CheckMemberSize(struct _GParamSpecString,substitutor,1,11,42251)
-CheckOffset(struct _GParamSpecString,substitutor,96,11,42251)
+CheckTypeSize(struct _GParamSpecString,104, 12028, 11);
+CheckMemberSize(struct _GParamSpecString,default_value,8,11,42248);
+CheckOffset(struct _GParamSpecString,default_value,72,11,42248);
+CheckMemberSize(struct _GParamSpecString,cset_first,8,11,42249);
+CheckOffset(struct _GParamSpecString,cset_first,80,11,42249);
+CheckMemberSize(struct _GParamSpecString,cset_nth,8,11,42250);
+CheckOffset(struct _GParamSpecString,cset_nth,88,11,42250);
+CheckMemberSize(struct _GParamSpecString,substitutor,1,11,42251);
+CheckOffset(struct _GParamSpecString,substitutor,96,11,42251);
 #elif __ia64__
-CheckTypeSize(struct _GParamSpecString,104, 12028, 3)
-CheckMemberSize(struct _GParamSpecString,default_value,8,3,42248)
-CheckOffset(struct _GParamSpecString,default_value,72,3,42248)
-CheckMemberSize(struct _GParamSpecString,cset_first,8,3,42249)
-CheckOffset(struct _GParamSpecString,cset_first,80,3,42249)
-CheckMemberSize(struct _GParamSpecString,cset_nth,8,3,42250)
-CheckOffset(struct _GParamSpecString,cset_nth,88,3,42250)
-CheckMemberSize(struct _GParamSpecString,substitutor,1,3,42251)
-CheckOffset(struct _GParamSpecString,substitutor,96,3,42251)
+CheckTypeSize(struct _GParamSpecString,104, 12028, 3);
+CheckMemberSize(struct _GParamSpecString,default_value,8,3,42248);
+CheckOffset(struct _GParamSpecString,default_value,72,3,42248);
+CheckMemberSize(struct _GParamSpecString,cset_first,8,3,42249);
+CheckOffset(struct _GParamSpecString,cset_first,80,3,42249);
+CheckMemberSize(struct _GParamSpecString,cset_nth,8,3,42250);
+CheckOffset(struct _GParamSpecString,cset_nth,88,3,42250);
+CheckMemberSize(struct _GParamSpecString,substitutor,1,3,42251);
+CheckOffset(struct _GParamSpecString,substitutor,96,3,42251);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GParamSpecString,56, 12028, 6)
-CheckMemberSize(struct _GParamSpecString,default_value,4,6,42248)
-CheckOffset(struct _GParamSpecString,default_value,40,6,42248)
-CheckMemberSize(struct _GParamSpecString,cset_first,4,6,42249)
-CheckOffset(struct _GParamSpecString,cset_first,44,6,42249)
-CheckMemberSize(struct _GParamSpecString,cset_nth,4,6,42250)
-CheckOffset(struct _GParamSpecString,cset_nth,48,6,42250)
-CheckMemberSize(struct _GParamSpecString,substitutor,1,6,42251)
-CheckOffset(struct _GParamSpecString,substitutor,52,6,42251)
+CheckTypeSize(struct _GParamSpecString,56, 12028, 6);
+CheckMemberSize(struct _GParamSpecString,default_value,4,6,42248);
+CheckOffset(struct _GParamSpecString,default_value,40,6,42248);
+CheckMemberSize(struct _GParamSpecString,cset_first,4,6,42249);
+CheckOffset(struct _GParamSpecString,cset_first,44,6,42249);
+CheckMemberSize(struct _GParamSpecString,cset_nth,4,6,42250);
+CheckOffset(struct _GParamSpecString,cset_nth,48,6,42250);
+CheckMemberSize(struct _GParamSpecString,substitutor,1,6,42251);
+CheckOffset(struct _GParamSpecString,substitutor,52,6,42251);
 #elif __powerpc64__
-CheckTypeSize(struct _GParamSpecString,104, 12028, 9)
-CheckMemberSize(struct _GParamSpecString,default_value,8,9,42248)
-CheckOffset(struct _GParamSpecString,default_value,72,9,42248)
-CheckMemberSize(struct _GParamSpecString,cset_first,8,9,42249)
-CheckOffset(struct _GParamSpecString,cset_first,80,9,42249)
-CheckMemberSize(struct _GParamSpecString,cset_nth,8,9,42250)
-CheckOffset(struct _GParamSpecString,cset_nth,88,9,42250)
-CheckMemberSize(struct _GParamSpecString,substitutor,1,9,42251)
-CheckOffset(struct _GParamSpecString,substitutor,96,9,42251)
+CheckTypeSize(struct _GParamSpecString,104, 12028, 9);
+CheckMemberSize(struct _GParamSpecString,default_value,8,9,42248);
+CheckOffset(struct _GParamSpecString,default_value,72,9,42248);
+CheckMemberSize(struct _GParamSpecString,cset_first,8,9,42249);
+CheckOffset(struct _GParamSpecString,cset_first,80,9,42249);
+CheckMemberSize(struct _GParamSpecString,cset_nth,8,9,42250);
+CheckOffset(struct _GParamSpecString,cset_nth,88,9,42250);
+CheckMemberSize(struct _GParamSpecString,substitutor,1,9,42251);
+CheckOffset(struct _GParamSpecString,substitutor,96,9,42251);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GParamSpecString,56, 12028, 10)
-CheckMemberSize(struct _GParamSpecString,default_value,4,10,42248)
-CheckOffset(struct _GParamSpecString,default_value,40,10,42248)
-CheckMemberSize(struct _GParamSpecString,cset_first,4,10,42249)
-CheckOffset(struct _GParamSpecString,cset_first,44,10,42249)
-CheckMemberSize(struct _GParamSpecString,cset_nth,4,10,42250)
-CheckOffset(struct _GParamSpecString,cset_nth,48,10,42250)
-CheckMemberSize(struct _GParamSpecString,substitutor,1,10,42251)
-CheckOffset(struct _GParamSpecString,substitutor,52,10,42251)
+CheckTypeSize(struct _GParamSpecString,56, 12028, 10);
+CheckMemberSize(struct _GParamSpecString,default_value,4,10,42248);
+CheckOffset(struct _GParamSpecString,default_value,40,10,42248);
+CheckMemberSize(struct _GParamSpecString,cset_first,4,10,42249);
+CheckOffset(struct _GParamSpecString,cset_first,44,10,42249);
+CheckMemberSize(struct _GParamSpecString,cset_nth,4,10,42250);
+CheckOffset(struct _GParamSpecString,cset_nth,48,10,42250);
+CheckMemberSize(struct _GParamSpecString,substitutor,1,10,42251);
+CheckOffset(struct _GParamSpecString,substitutor,52,10,42251);
 #elif __s390x__
-CheckTypeSize(struct _GParamSpecString,104, 12028, 12)
-CheckMemberSize(struct _GParamSpecString,default_value,8,12,42248)
-CheckOffset(struct _GParamSpecString,default_value,72,12,42248)
-CheckMemberSize(struct _GParamSpecString,cset_first,8,12,42249)
-CheckOffset(struct _GParamSpecString,cset_first,80,12,42249)
-CheckMemberSize(struct _GParamSpecString,cset_nth,8,12,42250)
-CheckOffset(struct _GParamSpecString,cset_nth,88,12,42250)
-CheckMemberSize(struct _GParamSpecString,substitutor,1,12,42251)
-CheckOffset(struct _GParamSpecString,substitutor,96,12,42251)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12028,0);
-Msg("Find size of _GParamSpecString (12028)\n");
+CheckTypeSize(struct _GParamSpecString,104, 12028, 12);
+CheckMemberSize(struct _GParamSpecString,default_value,8,12,42248);
+CheckOffset(struct _GParamSpecString,default_value,72,12,42248);
+CheckMemberSize(struct _GParamSpecString,cset_first,8,12,42249);
+CheckOffset(struct _GParamSpecString,cset_first,80,12,42249);
+CheckMemberSize(struct _GParamSpecString,cset_nth,8,12,42250);
+CheckOffset(struct _GParamSpecString,cset_nth,88,12,42250);
+CheckMemberSize(struct _GParamSpecString,substitutor,1,12,42251);
+CheckOffset(struct _GParamSpecString,substitutor,96,12,42251);
+#elif 1
+CheckTypeSize(struct _GParamSpecString,0, 12028, 1);
+CheckBitField(struct _GParamSpecString,null_fold_if_empty,1,1,42252)
+CheckBitField(struct _GParamSpecString,ensure_non_null,1,1,42253)
 #endif
 
 #if __i386__
-CheckTypeSize(GParamSpecString,56, 12029, 2)
+CheckTypeSize(GParamSpecString,56, 12029, 2);
 #elif __x86_64__
-CheckTypeSize(GParamSpecString,104, 12029, 11)
+CheckTypeSize(GParamSpecString,104, 12029, 11);
 #elif __ia64__
-CheckTypeSize(GParamSpecString,104, 12029, 3)
+CheckTypeSize(GParamSpecString,104, 12029, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpecString,56, 12029, 6)
+CheckTypeSize(GParamSpecString,56, 12029, 6);
 #elif __powerpc64__
-CheckTypeSize(GParamSpecString,104, 12029, 9)
+CheckTypeSize(GParamSpecString,104, 12029, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpecString,56, 12029, 10)
+CheckTypeSize(GParamSpecString,56, 12029, 10);
 #elif __s390x__
-CheckTypeSize(GParamSpecString,104, 12029, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12029,0);
-Msg("Find size of GParamSpecString (12029)\n");
+CheckTypeSize(GParamSpecString,104, 12029, 12);
+#elif 1
+CheckTypeSize(GParamSpecString,0, 12029, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GParamSpecDouble,72, 12030, 2)
-CheckMemberSize(struct _GParamSpecDouble,minimum,8,2,42255)
-CheckOffset(struct _GParamSpecDouble,minimum,40,2,42255)
-CheckMemberSize(struct _GParamSpecDouble,maximum,8,2,42256)
-CheckOffset(struct _GParamSpecDouble,maximum,48,2,42256)
-CheckMemberSize(struct _GParamSpecDouble,default_value,8,2,42257)
-CheckOffset(struct _GParamSpecDouble,default_value,56,2,42257)
-CheckMemberSize(struct _GParamSpecDouble,epsilon,8,2,42258)
-CheckOffset(struct _GParamSpecDouble,epsilon,64,2,42258)
+CheckTypeSize(struct _GParamSpecDouble,72, 12030, 2);
+CheckMemberSize(struct _GParamSpecDouble,minimum,8,2,42255);
+CheckOffset(struct _GParamSpecDouble,minimum,40,2,42255);
+CheckMemberSize(struct _GParamSpecDouble,maximum,8,2,42256);
+CheckOffset(struct _GParamSpecDouble,maximum,48,2,42256);
+CheckMemberSize(struct _GParamSpecDouble,default_value,8,2,42257);
+CheckOffset(struct _GParamSpecDouble,default_value,56,2,42257);
+CheckMemberSize(struct _GParamSpecDouble,epsilon,8,2,42258);
+CheckOffset(struct _GParamSpecDouble,epsilon,64,2,42258);
 #elif __x86_64__
-CheckTypeSize(struct _GParamSpecDouble,104, 12030, 11)
-CheckMemberSize(struct _GParamSpecDouble,minimum,8,11,42255)
-CheckOffset(struct _GParamSpecDouble,minimum,72,11,42255)
-CheckMemberSize(struct _GParamSpecDouble,maximum,8,11,42256)
-CheckOffset(struct _GParamSpecDouble,maximum,80,11,42256)
-CheckMemberSize(struct _GParamSpecDouble,default_value,8,11,42257)
-CheckOffset(struct _GParamSpecDouble,default_value,88,11,42257)
-CheckMemberSize(struct _GParamSpecDouble,epsilon,8,11,42258)
-CheckOffset(struct _GParamSpecDouble,epsilon,96,11,42258)
+CheckTypeSize(struct _GParamSpecDouble,104, 12030, 11);
+CheckMemberSize(struct _GParamSpecDouble,minimum,8,11,42255);
+CheckOffset(struct _GParamSpecDouble,minimum,72,11,42255);
+CheckMemberSize(struct _GParamSpecDouble,maximum,8,11,42256);
+CheckOffset(struct _GParamSpecDouble,maximum,80,11,42256);
+CheckMemberSize(struct _GParamSpecDouble,default_value,8,11,42257);
+CheckOffset(struct _GParamSpecDouble,default_value,88,11,42257);
+CheckMemberSize(struct _GParamSpecDouble,epsilon,8,11,42258);
+CheckOffset(struct _GParamSpecDouble,epsilon,96,11,42258);
 #elif __ia64__
-CheckTypeSize(struct _GParamSpecDouble,104, 12030, 3)
-CheckMemberSize(struct _GParamSpecDouble,minimum,8,3,42255)
-CheckOffset(struct _GParamSpecDouble,minimum,72,3,42255)
-CheckMemberSize(struct _GParamSpecDouble,maximum,8,3,42256)
-CheckOffset(struct _GParamSpecDouble,maximum,80,3,42256)
-CheckMemberSize(struct _GParamSpecDouble,default_value,8,3,42257)
-CheckOffset(struct _GParamSpecDouble,default_value,88,3,42257)
-CheckMemberSize(struct _GParamSpecDouble,epsilon,8,3,42258)
-CheckOffset(struct _GParamSpecDouble,epsilon,96,3,42258)
+CheckTypeSize(struct _GParamSpecDouble,104, 12030, 3);
+CheckMemberSize(struct _GParamSpecDouble,minimum,8,3,42255);
+CheckOffset(struct _GParamSpecDouble,minimum,72,3,42255);
+CheckMemberSize(struct _GParamSpecDouble,maximum,8,3,42256);
+CheckOffset(struct _GParamSpecDouble,maximum,80,3,42256);
+CheckMemberSize(struct _GParamSpecDouble,default_value,8,3,42257);
+CheckOffset(struct _GParamSpecDouble,default_value,88,3,42257);
+CheckMemberSize(struct _GParamSpecDouble,epsilon,8,3,42258);
+CheckOffset(struct _GParamSpecDouble,epsilon,96,3,42258);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GParamSpecDouble,72, 12030, 6)
-CheckMemberSize(struct _GParamSpecDouble,minimum,8,6,42255)
-CheckOffset(struct _GParamSpecDouble,minimum,40,6,42255)
-CheckMemberSize(struct _GParamSpecDouble,maximum,8,6,42256)
-CheckOffset(struct _GParamSpecDouble,maximum,48,6,42256)
-CheckMemberSize(struct _GParamSpecDouble,default_value,8,6,42257)
-CheckOffset(struct _GParamSpecDouble,default_value,56,6,42257)
-CheckMemberSize(struct _GParamSpecDouble,epsilon,8,6,42258)
-CheckOffset(struct _GParamSpecDouble,epsilon,64,6,42258)
+CheckTypeSize(struct _GParamSpecDouble,72, 12030, 6);
+CheckMemberSize(struct _GParamSpecDouble,minimum,8,6,42255);
+CheckOffset(struct _GParamSpecDouble,minimum,40,6,42255);
+CheckMemberSize(struct _GParamSpecDouble,maximum,8,6,42256);
+CheckOffset(struct _GParamSpecDouble,maximum,48,6,42256);
+CheckMemberSize(struct _GParamSpecDouble,default_value,8,6,42257);
+CheckOffset(struct _GParamSpecDouble,default_value,56,6,42257);
+CheckMemberSize(struct _GParamSpecDouble,epsilon,8,6,42258);
+CheckOffset(struct _GParamSpecDouble,epsilon,64,6,42258);
 #elif __powerpc64__
-CheckTypeSize(struct _GParamSpecDouble,104, 12030, 9)
-CheckMemberSize(struct _GParamSpecDouble,minimum,8,9,42255)
-CheckOffset(struct _GParamSpecDouble,minimum,72,9,42255)
-CheckMemberSize(struct _GParamSpecDouble,maximum,8,9,42256)
-CheckOffset(struct _GParamSpecDouble,maximum,80,9,42256)
-CheckMemberSize(struct _GParamSpecDouble,default_value,8,9,42257)
-CheckOffset(struct _GParamSpecDouble,default_value,88,9,42257)
-CheckMemberSize(struct _GParamSpecDouble,epsilon,8,9,42258)
-CheckOffset(struct _GParamSpecDouble,epsilon,96,9,42258)
+CheckTypeSize(struct _GParamSpecDouble,104, 12030, 9);
+CheckMemberSize(struct _GParamSpecDouble,minimum,8,9,42255);
+CheckOffset(struct _GParamSpecDouble,minimum,72,9,42255);
+CheckMemberSize(struct _GParamSpecDouble,maximum,8,9,42256);
+CheckOffset(struct _GParamSpecDouble,maximum,80,9,42256);
+CheckMemberSize(struct _GParamSpecDouble,default_value,8,9,42257);
+CheckOffset(struct _GParamSpecDouble,default_value,88,9,42257);
+CheckMemberSize(struct _GParamSpecDouble,epsilon,8,9,42258);
+CheckOffset(struct _GParamSpecDouble,epsilon,96,9,42258);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GParamSpecDouble,72, 12030, 10)
-CheckMemberSize(struct _GParamSpecDouble,minimum,8,10,42255)
-CheckOffset(struct _GParamSpecDouble,minimum,40,10,42255)
-CheckMemberSize(struct _GParamSpecDouble,maximum,8,10,42256)
-CheckOffset(struct _GParamSpecDouble,maximum,48,10,42256)
-CheckMemberSize(struct _GParamSpecDouble,default_value,8,10,42257)
-CheckOffset(struct _GParamSpecDouble,default_value,56,10,42257)
-CheckMemberSize(struct _GParamSpecDouble,epsilon,8,10,42258)
-CheckOffset(struct _GParamSpecDouble,epsilon,64,10,42258)
+CheckTypeSize(struct _GParamSpecDouble,72, 12030, 10);
+CheckMemberSize(struct _GParamSpecDouble,minimum,8,10,42255);
+CheckOffset(struct _GParamSpecDouble,minimum,40,10,42255);
+CheckMemberSize(struct _GParamSpecDouble,maximum,8,10,42256);
+CheckOffset(struct _GParamSpecDouble,maximum,48,10,42256);
+CheckMemberSize(struct _GParamSpecDouble,default_value,8,10,42257);
+CheckOffset(struct _GParamSpecDouble,default_value,56,10,42257);
+CheckMemberSize(struct _GParamSpecDouble,epsilon,8,10,42258);
+CheckOffset(struct _GParamSpecDouble,epsilon,64,10,42258);
 #elif __s390x__
-CheckTypeSize(struct _GParamSpecDouble,104, 12030, 12)
-CheckMemberSize(struct _GParamSpecDouble,minimum,8,12,42255)
-CheckOffset(struct _GParamSpecDouble,minimum,72,12,42255)
-CheckMemberSize(struct _GParamSpecDouble,maximum,8,12,42256)
-CheckOffset(struct _GParamSpecDouble,maximum,80,12,42256)
-CheckMemberSize(struct _GParamSpecDouble,default_value,8,12,42257)
-CheckOffset(struct _GParamSpecDouble,default_value,88,12,42257)
-CheckMemberSize(struct _GParamSpecDouble,epsilon,8,12,42258)
-CheckOffset(struct _GParamSpecDouble,epsilon,96,12,42258)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12030,0);
-Msg("Find size of _GParamSpecDouble (12030)\n");
+CheckTypeSize(struct _GParamSpecDouble,104, 12030, 12);
+CheckMemberSize(struct _GParamSpecDouble,minimum,8,12,42255);
+CheckOffset(struct _GParamSpecDouble,minimum,72,12,42255);
+CheckMemberSize(struct _GParamSpecDouble,maximum,8,12,42256);
+CheckOffset(struct _GParamSpecDouble,maximum,80,12,42256);
+CheckMemberSize(struct _GParamSpecDouble,default_value,8,12,42257);
+CheckOffset(struct _GParamSpecDouble,default_value,88,12,42257);
+CheckMemberSize(struct _GParamSpecDouble,epsilon,8,12,42258);
+CheckOffset(struct _GParamSpecDouble,epsilon,96,12,42258);
+#elif 1
+CheckTypeSize(struct _GParamSpecDouble,0, 12030, 1);
+Msg("Missing member data for _GParamSpecDouble on All\n");
+CheckOffset(struct _GParamSpecDouble,parent_instance,0,1,42254);
+CheckOffset(struct _GParamSpecDouble,minimum,0,1,42255);
+CheckOffset(struct _GParamSpecDouble,maximum,0,1,42256);
+CheckOffset(struct _GParamSpecDouble,default_value,0,1,42257);
+CheckOffset(struct _GParamSpecDouble,epsilon,0,1,42258);
 #endif
 
 #if __i386__
-CheckTypeSize(GParamSpecDouble,72, 12031, 2)
+CheckTypeSize(GParamSpecDouble,72, 12031, 2);
 #elif __x86_64__
-CheckTypeSize(GParamSpecDouble,104, 12031, 11)
+CheckTypeSize(GParamSpecDouble,104, 12031, 11);
 #elif __ia64__
-CheckTypeSize(GParamSpecDouble,104, 12031, 3)
+CheckTypeSize(GParamSpecDouble,104, 12031, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpecDouble,72, 12031, 6)
+CheckTypeSize(GParamSpecDouble,72, 12031, 6);
 #elif __powerpc64__
-CheckTypeSize(GParamSpecDouble,104, 12031, 9)
+CheckTypeSize(GParamSpecDouble,104, 12031, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpecDouble,72, 12031, 10)
+CheckTypeSize(GParamSpecDouble,72, 12031, 10);
 #elif __s390x__
-CheckTypeSize(GParamSpecDouble,104, 12031, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12031,0);
-Msg("Find size of GParamSpecDouble (12031)\n");
+CheckTypeSize(GParamSpecDouble,104, 12031, 12);
+#elif 1
+CheckTypeSize(GParamSpecDouble,0, 12031, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GParamSpecParam,40, 12032, 2)
+CheckTypeSize(struct _GParamSpecParam,40, 12032, 2);
 Msg("Missing member data for _GParamSpecParam on IA32\n");
-CheckOffset(struct _GParamSpecParam,parent_instance,0,2,42259)
+CheckOffset(struct _GParamSpecParam,parent_instance,0,2,42259);
 #elif __x86_64__
-CheckTypeSize(struct _GParamSpecParam,72, 12032, 11)
+CheckTypeSize(struct _GParamSpecParam,72, 12032, 11);
 Msg("Missing member data for _GParamSpecParam on x86-64\n");
-CheckOffset(struct _GParamSpecParam,parent_instance,0,11,42259)
+CheckOffset(struct _GParamSpecParam,parent_instance,0,11,42259);
 #elif __ia64__
-CheckTypeSize(struct _GParamSpecParam,72, 12032, 3)
+CheckTypeSize(struct _GParamSpecParam,72, 12032, 3);
 Msg("Missing member data for _GParamSpecParam on IA64\n");
-CheckOffset(struct _GParamSpecParam,parent_instance,0,3,42259)
+CheckOffset(struct _GParamSpecParam,parent_instance,0,3,42259);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GParamSpecParam,40, 12032, 6)
+CheckTypeSize(struct _GParamSpecParam,40, 12032, 6);
 Msg("Missing member data for _GParamSpecParam on PPC32\n");
-CheckOffset(struct _GParamSpecParam,parent_instance,0,6,42259)
+CheckOffset(struct _GParamSpecParam,parent_instance,0,6,42259);
 #elif __powerpc64__
-CheckTypeSize(struct _GParamSpecParam,72, 12032, 9)
+CheckTypeSize(struct _GParamSpecParam,72, 12032, 9);
 Msg("Missing member data for _GParamSpecParam on PPC64\n");
-CheckOffset(struct _GParamSpecParam,parent_instance,0,9,42259)
+CheckOffset(struct _GParamSpecParam,parent_instance,0,9,42259);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GParamSpecParam,40, 12032, 10)
+CheckTypeSize(struct _GParamSpecParam,40, 12032, 10);
 Msg("Missing member data for _GParamSpecParam on S390\n");
-CheckOffset(struct _GParamSpecParam,parent_instance,0,10,42259)
+CheckOffset(struct _GParamSpecParam,parent_instance,0,10,42259);
 #elif __s390x__
-CheckTypeSize(struct _GParamSpecParam,72, 12032, 12)
+CheckTypeSize(struct _GParamSpecParam,72, 12032, 12);
 Msg("Missing member data for _GParamSpecParam on S390X\n");
-CheckOffset(struct _GParamSpecParam,parent_instance,0,12,42259)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12032,0);
-Msg("Find size of _GParamSpecParam (12032)\n");
+CheckOffset(struct _GParamSpecParam,parent_instance,0,12,42259);
+#elif 1
+CheckTypeSize(struct _GParamSpecParam,0, 12032, 1);
+Msg("Missing member data for _GParamSpecParam on All\n");
+CheckOffset(struct _GParamSpecParam,parent_instance,0,1,42259);
 #endif
 
 #if __i386__
-CheckTypeSize(GParamSpecParam,40, 12033, 2)
+CheckTypeSize(GParamSpecParam,40, 12033, 2);
 #elif __x86_64__
-CheckTypeSize(GParamSpecParam,72, 12033, 11)
+CheckTypeSize(GParamSpecParam,72, 12033, 11);
 #elif __ia64__
-CheckTypeSize(GParamSpecParam,72, 12033, 3)
+CheckTypeSize(GParamSpecParam,72, 12033, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpecParam,40, 12033, 6)
+CheckTypeSize(GParamSpecParam,40, 12033, 6);
 #elif __powerpc64__
-CheckTypeSize(GParamSpecParam,72, 12033, 9)
+CheckTypeSize(GParamSpecParam,72, 12033, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpecParam,40, 12033, 10)
+CheckTypeSize(GParamSpecParam,40, 12033, 10);
 #elif __s390x__
-CheckTypeSize(GParamSpecParam,72, 12033, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12033,0);
-Msg("Find size of GParamSpecParam (12033)\n");
+CheckTypeSize(GParamSpecParam,72, 12033, 12);
+#elif 1
+CheckTypeSize(GParamSpecParam,0, 12033, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GParamSpecValueArray,48, 12034, 2)
-CheckMemberSize(struct _GParamSpecValueArray,element_spec,4,2,42261)
-CheckOffset(struct _GParamSpecValueArray,element_spec,40,2,42261)
-CheckMemberSize(struct _GParamSpecValueArray,fixed_n_elements,4,2,42262)
-CheckOffset(struct _GParamSpecValueArray,fixed_n_elements,44,2,42262)
+CheckTypeSize(struct _GParamSpecValueArray,48, 12034, 2);
+CheckMemberSize(struct _GParamSpecValueArray,element_spec,4,2,42261);
+CheckOffset(struct _GParamSpecValueArray,element_spec,40,2,42261);
+CheckMemberSize(struct _GParamSpecValueArray,fixed_n_elements,4,2,42262);
+CheckOffset(struct _GParamSpecValueArray,fixed_n_elements,44,2,42262);
 #elif __x86_64__
-CheckTypeSize(struct _GParamSpecValueArray,88, 12034, 11)
-CheckMemberSize(struct _GParamSpecValueArray,element_spec,8,11,42261)
-CheckOffset(struct _GParamSpecValueArray,element_spec,72,11,42261)
-CheckMemberSize(struct _GParamSpecValueArray,fixed_n_elements,4,11,42262)
-CheckOffset(struct _GParamSpecValueArray,fixed_n_elements,80,11,42262)
+CheckTypeSize(struct _GParamSpecValueArray,88, 12034, 11);
+CheckMemberSize(struct _GParamSpecValueArray,element_spec,8,11,42261);
+CheckOffset(struct _GParamSpecValueArray,element_spec,72,11,42261);
+CheckMemberSize(struct _GParamSpecValueArray,fixed_n_elements,4,11,42262);
+CheckOffset(struct _GParamSpecValueArray,fixed_n_elements,80,11,42262);
 #elif __ia64__
-CheckTypeSize(struct _GParamSpecValueArray,88, 12034, 3)
-CheckMemberSize(struct _GParamSpecValueArray,element_spec,8,3,42261)
-CheckOffset(struct _GParamSpecValueArray,element_spec,72,3,42261)
-CheckMemberSize(struct _GParamSpecValueArray,fixed_n_elements,4,3,42262)
-CheckOffset(struct _GParamSpecValueArray,fixed_n_elements,80,3,42262)
+CheckTypeSize(struct _GParamSpecValueArray,88, 12034, 3);
+CheckMemberSize(struct _GParamSpecValueArray,element_spec,8,3,42261);
+CheckOffset(struct _GParamSpecValueArray,element_spec,72,3,42261);
+CheckMemberSize(struct _GParamSpecValueArray,fixed_n_elements,4,3,42262);
+CheckOffset(struct _GParamSpecValueArray,fixed_n_elements,80,3,42262);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GParamSpecValueArray,48, 12034, 6)
-CheckMemberSize(struct _GParamSpecValueArray,element_spec,4,6,42261)
-CheckOffset(struct _GParamSpecValueArray,element_spec,40,6,42261)
-CheckMemberSize(struct _GParamSpecValueArray,fixed_n_elements,4,6,42262)
-CheckOffset(struct _GParamSpecValueArray,fixed_n_elements,44,6,42262)
+CheckTypeSize(struct _GParamSpecValueArray,48, 12034, 6);
+CheckMemberSize(struct _GParamSpecValueArray,element_spec,4,6,42261);
+CheckOffset(struct _GParamSpecValueArray,element_spec,40,6,42261);
+CheckMemberSize(struct _GParamSpecValueArray,fixed_n_elements,4,6,42262);
+CheckOffset(struct _GParamSpecValueArray,fixed_n_elements,44,6,42262);
 #elif __powerpc64__
-CheckTypeSize(struct _GParamSpecValueArray,88, 12034, 9)
-CheckMemberSize(struct _GParamSpecValueArray,element_spec,8,9,42261)
-CheckOffset(struct _GParamSpecValueArray,element_spec,72,9,42261)
-CheckMemberSize(struct _GParamSpecValueArray,fixed_n_elements,4,9,42262)
-CheckOffset(struct _GParamSpecValueArray,fixed_n_elements,80,9,42262)
+CheckTypeSize(struct _GParamSpecValueArray,88, 12034, 9);
+CheckMemberSize(struct _GParamSpecValueArray,element_spec,8,9,42261);
+CheckOffset(struct _GParamSpecValueArray,element_spec,72,9,42261);
+CheckMemberSize(struct _GParamSpecValueArray,fixed_n_elements,4,9,42262);
+CheckOffset(struct _GParamSpecValueArray,fixed_n_elements,80,9,42262);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GParamSpecValueArray,48, 12034, 10)
-CheckMemberSize(struct _GParamSpecValueArray,element_spec,4,10,42261)
-CheckOffset(struct _GParamSpecValueArray,element_spec,40,10,42261)
-CheckMemberSize(struct _GParamSpecValueArray,fixed_n_elements,4,10,42262)
-CheckOffset(struct _GParamSpecValueArray,fixed_n_elements,44,10,42262)
+CheckTypeSize(struct _GParamSpecValueArray,48, 12034, 10);
+CheckMemberSize(struct _GParamSpecValueArray,element_spec,4,10,42261);
+CheckOffset(struct _GParamSpecValueArray,element_spec,40,10,42261);
+CheckMemberSize(struct _GParamSpecValueArray,fixed_n_elements,4,10,42262);
+CheckOffset(struct _GParamSpecValueArray,fixed_n_elements,44,10,42262);
 #elif __s390x__
-CheckTypeSize(struct _GParamSpecValueArray,88, 12034, 12)
-CheckMemberSize(struct _GParamSpecValueArray,element_spec,8,12,42261)
-CheckOffset(struct _GParamSpecValueArray,element_spec,72,12,42261)
-CheckMemberSize(struct _GParamSpecValueArray,fixed_n_elements,4,12,42262)
-CheckOffset(struct _GParamSpecValueArray,fixed_n_elements,80,12,42262)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12034,0);
-Msg("Find size of _GParamSpecValueArray (12034)\n");
+CheckTypeSize(struct _GParamSpecValueArray,88, 12034, 12);
+CheckMemberSize(struct _GParamSpecValueArray,element_spec,8,12,42261);
+CheckOffset(struct _GParamSpecValueArray,element_spec,72,12,42261);
+CheckMemberSize(struct _GParamSpecValueArray,fixed_n_elements,4,12,42262);
+CheckOffset(struct _GParamSpecValueArray,fixed_n_elements,80,12,42262);
+#elif 1
+CheckTypeSize(struct _GParamSpecValueArray,0, 12034, 1);
+Msg("Missing member data for _GParamSpecValueArray on All\n");
+CheckOffset(struct _GParamSpecValueArray,parent_instance,0,1,42260);
+CheckOffset(struct _GParamSpecValueArray,element_spec,0,1,42261);
+CheckOffset(struct _GParamSpecValueArray,fixed_n_elements,0,1,42262);
 #endif
 
 #if __i386__
-CheckTypeSize(GParamSpecValueArray,48, 12035, 2)
+CheckTypeSize(GParamSpecValueArray,48, 12035, 2);
 #elif __x86_64__
-CheckTypeSize(GParamSpecValueArray,88, 12035, 11)
+CheckTypeSize(GParamSpecValueArray,88, 12035, 11);
 #elif __ia64__
-CheckTypeSize(GParamSpecValueArray,88, 12035, 3)
+CheckTypeSize(GParamSpecValueArray,88, 12035, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpecValueArray,48, 12035, 6)
+CheckTypeSize(GParamSpecValueArray,48, 12035, 6);
 #elif __powerpc64__
-CheckTypeSize(GParamSpecValueArray,88, 12035, 9)
+CheckTypeSize(GParamSpecValueArray,88, 12035, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpecValueArray,48, 12035, 10)
+CheckTypeSize(GParamSpecValueArray,48, 12035, 10);
 #elif __s390x__
-CheckTypeSize(GParamSpecValueArray,88, 12035, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12035,0);
-Msg("Find size of GParamSpecValueArray (12035)\n");
+CheckTypeSize(GParamSpecValueArray,88, 12035, 12);
+#elif 1
+CheckTypeSize(GParamSpecValueArray,0, 12035, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GParamSpecFlags,48, 12036, 2)
-CheckMemberSize(struct _GParamSpecFlags,flags_class,4,2,42264)
-CheckOffset(struct _GParamSpecFlags,flags_class,40,2,42264)
-CheckMemberSize(struct _GParamSpecFlags,default_value,4,2,42265)
-CheckOffset(struct _GParamSpecFlags,default_value,44,2,42265)
+CheckTypeSize(struct _GParamSpecFlags,48, 12036, 2);
+CheckMemberSize(struct _GParamSpecFlags,flags_class,4,2,42264);
+CheckOffset(struct _GParamSpecFlags,flags_class,40,2,42264);
+CheckMemberSize(struct _GParamSpecFlags,default_value,4,2,42265);
+CheckOffset(struct _GParamSpecFlags,default_value,44,2,42265);
 #elif __x86_64__
-CheckTypeSize(struct _GParamSpecFlags,88, 12036, 11)
-CheckMemberSize(struct _GParamSpecFlags,flags_class,8,11,42264)
-CheckOffset(struct _GParamSpecFlags,flags_class,72,11,42264)
-CheckMemberSize(struct _GParamSpecFlags,default_value,4,11,42265)
-CheckOffset(struct _GParamSpecFlags,default_value,80,11,42265)
+CheckTypeSize(struct _GParamSpecFlags,88, 12036, 11);
+CheckMemberSize(struct _GParamSpecFlags,flags_class,8,11,42264);
+CheckOffset(struct _GParamSpecFlags,flags_class,72,11,42264);
+CheckMemberSize(struct _GParamSpecFlags,default_value,4,11,42265);
+CheckOffset(struct _GParamSpecFlags,default_value,80,11,42265);
 #elif __ia64__
-CheckTypeSize(struct _GParamSpecFlags,88, 12036, 3)
-CheckMemberSize(struct _GParamSpecFlags,flags_class,8,3,42264)
-CheckOffset(struct _GParamSpecFlags,flags_class,72,3,42264)
-CheckMemberSize(struct _GParamSpecFlags,default_value,4,3,42265)
-CheckOffset(struct _GParamSpecFlags,default_value,80,3,42265)
+CheckTypeSize(struct _GParamSpecFlags,88, 12036, 3);
+CheckMemberSize(struct _GParamSpecFlags,flags_class,8,3,42264);
+CheckOffset(struct _GParamSpecFlags,flags_class,72,3,42264);
+CheckMemberSize(struct _GParamSpecFlags,default_value,4,3,42265);
+CheckOffset(struct _GParamSpecFlags,default_value,80,3,42265);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GParamSpecFlags,48, 12036, 6)
-CheckMemberSize(struct _GParamSpecFlags,flags_class,4,6,42264)
-CheckOffset(struct _GParamSpecFlags,flags_class,40,6,42264)
-CheckMemberSize(struct _GParamSpecFlags,default_value,4,6,42265)
-CheckOffset(struct _GParamSpecFlags,default_value,44,6,42265)
+CheckTypeSize(struct _GParamSpecFlags,48, 12036, 6);
+CheckMemberSize(struct _GParamSpecFlags,flags_class,4,6,42264);
+CheckOffset(struct _GParamSpecFlags,flags_class,40,6,42264);
+CheckMemberSize(struct _GParamSpecFlags,default_value,4,6,42265);
+CheckOffset(struct _GParamSpecFlags,default_value,44,6,42265);
 #elif __powerpc64__
-CheckTypeSize(struct _GParamSpecFlags,88, 12036, 9)
-CheckMemberSize(struct _GParamSpecFlags,flags_class,8,9,42264)
-CheckOffset(struct _GParamSpecFlags,flags_class,72,9,42264)
-CheckMemberSize(struct _GParamSpecFlags,default_value,4,9,42265)
-CheckOffset(struct _GParamSpecFlags,default_value,80,9,42265)
+CheckTypeSize(struct _GParamSpecFlags,88, 12036, 9);
+CheckMemberSize(struct _GParamSpecFlags,flags_class,8,9,42264);
+CheckOffset(struct _GParamSpecFlags,flags_class,72,9,42264);
+CheckMemberSize(struct _GParamSpecFlags,default_value,4,9,42265);
+CheckOffset(struct _GParamSpecFlags,default_value,80,9,42265);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GParamSpecFlags,48, 12036, 10)
-CheckMemberSize(struct _GParamSpecFlags,flags_class,4,10,42264)
-CheckOffset(struct _GParamSpecFlags,flags_class,40,10,42264)
-CheckMemberSize(struct _GParamSpecFlags,default_value,4,10,42265)
-CheckOffset(struct _GParamSpecFlags,default_value,44,10,42265)
+CheckTypeSize(struct _GParamSpecFlags,48, 12036, 10);
+CheckMemberSize(struct _GParamSpecFlags,flags_class,4,10,42264);
+CheckOffset(struct _GParamSpecFlags,flags_class,40,10,42264);
+CheckMemberSize(struct _GParamSpecFlags,default_value,4,10,42265);
+CheckOffset(struct _GParamSpecFlags,default_value,44,10,42265);
 #elif __s390x__
-CheckTypeSize(struct _GParamSpecFlags,88, 12036, 12)
-CheckMemberSize(struct _GParamSpecFlags,flags_class,8,12,42264)
-CheckOffset(struct _GParamSpecFlags,flags_class,72,12,42264)
-CheckMemberSize(struct _GParamSpecFlags,default_value,4,12,42265)
-CheckOffset(struct _GParamSpecFlags,default_value,80,12,42265)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12036,0);
-Msg("Find size of _GParamSpecFlags (12036)\n");
+CheckTypeSize(struct _GParamSpecFlags,88, 12036, 12);
+CheckMemberSize(struct _GParamSpecFlags,flags_class,8,12,42264);
+CheckOffset(struct _GParamSpecFlags,flags_class,72,12,42264);
+CheckMemberSize(struct _GParamSpecFlags,default_value,4,12,42265);
+CheckOffset(struct _GParamSpecFlags,default_value,80,12,42265);
+#elif 1
+CheckTypeSize(struct _GParamSpecFlags,0, 12036, 1);
+Msg("Missing member data for _GParamSpecFlags on All\n");
+CheckOffset(struct _GParamSpecFlags,parent_instance,0,1,42263);
+CheckOffset(struct _GParamSpecFlags,flags_class,0,1,42264);
+CheckOffset(struct _GParamSpecFlags,default_value,0,1,42265);
 #endif
 
 #if __i386__
-CheckTypeSize(GParamSpecFlags,48, 12037, 2)
+CheckTypeSize(GParamSpecFlags,48, 12037, 2);
 #elif __x86_64__
-CheckTypeSize(GParamSpecFlags,88, 12037, 11)
+CheckTypeSize(GParamSpecFlags,88, 12037, 11);
 #elif __ia64__
-CheckTypeSize(GParamSpecFlags,88, 12037, 3)
+CheckTypeSize(GParamSpecFlags,88, 12037, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpecFlags,48, 12037, 6)
+CheckTypeSize(GParamSpecFlags,48, 12037, 6);
 #elif __powerpc64__
-CheckTypeSize(GParamSpecFlags,88, 12037, 9)
+CheckTypeSize(GParamSpecFlags,88, 12037, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpecFlags,48, 12037, 10)
+CheckTypeSize(GParamSpecFlags,48, 12037, 10);
 #elif __s390x__
-CheckTypeSize(GParamSpecFlags,88, 12037, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12037,0);
-Msg("Find size of GParamSpecFlags (12037)\n");
+CheckTypeSize(GParamSpecFlags,88, 12037, 12);
+#elif 1
+CheckTypeSize(GParamSpecFlags,0, 12037, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GParamSpecInt64,64, 12038, 2)
-CheckMemberSize(struct _GParamSpecInt64,minimum,8,2,42267)
-CheckOffset(struct _GParamSpecInt64,minimum,40,2,42267)
-CheckMemberSize(struct _GParamSpecInt64,maximum,8,2,42268)
-CheckOffset(struct _GParamSpecInt64,maximum,48,2,42268)
-CheckMemberSize(struct _GParamSpecInt64,default_value,8,2,42269)
-CheckOffset(struct _GParamSpecInt64,default_value,56,2,42269)
+CheckTypeSize(struct _GParamSpecInt64,64, 12038, 2);
+CheckMemberSize(struct _GParamSpecInt64,minimum,8,2,42267);
+CheckOffset(struct _GParamSpecInt64,minimum,40,2,42267);
+CheckMemberSize(struct _GParamSpecInt64,maximum,8,2,42268);
+CheckOffset(struct _GParamSpecInt64,maximum,48,2,42268);
+CheckMemberSize(struct _GParamSpecInt64,default_value,8,2,42269);
+CheckOffset(struct _GParamSpecInt64,default_value,56,2,42269);
 #elif __x86_64__
-CheckTypeSize(struct _GParamSpecInt64,96, 12038, 11)
-CheckMemberSize(struct _GParamSpecInt64,minimum,8,11,42267)
-CheckOffset(struct _GParamSpecInt64,minimum,72,11,42267)
-CheckMemberSize(struct _GParamSpecInt64,maximum,8,11,42268)
-CheckOffset(struct _GParamSpecInt64,maximum,80,11,42268)
-CheckMemberSize(struct _GParamSpecInt64,default_value,8,11,42269)
-CheckOffset(struct _GParamSpecInt64,default_value,88,11,42269)
+CheckTypeSize(struct _GParamSpecInt64,96, 12038, 11);
+CheckMemberSize(struct _GParamSpecInt64,minimum,8,11,42267);
+CheckOffset(struct _GParamSpecInt64,minimum,72,11,42267);
+CheckMemberSize(struct _GParamSpecInt64,maximum,8,11,42268);
+CheckOffset(struct _GParamSpecInt64,maximum,80,11,42268);
+CheckMemberSize(struct _GParamSpecInt64,default_value,8,11,42269);
+CheckOffset(struct _GParamSpecInt64,default_value,88,11,42269);
 #elif __ia64__
-CheckTypeSize(struct _GParamSpecInt64,96, 12038, 3)
-CheckMemberSize(struct _GParamSpecInt64,minimum,8,3,42267)
-CheckOffset(struct _GParamSpecInt64,minimum,72,3,42267)
-CheckMemberSize(struct _GParamSpecInt64,maximum,8,3,42268)
-CheckOffset(struct _GParamSpecInt64,maximum,80,3,42268)
-CheckMemberSize(struct _GParamSpecInt64,default_value,8,3,42269)
-CheckOffset(struct _GParamSpecInt64,default_value,88,3,42269)
+CheckTypeSize(struct _GParamSpecInt64,96, 12038, 3);
+CheckMemberSize(struct _GParamSpecInt64,minimum,8,3,42267);
+CheckOffset(struct _GParamSpecInt64,minimum,72,3,42267);
+CheckMemberSize(struct _GParamSpecInt64,maximum,8,3,42268);
+CheckOffset(struct _GParamSpecInt64,maximum,80,3,42268);
+CheckMemberSize(struct _GParamSpecInt64,default_value,8,3,42269);
+CheckOffset(struct _GParamSpecInt64,default_value,88,3,42269);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GParamSpecInt64,64, 12038, 6)
-CheckMemberSize(struct _GParamSpecInt64,minimum,8,6,42267)
-CheckOffset(struct _GParamSpecInt64,minimum,40,6,42267)
-CheckMemberSize(struct _GParamSpecInt64,maximum,8,6,42268)
-CheckOffset(struct _GParamSpecInt64,maximum,48,6,42268)
-CheckMemberSize(struct _GParamSpecInt64,default_value,8,6,42269)
-CheckOffset(struct _GParamSpecInt64,default_value,56,6,42269)
+CheckTypeSize(struct _GParamSpecInt64,64, 12038, 6);
+CheckMemberSize(struct _GParamSpecInt64,minimum,8,6,42267);
+CheckOffset(struct _GParamSpecInt64,minimum,40,6,42267);
+CheckMemberSize(struct _GParamSpecInt64,maximum,8,6,42268);
+CheckOffset(struct _GParamSpecInt64,maximum,48,6,42268);
+CheckMemberSize(struct _GParamSpecInt64,default_value,8,6,42269);
+CheckOffset(struct _GParamSpecInt64,default_value,56,6,42269);
 #elif __powerpc64__
-CheckTypeSize(struct _GParamSpecInt64,96, 12038, 9)
-CheckMemberSize(struct _GParamSpecInt64,minimum,8,9,42267)
-CheckOffset(struct _GParamSpecInt64,minimum,72,9,42267)
-CheckMemberSize(struct _GParamSpecInt64,maximum,8,9,42268)
-CheckOffset(struct _GParamSpecInt64,maximum,80,9,42268)
-CheckMemberSize(struct _GParamSpecInt64,default_value,8,9,42269)
-CheckOffset(struct _GParamSpecInt64,default_value,88,9,42269)
+CheckTypeSize(struct _GParamSpecInt64,96, 12038, 9);
+CheckMemberSize(struct _GParamSpecInt64,minimum,8,9,42267);
+CheckOffset(struct _GParamSpecInt64,minimum,72,9,42267);
+CheckMemberSize(struct _GParamSpecInt64,maximum,8,9,42268);
+CheckOffset(struct _GParamSpecInt64,maximum,80,9,42268);
+CheckMemberSize(struct _GParamSpecInt64,default_value,8,9,42269);
+CheckOffset(struct _GParamSpecInt64,default_value,88,9,42269);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GParamSpecInt64,64, 12038, 10)
-CheckMemberSize(struct _GParamSpecInt64,minimum,8,10,42267)
-CheckOffset(struct _GParamSpecInt64,minimum,40,10,42267)
-CheckMemberSize(struct _GParamSpecInt64,maximum,8,10,42268)
-CheckOffset(struct _GParamSpecInt64,maximum,48,10,42268)
-CheckMemberSize(struct _GParamSpecInt64,default_value,8,10,42269)
-CheckOffset(struct _GParamSpecInt64,default_value,56,10,42269)
+CheckTypeSize(struct _GParamSpecInt64,64, 12038, 10);
+CheckMemberSize(struct _GParamSpecInt64,minimum,8,10,42267);
+CheckOffset(struct _GParamSpecInt64,minimum,40,10,42267);
+CheckMemberSize(struct _GParamSpecInt64,maximum,8,10,42268);
+CheckOffset(struct _GParamSpecInt64,maximum,48,10,42268);
+CheckMemberSize(struct _GParamSpecInt64,default_value,8,10,42269);
+CheckOffset(struct _GParamSpecInt64,default_value,56,10,42269);
 #elif __s390x__
-CheckTypeSize(struct _GParamSpecInt64,96, 12038, 12)
-CheckMemberSize(struct _GParamSpecInt64,minimum,8,12,42267)
-CheckOffset(struct _GParamSpecInt64,minimum,72,12,42267)
-CheckMemberSize(struct _GParamSpecInt64,maximum,8,12,42268)
-CheckOffset(struct _GParamSpecInt64,maximum,80,12,42268)
-CheckMemberSize(struct _GParamSpecInt64,default_value,8,12,42269)
-CheckOffset(struct _GParamSpecInt64,default_value,88,12,42269)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12038,0);
-Msg("Find size of _GParamSpecInt64 (12038)\n");
+CheckTypeSize(struct _GParamSpecInt64,96, 12038, 12);
+CheckMemberSize(struct _GParamSpecInt64,minimum,8,12,42267);
+CheckOffset(struct _GParamSpecInt64,minimum,72,12,42267);
+CheckMemberSize(struct _GParamSpecInt64,maximum,8,12,42268);
+CheckOffset(struct _GParamSpecInt64,maximum,80,12,42268);
+CheckMemberSize(struct _GParamSpecInt64,default_value,8,12,42269);
+CheckOffset(struct _GParamSpecInt64,default_value,88,12,42269);
+#elif 1
+CheckTypeSize(struct _GParamSpecInt64,0, 12038, 1);
+Msg("Missing member data for _GParamSpecInt64 on All\n");
+CheckOffset(struct _GParamSpecInt64,parent_instance,0,1,42266);
+CheckOffset(struct _GParamSpecInt64,minimum,0,1,42267);
+CheckOffset(struct _GParamSpecInt64,maximum,0,1,42268);
+CheckOffset(struct _GParamSpecInt64,default_value,0,1,42269);
 #endif
 
 #if __i386__
-CheckTypeSize(GParamSpecInt64,64, 12039, 2)
+CheckTypeSize(GParamSpecInt64,64, 12039, 2);
 #elif __x86_64__
-CheckTypeSize(GParamSpecInt64,96, 12039, 11)
+CheckTypeSize(GParamSpecInt64,96, 12039, 11);
 #elif __ia64__
-CheckTypeSize(GParamSpecInt64,96, 12039, 3)
+CheckTypeSize(GParamSpecInt64,96, 12039, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpecInt64,64, 12039, 6)
+CheckTypeSize(GParamSpecInt64,64, 12039, 6);
 #elif __powerpc64__
-CheckTypeSize(GParamSpecInt64,96, 12039, 9)
+CheckTypeSize(GParamSpecInt64,96, 12039, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpecInt64,64, 12039, 10)
+CheckTypeSize(GParamSpecInt64,64, 12039, 10);
 #elif __s390x__
-CheckTypeSize(GParamSpecInt64,96, 12039, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12039,0);
-Msg("Find size of GParamSpecInt64 (12039)\n");
+CheckTypeSize(GParamSpecInt64,96, 12039, 12);
+#elif 1
+CheckTypeSize(GParamSpecInt64,0, 12039, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GParamSpecPointer,40, 12040, 2)
+CheckTypeSize(struct _GParamSpecPointer,40, 12040, 2);
 Msg("Missing member data for _GParamSpecPointer on IA32\n");
-CheckOffset(struct _GParamSpecPointer,parent_instance,0,2,42270)
+CheckOffset(struct _GParamSpecPointer,parent_instance,0,2,42270);
 #elif __x86_64__
-CheckTypeSize(struct _GParamSpecPointer,72, 12040, 11)
+CheckTypeSize(struct _GParamSpecPointer,72, 12040, 11);
 Msg("Missing member data for _GParamSpecPointer on x86-64\n");
-CheckOffset(struct _GParamSpecPointer,parent_instance,0,11,42270)
+CheckOffset(struct _GParamSpecPointer,parent_instance,0,11,42270);
 #elif __ia64__
-CheckTypeSize(struct _GParamSpecPointer,72, 12040, 3)
+CheckTypeSize(struct _GParamSpecPointer,72, 12040, 3);
 Msg("Missing member data for _GParamSpecPointer on IA64\n");
-CheckOffset(struct _GParamSpecPointer,parent_instance,0,3,42270)
+CheckOffset(struct _GParamSpecPointer,parent_instance,0,3,42270);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GParamSpecPointer,40, 12040, 6)
+CheckTypeSize(struct _GParamSpecPointer,40, 12040, 6);
 Msg("Missing member data for _GParamSpecPointer on PPC32\n");
-CheckOffset(struct _GParamSpecPointer,parent_instance,0,6,42270)
+CheckOffset(struct _GParamSpecPointer,parent_instance,0,6,42270);
 #elif __powerpc64__
-CheckTypeSize(struct _GParamSpecPointer,72, 12040, 9)
+CheckTypeSize(struct _GParamSpecPointer,72, 12040, 9);
 Msg("Missing member data for _GParamSpecPointer on PPC64\n");
-CheckOffset(struct _GParamSpecPointer,parent_instance,0,9,42270)
+CheckOffset(struct _GParamSpecPointer,parent_instance,0,9,42270);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GParamSpecPointer,40, 12040, 10)
+CheckTypeSize(struct _GParamSpecPointer,40, 12040, 10);
 Msg("Missing member data for _GParamSpecPointer on S390\n");
-CheckOffset(struct _GParamSpecPointer,parent_instance,0,10,42270)
+CheckOffset(struct _GParamSpecPointer,parent_instance,0,10,42270);
 #elif __s390x__
-CheckTypeSize(struct _GParamSpecPointer,72, 12040, 12)
+CheckTypeSize(struct _GParamSpecPointer,72, 12040, 12);
 Msg("Missing member data for _GParamSpecPointer on S390X\n");
-CheckOffset(struct _GParamSpecPointer,parent_instance,0,12,42270)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12040,0);
-Msg("Find size of _GParamSpecPointer (12040)\n");
+CheckOffset(struct _GParamSpecPointer,parent_instance,0,12,42270);
+#elif 1
+CheckTypeSize(struct _GParamSpecPointer,0, 12040, 1);
+Msg("Missing member data for _GParamSpecPointer on All\n");
+CheckOffset(struct _GParamSpecPointer,parent_instance,0,1,42270);
 #endif
 
 #if __i386__
-CheckTypeSize(GParamSpecPointer,40, 12041, 2)
+CheckTypeSize(GParamSpecPointer,40, 12041, 2);
 #elif __x86_64__
-CheckTypeSize(GParamSpecPointer,72, 12041, 11)
+CheckTypeSize(GParamSpecPointer,72, 12041, 11);
 #elif __ia64__
-CheckTypeSize(GParamSpecPointer,72, 12041, 3)
+CheckTypeSize(GParamSpecPointer,72, 12041, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpecPointer,40, 12041, 6)
+CheckTypeSize(GParamSpecPointer,40, 12041, 6);
 #elif __powerpc64__
-CheckTypeSize(GParamSpecPointer,72, 12041, 9)
+CheckTypeSize(GParamSpecPointer,72, 12041, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpecPointer,40, 12041, 10)
+CheckTypeSize(GParamSpecPointer,40, 12041, 10);
 #elif __s390x__
-CheckTypeSize(GParamSpecPointer,72, 12041, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12041,0);
-Msg("Find size of GParamSpecPointer (12041)\n");
+CheckTypeSize(GParamSpecPointer,72, 12041, 12);
+#elif 1
+CheckTypeSize(GParamSpecPointer,0, 12041, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GParamSpecInt,52, 12042, 2)
-CheckMemberSize(struct _GParamSpecInt,minimum,4,2,42272)
-CheckOffset(struct _GParamSpecInt,minimum,40,2,42272)
-CheckMemberSize(struct _GParamSpecInt,maximum,4,2,42273)
-CheckOffset(struct _GParamSpecInt,maximum,44,2,42273)
-CheckMemberSize(struct _GParamSpecInt,default_value,4,2,42274)
-CheckOffset(struct _GParamSpecInt,default_value,48,2,42274)
+CheckTypeSize(struct _GParamSpecInt,52, 12042, 2);
+CheckMemberSize(struct _GParamSpecInt,minimum,4,2,42272);
+CheckOffset(struct _GParamSpecInt,minimum,40,2,42272);
+CheckMemberSize(struct _GParamSpecInt,maximum,4,2,42273);
+CheckOffset(struct _GParamSpecInt,maximum,44,2,42273);
+CheckMemberSize(struct _GParamSpecInt,default_value,4,2,42274);
+CheckOffset(struct _GParamSpecInt,default_value,48,2,42274);
 #elif __x86_64__
-CheckTypeSize(struct _GParamSpecInt,88, 12042, 11)
-CheckMemberSize(struct _GParamSpecInt,minimum,4,11,42272)
-CheckOffset(struct _GParamSpecInt,minimum,72,11,42272)
-CheckMemberSize(struct _GParamSpecInt,maximum,4,11,42273)
-CheckOffset(struct _GParamSpecInt,maximum,76,11,42273)
-CheckMemberSize(struct _GParamSpecInt,default_value,4,11,42274)
-CheckOffset(struct _GParamSpecInt,default_value,80,11,42274)
+CheckTypeSize(struct _GParamSpecInt,88, 12042, 11);
+CheckMemberSize(struct _GParamSpecInt,minimum,4,11,42272);
+CheckOffset(struct _GParamSpecInt,minimum,72,11,42272);
+CheckMemberSize(struct _GParamSpecInt,maximum,4,11,42273);
+CheckOffset(struct _GParamSpecInt,maximum,76,11,42273);
+CheckMemberSize(struct _GParamSpecInt,default_value,4,11,42274);
+CheckOffset(struct _GParamSpecInt,default_value,80,11,42274);
 #elif __ia64__
-CheckTypeSize(struct _GParamSpecInt,88, 12042, 3)
-CheckMemberSize(struct _GParamSpecInt,minimum,4,3,42272)
-CheckOffset(struct _GParamSpecInt,minimum,72,3,42272)
-CheckMemberSize(struct _GParamSpecInt,maximum,4,3,42273)
-CheckOffset(struct _GParamSpecInt,maximum,76,3,42273)
-CheckMemberSize(struct _GParamSpecInt,default_value,4,3,42274)
-CheckOffset(struct _GParamSpecInt,default_value,80,3,42274)
+CheckTypeSize(struct _GParamSpecInt,88, 12042, 3);
+CheckMemberSize(struct _GParamSpecInt,minimum,4,3,42272);
+CheckOffset(struct _GParamSpecInt,minimum,72,3,42272);
+CheckMemberSize(struct _GParamSpecInt,maximum,4,3,42273);
+CheckOffset(struct _GParamSpecInt,maximum,76,3,42273);
+CheckMemberSize(struct _GParamSpecInt,default_value,4,3,42274);
+CheckOffset(struct _GParamSpecInt,default_value,80,3,42274);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GParamSpecInt,52, 12042, 6)
-CheckMemberSize(struct _GParamSpecInt,minimum,4,6,42272)
-CheckOffset(struct _GParamSpecInt,minimum,40,6,42272)
-CheckMemberSize(struct _GParamSpecInt,maximum,4,6,42273)
-CheckOffset(struct _GParamSpecInt,maximum,44,6,42273)
-CheckMemberSize(struct _GParamSpecInt,default_value,4,6,42274)
-CheckOffset(struct _GParamSpecInt,default_value,48,6,42274)
+CheckTypeSize(struct _GParamSpecInt,52, 12042, 6);
+CheckMemberSize(struct _GParamSpecInt,minimum,4,6,42272);
+CheckOffset(struct _GParamSpecInt,minimum,40,6,42272);
+CheckMemberSize(struct _GParamSpecInt,maximum,4,6,42273);
+CheckOffset(struct _GParamSpecInt,maximum,44,6,42273);
+CheckMemberSize(struct _GParamSpecInt,default_value,4,6,42274);
+CheckOffset(struct _GParamSpecInt,default_value,48,6,42274);
 #elif __powerpc64__
-CheckTypeSize(struct _GParamSpecInt,88, 12042, 9)
-CheckMemberSize(struct _GParamSpecInt,minimum,4,9,42272)
-CheckOffset(struct _GParamSpecInt,minimum,72,9,42272)
-CheckMemberSize(struct _GParamSpecInt,maximum,4,9,42273)
-CheckOffset(struct _GParamSpecInt,maximum,76,9,42273)
-CheckMemberSize(struct _GParamSpecInt,default_value,4,9,42274)
-CheckOffset(struct _GParamSpecInt,default_value,80,9,42274)
+CheckTypeSize(struct _GParamSpecInt,88, 12042, 9);
+CheckMemberSize(struct _GParamSpecInt,minimum,4,9,42272);
+CheckOffset(struct _GParamSpecInt,minimum,72,9,42272);
+CheckMemberSize(struct _GParamSpecInt,maximum,4,9,42273);
+CheckOffset(struct _GParamSpecInt,maximum,76,9,42273);
+CheckMemberSize(struct _GParamSpecInt,default_value,4,9,42274);
+CheckOffset(struct _GParamSpecInt,default_value,80,9,42274);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GParamSpecInt,52, 12042, 10)
-CheckMemberSize(struct _GParamSpecInt,minimum,4,10,42272)
-CheckOffset(struct _GParamSpecInt,minimum,40,10,42272)
-CheckMemberSize(struct _GParamSpecInt,maximum,4,10,42273)
-CheckOffset(struct _GParamSpecInt,maximum,44,10,42273)
-CheckMemberSize(struct _GParamSpecInt,default_value,4,10,42274)
-CheckOffset(struct _GParamSpecInt,default_value,48,10,42274)
+CheckTypeSize(struct _GParamSpecInt,52, 12042, 10);
+CheckMemberSize(struct _GParamSpecInt,minimum,4,10,42272);
+CheckOffset(struct _GParamSpecInt,minimum,40,10,42272);
+CheckMemberSize(struct _GParamSpecInt,maximum,4,10,42273);
+CheckOffset(struct _GParamSpecInt,maximum,44,10,42273);
+CheckMemberSize(struct _GParamSpecInt,default_value,4,10,42274);
+CheckOffset(struct _GParamSpecInt,default_value,48,10,42274);
 #elif __s390x__
-CheckTypeSize(struct _GParamSpecInt,88, 12042, 12)
-CheckMemberSize(struct _GParamSpecInt,minimum,4,12,42272)
-CheckOffset(struct _GParamSpecInt,minimum,72,12,42272)
-CheckMemberSize(struct _GParamSpecInt,maximum,4,12,42273)
-CheckOffset(struct _GParamSpecInt,maximum,76,12,42273)
-CheckMemberSize(struct _GParamSpecInt,default_value,4,12,42274)
-CheckOffset(struct _GParamSpecInt,default_value,80,12,42274)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12042,0);
-Msg("Find size of _GParamSpecInt (12042)\n");
+CheckTypeSize(struct _GParamSpecInt,88, 12042, 12);
+CheckMemberSize(struct _GParamSpecInt,minimum,4,12,42272);
+CheckOffset(struct _GParamSpecInt,minimum,72,12,42272);
+CheckMemberSize(struct _GParamSpecInt,maximum,4,12,42273);
+CheckOffset(struct _GParamSpecInt,maximum,76,12,42273);
+CheckMemberSize(struct _GParamSpecInt,default_value,4,12,42274);
+CheckOffset(struct _GParamSpecInt,default_value,80,12,42274);
+#elif 1
+CheckTypeSize(struct _GParamSpecInt,0, 12042, 1);
+Msg("Missing member data for _GParamSpecInt on All\n");
+CheckOffset(struct _GParamSpecInt,parent_instance,0,1,42271);
+CheckOffset(struct _GParamSpecInt,minimum,0,1,42272);
+CheckOffset(struct _GParamSpecInt,maximum,0,1,42273);
+CheckOffset(struct _GParamSpecInt,default_value,0,1,42274);
 #endif
 
 #if __i386__
-CheckTypeSize(GParamSpecInt,52, 12043, 2)
+CheckTypeSize(GParamSpecInt,52, 12043, 2);
 #elif __x86_64__
-CheckTypeSize(GParamSpecInt,88, 12043, 11)
+CheckTypeSize(GParamSpecInt,88, 12043, 11);
 #elif __ia64__
-CheckTypeSize(GParamSpecInt,88, 12043, 3)
+CheckTypeSize(GParamSpecInt,88, 12043, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpecInt,52, 12043, 6)
+CheckTypeSize(GParamSpecInt,52, 12043, 6);
 #elif __powerpc64__
-CheckTypeSize(GParamSpecInt,88, 12043, 9)
+CheckTypeSize(GParamSpecInt,88, 12043, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpecInt,52, 12043, 10)
+CheckTypeSize(GParamSpecInt,52, 12043, 10);
 #elif __s390x__
-CheckTypeSize(GParamSpecInt,88, 12043, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12043,0);
-Msg("Find size of GParamSpecInt (12043)\n");
+CheckTypeSize(GParamSpecInt,88, 12043, 12);
+#elif 1
+CheckTypeSize(GParamSpecInt,0, 12043, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GTypeModuleClass,92, 12044, 2)
-CheckMemberSize(struct _GTypeModuleClass,load,4,2,42277)
-CheckOffset(struct _GTypeModuleClass,load,68,2,42277)
-CheckMemberSize(struct _GTypeModuleClass,unload,4,2,42279)
-CheckOffset(struct _GTypeModuleClass,unload,72,2,42279)
-CheckMemberSize(struct _GTypeModuleClass,reserved1,4,2,42280)
-CheckOffset(struct _GTypeModuleClass,reserved1,76,2,42280)
-CheckMemberSize(struct _GTypeModuleClass,reserved2,4,2,42281)
-CheckOffset(struct _GTypeModuleClass,reserved2,80,2,42281)
-CheckMemberSize(struct _GTypeModuleClass,reserved3,4,2,42282)
-CheckOffset(struct _GTypeModuleClass,reserved3,84,2,42282)
-CheckMemberSize(struct _GTypeModuleClass,reserved4,4,2,42283)
-CheckOffset(struct _GTypeModuleClass,reserved4,88,2,42283)
+CheckTypeSize(struct _GTypeModuleClass,92, 12044, 2);
+CheckMemberSize(struct _GTypeModuleClass,load,4,2,42277);
+CheckOffset(struct _GTypeModuleClass,load,68,2,42277);
+CheckMemberSize(struct _GTypeModuleClass,unload,4,2,42279);
+CheckOffset(struct _GTypeModuleClass,unload,72,2,42279);
+CheckMemberSize(struct _GTypeModuleClass,reserved1,4,2,42280);
+CheckOffset(struct _GTypeModuleClass,reserved1,76,2,42280);
+CheckMemberSize(struct _GTypeModuleClass,reserved2,4,2,42281);
+CheckOffset(struct _GTypeModuleClass,reserved2,80,2,42281);
+CheckMemberSize(struct _GTypeModuleClass,reserved3,4,2,42282);
+CheckOffset(struct _GTypeModuleClass,reserved3,84,2,42282);
+CheckMemberSize(struct _GTypeModuleClass,reserved4,4,2,42283);
+CheckOffset(struct _GTypeModuleClass,reserved4,88,2,42283);
 #elif __x86_64__
-CheckTypeSize(struct _GTypeModuleClass,184, 12044, 11)
-CheckMemberSize(struct _GTypeModuleClass,load,8,11,42277)
-CheckOffset(struct _GTypeModuleClass,load,136,11,42277)
-CheckMemberSize(struct _GTypeModuleClass,unload,8,11,42279)
-CheckOffset(struct _GTypeModuleClass,unload,144,11,42279)
-CheckMemberSize(struct _GTypeModuleClass,reserved1,8,11,42280)
-CheckOffset(struct _GTypeModuleClass,reserved1,152,11,42280)
-CheckMemberSize(struct _GTypeModuleClass,reserved2,8,11,42281)
-CheckOffset(struct _GTypeModuleClass,reserved2,160,11,42281)
-CheckMemberSize(struct _GTypeModuleClass,reserved3,8,11,42282)
-CheckOffset(struct _GTypeModuleClass,reserved3,168,11,42282)
-CheckMemberSize(struct _GTypeModuleClass,reserved4,8,11,42283)
-CheckOffset(struct _GTypeModuleClass,reserved4,176,11,42283)
+CheckTypeSize(struct _GTypeModuleClass,184, 12044, 11);
+CheckMemberSize(struct _GTypeModuleClass,load,8,11,42277);
+CheckOffset(struct _GTypeModuleClass,load,136,11,42277);
+CheckMemberSize(struct _GTypeModuleClass,unload,8,11,42279);
+CheckOffset(struct _GTypeModuleClass,unload,144,11,42279);
+CheckMemberSize(struct _GTypeModuleClass,reserved1,8,11,42280);
+CheckOffset(struct _GTypeModuleClass,reserved1,152,11,42280);
+CheckMemberSize(struct _GTypeModuleClass,reserved2,8,11,42281);
+CheckOffset(struct _GTypeModuleClass,reserved2,160,11,42281);
+CheckMemberSize(struct _GTypeModuleClass,reserved3,8,11,42282);
+CheckOffset(struct _GTypeModuleClass,reserved3,168,11,42282);
+CheckMemberSize(struct _GTypeModuleClass,reserved4,8,11,42283);
+CheckOffset(struct _GTypeModuleClass,reserved4,176,11,42283);
 #elif __ia64__
-CheckTypeSize(struct _GTypeModuleClass,184, 12044, 3)
-CheckMemberSize(struct _GTypeModuleClass,load,8,3,42277)
-CheckOffset(struct _GTypeModuleClass,load,136,3,42277)
-CheckMemberSize(struct _GTypeModuleClass,unload,8,3,42279)
-CheckOffset(struct _GTypeModuleClass,unload,144,3,42279)
-CheckMemberSize(struct _GTypeModuleClass,reserved1,8,3,42280)
-CheckOffset(struct _GTypeModuleClass,reserved1,152,3,42280)
-CheckMemberSize(struct _GTypeModuleClass,reserved2,8,3,42281)
-CheckOffset(struct _GTypeModuleClass,reserved2,160,3,42281)
-CheckMemberSize(struct _GTypeModuleClass,reserved3,8,3,42282)
-CheckOffset(struct _GTypeModuleClass,reserved3,168,3,42282)
-CheckMemberSize(struct _GTypeModuleClass,reserved4,8,3,42283)
-CheckOffset(struct _GTypeModuleClass,reserved4,176,3,42283)
+CheckTypeSize(struct _GTypeModuleClass,184, 12044, 3);
+CheckMemberSize(struct _GTypeModuleClass,load,8,3,42277);
+CheckOffset(struct _GTypeModuleClass,load,136,3,42277);
+CheckMemberSize(struct _GTypeModuleClass,unload,8,3,42279);
+CheckOffset(struct _GTypeModuleClass,unload,144,3,42279);
+CheckMemberSize(struct _GTypeModuleClass,reserved1,8,3,42280);
+CheckOffset(struct _GTypeModuleClass,reserved1,152,3,42280);
+CheckMemberSize(struct _GTypeModuleClass,reserved2,8,3,42281);
+CheckOffset(struct _GTypeModuleClass,reserved2,160,3,42281);
+CheckMemberSize(struct _GTypeModuleClass,reserved3,8,3,42282);
+CheckOffset(struct _GTypeModuleClass,reserved3,168,3,42282);
+CheckMemberSize(struct _GTypeModuleClass,reserved4,8,3,42283);
+CheckOffset(struct _GTypeModuleClass,reserved4,176,3,42283);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GTypeModuleClass,92, 12044, 6)
-CheckMemberSize(struct _GTypeModuleClass,load,4,6,42277)
-CheckOffset(struct _GTypeModuleClass,load,68,6,42277)
-CheckMemberSize(struct _GTypeModuleClass,unload,4,6,42279)
-CheckOffset(struct _GTypeModuleClass,unload,72,6,42279)
-CheckMemberSize(struct _GTypeModuleClass,reserved1,4,6,42280)
-CheckOffset(struct _GTypeModuleClass,reserved1,76,6,42280)
-CheckMemberSize(struct _GTypeModuleClass,reserved2,4,6,42281)
-CheckOffset(struct _GTypeModuleClass,reserved2,80,6,42281)
-CheckMemberSize(struct _GTypeModuleClass,reserved3,4,6,42282)
-CheckOffset(struct _GTypeModuleClass,reserved3,84,6,42282)
-CheckMemberSize(struct _GTypeModuleClass,reserved4,4,6,42283)
-CheckOffset(struct _GTypeModuleClass,reserved4,88,6,42283)
+CheckTypeSize(struct _GTypeModuleClass,92, 12044, 6);
+CheckMemberSize(struct _GTypeModuleClass,load,4,6,42277);
+CheckOffset(struct _GTypeModuleClass,load,68,6,42277);
+CheckMemberSize(struct _GTypeModuleClass,unload,4,6,42279);
+CheckOffset(struct _GTypeModuleClass,unload,72,6,42279);
+CheckMemberSize(struct _GTypeModuleClass,reserved1,4,6,42280);
+CheckOffset(struct _GTypeModuleClass,reserved1,76,6,42280);
+CheckMemberSize(struct _GTypeModuleClass,reserved2,4,6,42281);
+CheckOffset(struct _GTypeModuleClass,reserved2,80,6,42281);
+CheckMemberSize(struct _GTypeModuleClass,reserved3,4,6,42282);
+CheckOffset(struct _GTypeModuleClass,reserved3,84,6,42282);
+CheckMemberSize(struct _GTypeModuleClass,reserved4,4,6,42283);
+CheckOffset(struct _GTypeModuleClass,reserved4,88,6,42283);
 #elif __powerpc64__
-CheckTypeSize(struct _GTypeModuleClass,184, 12044, 9)
-CheckMemberSize(struct _GTypeModuleClass,load,8,9,42277)
-CheckOffset(struct _GTypeModuleClass,load,136,9,42277)
-CheckMemberSize(struct _GTypeModuleClass,unload,8,9,42279)
-CheckOffset(struct _GTypeModuleClass,unload,144,9,42279)
-CheckMemberSize(struct _GTypeModuleClass,reserved1,8,9,42280)
-CheckOffset(struct _GTypeModuleClass,reserved1,152,9,42280)
-CheckMemberSize(struct _GTypeModuleClass,reserved2,8,9,42281)
-CheckOffset(struct _GTypeModuleClass,reserved2,160,9,42281)
-CheckMemberSize(struct _GTypeModuleClass,reserved3,8,9,42282)
-CheckOffset(struct _GTypeModuleClass,reserved3,168,9,42282)
-CheckMemberSize(struct _GTypeModuleClass,reserved4,8,9,42283)
-CheckOffset(struct _GTypeModuleClass,reserved4,176,9,42283)
+CheckTypeSize(struct _GTypeModuleClass,184, 12044, 9);
+CheckMemberSize(struct _GTypeModuleClass,load,8,9,42277);
+CheckOffset(struct _GTypeModuleClass,load,136,9,42277);
+CheckMemberSize(struct _GTypeModuleClass,unload,8,9,42279);
+CheckOffset(struct _GTypeModuleClass,unload,144,9,42279);
+CheckMemberSize(struct _GTypeModuleClass,reserved1,8,9,42280);
+CheckOffset(struct _GTypeModuleClass,reserved1,152,9,42280);
+CheckMemberSize(struct _GTypeModuleClass,reserved2,8,9,42281);
+CheckOffset(struct _GTypeModuleClass,reserved2,160,9,42281);
+CheckMemberSize(struct _GTypeModuleClass,reserved3,8,9,42282);
+CheckOffset(struct _GTypeModuleClass,reserved3,168,9,42282);
+CheckMemberSize(struct _GTypeModuleClass,reserved4,8,9,42283);
+CheckOffset(struct _GTypeModuleClass,reserved4,176,9,42283);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GTypeModuleClass,92, 12044, 10)
-CheckMemberSize(struct _GTypeModuleClass,load,4,10,42277)
-CheckOffset(struct _GTypeModuleClass,load,68,10,42277)
-CheckMemberSize(struct _GTypeModuleClass,unload,4,10,42279)
-CheckOffset(struct _GTypeModuleClass,unload,72,10,42279)
-CheckMemberSize(struct _GTypeModuleClass,reserved1,4,10,42280)
-CheckOffset(struct _GTypeModuleClass,reserved1,76,10,42280)
-CheckMemberSize(struct _GTypeModuleClass,reserved2,4,10,42281)
-CheckOffset(struct _GTypeModuleClass,reserved2,80,10,42281)
-CheckMemberSize(struct _GTypeModuleClass,reserved3,4,10,42282)
-CheckOffset(struct _GTypeModuleClass,reserved3,84,10,42282)
-CheckMemberSize(struct _GTypeModuleClass,reserved4,4,10,42283)
-CheckOffset(struct _GTypeModuleClass,reserved4,88,10,42283)
+CheckTypeSize(struct _GTypeModuleClass,92, 12044, 10);
+CheckMemberSize(struct _GTypeModuleClass,load,4,10,42277);
+CheckOffset(struct _GTypeModuleClass,load,68,10,42277);
+CheckMemberSize(struct _GTypeModuleClass,unload,4,10,42279);
+CheckOffset(struct _GTypeModuleClass,unload,72,10,42279);
+CheckMemberSize(struct _GTypeModuleClass,reserved1,4,10,42280);
+CheckOffset(struct _GTypeModuleClass,reserved1,76,10,42280);
+CheckMemberSize(struct _GTypeModuleClass,reserved2,4,10,42281);
+CheckOffset(struct _GTypeModuleClass,reserved2,80,10,42281);
+CheckMemberSize(struct _GTypeModuleClass,reserved3,4,10,42282);
+CheckOffset(struct _GTypeModuleClass,reserved3,84,10,42282);
+CheckMemberSize(struct _GTypeModuleClass,reserved4,4,10,42283);
+CheckOffset(struct _GTypeModuleClass,reserved4,88,10,42283);
 #elif __s390x__
-CheckTypeSize(struct _GTypeModuleClass,184, 12044, 12)
-CheckMemberSize(struct _GTypeModuleClass,load,8,12,42277)
-CheckOffset(struct _GTypeModuleClass,load,136,12,42277)
-CheckMemberSize(struct _GTypeModuleClass,unload,8,12,42279)
-CheckOffset(struct _GTypeModuleClass,unload,144,12,42279)
-CheckMemberSize(struct _GTypeModuleClass,reserved1,8,12,42280)
-CheckOffset(struct _GTypeModuleClass,reserved1,152,12,42280)
-CheckMemberSize(struct _GTypeModuleClass,reserved2,8,12,42281)
-CheckOffset(struct _GTypeModuleClass,reserved2,160,12,42281)
-CheckMemberSize(struct _GTypeModuleClass,reserved3,8,12,42282)
-CheckOffset(struct _GTypeModuleClass,reserved3,168,12,42282)
-CheckMemberSize(struct _GTypeModuleClass,reserved4,8,12,42283)
-CheckOffset(struct _GTypeModuleClass,reserved4,176,12,42283)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12044,0);
-Msg("Find size of _GTypeModuleClass (12044)\n");
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12045,0);
-Msg("Find size of fptr_glib-object_55 (12045)\n");
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12046,0);
-Msg("Find size of fptr_glib-object_81 (12046)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GTypeModuleClass,92, 12047, 2)
-#elif __x86_64__
-CheckTypeSize(GTypeModuleClass,184, 12047, 11)
-#elif __ia64__
-CheckTypeSize(GTypeModuleClass,184, 12047, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GTypeModuleClass,92, 12047, 6)
-#elif __powerpc64__
-CheckTypeSize(GTypeModuleClass,184, 12047, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GTypeModuleClass,92, 12047, 10)
-#elif __s390x__
-CheckTypeSize(GTypeModuleClass,184, 12047, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12047,0);
-Msg("Find size of GTypeModuleClass (12047)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(struct _GParamSpecUInt,52, 12048, 2)
-CheckMemberSize(struct _GParamSpecUInt,minimum,4,2,42285)
-CheckOffset(struct _GParamSpecUInt,minimum,40,2,42285)
-CheckMemberSize(struct _GParamSpecUInt,maximum,4,2,42286)
-CheckOffset(struct _GParamSpecUInt,maximum,44,2,42286)
-CheckMemberSize(struct _GParamSpecUInt,default_value,4,2,42287)
-CheckOffset(struct _GParamSpecUInt,default_value,48,2,42287)
-#elif __x86_64__
-CheckTypeSize(struct _GParamSpecUInt,88, 12048, 11)
-CheckMemberSize(struct _GParamSpecUInt,minimum,4,11,42285)
-CheckOffset(struct _GParamSpecUInt,minimum,72,11,42285)
-CheckMemberSize(struct _GParamSpecUInt,maximum,4,11,42286)
-CheckOffset(struct _GParamSpecUInt,maximum,76,11,42286)
-CheckMemberSize(struct _GParamSpecUInt,default_value,4,11,42287)
-CheckOffset(struct _GParamSpecUInt,default_value,80,11,42287)
-#elif __ia64__
-CheckTypeSize(struct _GParamSpecUInt,88, 12048, 3)
-CheckMemberSize(struct _GParamSpecUInt,minimum,4,3,42285)
-CheckOffset(struct _GParamSpecUInt,minimum,72,3,42285)
-CheckMemberSize(struct _GParamSpecUInt,maximum,4,3,42286)
-CheckOffset(struct _GParamSpecUInt,maximum,76,3,42286)
-CheckMemberSize(struct _GParamSpecUInt,default_value,4,3,42287)
-CheckOffset(struct _GParamSpecUInt,default_value,80,3,42287)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GParamSpecUInt,52, 12048, 6)
-CheckMemberSize(struct _GParamSpecUInt,minimum,4,6,42285)
-CheckOffset(struct _GParamSpecUInt,minimum,40,6,42285)
-CheckMemberSize(struct _GParamSpecUInt,maximum,4,6,42286)
-CheckOffset(struct _GParamSpecUInt,maximum,44,6,42286)
-CheckMemberSize(struct _GParamSpecUInt,default_value,4,6,42287)
-CheckOffset(struct _GParamSpecUInt,default_value,48,6,42287)
-#elif __powerpc64__
-CheckTypeSize(struct _GParamSpecUInt,88, 12048, 9)
-CheckMemberSize(struct _GParamSpecUInt,minimum,4,9,42285)
-CheckOffset(struct _GParamSpecUInt,minimum,72,9,42285)
-CheckMemberSize(struct _GParamSpecUInt,maximum,4,9,42286)
-CheckOffset(struct _GParamSpecUInt,maximum,76,9,42286)
-CheckMemberSize(struct _GParamSpecUInt,default_value,4,9,42287)
-CheckOffset(struct _GParamSpecUInt,default_value,80,9,42287)
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct _GParamSpecUInt,52, 12048, 10)
-CheckMemberSize(struct _GParamSpecUInt,minimum,4,10,42285)
-CheckOffset(struct _GParamSpecUInt,minimum,40,10,42285)
-CheckMemberSize(struct _GParamSpecUInt,maximum,4,10,42286)
-CheckOffset(struct _GParamSpecUInt,maximum,44,10,42286)
-CheckMemberSize(struct _GParamSpecUInt,default_value,4,10,42287)
-CheckOffset(struct _GParamSpecUInt,default_value,48,10,42287)
-#elif __s390x__
-CheckTypeSize(struct _GParamSpecUInt,88, 12048, 12)
-CheckMemberSize(struct _GParamSpecUInt,minimum,4,12,42285)
-CheckOffset(struct _GParamSpecUInt,minimum,72,12,42285)
-CheckMemberSize(struct _GParamSpecUInt,maximum,4,12,42286)
-CheckOffset(struct _GParamSpecUInt,maximum,76,12,42286)
-CheckMemberSize(struct _GParamSpecUInt,default_value,4,12,42287)
-CheckOffset(struct _GParamSpecUInt,default_value,80,12,42287)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12048,0);
-Msg("Find size of _GParamSpecUInt (12048)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GParamSpecUInt,52, 12049, 2)
-#elif __x86_64__
-CheckTypeSize(GParamSpecUInt,88, 12049, 11)
-#elif __ia64__
-CheckTypeSize(GParamSpecUInt,88, 12049, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpecUInt,52, 12049, 6)
-#elif __powerpc64__
-CheckTypeSize(GParamSpecUInt,88, 12049, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpecUInt,52, 12049, 10)
-#elif __s390x__
-CheckTypeSize(GParamSpecUInt,88, 12049, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12049,0);
-Msg("Find size of GParamSpecUInt (12049)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(struct _GParamSpecUChar,44, 12050, 2)
-CheckMemberSize(struct _GParamSpecUChar,minimum,1,2,42289)
-CheckOffset(struct _GParamSpecUChar,minimum,40,2,42289)
-CheckMemberSize(struct _GParamSpecUChar,maximum,1,2,42290)
-CheckOffset(struct _GParamSpecUChar,maximum,41,2,42290)
-CheckMemberSize(struct _GParamSpecUChar,default_value,1,2,42291)
-CheckOffset(struct _GParamSpecUChar,default_value,42,2,42291)
-#elif __x86_64__
-CheckTypeSize(struct _GParamSpecUChar,80, 12050, 11)
-CheckMemberSize(struct _GParamSpecUChar,minimum,1,11,42289)
-CheckOffset(struct _GParamSpecUChar,minimum,72,11,42289)
-CheckMemberSize(struct _GParamSpecUChar,maximum,1,11,42290)
-CheckOffset(struct _GParamSpecUChar,maximum,73,11,42290)
-CheckMemberSize(struct _GParamSpecUChar,default_value,1,11,42291)
-CheckOffset(struct _GParamSpecUChar,default_value,74,11,42291)
-#elif __ia64__
-CheckTypeSize(struct _GParamSpecUChar,80, 12050, 3)
-CheckMemberSize(struct _GParamSpecUChar,minimum,1,3,42289)
-CheckOffset(struct _GParamSpecUChar,minimum,72,3,42289)
-CheckMemberSize(struct _GParamSpecUChar,maximum,1,3,42290)
-CheckOffset(struct _GParamSpecUChar,maximum,73,3,42290)
-CheckMemberSize(struct _GParamSpecUChar,default_value,1,3,42291)
-CheckOffset(struct _GParamSpecUChar,default_value,74,3,42291)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GParamSpecUChar,44, 12050, 6)
-CheckMemberSize(struct _GParamSpecUChar,minimum,1,6,42289)
-CheckOffset(struct _GParamSpecUChar,minimum,40,6,42289)
-CheckMemberSize(struct _GParamSpecUChar,maximum,1,6,42290)
-CheckOffset(struct _GParamSpecUChar,maximum,41,6,42290)
-CheckMemberSize(struct _GParamSpecUChar,default_value,1,6,42291)
-CheckOffset(struct _GParamSpecUChar,default_value,42,6,42291)
-#elif __powerpc64__
-CheckTypeSize(struct _GParamSpecUChar,80, 12050, 9)
-CheckMemberSize(struct _GParamSpecUChar,minimum,1,9,42289)
-CheckOffset(struct _GParamSpecUChar,minimum,72,9,42289)
-CheckMemberSize(struct _GParamSpecUChar,maximum,1,9,42290)
-CheckOffset(struct _GParamSpecUChar,maximum,73,9,42290)
-CheckMemberSize(struct _GParamSpecUChar,default_value,1,9,42291)
-CheckOffset(struct _GParamSpecUChar,default_value,74,9,42291)
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct _GParamSpecUChar,44, 12050, 10)
-CheckMemberSize(struct _GParamSpecUChar,minimum,1,10,42289)
-CheckOffset(struct _GParamSpecUChar,minimum,40,10,42289)
-CheckMemberSize(struct _GParamSpecUChar,maximum,1,10,42290)
-CheckOffset(struct _GParamSpecUChar,maximum,41,10,42290)
-CheckMemberSize(struct _GParamSpecUChar,default_value,1,10,42291)
-CheckOffset(struct _GParamSpecUChar,default_value,42,10,42291)
-#elif __s390x__
-CheckTypeSize(struct _GParamSpecUChar,80, 12050, 12)
-CheckMemberSize(struct _GParamSpecUChar,minimum,1,12,42289)
-CheckOffset(struct _GParamSpecUChar,minimum,72,12,42289)
-CheckMemberSize(struct _GParamSpecUChar,maximum,1,12,42290)
-CheckOffset(struct _GParamSpecUChar,maximum,73,12,42290)
-CheckMemberSize(struct _GParamSpecUChar,default_value,1,12,42291)
-CheckOffset(struct _GParamSpecUChar,default_value,74,12,42291)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12050,0);
-Msg("Find size of _GParamSpecUChar (12050)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GParamSpecUChar,44, 12051, 2)
-#elif __x86_64__
-CheckTypeSize(GParamSpecUChar,80, 12051, 11)
-#elif __ia64__
-CheckTypeSize(GParamSpecUChar,80, 12051, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpecUChar,44, 12051, 6)
-#elif __powerpc64__
-CheckTypeSize(GParamSpecUChar,80, 12051, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpecUChar,44, 12051, 10)
-#elif __s390x__
-CheckTypeSize(GParamSpecUChar,80, 12051, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12051,0);
-Msg("Find size of GParamSpecUChar (12051)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(struct _GParamSpecULong,52, 12052, 2)
-CheckMemberSize(struct _GParamSpecULong,minimum,4,2,42293)
-CheckOffset(struct _GParamSpecULong,minimum,40,2,42293)
-CheckMemberSize(struct _GParamSpecULong,maximum,4,2,42294)
-CheckOffset(struct _GParamSpecULong,maximum,44,2,42294)
-CheckMemberSize(struct _GParamSpecULong,default_value,4,2,42295)
-CheckOffset(struct _GParamSpecULong,default_value,48,2,42295)
-#elif __x86_64__
-CheckTypeSize(struct _GParamSpecULong,96, 12052, 11)
-CheckMemberSize(struct _GParamSpecULong,minimum,8,11,42293)
-CheckOffset(struct _GParamSpecULong,minimum,72,11,42293)
-CheckMemberSize(struct _GParamSpecULong,maximum,8,11,42294)
-CheckOffset(struct _GParamSpecULong,maximum,80,11,42294)
-CheckMemberSize(struct _GParamSpecULong,default_value,8,11,42295)
-CheckOffset(struct _GParamSpecULong,default_value,88,11,42295)
-#elif __ia64__
-CheckTypeSize(struct _GParamSpecULong,96, 12052, 3)
-CheckMemberSize(struct _GParamSpecULong,minimum,8,3,42293)
-CheckOffset(struct _GParamSpecULong,minimum,72,3,42293)
-CheckMemberSize(struct _GParamSpecULong,maximum,8,3,42294)
-CheckOffset(struct _GParamSpecULong,maximum,80,3,42294)
-CheckMemberSize(struct _GParamSpecULong,default_value,8,3,42295)
-CheckOffset(struct _GParamSpecULong,default_value,88,3,42295)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GParamSpecULong,52, 12052, 6)
-CheckMemberSize(struct _GParamSpecULong,minimum,4,6,42293)
-CheckOffset(struct _GParamSpecULong,minimum,40,6,42293)
-CheckMemberSize(struct _GParamSpecULong,maximum,4,6,42294)
-CheckOffset(struct _GParamSpecULong,maximum,44,6,42294)
-CheckMemberSize(struct _GParamSpecULong,default_value,4,6,42295)
-CheckOffset(struct _GParamSpecULong,default_value,48,6,42295)
-#elif __powerpc64__
-CheckTypeSize(struct _GParamSpecULong,96, 12052, 9)
-CheckMemberSize(struct _GParamSpecULong,minimum,8,9,42293)
-CheckOffset(struct _GParamSpecULong,minimum,72,9,42293)
-CheckMemberSize(struct _GParamSpecULong,maximum,8,9,42294)
-CheckOffset(struct _GParamSpecULong,maximum,80,9,42294)
-CheckMemberSize(struct _GParamSpecULong,default_value,8,9,42295)
-CheckOffset(struct _GParamSpecULong,default_value,88,9,42295)
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct _GParamSpecULong,52, 12052, 10)
-CheckMemberSize(struct _GParamSpecULong,minimum,4,10,42293)
-CheckOffset(struct _GParamSpecULong,minimum,40,10,42293)
-CheckMemberSize(struct _GParamSpecULong,maximum,4,10,42294)
-CheckOffset(struct _GParamSpecULong,maximum,44,10,42294)
-CheckMemberSize(struct _GParamSpecULong,default_value,4,10,42295)
-CheckOffset(struct _GParamSpecULong,default_value,48,10,42295)
-#elif __s390x__
-CheckTypeSize(struct _GParamSpecULong,96, 12052, 12)
-CheckMemberSize(struct _GParamSpecULong,minimum,8,12,42293)
-CheckOffset(struct _GParamSpecULong,minimum,72,12,42293)
-CheckMemberSize(struct _GParamSpecULong,maximum,8,12,42294)
-CheckOffset(struct _GParamSpecULong,maximum,80,12,42294)
-CheckMemberSize(struct _GParamSpecULong,default_value,8,12,42295)
-CheckOffset(struct _GParamSpecULong,default_value,88,12,42295)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12052,0);
-Msg("Find size of _GParamSpecULong (12052)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GParamSpecULong,52, 12053, 2)
-#elif __x86_64__
-CheckTypeSize(GParamSpecULong,96, 12053, 11)
-#elif __ia64__
-CheckTypeSize(GParamSpecULong,96, 12053, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpecULong,52, 12053, 6)
-#elif __powerpc64__
-CheckTypeSize(GParamSpecULong,96, 12053, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpecULong,52, 12053, 10)
-#elif __s390x__
-CheckTypeSize(GParamSpecULong,96, 12053, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12053,0);
-Msg("Find size of GParamSpecULong (12053)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(struct _GParamSpecChar,44, 12054, 2)
-CheckMemberSize(struct _GParamSpecChar,minimum,1,2,42297)
-CheckOffset(struct _GParamSpecChar,minimum,40,2,42297)
-CheckMemberSize(struct _GParamSpecChar,maximum,1,2,42298)
-CheckOffset(struct _GParamSpecChar,maximum,41,2,42298)
-CheckMemberSize(struct _GParamSpecChar,default_value,1,2,42299)
-CheckOffset(struct _GParamSpecChar,default_value,42,2,42299)
-#elif __x86_64__
-CheckTypeSize(struct _GParamSpecChar,80, 12054, 11)
-CheckMemberSize(struct _GParamSpecChar,minimum,1,11,42297)
-CheckOffset(struct _GParamSpecChar,minimum,72,11,42297)
-CheckMemberSize(struct _GParamSpecChar,maximum,1,11,42298)
-CheckOffset(struct _GParamSpecChar,maximum,73,11,42298)
-CheckMemberSize(struct _GParamSpecChar,default_value,1,11,42299)
-CheckOffset(struct _GParamSpecChar,default_value,74,11,42299)
-#elif __ia64__
-CheckTypeSize(struct _GParamSpecChar,80, 12054, 3)
-CheckMemberSize(struct _GParamSpecChar,minimum,1,3,42297)
-CheckOffset(struct _GParamSpecChar,minimum,72,3,42297)
-CheckMemberSize(struct _GParamSpecChar,maximum,1,3,42298)
-CheckOffset(struct _GParamSpecChar,maximum,73,3,42298)
-CheckMemberSize(struct _GParamSpecChar,default_value,1,3,42299)
-CheckOffset(struct _GParamSpecChar,default_value,74,3,42299)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GParamSpecChar,44, 12054, 6)
-CheckMemberSize(struct _GParamSpecChar,minimum,1,6,42297)
-CheckOffset(struct _GParamSpecChar,minimum,40,6,42297)
-CheckMemberSize(struct _GParamSpecChar,maximum,1,6,42298)
-CheckOffset(struct _GParamSpecChar,maximum,41,6,42298)
-CheckMemberSize(struct _GParamSpecChar,default_value,1,6,42299)
-CheckOffset(struct _GParamSpecChar,default_value,42,6,42299)
-#elif __powerpc64__
-CheckTypeSize(struct _GParamSpecChar,80, 12054, 9)
-CheckMemberSize(struct _GParamSpecChar,minimum,1,9,42297)
-CheckOffset(struct _GParamSpecChar,minimum,72,9,42297)
-CheckMemberSize(struct _GParamSpecChar,maximum,1,9,42298)
-CheckOffset(struct _GParamSpecChar,maximum,73,9,42298)
-CheckMemberSize(struct _GParamSpecChar,default_value,1,9,42299)
-CheckOffset(struct _GParamSpecChar,default_value,74,9,42299)
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct _GParamSpecChar,44, 12054, 10)
-CheckMemberSize(struct _GParamSpecChar,minimum,1,10,42297)
-CheckOffset(struct _GParamSpecChar,minimum,40,10,42297)
-CheckMemberSize(struct _GParamSpecChar,maximum,1,10,42298)
-CheckOffset(struct _GParamSpecChar,maximum,41,10,42298)
-CheckMemberSize(struct _GParamSpecChar,default_value,1,10,42299)
-CheckOffset(struct _GParamSpecChar,default_value,42,10,42299)
-#elif __s390x__
-CheckTypeSize(struct _GParamSpecChar,80, 12054, 12)
-CheckMemberSize(struct _GParamSpecChar,minimum,1,12,42297)
-CheckOffset(struct _GParamSpecChar,minimum,72,12,42297)
-CheckMemberSize(struct _GParamSpecChar,maximum,1,12,42298)
-CheckOffset(struct _GParamSpecChar,maximum,73,12,42298)
-CheckMemberSize(struct _GParamSpecChar,default_value,1,12,42299)
-CheckOffset(struct _GParamSpecChar,default_value,74,12,42299)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12054,0);
-Msg("Find size of _GParamSpecChar (12054)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GParamSpecChar,44, 12055, 2)
-#elif __x86_64__
-CheckTypeSize(GParamSpecChar,80, 12055, 11)
-#elif __ia64__
-CheckTypeSize(GParamSpecChar,80, 12055, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpecChar,44, 12055, 6)
-#elif __powerpc64__
-CheckTypeSize(GParamSpecChar,80, 12055, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpecChar,44, 12055, 10)
-#elif __s390x__
-CheckTypeSize(GParamSpecChar,80, 12055, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12055,0);
-Msg("Find size of GParamSpecChar (12055)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(struct _GParamSpecBoolean,44, 12056, 2)
-CheckMemberSize(struct _GParamSpecBoolean,default_value,4,2,42301)
-CheckOffset(struct _GParamSpecBoolean,default_value,40,2,42301)
-#elif __x86_64__
-CheckTypeSize(struct _GParamSpecBoolean,80, 12056, 11)
-CheckMemberSize(struct _GParamSpecBoolean,default_value,4,11,42301)
-CheckOffset(struct _GParamSpecBoolean,default_value,72,11,42301)
-#elif __ia64__
-CheckTypeSize(struct _GParamSpecBoolean,80, 12056, 3)
-CheckMemberSize(struct _GParamSpecBoolean,default_value,4,3,42301)
-CheckOffset(struct _GParamSpecBoolean,default_value,72,3,42301)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GParamSpecBoolean,44, 12056, 6)
-CheckMemberSize(struct _GParamSpecBoolean,default_value,4,6,42301)
-CheckOffset(struct _GParamSpecBoolean,default_value,40,6,42301)
-#elif __powerpc64__
-CheckTypeSize(struct _GParamSpecBoolean,80, 12056, 9)
-CheckMemberSize(struct _GParamSpecBoolean,default_value,4,9,42301)
-CheckOffset(struct _GParamSpecBoolean,default_value,72,9,42301)
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct _GParamSpecBoolean,44, 12056, 10)
-CheckMemberSize(struct _GParamSpecBoolean,default_value,4,10,42301)
-CheckOffset(struct _GParamSpecBoolean,default_value,40,10,42301)
-#elif __s390x__
-CheckTypeSize(struct _GParamSpecBoolean,80, 12056, 12)
-CheckMemberSize(struct _GParamSpecBoolean,default_value,4,12,42301)
-CheckOffset(struct _GParamSpecBoolean,default_value,72,12,42301)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12056,0);
-Msg("Find size of _GParamSpecBoolean (12056)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GParamSpecBoolean,44, 12057, 2)
-#elif __x86_64__
-CheckTypeSize(GParamSpecBoolean,80, 12057, 11)
-#elif __ia64__
-CheckTypeSize(GParamSpecBoolean,80, 12057, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GParamSpecBoolean,44, 12057, 6)
-#elif __powerpc64__
-CheckTypeSize(GParamSpecBoolean,80, 12057, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GParamSpecBoolean,44, 12057, 10)
-#elif __s390x__
-CheckTypeSize(GParamSpecBoolean,80, 12057, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12057,0);
-Msg("Find size of GParamSpecBoolean (12057)\n");
+CheckTypeSize(struct _GTypeModuleClass,184, 12044, 12);
+CheckMemberSize(struct _GTypeModuleClass,load,8,12,42277);
+CheckOffset(struct _GTypeModuleClass,load,136,12,42277);
+CheckMemberSize(struct _GTypeModuleClass,unload,8,12,42279);
+CheckOffset(struct _GTypeModuleClass,unload,144,12,42279);
+CheckMemberSize(struct _GTypeModuleClass,reserved1,8,12,42280);
+CheckOffset(struct _GTypeModuleClass,reserved1,152,12,42280);
+CheckMemberSize(struct _GTypeModuleClass,reserved2,8,12,42281);
+CheckOffset(struct _GTypeModuleClass,reserved2,160,12,42281);
+CheckMemberSize(struct _GTypeModuleClass,reserved3,8,12,42282);
+CheckOffset(struct _GTypeModuleClass,reserved3,168,12,42282);
+CheckMemberSize(struct _GTypeModuleClass,reserved4,8,12,42283);
+CheckOffset(struct _GTypeModuleClass,reserved4,176,12,42283);
+#elif 1
+CheckTypeSize(struct _GTypeModuleClass,0, 12044, 1);
+Msg("Missing member data for _GTypeModuleClass on All\n");
+CheckOffset(struct _GTypeModuleClass,parent_class,0,1,42275);
+CheckOffset(struct _GTypeModuleClass,load,0,1,42277);
+CheckOffset(struct _GTypeModuleClass,unload,0,1,42279);
+CheckOffset(struct _GTypeModuleClass,reserved1,0,1,42280);
+CheckOffset(struct _GTypeModuleClass,reserved2,0,1,42281);
+CheckOffset(struct _GTypeModuleClass,reserved3,0,1,42282);
+CheckOffset(struct _GTypeModuleClass,reserved4,0,1,42283);
 #endif
 
 #if __i386__
@@ -7127,28 +6714,7 @@ Msg("Find size of GParamSpecBoolean (12057)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12058,0);
-Msg("Find size of fptr_anonymous-glib-object.h.types-0 (12058)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(GObjectFinalizeFunc,4, 12059, 2)
-#elif __ia64__
-CheckTypeSize(GObjectFinalizeFunc,8, 12059, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GObjectFinalizeFunc,4, 12059, 6)
-#elif __powerpc64__
-CheckTypeSize(GObjectFinalizeFunc,8, 12059, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GObjectFinalizeFunc,4, 12059, 10)
-#elif __s390x__
-CheckTypeSize(GObjectFinalizeFunc,8, 12059, 12)
-#elif __x86_64__
-CheckTypeSize(GObjectFinalizeFunc,8, 12059, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12059,0);
-Msg("Find size of GObjectFinalizeFunc (12059)\n");
+#elif 1
 #endif
 
 #if __i386__
@@ -7158,28 +6724,410 @@ Msg("Find size of GObjectFinalizeFunc (12059)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12060,0);
-Msg("Find size of fptr_anonymous-glib-object.h.types-2 (12060)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(GObjectGetPropertyFunc,4, 12061, 2)
-#elif __ia64__
-CheckTypeSize(GObjectGetPropertyFunc,8, 12061, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GObjectGetPropertyFunc,4, 12061, 6)
-#elif __powerpc64__
-CheckTypeSize(GObjectGetPropertyFunc,8, 12061, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(GObjectGetPropertyFunc,4, 12061, 10)
-#elif __s390x__
-CheckTypeSize(GObjectGetPropertyFunc,8, 12061, 12)
+CheckTypeSize(GTypeModuleClass,92, 12047, 2);
 #elif __x86_64__
-CheckTypeSize(GObjectGetPropertyFunc,8, 12061, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12061,0);
-Msg("Find size of GObjectGetPropertyFunc (12061)\n");
+CheckTypeSize(GTypeModuleClass,184, 12047, 11);
+#elif __ia64__
+CheckTypeSize(GTypeModuleClass,184, 12047, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GTypeModuleClass,92, 12047, 6);
+#elif __powerpc64__
+CheckTypeSize(GTypeModuleClass,184, 12047, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GTypeModuleClass,92, 12047, 10);
+#elif __s390x__
+CheckTypeSize(GTypeModuleClass,184, 12047, 12);
+#elif 1
+CheckTypeSize(GTypeModuleClass,0, 12047, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(struct _GParamSpecUInt,52, 12048, 2);
+CheckMemberSize(struct _GParamSpecUInt,minimum,4,2,42285);
+CheckOffset(struct _GParamSpecUInt,minimum,40,2,42285);
+CheckMemberSize(struct _GParamSpecUInt,maximum,4,2,42286);
+CheckOffset(struct _GParamSpecUInt,maximum,44,2,42286);
+CheckMemberSize(struct _GParamSpecUInt,default_value,4,2,42287);
+CheckOffset(struct _GParamSpecUInt,default_value,48,2,42287);
+#elif __x86_64__
+CheckTypeSize(struct _GParamSpecUInt,88, 12048, 11);
+CheckMemberSize(struct _GParamSpecUInt,minimum,4,11,42285);
+CheckOffset(struct _GParamSpecUInt,minimum,72,11,42285);
+CheckMemberSize(struct _GParamSpecUInt,maximum,4,11,42286);
+CheckOffset(struct _GParamSpecUInt,maximum,76,11,42286);
+CheckMemberSize(struct _GParamSpecUInt,default_value,4,11,42287);
+CheckOffset(struct _GParamSpecUInt,default_value,80,11,42287);
+#elif __ia64__
+CheckTypeSize(struct _GParamSpecUInt,88, 12048, 3);
+CheckMemberSize(struct _GParamSpecUInt,minimum,4,3,42285);
+CheckOffset(struct _GParamSpecUInt,minimum,72,3,42285);
+CheckMemberSize(struct _GParamSpecUInt,maximum,4,3,42286);
+CheckOffset(struct _GParamSpecUInt,maximum,76,3,42286);
+CheckMemberSize(struct _GParamSpecUInt,default_value,4,3,42287);
+CheckOffset(struct _GParamSpecUInt,default_value,80,3,42287);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _GParamSpecUInt,52, 12048, 6);
+CheckMemberSize(struct _GParamSpecUInt,minimum,4,6,42285);
+CheckOffset(struct _GParamSpecUInt,minimum,40,6,42285);
+CheckMemberSize(struct _GParamSpecUInt,maximum,4,6,42286);
+CheckOffset(struct _GParamSpecUInt,maximum,44,6,42286);
+CheckMemberSize(struct _GParamSpecUInt,default_value,4,6,42287);
+CheckOffset(struct _GParamSpecUInt,default_value,48,6,42287);
+#elif __powerpc64__
+CheckTypeSize(struct _GParamSpecUInt,88, 12048, 9);
+CheckMemberSize(struct _GParamSpecUInt,minimum,4,9,42285);
+CheckOffset(struct _GParamSpecUInt,minimum,72,9,42285);
+CheckMemberSize(struct _GParamSpecUInt,maximum,4,9,42286);
+CheckOffset(struct _GParamSpecUInt,maximum,76,9,42286);
+CheckMemberSize(struct _GParamSpecUInt,default_value,4,9,42287);
+CheckOffset(struct _GParamSpecUInt,default_value,80,9,42287);
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _GParamSpecUInt,52, 12048, 10);
+CheckMemberSize(struct _GParamSpecUInt,minimum,4,10,42285);
+CheckOffset(struct _GParamSpecUInt,minimum,40,10,42285);
+CheckMemberSize(struct _GParamSpecUInt,maximum,4,10,42286);
+CheckOffset(struct _GParamSpecUInt,maximum,44,10,42286);
+CheckMemberSize(struct _GParamSpecUInt,default_value,4,10,42287);
+CheckOffset(struct _GParamSpecUInt,default_value,48,10,42287);
+#elif __s390x__
+CheckTypeSize(struct _GParamSpecUInt,88, 12048, 12);
+CheckMemberSize(struct _GParamSpecUInt,minimum,4,12,42285);
+CheckOffset(struct _GParamSpecUInt,minimum,72,12,42285);
+CheckMemberSize(struct _GParamSpecUInt,maximum,4,12,42286);
+CheckOffset(struct _GParamSpecUInt,maximum,76,12,42286);
+CheckMemberSize(struct _GParamSpecUInt,default_value,4,12,42287);
+CheckOffset(struct _GParamSpecUInt,default_value,80,12,42287);
+#elif 1
+CheckTypeSize(struct _GParamSpecUInt,0, 12048, 1);
+Msg("Missing member data for _GParamSpecUInt on All\n");
+CheckOffset(struct _GParamSpecUInt,parent_instance,0,1,42284);
+CheckOffset(struct _GParamSpecUInt,minimum,0,1,42285);
+CheckOffset(struct _GParamSpecUInt,maximum,0,1,42286);
+CheckOffset(struct _GParamSpecUInt,default_value,0,1,42287);
+#endif
+
+#if __i386__
+CheckTypeSize(GParamSpecUInt,52, 12049, 2);
+#elif __x86_64__
+CheckTypeSize(GParamSpecUInt,88, 12049, 11);
+#elif __ia64__
+CheckTypeSize(GParamSpecUInt,88, 12049, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GParamSpecUInt,52, 12049, 6);
+#elif __powerpc64__
+CheckTypeSize(GParamSpecUInt,88, 12049, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GParamSpecUInt,52, 12049, 10);
+#elif __s390x__
+CheckTypeSize(GParamSpecUInt,88, 12049, 12);
+#elif 1
+CheckTypeSize(GParamSpecUInt,0, 12049, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(struct _GParamSpecUChar,44, 12050, 2);
+CheckMemberSize(struct _GParamSpecUChar,minimum,1,2,42289);
+CheckOffset(struct _GParamSpecUChar,minimum,40,2,42289);
+CheckMemberSize(struct _GParamSpecUChar,maximum,1,2,42290);
+CheckOffset(struct _GParamSpecUChar,maximum,41,2,42290);
+CheckMemberSize(struct _GParamSpecUChar,default_value,1,2,42291);
+CheckOffset(struct _GParamSpecUChar,default_value,42,2,42291);
+#elif __x86_64__
+CheckTypeSize(struct _GParamSpecUChar,80, 12050, 11);
+CheckMemberSize(struct _GParamSpecUChar,minimum,1,11,42289);
+CheckOffset(struct _GParamSpecUChar,minimum,72,11,42289);
+CheckMemberSize(struct _GParamSpecUChar,maximum,1,11,42290);
+CheckOffset(struct _GParamSpecUChar,maximum,73,11,42290);
+CheckMemberSize(struct _GParamSpecUChar,default_value,1,11,42291);
+CheckOffset(struct _GParamSpecUChar,default_value,74,11,42291);
+#elif __ia64__
+CheckTypeSize(struct _GParamSpecUChar,80, 12050, 3);
+CheckMemberSize(struct _GParamSpecUChar,minimum,1,3,42289);
+CheckOffset(struct _GParamSpecUChar,minimum,72,3,42289);
+CheckMemberSize(struct _GParamSpecUChar,maximum,1,3,42290);
+CheckOffset(struct _GParamSpecUChar,maximum,73,3,42290);
+CheckMemberSize(struct _GParamSpecUChar,default_value,1,3,42291);
+CheckOffset(struct _GParamSpecUChar,default_value,74,3,42291);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _GParamSpecUChar,44, 12050, 6);
+CheckMemberSize(struct _GParamSpecUChar,minimum,1,6,42289);
+CheckOffset(struct _GParamSpecUChar,minimum,40,6,42289);
+CheckMemberSize(struct _GParamSpecUChar,maximum,1,6,42290);
+CheckOffset(struct _GParamSpecUChar,maximum,41,6,42290);
+CheckMemberSize(struct _GParamSpecUChar,default_value,1,6,42291);
+CheckOffset(struct _GParamSpecUChar,default_value,42,6,42291);
+#elif __powerpc64__
+CheckTypeSize(struct _GParamSpecUChar,80, 12050, 9);
+CheckMemberSize(struct _GParamSpecUChar,minimum,1,9,42289);
+CheckOffset(struct _GParamSpecUChar,minimum,72,9,42289);
+CheckMemberSize(struct _GParamSpecUChar,maximum,1,9,42290);
+CheckOffset(struct _GParamSpecUChar,maximum,73,9,42290);
+CheckMemberSize(struct _GParamSpecUChar,default_value,1,9,42291);
+CheckOffset(struct _GParamSpecUChar,default_value,74,9,42291);
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _GParamSpecUChar,44, 12050, 10);
+CheckMemberSize(struct _GParamSpecUChar,minimum,1,10,42289);
+CheckOffset(struct _GParamSpecUChar,minimum,40,10,42289);
+CheckMemberSize(struct _GParamSpecUChar,maximum,1,10,42290);
+CheckOffset(struct _GParamSpecUChar,maximum,41,10,42290);
+CheckMemberSize(struct _GParamSpecUChar,default_value,1,10,42291);
+CheckOffset(struct _GParamSpecUChar,default_value,42,10,42291);
+#elif __s390x__
+CheckTypeSize(struct _GParamSpecUChar,80, 12050, 12);
+CheckMemberSize(struct _GParamSpecUChar,minimum,1,12,42289);
+CheckOffset(struct _GParamSpecUChar,minimum,72,12,42289);
+CheckMemberSize(struct _GParamSpecUChar,maximum,1,12,42290);
+CheckOffset(struct _GParamSpecUChar,maximum,73,12,42290);
+CheckMemberSize(struct _GParamSpecUChar,default_value,1,12,42291);
+CheckOffset(struct _GParamSpecUChar,default_value,74,12,42291);
+#elif 1
+CheckTypeSize(struct _GParamSpecUChar,0, 12050, 1);
+Msg("Missing member data for _GParamSpecUChar on All\n");
+CheckOffset(struct _GParamSpecUChar,parent_instance,0,1,42288);
+CheckOffset(struct _GParamSpecUChar,minimum,0,1,42289);
+CheckOffset(struct _GParamSpecUChar,maximum,0,1,42290);
+CheckOffset(struct _GParamSpecUChar,default_value,0,1,42291);
+#endif
+
+#if __i386__
+CheckTypeSize(GParamSpecUChar,44, 12051, 2);
+#elif __x86_64__
+CheckTypeSize(GParamSpecUChar,80, 12051, 11);
+#elif __ia64__
+CheckTypeSize(GParamSpecUChar,80, 12051, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GParamSpecUChar,44, 12051, 6);
+#elif __powerpc64__
+CheckTypeSize(GParamSpecUChar,80, 12051, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GParamSpecUChar,44, 12051, 10);
+#elif __s390x__
+CheckTypeSize(GParamSpecUChar,80, 12051, 12);
+#elif 1
+CheckTypeSize(GParamSpecUChar,0, 12051, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(struct _GParamSpecULong,52, 12052, 2);
+CheckMemberSize(struct _GParamSpecULong,minimum,4,2,42293);
+CheckOffset(struct _GParamSpecULong,minimum,40,2,42293);
+CheckMemberSize(struct _GParamSpecULong,maximum,4,2,42294);
+CheckOffset(struct _GParamSpecULong,maximum,44,2,42294);
+CheckMemberSize(struct _GParamSpecULong,default_value,4,2,42295);
+CheckOffset(struct _GParamSpecULong,default_value,48,2,42295);
+#elif __x86_64__
+CheckTypeSize(struct _GParamSpecULong,96, 12052, 11);
+CheckMemberSize(struct _GParamSpecULong,minimum,8,11,42293);
+CheckOffset(struct _GParamSpecULong,minimum,72,11,42293);
+CheckMemberSize(struct _GParamSpecULong,maximum,8,11,42294);
+CheckOffset(struct _GParamSpecULong,maximum,80,11,42294);
+CheckMemberSize(struct _GParamSpecULong,default_value,8,11,42295);
+CheckOffset(struct _GParamSpecULong,default_value,88,11,42295);
+#elif __ia64__
+CheckTypeSize(struct _GParamSpecULong,96, 12052, 3);
+CheckMemberSize(struct _GParamSpecULong,minimum,8,3,42293);
+CheckOffset(struct _GParamSpecULong,minimum,72,3,42293);
+CheckMemberSize(struct _GParamSpecULong,maximum,8,3,42294);
+CheckOffset(struct _GParamSpecULong,maximum,80,3,42294);
+CheckMemberSize(struct _GParamSpecULong,default_value,8,3,42295);
+CheckOffset(struct _GParamSpecULong,default_value,88,3,42295);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _GParamSpecULong,52, 12052, 6);
+CheckMemberSize(struct _GParamSpecULong,minimum,4,6,42293);
+CheckOffset(struct _GParamSpecULong,minimum,40,6,42293);
+CheckMemberSize(struct _GParamSpecULong,maximum,4,6,42294);
+CheckOffset(struct _GParamSpecULong,maximum,44,6,42294);
+CheckMemberSize(struct _GParamSpecULong,default_value,4,6,42295);
+CheckOffset(struct _GParamSpecULong,default_value,48,6,42295);
+#elif __powerpc64__
+CheckTypeSize(struct _GParamSpecULong,96, 12052, 9);
+CheckMemberSize(struct _GParamSpecULong,minimum,8,9,42293);
+CheckOffset(struct _GParamSpecULong,minimum,72,9,42293);
+CheckMemberSize(struct _GParamSpecULong,maximum,8,9,42294);
+CheckOffset(struct _GParamSpecULong,maximum,80,9,42294);
+CheckMemberSize(struct _GParamSpecULong,default_value,8,9,42295);
+CheckOffset(struct _GParamSpecULong,default_value,88,9,42295);
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _GParamSpecULong,52, 12052, 10);
+CheckMemberSize(struct _GParamSpecULong,minimum,4,10,42293);
+CheckOffset(struct _GParamSpecULong,minimum,40,10,42293);
+CheckMemberSize(struct _GParamSpecULong,maximum,4,10,42294);
+CheckOffset(struct _GParamSpecULong,maximum,44,10,42294);
+CheckMemberSize(struct _GParamSpecULong,default_value,4,10,42295);
+CheckOffset(struct _GParamSpecULong,default_value,48,10,42295);
+#elif __s390x__
+CheckTypeSize(struct _GParamSpecULong,96, 12052, 12);
+CheckMemberSize(struct _GParamSpecULong,minimum,8,12,42293);
+CheckOffset(struct _GParamSpecULong,minimum,72,12,42293);
+CheckMemberSize(struct _GParamSpecULong,maximum,8,12,42294);
+CheckOffset(struct _GParamSpecULong,maximum,80,12,42294);
+CheckMemberSize(struct _GParamSpecULong,default_value,8,12,42295);
+CheckOffset(struct _GParamSpecULong,default_value,88,12,42295);
+#elif 1
+CheckTypeSize(struct _GParamSpecULong,0, 12052, 1);
+Msg("Missing member data for _GParamSpecULong on All\n");
+CheckOffset(struct _GParamSpecULong,parent_instance,0,1,42292);
+CheckOffset(struct _GParamSpecULong,minimum,0,1,42293);
+CheckOffset(struct _GParamSpecULong,maximum,0,1,42294);
+CheckOffset(struct _GParamSpecULong,default_value,0,1,42295);
+#endif
+
+#if __i386__
+CheckTypeSize(GParamSpecULong,52, 12053, 2);
+#elif __x86_64__
+CheckTypeSize(GParamSpecULong,96, 12053, 11);
+#elif __ia64__
+CheckTypeSize(GParamSpecULong,96, 12053, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GParamSpecULong,52, 12053, 6);
+#elif __powerpc64__
+CheckTypeSize(GParamSpecULong,96, 12053, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GParamSpecULong,52, 12053, 10);
+#elif __s390x__
+CheckTypeSize(GParamSpecULong,96, 12053, 12);
+#elif 1
+CheckTypeSize(GParamSpecULong,0, 12053, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(struct _GParamSpecChar,44, 12054, 2);
+CheckMemberSize(struct _GParamSpecChar,minimum,1,2,42297);
+CheckOffset(struct _GParamSpecChar,minimum,40,2,42297);
+CheckMemberSize(struct _GParamSpecChar,maximum,1,2,42298);
+CheckOffset(struct _GParamSpecChar,maximum,41,2,42298);
+CheckMemberSize(struct _GParamSpecChar,default_value,1,2,42299);
+CheckOffset(struct _GParamSpecChar,default_value,42,2,42299);
+#elif __x86_64__
+CheckTypeSize(struct _GParamSpecChar,80, 12054, 11);
+CheckMemberSize(struct _GParamSpecChar,minimum,1,11,42297);
+CheckOffset(struct _GParamSpecChar,minimum,72,11,42297);
+CheckMemberSize(struct _GParamSpecChar,maximum,1,11,42298);
+CheckOffset(struct _GParamSpecChar,maximum,73,11,42298);
+CheckMemberSize(struct _GParamSpecChar,default_value,1,11,42299);
+CheckOffset(struct _GParamSpecChar,default_value,74,11,42299);
+#elif __ia64__
+CheckTypeSize(struct _GParamSpecChar,80, 12054, 3);
+CheckMemberSize(struct _GParamSpecChar,minimum,1,3,42297);
+CheckOffset(struct _GParamSpecChar,minimum,72,3,42297);
+CheckMemberSize(struct _GParamSpecChar,maximum,1,3,42298);
+CheckOffset(struct _GParamSpecChar,maximum,73,3,42298);
+CheckMemberSize(struct _GParamSpecChar,default_value,1,3,42299);
+CheckOffset(struct _GParamSpecChar,default_value,74,3,42299);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _GParamSpecChar,44, 12054, 6);
+CheckMemberSize(struct _GParamSpecChar,minimum,1,6,42297);
+CheckOffset(struct _GParamSpecChar,minimum,40,6,42297);
+CheckMemberSize(struct _GParamSpecChar,maximum,1,6,42298);
+CheckOffset(struct _GParamSpecChar,maximum,41,6,42298);
+CheckMemberSize(struct _GParamSpecChar,default_value,1,6,42299);
+CheckOffset(struct _GParamSpecChar,default_value,42,6,42299);
+#elif __powerpc64__
+CheckTypeSize(struct _GParamSpecChar,80, 12054, 9);
+CheckMemberSize(struct _GParamSpecChar,minimum,1,9,42297);
+CheckOffset(struct _GParamSpecChar,minimum,72,9,42297);
+CheckMemberSize(struct _GParamSpecChar,maximum,1,9,42298);
+CheckOffset(struct _GParamSpecChar,maximum,73,9,42298);
+CheckMemberSize(struct _GParamSpecChar,default_value,1,9,42299);
+CheckOffset(struct _GParamSpecChar,default_value,74,9,42299);
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _GParamSpecChar,44, 12054, 10);
+CheckMemberSize(struct _GParamSpecChar,minimum,1,10,42297);
+CheckOffset(struct _GParamSpecChar,minimum,40,10,42297);
+CheckMemberSize(struct _GParamSpecChar,maximum,1,10,42298);
+CheckOffset(struct _GParamSpecChar,maximum,41,10,42298);
+CheckMemberSize(struct _GParamSpecChar,default_value,1,10,42299);
+CheckOffset(struct _GParamSpecChar,default_value,42,10,42299);
+#elif __s390x__
+CheckTypeSize(struct _GParamSpecChar,80, 12054, 12);
+CheckMemberSize(struct _GParamSpecChar,minimum,1,12,42297);
+CheckOffset(struct _GParamSpecChar,minimum,72,12,42297);
+CheckMemberSize(struct _GParamSpecChar,maximum,1,12,42298);
+CheckOffset(struct _GParamSpecChar,maximum,73,12,42298);
+CheckMemberSize(struct _GParamSpecChar,default_value,1,12,42299);
+CheckOffset(struct _GParamSpecChar,default_value,74,12,42299);
+#elif 1
+CheckTypeSize(struct _GParamSpecChar,0, 12054, 1);
+Msg("Missing member data for _GParamSpecChar on All\n");
+CheckOffset(struct _GParamSpecChar,parent_instance,0,1,42296);
+CheckOffset(struct _GParamSpecChar,minimum,0,1,42297);
+CheckOffset(struct _GParamSpecChar,maximum,0,1,42298);
+CheckOffset(struct _GParamSpecChar,default_value,0,1,42299);
+#endif
+
+#if __i386__
+CheckTypeSize(GParamSpecChar,44, 12055, 2);
+#elif __x86_64__
+CheckTypeSize(GParamSpecChar,80, 12055, 11);
+#elif __ia64__
+CheckTypeSize(GParamSpecChar,80, 12055, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GParamSpecChar,44, 12055, 6);
+#elif __powerpc64__
+CheckTypeSize(GParamSpecChar,80, 12055, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GParamSpecChar,44, 12055, 10);
+#elif __s390x__
+CheckTypeSize(GParamSpecChar,80, 12055, 12);
+#elif 1
+CheckTypeSize(GParamSpecChar,0, 12055, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(struct _GParamSpecBoolean,44, 12056, 2);
+CheckMemberSize(struct _GParamSpecBoolean,default_value,4,2,42301);
+CheckOffset(struct _GParamSpecBoolean,default_value,40,2,42301);
+#elif __x86_64__
+CheckTypeSize(struct _GParamSpecBoolean,80, 12056, 11);
+CheckMemberSize(struct _GParamSpecBoolean,default_value,4,11,42301);
+CheckOffset(struct _GParamSpecBoolean,default_value,72,11,42301);
+#elif __ia64__
+CheckTypeSize(struct _GParamSpecBoolean,80, 12056, 3);
+CheckMemberSize(struct _GParamSpecBoolean,default_value,4,3,42301);
+CheckOffset(struct _GParamSpecBoolean,default_value,72,3,42301);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _GParamSpecBoolean,44, 12056, 6);
+CheckMemberSize(struct _GParamSpecBoolean,default_value,4,6,42301);
+CheckOffset(struct _GParamSpecBoolean,default_value,40,6,42301);
+#elif __powerpc64__
+CheckTypeSize(struct _GParamSpecBoolean,80, 12056, 9);
+CheckMemberSize(struct _GParamSpecBoolean,default_value,4,9,42301);
+CheckOffset(struct _GParamSpecBoolean,default_value,72,9,42301);
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _GParamSpecBoolean,44, 12056, 10);
+CheckMemberSize(struct _GParamSpecBoolean,default_value,4,10,42301);
+CheckOffset(struct _GParamSpecBoolean,default_value,40,10,42301);
+#elif __s390x__
+CheckTypeSize(struct _GParamSpecBoolean,80, 12056, 12);
+CheckMemberSize(struct _GParamSpecBoolean,default_value,4,12,42301);
+CheckOffset(struct _GParamSpecBoolean,default_value,72,12,42301);
+#elif 1
+CheckTypeSize(struct _GParamSpecBoolean,0, 12056, 1);
+Msg("Missing member data for _GParamSpecBoolean on All\n");
+CheckOffset(struct _GParamSpecBoolean,parent_instance,0,1,42300);
+CheckOffset(struct _GParamSpecBoolean,default_value,0,1,42301);
+#endif
+
+#if __i386__
+CheckTypeSize(GParamSpecBoolean,44, 12057, 2);
+#elif __x86_64__
+CheckTypeSize(GParamSpecBoolean,80, 12057, 11);
+#elif __ia64__
+CheckTypeSize(GParamSpecBoolean,80, 12057, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GParamSpecBoolean,44, 12057, 6);
+#elif __powerpc64__
+CheckTypeSize(GParamSpecBoolean,80, 12057, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GParamSpecBoolean,44, 12057, 10);
+#elif __s390x__
+CheckTypeSize(GParamSpecBoolean,80, 12057, 12);
+#elif 1
+CheckTypeSize(GParamSpecBoolean,0, 12057, 1);
 #endif
 
 #if __i386__
@@ -7189,66 +7137,117 @@ Msg("Find size of GObjectGetPropertyFunc (12061)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12062,0);
-Msg("Find size of fptr_anonymous-glib-object.h.types-4 (12062)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(GObjectSetPropertyFunc,4, 12063, 2)
+CheckTypeSize(GObjectFinalizeFunc,4, 12059, 2);
 #elif __ia64__
-CheckTypeSize(GObjectSetPropertyFunc,8, 12063, 3)
+CheckTypeSize(GObjectFinalizeFunc,8, 12059, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GObjectSetPropertyFunc,4, 12063, 6)
+CheckTypeSize(GObjectFinalizeFunc,4, 12059, 6);
 #elif __powerpc64__
-CheckTypeSize(GObjectSetPropertyFunc,8, 12063, 9)
+CheckTypeSize(GObjectFinalizeFunc,8, 12059, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GObjectSetPropertyFunc,4, 12063, 10)
+CheckTypeSize(GObjectFinalizeFunc,4, 12059, 10);
 #elif __s390x__
-CheckTypeSize(GObjectSetPropertyFunc,8, 12063, 12)
+CheckTypeSize(GObjectFinalizeFunc,8, 12059, 12);
 #elif __x86_64__
-CheckTypeSize(GObjectSetPropertyFunc,8, 12063, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12063,0);
-Msg("Find size of GObjectSetPropertyFunc (12063)\n");
+CheckTypeSize(GObjectFinalizeFunc,8, 12059, 11);
+#elif 1
+CheckTypeSize(GObjectFinalizeFunc,0, 12059, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(gchararray,4, 16219, 2)
 #elif __x86_64__
-CheckTypeSize(gchararray,8, 16219, 11)
 #elif __ia64__
-CheckTypeSize(gchararray,8, 16219, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(gchararray,4, 16219, 6)
 #elif __powerpc64__
-CheckTypeSize(gchararray,8, 16219, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(gchararray,4, 16219, 10)
 #elif __s390x__
-CheckTypeSize(gchararray,8, 16219, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16219,0);
-Msg("Find size of gchararray (16219)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(GStrv,4, 16220, 2)
-#elif __x86_64__
-CheckTypeSize(GStrv,8, 16220, 11)
+CheckTypeSize(GObjectGetPropertyFunc,4, 12061, 2);
 #elif __ia64__
-CheckTypeSize(GStrv,8, 16220, 3)
+CheckTypeSize(GObjectGetPropertyFunc,8, 12061, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GStrv,4, 16220, 6)
+CheckTypeSize(GObjectGetPropertyFunc,4, 12061, 6);
 #elif __powerpc64__
-CheckTypeSize(GStrv,8, 16220, 9)
+CheckTypeSize(GObjectGetPropertyFunc,8, 12061, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(GStrv,4, 16220, 10)
+CheckTypeSize(GObjectGetPropertyFunc,4, 12061, 10);
 #elif __s390x__
-CheckTypeSize(GStrv,8, 16220, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16220,0);
-Msg("Find size of GStrv (16220)\n");
+CheckTypeSize(GObjectGetPropertyFunc,8, 12061, 12);
+#elif __x86_64__
+CheckTypeSize(GObjectGetPropertyFunc,8, 12061, 11);
+#elif 1
+CheckTypeSize(GObjectGetPropertyFunc,0, 12061, 1);
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
+#elif 1
+#endif
+
+#if __i386__
+CheckTypeSize(GObjectSetPropertyFunc,4, 12063, 2);
+#elif __ia64__
+CheckTypeSize(GObjectSetPropertyFunc,8, 12063, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GObjectSetPropertyFunc,4, 12063, 6);
+#elif __powerpc64__
+CheckTypeSize(GObjectSetPropertyFunc,8, 12063, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GObjectSetPropertyFunc,4, 12063, 10);
+#elif __s390x__
+CheckTypeSize(GObjectSetPropertyFunc,8, 12063, 12);
+#elif __x86_64__
+CheckTypeSize(GObjectSetPropertyFunc,8, 12063, 11);
+#elif 1
+CheckTypeSize(GObjectSetPropertyFunc,0, 12063, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(gchararray,4, 16219, 2);
+#elif __x86_64__
+CheckTypeSize(gchararray,8, 16219, 11);
+#elif __ia64__
+CheckTypeSize(gchararray,8, 16219, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(gchararray,4, 16219, 6);
+#elif __powerpc64__
+CheckTypeSize(gchararray,8, 16219, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(gchararray,4, 16219, 10);
+#elif __s390x__
+CheckTypeSize(gchararray,8, 16219, 12);
+#elif 1
+CheckTypeSize(gchararray,0, 16219, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(GStrv,4, 16220, 2);
+#elif __x86_64__
+CheckTypeSize(GStrv,8, 16220, 11);
+#elif __ia64__
+CheckTypeSize(GStrv,8, 16220, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GStrv,4, 16220, 6);
+#elif __powerpc64__
+CheckTypeSize(GStrv,8, 16220, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(GStrv,4, 16220, 10);
+#elif __s390x__
+CheckTypeSize(GStrv,8, 16220, 12);
+#elif 1
+CheckTypeSize(GStrv,0, 16220, 1);
 #endif
 
 extern void g_object_set_property_db(GObject *, const gchar *, const GValue *);

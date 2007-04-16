@@ -5245,9 +5245,6 @@ struct versym libc_so_6[] = {
 #if __powerpc__ && !__powerpc64__
 	{"getlogin_r","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
-#if __not_def__
-	{"getlogin_r","GLIBC_2.3",0,LSB_Core,0,1},
-#endif
 #if __s390__ && !__s390x__
 	{"getlogin_r","GLIBC_2.0",0,LSB_Core,4,1},
 #endif

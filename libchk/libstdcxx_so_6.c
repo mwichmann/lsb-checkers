@@ -6929,6 +6929,9 @@ struct versym libstdcxx_so_6[] = {
 #if __powerpc64__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 #endif
+#if __s390__ && !__s390x__
+	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
 #if __x86_64__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 #endif
@@ -12291,8 +12294,6 @@ struct classtypeinfo _N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_typeinfo 
 	};
 
 const char *_N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_vtable_name_0 [] = {
-	"",
-	"",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE5imbueERKSt6locale",
 #if __i386__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPci",
@@ -12315,16 +12316,7 @@ const char *_N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_vtable_name_0 [] =
 #if __s390x__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPcl",
 #endif
-	"",
-	"",
-	"",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE9showmanycEv",
-	"",
-	"",
-	"",
-	"",
-	"",
-	"",
 	};
 
 struct classvtable _N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_vtable [1] = {
@@ -12367,8 +12359,6 @@ struct classtypeinfo _N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_typeinfo 
 	};
 
 const char *_N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_vtable_name_0 [] = {
-	"",
-	"",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE5imbueERKSt6locale",
 #if __i386__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwi",
@@ -12391,16 +12381,7 @@ const char *_N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_vtable_name_0 [] =
 #if __s390x__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwl",
 #endif
-	"",
-	"",
-	"",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE9showmanycEv",
-	"",
-	"",
-	"",
-	"",
-	"",
-	"",
 	};
 
 struct classvtable _N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_vtable [1] = {
@@ -13319,14 +13300,6 @@ struct classvtable _St13basic_fstreamIcSt11char_traitsIcEE_vtable [3] = {
 	264,
 	0,
 #endif
-#if __arm__
-	148,
-	0,
-#endif
-#if __mc68000__
-	148,
-	0,
-#endif
 #if __powerpc__ && !__powerpc64__
 	148,
 	0,
@@ -13361,14 +13334,6 @@ struct classvtable _St13basic_fstreamIcSt11char_traitsIcEE_vtable [3] = {
 	248,
 	-16,
 #endif
-#if __arm__
-	140,
-	-8,
-#endif
-#if __mc68000__
-	140,
-	-8,
-#endif
 #if __powerpc__ && !__powerpc64__
 	140,
 	-8,
@@ -13402,14 +13367,6 @@ struct classvtable _St13basic_fstreamIcSt11char_traitsIcEE_vtable [3] = {
 #if __ia64__
 	-264,
 	-264,
-#endif
-#if __arm__
-	-148,
-	-148,
-#endif
-#if __mc68000__
-	-148,
-	-148,
 #endif
 #if __powerpc__ && !__powerpc64__
 	-148,
@@ -13571,14 +13528,6 @@ struct classvtable _St13basic_fstreamIwSt11char_traitsIwEE_vtable [3] = {
 	264,
 	0,
 #endif
-#if __arm__
-	152,
-	0,
-#endif
-#if __mc68000__
-	152,
-	0,
-#endif
 #if __powerpc__ && !__powerpc64__
 	152,
 	0,
@@ -13613,14 +13562,6 @@ struct classvtable _St13basic_fstreamIwSt11char_traitsIwEE_vtable [3] = {
 	248,
 	-16,
 #endif
-#if __arm__
-	144,
-	-8,
-#endif
-#if __mc68000__
-	144,
-	-8,
-#endif
 #if __powerpc__ && !__powerpc64__
 	144,
 	-8,
@@ -13654,14 +13595,6 @@ struct classvtable _St13basic_fstreamIwSt11char_traitsIwEE_vtable [3] = {
 #if __ia64__
 	-264,
 	-264,
-#endif
-#if __arm__
-	-152,
-	-152,
-#endif
-#if __mc68000__
-	-152,
-	-152,
 #endif
 #if __powerpc__ && !__powerpc64__
 	-152,
@@ -13823,14 +13756,6 @@ struct classvtable _St14basic_ifstreamIcSt11char_traitsIcEE_vtable [2] = {
 	256,
 	0,
 #endif
-#if __arm__
-	144,
-	0,
-#endif
-#if __mc68000__
-	144,
-	0,
-#endif
 #if __powerpc__ && !__powerpc64__
 	144,
 	0,
@@ -13864,14 +13789,6 @@ struct classvtable _St14basic_ifstreamIcSt11char_traitsIcEE_vtable [2] = {
 #if __ia64__
 	-256,
 	-256,
-#endif
-#if __arm__
-	-144,
-	-144,
-#endif
-#if __mc68000__
-	-144,
-	-144,
 #endif
 #if __powerpc__ && !__powerpc64__
 	-144,
@@ -13988,14 +13905,6 @@ struct classvtable _St14basic_ifstreamIwSt11char_traitsIwEE_vtable [2] = {
 	256,
 	0,
 #endif
-#if __arm__
-	148,
-	0,
-#endif
-#if __mc68000__
-	148,
-	0,
-#endif
 #if __powerpc__ && !__powerpc64__
 	148,
 	0,
@@ -14029,14 +13938,6 @@ struct classvtable _St14basic_ifstreamIwSt11char_traitsIwEE_vtable [2] = {
 #if __ia64__
 	-256,
 	-256,
-#endif
-#if __arm__
-	-148,
-	-148,
-#endif
-#if __mc68000__
-	-148,
-	-148,
 #endif
 #if __powerpc__ && !__powerpc64__
 	-148,
@@ -14153,14 +14054,6 @@ struct classvtable _St14basic_ofstreamIcSt11char_traitsIcEE_vtable [2] = {
 	248,
 	0,
 #endif
-#if __arm__
-	140,
-	0,
-#endif
-#if __mc68000__
-	140,
-	0,
-#endif
 #if __powerpc__ && !__powerpc64__
 	140,
 	0,
@@ -14194,14 +14087,6 @@ struct classvtable _St14basic_ofstreamIcSt11char_traitsIcEE_vtable [2] = {
 #if __ia64__
 	-248,
 	-248,
-#endif
-#if __arm__
-	-140,
-	-140,
-#endif
-#if __mc68000__
-	-140,
-	-140,
 #endif
 #if __powerpc__ && !__powerpc64__
 	-140,
@@ -14318,14 +14203,6 @@ struct classvtable _St14basic_ofstreamIwSt11char_traitsIwEE_vtable [2] = {
 	248,
 	0,
 #endif
-#if __arm__
-	144,
-	0,
-#endif
-#if __mc68000__
-	144,
-	0,
-#endif
 #if __powerpc__ && !__powerpc64__
 	144,
 	0,
@@ -14359,14 +14236,6 @@ struct classvtable _St14basic_ofstreamIwSt11char_traitsIwEE_vtable [2] = {
 #if __ia64__
 	-248,
 	-248,
-#endif
-#if __arm__
-	-144,
-	-144,
-#endif
-#if __mc68000__
-	-144,
-	-144,
 #endif
 #if __powerpc__ && !__powerpc64__
 	-144,
@@ -15765,14 +15634,6 @@ struct classvtable _St18basic_stringstreamIcSt11char_traitsIcESaIcEE_vtable [3] 
 	104,
 	0,
 #endif
-#if __arm__
-	52,
-	0,
-#endif
-#if __mc68000__
-	52,
-	0,
-#endif
 #if __powerpc__ && !__powerpc64__
 	52,
 	0,
@@ -15807,14 +15668,6 @@ struct classvtable _St18basic_stringstreamIcSt11char_traitsIcESaIcEE_vtable [3] 
 	88,
 	-16,
 #endif
-#if __arm__
-	44,
-	-8,
-#endif
-#if __mc68000__
-	44,
-	-8,
-#endif
 #if __powerpc__ && !__powerpc64__
 	44,
 	-8,
@@ -15848,14 +15701,6 @@ struct classvtable _St18basic_stringstreamIcSt11char_traitsIcESaIcEE_vtable [3] 
 #if __ia64__
 	-104,
 	-104,
-#endif
-#if __arm__
-	-52,
-	-52,
-#endif
-#if __mc68000__
-	-52,
-	-52,
 #endif
 #if __powerpc__ && !__powerpc64__
 	-52,
@@ -16017,14 +15862,6 @@ struct classvtable _St18basic_stringstreamIwSt11char_traitsIwESaIwEE_vtable [3] 
 	104,
 	0,
 #endif
-#if __arm__
-	52,
-	0,
-#endif
-#if __mc68000__
-	52,
-	0,
-#endif
 #if __powerpc__ && !__powerpc64__
 	52,
 	0,
@@ -16059,14 +15896,6 @@ struct classvtable _St18basic_stringstreamIwSt11char_traitsIwESaIwEE_vtable [3] 
 	88,
 	-16,
 #endif
-#if __arm__
-	44,
-	-8,
-#endif
-#if __mc68000__
-	44,
-	-8,
-#endif
 #if __powerpc__ && !__powerpc64__
 	44,
 	-8,
@@ -16100,14 +15929,6 @@ struct classvtable _St18basic_stringstreamIwSt11char_traitsIwESaIwEE_vtable [3] 
 #if __ia64__
 	-104,
 	-104,
-#endif
-#if __arm__
-	-52,
-	-52,
-#endif
-#if __mc68000__
-	-52,
-	-52,
 #endif
 #if __powerpc__ && !__powerpc64__
 	-52,
@@ -16224,14 +16045,6 @@ struct classvtable _St19basic_istringstreamIcSt11char_traitsIcESaIcEE_vtable [2]
 	96,
 	0,
 #endif
-#if __arm__
-	48,
-	0,
-#endif
-#if __mc68000__
-	48,
-	0,
-#endif
 #if __powerpc__ && !__powerpc64__
 	48,
 	0,
@@ -16265,14 +16078,6 @@ struct classvtable _St19basic_istringstreamIcSt11char_traitsIcESaIcEE_vtable [2]
 #if __ia64__
 	-96,
 	-96,
-#endif
-#if __arm__
-	-48,
-	-48,
-#endif
-#if __mc68000__
-	-48,
-	-48,
 #endif
 #if __powerpc__ && !__powerpc64__
 	-48,
@@ -16389,14 +16194,6 @@ struct classvtable _St19basic_istringstreamIwSt11char_traitsIwESaIwEE_vtable [2]
 	96,
 	0,
 #endif
-#if __arm__
-	48,
-	0,
-#endif
-#if __mc68000__
-	48,
-	0,
-#endif
 #if __powerpc__ && !__powerpc64__
 	48,
 	0,
@@ -16430,14 +16227,6 @@ struct classvtable _St19basic_istringstreamIwSt11char_traitsIwESaIwEE_vtable [2]
 #if __ia64__
 	-96,
 	-96,
-#endif
-#if __arm__
-	-48,
-	-48,
-#endif
-#if __mc68000__
-	-48,
-	-48,
 #endif
 #if __powerpc__ && !__powerpc64__
 	-48,
@@ -16554,14 +16343,6 @@ struct classvtable _St19basic_ostringstreamIcSt11char_traitsIcESaIcEE_vtable [2]
 	88,
 	0,
 #endif
-#if __arm__
-	44,
-	0,
-#endif
-#if __mc68000__
-	44,
-	0,
-#endif
 #if __powerpc__ && !__powerpc64__
 	44,
 	0,
@@ -16595,14 +16376,6 @@ struct classvtable _St19basic_ostringstreamIcSt11char_traitsIcESaIcEE_vtable [2]
 #if __ia64__
 	-88,
 	-88,
-#endif
-#if __arm__
-	-44,
-	-44,
-#endif
-#if __mc68000__
-	-44,
-	-44,
 #endif
 #if __powerpc__ && !__powerpc64__
 	-44,
@@ -16719,14 +16492,6 @@ struct classvtable _St19basic_ostringstreamIwSt11char_traitsIwESaIwEE_vtable [2]
 	88,
 	0,
 #endif
-#if __arm__
-	44,
-	0,
-#endif
-#if __mc68000__
-	44,
-	0,
-#endif
 #if __powerpc__ && !__powerpc64__
 	44,
 	0,
@@ -16760,14 +16525,6 @@ struct classvtable _St19basic_ostringstreamIwSt11char_traitsIwESaIwEE_vtable [2]
 #if __ia64__
 	-88,
 	-88,
-#endif
-#if __arm__
-	-44,
-	-44,
-#endif
-#if __mc68000__
-	-44,
-	-44,
 #endif
 #if __powerpc__ && !__powerpc64__
 	-44,
@@ -17600,14 +17357,6 @@ struct classvtable _Si_vtable [2] = {
 	16,
 	0,
 #endif
-#if __arm__
-	8,
-	0,
-#endif
-#if __mc68000__
-	8,
-	0,
-#endif
 #if __powerpc__ && !__powerpc64__
 	8,
 	0,
@@ -17642,14 +17391,6 @@ struct classvtable _Si_vtable [2] = {
 	-16,
 	-16,
 #endif
-#if __arm__
-	-8,
-	-8,
-#endif
-#if __mc68000__
-	-8,
-	-8,
-#endif
 #if __powerpc__ && !__powerpc64__
 	-8,
 	-8,
@@ -17683,12 +17424,6 @@ struct base_type_info _Si_baseinfo[] = {
 #endif
 #if __ia64__
 	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
-#endif
-#if __arm__
-	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
-#endif
-#if __mc68000__
-	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
@@ -17792,14 +17527,6 @@ struct classvtable _So_vtable [2] = {
 	8,
 	0,
 #endif
-#if __arm__
-	4,
-	0,
-#endif
-#if __mc68000__
-	4,
-	0,
-#endif
 #if __powerpc__ && !__powerpc64__
 	4,
 	0,
@@ -17834,14 +17561,6 @@ struct classvtable _So_vtable [2] = {
 	-8,
 	-8,
 #endif
-#if __arm__
-	-4,
-	-4,
-#endif
-#if __mc68000__
-	-4,
-	-4,
-#endif
 #if __powerpc__ && !__powerpc64__
 	-4,
 	-4,
@@ -17875,12 +17594,6 @@ struct base_type_info _So_baseinfo[] = {
 #endif
 #if __ia64__
 	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
-#endif
-#if __arm__
-	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
-#endif
-#if __mc68000__
-	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
@@ -17984,14 +17697,6 @@ struct classvtable _St13basic_istreamIwSt11char_traitsIwEE_vtable [2] = {
 	16,
 	0,
 #endif
-#if __arm__
-	8,
-	0,
-#endif
-#if __mc68000__
-	8,
-	0,
-#endif
 #if __powerpc__ && !__powerpc64__
 	8,
 	0,
@@ -18026,14 +17731,6 @@ struct classvtable _St13basic_istreamIwSt11char_traitsIwEE_vtable [2] = {
 	-16,
 	-16,
 #endif
-#if __arm__
-	-8,
-	-8,
-#endif
-#if __mc68000__
-	-8,
-	-8,
-#endif
 #if __powerpc__ && !__powerpc64__
 	-8,
 	-8,
@@ -18067,12 +17764,6 @@ struct base_type_info _St13basic_istreamIwSt11char_traitsIwEE_baseinfo[] = {
 #endif
 #if __ia64__
 	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
-#endif
-#if __arm__
-	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
-#endif
-#if __mc68000__
-	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
@@ -18176,14 +17867,6 @@ struct classvtable _St13basic_ostreamIwSt11char_traitsIwEE_vtable [2] = {
 	8,
 	0,
 #endif
-#if __arm__
-	4,
-	0,
-#endif
-#if __mc68000__
-	4,
-	0,
-#endif
 #if __powerpc__ && !__powerpc64__
 	4,
 	0,
@@ -18218,14 +17901,6 @@ struct classvtable _St13basic_ostreamIwSt11char_traitsIwEE_vtable [2] = {
 	-8,
 	-8,
 #endif
-#if __arm__
-	-4,
-	-4,
-#endif
-#if __mc68000__
-	-4,
-	-4,
-#endif
 #if __powerpc__ && !__powerpc64__
 	-4,
 	-4,
@@ -18259,12 +17934,6 @@ struct base_type_info _St13basic_ostreamIwSt11char_traitsIwEE_baseinfo[] = {
 #endif
 #if __ia64__
 	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
-#endif
-#if __arm__
-	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
-#endif
-#if __mc68000__
-	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
@@ -18330,12 +17999,6 @@ struct base_type_info _St9basic_iosIcSt11char_traitsIcEE_baseinfo[] = {
 #endif
 #if __ia64__
 	{"_ZTISt8ios_base",	2050U},
-#endif
-#if __arm__
-	{"_ZTISt8ios_base",	1026U},
-#endif
-#if __mc68000__
-	{"_ZTISt8ios_base",	1026U},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZTISt8ios_base",	1026U},
@@ -18484,14 +18147,6 @@ struct classvtable _Sd_vtable [3] = {
 	24,
 	0,
 #endif
-#if __arm__
-	12,
-	0,
-#endif
-#if __mc68000__
-	12,
-	0,
-#endif
 #if __powerpc__ && !__powerpc64__
 	12,
 	0,
@@ -18525,14 +18180,6 @@ struct classvtable _Sd_vtable [3] = {
 #if __ia64__
 	8,
 	-16,
-#endif
-#if __arm__
-	4,
-	-8,
-#endif
-#if __mc68000__
-	4,
-	-8,
 #endif
 #if __powerpc__ && !__powerpc64__
 	4,
@@ -18568,14 +18215,6 @@ struct classvtable _Sd_vtable [3] = {
 	-24,
 	-24,
 #endif
-#if __arm__
-	-12,
-	-12,
-#endif
-#if __mc68000__
-	-12,
-	-12,
-#endif
 #if __powerpc__ && !__powerpc64__
 	-12,
 	-12,
@@ -18610,12 +18249,6 @@ struct base_type_info _Sd_baseinfo[] = {
 #endif
 #if __ia64__
 	{"_ZTISo",	4098U},
-#endif
-#if __arm__
-	{"_ZTISo",	2050U},
-#endif
-#if __mc68000__
-	{"_ZTISo",	2050U},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZTISo",	2050U},
@@ -18984,14 +18617,6 @@ struct classvtable _St14basic_iostreamIwSt11char_traitsIwEE_vtable [3] = {
 	24,
 	0,
 #endif
-#if __arm__
-	12,
-	0,
-#endif
-#if __mc68000__
-	12,
-	0,
-#endif
 #if __powerpc__ && !__powerpc64__
 	12,
 	0,
@@ -19025,14 +18650,6 @@ struct classvtable _St14basic_iostreamIwSt11char_traitsIwEE_vtable [3] = {
 #if __ia64__
 	8,
 	-16,
-#endif
-#if __arm__
-	4,
-	-8,
-#endif
-#if __mc68000__
-	4,
-	-8,
 #endif
 #if __powerpc__ && !__powerpc64__
 	4,
@@ -19068,14 +18685,6 @@ struct classvtable _St14basic_iostreamIwSt11char_traitsIwEE_vtable [3] = {
 	-24,
 	-24,
 #endif
-#if __arm__
-	-12,
-	-12,
-#endif
-#if __mc68000__
-	-12,
-	-12,
-#endif
 #if __powerpc__ && !__powerpc64__
 	-12,
 	-12,
@@ -19110,12 +18719,6 @@ struct base_type_info _St14basic_iostreamIwSt11char_traitsIwEE_baseinfo[] = {
 #endif
 #if __ia64__
 	{"_ZTISt13basic_ostreamIwSt11char_traitsIwEE",	4098U},
-#endif
-#if __arm__
-	{"_ZTISt13basic_ostreamIwSt11char_traitsIwEE",	2050U},
-#endif
-#if __mc68000__
-	{"_ZTISt13basic_ostreamIwSt11char_traitsIwEE",	2050U},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZTISt13basic_ostreamIwSt11char_traitsIwEE",	2050U},
@@ -19160,8 +18763,6 @@ struct classtypeinfo _St21__ctype_abstract_baseIcE_typeinfo = {
 	};
 
 const char *_St21__ctype_abstract_baseIcE_vtable_name_0 [] = {
-	"",
-	"",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
@@ -19218,8 +18819,6 @@ struct classtypeinfo _St21__ctype_abstract_baseIwE_typeinfo = {
 	};
 
 const char *_St21__ctype_abstract_baseIwE_vtable_name_0 [] = {
-	"",
-	"",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
@@ -19276,8 +18875,6 @@ struct classtypeinfo _St23__codecvt_abstract_baseIcc11__mbstate_tE_typeinfo = {
 	};
 
 const char *_St23__codecvt_abstract_baseIcc11__mbstate_tE_vtable_name_0 [] = {
-	"",
-	"",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
@@ -19329,8 +18926,6 @@ struct classtypeinfo _St23__codecvt_abstract_baseIwc11__mbstate_tE_typeinfo = {
 	};
 
 const char *_St23__codecvt_abstract_baseIwc11__mbstate_tE_vtable_name_0 [] = {
-	"",
-	"",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",

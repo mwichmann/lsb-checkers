@@ -32,41 +32,39 @@ Msg("Checking data structures in X11/extensions/security.h\n");
 
 printf("Checking data structures in X11/extensions/security.h\n");
 #if __i386__
-CheckTypeSize(XSecurityAuthorization,4, 8596, 2)
+CheckTypeSize(XSecurityAuthorization,4, 8596, 2);
 #elif __ia64__
-CheckTypeSize(XSecurityAuthorization,8, 8596, 3)
+CheckTypeSize(XSecurityAuthorization,8, 8596, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(XSecurityAuthorization,4, 8596, 6)
+CheckTypeSize(XSecurityAuthorization,4, 8596, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(XSecurityAuthorization,4, 8596, 10)
+CheckTypeSize(XSecurityAuthorization,4, 8596, 10);
 #elif __powerpc64__
-CheckTypeSize(XSecurityAuthorization,8, 8596, 9)
+CheckTypeSize(XSecurityAuthorization,8, 8596, 9);
 #elif __s390x__
-CheckTypeSize(XSecurityAuthorization,8, 8596, 12)
+CheckTypeSize(XSecurityAuthorization,8, 8596, 12);
 #elif __x86_64__
-CheckTypeSize(XSecurityAuthorization,8, 8596, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8596,0);
-Msg("Find size of XSecurityAuthorization (8596)\n");
+CheckTypeSize(XSecurityAuthorization,8, 8596, 11);
+#elif 1
+CheckTypeSize(XSecurityAuthorization,0, 8596, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 2)
+CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 2);
 #elif __ia64__
-CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 3)
+CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 6)
+CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 10)
+CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 10);
 #elif __powerpc64__
-CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 9)
+CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 9);
 #elif __s390x__
-CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 12)
+CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 12);
 #elif __x86_64__
-CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8598,0);
-Msg("Find size of XSecurityAuthorizationAttributes (8598)\n");
+CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 11);
+#elif 1
+CheckTypeSize(XSecurityAuthorizationAttributes,0, 8598, 1);
 #endif
 
 #ifdef TET_TEST

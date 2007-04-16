@@ -86,22 +86,21 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(reg_syntax_t,4, 6941, 2)
+CheckTypeSize(reg_syntax_t,4, 6941, 2);
 #elif __ia64__
-CheckTypeSize(reg_syntax_t,8, 6941, 3)
+CheckTypeSize(reg_syntax_t,8, 6941, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(reg_syntax_t,4, 6941, 6)
+CheckTypeSize(reg_syntax_t,4, 6941, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(reg_syntax_t,4, 6941, 10)
+CheckTypeSize(reg_syntax_t,4, 6941, 10);
 #elif __powerpc64__
-CheckTypeSize(reg_syntax_t,8, 6941, 9)
+CheckTypeSize(reg_syntax_t,8, 6941, 9);
 #elif __s390x__
-CheckTypeSize(reg_syntax_t,8, 6941, 12)
+CheckTypeSize(reg_syntax_t,8, 6941, 12);
 #elif __x86_64__
-CheckTypeSize(reg_syntax_t,8, 6941, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6941,0);
-Msg("Find size of reg_syntax_t (6941)\n");
+CheckTypeSize(reg_syntax_t,8, 6941, 11);
+#elif 1
+CheckTypeSize(reg_syntax_t,0, 6941, 1);
 #endif
 
 #if 1
@@ -126,169 +125,172 @@ CheckEnum("REG_ERPAREN",REG_ERPAREN,16,30065);
 #endif
 
 #if 1
-CheckTypeSize(reg_errcode_t,4, 9073, 1)
+CheckTypeSize(reg_errcode_t,4, 9073, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct re_pattern_buffer,32, 6944, 2)
-CheckMemberSize(struct re_pattern_buffer,buffer,4,2,30066)
-CheckOffset(struct re_pattern_buffer,buffer,0,2,30066)
-CheckMemberSize(struct re_pattern_buffer,allocated,4,2,30067)
-CheckOffset(struct re_pattern_buffer,allocated,4,2,30067)
-CheckMemberSize(struct re_pattern_buffer,used,4,2,30068)
-CheckOffset(struct re_pattern_buffer,used,8,2,30068)
-CheckMemberSize(struct re_pattern_buffer,syntax,4,2,30069)
-CheckOffset(struct re_pattern_buffer,syntax,12,2,30069)
-CheckMemberSize(struct re_pattern_buffer,fastmap,4,2,30070)
-CheckOffset(struct re_pattern_buffer,fastmap,16,2,30070)
-CheckMemberSize(struct re_pattern_buffer,translate,4,2,30071)
-CheckOffset(struct re_pattern_buffer,translate,20,2,30071)
-CheckMemberSize(struct re_pattern_buffer,re_nsub,4,2,30072)
-CheckOffset(struct re_pattern_buffer,re_nsub,24,2,30072)
+CheckTypeSize(struct re_pattern_buffer,32, 6944, 2);
+CheckMemberSize(struct re_pattern_buffer,buffer,4,2,30066);
+CheckOffset(struct re_pattern_buffer,buffer,0,2,30066);
+CheckMemberSize(struct re_pattern_buffer,allocated,4,2,30067);
+CheckOffset(struct re_pattern_buffer,allocated,4,2,30067);
+CheckMemberSize(struct re_pattern_buffer,used,4,2,30068);
+CheckOffset(struct re_pattern_buffer,used,8,2,30068);
+CheckMemberSize(struct re_pattern_buffer,syntax,4,2,30069);
+CheckOffset(struct re_pattern_buffer,syntax,12,2,30069);
+CheckMemberSize(struct re_pattern_buffer,fastmap,4,2,30070);
+CheckOffset(struct re_pattern_buffer,fastmap,16,2,30070);
+CheckMemberSize(struct re_pattern_buffer,translate,4,2,30071);
+CheckOffset(struct re_pattern_buffer,translate,20,2,30071);
+CheckMemberSize(struct re_pattern_buffer,re_nsub,4,2,30072);
+CheckOffset(struct re_pattern_buffer,re_nsub,24,2,30072);
 #elif __ia64__
-CheckTypeSize(struct re_pattern_buffer,64, 6944, 3)
-CheckMemberSize(struct re_pattern_buffer,allocated,8,3,30067)
-CheckOffset(struct re_pattern_buffer,allocated,8,3,30067)
-CheckMemberSize(struct re_pattern_buffer,used,8,3,30068)
-CheckOffset(struct re_pattern_buffer,used,16,3,30068)
-CheckMemberSize(struct re_pattern_buffer,syntax,8,3,30069)
-CheckOffset(struct re_pattern_buffer,syntax,24,3,30069)
-CheckMemberSize(struct re_pattern_buffer,fastmap,8,3,30070)
-CheckOffset(struct re_pattern_buffer,fastmap,32,3,30070)
-CheckMemberSize(struct re_pattern_buffer,translate,8,3,30071)
-CheckOffset(struct re_pattern_buffer,translate,40,3,30071)
-CheckMemberSize(struct re_pattern_buffer,re_nsub,8,3,30072)
-CheckOffset(struct re_pattern_buffer,re_nsub,48,3,30072)
+CheckTypeSize(struct re_pattern_buffer,64, 6944, 3);
+CheckMemberSize(struct re_pattern_buffer,allocated,8,3,30067);
+CheckOffset(struct re_pattern_buffer,allocated,8,3,30067);
+CheckMemberSize(struct re_pattern_buffer,used,8,3,30068);
+CheckOffset(struct re_pattern_buffer,used,16,3,30068);
+CheckMemberSize(struct re_pattern_buffer,syntax,8,3,30069);
+CheckOffset(struct re_pattern_buffer,syntax,24,3,30069);
+CheckMemberSize(struct re_pattern_buffer,fastmap,8,3,30070);
+CheckOffset(struct re_pattern_buffer,fastmap,32,3,30070);
+CheckMemberSize(struct re_pattern_buffer,translate,8,3,30071);
+CheckOffset(struct re_pattern_buffer,translate,40,3,30071);
+CheckMemberSize(struct re_pattern_buffer,re_nsub,8,3,30072);
+CheckOffset(struct re_pattern_buffer,re_nsub,48,3,30072);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct re_pattern_buffer,32, 6944, 6)
-CheckMemberSize(struct re_pattern_buffer,allocated,4,6,30067)
-CheckOffset(struct re_pattern_buffer,allocated,4,6,30067)
-CheckMemberSize(struct re_pattern_buffer,used,4,6,30068)
-CheckOffset(struct re_pattern_buffer,used,8,6,30068)
-CheckMemberSize(struct re_pattern_buffer,syntax,4,6,30069)
-CheckOffset(struct re_pattern_buffer,syntax,12,6,30069)
-CheckMemberSize(struct re_pattern_buffer,fastmap,4,6,30070)
-CheckOffset(struct re_pattern_buffer,fastmap,16,6,30070)
-CheckMemberSize(struct re_pattern_buffer,translate,4,6,30071)
-CheckOffset(struct re_pattern_buffer,translate,20,6,30071)
-CheckMemberSize(struct re_pattern_buffer,re_nsub,4,6,30072)
-CheckOffset(struct re_pattern_buffer,re_nsub,24,6,30072)
+CheckTypeSize(struct re_pattern_buffer,32, 6944, 6);
+CheckMemberSize(struct re_pattern_buffer,allocated,4,6,30067);
+CheckOffset(struct re_pattern_buffer,allocated,4,6,30067);
+CheckMemberSize(struct re_pattern_buffer,used,4,6,30068);
+CheckOffset(struct re_pattern_buffer,used,8,6,30068);
+CheckMemberSize(struct re_pattern_buffer,syntax,4,6,30069);
+CheckOffset(struct re_pattern_buffer,syntax,12,6,30069);
+CheckMemberSize(struct re_pattern_buffer,fastmap,4,6,30070);
+CheckOffset(struct re_pattern_buffer,fastmap,16,6,30070);
+CheckMemberSize(struct re_pattern_buffer,translate,4,6,30071);
+CheckOffset(struct re_pattern_buffer,translate,20,6,30071);
+CheckMemberSize(struct re_pattern_buffer,re_nsub,4,6,30072);
+CheckOffset(struct re_pattern_buffer,re_nsub,24,6,30072);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct re_pattern_buffer,32, 6944, 10)
-CheckMemberSize(struct re_pattern_buffer,allocated,4,10,30067)
-CheckOffset(struct re_pattern_buffer,allocated,4,10,30067)
-CheckMemberSize(struct re_pattern_buffer,used,4,10,30068)
-CheckOffset(struct re_pattern_buffer,used,8,10,30068)
-CheckMemberSize(struct re_pattern_buffer,syntax,4,10,30069)
-CheckOffset(struct re_pattern_buffer,syntax,12,10,30069)
-CheckMemberSize(struct re_pattern_buffer,fastmap,4,10,30070)
-CheckOffset(struct re_pattern_buffer,fastmap,16,10,30070)
-CheckMemberSize(struct re_pattern_buffer,translate,4,10,30071)
-CheckOffset(struct re_pattern_buffer,translate,20,10,30071)
-CheckMemberSize(struct re_pattern_buffer,re_nsub,4,10,30072)
-CheckOffset(struct re_pattern_buffer,re_nsub,24,10,30072)
+CheckTypeSize(struct re_pattern_buffer,32, 6944, 10);
+CheckMemberSize(struct re_pattern_buffer,allocated,4,10,30067);
+CheckOffset(struct re_pattern_buffer,allocated,4,10,30067);
+CheckMemberSize(struct re_pattern_buffer,used,4,10,30068);
+CheckOffset(struct re_pattern_buffer,used,8,10,30068);
+CheckMemberSize(struct re_pattern_buffer,syntax,4,10,30069);
+CheckOffset(struct re_pattern_buffer,syntax,12,10,30069);
+CheckMemberSize(struct re_pattern_buffer,fastmap,4,10,30070);
+CheckOffset(struct re_pattern_buffer,fastmap,16,10,30070);
+CheckMemberSize(struct re_pattern_buffer,translate,4,10,30071);
+CheckOffset(struct re_pattern_buffer,translate,20,10,30071);
+CheckMemberSize(struct re_pattern_buffer,re_nsub,4,10,30072);
+CheckOffset(struct re_pattern_buffer,re_nsub,24,10,30072);
 #elif __powerpc64__
-CheckTypeSize(struct re_pattern_buffer,64, 6944, 9)
-CheckMemberSize(struct re_pattern_buffer,allocated,8,9,30067)
-CheckOffset(struct re_pattern_buffer,allocated,8,9,30067)
-CheckMemberSize(struct re_pattern_buffer,used,8,9,30068)
-CheckOffset(struct re_pattern_buffer,used,16,9,30068)
-CheckMemberSize(struct re_pattern_buffer,syntax,8,9,30069)
-CheckOffset(struct re_pattern_buffer,syntax,24,9,30069)
-CheckMemberSize(struct re_pattern_buffer,fastmap,8,9,30070)
-CheckOffset(struct re_pattern_buffer,fastmap,32,9,30070)
-CheckMemberSize(struct re_pattern_buffer,translate,8,9,30071)
-CheckOffset(struct re_pattern_buffer,translate,40,9,30071)
-CheckMemberSize(struct re_pattern_buffer,re_nsub,8,9,30072)
-CheckOffset(struct re_pattern_buffer,re_nsub,48,9,30072)
+CheckTypeSize(struct re_pattern_buffer,64, 6944, 9);
+CheckMemberSize(struct re_pattern_buffer,allocated,8,9,30067);
+CheckOffset(struct re_pattern_buffer,allocated,8,9,30067);
+CheckMemberSize(struct re_pattern_buffer,used,8,9,30068);
+CheckOffset(struct re_pattern_buffer,used,16,9,30068);
+CheckMemberSize(struct re_pattern_buffer,syntax,8,9,30069);
+CheckOffset(struct re_pattern_buffer,syntax,24,9,30069);
+CheckMemberSize(struct re_pattern_buffer,fastmap,8,9,30070);
+CheckOffset(struct re_pattern_buffer,fastmap,32,9,30070);
+CheckMemberSize(struct re_pattern_buffer,translate,8,9,30071);
+CheckOffset(struct re_pattern_buffer,translate,40,9,30071);
+CheckMemberSize(struct re_pattern_buffer,re_nsub,8,9,30072);
+CheckOffset(struct re_pattern_buffer,re_nsub,48,9,30072);
 #elif __s390x__
-CheckTypeSize(struct re_pattern_buffer,64, 6944, 12)
-CheckMemberSize(struct re_pattern_buffer,allocated,8,12,30067)
-CheckOffset(struct re_pattern_buffer,allocated,8,12,30067)
-CheckMemberSize(struct re_pattern_buffer,used,8,12,30068)
-CheckOffset(struct re_pattern_buffer,used,16,12,30068)
-CheckMemberSize(struct re_pattern_buffer,syntax,8,12,30069)
-CheckOffset(struct re_pattern_buffer,syntax,24,12,30069)
-CheckMemberSize(struct re_pattern_buffer,fastmap,8,12,30070)
-CheckOffset(struct re_pattern_buffer,fastmap,32,12,30070)
-CheckMemberSize(struct re_pattern_buffer,translate,8,12,30071)
-CheckOffset(struct re_pattern_buffer,translate,40,12,30071)
-CheckMemberSize(struct re_pattern_buffer,re_nsub,8,12,30072)
-CheckOffset(struct re_pattern_buffer,re_nsub,48,12,30072)
+CheckTypeSize(struct re_pattern_buffer,64, 6944, 12);
+CheckMemberSize(struct re_pattern_buffer,allocated,8,12,30067);
+CheckOffset(struct re_pattern_buffer,allocated,8,12,30067);
+CheckMemberSize(struct re_pattern_buffer,used,8,12,30068);
+CheckOffset(struct re_pattern_buffer,used,16,12,30068);
+CheckMemberSize(struct re_pattern_buffer,syntax,8,12,30069);
+CheckOffset(struct re_pattern_buffer,syntax,24,12,30069);
+CheckMemberSize(struct re_pattern_buffer,fastmap,8,12,30070);
+CheckOffset(struct re_pattern_buffer,fastmap,32,12,30070);
+CheckMemberSize(struct re_pattern_buffer,translate,8,12,30071);
+CheckOffset(struct re_pattern_buffer,translate,40,12,30071);
+CheckMemberSize(struct re_pattern_buffer,re_nsub,8,12,30072);
+CheckOffset(struct re_pattern_buffer,re_nsub,48,12,30072);
 #elif __x86_64__
-CheckTypeSize(struct re_pattern_buffer,64, 6944, 11)
-CheckMemberSize(struct re_pattern_buffer,allocated,8,11,30067)
-CheckOffset(struct re_pattern_buffer,allocated,8,11,30067)
-CheckMemberSize(struct re_pattern_buffer,used,8,11,30068)
-CheckOffset(struct re_pattern_buffer,used,16,11,30068)
-CheckMemberSize(struct re_pattern_buffer,syntax,8,11,30069)
-CheckOffset(struct re_pattern_buffer,syntax,24,11,30069)
-CheckMemberSize(struct re_pattern_buffer,fastmap,8,11,30070)
-CheckOffset(struct re_pattern_buffer,fastmap,32,11,30070)
-CheckMemberSize(struct re_pattern_buffer,translate,8,11,30071)
-CheckOffset(struct re_pattern_buffer,translate,40,11,30071)
-CheckMemberSize(struct re_pattern_buffer,re_nsub,8,11,30072)
-CheckOffset(struct re_pattern_buffer,re_nsub,48,11,30072)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6944,0);
-Msg("Find size of re_pattern_buffer (6944)\n");
+CheckTypeSize(struct re_pattern_buffer,64, 6944, 11);
+CheckMemberSize(struct re_pattern_buffer,allocated,8,11,30067);
+CheckOffset(struct re_pattern_buffer,allocated,8,11,30067);
+CheckMemberSize(struct re_pattern_buffer,used,8,11,30068);
+CheckOffset(struct re_pattern_buffer,used,16,11,30068);
+CheckMemberSize(struct re_pattern_buffer,syntax,8,11,30069);
+CheckOffset(struct re_pattern_buffer,syntax,24,11,30069);
+CheckMemberSize(struct re_pattern_buffer,fastmap,8,11,30070);
+CheckOffset(struct re_pattern_buffer,fastmap,32,11,30070);
+CheckMemberSize(struct re_pattern_buffer,translate,8,11,30071);
+CheckOffset(struct re_pattern_buffer,translate,40,11,30071);
+CheckMemberSize(struct re_pattern_buffer,re_nsub,8,11,30072);
+CheckOffset(struct re_pattern_buffer,re_nsub,48,11,30072);
+#elif 1
+CheckTypeSize(struct re_pattern_buffer,0, 6944, 1);
+CheckBitField(struct re_pattern_buffer,can_be_null,1,1,30073)
+CheckBitField(struct re_pattern_buffer,regs_allocated,2,1,30074)
+CheckBitField(struct re_pattern_buffer,fastmap_accurate,1,1,30075)
+CheckBitField(struct re_pattern_buffer,no_sub,1,1,30076)
+CheckBitField(struct re_pattern_buffer,not_bol,1,1,30077)
+CheckBitField(struct re_pattern_buffer,not_eol,1,1,30078)
+CheckBitField(struct re_pattern_buffer,newline_anchor,1,1,30079)
 #endif
 
 #if __i386__
-CheckTypeSize(regex_t,32, 6945, 2)
+CheckTypeSize(regex_t,32, 6945, 2);
 #elif __ia64__
-CheckTypeSize(regex_t,64, 6945, 3)
+CheckTypeSize(regex_t,64, 6945, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(regex_t,32, 6945, 6)
+CheckTypeSize(regex_t,32, 6945, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(regex_t,32, 6945, 10)
+CheckTypeSize(regex_t,32, 6945, 10);
 #elif __powerpc64__
-CheckTypeSize(regex_t,64, 6945, 9)
+CheckTypeSize(regex_t,64, 6945, 9);
 #elif __s390x__
-CheckTypeSize(regex_t,64, 6945, 12)
+CheckTypeSize(regex_t,64, 6945, 12);
 #elif __x86_64__
-CheckTypeSize(regex_t,64, 6945, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6945,0);
-Msg("Find size of regex_t (6945)\n");
+CheckTypeSize(regex_t,64, 6945, 11);
+#elif 1
+CheckTypeSize(regex_t,0, 6945, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(regoff_t,4, 6946, 2)
+CheckTypeSize(regoff_t,4, 6946, 2);
 #elif __ia64__
-CheckTypeSize(regoff_t,4, 6946, 3)
+CheckTypeSize(regoff_t,4, 6946, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(regoff_t,4, 6946, 6)
+CheckTypeSize(regoff_t,4, 6946, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(regoff_t,4, 6946, 10)
+CheckTypeSize(regoff_t,4, 6946, 10);
 #elif __powerpc64__
-CheckTypeSize(regoff_t,4, 6946, 9)
+CheckTypeSize(regoff_t,4, 6946, 9);
 #elif __s390x__
-CheckTypeSize(regoff_t,4, 6946, 12)
+CheckTypeSize(regoff_t,4, 6946, 12);
 #elif __x86_64__
-CheckTypeSize(regoff_t,4, 6946, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6946,0);
-Msg("Find size of regoff_t (6946)\n");
+CheckTypeSize(regoff_t,4, 6946, 11);
+#elif 1
+CheckTypeSize(regoff_t,0, 6946, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(regmatch_t,8, 6949, 2)
+CheckTypeSize(regmatch_t,8, 6949, 2);
 #elif __ia64__
-CheckTypeSize(regmatch_t,8, 6949, 3)
+CheckTypeSize(regmatch_t,8, 6949, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(regmatch_t,8, 6949, 6)
+CheckTypeSize(regmatch_t,8, 6949, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(regmatch_t,8, 6949, 10)
+CheckTypeSize(regmatch_t,8, 6949, 10);
 #elif __powerpc64__
-CheckTypeSize(regmatch_t,8, 6949, 9)
+CheckTypeSize(regmatch_t,8, 6949, 9);
 #elif __s390x__
-CheckTypeSize(regmatch_t,8, 6949, 12)
+CheckTypeSize(regmatch_t,8, 6949, 12);
 #elif __x86_64__
-CheckTypeSize(regmatch_t,8, 6949, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6949,0);
-Msg("Find size of regmatch_t (6949)\n");
+CheckTypeSize(regmatch_t,8, 6949, 11);
+#elif 1
+CheckTypeSize(regmatch_t,0, 6949, 1);
 #endif
 
 extern int regcomp_db(regex_t *, const char *, int);

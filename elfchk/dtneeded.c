@@ -116,12 +116,6 @@ char *DtNeeded[] = {
 #if __ia64__
 	"libgcc_s.so.1",
 #endif /* __ia64__ */
-#if __arm__
-	"libgcc_s.so.1",
-#endif /* __arm__ */
-#if __mc68000__
-	"libgcc_s.so.1",
-#endif /* __mc68000__ */
 #if __powerpc__ && !__powerpc64__
 	"libgcc_s.so.1",
 #endif /* __powerpc__ && !__powerpc64__ */
@@ -344,9 +338,6 @@ char *DtNeeded[] = {
 #if __ia64__
 	"libncurses.so.5",
 #endif /* __ia64__ */
-#if __arm__
-	"libncurses.so.5",
-#endif /* __arm__ */
 #if __powerpc__ && !__powerpc64__
 	"libncurses.so.5",
 #endif /* __powerpc__ && !__powerpc64__ */
@@ -659,9 +650,6 @@ char *DtNeeded[] = {
 #if __ia64__
 	"libutil.so.1",
 #endif /* __ia64__ */
-#if __arm__
-	"libutil.so.1",
-#endif /* __arm__ */
 #if __powerpc__ && !__powerpc64__
 	"libutil.so.1",
 #endif /* __powerpc__ && !__powerpc64__ */
@@ -689,9 +677,6 @@ char *DtNeeded[] = {
 #if __ia64__
 	"libz.so.1",
 #endif /* __ia64__ */
-#if __arm__
-	"libz.so.1",
-#endif /* __arm__ */
 #if __powerpc__ && !__powerpc64__
 	"libz.so.1",
 #endif /* __powerpc__ && !__powerpc64__ */

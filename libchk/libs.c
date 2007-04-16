@@ -127,12 +127,6 @@ struct modlib modlibs [] = {
 #if __powerpc__ && !__powerpc64__
 	{LSB_Core,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo},
 #endif
-#if __mc68000__
-	{LSB_Core,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo},
-#endif
-#if __arm__
-	{LSB_Core,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo},
-#endif
 #if __ia64__
 	{LSB_Core,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo},
 #endif
@@ -344,9 +338,6 @@ struct modlib modlibs [] = {
 	{LSB_Core,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{LSB_Core,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo},
-#endif
-#if __arm__
 	{LSB_Core,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo},
 #endif
 #if __ia64__
@@ -647,9 +638,6 @@ struct modlib modlibs [] = {
 #if __powerpc__ && !__powerpc64__
 	{LSB_Core,"libutil.so.1",libutil_so_1,libutil_so_1_classinfo},
 #endif
-#if __arm__
-	{LSB_Core,"libutil.so.1",libutil_so_1,libutil_so_1_classinfo},
-#endif
 #if __ia64__
 	{LSB_Core,"libutil.so.1",libutil_so_1,libutil_so_1_classinfo},
 #endif
@@ -674,9 +662,6 @@ struct modlib modlibs [] = {
 	{LSB_Core,"libz.so.1",libz_so_1,libz_so_1_classinfo},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{LSB_Core,"libz.so.1",libz_so_1,libz_so_1_classinfo},
-#endif
-#if __arm__
 	{LSB_Core,"libz.so.1",libz_so_1,libz_so_1_classinfo},
 #endif
 #if __ia64__

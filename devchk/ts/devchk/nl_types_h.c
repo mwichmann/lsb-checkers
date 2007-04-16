@@ -46,41 +46,39 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(nl_catd,4, 6923, 2)
+CheckTypeSize(nl_catd,4, 6923, 2);
 #elif __ia64__
-CheckTypeSize(nl_catd,8, 6923, 3)
+CheckTypeSize(nl_catd,8, 6923, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(nl_catd,4, 6923, 6)
+CheckTypeSize(nl_catd,4, 6923, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(nl_catd,4, 6923, 10)
+CheckTypeSize(nl_catd,4, 6923, 10);
 #elif __powerpc64__
-CheckTypeSize(nl_catd,8, 6923, 9)
+CheckTypeSize(nl_catd,8, 6923, 9);
 #elif __s390x__
-CheckTypeSize(nl_catd,8, 6923, 12)
+CheckTypeSize(nl_catd,8, 6923, 12);
 #elif __x86_64__
-CheckTypeSize(nl_catd,8, 6923, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6923,0);
-Msg("Find size of nl_catd (6923)\n");
+CheckTypeSize(nl_catd,8, 6923, 11);
+#elif 1
+CheckTypeSize(nl_catd,0, 6923, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(nl_item,4, 6924, 2)
+CheckTypeSize(nl_item,4, 6924, 2);
 #elif __ia64__
-CheckTypeSize(nl_item,4, 6924, 3)
+CheckTypeSize(nl_item,4, 6924, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(nl_item,4, 6924, 6)
+CheckTypeSize(nl_item,4, 6924, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(nl_item,4, 6924, 10)
+CheckTypeSize(nl_item,4, 6924, 10);
 #elif __powerpc64__
-CheckTypeSize(nl_item,4, 6924, 9)
+CheckTypeSize(nl_item,4, 6924, 9);
 #elif __s390x__
-CheckTypeSize(nl_item,4, 6924, 12)
+CheckTypeSize(nl_item,4, 6924, 12);
 #elif __x86_64__
-CheckTypeSize(nl_item,4, 6924, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6924,0);
-Msg("Find size of nl_item (6924)\n");
+CheckTypeSize(nl_item,4, 6924, 11);
+#elif 1
+CheckTypeSize(nl_item,0, 6924, 1);
 #endif
 
 extern int catclose_db(nl_catd);

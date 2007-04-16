@@ -96,175 +96,175 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(struct ipc_perm,36, 10128, 2)
-CheckMemberSize(struct ipc_perm,__key,4,2,33724)
-CheckOffset(struct ipc_perm,__key,0,2,33724)
-CheckMemberSize(struct ipc_perm,uid,4,2,33725)
-CheckOffset(struct ipc_perm,uid,4,2,33725)
-CheckMemberSize(struct ipc_perm,gid,4,2,33726)
-CheckOffset(struct ipc_perm,gid,8,2,33726)
-CheckMemberSize(struct ipc_perm,cuid,4,2,33727)
-CheckOffset(struct ipc_perm,cuid,12,2,33727)
-CheckMemberSize(struct ipc_perm,cgid,4,2,33728)
-CheckOffset(struct ipc_perm,cgid,16,2,33728)
-CheckMemberSize(struct ipc_perm,mode,2,2,33729)
-CheckOffset(struct ipc_perm,mode,20,2,33729)
-CheckMemberSize(struct ipc_perm,__pad1,2,2,33730)
-CheckOffset(struct ipc_perm,__pad1,22,2,33730)
-CheckMemberSize(struct ipc_perm,__seq,2,2,34416)
-CheckOffset(struct ipc_perm,__seq,24,2,34416)
-CheckMemberSize(struct ipc_perm,__pad2,2,2,34417)
-CheckOffset(struct ipc_perm,__pad2,26,2,34417)
-CheckMemberSize(struct ipc_perm,__unused1,4,2,34418)
-CheckOffset(struct ipc_perm,__unused1,28,2,34418)
-CheckMemberSize(struct ipc_perm,__unused2,4,2,34419)
-CheckOffset(struct ipc_perm,__unused2,32,2,34419)
+CheckTypeSize(struct ipc_perm,36, 10128, 2);
+CheckMemberSize(struct ipc_perm,__key,4,2,33724);
+CheckOffset(struct ipc_perm,__key,0,2,33724);
+CheckMemberSize(struct ipc_perm,uid,4,2,33725);
+CheckOffset(struct ipc_perm,uid,4,2,33725);
+CheckMemberSize(struct ipc_perm,gid,4,2,33726);
+CheckOffset(struct ipc_perm,gid,8,2,33726);
+CheckMemberSize(struct ipc_perm,cuid,4,2,33727);
+CheckOffset(struct ipc_perm,cuid,12,2,33727);
+CheckMemberSize(struct ipc_perm,cgid,4,2,33728);
+CheckOffset(struct ipc_perm,cgid,16,2,33728);
+CheckMemberSize(struct ipc_perm,mode,2,2,33729);
+CheckOffset(struct ipc_perm,mode,20,2,33729);
+CheckMemberSize(struct ipc_perm,__pad1,2,2,33730);
+CheckOffset(struct ipc_perm,__pad1,22,2,33730);
+CheckMemberSize(struct ipc_perm,__seq,2,2,34416);
+CheckOffset(struct ipc_perm,__seq,24,2,34416);
+CheckMemberSize(struct ipc_perm,__pad2,2,2,34417);
+CheckOffset(struct ipc_perm,__pad2,26,2,34417);
+CheckMemberSize(struct ipc_perm,__unused1,4,2,34418);
+CheckOffset(struct ipc_perm,__unused1,28,2,34418);
+CheckMemberSize(struct ipc_perm,__unused2,4,2,34419);
+CheckOffset(struct ipc_perm,__unused2,32,2,34419);
 #endif
 
 #if __ia64__
-CheckTypeSize(struct ipc_perm,48, 10394, 3)
-CheckMemberSize(struct ipc_perm,__key,4,3,34644)
-CheckOffset(struct ipc_perm,__key,0,3,34644)
-CheckMemberSize(struct ipc_perm,uid,4,3,34645)
-CheckOffset(struct ipc_perm,uid,4,3,34645)
-CheckMemberSize(struct ipc_perm,gid,4,3,34646)
-CheckOffset(struct ipc_perm,gid,8,3,34646)
-CheckMemberSize(struct ipc_perm,cuid,4,3,34647)
-CheckOffset(struct ipc_perm,cuid,12,3,34647)
-CheckMemberSize(struct ipc_perm,cgid,4,3,34648)
-CheckOffset(struct ipc_perm,cgid,16,3,34648)
-CheckMemberSize(struct ipc_perm,mode,4,3,34649)
-CheckOffset(struct ipc_perm,mode,20,3,34649)
-CheckMemberSize(struct ipc_perm,__seq,2,3,34650)
-CheckOffset(struct ipc_perm,__seq,24,3,34650)
-CheckMemberSize(struct ipc_perm,__pad1,2,3,34651)
-CheckOffset(struct ipc_perm,__pad1,26,3,34651)
-CheckMemberSize(struct ipc_perm,__unused1,8,3,34652)
-CheckOffset(struct ipc_perm,__unused1,32,3,34652)
-CheckMemberSize(struct ipc_perm,__unused2,8,3,34653)
-CheckOffset(struct ipc_perm,__unused2,40,3,34653)
+CheckTypeSize(struct ipc_perm,48, 10394, 3);
+CheckMemberSize(struct ipc_perm,__key,4,3,34644);
+CheckOffset(struct ipc_perm,__key,0,3,34644);
+CheckMemberSize(struct ipc_perm,uid,4,3,34645);
+CheckOffset(struct ipc_perm,uid,4,3,34645);
+CheckMemberSize(struct ipc_perm,gid,4,3,34646);
+CheckOffset(struct ipc_perm,gid,8,3,34646);
+CheckMemberSize(struct ipc_perm,cuid,4,3,34647);
+CheckOffset(struct ipc_perm,cuid,12,3,34647);
+CheckMemberSize(struct ipc_perm,cgid,4,3,34648);
+CheckOffset(struct ipc_perm,cgid,16,3,34648);
+CheckMemberSize(struct ipc_perm,mode,4,3,34649);
+CheckOffset(struct ipc_perm,mode,20,3,34649);
+CheckMemberSize(struct ipc_perm,__seq,2,3,34650);
+CheckOffset(struct ipc_perm,__seq,24,3,34650);
+CheckMemberSize(struct ipc_perm,__pad1,2,3,34651);
+CheckOffset(struct ipc_perm,__pad1,26,3,34651);
+CheckMemberSize(struct ipc_perm,__unused1,8,3,34652);
+CheckOffset(struct ipc_perm,__unused1,32,3,34652);
+CheckMemberSize(struct ipc_perm,__unused2,8,3,34653);
+CheckOffset(struct ipc_perm,__unused2,40,3,34653);
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckTypeSize(struct ipc_perm,48, 10403, 6)
-CheckMemberSize(struct ipc_perm,__key,4,6,34720)
-CheckOffset(struct ipc_perm,__key,0,6,34720)
-CheckMemberSize(struct ipc_perm,uid,4,6,34721)
-CheckOffset(struct ipc_perm,uid,4,6,34721)
-CheckMemberSize(struct ipc_perm,gid,4,6,34723)
-CheckOffset(struct ipc_perm,gid,8,6,34723)
-CheckMemberSize(struct ipc_perm,cuid,4,6,34722)
-CheckOffset(struct ipc_perm,cuid,12,6,34722)
-CheckMemberSize(struct ipc_perm,cgid,4,6,34724)
-CheckOffset(struct ipc_perm,cgid,16,6,34724)
-CheckMemberSize(struct ipc_perm,mode,4,6,34725)
-CheckOffset(struct ipc_perm,mode,20,6,34725)
-CheckMemberSize(struct ipc_perm,__seq,4,6,34727)
-CheckOffset(struct ipc_perm,__seq,24,6,34727)
-CheckMemberSize(struct ipc_perm,__pad1,4,6,34726)
-CheckOffset(struct ipc_perm,__pad1,28,6,34726)
-CheckMemberSize(struct ipc_perm,__unused1,8,6,34729)
-CheckOffset(struct ipc_perm,__unused1,32,6,34729)
-CheckMemberSize(struct ipc_perm,__unused2,8,6,34730)
-CheckOffset(struct ipc_perm,__unused2,40,6,34730)
+CheckTypeSize(struct ipc_perm,48, 10403, 6);
+CheckMemberSize(struct ipc_perm,__key,4,6,34720);
+CheckOffset(struct ipc_perm,__key,0,6,34720);
+CheckMemberSize(struct ipc_perm,uid,4,6,34721);
+CheckOffset(struct ipc_perm,uid,4,6,34721);
+CheckMemberSize(struct ipc_perm,gid,4,6,34723);
+CheckOffset(struct ipc_perm,gid,8,6,34723);
+CheckMemberSize(struct ipc_perm,cuid,4,6,34722);
+CheckOffset(struct ipc_perm,cuid,12,6,34722);
+CheckMemberSize(struct ipc_perm,cgid,4,6,34724);
+CheckOffset(struct ipc_perm,cgid,16,6,34724);
+CheckMemberSize(struct ipc_perm,mode,4,6,34725);
+CheckOffset(struct ipc_perm,mode,20,6,34725);
+CheckMemberSize(struct ipc_perm,__seq,4,6,34727);
+CheckOffset(struct ipc_perm,__seq,24,6,34727);
+CheckMemberSize(struct ipc_perm,__pad1,4,6,34726);
+CheckOffset(struct ipc_perm,__pad1,28,6,34726);
+CheckMemberSize(struct ipc_perm,__unused1,8,6,34729);
+CheckOffset(struct ipc_perm,__unused1,32,6,34729);
+CheckMemberSize(struct ipc_perm,__unused2,8,6,34730);
+CheckOffset(struct ipc_perm,__unused2,40,6,34730);
 #endif
 
 #if __s390__ && !__s390x__
-CheckTypeSize(struct ipc_perm,36, 10404, 10)
-CheckMemberSize(struct ipc_perm,__key,4,10,34731)
-CheckOffset(struct ipc_perm,__key,0,10,34731)
-CheckMemberSize(struct ipc_perm,uid,4,10,34732)
-CheckOffset(struct ipc_perm,uid,4,10,34732)
-CheckMemberSize(struct ipc_perm,gid,4,10,34734)
-CheckOffset(struct ipc_perm,gid,8,10,34734)
-CheckMemberSize(struct ipc_perm,cuid,4,10,34733)
-CheckOffset(struct ipc_perm,cuid,12,10,34733)
-CheckMemberSize(struct ipc_perm,cgid,4,10,34735)
-CheckOffset(struct ipc_perm,cgid,16,10,34735)
-CheckMemberSize(struct ipc_perm,mode,2,10,34736)
-CheckOffset(struct ipc_perm,mode,20,10,34736)
-CheckMemberSize(struct ipc_perm,__pad1,2,10,34737)
-CheckOffset(struct ipc_perm,__pad1,22,10,34737)
-CheckMemberSize(struct ipc_perm,__seq,2,10,34738)
-CheckOffset(struct ipc_perm,__seq,24,10,34738)
-CheckMemberSize(struct ipc_perm,__pad2,2,10,34739)
-CheckOffset(struct ipc_perm,__pad2,26,10,34739)
-CheckMemberSize(struct ipc_perm,__unused1,4,10,34740)
-CheckOffset(struct ipc_perm,__unused1,28,10,34740)
-CheckMemberSize(struct ipc_perm,__unused2,4,10,34741)
-CheckOffset(struct ipc_perm,__unused2,32,10,34741)
+CheckTypeSize(struct ipc_perm,36, 10404, 10);
+CheckMemberSize(struct ipc_perm,__key,4,10,34731);
+CheckOffset(struct ipc_perm,__key,0,10,34731);
+CheckMemberSize(struct ipc_perm,uid,4,10,34732);
+CheckOffset(struct ipc_perm,uid,4,10,34732);
+CheckMemberSize(struct ipc_perm,gid,4,10,34734);
+CheckOffset(struct ipc_perm,gid,8,10,34734);
+CheckMemberSize(struct ipc_perm,cuid,4,10,34733);
+CheckOffset(struct ipc_perm,cuid,12,10,34733);
+CheckMemberSize(struct ipc_perm,cgid,4,10,34735);
+CheckOffset(struct ipc_perm,cgid,16,10,34735);
+CheckMemberSize(struct ipc_perm,mode,2,10,34736);
+CheckOffset(struct ipc_perm,mode,20,10,34736);
+CheckMemberSize(struct ipc_perm,__pad1,2,10,34737);
+CheckOffset(struct ipc_perm,__pad1,22,10,34737);
+CheckMemberSize(struct ipc_perm,__seq,2,10,34738);
+CheckOffset(struct ipc_perm,__seq,24,10,34738);
+CheckMemberSize(struct ipc_perm,__pad2,2,10,34739);
+CheckOffset(struct ipc_perm,__pad2,26,10,34739);
+CheckMemberSize(struct ipc_perm,__unused1,4,10,34740);
+CheckOffset(struct ipc_perm,__unused1,28,10,34740);
+CheckMemberSize(struct ipc_perm,__unused2,4,10,34741);
+CheckOffset(struct ipc_perm,__unused2,32,10,34741);
 #endif
 
 #if __powerpc64__
-CheckTypeSize(struct ipc_perm,48, 10494, 9)
-CheckMemberSize(struct ipc_perm,__key,4,9,40060)
-CheckOffset(struct ipc_perm,__key,0,9,40060)
-CheckMemberSize(struct ipc_perm,uid,4,9,40061)
-CheckOffset(struct ipc_perm,uid,4,9,40061)
-CheckMemberSize(struct ipc_perm,gid,4,9,40062)
-CheckOffset(struct ipc_perm,gid,8,9,40062)
-CheckMemberSize(struct ipc_perm,cuid,4,9,40063)
-CheckOffset(struct ipc_perm,cuid,12,9,40063)
-CheckMemberSize(struct ipc_perm,cgid,4,9,40064)
-CheckOffset(struct ipc_perm,cgid,16,9,40064)
-CheckMemberSize(struct ipc_perm,mode,4,9,40065)
-CheckOffset(struct ipc_perm,mode,20,9,40065)
-CheckMemberSize(struct ipc_perm,__seq,4,9,40066)
-CheckOffset(struct ipc_perm,__seq,24,9,40066)
-CheckMemberSize(struct ipc_perm,__pad1,4,9,40067)
-CheckOffset(struct ipc_perm,__pad1,28,9,40067)
-CheckMemberSize(struct ipc_perm,__unused1,8,9,40068)
-CheckOffset(struct ipc_perm,__unused1,32,9,40068)
-CheckMemberSize(struct ipc_perm,__unused2,8,9,40069)
-CheckOffset(struct ipc_perm,__unused2,40,9,40069)
+CheckTypeSize(struct ipc_perm,48, 10494, 9);
+CheckMemberSize(struct ipc_perm,__key,4,9,40060);
+CheckOffset(struct ipc_perm,__key,0,9,40060);
+CheckMemberSize(struct ipc_perm,uid,4,9,40061);
+CheckOffset(struct ipc_perm,uid,4,9,40061);
+CheckMemberSize(struct ipc_perm,gid,4,9,40062);
+CheckOffset(struct ipc_perm,gid,8,9,40062);
+CheckMemberSize(struct ipc_perm,cuid,4,9,40063);
+CheckOffset(struct ipc_perm,cuid,12,9,40063);
+CheckMemberSize(struct ipc_perm,cgid,4,9,40064);
+CheckOffset(struct ipc_perm,cgid,16,9,40064);
+CheckMemberSize(struct ipc_perm,mode,4,9,40065);
+CheckOffset(struct ipc_perm,mode,20,9,40065);
+CheckMemberSize(struct ipc_perm,__seq,4,9,40066);
+CheckOffset(struct ipc_perm,__seq,24,9,40066);
+CheckMemberSize(struct ipc_perm,__pad1,4,9,40067);
+CheckOffset(struct ipc_perm,__pad1,28,9,40067);
+CheckMemberSize(struct ipc_perm,__unused1,8,9,40068);
+CheckOffset(struct ipc_perm,__unused1,32,9,40068);
+CheckMemberSize(struct ipc_perm,__unused2,8,9,40069);
+CheckOffset(struct ipc_perm,__unused2,40,9,40069);
 #endif
 
 #if __s390x__
-CheckTypeSize(struct ipc_perm,48, 10543, 12)
-CheckMemberSize(struct ipc_perm,__key,4,12,40191)
-CheckOffset(struct ipc_perm,__key,0,12,40191)
-CheckMemberSize(struct ipc_perm,uid,4,12,40192)
-CheckOffset(struct ipc_perm,uid,4,12,40192)
-CheckMemberSize(struct ipc_perm,gid,4,12,40193)
-CheckOffset(struct ipc_perm,gid,8,12,40193)
-CheckMemberSize(struct ipc_perm,cuid,4,12,40194)
-CheckOffset(struct ipc_perm,cuid,12,12,40194)
-CheckMemberSize(struct ipc_perm,cgid,4,12,40195)
-CheckOffset(struct ipc_perm,cgid,16,12,40195)
-CheckMemberSize(struct ipc_perm,mode,4,12,40196)
-CheckOffset(struct ipc_perm,mode,20,12,40196)
-CheckMemberSize(struct ipc_perm,__seq,2,12,40197)
-CheckOffset(struct ipc_perm,__seq,24,12,40197)
-CheckMemberSize(struct ipc_perm,__pad2,2,12,40198)
-CheckOffset(struct ipc_perm,__pad2,26,12,40198)
-CheckMemberSize(struct ipc_perm,__unused1,8,12,40199)
-CheckOffset(struct ipc_perm,__unused1,32,12,40199)
-CheckMemberSize(struct ipc_perm,__unused2,8,12,40200)
-CheckOffset(struct ipc_perm,__unused2,40,12,40200)
+CheckTypeSize(struct ipc_perm,48, 10543, 12);
+CheckMemberSize(struct ipc_perm,__key,4,12,40191);
+CheckOffset(struct ipc_perm,__key,0,12,40191);
+CheckMemberSize(struct ipc_perm,uid,4,12,40192);
+CheckOffset(struct ipc_perm,uid,4,12,40192);
+CheckMemberSize(struct ipc_perm,gid,4,12,40193);
+CheckOffset(struct ipc_perm,gid,8,12,40193);
+CheckMemberSize(struct ipc_perm,cuid,4,12,40194);
+CheckOffset(struct ipc_perm,cuid,12,12,40194);
+CheckMemberSize(struct ipc_perm,cgid,4,12,40195);
+CheckOffset(struct ipc_perm,cgid,16,12,40195);
+CheckMemberSize(struct ipc_perm,mode,4,12,40196);
+CheckOffset(struct ipc_perm,mode,20,12,40196);
+CheckMemberSize(struct ipc_perm,__seq,2,12,40197);
+CheckOffset(struct ipc_perm,__seq,24,12,40197);
+CheckMemberSize(struct ipc_perm,__pad2,2,12,40198);
+CheckOffset(struct ipc_perm,__pad2,26,12,40198);
+CheckMemberSize(struct ipc_perm,__unused1,8,12,40199);
+CheckOffset(struct ipc_perm,__unused1,32,12,40199);
+CheckMemberSize(struct ipc_perm,__unused2,8,12,40200);
+CheckOffset(struct ipc_perm,__unused2,40,12,40200);
 #endif
 
 #if __x86_64__
-CheckTypeSize(struct ipc_perm,48, 10787, 11)
-CheckMemberSize(struct ipc_perm,uid,4,11,40427)
-CheckOffset(struct ipc_perm,uid,4,11,40427)
-CheckMemberSize(struct ipc_perm,gid,4,11,40428)
-CheckOffset(struct ipc_perm,gid,8,11,40428)
-CheckMemberSize(struct ipc_perm,cuid,4,11,40429)
-CheckOffset(struct ipc_perm,cuid,12,11,40429)
-CheckMemberSize(struct ipc_perm,cgid,4,11,40430)
-CheckOffset(struct ipc_perm,cgid,16,11,40430)
-CheckMemberSize(struct ipc_perm,mode,2,11,40431)
-CheckOffset(struct ipc_perm,mode,20,11,40431)
-CheckMemberSize(struct ipc_perm,__pad1,2,11,40432)
-CheckOffset(struct ipc_perm,__pad1,22,11,40432)
-CheckMemberSize(struct ipc_perm,__seq,2,11,40433)
-CheckOffset(struct ipc_perm,__seq,24,11,40433)
-CheckMemberSize(struct ipc_perm,__pad2,2,11,40434)
-CheckOffset(struct ipc_perm,__pad2,26,11,40434)
-CheckMemberSize(struct ipc_perm,__unused1,8,11,40435)
-CheckOffset(struct ipc_perm,__unused1,32,11,40435)
-CheckMemberSize(struct ipc_perm,__unused2,8,11,40436)
-CheckOffset(struct ipc_perm,__unused2,40,11,40436)
+CheckTypeSize(struct ipc_perm,48, 10787, 11);
+CheckMemberSize(struct ipc_perm,uid,4,11,40427);
+CheckOffset(struct ipc_perm,uid,4,11,40427);
+CheckMemberSize(struct ipc_perm,gid,4,11,40428);
+CheckOffset(struct ipc_perm,gid,8,11,40428);
+CheckMemberSize(struct ipc_perm,cuid,4,11,40429);
+CheckOffset(struct ipc_perm,cuid,12,11,40429);
+CheckMemberSize(struct ipc_perm,cgid,4,11,40430);
+CheckOffset(struct ipc_perm,cgid,16,11,40430);
+CheckMemberSize(struct ipc_perm,mode,2,11,40431);
+CheckOffset(struct ipc_perm,mode,20,11,40431);
+CheckMemberSize(struct ipc_perm,__pad1,2,11,40432);
+CheckOffset(struct ipc_perm,__pad1,22,11,40432);
+CheckMemberSize(struct ipc_perm,__seq,2,11,40433);
+CheckOffset(struct ipc_perm,__seq,24,11,40433);
+CheckMemberSize(struct ipc_perm,__pad2,2,11,40434);
+CheckOffset(struct ipc_perm,__pad2,26,11,40434);
+CheckMemberSize(struct ipc_perm,__unused1,8,11,40435);
+CheckOffset(struct ipc_perm,__unused1,32,11,40435);
+CheckMemberSize(struct ipc_perm,__unused2,8,11,40436);
+CheckOffset(struct ipc_perm,__unused2,40,11,40436);
 #endif
 
 extern key_t ftok_db(const char *, int);

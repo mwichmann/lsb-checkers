@@ -27,456 +27,373 @@ Msg("Checking data structures in libxml2/libxml/xmlerror.h\n");
 
 printf("Checking data structures in libxml2/libxml/xmlerror.h\n");
 #if __i386__
-CheckTypeSize(struct _xmlParserInput,60, 14642, 2)
-CheckMemberSize(struct _xmlParserInput,filename,4,2,47899)
-CheckOffset(struct _xmlParserInput,filename,4,2,47899)
-CheckMemberSize(struct _xmlParserInput,directory,4,2,47900)
-CheckOffset(struct _xmlParserInput,directory,8,2,47900)
-CheckMemberSize(struct _xmlParserInput,base,4,2,47901)
-CheckOffset(struct _xmlParserInput,base,12,2,47901)
-CheckMemberSize(struct _xmlParserInput,cur,4,2,47902)
-CheckOffset(struct _xmlParserInput,cur,16,2,47902)
-CheckMemberSize(struct _xmlParserInput,end,4,2,47903)
-CheckOffset(struct _xmlParserInput,end,20,2,47903)
-CheckMemberSize(struct _xmlParserInput,length,4,2,47904)
-CheckOffset(struct _xmlParserInput,length,24,2,47904)
-CheckMemberSize(struct _xmlParserInput,line,4,2,47905)
-CheckOffset(struct _xmlParserInput,line,28,2,47905)
-CheckMemberSize(struct _xmlParserInput,col,4,2,47906)
-CheckOffset(struct _xmlParserInput,col,32,2,47906)
-CheckMemberSize(struct _xmlParserInput,consumed,4,2,47907)
-CheckOffset(struct _xmlParserInput,consumed,36,2,47907)
-CheckMemberSize(struct _xmlParserInput,free,4,2,47909)
-CheckOffset(struct _xmlParserInput,free,40,2,47909)
-CheckMemberSize(struct _xmlParserInput,encoding,4,2,47910)
-CheckOffset(struct _xmlParserInput,encoding,44,2,47910)
-CheckMemberSize(struct _xmlParserInput,version,4,2,47911)
-CheckOffset(struct _xmlParserInput,version,48,2,47911)
-CheckMemberSize(struct _xmlParserInput,standalone,4,2,47912)
-CheckOffset(struct _xmlParserInput,standalone,52,2,47912)
-CheckMemberSize(struct _xmlParserInput,id,4,2,47913)
-CheckOffset(struct _xmlParserInput,id,56,2,47913)
+CheckTypeSize(struct _xmlParserInput,60, 14642, 2);
+CheckMemberSize(struct _xmlParserInput,filename,4,2,47899);
+CheckOffset(struct _xmlParserInput,filename,4,2,47899);
+CheckMemberSize(struct _xmlParserInput,directory,4,2,47900);
+CheckOffset(struct _xmlParserInput,directory,8,2,47900);
+CheckMemberSize(struct _xmlParserInput,base,4,2,47901);
+CheckOffset(struct _xmlParserInput,base,12,2,47901);
+CheckMemberSize(struct _xmlParserInput,cur,4,2,47902);
+CheckOffset(struct _xmlParserInput,cur,16,2,47902);
+CheckMemberSize(struct _xmlParserInput,end,4,2,47903);
+CheckOffset(struct _xmlParserInput,end,20,2,47903);
+CheckMemberSize(struct _xmlParserInput,length,4,2,47904);
+CheckOffset(struct _xmlParserInput,length,24,2,47904);
+CheckMemberSize(struct _xmlParserInput,line,4,2,47905);
+CheckOffset(struct _xmlParserInput,line,28,2,47905);
+CheckMemberSize(struct _xmlParserInput,col,4,2,47906);
+CheckOffset(struct _xmlParserInput,col,32,2,47906);
+CheckMemberSize(struct _xmlParserInput,consumed,4,2,47907);
+CheckOffset(struct _xmlParserInput,consumed,36,2,47907);
+CheckMemberSize(struct _xmlParserInput,free,4,2,47909);
+CheckOffset(struct _xmlParserInput,free,40,2,47909);
+CheckMemberSize(struct _xmlParserInput,encoding,4,2,47910);
+CheckOffset(struct _xmlParserInput,encoding,44,2,47910);
+CheckMemberSize(struct _xmlParserInput,version,4,2,47911);
+CheckOffset(struct _xmlParserInput,version,48,2,47911);
+CheckMemberSize(struct _xmlParserInput,standalone,4,2,47912);
+CheckOffset(struct _xmlParserInput,standalone,52,2,47912);
+CheckMemberSize(struct _xmlParserInput,id,4,2,47913);
+CheckOffset(struct _xmlParserInput,id,56,2,47913);
 #elif __x86_64__
-CheckTypeSize(struct _xmlParserInput,104, 14642, 11)
-CheckMemberSize(struct _xmlParserInput,filename,8,11,47899)
-CheckOffset(struct _xmlParserInput,filename,8,11,47899)
-CheckMemberSize(struct _xmlParserInput,directory,8,11,47900)
-CheckOffset(struct _xmlParserInput,directory,16,11,47900)
-CheckMemberSize(struct _xmlParserInput,base,8,11,47901)
-CheckOffset(struct _xmlParserInput,base,24,11,47901)
-CheckMemberSize(struct _xmlParserInput,cur,8,11,47902)
-CheckOffset(struct _xmlParserInput,cur,32,11,47902)
-CheckMemberSize(struct _xmlParserInput,end,8,11,47903)
-CheckOffset(struct _xmlParserInput,end,40,11,47903)
-CheckMemberSize(struct _xmlParserInput,length,4,11,47904)
-CheckOffset(struct _xmlParserInput,length,48,11,47904)
-CheckMemberSize(struct _xmlParserInput,line,4,11,47905)
-CheckOffset(struct _xmlParserInput,line,52,11,47905)
-CheckMemberSize(struct _xmlParserInput,col,4,11,47906)
-CheckOffset(struct _xmlParserInput,col,56,11,47906)
-CheckMemberSize(struct _xmlParserInput,consumed,8,11,47907)
-CheckOffset(struct _xmlParserInput,consumed,64,11,47907)
-CheckMemberSize(struct _xmlParserInput,free,8,11,47909)
-CheckOffset(struct _xmlParserInput,free,72,11,47909)
-CheckMemberSize(struct _xmlParserInput,encoding,8,11,47910)
-CheckOffset(struct _xmlParserInput,encoding,80,11,47910)
-CheckMemberSize(struct _xmlParserInput,version,8,11,47911)
-CheckOffset(struct _xmlParserInput,version,88,11,47911)
-CheckMemberSize(struct _xmlParserInput,standalone,4,11,47912)
-CheckOffset(struct _xmlParserInput,standalone,96,11,47912)
-CheckMemberSize(struct _xmlParserInput,id,4,11,47913)
-CheckOffset(struct _xmlParserInput,id,100,11,47913)
+CheckTypeSize(struct _xmlParserInput,104, 14642, 11);
+CheckMemberSize(struct _xmlParserInput,filename,8,11,47899);
+CheckOffset(struct _xmlParserInput,filename,8,11,47899);
+CheckMemberSize(struct _xmlParserInput,directory,8,11,47900);
+CheckOffset(struct _xmlParserInput,directory,16,11,47900);
+CheckMemberSize(struct _xmlParserInput,base,8,11,47901);
+CheckOffset(struct _xmlParserInput,base,24,11,47901);
+CheckMemberSize(struct _xmlParserInput,cur,8,11,47902);
+CheckOffset(struct _xmlParserInput,cur,32,11,47902);
+CheckMemberSize(struct _xmlParserInput,end,8,11,47903);
+CheckOffset(struct _xmlParserInput,end,40,11,47903);
+CheckMemberSize(struct _xmlParserInput,length,4,11,47904);
+CheckOffset(struct _xmlParserInput,length,48,11,47904);
+CheckMemberSize(struct _xmlParserInput,line,4,11,47905);
+CheckOffset(struct _xmlParserInput,line,52,11,47905);
+CheckMemberSize(struct _xmlParserInput,col,4,11,47906);
+CheckOffset(struct _xmlParserInput,col,56,11,47906);
+CheckMemberSize(struct _xmlParserInput,consumed,8,11,47907);
+CheckOffset(struct _xmlParserInput,consumed,64,11,47907);
+CheckMemberSize(struct _xmlParserInput,free,8,11,47909);
+CheckOffset(struct _xmlParserInput,free,72,11,47909);
+CheckMemberSize(struct _xmlParserInput,encoding,8,11,47910);
+CheckOffset(struct _xmlParserInput,encoding,80,11,47910);
+CheckMemberSize(struct _xmlParserInput,version,8,11,47911);
+CheckOffset(struct _xmlParserInput,version,88,11,47911);
+CheckMemberSize(struct _xmlParserInput,standalone,4,11,47912);
+CheckOffset(struct _xmlParserInput,standalone,96,11,47912);
+CheckMemberSize(struct _xmlParserInput,id,4,11,47913);
+CheckOffset(struct _xmlParserInput,id,100,11,47913);
 #elif __ia64__
-CheckTypeSize(struct _xmlParserInput,104, 14642, 3)
-CheckMemberSize(struct _xmlParserInput,filename,8,3,47899)
-CheckOffset(struct _xmlParserInput,filename,8,3,47899)
-CheckMemberSize(struct _xmlParserInput,directory,8,3,47900)
-CheckOffset(struct _xmlParserInput,directory,16,3,47900)
-CheckMemberSize(struct _xmlParserInput,base,8,3,47901)
-CheckOffset(struct _xmlParserInput,base,24,3,47901)
-CheckMemberSize(struct _xmlParserInput,cur,8,3,47902)
-CheckOffset(struct _xmlParserInput,cur,32,3,47902)
-CheckMemberSize(struct _xmlParserInput,end,8,3,47903)
-CheckOffset(struct _xmlParserInput,end,40,3,47903)
-CheckMemberSize(struct _xmlParserInput,length,4,3,47904)
-CheckOffset(struct _xmlParserInput,length,48,3,47904)
-CheckMemberSize(struct _xmlParserInput,line,4,3,47905)
-CheckOffset(struct _xmlParserInput,line,52,3,47905)
-CheckMemberSize(struct _xmlParserInput,col,4,3,47906)
-CheckOffset(struct _xmlParserInput,col,56,3,47906)
-CheckMemberSize(struct _xmlParserInput,consumed,8,3,47907)
-CheckOffset(struct _xmlParserInput,consumed,64,3,47907)
-CheckMemberSize(struct _xmlParserInput,free,8,3,47909)
-CheckOffset(struct _xmlParserInput,free,72,3,47909)
-CheckMemberSize(struct _xmlParserInput,encoding,8,3,47910)
-CheckOffset(struct _xmlParserInput,encoding,80,3,47910)
-CheckMemberSize(struct _xmlParserInput,version,8,3,47911)
-CheckOffset(struct _xmlParserInput,version,88,3,47911)
-CheckMemberSize(struct _xmlParserInput,standalone,4,3,47912)
-CheckOffset(struct _xmlParserInput,standalone,96,3,47912)
-CheckMemberSize(struct _xmlParserInput,id,4,3,47913)
-CheckOffset(struct _xmlParserInput,id,100,3,47913)
+CheckTypeSize(struct _xmlParserInput,104, 14642, 3);
+CheckMemberSize(struct _xmlParserInput,filename,8,3,47899);
+CheckOffset(struct _xmlParserInput,filename,8,3,47899);
+CheckMemberSize(struct _xmlParserInput,directory,8,3,47900);
+CheckOffset(struct _xmlParserInput,directory,16,3,47900);
+CheckMemberSize(struct _xmlParserInput,base,8,3,47901);
+CheckOffset(struct _xmlParserInput,base,24,3,47901);
+CheckMemberSize(struct _xmlParserInput,cur,8,3,47902);
+CheckOffset(struct _xmlParserInput,cur,32,3,47902);
+CheckMemberSize(struct _xmlParserInput,end,8,3,47903);
+CheckOffset(struct _xmlParserInput,end,40,3,47903);
+CheckMemberSize(struct _xmlParserInput,length,4,3,47904);
+CheckOffset(struct _xmlParserInput,length,48,3,47904);
+CheckMemberSize(struct _xmlParserInput,line,4,3,47905);
+CheckOffset(struct _xmlParserInput,line,52,3,47905);
+CheckMemberSize(struct _xmlParserInput,col,4,3,47906);
+CheckOffset(struct _xmlParserInput,col,56,3,47906);
+CheckMemberSize(struct _xmlParserInput,consumed,8,3,47907);
+CheckOffset(struct _xmlParserInput,consumed,64,3,47907);
+CheckMemberSize(struct _xmlParserInput,free,8,3,47909);
+CheckOffset(struct _xmlParserInput,free,72,3,47909);
+CheckMemberSize(struct _xmlParserInput,encoding,8,3,47910);
+CheckOffset(struct _xmlParserInput,encoding,80,3,47910);
+CheckMemberSize(struct _xmlParserInput,version,8,3,47911);
+CheckOffset(struct _xmlParserInput,version,88,3,47911);
+CheckMemberSize(struct _xmlParserInput,standalone,4,3,47912);
+CheckOffset(struct _xmlParserInput,standalone,96,3,47912);
+CheckMemberSize(struct _xmlParserInput,id,4,3,47913);
+CheckOffset(struct _xmlParserInput,id,100,3,47913);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _xmlParserInput,60, 14642, 6)
-CheckMemberSize(struct _xmlParserInput,filename,4,6,47899)
-CheckOffset(struct _xmlParserInput,filename,4,6,47899)
-CheckMemberSize(struct _xmlParserInput,directory,4,6,47900)
-CheckOffset(struct _xmlParserInput,directory,8,6,47900)
-CheckMemberSize(struct _xmlParserInput,base,4,6,47901)
-CheckOffset(struct _xmlParserInput,base,12,6,47901)
-CheckMemberSize(struct _xmlParserInput,cur,4,6,47902)
-CheckOffset(struct _xmlParserInput,cur,16,6,47902)
-CheckMemberSize(struct _xmlParserInput,end,4,6,47903)
-CheckOffset(struct _xmlParserInput,end,20,6,47903)
-CheckMemberSize(struct _xmlParserInput,length,4,6,47904)
-CheckOffset(struct _xmlParserInput,length,24,6,47904)
-CheckMemberSize(struct _xmlParserInput,line,4,6,47905)
-CheckOffset(struct _xmlParserInput,line,28,6,47905)
-CheckMemberSize(struct _xmlParserInput,col,4,6,47906)
-CheckOffset(struct _xmlParserInput,col,32,6,47906)
-CheckMemberSize(struct _xmlParserInput,consumed,4,6,47907)
-CheckOffset(struct _xmlParserInput,consumed,36,6,47907)
-CheckMemberSize(struct _xmlParserInput,free,4,6,47909)
-CheckOffset(struct _xmlParserInput,free,40,6,47909)
-CheckMemberSize(struct _xmlParserInput,encoding,4,6,47910)
-CheckOffset(struct _xmlParserInput,encoding,44,6,47910)
-CheckMemberSize(struct _xmlParserInput,version,4,6,47911)
-CheckOffset(struct _xmlParserInput,version,48,6,47911)
-CheckMemberSize(struct _xmlParserInput,standalone,4,6,47912)
-CheckOffset(struct _xmlParserInput,standalone,52,6,47912)
-CheckMemberSize(struct _xmlParserInput,id,4,6,47913)
-CheckOffset(struct _xmlParserInput,id,56,6,47913)
+CheckTypeSize(struct _xmlParserInput,60, 14642, 6);
+CheckMemberSize(struct _xmlParserInput,filename,4,6,47899);
+CheckOffset(struct _xmlParserInput,filename,4,6,47899);
+CheckMemberSize(struct _xmlParserInput,directory,4,6,47900);
+CheckOffset(struct _xmlParserInput,directory,8,6,47900);
+CheckMemberSize(struct _xmlParserInput,base,4,6,47901);
+CheckOffset(struct _xmlParserInput,base,12,6,47901);
+CheckMemberSize(struct _xmlParserInput,cur,4,6,47902);
+CheckOffset(struct _xmlParserInput,cur,16,6,47902);
+CheckMemberSize(struct _xmlParserInput,end,4,6,47903);
+CheckOffset(struct _xmlParserInput,end,20,6,47903);
+CheckMemberSize(struct _xmlParserInput,length,4,6,47904);
+CheckOffset(struct _xmlParserInput,length,24,6,47904);
+CheckMemberSize(struct _xmlParserInput,line,4,6,47905);
+CheckOffset(struct _xmlParserInput,line,28,6,47905);
+CheckMemberSize(struct _xmlParserInput,col,4,6,47906);
+CheckOffset(struct _xmlParserInput,col,32,6,47906);
+CheckMemberSize(struct _xmlParserInput,consumed,4,6,47907);
+CheckOffset(struct _xmlParserInput,consumed,36,6,47907);
+CheckMemberSize(struct _xmlParserInput,free,4,6,47909);
+CheckOffset(struct _xmlParserInput,free,40,6,47909);
+CheckMemberSize(struct _xmlParserInput,encoding,4,6,47910);
+CheckOffset(struct _xmlParserInput,encoding,44,6,47910);
+CheckMemberSize(struct _xmlParserInput,version,4,6,47911);
+CheckOffset(struct _xmlParserInput,version,48,6,47911);
+CheckMemberSize(struct _xmlParserInput,standalone,4,6,47912);
+CheckOffset(struct _xmlParserInput,standalone,52,6,47912);
+CheckMemberSize(struct _xmlParserInput,id,4,6,47913);
+CheckOffset(struct _xmlParserInput,id,56,6,47913);
 #elif __powerpc64__
-CheckTypeSize(struct _xmlParserInput,104, 14642, 9)
-CheckMemberSize(struct _xmlParserInput,filename,8,9,47899)
-CheckOffset(struct _xmlParserInput,filename,8,9,47899)
-CheckMemberSize(struct _xmlParserInput,directory,8,9,47900)
-CheckOffset(struct _xmlParserInput,directory,16,9,47900)
-CheckMemberSize(struct _xmlParserInput,base,8,9,47901)
-CheckOffset(struct _xmlParserInput,base,24,9,47901)
-CheckMemberSize(struct _xmlParserInput,cur,8,9,47902)
-CheckOffset(struct _xmlParserInput,cur,32,9,47902)
-CheckMemberSize(struct _xmlParserInput,end,8,9,47903)
-CheckOffset(struct _xmlParserInput,end,40,9,47903)
-CheckMemberSize(struct _xmlParserInput,length,4,9,47904)
-CheckOffset(struct _xmlParserInput,length,48,9,47904)
-CheckMemberSize(struct _xmlParserInput,line,4,9,47905)
-CheckOffset(struct _xmlParserInput,line,52,9,47905)
-CheckMemberSize(struct _xmlParserInput,col,4,9,47906)
-CheckOffset(struct _xmlParserInput,col,56,9,47906)
-CheckMemberSize(struct _xmlParserInput,consumed,8,9,47907)
-CheckOffset(struct _xmlParserInput,consumed,64,9,47907)
-CheckMemberSize(struct _xmlParserInput,free,8,9,47909)
-CheckOffset(struct _xmlParserInput,free,72,9,47909)
-CheckMemberSize(struct _xmlParserInput,encoding,8,9,47910)
-CheckOffset(struct _xmlParserInput,encoding,80,9,47910)
-CheckMemberSize(struct _xmlParserInput,version,8,9,47911)
-CheckOffset(struct _xmlParserInput,version,88,9,47911)
-CheckMemberSize(struct _xmlParserInput,standalone,4,9,47912)
-CheckOffset(struct _xmlParserInput,standalone,96,9,47912)
-CheckMemberSize(struct _xmlParserInput,id,4,9,47913)
-CheckOffset(struct _xmlParserInput,id,100,9,47913)
+CheckTypeSize(struct _xmlParserInput,104, 14642, 9);
+CheckMemberSize(struct _xmlParserInput,filename,8,9,47899);
+CheckOffset(struct _xmlParserInput,filename,8,9,47899);
+CheckMemberSize(struct _xmlParserInput,directory,8,9,47900);
+CheckOffset(struct _xmlParserInput,directory,16,9,47900);
+CheckMemberSize(struct _xmlParserInput,base,8,9,47901);
+CheckOffset(struct _xmlParserInput,base,24,9,47901);
+CheckMemberSize(struct _xmlParserInput,cur,8,9,47902);
+CheckOffset(struct _xmlParserInput,cur,32,9,47902);
+CheckMemberSize(struct _xmlParserInput,end,8,9,47903);
+CheckOffset(struct _xmlParserInput,end,40,9,47903);
+CheckMemberSize(struct _xmlParserInput,length,4,9,47904);
+CheckOffset(struct _xmlParserInput,length,48,9,47904);
+CheckMemberSize(struct _xmlParserInput,line,4,9,47905);
+CheckOffset(struct _xmlParserInput,line,52,9,47905);
+CheckMemberSize(struct _xmlParserInput,col,4,9,47906);
+CheckOffset(struct _xmlParserInput,col,56,9,47906);
+CheckMemberSize(struct _xmlParserInput,consumed,8,9,47907);
+CheckOffset(struct _xmlParserInput,consumed,64,9,47907);
+CheckMemberSize(struct _xmlParserInput,free,8,9,47909);
+CheckOffset(struct _xmlParserInput,free,72,9,47909);
+CheckMemberSize(struct _xmlParserInput,encoding,8,9,47910);
+CheckOffset(struct _xmlParserInput,encoding,80,9,47910);
+CheckMemberSize(struct _xmlParserInput,version,8,9,47911);
+CheckOffset(struct _xmlParserInput,version,88,9,47911);
+CheckMemberSize(struct _xmlParserInput,standalone,4,9,47912);
+CheckOffset(struct _xmlParserInput,standalone,96,9,47912);
+CheckMemberSize(struct _xmlParserInput,id,4,9,47913);
+CheckOffset(struct _xmlParserInput,id,100,9,47913);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _xmlParserInput,60, 14642, 10)
-CheckMemberSize(struct _xmlParserInput,filename,4,10,47899)
-CheckOffset(struct _xmlParserInput,filename,4,10,47899)
-CheckMemberSize(struct _xmlParserInput,directory,4,10,47900)
-CheckOffset(struct _xmlParserInput,directory,8,10,47900)
-CheckMemberSize(struct _xmlParserInput,base,4,10,47901)
-CheckOffset(struct _xmlParserInput,base,12,10,47901)
-CheckMemberSize(struct _xmlParserInput,cur,4,10,47902)
-CheckOffset(struct _xmlParserInput,cur,16,10,47902)
-CheckMemberSize(struct _xmlParserInput,end,4,10,47903)
-CheckOffset(struct _xmlParserInput,end,20,10,47903)
-CheckMemberSize(struct _xmlParserInput,length,4,10,47904)
-CheckOffset(struct _xmlParserInput,length,24,10,47904)
-CheckMemberSize(struct _xmlParserInput,line,4,10,47905)
-CheckOffset(struct _xmlParserInput,line,28,10,47905)
-CheckMemberSize(struct _xmlParserInput,col,4,10,47906)
-CheckOffset(struct _xmlParserInput,col,32,10,47906)
-CheckMemberSize(struct _xmlParserInput,consumed,4,10,47907)
-CheckOffset(struct _xmlParserInput,consumed,36,10,47907)
-CheckMemberSize(struct _xmlParserInput,free,4,10,47909)
-CheckOffset(struct _xmlParserInput,free,40,10,47909)
-CheckMemberSize(struct _xmlParserInput,encoding,4,10,47910)
-CheckOffset(struct _xmlParserInput,encoding,44,10,47910)
-CheckMemberSize(struct _xmlParserInput,version,4,10,47911)
-CheckOffset(struct _xmlParserInput,version,48,10,47911)
-CheckMemberSize(struct _xmlParserInput,standalone,4,10,47912)
-CheckOffset(struct _xmlParserInput,standalone,52,10,47912)
-CheckMemberSize(struct _xmlParserInput,id,4,10,47913)
-CheckOffset(struct _xmlParserInput,id,56,10,47913)
+CheckTypeSize(struct _xmlParserInput,60, 14642, 10);
+CheckMemberSize(struct _xmlParserInput,filename,4,10,47899);
+CheckOffset(struct _xmlParserInput,filename,4,10,47899);
+CheckMemberSize(struct _xmlParserInput,directory,4,10,47900);
+CheckOffset(struct _xmlParserInput,directory,8,10,47900);
+CheckMemberSize(struct _xmlParserInput,base,4,10,47901);
+CheckOffset(struct _xmlParserInput,base,12,10,47901);
+CheckMemberSize(struct _xmlParserInput,cur,4,10,47902);
+CheckOffset(struct _xmlParserInput,cur,16,10,47902);
+CheckMemberSize(struct _xmlParserInput,end,4,10,47903);
+CheckOffset(struct _xmlParserInput,end,20,10,47903);
+CheckMemberSize(struct _xmlParserInput,length,4,10,47904);
+CheckOffset(struct _xmlParserInput,length,24,10,47904);
+CheckMemberSize(struct _xmlParserInput,line,4,10,47905);
+CheckOffset(struct _xmlParserInput,line,28,10,47905);
+CheckMemberSize(struct _xmlParserInput,col,4,10,47906);
+CheckOffset(struct _xmlParserInput,col,32,10,47906);
+CheckMemberSize(struct _xmlParserInput,consumed,4,10,47907);
+CheckOffset(struct _xmlParserInput,consumed,36,10,47907);
+CheckMemberSize(struct _xmlParserInput,free,4,10,47909);
+CheckOffset(struct _xmlParserInput,free,40,10,47909);
+CheckMemberSize(struct _xmlParserInput,encoding,4,10,47910);
+CheckOffset(struct _xmlParserInput,encoding,44,10,47910);
+CheckMemberSize(struct _xmlParserInput,version,4,10,47911);
+CheckOffset(struct _xmlParserInput,version,48,10,47911);
+CheckMemberSize(struct _xmlParserInput,standalone,4,10,47912);
+CheckOffset(struct _xmlParserInput,standalone,52,10,47912);
+CheckMemberSize(struct _xmlParserInput,id,4,10,47913);
+CheckOffset(struct _xmlParserInput,id,56,10,47913);
 #elif __s390x__
-CheckTypeSize(struct _xmlParserInput,104, 14642, 12)
-CheckMemberSize(struct _xmlParserInput,filename,8,12,47899)
-CheckOffset(struct _xmlParserInput,filename,8,12,47899)
-CheckMemberSize(struct _xmlParserInput,directory,8,12,47900)
-CheckOffset(struct _xmlParserInput,directory,16,12,47900)
-CheckMemberSize(struct _xmlParserInput,base,8,12,47901)
-CheckOffset(struct _xmlParserInput,base,24,12,47901)
-CheckMemberSize(struct _xmlParserInput,cur,8,12,47902)
-CheckOffset(struct _xmlParserInput,cur,32,12,47902)
-CheckMemberSize(struct _xmlParserInput,end,8,12,47903)
-CheckOffset(struct _xmlParserInput,end,40,12,47903)
-CheckMemberSize(struct _xmlParserInput,length,4,12,47904)
-CheckOffset(struct _xmlParserInput,length,48,12,47904)
-CheckMemberSize(struct _xmlParserInput,line,4,12,47905)
-CheckOffset(struct _xmlParserInput,line,52,12,47905)
-CheckMemberSize(struct _xmlParserInput,col,4,12,47906)
-CheckOffset(struct _xmlParserInput,col,56,12,47906)
-CheckMemberSize(struct _xmlParserInput,consumed,8,12,47907)
-CheckOffset(struct _xmlParserInput,consumed,64,12,47907)
-CheckMemberSize(struct _xmlParserInput,free,8,12,47909)
-CheckOffset(struct _xmlParserInput,free,72,12,47909)
-CheckMemberSize(struct _xmlParserInput,encoding,8,12,47910)
-CheckOffset(struct _xmlParserInput,encoding,80,12,47910)
-CheckMemberSize(struct _xmlParserInput,version,8,12,47911)
-CheckOffset(struct _xmlParserInput,version,88,12,47911)
-CheckMemberSize(struct _xmlParserInput,standalone,4,12,47912)
-CheckOffset(struct _xmlParserInput,standalone,96,12,47912)
-CheckMemberSize(struct _xmlParserInput,id,4,12,47913)
-CheckOffset(struct _xmlParserInput,id,100,12,47913)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14642,0);
-Msg("Find size of _xmlParserInput (14642)\n");
+CheckTypeSize(struct _xmlParserInput,104, 14642, 12);
+CheckMemberSize(struct _xmlParserInput,filename,8,12,47899);
+CheckOffset(struct _xmlParserInput,filename,8,12,47899);
+CheckMemberSize(struct _xmlParserInput,directory,8,12,47900);
+CheckOffset(struct _xmlParserInput,directory,16,12,47900);
+CheckMemberSize(struct _xmlParserInput,base,8,12,47901);
+CheckOffset(struct _xmlParserInput,base,24,12,47901);
+CheckMemberSize(struct _xmlParserInput,cur,8,12,47902);
+CheckOffset(struct _xmlParserInput,cur,32,12,47902);
+CheckMemberSize(struct _xmlParserInput,end,8,12,47903);
+CheckOffset(struct _xmlParserInput,end,40,12,47903);
+CheckMemberSize(struct _xmlParserInput,length,4,12,47904);
+CheckOffset(struct _xmlParserInput,length,48,12,47904);
+CheckMemberSize(struct _xmlParserInput,line,4,12,47905);
+CheckOffset(struct _xmlParserInput,line,52,12,47905);
+CheckMemberSize(struct _xmlParserInput,col,4,12,47906);
+CheckOffset(struct _xmlParserInput,col,56,12,47906);
+CheckMemberSize(struct _xmlParserInput,consumed,8,12,47907);
+CheckOffset(struct _xmlParserInput,consumed,64,12,47907);
+CheckMemberSize(struct _xmlParserInput,free,8,12,47909);
+CheckOffset(struct _xmlParserInput,free,72,12,47909);
+CheckMemberSize(struct _xmlParserInput,encoding,8,12,47910);
+CheckOffset(struct _xmlParserInput,encoding,80,12,47910);
+CheckMemberSize(struct _xmlParserInput,version,8,12,47911);
+CheckOffset(struct _xmlParserInput,version,88,12,47911);
+CheckMemberSize(struct _xmlParserInput,standalone,4,12,47912);
+CheckOffset(struct _xmlParserInput,standalone,96,12,47912);
+CheckMemberSize(struct _xmlParserInput,id,4,12,47913);
+CheckOffset(struct _xmlParserInput,id,100,12,47913);
+#elif 1
+CheckTypeSize(struct _xmlParserInput,0, 14642, 1);
+Msg("Missing member data for _xmlParserInput on All\n");
+CheckOffset(struct _xmlParserInput,buf,0,1,47898);
+CheckOffset(struct _xmlParserInput,filename,0,1,47899);
+CheckOffset(struct _xmlParserInput,directory,0,1,47900);
+CheckOffset(struct _xmlParserInput,base,0,1,47901);
+CheckOffset(struct _xmlParserInput,cur,0,1,47902);
+CheckOffset(struct _xmlParserInput,end,0,1,47903);
+CheckOffset(struct _xmlParserInput,length,0,1,47904);
+CheckOffset(struct _xmlParserInput,line,0,1,47905);
+CheckOffset(struct _xmlParserInput,col,0,1,47906);
+CheckOffset(struct _xmlParserInput,consumed,0,1,47907);
+CheckOffset(struct _xmlParserInput,free,0,1,47909);
+CheckOffset(struct _xmlParserInput,encoding,0,1,47910);
+CheckOffset(struct _xmlParserInput,version,0,1,47911);
+CheckOffset(struct _xmlParserInput,standalone,0,1,47912);
+CheckOffset(struct _xmlParserInput,id,0,1,47913);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _xmlParserInputBuffer,36, 14643, 2)
-CheckMemberSize(struct _xmlParserInputBuffer,readcallback,4,2,47890)
-CheckOffset(struct _xmlParserInputBuffer,readcallback,4,2,47890)
-CheckMemberSize(struct _xmlParserInputBuffer,closecallback,4,2,47891)
-CheckOffset(struct _xmlParserInputBuffer,closecallback,8,2,47891)
-CheckMemberSize(struct _xmlParserInputBuffer,encoder,4,2,47892)
-CheckOffset(struct _xmlParserInputBuffer,encoder,12,2,47892)
-CheckMemberSize(struct _xmlParserInputBuffer,buffer,4,2,47893)
-CheckOffset(struct _xmlParserInputBuffer,buffer,16,2,47893)
-CheckMemberSize(struct _xmlParserInputBuffer,raw,4,2,47894)
-CheckOffset(struct _xmlParserInputBuffer,raw,20,2,47894)
-CheckMemberSize(struct _xmlParserInputBuffer,compressed,4,2,47895)
-CheckOffset(struct _xmlParserInputBuffer,compressed,24,2,47895)
-CheckMemberSize(struct _xmlParserInputBuffer,error,4,2,47896)
-CheckOffset(struct _xmlParserInputBuffer,error,28,2,47896)
-CheckMemberSize(struct _xmlParserInputBuffer,rawconsumed,4,2,47897)
-CheckOffset(struct _xmlParserInputBuffer,rawconsumed,32,2,47897)
+CheckTypeSize(struct _xmlParserInputBuffer,36, 14643, 2);
+CheckMemberSize(struct _xmlParserInputBuffer,readcallback,4,2,47890);
+CheckOffset(struct _xmlParserInputBuffer,readcallback,4,2,47890);
+CheckMemberSize(struct _xmlParserInputBuffer,closecallback,4,2,47891);
+CheckOffset(struct _xmlParserInputBuffer,closecallback,8,2,47891);
+CheckMemberSize(struct _xmlParserInputBuffer,encoder,4,2,47892);
+CheckOffset(struct _xmlParserInputBuffer,encoder,12,2,47892);
+CheckMemberSize(struct _xmlParserInputBuffer,buffer,4,2,47893);
+CheckOffset(struct _xmlParserInputBuffer,buffer,16,2,47893);
+CheckMemberSize(struct _xmlParserInputBuffer,raw,4,2,47894);
+CheckOffset(struct _xmlParserInputBuffer,raw,20,2,47894);
+CheckMemberSize(struct _xmlParserInputBuffer,compressed,4,2,47895);
+CheckOffset(struct _xmlParserInputBuffer,compressed,24,2,47895);
+CheckMemberSize(struct _xmlParserInputBuffer,error,4,2,47896);
+CheckOffset(struct _xmlParserInputBuffer,error,28,2,47896);
+CheckMemberSize(struct _xmlParserInputBuffer,rawconsumed,4,2,47897);
+CheckOffset(struct _xmlParserInputBuffer,rawconsumed,32,2,47897);
 #elif __x86_64__
-CheckTypeSize(struct _xmlParserInputBuffer,64, 14643, 11)
-CheckMemberSize(struct _xmlParserInputBuffer,readcallback,8,11,47890)
-CheckOffset(struct _xmlParserInputBuffer,readcallback,8,11,47890)
-CheckMemberSize(struct _xmlParserInputBuffer,closecallback,8,11,47891)
-CheckOffset(struct _xmlParserInputBuffer,closecallback,16,11,47891)
-CheckMemberSize(struct _xmlParserInputBuffer,encoder,8,11,47892)
-CheckOffset(struct _xmlParserInputBuffer,encoder,24,11,47892)
-CheckMemberSize(struct _xmlParserInputBuffer,buffer,8,11,47893)
-CheckOffset(struct _xmlParserInputBuffer,buffer,32,11,47893)
-CheckMemberSize(struct _xmlParserInputBuffer,raw,8,11,47894)
-CheckOffset(struct _xmlParserInputBuffer,raw,40,11,47894)
-CheckMemberSize(struct _xmlParserInputBuffer,compressed,4,11,47895)
-CheckOffset(struct _xmlParserInputBuffer,compressed,48,11,47895)
-CheckMemberSize(struct _xmlParserInputBuffer,error,4,11,47896)
-CheckOffset(struct _xmlParserInputBuffer,error,52,11,47896)
-CheckMemberSize(struct _xmlParserInputBuffer,rawconsumed,8,11,47897)
-CheckOffset(struct _xmlParserInputBuffer,rawconsumed,56,11,47897)
+CheckTypeSize(struct _xmlParserInputBuffer,64, 14643, 11);
+CheckMemberSize(struct _xmlParserInputBuffer,readcallback,8,11,47890);
+CheckOffset(struct _xmlParserInputBuffer,readcallback,8,11,47890);
+CheckMemberSize(struct _xmlParserInputBuffer,closecallback,8,11,47891);
+CheckOffset(struct _xmlParserInputBuffer,closecallback,16,11,47891);
+CheckMemberSize(struct _xmlParserInputBuffer,encoder,8,11,47892);
+CheckOffset(struct _xmlParserInputBuffer,encoder,24,11,47892);
+CheckMemberSize(struct _xmlParserInputBuffer,buffer,8,11,47893);
+CheckOffset(struct _xmlParserInputBuffer,buffer,32,11,47893);
+CheckMemberSize(struct _xmlParserInputBuffer,raw,8,11,47894);
+CheckOffset(struct _xmlParserInputBuffer,raw,40,11,47894);
+CheckMemberSize(struct _xmlParserInputBuffer,compressed,4,11,47895);
+CheckOffset(struct _xmlParserInputBuffer,compressed,48,11,47895);
+CheckMemberSize(struct _xmlParserInputBuffer,error,4,11,47896);
+CheckOffset(struct _xmlParserInputBuffer,error,52,11,47896);
+CheckMemberSize(struct _xmlParserInputBuffer,rawconsumed,8,11,47897);
+CheckOffset(struct _xmlParserInputBuffer,rawconsumed,56,11,47897);
 #elif __ia64__
-CheckTypeSize(struct _xmlParserInputBuffer,64, 14643, 3)
-CheckMemberSize(struct _xmlParserInputBuffer,readcallback,8,3,47890)
-CheckOffset(struct _xmlParserInputBuffer,readcallback,8,3,47890)
-CheckMemberSize(struct _xmlParserInputBuffer,closecallback,8,3,47891)
-CheckOffset(struct _xmlParserInputBuffer,closecallback,16,3,47891)
-CheckMemberSize(struct _xmlParserInputBuffer,encoder,8,3,47892)
-CheckOffset(struct _xmlParserInputBuffer,encoder,24,3,47892)
-CheckMemberSize(struct _xmlParserInputBuffer,buffer,8,3,47893)
-CheckOffset(struct _xmlParserInputBuffer,buffer,32,3,47893)
-CheckMemberSize(struct _xmlParserInputBuffer,raw,8,3,47894)
-CheckOffset(struct _xmlParserInputBuffer,raw,40,3,47894)
-CheckMemberSize(struct _xmlParserInputBuffer,compressed,4,3,47895)
-CheckOffset(struct _xmlParserInputBuffer,compressed,48,3,47895)
-CheckMemberSize(struct _xmlParserInputBuffer,error,4,3,47896)
-CheckOffset(struct _xmlParserInputBuffer,error,52,3,47896)
-CheckMemberSize(struct _xmlParserInputBuffer,rawconsumed,8,3,47897)
-CheckOffset(struct _xmlParserInputBuffer,rawconsumed,56,3,47897)
+CheckTypeSize(struct _xmlParserInputBuffer,64, 14643, 3);
+CheckMemberSize(struct _xmlParserInputBuffer,readcallback,8,3,47890);
+CheckOffset(struct _xmlParserInputBuffer,readcallback,8,3,47890);
+CheckMemberSize(struct _xmlParserInputBuffer,closecallback,8,3,47891);
+CheckOffset(struct _xmlParserInputBuffer,closecallback,16,3,47891);
+CheckMemberSize(struct _xmlParserInputBuffer,encoder,8,3,47892);
+CheckOffset(struct _xmlParserInputBuffer,encoder,24,3,47892);
+CheckMemberSize(struct _xmlParserInputBuffer,buffer,8,3,47893);
+CheckOffset(struct _xmlParserInputBuffer,buffer,32,3,47893);
+CheckMemberSize(struct _xmlParserInputBuffer,raw,8,3,47894);
+CheckOffset(struct _xmlParserInputBuffer,raw,40,3,47894);
+CheckMemberSize(struct _xmlParserInputBuffer,compressed,4,3,47895);
+CheckOffset(struct _xmlParserInputBuffer,compressed,48,3,47895);
+CheckMemberSize(struct _xmlParserInputBuffer,error,4,3,47896);
+CheckOffset(struct _xmlParserInputBuffer,error,52,3,47896);
+CheckMemberSize(struct _xmlParserInputBuffer,rawconsumed,8,3,47897);
+CheckOffset(struct _xmlParserInputBuffer,rawconsumed,56,3,47897);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _xmlParserInputBuffer,36, 14643, 6)
-CheckMemberSize(struct _xmlParserInputBuffer,readcallback,4,6,47890)
-CheckOffset(struct _xmlParserInputBuffer,readcallback,4,6,47890)
-CheckMemberSize(struct _xmlParserInputBuffer,closecallback,4,6,47891)
-CheckOffset(struct _xmlParserInputBuffer,closecallback,8,6,47891)
-CheckMemberSize(struct _xmlParserInputBuffer,encoder,4,6,47892)
-CheckOffset(struct _xmlParserInputBuffer,encoder,12,6,47892)
-CheckMemberSize(struct _xmlParserInputBuffer,buffer,4,6,47893)
-CheckOffset(struct _xmlParserInputBuffer,buffer,16,6,47893)
-CheckMemberSize(struct _xmlParserInputBuffer,raw,4,6,47894)
-CheckOffset(struct _xmlParserInputBuffer,raw,20,6,47894)
-CheckMemberSize(struct _xmlParserInputBuffer,compressed,4,6,47895)
-CheckOffset(struct _xmlParserInputBuffer,compressed,24,6,47895)
-CheckMemberSize(struct _xmlParserInputBuffer,error,4,6,47896)
-CheckOffset(struct _xmlParserInputBuffer,error,28,6,47896)
-CheckMemberSize(struct _xmlParserInputBuffer,rawconsumed,4,6,47897)
-CheckOffset(struct _xmlParserInputBuffer,rawconsumed,32,6,47897)
+CheckTypeSize(struct _xmlParserInputBuffer,36, 14643, 6);
+CheckMemberSize(struct _xmlParserInputBuffer,readcallback,4,6,47890);
+CheckOffset(struct _xmlParserInputBuffer,readcallback,4,6,47890);
+CheckMemberSize(struct _xmlParserInputBuffer,closecallback,4,6,47891);
+CheckOffset(struct _xmlParserInputBuffer,closecallback,8,6,47891);
+CheckMemberSize(struct _xmlParserInputBuffer,encoder,4,6,47892);
+CheckOffset(struct _xmlParserInputBuffer,encoder,12,6,47892);
+CheckMemberSize(struct _xmlParserInputBuffer,buffer,4,6,47893);
+CheckOffset(struct _xmlParserInputBuffer,buffer,16,6,47893);
+CheckMemberSize(struct _xmlParserInputBuffer,raw,4,6,47894);
+CheckOffset(struct _xmlParserInputBuffer,raw,20,6,47894);
+CheckMemberSize(struct _xmlParserInputBuffer,compressed,4,6,47895);
+CheckOffset(struct _xmlParserInputBuffer,compressed,24,6,47895);
+CheckMemberSize(struct _xmlParserInputBuffer,error,4,6,47896);
+CheckOffset(struct _xmlParserInputBuffer,error,28,6,47896);
+CheckMemberSize(struct _xmlParserInputBuffer,rawconsumed,4,6,47897);
+CheckOffset(struct _xmlParserInputBuffer,rawconsumed,32,6,47897);
 #elif __powerpc64__
-CheckTypeSize(struct _xmlParserInputBuffer,64, 14643, 9)
-CheckMemberSize(struct _xmlParserInputBuffer,readcallback,8,9,47890)
-CheckOffset(struct _xmlParserInputBuffer,readcallback,8,9,47890)
-CheckMemberSize(struct _xmlParserInputBuffer,closecallback,8,9,47891)
-CheckOffset(struct _xmlParserInputBuffer,closecallback,16,9,47891)
-CheckMemberSize(struct _xmlParserInputBuffer,encoder,8,9,47892)
-CheckOffset(struct _xmlParserInputBuffer,encoder,24,9,47892)
-CheckMemberSize(struct _xmlParserInputBuffer,buffer,8,9,47893)
-CheckOffset(struct _xmlParserInputBuffer,buffer,32,9,47893)
-CheckMemberSize(struct _xmlParserInputBuffer,raw,8,9,47894)
-CheckOffset(struct _xmlParserInputBuffer,raw,40,9,47894)
-CheckMemberSize(struct _xmlParserInputBuffer,compressed,4,9,47895)
-CheckOffset(struct _xmlParserInputBuffer,compressed,48,9,47895)
-CheckMemberSize(struct _xmlParserInputBuffer,error,4,9,47896)
-CheckOffset(struct _xmlParserInputBuffer,error,52,9,47896)
-CheckMemberSize(struct _xmlParserInputBuffer,rawconsumed,8,9,47897)
-CheckOffset(struct _xmlParserInputBuffer,rawconsumed,56,9,47897)
+CheckTypeSize(struct _xmlParserInputBuffer,64, 14643, 9);
+CheckMemberSize(struct _xmlParserInputBuffer,readcallback,8,9,47890);
+CheckOffset(struct _xmlParserInputBuffer,readcallback,8,9,47890);
+CheckMemberSize(struct _xmlParserInputBuffer,closecallback,8,9,47891);
+CheckOffset(struct _xmlParserInputBuffer,closecallback,16,9,47891);
+CheckMemberSize(struct _xmlParserInputBuffer,encoder,8,9,47892);
+CheckOffset(struct _xmlParserInputBuffer,encoder,24,9,47892);
+CheckMemberSize(struct _xmlParserInputBuffer,buffer,8,9,47893);
+CheckOffset(struct _xmlParserInputBuffer,buffer,32,9,47893);
+CheckMemberSize(struct _xmlParserInputBuffer,raw,8,9,47894);
+CheckOffset(struct _xmlParserInputBuffer,raw,40,9,47894);
+CheckMemberSize(struct _xmlParserInputBuffer,compressed,4,9,47895);
+CheckOffset(struct _xmlParserInputBuffer,compressed,48,9,47895);
+CheckMemberSize(struct _xmlParserInputBuffer,error,4,9,47896);
+CheckOffset(struct _xmlParserInputBuffer,error,52,9,47896);
+CheckMemberSize(struct _xmlParserInputBuffer,rawconsumed,8,9,47897);
+CheckOffset(struct _xmlParserInputBuffer,rawconsumed,56,9,47897);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _xmlParserInputBuffer,36, 14643, 10)
-CheckMemberSize(struct _xmlParserInputBuffer,readcallback,4,10,47890)
-CheckOffset(struct _xmlParserInputBuffer,readcallback,4,10,47890)
-CheckMemberSize(struct _xmlParserInputBuffer,closecallback,4,10,47891)
-CheckOffset(struct _xmlParserInputBuffer,closecallback,8,10,47891)
-CheckMemberSize(struct _xmlParserInputBuffer,encoder,4,10,47892)
-CheckOffset(struct _xmlParserInputBuffer,encoder,12,10,47892)
-CheckMemberSize(struct _xmlParserInputBuffer,buffer,4,10,47893)
-CheckOffset(struct _xmlParserInputBuffer,buffer,16,10,47893)
-CheckMemberSize(struct _xmlParserInputBuffer,raw,4,10,47894)
-CheckOffset(struct _xmlParserInputBuffer,raw,20,10,47894)
-CheckMemberSize(struct _xmlParserInputBuffer,compressed,4,10,47895)
-CheckOffset(struct _xmlParserInputBuffer,compressed,24,10,47895)
-CheckMemberSize(struct _xmlParserInputBuffer,error,4,10,47896)
-CheckOffset(struct _xmlParserInputBuffer,error,28,10,47896)
-CheckMemberSize(struct _xmlParserInputBuffer,rawconsumed,4,10,47897)
-CheckOffset(struct _xmlParserInputBuffer,rawconsumed,32,10,47897)
+CheckTypeSize(struct _xmlParserInputBuffer,36, 14643, 10);
+CheckMemberSize(struct _xmlParserInputBuffer,readcallback,4,10,47890);
+CheckOffset(struct _xmlParserInputBuffer,readcallback,4,10,47890);
+CheckMemberSize(struct _xmlParserInputBuffer,closecallback,4,10,47891);
+CheckOffset(struct _xmlParserInputBuffer,closecallback,8,10,47891);
+CheckMemberSize(struct _xmlParserInputBuffer,encoder,4,10,47892);
+CheckOffset(struct _xmlParserInputBuffer,encoder,12,10,47892);
+CheckMemberSize(struct _xmlParserInputBuffer,buffer,4,10,47893);
+CheckOffset(struct _xmlParserInputBuffer,buffer,16,10,47893);
+CheckMemberSize(struct _xmlParserInputBuffer,raw,4,10,47894);
+CheckOffset(struct _xmlParserInputBuffer,raw,20,10,47894);
+CheckMemberSize(struct _xmlParserInputBuffer,compressed,4,10,47895);
+CheckOffset(struct _xmlParserInputBuffer,compressed,24,10,47895);
+CheckMemberSize(struct _xmlParserInputBuffer,error,4,10,47896);
+CheckOffset(struct _xmlParserInputBuffer,error,28,10,47896);
+CheckMemberSize(struct _xmlParserInputBuffer,rawconsumed,4,10,47897);
+CheckOffset(struct _xmlParserInputBuffer,rawconsumed,32,10,47897);
 #elif __s390x__
-CheckTypeSize(struct _xmlParserInputBuffer,64, 14643, 12)
-CheckMemberSize(struct _xmlParserInputBuffer,readcallback,8,12,47890)
-CheckOffset(struct _xmlParserInputBuffer,readcallback,8,12,47890)
-CheckMemberSize(struct _xmlParserInputBuffer,closecallback,8,12,47891)
-CheckOffset(struct _xmlParserInputBuffer,closecallback,16,12,47891)
-CheckMemberSize(struct _xmlParserInputBuffer,encoder,8,12,47892)
-CheckOffset(struct _xmlParserInputBuffer,encoder,24,12,47892)
-CheckMemberSize(struct _xmlParserInputBuffer,buffer,8,12,47893)
-CheckOffset(struct _xmlParserInputBuffer,buffer,32,12,47893)
-CheckMemberSize(struct _xmlParserInputBuffer,raw,8,12,47894)
-CheckOffset(struct _xmlParserInputBuffer,raw,40,12,47894)
-CheckMemberSize(struct _xmlParserInputBuffer,compressed,4,12,47895)
-CheckOffset(struct _xmlParserInputBuffer,compressed,48,12,47895)
-CheckMemberSize(struct _xmlParserInputBuffer,error,4,12,47896)
-CheckOffset(struct _xmlParserInputBuffer,error,52,12,47896)
-CheckMemberSize(struct _xmlParserInputBuffer,rawconsumed,8,12,47897)
-CheckOffset(struct _xmlParserInputBuffer,rawconsumed,56,12,47897)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14643,0);
-Msg("Find size of _xmlParserInputBuffer (14643)\n");
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14644,0);
-Msg("Find size of fptr_xmlerror_61 (14644)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(xmlInputReadCallback,4, 14645, 2)
-#elif __x86_64__
-CheckTypeSize(xmlInputReadCallback,8, 14645, 11)
-#elif __ia64__
-CheckTypeSize(xmlInputReadCallback,8, 14645, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlInputReadCallback,4, 14645, 6)
-#elif __powerpc64__
-CheckTypeSize(xmlInputReadCallback,8, 14645, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlInputReadCallback,4, 14645, 10)
-#elif __s390x__
-CheckTypeSize(xmlInputReadCallback,8, 14645, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14645,0);
-Msg("Find size of xmlInputReadCallback (14645)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(xmlInputCloseCallback,4, 14646, 2)
-#elif __x86_64__
-CheckTypeSize(xmlInputCloseCallback,8, 14646, 11)
-#elif __ia64__
-CheckTypeSize(xmlInputCloseCallback,8, 14646, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlInputCloseCallback,4, 14646, 6)
-#elif __powerpc64__
-CheckTypeSize(xmlInputCloseCallback,8, 14646, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlInputCloseCallback,4, 14646, 10)
-#elif __s390x__
-CheckTypeSize(xmlInputCloseCallback,8, 14646, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14646,0);
-Msg("Find size of xmlInputCloseCallback (14646)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(xmlParserInputBuffer,36, 14647, 2)
-#elif __x86_64__
-CheckTypeSize(xmlParserInputBuffer,64, 14647, 11)
-#elif __ia64__
-CheckTypeSize(xmlParserInputBuffer,64, 14647, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlParserInputBuffer,36, 14647, 6)
-#elif __powerpc64__
-CheckTypeSize(xmlParserInputBuffer,64, 14647, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlParserInputBuffer,36, 14647, 10)
-#elif __s390x__
-CheckTypeSize(xmlParserInputBuffer,64, 14647, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14647,0);
-Msg("Find size of xmlParserInputBuffer (14647)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(xmlParserInputBuffer *,4, 14648, 2)
-#elif __x86_64__
-CheckTypeSize(xmlParserInputBuffer *,8, 14648, 11)
-#elif __ia64__
-CheckTypeSize(xmlParserInputBuffer *,8, 14648, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlParserInputBuffer *,4, 14648, 6)
-#elif __powerpc64__
-CheckTypeSize(xmlParserInputBuffer *,8, 14648, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlParserInputBuffer *,4, 14648, 10)
-#elif __s390x__
-CheckTypeSize(xmlParserInputBuffer *,8, 14648, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14648,0);
-Msg("Find size of xmlParserInputBuffer * (14648)\n");
-#endif
-
-#if __i386__
-CheckTypeSize(xmlParserInputBufferPtr,4, 14649, 2)
-#elif __x86_64__
-CheckTypeSize(xmlParserInputBufferPtr,8, 14649, 11)
-#elif __ia64__
-CheckTypeSize(xmlParserInputBufferPtr,8, 14649, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlParserInputBufferPtr,4, 14649, 6)
-#elif __powerpc64__
-CheckTypeSize(xmlParserInputBufferPtr,8, 14649, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlParserInputBufferPtr,4, 14649, 10)
-#elif __s390x__
-CheckTypeSize(xmlParserInputBufferPtr,8, 14649, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14649,0);
-Msg("Find size of xmlParserInputBufferPtr (14649)\n");
+CheckTypeSize(struct _xmlParserInputBuffer,64, 14643, 12);
+CheckMemberSize(struct _xmlParserInputBuffer,readcallback,8,12,47890);
+CheckOffset(struct _xmlParserInputBuffer,readcallback,8,12,47890);
+CheckMemberSize(struct _xmlParserInputBuffer,closecallback,8,12,47891);
+CheckOffset(struct _xmlParserInputBuffer,closecallback,16,12,47891);
+CheckMemberSize(struct _xmlParserInputBuffer,encoder,8,12,47892);
+CheckOffset(struct _xmlParserInputBuffer,encoder,24,12,47892);
+CheckMemberSize(struct _xmlParserInputBuffer,buffer,8,12,47893);
+CheckOffset(struct _xmlParserInputBuffer,buffer,32,12,47893);
+CheckMemberSize(struct _xmlParserInputBuffer,raw,8,12,47894);
+CheckOffset(struct _xmlParserInputBuffer,raw,40,12,47894);
+CheckMemberSize(struct _xmlParserInputBuffer,compressed,4,12,47895);
+CheckOffset(struct _xmlParserInputBuffer,compressed,48,12,47895);
+CheckMemberSize(struct _xmlParserInputBuffer,error,4,12,47896);
+CheckOffset(struct _xmlParserInputBuffer,error,52,12,47896);
+CheckMemberSize(struct _xmlParserInputBuffer,rawconsumed,8,12,47897);
+CheckOffset(struct _xmlParserInputBuffer,rawconsumed,56,12,47897);
+#elif 1
+CheckTypeSize(struct _xmlParserInputBuffer,0, 14643, 1);
+Msg("Missing member data for _xmlParserInputBuffer on All\n");
+CheckOffset(struct _xmlParserInputBuffer,context,0,1,47886);
+CheckOffset(struct _xmlParserInputBuffer,readcallback,0,1,47890);
+CheckOffset(struct _xmlParserInputBuffer,closecallback,0,1,47891);
+CheckOffset(struct _xmlParserInputBuffer,encoder,0,1,47892);
+CheckOffset(struct _xmlParserInputBuffer,buffer,0,1,47893);
+CheckOffset(struct _xmlParserInputBuffer,raw,0,1,47894);
+CheckOffset(struct _xmlParserInputBuffer,compressed,0,1,47895);
+CheckOffset(struct _xmlParserInputBuffer,error,0,1,47896);
+CheckOffset(struct _xmlParserInputBuffer,rawconsumed,0,1,47897);
 #endif
 
 #if __i386__
@@ -486,85 +403,97 @@ Msg("Find size of xmlParserInputBufferPtr (14649)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14650,0);
-Msg("Find size of fptr_xmlerror_484 (14650)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(xmlParserInputDeallocate,4, 14651, 2)
+CheckTypeSize(xmlInputReadCallback,4, 14645, 2);
 #elif __x86_64__
-CheckTypeSize(xmlParserInputDeallocate,8, 14651, 11)
+CheckTypeSize(xmlInputReadCallback,8, 14645, 11);
 #elif __ia64__
-CheckTypeSize(xmlParserInputDeallocate,8, 14651, 3)
+CheckTypeSize(xmlInputReadCallback,8, 14645, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlParserInputDeallocate,4, 14651, 6)
+CheckTypeSize(xmlInputReadCallback,4, 14645, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlParserInputDeallocate,8, 14651, 9)
+CheckTypeSize(xmlInputReadCallback,8, 14645, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlParserInputDeallocate,4, 14651, 10)
+CheckTypeSize(xmlInputReadCallback,4, 14645, 10);
 #elif __s390x__
-CheckTypeSize(xmlParserInputDeallocate,8, 14651, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14651,0);
-Msg("Find size of xmlParserInputDeallocate (14651)\n");
+CheckTypeSize(xmlInputReadCallback,8, 14645, 12);
+#elif 1
+CheckTypeSize(xmlInputReadCallback,0, 14645, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlParserInput,60, 14652, 2)
+CheckTypeSize(xmlInputCloseCallback,4, 14646, 2);
 #elif __x86_64__
-CheckTypeSize(xmlParserInput,104, 14652, 11)
+CheckTypeSize(xmlInputCloseCallback,8, 14646, 11);
 #elif __ia64__
-CheckTypeSize(xmlParserInput,104, 14652, 3)
+CheckTypeSize(xmlInputCloseCallback,8, 14646, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlParserInput,60, 14652, 6)
+CheckTypeSize(xmlInputCloseCallback,4, 14646, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlParserInput,104, 14652, 9)
+CheckTypeSize(xmlInputCloseCallback,8, 14646, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlParserInput,60, 14652, 10)
+CheckTypeSize(xmlInputCloseCallback,4, 14646, 10);
 #elif __s390x__
-CheckTypeSize(xmlParserInput,104, 14652, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14652,0);
-Msg("Find size of xmlParserInput (14652)\n");
+CheckTypeSize(xmlInputCloseCallback,8, 14646, 12);
+#elif 1
+CheckTypeSize(xmlInputCloseCallback,0, 14646, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlParserInput *,4, 14653, 2)
+CheckTypeSize(xmlParserInputBuffer,36, 14647, 2);
 #elif __x86_64__
-CheckTypeSize(xmlParserInput *,8, 14653, 11)
+CheckTypeSize(xmlParserInputBuffer,64, 14647, 11);
 #elif __ia64__
-CheckTypeSize(xmlParserInput *,8, 14653, 3)
+CheckTypeSize(xmlParserInputBuffer,64, 14647, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlParserInput *,4, 14653, 6)
+CheckTypeSize(xmlParserInputBuffer,36, 14647, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlParserInput *,8, 14653, 9)
+CheckTypeSize(xmlParserInputBuffer,64, 14647, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlParserInput *,4, 14653, 10)
+CheckTypeSize(xmlParserInputBuffer,36, 14647, 10);
 #elif __s390x__
-CheckTypeSize(xmlParserInput *,8, 14653, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14653,0);
-Msg("Find size of xmlParserInput * (14653)\n");
+CheckTypeSize(xmlParserInputBuffer,64, 14647, 12);
+#elif 1
+CheckTypeSize(xmlParserInputBuffer,0, 14647, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlParserInputPtr,4, 14654, 2)
+CheckTypeSize(xmlParserInputBuffer *,4, 14648, 2);
 #elif __x86_64__
-CheckTypeSize(xmlParserInputPtr,8, 14654, 11)
+CheckTypeSize(xmlParserInputBuffer *,8, 14648, 11);
 #elif __ia64__
-CheckTypeSize(xmlParserInputPtr,8, 14654, 3)
+CheckTypeSize(xmlParserInputBuffer *,8, 14648, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlParserInputPtr,4, 14654, 6)
+CheckTypeSize(xmlParserInputBuffer *,4, 14648, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlParserInputPtr,8, 14654, 9)
+CheckTypeSize(xmlParserInputBuffer *,8, 14648, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlParserInputPtr,4, 14654, 10)
+CheckTypeSize(xmlParserInputBuffer *,4, 14648, 10);
 #elif __s390x__
-CheckTypeSize(xmlParserInputPtr,8, 14654, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14654,0);
-Msg("Find size of xmlParserInputPtr (14654)\n");
+CheckTypeSize(xmlParserInputBuffer *,8, 14648, 12);
+#elif 1
+CheckTypeSize(xmlParserInputBuffer *,0, 14648, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(xmlParserInputBufferPtr,4, 14649, 2);
+#elif __x86_64__
+CheckTypeSize(xmlParserInputBufferPtr,8, 14649, 11);
+#elif __ia64__
+CheckTypeSize(xmlParserInputBufferPtr,8, 14649, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlParserInputBufferPtr,4, 14649, 6);
+#elif __powerpc64__
+CheckTypeSize(xmlParserInputBufferPtr,8, 14649, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlParserInputBufferPtr,4, 14649, 10);
+#elif __s390x__
+CheckTypeSize(xmlParserInputBufferPtr,8, 14649, 12);
+#elif 1
+CheckTypeSize(xmlParserInputBufferPtr,0, 14649, 1);
 #endif
 
 #if __i386__
@@ -574,215 +503,307 @@ Msg("Find size of xmlParserInputPtr (14654)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14655,0);
-Msg("Find size of fptr_xmlerror_213 (14655)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(xmlGenericErrorFunc,4, 14656, 2)
+CheckTypeSize(xmlParserInputDeallocate,4, 14651, 2);
 #elif __x86_64__
-CheckTypeSize(xmlGenericErrorFunc,8, 14656, 11)
+CheckTypeSize(xmlParserInputDeallocate,8, 14651, 11);
 #elif __ia64__
-CheckTypeSize(xmlGenericErrorFunc,8, 14656, 3)
+CheckTypeSize(xmlParserInputDeallocate,8, 14651, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlGenericErrorFunc,4, 14656, 6)
+CheckTypeSize(xmlParserInputDeallocate,4, 14651, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlGenericErrorFunc,8, 14656, 9)
+CheckTypeSize(xmlParserInputDeallocate,8, 14651, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlGenericErrorFunc,4, 14656, 10)
+CheckTypeSize(xmlParserInputDeallocate,4, 14651, 10);
 #elif __s390x__
-CheckTypeSize(xmlGenericErrorFunc,8, 14656, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14656,0);
-Msg("Find size of xmlGenericErrorFunc (14656)\n");
+CheckTypeSize(xmlParserInputDeallocate,8, 14651, 12);
+#elif 1
+CheckTypeSize(xmlParserInputDeallocate,0, 14651, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _xmlError,52, 14657, 2)
-CheckMemberSize(struct _xmlError,code,4,2,47918)
-CheckOffset(struct _xmlError,code,4,2,47918)
-CheckMemberSize(struct _xmlError,message,4,2,47919)
-CheckOffset(struct _xmlError,message,8,2,47919)
-CheckMemberSize(struct _xmlError,level,4,2,47924)
-CheckOffset(struct _xmlError,level,12,2,47924)
-CheckMemberSize(struct _xmlError,file,4,2,47925)
-CheckOffset(struct _xmlError,file,16,2,47925)
-CheckMemberSize(struct _xmlError,line,4,2,47926)
-CheckOffset(struct _xmlError,line,20,2,47926)
-CheckMemberSize(struct _xmlError,str1,4,2,47927)
-CheckOffset(struct _xmlError,str1,24,2,47927)
-CheckMemberSize(struct _xmlError,str2,4,2,47928)
-CheckOffset(struct _xmlError,str2,28,2,47928)
-CheckMemberSize(struct _xmlError,str3,4,2,47929)
-CheckOffset(struct _xmlError,str3,32,2,47929)
-CheckMemberSize(struct _xmlError,int1,4,2,47930)
-CheckOffset(struct _xmlError,int1,36,2,47930)
-CheckMemberSize(struct _xmlError,int2,4,2,47931)
-CheckOffset(struct _xmlError,int2,40,2,47931)
-CheckMemberSize(struct _xmlError,ctxt,4,2,47932)
-CheckOffset(struct _xmlError,ctxt,44,2,47932)
-CheckMemberSize(struct _xmlError,node,4,2,47933)
-CheckOffset(struct _xmlError,node,48,2,47933)
+CheckTypeSize(xmlParserInput,60, 14652, 2);
 #elif __x86_64__
-CheckTypeSize(struct _xmlError,88, 14657, 11)
-CheckMemberSize(struct _xmlError,code,4,11,47918)
-CheckOffset(struct _xmlError,code,4,11,47918)
-CheckMemberSize(struct _xmlError,message,8,11,47919)
-CheckOffset(struct _xmlError,message,8,11,47919)
-CheckMemberSize(struct _xmlError,level,4,11,47924)
-CheckOffset(struct _xmlError,level,16,11,47924)
-CheckMemberSize(struct _xmlError,file,8,11,47925)
-CheckOffset(struct _xmlError,file,24,11,47925)
-CheckMemberSize(struct _xmlError,line,4,11,47926)
-CheckOffset(struct _xmlError,line,32,11,47926)
-CheckMemberSize(struct _xmlError,str1,8,11,47927)
-CheckOffset(struct _xmlError,str1,40,11,47927)
-CheckMemberSize(struct _xmlError,str2,8,11,47928)
-CheckOffset(struct _xmlError,str2,48,11,47928)
-CheckMemberSize(struct _xmlError,str3,8,11,47929)
-CheckOffset(struct _xmlError,str3,56,11,47929)
-CheckMemberSize(struct _xmlError,int1,4,11,47930)
-CheckOffset(struct _xmlError,int1,64,11,47930)
-CheckMemberSize(struct _xmlError,int2,4,11,47931)
-CheckOffset(struct _xmlError,int2,68,11,47931)
-CheckMemberSize(struct _xmlError,ctxt,8,11,47932)
-CheckOffset(struct _xmlError,ctxt,72,11,47932)
-CheckMemberSize(struct _xmlError,node,8,11,47933)
-CheckOffset(struct _xmlError,node,80,11,47933)
+CheckTypeSize(xmlParserInput,104, 14652, 11);
 #elif __ia64__
-CheckTypeSize(struct _xmlError,88, 14657, 3)
-CheckMemberSize(struct _xmlError,code,4,3,47918)
-CheckOffset(struct _xmlError,code,4,3,47918)
-CheckMemberSize(struct _xmlError,message,8,3,47919)
-CheckOffset(struct _xmlError,message,8,3,47919)
-CheckMemberSize(struct _xmlError,level,4,3,47924)
-CheckOffset(struct _xmlError,level,16,3,47924)
-CheckMemberSize(struct _xmlError,file,8,3,47925)
-CheckOffset(struct _xmlError,file,24,3,47925)
-CheckMemberSize(struct _xmlError,line,4,3,47926)
-CheckOffset(struct _xmlError,line,32,3,47926)
-CheckMemberSize(struct _xmlError,str1,8,3,47927)
-CheckOffset(struct _xmlError,str1,40,3,47927)
-CheckMemberSize(struct _xmlError,str2,8,3,47928)
-CheckOffset(struct _xmlError,str2,48,3,47928)
-CheckMemberSize(struct _xmlError,str3,8,3,47929)
-CheckOffset(struct _xmlError,str3,56,3,47929)
-CheckMemberSize(struct _xmlError,int1,4,3,47930)
-CheckOffset(struct _xmlError,int1,64,3,47930)
-CheckMemberSize(struct _xmlError,int2,4,3,47931)
-CheckOffset(struct _xmlError,int2,68,3,47931)
-CheckMemberSize(struct _xmlError,ctxt,8,3,47932)
-CheckOffset(struct _xmlError,ctxt,72,3,47932)
-CheckMemberSize(struct _xmlError,node,8,3,47933)
-CheckOffset(struct _xmlError,node,80,3,47933)
+CheckTypeSize(xmlParserInput,104, 14652, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _xmlError,52, 14657, 6)
-CheckMemberSize(struct _xmlError,code,4,6,47918)
-CheckOffset(struct _xmlError,code,4,6,47918)
-CheckMemberSize(struct _xmlError,message,4,6,47919)
-CheckOffset(struct _xmlError,message,8,6,47919)
-CheckMemberSize(struct _xmlError,level,4,6,47924)
-CheckOffset(struct _xmlError,level,12,6,47924)
-CheckMemberSize(struct _xmlError,file,4,6,47925)
-CheckOffset(struct _xmlError,file,16,6,47925)
-CheckMemberSize(struct _xmlError,line,4,6,47926)
-CheckOffset(struct _xmlError,line,20,6,47926)
-CheckMemberSize(struct _xmlError,str1,4,6,47927)
-CheckOffset(struct _xmlError,str1,24,6,47927)
-CheckMemberSize(struct _xmlError,str2,4,6,47928)
-CheckOffset(struct _xmlError,str2,28,6,47928)
-CheckMemberSize(struct _xmlError,str3,4,6,47929)
-CheckOffset(struct _xmlError,str3,32,6,47929)
-CheckMemberSize(struct _xmlError,int1,4,6,47930)
-CheckOffset(struct _xmlError,int1,36,6,47930)
-CheckMemberSize(struct _xmlError,int2,4,6,47931)
-CheckOffset(struct _xmlError,int2,40,6,47931)
-CheckMemberSize(struct _xmlError,ctxt,4,6,47932)
-CheckOffset(struct _xmlError,ctxt,44,6,47932)
-CheckMemberSize(struct _xmlError,node,4,6,47933)
-CheckOffset(struct _xmlError,node,48,6,47933)
+CheckTypeSize(xmlParserInput,60, 14652, 6);
 #elif __powerpc64__
-CheckTypeSize(struct _xmlError,88, 14657, 9)
-CheckMemberSize(struct _xmlError,code,4,9,47918)
-CheckOffset(struct _xmlError,code,4,9,47918)
-CheckMemberSize(struct _xmlError,message,8,9,47919)
-CheckOffset(struct _xmlError,message,8,9,47919)
-CheckMemberSize(struct _xmlError,level,4,9,47924)
-CheckOffset(struct _xmlError,level,16,9,47924)
-CheckMemberSize(struct _xmlError,file,8,9,47925)
-CheckOffset(struct _xmlError,file,24,9,47925)
-CheckMemberSize(struct _xmlError,line,4,9,47926)
-CheckOffset(struct _xmlError,line,32,9,47926)
-CheckMemberSize(struct _xmlError,str1,8,9,47927)
-CheckOffset(struct _xmlError,str1,40,9,47927)
-CheckMemberSize(struct _xmlError,str2,8,9,47928)
-CheckOffset(struct _xmlError,str2,48,9,47928)
-CheckMemberSize(struct _xmlError,str3,8,9,47929)
-CheckOffset(struct _xmlError,str3,56,9,47929)
-CheckMemberSize(struct _xmlError,int1,4,9,47930)
-CheckOffset(struct _xmlError,int1,64,9,47930)
-CheckMemberSize(struct _xmlError,int2,4,9,47931)
-CheckOffset(struct _xmlError,int2,68,9,47931)
-CheckMemberSize(struct _xmlError,ctxt,8,9,47932)
-CheckOffset(struct _xmlError,ctxt,72,9,47932)
-CheckMemberSize(struct _xmlError,node,8,9,47933)
-CheckOffset(struct _xmlError,node,80,9,47933)
+CheckTypeSize(xmlParserInput,104, 14652, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _xmlError,52, 14657, 10)
-CheckMemberSize(struct _xmlError,code,4,10,47918)
-CheckOffset(struct _xmlError,code,4,10,47918)
-CheckMemberSize(struct _xmlError,message,4,10,47919)
-CheckOffset(struct _xmlError,message,8,10,47919)
-CheckMemberSize(struct _xmlError,level,4,10,47924)
-CheckOffset(struct _xmlError,level,12,10,47924)
-CheckMemberSize(struct _xmlError,file,4,10,47925)
-CheckOffset(struct _xmlError,file,16,10,47925)
-CheckMemberSize(struct _xmlError,line,4,10,47926)
-CheckOffset(struct _xmlError,line,20,10,47926)
-CheckMemberSize(struct _xmlError,str1,4,10,47927)
-CheckOffset(struct _xmlError,str1,24,10,47927)
-CheckMemberSize(struct _xmlError,str2,4,10,47928)
-CheckOffset(struct _xmlError,str2,28,10,47928)
-CheckMemberSize(struct _xmlError,str3,4,10,47929)
-CheckOffset(struct _xmlError,str3,32,10,47929)
-CheckMemberSize(struct _xmlError,int1,4,10,47930)
-CheckOffset(struct _xmlError,int1,36,10,47930)
-CheckMemberSize(struct _xmlError,int2,4,10,47931)
-CheckOffset(struct _xmlError,int2,40,10,47931)
-CheckMemberSize(struct _xmlError,ctxt,4,10,47932)
-CheckOffset(struct _xmlError,ctxt,44,10,47932)
-CheckMemberSize(struct _xmlError,node,4,10,47933)
-CheckOffset(struct _xmlError,node,48,10,47933)
+CheckTypeSize(xmlParserInput,60, 14652, 10);
 #elif __s390x__
-CheckTypeSize(struct _xmlError,88, 14657, 12)
-CheckMemberSize(struct _xmlError,code,4,12,47918)
-CheckOffset(struct _xmlError,code,4,12,47918)
-CheckMemberSize(struct _xmlError,message,8,12,47919)
-CheckOffset(struct _xmlError,message,8,12,47919)
-CheckMemberSize(struct _xmlError,level,4,12,47924)
-CheckOffset(struct _xmlError,level,16,12,47924)
-CheckMemberSize(struct _xmlError,file,8,12,47925)
-CheckOffset(struct _xmlError,file,24,12,47925)
-CheckMemberSize(struct _xmlError,line,4,12,47926)
-CheckOffset(struct _xmlError,line,32,12,47926)
-CheckMemberSize(struct _xmlError,str1,8,12,47927)
-CheckOffset(struct _xmlError,str1,40,12,47927)
-CheckMemberSize(struct _xmlError,str2,8,12,47928)
-CheckOffset(struct _xmlError,str2,48,12,47928)
-CheckMemberSize(struct _xmlError,str3,8,12,47929)
-CheckOffset(struct _xmlError,str3,56,12,47929)
-CheckMemberSize(struct _xmlError,int1,4,12,47930)
-CheckOffset(struct _xmlError,int1,64,12,47930)
-CheckMemberSize(struct _xmlError,int2,4,12,47931)
-CheckOffset(struct _xmlError,int2,68,12,47931)
-CheckMemberSize(struct _xmlError,ctxt,8,12,47932)
-CheckOffset(struct _xmlError,ctxt,72,12,47932)
-CheckMemberSize(struct _xmlError,node,8,12,47933)
-CheckOffset(struct _xmlError,node,80,12,47933)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14657,0);
-Msg("Find size of _xmlError (14657)\n");
+CheckTypeSize(xmlParserInput,104, 14652, 12);
+#elif 1
+CheckTypeSize(xmlParserInput,0, 14652, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(xmlParserInput *,4, 14653, 2);
+#elif __x86_64__
+CheckTypeSize(xmlParserInput *,8, 14653, 11);
+#elif __ia64__
+CheckTypeSize(xmlParserInput *,8, 14653, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlParserInput *,4, 14653, 6);
+#elif __powerpc64__
+CheckTypeSize(xmlParserInput *,8, 14653, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlParserInput *,4, 14653, 10);
+#elif __s390x__
+CheckTypeSize(xmlParserInput *,8, 14653, 12);
+#elif 1
+CheckTypeSize(xmlParserInput *,0, 14653, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(xmlParserInputPtr,4, 14654, 2);
+#elif __x86_64__
+CheckTypeSize(xmlParserInputPtr,8, 14654, 11);
+#elif __ia64__
+CheckTypeSize(xmlParserInputPtr,8, 14654, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlParserInputPtr,4, 14654, 6);
+#elif __powerpc64__
+CheckTypeSize(xmlParserInputPtr,8, 14654, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlParserInputPtr,4, 14654, 10);
+#elif __s390x__
+CheckTypeSize(xmlParserInputPtr,8, 14654, 12);
+#elif 1
+CheckTypeSize(xmlParserInputPtr,0, 14654, 1);
+#endif
+
+#if __i386__
+#elif __x86_64__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
+#elif 1
+#endif
+
+#if __i386__
+CheckTypeSize(xmlGenericErrorFunc,4, 14656, 2);
+#elif __x86_64__
+CheckTypeSize(xmlGenericErrorFunc,8, 14656, 11);
+#elif __ia64__
+CheckTypeSize(xmlGenericErrorFunc,8, 14656, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlGenericErrorFunc,4, 14656, 6);
+#elif __powerpc64__
+CheckTypeSize(xmlGenericErrorFunc,8, 14656, 9);
+#elif __s390__ && !__s390x__
+CheckTypeSize(xmlGenericErrorFunc,4, 14656, 10);
+#elif __s390x__
+CheckTypeSize(xmlGenericErrorFunc,8, 14656, 12);
+#elif 1
+CheckTypeSize(xmlGenericErrorFunc,0, 14656, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(struct _xmlError,52, 14657, 2);
+CheckMemberSize(struct _xmlError,code,4,2,47918);
+CheckOffset(struct _xmlError,code,4,2,47918);
+CheckMemberSize(struct _xmlError,message,4,2,47919);
+CheckOffset(struct _xmlError,message,8,2,47919);
+CheckMemberSize(struct _xmlError,level,4,2,47924);
+CheckOffset(struct _xmlError,level,12,2,47924);
+CheckMemberSize(struct _xmlError,file,4,2,47925);
+CheckOffset(struct _xmlError,file,16,2,47925);
+CheckMemberSize(struct _xmlError,line,4,2,47926);
+CheckOffset(struct _xmlError,line,20,2,47926);
+CheckMemberSize(struct _xmlError,str1,4,2,47927);
+CheckOffset(struct _xmlError,str1,24,2,47927);
+CheckMemberSize(struct _xmlError,str2,4,2,47928);
+CheckOffset(struct _xmlError,str2,28,2,47928);
+CheckMemberSize(struct _xmlError,str3,4,2,47929);
+CheckOffset(struct _xmlError,str3,32,2,47929);
+CheckMemberSize(struct _xmlError,int1,4,2,47930);
+CheckOffset(struct _xmlError,int1,36,2,47930);
+CheckMemberSize(struct _xmlError,int2,4,2,47931);
+CheckOffset(struct _xmlError,int2,40,2,47931);
+CheckMemberSize(struct _xmlError,ctxt,4,2,47932);
+CheckOffset(struct _xmlError,ctxt,44,2,47932);
+CheckMemberSize(struct _xmlError,node,4,2,47933);
+CheckOffset(struct _xmlError,node,48,2,47933);
+#elif __x86_64__
+CheckTypeSize(struct _xmlError,88, 14657, 11);
+CheckMemberSize(struct _xmlError,code,4,11,47918);
+CheckOffset(struct _xmlError,code,4,11,47918);
+CheckMemberSize(struct _xmlError,message,8,11,47919);
+CheckOffset(struct _xmlError,message,8,11,47919);
+CheckMemberSize(struct _xmlError,level,4,11,47924);
+CheckOffset(struct _xmlError,level,16,11,47924);
+CheckMemberSize(struct _xmlError,file,8,11,47925);
+CheckOffset(struct _xmlError,file,24,11,47925);
+CheckMemberSize(struct _xmlError,line,4,11,47926);
+CheckOffset(struct _xmlError,line,32,11,47926);
+CheckMemberSize(struct _xmlError,str1,8,11,47927);
+CheckOffset(struct _xmlError,str1,40,11,47927);
+CheckMemberSize(struct _xmlError,str2,8,11,47928);
+CheckOffset(struct _xmlError,str2,48,11,47928);
+CheckMemberSize(struct _xmlError,str3,8,11,47929);
+CheckOffset(struct _xmlError,str3,56,11,47929);
+CheckMemberSize(struct _xmlError,int1,4,11,47930);
+CheckOffset(struct _xmlError,int1,64,11,47930);
+CheckMemberSize(struct _xmlError,int2,4,11,47931);
+CheckOffset(struct _xmlError,int2,68,11,47931);
+CheckMemberSize(struct _xmlError,ctxt,8,11,47932);
+CheckOffset(struct _xmlError,ctxt,72,11,47932);
+CheckMemberSize(struct _xmlError,node,8,11,47933);
+CheckOffset(struct _xmlError,node,80,11,47933);
+#elif __ia64__
+CheckTypeSize(struct _xmlError,88, 14657, 3);
+CheckMemberSize(struct _xmlError,code,4,3,47918);
+CheckOffset(struct _xmlError,code,4,3,47918);
+CheckMemberSize(struct _xmlError,message,8,3,47919);
+CheckOffset(struct _xmlError,message,8,3,47919);
+CheckMemberSize(struct _xmlError,level,4,3,47924);
+CheckOffset(struct _xmlError,level,16,3,47924);
+CheckMemberSize(struct _xmlError,file,8,3,47925);
+CheckOffset(struct _xmlError,file,24,3,47925);
+CheckMemberSize(struct _xmlError,line,4,3,47926);
+CheckOffset(struct _xmlError,line,32,3,47926);
+CheckMemberSize(struct _xmlError,str1,8,3,47927);
+CheckOffset(struct _xmlError,str1,40,3,47927);
+CheckMemberSize(struct _xmlError,str2,8,3,47928);
+CheckOffset(struct _xmlError,str2,48,3,47928);
+CheckMemberSize(struct _xmlError,str3,8,3,47929);
+CheckOffset(struct _xmlError,str3,56,3,47929);
+CheckMemberSize(struct _xmlError,int1,4,3,47930);
+CheckOffset(struct _xmlError,int1,64,3,47930);
+CheckMemberSize(struct _xmlError,int2,4,3,47931);
+CheckOffset(struct _xmlError,int2,68,3,47931);
+CheckMemberSize(struct _xmlError,ctxt,8,3,47932);
+CheckOffset(struct _xmlError,ctxt,72,3,47932);
+CheckMemberSize(struct _xmlError,node,8,3,47933);
+CheckOffset(struct _xmlError,node,80,3,47933);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct _xmlError,52, 14657, 6);
+CheckMemberSize(struct _xmlError,code,4,6,47918);
+CheckOffset(struct _xmlError,code,4,6,47918);
+CheckMemberSize(struct _xmlError,message,4,6,47919);
+CheckOffset(struct _xmlError,message,8,6,47919);
+CheckMemberSize(struct _xmlError,level,4,6,47924);
+CheckOffset(struct _xmlError,level,12,6,47924);
+CheckMemberSize(struct _xmlError,file,4,6,47925);
+CheckOffset(struct _xmlError,file,16,6,47925);
+CheckMemberSize(struct _xmlError,line,4,6,47926);
+CheckOffset(struct _xmlError,line,20,6,47926);
+CheckMemberSize(struct _xmlError,str1,4,6,47927);
+CheckOffset(struct _xmlError,str1,24,6,47927);
+CheckMemberSize(struct _xmlError,str2,4,6,47928);
+CheckOffset(struct _xmlError,str2,28,6,47928);
+CheckMemberSize(struct _xmlError,str3,4,6,47929);
+CheckOffset(struct _xmlError,str3,32,6,47929);
+CheckMemberSize(struct _xmlError,int1,4,6,47930);
+CheckOffset(struct _xmlError,int1,36,6,47930);
+CheckMemberSize(struct _xmlError,int2,4,6,47931);
+CheckOffset(struct _xmlError,int2,40,6,47931);
+CheckMemberSize(struct _xmlError,ctxt,4,6,47932);
+CheckOffset(struct _xmlError,ctxt,44,6,47932);
+CheckMemberSize(struct _xmlError,node,4,6,47933);
+CheckOffset(struct _xmlError,node,48,6,47933);
+#elif __powerpc64__
+CheckTypeSize(struct _xmlError,88, 14657, 9);
+CheckMemberSize(struct _xmlError,code,4,9,47918);
+CheckOffset(struct _xmlError,code,4,9,47918);
+CheckMemberSize(struct _xmlError,message,8,9,47919);
+CheckOffset(struct _xmlError,message,8,9,47919);
+CheckMemberSize(struct _xmlError,level,4,9,47924);
+CheckOffset(struct _xmlError,level,16,9,47924);
+CheckMemberSize(struct _xmlError,file,8,9,47925);
+CheckOffset(struct _xmlError,file,24,9,47925);
+CheckMemberSize(struct _xmlError,line,4,9,47926);
+CheckOffset(struct _xmlError,line,32,9,47926);
+CheckMemberSize(struct _xmlError,str1,8,9,47927);
+CheckOffset(struct _xmlError,str1,40,9,47927);
+CheckMemberSize(struct _xmlError,str2,8,9,47928);
+CheckOffset(struct _xmlError,str2,48,9,47928);
+CheckMemberSize(struct _xmlError,str3,8,9,47929);
+CheckOffset(struct _xmlError,str3,56,9,47929);
+CheckMemberSize(struct _xmlError,int1,4,9,47930);
+CheckOffset(struct _xmlError,int1,64,9,47930);
+CheckMemberSize(struct _xmlError,int2,4,9,47931);
+CheckOffset(struct _xmlError,int2,68,9,47931);
+CheckMemberSize(struct _xmlError,ctxt,8,9,47932);
+CheckOffset(struct _xmlError,ctxt,72,9,47932);
+CheckMemberSize(struct _xmlError,node,8,9,47933);
+CheckOffset(struct _xmlError,node,80,9,47933);
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct _xmlError,52, 14657, 10);
+CheckMemberSize(struct _xmlError,code,4,10,47918);
+CheckOffset(struct _xmlError,code,4,10,47918);
+CheckMemberSize(struct _xmlError,message,4,10,47919);
+CheckOffset(struct _xmlError,message,8,10,47919);
+CheckMemberSize(struct _xmlError,level,4,10,47924);
+CheckOffset(struct _xmlError,level,12,10,47924);
+CheckMemberSize(struct _xmlError,file,4,10,47925);
+CheckOffset(struct _xmlError,file,16,10,47925);
+CheckMemberSize(struct _xmlError,line,4,10,47926);
+CheckOffset(struct _xmlError,line,20,10,47926);
+CheckMemberSize(struct _xmlError,str1,4,10,47927);
+CheckOffset(struct _xmlError,str1,24,10,47927);
+CheckMemberSize(struct _xmlError,str2,4,10,47928);
+CheckOffset(struct _xmlError,str2,28,10,47928);
+CheckMemberSize(struct _xmlError,str3,4,10,47929);
+CheckOffset(struct _xmlError,str3,32,10,47929);
+CheckMemberSize(struct _xmlError,int1,4,10,47930);
+CheckOffset(struct _xmlError,int1,36,10,47930);
+CheckMemberSize(struct _xmlError,int2,4,10,47931);
+CheckOffset(struct _xmlError,int2,40,10,47931);
+CheckMemberSize(struct _xmlError,ctxt,4,10,47932);
+CheckOffset(struct _xmlError,ctxt,44,10,47932);
+CheckMemberSize(struct _xmlError,node,4,10,47933);
+CheckOffset(struct _xmlError,node,48,10,47933);
+#elif __s390x__
+CheckTypeSize(struct _xmlError,88, 14657, 12);
+CheckMemberSize(struct _xmlError,code,4,12,47918);
+CheckOffset(struct _xmlError,code,4,12,47918);
+CheckMemberSize(struct _xmlError,message,8,12,47919);
+CheckOffset(struct _xmlError,message,8,12,47919);
+CheckMemberSize(struct _xmlError,level,4,12,47924);
+CheckOffset(struct _xmlError,level,16,12,47924);
+CheckMemberSize(struct _xmlError,file,8,12,47925);
+CheckOffset(struct _xmlError,file,24,12,47925);
+CheckMemberSize(struct _xmlError,line,4,12,47926);
+CheckOffset(struct _xmlError,line,32,12,47926);
+CheckMemberSize(struct _xmlError,str1,8,12,47927);
+CheckOffset(struct _xmlError,str1,40,12,47927);
+CheckMemberSize(struct _xmlError,str2,8,12,47928);
+CheckOffset(struct _xmlError,str2,48,12,47928);
+CheckMemberSize(struct _xmlError,str3,8,12,47929);
+CheckOffset(struct _xmlError,str3,56,12,47929);
+CheckMemberSize(struct _xmlError,int1,4,12,47930);
+CheckOffset(struct _xmlError,int1,64,12,47930);
+CheckMemberSize(struct _xmlError,int2,4,12,47931);
+CheckOffset(struct _xmlError,int2,68,12,47931);
+CheckMemberSize(struct _xmlError,ctxt,8,12,47932);
+CheckOffset(struct _xmlError,ctxt,72,12,47932);
+CheckMemberSize(struct _xmlError,node,8,12,47933);
+CheckOffset(struct _xmlError,node,80,12,47933);
+#elif 1
+CheckTypeSize(struct _xmlError,0, 14657, 1);
+Msg("Missing member data for _xmlError on All\n");
+CheckOffset(struct _xmlError,domain,0,1,47917);
+CheckOffset(struct _xmlError,code,0,1,47918);
+CheckOffset(struct _xmlError,message,0,1,47919);
+CheckOffset(struct _xmlError,level,0,1,47924);
+CheckOffset(struct _xmlError,file,0,1,47925);
+CheckOffset(struct _xmlError,line,0,1,47926);
+CheckOffset(struct _xmlError,str1,0,1,47927);
+CheckOffset(struct _xmlError,str2,0,1,47928);
+CheckOffset(struct _xmlError,str3,0,1,47929);
+CheckOffset(struct _xmlError,int1,0,1,47930);
+CheckOffset(struct _xmlError,int2,0,1,47931);
+CheckOffset(struct _xmlError,ctxt,0,1,47932);
+CheckOffset(struct _xmlError,node,0,1,47933);
 #endif
 
 #if __i386__
@@ -820,104 +841,101 @@ CheckEnum("XML_ERR_NONE",XML_ERR_NONE,0,47920);
 CheckEnum("XML_ERR_WARNING",XML_ERR_WARNING,1,47921);
 CheckEnum("XML_ERR_ERROR",XML_ERR_ERROR,2,47922);
 CheckEnum("XML_ERR_FATAL",XML_ERR_FATAL,3,47923);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14658,0);
-Msg("Find size of anon-libxml2/libxml/xmlerror.h-27 (14658)\n");
+#elif 1
+CheckEnum("XML_ERR_NONE",XML_ERR_NONE,0,47920);
+CheckEnum("XML_ERR_WARNING",XML_ERR_WARNING,1,47921);
+CheckEnum("XML_ERR_ERROR",XML_ERR_ERROR,2,47922);
+CheckEnum("XML_ERR_FATAL",XML_ERR_FATAL,3,47923);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlErrorLevel,4, 14659, 2)
+CheckTypeSize(xmlErrorLevel,4, 14659, 2);
 #elif __x86_64__
-CheckTypeSize(xmlErrorLevel,4, 14659, 11)
+CheckTypeSize(xmlErrorLevel,4, 14659, 11);
 #elif __ia64__
-CheckTypeSize(xmlErrorLevel,4, 14659, 3)
+CheckTypeSize(xmlErrorLevel,4, 14659, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlErrorLevel,4, 14659, 6)
+CheckTypeSize(xmlErrorLevel,4, 14659, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlErrorLevel,4, 14659, 9)
+CheckTypeSize(xmlErrorLevel,4, 14659, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlErrorLevel,4, 14659, 10)
+CheckTypeSize(xmlErrorLevel,4, 14659, 10);
 #elif __s390x__
-CheckTypeSize(xmlErrorLevel,4, 14659, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14659,0);
-Msg("Find size of xmlErrorLevel (14659)\n");
+CheckTypeSize(xmlErrorLevel,4, 14659, 12);
+#elif 1
+CheckTypeSize(xmlErrorLevel,0, 14659, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlError,52, 14660, 2)
+CheckTypeSize(xmlError,52, 14660, 2);
 #elif __x86_64__
-CheckTypeSize(xmlError,88, 14660, 11)
+CheckTypeSize(xmlError,88, 14660, 11);
 #elif __ia64__
-CheckTypeSize(xmlError,88, 14660, 3)
+CheckTypeSize(xmlError,88, 14660, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlError,52, 14660, 6)
+CheckTypeSize(xmlError,52, 14660, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlError,88, 14660, 9)
+CheckTypeSize(xmlError,88, 14660, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlError,52, 14660, 10)
+CheckTypeSize(xmlError,52, 14660, 10);
 #elif __s390x__
-CheckTypeSize(xmlError,88, 14660, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14660,0);
-Msg("Find size of xmlError (14660)\n");
+CheckTypeSize(xmlError,88, 14660, 12);
+#elif 1
+CheckTypeSize(xmlError,0, 14660, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlError *,4, 14661, 2)
+CheckTypeSize(xmlError *,4, 14661, 2);
 #elif __x86_64__
-CheckTypeSize(xmlError *,8, 14661, 11)
+CheckTypeSize(xmlError *,8, 14661, 11);
 #elif __ia64__
-CheckTypeSize(xmlError *,8, 14661, 3)
+CheckTypeSize(xmlError *,8, 14661, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlError *,4, 14661, 6)
+CheckTypeSize(xmlError *,4, 14661, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlError *,8, 14661, 9)
+CheckTypeSize(xmlError *,8, 14661, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlError *,4, 14661, 10)
+CheckTypeSize(xmlError *,4, 14661, 10);
 #elif __s390x__
-CheckTypeSize(xmlError *,8, 14661, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14661,0);
-Msg("Find size of xmlError * (14661)\n");
+CheckTypeSize(xmlError *,8, 14661, 12);
+#elif 1
+CheckTypeSize(xmlError *,0, 14661, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlErrorPtr,4, 14662, 2)
+CheckTypeSize(xmlErrorPtr,4, 14662, 2);
 #elif __x86_64__
-CheckTypeSize(xmlErrorPtr,8, 14662, 11)
+CheckTypeSize(xmlErrorPtr,8, 14662, 11);
 #elif __ia64__
-CheckTypeSize(xmlErrorPtr,8, 14662, 3)
+CheckTypeSize(xmlErrorPtr,8, 14662, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlErrorPtr,4, 14662, 6)
+CheckTypeSize(xmlErrorPtr,4, 14662, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlErrorPtr,8, 14662, 9)
+CheckTypeSize(xmlErrorPtr,8, 14662, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlErrorPtr,4, 14662, 10)
+CheckTypeSize(xmlErrorPtr,4, 14662, 10);
 #elif __s390x__
-CheckTypeSize(xmlErrorPtr,8, 14662, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14662,0);
-Msg("Find size of xmlErrorPtr (14662)\n");
+CheckTypeSize(xmlErrorPtr,8, 14662, 12);
+#elif 1
+CheckTypeSize(xmlErrorPtr,0, 14662, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlGenericErrorFunc *,4, 14663, 2)
+CheckTypeSize(xmlGenericErrorFunc *,4, 14663, 2);
 #elif __x86_64__
-CheckTypeSize(xmlGenericErrorFunc *,8, 14663, 11)
+CheckTypeSize(xmlGenericErrorFunc *,8, 14663, 11);
 #elif __ia64__
-CheckTypeSize(xmlGenericErrorFunc *,8, 14663, 3)
+CheckTypeSize(xmlGenericErrorFunc *,8, 14663, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlGenericErrorFunc *,4, 14663, 6)
+CheckTypeSize(xmlGenericErrorFunc *,4, 14663, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlGenericErrorFunc *,8, 14663, 9)
+CheckTypeSize(xmlGenericErrorFunc *,8, 14663, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlGenericErrorFunc *,4, 14663, 10)
+CheckTypeSize(xmlGenericErrorFunc *,4, 14663, 10);
 #elif __s390x__
-CheckTypeSize(xmlGenericErrorFunc *,8, 14663, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14663,0);
-Msg("Find size of xmlGenericErrorFunc * (14663)\n");
+CheckTypeSize(xmlGenericErrorFunc *,8, 14663, 12);
+#elif 1
+CheckTypeSize(xmlGenericErrorFunc *,0, 14663, 1);
 #endif
 
 #if __i386__
@@ -927,28 +945,25 @@ Msg("Find size of xmlGenericErrorFunc * (14663)\n");
 #elif __powerpc64__
 #elif __s390__ && !__s390x__
 #elif __s390x__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14664,0);
-Msg("Find size of fptr_xmlerror_99 (14664)\n");
+#elif 1
 #endif
 
 #if __i386__
-CheckTypeSize(xmlStructuredErrorFunc,4, 14665, 2)
+CheckTypeSize(xmlStructuredErrorFunc,4, 14665, 2);
 #elif __x86_64__
-CheckTypeSize(xmlStructuredErrorFunc,8, 14665, 11)
+CheckTypeSize(xmlStructuredErrorFunc,8, 14665, 11);
 #elif __ia64__
-CheckTypeSize(xmlStructuredErrorFunc,8, 14665, 3)
+CheckTypeSize(xmlStructuredErrorFunc,8, 14665, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlStructuredErrorFunc,4, 14665, 6)
+CheckTypeSize(xmlStructuredErrorFunc,4, 14665, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlStructuredErrorFunc,8, 14665, 9)
+CheckTypeSize(xmlStructuredErrorFunc,8, 14665, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlStructuredErrorFunc,4, 14665, 10)
+CheckTypeSize(xmlStructuredErrorFunc,4, 14665, 10);
 #elif __s390x__
-CheckTypeSize(xmlStructuredErrorFunc,8, 14665, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14665,0);
-Msg("Find size of xmlStructuredErrorFunc (14665)\n");
+CheckTypeSize(xmlStructuredErrorFunc,8, 14665, 12);
+#elif 1
+CheckTypeSize(xmlStructuredErrorFunc,0, 14665, 1);
 #endif
 
 #if __i386__
@@ -1154,28 +1169,53 @@ CheckEnum("XML_FROM_CHECK",XML_FROM_CHECK,((((((((((((((((((((((((0) + 1) + 1) +
 CheckEnum("XML_FROM_WRITER",XML_FROM_WRITER,(((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47961);
 CheckEnum("XML_FROM_MODULE",XML_FROM_MODULE,((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47962);
 CheckEnum("XML_FROM_I18N",XML_FROM_I18N,(((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47963);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14666,0);
-Msg("Find size of anonymous-xmlerror.h.types-0 (14666)\n");
+#elif 1
+CheckEnum("XML_FROM_NONE",XML_FROM_NONE,0,47936);
+CheckEnum("XML_FROM_PARSER",XML_FROM_PARSER,(0) + 1,47937);
+CheckEnum("XML_FROM_TREE",XML_FROM_TREE,((0) + 1) + 1,47938);
+CheckEnum("XML_FROM_NAMESPACE",XML_FROM_NAMESPACE,(((0) + 1) + 1) + 1,47939);
+CheckEnum("XML_FROM_DTD",XML_FROM_DTD,((((0) + 1) + 1) + 1) + 1,47940);
+CheckEnum("XML_FROM_HTML",XML_FROM_HTML,(((((0) + 1) + 1) + 1) + 1) + 1,47941);
+CheckEnum("XML_FROM_MEMORY",XML_FROM_MEMORY,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,47942);
+CheckEnum("XML_FROM_OUTPUT",XML_FROM_OUTPUT,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47943);
+CheckEnum("XML_FROM_IO",XML_FROM_IO,((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47944);
+CheckEnum("XML_FROM_FTP",XML_FROM_FTP,(((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47945);
+CheckEnum("XML_FROM_HTTP",XML_FROM_HTTP,((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47946);
+CheckEnum("XML_FROM_XINCLUDE",XML_FROM_XINCLUDE,(((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47947);
+CheckEnum("XML_FROM_XPATH",XML_FROM_XPATH,((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47948);
+CheckEnum("XML_FROM_XPOINTER",XML_FROM_XPOINTER,(((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47949);
+CheckEnum("XML_FROM_REGEXP",XML_FROM_REGEXP,((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47950);
+CheckEnum("XML_FROM_DATATYPE",XML_FROM_DATATYPE,(((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47951);
+CheckEnum("XML_FROM_SCHEMASP",XML_FROM_SCHEMASP,((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47952);
+CheckEnum("XML_FROM_SCHEMASV",XML_FROM_SCHEMASV,(((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47953);
+CheckEnum("XML_FROM_RELAXNGP",XML_FROM_RELAXNGP,((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47954);
+CheckEnum("XML_FROM_RELAXNGV",XML_FROM_RELAXNGV,(((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47955);
+CheckEnum("XML_FROM_CATALOG",XML_FROM_CATALOG,((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47956);
+CheckEnum("XML_FROM_C14N",XML_FROM_C14N,(((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47957);
+CheckEnum("XML_FROM_XSLT",XML_FROM_XSLT,((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47958);
+CheckEnum("XML_FROM_VALID",XML_FROM_VALID,(((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47959);
+CheckEnum("XML_FROM_CHECK",XML_FROM_CHECK,((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47960);
+CheckEnum("XML_FROM_WRITER",XML_FROM_WRITER,(((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47961);
+CheckEnum("XML_FROM_MODULE",XML_FROM_MODULE,((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47962);
+CheckEnum("XML_FROM_I18N",XML_FROM_I18N,(((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47963);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlErrorDomain,4, 14667, 2)
+CheckTypeSize(xmlErrorDomain,4, 14667, 2);
 #elif __x86_64__
-CheckTypeSize(xmlErrorDomain,4, 14667, 11)
+CheckTypeSize(xmlErrorDomain,4, 14667, 11);
 #elif __ia64__
-CheckTypeSize(xmlErrorDomain,4, 14667, 3)
+CheckTypeSize(xmlErrorDomain,4, 14667, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlErrorDomain,4, 14667, 6)
+CheckTypeSize(xmlErrorDomain,4, 14667, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlErrorDomain,4, 14667, 9)
+CheckTypeSize(xmlErrorDomain,4, 14667, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlErrorDomain,4, 14667, 10)
+CheckTypeSize(xmlErrorDomain,4, 14667, 10);
 #elif __s390x__
-CheckTypeSize(xmlErrorDomain,4, 14667, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14667,0);
-Msg("Find size of xmlErrorDomain (14667)\n");
+CheckTypeSize(xmlErrorDomain,4, 14667, 12);
+#elif 1
+CheckTypeSize(xmlErrorDomain,0, 14667, 1);
 #endif
 
 #if __i386__
@@ -6211,28 +6251,743 @@ CheckEnum("XML_I18N_NO_HANDLER",XML_I18N_NO_HANDLER,(6000) + 1,48678);
 CheckEnum("XML_I18N_EXCESS_HANDLER",XML_I18N_EXCESS_HANDLER,((6000) + 1) + 1,48679);
 CheckEnum("XML_I18N_CONV_FAILED",XML_I18N_CONV_FAILED,(((6000) + 1) + 1) + 1,48680);
 CheckEnum("XML_I18N_NO_OUTPUT",XML_I18N_NO_OUTPUT,((((6000) + 1) + 1) + 1) + 1,48681);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14668,0);
-Msg("Find size of anonymous-xmlerror.h.types-2 (14668)\n");
+#elif 1
+CheckEnum("XML_ERR_OK",XML_ERR_OK,0,47964);
+CheckEnum("XML_ERR_INTERNAL_ERROR",XML_ERR_INTERNAL_ERROR,(0) + 1,47965);
+CheckEnum("XML_ERR_NO_MEMORY",XML_ERR_NO_MEMORY,((0) + 1) + 1,47966);
+CheckEnum("XML_ERR_DOCUMENT_START",XML_ERR_DOCUMENT_START,(((0) + 1) + 1) + 1,47967);
+CheckEnum("XML_ERR_DOCUMENT_EMPTY",XML_ERR_DOCUMENT_EMPTY,((((0) + 1) + 1) + 1) + 1,47968);
+CheckEnum("XML_ERR_DOCUMENT_END",XML_ERR_DOCUMENT_END,(((((0) + 1) + 1) + 1) + 1) + 1,47969);
+CheckEnum("XML_ERR_INVALID_HEX_CHARREF",XML_ERR_INVALID_HEX_CHARREF,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,47970);
+CheckEnum("XML_ERR_INVALID_DEC_CHARREF",XML_ERR_INVALID_DEC_CHARREF,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47971);
+CheckEnum("XML_ERR_INVALID_CHARREF",XML_ERR_INVALID_CHARREF,((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47972);
+CheckEnum("XML_ERR_INVALID_CHAR",XML_ERR_INVALID_CHAR,(((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47973);
+CheckEnum("XML_ERR_CHARREF_AT_EOF",XML_ERR_CHARREF_AT_EOF,((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47974);
+CheckEnum("XML_ERR_CHARREF_IN_PROLOG",XML_ERR_CHARREF_IN_PROLOG,(((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47975);
+CheckEnum("XML_ERR_CHARREF_IN_EPILOG",XML_ERR_CHARREF_IN_EPILOG,((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47976);
+CheckEnum("XML_ERR_CHARREF_IN_DTD",XML_ERR_CHARREF_IN_DTD,(((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47977);
+CheckEnum("XML_ERR_ENTITYREF_AT_EOF",XML_ERR_ENTITYREF_AT_EOF,((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47978);
+CheckEnum("XML_ERR_ENTITYREF_IN_PROLOG",XML_ERR_ENTITYREF_IN_PROLOG,(((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47979);
+CheckEnum("XML_ERR_ENTITYREF_IN_EPILOG",XML_ERR_ENTITYREF_IN_EPILOG,((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47980);
+CheckEnum("XML_ERR_ENTITYREF_IN_DTD",XML_ERR_ENTITYREF_IN_DTD,(((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47981);
+CheckEnum("XML_ERR_PEREF_AT_EOF",XML_ERR_PEREF_AT_EOF,((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47982);
+CheckEnum("XML_ERR_PEREF_IN_PROLOG",XML_ERR_PEREF_IN_PROLOG,(((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47983);
+CheckEnum("XML_ERR_PEREF_IN_EPILOG",XML_ERR_PEREF_IN_EPILOG,((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47984);
+CheckEnum("XML_ERR_PEREF_IN_INT_SUBSET",XML_ERR_PEREF_IN_INT_SUBSET,(((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47985);
+CheckEnum("XML_ERR_ENTITYREF_NO_NAME",XML_ERR_ENTITYREF_NO_NAME,((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47986);
+CheckEnum("XML_ERR_ENTITYREF_SEMICOL_MISSING",XML_ERR_ENTITYREF_SEMICOL_MISSING,(((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47987);
+CheckEnum("XML_ERR_PEREF_NO_NAME",XML_ERR_PEREF_NO_NAME,((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47988);
+CheckEnum("XML_ERR_PEREF_SEMICOL_MISSING",XML_ERR_PEREF_SEMICOL_MISSING,(((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47989);
+CheckEnum("XML_ERR_UNDECLARED_ENTITY",XML_ERR_UNDECLARED_ENTITY,((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47990);
+CheckEnum("XML_WAR_UNDECLARED_ENTITY",XML_WAR_UNDECLARED_ENTITY,(((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47991);
+CheckEnum("XML_ERR_UNPARSED_ENTITY",XML_ERR_UNPARSED_ENTITY,((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47992);
+CheckEnum("XML_ERR_ENTITY_IS_EXTERNAL",XML_ERR_ENTITY_IS_EXTERNAL,(((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47993);
+CheckEnum("XML_ERR_ENTITY_IS_PARAMETER",XML_ERR_ENTITY_IS_PARAMETER,((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47994);
+CheckEnum("XML_ERR_UNKNOWN_ENCODING",XML_ERR_UNKNOWN_ENCODING,(((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47995);
+CheckEnum("XML_ERR_UNSUPPORTED_ENCODING",XML_ERR_UNSUPPORTED_ENCODING,((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47996);
+CheckEnum("XML_ERR_STRING_NOT_STARTED",XML_ERR_STRING_NOT_STARTED,(((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47997);
+CheckEnum("XML_ERR_STRING_NOT_CLOSED",XML_ERR_STRING_NOT_CLOSED,((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47998);
+CheckEnum("XML_ERR_NS_DECL_ERROR",XML_ERR_NS_DECL_ERROR,(((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,47999);
+CheckEnum("XML_ERR_ENTITY_NOT_STARTED",XML_ERR_ENTITY_NOT_STARTED,((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48000);
+CheckEnum("XML_ERR_ENTITY_NOT_FINISHED",XML_ERR_ENTITY_NOT_FINISHED,(((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48001);
+CheckEnum("XML_ERR_LT_IN_ATTRIBUTE",XML_ERR_LT_IN_ATTRIBUTE,((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48002);
+CheckEnum("XML_ERR_ATTRIBUTE_NOT_STARTED",XML_ERR_ATTRIBUTE_NOT_STARTED,(((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48003);
+CheckEnum("XML_ERR_ATTRIBUTE_NOT_FINISHED",XML_ERR_ATTRIBUTE_NOT_FINISHED,((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48004);
+CheckEnum("XML_ERR_ATTRIBUTE_WITHOUT_VALUE",XML_ERR_ATTRIBUTE_WITHOUT_VALUE,(((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48005);
+CheckEnum("XML_ERR_ATTRIBUTE_REDEFINED",XML_ERR_ATTRIBUTE_REDEFINED,((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48006);
+CheckEnum("XML_ERR_LITERAL_NOT_STARTED",XML_ERR_LITERAL_NOT_STARTED,(((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48007);
+CheckEnum("XML_ERR_LITERAL_NOT_FINISHED",XML_ERR_LITERAL_NOT_FINISHED,((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48008);
+CheckEnum("XML_ERR_COMMENT_NOT_FINISHED",XML_ERR_COMMENT_NOT_FINISHED,(((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48009);
+CheckEnum("XML_ERR_PI_NOT_STARTED",XML_ERR_PI_NOT_STARTED,((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48010);
+CheckEnum("XML_ERR_PI_NOT_FINISHED",XML_ERR_PI_NOT_FINISHED,(((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48011);
+CheckEnum("XML_ERR_NOTATION_NOT_STARTED",XML_ERR_NOTATION_NOT_STARTED,((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48012);
+CheckEnum("XML_ERR_NOTATION_NOT_FINISHED",XML_ERR_NOTATION_NOT_FINISHED,(((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48013);
+CheckEnum("XML_ERR_ATTLIST_NOT_STARTED",XML_ERR_ATTLIST_NOT_STARTED,((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48014);
+CheckEnum("XML_ERR_ATTLIST_NOT_FINISHED",XML_ERR_ATTLIST_NOT_FINISHED,(((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48015);
+CheckEnum("XML_ERR_MIXED_NOT_STARTED",XML_ERR_MIXED_NOT_STARTED,((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48016);
+CheckEnum("XML_ERR_MIXED_NOT_FINISHED",XML_ERR_MIXED_NOT_FINISHED,(((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48017);
+CheckEnum("XML_ERR_ELEMCONTENT_NOT_STARTED",XML_ERR_ELEMCONTENT_NOT_STARTED,((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48018);
+CheckEnum("XML_ERR_ELEMCONTENT_NOT_FINISHED",XML_ERR_ELEMCONTENT_NOT_FINISHED,(((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48019);
+CheckEnum("XML_ERR_XMLDECL_NOT_STARTED",XML_ERR_XMLDECL_NOT_STARTED,((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48020);
+CheckEnum("XML_ERR_XMLDECL_NOT_FINISHED",XML_ERR_XMLDECL_NOT_FINISHED,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48021);
+CheckEnum("XML_ERR_CONDSEC_NOT_STARTED",XML_ERR_CONDSEC_NOT_STARTED,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48022);
+CheckEnum("XML_ERR_CONDSEC_NOT_FINISHED",XML_ERR_CONDSEC_NOT_FINISHED,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48023);
+CheckEnum("XML_ERR_EXT_SUBSET_NOT_FINISHED",XML_ERR_EXT_SUBSET_NOT_FINISHED,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48024);
+CheckEnum("XML_ERR_DOCTYPE_NOT_FINISHED",XML_ERR_DOCTYPE_NOT_FINISHED,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48025);
+CheckEnum("XML_ERR_MISPLACED_CDATA_END",XML_ERR_MISPLACED_CDATA_END,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48026);
+CheckEnum("XML_ERR_CDATA_NOT_FINISHED",XML_ERR_CDATA_NOT_FINISHED,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48027);
+CheckEnum("XML_ERR_RESERVED_XML_NAME",XML_ERR_RESERVED_XML_NAME,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48028);
+CheckEnum("XML_ERR_SPACE_REQUIRED",XML_ERR_SPACE_REQUIRED,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48029);
+CheckEnum("XML_ERR_SEPARATOR_REQUIRED",XML_ERR_SEPARATOR_REQUIRED,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48030);
+CheckEnum("XML_ERR_NMTOKEN_REQUIRED",XML_ERR_NMTOKEN_REQUIRED,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48031);
+CheckEnum("XML_ERR_NAME_REQUIRED",XML_ERR_NAME_REQUIRED,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48032);
+CheckEnum("XML_ERR_PCDATA_REQUIRED",XML_ERR_PCDATA_REQUIRED,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48033);
+CheckEnum("XML_ERR_URI_REQUIRED",XML_ERR_URI_REQUIRED,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48034);
+CheckEnum("XML_ERR_PUBID_REQUIRED",XML_ERR_PUBID_REQUIRED,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48035);
+CheckEnum("XML_ERR_LT_REQUIRED",XML_ERR_LT_REQUIRED,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48036);
+CheckEnum("XML_ERR_GT_REQUIRED",XML_ERR_GT_REQUIRED,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48037);
+CheckEnum("XML_ERR_LTSLASH_REQUIRED",XML_ERR_LTSLASH_REQUIRED,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48038);
+CheckEnum("XML_ERR_EQUAL_REQUIRED",XML_ERR_EQUAL_REQUIRED,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48039);
+CheckEnum("XML_ERR_TAG_NAME_MISMATCH",XML_ERR_TAG_NAME_MISMATCH,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48040);
+CheckEnum("XML_ERR_TAG_NOT_FINISHED",XML_ERR_TAG_NOT_FINISHED,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48041);
+CheckEnum("XML_ERR_STANDALONE_VALUE",XML_ERR_STANDALONE_VALUE,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48042);
+CheckEnum("XML_ERR_ENCODING_NAME",XML_ERR_ENCODING_NAME,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48043);
+CheckEnum("XML_ERR_HYPHEN_IN_COMMENT",XML_ERR_HYPHEN_IN_COMMENT,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48044);
+CheckEnum("XML_ERR_INVALID_ENCODING",XML_ERR_INVALID_ENCODING,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48045);
+CheckEnum("XML_ERR_EXT_ENTITY_STANDALONE",XML_ERR_EXT_ENTITY_STANDALONE,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48046);
+CheckEnum("XML_ERR_CONDSEC_INVALID",XML_ERR_CONDSEC_INVALID,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48047);
+CheckEnum("XML_ERR_VALUE_REQUIRED",XML_ERR_VALUE_REQUIRED,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48048);
+CheckEnum("XML_ERR_NOT_WELL_BALANCED",XML_ERR_NOT_WELL_BALANCED,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48049);
+CheckEnum("XML_ERR_EXTRA_CONTENT",XML_ERR_EXTRA_CONTENT,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48050);
+CheckEnum("XML_ERR_ENTITY_CHAR_ERROR",XML_ERR_ENTITY_CHAR_ERROR,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48051);
+CheckEnum("XML_ERR_ENTITY_PE_INTERNAL",XML_ERR_ENTITY_PE_INTERNAL,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48052);
+CheckEnum("XML_ERR_ENTITY_LOOP",XML_ERR_ENTITY_LOOP,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48053);
+CheckEnum("XML_ERR_ENTITY_BOUNDARY",XML_ERR_ENTITY_BOUNDARY,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48054);
+CheckEnum("XML_ERR_INVALID_URI",XML_ERR_INVALID_URI,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48055);
+CheckEnum("XML_ERR_URI_FRAGMENT",XML_ERR_URI_FRAGMENT,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48056);
+CheckEnum("XML_WAR_CATALOG_PI",XML_WAR_CATALOG_PI,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48057);
+CheckEnum("XML_ERR_NO_DTD",XML_ERR_NO_DTD,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48058);
+CheckEnum("XML_ERR_CONDSEC_INVALID_KEYWORD",XML_ERR_CONDSEC_INVALID_KEYWORD,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48059);
+CheckEnum("XML_ERR_VERSION_MISSING",XML_ERR_VERSION_MISSING,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48060);
+CheckEnum("XML_WAR_UNKNOWN_VERSION",XML_WAR_UNKNOWN_VERSION,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48061);
+CheckEnum("XML_WAR_LANG_VALUE",XML_WAR_LANG_VALUE,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48062);
+CheckEnum("XML_WAR_NS_URI",XML_WAR_NS_URI,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48063);
+CheckEnum("XML_WAR_NS_URI_RELATIVE",XML_WAR_NS_URI_RELATIVE,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48064);
+CheckEnum("XML_ERR_MISSING_ENCODING",XML_ERR_MISSING_ENCODING,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48065);
+CheckEnum("XML_WAR_SPACE_VALUE",XML_WAR_SPACE_VALUE,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48066);
+CheckEnum("XML_ERR_NOT_STANDALONE",XML_ERR_NOT_STANDALONE,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48067);
+CheckEnum("XML_ERR_ENTITY_PROCESSING",XML_ERR_ENTITY_PROCESSING,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48068);
+CheckEnum("XML_ERR_NOTATION_PROCESSING",XML_ERR_NOTATION_PROCESSING,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48069);
+CheckEnum("XML_WAR_NS_COLUMN",XML_WAR_NS_COLUMN,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48070);
+CheckEnum("XML_WAR_ENTITY_REDEFINED",XML_WAR_ENTITY_REDEFINED,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48071);
+CheckEnum("XML_NS_ERR_XML_NAMESPACE",XML_NS_ERR_XML_NAMESPACE,200,48072);
+CheckEnum("XML_NS_ERR_UNDEFINED_NAMESPACE",XML_NS_ERR_UNDEFINED_NAMESPACE,(200) + 1,48073);
+CheckEnum("XML_NS_ERR_QNAME",XML_NS_ERR_QNAME,((200) + 1) + 1,48074);
+CheckEnum("XML_NS_ERR_ATTRIBUTE_REDEFINED",XML_NS_ERR_ATTRIBUTE_REDEFINED,(((200) + 1) + 1) + 1,48075);
+CheckEnum("XML_NS_ERR_EMPTY",XML_NS_ERR_EMPTY,((((200) + 1) + 1) + 1) + 1,48076);
+CheckEnum("XML_DTD_ATTRIBUTE_DEFAULT",XML_DTD_ATTRIBUTE_DEFAULT,500,48077);
+CheckEnum("XML_DTD_ATTRIBUTE_REDEFINED",XML_DTD_ATTRIBUTE_REDEFINED,(500) + 1,48078);
+CheckEnum("XML_DTD_ATTRIBUTE_VALUE",XML_DTD_ATTRIBUTE_VALUE,((500) + 1) + 1,48079);
+CheckEnum("XML_DTD_CONTENT_ERROR",XML_DTD_CONTENT_ERROR,(((500) + 1) + 1) + 1,48080);
+CheckEnum("XML_DTD_CONTENT_MODEL",XML_DTD_CONTENT_MODEL,((((500) + 1) + 1) + 1) + 1,48081);
+CheckEnum("XML_DTD_CONTENT_NOT_DETERMINIST",XML_DTD_CONTENT_NOT_DETERMINIST,(((((500) + 1) + 1) + 1) + 1) + 1,48082);
+CheckEnum("XML_DTD_DIFFERENT_PREFIX",XML_DTD_DIFFERENT_PREFIX,((((((500) + 1) + 1) + 1) + 1) + 1) + 1,48083);
+CheckEnum("XML_DTD_ELEM_DEFAULT_NAMESPACE",XML_DTD_ELEM_DEFAULT_NAMESPACE,(((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48084);
+CheckEnum("XML_DTD_ELEM_NAMESPACE",XML_DTD_ELEM_NAMESPACE,((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48085);
+CheckEnum("XML_DTD_ELEM_REDEFINED",XML_DTD_ELEM_REDEFINED,(((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48086);
+CheckEnum("XML_DTD_EMPTY_NOTATION",XML_DTD_EMPTY_NOTATION,((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48087);
+CheckEnum("XML_DTD_ENTITY_TYPE",XML_DTD_ENTITY_TYPE,(((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48088);
+CheckEnum("XML_DTD_ID_FIXED",XML_DTD_ID_FIXED,((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48089);
+CheckEnum("XML_DTD_ID_REDEFINED",XML_DTD_ID_REDEFINED,(((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48090);
+CheckEnum("XML_DTD_ID_SUBSET",XML_DTD_ID_SUBSET,((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48091);
+CheckEnum("XML_DTD_INVALID_CHILD",XML_DTD_INVALID_CHILD,(((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48092);
+CheckEnum("XML_DTD_INVALID_DEFAULT",XML_DTD_INVALID_DEFAULT,((((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48093);
+CheckEnum("XML_DTD_LOAD_ERROR",XML_DTD_LOAD_ERROR,(((((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48094);
+CheckEnum("XML_DTD_MISSING_ATTRIBUTE",XML_DTD_MISSING_ATTRIBUTE,((((((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48095);
+CheckEnum("XML_DTD_MIXED_CORRUPT",XML_DTD_MIXED_CORRUPT,(((((((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48096);
+CheckEnum("XML_DTD_MULTIPLE_ID",XML_DTD_MULTIPLE_ID,((((((((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48097);
+CheckEnum("XML_DTD_NO_DOC",XML_DTD_NO_DOC,(((((((((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48098);
+CheckEnum("XML_DTD_NO_DTD",XML_DTD_NO_DTD,((((((((((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48099);
+CheckEnum("XML_DTD_NO_ELEM_NAME",XML_DTD_NO_ELEM_NAME,(((((((((((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48100);
+CheckEnum("XML_DTD_NO_PREFIX",XML_DTD_NO_PREFIX,((((((((((((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48101);
+CheckEnum("XML_DTD_NO_ROOT",XML_DTD_NO_ROOT,(((((((((((((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48102);
+CheckEnum("XML_DTD_NOTATION_REDEFINED",XML_DTD_NOTATION_REDEFINED,((((((((((((((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48103);
+CheckEnum("XML_DTD_NOTATION_VALUE",XML_DTD_NOTATION_VALUE,(((((((((((((((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48104);
+CheckEnum("XML_DTD_NOT_EMPTY",XML_DTD_NOT_EMPTY,((((((((((((((((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48105);
+CheckEnum("XML_DTD_NOT_PCDATA",XML_DTD_NOT_PCDATA,(((((((((((((((((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48106);
+CheckEnum("XML_DTD_NOT_STANDALONE",XML_DTD_NOT_STANDALONE,((((((((((((((((((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48107);
+CheckEnum("XML_DTD_ROOT_NAME",XML_DTD_ROOT_NAME,(((((((((((((((((((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48108);
+CheckEnum("XML_DTD_STANDALONE_WHITE_SPACE",XML_DTD_STANDALONE_WHITE_SPACE,((((((((((((((((((((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48109);
+CheckEnum("XML_DTD_UNKNOWN_ATTRIBUTE",XML_DTD_UNKNOWN_ATTRIBUTE,(((((((((((((((((((((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48110);
+CheckEnum("XML_DTD_UNKNOWN_ELEM",XML_DTD_UNKNOWN_ELEM,((((((((((((((((((((((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48111);
+CheckEnum("XML_DTD_UNKNOWN_ENTITY",XML_DTD_UNKNOWN_ENTITY,(((((((((((((((((((((((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48112);
+CheckEnum("XML_DTD_UNKNOWN_ID",XML_DTD_UNKNOWN_ID,((((((((((((((((((((((((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48113);
+CheckEnum("XML_DTD_UNKNOWN_NOTATION",XML_DTD_UNKNOWN_NOTATION,(((((((((((((((((((((((((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48114);
+CheckEnum("XML_DTD_STANDALONE_DEFAULTED",XML_DTD_STANDALONE_DEFAULTED,((((((((((((((((((((((((((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48115);
+CheckEnum("XML_DTD_XMLID_VALUE",XML_DTD_XMLID_VALUE,(((((((((((((((((((((((((((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48116);
+CheckEnum("XML_DTD_XMLID_TYPE",XML_DTD_XMLID_TYPE,((((((((((((((((((((((((((((((((((((((((500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48117);
+CheckEnum("XML_HTML_STRUCURE_ERROR",XML_HTML_STRUCURE_ERROR,800,48118);
+CheckEnum("XML_HTML_UNKNOWN_TAG",XML_HTML_UNKNOWN_TAG,(800) + 1,48119);
+CheckEnum("XML_RNGP_ANYNAME_ATTR_ANCESTOR",XML_RNGP_ANYNAME_ATTR_ANCESTOR,1000,48120);
+CheckEnum("XML_RNGP_ATTR_CONFLICT",XML_RNGP_ATTR_CONFLICT,(1000) + 1,48121);
+CheckEnum("XML_RNGP_ATTRIBUTE_CHILDREN",XML_RNGP_ATTRIBUTE_CHILDREN,((1000) + 1) + 1,48122);
+CheckEnum("XML_RNGP_ATTRIBUTE_CONTENT",XML_RNGP_ATTRIBUTE_CONTENT,(((1000) + 1) + 1) + 1,48123);
+CheckEnum("XML_RNGP_ATTRIBUTE_EMPTY",XML_RNGP_ATTRIBUTE_EMPTY,((((1000) + 1) + 1) + 1) + 1,48124);
+CheckEnum("XML_RNGP_ATTRIBUTE_NOOP",XML_RNGP_ATTRIBUTE_NOOP,(((((1000) + 1) + 1) + 1) + 1) + 1,48125);
+CheckEnum("XML_RNGP_CHOICE_CONTENT",XML_RNGP_CHOICE_CONTENT,((((((1000) + 1) + 1) + 1) + 1) + 1) + 1,48126);
+CheckEnum("XML_RNGP_CHOICE_EMPTY",XML_RNGP_CHOICE_EMPTY,(((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48127);
+CheckEnum("XML_RNGP_CREATE_FAILURE",XML_RNGP_CREATE_FAILURE,((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48128);
+CheckEnum("XML_RNGP_DATA_CONTENT",XML_RNGP_DATA_CONTENT,(((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48129);
+CheckEnum("XML_RNGP_DEF_CHOICE_AND_INTERLEAVE",XML_RNGP_DEF_CHOICE_AND_INTERLEAVE,((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48130);
+CheckEnum("XML_RNGP_DEFINE_CREATE_FAILED",XML_RNGP_DEFINE_CREATE_FAILED,(((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48131);
+CheckEnum("XML_RNGP_DEFINE_EMPTY",XML_RNGP_DEFINE_EMPTY,((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48132);
+CheckEnum("XML_RNGP_DEFINE_MISSING",XML_RNGP_DEFINE_MISSING,(((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48133);
+CheckEnum("XML_RNGP_DEFINE_NAME_MISSING",XML_RNGP_DEFINE_NAME_MISSING,((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48134);
+CheckEnum("XML_RNGP_ELEM_CONTENT_EMPTY",XML_RNGP_ELEM_CONTENT_EMPTY,(((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48135);
+CheckEnum("XML_RNGP_ELEM_CONTENT_ERROR",XML_RNGP_ELEM_CONTENT_ERROR,((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48136);
+CheckEnum("XML_RNGP_ELEMENT_EMPTY",XML_RNGP_ELEMENT_EMPTY,(((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48137);
+CheckEnum("XML_RNGP_ELEMENT_CONTENT",XML_RNGP_ELEMENT_CONTENT,((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48138);
+CheckEnum("XML_RNGP_ELEMENT_NAME",XML_RNGP_ELEMENT_NAME,(((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48139);
+CheckEnum("XML_RNGP_ELEMENT_NO_CONTENT",XML_RNGP_ELEMENT_NO_CONTENT,((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48140);
+CheckEnum("XML_RNGP_ELEM_TEXT_CONFLICT",XML_RNGP_ELEM_TEXT_CONFLICT,(((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48141);
+CheckEnum("XML_RNGP_EMPTY",XML_RNGP_EMPTY,((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48142);
+CheckEnum("XML_RNGP_EMPTY_CONSTRUCT",XML_RNGP_EMPTY_CONSTRUCT,(((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48143);
+CheckEnum("XML_RNGP_EMPTY_CONTENT",XML_RNGP_EMPTY_CONTENT,((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48144);
+CheckEnum("XML_RNGP_EMPTY_NOT_EMPTY",XML_RNGP_EMPTY_NOT_EMPTY,(((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48145);
+CheckEnum("XML_RNGP_ERROR_TYPE_LIB",XML_RNGP_ERROR_TYPE_LIB,((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48146);
+CheckEnum("XML_RNGP_EXCEPT_EMPTY",XML_RNGP_EXCEPT_EMPTY,(((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48147);
+CheckEnum("XML_RNGP_EXCEPT_MISSING",XML_RNGP_EXCEPT_MISSING,((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48148);
+CheckEnum("XML_RNGP_EXCEPT_MULTIPLE",XML_RNGP_EXCEPT_MULTIPLE,(((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48149);
+CheckEnum("XML_RNGP_EXCEPT_NO_CONTENT",XML_RNGP_EXCEPT_NO_CONTENT,((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48150);
+CheckEnum("XML_RNGP_EXTERNALREF_EMTPY",XML_RNGP_EXTERNALREF_EMTPY,(((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48151);
+CheckEnum("XML_RNGP_EXTERNAL_REF_FAILURE",XML_RNGP_EXTERNAL_REF_FAILURE,((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48152);
+CheckEnum("XML_RNGP_EXTERNALREF_RECURSE",XML_RNGP_EXTERNALREF_RECURSE,(((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48153);
+CheckEnum("XML_RNGP_FORBIDDEN_ATTRIBUTE",XML_RNGP_FORBIDDEN_ATTRIBUTE,((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48154);
+CheckEnum("XML_RNGP_FOREIGN_ELEMENT",XML_RNGP_FOREIGN_ELEMENT,(((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48155);
+CheckEnum("XML_RNGP_GRAMMAR_CONTENT",XML_RNGP_GRAMMAR_CONTENT,((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48156);
+CheckEnum("XML_RNGP_GRAMMAR_EMPTY",XML_RNGP_GRAMMAR_EMPTY,(((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48157);
+CheckEnum("XML_RNGP_GRAMMAR_MISSING",XML_RNGP_GRAMMAR_MISSING,((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48158);
+CheckEnum("XML_RNGP_GRAMMAR_NO_START",XML_RNGP_GRAMMAR_NO_START,(((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48159);
+CheckEnum("XML_RNGP_GROUP_ATTR_CONFLICT",XML_RNGP_GROUP_ATTR_CONFLICT,((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48160);
+CheckEnum("XML_RNGP_HREF_ERROR",XML_RNGP_HREF_ERROR,(((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48161);
+CheckEnum("XML_RNGP_INCLUDE_EMPTY",XML_RNGP_INCLUDE_EMPTY,((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48162);
+CheckEnum("XML_RNGP_INCLUDE_FAILURE",XML_RNGP_INCLUDE_FAILURE,(((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48163);
+CheckEnum("XML_RNGP_INCLUDE_RECURSE",XML_RNGP_INCLUDE_RECURSE,((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48164);
+CheckEnum("XML_RNGP_INTERLEAVE_ADD",XML_RNGP_INTERLEAVE_ADD,(((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48165);
+CheckEnum("XML_RNGP_INTERLEAVE_CREATE_FAILED",XML_RNGP_INTERLEAVE_CREATE_FAILED,((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48166);
+CheckEnum("XML_RNGP_INTERLEAVE_EMPTY",XML_RNGP_INTERLEAVE_EMPTY,(((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48167);
+CheckEnum("XML_RNGP_INTERLEAVE_NO_CONTENT",XML_RNGP_INTERLEAVE_NO_CONTENT,((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48168);
+CheckEnum("XML_RNGP_INVALID_DEFINE_NAME",XML_RNGP_INVALID_DEFINE_NAME,(((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48169);
+CheckEnum("XML_RNGP_INVALID_URI",XML_RNGP_INVALID_URI,((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48170);
+CheckEnum("XML_RNGP_INVALID_VALUE",XML_RNGP_INVALID_VALUE,(((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48171);
+CheckEnum("XML_RNGP_MISSING_HREF",XML_RNGP_MISSING_HREF,((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48172);
+CheckEnum("XML_RNGP_NAME_MISSING",XML_RNGP_NAME_MISSING,(((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48173);
+CheckEnum("XML_RNGP_NEED_COMBINE",XML_RNGP_NEED_COMBINE,((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48174);
+CheckEnum("XML_RNGP_NOTALLOWED_NOT_EMPTY",XML_RNGP_NOTALLOWED_NOT_EMPTY,(((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48175);
+CheckEnum("XML_RNGP_NSNAME_ATTR_ANCESTOR",XML_RNGP_NSNAME_ATTR_ANCESTOR,((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48176);
+CheckEnum("XML_RNGP_NSNAME_NO_NS",XML_RNGP_NSNAME_NO_NS,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48177);
+CheckEnum("XML_RNGP_PARAM_FORBIDDEN",XML_RNGP_PARAM_FORBIDDEN,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48178);
+CheckEnum("XML_RNGP_PARAM_NAME_MISSING",XML_RNGP_PARAM_NAME_MISSING,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48179);
+CheckEnum("XML_RNGP_PARENTREF_CREATE_FAILED",XML_RNGP_PARENTREF_CREATE_FAILED,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48180);
+CheckEnum("XML_RNGP_PARENTREF_NAME_INVALID",XML_RNGP_PARENTREF_NAME_INVALID,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48181);
+CheckEnum("XML_RNGP_PARENTREF_NO_NAME",XML_RNGP_PARENTREF_NO_NAME,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48182);
+CheckEnum("XML_RNGP_PARENTREF_NO_PARENT",XML_RNGP_PARENTREF_NO_PARENT,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48183);
+CheckEnum("XML_RNGP_PARENTREF_NOT_EMPTY",XML_RNGP_PARENTREF_NOT_EMPTY,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48184);
+CheckEnum("XML_RNGP_PARSE_ERROR",XML_RNGP_PARSE_ERROR,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48185);
+CheckEnum("XML_RNGP_PAT_ANYNAME_EXCEPT_ANYNAME",XML_RNGP_PAT_ANYNAME_EXCEPT_ANYNAME,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48186);
+CheckEnum("XML_RNGP_PAT_ATTR_ATTR",XML_RNGP_PAT_ATTR_ATTR,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48187);
+CheckEnum("XML_RNGP_PAT_ATTR_ELEM",XML_RNGP_PAT_ATTR_ELEM,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48188);
+CheckEnum("XML_RNGP_PAT_DATA_EXCEPT_ATTR",XML_RNGP_PAT_DATA_EXCEPT_ATTR,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48189);
+CheckEnum("XML_RNGP_PAT_DATA_EXCEPT_ELEM",XML_RNGP_PAT_DATA_EXCEPT_ELEM,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48190);
+CheckEnum("XML_RNGP_PAT_DATA_EXCEPT_EMPTY",XML_RNGP_PAT_DATA_EXCEPT_EMPTY,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48191);
+CheckEnum("XML_RNGP_PAT_DATA_EXCEPT_GROUP",XML_RNGP_PAT_DATA_EXCEPT_GROUP,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48192);
+CheckEnum("XML_RNGP_PAT_DATA_EXCEPT_INTERLEAVE",XML_RNGP_PAT_DATA_EXCEPT_INTERLEAVE,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48193);
+CheckEnum("XML_RNGP_PAT_DATA_EXCEPT_LIST",XML_RNGP_PAT_DATA_EXCEPT_LIST,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48194);
+CheckEnum("XML_RNGP_PAT_DATA_EXCEPT_ONEMORE",XML_RNGP_PAT_DATA_EXCEPT_ONEMORE,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48195);
+CheckEnum("XML_RNGP_PAT_DATA_EXCEPT_REF",XML_RNGP_PAT_DATA_EXCEPT_REF,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48196);
+CheckEnum("XML_RNGP_PAT_DATA_EXCEPT_TEXT",XML_RNGP_PAT_DATA_EXCEPT_TEXT,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48197);
+CheckEnum("XML_RNGP_PAT_LIST_ATTR",XML_RNGP_PAT_LIST_ATTR,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48198);
+CheckEnum("XML_RNGP_PAT_LIST_ELEM",XML_RNGP_PAT_LIST_ELEM,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48199);
+CheckEnum("XML_RNGP_PAT_LIST_INTERLEAVE",XML_RNGP_PAT_LIST_INTERLEAVE,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48200);
+CheckEnum("XML_RNGP_PAT_LIST_LIST",XML_RNGP_PAT_LIST_LIST,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48201);
+CheckEnum("XML_RNGP_PAT_LIST_REF",XML_RNGP_PAT_LIST_REF,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48202);
+CheckEnum("XML_RNGP_PAT_LIST_TEXT",XML_RNGP_PAT_LIST_TEXT,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48203);
+CheckEnum("XML_RNGP_PAT_NSNAME_EXCEPT_ANYNAME",XML_RNGP_PAT_NSNAME_EXCEPT_ANYNAME,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48204);
+CheckEnum("XML_RNGP_PAT_NSNAME_EXCEPT_NSNAME",XML_RNGP_PAT_NSNAME_EXCEPT_NSNAME,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48205);
+CheckEnum("XML_RNGP_PAT_ONEMORE_GROUP_ATTR",XML_RNGP_PAT_ONEMORE_GROUP_ATTR,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48206);
+CheckEnum("XML_RNGP_PAT_ONEMORE_INTERLEAVE_ATTR",XML_RNGP_PAT_ONEMORE_INTERLEAVE_ATTR,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48207);
+CheckEnum("XML_RNGP_PAT_START_ATTR",XML_RNGP_PAT_START_ATTR,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48208);
+CheckEnum("XML_RNGP_PAT_START_DATA",XML_RNGP_PAT_START_DATA,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48209);
+CheckEnum("XML_RNGP_PAT_START_EMPTY",XML_RNGP_PAT_START_EMPTY,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48210);
+CheckEnum("XML_RNGP_PAT_START_GROUP",XML_RNGP_PAT_START_GROUP,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48211);
+CheckEnum("XML_RNGP_PAT_START_INTERLEAVE",XML_RNGP_PAT_START_INTERLEAVE,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48212);
+CheckEnum("XML_RNGP_PAT_START_LIST",XML_RNGP_PAT_START_LIST,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48213);
+CheckEnum("XML_RNGP_PAT_START_ONEMORE",XML_RNGP_PAT_START_ONEMORE,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48214);
+CheckEnum("XML_RNGP_PAT_START_TEXT",XML_RNGP_PAT_START_TEXT,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48215);
+CheckEnum("XML_RNGP_PAT_START_VALUE",XML_RNGP_PAT_START_VALUE,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48216);
+CheckEnum("XML_RNGP_PREFIX_UNDEFINED",XML_RNGP_PREFIX_UNDEFINED,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48217);
+CheckEnum("XML_RNGP_REF_CREATE_FAILED",XML_RNGP_REF_CREATE_FAILED,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48218);
+CheckEnum("XML_RNGP_REF_CYCLE",XML_RNGP_REF_CYCLE,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48219);
+CheckEnum("XML_RNGP_REF_NAME_INVALID",XML_RNGP_REF_NAME_INVALID,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48220);
+CheckEnum("XML_RNGP_REF_NO_DEF",XML_RNGP_REF_NO_DEF,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48221);
+CheckEnum("XML_RNGP_REF_NO_NAME",XML_RNGP_REF_NO_NAME,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48222);
+CheckEnum("XML_RNGP_REF_NOT_EMPTY",XML_RNGP_REF_NOT_EMPTY,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48223);
+CheckEnum("XML_RNGP_START_CHOICE_AND_INTERLEAVE",XML_RNGP_START_CHOICE_AND_INTERLEAVE,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48224);
+CheckEnum("XML_RNGP_START_CONTENT",XML_RNGP_START_CONTENT,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48225);
+CheckEnum("XML_RNGP_START_EMPTY",XML_RNGP_START_EMPTY,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48226);
+CheckEnum("XML_RNGP_START_MISSING",XML_RNGP_START_MISSING,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48227);
+CheckEnum("XML_RNGP_TEXT_EXPECTED",XML_RNGP_TEXT_EXPECTED,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48228);
+CheckEnum("XML_RNGP_TEXT_HAS_CHILD",XML_RNGP_TEXT_HAS_CHILD,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48229);
+CheckEnum("XML_RNGP_TYPE_MISSING",XML_RNGP_TYPE_MISSING,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48230);
+CheckEnum("XML_RNGP_TYPE_NOT_FOUND",XML_RNGP_TYPE_NOT_FOUND,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48231);
+CheckEnum("XML_RNGP_TYPE_VALUE",XML_RNGP_TYPE_VALUE,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48232);
+CheckEnum("XML_RNGP_UNKNOWN_ATTRIBUTE",XML_RNGP_UNKNOWN_ATTRIBUTE,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48233);
+CheckEnum("XML_RNGP_UNKNOWN_COMBINE",XML_RNGP_UNKNOWN_COMBINE,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48234);
+CheckEnum("XML_RNGP_UNKNOWN_CONSTRUCT",XML_RNGP_UNKNOWN_CONSTRUCT,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48235);
+CheckEnum("XML_RNGP_UNKNOWN_TYPE_LIB",XML_RNGP_UNKNOWN_TYPE_LIB,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48236);
+CheckEnum("XML_RNGP_URI_FRAGMENT",XML_RNGP_URI_FRAGMENT,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48237);
+CheckEnum("XML_RNGP_URI_NOT_ABSOLUTE",XML_RNGP_URI_NOT_ABSOLUTE,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48238);
+CheckEnum("XML_RNGP_VALUE_EMPTY",XML_RNGP_VALUE_EMPTY,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48239);
+CheckEnum("XML_RNGP_VALUE_NO_CONTENT",XML_RNGP_VALUE_NO_CONTENT,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48240);
+CheckEnum("XML_RNGP_XMLNS_NAME",XML_RNGP_XMLNS_NAME,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48241);
+CheckEnum("XML_RNGP_XML_NS",XML_RNGP_XML_NS,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48242);
+CheckEnum("XML_XPATH_EXPRESSION_OK",XML_XPATH_EXPRESSION_OK,1200,48243);
+CheckEnum("XML_XPATH_NUMBER_ERROR",XML_XPATH_NUMBER_ERROR,(1200) + 1,48244);
+CheckEnum("XML_XPATH_UNFINISHED_LITERAL_ERROR",XML_XPATH_UNFINISHED_LITERAL_ERROR,((1200) + 1) + 1,48245);
+CheckEnum("XML_XPATH_START_LITERAL_ERROR",XML_XPATH_START_LITERAL_ERROR,(((1200) + 1) + 1) + 1,48246);
+CheckEnum("XML_XPATH_VARIABLE_REF_ERROR",XML_XPATH_VARIABLE_REF_ERROR,((((1200) + 1) + 1) + 1) + 1,48247);
+CheckEnum("XML_XPATH_UNDEF_VARIABLE_ERROR",XML_XPATH_UNDEF_VARIABLE_ERROR,(((((1200) + 1) + 1) + 1) + 1) + 1,48248);
+CheckEnum("XML_XPATH_INVALID_PREDICATE_ERROR",XML_XPATH_INVALID_PREDICATE_ERROR,((((((1200) + 1) + 1) + 1) + 1) + 1) + 1,48249);
+CheckEnum("XML_XPATH_EXPR_ERROR",XML_XPATH_EXPR_ERROR,(((((((1200) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48250);
+CheckEnum("XML_XPATH_UNCLOSED_ERROR",XML_XPATH_UNCLOSED_ERROR,((((((((1200) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48251);
+CheckEnum("XML_XPATH_UNKNOWN_FUNC_ERROR",XML_XPATH_UNKNOWN_FUNC_ERROR,(((((((((1200) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48252);
+CheckEnum("XML_XPATH_INVALID_OPERAND",XML_XPATH_INVALID_OPERAND,((((((((((1200) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48253);
+CheckEnum("XML_XPATH_INVALID_TYPE",XML_XPATH_INVALID_TYPE,(((((((((((1200) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48254);
+CheckEnum("XML_XPATH_INVALID_ARITY",XML_XPATH_INVALID_ARITY,((((((((((((1200) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48255);
+CheckEnum("XML_XPATH_INVALID_CTXT_SIZE",XML_XPATH_INVALID_CTXT_SIZE,(((((((((((((1200) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48256);
+CheckEnum("XML_XPATH_INVALID_CTXT_POSITION",XML_XPATH_INVALID_CTXT_POSITION,((((((((((((((1200) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48257);
+CheckEnum("XML_XPATH_MEMORY_ERROR",XML_XPATH_MEMORY_ERROR,(((((((((((((((1200) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48258);
+CheckEnum("XML_XPTR_SYNTAX_ERROR",XML_XPTR_SYNTAX_ERROR,((((((((((((((((1200) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48259);
+CheckEnum("XML_XPTR_RESOURCE_ERROR",XML_XPTR_RESOURCE_ERROR,(((((((((((((((((1200) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48260);
+CheckEnum("XML_XPTR_SUB_RESOURCE_ERROR",XML_XPTR_SUB_RESOURCE_ERROR,((((((((((((((((((1200) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48261);
+CheckEnum("XML_XPATH_UNDEF_PREFIX_ERROR",XML_XPATH_UNDEF_PREFIX_ERROR,(((((((((((((((((((1200) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48262);
+CheckEnum("XML_XPATH_ENCODING_ERROR",XML_XPATH_ENCODING_ERROR,((((((((((((((((((((1200) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48263);
+CheckEnum("XML_XPATH_INVALID_CHAR_ERROR",XML_XPATH_INVALID_CHAR_ERROR,(((((((((((((((((((((1200) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48264);
+CheckEnum("XML_TREE_INVALID_HEX",XML_TREE_INVALID_HEX,1300,48265);
+CheckEnum("XML_TREE_INVALID_DEC",XML_TREE_INVALID_DEC,(1300) + 1,48266);
+CheckEnum("XML_TREE_UNTERMINATED_ENTITY",XML_TREE_UNTERMINATED_ENTITY,((1300) + 1) + 1,48267);
+CheckEnum("XML_SAVE_NOT_UTF8",XML_SAVE_NOT_UTF8,1400,48268);
+CheckEnum("XML_SAVE_CHAR_INVALID",XML_SAVE_CHAR_INVALID,(1400) + 1,48269);
+CheckEnum("XML_SAVE_NO_DOCTYPE",XML_SAVE_NO_DOCTYPE,((1400) + 1) + 1,48270);
+CheckEnum("XML_SAVE_UNKNOWN_ENCODING",XML_SAVE_UNKNOWN_ENCODING,(((1400) + 1) + 1) + 1,48271);
+CheckEnum("XML_REGEXP_COMPILE_ERROR",XML_REGEXP_COMPILE_ERROR,1450,48272);
+CheckEnum("XML_IO_UNKNOWN",XML_IO_UNKNOWN,1500,48273);
+CheckEnum("XML_IO_EACCES",XML_IO_EACCES,(1500) + 1,48274);
+CheckEnum("XML_IO_EAGAIN",XML_IO_EAGAIN,((1500) + 1) + 1,48275);
+CheckEnum("XML_IO_EBADF",XML_IO_EBADF,(((1500) + 1) + 1) + 1,48276);
+CheckEnum("XML_IO_EBADMSG",XML_IO_EBADMSG,((((1500) + 1) + 1) + 1) + 1,48277);
+CheckEnum("XML_IO_EBUSY",XML_IO_EBUSY,(((((1500) + 1) + 1) + 1) + 1) + 1,48278);
+CheckEnum("XML_IO_ECANCELED",XML_IO_ECANCELED,((((((1500) + 1) + 1) + 1) + 1) + 1) + 1,48279);
+CheckEnum("XML_IO_ECHILD",XML_IO_ECHILD,(((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48280);
+CheckEnum("XML_IO_EDEADLK",XML_IO_EDEADLK,((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48281);
+CheckEnum("XML_IO_EDOM",XML_IO_EDOM,(((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48282);
+CheckEnum("XML_IO_EEXIST",XML_IO_EEXIST,((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48283);
+CheckEnum("XML_IO_EFAULT",XML_IO_EFAULT,(((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48284);
+CheckEnum("XML_IO_EFBIG",XML_IO_EFBIG,((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48285);
+CheckEnum("XML_IO_EINPROGRESS",XML_IO_EINPROGRESS,(((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48286);
+CheckEnum("XML_IO_EINTR",XML_IO_EINTR,((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48287);
+CheckEnum("XML_IO_EINVAL",XML_IO_EINVAL,(((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48288);
+CheckEnum("XML_IO_EIO",XML_IO_EIO,((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48289);
+CheckEnum("XML_IO_EISDIR",XML_IO_EISDIR,(((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48290);
+CheckEnum("XML_IO_EMFILE",XML_IO_EMFILE,((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48291);
+CheckEnum("XML_IO_EMLINK",XML_IO_EMLINK,(((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48292);
+CheckEnum("XML_IO_EMSGSIZE",XML_IO_EMSGSIZE,((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48293);
+CheckEnum("XML_IO_ENAMETOOLONG",XML_IO_ENAMETOOLONG,(((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48294);
+CheckEnum("XML_IO_ENFILE",XML_IO_ENFILE,((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48295);
+CheckEnum("XML_IO_ENODEV",XML_IO_ENODEV,(((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48296);
+CheckEnum("XML_IO_ENOENT",XML_IO_ENOENT,((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48297);
+CheckEnum("XML_IO_ENOEXEC",XML_IO_ENOEXEC,(((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48298);
+CheckEnum("XML_IO_ENOLCK",XML_IO_ENOLCK,((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48299);
+CheckEnum("XML_IO_ENOMEM",XML_IO_ENOMEM,(((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48300);
+CheckEnum("XML_IO_ENOSPC",XML_IO_ENOSPC,((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48301);
+CheckEnum("XML_IO_ENOSYS",XML_IO_ENOSYS,(((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48302);
+CheckEnum("XML_IO_ENOTDIR",XML_IO_ENOTDIR,((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48303);
+CheckEnum("XML_IO_ENOTEMPTY",XML_IO_ENOTEMPTY,(((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48304);
+CheckEnum("XML_IO_ENOTSUP",XML_IO_ENOTSUP,((((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48305);
+CheckEnum("XML_IO_ENOTTY",XML_IO_ENOTTY,(((((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48306);
+CheckEnum("XML_IO_ENXIO",XML_IO_ENXIO,((((((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48307);
+CheckEnum("XML_IO_EPERM",XML_IO_EPERM,(((((((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48308);
+CheckEnum("XML_IO_EPIPE",XML_IO_EPIPE,((((((((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48309);
+CheckEnum("XML_IO_ERANGE",XML_IO_ERANGE,(((((((((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48310);
+CheckEnum("XML_IO_EROFS",XML_IO_EROFS,((((((((((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48311);
+CheckEnum("XML_IO_ESPIPE",XML_IO_ESPIPE,(((((((((((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48312);
+CheckEnum("XML_IO_ESRCH",XML_IO_ESRCH,((((((((((((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48313);
+CheckEnum("XML_IO_ETIMEDOUT",XML_IO_ETIMEDOUT,(((((((((((((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48314);
+CheckEnum("XML_IO_EXDEV",XML_IO_EXDEV,((((((((((((((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48315);
+CheckEnum("XML_IO_NETWORK_ATTEMPT",XML_IO_NETWORK_ATTEMPT,(((((((((((((((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48316);
+CheckEnum("XML_IO_ENCODER",XML_IO_ENCODER,((((((((((((((((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48317);
+CheckEnum("XML_IO_FLUSH",XML_IO_FLUSH,(((((((((((((((((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48318);
+CheckEnum("XML_IO_WRITE",XML_IO_WRITE,((((((((((((((((((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48319);
+CheckEnum("XML_IO_NO_INPUT",XML_IO_NO_INPUT,(((((((((((((((((((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48320);
+CheckEnum("XML_IO_BUFFER_FULL",XML_IO_BUFFER_FULL,((((((((((((((((((((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48321);
+CheckEnum("XML_IO_LOAD_ERROR",XML_IO_LOAD_ERROR,(((((((((((((((((((((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48322);
+CheckEnum("XML_IO_ENOTSOCK",XML_IO_ENOTSOCK,((((((((((((((((((((((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48323);
+CheckEnum("XML_IO_EISCONN",XML_IO_EISCONN,(((((((((((((((((((((((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48324);
+CheckEnum("XML_IO_ECONNREFUSED",XML_IO_ECONNREFUSED,((((((((((((((((((((((((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48325);
+CheckEnum("XML_IO_ENETUNREACH",XML_IO_ENETUNREACH,(((((((((((((((((((((((((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48326);
+CheckEnum("XML_IO_EADDRINUSE",XML_IO_EADDRINUSE,((((((((((((((((((((((((((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48327);
+CheckEnum("XML_IO_EALREADY",XML_IO_EALREADY,(((((((((((((((((((((((((((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48328);
+CheckEnum("XML_IO_EAFNOSUPPORT",XML_IO_EAFNOSUPPORT,((((((((((((((((((((((((((((((((((((((((((((((((((((((((1500) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48329);
+CheckEnum("XML_XINCLUDE_RECURSION",XML_XINCLUDE_RECURSION,1600,48330);
+CheckEnum("XML_XINCLUDE_PARSE_VALUE",XML_XINCLUDE_PARSE_VALUE,(1600) + 1,48331);
+CheckEnum("XML_XINCLUDE_ENTITY_DEF_MISMATCH",XML_XINCLUDE_ENTITY_DEF_MISMATCH,((1600) + 1) + 1,48332);
+CheckEnum("XML_XINCLUDE_NO_HREF",XML_XINCLUDE_NO_HREF,(((1600) + 1) + 1) + 1,48333);
+CheckEnum("XML_XINCLUDE_NO_FALLBACK",XML_XINCLUDE_NO_FALLBACK,((((1600) + 1) + 1) + 1) + 1,48334);
+CheckEnum("XML_XINCLUDE_HREF_URI",XML_XINCLUDE_HREF_URI,(((((1600) + 1) + 1) + 1) + 1) + 1,48335);
+CheckEnum("XML_XINCLUDE_TEXT_FRAGMENT",XML_XINCLUDE_TEXT_FRAGMENT,((((((1600) + 1) + 1) + 1) + 1) + 1) + 1,48336);
+CheckEnum("XML_XINCLUDE_TEXT_DOCUMENT",XML_XINCLUDE_TEXT_DOCUMENT,(((((((1600) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48337);
+CheckEnum("XML_XINCLUDE_INVALID_CHAR",XML_XINCLUDE_INVALID_CHAR,((((((((1600) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48338);
+CheckEnum("XML_XINCLUDE_BUILD_FAILED",XML_XINCLUDE_BUILD_FAILED,(((((((((1600) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48339);
+CheckEnum("XML_XINCLUDE_UNKNOWN_ENCODING",XML_XINCLUDE_UNKNOWN_ENCODING,((((((((((1600) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48340);
+CheckEnum("XML_XINCLUDE_MULTIPLE_ROOT",XML_XINCLUDE_MULTIPLE_ROOT,(((((((((((1600) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48341);
+CheckEnum("XML_XINCLUDE_XPTR_FAILED",XML_XINCLUDE_XPTR_FAILED,((((((((((((1600) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48342);
+CheckEnum("XML_XINCLUDE_XPTR_RESULT",XML_XINCLUDE_XPTR_RESULT,(((((((((((((1600) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48343);
+CheckEnum("XML_XINCLUDE_INCLUDE_IN_INCLUDE",XML_XINCLUDE_INCLUDE_IN_INCLUDE,((((((((((((((1600) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48344);
+CheckEnum("XML_XINCLUDE_FALLBACKS_IN_INCLUDE",XML_XINCLUDE_FALLBACKS_IN_INCLUDE,(((((((((((((((1600) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48345);
+CheckEnum("XML_XINCLUDE_FALLBACK_NOT_IN_INCLUDE",XML_XINCLUDE_FALLBACK_NOT_IN_INCLUDE,((((((((((((((((1600) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48346);
+CheckEnum("XML_XINCLUDE_DEPRECATED_NS",XML_XINCLUDE_DEPRECATED_NS,(((((((((((((((((1600) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48347);
+CheckEnum("XML_XINCLUDE_FRAGMENT_ID",XML_XINCLUDE_FRAGMENT_ID,((((((((((((((((((1600) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48348);
+CheckEnum("XML_CATALOG_MISSING_ATTR",XML_CATALOG_MISSING_ATTR,1650,48349);
+CheckEnum("XML_CATALOG_ENTRY_BROKEN",XML_CATALOG_ENTRY_BROKEN,(1650) + 1,48350);
+CheckEnum("XML_CATALOG_PREFER_VALUE",XML_CATALOG_PREFER_VALUE,((1650) + 1) + 1,48351);
+CheckEnum("XML_CATALOG_NOT_CATALOG",XML_CATALOG_NOT_CATALOG,(((1650) + 1) + 1) + 1,48352);
+CheckEnum("XML_CATALOG_RECURSION",XML_CATALOG_RECURSION,((((1650) + 1) + 1) + 1) + 1,48353);
+CheckEnum("XML_SCHEMAP_PREFIX_UNDEFINED",XML_SCHEMAP_PREFIX_UNDEFINED,1700,48354);
+CheckEnum("XML_SCHEMAP_ATTRFORMDEFAULT_VALUE",XML_SCHEMAP_ATTRFORMDEFAULT_VALUE,(1700) + 1,48355);
+CheckEnum("XML_SCHEMAP_ATTRGRP_NONAME_NOREF",XML_SCHEMAP_ATTRGRP_NONAME_NOREF,((1700) + 1) + 1,48356);
+CheckEnum("XML_SCHEMAP_ATTR_NONAME_NOREF",XML_SCHEMAP_ATTR_NONAME_NOREF,(((1700) + 1) + 1) + 1,48357);
+CheckEnum("XML_SCHEMAP_COMPLEXTYPE_NONAME_NOREF",XML_SCHEMAP_COMPLEXTYPE_NONAME_NOREF,((((1700) + 1) + 1) + 1) + 1,48358);
+CheckEnum("XML_SCHEMAP_ELEMFORMDEFAULT_VALUE",XML_SCHEMAP_ELEMFORMDEFAULT_VALUE,(((((1700) + 1) + 1) + 1) + 1) + 1,48359);
+CheckEnum("XML_SCHEMAP_ELEM_NONAME_NOREF",XML_SCHEMAP_ELEM_NONAME_NOREF,((((((1700) + 1) + 1) + 1) + 1) + 1) + 1,48360);
+CheckEnum("XML_SCHEMAP_EXTENSION_NO_BASE",XML_SCHEMAP_EXTENSION_NO_BASE,(((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48361);
+CheckEnum("XML_SCHEMAP_FACET_NO_VALUE",XML_SCHEMAP_FACET_NO_VALUE,((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48362);
+CheckEnum("XML_SCHEMAP_FAILED_BUILD_IMPORT",XML_SCHEMAP_FAILED_BUILD_IMPORT,(((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48363);
+CheckEnum("XML_SCHEMAP_GROUP_NONAME_NOREF",XML_SCHEMAP_GROUP_NONAME_NOREF,((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48364);
+CheckEnum("XML_SCHEMAP_IMPORT_NAMESPACE_NOT_URI",XML_SCHEMAP_IMPORT_NAMESPACE_NOT_URI,(((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48365);
+CheckEnum("XML_SCHEMAP_IMPORT_REDEFINE_NSNAME",XML_SCHEMAP_IMPORT_REDEFINE_NSNAME,((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48366);
+CheckEnum("XML_SCHEMAP_IMPORT_SCHEMA_NOT_URI",XML_SCHEMAP_IMPORT_SCHEMA_NOT_URI,(((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48367);
+CheckEnum("XML_SCHEMAP_INVALID_BOOLEAN",XML_SCHEMAP_INVALID_BOOLEAN,((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48368);
+CheckEnum("XML_SCHEMAP_INVALID_ENUM",XML_SCHEMAP_INVALID_ENUM,(((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48369);
+CheckEnum("XML_SCHEMAP_INVALID_FACET",XML_SCHEMAP_INVALID_FACET,((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48370);
+CheckEnum("XML_SCHEMAP_INVALID_FACET_VALUE",XML_SCHEMAP_INVALID_FACET_VALUE,(((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48371);
+CheckEnum("XML_SCHEMAP_INVALID_MAXOCCURS",XML_SCHEMAP_INVALID_MAXOCCURS,((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48372);
+CheckEnum("XML_SCHEMAP_INVALID_MINOCCURS",XML_SCHEMAP_INVALID_MINOCCURS,(((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48373);
+CheckEnum("XML_SCHEMAP_INVALID_REF_AND_SUBTYPE",XML_SCHEMAP_INVALID_REF_AND_SUBTYPE,((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48374);
+CheckEnum("XML_SCHEMAP_INVALID_WHITE_SPACE",XML_SCHEMAP_INVALID_WHITE_SPACE,(((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48375);
+CheckEnum("XML_SCHEMAP_NOATTR_NOREF",XML_SCHEMAP_NOATTR_NOREF,((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48376);
+CheckEnum("XML_SCHEMAP_NOTATION_NO_NAME",XML_SCHEMAP_NOTATION_NO_NAME,(((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48377);
+CheckEnum("XML_SCHEMAP_NOTYPE_NOREF",XML_SCHEMAP_NOTYPE_NOREF,((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48378);
+CheckEnum("XML_SCHEMAP_REF_AND_SUBTYPE",XML_SCHEMAP_REF_AND_SUBTYPE,(((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48379);
+CheckEnum("XML_SCHEMAP_RESTRICTION_NONAME_NOREF",XML_SCHEMAP_RESTRICTION_NONAME_NOREF,((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48380);
+CheckEnum("XML_SCHEMAP_SIMPLETYPE_NONAME",XML_SCHEMAP_SIMPLETYPE_NONAME,(((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48381);
+CheckEnum("XML_SCHEMAP_TYPE_AND_SUBTYPE",XML_SCHEMAP_TYPE_AND_SUBTYPE,((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48382);
+CheckEnum("XML_SCHEMAP_UNKNOWN_ALL_CHILD",XML_SCHEMAP_UNKNOWN_ALL_CHILD,(((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48383);
+CheckEnum("XML_SCHEMAP_UNKNOWN_ANYATTRIBUTE_CHILD",XML_SCHEMAP_UNKNOWN_ANYATTRIBUTE_CHILD,((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48384);
+CheckEnum("XML_SCHEMAP_UNKNOWN_ATTR_CHILD",XML_SCHEMAP_UNKNOWN_ATTR_CHILD,(((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48385);
+CheckEnum("XML_SCHEMAP_UNKNOWN_ATTRGRP_CHILD",XML_SCHEMAP_UNKNOWN_ATTRGRP_CHILD,((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48386);
+CheckEnum("XML_SCHEMAP_UNKNOWN_ATTRIBUTE_GROUP",XML_SCHEMAP_UNKNOWN_ATTRIBUTE_GROUP,(((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48387);
+CheckEnum("XML_SCHEMAP_UNKNOWN_BASE_TYPE",XML_SCHEMAP_UNKNOWN_BASE_TYPE,((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48388);
+CheckEnum("XML_SCHEMAP_UNKNOWN_CHOICE_CHILD",XML_SCHEMAP_UNKNOWN_CHOICE_CHILD,(((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48389);
+CheckEnum("XML_SCHEMAP_UNKNOWN_COMPLEXCONTENT_CHILD",XML_SCHEMAP_UNKNOWN_COMPLEXCONTENT_CHILD,((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48390);
+CheckEnum("XML_SCHEMAP_UNKNOWN_COMPLEXTYPE_CHILD",XML_SCHEMAP_UNKNOWN_COMPLEXTYPE_CHILD,(((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48391);
+CheckEnum("XML_SCHEMAP_UNKNOWN_ELEM_CHILD",XML_SCHEMAP_UNKNOWN_ELEM_CHILD,((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48392);
+CheckEnum("XML_SCHEMAP_UNKNOWN_EXTENSION_CHILD",XML_SCHEMAP_UNKNOWN_EXTENSION_CHILD,(((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48393);
+CheckEnum("XML_SCHEMAP_UNKNOWN_FACET_CHILD",XML_SCHEMAP_UNKNOWN_FACET_CHILD,((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48394);
+CheckEnum("XML_SCHEMAP_UNKNOWN_FACET_TYPE",XML_SCHEMAP_UNKNOWN_FACET_TYPE,(((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48395);
+CheckEnum("XML_SCHEMAP_UNKNOWN_GROUP_CHILD",XML_SCHEMAP_UNKNOWN_GROUP_CHILD,((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48396);
+CheckEnum("XML_SCHEMAP_UNKNOWN_IMPORT_CHILD",XML_SCHEMAP_UNKNOWN_IMPORT_CHILD,(((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48397);
+CheckEnum("XML_SCHEMAP_UNKNOWN_LIST_CHILD",XML_SCHEMAP_UNKNOWN_LIST_CHILD,((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48398);
+CheckEnum("XML_SCHEMAP_UNKNOWN_NOTATION_CHILD",XML_SCHEMAP_UNKNOWN_NOTATION_CHILD,(((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48399);
+CheckEnum("XML_SCHEMAP_UNKNOWN_PROCESSCONTENT_CHILD",XML_SCHEMAP_UNKNOWN_PROCESSCONTENT_CHILD,((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48400);
+CheckEnum("XML_SCHEMAP_UNKNOWN_REF",XML_SCHEMAP_UNKNOWN_REF,(((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48401);
+CheckEnum("XML_SCHEMAP_UNKNOWN_RESTRICTION_CHILD",XML_SCHEMAP_UNKNOWN_RESTRICTION_CHILD,((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48402);
+CheckEnum("XML_SCHEMAP_UNKNOWN_SCHEMAS_CHILD",XML_SCHEMAP_UNKNOWN_SCHEMAS_CHILD,(((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48403);
+CheckEnum("XML_SCHEMAP_UNKNOWN_SEQUENCE_CHILD",XML_SCHEMAP_UNKNOWN_SEQUENCE_CHILD,((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48404);
+CheckEnum("XML_SCHEMAP_UNKNOWN_SIMPLECONTENT_CHILD",XML_SCHEMAP_UNKNOWN_SIMPLECONTENT_CHILD,(((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48405);
+CheckEnum("XML_SCHEMAP_UNKNOWN_SIMPLETYPE_CHILD",XML_SCHEMAP_UNKNOWN_SIMPLETYPE_CHILD,((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48406);
+CheckEnum("XML_SCHEMAP_UNKNOWN_TYPE",XML_SCHEMAP_UNKNOWN_TYPE,(((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48407);
+CheckEnum("XML_SCHEMAP_UNKNOWN_UNION_CHILD",XML_SCHEMAP_UNKNOWN_UNION_CHILD,((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48408);
+CheckEnum("XML_SCHEMAP_ELEM_DEFAULT_FIXED",XML_SCHEMAP_ELEM_DEFAULT_FIXED,(((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48409);
+CheckEnum("XML_SCHEMAP_REGEXP_INVALID",XML_SCHEMAP_REGEXP_INVALID,((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48410);
+CheckEnum("XML_SCHEMAP_FAILED_LOAD",XML_SCHEMAP_FAILED_LOAD,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48411);
+CheckEnum("XML_SCHEMAP_NOTHING_TO_PARSE",XML_SCHEMAP_NOTHING_TO_PARSE,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48412);
+CheckEnum("XML_SCHEMAP_NOROOT",XML_SCHEMAP_NOROOT,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48413);
+CheckEnum("XML_SCHEMAP_REDEFINED_GROUP",XML_SCHEMAP_REDEFINED_GROUP,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48414);
+CheckEnum("XML_SCHEMAP_REDEFINED_TYPE",XML_SCHEMAP_REDEFINED_TYPE,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48415);
+CheckEnum("XML_SCHEMAP_REDEFINED_ELEMENT",XML_SCHEMAP_REDEFINED_ELEMENT,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48416);
+CheckEnum("XML_SCHEMAP_REDEFINED_ATTRGROUP",XML_SCHEMAP_REDEFINED_ATTRGROUP,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48417);
+CheckEnum("XML_SCHEMAP_REDEFINED_ATTR",XML_SCHEMAP_REDEFINED_ATTR,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48418);
+CheckEnum("XML_SCHEMAP_REDEFINED_NOTATION",XML_SCHEMAP_REDEFINED_NOTATION,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48419);
+CheckEnum("XML_SCHEMAP_FAILED_PARSE",XML_SCHEMAP_FAILED_PARSE,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48420);
+CheckEnum("XML_SCHEMAP_UNKNOWN_PREFIX",XML_SCHEMAP_UNKNOWN_PREFIX,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48421);
+CheckEnum("XML_SCHEMAP_DEF_AND_PREFIX",XML_SCHEMAP_DEF_AND_PREFIX,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48422);
+CheckEnum("XML_SCHEMAP_UNKNOWN_INCLUDE_CHILD",XML_SCHEMAP_UNKNOWN_INCLUDE_CHILD,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48423);
+CheckEnum("XML_SCHEMAP_INCLUDE_SCHEMA_NOT_URI",XML_SCHEMAP_INCLUDE_SCHEMA_NOT_URI,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48424);
+CheckEnum("XML_SCHEMAP_INCLUDE_SCHEMA_NO_URI",XML_SCHEMAP_INCLUDE_SCHEMA_NO_URI,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48425);
+CheckEnum("XML_SCHEMAP_NOT_SCHEMA",XML_SCHEMAP_NOT_SCHEMA,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48426);
+CheckEnum("XML_SCHEMAP_UNKNOWN_MEMBER_TYPE",XML_SCHEMAP_UNKNOWN_MEMBER_TYPE,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48427);
+CheckEnum("XML_SCHEMAP_INVALID_ATTR_USE",XML_SCHEMAP_INVALID_ATTR_USE,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48428);
+CheckEnum("XML_SCHEMAP_RECURSIVE",XML_SCHEMAP_RECURSIVE,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48429);
+CheckEnum("XML_SCHEMAP_SUPERNUMEROUS_LIST_ITEM_TYPE",XML_SCHEMAP_SUPERNUMEROUS_LIST_ITEM_TYPE,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48430);
+CheckEnum("XML_SCHEMAP_INVALID_ATTR_COMBINATION",XML_SCHEMAP_INVALID_ATTR_COMBINATION,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48431);
+CheckEnum("XML_SCHEMAP_INVALID_ATTR_INLINE_COMBINATION",XML_SCHEMAP_INVALID_ATTR_INLINE_COMBINATION,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48432);
+CheckEnum("XML_SCHEMAP_MISSING_SIMPLETYPE_CHILD",XML_SCHEMAP_MISSING_SIMPLETYPE_CHILD,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48433);
+CheckEnum("XML_SCHEMAP_INVALID_ATTR_NAME",XML_SCHEMAP_INVALID_ATTR_NAME,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48434);
+CheckEnum("XML_SCHEMAP_REF_AND_CONTENT",XML_SCHEMAP_REF_AND_CONTENT,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48435);
+CheckEnum("XML_SCHEMAP_CT_PROPS_CORRECT_1",XML_SCHEMAP_CT_PROPS_CORRECT_1,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48436);
+CheckEnum("XML_SCHEMAP_CT_PROPS_CORRECT_2",XML_SCHEMAP_CT_PROPS_CORRECT_2,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48437);
+CheckEnum("XML_SCHEMAP_CT_PROPS_CORRECT_3",XML_SCHEMAP_CT_PROPS_CORRECT_3,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48438);
+CheckEnum("XML_SCHEMAP_CT_PROPS_CORRECT_4",XML_SCHEMAP_CT_PROPS_CORRECT_4,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48439);
+CheckEnum("XML_SCHEMAP_CT_PROPS_CORRECT_5",XML_SCHEMAP_CT_PROPS_CORRECT_5,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48440);
+CheckEnum("XML_SCHEMAP_DERIVATION_OK_RESTRICTION_1",XML_SCHEMAP_DERIVATION_OK_RESTRICTION_1,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48441);
+CheckEnum("XML_SCHEMAP_DERIVATION_OK_RESTRICTION_2_1_1",XML_SCHEMAP_DERIVATION_OK_RESTRICTION_2_1_1,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48442);
+CheckEnum("XML_SCHEMAP_DERIVATION_OK_RESTRICTION_2_1_2",XML_SCHEMAP_DERIVATION_OK_RESTRICTION_2_1_2,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48443);
+CheckEnum("XML_SCHEMAP_DERIVATION_OK_RESTRICTION_2_2",XML_SCHEMAP_DERIVATION_OK_RESTRICTION_2_2,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48444);
+CheckEnum("XML_SCHEMAP_DERIVATION_OK_RESTRICTION_3",XML_SCHEMAP_DERIVATION_OK_RESTRICTION_3,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48445);
+CheckEnum("XML_SCHEMAP_WILDCARD_INVALID_NS_MEMBER",XML_SCHEMAP_WILDCARD_INVALID_NS_MEMBER,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48446);
+CheckEnum("XML_SCHEMAP_INTERSECTION_NOT_EXPRESSIBLE",XML_SCHEMAP_INTERSECTION_NOT_EXPRESSIBLE,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48447);
+CheckEnum("XML_SCHEMAP_UNION_NOT_EXPRESSIBLE",XML_SCHEMAP_UNION_NOT_EXPRESSIBLE,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48448);
+CheckEnum("XML_SCHEMAP_SRC_IMPORT_3_1",XML_SCHEMAP_SRC_IMPORT_3_1,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48449);
+CheckEnum("XML_SCHEMAP_SRC_IMPORT_3_2",XML_SCHEMAP_SRC_IMPORT_3_2,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48450);
+CheckEnum("XML_SCHEMAP_DERIVATION_OK_RESTRICTION_4_1",XML_SCHEMAP_DERIVATION_OK_RESTRICTION_4_1,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48451);
+CheckEnum("XML_SCHEMAP_DERIVATION_OK_RESTRICTION_4_2",XML_SCHEMAP_DERIVATION_OK_RESTRICTION_4_2,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48452);
+CheckEnum("XML_SCHEMAP_DERIVATION_OK_RESTRICTION_4_3",XML_SCHEMAP_DERIVATION_OK_RESTRICTION_4_3,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48453);
+CheckEnum("XML_SCHEMAP_COS_CT_EXTENDS_1_3",XML_SCHEMAP_COS_CT_EXTENDS_1_3,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1700) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48454);
+CheckEnum("XML_SCHEMAV_NOROOT",XML_SCHEMAV_NOROOT,1801,48455);
+CheckEnum("XML_SCHEMAV_UNDECLAREDELEM",XML_SCHEMAV_UNDECLAREDELEM,(1801) + 1,48456);
+CheckEnum("XML_SCHEMAV_NOTTOPLEVEL",XML_SCHEMAV_NOTTOPLEVEL,((1801) + 1) + 1,48457);
+CheckEnum("XML_SCHEMAV_MISSING",XML_SCHEMAV_MISSING,(((1801) + 1) + 1) + 1,48458);
+CheckEnum("XML_SCHEMAV_WRONGELEM",XML_SCHEMAV_WRONGELEM,((((1801) + 1) + 1) + 1) + 1,48459);
+CheckEnum("XML_SCHEMAV_NOTYPE",XML_SCHEMAV_NOTYPE,(((((1801) + 1) + 1) + 1) + 1) + 1,48460);
+CheckEnum("XML_SCHEMAV_NOROLLBACK",XML_SCHEMAV_NOROLLBACK,((((((1801) + 1) + 1) + 1) + 1) + 1) + 1,48461);
+CheckEnum("XML_SCHEMAV_ISABSTRACT",XML_SCHEMAV_ISABSTRACT,(((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48462);
+CheckEnum("XML_SCHEMAV_NOTEMPTY",XML_SCHEMAV_NOTEMPTY,((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48463);
+CheckEnum("XML_SCHEMAV_ELEMCONT",XML_SCHEMAV_ELEMCONT,(((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48464);
+CheckEnum("XML_SCHEMAV_HAVEDEFAULT",XML_SCHEMAV_HAVEDEFAULT,((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48465);
+CheckEnum("XML_SCHEMAV_NOTNILLABLE",XML_SCHEMAV_NOTNILLABLE,(((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48466);
+CheckEnum("XML_SCHEMAV_EXTRACONTENT",XML_SCHEMAV_EXTRACONTENT,((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48467);
+CheckEnum("XML_SCHEMAV_INVALIDATTR",XML_SCHEMAV_INVALIDATTR,(((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48468);
+CheckEnum("XML_SCHEMAV_INVALIDELEM",XML_SCHEMAV_INVALIDELEM,((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48469);
+CheckEnum("XML_SCHEMAV_NOTDETERMINIST",XML_SCHEMAV_NOTDETERMINIST,(((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48470);
+CheckEnum("XML_SCHEMAV_CONSTRUCT",XML_SCHEMAV_CONSTRUCT,((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48471);
+CheckEnum("XML_SCHEMAV_INTERNAL",XML_SCHEMAV_INTERNAL,(((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48472);
+CheckEnum("XML_SCHEMAV_NOTSIMPLE",XML_SCHEMAV_NOTSIMPLE,((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48473);
+CheckEnum("XML_SCHEMAV_ATTRUNKNOWN",XML_SCHEMAV_ATTRUNKNOWN,(((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48474);
+CheckEnum("XML_SCHEMAV_ATTRINVALID",XML_SCHEMAV_ATTRINVALID,((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48475);
+CheckEnum("XML_SCHEMAV_VALUE",XML_SCHEMAV_VALUE,(((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48476);
+CheckEnum("XML_SCHEMAV_FACET",XML_SCHEMAV_FACET,((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48477);
+CheckEnum("XML_SCHEMAV_CVC_DATATYPE_VALID_1_2_1",XML_SCHEMAV_CVC_DATATYPE_VALID_1_2_1,(((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48478);
+CheckEnum("XML_SCHEMAV_CVC_DATATYPE_VALID_1_2_2",XML_SCHEMAV_CVC_DATATYPE_VALID_1_2_2,((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48479);
+CheckEnum("XML_SCHEMAV_CVC_DATATYPE_VALID_1_2_3",XML_SCHEMAV_CVC_DATATYPE_VALID_1_2_3,(((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48480);
+CheckEnum("XML_SCHEMAV_CVC_TYPE_3_1_1",XML_SCHEMAV_CVC_TYPE_3_1_1,((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48481);
+CheckEnum("XML_SCHEMAV_CVC_TYPE_3_1_2",XML_SCHEMAV_CVC_TYPE_3_1_2,(((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48482);
+CheckEnum("XML_SCHEMAV_CVC_FACET_VALID",XML_SCHEMAV_CVC_FACET_VALID,((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48483);
+CheckEnum("XML_SCHEMAV_CVC_LENGTH_VALID",XML_SCHEMAV_CVC_LENGTH_VALID,(((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48484);
+CheckEnum("XML_SCHEMAV_CVC_MINLENGTH_VALID",XML_SCHEMAV_CVC_MINLENGTH_VALID,((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48485);
+CheckEnum("XML_SCHEMAV_CVC_MAXLENGTH_VALID",XML_SCHEMAV_CVC_MAXLENGTH_VALID,(((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48486);
+CheckEnum("XML_SCHEMAV_CVC_MININCLUSIVE_VALID",XML_SCHEMAV_CVC_MININCLUSIVE_VALID,((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48487);
+CheckEnum("XML_SCHEMAV_CVC_MAXINCLUSIVE_VALID",XML_SCHEMAV_CVC_MAXINCLUSIVE_VALID,(((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48488);
+CheckEnum("XML_SCHEMAV_CVC_MINEXCLUSIVE_VALID",XML_SCHEMAV_CVC_MINEXCLUSIVE_VALID,((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48489);
+CheckEnum("XML_SCHEMAV_CVC_MAXEXCLUSIVE_VALID",XML_SCHEMAV_CVC_MAXEXCLUSIVE_VALID,(((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48490);
+CheckEnum("XML_SCHEMAV_CVC_TOTALDIGITS_VALID",XML_SCHEMAV_CVC_TOTALDIGITS_VALID,((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48491);
+CheckEnum("XML_SCHEMAV_CVC_FRACTIONDIGITS_VALID",XML_SCHEMAV_CVC_FRACTIONDIGITS_VALID,(((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48492);
+CheckEnum("XML_SCHEMAV_CVC_PATTERN_VALID",XML_SCHEMAV_CVC_PATTERN_VALID,((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48493);
+CheckEnum("XML_SCHEMAV_CVC_ENUMERATION_VALID",XML_SCHEMAV_CVC_ENUMERATION_VALID,(((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48494);
+CheckEnum("XML_SCHEMAV_CVC_COMPLEX_TYPE_2_1",XML_SCHEMAV_CVC_COMPLEX_TYPE_2_1,((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48495);
+CheckEnum("XML_SCHEMAV_CVC_COMPLEX_TYPE_2_2",XML_SCHEMAV_CVC_COMPLEX_TYPE_2_2,(((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48496);
+CheckEnum("XML_SCHEMAV_CVC_COMPLEX_TYPE_2_3",XML_SCHEMAV_CVC_COMPLEX_TYPE_2_3,((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48497);
+CheckEnum("XML_SCHEMAV_CVC_COMPLEX_TYPE_2_4",XML_SCHEMAV_CVC_COMPLEX_TYPE_2_4,(((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48498);
+CheckEnum("XML_SCHEMAV_CVC_ELT_1",XML_SCHEMAV_CVC_ELT_1,((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48499);
+CheckEnum("XML_SCHEMAV_CVC_ELT_2",XML_SCHEMAV_CVC_ELT_2,(((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48500);
+CheckEnum("XML_SCHEMAV_CVC_ELT_3_1",XML_SCHEMAV_CVC_ELT_3_1,((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48501);
+CheckEnum("XML_SCHEMAV_CVC_ELT_3_2_1",XML_SCHEMAV_CVC_ELT_3_2_1,(((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48502);
+CheckEnum("XML_SCHEMAV_CVC_ELT_3_2_2",XML_SCHEMAV_CVC_ELT_3_2_2,((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48503);
+CheckEnum("XML_SCHEMAV_CVC_ELT_4_1",XML_SCHEMAV_CVC_ELT_4_1,(((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48504);
+CheckEnum("XML_SCHEMAV_CVC_ELT_4_2",XML_SCHEMAV_CVC_ELT_4_2,((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48505);
+CheckEnum("XML_SCHEMAV_CVC_ELT_4_3",XML_SCHEMAV_CVC_ELT_4_3,(((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48506);
+CheckEnum("XML_SCHEMAV_CVC_ELT_5_1_1",XML_SCHEMAV_CVC_ELT_5_1_1,((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48507);
+CheckEnum("XML_SCHEMAV_CVC_ELT_5_1_2",XML_SCHEMAV_CVC_ELT_5_1_2,(((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48508);
+CheckEnum("XML_SCHEMAV_CVC_ELT_5_2_1",XML_SCHEMAV_CVC_ELT_5_2_1,((((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48509);
+CheckEnum("XML_SCHEMAV_CVC_ELT_5_2_2_1",XML_SCHEMAV_CVC_ELT_5_2_2_1,(((((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48510);
+CheckEnum("XML_SCHEMAV_CVC_ELT_5_2_2_2_1",XML_SCHEMAV_CVC_ELT_5_2_2_2_1,((((((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48511);
+CheckEnum("XML_SCHEMAV_CVC_ELT_5_2_2_2_2",XML_SCHEMAV_CVC_ELT_5_2_2_2_2,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48512);
+CheckEnum("XML_SCHEMAV_CVC_ELT_6",XML_SCHEMAV_CVC_ELT_6,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48513);
+CheckEnum("XML_SCHEMAV_CVC_ELT_7",XML_SCHEMAV_CVC_ELT_7,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48514);
+CheckEnum("XML_SCHEMAV_CVC_ATTRIBUTE_1",XML_SCHEMAV_CVC_ATTRIBUTE_1,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48515);
+CheckEnum("XML_SCHEMAV_CVC_ATTRIBUTE_2",XML_SCHEMAV_CVC_ATTRIBUTE_2,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48516);
+CheckEnum("XML_SCHEMAV_CVC_ATTRIBUTE_3",XML_SCHEMAV_CVC_ATTRIBUTE_3,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48517);
+CheckEnum("XML_SCHEMAV_CVC_ATTRIBUTE_4",XML_SCHEMAV_CVC_ATTRIBUTE_4,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48518);
+CheckEnum("XML_SCHEMAV_CVC_COMPLEX_TYPE_3_1",XML_SCHEMAV_CVC_COMPLEX_TYPE_3_1,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48519);
+CheckEnum("XML_SCHEMAV_CVC_COMPLEX_TYPE_3_2_1",XML_SCHEMAV_CVC_COMPLEX_TYPE_3_2_1,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48520);
+CheckEnum("XML_SCHEMAV_CVC_COMPLEX_TYPE_3_2_2",XML_SCHEMAV_CVC_COMPLEX_TYPE_3_2_2,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48521);
+CheckEnum("XML_SCHEMAV_CVC_COMPLEX_TYPE_4",XML_SCHEMAV_CVC_COMPLEX_TYPE_4,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48522);
+CheckEnum("XML_SCHEMAV_CVC_COMPLEX_TYPE_5_1",XML_SCHEMAV_CVC_COMPLEX_TYPE_5_1,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48523);
+CheckEnum("XML_SCHEMAV_CVC_COMPLEX_TYPE_5_2",XML_SCHEMAV_CVC_COMPLEX_TYPE_5_2,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48524);
+CheckEnum("XML_SCHEMAV_ELEMENT_CONTENT",XML_SCHEMAV_ELEMENT_CONTENT,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48525);
+CheckEnum("XML_SCHEMAV_DOCUMENT_ELEMENT_MISSING",XML_SCHEMAV_DOCUMENT_ELEMENT_MISSING,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48526);
+CheckEnum("XML_SCHEMAV_CVC_COMPLEX_TYPE_1",XML_SCHEMAV_CVC_COMPLEX_TYPE_1,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48527);
+CheckEnum("XML_SCHEMAV_CVC_AU",XML_SCHEMAV_CVC_AU,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48528);
+CheckEnum("XML_SCHEMAV_CVC_TYPE_1",XML_SCHEMAV_CVC_TYPE_1,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48529);
+CheckEnum("XML_SCHEMAV_CVC_TYPE_2",XML_SCHEMAV_CVC_TYPE_2,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48530);
+CheckEnum("XML_SCHEMAV_CVC_IDC",XML_SCHEMAV_CVC_IDC,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48531);
+CheckEnum("XML_SCHEMAV_CVC_WILDCARD",XML_SCHEMAV_CVC_WILDCARD,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((1801) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48532);
+CheckEnum("XML_XPTR_UNKNOWN_SCHEME",XML_XPTR_UNKNOWN_SCHEME,1900,48533);
+CheckEnum("XML_XPTR_CHILDSEQ_START",XML_XPTR_CHILDSEQ_START,(1900) + 1,48534);
+CheckEnum("XML_XPTR_EVAL_FAILED",XML_XPTR_EVAL_FAILED,((1900) + 1) + 1,48535);
+CheckEnum("XML_XPTR_EXTRA_OBJECTS",XML_XPTR_EXTRA_OBJECTS,(((1900) + 1) + 1) + 1,48536);
+CheckEnum("XML_C14N_CREATE_CTXT",XML_C14N_CREATE_CTXT,1950,48537);
+CheckEnum("XML_C14N_REQUIRES_UTF8",XML_C14N_REQUIRES_UTF8,(1950) + 1,48538);
+CheckEnum("XML_C14N_CREATE_STACK",XML_C14N_CREATE_STACK,((1950) + 1) + 1,48539);
+CheckEnum("XML_C14N_INVALID_NODE",XML_C14N_INVALID_NODE,(((1950) + 1) + 1) + 1,48540);
+CheckEnum("XML_C14N_UNKNOW_NODE",XML_C14N_UNKNOW_NODE,((((1950) + 1) + 1) + 1) + 1,48541);
+CheckEnum("XML_C14N_RELATIVE_NAMESPACE",XML_C14N_RELATIVE_NAMESPACE,(((((1950) + 1) + 1) + 1) + 1) + 1,48542);
+CheckEnum("XML_FTP_PASV_ANSWER",XML_FTP_PASV_ANSWER,2000,48543);
+CheckEnum("XML_FTP_EPSV_ANSWER",XML_FTP_EPSV_ANSWER,(2000) + 1,48544);
+CheckEnum("XML_FTP_ACCNT",XML_FTP_ACCNT,((2000) + 1) + 1,48545);
+CheckEnum("XML_FTP_URL_SYNTAX",XML_FTP_URL_SYNTAX,(((2000) + 1) + 1) + 1,48546);
+CheckEnum("XML_HTTP_URL_SYNTAX",XML_HTTP_URL_SYNTAX,2020,48547);
+CheckEnum("XML_HTTP_USE_IP",XML_HTTP_USE_IP,(2020) + 1,48548);
+CheckEnum("XML_HTTP_UNKNOWN_HOST",XML_HTTP_UNKNOWN_HOST,((2020) + 1) + 1,48549);
+CheckEnum("XML_SCHEMAP_SRC_SIMPLE_TYPE_1",XML_SCHEMAP_SRC_SIMPLE_TYPE_1,3000,48550);
+CheckEnum("XML_SCHEMAP_SRC_SIMPLE_TYPE_2",XML_SCHEMAP_SRC_SIMPLE_TYPE_2,(3000) + 1,48551);
+CheckEnum("XML_SCHEMAP_SRC_SIMPLE_TYPE_3",XML_SCHEMAP_SRC_SIMPLE_TYPE_3,((3000) + 1) + 1,48552);
+CheckEnum("XML_SCHEMAP_SRC_SIMPLE_TYPE_4",XML_SCHEMAP_SRC_SIMPLE_TYPE_4,(((3000) + 1) + 1) + 1,48553);
+CheckEnum("XML_SCHEMAP_SRC_RESOLVE",XML_SCHEMAP_SRC_RESOLVE,((((3000) + 1) + 1) + 1) + 1,48554);
+CheckEnum("XML_SCHEMAP_SRC_RESTRICTION_BASE_OR_SIMPLETYPE",XML_SCHEMAP_SRC_RESTRICTION_BASE_OR_SIMPLETYPE,(((((3000) + 1) + 1) + 1) + 1) + 1,48555);
+CheckEnum("XML_SCHEMAP_SRC_LIST_ITEMTYPE_OR_SIMPLETYPE",XML_SCHEMAP_SRC_LIST_ITEMTYPE_OR_SIMPLETYPE,((((((3000) + 1) + 1) + 1) + 1) + 1) + 1,48556);
+CheckEnum("XML_SCHEMAP_SRC_UNION_MEMBERTYPES_OR_SIMPLETYPES",XML_SCHEMAP_SRC_UNION_MEMBERTYPES_OR_SIMPLETYPES,(((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48557);
+CheckEnum("XML_SCHEMAP_ST_PROPS_CORRECT_1",XML_SCHEMAP_ST_PROPS_CORRECT_1,((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48558);
+CheckEnum("XML_SCHEMAP_ST_PROPS_CORRECT_2",XML_SCHEMAP_ST_PROPS_CORRECT_2,(((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48559);
+CheckEnum("XML_SCHEMAP_ST_PROPS_CORRECT_3",XML_SCHEMAP_ST_PROPS_CORRECT_3,((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48560);
+CheckEnum("XML_SCHEMAP_COS_ST_RESTRICTS_1_1",XML_SCHEMAP_COS_ST_RESTRICTS_1_1,(((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48561);
+CheckEnum("XML_SCHEMAP_COS_ST_RESTRICTS_1_2",XML_SCHEMAP_COS_ST_RESTRICTS_1_2,((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48562);
+CheckEnum("XML_SCHEMAP_COS_ST_RESTRICTS_1_3_1",XML_SCHEMAP_COS_ST_RESTRICTS_1_3_1,(((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48563);
+CheckEnum("XML_SCHEMAP_COS_ST_RESTRICTS_1_3_2",XML_SCHEMAP_COS_ST_RESTRICTS_1_3_2,((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48564);
+CheckEnum("XML_SCHEMAP_COS_ST_RESTRICTS_2_1",XML_SCHEMAP_COS_ST_RESTRICTS_2_1,(((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48565);
+CheckEnum("XML_SCHEMAP_COS_ST_RESTRICTS_2_3_1_1",XML_SCHEMAP_COS_ST_RESTRICTS_2_3_1_1,((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48566);
+CheckEnum("XML_SCHEMAP_COS_ST_RESTRICTS_2_3_1_2",XML_SCHEMAP_COS_ST_RESTRICTS_2_3_1_2,(((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48567);
+CheckEnum("XML_SCHEMAP_COS_ST_RESTRICTS_2_3_2_1",XML_SCHEMAP_COS_ST_RESTRICTS_2_3_2_1,((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48568);
+CheckEnum("XML_SCHEMAP_COS_ST_RESTRICTS_2_3_2_2",XML_SCHEMAP_COS_ST_RESTRICTS_2_3_2_2,(((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48569);
+CheckEnum("XML_SCHEMAP_COS_ST_RESTRICTS_2_3_2_3",XML_SCHEMAP_COS_ST_RESTRICTS_2_3_2_3,((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48570);
+CheckEnum("XML_SCHEMAP_COS_ST_RESTRICTS_2_3_2_4",XML_SCHEMAP_COS_ST_RESTRICTS_2_3_2_4,(((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48571);
+CheckEnum("XML_SCHEMAP_COS_ST_RESTRICTS_2_3_2_5",XML_SCHEMAP_COS_ST_RESTRICTS_2_3_2_5,((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48572);
+CheckEnum("XML_SCHEMAP_COS_ST_RESTRICTS_3_1",XML_SCHEMAP_COS_ST_RESTRICTS_3_1,(((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48573);
+CheckEnum("XML_SCHEMAP_COS_ST_RESTRICTS_3_3_1",XML_SCHEMAP_COS_ST_RESTRICTS_3_3_1,((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48574);
+CheckEnum("XML_SCHEMAP_COS_ST_RESTRICTS_3_3_1_2",XML_SCHEMAP_COS_ST_RESTRICTS_3_3_1_2,(((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48575);
+CheckEnum("XML_SCHEMAP_COS_ST_RESTRICTS_3_3_2_2",XML_SCHEMAP_COS_ST_RESTRICTS_3_3_2_2,((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48576);
+CheckEnum("XML_SCHEMAP_COS_ST_RESTRICTS_3_3_2_1",XML_SCHEMAP_COS_ST_RESTRICTS_3_3_2_1,(((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48577);
+CheckEnum("XML_SCHEMAP_COS_ST_RESTRICTS_3_3_2_3",XML_SCHEMAP_COS_ST_RESTRICTS_3_3_2_3,((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48578);
+CheckEnum("XML_SCHEMAP_COS_ST_RESTRICTS_3_3_2_4",XML_SCHEMAP_COS_ST_RESTRICTS_3_3_2_4,(((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48579);
+CheckEnum("XML_SCHEMAP_COS_ST_RESTRICTS_3_3_2_5",XML_SCHEMAP_COS_ST_RESTRICTS_3_3_2_5,((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48580);
+CheckEnum("XML_SCHEMAP_COS_ST_DERIVED_OK_2_1",XML_SCHEMAP_COS_ST_DERIVED_OK_2_1,(((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48581);
+CheckEnum("XML_SCHEMAP_COS_ST_DERIVED_OK_2_2",XML_SCHEMAP_COS_ST_DERIVED_OK_2_2,((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48582);
+CheckEnum("XML_SCHEMAP_S4S_ELEM_NOT_ALLOWED",XML_SCHEMAP_S4S_ELEM_NOT_ALLOWED,(((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48583);
+CheckEnum("XML_SCHEMAP_S4S_ELEM_MISSING",XML_SCHEMAP_S4S_ELEM_MISSING,((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48584);
+CheckEnum("XML_SCHEMAP_S4S_ATTR_NOT_ALLOWED",XML_SCHEMAP_S4S_ATTR_NOT_ALLOWED,(((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48585);
+CheckEnum("XML_SCHEMAP_S4S_ATTR_MISSING",XML_SCHEMAP_S4S_ATTR_MISSING,((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48586);
+CheckEnum("XML_SCHEMAP_S4S_ATTR_INVALID_VALUE",XML_SCHEMAP_S4S_ATTR_INVALID_VALUE,(((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48587);
+CheckEnum("XML_SCHEMAP_SRC_ELEMENT_1",XML_SCHEMAP_SRC_ELEMENT_1,((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48588);
+CheckEnum("XML_SCHEMAP_SRC_ELEMENT_2_1",XML_SCHEMAP_SRC_ELEMENT_2_1,(((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48589);
+CheckEnum("XML_SCHEMAP_SRC_ELEMENT_2_2",XML_SCHEMAP_SRC_ELEMENT_2_2,((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48590);
+CheckEnum("XML_SCHEMAP_SRC_ELEMENT_3",XML_SCHEMAP_SRC_ELEMENT_3,(((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48591);
+CheckEnum("XML_SCHEMAP_P_PROPS_CORRECT_1",XML_SCHEMAP_P_PROPS_CORRECT_1,((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48592);
+CheckEnum("XML_SCHEMAP_P_PROPS_CORRECT_2_1",XML_SCHEMAP_P_PROPS_CORRECT_2_1,(((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48593);
+CheckEnum("XML_SCHEMAP_P_PROPS_CORRECT_2_2",XML_SCHEMAP_P_PROPS_CORRECT_2_2,((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48594);
+CheckEnum("XML_SCHEMAP_E_PROPS_CORRECT_2",XML_SCHEMAP_E_PROPS_CORRECT_2,(((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48595);
+CheckEnum("XML_SCHEMAP_E_PROPS_CORRECT_3",XML_SCHEMAP_E_PROPS_CORRECT_3,((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48596);
+CheckEnum("XML_SCHEMAP_E_PROPS_CORRECT_4",XML_SCHEMAP_E_PROPS_CORRECT_4,(((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48597);
+CheckEnum("XML_SCHEMAP_E_PROPS_CORRECT_5",XML_SCHEMAP_E_PROPS_CORRECT_5,((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48598);
+CheckEnum("XML_SCHEMAP_E_PROPS_CORRECT_6",XML_SCHEMAP_E_PROPS_CORRECT_6,(((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48599);
+CheckEnum("XML_SCHEMAP_SRC_INCLUDE",XML_SCHEMAP_SRC_INCLUDE,((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48600);
+CheckEnum("XML_SCHEMAP_SRC_ATTRIBUTE_1",XML_SCHEMAP_SRC_ATTRIBUTE_1,(((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48601);
+CheckEnum("XML_SCHEMAP_SRC_ATTRIBUTE_2",XML_SCHEMAP_SRC_ATTRIBUTE_2,((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48602);
+CheckEnum("XML_SCHEMAP_SRC_ATTRIBUTE_3_1",XML_SCHEMAP_SRC_ATTRIBUTE_3_1,(((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48603);
+CheckEnum("XML_SCHEMAP_SRC_ATTRIBUTE_3_2",XML_SCHEMAP_SRC_ATTRIBUTE_3_2,((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48604);
+CheckEnum("XML_SCHEMAP_SRC_ATTRIBUTE_4",XML_SCHEMAP_SRC_ATTRIBUTE_4,(((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48605);
+CheckEnum("XML_SCHEMAP_NO_XMLNS",XML_SCHEMAP_NO_XMLNS,((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48606);
+CheckEnum("XML_SCHEMAP_NO_XSI",XML_SCHEMAP_NO_XSI,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48607);
+CheckEnum("XML_SCHEMAP_COS_VALID_DEFAULT_1",XML_SCHEMAP_COS_VALID_DEFAULT_1,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48608);
+CheckEnum("XML_SCHEMAP_COS_VALID_DEFAULT_2_1",XML_SCHEMAP_COS_VALID_DEFAULT_2_1,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48609);
+CheckEnum("XML_SCHEMAP_COS_VALID_DEFAULT_2_2_1",XML_SCHEMAP_COS_VALID_DEFAULT_2_2_1,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48610);
+CheckEnum("XML_SCHEMAP_COS_VALID_DEFAULT_2_2_2",XML_SCHEMAP_COS_VALID_DEFAULT_2_2_2,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48611);
+CheckEnum("XML_SCHEMAP_CVC_SIMPLE_TYPE",XML_SCHEMAP_CVC_SIMPLE_TYPE,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48612);
+CheckEnum("XML_SCHEMAP_COS_CT_EXTENDS_1_1",XML_SCHEMAP_COS_CT_EXTENDS_1_1,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48613);
+CheckEnum("XML_SCHEMAP_SRC_IMPORT_1_1",XML_SCHEMAP_SRC_IMPORT_1_1,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48614);
+CheckEnum("XML_SCHEMAP_SRC_IMPORT_1_2",XML_SCHEMAP_SRC_IMPORT_1_2,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48615);
+CheckEnum("XML_SCHEMAP_SRC_IMPORT_2",XML_SCHEMAP_SRC_IMPORT_2,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48616);
+CheckEnum("XML_SCHEMAP_SRC_IMPORT_2_1",XML_SCHEMAP_SRC_IMPORT_2_1,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48617);
+CheckEnum("XML_SCHEMAP_SRC_IMPORT_2_2",XML_SCHEMAP_SRC_IMPORT_2_2,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48618);
+CheckEnum("XML_SCHEMAP_INTERNAL",XML_SCHEMAP_INTERNAL,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48619);
+CheckEnum("XML_SCHEMAP_NOT_DETERMINISTIC",XML_SCHEMAP_NOT_DETERMINISTIC,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48620);
+CheckEnum("XML_SCHEMAP_SRC_ATTRIBUTE_GROUP_1",XML_SCHEMAP_SRC_ATTRIBUTE_GROUP_1,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48621);
+CheckEnum("XML_SCHEMAP_SRC_ATTRIBUTE_GROUP_2",XML_SCHEMAP_SRC_ATTRIBUTE_GROUP_2,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48622);
+CheckEnum("XML_SCHEMAP_SRC_ATTRIBUTE_GROUP_3",XML_SCHEMAP_SRC_ATTRIBUTE_GROUP_3,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48623);
+CheckEnum("XML_SCHEMAP_MG_PROPS_CORRECT_1",XML_SCHEMAP_MG_PROPS_CORRECT_1,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48624);
+CheckEnum("XML_SCHEMAP_MG_PROPS_CORRECT_2",XML_SCHEMAP_MG_PROPS_CORRECT_2,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48625);
+CheckEnum("XML_SCHEMAP_SRC_CT_1",XML_SCHEMAP_SRC_CT_1,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48626);
+CheckEnum("XML_SCHEMAP_DERIVATION_OK_RESTRICTION_2_1_3",XML_SCHEMAP_DERIVATION_OK_RESTRICTION_2_1_3,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48627);
+CheckEnum("XML_SCHEMAP_AU_PROPS_CORRECT_2",XML_SCHEMAP_AU_PROPS_CORRECT_2,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48628);
+CheckEnum("XML_SCHEMAP_A_PROPS_CORRECT_2",XML_SCHEMAP_A_PROPS_CORRECT_2,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48629);
+CheckEnum("XML_SCHEMAP_C_PROPS_CORRECT",XML_SCHEMAP_C_PROPS_CORRECT,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48630);
+CheckEnum("XML_SCHEMAP_SRC_REDEFINE",XML_SCHEMAP_SRC_REDEFINE,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48631);
+CheckEnum("XML_SCHEMAP_SRC_IMPORT",XML_SCHEMAP_SRC_IMPORT,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48632);
+CheckEnum("XML_SCHEMAP_WARN_SKIP_SCHEMA",XML_SCHEMAP_WARN_SKIP_SCHEMA,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48633);
+CheckEnum("XML_SCHEMAP_WARN_UNLOCATED_SCHEMA",XML_SCHEMAP_WARN_UNLOCATED_SCHEMA,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48634);
+CheckEnum("XML_SCHEMAP_WARN_ATTR_REDECL_PROH",XML_SCHEMAP_WARN_ATTR_REDECL_PROH,(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48635);
+CheckEnum("XML_SCHEMAP_WARN_ATTR_POINTLESS_PROH",XML_SCHEMAP_WARN_ATTR_POINTLESS_PROH,((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((3000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48636);
+CheckEnum("XML_MODULE_OPEN",XML_MODULE_OPEN,4900,48637);
+CheckEnum("XML_MODULE_CLOSE",XML_MODULE_CLOSE,(4900) + 1,48638);
+CheckEnum("XML_CHECK_FOUND_ELEMENT",XML_CHECK_FOUND_ELEMENT,5000,48639);
+CheckEnum("XML_CHECK_FOUND_ATTRIBUTE",XML_CHECK_FOUND_ATTRIBUTE,(5000) + 1,48640);
+CheckEnum("XML_CHECK_FOUND_TEXT",XML_CHECK_FOUND_TEXT,((5000) + 1) + 1,48641);
+CheckEnum("XML_CHECK_FOUND_CDATA",XML_CHECK_FOUND_CDATA,(((5000) + 1) + 1) + 1,48642);
+CheckEnum("XML_CHECK_FOUND_ENTITYREF",XML_CHECK_FOUND_ENTITYREF,((((5000) + 1) + 1) + 1) + 1,48643);
+CheckEnum("XML_CHECK_FOUND_ENTITY",XML_CHECK_FOUND_ENTITY,(((((5000) + 1) + 1) + 1) + 1) + 1,48644);
+CheckEnum("XML_CHECK_FOUND_PI",XML_CHECK_FOUND_PI,((((((5000) + 1) + 1) + 1) + 1) + 1) + 1,48645);
+CheckEnum("XML_CHECK_FOUND_COMMENT",XML_CHECK_FOUND_COMMENT,(((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48646);
+CheckEnum("XML_CHECK_FOUND_DOCTYPE",XML_CHECK_FOUND_DOCTYPE,((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48647);
+CheckEnum("XML_CHECK_FOUND_FRAGMENT",XML_CHECK_FOUND_FRAGMENT,(((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48648);
+CheckEnum("XML_CHECK_FOUND_NOTATION",XML_CHECK_FOUND_NOTATION,((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48649);
+CheckEnum("XML_CHECK_UNKNOWN_NODE",XML_CHECK_UNKNOWN_NODE,(((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48650);
+CheckEnum("XML_CHECK_ENTITY_TYPE",XML_CHECK_ENTITY_TYPE,((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48651);
+CheckEnum("XML_CHECK_NO_PARENT",XML_CHECK_NO_PARENT,(((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48652);
+CheckEnum("XML_CHECK_NO_DOC",XML_CHECK_NO_DOC,((((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48653);
+CheckEnum("XML_CHECK_NO_NAME",XML_CHECK_NO_NAME,(((((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48654);
+CheckEnum("XML_CHECK_NO_ELEM",XML_CHECK_NO_ELEM,((((((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48655);
+CheckEnum("XML_CHECK_WRONG_DOC",XML_CHECK_WRONG_DOC,(((((((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48656);
+CheckEnum("XML_CHECK_NO_PREV",XML_CHECK_NO_PREV,((((((((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48657);
+CheckEnum("XML_CHECK_WRONG_PREV",XML_CHECK_WRONG_PREV,(((((((((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48658);
+CheckEnum("XML_CHECK_NO_NEXT",XML_CHECK_NO_NEXT,((((((((((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48659);
+CheckEnum("XML_CHECK_WRONG_NEXT",XML_CHECK_WRONG_NEXT,(((((((((((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48660);
+CheckEnum("XML_CHECK_NOT_DTD",XML_CHECK_NOT_DTD,((((((((((((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48661);
+CheckEnum("XML_CHECK_NOT_ATTR",XML_CHECK_NOT_ATTR,(((((((((((((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48662);
+CheckEnum("XML_CHECK_NOT_ATTR_DECL",XML_CHECK_NOT_ATTR_DECL,((((((((((((((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48663);
+CheckEnum("XML_CHECK_NOT_ELEM_DECL",XML_CHECK_NOT_ELEM_DECL,(((((((((((((((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48664);
+CheckEnum("XML_CHECK_NOT_ENTITY_DECL",XML_CHECK_NOT_ENTITY_DECL,((((((((((((((((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48665);
+CheckEnum("XML_CHECK_NOT_NS_DECL",XML_CHECK_NOT_NS_DECL,(((((((((((((((((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48666);
+CheckEnum("XML_CHECK_NO_HREF",XML_CHECK_NO_HREF,((((((((((((((((((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48667);
+CheckEnum("XML_CHECK_WRONG_PARENT",XML_CHECK_WRONG_PARENT,(((((((((((((((((((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48668);
+CheckEnum("XML_CHECK_NS_SCOPE",XML_CHECK_NS_SCOPE,((((((((((((((((((((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48669);
+CheckEnum("XML_CHECK_NS_ANCESTOR",XML_CHECK_NS_ANCESTOR,(((((((((((((((((((((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48670);
+CheckEnum("XML_CHECK_NOT_UTF8",XML_CHECK_NOT_UTF8,((((((((((((((((((((((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48671);
+CheckEnum("XML_CHECK_NO_DICT",XML_CHECK_NO_DICT,(((((((((((((((((((((((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48672);
+CheckEnum("XML_CHECK_NOT_NCNAME",XML_CHECK_NOT_NCNAME,((((((((((((((((((((((((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48673);
+CheckEnum("XML_CHECK_OUTSIDE_DICT",XML_CHECK_OUTSIDE_DICT,(((((((((((((((((((((((((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48674);
+CheckEnum("XML_CHECK_WRONG_NAME",XML_CHECK_WRONG_NAME,((((((((((((((((((((((((((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48675);
+CheckEnum("XML_CHECK_NAME_NOT_NULL",XML_CHECK_NAME_NOT_NULL,(((((((((((((((((((((((((((((((((((((5000) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,48676);
+CheckEnum("XML_I18N_NO_NAME",XML_I18N_NO_NAME,6000,48677);
+CheckEnum("XML_I18N_NO_HANDLER",XML_I18N_NO_HANDLER,(6000) + 1,48678);
+CheckEnum("XML_I18N_EXCESS_HANDLER",XML_I18N_EXCESS_HANDLER,((6000) + 1) + 1,48679);
+CheckEnum("XML_I18N_CONV_FAILED",XML_I18N_CONV_FAILED,(((6000) + 1) + 1) + 1,48680);
+CheckEnum("XML_I18N_NO_OUTPUT",XML_I18N_NO_OUTPUT,((((6000) + 1) + 1) + 1) + 1,48681);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlParserErrors,4, 14669, 2)
+CheckTypeSize(xmlParserErrors,4, 14669, 2);
 #elif __x86_64__
-CheckTypeSize(xmlParserErrors,4, 14669, 11)
+CheckTypeSize(xmlParserErrors,4, 14669, 11);
 #elif __ia64__
-CheckTypeSize(xmlParserErrors,4, 14669, 3)
+CheckTypeSize(xmlParserErrors,4, 14669, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlParserErrors,4, 14669, 6)
+CheckTypeSize(xmlParserErrors,4, 14669, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlParserErrors,4, 14669, 9)
+CheckTypeSize(xmlParserErrors,4, 14669, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlParserErrors,4, 14669, 10)
+CheckTypeSize(xmlParserErrors,4, 14669, 10);
 #elif __s390x__
-CheckTypeSize(xmlParserErrors,4, 14669, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14669,0);
-Msg("Find size of xmlParserErrors (14669)\n");
+CheckTypeSize(xmlParserErrors,4, 14669, 12);
+#elif 1
+CheckTypeSize(xmlParserErrors,0, 14669, 1);
 #endif
 
 extern void xmlParserPrintFileInfo_db(xmlParserInputPtr);

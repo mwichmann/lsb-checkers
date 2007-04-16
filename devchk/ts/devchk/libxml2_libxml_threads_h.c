@@ -29,117 +29,111 @@ Msg("Checking data structures in libxml2/libxml/threads.h\n");
 
 printf("Checking data structures in libxml2/libxml/threads.h\n");
 #if __i386__
-CheckTypeSize(xmlRMutex,0, 14995, 2)
+CheckTypeSize(xmlRMutex,0, 14995, 2);
 #elif __x86_64__
-CheckTypeSize(xmlRMutex,0, 14995, 11)
+CheckTypeSize(xmlRMutex,0, 14995, 11);
 #elif __ia64__
-CheckTypeSize(xmlRMutex,0, 14995, 3)
+CheckTypeSize(xmlRMutex,0, 14995, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlRMutex,0, 14995, 6)
+CheckTypeSize(xmlRMutex,0, 14995, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlRMutex,0, 14995, 9)
+CheckTypeSize(xmlRMutex,0, 14995, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlRMutex,0, 14995, 10)
+CheckTypeSize(xmlRMutex,0, 14995, 10);
 #elif __s390x__
-CheckTypeSize(xmlRMutex,0, 14995, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14995,0);
-Msg("Find size of xmlRMutex (14995)\n");
+CheckTypeSize(xmlRMutex,0, 14995, 12);
+#elif 1
+CheckTypeSize(xmlRMutex,0, 14995, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlRMutex *,4, 14996, 2)
+CheckTypeSize(xmlRMutex *,4, 14996, 2);
 #elif __x86_64__
-CheckTypeSize(xmlRMutex *,8, 14996, 11)
+CheckTypeSize(xmlRMutex *,8, 14996, 11);
 #elif __ia64__
-CheckTypeSize(xmlRMutex *,8, 14996, 3)
+CheckTypeSize(xmlRMutex *,8, 14996, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlRMutex *,4, 14996, 6)
+CheckTypeSize(xmlRMutex *,4, 14996, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlRMutex *,8, 14996, 9)
+CheckTypeSize(xmlRMutex *,8, 14996, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlRMutex *,4, 14996, 10)
+CheckTypeSize(xmlRMutex *,4, 14996, 10);
 #elif __s390x__
-CheckTypeSize(xmlRMutex *,8, 14996, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14996,0);
-Msg("Find size of xmlRMutex * (14996)\n");
+CheckTypeSize(xmlRMutex *,8, 14996, 12);
+#elif 1
+CheckTypeSize(xmlRMutex *,0, 14996, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlRMutexPtr,4, 14997, 2)
+CheckTypeSize(xmlRMutexPtr,4, 14997, 2);
 #elif __x86_64__
-CheckTypeSize(xmlRMutexPtr,8, 14997, 11)
+CheckTypeSize(xmlRMutexPtr,8, 14997, 11);
 #elif __ia64__
-CheckTypeSize(xmlRMutexPtr,8, 14997, 3)
+CheckTypeSize(xmlRMutexPtr,8, 14997, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlRMutexPtr,4, 14997, 6)
+CheckTypeSize(xmlRMutexPtr,4, 14997, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlRMutexPtr,8, 14997, 9)
+CheckTypeSize(xmlRMutexPtr,8, 14997, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlRMutexPtr,4, 14997, 10)
+CheckTypeSize(xmlRMutexPtr,4, 14997, 10);
 #elif __s390x__
-CheckTypeSize(xmlRMutexPtr,8, 14997, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14997,0);
-Msg("Find size of xmlRMutexPtr (14997)\n");
+CheckTypeSize(xmlRMutexPtr,8, 14997, 12);
+#elif 1
+CheckTypeSize(xmlRMutexPtr,0, 14997, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlMutex,0, 14999, 2)
+CheckTypeSize(xmlMutex,0, 14999, 2);
 #elif __x86_64__
-CheckTypeSize(xmlMutex,0, 14999, 11)
+CheckTypeSize(xmlMutex,0, 14999, 11);
 #elif __ia64__
-CheckTypeSize(xmlMutex,0, 14999, 3)
+CheckTypeSize(xmlMutex,0, 14999, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlMutex,0, 14999, 6)
+CheckTypeSize(xmlMutex,0, 14999, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlMutex,0, 14999, 9)
+CheckTypeSize(xmlMutex,0, 14999, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlMutex,0, 14999, 10)
+CheckTypeSize(xmlMutex,0, 14999, 10);
 #elif __s390x__
-CheckTypeSize(xmlMutex,0, 14999, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14999,0);
-Msg("Find size of xmlMutex (14999)\n");
+CheckTypeSize(xmlMutex,0, 14999, 12);
+#elif 1
+CheckTypeSize(xmlMutex,0, 14999, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlMutex *,4, 15000, 2)
+CheckTypeSize(xmlMutex *,4, 15000, 2);
 #elif __x86_64__
-CheckTypeSize(xmlMutex *,8, 15000, 11)
+CheckTypeSize(xmlMutex *,8, 15000, 11);
 #elif __ia64__
-CheckTypeSize(xmlMutex *,8, 15000, 3)
+CheckTypeSize(xmlMutex *,8, 15000, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlMutex *,4, 15000, 6)
+CheckTypeSize(xmlMutex *,4, 15000, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlMutex *,8, 15000, 9)
+CheckTypeSize(xmlMutex *,8, 15000, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlMutex *,4, 15000, 10)
+CheckTypeSize(xmlMutex *,4, 15000, 10);
 #elif __s390x__
-CheckTypeSize(xmlMutex *,8, 15000, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15000,0);
-Msg("Find size of xmlMutex * (15000)\n");
+CheckTypeSize(xmlMutex *,8, 15000, 12);
+#elif 1
+CheckTypeSize(xmlMutex *,0, 15000, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(xmlMutexPtr,4, 15001, 2)
+CheckTypeSize(xmlMutexPtr,4, 15001, 2);
 #elif __x86_64__
-CheckTypeSize(xmlMutexPtr,8, 15001, 11)
+CheckTypeSize(xmlMutexPtr,8, 15001, 11);
 #elif __ia64__
-CheckTypeSize(xmlMutexPtr,8, 15001, 3)
+CheckTypeSize(xmlMutexPtr,8, 15001, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlMutexPtr,4, 15001, 6)
+CheckTypeSize(xmlMutexPtr,4, 15001, 6);
 #elif __powerpc64__
-CheckTypeSize(xmlMutexPtr,8, 15001, 9)
+CheckTypeSize(xmlMutexPtr,8, 15001, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlMutexPtr,4, 15001, 10)
+CheckTypeSize(xmlMutexPtr,4, 15001, 10);
 #elif __s390x__
-CheckTypeSize(xmlMutexPtr,8, 15001, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15001,0);
-Msg("Find size of xmlMutexPtr (15001)\n");
+CheckTypeSize(xmlMutexPtr,8, 15001, 12);
+#elif 1
+CheckTypeSize(xmlMutexPtr,0, 15001, 1);
 #endif
 
 extern int xmlGetThreadId_db(void);

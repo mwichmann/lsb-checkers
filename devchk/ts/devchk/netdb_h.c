@@ -320,366 +320,383 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(struct servent,16, 10134, 2)
-CheckMemberSize(struct servent,s_aliases,4,2,33734)
-CheckOffset(struct servent,s_aliases,4,2,33734)
-CheckMemberSize(struct servent,s_port,4,2,33735)
-CheckOffset(struct servent,s_port,8,2,33735)
-CheckMemberSize(struct servent,s_proto,4,2,33736)
-CheckOffset(struct servent,s_proto,12,2,33736)
+CheckTypeSize(struct servent,16, 10134, 2);
+CheckMemberSize(struct servent,s_aliases,4,2,33734);
+CheckOffset(struct servent,s_aliases,4,2,33734);
+CheckMemberSize(struct servent,s_port,4,2,33735);
+CheckOffset(struct servent,s_port,8,2,33735);
+CheckMemberSize(struct servent,s_proto,4,2,33736);
+CheckOffset(struct servent,s_proto,12,2,33736);
 #elif __ia64__
-CheckTypeSize(struct servent,32, 10134, 3)
-CheckMemberSize(struct servent,s_aliases,8,3,33734)
-CheckOffset(struct servent,s_aliases,8,3,33734)
-CheckMemberSize(struct servent,s_port,4,3,33735)
-CheckOffset(struct servent,s_port,16,3,33735)
-CheckMemberSize(struct servent,s_proto,8,3,33736)
-CheckOffset(struct servent,s_proto,24,3,33736)
+CheckTypeSize(struct servent,32, 10134, 3);
+CheckMemberSize(struct servent,s_aliases,8,3,33734);
+CheckOffset(struct servent,s_aliases,8,3,33734);
+CheckMemberSize(struct servent,s_port,4,3,33735);
+CheckOffset(struct servent,s_port,16,3,33735);
+CheckMemberSize(struct servent,s_proto,8,3,33736);
+CheckOffset(struct servent,s_proto,24,3,33736);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct servent,16, 10134, 6)
-CheckMemberSize(struct servent,s_aliases,4,6,33734)
-CheckOffset(struct servent,s_aliases,4,6,33734)
-CheckMemberSize(struct servent,s_port,4,6,33735)
-CheckOffset(struct servent,s_port,8,6,33735)
-CheckMemberSize(struct servent,s_proto,4,6,33736)
-CheckOffset(struct servent,s_proto,12,6,33736)
+CheckTypeSize(struct servent,16, 10134, 6);
+CheckMemberSize(struct servent,s_aliases,4,6,33734);
+CheckOffset(struct servent,s_aliases,4,6,33734);
+CheckMemberSize(struct servent,s_port,4,6,33735);
+CheckOffset(struct servent,s_port,8,6,33735);
+CheckMemberSize(struct servent,s_proto,4,6,33736);
+CheckOffset(struct servent,s_proto,12,6,33736);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct servent,16, 10134, 10)
-CheckMemberSize(struct servent,s_aliases,4,10,33734)
-CheckOffset(struct servent,s_aliases,4,10,33734)
-CheckMemberSize(struct servent,s_port,4,10,33735)
-CheckOffset(struct servent,s_port,8,10,33735)
-CheckMemberSize(struct servent,s_proto,4,10,33736)
-CheckOffset(struct servent,s_proto,12,10,33736)
+CheckTypeSize(struct servent,16, 10134, 10);
+CheckMemberSize(struct servent,s_aliases,4,10,33734);
+CheckOffset(struct servent,s_aliases,4,10,33734);
+CheckMemberSize(struct servent,s_port,4,10,33735);
+CheckOffset(struct servent,s_port,8,10,33735);
+CheckMemberSize(struct servent,s_proto,4,10,33736);
+CheckOffset(struct servent,s_proto,12,10,33736);
 #elif __powerpc64__
-CheckTypeSize(struct servent,32, 10134, 9)
-CheckMemberSize(struct servent,s_aliases,8,9,33734)
-CheckOffset(struct servent,s_aliases,8,9,33734)
-CheckMemberSize(struct servent,s_port,4,9,33735)
-CheckOffset(struct servent,s_port,16,9,33735)
-CheckMemberSize(struct servent,s_proto,8,9,33736)
-CheckOffset(struct servent,s_proto,24,9,33736)
+CheckTypeSize(struct servent,32, 10134, 9);
+CheckMemberSize(struct servent,s_aliases,8,9,33734);
+CheckOffset(struct servent,s_aliases,8,9,33734);
+CheckMemberSize(struct servent,s_port,4,9,33735);
+CheckOffset(struct servent,s_port,16,9,33735);
+CheckMemberSize(struct servent,s_proto,8,9,33736);
+CheckOffset(struct servent,s_proto,24,9,33736);
 #elif __s390x__
-CheckTypeSize(struct servent,32, 10134, 12)
-CheckMemberSize(struct servent,s_aliases,8,12,33734)
-CheckOffset(struct servent,s_aliases,8,12,33734)
-CheckMemberSize(struct servent,s_port,4,12,33735)
-CheckOffset(struct servent,s_port,16,12,33735)
-CheckMemberSize(struct servent,s_proto,8,12,33736)
-CheckOffset(struct servent,s_proto,24,12,33736)
+CheckTypeSize(struct servent,32, 10134, 12);
+CheckMemberSize(struct servent,s_aliases,8,12,33734);
+CheckOffset(struct servent,s_aliases,8,12,33734);
+CheckMemberSize(struct servent,s_port,4,12,33735);
+CheckOffset(struct servent,s_port,16,12,33735);
+CheckMemberSize(struct servent,s_proto,8,12,33736);
+CheckOffset(struct servent,s_proto,24,12,33736);
 #elif __x86_64__
-CheckTypeSize(struct servent,32, 10134, 11)
-CheckMemberSize(struct servent,s_aliases,8,11,33734)
-CheckOffset(struct servent,s_aliases,8,11,33734)
-CheckMemberSize(struct servent,s_port,4,11,33735)
-CheckOffset(struct servent,s_port,16,11,33735)
-CheckMemberSize(struct servent,s_proto,8,11,33736)
-CheckOffset(struct servent,s_proto,24,11,33736)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10134,0);
-Msg("Find size of servent (10134)\n");
+CheckTypeSize(struct servent,32, 10134, 11);
+CheckMemberSize(struct servent,s_aliases,8,11,33734);
+CheckOffset(struct servent,s_aliases,8,11,33734);
+CheckMemberSize(struct servent,s_port,4,11,33735);
+CheckOffset(struct servent,s_port,16,11,33735);
+CheckMemberSize(struct servent,s_proto,8,11,33736);
+CheckOffset(struct servent,s_proto,24,11,33736);
+#elif 1
+CheckTypeSize(struct servent,0, 10134, 1);
+Msg("Missing member data for servent on All\n");
+CheckOffset(struct servent,s_name,0,1,33733);
+CheckOffset(struct servent,s_aliases,0,1,33734);
+CheckOffset(struct servent,s_port,0,1,33735);
+CheckOffset(struct servent,s_proto,0,1,33736);
 #endif
 
 #if __i386__
-CheckTypeSize(struct hostent,20, 10136, 2)
-CheckMemberSize(struct hostent,h_aliases,4,2,33738)
-CheckOffset(struct hostent,h_aliases,4,2,33738)
-CheckMemberSize(struct hostent,h_addrtype,4,2,33739)
-CheckOffset(struct hostent,h_addrtype,8,2,33739)
-CheckMemberSize(struct hostent,h_length,4,2,33740)
-CheckOffset(struct hostent,h_length,12,2,33740)
-CheckMemberSize(struct hostent,h_addr_list,4,2,33741)
-CheckOffset(struct hostent,h_addr_list,16,2,33741)
+CheckTypeSize(struct hostent,20, 10136, 2);
+CheckMemberSize(struct hostent,h_aliases,4,2,33738);
+CheckOffset(struct hostent,h_aliases,4,2,33738);
+CheckMemberSize(struct hostent,h_addrtype,4,2,33739);
+CheckOffset(struct hostent,h_addrtype,8,2,33739);
+CheckMemberSize(struct hostent,h_length,4,2,33740);
+CheckOffset(struct hostent,h_length,12,2,33740);
+CheckMemberSize(struct hostent,h_addr_list,4,2,33741);
+CheckOffset(struct hostent,h_addr_list,16,2,33741);
 #elif __ia64__
-CheckTypeSize(struct hostent,32, 10136, 3)
-CheckMemberSize(struct hostent,h_aliases,8,3,33738)
-CheckOffset(struct hostent,h_aliases,8,3,33738)
-CheckMemberSize(struct hostent,h_addrtype,4,3,33739)
-CheckOffset(struct hostent,h_addrtype,16,3,33739)
-CheckMemberSize(struct hostent,h_length,4,3,33740)
-CheckOffset(struct hostent,h_length,20,3,33740)
-CheckMemberSize(struct hostent,h_addr_list,8,3,33741)
-CheckOffset(struct hostent,h_addr_list,24,3,33741)
+CheckTypeSize(struct hostent,32, 10136, 3);
+CheckMemberSize(struct hostent,h_aliases,8,3,33738);
+CheckOffset(struct hostent,h_aliases,8,3,33738);
+CheckMemberSize(struct hostent,h_addrtype,4,3,33739);
+CheckOffset(struct hostent,h_addrtype,16,3,33739);
+CheckMemberSize(struct hostent,h_length,4,3,33740);
+CheckOffset(struct hostent,h_length,20,3,33740);
+CheckMemberSize(struct hostent,h_addr_list,8,3,33741);
+CheckOffset(struct hostent,h_addr_list,24,3,33741);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct hostent,20, 10136, 6)
-CheckMemberSize(struct hostent,h_aliases,4,6,33738)
-CheckOffset(struct hostent,h_aliases,4,6,33738)
-CheckMemberSize(struct hostent,h_addrtype,4,6,33739)
-CheckOffset(struct hostent,h_addrtype,8,6,33739)
-CheckMemberSize(struct hostent,h_length,4,6,33740)
-CheckOffset(struct hostent,h_length,12,6,33740)
-CheckMemberSize(struct hostent,h_addr_list,4,6,33741)
-CheckOffset(struct hostent,h_addr_list,16,6,33741)
+CheckTypeSize(struct hostent,20, 10136, 6);
+CheckMemberSize(struct hostent,h_aliases,4,6,33738);
+CheckOffset(struct hostent,h_aliases,4,6,33738);
+CheckMemberSize(struct hostent,h_addrtype,4,6,33739);
+CheckOffset(struct hostent,h_addrtype,8,6,33739);
+CheckMemberSize(struct hostent,h_length,4,6,33740);
+CheckOffset(struct hostent,h_length,12,6,33740);
+CheckMemberSize(struct hostent,h_addr_list,4,6,33741);
+CheckOffset(struct hostent,h_addr_list,16,6,33741);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct hostent,20, 10136, 10)
-CheckMemberSize(struct hostent,h_aliases,4,10,33738)
-CheckOffset(struct hostent,h_aliases,4,10,33738)
-CheckMemberSize(struct hostent,h_addrtype,4,10,33739)
-CheckOffset(struct hostent,h_addrtype,8,10,33739)
-CheckMemberSize(struct hostent,h_length,4,10,33740)
-CheckOffset(struct hostent,h_length,12,10,33740)
-CheckMemberSize(struct hostent,h_addr_list,4,10,33741)
-CheckOffset(struct hostent,h_addr_list,16,10,33741)
+CheckTypeSize(struct hostent,20, 10136, 10);
+CheckMemberSize(struct hostent,h_aliases,4,10,33738);
+CheckOffset(struct hostent,h_aliases,4,10,33738);
+CheckMemberSize(struct hostent,h_addrtype,4,10,33739);
+CheckOffset(struct hostent,h_addrtype,8,10,33739);
+CheckMemberSize(struct hostent,h_length,4,10,33740);
+CheckOffset(struct hostent,h_length,12,10,33740);
+CheckMemberSize(struct hostent,h_addr_list,4,10,33741);
+CheckOffset(struct hostent,h_addr_list,16,10,33741);
 #elif __powerpc64__
-CheckTypeSize(struct hostent,32, 10136, 9)
-CheckMemberSize(struct hostent,h_aliases,8,9,33738)
-CheckOffset(struct hostent,h_aliases,8,9,33738)
-CheckMemberSize(struct hostent,h_addrtype,4,9,33739)
-CheckOffset(struct hostent,h_addrtype,16,9,33739)
-CheckMemberSize(struct hostent,h_length,4,9,33740)
-CheckOffset(struct hostent,h_length,20,9,33740)
-CheckMemberSize(struct hostent,h_addr_list,8,9,33741)
-CheckOffset(struct hostent,h_addr_list,24,9,33741)
+CheckTypeSize(struct hostent,32, 10136, 9);
+CheckMemberSize(struct hostent,h_aliases,8,9,33738);
+CheckOffset(struct hostent,h_aliases,8,9,33738);
+CheckMemberSize(struct hostent,h_addrtype,4,9,33739);
+CheckOffset(struct hostent,h_addrtype,16,9,33739);
+CheckMemberSize(struct hostent,h_length,4,9,33740);
+CheckOffset(struct hostent,h_length,20,9,33740);
+CheckMemberSize(struct hostent,h_addr_list,8,9,33741);
+CheckOffset(struct hostent,h_addr_list,24,9,33741);
 #elif __s390x__
-CheckTypeSize(struct hostent,32, 10136, 12)
-CheckMemberSize(struct hostent,h_aliases,8,12,33738)
-CheckOffset(struct hostent,h_aliases,8,12,33738)
-CheckMemberSize(struct hostent,h_addrtype,4,12,33739)
-CheckOffset(struct hostent,h_addrtype,16,12,33739)
-CheckMemberSize(struct hostent,h_length,4,12,33740)
-CheckOffset(struct hostent,h_length,20,12,33740)
-CheckMemberSize(struct hostent,h_addr_list,8,12,33741)
-CheckOffset(struct hostent,h_addr_list,24,12,33741)
+CheckTypeSize(struct hostent,32, 10136, 12);
+CheckMemberSize(struct hostent,h_aliases,8,12,33738);
+CheckOffset(struct hostent,h_aliases,8,12,33738);
+CheckMemberSize(struct hostent,h_addrtype,4,12,33739);
+CheckOffset(struct hostent,h_addrtype,16,12,33739);
+CheckMemberSize(struct hostent,h_length,4,12,33740);
+CheckOffset(struct hostent,h_length,20,12,33740);
+CheckMemberSize(struct hostent,h_addr_list,8,12,33741);
+CheckOffset(struct hostent,h_addr_list,24,12,33741);
 #elif __x86_64__
-CheckTypeSize(struct hostent,32, 10136, 11)
-CheckMemberSize(struct hostent,h_aliases,8,11,33738)
-CheckOffset(struct hostent,h_aliases,8,11,33738)
-CheckMemberSize(struct hostent,h_addrtype,4,11,33739)
-CheckOffset(struct hostent,h_addrtype,16,11,33739)
-CheckMemberSize(struct hostent,h_length,4,11,33740)
-CheckOffset(struct hostent,h_length,20,11,33740)
-CheckMemberSize(struct hostent,h_addr_list,8,11,33741)
-CheckOffset(struct hostent,h_addr_list,24,11,33741)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10136,0);
-Msg("Find size of hostent (10136)\n");
+CheckTypeSize(struct hostent,32, 10136, 11);
+CheckMemberSize(struct hostent,h_aliases,8,11,33738);
+CheckOffset(struct hostent,h_aliases,8,11,33738);
+CheckMemberSize(struct hostent,h_addrtype,4,11,33739);
+CheckOffset(struct hostent,h_addrtype,16,11,33739);
+CheckMemberSize(struct hostent,h_length,4,11,33740);
+CheckOffset(struct hostent,h_length,20,11,33740);
+CheckMemberSize(struct hostent,h_addr_list,8,11,33741);
+CheckOffset(struct hostent,h_addr_list,24,11,33741);
+#elif 1
+CheckTypeSize(struct hostent,0, 10136, 1);
+Msg("Missing member data for hostent on All\n");
+CheckOffset(struct hostent,h_name,0,1,33737);
+CheckOffset(struct hostent,h_aliases,0,1,33738);
+CheckOffset(struct hostent,h_addrtype,0,1,33739);
+CheckOffset(struct hostent,h_length,0,1,33740);
+CheckOffset(struct hostent,h_addr_list,0,1,33741);
 #endif
 
 #if __i386__
-CheckTypeSize(struct protoent,12, 10139, 2)
-CheckMemberSize(struct protoent,p_name,4,2,33742)
-CheckOffset(struct protoent,p_name,0,2,33742)
-CheckMemberSize(struct protoent,p_aliases,4,2,33743)
-CheckOffset(struct protoent,p_aliases,4,2,33743)
-CheckMemberSize(struct protoent,p_proto,4,2,33744)
-CheckOffset(struct protoent,p_proto,8,2,33744)
+CheckTypeSize(struct protoent,12, 10139, 2);
+CheckMemberSize(struct protoent,p_name,4,2,33742);
+CheckOffset(struct protoent,p_name,0,2,33742);
+CheckMemberSize(struct protoent,p_aliases,4,2,33743);
+CheckOffset(struct protoent,p_aliases,4,2,33743);
+CheckMemberSize(struct protoent,p_proto,4,2,33744);
+CheckOffset(struct protoent,p_proto,8,2,33744);
 #elif __ia64__
-CheckTypeSize(struct protoent,24, 10139, 3)
-CheckMemberSize(struct protoent,p_aliases,8,3,33743)
-CheckOffset(struct protoent,p_aliases,8,3,33743)
-CheckMemberSize(struct protoent,p_proto,4,3,33744)
-CheckOffset(struct protoent,p_proto,16,3,33744)
+CheckTypeSize(struct protoent,24, 10139, 3);
+CheckMemberSize(struct protoent,p_aliases,8,3,33743);
+CheckOffset(struct protoent,p_aliases,8,3,33743);
+CheckMemberSize(struct protoent,p_proto,4,3,33744);
+CheckOffset(struct protoent,p_proto,16,3,33744);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct protoent,12, 10139, 10)
-CheckMemberSize(struct protoent,p_aliases,4,10,33743)
-CheckOffset(struct protoent,p_aliases,4,10,33743)
-CheckMemberSize(struct protoent,p_proto,4,10,33744)
-CheckOffset(struct protoent,p_proto,8,10,33744)
+CheckTypeSize(struct protoent,12, 10139, 10);
+CheckMemberSize(struct protoent,p_aliases,4,10,33743);
+CheckOffset(struct protoent,p_aliases,4,10,33743);
+CheckMemberSize(struct protoent,p_proto,4,10,33744);
+CheckOffset(struct protoent,p_proto,8,10,33744);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct protoent,12, 10139, 6)
-CheckMemberSize(struct protoent,p_aliases,4,6,33743)
-CheckOffset(struct protoent,p_aliases,4,6,33743)
-CheckMemberSize(struct protoent,p_proto,4,6,33744)
-CheckOffset(struct protoent,p_proto,8,6,33744)
+CheckTypeSize(struct protoent,12, 10139, 6);
+CheckMemberSize(struct protoent,p_aliases,4,6,33743);
+CheckOffset(struct protoent,p_aliases,4,6,33743);
+CheckMemberSize(struct protoent,p_proto,4,6,33744);
+CheckOffset(struct protoent,p_proto,8,6,33744);
 #elif __powerpc64__
-CheckTypeSize(struct protoent,24, 10139, 9)
-CheckMemberSize(struct protoent,p_aliases,8,9,33743)
-CheckOffset(struct protoent,p_aliases,8,9,33743)
-CheckMemberSize(struct protoent,p_proto,4,9,33744)
-CheckOffset(struct protoent,p_proto,16,9,33744)
+CheckTypeSize(struct protoent,24, 10139, 9);
+CheckMemberSize(struct protoent,p_aliases,8,9,33743);
+CheckOffset(struct protoent,p_aliases,8,9,33743);
+CheckMemberSize(struct protoent,p_proto,4,9,33744);
+CheckOffset(struct protoent,p_proto,16,9,33744);
 #elif __s390x__
-CheckTypeSize(struct protoent,24, 10139, 12)
-CheckMemberSize(struct protoent,p_aliases,8,12,33743)
-CheckOffset(struct protoent,p_aliases,8,12,33743)
-CheckMemberSize(struct protoent,p_proto,4,12,33744)
-CheckOffset(struct protoent,p_proto,16,12,33744)
+CheckTypeSize(struct protoent,24, 10139, 12);
+CheckMemberSize(struct protoent,p_aliases,8,12,33743);
+CheckOffset(struct protoent,p_aliases,8,12,33743);
+CheckMemberSize(struct protoent,p_proto,4,12,33744);
+CheckOffset(struct protoent,p_proto,16,12,33744);
 #elif __x86_64__
-CheckTypeSize(struct protoent,24, 10139, 11)
-CheckMemberSize(struct protoent,p_aliases,8,11,33743)
-CheckOffset(struct protoent,p_aliases,8,11,33743)
-CheckMemberSize(struct protoent,p_proto,4,11,33744)
-CheckOffset(struct protoent,p_proto,16,11,33744)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10139,0);
-Msg("Find size of protoent (10139)\n");
+CheckTypeSize(struct protoent,24, 10139, 11);
+CheckMemberSize(struct protoent,p_aliases,8,11,33743);
+CheckOffset(struct protoent,p_aliases,8,11,33743);
+CheckMemberSize(struct protoent,p_proto,4,11,33744);
+CheckOffset(struct protoent,p_proto,16,11,33744);
+#elif 1
+CheckTypeSize(struct protoent,0, 10139, 1);
+Msg("Missing member data for protoent on All\n");
+CheckOffset(struct protoent,p_name,0,1,33742);
+CheckOffset(struct protoent,p_aliases,0,1,33743);
+CheckOffset(struct protoent,p_proto,0,1,33744);
 #endif
 
 #if __ia64__
-CheckTypeSize(struct netent,24, 10141, 3)
-CheckMemberSize(struct netent,n_aliases,8,3,33746)
-CheckOffset(struct netent,n_aliases,8,3,33746)
-CheckMemberSize(struct netent,n_addrtype,4,3,33747)
-CheckOffset(struct netent,n_addrtype,16,3,33747)
-CheckMemberSize(struct netent,n_net,4,3,33748)
-CheckOffset(struct netent,n_net,20,3,33748)
+CheckTypeSize(struct netent,24, 10141, 3);
+CheckMemberSize(struct netent,n_aliases,8,3,33746);
+CheckOffset(struct netent,n_aliases,8,3,33746);
+CheckMemberSize(struct netent,n_addrtype,4,3,33747);
+CheckOffset(struct netent,n_addrtype,16,3,33747);
+CheckMemberSize(struct netent,n_net,4,3,33748);
+CheckOffset(struct netent,n_net,20,3,33748);
 #elif __i386__
-CheckTypeSize(struct netent,16, 10141, 2)
-CheckMemberSize(struct netent,n_aliases,4,2,33746)
-CheckOffset(struct netent,n_aliases,4,2,33746)
-CheckMemberSize(struct netent,n_addrtype,4,2,33747)
-CheckOffset(struct netent,n_addrtype,8,2,33747)
-CheckMemberSize(struct netent,n_net,4,2,33748)
-CheckOffset(struct netent,n_net,12,2,33748)
+CheckTypeSize(struct netent,16, 10141, 2);
+CheckMemberSize(struct netent,n_aliases,4,2,33746);
+CheckOffset(struct netent,n_aliases,4,2,33746);
+CheckMemberSize(struct netent,n_addrtype,4,2,33747);
+CheckOffset(struct netent,n_addrtype,8,2,33747);
+CheckMemberSize(struct netent,n_net,4,2,33748);
+CheckOffset(struct netent,n_net,12,2,33748);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct netent,16, 10141, 10)
-CheckMemberSize(struct netent,n_aliases,4,10,33746)
-CheckOffset(struct netent,n_aliases,4,10,33746)
-CheckMemberSize(struct netent,n_addrtype,4,10,33747)
-CheckOffset(struct netent,n_addrtype,8,10,33747)
-CheckMemberSize(struct netent,n_net,4,10,33748)
-CheckOffset(struct netent,n_net,12,10,33748)
+CheckTypeSize(struct netent,16, 10141, 10);
+CheckMemberSize(struct netent,n_aliases,4,10,33746);
+CheckOffset(struct netent,n_aliases,4,10,33746);
+CheckMemberSize(struct netent,n_addrtype,4,10,33747);
+CheckOffset(struct netent,n_addrtype,8,10,33747);
+CheckMemberSize(struct netent,n_net,4,10,33748);
+CheckOffset(struct netent,n_net,12,10,33748);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct netent,16, 10141, 6)
-CheckMemberSize(struct netent,n_aliases,4,6,33746)
-CheckOffset(struct netent,n_aliases,4,6,33746)
-CheckMemberSize(struct netent,n_addrtype,4,6,33747)
-CheckOffset(struct netent,n_addrtype,8,6,33747)
-CheckMemberSize(struct netent,n_net,4,6,33748)
-CheckOffset(struct netent,n_net,12,6,33748)
+CheckTypeSize(struct netent,16, 10141, 6);
+CheckMemberSize(struct netent,n_aliases,4,6,33746);
+CheckOffset(struct netent,n_aliases,4,6,33746);
+CheckMemberSize(struct netent,n_addrtype,4,6,33747);
+CheckOffset(struct netent,n_addrtype,8,6,33747);
+CheckMemberSize(struct netent,n_net,4,6,33748);
+CheckOffset(struct netent,n_net,12,6,33748);
 #elif __powerpc64__
-CheckTypeSize(struct netent,24, 10141, 9)
-CheckMemberSize(struct netent,n_aliases,8,9,33746)
-CheckOffset(struct netent,n_aliases,8,9,33746)
-CheckMemberSize(struct netent,n_addrtype,4,9,33747)
-CheckOffset(struct netent,n_addrtype,16,9,33747)
-CheckMemberSize(struct netent,n_net,4,9,33748)
-CheckOffset(struct netent,n_net,20,9,33748)
+CheckTypeSize(struct netent,24, 10141, 9);
+CheckMemberSize(struct netent,n_aliases,8,9,33746);
+CheckOffset(struct netent,n_aliases,8,9,33746);
+CheckMemberSize(struct netent,n_addrtype,4,9,33747);
+CheckOffset(struct netent,n_addrtype,16,9,33747);
+CheckMemberSize(struct netent,n_net,4,9,33748);
+CheckOffset(struct netent,n_net,20,9,33748);
 #elif __s390x__
-CheckTypeSize(struct netent,24, 10141, 12)
-CheckMemberSize(struct netent,n_aliases,8,12,33746)
-CheckOffset(struct netent,n_aliases,8,12,33746)
-CheckMemberSize(struct netent,n_addrtype,4,12,33747)
-CheckOffset(struct netent,n_addrtype,16,12,33747)
-CheckMemberSize(struct netent,n_net,4,12,33748)
-CheckOffset(struct netent,n_net,20,12,33748)
+CheckTypeSize(struct netent,24, 10141, 12);
+CheckMemberSize(struct netent,n_aliases,8,12,33746);
+CheckOffset(struct netent,n_aliases,8,12,33746);
+CheckMemberSize(struct netent,n_addrtype,4,12,33747);
+CheckOffset(struct netent,n_addrtype,16,12,33747);
+CheckMemberSize(struct netent,n_net,4,12,33748);
+CheckOffset(struct netent,n_net,20,12,33748);
 #elif __x86_64__
-CheckTypeSize(struct netent,24, 10141, 11)
-CheckMemberSize(struct netent,n_aliases,8,11,33746)
-CheckOffset(struct netent,n_aliases,8,11,33746)
-CheckMemberSize(struct netent,n_addrtype,4,11,33747)
-CheckOffset(struct netent,n_addrtype,16,11,33747)
-CheckMemberSize(struct netent,n_net,4,11,33748)
-CheckOffset(struct netent,n_net,20,11,33748)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10141,0);
-Msg("Find size of netent (10141)\n");
+CheckTypeSize(struct netent,24, 10141, 11);
+CheckMemberSize(struct netent,n_aliases,8,11,33746);
+CheckOffset(struct netent,n_aliases,8,11,33746);
+CheckMemberSize(struct netent,n_addrtype,4,11,33747);
+CheckOffset(struct netent,n_addrtype,16,11,33747);
+CheckMemberSize(struct netent,n_net,4,11,33748);
+CheckOffset(struct netent,n_net,20,11,33748);
+#elif 1
+CheckTypeSize(struct netent,0, 10141, 1);
+Msg("Missing member data for netent on All\n");
+CheckOffset(struct netent,n_name,0,1,33745);
+CheckOffset(struct netent,n_aliases,0,1,33746);
+CheckOffset(struct netent,n_addrtype,0,1,33747);
+CheckOffset(struct netent,n_net,0,1,33748);
 #endif
 
 #if __ia64__
-CheckTypeSize(struct addrinfo,48, 10125, 3)
-CheckMemberSize(struct addrinfo,ai_family,4,3,33695)
-CheckOffset(struct addrinfo,ai_family,4,3,33695)
-CheckMemberSize(struct addrinfo,ai_socktype,4,3,33696)
-CheckOffset(struct addrinfo,ai_socktype,8,3,33696)
-CheckMemberSize(struct addrinfo,ai_protocol,4,3,33697)
-CheckOffset(struct addrinfo,ai_protocol,12,3,33697)
-CheckMemberSize(struct addrinfo,ai_addrlen,4,3,33698)
-CheckOffset(struct addrinfo,ai_addrlen,16,3,33698)
-CheckMemberSize(struct addrinfo,ai_addr,8,3,33699)
-CheckOffset(struct addrinfo,ai_addr,24,3,33699)
-CheckMemberSize(struct addrinfo,ai_canonname,8,3,33700)
-CheckOffset(struct addrinfo,ai_canonname,32,3,33700)
-CheckMemberSize(struct addrinfo,ai_next,8,3,33701)
-CheckOffset(struct addrinfo,ai_next,40,3,33701)
+CheckTypeSize(struct addrinfo,48, 10125, 3);
+CheckMemberSize(struct addrinfo,ai_family,4,3,33695);
+CheckOffset(struct addrinfo,ai_family,4,3,33695);
+CheckMemberSize(struct addrinfo,ai_socktype,4,3,33696);
+CheckOffset(struct addrinfo,ai_socktype,8,3,33696);
+CheckMemberSize(struct addrinfo,ai_protocol,4,3,33697);
+CheckOffset(struct addrinfo,ai_protocol,12,3,33697);
+CheckMemberSize(struct addrinfo,ai_addrlen,4,3,33698);
+CheckOffset(struct addrinfo,ai_addrlen,16,3,33698);
+CheckMemberSize(struct addrinfo,ai_addr,8,3,33699);
+CheckOffset(struct addrinfo,ai_addr,24,3,33699);
+CheckMemberSize(struct addrinfo,ai_canonname,8,3,33700);
+CheckOffset(struct addrinfo,ai_canonname,32,3,33700);
+CheckMemberSize(struct addrinfo,ai_next,8,3,33701);
+CheckOffset(struct addrinfo,ai_next,40,3,33701);
 #elif __i386__
-CheckTypeSize(struct addrinfo,32, 10125, 2)
-CheckMemberSize(struct addrinfo,ai_family,4,2,33695)
-CheckOffset(struct addrinfo,ai_family,4,2,33695)
-CheckMemberSize(struct addrinfo,ai_socktype,4,2,33696)
-CheckOffset(struct addrinfo,ai_socktype,8,2,33696)
-CheckMemberSize(struct addrinfo,ai_protocol,4,2,33697)
-CheckOffset(struct addrinfo,ai_protocol,12,2,33697)
-CheckMemberSize(struct addrinfo,ai_addrlen,4,2,33698)
-CheckOffset(struct addrinfo,ai_addrlen,16,2,33698)
-CheckMemberSize(struct addrinfo,ai_addr,4,2,33699)
-CheckOffset(struct addrinfo,ai_addr,20,2,33699)
-CheckMemberSize(struct addrinfo,ai_canonname,4,2,33700)
-CheckOffset(struct addrinfo,ai_canonname,24,2,33700)
-CheckMemberSize(struct addrinfo,ai_next,4,2,33701)
-CheckOffset(struct addrinfo,ai_next,28,2,33701)
+CheckTypeSize(struct addrinfo,32, 10125, 2);
+CheckMemberSize(struct addrinfo,ai_family,4,2,33695);
+CheckOffset(struct addrinfo,ai_family,4,2,33695);
+CheckMemberSize(struct addrinfo,ai_socktype,4,2,33696);
+CheckOffset(struct addrinfo,ai_socktype,8,2,33696);
+CheckMemberSize(struct addrinfo,ai_protocol,4,2,33697);
+CheckOffset(struct addrinfo,ai_protocol,12,2,33697);
+CheckMemberSize(struct addrinfo,ai_addrlen,4,2,33698);
+CheckOffset(struct addrinfo,ai_addrlen,16,2,33698);
+CheckMemberSize(struct addrinfo,ai_addr,4,2,33699);
+CheckOffset(struct addrinfo,ai_addr,20,2,33699);
+CheckMemberSize(struct addrinfo,ai_canonname,4,2,33700);
+CheckOffset(struct addrinfo,ai_canonname,24,2,33700);
+CheckMemberSize(struct addrinfo,ai_next,4,2,33701);
+CheckOffset(struct addrinfo,ai_next,28,2,33701);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct addrinfo,32, 10125, 10)
-CheckMemberSize(struct addrinfo,ai_family,4,10,33695)
-CheckOffset(struct addrinfo,ai_family,4,10,33695)
-CheckMemberSize(struct addrinfo,ai_socktype,4,10,33696)
-CheckOffset(struct addrinfo,ai_socktype,8,10,33696)
-CheckMemberSize(struct addrinfo,ai_protocol,4,10,33697)
-CheckOffset(struct addrinfo,ai_protocol,12,10,33697)
-CheckMemberSize(struct addrinfo,ai_addrlen,4,10,33698)
-CheckOffset(struct addrinfo,ai_addrlen,16,10,33698)
-CheckMemberSize(struct addrinfo,ai_addr,4,10,33699)
-CheckOffset(struct addrinfo,ai_addr,20,10,33699)
-CheckMemberSize(struct addrinfo,ai_canonname,4,10,33700)
-CheckOffset(struct addrinfo,ai_canonname,24,10,33700)
-CheckMemberSize(struct addrinfo,ai_next,4,10,33701)
-CheckOffset(struct addrinfo,ai_next,28,10,33701)
+CheckTypeSize(struct addrinfo,32, 10125, 10);
+CheckMemberSize(struct addrinfo,ai_family,4,10,33695);
+CheckOffset(struct addrinfo,ai_family,4,10,33695);
+CheckMemberSize(struct addrinfo,ai_socktype,4,10,33696);
+CheckOffset(struct addrinfo,ai_socktype,8,10,33696);
+CheckMemberSize(struct addrinfo,ai_protocol,4,10,33697);
+CheckOffset(struct addrinfo,ai_protocol,12,10,33697);
+CheckMemberSize(struct addrinfo,ai_addrlen,4,10,33698);
+CheckOffset(struct addrinfo,ai_addrlen,16,10,33698);
+CheckMemberSize(struct addrinfo,ai_addr,4,10,33699);
+CheckOffset(struct addrinfo,ai_addr,20,10,33699);
+CheckMemberSize(struct addrinfo,ai_canonname,4,10,33700);
+CheckOffset(struct addrinfo,ai_canonname,24,10,33700);
+CheckMemberSize(struct addrinfo,ai_next,4,10,33701);
+CheckOffset(struct addrinfo,ai_next,28,10,33701);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct addrinfo,32, 10125, 6)
-CheckMemberSize(struct addrinfo,ai_family,4,6,33695)
-CheckOffset(struct addrinfo,ai_family,4,6,33695)
-CheckMemberSize(struct addrinfo,ai_socktype,4,6,33696)
-CheckOffset(struct addrinfo,ai_socktype,8,6,33696)
-CheckMemberSize(struct addrinfo,ai_protocol,4,6,33697)
-CheckOffset(struct addrinfo,ai_protocol,12,6,33697)
-CheckMemberSize(struct addrinfo,ai_addrlen,4,6,33698)
-CheckOffset(struct addrinfo,ai_addrlen,16,6,33698)
-CheckMemberSize(struct addrinfo,ai_addr,4,6,33699)
-CheckOffset(struct addrinfo,ai_addr,20,6,33699)
-CheckMemberSize(struct addrinfo,ai_canonname,4,6,33700)
-CheckOffset(struct addrinfo,ai_canonname,24,6,33700)
-CheckMemberSize(struct addrinfo,ai_next,4,6,33701)
-CheckOffset(struct addrinfo,ai_next,28,6,33701)
+CheckTypeSize(struct addrinfo,32, 10125, 6);
+CheckMemberSize(struct addrinfo,ai_family,4,6,33695);
+CheckOffset(struct addrinfo,ai_family,4,6,33695);
+CheckMemberSize(struct addrinfo,ai_socktype,4,6,33696);
+CheckOffset(struct addrinfo,ai_socktype,8,6,33696);
+CheckMemberSize(struct addrinfo,ai_protocol,4,6,33697);
+CheckOffset(struct addrinfo,ai_protocol,12,6,33697);
+CheckMemberSize(struct addrinfo,ai_addrlen,4,6,33698);
+CheckOffset(struct addrinfo,ai_addrlen,16,6,33698);
+CheckMemberSize(struct addrinfo,ai_addr,4,6,33699);
+CheckOffset(struct addrinfo,ai_addr,20,6,33699);
+CheckMemberSize(struct addrinfo,ai_canonname,4,6,33700);
+CheckOffset(struct addrinfo,ai_canonname,24,6,33700);
+CheckMemberSize(struct addrinfo,ai_next,4,6,33701);
+CheckOffset(struct addrinfo,ai_next,28,6,33701);
 #elif __powerpc64__
-CheckTypeSize(struct addrinfo,48, 10125, 9)
-CheckMemberSize(struct addrinfo,ai_family,4,9,33695)
-CheckOffset(struct addrinfo,ai_family,4,9,33695)
-CheckMemberSize(struct addrinfo,ai_socktype,4,9,33696)
-CheckOffset(struct addrinfo,ai_socktype,8,9,33696)
-CheckMemberSize(struct addrinfo,ai_protocol,4,9,33697)
-CheckOffset(struct addrinfo,ai_protocol,12,9,33697)
-CheckMemberSize(struct addrinfo,ai_addrlen,4,9,33698)
-CheckOffset(struct addrinfo,ai_addrlen,16,9,33698)
-CheckMemberSize(struct addrinfo,ai_addr,8,9,33699)
-CheckOffset(struct addrinfo,ai_addr,24,9,33699)
-CheckMemberSize(struct addrinfo,ai_canonname,8,9,33700)
-CheckOffset(struct addrinfo,ai_canonname,32,9,33700)
-CheckMemberSize(struct addrinfo,ai_next,8,9,33701)
-CheckOffset(struct addrinfo,ai_next,40,9,33701)
+CheckTypeSize(struct addrinfo,48, 10125, 9);
+CheckMemberSize(struct addrinfo,ai_family,4,9,33695);
+CheckOffset(struct addrinfo,ai_family,4,9,33695);
+CheckMemberSize(struct addrinfo,ai_socktype,4,9,33696);
+CheckOffset(struct addrinfo,ai_socktype,8,9,33696);
+CheckMemberSize(struct addrinfo,ai_protocol,4,9,33697);
+CheckOffset(struct addrinfo,ai_protocol,12,9,33697);
+CheckMemberSize(struct addrinfo,ai_addrlen,4,9,33698);
+CheckOffset(struct addrinfo,ai_addrlen,16,9,33698);
+CheckMemberSize(struct addrinfo,ai_addr,8,9,33699);
+CheckOffset(struct addrinfo,ai_addr,24,9,33699);
+CheckMemberSize(struct addrinfo,ai_canonname,8,9,33700);
+CheckOffset(struct addrinfo,ai_canonname,32,9,33700);
+CheckMemberSize(struct addrinfo,ai_next,8,9,33701);
+CheckOffset(struct addrinfo,ai_next,40,9,33701);
 #elif __s390x__
-CheckTypeSize(struct addrinfo,48, 10125, 12)
-CheckMemberSize(struct addrinfo,ai_family,4,12,33695)
-CheckOffset(struct addrinfo,ai_family,4,12,33695)
-CheckMemberSize(struct addrinfo,ai_socktype,4,12,33696)
-CheckOffset(struct addrinfo,ai_socktype,8,12,33696)
-CheckMemberSize(struct addrinfo,ai_protocol,4,12,33697)
-CheckOffset(struct addrinfo,ai_protocol,12,12,33697)
-CheckMemberSize(struct addrinfo,ai_addrlen,4,12,33698)
-CheckOffset(struct addrinfo,ai_addrlen,16,12,33698)
-CheckMemberSize(struct addrinfo,ai_addr,8,12,33699)
-CheckOffset(struct addrinfo,ai_addr,24,12,33699)
-CheckMemberSize(struct addrinfo,ai_canonname,8,12,33700)
-CheckOffset(struct addrinfo,ai_canonname,32,12,33700)
-CheckMemberSize(struct addrinfo,ai_next,8,12,33701)
-CheckOffset(struct addrinfo,ai_next,40,12,33701)
+CheckTypeSize(struct addrinfo,48, 10125, 12);
+CheckMemberSize(struct addrinfo,ai_family,4,12,33695);
+CheckOffset(struct addrinfo,ai_family,4,12,33695);
+CheckMemberSize(struct addrinfo,ai_socktype,4,12,33696);
+CheckOffset(struct addrinfo,ai_socktype,8,12,33696);
+CheckMemberSize(struct addrinfo,ai_protocol,4,12,33697);
+CheckOffset(struct addrinfo,ai_protocol,12,12,33697);
+CheckMemberSize(struct addrinfo,ai_addrlen,4,12,33698);
+CheckOffset(struct addrinfo,ai_addrlen,16,12,33698);
+CheckMemberSize(struct addrinfo,ai_addr,8,12,33699);
+CheckOffset(struct addrinfo,ai_addr,24,12,33699);
+CheckMemberSize(struct addrinfo,ai_canonname,8,12,33700);
+CheckOffset(struct addrinfo,ai_canonname,32,12,33700);
+CheckMemberSize(struct addrinfo,ai_next,8,12,33701);
+CheckOffset(struct addrinfo,ai_next,40,12,33701);
 #elif __x86_64__
-CheckTypeSize(struct addrinfo,48, 10125, 11)
-CheckMemberSize(struct addrinfo,ai_family,4,11,33695)
-CheckOffset(struct addrinfo,ai_family,4,11,33695)
-CheckMemberSize(struct addrinfo,ai_socktype,4,11,33696)
-CheckOffset(struct addrinfo,ai_socktype,8,11,33696)
-CheckMemberSize(struct addrinfo,ai_protocol,4,11,33697)
-CheckOffset(struct addrinfo,ai_protocol,12,11,33697)
-CheckMemberSize(struct addrinfo,ai_addrlen,4,11,33698)
-CheckOffset(struct addrinfo,ai_addrlen,16,11,33698)
-CheckMemberSize(struct addrinfo,ai_addr,8,11,33699)
-CheckOffset(struct addrinfo,ai_addr,24,11,33699)
-CheckMemberSize(struct addrinfo,ai_canonname,8,11,33700)
-CheckOffset(struct addrinfo,ai_canonname,32,11,33700)
-CheckMemberSize(struct addrinfo,ai_next,8,11,33701)
-CheckOffset(struct addrinfo,ai_next,40,11,33701)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10125,0);
-Msg("Find size of addrinfo (10125)\n");
+CheckTypeSize(struct addrinfo,48, 10125, 11);
+CheckMemberSize(struct addrinfo,ai_family,4,11,33695);
+CheckOffset(struct addrinfo,ai_family,4,11,33695);
+CheckMemberSize(struct addrinfo,ai_socktype,4,11,33696);
+CheckOffset(struct addrinfo,ai_socktype,8,11,33696);
+CheckMemberSize(struct addrinfo,ai_protocol,4,11,33697);
+CheckOffset(struct addrinfo,ai_protocol,12,11,33697);
+CheckMemberSize(struct addrinfo,ai_addrlen,4,11,33698);
+CheckOffset(struct addrinfo,ai_addrlen,16,11,33698);
+CheckMemberSize(struct addrinfo,ai_addr,8,11,33699);
+CheckOffset(struct addrinfo,ai_addr,24,11,33699);
+CheckMemberSize(struct addrinfo,ai_canonname,8,11,33700);
+CheckOffset(struct addrinfo,ai_canonname,32,11,33700);
+CheckMemberSize(struct addrinfo,ai_next,8,11,33701);
+CheckOffset(struct addrinfo,ai_next,40,11,33701);
+#elif 1
+CheckTypeSize(struct addrinfo,0, 10125, 1);
+CheckMemberSize(struct addrinfo,ai_flags,4,1,33694);
+CheckOffset(struct addrinfo,ai_flags,0,1,33694);
 #endif
 
 extern void endprotoent_db(void);
