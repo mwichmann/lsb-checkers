@@ -37,21 +37,18 @@ struct SectionInfo SectionInfo[] = {
 #if __powerpc__ && !__powerpc64__
 	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE+SHF_EXECINSTR,checkPROGBITS},
 #endif /* __powerpc__ && !__powerpc64__ */
-#if __s390__ && !__s390x__
-	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
-#endif /* __s390__ && !__s390x__ */
 #if __powerpc64__
 	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* __powerpc64__ */
-#if __s390x__
+#if __s390__ && !__s390x__
 	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
-#endif /* __s390x__ */
+#endif /* __s390__ && !__s390x__ */
 #if __x86_64__
 	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* __x86_64__ */
-#if __m32r__
+#if __s390x__
 	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
-#endif /* __m32r__ */
+#endif /* __s390x__ */
 	{".got.plt",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #if __powerpc__ && !__powerpc64__
 	{".got2",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
@@ -76,12 +73,12 @@ struct SectionInfo SectionInfo[] = {
 	{".line",SHT_PROGBITS,0,checkPROGBITS},
 	{".note",SHT_NOTE,0,checkNOTE},
 	{".note.ABI-tag",SHT_NOTE,SHF_ALLOC,checkNOTE},
-#if __powerpc64__
-	{".opd",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
-#endif /* __powerpc64__ */
 #if __ia64__
 	{".opd",SHT_PROGBITS,SHF_ALLOC,checkPROGBITS},
 #endif /* __ia64__ */
+#if __powerpc64__
+	{".opd",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
+#endif /* __powerpc64__ */
 #if __i386__
 	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
 #endif /* __i386__ */
@@ -91,21 +88,18 @@ struct SectionInfo SectionInfo[] = {
 #if __powerpc__ && !__powerpc64__
 	{".plt",SHT_NOBITS,SHF_ALLOC+SHF_WRITE+SHF_EXECINSTR,checkNOBITS},
 #endif /* __powerpc__ && !__powerpc64__ */
-#if __s390__ && !__s390x__
-	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
-#endif /* __s390__ && !__s390x__ */
 #if __powerpc64__
 	{".plt",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
 #endif /* __powerpc64__ */
-#if __s390x__
+#if __s390__ && !__s390x__
 	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
-#endif /* __s390x__ */
+#endif /* __s390__ && !__s390x__ */
 #if __x86_64__
 	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
 #endif /* __x86_64__ */
-#if __m32r__
-	{".plt",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
-#endif /* __m32r__ */
+#if __s390x__
+	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
+#endif /* __s390x__ */
 	{".preinit_array",SHT_PREINIT_ARRAY,SHF_ALLOC+SHF_WRITE,checkPREINIT_ARRAY},
 #if __i386__
 	{".rel.bss",SHT_REL,SHF_ALLOC,checkREL},
@@ -149,21 +143,18 @@ struct SectionInfo SectionInfo[] = {
 #if __powerpc__ && !__powerpc64__
 	{".rela.dyn",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __powerpc__ && !__powerpc64__ */
-#if __s390__ && !__s390x__
-	{".rela.dyn",SHT_RELA,SHF_ALLOC,checkRELA},
-#endif /* __s390__ && !__s390x__ */
 #if __powerpc64__
 	{".rela.dyn",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __powerpc64__ */
-#if __s390x__
+#if __s390__ && !__s390x__
 	{".rela.dyn",SHT_RELA,SHF_ALLOC,checkRELA},
-#endif /* __s390x__ */
+#endif /* __s390__ && !__s390x__ */
 #if __x86_64__
 	{".rela.dyn",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __x86_64__ */
-#if __m32r__
+#if __s390x__
 	{".rela.dyn",SHT_RELA,SHF_ALLOC,checkRELA},
-#endif /* __m32r__ */
+#endif /* __s390x__ */
 #if __powerpc__ && !__powerpc64__
 	{".rela.got",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __powerpc__ && !__powerpc64__ */
@@ -176,21 +167,18 @@ struct SectionInfo SectionInfo[] = {
 #if __powerpc__ && !__powerpc64__
 	{".rela.plt",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __powerpc__ && !__powerpc64__ */
-#if __s390__ && !__s390x__
-	{".rela.plt",SHT_RELA,SHF_ALLOC,checkRELA},
-#endif /* __s390__ && !__s390x__ */
 #if __powerpc64__
 	{".rela.plt",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __powerpc64__ */
-#if __s390x__
+#if __s390__ && !__s390x__
 	{".rela.plt",SHT_RELA,SHF_ALLOC,checkRELA},
-#endif /* __s390x__ */
+#endif /* __s390__ && !__s390x__ */
 #if __x86_64__
 	{".rela.plt",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __x86_64__ */
-#if __m32r__
+#if __s390x__
 	{".rela.plt",SHT_RELA,SHF_ALLOC,checkRELA},
-#endif /* __m32r__ */
+#endif /* __s390x__ */
 #if __powerpc__ && !__powerpc64__
 	{".rela.sbss",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* __powerpc__ && !__powerpc64__ */
@@ -202,15 +190,12 @@ struct SectionInfo SectionInfo[] = {
 #if __powerpc__ && !__powerpc64__
 	{".sbss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
 #endif /* __powerpc__ && !__powerpc64__ */
-#if __s390x__
-	{".sbss",SHT_PROGBITS,SHF_WRITE,checkPROGBITS},
-#endif /* __s390x__ */
 #if __powerpc64__
 	{".sbss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
 #endif /* __powerpc64__ */
-#if __m32r__
-	{".sbss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
-#endif /* __m32r__ */
+#if __s390x__
+	{".sbss",SHT_PROGBITS,SHF_WRITE,checkPROGBITS},
+#endif /* __s390x__ */
 #if __ia64__
 	{".sdata",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE+SHF_IA_64_SHORT,checkPROGBITS},
 #endif /* __ia64__ */

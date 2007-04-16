@@ -116,9 +116,19 @@ CheckEnum("_ISblank",_ISblank,1,29690);
 CheckEnum("_IScntrl",_IScntrl,2,29691);
 CheckEnum("_ISpunct",_ISpunct,4,29692);
 CheckEnum("_ISalnum",_ISalnum,8,29693);
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8976,0);
-Msg("Find size of anon-ctype.h-13 (8976)\n");
+#elif 1
+CheckEnum("_ISupper",_ISupper,256,29682);
+CheckEnum("_ISlower",_ISlower,512,29683);
+CheckEnum("_ISalpha",_ISalpha,1024,29684);
+CheckEnum("_ISdigit",_ISdigit,2048,29685);
+CheckEnum("_ISxdigit",_ISxdigit,4096,29686);
+CheckEnum("_ISspace",_ISspace,8192,29687);
+CheckEnum("_ISprint",_ISprint,16384,29688);
+CheckEnum("_ISgraph",_ISgraph,32768,29689);
+CheckEnum("_ISblank",_ISblank,1,29690);
+CheckEnum("_IScntrl",_IScntrl,2,29691);
+CheckEnum("_ISpunct",_ISpunct,4,29692);
+CheckEnum("_ISalnum",_ISalnum,8,29693);
 #endif
 
 extern int _tolower_db(int);

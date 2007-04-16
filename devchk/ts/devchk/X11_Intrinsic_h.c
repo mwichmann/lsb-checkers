@@ -26,440 +26,417 @@ Msg("Checking data structures in X11/Intrinsic.h\n");
 
 printf("Checking data structures in X11/Intrinsic.h\n");
 #if __i386__
-CheckTypeSize(Widget,4, 9578, 2)
+CheckTypeSize(Widget,4, 9578, 2);
 #elif __ia64__
-CheckTypeSize(Widget,8, 9578, 3)
+CheckTypeSize(Widget,8, 9578, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(Widget,4, 9578, 6)
+CheckTypeSize(Widget,4, 9578, 6);
 #elif __s390x__
-CheckTypeSize(Widget,8, 9578, 12)
+CheckTypeSize(Widget,8, 9578, 12);
 #elif __s390__ && !__s390x__
-CheckTypeSize(Widget,4, 9578, 10)
+CheckTypeSize(Widget,4, 9578, 10);
 #elif __x86_64__
-CheckTypeSize(Widget,8, 9578, 11)
+CheckTypeSize(Widget,8, 9578, 11);
 #elif __powerpc64__
-CheckTypeSize(Widget,8, 9578, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9578,0);
-Msg("Find size of Widget (9578)\n");
+CheckTypeSize(Widget,8, 9578, 9);
+#elif 1
+CheckTypeSize(Widget,0, 9578, 1);
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckTypeSize(WidgetList,4, 9580, 6)
+CheckTypeSize(WidgetList,4, 9580, 6);
 #elif __i386__
-CheckTypeSize(WidgetList,4, 9580, 2)
+CheckTypeSize(WidgetList,4, 9580, 2);
 #elif __s390x__
-CheckTypeSize(WidgetList,8, 9580, 12)
+CheckTypeSize(WidgetList,8, 9580, 12);
 #elif __ia64__
-CheckTypeSize(WidgetList,8, 9580, 3)
+CheckTypeSize(WidgetList,8, 9580, 3);
 #elif __s390__ && !__s390x__
-CheckTypeSize(WidgetList,4, 9580, 10)
+CheckTypeSize(WidgetList,4, 9580, 10);
 #elif __x86_64__
-CheckTypeSize(WidgetList,8, 9580, 11)
+CheckTypeSize(WidgetList,8, 9580, 11);
 #elif __powerpc64__
-CheckTypeSize(WidgetList,8, 9580, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9580,0);
-Msg("Find size of WidgetList (9580)\n");
+CheckTypeSize(WidgetList,8, 9580, 9);
+#elif 1
+CheckTypeSize(WidgetList,0, 9580, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(WidgetClass,4, 9583, 2)
+CheckTypeSize(WidgetClass,4, 9583, 2);
 #elif __ia64__
-CheckTypeSize(WidgetClass,8, 9583, 3)
+CheckTypeSize(WidgetClass,8, 9583, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(WidgetClass,4, 9583, 6)
+CheckTypeSize(WidgetClass,4, 9583, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(WidgetClass,4, 9583, 10)
+CheckTypeSize(WidgetClass,4, 9583, 10);
 #elif __powerpc64__
-CheckTypeSize(WidgetClass,8, 9583, 9)
+CheckTypeSize(WidgetClass,8, 9583, 9);
 #elif __s390x__
-CheckTypeSize(WidgetClass,8, 9583, 12)
+CheckTypeSize(WidgetClass,8, 9583, 12);
 #elif __x86_64__
-CheckTypeSize(WidgetClass,8, 9583, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9583,0);
-Msg("Find size of WidgetClass (9583)\n");
+CheckTypeSize(WidgetClass,8, 9583, 11);
+#elif 1
+CheckTypeSize(WidgetClass,0, 9583, 1);
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckTypeSize(CompositeWidget,4, 9586, 6)
+CheckTypeSize(CompositeWidget,4, 9586, 6);
 #elif __i386__
-CheckTypeSize(CompositeWidget,4, 9586, 2)
+CheckTypeSize(CompositeWidget,4, 9586, 2);
 #elif __s390x__
-CheckTypeSize(CompositeWidget,8, 9586, 12)
+CheckTypeSize(CompositeWidget,8, 9586, 12);
 #elif __ia64__
-CheckTypeSize(CompositeWidget,8, 9586, 3)
+CheckTypeSize(CompositeWidget,8, 9586, 3);
 #elif __s390__ && !__s390x__
-CheckTypeSize(CompositeWidget,4, 9586, 10)
+CheckTypeSize(CompositeWidget,4, 9586, 10);
 #elif __x86_64__
-CheckTypeSize(CompositeWidget,8, 9586, 11)
+CheckTypeSize(CompositeWidget,8, 9586, 11);
 #elif __powerpc64__
-CheckTypeSize(CompositeWidget,8, 9586, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9586,0);
-Msg("Find size of CompositeWidget (9586)\n");
+CheckTypeSize(CompositeWidget,8, 9586, 9);
+#elif 1
+CheckTypeSize(CompositeWidget,0, 9586, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(XtActionList,4, 9589, 2)
+CheckTypeSize(XtActionList,4, 9589, 2);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(XtActionList,4, 9589, 6)
+CheckTypeSize(XtActionList,4, 9589, 6);
 #elif __s390x__
-CheckTypeSize(XtActionList,8, 9589, 12)
+CheckTypeSize(XtActionList,8, 9589, 12);
 #elif __ia64__
-CheckTypeSize(XtActionList,8, 9589, 3)
+CheckTypeSize(XtActionList,8, 9589, 3);
 #elif __s390__ && !__s390x__
-CheckTypeSize(XtActionList,4, 9589, 10)
+CheckTypeSize(XtActionList,4, 9589, 10);
 #elif __x86_64__
-CheckTypeSize(XtActionList,8, 9589, 11)
+CheckTypeSize(XtActionList,8, 9589, 11);
 #elif __powerpc64__
-CheckTypeSize(XtActionList,8, 9589, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9589,0);
-Msg("Find size of XtActionList (9589)\n");
+CheckTypeSize(XtActionList,8, 9589, 9);
+#elif 1
+CheckTypeSize(XtActionList,0, 9589, 1);
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckTypeSize(XtEventTable,4, 9592, 6)
+CheckTypeSize(XtEventTable,4, 9592, 6);
 #elif __i386__
-CheckTypeSize(XtEventTable,4, 9592, 2)
+CheckTypeSize(XtEventTable,4, 9592, 2);
 #elif __s390x__
-CheckTypeSize(XtEventTable,8, 9592, 12)
+CheckTypeSize(XtEventTable,8, 9592, 12);
 #elif __ia64__
-CheckTypeSize(XtEventTable,8, 9592, 3)
+CheckTypeSize(XtEventTable,8, 9592, 3);
 #elif __s390__ && !__s390x__
-CheckTypeSize(XtEventTable,4, 9592, 10)
+CheckTypeSize(XtEventTable,4, 9592, 10);
 #elif __x86_64__
-CheckTypeSize(XtEventTable,8, 9592, 11)
+CheckTypeSize(XtEventTable,8, 9592, 11);
 #elif __powerpc64__
-CheckTypeSize(XtEventTable,8, 9592, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9592,0);
-Msg("Find size of XtEventTable (9592)\n");
+CheckTypeSize(XtEventTable,8, 9592, 9);
+#elif 1
+CheckTypeSize(XtEventTable,0, 9592, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(XtAppContext,4, 9595, 2)
+CheckTypeSize(XtAppContext,4, 9595, 2);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(XtAppContext,4, 9595, 6)
+CheckTypeSize(XtAppContext,4, 9595, 6);
 #elif __s390x__
-CheckTypeSize(XtAppContext,8, 9595, 12)
+CheckTypeSize(XtAppContext,8, 9595, 12);
 #elif __ia64__
-CheckTypeSize(XtAppContext,8, 9595, 3)
+CheckTypeSize(XtAppContext,8, 9595, 3);
 #elif __s390__ && !__s390x__
-CheckTypeSize(XtAppContext,4, 9595, 10)
+CheckTypeSize(XtAppContext,4, 9595, 10);
 #elif __x86_64__
-CheckTypeSize(XtAppContext,8, 9595, 11)
+CheckTypeSize(XtAppContext,8, 9595, 11);
 #elif __powerpc64__
-CheckTypeSize(XtAppContext,8, 9595, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9595,0);
-Msg("Find size of XtAppContext (9595)\n");
+CheckTypeSize(XtAppContext,8, 9595, 9);
+#elif 1
+CheckTypeSize(XtAppContext,0, 9595, 1);
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckTypeSize(XtValueMask,4, 9596, 6)
+CheckTypeSize(XtValueMask,4, 9596, 6);
 #elif __i386__
-CheckTypeSize(XtValueMask,4, 9596, 2)
+CheckTypeSize(XtValueMask,4, 9596, 2);
 #elif __s390x__
-CheckTypeSize(XtValueMask,8, 9596, 12)
+CheckTypeSize(XtValueMask,8, 9596, 12);
 #elif __ia64__
-CheckTypeSize(XtValueMask,8, 9596, 3)
+CheckTypeSize(XtValueMask,8, 9596, 3);
 #elif __s390__ && !__s390x__
-CheckTypeSize(XtValueMask,4, 9596, 10)
+CheckTypeSize(XtValueMask,4, 9596, 10);
 #elif __x86_64__
-CheckTypeSize(XtValueMask,8, 9596, 11)
+CheckTypeSize(XtValueMask,8, 9596, 11);
 #elif __powerpc64__
-CheckTypeSize(XtValueMask,8, 9596, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9596,0);
-Msg("Find size of XtValueMask (9596)\n");
+CheckTypeSize(XtValueMask,8, 9596, 9);
+#elif 1
+CheckTypeSize(XtValueMask,0, 9596, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(XtIntervalId,4, 9597, 2)
+CheckTypeSize(XtIntervalId,4, 9597, 2);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(XtIntervalId,4, 9597, 6)
+CheckTypeSize(XtIntervalId,4, 9597, 6);
 #elif __s390x__
-CheckTypeSize(XtIntervalId,8, 9597, 12)
+CheckTypeSize(XtIntervalId,8, 9597, 12);
 #elif __ia64__
-CheckTypeSize(XtIntervalId,8, 9597, 3)
+CheckTypeSize(XtIntervalId,8, 9597, 3);
 #elif __s390__ && !__s390x__
-CheckTypeSize(XtIntervalId,4, 9597, 10)
+CheckTypeSize(XtIntervalId,4, 9597, 10);
 #elif __x86_64__
-CheckTypeSize(XtIntervalId,8, 9597, 11)
+CheckTypeSize(XtIntervalId,8, 9597, 11);
 #elif __powerpc64__
-CheckTypeSize(XtIntervalId,8, 9597, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9597,0);
-Msg("Find size of XtIntervalId (9597)\n");
+CheckTypeSize(XtIntervalId,8, 9597, 9);
+#elif 1
+CheckTypeSize(XtIntervalId,0, 9597, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(XtInputId,4, 9598, 2)
+CheckTypeSize(XtInputId,4, 9598, 2);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(XtInputId,4, 9598, 6)
+CheckTypeSize(XtInputId,4, 9598, 6);
 #elif __s390x__
-CheckTypeSize(XtInputId,8, 9598, 12)
+CheckTypeSize(XtInputId,8, 9598, 12);
 #elif __ia64__
-CheckTypeSize(XtInputId,8, 9598, 3)
+CheckTypeSize(XtInputId,8, 9598, 3);
 #elif __s390__ && !__s390x__
-CheckTypeSize(XtInputId,4, 9598, 10)
+CheckTypeSize(XtInputId,4, 9598, 10);
 #elif __x86_64__
-CheckTypeSize(XtInputId,8, 9598, 11)
+CheckTypeSize(XtInputId,8, 9598, 11);
 #elif __powerpc64__
-CheckTypeSize(XtInputId,8, 9598, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9598,0);
-Msg("Find size of XtInputId (9598)\n");
+CheckTypeSize(XtInputId,8, 9598, 9);
+#elif 1
+CheckTypeSize(XtInputId,0, 9598, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(XtSignalId,4, 9600, 2)
+CheckTypeSize(XtSignalId,4, 9600, 2);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(XtSignalId,4, 9600, 6)
+CheckTypeSize(XtSignalId,4, 9600, 6);
 #elif __s390x__
-CheckTypeSize(XtSignalId,8, 9600, 12)
+CheckTypeSize(XtSignalId,8, 9600, 12);
 #elif __ia64__
-CheckTypeSize(XtSignalId,8, 9600, 3)
+CheckTypeSize(XtSignalId,8, 9600, 3);
 #elif __s390__ && !__s390x__
-CheckTypeSize(XtSignalId,4, 9600, 10)
+CheckTypeSize(XtSignalId,4, 9600, 10);
 #elif __x86_64__
-CheckTypeSize(XtSignalId,8, 9600, 11)
+CheckTypeSize(XtSignalId,8, 9600, 11);
 #elif __powerpc64__
-CheckTypeSize(XtSignalId,8, 9600, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9600,0);
-Msg("Find size of XtSignalId (9600)\n");
+CheckTypeSize(XtSignalId,8, 9600, 9);
+#elif 1
+CheckTypeSize(XtSignalId,0, 9600, 1);
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckTypeSize(XtGeometryMask,4, 9601, 6)
+CheckTypeSize(XtGeometryMask,4, 9601, 6);
 #elif __i386__
-CheckTypeSize(XtGeometryMask,4, 9601, 2)
+CheckTypeSize(XtGeometryMask,4, 9601, 2);
 #elif __s390x__
-CheckTypeSize(XtGeometryMask,4, 9601, 12)
+CheckTypeSize(XtGeometryMask,4, 9601, 12);
 #elif __ia64__
-CheckTypeSize(XtGeometryMask,4, 9601, 3)
+CheckTypeSize(XtGeometryMask,4, 9601, 3);
 #elif __s390__ && !__s390x__
-CheckTypeSize(XtGeometryMask,4, 9601, 10)
+CheckTypeSize(XtGeometryMask,4, 9601, 10);
 #elif __x86_64__
-CheckTypeSize(XtGeometryMask,4, 9601, 11)
+CheckTypeSize(XtGeometryMask,4, 9601, 11);
 #elif __powerpc64__
-CheckTypeSize(XtGeometryMask,4, 9601, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9601,0);
-Msg("Find size of XtGeometryMask (9601)\n");
+CheckTypeSize(XtGeometryMask,4, 9601, 9);
+#elif 1
+CheckTypeSize(XtGeometryMask,0, 9601, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(XtGCMask,4, 9602, 2)
+CheckTypeSize(XtGCMask,4, 9602, 2);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(XtGCMask,4, 9602, 6)
+CheckTypeSize(XtGCMask,4, 9602, 6);
 #elif __s390x__
-CheckTypeSize(XtGCMask,8, 9602, 12)
+CheckTypeSize(XtGCMask,8, 9602, 12);
 #elif __ia64__
-CheckTypeSize(XtGCMask,8, 9602, 3)
+CheckTypeSize(XtGCMask,8, 9602, 3);
 #elif __s390__ && !__s390x__
-CheckTypeSize(XtGCMask,4, 9602, 10)
+CheckTypeSize(XtGCMask,4, 9602, 10);
 #elif __x86_64__
-CheckTypeSize(XtGCMask,8, 9602, 11)
+CheckTypeSize(XtGCMask,8, 9602, 11);
 #elif __powerpc64__
-CheckTypeSize(XtGCMask,8, 9602, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9602,0);
-Msg("Find size of XtGCMask (9602)\n");
+CheckTypeSize(XtGCMask,8, 9602, 9);
+#elif 1
+CheckTypeSize(XtGCMask,0, 9602, 1);
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckTypeSize(Pixel,4, 9603, 6)
+CheckTypeSize(Pixel,4, 9603, 6);
 #elif __i386__
-CheckTypeSize(Pixel,4, 9603, 2)
+CheckTypeSize(Pixel,4, 9603, 2);
 #elif __s390x__
-CheckTypeSize(Pixel,8, 9603, 12)
+CheckTypeSize(Pixel,8, 9603, 12);
 #elif __ia64__
-CheckTypeSize(Pixel,8, 9603, 3)
+CheckTypeSize(Pixel,8, 9603, 3);
 #elif __s390__ && !__s390x__
-CheckTypeSize(Pixel,4, 9603, 10)
+CheckTypeSize(Pixel,4, 9603, 10);
 #elif __x86_64__
-CheckTypeSize(Pixel,8, 9603, 11)
+CheckTypeSize(Pixel,8, 9603, 11);
 #elif __powerpc64__
-CheckTypeSize(Pixel,8, 9603, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9603,0);
-Msg("Find size of Pixel (9603)\n");
+CheckTypeSize(Pixel,8, 9603, 9);
+#elif 1
+CheckTypeSize(Pixel,0, 9603, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(XtCacheType,4, 9604, 2)
+CheckTypeSize(XtCacheType,4, 9604, 2);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(XtCacheType,4, 9604, 6)
+CheckTypeSize(XtCacheType,4, 9604, 6);
 #elif __s390x__
-CheckTypeSize(XtCacheType,4, 9604, 12)
+CheckTypeSize(XtCacheType,4, 9604, 12);
 #elif __ia64__
-CheckTypeSize(XtCacheType,4, 9604, 3)
+CheckTypeSize(XtCacheType,4, 9604, 3);
 #elif __s390__ && !__s390x__
-CheckTypeSize(XtCacheType,4, 9604, 10)
+CheckTypeSize(XtCacheType,4, 9604, 10);
 #elif __x86_64__
-CheckTypeSize(XtCacheType,4, 9604, 11)
+CheckTypeSize(XtCacheType,4, 9604, 11);
 #elif __powerpc64__
-CheckTypeSize(XtCacheType,4, 9604, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9604,0);
-Msg("Find size of XtCacheType (9604)\n");
+CheckTypeSize(XtCacheType,4, 9604, 9);
+#elif 1
+CheckTypeSize(XtCacheType,0, 9604, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(Boolean,1, 9605, 2)
+CheckTypeSize(Boolean,1, 9605, 2);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(Boolean,1, 9605, 6)
+CheckTypeSize(Boolean,1, 9605, 6);
 #elif __s390x__
-CheckTypeSize(Boolean,1, 9605, 12)
+CheckTypeSize(Boolean,1, 9605, 12);
 #elif __ia64__
-CheckTypeSize(Boolean,1, 9605, 3)
+CheckTypeSize(Boolean,1, 9605, 3);
 #elif __s390__ && !__s390x__
-CheckTypeSize(Boolean,1, 9605, 10)
+CheckTypeSize(Boolean,1, 9605, 10);
 #elif __x86_64__
-CheckTypeSize(Boolean,1, 9605, 11)
+CheckTypeSize(Boolean,1, 9605, 11);
 #elif __powerpc64__
-CheckTypeSize(Boolean,1, 9605, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9605,0);
-Msg("Find size of Boolean (9605)\n");
+CheckTypeSize(Boolean,1, 9605, 9);
+#elif 1
+CheckTypeSize(Boolean,0, 9605, 1);
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckTypeSize(XtArgVal,4, 9606, 6)
+CheckTypeSize(XtArgVal,4, 9606, 6);
 #elif __i386__
-CheckTypeSize(XtArgVal,4, 9606, 2)
+CheckTypeSize(XtArgVal,4, 9606, 2);
 #elif __s390x__
-CheckTypeSize(XtArgVal,8, 9606, 12)
+CheckTypeSize(XtArgVal,8, 9606, 12);
 #elif __ia64__
-CheckTypeSize(XtArgVal,8, 9606, 3)
+CheckTypeSize(XtArgVal,8, 9606, 3);
 #elif __s390__ && !__s390x__
-CheckTypeSize(XtArgVal,4, 9606, 10)
+CheckTypeSize(XtArgVal,4, 9606, 10);
 #elif __x86_64__
-CheckTypeSize(XtArgVal,8, 9606, 11)
+CheckTypeSize(XtArgVal,8, 9606, 11);
 #elif __powerpc64__
-CheckTypeSize(XtArgVal,8, 9606, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9606,0);
-Msg("Find size of XtArgVal (9606)\n");
+CheckTypeSize(XtArgVal,8, 9606, 9);
+#elif 1
+CheckTypeSize(XtArgVal,0, 9606, 1);
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckTypeSize(XtEnum,1, 9607, 6)
+CheckTypeSize(XtEnum,1, 9607, 6);
 #elif __i386__
-CheckTypeSize(XtEnum,1, 9607, 2)
+CheckTypeSize(XtEnum,1, 9607, 2);
 #elif __s390x__
-CheckTypeSize(XtEnum,1, 9607, 12)
+CheckTypeSize(XtEnum,1, 9607, 12);
 #elif __ia64__
-CheckTypeSize(XtEnum,1, 9607, 3)
+CheckTypeSize(XtEnum,1, 9607, 3);
 #elif __s390__ && !__s390x__
-CheckTypeSize(XtEnum,1, 9607, 10)
+CheckTypeSize(XtEnum,1, 9607, 10);
 #elif __x86_64__
-CheckTypeSize(XtEnum,1, 9607, 11)
+CheckTypeSize(XtEnum,1, 9607, 11);
 #elif __powerpc64__
-CheckTypeSize(XtEnum,1, 9607, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9607,0);
-Msg("Find size of XtEnum (9607)\n");
+CheckTypeSize(XtEnum,1, 9607, 9);
+#elif 1
+CheckTypeSize(XtEnum,0, 9607, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(Cardinal,4, 9608, 2)
+CheckTypeSize(Cardinal,4, 9608, 2);
 #elif __ia64__
-CheckTypeSize(Cardinal,4, 9608, 3)
+CheckTypeSize(Cardinal,4, 9608, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(Cardinal,4, 9608, 6)
+CheckTypeSize(Cardinal,4, 9608, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(Cardinal,4, 9608, 10)
+CheckTypeSize(Cardinal,4, 9608, 10);
 #elif __powerpc64__
-CheckTypeSize(Cardinal,4, 9608, 9)
+CheckTypeSize(Cardinal,4, 9608, 9);
 #elif __s390x__
-CheckTypeSize(Cardinal,4, 9608, 12)
+CheckTypeSize(Cardinal,4, 9608, 12);
 #elif __x86_64__
-CheckTypeSize(Cardinal,4, 9608, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9608,0);
-Msg("Find size of Cardinal (9608)\n");
+CheckTypeSize(Cardinal,4, 9608, 11);
+#elif 1
+CheckTypeSize(Cardinal,0, 9608, 1);
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckTypeSize(Dimension,2, 9609, 6)
+CheckTypeSize(Dimension,2, 9609, 6);
 #elif __i386__
-CheckTypeSize(Dimension,2, 9609, 2)
+CheckTypeSize(Dimension,2, 9609, 2);
 #elif __s390x__
-CheckTypeSize(Dimension,2, 9609, 12)
+CheckTypeSize(Dimension,2, 9609, 12);
 #elif __ia64__
-CheckTypeSize(Dimension,2, 9609, 3)
+CheckTypeSize(Dimension,2, 9609, 3);
 #elif __s390__ && !__s390x__
-CheckTypeSize(Dimension,2, 9609, 10)
+CheckTypeSize(Dimension,2, 9609, 10);
 #elif __x86_64__
-CheckTypeSize(Dimension,2, 9609, 11)
+CheckTypeSize(Dimension,2, 9609, 11);
 #elif __powerpc64__
-CheckTypeSize(Dimension,2, 9609, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9609,0);
-Msg("Find size of Dimension (9609)\n");
+CheckTypeSize(Dimension,2, 9609, 9);
+#elif 1
+CheckTypeSize(Dimension,0, 9609, 1);
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckTypeSize(Position,2, 9610, 6)
+CheckTypeSize(Position,2, 9610, 6);
 #elif __i386__
-CheckTypeSize(Position,2, 9610, 2)
+CheckTypeSize(Position,2, 9610, 2);
 #elif __s390x__
-CheckTypeSize(Position,2, 9610, 12)
+CheckTypeSize(Position,2, 9610, 12);
 #elif __ia64__
-CheckTypeSize(Position,2, 9610, 3)
+CheckTypeSize(Position,2, 9610, 3);
 #elif __s390__ && !__s390x__
-CheckTypeSize(Position,2, 9610, 10)
+CheckTypeSize(Position,2, 9610, 10);
 #elif __x86_64__
-CheckTypeSize(Position,2, 9610, 11)
+CheckTypeSize(Position,2, 9610, 11);
 #elif __powerpc64__
-CheckTypeSize(Position,2, 9610, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9610,0);
-Msg("Find size of Position (9610)\n");
+CheckTypeSize(Position,2, 9610, 9);
+#elif 1
+CheckTypeSize(Position,0, 9610, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(XtPointer,4, 9611, 2)
+CheckTypeSize(XtPointer,4, 9611, 2);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(XtPointer,4, 9611, 6)
+CheckTypeSize(XtPointer,4, 9611, 6);
 #elif __s390x__
-CheckTypeSize(XtPointer,8, 9611, 12)
+CheckTypeSize(XtPointer,8, 9611, 12);
 #elif __ia64__
-CheckTypeSize(XtPointer,8, 9611, 3)
+CheckTypeSize(XtPointer,8, 9611, 3);
 #elif __s390__ && !__s390x__
-CheckTypeSize(XtPointer,4, 9611, 10)
+CheckTypeSize(XtPointer,4, 9611, 10);
 #elif __x86_64__
-CheckTypeSize(XtPointer,8, 9611, 11)
+CheckTypeSize(XtPointer,8, 9611, 11);
 #elif __powerpc64__
-CheckTypeSize(XtPointer,8, 9611, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9611,0);
-Msg("Find size of XtPointer (9611)\n");
+CheckTypeSize(XtPointer,8, 9611, 9);
+#elif 1
+CheckTypeSize(XtPointer,0, 9611, 1);
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckTypeSize(Opaque,4, 9612, 6)
+CheckTypeSize(Opaque,4, 9612, 6);
 #elif __i386__
-CheckTypeSize(Opaque,4, 9612, 2)
+CheckTypeSize(Opaque,4, 9612, 2);
 #elif __s390x__
-CheckTypeSize(Opaque,8, 9612, 12)
+CheckTypeSize(Opaque,8, 9612, 12);
 #elif __ia64__
-CheckTypeSize(Opaque,8, 9612, 3)
+CheckTypeSize(Opaque,8, 9612, 3);
 #elif __s390__ && !__s390x__
-CheckTypeSize(Opaque,4, 9612, 10)
+CheckTypeSize(Opaque,4, 9612, 10);
 #elif __x86_64__
-CheckTypeSize(Opaque,8, 9612, 11)
+CheckTypeSize(Opaque,8, 9612, 11);
 #elif __powerpc64__
-CheckTypeSize(Opaque,8, 9612, 9)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9612,0);
-Msg("Find size of Opaque (9612)\n");
+CheckTypeSize(Opaque,8, 9612, 9);
+#elif 1
+CheckTypeSize(Opaque,0, 9612, 1);
 #endif
 
 #ifdef TET_TEST

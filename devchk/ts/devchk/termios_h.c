@@ -4028,179 +4028,184 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(speed_t,4, 9186, 2)
+CheckTypeSize(speed_t,4, 9186, 2);
 #elif __ia64__
-CheckTypeSize(speed_t,4, 9186, 3)
+CheckTypeSize(speed_t,4, 9186, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(speed_t,4, 9186, 6)
+CheckTypeSize(speed_t,4, 9186, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(speed_t,4, 9186, 10)
+CheckTypeSize(speed_t,4, 9186, 10);
 #elif __powerpc64__
-CheckTypeSize(speed_t,4, 9186, 9)
+CheckTypeSize(speed_t,4, 9186, 9);
 #elif __s390x__
-CheckTypeSize(speed_t,4, 9186, 12)
+CheckTypeSize(speed_t,4, 9186, 12);
 #elif __x86_64__
-CheckTypeSize(speed_t,4, 9186, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9186,0);
-Msg("Find size of speed_t (9186)\n");
+CheckTypeSize(speed_t,4, 9186, 11);
+#elif 1
+CheckTypeSize(speed_t,0, 9186, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(cc_t,1, 10206, 2)
+CheckTypeSize(cc_t,1, 10206, 2);
 #elif __ia64__
-CheckTypeSize(cc_t,1, 10206, 3)
+CheckTypeSize(cc_t,1, 10206, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(cc_t,1, 10206, 6)
+CheckTypeSize(cc_t,1, 10206, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(cc_t,1, 10206, 10)
+CheckTypeSize(cc_t,1, 10206, 10);
 #elif __powerpc64__
-CheckTypeSize(cc_t,1, 10206, 9)
+CheckTypeSize(cc_t,1, 10206, 9);
 #elif __s390x__
-CheckTypeSize(cc_t,1, 10206, 12)
+CheckTypeSize(cc_t,1, 10206, 12);
 #elif __x86_64__
-CheckTypeSize(cc_t,1, 10206, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10206,0);
-Msg("Find size of cc_t (10206)\n");
+CheckTypeSize(cc_t,1, 10206, 11);
+#elif 1
+CheckTypeSize(cc_t,0, 10206, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(tcflag_t,4, 10207, 2)
+CheckTypeSize(tcflag_t,4, 10207, 2);
 #elif __ia64__
-CheckTypeSize(tcflag_t,4, 10207, 3)
+CheckTypeSize(tcflag_t,4, 10207, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(tcflag_t,4, 10207, 6)
+CheckTypeSize(tcflag_t,4, 10207, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(tcflag_t,4, 10207, 10)
+CheckTypeSize(tcflag_t,4, 10207, 10);
 #elif __powerpc64__
-CheckTypeSize(tcflag_t,4, 10207, 9)
+CheckTypeSize(tcflag_t,4, 10207, 9);
 #elif __s390x__
-CheckTypeSize(tcflag_t,4, 10207, 12)
+CheckTypeSize(tcflag_t,4, 10207, 12);
 #elif __x86_64__
-CheckTypeSize(tcflag_t,4, 10207, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10207,0);
-Msg("Find size of tcflag_t (10207)\n");
+CheckTypeSize(tcflag_t,4, 10207, 11);
+#elif 1
+CheckTypeSize(tcflag_t,0, 10207, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct termios,60, 9187, 2)
-CheckMemberSize(struct termios,c_iflag,4,2,34268)
-CheckOffset(struct termios,c_iflag,0,2,34268)
-CheckMemberSize(struct termios,c_oflag,4,2,34269)
-CheckOffset(struct termios,c_oflag,4,2,34269)
-CheckMemberSize(struct termios,c_cflag,4,2,34270)
-CheckOffset(struct termios,c_cflag,8,2,34270)
-CheckMemberSize(struct termios,c_lflag,4,2,34271)
-CheckOffset(struct termios,c_lflag,12,2,34271)
-CheckMemberSize(struct termios,c_line,1,2,34272)
-CheckOffset(struct termios,c_line,16,2,34272)
-CheckMemberSize(struct termios,c_cc,32,2,34273)
-CheckOffset(struct termios,c_cc,17,2,34273)
-CheckMemberSize(struct termios,c_ispeed,4,2,34274)
-CheckOffset(struct termios,c_ispeed,52,2,34274)
-CheckMemberSize(struct termios,c_ospeed,4,2,34275)
-CheckOffset(struct termios,c_ospeed,56,2,34275)
+CheckTypeSize(struct termios,60, 9187, 2);
+CheckMemberSize(struct termios,c_iflag,4,2,34268);
+CheckOffset(struct termios,c_iflag,0,2,34268);
+CheckMemberSize(struct termios,c_oflag,4,2,34269);
+CheckOffset(struct termios,c_oflag,4,2,34269);
+CheckMemberSize(struct termios,c_cflag,4,2,34270);
+CheckOffset(struct termios,c_cflag,8,2,34270);
+CheckMemberSize(struct termios,c_lflag,4,2,34271);
+CheckOffset(struct termios,c_lflag,12,2,34271);
+CheckMemberSize(struct termios,c_line,1,2,34272);
+CheckOffset(struct termios,c_line,16,2,34272);
+CheckMemberSize(struct termios,c_cc,32,2,34273);
+CheckOffset(struct termios,c_cc,17,2,34273);
+CheckMemberSize(struct termios,c_ispeed,4,2,34274);
+CheckOffset(struct termios,c_ispeed,52,2,34274);
+CheckMemberSize(struct termios,c_ospeed,4,2,34275);
+CheckOffset(struct termios,c_ospeed,56,2,34275);
 #elif __ia64__
-CheckTypeSize(struct termios,60, 9187, 3)
-CheckMemberSize(struct termios,c_oflag,4,3,34269)
-CheckOffset(struct termios,c_oflag,4,3,34269)
-CheckMemberSize(struct termios,c_cflag,4,3,34270)
-CheckOffset(struct termios,c_cflag,8,3,34270)
-CheckMemberSize(struct termios,c_lflag,4,3,34271)
-CheckOffset(struct termios,c_lflag,12,3,34271)
-CheckMemberSize(struct termios,c_line,1,3,34272)
-CheckOffset(struct termios,c_line,16,3,34272)
-CheckMemberSize(struct termios,c_cc,32,3,34273)
-CheckOffset(struct termios,c_cc,17,3,34273)
-CheckMemberSize(struct termios,c_ispeed,4,3,34274)
-CheckOffset(struct termios,c_ispeed,52,3,34274)
-CheckMemberSize(struct termios,c_ospeed,4,3,34275)
-CheckOffset(struct termios,c_ospeed,56,3,34275)
+CheckTypeSize(struct termios,60, 9187, 3);
+CheckMemberSize(struct termios,c_oflag,4,3,34269);
+CheckOffset(struct termios,c_oflag,4,3,34269);
+CheckMemberSize(struct termios,c_cflag,4,3,34270);
+CheckOffset(struct termios,c_cflag,8,3,34270);
+CheckMemberSize(struct termios,c_lflag,4,3,34271);
+CheckOffset(struct termios,c_lflag,12,3,34271);
+CheckMemberSize(struct termios,c_line,1,3,34272);
+CheckOffset(struct termios,c_line,16,3,34272);
+CheckMemberSize(struct termios,c_cc,32,3,34273);
+CheckOffset(struct termios,c_cc,17,3,34273);
+CheckMemberSize(struct termios,c_ispeed,4,3,34274);
+CheckOffset(struct termios,c_ispeed,52,3,34274);
+CheckMemberSize(struct termios,c_ospeed,4,3,34275);
+CheckOffset(struct termios,c_ospeed,56,3,34275);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct termios,60, 9187, 6)
-CheckMemberSize(struct termios,c_oflag,4,6,34269)
-CheckOffset(struct termios,c_oflag,4,6,34269)
-CheckMemberSize(struct termios,c_cflag,4,6,34270)
-CheckOffset(struct termios,c_cflag,8,6,34270)
-CheckMemberSize(struct termios,c_lflag,4,6,34271)
-CheckOffset(struct termios,c_lflag,12,6,34271)
-CheckMemberSize(struct termios,c_line,1,6,34272)
-CheckOffset(struct termios,c_line,16,6,34272)
-CheckMemberSize(struct termios,c_cc,32,6,34273)
-CheckOffset(struct termios,c_cc,17,6,34273)
-CheckMemberSize(struct termios,c_ispeed,4,6,34274)
-CheckOffset(struct termios,c_ispeed,52,6,34274)
-CheckMemberSize(struct termios,c_ospeed,4,6,34275)
-CheckOffset(struct termios,c_ospeed,56,6,34275)
+CheckTypeSize(struct termios,60, 9187, 6);
+CheckMemberSize(struct termios,c_oflag,4,6,34269);
+CheckOffset(struct termios,c_oflag,4,6,34269);
+CheckMemberSize(struct termios,c_cflag,4,6,34270);
+CheckOffset(struct termios,c_cflag,8,6,34270);
+CheckMemberSize(struct termios,c_lflag,4,6,34271);
+CheckOffset(struct termios,c_lflag,12,6,34271);
+CheckMemberSize(struct termios,c_line,1,6,34272);
+CheckOffset(struct termios,c_line,16,6,34272);
+CheckMemberSize(struct termios,c_cc,32,6,34273);
+CheckOffset(struct termios,c_cc,17,6,34273);
+CheckMemberSize(struct termios,c_ispeed,4,6,34274);
+CheckOffset(struct termios,c_ispeed,52,6,34274);
+CheckMemberSize(struct termios,c_ospeed,4,6,34275);
+CheckOffset(struct termios,c_ospeed,56,6,34275);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct termios,60, 9187, 10)
-CheckMemberSize(struct termios,c_oflag,4,10,34269)
-CheckOffset(struct termios,c_oflag,4,10,34269)
-CheckMemberSize(struct termios,c_cflag,4,10,34270)
-CheckOffset(struct termios,c_cflag,8,10,34270)
-CheckMemberSize(struct termios,c_lflag,4,10,34271)
-CheckOffset(struct termios,c_lflag,12,10,34271)
-CheckMemberSize(struct termios,c_line,1,10,34272)
-CheckOffset(struct termios,c_line,16,10,34272)
-CheckMemberSize(struct termios,c_cc,32,10,34273)
-CheckOffset(struct termios,c_cc,17,10,34273)
-CheckMemberSize(struct termios,c_ispeed,4,10,34274)
-CheckOffset(struct termios,c_ispeed,52,10,34274)
-CheckMemberSize(struct termios,c_ospeed,4,10,34275)
-CheckOffset(struct termios,c_ospeed,56,10,34275)
+CheckTypeSize(struct termios,60, 9187, 10);
+CheckMemberSize(struct termios,c_oflag,4,10,34269);
+CheckOffset(struct termios,c_oflag,4,10,34269);
+CheckMemberSize(struct termios,c_cflag,4,10,34270);
+CheckOffset(struct termios,c_cflag,8,10,34270);
+CheckMemberSize(struct termios,c_lflag,4,10,34271);
+CheckOffset(struct termios,c_lflag,12,10,34271);
+CheckMemberSize(struct termios,c_line,1,10,34272);
+CheckOffset(struct termios,c_line,16,10,34272);
+CheckMemberSize(struct termios,c_cc,32,10,34273);
+CheckOffset(struct termios,c_cc,17,10,34273);
+CheckMemberSize(struct termios,c_ispeed,4,10,34274);
+CheckOffset(struct termios,c_ispeed,52,10,34274);
+CheckMemberSize(struct termios,c_ospeed,4,10,34275);
+CheckOffset(struct termios,c_ospeed,56,10,34275);
 #elif __powerpc64__
-CheckTypeSize(struct termios,60, 9187, 9)
-CheckMemberSize(struct termios,c_oflag,4,9,34269)
-CheckOffset(struct termios,c_oflag,4,9,34269)
-CheckMemberSize(struct termios,c_cflag,4,9,34270)
-CheckOffset(struct termios,c_cflag,8,9,34270)
-CheckMemberSize(struct termios,c_lflag,4,9,34271)
-CheckOffset(struct termios,c_lflag,12,9,34271)
-CheckMemberSize(struct termios,c_line,1,9,34272)
-CheckOffset(struct termios,c_line,16,9,34272)
-CheckMemberSize(struct termios,c_cc,32,9,34273)
-CheckOffset(struct termios,c_cc,17,9,34273)
-CheckMemberSize(struct termios,c_ispeed,4,9,34274)
-CheckOffset(struct termios,c_ispeed,52,9,34274)
-CheckMemberSize(struct termios,c_ospeed,4,9,34275)
-CheckOffset(struct termios,c_ospeed,56,9,34275)
+CheckTypeSize(struct termios,60, 9187, 9);
+CheckMemberSize(struct termios,c_oflag,4,9,34269);
+CheckOffset(struct termios,c_oflag,4,9,34269);
+CheckMemberSize(struct termios,c_cflag,4,9,34270);
+CheckOffset(struct termios,c_cflag,8,9,34270);
+CheckMemberSize(struct termios,c_lflag,4,9,34271);
+CheckOffset(struct termios,c_lflag,12,9,34271);
+CheckMemberSize(struct termios,c_line,1,9,34272);
+CheckOffset(struct termios,c_line,16,9,34272);
+CheckMemberSize(struct termios,c_cc,32,9,34273);
+CheckOffset(struct termios,c_cc,17,9,34273);
+CheckMemberSize(struct termios,c_ispeed,4,9,34274);
+CheckOffset(struct termios,c_ispeed,52,9,34274);
+CheckMemberSize(struct termios,c_ospeed,4,9,34275);
+CheckOffset(struct termios,c_ospeed,56,9,34275);
 #elif __s390x__
-CheckTypeSize(struct termios,60, 9187, 12)
-CheckMemberSize(struct termios,c_oflag,4,12,34269)
-CheckOffset(struct termios,c_oflag,4,12,34269)
-CheckMemberSize(struct termios,c_cflag,4,12,34270)
-CheckOffset(struct termios,c_cflag,8,12,34270)
-CheckMemberSize(struct termios,c_lflag,4,12,34271)
-CheckOffset(struct termios,c_lflag,12,12,34271)
-CheckMemberSize(struct termios,c_line,1,12,34272)
-CheckOffset(struct termios,c_line,16,12,34272)
-CheckMemberSize(struct termios,c_cc,32,12,34273)
-CheckOffset(struct termios,c_cc,17,12,34273)
-CheckMemberSize(struct termios,c_ispeed,4,12,34274)
-CheckOffset(struct termios,c_ispeed,52,12,34274)
-CheckMemberSize(struct termios,c_ospeed,4,12,34275)
-CheckOffset(struct termios,c_ospeed,56,12,34275)
+CheckTypeSize(struct termios,60, 9187, 12);
+CheckMemberSize(struct termios,c_oflag,4,12,34269);
+CheckOffset(struct termios,c_oflag,4,12,34269);
+CheckMemberSize(struct termios,c_cflag,4,12,34270);
+CheckOffset(struct termios,c_cflag,8,12,34270);
+CheckMemberSize(struct termios,c_lflag,4,12,34271);
+CheckOffset(struct termios,c_lflag,12,12,34271);
+CheckMemberSize(struct termios,c_line,1,12,34272);
+CheckOffset(struct termios,c_line,16,12,34272);
+CheckMemberSize(struct termios,c_cc,32,12,34273);
+CheckOffset(struct termios,c_cc,17,12,34273);
+CheckMemberSize(struct termios,c_ispeed,4,12,34274);
+CheckOffset(struct termios,c_ispeed,52,12,34274);
+CheckMemberSize(struct termios,c_ospeed,4,12,34275);
+CheckOffset(struct termios,c_ospeed,56,12,34275);
 #elif __x86_64__
-CheckTypeSize(struct termios,60, 9187, 11)
-CheckMemberSize(struct termios,c_oflag,4,11,34269)
-CheckOffset(struct termios,c_oflag,4,11,34269)
-CheckMemberSize(struct termios,c_cflag,4,11,34270)
-CheckOffset(struct termios,c_cflag,8,11,34270)
-CheckMemberSize(struct termios,c_lflag,4,11,34271)
-CheckOffset(struct termios,c_lflag,12,11,34271)
-CheckMemberSize(struct termios,c_line,1,11,34272)
-CheckOffset(struct termios,c_line,16,11,34272)
-CheckMemberSize(struct termios,c_cc,32,11,34273)
-CheckOffset(struct termios,c_cc,17,11,34273)
-CheckMemberSize(struct termios,c_ispeed,4,11,34274)
-CheckOffset(struct termios,c_ispeed,52,11,34274)
-CheckMemberSize(struct termios,c_ospeed,4,11,34275)
-CheckOffset(struct termios,c_ospeed,56,11,34275)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9187,0);
-Msg("Find size of termios (9187)\n");
+CheckTypeSize(struct termios,60, 9187, 11);
+CheckMemberSize(struct termios,c_oflag,4,11,34269);
+CheckOffset(struct termios,c_oflag,4,11,34269);
+CheckMemberSize(struct termios,c_cflag,4,11,34270);
+CheckOffset(struct termios,c_cflag,8,11,34270);
+CheckMemberSize(struct termios,c_lflag,4,11,34271);
+CheckOffset(struct termios,c_lflag,12,11,34271);
+CheckMemberSize(struct termios,c_line,1,11,34272);
+CheckOffset(struct termios,c_line,16,11,34272);
+CheckMemberSize(struct termios,c_cc,32,11,34273);
+CheckOffset(struct termios,c_cc,17,11,34273);
+CheckMemberSize(struct termios,c_ispeed,4,11,34274);
+CheckOffset(struct termios,c_ispeed,52,11,34274);
+CheckMemberSize(struct termios,c_ospeed,4,11,34275);
+CheckOffset(struct termios,c_ospeed,56,11,34275);
+#elif 1
+CheckTypeSize(struct termios,0, 9187, 1);
+Msg("Missing member data for termios on All\n");
+CheckOffset(struct termios,c_iflag,0,1,34268);
+CheckOffset(struct termios,c_oflag,0,1,34269);
+CheckOffset(struct termios,c_cflag,0,1,34270);
+CheckOffset(struct termios,c_lflag,0,1,34271);
+CheckOffset(struct termios,c_line,0,1,34272);
+CheckOffset(struct termios,c_cc,0,1,34273);
+CheckOffset(struct termios,c_ispeed,0,1,34274);
+CheckOffset(struct termios,c_ospeed,0,1,34275);
 #endif
 
 extern speed_t cfgetispeed_db(const struct termios *);

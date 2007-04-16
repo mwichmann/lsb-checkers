@@ -145,4 +145,3 @@ struct cmds desktop_cmdlist[] = {
 	{"fc-list", ""},
 	{"fc-match", ""},
 };
-

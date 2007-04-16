@@ -26,98 +26,93 @@ Msg("Checking data structures in pango-1.0/pango/pango-utils.h\n");
 
 printf("Checking data structures in pango-1.0/pango/pango-utils.h\n");
 #if __i386__
-CheckTypeSize(PangoStretch *,4, 12548, 2)
+CheckTypeSize(PangoStretch *,4, 12548, 2);
 #elif __x86_64__
-CheckTypeSize(PangoStretch *,8, 12548, 11)
+CheckTypeSize(PangoStretch *,8, 12548, 11);
 #elif __ia64__
-CheckTypeSize(PangoStretch *,8, 12548, 3)
+CheckTypeSize(PangoStretch *,8, 12548, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(PangoStretch *,4, 12548, 6)
+CheckTypeSize(PangoStretch *,4, 12548, 6);
 #elif __powerpc64__
-CheckTypeSize(PangoStretch *,8, 12548, 9)
+CheckTypeSize(PangoStretch *,8, 12548, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(PangoStretch *,4, 12548, 10)
+CheckTypeSize(PangoStretch *,4, 12548, 10);
 #elif __s390x__
-CheckTypeSize(PangoStretch *,8, 12548, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12548,0);
-Msg("Find size of PangoStretch * (12548)\n");
+CheckTypeSize(PangoStretch *,8, 12548, 12);
+#elif 1
+CheckTypeSize(PangoStretch *,0, 12548, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(PangoWeight *,4, 12549, 2)
+CheckTypeSize(PangoWeight *,4, 12549, 2);
 #elif __x86_64__
-CheckTypeSize(PangoWeight *,8, 12549, 11)
+CheckTypeSize(PangoWeight *,8, 12549, 11);
 #elif __ia64__
-CheckTypeSize(PangoWeight *,8, 12549, 3)
+CheckTypeSize(PangoWeight *,8, 12549, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(PangoWeight *,4, 12549, 6)
+CheckTypeSize(PangoWeight *,4, 12549, 6);
 #elif __powerpc64__
-CheckTypeSize(PangoWeight *,8, 12549, 9)
+CheckTypeSize(PangoWeight *,8, 12549, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(PangoWeight *,4, 12549, 10)
+CheckTypeSize(PangoWeight *,4, 12549, 10);
 #elif __s390x__
-CheckTypeSize(PangoWeight *,8, 12549, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12549,0);
-Msg("Find size of PangoWeight * (12549)\n");
+CheckTypeSize(PangoWeight *,8, 12549, 12);
+#elif 1
+CheckTypeSize(PangoWeight *,0, 12549, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(PangoDirection *,4, 12550, 2)
+CheckTypeSize(PangoDirection *,4, 12550, 2);
 #elif __x86_64__
-CheckTypeSize(PangoDirection *,8, 12550, 11)
+CheckTypeSize(PangoDirection *,8, 12550, 11);
 #elif __ia64__
-CheckTypeSize(PangoDirection *,8, 12550, 3)
+CheckTypeSize(PangoDirection *,8, 12550, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(PangoDirection *,4, 12550, 6)
+CheckTypeSize(PangoDirection *,4, 12550, 6);
 #elif __powerpc64__
-CheckTypeSize(PangoDirection *,8, 12550, 9)
+CheckTypeSize(PangoDirection *,8, 12550, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(PangoDirection *,4, 12550, 10)
+CheckTypeSize(PangoDirection *,4, 12550, 10);
 #elif __s390x__
-CheckTypeSize(PangoDirection *,8, 12550, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12550,0);
-Msg("Find size of PangoDirection * (12550)\n");
+CheckTypeSize(PangoDirection *,8, 12550, 12);
+#elif 1
+CheckTypeSize(PangoDirection *,0, 12550, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(PangoStyle *,4, 12551, 2)
+CheckTypeSize(PangoStyle *,4, 12551, 2);
 #elif __x86_64__
-CheckTypeSize(PangoStyle *,8, 12551, 11)
+CheckTypeSize(PangoStyle *,8, 12551, 11);
 #elif __ia64__
-CheckTypeSize(PangoStyle *,8, 12551, 3)
+CheckTypeSize(PangoStyle *,8, 12551, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(PangoStyle *,4, 12551, 6)
+CheckTypeSize(PangoStyle *,4, 12551, 6);
 #elif __powerpc64__
-CheckTypeSize(PangoStyle *,8, 12551, 9)
+CheckTypeSize(PangoStyle *,8, 12551, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(PangoStyle *,4, 12551, 10)
+CheckTypeSize(PangoStyle *,4, 12551, 10);
 #elif __s390x__
-CheckTypeSize(PangoStyle *,8, 12551, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12551,0);
-Msg("Find size of PangoStyle * (12551)\n");
+CheckTypeSize(PangoStyle *,8, 12551, 12);
+#elif 1
+CheckTypeSize(PangoStyle *,0, 12551, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(PangoVariant *,4, 12552, 2)
+CheckTypeSize(PangoVariant *,4, 12552, 2);
 #elif __x86_64__
-CheckTypeSize(PangoVariant *,8, 12552, 11)
+CheckTypeSize(PangoVariant *,8, 12552, 11);
 #elif __ia64__
-CheckTypeSize(PangoVariant *,8, 12552, 3)
+CheckTypeSize(PangoVariant *,8, 12552, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(PangoVariant *,4, 12552, 6)
+CheckTypeSize(PangoVariant *,4, 12552, 6);
 #elif __powerpc64__
-CheckTypeSize(PangoVariant *,8, 12552, 9)
+CheckTypeSize(PangoVariant *,8, 12552, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(PangoVariant *,4, 12552, 10)
+CheckTypeSize(PangoVariant *,4, 12552, 10);
 #elif __s390x__
-CheckTypeSize(PangoVariant *,8, 12552, 12)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12552,0);
-Msg("Find size of PangoVariant * (12552)\n");
+CheckTypeSize(PangoVariant *,8, 12552, 12);
+#elif 1
+CheckTypeSize(PangoVariant *,0, 12552, 1);
 #endif
 
 extern char * pango_trim_string_db(const char *);
