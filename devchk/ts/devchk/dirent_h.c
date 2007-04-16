@@ -28,180 +28,185 @@ Msg("Checking data structures in dirent.h\n");
 
 printf("Checking data structures in dirent.h\n");
 #if __ia64__
-CheckTypeSize(DIR,0, 10175, 3)
+CheckTypeSize(DIR,0, 10175, 3);
 #elif __i386__
-CheckTypeSize(DIR,0, 10175, 2)
+CheckTypeSize(DIR,0, 10175, 2);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(DIR,0, 10175, 6)
+CheckTypeSize(DIR,0, 10175, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(DIR,0, 10175, 10)
+CheckTypeSize(DIR,0, 10175, 10);
 #elif __powerpc64__
-CheckTypeSize(DIR,0, 10175, 9)
+CheckTypeSize(DIR,0, 10175, 9);
 #elif __s390x__
-CheckTypeSize(DIR,0, 10175, 12)
+CheckTypeSize(DIR,0, 10175, 12);
 #elif __x86_64__
-CheckTypeSize(DIR,0, 10175, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10175,0);
-Msg("Find size of DIR (10175)\n");
+CheckTypeSize(DIR,0, 10175, 11);
+#elif 1
+CheckTypeSize(DIR,0, 10175, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct dirent,268, 10178, 2)
-CheckMemberSize(struct dirent,d_ino,4,2,34177)
-CheckOffset(struct dirent,d_ino,0,2,34177)
-CheckMemberSize(struct dirent,d_off,4,2,34178)
-CheckOffset(struct dirent,d_off,4,2,34178)
-CheckMemberSize(struct dirent,d_reclen,2,2,34179)
-CheckOffset(struct dirent,d_reclen,8,2,34179)
+CheckTypeSize(struct dirent,268, 10178, 2);
+CheckMemberSize(struct dirent,d_ino,4,2,34177);
+CheckOffset(struct dirent,d_ino,0,2,34177);
+CheckMemberSize(struct dirent,d_off,4,2,34178);
+CheckOffset(struct dirent,d_off,4,2,34178);
+CheckMemberSize(struct dirent,d_reclen,2,2,34179);
+CheckOffset(struct dirent,d_reclen,8,2,34179);
 #elif __ia64__
-CheckTypeSize(struct dirent,280, 10178, 3)
-CheckMemberSize(struct dirent,d_off,8,3,34178)
-CheckOffset(struct dirent,d_off,8,3,34178)
-CheckMemberSize(struct dirent,d_reclen,2,3,34179)
-CheckOffset(struct dirent,d_reclen,16,3,34179)
-CheckMemberSize(struct dirent,d_type,1,3,34410)
-CheckOffset(struct dirent,d_type,18,3,34410)
-CheckMemberSize(struct dirent,d_name,256,3,34180)
-CheckOffset(struct dirent,d_name,19,3,34180)
+CheckTypeSize(struct dirent,280, 10178, 3);
+CheckMemberSize(struct dirent,d_off,8,3,34178);
+CheckOffset(struct dirent,d_off,8,3,34178);
+CheckMemberSize(struct dirent,d_reclen,2,3,34179);
+CheckOffset(struct dirent,d_reclen,16,3,34179);
+CheckMemberSize(struct dirent,d_type,1,3,34410);
+CheckOffset(struct dirent,d_type,18,3,34410);
+CheckMemberSize(struct dirent,d_name,256,3,34180);
+CheckOffset(struct dirent,d_name,19,3,34180);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct dirent,268, 10178, 6)
-CheckMemberSize(struct dirent,d_off,4,6,34178)
-CheckOffset(struct dirent,d_off,4,6,34178)
-CheckMemberSize(struct dirent,d_reclen,2,6,34179)
-CheckOffset(struct dirent,d_reclen,8,6,34179)
-CheckMemberSize(struct dirent,d_type,1,6,34410)
-CheckOffset(struct dirent,d_type,10,6,34410)
-CheckMemberSize(struct dirent,d_name,256,6,34180)
-CheckOffset(struct dirent,d_name,11,6,34180)
+CheckTypeSize(struct dirent,268, 10178, 6);
+CheckMemberSize(struct dirent,d_off,4,6,34178);
+CheckOffset(struct dirent,d_off,4,6,34178);
+CheckMemberSize(struct dirent,d_reclen,2,6,34179);
+CheckOffset(struct dirent,d_reclen,8,6,34179);
+CheckMemberSize(struct dirent,d_type,1,6,34410);
+CheckOffset(struct dirent,d_type,10,6,34410);
+CheckMemberSize(struct dirent,d_name,256,6,34180);
+CheckOffset(struct dirent,d_name,11,6,34180);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct dirent,268, 10178, 10)
-CheckMemberSize(struct dirent,d_off,4,10,34178)
-CheckOffset(struct dirent,d_off,4,10,34178)
-CheckMemberSize(struct dirent,d_reclen,2,10,34179)
-CheckOffset(struct dirent,d_reclen,8,10,34179)
-CheckMemberSize(struct dirent,d_type,1,10,34410)
-CheckOffset(struct dirent,d_type,10,10,34410)
-CheckMemberSize(struct dirent,d_name,256,10,34180)
-CheckOffset(struct dirent,d_name,11,10,34180)
+CheckTypeSize(struct dirent,268, 10178, 10);
+CheckMemberSize(struct dirent,d_off,4,10,34178);
+CheckOffset(struct dirent,d_off,4,10,34178);
+CheckMemberSize(struct dirent,d_reclen,2,10,34179);
+CheckOffset(struct dirent,d_reclen,8,10,34179);
+CheckMemberSize(struct dirent,d_type,1,10,34410);
+CheckOffset(struct dirent,d_type,10,10,34410);
+CheckMemberSize(struct dirent,d_name,256,10,34180);
+CheckOffset(struct dirent,d_name,11,10,34180);
 #elif __powerpc64__
-CheckTypeSize(struct dirent,280, 10178, 9)
-CheckMemberSize(struct dirent,d_off,8,9,34178)
-CheckOffset(struct dirent,d_off,8,9,34178)
-CheckMemberSize(struct dirent,d_reclen,2,9,34179)
-CheckOffset(struct dirent,d_reclen,16,9,34179)
-CheckMemberSize(struct dirent,d_type,1,9,34410)
-CheckOffset(struct dirent,d_type,18,9,34410)
-CheckMemberSize(struct dirent,d_name,256,9,34180)
-CheckOffset(struct dirent,d_name,19,9,34180)
+CheckTypeSize(struct dirent,280, 10178, 9);
+CheckMemberSize(struct dirent,d_off,8,9,34178);
+CheckOffset(struct dirent,d_off,8,9,34178);
+CheckMemberSize(struct dirent,d_reclen,2,9,34179);
+CheckOffset(struct dirent,d_reclen,16,9,34179);
+CheckMemberSize(struct dirent,d_type,1,9,34410);
+CheckOffset(struct dirent,d_type,18,9,34410);
+CheckMemberSize(struct dirent,d_name,256,9,34180);
+CheckOffset(struct dirent,d_name,19,9,34180);
 #elif __s390x__
-CheckTypeSize(struct dirent,280, 10178, 12)
-CheckMemberSize(struct dirent,d_off,8,12,34178)
-CheckOffset(struct dirent,d_off,8,12,34178)
-CheckMemberSize(struct dirent,d_reclen,2,12,34179)
-CheckOffset(struct dirent,d_reclen,16,12,34179)
-CheckMemberSize(struct dirent,d_type,1,12,34410)
-CheckOffset(struct dirent,d_type,18,12,34410)
-CheckMemberSize(struct dirent,d_name,256,12,34180)
-CheckOffset(struct dirent,d_name,19,12,34180)
+CheckTypeSize(struct dirent,280, 10178, 12);
+CheckMemberSize(struct dirent,d_off,8,12,34178);
+CheckOffset(struct dirent,d_off,8,12,34178);
+CheckMemberSize(struct dirent,d_reclen,2,12,34179);
+CheckOffset(struct dirent,d_reclen,16,12,34179);
+CheckMemberSize(struct dirent,d_type,1,12,34410);
+CheckOffset(struct dirent,d_type,18,12,34410);
+CheckMemberSize(struct dirent,d_name,256,12,34180);
+CheckOffset(struct dirent,d_name,19,12,34180);
 #elif __x86_64__
-CheckTypeSize(struct dirent,280, 10178, 11)
-CheckMemberSize(struct dirent,d_off,8,11,34178)
-CheckOffset(struct dirent,d_off,8,11,34178)
-CheckMemberSize(struct dirent,d_reclen,2,11,34179)
-CheckOffset(struct dirent,d_reclen,16,11,34179)
-CheckMemberSize(struct dirent,d_type,1,11,34410)
-CheckOffset(struct dirent,d_type,18,11,34410)
-CheckMemberSize(struct dirent,d_name,256,11,34180)
-CheckOffset(struct dirent,d_name,19,11,34180)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10178,0);
-Msg("Find size of dirent (10178)\n");
+CheckTypeSize(struct dirent,280, 10178, 11);
+CheckMemberSize(struct dirent,d_off,8,11,34178);
+CheckOffset(struct dirent,d_off,8,11,34178);
+CheckMemberSize(struct dirent,d_reclen,2,11,34179);
+CheckOffset(struct dirent,d_reclen,16,11,34179);
+CheckMemberSize(struct dirent,d_type,1,11,34410);
+CheckOffset(struct dirent,d_type,18,11,34410);
+CheckMemberSize(struct dirent,d_name,256,11,34180);
+CheckOffset(struct dirent,d_name,19,11,34180);
+#elif 1
+CheckTypeSize(struct dirent,0, 10178, 1);
+CheckMemberSize(struct dirent,d_name,256,1,34180);
+CheckOffset(struct dirent,d_name,10,1,34180);
 #endif
 
 #if __ia64__
-CheckTypeSize(struct dirent64,280, 10179, 3)
-CheckMemberSize(struct dirent64,d_ino,8,3,34181)
-CheckOffset(struct dirent64,d_ino,0,3,34181)
-CheckMemberSize(struct dirent64,d_off,8,3,34182)
-CheckOffset(struct dirent64,d_off,8,3,34182)
-CheckMemberSize(struct dirent64,d_reclen,2,3,34183)
-CheckOffset(struct dirent64,d_reclen,16,3,34183)
-CheckMemberSize(struct dirent64,d_type,1,3,34184)
-CheckOffset(struct dirent64,d_type,18,3,34184)
-CheckMemberSize(struct dirent64,d_name,256,3,34185)
-CheckOffset(struct dirent64,d_name,19,3,34185)
+CheckTypeSize(struct dirent64,280, 10179, 3);
+CheckMemberSize(struct dirent64,d_ino,8,3,34181);
+CheckOffset(struct dirent64,d_ino,0,3,34181);
+CheckMemberSize(struct dirent64,d_off,8,3,34182);
+CheckOffset(struct dirent64,d_off,8,3,34182);
+CheckMemberSize(struct dirent64,d_reclen,2,3,34183);
+CheckOffset(struct dirent64,d_reclen,16,3,34183);
+CheckMemberSize(struct dirent64,d_type,1,3,34184);
+CheckOffset(struct dirent64,d_type,18,3,34184);
+CheckMemberSize(struct dirent64,d_name,256,3,34185);
+CheckOffset(struct dirent64,d_name,19,3,34185);
 #elif __i386__
-CheckTypeSize(struct dirent64,276, 10179, 2)
-CheckMemberSize(struct dirent64,d_ino,8,2,34181)
-CheckOffset(struct dirent64,d_ino,0,2,34181)
-CheckMemberSize(struct dirent64,d_off,8,2,34182)
-CheckOffset(struct dirent64,d_off,8,2,34182)
-CheckMemberSize(struct dirent64,d_reclen,2,2,34183)
-CheckOffset(struct dirent64,d_reclen,16,2,34183)
-CheckMemberSize(struct dirent64,d_type,1,2,34184)
-CheckOffset(struct dirent64,d_type,18,2,34184)
-CheckMemberSize(struct dirent64,d_name,256,2,34185)
-CheckOffset(struct dirent64,d_name,19,2,34185)
+CheckTypeSize(struct dirent64,276, 10179, 2);
+CheckMemberSize(struct dirent64,d_ino,8,2,34181);
+CheckOffset(struct dirent64,d_ino,0,2,34181);
+CheckMemberSize(struct dirent64,d_off,8,2,34182);
+CheckOffset(struct dirent64,d_off,8,2,34182);
+CheckMemberSize(struct dirent64,d_reclen,2,2,34183);
+CheckOffset(struct dirent64,d_reclen,16,2,34183);
+CheckMemberSize(struct dirent64,d_type,1,2,34184);
+CheckOffset(struct dirent64,d_type,18,2,34184);
+CheckMemberSize(struct dirent64,d_name,256,2,34185);
+CheckOffset(struct dirent64,d_name,19,2,34185);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct dirent64,280, 10179, 6)
-CheckMemberSize(struct dirent64,d_ino,8,6,34181)
-CheckOffset(struct dirent64,d_ino,0,6,34181)
-CheckMemberSize(struct dirent64,d_off,8,6,34182)
-CheckOffset(struct dirent64,d_off,8,6,34182)
-CheckMemberSize(struct dirent64,d_reclen,2,6,34183)
-CheckOffset(struct dirent64,d_reclen,16,6,34183)
-CheckMemberSize(struct dirent64,d_type,1,6,34184)
-CheckOffset(struct dirent64,d_type,18,6,34184)
-CheckMemberSize(struct dirent64,d_name,256,6,34185)
-CheckOffset(struct dirent64,d_name,19,6,34185)
+CheckTypeSize(struct dirent64,280, 10179, 6);
+CheckMemberSize(struct dirent64,d_ino,8,6,34181);
+CheckOffset(struct dirent64,d_ino,0,6,34181);
+CheckMemberSize(struct dirent64,d_off,8,6,34182);
+CheckOffset(struct dirent64,d_off,8,6,34182);
+CheckMemberSize(struct dirent64,d_reclen,2,6,34183);
+CheckOffset(struct dirent64,d_reclen,16,6,34183);
+CheckMemberSize(struct dirent64,d_type,1,6,34184);
+CheckOffset(struct dirent64,d_type,18,6,34184);
+CheckMemberSize(struct dirent64,d_name,256,6,34185);
+CheckOffset(struct dirent64,d_name,19,6,34185);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct dirent64,280, 10179, 10)
-CheckMemberSize(struct dirent64,d_ino,8,10,34181)
-CheckOffset(struct dirent64,d_ino,0,10,34181)
-CheckMemberSize(struct dirent64,d_off,8,10,34182)
-CheckOffset(struct dirent64,d_off,8,10,34182)
-CheckMemberSize(struct dirent64,d_reclen,2,10,34183)
-CheckOffset(struct dirent64,d_reclen,16,10,34183)
-CheckMemberSize(struct dirent64,d_type,1,10,34184)
-CheckOffset(struct dirent64,d_type,18,10,34184)
-CheckMemberSize(struct dirent64,d_name,256,10,34185)
-CheckOffset(struct dirent64,d_name,19,10,34185)
+CheckTypeSize(struct dirent64,280, 10179, 10);
+CheckMemberSize(struct dirent64,d_ino,8,10,34181);
+CheckOffset(struct dirent64,d_ino,0,10,34181);
+CheckMemberSize(struct dirent64,d_off,8,10,34182);
+CheckOffset(struct dirent64,d_off,8,10,34182);
+CheckMemberSize(struct dirent64,d_reclen,2,10,34183);
+CheckOffset(struct dirent64,d_reclen,16,10,34183);
+CheckMemberSize(struct dirent64,d_type,1,10,34184);
+CheckOffset(struct dirent64,d_type,18,10,34184);
+CheckMemberSize(struct dirent64,d_name,256,10,34185);
+CheckOffset(struct dirent64,d_name,19,10,34185);
 #elif __powerpc64__
-CheckTypeSize(struct dirent64,280, 10179, 9)
-CheckMemberSize(struct dirent64,d_ino,8,9,34181)
-CheckOffset(struct dirent64,d_ino,0,9,34181)
-CheckMemberSize(struct dirent64,d_off,8,9,34182)
-CheckOffset(struct dirent64,d_off,8,9,34182)
-CheckMemberSize(struct dirent64,d_reclen,2,9,34183)
-CheckOffset(struct dirent64,d_reclen,16,9,34183)
-CheckMemberSize(struct dirent64,d_type,1,9,34184)
-CheckOffset(struct dirent64,d_type,18,9,34184)
-CheckMemberSize(struct dirent64,d_name,256,9,34185)
-CheckOffset(struct dirent64,d_name,19,9,34185)
+CheckTypeSize(struct dirent64,280, 10179, 9);
+CheckMemberSize(struct dirent64,d_ino,8,9,34181);
+CheckOffset(struct dirent64,d_ino,0,9,34181);
+CheckMemberSize(struct dirent64,d_off,8,9,34182);
+CheckOffset(struct dirent64,d_off,8,9,34182);
+CheckMemberSize(struct dirent64,d_reclen,2,9,34183);
+CheckOffset(struct dirent64,d_reclen,16,9,34183);
+CheckMemberSize(struct dirent64,d_type,1,9,34184);
+CheckOffset(struct dirent64,d_type,18,9,34184);
+CheckMemberSize(struct dirent64,d_name,256,9,34185);
+CheckOffset(struct dirent64,d_name,19,9,34185);
 #elif __s390x__
-CheckTypeSize(struct dirent64,280, 10179, 12)
-CheckMemberSize(struct dirent64,d_off,8,12,34182)
-CheckOffset(struct dirent64,d_off,8,12,34182)
-CheckMemberSize(struct dirent64,d_reclen,2,12,34183)
-CheckOffset(struct dirent64,d_reclen,16,12,34183)
-CheckMemberSize(struct dirent64,d_type,1,12,34184)
-CheckOffset(struct dirent64,d_type,18,12,34184)
-CheckMemberSize(struct dirent64,d_name,256,12,34185)
-CheckOffset(struct dirent64,d_name,19,12,34185)
+CheckTypeSize(struct dirent64,280, 10179, 12);
+CheckMemberSize(struct dirent64,d_off,8,12,34182);
+CheckOffset(struct dirent64,d_off,8,12,34182);
+CheckMemberSize(struct dirent64,d_reclen,2,12,34183);
+CheckOffset(struct dirent64,d_reclen,16,12,34183);
+CheckMemberSize(struct dirent64,d_type,1,12,34184);
+CheckOffset(struct dirent64,d_type,18,12,34184);
+CheckMemberSize(struct dirent64,d_name,256,12,34185);
+CheckOffset(struct dirent64,d_name,19,12,34185);
 #elif __x86_64__
-CheckTypeSize(struct dirent64,280, 10179, 11)
-CheckMemberSize(struct dirent64,d_off,8,11,34182)
-CheckOffset(struct dirent64,d_off,8,11,34182)
-CheckMemberSize(struct dirent64,d_reclen,2,11,34183)
-CheckOffset(struct dirent64,d_reclen,16,11,34183)
-CheckMemberSize(struct dirent64,d_type,1,11,34184)
-CheckOffset(struct dirent64,d_type,18,11,34184)
-CheckMemberSize(struct dirent64,d_name,256,11,34185)
-CheckOffset(struct dirent64,d_name,19,11,34185)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10179,0);
-Msg("Find size of dirent64 (10179)\n");
+CheckTypeSize(struct dirent64,280, 10179, 11);
+CheckMemberSize(struct dirent64,d_off,8,11,34182);
+CheckOffset(struct dirent64,d_off,8,11,34182);
+CheckMemberSize(struct dirent64,d_reclen,2,11,34183);
+CheckOffset(struct dirent64,d_reclen,16,11,34183);
+CheckMemberSize(struct dirent64,d_type,1,11,34184);
+CheckOffset(struct dirent64,d_type,18,11,34184);
+CheckMemberSize(struct dirent64,d_name,256,11,34185);
+CheckOffset(struct dirent64,d_name,19,11,34185);
+#elif 1
+CheckTypeSize(struct dirent64,0, 10179, 1);
+Msg("Missing member data for dirent64 on All\n");
+CheckOffset(struct dirent64,d_ino,0,1,34181);
+CheckOffset(struct dirent64,d_off,0,1,34182);
+CheckOffset(struct dirent64,d_reclen,0,1,34183);
+CheckOffset(struct dirent64,d_type,0,1,34184);
+CheckOffset(struct dirent64,d_name,0,1,34185);
 #endif
 
 extern void rewinddir_db(DIR *);

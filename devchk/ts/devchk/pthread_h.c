@@ -240,468 +240,466 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(struct _pthread_cleanup_buffer,16, 6931, 2)
-CheckMemberSize(struct _pthread_cleanup_buffer,__routine,4,2,40619)
-CheckOffset(struct _pthread_cleanup_buffer,__routine,0,2,40619)
-CheckMemberSize(struct _pthread_cleanup_buffer,__arg,4,2,40620)
-CheckOffset(struct _pthread_cleanup_buffer,__arg,4,2,40620)
-CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,2,40621)
-CheckOffset(struct _pthread_cleanup_buffer,__canceltype,8,2,40621)
-CheckMemberSize(struct _pthread_cleanup_buffer,__prev,4,2,40622)
-CheckOffset(struct _pthread_cleanup_buffer,__prev,12,2,40622)
+CheckTypeSize(struct _pthread_cleanup_buffer,16, 6931, 2);
+CheckMemberSize(struct _pthread_cleanup_buffer,__routine,4,2,40619);
+CheckOffset(struct _pthread_cleanup_buffer,__routine,0,2,40619);
+CheckMemberSize(struct _pthread_cleanup_buffer,__arg,4,2,40620);
+CheckOffset(struct _pthread_cleanup_buffer,__arg,4,2,40620);
+CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,2,40621);
+CheckOffset(struct _pthread_cleanup_buffer,__canceltype,8,2,40621);
+CheckMemberSize(struct _pthread_cleanup_buffer,__prev,4,2,40622);
+CheckOffset(struct _pthread_cleanup_buffer,__prev,12,2,40622);
 #elif __s390x__
-CheckTypeSize(struct _pthread_cleanup_buffer,32, 6931, 12)
-CheckMemberSize(struct _pthread_cleanup_buffer,__routine,8,12,40619)
-CheckOffset(struct _pthread_cleanup_buffer,__routine,0,12,40619)
-CheckMemberSize(struct _pthread_cleanup_buffer,__arg,8,12,40620)
-CheckOffset(struct _pthread_cleanup_buffer,__arg,8,12,40620)
-CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,12,40621)
-CheckOffset(struct _pthread_cleanup_buffer,__canceltype,16,12,40621)
-CheckMemberSize(struct _pthread_cleanup_buffer,__prev,8,12,40622)
-CheckOffset(struct _pthread_cleanup_buffer,__prev,24,12,40622)
+CheckTypeSize(struct _pthread_cleanup_buffer,32, 6931, 12);
+CheckMemberSize(struct _pthread_cleanup_buffer,__routine,8,12,40619);
+CheckOffset(struct _pthread_cleanup_buffer,__routine,0,12,40619);
+CheckMemberSize(struct _pthread_cleanup_buffer,__arg,8,12,40620);
+CheckOffset(struct _pthread_cleanup_buffer,__arg,8,12,40620);
+CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,12,40621);
+CheckOffset(struct _pthread_cleanup_buffer,__canceltype,16,12,40621);
+CheckMemberSize(struct _pthread_cleanup_buffer,__prev,8,12,40622);
+CheckOffset(struct _pthread_cleanup_buffer,__prev,24,12,40622);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _pthread_cleanup_buffer,16, 6931, 6)
-CheckMemberSize(struct _pthread_cleanup_buffer,__routine,4,6,40619)
-CheckOffset(struct _pthread_cleanup_buffer,__routine,0,6,40619)
-CheckMemberSize(struct _pthread_cleanup_buffer,__arg,4,6,40620)
-CheckOffset(struct _pthread_cleanup_buffer,__arg,4,6,40620)
-CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,6,40621)
-CheckOffset(struct _pthread_cleanup_buffer,__canceltype,8,6,40621)
-CheckMemberSize(struct _pthread_cleanup_buffer,__prev,4,6,40622)
-CheckOffset(struct _pthread_cleanup_buffer,__prev,12,6,40622)
+CheckTypeSize(struct _pthread_cleanup_buffer,16, 6931, 6);
+CheckMemberSize(struct _pthread_cleanup_buffer,__routine,4,6,40619);
+CheckOffset(struct _pthread_cleanup_buffer,__routine,0,6,40619);
+CheckMemberSize(struct _pthread_cleanup_buffer,__arg,4,6,40620);
+CheckOffset(struct _pthread_cleanup_buffer,__arg,4,6,40620);
+CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,6,40621);
+CheckOffset(struct _pthread_cleanup_buffer,__canceltype,8,6,40621);
+CheckMemberSize(struct _pthread_cleanup_buffer,__prev,4,6,40622);
+CheckOffset(struct _pthread_cleanup_buffer,__prev,12,6,40622);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _pthread_cleanup_buffer,16, 6931, 10)
-CheckMemberSize(struct _pthread_cleanup_buffer,__routine,4,10,40619)
-CheckOffset(struct _pthread_cleanup_buffer,__routine,0,10,40619)
-CheckMemberSize(struct _pthread_cleanup_buffer,__arg,4,10,40620)
-CheckOffset(struct _pthread_cleanup_buffer,__arg,4,10,40620)
-CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,10,40621)
-CheckOffset(struct _pthread_cleanup_buffer,__canceltype,8,10,40621)
-CheckMemberSize(struct _pthread_cleanup_buffer,__prev,4,10,40622)
-CheckOffset(struct _pthread_cleanup_buffer,__prev,12,10,40622)
+CheckTypeSize(struct _pthread_cleanup_buffer,16, 6931, 10);
+CheckMemberSize(struct _pthread_cleanup_buffer,__routine,4,10,40619);
+CheckOffset(struct _pthread_cleanup_buffer,__routine,0,10,40619);
+CheckMemberSize(struct _pthread_cleanup_buffer,__arg,4,10,40620);
+CheckOffset(struct _pthread_cleanup_buffer,__arg,4,10,40620);
+CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,10,40621);
+CheckOffset(struct _pthread_cleanup_buffer,__canceltype,8,10,40621);
+CheckMemberSize(struct _pthread_cleanup_buffer,__prev,4,10,40622);
+CheckOffset(struct _pthread_cleanup_buffer,__prev,12,10,40622);
 #elif __ia64__
-CheckTypeSize(struct _pthread_cleanup_buffer,32, 6931, 3)
-CheckMemberSize(struct _pthread_cleanup_buffer,__routine,8,3,40619)
-CheckOffset(struct _pthread_cleanup_buffer,__routine,0,3,40619)
-CheckMemberSize(struct _pthread_cleanup_buffer,__arg,8,3,40620)
-CheckOffset(struct _pthread_cleanup_buffer,__arg,8,3,40620)
-CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,3,40621)
-CheckOffset(struct _pthread_cleanup_buffer,__canceltype,16,3,40621)
-CheckMemberSize(struct _pthread_cleanup_buffer,__prev,8,3,40622)
-CheckOffset(struct _pthread_cleanup_buffer,__prev,24,3,40622)
+CheckTypeSize(struct _pthread_cleanup_buffer,32, 6931, 3);
+CheckMemberSize(struct _pthread_cleanup_buffer,__routine,8,3,40619);
+CheckOffset(struct _pthread_cleanup_buffer,__routine,0,3,40619);
+CheckMemberSize(struct _pthread_cleanup_buffer,__arg,8,3,40620);
+CheckOffset(struct _pthread_cleanup_buffer,__arg,8,3,40620);
+CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,3,40621);
+CheckOffset(struct _pthread_cleanup_buffer,__canceltype,16,3,40621);
+CheckMemberSize(struct _pthread_cleanup_buffer,__prev,8,3,40622);
+CheckOffset(struct _pthread_cleanup_buffer,__prev,24,3,40622);
 #elif __powerpc64__
-CheckTypeSize(struct _pthread_cleanup_buffer,32, 6931, 9)
-CheckMemberSize(struct _pthread_cleanup_buffer,__routine,8,9,40619)
-CheckOffset(struct _pthread_cleanup_buffer,__routine,0,9,40619)
-CheckMemberSize(struct _pthread_cleanup_buffer,__arg,8,9,40620)
-CheckOffset(struct _pthread_cleanup_buffer,__arg,8,9,40620)
-CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,9,40621)
-CheckOffset(struct _pthread_cleanup_buffer,__canceltype,16,9,40621)
-CheckMemberSize(struct _pthread_cleanup_buffer,__prev,8,9,40622)
-CheckOffset(struct _pthread_cleanup_buffer,__prev,24,9,40622)
+CheckTypeSize(struct _pthread_cleanup_buffer,32, 6931, 9);
+CheckMemberSize(struct _pthread_cleanup_buffer,__routine,8,9,40619);
+CheckOffset(struct _pthread_cleanup_buffer,__routine,0,9,40619);
+CheckMemberSize(struct _pthread_cleanup_buffer,__arg,8,9,40620);
+CheckOffset(struct _pthread_cleanup_buffer,__arg,8,9,40620);
+CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,9,40621);
+CheckOffset(struct _pthread_cleanup_buffer,__canceltype,16,9,40621);
+CheckMemberSize(struct _pthread_cleanup_buffer,__prev,8,9,40622);
+CheckOffset(struct _pthread_cleanup_buffer,__prev,24,9,40622);
 #elif __x86_64__
-CheckTypeSize(struct _pthread_cleanup_buffer,32, 6931, 11)
-CheckMemberSize(struct _pthread_cleanup_buffer,__routine,8,11,40619)
-CheckOffset(struct _pthread_cleanup_buffer,__routine,0,11,40619)
-CheckMemberSize(struct _pthread_cleanup_buffer,__arg,8,11,40620)
-CheckOffset(struct _pthread_cleanup_buffer,__arg,8,11,40620)
-CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,11,40621)
-CheckOffset(struct _pthread_cleanup_buffer,__canceltype,16,11,40621)
-CheckMemberSize(struct _pthread_cleanup_buffer,__prev,8,11,40622)
-CheckOffset(struct _pthread_cleanup_buffer,__prev,24,11,40622)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6931,0);
-Msg("Find size of _pthread_cleanup_buffer (6931)\n");
+CheckTypeSize(struct _pthread_cleanup_buffer,32, 6931, 11);
+CheckMemberSize(struct _pthread_cleanup_buffer,__routine,8,11,40619);
+CheckOffset(struct _pthread_cleanup_buffer,__routine,0,11,40619);
+CheckMemberSize(struct _pthread_cleanup_buffer,__arg,8,11,40620);
+CheckOffset(struct _pthread_cleanup_buffer,__arg,8,11,40620);
+CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,11,40621);
+CheckOffset(struct _pthread_cleanup_buffer,__canceltype,16,11,40621);
+CheckMemberSize(struct _pthread_cleanup_buffer,__prev,8,11,40622);
+CheckOffset(struct _pthread_cleanup_buffer,__prev,24,11,40622);
+#elif 1
+CheckTypeSize(struct _pthread_cleanup_buffer,0, 6931, 1);
+Msg("Missing member data for _pthread_cleanup_buffer on All\n");
+CheckOffset(struct _pthread_cleanup_buffer,__routine,0,1,40619);
+CheckOffset(struct _pthread_cleanup_buffer,__arg,0,1,40620);
+CheckOffset(struct _pthread_cleanup_buffer,__canceltype,0,1,40621);
+CheckOffset(struct _pthread_cleanup_buffer,__prev,0,1,40622);
 #endif
 
 #if __i386__
-CheckTypeSize(pthread_rwlock_t *,4, 9056, 2)
+CheckTypeSize(pthread_rwlock_t *,4, 9056, 2);
 #elif __x86_64__
-CheckTypeSize(pthread_rwlock_t *,8, 9056, 11)
+CheckTypeSize(pthread_rwlock_t *,8, 9056, 11);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(pthread_rwlock_t *,4, 9056, 6)
+CheckTypeSize(pthread_rwlock_t *,4, 9056, 6);
 #elif __powerpc64__
-CheckTypeSize(pthread_rwlock_t *,8, 9056, 9)
+CheckTypeSize(pthread_rwlock_t *,8, 9056, 9);
 #elif __s390__ && !__s390x__
-CheckTypeSize(pthread_rwlock_t *,4, 9056, 10)
+CheckTypeSize(pthread_rwlock_t *,4, 9056, 10);
 #elif __s390x__
-CheckTypeSize(pthread_rwlock_t *,8, 9056, 12)
+CheckTypeSize(pthread_rwlock_t *,8, 9056, 12);
 #elif __ia64__
-CheckTypeSize(pthread_rwlock_t *,8, 9056, 3)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9056,0);
-Msg("Find size of pthread_rwlock_t * (9056)\n");
+CheckTypeSize(pthread_rwlock_t *,8, 9056, 3);
+#elif 1
+CheckTypeSize(pthread_rwlock_t *,0, 9056, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(pthread_key_t,4, 9059, 2)
+CheckTypeSize(pthread_key_t,4, 9059, 2);
 #elif __ia64__
-CheckTypeSize(pthread_key_t,4, 9059, 3)
+CheckTypeSize(pthread_key_t,4, 9059, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(pthread_key_t,4, 9059, 6)
+CheckTypeSize(pthread_key_t,4, 9059, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(pthread_key_t,4, 9059, 10)
+CheckTypeSize(pthread_key_t,4, 9059, 10);
 #elif __powerpc64__
-CheckTypeSize(pthread_key_t,4, 9059, 9)
+CheckTypeSize(pthread_key_t,4, 9059, 9);
 #elif __s390x__
-CheckTypeSize(pthread_key_t,4, 9059, 12)
+CheckTypeSize(pthread_key_t,4, 9059, 12);
 #elif __x86_64__
-CheckTypeSize(pthread_key_t,4, 9059, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9059,0);
-Msg("Find size of pthread_key_t (9059)\n");
+CheckTypeSize(pthread_key_t,4, 9059, 11);
+#elif 1
+CheckTypeSize(pthread_key_t,0, 9059, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(pthread_once_t,4, 9062, 2)
+CheckTypeSize(pthread_once_t,4, 9062, 2);
 #elif __ia64__
-CheckTypeSize(pthread_once_t,4, 9062, 3)
+CheckTypeSize(pthread_once_t,4, 9062, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(pthread_once_t,4, 9062, 6)
+CheckTypeSize(pthread_once_t,4, 9062, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(pthread_once_t,4, 9062, 10)
+CheckTypeSize(pthread_once_t,4, 9062, 10);
 #elif __powerpc64__
-CheckTypeSize(pthread_once_t,4, 9062, 9)
+CheckTypeSize(pthread_once_t,4, 9062, 9);
 #elif __s390x__
-CheckTypeSize(pthread_once_t,4, 9062, 12)
+CheckTypeSize(pthread_once_t,4, 9062, 12);
 #elif __x86_64__
-CheckTypeSize(pthread_once_t,4, 9062, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9062,0);
-Msg("Find size of pthread_once_t (9062)\n");
-#endif
-
-#if __arm__
-CheckTypeSize(__pthread_cond_align_t,8, 10917, 4)
-#elif __i386__
-CheckTypeSize(__pthread_cond_align_t,8, 10917, 2)
-#elif __ia64__
-CheckTypeSize(__pthread_cond_align_t,8, 10917, 3)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(__pthread_cond_align_t,8, 10917, 6)
-#elif __s390__ && !__s390x__
-CheckTypeSize(__pthread_cond_align_t,8, 10917, 10)
-#elif __powerpc64__
-CheckTypeSize(__pthread_cond_align_t,8, 10917, 9)
-#elif __s390x__
-CheckTypeSize(__pthread_cond_align_t,8, 10917, 12)
-#elif __x86_64__
-CheckTypeSize(__pthread_cond_align_t,8, 10917, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10917,0);
-Msg("Find size of __pthread_cond_align_t (10917)\n");
+CheckTypeSize(pthread_once_t,4, 9062, 11);
+#elif 1
+CheckTypeSize(pthread_once_t,0, 9062, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(pthread_t,4, 9040, 2)
+CheckTypeSize(__pthread_cond_align_t,8, 10917, 2);
 #elif __ia64__
-CheckTypeSize(pthread_t,8, 9040, 3)
+CheckTypeSize(__pthread_cond_align_t,8, 10917, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(pthread_t,4, 9040, 6)
+CheckTypeSize(__pthread_cond_align_t,8, 10917, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(pthread_t,4, 9040, 10)
+CheckTypeSize(__pthread_cond_align_t,8, 10917, 10);
 #elif __powerpc64__
-CheckTypeSize(pthread_t,8, 9040, 9)
+CheckTypeSize(__pthread_cond_align_t,8, 10917, 9);
 #elif __s390x__
-CheckTypeSize(pthread_t,8, 9040, 12)
+CheckTypeSize(__pthread_cond_align_t,8, 10917, 12);
 #elif __x86_64__
-CheckTypeSize(pthread_t,8, 9040, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9040,0);
-Msg("Find size of pthread_t (9040)\n");
+CheckTypeSize(__pthread_cond_align_t,8, 10917, 11);
+#elif 1
+CheckTypeSize(__pthread_cond_align_t,0, 10917, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _pthread_fastlock,8, 10105, 2)
-CheckMemberSize(struct _pthread_fastlock,__status,4,2,33602)
-CheckOffset(struct _pthread_fastlock,__status,0,2,33602)
-CheckMemberSize(struct _pthread_fastlock,__spinlock,4,2,34427)
-CheckOffset(struct _pthread_fastlock,__spinlock,4,2,34427)
+CheckTypeSize(pthread_t,4, 9040, 2);
 #elif __ia64__
-CheckTypeSize(struct _pthread_fastlock,16, 10105, 3)
-CheckMemberSize(struct _pthread_fastlock,__spinlock,4,3,34427)
-CheckOffset(struct _pthread_fastlock,__spinlock,8,3,34427)
+CheckTypeSize(pthread_t,8, 9040, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _pthread_fastlock,8, 10105, 6)
-CheckMemberSize(struct _pthread_fastlock,__spinlock,4,6,34427)
-CheckOffset(struct _pthread_fastlock,__spinlock,4,6,34427)
+CheckTypeSize(pthread_t,4, 9040, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _pthread_fastlock,8, 10105, 10)
-CheckMemberSize(struct _pthread_fastlock,__spinlock,4,10,34427)
-CheckOffset(struct _pthread_fastlock,__spinlock,4,10,34427)
+CheckTypeSize(pthread_t,4, 9040, 10);
 #elif __powerpc64__
-CheckTypeSize(struct _pthread_fastlock,16, 10105, 9)
-CheckMemberSize(struct _pthread_fastlock,__spinlock,4,9,34427)
-CheckOffset(struct _pthread_fastlock,__spinlock,8,9,34427)
+CheckTypeSize(pthread_t,8, 9040, 9);
 #elif __s390x__
-CheckTypeSize(struct _pthread_fastlock,16, 10105, 12)
-CheckMemberSize(struct _pthread_fastlock,__spinlock,4,12,34427)
-CheckOffset(struct _pthread_fastlock,__spinlock,8,12,34427)
+CheckTypeSize(pthread_t,8, 9040, 12);
 #elif __x86_64__
-CheckTypeSize(struct _pthread_fastlock,16, 10105, 11)
-CheckMemberSize(struct _pthread_fastlock,__spinlock,4,11,34427)
-CheckOffset(struct _pthread_fastlock,__spinlock,8,11,34427)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10105,0);
-Msg("Find size of _pthread_fastlock (10105)\n");
+CheckTypeSize(pthread_t,8, 9040, 11);
+#elif 1
+CheckTypeSize(pthread_t,0, 9040, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(pthread_mutex_t,24, 9047, 2)
+CheckTypeSize(struct _pthread_fastlock,8, 10105, 2);
+CheckMemberSize(struct _pthread_fastlock,__status,4,2,33602);
+CheckOffset(struct _pthread_fastlock,__status,0,2,33602);
+CheckMemberSize(struct _pthread_fastlock,__spinlock,4,2,34427);
+CheckOffset(struct _pthread_fastlock,__spinlock,4,2,34427);
 #elif __ia64__
-CheckTypeSize(pthread_mutex_t,40, 9047, 3)
+CheckTypeSize(struct _pthread_fastlock,16, 10105, 3);
+CheckMemberSize(struct _pthread_fastlock,__spinlock,4,3,34427);
+CheckOffset(struct _pthread_fastlock,__spinlock,8,3,34427);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(pthread_mutex_t,24, 9047, 6)
+CheckTypeSize(struct _pthread_fastlock,8, 10105, 6);
+CheckMemberSize(struct _pthread_fastlock,__spinlock,4,6,34427);
+CheckOffset(struct _pthread_fastlock,__spinlock,4,6,34427);
 #elif __s390__ && !__s390x__
-CheckTypeSize(pthread_mutex_t,24, 9047, 10)
+CheckTypeSize(struct _pthread_fastlock,8, 10105, 10);
+CheckMemberSize(struct _pthread_fastlock,__spinlock,4,10,34427);
+CheckOffset(struct _pthread_fastlock,__spinlock,4,10,34427);
 #elif __powerpc64__
-CheckTypeSize(pthread_mutex_t,40, 9047, 9)
+CheckTypeSize(struct _pthread_fastlock,16, 10105, 9);
+CheckMemberSize(struct _pthread_fastlock,__spinlock,4,9,34427);
+CheckOffset(struct _pthread_fastlock,__spinlock,8,9,34427);
 #elif __s390x__
-CheckTypeSize(pthread_mutex_t,40, 9047, 12)
+CheckTypeSize(struct _pthread_fastlock,16, 10105, 12);
+CheckMemberSize(struct _pthread_fastlock,__spinlock,4,12,34427);
+CheckOffset(struct _pthread_fastlock,__spinlock,8,12,34427);
 #elif __x86_64__
-CheckTypeSize(pthread_mutex_t,40, 9047, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9047,0);
-Msg("Find size of pthread_mutex_t (9047)\n");
+CheckTypeSize(struct _pthread_fastlock,16, 10105, 11);
+CheckMemberSize(struct _pthread_fastlock,__spinlock,4,11,34427);
+CheckOffset(struct _pthread_fastlock,__spinlock,8,11,34427);
+#elif 1
+CheckTypeSize(struct _pthread_fastlock,0, 10105, 1);
+Msg("Missing member data for _pthread_fastlock on All\n");
+CheckOffset(struct _pthread_fastlock,__status,0,1,33602);
+CheckOffset(struct _pthread_fastlock,__spinlock,0,1,34427);
 #endif
 
 #if __i386__
-CheckTypeSize(pthread_mutexattr_t,4, 9049, 2)
+CheckTypeSize(pthread_mutex_t,24, 9047, 2);
 #elif __ia64__
-CheckTypeSize(pthread_mutexattr_t,4, 9049, 3)
+CheckTypeSize(pthread_mutex_t,40, 9047, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(pthread_mutexattr_t,4, 9049, 6)
+CheckTypeSize(pthread_mutex_t,24, 9047, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(pthread_mutexattr_t,4, 9049, 10)
+CheckTypeSize(pthread_mutex_t,24, 9047, 10);
 #elif __powerpc64__
-CheckTypeSize(pthread_mutexattr_t,4, 9049, 9)
+CheckTypeSize(pthread_mutex_t,40, 9047, 9);
 #elif __s390x__
-CheckTypeSize(pthread_mutexattr_t,4, 9049, 12)
+CheckTypeSize(pthread_mutex_t,40, 9047, 12);
 #elif __x86_64__
-CheckTypeSize(pthread_mutexattr_t,4, 9049, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9049,0);
-Msg("Find size of pthread_mutexattr_t (9049)\n");
+CheckTypeSize(pthread_mutex_t,40, 9047, 11);
+#elif 1
+CheckTypeSize(pthread_mutex_t,0, 9047, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(pthread_attr_t,36, 9042, 2)
+CheckTypeSize(pthread_mutexattr_t,4, 9049, 2);
 #elif __ia64__
-CheckTypeSize(pthread_attr_t,56, 9042, 3)
+CheckTypeSize(pthread_mutexattr_t,4, 9049, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(pthread_attr_t,36, 9042, 6)
+CheckTypeSize(pthread_mutexattr_t,4, 9049, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(pthread_attr_t,36, 9042, 10)
+CheckTypeSize(pthread_mutexattr_t,4, 9049, 10);
 #elif __powerpc64__
-CheckTypeSize(pthread_attr_t,56, 9042, 9)
+CheckTypeSize(pthread_mutexattr_t,4, 9049, 9);
 #elif __s390x__
-CheckTypeSize(pthread_attr_t,56, 9042, 12)
+CheckTypeSize(pthread_mutexattr_t,4, 9049, 12);
 #elif __x86_64__
-CheckTypeSize(pthread_attr_t,56, 9042, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9042,0);
-Msg("Find size of pthread_attr_t (9042)\n");
+CheckTypeSize(pthread_mutexattr_t,4, 9049, 11);
+#elif 1
+CheckTypeSize(pthread_mutexattr_t,0, 9049, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(pthread_cond_t,48, 9051, 2)
+CheckTypeSize(pthread_attr_t,36, 9042, 2);
 #elif __ia64__
-CheckTypeSize(pthread_cond_t,48, 9051, 3)
+CheckTypeSize(pthread_attr_t,56, 9042, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(pthread_cond_t,48, 9051, 6)
+CheckTypeSize(pthread_attr_t,36, 9042, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(pthread_cond_t,48, 9051, 10)
+CheckTypeSize(pthread_attr_t,36, 9042, 10);
 #elif __powerpc64__
-CheckTypeSize(pthread_cond_t,48, 9051, 9)
+CheckTypeSize(pthread_attr_t,56, 9042, 9);
 #elif __s390x__
-CheckTypeSize(pthread_cond_t,48, 9051, 12)
+CheckTypeSize(pthread_attr_t,56, 9042, 12);
 #elif __x86_64__
-CheckTypeSize(pthread_cond_t,48, 9051, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9051,0);
-Msg("Find size of pthread_cond_t (9051)\n");
+CheckTypeSize(pthread_attr_t,56, 9042, 11);
+#elif 1
+CheckTypeSize(pthread_attr_t,0, 9042, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(pthread_condattr_t,4, 9053, 2)
+CheckTypeSize(pthread_cond_t,48, 9051, 2);
 #elif __ia64__
-CheckTypeSize(pthread_condattr_t,4, 9053, 3)
+CheckTypeSize(pthread_cond_t,48, 9051, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(pthread_condattr_t,4, 9053, 6)
+CheckTypeSize(pthread_cond_t,48, 9051, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(pthread_condattr_t,4, 9053, 10)
+CheckTypeSize(pthread_cond_t,48, 9051, 10);
 #elif __powerpc64__
-CheckTypeSize(pthread_condattr_t,4, 9053, 9)
+CheckTypeSize(pthread_cond_t,48, 9051, 9);
 #elif __s390x__
-CheckTypeSize(pthread_condattr_t,4, 9053, 12)
+CheckTypeSize(pthread_cond_t,48, 9051, 12);
 #elif __x86_64__
-CheckTypeSize(pthread_condattr_t,4, 9053, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9053,0);
-Msg("Find size of pthread_condattr_t (9053)\n");
+CheckTypeSize(pthread_cond_t,48, 9051, 11);
+#elif 1
+CheckTypeSize(pthread_cond_t,0, 9051, 1);
+#endif
+
+#if __i386__
+CheckTypeSize(pthread_condattr_t,4, 9053, 2);
+#elif __ia64__
+CheckTypeSize(pthread_condattr_t,4, 9053, 3);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(pthread_condattr_t,4, 9053, 6);
+#elif __s390__ && !__s390x__
+CheckTypeSize(pthread_condattr_t,4, 9053, 10);
+#elif __powerpc64__
+CheckTypeSize(pthread_condattr_t,4, 9053, 9);
+#elif __s390x__
+CheckTypeSize(pthread_condattr_t,4, 9053, 12);
+#elif __x86_64__
+CheckTypeSize(pthread_condattr_t,4, 9053, 11);
+#elif 1
+CheckTypeSize(pthread_condattr_t,0, 9053, 1);
 #endif
 
 #if 1
 #endif
 
 #if __i386__
-CheckTypeSize(_pthread_descr,4, 9087, 2)
+CheckTypeSize(_pthread_descr,4, 9087, 2);
 #elif __ia64__
-CheckTypeSize(_pthread_descr,8, 9087, 3)
+CheckTypeSize(_pthread_descr,8, 9087, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(_pthread_descr,4, 9087, 6)
+CheckTypeSize(_pthread_descr,4, 9087, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(_pthread_descr,4, 9087, 10)
+CheckTypeSize(_pthread_descr,4, 9087, 10);
 #elif __powerpc64__
-CheckTypeSize(_pthread_descr,8, 9087, 9)
+CheckTypeSize(_pthread_descr,8, 9087, 9);
 #elif __s390x__
-CheckTypeSize(_pthread_descr,8, 9087, 12)
+CheckTypeSize(_pthread_descr,8, 9087, 12);
 #elif __x86_64__
-CheckTypeSize(_pthread_descr,8, 9087, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9087,0);
-Msg("Find size of _pthread_descr (9087)\n");
+CheckTypeSize(_pthread_descr,8, 9087, 11);
+#elif 1
+CheckTypeSize(_pthread_descr,0, 9087, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(pthread_rwlock_t,32, 9055, 2)
+CheckTypeSize(pthread_rwlock_t,32, 9055, 2);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(pthread_rwlock_t,32, 9055, 6)
+CheckTypeSize(pthread_rwlock_t,32, 9055, 6);
 #elif __ia64__
-CheckTypeSize(pthread_rwlock_t,56, 9055, 3)
+CheckTypeSize(pthread_rwlock_t,56, 9055, 3);
 #elif __s390__ && !__s390x__
-CheckTypeSize(pthread_rwlock_t,32, 9055, 10)
+CheckTypeSize(pthread_rwlock_t,32, 9055, 10);
 #elif __powerpc64__
-CheckTypeSize(pthread_rwlock_t,56, 9055, 9)
+CheckTypeSize(pthread_rwlock_t,56, 9055, 9);
 #elif __s390x__
-CheckTypeSize(pthread_rwlock_t,56, 9055, 12)
+CheckTypeSize(pthread_rwlock_t,56, 9055, 12);
 #elif __x86_64__
-CheckTypeSize(pthread_rwlock_t,56, 9055, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9055,0);
-Msg("Find size of pthread_rwlock_t (9055)\n");
+CheckTypeSize(pthread_rwlock_t,56, 9055, 11);
+#elif 1
+CheckTypeSize(pthread_rwlock_t,0, 9055, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(pthread_rwlockattr_t,8, 9057, 2)
+CheckTypeSize(pthread_rwlockattr_t,8, 9057, 2);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(pthread_rwlockattr_t,8, 9057, 6)
+CheckTypeSize(pthread_rwlockattr_t,8, 9057, 6);
 #elif __ia64__
-CheckTypeSize(pthread_rwlockattr_t,8, 9057, 3)
+CheckTypeSize(pthread_rwlockattr_t,8, 9057, 3);
 #elif __s390__ && !__s390x__
-CheckTypeSize(pthread_rwlockattr_t,8, 9057, 10)
+CheckTypeSize(pthread_rwlockattr_t,8, 9057, 10);
 #elif __powerpc64__
-CheckTypeSize(pthread_rwlockattr_t,8, 9057, 9)
+CheckTypeSize(pthread_rwlockattr_t,8, 9057, 9);
 #elif __s390x__
-CheckTypeSize(pthread_rwlockattr_t,8, 9057, 12)
+CheckTypeSize(pthread_rwlockattr_t,8, 9057, 12);
 #elif __x86_64__
-CheckTypeSize(pthread_rwlockattr_t,8, 9057, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9057,0);
-Msg("Find size of pthread_rwlockattr_t (9057)\n");
+CheckTypeSize(pthread_rwlockattr_t,8, 9057, 11);
+#elif 1
+CheckTypeSize(pthread_rwlockattr_t,0, 9057, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _pthread_rwlock_t,32, 10279, 2)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_readers,4,2,34439)
-CheckOffset(struct _pthread_rwlock_t,__rw_readers,8,2,34439)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_writer,4,2,34440)
-CheckOffset(struct _pthread_rwlock_t,__rw_writer,12,2,34440)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_read_waiting,4,2,34441)
-CheckOffset(struct _pthread_rwlock_t,__rw_read_waiting,16,2,34441)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_write_waiting,4,2,34442)
-CheckOffset(struct _pthread_rwlock_t,__rw_write_waiting,20,2,34442)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_kind,4,2,34443)
-CheckOffset(struct _pthread_rwlock_t,__rw_kind,24,2,34443)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_pshared,4,2,34444)
-CheckOffset(struct _pthread_rwlock_t,__rw_pshared,28,2,34444)
+CheckTypeSize(struct _pthread_rwlock_t,32, 10279, 2);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_readers,4,2,34439);
+CheckOffset(struct _pthread_rwlock_t,__rw_readers,8,2,34439);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_writer,4,2,34440);
+CheckOffset(struct _pthread_rwlock_t,__rw_writer,12,2,34440);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_read_waiting,4,2,34441);
+CheckOffset(struct _pthread_rwlock_t,__rw_read_waiting,16,2,34441);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_write_waiting,4,2,34442);
+CheckOffset(struct _pthread_rwlock_t,__rw_write_waiting,20,2,34442);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_kind,4,2,34443);
+CheckOffset(struct _pthread_rwlock_t,__rw_kind,24,2,34443);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_pshared,4,2,34444);
+CheckOffset(struct _pthread_rwlock_t,__rw_pshared,28,2,34444);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _pthread_rwlock_t,32, 10279, 6)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_readers,4,6,34439)
-CheckOffset(struct _pthread_rwlock_t,__rw_readers,8,6,34439)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_writer,4,6,34440)
-CheckOffset(struct _pthread_rwlock_t,__rw_writer,12,6,34440)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_read_waiting,4,6,34441)
-CheckOffset(struct _pthread_rwlock_t,__rw_read_waiting,16,6,34441)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_write_waiting,4,6,34442)
-CheckOffset(struct _pthread_rwlock_t,__rw_write_waiting,20,6,34442)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_kind,4,6,34443)
-CheckOffset(struct _pthread_rwlock_t,__rw_kind,24,6,34443)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_pshared,4,6,34444)
-CheckOffset(struct _pthread_rwlock_t,__rw_pshared,28,6,34444)
+CheckTypeSize(struct _pthread_rwlock_t,32, 10279, 6);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_readers,4,6,34439);
+CheckOffset(struct _pthread_rwlock_t,__rw_readers,8,6,34439);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_writer,4,6,34440);
+CheckOffset(struct _pthread_rwlock_t,__rw_writer,12,6,34440);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_read_waiting,4,6,34441);
+CheckOffset(struct _pthread_rwlock_t,__rw_read_waiting,16,6,34441);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_write_waiting,4,6,34442);
+CheckOffset(struct _pthread_rwlock_t,__rw_write_waiting,20,6,34442);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_kind,4,6,34443);
+CheckOffset(struct _pthread_rwlock_t,__rw_kind,24,6,34443);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_pshared,4,6,34444);
+CheckOffset(struct _pthread_rwlock_t,__rw_pshared,28,6,34444);
 #elif __ia64__
-CheckTypeSize(struct _pthread_rwlock_t,56, 10279, 3)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_readers,4,3,34439)
-CheckOffset(struct _pthread_rwlock_t,__rw_readers,16,3,34439)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_writer,8,3,34440)
-CheckOffset(struct _pthread_rwlock_t,__rw_writer,24,3,34440)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_read_waiting,8,3,34441)
-CheckOffset(struct _pthread_rwlock_t,__rw_read_waiting,32,3,34441)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_write_waiting,8,3,34442)
-CheckOffset(struct _pthread_rwlock_t,__rw_write_waiting,40,3,34442)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_kind,4,3,34443)
-CheckOffset(struct _pthread_rwlock_t,__rw_kind,48,3,34443)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_pshared,4,3,34444)
-CheckOffset(struct _pthread_rwlock_t,__rw_pshared,52,3,34444)
+CheckTypeSize(struct _pthread_rwlock_t,56, 10279, 3);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_readers,4,3,34439);
+CheckOffset(struct _pthread_rwlock_t,__rw_readers,16,3,34439);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_writer,8,3,34440);
+CheckOffset(struct _pthread_rwlock_t,__rw_writer,24,3,34440);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_read_waiting,8,3,34441);
+CheckOffset(struct _pthread_rwlock_t,__rw_read_waiting,32,3,34441);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_write_waiting,8,3,34442);
+CheckOffset(struct _pthread_rwlock_t,__rw_write_waiting,40,3,34442);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_kind,4,3,34443);
+CheckOffset(struct _pthread_rwlock_t,__rw_kind,48,3,34443);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_pshared,4,3,34444);
+CheckOffset(struct _pthread_rwlock_t,__rw_pshared,52,3,34444);
 #elif __s390x__
-CheckTypeSize(struct _pthread_rwlock_t,56, 10279, 12)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_readers,4,12,34439)
-CheckOffset(struct _pthread_rwlock_t,__rw_readers,16,12,34439)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_writer,8,12,34440)
-CheckOffset(struct _pthread_rwlock_t,__rw_writer,24,12,34440)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_read_waiting,8,12,34441)
-CheckOffset(struct _pthread_rwlock_t,__rw_read_waiting,32,12,34441)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_write_waiting,8,12,34442)
-CheckOffset(struct _pthread_rwlock_t,__rw_write_waiting,40,12,34442)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_kind,4,12,34443)
-CheckOffset(struct _pthread_rwlock_t,__rw_kind,48,12,34443)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_pshared,4,12,34444)
-CheckOffset(struct _pthread_rwlock_t,__rw_pshared,52,12,34444)
+CheckTypeSize(struct _pthread_rwlock_t,56, 10279, 12);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_readers,4,12,34439);
+CheckOffset(struct _pthread_rwlock_t,__rw_readers,16,12,34439);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_writer,8,12,34440);
+CheckOffset(struct _pthread_rwlock_t,__rw_writer,24,12,34440);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_read_waiting,8,12,34441);
+CheckOffset(struct _pthread_rwlock_t,__rw_read_waiting,32,12,34441);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_write_waiting,8,12,34442);
+CheckOffset(struct _pthread_rwlock_t,__rw_write_waiting,40,12,34442);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_kind,4,12,34443);
+CheckOffset(struct _pthread_rwlock_t,__rw_kind,48,12,34443);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_pshared,4,12,34444);
+CheckOffset(struct _pthread_rwlock_t,__rw_pshared,52,12,34444);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _pthread_rwlock_t,32, 10279, 10)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_readers,4,10,34439)
-CheckOffset(struct _pthread_rwlock_t,__rw_readers,8,10,34439)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_writer,4,10,34440)
-CheckOffset(struct _pthread_rwlock_t,__rw_writer,12,10,34440)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_read_waiting,4,10,34441)
-CheckOffset(struct _pthread_rwlock_t,__rw_read_waiting,16,10,34441)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_write_waiting,4,10,34442)
-CheckOffset(struct _pthread_rwlock_t,__rw_write_waiting,20,10,34442)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_kind,4,10,34443)
-CheckOffset(struct _pthread_rwlock_t,__rw_kind,24,10,34443)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_pshared,4,10,34444)
-CheckOffset(struct _pthread_rwlock_t,__rw_pshared,28,10,34444)
+CheckTypeSize(struct _pthread_rwlock_t,32, 10279, 10);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_readers,4,10,34439);
+CheckOffset(struct _pthread_rwlock_t,__rw_readers,8,10,34439);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_writer,4,10,34440);
+CheckOffset(struct _pthread_rwlock_t,__rw_writer,12,10,34440);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_read_waiting,4,10,34441);
+CheckOffset(struct _pthread_rwlock_t,__rw_read_waiting,16,10,34441);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_write_waiting,4,10,34442);
+CheckOffset(struct _pthread_rwlock_t,__rw_write_waiting,20,10,34442);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_kind,4,10,34443);
+CheckOffset(struct _pthread_rwlock_t,__rw_kind,24,10,34443);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_pshared,4,10,34444);
+CheckOffset(struct _pthread_rwlock_t,__rw_pshared,28,10,34444);
 #elif __x86_64__
-CheckTypeSize(struct _pthread_rwlock_t,56, 10279, 11)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_readers,4,11,34439)
-CheckOffset(struct _pthread_rwlock_t,__rw_readers,16,11,34439)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_writer,8,11,34440)
-CheckOffset(struct _pthread_rwlock_t,__rw_writer,24,11,34440)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_read_waiting,8,11,34441)
-CheckOffset(struct _pthread_rwlock_t,__rw_read_waiting,32,11,34441)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_write_waiting,8,11,34442)
-CheckOffset(struct _pthread_rwlock_t,__rw_write_waiting,40,11,34442)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_kind,4,11,34443)
-CheckOffset(struct _pthread_rwlock_t,__rw_kind,48,11,34443)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_pshared,4,11,34444)
-CheckOffset(struct _pthread_rwlock_t,__rw_pshared,52,11,34444)
+CheckTypeSize(struct _pthread_rwlock_t,56, 10279, 11);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_readers,4,11,34439);
+CheckOffset(struct _pthread_rwlock_t,__rw_readers,16,11,34439);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_writer,8,11,34440);
+CheckOffset(struct _pthread_rwlock_t,__rw_writer,24,11,34440);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_read_waiting,8,11,34441);
+CheckOffset(struct _pthread_rwlock_t,__rw_read_waiting,32,11,34441);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_write_waiting,8,11,34442);
+CheckOffset(struct _pthread_rwlock_t,__rw_write_waiting,40,11,34442);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_kind,4,11,34443);
+CheckOffset(struct _pthread_rwlock_t,__rw_kind,48,11,34443);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_pshared,4,11,34444);
+CheckOffset(struct _pthread_rwlock_t,__rw_pshared,52,11,34444);
 #elif __powerpc64__
-CheckTypeSize(struct _pthread_rwlock_t,56, 10279, 9)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_readers,4,9,34439)
-CheckOffset(struct _pthread_rwlock_t,__rw_readers,16,9,34439)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_writer,8,9,34440)
-CheckOffset(struct _pthread_rwlock_t,__rw_writer,24,9,34440)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_read_waiting,8,9,34441)
-CheckOffset(struct _pthread_rwlock_t,__rw_read_waiting,32,9,34441)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_write_waiting,8,9,34442)
-CheckOffset(struct _pthread_rwlock_t,__rw_write_waiting,40,9,34442)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_kind,4,9,34443)
-CheckOffset(struct _pthread_rwlock_t,__rw_kind,48,9,34443)
-CheckMemberSize(struct _pthread_rwlock_t,__rw_pshared,4,9,34444)
-CheckOffset(struct _pthread_rwlock_t,__rw_pshared,52,9,34444)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10279,0);
-Msg("Find size of _pthread_rwlock_t (10279)\n");
+CheckTypeSize(struct _pthread_rwlock_t,56, 10279, 9);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_readers,4,9,34439);
+CheckOffset(struct _pthread_rwlock_t,__rw_readers,16,9,34439);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_writer,8,9,34440);
+CheckOffset(struct _pthread_rwlock_t,__rw_writer,24,9,34440);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_read_waiting,8,9,34441);
+CheckOffset(struct _pthread_rwlock_t,__rw_read_waiting,32,9,34441);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_write_waiting,8,9,34442);
+CheckOffset(struct _pthread_rwlock_t,__rw_write_waiting,40,9,34442);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_kind,4,9,34443);
+CheckOffset(struct _pthread_rwlock_t,__rw_kind,48,9,34443);
+CheckMemberSize(struct _pthread_rwlock_t,__rw_pshared,4,9,34444);
+CheckOffset(struct _pthread_rwlock_t,__rw_pshared,52,9,34444);
+#elif 1
+CheckTypeSize(struct _pthread_rwlock_t,0, 10279, 1);
+Msg("Missing member data for _pthread_rwlock_t on All\n");
+CheckOffset(struct _pthread_rwlock_t,__rw_lock,0,1,34438);
+CheckOffset(struct _pthread_rwlock_t,__rw_readers,0,1,34439);
+CheckOffset(struct _pthread_rwlock_t,__rw_writer,0,1,34440);
+CheckOffset(struct _pthread_rwlock_t,__rw_read_waiting,0,1,34441);
+CheckOffset(struct _pthread_rwlock_t,__rw_write_waiting,0,1,34442);
+CheckOffset(struct _pthread_rwlock_t,__rw_kind,0,1,34443);
+CheckOffset(struct _pthread_rwlock_t,__rw_pshared,0,1,34444);
 #endif
 
 #if __i386__
@@ -711,9 +709,7 @@ Msg("Find size of _pthread_rwlock_t (10279)\n");
 #elif __s390__ && !__s390x__
 #elif __x86_64__
 #elif __powerpc64__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10280,0);
-Msg("Find size of anon-pthread_rwlockattr_t (10280)\n");
+#elif 1
 #endif
 
 #if __s390__ && !__s390x__
@@ -723,9 +719,7 @@ Msg("Find size of anon-pthread_rwlockattr_t (10280)\n");
 #elif __powerpc__ && !__powerpc64__
 #elif __s390x__
 #elif __x86_64__
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10811,0);
-Msg("Find size of const pthread_rwlockattr_t * (10811)\n");
+#elif 1
 #endif
 
 extern void _pthread_cleanup_pop_db(struct _pthread_cleanup_buffer *, int);

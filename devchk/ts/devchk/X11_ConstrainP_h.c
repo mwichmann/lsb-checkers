@@ -43,60 +43,57 @@ cnt++;
 #endif
 
 #if __ia64__
-CheckTypeSize(ConstraintPart,8, 10250, 3)
+CheckTypeSize(ConstraintPart,8, 10250, 3);
 #elif __i386__
-CheckTypeSize(ConstraintPart,4, 10250, 2)
+CheckTypeSize(ConstraintPart,4, 10250, 2);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(ConstraintPart,4, 10250, 6)
+CheckTypeSize(ConstraintPart,4, 10250, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(ConstraintPart,4, 10250, 10)
+CheckTypeSize(ConstraintPart,4, 10250, 10);
 #elif __powerpc64__
-CheckTypeSize(ConstraintPart,8, 10250, 9)
+CheckTypeSize(ConstraintPart,8, 10250, 9);
 #elif __s390x__
-CheckTypeSize(ConstraintPart,8, 10250, 12)
+CheckTypeSize(ConstraintPart,8, 10250, 12);
 #elif __x86_64__
-CheckTypeSize(ConstraintPart,8, 10250, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10250,0);
-Msg("Find size of ConstraintPart (10250)\n");
+CheckTypeSize(ConstraintPart,8, 10250, 11);
+#elif 1
+CheckTypeSize(ConstraintPart,0, 10250, 1);
 #endif
 
 #if __ia64__
-CheckTypeSize(ConstraintClassPart,48, 10252, 3)
+CheckTypeSize(ConstraintClassPart,48, 10252, 3);
 #elif __i386__
-CheckTypeSize(ConstraintClassPart,28, 10252, 2)
+CheckTypeSize(ConstraintClassPart,28, 10252, 2);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(ConstraintClassPart,28, 10252, 6)
+CheckTypeSize(ConstraintClassPart,28, 10252, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(ConstraintClassPart,28, 10252, 10)
+CheckTypeSize(ConstraintClassPart,28, 10252, 10);
 #elif __powerpc64__
-CheckTypeSize(ConstraintClassPart,48, 10252, 9)
+CheckTypeSize(ConstraintClassPart,48, 10252, 9);
 #elif __s390x__
-CheckTypeSize(ConstraintClassPart,48, 10252, 12)
+CheckTypeSize(ConstraintClassPart,48, 10252, 12);
 #elif __x86_64__
-CheckTypeSize(ConstraintClassPart,48, 10252, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10252,0);
-Msg("Find size of ConstraintClassPart (10252)\n");
+CheckTypeSize(ConstraintClassPart,48, 10252, 11);
+#elif 1
+CheckTypeSize(ConstraintClassPart,0, 10252, 1);
 #endif
 
 #if __ia64__
-CheckTypeSize(ConstraintClassRec,312, 10258, 3)
+CheckTypeSize(ConstraintClassRec,312, 10258, 3);
 #elif __i386__
-CheckTypeSize(ConstraintClassRec,164, 10258, 2)
+CheckTypeSize(ConstraintClassRec,164, 10258, 2);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(ConstraintClassRec,164, 10258, 6)
+CheckTypeSize(ConstraintClassRec,164, 10258, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(ConstraintClassRec,164, 10258, 10)
+CheckTypeSize(ConstraintClassRec,164, 10258, 10);
 #elif __powerpc64__
-CheckTypeSize(ConstraintClassRec,312, 10258, 9)
+CheckTypeSize(ConstraintClassRec,312, 10258, 9);
 #elif __s390x__
-CheckTypeSize(ConstraintClassRec,312, 10258, 12)
+CheckTypeSize(ConstraintClassRec,312, 10258, 12);
 #elif __x86_64__
-CheckTypeSize(ConstraintClassRec,312, 10258, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10258,0);
-Msg("Find size of ConstraintClassRec (10258)\n");
+CheckTypeSize(ConstraintClassRec,312, 10258, 11);
+#elif 1
+CheckTypeSize(ConstraintClassRec,0, 10258, 1);
 #endif
 
 #ifdef TET_TEST

@@ -46,22 +46,21 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(sem_t,16, 6960, 2)
+CheckTypeSize(sem_t,16, 6960, 2);
 #elif __ia64__
-CheckTypeSize(sem_t,32, 6960, 3)
+CheckTypeSize(sem_t,32, 6960, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(sem_t,16, 6960, 6)
+CheckTypeSize(sem_t,16, 6960, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(sem_t,16, 6960, 10)
+CheckTypeSize(sem_t,16, 6960, 10);
 #elif __powerpc64__
-CheckTypeSize(sem_t,32, 6960, 9)
+CheckTypeSize(sem_t,32, 6960, 9);
 #elif __s390x__
-CheckTypeSize(sem_t,32, 6960, 12)
+CheckTypeSize(sem_t,32, 6960, 12);
 #elif __x86_64__
-CheckTypeSize(sem_t,32, 6960, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6960,0);
-Msg("Find size of sem_t (6960)\n");
+CheckTypeSize(sem_t,32, 6960, 11);
+#elif 1
+CheckTypeSize(sem_t,0, 6960, 1);
 #endif
 
 extern int sem_close_db(sem_t *);

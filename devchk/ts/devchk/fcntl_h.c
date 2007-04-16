@@ -482,157 +482,167 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(struct flock,16, 10217, 2)
-CheckMemberSize(struct flock,l_type,2,2,34302)
-CheckOffset(struct flock,l_type,0,2,34302)
-CheckMemberSize(struct flock,l_whence,2,2,34303)
-CheckOffset(struct flock,l_whence,2,2,34303)
-CheckMemberSize(struct flock,l_start,4,2,34304)
-CheckOffset(struct flock,l_start,4,2,34304)
-CheckMemberSize(struct flock,l_len,4,2,34305)
-CheckOffset(struct flock,l_len,8,2,34305)
-CheckMemberSize(struct flock,l_pid,4,2,34306)
-CheckOffset(struct flock,l_pid,12,2,34306)
+CheckTypeSize(struct flock,16, 10217, 2);
+CheckMemberSize(struct flock,l_type,2,2,34302);
+CheckOffset(struct flock,l_type,0,2,34302);
+CheckMemberSize(struct flock,l_whence,2,2,34303);
+CheckOffset(struct flock,l_whence,2,2,34303);
+CheckMemberSize(struct flock,l_start,4,2,34304);
+CheckOffset(struct flock,l_start,4,2,34304);
+CheckMemberSize(struct flock,l_len,4,2,34305);
+CheckOffset(struct flock,l_len,8,2,34305);
+CheckMemberSize(struct flock,l_pid,4,2,34306);
+CheckOffset(struct flock,l_pid,12,2,34306);
 #elif __ia64__
-CheckTypeSize(struct flock,32, 10217, 3)
-CheckMemberSize(struct flock,l_whence,2,3,34303)
-CheckOffset(struct flock,l_whence,2,3,34303)
-CheckMemberSize(struct flock,l_start,8,3,34304)
-CheckOffset(struct flock,l_start,8,3,34304)
-CheckMemberSize(struct flock,l_len,8,3,34305)
-CheckOffset(struct flock,l_len,16,3,34305)
-CheckMemberSize(struct flock,l_pid,4,3,34306)
-CheckOffset(struct flock,l_pid,24,3,34306)
+CheckTypeSize(struct flock,32, 10217, 3);
+CheckMemberSize(struct flock,l_whence,2,3,34303);
+CheckOffset(struct flock,l_whence,2,3,34303);
+CheckMemberSize(struct flock,l_start,8,3,34304);
+CheckOffset(struct flock,l_start,8,3,34304);
+CheckMemberSize(struct flock,l_len,8,3,34305);
+CheckOffset(struct flock,l_len,16,3,34305);
+CheckMemberSize(struct flock,l_pid,4,3,34306);
+CheckOffset(struct flock,l_pid,24,3,34306);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct flock,16, 10217, 6)
-CheckMemberSize(struct flock,l_whence,2,6,34303)
-CheckOffset(struct flock,l_whence,2,6,34303)
-CheckMemberSize(struct flock,l_start,4,6,34304)
-CheckOffset(struct flock,l_start,4,6,34304)
-CheckMemberSize(struct flock,l_len,4,6,34305)
-CheckOffset(struct flock,l_len,8,6,34305)
-CheckMemberSize(struct flock,l_pid,4,6,34306)
-CheckOffset(struct flock,l_pid,12,6,34306)
+CheckTypeSize(struct flock,16, 10217, 6);
+CheckMemberSize(struct flock,l_whence,2,6,34303);
+CheckOffset(struct flock,l_whence,2,6,34303);
+CheckMemberSize(struct flock,l_start,4,6,34304);
+CheckOffset(struct flock,l_start,4,6,34304);
+CheckMemberSize(struct flock,l_len,4,6,34305);
+CheckOffset(struct flock,l_len,8,6,34305);
+CheckMemberSize(struct flock,l_pid,4,6,34306);
+CheckOffset(struct flock,l_pid,12,6,34306);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct flock,16, 10217, 10)
-CheckMemberSize(struct flock,l_whence,2,10,34303)
-CheckOffset(struct flock,l_whence,2,10,34303)
-CheckMemberSize(struct flock,l_start,4,10,34304)
-CheckOffset(struct flock,l_start,4,10,34304)
-CheckMemberSize(struct flock,l_len,4,10,34305)
-CheckOffset(struct flock,l_len,8,10,34305)
-CheckMemberSize(struct flock,l_pid,4,10,34306)
-CheckOffset(struct flock,l_pid,12,10,34306)
+CheckTypeSize(struct flock,16, 10217, 10);
+CheckMemberSize(struct flock,l_whence,2,10,34303);
+CheckOffset(struct flock,l_whence,2,10,34303);
+CheckMemberSize(struct flock,l_start,4,10,34304);
+CheckOffset(struct flock,l_start,4,10,34304);
+CheckMemberSize(struct flock,l_len,4,10,34305);
+CheckOffset(struct flock,l_len,8,10,34305);
+CheckMemberSize(struct flock,l_pid,4,10,34306);
+CheckOffset(struct flock,l_pid,12,10,34306);
 #elif __powerpc64__
-CheckTypeSize(struct flock,32, 10217, 9)
-CheckMemberSize(struct flock,l_whence,2,9,34303)
-CheckOffset(struct flock,l_whence,2,9,34303)
-CheckMemberSize(struct flock,l_start,8,9,34304)
-CheckOffset(struct flock,l_start,8,9,34304)
-CheckMemberSize(struct flock,l_len,8,9,34305)
-CheckOffset(struct flock,l_len,16,9,34305)
-CheckMemberSize(struct flock,l_pid,4,9,34306)
-CheckOffset(struct flock,l_pid,24,9,34306)
+CheckTypeSize(struct flock,32, 10217, 9);
+CheckMemberSize(struct flock,l_whence,2,9,34303);
+CheckOffset(struct flock,l_whence,2,9,34303);
+CheckMemberSize(struct flock,l_start,8,9,34304);
+CheckOffset(struct flock,l_start,8,9,34304);
+CheckMemberSize(struct flock,l_len,8,9,34305);
+CheckOffset(struct flock,l_len,16,9,34305);
+CheckMemberSize(struct flock,l_pid,4,9,34306);
+CheckOffset(struct flock,l_pid,24,9,34306);
 #elif __s390x__
-CheckTypeSize(struct flock,32, 10217, 12)
-CheckMemberSize(struct flock,l_whence,2,12,34303)
-CheckOffset(struct flock,l_whence,2,12,34303)
-CheckMemberSize(struct flock,l_start,8,12,34304)
-CheckOffset(struct flock,l_start,8,12,34304)
-CheckMemberSize(struct flock,l_len,8,12,34305)
-CheckOffset(struct flock,l_len,16,12,34305)
-CheckMemberSize(struct flock,l_pid,4,12,34306)
-CheckOffset(struct flock,l_pid,24,12,34306)
+CheckTypeSize(struct flock,32, 10217, 12);
+CheckMemberSize(struct flock,l_whence,2,12,34303);
+CheckOffset(struct flock,l_whence,2,12,34303);
+CheckMemberSize(struct flock,l_start,8,12,34304);
+CheckOffset(struct flock,l_start,8,12,34304);
+CheckMemberSize(struct flock,l_len,8,12,34305);
+CheckOffset(struct flock,l_len,16,12,34305);
+CheckMemberSize(struct flock,l_pid,4,12,34306);
+CheckOffset(struct flock,l_pid,24,12,34306);
 #elif __x86_64__
-CheckTypeSize(struct flock,32, 10217, 11)
-CheckMemberSize(struct flock,l_whence,2,11,34303)
-CheckOffset(struct flock,l_whence,2,11,34303)
-CheckMemberSize(struct flock,l_start,8,11,34304)
-CheckOffset(struct flock,l_start,8,11,34304)
-CheckMemberSize(struct flock,l_len,8,11,34305)
-CheckOffset(struct flock,l_len,16,11,34305)
-CheckMemberSize(struct flock,l_pid,4,11,34306)
-CheckOffset(struct flock,l_pid,24,11,34306)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10217,0);
-Msg("Find size of flock (10217)\n");
+CheckTypeSize(struct flock,32, 10217, 11);
+CheckMemberSize(struct flock,l_whence,2,11,34303);
+CheckOffset(struct flock,l_whence,2,11,34303);
+CheckMemberSize(struct flock,l_start,8,11,34304);
+CheckOffset(struct flock,l_start,8,11,34304);
+CheckMemberSize(struct flock,l_len,8,11,34305);
+CheckOffset(struct flock,l_len,16,11,34305);
+CheckMemberSize(struct flock,l_pid,4,11,34306);
+CheckOffset(struct flock,l_pid,24,11,34306);
+#elif 1
+CheckTypeSize(struct flock,0, 10217, 1);
+Msg("Missing member data for flock on All\n");
+CheckOffset(struct flock,l_type,0,1,34302);
+CheckOffset(struct flock,l_whence,0,1,34303);
+CheckOffset(struct flock,l_start,0,1,34304);
+CheckOffset(struct flock,l_len,0,1,34305);
+CheckOffset(struct flock,l_pid,0,1,34306);
 #endif
 
 #if __i386__
-CheckTypeSize(struct flock64,24, 10218, 2)
-CheckMemberSize(struct flock64,l_type,2,2,34307)
-CheckOffset(struct flock64,l_type,0,2,34307)
-CheckMemberSize(struct flock64,l_whence,2,2,34308)
-CheckOffset(struct flock64,l_whence,2,2,34308)
-CheckMemberSize(struct flock64,l_start,8,2,34309)
-CheckOffset(struct flock64,l_start,4,2,34309)
-CheckMemberSize(struct flock64,l_len,8,2,34310)
-CheckOffset(struct flock64,l_len,12,2,34310)
-CheckMemberSize(struct flock64,l_pid,4,2,34311)
-CheckOffset(struct flock64,l_pid,20,2,34311)
+CheckTypeSize(struct flock64,24, 10218, 2);
+CheckMemberSize(struct flock64,l_type,2,2,34307);
+CheckOffset(struct flock64,l_type,0,2,34307);
+CheckMemberSize(struct flock64,l_whence,2,2,34308);
+CheckOffset(struct flock64,l_whence,2,2,34308);
+CheckMemberSize(struct flock64,l_start,8,2,34309);
+CheckOffset(struct flock64,l_start,4,2,34309);
+CheckMemberSize(struct flock64,l_len,8,2,34310);
+CheckOffset(struct flock64,l_len,12,2,34310);
+CheckMemberSize(struct flock64,l_pid,4,2,34311);
+CheckOffset(struct flock64,l_pid,20,2,34311);
 #elif __ia64__
-CheckTypeSize(struct flock64,32, 10218, 3)
-CheckMemberSize(struct flock64,l_whence,2,3,34308)
-CheckOffset(struct flock64,l_whence,2,3,34308)
-CheckMemberSize(struct flock64,l_start,8,3,34309)
-CheckOffset(struct flock64,l_start,8,3,34309)
-CheckMemberSize(struct flock64,l_len,8,3,34310)
-CheckOffset(struct flock64,l_len,16,3,34310)
-CheckMemberSize(struct flock64,l_pid,4,3,34311)
-CheckOffset(struct flock64,l_pid,24,3,34311)
+CheckTypeSize(struct flock64,32, 10218, 3);
+CheckMemberSize(struct flock64,l_whence,2,3,34308);
+CheckOffset(struct flock64,l_whence,2,3,34308);
+CheckMemberSize(struct flock64,l_start,8,3,34309);
+CheckOffset(struct flock64,l_start,8,3,34309);
+CheckMemberSize(struct flock64,l_len,8,3,34310);
+CheckOffset(struct flock64,l_len,16,3,34310);
+CheckMemberSize(struct flock64,l_pid,4,3,34311);
+CheckOffset(struct flock64,l_pid,24,3,34311);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct flock64,32, 10218, 6)
-CheckMemberSize(struct flock64,l_whence,2,6,34308)
-CheckOffset(struct flock64,l_whence,2,6,34308)
-CheckMemberSize(struct flock64,l_start,8,6,34309)
-CheckOffset(struct flock64,l_start,8,6,34309)
-CheckMemberSize(struct flock64,l_len,8,6,34310)
-CheckOffset(struct flock64,l_len,16,6,34310)
-CheckMemberSize(struct flock64,l_pid,4,6,34311)
-CheckOffset(struct flock64,l_pid,24,6,34311)
+CheckTypeSize(struct flock64,32, 10218, 6);
+CheckMemberSize(struct flock64,l_whence,2,6,34308);
+CheckOffset(struct flock64,l_whence,2,6,34308);
+CheckMemberSize(struct flock64,l_start,8,6,34309);
+CheckOffset(struct flock64,l_start,8,6,34309);
+CheckMemberSize(struct flock64,l_len,8,6,34310);
+CheckOffset(struct flock64,l_len,16,6,34310);
+CheckMemberSize(struct flock64,l_pid,4,6,34311);
+CheckOffset(struct flock64,l_pid,24,6,34311);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct flock64,32, 10218, 10)
-CheckMemberSize(struct flock64,l_whence,2,10,34308)
-CheckOffset(struct flock64,l_whence,2,10,34308)
-CheckMemberSize(struct flock64,l_start,8,10,34309)
-CheckOffset(struct flock64,l_start,8,10,34309)
-CheckMemberSize(struct flock64,l_len,8,10,34310)
-CheckOffset(struct flock64,l_len,16,10,34310)
-CheckMemberSize(struct flock64,l_pid,4,10,34311)
-CheckOffset(struct flock64,l_pid,24,10,34311)
+CheckTypeSize(struct flock64,32, 10218, 10);
+CheckMemberSize(struct flock64,l_whence,2,10,34308);
+CheckOffset(struct flock64,l_whence,2,10,34308);
+CheckMemberSize(struct flock64,l_start,8,10,34309);
+CheckOffset(struct flock64,l_start,8,10,34309);
+CheckMemberSize(struct flock64,l_len,8,10,34310);
+CheckOffset(struct flock64,l_len,16,10,34310);
+CheckMemberSize(struct flock64,l_pid,4,10,34311);
+CheckOffset(struct flock64,l_pid,24,10,34311);
 #elif __powerpc64__
-CheckTypeSize(struct flock64,32, 10218, 9)
-CheckMemberSize(struct flock64,l_whence,2,9,34308)
-CheckOffset(struct flock64,l_whence,2,9,34308)
-CheckMemberSize(struct flock64,l_start,8,9,34309)
-CheckOffset(struct flock64,l_start,8,9,34309)
-CheckMemberSize(struct flock64,l_len,8,9,34310)
-CheckOffset(struct flock64,l_len,16,9,34310)
-CheckMemberSize(struct flock64,l_pid,4,9,34311)
-CheckOffset(struct flock64,l_pid,24,9,34311)
+CheckTypeSize(struct flock64,32, 10218, 9);
+CheckMemberSize(struct flock64,l_whence,2,9,34308);
+CheckOffset(struct flock64,l_whence,2,9,34308);
+CheckMemberSize(struct flock64,l_start,8,9,34309);
+CheckOffset(struct flock64,l_start,8,9,34309);
+CheckMemberSize(struct flock64,l_len,8,9,34310);
+CheckOffset(struct flock64,l_len,16,9,34310);
+CheckMemberSize(struct flock64,l_pid,4,9,34311);
+CheckOffset(struct flock64,l_pid,24,9,34311);
 #elif __s390x__
-CheckTypeSize(struct flock64,32, 10218, 12)
-CheckMemberSize(struct flock64,l_whence,2,12,34308)
-CheckOffset(struct flock64,l_whence,2,12,34308)
-CheckMemberSize(struct flock64,l_start,8,12,34309)
-CheckOffset(struct flock64,l_start,8,12,34309)
-CheckMemberSize(struct flock64,l_len,8,12,34310)
-CheckOffset(struct flock64,l_len,16,12,34310)
-CheckMemberSize(struct flock64,l_pid,4,12,34311)
-CheckOffset(struct flock64,l_pid,24,12,34311)
+CheckTypeSize(struct flock64,32, 10218, 12);
+CheckMemberSize(struct flock64,l_whence,2,12,34308);
+CheckOffset(struct flock64,l_whence,2,12,34308);
+CheckMemberSize(struct flock64,l_start,8,12,34309);
+CheckOffset(struct flock64,l_start,8,12,34309);
+CheckMemberSize(struct flock64,l_len,8,12,34310);
+CheckOffset(struct flock64,l_len,16,12,34310);
+CheckMemberSize(struct flock64,l_pid,4,12,34311);
+CheckOffset(struct flock64,l_pid,24,12,34311);
 #elif __x86_64__
-CheckTypeSize(struct flock64,32, 10218, 11)
-CheckMemberSize(struct flock64,l_whence,2,11,34308)
-CheckOffset(struct flock64,l_whence,2,11,34308)
-CheckMemberSize(struct flock64,l_start,8,11,34309)
-CheckOffset(struct flock64,l_start,8,11,34309)
-CheckMemberSize(struct flock64,l_len,8,11,34310)
-CheckOffset(struct flock64,l_len,16,11,34310)
-CheckMemberSize(struct flock64,l_pid,4,11,34311)
-CheckOffset(struct flock64,l_pid,24,11,34311)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10218,0);
-Msg("Find size of flock64 (10218)\n");
+CheckTypeSize(struct flock64,32, 10218, 11);
+CheckMemberSize(struct flock64,l_whence,2,11,34308);
+CheckOffset(struct flock64,l_whence,2,11,34308);
+CheckMemberSize(struct flock64,l_start,8,11,34309);
+CheckOffset(struct flock64,l_start,8,11,34309);
+CheckMemberSize(struct flock64,l_len,8,11,34310);
+CheckOffset(struct flock64,l_len,16,11,34310);
+CheckMemberSize(struct flock64,l_pid,4,11,34311);
+CheckOffset(struct flock64,l_pid,24,11,34311);
+#elif 1
+CheckTypeSize(struct flock64,0, 10218, 1);
+Msg("Missing member data for flock64 on All\n");
+CheckOffset(struct flock64,l_type,0,1,34307);
+CheckOffset(struct flock64,l_whence,0,1,34308);
+CheckOffset(struct flock64,l_start,0,1,34309);
+CheckOffset(struct flock64,l_len,0,1,34310);
+CheckOffset(struct flock64,l_pid,0,1,34311);
 #endif
 
 extern int lockf64_db(int, int, off64_t);

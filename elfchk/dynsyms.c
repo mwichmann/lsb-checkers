@@ -1533,16 +1533,7 @@ struct versym DynSyms[] = {
 #if __ia64__
 	{"_Unwind_DeleteException","GCC_3.0",0,LSB_Core},
 #endif
-#if __arm__
-	{"_Unwind_DeleteException","GCC_3.0",0,LSB_Core},
-#endif
-#if __mc68000__
-	{"_Unwind_DeleteException","GCC_3.0",0,LSB_Core},
-#endif
 #if __powerpc__ && !__powerpc64__
-	{"_Unwind_DeleteException","GCC_3.0",0,LSB_Core},
-#endif
-#if __alpha__
 	{"_Unwind_DeleteException","GCC_3.0",0,LSB_Core},
 #endif
 #if __powerpc64__
@@ -1581,16 +1572,7 @@ struct versym DynSyms[] = {
 #if __i386__
 	{"_Unwind_Find_FDE","GCC_3.0",0,LSB_Core},
 #endif
-#if __arm__
-	{"_Unwind_Find_FDE","GCC_3.0",0,LSB_Core},
-#endif
-#if __mc68000__
-	{"_Unwind_Find_FDE","GCC_3.0",0,LSB_Core},
-#endif
 #if __powerpc__ && !__powerpc64__
-	{"_Unwind_Find_FDE","GCC_3.0",0,LSB_Core},
-#endif
-#if __alpha__
 	{"_Unwind_Find_FDE","GCC_3.0",0,LSB_Core},
 #endif
 #if __powerpc64__
@@ -1611,16 +1593,7 @@ struct versym DynSyms[] = {
 #if __ia64__
 	{"_Unwind_ForcedUnwind","GCC_3.0",0,LSB_Core},
 #endif
-#if __arm__
-	{"_Unwind_ForcedUnwind","GCC_3.0",0,LSB_Core},
-#endif
-#if __mc68000__
-	{"_Unwind_ForcedUnwind","GCC_3.0",0,LSB_Core},
-#endif
 #if __powerpc__ && !__powerpc64__
-	{"_Unwind_ForcedUnwind","GCC_3.0",0,LSB_Core},
-#endif
-#if __alpha__
 	{"_Unwind_ForcedUnwind","GCC_3.0",0,LSB_Core},
 #endif
 #if __powerpc64__
@@ -1634,28 +1607,10 @@ struct versym DynSyms[] = {
 #endif
 #if __s390x__
 	{"_Unwind_ForcedUnwind","GCC_3.0",0,LSB_Core},
-#endif
-#if __i386__
-	{"_Unwind_GetBSP","GCC_3.3",0,LSB_Core},
 #endif
 #if __ia64__
 	{"_Unwind_GetBSP","GCC_3.3.2",0,LSB_Core},
 #endif
-#if __powerpc__ && !__powerpc64__
-	{"_Unwind_GetBSP","GCC_3.3",0,LSB_Core},
-#endif
-#if __powerpc64__
-	{"_Unwind_GetBSP","GCC_3.3",0,LSB_Core},
-#endif
-#if __s390__ && !__s390x__
-	{"_Unwind_GetBSP","GCC_3.3",0,LSB_Core},
-#endif
-#if __x86_64__
-	{"_Unwind_GetBSP","GCC_3.3",0,LSB_Core},
-#endif
-#if __s390x__
-	{"_Unwind_GetBSP","GCC_3.3",0,LSB_Core},
-#endif
 #if __i386__
 	{"_Unwind_GetCFA","GCC_3.3",0,LSB_Core},
 #endif
@@ -1680,16 +1635,7 @@ struct versym DynSyms[] = {
 #if __i386__
 	{"_Unwind_GetDataRelBase","GCC_3.0",0,LSB_Core},
 #endif
-#if __arm__
-	{"_Unwind_GetDataRelBase","GCC_3.0",0,LSB_Core},
-#endif
-#if __mc68000__
-	{"_Unwind_GetDataRelBase","GCC_3.0",0,LSB_Core},
-#endif
 #if __powerpc__ && !__powerpc64__
-	{"_Unwind_GetDataRelBase","GCC_3.0",0,LSB_Core},
-#endif
-#if __alpha__
 	{"_Unwind_GetDataRelBase","GCC_3.0",0,LSB_Core},
 #endif
 #if __powerpc64__
@@ -1710,16 +1656,7 @@ struct versym DynSyms[] = {
 #if __ia64__
 	{"_Unwind_GetGR","GCC_3.0",0,LSB_Core},
 #endif
-#if __arm__
-	{"_Unwind_GetGR","GCC_3.0",0,LSB_Core},
-#endif
-#if __mc68000__
-	{"_Unwind_GetGR","GCC_3.0",0,LSB_Core},
-#endif
 #if __powerpc__ && !__powerpc64__
-	{"_Unwind_GetGR","GCC_3.0",0,LSB_Core},
-#endif
-#if __alpha__
 	{"_Unwind_GetGR","GCC_3.0",0,LSB_Core},
 #endif
 #if __powerpc64__
@@ -1740,16 +1677,7 @@ struct versym DynSyms[] = {
 #if __ia64__
 	{"_Unwind_GetIP","GCC_3.0",0,LSB_Core},
 #endif
-#if __arm__
-	{"_Unwind_GetIP","GCC_3.0",0,LSB_Core},
-#endif
-#if __mc68000__
-	{"_Unwind_GetIP","GCC_3.0",0,LSB_Core},
-#endif
 #if __powerpc__ && !__powerpc64__
-	{"_Unwind_GetIP","GCC_3.0",0,LSB_Core},
-#endif
-#if __alpha__
 	{"_Unwind_GetIP","GCC_3.0",0,LSB_Core},
 #endif
 #if __powerpc64__
@@ -1770,16 +1698,7 @@ struct versym DynSyms[] = {
 #if __ia64__
 	{"_Unwind_GetLanguageSpecificData","GCC_3.0",0,LSB_Core},
 #endif
-#if __arm__
-	{"_Unwind_GetLanguageSpecificData","GCC_3.0",0,LSB_Core},
-#endif
-#if __mc68000__
-	{"_Unwind_GetLanguageSpecificData","GCC_3.0",0,LSB_Core},
-#endif
 #if __powerpc__ && !__powerpc64__
-	{"_Unwind_GetLanguageSpecificData","GCC_3.0",0,LSB_Core},
-#endif
-#if __alpha__
 	{"_Unwind_GetLanguageSpecificData","GCC_3.0",0,LSB_Core},
 #endif
 #if __powerpc64__
@@ -1800,16 +1719,7 @@ struct versym DynSyms[] = {
 #if __ia64__
 	{"_Unwind_GetRegionStart","GCC_3.0",0,LSB_Core},
 #endif
-#if __arm__
-	{"_Unwind_GetRegionStart","GCC_3.0",0,LSB_Core},
-#endif
-#if __mc68000__
-	{"_Unwind_GetRegionStart","GCC_3.0",0,LSB_Core},
-#endif
 #if __powerpc__ && !__powerpc64__
-	{"_Unwind_GetRegionStart","GCC_3.0",0,LSB_Core},
-#endif
-#if __alpha__
 	{"_Unwind_GetRegionStart","GCC_3.0",0,LSB_Core},
 #endif
 #if __powerpc64__
@@ -1827,16 +1737,7 @@ struct versym DynSyms[] = {
 #if __i386__
 	{"_Unwind_GetTextRelBase","GCC_3.0",0,LSB_Core},
 #endif
-#if __arm__
-	{"_Unwind_GetTextRelBase","GCC_3.0",0,LSB_Core},
-#endif
-#if __mc68000__
-	{"_Unwind_GetTextRelBase","GCC_3.0",0,LSB_Core},
-#endif
 #if __powerpc__ && !__powerpc64__
-	{"_Unwind_GetTextRelBase","GCC_3.0",0,LSB_Core},
-#endif
-#if __alpha__
 	{"_Unwind_GetTextRelBase","GCC_3.0",0,LSB_Core},
 #endif
 #if __powerpc64__
@@ -1857,16 +1758,7 @@ struct versym DynSyms[] = {
 #if __ia64__
 	{"_Unwind_RaiseException","GCC_3.0",0,LSB_Core},
 #endif
-#if __arm__
-	{"_Unwind_RaiseException","GCC_3.0",0,LSB_Core},
-#endif
-#if __mc68000__
-	{"_Unwind_RaiseException","GCC_3.0",0,LSB_Core},
-#endif
 #if __powerpc__ && !__powerpc64__
-	{"_Unwind_RaiseException","GCC_3.0",0,LSB_Core},
-#endif
-#if __alpha__
 	{"_Unwind_RaiseException","GCC_3.0",0,LSB_Core},
 #endif
 #if __powerpc64__
@@ -1887,16 +1779,7 @@ struct versym DynSyms[] = {
 #if __ia64__
 	{"_Unwind_Resume","GCC_3.0",0,LSB_Core},
 #endif
-#if __arm__
-	{"_Unwind_Resume","GCC_3.0",0,LSB_Core},
-#endif
-#if __mc68000__
-	{"_Unwind_Resume","GCC_3.0",0,LSB_Core},
-#endif
 #if __powerpc__ && !__powerpc64__
-	{"_Unwind_Resume","GCC_3.0",0,LSB_Core},
-#endif
-#if __alpha__
 	{"_Unwind_Resume","GCC_3.0",0,LSB_Core},
 #endif
 #if __powerpc64__
@@ -1938,16 +1821,7 @@ struct versym DynSyms[] = {
 #if __ia64__
 	{"_Unwind_SetGR","GCC_3.0",0,LSB_Core},
 #endif
-#if __arm__
-	{"_Unwind_SetGR","GCC_3.0",0,LSB_Core},
-#endif
-#if __mc68000__
-	{"_Unwind_SetGR","GCC_3.0",0,LSB_Core},
-#endif
 #if __powerpc__ && !__powerpc64__
-	{"_Unwind_SetGR","GCC_3.0",0,LSB_Core},
-#endif
-#if __alpha__
 	{"_Unwind_SetGR","GCC_3.0",0,LSB_Core},
 #endif
 #if __powerpc64__
@@ -1968,16 +1842,7 @@ struct versym DynSyms[] = {
 #if __ia64__
 	{"_Unwind_SetIP","GCC_3.0",0,LSB_Core},
 #endif
-#if __arm__
-	{"_Unwind_SetIP","GCC_3.0",0,LSB_Core},
-#endif
-#if __mc68000__
-	{"_Unwind_SetIP","GCC_3.0",0,LSB_Core},
-#endif
 #if __powerpc__ && !__powerpc64__
-	{"_Unwind_SetIP","GCC_3.0",0,LSB_Core},
-#endif
-#if __alpha__
 	{"_Unwind_SetIP","GCC_3.0",0,LSB_Core},
 #endif
 #if __powerpc64__
@@ -2508,8 +2373,6 @@ struct versym DynSyms[] = {
 	{"_ZN10QColorDragC1ERK6QColorP7QWidgetPKc","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QColorDragC2EP7QWidgetPKc","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QColorDragC2ERK6QColorP7QWidgetPKc","",0,LSB_Toolkit_Qt3},
-	{"_ZN10QColorDragD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN10QColorDragD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QDataTable10findBufferERK9QSqlIndexi","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QDataTable10hideColumnEi","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QDataTable10paintFieldEP8QPainterPK9QSqlFieldRK5QRectb","",0,LSB_Toolkit_Qt3},
@@ -2629,9 +2492,7 @@ struct versym DynSyms[] = {
 	{"_ZN10QDropEventC1ERK6QPoint6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEEN6QEvent4TypeE","",0,LSB_Toolkit_Qt},
 	{"_ZN10QDropEventC2ERK6QPoint6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEEN6QEvent4TypeE","",0,LSB_Toolkit_Qt},
 	{"_ZN10QDropEventD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN10QDropEventD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QDropEventD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN10QDropEventD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QDropEventD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN10QEventLoop11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt},
 	{"_ZN10QEventLoop11qt_metacastEPKc","",0,LSB_Toolkit_Qt},
@@ -2753,9 +2614,7 @@ struct versym DynSyms[] = {
 	{"_ZN10QHideEventC1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN10QHideEventC2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN10QHideEventD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN10QHideEventD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QHideEventD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN10QHideEventD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QHideEventD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN10QImageDrag11qt_propertyEiiP8QVariant","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QImageDrag16staticMetaObjectEv","",0,LSB_Toolkit_Qt3},
@@ -2843,9 +2702,7 @@ struct versym DynSyms[] = {
 	{"_ZN10QMoveEventC1ERK6QPointS2_","",0,LSB_Toolkit_Qt},
 	{"_ZN10QMoveEventC2ERK6QPointS2_","",0,LSB_Toolkit_Qt},
 	{"_ZN10QMoveEventD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN10QMoveEventD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QMoveEventD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN10QMoveEventD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QMoveEventD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN10QPictureIO10setPictureERK8QPicture","",0,LSB_Toolkit_Qt},
 	{"_ZN10QPictureIO10setQualityEi","",0,LSB_Toolkit_Qt},
@@ -2950,8 +2807,6 @@ struct versym DynSyms[] = {
 	{"_ZN10QPopupMenuD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QPopupMenuD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QPopupMenuD2Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN10QPtrVectorI15QConnectionListE10deleteItemEPv","",0,LSB_Toolkit_Qt3},
-	{"_ZN10QPtrVectorI15QConnectionListE5clearEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QScrollBar10paintEventEP11QPaintEvent","",0,LSB_Toolkit_Qt},
 	{"_ZN10QScrollBar10paintEventEP11QPaintEvent","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QScrollBar10setPaletteERK8QPalette","",0,LSB_Toolkit_Qt3},
@@ -2966,7 +2821,6 @@ struct versym DynSyms[] = {
 	{"_ZN10QScrollBar11setMaxValueEi","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QScrollBar11setMinValueEi","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QScrollBar11setPageStepEi","",0,LSB_Toolkit_Qt3},
-	{"_ZN10QScrollBar11setTrackingEb","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QScrollBar11sliderMovedEi","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QScrollBar11styleChangeER6QStyle","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QScrollBar11valueChangeEv","",0,LSB_Toolkit_Qt3},
@@ -3056,17 +2910,11 @@ struct versym DynSyms[] = {
 	{"_ZN10QSemiModal7qt_castEPKc","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QSemiModal7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QSemiModal9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3},
-	{"_ZN10QSemiModalD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN10QSemiModalD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QShowEventC1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN10QShowEventC2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN10QShowEventD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN10QShowEventD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QShowEventD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN10QShowEventD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QShowEventD2Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN10QSignalVecD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN10QSignalVecD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QSjisCodecC1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QSjisCodecC2Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QSjisCodecD0Ev","",0,LSB_Toolkit_Qt3},
@@ -3619,8 +3467,6 @@ struct versym DynSyms[] = {
 	{"_ZN10QUdpSocketD0Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN10QUdpSocketD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN10QUdpSocketD2Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN10QUtf8CodecD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN10QUtf8CodecD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QVGroupBox11qt_propertyEiiP8QVariant","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QVGroupBox16staticMetaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QVGroupBox18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3},
@@ -3774,8 +3620,6 @@ struct versym DynSyms[] = {
 	{"_ZN10QWorkspaceD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN10QWorkspaceD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN10QWorkspaceD2Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN10QXmlReaderD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN10QXmlReaderD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN10__cxxabiv116__enum_type_infoD0Ev","CXXABI_1.3",0,LSB_Cpp},
 	{"_ZN10__cxxabiv116__enum_type_infoD1Ev","CXXABI_1.3",0,LSB_Cpp},
 	{"_ZN10__cxxabiv116__enum_type_infoD2Ev","CXXABI_1.3",0,LSB_Cpp},
@@ -3895,16 +3739,12 @@ struct versym DynSyms[] = {
 	{"_ZN11QChildEventC1EN6QEvent4TypeEP7QObject","",0,LSB_Toolkit_Qt},
 	{"_ZN11QChildEventC2EN6QEvent4TypeEP7QObject","",0,LSB_Toolkit_Qt},
 	{"_ZN11QChildEventD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN11QChildEventD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QChildEventD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN11QChildEventD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QChildEventD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN11QCloseEventC1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN11QCloseEventC2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN11QCloseEventD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN11QCloseEventD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QCloseEventD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN11QCloseEventD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QCloseEventD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN11QColorGroup8setBrushENS_9ColorRoleERK6QBrush","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QColorGroup8setColorENS_9ColorRoleERK6QColor","",0,LSB_Toolkit_Qt3},
@@ -3924,8 +3764,6 @@ struct versym DynSyms[] = {
 	{"_ZN11QDataSource10maybeReadyEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QDataSource12enableRewindEb","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QDataSource6rewindEv","",0,LSB_Toolkit_Qt3},
-	{"_ZN11QDataSourceD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN11QDataSourceD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QDataStream10writeBytesEPKcj","",0,LSB_Toolkit_Qt},
 	{"_ZN11QDataStream10writeBytesEPKcj","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QDataStream11readRawDataEPci","",0,LSB_Toolkit_Qt},
@@ -4052,7 +3890,6 @@ struct versym DynSyms[] = {
 	{"_ZN11QDockWindow6areaAtERK6QPoint","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QDockWindow6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QDockWindow6undockEP7QWidget","",0,LSB_Toolkit_Qt3},
-	{"_ZN11QDockWindow6undockEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QDockWindow7metaObjE","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QDockWindow7qt_castEPKc","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QDockWindow7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3},
@@ -4170,8 +4007,6 @@ struct versym DynSyms[] = {
 	{"_ZN11QEucJpCodecD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QEucJpCodecD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QEucJpCodecD2Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN11QEucKrCodecD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN11QEucKrCodecD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QFileDialog10addWidgetsEP6QLabelP7QWidgetP11QPushButton","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QFileDialog10changeModeEi","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QFileDialog10deleteFileERK7QString","",0,LSB_Toolkit_Qt3},
@@ -4313,9 +4148,7 @@ struct versym DynSyms[] = {
 	{"_ZN11QFocusEventC1EN6QEvent4TypeEN2Qt11FocusReasonE","",0,LSB_Toolkit_Qt},
 	{"_ZN11QFocusEventC2EN6QEvent4TypeEN2Qt11FocusReasonE","",0,LSB_Toolkit_Qt},
 	{"_ZN11QFocusEventD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN11QFocusEventD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QFocusEventD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN11QFocusEventD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QFocusEventD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN11QFocusFrame10paintEventEP11QPaintEvent","",0,LSB_Toolkit_Qt},
 	{"_ZN11QFocusFrame11eventFilterEP7QObjectP6QEvent","",0,LSB_Toolkit_Qt},
@@ -4894,12 +4727,8 @@ struct versym DynSyms[] = {
 	{"_ZN11QMouseEventC2EN6QEvent4TypeERK6QPointii","",0,LSB_Toolkit_Qt},
 	{"_ZN11QMouseEventC2EN6QEvent4TypeERK6QPointii","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QMouseEventD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN11QMouseEventD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QMouseEventD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN11QMouseEventD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QMouseEventD2Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN11QObjectListD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN11QObjectListD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QPaintEventC1ERK5QRect","",0,LSB_Toolkit_Qt},
 	{"_ZN11QPaintEventC1ERK7QRegion","",0,LSB_Toolkit_Qt},
 	{"_ZN11QPaintEventC1ERK7QRegionRK5QRect","",0,LSB_Toolkit_Qt},
@@ -4907,9 +4736,7 @@ struct versym DynSyms[] = {
 	{"_ZN11QPaintEventC2ERK7QRegion","",0,LSB_Toolkit_Qt},
 	{"_ZN11QPaintEventC2ERK7QRegionRK5QRect","",0,LSB_Toolkit_Qt},
 	{"_ZN11QPaintEventD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN11QPaintEventD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QPaintEventD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN11QPaintEventD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QPaintEventD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN11QPointArray11makeEllipseEiiii","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QPointArray12cleanBuffersEv","",0,LSB_Toolkit_Qt3},
@@ -4928,8 +4755,6 @@ struct versym DynSyms[] = {
 	{"_ZN11QPointArrayC1EiPKi","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QPointArrayC2ERK5QRectb","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QPointArrayC2EiPKi","",0,LSB_Toolkit_Qt3},
-	{"_ZN11QPointArrayD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN11QPointArrayD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QProxyModel10insertRowsEiiRK11QModelIndex","",0,LSB_Toolkit_Qt},
 	{"_ZN11QProxyModel11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt},
 	{"_ZN11QProxyModel11qt_metacastEPKc","",0,LSB_Toolkit_Qt},
@@ -4971,7 +4796,6 @@ struct versym DynSyms[] = {
 	{"_ZN11QPushButton14setAutoDefaultEb","",0,LSB_Toolkit_Qt},
 	{"_ZN11QPushButton14setAutoDefaultEb","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QPushButton15drawButtonLabelEP8QPainter","",0,LSB_Toolkit_Qt3},
-	{"_ZN11QPushButton15setIsMenuButtonEb","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QPushButton15setToggleButtonEb","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QPushButton16staticMetaObjectE","",0,LSB_Toolkit_Qt},
 	{"_ZN11QPushButton16staticMetaObjectEv","",0,LSB_Toolkit_Qt3},
@@ -5161,10 +4985,6 @@ struct versym DynSyms[] = {
 	{"_ZN11QSpacerItem10spacerItemEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QSpacerItem11setGeometryERK5QRect","",0,LSB_Toolkit_Qt},
 	{"_ZN11QSpacerItem11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3},
-	{"_ZN11QSpacerItemD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN11QSpacerItemD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN11QSpacerItemD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN11QSpacerItemD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QSpinWidget10editWidgetEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QSpinWidget10paintEventEP11QPaintEvent","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QSpinWidget10wheelEventEP11QWheelEvent","",0,LSB_Toolkit_Qt3},
@@ -5495,9 +5315,7 @@ struct versym DynSyms[] = {
 	{"_ZN11QTimerEventC1Ei","",0,LSB_Toolkit_Qt},
 	{"_ZN11QTimerEventC2Ei","",0,LSB_Toolkit_Qt},
 	{"_ZN11QTimerEventD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN11QTimerEventD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QTimerEventD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN11QTimerEventD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QTimerEventD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN11QToolButton10drawButtonEP8QPainter","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QToolButton10enterEventEP6QEvent","",0,LSB_Toolkit_Qt},
@@ -5661,8 +5479,6 @@ struct versym DynSyms[] = {
 	{"_ZN11QTreeWidgetD0Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN11QTreeWidgetD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN11QTreeWidgetD2Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN11QTsciiCodecD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN11QTsciiCodecD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QUType_Null11convertFromEP8QUObjectP6QUType","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QUType_Null11serializeToEP8QUObjectP8QUBuffer","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QUType_Null12canConvertToEP8QUObjectP6QUType","",0,LSB_Toolkit_Qt3},
@@ -5684,8 +5500,6 @@ struct versym DynSyms[] = {
 	{"_ZN11QUType_enum14canConvertFromEP8QUObjectP6QUType","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QUType_enum3setEP8QUObjecti","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QUType_enum9convertToEP8QUObjectP6QUType","",0,LSB_Toolkit_Qt3},
-	{"_ZN11QUtf16CodecD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN11QUtf16CodecD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QVBoxLayout11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt},
 	{"_ZN11QVBoxLayout11qt_metacastEPKc","",0,LSB_Toolkit_Qt},
 	{"_ZN11QVBoxLayout11qt_propertyEiiP8QVariant","",0,LSB_Toolkit_Qt3},
@@ -5734,20 +5548,12 @@ struct versym DynSyms[] = {
 	{"_ZN11QWheelEventC2ERK6QPointiiN2Qt11OrientationE","",0,LSB_Toolkit_Qt},
 	{"_ZN11QWheelEventC2ERK6QPointiiN2Qt11OrientationE","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QWheelEventD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN11QWheelEventD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QWheelEventD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN11QWheelEventD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QWheelEventD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN11QWidgetItem11setGeometryERK5QRect","",0,LSB_Toolkit_Qt},
 	{"_ZN11QWidgetItem11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QWidgetItem6widgetEv","",0,LSB_Toolkit_Qt},
 	{"_ZN11QWidgetItem6widgetEv","",0,LSB_Toolkit_Qt3},
-	{"_ZN11QWidgetItemD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN11QWidgetItemD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN11QWidgetItemD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN11QWidgetItemD1Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN11QWidgetListD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN11QWidgetListD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QXmlLocatorC1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN11QXmlLocatorC1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN11QXmlLocatorC2Ev","",0,LSB_Toolkit_Qt},
@@ -6186,9 +5992,7 @@ struct versym DynSyms[] = {
 	{"_ZN12QCustomEventC2Ei","",0,LSB_Toolkit_Qt3},
 	{"_ZN12QCustomEventC2EiPv","",0,LSB_Toolkit_Qt},
 	{"_ZN12QCustomEventD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN12QCustomEventD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN12QCustomEventD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN12QCustomEventD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN12QCustomEventD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN12QDataBrowser10readFieldsEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN12QDataBrowser11clearValuesEv","",0,LSB_Toolkit_Qt3},
@@ -6401,10 +6205,6 @@ struct versym DynSyms[] = {
 	{"_ZN12QFontMetricseqERKS_","",0,LSB_Toolkit_Qt},
 	{"_ZN12QGb2312CodecC1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN12QGb2312CodecC2Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN12QGb2312CodecD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN12QGb2312CodecD1Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN12QHebrewCodecD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN12QHebrewCodecD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN12QHostAddress10setAddressEPK8sockaddr","",0,LSB_Toolkit_Qt},
 	{"_ZN12QHostAddress10setAddressEPh","",0,LSB_Toolkit_Qt},
 	{"_ZN12QHostAddress10setAddressEPh","",0,LSB_Toolkit_Qt3},
@@ -6568,7 +6368,6 @@ struct versym DynSyms[] = {
 	{"_ZN12QListBoxItem13setSelectableEb","",0,LSB_Toolkit_Qt3},
 	{"_ZN12QListBoxItem21setCustomHighlightingEb","",0,LSB_Toolkit_Qt3},
 	{"_ZN12QListBoxItem4RTTIE","",0,LSB_Toolkit_Qt3},
-	{"_ZN12QListBoxItem7setTextERK7QString","",0,LSB_Toolkit_Qt3},
 	{"_ZN12QListBoxItemC1EP8QListBox","",0,LSB_Toolkit_Qt3},
 	{"_ZN12QListBoxItemC1EP8QListBoxPS_","",0,LSB_Toolkit_Qt3},
 	{"_ZN12QListBoxItemC2EP8QListBox","",0,LSB_Toolkit_Qt3},
@@ -6747,8 +6546,6 @@ struct versym DynSyms[] = {
 	{"_ZN12QPrintDialogD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN12QPrintDialogD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN12QPrintDialogD2Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN12QPrintEngineD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN12QPrintEngineD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN12QProgressBar10paintEventEP11QPaintEvent","",0,LSB_Toolkit_Qt},
 	{"_ZN12QProgressBar10setMaximumEi","",0,LSB_Toolkit_Qt},
 	{"_ZN12QProgressBar10setMinimumEi","",0,LSB_Toolkit_Qt},
@@ -6794,10 +6591,6 @@ struct versym DynSyms[] = {
 	{"_ZN12QProgressBarC2EP7QWidget","",0,LSB_Toolkit_Qt},
 	{"_ZN12QProgressBarC2EP7QWidgetPKcj","",0,LSB_Toolkit_Qt3},
 	{"_ZN12QProgressBarC2EiP7QWidgetPKcj","",0,LSB_Toolkit_Qt3},
-	{"_ZN12QProgressBarD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN12QProgressBarD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN12QProgressBarD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN12QProgressBarD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN12QRadioButton10drawButtonEP8QPainter","",0,LSB_Toolkit_Qt3},
 	{"_ZN12QRadioButton10paintEventEP11QPaintEvent","",0,LSB_Toolkit_Qt},
 	{"_ZN12QRadioButton10setCheckedEb","",0,LSB_Toolkit_Qt3},
@@ -6831,16 +6624,10 @@ struct versym DynSyms[] = {
 	{"_ZN12QRadioButtonC2ERK7QStringP7QWidget","",0,LSB_Toolkit_Qt},
 	{"_ZN12QRadioButtonC2ERK7QStringP7QWidgetPKc","",0,LSB_Toolkit_Qt},
 	{"_ZN12QRadioButtonC2ERK7QStringP7QWidgetPKc","",0,LSB_Toolkit_Qt3},
-	{"_ZN12QRadioButtonD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN12QRadioButtonD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN12QRadioButtonD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN12QRadioButtonD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN12QResizeEventC1ERK5QSizeS2_","",0,LSB_Toolkit_Qt},
 	{"_ZN12QResizeEventC2ERK5QSizeS2_","",0,LSB_Toolkit_Qt},
 	{"_ZN12QResizeEventD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN12QResizeEventD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN12QResizeEventD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN12QResizeEventD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN12QResizeEventD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN12QSqlDatabase11addDatabaseEP10QSqlDriverRK7QString","",0,LSB_Toolkit_Qt},
 	{"_ZN12QSqlDatabase11addDatabaseEP10QSqlDriverRK7QString","",0,LSB_Toolkit_Qt3},
@@ -7065,9 +6852,7 @@ struct versym DynSyms[] = {
 	{"_ZN12QTabletEventC2EN6QEvent4TypeERK6QPointS4_RK7QPointFiidiiddi6QFlagsIN2Qt16KeyboardModifierEEx","",0,LSB_Toolkit_Qt},
 	{"_ZN12QTabletEventC2EN6QEvent4TypeERK6QPointS4_iiiiRK5QPairIiiE","",0,LSB_Toolkit_Qt3},
 	{"_ZN12QTabletEventD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN12QTabletEventD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN12QTabletEventD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN12QTabletEventD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN12QTabletEventD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN12QTextBrowser10paintEventEP11QPaintEvent","",0,LSB_Toolkit_Qt},
 	{"_ZN12QTextBrowser11highlightedERK4QUrl","",0,LSB_Toolkit_Qt},
@@ -7145,8 +6930,6 @@ struct versym DynSyms[] = {
 	{"_ZN12QTextEncoderD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN12QTextEncoderD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN12QTextEncoderD2Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN12QTextOStreamD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN12QTextOStreamD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN12QUType_idisp11convertFromEP8QUObjectP6QUType","",0,LSB_Toolkit_Qt3},
 	{"_ZN12QUType_idisp11serializeToEP8QUObjectP8QUBuffer","",0,LSB_Toolkit_Qt3},
 	{"_ZN12QUType_idisp12canConvertToEP8QUObjectP6QUType","",0,LSB_Toolkit_Qt3},
@@ -7339,9 +7122,7 @@ struct versym DynSyms[] = {
 	{"_ZN13QDateTimeEditC2ERK5QTimeP7QWidget","",0,LSB_Toolkit_Qt},
 	{"_ZN13QDateTimeEditC2ERK9QDateTimeP7QWidget","",0,LSB_Toolkit_Qt},
 	{"_ZN13QDateTimeEditC2ERK9QDateTimeP7QWidgetPKc","",0,LSB_Toolkit_Qt3},
-	{"_ZN13QDateTimeEditD0Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN13QDateTimeEditD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN13QDateTimeEditD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN13QDateTimeEditD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN13QDateTimeEditD2Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN13QErrorMessage11nextPendingEv","",0,LSB_Toolkit_Qt3},
@@ -7440,8 +7221,6 @@ struct versym DynSyms[] = {
 	{"_ZN13QFontMetricsFeqERKS_","",0,LSB_Toolkit_Qt},
 	{"_ZN13QGb18030CodecC1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN13QGb18030CodecC2Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN13QGb18030CodecD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN13QGb18030CodecD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN13QHButtonGroup11qt_propertyEiiP8QVariant","",0,LSB_Toolkit_Qt3},
 	{"_ZN13QHButtonGroup16staticMetaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN13QHButtonGroup18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3},
@@ -7598,7 +7377,6 @@ struct versym DynSyms[] = {
 	{"_ZN13QItemDelegateD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN13QListViewItem10insertItemEPS_","",0,LSB_Toolkit_Qt3},
 	{"_ZN13QListViewItem10paintFocusEP8QPainterRK11QColorGroupRK5QRect","",0,LSB_Toolkit_Qt3},
-	{"_ZN13QListViewItem10removeItemEPS_","",0,LSB_Toolkit_Qt3},
 	{"_ZN13QListViewItem10setEnabledEb","",0,LSB_Toolkit_Qt3},
 	{"_ZN13QListViewItem10setVisibleEb","",0,LSB_Toolkit_Qt3},
 	{"_ZN13QListViewItem11dragEnteredEv","",0,LSB_Toolkit_Qt3},
@@ -8083,14 +7861,10 @@ struct versym DynSyms[] = {
 	{"_ZN14QDoubleSpinBox9setSuffixERK7QString","",0,LSB_Toolkit_Qt},
 	{"_ZN14QDoubleSpinBoxC1EP7QWidget","",0,LSB_Toolkit_Qt},
 	{"_ZN14QDoubleSpinBoxC2EP7QWidget","",0,LSB_Toolkit_Qt},
-	{"_ZN14QDoubleSpinBoxD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN14QDoubleSpinBoxD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN14QDragMoveEventC1ERK6QPoint6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEEN6QEvent4TypeE","",0,LSB_Toolkit_Qt},
 	{"_ZN14QDragMoveEventC2ERK6QPoint6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEEN6QEvent4TypeE","",0,LSB_Toolkit_Qt},
 	{"_ZN14QDragMoveEventD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN14QDragMoveEventD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN14QDragMoveEventD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN14QDragMoveEventD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN14QDragMoveEventD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN14QEditorFactory12createEditorEP7QWidgetRK8QVariant","",0,LSB_Toolkit_Qt3},
 	{"_ZN14QEditorFactory14defaultFactoryEv","",0,LSB_Toolkit_Qt3},
@@ -8188,10 +7962,8 @@ struct versym DynSyms[] = {
 	{"_ZN14QMultiLineEdit11qt_propertyEiiP8QVariant","",0,LSB_Toolkit_Qt3},
 	{"_ZN14QMultiLineEdit12setAlignmentEi","",0,LSB_Toolkit_Qt3},
 	{"_ZN14QMultiLineEdit13insertAndMarkERK7QStringb","",0,LSB_Toolkit_Qt3},
-	{"_ZN14QMultiLineEdit13setAutoUpdateEb","",0,LSB_Toolkit_Qt3},
 	{"_ZN14QMultiLineEdit16staticMetaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN14QMultiLineEdit17cursorWordForwardEb","",0,LSB_Toolkit_Qt3},
-	{"_ZN14QMultiLineEdit17setCursorPositionEii","",0,LSB_Toolkit_Qt3},
 	{"_ZN14QMultiLineEdit17setCursorPositionEiib","",0,LSB_Toolkit_Qt3},
 	{"_ZN14QMultiLineEdit18cursorWordBackwardEb","",0,LSB_Toolkit_Qt3},
 	{"_ZN14QMultiLineEdit18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3},
@@ -8205,7 +7977,6 @@ struct versym DynSyms[] = {
 	{"_ZN14QMultiLineEdit7qt_castEPKc","",0,LSB_Toolkit_Qt3},
 	{"_ZN14QMultiLineEdit7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3},
 	{"_ZN14QMultiLineEdit8cursorUpEb","",0,LSB_Toolkit_Qt3},
-	{"_ZN14QMultiLineEdit8insertAtERK7QStringii","",0,LSB_Toolkit_Qt3},
 	{"_ZN14QMultiLineEdit8insertAtERK7QStringiib","",0,LSB_Toolkit_Qt3},
 	{"_ZN14QMultiLineEdit8killLineEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN14QMultiLineEdit8pageDownEb","",0,LSB_Toolkit_Qt3},
@@ -8218,8 +7989,6 @@ struct versym DynSyms[] = {
 	{"_ZN14QMultiLineEditD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN14QMultiLineEditD2Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN14QPtrCollection7newItemEPv","",0,LSB_Toolkit_Qt3},
-	{"_ZN14QPtrCollectionD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN14QPtrCollectionD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN14QReadWriteLock11lockForReadEv","",0,LSB_Toolkit_Qt},
 	{"_ZN14QReadWriteLock12lockForWriteEv","",0,LSB_Toolkit_Qt},
 	{"_ZN14QReadWriteLock14tryLockForReadEv","",0,LSB_Toolkit_Qt},
@@ -8383,18 +8152,10 @@ struct versym DynSyms[] = {
 	{"_ZN14QWaitConditionD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN14QWaitConditionD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN14QWaitConditionD2Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN14QWidgetIntDictD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN14QWidgetIntDictD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN14QXmlAttributes5clearEv","",0,LSB_Toolkit_Qt},
 	{"_ZN14QXmlAttributes5clearEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN14QXmlAttributes6appendERK7QStringS2_S2_S2_","",0,LSB_Toolkit_Qt},
 	{"_ZN14QXmlAttributes6appendERK7QStringS2_S2_S2_","",0,LSB_Toolkit_Qt3},
-	{"_ZN14QXmlAttributesD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN14QXmlAttributesD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN14QXmlAttributesD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN14QXmlAttributesD1Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN14QXmlDTDHandlerD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN14QXmlDTDHandlerD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN15QAbstractButton10setCheckedEb","",0,LSB_Toolkit_Qt},
 	{"_ZN15QAbstractButton10timerEventEP11QTimerEvent","",0,LSB_Toolkit_Qt},
 	{"_ZN15QAbstractButton11changeEventEP6QEvent","",0,LSB_Toolkit_Qt},
@@ -8522,8 +8283,6 @@ struct versym DynSyms[] = {
 	{"_ZN15QCheckTableItem7setTextERK7QString","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QCheckTableItemC1EP6QTableRK7QString","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QCheckTableItemC2EP6QTableRK7QString","",0,LSB_Toolkit_Qt3},
-	{"_ZN15QCheckTableItemD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN15QCheckTableItemD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QClipboardEventC1EP13QEventPrivate","",0,LSB_Toolkit_Qt},
 	{"_ZN15QClipboardEventC2EP13QEventPrivate","",0,LSB_Toolkit_Qt},
 	{"_ZN15QClipboardEventD0Ev","",0,LSB_Toolkit_Qt},
@@ -8544,8 +8303,6 @@ struct versym DynSyms[] = {
 	{"_ZN15QComboTableItemD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QComboTableItemD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QComboTableItemD2Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN15QConnectionListD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN15QConnectionListD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QCustomMenuItem7setFontERK5QFont","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QCustomMenuItemC1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QCustomMenuItemC2Ev","",0,LSB_Toolkit_Qt3},
@@ -8561,27 +8318,20 @@ struct versym DynSyms[] = {
 	{"_ZN15QDockAreaLayout2trEPKcS1_","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QDockAreaLayout4initEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QDockAreaLayout6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3},
-	{"_ZN15QDockAreaLayout7addItemEP11QLayoutItem","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QDockAreaLayout7metaObjE","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QDockAreaLayout7qt_castEPKc","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QDockAreaLayout7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QDockAreaLayout8iteratorEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QDockAreaLayout9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3},
-	{"_ZN15QDockAreaLayoutD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN15QDockAreaLayoutD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QDragEnterEventC1ERK6QPoint6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEE","",0,LSB_Toolkit_Qt},
 	{"_ZN15QDragEnterEventC2ERK6QPoint6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEE","",0,LSB_Toolkit_Qt},
 	{"_ZN15QDragEnterEventD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN15QDragEnterEventD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QDragEnterEventD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN15QDragEnterEventD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QDragEnterEventD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN15QDragLeaveEventC1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN15QDragLeaveEventC2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN15QDragLeaveEventD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN15QDragLeaveEventD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QDragLeaveEventD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN15QDragLeaveEventD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QDragLeaveEventD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN15QGCacheIterator6toLastEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QGCacheIterator7toFirstEv","",0,LSB_Toolkit_Qt3},
@@ -8603,8 +8353,6 @@ struct versym DynSyms[] = {
 	{"_ZN15QGPluginManagerC2ERK5QUuidRK11QStringListRK7QStringb","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QGPluginManagerD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QGPluginManagerD2Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN15QIMComposeEventD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN15QIMComposeEventD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QIODeviceSource11readyToSendEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QIODeviceSource12enableRewindEb","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QIODeviceSource6rewindEv","",0,LSB_Toolkit_Qt3},
@@ -8632,7 +8380,6 @@ struct versym DynSyms[] = {
 	{"_ZN15QLinearGradientC2ERK7QPointFS2_","",0,LSB_Toolkit_Qt},
 	{"_ZN15QLinearGradientC2Edddd","",0,LSB_Toolkit_Qt},
 	{"_ZN15QLinkedListData11shared_nullE","",0,LSB_Toolkit_Qt},
-	{"_ZN15QListWidgetItem18setBackgroundColorERK6QColor","",0,LSB_Toolkit_Qt},
 	{"_ZN15QListWidgetItem4readER11QDataStream","",0,LSB_Toolkit_Qt},
 	{"_ZN15QListWidgetItem7setDataEiRK8QVariant","",0,LSB_Toolkit_Qt},
 	{"_ZN15QListWidgetItemC1EP11QListWidgeti","",0,LSB_Toolkit_Qt},
@@ -8854,8 +8601,6 @@ struct versym DynSyms[] = {
 	{"_ZN15QSplitterHandle5eventEP6QEvent","",0,LSB_Toolkit_Qt},
 	{"_ZN15QSplitterHandleC1EN2Qt11OrientationEP9QSplitter","",0,LSB_Toolkit_Qt},
 	{"_ZN15QSplitterHandleC2EN2Qt11OrientationEP9QSplitter","",0,LSB_Toolkit_Qt},
-	{"_ZN15QSplitterHandleD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN15QSplitterHandleD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN15QSqlPropertyMap10defaultMapEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QSqlPropertyMap11setPropertyEP7QWidgetRK8QVariant","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QSqlPropertyMap17installDefaultMapEPS_","",0,LSB_Toolkit_Qt3},
@@ -8976,8 +8721,6 @@ struct versym DynSyms[] = {
 	{"_ZN15QUType_charstar3setEP8QUObjectPKcb","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QUType_charstar5clearEP8QUObject","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QUType_charstar9convertToEP8QUObjectP6QUType","",0,LSB_Toolkit_Qt3},
-	{"_ZN15QXmlDeclHandlerD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN15QXmlDeclHandlerD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN15QXmlInputSource11fromRawDataERK10QByteArrayb","",0,LSB_Toolkit_Qt},
 	{"_ZN15QXmlInputSource11fromRawDataERK9QMemArrayIcEb","",0,LSB_Toolkit_Qt3},
 	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt},
@@ -9275,8 +9018,6 @@ struct versym DynSyms[] = {
 	{"_ZN16QPageSetupDialog4execEv","",0,LSB_Toolkit_Qt},
 	{"_ZN16QPageSetupDialogC1EP8QPrinterP7QWidget","",0,LSB_Toolkit_Qt},
 	{"_ZN16QPageSetupDialogC2EP8QPrinterP7QWidget","",0,LSB_Toolkit_Qt},
-	{"_ZN16QPageSetupDialogD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN16QPageSetupDialogD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN16QRegExpValidator11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt},
 	{"_ZN16QRegExpValidator11qt_metacastEPKc","",0,LSB_Toolkit_Qt},
 	{"_ZN16QRegExpValidator11qt_propertyEiiP8QVariant","",0,LSB_Toolkit_Qt3},
@@ -9346,27 +9087,9 @@ struct versym DynSyms[] = {
 	{"_ZN16QSqlResultSharedD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN16QSqlResultSharedD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN16QSqlResultSharedD2Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN16QSqlSelectCursor10editBufferEb","",0,LSB_Toolkit_Qt3},
-	{"_ZN16QSqlSelectCursor11primeDeleteEv","",0,LSB_Toolkit_Qt3},
-	{"_ZN16QSqlSelectCursor11primeInsertEv","",0,LSB_Toolkit_Qt3},
-	{"_ZN16QSqlSelectCursor11primeUpdateEv","",0,LSB_Toolkit_Qt3},
-	{"_ZN16QSqlSelectCursor12setGeneratedERK7QStringb","",0,LSB_Toolkit_Qt3},
-	{"_ZN16QSqlSelectCursor12setGeneratedEib","",0,LSB_Toolkit_Qt3},
 	{"_ZN16QSqlSelectCursor14populateCursorEv","",0,LSB_Toolkit_Qt3},
-	{"_ZN16QSqlSelectCursor15setPrimaryIndexERK9QSqlIndex","",0,LSB_Toolkit_Qt3},
-	{"_ZN16QSqlSelectCursor3delEb","",0,LSB_Toolkit_Qt3},
 	{"_ZN16QSqlSelectCursor4execERK7QString","",0,LSB_Toolkit_Qt3},
-	{"_ZN16QSqlSelectCursor5clearEv","",0,LSB_Toolkit_Qt3},
-	{"_ZN16QSqlSelectCursor6appendERK13QSqlFieldInfo","",0,LSB_Toolkit_Qt3},
-	{"_ZN16QSqlSelectCursor6insertEb","",0,LSB_Toolkit_Qt3},
-	{"_ZN16QSqlSelectCursor6insertEiRK13QSqlFieldInfo","",0,LSB_Toolkit_Qt3},
-	{"_ZN16QSqlSelectCursor6removeEi","",0,LSB_Toolkit_Qt3},
 	{"_ZN16QSqlSelectCursor6selectERK7QStringRK9QSqlIndex","",0,LSB_Toolkit_Qt3},
-	{"_ZN16QSqlSelectCursor6updateEb","",0,LSB_Toolkit_Qt3},
-	{"_ZN16QSqlSelectCursor7setModeEi","",0,LSB_Toolkit_Qt3},
-	{"_ZN16QSqlSelectCursor7setNameERK7QStringb","",0,LSB_Toolkit_Qt3},
-	{"_ZN16QSqlSelectCursor7setSortERK9QSqlIndex","",0,LSB_Toolkit_Qt3},
-	{"_ZN16QSqlSelectCursor9setFilterERK7QString","",0,LSB_Toolkit_Qt3},
 	{"_ZN16QSqlSelectCursorC1ERK7QStringP12QSqlDatabase","",0,LSB_Toolkit_Qt3},
 	{"_ZN16QSqlSelectCursorC1ERKS_","",0,LSB_Toolkit_Qt3},
 	{"_ZN16QSqlSelectCursorC2ERK7QStringP12QSqlDatabase","",0,LSB_Toolkit_Qt3},
@@ -9386,8 +9109,6 @@ struct versym DynSyms[] = {
 	{"_ZN16QStringListModelC1ERK11QStringListP7QObject","",0,LSB_Toolkit_Qt},
 	{"_ZN16QStringListModelC2EP7QObject","",0,LSB_Toolkit_Qt},
 	{"_ZN16QStringListModelC2ERK11QStringListP7QObject","",0,LSB_Toolkit_Qt},
-	{"_ZN16QStringListModelD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN16QStringListModelD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN16QStyleHintReturnC1Eii","",0,LSB_Toolkit_Qt},
 	{"_ZN16QStyleHintReturnC2Eii","",0,LSB_Toolkit_Qt},
 	{"_ZN16QStyleHintReturnD1Ev","",0,LSB_Toolkit_Qt},
@@ -9435,8 +9156,6 @@ struct versym DynSyms[] = {
 	{"_ZN16QTextImageFormatC2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN16QTextTableFormatC1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN16QTextTableFormatC2Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN16QXmlErrorHandlerD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN16QXmlErrorHandlerD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN16QXmlSimpleReader10setFeatureERK7QStringb","",0,LSB_Toolkit_Qt},
 	{"_ZN16QXmlSimpleReader10setFeatureERK7QStringb","",0,LSB_Toolkit_Qt3},
 	{"_ZN16QXmlSimpleReader10stringAddCERK5QChar","",0,LSB_Toolkit_Qt3},
@@ -9647,9 +9366,7 @@ struct versym DynSyms[] = {
 	{"_ZN17QContextMenuEventC2ENS_6ReasonERK6QPointi","",0,LSB_Toolkit_Qt},
 	{"_ZN17QContextMenuEventC2ENS_6ReasonERK6QPointi","",0,LSB_Toolkit_Qt3},
 	{"_ZN17QContextMenuEventD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN17QContextMenuEventD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN17QContextMenuEventD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN17QContextMenuEventD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN17QContextMenuEventD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN17QDateTimeEditBase11qt_propertyEiiP8QVariant","",0,LSB_Toolkit_Qt3},
 	{"_ZN17QDateTimeEditBase16staticMetaObjectEv","",0,LSB_Toolkit_Qt3},
@@ -9660,8 +9377,6 @@ struct versym DynSyms[] = {
 	{"_ZN17QDateTimeEditBase7qt_castEPKc","",0,LSB_Toolkit_Qt3},
 	{"_ZN17QDateTimeEditBase7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3},
 	{"_ZN17QDateTimeEditBase9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3},
-	{"_ZN17QDateTimeEditBaseD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN17QDateTimeEditBaseD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN17QDomCharacterData10appendDataERK7QString","",0,LSB_Toolkit_Qt},
 	{"_ZN17QDomCharacterData10appendDataERK7QString","",0,LSB_Toolkit_Qt3},
 	{"_ZN17QDomCharacterData10deleteDataEmm","",0,LSB_Toolkit_Qt},
@@ -9689,8 +9404,6 @@ struct versym DynSyms[] = {
 	{"_ZN17QDomCharacterDataD2Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN17QDomCharacterDataaSERKS_","",0,LSB_Toolkit_Qt},
 	{"_ZN17QDomCharacterDataaSERKS_","",0,LSB_Toolkit_Qt3},
-	{"_ZN17QFactoryInterfaceD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN17QFactoryInterfaceD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN17QFileIconProvider11qt_propertyEiiP8QVariant","",0,LSB_Toolkit_Qt3},
 	{"_ZN17QFileIconProvider16staticMetaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN17QFileIconProvider18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3},
@@ -9706,9 +9419,7 @@ struct versym DynSyms[] = {
 	{"_ZN17QFileIconProviderC2EP7QObjectPKc","",0,LSB_Toolkit_Qt3},
 	{"_ZN17QFileIconProviderC2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN17QFileIconProviderD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN17QFileIconProviderD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN17QFileIconProviderD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN17QFileIconProviderD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN17QFileIconProviderD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN17QIconEnginePlugin11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt},
 	{"_ZN17QIconEnginePlugin11qt_metacastEPKc","",0,LSB_Toolkit_Qt},
@@ -9725,8 +9436,6 @@ struct versym DynSyms[] = {
 	{"_ZN17QInputMethodEventC2ERK7QStringRK5QListINS_9AttributeEE","",0,LSB_Toolkit_Qt},
 	{"_ZN17QInputMethodEventC2ERKS_","",0,LSB_Toolkit_Qt},
 	{"_ZN17QInputMethodEventC2Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN17QInputMethodEventD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN17QInputMethodEventD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN17QNetworkOperation11qt_propertyEiiP8QVariant","",0,LSB_Toolkit_Qt3},
 	{"_ZN17QNetworkOperation12setErrorCodeEi","",0,LSB_Toolkit_Qt3},
 	{"_ZN17QNetworkOperation16staticMetaObjectEv","",0,LSB_Toolkit_Qt3},
@@ -9883,9 +9592,7 @@ struct versym DynSyms[] = {
 	{"_ZN18QDragResponseEventC1Eb","",0,LSB_Toolkit_Qt},
 	{"_ZN18QDragResponseEventC2Eb","",0,LSB_Toolkit_Qt},
 	{"_ZN18QDragResponseEventD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN18QDragResponseEventD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN18QDragResponseEventD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN18QDragResponseEventD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN18QDragResponseEventD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN18QGuardedPtrPrivate11qt_propertyEiiP8QVariant","",0,LSB_Toolkit_Qt3},
 	{"_ZN18QGuardedPtrPrivate15objectDestroyedEv","",0,LSB_Toolkit_Qt3},
@@ -9923,10 +9630,6 @@ struct versym DynSyms[] = {
 	{"_ZN18QHttpRequestHeaderC2ERKS_","",0,LSB_Toolkit_Qt3},
 	{"_ZN18QHttpRequestHeaderC2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN18QHttpRequestHeaderC2Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN18QHttpRequestHeaderD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN18QHttpRequestHeaderD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN18QHttpRequestHeaderD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN18QHttpRequestHeaderD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN18QHttpRequestHeaderaSERKS_","",0,LSB_Toolkit_Qt},
 	{"_ZN18QImageFormatPlugin11qt_propertyEiiP8QVariant","",0,LSB_Toolkit_Qt3},
 	{"_ZN18QImageFormatPlugin16staticMetaObjectEv","",0,LSB_Toolkit_Qt3},
@@ -10054,8 +9757,6 @@ struct versym DynSyms[] = {
 	{"_ZN18QTranslatorMessageC2ERKS_","",0,LSB_Toolkit_Qt3},
 	{"_ZN18QTranslatorMessageC2Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN18QTranslatorMessageaSERKS_","",0,LSB_Toolkit_Qt3},
-	{"_ZN18QXmlContentHandlerD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN18QXmlContentHandlerD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN18QXmlDefaultHandler10charactersERK7QString","",0,LSB_Toolkit_Qt},
 	{"_ZN18QXmlDefaultHandler10charactersERK7QString","",0,LSB_Toolkit_Qt3},
 	{"_ZN18QXmlDefaultHandler10endElementERK7QStringS2_S2_","",0,LSB_Toolkit_Qt},
@@ -10111,14 +9812,6 @@ struct versym DynSyms[] = {
 	{"_ZN18QXmlDefaultHandler8startDTDERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3},
 	{"_ZN18QXmlDefaultHandler9endEntityERK7QString","",0,LSB_Toolkit_Qt},
 	{"_ZN18QXmlDefaultHandler9endEntityERK7QString","",0,LSB_Toolkit_Qt3},
-	{"_ZN18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN18QXmlEntityResolverD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN18QXmlEntityResolverD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN18QXmlLexicalHandlerD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN18QXmlLexicalHandlerD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN18QXmlParseExceptionC1ERK7QStringiiS2_S2_","",0,LSB_Toolkit_Qt},
 	{"_ZN18QXmlParseExceptionC2ERK7QStringiiS2_S2_","",0,LSB_Toolkit_Qt},
 	{"_ZN18QXmlParseExceptionD1Ev","",0,LSB_Toolkit_Qt},
@@ -10237,10 +9930,6 @@ struct versym DynSyms[] = {
 	{"_ZN19QHttpResponseHeaderC2EiRK7QStringii","",0,LSB_Toolkit_Qt3},
 	{"_ZN19QHttpResponseHeaderC2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN19QHttpResponseHeaderC2Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN19QHttpResponseHeaderD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN19QHttpResponseHeaderD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN19QHttpResponseHeaderD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN19QHttpResponseHeaderD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN19QHttpResponseHeaderaSERKS_","",0,LSB_Toolkit_Qt},
 	{"_ZN19QInputContextPlugin11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt},
 	{"_ZN19QInputContextPlugin11qt_metacastEPKc","",0,LSB_Toolkit_Qt},
@@ -10320,10 +10009,6 @@ struct versym DynSyms[] = {
 	{"_ZN20QAbstractPrintDialogC1ER27QAbstractPrintDialogPrivateP8QPrinterP7QWidget","",0,LSB_Toolkit_Qt},
 	{"_ZN20QAbstractPrintDialogC2EP8QPrinterP7QWidget","",0,LSB_Toolkit_Qt},
 	{"_ZN20QAbstractPrintDialogC2ER27QAbstractPrintDialogPrivateP8QPrinterP7QWidget","",0,LSB_Toolkit_Qt},
-	{"_ZN20QAbstractPrintDialogD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN20QAbstractPrintDialogD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN20QAccessibleInterfaceD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN20QAccessibleInterfaceD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN20QCanvasPolygonalItem10invalidateEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN20QCanvasPolygonalItem10setWindingEb","",0,LSB_Toolkit_Qt3},
 	{"_ZN20QCanvasPolygonalItem4RTTIE","",0,LSB_Toolkit_Qt3},
@@ -10357,8 +10042,6 @@ struct versym DynSyms[] = {
 	{"_ZN20QInputContextFactory9languagesERK7QString","",0,LSB_Toolkit_Qt},
 	{"_ZN20QMenubarUpdatedEventC1EP8QMenuBar","",0,LSB_Toolkit_Qt},
 	{"_ZN20QMenubarUpdatedEventC2EP8QMenuBar","",0,LSB_Toolkit_Qt},
-	{"_ZN20QMenubarUpdatedEventD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN20QMenubarUpdatedEventD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture","",0,LSB_Toolkit_Qt},
 	{"_ZN20QPictureFormatPlugin11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt},
 	{"_ZN20QPictureFormatPlugin11qt_metacastEPKc","",0,LSB_Toolkit_Qt},
@@ -10394,8 +10077,6 @@ struct versym DynSyms[] = {
 	{"_ZN20QTextFrameLayoutDataD0Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN20QTextFrameLayoutDataD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN20QTextFrameLayoutDataD2Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN20QTextObjectInterfaceD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN20QTextObjectInterfaceD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN20QXmlNamespaceSupport10popContextEv","",0,LSB_Toolkit_Qt},
 	{"_ZN20QXmlNamespaceSupport10popContextEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN20QXmlNamespaceSupport11pushContextEv","",0,LSB_Toolkit_Qt},
@@ -10535,10 +10216,6 @@ struct versym DynSyms[] = {
 	{"_ZN22QAccessibleApplication8doActionEiiRK5QListI8QVariantE","",0,LSB_Toolkit_Qt},
 	{"_ZN22QAccessibleApplicationC1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN22QAccessibleApplicationC2Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN22QAccessibleApplicationD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN22QAccessibleApplicationD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN22QStyleFactoryInterfaceD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN22QStyleFactoryInterfaceD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN22QStyleOptionDockWidgetC1Ei","",0,LSB_Toolkit_Qt},
 	{"_ZN22QStyleOptionDockWidgetC1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN22QStyleOptionDockWidgetC2Ei","",0,LSB_Toolkit_Qt},
@@ -10572,8 +10249,6 @@ struct versym DynSyms[] = {
 	{"_ZN23QAccessibleBridgePluginD0Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN23QAccessibleBridgePluginD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN23QAccessibleBridgePluginD2Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN23QPictureFormatInterfaceD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN23QPictureFormatInterfaceD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN23QStyleOptionProgressBarC1Ei","",0,LSB_Toolkit_Qt},
 	{"_ZN23QStyleOptionProgressBarC1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN23QStyleOptionProgressBarC2Ei","",0,LSB_Toolkit_Qt},
@@ -10619,8 +10294,6 @@ struct versym DynSyms[] = {
 	{"_ZN24QAbstractPageSetupDialogC1ER31QAbstractPageSetupDialogPrivateP8QPrinterP7QWidget","",0,LSB_Toolkit_Qt},
 	{"_ZN24QAbstractPageSetupDialogC2EP8QPrinterP7QWidget","",0,LSB_Toolkit_Qt},
 	{"_ZN24QAbstractPageSetupDialogC2ER31QAbstractPageSetupDialogPrivateP8QPrinterP7QWidget","",0,LSB_Toolkit_Qt},
-	{"_ZN24QAbstractPageSetupDialogD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN24QAbstractPageSetupDialogD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN24QSqlRelationalTableModel11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt},
 	{"_ZN24QSqlRelationalTableModel11qt_metacastEPKc","",0,LSB_Toolkit_Qt},
 	{"_ZN24QSqlRelationalTableModel11setRelationEiRK12QSqlRelation","",0,LSB_Toolkit_Qt},
@@ -10671,8 +10344,6 @@ struct versym DynSyms[] = {
 	{"_ZN26QAbstractFileEngineHandlerD0Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN26QAbstractFileEngineHandlerD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN26QAbstractFileEngineHandlerD2Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN26QSqlDriverFactoryInterfaceD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN26QSqlDriverFactoryInterfaceD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN26QStyleOptionQ3ListViewItemC1Ei","",0,LSB_Toolkit_Qt},
 	{"_ZN26QStyleOptionQ3ListViewItemC1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN26QStyleOptionQ3ListViewItemC2Ei","",0,LSB_Toolkit_Qt},
@@ -10689,8 +10360,6 @@ struct versym DynSyms[] = {
 	{"_ZN26QTableWidgetSelectionRangeC2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN26QTableWidgetSelectionRangeD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN26QTableWidgetSelectionRangeD2Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN26QTextCodecFactoryInterfaceD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN26QTextCodecFactoryInterfaceD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN27QAbstractTextDocumentLayout11formatIndexEi","",0,LSB_Toolkit_Qt},
 	{"_ZN27QAbstractTextDocumentLayout11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt},
 	{"_ZN27QAbstractTextDocumentLayout11qt_metacastEPKc","",0,LSB_Toolkit_Qt},
@@ -10711,12 +10380,6 @@ struct versym DynSyms[] = {
 	{"_ZN27QAbstractTextDocumentLayoutD0Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN27QAbstractTextDocumentLayoutD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN27QAbstractTextDocumentLayoutD2Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN27QAccessibleFactoryInterfaceD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN27QAccessibleFactoryInterfaceD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN27QIconEngineFactoryInterfaceD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN27QIconEngineFactoryInterfaceD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN29QInputContextFactoryInterfaceD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN29QInputContextFactoryInterfaceD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN2Qt10busyCursorE","",0,LSB_Toolkit_Qt3},
 	{"_ZN2Qt10darkYellowE","",0,LSB_Toolkit_Qt3},
 	{"_ZN2Qt10waitCursorE","",0,LSB_Toolkit_Qt3},
@@ -10757,10 +10420,6 @@ struct versym DynSyms[] = {
 	{"_ZN2Qt8darkGrayE","",0,LSB_Toolkit_Qt3},
 	{"_ZN2Qt9darkGreenE","",0,LSB_Toolkit_Qt3},
 	{"_ZN2Qt9lightGrayE","",0,LSB_Toolkit_Qt3},
-	{"_ZN31QImageIOHandlerFactoryInterfaceD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN31QImageIOHandlerFactoryInterfaceD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN33QAccessibleBridgeFactoryInterfaceD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN33QAccessibleBridgeFactoryInterfaceD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN4QDir10setCurrentERK7QString","",0,LSB_Toolkit_Qt},
 	{"_ZN4QDir10setCurrentERK7QString","",0,LSB_Toolkit_Qt3},
 	{"_ZN4QDir10setSortingE6QFlagsINS_8SortFlagEE","",0,LSB_Toolkit_Qt},
@@ -11393,8 +11052,6 @@ struct versym DynSyms[] = {
 	{"_ZN5QGridC1EiP7QWidgetPKcj","",0,LSB_Toolkit_Qt3},
 	{"_ZN5QGridC2EiN2Qt11OrientationEP7QWidgetPKcj","",0,LSB_Toolkit_Qt3},
 	{"_ZN5QGridC2EiP7QWidgetPKcj","",0,LSB_Toolkit_Qt3},
-	{"_ZN5QGridD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN5QGridD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN5QHBox10setSpacingEi","",0,LSB_Toolkit_Qt3},
 	{"_ZN5QHBox11qt_propertyEiiP8QVariant","",0,LSB_Toolkit_Qt3},
 	{"_ZN5QHBox12frameChangedEv","",0,LSB_Toolkit_Qt3},
@@ -11411,8 +11068,6 @@ struct versym DynSyms[] = {
 	{"_ZN5QHBoxC1EbP7QWidgetPKcj","",0,LSB_Toolkit_Qt3},
 	{"_ZN5QHBoxC2EP7QWidgetPKcj","",0,LSB_Toolkit_Qt3},
 	{"_ZN5QHBoxC2EbP7QWidgetPKcj","",0,LSB_Toolkit_Qt3},
-	{"_ZN5QHBoxD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN5QHBoxD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN5QHttp10addRequestEP12QHttpRequest","",0,LSB_Toolkit_Qt3},
 	{"_ZN5QHttp10clientDoneEb","",0,LSB_Toolkit_Qt3},
 	{"_ZN5QHttp10slotClosedEv","",0,LSB_Toolkit_Qt3},
@@ -11653,8 +11308,6 @@ struct versym DynSyms[] = {
 	{"_ZN5QVBox9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3},
 	{"_ZN5QVBoxC1EP7QWidgetPKcj","",0,LSB_Toolkit_Qt3},
 	{"_ZN5QVBoxC2EP7QWidgetPKcj","",0,LSB_Toolkit_Qt3},
-	{"_ZN5QVBoxD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN5QVBoxD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN6QAccel10insertItemERK12QKeySequencei","",0,LSB_Toolkit_Qt3},
 	{"_ZN6QAccel10removeItemEi","",0,LSB_Toolkit_Qt3},
 	{"_ZN6QAccel10setEnabledEb","",0,LSB_Toolkit_Qt3},
@@ -11849,9 +11502,7 @@ struct versym DynSyms[] = {
 	{"_ZN6QFrameC2EP7QWidgetPKcj","",0,LSB_Toolkit_Qt3},
 	{"_ZN6QFrameC2ER13QFramePrivateP7QWidget6QFlagsIN2Qt10WindowTypeEE","",0,LSB_Toolkit_Qt},
 	{"_ZN6QFrameD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN6QFrameD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN6QFrameD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN6QFrameD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN6QFrameD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN6QGDict10look_asciiEPKcPvi","",0,LSB_Toolkit_Qt3},
 	{"_ZN6QGDict10remove_intElPv","",0,LSB_Toolkit_Qt3},
@@ -12562,9 +12213,7 @@ struct versym DynSyms[] = {
 	{"_ZN7QBitmapC2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN7QBitmapC2Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QBitmapD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN7QBitmapD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QBitmapD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN7QBitmapD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QBitmapD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN7QBitmapaSERK6QImage","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QBitmapaSERK7QPixmap","",0,LSB_Toolkit_Qt},
@@ -12831,7 +12480,6 @@ struct versym DynSyms[] = {
 	{"_ZN7QGArray5storeEPKcj","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QGArray6assignEPKcj","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QGArray6assignERKS_","",0,LSB_Toolkit_Qt3},
-	{"_ZN7QGArray6detachEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QGArray6resizeEj","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QGArray6resizeEjNS_12OptimizationE","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QGArray7newDataEv","",0,LSB_Toolkit_Qt3},
@@ -12877,7 +12525,6 @@ struct versym DynSyms[] = {
 	{"_ZN7QHeader11removeLabelEi","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QHeader11resizeEventEP12QResizeEvent","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QHeader11setCellSizeEii","",0,LSB_Toolkit_Qt3},
-	{"_ZN7QHeader11setTrackingEb","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QHeader12paintSectionEP8QPainteriRK5QRect","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QHeader12resizeArraysEi","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QHeader13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt3},
@@ -13784,7 +13431,6 @@ struct versym DynSyms[] = {
 	{"_ZN7QWidget11setDisabledEb","",0,LSB_Toolkit_Qt},
 	{"_ZN7QWidget11setDisabledEb","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QWidget11setGeometryERK5QRect","",0,LSB_Toolkit_Qt},
-	{"_ZN7QWidget11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QWidget11setGeometryEiiii","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QWidget11setIconTextERK7QString","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QWidget11setTabOrderEPS_S0_","",0,LSB_Toolkit_Qt},
@@ -14061,8 +13707,6 @@ struct versym DynSyms[] = {
 	{"_ZN7QWidget9setLayoutEP7QLayout","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QWidget9setParentEPS_","",0,LSB_Toolkit_Qt},
 	{"_ZN7QWidget9setParentEPS_6QFlagsIN2Qt10WindowTypeEE","",0,LSB_Toolkit_Qt},
-	{"_ZN7QWidget9setWFlagsEj","",0,LSB_Toolkit_Qt3},
-	{"_ZN7QWidget9setWStateEj","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QWidget9showEventEP10QShowEvent","",0,LSB_Toolkit_Qt},
 	{"_ZN7QWidget9showEventEP10QShowEvent","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QWidget9unsetFontEv","",0,LSB_Toolkit_Qt3},
@@ -14115,7 +13759,6 @@ struct versym DynSyms[] = {
 	{"_ZN7QWizard8setTitleEP7QWidgetRK7QString","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QWizard8showPageEP7QWidget","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QWizard9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3},
-	{"_ZN7QWizard9setFinishEP7QWidgetb","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QWizardC1EP7QWidgetPKcbj","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QWizardC2EP7QWidgetPKcbj","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QWizardD0Ev","",0,LSB_Toolkit_Qt3},
@@ -14277,8 +13920,6 @@ struct versym DynSyms[] = {
 	{"_ZN8QGVectorD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN8QGVectorD2Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN8QGVectoraSERKS_","",0,LSB_Toolkit_Qt3},
-	{"_ZN8QIMEventD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN8QIMEventD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN8QIconSet11setIconSizeENS_4SizeERK5QSize","",0,LSB_Toolkit_Qt3},
 	{"_ZN8QIconSet14clearGeneratedEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN8QIconSet18installIconFactoryEP12QIconFactory","",0,LSB_Toolkit_Qt3},
@@ -14325,8 +13966,6 @@ struct versym DynSyms[] = {
 	{"_ZN8QImageIOC2Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN8QImageIOD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN8QImageIOD2Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN8QIntDictI7QWidgetE10deleteItemEPv","",0,LSB_Toolkit_Qt3},
-	{"_ZN8QIntDictI7QWidgetE5clearEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN8QLibrary11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt},
 	{"_ZN8QLibrary11qt_metacastEPKc","",0,LSB_Toolkit_Qt},
 	{"_ZN8QLibrary11setFileNameERK7QString","",0,LSB_Toolkit_Qt},
@@ -14481,8 +14120,6 @@ struct versym DynSyms[] = {
 	{"_ZN8QLocalFs9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3},
 	{"_ZN8QLocalFsC1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN8QLocalFsC2Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN8QLocalFsD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN8QLocalFsD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN8QMapData10createDataEv","",0,LSB_Toolkit_Qt},
 	{"_ZN8QMapData11node_createEPPNS_4NodeEi","",0,LSB_Toolkit_Qt},
 	{"_ZN8QMapData11node_deleteEPPNS_4NodeEiS1_","",0,LSB_Toolkit_Qt},
@@ -15016,13 +14653,6 @@ struct versym DynSyms[] = {
 	{"_ZN8QProcessD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN8QProcessD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN8QProcessD2Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN8QPtrListI11QConnectionE10deleteItemEPv","",0,LSB_Toolkit_Qt3},
-	{"_ZN8QPtrListI11QConnectionE5clearEv","",0,LSB_Toolkit_Qt3},
-	{"_ZN8QPtrListI7QObjectE10deleteItemEPv","",0,LSB_Toolkit_Qt3},
-	{"_ZN8QPtrListI7QObjectE5clearEv","",0,LSB_Toolkit_Qt3},
-	{"_ZN8QPtrListI7QWidgetE10deleteItemEPv","",0,LSB_Toolkit_Qt3},
-	{"_ZN8QPtrListI7QWidgetE5clearEv","",0,LSB_Toolkit_Qt3},
-	{"_ZN8QPtrListIcE5clearEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN8QSpinBox10leaveEventEP6QEvent","",0,LSB_Toolkit_Qt3},
 	{"_ZN8QSpinBox10setEnabledEb","",0,LSB_Toolkit_Qt3},
 	{"_ZN8QSpinBox10setMaximumEi","",0,LSB_Toolkit_Qt},
@@ -15086,9 +14716,7 @@ struct versym DynSyms[] = {
 	{"_ZN8QSpinBoxC2EP7QWidgetPKc","",0,LSB_Toolkit_Qt3},
 	{"_ZN8QSpinBoxC2EiiiP7QWidgetPKc","",0,LSB_Toolkit_Qt},
 	{"_ZN8QSpinBoxC2EiiiP7QWidgetPKc","",0,LSB_Toolkit_Qt3},
-	{"_ZN8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN8QSpinBoxD2Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN8QSqlForm10readFieldsEv","",0,LSB_Toolkit_Qt3},
@@ -15119,12 +14747,6 @@ struct versym DynSyms[] = {
 	{"_ZN8QSqlFormD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN8QSqlFormD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN8QSqlFormD2Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN8QStrList10deleteItemEPv","",0,LSB_Toolkit_Qt3},
-	{"_ZN8QStrList12compareItemsEPvS0_","",0,LSB_Toolkit_Qt3},
-	{"_ZN8QStrList4readER11QDataStreamRPv","",0,LSB_Toolkit_Qt3},
-	{"_ZN8QStrList7newItemEPv","",0,LSB_Toolkit_Qt3},
-	{"_ZN8QStrListD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN8QStrListD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN8QToolBar10childEventEP11QChildEvent","",0,LSB_Toolkit_Qt},
 	{"_ZN8QToolBar10paintEventEP11QPaintEvent","",0,LSB_Toolkit_Qt},
 	{"_ZN8QToolBar10setMovableEb","",0,LSB_Toolkit_Qt},
@@ -15567,7 +15189,6 @@ struct versym DynSyms[] = {
 	{"_ZN8QWMatrixC2Edddddd","",0,LSB_Toolkit_Qt3},
 	{"_ZN8QWMatrixC2Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN8QWMatrixmLERKS_","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QBitArray10deleteDataEPN7QGArray10array_dataE","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QBitArray4fillEbi","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QBitArray4fillEbii","",0,LSB_Toolkit_Qt},
 	{"_ZN9QBitArray4pad0Ev","",0,LSB_Toolkit_Qt3},
@@ -15575,7 +15196,6 @@ struct versym DynSyms[] = {
 	{"_ZN9QBitArray6resizeEi","",0,LSB_Toolkit_Qt},
 	{"_ZN9QBitArray6resizeEj","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QBitArray6setBitEj","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QBitArray7newDataEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QBitArray8clearBitEj","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QBitArray9toggleBitEj","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QBitArrayC1Eib","",0,LSB_Toolkit_Qt},
@@ -15584,8 +15204,6 @@ struct versym DynSyms[] = {
 	{"_ZN9QBitArrayC2Eib","",0,LSB_Toolkit_Qt},
 	{"_ZN9QBitArrayC2Ej","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QBitArrayC2Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QBitArrayD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QBitArrayD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QBitArrayaNERKS_","",0,LSB_Toolkit_Qt},
 	{"_ZN9QBitArrayaNERKS_","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QBitArrayeOERKS_","",0,LSB_Toolkit_Qt},
@@ -15638,10 +15256,6 @@ struct versym DynSyms[] = {
 	{"_ZN9QCheckBoxC2ERK7QStringP7QWidget","",0,LSB_Toolkit_Qt},
 	{"_ZN9QCheckBoxC2ERK7QStringP7QWidgetPKc","",0,LSB_Toolkit_Qt},
 	{"_ZN9QCheckBoxC2ERK7QStringP7QWidgetPKc","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QCheckBoxD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN9QCheckBoxD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QCheckBoxD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN9QCheckBoxD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QColormap10initializeEv","",0,LSB_Toolkit_Qt},
 	{"_ZN9QColormap7cleanupEv","",0,LSB_Toolkit_Qt},
 	{"_ZN9QColormap8instanceEi","",0,LSB_Toolkit_Qt},
@@ -15802,11 +15416,7 @@ struct versym DynSyms[] = {
 	{"_ZN9QDataPump9tryToPumpEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QDataPumpC1EP11QDataSourceP9QDataSink","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QDataPumpC2EP11QDataSourceP9QDataSink","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QDataPumpD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QDataPumpD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QDataSink10maybeReadyEv","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QDataSinkD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QDataSinkD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QDataView10readFieldsEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QDataView11clearValuesEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QDataView11qt_propertyEiiP8QVariant","",0,LSB_Toolkit_Qt3},
@@ -15834,8 +15444,6 @@ struct versym DynSyms[] = {
 	{"_ZN9QDateEdit11qt_metacastEPKc","",0,LSB_Toolkit_Qt},
 	{"_ZN9QDateEdit11qt_propertyEiiP8QVariant","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QDateEdit11resizeEventEP12QResizeEvent","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QDateEdit11setMaxValueERK5QDate","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QDateEdit11setMinValueERK5QDate","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QDateEdit12setSeparatorERK7QString","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QDateEdit12valueChangedERK5QDate","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QDateEdit13updateButtonsEv","",0,LSB_Toolkit_Qt3},
@@ -15873,9 +15481,7 @@ struct versym DynSyms[] = {
 	{"_ZN9QDateEditC2EP7QWidgetPKc","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QDateEditC2ERK5QDateP7QWidget","",0,LSB_Toolkit_Qt},
 	{"_ZN9QDateEditC2ERK5QDateP7QWidgetPKc","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QDateEditD0Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN9QDateEditD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QDateEditD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN9QDateEditD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QDateEditD2Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QDateTime10fromStringERK7QStringN2Qt10DateFormatE","",0,LSB_Toolkit_Qt},
@@ -16182,8 +15788,6 @@ struct versym DynSyms[] = {
 	{"_ZN9QGLWidgetD2Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QGbkCodecC1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QGbkCodecC2Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QGbkCodecD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QGbkCodecD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QGradient10setColorAtEdRK6QColor","",0,LSB_Toolkit_Qt},
 	{"_ZN9QGradient8setStopsERK7QVectorI5QPairId6QColorEE","",0,LSB_Toolkit_Qt},
 	{"_ZN9QGradientC1Ev","",0,LSB_Toolkit_Qt},
@@ -16495,9 +16099,7 @@ struct versym DynSyms[] = {
 	{"_ZN9QKeyEventC1EN6QEvent4TypeEi6QFlagsIN2Qt16KeyboardModifierEERK7QStringbt","",0,LSB_Toolkit_Qt},
 	{"_ZN9QKeyEventC2EN6QEvent4TypeEi6QFlagsIN2Qt16KeyboardModifierEERK7QStringbt","",0,LSB_Toolkit_Qt},
 	{"_ZN9QKeyEventD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN9QKeyEventD0Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QKeyEventD1Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN9QKeyEventD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QKeyEventD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN9QLineEdit10imEndEventEP8QIMEvent","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QLineEdit10paintEventEP11QPaintEvent","",0,LSB_Toolkit_Qt},
@@ -16667,7 +16269,6 @@ struct versym DynSyms[] = {
 	{"_ZN9QListView10moveCursorEN17QAbstractItemView12CursorActionE6QFlagsIN2Qt16KeyboardModifierEE","",0,LSB_Toolkit_Qt},
 	{"_ZN9QListView10onViewportEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QListView10paintEventEP11QPaintEvent","",0,LSB_Toolkit_Qt},
-	{"_ZN9QListView10removeItemEP13QListViewItem","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QListView10setPaletteERK8QPalette","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QListView10setSortingEib","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QListView10setSpacingEi","",0,LSB_Toolkit_Qt},
@@ -16828,8 +16429,6 @@ struct versym DynSyms[] = {
 	{"_ZN9QListViewD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QListViewD2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN9QListViewD2Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QMemArrayI6QPointE6detachEv","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QMemArrayIcE6detachEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QMenuData10changeItemEiRK7QPixmap","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QMenuData10changeItemEiRK7QString","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QMenuData10changeItemEiRK8QIconSetRK7QPixmap","",0,LSB_Toolkit_Qt3},
@@ -16882,8 +16481,6 @@ struct versym DynSyms[] = {
 	{"_ZN9QMenuItemC1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QMenuItemC2Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN9QMenuItemC2Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QMenuItemD0Ev","",0,LSB_Toolkit_Qt},
-	{"_ZN9QMenuItemD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN9QMenuItemD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QMenuItemD2Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QMetaType12isRegisteredEi","",0,LSB_Toolkit_Qt},
@@ -17370,14 +16967,11 @@ struct versym DynSyms[] = {
 	{"_ZN9QTextEdit14scrollToAnchorERK7QString","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTextEdit14scrollToBottomEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTextEdit14setCurrentFontERK5QFont","",0,LSB_Toolkit_Qt},
-	{"_ZN9QTextEdit14setCurrentFontERK5QFont","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTextEdit14setMaxLogLinesEi","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTextEdit14sliderReleasedEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTextEdit15copyToClipboardEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTextEdit15createPopupMenuERK6QPoint","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTextEdit15createPopupMenuEv","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QTextEdit15emitHighlightedERK7QString","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QTextEdit15emitLinkClickedERK7QString","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTextEdit15ensureFormattedEP14QTextParagraph","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTextEdit15handleMouseMoveERK6QPoint","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTextEdit15insertParagraphERK7QStringi","",0,LSB_Toolkit_Qt3},
@@ -17405,7 +16999,6 @@ struct versym DynSyms[] = {
 	{"_ZN9QTextEdit16setFontUnderlineEb","",0,LSB_Toolkit_Qt},
 	{"_ZN9QTextEdit16setLinkUnderlineEb","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTextEdit16setOverwriteModeEb","",0,LSB_Toolkit_Qt},
-	{"_ZN9QTextEdit16setOverwriteModeEb","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTextEdit16staticMetaObjectE","",0,LSB_Toolkit_Qt},
 	{"_ZN9QTextEdit16staticMetaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTextEdit17checkUndoRedoInfoENS_12UndoRedoInfo4TypeE","",0,LSB_Toolkit_Qt3},
@@ -17501,7 +17094,6 @@ struct versym DynSyms[] = {
 	{"_ZN9QTextEdit6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTextEdit6zoomInEi","",0,LSB_Toolkit_Qt},
 	{"_ZN9QTextEdit6zoomInEi","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QTextEdit6zoomInEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTextEdit6zoomToEi","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTextEdit7clickedEii","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTextEdit7metaObjE","",0,LSB_Toolkit_Qt3},
@@ -17514,7 +17106,6 @@ struct versym DynSyms[] = {
 	{"_ZN9QTextEdit7setTextERK7QStringS2_","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTextEdit7zoomOutEi","",0,LSB_Toolkit_Qt},
 	{"_ZN9QTextEdit7zoomOutEi","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QTextEdit7zoomOutEv","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTextEdit8anchorAtERK6QPoint","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTextEdit8anchorAtERK6QPointN2Qt15AnchorAttributeE","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTextEdit8doResizeEv","",0,LSB_Toolkit_Qt3},
@@ -17587,8 +17178,6 @@ struct versym DynSyms[] = {
 	{"_ZN9QTimeEdit11qt_propertyEiiP8QVariant","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTimeEdit11resizeEventEP12QResizeEvent","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTimeEdit11sectionTextEi","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QTimeEdit11setMaxValueERK5QTime","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QTimeEdit11setMinValueERK5QTime","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTimeEdit12setSeparatorERK7QString","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTimeEdit12valueChangedERK5QTime","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTimeEdit13updateButtonsEv","",0,LSB_Toolkit_Qt3},
@@ -17624,9 +17213,7 @@ struct versym DynSyms[] = {
 	{"_ZN9QTimeEditC2EP7QWidgetPKc","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTimeEditC2ERK5QTimeP7QWidget","",0,LSB_Toolkit_Qt},
 	{"_ZN9QTimeEditC2ERK5QTimeP7QWidgetPKc","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QTimeEditD0Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN9QTimeEditD0Ev","",0,LSB_Toolkit_Qt3},
-	{"_ZN9QTimeEditD1Ev","",0,LSB_Toolkit_Qt},
 	{"_ZN9QTimeEditD1Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTimeEditD2Ev","",0,LSB_Toolkit_Qt3},
 	{"_ZN9QTreeView10hideColumnEi","",0,LSB_Toolkit_Qt},
@@ -17739,7 +17326,6 @@ struct versym DynSyms[] = {
 	{"_ZN9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEE4fileEv","GLIBCXX_3.4.2",0,LSB_Cpp},
 	{"_ZN9__gnu_cxx27__verbose_terminate_handlerEv","CXXABI_1.3",0,LSB_Cpp},
 	{"_ZNK10QBoxLayout10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK10QBoxLayout10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QBoxLayout11maximumSizeEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK10QBoxLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QBoxLayout11minimumSizeEv","",0,LSB_Toolkit_Qt},
@@ -17794,7 +17380,6 @@ struct versym DynSyms[] = {
 	{"_ZNK10QByteArray8toDoubleEPb","",0,LSB_Toolkit_Qt},
 	{"_ZNK10QByteArray8toUShortEPbi","",0,LSB_Toolkit_Qt},
 	{"_ZNK10QClipboard10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK10QClipboard10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QClipboard13ownsClipboardEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK10QClipboard13ownsClipboardEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QClipboard13ownsSelectionEv","",0,LSB_Toolkit_Qt},
@@ -17819,11 +17404,9 @@ struct versym DynSyms[] = {
 	{"_ZNK10QClipboard6pixmapEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QClipboard8mimeDataENS_4ModeE","",0,LSB_Toolkit_Qt},
 	{"_ZNK10QClipboard9classNameEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK10QColorDrag10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QColorDrag9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QDataTable10autoDeleteEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QDataTable10dateFormatEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK10QDataTable10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QDataTable12confirmEditsEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QDataTable12createEditorEiib","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QDataTable13confirmDeleteEv","",0,LSB_Toolkit_Qt3},
@@ -17863,7 +17446,6 @@ struct versym DynSyms[] = {
 	{"_ZNK10QDropEvent8providesEPKc","",0,LSB_Toolkit_Qt},
 	{"_ZNK10QDropEvent8providesEPKc","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QEventLoop10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK10QEventLoop10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QEventLoop10timeToWaitEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QEventLoop16hasPendingEventsEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QEventLoop9classNameEv","",0,LSB_Toolkit_Qt3},
@@ -17886,14 +17468,11 @@ struct versym DynSyms[] = {
 	{"_ZNK10QGLContext6formatEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK10QGLContext7isValidEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK10QGLContext9isSharingEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK10QHGroupBox10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QHGroupBox9classNameEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK10QImageDrag10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QImageDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QImageDrag6formatEi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QImageDrag9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QLCDNumber10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK10QLCDNumber10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QLCDNumber12segmentStyleEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK10QLCDNumber12segmentStyleEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QLCDNumber13checkOverflowEd","",0,LSB_Toolkit_Qt},
@@ -17922,7 +17501,6 @@ struct versym DynSyms[] = {
 	{"_ZNK10QPictureIO8ioDeviceEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK10QPopupMenu10itemHeightEP9QMenuItem","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QPopupMenu10itemHeightEi","",0,LSB_Toolkit_Qt3},
-	{"_ZNK10QPopupMenu10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QPopupMenu11isCheckableEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QPopupMenu15customWhatsThisEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QPopupMenu4idAtERK6QPoint","",0,LSB_Toolkit_Qt3},
@@ -17930,9 +17508,7 @@ struct versym DynSyms[] = {
 	{"_ZNK10QPopupMenu8sizeHintEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QPopupMenu9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QPopupMenu9itemAtPosERK6QPointb","",0,LSB_Toolkit_Qt3},
-	{"_ZNK10QPtrVectorI15QConnectionListE5countEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QScrollBar10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK10QScrollBar10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QScrollBar10sliderRectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QScrollBar12drawControlsEjj","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QScrollBar12drawControlsEjjP8QPainter","",0,LSB_Toolkit_Qt3},
@@ -17951,7 +17527,6 @@ struct versym DynSyms[] = {
 	{"_ZNK10QSemaphore5totalEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QSemaphore9availableEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK10QSemaphore9availableEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK10QSemiModal10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QSemiModal9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QSjisCodec11fromUnicodeERK7QStringRi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QSjisCodec11makeDecoderEv","",0,LSB_Toolkit_Qt3},
@@ -17984,7 +17559,6 @@ struct versym DynSyms[] = {
 	{"_ZNK10QSqlCursor9canUpdateEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QSqlCursor9isTrimmedERK7QString","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QSqlDriver10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK10QSqlDriver10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QSqlDriver10recordInfoERK7QString","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QSqlDriver10recordInfoERK9QSqlQuery","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QSqlDriver11formatValueEPK9QSqlFieldb","",0,LSB_Toolkit_Qt3},
@@ -18071,7 +17645,6 @@ struct versym DynSyms[] = {
 	{"_ZNK10QSqlResult9lastQueryEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK10QSqlResult9lastQueryEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QStatusBar10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK10QStatusBar10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QStatusBar14currentMessageEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK10QStatusBar17isSizeGripEnabledEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK10QStatusBar17isSizeGripEnabledEv","",0,LSB_Toolkit_Qt3},
@@ -18079,7 +17652,6 @@ struct versym DynSyms[] = {
 	{"_ZNK10QSvgWidget10metaObjectEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK10QSvgWidget8rendererEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK10QSvgWidget8sizeHintEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK10QTabDialog10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QTabDialog11currentPageEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QTabDialog11hasOkButtonEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QTabDialog12isTabEnabledEP7QWidget","",0,LSB_Toolkit_Qt3},
@@ -18091,7 +17663,6 @@ struct versym DynSyms[] = {
 	{"_ZNK10QTabDialog6tabBarEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QTabDialog9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QTabWidget10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK10QTabWidget10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QTabWidget10tabIconSetEP7QWidget","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QTabWidget10tabToolTipEP7QWidget","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QTabWidget10tabToolTipEi","",0,LSB_Toolkit_Qt},
@@ -18252,16 +17823,13 @@ struct versym DynSyms[] = {
 	{"_ZNK10QUtf8Codec4nameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QUtf8Codec7mibEnumEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QUtf8Codec9toUnicodeEPKci","",0,LSB_Toolkit_Qt3},
-	{"_ZNK10QVGroupBox10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QVGroupBox9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QValidator10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK10QValidator10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QValidator5fixupER7QString","",0,LSB_Toolkit_Qt},
 	{"_ZNK10QValidator5fixupER7QString","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QValidator9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QWorkspace10backgroundEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK10QWorkspace10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK10QWorkspace10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QWorkspace10windowListENS_11WindowOrderE","",0,LSB_Toolkit_Qt},
 	{"_ZNK10QWorkspace10windowListENS_11WindowOrderE","",0,LSB_Toolkit_Qt3},
 	{"_ZNK10QWorkspace10windowListEv","",0,LSB_Toolkit_Qt3},
@@ -18426,7 +17994,6 @@ struct versym DynSyms[] = {
 	{"_ZNK11QCanvasText4rttiEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QCanvasText4textEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QCanvasText5colorEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK11QCanvasView10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QCanvasView11worldMatrixEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QCanvasView18inverseWorldMatrixEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QCanvasView8sizeHintEv","",0,LSB_Toolkit_Qt3},
@@ -18444,7 +18011,6 @@ struct versym DynSyms[] = {
 	{"_ZNK11QDockWidget16toggleViewActionEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QDockWidget6widgetEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QDockWidget8featuresEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK11QDockWindow10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QDockWindow11fixedExtentEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QDockWindow11minimumSizeEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QDockWindow11orientationEv","",0,LSB_Toolkit_Qt3},
@@ -18484,7 +18050,6 @@ struct versym DynSyms[] = {
 	{"_ZNK11QDomElement9attributeERK7QStringS2_","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QDomElement9attributeERK7QStringS2_","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QDomElement9isElementEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK11QDragObject10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QDragObject13pixmapHotSpotEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QDragObject6pixmapEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QDragObject9classNameEv","",0,LSB_Toolkit_Qt3},
@@ -18507,7 +18072,6 @@ struct versym DynSyms[] = {
 	{"_ZNK11QFileDialog10acceptModeEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QFileDialog10isReadOnlyEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QFileDialog10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK11QFileDialog10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QFileDialog11previewModeEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QFileDialog12iconProviderEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QFileDialog12itemDelegateEv","",0,LSB_Toolkit_Qt},
@@ -18538,7 +18102,6 @@ struct versym DynSyms[] = {
 	{"_ZNK11QFocusFrame10metaObjectEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QFocusFrame6widgetEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QFontDialog10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK11QFontDialog10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QFontDialog4fontEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QFontDialog9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QGLColormap10entryColorEi","",0,LSB_Toolkit_Qt},
@@ -18556,7 +18119,6 @@ struct versym DynSyms[] = {
 	{"_ZNK11QGridLayout10colSpacingEi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QGridLayout10colStretchEi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QGridLayout10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK11QGridLayout10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QGridLayout10rowSpacingEi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QGridLayout10rowStretchEi","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QGridLayout10rowStretchEi","",0,LSB_Toolkit_Qt3},
@@ -18589,7 +18151,6 @@ struct versym DynSyms[] = {
 	{"_ZNK11QGridLayout9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QGridLayout9expandingEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QHBoxLayout10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK11QHBoxLayout10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QHBoxLayout9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QHeaderView10metaObjectEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QHeaderView10resizeModeEi","",0,LSB_Toolkit_Qt},
@@ -18674,7 +18235,6 @@ struct versym DynSyms[] = {
 	{"_ZNK11QListWidget9mimeTypesEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QMainWindow10bottomDockEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QMainWindow10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK11QMainWindow10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QMainWindow11appropriateEP11QDockWindow","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QMainWindow11dockWindowsEN2Qt4DockE","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QMainWindow11dockWindowsEv","",0,LSB_Toolkit_Qt3},
@@ -18716,7 +18276,6 @@ struct versym DynSyms[] = {
 	{"_ZNK11QMessageBox10iconPixmapEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QMessageBox10iconPixmapEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QMessageBox10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK11QMessageBox10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QMessageBox10textFormatEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QMessageBox10textFormatEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QMessageBox4iconEv","",0,LSB_Toolkit_Qt},
@@ -18817,7 +18376,6 @@ struct versym DynSyms[] = {
 	{"_ZNK11QProxyModel8rowCountERK11QModelIndex","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QProxyModel9mimeTypesEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QPushButton10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK11QPushButton10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QPushButton11autoDefaultEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QPushButton4menuEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QPushButton5popupEv","",0,LSB_Toolkit_Qt3},
@@ -18835,7 +18393,6 @@ struct versym DynSyms[] = {
 	{"_ZNK11QScrollArea6widgetEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QScrollArea8sizeHintEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QScrollView10leftMarginEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK11QScrollView10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QScrollView11rightMarginEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QScrollView12bottomMarginEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QScrollView12cornerWidgetEv","",0,LSB_Toolkit_Qt3},
@@ -18878,21 +18435,18 @@ struct versym DynSyms[] = {
 	{"_ZNK11QSpacerItem8sizeHintEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QSpacerItem8sizeHintEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QSpacerItem9expandingEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK11QSpinWidget10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QSpinWidget11isUpEnabledEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QSpinWidget13buttonSymbolsEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QSpinWidget13isDownEnabledEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QSpinWidget6upRectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QSpinWidget8downRectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QSpinWidget9classNameEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK11QStoredDrag10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QStoredDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QStoredDrag6formatEi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QStoredDrag9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QStringList4grepERK7QRegExp","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QStringList4grepERK7QStringb","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QStringList4joinERK7QString","",0,LSB_Toolkit_Qt3},
-	{"_ZNK11QStyleSheet10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QStyleSheet3tagERK7QStringRK4QMapIS0_S0_ES2_RK18QMimeSourceFactorybP13QTextDocument","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QStyleSheet4itemERK7QString","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QStyleSheet5errorERK7QString","",0,LSB_Toolkit_Qt3},
@@ -18990,7 +18544,6 @@ struct versym DynSyms[] = {
 	{"_ZNK11QTextStream6stringEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QTextStream7padCharEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QToolButton10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK11QToolButton10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QToolButton10offIconSetEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QToolButton10offIconSetEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QToolButton10popupDelayEv","",0,LSB_Toolkit_Qt},
@@ -19016,7 +18569,6 @@ struct versym DynSyms[] = {
 	{"_ZNK11QToolButton9onIconSetEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QToolButton9popupModeEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QTranslator10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK11QTranslator10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QTranslator11findMessageEPKcS1_S1_","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QTranslator7isEmptyEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QTranslator7isEmptyEv","",0,LSB_Toolkit_Qt3},
@@ -19065,7 +18617,6 @@ struct versym DynSyms[] = {
 	{"_ZNK11QUtf16Codec4nameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QUtf16Codec7mibEnumEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QVBoxLayout10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK11QVBoxLayout10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QVBoxLayout9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QWidgetItem11maximumSizeEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK11QWidgetItem11maximumSizeEv","",0,LSB_Toolkit_Qt3},
@@ -19084,7 +18635,6 @@ struct versym DynSyms[] = {
 	{"_ZNK11QWidgetItem8sizeHintEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK11QWidgetItem9expandingEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QActionGroup10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK12QActionGroup10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QActionGroup11isExclusiveEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QActionGroup11isExclusiveEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QActionGroup12usesDropDownEv","",0,LSB_Toolkit_Qt3},
@@ -19094,7 +18644,6 @@ struct versym DynSyms[] = {
 	{"_ZNK12QActionGroup9isEnabledEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QActionGroup9isVisibleEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QApplication10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK12QApplication10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QApplication10sessionKeyEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QApplication12defaultCodecEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QApplication12inputContextEv","",0,LSB_Toolkit_Qt},
@@ -19105,7 +18654,6 @@ struct versym DynSyms[] = {
 	{"_ZNK12QApplication9sessionIdEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QApplication9translateEPKcS1_S1_NS_8EncodingE","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QButtonGroup10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK12QButtonGroup10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QButtonGroup10selectedIdEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QButtonGroup11isExclusiveEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QButtonGroup13checkedButtonEv","",0,LSB_Toolkit_Qt},
@@ -19120,12 +18668,10 @@ struct versym DynSyms[] = {
 	{"_ZNK12QButtonGroup9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QButtonGroup9exclusiveEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QColorDialog10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK12QColorDialog10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QColorDialog13selectedAlphaEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QColorDialog5colorEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QColorDialog9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QCommonStyle10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK12QCommonStyle10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QCommonStyle11drawControlEN6QStyle14ControlElementEP8QPainterPK7QWidgetRK5QRectRK11QColorGroupjRK12QStyleOption","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QCommonStyle11drawControlEN6QStyle14ControlElementEPK12QStyleOptionP8QPainterPK7QWidget","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QCommonStyle11pixelMetricEN6QStyle11PixelMetricEPK12QStyleOptionPK7QWidget","",0,LSB_Toolkit_Qt},
@@ -19151,7 +18697,6 @@ struct versym DynSyms[] = {
 	{"_ZNK12QCommonStyle9styleHintEN6QStyle9StyleHintEPK12QStyleOptionPK7QWidgetP16QStyleHintReturn","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QCommonStyle9styleHintEN6QStyle9StyleHintEPK7QWidgetRK12QStyleOptionP16QStyleHintReturn","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QDataBrowser10isReadOnlyEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK12QDataBrowser10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QDataBrowser12confirmEditsEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QDataBrowser13confirmDeleteEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QDataBrowser13confirmInsertEv","",0,LSB_Toolkit_Qt3},
@@ -19193,7 +18738,6 @@ struct versym DynSyms[] = {
 	{"_ZNK12QDomNotation8publicIdEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QDomNotation8systemIdEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QDomNotation8systemIdEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK12QDragManager10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QDragManager9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QFontMetrics11leftBearingE5QChar","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QFontMetrics11leftBearingE5QChar","",0,LSB_Toolkit_Qt3},
@@ -19300,7 +18844,6 @@ struct versym DynSyms[] = {
 	{"_ZNK12QImageWriter8canWriteEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QImageWriter8fileNameEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QInputDialog10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK12QInputDialog10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QInputDialog16editableComboBoxEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QInputDialog4typeEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QInputDialog7spinBoxEv","",0,LSB_Toolkit_Qt3},
@@ -19349,7 +18892,6 @@ struct versym DynSyms[] = {
 	{"_ZNK12QPaintDevice6handleEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QPaintDevice6metricENS_17PaintDeviceMetricE","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QPaintDevice6metricEi","",0,LSB_Toolkit_Qt3},
-	{"_ZNK12QPaintDevice7devTypeEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QPaintDevice7fontInfEP5QFonti","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QPaintDevice7fontMetEP5QFontiPKci","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QPaintDevice8x11CellsEv","",0,LSB_Toolkit_Qt},
@@ -19375,12 +18917,10 @@ struct versym DynSyms[] = {
 	{"_ZNK12QPainterPatheqERKS_","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QPainterPathneERKS_","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QPrintDialog10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK12QPrintDialog10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QPrintDialog7printerEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QPrintDialog7printerEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QPrintDialog9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QProgressBar10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK12QProgressBar10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QProgressBar11orientationEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QProgressBar13isTextVisibleEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QProgressBar15minimumSizeHintEv","",0,LSB_Toolkit_Qt},
@@ -19394,7 +18934,6 @@ struct versym DynSyms[] = {
 	{"_ZNK12QProgressBar9alignmentEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QProgressBar9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QRadioButton10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK12QRadioButton10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QRadioButton8sizeHintEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QRadioButton8sizeHintEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QRadioButton9classNameEv","",0,LSB_Toolkit_Qt3},
@@ -19402,7 +18941,6 @@ struct versym DynSyms[] = {
 	{"_ZNK12QRadioButton9hitButtonERK6QPoint","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QSqlDatabase10driverNameEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QSqlDatabase10driverNameEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK12QSqlDatabase10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QSqlDatabase10recordInfoERK7QString","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QSqlDatabase10recordInfoERK9QSqlQuery","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QSqlDatabase10recordInfoERK9QSqlQuery","",0,LSB_Toolkit_Qt3},
@@ -19440,7 +18978,6 @@ struct versym DynSyms[] = {
 	{"_ZNK12QSqlDatabase9lastErrorEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QSqlDatabase9lastErrorEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QStylePlugin10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK12QStylePlugin10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QStylePlugin9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QSvgRenderer10metaObjectEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QSvgRenderer11defaultSizeEv","",0,LSB_Toolkit_Qt},
@@ -19484,9 +19021,7 @@ struct versym DynSyms[] = {
 	{"_ZNK12QTableWidget9mimeTypesEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QTableWidget9visualRowEi","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QTextBrowser10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK12QTextBrowser10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QTextBrowser11searchPathsEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK12QTextBrowser12linksEnabledEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QTextBrowser6sourceEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK12QTextBrowser6sourceEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QTextBrowser9classNameEv","",0,LSB_Toolkit_Qt3},
@@ -19494,11 +19029,9 @@ struct versym DynSyms[] = {
 	{"_ZNK12QUType_idisp4uuidEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QUType_iface4descEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QUType_iface4uuidEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK12QUrlOperator10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QUrlOperator10nameFilterEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QUrlOperator4infoERK7QString","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QUrlOperator9classNameEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK12QWidgetStack10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QWidgetStack13visibleWidgetEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QWidgetStack15minimumSizeHintEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK12QWidgetStack2idEP7QWidget","",0,LSB_Toolkit_Qt3},
@@ -19524,7 +19057,6 @@ struct versym DynSyms[] = {
 	{"_ZNK13QCanvasSprite9rightEdgeEi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QCanvasSprite9rightEdgeEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QDateTimeEdit10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK13QDateTimeEdit10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QDateTimeEdit11autoAdvanceEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QDateTimeEdit11maximumDateEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK13QDateTimeEdit11maximumTimeEv","",0,LSB_Toolkit_Qt},
@@ -19548,7 +19080,6 @@ struct versym DynSyms[] = {
 	{"_ZNK13QDateTimeEdit8validateER7QStringRi","",0,LSB_Toolkit_Qt},
 	{"_ZNK13QDateTimeEdit9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QErrorMessage10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK13QErrorMessage10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QErrorMessage9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QFSFileEngine12isSequentialEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK13QFSFileEngine13caseSensitiveEv","",0,LSB_Toolkit_Qt},
@@ -19616,7 +19147,6 @@ struct versym DynSyms[] = {
 	{"_ZNK13QGb18030Codec4nameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QGb18030Codec7mibEnumEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QGb18030Codec9toUnicodeEPKci","",0,LSB_Toolkit_Qt3},
-	{"_ZNK13QHButtonGroup10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QHButtonGroup9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QIconDragData10pixmapRectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QIconDragData8textRectEv","",0,LSB_Toolkit_Qt3},
@@ -19656,7 +19186,6 @@ struct versym DynSyms[] = {
 	{"_ZNK13QInputContext14standardFormatENS_14StandardFormatE","",0,LSB_Toolkit_Qt},
 	{"_ZNK13QInputContext4fontEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK13QIntValidator10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK13QIntValidator10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QIntValidator8validateER7QStringRi","",0,LSB_Toolkit_Qt},
 	{"_ZNK13QIntValidator8validateER7QStringRi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QIntValidator9classNameEv","",0,LSB_Toolkit_Qt3},
@@ -19743,14 +19272,12 @@ struct versym DynSyms[] = {
 	{"_ZNK13QRangeControl17positionFromValueEii","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QRangeControl17valueFromPositionEii","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QRangeControl5boundEi","",0,LSB_Toolkit_Qt3},
-	{"_ZNK13QServerSocket10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QServerSocket2okEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QServerSocket4portEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QServerSocket6socketEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QServerSocket7addressEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QServerSocket9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QSignalMapper10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK13QSignalMapper10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QSignalMapper7mappingEP7QObject","",0,LSB_Toolkit_Qt},
 	{"_ZNK13QSignalMapper7mappingEP7QWidget","",0,LSB_Toolkit_Qt},
 	{"_ZNK13QSignalMapper7mappingERK7QString","",0,LSB_Toolkit_Qt},
@@ -19777,7 +19304,6 @@ struct versym DynSyms[] = {
 	{"_ZNK13QSocketDevice8peerPortEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QSocketDevice8protocolEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QSplashScreen10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK13QSplashScreen10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QSplashScreen6pixmapEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK13QSplashScreen6pixmapEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QSplashScreen9classNameEv","",0,LSB_Toolkit_Qt3},
@@ -19827,7 +19353,6 @@ struct versym DynSyms[] = {
 	{"_ZNK13QTextFragment6lengthEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK13QTextFragment8containsEi","",0,LSB_Toolkit_Qt},
 	{"_ZNK13QTextFragment8positionEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK13QToolTipGroup10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QToolTipGroup5delayEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QToolTipGroup7enabledEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QToolTipGroup9classNameEv","",0,LSB_Toolkit_Qt3},
@@ -19835,9 +19360,7 @@ struct versym DynSyms[] = {
 	{"_ZNK13QUType_double4uuidEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QUType_varptr4descEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QUType_varptr4uuidEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK13QVButtonGroup10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QVButtonGroup9classNameEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK13QWidgetPlugin10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QWidgetPlugin11includeFileERK7QString","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QWidgetPlugin11isContainerERK7QString","",0,LSB_Toolkit_Qt3},
 	{"_ZNK13QWidgetPlugin5groupERK7QString","",0,LSB_Toolkit_Qt3},
@@ -19867,11 +19390,9 @@ struct versym DynSyms[] = {
 	{"_ZNK14QCheckListItem11storedStateEPv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK14QCheckListItem13internalStateEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK14QCheckListItem4rttiEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK14QCheckListItem4textEi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK14QCheckListItem5stateEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK14QCheckListItem5widthERK12QFontMetricsPK9QListViewi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK14QDesktopWidget10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK14QDesktopWidget10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK14QDesktopWidget10numScreensEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK14QDesktopWidget10numScreensEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK14QDesktopWidget12screenNumberEP7QWidget","",0,LSB_Toolkit_Qt3},
@@ -19929,12 +19450,10 @@ struct versym DynSyms[] = {
 	{"_ZNK14QListBoxPixmap4rttiEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK14QListBoxPixmap5widthEPK8QListBox","",0,LSB_Toolkit_Qt3},
 	{"_ZNK14QListBoxPixmap6heightEPK8QListBox","",0,LSB_Toolkit_Qt3},
-	{"_ZNK14QListBoxPixmap6pixmapEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK14QMetaClassInfo4nameEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK14QMetaClassInfo5valueEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK14QMultiLineEdit10lineLengthEi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK14QMultiLineEdit10markedTextEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK14QMultiLineEdit10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK14QMultiLineEdit11atBeginningEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK14QMultiLineEdit11cursorPointEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK14QMultiLineEdit13hasMarkedTextEv","",0,LSB_Toolkit_Qt3},
@@ -20090,14 +19609,12 @@ struct versym DynSyms[] = {
 	{"_ZNK15QComboTableItem8sizeHintEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK15QCustomMenuItem11isSeparatorEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK15QCustomMenuItem8fullSpanEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK15QDockAreaLayout10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK15QDockAreaLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK15QDockAreaLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK15QDockAreaLayout14widthForHeightEi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK15QDockAreaLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK15QDockAreaLayout8sizeHintEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK15QDockAreaLayout9classNameEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK15QDockAreaLayout9expandingEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK15QGCacheIterator11getKeyAsciiEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK15QGCacheIterator12getKeyStringEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK15QGCacheIterator3getEv","",0,LSB_Toolkit_Qt3},
@@ -20139,7 +19656,6 @@ struct versym DynSyms[] = {
 	{"_ZNK15QPlastiqueStyle21hitTestComplexControlEN6QStyle14ComplexControlEPK19QStyleOptionComplexRK6QPointPK7QWidget","",0,LSB_Toolkit_Qt},
 	{"_ZNK15QPlastiqueStyle9styleHintEN6QStyle9StyleHintEPK12QStyleOptionPK7QWidgetP16QStyleHintReturn","",0,LSB_Toolkit_Qt},
 	{"_ZNK15QProgressDialog10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK15QProgressDialog10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK15QProgressDialog10totalStepsEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK15QProgressDialog11wasCanceledEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK15QProgressDialog12wasCancelledEv","",0,LSB_Toolkit_Qt3},
@@ -20164,7 +19680,6 @@ struct versym DynSyms[] = {
 	{"_ZNK15QRadialGradient6centerEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK15QRadialGradient6radiusEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK15QSessionManager10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK15QSessionManager10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK15QSessionManager10sessionKeyEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK15QSessionManager10sessionKeyEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK15QSessionManager11restartHintEv","",0,LSB_Toolkit_Qt},
@@ -20188,7 +19703,6 @@ struct versym DynSyms[] = {
 	{"_ZNK15QSimpleRichText8anchorAtERK6QPoint","",0,LSB_Toolkit_Qt3},
 	{"_ZNK15QSimpleRichText9widthUsedEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK15QSocketNotifier10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK15QSocketNotifier10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK15QSocketNotifier9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK15QSplitterHandle10metaObjectEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK15QSplitterHandle11orientationEv","",0,LSB_Toolkit_Qt},
@@ -20291,29 +19805,21 @@ struct versym DynSyms[] = {
 	{"_ZNK16QDomNamedNodeMapneERKS_","",0,LSB_Toolkit_Qt},
 	{"_ZNK16QDomNamedNodeMapneERKS_","",0,LSB_Toolkit_Qt3},
 	{"_ZNK16QDoubleValidator10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK16QDoubleValidator10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK16QDoubleValidator8validateER7QStringRi","",0,LSB_Toolkit_Qt},
 	{"_ZNK16QDoubleValidator8validateER7QStringRi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK16QDoubleValidator9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK16QNetworkProtocol10autoDeleteEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK16QNetworkProtocol10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK16QNetworkProtocol19operationInProgressEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK16QNetworkProtocol19supportedOperationsEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK16QNetworkProtocol3urlEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK16QNetworkProtocol9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK16QRegExpValidator10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK16QRegExpValidator10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK16QRegExpValidator8validateER7QStringRi","",0,LSB_Toolkit_Qt},
 	{"_ZNK16QRegExpValidator8validateER7QStringRi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK16QRegExpValidator9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK16QSqlDriverPlugin10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK16QSqlDriverPlugin10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK16QSqlDriverPlugin9classNameEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK16QSqlResultShared10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK16QSqlResultShared9classNameEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK16QSqlSelectCursor12primaryIndexEb","",0,LSB_Toolkit_Qt3},
-	{"_ZNK16QSqlSelectCursor5indexERK11QStringList","",0,LSB_Toolkit_Qt3},
-	{"_ZNK16QSqlSelectCursor8toStringERK7QStringS2_","",0,LSB_Toolkit_Qt3},
 	{"_ZNK16QStringListModel10metaObjectEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK16QStringListModel10stringListEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK16QStringListModel4dataERK11QModelIndexi","",0,LSB_Toolkit_Qt},
@@ -20324,7 +19830,6 @@ struct versym DynSyms[] = {
 	{"_ZNK16QTableWidgetItem5writeER11QDataStream","",0,LSB_Toolkit_Qt},
 	{"_ZNK16QTableWidgetItemltERKS_","",0,LSB_Toolkit_Qt},
 	{"_ZNK16QTextCodecPlugin10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK16QTextCodecPlugin10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK16QTextCodecPlugin4keysEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK16QTextCodecPlugin9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK16QXmlSimpleReader10DTDHandlerEv","",0,LSB_Toolkit_Qt},
@@ -20396,7 +19901,6 @@ struct versym DynSyms[] = {
 	{"_ZNK17QAccessibleWidget8navigateEN11QAccessible12RelationFlagEiPP20QAccessibleInterface","",0,LSB_Toolkit_Qt},
 	{"_ZNK17QByteArrayMatcher7indexInERK10QByteArrayi","",0,LSB_Toolkit_Qt},
 	{"_ZNK17QContextMenuEvent5stateEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK17QDateTimeEditBase10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK17QDateTimeEditBase9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK17QDomCharacterData15isCharacterDataEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK17QDomCharacterData4dataEv","",0,LSB_Toolkit_Qt},
@@ -20405,14 +19909,12 @@ struct versym DynSyms[] = {
 	{"_ZNK17QDomCharacterData6lengthEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK17QDomCharacterData8nodeTypeEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK17QDomCharacterData8nodeTypeEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK17QFileIconProvider10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK17QFileIconProvider4iconENS_8IconTypeE","",0,LSB_Toolkit_Qt},
 	{"_ZNK17QFileIconProvider4iconERK9QFileInfo","",0,LSB_Toolkit_Qt},
 	{"_ZNK17QFileIconProvider4typeERK9QFileInfo","",0,LSB_Toolkit_Qt},
 	{"_ZNK17QFileIconProvider9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK17QIconDragDataItemeqERKS_","",0,LSB_Toolkit_Qt3},
 	{"_ZNK17QIconEnginePlugin10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK17QNetworkOperation10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK17QNetworkOperation14protocolDetailEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK17QNetworkOperation3argEi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK17QNetworkOperation3rawEi","",0,LSB_Toolkit_Qt3},
@@ -20470,7 +19972,6 @@ struct versym DynSyms[] = {
 	{"_ZNK18QDomImplementationeqERKS_","",0,LSB_Toolkit_Qt3},
 	{"_ZNK18QDomImplementationneERKS_","",0,LSB_Toolkit_Qt},
 	{"_ZNK18QDomImplementationneERKS_","",0,LSB_Toolkit_Qt3},
-	{"_ZNK18QGuardedPtrPrivate10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK18QGuardedPtrPrivate9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK18QHttpRequestHeader12majorVersionEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK18QHttpRequestHeader12majorVersionEv","",0,LSB_Toolkit_Qt3},
@@ -20482,7 +19983,6 @@ struct versym DynSyms[] = {
 	{"_ZNK18QHttpRequestHeader6methodEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK18QHttpRequestHeader8toStringEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK18QHttpRequestHeader8toStringEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK18QImageFormatPlugin10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK18QImageFormatPlugin9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK18QItemEditorFactory12createEditorEN8QVariant4TypeEP7QWidget","",0,LSB_Toolkit_Qt},
 	{"_ZNK18QItemEditorFactory17valuePropertyNameEN8QVariant4TypeE","",0,LSB_Toolkit_Qt},
@@ -20632,7 +20132,6 @@ struct versym DynSyms[] = {
 	{"_ZNK21QListViewItemIterator7currentEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK21QListViewItemIterator9isCheckedEPK13QListViewItem","",0,LSB_Toolkit_Qt3},
 	{"_ZNK21QObjectCleanupHandler10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK21QObjectCleanupHandler10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK21QObjectCleanupHandler7isEmptyEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK21QObjectCleanupHandler7isEmptyEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK21QObjectCleanupHandler9classNameEv","",0,LSB_Toolkit_Qt3},
@@ -20728,7 +20227,6 @@ struct versym DynSyms[] = {
 	{"_ZNK4QDir16encodedEntryListEii","",0,LSB_Toolkit_Qt3},
 	{"_ZNK4QDir16relativeFilePathERK7QString","",0,LSB_Toolkit_Qt},
 	{"_ZNK4QDir4pathEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK4QDir4pathEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK4QDir5countEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK4QDir5countEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK4QDir5mkdirERK7QString","",0,LSB_Toolkit_Qt},
@@ -20759,8 +20257,6 @@ struct versym DynSyms[] = {
 	{"_ZNK4QDireqERKS_","",0,LSB_Toolkit_Qt3},
 	{"_ZNK4QDirixEi","",0,LSB_Toolkit_Qt},
 	{"_ZNK4QDirixEi","",0,LSB_Toolkit_Qt3},
-	{"_ZNK4QDirneERKS_","",0,LSB_Toolkit_Qt3},
-	{"_ZNK4QDns10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK4QDns11mailServersEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK4QDns13canonicalNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK4QDns5textsEv","",0,LSB_Toolkit_Qt3},
@@ -20770,7 +20266,6 @@ struct versym DynSyms[] = {
 	{"_ZNK4QDns9hostNamesEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK4QDns9isWorkingEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK4QFtp10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK4QFtp10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK4QFtp11errorStringEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK4QFtp11errorStringEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK4QFtp13currentDeviceEv","",0,LSB_Toolkit_Qt},
@@ -20931,7 +20426,6 @@ struct versym DynSyms[] = {
 	{"_ZNK5QDate9dayOfYearEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK5QDate9dayOfYearEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK5QDial10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK5QDial10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK5QDial11notchTargetEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK5QDial11notchTargetEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK5QDial14notchesVisibleEv","",0,LSB_Toolkit_Qt},
@@ -20967,7 +20461,6 @@ struct versym DynSyms[] = {
 	{"_ZNK5QFile11errorStringEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK5QFile11permissionsEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK5QFile12isSequentialEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK5QFile2atEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK5QFile3posEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK5QFile4sizeEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK5QFile4sizeEv","",0,LSB_Toolkit_Qt3},
@@ -21038,14 +20531,11 @@ struct versym DynSyms[] = {
 	{"_ZNK5QFontltERKS_","",0,LSB_Toolkit_Qt},
 	{"_ZNK5QFontneERKS_","",0,LSB_Toolkit_Qt},
 	{"_ZNK5QFontneERKS_","",0,LSB_Toolkit_Qt3},
-	{"_ZNK5QGrid10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK5QGrid8sizeHintEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK5QGrid9classNameEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK5QHBox10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK5QHBox8sizeHintEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK5QHBox9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK5QHttp10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK5QHttp10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK5QHttp11errorStringEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK5QHttp11errorStringEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK5QHttp12lastResponseEv","",0,LSB_Toolkit_Qt},
@@ -21143,9 +20633,7 @@ struct versym DynSyms[] = {
 	{"_ZNK5QUuidgtERKS_","",0,LSB_Toolkit_Qt3},
 	{"_ZNK5QUuidltERKS_","",0,LSB_Toolkit_Qt},
 	{"_ZNK5QUuidltERKS_","",0,LSB_Toolkit_Qt3},
-	{"_ZNK5QVBox10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK5QVBox9classNameEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK6QAccel10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QAccel13isItemEnabledEi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QAccel15ignoreWhatsThisEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QAccel5countEv","",0,LSB_Toolkit_Qt3},
@@ -21212,7 +20700,6 @@ struct versym DynSyms[] = {
 	{"_ZNK6QFrame10frameStyleEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK6QFrame10frameWidthEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK6QFrame10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK6QFrame10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QFrame11frameShadowEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK6QFrame12contentsRectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QFrame12midLineWidthEv","",0,LSB_Toolkit_Qt},
@@ -21223,11 +20710,9 @@ struct versym DynSyms[] = {
 	{"_ZNK6QFrame9frameRectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QFrame9lineWidthEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK6QGDict10statisticsEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK6QGDict5countEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QGDict5writeER11QDataStream","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QGDict5writeER11QDataStreamPv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QGList11containsRefEPv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK6QGList5countEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QGList5writeER11QDataStream","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QGList5writeER11QDataStreamPv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QGList8containsEPv","",0,LSB_Toolkit_Qt3},
@@ -21324,7 +20809,6 @@ struct versym DynSyms[] = {
 	{"_ZNK6QImageneERKS_","",0,LSB_Toolkit_Qt},
 	{"_ZNK6QImageneERKS_","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QLabel10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK6QLabel10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QLabel10textFormatEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK6QLabel10textFormatEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QLabel12sizeForWidthEi","",0,LSB_Toolkit_Qt3},
@@ -21391,7 +20875,6 @@ struct versym DynSyms[] = {
 	{"_ZNK6QSound10isFinishedEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK6QSound10isFinishedEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QSound10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK6QSound10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QSound14loopsRemainingEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK6QSound14loopsRemainingEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QSound5loopsEv","",0,LSB_Toolkit_Qt},
@@ -21400,7 +20883,6 @@ struct versym DynSyms[] = {
 	{"_ZNK6QSound8fileNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QSound9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QStyle10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK6QStyle10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QStyle12drawItemTextEP8QPainterRK5QRectiRK8QPalettebRK7QStringNS5_9ColorRoleE","",0,LSB_Toolkit_Qt},
 	{"_ZNK6QStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString","",0,LSB_Toolkit_Qt},
 	{"_ZNK6QStyle12standardIconENS_14StandardPixmapEPK12QStyleOptionPK7QWidget","",0,LSB_Toolkit_Qt},
@@ -21416,7 +20898,6 @@ struct versym DynSyms[] = {
 	{"_ZNK6QTable10isReadOnlyEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QTable10isSelectedEii","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QTable10isSelectedEiib","",0,LSB_Toolkit_Qt3},
-	{"_ZNK6QTable10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QTable11columnWidthEi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QTable11currEditColEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QTable11currEditRowEv","",0,LSB_Toolkit_Qt3},
@@ -21459,10 +20940,8 @@ struct versym DynSyms[] = {
 	{"_ZNK6QTable9selectionEi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QTable9tableSizeEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QTimer10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK6QTimer10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK6QTimer9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QAction10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK7QAction10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QAction11actionGroupEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK7QAction11isCheckableEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK7QAction11isSeparatorEv","",0,LSB_Toolkit_Qt},
@@ -21498,14 +20977,11 @@ struct versym DynSyms[] = {
 	{"_ZNK7QBitmapcv8QVariantEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK7QBuffer10metaObjectEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK7QBuffer11canReadLineEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK7QBuffer2atEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QBuffer3posEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK7QBuffer4dataEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK7QBuffer4sizeEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK7QBuffer4sizeEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QBuffer5atEndEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK7QBuffer6bufferEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK7QButton10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QButton17isExclusiveToggleEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QButton5accelEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QButton5groupEv","",0,LSB_Toolkit_Qt3},
@@ -21514,7 +20990,6 @@ struct versym DynSyms[] = {
 	{"_ZNK7QCanvas10collisionsERK11QPointArrayPK11QCanvasItemb","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QCanvas10collisionsERK5QRect","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QCanvas10collisionsERK6QPoint","",0,LSB_Toolkit_Qt3},
-	{"_ZNK7QCanvas10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QCanvas15backgroundColorEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QCanvas15chunkContainingEii","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QCanvas16backgroundPixmapEv","",0,LSB_Toolkit_Qt3},
@@ -21534,7 +21009,6 @@ struct versym DynSyms[] = {
 	{"_ZNK7QCursor7hotSpotEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QCursorcv8QVariantEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK7QDialog10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK7QDialog10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QDialog11orientationEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK7QDialog11orientationEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QDialog15minimumSizeHintEv","",0,LSB_Toolkit_Qt},
@@ -21558,7 +21032,6 @@ struct versym DynSyms[] = {
 	{"_ZNK7QGCache4sizeEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QGCache5countEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QHeader10mapToIndexEi","",0,LSB_Toolkit_Qt3},
-	{"_ZNK7QHeader10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QHeader10sectionPosEi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QHeader11headerWidthEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QHeader11mapToActualEi","",0,LSB_Toolkit_Qt3},
@@ -21587,7 +21060,6 @@ struct versym DynSyms[] = {
 	{"_ZNK7QHeader9sectionAtEi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QLayout10isTopLevelEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK7QLayout10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK7QLayout10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QLayout10resizeModeEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QLayout11maximumSizeEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK7QLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3},
@@ -21680,7 +21152,6 @@ struct versym DynSyms[] = {
 	{"_ZNK7QMatrixmlERKS_","",0,LSB_Toolkit_Qt},
 	{"_ZNK7QMatrixneERKS_","",0,LSB_Toolkit_Qt},
 	{"_ZNK7QObject10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK7QObject10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QObject10objectNameEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK7QObject3isAEPKc","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QObject4nameEPKc","",0,LSB_Toolkit_Qt3},
@@ -21803,12 +21274,10 @@ struct versym DynSyms[] = {
 	{"_ZNK7QRegionorERKS_","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QRegionplERKS_","",0,LSB_Toolkit_Qt},
 	{"_ZNK7QRegionplERKS_","",0,LSB_Toolkit_Qt3},
-	{"_ZNK7QSignal10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QSignal5valueEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QSignal9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QSignal9parameterEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QSlider10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK7QSlider10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QSlider10sizePolicyEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QSlider10sliderRectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QSlider12tickIntervalEv","",0,LSB_Toolkit_Qt},
@@ -21827,7 +21296,6 @@ struct versym DynSyms[] = {
 	{"_ZNK7QSlider8sizeHintEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QSlider9availableEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QSlider9classNameEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK7QSocket10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QSocket11canReadLineEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QSocket11peerAddressEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QSocket11waitForMoreEi","",0,LSB_Toolkit_Qt3},
@@ -21962,7 +21430,6 @@ struct versym DynSyms[] = {
 	{"_ZNK7QStringltERKS_","",0,LSB_Toolkit_Qt},
 	{"_ZNK7QTabBar10currentTabEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QTabBar10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK7QTabBar10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QTabBar10paintLabelEP8QPainterRK5QRectP4QTabb","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QTabBar10tabToolTipEi","",0,LSB_Toolkit_Qt},
 	{"_ZNK7QTabBar11tabSizeHintEi","",0,LSB_Toolkit_Qt},
@@ -22005,7 +21472,6 @@ struct versym DynSyms[] = {
 	{"_ZNK7QWidget10focusProxyEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK7QWidget10focusProxyEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QWidget10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK7QWidget10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QWidget10sizePolicyEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK7QWidget10sizePolicyEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QWidget10windowIconEv","",0,LSB_Toolkit_Qt},
@@ -22141,7 +21607,6 @@ struct versym DynSyms[] = {
 	{"_ZNK7QWidget9whatsThisEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK7QWizard10backButtonEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QWizard10helpButtonEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK7QWizard10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QWizard10nextButtonEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QWizard11appropriateEP7QWidget","",0,LSB_Toolkit_Qt3},
 	{"_ZNK7QWizard11currentPageEv","",0,LSB_Toolkit_Qt3},
@@ -22283,11 +21748,9 @@ struct versym DynSyms[] = {
 	{"_ZNK8QDomNodeneERKS_","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QDomText6isTextEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QDomText8nodeTypeEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK8QGPlugin10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QGPlugin9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QGVector11containsRefEPv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QGVector4findEPvj","",0,LSB_Toolkit_Qt3},
-	{"_ZNK8QGVector5countEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QGVector5writeER11QDataStream","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QGVector5writeER11QDataStreamPv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QGVector6toListEP6QGList","",0,LSB_Toolkit_Qt3},
@@ -22305,7 +21768,6 @@ struct versym DynSyms[] = {
 	{"_ZNK8QImageIO10parametersEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QImageIO5gammaEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QImageIO7qualityEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK8QIntDictI7QWidgetE5countEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QLibrary10autoUnloadEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QLibrary10metaObjectEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK8QLibrary7libraryEv","",0,LSB_Toolkit_Qt3},
@@ -22317,7 +21779,6 @@ struct versym DynSyms[] = {
 	{"_ZNK8QListBox10isSelectedEPK12QListBoxItem","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QListBox10isSelectedEi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QListBox10itemHeightEi","",0,LSB_Toolkit_Qt3},
-	{"_ZNK8QListBox10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QListBox10numColumnsEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QListBox11currentItemEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QListBox11tryGeometryEii","",0,LSB_Toolkit_Qt3},
@@ -22349,13 +21810,11 @@ struct versym DynSyms[] = {
 	{"_ZNK8QListBox8sizeHintEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QListBox9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QListBox9firstItemEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK8QLocalFs10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QLocalFs13calcBlockSizeEi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QLocalFs19supportedOperationsEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QLocalFs9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QMenuBar10frameWidthEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK8QMenuBar10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK8QMenuBar10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QMenuBar11isDefaultUpEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK8QMenuBar11isDefaultUpEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QMenuBar11minimumSizeEv","",0,LSB_Toolkit_Qt3},
@@ -22499,7 +21958,6 @@ struct versym DynSyms[] = {
 	{"_ZNK8QProcess10exitStatusEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK8QProcess10exitStatusEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QProcess10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK8QProcess10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QProcess10normalExitEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QProcess11canReadLineEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK8QProcess11environmentEv","",0,LSB_Toolkit_Qt},
@@ -22523,12 +21981,7 @@ struct versym DynSyms[] = {
 	{"_ZNK8QProcess9argumentsEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QProcess9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QProcess9isRunningEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK8QPtrListI11QConnectionE5countEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK8QPtrListI7QObjectE5countEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK8QPtrListI7QWidgetE5countEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK8QPtrListIcE5countEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QSpinBox10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK8QSpinBox10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QSpinBox10singleStepEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK8QSpinBox13buttonSymbolsEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QSpinBox13textFromValueEi","",0,LSB_Toolkit_Qt},
@@ -22558,16 +22011,13 @@ struct versym DynSyms[] = {
 	{"_ZNK8QSpinBox9cleanTextEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK8QSpinBox9cleanTextEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QSpinBox9validatorEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK8QSqlForm10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QSqlForm13fieldToWidgetEP9QSqlField","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QSqlForm13widgetToFieldEP7QWidget","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QSqlForm5countEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QSqlForm6widgetEj","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QSqlForm9classNameEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK8QStrList5writeER11QDataStreamPv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QToolBar10mainWindowEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QToolBar10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK8QToolBar10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QToolBar11minimumSizeEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QToolBar11orientationEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK8QToolBar12allowedAreasEv","",0,LSB_Toolkit_Qt},
@@ -22581,7 +22031,6 @@ struct versym DynSyms[] = {
 	{"_ZNK8QToolBar9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QToolBar9isMovableEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK8QToolBox10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK8QToolBox10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QToolBox11currentItemEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QToolBox11itemIconSetEi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QToolBox11itemToolTipEi","",0,LSB_Toolkit_Qt},
@@ -22601,7 +22050,6 @@ struct versym DynSyms[] = {
 	{"_ZNK8QToolBox8itemTextEi","",0,LSB_Toolkit_Qt},
 	{"_ZNK8QToolBox9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QToolBox9itemLabelEi","",0,LSB_Toolkit_Qt3},
-	{"_ZNK8QUriDrag10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QUriDrag9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK8QUrlInfo10isReadableEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK8QUrlInfo10isReadableEv","",0,LSB_Toolkit_Qt3},
@@ -22734,7 +22182,6 @@ struct versym DynSyms[] = {
 	{"_ZNK9QCheckBox10isTristateEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QCheckBox10isTristateEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QCheckBox10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK9QCheckBox10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QCheckBox8sizeHintEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QCheckBox8sizeHintEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QCheckBox9classNameEv","",0,LSB_Toolkit_Qt3},
@@ -22749,7 +22196,6 @@ struct versym DynSyms[] = {
 	{"_ZNK9QComboBox10autoResizeEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QComboBox10isEditableEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QComboBox10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK9QComboBox10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QComboBox11currentItemEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QComboBox11currentTextEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QComboBox11currentTextEv","",0,LSB_Toolkit_Qt3},
@@ -22794,12 +22240,9 @@ struct versym DynSyms[] = {
 	{"_ZNK9QComboBox9sizeLimitEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QComboBox9validatorEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QComboBox9validatorEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK9QDataPump10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QDataPump9classNameEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK9QDataView10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QDataView9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QDateEdit10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK9QDateEdit10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QDateEdit10outOfRangeEiii","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QDateEdit11autoAdvanceEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QDateEdit11sectionTextEi","",0,LSB_Toolkit_Qt3},
@@ -22871,7 +22314,6 @@ struct versym DynSyms[] = {
 	{"_ZNK9QDirModel8mimeDataERK5QListI11QModelIndexE","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QDirModel8rowCountERK11QModelIndex","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QDirModel9mimeTypesEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK9QDockArea10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QDockArea14dockWindowListEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QDockArea5countEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QDockArea7isEmptyEv","",0,LSB_Toolkit_Qt3},
@@ -23004,10 +22446,8 @@ struct versym DynSyms[] = {
 	{"_ZNK9QGbkCodec9toUnicodeEPKci","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QGradient5stopsEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QGradienteqERKS_","",0,LSB_Toolkit_Qt},
-	{"_ZNK9QGridView10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QGridView9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QGroupBox10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK9QGroupBox10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QGroupBox11isCheckableEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QGroupBox11isCheckableEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QGroupBox12insideMarginEv","",0,LSB_Toolkit_Qt3},
@@ -23044,12 +22484,10 @@ struct versym DynSyms[] = {
 	{"_ZNK9QIODevice6isOpenEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QIODevice6statusEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QIODevice8openModeEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK9QIconDrag10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QIconDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QIconDrag6formatEi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QIconDrag9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QIconView10isRenamingEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK9QIconView10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QIconView10resizeModeEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QIconView11arrangementEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QIconView11autoArrangeEv","",0,LSB_Toolkit_Qt3},
@@ -23098,7 +22536,6 @@ struct versym DynSyms[] = {
 	{"_ZNK9QLineEdit10isReadOnlyEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QLineEdit10isReadOnlyEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QLineEdit10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK9QLineEdit10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QLineEdit11characterAtEiP5QChar","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QLineEdit11characterAtEiP5QChar","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QLineEdit11displayTextEv","",0,LSB_Toolkit_Qt},
@@ -23153,7 +22590,6 @@ struct versym DynSyms[] = {
 	{"_ZNK9QListView10itemMarginEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QListView10layoutModeEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QListView10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK9QListView10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QListView10resizeModeEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QListView10resizeModeEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QListView10sortColumnEv","",0,LSB_Toolkit_Qt3},
@@ -23266,12 +22702,10 @@ struct versym DynSyms[] = {
 	{"_ZNK9QShortcut9isEnabledEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QShortcut9whatsThisEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QSizeGrip10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK9QSizeGrip10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QSizeGrip8sizeHintEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QSizeGrip8sizeHintEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QSizeGrip9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QSplitter10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK9QSplitter10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QSplitter11handleWidthEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QSplitter11handleWidthEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QSplitter11orientationEv","",0,LSB_Toolkit_Qt},
@@ -23313,7 +22747,6 @@ struct versym DynSyms[] = {
 	{"_ZNK9QSqlField14requiredStatusEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QSqlField4nameEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QSqlField4typeEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK9QSqlField5valueEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QSqlField6isNullEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QSqlField6lengthEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QSqlField6typeIDEv","",0,LSB_Toolkit_Qt},
@@ -23364,7 +22797,6 @@ struct versym DynSyms[] = {
 	{"_ZNK9QSqlQuery9lastErrorEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QSqlQuery9lastQueryEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QSqlQuery9lastQueryEv","",0,LSB_Toolkit_Qt3},
-	{"_ZNK9QTextDrag10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QTextDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QTextDrag6formatEi","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QTextDrag9classNameEv","",0,LSB_Toolkit_Qt3},
@@ -23377,7 +22809,6 @@ struct versym DynSyms[] = {
 	{"_ZNK9QTextEdit10isModifiedEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QTextEdit10isReadOnlyEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QTextEdit10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK9QTextEdit10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QTextEdit10paragraphsEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QTextEdit10styleSheetEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QTextEdit10textCursorEv","",0,LSB_Toolkit_Qt},
@@ -23390,7 +22821,6 @@ struct versym DynSyms[] = {
 	{"_ZNK9QTextEdit12UndoRedoInfo5validEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QTextEdit12getSelectionEPiS0_S0_S0_i","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QTextEdit12lineWrapModeEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK9QTextEdit12linksEnabledEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QTextEdit12selectedTextEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QTextEdit12tabStopWidthEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QTextEdit12tabStopWidthEv","",0,LSB_Toolkit_Qt3},
@@ -23477,10 +22907,8 @@ struct versym DynSyms[] = {
 	{"_ZNK9QTextList4itemEi","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QTextList5countEv","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QTextList8itemTextERK10QTextBlock","",0,LSB_Toolkit_Qt},
-	{"_ZNK9QTextView10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QTextView9classNameEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QTimeEdit10metaObjectEv","",0,LSB_Toolkit_Qt},
-	{"_ZNK9QTimeEdit10metaObjectEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QTimeEdit10outOfRangeEiii","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QTimeEdit11autoAdvanceEv","",0,LSB_Toolkit_Qt3},
 	{"_ZNK9QTimeEdit15minimumSizeHintEv","",0,LSB_Toolkit_Qt3},
@@ -30205,6 +29633,9 @@ struct versym DynSyms[] = {
 #if __powerpc64__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
+#if __s390__ && !__s390x__
+	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl","GLIBCXX_3.4",0,LSB_Cpp},
+#endif
 #if __x86_64__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
@@ -33389,14 +32820,12 @@ struct versym DynSyms[] = {
 	{"_ZTI10QMoveEvent","",0,LSB_Toolkit_Qt},
 	{"_ZTI10QMoveEvent","",0,LSB_Toolkit_Qt3},
 	{"_ZTI10QPopupMenu","",0,LSB_Toolkit_Qt3},
-	{"_ZTI10QPtrVectorI15QConnectionListE","",0,LSB_Toolkit_Qt3},
 	{"_ZTI10QScrollBar","",0,LSB_Toolkit_Qt},
 	{"_ZTI10QScrollBar","",0,LSB_Toolkit_Qt3},
 	{"_ZTI10QSemaphore","",0,LSB_Toolkit_Qt3},
 	{"_ZTI10QSemiModal","",0,LSB_Toolkit_Qt3},
 	{"_ZTI10QShowEvent","",0,LSB_Toolkit_Qt},
 	{"_ZTI10QShowEvent","",0,LSB_Toolkit_Qt3},
-	{"_ZTI10QSignalVec","",0,LSB_Toolkit_Qt3},
 	{"_ZTI10QSjisCodec","",0,LSB_Toolkit_Qt3},
 	{"_ZTI10QSqlCursor","",0,LSB_Toolkit_Qt3},
 	{"_ZTI10QSqlDriver","",0,LSB_Toolkit_Qt},
@@ -33904,7 +33333,6 @@ struct versym DynSyms[] = {
 	{"_ZTI8QGVector","",0,LSB_Toolkit_Qt3},
 	{"_ZTI8QIMEvent","",0,LSB_Toolkit_Qt3},
 	{"_ZTI8QIconSet","",0,LSB_Toolkit_Qt3},
-	{"_ZTI8QIntDictI7QWidgetE","",0,LSB_Toolkit_Qt3},
 	{"_ZTI8QLibrary","",0,LSB_Toolkit_Qt},
 	{"_ZTI8QLibrary","",0,LSB_Toolkit_Qt3},
 	{"_ZTI8QListBox","",0,LSB_Toolkit_Qt3},
@@ -33917,10 +33345,6 @@ struct versym DynSyms[] = {
 	{"_ZTI8QPrinter","",0,LSB_Toolkit_Qt3},
 	{"_ZTI8QProcess","",0,LSB_Toolkit_Qt},
 	{"_ZTI8QProcess","",0,LSB_Toolkit_Qt3},
-	{"_ZTI8QPtrListI11QConnectionE","",0,LSB_Toolkit_Qt3},
-	{"_ZTI8QPtrListI7QObjectE","",0,LSB_Toolkit_Qt3},
-	{"_ZTI8QPtrListI7QWidgetE","",0,LSB_Toolkit_Qt3},
-	{"_ZTI8QPtrListIcE","",0,LSB_Toolkit_Qt3},
 	{"_ZTI8QSpinBox","",0,LSB_Toolkit_Qt},
 	{"_ZTI8QSpinBox","",0,LSB_Toolkit_Qt3},
 	{"_ZTI8QSqlForm","",0,LSB_Toolkit_Qt3},
@@ -33965,8 +33389,6 @@ struct versym DynSyms[] = {
 	{"_ZTI9QLineEdit","",0,LSB_Toolkit_Qt3},
 	{"_ZTI9QListView","",0,LSB_Toolkit_Qt},
 	{"_ZTI9QListView","",0,LSB_Toolkit_Qt3},
-	{"_ZTI9QMemArrayI6QPointE","",0,LSB_Toolkit_Qt3},
-	{"_ZTI9QMemArrayIcE","",0,LSB_Toolkit_Qt3},
 	{"_ZTI9QMenuData","",0,LSB_Toolkit_Qt3},
 	{"_ZTI9QMenuItem","",0,LSB_Toolkit_Qt},
 	{"_ZTI9QMimeData","",0,LSB_Toolkit_Qt},
@@ -34357,14 +33779,12 @@ struct versym DynSyms[] = {
 	{"_ZTV10QMoveEvent","",0,LSB_Toolkit_Qt},
 	{"_ZTV10QMoveEvent","",0,LSB_Toolkit_Qt3},
 	{"_ZTV10QPopupMenu","",0,LSB_Toolkit_Qt3},
-	{"_ZTV10QPtrVectorI15QConnectionListE","",0,LSB_Toolkit_Qt3},
 	{"_ZTV10QScrollBar","",0,LSB_Toolkit_Qt},
 	{"_ZTV10QScrollBar","",0,LSB_Toolkit_Qt3},
 	{"_ZTV10QSemaphore","",0,LSB_Toolkit_Qt3},
 	{"_ZTV10QSemiModal","",0,LSB_Toolkit_Qt3},
 	{"_ZTV10QShowEvent","",0,LSB_Toolkit_Qt},
 	{"_ZTV10QShowEvent","",0,LSB_Toolkit_Qt3},
-	{"_ZTV10QSignalVec","",0,LSB_Toolkit_Qt3},
 	{"_ZTV10QSjisCodec","",0,LSB_Toolkit_Qt3},
 	{"_ZTV10QSqlCursor","",0,LSB_Toolkit_Qt3},
 	{"_ZTV10QSqlDriver","",0,LSB_Toolkit_Qt},
@@ -34868,7 +34288,6 @@ struct versym DynSyms[] = {
 	{"_ZTV8QGVector","",0,LSB_Toolkit_Qt3},
 	{"_ZTV8QIMEvent","",0,LSB_Toolkit_Qt3},
 	{"_ZTV8QIconSet","",0,LSB_Toolkit_Qt3},
-	{"_ZTV8QIntDictI7QWidgetE","",0,LSB_Toolkit_Qt3},
 	{"_ZTV8QLibrary","",0,LSB_Toolkit_Qt},
 	{"_ZTV8QLibrary","",0,LSB_Toolkit_Qt3},
 	{"_ZTV8QListBox","",0,LSB_Toolkit_Qt3},
@@ -34881,10 +34300,6 @@ struct versym DynSyms[] = {
 	{"_ZTV8QPrinter","",0,LSB_Toolkit_Qt3},
 	{"_ZTV8QProcess","",0,LSB_Toolkit_Qt},
 	{"_ZTV8QProcess","",0,LSB_Toolkit_Qt3},
-	{"_ZTV8QPtrListI11QConnectionE","",0,LSB_Toolkit_Qt3},
-	{"_ZTV8QPtrListI7QObjectE","",0,LSB_Toolkit_Qt3},
-	{"_ZTV8QPtrListI7QWidgetE","",0,LSB_Toolkit_Qt3},
-	{"_ZTV8QPtrListIcE","",0,LSB_Toolkit_Qt3},
 	{"_ZTV8QSpinBox","",0,LSB_Toolkit_Qt},
 	{"_ZTV8QSpinBox","",0,LSB_Toolkit_Qt3},
 	{"_ZTV8QSqlForm","",0,LSB_Toolkit_Qt3},
@@ -34929,8 +34344,6 @@ struct versym DynSyms[] = {
 	{"_ZTV9QLineEdit","",0,LSB_Toolkit_Qt3},
 	{"_ZTV9QListView","",0,LSB_Toolkit_Qt},
 	{"_ZTV9QListView","",0,LSB_Toolkit_Qt3},
-	{"_ZTV9QMemArrayI6QPointE","",0,LSB_Toolkit_Qt3},
-	{"_ZTV9QMemArrayIcE","",0,LSB_Toolkit_Qt3},
 	{"_ZTV9QMenuData","",0,LSB_Toolkit_Qt3},
 	{"_ZTV9QMenuItem","",0,LSB_Toolkit_Qt},
 	{"_ZTV9QMimeData","",0,LSB_Toolkit_Qt},
@@ -35214,110 +34627,56 @@ struct versym DynSyms[] = {
 #if __i386__
 	{"_ZThn12_N10QDropEventD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if __i386__
-	{"_ZThn12_N10QDropEventD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZThn12_N10QDropEventD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn12_N10QDropEventD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if __s390__ && !__s390x__
 	{"_ZThn12_N10QDropEventD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if __s390__ && !__s390x__
-	{"_ZThn12_N10QDropEventD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
 #if __i386__
 	{"_ZThn12_N10QDropEventD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn12_N10QDropEventD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZThn12_N10QDropEventD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn12_N10QDropEventD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
 #if __s390__ && !__s390x__
 	{"_ZThn12_N10QDropEventD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if __s390__ && !__s390x__
-	{"_ZThn12_N10QDropEventD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
 #if __i386__
 	{"_ZThn12_N14QDragMoveEventD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn12_N14QDragMoveEventD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZThn12_N14QDragMoveEventD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn12_N14QDragMoveEventD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
 #if __s390__ && !__s390x__
 	{"_ZThn12_N14QDragMoveEventD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if __s390__ && !__s390x__
-	{"_ZThn12_N14QDragMoveEventD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
 #if __i386__
 	{"_ZThn12_N14QDragMoveEventD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn12_N14QDragMoveEventD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZThn12_N14QDragMoveEventD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn12_N14QDragMoveEventD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
 #if __s390__ && !__s390x__
 	{"_ZThn12_N14QDragMoveEventD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if __s390__ && !__s390x__
-	{"_ZThn12_N14QDragMoveEventD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
 #if __i386__
 	{"_ZThn12_N15QDragEnterEventD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn12_N15QDragEnterEventD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZThn12_N15QDragEnterEventD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn12_N15QDragEnterEventD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
 #if __s390__ && !__s390x__
 	{"_ZThn12_N15QDragEnterEventD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if __s390__ && !__s390x__
-	{"_ZThn12_N15QDragEnterEventD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
 #if __i386__
 	{"_ZThn12_N15QDragEnterEventD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn12_N15QDragEnterEventD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"_ZThn12_N15QDragEnterEventD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn12_N15QDragEnterEventD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
 #if __s390__ && !__s390x__
 	{"_ZThn12_N15QDragEnterEventD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn12_N15QDragEnterEventD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if __i386__
 	{"_ZThn12_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3},
@@ -35345,24 +34704,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390__ && !__s390x__
 	{"_ZThn12_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource","",0,LSB_Toolkit_Qt3},
-#endif
-#if __i386__
-	{"_ZThn12_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn12_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn12_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn12_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn12_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn12_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __i386__
 	{"_ZThn12_NK10QDropEvent11encodedDataEPKc","",0,LSB_Toolkit_Qt},
@@ -35620,30 +34961,6 @@ struct versym DynSyms[] = {
 	{"_ZThn16_N10QBoxLayoutD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __ia64__
-	{"_ZThn16_N10QDropEventD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N10QDropEventD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn16_N10QDropEventD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn16_N10QDropEventD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
-	{"_ZThn16_N10QDropEventD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N10QDropEventD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn16_N10QDropEventD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn16_N10QDropEventD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
 	{"_ZThn16_N10QLCDNumberD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __powerpc64__
@@ -36340,54 +35657,6 @@ struct versym DynSyms[] = {
 	{"_ZThn16_N12QPrintDialogD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __ia64__
-	{"_ZThn16_N12QProgressBarD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N12QProgressBarD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N12QProgressBarD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N12QProgressBarD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn16_N12QProgressBarD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N12QProgressBarD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N12QProgressBarD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N12QProgressBarD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn16_N12QRadioButtonD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N12QRadioButtonD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N12QRadioButtonD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N12QRadioButtonD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn16_N12QRadioButtonD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N12QRadioButtonD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N12QRadioButtonD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N12QRadioButtonD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
 	{"_ZThn16_N12QStylePluginD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __powerpc64__
@@ -36460,30 +35729,6 @@ struct versym DynSyms[] = {
 	{"_ZThn16_N12QTextBrowserD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __ia64__
-	{"_ZThn16_N13QDateTimeEditD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N13QDateTimeEditD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N13QDateTimeEditD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N13QDateTimeEditD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn16_N13QDateTimeEditD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N13QDateTimeEditD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N13QDateTimeEditD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N13QDateTimeEditD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
 	{"_ZThn16_N13QErrorMessageD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __powerpc64__
@@ -36554,54 +35799,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390x__
 	{"_ZThn16_N14QDesktopWidgetD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn16_N14QDoubleSpinBoxD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N14QDoubleSpinBoxD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N14QDoubleSpinBoxD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N14QDoubleSpinBoxD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn16_N14QDoubleSpinBoxD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N14QDoubleSpinBoxD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N14QDoubleSpinBoxD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N14QDoubleSpinBoxD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn16_N14QDragMoveEventD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N14QDragMoveEventD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn16_N14QDragMoveEventD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn16_N14QDragMoveEventD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
-	{"_ZThn16_N14QDragMoveEventD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N14QDragMoveEventD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn16_N14QDragMoveEventD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn16_N14QDragMoveEventD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if __ia64__
 	{"_ZThn16_N14QImageIOPluginD0Ev","",0,LSB_Toolkit_Qt},
@@ -36736,30 +35933,6 @@ struct versym DynSyms[] = {
 	{"_ZThn16_N15QAbstractSliderD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __ia64__
-	{"_ZThn16_N15QDragEnterEventD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N15QDragEnterEventD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn16_N15QDragEnterEventD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn16_N15QDragEnterEventD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
-	{"_ZThn16_N15QDragEnterEventD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N15QDragEnterEventD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn16_N15QDragEnterEventD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn16_N15QDragEnterEventD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
 	{"_ZThn16_N15QProgressDialogD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __powerpc64__
@@ -36782,30 +35955,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390x__
 	{"_ZThn16_N15QProgressDialogD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn16_N15QSplitterHandleD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N15QSplitterHandleD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N15QSplitterHandleD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N15QSplitterHandleD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn16_N15QSplitterHandleD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N15QSplitterHandleD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N15QSplitterHandleD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N15QSplitterHandleD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __ia64__
 	{"_ZThn16_N15QX11EmbedWidgetD0Ev","",0,LSB_Toolkit_Qt},
@@ -36854,30 +36003,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390x__
 	{"_ZThn16_N16QAbstractSpinBoxD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn16_N16QPageSetupDialogD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N16QPageSetupDialogD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N16QPageSetupDialogD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N16QPageSetupDialogD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn16_N16QPageSetupDialogD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N16QPageSetupDialogD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N16QPageSetupDialogD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N16QPageSetupDialogD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __ia64__
 	{"_ZThn16_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt},
@@ -37290,48 +36415,6 @@ struct versym DynSyms[] = {
 #if __s390__ && !__s390x__
 	{"_ZThn16_N18QXmlDefaultHandler9endEntityERK7QString","",0,LSB_Toolkit_Qt3},
 #endif
-#if __i386__
-	{"_ZThn16_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn16_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn16_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn16_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn16_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn16_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn16_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn16_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
 #if __ia64__
 	{"_ZThn16_N19QAbstractScrollAreaD0Ev","",0,LSB_Toolkit_Qt},
 #endif
@@ -37379,30 +36462,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390x__
 	{"_ZThn16_N19QInputContextPluginD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn16_N20QAbstractPrintDialogD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N20QAbstractPrintDialogD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N20QAbstractPrintDialogD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N20QAbstractPrintDialogD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn16_N20QAbstractPrintDialogD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N20QAbstractPrintDialogD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N20QAbstractPrintDialogD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N20QAbstractPrintDialogD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __ia64__
 	{"_ZThn16_N20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture","",0,LSB_Toolkit_Qt},
@@ -37475,30 +36534,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390x__
 	{"_ZThn16_N23QAccessibleBridgePluginD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn16_N24QAbstractPageSetupDialogD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N24QAbstractPageSetupDialogD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N24QAbstractPageSetupDialogD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N24QAbstractPageSetupDialogD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn16_N24QAbstractPageSetupDialogD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N24QAbstractPageSetupDialogD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N24QAbstractPageSetupDialogD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N24QAbstractPageSetupDialogD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __ia64__
 	{"_ZThn16_N5QDialD0Ev","",0,LSB_Toolkit_Qt},
@@ -37765,30 +36800,6 @@ struct versym DynSyms[] = {
 	{"_ZThn16_N8QMenuBarD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __ia64__
-	{"_ZThn16_N8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn16_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
 	{"_ZThn16_N8QToolBarD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __powerpc64__
@@ -37837,30 +36848,6 @@ struct versym DynSyms[] = {
 	{"_ZThn16_N8QToolBoxD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __ia64__
-	{"_ZThn16_N9QCheckBoxD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N9QCheckBoxD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N9QCheckBoxD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N9QCheckBoxD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn16_N9QCheckBoxD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N9QCheckBoxD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N9QCheckBoxD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N9QCheckBoxD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
 	{"_ZThn16_N9QComboBoxD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __powerpc64__
@@ -37883,30 +36870,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390x__
 	{"_ZThn16_N9QComboBoxD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn16_N9QDateEditD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N9QDateEditD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N9QDateEditD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N9QDateEditD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn16_N9QDateEditD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N9QDateEditD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N9QDateEditD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N9QDateEditD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __ia64__
 	{"_ZThn16_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt},
@@ -38075,30 +37038,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390x__
 	{"_ZThn16_N9QTextEditD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn16_N9QTimeEditD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N9QTimeEditD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N9QTimeEditD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N9QTimeEditD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn16_N9QTimeEditD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn16_N9QTimeEditD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn16_N9QTimeEditD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn16_N9QTimeEditD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __ia64__
 	{"_ZThn16_N9QTreeViewD0Ev","",0,LSB_Toolkit_Qt},
@@ -38917,24 +37856,6 @@ struct versym DynSyms[] = {
 	{"_ZThn20_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_","",0,LSB_Toolkit_Qt3},
 #endif
 #if __i386__
-	{"_ZThn20_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn20_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn20_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn20_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn20_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn20_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
 	{"_ZThn20_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -39244,30 +38165,6 @@ struct versym DynSyms[] = {
 	{"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource","",0,LSB_Toolkit_Qt3},
 #endif
 #if __ia64__
-	{"_ZThn24_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn24_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn24_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn24_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn24_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn24_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn24_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn24_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
 	{"_ZThn24_NK10QDropEvent11encodedDataEPKc","",0,LSB_Toolkit_Qt},
 #endif
 #if __powerpc64__
@@ -39494,30 +38391,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390x__
 	{"_ZThn32_N18QXmlDefaultHandler9endEntityERK7QString","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
-	{"_ZThn32_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn32_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn32_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn32_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn32_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn32_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn32_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn32_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __ia64__
 	{"_ZThn32_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt},
@@ -39575,24 +38448,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390__ && !__s390x__
 	{"_ZThn40_N10QBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __i386__
-	{"_ZThn40_N10QColorDragD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn40_N10QColorDragD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn40_N10QColorDragD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __i386__
-	{"_ZThn40_N10QColorDragD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn40_N10QColorDragD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn40_N10QColorDragD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if __i386__
 	{"_ZThn40_N10QDataTableD0Ev","",0,LSB_Toolkit_Qt3},
@@ -39701,24 +38556,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390__ && !__s390x__
 	{"_ZThn40_N10QScrollBarD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __i386__
-	{"_ZThn40_N10QSemiModalD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn40_N10QSemiModalD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn40_N10QSemiModalD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __i386__
-	{"_ZThn40_N10QSemiModalD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn40_N10QSemiModalD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn40_N10QSemiModalD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if __i386__
 	{"_ZThn40_N10QStatusBarD0Ev","",0,LSB_Toolkit_Qt3},
@@ -40198,42 +39035,6 @@ struct versym DynSyms[] = {
 	{"_ZThn40_N12QPrintDialogD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if __i386__
-	{"_ZThn40_N12QProgressBarD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn40_N12QProgressBarD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn40_N12QProgressBarD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __i386__
-	{"_ZThn40_N12QProgressBarD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn40_N12QProgressBarD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn40_N12QProgressBarD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __i386__
-	{"_ZThn40_N12QRadioButtonD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn40_N12QRadioButtonD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn40_N12QRadioButtonD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __i386__
-	{"_ZThn40_N12QRadioButtonD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn40_N12QRadioButtonD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn40_N12QRadioButtonD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __i386__
 	{"_ZThn40_N12QTextBrowserD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -40477,24 +39278,6 @@ struct versym DynSyms[] = {
 	{"_ZThn40_N15QDockAreaLayout8iteratorEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if __i386__
-	{"_ZThn40_N15QDockAreaLayoutD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn40_N15QDockAreaLayoutD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn40_N15QDockAreaLayoutD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __i386__
-	{"_ZThn40_N15QDockAreaLayoutD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn40_N15QDockAreaLayoutD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn40_N15QDockAreaLayoutD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __i386__
 	{"_ZThn40_N15QProgressDialogD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -40512,24 +39295,6 @@ struct versym DynSyms[] = {
 #if __s390__ && !__s390x__
 	{"_ZThn40_N15QProgressDialogD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if __i386__
-	{"_ZThn40_N17QDateTimeEditBaseD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn40_N17QDateTimeEditBaseD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn40_N17QDateTimeEditBaseD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __i386__
-	{"_ZThn40_N17QDateTimeEditBaseD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn40_N17QDateTimeEditBaseD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn40_N17QDateTimeEditBaseD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
 #if __ia64__
 	{"_ZThn40_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3},
 #endif
@@ -40613,30 +39378,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390x__
 	{"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
-	{"_ZThn40_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn40_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn40_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn40_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn40_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn40_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn40_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn40_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __i386__
 	{"_ZThn40_N5QDialD0Ev","",0,LSB_Toolkit_Qt3},
@@ -40655,78 +39396,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390__ && !__s390x__
 	{"_ZThn40_N5QDialD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __i386__
-	{"_ZThn40_N5QGridD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn40_N5QGridD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn40_N5QGridD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __i386__
-	{"_ZThn40_N5QGridD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn40_N5QGridD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn40_N5QGridD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __i386__
-	{"_ZThn40_N5QHBoxD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn40_N5QHBoxD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn40_N5QHBoxD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __i386__
-	{"_ZThn40_N5QHBoxD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn40_N5QHBoxD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn40_N5QHBoxD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __i386__
-	{"_ZThn40_N5QVBoxD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn40_N5QVBoxD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn40_N5QVBoxD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __i386__
-	{"_ZThn40_N5QVBoxD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn40_N5QVBoxD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn40_N5QVBoxD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __i386__
-	{"_ZThn40_N6QFrameD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn40_N6QFrameD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn40_N6QFrameD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __i386__
-	{"_ZThn40_N6QFrameD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn40_N6QFrameD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn40_N6QFrameD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if __i386__
 	{"_ZThn40_N6QLabelD0Ev","",0,LSB_Toolkit_Qt3},
@@ -41141,24 +39810,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390__ && !__s390x__
 	{"_ZThn40_N8QUriDragD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __i386__
-	{"_ZThn40_N9QCheckBoxD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn40_N9QCheckBoxD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn40_N9QCheckBoxD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __i386__
-	{"_ZThn40_N9QCheckBoxD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn40_N9QCheckBoxD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn40_N9QCheckBoxD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if __i386__
 	{"_ZThn40_N9QComboBoxD0Ev","",0,LSB_Toolkit_Qt3},
@@ -41664,15 +40315,6 @@ struct versym DynSyms[] = {
 #if __s390__ && !__s390x__
 	{"_ZThn40_NK15QDockAreaLayout8sizeHintEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if __i386__
-	{"_ZThn40_NK15QDockAreaLayout9expandingEv","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn40_NK15QDockAreaLayout9expandingEv","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn40_NK15QDockAreaLayout9expandingEv","",0,LSB_Toolkit_Qt3},
-#endif
 #if __ia64__
 	{"_ZThn40_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt},
 #endif
@@ -41866,24 +40508,6 @@ struct versym DynSyms[] = {
 	{"_ZThn4_N18QXmlDefaultHandler7warningERK18QXmlParseException","",0,LSB_Toolkit_Qt3},
 #endif
 #if __i386__
-	{"_ZThn4_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn4_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn4_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn4_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn4_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn4_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
 	{"_ZThn4_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -41953,30 +40577,6 @@ struct versym DynSyms[] = {
 	{"_ZThn80_N10QBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if __ia64__
-	{"_ZThn80_N10QColorDragD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn80_N10QColorDragD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn80_N10QColorDragD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn80_N10QColorDragD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
-	{"_ZThn80_N10QColorDragD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn80_N10QColorDragD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn80_N10QColorDragD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn80_N10QColorDragD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
 	{"_ZThn80_N10QDataTableD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if __powerpc64__
@@ -42119,30 +40719,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390x__
 	{"_ZThn80_N10QScrollBarD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
-	{"_ZThn80_N10QSemiModalD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn80_N10QSemiModalD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn80_N10QSemiModalD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn80_N10QSemiModalD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
-	{"_ZThn80_N10QSemiModalD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn80_N10QSemiModalD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn80_N10QSemiModalD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn80_N10QSemiModalD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if __ia64__
 	{"_ZThn80_N10QStatusBarD0Ev","",0,LSB_Toolkit_Qt3},
@@ -42781,54 +41357,6 @@ struct versym DynSyms[] = {
 	{"_ZThn80_N12QPrintDialogD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if __ia64__
-	{"_ZThn80_N12QProgressBarD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn80_N12QProgressBarD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn80_N12QProgressBarD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn80_N12QProgressBarD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
-	{"_ZThn80_N12QProgressBarD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn80_N12QProgressBarD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn80_N12QProgressBarD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn80_N12QProgressBarD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
-	{"_ZThn80_N12QRadioButtonD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn80_N12QRadioButtonD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn80_N12QRadioButtonD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn80_N12QRadioButtonD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
-	{"_ZThn80_N12QRadioButtonD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn80_N12QRadioButtonD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn80_N12QRadioButtonD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn80_N12QRadioButtonD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
 	{"_ZThn80_N12QTextBrowserD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if __powerpc64__
@@ -43153,30 +41681,6 @@ struct versym DynSyms[] = {
 	{"_ZThn80_N15QDockAreaLayout8iteratorEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if __ia64__
-	{"_ZThn80_N15QDockAreaLayoutD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn80_N15QDockAreaLayoutD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn80_N15QDockAreaLayoutD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn80_N15QDockAreaLayoutD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
-	{"_ZThn80_N15QDockAreaLayoutD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn80_N15QDockAreaLayoutD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn80_N15QDockAreaLayoutD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn80_N15QDockAreaLayoutD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
 	{"_ZThn80_N15QProgressDialogD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if __powerpc64__
@@ -43201,30 +41705,6 @@ struct versym DynSyms[] = {
 	{"_ZThn80_N15QProgressDialogD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if __ia64__
-	{"_ZThn80_N17QDateTimeEditBaseD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn80_N17QDateTimeEditBaseD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn80_N17QDateTimeEditBaseD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn80_N17QDateTimeEditBaseD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
-	{"_ZThn80_N17QDateTimeEditBaseD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn80_N17QDateTimeEditBaseD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn80_N17QDateTimeEditBaseD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn80_N17QDateTimeEditBaseD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
 	{"_ZThn80_N5QDialD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if __powerpc64__
@@ -43247,102 +41727,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390x__
 	{"_ZThn80_N5QDialD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
-	{"_ZThn80_N5QGridD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn80_N5QGridD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn80_N5QGridD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn80_N5QGridD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
-	{"_ZThn80_N5QGridD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn80_N5QGridD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn80_N5QGridD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn80_N5QGridD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
-	{"_ZThn80_N5QHBoxD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn80_N5QHBoxD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn80_N5QHBoxD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn80_N5QHBoxD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
-	{"_ZThn80_N5QHBoxD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn80_N5QHBoxD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn80_N5QHBoxD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn80_N5QHBoxD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
-	{"_ZThn80_N5QVBoxD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn80_N5QVBoxD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn80_N5QVBoxD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn80_N5QVBoxD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
-	{"_ZThn80_N5QVBoxD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn80_N5QVBoxD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn80_N5QVBoxD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn80_N5QVBoxD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
-	{"_ZThn80_N6QFrameD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn80_N6QFrameD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn80_N6QFrameD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn80_N6QFrameD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
-	{"_ZThn80_N6QFrameD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn80_N6QFrameD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn80_N6QFrameD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn80_N6QFrameD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if __ia64__
 	{"_ZThn80_N6QLabelD0Ev","",0,LSB_Toolkit_Qt3},
@@ -43895,30 +42279,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390x__
 	{"_ZThn80_N8QUriDragD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
-	{"_ZThn80_N9QCheckBoxD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn80_N9QCheckBoxD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn80_N9QCheckBoxD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn80_N9QCheckBoxD0Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
-	{"_ZThn80_N9QCheckBoxD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn80_N9QCheckBoxD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn80_N9QCheckBoxD1Ev","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn80_N9QCheckBoxD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if __ia64__
 	{"_ZThn80_N9QComboBoxD0Ev","",0,LSB_Toolkit_Qt3},
@@ -44591,18 +42951,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390x__
 	{"_ZThn80_NK15QDockAreaLayout8sizeHintEv","",0,LSB_Toolkit_Qt3},
-#endif
-#if __ia64__
-	{"_ZThn80_NK15QDockAreaLayout9expandingEv","",0,LSB_Toolkit_Qt3},
-#endif
-#if __powerpc64__
-	{"_ZThn80_NK15QDockAreaLayout9expandingEv","",0,LSB_Toolkit_Qt3},
-#endif
-#if __x86_64__
-	{"_ZThn80_NK15QDockAreaLayout9expandingEv","",0,LSB_Toolkit_Qt3},
-#endif
-#if __s390x__
-	{"_ZThn80_NK15QDockAreaLayout9expandingEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if __ia64__
 	{"_ZThn80_NK7QLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3},
@@ -45319,42 +43667,6 @@ struct versym DynSyms[] = {
 	{"_ZThn8_N12QPrintDialogD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __i386__
-	{"_ZThn8_N12QProgressBarD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N12QProgressBarD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N12QProgressBarD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn8_N12QProgressBarD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N12QProgressBarD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N12QProgressBarD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn8_N12QRadioButtonD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N12QRadioButtonD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N12QRadioButtonD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn8_N12QRadioButtonD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N12QRadioButtonD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N12QRadioButtonD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
 	{"_ZThn8_N12QStylePluginD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -45409,24 +43721,6 @@ struct versym DynSyms[] = {
 	{"_ZThn8_N12QTextBrowserD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __i386__
-	{"_ZThn8_N13QDateTimeEditD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N13QDateTimeEditD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N13QDateTimeEditD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn8_N13QDateTimeEditD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N13QDateTimeEditD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N13QDateTimeEditD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
 	{"_ZThn8_N13QErrorMessageD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -45479,24 +43773,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390__ && !__s390x__
 	{"_ZThn8_N14QDesktopWidgetD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn8_N14QDoubleSpinBoxD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N14QDoubleSpinBoxD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N14QDoubleSpinBoxD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn8_N14QDoubleSpinBoxD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N14QDoubleSpinBoxD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N14QDoubleSpinBoxD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __i386__
 	{"_ZThn8_N14QImageIOPluginD0Ev","",0,LSB_Toolkit_Qt},
@@ -45616,24 +43892,6 @@ struct versym DynSyms[] = {
 	{"_ZThn8_N15QProgressDialogD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __i386__
-	{"_ZThn8_N15QSplitterHandleD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N15QSplitterHandleD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N15QSplitterHandleD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn8_N15QSplitterHandleD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N15QSplitterHandleD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N15QSplitterHandleD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
 	{"_ZThn8_N15QX11EmbedWidgetD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -45668,24 +43926,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390__ && !__s390x__
 	{"_ZThn8_N16QAbstractSpinBoxD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn8_N16QPageSetupDialogD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N16QPageSetupDialogD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N16QPageSetupDialogD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn8_N16QPageSetupDialogD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N16QPageSetupDialogD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N16QPageSetupDialogD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __i386__
 	{"_ZThn8_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt},
@@ -45979,48 +44219,6 @@ struct versym DynSyms[] = {
 	{"_ZThn8_N18QXmlDefaultHandler7warningERK18QXmlParseException","",0,LSB_Toolkit_Qt3},
 #endif
 #if __i386__
-	{"_ZThn8_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn8_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn8_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn8_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn8_N18QXmlDefaultHandlerD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn8_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __ia64__
-	{"_ZThn8_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc64__
-	{"_ZThn8_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __x86_64__
-	{"_ZThn8_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390x__
-	{"_ZThn8_N18QXmlDefaultHandlerD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
 	{"_ZThn8_N19QAbstractScrollAreaD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -46055,24 +44253,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390__ && !__s390x__
 	{"_ZThn8_N19QInputContextPluginD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn8_N20QAbstractPrintDialogD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N20QAbstractPrintDialogD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N20QAbstractPrintDialogD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn8_N20QAbstractPrintDialogD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N20QAbstractPrintDialogD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N20QAbstractPrintDialogD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __i386__
 	{"_ZThn8_N20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture","",0,LSB_Toolkit_Qt},
@@ -46127,24 +44307,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390__ && !__s390x__
 	{"_ZThn8_N23QAccessibleBridgePluginD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn8_N24QAbstractPageSetupDialogD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N24QAbstractPageSetupDialogD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N24QAbstractPageSetupDialogD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn8_N24QAbstractPageSetupDialogD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N24QAbstractPageSetupDialogD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N24QAbstractPageSetupDialogD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __i386__
 	{"_ZThn8_N5QDialD0Ev","",0,LSB_Toolkit_Qt},
@@ -46345,24 +44507,6 @@ struct versym DynSyms[] = {
 	{"_ZThn8_N8QMenuBarD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __i386__
-	{"_ZThn8_N8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn8_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
 	{"_ZThn8_N8QToolBarD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -46399,24 +44543,6 @@ struct versym DynSyms[] = {
 	{"_ZThn8_N8QToolBoxD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __i386__
-	{"_ZThn8_N9QCheckBoxD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N9QCheckBoxD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N9QCheckBoxD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn8_N9QCheckBoxD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N9QCheckBoxD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N9QCheckBoxD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
 	{"_ZThn8_N9QComboBoxD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __powerpc__ && !__powerpc64__
@@ -46433,24 +44559,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390__ && !__s390x__
 	{"_ZThn8_N9QComboBoxD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn8_N9QDateEditD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N9QDateEditD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N9QDateEditD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn8_N9QDateEditD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N9QDateEditD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N9QDateEditD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __i386__
 	{"_ZThn8_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt},
@@ -46577,24 +44685,6 @@ struct versym DynSyms[] = {
 #endif
 #if __s390__ && !__s390x__
 	{"_ZThn8_N9QTextEditD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn8_N9QTimeEditD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N9QTimeEditD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N9QTimeEditD0Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __i386__
-	{"_ZThn8_N9QTimeEditD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __powerpc__ && !__powerpc64__
-	{"_ZThn8_N9QTimeEditD1Ev","",0,LSB_Toolkit_Qt},
-#endif
-#if __s390__ && !__s390x__
-	{"_ZThn8_N9QTimeEditD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if __i386__
 	{"_ZThn8_N9QTreeViewD0Ev","",0,LSB_Toolkit_Qt},
@@ -49209,10 +47299,8 @@ struct versym DynSyms[] = {
 	{"__xmlLastError","",0,LSB_XML},
 	{"__xmlLineNumbersDefaultValue","",0,LSB_XML},
 	{"__xmlLoadExtDtdDefaultValue","",0,LSB_XML},
-	{"__xmlOutputBufferCreateFilename","",0,LSB_XML},
 	{"__xmlOutputBufferCreateFilenameValue","",0,LSB_XML},
 	{"__xmlParserDebugEntities","",0,LSB_XML},
-	{"__xmlParserInputBufferCreateFilename","",0,LSB_XML},
 	{"__xmlParserInputBufferCreateFilenameValue","",0,LSB_XML},
 	{"__xmlParserVersion","",0,LSB_XML},
 	{"__xmlPedanticParserDefaultValue","",0,LSB_XML},
@@ -58002,7 +56090,6 @@ struct versym DynSyms[] = {
 	{"gcvt","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"gdk_add_client_message_filter","",0,LSB_Toolkit_Gtk},
-	{"gdk_add_option_entries_libgtk_only","",0,LSB_Toolkit_Gtk},
 	{"gdk_atom_intern","",0,LSB_Toolkit_Gtk},
 	{"gdk_atom_name","",0,LSB_Toolkit_Gtk},
 	{"gdk_axis_use_get_type","",0,LSB_Toolkit_Gtk},
@@ -58073,7 +56160,6 @@ struct versym DynSyms[] = {
 	{"gdk_display_manager_list_displays","",0,LSB_Toolkit_Gtk},
 	{"gdk_display_manager_set_default_display","",0,LSB_Toolkit_Gtk},
 	{"gdk_display_open","",0,LSB_Toolkit_Gtk},
-	{"gdk_display_open_default_libgtk_only","",0,LSB_Toolkit_Gtk},
 	{"gdk_display_peek_event","",0,LSB_Toolkit_Gtk},
 	{"gdk_display_pointer_is_grabbed","",0,LSB_Toolkit_Gtk},
 	{"gdk_display_pointer_ungrab","",0,LSB_Toolkit_Gtk},
@@ -58121,7 +56207,6 @@ struct versym DynSyms[] = {
 	{"gdk_draw_points","",0,LSB_Toolkit_Gtk},
 	{"gdk_draw_polygon","",0,LSB_Toolkit_Gtk},
 	{"gdk_draw_rectangle","",0,LSB_Toolkit_Gtk},
-	{"gdk_draw_rectangle_alpha_libgtk_only","",0,LSB_Toolkit_Gtk},
 	{"gdk_draw_rgb_32_image","",0,LSB_Toolkit_Gtk},
 	{"gdk_draw_rgb_32_image_dithalign","",0,LSB_Toolkit_Gtk},
 	{"gdk_draw_rgb_image","",0,LSB_Toolkit_Gtk},
@@ -58171,11 +56256,7 @@ struct versym DynSyms[] = {
 	{"gdk_fill_rule_get_type","",0,LSB_Toolkit_Gtk},
 	{"gdk_filter_return_get_type","",0,LSB_Toolkit_Gtk},
 	{"gdk_flush","",0,LSB_Toolkit_Gtk},
-	{"gdk_font_equal","",0,LSB_Toolkit_Gtk},
-	{"gdk_font_id","",0,LSB_Toolkit_Gtk},
-	{"gdk_font_ref","",0,LSB_Toolkit_Gtk},
 	{"gdk_font_type_get_type","",0,LSB_Toolkit_Gtk},
-	{"gdk_font_unref","",0,LSB_Toolkit_Gtk},
 	{"gdk_free_compound_text","",0,LSB_Toolkit_Gtk},
 	{"gdk_free_text_list","",0,LSB_Toolkit_Gtk},
 	{"gdk_function_get_type","",0,LSB_Toolkit_Gtk},
@@ -58230,7 +56311,6 @@ struct versym DynSyms[] = {
 	{"gdk_interp_type_get_type","",0,LSB_Toolkit_Gtk},
 	{"gdk_join_style_get_type","",0,LSB_Toolkit_Gtk},
 	{"gdk_keyboard_grab","",0,LSB_Toolkit_Gtk},
-	{"gdk_keyboard_grab_info_libgtk_only","",0,LSB_Toolkit_Gtk},
 	{"gdk_keyboard_ungrab","",0,LSB_Toolkit_Gtk},
 	{"gdk_keymap_get_default","",0,LSB_Toolkit_Gtk},
 	{"gdk_keymap_get_direction","",0,LSB_Toolkit_Gtk},
@@ -58376,10 +56456,8 @@ struct versym DynSyms[] = {
 	{"gdk_pixmap_lookup_for_display","",0,LSB_Toolkit_Gtk},
 	{"gdk_pixmap_new","",0,LSB_Toolkit_Gtk},
 	{"gdk_pointer_grab","",0,LSB_Toolkit_Gtk},
-	{"gdk_pointer_grab_info_libgtk_only","",0,LSB_Toolkit_Gtk},
 	{"gdk_pointer_is_grabbed","",0,LSB_Toolkit_Gtk},
 	{"gdk_pointer_ungrab","",0,LSB_Toolkit_Gtk},
-	{"gdk_pre_parse_libgtk_only","",0,LSB_Toolkit_Gtk},
 	{"gdk_prop_mode_get_type","",0,LSB_Toolkit_Gtk},
 	{"gdk_property_change","",0,LSB_Toolkit_Gtk},
 	{"gdk_property_delete","",0,LSB_Toolkit_Gtk},
@@ -58615,7 +56693,6 @@ struct versym DynSyms[] = {
 	{"gdk_x11_colormap_get_xdisplay","",0,LSB_Toolkit_Gtk},
 	{"gdk_x11_cursor_get_xcursor","",0,LSB_Toolkit_Gtk},
 	{"gdk_x11_cursor_get_xdisplay","",0,LSB_Toolkit_Gtk},
-	{"gdk_x11_display_get_user_time_libgtk_only","",0,LSB_Toolkit_Gtk},
 	{"gdk_x11_display_get_xdisplay","",0,LSB_Toolkit_Gtk},
 	{"gdk_x11_display_grab","",0,LSB_Toolkit_Gtk},
 	{"gdk_x11_display_ungrab","",0,LSB_Toolkit_Gtk},
@@ -59227,9 +57304,6 @@ struct versym DynSyms[] = {
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"getlogin_r","GLIBC_2.0",0,LSB_Core},
-#endif
-#if __not_def__
-	{"getlogin_r","GLIBC_2.3",0,LSB_Core},
 #endif
 #if __s390__ && !__s390x__
 	{"getlogin_r","GLIBC_2.0",0,LSB_Core},
@@ -60938,7 +59012,6 @@ struct versym DynSyms[] = {
 	{"gtk_cell_renderer_activate","",0,LSB_Toolkit_Gtk},
 	{"gtk_cell_renderer_combo_get_type","",0,LSB_Toolkit_Gtk},
 	{"gtk_cell_renderer_combo_new","",0,LSB_Toolkit_Gtk},
-	{"gtk_cell_renderer_editing_canceled","",0,LSB_Toolkit_Gtk},
 	{"gtk_cell_renderer_get_fixed_size","",0,LSB_Toolkit_Gtk},
 	{"gtk_cell_renderer_get_size","",0,LSB_Toolkit_Gtk},
 	{"gtk_cell_renderer_get_type","",0,LSB_Toolkit_Gtk},
@@ -61660,8 +59733,6 @@ struct versym DynSyms[] = {
 	{"gtk_layout_set_hadjustment","",0,LSB_Toolkit_Gtk},
 	{"gtk_layout_set_size","",0,LSB_Toolkit_Gtk},
 	{"gtk_layout_set_vadjustment","",0,LSB_Toolkit_Gtk},
-	{"gtk_list_get_type","",0,LSB_Toolkit_Gtk},
-	{"gtk_list_item_get_type","",0,LSB_Toolkit_Gtk},
 	{"gtk_list_store_append","",0,LSB_Toolkit_Gtk},
 	{"gtk_list_store_clear","",0,LSB_Toolkit_Gtk},
 	{"gtk_list_store_get_type","",0,LSB_Toolkit_Gtk},
@@ -61690,32 +59761,6 @@ struct versym DynSyms[] = {
 	{"gtk_main_level","",0,LSB_Toolkit_Gtk},
 	{"gtk_main_quit","",0,LSB_Toolkit_Gtk},
 	{"gtk_major_version","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_BOOLEAN__POINTER","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_BOOLEAN__POINTER_INT_INT","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_BOOLEAN__POINTER_INT_INT_UINT","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_BOOLEAN__POINTER_POINTER_INT_INT","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_BOOLEAN__POINTER_STRING_STRING_POINTER","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_BOOLEAN__VOID","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_ENUM__ENUM","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_INT__POINTER","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_INT__POINTER_CHAR_CHAR","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_VOID__ENUM_FLOAT","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_VOID__ENUM_FLOAT_BOOLEAN","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_VOID__INT_INT","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_VOID__INT_INT_POINTER","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_VOID__POINTER_INT","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_VOID__POINTER_INT_INT_POINTER_UINT_UINT","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_VOID__POINTER_POINTER","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_VOID__POINTER_POINTER_POINTER","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_VOID__POINTER_POINTER_UINT_UINT","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_VOID__POINTER_STRING_STRING","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_VOID__POINTER_UINT","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_VOID__POINTER_UINT_ENUM","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_VOID__POINTER_UINT_UINT","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_VOID__STRING_INT_POINTER","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_VOID__UINT_POINTER_UINT_ENUM_ENUM_POINTER","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_VOID__UINT_POINTER_UINT_UINT_ENUM","",0,LSB_Toolkit_Gtk},
-	{"gtk_marshal_VOID__UINT_STRING","",0,LSB_Toolkit_Gtk},
 	{"gtk_match_type_get_type","",0,LSB_Toolkit_Gtk},
 	{"gtk_menu_attach","",0,LSB_Toolkit_Gtk},
 	{"gtk_menu_attach_to_widget","",0,LSB_Toolkit_Gtk},
@@ -61855,7 +59900,6 @@ struct versym DynSyms[] = {
 	{"gtk_paint_vline","",0,LSB_Toolkit_Gtk},
 	{"gtk_paned_add1","",0,LSB_Toolkit_Gtk},
 	{"gtk_paned_add2","",0,LSB_Toolkit_Gtk},
-	{"gtk_paned_compute_position","",0,LSB_Toolkit_Gtk},
 	{"gtk_paned_get_child1","",0,LSB_Toolkit_Gtk},
 	{"gtk_paned_get_child2","",0,LSB_Toolkit_Gtk},
 	{"gtk_paned_get_position","",0,LSB_Toolkit_Gtk},
@@ -61889,7 +59933,6 @@ struct versym DynSyms[] = {
 	{"gtk_progress_bar_set_pulse_step","",0,LSB_Toolkit_Gtk},
 	{"gtk_progress_bar_set_text","",0,LSB_Toolkit_Gtk},
 	{"gtk_progress_bar_style_get_type","",0,LSB_Toolkit_Gtk},
-	{"gtk_progress_get_type","",0,LSB_Toolkit_Gtk},
 	{"gtk_propagate_event","",0,LSB_Toolkit_Gtk},
 	{"gtk_quit_add","",0,LSB_Toolkit_Gtk},
 	{"gtk_quit_add_destroy","",0,LSB_Toolkit_Gtk},
@@ -62009,7 +60052,6 @@ struct versym DynSyms[] = {
 	{"gtk_scrolled_window_set_vadjustment","",0,LSB_Toolkit_Gtk},
 	{"gtk_selection_add_target","",0,LSB_Toolkit_Gtk},
 	{"gtk_selection_add_targets","",0,LSB_Toolkit_Gtk},
-	{"gtk_selection_clear","",0,LSB_Toolkit_Gtk},
 	{"gtk_selection_clear_targets","",0,LSB_Toolkit_Gtk},
 	{"gtk_selection_convert","",0,LSB_Toolkit_Gtk},
 	{"gtk_selection_data_copy","",0,LSB_Toolkit_Gtk},

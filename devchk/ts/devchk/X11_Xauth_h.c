@@ -26,22 +26,21 @@ Msg("Checking data structures in X11/Xauth.h\n");
 
 printf("Checking data structures in X11/Xauth.h\n");
 #if __i386__
-CheckTypeSize(Xauth,32, 8961, 2)
+CheckTypeSize(Xauth,32, 8961, 2);
 #elif __ia64__
-CheckTypeSize(Xauth,64, 8961, 3)
+CheckTypeSize(Xauth,64, 8961, 3);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(Xauth,32, 8961, 6)
+CheckTypeSize(Xauth,32, 8961, 6);
 #elif __s390__ && !__s390x__
-CheckTypeSize(Xauth,32, 8961, 10)
+CheckTypeSize(Xauth,32, 8961, 10);
 #elif __powerpc64__
-CheckTypeSize(Xauth,64, 8961, 9)
+CheckTypeSize(Xauth,64, 8961, 9);
 #elif __s390x__
-CheckTypeSize(Xauth,64, 8961, 12)
+CheckTypeSize(Xauth,64, 8961, 12);
 #elif __x86_64__
-CheckTypeSize(Xauth,64, 8961, 11)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8961,0);
-Msg("Find size of Xauth (8961)\n");
+CheckTypeSize(Xauth,64, 8961, 11);
+#elif 1
+CheckTypeSize(Xauth,0, 8961, 1);
 #endif
 
 #ifdef TET_TEST
