@@ -12294,6 +12294,8 @@ struct classtypeinfo _N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_typeinfo 
 	};
 
 const char *_N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_vtable_name_0 [] = {
+	"",
+	"",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE5imbueERKSt6locale",
 #if __i386__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPci",
@@ -12316,7 +12318,16 @@ const char *_N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_vtable_name_0 [] =
 #if __s390x__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPcl",
 #endif
+	"",
+	"",
+	"",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE9showmanycEv",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
 	};
 
 struct classvtable _N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_vtable [1] = {
@@ -12359,6 +12370,8 @@ struct classtypeinfo _N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_typeinfo 
 	};
 
 const char *_N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_vtable_name_0 [] = {
+	"",
+	"",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE5imbueERKSt6locale",
 #if __i386__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwi",
@@ -12381,7 +12394,16 @@ const char *_N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_vtable_name_0 [] =
 #if __s390x__
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwl",
 #endif
+	"",
+	"",
+	"",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE9showmanycEv",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
 	};
 
 struct classvtable _N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_vtable [1] = {
@@ -18763,6 +18785,8 @@ struct classtypeinfo _St21__ctype_abstract_baseIcE_typeinfo = {
 	};
 
 const char *_St21__ctype_abstract_baseIcE_vtable_name_0 [] = {
+	"",
+	"",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
@@ -18819,6 +18843,8 @@ struct classtypeinfo _St21__ctype_abstract_baseIwE_typeinfo = {
 	};
 
 const char *_St21__ctype_abstract_baseIwE_vtable_name_0 [] = {
+	"",
+	"",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
@@ -18875,6 +18901,8 @@ struct classtypeinfo _St23__codecvt_abstract_baseIcc11__mbstate_tE_typeinfo = {
 	};
 
 const char *_St23__codecvt_abstract_baseIcc11__mbstate_tE_vtable_name_0 [] = {
+	"",
+	"",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
@@ -18926,6 +18954,8 @@ struct classtypeinfo _St23__codecvt_abstract_baseIwc11__mbstate_tE_typeinfo = {
 	};
 
 const char *_St23__codecvt_abstract_baseIwc11__mbstate_tE_vtable_name_0 [] = {
+	"",
+	"",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
