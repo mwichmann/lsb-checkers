@@ -5,7 +5,7 @@ struct versym libncurses_so_5[] = {
 	{"COLOR_PAIRS","",0,LSB_Core,0,0},
 	{"COLS","",0,LSB_Core,0,0},
 	{"LINES","",0,LSB_Core,0,0},
-	{"acs_map","",0,LSB_Core,128,0},
+	{"acs_map","",0,LSB_Core,0,0},
 	{"addch","",0,LSB_Core,0,1},
 	{"addchnstr","",0,LSB_Core,0,1},
 	{"addchstr","",0,LSB_Core,0,1},
