@@ -719,6 +719,9 @@ check_class_info(ElfFile * file, char *libname,
 	 tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
 	 tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
 	 */
+	/* bug 1601: "don't complain" means we have to record a PASS */
+	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+	tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
       }
     }
 
