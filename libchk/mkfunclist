@@ -93,7 +93,7 @@ $select.= "LEFT JOIN Interface ON Iid=VTviid ";
 $select.= "LEFT JOIN ArchInt ON Iid=AIint ";
 $select.= "WHERE VTcid=".$$class{'CIid'}." ";
 $select.= "AND VTvtpos=$pos ";
-$select.= "AND AIarch IS NOT NULL ";
+$select.= "AND (AIarch IS NOT NULL OR Iname IS NULL) ";
 # $select.= "AND AIarch = VTarch ";
 $select.= "ORDER BY VTpos";
 
