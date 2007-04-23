@@ -49,7 +49,7 @@ secttype.c:
 	./mksecttype >secttype.c
 
 modules.c modules.h: 
-	./dump_modules
+	./dump_modules -v `cat LSB_VERSION`
 
 clean:
 	rm -f $(OBJS) $(GENOBJS) $(LIB) $(OBJS_APPCHK) $(LIB_APPCHK) test
