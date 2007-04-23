@@ -2,9 +2,22 @@
 use strict;
 use Mysql;
 use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
+use Getopt::Long;
+
+sub usage()
+{
+print STDERR "dump_modules -v <lsbversion>\n";
+die;
+}
+
+my $lsbversion;
+GetOptions("v=s" => \$lsbversion);
+if( !$lsbversion ) { usage(); }
+
 my $dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
-my $sth = $dbh->query("SELECT Mname FROM Module ORDER BY Mname");
+my $sth = $dbh->query("SELECT Mname,Mmandatorysince FROM Module WHERE Mappearedin BETWEEN '1.0' AND '$lsbversion' 
+			AND Mwithdrawnin IS NULL ORDER BY Mname");
 my $flag = 1;
 my @defines;
 open(my $fd, ">modules.h");
@@ -25,18 +38,17 @@ extern struct lsb_module LSB_Modules[];
 my $count = 0;
 my @desktop_defines;
 for(1..$sth->numrows) {
-	my $row = $sth->fetchrow;
-	$row=~s/-/_/g;
+	my %row = $sth->fetchhash;
+	$row{'Mname'}=~s/-/_/g;
 	my $name;
-	if(lc(substr($row, 0, 4)) == "lsb_") {
-		$name = "LSB_".ucfirst(substr($row,4));
+	if(lc(substr($row{'Mname'}, 0, 4)) == "lsb_") {
+		$name = "LSB_".ucfirst(substr($row{'Mname'},4));
 	} else {
-		$name = $row;
+		$name = $row{'Mname'};
 	}
 	printf $fd "#define $name\t0x%x\n", $flag;
-	push(@defines, $row, $name);
-	# kind of ugly, but we get the proper defines via this.
-	if($name =~ /^(LSB_Core|LSB_Cpp|LSB_Graphics|LSB_Graphics_Ext|LSB_Toolkit_Gtk|LSB_Toolkit_Qt3|LSB_XML)$/i) {
+	push(@defines, $row{'Mname'}, $name);
+	if( ($row{'Mmandatorysince'} ne "") and ($row{'Mmandatorysince'} le $lsbversion) ) {
 		push(@desktop_defines, $name);
 	}
 	$flag <<= 1;
