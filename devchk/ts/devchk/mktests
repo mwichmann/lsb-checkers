@@ -978,6 +978,7 @@ print TESTS "#include <vector>\n";
 print TESTS "#include <backward/strstream>\n";
 print TESTS "#include <ext/stdio_filebuf.h>\n";
 print TESTS "#include <cxxabi.h>\n";
+print TESTS "#include <qt.h>\n";
 print TESTS "#include \"hdrchk.h\"\n";
 print TESTS "\n\n\n";
 print TESTS "extern \"C\" {\n";
