@@ -16,6 +16,7 @@
 #include <backward/strstream>
 #include <ext/stdio_filebuf.h>
 #include <cxxabi.h>
+#include <qt.h>
 #include "hdrchk.h"
 
 
