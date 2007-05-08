@@ -6,8 +6,8 @@
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #ifdef LSBCC_MODE	/* XXX hand-edit */
-struct png_struct_def();
-struct png_info_struct();
+struct png_struct_def{};
+struct png_info_struct{};
 #endif
 #include "png.h"	/* XXX hand-edit */
 
