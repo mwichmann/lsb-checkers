@@ -12651,8 +12651,10 @@ CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,4,2,44314);
 CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,164,2,44314);
 CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,4,2,44319);
 CheckOffset(struct _GdkDrawableClass,draw_trapezoids,168,2,44319);
+/* XXX hand-edit
 CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved3,4,2,44320);
 CheckOffset(struct _GdkDrawableClass,_gdk_reserved3,172,2,44320);
+*/
 CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,4,2,44321);
 CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,176,2,44321);
 CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,4,2,44322);
@@ -12731,8 +12733,10 @@ CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,8,11,44314);
 CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,328,11,44314);
 CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,8,11,44319);
 CheckOffset(struct _GdkDrawableClass,draw_trapezoids,336,11,44319);
+/* XXX hand-edit
 CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved3,8,11,44320);
 CheckOffset(struct _GdkDrawableClass,_gdk_reserved3,344,11,44320);
+*/
 CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,8,11,44321);
 CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,352,11,44321);
 CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,8,11,44322);
@@ -12889,8 +12893,10 @@ CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,4,6,44314);
 CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,164,6,44314);
 CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,4,6,44319);
 CheckOffset(struct _GdkDrawableClass,draw_trapezoids,168,6,44319);
+/* XXX hand-edit
 CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved3,4,6,44320);
 CheckOffset(struct _GdkDrawableClass,_gdk_reserved3,172,6,44320);
+*/
 CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,4,6,44321);
 CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,176,6,44321);
 CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,4,6,44322);
@@ -12969,8 +12975,10 @@ CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,8,9,44314);
 CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,328,9,44314);
 CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,8,9,44319);
 CheckOffset(struct _GdkDrawableClass,draw_trapezoids,336,9,44319);
+/* XXX hand-edit
 CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved3,8,9,44320);
 CheckOffset(struct _GdkDrawableClass,_gdk_reserved3,344,9,44320);
+*/
 CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,8,9,44321);
 CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,352,9,44321);
 CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,8,9,44322);
@@ -13049,8 +13057,10 @@ CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,4,10,44314);
 CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,164,10,44314);
 CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,4,10,44319);
 CheckOffset(struct _GdkDrawableClass,draw_trapezoids,168,10,44319);
+/* XXX hand-edit
 CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved3,4,10,44320);
 CheckOffset(struct _GdkDrawableClass,_gdk_reserved3,172,10,44320);
+*/
 CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,4,10,44321);
 CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,176,10,44321);
 CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,4,10,44322);
@@ -13129,8 +13139,10 @@ CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,8,12,44314);
 CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,328,12,44314);
 CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,8,12,44319);
 CheckOffset(struct _GdkDrawableClass,draw_trapezoids,336,12,44319);
+/* XXX hand-edit
 CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved3,8,12,44320);
 CheckOffset(struct _GdkDrawableClass,_gdk_reserved3,344,12,44320);
+*/
 CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,8,12,44321);
 CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,352,12,44321);
 CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,8,12,44322);
@@ -13185,7 +13197,9 @@ CheckOffset(struct _GdkDrawableClass,draw_pixbuf,0,1,44297);
 CheckOffset(struct _GdkDrawableClass,_copy_to_image,0,1,44306);
 CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,0,1,44314);
 CheckOffset(struct _GdkDrawableClass,draw_trapezoids,0,1,44319);
+/* XXX hand-edit
 CheckOffset(struct _GdkDrawableClass,_gdk_reserved3,0,1,44320);
+*/
 CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,0,1,44321);
 CheckOffset(struct _GdkDrawableClass,_gdk_reserved5,0,1,44322);
 CheckOffset(struct _GdkDrawableClass,_gdk_reserved6,0,1,44323);
