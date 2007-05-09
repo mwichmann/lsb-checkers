@@ -189,7 +189,7 @@ endif
 all: hdrchk
 
 hdrchk: $(OBJS)
-	$(CXX) -o hdrchk $(OBJS) $(EXTRALIBS) -L /usr/X11R6/lib64 -L/usr/X11R6/lib -L/usr/lib/qt3/lib -lXt -lX11 -lncurses -lqt-mt
+	$(CXX) -o hdrchk $(OBJS) $(EXTRALIBS) -L /usr/X11R6/lib64 -L/usr/X11R6/lib -L/usr/lib/qt3/lib64 -L/usr/lib/qt3/lib -lXt -lX11 -lncurses -lqt-mt
 
 hdrchk.o: hdrchk.c
 	$(CC) $(CFLAGS) -g -c hdrchk.c
