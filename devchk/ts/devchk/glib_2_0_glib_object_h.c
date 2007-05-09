@@ -9,6 +9,7 @@
 #define G_ERRORCHECK_MUTEXES
 #undef GOBJECT_COMPILATION
 #undef GETTEXT_PACKAGE
+#undef G_DISABLE_DEPRECATED	/* XXX hand-edit */
 
 union _GTypeCValue {
 };

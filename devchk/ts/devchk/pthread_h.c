@@ -408,6 +408,7 @@ CheckTypeSize(pthread_t,8, 9040, 11);
 CheckTypeSize(pthread_t,0, 9040, 1);
 #endif
 
+/* XXX hand-edit
 #if __i386__
 CheckTypeSize(struct _pthread_fastlock,8, 10105, 2);
 CheckMemberSize(struct _pthread_fastlock,__status,4,2,33602);
@@ -444,6 +445,7 @@ Msg("Missing member data for _pthread_fastlock on All\n");
 CheckOffset(struct _pthread_fastlock,__status,0,1,33602);
 CheckOffset(struct _pthread_fastlock,__spinlock,0,1,34427);
 #endif
+*/
 
 #if __i386__
 CheckTypeSize(pthread_mutex_t,24, 9047, 2);
@@ -538,6 +540,7 @@ CheckTypeSize(pthread_condattr_t,0, 9053, 1);
 #if 1
 #endif
 
+/* XXX hand-edit
 #if __i386__
 CheckTypeSize(_pthread_descr,4, 9087, 2);
 #elif __ia64__
@@ -555,6 +558,7 @@ CheckTypeSize(_pthread_descr,8, 9087, 11);
 #elif 1
 CheckTypeSize(_pthread_descr,0, 9087, 1);
 #endif
+*/
 
 #if __i386__
 CheckTypeSize(pthread_rwlock_t,32, 9055, 2);
@@ -592,6 +596,7 @@ CheckTypeSize(pthread_rwlockattr_t,8, 9057, 11);
 CheckTypeSize(pthread_rwlockattr_t,0, 9057, 1);
 #endif
 
+/* XXX hand-edit
 #if __i386__
 CheckTypeSize(struct _pthread_rwlock_t,32, 10279, 2);
 CheckMemberSize(struct _pthread_rwlock_t,__rw_readers,4,2,34439);
@@ -701,6 +706,7 @@ CheckOffset(struct _pthread_rwlock_t,__rw_write_waiting,0,1,34442);
 CheckOffset(struct _pthread_rwlock_t,__rw_kind,0,1,34443);
 CheckOffset(struct _pthread_rwlock_t,__rw_pshared,0,1,34444);
 #endif
+*/
 
 #if __i386__
 #elif __s390x__
@@ -722,11 +728,13 @@ CheckOffset(struct _pthread_rwlock_t,__rw_pshared,0,1,34444);
 #elif 1
 #endif
 
+/* XXX hand-edit
 extern void _pthread_cleanup_pop_db(struct _pthread_cleanup_buffer *, int);
 CheckInterfacedef(_pthread_cleanup_pop,_pthread_cleanup_pop_db);
 extern void _pthread_cleanup_push_db(struct _pthread_cleanup_buffer *, void(*__routine)(void *)
 , void *);
 CheckInterfacedef(_pthread_cleanup_push,_pthread_cleanup_push_db);
+*/
 extern int pthread_atfork_db(void(*prepare)(void)
 , void(*parent)(void)
 , void(*child)(void)
@@ -881,11 +889,13 @@ extern int pthread_rwlock_timedrdlock_db(pthread_rwlock_t *, const struct timesp
 CheckInterfacedef(pthread_rwlock_timedrdlock,pthread_rwlock_timedrdlock_db);
 extern int pthread_rwlock_timedwrlock_db(pthread_rwlock_t *, const struct timespec *);
 CheckInterfacedef(pthread_rwlock_timedwrlock,pthread_rwlock_timedwrlock_db);
+/* XXX hand-edit
 extern int __register_atfork_db(void(*prepare)(void)
 , void(*parent)(void)
 , void(*child)(void)
 , void *);
 CheckInterfacedef(__register_atfork,__register_atfork_db);
+*/
 extern int pthread_setschedprio_db(pthread_t, int);
 CheckInterfacedef(pthread_setschedprio,pthread_setschedprio_db);
 #ifdef TET_TEST
