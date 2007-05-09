@@ -372,6 +372,7 @@ CheckTypeSize(pthread_once_t,4, 9062, 11);
 CheckTypeSize(pthread_once_t,0, 9062, 1);
 #endif
 
+/* XXX hand-edit
 #if __i386__
 CheckTypeSize(__pthread_cond_align_t,8, 10917, 2);
 #elif __ia64__
@@ -389,6 +390,7 @@ CheckTypeSize(__pthread_cond_align_t,8, 10917, 11);
 #elif 1
 CheckTypeSize(__pthread_cond_align_t,0, 10917, 1);
 #endif
+*/
 
 #if __i386__
 CheckTypeSize(pthread_t,4, 9040, 2);
