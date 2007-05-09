@@ -15785,8 +15785,10 @@ CheckMemberSize(struct _GtkCalendar,highlight_row,4,2,45037);
 CheckOffset(struct _GtkCalendar,highlight_row,936,2,45037);
 CheckMemberSize(struct _GtkCalendar,highlight_col,4,2,45038);
 CheckOffset(struct _GtkCalendar,highlight_col,940,2,45038);
+/* XXX hand-edit
 CheckMemberSize(struct _GtkCalendar,private_data,4,2,45039);
 CheckOffset(struct _GtkCalendar,private_data,944,2,45039);
+*/
 CheckMemberSize(struct _GtkCalendar,grow_space,32,2,45040);
 CheckOffset(struct _GtkCalendar,grow_space,948,2,45040);
 CheckMemberSize(struct _GtkCalendar,_gtk_reserved1,4,2,45041);
@@ -15833,8 +15835,10 @@ CheckMemberSize(struct _GtkCalendar,highlight_row,4,11,45037);
 CheckOffset(struct _GtkCalendar,highlight_row,992,11,45037);
 CheckMemberSize(struct _GtkCalendar,highlight_col,4,11,45038);
 CheckOffset(struct _GtkCalendar,highlight_col,996,11,45038);
+/* XXX hand-edit
 CheckMemberSize(struct _GtkCalendar,private_data,8,11,45039);
 CheckOffset(struct _GtkCalendar,private_data,1000,11,45039);
+*/
 CheckMemberSize(struct _GtkCalendar,grow_space,32,11,45040);
 CheckOffset(struct _GtkCalendar,grow_space,1008,11,45040);
 CheckMemberSize(struct _GtkCalendar,_gtk_reserved1,8,11,45041);
@@ -15927,8 +15931,10 @@ CheckMemberSize(struct _GtkCalendar,highlight_row,4,6,45037);
 CheckOffset(struct _GtkCalendar,highlight_row,936,6,45037);
 CheckMemberSize(struct _GtkCalendar,highlight_col,4,6,45038);
 CheckOffset(struct _GtkCalendar,highlight_col,940,6,45038);
+/* XXX hand-edit
 CheckMemberSize(struct _GtkCalendar,private_data,4,6,45039);
 CheckOffset(struct _GtkCalendar,private_data,944,6,45039);
+*/
 CheckMemberSize(struct _GtkCalendar,grow_space,32,6,45040);
 CheckOffset(struct _GtkCalendar,grow_space,948,6,45040);
 CheckMemberSize(struct _GtkCalendar,_gtk_reserved1,4,6,45041);
@@ -15975,8 +15981,10 @@ CheckMemberSize(struct _GtkCalendar,highlight_row,4,9,45037);
 CheckOffset(struct _GtkCalendar,highlight_row,992,9,45037);
 CheckMemberSize(struct _GtkCalendar,highlight_col,4,9,45038);
 CheckOffset(struct _GtkCalendar,highlight_col,996,9,45038);
+/* XXX hand-edit
 CheckMemberSize(struct _GtkCalendar,private_data,8,9,45039);
 CheckOffset(struct _GtkCalendar,private_data,1000,9,45039);
+*/
 CheckMemberSize(struct _GtkCalendar,grow_space,32,9,45040);
 CheckOffset(struct _GtkCalendar,grow_space,1008,9,45040);
 CheckMemberSize(struct _GtkCalendar,_gtk_reserved1,8,9,45041);
@@ -16023,8 +16031,10 @@ CheckMemberSize(struct _GtkCalendar,highlight_row,4,10,45037);
 CheckOffset(struct _GtkCalendar,highlight_row,936,10,45037);
 CheckMemberSize(struct _GtkCalendar,highlight_col,4,10,45038);
 CheckOffset(struct _GtkCalendar,highlight_col,940,10,45038);
+/* XXX hand-edit
 CheckMemberSize(struct _GtkCalendar,private_data,4,10,45039);
 CheckOffset(struct _GtkCalendar,private_data,944,10,45039);
+*/
 CheckMemberSize(struct _GtkCalendar,grow_space,32,10,45040);
 CheckOffset(struct _GtkCalendar,grow_space,948,10,45040);
 CheckMemberSize(struct _GtkCalendar,_gtk_reserved1,4,10,45041);
@@ -16071,6 +16081,7 @@ CheckMemberSize(struct _GtkCalendar,highlight_row,4,12,45037);
 CheckOffset(struct _GtkCalendar,highlight_row,992,12,45037);
 CheckMemberSize(struct _GtkCalendar,highlight_col,4,12,45038);
 CheckOffset(struct _GtkCalendar,highlight_col,996,12,45038);
+/* XXX hand-edit
 CheckMemberSize(struct _GtkCalendar,private_data,8,12,45039);
 CheckOffset(struct _GtkCalendar,private_data,1000,12,45039);
 CheckMemberSize(struct _GtkCalendar,grow_space,32,12,45040);
@@ -16104,6 +16115,7 @@ CheckOffset(struct _GtkCalendar,focus_row,0,1,45035);
 CheckOffset(struct _GtkCalendar,focus_col,0,1,45036);
 CheckOffset(struct _GtkCalendar,highlight_row,0,1,45037);
 CheckOffset(struct _GtkCalendar,highlight_col,0,1,45038);
+/* XXX hand-edit
 CheckOffset(struct _GtkCalendar,private_data,0,1,45039);
 CheckOffset(struct _GtkCalendar,grow_space,0,1,45040);
 CheckOffset(struct _GtkCalendar,_gtk_reserved1,0,1,45041);
@@ -18508,8 +18520,10 @@ CheckMemberSize(struct _GtkWidgetClass,screen_changed,4,2,45384);
 CheckOffset(struct _GtkWidgetClass,screen_changed,332,2,45384);
 CheckMemberSize(struct _GtkWidgetClass,can_activate_accel,4,2,45387);
 CheckOffset(struct _GtkWidgetClass,can_activate_accel,336,2,45387);
+/* XXX hand-edit
 CheckMemberSize(struct _GtkWidgetClass,_gtk_reserved2,4,2,45388);
 CheckOffset(struct _GtkWidgetClass,_gtk_reserved2,340,2,45388);
+*/
 CheckMemberSize(struct _GtkWidgetClass,_gtk_reserved3,4,2,45389);
 CheckOffset(struct _GtkWidgetClass,_gtk_reserved3,344,2,45389);
 CheckMemberSize(struct _GtkWidgetClass,_gtk_reserved4,4,2,45390);
@@ -18652,8 +18666,10 @@ CheckMemberSize(struct _GtkWidgetClass,screen_changed,8,11,45384);
 CheckOffset(struct _GtkWidgetClass,screen_changed,656,11,45384);
 CheckMemberSize(struct _GtkWidgetClass,can_activate_accel,8,11,45387);
 CheckOffset(struct _GtkWidgetClass,can_activate_accel,664,11,45387);
+/* XXX hand-edit
 CheckMemberSize(struct _GtkWidgetClass,_gtk_reserved2,8,11,45388);
 CheckOffset(struct _GtkWidgetClass,_gtk_reserved2,672,11,45388);
+*/
 CheckMemberSize(struct _GtkWidgetClass,_gtk_reserved3,8,11,45389);
 CheckOffset(struct _GtkWidgetClass,_gtk_reserved3,680,11,45389);
 CheckMemberSize(struct _GtkWidgetClass,_gtk_reserved4,8,11,45390);
@@ -18938,8 +18954,10 @@ CheckMemberSize(struct _GtkWidgetClass,screen_changed,4,6,45384);
 CheckOffset(struct _GtkWidgetClass,screen_changed,332,6,45384);
 CheckMemberSize(struct _GtkWidgetClass,can_activate_accel,4,6,45387);
 CheckOffset(struct _GtkWidgetClass,can_activate_accel,336,6,45387);
+/* XXX hand-edit
 CheckMemberSize(struct _GtkWidgetClass,_gtk_reserved2,4,6,45388);
 CheckOffset(struct _GtkWidgetClass,_gtk_reserved2,340,6,45388);
+*/
 CheckMemberSize(struct _GtkWidgetClass,_gtk_reserved3,4,6,45389);
 CheckOffset(struct _GtkWidgetClass,_gtk_reserved3,344,6,45389);
 CheckMemberSize(struct _GtkWidgetClass,_gtk_reserved4,4,6,45390);
@@ -19082,8 +19100,10 @@ CheckMemberSize(struct _GtkWidgetClass,screen_changed,8,9,45384);
 CheckOffset(struct _GtkWidgetClass,screen_changed,656,9,45384);
 CheckMemberSize(struct _GtkWidgetClass,can_activate_accel,8,9,45387);
 CheckOffset(struct _GtkWidgetClass,can_activate_accel,664,9,45387);
+/* XXX hand-edit
 CheckMemberSize(struct _GtkWidgetClass,_gtk_reserved2,8,9,45388);
 CheckOffset(struct _GtkWidgetClass,_gtk_reserved2,672,9,45388);
+*/
 CheckMemberSize(struct _GtkWidgetClass,_gtk_reserved3,8,9,45389);
 CheckOffset(struct _GtkWidgetClass,_gtk_reserved3,680,9,45389);
 CheckMemberSize(struct _GtkWidgetClass,_gtk_reserved4,8,9,45390);
@@ -19226,8 +19246,10 @@ CheckMemberSize(struct _GtkWidgetClass,screen_changed,4,10,45384);
 CheckOffset(struct _GtkWidgetClass,screen_changed,332,10,45384);
 CheckMemberSize(struct _GtkWidgetClass,can_activate_accel,4,10,45387);
 CheckOffset(struct _GtkWidgetClass,can_activate_accel,336,10,45387);
+/* XXX hand-edit
 CheckMemberSize(struct _GtkWidgetClass,_gtk_reserved2,4,10,45388);
 CheckOffset(struct _GtkWidgetClass,_gtk_reserved2,340,10,45388);
+*/
 CheckMemberSize(struct _GtkWidgetClass,_gtk_reserved3,4,10,45389);
 CheckOffset(struct _GtkWidgetClass,_gtk_reserved3,344,10,45389);
 CheckMemberSize(struct _GtkWidgetClass,_gtk_reserved4,4,10,45390);
@@ -19370,8 +19392,10 @@ CheckMemberSize(struct _GtkWidgetClass,screen_changed,8,12,45384);
 CheckOffset(struct _GtkWidgetClass,screen_changed,656,12,45384);
 CheckMemberSize(struct _GtkWidgetClass,can_activate_accel,8,12,45387);
 CheckOffset(struct _GtkWidgetClass,can_activate_accel,664,12,45387);
+/* XXX hand-edit
 CheckMemberSize(struct _GtkWidgetClass,_gtk_reserved2,8,12,45388);
 CheckOffset(struct _GtkWidgetClass,_gtk_reserved2,672,12,45388);
+*/
 CheckMemberSize(struct _GtkWidgetClass,_gtk_reserved3,8,12,45389);
 CheckOffset(struct _GtkWidgetClass,_gtk_reserved3,680,12,45389);
 CheckMemberSize(struct _GtkWidgetClass,_gtk_reserved4,8,12,45390);
@@ -19451,7 +19475,9 @@ CheckOffset(struct _GtkWidgetClass,show_help,0,1,45379);
 CheckOffset(struct _GtkWidgetClass,get_accessible,0,1,45381);
 CheckOffset(struct _GtkWidgetClass,screen_changed,0,1,45384);
 CheckOffset(struct _GtkWidgetClass,can_activate_accel,0,1,45387);
+/* XXX hand-edit
 CheckOffset(struct _GtkWidgetClass,_gtk_reserved2,0,1,45388);
+*/
 CheckOffset(struct _GtkWidgetClass,_gtk_reserved3,0,1,45389);
 CheckOffset(struct _GtkWidgetClass,_gtk_reserved4,0,1,45390);
 CheckOffset(struct _GtkWidgetClass,_gtk_reserved5,0,1,45391);
