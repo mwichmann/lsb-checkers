@@ -12378,8 +12378,10 @@ CheckMemberSize(struct _GtkTextAttributes,wrap_mode,4,2,44857);
 CheckOffset(struct _GtkTextAttributes,wrap_mode,96,2,44857);
 CheckMemberSize(struct _GtkTextAttributes,language,4,2,44858);
 CheckOffset(struct _GtkTextAttributes,language,100,2,44858);
+/* XXX hand-edit
 CheckMemberSize(struct _GtkTextAttributes,padding1,4,2,44859);
 CheckOffset(struct _GtkTextAttributes,padding1,104,2,44859);
+*/
 #elif __x86_64__
 CheckTypeSize(struct _GtkTextAttributes,160, 13234, 11);
 CheckMemberSize(struct _GtkTextAttributes,appearance,64,11,44834);
@@ -12410,8 +12412,10 @@ CheckMemberSize(struct _GtkTextAttributes,wrap_mode,4,11,44857);
 CheckOffset(struct _GtkTextAttributes,wrap_mode,128,11,44857);
 CheckMemberSize(struct _GtkTextAttributes,language,8,11,44858);
 CheckOffset(struct _GtkTextAttributes,language,136,11,44858);
+/* XXX hand-edit
 CheckMemberSize(struct _GtkTextAttributes,padding1,8,11,44859);
 CheckOffset(struct _GtkTextAttributes,padding1,144,11,44859);
+*/
 #elif __ia64__
 CheckTypeSize(struct _GtkTextAttributes,160, 13234, 3);
 CheckMemberSize(struct _GtkTextAttributes,appearance,64,3,44834);
@@ -12472,8 +12476,10 @@ CheckMemberSize(struct _GtkTextAttributes,wrap_mode,4,6,44857);
 CheckOffset(struct _GtkTextAttributes,wrap_mode,100,6,44857);
 CheckMemberSize(struct _GtkTextAttributes,language,4,6,44858);
 CheckOffset(struct _GtkTextAttributes,language,104,6,44858);
+/* XXX hand-edit
 CheckMemberSize(struct _GtkTextAttributes,padding1,4,6,44859);
 CheckOffset(struct _GtkTextAttributes,padding1,108,6,44859);
+*/
 #elif __powerpc64__
 CheckTypeSize(struct _GtkTextAttributes,160, 13234, 9);
 CheckMemberSize(struct _GtkTextAttributes,appearance,64,9,44834);
@@ -12504,8 +12510,10 @@ CheckMemberSize(struct _GtkTextAttributes,wrap_mode,4,9,44857);
 CheckOffset(struct _GtkTextAttributes,wrap_mode,128,9,44857);
 CheckMemberSize(struct _GtkTextAttributes,language,8,9,44858);
 CheckOffset(struct _GtkTextAttributes,language,136,9,44858);
+/* XXX hand-edit
 CheckMemberSize(struct _GtkTextAttributes,padding1,8,9,44859);
 CheckOffset(struct _GtkTextAttributes,padding1,144,9,44859);
+*/
 #elif __s390__ && !__s390x__
 CheckTypeSize(struct _GtkTextAttributes,120, 13234, 10);
 CheckMemberSize(struct _GtkTextAttributes,appearance,44,10,44834);
@@ -12536,8 +12544,10 @@ CheckMemberSize(struct _GtkTextAttributes,wrap_mode,4,10,44857);
 CheckOffset(struct _GtkTextAttributes,wrap_mode,100,10,44857);
 CheckMemberSize(struct _GtkTextAttributes,language,4,10,44858);
 CheckOffset(struct _GtkTextAttributes,language,104,10,44858);
+/* XXX hand-edit
 CheckMemberSize(struct _GtkTextAttributes,padding1,4,10,44859);
 CheckOffset(struct _GtkTextAttributes,padding1,108,10,44859);
+*/
 #elif __s390x__
 CheckTypeSize(struct _GtkTextAttributes,160, 13234, 12);
 CheckMemberSize(struct _GtkTextAttributes,appearance,64,12,44834);
@@ -12568,8 +12578,10 @@ CheckMemberSize(struct _GtkTextAttributes,wrap_mode,4,12,44857);
 CheckOffset(struct _GtkTextAttributes,wrap_mode,128,12,44857);
 CheckMemberSize(struct _GtkTextAttributes,language,8,12,44858);
 CheckOffset(struct _GtkTextAttributes,language,136,12,44858);
+/* XXX hand-edit
 CheckMemberSize(struct _GtkTextAttributes,padding1,8,12,44859);
 CheckOffset(struct _GtkTextAttributes,padding1,144,12,44859);
+*/
 #elif 1
 CheckTypeSize(struct _GtkTextAttributes,0, 13234, 1);
 CheckBitField(struct _GtkTextAttributes,invisible,1,1,44860)
@@ -26729,10 +26741,12 @@ CheckMemberSize(struct _GtkToolbar,button_maxw,4,2,45746);
 CheckOffset(struct _GtkToolbar,button_maxw,92,2,45746);
 CheckMemberSize(struct _GtkToolbar,button_maxh,4,2,45747);
 CheckOffset(struct _GtkToolbar,button_maxh,96,2,45747);
+/* XXX hand-edit
 CheckMemberSize(struct _GtkToolbar,style_set_connection,4,2,45748);
 CheckOffset(struct _GtkToolbar,style_set_connection,100,2,45748);
 CheckMemberSize(struct _GtkToolbar,icon_size_connection,4,2,45749);
 CheckOffset(struct _GtkToolbar,icon_size_connection,104,2,45749);
+*/
 #elif __x86_64__
 CheckTypeSize(struct _GtkToolbar,176, 13698, 11);
 CheckMemberSize(struct _GtkToolbar,num_children,4,11,45736);
@@ -26751,10 +26765,12 @@ CheckMemberSize(struct _GtkToolbar,button_maxw,4,11,45746);
 CheckOffset(struct _GtkToolbar,button_maxw,152,11,45746);
 CheckMemberSize(struct _GtkToolbar,button_maxh,4,11,45747);
 CheckOffset(struct _GtkToolbar,button_maxh,156,11,45747);
+/* XXX hand-edit
 CheckMemberSize(struct _GtkToolbar,style_set_connection,4,11,45748);
 CheckOffset(struct _GtkToolbar,style_set_connection,160,11,45748);
 CheckMemberSize(struct _GtkToolbar,icon_size_connection,4,11,45749);
 CheckOffset(struct _GtkToolbar,icon_size_connection,164,11,45749);
+*/
 #elif __ia64__
 CheckTypeSize(struct _GtkToolbar,176, 13698, 3);
 CheckMemberSize(struct _GtkToolbar,num_children,4,3,45736);
@@ -26791,10 +26807,12 @@ CheckMemberSize(struct _GtkToolbar,button_maxw,4,6,45746);
 CheckOffset(struct _GtkToolbar,button_maxw,92,6,45746);
 CheckMemberSize(struct _GtkToolbar,button_maxh,4,6,45747);
 CheckOffset(struct _GtkToolbar,button_maxh,96,6,45747);
+/* XXX hand-edit
 CheckMemberSize(struct _GtkToolbar,style_set_connection,4,6,45748);
 CheckOffset(struct _GtkToolbar,style_set_connection,100,6,45748);
 CheckMemberSize(struct _GtkToolbar,icon_size_connection,4,6,45749);
 CheckOffset(struct _GtkToolbar,icon_size_connection,104,6,45749);
+*/
 #elif __powerpc64__
 CheckTypeSize(struct _GtkToolbar,176, 13698, 9);
 CheckMemberSize(struct _GtkToolbar,num_children,4,9,45736);
@@ -26813,10 +26831,12 @@ CheckMemberSize(struct _GtkToolbar,button_maxw,4,9,45746);
 CheckOffset(struct _GtkToolbar,button_maxw,152,9,45746);
 CheckMemberSize(struct _GtkToolbar,button_maxh,4,9,45747);
 CheckOffset(struct _GtkToolbar,button_maxh,156,9,45747);
+/* XXX hand-edit
 CheckMemberSize(struct _GtkToolbar,style_set_connection,4,9,45748);
 CheckOffset(struct _GtkToolbar,style_set_connection,160,9,45748);
 CheckMemberSize(struct _GtkToolbar,icon_size_connection,4,9,45749);
 CheckOffset(struct _GtkToolbar,icon_size_connection,164,9,45749);
+*/
 #elif __s390__ && !__s390x__
 CheckTypeSize(struct _GtkToolbar,112, 13698, 10);
 CheckMemberSize(struct _GtkToolbar,num_children,4,10,45736);
@@ -26835,10 +26855,12 @@ CheckMemberSize(struct _GtkToolbar,button_maxw,4,10,45746);
 CheckOffset(struct _GtkToolbar,button_maxw,92,10,45746);
 CheckMemberSize(struct _GtkToolbar,button_maxh,4,10,45747);
 CheckOffset(struct _GtkToolbar,button_maxh,96,10,45747);
+/* XXX hand-edit
 CheckMemberSize(struct _GtkToolbar,style_set_connection,4,10,45748);
 CheckOffset(struct _GtkToolbar,style_set_connection,100,10,45748);
 CheckMemberSize(struct _GtkToolbar,icon_size_connection,4,10,45749);
 CheckOffset(struct _GtkToolbar,icon_size_connection,104,10,45749);
+*/
 #elif __s390x__
 CheckTypeSize(struct _GtkToolbar,176, 13698, 12);
 CheckMemberSize(struct _GtkToolbar,num_children,4,12,45736);
@@ -26857,10 +26879,12 @@ CheckMemberSize(struct _GtkToolbar,button_maxw,4,12,45746);
 CheckOffset(struct _GtkToolbar,button_maxw,152,12,45746);
 CheckMemberSize(struct _GtkToolbar,button_maxh,4,12,45747);
 CheckOffset(struct _GtkToolbar,button_maxh,156,12,45747);
+/* XXX hand-edit
 CheckMemberSize(struct _GtkToolbar,style_set_connection,4,12,45748);
 CheckOffset(struct _GtkToolbar,style_set_connection,160,12,45748);
 CheckMemberSize(struct _GtkToolbar,icon_size_connection,4,12,45749);
 CheckOffset(struct _GtkToolbar,icon_size_connection,164,12,45749);
+*/
 #elif 1
 CheckTypeSize(struct _GtkToolbar,0, 13698, 1);
 CheckBitField(struct _GtkToolbar,style_set,1,1,45750)
