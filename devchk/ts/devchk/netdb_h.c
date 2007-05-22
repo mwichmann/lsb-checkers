@@ -731,6 +731,10 @@ extern void setservent_db(int);
 CheckInterfacedef(setservent,setservent_db);
 extern int * __h_errno_location_db(void);
 CheckInterfacedef(__h_errno_location,__h_errno_location_db);
+extern int gethostbyaddr_r_db(const void *, socklen_t, int, struct hostent *, char *, size_t, struct hostent * *, int *);
+CheckInterfacedef(gethostbyaddr_r,gethostbyaddr_r_db);
+extern int gethostbyname_r_db(const char *, struct hostent *, char *, size_t, struct hostent * *, int *);
+CheckInterfacedef(gethostbyname_r,gethostbyname_r_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

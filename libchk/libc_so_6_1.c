@@ -1077,6 +1077,69 @@ struct versym libc_so_6_1[] = {
 	{"__xmknod","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if __i386__
+	{"__xpg_basename","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if __ia64__
+	{"__xpg_basename","GLIBC_2.2",0,LSB_Core,8,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"__xpg_basename","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if __powerpc64__
+	{"__xpg_basename","GLIBC_2.3",0,LSB_Core,8,1},
+#endif
+#if __s390__ && !__s390x__
+	{"__xpg_basename","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if __x86_64__
+	{"__xpg_basename","GLIBC_2.2.5",0,LSB_Core,8,1},
+#endif
+#if __s390x__
+	{"__xpg_basename","GLIBC_2.2",0,LSB_Core,8,1},
+#endif
+#if __i386__
+	{"__xpg_sigpause","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if __ia64__
+	{"__xpg_sigpause","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"__xpg_sigpause","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if __powerpc64__
+	{"__xpg_sigpause","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if __s390__ && !__s390x__
+	{"__xpg_sigpause","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if __x86_64__
+	{"__xpg_sigpause","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if __s390x__
+	{"__xpg_sigpause","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if __i386__
+	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if __ia64__
+	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,8,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if __powerpc64__
+	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,8,1},
+#endif
+#if __s390__ && !__s390x__
+	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if __x86_64__
+	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,8,1},
+#endif
+#if __s390x__
+	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,8,1},
+#endif
+#if __i386__
 	{"__xstat","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if __ia64__
@@ -5111,6 +5174,27 @@ struct versym libc_so_6_1[] = {
 	{"gethostbyaddr","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
 #if __i386__
+	{"gethostbyaddr_r","GLIBC_2.1.2",0,LSB_Core,4,1},
+#endif
+#if __ia64__
+	{"gethostbyaddr_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"gethostbyaddr_r","GLIBC_2.1.2",0,LSB_Core,4,1},
+#endif
+#if __powerpc64__
+	{"gethostbyaddr_r","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if __s390__ && !__s390x__
+	{"gethostbyaddr_r","GLIBC_2.1.2",0,LSB_Core,4,1},
+#endif
+#if __x86_64__
+	{"gethostbyaddr_r","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if __s390x__
+	{"gethostbyaddr_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if __i386__
 	{"gethostbyname","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if __ia64__
@@ -5130,6 +5214,27 @@ struct versym libc_so_6_1[] = {
 #endif
 #if __s390x__
 	{"gethostbyname","GLIBC_2.2",0,LSB_Core,0,1},
+#endif
+#if __i386__
+	{"gethostbyname_r","GLIBC_2.1.2",0,LSB_Core,4,1},
+#endif
+#if __ia64__
+	{"gethostbyname_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"gethostbyname_r","GLIBC_2.1.2",0,LSB_Core,4,1},
+#endif
+#if __powerpc64__
+	{"gethostbyname_r","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if __s390__ && !__s390x__
+	{"gethostbyname_r","GLIBC_2.1.2",0,LSB_Core,4,1},
+#endif
+#if __x86_64__
+	{"gethostbyname_r","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if __s390x__
+	{"gethostbyname_r","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if __i386__
 	{"gethostid","GLIBC_2.0",0,LSB_Core,4,1},
@@ -9202,6 +9307,27 @@ struct versym libc_so_6_1[] = {
 #endif
 #if __s390x__
 	{"printf","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if __i386__
+	{"pselect","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if __ia64__
+	{"pselect","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"pselect","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if __powerpc64__
+	{"pselect","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if __s390__ && !__s390x__
+	{"pselect","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if __x86_64__
+	{"pselect","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if __s390x__
+	{"pselect","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if __i386__
 	{"psignal","GLIBC_2.0",0,LSB_Core,1,1},
