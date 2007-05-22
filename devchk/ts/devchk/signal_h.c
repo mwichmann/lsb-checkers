@@ -2152,6 +2152,8 @@ extern int sigtimedwait_db(const sigset_t *, siginfo_t *, const struct timespec 
 CheckInterfacedef(sigtimedwait,sigtimedwait_db);
 extern sighandler_t bsd_signal_db(int, sighandler_t);
 CheckInterfacedef(bsd_signal,bsd_signal_db);
+extern int __xpg_sigpause_db(int);
+CheckInterfacedef(__xpg_sigpause,__xpg_sigpause_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
