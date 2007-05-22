@@ -29633,9 +29633,6 @@ struct versym DynSyms[] = {
 #if __powerpc64__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if __s390__ && !__s390x__
-	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl","GLIBCXX_3.4",0,LSB_Cpp},
-#endif
 #if __x86_64__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
@@ -47310,6 +47307,69 @@ struct versym DynSyms[] = {
 	{"__xmlSubstituteEntitiesDefaultValue","",0,LSB_XML},
 	{"__xmlTreeIndentString","",0,LSB_XML},
 #if __i386__
+	{"__xpg_basename","GLIBC_2.0",0,LSB_Core},
+#endif
+#if __ia64__
+	{"__xpg_basename","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"__xpg_basename","GLIBC_2.0",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"__xpg_basename","GLIBC_2.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"__xpg_basename","GLIBC_2.0",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"__xpg_basename","GLIBC_2.2.5",0,LSB_Core},
+#endif
+#if __s390x__
+	{"__xpg_basename","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __i386__
+	{"__xpg_sigpause","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __ia64__
+	{"__xpg_sigpause","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"__xpg_sigpause","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"__xpg_sigpause","GLIBC_2.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"__xpg_sigpause","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"__xpg_sigpause","GLIBC_2.2.5",0,LSB_Core},
+#endif
+#if __s390x__
+	{"__xpg_sigpause","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __i386__
+	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core},
+#endif
+#if __ia64__
+	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core},
+#endif
+#if __s390x__
+	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core},
+#endif
+#if __i386__
 	{"__xstat","GLIBC_2.0",0,LSB_Core},
 #endif
 #if __ia64__
@@ -57171,6 +57231,27 @@ struct versym DynSyms[] = {
 	{"gethostbyaddr","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __i386__
+	{"gethostbyaddr_r","GLIBC_2.1.2",0,LSB_Core},
+#endif
+#if __ia64__
+	{"gethostbyaddr_r","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"gethostbyaddr_r","GLIBC_2.1.2",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"gethostbyaddr_r","GLIBC_2.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"gethostbyaddr_r","GLIBC_2.1.2",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"gethostbyaddr_r","GLIBC_2.2.5",0,LSB_Core},
+#endif
+#if __s390x__
+	{"gethostbyaddr_r","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __i386__
 	{"gethostbyname","GLIBC_2.0",0,LSB_Core},
 #endif
 #if __ia64__
@@ -57190,6 +57271,27 @@ struct versym DynSyms[] = {
 #endif
 #if __s390x__
 	{"gethostbyname","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __i386__
+	{"gethostbyname_r","GLIBC_2.1.2",0,LSB_Core},
+#endif
+#if __ia64__
+	{"gethostbyname_r","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"gethostbyname_r","GLIBC_2.1.2",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"gethostbyname_r","GLIBC_2.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"gethostbyname_r","GLIBC_2.1.2",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"gethostbyname_r","GLIBC_2.2.5",0,LSB_Core},
+#endif
+#if __s390x__
+	{"gethostbyname_r","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __i386__
 	{"gethostid","GLIBC_2.0",0,LSB_Core},
@@ -66394,6 +66496,27 @@ struct versym DynSyms[] = {
 	{"printf","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"printw","",0,LSB_Core},
+#if __i386__
+	{"pselect","GLIBC_2.0",0,LSB_Core},
+#endif
+#if __ia64__
+	{"pselect","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"pselect","GLIBC_2.0",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"pselect","GLIBC_2.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"pselect","GLIBC_2.0",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"pselect","GLIBC_2.2.5",0,LSB_Core},
+#endif
+#if __s390x__
+	{"pselect","GLIBC_2.2",0,LSB_Core},
+#endif
 #if __i386__
 	{"psignal","GLIBC_2.0",0,LSB_Core},
 #endif
