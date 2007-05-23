@@ -64709,6 +64709,16 @@ struct versym DynSyms[] = {
 #if __s390x__
 	{"mprotect","GLIBC_2.2",0,LSB_Core},
 #endif
+	{"mq_close","GLIBC_2.3.4",0,LSB_Core},
+	{"mq_getattr","GLIBC_2.3.4",0,LSB_Core},
+	{"mq_notify","GLIBC_2.3.4",0,LSB_Core},
+	{"mq_open","GLIBC_2.3.4",0,LSB_Core},
+	{"mq_receive","GLIBC_2.3.4",0,LSB_Core},
+	{"mq_send","GLIBC_2.3.4",0,LSB_Core},
+	{"mq_setattr","GLIBC_2.3.4",0,LSB_Core},
+	{"mq_timedreceive","GLIBC_2.3.4",0,LSB_Core},
+	{"mq_timedsend","GLIBC_2.3.4",0,LSB_Core},
+	{"mq_unlink","GLIBC_2.3.4",0,LSB_Core},
 #if __i386__
 	{"mrand48","GLIBC_2.0",0,LSB_Core},
 #endif

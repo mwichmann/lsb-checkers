@@ -6,6 +6,8 @@ OBJS = libchk.o libs.o classchk.o $(LIBOBJS)
 
 CFLAGS=-g -I../elfchk -I../tetj -DUSE_CXXABI_DEMANGLE -DLSBVERSION=\"$$LSBVERSION\" -DLSBLIBCHK_VERSION=\"$(LSBLIBCHK_VERSION)\" -Wall
 
+GENSRCS=libs.h libs.c
+
 all:: libchk dummy_link
 
 include ../Makefile.common
@@ -13,7 +15,9 @@ include ../Makefile.common
 libchk: $(OBJS) ../elfchk/libelfchk.a ../tetj/libtetj.a
 	$(CC) $(CFLAGS) -o libchk $(OBJS) -L../elfchk -L ../tetj -lelfchk -ltetj -lstdc++ -ldl
 
-libs.c:
+gensrc: $(GENSRCS)
+
+libs.c libs.h:
 	./mkfunclist -v `cat LSB_VERSION`
 
 LSB_LINKER=`./lsb_linker`
@@ -46,7 +50,7 @@ dumpints: dumpints.o libstdcxx_so_5.o
 
 # Distclean means will need database to rebuild
 distclean: clean
-	rm -f libs.h libs.c
+	rm -f $(GENSRCS)
 
 clean:
 	rm -f $(OBJS) libchk dummy_link dummy_link.o
