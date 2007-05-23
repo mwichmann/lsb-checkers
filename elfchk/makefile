@@ -30,6 +30,8 @@ test: test.c $(LIB) $(LIBS)
 check: dynsyms.c dynsyms.c.chk
 	diff dynsyms.c dynsyms.c.chk
 
+gensrc: $(GENSRCS)
+
 dynsyms.c:
 	./mkfunclist -v `cat LSB_VERSION` >dynsyms.c
 
