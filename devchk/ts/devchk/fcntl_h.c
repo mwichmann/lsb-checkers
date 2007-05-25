@@ -481,6 +481,26 @@ cnt++;
 
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifdef F_SETSIG
+	CompareConstant(F_SETSIG,10,3023,architecture)
+#else
+Msg( "Error: Constant not found: F_SETSIG\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef F_GETSIG
+	CompareConstant(F_GETSIG,11,3024,architecture)
+#else
+Msg( "Error: Constant not found: F_GETSIG\n");
+cnt++;
+#endif
+
+#endif
+
 #if __i386__
 CheckTypeSize(struct flock,16, 10217, 2);
 CheckMemberSize(struct flock,l_type,2,2,34302);
