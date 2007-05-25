@@ -66315,6 +66315,27 @@ struct versym DynSyms[] = {
 #if __s390x__
 	{"posix_openpt","GLIBC_2.2.1",0,LSB_Core},
 #endif
+	{"posix_spawn","GLIBC_2.2",0,LSB_Core},
+	{"posix_spawn_file_actions_addclose","GLIBC_2.2",0,LSB_Core},
+	{"posix_spawn_file_actions_adddup2","GLIBC_2.2",0,LSB_Core},
+	{"posix_spawn_file_actions_addopen","GLIBC_2.2",0,LSB_Core},
+	{"posix_spawn_file_actions_destroy","GLIBC_2.2",0,LSB_Core},
+	{"posix_spawn_file_actions_init","GLIBC_2.2",0,LSB_Core},
+	{"posix_spawnattr_destroy","GLIBC_2.2",0,LSB_Core},
+	{"posix_spawnattr_getflags","GLIBC_2.2",0,LSB_Core},
+	{"posix_spawnattr_getpgroup","GLIBC_2.2",0,LSB_Core},
+	{"posix_spawnattr_getschedparam","GLIBC_2.2",0,LSB_Core},
+	{"posix_spawnattr_getschedpolicy","GLIBC_2.2",0,LSB_Core},
+	{"posix_spawnattr_getsigdefault","GLIBC_2.2",0,LSB_Core},
+	{"posix_spawnattr_getsigmask","GLIBC_2.2",0,LSB_Core},
+	{"posix_spawnattr_init","GLIBC_2.2",0,LSB_Core},
+	{"posix_spawnattr_setflags","GLIBC_2.2",0,LSB_Core},
+	{"posix_spawnattr_setpgroup","GLIBC_2.2",0,LSB_Core},
+	{"posix_spawnattr_setschedparam","GLIBC_2.2",0,LSB_Core},
+	{"posix_spawnattr_setschedpolicy","GLIBC_2.2",0,LSB_Core},
+	{"posix_spawnattr_setsigdefault","GLIBC_2.2",0,LSB_Core},
+	{"posix_spawnattr_setsigmask","GLIBC_2.2",0,LSB_Core},
+	{"posix_spawnp","GLIBC_2.2",0,LSB_Core},
 #if __i386__
 	{"pow","GLIBC_2.0",0,LSB_Core},
 #endif
