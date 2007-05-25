@@ -29,18 +29,98 @@ printf("Checking data structures in mqueue.h\n");
 CheckTypeSize(mqd_t,0, 16573, 1);
 #endif
 
-#if 1
+#if __i386__
+CheckTypeSize(struct mq_attr,32, 16575, 2);
+CheckMemberSize(struct mq_attr,mq_flags,4,2,53757);
+CheckOffset(struct mq_attr,mq_flags,0,2,53757);
+CheckMemberSize(struct mq_attr,mq_maxmsg,4,2,53758);
+CheckOffset(struct mq_attr,mq_maxmsg,4,2,53758);
+CheckMemberSize(struct mq_attr,mq_msgsize,4,2,53759);
+CheckOffset(struct mq_attr,mq_msgsize,8,2,53759);
+CheckMemberSize(struct mq_attr,mq_curmsgs,4,2,53760);
+CheckOffset(struct mq_attr,mq_curmsgs,12,2,53760);
+CheckMemberSize(struct mq_attr,__pad,16,2,53761);
+CheckOffset(struct mq_attr,__pad,16,2,53761);
+#elif __s390x__
+CheckTypeSize(struct mq_attr,64, 16575, 12);
+CheckMemberSize(struct mq_attr,mq_flags,8,12,53757);
+CheckOffset(struct mq_attr,mq_flags,0,12,53757);
+CheckMemberSize(struct mq_attr,mq_maxmsg,8,12,53758);
+CheckOffset(struct mq_attr,mq_maxmsg,8,12,53758);
+CheckMemberSize(struct mq_attr,mq_msgsize,8,12,53759);
+CheckOffset(struct mq_attr,mq_msgsize,16,12,53759);
+CheckMemberSize(struct mq_attr,mq_curmsgs,8,12,53760);
+CheckOffset(struct mq_attr,mq_curmsgs,24,12,53760);
+CheckMemberSize(struct mq_attr,__pad,32,12,53761);
+CheckOffset(struct mq_attr,__pad,32,12,53761);
+#elif __x86_64__
+CheckTypeSize(struct mq_attr,64, 16575, 11);
+CheckMemberSize(struct mq_attr,mq_flags,8,11,53757);
+CheckOffset(struct mq_attr,mq_flags,0,11,53757);
+CheckMemberSize(struct mq_attr,mq_maxmsg,8,11,53758);
+CheckOffset(struct mq_attr,mq_maxmsg,8,11,53758);
+CheckMemberSize(struct mq_attr,mq_msgsize,8,11,53759);
+CheckOffset(struct mq_attr,mq_msgsize,16,11,53759);
+CheckMemberSize(struct mq_attr,mq_curmsgs,8,11,53760);
+CheckOffset(struct mq_attr,mq_curmsgs,24,11,53760);
+CheckMemberSize(struct mq_attr,__pad,32,11,53761);
+CheckOffset(struct mq_attr,__pad,32,11,53761);
+#elif __s390__ && !__s390x__
+CheckTypeSize(struct mq_attr,32, 16575, 10);
+CheckMemberSize(struct mq_attr,mq_flags,4,10,53757);
+CheckOffset(struct mq_attr,mq_flags,0,10,53757);
+CheckMemberSize(struct mq_attr,mq_maxmsg,4,10,53758);
+CheckOffset(struct mq_attr,mq_maxmsg,4,10,53758);
+CheckMemberSize(struct mq_attr,mq_msgsize,4,10,53759);
+CheckOffset(struct mq_attr,mq_msgsize,8,10,53759);
+CheckMemberSize(struct mq_attr,mq_curmsgs,4,10,53760);
+CheckOffset(struct mq_attr,mq_curmsgs,12,10,53760);
+CheckMemberSize(struct mq_attr,__pad,16,10,53761);
+CheckOffset(struct mq_attr,__pad,16,10,53761);
+#elif __powerpc64__
+CheckTypeSize(struct mq_attr,64, 16575, 9);
+CheckMemberSize(struct mq_attr,mq_flags,8,9,53757);
+CheckOffset(struct mq_attr,mq_flags,0,9,53757);
+CheckMemberSize(struct mq_attr,mq_maxmsg,8,9,53758);
+CheckOffset(struct mq_attr,mq_maxmsg,8,9,53758);
+CheckMemberSize(struct mq_attr,mq_msgsize,8,9,53759);
+CheckOffset(struct mq_attr,mq_msgsize,16,9,53759);
+CheckMemberSize(struct mq_attr,mq_curmsgs,8,9,53760);
+CheckOffset(struct mq_attr,mq_curmsgs,24,9,53760);
+CheckMemberSize(struct mq_attr,__pad,32,9,53761);
+CheckOffset(struct mq_attr,__pad,32,9,53761);
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(struct mq_attr,32, 16575, 6);
+CheckMemberSize(struct mq_attr,mq_flags,4,6,53757);
+CheckOffset(struct mq_attr,mq_flags,0,6,53757);
+CheckMemberSize(struct mq_attr,mq_maxmsg,4,6,53758);
+CheckOffset(struct mq_attr,mq_maxmsg,4,6,53758);
+CheckMemberSize(struct mq_attr,mq_msgsize,4,6,53759);
+CheckOffset(struct mq_attr,mq_msgsize,8,6,53759);
+CheckMemberSize(struct mq_attr,mq_curmsgs,4,6,53760);
+CheckOffset(struct mq_attr,mq_curmsgs,12,6,53760);
+CheckMemberSize(struct mq_attr,__pad,16,6,53761);
+CheckOffset(struct mq_attr,__pad,16,6,53761);
+#elif __ia64__
+CheckTypeSize(struct mq_attr,64, 16575, 3);
+CheckMemberSize(struct mq_attr,mq_flags,8,3,53757);
+CheckOffset(struct mq_attr,mq_flags,0,3,53757);
+CheckMemberSize(struct mq_attr,mq_maxmsg,8,3,53758);
+CheckOffset(struct mq_attr,mq_maxmsg,8,3,53758);
+CheckMemberSize(struct mq_attr,mq_msgsize,8,3,53759);
+CheckOffset(struct mq_attr,mq_msgsize,16,3,53759);
+CheckMemberSize(struct mq_attr,mq_curmsgs,8,3,53760);
+CheckOffset(struct mq_attr,mq_curmsgs,24,3,53760);
+CheckMemberSize(struct mq_attr,__pad,32,3,53761);
+CheckOffset(struct mq_attr,__pad,32,3,53761);
+#elif 1
 CheckTypeSize(struct mq_attr,0, 16575, 1);
-CheckMemberSize(struct mq_attr,mq_flags,4,1,53757);
+Msg("Missing member data for mq_attr on All\n");
 CheckOffset(struct mq_attr,mq_flags,0,1,53757);
-CheckMemberSize(struct mq_attr,mq_maxmsg,4,1,53758);
-CheckOffset(struct mq_attr,mq_maxmsg,4,1,53758);
-CheckMemberSize(struct mq_attr,mq_msgsize,4,1,53759);
-CheckOffset(struct mq_attr,mq_msgsize,8,1,53759);
-CheckMemberSize(struct mq_attr,mq_curmsgs,4,1,53760);
-CheckOffset(struct mq_attr,mq_curmsgs,12,1,53760);
-CheckMemberSize(struct mq_attr,__pad,16,1,53761);
-CheckOffset(struct mq_attr,__pad,16,1,53761);
+CheckOffset(struct mq_attr,mq_maxmsg,0,1,53758);
+CheckOffset(struct mq_attr,mq_msgsize,0,1,53759);
+CheckOffset(struct mq_attr,mq_curmsgs,0,1,53760);
+CheckOffset(struct mq_attr,__pad,0,1,53761);
 #endif
 
 #if 1
