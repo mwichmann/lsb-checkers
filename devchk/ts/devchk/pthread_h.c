@@ -730,13 +730,15 @@ CheckOffset(struct _pthread_rwlock_t,__rw_pshared,0,1,34444);
 #elif 1
 #endif
 
+extern int pthread_mutex_timedlock_db(pthread_mutex_t, const struct timespec *);
+CheckInterfacedef(pthread_mutex_timedlock,pthread_mutex_timedlock_db);
 /* XXX hand-edit
 extern void _pthread_cleanup_pop_db(struct _pthread_cleanup_buffer *, int);
 CheckInterfacedef(_pthread_cleanup_pop,_pthread_cleanup_pop_db);
 extern void _pthread_cleanup_push_db(struct _pthread_cleanup_buffer *, void(*__routine)(void *)
 , void *);
-CheckInterfacedef(_pthread_cleanup_push,_pthread_cleanup_push_db);
 */
+CheckInterfacedef(_pthread_cleanup_push,_pthread_cleanup_push_db);
 extern int pthread_atfork_db(void(*prepare)(void)
 , void(*parent)(void)
 , void(*child)(void)
