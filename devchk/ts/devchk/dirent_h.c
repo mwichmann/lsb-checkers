@@ -209,6 +209,8 @@ CheckOffset(struct dirent64,d_type,0,1,34184);
 CheckOffset(struct dirent64,d_name,0,1,34185);
 #endif
 
+extern int readdir64_r_db(DIR *, struct dirent64 *, struct dirent64 * *);
+CheckInterfacedef(readdir64_r,readdir64_r_db);
 extern void rewinddir_db(DIR *);
 CheckInterfacedef(rewinddir,rewinddir_db);
 extern void seekdir_db(DIR *, long int);
