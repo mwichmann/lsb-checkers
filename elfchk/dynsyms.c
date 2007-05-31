@@ -67917,6 +67917,27 @@ struct versym DynSyms[] = {
 	{"pthread_mutex_lock","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __i386__
+	{"pthread_mutex_timedlock","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __ia64__
+	{"pthread_mutex_timedlock","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"pthread_mutex_timedlock","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"pthread_mutex_timedlock","GLIBC_2.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"pthread_mutex_timedlock","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"pthread_mutex_timedlock","GLIBC_2.2.5",0,LSB_Core},
+#endif
+#if __s390x__
+	{"pthread_mutex_timedlock","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __i386__
 	{"pthread_mutex_trylock","GLIBC_2.0",0,LSB_Core},
 #endif
 #if __ia64__
