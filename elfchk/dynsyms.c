@@ -69032,6 +69032,27 @@ struct versym DynSyms[] = {
 	{"readdir64","GLIBC_2.2",0,LSB_Core},
 #endif
 #if __i386__
+	{"readdir64_r","GLIBC_2.1",0,LSB_Core},
+#endif
+#if __ia64__
+	{"readdir64_r","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"readdir64_r","GLIBC_2.1",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"readdir64_r","GLIBC_2.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"readdir64_r","GLIBC_2.1",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"readdir64_r","GLIBC_2.2.5",0,LSB_Core},
+#endif
+#if __s390x__
+	{"readdir64_r","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __i386__
 	{"readdir_r","GLIBC_2.0",0,LSB_Core},
 #endif
 #if __ia64__
