@@ -106,7 +106,7 @@ getmodulename(int mod)
 {
 	struct lsb_module *m = LSB_Modules;
     int count=0;
-    char buf[1024];
+    static char buf[1024];
     buf[0] = '\0';
     /* special casing */
     while(m->name && mod) {
@@ -147,3 +147,26 @@ getmoduleval(char *mod)
 	}
 	return flag;
 }
+
+char *
+getlsbprofile(const char* lsb_version,int mod)
+{
+    static char buf[1024];
+	
+	if (mod == LSB_Core_Modules) {
+	    sprintf( buf, "LSB %s (Core & C++)", lsb_version);
+	}
+	else if (mod == LSB_Desktop_Modules) {
+	    sprintf(buf, "LSB %s (Core & C++ & Desktop)", lsb_version);
+	}
+	else if (mod == (LSB_Desktop_Modules | LSB_Toolkit_Qt)) {
+	    sprintf(buf, "LSB %s (Core & C++ & Desktop & Qt4(optional))",
+		    lsb_version);
+	}
+	else {
+	    sprintf(buf, "LSB %s (UNKNOWN PROFILE)", lsb_version);
+	}
+
+    return buf;
+}
+
