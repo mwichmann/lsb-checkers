@@ -186,8 +186,10 @@ main(int argc, char *argv[])
 	   case 'T':
 	      if(strcasecmp(optarg, "core,c++") == 0)
 		modules = LSB_Core | LSB_Cpp;
-	      else if(strcasecmp(optarg, "core,c++,desktop") == 0 || strcasecmp(optarg, "all") == 0)
-		modules = LSB_All_Modules;
+	      else if(strcasecmp(optarg, "core,c++,desktop") == 0)
+		modules = LSB_Desktop_Modules;
+	      /* else if(strcasecmp(optarg, "all") == 0)
+		modules = LSB_All_Modules; */
 	      else {
 		printf("product '%s' is not valid!\n", optarg);
 		usage(argv[0]);
@@ -277,6 +279,9 @@ main(int argc, char *argv[])
         tetj_add_config(journal, tmp_string);
         snprintf(tmp_string, TMP_STRING_SIZE, "LSB_MODULES=%s",
                  getmodulename(modules));
+        tetj_add_config(journal, tmp_string);
+        snprintf(tmp_string, TMP_STRING_SIZE, "LSB_PROFILE=%s",
+                 getlsbprofile(LSBVERSION,modules));
         tetj_add_config(journal, tmp_string);
 
         /* Log extra libraries to look for symbols in */
