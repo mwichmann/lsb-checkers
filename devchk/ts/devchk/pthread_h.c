@@ -737,8 +737,8 @@ extern void _pthread_cleanup_pop_db(struct _pthread_cleanup_buffer *, int);
 CheckInterfacedef(_pthread_cleanup_pop,_pthread_cleanup_pop_db);
 extern void _pthread_cleanup_push_db(struct _pthread_cleanup_buffer *, void(*__routine)(void *)
 , void *);
-*/
 CheckInterfacedef(_pthread_cleanup_push,_pthread_cleanup_push_db);
+*/
 extern int pthread_atfork_db(void(*prepare)(void)
 , void(*parent)(void)
 , void(*child)(void)
