@@ -31,7 +31,6 @@ OBJS = hdrchk.o \
 	fenv_h.o \
 	fmtmsg_h.o \
 	fnmatch_h.o \
-	fontconfig_fcfreetype_h.o \
 	fontconfig_fcprivate_h.o \
 	fontconfig_fontconfig_h.o \
 	ftw_h.o \
@@ -96,6 +95,7 @@ OBJS = hdrchk.o \
 	limits_h.o \
 	locale_h.o \
 	math_h.o \
+	mqueue_h.o \
 	net_if_h.o \
 	netdb_h.o \
 	netinet_in_h.o \
@@ -103,7 +103,6 @@ OBJS = hdrchk.o \
 	netinet_tcp_h.o \
 	netinet_udp_h.o \
 	nl_types_h.o \
-	pango_1_0_pango_pango_utils_h.o \
 	pango_1_0_pango_pango_h.o \
 	pango_1_0_pango_pangofc_decoder_h.o \
 	pango_1_0_pango_pangofc_fontmap_h.o \
@@ -125,6 +124,7 @@ OBJS = hdrchk.o \
 	semaphore_h.o \
 	setjmp_h.o \
 	signal_h.o \
+	spawn_h.o \
 	stddef_h.o \
 	stdio_h.o \
 	stdlib_h.o \
@@ -174,10 +174,10 @@ else
 EXTRALIBS =
 endif
 
-CFLAGS=-O -DQT_THREAD_SUPPORT -D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include -I/usr/include/glib-2.0 -I/usr/include/atk-1.0 -I/usr/include/pango-1.0 -I/usr/include/gtk-2.0 -I/usr/include/freetype2 -I/usr/lib/gtk-2.0/include -I/usr/lib64/gtk-2.0/include -I/usr/lib/glib-2.0/include -I/usr/lib64/glib-2.0/include -I/usr/include/libxml2 -I/usr/include/fontconfig -I/usr/include/cairo -I/usr/lib/qt3/include -I/opt/gnome/include -I/opt/gnome/include/atk-1.0 -I/opt/gnome/include/glib-2.0 -I/opt/gnome/include/gtk-2.0 -I/opt/gnome/include/pango-1.0 -I/opt/gnome/lib/glib-2.0/include -I/opt/gnome/lib64/glib-2.0/include -I/opt/gnome/lib/gtk-2.0/include -I/opt/gnome/lib64/gtk-2.0/include
+CFLAGS=-D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include -I/usr/include/glib-2.0 -I/usr/include/atk-1.0 -I/usr/include/pango-1.0 -I/usr/include/gtk-2.0 -I/usr/include/freetype2 -I/usr/lib/gtk-2.0/include -I/usr/lib64/gtk-2.0/include -I/usr/lib/glib-2.0/include -I/usr/lib64/glib-2.0/include -I/usr/include/libxml2 -I/usr/include/fontconfig -I/usr/include/cairo 
 
 ifdef LSB_PRODUCT
-CFLAGS=-DLSBCC_MODE -O -DQT_THREAD_SUPPORT -D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include -I/opt/lsb/include/glib-2.0 -I/opt/lsb/include/atk-1.0 -I/opt/lsb/include/pango-1.0 -I/opt/lsb/include/gtk-2.0 -I/usr/include/freetype2 -I/opt/lsb/include/libxml2 -I/opt/lsb/include/fontconfig
+CFLAGS=-DLSBCC_MODE -D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include -I/opt/lsb/include/glib-2.0 -I/opt/lsb/include/atk-1.0 -I/opt/lsb/include/pango-1.0 -I/opt/lsb/include/gtk-2.0 -I/usr/include/freetype2 -I/opt/lsb/include/libxml2 -I/opt/lsb/include/fontconfig
 endif
 
 CXXFLAGS = $(CFLAGS)
@@ -189,7 +189,7 @@ endif
 all: hdrchk
 
 hdrchk: $(OBJS)
-	$(CXX) -o hdrchk $(OBJS) $(EXTRALIBS) -L /usr/X11R6/lib64 -L/usr/X11R6/lib -L/usr/lib/qt3/lib64 -L/usr/lib/qt3/lib -lXt -lX11 -lncurses -lqt-mt
+	$(CXX) -o hdrchk $(OBJS) $(EXTRALIBS) -L /usr/X11R6/lib64 -L/usr/X11R6/lib -lXt -lX11 -lncurses
 
 hdrchk.o: hdrchk.c
 	$(CC) $(CFLAGS) -g -c hdrchk.c

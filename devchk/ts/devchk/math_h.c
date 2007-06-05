@@ -486,93 +486,15 @@ Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5263,%d);\n", arch
 #endif
 #endif
 #if __i386__
-CheckTypeSize(struct exception,32, 10010, 2);
-CheckMemberSize(struct exception,type,4,2,32294);
-CheckOffset(struct exception,type,0,2,32294);
-CheckMemberSize(struct exception,name,4,2,32295);
-CheckOffset(struct exception,name,4,2,32295);
-CheckMemberSize(struct exception,arg1,8,2,32296);
-CheckOffset(struct exception,arg1,8,2,32296);
-CheckMemberSize(struct exception,arg2,8,2,32297);
-CheckOffset(struct exception,arg2,16,2,32297);
-CheckMemberSize(struct exception,retval,8,2,32298);
-CheckOffset(struct exception,retval,24,2,32298);
 #elif __ia64__
-CheckTypeSize(struct exception,40, 10010, 3);
-CheckMemberSize(struct exception,type,4,3,32294);
-CheckOffset(struct exception,type,0,3,32294);
-CheckMemberSize(struct exception,name,8,3,32295);
-CheckOffset(struct exception,name,8,3,32295);
-CheckMemberSize(struct exception,arg1,8,3,32296);
-CheckOffset(struct exception,arg1,16,3,32296);
-CheckMemberSize(struct exception,arg2,8,3,32297);
-CheckOffset(struct exception,arg2,24,3,32297);
-CheckMemberSize(struct exception,retval,8,3,32298);
-CheckOffset(struct exception,retval,32,3,32298);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct exception,32, 10010, 6);
-CheckMemberSize(struct exception,type,4,6,32294);
-CheckOffset(struct exception,type,0,6,32294);
-CheckMemberSize(struct exception,name,4,6,32295);
-CheckOffset(struct exception,name,4,6,32295);
-CheckMemberSize(struct exception,arg1,8,6,32296);
-CheckOffset(struct exception,arg1,8,6,32296);
-CheckMemberSize(struct exception,arg2,8,6,32297);
-CheckOffset(struct exception,arg2,16,6,32297);
-CheckMemberSize(struct exception,retval,8,6,32298);
-CheckOffset(struct exception,retval,24,6,32298);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct exception,32, 10010, 10);
-CheckMemberSize(struct exception,type,4,10,32294);
-CheckOffset(struct exception,type,0,10,32294);
-CheckMemberSize(struct exception,name,4,10,32295);
-CheckOffset(struct exception,name,4,10,32295);
-CheckMemberSize(struct exception,arg1,8,10,32296);
-CheckOffset(struct exception,arg1,8,10,32296);
-CheckMemberSize(struct exception,arg2,8,10,32297);
-CheckOffset(struct exception,arg2,16,10,32297);
-CheckMemberSize(struct exception,retval,8,10,32298);
-CheckOffset(struct exception,retval,24,10,32298);
 #elif __powerpc64__
-CheckTypeSize(struct exception,40, 10010, 9);
-CheckMemberSize(struct exception,type,4,9,32294);
-CheckOffset(struct exception,type,0,9,32294);
-CheckMemberSize(struct exception,name,8,9,32295);
-CheckOffset(struct exception,name,8,9,32295);
-CheckMemberSize(struct exception,arg1,8,9,32296);
-CheckOffset(struct exception,arg1,16,9,32296);
-CheckMemberSize(struct exception,arg2,8,9,32297);
-CheckOffset(struct exception,arg2,24,9,32297);
-CheckMemberSize(struct exception,retval,8,9,32298);
-CheckOffset(struct exception,retval,32,9,32298);
 #elif __s390x__
-CheckTypeSize(struct exception,40, 10010, 12);
-CheckMemberSize(struct exception,name,8,12,32295);
-CheckOffset(struct exception,name,8,12,32295);
-CheckMemberSize(struct exception,arg1,8,12,32296);
-CheckOffset(struct exception,arg1,16,12,32296);
-CheckMemberSize(struct exception,arg2,8,12,32297);
-CheckOffset(struct exception,arg2,24,12,32297);
-CheckMemberSize(struct exception,retval,8,12,32298);
-CheckOffset(struct exception,retval,32,12,32298);
 #elif __x86_64__
-CheckTypeSize(struct exception,40, 10010, 11);
-CheckMemberSize(struct exception,name,8,11,32295);
-CheckOffset(struct exception,name,8,11,32295);
-CheckMemberSize(struct exception,arg1,8,11,32296);
-CheckOffset(struct exception,arg1,16,11,32296);
-CheckMemberSize(struct exception,arg2,8,11,32297);
-CheckOffset(struct exception,arg2,24,11,32297);
-CheckMemberSize(struct exception,retval,8,11,32298);
-CheckOffset(struct exception,retval,32,11,32298);
-#elif 1
-CheckTypeSize(struct exception,0, 10010, 1);
-Msg("Missing member data for exception on All\n");
-CheckOffset(struct exception,type,0,1,32294);
-CheckOffset(struct exception,name,0,1,32295);
-CheckOffset(struct exception,arg1,0,1,32296);
-CheckOffset(struct exception,arg2,0,1,32297);
-CheckOffset(struct exception,retval,0,1,32298);
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10010,0);
+Msg("Find size of exception (10010)\n");
 #endif
 
 extern int __finite_db(double);

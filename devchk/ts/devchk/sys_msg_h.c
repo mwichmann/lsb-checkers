@@ -35,248 +35,41 @@ cnt++;
 
 #endif
 
-#if __i386__
-CheckTypeSize(msgqnum_t,4, 10213, 2);
-#endif
-
-#if __i386__
-CheckTypeSize(msglen_t,4, 10214, 2);
-#endif
-
-#if __powerpc__ && !__powerpc64__
-CheckTypeSize(msglen_t,4, 10489, 6);
-#endif
-
 #if __s390__ && !__s390x__
-CheckTypeSize(msglen_t,4, 10490, 10);
-#endif
-
-#if __s390__ && !__s390x__
-CheckTypeSize(msgqnum_t,4, 10491, 10);
-#endif
-
-#if __powerpc__ && !__powerpc64__
-CheckTypeSize(msgqnum_t,4, 10492, 6);
-#endif
-
-#if __s390x__
-CheckTypeSize(msgqnum_t,8, 10544, 12);
-#endif
-
-#if __s390x__
-CheckTypeSize(msglen_t,8, 10545, 12);
-#endif
-
-#if __x86_64__
-CheckTypeSize(msgqnum_t,8, 10789, 11);
-#endif
-
-#if __x86_64__
-CheckTypeSize(msglen_t,8, 10790, 11);
-#endif
-
-#if __powerpc64__
-CheckTypeSize(msglen_t,8, 10918, 9);
-#endif
-
-#if __powerpc64__
-CheckTypeSize(msgqnum_t,8, 10920, 9);
+CheckTypeSize(msgqnum_t,4, 10213, 10)
+#elif __i386__
+CheckTypeSize(msgqnum_t,4, 10213, 2)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(msgqnum_t,4, 10213, 6)
+#elif __s390x__
+CheckTypeSize(msgqnum_t,8, 10213, 12)
+#elif __x86_64__
+CheckTypeSize(msgqnum_t,8, 10213, 11)
+#elif __powerpc64__
+CheckTypeSize(msgqnum_t,8, 10213, 9)
 #endif
 
 #if __i386__
-CheckTypeSize(struct msqid_ds,88, 9117, 2);
-CheckMemberSize(struct msqid_ds,msg_perm,36,2,34276);
-CheckOffset(struct msqid_ds,msg_perm,0,2,34276);
-CheckMemberSize(struct msqid_ds,msg_stime,4,2,34277);
-CheckOffset(struct msqid_ds,msg_stime,36,2,34277);
-CheckMemberSize(struct msqid_ds,__unused1,4,2,34278);
-CheckOffset(struct msqid_ds,__unused1,40,2,34278);
-CheckMemberSize(struct msqid_ds,msg_rtime,4,2,34279);
-CheckOffset(struct msqid_ds,msg_rtime,44,2,34279);
-CheckMemberSize(struct msqid_ds,__unused2,4,2,34280);
-CheckOffset(struct msqid_ds,__unused2,48,2,34280);
-CheckMemberSize(struct msqid_ds,msg_ctime,4,2,34281);
-CheckOffset(struct msqid_ds,msg_ctime,52,2,34281);
-CheckMemberSize(struct msqid_ds,__unused3,4,2,34282);
-CheckOffset(struct msqid_ds,__unused3,56,2,34282);
-CheckMemberSize(struct msqid_ds,__msg_cbytes,4,2,34283);
-CheckOffset(struct msqid_ds,__msg_cbytes,60,2,34283);
-CheckMemberSize(struct msqid_ds,msg_qnum,4,2,34284);
-CheckOffset(struct msqid_ds,msg_qnum,64,2,34284);
-CheckMemberSize(struct msqid_ds,msg_qbytes,4,2,34285);
-CheckOffset(struct msqid_ds,msg_qbytes,68,2,34285);
-CheckMemberSize(struct msqid_ds,msg_lspid,4,2,34286);
-CheckOffset(struct msqid_ds,msg_lspid,72,2,34286);
-CheckMemberSize(struct msqid_ds,msg_lrpid,4,2,34287);
-CheckOffset(struct msqid_ds,msg_lrpid,76,2,34287);
-CheckMemberSize(struct msqid_ds,__unused4,4,2,34288);
-CheckOffset(struct msqid_ds,__unused4,80,2,34288);
-CheckMemberSize(struct msqid_ds,__unused5,4,2,34289);
-CheckOffset(struct msqid_ds,__unused5,84,2,34289);
+CheckTypeSize(msglen_t,4, 10214, 2)
+#elif __s390__ && !__s390x__
+CheckTypeSize(msglen_t,4, 10214, 10)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(msglen_t,4, 10214, 6)
+#elif __s390x__
+CheckTypeSize(msglen_t,8, 10214, 12)
+#elif __x86_64__
+CheckTypeSize(msglen_t,8, 10214, 11)
+#elif __powerpc64__
+CheckTypeSize(msglen_t,8, 10214, 9)
 #endif
 
-#if __ia64__
-CheckTypeSize(struct msqid_ds,120, 10395, 3);
-CheckMemberSize(struct msqid_ds,msg_perm,48,3,34654);
-CheckOffset(struct msqid_ds,msg_perm,0,3,34654);
-CheckMemberSize(struct msqid_ds,msg_stime,8,3,34655);
-CheckOffset(struct msqid_ds,msg_stime,48,3,34655);
-CheckMemberSize(struct msqid_ds,msg_rtime,8,3,34656);
-CheckOffset(struct msqid_ds,msg_rtime,56,3,34656);
-CheckMemberSize(struct msqid_ds,msg_ctime,8,3,34657);
-CheckOffset(struct msqid_ds,msg_ctime,64,3,34657);
-CheckMemberSize(struct msqid_ds,__msg_cbytes,8,3,34658);
-CheckOffset(struct msqid_ds,__msg_cbytes,72,3,34658);
-CheckMemberSize(struct msqid_ds,msg_qnum,8,3,34659);
-CheckOffset(struct msqid_ds,msg_qnum,80,3,34659);
-CheckMemberSize(struct msqid_ds,msg_qbytes,8,3,34660);
-CheckOffset(struct msqid_ds,msg_qbytes,88,3,34660);
-CheckMemberSize(struct msqid_ds,msg_lspid,4,3,34661);
-CheckOffset(struct msqid_ds,msg_lspid,96,3,34661);
-CheckMemberSize(struct msqid_ds,msg_lrpid,4,3,34662);
-CheckOffset(struct msqid_ds,msg_lrpid,100,3,34662);
-CheckMemberSize(struct msqid_ds,__unused1,8,3,34663);
-CheckOffset(struct msqid_ds,__unused1,104,3,34663);
-CheckMemberSize(struct msqid_ds,__unused2,8,3,34664);
-CheckOffset(struct msqid_ds,__unused2,112,3,34664);
-#endif
-
-#if __powerpc__ && !__powerpc64__
-CheckTypeSize(struct msqid_ds,104, 10405, 6);
-CheckMemberSize(struct msqid_ds,msg_perm,48,6,34742);
-CheckOffset(struct msqid_ds,msg_perm,0,6,34742);
-CheckMemberSize(struct msqid_ds,__unused1,4,6,34746);
-CheckOffset(struct msqid_ds,__unused1,48,6,34746);
-CheckMemberSize(struct msqid_ds,msg_stime,4,6,34743);
-CheckOffset(struct msqid_ds,msg_stime,52,6,34743);
-CheckMemberSize(struct msqid_ds,__unused2,4,6,34747);
-CheckOffset(struct msqid_ds,__unused2,56,6,34747);
-CheckMemberSize(struct msqid_ds,msg_rtime,4,6,34744);
-CheckOffset(struct msqid_ds,msg_rtime,60,6,34744);
-CheckMemberSize(struct msqid_ds,__unused3,4,6,34748);
-CheckOffset(struct msqid_ds,__unused3,64,6,34748);
-CheckMemberSize(struct msqid_ds,msg_ctime,4,6,34745);
-CheckOffset(struct msqid_ds,msg_ctime,68,6,34745);
-CheckMemberSize(struct msqid_ds,__msg_cbytes,4,6,34749);
-CheckOffset(struct msqid_ds,__msg_cbytes,72,6,34749);
-CheckMemberSize(struct msqid_ds,msg_qnum,4,6,34750);
-CheckOffset(struct msqid_ds,msg_qnum,76,6,34750);
-CheckMemberSize(struct msqid_ds,msg_qbytes,4,6,34751);
-CheckOffset(struct msqid_ds,msg_qbytes,80,6,34751);
-CheckMemberSize(struct msqid_ds,msg_lspid,4,6,34752);
-CheckOffset(struct msqid_ds,msg_lspid,84,6,34752);
-CheckMemberSize(struct msqid_ds,msg_lrpid,4,6,34753);
-CheckOffset(struct msqid_ds,msg_lrpid,88,6,34753);
-#endif
-
-#if __s390__ && !__s390x__
-CheckTypeSize(struct msqid_ds,88, 10406, 10);
-CheckMemberSize(struct msqid_ds,msg_perm,36,10,34754);
-CheckOffset(struct msqid_ds,msg_perm,0,10,34754);
-CheckMemberSize(struct msqid_ds,msg_stime,4,10,34755);
-CheckOffset(struct msqid_ds,msg_stime,36,10,34755);
-CheckMemberSize(struct msqid_ds,__unused1,4,10,34758);
-CheckOffset(struct msqid_ds,__unused1,40,10,34758);
-CheckMemberSize(struct msqid_ds,msg_rtime,4,10,34756);
-CheckOffset(struct msqid_ds,msg_rtime,44,10,34756);
-CheckMemberSize(struct msqid_ds,__unused2,4,10,34759);
-CheckOffset(struct msqid_ds,__unused2,48,10,34759);
-CheckMemberSize(struct msqid_ds,msg_ctime,4,10,34757);
-CheckOffset(struct msqid_ds,msg_ctime,52,10,34757);
-CheckMemberSize(struct msqid_ds,__unused3,4,10,34760);
-CheckOffset(struct msqid_ds,__unused3,56,10,34760);
-CheckMemberSize(struct msqid_ds,__msg_cbytes,4,10,34761);
-CheckOffset(struct msqid_ds,__msg_cbytes,60,10,34761);
-CheckMemberSize(struct msqid_ds,msg_qnum,4,10,34762);
-CheckOffset(struct msqid_ds,msg_qnum,64,10,34762);
-CheckMemberSize(struct msqid_ds,msg_qbytes,4,10,34763);
-CheckOffset(struct msqid_ds,msg_qbytes,68,10,34763);
-CheckMemberSize(struct msqid_ds,msg_lspid,4,10,34764);
-CheckOffset(struct msqid_ds,msg_lspid,72,10,34764);
-CheckMemberSize(struct msqid_ds,msg_lrpid,4,10,34765);
-CheckOffset(struct msqid_ds,msg_lrpid,76,10,34765);
-CheckMemberSize(struct msqid_ds,__unused4,4,10,34766);
-CheckOffset(struct msqid_ds,__unused4,80,10,34766);
-CheckMemberSize(struct msqid_ds,__unused5,4,10,34767);
-CheckOffset(struct msqid_ds,__unused5,84,10,34767);
-#endif
-
-#if __s390x__
-CheckTypeSize(struct msqid_ds,120, 10546, 12);
-CheckMemberSize(struct msqid_ds,msg_perm,48,12,40201);
-CheckOffset(struct msqid_ds,msg_perm,0,12,40201);
-CheckMemberSize(struct msqid_ds,msg_stime,8,12,40202);
-CheckOffset(struct msqid_ds,msg_stime,48,12,40202);
-CheckMemberSize(struct msqid_ds,msg_rtime,8,12,40203);
-CheckOffset(struct msqid_ds,msg_rtime,56,12,40203);
-CheckMemberSize(struct msqid_ds,msg_ctime,8,12,40204);
-CheckOffset(struct msqid_ds,msg_ctime,64,12,40204);
-CheckMemberSize(struct msqid_ds,__msg_cbytes,8,12,40205);
-CheckOffset(struct msqid_ds,__msg_cbytes,72,12,40205);
-CheckMemberSize(struct msqid_ds,msg_qnum,8,12,40206);
-CheckOffset(struct msqid_ds,msg_qnum,80,12,40206);
-CheckMemberSize(struct msqid_ds,msg_qbytes,8,12,40207);
-CheckOffset(struct msqid_ds,msg_qbytes,88,12,40207);
-CheckMemberSize(struct msqid_ds,msg_lspid,4,12,40208);
-CheckOffset(struct msqid_ds,msg_lspid,96,12,40208);
-CheckMemberSize(struct msqid_ds,msg_lrpid,4,12,40209);
-CheckOffset(struct msqid_ds,msg_lrpid,100,12,40209);
-CheckMemberSize(struct msqid_ds,__unused4,8,12,40210);
-CheckOffset(struct msqid_ds,__unused4,104,12,40210);
-CheckMemberSize(struct msqid_ds,__unused5,8,12,40211);
-CheckOffset(struct msqid_ds,__unused5,112,12,40211);
-#endif
-
-#if __x86_64__
-CheckTypeSize(struct msqid_ds,120, 10788, 11);
-CheckMemberSize(struct msqid_ds,msg_perm,48,11,40437);
-CheckOffset(struct msqid_ds,msg_perm,0,11,40437);
-CheckMemberSize(struct msqid_ds,msg_stime,8,11,40438);
-CheckOffset(struct msqid_ds,msg_stime,48,11,40438);
-CheckMemberSize(struct msqid_ds,msg_rtime,8,11,40439);
-CheckOffset(struct msqid_ds,msg_rtime,56,11,40439);
-CheckMemberSize(struct msqid_ds,msg_ctime,8,11,40440);
-CheckOffset(struct msqid_ds,msg_ctime,64,11,40440);
-CheckMemberSize(struct msqid_ds,__msg_cbytes,8,11,40441);
-CheckOffset(struct msqid_ds,__msg_cbytes,72,11,40441);
-CheckMemberSize(struct msqid_ds,msg_qnum,8,11,40442);
-CheckOffset(struct msqid_ds,msg_qnum,80,11,40442);
-CheckMemberSize(struct msqid_ds,msg_qbytes,8,11,40443);
-CheckOffset(struct msqid_ds,msg_qbytes,88,11,40443);
-CheckMemberSize(struct msqid_ds,msg_lspid,4,11,40444);
-CheckOffset(struct msqid_ds,msg_lspid,96,11,40444);
-CheckMemberSize(struct msqid_ds,msg_lrpid,4,11,40445);
-CheckOffset(struct msqid_ds,msg_lrpid,100,11,40445);
-CheckMemberSize(struct msqid_ds,__unused4,8,11,40745);
-CheckOffset(struct msqid_ds,__unused4,104,11,40745);
-CheckMemberSize(struct msqid_ds,__unused5,8,11,40746);
-CheckOffset(struct msqid_ds,__unused5,112,11,40746);
-#endif
-
-#if __powerpc64__
-CheckTypeSize(struct msqid_ds,120, 10919, 9);
-CheckMemberSize(struct msqid_ds,msg_perm,48,9,40655);
-CheckOffset(struct msqid_ds,msg_perm,0,9,40655);
-CheckMemberSize(struct msqid_ds,msg_stime,8,9,40656);
-CheckOffset(struct msqid_ds,msg_stime,48,9,40656);
-CheckMemberSize(struct msqid_ds,msg_rtime,8,9,40657);
-CheckOffset(struct msqid_ds,msg_rtime,56,9,40657);
-CheckMemberSize(struct msqid_ds,msg_ctime,8,9,40658);
-CheckOffset(struct msqid_ds,msg_ctime,64,9,40658);
-CheckMemberSize(struct msqid_ds,__msg_cbytes,8,9,40659);
-CheckOffset(struct msqid_ds,__msg_cbytes,72,9,40659);
-CheckMemberSize(struct msqid_ds,msg_qnum,8,9,40660);
-CheckOffset(struct msqid_ds,msg_qnum,80,9,40660);
-CheckMemberSize(struct msqid_ds,msg_qbytes,8,9,40661);
-CheckOffset(struct msqid_ds,msg_qbytes,88,9,40661);
-CheckMemberSize(struct msqid_ds,msg_lspid,4,9,40662);
-CheckOffset(struct msqid_ds,msg_lspid,96,9,40662);
-CheckMemberSize(struct msqid_ds,msg_lrpid,4,9,40663);
-CheckOffset(struct msqid_ds,msg_lrpid,100,9,40663);
-CheckMemberSize(struct msqid_ds,__unused4,8,9,40664);
-CheckOffset(struct msqid_ds,__unused4,104,9,40664);
-CheckMemberSize(struct msqid_ds,__unused5,8,9,40665);
-CheckOffset(struct msqid_ds,__unused5,112,9,40665);
+#if __i386__
+#elif __s390__ && !__s390x__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __s390x__
+#elif __x86_64__
+#elif __powerpc64__
 #endif
 
 extern int msgctl_db(int, int, struct msqid_ds *);

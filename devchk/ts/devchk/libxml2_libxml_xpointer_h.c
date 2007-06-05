@@ -27,107 +27,41 @@ Msg("Checking data structures in libxml2/libxml/xpointer.h\n");
 
 printf("Checking data structures in libxml2/libxml/xpointer.h\n");
 #if __i386__
-CheckTypeSize(struct _xmlLocationSet,12, 14910, 2);
-CheckMemberSize(struct _xmlLocationSet,locMax,4,2,49080);
-CheckOffset(struct _xmlLocationSet,locMax,4,2,49080);
-CheckMemberSize(struct _xmlLocationSet,locTab,4,2,49081);
-CheckOffset(struct _xmlLocationSet,locTab,8,2,49081);
+CheckTypeSize(xmlLocationSet,12, 14911, 2)
 #elif __x86_64__
-CheckTypeSize(struct _xmlLocationSet,16, 14910, 11);
-CheckMemberSize(struct _xmlLocationSet,locMax,4,11,49080);
-CheckOffset(struct _xmlLocationSet,locMax,4,11,49080);
-CheckMemberSize(struct _xmlLocationSet,locTab,8,11,49081);
-CheckOffset(struct _xmlLocationSet,locTab,8,11,49081);
+CheckTypeSize(xmlLocationSet,16, 14911, 11)
 #elif __ia64__
-CheckTypeSize(struct _xmlLocationSet,16, 14910, 3);
-CheckMemberSize(struct _xmlLocationSet,locMax,4,3,49080);
-CheckOffset(struct _xmlLocationSet,locMax,4,3,49080);
-CheckMemberSize(struct _xmlLocationSet,locTab,8,3,49081);
-CheckOffset(struct _xmlLocationSet,locTab,8,3,49081);
+CheckTypeSize(xmlLocationSet,16, 14911, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _xmlLocationSet,12, 14910, 6);
-CheckMemberSize(struct _xmlLocationSet,locMax,4,6,49080);
-CheckOffset(struct _xmlLocationSet,locMax,4,6,49080);
-CheckMemberSize(struct _xmlLocationSet,locTab,4,6,49081);
-CheckOffset(struct _xmlLocationSet,locTab,8,6,49081);
+CheckTypeSize(xmlLocationSet,12, 14911, 6)
 #elif __powerpc64__
-CheckTypeSize(struct _xmlLocationSet,16, 14910, 9);
-CheckMemberSize(struct _xmlLocationSet,locMax,4,9,49080);
-CheckOffset(struct _xmlLocationSet,locMax,4,9,49080);
-CheckMemberSize(struct _xmlLocationSet,locTab,8,9,49081);
-CheckOffset(struct _xmlLocationSet,locTab,8,9,49081);
+CheckTypeSize(xmlLocationSet,16, 14911, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _xmlLocationSet,12, 14910, 10);
-CheckMemberSize(struct _xmlLocationSet,locMax,4,10,49080);
-CheckOffset(struct _xmlLocationSet,locMax,4,10,49080);
-CheckMemberSize(struct _xmlLocationSet,locTab,4,10,49081);
-CheckOffset(struct _xmlLocationSet,locTab,8,10,49081);
+CheckTypeSize(xmlLocationSet,12, 14911, 10)
 #elif __s390x__
-CheckTypeSize(struct _xmlLocationSet,16, 14910, 12);
-CheckMemberSize(struct _xmlLocationSet,locMax,4,12,49080);
-CheckOffset(struct _xmlLocationSet,locMax,4,12,49080);
-CheckMemberSize(struct _xmlLocationSet,locTab,8,12,49081);
-CheckOffset(struct _xmlLocationSet,locTab,8,12,49081);
-#elif 1
-CheckTypeSize(struct _xmlLocationSet,0, 14910, 1);
-Msg("Missing member data for _xmlLocationSet on All\n");
-CheckOffset(struct _xmlLocationSet,locNr,0,1,49079);
-CheckOffset(struct _xmlLocationSet,locMax,0,1,49080);
-CheckOffset(struct _xmlLocationSet,locTab,0,1,49081);
+CheckTypeSize(xmlLocationSet,16, 14911, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14911,0);
+Msg("Find size of xmlLocationSet (14911)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlLocationSet,12, 14911, 2);
+CheckTypeSize(xmlLocationSetPtr,4, 14913, 2)
 #elif __x86_64__
-CheckTypeSize(xmlLocationSet,16, 14911, 11);
+CheckTypeSize(xmlLocationSetPtr,8, 14913, 11)
 #elif __ia64__
-CheckTypeSize(xmlLocationSet,16, 14911, 3);
+CheckTypeSize(xmlLocationSetPtr,8, 14913, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlLocationSet,12, 14911, 6);
+CheckTypeSize(xmlLocationSetPtr,4, 14913, 6)
 #elif __powerpc64__
-CheckTypeSize(xmlLocationSet,16, 14911, 9);
+CheckTypeSize(xmlLocationSetPtr,8, 14913, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlLocationSet,12, 14911, 10);
+CheckTypeSize(xmlLocationSetPtr,4, 14913, 10)
 #elif __s390x__
-CheckTypeSize(xmlLocationSet,16, 14911, 12);
-#elif 1
-CheckTypeSize(xmlLocationSet,0, 14911, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(xmlLocationSet *,4, 14912, 2);
-#elif __x86_64__
-CheckTypeSize(xmlLocationSet *,8, 14912, 11);
-#elif __ia64__
-CheckTypeSize(xmlLocationSet *,8, 14912, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlLocationSet *,4, 14912, 6);
-#elif __powerpc64__
-CheckTypeSize(xmlLocationSet *,8, 14912, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlLocationSet *,4, 14912, 10);
-#elif __s390x__
-CheckTypeSize(xmlLocationSet *,8, 14912, 12);
-#elif 1
-CheckTypeSize(xmlLocationSet *,0, 14912, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(xmlLocationSetPtr,4, 14913, 2);
-#elif __x86_64__
-CheckTypeSize(xmlLocationSetPtr,8, 14913, 11);
-#elif __ia64__
-CheckTypeSize(xmlLocationSetPtr,8, 14913, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlLocationSetPtr,4, 14913, 6);
-#elif __powerpc64__
-CheckTypeSize(xmlLocationSetPtr,8, 14913, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlLocationSetPtr,4, 14913, 10);
-#elif __s390x__
-CheckTypeSize(xmlLocationSetPtr,8, 14913, 12);
-#elif 1
-CheckTypeSize(xmlLocationSetPtr,0, 14913, 1);
+CheckTypeSize(xmlLocationSetPtr,8, 14913, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14913,0);
+Msg("Find size of xmlLocationSetPtr (14913)\n");
 #endif
 
 extern xmlLocationSetPtr xmlXPtrLocationSetCreate_db(xmlXPathObjectPtr);

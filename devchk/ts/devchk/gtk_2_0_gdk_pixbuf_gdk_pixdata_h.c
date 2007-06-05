@@ -34,361 +34,60 @@ printf("Checking data structures in gtk-2.0/gdk-pixbuf/gdk-pixdata.h\n");
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkPixdata,28, 12650, 2);
-CheckMemberSize(struct _GdkPixdata,length,4,2,43356);
-CheckOffset(struct _GdkPixdata,length,4,2,43356);
-CheckMemberSize(struct _GdkPixdata,pixdata_type,4,2,43357);
-CheckOffset(struct _GdkPixdata,pixdata_type,8,2,43357);
-CheckMemberSize(struct _GdkPixdata,rowstride,4,2,43358);
-CheckOffset(struct _GdkPixdata,rowstride,12,2,43358);
-CheckMemberSize(struct _GdkPixdata,width,4,2,43359);
-CheckOffset(struct _GdkPixdata,width,16,2,43359);
-CheckMemberSize(struct _GdkPixdata,height,4,2,43360);
-CheckOffset(struct _GdkPixdata,height,20,2,43360);
-CheckMemberSize(struct _GdkPixdata,pixel_data,4,2,43361);
-CheckOffset(struct _GdkPixdata,pixel_data,24,2,43361);
+CheckTypeSize(GdkPixdata,28, 12651, 2)
 #elif __x86_64__
-CheckTypeSize(struct _GdkPixdata,32, 12650, 11);
-CheckMemberSize(struct _GdkPixdata,length,4,11,43356);
-CheckOffset(struct _GdkPixdata,length,4,11,43356);
-CheckMemberSize(struct _GdkPixdata,pixdata_type,4,11,43357);
-CheckOffset(struct _GdkPixdata,pixdata_type,8,11,43357);
-CheckMemberSize(struct _GdkPixdata,rowstride,4,11,43358);
-CheckOffset(struct _GdkPixdata,rowstride,12,11,43358);
-CheckMemberSize(struct _GdkPixdata,width,4,11,43359);
-CheckOffset(struct _GdkPixdata,width,16,11,43359);
-CheckMemberSize(struct _GdkPixdata,height,4,11,43360);
-CheckOffset(struct _GdkPixdata,height,20,11,43360);
-CheckMemberSize(struct _GdkPixdata,pixel_data,8,11,43361);
-CheckOffset(struct _GdkPixdata,pixel_data,24,11,43361);
+CheckTypeSize(GdkPixdata,32, 12651, 11)
 #elif __ia64__
-CheckTypeSize(struct _GdkPixdata,32, 12650, 3);
-CheckMemberSize(struct _GdkPixdata,length,4,3,43356);
-CheckOffset(struct _GdkPixdata,length,4,3,43356);
-CheckMemberSize(struct _GdkPixdata,pixdata_type,4,3,43357);
-CheckOffset(struct _GdkPixdata,pixdata_type,8,3,43357);
-CheckMemberSize(struct _GdkPixdata,rowstride,4,3,43358);
-CheckOffset(struct _GdkPixdata,rowstride,12,3,43358);
-CheckMemberSize(struct _GdkPixdata,width,4,3,43359);
-CheckOffset(struct _GdkPixdata,width,16,3,43359);
-CheckMemberSize(struct _GdkPixdata,height,4,3,43360);
-CheckOffset(struct _GdkPixdata,height,20,3,43360);
-CheckMemberSize(struct _GdkPixdata,pixel_data,8,3,43361);
-CheckOffset(struct _GdkPixdata,pixel_data,24,3,43361);
+CheckTypeSize(GdkPixdata,32, 12651, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkPixdata,28, 12650, 6);
-CheckMemberSize(struct _GdkPixdata,length,4,6,43356);
-CheckOffset(struct _GdkPixdata,length,4,6,43356);
-CheckMemberSize(struct _GdkPixdata,pixdata_type,4,6,43357);
-CheckOffset(struct _GdkPixdata,pixdata_type,8,6,43357);
-CheckMemberSize(struct _GdkPixdata,rowstride,4,6,43358);
-CheckOffset(struct _GdkPixdata,rowstride,12,6,43358);
-CheckMemberSize(struct _GdkPixdata,width,4,6,43359);
-CheckOffset(struct _GdkPixdata,width,16,6,43359);
-CheckMemberSize(struct _GdkPixdata,height,4,6,43360);
-CheckOffset(struct _GdkPixdata,height,20,6,43360);
-CheckMemberSize(struct _GdkPixdata,pixel_data,4,6,43361);
-CheckOffset(struct _GdkPixdata,pixel_data,24,6,43361);
+CheckTypeSize(GdkPixdata,28, 12651, 6)
 #elif __powerpc64__
-CheckTypeSize(struct _GdkPixdata,32, 12650, 9);
-CheckMemberSize(struct _GdkPixdata,length,4,9,43356);
-CheckOffset(struct _GdkPixdata,length,4,9,43356);
-CheckMemberSize(struct _GdkPixdata,pixdata_type,4,9,43357);
-CheckOffset(struct _GdkPixdata,pixdata_type,8,9,43357);
-CheckMemberSize(struct _GdkPixdata,rowstride,4,9,43358);
-CheckOffset(struct _GdkPixdata,rowstride,12,9,43358);
-CheckMemberSize(struct _GdkPixdata,width,4,9,43359);
-CheckOffset(struct _GdkPixdata,width,16,9,43359);
-CheckMemberSize(struct _GdkPixdata,height,4,9,43360);
-CheckOffset(struct _GdkPixdata,height,20,9,43360);
-CheckMemberSize(struct _GdkPixdata,pixel_data,8,9,43361);
-CheckOffset(struct _GdkPixdata,pixel_data,24,9,43361);
+CheckTypeSize(GdkPixdata,32, 12651, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkPixdata,28, 12650, 10);
-CheckMemberSize(struct _GdkPixdata,length,4,10,43356);
-CheckOffset(struct _GdkPixdata,length,4,10,43356);
-CheckMemberSize(struct _GdkPixdata,pixdata_type,4,10,43357);
-CheckOffset(struct _GdkPixdata,pixdata_type,8,10,43357);
-CheckMemberSize(struct _GdkPixdata,rowstride,4,10,43358);
-CheckOffset(struct _GdkPixdata,rowstride,12,10,43358);
-CheckMemberSize(struct _GdkPixdata,width,4,10,43359);
-CheckOffset(struct _GdkPixdata,width,16,10,43359);
-CheckMemberSize(struct _GdkPixdata,height,4,10,43360);
-CheckOffset(struct _GdkPixdata,height,20,10,43360);
-CheckMemberSize(struct _GdkPixdata,pixel_data,4,10,43361);
-CheckOffset(struct _GdkPixdata,pixel_data,24,10,43361);
+CheckTypeSize(GdkPixdata,28, 12651, 10)
 #elif __s390x__
-CheckTypeSize(struct _GdkPixdata,32, 12650, 12);
-CheckMemberSize(struct _GdkPixdata,length,4,12,43356);
-CheckOffset(struct _GdkPixdata,length,4,12,43356);
-CheckMemberSize(struct _GdkPixdata,pixdata_type,4,12,43357);
-CheckOffset(struct _GdkPixdata,pixdata_type,8,12,43357);
-CheckMemberSize(struct _GdkPixdata,rowstride,4,12,43358);
-CheckOffset(struct _GdkPixdata,rowstride,12,12,43358);
-CheckMemberSize(struct _GdkPixdata,width,4,12,43359);
-CheckOffset(struct _GdkPixdata,width,16,12,43359);
-CheckMemberSize(struct _GdkPixdata,height,4,12,43360);
-CheckOffset(struct _GdkPixdata,height,20,12,43360);
-CheckMemberSize(struct _GdkPixdata,pixel_data,8,12,43361);
-CheckOffset(struct _GdkPixdata,pixel_data,24,12,43361);
-#elif 1
-CheckTypeSize(struct _GdkPixdata,0, 12650, 1);
-Msg("Missing member data for _GdkPixdata on All\n");
-CheckOffset(struct _GdkPixdata,magic,0,1,43355);
-CheckOffset(struct _GdkPixdata,length,0,1,43356);
-CheckOffset(struct _GdkPixdata,pixdata_type,0,1,43357);
-CheckOffset(struct _GdkPixdata,rowstride,0,1,43358);
-CheckOffset(struct _GdkPixdata,width,0,1,43359);
-CheckOffset(struct _GdkPixdata,height,0,1,43360);
-CheckOffset(struct _GdkPixdata,pixel_data,0,1,43361);
+CheckTypeSize(GdkPixdata,32, 12651, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12651,0);
+Msg("Find size of GdkPixdata (12651)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPixdata,28, 12651, 2);
+CheckTypeSize(GdkPixdataDumpType,4, 12656, 2)
 #elif __x86_64__
-CheckTypeSize(GdkPixdata,32, 12651, 11);
+CheckTypeSize(GdkPixdataDumpType,4, 12656, 11)
 #elif __ia64__
-CheckTypeSize(GdkPixdata,32, 12651, 3);
+CheckTypeSize(GdkPixdataDumpType,4, 12656, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixdata,28, 12651, 6);
+CheckTypeSize(GdkPixdataDumpType,4, 12656, 6)
 #elif __powerpc64__
-CheckTypeSize(GdkPixdata,32, 12651, 9);
+CheckTypeSize(GdkPixdataDumpType,4, 12656, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixdata,28, 12651, 10);
+CheckTypeSize(GdkPixdataDumpType,4, 12656, 10)
 #elif __s390x__
-CheckTypeSize(GdkPixdata,32, 12651, 12);
-#elif 1
-CheckTypeSize(GdkPixdata,0, 12651, 1);
+CheckTypeSize(GdkPixdataDumpType,4, 12656, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12656,0);
+Msg("Find size of GdkPixdataDumpType (12656)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPixdata *,4, 12652, 2);
+CheckTypeSize(GdkPixdataType,4, 12658, 2)
 #elif __x86_64__
-CheckTypeSize(GdkPixdata *,8, 12652, 11);
+CheckTypeSize(GdkPixdataType,4, 12658, 11)
 #elif __ia64__
-CheckTypeSize(GdkPixdata *,8, 12652, 3);
+CheckTypeSize(GdkPixdataType,4, 12658, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixdata *,4, 12652, 6);
+CheckTypeSize(GdkPixdataType,4, 12658, 6)
 #elif __powerpc64__
-CheckTypeSize(GdkPixdata *,8, 12652, 9);
+CheckTypeSize(GdkPixdataType,4, 12658, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixdata *,4, 12652, 10);
+CheckTypeSize(GdkPixdataType,4, 12658, 10)
 #elif __s390x__
-CheckTypeSize(GdkPixdata *,8, 12652, 12);
-#elif 1
-CheckTypeSize(GdkPixdata *,0, 12652, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(const GdkPixdata,28, 12653, 2);
-#elif __x86_64__
-CheckTypeSize(const GdkPixdata,32, 12653, 11);
-#elif __ia64__
-CheckTypeSize(const GdkPixdata,32, 12653, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(const GdkPixdata,28, 12653, 6);
-#elif __powerpc64__
-CheckTypeSize(const GdkPixdata,32, 12653, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(const GdkPixdata,28, 12653, 10);
-#elif __s390x__
-CheckTypeSize(const GdkPixdata,32, 12653, 12);
-#elif 1
-CheckTypeSize(const GdkPixdata,0, 12653, 1);
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#elif 1
-#endif
-
-#if __i386__
-CheckEnum("GDK_PIXDATA_DUMP_PIXDATA_STREAM",GDK_PIXDATA_DUMP_PIXDATA_STREAM,0,43362);
-CheckEnum("GDK_PIXDATA_DUMP_PIXDATA_STRUCT",GDK_PIXDATA_DUMP_PIXDATA_STRUCT,1,43363);
-CheckEnum("GDK_PIXDATA_DUMP_MACROS",GDK_PIXDATA_DUMP_MACROS,2,43364);
-CheckEnum("GDK_PIXDATA_DUMP_GTYPES",GDK_PIXDATA_DUMP_GTYPES,0,43365);
-CheckEnum("GDK_PIXDATA_DUMP_CTYPES",GDK_PIXDATA_DUMP_CTYPES,256,43366);
-CheckEnum("GDK_PIXDATA_DUMP_STATIC",GDK_PIXDATA_DUMP_STATIC,512,43367);
-CheckEnum("GDK_PIXDATA_DUMP_CONST",GDK_PIXDATA_DUMP_CONST,1024,43368);
-CheckEnum("GDK_PIXDATA_DUMP_RLE_DECODER",GDK_PIXDATA_DUMP_RLE_DECODER,65536,43369);
-#elif __x86_64__
-CheckEnum("GDK_PIXDATA_DUMP_PIXDATA_STREAM",GDK_PIXDATA_DUMP_PIXDATA_STREAM,0,43362);
-CheckEnum("GDK_PIXDATA_DUMP_PIXDATA_STRUCT",GDK_PIXDATA_DUMP_PIXDATA_STRUCT,1,43363);
-CheckEnum("GDK_PIXDATA_DUMP_MACROS",GDK_PIXDATA_DUMP_MACROS,2,43364);
-CheckEnum("GDK_PIXDATA_DUMP_GTYPES",GDK_PIXDATA_DUMP_GTYPES,0,43365);
-CheckEnum("GDK_PIXDATA_DUMP_CTYPES",GDK_PIXDATA_DUMP_CTYPES,256,43366);
-CheckEnum("GDK_PIXDATA_DUMP_STATIC",GDK_PIXDATA_DUMP_STATIC,512,43367);
-CheckEnum("GDK_PIXDATA_DUMP_CONST",GDK_PIXDATA_DUMP_CONST,1024,43368);
-CheckEnum("GDK_PIXDATA_DUMP_RLE_DECODER",GDK_PIXDATA_DUMP_RLE_DECODER,65536,43369);
-#elif __ia64__
-CheckEnum("GDK_PIXDATA_DUMP_PIXDATA_STREAM",GDK_PIXDATA_DUMP_PIXDATA_STREAM,0,43362);
-CheckEnum("GDK_PIXDATA_DUMP_PIXDATA_STRUCT",GDK_PIXDATA_DUMP_PIXDATA_STRUCT,1,43363);
-CheckEnum("GDK_PIXDATA_DUMP_MACROS",GDK_PIXDATA_DUMP_MACROS,2,43364);
-CheckEnum("GDK_PIXDATA_DUMP_GTYPES",GDK_PIXDATA_DUMP_GTYPES,0,43365);
-CheckEnum("GDK_PIXDATA_DUMP_CTYPES",GDK_PIXDATA_DUMP_CTYPES,256,43366);
-CheckEnum("GDK_PIXDATA_DUMP_STATIC",GDK_PIXDATA_DUMP_STATIC,512,43367);
-CheckEnum("GDK_PIXDATA_DUMP_CONST",GDK_PIXDATA_DUMP_CONST,1024,43368);
-CheckEnum("GDK_PIXDATA_DUMP_RLE_DECODER",GDK_PIXDATA_DUMP_RLE_DECODER,65536,43369);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GDK_PIXDATA_DUMP_PIXDATA_STREAM",GDK_PIXDATA_DUMP_PIXDATA_STREAM,0,43362);
-CheckEnum("GDK_PIXDATA_DUMP_PIXDATA_STRUCT",GDK_PIXDATA_DUMP_PIXDATA_STRUCT,1,43363);
-CheckEnum("GDK_PIXDATA_DUMP_MACROS",GDK_PIXDATA_DUMP_MACROS,2,43364);
-CheckEnum("GDK_PIXDATA_DUMP_GTYPES",GDK_PIXDATA_DUMP_GTYPES,0,43365);
-CheckEnum("GDK_PIXDATA_DUMP_CTYPES",GDK_PIXDATA_DUMP_CTYPES,256,43366);
-CheckEnum("GDK_PIXDATA_DUMP_STATIC",GDK_PIXDATA_DUMP_STATIC,512,43367);
-CheckEnum("GDK_PIXDATA_DUMP_CONST",GDK_PIXDATA_DUMP_CONST,1024,43368);
-CheckEnum("GDK_PIXDATA_DUMP_RLE_DECODER",GDK_PIXDATA_DUMP_RLE_DECODER,65536,43369);
-#elif __powerpc64__
-CheckEnum("GDK_PIXDATA_DUMP_PIXDATA_STREAM",GDK_PIXDATA_DUMP_PIXDATA_STREAM,0,43362);
-CheckEnum("GDK_PIXDATA_DUMP_PIXDATA_STRUCT",GDK_PIXDATA_DUMP_PIXDATA_STRUCT,1,43363);
-CheckEnum("GDK_PIXDATA_DUMP_MACROS",GDK_PIXDATA_DUMP_MACROS,2,43364);
-CheckEnum("GDK_PIXDATA_DUMP_GTYPES",GDK_PIXDATA_DUMP_GTYPES,0,43365);
-CheckEnum("GDK_PIXDATA_DUMP_CTYPES",GDK_PIXDATA_DUMP_CTYPES,256,43366);
-CheckEnum("GDK_PIXDATA_DUMP_STATIC",GDK_PIXDATA_DUMP_STATIC,512,43367);
-CheckEnum("GDK_PIXDATA_DUMP_CONST",GDK_PIXDATA_DUMP_CONST,1024,43368);
-CheckEnum("GDK_PIXDATA_DUMP_RLE_DECODER",GDK_PIXDATA_DUMP_RLE_DECODER,65536,43369);
-#elif __s390__ && !__s390x__
-CheckEnum("GDK_PIXDATA_DUMP_PIXDATA_STREAM",GDK_PIXDATA_DUMP_PIXDATA_STREAM,0,43362);
-CheckEnum("GDK_PIXDATA_DUMP_PIXDATA_STRUCT",GDK_PIXDATA_DUMP_PIXDATA_STRUCT,1,43363);
-CheckEnum("GDK_PIXDATA_DUMP_MACROS",GDK_PIXDATA_DUMP_MACROS,2,43364);
-CheckEnum("GDK_PIXDATA_DUMP_GTYPES",GDK_PIXDATA_DUMP_GTYPES,0,43365);
-CheckEnum("GDK_PIXDATA_DUMP_CTYPES",GDK_PIXDATA_DUMP_CTYPES,256,43366);
-CheckEnum("GDK_PIXDATA_DUMP_STATIC",GDK_PIXDATA_DUMP_STATIC,512,43367);
-CheckEnum("GDK_PIXDATA_DUMP_CONST",GDK_PIXDATA_DUMP_CONST,1024,43368);
-CheckEnum("GDK_PIXDATA_DUMP_RLE_DECODER",GDK_PIXDATA_DUMP_RLE_DECODER,65536,43369);
-#elif __s390x__
-CheckEnum("GDK_PIXDATA_DUMP_PIXDATA_STREAM",GDK_PIXDATA_DUMP_PIXDATA_STREAM,0,43362);
-CheckEnum("GDK_PIXDATA_DUMP_PIXDATA_STRUCT",GDK_PIXDATA_DUMP_PIXDATA_STRUCT,1,43363);
-CheckEnum("GDK_PIXDATA_DUMP_MACROS",GDK_PIXDATA_DUMP_MACROS,2,43364);
-CheckEnum("GDK_PIXDATA_DUMP_GTYPES",GDK_PIXDATA_DUMP_GTYPES,0,43365);
-CheckEnum("GDK_PIXDATA_DUMP_CTYPES",GDK_PIXDATA_DUMP_CTYPES,256,43366);
-CheckEnum("GDK_PIXDATA_DUMP_STATIC",GDK_PIXDATA_DUMP_STATIC,512,43367);
-CheckEnum("GDK_PIXDATA_DUMP_CONST",GDK_PIXDATA_DUMP_CONST,1024,43368);
-CheckEnum("GDK_PIXDATA_DUMP_RLE_DECODER",GDK_PIXDATA_DUMP_RLE_DECODER,65536,43369);
-#elif 1
-CheckEnum("GDK_PIXDATA_DUMP_PIXDATA_STREAM",GDK_PIXDATA_DUMP_PIXDATA_STREAM,0,43362);
-CheckEnum("GDK_PIXDATA_DUMP_PIXDATA_STRUCT",GDK_PIXDATA_DUMP_PIXDATA_STRUCT,1,43363);
-CheckEnum("GDK_PIXDATA_DUMP_MACROS",GDK_PIXDATA_DUMP_MACROS,2,43364);
-CheckEnum("GDK_PIXDATA_DUMP_GTYPES",GDK_PIXDATA_DUMP_GTYPES,0,43365);
-CheckEnum("GDK_PIXDATA_DUMP_CTYPES",GDK_PIXDATA_DUMP_CTYPES,256,43366);
-CheckEnum("GDK_PIXDATA_DUMP_STATIC",GDK_PIXDATA_DUMP_STATIC,512,43367);
-CheckEnum("GDK_PIXDATA_DUMP_CONST",GDK_PIXDATA_DUMP_CONST,1024,43368);
-CheckEnum("GDK_PIXDATA_DUMP_RLE_DECODER",GDK_PIXDATA_DUMP_RLE_DECODER,65536,43369);
-#endif
-
-#if __i386__
-CheckTypeSize(GdkPixdataDumpType,4, 12656, 2);
-#elif __x86_64__
-CheckTypeSize(GdkPixdataDumpType,4, 12656, 11);
-#elif __ia64__
-CheckTypeSize(GdkPixdataDumpType,4, 12656, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixdataDumpType,4, 12656, 6);
-#elif __powerpc64__
-CheckTypeSize(GdkPixdataDumpType,4, 12656, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixdataDumpType,4, 12656, 10);
-#elif __s390x__
-CheckTypeSize(GdkPixdataDumpType,4, 12656, 12);
-#elif 1
-CheckTypeSize(GdkPixdataDumpType,0, 12656, 1);
-#endif
-
-#if __i386__
-CheckEnum("GDK_PIXDATA_COLOR_TYPE_RGB",GDK_PIXDATA_COLOR_TYPE_RGB,0x01,43370);
-CheckEnum("GDK_PIXDATA_COLOR_TYPE_RGBA",GDK_PIXDATA_COLOR_TYPE_RGBA,0x02,43371);
-CheckEnum("GDK_PIXDATA_COLOR_TYPE_MASK",GDK_PIXDATA_COLOR_TYPE_MASK,0xff,43372);
-CheckEnum("GDK_PIXDATA_SAMPLE_WIDTH_8",GDK_PIXDATA_SAMPLE_WIDTH_8,0x01 << 16,43373);
-CheckEnum("GDK_PIXDATA_SAMPLE_WIDTH_MASK",GDK_PIXDATA_SAMPLE_WIDTH_MASK,0x0f << 16,43374);
-CheckEnum("GDK_PIXDATA_ENCODING_RAW",GDK_PIXDATA_ENCODING_RAW,0x01 << 24,43375);
-CheckEnum("GDK_PIXDATA_ENCODING_RLE",GDK_PIXDATA_ENCODING_RLE,0x02 << 24,43376);
-CheckEnum("GDK_PIXDATA_ENCODING_MASK",GDK_PIXDATA_ENCODING_MASK,0x0f << 24,43377);
-#elif __x86_64__
-CheckEnum("GDK_PIXDATA_COLOR_TYPE_RGB",GDK_PIXDATA_COLOR_TYPE_RGB,0x01,43370);
-CheckEnum("GDK_PIXDATA_COLOR_TYPE_RGBA",GDK_PIXDATA_COLOR_TYPE_RGBA,0x02,43371);
-CheckEnum("GDK_PIXDATA_COLOR_TYPE_MASK",GDK_PIXDATA_COLOR_TYPE_MASK,0xff,43372);
-CheckEnum("GDK_PIXDATA_SAMPLE_WIDTH_8",GDK_PIXDATA_SAMPLE_WIDTH_8,0x01 << 16,43373);
-CheckEnum("GDK_PIXDATA_SAMPLE_WIDTH_MASK",GDK_PIXDATA_SAMPLE_WIDTH_MASK,0x0f << 16,43374);
-CheckEnum("GDK_PIXDATA_ENCODING_RAW",GDK_PIXDATA_ENCODING_RAW,0x01 << 24,43375);
-CheckEnum("GDK_PIXDATA_ENCODING_RLE",GDK_PIXDATA_ENCODING_RLE,0x02 << 24,43376);
-CheckEnum("GDK_PIXDATA_ENCODING_MASK",GDK_PIXDATA_ENCODING_MASK,0x0f << 24,43377);
-#elif __ia64__
-CheckEnum("GDK_PIXDATA_COLOR_TYPE_RGB",GDK_PIXDATA_COLOR_TYPE_RGB,0x01,43370);
-CheckEnum("GDK_PIXDATA_COLOR_TYPE_RGBA",GDK_PIXDATA_COLOR_TYPE_RGBA,0x02,43371);
-CheckEnum("GDK_PIXDATA_COLOR_TYPE_MASK",GDK_PIXDATA_COLOR_TYPE_MASK,0xff,43372);
-CheckEnum("GDK_PIXDATA_SAMPLE_WIDTH_8",GDK_PIXDATA_SAMPLE_WIDTH_8,0x01 << 16,43373);
-CheckEnum("GDK_PIXDATA_SAMPLE_WIDTH_MASK",GDK_PIXDATA_SAMPLE_WIDTH_MASK,0x0f << 16,43374);
-CheckEnum("GDK_PIXDATA_ENCODING_RAW",GDK_PIXDATA_ENCODING_RAW,0x01 << 24,43375);
-CheckEnum("GDK_PIXDATA_ENCODING_RLE",GDK_PIXDATA_ENCODING_RLE,0x02 << 24,43376);
-CheckEnum("GDK_PIXDATA_ENCODING_MASK",GDK_PIXDATA_ENCODING_MASK,0x0f << 24,43377);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GDK_PIXDATA_COLOR_TYPE_RGB",GDK_PIXDATA_COLOR_TYPE_RGB,0x01,43370);
-CheckEnum("GDK_PIXDATA_COLOR_TYPE_RGBA",GDK_PIXDATA_COLOR_TYPE_RGBA,0x02,43371);
-CheckEnum("GDK_PIXDATA_COLOR_TYPE_MASK",GDK_PIXDATA_COLOR_TYPE_MASK,0xff,43372);
-CheckEnum("GDK_PIXDATA_SAMPLE_WIDTH_8",GDK_PIXDATA_SAMPLE_WIDTH_8,0x01 << 16,43373);
-CheckEnum("GDK_PIXDATA_SAMPLE_WIDTH_MASK",GDK_PIXDATA_SAMPLE_WIDTH_MASK,0x0f << 16,43374);
-CheckEnum("GDK_PIXDATA_ENCODING_RAW",GDK_PIXDATA_ENCODING_RAW,0x01 << 24,43375);
-CheckEnum("GDK_PIXDATA_ENCODING_RLE",GDK_PIXDATA_ENCODING_RLE,0x02 << 24,43376);
-CheckEnum("GDK_PIXDATA_ENCODING_MASK",GDK_PIXDATA_ENCODING_MASK,0x0f << 24,43377);
-#elif __powerpc64__
-CheckEnum("GDK_PIXDATA_COLOR_TYPE_RGB",GDK_PIXDATA_COLOR_TYPE_RGB,0x01,43370);
-CheckEnum("GDK_PIXDATA_COLOR_TYPE_RGBA",GDK_PIXDATA_COLOR_TYPE_RGBA,0x02,43371);
-CheckEnum("GDK_PIXDATA_COLOR_TYPE_MASK",GDK_PIXDATA_COLOR_TYPE_MASK,0xff,43372);
-CheckEnum("GDK_PIXDATA_SAMPLE_WIDTH_8",GDK_PIXDATA_SAMPLE_WIDTH_8,0x01 << 16,43373);
-CheckEnum("GDK_PIXDATA_SAMPLE_WIDTH_MASK",GDK_PIXDATA_SAMPLE_WIDTH_MASK,0x0f << 16,43374);
-CheckEnum("GDK_PIXDATA_ENCODING_RAW",GDK_PIXDATA_ENCODING_RAW,0x01 << 24,43375);
-CheckEnum("GDK_PIXDATA_ENCODING_RLE",GDK_PIXDATA_ENCODING_RLE,0x02 << 24,43376);
-CheckEnum("GDK_PIXDATA_ENCODING_MASK",GDK_PIXDATA_ENCODING_MASK,0x0f << 24,43377);
-#elif __s390__ && !__s390x__
-CheckEnum("GDK_PIXDATA_COLOR_TYPE_RGB",GDK_PIXDATA_COLOR_TYPE_RGB,0x01,43370);
-CheckEnum("GDK_PIXDATA_COLOR_TYPE_RGBA",GDK_PIXDATA_COLOR_TYPE_RGBA,0x02,43371);
-CheckEnum("GDK_PIXDATA_COLOR_TYPE_MASK",GDK_PIXDATA_COLOR_TYPE_MASK,0xff,43372);
-CheckEnum("GDK_PIXDATA_SAMPLE_WIDTH_8",GDK_PIXDATA_SAMPLE_WIDTH_8,0x01 << 16,43373);
-CheckEnum("GDK_PIXDATA_SAMPLE_WIDTH_MASK",GDK_PIXDATA_SAMPLE_WIDTH_MASK,0x0f << 16,43374);
-CheckEnum("GDK_PIXDATA_ENCODING_RAW",GDK_PIXDATA_ENCODING_RAW,0x01 << 24,43375);
-CheckEnum("GDK_PIXDATA_ENCODING_RLE",GDK_PIXDATA_ENCODING_RLE,0x02 << 24,43376);
-CheckEnum("GDK_PIXDATA_ENCODING_MASK",GDK_PIXDATA_ENCODING_MASK,0x0f << 24,43377);
-#elif __s390x__
-CheckEnum("GDK_PIXDATA_COLOR_TYPE_RGB",GDK_PIXDATA_COLOR_TYPE_RGB,0x01,43370);
-CheckEnum("GDK_PIXDATA_COLOR_TYPE_RGBA",GDK_PIXDATA_COLOR_TYPE_RGBA,0x02,43371);
-CheckEnum("GDK_PIXDATA_COLOR_TYPE_MASK",GDK_PIXDATA_COLOR_TYPE_MASK,0xff,43372);
-CheckEnum("GDK_PIXDATA_SAMPLE_WIDTH_8",GDK_PIXDATA_SAMPLE_WIDTH_8,0x01 << 16,43373);
-CheckEnum("GDK_PIXDATA_SAMPLE_WIDTH_MASK",GDK_PIXDATA_SAMPLE_WIDTH_MASK,0x0f << 16,43374);
-CheckEnum("GDK_PIXDATA_ENCODING_RAW",GDK_PIXDATA_ENCODING_RAW,0x01 << 24,43375);
-CheckEnum("GDK_PIXDATA_ENCODING_RLE",GDK_PIXDATA_ENCODING_RLE,0x02 << 24,43376);
-CheckEnum("GDK_PIXDATA_ENCODING_MASK",GDK_PIXDATA_ENCODING_MASK,0x0f << 24,43377);
-#elif 1
-CheckEnum("GDK_PIXDATA_COLOR_TYPE_RGB",GDK_PIXDATA_COLOR_TYPE_RGB,0x01,43370);
-CheckEnum("GDK_PIXDATA_COLOR_TYPE_RGBA",GDK_PIXDATA_COLOR_TYPE_RGBA,0x02,43371);
-CheckEnum("GDK_PIXDATA_COLOR_TYPE_MASK",GDK_PIXDATA_COLOR_TYPE_MASK,0xff,43372);
-CheckEnum("GDK_PIXDATA_SAMPLE_WIDTH_8",GDK_PIXDATA_SAMPLE_WIDTH_8,0x01 << 16,43373);
-CheckEnum("GDK_PIXDATA_SAMPLE_WIDTH_MASK",GDK_PIXDATA_SAMPLE_WIDTH_MASK,0x0f << 16,43374);
-CheckEnum("GDK_PIXDATA_ENCODING_RAW",GDK_PIXDATA_ENCODING_RAW,0x01 << 24,43375);
-CheckEnum("GDK_PIXDATA_ENCODING_RLE",GDK_PIXDATA_ENCODING_RLE,0x02 << 24,43376);
-CheckEnum("GDK_PIXDATA_ENCODING_MASK",GDK_PIXDATA_ENCODING_MASK,0x0f << 24,43377);
-#endif
-
-#if __i386__
-CheckTypeSize(GdkPixdataType,4, 12658, 2);
-#elif __x86_64__
-CheckTypeSize(GdkPixdataType,4, 12658, 11);
-#elif __ia64__
-CheckTypeSize(GdkPixdataType,4, 12658, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixdataType,4, 12658, 6);
-#elif __powerpc64__
-CheckTypeSize(GdkPixdataType,4, 12658, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixdataType,4, 12658, 10);
-#elif __s390x__
-CheckTypeSize(GdkPixdataType,4, 12658, 12);
-#elif 1
-CheckTypeSize(GdkPixdataType,0, 12658, 1);
+CheckTypeSize(GdkPixdataType,4, 12658, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12658,0);
+Msg("Find size of GdkPixdataType (12658)\n");
 #endif
 
 extern gboolean gdk_pixdata_deserialize_db(GdkPixdata *, guint, const guint8 *, GError * *);

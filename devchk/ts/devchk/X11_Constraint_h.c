@@ -33,21 +33,22 @@ Msg("Checking data structures in X11/Constraint.h\n");
 
 printf("Checking data structures in X11/Constraint.h\n");
 #if __ia64__
-CheckTypeSize(ConstraintWidgetClass,8, 10260, 3);
+CheckTypeSize(ConstraintWidgetClass,8, 10260, 3)
 #elif __i386__
-CheckTypeSize(ConstraintWidgetClass,4, 10260, 2);
+CheckTypeSize(ConstraintWidgetClass,4, 10260, 2)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(ConstraintWidgetClass,4, 10260, 6);
+CheckTypeSize(ConstraintWidgetClass,4, 10260, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(ConstraintWidgetClass,4, 10260, 10);
+CheckTypeSize(ConstraintWidgetClass,4, 10260, 10)
 #elif __powerpc64__
-CheckTypeSize(ConstraintWidgetClass,8, 10260, 9);
+CheckTypeSize(ConstraintWidgetClass,8, 10260, 9)
 #elif __s390x__
-CheckTypeSize(ConstraintWidgetClass,8, 10260, 12);
+CheckTypeSize(ConstraintWidgetClass,8, 10260, 12)
 #elif __x86_64__
-CheckTypeSize(ConstraintWidgetClass,8, 10260, 11);
-#elif 1
-CheckTypeSize(ConstraintWidgetClass,0, 10260, 1);
+CheckTypeSize(ConstraintWidgetClass,8, 10260, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10260,0);
+Msg("Find size of ConstraintWidgetClass (10260)\n");
 #endif
 
 #ifdef TET_TEST
