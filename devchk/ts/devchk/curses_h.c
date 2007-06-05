@@ -1778,625 +1778,126 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(chtype,4, 8650, 2);
+CheckTypeSize(chtype,4, 8650, 2)
 #elif __ia64__
-CheckTypeSize(chtype,8, 8650, 3);
+CheckTypeSize(chtype,8, 8650, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(chtype,4, 8650, 6);
+CheckTypeSize(chtype,4, 8650, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(chtype,4, 8650, 10);
+CheckTypeSize(chtype,4, 8650, 10)
 #elif __powerpc64__
-CheckTypeSize(chtype,8, 8650, 9);
+CheckTypeSize(chtype,8, 8650, 9)
 #elif __s390x__
-CheckTypeSize(chtype,8, 8650, 12);
+CheckTypeSize(chtype,8, 8650, 12)
 #elif __x86_64__
-CheckTypeSize(chtype,8, 8650, 11);
-#elif 1
-CheckTypeSize(chtype,0, 8650, 1);
+CheckTypeSize(chtype,8, 8650, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8650,0);
+Msg("Find size of chtype (8650)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(SCREEN,0, 8653, 2);
+CheckTypeSize(SCREEN,0, 8653, 2)
 #elif __ia64__
-CheckTypeSize(SCREEN,0, 8653, 3);
+CheckTypeSize(SCREEN,0, 8653, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(SCREEN,0, 8653, 6);
+CheckTypeSize(SCREEN,0, 8653, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(SCREEN,0, 8653, 10);
+CheckTypeSize(SCREEN,0, 8653, 10)
 #elif __powerpc64__
-CheckTypeSize(SCREEN,0, 8653, 9);
+CheckTypeSize(SCREEN,0, 8653, 9)
 #elif __s390x__
-CheckTypeSize(SCREEN,0, 8653, 12);
+CheckTypeSize(SCREEN,0, 8653, 12)
 #elif __x86_64__
-CheckTypeSize(SCREEN,0, 8653, 11);
-#elif 1
-CheckTypeSize(SCREEN,0, 8653, 1);
+CheckTypeSize(SCREEN,0, 8653, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8653,0);
+Msg("Find size of SCREEN (8653)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(WINDOW,100, 8655, 2);
+CheckTypeSize(WINDOW,100, 8655, 2)
 #elif __ia64__
-CheckTypeSize(WINDOW,128, 8655, 3);
+CheckTypeSize(WINDOW,128, 8655, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(WINDOW,100, 8655, 6);
+CheckTypeSize(WINDOW,100, 8655, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(WINDOW,100, 8655, 10);
+CheckTypeSize(WINDOW,100, 8655, 10)
 #elif __powerpc64__
-CheckTypeSize(WINDOW,128, 8655, 9);
+CheckTypeSize(WINDOW,128, 8655, 9)
 #elif __s390x__
-CheckTypeSize(WINDOW,128, 8655, 12);
+CheckTypeSize(WINDOW,128, 8655, 12)
 #elif __x86_64__
-CheckTypeSize(WINDOW,128, 8655, 11);
-#elif 1
-CheckTypeSize(WINDOW,0, 8655, 1);
+CheckTypeSize(WINDOW,128, 8655, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8655,0);
+Msg("Find size of WINDOW (8655)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(attr_t,4, 8656, 2);
+CheckTypeSize(attr_t,4, 8656, 2)
 #elif __ia64__
-CheckTypeSize(attr_t,8, 8656, 3);
+CheckTypeSize(attr_t,8, 8656, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(attr_t,4, 8656, 6);
+CheckTypeSize(attr_t,4, 8656, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(attr_t,4, 8656, 10);
+CheckTypeSize(attr_t,4, 8656, 10)
 #elif __powerpc64__
-CheckTypeSize(attr_t,8, 8656, 9);
+CheckTypeSize(attr_t,8, 8656, 9)
 #elif __s390x__
-CheckTypeSize(attr_t,8, 8656, 12);
+CheckTypeSize(attr_t,8, 8656, 12)
 #elif __x86_64__
-CheckTypeSize(attr_t,8, 8656, 11);
-#elif 1
-CheckTypeSize(attr_t,0, 8656, 1);
+CheckTypeSize(attr_t,8, 8656, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8656,0);
+Msg("Find size of attr_t (8656)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(cchar_t,24, 8658, 2);
+CheckTypeSize(cchar_t,24, 8658, 2)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(cchar_t,24, 8658, 6);
+CheckTypeSize(cchar_t,24, 8658, 6)
 #elif __ia64__
-CheckTypeSize(cchar_t,32, 8658, 3);
+CheckTypeSize(cchar_t,32, 8658, 3)
 #elif __s390__ && !__s390x__
-CheckTypeSize(cchar_t,24, 8658, 10);
+CheckTypeSize(cchar_t,24, 8658, 10)
 #elif __powerpc64__
-CheckTypeSize(cchar_t,32, 8658, 9);
+CheckTypeSize(cchar_t,32, 8658, 9)
 #elif __s390x__
-CheckTypeSize(cchar_t,32, 8658, 12);
+CheckTypeSize(cchar_t,32, 8658, 12)
 #elif __x86_64__
-CheckTypeSize(cchar_t,32, 8658, 11);
-#elif 1
-CheckTypeSize(cchar_t,0, 8658, 1);
+CheckTypeSize(cchar_t,32, 8658, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8658,0);
+Msg("Find size of cchar_t (8658)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(struct pdat,12, 8663, 2);
-CheckMemberSize(struct pdat,_pad_y,2,2,29725);
-CheckOffset(struct pdat,_pad_y,0,2,29725);
-CheckMemberSize(struct pdat,_pad_x,2,2,29726);
-CheckOffset(struct pdat,_pad_x,2,2,29726);
-CheckMemberSize(struct pdat,_pad_top,2,2,29727);
-CheckOffset(struct pdat,_pad_top,4,2,29727);
-CheckMemberSize(struct pdat,_pad_left,2,2,29728);
-CheckOffset(struct pdat,_pad_left,6,2,29728);
-CheckMemberSize(struct pdat,_pad_bottom,2,2,29729);
-CheckOffset(struct pdat,_pad_bottom,8,2,29729);
-CheckMemberSize(struct pdat,_pad_right,2,2,29730);
-CheckOffset(struct pdat,_pad_right,10,2,29730);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct pdat,12, 8663, 6);
-CheckMemberSize(struct pdat,_pad_x,2,6,29726);
-CheckOffset(struct pdat,_pad_x,2,6,29726);
-CheckMemberSize(struct pdat,_pad_top,2,6,29727);
-CheckOffset(struct pdat,_pad_top,4,6,29727);
-CheckMemberSize(struct pdat,_pad_left,2,6,29728);
-CheckOffset(struct pdat,_pad_left,6,6,29728);
-CheckMemberSize(struct pdat,_pad_bottom,2,6,29729);
-CheckOffset(struct pdat,_pad_bottom,8,6,29729);
-CheckMemberSize(struct pdat,_pad_right,2,6,29730);
-CheckOffset(struct pdat,_pad_right,10,6,29730);
 #elif __ia64__
-CheckTypeSize(struct pdat,12, 8663, 3);
-CheckMemberSize(struct pdat,_pad_y,2,3,29725);
-CheckOffset(struct pdat,_pad_y,0,3,29725);
-CheckMemberSize(struct pdat,_pad_x,2,3,29726);
-CheckOffset(struct pdat,_pad_x,2,3,29726);
-CheckMemberSize(struct pdat,_pad_top,2,3,29727);
-CheckOffset(struct pdat,_pad_top,4,3,29727);
-CheckMemberSize(struct pdat,_pad_left,2,3,29728);
-CheckOffset(struct pdat,_pad_left,6,3,29728);
-CheckMemberSize(struct pdat,_pad_bottom,2,3,29729);
-CheckOffset(struct pdat,_pad_bottom,8,3,29729);
-CheckMemberSize(struct pdat,_pad_right,2,3,29730);
-CheckOffset(struct pdat,_pad_right,10,3,29730);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct pdat,12, 8663, 10);
-CheckMemberSize(struct pdat,_pad_x,2,10,29726);
-CheckOffset(struct pdat,_pad_x,2,10,29726);
-CheckMemberSize(struct pdat,_pad_top,2,10,29727);
-CheckOffset(struct pdat,_pad_top,4,10,29727);
-CheckMemberSize(struct pdat,_pad_left,2,10,29728);
-CheckOffset(struct pdat,_pad_left,6,10,29728);
-CheckMemberSize(struct pdat,_pad_bottom,2,10,29729);
-CheckOffset(struct pdat,_pad_bottom,8,10,29729);
-CheckMemberSize(struct pdat,_pad_right,2,10,29730);
-CheckOffset(struct pdat,_pad_right,10,10,29730);
 #elif __powerpc64__
-CheckTypeSize(struct pdat,12, 8663, 9);
-CheckMemberSize(struct pdat,_pad_x,2,9,29726);
-CheckOffset(struct pdat,_pad_x,2,9,29726);
-CheckMemberSize(struct pdat,_pad_top,2,9,29727);
-CheckOffset(struct pdat,_pad_top,4,9,29727);
-CheckMemberSize(struct pdat,_pad_left,2,9,29728);
-CheckOffset(struct pdat,_pad_left,6,9,29728);
-CheckMemberSize(struct pdat,_pad_bottom,2,9,29729);
-CheckOffset(struct pdat,_pad_bottom,8,9,29729);
-CheckMemberSize(struct pdat,_pad_right,2,9,29730);
-CheckOffset(struct pdat,_pad_right,10,9,29730);
 #elif __s390x__
-CheckTypeSize(struct pdat,12, 8663, 12);
-CheckMemberSize(struct pdat,_pad_x,2,12,29726);
-CheckOffset(struct pdat,_pad_x,2,12,29726);
-CheckMemberSize(struct pdat,_pad_top,2,12,29727);
-CheckOffset(struct pdat,_pad_top,4,12,29727);
-CheckMemberSize(struct pdat,_pad_left,2,12,29728);
-CheckOffset(struct pdat,_pad_left,6,12,29728);
-CheckMemberSize(struct pdat,_pad_bottom,2,12,29729);
-CheckOffset(struct pdat,_pad_bottom,8,12,29729);
-CheckMemberSize(struct pdat,_pad_right,2,12,29730);
-CheckOffset(struct pdat,_pad_right,10,12,29730);
 #elif __x86_64__
-CheckTypeSize(struct pdat,12, 8663, 11);
-CheckMemberSize(struct pdat,_pad_x,2,11,29726);
-CheckOffset(struct pdat,_pad_x,2,11,29726);
-CheckMemberSize(struct pdat,_pad_top,2,11,29727);
-CheckOffset(struct pdat,_pad_top,4,11,29727);
-CheckMemberSize(struct pdat,_pad_left,2,11,29728);
-CheckOffset(struct pdat,_pad_left,6,11,29728);
-CheckMemberSize(struct pdat,_pad_bottom,2,11,29729);
-CheckOffset(struct pdat,_pad_bottom,8,11,29729);
-CheckMemberSize(struct pdat,_pad_right,2,11,29730);
-CheckOffset(struct pdat,_pad_right,10,11,29730);
-#elif 1
-CheckTypeSize(struct pdat,0, 8663, 1);
-Msg("Missing member data for pdat on All\n");
-CheckOffset(struct pdat,_pad_y,0,1,29725);
-CheckOffset(struct pdat,_pad_x,0,1,29726);
-CheckOffset(struct pdat,_pad_top,0,1,29727);
-CheckOffset(struct pdat,_pad_left,0,1,29728);
-CheckOffset(struct pdat,_pad_bottom,0,1,29729);
-CheckOffset(struct pdat,_pad_right,0,1,29730);
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8663,0);
+Msg("Find size of pdat (8663)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(struct _win_st,100, 8654, 2);
-CheckMemberSize(struct _win_st,_cury,2,2,29700);
-CheckOffset(struct _win_st,_cury,0,2,29700);
-CheckMemberSize(struct _win_st,_curx,2,2,29701);
-CheckOffset(struct _win_st,_curx,2,2,29701);
-CheckMemberSize(struct _win_st,_maxy,2,2,29702);
-CheckOffset(struct _win_st,_maxy,4,2,29702);
-CheckMemberSize(struct _win_st,_maxx,2,2,29703);
-CheckOffset(struct _win_st,_maxx,6,2,29703);
-CheckMemberSize(struct _win_st,_begy,2,2,29704);
-CheckOffset(struct _win_st,_begy,8,2,29704);
-CheckMemberSize(struct _win_st,_begx,2,2,29705);
-CheckOffset(struct _win_st,_begx,10,2,29705);
-CheckMemberSize(struct _win_st,_flags,2,2,29706);
-CheckOffset(struct _win_st,_flags,12,2,29706);
-CheckMemberSize(struct _win_st,_attrs,4,2,29707);
-CheckOffset(struct _win_st,_attrs,16,2,29707);
-CheckMemberSize(struct _win_st,_bkgd,4,2,29708);
-CheckOffset(struct _win_st,_bkgd,20,2,29708);
-CheckMemberSize(struct _win_st,_notimeout,1,2,29709);
-CheckOffset(struct _win_st,_notimeout,24,2,29709);
-CheckMemberSize(struct _win_st,_clear,1,2,29710);
-CheckOffset(struct _win_st,_clear,25,2,29710);
-CheckMemberSize(struct _win_st,_leaveok,1,2,29711);
-CheckOffset(struct _win_st,_leaveok,26,2,29711);
-CheckMemberSize(struct _win_st,_scroll,1,2,29712);
-CheckOffset(struct _win_st,_scroll,27,2,29712);
-CheckMemberSize(struct _win_st,_idlok,1,2,29713);
-CheckOffset(struct _win_st,_idlok,28,2,29713);
-CheckMemberSize(struct _win_st,_idcok,1,2,29714);
-CheckOffset(struct _win_st,_idcok,29,2,29714);
-CheckMemberSize(struct _win_st,_immed,1,2,29715);
-CheckOffset(struct _win_st,_immed,30,2,29715);
-CheckMemberSize(struct _win_st,_sync,1,2,29716);
-CheckOffset(struct _win_st,_sync,31,2,29716);
-CheckMemberSize(struct _win_st,_use_keypad,1,2,29717);
-CheckOffset(struct _win_st,_use_keypad,32,2,29717);
-CheckMemberSize(struct _win_st,_delay,4,2,29718);
-CheckOffset(struct _win_st,_delay,36,2,29718);
-CheckMemberSize(struct _win_st,_line,4,2,29719);
-CheckOffset(struct _win_st,_line,40,2,29719);
-CheckMemberSize(struct _win_st,_regtop,2,2,29720);
-CheckOffset(struct _win_st,_regtop,44,2,29720);
-CheckMemberSize(struct _win_st,_regbottom,2,2,29721);
-CheckOffset(struct _win_st,_regbottom,46,2,29721);
-CheckMemberSize(struct _win_st,_parx,4,2,29722);
-CheckOffset(struct _win_st,_parx,48,2,29722);
-CheckMemberSize(struct _win_st,_pary,4,2,29723);
-CheckOffset(struct _win_st,_pary,52,2,29723);
-CheckMemberSize(struct _win_st,_parent,4,2,29724);
-CheckOffset(struct _win_st,_parent,56,2,29724);
-CheckMemberSize(struct _win_st,_pad,12,2,29731);
-CheckOffset(struct _win_st,_pad,60,2,29731);
-CheckMemberSize(struct _win_st,_yoffset,2,2,29732);
-CheckOffset(struct _win_st,_yoffset,72,2,29732);
-CheckMemberSize(struct _win_st,_bkgrnd,24,2,34437);
-CheckOffset(struct _win_st,_bkgrnd,76,2,34437);
 #elif __ia64__
-CheckTypeSize(struct _win_st,128, 8654, 3);
-CheckMemberSize(struct _win_st,_cury,2,3,29700);
-CheckOffset(struct _win_st,_cury,0,3,29700);
-CheckMemberSize(struct _win_st,_curx,2,3,29701);
-CheckOffset(struct _win_st,_curx,2,3,29701);
-CheckMemberSize(struct _win_st,_maxy,2,3,29702);
-CheckOffset(struct _win_st,_maxy,4,3,29702);
-CheckMemberSize(struct _win_st,_maxx,2,3,29703);
-CheckOffset(struct _win_st,_maxx,6,3,29703);
-CheckMemberSize(struct _win_st,_begy,2,3,29704);
-CheckOffset(struct _win_st,_begy,8,3,29704);
-CheckMemberSize(struct _win_st,_begx,2,3,29705);
-CheckOffset(struct _win_st,_begx,10,3,29705);
-CheckMemberSize(struct _win_st,_flags,2,3,29706);
-CheckOffset(struct _win_st,_flags,12,3,29706);
-CheckMemberSize(struct _win_st,_attrs,8,3,29707);
-CheckOffset(struct _win_st,_attrs,16,3,29707);
-CheckMemberSize(struct _win_st,_bkgd,8,3,29708);
-CheckOffset(struct _win_st,_bkgd,24,3,29708);
-CheckMemberSize(struct _win_st,_notimeout,1,3,29709);
-CheckOffset(struct _win_st,_notimeout,32,3,29709);
-CheckMemberSize(struct _win_st,_clear,1,3,29710);
-CheckOffset(struct _win_st,_clear,33,3,29710);
-CheckMemberSize(struct _win_st,_leaveok,1,3,29711);
-CheckOffset(struct _win_st,_leaveok,34,3,29711);
-CheckMemberSize(struct _win_st,_scroll,1,3,29712);
-CheckOffset(struct _win_st,_scroll,35,3,29712);
-CheckMemberSize(struct _win_st,_idlok,1,3,29713);
-CheckOffset(struct _win_st,_idlok,36,3,29713);
-CheckMemberSize(struct _win_st,_idcok,1,3,29714);
-CheckOffset(struct _win_st,_idcok,37,3,29714);
-CheckMemberSize(struct _win_st,_immed,1,3,29715);
-CheckOffset(struct _win_st,_immed,38,3,29715);
-CheckMemberSize(struct _win_st,_sync,1,3,29716);
-CheckOffset(struct _win_st,_sync,39,3,29716);
-CheckMemberSize(struct _win_st,_use_keypad,1,3,29717);
-CheckOffset(struct _win_st,_use_keypad,40,3,29717);
-CheckMemberSize(struct _win_st,_delay,4,3,29718);
-CheckOffset(struct _win_st,_delay,44,3,29718);
-CheckMemberSize(struct _win_st,_line,8,3,29719);
-CheckOffset(struct _win_st,_line,48,3,29719);
-CheckMemberSize(struct _win_st,_regtop,2,3,29720);
-CheckOffset(struct _win_st,_regtop,56,3,29720);
-CheckMemberSize(struct _win_st,_regbottom,2,3,29721);
-CheckOffset(struct _win_st,_regbottom,58,3,29721);
-CheckMemberSize(struct _win_st,_parx,4,3,29722);
-CheckOffset(struct _win_st,_parx,60,3,29722);
-CheckMemberSize(struct _win_st,_pary,4,3,29723);
-CheckOffset(struct _win_st,_pary,64,3,29723);
-CheckMemberSize(struct _win_st,_parent,8,3,29724);
-CheckOffset(struct _win_st,_parent,72,3,29724);
-CheckMemberSize(struct _win_st,_pad,12,3,29731);
-CheckOffset(struct _win_st,_pad,80,3,29731);
-CheckMemberSize(struct _win_st,_yoffset,2,3,29732);
-CheckOffset(struct _win_st,_yoffset,92,3,29732);
-CheckMemberSize(struct _win_st,_bkgrnd,32,3,34437);
-CheckOffset(struct _win_st,_bkgrnd,96,3,34437);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _win_st,100, 8654, 6);
-CheckMemberSize(struct _win_st,_curx,2,6,29701);
-CheckOffset(struct _win_st,_curx,2,6,29701);
-CheckMemberSize(struct _win_st,_maxy,2,6,29702);
-CheckOffset(struct _win_st,_maxy,4,6,29702);
-CheckMemberSize(struct _win_st,_maxx,2,6,29703);
-CheckOffset(struct _win_st,_maxx,6,6,29703);
-CheckMemberSize(struct _win_st,_begy,2,6,29704);
-CheckOffset(struct _win_st,_begy,8,6,29704);
-CheckMemberSize(struct _win_st,_begx,2,6,29705);
-CheckOffset(struct _win_st,_begx,10,6,29705);
-CheckMemberSize(struct _win_st,_flags,2,6,29706);
-CheckOffset(struct _win_st,_flags,12,6,29706);
-CheckMemberSize(struct _win_st,_attrs,4,6,29707);
-CheckOffset(struct _win_st,_attrs,16,6,29707);
-CheckMemberSize(struct _win_st,_bkgd,4,6,29708);
-CheckOffset(struct _win_st,_bkgd,20,6,29708);
-CheckMemberSize(struct _win_st,_notimeout,1,6,29709);
-CheckOffset(struct _win_st,_notimeout,24,6,29709);
-CheckMemberSize(struct _win_st,_clear,1,6,29710);
-CheckOffset(struct _win_st,_clear,25,6,29710);
-CheckMemberSize(struct _win_st,_leaveok,1,6,29711);
-CheckOffset(struct _win_st,_leaveok,26,6,29711);
-CheckMemberSize(struct _win_st,_scroll,1,6,29712);
-CheckOffset(struct _win_st,_scroll,27,6,29712);
-CheckMemberSize(struct _win_st,_idlok,1,6,29713);
-CheckOffset(struct _win_st,_idlok,28,6,29713);
-CheckMemberSize(struct _win_st,_idcok,1,6,29714);
-CheckOffset(struct _win_st,_idcok,29,6,29714);
-CheckMemberSize(struct _win_st,_immed,1,6,29715);
-CheckOffset(struct _win_st,_immed,30,6,29715);
-CheckMemberSize(struct _win_st,_sync,1,6,29716);
-CheckOffset(struct _win_st,_sync,31,6,29716);
-CheckMemberSize(struct _win_st,_use_keypad,1,6,29717);
-CheckOffset(struct _win_st,_use_keypad,32,6,29717);
-CheckMemberSize(struct _win_st,_delay,4,6,29718);
-CheckOffset(struct _win_st,_delay,36,6,29718);
-CheckMemberSize(struct _win_st,_line,4,6,29719);
-CheckOffset(struct _win_st,_line,40,6,29719);
-CheckMemberSize(struct _win_st,_regtop,2,6,29720);
-CheckOffset(struct _win_st,_regtop,44,6,29720);
-CheckMemberSize(struct _win_st,_regbottom,2,6,29721);
-CheckOffset(struct _win_st,_regbottom,46,6,29721);
-CheckMemberSize(struct _win_st,_parx,4,6,29722);
-CheckOffset(struct _win_st,_parx,48,6,29722);
-CheckMemberSize(struct _win_st,_pary,4,6,29723);
-CheckOffset(struct _win_st,_pary,52,6,29723);
-CheckMemberSize(struct _win_st,_parent,4,6,29724);
-CheckOffset(struct _win_st,_parent,56,6,29724);
-CheckMemberSize(struct _win_st,_pad,12,6,29731);
-CheckOffset(struct _win_st,_pad,60,6,29731);
-CheckMemberSize(struct _win_st,_yoffset,2,6,29732);
-CheckOffset(struct _win_st,_yoffset,72,6,29732);
-CheckMemberSize(struct _win_st,_bkgrnd,24,6,34437);
-CheckOffset(struct _win_st,_bkgrnd,76,6,34437);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _win_st,100, 8654, 10);
-CheckMemberSize(struct _win_st,_curx,2,10,29701);
-CheckOffset(struct _win_st,_curx,2,10,29701);
-CheckMemberSize(struct _win_st,_maxy,2,10,29702);
-CheckOffset(struct _win_st,_maxy,4,10,29702);
-CheckMemberSize(struct _win_st,_maxx,2,10,29703);
-CheckOffset(struct _win_st,_maxx,6,10,29703);
-CheckMemberSize(struct _win_st,_begy,2,10,29704);
-CheckOffset(struct _win_st,_begy,8,10,29704);
-CheckMemberSize(struct _win_st,_begx,2,10,29705);
-CheckOffset(struct _win_st,_begx,10,10,29705);
-CheckMemberSize(struct _win_st,_flags,2,10,29706);
-CheckOffset(struct _win_st,_flags,12,10,29706);
-CheckMemberSize(struct _win_st,_attrs,4,10,29707);
-CheckOffset(struct _win_st,_attrs,16,10,29707);
-CheckMemberSize(struct _win_st,_bkgd,4,10,29708);
-CheckOffset(struct _win_st,_bkgd,20,10,29708);
-CheckMemberSize(struct _win_st,_notimeout,1,10,29709);
-CheckOffset(struct _win_st,_notimeout,24,10,29709);
-CheckMemberSize(struct _win_st,_clear,1,10,29710);
-CheckOffset(struct _win_st,_clear,25,10,29710);
-CheckMemberSize(struct _win_st,_leaveok,1,10,29711);
-CheckOffset(struct _win_st,_leaveok,26,10,29711);
-CheckMemberSize(struct _win_st,_scroll,1,10,29712);
-CheckOffset(struct _win_st,_scroll,27,10,29712);
-CheckMemberSize(struct _win_st,_idlok,1,10,29713);
-CheckOffset(struct _win_st,_idlok,28,10,29713);
-CheckMemberSize(struct _win_st,_idcok,1,10,29714);
-CheckOffset(struct _win_st,_idcok,29,10,29714);
-CheckMemberSize(struct _win_st,_immed,1,10,29715);
-CheckOffset(struct _win_st,_immed,30,10,29715);
-CheckMemberSize(struct _win_st,_sync,1,10,29716);
-CheckOffset(struct _win_st,_sync,31,10,29716);
-CheckMemberSize(struct _win_st,_use_keypad,1,10,29717);
-CheckOffset(struct _win_st,_use_keypad,32,10,29717);
-CheckMemberSize(struct _win_st,_delay,4,10,29718);
-CheckOffset(struct _win_st,_delay,36,10,29718);
-CheckMemberSize(struct _win_st,_line,4,10,29719);
-CheckOffset(struct _win_st,_line,40,10,29719);
-CheckMemberSize(struct _win_st,_regtop,2,10,29720);
-CheckOffset(struct _win_st,_regtop,44,10,29720);
-CheckMemberSize(struct _win_st,_regbottom,2,10,29721);
-CheckOffset(struct _win_st,_regbottom,46,10,29721);
-CheckMemberSize(struct _win_st,_parx,4,10,29722);
-CheckOffset(struct _win_st,_parx,48,10,29722);
-CheckMemberSize(struct _win_st,_pary,4,10,29723);
-CheckOffset(struct _win_st,_pary,52,10,29723);
-CheckMemberSize(struct _win_st,_parent,4,10,29724);
-CheckOffset(struct _win_st,_parent,56,10,29724);
-CheckMemberSize(struct _win_st,_pad,12,10,29731);
-CheckOffset(struct _win_st,_pad,60,10,29731);
-CheckMemberSize(struct _win_st,_yoffset,2,10,29732);
-CheckOffset(struct _win_st,_yoffset,72,10,29732);
-CheckMemberSize(struct _win_st,_bkgrnd,24,10,34437);
-CheckOffset(struct _win_st,_bkgrnd,76,10,34437);
 #elif __powerpc64__
-CheckTypeSize(struct _win_st,128, 8654, 9);
-CheckMemberSize(struct _win_st,_curx,2,9,29701);
-CheckOffset(struct _win_st,_curx,2,9,29701);
-CheckMemberSize(struct _win_st,_maxy,2,9,29702);
-CheckOffset(struct _win_st,_maxy,4,9,29702);
-CheckMemberSize(struct _win_st,_maxx,2,9,29703);
-CheckOffset(struct _win_st,_maxx,6,9,29703);
-CheckMemberSize(struct _win_st,_begy,2,9,29704);
-CheckOffset(struct _win_st,_begy,8,9,29704);
-CheckMemberSize(struct _win_st,_begx,2,9,29705);
-CheckOffset(struct _win_st,_begx,10,9,29705);
-CheckMemberSize(struct _win_st,_flags,2,9,29706);
-CheckOffset(struct _win_st,_flags,12,9,29706);
-CheckMemberSize(struct _win_st,_attrs,8,9,29707);
-CheckOffset(struct _win_st,_attrs,16,9,29707);
-CheckMemberSize(struct _win_st,_bkgd,8,9,29708);
-CheckOffset(struct _win_st,_bkgd,24,9,29708);
-CheckMemberSize(struct _win_st,_notimeout,1,9,29709);
-CheckOffset(struct _win_st,_notimeout,32,9,29709);
-CheckMemberSize(struct _win_st,_clear,1,9,29710);
-CheckOffset(struct _win_st,_clear,33,9,29710);
-CheckMemberSize(struct _win_st,_leaveok,1,9,29711);
-CheckOffset(struct _win_st,_leaveok,34,9,29711);
-CheckMemberSize(struct _win_st,_scroll,1,9,29712);
-CheckOffset(struct _win_st,_scroll,35,9,29712);
-CheckMemberSize(struct _win_st,_idlok,1,9,29713);
-CheckOffset(struct _win_st,_idlok,36,9,29713);
-CheckMemberSize(struct _win_st,_idcok,1,9,29714);
-CheckOffset(struct _win_st,_idcok,37,9,29714);
-CheckMemberSize(struct _win_st,_immed,1,9,29715);
-CheckOffset(struct _win_st,_immed,38,9,29715);
-CheckMemberSize(struct _win_st,_sync,1,9,29716);
-CheckOffset(struct _win_st,_sync,39,9,29716);
-CheckMemberSize(struct _win_st,_use_keypad,1,9,29717);
-CheckOffset(struct _win_st,_use_keypad,40,9,29717);
-CheckMemberSize(struct _win_st,_delay,4,9,29718);
-CheckOffset(struct _win_st,_delay,44,9,29718);
-CheckMemberSize(struct _win_st,_line,8,9,29719);
-CheckOffset(struct _win_st,_line,48,9,29719);
-CheckMemberSize(struct _win_st,_regtop,2,9,29720);
-CheckOffset(struct _win_st,_regtop,56,9,29720);
-CheckMemberSize(struct _win_st,_regbottom,2,9,29721);
-CheckOffset(struct _win_st,_regbottom,58,9,29721);
-CheckMemberSize(struct _win_st,_parx,4,9,29722);
-CheckOffset(struct _win_st,_parx,60,9,29722);
-CheckMemberSize(struct _win_st,_pary,4,9,29723);
-CheckOffset(struct _win_st,_pary,64,9,29723);
-CheckMemberSize(struct _win_st,_parent,8,9,29724);
-CheckOffset(struct _win_st,_parent,72,9,29724);
-CheckMemberSize(struct _win_st,_pad,12,9,29731);
-CheckOffset(struct _win_st,_pad,80,9,29731);
-CheckMemberSize(struct _win_st,_yoffset,2,9,29732);
-CheckOffset(struct _win_st,_yoffset,92,9,29732);
-CheckMemberSize(struct _win_st,_bkgrnd,32,9,34437);
-CheckOffset(struct _win_st,_bkgrnd,96,9,34437);
 #elif __s390x__
-CheckTypeSize(struct _win_st,128, 8654, 12);
-CheckMemberSize(struct _win_st,_curx,2,12,29701);
-CheckOffset(struct _win_st,_curx,2,12,29701);
-CheckMemberSize(struct _win_st,_maxy,2,12,29702);
-CheckOffset(struct _win_st,_maxy,4,12,29702);
-CheckMemberSize(struct _win_st,_maxx,2,12,29703);
-CheckOffset(struct _win_st,_maxx,6,12,29703);
-CheckMemberSize(struct _win_st,_begy,2,12,29704);
-CheckOffset(struct _win_st,_begy,8,12,29704);
-CheckMemberSize(struct _win_st,_begx,2,12,29705);
-CheckOffset(struct _win_st,_begx,10,12,29705);
-CheckMemberSize(struct _win_st,_flags,2,12,29706);
-CheckOffset(struct _win_st,_flags,12,12,29706);
-CheckMemberSize(struct _win_st,_attrs,8,12,29707);
-CheckOffset(struct _win_st,_attrs,16,12,29707);
-CheckMemberSize(struct _win_st,_bkgd,8,12,29708);
-CheckOffset(struct _win_st,_bkgd,24,12,29708);
-CheckMemberSize(struct _win_st,_notimeout,1,12,29709);
-CheckOffset(struct _win_st,_notimeout,32,12,29709);
-CheckMemberSize(struct _win_st,_clear,1,12,29710);
-CheckOffset(struct _win_st,_clear,33,12,29710);
-CheckMemberSize(struct _win_st,_leaveok,1,12,29711);
-CheckOffset(struct _win_st,_leaveok,34,12,29711);
-CheckMemberSize(struct _win_st,_scroll,1,12,29712);
-CheckOffset(struct _win_st,_scroll,35,12,29712);
-CheckMemberSize(struct _win_st,_idlok,1,12,29713);
-CheckOffset(struct _win_st,_idlok,36,12,29713);
-CheckMemberSize(struct _win_st,_idcok,1,12,29714);
-CheckOffset(struct _win_st,_idcok,37,12,29714);
-CheckMemberSize(struct _win_st,_immed,1,12,29715);
-CheckOffset(struct _win_st,_immed,38,12,29715);
-CheckMemberSize(struct _win_st,_sync,1,12,29716);
-CheckOffset(struct _win_st,_sync,39,12,29716);
-CheckMemberSize(struct _win_st,_use_keypad,1,12,29717);
-CheckOffset(struct _win_st,_use_keypad,40,12,29717);
-CheckMemberSize(struct _win_st,_delay,4,12,29718);
-CheckOffset(struct _win_st,_delay,44,12,29718);
-CheckMemberSize(struct _win_st,_line,8,12,29719);
-CheckOffset(struct _win_st,_line,48,12,29719);
-CheckMemberSize(struct _win_st,_regtop,2,12,29720);
-CheckOffset(struct _win_st,_regtop,56,12,29720);
-CheckMemberSize(struct _win_st,_regbottom,2,12,29721);
-CheckOffset(struct _win_st,_regbottom,58,12,29721);
-CheckMemberSize(struct _win_st,_parx,4,12,29722);
-CheckOffset(struct _win_st,_parx,60,12,29722);
-CheckMemberSize(struct _win_st,_pary,4,12,29723);
-CheckOffset(struct _win_st,_pary,64,12,29723);
-CheckMemberSize(struct _win_st,_parent,8,12,29724);
-CheckOffset(struct _win_st,_parent,72,12,29724);
-CheckMemberSize(struct _win_st,_pad,12,12,29731);
-CheckOffset(struct _win_st,_pad,80,12,29731);
-CheckMemberSize(struct _win_st,_yoffset,2,12,29732);
-CheckOffset(struct _win_st,_yoffset,92,12,29732);
-CheckMemberSize(struct _win_st,_bkgrnd,32,12,34437);
-CheckOffset(struct _win_st,_bkgrnd,96,12,34437);
 #elif __x86_64__
-CheckTypeSize(struct _win_st,128, 8654, 11);
-CheckMemberSize(struct _win_st,_curx,2,11,29701);
-CheckOffset(struct _win_st,_curx,2,11,29701);
-CheckMemberSize(struct _win_st,_maxy,2,11,29702);
-CheckOffset(struct _win_st,_maxy,4,11,29702);
-CheckMemberSize(struct _win_st,_maxx,2,11,29703);
-CheckOffset(struct _win_st,_maxx,6,11,29703);
-CheckMemberSize(struct _win_st,_begy,2,11,29704);
-CheckOffset(struct _win_st,_begy,8,11,29704);
-CheckMemberSize(struct _win_st,_begx,2,11,29705);
-CheckOffset(struct _win_st,_begx,10,11,29705);
-CheckMemberSize(struct _win_st,_flags,2,11,29706);
-CheckOffset(struct _win_st,_flags,12,11,29706);
-CheckMemberSize(struct _win_st,_attrs,8,11,29707);
-CheckOffset(struct _win_st,_attrs,16,11,29707);
-CheckMemberSize(struct _win_st,_bkgd,8,11,29708);
-CheckOffset(struct _win_st,_bkgd,24,11,29708);
-CheckMemberSize(struct _win_st,_notimeout,1,11,29709);
-CheckOffset(struct _win_st,_notimeout,32,11,29709);
-CheckMemberSize(struct _win_st,_clear,1,11,29710);
-CheckOffset(struct _win_st,_clear,33,11,29710);
-CheckMemberSize(struct _win_st,_leaveok,1,11,29711);
-CheckOffset(struct _win_st,_leaveok,34,11,29711);
-CheckMemberSize(struct _win_st,_scroll,1,11,29712);
-CheckOffset(struct _win_st,_scroll,35,11,29712);
-CheckMemberSize(struct _win_st,_idlok,1,11,29713);
-CheckOffset(struct _win_st,_idlok,36,11,29713);
-CheckMemberSize(struct _win_st,_idcok,1,11,29714);
-CheckOffset(struct _win_st,_idcok,37,11,29714);
-CheckMemberSize(struct _win_st,_immed,1,11,29715);
-CheckOffset(struct _win_st,_immed,38,11,29715);
-CheckMemberSize(struct _win_st,_sync,1,11,29716);
-CheckOffset(struct _win_st,_sync,39,11,29716);
-CheckMemberSize(struct _win_st,_use_keypad,1,11,29717);
-CheckOffset(struct _win_st,_use_keypad,40,11,29717);
-CheckMemberSize(struct _win_st,_delay,4,11,29718);
-CheckOffset(struct _win_st,_delay,44,11,29718);
-CheckMemberSize(struct _win_st,_line,8,11,29719);
-CheckOffset(struct _win_st,_line,48,11,29719);
-CheckMemberSize(struct _win_st,_regtop,2,11,29720);
-CheckOffset(struct _win_st,_regtop,56,11,29720);
-CheckMemberSize(struct _win_st,_regbottom,2,11,29721);
-CheckOffset(struct _win_st,_regbottom,58,11,29721);
-CheckMemberSize(struct _win_st,_parx,4,11,29722);
-CheckOffset(struct _win_st,_parx,60,11,29722);
-CheckMemberSize(struct _win_st,_pary,4,11,29723);
-CheckOffset(struct _win_st,_pary,64,11,29723);
-CheckMemberSize(struct _win_st,_parent,8,11,29724);
-CheckOffset(struct _win_st,_parent,72,11,29724);
-CheckMemberSize(struct _win_st,_pad,12,11,29731);
-CheckOffset(struct _win_st,_pad,80,11,29731);
-CheckMemberSize(struct _win_st,_yoffset,2,11,29732);
-CheckOffset(struct _win_st,_yoffset,92,11,29732);
-CheckMemberSize(struct _win_st,_bkgrnd,32,11,34437);
-CheckOffset(struct _win_st,_bkgrnd,96,11,34437);
-#elif 1
-CheckTypeSize(struct _win_st,0, 8654, 1);
-Msg("Missing member data for _win_st on All\n");
-CheckOffset(struct _win_st,_cury,0,1,29700);
-CheckOffset(struct _win_st,_curx,0,1,29701);
-CheckOffset(struct _win_st,_maxy,0,1,29702);
-CheckOffset(struct _win_st,_maxx,0,1,29703);
-CheckOffset(struct _win_st,_begy,0,1,29704);
-CheckOffset(struct _win_st,_begx,0,1,29705);
-CheckOffset(struct _win_st,_flags,0,1,29706);
-CheckOffset(struct _win_st,_attrs,0,1,29707);
-CheckOffset(struct _win_st,_bkgd,0,1,29708);
-CheckOffset(struct _win_st,_notimeout,0,1,29709);
-CheckOffset(struct _win_st,_clear,0,1,29710);
-CheckOffset(struct _win_st,_leaveok,0,1,29711);
-CheckOffset(struct _win_st,_scroll,0,1,29712);
-CheckOffset(struct _win_st,_idlok,0,1,29713);
-CheckOffset(struct _win_st,_idcok,0,1,29714);
-CheckOffset(struct _win_st,_immed,0,1,29715);
-CheckOffset(struct _win_st,_sync,0,1,29716);
-CheckOffset(struct _win_st,_use_keypad,0,1,29717);
-CheckOffset(struct _win_st,_delay,0,1,29718);
-CheckOffset(struct _win_st,_line,0,1,29719);
-CheckOffset(struct _win_st,_regtop,0,1,29720);
-CheckOffset(struct _win_st,_regbottom,0,1,29721);
-CheckOffset(struct _win_st,_parx,0,1,29722);
-CheckOffset(struct _win_st,_pary,0,1,29723);
-CheckOffset(struct _win_st,_parent,0,1,29724);
-CheckOffset(struct _win_st,_pad,0,1,29731);
-CheckOffset(struct _win_st,_yoffset,0,1,29732);
-CheckOffset(struct _win_st,_bkgrnd,0,1,34437);
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8654,0);
+Msg("Find size of _win_st (8654)\n");
 #endif
 
 #if 1
-CheckTypeSize(bool,1, 8651, 1);
+CheckTypeSize(bool,1, 8651, 1)
 #endif
 
 extern int addch_db(const chtype);

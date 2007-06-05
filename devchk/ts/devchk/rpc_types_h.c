@@ -26,111 +26,117 @@ Msg("Checking data structures in rpc/types.h\n");
 
 printf("Checking data structures in rpc/types.h\n");
 #if __powerpc64__
-CheckTypeSize(bool_t,4, 9890, 9);
+CheckTypeSize(bool_t,4, 9890, 9)
 #elif __ia64__
-CheckTypeSize(bool_t,4, 9890, 3);
+CheckTypeSize(bool_t,4, 9890, 3)
 #elif __i386__
-CheckTypeSize(bool_t,4, 9890, 2);
+CheckTypeSize(bool_t,4, 9890, 2)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(bool_t,4, 9890, 6);
+CheckTypeSize(bool_t,4, 9890, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(bool_t,4, 9890, 10);
+CheckTypeSize(bool_t,4, 9890, 10)
 #elif __s390x__
-CheckTypeSize(bool_t,4, 9890, 12);
+CheckTypeSize(bool_t,4, 9890, 12)
 #elif __x86_64__
-CheckTypeSize(bool_t,4, 9890, 11);
-#elif 1
-CheckTypeSize(bool_t,0, 9890, 1);
+CheckTypeSize(bool_t,4, 9890, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9890,0);
+Msg("Find size of bool_t (9890)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(enum_t,4, 9895, 2);
+CheckTypeSize(enum_t,4, 9895, 2)
 #elif __s390__ && !__s390x__
-CheckTypeSize(enum_t,4, 9895, 10);
+CheckTypeSize(enum_t,4, 9895, 10)
 #elif __ia64__
-CheckTypeSize(enum_t,4, 9895, 3);
+CheckTypeSize(enum_t,4, 9895, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(enum_t,4, 9895, 6);
+CheckTypeSize(enum_t,4, 9895, 6)
 #elif __powerpc64__
-CheckTypeSize(enum_t,4, 9895, 9);
+CheckTypeSize(enum_t,4, 9895, 9)
 #elif __s390x__
-CheckTypeSize(enum_t,4, 9895, 12);
+CheckTypeSize(enum_t,4, 9895, 12)
 #elif __x86_64__
-CheckTypeSize(enum_t,4, 9895, 11);
-#elif 1
-CheckTypeSize(enum_t,0, 9895, 1);
+CheckTypeSize(enum_t,4, 9895, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9895,0);
+Msg("Find size of enum_t (9895)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(rpcprog_t,4, 9992, 2);
+CheckTypeSize(rpcprog_t,4, 9992, 2)
 #elif __powerpc64__
-CheckTypeSize(rpcprog_t,8, 9992, 9);
+CheckTypeSize(rpcprog_t,8, 9992, 9)
 #elif __ia64__
-CheckTypeSize(rpcprog_t,8, 9992, 3);
+CheckTypeSize(rpcprog_t,8, 9992, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(rpcprog_t,4, 9992, 6);
+CheckTypeSize(rpcprog_t,4, 9992, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(rpcprog_t,4, 9992, 10);
+CheckTypeSize(rpcprog_t,4, 9992, 10)
 #elif __s390x__
-CheckTypeSize(rpcprog_t,8, 9992, 12);
+CheckTypeSize(rpcprog_t,8, 9992, 12)
 #elif __x86_64__
-CheckTypeSize(rpcprog_t,8, 9992, 11);
-#elif 1
-CheckTypeSize(rpcprog_t,0, 9992, 1);
+CheckTypeSize(rpcprog_t,8, 9992, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9992,0);
+Msg("Find size of rpcprog_t (9992)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(rpcvers_t,4, 9993, 2);
+CheckTypeSize(rpcvers_t,4, 9993, 2)
 #elif __ia64__
-CheckTypeSize(rpcvers_t,8, 9993, 3);
+CheckTypeSize(rpcvers_t,8, 9993, 3)
 #elif __s390__ && !__s390x__
-CheckTypeSize(rpcvers_t,4, 9993, 10);
+CheckTypeSize(rpcvers_t,4, 9993, 10)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(rpcvers_t,4, 9993, 6);
+CheckTypeSize(rpcvers_t,4, 9993, 6)
 #elif __powerpc64__
-CheckTypeSize(rpcvers_t,8, 9993, 9);
+CheckTypeSize(rpcvers_t,8, 9993, 9)
 #elif __s390x__
-CheckTypeSize(rpcvers_t,8, 9993, 12);
+CheckTypeSize(rpcvers_t,8, 9993, 12)
 #elif __x86_64__
-CheckTypeSize(rpcvers_t,8, 9993, 11);
-#elif 1
-CheckTypeSize(rpcvers_t,0, 9993, 1);
+CheckTypeSize(rpcvers_t,8, 9993, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9993,0);
+Msg("Find size of rpcvers_t (9993)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(rpcproc_t,4, 9994, 2);
+CheckTypeSize(rpcproc_t,4, 9994, 2)
 #elif __powerpc64__
-CheckTypeSize(rpcproc_t,8, 9994, 9);
+CheckTypeSize(rpcproc_t,8, 9994, 9)
 #elif __ia64__
-CheckTypeSize(rpcproc_t,8, 9994, 3);
+CheckTypeSize(rpcproc_t,8, 9994, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(rpcproc_t,4, 9994, 6);
+CheckTypeSize(rpcproc_t,4, 9994, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(rpcproc_t,4, 9994, 10);
+CheckTypeSize(rpcproc_t,4, 9994, 10)
 #elif __s390x__
-CheckTypeSize(rpcproc_t,8, 9994, 12);
+CheckTypeSize(rpcproc_t,8, 9994, 12)
 #elif __x86_64__
-CheckTypeSize(rpcproc_t,8, 9994, 11);
-#elif 1
-CheckTypeSize(rpcproc_t,0, 9994, 1);
+CheckTypeSize(rpcproc_t,8, 9994, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9994,0);
+Msg("Find size of rpcproc_t (9994)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(rpcprot_t,4, 9998, 2);
+CheckTypeSize(rpcprot_t,4, 9998, 2)
 #elif __powerpc64__
-CheckTypeSize(rpcprot_t,8, 9998, 9);
+CheckTypeSize(rpcprot_t,8, 9998, 9)
 #elif __ia64__
-CheckTypeSize(rpcprot_t,8, 9998, 3);
+CheckTypeSize(rpcprot_t,8, 9998, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(rpcprot_t,4, 9998, 6);
+CheckTypeSize(rpcprot_t,4, 9998, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(rpcprot_t,4, 9998, 10);
+CheckTypeSize(rpcprot_t,4, 9998, 10)
 #elif __s390x__
-CheckTypeSize(rpcprot_t,8, 9998, 12);
+CheckTypeSize(rpcprot_t,8, 9998, 12)
 #elif __x86_64__
-CheckTypeSize(rpcprot_t,8, 9998, 11);
-#elif 1
-CheckTypeSize(rpcprot_t,0, 9998, 1);
+CheckTypeSize(rpcprot_t,8, 9998, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9998,0);
+Msg("Find size of rpcprot_t (9998)\n");
 #endif
 
 #ifdef TET_TEST

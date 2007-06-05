@@ -72,13 +72,76 @@ getBaseTypeRecord($$)
 	return $sth;
 }
 
+# For a given type, check if there are architecture specific records
+# in the ArchType table. If not, return -1. Otherwise, check if records
+# for every supported architecture present; if not, print appropriate
+# 'Msg' calls and return number of missed archs, otherwise return 0
+sub checkArchSpecific($$$$) {
+ 	local ($Tname,$Tid,$condition,$Ttype) = @_;
+
+   	$selectArchSpecific = "SELECT * FROM Type LEFT JOIN ArchType ON ATtid=Tid ";
+   	$selectArchSpecific.= "WHERE ATaid<>1 ";
+   	$selectArchSpecific.= "AND ATtid=$Tid ";
+   	$selectArchSpecific.= "AND ( ATappearedin<>'' AND ATappearedin<='$lsbversion' ";
+   	$selectArchSpecific.= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin > '$lsbversion') ) ";
+#    	$selectArchSpecific.= "OR Tindirect='Yes')";
+	$sth = $Dbh->query($selectArchSpecific) || die $Dbh->errmsg();
+
+	$archNumber = $sth->numrows;
+	if( $archNumber == 0 ) {
+		return -1;
+	}
+
+    for ( 1 .. $archNumber ) {
+   	    %archentry = $sth->fetchhash ;
+   	    $PresentedArchs{$archentry{'ATaid'}} = 1;
+   	}
+
+	# Get all supported architectures;
+	$selectAllArchs = "SELECT Aid,Asymbol FROM Architecture WHERE Aid<>1";
+	$ath = $Dbh->query($selectAllArchs) || die $Dbh->errmsg();
+
+	$allNum = $ath->numrows;
+
+	if( not ( $Tname =~ /anon/ && $Ttype ne 'Enum') and (not ( $Tname =~ /fptr/ ) ) ) {
+		if( $allNum > $archNumber ) {
+			$missedCount=0;
+			for ( 1 .. $allNum ) {
+				@aentry = $ath->fetchrow_array;
+				if( not $PresentedArchs{$aentry[0]} ) {
+					if( $missedCount ) {
+						print TESTS "#elif $aentry[1]\n";
+					}
+					else {
+						if( $condition eq "endif" ) {
+							print TESTS "#endif\n\n";
+							print TESTS "#if $allentry{'Asymbol'}\n";
+						}
+						elsif( $condition eq "elif" ) {
+							print TESTS "#elif $allentry{'Asymbol'}\n";
+						}
+						elsif( $condition eq "if" ) {
+							print TESTS "#if $allentry{'Asymbol'}\n";
+						}
+						else {
+							die "Illegal condition was passed to checkArchSpecific";
+						}
+					}
+					print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+					print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+					print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
+					$missedCount++;
+				}
+			}
+		}
+	}
+
+	return $missedCount;
+}
+
 sub displaytyperef($$$) {
     local ( $param, $enableConst, $curArch ) = @_;
     local ( %select, $sth, %type );
-
-    if ( $$param{'Pconst'} eq "Yes" ) {
-        print TESTS "const ";
-    }
 
     if (   $$param{'Ttype'} eq "Volatile"
         || $$param{'Ttype'} eq "Intrinsic"
@@ -165,7 +228,7 @@ sub displaytyperef($$$) {
         print TESTS "(";
 
         $tmselect = "SELECT * FROM TypeMember";
-        $tmselect .= " WHERE TMmemberof=$Tid";
+        $tmselect .= " WHERE TMmemberof=$Tid AND TMaid in(1,$curArch)";
         $tmselect .= " GROUP BY TMid";
         $tmselect .= " ORDER BY TMposition";
         $tmh = $Dbh->query($tmselect) || die $Dbh->errmsg();
@@ -245,7 +308,10 @@ sub writetest($$) {
 
     $typelist = join ',', keys(%type);
 
-    if ( $typelist eq "" ) { return 0; }
+    if ( $typelist eq "" ) {
+		print "No types to tests to write for $Hname\n";
+		return 0;
+    }
 
     # Get referenced types
     $select = "SELECT DISTINCT * FROM Type ";
@@ -287,9 +353,9 @@ sub writetest($$) {
     $select .= "WHERE HGheader=$Hid ";
 
     #$select.= "AND Tid IN ($typelist) ";
-	$select.= "AND ( ( (ATappearedin <= '$lsbversion' AND ATappearedin<>'') ";
+	$select.= "AND ( (ATappearedin <= '$lsbversion' AND ATappearedin<>'') ";
 	$select.= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin >'$lsbversion') ) ";
-    $select .= "OR (Tindirect = 'Yes' OR Tconly='Yes') )";
+#     $select .= "OR Tindirect = 'Yes' )";
     $select .= "ORDER BY Theadergroup,Tid ";
     $tth = $Dbh->query($select) || die $Dbh->errmsg();
 
@@ -430,36 +496,60 @@ sub writetest($$) {
             $tentry{'Asymbol'} = '__no_sym__';
         }
 
-        # Do this before we reset the value, so we can re-use the values
-        # from the last time through the loop if we need them
+		$condition = "elif"; # "elif"
         if ( $tentry{'Tid'} != $lastid ) {
             if ( $lastid != 0 ) {
-
-                # We have output at least one type, and now we need to
-                # put a catchall else clause
-                # XXXSTU - This should probably only happen if previous cases
-                #   have dissimilar Tarch and ATaid values
-
-#                 if ( $lastarch == 1 && $lastaid != 1 ) {
-#                     print TESTS "#else\n";
-#                     print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
-#                     print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
-#                     print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
-#                 }
-                print TESTS "#endif\n\n";
+                $condition = "endif";
             }
-
-            #if( $tentry{'Aid'} != 1 ) {
-            print TESTS "#if $tentry{'Asymbol'}\n";
-            #}
-        } else {
-            print TESTS "#elif $tentry{'Asymbol'}\n";
+            $condition = "if";
         }
+
+		if( $tentry{'Aid'} == 1 ) {
+			$printedMsgs = checkArchSpecific($tentry{'Tname'},$tentry{'Tid'},$condition,$tentry{'Ttype'});
+			if( $printedMsgs > 0 ) {
+				$lastid = $tentry{'Tid'};
+			}
+			if( $printedMsgs != -1 ) {
+				next;
+			}
+		}
+
+        # Do this before we reset the value, so we can re-use the values
+        # from the last time through the loop if we need them
+		if ( $tentry{'Tid'} != $lastid ) {
+			if ( ( $lastid != 0 ) and ( not ( $Tname =~ /anon/ && $Ttype ne 'Enum') and (not ( $Tname =~ /fptr/ ) ) ) ) {
+				# We have output at least one type, and now we need to
+				# put a catchall else clause
+				if ( $lastaid != 1 ) {
+					$selectGeneric = "SELECT count(*) as cnt FROM ArchType ";
+					$selectGeneric.= "WHERE ATtid=$Tid AND ATaid=1 ";
+					$selectGeneric.= "AND ATappearedin<>'' AND ATappearedin <= '$lsbversion' ";
+					$selectGeneric.= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin > '$lsbversion') ";
+					$gth = $Dbh->query($selectGeneric) || die $Dbh->errmsg();
+					%gentry = $gth->fetchhash;
+					if ($gentry{'cnt'} > 0) {
+						print TESTS "#else\n";
+						print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+						print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+						print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
+					}
+				}
+				print TESTS "#endif\n\n";
+			}
+
+			if ( not ( $tentry{'Tname'} =~ /anon/ && $tentry{'Ttype'} ne 'Enum') and (not ( $tentry{'Tname'} =~ /fptr/ ) ) ) {
+				print TESTS "#if $tentry{'Asymbol'}\n";
+			}
+		} else {
+			if ( not ( $tentry{'Tname'} =~ /anon/ && $tentry{'Ttype'} ne 'Enum') and (not ( $tentry{'Tname'} =~ /fptr/ ) ) ) {
+				print TESTS "#elif $tentry{'Asymbol'}\n";
+			}
+		}
         $lastid   = $tentry{'Tid'};
         $lastaid  = $tentry{'Aid'};
-#         $lastarch = $tentry{'Tarch'};
         $Tid      = $tentry{'Tid'};
         $Tname    = $tentry{'Tname'};
+        $Ttype    = $tentry{'Ttype'};
         $ATsize   = $tentry{'ATsize'};
         $Aid      = $tentry{'Aid'};
         $Asymbol  = $tentry{'Asymbol'};
@@ -476,15 +566,30 @@ sub writetest($$) {
             } else {
                 $type = "union";
             }
-            print TESTS "CheckTypeSize($type $Tname,$ATsize, $Tid, $Aid);\n";
+
+			$tselect = "SELECT * FROM Type ";
+			$tselect .= "LEFT JOIN ArchType ON ATtid=Tid ";
+			$tselect .= "LEFT JOIN Architecture ON Aid=ATaid ";
+			$tselect .= "WHERE (ATappearedin <> '' AND ATappearedin <= '$lsbversion' ";
+			$tselect .= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin > '$lsbversion') ) ";
+			$tselect .= "AND Tid=" . $tentry{'ATbasetype'};
+# 			$tselect .= " OR Tindirect='Yes')";
+			$ttth    = $Dbh->query($tselect) || die $Dbh->errmsg();
+			%ttentry = $ttth->fetchhash;
+			if ($ttentry{'Tid'}) {
+            	print TESTS "CheckTypeSize($type $Tname,$ATsize, $Tid, $Aid)\n";
+            }
+            else {
+            	next; # do not check members of not included types
+            }
 
             # Get the members
 			if( $Aid ) {
 				$select = "SELECT DISTINCT * FROM TypeMember ";
-				$select .= "LEFT JOIN ArchTypeMem ON ATMtmid=TMid ";
-				$select .= "WHERE TMmemberof=$Tid ";
+ 				$select .= "LEFT JOIN TypeMemberExtras ON TMEtmid=TMid ";
+				$select .= "WHERE TMmemberof=$Tid AND TMaid in (1,$Aid) ";
 				$select .= "AND TMbitfield = 0 ";
-				$select .= "AND ATMaid=$Aid ";
+ 				$select .= "AND TMEaid=$Aid ";
 				$select .= "ORDER BY TMposition ";
 				print $select, "\n" if $trace;
 				$mth = $Dbh->query($select) || die $Dbh->errmsg();
@@ -497,13 +602,13 @@ sub writetest($$) {
 					# XXXSTU - We really should fetch the info for the member
 					# type so we can validate the size in the DB
 					#
-					print TESTS "CheckMemberSize($type $tentry{'Tname'},$mentry{'TMname'},$mentry{'ATMsize'},$Aid,$mentry{'TMid'});\n";
-					print TESTS "CheckOffset($type $tentry{'Tname'},$mentry{'TMname'},$mentry{'ATMoffset'},$Aid,$mentry{'TMid'});\n";
+					print TESTS "CheckMemberSize($type $tentry{'Tname'},$mentry{'TMname'},$mentry{'TMEsize'},$Aid,$mentry{'TMid'})\n";
+					print TESTS "CheckOffset($type $tentry{'Tname'},$mentry{'TMname'},$mentry{'TMEoffset'},$Aid,$mentry{'TMid'})\n";
 				}
             } else {
 	        	#Checking Structure Member Bit-Field value
 				$select = "SELECT DISTINCT * FROM TypeMember ";
-                $select .= "WHERE TMmemberof=$Tid ";
+                $select .= "WHERE TMmemberof=$Tid AND TMaid in (1,$Aid) ";
                 $select .= "AND TMbitfield > 0 ";
                 $select .= "ORDER BY TMposition ";
                 print $select, "\n" if $trace;
@@ -516,7 +621,7 @@ sub writetest($$) {
 				}else{
 	                # Get the members that are supposed to be there
         	        $select = "SELECT DISTINCT * FROM TypeMember ";
-                	$select .= "WHERE TMmemberof=$Tid ";
+                	$select .= "WHERE TMmemberof=$Tid AND TMaid in (1,$Aid) ";
 	                $select .= "AND TMbitfield = 0 ";
         	        $select .= "ORDER BY TMposition ";
                 	print $select, "\n" if $trace;
@@ -524,7 +629,7 @@ sub writetest($$) {
         	        print TESTS "Msg(\"Missing member data for $Tname on $Aname\\n\");\n";
                 	for ( 1 .. $mth->numrows ) {
 	                    %mentry = $mth->fetchhash;
-        	            print TESTS "CheckOffset($type $tentry{'Tname'},$mentry{'TMname'},0,$Aid,$mentry{'TMid'});\n";
+        	            print TESTS "CheckOffset($type $tentry{'Tname'},$mentry{'TMname'},0,$Aid,$mentry{'TMid'})\n";
 					}
 				}
 			}
@@ -545,12 +650,12 @@ sub writetest($$) {
 
             if ( $ttentry{'Ttype'} eq 'Struct' ) {
                 $typeName = "struct " . $Tname;
-                print TESTS "CheckTypeSize($typeName,$ATsize, $Tid, $Aid);\n";
+                print TESTS "CheckTypeSize($typeName,$ATsize, $Tid, $Aid)\n";
             } elsif ( $ttentry{'Ttype'} eq 'Union' ) {
                 $typeName = "union " . $Tname;
-                print TESTS "CheckTypeSize($typeName,$ATsize, $Tid, $Aid);\n";
+                print TESTS "CheckTypeSize($typeName,$ATsize, $Tid, $Aid)\n";
             } elsif ( $ttentry{'Ttype'} eq 'Typedef' ) {
-                print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid);\n";
+                print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
             }
             next;
         }
@@ -558,7 +663,7 @@ sub writetest($$) {
         #case Enum:
         if ( $tentry{'Ttype'} eq 'Enum' ) {
             $tmselect = "SELECT * FROM TypeMember ";
-            $tmselect .= "WHERE TMmemberof=" . $tentry{'Tid'};
+            $tmselect .= "WHERE TMmemberof=" . $tentry{'Tid'} . " AND TMaid in (1,$Aid) ";
             $tmselect .= " ORDER BY TMposition";
             $tmh = $Dbh->query($tmselect) || die $Dbh->errmsg();
             for ( 1 .. $tmh->numrows ) {
@@ -582,21 +687,22 @@ sub writetest($$) {
         if ( $tentry{'Ttype'} eq 'Typedef' ) {
 
             # Need to check for Array, and adjust the size value accordingly
-            $tselect = "SELECT * FROM Type ";
-            $tselect .= "LEFT JOIN ArchType ON ATtid=Tid ";
-            $tselect .= "LEFT JOIN Architecture ON Aid=ATaid ";
-            $tselect .= "WHERE Tid=" . $tentry{'ATbasetype'};
-            $ttth    = $Dbh->query($tselect) || die $Dbh->errmsg();
-            %ttentry = $ttth->fetchhash;
 
-            #if ( $ttentry{'Ttype'} eq 'Array' ) {
-            #    print TESTS "CheckArrayTypeSize($Tname,"
-            #      . $ttentry{'ATsize'}
-            #      . ",$ATsize, $Tid, $Aid)\n";
-            #    print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid);\n";
-            #} else {
-            print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid);\n";
-            #}
+#             $tselect = "SELECT * FROM Type ";
+#             $tselect .= "LEFT JOIN ArchType ON ATtid=Tid ";
+#             $tselect .= "LEFT JOIN Architecture ON Aid=ATaid ";
+#             $tselect .= "WHERE Tid=" . $tentry{'ATbasetype'};
+# 			$tselect .= " AND (ATappearedin <> '' AND ATappearedin <= '$lsbversion' ";
+# 			$tselect .= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin > '$lsbversion') ) ";
+# # 			$tselect .= "OR Tindirect='Yes' )";
+#             $ttth    = $Dbh->query($tselect) || die $Dbh->errmsg();
+#             %ttentry = $ttth->fetchhash;
+
+# 			if ($ttentry{'Tid'}) {
+	            print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
+# 			} else {
+# 				$tentry{'ATaid'} = 0;
+# 			}
 
             next;
         }
@@ -609,31 +715,61 @@ sub writetest($$) {
             $tselect .= "LEFT JOIN ArchType ON ATtid=Tid ";
             $tselect .= "LEFT JOIN Architecture ON Aid=ATaid ";
             $tselect .= "WHERE Tid=" . $tentry{'ATbasetype'};
+			$tselect .= " AND (ATappearedin <> '' AND ATappearedin <= '$lsbversion' ";
+			$tselect .= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin > '$lsbversion') ) ";
+# 			$tselect .= "OR Tindirect='Yes' ) ";
             $ttth = $Dbh->query($tselect) || die $Dbh->errmsg();
             %ttentry = $ttth->fetchhash;
             my $typeName;
 
-            if (   $ttentry{'Ttype'} eq 'Typedef'
-                || $ttentry{'Ttype'} eq 'Pointer' )
-            {
-                print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid);\n";
-            }
+            if ( $ttentry{'Ttype'} eq 'Typedef' || $ttentry{'Ttype'} eq 'Pointer' ) {
+				if ($ttentry{'Ttype'} eq 'Typedef') {
+					$tselect = "SELECT * FROM Type ";
+					$tselect .= "LEFT JOIN ArchType ON ATtid=Tid ";
+					$tselect .= "LEFT JOIN Architecture ON Aid=ATaid ";
+					$tselect .= "WHERE (ATappearedin <> '' AND ATappearedin <= '$lsbversion' ";
+					$tselect .= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin > '$lsbversion') ) ";
+# 					$tselect .= "OR Tindirect='Yes' ) ";
+					$tselect .= "AND Tid=" . $ttentry{'ATbasetype'};
+					$ttth = $Dbh->query($tselect) || die $Dbh->errmsg();
+					%ttentry = $ttth->fetchhash;
+					if ($ttentry{'Tid'}) {
+						print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
+					}
+				} else {
+					print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
+				}
+			} else {
+				$tentry{'ATaid'} = 0;
+			}
+
             next;
         }
 
         # Default case
-		print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid);\n"
+		print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n"
 		if $tentry{'Ttype'} ne 'Array';
     }
-    if ( $lastid != 0 ) {
-#         if ( $tentry{'Tarch'} == 1 && $lastaid != 1 ) {
-#             print TESTS "#else\n";
-#             print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
-#             print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
-#             print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
-#         }
-        print TESTS "#endif\n\n";
-    }
+
+ 	if ( not ( $Tname =~ /anon/ && $Ttype ne 'Enum') and (not ( $Tname =~ /fptr/ ) ) ) {
+		if ( $lastid != 0 ) {
+			if ( $lastaid != 1 ) {
+				$selectGeneric = "SELECT count(*) as cnt FROM ArchType ";
+				$selectGeneric.= "WHERE ATtid=$Tid AND ATaid=1 ";
+				$selectGeneric.= "AND ATappearedin<>'' AND ATappearedin <= '$lsbversion' ";
+				$selectGeneric.= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin > '$lsbversion') ";
+				$gth = $Dbh->query($selectGeneric) || die $Dbh->errmsg();
+				%gentry = $gth->fetchhash;
+				if ($gentry{'cnt'} > 0) {
+					print TESTS "#else\n";
+					print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+					print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+					print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
+				}
+			}
+			print TESTS "#endif\n\n";
+		}
+ 	}
 
     #
     # Interface testing
@@ -694,7 +830,7 @@ sub writetest($$) {
 				print TESTS "extern ";
 				displaytyperef( \%entry, 1, $entry{'Aid'} );
 				print TESTS " $entry{'Iname'}_db(";
-				$select = "SELECT Tid,Tname,Ttype,ATbasetype,Parsize,Pconst FROM Parameter,Type ";
+				$select = "SELECT Tid,Tname,Ttype,ATbasetype,Parsize FROM Parameter,Type ";
 				$select .= "LEFT JOIN ArchType ON ATtid=Tid ";
 				$select .= "WHERE Pint=" . $entry{'Iid'} . " AND Ptype=Tid ";
 				$select .= "GROUP BY Ppos ORDER BY Ppos";
@@ -898,16 +1034,36 @@ for ( 1 .. $tth->numrows ) {
     if ( $tentry{'Tname'} eq 'bool' ) {
         $lastid = 0;
     }
+
+    if( $tentry{'Aid'}==1 && $tentry{'ATsize'}==0 ) {
+    	$selectArchSpecific = "SELECT * FROM ArchType ";
+    	$selectArchSpecific.= "WHERE ATaid<>1 ";
+    	$selectArchSpecific.= "AND ATtid=".$tentry{'Tid'}; # do not check status here - the types are intrinsic
+		$ath = $Dbh->query($selectArchSpecific) || die $Dbh->errmsg();
+		if ( $ath->numrows != 0 ) {
+			# arch specific records found - skip generic
+			next;
+		}
+    }
+
     if ( $tentry{'Tid'} != $lastid ) {
         if ( $lastid != 0 ) {
 
             # We have output at least one type, and now we need to
             # put a catch-all else clause
             #
-            print TESTS "#else\n";
-            print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
-            print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
-            print TESTS "#endif\n\n";
+			$selectGeneric = "SELECT count(*) as cnt FROM ArchType ";
+			$selectGeneric.= "WHERE ATtid=$Tid AND ATaid=1 ";
+# 			$selectGeneric.= "AND ATappearedin<>'' AND ATappearedin <= '$lsbversion' ";
+# 			$selectGeneric.= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin > '$lsbversion') ";
+			$gth = $Dbh->query($selectGeneric) || die $Dbh->errmsg();
+			%gentry = $gth->fetchhash;
+			if ($gentry{'cnt'} > 0) {
+				print TESTS "#else\n";
+				print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+				print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+				print TESTS "#endif\n\n";
+			}
         }
         print TESTS "#if $tentry{'Asymbol'}\n" if $tentry{'Tname'} ne 'bool';
         $lastid = $tentry{'Tid'} if $tentry{'Tname'} ne 'bool';
@@ -918,7 +1074,8 @@ for ( 1 .. $tth->numrows ) {
     $ATsize = $tentry{'ATsize'};
     $Aid    = $tentry{'Aid'};
     $Tname  = $tentry{'Tname'};
-    print TESTS "CheckTypeSize($Tname,$ATsize,$Tid,$Aid);\n"
+
+    print TESTS "CheckTypeSize($Tname,$ATsize,$Tid,$Aid)\n"
       if $tentry{'Tname'} ne 'bool';
 }
 print TESTS "#else\n";
@@ -950,7 +1107,7 @@ open( TESTS, "|c++filt |c++filt >cxx.C" ) || die "Can't open cxx.C for writing";
 $select = "SELECT DISTINCT * FROM Type ";
 $select .= "LEFT JOIN ArchType ON ATtid=Tid ";
 $select .= "LEFT JOIN Architecture ON Aid=ATaid ";
-$select .= "WHERE Ttype='Class' AND TheaderGroup<669 ";
+$select .= "WHERE Ttype='Class' AND Theadergroup<669 ";
 $select .= "ORDER BY Tname,ATaid";
 $tth = $Dbh->query($select) || die $Dbh->errmsg();
 if ( $tth->numrows == 0 ) {
@@ -978,7 +1135,6 @@ print TESTS "#include <vector>\n";
 print TESTS "#include <backward/strstream>\n";
 print TESTS "#include <ext/stdio_filebuf.h>\n";
 print TESTS "#include <cxxabi.h>\n";
-print TESTS "#include <qt.h>\n";
 print TESTS "#include \"hdrchk.h\"\n";
 print TESTS "\n\n\n";
 print TESTS "extern \"C\" {\n";
@@ -1005,6 +1161,24 @@ $lastid = 0;
 for ( 1 .. $tth->numrows ) {
     %tentry = $tth->fetchhash;
 
+	$condition = "elif"; # "elif"
+	if ( $tentry{'Tid'} != $lastid ) {
+		if ( $lastid != 0 ) {
+			$condition = "endif";
+		}
+		$condition = "if";
+	}
+
+	if( $tentry{'Aid'} == 1 ) {
+		$printedMsgs = checkArchSpecific($tentry{'Tname'},$tentry{'Tid'},$condition,$tentry{'Ttype'});
+		if( $printedMsgs > 0 ) {
+			$lastid = $tentry{'Tid'};
+		}
+		if( $printedMsgs != -1 ) {
+			next;
+		}
+	}
+
     # Do this before we reset the value, so we can re-use the values
     # from the last time through the loop if we need them
     if ( $tentry{'Tid'} != $lastid ) {
@@ -1018,7 +1192,11 @@ for ( 1 .. $tth->numrows ) {
             print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
             print TESTS "#endif\n\n";
         }
-        if ( !$tentry{'Asymbol'} ) {
+
+        # Hope the check for zero ATsize is temporary; but we have a lot of 'classes'
+        # without any additional information (Qt classes) and their presence will break
+        # devchk compilation
+        if ( !$tentry{'Asymbol'} or $tentry{'ATsize'} == 0 ) {
             $tentry{'Asymbol'} = '0';
         }
         print TESTS "#if $tentry{'Asymbol'}\n";
@@ -1033,7 +1211,7 @@ for ( 1 .. $tth->numrows ) {
 
     # Unmangled types have commas, which confuse the preprocessor
     print TESTS "#define TYPE _Z" . "$Tname\n";
-    print TESTS "CheckTypeSize(TYPE,$ATsize,$Tid,$Aid);\n";
+    print TESTS "CheckTypeSize(TYPE,$ATsize,$Tid,$Aid)\n";
     print TESTS "#undef TYPE\n";
 }
 print TESTS "#else\n";
@@ -1068,9 +1246,9 @@ print MAKEFILE "else\n";
 print MAKEFILE "EXTRALIBS =\n";
 print MAKEFILE "endif\n\n";
 
-print MAKEFILE "CFLAGS=-O -DQT_THREAD_SUPPORT -D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include -I/usr/include/glib-2.0 -I/usr/include/atk-1.0 -I/usr/include/pango-1.0 -I/usr/include/gtk-2.0 -I/usr/include/freetype2 -I/usr/lib/gtk-2.0/include -I/usr/lib64/gtk-2.0/include -I/usr/lib/glib-2.0/include -I/usr/lib64/glib-2.0/include -I/usr/include/libxml2 -I/usr/include/fontconfig -I/usr/include/cairo -I/usr/lib/qt3/include -I/opt/gnome/include -I/opt/gnome/include/atk-1.0 -I/opt/gnome/include/glib-2.0 -I/opt/gnome/include/gtk-2.0 -I/opt/gnome/include/pango-1.0 -I/opt/gnome/lib/glib-2.0/include -I/opt/gnome/lib64/glib-2.0/include -I/opt/gnome/lib/gtk-2.0/include -I/opt/gnome/lib64/gtk-2.0/include\n\n";
+print MAKEFILE "CFLAGS=-D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include -I/usr/include/glib-2.0 -I/usr/include/atk-1.0 -I/usr/include/pango-1.0 -I/usr/include/gtk-2.0 -I/usr/include/freetype2 -I/usr/lib/gtk-2.0/include -I/usr/lib64/gtk-2.0/include -I/usr/lib/glib-2.0/include -I/usr/lib64/glib-2.0/include -I/usr/include/libxml2 -I/usr/include/fontconfig -I/usr/include/cairo \n\n";
 print MAKEFILE "ifdef LSB_PRODUCT\n";
-print MAKEFILE "CFLAGS=-DLSBCC_MODE -O -DQT_THREAD_SUPPORT -D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include -I/opt/lsb/include/glib-2.0 -I/opt/lsb/include/atk-1.0 -I/opt/lsb/include/pango-1.0 -I/opt/lsb/include/gtk-2.0 -I/usr/include/freetype2 -I/opt/lsb/include/libxml2 -I/opt/lsb/include/fontconfig\n";
+print MAKEFILE "CFLAGS=-DLSBCC_MODE -D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include -I/opt/lsb/include/glib-2.0 -I/opt/lsb/include/atk-1.0 -I/opt/lsb/include/pango-1.0 -I/opt/lsb/include/gtk-2.0 -I/usr/include/freetype2 -I/opt/lsb/include/libxml2 -I/opt/lsb/include/fontconfig\n";
 print MAKEFILE "endif\n\n";
 print MAKEFILE "CXXFLAGS = \$\(CFLAGS)\n\n";
 
@@ -1080,7 +1258,7 @@ print MAKEFILE "endif\n\n";
 
 print MAKEFILE "all: hdrchk\n\n";
 print MAKEFILE "hdrchk: \$\(OBJS)\n";
-print MAKEFILE "\t\$(CXX) -o hdrchk \$\(OBJS) \$\(EXTRALIBS) -L /usr/X11R6/lib64 -L/usr/X11R6/lib -L/usr/lib/qt3/lib64 -L/usr/lib/qt3/lib -lXt -lX11 -lncurses -lqt-mt\n";
+print MAKEFILE "\t\$(CXX) -o hdrchk \$\(OBJS) \$\(EXTRALIBS) -L /usr/X11R6/lib64 -L/usr/X11R6/lib -lXt -lX11 -lncurses\n";
 print MAKEFILE "\n";
 print MAKEFILE "hdrchk.o: hdrchk.c\n";
 print MAKEFILE "\t\$(CC) \$\(CFLAGS) -g -c hdrchk.c\n";
@@ -1106,3 +1284,4 @@ print TET_HDR "\t{ NULL, 0 }\n";
 print TET_HDR "};\n";
 close(TET_HDR);
 close(SUBDEFS);
+

@@ -67,187 +67,91 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(__compar_fn_t,4, 9231, 2);
+CheckTypeSize(__compar_fn_t,4, 9231, 2)
 #elif __ia64__
-CheckTypeSize(__compar_fn_t,8, 9231, 3);
+CheckTypeSize(__compar_fn_t,8, 9231, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(__compar_fn_t,4, 9231, 6);
+CheckTypeSize(__compar_fn_t,4, 9231, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(__compar_fn_t,4, 9231, 10);
+CheckTypeSize(__compar_fn_t,4, 9231, 10)
 #elif __powerpc64__
-CheckTypeSize(__compar_fn_t,8, 9231, 9);
+CheckTypeSize(__compar_fn_t,8, 9231, 9)
 #elif __s390x__
-CheckTypeSize(__compar_fn_t,8, 9231, 12);
+CheckTypeSize(__compar_fn_t,8, 9231, 12)
 #elif __x86_64__
-CheckTypeSize(__compar_fn_t,8, 9231, 11);
-#elif 1
-CheckTypeSize(__compar_fn_t,0, 9231, 1);
+CheckTypeSize(__compar_fn_t,8, 9231, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9231,0);
+Msg("Find size of __compar_fn_t (9231)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(struct random_data,28, 10483, 2);
-CheckMemberSize(struct random_data,fptr,4,2,40027);
-CheckOffset(struct random_data,fptr,0,2,40027);
-CheckMemberSize(struct random_data,rptr,4,2,40028);
-CheckOffset(struct random_data,rptr,4,2,40028);
-CheckMemberSize(struct random_data,state,4,2,40029);
-CheckOffset(struct random_data,state,8,2,40029);
-CheckMemberSize(struct random_data,rand_type,4,2,40030);
-CheckOffset(struct random_data,rand_type,12,2,40030);
-CheckMemberSize(struct random_data,rand_deg,4,2,40031);
-CheckOffset(struct random_data,rand_deg,16,2,40031);
-CheckMemberSize(struct random_data,rand_sep,4,2,40032);
-CheckOffset(struct random_data,rand_sep,20,2,40032);
-CheckMemberSize(struct random_data,end_ptr,4,2,40033);
-CheckOffset(struct random_data,end_ptr,24,2,40033);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct random_data,28, 10483, 6);
-CheckMemberSize(struct random_data,rptr,4,6,40028);
-CheckOffset(struct random_data,rptr,4,6,40028);
-CheckMemberSize(struct random_data,state,4,6,40029);
-CheckOffset(struct random_data,state,8,6,40029);
-CheckMemberSize(struct random_data,rand_type,4,6,40030);
-CheckOffset(struct random_data,rand_type,12,6,40030);
-CheckMemberSize(struct random_data,rand_deg,4,6,40031);
-CheckOffset(struct random_data,rand_deg,16,6,40031);
-CheckMemberSize(struct random_data,rand_sep,4,6,40032);
-CheckOffset(struct random_data,rand_sep,20,6,40032);
-CheckMemberSize(struct random_data,end_ptr,4,6,40033);
-CheckOffset(struct random_data,end_ptr,24,6,40033);
 #elif __ia64__
-CheckTypeSize(struct random_data,48, 10483, 3);
-CheckMemberSize(struct random_data,rptr,8,3,40028);
-CheckOffset(struct random_data,rptr,8,3,40028);
-CheckMemberSize(struct random_data,state,8,3,40029);
-CheckOffset(struct random_data,state,16,3,40029);
-CheckMemberSize(struct random_data,rand_type,4,3,40030);
-CheckOffset(struct random_data,rand_type,24,3,40030);
-CheckMemberSize(struct random_data,rand_deg,4,3,40031);
-CheckOffset(struct random_data,rand_deg,28,3,40031);
-CheckMemberSize(struct random_data,rand_sep,4,3,40032);
-CheckOffset(struct random_data,rand_sep,32,3,40032);
-CheckMemberSize(struct random_data,end_ptr,8,3,40033);
-CheckOffset(struct random_data,end_ptr,40,3,40033);
 #elif __s390x__
-CheckTypeSize(struct random_data,48, 10483, 12);
-CheckMemberSize(struct random_data,rptr,8,12,40028);
-CheckOffset(struct random_data,rptr,8,12,40028);
-CheckMemberSize(struct random_data,state,8,12,40029);
-CheckOffset(struct random_data,state,16,12,40029);
-CheckMemberSize(struct random_data,rand_type,4,12,40030);
-CheckOffset(struct random_data,rand_type,24,12,40030);
-CheckMemberSize(struct random_data,rand_deg,4,12,40031);
-CheckOffset(struct random_data,rand_deg,28,12,40031);
-CheckMemberSize(struct random_data,rand_sep,4,12,40032);
-CheckOffset(struct random_data,rand_sep,32,12,40032);
-CheckMemberSize(struct random_data,end_ptr,8,12,40033);
-CheckOffset(struct random_data,end_ptr,40,12,40033);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct random_data,28, 10483, 10);
-CheckMemberSize(struct random_data,rptr,4,10,40028);
-CheckOffset(struct random_data,rptr,4,10,40028);
-CheckMemberSize(struct random_data,state,4,10,40029);
-CheckOffset(struct random_data,state,8,10,40029);
-CheckMemberSize(struct random_data,rand_type,4,10,40030);
-CheckOffset(struct random_data,rand_type,12,10,40030);
-CheckMemberSize(struct random_data,rand_deg,4,10,40031);
-CheckOffset(struct random_data,rand_deg,16,10,40031);
-CheckMemberSize(struct random_data,rand_sep,4,10,40032);
-CheckOffset(struct random_data,rand_sep,20,10,40032);
-CheckMemberSize(struct random_data,end_ptr,4,10,40033);
-CheckOffset(struct random_data,end_ptr,24,10,40033);
 #elif __x86_64__
-CheckTypeSize(struct random_data,48, 10483, 11);
-CheckMemberSize(struct random_data,rptr,8,11,40028);
-CheckOffset(struct random_data,rptr,8,11,40028);
-CheckMemberSize(struct random_data,state,8,11,40029);
-CheckOffset(struct random_data,state,16,11,40029);
-CheckMemberSize(struct random_data,rand_type,4,11,40030);
-CheckOffset(struct random_data,rand_type,24,11,40030);
-CheckMemberSize(struct random_data,rand_deg,4,11,40031);
-CheckOffset(struct random_data,rand_deg,28,11,40031);
-CheckMemberSize(struct random_data,rand_sep,4,11,40032);
-CheckOffset(struct random_data,rand_sep,32,11,40032);
-CheckMemberSize(struct random_data,end_ptr,8,11,40033);
-CheckOffset(struct random_data,end_ptr,40,11,40033);
 #elif __powerpc64__
-CheckTypeSize(struct random_data,48, 10483, 9);
-CheckMemberSize(struct random_data,rptr,8,9,40028);
-CheckOffset(struct random_data,rptr,8,9,40028);
-CheckMemberSize(struct random_data,state,8,9,40029);
-CheckOffset(struct random_data,state,16,9,40029);
-CheckMemberSize(struct random_data,rand_type,4,9,40030);
-CheckOffset(struct random_data,rand_type,24,9,40030);
-CheckMemberSize(struct random_data,rand_deg,4,9,40031);
-CheckOffset(struct random_data,rand_deg,28,9,40031);
-CheckMemberSize(struct random_data,rand_sep,4,9,40032);
-CheckOffset(struct random_data,rand_sep,32,9,40032);
-CheckMemberSize(struct random_data,end_ptr,8,9,40033);
-CheckOffset(struct random_data,end_ptr,40,9,40033);
-#elif 1
-CheckTypeSize(struct random_data,0, 10483, 1);
-Msg("Missing member data for random_data on All\n");
-CheckOffset(struct random_data,fptr,0,1,40027);
-CheckOffset(struct random_data,rptr,0,1,40028);
-CheckOffset(struct random_data,state,0,1,40029);
-CheckOffset(struct random_data,rand_type,0,1,40030);
-CheckOffset(struct random_data,rand_deg,0,1,40031);
-CheckOffset(struct random_data,rand_sep,0,1,40032);
-CheckOffset(struct random_data,end_ptr,0,1,40033);
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10483,0);
+Msg("Find size of random_data (10483)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(div_t,8, 6973, 2);
+CheckTypeSize(div_t,8, 6973, 2)
 #elif __ia64__
-CheckTypeSize(div_t,8, 6973, 3);
+CheckTypeSize(div_t,8, 6973, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(div_t,8, 6973, 6);
+CheckTypeSize(div_t,8, 6973, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(div_t,8, 6973, 10);
+CheckTypeSize(div_t,8, 6973, 10)
 #elif __powerpc64__
-CheckTypeSize(div_t,8, 6973, 9);
+CheckTypeSize(div_t,8, 6973, 9)
 #elif __s390x__
-CheckTypeSize(div_t,8, 6973, 12);
+CheckTypeSize(div_t,8, 6973, 12)
 #elif __x86_64__
-CheckTypeSize(div_t,8, 6973, 11);
-#elif 1
-CheckTypeSize(div_t,0, 6973, 1);
+CheckTypeSize(div_t,8, 6973, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6973,0);
+Msg("Find size of div_t (6973)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(ldiv_t,8, 6975, 2);
+CheckTypeSize(ldiv_t,8, 6975, 2)
 #elif __ia64__
-CheckTypeSize(ldiv_t,16, 6975, 3);
+CheckTypeSize(ldiv_t,16, 6975, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(ldiv_t,8, 6975, 6);
+CheckTypeSize(ldiv_t,8, 6975, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(ldiv_t,8, 6975, 10);
+CheckTypeSize(ldiv_t,8, 6975, 10)
 #elif __powerpc64__
-CheckTypeSize(ldiv_t,16, 6975, 9);
+CheckTypeSize(ldiv_t,16, 6975, 9)
 #elif __s390x__
-CheckTypeSize(ldiv_t,16, 6975, 12);
+CheckTypeSize(ldiv_t,16, 6975, 12)
 #elif __x86_64__
-CheckTypeSize(ldiv_t,16, 6975, 11);
-#elif 1
-CheckTypeSize(ldiv_t,0, 6975, 1);
+CheckTypeSize(ldiv_t,16, 6975, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6975,0);
+Msg("Find size of ldiv_t (6975)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(lldiv_t,16, 6897, 2);
+CheckTypeSize(lldiv_t,16, 6897, 2)
 #elif __ia64__
-CheckTypeSize(lldiv_t,16, 6897, 3);
+CheckTypeSize(lldiv_t,16, 6897, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(lldiv_t,16, 6897, 6);
+CheckTypeSize(lldiv_t,16, 6897, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(lldiv_t,16, 6897, 10);
+CheckTypeSize(lldiv_t,16, 6897, 10)
 #elif __powerpc64__
-CheckTypeSize(lldiv_t,16, 6897, 9);
+CheckTypeSize(lldiv_t,16, 6897, 9)
 #elif __s390x__
-CheckTypeSize(lldiv_t,16, 6897, 12);
+CheckTypeSize(lldiv_t,16, 6897, 12)
 #elif __x86_64__
-CheckTypeSize(lldiv_t,16, 6897, 11);
-#elif 1
-CheckTypeSize(lldiv_t,0, 6897, 1);
+CheckTypeSize(lldiv_t,16, 6897, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6897,0);
+Msg("Find size of lldiv_t (6897)\n");
 #endif
 
 extern double __strtod_internal_db(const char *, char * *, int);

@@ -483,136 +483,58 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(struct pam_conv,8, 10352, 2);
-CheckMemberSize(struct pam_conv,conv,4,2,34588);
-CheckOffset(struct pam_conv,conv,0,2,34588);
-CheckMemberSize(struct pam_conv,appdata_ptr,4,2,34589);
-CheckOffset(struct pam_conv,appdata_ptr,4,2,34589);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct pam_conv,8, 10352, 10);
-CheckMemberSize(struct pam_conv,appdata_ptr,4,10,34589);
-CheckOffset(struct pam_conv,appdata_ptr,4,10,34589);
 #elif __ia64__
-CheckTypeSize(struct pam_conv,16, 10352, 3);
-CheckMemberSize(struct pam_conv,appdata_ptr,8,3,34589);
-CheckOffset(struct pam_conv,appdata_ptr,8,3,34589);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct pam_conv,8, 10352, 6);
-CheckMemberSize(struct pam_conv,appdata_ptr,4,6,34589);
-CheckOffset(struct pam_conv,appdata_ptr,4,6,34589);
 #elif __powerpc64__
-CheckTypeSize(struct pam_conv,16, 10352, 9);
-CheckMemberSize(struct pam_conv,appdata_ptr,8,9,34589);
-CheckOffset(struct pam_conv,appdata_ptr,8,9,34589);
 #elif __s390x__
-CheckTypeSize(struct pam_conv,16, 10352, 12);
-CheckMemberSize(struct pam_conv,appdata_ptr,8,12,34589);
-CheckOffset(struct pam_conv,appdata_ptr,8,12,34589);
 #elif __x86_64__
-CheckTypeSize(struct pam_conv,16, 10352, 11);
-CheckMemberSize(struct pam_conv,appdata_ptr,8,11,34589);
-CheckOffset(struct pam_conv,appdata_ptr,8,11,34589);
-#elif 1
-CheckTypeSize(struct pam_conv,0, 10352, 1);
-Msg("Missing member data for pam_conv on All\n");
-CheckOffset(struct pam_conv,conv,0,1,34588);
-CheckOffset(struct pam_conv,appdata_ptr,0,1,34589);
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10352,0);
+Msg("Find size of pam_conv (10352)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(pam_handle_t,4, 10354, 2);
+CheckTypeSize(pam_handle_t,4, 10354, 2)
 #elif __s390__ && !__s390x__
-CheckTypeSize(pam_handle_t,4, 10354, 10);
+CheckTypeSize(pam_handle_t,4, 10354, 10)
 #elif __ia64__
-CheckTypeSize(pam_handle_t,4, 10354, 3);
+CheckTypeSize(pam_handle_t,4, 10354, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(pam_handle_t,4, 10354, 6);
+CheckTypeSize(pam_handle_t,4, 10354, 6)
 #elif __powerpc64__
-CheckTypeSize(pam_handle_t,4, 10354, 9);
+CheckTypeSize(pam_handle_t,4, 10354, 9)
 #elif __s390x__
-CheckTypeSize(pam_handle_t,4, 10354, 12);
+CheckTypeSize(pam_handle_t,4, 10354, 12)
 #elif __x86_64__
-CheckTypeSize(pam_handle_t,4, 10354, 11);
-#elif 1
-CheckTypeSize(pam_handle_t,0, 10354, 1);
+CheckTypeSize(pam_handle_t,4, 10354, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10354,0);
+Msg("Find size of pam_handle_t (10354)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(struct pam_message,8, 10356, 2);
-CheckMemberSize(struct pam_message,msg_style,4,2,34584);
-CheckOffset(struct pam_message,msg_style,0,2,34584);
-CheckMemberSize(struct pam_message,msg,4,2,34585);
-CheckOffset(struct pam_message,msg,4,2,34585);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct pam_message,8, 10356, 10);
-CheckMemberSize(struct pam_message,msg,4,10,34585);
-CheckOffset(struct pam_message,msg,4,10,34585);
 #elif __ia64__
-CheckTypeSize(struct pam_message,16, 10356, 3);
-CheckMemberSize(struct pam_message,msg,8,3,34585);
-CheckOffset(struct pam_message,msg,8,3,34585);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct pam_message,8, 10356, 6);
-CheckMemberSize(struct pam_message,msg,4,6,34585);
-CheckOffset(struct pam_message,msg,4,6,34585);
 #elif __powerpc64__
-CheckTypeSize(struct pam_message,16, 10356, 9);
-CheckMemberSize(struct pam_message,msg,8,9,34585);
-CheckOffset(struct pam_message,msg,8,9,34585);
 #elif __s390x__
-CheckTypeSize(struct pam_message,16, 10356, 12);
-CheckMemberSize(struct pam_message,msg,8,12,34585);
-CheckOffset(struct pam_message,msg,8,12,34585);
 #elif __x86_64__
-CheckTypeSize(struct pam_message,16, 10356, 11);
-CheckMemberSize(struct pam_message,msg,8,11,34585);
-CheckOffset(struct pam_message,msg,8,11,34585);
-#elif 1
-CheckTypeSize(struct pam_message,0, 10356, 1);
-Msg("Missing member data for pam_message on All\n");
-CheckOffset(struct pam_message,msg_style,0,1,34584);
-CheckOffset(struct pam_message,msg,0,1,34585);
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10356,0);
+Msg("Find size of pam_message (10356)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(struct pam_response,8, 10358, 2);
-CheckMemberSize(struct pam_response,resp,4,2,34586);
-CheckOffset(struct pam_response,resp,0,2,34586);
-CheckMemberSize(struct pam_response,resp_retcode,4,2,34587);
-CheckOffset(struct pam_response,resp_retcode,4,2,34587);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct pam_response,8, 10358, 10);
-CheckMemberSize(struct pam_response,resp_retcode,4,10,34587);
-CheckOffset(struct pam_response,resp_retcode,4,10,34587);
 #elif __ia64__
-CheckTypeSize(struct pam_response,16, 10358, 3);
-CheckMemberSize(struct pam_response,resp,8,3,34586);
-CheckOffset(struct pam_response,resp,0,3,34586);
-CheckMemberSize(struct pam_response,resp_retcode,4,3,34587);
-CheckOffset(struct pam_response,resp_retcode,8,3,34587);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct pam_response,8, 10358, 6);
-CheckMemberSize(struct pam_response,resp,4,6,34586);
-CheckOffset(struct pam_response,resp,0,6,34586);
-CheckMemberSize(struct pam_response,resp_retcode,4,6,34587);
-CheckOffset(struct pam_response,resp_retcode,4,6,34587);
 #elif __powerpc64__
-CheckTypeSize(struct pam_response,16, 10358, 9);
-CheckMemberSize(struct pam_response,resp_retcode,4,9,34587);
-CheckOffset(struct pam_response,resp_retcode,8,9,34587);
 #elif __s390x__
-CheckTypeSize(struct pam_response,16, 10358, 12);
-CheckMemberSize(struct pam_response,resp_retcode,4,12,34587);
-CheckOffset(struct pam_response,resp_retcode,8,12,34587);
 #elif __x86_64__
-CheckTypeSize(struct pam_response,16, 10358, 11);
-CheckMemberSize(struct pam_response,resp_retcode,4,11,34587);
-CheckOffset(struct pam_response,resp_retcode,8,11,34587);
-#elif 1
-CheckTypeSize(struct pam_response,0, 10358, 1);
-Msg("Missing member data for pam_response on All\n");
-CheckOffset(struct pam_response,resp,0,1,34586);
-CheckOffset(struct pam_response,resp_retcode,0,1,34587);
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10358,0);
+Msg("Find size of pam_response (10358)\n");
 #endif
 
 extern int pam_set_item_db(pam_handle_t *, int, const void *);

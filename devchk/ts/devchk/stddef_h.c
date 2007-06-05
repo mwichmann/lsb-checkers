@@ -40,81 +40,51 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(wchar_t,4, 8848, 2);
+CheckTypeSize(wchar_t,4, 8848, 2)
 #elif __ia64__
-CheckTypeSize(wchar_t,4, 8848, 3);
+CheckTypeSize(wchar_t,4, 8848, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(wchar_t,4, 8848, 6);
+CheckTypeSize(wchar_t,4, 8848, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(wchar_t,4, 8848, 10);
+CheckTypeSize(wchar_t,4, 8848, 10)
 #elif __powerpc64__
-CheckTypeSize(wchar_t,4, 8848, 9);
+CheckTypeSize(wchar_t,4, 8848, 9)
 #elif __s390x__
-CheckTypeSize(wchar_t,4, 8848, 12);
+CheckTypeSize(wchar_t,4, 8848, 12)
 #elif __x86_64__
-CheckTypeSize(wchar_t,4, 8848, 11);
-#elif 1
-CheckTypeSize(wchar_t,0, 8848, 1);
-#endif
-
-#if __no_sym__
-CheckTypeSize(size_t,0, 8969, );
-#endif
-
-#if __ia64__
-CheckTypeSize(ptrdiff_t,0, 9027, 3);
-#endif
-
-#if __i386__
-CheckTypeSize(size_t,4, 10450, 2);
-#endif
-
-#if __ia64__
-CheckTypeSize(size_t,8, 10451, 3);
+CheckTypeSize(wchar_t,4, 8848, 11)
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckTypeSize(size_t,4, 10452, 6);
-#endif
-
-#if __powerpc64__
-CheckTypeSize(size_t,8, 10453, 9);
-#endif
-
-#if __s390__ && !__s390x__
-CheckTypeSize(size_t,4, 10454, 10);
+CheckTypeSize(size_t,4, 8969, 6)
+#elif __ia64__
+CheckTypeSize(size_t,8, 8969, 3)
+#elif __powerpc64__
+CheckTypeSize(size_t,8, 8969, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(size_t,4, 8969, 10)
+#elif __i386__
+CheckTypeSize(size_t,4, 8969, 2)
+#elif __s390x__
+CheckTypeSize(size_t,8, 8969, 12)
+#elif __x86_64__
+CheckTypeSize(size_t,8, 8969, 11)
 #endif
 
 #if __i386__
-CheckTypeSize(ptrdiff_t,4, 10473, 2);
-#endif
-
-#if __powerpc__ && !__powerpc64__
-CheckTypeSize(ptrdiff_t,4, 10474, 6);
-#endif
-
-#if __s390__ && !__s390x__
-CheckTypeSize(ptrdiff_t,4, 10475, 10);
-#endif
-
-#if __powerpc64__
-CheckTypeSize(ptrdiff_t,8, 10476, 9);
-#endif
-
-#if __s390x__
-CheckTypeSize(size_t,8, 10554, 12);
-#endif
-
-#if __x86_64__
-CheckTypeSize(ptrdiff_t,8, 10783, 11);
-#endif
-
-#if __x86_64__
-CheckTypeSize(size_t,8, 10784, 11);
-#endif
-
-#if __s390x__
-CheckTypeSize(ptrdiff_t,8, 10865, 12);
+CheckTypeSize(ptrdiff_t,4, 9027, 2)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(ptrdiff_t,4, 9027, 6)
+#elif __s390__ && !__s390x__
+CheckTypeSize(ptrdiff_t,4, 9027, 10)
+#elif __powerpc64__
+CheckTypeSize(ptrdiff_t,8, 9027, 9)
+#elif __x86_64__
+CheckTypeSize(ptrdiff_t,8, 9027, 11)
+#elif __s390x__
+CheckTypeSize(ptrdiff_t,8, 9027, 12)
+#elif __ia64__
+CheckTypeSize(ptrdiff_t,0, 9027, 3)
 #endif
 
 #ifdef TET_TEST

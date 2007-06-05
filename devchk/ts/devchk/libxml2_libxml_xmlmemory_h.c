@@ -27,187 +27,79 @@ Msg("Checking data structures in libxml2/libxml/xmlmemory.h\n");
 
 printf("Checking data structures in libxml2/libxml/xmlmemory.h\n");
 #if __i386__
+CheckTypeSize(xmlFreeFunc,4, 14570, 2)
 #elif __x86_64__
+CheckTypeSize(xmlFreeFunc,8, 14570, 11)
 #elif __ia64__
+CheckTypeSize(xmlFreeFunc,8, 14570, 3)
 #elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlFreeFunc,4, 14570, 6)
 #elif __powerpc64__
+CheckTypeSize(xmlFreeFunc,8, 14570, 9)
 #elif __s390__ && !__s390x__
+CheckTypeSize(xmlFreeFunc,4, 14570, 10)
 #elif __s390x__
-#elif 1
+CheckTypeSize(xmlFreeFunc,8, 14570, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14570,0);
+Msg("Find size of xmlFreeFunc (14570)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlFreeFunc,4, 14570, 2);
+CheckTypeSize(xmlMallocFunc,4, 14572, 2)
 #elif __x86_64__
-CheckTypeSize(xmlFreeFunc,8, 14570, 11);
+CheckTypeSize(xmlMallocFunc,8, 14572, 11)
 #elif __ia64__
-CheckTypeSize(xmlFreeFunc,8, 14570, 3);
+CheckTypeSize(xmlMallocFunc,8, 14572, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlFreeFunc,4, 14570, 6);
+CheckTypeSize(xmlMallocFunc,4, 14572, 6)
 #elif __powerpc64__
-CheckTypeSize(xmlFreeFunc,8, 14570, 9);
+CheckTypeSize(xmlMallocFunc,8, 14572, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlFreeFunc,4, 14570, 10);
+CheckTypeSize(xmlMallocFunc,4, 14572, 10)
 #elif __s390x__
-CheckTypeSize(xmlFreeFunc,8, 14570, 12);
-#elif 1
-CheckTypeSize(xmlFreeFunc,0, 14570, 1);
+CheckTypeSize(xmlMallocFunc,8, 14572, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14572,0);
+Msg("Find size of xmlMallocFunc (14572)\n");
 #endif
 
 #if __i386__
+CheckTypeSize(xmlReallocFunc,4, 14574, 2)
 #elif __x86_64__
+CheckTypeSize(xmlReallocFunc,8, 14574, 11)
 #elif __ia64__
+CheckTypeSize(xmlReallocFunc,8, 14574, 3)
 #elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlReallocFunc,4, 14574, 6)
 #elif __powerpc64__
+CheckTypeSize(xmlReallocFunc,8, 14574, 9)
 #elif __s390__ && !__s390x__
+CheckTypeSize(xmlReallocFunc,4, 14574, 10)
 #elif __s390x__
-#elif 1
+CheckTypeSize(xmlReallocFunc,8, 14574, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14574,0);
+Msg("Find size of xmlReallocFunc (14574)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlMallocFunc,4, 14572, 2);
+CheckTypeSize(xmlStrdupFunc,4, 14576, 2)
 #elif __x86_64__
-CheckTypeSize(xmlMallocFunc,8, 14572, 11);
+CheckTypeSize(xmlStrdupFunc,8, 14576, 11)
 #elif __ia64__
-CheckTypeSize(xmlMallocFunc,8, 14572, 3);
+CheckTypeSize(xmlStrdupFunc,8, 14576, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlMallocFunc,4, 14572, 6);
+CheckTypeSize(xmlStrdupFunc,4, 14576, 6)
 #elif __powerpc64__
-CheckTypeSize(xmlMallocFunc,8, 14572, 9);
+CheckTypeSize(xmlStrdupFunc,8, 14576, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlMallocFunc,4, 14572, 10);
+CheckTypeSize(xmlStrdupFunc,4, 14576, 10)
 #elif __s390x__
-CheckTypeSize(xmlMallocFunc,8, 14572, 12);
-#elif 1
-CheckTypeSize(xmlMallocFunc,0, 14572, 1);
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#elif 1
-#endif
-
-#if __i386__
-CheckTypeSize(xmlReallocFunc,4, 14574, 2);
-#elif __x86_64__
-CheckTypeSize(xmlReallocFunc,8, 14574, 11);
-#elif __ia64__
-CheckTypeSize(xmlReallocFunc,8, 14574, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlReallocFunc,4, 14574, 6);
-#elif __powerpc64__
-CheckTypeSize(xmlReallocFunc,8, 14574, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlReallocFunc,4, 14574, 10);
-#elif __s390x__
-CheckTypeSize(xmlReallocFunc,8, 14574, 12);
-#elif 1
-CheckTypeSize(xmlReallocFunc,0, 14574, 1);
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#elif 1
-#endif
-
-#if __i386__
-CheckTypeSize(xmlStrdupFunc,4, 14576, 2);
-#elif __x86_64__
-CheckTypeSize(xmlStrdupFunc,8, 14576, 11);
-#elif __ia64__
-CheckTypeSize(xmlStrdupFunc,8, 14576, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlStrdupFunc,4, 14576, 6);
-#elif __powerpc64__
-CheckTypeSize(xmlStrdupFunc,8, 14576, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlStrdupFunc,4, 14576, 10);
-#elif __s390x__
-CheckTypeSize(xmlStrdupFunc,8, 14576, 12);
-#elif 1
-CheckTypeSize(xmlStrdupFunc,0, 14576, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(xmlFreeFunc *,4, 14577, 2);
-#elif __x86_64__
-CheckTypeSize(xmlFreeFunc *,8, 14577, 11);
-#elif __ia64__
-CheckTypeSize(xmlFreeFunc *,8, 14577, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlFreeFunc *,4, 14577, 6);
-#elif __powerpc64__
-CheckTypeSize(xmlFreeFunc *,8, 14577, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlFreeFunc *,4, 14577, 10);
-#elif __s390x__
-CheckTypeSize(xmlFreeFunc *,8, 14577, 12);
-#elif 1
-CheckTypeSize(xmlFreeFunc *,0, 14577, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(xmlMallocFunc *,4, 14578, 2);
-#elif __x86_64__
-CheckTypeSize(xmlMallocFunc *,8, 14578, 11);
-#elif __ia64__
-CheckTypeSize(xmlMallocFunc *,8, 14578, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlMallocFunc *,4, 14578, 6);
-#elif __powerpc64__
-CheckTypeSize(xmlMallocFunc *,8, 14578, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlMallocFunc *,4, 14578, 10);
-#elif __s390x__
-CheckTypeSize(xmlMallocFunc *,8, 14578, 12);
-#elif 1
-CheckTypeSize(xmlMallocFunc *,0, 14578, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(xmlReallocFunc *,4, 14579, 2);
-#elif __x86_64__
-CheckTypeSize(xmlReallocFunc *,8, 14579, 11);
-#elif __ia64__
-CheckTypeSize(xmlReallocFunc *,8, 14579, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlReallocFunc *,4, 14579, 6);
-#elif __powerpc64__
-CheckTypeSize(xmlReallocFunc *,8, 14579, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlReallocFunc *,4, 14579, 10);
-#elif __s390x__
-CheckTypeSize(xmlReallocFunc *,8, 14579, 12);
-#elif 1
-CheckTypeSize(xmlReallocFunc *,0, 14579, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(xmlStrdupFunc *,4, 14580, 2);
-#elif __x86_64__
-CheckTypeSize(xmlStrdupFunc *,8, 14580, 11);
-#elif __ia64__
-CheckTypeSize(xmlStrdupFunc *,8, 14580, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlStrdupFunc *,4, 14580, 6);
-#elif __powerpc64__
-CheckTypeSize(xmlStrdupFunc *,8, 14580, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlStrdupFunc *,4, 14580, 10);
-#elif __s390x__
-CheckTypeSize(xmlStrdupFunc *,8, 14580, 12);
-#elif 1
-CheckTypeSize(xmlStrdupFunc *,0, 14580, 1);
+CheckTypeSize(xmlStrdupFunc,8, 14576, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14576,0);
+Msg("Find size of xmlStrdupFunc (14576)\n");
 #endif
 
 extern void xmlCleanupMemory_db(void);

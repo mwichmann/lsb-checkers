@@ -29,39 +29,41 @@ Msg("Checking data structures in X11/ICE/ICEutil.h\n");
 
 printf("Checking data structures in X11/ICE/ICEutil.h\n");
 #if __i386__
-CheckTypeSize(IceAuthFileEntry,28, 8228, 2);
+CheckTypeSize(IceAuthFileEntry,28, 8228, 2)
 #elif __ia64__
-CheckTypeSize(IceAuthFileEntry,56, 8228, 3);
+CheckTypeSize(IceAuthFileEntry,56, 8228, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(IceAuthFileEntry,28, 8228, 6);
+CheckTypeSize(IceAuthFileEntry,28, 8228, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(IceAuthFileEntry,28, 8228, 10);
+CheckTypeSize(IceAuthFileEntry,28, 8228, 10)
 #elif __powerpc64__
-CheckTypeSize(IceAuthFileEntry,56, 8228, 9);
+CheckTypeSize(IceAuthFileEntry,56, 8228, 9)
 #elif __s390x__
-CheckTypeSize(IceAuthFileEntry,56, 8228, 12);
+CheckTypeSize(IceAuthFileEntry,56, 8228, 12)
 #elif __x86_64__
-CheckTypeSize(IceAuthFileEntry,56, 8228, 11);
-#elif 1
-CheckTypeSize(IceAuthFileEntry,0, 8228, 1);
+CheckTypeSize(IceAuthFileEntry,56, 8228, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8228,0);
+Msg("Find size of IceAuthFileEntry (8228)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(IceAuthDataEntry,20, 8230, 2);
+CheckTypeSize(IceAuthDataEntry,20, 8230, 2)
 #elif __ia64__
-CheckTypeSize(IceAuthDataEntry,40, 8230, 3);
+CheckTypeSize(IceAuthDataEntry,40, 8230, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(IceAuthDataEntry,20, 8230, 6);
+CheckTypeSize(IceAuthDataEntry,20, 8230, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(IceAuthDataEntry,20, 8230, 10);
+CheckTypeSize(IceAuthDataEntry,20, 8230, 10)
 #elif __powerpc64__
-CheckTypeSize(IceAuthDataEntry,40, 8230, 9);
+CheckTypeSize(IceAuthDataEntry,40, 8230, 9)
 #elif __s390x__
-CheckTypeSize(IceAuthDataEntry,40, 8230, 12);
+CheckTypeSize(IceAuthDataEntry,40, 8230, 12)
 #elif __x86_64__
-CheckTypeSize(IceAuthDataEntry,40, 8230, 11);
-#elif 1
-CheckTypeSize(IceAuthDataEntry,0, 8230, 1);
+CheckTypeSize(IceAuthDataEntry,40, 8230, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8230,0);
+Msg("Find size of IceAuthDataEntry (8230)\n");
 #endif
 
 #ifdef TET_TEST

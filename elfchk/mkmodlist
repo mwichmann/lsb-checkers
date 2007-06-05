@@ -6,7 +6,7 @@ use Getopt::Long;
 
 sub usage()
 {
-print STDERR "dump_modules -v <lsbversion>\n";
+print STDERR "mkmodlist -v <lsbversion>\n";
 die;
 }
 
