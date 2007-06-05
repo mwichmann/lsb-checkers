@@ -108,335 +108,155 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(XftDraw *,4, 12555, 2);
+CheckTypeSize(PangoXftRenderer,48, 12560, 2)
 #elif __x86_64__
-CheckTypeSize(XftDraw *,8, 12555, 11);
+CheckTypeSize(PangoXftRenderer,88, 12560, 11)
 #elif __ia64__
-CheckTypeSize(XftDraw *,8, 12555, 3);
+CheckTypeSize(PangoXftRenderer,88, 12560, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(XftDraw *,4, 12555, 6);
+CheckTypeSize(PangoXftRenderer,48, 12560, 6)
 #elif __powerpc64__
-CheckTypeSize(XftDraw *,8, 12555, 9);
+CheckTypeSize(PangoXftRenderer,88, 12560, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(XftDraw *,4, 12555, 10);
+CheckTypeSize(PangoXftRenderer,48, 12560, 10)
 #elif __s390x__
-CheckTypeSize(XftDraw *,8, 12555, 12);
-#elif 1
-CheckTypeSize(XftDraw *,0, 12555, 1);
+CheckTypeSize(PangoXftRenderer,88, 12560, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12560,0);
+Msg("Find size of PangoXftRenderer (12560)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(XftColor *,4, 12558, 2);
+CheckTypeSize(PangoXftSubstituteFunc,4, 12564, 2)
 #elif __x86_64__
-CheckTypeSize(XftColor *,8, 12558, 11);
+CheckTypeSize(PangoXftSubstituteFunc,8, 12564, 11)
 #elif __ia64__
-CheckTypeSize(XftColor *,8, 12558, 3);
+CheckTypeSize(PangoXftSubstituteFunc,8, 12564, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(XftColor *,4, 12558, 6);
+CheckTypeSize(PangoXftSubstituteFunc,4, 12564, 6)
 #elif __powerpc64__
-CheckTypeSize(XftColor *,8, 12558, 9);
+CheckTypeSize(PangoXftSubstituteFunc,8, 12564, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(XftColor *,4, 12558, 10);
+CheckTypeSize(PangoXftSubstituteFunc,4, 12564, 10)
 #elif __s390x__
-CheckTypeSize(XftColor *,8, 12558, 12);
-#elif 1
-CheckTypeSize(XftColor *,0, 12558, 1);
+CheckTypeSize(PangoXftSubstituteFunc,8, 12564, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12564,0);
+Msg("Find size of PangoXftSubstituteFunc (12564)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(PangoXftRenderer,48, 12560, 2);
+CheckTypeSize(PangoXftFontMap,0, 12566, 2)
 #elif __x86_64__
-CheckTypeSize(PangoXftRenderer,88, 12560, 11);
+CheckTypeSize(PangoXftFontMap,0, 12566, 11)
 #elif __ia64__
-CheckTypeSize(PangoXftRenderer,88, 12560, 3);
+CheckTypeSize(PangoXftFontMap,0, 12566, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(PangoXftRenderer,48, 12560, 6);
+CheckTypeSize(PangoXftFontMap,0, 12566, 6)
 #elif __powerpc64__
-CheckTypeSize(PangoXftRenderer,88, 12560, 9);
+CheckTypeSize(PangoXftFontMap,0, 12566, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(PangoXftRenderer,48, 12560, 10);
+CheckTypeSize(PangoXftFontMap,0, 12566, 10)
 #elif __s390x__
-CheckTypeSize(PangoXftRenderer,88, 12560, 12);
-#elif 1
-CheckTypeSize(PangoXftRenderer,0, 12560, 1);
+CheckTypeSize(PangoXftFontMap,0, 12566, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12566,0);
+Msg("Find size of PangoXftFontMap (12566)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(PangoXftRenderer *,4, 12561, 2);
+CheckTypeSize(PangoXftRendererClass,132, 12579, 2)
 #elif __x86_64__
-CheckTypeSize(PangoXftRenderer *,8, 12561, 11);
+CheckTypeSize(PangoXftRendererClass,264, 12579, 11)
 #elif __ia64__
-CheckTypeSize(PangoXftRenderer *,8, 12561, 3);
+CheckTypeSize(PangoXftRendererClass,264, 12579, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(PangoXftRenderer *,4, 12561, 6);
+CheckTypeSize(PangoXftRendererClass,132, 12579, 6)
 #elif __powerpc64__
-CheckTypeSize(PangoXftRenderer *,8, 12561, 9);
+CheckTypeSize(PangoXftRendererClass,264, 12579, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(PangoXftRenderer *,4, 12561, 10);
+CheckTypeSize(PangoXftRendererClass,132, 12579, 10)
 #elif __s390x__
-CheckTypeSize(PangoXftRenderer *,8, 12561, 12);
-#elif 1
-CheckTypeSize(PangoXftRenderer *,0, 12561, 1);
+CheckTypeSize(PangoXftRendererClass,264, 12579, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12579,0);
+Msg("Find size of PangoXftRendererClass (12579)\n");
 #endif
 
 #if __i386__
+CheckTypeSize(PangoFcFontClass,0, 12581, 2)
 #elif __x86_64__
+CheckTypeSize(PangoFcFontClass,0, 12581, 11)
 #elif __ia64__
+CheckTypeSize(PangoFcFontClass,0, 12581, 3)
 #elif __powerpc__ && !__powerpc64__
+CheckTypeSize(PangoFcFontClass,0, 12581, 6)
 #elif __powerpc64__
+CheckTypeSize(PangoFcFontClass,0, 12581, 9)
 #elif __s390__ && !__s390x__
+CheckTypeSize(PangoFcFontClass,0, 12581, 10)
 #elif __s390x__
-#elif 1
+CheckTypeSize(PangoFcFontClass,0, 12581, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12581,0);
+Msg("Find size of PangoFcFontClass (12581)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(PangoXftSubstituteFunc,4, 12564, 2);
+CheckTypeSize(PangoFcFont,0, 12583, 2)
 #elif __x86_64__
-CheckTypeSize(PangoXftSubstituteFunc,8, 12564, 11);
+CheckTypeSize(PangoFcFont,0, 12583, 11)
 #elif __ia64__
-CheckTypeSize(PangoXftSubstituteFunc,8, 12564, 3);
+CheckTypeSize(PangoFcFont,0, 12583, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(PangoXftSubstituteFunc,4, 12564, 6);
+CheckTypeSize(PangoFcFont,0, 12583, 6)
 #elif __powerpc64__
-CheckTypeSize(PangoXftSubstituteFunc,8, 12564, 9);
+CheckTypeSize(PangoFcFont,0, 12583, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(PangoXftSubstituteFunc,4, 12564, 10);
+CheckTypeSize(PangoFcFont,0, 12583, 10)
 #elif __s390x__
-CheckTypeSize(PangoXftSubstituteFunc,8, 12564, 12);
-#elif 1
-CheckTypeSize(PangoXftSubstituteFunc,0, 12564, 1);
+CheckTypeSize(PangoFcFont,0, 12583, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12583,0);
+Msg("Find size of PangoFcFont (12583)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(PangoXftFontMap,0, 12566, 2);
+CheckTypeSize(PangoXftFont,0, 12585, 2)
 #elif __x86_64__
-CheckTypeSize(PangoXftFontMap,0, 12566, 11);
+CheckTypeSize(PangoXftFont,0, 12585, 11)
 #elif __ia64__
-CheckTypeSize(PangoXftFontMap,0, 12566, 3);
+CheckTypeSize(PangoXftFont,0, 12585, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(PangoXftFontMap,0, 12566, 6);
+CheckTypeSize(PangoXftFont,0, 12585, 6)
 #elif __powerpc64__
-CheckTypeSize(PangoXftFontMap,0, 12566, 9);
+CheckTypeSize(PangoXftFont,0, 12585, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(PangoXftFontMap,0, 12566, 10);
+CheckTypeSize(PangoXftFont,0, 12585, 10)
 #elif __s390x__
-CheckTypeSize(PangoXftFontMap,0, 12566, 12);
-#elif 1
-CheckTypeSize(PangoXftFontMap,0, 12566, 1);
+CheckTypeSize(PangoXftFont,0, 12585, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12585,0);
+Msg("Find size of PangoXftFont (12585)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(struct _PangoXftRendererClass,132, 12567, 2);
-CheckMemberSize(struct _PangoXftRendererClass,composite_trapezoids,4,2,43295);
-CheckOffset(struct _PangoXftRendererClass,composite_trapezoids,124,2,43295);
-CheckMemberSize(struct _PangoXftRendererClass,composite_glyphs,4,2,43300);
-CheckOffset(struct _PangoXftRendererClass,composite_glyphs,128,2,43300);
+CheckTypeSize(PangoXftRendererPrivate,0, 12587, 2)
 #elif __x86_64__
-CheckTypeSize(struct _PangoXftRendererClass,264, 12567, 11);
-CheckMemberSize(struct _PangoXftRendererClass,composite_trapezoids,8,11,43295);
-CheckOffset(struct _PangoXftRendererClass,composite_trapezoids,248,11,43295);
-CheckMemberSize(struct _PangoXftRendererClass,composite_glyphs,8,11,43300);
-CheckOffset(struct _PangoXftRendererClass,composite_glyphs,256,11,43300);
+CheckTypeSize(PangoXftRendererPrivate,0, 12587, 11)
 #elif __ia64__
-CheckTypeSize(struct _PangoXftRendererClass,264, 12567, 3);
-CheckMemberSize(struct _PangoXftRendererClass,composite_trapezoids,8,3,43295);
-CheckOffset(struct _PangoXftRendererClass,composite_trapezoids,248,3,43295);
-CheckMemberSize(struct _PangoXftRendererClass,composite_glyphs,8,3,43300);
-CheckOffset(struct _PangoXftRendererClass,composite_glyphs,256,3,43300);
+CheckTypeSize(PangoXftRendererPrivate,0, 12587, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _PangoXftRendererClass,132, 12567, 6);
-CheckMemberSize(struct _PangoXftRendererClass,composite_trapezoids,4,6,43295);
-CheckOffset(struct _PangoXftRendererClass,composite_trapezoids,124,6,43295);
-CheckMemberSize(struct _PangoXftRendererClass,composite_glyphs,4,6,43300);
-CheckOffset(struct _PangoXftRendererClass,composite_glyphs,128,6,43300);
+CheckTypeSize(PangoXftRendererPrivate,0, 12587, 6)
 #elif __powerpc64__
-CheckTypeSize(struct _PangoXftRendererClass,264, 12567, 9);
-CheckMemberSize(struct _PangoXftRendererClass,composite_trapezoids,8,9,43295);
-CheckOffset(struct _PangoXftRendererClass,composite_trapezoids,248,9,43295);
-CheckMemberSize(struct _PangoXftRendererClass,composite_glyphs,8,9,43300);
-CheckOffset(struct _PangoXftRendererClass,composite_glyphs,256,9,43300);
+CheckTypeSize(PangoXftRendererPrivate,0, 12587, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _PangoXftRendererClass,132, 12567, 10);
-CheckMemberSize(struct _PangoXftRendererClass,composite_trapezoids,4,10,43295);
-CheckOffset(struct _PangoXftRendererClass,composite_trapezoids,124,10,43295);
-CheckMemberSize(struct _PangoXftRendererClass,composite_glyphs,4,10,43300);
-CheckOffset(struct _PangoXftRendererClass,composite_glyphs,128,10,43300);
+CheckTypeSize(PangoXftRendererPrivate,0, 12587, 10)
 #elif __s390x__
-CheckTypeSize(struct _PangoXftRendererClass,264, 12567, 12);
-CheckMemberSize(struct _PangoXftRendererClass,composite_trapezoids,8,12,43295);
-CheckOffset(struct _PangoXftRendererClass,composite_trapezoids,248,12,43295);
-CheckMemberSize(struct _PangoXftRendererClass,composite_glyphs,8,12,43300);
-CheckOffset(struct _PangoXftRendererClass,composite_glyphs,256,12,43300);
-#elif 1
-CheckTypeSize(struct _PangoXftRendererClass,0, 12567, 1);
-Msg("Missing member data for _PangoXftRendererClass on All\n");
-CheckOffset(struct _PangoXftRendererClass,parent_class,0,1,43290);
-CheckOffset(struct _PangoXftRendererClass,composite_trapezoids,0,1,43295);
-CheckOffset(struct _PangoXftRendererClass,composite_glyphs,0,1,43300);
-#endif
-
-#if __i386__
-CheckTypeSize(XTrapezoid *,4, 12570, 2);
-#elif __x86_64__
-CheckTypeSize(XTrapezoid *,8, 12570, 11);
-#elif __ia64__
-CheckTypeSize(XTrapezoid *,8, 12570, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(XTrapezoid *,4, 12570, 6);
-#elif __powerpc64__
-CheckTypeSize(XTrapezoid *,8, 12570, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(XTrapezoid *,4, 12570, 10);
-#elif __s390x__
-CheckTypeSize(XTrapezoid *,8, 12570, 12);
-#elif 1
-CheckTypeSize(XTrapezoid *,0, 12570, 1);
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#elif 1
-#endif
-
-#if __i386__
-CheckTypeSize(XftFont *,4, 12574, 2);
-#elif __x86_64__
-CheckTypeSize(XftFont *,8, 12574, 11);
-#elif __ia64__
-CheckTypeSize(XftFont *,8, 12574, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(XftFont *,4, 12574, 6);
-#elif __powerpc64__
-CheckTypeSize(XftFont *,8, 12574, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(XftFont *,4, 12574, 10);
-#elif __s390x__
-CheckTypeSize(XftFont *,8, 12574, 12);
-#elif 1
-CheckTypeSize(XftFont *,0, 12574, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(XftGlyphSpec *,4, 12577, 2);
-#elif __x86_64__
-CheckTypeSize(XftGlyphSpec *,8, 12577, 11);
-#elif __ia64__
-CheckTypeSize(XftGlyphSpec *,8, 12577, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(XftGlyphSpec *,4, 12577, 6);
-#elif __powerpc64__
-CheckTypeSize(XftGlyphSpec *,8, 12577, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(XftGlyphSpec *,4, 12577, 10);
-#elif __s390x__
-CheckTypeSize(XftGlyphSpec *,8, 12577, 12);
-#elif 1
-CheckTypeSize(XftGlyphSpec *,0, 12577, 1);
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#elif 1
-#endif
-
-#if __i386__
-CheckTypeSize(PangoXftRendererClass,132, 12579, 2);
-#elif __x86_64__
-CheckTypeSize(PangoXftRendererClass,264, 12579, 11);
-#elif __ia64__
-CheckTypeSize(PangoXftRendererClass,264, 12579, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(PangoXftRendererClass,132, 12579, 6);
-#elif __powerpc64__
-CheckTypeSize(PangoXftRendererClass,264, 12579, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(PangoXftRendererClass,132, 12579, 10);
-#elif __s390x__
-CheckTypeSize(PangoXftRendererClass,264, 12579, 12);
-#elif 1
-CheckTypeSize(PangoXftRendererClass,0, 12579, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(PangoFcFontClass,0, 12581, 2);
-#elif __x86_64__
-CheckTypeSize(PangoFcFontClass,0, 12581, 11);
-#elif __ia64__
-CheckTypeSize(PangoFcFontClass,0, 12581, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(PangoFcFontClass,0, 12581, 6);
-#elif __powerpc64__
-CheckTypeSize(PangoFcFontClass,0, 12581, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(PangoFcFontClass,0, 12581, 10);
-#elif __s390x__
-CheckTypeSize(PangoFcFontClass,0, 12581, 12);
-#elif 1
-CheckTypeSize(PangoFcFontClass,0, 12581, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(PangoFcFont,0, 12583, 2);
-#elif __x86_64__
-CheckTypeSize(PangoFcFont,0, 12583, 11);
-#elif __ia64__
-CheckTypeSize(PangoFcFont,0, 12583, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(PangoFcFont,0, 12583, 6);
-#elif __powerpc64__
-CheckTypeSize(PangoFcFont,0, 12583, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(PangoFcFont,0, 12583, 10);
-#elif __s390x__
-CheckTypeSize(PangoFcFont,0, 12583, 12);
-#elif 1
-CheckTypeSize(PangoFcFont,0, 12583, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(PangoXftFont,0, 12585, 2);
-#elif __x86_64__
-CheckTypeSize(PangoXftFont,0, 12585, 11);
-#elif __ia64__
-CheckTypeSize(PangoXftFont,0, 12585, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(PangoXftFont,0, 12585, 6);
-#elif __powerpc64__
-CheckTypeSize(PangoXftFont,0, 12585, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(PangoXftFont,0, 12585, 10);
-#elif __s390x__
-CheckTypeSize(PangoXftFont,0, 12585, 12);
-#elif 1
-CheckTypeSize(PangoXftFont,0, 12585, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(PangoXftRendererPrivate,0, 12587, 2);
-#elif __x86_64__
-CheckTypeSize(PangoXftRendererPrivate,0, 12587, 11);
-#elif __ia64__
-CheckTypeSize(PangoXftRendererPrivate,0, 12587, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(PangoXftRendererPrivate,0, 12587, 6);
-#elif __powerpc64__
-CheckTypeSize(PangoXftRendererPrivate,0, 12587, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(PangoXftRendererPrivate,0, 12587, 10);
-#elif __s390x__
-CheckTypeSize(PangoXftRendererPrivate,0, 12587, 12);
-#elif 1
-CheckTypeSize(PangoXftRendererPrivate,0, 12587, 1);
+CheckTypeSize(PangoXftRendererPrivate,0, 12587, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12587,0);
+Msg("Find size of PangoXftRendererPrivate (12587)\n");
 #endif
 
 extern void pango_xft_substitute_changed_db(Display *, int);

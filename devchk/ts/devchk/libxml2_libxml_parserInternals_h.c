@@ -175,127 +175,22 @@ cnt++;
 #endif
 
 #if __i386__
+CheckTypeSize(xmlEntityReferenceFunc,4, 15021, 2)
 #elif __x86_64__
+CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 11)
 #elif __ia64__
+CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 3)
 #elif __powerpc__ && !__powerpc64__
+CheckTypeSize(xmlEntityReferenceFunc,4, 15021, 6)
 #elif __powerpc64__
+CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 9)
 #elif __s390__ && !__s390x__
+CheckTypeSize(xmlEntityReferenceFunc,4, 15021, 10)
 #elif __s390x__
-#elif 1
-#endif
-
-#if __powerpc64__
-#elif __i386__
-#elif __powerpc__ && !__powerpc64__
-#elif __ia64__
-#elif __s390__ && !__s390x__
-#elif __x86_64__
-#elif __s390x__
-#elif 1
-#endif
-
-#if __i386__
-CheckTypeSize(xmlElementContentPtr *,4, 15018, 2);
-#elif __x86_64__
-CheckTypeSize(xmlElementContentPtr *,8, 15018, 11);
-#elif __ia64__
-CheckTypeSize(xmlElementContentPtr *,8, 15018, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlElementContentPtr *,4, 15018, 6);
-#elif __powerpc64__
-CheckTypeSize(xmlElementContentPtr *,8, 15018, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlElementContentPtr *,4, 15018, 10);
-#elif __s390x__
-CheckTypeSize(xmlElementContentPtr *,8, 15018, 12);
-#elif 1
-CheckTypeSize(xmlElementContentPtr *,0, 15018, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(xmlEnumerationPtr *,4, 15019, 2);
-#elif __x86_64__
-CheckTypeSize(xmlEnumerationPtr *,8, 15019, 11);
-#elif __ia64__
-CheckTypeSize(xmlEnumerationPtr *,8, 15019, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlEnumerationPtr *,4, 15019, 6);
-#elif __powerpc64__
-CheckTypeSize(xmlEnumerationPtr *,8, 15019, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlEnumerationPtr *,4, 15019, 10);
-#elif __s390x__
-CheckTypeSize(xmlEnumerationPtr *,8, 15019, 12);
-#elif 1
-CheckTypeSize(xmlEnumerationPtr *,0, 15019, 1);
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#elif 1
-#endif
-
-#if __i386__
-CheckTypeSize(xmlEntityReferenceFunc,4, 15021, 2);
-#elif __x86_64__
-CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 11);
-#elif __ia64__
-CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlEntityReferenceFunc,4, 15021, 6);
-#elif __powerpc64__
-CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlEntityReferenceFunc,4, 15021, 10);
-#elif __s390x__
-CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 12);
-#elif 1
-CheckTypeSize(xmlEntityReferenceFunc,0, 15021, 1);
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#elif 1
-#endif
-
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __x86_64__
-#elif __s390x__
-#elif 1
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#elif 1
-#endif
-
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __x86_64__
-#elif __s390x__
-#elif 1
+CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15021,0);
+Msg("Find size of xmlEntityReferenceFunc (15021)\n");
 #endif
 
 extern int nodePush_db(xmlParserCtxtPtr, xmlNodePtr);

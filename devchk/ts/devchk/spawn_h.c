@@ -86,25 +86,26 @@ cnt++;
 #endif
 
 #if __ia64__
-CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 3);
+CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 3)
 #elif __i386__
-CheckTypeSize(posix_spawn_file_actions_t,76, 16588, 2);
-#elif 1
-CheckTypeSize(posix_spawn_file_actions_t,0, 16588, 1);
+CheckTypeSize(posix_spawn_file_actions_t,76, 16588, 2)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(posix_spawn_file_actions_t,76, 16588, 6);
+CheckTypeSize(posix_spawn_file_actions_t,76, 16588, 6)
 #elif __powerpc64__
-CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 9);
+CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(posix_spawn_file_actions_t,76, 16588, 10);
+CheckTypeSize(posix_spawn_file_actions_t,76, 16588, 10)
 #elif __x86_64__
-CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 11);
+CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 11)
 #elif __s390x__
-CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 12);
+CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16588,0);
+Msg("Find size of posix_spawn_file_actions_t (16588)\n");
 #endif
 
 #if 1
-CheckTypeSize(posix_spawnattr_t,336, 16591, 1);
+CheckTypeSize(posix_spawnattr_t,336, 16591, 1)
 #endif
 
 extern int posix_spawn_db(pid_t, const char *, posix_spawn_file_actions_t *const , posix_spawnattr_t *const , char *const [], char *const []);
