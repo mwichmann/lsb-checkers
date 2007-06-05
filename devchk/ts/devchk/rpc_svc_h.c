@@ -26,33 +26,15 @@ Msg("Checking data structures in rpc/svc.h\n");
 
 printf("Checking data structures in rpc/svc.h\n");
 #if _LSB_DEFAULT_ARCH
-#ifdef svc_getcaller(x)
-	CompareConstant(svc_getcaller(x),(&(x)->xp_raddr),4361,architecture)
-#else
-Msg( "Error: Constant not found: svc_getcaller(x)\n");
-cnt++;
-#endif
-
+/* No test for svc_getcaller(x) */
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef svc_recv(xprt,msg)
-	CompareConstant(svc_recv(xprt,msg),(*(xprt)->xp_ops->xp_recv)((xprt), (msg)),4363,architecture)
-#else
-Msg( "Error: Constant not found: svc_recv(xprt,msg)\n");
-cnt++;
-#endif
-
+/* No test for svc_recv(xprt,msg) */
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef svc_stat(xprt)
-	CompareConstant(svc_stat(xprt),(*(xprt)->xp_ops->xp_stat)(xprt),4365,architecture)
-#else
-Msg( "Error: Constant not found: svc_stat(xprt)\n");
-cnt++;
-#endif
-
+/* No test for svc_stat(xprt) */
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -60,13 +42,7 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef svc_reply(xprt,msg)
-	CompareConstant(svc_reply(xprt,msg),(*(xprt)->xp_ops->xp_reply) ((xprt), (msg)),4369,architecture)
-#else
-Msg( "Error: Constant not found: svc_reply(xprt,msg)\n");
-cnt++;
-#endif
-
+/* No test for svc_reply(xprt,msg) */
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -74,13 +50,7 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef svc_destroy(xprt)
-	CompareConstant(svc_destroy(xprt),(*(xprt)->xp_ops->xp_destroy)(xprt),4373,architecture)
-#else
-Msg( "Error: Constant not found: svc_destroy(xprt)\n");
-cnt++;
-#endif
-
+/* No test for svc_destroy(xprt) */
 #endif
 
 #if _LSB_DEFAULT_ARCH

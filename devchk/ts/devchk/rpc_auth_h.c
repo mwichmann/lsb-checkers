@@ -26,13 +26,7 @@ Msg("Checking data structures in rpc/auth.h\n");
 
 printf("Checking data structures in rpc/auth.h\n");
 #if _LSB_DEFAULT_ARCH
-#ifdef auth_destroy(auth)
-	CompareConstant(auth_destroy(auth),((*((auth)->ah_ops->ah_destroy))(auth)),4256,architecture)
-#else
-Msg( "Error: Constant not found: auth_destroy(auth)\n");
-cnt++;
-#endif
-
+/* No test for auth_destroy(auth) */
 #endif
 
 #if __ia64__
