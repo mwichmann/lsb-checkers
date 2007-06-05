@@ -1486,600 +1486,200 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(sig_atomic_t,4, 9092, 2);
+CheckTypeSize(sig_atomic_t,4, 9092, 2)
 #elif __ia64__
-CheckTypeSize(sig_atomic_t,4, 9092, 3);
+CheckTypeSize(sig_atomic_t,4, 9092, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(sig_atomic_t,4, 9092, 6);
+CheckTypeSize(sig_atomic_t,4, 9092, 6)
 #elif __s390__ && !__s390x__
-CheckTypeSize(sig_atomic_t,4, 9092, 10);
+CheckTypeSize(sig_atomic_t,4, 9092, 10)
 #elif __powerpc64__
-CheckTypeSize(sig_atomic_t,4, 9092, 9);
+CheckTypeSize(sig_atomic_t,4, 9092, 9)
 #elif __s390x__
-CheckTypeSize(sig_atomic_t,4, 9092, 12);
+CheckTypeSize(sig_atomic_t,4, 9092, 12)
 #elif __x86_64__
-CheckTypeSize(sig_atomic_t,4, 9092, 11);
-#elif 1
-CheckTypeSize(sig_atomic_t,0, 9092, 1);
-#endif
-
-#if __powerpc64__
+CheckTypeSize(sig_atomic_t,4, 9092, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9092,0);
+Msg("Find size of sig_atomic_t (9092)\n");
 #endif
 
 #if __s390x__
-CheckTypeSize(_psw_t,16, 10571, 12);
+CheckTypeSize(_psw_t,16, 10571, 12)
+#elif __s390__ && !__s390x__
+CheckTypeSize(_psw_t,8, 10571, 10)
 #endif
 
 #if __s390__ && !__s390x__
-CheckTypeSize(_psw_t,8, 10581, 10);
-#endif
-
-#if __s390__ && !__s390x__
-CheckTypeSize(_s390_regs_common,136, 10821, 10);
-#endif
-
-#if __powerpc64__
-CheckTypeSize(struct pt_regs,352, 10823, 9);
-CheckMemberSize(struct pt_regs,gpr,256,9,40589);
-CheckOffset(struct pt_regs,gpr,0,9,40589);
-CheckMemberSize(struct pt_regs,nip,8,9,40590);
-CheckOffset(struct pt_regs,nip,256,9,40590);
-CheckMemberSize(struct pt_regs,msr,8,9,40591);
-CheckOffset(struct pt_regs,msr,264,9,40591);
-CheckMemberSize(struct pt_regs,orig_gpr3,8,9,40592);
-CheckOffset(struct pt_regs,orig_gpr3,272,9,40592);
-CheckMemberSize(struct pt_regs,link,8,9,40594);
-CheckOffset(struct pt_regs,link,288,9,40594);
-CheckMemberSize(struct pt_regs,xer,8,9,40595);
-CheckOffset(struct pt_regs,xer,296,9,40595);
-CheckMemberSize(struct pt_regs,ccr,8,9,40596);
-CheckOffset(struct pt_regs,ccr,304,9,40596);
-CheckMemberSize(struct pt_regs,softe,8,9,40597);
-CheckOffset(struct pt_regs,softe,312,9,40597);
-CheckMemberSize(struct pt_regs,trap,8,9,40598);
-CheckOffset(struct pt_regs,trap,320,9,40598);
-CheckMemberSize(struct pt_regs,dar,8,9,40599);
-CheckOffset(struct pt_regs,dar,328,9,40599);
-CheckMemberSize(struct pt_regs,dsisr,8,9,40600);
-CheckOffset(struct pt_regs,dsisr,336,9,40600);
-CheckMemberSize(struct pt_regs,result,8,9,40601);
-CheckOffset(struct pt_regs,result,344,9,40601);
-#endif
-
-#if __s390x__
-CheckTypeSize(_s390_regs_common,208, 10838, 12);
-#endif
-
-#if __i386__
-CheckTypeSize(sighandler_t,4, 9374, 2);
-#elif __powerpc64__
-CheckTypeSize(sighandler_t,8, 9374, 9);
-#elif __ia64__
-CheckTypeSize(sighandler_t,8, 9374, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(sighandler_t,4, 9374, 6);
-#elif __s390__ && !__s390x__
-CheckTypeSize(sighandler_t,4, 9374, 10);
+CheckTypeSize(_s390_regs_common,136, 10821, 10)
 #elif __s390x__
-CheckTypeSize(sighandler_t,8, 9374, 12);
-#elif __x86_64__
-CheckTypeSize(sighandler_t,8, 9374, 11);
-#elif 1
-CheckTypeSize(sighandler_t,0, 9374, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(sigval_t,4, 9320, 2);
-#elif __ia64__
-CheckTypeSize(sigval_t,8, 9320, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(sigval_t,4, 9320, 6);
-#elif __s390__ && !__s390x__
-CheckTypeSize(sigval_t,4, 9320, 10);
-#elif __powerpc64__
-CheckTypeSize(sigval_t,8, 9320, 9);
-#elif __s390x__
-CheckTypeSize(sigval_t,8, 9320, 12);
-#elif __x86_64__
-CheckTypeSize(sigval_t,8, 9320, 11);
-#elif 1
-CheckTypeSize(sigval_t,0, 9320, 1);
-#endif
-
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
-#elif 1
-#endif
-
-#if __i386__
-CheckTypeSize(sigevent_t,64, 10190, 2);
-#elif __ia64__
-CheckTypeSize(sigevent_t,64, 10190, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(sigevent_t,64, 10190, 6);
-#elif __s390__ && !__s390x__
-CheckTypeSize(sigevent_t,64, 10190, 10);
-#elif __powerpc64__
-CheckTypeSize(sigevent_t,64, 10190, 9);
-#elif __s390x__
-CheckTypeSize(sigevent_t,64, 10190, 12);
-#elif __x86_64__
-CheckTypeSize(sigevent_t,64, 10190, 11);
-#elif 1
-CheckTypeSize(sigevent_t,0, 10190, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(siginfo_t,128, 9099, 2);
-#elif __ia64__
-CheckTypeSize(siginfo_t,128, 9099, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(siginfo_t,128, 9099, 6);
-#elif __s390__ && !__s390x__
-CheckTypeSize(siginfo_t,128, 9099, 10);
-#elif __powerpc64__
-CheckTypeSize(siginfo_t,128, 9099, 9);
-#elif __s390x__
-CheckTypeSize(siginfo_t,128, 9099, 12);
-#elif __x86_64__
-CheckTypeSize(siginfo_t,128, 9099, 11);
-#elif 1
-CheckTypeSize(siginfo_t,0, 9099, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(sigset_t,128, 10163, 2);
-#elif __ia64__
-CheckTypeSize(sigset_t,128, 10163, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(sigset_t,128, 10163, 6);
-#elif __s390__ && !__s390x__
-CheckTypeSize(sigset_t,128, 10163, 10);
-#elif __s390x__
-CheckTypeSize(sigset_t,128, 10163, 12);
-#elif __x86_64__
-CheckTypeSize(sigset_t,128, 10163, 11);
-#elif __powerpc64__
-CheckTypeSize(sigset_t,128, 10163, 9);
-#elif 1
-CheckTypeSize(sigset_t,0, 10163, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(struct sigaction,140, 9097, 2);
-CheckMemberSize(struct sigaction,__sigaction_handler,4,2,34019);
-CheckOffset(struct sigaction,__sigaction_handler,0,2,34019);
-CheckMemberSize(struct sigaction,sa_mask,128,2,34022);
-CheckOffset(struct sigaction,sa_mask,4,2,34022);
-CheckMemberSize(struct sigaction,sa_flags,4,2,34020);
-CheckOffset(struct sigaction,sa_flags,132,2,34020);
-CheckMemberSize(struct sigaction,sa_restorer,4,2,34021);
-CheckOffset(struct sigaction,sa_restorer,136,2,34021);
-#endif
-
-#if __ia64__
-CheckTypeSize(struct sigaction,144, 10393, 3);
-CheckMemberSize(struct sigaction,__sigaction_handler,8,3,34641);
-CheckOffset(struct sigaction,__sigaction_handler,0,3,34641);
-CheckMemberSize(struct sigaction,sa_flags,8,3,34642);
-CheckOffset(struct sigaction,sa_flags,8,3,34642);
-CheckMemberSize(struct sigaction,sa_mask,128,3,34643);
-CheckOffset(struct sigaction,sa_mask,16,3,34643);
+CheckTypeSize(_s390_regs_common,208, 10821, 12)
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckTypeSize(struct sigaction,140, 10401, 6);
-CheckMemberSize(struct sigaction,__sigaction_handler,4,6,34712);
-CheckOffset(struct sigaction,__sigaction_handler,0,6,34712);
-CheckMemberSize(struct sigaction,sa_mask,128,6,34715);
-CheckOffset(struct sigaction,sa_mask,4,6,34715);
-CheckMemberSize(struct sigaction,sa_flags,4,6,34713);
-CheckOffset(struct sigaction,sa_flags,132,6,34713);
-CheckMemberSize(struct sigaction,sa_restorer,4,6,34714);
-CheckOffset(struct sigaction,sa_restorer,136,6,34714);
-#endif
-
-#if __s390__ && !__s390x__
-CheckTypeSize(struct sigaction,140, 10402, 10);
-CheckMemberSize(struct sigaction,__sigaction_handler,4,10,34716);
-CheckOffset(struct sigaction,__sigaction_handler,0,10,34716);
-CheckMemberSize(struct sigaction,sa_mask,128,10,34719);
-CheckOffset(struct sigaction,sa_mask,4,10,34719);
-CheckMemberSize(struct sigaction,sa_flags,4,10,34717);
-CheckOffset(struct sigaction,sa_flags,132,10,34717);
-CheckMemberSize(struct sigaction,sa_restorer,4,10,34718);
-CheckOffset(struct sigaction,sa_restorer,136,10,34718);
-#endif
-
-#if __powerpc64__
-CheckTypeSize(struct sigaction,152, 10502, 9);
-CheckMemberSize(struct sigaction,__sigaction_handler,8,9,40152);
-CheckOffset(struct sigaction,__sigaction_handler,0,9,40152);
-CheckMemberSize(struct sigaction,sa_mask,128,9,40153);
-CheckOffset(struct sigaction,sa_mask,8,9,40153);
-CheckMemberSize(struct sigaction,sa_flags,4,9,40154);
-CheckOffset(struct sigaction,sa_flags,136,9,40154);
-CheckMemberSize(struct sigaction,sa_restorer,8,9,40155);
-CheckOffset(struct sigaction,sa_restorer,144,9,40155);
-#endif
-
-#if __s390x__
-CheckTypeSize(struct sigaction,152, 10576, 12);
-CheckMemberSize(struct sigaction,sa_flags,8,12,40312);
-CheckOffset(struct sigaction,sa_flags,8,12,40312);
-CheckMemberSize(struct sigaction,sa_mask,128,12,40313);
-CheckOffset(struct sigaction,sa_mask,24,12,40313);
-#endif
-
-#if __x86_64__
-CheckTypeSize(struct sigaction,152, 10773, 11);
-CheckMemberSize(struct sigaction,sa_mask,128,11,40380);
-CheckOffset(struct sigaction,sa_mask,8,11,40380);
-CheckMemberSize(struct sigaction,sa_flags,4,11,40381);
-CheckOffset(struct sigaction,sa_flags,136,11,40381);
-CheckMemberSize(struct sigaction,sa_restorer,8,11,40382);
-CheckOffset(struct sigaction,sa_restorer,144,11,40382);
-#endif
-
-#if __i386__
-CheckTypeSize(stack_t,12, 9314, 2);
-#elif __ia64__
-CheckTypeSize(stack_t,24, 9314, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(stack_t,12, 9314, 6);
-#elif __s390x__
-CheckTypeSize(stack_t,24, 9314, 12);
-#elif __s390__ && !__s390x__
-CheckTypeSize(stack_t,12, 9314, 10);
-#elif __x86_64__
-CheckTypeSize(stack_t,24, 9314, 11);
 #elif __powerpc64__
-CheckTypeSize(stack_t,24, 9314, 9);
-#elif 1
-CheckTypeSize(stack_t,0, 9314, 1);
 #endif
 
 #if __i386__
-CheckTypeSize(struct _fpstate,624, 10198, 2);
-CheckMemberSize(struct _fpstate,sw,4,2,34225);
-CheckOffset(struct _fpstate,sw,4,2,34225);
-CheckMemberSize(struct _fpstate,tag,4,2,34226);
-CheckOffset(struct _fpstate,tag,8,2,34226);
-CheckMemberSize(struct _fpstate,ipoff,4,2,34229);
-CheckOffset(struct _fpstate,ipoff,12,2,34229);
-CheckMemberSize(struct _fpstate,cssel,4,2,34230);
-CheckOffset(struct _fpstate,cssel,16,2,34230);
-CheckMemberSize(struct _fpstate,dataoff,4,2,34231);
-CheckOffset(struct _fpstate,dataoff,20,2,34231);
-CheckMemberSize(struct _fpstate,datasel,4,2,34232);
-CheckOffset(struct _fpstate,datasel,24,2,34232);
-CheckMemberSize(struct _fpstate,_st,80,2,34235);
-CheckOffset(struct _fpstate,_st,28,2,34235);
-CheckMemberSize(struct _fpstate,status,2,2,34233);
-CheckOffset(struct _fpstate,status,108,2,34233);
-CheckMemberSize(struct _fpstate,magic,2,2,34234);
-CheckOffset(struct _fpstate,magic,110,2,34234);
-CheckMemberSize(struct _fpstate,_fxsr_env,24,2,34236);
-CheckOffset(struct _fpstate,_fxsr_env,112,2,34236);
-CheckMemberSize(struct _fpstate,mxcsr,4,2,34237);
-CheckOffset(struct _fpstate,mxcsr,136,2,34237);
-CheckMemberSize(struct _fpstate,reserved,4,2,34238);
-CheckOffset(struct _fpstate,reserved,140,2,34238);
-CheckMemberSize(struct _fpstate,_fxsr_st,128,2,34243);
-CheckOffset(struct _fpstate,_fxsr_st,144,2,34243);
-CheckMemberSize(struct _fpstate,_xmm,128,2,34244);
-CheckOffset(struct _fpstate,_xmm,272,2,34244);
-CheckMemberSize(struct _fpstate,padding,224,2,34245);
-CheckOffset(struct _fpstate,padding,400,2,34245);
-#endif
-
-#if __x86_64__
-CheckTypeSize(struct _fpstate,512, 10779, 11);
-CheckMemberSize(struct _fpstate,cwd,2,11,40387);
-CheckOffset(struct _fpstate,cwd,0,11,40387);
-CheckMemberSize(struct _fpstate,swd,2,11,40388);
-CheckOffset(struct _fpstate,swd,2,11,40388);
-CheckMemberSize(struct _fpstate,ftw,2,11,40389);
-CheckOffset(struct _fpstate,ftw,4,11,40389);
-CheckMemberSize(struct _fpstate,fop,2,11,40390);
-CheckOffset(struct _fpstate,fop,6,11,40390);
-CheckMemberSize(struct _fpstate,rip,8,11,40391);
-CheckOffset(struct _fpstate,rip,8,11,40391);
-CheckMemberSize(struct _fpstate,rdp,8,11,40392);
-CheckOffset(struct _fpstate,rdp,16,11,40392);
-CheckMemberSize(struct _fpstate,mxcsr,4,11,40393);
-CheckOffset(struct _fpstate,mxcsr,24,11,40393);
-CheckMemberSize(struct _fpstate,mxcr_mask,4,11,40394);
-CheckOffset(struct _fpstate,mxcr_mask,28,11,40394);
-CheckMemberSize(struct _fpstate,_st,128,11,40395);
-CheckOffset(struct _fpstate,_st,32,11,40395);
-CheckMemberSize(struct _fpstate,_xmm,256,11,40396);
-CheckOffset(struct _fpstate,_xmm,160,11,40396);
-CheckMemberSize(struct _fpstate,padding,96,11,40397);
-CheckOffset(struct _fpstate,padding,416,11,40397);
+CheckTypeSize(sighandler_t,4, 9374, 2)
+#elif __powerpc64__
+CheckTypeSize(sighandler_t,8, 9374, 9)
+#elif __ia64__
+CheckTypeSize(sighandler_t,8, 9374, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(sighandler_t,4, 9374, 6)
+#elif __s390__ && !__s390x__
+CheckTypeSize(sighandler_t,4, 9374, 10)
+#elif __s390x__
+CheckTypeSize(sighandler_t,8, 9374, 12)
+#elif __x86_64__
+CheckTypeSize(sighandler_t,8, 9374, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9374,0);
+Msg("Find size of sighandler_t (9374)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(struct _fpreg,10, 10199, 2);
-CheckMemberSize(struct _fpreg,exponent,2,2,34228);
-CheckOffset(struct _fpreg,exponent,8,2,34228);
+CheckTypeSize(sigval_t,4, 9320, 2)
+#elif __ia64__
+CheckTypeSize(sigval_t,8, 9320, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(sigval_t,4, 9320, 6)
+#elif __s390__ && !__s390x__
+CheckTypeSize(sigval_t,4, 9320, 10)
+#elif __powerpc64__
+CheckTypeSize(sigval_t,8, 9320, 9)
+#elif __s390x__
+CheckTypeSize(sigval_t,8, 9320, 12)
+#elif __x86_64__
+CheckTypeSize(sigval_t,8, 9320, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9320,0);
+Msg("Find size of sigval_t (9320)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(struct _fpxreg,16, 10202, 2);
-CheckMemberSize(struct _fpxreg,exponent,2,2,34240);
-CheckOffset(struct _fpxreg,exponent,8,2,34240);
-CheckMemberSize(struct _fpxreg,padding,6,2,34241);
-CheckOffset(struct _fpxreg,padding,10,2,34241);
+CheckTypeSize(sigevent_t,64, 10190, 2)
+#elif __ia64__
+CheckTypeSize(sigevent_t,64, 10190, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(sigevent_t,64, 10190, 6)
+#elif __s390__ && !__s390x__
+CheckTypeSize(sigevent_t,64, 10190, 10)
+#elif __powerpc64__
+CheckTypeSize(sigevent_t,64, 10190, 9)
+#elif __s390x__
+CheckTypeSize(sigevent_t,64, 10190, 12)
+#elif __x86_64__
+CheckTypeSize(sigevent_t,64, 10190, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10190,0);
+Msg("Find size of sigevent_t (10190)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(struct _xmmreg,16, 10203, 2);
-CheckMemberSize(struct _xmmreg,element,16,2,34242);
-CheckOffset(struct _xmmreg,element,0,2,34242);
+CheckTypeSize(siginfo_t,128, 9099, 2)
+#elif __ia64__
+CheckTypeSize(siginfo_t,128, 9099, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(siginfo_t,128, 9099, 6)
+#elif __s390__ && !__s390x__
+CheckTypeSize(siginfo_t,128, 9099, 10)
+#elif __powerpc64__
+CheckTypeSize(siginfo_t,128, 9099, 9)
+#elif __s390x__
+CheckTypeSize(siginfo_t,128, 9099, 12)
+#elif __x86_64__
+CheckTypeSize(siginfo_t,128, 9099, 11)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9099,0);
+Msg("Find size of siginfo_t (9099)\n");
+#endif
+
+#if __i386__
+CheckTypeSize(sigset_t,128, 10163, 2)
+#elif __ia64__
+CheckTypeSize(sigset_t,128, 10163, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(sigset_t,128, 10163, 6)
+#elif __s390__ && !__s390x__
+CheckTypeSize(sigset_t,128, 10163, 10)
+#elif __s390x__
+CheckTypeSize(sigset_t,128, 10163, 12)
+#elif __x86_64__
+CheckTypeSize(sigset_t,128, 10163, 11)
+#elif __powerpc64__
+CheckTypeSize(sigset_t,128, 10163, 9)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10163,0);
+Msg("Find size of sigset_t (10163)\n");
+#endif
+
+#if __i386__
+#elif __s390__ && !__s390x__
+#elif __ia64__
+#elif __powerpc__ && !__powerpc64__
+#elif __powerpc64__
+#elif __s390x__
+#elif __x86_64__
+#endif
+
+#if __i386__
+CheckTypeSize(stack_t,12, 9314, 2)
+#elif __ia64__
+CheckTypeSize(stack_t,24, 9314, 3)
+#elif __powerpc__ && !__powerpc64__
+CheckTypeSize(stack_t,12, 9314, 6)
+#elif __s390x__
+CheckTypeSize(stack_t,24, 9314, 12)
+#elif __s390__ && !__s390x__
+CheckTypeSize(stack_t,12, 9314, 10)
+#elif __x86_64__
+CheckTypeSize(stack_t,24, 9314, 11)
+#elif __powerpc64__
+CheckTypeSize(stack_t,24, 9314, 9)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9314,0);
+Msg("Find size of stack_t (9314)\n");
+#endif
+
+#if __i386__
+#elif __x86_64__
+#endif
+
+#if __i386__
+#endif
+
+#if __i386__
+#elif __x86_64__
+#endif
+
+#if __i386__
+#elif __x86_64__
 #endif
 
 #if __ia64__
-CheckTypeSize(struct ia64_fpreg,16, 10338, 3);
-CheckMemberSize(struct ia64_fpreg,u,16,3,34581);
-CheckOffset(struct ia64_fpreg,u,0,3,34581);
-#endif
-
-#if __x86_64__
-CheckTypeSize(struct _fpxreg,16, 10776, 11);
-CheckMemberSize(struct _fpxreg,significand,8,11,40383);
-CheckOffset(struct _fpxreg,significand,0,11,40383);
-CheckMemberSize(struct _fpxreg,exponent,2,11,40384);
-CheckOffset(struct _fpxreg,exponent,8,11,40384);
-CheckMemberSize(struct _fpxreg,padding,6,11,40385);
-CheckOffset(struct _fpxreg,padding,10,11,40385);
-#endif
-
-#if __x86_64__
-CheckTypeSize(struct _xmmreg,16, 10778, 11);
-CheckMemberSize(struct _xmmreg,element,16,11,40386);
-CheckOffset(struct _xmmreg,element,0,11,40386);
 #endif
 
 #if __s390__ && !__s390x__
-CheckTypeSize(_s390_fp_regs,136, 10832, 10);
+CheckTypeSize(_s390_fp_regs,136, 10832, 10)
+#elif __s390x__
+CheckTypeSize(_s390_fp_regs,136, 10832, 12)
 #endif
 
 #if __s390__ && !__s390x__
-CheckTypeSize(_sigregs,272, 10834, 10);
-#endif
-
-#if __s390x__
-CheckTypeSize(_s390_fp_regs,136, 10840, 12);
-#endif
-
-#if __s390x__
-CheckTypeSize(_sigregs,344, 10842, 12);
+CheckTypeSize(_sigregs,272, 10834, 10)
+#elif __s390x__
+CheckTypeSize(_sigregs,344, 10834, 12)
 #endif
 
 #if __i386__
-CheckTypeSize(struct sigcontext,88, 10005, 2);
-CheckMemberSize(struct sigcontext,gs,2,2,34196);
-CheckOffset(struct sigcontext,gs,0,2,34196);
-CheckMemberSize(struct sigcontext,__gsh,2,2,34197);
-CheckOffset(struct sigcontext,__gsh,2,2,34197);
-CheckMemberSize(struct sigcontext,fs,2,2,34198);
-CheckOffset(struct sigcontext,fs,4,2,34198);
-CheckMemberSize(struct sigcontext,__fsh,2,2,34199);
-CheckOffset(struct sigcontext,__fsh,6,2,34199);
-CheckMemberSize(struct sigcontext,es,2,2,34200);
-CheckOffset(struct sigcontext,es,8,2,34200);
-CheckMemberSize(struct sigcontext,__esh,2,2,34201);
-CheckOffset(struct sigcontext,__esh,10,2,34201);
-CheckMemberSize(struct sigcontext,ds,2,2,34202);
-CheckOffset(struct sigcontext,ds,12,2,34202);
-CheckMemberSize(struct sigcontext,__dsh,2,2,34203);
-CheckOffset(struct sigcontext,__dsh,14,2,34203);
-CheckMemberSize(struct sigcontext,edi,4,2,34204);
-CheckOffset(struct sigcontext,edi,16,2,34204);
-CheckMemberSize(struct sigcontext,esi,4,2,34205);
-CheckOffset(struct sigcontext,esi,20,2,34205);
-CheckMemberSize(struct sigcontext,ebp,4,2,34206);
-CheckOffset(struct sigcontext,ebp,24,2,34206);
-CheckMemberSize(struct sigcontext,esp,4,2,34207);
-CheckOffset(struct sigcontext,esp,28,2,34207);
-CheckMemberSize(struct sigcontext,ebx,4,2,34208);
-CheckOffset(struct sigcontext,ebx,32,2,34208);
-CheckMemberSize(struct sigcontext,edx,4,2,34209);
-CheckOffset(struct sigcontext,edx,36,2,34209);
-CheckMemberSize(struct sigcontext,ecx,4,2,34210);
-CheckOffset(struct sigcontext,ecx,40,2,34210);
-CheckMemberSize(struct sigcontext,eax,4,2,34211);
-CheckOffset(struct sigcontext,eax,44,2,34211);
-CheckMemberSize(struct sigcontext,trapno,4,2,34212);
-CheckOffset(struct sigcontext,trapno,48,2,34212);
-CheckMemberSize(struct sigcontext,err,4,2,34213);
-CheckOffset(struct sigcontext,err,52,2,34213);
-CheckMemberSize(struct sigcontext,eip,4,2,34214);
-CheckOffset(struct sigcontext,eip,56,2,34214);
-CheckMemberSize(struct sigcontext,cs,2,2,34215);
-CheckOffset(struct sigcontext,cs,60,2,34215);
-CheckMemberSize(struct sigcontext,__csh,2,2,34216);
-CheckOffset(struct sigcontext,__csh,62,2,34216);
-CheckMemberSize(struct sigcontext,eflags,4,2,34217);
-CheckOffset(struct sigcontext,eflags,64,2,34217);
-CheckMemberSize(struct sigcontext,esp_at_signal,4,2,34218);
-CheckOffset(struct sigcontext,esp_at_signal,68,2,34218);
-CheckMemberSize(struct sigcontext,ss,2,2,34219);
-CheckOffset(struct sigcontext,ss,72,2,34219);
-CheckMemberSize(struct sigcontext,__ssh,2,2,34220);
-CheckOffset(struct sigcontext,__ssh,74,2,34220);
-CheckMemberSize(struct sigcontext,fpstate,4,2,34221);
-CheckOffset(struct sigcontext,fpstate,76,2,34221);
-CheckMemberSize(struct sigcontext,oldmask,4,2,34222);
-CheckOffset(struct sigcontext,oldmask,80,2,34222);
-CheckMemberSize(struct sigcontext,cr2,4,2,34223);
-CheckOffset(struct sigcontext,cr2,84,2,34223);
-#endif
-
-#if __ia64__
-CheckTypeSize(struct sigcontext,2656, 10299, 3);
-CheckMemberSize(struct sigcontext,sc_flags,8,3,34560);
-CheckOffset(struct sigcontext,sc_flags,0,3,34560);
-CheckMemberSize(struct sigcontext,sc_nat,8,3,34561);
-CheckOffset(struct sigcontext,sc_nat,8,3,34561);
-CheckMemberSize(struct sigcontext,sc_stack,24,3,34562);
-CheckOffset(struct sigcontext,sc_stack,16,3,34562);
-CheckMemberSize(struct sigcontext,sc_ip,8,3,34563);
-CheckOffset(struct sigcontext,sc_ip,40,3,34563);
-CheckMemberSize(struct sigcontext,sc_cfm,8,3,34564);
-CheckOffset(struct sigcontext,sc_cfm,48,3,34564);
-CheckMemberSize(struct sigcontext,sc_um,8,3,34565);
-CheckOffset(struct sigcontext,sc_um,56,3,34565);
-CheckMemberSize(struct sigcontext,sc_ar_rsc,8,3,34566);
-CheckOffset(struct sigcontext,sc_ar_rsc,64,3,34566);
-CheckMemberSize(struct sigcontext,sc_ar_bsp,8,3,34567);
-CheckOffset(struct sigcontext,sc_ar_bsp,72,3,34567);
-CheckMemberSize(struct sigcontext,sc_ar_rnat,8,3,34568);
-CheckOffset(struct sigcontext,sc_ar_rnat,80,3,34568);
-CheckMemberSize(struct sigcontext,sc_ar_ccv,8,3,34569);
-CheckOffset(struct sigcontext,sc_ar_ccv,88,3,34569);
-CheckMemberSize(struct sigcontext,sc_ar_unat,8,3,34570);
-CheckOffset(struct sigcontext,sc_ar_unat,96,3,34570);
-CheckMemberSize(struct sigcontext,sc_ar_fpsr,8,3,34571);
-CheckOffset(struct sigcontext,sc_ar_fpsr,104,3,34571);
-CheckMemberSize(struct sigcontext,sc_ar_pfs,8,3,34572);
-CheckOffset(struct sigcontext,sc_ar_pfs,112,3,34572);
-CheckMemberSize(struct sigcontext,sc_ar_lc,8,3,34573);
-CheckOffset(struct sigcontext,sc_ar_lc,120,3,34573);
-CheckMemberSize(struct sigcontext,sc_pr,8,3,34574);
-CheckOffset(struct sigcontext,sc_pr,128,3,34574);
-CheckMemberSize(struct sigcontext,sc_br,64,3,34575);
-CheckOffset(struct sigcontext,sc_br,136,3,34575);
-CheckMemberSize(struct sigcontext,sc_gr,256,3,34576);
-CheckOffset(struct sigcontext,sc_gr,200,3,34576);
-CheckMemberSize(struct sigcontext,sc_fr,2048,3,34577);
-CheckOffset(struct sigcontext,sc_fr,464,3,34577);
-CheckMemberSize(struct sigcontext,sc_rbs_base,8,3,34897);
-CheckOffset(struct sigcontext,sc_rbs_base,2512,3,34897);
-CheckMemberSize(struct sigcontext,sc_loadrs,8,3,34898);
-CheckOffset(struct sigcontext,sc_loadrs,2520,3,34898);
-CheckMemberSize(struct sigcontext,sc_ar25,8,3,40632);
-CheckOffset(struct sigcontext,sc_ar25,2528,3,40632);
-CheckMemberSize(struct sigcontext,sc_ar26,8,3,40633);
-CheckOffset(struct sigcontext,sc_ar26,2536,3,40633);
-CheckMemberSize(struct sigcontext,sc_rsvd,96,3,34578);
-CheckOffset(struct sigcontext,sc_rsvd,2544,3,34578);
-CheckMemberSize(struct sigcontext,sc_mask,8,3,34579);
-CheckOffset(struct sigcontext,sc_mask,2640,3,34579);
-#endif
-
-#if __powerpc__ && !__powerpc64__
-CheckTypeSize(struct sigcontext,32, 10300, 6);
-CheckMemberSize(struct sigcontext,_unused,16,6,40161);
-CheckOffset(struct sigcontext,_unused,0,6,40161);
-CheckMemberSize(struct sigcontext,signal,4,6,40162);
-CheckOffset(struct sigcontext,signal,16,6,40162);
-CheckMemberSize(struct sigcontext,handler,4,6,40163);
-CheckOffset(struct sigcontext,handler,20,6,40163);
-CheckMemberSize(struct sigcontext,oldmask,4,6,40164);
-CheckOffset(struct sigcontext,oldmask,24,6,40164);
-CheckMemberSize(struct sigcontext,regs,4,6,40165);
-CheckOffset(struct sigcontext,regs,28,6,40165);
-#endif
-
-#if __x86_64__
-CheckTypeSize(struct sigcontext,256, 10782, 11);
-CheckMemberSize(struct sigcontext,r8,8,11,40398);
-CheckOffset(struct sigcontext,r8,0,11,40398);
-CheckMemberSize(struct sigcontext,r9,8,11,40399);
-CheckOffset(struct sigcontext,r9,8,11,40399);
-CheckMemberSize(struct sigcontext,r10,8,11,40400);
-CheckOffset(struct sigcontext,r10,16,11,40400);
-CheckMemberSize(struct sigcontext,r11,8,11,40401);
-CheckOffset(struct sigcontext,r11,24,11,40401);
-CheckMemberSize(struct sigcontext,r12,8,11,40402);
-CheckOffset(struct sigcontext,r12,32,11,40402);
-CheckMemberSize(struct sigcontext,r13,8,11,40403);
-CheckOffset(struct sigcontext,r13,40,11,40403);
-CheckMemberSize(struct sigcontext,r14,8,11,40404);
-CheckOffset(struct sigcontext,r14,48,11,40404);
-CheckMemberSize(struct sigcontext,r15,8,11,40405);
-CheckOffset(struct sigcontext,r15,56,11,40405);
-CheckMemberSize(struct sigcontext,rdi,8,11,40406);
-CheckOffset(struct sigcontext,rdi,64,11,40406);
-CheckMemberSize(struct sigcontext,rsi,8,11,40407);
-CheckOffset(struct sigcontext,rsi,72,11,40407);
-CheckMemberSize(struct sigcontext,rbp,8,11,40408);
-CheckOffset(struct sigcontext,rbp,80,11,40408);
-CheckMemberSize(struct sigcontext,rbx,8,11,40409);
-CheckOffset(struct sigcontext,rbx,88,11,40409);
-CheckMemberSize(struct sigcontext,rdx,8,11,40410);
-CheckOffset(struct sigcontext,rdx,96,11,40410);
-CheckMemberSize(struct sigcontext,rax,8,11,40411);
-CheckOffset(struct sigcontext,rax,104,11,40411);
-CheckMemberSize(struct sigcontext,rcx,8,11,40412);
-CheckOffset(struct sigcontext,rcx,112,11,40412);
-CheckMemberSize(struct sigcontext,rsp,8,11,40413);
-CheckOffset(struct sigcontext,rsp,120,11,40413);
-CheckMemberSize(struct sigcontext,rip,8,11,40414);
-CheckOffset(struct sigcontext,rip,128,11,40414);
-CheckMemberSize(struct sigcontext,eflags,8,11,40415);
-CheckOffset(struct sigcontext,eflags,136,11,40415);
-CheckMemberSize(struct sigcontext,cs,2,11,40416);
-CheckOffset(struct sigcontext,cs,144,11,40416);
-CheckMemberSize(struct sigcontext,gs,2,11,40417);
-CheckOffset(struct sigcontext,gs,146,11,40417);
-CheckMemberSize(struct sigcontext,fs,2,11,40418);
-CheckOffset(struct sigcontext,fs,148,11,40418);
-CheckMemberSize(struct sigcontext,__pad0,2,11,40419);
-CheckOffset(struct sigcontext,__pad0,150,11,40419);
-CheckMemberSize(struct sigcontext,err,8,11,40420);
-CheckOffset(struct sigcontext,err,152,11,40420);
-CheckMemberSize(struct sigcontext,trapno,8,11,40421);
-CheckOffset(struct sigcontext,trapno,160,11,40421);
-CheckMemberSize(struct sigcontext,oldmask,8,11,40422);
-CheckOffset(struct sigcontext,oldmask,168,11,40422);
-CheckMemberSize(struct sigcontext,cr2,8,11,40423);
-CheckOffset(struct sigcontext,cr2,176,11,40423);
-CheckMemberSize(struct sigcontext,fpstate,8,11,40424);
-CheckOffset(struct sigcontext,fpstate,184,11,40424);
-CheckMemberSize(struct sigcontext,__reserved1,64,11,40425);
-CheckOffset(struct sigcontext,__reserved1,192,11,40425);
-#endif
-
-#if __powerpc64__
-CheckTypeSize(struct sigcontext,1272, 10816, 9);
-CheckMemberSize(struct sigcontext,_unused,32,9,40580);
-CheckOffset(struct sigcontext,_unused,0,9,40580);
-CheckMemberSize(struct sigcontext,signal,4,9,40581);
-CheckOffset(struct sigcontext,signal,32,9,40581);
-CheckMemberSize(struct sigcontext,handler,8,9,40582);
-CheckOffset(struct sigcontext,handler,40,9,40582);
-CheckMemberSize(struct sigcontext,oldmask,8,9,40583);
-CheckOffset(struct sigcontext,oldmask,48,9,40583);
-CheckMemberSize(struct sigcontext,regs,8,9,40584);
-CheckOffset(struct sigcontext,regs,56,9,40584);
-CheckMemberSize(struct sigcontext,gp_regs,384,9,40602);
-CheckOffset(struct sigcontext,gp_regs,64,9,40602);
-CheckMemberSize(struct sigcontext,fp_regs,264,9,40603);
-CheckOffset(struct sigcontext,fp_regs,448,9,40603);
-#endif
-
-#if __s390__ && !__s390x__
-CheckTypeSize(struct sigcontext,12, 10817, 10);
-CheckMemberSize(struct sigcontext,oldmask,8,10,40608);
-CheckOffset(struct sigcontext,oldmask,0,10,40608);
-CheckMemberSize(struct sigcontext,sregs,4,10,40609);
-CheckOffset(struct sigcontext,sregs,8,10,40609);
-#endif
-
-#if __s390x__
-CheckTypeSize(struct sigcontext,16, 10818, 12);
-CheckMemberSize(struct sigcontext,oldmask,8,12,40617);
-CheckOffset(struct sigcontext,oldmask,0,12,40617);
-CheckMemberSize(struct sigcontext,sregs,8,12,40618);
-CheckOffset(struct sigcontext,sregs,8,12,40618);
+#elif __powerpc__ && !__powerpc64__
+#elif __ia64__
+#elif __x86_64__
+#elif __s390__ && !__s390x__
+#elif __s390x__
+#elif __powerpc64__
 #endif
 
 extern int __libc_current_sigrtmax_db(void);
@@ -2152,10 +1752,10 @@ extern int sigtimedwait_db(const sigset_t *, siginfo_t *, const struct timespec 
 CheckInterfacedef(sigtimedwait,sigtimedwait_db);
 extern sighandler_t bsd_signal_db(int, sighandler_t);
 CheckInterfacedef(bsd_signal,bsd_signal_db);
-/*XXX hand-edit 
+/* XXX hand-edit
 extern int __xpg_sigpause_db(int);
 CheckInterfacedef(__xpg_sigpause,__xpg_sigpause_db);
-XXX*/
+*/
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

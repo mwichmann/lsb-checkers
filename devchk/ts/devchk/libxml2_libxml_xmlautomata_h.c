@@ -29,111 +29,79 @@ Msg("Checking data structures in libxml2/libxml/xmlautomata.h\n");
 
 printf("Checking data structures in libxml2/libxml/xmlautomata.h\n");
 #if __i386__
-CheckTypeSize(xmlAutomataState,0, 14709, 2);
+CheckTypeSize(xmlAutomataState,0, 14709, 2)
 #elif __x86_64__
-CheckTypeSize(xmlAutomataState,0, 14709, 11);
+CheckTypeSize(xmlAutomataState,0, 14709, 11)
 #elif __ia64__
-CheckTypeSize(xmlAutomataState,0, 14709, 3);
+CheckTypeSize(xmlAutomataState,0, 14709, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlAutomataState,0, 14709, 6);
+CheckTypeSize(xmlAutomataState,0, 14709, 6)
 #elif __powerpc64__
-CheckTypeSize(xmlAutomataState,0, 14709, 9);
+CheckTypeSize(xmlAutomataState,0, 14709, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlAutomataState,0, 14709, 10);
+CheckTypeSize(xmlAutomataState,0, 14709, 10)
 #elif __s390x__
-CheckTypeSize(xmlAutomataState,0, 14709, 12);
-#elif 1
-CheckTypeSize(xmlAutomataState,0, 14709, 1);
+CheckTypeSize(xmlAutomataState,0, 14709, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14709,0);
+Msg("Find size of xmlAutomataState (14709)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlAutomataState *,4, 14710, 2);
+CheckTypeSize(xmlAutomataStatePtr,4, 14711, 2)
 #elif __x86_64__
-CheckTypeSize(xmlAutomataState *,8, 14710, 11);
+CheckTypeSize(xmlAutomataStatePtr,8, 14711, 11)
 #elif __ia64__
-CheckTypeSize(xmlAutomataState *,8, 14710, 3);
+CheckTypeSize(xmlAutomataStatePtr,8, 14711, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlAutomataState *,4, 14710, 6);
+CheckTypeSize(xmlAutomataStatePtr,4, 14711, 6)
 #elif __powerpc64__
-CheckTypeSize(xmlAutomataState *,8, 14710, 9);
+CheckTypeSize(xmlAutomataStatePtr,8, 14711, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlAutomataState *,4, 14710, 10);
+CheckTypeSize(xmlAutomataStatePtr,4, 14711, 10)
 #elif __s390x__
-CheckTypeSize(xmlAutomataState *,8, 14710, 12);
-#elif 1
-CheckTypeSize(xmlAutomataState *,0, 14710, 1);
+CheckTypeSize(xmlAutomataStatePtr,8, 14711, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14711,0);
+Msg("Find size of xmlAutomataStatePtr (14711)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlAutomataStatePtr,4, 14711, 2);
+CheckTypeSize(xmlAutomata,0, 14713, 2)
 #elif __x86_64__
-CheckTypeSize(xmlAutomataStatePtr,8, 14711, 11);
+CheckTypeSize(xmlAutomata,0, 14713, 11)
 #elif __ia64__
-CheckTypeSize(xmlAutomataStatePtr,8, 14711, 3);
+CheckTypeSize(xmlAutomata,0, 14713, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlAutomataStatePtr,4, 14711, 6);
+CheckTypeSize(xmlAutomata,0, 14713, 6)
 #elif __powerpc64__
-CheckTypeSize(xmlAutomataStatePtr,8, 14711, 9);
+CheckTypeSize(xmlAutomata,0, 14713, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlAutomataStatePtr,4, 14711, 10);
+CheckTypeSize(xmlAutomata,0, 14713, 10)
 #elif __s390x__
-CheckTypeSize(xmlAutomataStatePtr,8, 14711, 12);
-#elif 1
-CheckTypeSize(xmlAutomataStatePtr,0, 14711, 1);
+CheckTypeSize(xmlAutomata,0, 14713, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14713,0);
+Msg("Find size of xmlAutomata (14713)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlAutomata,0, 14713, 2);
+CheckTypeSize(xmlAutomataPtr,4, 14715, 2)
 #elif __x86_64__
-CheckTypeSize(xmlAutomata,0, 14713, 11);
+CheckTypeSize(xmlAutomataPtr,8, 14715, 11)
 #elif __ia64__
-CheckTypeSize(xmlAutomata,0, 14713, 3);
+CheckTypeSize(xmlAutomataPtr,8, 14715, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlAutomata,0, 14713, 6);
+CheckTypeSize(xmlAutomataPtr,4, 14715, 6)
 #elif __powerpc64__
-CheckTypeSize(xmlAutomata,0, 14713, 9);
+CheckTypeSize(xmlAutomataPtr,8, 14715, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlAutomata,0, 14713, 10);
+CheckTypeSize(xmlAutomataPtr,4, 14715, 10)
 #elif __s390x__
-CheckTypeSize(xmlAutomata,0, 14713, 12);
-#elif 1
-CheckTypeSize(xmlAutomata,0, 14713, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(xmlAutomata *,4, 14714, 2);
-#elif __x86_64__
-CheckTypeSize(xmlAutomata *,8, 14714, 11);
-#elif __ia64__
-CheckTypeSize(xmlAutomata *,8, 14714, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlAutomata *,4, 14714, 6);
-#elif __powerpc64__
-CheckTypeSize(xmlAutomata *,8, 14714, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlAutomata *,4, 14714, 10);
-#elif __s390x__
-CheckTypeSize(xmlAutomata *,8, 14714, 12);
-#elif 1
-CheckTypeSize(xmlAutomata *,0, 14714, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(xmlAutomataPtr,4, 14715, 2);
-#elif __x86_64__
-CheckTypeSize(xmlAutomataPtr,8, 14715, 11);
-#elif __ia64__
-CheckTypeSize(xmlAutomataPtr,8, 14715, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlAutomataPtr,4, 14715, 6);
-#elif __powerpc64__
-CheckTypeSize(xmlAutomataPtr,8, 14715, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlAutomataPtr,4, 14715, 10);
-#elif __s390x__
-CheckTypeSize(xmlAutomataPtr,8, 14715, 12);
-#elif 1
-CheckTypeSize(xmlAutomataPtr,0, 14715, 1);
+CheckTypeSize(xmlAutomataPtr,8, 14715, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14715,0);
+Msg("Find size of xmlAutomataPtr (14715)\n");
 #endif
 
 extern xmlAutomataStatePtr xmlAutomataNewTransition2_db(xmlAutomataPtr, xmlAutomataStatePtr, xmlAutomataStatePtr, const xmlChar *, const xmlChar *, void *);

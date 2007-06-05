@@ -685,69 +685,36 @@ Msg( "No definition for FE_UNNORMAL (5309, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5309,%d);\n", architecture, FE_UNNORMAL);
 #endif
 #endif
-#if __i386__
-CheckTypeSize(fexcept_t,2, 11038, 2);
-#endif
-
-#if __ia64__
-CheckTypeSize(fexcept_t,8, 11043, 3);
+#if __powerpc__ && !__powerpc64__
+CheckTypeSize(fexcept_t,4, 11038, 6)
+#elif __i386__
+CheckTypeSize(fexcept_t,2, 11038, 2)
+#elif __ia64__
+CheckTypeSize(fexcept_t,8, 11038, 3)
+#elif __powerpc64__
+CheckTypeSize(fexcept_t,4, 11038, 9)
+#elif __s390__ && !__s390x__
+CheckTypeSize(fexcept_t,4, 11038, 10)
+#elif __s390x__
+CheckTypeSize(fexcept_t,4, 11038, 12)
+#elif __x86_64__
+CheckTypeSize(fexcept_t,2, 11038, 11)
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckTypeSize(fexcept_t,4, 11046, 6);
-#endif
-
-#if __powerpc64__
-CheckTypeSize(fexcept_t,4, 11047, 9);
-#endif
-
-#if __s390__ && !__s390x__
-CheckTypeSize(fexcept_t,4, 11053, 10);
-#endif
-
-#if __s390x__
-CheckTypeSize(fexcept_t,4, 11054, 12);
-#endif
-
-#if __x86_64__
-CheckTypeSize(fexcept_t,2, 11055, 11);
-#endif
-
-#if __i386__
-#endif
-
-#if __powerpc__ && !__powerpc64__
-CheckTypeSize(fenv_t,8, 11040, 6);
-#endif
-
-#if __powerpc64__
-CheckTypeSize(fenv_t,8, 11041, 9);
-#endif
-
-#if __ia64__
-CheckTypeSize(fenv_t,8, 11042, 3);
-#endif
-
-#if __s390__ && !__s390x__
-CheckTypeSize(fenv_t,8, 11044, 10);
-#endif
-
-#if __s390x__
-CheckTypeSize(fenv_t,16, 11045, 12);
-#endif
-
-#if __i386__
-CheckTypeSize(fenv_t,28, 11048, 2);
-#endif
-
-#if __x86_64__
-CheckTypeSize(fenv_t,32, 11056, 11);
-#endif
-
-#if __x86_64__
-#endif
-
-#if __s390__ && !__s390x__
+CheckTypeSize(fenv_t,8, 11040, 6)
+#elif __powerpc64__
+CheckTypeSize(fenv_t,8, 11040, 9)
+#elif __ia64__
+CheckTypeSize(fenv_t,8, 11040, 3)
+#elif __s390__ && !__s390x__
+CheckTypeSize(fenv_t,8, 11040, 10)
+#elif __s390x__
+CheckTypeSize(fenv_t,16, 11040, 12)
+#elif __i386__
+CheckTypeSize(fenv_t,28, 11040, 2)
+#elif __x86_64__
+CheckTypeSize(fenv_t,32, 11040, 11)
 #endif
 
 extern int feclearexcept_db(int);

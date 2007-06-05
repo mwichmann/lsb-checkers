@@ -27,101 +27,60 @@ Msg("Checking data structures in libxml2/libxml/xmlmodule.h\n");
 
 printf("Checking data structures in libxml2/libxml/xmlmodule.h\n");
 #if __i386__
-CheckTypeSize(xmlModule,0, 14544, 2);
+CheckTypeSize(xmlModule,0, 14544, 2)
 #elif __x86_64__
-CheckTypeSize(xmlModule,0, 14544, 11);
+CheckTypeSize(xmlModule,0, 14544, 11)
 #elif __ia64__
-CheckTypeSize(xmlModule,0, 14544, 3);
+CheckTypeSize(xmlModule,0, 14544, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlModule,0, 14544, 6);
+CheckTypeSize(xmlModule,0, 14544, 6)
 #elif __powerpc64__
-CheckTypeSize(xmlModule,0, 14544, 9);
+CheckTypeSize(xmlModule,0, 14544, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlModule,0, 14544, 10);
+CheckTypeSize(xmlModule,0, 14544, 10)
 #elif __s390x__
-CheckTypeSize(xmlModule,0, 14544, 12);
-#elif 1
-CheckTypeSize(xmlModule,0, 14544, 1);
+CheckTypeSize(xmlModule,0, 14544, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14544,0);
+Msg("Find size of xmlModule (14544)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlModule *,4, 14545, 2);
+CheckTypeSize(xmlModulePtr,4, 14546, 2)
 #elif __x86_64__
-CheckTypeSize(xmlModule *,8, 14545, 11);
+CheckTypeSize(xmlModulePtr,8, 14546, 11)
 #elif __ia64__
-CheckTypeSize(xmlModule *,8, 14545, 3);
+CheckTypeSize(xmlModulePtr,8, 14546, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlModule *,4, 14545, 6);
+CheckTypeSize(xmlModulePtr,4, 14546, 6)
 #elif __powerpc64__
-CheckTypeSize(xmlModule *,8, 14545, 9);
+CheckTypeSize(xmlModulePtr,8, 14546, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlModule *,4, 14545, 10);
+CheckTypeSize(xmlModulePtr,4, 14546, 10)
 #elif __s390x__
-CheckTypeSize(xmlModule *,8, 14545, 12);
-#elif 1
-CheckTypeSize(xmlModule *,0, 14545, 1);
+CheckTypeSize(xmlModulePtr,8, 14546, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14546,0);
+Msg("Find size of xmlModulePtr (14546)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlModulePtr,4, 14546, 2);
+CheckTypeSize(xmlModuleOption,4, 15082, 2)
 #elif __x86_64__
-CheckTypeSize(xmlModulePtr,8, 14546, 11);
+CheckTypeSize(xmlModuleOption,4, 15082, 11)
 #elif __ia64__
-CheckTypeSize(xmlModulePtr,8, 14546, 3);
+CheckTypeSize(xmlModuleOption,4, 15082, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlModulePtr,4, 14546, 6);
+CheckTypeSize(xmlModuleOption,4, 15082, 6)
 #elif __powerpc64__
-CheckTypeSize(xmlModulePtr,8, 14546, 9);
+CheckTypeSize(xmlModuleOption,4, 15082, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlModulePtr,4, 14546, 10);
+CheckTypeSize(xmlModuleOption,4, 15082, 10)
 #elif __s390x__
-CheckTypeSize(xmlModulePtr,8, 14546, 12);
-#elif 1
-CheckTypeSize(xmlModulePtr,0, 14546, 1);
-#endif
-
-#if __i386__
-CheckEnum("XML_MODULE_LAZY",XML_MODULE_LAZY,1,50011);
-CheckEnum("XML_MODULE_LOCAL",XML_MODULE_LOCAL,2,50012);
-#elif __x86_64__
-CheckEnum("XML_MODULE_LAZY",XML_MODULE_LAZY,1,50011);
-CheckEnum("XML_MODULE_LOCAL",XML_MODULE_LOCAL,2,50012);
-#elif __ia64__
-CheckEnum("XML_MODULE_LAZY",XML_MODULE_LAZY,1,50011);
-CheckEnum("XML_MODULE_LOCAL",XML_MODULE_LOCAL,2,50012);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("XML_MODULE_LAZY",XML_MODULE_LAZY,1,50011);
-CheckEnum("XML_MODULE_LOCAL",XML_MODULE_LOCAL,2,50012);
-#elif __powerpc64__
-CheckEnum("XML_MODULE_LAZY",XML_MODULE_LAZY,1,50011);
-CheckEnum("XML_MODULE_LOCAL",XML_MODULE_LOCAL,2,50012);
-#elif __s390__ && !__s390x__
-CheckEnum("XML_MODULE_LAZY",XML_MODULE_LAZY,1,50011);
-CheckEnum("XML_MODULE_LOCAL",XML_MODULE_LOCAL,2,50012);
-#elif __s390x__
-CheckEnum("XML_MODULE_LAZY",XML_MODULE_LAZY,1,50011);
-CheckEnum("XML_MODULE_LOCAL",XML_MODULE_LOCAL,2,50012);
-#elif 1
-CheckEnum("XML_MODULE_LAZY",XML_MODULE_LAZY,1,50011);
-CheckEnum("XML_MODULE_LOCAL",XML_MODULE_LOCAL,2,50012);
-#endif
-
-#if __i386__
-CheckTypeSize(xmlModuleOption,4, 15082, 2);
-#elif __x86_64__
-CheckTypeSize(xmlModuleOption,4, 15082, 11);
-#elif __ia64__
-CheckTypeSize(xmlModuleOption,4, 15082, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlModuleOption,4, 15082, 6);
-#elif __powerpc64__
-CheckTypeSize(xmlModuleOption,4, 15082, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlModuleOption,4, 15082, 10);
-#elif __s390x__
-CheckTypeSize(xmlModuleOption,4, 15082, 12);
-#elif 1
-CheckTypeSize(xmlModuleOption,0, 15082, 1);
+CheckTypeSize(xmlModuleOption,4, 15082, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15082,0);
+Msg("Find size of xmlModuleOption (15082)\n");
 #endif
 
 extern int xmlModuleClose_db(xmlModulePtr);

@@ -38,345 +38,212 @@ Msg("Checking data structures in libxml2/libxml/xmlschemas.h\n");
 
 printf("Checking data structures in libxml2/libxml/xmlschemas.h\n");
 #if __i386__
-CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 2);
+CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 2)
 #elif __x86_64__
-CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 11);
+CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 11)
 #elif __ia64__
-CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 3);
+CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 6);
+CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 6)
 #elif __powerpc64__
-CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 9);
+CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 10);
+CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 10)
 #elif __s390x__
-CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 12);
-#elif 1
-CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 1);
+CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15027,0);
+Msg("Find size of xmlSchemaValidCtxt (15027)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlSchemaValidCtxt *,4, 15028, 2);
+CheckTypeSize(xmlSchemaValidCtxtPtr,4, 15029, 2)
 #elif __x86_64__
-CheckTypeSize(xmlSchemaValidCtxt *,8, 15028, 11);
+CheckTypeSize(xmlSchemaValidCtxtPtr,8, 15029, 11)
 #elif __ia64__
-CheckTypeSize(xmlSchemaValidCtxt *,8, 15028, 3);
+CheckTypeSize(xmlSchemaValidCtxtPtr,8, 15029, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaValidCtxt *,4, 15028, 6);
+CheckTypeSize(xmlSchemaValidCtxtPtr,4, 15029, 6)
 #elif __powerpc64__
-CheckTypeSize(xmlSchemaValidCtxt *,8, 15028, 9);
+CheckTypeSize(xmlSchemaValidCtxtPtr,8, 15029, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaValidCtxt *,4, 15028, 10);
+CheckTypeSize(xmlSchemaValidCtxtPtr,4, 15029, 10)
 #elif __s390x__
-CheckTypeSize(xmlSchemaValidCtxt *,8, 15028, 12);
-#elif 1
-CheckTypeSize(xmlSchemaValidCtxt *,0, 15028, 1);
+CheckTypeSize(xmlSchemaValidCtxtPtr,8, 15029, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15029,0);
+Msg("Find size of xmlSchemaValidCtxtPtr (15029)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlSchemaValidCtxtPtr,4, 15029, 2);
+CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 2)
 #elif __x86_64__
-CheckTypeSize(xmlSchemaValidCtxtPtr,8, 15029, 11);
+CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 11)
 #elif __ia64__
-CheckTypeSize(xmlSchemaValidCtxtPtr,8, 15029, 3);
+CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaValidCtxtPtr,4, 15029, 6);
+CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 6)
 #elif __powerpc64__
-CheckTypeSize(xmlSchemaValidCtxtPtr,8, 15029, 9);
+CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaValidCtxtPtr,4, 15029, 10);
+CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 10)
 #elif __s390x__
-CheckTypeSize(xmlSchemaValidCtxtPtr,8, 15029, 12);
-#elif 1
-CheckTypeSize(xmlSchemaValidCtxtPtr,0, 15029, 1);
+CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15031,0);
+Msg("Find size of xmlSchemaSAXPlugStruct (15031)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 2);
+CheckTypeSize(xmlSchemaSAXPlugPtr,4, 15033, 2)
 #elif __x86_64__
-CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 11);
+CheckTypeSize(xmlSchemaSAXPlugPtr,8, 15033, 11)
 #elif __ia64__
-CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 3);
+CheckTypeSize(xmlSchemaSAXPlugPtr,8, 15033, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 6);
+CheckTypeSize(xmlSchemaSAXPlugPtr,4, 15033, 6)
 #elif __powerpc64__
-CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 9);
+CheckTypeSize(xmlSchemaSAXPlugPtr,8, 15033, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 10);
+CheckTypeSize(xmlSchemaSAXPlugPtr,4, 15033, 10)
 #elif __s390x__
-CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 12);
-#elif 1
-CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 1);
+CheckTypeSize(xmlSchemaSAXPlugPtr,8, 15033, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15033,0);
+Msg("Find size of xmlSchemaSAXPlugPtr (15033)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlSchemaSAXPlugStruct *,4, 15032, 2);
+CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 2)
 #elif __x86_64__
-CheckTypeSize(xmlSchemaSAXPlugStruct *,8, 15032, 11);
+CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 11)
 #elif __ia64__
-CheckTypeSize(xmlSchemaSAXPlugStruct *,8, 15032, 3);
+CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaSAXPlugStruct *,4, 15032, 6);
+CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 6)
 #elif __powerpc64__
-CheckTypeSize(xmlSchemaSAXPlugStruct *,8, 15032, 9);
+CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaSAXPlugStruct *,4, 15032, 10);
+CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 10)
 #elif __s390x__
-CheckTypeSize(xmlSchemaSAXPlugStruct *,8, 15032, 12);
-#elif 1
-CheckTypeSize(xmlSchemaSAXPlugStruct *,0, 15032, 1);
+CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15035,0);
+Msg("Find size of xmlSchemaParserCtxt (15035)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlSchemaSAXPlugPtr,4, 15033, 2);
+CheckTypeSize(xmlSchemaParserCtxtPtr,4, 15037, 2)
 #elif __x86_64__
-CheckTypeSize(xmlSchemaSAXPlugPtr,8, 15033, 11);
+CheckTypeSize(xmlSchemaParserCtxtPtr,8, 15037, 11)
 #elif __ia64__
-CheckTypeSize(xmlSchemaSAXPlugPtr,8, 15033, 3);
+CheckTypeSize(xmlSchemaParserCtxtPtr,8, 15037, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaSAXPlugPtr,4, 15033, 6);
+CheckTypeSize(xmlSchemaParserCtxtPtr,4, 15037, 6)
 #elif __powerpc64__
-CheckTypeSize(xmlSchemaSAXPlugPtr,8, 15033, 9);
+CheckTypeSize(xmlSchemaParserCtxtPtr,8, 15037, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaSAXPlugPtr,4, 15033, 10);
+CheckTypeSize(xmlSchemaParserCtxtPtr,4, 15037, 10)
 #elif __s390x__
-CheckTypeSize(xmlSchemaSAXPlugPtr,8, 15033, 12);
-#elif 1
-CheckTypeSize(xmlSchemaSAXPlugPtr,0, 15033, 1);
+CheckTypeSize(xmlSchemaParserCtxtPtr,8, 15037, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15037,0);
+Msg("Find size of xmlSchemaParserCtxtPtr (15037)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 2);
+CheckTypeSize(xmlSchemaValidityErrorFunc,4, 15039, 2)
 #elif __x86_64__
-CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 11);
+CheckTypeSize(xmlSchemaValidityErrorFunc,8, 15039, 11)
 #elif __ia64__
-CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 3);
+CheckTypeSize(xmlSchemaValidityErrorFunc,8, 15039, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 6);
+CheckTypeSize(xmlSchemaValidityErrorFunc,4, 15039, 6)
 #elif __powerpc64__
-CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 9);
+CheckTypeSize(xmlSchemaValidityErrorFunc,8, 15039, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 10);
+CheckTypeSize(xmlSchemaValidityErrorFunc,4, 15039, 10)
 #elif __s390x__
-CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 12);
-#elif 1
-CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 1);
+CheckTypeSize(xmlSchemaValidityErrorFunc,8, 15039, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15039,0);
+Msg("Find size of xmlSchemaValidityErrorFunc (15039)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlSchemaParserCtxt *,4, 15036, 2);
+CheckTypeSize(xmlSchemaValidityWarningFunc,4, 15041, 2)
 #elif __x86_64__
-CheckTypeSize(xmlSchemaParserCtxt *,8, 15036, 11);
+CheckTypeSize(xmlSchemaValidityWarningFunc,8, 15041, 11)
 #elif __ia64__
-CheckTypeSize(xmlSchemaParserCtxt *,8, 15036, 3);
+CheckTypeSize(xmlSchemaValidityWarningFunc,8, 15041, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaParserCtxt *,4, 15036, 6);
+CheckTypeSize(xmlSchemaValidityWarningFunc,4, 15041, 6)
 #elif __powerpc64__
-CheckTypeSize(xmlSchemaParserCtxt *,8, 15036, 9);
+CheckTypeSize(xmlSchemaValidityWarningFunc,8, 15041, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaParserCtxt *,4, 15036, 10);
+CheckTypeSize(xmlSchemaValidityWarningFunc,4, 15041, 10)
 #elif __s390x__
-CheckTypeSize(xmlSchemaParserCtxt *,8, 15036, 12);
-#elif 1
-CheckTypeSize(xmlSchemaParserCtxt *,0, 15036, 1);
+CheckTypeSize(xmlSchemaValidityWarningFunc,8, 15041, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15041,0);
+Msg("Find size of xmlSchemaValidityWarningFunc (15041)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlSchemaParserCtxtPtr,4, 15037, 2);
+CheckTypeSize(xmlSchema,84, 15044, 2)
 #elif __x86_64__
-CheckTypeSize(xmlSchemaParserCtxtPtr,8, 15037, 11);
+CheckTypeSize(xmlSchema,160, 15044, 11)
 #elif __ia64__
-CheckTypeSize(xmlSchemaParserCtxtPtr,8, 15037, 3);
+CheckTypeSize(xmlSchema,160, 15044, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaParserCtxtPtr,4, 15037, 6);
+CheckTypeSize(xmlSchema,84, 15044, 6)
 #elif __powerpc64__
-CheckTypeSize(xmlSchemaParserCtxtPtr,8, 15037, 9);
+CheckTypeSize(xmlSchema,160, 15044, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaParserCtxtPtr,4, 15037, 10);
+CheckTypeSize(xmlSchema,84, 15044, 10)
 #elif __s390x__
-CheckTypeSize(xmlSchemaParserCtxtPtr,8, 15037, 12);
-#elif 1
-CheckTypeSize(xmlSchemaParserCtxtPtr,0, 15037, 1);
+CheckTypeSize(xmlSchema,160, 15044, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15044,0);
+Msg("Find size of xmlSchema (15044)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlSAXHandlerPtr *,4, 15038, 2);
+CheckTypeSize(xmlSchemaPtr,4, 15046, 2)
 #elif __x86_64__
-CheckTypeSize(xmlSAXHandlerPtr *,8, 15038, 11);
+CheckTypeSize(xmlSchemaPtr,8, 15046, 11)
 #elif __ia64__
-CheckTypeSize(xmlSAXHandlerPtr *,8, 15038, 3);
+CheckTypeSize(xmlSchemaPtr,8, 15046, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSAXHandlerPtr *,4, 15038, 6);
+CheckTypeSize(xmlSchemaPtr,4, 15046, 6)
 #elif __powerpc64__
-CheckTypeSize(xmlSAXHandlerPtr *,8, 15038, 9);
+CheckTypeSize(xmlSchemaPtr,8, 15046, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlSAXHandlerPtr *,4, 15038, 10);
+CheckTypeSize(xmlSchemaPtr,4, 15046, 10)
 #elif __s390x__
-CheckTypeSize(xmlSAXHandlerPtr *,8, 15038, 12);
-#elif 1
-CheckTypeSize(xmlSAXHandlerPtr *,0, 15038, 1);
+CheckTypeSize(xmlSchemaPtr,8, 15046, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15046,0);
+Msg("Find size of xmlSchemaPtr (15046)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlSchemaValidityErrorFunc,4, 15039, 2);
+CheckTypeSize(xmlSchemaValidOption,4, 15118, 2)
 #elif __x86_64__
-CheckTypeSize(xmlSchemaValidityErrorFunc,8, 15039, 11);
+CheckTypeSize(xmlSchemaValidOption,4, 15118, 11)
 #elif __ia64__
-CheckTypeSize(xmlSchemaValidityErrorFunc,8, 15039, 3);
+CheckTypeSize(xmlSchemaValidOption,4, 15118, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaValidityErrorFunc,4, 15039, 6);
+CheckTypeSize(xmlSchemaValidOption,4, 15118, 6)
 #elif __powerpc64__
-CheckTypeSize(xmlSchemaValidityErrorFunc,8, 15039, 9);
+CheckTypeSize(xmlSchemaValidOption,4, 15118, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaValidityErrorFunc,4, 15039, 10);
+CheckTypeSize(xmlSchemaValidOption,4, 15118, 10)
 #elif __s390x__
-CheckTypeSize(xmlSchemaValidityErrorFunc,8, 15039, 12);
-#elif 1
-CheckTypeSize(xmlSchemaValidityErrorFunc,0, 15039, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(xmlSchemaValidityErrorFunc *,4, 15040, 2);
-#elif __x86_64__
-CheckTypeSize(xmlSchemaValidityErrorFunc *,8, 15040, 11);
-#elif __ia64__
-CheckTypeSize(xmlSchemaValidityErrorFunc *,8, 15040, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaValidityErrorFunc *,4, 15040, 6);
-#elif __powerpc64__
-CheckTypeSize(xmlSchemaValidityErrorFunc *,8, 15040, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaValidityErrorFunc *,4, 15040, 10);
-#elif __s390x__
-CheckTypeSize(xmlSchemaValidityErrorFunc *,8, 15040, 12);
-#elif 1
-CheckTypeSize(xmlSchemaValidityErrorFunc *,0, 15040, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(xmlSchemaValidityWarningFunc,4, 15041, 2);
-#elif __x86_64__
-CheckTypeSize(xmlSchemaValidityWarningFunc,8, 15041, 11);
-#elif __ia64__
-CheckTypeSize(xmlSchemaValidityWarningFunc,8, 15041, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaValidityWarningFunc,4, 15041, 6);
-#elif __powerpc64__
-CheckTypeSize(xmlSchemaValidityWarningFunc,8, 15041, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaValidityWarningFunc,4, 15041, 10);
-#elif __s390x__
-CheckTypeSize(xmlSchemaValidityWarningFunc,8, 15041, 12);
-#elif 1
-CheckTypeSize(xmlSchemaValidityWarningFunc,0, 15041, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(xmlSchemaValidityWarningFunc *,4, 15042, 2);
-#elif __x86_64__
-CheckTypeSize(xmlSchemaValidityWarningFunc *,8, 15042, 11);
-#elif __ia64__
-CheckTypeSize(xmlSchemaValidityWarningFunc *,8, 15042, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaValidityWarningFunc *,4, 15042, 6);
-#elif __powerpc64__
-CheckTypeSize(xmlSchemaValidityWarningFunc *,8, 15042, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaValidityWarningFunc *,4, 15042, 10);
-#elif __s390x__
-CheckTypeSize(xmlSchemaValidityWarningFunc *,8, 15042, 12);
-#elif 1
-CheckTypeSize(xmlSchemaValidityWarningFunc *,0, 15042, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(xmlSchema,84, 15044, 2);
-#elif __x86_64__
-CheckTypeSize(xmlSchema,160, 15044, 11);
-#elif __ia64__
-CheckTypeSize(xmlSchema,160, 15044, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchema,84, 15044, 6);
-#elif __powerpc64__
-CheckTypeSize(xmlSchema,160, 15044, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchema,84, 15044, 10);
-#elif __s390x__
-CheckTypeSize(xmlSchema,160, 15044, 12);
-#elif 1
-CheckTypeSize(xmlSchema,0, 15044, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(xmlSchema *,4, 15045, 2);
-#elif __x86_64__
-CheckTypeSize(xmlSchema *,8, 15045, 11);
-#elif __ia64__
-CheckTypeSize(xmlSchema *,8, 15045, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchema *,4, 15045, 6);
-#elif __powerpc64__
-CheckTypeSize(xmlSchema *,8, 15045, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchema *,4, 15045, 10);
-#elif __s390x__
-CheckTypeSize(xmlSchema *,8, 15045, 12);
-#elif 1
-CheckTypeSize(xmlSchema *,0, 15045, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(xmlSchemaPtr,4, 15046, 2);
-#elif __x86_64__
-CheckTypeSize(xmlSchemaPtr,8, 15046, 11);
-#elif __ia64__
-CheckTypeSize(xmlSchemaPtr,8, 15046, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaPtr,4, 15046, 6);
-#elif __powerpc64__
-CheckTypeSize(xmlSchemaPtr,8, 15046, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaPtr,4, 15046, 10);
-#elif __s390x__
-CheckTypeSize(xmlSchemaPtr,8, 15046, 12);
-#elif 1
-CheckTypeSize(xmlSchemaPtr,0, 15046, 1);
-#endif
-
-#if __i386__
-CheckEnum("XML_SCHEMA_VAL_VC_I_CREATE",XML_SCHEMA_VAL_VC_I_CREATE,1<<0,50129);
-#elif __x86_64__
-CheckEnum("XML_SCHEMA_VAL_VC_I_CREATE",XML_SCHEMA_VAL_VC_I_CREATE,1<<0,50129);
-#elif __ia64__
-CheckEnum("XML_SCHEMA_VAL_VC_I_CREATE",XML_SCHEMA_VAL_VC_I_CREATE,1<<0,50129);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("XML_SCHEMA_VAL_VC_I_CREATE",XML_SCHEMA_VAL_VC_I_CREATE,1<<0,50129);
-#elif __powerpc64__
-CheckEnum("XML_SCHEMA_VAL_VC_I_CREATE",XML_SCHEMA_VAL_VC_I_CREATE,1<<0,50129);
-#elif __s390__ && !__s390x__
-CheckEnum("XML_SCHEMA_VAL_VC_I_CREATE",XML_SCHEMA_VAL_VC_I_CREATE,1<<0,50129);
-#elif __s390x__
-CheckEnum("XML_SCHEMA_VAL_VC_I_CREATE",XML_SCHEMA_VAL_VC_I_CREATE,1<<0,50129);
-#elif 1
-CheckEnum("XML_SCHEMA_VAL_VC_I_CREATE",XML_SCHEMA_VAL_VC_I_CREATE,1<<0,50129);
-#endif
-
-#if __i386__
-CheckTypeSize(xmlSchemaValidOption,4, 15118, 2);
-#elif __x86_64__
-CheckTypeSize(xmlSchemaValidOption,4, 15118, 11);
-#elif __ia64__
-CheckTypeSize(xmlSchemaValidOption,4, 15118, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSchemaValidOption,4, 15118, 6);
-#elif __powerpc64__
-CheckTypeSize(xmlSchemaValidOption,4, 15118, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlSchemaValidOption,4, 15118, 10);
-#elif __s390x__
-CheckTypeSize(xmlSchemaValidOption,4, 15118, 12);
-#elif 1
-CheckTypeSize(xmlSchemaValidOption,0, 15118, 1);
+CheckTypeSize(xmlSchemaValidOption,4, 15118, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15118,0);
+Msg("Find size of xmlSchemaValidOption (15118)\n");
 #endif
 
 extern int xmlSchemaValidateFile_db(xmlSchemaValidCtxtPtr, const char *, int);

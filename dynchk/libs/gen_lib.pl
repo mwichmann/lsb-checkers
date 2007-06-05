@@ -178,7 +178,7 @@ my $get_param_typetype_q2 = $dbh->prepare(
 	or die "Couldn't prepare write_param_typetype query 2: " . DBI->errstr;
 
 my $get_param_type_q = $dbh->prepare(
-'SELECT Tname, Tid, Pconst, Parsize FROM Parameter, Type
+'SELECT Tname, Tid, Parsize FROM Parameter, Type
 WHERE Ppos = ?
   AND Pint = ?
   AND Ptype = Tid'
@@ -247,7 +247,7 @@ my $get_type_form_q = $dbh->prepare('SELECT Ttype FROM Type WHERE Tid = ?')
 	or die "Couldn't prepare type_from query: " . DBI->errstr;
 
 my $get_funcptr_declaration_q = $dbh->prepare(
-'SELECT TMtypeid FROM TypeMember WHERE TMmemberof = ?' )
+'SELECT TMtypeid FROM TypeMember WHERE TMmemberof = ? AND TMaid IN (1,?)' )
 	or die "Couldn't prepare gen_funcptr_declaration query: " . DBI->errstr;
 
 ##############################
@@ -458,7 +458,7 @@ sub get_funcptr_declaration($$)
 	my ($TMid,$archId) = @_;
 	my $i = 0;
 	my $output = "(";
-	$get_funcptr_declaration_q->execute($TMid)
+	$get_funcptr_declaration_q->execute($TMid,$archId)
 		or die "Couldn't execute funcptr declaration query: " . DBI->errstr;
 	while( my($type_id) = $get_funcptr_declaration_q->fetchrow_array())
 	{
@@ -499,10 +499,12 @@ sub get_param_type # ($param_pos, $param_int, $archId)
 {
 	my($param_pos, $param_int, $archId) = @_;
 	$get_param_type_q->execute($param_pos, $param_int);
-	my($type, $type_id, $is_const) = $get_param_type_q->fetchrow_array();
+	my($type, $type_id, $size) = $get_param_type_q->fetchrow_array();
 
 	my($left_string, $right_string) = get_type_string($type_id, $param_pos, $param_int, $archId);
-	$left_string = "const ". $left_string if ($is_const eq 'Yes');
+
+	# Not needed - const parameters have 'const' qualifier in their names
+# 	$left_string = "const ". $left_string if ($is_const eq 'Yes');
 
 	return ($left_string,$right_string);
 }

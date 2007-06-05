@@ -125,7 +125,7 @@ my $get_type_form_q = $dbh->prepare('SELECT Ttype FROM Type WHERE Tid = ?')
 	or die "Couldn't prepare type_from query: " . DBI->errstr;
 
 my $get_funcptr_declaration_q = $dbh->prepare(
-'SELECT TMtypeid FROM TypeMember WHERE TMmemberof = ?' )
+'SELECT TMtypeid FROM TypeMember WHERE TMmemberof = ? AND TMaid IN (1,$Arch) ' )
 	or die "Couldn't prepare gen_funcptr_declaration query: " . DBI->errstr;
 
 

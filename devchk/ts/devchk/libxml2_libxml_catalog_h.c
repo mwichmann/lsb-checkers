@@ -37,169 +37,79 @@ printf("Checking data structures in libxml2/libxml/catalog.h\n");
 #endif
 
 #if __i386__
-CheckEnum("XML_CATA_ALLOW_NONE",XML_CATA_ALLOW_NONE,0,50004);
-CheckEnum("XML_CATA_ALLOW_GLOBAL",XML_CATA_ALLOW_GLOBAL,1,50005);
-CheckEnum("XML_CATA_ALLOW_DOCUMENT",XML_CATA_ALLOW_DOCUMENT,2,50006);
-CheckEnum("XML_CATA_ALLOW_ALL",XML_CATA_ALLOW_ALL,3,50007);
+CheckTypeSize(xmlCatalogAllow,4, 15069, 2)
 #elif __x86_64__
-CheckEnum("XML_CATA_ALLOW_NONE",XML_CATA_ALLOW_NONE,0,50004);
-CheckEnum("XML_CATA_ALLOW_GLOBAL",XML_CATA_ALLOW_GLOBAL,1,50005);
-CheckEnum("XML_CATA_ALLOW_DOCUMENT",XML_CATA_ALLOW_DOCUMENT,2,50006);
-CheckEnum("XML_CATA_ALLOW_ALL",XML_CATA_ALLOW_ALL,3,50007);
+CheckTypeSize(xmlCatalogAllow,4, 15069, 11)
 #elif __ia64__
-CheckEnum("XML_CATA_ALLOW_NONE",XML_CATA_ALLOW_NONE,0,50004);
-CheckEnum("XML_CATA_ALLOW_GLOBAL",XML_CATA_ALLOW_GLOBAL,1,50005);
-CheckEnum("XML_CATA_ALLOW_DOCUMENT",XML_CATA_ALLOW_DOCUMENT,2,50006);
-CheckEnum("XML_CATA_ALLOW_ALL",XML_CATA_ALLOW_ALL,3,50007);
+CheckTypeSize(xmlCatalogAllow,4, 15069, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckEnum("XML_CATA_ALLOW_NONE",XML_CATA_ALLOW_NONE,0,50004);
-CheckEnum("XML_CATA_ALLOW_GLOBAL",XML_CATA_ALLOW_GLOBAL,1,50005);
-CheckEnum("XML_CATA_ALLOW_DOCUMENT",XML_CATA_ALLOW_DOCUMENT,2,50006);
-CheckEnum("XML_CATA_ALLOW_ALL",XML_CATA_ALLOW_ALL,3,50007);
+CheckTypeSize(xmlCatalogAllow,4, 15069, 6)
 #elif __powerpc64__
-CheckEnum("XML_CATA_ALLOW_NONE",XML_CATA_ALLOW_NONE,0,50004);
-CheckEnum("XML_CATA_ALLOW_GLOBAL",XML_CATA_ALLOW_GLOBAL,1,50005);
-CheckEnum("XML_CATA_ALLOW_DOCUMENT",XML_CATA_ALLOW_DOCUMENT,2,50006);
-CheckEnum("XML_CATA_ALLOW_ALL",XML_CATA_ALLOW_ALL,3,50007);
+CheckTypeSize(xmlCatalogAllow,4, 15069, 9)
 #elif __s390__ && !__s390x__
-CheckEnum("XML_CATA_ALLOW_NONE",XML_CATA_ALLOW_NONE,0,50004);
-CheckEnum("XML_CATA_ALLOW_GLOBAL",XML_CATA_ALLOW_GLOBAL,1,50005);
-CheckEnum("XML_CATA_ALLOW_DOCUMENT",XML_CATA_ALLOW_DOCUMENT,2,50006);
-CheckEnum("XML_CATA_ALLOW_ALL",XML_CATA_ALLOW_ALL,3,50007);
+CheckTypeSize(xmlCatalogAllow,4, 15069, 10)
 #elif __s390x__
-CheckEnum("XML_CATA_ALLOW_NONE",XML_CATA_ALLOW_NONE,0,50004);
-CheckEnum("XML_CATA_ALLOW_GLOBAL",XML_CATA_ALLOW_GLOBAL,1,50005);
-CheckEnum("XML_CATA_ALLOW_DOCUMENT",XML_CATA_ALLOW_DOCUMENT,2,50006);
-CheckEnum("XML_CATA_ALLOW_ALL",XML_CATA_ALLOW_ALL,3,50007);
-#elif 1
-CheckEnum("XML_CATA_ALLOW_NONE",XML_CATA_ALLOW_NONE,0,50004);
-CheckEnum("XML_CATA_ALLOW_GLOBAL",XML_CATA_ALLOW_GLOBAL,1,50005);
-CheckEnum("XML_CATA_ALLOW_DOCUMENT",XML_CATA_ALLOW_DOCUMENT,2,50006);
-CheckEnum("XML_CATA_ALLOW_ALL",XML_CATA_ALLOW_ALL,3,50007);
+CheckTypeSize(xmlCatalogAllow,4, 15069, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15069,0);
+Msg("Find size of xmlCatalogAllow (15069)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlCatalogAllow,4, 15069, 2);
+CheckTypeSize(xmlCatalog,0, 15071, 2)
 #elif __x86_64__
-CheckTypeSize(xmlCatalogAllow,4, 15069, 11);
+CheckTypeSize(xmlCatalog,0, 15071, 11)
 #elif __ia64__
-CheckTypeSize(xmlCatalogAllow,4, 15069, 3);
+CheckTypeSize(xmlCatalog,0, 15071, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlCatalogAllow,4, 15069, 6);
+CheckTypeSize(xmlCatalog,0, 15071, 6)
 #elif __powerpc64__
-CheckTypeSize(xmlCatalogAllow,4, 15069, 9);
+CheckTypeSize(xmlCatalog,0, 15071, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlCatalogAllow,4, 15069, 10);
+CheckTypeSize(xmlCatalog,0, 15071, 10)
 #elif __s390x__
-CheckTypeSize(xmlCatalogAllow,4, 15069, 12);
-#elif 1
-CheckTypeSize(xmlCatalogAllow,0, 15069, 1);
+CheckTypeSize(xmlCatalog,0, 15071, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15071,0);
+Msg("Find size of xmlCatalog (15071)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlCatalog,0, 15071, 2);
+CheckTypeSize(xmlCatalogPtr,4, 15073, 2)
 #elif __x86_64__
-CheckTypeSize(xmlCatalog,0, 15071, 11);
+CheckTypeSize(xmlCatalogPtr,8, 15073, 11)
 #elif __ia64__
-CheckTypeSize(xmlCatalog,0, 15071, 3);
+CheckTypeSize(xmlCatalogPtr,8, 15073, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlCatalog,0, 15071, 6);
+CheckTypeSize(xmlCatalogPtr,4, 15073, 6)
 #elif __powerpc64__
-CheckTypeSize(xmlCatalog,0, 15071, 9);
+CheckTypeSize(xmlCatalogPtr,8, 15073, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlCatalog,0, 15071, 10);
+CheckTypeSize(xmlCatalogPtr,4, 15073, 10)
 #elif __s390x__
-CheckTypeSize(xmlCatalog,0, 15071, 12);
-#elif 1
-CheckTypeSize(xmlCatalog,0, 15071, 1);
+CheckTypeSize(xmlCatalogPtr,8, 15073, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15073,0);
+Msg("Find size of xmlCatalogPtr (15073)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlCatalog *,4, 15072, 2);
+CheckTypeSize(xmlCatalogPrefer,4, 15075, 2)
 #elif __x86_64__
-CheckTypeSize(xmlCatalog *,8, 15072, 11);
+CheckTypeSize(xmlCatalogPrefer,4, 15075, 11)
 #elif __ia64__
-CheckTypeSize(xmlCatalog *,8, 15072, 3);
+CheckTypeSize(xmlCatalogPrefer,4, 15075, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlCatalog *,4, 15072, 6);
+CheckTypeSize(xmlCatalogPrefer,4, 15075, 6)
 #elif __powerpc64__
-CheckTypeSize(xmlCatalog *,8, 15072, 9);
+CheckTypeSize(xmlCatalogPrefer,4, 15075, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlCatalog *,4, 15072, 10);
+CheckTypeSize(xmlCatalogPrefer,4, 15075, 10)
 #elif __s390x__
-CheckTypeSize(xmlCatalog *,8, 15072, 12);
-#elif 1
-CheckTypeSize(xmlCatalog *,0, 15072, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(xmlCatalogPtr,4, 15073, 2);
-#elif __x86_64__
-CheckTypeSize(xmlCatalogPtr,8, 15073, 11);
-#elif __ia64__
-CheckTypeSize(xmlCatalogPtr,8, 15073, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlCatalogPtr,4, 15073, 6);
-#elif __powerpc64__
-CheckTypeSize(xmlCatalogPtr,8, 15073, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlCatalogPtr,4, 15073, 10);
-#elif __s390x__
-CheckTypeSize(xmlCatalogPtr,8, 15073, 12);
-#elif 1
-CheckTypeSize(xmlCatalogPtr,0, 15073, 1);
-#endif
-
-#if __i386__
-CheckEnum("XML_CATA_PREFER_NONE",XML_CATA_PREFER_NONE,0,50008);
-CheckEnum("XML_CATA_PREFER_PUBLIC",XML_CATA_PREFER_PUBLIC,1,50009);
-CheckEnum("XML_CATA_PREFER_SYSTEM",XML_CATA_PREFER_SYSTEM,2,50010);
-#elif __x86_64__
-CheckEnum("XML_CATA_PREFER_NONE",XML_CATA_PREFER_NONE,0,50008);
-CheckEnum("XML_CATA_PREFER_PUBLIC",XML_CATA_PREFER_PUBLIC,1,50009);
-CheckEnum("XML_CATA_PREFER_SYSTEM",XML_CATA_PREFER_SYSTEM,2,50010);
-#elif __ia64__
-CheckEnum("XML_CATA_PREFER_NONE",XML_CATA_PREFER_NONE,0,50008);
-CheckEnum("XML_CATA_PREFER_PUBLIC",XML_CATA_PREFER_PUBLIC,1,50009);
-CheckEnum("XML_CATA_PREFER_SYSTEM",XML_CATA_PREFER_SYSTEM,2,50010);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("XML_CATA_PREFER_NONE",XML_CATA_PREFER_NONE,0,50008);
-CheckEnum("XML_CATA_PREFER_PUBLIC",XML_CATA_PREFER_PUBLIC,1,50009);
-CheckEnum("XML_CATA_PREFER_SYSTEM",XML_CATA_PREFER_SYSTEM,2,50010);
-#elif __powerpc64__
-CheckEnum("XML_CATA_PREFER_NONE",XML_CATA_PREFER_NONE,0,50008);
-CheckEnum("XML_CATA_PREFER_PUBLIC",XML_CATA_PREFER_PUBLIC,1,50009);
-CheckEnum("XML_CATA_PREFER_SYSTEM",XML_CATA_PREFER_SYSTEM,2,50010);
-#elif __s390__ && !__s390x__
-CheckEnum("XML_CATA_PREFER_NONE",XML_CATA_PREFER_NONE,0,50008);
-CheckEnum("XML_CATA_PREFER_PUBLIC",XML_CATA_PREFER_PUBLIC,1,50009);
-CheckEnum("XML_CATA_PREFER_SYSTEM",XML_CATA_PREFER_SYSTEM,2,50010);
-#elif __s390x__
-CheckEnum("XML_CATA_PREFER_NONE",XML_CATA_PREFER_NONE,0,50008);
-CheckEnum("XML_CATA_PREFER_PUBLIC",XML_CATA_PREFER_PUBLIC,1,50009);
-CheckEnum("XML_CATA_PREFER_SYSTEM",XML_CATA_PREFER_SYSTEM,2,50010);
-#elif 1
-CheckEnum("XML_CATA_PREFER_NONE",XML_CATA_PREFER_NONE,0,50008);
-CheckEnum("XML_CATA_PREFER_PUBLIC",XML_CATA_PREFER_PUBLIC,1,50009);
-CheckEnum("XML_CATA_PREFER_SYSTEM",XML_CATA_PREFER_SYSTEM,2,50010);
-#endif
-
-#if __i386__
-CheckTypeSize(xmlCatalogPrefer,4, 15075, 2);
-#elif __x86_64__
-CheckTypeSize(xmlCatalogPrefer,4, 15075, 11);
-#elif __ia64__
-CheckTypeSize(xmlCatalogPrefer,4, 15075, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlCatalogPrefer,4, 15075, 6);
-#elif __powerpc64__
-CheckTypeSize(xmlCatalogPrefer,4, 15075, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(xmlCatalogPrefer,4, 15075, 10);
-#elif __s390x__
-CheckTypeSize(xmlCatalogPrefer,4, 15075, 12);
-#elif 1
-CheckTypeSize(xmlCatalogPrefer,0, 15075, 1);
+CheckTypeSize(xmlCatalogPrefer,4, 15075, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15075,0);
+Msg("Find size of xmlCatalogPrefer (15075)\n");
 #endif
 
 extern xmlChar * xmlCatalogLocalResolveURI_db(void *, const xmlChar *);

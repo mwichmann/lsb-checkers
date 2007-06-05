@@ -36,101 +36,15 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(struct utsname,390, 7013, 2);
-CheckMemberSize(struct utsname,nodename,65,2,30178);
-CheckOffset(struct utsname,nodename,65,2,30178);
-CheckMemberSize(struct utsname,release,65,2,30179);
-CheckOffset(struct utsname,release,130,2,30179);
-CheckMemberSize(struct utsname,version,65,2,30180);
-CheckOffset(struct utsname,version,195,2,30180);
-CheckMemberSize(struct utsname,machine,65,2,30181);
-CheckOffset(struct utsname,machine,260,2,30181);
-CheckMemberSize(struct utsname,domainname,65,2,34411);
-CheckOffset(struct utsname,domainname,325,2,34411);
 #elif __ia64__
-CheckTypeSize(struct utsname,390, 7013, 3);
-CheckMemberSize(struct utsname,nodename,65,3,30178);
-CheckOffset(struct utsname,nodename,65,3,30178);
-CheckMemberSize(struct utsname,release,65,3,30179);
-CheckOffset(struct utsname,release,130,3,30179);
-CheckMemberSize(struct utsname,version,65,3,30180);
-CheckOffset(struct utsname,version,195,3,30180);
-CheckMemberSize(struct utsname,machine,65,3,30181);
-CheckOffset(struct utsname,machine,260,3,30181);
-CheckMemberSize(struct utsname,domainname,65,3,34411);
-CheckOffset(struct utsname,domainname,325,3,34411);
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct utsname,390, 7013, 6);
-CheckMemberSize(struct utsname,nodename,65,6,30178);
-CheckOffset(struct utsname,nodename,65,6,30178);
-CheckMemberSize(struct utsname,release,65,6,30179);
-CheckOffset(struct utsname,release,130,6,30179);
-CheckMemberSize(struct utsname,version,65,6,30180);
-CheckOffset(struct utsname,version,195,6,30180);
-CheckMemberSize(struct utsname,machine,65,6,30181);
-CheckOffset(struct utsname,machine,260,6,30181);
-CheckMemberSize(struct utsname,domainname,65,6,34411);
-CheckOffset(struct utsname,domainname,325,6,34411);
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct utsname,390, 7013, 10);
-CheckMemberSize(struct utsname,nodename,65,10,30178);
-CheckOffset(struct utsname,nodename,65,10,30178);
-CheckMemberSize(struct utsname,release,65,10,30179);
-CheckOffset(struct utsname,release,130,10,30179);
-CheckMemberSize(struct utsname,version,65,10,30180);
-CheckOffset(struct utsname,version,195,10,30180);
-CheckMemberSize(struct utsname,machine,65,10,30181);
-CheckOffset(struct utsname,machine,260,10,30181);
-CheckMemberSize(struct utsname,domainname,65,10,34411);
-CheckOffset(struct utsname,domainname,325,10,34411);
 #elif __powerpc64__
-CheckTypeSize(struct utsname,390, 7013, 9);
-CheckMemberSize(struct utsname,nodename,65,9,30178);
-CheckOffset(struct utsname,nodename,65,9,30178);
-CheckMemberSize(struct utsname,release,65,9,30179);
-CheckOffset(struct utsname,release,130,9,30179);
-CheckMemberSize(struct utsname,version,65,9,30180);
-CheckOffset(struct utsname,version,195,9,30180);
-CheckMemberSize(struct utsname,machine,65,9,30181);
-CheckOffset(struct utsname,machine,260,9,30181);
-CheckMemberSize(struct utsname,domainname,65,9,34411);
-CheckOffset(struct utsname,domainname,325,9,34411);
 #elif __s390x__
-CheckTypeSize(struct utsname,390, 7013, 12);
-CheckMemberSize(struct utsname,nodename,65,12,30178);
-CheckOffset(struct utsname,nodename,65,12,30178);
-CheckMemberSize(struct utsname,release,65,12,30179);
-CheckOffset(struct utsname,release,130,12,30179);
-CheckMemberSize(struct utsname,version,65,12,30180);
-CheckOffset(struct utsname,version,195,12,30180);
-CheckMemberSize(struct utsname,machine,65,12,30181);
-CheckOffset(struct utsname,machine,260,12,30181);
-CheckMemberSize(struct utsname,domainname,65,12,34411);
-CheckOffset(struct utsname,domainname,325,12,34411);
 #elif __x86_64__
-CheckTypeSize(struct utsname,390, 7013, 11);
-CheckMemberSize(struct utsname,nodename,65,11,30178);
-CheckOffset(struct utsname,nodename,65,11,30178);
-CheckMemberSize(struct utsname,release,65,11,30179);
-CheckOffset(struct utsname,release,130,11,30179);
-CheckMemberSize(struct utsname,version,65,11,30180);
-CheckOffset(struct utsname,version,195,11,30180);
-CheckMemberSize(struct utsname,machine,65,11,30181);
-CheckOffset(struct utsname,machine,260,11,30181);
-CheckMemberSize(struct utsname,domainname,65,11,34411);
-CheckOffset(struct utsname,domainname,325,11,34411);
-#elif 1
-CheckTypeSize(struct utsname,0, 7013, 1);
-CheckMemberSize(struct utsname,sysname,65,1,30177);
-CheckOffset(struct utsname,sysname,0,1,30177);
-CheckMemberSize(struct utsname,nodename,65,1,30178);
-CheckOffset(struct utsname,nodename,0,1,30178);
-CheckMemberSize(struct utsname,release,65,1,30179);
-CheckOffset(struct utsname,release,0,1,30179);
-CheckMemberSize(struct utsname,version,65,1,30180);
-CheckOffset(struct utsname,version,0,1,30180);
-CheckMemberSize(struct utsname,machine,65,1,30181);
-CheckOffset(struct utsname,machine,0,1,30181);
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7013,0);
+Msg("Find size of utsname (7013)\n");
 #endif
 
 extern int uname_db(struct utsname *);

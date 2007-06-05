@@ -154,762 +154,250 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPixbuf,0, 12611, 2);
+CheckTypeSize(GdkPixbuf,0, 12611, 2)
 #elif __x86_64__
-CheckTypeSize(GdkPixbuf,0, 12611, 11);
+CheckTypeSize(GdkPixbuf,0, 12611, 11)
 #elif __ia64__
-CheckTypeSize(GdkPixbuf,0, 12611, 3);
+CheckTypeSize(GdkPixbuf,0, 12611, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbuf,0, 12611, 6);
+CheckTypeSize(GdkPixbuf,0, 12611, 6)
 #elif __powerpc64__
-CheckTypeSize(GdkPixbuf,0, 12611, 9);
+CheckTypeSize(GdkPixbuf,0, 12611, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbuf,0, 12611, 10);
+CheckTypeSize(GdkPixbuf,0, 12611, 10)
 #elif __s390x__
-CheckTypeSize(GdkPixbuf,0, 12611, 12);
-#elif 1
-CheckTypeSize(GdkPixbuf,0, 12611, 1);
+CheckTypeSize(GdkPixbuf,0, 12611, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12611,0);
+Msg("Find size of GdkPixbuf (12611)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPixbuf *,4, 12612, 2);
+CheckTypeSize(GdkPixbufSaveFunc,4, 12614, 2)
 #elif __x86_64__
-CheckTypeSize(GdkPixbuf *,8, 12612, 11);
+CheckTypeSize(GdkPixbufSaveFunc,8, 12614, 11)
 #elif __ia64__
-CheckTypeSize(GdkPixbuf *,8, 12612, 3);
+CheckTypeSize(GdkPixbufSaveFunc,8, 12614, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbuf *,4, 12612, 6);
+CheckTypeSize(GdkPixbufSaveFunc,4, 12614, 6)
 #elif __powerpc64__
-CheckTypeSize(GdkPixbuf *,8, 12612, 9);
+CheckTypeSize(GdkPixbufSaveFunc,8, 12614, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbuf *,4, 12612, 10);
+CheckTypeSize(GdkPixbufSaveFunc,4, 12614, 10)
 #elif __s390x__
-CheckTypeSize(GdkPixbuf *,8, 12612, 12);
-#elif 1
-CheckTypeSize(GdkPixbuf *,0, 12612, 1);
+CheckTypeSize(GdkPixbufSaveFunc,8, 12614, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12614,0);
+Msg("Find size of GdkPixbufSaveFunc (12614)\n");
 #endif
 
 #if __i386__
+CheckTypeSize(GdkPixbufLoader,16, 12616, 2)
 #elif __x86_64__
+CheckTypeSize(GdkPixbufLoader,32, 12616, 11)
 #elif __ia64__
+CheckTypeSize(GdkPixbufLoader,32, 12616, 3)
 #elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkPixbufLoader,16, 12616, 6)
 #elif __powerpc64__
+CheckTypeSize(GdkPixbufLoader,32, 12616, 9)
 #elif __s390__ && !__s390x__
+CheckTypeSize(GdkPixbufLoader,16, 12616, 10)
 #elif __s390x__
-#elif 1
+CheckTypeSize(GdkPixbufLoader,32, 12616, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12616,0);
+Msg("Find size of GdkPixbufLoader (12616)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPixbufSaveFunc,4, 12614, 2);
+CheckTypeSize(GdkPixbufFormat,0, 12621, 2)
 #elif __x86_64__
-CheckTypeSize(GdkPixbufSaveFunc,8, 12614, 11);
+CheckTypeSize(GdkPixbufFormat,0, 12621, 11)
 #elif __ia64__
-CheckTypeSize(GdkPixbufSaveFunc,8, 12614, 3);
+CheckTypeSize(GdkPixbufFormat,0, 12621, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbufSaveFunc,4, 12614, 6);
+CheckTypeSize(GdkPixbufFormat,0, 12621, 6)
 #elif __powerpc64__
-CheckTypeSize(GdkPixbufSaveFunc,8, 12614, 9);
+CheckTypeSize(GdkPixbufFormat,0, 12621, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbufSaveFunc,4, 12614, 10);
+CheckTypeSize(GdkPixbufFormat,0, 12621, 10)
 #elif __s390x__
-CheckTypeSize(GdkPixbufSaveFunc,8, 12614, 12);
-#elif 1
-CheckTypeSize(GdkPixbufSaveFunc,0, 12614, 1);
+CheckTypeSize(GdkPixbufFormat,0, 12621, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12621,0);
+Msg("Find size of GdkPixbufFormat (12621)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(struct _GdkPixbufLoader,16, 12615, 2);
-CheckMemberSize(struct _GdkPixbufLoader,priv,4,2,43321);
-CheckOffset(struct _GdkPixbufLoader,priv,12,2,43321);
+CheckTypeSize(GdkInterpType,4, 12624, 2)
 #elif __x86_64__
-CheckTypeSize(struct _GdkPixbufLoader,32, 12615, 11);
-CheckMemberSize(struct _GdkPixbufLoader,priv,8,11,43321);
-CheckOffset(struct _GdkPixbufLoader,priv,24,11,43321);
+CheckTypeSize(GdkInterpType,4, 12624, 11)
 #elif __ia64__
-CheckTypeSize(struct _GdkPixbufLoader,32, 12615, 3);
-CheckMemberSize(struct _GdkPixbufLoader,priv,8,3,43321);
-CheckOffset(struct _GdkPixbufLoader,priv,24,3,43321);
+CheckTypeSize(GdkInterpType,4, 12624, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkPixbufLoader,16, 12615, 6);
-CheckMemberSize(struct _GdkPixbufLoader,priv,4,6,43321);
-CheckOffset(struct _GdkPixbufLoader,priv,12,6,43321);
+CheckTypeSize(GdkInterpType,4, 12624, 6)
 #elif __powerpc64__
-CheckTypeSize(struct _GdkPixbufLoader,32, 12615, 9);
-CheckMemberSize(struct _GdkPixbufLoader,priv,8,9,43321);
-CheckOffset(struct _GdkPixbufLoader,priv,24,9,43321);
+CheckTypeSize(GdkInterpType,4, 12624, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkPixbufLoader,16, 12615, 10);
-CheckMemberSize(struct _GdkPixbufLoader,priv,4,10,43321);
-CheckOffset(struct _GdkPixbufLoader,priv,12,10,43321);
+CheckTypeSize(GdkInterpType,4, 12624, 10)
 #elif __s390x__
-CheckTypeSize(struct _GdkPixbufLoader,32, 12615, 12);
-CheckMemberSize(struct _GdkPixbufLoader,priv,8,12,43321);
-CheckOffset(struct _GdkPixbufLoader,priv,24,12,43321);
-#elif 1
-CheckTypeSize(struct _GdkPixbufLoader,0, 12615, 1);
-Msg("Missing member data for _GdkPixbufLoader on All\n");
-CheckOffset(struct _GdkPixbufLoader,parent_instance,0,1,43320);
-CheckOffset(struct _GdkPixbufLoader,priv,0,1,43321);
+CheckTypeSize(GdkInterpType,4, 12624, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12624,0);
+Msg("Find size of GdkInterpType (12624)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPixbufLoader,16, 12616, 2);
+CheckTypeSize(GdkColorspace,4, 12628, 2)
 #elif __x86_64__
-CheckTypeSize(GdkPixbufLoader,32, 12616, 11);
+CheckTypeSize(GdkColorspace,4, 12628, 11)
 #elif __ia64__
-CheckTypeSize(GdkPixbufLoader,32, 12616, 3);
+CheckTypeSize(GdkColorspace,4, 12628, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbufLoader,16, 12616, 6);
+CheckTypeSize(GdkColorspace,4, 12628, 6)
 #elif __powerpc64__
-CheckTypeSize(GdkPixbufLoader,32, 12616, 9);
+CheckTypeSize(GdkColorspace,4, 12628, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbufLoader,16, 12616, 10);
+CheckTypeSize(GdkColorspace,4, 12628, 10)
 #elif __s390x__
-CheckTypeSize(GdkPixbufLoader,32, 12616, 12);
-#elif 1
-CheckTypeSize(GdkPixbufLoader,0, 12616, 1);
+CheckTypeSize(GdkColorspace,4, 12628, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12628,0);
+Msg("Find size of GdkColorspace (12628)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPixbufLoader *,4, 12617, 2);
+CheckTypeSize(GdkPixbufDestroyNotify,4, 12630, 2)
 #elif __x86_64__
-CheckTypeSize(GdkPixbufLoader *,8, 12617, 11);
+CheckTypeSize(GdkPixbufDestroyNotify,8, 12630, 11)
 #elif __ia64__
-CheckTypeSize(GdkPixbufLoader *,8, 12617, 3);
+CheckTypeSize(GdkPixbufDestroyNotify,8, 12630, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbufLoader *,4, 12617, 6);
+CheckTypeSize(GdkPixbufDestroyNotify,4, 12630, 6)
 #elif __powerpc64__
-CheckTypeSize(GdkPixbufLoader *,8, 12617, 9);
+CheckTypeSize(GdkPixbufDestroyNotify,8, 12630, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbufLoader *,4, 12617, 10);
+CheckTypeSize(GdkPixbufDestroyNotify,4, 12630, 10)
 #elif __s390x__
-CheckTypeSize(GdkPixbufLoader *,8, 12617, 12);
-#elif 1
-CheckTypeSize(GdkPixbufLoader *,0, 12617, 1);
+CheckTypeSize(GdkPixbufDestroyNotify,8, 12630, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12630,0);
+Msg("Find size of GdkPixbufDestroyNotify (12630)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(const GdkPixbuf,0, 12618, 2);
+CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 2)
 #elif __x86_64__
-CheckTypeSize(const GdkPixbuf,0, 12618, 11);
+CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 11)
 #elif __ia64__
-CheckTypeSize(const GdkPixbuf,0, 12618, 3);
+CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(const GdkPixbuf,0, 12618, 6);
+CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 6)
 #elif __powerpc64__
-CheckTypeSize(const GdkPixbuf,0, 12618, 9);
+CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(const GdkPixbuf,0, 12618, 10);
+CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 10)
 #elif __s390x__
-CheckTypeSize(const GdkPixbuf,0, 12618, 12);
-#elif 1
-CheckTypeSize(const GdkPixbuf,0, 12618, 1);
+CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12632,0);
+Msg("Find size of GdkPixbufAnimationIter (12632)\n");
 #endif
 
 #if __i386__
+CheckTypeSize(GdkPixbufAnimation,0, 12637, 2)
 #elif __x86_64__
+CheckTypeSize(GdkPixbufAnimation,0, 12637, 11)
 #elif __ia64__
+CheckTypeSize(GdkPixbufAnimation,0, 12637, 3)
 #elif __powerpc__ && !__powerpc64__
+CheckTypeSize(GdkPixbufAnimation,0, 12637, 6)
 #elif __powerpc64__
+CheckTypeSize(GdkPixbufAnimation,0, 12637, 9)
 #elif __s390__ && !__s390x__
+CheckTypeSize(GdkPixbufAnimation,0, 12637, 10)
 #elif __s390x__
-#elif 1
+CheckTypeSize(GdkPixbufAnimation,0, 12637, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12637,0);
+Msg("Find size of GdkPixbufAnimation (12637)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPixbufFormat,0, 12621, 2);
+CheckTypeSize(GdkPixbufRotation,4, 12640, 2)
 #elif __x86_64__
-CheckTypeSize(GdkPixbufFormat,0, 12621, 11);
+CheckTypeSize(GdkPixbufRotation,4, 12640, 11)
 #elif __ia64__
-CheckTypeSize(GdkPixbufFormat,0, 12621, 3);
+CheckTypeSize(GdkPixbufRotation,4, 12640, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbufFormat,0, 12621, 6);
+CheckTypeSize(GdkPixbufRotation,4, 12640, 6)
 #elif __powerpc64__
-CheckTypeSize(GdkPixbufFormat,0, 12621, 9);
+CheckTypeSize(GdkPixbufRotation,4, 12640, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbufFormat,0, 12621, 10);
+CheckTypeSize(GdkPixbufRotation,4, 12640, 10)
 #elif __s390x__
-CheckTypeSize(GdkPixbufFormat,0, 12621, 12);
-#elif 1
-CheckTypeSize(GdkPixbufFormat,0, 12621, 1);
+CheckTypeSize(GdkPixbufRotation,4, 12640, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12640,0);
+Msg("Find size of GdkPixbufRotation (12640)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPixbufFormat *,4, 12622, 2);
+CheckTypeSize(GdkPixbufLoaderClass,84, 12645, 2)
 #elif __x86_64__
-CheckTypeSize(GdkPixbufFormat *,8, 12622, 11);
+CheckTypeSize(GdkPixbufLoaderClass,168, 12645, 11)
 #elif __ia64__
-CheckTypeSize(GdkPixbufFormat *,8, 12622, 3);
+CheckTypeSize(GdkPixbufLoaderClass,168, 12645, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbufFormat *,4, 12622, 6);
+CheckTypeSize(GdkPixbufLoaderClass,84, 12645, 6)
 #elif __powerpc64__
-CheckTypeSize(GdkPixbufFormat *,8, 12622, 9);
+CheckTypeSize(GdkPixbufLoaderClass,168, 12645, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbufFormat *,4, 12622, 10);
+CheckTypeSize(GdkPixbufLoaderClass,84, 12645, 10)
 #elif __s390x__
-CheckTypeSize(GdkPixbufFormat *,8, 12622, 12);
-#elif 1
-CheckTypeSize(GdkPixbufFormat *,0, 12622, 1);
+CheckTypeSize(GdkPixbufLoaderClass,168, 12645, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12645,0);
+Msg("Find size of GdkPixbufLoaderClass (12645)\n");
 #endif
 
 #if __i386__
-CheckEnum("GDK_INTERP_NEAREST",GDK_INTERP_NEAREST,0,43322);
-CheckEnum("GDK_INTERP_TILES",GDK_INTERP_TILES,1,43323);
-CheckEnum("GDK_INTERP_BILINEAR",GDK_INTERP_BILINEAR,2,43324);
-CheckEnum("GDK_INTERP_HYPER",GDK_INTERP_HYPER,3,43325);
+CheckTypeSize(GdkPixbufError,4, 12647, 2)
 #elif __x86_64__
-CheckEnum("GDK_INTERP_NEAREST",GDK_INTERP_NEAREST,0,43322);
-CheckEnum("GDK_INTERP_TILES",GDK_INTERP_TILES,1,43323);
-CheckEnum("GDK_INTERP_BILINEAR",GDK_INTERP_BILINEAR,2,43324);
-CheckEnum("GDK_INTERP_HYPER",GDK_INTERP_HYPER,3,43325);
+CheckTypeSize(GdkPixbufError,4, 12647, 11)
 #elif __ia64__
-CheckEnum("GDK_INTERP_NEAREST",GDK_INTERP_NEAREST,0,43322);
-CheckEnum("GDK_INTERP_TILES",GDK_INTERP_TILES,1,43323);
-CheckEnum("GDK_INTERP_BILINEAR",GDK_INTERP_BILINEAR,2,43324);
-CheckEnum("GDK_INTERP_HYPER",GDK_INTERP_HYPER,3,43325);
+CheckTypeSize(GdkPixbufError,4, 12647, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckEnum("GDK_INTERP_NEAREST",GDK_INTERP_NEAREST,0,43322);
-CheckEnum("GDK_INTERP_TILES",GDK_INTERP_TILES,1,43323);
-CheckEnum("GDK_INTERP_BILINEAR",GDK_INTERP_BILINEAR,2,43324);
-CheckEnum("GDK_INTERP_HYPER",GDK_INTERP_HYPER,3,43325);
+CheckTypeSize(GdkPixbufError,4, 12647, 6)
 #elif __powerpc64__
-CheckEnum("GDK_INTERP_NEAREST",GDK_INTERP_NEAREST,0,43322);
-CheckEnum("GDK_INTERP_TILES",GDK_INTERP_TILES,1,43323);
-CheckEnum("GDK_INTERP_BILINEAR",GDK_INTERP_BILINEAR,2,43324);
-CheckEnum("GDK_INTERP_HYPER",GDK_INTERP_HYPER,3,43325);
+CheckTypeSize(GdkPixbufError,4, 12647, 9)
 #elif __s390__ && !__s390x__
-CheckEnum("GDK_INTERP_NEAREST",GDK_INTERP_NEAREST,0,43322);
-CheckEnum("GDK_INTERP_TILES",GDK_INTERP_TILES,1,43323);
-CheckEnum("GDK_INTERP_BILINEAR",GDK_INTERP_BILINEAR,2,43324);
-CheckEnum("GDK_INTERP_HYPER",GDK_INTERP_HYPER,3,43325);
+CheckTypeSize(GdkPixbufError,4, 12647, 10)
 #elif __s390x__
-CheckEnum("GDK_INTERP_NEAREST",GDK_INTERP_NEAREST,0,43322);
-CheckEnum("GDK_INTERP_TILES",GDK_INTERP_TILES,1,43323);
-CheckEnum("GDK_INTERP_BILINEAR",GDK_INTERP_BILINEAR,2,43324);
-CheckEnum("GDK_INTERP_HYPER",GDK_INTERP_HYPER,3,43325);
-#elif 1
-CheckEnum("GDK_INTERP_NEAREST",GDK_INTERP_NEAREST,0,43322);
-CheckEnum("GDK_INTERP_TILES",GDK_INTERP_TILES,1,43323);
-CheckEnum("GDK_INTERP_BILINEAR",GDK_INTERP_BILINEAR,2,43324);
-CheckEnum("GDK_INTERP_HYPER",GDK_INTERP_HYPER,3,43325);
+CheckTypeSize(GdkPixbufError,4, 12647, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12647,0);
+Msg("Find size of GdkPixbufError (12647)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GdkInterpType,4, 12624, 2);
+CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 2)
 #elif __x86_64__
-CheckTypeSize(GdkInterpType,4, 12624, 11);
+CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 11)
 #elif __ia64__
-CheckTypeSize(GdkInterpType,4, 12624, 3);
+CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 3)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkInterpType,4, 12624, 6);
+CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 6)
 #elif __powerpc64__
-CheckTypeSize(GdkInterpType,4, 12624, 9);
+CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 9)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkInterpType,4, 12624, 10);
+CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 10)
 #elif __s390x__
-CheckTypeSize(GdkInterpType,4, 12624, 12);
-#elif 1
-CheckTypeSize(GdkInterpType,0, 12624, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(const guchar,1, 12625, 2);
-#elif __x86_64__
-CheckTypeSize(const guchar,1, 12625, 11);
-#elif __ia64__
-CheckTypeSize(const guchar,1, 12625, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(const guchar,1, 12625, 6);
-#elif __powerpc64__
-CheckTypeSize(const guchar,1, 12625, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(const guchar,1, 12625, 10);
-#elif __s390x__
-CheckTypeSize(const guchar,1, 12625, 12);
-#elif 1
-CheckTypeSize(const guchar,0, 12625, 1);
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#elif 1
-#endif
-
-#if __i386__
-CheckEnum("GDK_COLORSPACE_RGB",GDK_COLORSPACE_RGB,0,43326);
-#elif __x86_64__
-CheckEnum("GDK_COLORSPACE_RGB",GDK_COLORSPACE_RGB,0,43326);
-#elif __ia64__
-CheckEnum("GDK_COLORSPACE_RGB",GDK_COLORSPACE_RGB,0,43326);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GDK_COLORSPACE_RGB",GDK_COLORSPACE_RGB,0,43326);
-#elif __powerpc64__
-CheckEnum("GDK_COLORSPACE_RGB",GDK_COLORSPACE_RGB,0,43326);
-#elif __s390__ && !__s390x__
-CheckEnum("GDK_COLORSPACE_RGB",GDK_COLORSPACE_RGB,0,43326);
-#elif __s390x__
-CheckEnum("GDK_COLORSPACE_RGB",GDK_COLORSPACE_RGB,0,43326);
-#elif 1
-CheckEnum("GDK_COLORSPACE_RGB",GDK_COLORSPACE_RGB,0,43326);
-#endif
-
-#if __i386__
-CheckTypeSize(GdkColorspace,4, 12628, 2);
-#elif __x86_64__
-CheckTypeSize(GdkColorspace,4, 12628, 11);
-#elif __ia64__
-CheckTypeSize(GdkColorspace,4, 12628, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkColorspace,4, 12628, 6);
-#elif __powerpc64__
-CheckTypeSize(GdkColorspace,4, 12628, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkColorspace,4, 12628, 10);
-#elif __s390x__
-CheckTypeSize(GdkColorspace,4, 12628, 12);
-#elif 1
-CheckTypeSize(GdkColorspace,0, 12628, 1);
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#elif 1
-#endif
-
-#if __i386__
-CheckTypeSize(GdkPixbufDestroyNotify,4, 12630, 2);
-#elif __x86_64__
-CheckTypeSize(GdkPixbufDestroyNotify,8, 12630, 11);
-#elif __ia64__
-CheckTypeSize(GdkPixbufDestroyNotify,8, 12630, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbufDestroyNotify,4, 12630, 6);
-#elif __powerpc64__
-CheckTypeSize(GdkPixbufDestroyNotify,8, 12630, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbufDestroyNotify,4, 12630, 10);
-#elif __s390x__
-CheckTypeSize(GdkPixbufDestroyNotify,8, 12630, 12);
-#elif 1
-CheckTypeSize(GdkPixbufDestroyNotify,0, 12630, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 2);
-#elif __x86_64__
-CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 11);
-#elif __ia64__
-CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 6);
-#elif __powerpc64__
-CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 10);
-#elif __s390x__
-CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 12);
-#elif 1
-CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(GdkPixbufAnimationIter *,4, 12633, 2);
-#elif __x86_64__
-CheckTypeSize(GdkPixbufAnimationIter *,8, 12633, 11);
-#elif __ia64__
-CheckTypeSize(GdkPixbufAnimationIter *,8, 12633, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbufAnimationIter *,4, 12633, 6);
-#elif __powerpc64__
-CheckTypeSize(GdkPixbufAnimationIter *,8, 12633, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbufAnimationIter *,4, 12633, 10);
-#elif __s390x__
-CheckTypeSize(GdkPixbufAnimationIter *,8, 12633, 12);
-#elif 1
-CheckTypeSize(GdkPixbufAnimationIter *,0, 12633, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(const GTimeVal,8, 12634, 2);
-#elif __x86_64__
-CheckTypeSize(const GTimeVal,16, 12634, 11);
-#elif __ia64__
-CheckTypeSize(const GTimeVal,16, 12634, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(const GTimeVal,8, 12634, 6);
-#elif __powerpc64__
-CheckTypeSize(const GTimeVal,16, 12634, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(const GTimeVal,8, 12634, 10);
-#elif __s390x__
-CheckTypeSize(const GTimeVal,16, 12634, 12);
-#elif 1
-CheckTypeSize(const GTimeVal,0, 12634, 1);
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#elif 1
-#endif
-
-#if __i386__
-CheckTypeSize(GdkPixbufAnimation,0, 12637, 2);
-#elif __x86_64__
-CheckTypeSize(GdkPixbufAnimation,0, 12637, 11);
-#elif __ia64__
-CheckTypeSize(GdkPixbufAnimation,0, 12637, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbufAnimation,0, 12637, 6);
-#elif __powerpc64__
-CheckTypeSize(GdkPixbufAnimation,0, 12637, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbufAnimation,0, 12637, 10);
-#elif __s390x__
-CheckTypeSize(GdkPixbufAnimation,0, 12637, 12);
-#elif 1
-CheckTypeSize(GdkPixbufAnimation,0, 12637, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(GdkPixbufAnimation *,4, 12638, 2);
-#elif __x86_64__
-CheckTypeSize(GdkPixbufAnimation *,8, 12638, 11);
-#elif __ia64__
-CheckTypeSize(GdkPixbufAnimation *,8, 12638, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbufAnimation *,4, 12638, 6);
-#elif __powerpc64__
-CheckTypeSize(GdkPixbufAnimation *,8, 12638, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbufAnimation *,4, 12638, 10);
-#elif __s390x__
-CheckTypeSize(GdkPixbufAnimation *,8, 12638, 12);
-#elif 1
-CheckTypeSize(GdkPixbufAnimation *,0, 12638, 1);
-#endif
-
-#if __i386__
-CheckEnum("GDK_PIXBUF_ROTATE_NONE",GDK_PIXBUF_ROTATE_NONE,0,43329);
-CheckEnum("GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE",GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE,90,43330);
-CheckEnum("GDK_PIXBUF_ROTATE_UPSIDEDOWN",GDK_PIXBUF_ROTATE_UPSIDEDOWN,180,43331);
-CheckEnum("GDK_PIXBUF_ROTATE_CLOCKWISE",GDK_PIXBUF_ROTATE_CLOCKWISE,270,43332);
-#elif __x86_64__
-CheckEnum("GDK_PIXBUF_ROTATE_NONE",GDK_PIXBUF_ROTATE_NONE,0,43329);
-CheckEnum("GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE",GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE,90,43330);
-CheckEnum("GDK_PIXBUF_ROTATE_UPSIDEDOWN",GDK_PIXBUF_ROTATE_UPSIDEDOWN,180,43331);
-CheckEnum("GDK_PIXBUF_ROTATE_CLOCKWISE",GDK_PIXBUF_ROTATE_CLOCKWISE,270,43332);
-#elif __ia64__
-CheckEnum("GDK_PIXBUF_ROTATE_NONE",GDK_PIXBUF_ROTATE_NONE,0,43329);
-CheckEnum("GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE",GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE,90,43330);
-CheckEnum("GDK_PIXBUF_ROTATE_UPSIDEDOWN",GDK_PIXBUF_ROTATE_UPSIDEDOWN,180,43331);
-CheckEnum("GDK_PIXBUF_ROTATE_CLOCKWISE",GDK_PIXBUF_ROTATE_CLOCKWISE,270,43332);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GDK_PIXBUF_ROTATE_NONE",GDK_PIXBUF_ROTATE_NONE,0,43329);
-CheckEnum("GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE",GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE,90,43330);
-CheckEnum("GDK_PIXBUF_ROTATE_UPSIDEDOWN",GDK_PIXBUF_ROTATE_UPSIDEDOWN,180,43331);
-CheckEnum("GDK_PIXBUF_ROTATE_CLOCKWISE",GDK_PIXBUF_ROTATE_CLOCKWISE,270,43332);
-#elif __powerpc64__
-CheckEnum("GDK_PIXBUF_ROTATE_NONE",GDK_PIXBUF_ROTATE_NONE,0,43329);
-CheckEnum("GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE",GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE,90,43330);
-CheckEnum("GDK_PIXBUF_ROTATE_UPSIDEDOWN",GDK_PIXBUF_ROTATE_UPSIDEDOWN,180,43331);
-CheckEnum("GDK_PIXBUF_ROTATE_CLOCKWISE",GDK_PIXBUF_ROTATE_CLOCKWISE,270,43332);
-#elif __s390__ && !__s390x__
-CheckEnum("GDK_PIXBUF_ROTATE_NONE",GDK_PIXBUF_ROTATE_NONE,0,43329);
-CheckEnum("GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE",GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE,90,43330);
-CheckEnum("GDK_PIXBUF_ROTATE_UPSIDEDOWN",GDK_PIXBUF_ROTATE_UPSIDEDOWN,180,43331);
-CheckEnum("GDK_PIXBUF_ROTATE_CLOCKWISE",GDK_PIXBUF_ROTATE_CLOCKWISE,270,43332);
-#elif __s390x__
-CheckEnum("GDK_PIXBUF_ROTATE_NONE",GDK_PIXBUF_ROTATE_NONE,0,43329);
-CheckEnum("GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE",GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE,90,43330);
-CheckEnum("GDK_PIXBUF_ROTATE_UPSIDEDOWN",GDK_PIXBUF_ROTATE_UPSIDEDOWN,180,43331);
-CheckEnum("GDK_PIXBUF_ROTATE_CLOCKWISE",GDK_PIXBUF_ROTATE_CLOCKWISE,270,43332);
-#elif 1
-CheckEnum("GDK_PIXBUF_ROTATE_NONE",GDK_PIXBUF_ROTATE_NONE,0,43329);
-CheckEnum("GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE",GDK_PIXBUF_ROTATE_COUNTERCLOCKWISE,90,43330);
-CheckEnum("GDK_PIXBUF_ROTATE_UPSIDEDOWN",GDK_PIXBUF_ROTATE_UPSIDEDOWN,180,43331);
-CheckEnum("GDK_PIXBUF_ROTATE_CLOCKWISE",GDK_PIXBUF_ROTATE_CLOCKWISE,270,43332);
-#endif
-
-#if __i386__
-CheckTypeSize(GdkPixbufRotation,4, 12640, 2);
-#elif __x86_64__
-CheckTypeSize(GdkPixbufRotation,4, 12640, 11);
-#elif __ia64__
-CheckTypeSize(GdkPixbufRotation,4, 12640, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbufRotation,4, 12640, 6);
-#elif __powerpc64__
-CheckTypeSize(GdkPixbufRotation,4, 12640, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbufRotation,4, 12640, 10);
-#elif __s390x__
-CheckTypeSize(GdkPixbufRotation,4, 12640, 12);
-#elif 1
-CheckTypeSize(GdkPixbufRotation,0, 12640, 1);
-#endif
-
-#if __i386__
-CheckTypeSize(struct _GdkPixbufLoaderClass,84, 12641, 2);
-CheckMemberSize(struct _GdkPixbufLoaderClass,size_prepared,4,2,43337);
-CheckOffset(struct _GdkPixbufLoaderClass,size_prepared,68,2,43337);
-CheckMemberSize(struct _GdkPixbufLoaderClass,area_prepared,4,2,43339);
-CheckOffset(struct _GdkPixbufLoaderClass,area_prepared,72,2,43339);
-CheckMemberSize(struct _GdkPixbufLoaderClass,area_updated,4,2,43345);
-CheckOffset(struct _GdkPixbufLoaderClass,area_updated,76,2,43345);
-CheckMemberSize(struct _GdkPixbufLoaderClass,closed,4,2,43346);
-CheckOffset(struct _GdkPixbufLoaderClass,closed,80,2,43346);
-#elif __x86_64__
-CheckTypeSize(struct _GdkPixbufLoaderClass,168, 12641, 11);
-CheckMemberSize(struct _GdkPixbufLoaderClass,size_prepared,8,11,43337);
-CheckOffset(struct _GdkPixbufLoaderClass,size_prepared,136,11,43337);
-CheckMemberSize(struct _GdkPixbufLoaderClass,area_prepared,8,11,43339);
-CheckOffset(struct _GdkPixbufLoaderClass,area_prepared,144,11,43339);
-CheckMemberSize(struct _GdkPixbufLoaderClass,area_updated,8,11,43345);
-CheckOffset(struct _GdkPixbufLoaderClass,area_updated,152,11,43345);
-CheckMemberSize(struct _GdkPixbufLoaderClass,closed,8,11,43346);
-CheckOffset(struct _GdkPixbufLoaderClass,closed,160,11,43346);
-#elif __ia64__
-CheckTypeSize(struct _GdkPixbufLoaderClass,168, 12641, 3);
-CheckMemberSize(struct _GdkPixbufLoaderClass,size_prepared,8,3,43337);
-CheckOffset(struct _GdkPixbufLoaderClass,size_prepared,136,3,43337);
-CheckMemberSize(struct _GdkPixbufLoaderClass,area_prepared,8,3,43339);
-CheckOffset(struct _GdkPixbufLoaderClass,area_prepared,144,3,43339);
-CheckMemberSize(struct _GdkPixbufLoaderClass,area_updated,8,3,43345);
-CheckOffset(struct _GdkPixbufLoaderClass,area_updated,152,3,43345);
-CheckMemberSize(struct _GdkPixbufLoaderClass,closed,8,3,43346);
-CheckOffset(struct _GdkPixbufLoaderClass,closed,160,3,43346);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(struct _GdkPixbufLoaderClass,84, 12641, 6);
-CheckMemberSize(struct _GdkPixbufLoaderClass,size_prepared,4,6,43337);
-CheckOffset(struct _GdkPixbufLoaderClass,size_prepared,68,6,43337);
-CheckMemberSize(struct _GdkPixbufLoaderClass,area_prepared,4,6,43339);
-CheckOffset(struct _GdkPixbufLoaderClass,area_prepared,72,6,43339);
-CheckMemberSize(struct _GdkPixbufLoaderClass,area_updated,4,6,43345);
-CheckOffset(struct _GdkPixbufLoaderClass,area_updated,76,6,43345);
-CheckMemberSize(struct _GdkPixbufLoaderClass,closed,4,6,43346);
-CheckOffset(struct _GdkPixbufLoaderClass,closed,80,6,43346);
-#elif __powerpc64__
-CheckTypeSize(struct _GdkPixbufLoaderClass,168, 12641, 9);
-CheckMemberSize(struct _GdkPixbufLoaderClass,size_prepared,8,9,43337);
-CheckOffset(struct _GdkPixbufLoaderClass,size_prepared,136,9,43337);
-CheckMemberSize(struct _GdkPixbufLoaderClass,area_prepared,8,9,43339);
-CheckOffset(struct _GdkPixbufLoaderClass,area_prepared,144,9,43339);
-CheckMemberSize(struct _GdkPixbufLoaderClass,area_updated,8,9,43345);
-CheckOffset(struct _GdkPixbufLoaderClass,area_updated,152,9,43345);
-CheckMemberSize(struct _GdkPixbufLoaderClass,closed,8,9,43346);
-CheckOffset(struct _GdkPixbufLoaderClass,closed,160,9,43346);
-#elif __s390__ && !__s390x__
-CheckTypeSize(struct _GdkPixbufLoaderClass,84, 12641, 10);
-CheckMemberSize(struct _GdkPixbufLoaderClass,size_prepared,4,10,43337);
-CheckOffset(struct _GdkPixbufLoaderClass,size_prepared,68,10,43337);
-CheckMemberSize(struct _GdkPixbufLoaderClass,area_prepared,4,10,43339);
-CheckOffset(struct _GdkPixbufLoaderClass,area_prepared,72,10,43339);
-CheckMemberSize(struct _GdkPixbufLoaderClass,area_updated,4,10,43345);
-CheckOffset(struct _GdkPixbufLoaderClass,area_updated,76,10,43345);
-CheckMemberSize(struct _GdkPixbufLoaderClass,closed,4,10,43346);
-CheckOffset(struct _GdkPixbufLoaderClass,closed,80,10,43346);
-#elif __s390x__
-CheckTypeSize(struct _GdkPixbufLoaderClass,168, 12641, 12);
-CheckMemberSize(struct _GdkPixbufLoaderClass,size_prepared,8,12,43337);
-CheckOffset(struct _GdkPixbufLoaderClass,size_prepared,136,12,43337);
-CheckMemberSize(struct _GdkPixbufLoaderClass,area_prepared,8,12,43339);
-CheckOffset(struct _GdkPixbufLoaderClass,area_prepared,144,12,43339);
-CheckMemberSize(struct _GdkPixbufLoaderClass,area_updated,8,12,43345);
-CheckOffset(struct _GdkPixbufLoaderClass,area_updated,152,12,43345);
-CheckMemberSize(struct _GdkPixbufLoaderClass,closed,8,12,43346);
-CheckOffset(struct _GdkPixbufLoaderClass,closed,160,12,43346);
-#elif 1
-CheckTypeSize(struct _GdkPixbufLoaderClass,0, 12641, 1);
-Msg("Missing member data for _GdkPixbufLoaderClass on All\n");
-CheckOffset(struct _GdkPixbufLoaderClass,parent_class,0,1,43333);
-CheckOffset(struct _GdkPixbufLoaderClass,size_prepared,0,1,43337);
-CheckOffset(struct _GdkPixbufLoaderClass,area_prepared,0,1,43339);
-CheckOffset(struct _GdkPixbufLoaderClass,area_updated,0,1,43345);
-CheckOffset(struct _GdkPixbufLoaderClass,closed,0,1,43346);
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#elif 1
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#elif 1
-#endif
-
-#if __i386__
-#elif __x86_64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#elif 1
-#endif
-
-#if __i386__
-CheckTypeSize(GdkPixbufLoaderClass,84, 12645, 2);
-#elif __x86_64__
-CheckTypeSize(GdkPixbufLoaderClass,168, 12645, 11);
-#elif __ia64__
-CheckTypeSize(GdkPixbufLoaderClass,168, 12645, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbufLoaderClass,84, 12645, 6);
-#elif __powerpc64__
-CheckTypeSize(GdkPixbufLoaderClass,168, 12645, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbufLoaderClass,84, 12645, 10);
-#elif __s390x__
-CheckTypeSize(GdkPixbufLoaderClass,168, 12645, 12);
-#elif 1
-CheckTypeSize(GdkPixbufLoaderClass,0, 12645, 1);
-#endif
-
-#if __i386__
-CheckEnum("GDK_PIXBUF_ERROR_CORRUPT_IMAGE",GDK_PIXBUF_ERROR_CORRUPT_IMAGE,0,43347);
-CheckEnum("GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY",GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY,(0) + 1,43348);
-CheckEnum("GDK_PIXBUF_ERROR_BAD_OPTION",GDK_PIXBUF_ERROR_BAD_OPTION,((0) + 1) + 1,43349);
-CheckEnum("GDK_PIXBUF_ERROR_UNKNOWN_TYPE",GDK_PIXBUF_ERROR_UNKNOWN_TYPE,(((0) + 1) + 1) + 1,43350);
-CheckEnum("GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION",GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION,((((0) + 1) + 1) + 1) + 1,43351);
-CheckEnum("GDK_PIXBUF_ERROR_FAILED",GDK_PIXBUF_ERROR_FAILED,(((((0) + 1) + 1) + 1) + 1) + 1,43352);
-#elif __x86_64__
-CheckEnum("GDK_PIXBUF_ERROR_CORRUPT_IMAGE",GDK_PIXBUF_ERROR_CORRUPT_IMAGE,0,43347);
-CheckEnum("GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY",GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY,(0) + 1,43348);
-CheckEnum("GDK_PIXBUF_ERROR_BAD_OPTION",GDK_PIXBUF_ERROR_BAD_OPTION,((0) + 1) + 1,43349);
-CheckEnum("GDK_PIXBUF_ERROR_UNKNOWN_TYPE",GDK_PIXBUF_ERROR_UNKNOWN_TYPE,(((0) + 1) + 1) + 1,43350);
-CheckEnum("GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION",GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION,((((0) + 1) + 1) + 1) + 1,43351);
-CheckEnum("GDK_PIXBUF_ERROR_FAILED",GDK_PIXBUF_ERROR_FAILED,(((((0) + 1) + 1) + 1) + 1) + 1,43352);
-#elif __ia64__
-CheckEnum("GDK_PIXBUF_ERROR_CORRUPT_IMAGE",GDK_PIXBUF_ERROR_CORRUPT_IMAGE,0,43347);
-CheckEnum("GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY",GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY,(0) + 1,43348);
-CheckEnum("GDK_PIXBUF_ERROR_BAD_OPTION",GDK_PIXBUF_ERROR_BAD_OPTION,((0) + 1) + 1,43349);
-CheckEnum("GDK_PIXBUF_ERROR_UNKNOWN_TYPE",GDK_PIXBUF_ERROR_UNKNOWN_TYPE,(((0) + 1) + 1) + 1,43350);
-CheckEnum("GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION",GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION,((((0) + 1) + 1) + 1) + 1,43351);
-CheckEnum("GDK_PIXBUF_ERROR_FAILED",GDK_PIXBUF_ERROR_FAILED,(((((0) + 1) + 1) + 1) + 1) + 1,43352);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GDK_PIXBUF_ERROR_CORRUPT_IMAGE",GDK_PIXBUF_ERROR_CORRUPT_IMAGE,0,43347);
-CheckEnum("GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY",GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY,(0) + 1,43348);
-CheckEnum("GDK_PIXBUF_ERROR_BAD_OPTION",GDK_PIXBUF_ERROR_BAD_OPTION,((0) + 1) + 1,43349);
-CheckEnum("GDK_PIXBUF_ERROR_UNKNOWN_TYPE",GDK_PIXBUF_ERROR_UNKNOWN_TYPE,(((0) + 1) + 1) + 1,43350);
-CheckEnum("GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION",GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION,((((0) + 1) + 1) + 1) + 1,43351);
-CheckEnum("GDK_PIXBUF_ERROR_FAILED",GDK_PIXBUF_ERROR_FAILED,(((((0) + 1) + 1) + 1) + 1) + 1,43352);
-#elif __powerpc64__
-CheckEnum("GDK_PIXBUF_ERROR_CORRUPT_IMAGE",GDK_PIXBUF_ERROR_CORRUPT_IMAGE,0,43347);
-CheckEnum("GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY",GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY,(0) + 1,43348);
-CheckEnum("GDK_PIXBUF_ERROR_BAD_OPTION",GDK_PIXBUF_ERROR_BAD_OPTION,((0) + 1) + 1,43349);
-CheckEnum("GDK_PIXBUF_ERROR_UNKNOWN_TYPE",GDK_PIXBUF_ERROR_UNKNOWN_TYPE,(((0) + 1) + 1) + 1,43350);
-CheckEnum("GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION",GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION,((((0) + 1) + 1) + 1) + 1,43351);
-CheckEnum("GDK_PIXBUF_ERROR_FAILED",GDK_PIXBUF_ERROR_FAILED,(((((0) + 1) + 1) + 1) + 1) + 1,43352);
-#elif __s390__ && !__s390x__
-CheckEnum("GDK_PIXBUF_ERROR_CORRUPT_IMAGE",GDK_PIXBUF_ERROR_CORRUPT_IMAGE,0,43347);
-CheckEnum("GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY",GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY,(0) + 1,43348);
-CheckEnum("GDK_PIXBUF_ERROR_BAD_OPTION",GDK_PIXBUF_ERROR_BAD_OPTION,((0) + 1) + 1,43349);
-CheckEnum("GDK_PIXBUF_ERROR_UNKNOWN_TYPE",GDK_PIXBUF_ERROR_UNKNOWN_TYPE,(((0) + 1) + 1) + 1,43350);
-CheckEnum("GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION",GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION,((((0) + 1) + 1) + 1) + 1,43351);
-CheckEnum("GDK_PIXBUF_ERROR_FAILED",GDK_PIXBUF_ERROR_FAILED,(((((0) + 1) + 1) + 1) + 1) + 1,43352);
-#elif __s390x__
-CheckEnum("GDK_PIXBUF_ERROR_CORRUPT_IMAGE",GDK_PIXBUF_ERROR_CORRUPT_IMAGE,0,43347);
-CheckEnum("GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY",GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY,(0) + 1,43348);
-CheckEnum("GDK_PIXBUF_ERROR_BAD_OPTION",GDK_PIXBUF_ERROR_BAD_OPTION,((0) + 1) + 1,43349);
-CheckEnum("GDK_PIXBUF_ERROR_UNKNOWN_TYPE",GDK_PIXBUF_ERROR_UNKNOWN_TYPE,(((0) + 1) + 1) + 1,43350);
-CheckEnum("GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION",GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION,((((0) + 1) + 1) + 1) + 1,43351);
-CheckEnum("GDK_PIXBUF_ERROR_FAILED",GDK_PIXBUF_ERROR_FAILED,(((((0) + 1) + 1) + 1) + 1) + 1,43352);
-#elif 1
-CheckEnum("GDK_PIXBUF_ERROR_CORRUPT_IMAGE",GDK_PIXBUF_ERROR_CORRUPT_IMAGE,0,43347);
-CheckEnum("GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY",GDK_PIXBUF_ERROR_INSUFFICIENT_MEMORY,(0) + 1,43348);
-CheckEnum("GDK_PIXBUF_ERROR_BAD_OPTION",GDK_PIXBUF_ERROR_BAD_OPTION,((0) + 1) + 1,43349);
-CheckEnum("GDK_PIXBUF_ERROR_UNKNOWN_TYPE",GDK_PIXBUF_ERROR_UNKNOWN_TYPE,(((0) + 1) + 1) + 1,43350);
-CheckEnum("GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION",GDK_PIXBUF_ERROR_UNSUPPORTED_OPERATION,((((0) + 1) + 1) + 1) + 1,43351);
-CheckEnum("GDK_PIXBUF_ERROR_FAILED",GDK_PIXBUF_ERROR_FAILED,(((((0) + 1) + 1) + 1) + 1) + 1,43352);
-#endif
-
-#if __i386__
-CheckTypeSize(GdkPixbufError,4, 12647, 2);
-#elif __x86_64__
-CheckTypeSize(GdkPixbufError,4, 12647, 11);
-#elif __ia64__
-CheckTypeSize(GdkPixbufError,4, 12647, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbufError,4, 12647, 6);
-#elif __powerpc64__
-CheckTypeSize(GdkPixbufError,4, 12647, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbufError,4, 12647, 10);
-#elif __s390x__
-CheckTypeSize(GdkPixbufError,4, 12647, 12);
-#elif 1
-CheckTypeSize(GdkPixbufError,0, 12647, 1);
-#endif
-
-#if __i386__
-CheckEnum("GDK_PIXBUF_ALPHA_BILEVEL",GDK_PIXBUF_ALPHA_BILEVEL,0,43353);
-CheckEnum("GDK_PIXBUF_ALPHA_FULL",GDK_PIXBUF_ALPHA_FULL,(0) + 1,43354);
-#elif __x86_64__
-CheckEnum("GDK_PIXBUF_ALPHA_BILEVEL",GDK_PIXBUF_ALPHA_BILEVEL,0,43353);
-CheckEnum("GDK_PIXBUF_ALPHA_FULL",GDK_PIXBUF_ALPHA_FULL,(0) + 1,43354);
-#elif __ia64__
-CheckEnum("GDK_PIXBUF_ALPHA_BILEVEL",GDK_PIXBUF_ALPHA_BILEVEL,0,43353);
-CheckEnum("GDK_PIXBUF_ALPHA_FULL",GDK_PIXBUF_ALPHA_FULL,(0) + 1,43354);
-#elif __powerpc__ && !__powerpc64__
-CheckEnum("GDK_PIXBUF_ALPHA_BILEVEL",GDK_PIXBUF_ALPHA_BILEVEL,0,43353);
-CheckEnum("GDK_PIXBUF_ALPHA_FULL",GDK_PIXBUF_ALPHA_FULL,(0) + 1,43354);
-#elif __powerpc64__
-CheckEnum("GDK_PIXBUF_ALPHA_BILEVEL",GDK_PIXBUF_ALPHA_BILEVEL,0,43353);
-CheckEnum("GDK_PIXBUF_ALPHA_FULL",GDK_PIXBUF_ALPHA_FULL,(0) + 1,43354);
-#elif __s390__ && !__s390x__
-CheckEnum("GDK_PIXBUF_ALPHA_BILEVEL",GDK_PIXBUF_ALPHA_BILEVEL,0,43353);
-CheckEnum("GDK_PIXBUF_ALPHA_FULL",GDK_PIXBUF_ALPHA_FULL,(0) + 1,43354);
-#elif __s390x__
-CheckEnum("GDK_PIXBUF_ALPHA_BILEVEL",GDK_PIXBUF_ALPHA_BILEVEL,0,43353);
-CheckEnum("GDK_PIXBUF_ALPHA_FULL",GDK_PIXBUF_ALPHA_FULL,(0) + 1,43354);
-#elif 1
-CheckEnum("GDK_PIXBUF_ALPHA_BILEVEL",GDK_PIXBUF_ALPHA_BILEVEL,0,43353);
-CheckEnum("GDK_PIXBUF_ALPHA_FULL",GDK_PIXBUF_ALPHA_FULL,(0) + 1,43354);
-#endif
-
-#if __i386__
-CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 2);
-#elif __x86_64__
-CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 11);
-#elif __ia64__
-CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 3);
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 6);
-#elif __powerpc64__
-CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 9);
-#elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 10);
-#elif __s390x__
-CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 12);
-#elif 1
-CheckTypeSize(GdkPixbufAlphaMode,0, 12649, 1);
+CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 12)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12649,0);
+Msg("Find size of GdkPixbufAlphaMode (12649)\n");
 #endif
 
 extern gboolean gdk_pixbuf_save_to_callbackv_db(GdkPixbuf *, GdkPixbufSaveFunc, gpointer, const char *, char * *, char * *, GError * *);
