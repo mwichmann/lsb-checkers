@@ -435,6 +435,12 @@ CheckTypeSize(CLIENT,12, 10389, 10)
 CheckTypeSize(CLIENT,24, 10389, 3)
 #elif __powerpc__ && !__powerpc64__
 CheckTypeSize(CLIENT,12, 10389, 6)
+#elif __powerpc64__
+CheckTypeSize(CLIENT,24, 10389, 9)
+#elif __x86_64__
+CheckTypeSize(CLIENT,24, 10389, 11)
+#elif __s390x__
+CheckTypeSize(CLIENT,24, 10389, 12)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10389,0);
 Msg("Find size of CLIENT (10389)\n");
