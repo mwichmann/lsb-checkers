@@ -146,7 +146,7 @@ extern int posix_spawnattr_setschedpolicy_db(posix_spawnattr_t *, struct sched_p
 CheckInterfacedef(posix_spawnattr_setschedpolicy,posix_spawnattr_setschedpolicy_db);
 extern int posix_spawnattr_setsigdefault_db(posix_spawnattr_t *, sigset_t *);
 CheckInterfacedef(posix_spawnattr_setsigdefault,posix_spawnattr_setsigdefault_db);
-extern int posix_spawnattr_setsigmask_db(posix_spawnattr_t *, struct random_data);
+extern int posix_spawnattr_setsigmask_db(posix_spawnattr_t *, const sigset_t *);
 CheckInterfacedef(posix_spawnattr_setsigmask,posix_spawnattr_setsigmask_db);
 extern int posix_spawnp_db(pid_t, const char *, posix_spawn_file_actions_t *const , posix_spawnattr_t *const , char *const [], char *);
 CheckInterfacedef(posix_spawnp,posix_spawnp_db);
