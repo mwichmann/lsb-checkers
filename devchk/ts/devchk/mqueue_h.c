@@ -26,7 +26,7 @@ Msg("Checking data structures in mqueue.h\n");
 
 printf("Checking data structures in mqueue.h\n");
 #if 1
-CheckTypeSize(mqd_t,0, 16573, 1)
+CheckTypeSize(mqd_t,4, 16573, 1)
 #endif
 
 #if __i386__
