@@ -61,7 +61,7 @@ Msg("Find size of statfs64 (10321)\n");
 
 extern int fstatfs64_db(int, struct statfs64 *);
 CheckInterfacedef(fstatfs64,fstatfs64_db);
-extern int statfs64_db(const char *, struct stat64 *);
+extern int statfs64_db(const char *, struct statfs64 *);
 CheckInterfacedef(statfs64,statfs64_db);
 extern int fstatfs_db(int, struct statfs *);
 CheckInterfacedef(fstatfs,fstatfs_db);
