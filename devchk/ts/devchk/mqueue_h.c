@@ -50,7 +50,7 @@ extern int mq_getattr_db(mqd_t, struct mq_attr *);
 CheckInterfacedef(mq_getattr,mq_getattr_db);
 extern int mq_notify_db(mqd_t, const struct sigevent *);
 CheckInterfacedef(mq_notify,mq_notify_db);
-extern ssize_t mq_open_db(const char *, int, ...);
+extern mqd_t mq_open_db(const char *, int, ...);
 CheckInterfacedef(mq_open,mq_open_db);
 extern ssize_t mq_receive_db(mqd_t, char *, size_t, unsigned int *);
 CheckInterfacedef(mq_receive,mq_receive_db);
