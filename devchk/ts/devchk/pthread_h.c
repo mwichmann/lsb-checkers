@@ -495,7 +495,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9057,0);
 Msg("Find size of pthread_rwlockattr_t (9057)\n");
 #endif
 
-extern int pthread_mutex_timedlock_db(pthread_mutex_t, const struct timespec *);
+extern int pthread_mutex_timedlock_db(pthread_mutex_t *, const struct timespec *);
 CheckInterfacedef(pthread_mutex_timedlock,pthread_mutex_timedlock_db);
 /* XXX hand-edit
 extern void _pthread_cleanup_pop_db(struct _pthread_cleanup_buffer *, int);
