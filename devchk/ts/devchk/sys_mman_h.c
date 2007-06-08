@@ -279,6 +279,8 @@ cnt++;
 
 #endif
 
+extern int posix_madvise_db(void, size_t, int);
+CheckInterfacedef(posix_madvise,posix_madvise_db);
 extern int msync_db(void *, size_t, int);
 CheckInterfacedef(msync,msync_db);
 extern int mlock_db(const void *, size_t);
