@@ -77855,6 +77855,27 @@ struct versym DynSyms[] = {
 #if __s390x__
 	{"xdrrec_eof","GLIBC_2.2",0,LSB_Core},
 #endif
+#if __i386__
+	{"xdrstdio_create","GLIBC_2.0",0,LSB_Core},
+#endif
+#if __ia64__
+	{"xdrstdio_create","GLIBC_2.2",0,LSB_Core},
+#endif
+#if __powerpc__ && !__powerpc64__
+	{"xdrstdio_create","GLIBC_2.0",0,LSB_Core},
+#endif
+#if __powerpc64__
+	{"xdrstdio_create","GLIBC_2.3",0,LSB_Core},
+#endif
+#if __s390__ && !__s390x__
+	{"xdrstdio_create","GLIBC_2.0",0,LSB_Core},
+#endif
+#if __x86_64__
+	{"xdrstdio_create","GLIBC_2.2.5",0,LSB_Core},
+#endif
+#if __s390x__
+	{"xdrstdio_create","GLIBC_2.2",0,LSB_Core},
+#endif
 	{"xlib_draw_gray_image","",0,LSB_Toolkit_Gtk},
 	{"xlib_draw_indexed_image","",0,LSB_Toolkit_Gtk},
 	{"xlib_draw_rgb_32_image","",0,LSB_Toolkit_Gtk},
