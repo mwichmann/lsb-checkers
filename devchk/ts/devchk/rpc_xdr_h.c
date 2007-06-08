@@ -120,6 +120,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9949,0);
 Msg("Find size of xdr_discrim (9949)\n");
 #endif
 
+extern void xdrstdio_create_db(XDR *, FILE *, enum xdr_op);
+CheckInterfacedef(xdrstdio_create,xdrstdio_create_db);
 extern bool_t xdr_array_db(XDR *, caddr_t *, u_int *, u_int, u_int, xdrproc_t);
 CheckInterfacedef(xdr_array,xdr_array_db);
 extern bool_t xdr_bool_db(XDR *, bool_t *);
