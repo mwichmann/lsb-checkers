@@ -190,7 +190,7 @@ CheckTypeSize(ucontext_t,1440, 10220, 9)
 
 extern int getcontext_db(ucontext_t *);
 CheckInterfacedef(getcontext,getcontext_db);
-extern int makecontext_db(ucontext_t *, void(*func)(void)
+extern void makecontext_db(ucontext_t *, void(*func)(void)
 , int, ...);
 CheckInterfacedef(makecontext,makecontext_db);
 extern int setcontext_db(const struct ucontext *);
