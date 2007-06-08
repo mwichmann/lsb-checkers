@@ -76,7 +76,7 @@ extern int msgctl_db(int, int, struct msqid_ds *);
 CheckInterfacedef(msgctl,msgctl_db);
 extern int msgget_db(key_t, int);
 CheckInterfacedef(msgget,msgget_db);
-extern int msgrcv_db(int, void *, size_t, long int, int);
+extern ssize_t msgrcv_db(int, void *, size_t, long int, int);
 CheckInterfacedef(msgrcv,msgrcv_db);
 extern int msgsnd_db(int, const void *, size_t, int);
 CheckInterfacedef(msgsnd,msgsnd_db);
