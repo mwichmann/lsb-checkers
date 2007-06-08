@@ -109,7 +109,7 @@ struct versym librt_so_1[] = {
 	{"mq_close","GLIBC_2.3.4",0,LSB_Core,0,1},
 	{"mq_getattr","GLIBC_2.3.4",0,LSB_Core,0,1},
 	{"mq_notify","GLIBC_2.3.4",0,LSB_Core,0,1},
-	{"mq_open","GLIBC_2.3.4",0,LSB_Core,0,1},
+	{"mq_open","GLIBC_2.3.4",0,LSB_Core,4,1},
 	{"mq_receive","GLIBC_2.3.4",0,LSB_Core,0,1},
 	{"mq_send","GLIBC_2.3.4",0,LSB_Core,0,1},
 	{"mq_setattr","GLIBC_2.3.4",0,LSB_Core,0,1},

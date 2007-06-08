@@ -7901,25 +7901,25 @@ struct versym libc_so_6[] = {
 	{"lseek","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if __i386__
-	{"makecontext","GLIBC_2.1",0,LSB_Core,4,1},
+	{"makecontext","GLIBC_2.1",0,LSB_Core,1,1},
 #endif
 #if __ia64__
-	{"makecontext","GLIBC_2.2",0,LSB_Core,4,1},
+	{"makecontext","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"makecontext","GLIBC_2.3.4",0,LSB_Core,4,1},
+	{"makecontext","GLIBC_2.3.4",0,LSB_Core,1,1},
 #endif
 #if __powerpc64__
-	{"makecontext","GLIBC_2.3",0,LSB_Core,4,1},
+	{"makecontext","GLIBC_2.3",0,LSB_Core,1,1},
 #endif
 #if __s390__ && !__s390x__
-	{"makecontext","GLIBC_2.1",0,LSB_Core,4,1},
+	{"makecontext","GLIBC_2.1",0,LSB_Core,1,1},
 #endif
 #if __x86_64__
-	{"makecontext","GLIBC_2.2.5",0,LSB_Core,4,1},
+	{"makecontext","GLIBC_2.2.5",0,LSB_Core,1,1},
 #endif
 #if __s390x__
-	{"makecontext","GLIBC_2.2",0,LSB_Core,4,1},
+	{"makecontext","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
 #if __i386__
 	{"malloc","GLIBC_2.0",0,LSB_Core,0,1},
@@ -8576,22 +8576,22 @@ struct versym libc_so_6[] = {
 	{"msgrcv","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if __ia64__
-	{"msgrcv","GLIBC_2.2",0,LSB_Core,4,1},
+	{"msgrcv","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"msgrcv","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if __powerpc64__
-	{"msgrcv","GLIBC_2.3",0,LSB_Core,4,1},
+	{"msgrcv","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if __s390__ && !__s390x__
 	{"msgrcv","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if __x86_64__
-	{"msgrcv","GLIBC_2.2.5",0,LSB_Core,4,1},
+	{"msgrcv","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
 #if __s390x__
-	{"msgrcv","GLIBC_2.2",0,LSB_Core,4,1},
+	{"msgrcv","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if __i386__
 	{"msgsnd","GLIBC_2.0",0,LSB_Core,4,1},
@@ -10191,19 +10191,19 @@ struct versym libc_so_6[] = {
 	{"readdir64","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
 #if __i386__
-	{"readdir64_r","GLIBC_2.1",0,LSB_Core,4,1},
+	{"readdir64_r","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if __ia64__
 	{"readdir64_r","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if __powerpc__ && !__powerpc64__
-	{"readdir64_r","GLIBC_2.1",0,LSB_Core,4,1},
+	{"readdir64_r","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if __powerpc64__
 	{"readdir64_r","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if __s390__ && !__s390x__
-	{"readdir64_r","GLIBC_2.1",0,LSB_Core,4,1},
+	{"readdir64_r","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if __x86_64__
 	{"readdir64_r","GLIBC_2.2.5",0,LSB_Core,4,1},
@@ -10236,22 +10236,22 @@ struct versym libc_so_6[] = {
 	{"readlink","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if __ia64__
-	{"readlink","GLIBC_2.2",0,LSB_Core,4,1},
+	{"readlink","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if __powerpc__ && !__powerpc64__
 	{"readlink","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if __powerpc64__
-	{"readlink","GLIBC_2.3",0,LSB_Core,4,1},
+	{"readlink","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if __s390__ && !__s390x__
 	{"readlink","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if __x86_64__
-	{"readlink","GLIBC_2.2.5",0,LSB_Core,4,1},
+	{"readlink","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
 #if __s390x__
-	{"readlink","GLIBC_2.2",0,LSB_Core,4,1},
+	{"readlink","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if __i386__
 	{"readv","GLIBC_2.0",0,LSB_Core,4,1},
