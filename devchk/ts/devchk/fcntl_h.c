@@ -529,6 +529,8 @@ extern int lockf64_db(int, int, off64_t);
 CheckInterfacedef(lockf64,lockf64_db);
 extern int fcntl_db(int, int, ...);
 CheckInterfacedef(fcntl,fcntl_db);
+extern int open_db(const char *, int, ...);
+CheckInterfacedef(open,open_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
