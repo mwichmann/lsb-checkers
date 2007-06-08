@@ -525,6 +525,14 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10218,0);
 Msg("Find size of flock64 (10218)\n");
 #endif
 
+extern int posix_fadvise_db(int, off_t, off_t, int);
+CheckInterfacedef(posix_fadvise,posix_fadvise_db);
+extern int posix_fallocate_db(int, off_t, off_t);
+CheckInterfacedef(posix_fallocate,posix_fallocate_db);
+extern int posix_fadvise64_db(int, off64_t, off64_t, int);
+CheckInterfacedef(posix_fadvise64,posix_fadvise64_db);
+extern int posix_fallocate64_db(int, off64_t, off64_t);
+CheckInterfacedef(posix_fallocate64,posix_fallocate64_db);
 extern int lockf64_db(int, int, off64_t);
 CheckInterfacedef(lockf64,lockf64_db);
 extern int fcntl_db(int, int, ...);
