@@ -1879,6 +1879,8 @@ CheckTypeSize(intptr_t,4, 9196, 6)
 CheckTypeSize(intptr_t,8, 9196, 3)
 #elif __x86_64__
 CheckTypeSize(intptr_t,8, 9196, 11)
+#elif __s390x__
+CheckTypeSize(intptr_t,8, 9196, 12)
 #endif
 
 extern pid_t __getpgid_db(pid_t);
