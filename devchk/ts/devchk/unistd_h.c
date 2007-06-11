@@ -1867,22 +1867,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9112,0);
 Msg("Find size of off64_t (9112)\n");
 #endif
 
-#if __i386__
-CheckTypeSize(intptr_t,4, 9196, 2)
-#elif __powerpc64__
-CheckTypeSize(intptr_t,8, 9196, 9)
-#elif __s390__ && !__s390x__
-CheckTypeSize(intptr_t,4, 9196, 10)
-#elif __powerpc__ && !__powerpc64__
-CheckTypeSize(intptr_t,4, 9196, 6)
-#elif __ia64__
-CheckTypeSize(intptr_t,8, 9196, 3)
-#elif __x86_64__
-CheckTypeSize(intptr_t,8, 9196, 11)
-#elif __s390x__
-CheckTypeSize(intptr_t,8, 9196, 12)
-#endif
-
 extern pid_t __getpgid_db(pid_t);
 CheckInterfacedef(__getpgid,__getpgid_db);
 extern void _exit_db(int);
