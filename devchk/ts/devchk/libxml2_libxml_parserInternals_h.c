@@ -28,7 +28,7 @@ Msg("Checking data structures in libxml2/libxml/parserInternals.h\n");
 printf("Checking data structures in libxml2/libxml/parserInternals.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef XML_MAX_NAMELEN
-	CompareConstant(XML_MAX_NAMELEN,100,9448,architecture)
+	CompareConstant(XML_MAX_NAMELEN,100,9448,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: XML_MAX_NAMELEN\n");
 cnt++;
@@ -38,7 +38,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef INPUT_CHUNK
-	CompareConstant(INPUT_CHUNK,250,9449,architecture)
+	CompareConstant(INPUT_CHUNK,250,9449,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: INPUT_CHUNK\n");
 cnt++;
@@ -136,7 +136,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef XML_SUBSTITUTE_NONE
-	CompareConstant(XML_SUBSTITUTE_NONE,0,9472,architecture)
+	CompareConstant(XML_SUBSTITUTE_NONE,0,9472,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: XML_SUBSTITUTE_NONE\n");
 cnt++;
@@ -146,7 +146,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef XML_SUBSTITUTE_REF
-	CompareConstant(XML_SUBSTITUTE_REF,1,9473,architecture)
+	CompareConstant(XML_SUBSTITUTE_REF,1,9473,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: XML_SUBSTITUTE_REF\n");
 cnt++;
@@ -156,7 +156,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef XML_SUBSTITUTE_PEREF
-	CompareConstant(XML_SUBSTITUTE_PEREF,2,9474,architecture)
+	CompareConstant(XML_SUBSTITUTE_PEREF,2,9474,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: XML_SUBSTITUTE_PEREF\n");
 cnt++;
@@ -166,7 +166,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef XML_SUBSTITUTE_BOTH
-	CompareConstant(XML_SUBSTITUTE_BOTH,3,9475,architecture)
+	CompareConstant(XML_SUBSTITUTE_BOTH,3,9475,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: XML_SUBSTITUTE_BOTH\n");
 cnt++;
@@ -175,21 +175,21 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(xmlEntityReferenceFunc,4, 15021, 2)
+CheckTypeSize(xmlEntityReferenceFunc,4, 15021, 2, 3.1, NULL, 15020, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 11)
+CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 11, 3.1, NULL, 15020, NULL)
 #elif __ia64__
-CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 3)
+CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 3, 3.1, NULL, 15020, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlEntityReferenceFunc,4, 15021, 6)
+CheckTypeSize(xmlEntityReferenceFunc,4, 15021, 6, 3.1, NULL, 15020, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 9)
+CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 9, 3.1, NULL, 15020, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlEntityReferenceFunc,4, 15021, 10)
+CheckTypeSize(xmlEntityReferenceFunc,4, 15021, 10, 3.1, NULL, 15020, NULL)
 #elif __s390x__
-CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 12)
+CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 12, 3.1, NULL, 15020, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15021,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15020, NULL);\n",architecture,15021,0);
 Msg("Find size of xmlEntityReferenceFunc (15021)\n");
 #endif
 

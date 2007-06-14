@@ -27,7 +27,7 @@ Msg("Checking data structures in sys/utsname.h\n");
 printf("Checking data structures in sys/utsname.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SYS_NMLN
-	CompareConstant(SYS_NMLN,65,1728,architecture)
+	CompareConstant(SYS_NMLN,65,1728,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: SYS_NMLN\n");
 cnt++;
@@ -43,7 +43,7 @@ cnt++;
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7013,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,7013,0);
 Msg("Find size of utsname (7013)\n");
 #endif
 

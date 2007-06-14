@@ -27,7 +27,7 @@ Msg("Checking data structures in utmp.h\n");
 printf("Checking data structures in utmp.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef UT_LINESIZE
-	CompareConstant(UT_LINESIZE,32,4960,architecture)
+	CompareConstant(UT_LINESIZE,32,4960,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: UT_LINESIZE\n");
 cnt++;
@@ -37,7 +37,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef UT_NAMESIZE
-	CompareConstant(UT_NAMESIZE,32,4961,architecture)
+	CompareConstant(UT_NAMESIZE,32,4961,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: UT_NAMESIZE\n");
 cnt++;
@@ -47,7 +47,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef UT_HOSTSIZE
-	CompareConstant(UT_HOSTSIZE,256,4962,architecture)
+	CompareConstant(UT_HOSTSIZE,256,4962,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: UT_HOSTSIZE\n");
 cnt++;
@@ -57,7 +57,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef EMPTY
-	CompareConstant(EMPTY,0,4963,architecture)
+	CompareConstant(EMPTY,0,4963,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: EMPTY\n");
 cnt++;
@@ -67,7 +67,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef RUN_LVL
-	CompareConstant(RUN_LVL,1,4964,architecture)
+	CompareConstant(RUN_LVL,1,4964,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: RUN_LVL\n");
 cnt++;
@@ -77,7 +77,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef BOOT_TIME
-	CompareConstant(BOOT_TIME,2,4965,architecture)
+	CompareConstant(BOOT_TIME,2,4965,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: BOOT_TIME\n");
 cnt++;
@@ -87,7 +87,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef NEW_TIME
-	CompareConstant(NEW_TIME,3,4966,architecture)
+	CompareConstant(NEW_TIME,3,4966,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: NEW_TIME\n");
 cnt++;
@@ -97,7 +97,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef OLD_TIME
-	CompareConstant(OLD_TIME,4,4967,architecture)
+	CompareConstant(OLD_TIME,4,4967,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: OLD_TIME\n");
 cnt++;
@@ -107,7 +107,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef INIT_PROCESS
-	CompareConstant(INIT_PROCESS,5,4968,architecture)
+	CompareConstant(INIT_PROCESS,5,4968,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: INIT_PROCESS\n");
 cnt++;
@@ -117,7 +117,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef LOGIN_PROCESS
-	CompareConstant(LOGIN_PROCESS,6,4969,architecture)
+	CompareConstant(LOGIN_PROCESS,6,4969,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: LOGIN_PROCESS\n");
 cnt++;
@@ -127,7 +127,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef USER_PROCESS
-	CompareConstant(USER_PROCESS,7,4970,architecture)
+	CompareConstant(USER_PROCESS,7,4970,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: USER_PROCESS\n");
 cnt++;
@@ -137,7 +137,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef DEAD_PROCESS
-	CompareConstant(DEAD_PROCESS,8,4971,architecture)
+	CompareConstant(DEAD_PROCESS,8,4971,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: DEAD_PROCESS\n");
 cnt++;
@@ -147,7 +147,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACCOUNTING
-	CompareConstant(ACCOUNTING,9,4972,architecture)
+	CompareConstant(ACCOUNTING,9,4972,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: ACCOUNTING\n");
 cnt++;
@@ -163,7 +163,7 @@ cnt++;
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10282,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10282,0);
 Msg("Find size of exit_status (10282)\n");
 #endif
 

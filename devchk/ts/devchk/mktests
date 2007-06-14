@@ -97,6 +97,15 @@ sub checkArchSpecific($$$$) {
    	    $PresentedArchs{$archentry{'ATaid'}} = 1;
    	}
 
+	# Get history info for generic record - required in cases when we want
+	# to display "REPLACE INTO ArchType" warnings
+   	$selectGenericHistory = "SELECT * FROM ArchType ";
+   	$selectGenericHistory.= "WHERE ATaid=1 ";
+   	$selectGenericHistory.= "AND ATtid=$Tid ";
+   	$selectGenericHistory.= "AND ( ATappearedin<>'' AND ATappearedin<='$lsbversion' ";
+   	$selectGenericHistory.= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin > '$lsbversion') ) ";
+	$sthGeneric = $Dbh->query($selectGenericHistory) || die $Dbh->errmsg();
+
 	# Get all supported architectures;
 	$selectAllArchs = "SELECT Aid,Asymbol FROM Architecture WHERE Aid<>1";
 	$ath = $Dbh->query($selectAllArchs) || die $Dbh->errmsg();
@@ -127,8 +136,15 @@ sub checkArchSpecific($$$$) {
 							die "Illegal condition was passed to checkArchSpecific";
 						}
 					}
+
+					@genentry = $sthGeneric->fetchrow_array;
+					$appearedin  = $genentry{'ATappearedin'};
+					$basetype    = $genentry{'ATbasetype'};
+					$withdrawnin = $genentry{'ATwithdrawnin'} ? "'\"\"$genentry{'ATwithdrawnin'}\"\"'" : "NULL";
+					$attribute   = $genentry{'ATattribute'} ? "'\"\"$genentry{'ATattribute'}\"\"'" : "NULL";
+
 					print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
-					print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+					print TESTS "%d,%d,%d,'\"\"$appearedin\"\"',$withdrawnin,$basetype,$attribute);\\n\",architecture,$Tid,0);\n";
 					print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
 					$missedCount++;
 				}
@@ -411,6 +427,10 @@ sub writetest($$) {
             $cname_save = $centry{'Cname'};
             $type_save  = $centry{'Ctype'};
             $cid_save   = $centry{'Cid'};
+            $cappearedin  = $centry{'ACappearedin'};
+            $cwithdrawnin = $centry{'ACwithdrawnin'};
+
+            $withdrawnin   = $cwithdrawnin ? "'\"\"$cwithdrawnin\"\"'" : "NULL";
             if ( $centry{'Aid'} == 1 ) {
                 $centry{Asymbol} = "_LSB_DEFAULT_ARCH";
             }
@@ -423,35 +443,35 @@ sub writetest($$) {
 
             if ( $centry{'Ctype'} eq 'int' ) {
                 print TESTS "#ifdef $centry{'Cname'}\n";
-                print TESTS "\tCompareConstant($centry{'Cname'},$centry{'ACvalue'},$centry{'Cid'},architecture)\n";
+                print TESTS "\tCompareConstant($centry{'Cname'},$centry{'ACvalue'},$centry{'Cid'},architecture,$cappearedin,$withdrawnin)\n";
                 print TESTS "#else\n";
                 print TESTS "Msg( \"Error: Constant not found: $centry{'Cname'}\\n\");\n";
                 print TESTS "cnt++;\n";
                 print TESTS "#endif\n\n";
             } elsif ( $centry{'Ctype'} eq 'long' ) {
                 print TESTS "#ifdef $centry{'Cname'}\n";
-                print TESTS "\tCompareLongConstant($centry{'Cname'},$centry{'ACvalue'},$centry{'Cid'},architecture)\n";
+                print TESTS "\tCompareLongConstant($centry{'Cname'},$centry{'ACvalue'},$centry{'Cid'},architecture,$cappearedin,$withdrawnin)\n";
                 print TESTS "#else\n";
                 print TESTS "Msg( \"Error: Constant not found: $centry{'Cname'}\\n\");\n";
                 print TESTS "cnt++;\n";
                 print TESTS "#endif\n\n";
             } elsif ( $centry{'Ctype'} eq 'float' ) {
                 print TESTS "#ifdef $centry{'Cname'}\n";
-                print TESTS "\tCompareFloatConstant($centry{'Cname'},$centry{'ACvalue'},$centry{'Cid'},architecture)\n";
+                print TESTS "\tCompareFloatConstant($centry{'Cname'},$centry{'ACvalue'},$centry{'Cid'},architecture,$cappearedin,$withdrawnin)\n";
                 print TESTS "#else\n";
                 print TESTS "Msg( \"Error: Constant not found: $centry{'Cname'}\\n\");\n";
                 print TESTS "cnt++;\n";
                 print TESTS "#endif\n\n";
             } elsif ( $centry{'Ctype'} eq 'double' ) {
                 print TESTS "#ifdef $centry{'Cname'}\n";
-                print TESTS "\tCompareDoubleConstant($centry{'Cname'},$centry{'ACvalue'},$centry{'Cid'},architecture)\n";
+                print TESTS "\tCompareDoubleConstant($centry{'Cname'},$centry{'ACvalue'},$centry{'Cid'},architecture,$cappearedin,$withdrawnin)\n";
                 print TESTS "#else\n";
                 print TESTS "Msg( \"Error: Constant not found: $centry{'Cname'}\\n\");\n";
                 print TESTS "cnt++;\n";
                 print TESTS "#endif\n\n";
             } elsif ( $centry{'Ctype'} eq 'longdouble' ) {
                 print TESTS "#ifdef $centry{'Cname'}\n";
-                print TESTS "\tCompareLongDoubleConstant($centry{'Cname'},$centry{'ACvalue'},$centry{'Cid'},architecture)\n";
+                print TESTS "\tCompareLongDoubleConstant($centry{'Cname'},$centry{'ACvalue'},$centry{'Cid'},architecture,$cappearedin,$withdrawnin)\n";
                 print TESTS "#else\n";
                 print TESTS "Msg( \"Error: Constant not found: $centry{'Cname'}\\n\");\n";
                 print TESTS "cnt++;\n";
@@ -459,7 +479,7 @@ sub writetest($$) {
             } elsif ( $centry{'Ctype'} eq 'string' ) {
                 print TESTS "#ifdef $centry{'Cname'}\n";
                 print TESTS "\tCompareStringConstant($centry{'Cname'},\""
-                  . $centry{'ACvalue'} . "\")\n";
+                  . $centry{'ACvalue'} . "\",$centry{'Cid'},architecture,$cappearedin,$withdrawnin)\n";
                 print TESTS "#else\n";
                 print TESTS "Msg( \"Error: Constant not found: $centry{'Cname'}\\n\");\n";
                 print TESTS "cnt++;\n";
@@ -475,13 +495,13 @@ sub writetest($$) {
             print TESTS "Msg( \"No definition for $cname_save ($cid_save, $type_save) in db\\n\");\n";
             print TESTS "#ifdef $cname_save\n";
             if ( $type_save eq 'int' ) {
-                print TESTS "Msg( \"REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,$cid_save,%d);\\n\", architecture, $cname_save);\n";
+                print TESTS "Msg( \"REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,$cid_save,%d,'\"\"$cappearedin\"\"',$withdrawnin);\\n\", architecture, $cname_save);\n";
             }
             if ( $type_save eq 'long' ) {
-                print TESTS "Msg( \"REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,$cid_save,%ld);\\n\", architecture, $cname_save);\n";
+                print TESTS "Msg( \"REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,$cid_save,%ld,'\"\"$cappearedin\"\"',$withdrawnin);\\n\", architecture, $cname_save);\n";
             }
             if ( $type_save eq 'string' ) {
-                print TESTS "Msg( \"REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,$cid_save,%s);\\n\", architecture, $cname_save);\n";
+                print TESTS "Msg( \"REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,$cid_save,%s,'\"\"$cappearedin\"\"',$withdrawnin);\\n\", architecture, $cname_save);\n";
             }
             print TESTS "#endif\n";
             print TESTS "#endif\n";
@@ -530,7 +550,9 @@ sub writetest($$) {
 					if ($gentry{'cnt'} > 0) {
 						print TESTS "#else\n";
 						print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
-						print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+						$withdrawnin = $ATwithdrawnin ? "'\"\"$ATwithdrawnin\"\"'" : "NULL";
+						$attribute = $ATattribute ? "'\"\"$ATattribute\"\"'" : "NULL";
+						print TESTS "%d,%d,%d,'\"\"$ATappearedin\"\"',$withdrawnin,$ATbasetype,$attribute);\\n\",architecture,$Tid,0);\n";
 						print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
 					}
 				}
@@ -554,6 +576,10 @@ sub writetest($$) {
         $Aid      = $tentry{'Aid'};
         $Asymbol  = $tentry{'Asymbol'};
         $Aname    = $tentry{'Aname'};
+        $ATappearedin  = $tentry{'ATappearedin'};
+        $ATwithdrawnin = $tentry{'ATwithdrawnin'};
+        $ATbasetype    = $tentry{'ATbasetype'};
+        $ATattribute   = $tentry{'ATattribute'};
         if ( $Tname =~ /anon/ && $tentry{'Ttype'} ne 'Enum' ) { next; }
         if ( $Tname =~ /fptr/ ) { next; }
 
@@ -577,7 +603,9 @@ sub writetest($$) {
 			$ttth    = $Dbh->query($tselect) || die $Dbh->errmsg();
 			%ttentry = $ttth->fetchhash;
 			if ($ttentry{'Tid'}) {
-            	print TESTS "CheckTypeSize($type $Tname,$ATsize, $Tid, $Aid)\n";
+				$withdrawnin = $ATwithdrawnin ? "'$ATwithdrawnin'" : "NULL";
+				$attribute = $ATattribute ? "'$ATattribute'" : "NULL";
+           		print TESTS "CheckTypeSize($type $Tname,$ATsize, $Tid, $Aid, $ATappearedin, $withdrawnin, $ATbasetype, $attribute)\n";
             }
             else {
             	next; # do not check members of not included types
@@ -648,14 +676,16 @@ sub writetest($$) {
             %ttentry = $ttth->fetchhash;
             my $typeName;
 
+			$withdrawnin = $ATwithdrawnin ? "'$ATwithdrawnin'" : "NULL";
+			$attribute = $ATattribute ? "'$ATattribute'" : "NULL";
             if ( $ttentry{'Ttype'} eq 'Struct' ) {
                 $typeName = "struct " . $Tname;
-                print TESTS "CheckTypeSize($typeName,$ATsize, $Tid, $Aid)\n";
+                print TESTS "CheckTypeSize($typeName,$ATsize, $Tid, $Aid, $ATappearedin, $withdrawnin, $ATbasetype, $attribute)\n";
             } elsif ( $ttentry{'Ttype'} eq 'Union' ) {
                 $typeName = "union " . $Tname;
-                print TESTS "CheckTypeSize($typeName,$ATsize, $Tid, $Aid)\n";
+                print TESTS "CheckTypeSize($typeName,$ATsize, $Tid, $Aid, $ATappearedin, $withdrawnin, $ATbasetype, $attribute)\n";
             } elsif ( $ttentry{'Ttype'} eq 'Typedef' ) {
-                print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
+                print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid, $ATappearedin, $withdrawnin, $ATbasetype, $attribute)\n";
             }
             next;
         }
@@ -699,7 +729,9 @@ sub writetest($$) {
 #             %ttentry = $ttth->fetchhash;
 
 # 			if ($ttentry{'Tid'}) {
-	            print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
+				$withdrawnin = $ATwithdrawnin ? "'$ATwithdrawnin'" : "NULL";
+				$attribute = $ATattribute ? "'$ATattribute'" : "NULL";
+	            print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid, $ATappearedin, $withdrawnin, $ATbasetype, $attribute)\n";
 # 			} else {
 # 				$tentry{'ATaid'} = 0;
 # 			}
@@ -722,6 +754,8 @@ sub writetest($$) {
             %ttentry = $ttth->fetchhash;
             my $typeName;
 
+			$withdrawnin = $ATwithdrawnin ? "'$ATwithdrawnin'" : "NULL";
+			$attribute = $ATattribute ? "'$ATattribute'" : "NULL";
             if ( $ttentry{'Ttype'} eq 'Typedef' || $ttentry{'Ttype'} eq 'Pointer' ) {
 				if ($ttentry{'Ttype'} eq 'Typedef') {
 					$tselect = "SELECT * FROM Type ";
@@ -734,10 +768,10 @@ sub writetest($$) {
 					$ttth = $Dbh->query($tselect) || die $Dbh->errmsg();
 					%ttentry = $ttth->fetchhash;
 					if ($ttentry{'Tid'}) {
-						print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
+						print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid, $ATappearedin, $withdrawnin, $ATbasetype, $attribute)\n";
 					}
 				} else {
-					print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n";
+					print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid, $ATappearedin, $withdrawnin, $ATbasetype, $attribute)\n";
 				}
 			} else {
 				$tentry{'ATaid'} = 0;
@@ -747,7 +781,8 @@ sub writetest($$) {
         }
 
         # Default case
-		print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid)\n"
+		$withdrawnin = $ATwithdrawnin ? "'$ATwithdrawnin'" : "NULL";
+		print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid, $ATappearedin, $withdrawnin)\n"
 		if $tentry{'Ttype'} ne 'Array';
     }
 
@@ -762,8 +797,10 @@ sub writetest($$) {
 				%gentry = $gth->fetchhash;
 				if ($gentry{'cnt'} > 0) {
 					print TESTS "#else\n";
+					$withdrawnin = $ATwithdrawnin ? "'\"\"$ATwithdrawnin\"\"'" : "NULL";
+					$attribute = $ATattribute ? "'\"\"$ATattribute\"\"'" : "NULL";
 					print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
-					print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+					print TESTS "%d,%d,%d,'\"\"$ATappearedin\"\"',$withdrawnin,$ATbasetype, $attribute);\\n\",architecture,$Tid,0);\n";
 					print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
 				}
 			}
@@ -1061,7 +1098,7 @@ for ( 1 .. $tth->numrows ) {
 			if ($gentry{'cnt'} > 0) {
 				print TESTS "#else\n";
 				print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
-				print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+				print TESTS "%d,%d,%d,'\"\"\"\"',\"\"NULL\"\",0,NULL);\\n\",architecture,$Tid,0);\n";
 				print TESTS "#endif\n\n";
 			}
         }
@@ -1074,13 +1111,17 @@ for ( 1 .. $tth->numrows ) {
     $ATsize = $tentry{'ATsize'};
     $Aid    = $tentry{'Aid'};
     $Tname  = $tentry{'Tname'};
+    $ATbasetype  = $tentry{'ATbasetype'};
+    $ATattribute = $tentry{'ATattribute'};
 
-    print TESTS "CheckTypeSize($Tname,$ATsize,$Tid,$Aid)\n"
+	$attribute = $ATattribute ? "'$ATattribute'" : "NULL";
+
+    print TESTS "CheckTypeSize($Tname,$ATsize,$Tid,$Aid, \"\", \"NULL\",0,\"NULL\")\n"
       if $tentry{'Tname'} ne 'bool';
 }
 print TESTS "#else\n";
 print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
-print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+print TESTS "%d,%d,%d,'\"\"\"\"',\"\"NULL\"\",0,\"\"NULL\"\");\\n\",architecture,$Tid,0);\n";
 print TESTS "#endif\n\n";
 
 print TESTS "#ifdef TET_TEST\n";
@@ -1188,8 +1229,10 @@ for ( 1 .. $tth->numrows ) {
             # put a catch-all else clause
 
             print TESTS "#else\n";
+            $withdrawnin = $ATwithdrawnin ? "'\"\"$ATwithdrawnin\"\"'" : "NULL";
+            $attribute = $ATattribute ? "'\"\"$ATattribute\"\"'" : "NULL";
             print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
-            print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+            print TESTS "%d,%d,%d,'\"\"$ATappearedin\"\"',$withdrawnin,$ATbasetype,$attribute);\\n\",architecture,$Tid,0);\n";
             print TESTS "#endif\n\n";
         }
 
@@ -1208,15 +1251,23 @@ for ( 1 .. $tth->numrows ) {
     $ATsize = $tentry{'ATsize'};
     $Aid    = $tentry{'Aid'};
     $Tname  = $tentry{'Tname'};
+    $ATappearedin  = $tentry{'ATappearedin'};
+    $ATwithdrawnin = $tentry{'ATwithdrawnin'};
+    $ATbasetype    = $tentry{'ATbasetype'};
+    $ATattribute   = $tentry{'ATattribute'};
 
     # Unmangled types have commas, which confuse the preprocessor
     print TESTS "#define TYPE _Z" . "$Tname\n";
-    print TESTS "CheckTypeSize(TYPE,$ATsize,$Tid,$Aid)\n";
+	$withdrawnin = $ATwithdrawnin ? "'$ATwithdrawnin'" : "NULL";
+	$attribute = $ATattribute ? "'$ATattribute'" : "NULL";
+    print TESTS "CheckTypeSize(TYPE,$ATsize,$Tid,$Aid, $ATappearedin, $withdrawnin, $ATbasetype, $attribute)\n";
     print TESTS "#undef TYPE\n";
 }
+$withdrawnin = $ATwithdrawnin ? "'\"\"$ATwithdrawnin\"\"'" : "NULL";
+$attribute = $ATattribute ? "'\"\"$ATattribute\"\"'" : "NULL";
 print TESTS "#else\n";
 print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
-print TESTS "%d,%d,%d);\\n\",architecture,$Tid,0);\n";
+print TESTS "%d,%d,%d,'\"\"$ATappearedin\"\"',$withdrawnin,$ATbasetype,$attribute);\\n\",architecture,$Tid,0);\n";
 print TESTS "#endif\n\n";
 
 print TESTS "#ifdef TET_TEST\n";

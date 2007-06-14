@@ -117,7 +117,7 @@ CheckEnum("_IScntrl",_IScntrl,2,29691);
 CheckEnum("_ISpunct",_ISpunct,4,29692);
 CheckEnum("_ISalnum",_ISalnum,8,29693);
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8976,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,8976,0);
 Msg("Find size of anon-ctype.h-13 (8976)\n");
 #endif
 

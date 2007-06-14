@@ -38,7 +38,7 @@ Msg("Checking data structures in fontconfig/fontconfig.h\n");
 printf("Checking data structures in fontconfig/fontconfig.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_MAJOR
-	CompareConstant(FC_MAJOR,2,5314,architecture)
+	CompareConstant(FC_MAJOR,2,5314,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_MAJOR\n");
 cnt++;
@@ -48,7 +48,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_MINOR
-	CompareConstant(FC_MINOR,3,5315,architecture)
+	CompareConstant(FC_MINOR,3,5315,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_MINOR\n");
 cnt++;
@@ -58,7 +58,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_REVISION
-	CompareConstant(FC_REVISION,2,5316,architecture)
+	CompareConstant(FC_REVISION,2,5316,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_REVISION\n");
 cnt++;
@@ -68,7 +68,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_VERSION
-	CompareConstant(FC_VERSION,((FC_MAJOR * 10000) + (FC_MINOR * 100) + (FC_REVISION)),5317,architecture)
+	CompareConstant(FC_VERSION,((FC_MAJOR * 10000) + (FC_MINOR * 100) + (FC_REVISION)),5317,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_VERSION\n");
 cnt++;
@@ -78,7 +78,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_CACHE_VERSION
-	CompareStringConstant(FC_CACHE_VERSION,"1")
+	CompareStringConstant(FC_CACHE_VERSION,"1",5318,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_CACHE_VERSION\n");
 cnt++;
@@ -88,7 +88,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FcTrue
-	CompareConstant(FcTrue,1,5319,architecture)
+	CompareConstant(FcTrue,1,5319,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FcTrue\n");
 cnt++;
@@ -98,7 +98,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FcFalse
-	CompareConstant(FcFalse,0,5320,architecture)
+	CompareConstant(FcFalse,0,5320,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FcFalse\n");
 cnt++;
@@ -108,7 +108,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_FAMILY
-	CompareStringConstant(FC_FAMILY,"family")
+	CompareStringConstant(FC_FAMILY,"family",5321,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_FAMILY\n");
 cnt++;
@@ -118,7 +118,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_STYLE
-	CompareStringConstant(FC_STYLE,"style")
+	CompareStringConstant(FC_STYLE,"style",5322,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_STYLE\n");
 cnt++;
@@ -128,7 +128,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_SLANT
-	CompareStringConstant(FC_SLANT,"slant")
+	CompareStringConstant(FC_SLANT,"slant",5323,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_SLANT\n");
 cnt++;
@@ -138,7 +138,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_WEIGHT
-	CompareStringConstant(FC_WEIGHT,"weight")
+	CompareStringConstant(FC_WEIGHT,"weight",5324,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_WEIGHT\n");
 cnt++;
@@ -148,7 +148,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_SIZE
-	CompareStringConstant(FC_SIZE,"size")
+	CompareStringConstant(FC_SIZE,"size",5325,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_SIZE\n");
 cnt++;
@@ -158,7 +158,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_ASPECT
-	CompareStringConstant(FC_ASPECT,"aspect")
+	CompareStringConstant(FC_ASPECT,"aspect",5326,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_ASPECT\n");
 cnt++;
@@ -168,7 +168,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_PIXEL_SIZE
-	CompareStringConstant(FC_PIXEL_SIZE,"pixelsize")
+	CompareStringConstant(FC_PIXEL_SIZE,"pixelsize",5327,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_PIXEL_SIZE\n");
 cnt++;
@@ -178,7 +178,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_SPACING
-	CompareStringConstant(FC_SPACING,"spacing")
+	CompareStringConstant(FC_SPACING,"spacing",5328,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_SPACING\n");
 cnt++;
@@ -188,7 +188,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_FOUNDRY
-	CompareStringConstant(FC_FOUNDRY,"foundry")
+	CompareStringConstant(FC_FOUNDRY,"foundry",5329,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_FOUNDRY\n");
 cnt++;
@@ -198,7 +198,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_ANTIALIAS
-	CompareStringConstant(FC_ANTIALIAS,"antialias")
+	CompareStringConstant(FC_ANTIALIAS,"antialias",5330,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_ANTIALIAS\n");
 cnt++;
@@ -208,7 +208,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_HINTING
-	CompareStringConstant(FC_HINTING,"hinting")
+	CompareStringConstant(FC_HINTING,"hinting",5331,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_HINTING\n");
 cnt++;
@@ -218,7 +218,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_HINT_STYLE
-	CompareStringConstant(FC_HINT_STYLE,"hintstyle")
+	CompareStringConstant(FC_HINT_STYLE,"hintstyle",5332,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_HINT_STYLE\n");
 cnt++;
@@ -228,7 +228,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_VERTICAL_LAYOUT
-	CompareStringConstant(FC_VERTICAL_LAYOUT,"verticallayout")
+	CompareStringConstant(FC_VERTICAL_LAYOUT,"verticallayout",5333,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_VERTICAL_LAYOUT\n");
 cnt++;
@@ -238,7 +238,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_AUTOHINT
-	CompareStringConstant(FC_AUTOHINT,"autohint")
+	CompareStringConstant(FC_AUTOHINT,"autohint",5334,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_AUTOHINT\n");
 cnt++;
@@ -248,7 +248,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_GLOBAL_ADVANCE
-	CompareStringConstant(FC_GLOBAL_ADVANCE,"globaladvance")
+	CompareStringConstant(FC_GLOBAL_ADVANCE,"globaladvance",5335,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_GLOBAL_ADVANCE\n");
 cnt++;
@@ -258,7 +258,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_WIDTH
-	CompareStringConstant(FC_WIDTH,"width")
+	CompareStringConstant(FC_WIDTH,"width",5336,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_WIDTH\n");
 cnt++;
@@ -268,7 +268,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_FILE
-	CompareStringConstant(FC_FILE,"file")
+	CompareStringConstant(FC_FILE,"file",5337,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_FILE\n");
 cnt++;
@@ -278,7 +278,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_INDEX
-	CompareStringConstant(FC_INDEX,"index")
+	CompareStringConstant(FC_INDEX,"index",5338,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_INDEX\n");
 cnt++;
@@ -288,7 +288,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_FT_FACE
-	CompareStringConstant(FC_FT_FACE,"ftface")
+	CompareStringConstant(FC_FT_FACE,"ftface",5339,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_FT_FACE\n");
 cnt++;
@@ -298,7 +298,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_RASTERIZER
-	CompareStringConstant(FC_RASTERIZER,"rasterizer")
+	CompareStringConstant(FC_RASTERIZER,"rasterizer",5340,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_RASTERIZER\n");
 cnt++;
@@ -308,7 +308,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_OUTLINE
-	CompareStringConstant(FC_OUTLINE,"outline")
+	CompareStringConstant(FC_OUTLINE,"outline",5341,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_OUTLINE\n");
 cnt++;
@@ -318,7 +318,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_SCALABLE
-	CompareStringConstant(FC_SCALABLE,"scalable")
+	CompareStringConstant(FC_SCALABLE,"scalable",5342,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_SCALABLE\n");
 cnt++;
@@ -328,7 +328,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_SCALE
-	CompareStringConstant(FC_SCALE,"scale")
+	CompareStringConstant(FC_SCALE,"scale",5343,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_SCALE\n");
 cnt++;
@@ -338,7 +338,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_DPI
-	CompareStringConstant(FC_DPI,"dpi")
+	CompareStringConstant(FC_DPI,"dpi",5344,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_DPI\n");
 cnt++;
@@ -348,7 +348,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_RGBA
-	CompareStringConstant(FC_RGBA,"rgba")
+	CompareStringConstant(FC_RGBA,"rgba",5345,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_RGBA\n");
 cnt++;
@@ -358,7 +358,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_MINSPACE
-	CompareStringConstant(FC_MINSPACE,"minspace")
+	CompareStringConstant(FC_MINSPACE,"minspace",5346,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_MINSPACE\n");
 cnt++;
@@ -368,7 +368,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_SOURCE
-	CompareStringConstant(FC_SOURCE,"source")
+	CompareStringConstant(FC_SOURCE,"source",5347,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_SOURCE\n");
 cnt++;
@@ -378,7 +378,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_CHARSET
-	CompareStringConstant(FC_CHARSET,"charset")
+	CompareStringConstant(FC_CHARSET,"charset",5348,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_CHARSET\n");
 cnt++;
@@ -388,7 +388,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_LANG
-	CompareStringConstant(FC_LANG,"lang")
+	CompareStringConstant(FC_LANG,"lang",5349,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_LANG\n");
 cnt++;
@@ -398,7 +398,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_FONTVERSION
-	CompareStringConstant(FC_FONTVERSION,"fontversion")
+	CompareStringConstant(FC_FONTVERSION,"fontversion",5350,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_FONTVERSION\n");
 cnt++;
@@ -408,7 +408,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_FULLNAME
-	CompareStringConstant(FC_FULLNAME,"fullname")
+	CompareStringConstant(FC_FULLNAME,"fullname",5351,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_FULLNAME\n");
 cnt++;
@@ -418,7 +418,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_FAMILYLANG
-	CompareStringConstant(FC_FAMILYLANG,"familylang")
+	CompareStringConstant(FC_FAMILYLANG,"familylang",5352,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_FAMILYLANG\n");
 cnt++;
@@ -428,7 +428,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_STYLELANG
-	CompareStringConstant(FC_STYLELANG,"stylelang")
+	CompareStringConstant(FC_STYLELANG,"stylelang",5353,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_STYLELANG\n");
 cnt++;
@@ -438,7 +438,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_FULLNAMELANG
-	CompareStringConstant(FC_FULLNAMELANG,"fullnamelang")
+	CompareStringConstant(FC_FULLNAMELANG,"fullnamelang",5354,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_FULLNAMELANG\n");
 cnt++;
@@ -448,7 +448,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_CAPABILITY
-	CompareStringConstant(FC_CAPABILITY,"capability")
+	CompareStringConstant(FC_CAPABILITY,"capability",5355,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_CAPABILITY\n");
 cnt++;
@@ -458,7 +458,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_FONTFORMAT
-	CompareStringConstant(FC_FONTFORMAT,"fontformat")
+	CompareStringConstant(FC_FONTFORMAT,"fontformat",5356,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_FONTFORMAT\n");
 cnt++;
@@ -468,7 +468,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_EMBOLDEN
-	CompareStringConstant(FC_EMBOLDEN,"embolden")
+	CompareStringConstant(FC_EMBOLDEN,"embolden",5357,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_EMBOLDEN\n");
 cnt++;
@@ -486,7 +486,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_CHAR_WIDTH
-	CompareStringConstant(FC_CHAR_WIDTH,"charwidth")
+	CompareStringConstant(FC_CHAR_WIDTH,"charwidth",5360,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_CHAR_WIDTH\n");
 cnt++;
@@ -496,7 +496,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_CHAR_HEIGHT
-	CompareStringConstant(FC_CHAR_HEIGHT,"charheight")
+	CompareStringConstant(FC_CHAR_HEIGHT,"charheight",5361,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_CHAR_HEIGHT\n");
 cnt++;
@@ -506,7 +506,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_MATRIX
-	CompareStringConstant(FC_MATRIX,"matrix")
+	CompareStringConstant(FC_MATRIX,"matrix",5362,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_MATRIX\n");
 cnt++;
@@ -516,7 +516,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_WEIGHT_THIN
-	CompareConstant(FC_WEIGHT_THIN,0,5363,architecture)
+	CompareConstant(FC_WEIGHT_THIN,0,5363,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_WEIGHT_THIN\n");
 cnt++;
@@ -526,7 +526,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_WEIGHT_EXTRALIGHT
-	CompareConstant(FC_WEIGHT_EXTRALIGHT,40,5364,architecture)
+	CompareConstant(FC_WEIGHT_EXTRALIGHT,40,5364,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_WEIGHT_EXTRALIGHT\n");
 cnt++;
@@ -540,7 +540,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_WEIGHT_LIGHT
-	CompareConstant(FC_WEIGHT_LIGHT,50,5366,architecture)
+	CompareConstant(FC_WEIGHT_LIGHT,50,5366,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_WEIGHT_LIGHT\n");
 cnt++;
@@ -550,7 +550,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_WEIGHT_BOOK
-	CompareConstant(FC_WEIGHT_BOOK,75,5367,architecture)
+	CompareConstant(FC_WEIGHT_BOOK,75,5367,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_WEIGHT_BOOK\n");
 cnt++;
@@ -560,7 +560,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_WEIGHT_REGULAR
-	CompareConstant(FC_WEIGHT_REGULAR,80,5368,architecture)
+	CompareConstant(FC_WEIGHT_REGULAR,80,5368,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_WEIGHT_REGULAR\n");
 cnt++;
@@ -574,7 +574,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_WEIGHT_MEDIUM
-	CompareConstant(FC_WEIGHT_MEDIUM,100,5370,architecture)
+	CompareConstant(FC_WEIGHT_MEDIUM,100,5370,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_WEIGHT_MEDIUM\n");
 cnt++;
@@ -584,7 +584,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_WEIGHT_DEMIBOLD
-	CompareConstant(FC_WEIGHT_DEMIBOLD,180,5371,architecture)
+	CompareConstant(FC_WEIGHT_DEMIBOLD,180,5371,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_WEIGHT_DEMIBOLD\n");
 cnt++;
@@ -598,7 +598,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_WEIGHT_BOLD
-	CompareConstant(FC_WEIGHT_BOLD,200,5373,architecture)
+	CompareConstant(FC_WEIGHT_BOLD,200,5373,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_WEIGHT_BOLD\n");
 cnt++;
@@ -608,7 +608,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_WEIGHT_EXTRABOLD
-	CompareConstant(FC_WEIGHT_EXTRABOLD,205,5374,architecture)
+	CompareConstant(FC_WEIGHT_EXTRABOLD,205,5374,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_WEIGHT_EXTRABOLD\n");
 cnt++;
@@ -622,7 +622,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_WEIGHT_BLACK
-	CompareConstant(FC_WEIGHT_BLACK,210,5376,architecture)
+	CompareConstant(FC_WEIGHT_BLACK,210,5376,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_WEIGHT_BLACK\n");
 cnt++;
@@ -636,7 +636,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_SLANT_ROMAN
-	CompareConstant(FC_SLANT_ROMAN,0,5378,architecture)
+	CompareConstant(FC_SLANT_ROMAN,0,5378,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_SLANT_ROMAN\n");
 cnt++;
@@ -646,7 +646,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_SLANT_ITALIC
-	CompareConstant(FC_SLANT_ITALIC,100,5379,architecture)
+	CompareConstant(FC_SLANT_ITALIC,100,5379,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_SLANT_ITALIC\n");
 cnt++;
@@ -656,7 +656,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_SLANT_OBLIQUE
-	CompareConstant(FC_SLANT_OBLIQUE,110,5380,architecture)
+	CompareConstant(FC_SLANT_OBLIQUE,110,5380,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_SLANT_OBLIQUE\n");
 cnt++;
@@ -666,7 +666,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_WIDTH_ULTRACONDENSED
-	CompareConstant(FC_WIDTH_ULTRACONDENSED,50,5381,architecture)
+	CompareConstant(FC_WIDTH_ULTRACONDENSED,50,5381,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_WIDTH_ULTRACONDENSED\n");
 cnt++;
@@ -676,7 +676,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_WIDTH_EXTRACONDENSED
-	CompareConstant(FC_WIDTH_EXTRACONDENSED,63,5382,architecture)
+	CompareConstant(FC_WIDTH_EXTRACONDENSED,63,5382,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_WIDTH_EXTRACONDENSED\n");
 cnt++;
@@ -686,7 +686,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_WIDTH_CONDENSED
-	CompareConstant(FC_WIDTH_CONDENSED,75,5383,architecture)
+	CompareConstant(FC_WIDTH_CONDENSED,75,5383,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_WIDTH_CONDENSED\n");
 cnt++;
@@ -696,7 +696,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_WIDTH_SEMICONDENSED
-	CompareConstant(FC_WIDTH_SEMICONDENSED,87,5384,architecture)
+	CompareConstant(FC_WIDTH_SEMICONDENSED,87,5384,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_WIDTH_SEMICONDENSED\n");
 cnt++;
@@ -706,7 +706,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_WIDTH_NORMAL
-	CompareConstant(FC_WIDTH_NORMAL,100,5385,architecture)
+	CompareConstant(FC_WIDTH_NORMAL,100,5385,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_WIDTH_NORMAL\n");
 cnt++;
@@ -716,7 +716,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_WIDTH_SEMIEXPANDED
-	CompareConstant(FC_WIDTH_SEMIEXPANDED,113,5386,architecture)
+	CompareConstant(FC_WIDTH_SEMIEXPANDED,113,5386,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_WIDTH_SEMIEXPANDED\n");
 cnt++;
@@ -726,7 +726,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_WIDTH_EXPANDED
-	CompareConstant(FC_WIDTH_EXPANDED,125,5387,architecture)
+	CompareConstant(FC_WIDTH_EXPANDED,125,5387,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_WIDTH_EXPANDED\n");
 cnt++;
@@ -736,7 +736,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_WIDTH_EXTRAEXPANDED
-	CompareConstant(FC_WIDTH_EXTRAEXPANDED,150,5388,architecture)
+	CompareConstant(FC_WIDTH_EXTRAEXPANDED,150,5388,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_WIDTH_EXTRAEXPANDED\n");
 cnt++;
@@ -746,7 +746,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_WIDTH_ULTRAEXPANDED
-	CompareConstant(FC_WIDTH_ULTRAEXPANDED,200,5389,architecture)
+	CompareConstant(FC_WIDTH_ULTRAEXPANDED,200,5389,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_WIDTH_ULTRAEXPANDED\n");
 cnt++;
@@ -756,7 +756,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_PROPORTIONAL
-	CompareConstant(FC_PROPORTIONAL,0,5390,architecture)
+	CompareConstant(FC_PROPORTIONAL,0,5390,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_PROPORTIONAL\n");
 cnt++;
@@ -766,7 +766,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_DUAL
-	CompareConstant(FC_DUAL,90,5391,architecture)
+	CompareConstant(FC_DUAL,90,5391,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_DUAL\n");
 cnt++;
@@ -776,7 +776,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_MONO
-	CompareConstant(FC_MONO,100,5392,architecture)
+	CompareConstant(FC_MONO,100,5392,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_MONO\n");
 cnt++;
@@ -786,7 +786,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_CHARCELL
-	CompareConstant(FC_CHARCELL,110,5393,architecture)
+	CompareConstant(FC_CHARCELL,110,5393,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_CHARCELL\n");
 cnt++;
@@ -796,7 +796,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_RGBA_UNKNOWN
-	CompareConstant(FC_RGBA_UNKNOWN,0,5394,architecture)
+	CompareConstant(FC_RGBA_UNKNOWN,0,5394,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_RGBA_UNKNOWN\n");
 cnt++;
@@ -806,7 +806,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_RGBA_RGB
-	CompareConstant(FC_RGBA_RGB,1,5395,architecture)
+	CompareConstant(FC_RGBA_RGB,1,5395,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_RGBA_RGB\n");
 cnt++;
@@ -816,7 +816,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_RGBA_BGR
-	CompareConstant(FC_RGBA_BGR,2,5396,architecture)
+	CompareConstant(FC_RGBA_BGR,2,5396,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_RGBA_BGR\n");
 cnt++;
@@ -826,7 +826,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_RGBA_VRGB
-	CompareConstant(FC_RGBA_VRGB,3,5397,architecture)
+	CompareConstant(FC_RGBA_VRGB,3,5397,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_RGBA_VRGB\n");
 cnt++;
@@ -836,7 +836,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_RGBA_VBGR
-	CompareConstant(FC_RGBA_VBGR,4,5398,architecture)
+	CompareConstant(FC_RGBA_VBGR,4,5398,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_RGBA_VBGR\n");
 cnt++;
@@ -846,7 +846,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_RGBA_NONE
-	CompareConstant(FC_RGBA_NONE,5,5399,architecture)
+	CompareConstant(FC_RGBA_NONE,5,5399,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_RGBA_NONE\n");
 cnt++;
@@ -856,7 +856,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_HINT_NONE
-	CompareConstant(FC_HINT_NONE,0,5400,architecture)
+	CompareConstant(FC_HINT_NONE,0,5400,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_HINT_NONE\n");
 cnt++;
@@ -866,7 +866,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_HINT_SLIGHT
-	CompareConstant(FC_HINT_SLIGHT,1,5401,architecture)
+	CompareConstant(FC_HINT_SLIGHT,1,5401,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_HINT_SLIGHT\n");
 cnt++;
@@ -876,7 +876,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_HINT_MEDIUM
-	CompareConstant(FC_HINT_MEDIUM,2,5402,architecture)
+	CompareConstant(FC_HINT_MEDIUM,2,5402,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_HINT_MEDIUM\n");
 cnt++;
@@ -886,7 +886,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_HINT_FULL
-	CompareConstant(FC_HINT_FULL,3,5403,architecture)
+	CompareConstant(FC_HINT_FULL,3,5403,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_HINT_FULL\n");
 cnt++;
@@ -908,7 +908,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_CHARSET_MAP_SIZE
-	CompareConstant(FC_CHARSET_MAP_SIZE,(256/32),5407,architecture)
+	CompareConstant(FC_CHARSET_MAP_SIZE,(256/32),5407,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_CHARSET_MAP_SIZE\n");
 cnt++;
@@ -918,7 +918,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_CHARSET_DONE
-	CompareConstant(FC_CHARSET_DONE,((FcChar32) -1),5408,architecture)
+	CompareConstant(FC_CHARSET_DONE,((FcChar32) -1),5408,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_CHARSET_DONE\n");
 cnt++;
@@ -940,7 +940,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_UTF8_MAX_LEN
-	CompareConstant(FC_UTF8_MAX_LEN,6,5412,architecture)
+	CompareConstant(FC_UTF8_MAX_LEN,6,5412,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_UTF8_MAX_LEN\n");
 cnt++;
@@ -949,477 +949,477 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(FcBool,4, 11078, 2)
+CheckTypeSize(FcBool,4, 11078, 2, 3.1, NULL, 6, NULL)
 #elif __x86_64__
-CheckTypeSize(FcBool,4, 11078, 11)
+CheckTypeSize(FcBool,4, 11078, 11, 3.1, NULL, 6, NULL)
 #elif __ia64__
-CheckTypeSize(FcBool,4, 11078, 3)
+CheckTypeSize(FcBool,4, 11078, 3, 3.1, NULL, 6, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FcBool,4, 11078, 6)
+CheckTypeSize(FcBool,4, 11078, 6, 3.1, NULL, 6, NULL)
 #elif __powerpc64__
-CheckTypeSize(FcBool,4, 11078, 9)
+CheckTypeSize(FcBool,4, 11078, 9, 3.1, NULL, 6, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FcBool,4, 11078, 10)
+CheckTypeSize(FcBool,4, 11078, 10, 3.1, NULL, 6, NULL)
 #elif __s390x__
-CheckTypeSize(FcBool,4, 11078, 12)
+CheckTypeSize(FcBool,4, 11078, 12, 3.1, NULL, 6, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11078,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,6,NULL);\n",architecture,11078,0);
 Msg("Find size of FcBool (11078)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(FcPattern,0, 11080, 2)
+CheckTypeSize(FcPattern,0, 11080, 2, 3.1, NULL, 11079, NULL)
 #elif __x86_64__
-CheckTypeSize(FcPattern,0, 11080, 11)
+CheckTypeSize(FcPattern,0, 11080, 11, 3.1, NULL, 11079, NULL)
 #elif __ia64__
-CheckTypeSize(FcPattern,0, 11080, 3)
+CheckTypeSize(FcPattern,0, 11080, 3, 3.1, NULL, 11079, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FcPattern,0, 11080, 6)
+CheckTypeSize(FcPattern,0, 11080, 6, 3.1, NULL, 11079, NULL)
 #elif __powerpc64__
-CheckTypeSize(FcPattern,0, 11080, 9)
+CheckTypeSize(FcPattern,0, 11080, 9, 3.1, NULL, 11079, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FcPattern,0, 11080, 10)
+CheckTypeSize(FcPattern,0, 11080, 10, 3.1, NULL, 11079, NULL)
 #elif __s390x__
-CheckTypeSize(FcPattern,0, 11080, 12)
+CheckTypeSize(FcPattern,0, 11080, 12, 3.1, NULL, 11079, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11080,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11079,NULL);\n",architecture,11080,0);
 Msg("Find size of FcPattern (11080)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(FcType,4, 11084, 2)
+CheckTypeSize(FcType,4, 11084, 2, 3.1, NULL, 11083, NULL)
 #elif __x86_64__
-CheckTypeSize(FcType,4, 11084, 11)
+CheckTypeSize(FcType,4, 11084, 11, 3.1, NULL, 11083, NULL)
 #elif __ia64__
-CheckTypeSize(FcType,4, 11084, 3)
+CheckTypeSize(FcType,4, 11084, 3, 3.1, NULL, 11083, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FcType,4, 11084, 6)
+CheckTypeSize(FcType,4, 11084, 6, 3.1, NULL, 11083, NULL)
 #elif __powerpc64__
-CheckTypeSize(FcType,4, 11084, 9)
+CheckTypeSize(FcType,4, 11084, 9, 3.1, NULL, 11083, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FcType,4, 11084, 10)
+CheckTypeSize(FcType,4, 11084, 10, 3.1, NULL, 11083, NULL)
 #elif __s390x__
-CheckTypeSize(FcType,4, 11084, 12)
+CheckTypeSize(FcType,4, 11084, 12, 3.1, NULL, 11083, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11084,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11083,NULL);\n",architecture,11084,0);
 Msg("Find size of FcType (11084)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(FcChar8,1, 11085, 2)
+CheckTypeSize(FcChar8,1, 11085, 2, 3.1, NULL, 3, NULL)
 #elif __x86_64__
-CheckTypeSize(FcChar8,1, 11085, 11)
+CheckTypeSize(FcChar8,1, 11085, 11, 3.1, NULL, 3, NULL)
 #elif __ia64__
-CheckTypeSize(FcChar8,1, 11085, 3)
+CheckTypeSize(FcChar8,1, 11085, 3, 3.1, NULL, 3, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FcChar8,1, 11085, 6)
+CheckTypeSize(FcChar8,1, 11085, 6, 3.1, NULL, 3, NULL)
 #elif __powerpc64__
-CheckTypeSize(FcChar8,1, 11085, 9)
+CheckTypeSize(FcChar8,1, 11085, 9, 3.1, NULL, 3, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FcChar8,1, 11085, 10)
+CheckTypeSize(FcChar8,1, 11085, 10, 3.1, NULL, 3, NULL)
 #elif __s390x__
-CheckTypeSize(FcChar8,1, 11085, 12)
+CheckTypeSize(FcChar8,1, 11085, 12, 3.1, NULL, 3, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11085,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,3,NULL);\n",architecture,11085,0);
 Msg("Find size of FcChar8 (11085)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(FcMatrix,32, 11089, 2)
+CheckTypeSize(FcMatrix,32, 11089, 2, 3.1, NULL, 11088, NULL)
 #elif __x86_64__
-CheckTypeSize(FcMatrix,32, 11089, 11)
+CheckTypeSize(FcMatrix,32, 11089, 11, 3.1, NULL, 11088, NULL)
 #elif __ia64__
-CheckTypeSize(FcMatrix,32, 11089, 3)
+CheckTypeSize(FcMatrix,32, 11089, 3, 3.1, NULL, 11088, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FcMatrix,32, 11089, 6)
+CheckTypeSize(FcMatrix,32, 11089, 6, 3.1, NULL, 11088, NULL)
 #elif __powerpc64__
-CheckTypeSize(FcMatrix,32, 11089, 9)
+CheckTypeSize(FcMatrix,32, 11089, 9, 3.1, NULL, 11088, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FcMatrix,32, 11089, 10)
+CheckTypeSize(FcMatrix,32, 11089, 10, 3.1, NULL, 11088, NULL)
 #elif __s390x__
-CheckTypeSize(FcMatrix,32, 11089, 12)
+CheckTypeSize(FcMatrix,32, 11089, 12, 3.1, NULL, 11088, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11089,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11088,NULL);\n",architecture,11089,0);
 Msg("Find size of FcMatrix (11089)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(FcCharSet,0, 11093, 2)
+CheckTypeSize(FcCharSet,0, 11093, 2, 3.1, NULL, 11092, NULL)
 #elif __x86_64__
-CheckTypeSize(FcCharSet,0, 11093, 11)
+CheckTypeSize(FcCharSet,0, 11093, 11, 3.1, NULL, 11092, NULL)
 #elif __ia64__
-CheckTypeSize(FcCharSet,0, 11093, 3)
+CheckTypeSize(FcCharSet,0, 11093, 3, 3.1, NULL, 11092, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FcCharSet,0, 11093, 6)
+CheckTypeSize(FcCharSet,0, 11093, 6, 3.1, NULL, 11092, NULL)
 #elif __powerpc64__
-CheckTypeSize(FcCharSet,0, 11093, 9)
+CheckTypeSize(FcCharSet,0, 11093, 9, 3.1, NULL, 11092, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FcCharSet,0, 11093, 10)
+CheckTypeSize(FcCharSet,0, 11093, 10, 3.1, NULL, 11092, NULL)
 #elif __s390x__
-CheckTypeSize(FcCharSet,0, 11093, 12)
+CheckTypeSize(FcCharSet,0, 11093, 12, 3.1, NULL, 11092, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11093,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11092,NULL);\n",architecture,11093,0);
 Msg("Find size of FcCharSet (11093)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(FcLangSet,0, 11099, 2)
+CheckTypeSize(FcLangSet,0, 11099, 2, 3.1, NULL, 11098, NULL)
 #elif __x86_64__
-CheckTypeSize(FcLangSet,0, 11099, 11)
+CheckTypeSize(FcLangSet,0, 11099, 11, 3.1, NULL, 11098, NULL)
 #elif __ia64__
-CheckTypeSize(FcLangSet,0, 11099, 3)
+CheckTypeSize(FcLangSet,0, 11099, 3, 3.1, NULL, 11098, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FcLangSet,0, 11099, 6)
+CheckTypeSize(FcLangSet,0, 11099, 6, 3.1, NULL, 11098, NULL)
 #elif __powerpc64__
-CheckTypeSize(FcLangSet,0, 11099, 9)
+CheckTypeSize(FcLangSet,0, 11099, 9, 3.1, NULL, 11098, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FcLangSet,0, 11099, 10)
+CheckTypeSize(FcLangSet,0, 11099, 10, 3.1, NULL, 11098, NULL)
 #elif __s390x__
-CheckTypeSize(FcLangSet,0, 11099, 12)
+CheckTypeSize(FcLangSet,0, 11099, 12, 3.1, NULL, 11098, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11099,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11098,NULL);\n",architecture,11099,0);
 Msg("Find size of FcLangSet (11099)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(FcValue,12, 11103, 2)
+CheckTypeSize(FcValue,12, 11103, 2, 3.1, NULL, 11082, NULL)
 #elif __x86_64__
-CheckTypeSize(FcValue,16, 11103, 11)
+CheckTypeSize(FcValue,16, 11103, 11, 3.1, NULL, 11082, NULL)
 #elif __ia64__
-CheckTypeSize(FcValue,16, 11103, 3)
+CheckTypeSize(FcValue,16, 11103, 3, 3.1, NULL, 11082, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FcValue,16, 11103, 6)
+CheckTypeSize(FcValue,16, 11103, 6, 3.1, NULL, 11082, NULL)
 #elif __powerpc64__
-CheckTypeSize(FcValue,16, 11103, 9)
+CheckTypeSize(FcValue,16, 11103, 9, 3.1, NULL, 11082, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FcValue,16, 11103, 10)
+CheckTypeSize(FcValue,16, 11103, 10, 3.1, NULL, 11082, NULL)
 #elif __s390x__
-CheckTypeSize(FcValue,16, 11103, 12)
+CheckTypeSize(FcValue,16, 11103, 12, 3.1, NULL, 11082, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11103,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11082,NULL);\n",architecture,11103,0);
 Msg("Find size of FcValue (11103)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(FcStrList,0, 11105, 2)
+CheckTypeSize(FcStrList,0, 11105, 2, 3.1, NULL, 11104, NULL)
 #elif __x86_64__
-CheckTypeSize(FcStrList,0, 11105, 11)
+CheckTypeSize(FcStrList,0, 11105, 11, 3.1, NULL, 11104, NULL)
 #elif __ia64__
-CheckTypeSize(FcStrList,0, 11105, 3)
+CheckTypeSize(FcStrList,0, 11105, 3, 3.1, NULL, 11104, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FcStrList,0, 11105, 6)
+CheckTypeSize(FcStrList,0, 11105, 6, 3.1, NULL, 11104, NULL)
 #elif __powerpc64__
-CheckTypeSize(FcStrList,0, 11105, 9)
+CheckTypeSize(FcStrList,0, 11105, 9, 3.1, NULL, 11104, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FcStrList,0, 11105, 10)
+CheckTypeSize(FcStrList,0, 11105, 10, 3.1, NULL, 11104, NULL)
 #elif __s390x__
-CheckTypeSize(FcStrList,0, 11105, 12)
+CheckTypeSize(FcStrList,0, 11105, 12, 3.1, NULL, 11104, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11105,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11104,NULL);\n",architecture,11105,0);
 Msg("Find size of FcStrList (11105)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(FcConfig,0, 11108, 2)
+CheckTypeSize(FcConfig,0, 11108, 2, 3.1, NULL, 11107, NULL)
 #elif __x86_64__
-CheckTypeSize(FcConfig,0, 11108, 11)
+CheckTypeSize(FcConfig,0, 11108, 11, 3.1, NULL, 11107, NULL)
 #elif __ia64__
-CheckTypeSize(FcConfig,0, 11108, 3)
+CheckTypeSize(FcConfig,0, 11108, 3, 3.1, NULL, 11107, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FcConfig,0, 11108, 6)
+CheckTypeSize(FcConfig,0, 11108, 6, 3.1, NULL, 11107, NULL)
 #elif __powerpc64__
-CheckTypeSize(FcConfig,0, 11108, 9)
+CheckTypeSize(FcConfig,0, 11108, 9, 3.1, NULL, 11107, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FcConfig,0, 11108, 10)
+CheckTypeSize(FcConfig,0, 11108, 10, 3.1, NULL, 11107, NULL)
 #elif __s390x__
-CheckTypeSize(FcConfig,0, 11108, 12)
+CheckTypeSize(FcConfig,0, 11108, 12, 3.1, NULL, 11107, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11108,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11107,NULL);\n",architecture,11108,0);
 Msg("Find size of FcConfig (11108)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(FcStrSet,0, 11111, 2)
+CheckTypeSize(FcStrSet,0, 11111, 2, 3.1, NULL, 11110, NULL)
 #elif __x86_64__
-CheckTypeSize(FcStrSet,0, 11111, 11)
+CheckTypeSize(FcStrSet,0, 11111, 11, 3.1, NULL, 11110, NULL)
 #elif __ia64__
-CheckTypeSize(FcStrSet,0, 11111, 3)
+CheckTypeSize(FcStrSet,0, 11111, 3, 3.1, NULL, 11110, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FcStrSet,0, 11111, 6)
+CheckTypeSize(FcStrSet,0, 11111, 6, 3.1, NULL, 11110, NULL)
 #elif __powerpc64__
-CheckTypeSize(FcStrSet,0, 11111, 9)
+CheckTypeSize(FcStrSet,0, 11111, 9, 3.1, NULL, 11110, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FcStrSet,0, 11111, 10)
+CheckTypeSize(FcStrSet,0, 11111, 10, 3.1, NULL, 11110, NULL)
 #elif __s390x__
-CheckTypeSize(FcStrSet,0, 11111, 12)
+CheckTypeSize(FcStrSet,0, 11111, 12, 3.1, NULL, 11110, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11111,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11110,NULL);\n",architecture,11111,0);
 Msg("Find size of FcStrSet (11111)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(FcChar32,4, 11113, 2)
+CheckTypeSize(FcChar32,4, 11113, 2, 3.1, NULL, 7, NULL)
 #elif __x86_64__
-CheckTypeSize(FcChar32,4, 11113, 11)
+CheckTypeSize(FcChar32,4, 11113, 11, 3.1, NULL, 7, NULL)
 #elif __ia64__
-CheckTypeSize(FcChar32,4, 11113, 3)
+CheckTypeSize(FcChar32,4, 11113, 3, 3.1, NULL, 7, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FcChar32,4, 11113, 6)
+CheckTypeSize(FcChar32,4, 11113, 6, 3.1, NULL, 7, NULL)
 #elif __powerpc64__
-CheckTypeSize(FcChar32,4, 11113, 9)
+CheckTypeSize(FcChar32,4, 11113, 9, 3.1, NULL, 7, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FcChar32,4, 11113, 10)
+CheckTypeSize(FcChar32,4, 11113, 10, 3.1, NULL, 7, NULL)
 #elif __s390x__
-CheckTypeSize(FcChar32,4, 11113, 12)
+CheckTypeSize(FcChar32,4, 11113, 12, 3.1, NULL, 7, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11113,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,7,NULL);\n",architecture,11113,0);
 Msg("Find size of FcChar32 (11113)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(FcMatchKind,4, 11116, 2)
+CheckTypeSize(FcMatchKind,4, 11116, 2, 3.1, NULL, 11115, NULL)
 #elif __x86_64__
-CheckTypeSize(FcMatchKind,4, 11116, 11)
+CheckTypeSize(FcMatchKind,4, 11116, 11, 3.1, NULL, 11115, NULL)
 #elif __ia64__
-CheckTypeSize(FcMatchKind,4, 11116, 3)
+CheckTypeSize(FcMatchKind,4, 11116, 3, 3.1, NULL, 11115, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FcMatchKind,4, 11116, 6)
+CheckTypeSize(FcMatchKind,4, 11116, 6, 3.1, NULL, 11115, NULL)
 #elif __powerpc64__
-CheckTypeSize(FcMatchKind,4, 11116, 9)
+CheckTypeSize(FcMatchKind,4, 11116, 9, 3.1, NULL, 11115, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FcMatchKind,4, 11116, 10)
+CheckTypeSize(FcMatchKind,4, 11116, 10, 3.1, NULL, 11115, NULL)
 #elif __s390x__
-CheckTypeSize(FcMatchKind,4, 11116, 12)
+CheckTypeSize(FcMatchKind,4, 11116, 12, 3.1, NULL, 11115, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11116,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11115,NULL);\n",architecture,11116,0);
 Msg("Find size of FcMatchKind (11116)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(FcObjectSet,12, 11118, 2)
+CheckTypeSize(FcObjectSet,12, 11118, 2, 3.1, NULL, 11117, NULL)
 #elif __x86_64__
-CheckTypeSize(FcObjectSet,16, 11118, 11)
+CheckTypeSize(FcObjectSet,16, 11118, 11, 3.1, NULL, 11117, NULL)
 #elif __ia64__
-CheckTypeSize(FcObjectSet,16, 11118, 3)
+CheckTypeSize(FcObjectSet,16, 11118, 3, 3.1, NULL, 11117, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FcObjectSet,12, 11118, 6)
+CheckTypeSize(FcObjectSet,12, 11118, 6, 3.1, NULL, 11117, NULL)
 #elif __powerpc64__
-CheckTypeSize(FcObjectSet,16, 11118, 9)
+CheckTypeSize(FcObjectSet,16, 11118, 9, 3.1, NULL, 11117, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FcObjectSet,12, 11118, 10)
+CheckTypeSize(FcObjectSet,12, 11118, 10, 3.1, NULL, 11117, NULL)
 #elif __s390x__
-CheckTypeSize(FcObjectSet,16, 11118, 12)
+CheckTypeSize(FcObjectSet,16, 11118, 12, 3.1, NULL, 11117, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11118,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11117,NULL);\n",architecture,11118,0);
 Msg("Find size of FcObjectSet (11118)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(FcEndian,4, 11121, 2)
+CheckTypeSize(FcEndian,4, 11121, 2, 3.1, NULL, 11120, NULL)
 #elif __x86_64__
-CheckTypeSize(FcEndian,4, 11121, 11)
+CheckTypeSize(FcEndian,4, 11121, 11, 3.1, NULL, 11120, NULL)
 #elif __ia64__
-CheckTypeSize(FcEndian,4, 11121, 3)
+CheckTypeSize(FcEndian,4, 11121, 3, 3.1, NULL, 11120, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FcEndian,4, 11121, 6)
+CheckTypeSize(FcEndian,4, 11121, 6, 3.1, NULL, 11120, NULL)
 #elif __powerpc64__
-CheckTypeSize(FcEndian,4, 11121, 9)
+CheckTypeSize(FcEndian,4, 11121, 9, 3.1, NULL, 11120, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FcEndian,4, 11121, 10)
+CheckTypeSize(FcEndian,4, 11121, 10, 3.1, NULL, 11120, NULL)
 #elif __s390x__
-CheckTypeSize(FcEndian,4, 11121, 12)
+CheckTypeSize(FcEndian,4, 11121, 12, 3.1, NULL, 11120, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11121,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11120,NULL);\n",architecture,11121,0);
 Msg("Find size of FcEndian (11121)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(FcAtomic,0, 11124, 2)
+CheckTypeSize(FcAtomic,0, 11124, 2, 3.1, NULL, 11123, NULL)
 #elif __x86_64__
-CheckTypeSize(FcAtomic,0, 11124, 11)
+CheckTypeSize(FcAtomic,0, 11124, 11, 3.1, NULL, 11123, NULL)
 #elif __ia64__
-CheckTypeSize(FcAtomic,0, 11124, 3)
+CheckTypeSize(FcAtomic,0, 11124, 3, 3.1, NULL, 11123, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FcAtomic,0, 11124, 6)
+CheckTypeSize(FcAtomic,0, 11124, 6, 3.1, NULL, 11123, NULL)
 #elif __powerpc64__
-CheckTypeSize(FcAtomic,0, 11124, 9)
+CheckTypeSize(FcAtomic,0, 11124, 9, 3.1, NULL, 11123, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FcAtomic,0, 11124, 10)
+CheckTypeSize(FcAtomic,0, 11124, 10, 3.1, NULL, 11123, NULL)
 #elif __s390x__
-CheckTypeSize(FcAtomic,0, 11124, 12)
+CheckTypeSize(FcAtomic,0, 11124, 12, 3.1, NULL, 11123, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11124,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11123,NULL);\n",architecture,11124,0);
 Msg("Find size of FcAtomic (11124)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(FcConstant,12, 11127, 2)
+CheckTypeSize(FcConstant,12, 11127, 2, 3.1, NULL, 11126, NULL)
 #elif __x86_64__
-CheckTypeSize(FcConstant,24, 11127, 11)
+CheckTypeSize(FcConstant,24, 11127, 11, 3.1, NULL, 11126, NULL)
 #elif __ia64__
-CheckTypeSize(FcConstant,24, 11127, 3)
+CheckTypeSize(FcConstant,24, 11127, 3, 3.1, NULL, 11126, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FcConstant,12, 11127, 6)
+CheckTypeSize(FcConstant,12, 11127, 6, 3.1, NULL, 11126, NULL)
 #elif __powerpc64__
-CheckTypeSize(FcConstant,24, 11127, 9)
+CheckTypeSize(FcConstant,24, 11127, 9, 3.1, NULL, 11126, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FcConstant,12, 11127, 10)
+CheckTypeSize(FcConstant,12, 11127, 10, 3.1, NULL, 11126, NULL)
 #elif __s390x__
-CheckTypeSize(FcConstant,24, 11127, 12)
+CheckTypeSize(FcConstant,24, 11127, 12, 3.1, NULL, 11126, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11127,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11126,NULL);\n",architecture,11127,0);
 Msg("Find size of FcConstant (11127)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(FcFontSet,12, 11132, 2)
+CheckTypeSize(FcFontSet,12, 11132, 2, 3.1, NULL, 11130, NULL)
 #elif __x86_64__
-CheckTypeSize(FcFontSet,16, 11132, 11)
+CheckTypeSize(FcFontSet,16, 11132, 11, 3.1, NULL, 11130, NULL)
 #elif __ia64__
-CheckTypeSize(FcFontSet,16, 11132, 3)
+CheckTypeSize(FcFontSet,16, 11132, 3, 3.1, NULL, 11130, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FcFontSet,12, 11132, 6)
+CheckTypeSize(FcFontSet,12, 11132, 6, 3.1, NULL, 11130, NULL)
 #elif __powerpc64__
-CheckTypeSize(FcFontSet,16, 11132, 9)
+CheckTypeSize(FcFontSet,16, 11132, 9, 3.1, NULL, 11130, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FcFontSet,12, 11132, 10)
+CheckTypeSize(FcFontSet,12, 11132, 10, 3.1, NULL, 11130, NULL)
 #elif __s390x__
-CheckTypeSize(FcFontSet,16, 11132, 12)
+CheckTypeSize(FcFontSet,16, 11132, 12, 3.1, NULL, 11130, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11132,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11130,NULL);\n",architecture,11132,0);
 Msg("Find size of FcFontSet (11132)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(FcSetName,4, 11135, 2)
+CheckTypeSize(FcSetName,4, 11135, 2, 3.1, NULL, 11134, NULL)
 #elif __x86_64__
-CheckTypeSize(FcSetName,4, 11135, 11)
+CheckTypeSize(FcSetName,4, 11135, 11, 3.1, NULL, 11134, NULL)
 #elif __ia64__
-CheckTypeSize(FcSetName,4, 11135, 3)
+CheckTypeSize(FcSetName,4, 11135, 3, 3.1, NULL, 11134, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FcSetName,4, 11135, 6)
+CheckTypeSize(FcSetName,4, 11135, 6, 3.1, NULL, 11134, NULL)
 #elif __powerpc64__
-CheckTypeSize(FcSetName,4, 11135, 9)
+CheckTypeSize(FcSetName,4, 11135, 9, 3.1, NULL, 11134, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FcSetName,4, 11135, 10)
+CheckTypeSize(FcSetName,4, 11135, 10, 3.1, NULL, 11134, NULL)
 #elif __s390x__
-CheckTypeSize(FcSetName,4, 11135, 12)
+CheckTypeSize(FcSetName,4, 11135, 12, 3.1, NULL, 11134, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11135,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11134,NULL);\n",architecture,11135,0);
 Msg("Find size of FcSetName (11135)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(FcBlanks,0, 11139, 2)
+CheckTypeSize(FcBlanks,0, 11139, 2, 3.1, NULL, 11138, NULL)
 #elif __x86_64__
-CheckTypeSize(FcBlanks,0, 11139, 11)
+CheckTypeSize(FcBlanks,0, 11139, 11, 3.1, NULL, 11138, NULL)
 #elif __ia64__
-CheckTypeSize(FcBlanks,0, 11139, 3)
+CheckTypeSize(FcBlanks,0, 11139, 3, 3.1, NULL, 11138, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FcBlanks,0, 11139, 6)
+CheckTypeSize(FcBlanks,0, 11139, 6, 3.1, NULL, 11138, NULL)
 #elif __powerpc64__
-CheckTypeSize(FcBlanks,0, 11139, 9)
+CheckTypeSize(FcBlanks,0, 11139, 9, 3.1, NULL, 11138, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FcBlanks,0, 11139, 10)
+CheckTypeSize(FcBlanks,0, 11139, 10, 3.1, NULL, 11138, NULL)
 #elif __s390x__
-CheckTypeSize(FcBlanks,0, 11139, 12)
+CheckTypeSize(FcBlanks,0, 11139, 12, 3.1, NULL, 11138, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11139,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11138,NULL);\n",architecture,11139,0);
 Msg("Find size of FcBlanks (11139)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(FcResult,4, 11142, 2)
+CheckTypeSize(FcResult,4, 11142, 2, 3.1, NULL, 11141, NULL)
 #elif __x86_64__
-CheckTypeSize(FcResult,4, 11142, 11)
+CheckTypeSize(FcResult,4, 11142, 11, 3.1, NULL, 11141, NULL)
 #elif __ia64__
-CheckTypeSize(FcResult,4, 11142, 3)
+CheckTypeSize(FcResult,4, 11142, 3, 3.1, NULL, 11141, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FcResult,4, 11142, 6)
+CheckTypeSize(FcResult,4, 11142, 6, 3.1, NULL, 11141, NULL)
 #elif __powerpc64__
-CheckTypeSize(FcResult,4, 11142, 9)
+CheckTypeSize(FcResult,4, 11142, 9, 3.1, NULL, 11141, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FcResult,4, 11142, 10)
+CheckTypeSize(FcResult,4, 11142, 10, 3.1, NULL, 11141, NULL)
 #elif __s390x__
-CheckTypeSize(FcResult,4, 11142, 12)
+CheckTypeSize(FcResult,4, 11142, 12, 3.1, NULL, 11141, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11142,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11141,NULL);\n",architecture,11142,0);
 Msg("Find size of FcResult (11142)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(FcObjectType,8, 11145, 2)
+CheckTypeSize(FcObjectType,8, 11145, 2, 3.1, NULL, 11144, NULL)
 #elif __x86_64__
-CheckTypeSize(FcObjectType,16, 11145, 11)
+CheckTypeSize(FcObjectType,16, 11145, 11, 3.1, NULL, 11144, NULL)
 #elif __ia64__
-CheckTypeSize(FcObjectType,16, 11145, 3)
+CheckTypeSize(FcObjectType,16, 11145, 3, 3.1, NULL, 11144, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FcObjectType,8, 11145, 6)
+CheckTypeSize(FcObjectType,8, 11145, 6, 3.1, NULL, 11144, NULL)
 #elif __powerpc64__
-CheckTypeSize(FcObjectType,16, 11145, 9)
+CheckTypeSize(FcObjectType,16, 11145, 9, 3.1, NULL, 11144, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FcObjectType,8, 11145, 10)
+CheckTypeSize(FcObjectType,8, 11145, 10, 3.1, NULL, 11144, NULL)
 #elif __s390x__
-CheckTypeSize(FcObjectType,16, 11145, 12)
+CheckTypeSize(FcObjectType,16, 11145, 12, 3.1, NULL, 11144, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11145,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11144,NULL);\n",architecture,11145,0);
 Msg("Find size of FcObjectType (11145)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(FcGlobalCache,0, 11150, 2)
+CheckTypeSize(FcGlobalCache,0, 11150, 2, 3.1, NULL, 11149, NULL)
 #elif __x86_64__
-CheckTypeSize(FcGlobalCache,0, 11150, 11)
+CheckTypeSize(FcGlobalCache,0, 11150, 11, 3.1, NULL, 11149, NULL)
 #elif __ia64__
-CheckTypeSize(FcGlobalCache,0, 11150, 3)
+CheckTypeSize(FcGlobalCache,0, 11150, 3, 3.1, NULL, 11149, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FcGlobalCache,0, 11150, 6)
+CheckTypeSize(FcGlobalCache,0, 11150, 6, 3.1, NULL, 11149, NULL)
 #elif __powerpc64__
-CheckTypeSize(FcGlobalCache,0, 11150, 9)
+CheckTypeSize(FcGlobalCache,0, 11150, 9, 3.1, NULL, 11149, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FcGlobalCache,0, 11150, 10)
+CheckTypeSize(FcGlobalCache,0, 11150, 10, 3.1, NULL, 11149, NULL)
 #elif __s390x__
-CheckTypeSize(FcGlobalCache,0, 11150, 12)
+CheckTypeSize(FcGlobalCache,0, 11150, 12, 3.1, NULL, 11149, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11150,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11149,NULL);\n",architecture,11150,0);
 Msg("Find size of FcGlobalCache (11150)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(FcLangResult,4, 11161, 2)
+CheckTypeSize(FcLangResult,4, 11161, 2, 3.1, NULL, 11160, NULL)
 #elif __x86_64__
-CheckTypeSize(FcLangResult,4, 11161, 11)
+CheckTypeSize(FcLangResult,4, 11161, 11, 3.1, NULL, 11160, NULL)
 #elif __ia64__
-CheckTypeSize(FcLangResult,4, 11161, 3)
+CheckTypeSize(FcLangResult,4, 11161, 3, 3.1, NULL, 11160, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FcLangResult,4, 11161, 6)
+CheckTypeSize(FcLangResult,4, 11161, 6, 3.1, NULL, 11160, NULL)
 #elif __powerpc64__
-CheckTypeSize(FcLangResult,4, 11161, 9)
+CheckTypeSize(FcLangResult,4, 11161, 9, 3.1, NULL, 11160, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FcLangResult,4, 11161, 10)
+CheckTypeSize(FcLangResult,4, 11161, 10, 3.1, NULL, 11160, NULL)
 #elif __s390x__
-CheckTypeSize(FcLangResult,4, 11161, 12)
+CheckTypeSize(FcLangResult,4, 11161, 12, 3.1, NULL, 11160, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11161,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11160,NULL);\n",architecture,11161,0);
 Msg("Find size of FcLangResult (11161)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(FcChar16,2, 16181, 2)
+CheckTypeSize(FcChar16,2, 16181, 2, 3.1, NULL, 11209, NULL)
 #elif __x86_64__
-CheckTypeSize(FcChar16,2, 16181, 11)
+CheckTypeSize(FcChar16,2, 16181, 11, 3.1, NULL, 11209, NULL)
 #elif __ia64__
-CheckTypeSize(FcChar16,2, 16181, 3)
+CheckTypeSize(FcChar16,2, 16181, 3, 3.1, NULL, 11209, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FcChar16,2, 16181, 6)
+CheckTypeSize(FcChar16,2, 16181, 6, 3.1, NULL, 11209, NULL)
 #elif __powerpc64__
-CheckTypeSize(FcChar16,2, 16181, 9)
+CheckTypeSize(FcChar16,2, 16181, 9, 3.1, NULL, 11209, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FcChar16,2, 16181, 10)
+CheckTypeSize(FcChar16,2, 16181, 10, 3.1, NULL, 11209, NULL)
 #elif __s390x__
-CheckTypeSize(FcChar16,2, 16181, 12)
+CheckTypeSize(FcChar16,2, 16181, 12, 3.1, NULL, 11209, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16181,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11209, NULL);\n",architecture,16181,0);
 Msg("Find size of FcChar16 (16181)\n");
 #endif
 

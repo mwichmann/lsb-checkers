@@ -26,21 +26,21 @@ Msg("Checking data structures in iconv.h\n");
 
 printf("Checking data structures in iconv.h\n");
 #if __i386__
-CheckTypeSize(iconv_t,4, 6895, 2)
+CheckTypeSize(iconv_t,4, 6895, 2, 1.0, NULL, 40, NULL)
 #elif __ia64__
-CheckTypeSize(iconv_t,8, 6895, 3)
+CheckTypeSize(iconv_t,8, 6895, 3, 1.3, NULL, 40, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(iconv_t,4, 6895, 6)
+CheckTypeSize(iconv_t,4, 6895, 6, 1.2, NULL, 40, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(iconv_t,4, 6895, 10)
+CheckTypeSize(iconv_t,4, 6895, 10, 1.3, NULL, 40, NULL)
 #elif __powerpc64__
-CheckTypeSize(iconv_t,8, 6895, 9)
+CheckTypeSize(iconv_t,8, 6895, 9, 2.0, NULL, 40, NULL)
 #elif __s390x__
-CheckTypeSize(iconv_t,8, 6895, 12)
+CheckTypeSize(iconv_t,8, 6895, 12, 1.3, NULL, 40, NULL)
 #elif __x86_64__
-CheckTypeSize(iconv_t,8, 6895, 11)
+CheckTypeSize(iconv_t,8, 6895, 11, 2.0, NULL, 40, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6895,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,40, NULL);\n",architecture,6895,0);
 Msg("Find size of iconv_t (6895)\n");
 #endif
 

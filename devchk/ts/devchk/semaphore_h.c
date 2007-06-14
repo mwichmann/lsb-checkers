@@ -27,7 +27,7 @@ Msg("Checking data structures in semaphore.h\n");
 printf("Checking data structures in semaphore.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SEM_FAILED
-	CompareConstant(SEM_FAILED,((sem_t*)0),1624,architecture)
+	CompareConstant(SEM_FAILED,((sem_t*)0),1624,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SEM_FAILED\n");
 cnt++;
@@ -37,7 +37,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SEM_VALUE_MAX
-	CompareConstant(SEM_VALUE_MAX,((int)((~0u)>>1)),1625,architecture)
+	CompareConstant(SEM_VALUE_MAX,((int)((~0u)>>1)),1625,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SEM_VALUE_MAX\n");
 cnt++;
@@ -46,21 +46,21 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(sem_t,16, 6960, 2)
+CheckTypeSize(sem_t,16, 6960, 2, 1.2, NULL, 6958, NULL)
 #elif __ia64__
-CheckTypeSize(sem_t,32, 6960, 3)
+CheckTypeSize(sem_t,32, 6960, 3, 1.3, NULL, 6958, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(sem_t,16, 6960, 6)
+CheckTypeSize(sem_t,16, 6960, 6, 1.2, NULL, 6958, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(sem_t,16, 6960, 10)
+CheckTypeSize(sem_t,16, 6960, 10, 1.3, NULL, 6958, NULL)
 #elif __powerpc64__
-CheckTypeSize(sem_t,32, 6960, 9)
+CheckTypeSize(sem_t,32, 6960, 9, 2.0, NULL, 6958, NULL)
 #elif __s390x__
-CheckTypeSize(sem_t,32, 6960, 12)
+CheckTypeSize(sem_t,32, 6960, 12, 1.3, NULL, 6958, NULL)
 #elif __x86_64__
-CheckTypeSize(sem_t,32, 6960, 11)
+CheckTypeSize(sem_t,32, 6960, 11, 2.0, NULL, 6958, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6960,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6958, NULL);\n",architecture,6960,0);
 Msg("Find size of sem_t (6960)\n");
 #endif
 

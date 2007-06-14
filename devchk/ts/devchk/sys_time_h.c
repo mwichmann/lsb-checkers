@@ -27,7 +27,7 @@ Msg("Checking data structures in sys/time.h\n");
 printf("Checking data structures in sys/time.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef ITIMER_REAL
-	CompareConstant(ITIMER_REAL,0,3585,architecture)
+	CompareConstant(ITIMER_REAL,0,3585,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: ITIMER_REAL\n");
 cnt++;
@@ -37,7 +37,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ITIMER_VIRTUAL
-	CompareConstant(ITIMER_VIRTUAL,1,3586,architecture)
+	CompareConstant(ITIMER_VIRTUAL,1,3586,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: ITIMER_VIRTUAL\n");
 cnt++;
@@ -47,7 +47,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ITIMER_PROF
-	CompareConstant(ITIMER_PROF,2,3587,architecture)
+	CompareConstant(ITIMER_PROF,2,3587,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: ITIMER_PROF\n");
 cnt++;
@@ -63,7 +63,7 @@ cnt++;
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9855,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9855,0);
 Msg("Find size of timezone (9855)\n");
 #endif
 
@@ -75,12 +75,12 @@ Msg("Find size of timezone (9855)\n");
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9861,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9861,0);
 Msg("Find size of itimerval (9861)\n");
 #endif
 
 #if 1
-CheckTypeSize(__itimer_which_t,4, 9862, 1)
+CheckTypeSize(__itimer_which_t,4, 9862, 1, 2.0, NULL, 6, NULL)
 #endif
 
 #if __i386__
@@ -91,7 +91,7 @@ CheckTypeSize(__itimer_which_t,4, 9862, 1)
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7018,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,7018,0);
 Msg("Find size of timespec (7018)\n");
 #endif
 
@@ -103,7 +103,7 @@ Msg("Find size of timespec (7018)\n");
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9858,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,9858,0);
 Msg("Find size of timeval (9858)\n");
 #endif
 

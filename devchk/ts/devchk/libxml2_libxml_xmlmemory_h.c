@@ -27,78 +27,78 @@ Msg("Checking data structures in libxml2/libxml/xmlmemory.h\n");
 
 printf("Checking data structures in libxml2/libxml/xmlmemory.h\n");
 #if __i386__
-CheckTypeSize(xmlFreeFunc,4, 14570, 2)
+CheckTypeSize(xmlFreeFunc,4, 14570, 2, 3.1, NULL, 14569, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlFreeFunc,8, 14570, 11)
+CheckTypeSize(xmlFreeFunc,8, 14570, 11, 3.1, NULL, 14569, NULL)
 #elif __ia64__
-CheckTypeSize(xmlFreeFunc,8, 14570, 3)
+CheckTypeSize(xmlFreeFunc,8, 14570, 3, 3.1, NULL, 14569, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlFreeFunc,4, 14570, 6)
+CheckTypeSize(xmlFreeFunc,4, 14570, 6, 3.1, NULL, 14569, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlFreeFunc,8, 14570, 9)
+CheckTypeSize(xmlFreeFunc,8, 14570, 9, 3.1, NULL, 14569, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlFreeFunc,4, 14570, 10)
+CheckTypeSize(xmlFreeFunc,4, 14570, 10, 3.1, NULL, 14569, NULL)
 #elif __s390x__
-CheckTypeSize(xmlFreeFunc,8, 14570, 12)
+CheckTypeSize(xmlFreeFunc,8, 14570, 12, 3.1, NULL, 14569, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14570,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14569,NULL);\n",architecture,14570,0);
 Msg("Find size of xmlFreeFunc (14570)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlMallocFunc,4, 14572, 2)
+CheckTypeSize(xmlMallocFunc,4, 14572, 2, 3.1, NULL, 14571, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlMallocFunc,8, 14572, 11)
+CheckTypeSize(xmlMallocFunc,8, 14572, 11, 3.1, NULL, 14571, NULL)
 #elif __ia64__
-CheckTypeSize(xmlMallocFunc,8, 14572, 3)
+CheckTypeSize(xmlMallocFunc,8, 14572, 3, 3.1, NULL, 14571, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlMallocFunc,4, 14572, 6)
+CheckTypeSize(xmlMallocFunc,4, 14572, 6, 3.1, NULL, 14571, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlMallocFunc,8, 14572, 9)
+CheckTypeSize(xmlMallocFunc,8, 14572, 9, 3.1, NULL, 14571, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlMallocFunc,4, 14572, 10)
+CheckTypeSize(xmlMallocFunc,4, 14572, 10, 3.1, NULL, 14571, NULL)
 #elif __s390x__
-CheckTypeSize(xmlMallocFunc,8, 14572, 12)
+CheckTypeSize(xmlMallocFunc,8, 14572, 12, 3.1, NULL, 14571, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14572,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14571,NULL);\n",architecture,14572,0);
 Msg("Find size of xmlMallocFunc (14572)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlReallocFunc,4, 14574, 2)
+CheckTypeSize(xmlReallocFunc,4, 14574, 2, 3.1, NULL, 14573, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlReallocFunc,8, 14574, 11)
+CheckTypeSize(xmlReallocFunc,8, 14574, 11, 3.1, NULL, 14573, NULL)
 #elif __ia64__
-CheckTypeSize(xmlReallocFunc,8, 14574, 3)
+CheckTypeSize(xmlReallocFunc,8, 14574, 3, 3.1, NULL, 14573, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlReallocFunc,4, 14574, 6)
+CheckTypeSize(xmlReallocFunc,4, 14574, 6, 3.1, NULL, 14573, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlReallocFunc,8, 14574, 9)
+CheckTypeSize(xmlReallocFunc,8, 14574, 9, 3.1, NULL, 14573, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlReallocFunc,4, 14574, 10)
+CheckTypeSize(xmlReallocFunc,4, 14574, 10, 3.1, NULL, 14573, NULL)
 #elif __s390x__
-CheckTypeSize(xmlReallocFunc,8, 14574, 12)
+CheckTypeSize(xmlReallocFunc,8, 14574, 12, 3.1, NULL, 14573, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14574,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14573,NULL);\n",architecture,14574,0);
 Msg("Find size of xmlReallocFunc (14574)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlStrdupFunc,4, 14576, 2)
+CheckTypeSize(xmlStrdupFunc,4, 14576, 2, 3.1, NULL, 14575, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlStrdupFunc,8, 14576, 11)
+CheckTypeSize(xmlStrdupFunc,8, 14576, 11, 3.1, NULL, 14575, NULL)
 #elif __ia64__
-CheckTypeSize(xmlStrdupFunc,8, 14576, 3)
+CheckTypeSize(xmlStrdupFunc,8, 14576, 3, 3.1, NULL, 14575, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlStrdupFunc,4, 14576, 6)
+CheckTypeSize(xmlStrdupFunc,4, 14576, 6, 3.1, NULL, 14575, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlStrdupFunc,8, 14576, 9)
+CheckTypeSize(xmlStrdupFunc,8, 14576, 9, 3.1, NULL, 14575, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlStrdupFunc,4, 14576, 10)
+CheckTypeSize(xmlStrdupFunc,4, 14576, 10, 3.1, NULL, 14575, NULL)
 #elif __s390x__
-CheckTypeSize(xmlStrdupFunc,8, 14576, 12)
+CheckTypeSize(xmlStrdupFunc,8, 14576, 12, 3.1, NULL, 14575, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14576,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14575, NULL);\n",architecture,14576,0);
 Msg("Find size of xmlStrdupFunc (14576)\n");
 #endif
 

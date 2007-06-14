@@ -33,7 +33,7 @@ printf("Checking data structures in sys/times.h\n");
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6990,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,6990,0);
 Msg("Find size of tms (6990)\n");
 #endif
 

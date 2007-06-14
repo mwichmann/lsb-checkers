@@ -126,6 +126,7 @@ OBJS = hdrchk.o \
 	signal_h.o \
 	spawn_h.o \
 	stddef_h.o \
+	stdint_h.o \
 	stdio_h.o \
 	stdlib_h.o \
 	sys_file_h.o \
@@ -189,8 +190,7 @@ endif
 all: hdrchk
 
 hdrchk: $(OBJS)
-	$(CXX) -o hdrchk $(OBJS) $(EXTRALIBS) -L /usr/X11R6/lib64 -L/usr/X11R6/lib -L/usr/lib/qt3/lib64 -L/usr/lib/qt3/lib -L/usr/lib64/qt-3.3 -L/usr/lib/qt-3.3 -lXt -lX11 -lncurses -lqt-mt
-
+	$(CXX) -o hdrchk $(OBJS) $(EXTRALIBS) -L /usr/X11R6/lib64 -L/usr/X11R6/lib -L/usr/lib/qt3/lib64 -L/usr/lib/qt3/lib -L/usr/lib64/qt-3.3 -L/usr/lib/qt-3.3 -lXt -lX11 -lncurses -lqt-mt -lrt
 
 hdrchk.o: hdrchk.c
 	$(CC) $(CFLAGS) -g -c hdrchk.c

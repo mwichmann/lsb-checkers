@@ -36,40 +36,40 @@ printf("Checking data structures in libxml2/libxml/xmlwriter.h\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlTextWriter,0, 15077, 2)
+CheckTypeSize(xmlTextWriter,0, 15077, 2, 3.1, NULL, 15076, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlTextWriter,0, 15077, 11)
+CheckTypeSize(xmlTextWriter,0, 15077, 11, 3.1, NULL, 15076, NULL)
 #elif __ia64__
-CheckTypeSize(xmlTextWriter,0, 15077, 3)
+CheckTypeSize(xmlTextWriter,0, 15077, 3, 3.1, NULL, 15076, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlTextWriter,0, 15077, 6)
+CheckTypeSize(xmlTextWriter,0, 15077, 6, 3.1, NULL, 15076, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlTextWriter,0, 15077, 9)
+CheckTypeSize(xmlTextWriter,0, 15077, 9, 3.1, NULL, 15076, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlTextWriter,0, 15077, 10)
+CheckTypeSize(xmlTextWriter,0, 15077, 10, 3.1, NULL, 15076, NULL)
 #elif __s390x__
-CheckTypeSize(xmlTextWriter,0, 15077, 12)
+CheckTypeSize(xmlTextWriter,0, 15077, 12, 3.1, NULL, 15076, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15077,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15076,NULL);\n",architecture,15077,0);
 Msg("Find size of xmlTextWriter (15077)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlTextWriterPtr,4, 15079, 2)
+CheckTypeSize(xmlTextWriterPtr,4, 15079, 2, 3.1, NULL, 15078, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlTextWriterPtr,8, 15079, 11)
+CheckTypeSize(xmlTextWriterPtr,8, 15079, 11, 3.1, NULL, 15078, NULL)
 #elif __ia64__
-CheckTypeSize(xmlTextWriterPtr,8, 15079, 3)
+CheckTypeSize(xmlTextWriterPtr,8, 15079, 3, 3.1, NULL, 15078, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlTextWriterPtr,4, 15079, 6)
+CheckTypeSize(xmlTextWriterPtr,4, 15079, 6, 3.1, NULL, 15078, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlTextWriterPtr,8, 15079, 9)
+CheckTypeSize(xmlTextWriterPtr,8, 15079, 9, 3.1, NULL, 15078, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlTextWriterPtr,4, 15079, 10)
+CheckTypeSize(xmlTextWriterPtr,4, 15079, 10, 3.1, NULL, 15078, NULL)
 #elif __s390x__
-CheckTypeSize(xmlTextWriterPtr,8, 15079, 12)
+CheckTypeSize(xmlTextWriterPtr,8, 15079, 12, 3.1, NULL, 15078, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15079,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15078, NULL);\n",architecture,15079,0);
 Msg("Find size of xmlTextWriterPtr (15079)\n");
 #endif
 

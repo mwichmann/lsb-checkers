@@ -27,7 +27,7 @@ Msg("Checking data structures in sys/msg.h\n");
 printf("Checking data structures in sys/msg.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef MSG_NOERROR
-	CompareConstant(MSG_NOERROR,010000,3457,architecture)
+	CompareConstant(MSG_NOERROR,010000,3457,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MSG_NOERROR\n");
 cnt++;
@@ -36,31 +36,31 @@ cnt++;
 #endif
 
 #if __s390__ && !__s390x__
-CheckTypeSize(msgqnum_t,4, 10213, 10)
+CheckTypeSize(msgqnum_t,4, 10213, 10, 2.0, NULL, 9, NULL)
 #elif __i386__
-CheckTypeSize(msgqnum_t,4, 10213, 2)
+CheckTypeSize(msgqnum_t,4, 10213, 2, 2.0, NULL, 9, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(msgqnum_t,4, 10213, 6)
+CheckTypeSize(msgqnum_t,4, 10213, 6, 2.0, NULL, 9, NULL)
 #elif __s390x__
-CheckTypeSize(msgqnum_t,8, 10213, 12)
+CheckTypeSize(msgqnum_t,8, 10213, 12, 2.0, NULL, 9, NULL)
 #elif __x86_64__
-CheckTypeSize(msgqnum_t,8, 10213, 11)
+CheckTypeSize(msgqnum_t,8, 10213, 11, 2.0, NULL, 9, NULL)
 #elif __powerpc64__
-CheckTypeSize(msgqnum_t,8, 10213, 9)
+CheckTypeSize(msgqnum_t,8, 10213, 9, 2.0, NULL, 9, NULL)
 #endif
 
 #if __i386__
-CheckTypeSize(msglen_t,4, 10214, 2)
+CheckTypeSize(msglen_t,4, 10214, 2, 2.0, NULL, 9, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(msglen_t,4, 10214, 10)
+CheckTypeSize(msglen_t,4, 10214, 10, 2.0, NULL, 9, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(msglen_t,4, 10214, 6)
+CheckTypeSize(msglen_t,4, 10214, 6, 2.0, NULL, 9, NULL)
 #elif __s390x__
-CheckTypeSize(msglen_t,8, 10214, 12)
+CheckTypeSize(msglen_t,8, 10214, 12, 2.0, NULL, 9, NULL)
 #elif __x86_64__
-CheckTypeSize(msglen_t,8, 10214, 11)
+CheckTypeSize(msglen_t,8, 10214, 11, 2.0, NULL, 9, NULL)
 #elif __powerpc64__
-CheckTypeSize(msglen_t,8, 10214, 9)
+CheckTypeSize(msglen_t,8, 10214, 9, 2.0, NULL, 9, NULL)
 #endif
 
 #if __i386__

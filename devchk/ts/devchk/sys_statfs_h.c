@@ -27,7 +27,7 @@ Msg("Checking data structures in sys/statfs.h\n");
 printf("Checking data structures in sys/statfs.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef NFS_SUPER_MAGIC
-	CompareConstant(NFS_SUPER_MAGIC,0x6969,5026,architecture)
+	CompareConstant(NFS_SUPER_MAGIC,0x6969,5026,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: NFS_SUPER_MAGIC\n");
 cnt++;
@@ -43,7 +43,7 @@ cnt++;
 #elif __x86_64__
 #elif __s390x__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10319,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,10319,0);
 Msg("Find size of statfs (10319)\n");
 #endif
 
@@ -55,7 +55,7 @@ Msg("Find size of statfs (10319)\n");
 #elif __x86_64__
 #elif __s390x__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10321,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0, NULL);\n",architecture,10321,0);
 Msg("Find size of statfs64 (10321)\n");
 #endif
 

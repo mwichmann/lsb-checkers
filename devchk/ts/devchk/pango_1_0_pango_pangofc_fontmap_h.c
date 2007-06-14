@@ -56,59 +56,59 @@ printf("Checking data structures in pango-1.0/pango/pangofc-fontmap.h\n");
 #endif
 
 #if __i386__
-CheckTypeSize(PangoFcFontMap,0, 12604, 2)
+CheckTypeSize(PangoFcFontMap,0, 12604, 2, 3.1, NULL, 12603, NULL)
 #elif __x86_64__
-CheckTypeSize(PangoFcFontMap,0, 12604, 11)
+CheckTypeSize(PangoFcFontMap,0, 12604, 11, 3.1, NULL, 12603, NULL)
 #elif __ia64__
-CheckTypeSize(PangoFcFontMap,0, 12604, 3)
+CheckTypeSize(PangoFcFontMap,0, 12604, 3, 3.1, NULL, 12603, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(PangoFcFontMap,0, 12604, 6)
+CheckTypeSize(PangoFcFontMap,0, 12604, 6, 3.1, NULL, 12603, NULL)
 #elif __powerpc64__
-CheckTypeSize(PangoFcFontMap,0, 12604, 9)
+CheckTypeSize(PangoFcFontMap,0, 12604, 9, 3.1, NULL, 12603, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(PangoFcFontMap,0, 12604, 10)
+CheckTypeSize(PangoFcFontMap,0, 12604, 10, 3.1, NULL, 12603, NULL)
 #elif __s390x__
-CheckTypeSize(PangoFcFontMap,0, 12604, 12)
+CheckTypeSize(PangoFcFontMap,0, 12604, 12, 3.1, NULL, 12603, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12604,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12603,NULL);\n",architecture,12604,0);
 Msg("Find size of PangoFcFontMap (12604)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(PangoFcDecoderFindFunc,4, 12607, 2)
+CheckTypeSize(PangoFcDecoderFindFunc,4, 12607, 2, 3.1, NULL, 12606, NULL)
 #elif __x86_64__
-CheckTypeSize(PangoFcDecoderFindFunc,8, 12607, 11)
+CheckTypeSize(PangoFcDecoderFindFunc,8, 12607, 11, 3.1, NULL, 12606, NULL)
 #elif __ia64__
-CheckTypeSize(PangoFcDecoderFindFunc,8, 12607, 3)
+CheckTypeSize(PangoFcDecoderFindFunc,8, 12607, 3, 3.1, NULL, 12606, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(PangoFcDecoderFindFunc,4, 12607, 6)
+CheckTypeSize(PangoFcDecoderFindFunc,4, 12607, 6, 3.1, NULL, 12606, NULL)
 #elif __powerpc64__
-CheckTypeSize(PangoFcDecoderFindFunc,8, 12607, 9)
+CheckTypeSize(PangoFcDecoderFindFunc,8, 12607, 9, 3.1, NULL, 12606, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(PangoFcDecoderFindFunc,4, 12607, 10)
+CheckTypeSize(PangoFcDecoderFindFunc,4, 12607, 10, 3.1, NULL, 12606, NULL)
 #elif __s390x__
-CheckTypeSize(PangoFcDecoderFindFunc,8, 12607, 12)
+CheckTypeSize(PangoFcDecoderFindFunc,8, 12607, 12, 3.1, NULL, 12606, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12607,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12606,NULL);\n",architecture,12607,0);
 Msg("Find size of PangoFcDecoderFindFunc (12607)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(PangoFcFontMapClass,0, 12609, 2)
+CheckTypeSize(PangoFcFontMapClass,0, 12609, 2, 3.1, NULL, 12608, NULL)
 #elif __x86_64__
-CheckTypeSize(PangoFcFontMapClass,0, 12609, 11)
+CheckTypeSize(PangoFcFontMapClass,0, 12609, 11, 3.1, NULL, 12608, NULL)
 #elif __ia64__
-CheckTypeSize(PangoFcFontMapClass,0, 12609, 3)
+CheckTypeSize(PangoFcFontMapClass,0, 12609, 3, 3.1, NULL, 12608, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(PangoFcFontMapClass,0, 12609, 6)
+CheckTypeSize(PangoFcFontMapClass,0, 12609, 6, 3.1, NULL, 12608, NULL)
 #elif __powerpc64__
-CheckTypeSize(PangoFcFontMapClass,0, 12609, 9)
+CheckTypeSize(PangoFcFontMapClass,0, 12609, 9, 3.1, NULL, 12608, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(PangoFcFontMapClass,0, 12609, 10)
+CheckTypeSize(PangoFcFontMapClass,0, 12609, 10, 3.1, NULL, 12608, NULL)
 #elif __s390x__
-CheckTypeSize(PangoFcFontMapClass,0, 12609, 12)
+CheckTypeSize(PangoFcFontMapClass,0, 12609, 12, 3.1, NULL, 12608, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12609,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12608, NULL);\n",architecture,12609,0);
 Msg("Find size of PangoFcFontMapClass (12609)\n");
 #endif
 

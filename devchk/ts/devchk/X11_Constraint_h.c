@@ -33,21 +33,21 @@ Msg("Checking data structures in X11/Constraint.h\n");
 
 printf("Checking data structures in X11/Constraint.h\n");
 #if __ia64__
-CheckTypeSize(ConstraintWidgetClass,8, 10260, 3)
+CheckTypeSize(ConstraintWidgetClass,8, 10260, 3, 1.3, NULL, 10259, NULL)
 #elif __i386__
-CheckTypeSize(ConstraintWidgetClass,4, 10260, 2)
+CheckTypeSize(ConstraintWidgetClass,4, 10260, 2, 1.2, NULL, 10259, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(ConstraintWidgetClass,4, 10260, 6)
+CheckTypeSize(ConstraintWidgetClass,4, 10260, 6, 1.2, NULL, 10259, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(ConstraintWidgetClass,4, 10260, 10)
+CheckTypeSize(ConstraintWidgetClass,4, 10260, 10, 1.3, NULL, 10259, NULL)
 #elif __powerpc64__
-CheckTypeSize(ConstraintWidgetClass,8, 10260, 9)
+CheckTypeSize(ConstraintWidgetClass,8, 10260, 9, 2.0, NULL, 10259, NULL)
 #elif __s390x__
-CheckTypeSize(ConstraintWidgetClass,8, 10260, 12)
+CheckTypeSize(ConstraintWidgetClass,8, 10260, 12, 1.3, NULL, 10259, NULL)
 #elif __x86_64__
-CheckTypeSize(ConstraintWidgetClass,8, 10260, 11)
+CheckTypeSize(ConstraintWidgetClass,8, 10260, 11, 2.0, NULL, 10259, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10260,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10259, NULL);\n",architecture,10260,0);
 Msg("Find size of ConstraintWidgetClass (10260)\n");
 #endif
 

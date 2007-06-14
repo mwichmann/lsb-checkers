@@ -27,7 +27,7 @@ Msg("Checking data structures in sys/sem.h\n");
 printf("Checking data structures in sys/sem.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SEM_UNDO
-	CompareConstant(SEM_UNDO,0x1000,3198,architecture)
+	CompareConstant(SEM_UNDO,0x1000,3198,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SEM_UNDO\n");
 cnt++;
@@ -37,7 +37,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef GETPID
-	CompareConstant(GETPID,11,3199,architecture)
+	CompareConstant(GETPID,11,3199,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: GETPID\n");
 cnt++;
@@ -47,7 +47,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef GETVAL
-	CompareConstant(GETVAL,12,3200,architecture)
+	CompareConstant(GETVAL,12,3200,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: GETVAL\n");
 cnt++;
@@ -57,7 +57,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef GETALL
-	CompareConstant(GETALL,13,3201,architecture)
+	CompareConstant(GETALL,13,3201,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: GETALL\n");
 cnt++;
@@ -67,7 +67,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef GETNCNT
-	CompareConstant(GETNCNT,14,3202,architecture)
+	CompareConstant(GETNCNT,14,3202,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: GETNCNT\n");
 cnt++;
@@ -77,7 +77,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef GETZCNT
-	CompareConstant(GETZCNT,15,3203,architecture)
+	CompareConstant(GETZCNT,15,3203,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: GETZCNT\n");
 cnt++;
@@ -87,7 +87,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SETVAL
-	CompareConstant(SETVAL,16,3204,architecture)
+	CompareConstant(SETVAL,16,3204,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SETVAL\n");
 cnt++;
@@ -97,7 +97,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SETALL
-	CompareConstant(SETALL,17,3205,architecture)
+	CompareConstant(SETALL,17,3205,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SETALL\n");
 cnt++;
@@ -113,7 +113,7 @@ cnt++;
 #elif __x86_64__
 #elif __powerpc64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6982,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,6982,0);
 Msg("Find size of sembuf (6982)\n");
 #endif
 

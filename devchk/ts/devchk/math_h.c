@@ -27,7 +27,7 @@ Msg("Checking data structures in math.h\n");
 printf("Checking data structures in math.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef DOMAIN
-	CompareConstant(DOMAIN,1,1508,architecture)
+	CompareConstant(DOMAIN,1,1508,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: DOMAIN\n");
 cnt++;
@@ -37,7 +37,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SING
-	CompareConstant(SING,2,1509,architecture)
+	CompareConstant(SING,2,1509,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SING\n");
 cnt++;
@@ -47,7 +47,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef M_E
-	CompareDoubleConstant(M_E,2.7182818284590452354,1515,architecture)
+	CompareDoubleConstant(M_E,2.7182818284590452354,1515,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: M_E\n");
 cnt++;
@@ -57,7 +57,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef M_LOG2E
-	CompareDoubleConstant(M_LOG2E,1.4426950408889634074,1516,architecture)
+	CompareDoubleConstant(M_LOG2E,1.4426950408889634074,1516,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: M_LOG2E\n");
 cnt++;
@@ -67,7 +67,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef M_LOG10E
-	CompareDoubleConstant(M_LOG10E,0.43429448190325182765,1517,architecture)
+	CompareDoubleConstant(M_LOG10E,0.43429448190325182765,1517,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: M_LOG10E\n");
 cnt++;
@@ -77,7 +77,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef M_LN2
-	CompareDoubleConstant(M_LN2,0.69314718055994530942,1518,architecture)
+	CompareDoubleConstant(M_LN2,0.69314718055994530942,1518,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: M_LN2\n");
 cnt++;
@@ -87,7 +87,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef M_LN10
-	CompareDoubleConstant(M_LN10,2.30258509299404568402,1519,architecture)
+	CompareDoubleConstant(M_LN10,2.30258509299404568402,1519,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: M_LN10\n");
 cnt++;
@@ -97,7 +97,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef M_PI
-	CompareDoubleConstant(M_PI,3.14159265358979323846,1520,architecture)
+	CompareDoubleConstant(M_PI,3.14159265358979323846,1520,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: M_PI\n");
 cnt++;
@@ -107,7 +107,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef M_PI_2
-	CompareDoubleConstant(M_PI_2,1.57079632679489661923,1521,architecture)
+	CompareDoubleConstant(M_PI_2,1.57079632679489661923,1521,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: M_PI_2\n");
 cnt++;
@@ -117,7 +117,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef M_PI_4
-	CompareDoubleConstant(M_PI_4,0.78539816339744830962,1522,architecture)
+	CompareDoubleConstant(M_PI_4,0.78539816339744830962,1522,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: M_PI_4\n");
 cnt++;
@@ -127,7 +127,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef M_1_PI
-	CompareDoubleConstant(M_1_PI,0.31830988618379067154,1523,architecture)
+	CompareDoubleConstant(M_1_PI,0.31830988618379067154,1523,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: M_1_PI\n");
 cnt++;
@@ -137,7 +137,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef M_2_PI
-	CompareDoubleConstant(M_2_PI,0.63661977236758134308,1524,architecture)
+	CompareDoubleConstant(M_2_PI,0.63661977236758134308,1524,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: M_2_PI\n");
 cnt++;
@@ -147,7 +147,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef M_2_SQRTPI
-	CompareDoubleConstant(M_2_SQRTPI,1.12837916709551257390,1525,architecture)
+	CompareDoubleConstant(M_2_SQRTPI,1.12837916709551257390,1525,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: M_2_SQRTPI\n");
 cnt++;
@@ -157,7 +157,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef M_SQRT2
-	CompareDoubleConstant(M_SQRT2,1.41421356237309504880,1526,architecture)
+	CompareDoubleConstant(M_SQRT2,1.41421356237309504880,1526,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: M_SQRT2\n");
 cnt++;
@@ -167,7 +167,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef M_SQRT1_2
-	CompareDoubleConstant(M_SQRT1_2,0.70710678118654752440,1527,architecture)
+	CompareDoubleConstant(M_SQRT1_2,0.70710678118654752440,1527,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: M_SQRT1_2\n");
 cnt++;
@@ -177,7 +177,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef HUGE_VAL
-	CompareDoubleConstant(HUGE_VAL,0x1.0p2047,3083,architecture)
+	CompareDoubleConstant(HUGE_VAL,0x1.0p2047,3083,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: HUGE_VAL\n");
 cnt++;
@@ -191,7 +191,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef MATH_ERRNO
-	CompareConstant(MATH_ERRNO,1,5135,architecture)
+	CompareConstant(MATH_ERRNO,1,5135,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: MATH_ERRNO\n");
 cnt++;
@@ -201,7 +201,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef MATH_ERREXCEPT
-	CompareConstant(MATH_ERREXCEPT,2,5136,architecture)
+	CompareConstant(MATH_ERREXCEPT,2,5136,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: MATH_ERREXCEPT\n");
 cnt++;
@@ -211,7 +211,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef HUGE_VALF
-	CompareFloatConstant(HUGE_VALF,0x1.0p255f,5138,architecture)
+	CompareFloatConstant(HUGE_VALF,0x1.0p255f,5138,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: HUGE_VALF\n");
 cnt++;
@@ -221,7 +221,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef HUGE_VALL
-	CompareLongDoubleConstant(HUGE_VALL,0x1.0p32767L,5139,architecture)
+	CompareLongDoubleConstant(HUGE_VALL,0x1.0p32767L,5139,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: HUGE_VALL\n");
 cnt++;
@@ -313,7 +313,7 @@ Msg( "No definition for signbit(x) (5250, macro) in db\n");
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FP_NAN
-	CompareConstant(FP_NAN,0,5257,architecture)
+	CompareConstant(FP_NAN,0,5257,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: FP_NAN\n");
 cnt++;
@@ -323,7 +323,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FP_INFINITE
-	CompareConstant(FP_INFINITE,1,5258,architecture)
+	CompareConstant(FP_INFINITE,1,5258,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: FP_INFINITE\n");
 cnt++;
@@ -333,7 +333,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FP_ZERO
-	CompareConstant(FP_ZERO,2,5259,architecture)
+	CompareConstant(FP_ZERO,2,5259,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: FP_ZERO\n");
 cnt++;
@@ -343,7 +343,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FP_SUBNORMAL
-	CompareConstant(FP_SUBNORMAL,3,5260,architecture)
+	CompareConstant(FP_SUBNORMAL,3,5260,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: FP_SUBNORMAL\n");
 cnt++;
@@ -353,7 +353,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FP_NORMAL
-	CompareConstant(FP_NORMAL,4,5261,architecture)
+	CompareConstant(FP_NORMAL,4,5261,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: FP_NORMAL\n");
 cnt++;
@@ -363,7 +363,7 @@ cnt++;
 
 #if __powerpc64__
 #ifdef FP_ILOGB0
-	CompareConstant(FP_ILOGB0,-2147483647,5262,architecture)
+	CompareConstant(FP_ILOGB0,-2147483647,5262,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: FP_ILOGB0\n");
 cnt++;
@@ -371,7 +371,7 @@ cnt++;
 
 #elif __powerpc__ && !__powerpc64__
 #ifdef FP_ILOGB0
-	CompareConstant(FP_ILOGB0,-2147483647,5262,architecture)
+	CompareConstant(FP_ILOGB0,-2147483647,5262,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: FP_ILOGB0\n");
 cnt++;
@@ -379,7 +379,7 @@ cnt++;
 
 #elif __ia64__
 #ifdef FP_ILOGB0
-	CompareConstant(FP_ILOGB0,-2147483648,5262,architecture)
+	CompareConstant(FP_ILOGB0,-2147483648,5262,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: FP_ILOGB0\n");
 cnt++;
@@ -387,7 +387,7 @@ cnt++;
 
 #elif __i386__
 #ifdef FP_ILOGB0
-	CompareConstant(FP_ILOGB0,(-2147483647 - 1),5262,architecture)
+	CompareConstant(FP_ILOGB0,(-2147483647 - 1),5262,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: FP_ILOGB0\n");
 cnt++;
@@ -395,7 +395,7 @@ cnt++;
 
 #elif __s390x__
 #ifdef FP_ILOGB0
-	CompareConstant(FP_ILOGB0,-2147483647,5262,architecture)
+	CompareConstant(FP_ILOGB0,-2147483647,5262,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: FP_ILOGB0\n");
 cnt++;
@@ -403,7 +403,7 @@ cnt++;
 
 #elif __x86_64__
 #ifdef FP_ILOGB0
-	CompareConstant(FP_ILOGB0,-2147483648,5262,architecture)
+	CompareConstant(FP_ILOGB0,-2147483648,5262,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: FP_ILOGB0\n");
 cnt++;
@@ -411,7 +411,7 @@ cnt++;
 
 #elif __s390__ && !__s390x__
 #ifdef FP_ILOGB0
-	CompareConstant(FP_ILOGB0,-2147483647,5262,architecture)
+	CompareConstant(FP_ILOGB0,-2147483647,5262,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: FP_ILOGB0\n");
 cnt++;
@@ -420,12 +420,12 @@ cnt++;
 #else
 Msg( "No definition for FP_ILOGB0 (5262, int) in db\n");
 #ifdef FP_ILOGB0
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5262,%d);\n", architecture, FP_ILOGB0);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5262,%d,'""2.1""',NULL);\n", architecture, FP_ILOGB0);
 #endif
 #endif
 #if __powerpc64__
 #ifdef FP_ILOGBNAN
-	CompareConstant(FP_ILOGBNAN,2147483647,5263,architecture)
+	CompareConstant(FP_ILOGBNAN,2147483647,5263,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: FP_ILOGBNAN\n");
 cnt++;
@@ -433,7 +433,7 @@ cnt++;
 
 #elif __powerpc__ && !__powerpc64__
 #ifdef FP_ILOGBNAN
-	CompareConstant(FP_ILOGBNAN,2147483647,5263,architecture)
+	CompareConstant(FP_ILOGBNAN,2147483647,5263,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: FP_ILOGBNAN\n");
 cnt++;
@@ -441,7 +441,7 @@ cnt++;
 
 #elif __ia64__
 #ifdef FP_ILOGBNAN
-	CompareConstant(FP_ILOGBNAN,2147483647,5263,architecture)
+	CompareConstant(FP_ILOGBNAN,2147483647,5263,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: FP_ILOGBNAN\n");
 cnt++;
@@ -449,7 +449,7 @@ cnt++;
 
 #elif __i386__
 #ifdef FP_ILOGBNAN
-	CompareConstant(FP_ILOGBNAN,(-2147483647 - 1),5263,architecture)
+	CompareConstant(FP_ILOGBNAN,(-2147483647 - 1),5263,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: FP_ILOGBNAN\n");
 cnt++;
@@ -457,7 +457,7 @@ cnt++;
 
 #elif __s390x__
 #ifdef FP_ILOGBNAN
-	CompareConstant(FP_ILOGBNAN,2147483647,5263,architecture)
+	CompareConstant(FP_ILOGBNAN,2147483647,5263,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: FP_ILOGBNAN\n");
 cnt++;
@@ -465,7 +465,7 @@ cnt++;
 
 #elif __x86_64__
 #ifdef FP_ILOGBNAN
-	CompareConstant(FP_ILOGBNAN,-2147483648,5263,architecture)
+	CompareConstant(FP_ILOGBNAN,-2147483648,5263,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: FP_ILOGBNAN\n");
 cnt++;
@@ -473,7 +473,7 @@ cnt++;
 
 #elif __s390__ && !__s390x__
 #ifdef FP_ILOGBNAN
-	CompareConstant(FP_ILOGBNAN,2147483647,5263,architecture)
+	CompareConstant(FP_ILOGBNAN,2147483647,5263,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: FP_ILOGBNAN\n");
 cnt++;
@@ -482,7 +482,7 @@ cnt++;
 #else
 Msg( "No definition for FP_ILOGBNAN (5263, int) in db\n");
 #ifdef FP_ILOGBNAN
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5263,%d);\n", architecture, FP_ILOGBNAN);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5263,%d,'""2.1""',NULL);\n", architecture, FP_ILOGBNAN);
 #endif
 #endif
 #if __i386__
@@ -493,7 +493,7 @@ Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5263,%d);\n", arch
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10010,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10010,0);
 Msg("Find size of exception (10010)\n");
 #endif
 

@@ -27,7 +27,7 @@ Msg("Checking data structures in netinet/udp.h\n");
 printf("Checking data structures in netinet/udp.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SOL_UDP
-	CompareConstant(SOL_UDP,17,3332,architecture)
+	CompareConstant(SOL_UDP,17,3332,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SOL_UDP\n");
 cnt++;

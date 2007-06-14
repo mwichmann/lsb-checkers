@@ -26,7 +26,7 @@ Msg("Checking data structures in mqueue.h\n");
 
 printf("Checking data structures in mqueue.h\n");
 #if 1
-CheckTypeSize(mqd_t,4, 16573, 1)
+CheckTypeSize(mqd_t,4, 16573, 1, 3.2, NULL, 6, NULL)
 #endif
 
 #if __i386__
@@ -37,7 +37,7 @@ CheckTypeSize(mqd_t,4, 16573, 1)
 #elif __powerpc__ && !__powerpc64__
 #elif __ia64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16575,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16575,0);
 Msg("Find size of mq_attr (16575)\n");
 #endif
 
