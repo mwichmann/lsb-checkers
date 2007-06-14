@@ -1752,7 +1752,7 @@ extern int sigtimedwait_db(const sigset_t *, siginfo_t *, const struct timespec 
 CheckInterfacedef(sigtimedwait,sigtimedwait_db);
 extern sighandler_t bsd_signal_db(int, sighandler_t);
 CheckInterfacedef(bsd_signal,bsd_signal_db);
-#ifndef LSBCC_MODE	/* XXX hand-edit */
+#ifdef LSBCC_MODE	/* XXX hand-edit */
 extern int __xpg_sigpause_db(int);
 CheckInterfacedef(__xpg_sigpause,__xpg_sigpause_db);
 #endif
