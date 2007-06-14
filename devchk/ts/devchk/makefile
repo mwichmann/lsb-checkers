@@ -126,6 +126,7 @@ OBJS = hdrchk.o \
 	signal_h.o \
 	spawn_h.o \
 	stddef_h.o \
+	stdint_h.o \
 	stdio_h.o \
 	stdlib_h.o \
 	sys_file_h.o \
@@ -174,7 +175,7 @@ else
 EXTRALIBS =
 endif
 
-CFLAGS=-O -DQT_THREAD_SUPPORT -D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include -I/usr/include/glib-2.0 -I/usr/include/atk-1.0 -I/usr/include/pango-1.0 -I/usr/include/gtk-2.0 -I/usr/include/freetype2 -I/usr/lib64/gtk-2.0/include -I/usr/lib/gtk-2.0/include -I/usr/lib64/glib-2.0/include -I/usr/lib/glib-2.0/include -I/usr/include/libxml2 -I/usr/include/fontconfig -I/usr/include/cairo -I/usr/lib64/qt3/include -I/usr/lib/qt3/include -I/usr/lib64/qt-3.3/include -I/usr/lib/qt-3.3/include -I/opt/gnome/include -I/opt/gnome/include/atk-1.0 -I/opt/gnome/include/glib-2.0 -I/opt/gnome/include/gtk-2.0 -I/opt/gnome/include/pango-1.0 -I/opt/gnome/lib64/glib-2.0/include -I/opt/gnome/lib/glib-2.0/include -I/opt/gnome/lib64/gtk-2.0/include -I/opt/gnome/lib/gtk-2.0/include 
+CFLAGS=-D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include -I/usr/include/glib-2.0 -I/usr/include/atk-1.0 -I/usr/include/pango-1.0 -I/usr/include/gtk-2.0 -I/usr/include/freetype2 -I/usr/lib/gtk-2.0/include -I/usr/lib64/gtk-2.0/include -I/usr/lib/glib-2.0/include -I/usr/lib64/glib-2.0/include -I/usr/include/libxml2 -I/usr/include/fontconfig -I/usr/include/cairo 
 
 ifdef LSB_PRODUCT
 CFLAGS=-DLSBCC_MODE -D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include -I/opt/lsb/include/glib-2.0 -I/opt/lsb/include/atk-1.0 -I/opt/lsb/include/pango-1.0 -I/opt/lsb/include/gtk-2.0 -I/usr/include/freetype2 -I/opt/lsb/include/libxml2 -I/opt/lsb/include/fontconfig
@@ -189,8 +190,7 @@ endif
 all: hdrchk
 
 hdrchk: $(OBJS)
-	$(CXX) -o hdrchk $(OBJS) $(EXTRALIBS) -L /usr/X11R6/lib64 -L/usr/X11R6/lib -L/usr/lib/qt3/lib64 -L/usr/lib/qt3/lib -L/usr/lib64/qt-3.3 -L/usr/lib/qt-3.3 -lXt -lX11 -lncurses -lqt-mt
-
+	$(CXX) -o hdrchk $(OBJS) $(EXTRALIBS) -L /usr/X11R6/lib64 -L/usr/X11R6/lib -lXt -lX11 -lncurses
 
 hdrchk.o: hdrchk.c
 	$(CC) $(CFLAGS) -g -c hdrchk.c

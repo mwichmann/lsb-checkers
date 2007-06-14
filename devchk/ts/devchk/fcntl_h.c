@@ -27,7 +27,7 @@ Msg("Checking data structures in fcntl.h\n");
 printf("Checking data structures in fcntl.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef O_ACCMODE
-	CompareConstant(O_ACCMODE,0003,1168,architecture)
+	CompareConstant(O_ACCMODE,0003,1168,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: O_ACCMODE\n");
 cnt++;
@@ -37,7 +37,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef O_RDONLY
-	CompareConstant(O_RDONLY,00,1169,architecture)
+	CompareConstant(O_RDONLY,00,1169,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: O_RDONLY\n");
 cnt++;
@@ -47,7 +47,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef O_WRONLY
-	CompareConstant(O_WRONLY,01,1170,architecture)
+	CompareConstant(O_WRONLY,01,1170,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: O_WRONLY\n");
 cnt++;
@@ -57,7 +57,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef O_RDWR
-	CompareConstant(O_RDWR,02,1171,architecture)
+	CompareConstant(O_RDWR,02,1171,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: O_RDWR\n");
 cnt++;
@@ -67,7 +67,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef O_CREAT
-	CompareConstant(O_CREAT,0100,1172,architecture)
+	CompareConstant(O_CREAT,0100,1172,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: O_CREAT\n");
 cnt++;
@@ -77,7 +77,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef O_EXCL
-	CompareConstant(O_EXCL,0200,1173,architecture)
+	CompareConstant(O_EXCL,0200,1173,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: O_EXCL\n");
 cnt++;
@@ -87,7 +87,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef O_NOCTTY
-	CompareConstant(O_NOCTTY,0400,1174,architecture)
+	CompareConstant(O_NOCTTY,0400,1174,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: O_NOCTTY\n");
 cnt++;
@@ -97,7 +97,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef O_TRUNC
-	CompareConstant(O_TRUNC,01000,1175,architecture)
+	CompareConstant(O_TRUNC,01000,1175,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: O_TRUNC\n");
 cnt++;
@@ -107,7 +107,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef O_APPEND
-	CompareConstant(O_APPEND,02000,1176,architecture)
+	CompareConstant(O_APPEND,02000,1176,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: O_APPEND\n");
 cnt++;
@@ -117,7 +117,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef O_NONBLOCK
-	CompareConstant(O_NONBLOCK,04000,1177,architecture)
+	CompareConstant(O_NONBLOCK,04000,1177,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: O_NONBLOCK\n");
 cnt++;
@@ -127,7 +127,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef O_NDELAY
-	CompareConstant(O_NDELAY,04000,1178,architecture)
+	CompareConstant(O_NDELAY,04000,1178,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: O_NDELAY\n");
 cnt++;
@@ -137,7 +137,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef O_SYNC
-	CompareConstant(O_SYNC,010000,1179,architecture)
+	CompareConstant(O_SYNC,010000,1179,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: O_SYNC\n");
 cnt++;
@@ -147,7 +147,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef O_ASYNC
-	CompareConstant(O_ASYNC,020000,1181,architecture)
+	CompareConstant(O_ASYNC,020000,1181,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: O_ASYNC\n");
 cnt++;
@@ -157,7 +157,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef F_DUPFD
-	CompareConstant(F_DUPFD,0,1184,architecture)
+	CompareConstant(F_DUPFD,0,1184,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: F_DUPFD\n");
 cnt++;
@@ -167,7 +167,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef F_GETFD
-	CompareConstant(F_GETFD,1,1185,architecture)
+	CompareConstant(F_GETFD,1,1185,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: F_GETFD\n");
 cnt++;
@@ -177,7 +177,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef F_SETFD
-	CompareConstant(F_SETFD,2,1186,architecture)
+	CompareConstant(F_SETFD,2,1186,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: F_SETFD\n");
 cnt++;
@@ -187,7 +187,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef F_GETFL
-	CompareConstant(F_GETFL,3,1187,architecture)
+	CompareConstant(F_GETFL,3,1187,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: F_GETFL\n");
 cnt++;
@@ -197,7 +197,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef F_SETFL
-	CompareConstant(F_SETFL,4,1188,architecture)
+	CompareConstant(F_SETFL,4,1188,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: F_SETFL\n");
 cnt++;
@@ -207,7 +207,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef F_GETLK
-	CompareConstant(F_GETLK,5,1189,architecture)
+	CompareConstant(F_GETLK,5,1189,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: F_GETLK\n");
 cnt++;
@@ -217,7 +217,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef F_SETLK
-	CompareConstant(F_SETLK,6,1190,architecture)
+	CompareConstant(F_SETLK,6,1190,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: F_SETLK\n");
 cnt++;
@@ -227,7 +227,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef F_SETLKW
-	CompareConstant(F_SETLKW,7,1191,architecture)
+	CompareConstant(F_SETLKW,7,1191,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: F_SETLKW\n");
 cnt++;
@@ -237,7 +237,7 @@ cnt++;
 
 #if __powerpc64__
 #ifdef F_GETLK64
-	CompareConstant(F_GETLK64,12,1192,architecture)
+	CompareConstant(F_GETLK64,12,1192,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: F_GETLK64\n");
 cnt++;
@@ -245,7 +245,7 @@ cnt++;
 
 #elif __powerpc__ && !__powerpc64__
 #ifdef F_GETLK64
-	CompareConstant(F_GETLK64,12,1192,architecture)
+	CompareConstant(F_GETLK64,12,1192,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: F_GETLK64\n");
 cnt++;
@@ -253,7 +253,7 @@ cnt++;
 
 #elif __ia64__
 #ifdef F_GETLK64
-	CompareConstant(F_GETLK64,5,1192,architecture)
+	CompareConstant(F_GETLK64,5,1192,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: F_GETLK64\n");
 cnt++;
@@ -261,7 +261,7 @@ cnt++;
 
 #elif __i386__
 #ifdef F_GETLK64
-	CompareConstant(F_GETLK64,12,1192,architecture)
+	CompareConstant(F_GETLK64,12,1192,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: F_GETLK64\n");
 cnt++;
@@ -269,7 +269,7 @@ cnt++;
 
 #elif __s390x__
 #ifdef F_GETLK64
-	CompareConstant(F_GETLK64,5,1192,architecture)
+	CompareConstant(F_GETLK64,5,1192,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: F_GETLK64\n");
 cnt++;
@@ -277,7 +277,7 @@ cnt++;
 
 #elif __x86_64__
 #ifdef F_GETLK64
-	CompareConstant(F_GETLK64,5,1192,architecture)
+	CompareConstant(F_GETLK64,5,1192,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: F_GETLK64\n");
 cnt++;
@@ -285,7 +285,7 @@ cnt++;
 
 #elif __s390__ && !__s390x__
 #ifdef F_GETLK64
-	CompareConstant(F_GETLK64,12,1192,architecture)
+	CompareConstant(F_GETLK64,12,1192,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: F_GETLK64\n");
 cnt++;
@@ -294,12 +294,12 @@ cnt++;
 #else
 Msg( "No definition for F_GETLK64 (1192, int) in db\n");
 #ifdef F_GETLK64
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1192,%d);\n", architecture, F_GETLK64);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1192,%d,'""2.1""',NULL);\n", architecture, F_GETLK64);
 #endif
 #endif
 #if __powerpc64__
 #ifdef F_SETLK64
-	CompareConstant(F_SETLK64,13,1193,architecture)
+	CompareConstant(F_SETLK64,13,1193,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: F_SETLK64\n");
 cnt++;
@@ -307,7 +307,7 @@ cnt++;
 
 #elif __powerpc__ && !__powerpc64__
 #ifdef F_SETLK64
-	CompareConstant(F_SETLK64,13,1193,architecture)
+	CompareConstant(F_SETLK64,13,1193,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: F_SETLK64\n");
 cnt++;
@@ -315,7 +315,7 @@ cnt++;
 
 #elif __ia64__
 #ifdef F_SETLK64
-	CompareConstant(F_SETLK64,6,1193,architecture)
+	CompareConstant(F_SETLK64,6,1193,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: F_SETLK64\n");
 cnt++;
@@ -323,7 +323,7 @@ cnt++;
 
 #elif __i386__
 #ifdef F_SETLK64
-	CompareConstant(F_SETLK64,13,1193,architecture)
+	CompareConstant(F_SETLK64,13,1193,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: F_SETLK64\n");
 cnt++;
@@ -331,7 +331,7 @@ cnt++;
 
 #elif __s390x__
 #ifdef F_SETLK64
-	CompareConstant(F_SETLK64,6,1193,architecture)
+	CompareConstant(F_SETLK64,6,1193,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: F_SETLK64\n");
 cnt++;
@@ -339,7 +339,7 @@ cnt++;
 
 #elif __x86_64__
 #ifdef F_SETLK64
-	CompareConstant(F_SETLK64,6,1193,architecture)
+	CompareConstant(F_SETLK64,6,1193,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: F_SETLK64\n");
 cnt++;
@@ -347,7 +347,7 @@ cnt++;
 
 #elif __s390__ && !__s390x__
 #ifdef F_SETLK64
-	CompareConstant(F_SETLK64,13,1193,architecture)
+	CompareConstant(F_SETLK64,13,1193,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: F_SETLK64\n");
 cnt++;
@@ -356,12 +356,12 @@ cnt++;
 #else
 Msg( "No definition for F_SETLK64 (1193, int) in db\n");
 #ifdef F_SETLK64
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1193,%d);\n", architecture, F_SETLK64);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1193,%d,'""2.1""',NULL);\n", architecture, F_SETLK64);
 #endif
 #endif
 #if __powerpc64__
 #ifdef F_SETLKW64
-	CompareConstant(F_SETLKW64,14,1194,architecture)
+	CompareConstant(F_SETLKW64,14,1194,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: F_SETLKW64\n");
 cnt++;
@@ -369,7 +369,7 @@ cnt++;
 
 #elif __powerpc__ && !__powerpc64__
 #ifdef F_SETLKW64
-	CompareConstant(F_SETLKW64,14,1194,architecture)
+	CompareConstant(F_SETLKW64,14,1194,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: F_SETLKW64\n");
 cnt++;
@@ -377,7 +377,7 @@ cnt++;
 
 #elif __ia64__
 #ifdef F_SETLKW64
-	CompareConstant(F_SETLKW64,7,1194,architecture)
+	CompareConstant(F_SETLKW64,7,1194,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: F_SETLKW64\n");
 cnt++;
@@ -385,7 +385,7 @@ cnt++;
 
 #elif __i386__
 #ifdef F_SETLKW64
-	CompareConstant(F_SETLKW64,14,1194,architecture)
+	CompareConstant(F_SETLKW64,14,1194,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: F_SETLKW64\n");
 cnt++;
@@ -393,7 +393,7 @@ cnt++;
 
 #elif __s390x__
 #ifdef F_SETLKW64
-	CompareConstant(F_SETLKW64,7,1194,architecture)
+	CompareConstant(F_SETLKW64,7,1194,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: F_SETLKW64\n");
 cnt++;
@@ -401,7 +401,7 @@ cnt++;
 
 #elif __x86_64__
 #ifdef F_SETLKW64
-	CompareConstant(F_SETLKW64,7,1194,architecture)
+	CompareConstant(F_SETLKW64,7,1194,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: F_SETLKW64\n");
 cnt++;
@@ -409,7 +409,7 @@ cnt++;
 
 #elif __s390__ && !__s390x__
 #ifdef F_SETLKW64
-	CompareConstant(F_SETLKW64,14,1194,architecture)
+	CompareConstant(F_SETLKW64,14,1194,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: F_SETLKW64\n");
 cnt++;
@@ -418,12 +418,12 @@ cnt++;
 #else
 Msg( "No definition for F_SETLKW64 (1194, int) in db\n");
 #ifdef F_SETLKW64
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1194,%d);\n", architecture, F_SETLKW64);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1194,%d,'""2.1""',NULL);\n", architecture, F_SETLKW64);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
 #ifdef F_SETOWN
-	CompareConstant(F_SETOWN,8,1195,architecture)
+	CompareConstant(F_SETOWN,8,1195,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: F_SETOWN\n");
 cnt++;
@@ -433,7 +433,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef F_GETOWN
-	CompareConstant(F_GETOWN,9,1196,architecture)
+	CompareConstant(F_GETOWN,9,1196,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: F_GETOWN\n");
 cnt++;
@@ -443,7 +443,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FD_CLOEXEC
-	CompareConstant(FD_CLOEXEC,1,1197,architecture)
+	CompareConstant(FD_CLOEXEC,1,1197,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: FD_CLOEXEC\n");
 cnt++;
@@ -453,7 +453,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef F_RDLCK
-	CompareConstant(F_RDLCK,0,1198,architecture)
+	CompareConstant(F_RDLCK,0,1198,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: F_RDLCK\n");
 cnt++;
@@ -463,7 +463,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef F_WRLCK
-	CompareConstant(F_WRLCK,1,1199,architecture)
+	CompareConstant(F_WRLCK,1,1199,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: F_WRLCK\n");
 cnt++;
@@ -473,7 +473,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef F_UNLCK
-	CompareConstant(F_UNLCK,2,1200,architecture)
+	CompareConstant(F_UNLCK,2,1200,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: F_UNLCK\n");
 cnt++;
@@ -483,7 +483,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef F_SETSIG
-	CompareConstant(F_SETSIG,10,3023,architecture)
+	CompareConstant(F_SETSIG,10,3023,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: F_SETSIG\n");
 cnt++;
@@ -493,7 +493,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef F_GETSIG
-	CompareConstant(F_GETSIG,11,3024,architecture)
+	CompareConstant(F_GETSIG,11,3024,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: F_GETSIG\n");
 cnt++;
@@ -509,7 +509,7 @@ cnt++;
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10217,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10217,0);
 Msg("Find size of flock (10217)\n");
 #endif
 
@@ -521,7 +521,7 @@ Msg("Find size of flock (10217)\n");
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10218,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10218,0);
 Msg("Find size of flock64 (10218)\n");
 #endif
 

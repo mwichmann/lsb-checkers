@@ -27,7 +27,7 @@ Msg("Checking data structures in spawn.h\n");
 printf("Checking data structures in spawn.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef POSIX_SPAWN_RESETIDS
-	CompareConstant(POSIX_SPAWN_RESETIDS,0x01,9495,architecture)
+	CompareConstant(POSIX_SPAWN_RESETIDS,0x01,9495,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: POSIX_SPAWN_RESETIDS\n");
 cnt++;
@@ -37,7 +37,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef POSIX_SPAWN_SETPGROUP
-	CompareConstant(POSIX_SPAWN_SETPGROUP,0x02,9496,architecture)
+	CompareConstant(POSIX_SPAWN_SETPGROUP,0x02,9496,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: POSIX_SPAWN_SETPGROUP\n");
 cnt++;
@@ -47,7 +47,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef POSIX_SPAWN_SETSIGDEF
-	CompareConstant(POSIX_SPAWN_SETSIGDEF,0x04,9497,architecture)
+	CompareConstant(POSIX_SPAWN_SETSIGDEF,0x04,9497,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: POSIX_SPAWN_SETSIGDEF\n");
 cnt++;
@@ -57,7 +57,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef POSIX_SPAWN_SETSIGMASK
-	CompareConstant(POSIX_SPAWN_SETSIGMASK,0x08,9498,architecture)
+	CompareConstant(POSIX_SPAWN_SETSIGMASK,0x08,9498,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: POSIX_SPAWN_SETSIGMASK\n");
 cnt++;
@@ -67,7 +67,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef POSIX_SPAWN_SETSCHEDPARAM
-	CompareConstant(POSIX_SPAWN_SETSCHEDPARAM,0x10,9499,architecture)
+	CompareConstant(POSIX_SPAWN_SETSCHEDPARAM,0x10,9499,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: POSIX_SPAWN_SETSCHEDPARAM\n");
 cnt++;
@@ -77,7 +77,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef POSIX_SPAWN_SETSCHEDULER
-	CompareConstant(POSIX_SPAWN_SETSCHEDULER,0x20,9500,architecture)
+	CompareConstant(POSIX_SPAWN_SETSCHEDULER,0x20,9500,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: POSIX_SPAWN_SETSCHEDULER\n");
 cnt++;
@@ -86,26 +86,26 @@ cnt++;
 #endif
 
 #if __ia64__
-CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 3)
+CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 3, 3.2, NULL, 16584, NULL)
 #elif __i386__
-CheckTypeSize(posix_spawn_file_actions_t,76, 16588, 2)
+CheckTypeSize(posix_spawn_file_actions_t,76, 16588, 2, 3.2, NULL, 16584, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(posix_spawn_file_actions_t,76, 16588, 6)
+CheckTypeSize(posix_spawn_file_actions_t,76, 16588, 6, 3.2, NULL, 16584, NULL)
 #elif __powerpc64__
-CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 9)
+CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 9, 3.2, NULL, 16584, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(posix_spawn_file_actions_t,76, 16588, 10)
+CheckTypeSize(posix_spawn_file_actions_t,76, 16588, 10, 3.2, NULL, 16584, NULL)
 #elif __x86_64__
-CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 11)
+CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 11, 3.2, NULL, 16584, NULL)
 #elif __s390x__
-CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 12)
+CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 12, 3.2, NULL, 16584, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16588,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16584,NULL);\n",architecture,16588,0);
 Msg("Find size of posix_spawn_file_actions_t (16588)\n");
 #endif
 
 #if 1
-CheckTypeSize(posix_spawnattr_t,336, 16591, 1)
+CheckTypeSize(posix_spawnattr_t,336, 16591, 1, 3.2, NULL, 16589, NULL)
 #endif
 
 extern int posix_spawn_db(pid_t *, const char *, const posix_spawn_file_actions_t *, const posix_spawnattr_t *, char *const [], char *const []);

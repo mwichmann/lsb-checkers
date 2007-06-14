@@ -28,7 +28,7 @@ Msg("Checking data structures in ftw.h\n");
 printf("Checking data structures in ftw.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef FTW_F
-	CompareConstant(FTW_F,FTW_F,1230,architecture)
+	CompareConstant(FTW_F,FTW_F,1230,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: FTW_F\n");
 cnt++;
@@ -38,7 +38,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FTW_D
-	CompareConstant(FTW_D,FTW_D,1231,architecture)
+	CompareConstant(FTW_D,FTW_D,1231,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: FTW_D\n");
 cnt++;
@@ -48,7 +48,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FTW_DNR
-	CompareConstant(FTW_DNR,FTW_DNR,1232,architecture)
+	CompareConstant(FTW_DNR,FTW_DNR,1232,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: FTW_DNR\n");
 cnt++;
@@ -58,7 +58,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FTW_NS
-	CompareConstant(FTW_NS,FTW_NS,1233,architecture)
+	CompareConstant(FTW_NS,FTW_NS,1233,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: FTW_NS\n");
 cnt++;
@@ -68,7 +68,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FTW_SL
-	CompareConstant(FTW_SL,FTW_SL,1234,architecture)
+	CompareConstant(FTW_SL,FTW_SL,1234,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: FTW_SL\n");
 cnt++;
@@ -78,7 +78,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FTW_DP
-	CompareConstant(FTW_DP,FTW_DP,3060,architecture)
+	CompareConstant(FTW_DP,FTW_DP,3060,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: FTW_DP\n");
 cnt++;
@@ -88,7 +88,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FTW_SLN
-	CompareConstant(FTW_SLN,FTW_SLN,3061,architecture)
+	CompareConstant(FTW_SLN,FTW_SLN,3061,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: FTW_SLN\n");
 cnt++;
@@ -153,7 +153,7 @@ CheckEnum("FTW_SL",FTW_SL,((((0) + 1) + 1) + 1) + 1,29751);
 CheckEnum("FTW_DP",FTW_DP,(((((0) + 1) + 1) + 1) + 1) + 1,29752);
 CheckEnum("FTW_SLN",FTW_SLN,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,29753);
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8989,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,8989,0);
 Msg("Find size of anon-ftw.h-13 (8989)\n");
 #endif
 
@@ -193,7 +193,7 @@ CheckEnum("FTW_MOUNT",FTW_MOUNT,2,29755);
 CheckEnum("FTW_CHDIR",FTW_CHDIR,4,29756);
 CheckEnum("FTW_DEPTH",FTW_DEPTH,8,29757);
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8990,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,8990,0);
 Msg("Find size of anon-ftw.h-34 (8990)\n");
 #endif
 
@@ -205,83 +205,83 @@ Msg("Find size of anon-ftw.h-34 (8990)\n");
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8691,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,8691,0);
 Msg("Find size of FTW (8691)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(__ftw_func_t,4, 8992, 2)
+CheckTypeSize(__ftw_func_t,4, 8992, 2, 1.0, NULL, 8991, NULL)
 #elif __ia64__
-CheckTypeSize(__ftw_func_t,8, 8992, 3)
+CheckTypeSize(__ftw_func_t,8, 8992, 3, 1.3, NULL, 8991, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(__ftw_func_t,4, 8992, 6)
+CheckTypeSize(__ftw_func_t,4, 8992, 6, 1.2, NULL, 8991, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(__ftw_func_t,4, 8992, 10)
+CheckTypeSize(__ftw_func_t,4, 8992, 10, 1.3, NULL, 8991, NULL)
 #elif __powerpc64__
-CheckTypeSize(__ftw_func_t,8, 8992, 9)
+CheckTypeSize(__ftw_func_t,8, 8992, 9, 2.0, NULL, 8991, NULL)
 #elif __s390x__
-CheckTypeSize(__ftw_func_t,8, 8992, 12)
+CheckTypeSize(__ftw_func_t,8, 8992, 12, 1.3, NULL, 8991, NULL)
 #elif __x86_64__
-CheckTypeSize(__ftw_func_t,8, 8992, 11)
+CheckTypeSize(__ftw_func_t,8, 8992, 11, 2.0, NULL, 8991, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8992,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8991,NULL);\n",architecture,8992,0);
 Msg("Find size of __ftw_func_t (8992)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(__ftw64_func_t,4, 8994, 2)
+CheckTypeSize(__ftw64_func_t,4, 8994, 2, 1.0, NULL, 8993, NULL)
 #elif __ia64__
-CheckTypeSize(__ftw64_func_t,8, 8994, 3)
+CheckTypeSize(__ftw64_func_t,8, 8994, 3, 1.3, NULL, 8993, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(__ftw64_func_t,4, 8994, 6)
+CheckTypeSize(__ftw64_func_t,4, 8994, 6, 1.2, NULL, 8993, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(__ftw64_func_t,4, 8994, 10)
+CheckTypeSize(__ftw64_func_t,4, 8994, 10, 1.3, NULL, 8993, NULL)
 #elif __powerpc64__
-CheckTypeSize(__ftw64_func_t,8, 8994, 9)
+CheckTypeSize(__ftw64_func_t,8, 8994, 9, 2.0, NULL, 8993, NULL)
 #elif __s390x__
-CheckTypeSize(__ftw64_func_t,8, 8994, 12)
+CheckTypeSize(__ftw64_func_t,8, 8994, 12, 1.3, NULL, 8993, NULL)
 #elif __x86_64__
-CheckTypeSize(__ftw64_func_t,8, 8994, 11)
+CheckTypeSize(__ftw64_func_t,8, 8994, 11, 2.0, NULL, 8993, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8994,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8993,NULL);\n",architecture,8994,0);
 Msg("Find size of __ftw64_func_t (8994)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(__nftw_func_t,4, 8996, 2)
+CheckTypeSize(__nftw_func_t,4, 8996, 2, 1.0, NULL, 8995, NULL)
 #elif __ia64__
-CheckTypeSize(__nftw_func_t,8, 8996, 3)
+CheckTypeSize(__nftw_func_t,8, 8996, 3, 1.3, NULL, 8995, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(__nftw_func_t,4, 8996, 6)
+CheckTypeSize(__nftw_func_t,4, 8996, 6, 1.2, NULL, 8995, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(__nftw_func_t,4, 8996, 10)
+CheckTypeSize(__nftw_func_t,4, 8996, 10, 1.3, NULL, 8995, NULL)
 #elif __powerpc64__
-CheckTypeSize(__nftw_func_t,8, 8996, 9)
+CheckTypeSize(__nftw_func_t,8, 8996, 9, 2.0, NULL, 8995, NULL)
 #elif __s390x__
-CheckTypeSize(__nftw_func_t,8, 8996, 12)
+CheckTypeSize(__nftw_func_t,8, 8996, 12, 1.3, NULL, 8995, NULL)
 #elif __x86_64__
-CheckTypeSize(__nftw_func_t,8, 8996, 11)
+CheckTypeSize(__nftw_func_t,8, 8996, 11, 2.0, NULL, 8995, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8996,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8995,NULL);\n",architecture,8996,0);
 Msg("Find size of __nftw_func_t (8996)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(__nftw64_func_t,4, 8998, 2)
+CheckTypeSize(__nftw64_func_t,4, 8998, 2, 1.0, NULL, 8997, NULL)
 #elif __ia64__
-CheckTypeSize(__nftw64_func_t,8, 8998, 3)
+CheckTypeSize(__nftw64_func_t,8, 8998, 3, 1.3, NULL, 8997, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(__nftw64_func_t,4, 8998, 6)
+CheckTypeSize(__nftw64_func_t,4, 8998, 6, 1.2, NULL, 8997, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(__nftw64_func_t,4, 8998, 10)
+CheckTypeSize(__nftw64_func_t,4, 8998, 10, 1.3, NULL, 8997, NULL)
 #elif __powerpc64__
-CheckTypeSize(__nftw64_func_t,8, 8998, 9)
+CheckTypeSize(__nftw64_func_t,8, 8998, 9, 2.0, NULL, 8997, NULL)
 #elif __s390x__
-CheckTypeSize(__nftw64_func_t,8, 8998, 12)
+CheckTypeSize(__nftw64_func_t,8, 8998, 12, 1.3, NULL, 8997, NULL)
 #elif __x86_64__
-CheckTypeSize(__nftw64_func_t,8, 8998, 11)
+CheckTypeSize(__nftw64_func_t,8, 8998, 11, 2.0, NULL, 8997, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8998,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8997, NULL);\n",architecture,8998,0);
 Msg("Find size of __nftw64_func_t (8998)\n");
 #endif
 

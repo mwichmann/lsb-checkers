@@ -27,7 +27,7 @@ Msg("Checking data structures in sys/ipc.h\n");
 printf("Checking data structures in sys/ipc.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef IPC_PRIVATE
-	CompareConstant(IPC_PRIVATE,((key_t)0),3445,architecture)
+	CompareConstant(IPC_PRIVATE,((key_t)0),3445,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: IPC_PRIVATE\n");
 cnt++;
@@ -37,7 +37,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef IPC_CREAT
-	CompareConstant(IPC_CREAT,00001000,3446,architecture)
+	CompareConstant(IPC_CREAT,00001000,3446,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: IPC_CREAT\n");
 cnt++;
@@ -47,7 +47,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef IPC_EXCL
-	CompareConstant(IPC_EXCL,00002000,3447,architecture)
+	CompareConstant(IPC_EXCL,00002000,3447,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: IPC_EXCL\n");
 cnt++;
@@ -57,7 +57,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef IPC_NOWAIT
-	CompareConstant(IPC_NOWAIT,00004000,3448,architecture)
+	CompareConstant(IPC_NOWAIT,00004000,3448,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: IPC_NOWAIT\n");
 cnt++;
@@ -67,7 +67,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef IPC_RMID
-	CompareConstant(IPC_RMID,0,3449,architecture)
+	CompareConstant(IPC_RMID,0,3449,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: IPC_RMID\n");
 cnt++;
@@ -77,7 +77,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef IPC_SET
-	CompareConstant(IPC_SET,1,3450,architecture)
+	CompareConstant(IPC_SET,1,3450,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: IPC_SET\n");
 cnt++;
@@ -87,7 +87,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef IPC_STAT
-	CompareConstant(IPC_STAT,2,3451,architecture)
+	CompareConstant(IPC_STAT,2,3451,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: IPC_STAT\n");
 cnt++;

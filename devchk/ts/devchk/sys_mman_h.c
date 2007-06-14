@@ -27,7 +27,7 @@ Msg("Checking data structures in sys/mman.h\n");
 printf("Checking data structures in sys/mman.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef MAP_FAILED
-	CompareConstant(MAP_FAILED,((void*)-1),1747,architecture)
+	CompareConstant(MAP_FAILED,((void*)-1),1747,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MAP_FAILED\n");
 cnt++;
@@ -37,7 +37,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PROT_READ
-	CompareConstant(PROT_READ,0x1,3503,architecture)
+	CompareConstant(PROT_READ,0x1,3503,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: PROT_READ\n");
 cnt++;
@@ -47,7 +47,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PROT_WRITE
-	CompareConstant(PROT_WRITE,0x2,3504,architecture)
+	CompareConstant(PROT_WRITE,0x2,3504,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PROT_WRITE\n");
 cnt++;
@@ -57,7 +57,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PROT_EXEC
-	CompareConstant(PROT_EXEC,0x4,3505,architecture)
+	CompareConstant(PROT_EXEC,0x4,3505,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PROT_EXEC\n");
 cnt++;
@@ -67,7 +67,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PROT_NONE
-	CompareConstant(PROT_NONE,0x0,3506,architecture)
+	CompareConstant(PROT_NONE,0x0,3506,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PROT_NONE\n");
 cnt++;
@@ -77,7 +77,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef MAP_SHARED
-	CompareConstant(MAP_SHARED,0x01,3507,architecture)
+	CompareConstant(MAP_SHARED,0x01,3507,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: MAP_SHARED\n");
 cnt++;
@@ -87,7 +87,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef MAP_PRIVATE
-	CompareConstant(MAP_PRIVATE,0x02,3508,architecture)
+	CompareConstant(MAP_PRIVATE,0x02,3508,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: MAP_PRIVATE\n");
 cnt++;
@@ -97,7 +97,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef MAP_FIXED
-	CompareConstant(MAP_FIXED,0x10,3509,architecture)
+	CompareConstant(MAP_FIXED,0x10,3509,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MAP_FIXED\n");
 cnt++;
@@ -107,7 +107,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef MAP_ANONYMOUS
-	CompareConstant(MAP_ANONYMOUS,0x20,3510,architecture)
+	CompareConstant(MAP_ANONYMOUS,0x20,3510,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MAP_ANONYMOUS\n");
 cnt++;
@@ -117,7 +117,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef MS_ASYNC
-	CompareConstant(MS_ASYNC,1,3516,architecture)
+	CompareConstant(MS_ASYNC,1,3516,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MS_ASYNC\n");
 cnt++;
@@ -127,7 +127,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef MS_INVALIDATE
-	CompareConstant(MS_INVALIDATE,2,3517,architecture)
+	CompareConstant(MS_INVALIDATE,2,3517,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MS_INVALIDATE\n");
 cnt++;
@@ -137,7 +137,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef MS_SYNC
-	CompareConstant(MS_SYNC,4,3518,architecture)
+	CompareConstant(MS_SYNC,4,3518,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MS_SYNC\n");
 cnt++;
@@ -147,7 +147,7 @@ cnt++;
 
 #if __powerpc64__
 #ifdef MCL_CURRENT
-	CompareConstant(MCL_CURRENT,8192,3519,architecture)
+	CompareConstant(MCL_CURRENT,8192,3519,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: MCL_CURRENT\n");
 cnt++;
@@ -155,7 +155,7 @@ cnt++;
 
 #elif __powerpc__ && !__powerpc64__
 #ifdef MCL_CURRENT
-	CompareConstant(MCL_CURRENT,8192,3519,architecture)
+	CompareConstant(MCL_CURRENT,8192,3519,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MCL_CURRENT\n");
 cnt++;
@@ -163,7 +163,7 @@ cnt++;
 
 #elif __ia64__
 #ifdef MCL_CURRENT
-	CompareConstant(MCL_CURRENT,1,3519,architecture)
+	CompareConstant(MCL_CURRENT,1,3519,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: MCL_CURRENT\n");
 cnt++;
@@ -171,7 +171,7 @@ cnt++;
 
 #elif __i386__
 #ifdef MCL_CURRENT
-	CompareConstant(MCL_CURRENT,1,3519,architecture)
+	CompareConstant(MCL_CURRENT,1,3519,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MCL_CURRENT\n");
 cnt++;
@@ -179,7 +179,7 @@ cnt++;
 
 #elif __s390x__
 #ifdef MCL_CURRENT
-	CompareConstant(MCL_CURRENT,1,3519,architecture)
+	CompareConstant(MCL_CURRENT,1,3519,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: MCL_CURRENT\n");
 cnt++;
@@ -187,7 +187,7 @@ cnt++;
 
 #elif __x86_64__
 #ifdef MCL_CURRENT
-	CompareConstant(MCL_CURRENT,1,3519,architecture)
+	CompareConstant(MCL_CURRENT,1,3519,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: MCL_CURRENT\n");
 cnt++;
@@ -195,7 +195,7 @@ cnt++;
 
 #elif __s390__ && !__s390x__
 #ifdef MCL_CURRENT
-	CompareConstant(MCL_CURRENT,1,3519,architecture)
+	CompareConstant(MCL_CURRENT,1,3519,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: MCL_CURRENT\n");
 cnt++;
@@ -204,12 +204,12 @@ cnt++;
 #else
 Msg( "No definition for MCL_CURRENT (3519, int) in db\n");
 #ifdef MCL_CURRENT
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3519,%d);\n", architecture, MCL_CURRENT);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3519,%d,'""1.3""',NULL);\n", architecture, MCL_CURRENT);
 #endif
 #endif
 #if __powerpc64__
 #ifdef MCL_FUTURE
-	CompareConstant(MCL_FUTURE,16384,3520,architecture)
+	CompareConstant(MCL_FUTURE,16384,3520,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: MCL_FUTURE\n");
 cnt++;
@@ -217,7 +217,7 @@ cnt++;
 
 #elif __powerpc__ && !__powerpc64__
 #ifdef MCL_FUTURE
-	CompareConstant(MCL_FUTURE,16384,3520,architecture)
+	CompareConstant(MCL_FUTURE,16384,3520,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MCL_FUTURE\n");
 cnt++;
@@ -225,7 +225,7 @@ cnt++;
 
 #elif __ia64__
 #ifdef MCL_FUTURE
-	CompareConstant(MCL_FUTURE,2,3520,architecture)
+	CompareConstant(MCL_FUTURE,2,3520,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: MCL_FUTURE\n");
 cnt++;
@@ -233,7 +233,7 @@ cnt++;
 
 #elif __i386__
 #ifdef MCL_FUTURE
-	CompareConstant(MCL_FUTURE,2,3520,architecture)
+	CompareConstant(MCL_FUTURE,2,3520,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MCL_FUTURE\n");
 cnt++;
@@ -241,7 +241,7 @@ cnt++;
 
 #elif __s390x__
 #ifdef MCL_FUTURE
-	CompareConstant(MCL_FUTURE,2,3520,architecture)
+	CompareConstant(MCL_FUTURE,2,3520,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: MCL_FUTURE\n");
 cnt++;
@@ -249,7 +249,7 @@ cnt++;
 
 #elif __x86_64__
 #ifdef MCL_FUTURE
-	CompareConstant(MCL_FUTURE,2,3520,architecture)
+	CompareConstant(MCL_FUTURE,2,3520,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: MCL_FUTURE\n");
 cnt++;
@@ -257,7 +257,7 @@ cnt++;
 
 #elif __s390__ && !__s390x__
 #ifdef MCL_FUTURE
-	CompareConstant(MCL_FUTURE,2,3520,architecture)
+	CompareConstant(MCL_FUTURE,2,3520,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: MCL_FUTURE\n");
 cnt++;
@@ -266,12 +266,12 @@ cnt++;
 #else
 Msg( "No definition for MCL_FUTURE (3520, int) in db\n");
 #ifdef MCL_FUTURE
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3520,%d);\n", architecture, MCL_FUTURE);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3520,%d,'""1.3""',NULL);\n", architecture, MCL_FUTURE);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
 #ifdef MAP_ANON
-	CompareConstant(MAP_ANON,MAP_ANONYMOUS,3526,architecture)
+	CompareConstant(MAP_ANON,MAP_ANONYMOUS,3526,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MAP_ANON\n");
 cnt++;

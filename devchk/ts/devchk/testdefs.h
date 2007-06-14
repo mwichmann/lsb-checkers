@@ -125,6 +125,7 @@ extern void setjmp_h();
 extern void signal_h();
 extern void spawn_h();
 extern void stddef_h();
+extern void stdint_h();
 extern void stdio_h();
 extern void stdlib_h();
 extern void sys_file_h();

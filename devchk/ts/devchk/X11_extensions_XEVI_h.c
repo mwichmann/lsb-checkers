@@ -31,7 +31,7 @@ Msg("Checking data structures in X11/extensions/XEVI.h\n");
 printf("Checking data structures in X11/extensions/XEVI.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef XEVI_TRANSPARENCY_NONE
-	CompareConstant(XEVI_TRANSPARENCY_NONE,0,5311,architecture)
+	CompareConstant(XEVI_TRANSPARENCY_NONE,0,5311,architecture,3.0,NULL)
 #else
 Msg( "Error: Constant not found: XEVI_TRANSPARENCY_NONE\n");
 cnt++;
@@ -41,7 +41,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef XEVI_TRANSPARENCY_PIXEL
-	CompareConstant(XEVI_TRANSPARENCY_PIXEL,1,5312,architecture)
+	CompareConstant(XEVI_TRANSPARENCY_PIXEL,1,5312,architecture,3.0,NULL)
 #else
 Msg( "Error: Constant not found: XEVI_TRANSPARENCY_PIXEL\n");
 cnt++;
@@ -51,7 +51,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef XEVI_TRANSPARENCY_MASK
-	CompareConstant(XEVI_TRANSPARENCY_MASK,2,5313,architecture)
+	CompareConstant(XEVI_TRANSPARENCY_MASK,2,5313,architecture,3.0,NULL)
 #else
 Msg( "Error: Constant not found: XEVI_TRANSPARENCY_MASK\n");
 cnt++;
@@ -60,21 +60,21 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(ExtendedVisualInfo,36, 11068, 2)
+CheckTypeSize(ExtendedVisualInfo,36, 11068, 2, 3.0, NULL, 11067, NULL)
 #elif __ia64__
-CheckTypeSize(ExtendedVisualInfo,48, 11068, 3)
+CheckTypeSize(ExtendedVisualInfo,48, 11068, 3, 3.0, NULL, 11067, NULL)
 #elif __powerpc64__
-CheckTypeSize(ExtendedVisualInfo,48, 11068, 9)
+CheckTypeSize(ExtendedVisualInfo,48, 11068, 9, 3.0, NULL, 11067, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(ExtendedVisualInfo,36, 11068, 6)
+CheckTypeSize(ExtendedVisualInfo,36, 11068, 6, 3.0, NULL, 11067, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(ExtendedVisualInfo,36, 11068, 10)
+CheckTypeSize(ExtendedVisualInfo,36, 11068, 10, 3.0, NULL, 11067, NULL)
 #elif __x86_64__
-CheckTypeSize(ExtendedVisualInfo,48, 11068, 11)
+CheckTypeSize(ExtendedVisualInfo,48, 11068, 11, 3.0, NULL, 11067, NULL)
 #elif __s390x__
-CheckTypeSize(ExtendedVisualInfo,48, 11068, 12)
+CheckTypeSize(ExtendedVisualInfo,48, 11068, 12, 3.0, NULL, 11067, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11068,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.0""',NULL,11067, NULL);\n",architecture,11068,0);
 Msg("Find size of ExtendedVisualInfo (11068)\n");
 #endif
 

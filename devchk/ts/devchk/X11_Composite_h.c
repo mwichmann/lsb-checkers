@@ -33,40 +33,40 @@ Msg("Checking data structures in X11/Composite.h\n");
 
 printf("Checking data structures in X11/Composite.h\n");
 #if __ia64__
-CheckTypeSize(XtOrderProc,8, 10245, 3)
+CheckTypeSize(XtOrderProc,8, 10245, 3, 1.3, NULL, 10246, NULL)
 #elif __i386__
-CheckTypeSize(XtOrderProc,4, 10245, 2)
+CheckTypeSize(XtOrderProc,4, 10245, 2, 1.2, NULL, 10246, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(XtOrderProc,4, 10245, 6)
+CheckTypeSize(XtOrderProc,4, 10245, 6, 1.2, NULL, 10246, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(XtOrderProc,4, 10245, 10)
+CheckTypeSize(XtOrderProc,4, 10245, 10, 1.3, NULL, 10246, NULL)
 #elif __powerpc64__
-CheckTypeSize(XtOrderProc,8, 10245, 9)
+CheckTypeSize(XtOrderProc,8, 10245, 9, 2.0, NULL, 10246, NULL)
 #elif __s390x__
-CheckTypeSize(XtOrderProc,8, 10245, 12)
+CheckTypeSize(XtOrderProc,8, 10245, 12, 1.3, NULL, 10246, NULL)
 #elif __x86_64__
-CheckTypeSize(XtOrderProc,8, 10245, 11)
+CheckTypeSize(XtOrderProc,8, 10245, 11, 2.0, NULL, 10246, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10245,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10246,NULL);\n",architecture,10245,0);
 Msg("Find size of XtOrderProc (10245)\n");
 #endif
 
 #if __ia64__
-CheckTypeSize(XtDoChangeProc,8, 10248, 3)
+CheckTypeSize(XtDoChangeProc,8, 10248, 3, 1.3, NULL, 10247, NULL)
 #elif __i386__
-CheckTypeSize(XtDoChangeProc,4, 10248, 2)
+CheckTypeSize(XtDoChangeProc,4, 10248, 2, 1.2, NULL, 10247, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(XtDoChangeProc,4, 10248, 6)
+CheckTypeSize(XtDoChangeProc,4, 10248, 6, 1.2, NULL, 10247, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(XtDoChangeProc,4, 10248, 10)
+CheckTypeSize(XtDoChangeProc,4, 10248, 10, 1.3, NULL, 10247, NULL)
 #elif __powerpc64__
-CheckTypeSize(XtDoChangeProc,8, 10248, 9)
+CheckTypeSize(XtDoChangeProc,8, 10248, 9, 2.0, NULL, 10247, NULL)
 #elif __s390x__
-CheckTypeSize(XtDoChangeProc,8, 10248, 12)
+CheckTypeSize(XtDoChangeProc,8, 10248, 12, 1.3, NULL, 10247, NULL)
 #elif __x86_64__
-CheckTypeSize(XtDoChangeProc,8, 10248, 11)
+CheckTypeSize(XtDoChangeProc,8, 10248, 11, 2.0, NULL, 10247, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10248,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10247, NULL);\n",architecture,10248,0);
 Msg("Find size of XtDoChangeProc (10248)\n");
 #endif
 

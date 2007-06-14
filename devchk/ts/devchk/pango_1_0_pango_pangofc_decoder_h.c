@@ -64,40 +64,40 @@ printf("Checking data structures in pango-1.0/pango/pangofc-decoder.h\n");
 #endif
 
 #if __i386__
-CheckTypeSize(PangoFcDecoder,12, 12597, 2)
+CheckTypeSize(PangoFcDecoder,12, 12597, 2, 3.1, NULL, 12596, NULL)
 #elif __x86_64__
-CheckTypeSize(PangoFcDecoder,24, 12597, 11)
+CheckTypeSize(PangoFcDecoder,24, 12597, 11, 3.1, NULL, 12596, NULL)
 #elif __ia64__
-CheckTypeSize(PangoFcDecoder,24, 12597, 3)
+CheckTypeSize(PangoFcDecoder,24, 12597, 3, 3.1, NULL, 12596, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(PangoFcDecoder,12, 12597, 6)
+CheckTypeSize(PangoFcDecoder,12, 12597, 6, 3.1, NULL, 12596, NULL)
 #elif __powerpc64__
-CheckTypeSize(PangoFcDecoder,24, 12597, 9)
+CheckTypeSize(PangoFcDecoder,24, 12597, 9, 3.1, NULL, 12596, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(PangoFcDecoder,12, 12597, 10)
+CheckTypeSize(PangoFcDecoder,12, 12597, 10, 3.1, NULL, 12596, NULL)
 #elif __s390x__
-CheckTypeSize(PangoFcDecoder,24, 12597, 12)
+CheckTypeSize(PangoFcDecoder,24, 12597, 12, 3.1, NULL, 12596, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12597,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12596,NULL);\n",architecture,12597,0);
 Msg("Find size of PangoFcDecoder (12597)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(PangoFcDecoderClass,92, 12602, 2)
+CheckTypeSize(PangoFcDecoderClass,92, 12602, 2, 3.1, NULL, 12601, NULL)
 #elif __ia64__
-CheckTypeSize(PangoFcDecoderClass,184, 12602, 3)
+CheckTypeSize(PangoFcDecoderClass,184, 12602, 3, 3.1, NULL, 12601, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(PangoFcDecoderClass,92, 12602, 6)
+CheckTypeSize(PangoFcDecoderClass,92, 12602, 6, 3.1, NULL, 12601, NULL)
 #elif __powerpc64__
-CheckTypeSize(PangoFcDecoderClass,184, 12602, 9)
+CheckTypeSize(PangoFcDecoderClass,184, 12602, 9, 3.1, NULL, 12601, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(PangoFcDecoderClass,92, 12602, 10)
+CheckTypeSize(PangoFcDecoderClass,92, 12602, 10, 3.1, NULL, 12601, NULL)
 #elif __s390x__
-CheckTypeSize(PangoFcDecoderClass,184, 12602, 12)
+CheckTypeSize(PangoFcDecoderClass,184, 12602, 12, 3.1, NULL, 12601, NULL)
 #elif __x86_64__
-CheckTypeSize(PangoFcDecoderClass,184, 12602, 11)
+CheckTypeSize(PangoFcDecoderClass,184, 12602, 11, 3.1, NULL, 12601, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12602,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12601, NULL);\n",architecture,12602,0);
 Msg("Find size of PangoFcDecoderClass (12602)\n");
 #endif
 

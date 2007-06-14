@@ -32,116 +32,116 @@ printf("Checking data structures in libxml2/libxml/hash.h\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlHashTable,0, 14729, 2)
+CheckTypeSize(xmlHashTable,0, 14729, 2, 3.1, NULL, 14723, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlHashTable,0, 14729, 11)
+CheckTypeSize(xmlHashTable,0, 14729, 11, 3.1, NULL, 14723, NULL)
 #elif __ia64__
-CheckTypeSize(xmlHashTable,0, 14729, 3)
+CheckTypeSize(xmlHashTable,0, 14729, 3, 3.1, NULL, 14723, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlHashTable,0, 14729, 6)
+CheckTypeSize(xmlHashTable,0, 14729, 6, 3.1, NULL, 14723, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlHashTable,0, 14729, 9)
+CheckTypeSize(xmlHashTable,0, 14729, 9, 3.1, NULL, 14723, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlHashTable,0, 14729, 10)
+CheckTypeSize(xmlHashTable,0, 14729, 10, 3.1, NULL, 14723, NULL)
 #elif __s390x__
-CheckTypeSize(xmlHashTable,0, 14729, 12)
+CheckTypeSize(xmlHashTable,0, 14729, 12, 3.1, NULL, 14723, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14729,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14723,NULL);\n",architecture,14729,0);
 Msg("Find size of xmlHashTable (14729)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlHashTablePtr,4, 14731, 2)
+CheckTypeSize(xmlHashTablePtr,4, 14731, 2, 3.1, NULL, 14730, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlHashTablePtr,8, 14731, 11)
+CheckTypeSize(xmlHashTablePtr,8, 14731, 11, 3.1, NULL, 14730, NULL)
 #elif __ia64__
-CheckTypeSize(xmlHashTablePtr,8, 14731, 3)
+CheckTypeSize(xmlHashTablePtr,8, 14731, 3, 3.1, NULL, 14730, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlHashTablePtr,4, 14731, 6)
+CheckTypeSize(xmlHashTablePtr,4, 14731, 6, 3.1, NULL, 14730, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlHashTablePtr,8, 14731, 9)
+CheckTypeSize(xmlHashTablePtr,8, 14731, 9, 3.1, NULL, 14730, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlHashTablePtr,4, 14731, 10)
+CheckTypeSize(xmlHashTablePtr,4, 14731, 10, 3.1, NULL, 14730, NULL)
 #elif __s390x__
-CheckTypeSize(xmlHashTablePtr,8, 14731, 12)
+CheckTypeSize(xmlHashTablePtr,8, 14731, 12, 3.1, NULL, 14730, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14731,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14730,NULL);\n",architecture,14731,0);
 Msg("Find size of xmlHashTablePtr (14731)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlHashDeallocator,4, 14733, 2)
+CheckTypeSize(xmlHashDeallocator,4, 14733, 2, 3.1, NULL, 14732, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlHashDeallocator,8, 14733, 11)
+CheckTypeSize(xmlHashDeallocator,8, 14733, 11, 3.1, NULL, 14732, NULL)
 #elif __ia64__
-CheckTypeSize(xmlHashDeallocator,8, 14733, 3)
+CheckTypeSize(xmlHashDeallocator,8, 14733, 3, 3.1, NULL, 14732, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlHashDeallocator,4, 14733, 6)
+CheckTypeSize(xmlHashDeallocator,4, 14733, 6, 3.1, NULL, 14732, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlHashDeallocator,8, 14733, 9)
+CheckTypeSize(xmlHashDeallocator,8, 14733, 9, 3.1, NULL, 14732, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlHashDeallocator,4, 14733, 10)
+CheckTypeSize(xmlHashDeallocator,4, 14733, 10, 3.1, NULL, 14732, NULL)
 #elif __s390x__
-CheckTypeSize(xmlHashDeallocator,8, 14733, 12)
+CheckTypeSize(xmlHashDeallocator,8, 14733, 12, 3.1, NULL, 14732, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14733,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14732,NULL);\n",architecture,14733,0);
 Msg("Find size of xmlHashDeallocator (14733)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlHashScannerFull,4, 14735, 2)
+CheckTypeSize(xmlHashScannerFull,4, 14735, 2, 3.1, NULL, 14734, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlHashScannerFull,8, 14735, 11)
+CheckTypeSize(xmlHashScannerFull,8, 14735, 11, 3.1, NULL, 14734, NULL)
 #elif __ia64__
-CheckTypeSize(xmlHashScannerFull,8, 14735, 3)
+CheckTypeSize(xmlHashScannerFull,8, 14735, 3, 3.1, NULL, 14734, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlHashScannerFull,4, 14735, 6)
+CheckTypeSize(xmlHashScannerFull,4, 14735, 6, 3.1, NULL, 14734, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlHashScannerFull,8, 14735, 9)
+CheckTypeSize(xmlHashScannerFull,8, 14735, 9, 3.1, NULL, 14734, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlHashScannerFull,4, 14735, 10)
+CheckTypeSize(xmlHashScannerFull,4, 14735, 10, 3.1, NULL, 14734, NULL)
 #elif __s390x__
-CheckTypeSize(xmlHashScannerFull,8, 14735, 12)
+CheckTypeSize(xmlHashScannerFull,8, 14735, 12, 3.1, NULL, 14734, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14735,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14734,NULL);\n",architecture,14735,0);
 Msg("Find size of xmlHashScannerFull (14735)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlHashCopier,4, 14737, 2)
+CheckTypeSize(xmlHashCopier,4, 14737, 2, 3.1, NULL, 14736, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlHashCopier,8, 14737, 11)
+CheckTypeSize(xmlHashCopier,8, 14737, 11, 3.1, NULL, 14736, NULL)
 #elif __ia64__
-CheckTypeSize(xmlHashCopier,8, 14737, 3)
+CheckTypeSize(xmlHashCopier,8, 14737, 3, 3.1, NULL, 14736, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlHashCopier,4, 14737, 6)
+CheckTypeSize(xmlHashCopier,4, 14737, 6, 3.1, NULL, 14736, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlHashCopier,8, 14737, 9)
+CheckTypeSize(xmlHashCopier,8, 14737, 9, 3.1, NULL, 14736, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlHashCopier,4, 14737, 10)
+CheckTypeSize(xmlHashCopier,4, 14737, 10, 3.1, NULL, 14736, NULL)
 #elif __s390x__
-CheckTypeSize(xmlHashCopier,8, 14737, 12)
+CheckTypeSize(xmlHashCopier,8, 14737, 12, 3.1, NULL, 14736, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14737,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14736,NULL);\n",architecture,14737,0);
 Msg("Find size of xmlHashCopier (14737)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlHashScanner,4, 14739, 2)
+CheckTypeSize(xmlHashScanner,4, 14739, 2, 3.1, NULL, 14738, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlHashScanner,8, 14739, 11)
+CheckTypeSize(xmlHashScanner,8, 14739, 11, 3.1, NULL, 14738, NULL)
 #elif __ia64__
-CheckTypeSize(xmlHashScanner,8, 14739, 3)
+CheckTypeSize(xmlHashScanner,8, 14739, 3, 3.1, NULL, 14738, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlHashScanner,4, 14739, 6)
+CheckTypeSize(xmlHashScanner,4, 14739, 6, 3.1, NULL, 14738, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlHashScanner,8, 14739, 9)
+CheckTypeSize(xmlHashScanner,8, 14739, 9, 3.1, NULL, 14738, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlHashScanner,4, 14739, 10)
+CheckTypeSize(xmlHashScanner,4, 14739, 10, 3.1, NULL, 14738, NULL)
 #elif __s390x__
-CheckTypeSize(xmlHashScanner,8, 14739, 12)
+CheckTypeSize(xmlHashScanner,8, 14739, 12, 3.1, NULL, 14738, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14739,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14738, NULL);\n",architecture,14739,0);
 Msg("Find size of xmlHashScanner (14739)\n");
 #endif
 

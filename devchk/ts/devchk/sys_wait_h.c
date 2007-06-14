@@ -52,7 +52,7 @@ printf("Checking data structures in sys/wait.h\n");
 
 #if _LSB_DEFAULT_ARCH
 #ifdef WCOREFLAG
-	CompareConstant(WCOREFLAG,0x80,1739,architecture)
+	CompareConstant(WCOREFLAG,0x80,1739,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: WCOREFLAG\n");
 cnt++;
@@ -66,7 +66,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef WNOHANG
-	CompareConstant(WNOHANG,0x00000001,3490,architecture)
+	CompareConstant(WNOHANG,0x00000001,3490,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: WNOHANG\n");
 cnt++;
@@ -76,7 +76,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef WUNTRACED
-	CompareConstant(WUNTRACED,0x00000002,3491,architecture)
+	CompareConstant(WUNTRACED,0x00000002,3491,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: WUNTRACED\n");
 cnt++;
@@ -85,21 +85,21 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(idtype_t,4, 9185, 2)
+CheckTypeSize(idtype_t,4, 9185, 2, 1.0, NULL, 9184, NULL)
 #elif __ia64__
-CheckTypeSize(idtype_t,4, 9185, 3)
+CheckTypeSize(idtype_t,4, 9185, 3, 1.3, NULL, 9184, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(idtype_t,4, 9185, 6)
+CheckTypeSize(idtype_t,4, 9185, 6, 1.2, NULL, 9184, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(idtype_t,4, 9185, 10)
+CheckTypeSize(idtype_t,4, 9185, 10, 1.3, NULL, 9184, NULL)
 #elif __powerpc64__
-CheckTypeSize(idtype_t,4, 9185, 9)
+CheckTypeSize(idtype_t,4, 9185, 9, 2.0, NULL, 9184, NULL)
 #elif __s390x__
-CheckTypeSize(idtype_t,4, 9185, 12)
+CheckTypeSize(idtype_t,4, 9185, 12, 1.3, NULL, 9184, NULL)
 #elif __x86_64__
-CheckTypeSize(idtype_t,4, 9185, 11)
+CheckTypeSize(idtype_t,4, 9185, 11, 2.0, NULL, 9184, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9185,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9184, NULL);\n",architecture,9185,0);
 Msg("Find size of idtype_t (9185)\n");
 #endif
 

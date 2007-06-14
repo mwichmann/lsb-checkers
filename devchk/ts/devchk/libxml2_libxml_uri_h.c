@@ -27,40 +27,40 @@ Msg("Checking data structures in libxml2/libxml/uri.h\n");
 
 printf("Checking data structures in libxml2/libxml/uri.h\n");
 #if __i386__
-CheckTypeSize(xmlURI,40, 14566, 2)
+CheckTypeSize(xmlURI,40, 14566, 2, 3.1, NULL, 14565, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlURI,80, 14566, 11)
+CheckTypeSize(xmlURI,80, 14566, 11, 3.1, NULL, 14565, NULL)
 #elif __ia64__
-CheckTypeSize(xmlURI,80, 14566, 3)
+CheckTypeSize(xmlURI,80, 14566, 3, 3.1, NULL, 14565, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlURI,40, 14566, 6)
+CheckTypeSize(xmlURI,40, 14566, 6, 3.1, NULL, 14565, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlURI,80, 14566, 9)
+CheckTypeSize(xmlURI,80, 14566, 9, 3.1, NULL, 14565, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlURI,40, 14566, 10)
+CheckTypeSize(xmlURI,40, 14566, 10, 3.1, NULL, 14565, NULL)
 #elif __s390x__
-CheckTypeSize(xmlURI,80, 14566, 12)
+CheckTypeSize(xmlURI,80, 14566, 12, 3.1, NULL, 14565, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14566,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14565,NULL);\n",architecture,14566,0);
 Msg("Find size of xmlURI (14566)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlURIPtr,4, 14568, 2)
+CheckTypeSize(xmlURIPtr,4, 14568, 2, 3.1, NULL, 14567, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlURIPtr,8, 14568, 11)
+CheckTypeSize(xmlURIPtr,8, 14568, 11, 3.1, NULL, 14567, NULL)
 #elif __ia64__
-CheckTypeSize(xmlURIPtr,8, 14568, 3)
+CheckTypeSize(xmlURIPtr,8, 14568, 3, 3.1, NULL, 14567, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlURIPtr,4, 14568, 6)
+CheckTypeSize(xmlURIPtr,4, 14568, 6, 3.1, NULL, 14567, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlURIPtr,8, 14568, 9)
+CheckTypeSize(xmlURIPtr,8, 14568, 9, 3.1, NULL, 14567, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlURIPtr,4, 14568, 10)
+CheckTypeSize(xmlURIPtr,4, 14568, 10, 3.1, NULL, 14567, NULL)
 #elif __s390x__
-CheckTypeSize(xmlURIPtr,8, 14568, 12)
+CheckTypeSize(xmlURIPtr,8, 14568, 12, 3.1, NULL, 14567, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14568,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14567, NULL);\n",architecture,14568,0);
 Msg("Find size of xmlURIPtr (14568)\n");
 #endif
 

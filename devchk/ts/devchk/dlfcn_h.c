@@ -27,7 +27,7 @@ Msg("Checking data structures in dlfcn.h\n");
 printf("Checking data structures in dlfcn.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef RTLD_LAZY
-	CompareConstant(RTLD_LAZY,0x00001,1160,architecture)
+	CompareConstant(RTLD_LAZY,0x00001,1160,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: RTLD_LAZY\n");
 cnt++;
@@ -37,7 +37,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef RTLD_NOW
-	CompareConstant(RTLD_NOW,0x00002,1161,architecture)
+	CompareConstant(RTLD_NOW,0x00002,1161,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: RTLD_NOW\n");
 cnt++;
@@ -47,7 +47,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef RTLD_GLOBAL
-	CompareConstant(RTLD_GLOBAL,0x00100,1164,architecture)
+	CompareConstant(RTLD_GLOBAL,0x00100,1164,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: RTLD_GLOBAL\n");
 cnt++;
@@ -57,7 +57,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef RTLD_LOCAL
-	CompareConstant(RTLD_LOCAL,0,1165,architecture)
+	CompareConstant(RTLD_LOCAL,0,1165,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: RTLD_LOCAL\n");
 cnt++;
@@ -67,7 +67,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef RTLD_NEXT
-	CompareConstant(RTLD_NEXT,((void *) -1l),5185,architecture)
+	CompareConstant(RTLD_NEXT,((void *) -1l),5185,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: RTLD_NEXT\n");
 cnt++;
@@ -76,21 +76,21 @@ cnt++;
 #endif
 
 #if __ia64__
-CheckTypeSize(Dl_info,32, 10008, 3)
+CheckTypeSize(Dl_info,32, 10008, 3, 1.3, NULL, 10007, NULL)
 #elif __i386__
-CheckTypeSize(Dl_info,16, 10008, 2)
+CheckTypeSize(Dl_info,16, 10008, 2, 1.2, NULL, 10007, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(Dl_info,16, 10008, 6)
+CheckTypeSize(Dl_info,16, 10008, 6, 1.2, NULL, 10007, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(Dl_info,16, 10008, 10)
+CheckTypeSize(Dl_info,16, 10008, 10, 1.3, NULL, 10007, NULL)
 #elif __powerpc64__
-CheckTypeSize(Dl_info,32, 10008, 9)
+CheckTypeSize(Dl_info,32, 10008, 9, 2.0, NULL, 10007, NULL)
 #elif __s390x__
-CheckTypeSize(Dl_info,32, 10008, 12)
+CheckTypeSize(Dl_info,32, 10008, 12, 1.3, NULL, 10007, NULL)
 #elif __x86_64__
-CheckTypeSize(Dl_info,32, 10008, 11)
+CheckTypeSize(Dl_info,32, 10008, 11, 2.0, NULL, 10007, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10008,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10007, NULL);\n",architecture,10008,0);
 Msg("Find size of Dl_info (10008)\n");
 #endif
 

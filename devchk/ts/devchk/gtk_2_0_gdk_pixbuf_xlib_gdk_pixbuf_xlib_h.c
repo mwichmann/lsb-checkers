@@ -26,40 +26,40 @@ Msg("Checking data structures in gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h\n");
 
 printf("Checking data structures in gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h\n");
 #if __i386__
-CheckTypeSize(XlibRgbDither,4, 12661, 2)
+CheckTypeSize(XlibRgbDither,4, 12661, 2, 3.1, NULL, 12660, NULL)
 #elif __x86_64__
-CheckTypeSize(XlibRgbDither,4, 12661, 11)
+CheckTypeSize(XlibRgbDither,4, 12661, 11, 3.1, NULL, 12660, NULL)
 #elif __ia64__
-CheckTypeSize(XlibRgbDither,4, 12661, 3)
+CheckTypeSize(XlibRgbDither,4, 12661, 3, 3.1, NULL, 12660, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(XlibRgbDither,4, 12661, 6)
+CheckTypeSize(XlibRgbDither,4, 12661, 6, 3.1, NULL, 12660, NULL)
 #elif __powerpc64__
-CheckTypeSize(XlibRgbDither,4, 12661, 9)
+CheckTypeSize(XlibRgbDither,4, 12661, 9, 3.1, NULL, 12660, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(XlibRgbDither,4, 12661, 10)
+CheckTypeSize(XlibRgbDither,4, 12661, 10, 3.1, NULL, 12660, NULL)
 #elif __s390x__
-CheckTypeSize(XlibRgbDither,4, 12661, 12)
+CheckTypeSize(XlibRgbDither,4, 12661, 12, 3.1, NULL, 12660, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12661,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12660,NULL);\n",architecture,12661,0);
 Msg("Find size of XlibRgbDither (12661)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(XlibRgbCmap,1280, 12666, 2)
+CheckTypeSize(XlibRgbCmap,1280, 12666, 2, 3.1, NULL, 12663, NULL)
 #elif __x86_64__
-CheckTypeSize(XlibRgbCmap,1280, 12666, 11)
+CheckTypeSize(XlibRgbCmap,1280, 12666, 11, 3.1, NULL, 12663, NULL)
 #elif __ia64__
-CheckTypeSize(XlibRgbCmap,1280, 12666, 3)
+CheckTypeSize(XlibRgbCmap,1280, 12666, 3, 3.1, NULL, 12663, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(XlibRgbCmap,1280, 12666, 6)
+CheckTypeSize(XlibRgbCmap,1280, 12666, 6, 3.1, NULL, 12663, NULL)
 #elif __powerpc64__
-CheckTypeSize(XlibRgbCmap,1280, 12666, 9)
+CheckTypeSize(XlibRgbCmap,1280, 12666, 9, 3.1, NULL, 12663, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(XlibRgbCmap,1280, 12666, 10)
+CheckTypeSize(XlibRgbCmap,1280, 12666, 10, 3.1, NULL, 12663, NULL)
 #elif __s390x__
-CheckTypeSize(XlibRgbCmap,1280, 12666, 12)
+CheckTypeSize(XlibRgbCmap,1280, 12666, 12, 3.1, NULL, 12663, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12666,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12663, NULL);\n",architecture,12666,0);
 Msg("Find size of XlibRgbCmap (12666)\n");
 #endif
 

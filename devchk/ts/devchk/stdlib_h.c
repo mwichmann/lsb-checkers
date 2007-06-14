@@ -28,7 +28,7 @@ Msg("Checking data structures in stdlib.h\n");
 printf("Checking data structures in stdlib.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef RAND_MAX
-	CompareConstant(RAND_MAX,2147483647,1647,architecture)
+	CompareConstant(RAND_MAX,2147483647,1647,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: RAND_MAX\n");
 cnt++;
@@ -38,7 +38,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef EXIT_FAILURE
-	CompareConstant(EXIT_FAILURE,1,1648,architecture)
+	CompareConstant(EXIT_FAILURE,1,1648,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: EXIT_FAILURE\n");
 cnt++;
@@ -48,7 +48,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef EXIT_SUCCESS
-	CompareConstant(EXIT_SUCCESS,0,1649,architecture)
+	CompareConstant(EXIT_SUCCESS,0,1649,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: EXIT_SUCCESS\n");
 cnt++;
@@ -58,7 +58,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef MB_CUR_MAX
-	CompareConstant(MB_CUR_MAX,(__ctype_get_mb_cur_max()),1650,architecture)
+	CompareConstant(MB_CUR_MAX,(__ctype_get_mb_cur_max()),1650,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: MB_CUR_MAX\n");
 cnt++;
@@ -67,21 +67,21 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(__compar_fn_t,4, 9231, 2)
+CheckTypeSize(__compar_fn_t,4, 9231, 2, 1.0, NULL, 9079, NULL)
 #elif __ia64__
-CheckTypeSize(__compar_fn_t,8, 9231, 3)
+CheckTypeSize(__compar_fn_t,8, 9231, 3, 1.3, NULL, 9079, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(__compar_fn_t,4, 9231, 6)
+CheckTypeSize(__compar_fn_t,4, 9231, 6, 1.2, NULL, 9079, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(__compar_fn_t,4, 9231, 10)
+CheckTypeSize(__compar_fn_t,4, 9231, 10, 1.3, NULL, 9079, NULL)
 #elif __powerpc64__
-CheckTypeSize(__compar_fn_t,8, 9231, 9)
+CheckTypeSize(__compar_fn_t,8, 9231, 9, 2.0, NULL, 9079, NULL)
 #elif __s390x__
-CheckTypeSize(__compar_fn_t,8, 9231, 12)
+CheckTypeSize(__compar_fn_t,8, 9231, 12, 1.3, NULL, 9079, NULL)
 #elif __x86_64__
-CheckTypeSize(__compar_fn_t,8, 9231, 11)
+CheckTypeSize(__compar_fn_t,8, 9231, 11, 2.0, NULL, 9079, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9231,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9079,NULL);\n",architecture,9231,0);
 Msg("Find size of __compar_fn_t (9231)\n");
 #endif
 
@@ -93,64 +93,64 @@ Msg("Find size of __compar_fn_t (9231)\n");
 #elif __x86_64__
 #elif __powerpc64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10483,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10483,0);
 Msg("Find size of random_data (10483)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(div_t,8, 6973, 2)
+CheckTypeSize(div_t,8, 6973, 2, 1.0, NULL, 6972, NULL)
 #elif __ia64__
-CheckTypeSize(div_t,8, 6973, 3)
+CheckTypeSize(div_t,8, 6973, 3, 1.3, NULL, 6972, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(div_t,8, 6973, 6)
+CheckTypeSize(div_t,8, 6973, 6, 1.2, NULL, 6972, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(div_t,8, 6973, 10)
+CheckTypeSize(div_t,8, 6973, 10, 1.3, NULL, 6972, NULL)
 #elif __powerpc64__
-CheckTypeSize(div_t,8, 6973, 9)
+CheckTypeSize(div_t,8, 6973, 9, 2.0, NULL, 6972, NULL)
 #elif __s390x__
-CheckTypeSize(div_t,8, 6973, 12)
+CheckTypeSize(div_t,8, 6973, 12, 1.3, NULL, 6972, NULL)
 #elif __x86_64__
-CheckTypeSize(div_t,8, 6973, 11)
+CheckTypeSize(div_t,8, 6973, 11, 2.0, NULL, 6972, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6973,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6972,NULL);\n",architecture,6973,0);
 Msg("Find size of div_t (6973)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(ldiv_t,8, 6975, 2)
+CheckTypeSize(ldiv_t,8, 6975, 2, 1.0, NULL, 6974, NULL)
 #elif __ia64__
-CheckTypeSize(ldiv_t,16, 6975, 3)
+CheckTypeSize(ldiv_t,16, 6975, 3, 1.3, NULL, 6974, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(ldiv_t,8, 6975, 6)
+CheckTypeSize(ldiv_t,8, 6975, 6, 1.2, NULL, 6974, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(ldiv_t,8, 6975, 10)
+CheckTypeSize(ldiv_t,8, 6975, 10, 1.3, NULL, 6974, NULL)
 #elif __powerpc64__
-CheckTypeSize(ldiv_t,16, 6975, 9)
+CheckTypeSize(ldiv_t,16, 6975, 9, 2.0, NULL, 6974, NULL)
 #elif __s390x__
-CheckTypeSize(ldiv_t,16, 6975, 12)
+CheckTypeSize(ldiv_t,16, 6975, 12, 1.3, NULL, 6974, NULL)
 #elif __x86_64__
-CheckTypeSize(ldiv_t,16, 6975, 11)
+CheckTypeSize(ldiv_t,16, 6975, 11, 2.0, NULL, 6974, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6975,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6974,NULL);\n",architecture,6975,0);
 Msg("Find size of ldiv_t (6975)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(lldiv_t,16, 6897, 2)
+CheckTypeSize(lldiv_t,16, 6897, 2, 1.2, NULL, 6976, NULL)
 #elif __ia64__
-CheckTypeSize(lldiv_t,16, 6897, 3)
+CheckTypeSize(lldiv_t,16, 6897, 3, 1.3, NULL, 6976, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(lldiv_t,16, 6897, 6)
+CheckTypeSize(lldiv_t,16, 6897, 6, 1.2, NULL, 6976, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(lldiv_t,16, 6897, 10)
+CheckTypeSize(lldiv_t,16, 6897, 10, 1.3, NULL, 6976, NULL)
 #elif __powerpc64__
-CheckTypeSize(lldiv_t,16, 6897, 9)
+CheckTypeSize(lldiv_t,16, 6897, 9, 2.0, NULL, 6976, NULL)
 #elif __s390x__
-CheckTypeSize(lldiv_t,16, 6897, 12)
+CheckTypeSize(lldiv_t,16, 6897, 12, 1.3, NULL, 6976, NULL)
 #elif __x86_64__
-CheckTypeSize(lldiv_t,16, 6897, 11)
+CheckTypeSize(lldiv_t,16, 6897, 11, 2.0, NULL, 6976, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6897,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6976, NULL);\n",architecture,6897,0);
 Msg("Find size of lldiv_t (6897)\n");
 #endif
 

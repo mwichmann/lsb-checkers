@@ -28,21 +28,21 @@ Msg("Checking data structures in inttypes.h\n");
 
 printf("Checking data structures in inttypes.h\n");
 #if __i386__
-CheckTypeSize(imaxdiv_t,16, 6898, 2)
+CheckTypeSize(imaxdiv_t,16, 6898, 2, 1.0, NULL, 6897, NULL)
 #elif __ia64__
-CheckTypeSize(imaxdiv_t,16, 6898, 3)
+CheckTypeSize(imaxdiv_t,16, 6898, 3, 1.3, NULL, 6897, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(imaxdiv_t,16, 6898, 6)
+CheckTypeSize(imaxdiv_t,16, 6898, 6, 1.2, NULL, 6897, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(imaxdiv_t,16, 6898, 10)
+CheckTypeSize(imaxdiv_t,16, 6898, 10, 1.3, NULL, 6897, NULL)
 #elif __powerpc64__
-CheckTypeSize(imaxdiv_t,16, 6898, 9)
+CheckTypeSize(imaxdiv_t,16, 6898, 9, 2.0, NULL, 6897, NULL)
 #elif __s390x__
-CheckTypeSize(imaxdiv_t,16, 6898, 12)
+CheckTypeSize(imaxdiv_t,16, 6898, 12, 1.3, NULL, 6897, NULL)
 #elif __x86_64__
-CheckTypeSize(imaxdiv_t,16, 6898, 11)
+CheckTypeSize(imaxdiv_t,16, 6898, 11, 2.0, NULL, 6897, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6898,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6897, NULL);\n",architecture,6898,0);
 Msg("Find size of imaxdiv_t (6898)\n");
 #endif
 

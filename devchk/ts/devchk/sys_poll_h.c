@@ -27,7 +27,7 @@ Msg("Checking data structures in sys/poll.h\n");
 printf("Checking data structures in sys/poll.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef POLLIN
-	CompareConstant(POLLIN,0x0001,4948,architecture)
+	CompareConstant(POLLIN,0x0001,4948,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: POLLIN\n");
 cnt++;
@@ -37,7 +37,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef POLLPRI
-	CompareConstant(POLLPRI,0x0002,4949,architecture)
+	CompareConstant(POLLPRI,0x0002,4949,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: POLLPRI\n");
 cnt++;
@@ -47,7 +47,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef POLLOUT
-	CompareConstant(POLLOUT,0x0004,4950,architecture)
+	CompareConstant(POLLOUT,0x0004,4950,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: POLLOUT\n");
 cnt++;
@@ -57,7 +57,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef POLLERR
-	CompareConstant(POLLERR,0x0008,4951,architecture)
+	CompareConstant(POLLERR,0x0008,4951,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: POLLERR\n");
 cnt++;
@@ -67,7 +67,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef POLLHUP
-	CompareConstant(POLLHUP,0x0010,4952,architecture)
+	CompareConstant(POLLHUP,0x0010,4952,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: POLLHUP\n");
 cnt++;
@@ -77,7 +77,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef POLLNVAL
-	CompareConstant(POLLNVAL,0x0020,4953,architecture)
+	CompareConstant(POLLNVAL,0x0020,4953,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: POLLNVAL\n");
 cnt++;
@@ -93,26 +93,26 @@ cnt++;
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9913,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9913,0);
 Msg("Find size of pollfd (9913)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(nfds_t,4, 10978, 2)
+CheckTypeSize(nfds_t,4, 10978, 2, 2.0, NULL, 9, NULL)
 #elif __ia64__
-CheckTypeSize(nfds_t,8, 10978, 3)
+CheckTypeSize(nfds_t,8, 10978, 3, 2.0, NULL, 9, NULL)
 #elif __powerpc64__
-CheckTypeSize(nfds_t,8, 10978, 9)
+CheckTypeSize(nfds_t,8, 10978, 9, 2.0, NULL, 9, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(nfds_t,4, 10978, 6)
+CheckTypeSize(nfds_t,4, 10978, 6, 2.0, NULL, 9, NULL)
 #elif __s390x__
-CheckTypeSize(nfds_t,8, 10978, 12)
+CheckTypeSize(nfds_t,8, 10978, 12, 2.0, NULL, 9, NULL)
 #elif __x86_64__
-CheckTypeSize(nfds_t,8, 10978, 11)
+CheckTypeSize(nfds_t,8, 10978, 11, 2.0, NULL, 9, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(nfds_t,4, 10978, 10)
+CheckTypeSize(nfds_t,4, 10978, 10, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10978,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9, NULL);\n",architecture,10978,0);
 Msg("Find size of nfds_t (10978)\n");
 #endif
 

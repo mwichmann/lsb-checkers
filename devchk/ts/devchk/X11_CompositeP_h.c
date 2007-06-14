@@ -34,7 +34,7 @@ Msg("Checking data structures in X11/CompositeP.h\n");
 printf("Checking data structures in X11/CompositeP.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef XtCompositeExtensionVersion
-	CompareConstant(XtCompositeExtensionVersion,2L,4931,architecture)
+	CompareConstant(XtCompositeExtensionVersion,2L,4931,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: XtCompositeExtensionVersion\n");
 cnt++;
@@ -52,7 +52,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef XtInheritDeleteChild
-	CompareConstant(XtInheritDeleteChild,((XtWidgetProc) _XtInherit),4934,architecture)
+	CompareConstant(XtInheritDeleteChild,((XtWidgetProc) _XtInherit),4934,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: XtInheritDeleteChild\n");
 cnt++;
@@ -61,40 +61,40 @@ cnt++;
 #endif
 
 #if __ia64__
-CheckTypeSize(CompositeClassPart,40, 10244, 3)
+CheckTypeSize(CompositeClassPart,40, 10244, 3, 1.3, NULL, 10242, NULL)
 #elif __i386__
-CheckTypeSize(CompositeClassPart,20, 10244, 2)
+CheckTypeSize(CompositeClassPart,20, 10244, 2, 1.2, NULL, 10242, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(CompositeClassPart,20, 10244, 6)
+CheckTypeSize(CompositeClassPart,20, 10244, 6, 1.2, NULL, 10242, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(CompositeClassPart,20, 10244, 10)
+CheckTypeSize(CompositeClassPart,20, 10244, 10, 1.3, NULL, 10242, NULL)
 #elif __powerpc64__
-CheckTypeSize(CompositeClassPart,40, 10244, 9)
+CheckTypeSize(CompositeClassPart,40, 10244, 9, 2.0, NULL, 10242, NULL)
 #elif __s390x__
-CheckTypeSize(CompositeClassPart,40, 10244, 12)
+CheckTypeSize(CompositeClassPart,40, 10244, 12, 1.3, NULL, 10242, NULL)
 #elif __x86_64__
-CheckTypeSize(CompositeClassPart,40, 10244, 11)
+CheckTypeSize(CompositeClassPart,40, 10244, 11, 2.0, NULL, 10242, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10244,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10242,NULL);\n",architecture,10244,0);
 Msg("Find size of CompositeClassPart (10244)\n");
 #endif
 
 #if __ia64__
-CheckTypeSize(CompositeClassRec,264, 10240, 3)
+CheckTypeSize(CompositeClassRec,264, 10240, 3, 1.3, NULL, 10239, NULL)
 #elif __i386__
-CheckTypeSize(CompositeClassRec,136, 10240, 2)
+CheckTypeSize(CompositeClassRec,136, 10240, 2, 1.2, NULL, 10239, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(CompositeClassRec,136, 10240, 6)
+CheckTypeSize(CompositeClassRec,136, 10240, 6, 1.2, NULL, 10239, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(CompositeClassRec,136, 10240, 10)
+CheckTypeSize(CompositeClassRec,136, 10240, 10, 1.3, NULL, 10239, NULL)
 #elif __powerpc64__
-CheckTypeSize(CompositeClassRec,264, 10240, 9)
+CheckTypeSize(CompositeClassRec,264, 10240, 9, 2.0, NULL, 10239, NULL)
 #elif __s390x__
-CheckTypeSize(CompositeClassRec,264, 10240, 12)
+CheckTypeSize(CompositeClassRec,264, 10240, 12, 1.3, NULL, 10239, NULL)
 #elif __x86_64__
-CheckTypeSize(CompositeClassRec,264, 10240, 11)
+CheckTypeSize(CompositeClassRec,264, 10240, 11, 2.0, NULL, 10239, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10240,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10239, NULL);\n",architecture,10240,0);
 Msg("Find size of CompositeClassRec (10240)\n");
 #endif
 

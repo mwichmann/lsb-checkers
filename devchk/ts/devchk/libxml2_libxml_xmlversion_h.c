@@ -27,7 +27,7 @@ Msg("Checking data structures in libxml2/libxml/xmlversion.h\n");
 printf("Checking data structures in libxml2/libxml/xmlversion.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef LIBXML_DOTTED_VERSION
-	CompareStringConstant(LIBXML_DOTTED_VERSION,"2.6.22")
+	CompareStringConstant(LIBXML_DOTTED_VERSION,"2.6.22",9323,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: LIBXML_DOTTED_VERSION\n");
 cnt++;
@@ -37,7 +37,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef LIBXML_VERSION
-	CompareConstant(LIBXML_VERSION,20622,9324,architecture)
+	CompareConstant(LIBXML_VERSION,20622,9324,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: LIBXML_VERSION\n");
 cnt++;
@@ -47,7 +47,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef LIBXML_VERSION_STRING
-	CompareStringConstant(LIBXML_VERSION_STRING,"20622")
+	CompareStringConstant(LIBXML_VERSION_STRING,"20622",9325,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: LIBXML_VERSION_STRING\n");
 cnt++;
@@ -57,7 +57,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef LIBXML_VERSION_EXTRA
-	CompareStringConstant(LIBXML_VERSION_EXTRA,"")
+	CompareStringConstant(LIBXML_VERSION_EXTRA,"",9326,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: LIBXML_VERSION_EXTRA\n");
 cnt++;
@@ -187,7 +187,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef LIBXML_MODULE_EXTENSION
-	CompareStringConstant(LIBXML_MODULE_EXTENSION,".so")
+	CompareStringConstant(LIBXML_MODULE_EXTENSION,".so",9357,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: LIBXML_MODULE_EXTENSION\n");
 cnt++;

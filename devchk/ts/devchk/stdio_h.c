@@ -29,7 +29,7 @@ Msg("Checking data structures in stdio.h\n");
 printf("Checking data structures in stdio.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef _IOFBF
-	CompareConstant(_IOFBF,0,1631,architecture)
+	CompareConstant(_IOFBF,0,1631,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: _IOFBF\n");
 cnt++;
@@ -39,7 +39,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _IOLBF
-	CompareConstant(_IOLBF,1,1632,architecture)
+	CompareConstant(_IOLBF,1,1632,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: _IOLBF\n");
 cnt++;
@@ -49,7 +49,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _IONBF
-	CompareConstant(_IONBF,2,1633,architecture)
+	CompareConstant(_IONBF,2,1633,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: _IONBF\n");
 cnt++;
@@ -59,7 +59,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef BUFSIZ
-	CompareConstant(BUFSIZ,8192,1634,architecture)
+	CompareConstant(BUFSIZ,8192,1634,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: BUFSIZ\n");
 cnt++;
@@ -69,7 +69,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef P_tmpdir
-	CompareStringConstant(P_tmpdir,"/tmp")
+	CompareStringConstant(P_tmpdir,"/tmp",1638,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: P_tmpdir\n");
 cnt++;
@@ -79,7 +79,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef EOF
-	CompareConstant(EOF,(-1),3183,architecture)
+	CompareConstant(EOF,(-1),3183,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: EOF\n");
 cnt++;
@@ -89,7 +89,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef L_tmpnam
-	CompareConstant(L_tmpnam,20,3187,architecture)
+	CompareConstant(L_tmpnam,20,3187,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: L_tmpnam\n");
 cnt++;
@@ -99,7 +99,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FILENAME_MAX
-	CompareConstant(FILENAME_MAX,4096,3188,architecture)
+	CompareConstant(FILENAME_MAX,4096,3188,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: FILENAME_MAX\n");
 cnt++;
@@ -109,7 +109,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FOPEN_MAX
-	CompareConstant(FOPEN_MAX,16,3189,architecture)
+	CompareConstant(FOPEN_MAX,16,3189,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: FOPEN_MAX\n");
 cnt++;
@@ -119,7 +119,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef L_ctermid
-	CompareConstant(L_ctermid,9,3190,architecture)
+	CompareConstant(L_ctermid,9,3190,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: L_ctermid\n");
 cnt++;
@@ -129,7 +129,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef L_cuserid
-	CompareConstant(L_cuserid,9,3191,architecture)
+	CompareConstant(L_cuserid,9,3191,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: L_cuserid\n");
 cnt++;
@@ -139,7 +139,7 @@ cnt++;
 
 #if __powerpc64__
 #ifdef __IO_FILE_SIZE
-	CompareConstant(__IO_FILE_SIZE,216,5085,architecture)
+	CompareConstant(__IO_FILE_SIZE,216,5085,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: __IO_FILE_SIZE\n");
 cnt++;
@@ -147,7 +147,7 @@ cnt++;
 
 #elif __powerpc__ && !__powerpc64__
 #ifdef __IO_FILE_SIZE
-	CompareConstant(__IO_FILE_SIZE,152,5085,architecture)
+	CompareConstant(__IO_FILE_SIZE,152,5085,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: __IO_FILE_SIZE\n");
 cnt++;
@@ -155,7 +155,7 @@ cnt++;
 
 #elif __ia64__
 #ifdef __IO_FILE_SIZE
-	CompareConstant(__IO_FILE_SIZE,216,5085,architecture)
+	CompareConstant(__IO_FILE_SIZE,216,5085,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: __IO_FILE_SIZE\n");
 cnt++;
@@ -163,7 +163,7 @@ cnt++;
 
 #elif __i386__
 #ifdef __IO_FILE_SIZE
-	CompareConstant(__IO_FILE_SIZE,148,5085,architecture)
+	CompareConstant(__IO_FILE_SIZE,148,5085,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: __IO_FILE_SIZE\n");
 cnt++;
@@ -171,7 +171,7 @@ cnt++;
 
 #elif __s390x__
 #ifdef __IO_FILE_SIZE
-	CompareConstant(__IO_FILE_SIZE,216,5085,architecture)
+	CompareConstant(__IO_FILE_SIZE,216,5085,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: __IO_FILE_SIZE\n");
 cnt++;
@@ -179,7 +179,7 @@ cnt++;
 
 #elif __x86_64__
 #ifdef __IO_FILE_SIZE
-	CompareConstant(__IO_FILE_SIZE,216,5085,architecture)
+	CompareConstant(__IO_FILE_SIZE,216,5085,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: __IO_FILE_SIZE\n");
 cnt++;
@@ -187,7 +187,7 @@ cnt++;
 
 #elif __s390__ && !__s390x__
 #ifdef __IO_FILE_SIZE
-	CompareConstant(__IO_FILE_SIZE,152,5085,architecture)
+	CompareConstant(__IO_FILE_SIZE,152,5085,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: __IO_FILE_SIZE\n");
 cnt++;
@@ -196,63 +196,63 @@ cnt++;
 #else
 Msg( "No definition for __IO_FILE_SIZE (5085, int) in db\n");
 #ifdef __IO_FILE_SIZE
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5085,%d);\n", architecture, __IO_FILE_SIZE);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5085,%d,'""2.1""',NULL);\n", architecture, __IO_FILE_SIZE);
 #endif
 #endif
 #if __i386__
-CheckTypeSize(fpos_t,12, 9108, 2)
+CheckTypeSize(fpos_t,12, 9108, 2, 1.2, NULL, 10274, NULL)
 #elif __ia64__
-CheckTypeSize(fpos_t,16, 9108, 3)
+CheckTypeSize(fpos_t,16, 9108, 3, 1.3, NULL, 10274, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(fpos_t,12, 9108, 6)
+CheckTypeSize(fpos_t,12, 9108, 6, 1.2, NULL, 10274, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(fpos_t,12, 9108, 10)
+CheckTypeSize(fpos_t,12, 9108, 10, 1.3, NULL, 10274, NULL)
 #elif __powerpc64__
-CheckTypeSize(fpos_t,16, 9108, 9)
+CheckTypeSize(fpos_t,16, 9108, 9, 2.0, NULL, 10274, NULL)
 #elif __s390x__
-CheckTypeSize(fpos_t,16, 9108, 12)
+CheckTypeSize(fpos_t,16, 9108, 12, 1.3, NULL, 10274, NULL)
 #elif __x86_64__
-CheckTypeSize(fpos_t,16, 9108, 11)
+CheckTypeSize(fpos_t,16, 9108, 11, 2.0, NULL, 10274, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9108,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10274,NULL);\n",architecture,9108,0);
 Msg("Find size of fpos_t (9108)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(fpos64_t,16, 9109, 2)
+CheckTypeSize(fpos64_t,16, 9109, 2, 1.2, NULL, 10275, NULL)
 #elif __ia64__
-CheckTypeSize(fpos64_t,16, 9109, 3)
+CheckTypeSize(fpos64_t,16, 9109, 3, 1.3, NULL, 10275, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(fpos64_t,16, 9109, 6)
+CheckTypeSize(fpos64_t,16, 9109, 6, 1.2, NULL, 10275, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(fpos64_t,16, 9109, 10)
+CheckTypeSize(fpos64_t,16, 9109, 10, 1.3, NULL, 10275, NULL)
 #elif __powerpc64__
-CheckTypeSize(fpos64_t,16, 9109, 9)
+CheckTypeSize(fpos64_t,16, 9109, 9, 2.0, NULL, 10275, NULL)
 #elif __s390x__
-CheckTypeSize(fpos64_t,16, 9109, 12)
+CheckTypeSize(fpos64_t,16, 9109, 12, 1.3, NULL, 10275, NULL)
 #elif __x86_64__
-CheckTypeSize(fpos64_t,16, 9109, 11)
+CheckTypeSize(fpos64_t,16, 9109, 11, 2.0, NULL, 10275, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9109,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10275,NULL);\n",architecture,9109,0);
 Msg("Find size of fpos64_t (9109)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(FILE,148, 8782, 2)
+CheckTypeSize(FILE,148, 8782, 2, 1.0, NULL, 9107, NULL)
 #elif __ia64__
-CheckTypeSize(FILE,216, 8782, 3)
+CheckTypeSize(FILE,216, 8782, 3, 1.3, NULL, 9107, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(FILE,152, 8782, 6)
+CheckTypeSize(FILE,152, 8782, 6, 1.2, NULL, 9107, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(FILE,152, 8782, 10)
+CheckTypeSize(FILE,152, 8782, 10, 1.3, NULL, 9107, NULL)
 #elif __powerpc64__
-CheckTypeSize(FILE,216, 8782, 9)
+CheckTypeSize(FILE,216, 8782, 9, 2.0, NULL, 9107, NULL)
 #elif __s390x__
-CheckTypeSize(FILE,216, 8782, 12)
+CheckTypeSize(FILE,216, 8782, 12, 1.3, NULL, 9107, NULL)
 #elif __x86_64__
-CheckTypeSize(FILE,216, 8782, 11)
+CheckTypeSize(FILE,216, 8782, 11, 2.0, NULL, 9107, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8782,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9107, NULL);\n",architecture,8782,0);
 Msg("Find size of FILE (8782)\n");
 #endif
 

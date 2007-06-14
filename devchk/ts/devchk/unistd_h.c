@@ -30,7 +30,7 @@ Msg("Checking data structures in unistd.h\n");
 printf("Checking data structures in unistd.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef R_OK
-	CompareConstant(R_OK,4,1212,architecture)
+	CompareConstant(R_OK,4,1212,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: R_OK\n");
 cnt++;
@@ -40,7 +40,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef W_OK
-	CompareConstant(W_OK,2,1213,architecture)
+	CompareConstant(W_OK,2,1213,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: W_OK\n");
 cnt++;
@@ -50,7 +50,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef X_OK
-	CompareConstant(X_OK,1,1214,architecture)
+	CompareConstant(X_OK,1,1214,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: X_OK\n");
 cnt++;
@@ -60,7 +60,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef F_OK
-	CompareConstant(F_OK,0,1215,architecture)
+	CompareConstant(F_OK,0,1215,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: F_OK\n");
 cnt++;
@@ -70,7 +70,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef F_ULOCK
-	CompareConstant(F_ULOCK,0,1216,architecture)
+	CompareConstant(F_ULOCK,0,1216,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: F_ULOCK\n");
 cnt++;
@@ -80,7 +80,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef F_LOCK
-	CompareConstant(F_LOCK,1,1217,architecture)
+	CompareConstant(F_LOCK,1,1217,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: F_LOCK\n");
 cnt++;
@@ -90,7 +90,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef F_TLOCK
-	CompareConstant(F_TLOCK,2,1218,architecture)
+	CompareConstant(F_TLOCK,2,1218,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: F_TLOCK\n");
 cnt++;
@@ -100,7 +100,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef F_TEST
-	CompareConstant(F_TEST,3,1219,architecture)
+	CompareConstant(F_TEST,3,1219,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: F_TEST\n");
 cnt++;
@@ -110,7 +110,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SEEK_SET
-	CompareConstant(SEEK_SET,0,1635,architecture)
+	CompareConstant(SEEK_SET,0,1635,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SEEK_SET\n");
 cnt++;
@@ -120,7 +120,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SEEK_CUR
-	CompareConstant(SEEK_CUR,1,1636,architecture)
+	CompareConstant(SEEK_CUR,1,1636,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SEEK_CUR\n");
 cnt++;
@@ -130,7 +130,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SEEK_END
-	CompareConstant(SEEK_END,2,1637,architecture)
+	CompareConstant(SEEK_END,2,1637,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SEEK_END\n");
 cnt++;
@@ -140,7 +140,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX2_C_BIND
-	CompareConstant(_POSIX2_C_BIND,200112L,1922,architecture)
+	CompareConstant(_POSIX2_C_BIND,200112L,1922,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX2_C_BIND\n");
 cnt++;
@@ -150,7 +150,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _XOPEN_XPG4
-	CompareConstant(_XOPEN_XPG4,1,1930,architecture)
+	CompareConstant(_XOPEN_XPG4,1,1930,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _XOPEN_XPG4\n");
 cnt++;
@@ -160,7 +160,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef STDIN_FILENO
-	CompareConstant(STDIN_FILENO,0,1935,architecture)
+	CompareConstant(STDIN_FILENO,0,1935,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: STDIN_FILENO\n");
 cnt++;
@@ -170,7 +170,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef STDOUT_FILENO
-	CompareConstant(STDOUT_FILENO,1,1936,architecture)
+	CompareConstant(STDOUT_FILENO,1,1936,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: STDOUT_FILENO\n");
 cnt++;
@@ -180,7 +180,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef STDERR_FILENO
-	CompareConstant(STDERR_FILENO,2,1937,architecture)
+	CompareConstant(STDERR_FILENO,2,1937,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: STDERR_FILENO\n");
 cnt++;
@@ -190,7 +190,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_MAPPED_FILES
-	CompareConstant(_POSIX_MAPPED_FILES,200112,3528,architecture)
+	CompareConstant(_POSIX_MAPPED_FILES,200112,3528,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_MAPPED_FILES\n");
 cnt++;
@@ -200,7 +200,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_OPEN_MAX
-	CompareConstant(_SC_OPEN_MAX,4,3595,architecture)
+	CompareConstant(_SC_OPEN_MAX,4,3595,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: _SC_OPEN_MAX\n");
 cnt++;
@@ -210,7 +210,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_CLK_TCK
-	CompareConstant(_SC_CLK_TCK,2,3596,architecture)
+	CompareConstant(_SC_CLK_TCK,2,3596,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: _SC_CLK_TCK\n");
 cnt++;
@@ -220,7 +220,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_FSYNC
-	CompareConstant(_POSIX_FSYNC,200112,4750,architecture)
+	CompareConstant(_POSIX_FSYNC,200112,4750,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_FSYNC\n");
 cnt++;
@@ -230,7 +230,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_MEMLOCK
-	CompareConstant(_POSIX_MEMLOCK,200112,4751,architecture)
+	CompareConstant(_POSIX_MEMLOCK,200112,4751,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_MEMLOCK\n");
 cnt++;
@@ -240,7 +240,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _PC_ASYNC_IO
-	CompareConstant(_PC_ASYNC_IO,10,4753,architecture)
+	CompareConstant(_PC_ASYNC_IO,10,4753,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _PC_ASYNC_IO\n");
 cnt++;
@@ -250,7 +250,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _PC_CHOWN_RESTRICTED
-	CompareConstant(_PC_CHOWN_RESTRICTED,6,4754,architecture)
+	CompareConstant(_PC_CHOWN_RESTRICTED,6,4754,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _PC_CHOWN_RESTRICTED\n");
 cnt++;
@@ -260,7 +260,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _PC_FILESIZEBITS
-	CompareConstant(_PC_FILESIZEBITS,13,4755,architecture)
+	CompareConstant(_PC_FILESIZEBITS,13,4755,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _PC_FILESIZEBITS\n");
 cnt++;
@@ -270,7 +270,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _PC_LINK_MAX
-	CompareConstant(_PC_LINK_MAX,0,4756,architecture)
+	CompareConstant(_PC_LINK_MAX,0,4756,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _PC_LINK_MAX\n");
 cnt++;
@@ -280,7 +280,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _PC_MAX_CANON
-	CompareConstant(_PC_MAX_CANON,1,4757,architecture)
+	CompareConstant(_PC_MAX_CANON,1,4757,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _PC_MAX_CANON\n");
 cnt++;
@@ -290,7 +290,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _PC_MAX_INPUT
-	CompareConstant(_PC_MAX_INPUT,2,4758,architecture)
+	CompareConstant(_PC_MAX_INPUT,2,4758,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _PC_MAX_INPUT\n");
 cnt++;
@@ -300,7 +300,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _PC_NAME_MAX
-	CompareConstant(_PC_NAME_MAX,3,4759,architecture)
+	CompareConstant(_PC_NAME_MAX,3,4759,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _PC_NAME_MAX\n");
 cnt++;
@@ -310,7 +310,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _PC_NO_TRUNC
-	CompareConstant(_PC_NO_TRUNC,7,4760,architecture)
+	CompareConstant(_PC_NO_TRUNC,7,4760,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _PC_NO_TRUNC\n");
 cnt++;
@@ -320,7 +320,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _PC_PATH_MAX
-	CompareConstant(_PC_PATH_MAX,4,4761,architecture)
+	CompareConstant(_PC_PATH_MAX,4,4761,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _PC_PATH_MAX\n");
 cnt++;
@@ -330,7 +330,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _PC_PIPE_BUF
-	CompareConstant(_PC_PIPE_BUF,5,4762,architecture)
+	CompareConstant(_PC_PIPE_BUF,5,4762,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _PC_PIPE_BUF\n");
 cnt++;
@@ -340,7 +340,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _PC_PRIO_IO
-	CompareConstant(_PC_PRIO_IO,11,4763,architecture)
+	CompareConstant(_PC_PRIO_IO,11,4763,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _PC_PRIO_IO\n");
 cnt++;
@@ -350,7 +350,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _PC_SYNC_IO
-	CompareConstant(_PC_SYNC_IO,9,4764,architecture)
+	CompareConstant(_PC_SYNC_IO,9,4764,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _PC_SYNC_IO\n");
 cnt++;
@@ -360,7 +360,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _PC_VDISABLE
-	CompareConstant(_PC_VDISABLE,8,4765,architecture)
+	CompareConstant(_PC_VDISABLE,8,4765,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _PC_VDISABLE\n");
 cnt++;
@@ -370,7 +370,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_MEMLOCK_RANGE
-	CompareConstant(_POSIX_MEMLOCK_RANGE,200112,4766,architecture)
+	CompareConstant(_POSIX_MEMLOCK_RANGE,200112,4766,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_MEMLOCK_RANGE\n");
 cnt++;
@@ -380,7 +380,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_MEMORY_PROTECTION
-	CompareConstant(_POSIX_MEMORY_PROTECTION,200112,4767,architecture)
+	CompareConstant(_POSIX_MEMORY_PROTECTION,200112,4767,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_MEMORY_PROTECTION\n");
 cnt++;
@@ -390,7 +390,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_SEMAPHORES
-	CompareConstant(_POSIX_SEMAPHORES,200112,4771,architecture)
+	CompareConstant(_POSIX_SEMAPHORES,200112,4771,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_SEMAPHORES\n");
 cnt++;
@@ -400,7 +400,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_SHARED_MEMORY_OBJECTS
-	CompareConstant(_POSIX_SHARED_MEMORY_OBJECTS,200112,4772,architecture)
+	CompareConstant(_POSIX_SHARED_MEMORY_OBJECTS,200112,4772,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_SHARED_MEMORY_OBJECTS\n");
 cnt++;
@@ -410,7 +410,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_TIMERS
-	CompareConstant(_POSIX_TIMERS,200112,4774,architecture)
+	CompareConstant(_POSIX_TIMERS,200112,4774,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_TIMERS\n");
 cnt++;
@@ -420,7 +420,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_2_C_BIND
-	CompareConstant(_SC_2_C_BIND,47,4775,architecture)
+	CompareConstant(_SC_2_C_BIND,47,4775,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_2_C_BIND\n");
 cnt++;
@@ -430,7 +430,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_2_C_DEV
-	CompareConstant(_SC_2_C_DEV,48,4776,architecture)
+	CompareConstant(_SC_2_C_DEV,48,4776,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_2_C_DEV\n");
 cnt++;
@@ -440,7 +440,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_2_C_VERSION
-	CompareConstant(_SC_2_C_VERSION,96,4777,architecture)
+	CompareConstant(_SC_2_C_VERSION,96,4777,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_2_C_VERSION\n");
 cnt++;
@@ -450,7 +450,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_2_FORT_DEV
-	CompareConstant(_SC_2_FORT_DEV,49,4778,architecture)
+	CompareConstant(_SC_2_FORT_DEV,49,4778,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_2_FORT_DEV\n");
 cnt++;
@@ -460,7 +460,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_2_FORT_RUN
-	CompareConstant(_SC_2_FORT_RUN,50,4779,architecture)
+	CompareConstant(_SC_2_FORT_RUN,50,4779,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_2_FORT_RUN\n");
 cnt++;
@@ -470,7 +470,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_2_LOCALEDEF
-	CompareConstant(_SC_2_LOCALEDEF,52,4780,architecture)
+	CompareConstant(_SC_2_LOCALEDEF,52,4780,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_2_LOCALEDEF\n");
 cnt++;
@@ -480,7 +480,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_2_SW_DEV
-	CompareConstant(_SC_2_SW_DEV,51,4781,architecture)
+	CompareConstant(_SC_2_SW_DEV,51,4781,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_2_SW_DEV\n");
 cnt++;
@@ -490,7 +490,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_2_UPE
-	CompareConstant(_SC_2_UPE,97,4782,architecture)
+	CompareConstant(_SC_2_UPE,97,4782,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_2_UPE\n");
 cnt++;
@@ -500,7 +500,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_2_VERSION
-	CompareConstant(_SC_2_VERSION,46,4783,architecture)
+	CompareConstant(_SC_2_VERSION,46,4783,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_2_VERSION\n");
 cnt++;
@@ -510,7 +510,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_AIO_LISTIO_MAX
-	CompareConstant(_SC_AIO_LISTIO_MAX,23,4784,architecture)
+	CompareConstant(_SC_AIO_LISTIO_MAX,23,4784,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_AIO_LISTIO_MAX\n");
 cnt++;
@@ -520,7 +520,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_AIO_MAX
-	CompareConstant(_SC_AIO_MAX,24,4785,architecture)
+	CompareConstant(_SC_AIO_MAX,24,4785,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_AIO_MAX\n");
 cnt++;
@@ -530,7 +530,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_AIO_PRIO_DELTA_MAX
-	CompareConstant(_SC_AIO_PRIO_DELTA_MAX,25,4786,architecture)
+	CompareConstant(_SC_AIO_PRIO_DELTA_MAX,25,4786,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_AIO_PRIO_DELTA_MAX\n");
 cnt++;
@@ -540,7 +540,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_ARG_MAX
-	CompareConstant(_SC_ARG_MAX,0,4787,architecture)
+	CompareConstant(_SC_ARG_MAX,0,4787,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_ARG_MAX\n");
 cnt++;
@@ -550,7 +550,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_ASYNCHRONOUS_IO
-	CompareConstant(_SC_ASYNCHRONOUS_IO,12,4788,architecture)
+	CompareConstant(_SC_ASYNCHRONOUS_IO,12,4788,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_ASYNCHRONOUS_IO\n");
 cnt++;
@@ -560,7 +560,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_BC_BASE_MAX
-	CompareConstant(_SC_BC_BASE_MAX,36,4789,architecture)
+	CompareConstant(_SC_BC_BASE_MAX,36,4789,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_BC_BASE_MAX\n");
 cnt++;
@@ -570,7 +570,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_BC_DIM_MAX
-	CompareConstant(_SC_BC_DIM_MAX,37,4790,architecture)
+	CompareConstant(_SC_BC_DIM_MAX,37,4790,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_BC_DIM_MAX\n");
 cnt++;
@@ -580,7 +580,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_BC_SCALE_MAX
-	CompareConstant(_SC_BC_SCALE_MAX,38,4791,architecture)
+	CompareConstant(_SC_BC_SCALE_MAX,38,4791,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_BC_SCALE_MAX\n");
 cnt++;
@@ -590,7 +590,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_BC_STRING_MAX
-	CompareConstant(_SC_BC_STRING_MAX,39,4792,architecture)
+	CompareConstant(_SC_BC_STRING_MAX,39,4792,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_BC_STRING_MAX\n");
 cnt++;
@@ -600,7 +600,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_CHILD_MAX
-	CompareConstant(_SC_CHILD_MAX,1,4793,architecture)
+	CompareConstant(_SC_CHILD_MAX,1,4793,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_CHILD_MAX\n");
 cnt++;
@@ -610,7 +610,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_COLL_WEIGHTS_MAX
-	CompareConstant(_SC_COLL_WEIGHTS_MAX,40,4794,architecture)
+	CompareConstant(_SC_COLL_WEIGHTS_MAX,40,4794,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_COLL_WEIGHTS_MAX\n");
 cnt++;
@@ -620,7 +620,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_DELAYTIMER_MAX
-	CompareConstant(_SC_DELAYTIMER_MAX,26,4795,architecture)
+	CompareConstant(_SC_DELAYTIMER_MAX,26,4795,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_DELAYTIMER_MAX\n");
 cnt++;
@@ -630,7 +630,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_EXPR_NEST_MAX
-	CompareConstant(_SC_EXPR_NEST_MAX,42,4796,architecture)
+	CompareConstant(_SC_EXPR_NEST_MAX,42,4796,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_EXPR_NEST_MAX\n");
 cnt++;
@@ -640,7 +640,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_JOB_CONTROL
-	CompareConstant(_SC_JOB_CONTROL,7,4797,architecture)
+	CompareConstant(_SC_JOB_CONTROL,7,4797,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_JOB_CONTROL\n");
 cnt++;
@@ -650,7 +650,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_LINE_MAX
-	CompareConstant(_SC_LINE_MAX,43,4798,architecture)
+	CompareConstant(_SC_LINE_MAX,43,4798,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_LINE_MAX\n");
 cnt++;
@@ -660,7 +660,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_MAPPED_FILES
-	CompareConstant(_SC_MAPPED_FILES,16,4799,architecture)
+	CompareConstant(_SC_MAPPED_FILES,16,4799,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_MAPPED_FILES\n");
 cnt++;
@@ -670,7 +670,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_MEMLOCK
-	CompareConstant(_SC_MEMLOCK,17,4800,architecture)
+	CompareConstant(_SC_MEMLOCK,17,4800,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_MEMLOCK\n");
 cnt++;
@@ -680,7 +680,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_MEMLOCK_RANGE
-	CompareConstant(_SC_MEMLOCK_RANGE,18,4801,architecture)
+	CompareConstant(_SC_MEMLOCK_RANGE,18,4801,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_MEMLOCK_RANGE\n");
 cnt++;
@@ -690,7 +690,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_MEMORY_PROTECTION
-	CompareConstant(_SC_MEMORY_PROTECTION,19,4802,architecture)
+	CompareConstant(_SC_MEMORY_PROTECTION,19,4802,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_MEMORY_PROTECTION\n");
 cnt++;
@@ -700,7 +700,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_MESSAGE_PASSING
-	CompareConstant(_SC_MESSAGE_PASSING,20,4803,architecture)
+	CompareConstant(_SC_MESSAGE_PASSING,20,4803,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_MESSAGE_PASSING\n");
 cnt++;
@@ -710,7 +710,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_MQ_OPEN_MAX
-	CompareConstant(_SC_MQ_OPEN_MAX,27,4804,architecture)
+	CompareConstant(_SC_MQ_OPEN_MAX,27,4804,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_MQ_OPEN_MAX\n");
 cnt++;
@@ -720,7 +720,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_MQ_PRIO_MAX
-	CompareConstant(_SC_MQ_PRIO_MAX,28,4805,architecture)
+	CompareConstant(_SC_MQ_PRIO_MAX,28,4805,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_MQ_PRIO_MAX\n");
 cnt++;
@@ -730,7 +730,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_NGROUPS_MAX
-	CompareConstant(_SC_NGROUPS_MAX,3,4806,architecture)
+	CompareConstant(_SC_NGROUPS_MAX,3,4806,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_NGROUPS_MAX\n");
 cnt++;
@@ -740,7 +740,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_PASS_MAX
-	CompareConstant(_SC_PASS_MAX,88,4807,architecture)
+	CompareConstant(_SC_PASS_MAX,88,4807,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_PASS_MAX\n");
 cnt++;
@@ -750,7 +750,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_PRIORITIZED_IO
-	CompareConstant(_SC_PRIORITIZED_IO,13,4808,architecture)
+	CompareConstant(_SC_PRIORITIZED_IO,13,4808,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_PRIORITIZED_IO\n");
 cnt++;
@@ -760,7 +760,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_PRIORITY_SCHEDULING
-	CompareConstant(_SC_PRIORITY_SCHEDULING,10,4809,architecture)
+	CompareConstant(_SC_PRIORITY_SCHEDULING,10,4809,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_PRIORITY_SCHEDULING\n");
 cnt++;
@@ -770,7 +770,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_REALTIME_SIGNALS
-	CompareConstant(_SC_REALTIME_SIGNALS,9,4810,architecture)
+	CompareConstant(_SC_REALTIME_SIGNALS,9,4810,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_REALTIME_SIGNALS\n");
 cnt++;
@@ -780,7 +780,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_RE_DUP_MAX
-	CompareConstant(_SC_RE_DUP_MAX,44,4811,architecture)
+	CompareConstant(_SC_RE_DUP_MAX,44,4811,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_RE_DUP_MAX\n");
 cnt++;
@@ -790,7 +790,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_RTSIG_MAX
-	CompareConstant(_SC_RTSIG_MAX,31,4812,architecture)
+	CompareConstant(_SC_RTSIG_MAX,31,4812,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_RTSIG_MAX\n");
 cnt++;
@@ -800,7 +800,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_SAVED_IDS
-	CompareConstant(_SC_SAVED_IDS,8,4813,architecture)
+	CompareConstant(_SC_SAVED_IDS,8,4813,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_SAVED_IDS\n");
 cnt++;
@@ -810,7 +810,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_SEMAPHORES
-	CompareConstant(_SC_SEMAPHORES,21,4814,architecture)
+	CompareConstant(_SC_SEMAPHORES,21,4814,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_SEMAPHORES\n");
 cnt++;
@@ -820,7 +820,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_SEM_NSEMS_MAX
-	CompareConstant(_SC_SEM_NSEMS_MAX,32,4815,architecture)
+	CompareConstant(_SC_SEM_NSEMS_MAX,32,4815,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_SEM_NSEMS_MAX\n");
 cnt++;
@@ -830,7 +830,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_SEM_VALUE_MAX
-	CompareConstant(_SC_SEM_VALUE_MAX,33,4816,architecture)
+	CompareConstant(_SC_SEM_VALUE_MAX,33,4816,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_SEM_VALUE_MAX\n");
 cnt++;
@@ -840,7 +840,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_SHARED_MEMORY_OBJECTS
-	CompareConstant(_SC_SHARED_MEMORY_OBJECTS,22,4817,architecture)
+	CompareConstant(_SC_SHARED_MEMORY_OBJECTS,22,4817,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_SHARED_MEMORY_OBJECTS\n");
 cnt++;
@@ -850,7 +850,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_SIGQUEUE_MAX
-	CompareConstant(_SC_SIGQUEUE_MAX,34,4818,architecture)
+	CompareConstant(_SC_SIGQUEUE_MAX,34,4818,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_SIGQUEUE_MAX\n");
 cnt++;
@@ -860,7 +860,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_STREAM_MAX
-	CompareConstant(_SC_STREAM_MAX,5,4819,architecture)
+	CompareConstant(_SC_STREAM_MAX,5,4819,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_STREAM_MAX\n");
 cnt++;
@@ -870,7 +870,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_SYNCHRONIZED_IO
-	CompareConstant(_SC_SYNCHRONIZED_IO,14,4820,architecture)
+	CompareConstant(_SC_SYNCHRONIZED_IO,14,4820,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_SYNCHRONIZED_IO\n");
 cnt++;
@@ -880,7 +880,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_THREADS
-	CompareConstant(_SC_THREADS,67,4821,architecture)
+	CompareConstant(_SC_THREADS,67,4821,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_THREADS\n");
 cnt++;
@@ -890,7 +890,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_THREAD_ATTR_STACKADDR
-	CompareConstant(_SC_THREAD_ATTR_STACKADDR,77,4822,architecture)
+	CompareConstant(_SC_THREAD_ATTR_STACKADDR,77,4822,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_THREAD_ATTR_STACKADDR\n");
 cnt++;
@@ -900,7 +900,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_THREAD_ATTR_STACKSIZE
-	CompareConstant(_SC_THREAD_ATTR_STACKSIZE,78,4823,architecture)
+	CompareConstant(_SC_THREAD_ATTR_STACKSIZE,78,4823,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_THREAD_ATTR_STACKSIZE\n");
 cnt++;
@@ -910,7 +910,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_THREAD_DESTRUCTOR_ITERATIONS
-	CompareConstant(_SC_THREAD_DESTRUCTOR_ITERATIONS,73,4824,architecture)
+	CompareConstant(_SC_THREAD_DESTRUCTOR_ITERATIONS,73,4824,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_THREAD_DESTRUCTOR_ITERATIONS\n");
 cnt++;
@@ -920,7 +920,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_THREAD_KEYS_MAX
-	CompareConstant(_SC_THREAD_KEYS_MAX,74,4825,architecture)
+	CompareConstant(_SC_THREAD_KEYS_MAX,74,4825,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_THREAD_KEYS_MAX\n");
 cnt++;
@@ -930,7 +930,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_THREAD_PRIORITY_SCHEDULING
-	CompareConstant(_SC_THREAD_PRIORITY_SCHEDULING,79,4826,architecture)
+	CompareConstant(_SC_THREAD_PRIORITY_SCHEDULING,79,4826,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_THREAD_PRIORITY_SCHEDULING\n");
 cnt++;
@@ -940,7 +940,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_THREAD_PRIO_INHERIT
-	CompareConstant(_SC_THREAD_PRIO_INHERIT,80,4827,architecture)
+	CompareConstant(_SC_THREAD_PRIO_INHERIT,80,4827,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_THREAD_PRIO_INHERIT\n");
 cnt++;
@@ -950,7 +950,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_THREAD_PRIO_PROTECT
-	CompareConstant(_SC_THREAD_PRIO_PROTECT,81,4828,architecture)
+	CompareConstant(_SC_THREAD_PRIO_PROTECT,81,4828,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_THREAD_PRIO_PROTECT\n");
 cnt++;
@@ -960,7 +960,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_THREAD_PROCESS_SHARED
-	CompareConstant(_SC_THREAD_PROCESS_SHARED,82,4829,architecture)
+	CompareConstant(_SC_THREAD_PROCESS_SHARED,82,4829,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_THREAD_PROCESS_SHARED\n");
 cnt++;
@@ -970,7 +970,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_THREAD_SAFE_FUNCTIONS
-	CompareConstant(_SC_THREAD_SAFE_FUNCTIONS,68,4830,architecture)
+	CompareConstant(_SC_THREAD_SAFE_FUNCTIONS,68,4830,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_THREAD_SAFE_FUNCTIONS\n");
 cnt++;
@@ -980,7 +980,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_THREAD_STACK_MIN
-	CompareConstant(_SC_THREAD_STACK_MIN,75,4831,architecture)
+	CompareConstant(_SC_THREAD_STACK_MIN,75,4831,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_THREAD_STACK_MIN\n");
 cnt++;
@@ -990,7 +990,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_THREAD_THREADS_MAX
-	CompareConstant(_SC_THREAD_THREADS_MAX,76,4832,architecture)
+	CompareConstant(_SC_THREAD_THREADS_MAX,76,4832,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_THREAD_THREADS_MAX\n");
 cnt++;
@@ -1000,7 +1000,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_TIMERS
-	CompareConstant(_SC_TIMERS,11,4833,architecture)
+	CompareConstant(_SC_TIMERS,11,4833,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_TIMERS\n");
 cnt++;
@@ -1010,7 +1010,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_TIMER_MAX
-	CompareConstant(_SC_TIMER_MAX,35,4834,architecture)
+	CompareConstant(_SC_TIMER_MAX,35,4834,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_TIMER_MAX\n");
 cnt++;
@@ -1020,7 +1020,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_TZNAME_MAX
-	CompareConstant(_SC_TZNAME_MAX,6,4835,architecture)
+	CompareConstant(_SC_TZNAME_MAX,6,4835,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_TZNAME_MAX\n");
 cnt++;
@@ -1030,7 +1030,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_VERSION
-	CompareConstant(_SC_VERSION,29,4836,architecture)
+	CompareConstant(_SC_VERSION,29,4836,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_VERSION\n");
 cnt++;
@@ -1040,7 +1040,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_XBS5_ILP32_OFF32
-	CompareConstant(_SC_XBS5_ILP32_OFF32,125,4837,architecture)
+	CompareConstant(_SC_XBS5_ILP32_OFF32,125,4837,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_XBS5_ILP32_OFF32\n");
 cnt++;
@@ -1050,7 +1050,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_XBS5_ILP32_OFFBIG
-	CompareConstant(_SC_XBS5_ILP32_OFFBIG,126,4838,architecture)
+	CompareConstant(_SC_XBS5_ILP32_OFFBIG,126,4838,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_XBS5_ILP32_OFFBIG\n");
 cnt++;
@@ -1060,7 +1060,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_XBS5_LP64_OFF64
-	CompareConstant(_SC_XBS5_LP64_OFF64,127,4839,architecture)
+	CompareConstant(_SC_XBS5_LP64_OFF64,127,4839,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_XBS5_LP64_OFF64\n");
 cnt++;
@@ -1070,7 +1070,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_XBS5_LPBIG_OFFBIG
-	CompareConstant(_SC_XBS5_LPBIG_OFFBIG,128,4840,architecture)
+	CompareConstant(_SC_XBS5_LPBIG_OFFBIG,128,4840,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_XBS5_LPBIG_OFFBIG\n");
 cnt++;
@@ -1080,7 +1080,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_XOPEN_CRYPT
-	CompareConstant(_SC_XOPEN_CRYPT,92,4841,architecture)
+	CompareConstant(_SC_XOPEN_CRYPT,92,4841,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_XOPEN_CRYPT\n");
 cnt++;
@@ -1090,7 +1090,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_XOPEN_ENH_I18N
-	CompareConstant(_SC_XOPEN_ENH_I18N,93,4842,architecture)
+	CompareConstant(_SC_XOPEN_ENH_I18N,93,4842,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_XOPEN_ENH_I18N\n");
 cnt++;
@@ -1100,7 +1100,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_XOPEN_LEGACY
-	CompareConstant(_SC_XOPEN_LEGACY,129,4843,architecture)
+	CompareConstant(_SC_XOPEN_LEGACY,129,4843,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_XOPEN_LEGACY\n");
 cnt++;
@@ -1110,7 +1110,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_XOPEN_REALTIME
-	CompareConstant(_SC_XOPEN_REALTIME,130,4844,architecture)
+	CompareConstant(_SC_XOPEN_REALTIME,130,4844,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_XOPEN_REALTIME\n");
 cnt++;
@@ -1120,7 +1120,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_XOPEN_SHM
-	CompareConstant(_SC_XOPEN_SHM,94,4845,architecture)
+	CompareConstant(_SC_XOPEN_SHM,94,4845,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_XOPEN_SHM\n");
 cnt++;
@@ -1130,7 +1130,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_XOPEN_VERSION
-	CompareConstant(_SC_XOPEN_VERSION,89,4846,architecture)
+	CompareConstant(_SC_XOPEN_VERSION,89,4846,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_XOPEN_VERSION\n");
 cnt++;
@@ -1140,7 +1140,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _CS_PATH
-	CompareConstant(_CS_PATH,0,4847,architecture)
+	CompareConstant(_CS_PATH,0,4847,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _CS_PATH\n");
 cnt++;
@@ -1150,7 +1150,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _CS_XBS5_ILP32_OFF32_CFLAGS
-	CompareConstant(_CS_XBS5_ILP32_OFF32_CFLAGS,1100,4848,architecture)
+	CompareConstant(_CS_XBS5_ILP32_OFF32_CFLAGS,1100,4848,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _CS_XBS5_ILP32_OFF32_CFLAGS\n");
 cnt++;
@@ -1160,7 +1160,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _CS_XBS5_ILP32_OFF32_LDFLAGS
-	CompareConstant(_CS_XBS5_ILP32_OFF32_LDFLAGS,1101,4849,architecture)
+	CompareConstant(_CS_XBS5_ILP32_OFF32_LDFLAGS,1101,4849,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _CS_XBS5_ILP32_OFF32_LDFLAGS\n");
 cnt++;
@@ -1170,7 +1170,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _CS_XBS5_ILP32_OFF32_LIBS
-	CompareConstant(_CS_XBS5_ILP32_OFF32_LIBS,1102,4850,architecture)
+	CompareConstant(_CS_XBS5_ILP32_OFF32_LIBS,1102,4850,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _CS_XBS5_ILP32_OFF32_LIBS\n");
 cnt++;
@@ -1180,7 +1180,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _CS_XBS5_ILP32_OFF32_LINTFLAGS
-	CompareConstant(_CS_XBS5_ILP32_OFF32_LINTFLAGS,1103,4851,architecture)
+	CompareConstant(_CS_XBS5_ILP32_OFF32_LINTFLAGS,1103,4851,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _CS_XBS5_ILP32_OFF32_LINTFLAGS\n");
 cnt++;
@@ -1190,7 +1190,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _CS_XBS5_ILP32_OFFBIG_CFLAGS
-	CompareConstant(_CS_XBS5_ILP32_OFFBIG_CFLAGS,1104,4852,architecture)
+	CompareConstant(_CS_XBS5_ILP32_OFFBIG_CFLAGS,1104,4852,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _CS_XBS5_ILP32_OFFBIG_CFLAGS\n");
 cnt++;
@@ -1200,7 +1200,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _CS_XBS5_ILP32_OFFBIG_LDFLAGS
-	CompareConstant(_CS_XBS5_ILP32_OFFBIG_LDFLAGS,1105,4853,architecture)
+	CompareConstant(_CS_XBS5_ILP32_OFFBIG_LDFLAGS,1105,4853,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _CS_XBS5_ILP32_OFFBIG_LDFLAGS\n");
 cnt++;
@@ -1210,7 +1210,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _CS_XBS5_ILP32_OFFBIG_LIBS
-	CompareConstant(_CS_XBS5_ILP32_OFFBIG_LIBS,1106,4854,architecture)
+	CompareConstant(_CS_XBS5_ILP32_OFFBIG_LIBS,1106,4854,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _CS_XBS5_ILP32_OFFBIG_LIBS\n");
 cnt++;
@@ -1220,7 +1220,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _CS_XBS5_ILP32_OFFBIG_LINTFLAGS
-	CompareConstant(_CS_XBS5_ILP32_OFFBIG_LINTFLAGS,1107,4855,architecture)
+	CompareConstant(_CS_XBS5_ILP32_OFFBIG_LINTFLAGS,1107,4855,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _CS_XBS5_ILP32_OFFBIG_LINTFLAGS\n");
 cnt++;
@@ -1230,7 +1230,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _CS_XBS5_LP64_OFF64_CFLAGS
-	CompareConstant(_CS_XBS5_LP64_OFF64_CFLAGS,1108,4856,architecture)
+	CompareConstant(_CS_XBS5_LP64_OFF64_CFLAGS,1108,4856,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _CS_XBS5_LP64_OFF64_CFLAGS\n");
 cnt++;
@@ -1240,7 +1240,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _CS_XBS5_LP64_OFF64_LDFLAGS
-	CompareConstant(_CS_XBS5_LP64_OFF64_LDFLAGS,1109,4857,architecture)
+	CompareConstant(_CS_XBS5_LP64_OFF64_LDFLAGS,1109,4857,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _CS_XBS5_LP64_OFF64_LDFLAGS\n");
 cnt++;
@@ -1250,7 +1250,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _CS_XBS5_LP64_OFF64_LIBS
-	CompareConstant(_CS_XBS5_LP64_OFF64_LIBS,1110,4858,architecture)
+	CompareConstant(_CS_XBS5_LP64_OFF64_LIBS,1110,4858,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _CS_XBS5_LP64_OFF64_LIBS\n");
 cnt++;
@@ -1260,7 +1260,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _CS_XBS5_LP64_OFF64_LINTFLAGS
-	CompareConstant(_CS_XBS5_LP64_OFF64_LINTFLAGS,1111,4859,architecture)
+	CompareConstant(_CS_XBS5_LP64_OFF64_LINTFLAGS,1111,4859,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _CS_XBS5_LP64_OFF64_LINTFLAGS\n");
 cnt++;
@@ -1270,7 +1270,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _CS_XBS5_LPBIG_OFFBIG_CFLAGS
-	CompareConstant(_CS_XBS5_LPBIG_OFFBIG_CFLAGS,1112,4860,architecture)
+	CompareConstant(_CS_XBS5_LPBIG_OFFBIG_CFLAGS,1112,4860,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _CS_XBS5_LPBIG_OFFBIG_CFLAGS\n");
 cnt++;
@@ -1280,7 +1280,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _CS_XBS5_LPBIG_OFFBIG_LDFLAGS
-	CompareConstant(_CS_XBS5_LPBIG_OFFBIG_LDFLAGS,1113,4861,architecture)
+	CompareConstant(_CS_XBS5_LPBIG_OFFBIG_LDFLAGS,1113,4861,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _CS_XBS5_LPBIG_OFFBIG_LDFLAGS\n");
 cnt++;
@@ -1290,7 +1290,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _CS_XBS5_LPBIG_OFFBIG_LIBS
-	CompareConstant(_CS_XBS5_LPBIG_OFFBIG_LIBS,1114,4862,architecture)
+	CompareConstant(_CS_XBS5_LPBIG_OFFBIG_LIBS,1114,4862,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _CS_XBS5_LPBIG_OFFBIG_LIBS\n");
 cnt++;
@@ -1300,7 +1300,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _CS_XBS5_LPBIG_OFFBIG_LINTFLAGS
-	CompareConstant(_CS_XBS5_LPBIG_OFFBIG_LINTFLAGS,1115,4863,architecture)
+	CompareConstant(_CS_XBS5_LPBIG_OFFBIG_LINTFLAGS,1115,4863,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _CS_XBS5_LPBIG_OFFBIG_LINTFLAGS\n");
 cnt++;
@@ -1310,7 +1310,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_PAGESIZE
-	CompareConstant(_SC_PAGESIZE,30,4930,architecture)
+	CompareConstant(_SC_PAGESIZE,30,4930,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_PAGESIZE\n");
 cnt++;
@@ -1320,7 +1320,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_VDISABLE
-	CompareConstant(_POSIX_VDISABLE,'\0',5028,architecture)
+	CompareConstant(_POSIX_VDISABLE,'\0',5028,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_VDISABLE\n");
 cnt++;
@@ -1330,7 +1330,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_NO_TRUNC
-	CompareConstant(_POSIX_NO_TRUNC,1,5029,architecture)
+	CompareConstant(_POSIX_NO_TRUNC,1,5029,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_NO_TRUNC\n");
 cnt++;
@@ -1340,7 +1340,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_CHOWN_RESTRICTED
-	CompareConstant(_POSIX_CHOWN_RESTRICTED,1,5030,architecture)
+	CompareConstant(_POSIX_CHOWN_RESTRICTED,1,5030,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_CHOWN_RESTRICTED\n");
 cnt++;
@@ -1350,7 +1350,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_PAGE_SIZE
-	CompareConstant(_SC_PAGE_SIZE,30,5148,architecture)
+	CompareConstant(_SC_PAGE_SIZE,30,5148,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_PAGE_SIZE\n");
 cnt++;
@@ -1360,7 +1360,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_REGEXP
-	CompareConstant(_POSIX_REGEXP,1,5188,architecture)
+	CompareConstant(_POSIX_REGEXP,1,5188,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_REGEXP\n");
 cnt++;
@@ -1370,7 +1370,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_SHELL
-	CompareConstant(_POSIX_SHELL,1,5190,architecture)
+	CompareConstant(_POSIX_SHELL,1,5190,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_SHELL\n");
 cnt++;
@@ -1380,7 +1380,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_JOB_CONTROL
-	CompareConstant(_POSIX_JOB_CONTROL,1,5191,architecture)
+	CompareConstant(_POSIX_JOB_CONTROL,1,5191,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_JOB_CONTROL\n");
 cnt++;
@@ -1390,7 +1390,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_THREADS
-	CompareConstant(_POSIX_THREADS,200112L,5192,architecture)
+	CompareConstant(_POSIX_THREADS,200112L,5192,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_THREADS\n");
 cnt++;
@@ -1400,7 +1400,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _PC_2_SYMLINKS
-	CompareConstant(_PC_2_SYMLINKS,20,5193,architecture)
+	CompareConstant(_PC_2_SYMLINKS,20,5193,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _PC_2_SYMLINKS\n");
 cnt++;
@@ -1410,7 +1410,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _PC_ALLOC_SIZE_MIN
-	CompareConstant(_PC_ALLOC_SIZE_MIN,18,5194,architecture)
+	CompareConstant(_PC_ALLOC_SIZE_MIN,18,5194,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _PC_ALLOC_SIZE_MIN\n");
 cnt++;
@@ -1420,7 +1420,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _PC_REC_INCR_XFER_SIZE
-	CompareConstant(_PC_REC_INCR_XFER_SIZE,14,5195,architecture)
+	CompareConstant(_PC_REC_INCR_XFER_SIZE,14,5195,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _PC_REC_INCR_XFER_SIZE\n");
 cnt++;
@@ -1430,7 +1430,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _PC_REC_MIN_XFER_SIZE
-	CompareConstant(_PC_REC_MIN_XFER_SIZE,16,5196,architecture)
+	CompareConstant(_PC_REC_MIN_XFER_SIZE,16,5196,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _PC_REC_MIN_XFER_SIZE\n");
 cnt++;
@@ -1440,7 +1440,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _PC_REC_XFER_ALIGN
-	CompareConstant(_PC_REC_XFER_ALIGN,17,5197,architecture)
+	CompareConstant(_PC_REC_XFER_ALIGN,17,5197,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _PC_REC_XFER_ALIGN\n");
 cnt++;
@@ -1450,7 +1450,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_2_CHAR_TERM
-	CompareConstant(_SC_2_CHAR_TERM,95,5198,architecture)
+	CompareConstant(_SC_2_CHAR_TERM,95,5198,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_2_CHAR_TERM\n");
 cnt++;
@@ -1460,7 +1460,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_2_PBS_ACCOUNTING
-	CompareConstant(_SC_2_PBS_ACCOUNTING,169,5199,architecture)
+	CompareConstant(_SC_2_PBS_ACCOUNTING,169,5199,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_2_PBS_ACCOUNTING\n");
 cnt++;
@@ -1470,7 +1470,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_2_PBS_CHECKPOINT
-	CompareConstant(_SC_2_PBS_CHECKPOINT,175,5200,architecture)
+	CompareConstant(_SC_2_PBS_CHECKPOINT,175,5200,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_2_PBS_CHECKPOINT\n");
 cnt++;
@@ -1480,7 +1480,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_2_PBS_LOCATE
-	CompareConstant(_SC_2_PBS_LOCATE,170,5201,architecture)
+	CompareConstant(_SC_2_PBS_LOCATE,170,5201,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_2_PBS_LOCATE\n");
 cnt++;
@@ -1490,7 +1490,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_2_PBS_MESSAGE
-	CompareConstant(_SC_2_PBS_MESSAGE,171,5202,architecture)
+	CompareConstant(_SC_2_PBS_MESSAGE,171,5202,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_2_PBS_MESSAGE\n");
 cnt++;
@@ -1500,7 +1500,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_2_PBS_TRACK
-	CompareConstant(_SC_2_PBS_TRACK,172,5203,architecture)
+	CompareConstant(_SC_2_PBS_TRACK,172,5203,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_2_PBS_TRACK\n");
 cnt++;
@@ -1510,7 +1510,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_ADVISORY_INFO
-	CompareConstant(_SC_ADVISORY_INFO,132,5204,architecture)
+	CompareConstant(_SC_ADVISORY_INFO,132,5204,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_ADVISORY_INFO\n");
 cnt++;
@@ -1520,7 +1520,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_ATEXIT_MAX
-	CompareConstant(_SC_ATEXIT_MAX,87,5205,architecture)
+	CompareConstant(_SC_ATEXIT_MAX,87,5205,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_ATEXIT_MAX\n");
 cnt++;
@@ -1530,7 +1530,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_BARRIERS
-	CompareConstant(_SC_BARRIERS,133,5206,architecture)
+	CompareConstant(_SC_BARRIERS,133,5206,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_BARRIERS\n");
 cnt++;
@@ -1540,7 +1540,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_CLOCK_SELECTION
-	CompareConstant(_SC_CLOCK_SELECTION,137,5207,architecture)
+	CompareConstant(_SC_CLOCK_SELECTION,137,5207,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_CLOCK_SELECTION\n");
 cnt++;
@@ -1550,7 +1550,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_CPUTIME
-	CompareConstant(_SC_CPUTIME,138,5208,architecture)
+	CompareConstant(_SC_CPUTIME,138,5208,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_CPUTIME\n");
 cnt++;
@@ -1560,7 +1560,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_FSYNC
-	CompareConstant(_SC_FSYNC,15,5209,architecture)
+	CompareConstant(_SC_FSYNC,15,5209,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_FSYNC\n");
 cnt++;
@@ -1570,7 +1570,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_GETGR_R_SIZE_MAX
-	CompareConstant(_SC_GETGR_R_SIZE_MAX,69,5210,architecture)
+	CompareConstant(_SC_GETGR_R_SIZE_MAX,69,5210,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_GETGR_R_SIZE_MAX\n");
 cnt++;
@@ -1580,7 +1580,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_GETPW_R_SIZE_MAX
-	CompareConstant(_SC_GETPW_R_SIZE_MAX,70,5211,architecture)
+	CompareConstant(_SC_GETPW_R_SIZE_MAX,70,5211,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_GETPW_R_SIZE_MAX\n");
 cnt++;
@@ -1590,7 +1590,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_HOST_NAME_MAX
-	CompareConstant(_SC_HOST_NAME_MAX,180,5212,architecture)
+	CompareConstant(_SC_HOST_NAME_MAX,180,5212,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_HOST_NAME_MAX\n");
 cnt++;
@@ -1600,7 +1600,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_IOV_MAX
-	CompareConstant(_SC_IOV_MAX,60,5213,architecture)
+	CompareConstant(_SC_IOV_MAX,60,5213,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_IOV_MAX\n");
 cnt++;
@@ -1610,7 +1610,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_LOGIN_NAME_MAX
-	CompareConstant(_SC_LOGIN_NAME_MAX,71,5215,architecture)
+	CompareConstant(_SC_LOGIN_NAME_MAX,71,5215,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_LOGIN_NAME_MAX\n");
 cnt++;
@@ -1620,7 +1620,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_MONOTONIC_CLOCK
-	CompareConstant(_SC_MONOTONIC_CLOCK,149,5216,architecture)
+	CompareConstant(_SC_MONOTONIC_CLOCK,149,5216,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_MONOTONIC_CLOCK\n");
 cnt++;
@@ -1630,7 +1630,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_READER_WRITER_LOCKS
-	CompareConstant(_SC_READER_WRITER_LOCKS,153,5219,architecture)
+	CompareConstant(_SC_READER_WRITER_LOCKS,153,5219,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_READER_WRITER_LOCKS\n");
 cnt++;
@@ -1640,7 +1640,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_REGEXP
-	CompareConstant(_SC_REGEXP,155,5220,architecture)
+	CompareConstant(_SC_REGEXP,155,5220,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_REGEXP\n");
 cnt++;
@@ -1650,7 +1650,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_SHELL
-	CompareConstant(_SC_SHELL,157,5221,architecture)
+	CompareConstant(_SC_SHELL,157,5221,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_SHELL\n");
 cnt++;
@@ -1660,7 +1660,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_SPAWN
-	CompareConstant(_SC_SPAWN,159,5222,architecture)
+	CompareConstant(_SC_SPAWN,159,5222,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_SPAWN\n");
 cnt++;
@@ -1670,7 +1670,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_SPIN_LOCKS
-	CompareConstant(_SC_SPIN_LOCKS,154,5223,architecture)
+	CompareConstant(_SC_SPIN_LOCKS,154,5223,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_SPIN_LOCKS\n");
 cnt++;
@@ -1680,7 +1680,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_SPORADIC_SERVER
-	CompareConstant(_SC_SPORADIC_SERVER,160,5224,architecture)
+	CompareConstant(_SC_SPORADIC_SERVER,160,5224,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_SPORADIC_SERVER\n");
 cnt++;
@@ -1690,7 +1690,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_SYMLOOP_MAX
-	CompareConstant(_SC_SYMLOOP_MAX,173,5226,architecture)
+	CompareConstant(_SC_SYMLOOP_MAX,173,5226,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_SYMLOOP_MAX\n");
 cnt++;
@@ -1700,7 +1700,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_THREAD_CPUTIME
-	CompareConstant(_SC_THREAD_CPUTIME,139,5227,architecture)
+	CompareConstant(_SC_THREAD_CPUTIME,139,5227,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_THREAD_CPUTIME\n");
 cnt++;
@@ -1710,7 +1710,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_THREAD_SPORADIC_SERVER
-	CompareConstant(_SC_THREAD_SPORADIC_SERVER,161,5228,architecture)
+	CompareConstant(_SC_THREAD_SPORADIC_SERVER,161,5228,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_THREAD_SPORADIC_SERVER\n");
 cnt++;
@@ -1720,7 +1720,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_TIMEOUTS
-	CompareConstant(_SC_TIMEOUTS,164,5229,architecture)
+	CompareConstant(_SC_TIMEOUTS,164,5229,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_TIMEOUTS\n");
 cnt++;
@@ -1730,7 +1730,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_TRACE
-	CompareConstant(_SC_TRACE,181,5230,architecture)
+	CompareConstant(_SC_TRACE,181,5230,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_TRACE\n");
 cnt++;
@@ -1740,7 +1740,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_TRACE_EVENT_FILTER
-	CompareConstant(_SC_TRACE_EVENT_FILTER,182,5231,architecture)
+	CompareConstant(_SC_TRACE_EVENT_FILTER,182,5231,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_TRACE_EVENT_FILTER\n");
 cnt++;
@@ -1750,7 +1750,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_TRACE_INHERIT
-	CompareConstant(_SC_TRACE_INHERIT,183,5233,architecture)
+	CompareConstant(_SC_TRACE_INHERIT,183,5233,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_TRACE_INHERIT\n");
 cnt++;
@@ -1760,7 +1760,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_TRACE_LOG
-	CompareConstant(_SC_TRACE_LOG,184,5234,architecture)
+	CompareConstant(_SC_TRACE_LOG,184,5234,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_TRACE_LOG\n");
 cnt++;
@@ -1770,7 +1770,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_TTY_NAME_MAX
-	CompareConstant(_SC_TTY_NAME_MAX,72,5238,architecture)
+	CompareConstant(_SC_TTY_NAME_MAX,72,5238,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_TTY_NAME_MAX\n");
 cnt++;
@@ -1780,7 +1780,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_TYPED_MEMORY_OBJECTS
-	CompareConstant(_SC_TYPED_MEMORY_OBJECTS,165,5239,architecture)
+	CompareConstant(_SC_TYPED_MEMORY_OBJECTS,165,5239,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_TYPED_MEMORY_OBJECTS\n");
 cnt++;
@@ -1790,7 +1790,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_XOPEN_UNIX
-	CompareConstant(_SC_XOPEN_UNIX,91,5241,architecture)
+	CompareConstant(_SC_XOPEN_UNIX,91,5241,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_XOPEN_UNIX\n");
 cnt++;
@@ -1800,7 +1800,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_XOPEN_REALTIME_THREADS
-	CompareConstant(_SC_XOPEN_REALTIME_THREADS,131,5242,architecture)
+	CompareConstant(_SC_XOPEN_REALTIME_THREADS,131,5242,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_XOPEN_REALTIME_THREADS\n");
 cnt++;
@@ -1810,7 +1810,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_V6_ILP32_OFF32
-	CompareConstant(_SC_V6_ILP32_OFF32,176,5243,architecture)
+	CompareConstant(_SC_V6_ILP32_OFF32,176,5243,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_V6_ILP32_OFF32\n");
 cnt++;
@@ -1820,7 +1820,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_V6_ILP32_OFFBIG
-	CompareConstant(_SC_V6_ILP32_OFFBIG,177,5244,architecture)
+	CompareConstant(_SC_V6_ILP32_OFFBIG,177,5244,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_V6_ILP32_OFFBIG\n");
 cnt++;
@@ -1830,7 +1830,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_V6_LP64_OFF64
-	CompareConstant(_SC_V6_LP64_OFF64,178,5245,architecture)
+	CompareConstant(_SC_V6_LP64_OFF64,178,5245,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_V6_LP64_OFF64\n");
 cnt++;
@@ -1840,7 +1840,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_V6_LPBIG_OFFBIG
-	CompareConstant(_SC_V6_LPBIG_OFFBIG,179,5246,architecture)
+	CompareConstant(_SC_V6_LPBIG_OFFBIG,179,5246,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_V6_LPBIG_OFFBIG\n");
 cnt++;
@@ -1849,21 +1849,21 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(off64_t,8, 9112, 2)
+CheckTypeSize(off64_t,8, 9112, 2, 1.2, NULL, 10, NULL)
 #elif __ia64__
-CheckTypeSize(off64_t,8, 9112, 3)
+CheckTypeSize(off64_t,8, 9112, 3, 1.3, NULL, 10, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(off64_t,8, 9112, 6)
+CheckTypeSize(off64_t,8, 9112, 6, 1.2, NULL, 10, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(off64_t,8, 9112, 10)
+CheckTypeSize(off64_t,8, 9112, 10, 1.3, NULL, 10, NULL)
 #elif __powerpc64__
-CheckTypeSize(off64_t,8, 9112, 9)
+CheckTypeSize(off64_t,8, 9112, 9, 2.0, NULL, 10, NULL)
 #elif __s390x__
-CheckTypeSize(off64_t,8, 9112, 12)
+CheckTypeSize(off64_t,8, 9112, 12, 1.3, NULL, 10, NULL)
 #elif __x86_64__
-CheckTypeSize(off64_t,8, 9112, 11)
+CheckTypeSize(off64_t,8, 9112, 11, 2.0, NULL, 10, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9112,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10, NULL);\n",architecture,9112,0);
 Msg("Find size of off64_t (9112)\n");
 #endif
 
