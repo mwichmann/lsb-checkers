@@ -31,7 +31,7 @@ Msg("Checking data structures in wchar.h\n");
 printf("Checking data structures in wchar.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef WCHAR_MIN
-	CompareConstant(WCHAR_MIN,0x80000000,1953,architecture)
+	CompareConstant(WCHAR_MIN,0x80000000,1953,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: WCHAR_MIN\n");
 cnt++;
@@ -41,7 +41,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef WCHAR_MAX
-	CompareConstant(WCHAR_MAX,0x7FFFFFFF,1954,architecture)
+	CompareConstant(WCHAR_MAX,0x7FFFFFFF,1954,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: WCHAR_MAX\n");
 cnt++;
@@ -51,7 +51,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef WEOF
-	CompareConstant(WEOF,(0xffffffffu),1955,architecture)
+	CompareConstant(WEOF,(0xffffffffu),1955,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: WEOF\n");
 cnt++;

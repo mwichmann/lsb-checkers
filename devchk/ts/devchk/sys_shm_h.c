@@ -27,7 +27,7 @@ Msg("Checking data structures in sys/shm.h\n");
 printf("Checking data structures in sys/shm.h\n");
 #if __powerpc64__
 #ifdef SHMLBA
-	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture)
+	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: SHMLBA\n");
 cnt++;
@@ -35,7 +35,7 @@ cnt++;
 
 #elif __powerpc__ && !__powerpc64__
 #ifdef SHMLBA
-	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture)
+	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SHMLBA\n");
 cnt++;
@@ -43,7 +43,7 @@ cnt++;
 
 #elif __ia64__
 #ifdef SHMLBA
-	CompareConstant(SHMLBA,(1024*1024),1681,architecture)
+	CompareConstant(SHMLBA,(1024*1024),1681,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: SHMLBA\n");
 cnt++;
@@ -51,7 +51,7 @@ cnt++;
 
 #elif __i386__
 #ifdef SHMLBA
-	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture)
+	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SHMLBA\n");
 cnt++;
@@ -59,7 +59,7 @@ cnt++;
 
 #elif __s390x__
 #ifdef SHMLBA
-	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture)
+	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: SHMLBA\n");
 cnt++;
@@ -67,7 +67,7 @@ cnt++;
 
 #elif __x86_64__
 #ifdef SHMLBA
-	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture)
+	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: SHMLBA\n");
 cnt++;
@@ -75,7 +75,7 @@ cnt++;
 
 #elif __s390__ && !__s390x__
 #ifdef SHMLBA
-	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture)
+	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: SHMLBA\n");
 cnt++;
@@ -84,12 +84,12 @@ cnt++;
 #else
 Msg( "No definition for SHMLBA (1681, int) in db\n");
 #ifdef SHMLBA
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,1681,%d);\n", architecture, SHMLBA);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1681,%d,'""1.3""',NULL);\n", architecture, SHMLBA);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
 #ifdef SHM_R
-	CompareConstant(SHM_R,0400,3467,architecture)
+	CompareConstant(SHM_R,0400,3467,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: SHM_R\n");
 cnt++;
@@ -99,7 +99,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SHM_W
-	CompareConstant(SHM_W,0200,3468,architecture)
+	CompareConstant(SHM_W,0200,3468,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: SHM_W\n");
 cnt++;
@@ -109,7 +109,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SHM_RDONLY
-	CompareConstant(SHM_RDONLY,010000,3469,architecture)
+	CompareConstant(SHM_RDONLY,010000,3469,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SHM_RDONLY\n");
 cnt++;
@@ -119,7 +119,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SHM_RND
-	CompareConstant(SHM_RND,020000,3470,architecture)
+	CompareConstant(SHM_RND,020000,3470,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SHM_RND\n");
 cnt++;
@@ -129,7 +129,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SHM_REMAP
-	CompareConstant(SHM_REMAP,040000,3471,architecture)
+	CompareConstant(SHM_REMAP,040000,3471,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: SHM_REMAP\n");
 cnt++;
@@ -139,7 +139,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SHM_LOCK
-	CompareConstant(SHM_LOCK,11,3472,architecture)
+	CompareConstant(SHM_LOCK,11,3472,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: SHM_LOCK\n");
 cnt++;
@@ -149,7 +149,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SHM_UNLOCK
-	CompareConstant(SHM_UNLOCK,12,3473,architecture)
+	CompareConstant(SHM_UNLOCK,12,3473,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: SHM_UNLOCK\n");
 cnt++;
@@ -158,17 +158,17 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(shmatt_t,4, 10212, 2)
+CheckTypeSize(shmatt_t,4, 10212, 2, 2.0, NULL, 9, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(shmatt_t,4, 10212, 6)
+CheckTypeSize(shmatt_t,4, 10212, 6, 2.0, NULL, 9, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(shmatt_t,4, 10212, 10)
+CheckTypeSize(shmatt_t,4, 10212, 10, 2.0, NULL, 9, NULL)
 #elif __powerpc64__
-CheckTypeSize(shmatt_t,8, 10212, 9)
+CheckTypeSize(shmatt_t,8, 10212, 9, 2.0, NULL, 9, NULL)
 #elif __s390x__
-CheckTypeSize(shmatt_t,8, 10212, 12)
+CheckTypeSize(shmatt_t,8, 10212, 12, 2.0, NULL, 9, NULL)
 #elif __x86_64__
-CheckTypeSize(shmatt_t,8, 10212, 11)
+CheckTypeSize(shmatt_t,8, 10212, 11, 2.0, NULL, 9, NULL)
 #endif
 
 #if __i386__

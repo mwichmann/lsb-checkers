@@ -28,21 +28,21 @@ Msg("Checking data structures in dirent.h\n");
 
 printf("Checking data structures in dirent.h\n");
 #if __ia64__
-CheckTypeSize(DIR,0, 10175, 3)
+CheckTypeSize(DIR,0, 10175, 3, 1.3, NULL, 10174, NULL)
 #elif __i386__
-CheckTypeSize(DIR,0, 10175, 2)
+CheckTypeSize(DIR,0, 10175, 2, 1.1, NULL, 10174, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(DIR,0, 10175, 6)
+CheckTypeSize(DIR,0, 10175, 6, 1.2, NULL, 10174, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(DIR,0, 10175, 10)
+CheckTypeSize(DIR,0, 10175, 10, 1.3, NULL, 10174, NULL)
 #elif __powerpc64__
-CheckTypeSize(DIR,0, 10175, 9)
+CheckTypeSize(DIR,0, 10175, 9, 2.0, NULL, 10174, NULL)
 #elif __s390x__
-CheckTypeSize(DIR,0, 10175, 12)
+CheckTypeSize(DIR,0, 10175, 12, 1.3, NULL, 10174, NULL)
 #elif __x86_64__
-CheckTypeSize(DIR,0, 10175, 11)
+CheckTypeSize(DIR,0, 10175, 11, 2.0, NULL, 10174, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10175,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10174,NULL);\n",architecture,10175,0);
 Msg("Find size of DIR (10175)\n");
 #endif
 
@@ -54,7 +54,7 @@ Msg("Find size of DIR (10175)\n");
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10178,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10178,0);
 Msg("Find size of dirent (10178)\n");
 #endif
 
@@ -66,7 +66,7 @@ Msg("Find size of dirent (10178)\n");
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10179,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10179,0);
 Msg("Find size of dirent64 (10179)\n");
 #endif
 

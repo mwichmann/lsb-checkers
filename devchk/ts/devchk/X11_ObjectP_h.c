@@ -34,7 +34,7 @@ Msg("Checking data structures in X11/ObjectP.h\n");
 printf("Checking data structures in X11/ObjectP.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef XtObjectExtensionVersion
-	CompareConstant(XtObjectExtensionVersion,1L,4944,architecture)
+	CompareConstant(XtObjectExtensionVersion,1L,4944,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: XtObjectExtensionVersion\n");
 cnt++;
@@ -44,7 +44,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef XtInheritAllocate
-	CompareConstant(XtInheritAllocate,((XtAllocateProc) _XtInherit),4945,architecture)
+	CompareConstant(XtInheritAllocate,((XtAllocateProc) _XtInherit),4945,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: XtInheritAllocate\n");
 cnt++;
@@ -54,7 +54,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef XtInheritDeallocate
-	CompareConstant(XtInheritDeallocate,((XtDeallocateProc) _XtInherit),4946,architecture)
+	CompareConstant(XtInheritDeallocate,((XtDeallocateProc) _XtInherit),4946,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: XtInheritDeallocate\n");
 cnt++;
@@ -63,116 +63,116 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(ObjectPart,28, 10264, 2)
+CheckTypeSize(ObjectPart,28, 10264, 2, 1.2, NULL, 10261, NULL)
 #elif __ia64__
-CheckTypeSize(ObjectPart,48, 10264, 3)
+CheckTypeSize(ObjectPart,48, 10264, 3, 1.3, NULL, 10261, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(ObjectPart,28, 10264, 6)
+CheckTypeSize(ObjectPart,28, 10264, 6, 1.2, NULL, 10261, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(ObjectPart,28, 10264, 10)
+CheckTypeSize(ObjectPart,28, 10264, 10, 1.3, NULL, 10261, NULL)
 #elif __powerpc64__
-CheckTypeSize(ObjectPart,48, 10264, 9)
+CheckTypeSize(ObjectPart,48, 10264, 9, 2.0, NULL, 10261, NULL)
 #elif __s390x__
-CheckTypeSize(ObjectPart,48, 10264, 12)
+CheckTypeSize(ObjectPart,48, 10264, 12, 1.3, NULL, 10261, NULL)
 #elif __x86_64__
-CheckTypeSize(ObjectPart,48, 10264, 11)
+CheckTypeSize(ObjectPart,48, 10264, 11, 2.0, NULL, 10261, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10264,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10261,NULL);\n",architecture,10264,0);
 Msg("Find size of ObjectPart (10264)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(ObjectRec,28, 10263, 2)
+CheckTypeSize(ObjectRec,28, 10263, 2, 1.2, NULL, 10262, NULL)
 #elif __ia64__
-CheckTypeSize(ObjectRec,48, 10263, 3)
+CheckTypeSize(ObjectRec,48, 10263, 3, 1.3, NULL, 10262, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(ObjectRec,28, 10263, 6)
+CheckTypeSize(ObjectRec,28, 10263, 6, 1.2, NULL, 10262, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(ObjectRec,28, 10263, 10)
+CheckTypeSize(ObjectRec,28, 10263, 10, 1.3, NULL, 10262, NULL)
 #elif __powerpc64__
-CheckTypeSize(ObjectRec,48, 10263, 9)
+CheckTypeSize(ObjectRec,48, 10263, 9, 2.0, NULL, 10262, NULL)
 #elif __s390x__
-CheckTypeSize(ObjectRec,48, 10263, 12)
+CheckTypeSize(ObjectRec,48, 10263, 12, 1.3, NULL, 10262, NULL)
 #elif __x86_64__
-CheckTypeSize(ObjectRec,48, 10263, 11)
+CheckTypeSize(ObjectRec,48, 10263, 11, 2.0, NULL, 10262, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10263,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10262,NULL);\n",architecture,10263,0);
 Msg("Find size of ObjectRec (10263)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(ObjectClassPart,116, 10266, 2)
+CheckTypeSize(ObjectClassPart,116, 10266, 2, 1.2, NULL, 10265, NULL)
 #elif __ia64__
-CheckTypeSize(ObjectClassPart,224, 10266, 3)
+CheckTypeSize(ObjectClassPart,224, 10266, 3, 1.3, NULL, 10265, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(ObjectClassPart,116, 10266, 6)
+CheckTypeSize(ObjectClassPart,116, 10266, 6, 1.2, NULL, 10265, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(ObjectClassPart,116, 10266, 10)
+CheckTypeSize(ObjectClassPart,116, 10266, 10, 1.3, NULL, 10265, NULL)
 #elif __powerpc64__
-CheckTypeSize(ObjectClassPart,224, 10266, 9)
+CheckTypeSize(ObjectClassPart,224, 10266, 9, 2.0, NULL, 10265, NULL)
 #elif __s390x__
-CheckTypeSize(ObjectClassPart,224, 10266, 12)
+CheckTypeSize(ObjectClassPart,224, 10266, 12, 1.3, NULL, 10265, NULL)
 #elif __x86_64__
-CheckTypeSize(ObjectClassPart,224, 10266, 11)
+CheckTypeSize(ObjectClassPart,224, 10266, 11, 2.0, NULL, 10265, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10266,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10265,NULL);\n",architecture,10266,0);
 Msg("Find size of ObjectClassPart (10266)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(ObjectClassExtensionRec,24, 10268, 2)
+CheckTypeSize(ObjectClassExtensionRec,24, 10268, 2, 1.2, NULL, 10267, NULL)
 #elif __ia64__
-CheckTypeSize(ObjectClassExtensionRec,48, 10268, 3)
+CheckTypeSize(ObjectClassExtensionRec,48, 10268, 3, 1.3, NULL, 10267, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(ObjectClassExtensionRec,24, 10268, 6)
+CheckTypeSize(ObjectClassExtensionRec,24, 10268, 6, 1.2, NULL, 10267, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(ObjectClassExtensionRec,24, 10268, 10)
+CheckTypeSize(ObjectClassExtensionRec,24, 10268, 10, 1.3, NULL, 10267, NULL)
 #elif __powerpc64__
-CheckTypeSize(ObjectClassExtensionRec,48, 10268, 9)
+CheckTypeSize(ObjectClassExtensionRec,48, 10268, 9, 2.0, NULL, 10267, NULL)
 #elif __s390x__
-CheckTypeSize(ObjectClassExtensionRec,48, 10268, 12)
+CheckTypeSize(ObjectClassExtensionRec,48, 10268, 12, 1.3, NULL, 10267, NULL)
 #elif __x86_64__
-CheckTypeSize(ObjectClassExtensionRec,48, 10268, 11)
+CheckTypeSize(ObjectClassExtensionRec,48, 10268, 11, 2.0, NULL, 10267, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10268,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10267,NULL);\n",architecture,10268,0);
 Msg("Find size of ObjectClassExtensionRec (10268)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(ObjectClassExtension,4, 10270, 2)
+CheckTypeSize(ObjectClassExtension,4, 10270, 2, 1.2, NULL, 10269, NULL)
 #elif __ia64__
-CheckTypeSize(ObjectClassExtension,8, 10270, 3)
+CheckTypeSize(ObjectClassExtension,8, 10270, 3, 1.3, NULL, 10269, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(ObjectClassExtension,4, 10270, 6)
+CheckTypeSize(ObjectClassExtension,4, 10270, 6, 1.2, NULL, 10269, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(ObjectClassExtension,4, 10270, 10)
+CheckTypeSize(ObjectClassExtension,4, 10270, 10, 1.3, NULL, 10269, NULL)
 #elif __powerpc64__
-CheckTypeSize(ObjectClassExtension,8, 10270, 9)
+CheckTypeSize(ObjectClassExtension,8, 10270, 9, 2.0, NULL, 10269, NULL)
 #elif __s390x__
-CheckTypeSize(ObjectClassExtension,8, 10270, 12)
+CheckTypeSize(ObjectClassExtension,8, 10270, 12, 1.3, NULL, 10269, NULL)
 #elif __x86_64__
-CheckTypeSize(ObjectClassExtension,8, 10270, 11)
+CheckTypeSize(ObjectClassExtension,8, 10270, 11, 2.0, NULL, 10269, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10270,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10269,NULL);\n",architecture,10270,0);
 Msg("Find size of ObjectClassExtension (10270)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(ObjectClassRec,116, 10272, 2)
+CheckTypeSize(ObjectClassRec,116, 10272, 2, 1.2, NULL, 10271, NULL)
 #elif __ia64__
-CheckTypeSize(ObjectClassRec,224, 10272, 3)
+CheckTypeSize(ObjectClassRec,224, 10272, 3, 1.3, NULL, 10271, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(ObjectClassRec,116, 10272, 6)
+CheckTypeSize(ObjectClassRec,116, 10272, 6, 1.2, NULL, 10271, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(ObjectClassRec,116, 10272, 10)
+CheckTypeSize(ObjectClassRec,116, 10272, 10, 1.3, NULL, 10271, NULL)
 #elif __powerpc64__
-CheckTypeSize(ObjectClassRec,224, 10272, 9)
+CheckTypeSize(ObjectClassRec,224, 10272, 9, 2.0, NULL, 10271, NULL)
 #elif __s390x__
-CheckTypeSize(ObjectClassRec,224, 10272, 12)
+CheckTypeSize(ObjectClassRec,224, 10272, 12, 1.3, NULL, 10271, NULL)
 #elif __x86_64__
-CheckTypeSize(ObjectClassRec,224, 10272, 11)
+CheckTypeSize(ObjectClassRec,224, 10272, 11, 2.0, NULL, 10271, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10272,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10271,NULL);\n",architecture,10272,0);
 Msg("Find size of ObjectClassRec (10272)\n");
 #endif
 

@@ -34,7 +34,7 @@ Msg("Checking data structures in X11/ConstrainP.h\n");
 printf("Checking data structures in X11/ConstrainP.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef XtConstraintExtensionVersion
-	CompareConstant(XtConstraintExtensionVersion,1L,4935,architecture)
+	CompareConstant(XtConstraintExtensionVersion,1L,4935,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: XtConstraintExtensionVersion\n");
 cnt++;
@@ -43,59 +43,59 @@ cnt++;
 #endif
 
 #if __ia64__
-CheckTypeSize(ConstraintPart,8, 10250, 3)
+CheckTypeSize(ConstraintPart,8, 10250, 3, 1.3, NULL, 10249, NULL)
 #elif __i386__
-CheckTypeSize(ConstraintPart,4, 10250, 2)
+CheckTypeSize(ConstraintPart,4, 10250, 2, 1.2, NULL, 10249, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(ConstraintPart,4, 10250, 6)
+CheckTypeSize(ConstraintPart,4, 10250, 6, 1.2, NULL, 10249, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(ConstraintPart,4, 10250, 10)
+CheckTypeSize(ConstraintPart,4, 10250, 10, 1.3, NULL, 10249, NULL)
 #elif __powerpc64__
-CheckTypeSize(ConstraintPart,8, 10250, 9)
+CheckTypeSize(ConstraintPart,8, 10250, 9, 2.0, NULL, 10249, NULL)
 #elif __s390x__
-CheckTypeSize(ConstraintPart,8, 10250, 12)
+CheckTypeSize(ConstraintPart,8, 10250, 12, 1.3, NULL, 10249, NULL)
 #elif __x86_64__
-CheckTypeSize(ConstraintPart,8, 10250, 11)
+CheckTypeSize(ConstraintPart,8, 10250, 11, 2.0, NULL, 10249, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10250,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10249,NULL);\n",architecture,10250,0);
 Msg("Find size of ConstraintPart (10250)\n");
 #endif
 
 #if __ia64__
-CheckTypeSize(ConstraintClassPart,48, 10252, 3)
+CheckTypeSize(ConstraintClassPart,48, 10252, 3, 1.3, NULL, 10251, NULL)
 #elif __i386__
-CheckTypeSize(ConstraintClassPart,28, 10252, 2)
+CheckTypeSize(ConstraintClassPart,28, 10252, 2, 1.2, NULL, 10251, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(ConstraintClassPart,28, 10252, 6)
+CheckTypeSize(ConstraintClassPart,28, 10252, 6, 1.2, NULL, 10251, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(ConstraintClassPart,28, 10252, 10)
+CheckTypeSize(ConstraintClassPart,28, 10252, 10, 1.3, NULL, 10251, NULL)
 #elif __powerpc64__
-CheckTypeSize(ConstraintClassPart,48, 10252, 9)
+CheckTypeSize(ConstraintClassPart,48, 10252, 9, 2.0, NULL, 10251, NULL)
 #elif __s390x__
-CheckTypeSize(ConstraintClassPart,48, 10252, 12)
+CheckTypeSize(ConstraintClassPart,48, 10252, 12, 1.3, NULL, 10251, NULL)
 #elif __x86_64__
-CheckTypeSize(ConstraintClassPart,48, 10252, 11)
+CheckTypeSize(ConstraintClassPart,48, 10252, 11, 2.0, NULL, 10251, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10252,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10251,NULL);\n",architecture,10252,0);
 Msg("Find size of ConstraintClassPart (10252)\n");
 #endif
 
 #if __ia64__
-CheckTypeSize(ConstraintClassRec,312, 10258, 3)
+CheckTypeSize(ConstraintClassRec,312, 10258, 3, 1.3, NULL, 10257, NULL)
 #elif __i386__
-CheckTypeSize(ConstraintClassRec,164, 10258, 2)
+CheckTypeSize(ConstraintClassRec,164, 10258, 2, 1.2, NULL, 10257, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(ConstraintClassRec,164, 10258, 6)
+CheckTypeSize(ConstraintClassRec,164, 10258, 6, 1.2, NULL, 10257, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(ConstraintClassRec,164, 10258, 10)
+CheckTypeSize(ConstraintClassRec,164, 10258, 10, 1.3, NULL, 10257, NULL)
 #elif __powerpc64__
-CheckTypeSize(ConstraintClassRec,312, 10258, 9)
+CheckTypeSize(ConstraintClassRec,312, 10258, 9, 2.0, NULL, 10257, NULL)
 #elif __s390x__
-CheckTypeSize(ConstraintClassRec,312, 10258, 12)
+CheckTypeSize(ConstraintClassRec,312, 10258, 12, 1.3, NULL, 10257, NULL)
 #elif __x86_64__
-CheckTypeSize(ConstraintClassRec,312, 10258, 11)
+CheckTypeSize(ConstraintClassRec,312, 10258, 11, 2.0, NULL, 10257, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10258,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10257, NULL);\n",architecture,10258,0);
 Msg("Find size of ConstraintClassRec (10258)\n");
 #endif
 

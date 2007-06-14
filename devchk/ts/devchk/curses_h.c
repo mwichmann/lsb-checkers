@@ -31,7 +31,7 @@ Msg("Checking data structures in curses.h\n");
 printf("Checking data structures in curses.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef WA_ATTRIBUTES
-	CompareConstant(WA_ATTRIBUTES,A_ATTRIBUTES,2509,architecture)
+	CompareConstant(WA_ATTRIBUTES,A_ATTRIBUTES,2509,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: WA_ATTRIBUTES\n");
 cnt++;
@@ -41,7 +41,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef WA_NORMAL
-	CompareConstant(WA_NORMAL,A_NORMAL,2510,architecture)
+	CompareConstant(WA_NORMAL,A_NORMAL,2510,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: WA_NORMAL\n");
 cnt++;
@@ -51,7 +51,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef WA_STANDOUT
-	CompareConstant(WA_STANDOUT,A_STANDOUT,2511,architecture)
+	CompareConstant(WA_STANDOUT,A_STANDOUT,2511,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: WA_STANDOUT\n");
 cnt++;
@@ -61,7 +61,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef WA_UNDERLINE
-	CompareConstant(WA_UNDERLINE,A_UNDERLINE,2512,architecture)
+	CompareConstant(WA_UNDERLINE,A_UNDERLINE,2512,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: WA_UNDERLINE\n");
 cnt++;
@@ -71,7 +71,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef WA_REVERSE
-	CompareConstant(WA_REVERSE,A_REVERSE,2513,architecture)
+	CompareConstant(WA_REVERSE,A_REVERSE,2513,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: WA_REVERSE\n");
 cnt++;
@@ -81,7 +81,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef WA_BLINK
-	CompareConstant(WA_BLINK,A_BLINK,2514,architecture)
+	CompareConstant(WA_BLINK,A_BLINK,2514,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: WA_BLINK\n");
 cnt++;
@@ -91,7 +91,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef WA_DIM
-	CompareConstant(WA_DIM,A_DIM,2515,architecture)
+	CompareConstant(WA_DIM,A_DIM,2515,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: WA_DIM\n");
 cnt++;
@@ -101,7 +101,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef WA_BOLD
-	CompareConstant(WA_BOLD,A_BOLD,2516,architecture)
+	CompareConstant(WA_BOLD,A_BOLD,2516,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: WA_BOLD\n");
 cnt++;
@@ -111,7 +111,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef WA_ALTCHARSET
-	CompareConstant(WA_ALTCHARSET,A_ALTCHARSET,2517,architecture)
+	CompareConstant(WA_ALTCHARSET,A_ALTCHARSET,2517,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: WA_ALTCHARSET\n");
 cnt++;
@@ -121,7 +121,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef WA_INVIS
-	CompareConstant(WA_INVIS,A_INVIS,2518,architecture)
+	CompareConstant(WA_INVIS,A_INVIS,2518,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: WA_INVIS\n");
 cnt++;
@@ -131,7 +131,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef WA_PROTECT
-	CompareConstant(WA_PROTECT,A_PROTECT,2519,architecture)
+	CompareConstant(WA_PROTECT,A_PROTECT,2519,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: WA_PROTECT\n");
 cnt++;
@@ -141,7 +141,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef WA_HORIZONTAL
-	CompareConstant(WA_HORIZONTAL,A_HORIZONTAL,2520,architecture)
+	CompareConstant(WA_HORIZONTAL,A_HORIZONTAL,2520,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: WA_HORIZONTAL\n");
 cnt++;
@@ -151,7 +151,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef WA_LEFT
-	CompareConstant(WA_LEFT,A_LEFT,2521,architecture)
+	CompareConstant(WA_LEFT,A_LEFT,2521,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: WA_LEFT\n");
 cnt++;
@@ -161,7 +161,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef WA_LOW
-	CompareConstant(WA_LOW,A_LOW,2522,architecture)
+	CompareConstant(WA_LOW,A_LOW,2522,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: WA_LOW\n");
 cnt++;
@@ -171,7 +171,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef WA_RIGHT
-	CompareConstant(WA_RIGHT,A_RIGHT,2523,architecture)
+	CompareConstant(WA_RIGHT,A_RIGHT,2523,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: WA_RIGHT\n");
 cnt++;
@@ -181,7 +181,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef WA_TOP
-	CompareConstant(WA_TOP,A_TOP,2524,architecture)
+	CompareConstant(WA_TOP,A_TOP,2524,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: WA_TOP\n");
 cnt++;
@@ -191,7 +191,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef WA_VERTICAL
-	CompareConstant(WA_VERTICAL,A_VERTICAL,2525,architecture)
+	CompareConstant(WA_VERTICAL,A_VERTICAL,2525,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: WA_VERTICAL\n");
 cnt++;
@@ -201,7 +201,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef COLOR_BLACK
-	CompareConstant(COLOR_BLACK,0,2526,architecture)
+	CompareConstant(COLOR_BLACK,0,2526,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: COLOR_BLACK\n");
 cnt++;
@@ -211,7 +211,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef COLOR_RED
-	CompareConstant(COLOR_RED,1,2527,architecture)
+	CompareConstant(COLOR_RED,1,2527,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: COLOR_RED\n");
 cnt++;
@@ -221,7 +221,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef COLOR_GREEN
-	CompareConstant(COLOR_GREEN,2,2528,architecture)
+	CompareConstant(COLOR_GREEN,2,2528,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: COLOR_GREEN\n");
 cnt++;
@@ -231,7 +231,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef COLOR_YELLOW
-	CompareConstant(COLOR_YELLOW,3,2529,architecture)
+	CompareConstant(COLOR_YELLOW,3,2529,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: COLOR_YELLOW\n");
 cnt++;
@@ -241,7 +241,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef COLOR_BLUE
-	CompareConstant(COLOR_BLUE,4,2530,architecture)
+	CompareConstant(COLOR_BLUE,4,2530,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: COLOR_BLUE\n");
 cnt++;
@@ -251,7 +251,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef COLOR_MAGENTA
-	CompareConstant(COLOR_MAGENTA,5,2531,architecture)
+	CompareConstant(COLOR_MAGENTA,5,2531,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: COLOR_MAGENTA\n");
 cnt++;
@@ -261,7 +261,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef COLOR_CYAN
-	CompareConstant(COLOR_CYAN,6,2532,architecture)
+	CompareConstant(COLOR_CYAN,6,2532,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: COLOR_CYAN\n");
 cnt++;
@@ -271,7 +271,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef COLOR_WHITE
-	CompareConstant(COLOR_WHITE,7,2533,architecture)
+	CompareConstant(COLOR_WHITE,7,2533,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: COLOR_WHITE\n");
 cnt++;
@@ -281,7 +281,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACS_ULCORNER
-	CompareConstant(ACS_ULCORNER,(acs_map['l']),2534,architecture)
+	CompareConstant(ACS_ULCORNER,(acs_map['l']),2534,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ACS_ULCORNER\n");
 cnt++;
@@ -291,7 +291,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACS_LLCORNER
-	CompareConstant(ACS_LLCORNER,(acs_map['m']),2535,architecture)
+	CompareConstant(ACS_LLCORNER,(acs_map['m']),2535,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ACS_LLCORNER\n");
 cnt++;
@@ -301,7 +301,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACS_URCORNER
-	CompareConstant(ACS_URCORNER,(acs_map['k']),2536,architecture)
+	CompareConstant(ACS_URCORNER,(acs_map['k']),2536,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ACS_URCORNER\n");
 cnt++;
@@ -311,7 +311,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACS_LRCORNER
-	CompareConstant(ACS_LRCORNER,(acs_map['j']),2537,architecture)
+	CompareConstant(ACS_LRCORNER,(acs_map['j']),2537,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ACS_LRCORNER\n");
 cnt++;
@@ -321,7 +321,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACS_LTEE
-	CompareConstant(ACS_LTEE,(acs_map['t']),2538,architecture)
+	CompareConstant(ACS_LTEE,(acs_map['t']),2538,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ACS_LTEE\n");
 cnt++;
@@ -331,7 +331,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACS_RTEE
-	CompareConstant(ACS_RTEE,(acs_map['u']),2539,architecture)
+	CompareConstant(ACS_RTEE,(acs_map['u']),2539,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ACS_RTEE\n");
 cnt++;
@@ -341,7 +341,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACS_BTEE
-	CompareConstant(ACS_BTEE,(acs_map['v']),2540,architecture)
+	CompareConstant(ACS_BTEE,(acs_map['v']),2540,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ACS_BTEE\n");
 cnt++;
@@ -351,7 +351,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACS_TTEE
-	CompareConstant(ACS_TTEE,(acs_map['w']),2541,architecture)
+	CompareConstant(ACS_TTEE,(acs_map['w']),2541,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ACS_TTEE\n");
 cnt++;
@@ -361,7 +361,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACS_HLINE
-	CompareConstant(ACS_HLINE,(acs_map['q']),2542,architecture)
+	CompareConstant(ACS_HLINE,(acs_map['q']),2542,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ACS_HLINE\n");
 cnt++;
@@ -371,7 +371,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACS_VLINE
-	CompareConstant(ACS_VLINE,(acs_map['x']),2543,architecture)
+	CompareConstant(ACS_VLINE,(acs_map['x']),2543,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ACS_VLINE\n");
 cnt++;
@@ -381,7 +381,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACS_PLUS
-	CompareConstant(ACS_PLUS,(acs_map['n']),2544,architecture)
+	CompareConstant(ACS_PLUS,(acs_map['n']),2544,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ACS_PLUS\n");
 cnt++;
@@ -391,7 +391,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACS_S1
-	CompareConstant(ACS_S1,(acs_map['o']),2545,architecture)
+	CompareConstant(ACS_S1,(acs_map['o']),2545,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ACS_S1\n");
 cnt++;
@@ -401,7 +401,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACS_S9
-	CompareConstant(ACS_S9,(acs_map['s']),2546,architecture)
+	CompareConstant(ACS_S9,(acs_map['s']),2546,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ACS_S9\n");
 cnt++;
@@ -411,7 +411,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACS_DIAMOND
-	CompareConstant(ACS_DIAMOND,(acs_map['`']),2547,architecture)
+	CompareConstant(ACS_DIAMOND,(acs_map['`']),2547,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ACS_DIAMOND\n");
 cnt++;
@@ -421,7 +421,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACS_CKBOARD
-	CompareConstant(ACS_CKBOARD,(acs_map['a']),2548,architecture)
+	CompareConstant(ACS_CKBOARD,(acs_map['a']),2548,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ACS_CKBOARD\n");
 cnt++;
@@ -431,7 +431,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACS_DEGREE
-	CompareConstant(ACS_DEGREE,(acs_map['f']),2549,architecture)
+	CompareConstant(ACS_DEGREE,(acs_map['f']),2549,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ACS_DEGREE\n");
 cnt++;
@@ -441,7 +441,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACS_PLMINUS
-	CompareConstant(ACS_PLMINUS,(acs_map['g']),2550,architecture)
+	CompareConstant(ACS_PLMINUS,(acs_map['g']),2550,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ACS_PLMINUS\n");
 cnt++;
@@ -451,7 +451,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACS_BULLET
-	CompareConstant(ACS_BULLET,(acs_map['~']),2551,architecture)
+	CompareConstant(ACS_BULLET,(acs_map['~']),2551,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ACS_BULLET\n");
 cnt++;
@@ -461,7 +461,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACS_LARROW
-	CompareConstant(ACS_LARROW,(acs_map[',']),2552,architecture)
+	CompareConstant(ACS_LARROW,(acs_map[',']),2552,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ACS_LARROW\n");
 cnt++;
@@ -471,7 +471,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACS_RARROW
-	CompareConstant(ACS_RARROW,(acs_map['+']),2553,architecture)
+	CompareConstant(ACS_RARROW,(acs_map['+']),2553,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ACS_RARROW\n");
 cnt++;
@@ -481,7 +481,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACS_DARROW
-	CompareConstant(ACS_DARROW,(acs_map['.']),2554,architecture)
+	CompareConstant(ACS_DARROW,(acs_map['.']),2554,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ACS_DARROW\n");
 cnt++;
@@ -491,7 +491,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACS_UARROW
-	CompareConstant(ACS_UARROW,(acs_map['-']),2555,architecture)
+	CompareConstant(ACS_UARROW,(acs_map['-']),2555,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ACS_UARROW\n");
 cnt++;
@@ -501,7 +501,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACS_BOARD
-	CompareConstant(ACS_BOARD,(acs_map['h']),2556,architecture)
+	CompareConstant(ACS_BOARD,(acs_map['h']),2556,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ACS_BOARD\n");
 cnt++;
@@ -511,7 +511,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACS_LANTERN
-	CompareConstant(ACS_LANTERN,(acs_map['i']),2557,architecture)
+	CompareConstant(ACS_LANTERN,(acs_map['i']),2557,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ACS_LANTERN\n");
 cnt++;
@@ -521,7 +521,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ACS_BLOCK
-	CompareConstant(ACS_BLOCK,(acs_map['0']),2558,architecture)
+	CompareConstant(ACS_BLOCK,(acs_map['0']),2558,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ACS_BLOCK\n");
 cnt++;
@@ -531,7 +531,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ERR
-	CompareConstant(ERR,(-1),2577,architecture)
+	CompareConstant(ERR,(-1),2577,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: ERR\n");
 cnt++;
@@ -541,7 +541,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef OK
-	CompareConstant(OK,(0),2578,architecture)
+	CompareConstant(OK,(0),2578,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: OK\n");
 cnt++;
@@ -551,7 +551,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SUBWIN
-	CompareConstant(_SUBWIN,0x01,2579,architecture)
+	CompareConstant(_SUBWIN,0x01,2579,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: _SUBWIN\n");
 cnt++;
@@ -561,7 +561,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _ENDLINE
-	CompareConstant(_ENDLINE,0x02,2580,architecture)
+	CompareConstant(_ENDLINE,0x02,2580,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: _ENDLINE\n");
 cnt++;
@@ -571,7 +571,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _FULLWIN
-	CompareConstant(_FULLWIN,0x04,2581,architecture)
+	CompareConstant(_FULLWIN,0x04,2581,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: _FULLWIN\n");
 cnt++;
@@ -581,7 +581,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SCROLLWIN
-	CompareConstant(_SCROLLWIN,0x08,2582,architecture)
+	CompareConstant(_SCROLLWIN,0x08,2582,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: _SCROLLWIN\n");
 cnt++;
@@ -591,7 +591,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _ISPAD
-	CompareConstant(_ISPAD,0x10,2583,architecture)
+	CompareConstant(_ISPAD,0x10,2583,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: _ISPAD\n");
 cnt++;
@@ -601,7 +601,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _HASMOVED
-	CompareConstant(_HASMOVED,0x20,2584,architecture)
+	CompareConstant(_HASMOVED,0x20,2584,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: _HASMOVED\n");
 cnt++;
@@ -615,7 +615,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef A_NORMAL
-	CompareConstant(A_NORMAL,0L,2593,architecture)
+	CompareConstant(A_NORMAL,0L,2593,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: A_NORMAL\n");
 cnt++;
@@ -625,7 +625,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef A_ATTRIBUTES
-	CompareConstant(A_ATTRIBUTES,NCURSES_BITS(~(1UL-1UL),0),2594,architecture)
+	CompareConstant(A_ATTRIBUTES,NCURSES_BITS(~(1UL-1UL),0),2594,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: A_ATTRIBUTES\n");
 cnt++;
@@ -635,7 +635,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef A_CHARTEXT
-	CompareConstant(A_CHARTEXT,(NCURSES_BITS(1UL,0)-1UL),2595,architecture)
+	CompareConstant(A_CHARTEXT,(NCURSES_BITS(1UL,0)-1UL),2595,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: A_CHARTEXT\n");
 cnt++;
@@ -645,7 +645,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef A_COLOR
-	CompareConstant(A_COLOR,NCURSES_BITS(((1UL)<<8)-1UL,0),2596,architecture)
+	CompareConstant(A_COLOR,NCURSES_BITS(((1UL)<<8)-1UL,0),2596,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: A_COLOR\n");
 cnt++;
@@ -655,7 +655,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef A_STANDOUT
-	CompareConstant(A_STANDOUT,NCURSES_BITS(1UL,8),2597,architecture)
+	CompareConstant(A_STANDOUT,NCURSES_BITS(1UL,8),2597,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: A_STANDOUT\n");
 cnt++;
@@ -665,7 +665,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef A_UNDERLINE
-	CompareConstant(A_UNDERLINE,NCURSES_BITS(1UL,9),2598,architecture)
+	CompareConstant(A_UNDERLINE,NCURSES_BITS(1UL,9),2598,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: A_UNDERLINE\n");
 cnt++;
@@ -675,7 +675,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef A_REVERSE
-	CompareConstant(A_REVERSE,NCURSES_BITS(1UL,10),2599,architecture)
+	CompareConstant(A_REVERSE,NCURSES_BITS(1UL,10),2599,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: A_REVERSE\n");
 cnt++;
@@ -685,7 +685,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef A_BLINK
-	CompareConstant(A_BLINK,NCURSES_BITS(1UL,11),2600,architecture)
+	CompareConstant(A_BLINK,NCURSES_BITS(1UL,11),2600,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: A_BLINK\n");
 cnt++;
@@ -695,7 +695,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef A_DIM
-	CompareConstant(A_DIM,NCURSES_BITS(1UL,12),2601,architecture)
+	CompareConstant(A_DIM,NCURSES_BITS(1UL,12),2601,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: A_DIM\n");
 cnt++;
@@ -705,7 +705,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef A_BOLD
-	CompareConstant(A_BOLD,NCURSES_BITS(1UL,13),2602,architecture)
+	CompareConstant(A_BOLD,NCURSES_BITS(1UL,13),2602,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: A_BOLD\n");
 cnt++;
@@ -715,7 +715,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef A_ALTCHARSET
-	CompareConstant(A_ALTCHARSET,NCURSES_BITS(1UL,14),2603,architecture)
+	CompareConstant(A_ALTCHARSET,NCURSES_BITS(1UL,14),2603,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: A_ALTCHARSET\n");
 cnt++;
@@ -725,7 +725,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef A_INVIS
-	CompareConstant(A_INVIS,NCURSES_BITS(1UL,15),2604,architecture)
+	CompareConstant(A_INVIS,NCURSES_BITS(1UL,15),2604,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: A_INVIS\n");
 cnt++;
@@ -735,7 +735,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef A_PROTECT
-	CompareConstant(A_PROTECT,NCURSES_BITS(1UL,16),2605,architecture)
+	CompareConstant(A_PROTECT,NCURSES_BITS(1UL,16),2605,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: A_PROTECT\n");
 cnt++;
@@ -745,7 +745,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef A_HORIZONTAL
-	CompareConstant(A_HORIZONTAL,NCURSES_BITS(1UL,17),2606,architecture)
+	CompareConstant(A_HORIZONTAL,NCURSES_BITS(1UL,17),2606,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: A_HORIZONTAL\n");
 cnt++;
@@ -755,7 +755,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef A_LEFT
-	CompareConstant(A_LEFT,NCURSES_BITS(1UL,18),2607,architecture)
+	CompareConstant(A_LEFT,NCURSES_BITS(1UL,18),2607,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: A_LEFT\n");
 cnt++;
@@ -765,7 +765,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef A_LOW
-	CompareConstant(A_LOW,NCURSES_BITS(1UL,19),2608,architecture)
+	CompareConstant(A_LOW,NCURSES_BITS(1UL,19),2608,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: A_LOW\n");
 cnt++;
@@ -775,7 +775,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef A_RIGHT
-	CompareConstant(A_RIGHT,NCURSES_BITS(1UL,20),2609,architecture)
+	CompareConstant(A_RIGHT,NCURSES_BITS(1UL,20),2609,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: A_RIGHT\n");
 cnt++;
@@ -785,7 +785,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef A_TOP
-	CompareConstant(A_TOP,NCURSES_BITS(1UL,21),2610,architecture)
+	CompareConstant(A_TOP,NCURSES_BITS(1UL,21),2610,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: A_TOP\n");
 cnt++;
@@ -795,7 +795,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef A_VERTICAL
-	CompareConstant(A_VERTICAL,NCURSES_BITS(1UL,22),2611,architecture)
+	CompareConstant(A_VERTICAL,NCURSES_BITS(1UL,22),2611,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: A_VERTICAL\n");
 cnt++;
@@ -829,7 +829,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_CODE_YES
-	CompareConstant(KEY_CODE_YES,0400,2804,architecture)
+	CompareConstant(KEY_CODE_YES,0400,2804,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_CODE_YES\n");
 cnt++;
@@ -839,7 +839,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_MIN
-	CompareConstant(KEY_MIN,0401,2805,architecture)
+	CompareConstant(KEY_MIN,0401,2805,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_MIN\n");
 cnt++;
@@ -849,7 +849,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_BREAK
-	CompareConstant(KEY_BREAK,0401,2806,architecture)
+	CompareConstant(KEY_BREAK,0401,2806,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_BREAK\n");
 cnt++;
@@ -859,7 +859,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_DOWN
-	CompareConstant(KEY_DOWN,0402,2807,architecture)
+	CompareConstant(KEY_DOWN,0402,2807,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_DOWN\n");
 cnt++;
@@ -869,7 +869,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_UP
-	CompareConstant(KEY_UP,0403,2808,architecture)
+	CompareConstant(KEY_UP,0403,2808,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_UP\n");
 cnt++;
@@ -879,7 +879,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_LEFT
-	CompareConstant(KEY_LEFT,0404,2809,architecture)
+	CompareConstant(KEY_LEFT,0404,2809,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_LEFT\n");
 cnt++;
@@ -889,7 +889,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_RIGHT
-	CompareConstant(KEY_RIGHT,0405,2810,architecture)
+	CompareConstant(KEY_RIGHT,0405,2810,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_RIGHT\n");
 cnt++;
@@ -899,7 +899,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_HOME
-	CompareConstant(KEY_HOME,0406,2811,architecture)
+	CompareConstant(KEY_HOME,0406,2811,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_HOME\n");
 cnt++;
@@ -909,7 +909,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_BACKSPACE
-	CompareConstant(KEY_BACKSPACE,0407,2812,architecture)
+	CompareConstant(KEY_BACKSPACE,0407,2812,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_BACKSPACE\n");
 cnt++;
@@ -919,7 +919,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_F0
-	CompareConstant(KEY_F0,0410,2813,architecture)
+	CompareConstant(KEY_F0,0410,2813,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_F0\n");
 cnt++;
@@ -929,7 +929,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_DL
-	CompareConstant(KEY_DL,0510,2815,architecture)
+	CompareConstant(KEY_DL,0510,2815,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_DL\n");
 cnt++;
@@ -939,7 +939,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_IL
-	CompareConstant(KEY_IL,0511,2816,architecture)
+	CompareConstant(KEY_IL,0511,2816,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_IL\n");
 cnt++;
@@ -949,7 +949,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_DC
-	CompareConstant(KEY_DC,0512,2817,architecture)
+	CompareConstant(KEY_DC,0512,2817,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_DC\n");
 cnt++;
@@ -959,7 +959,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_IC
-	CompareConstant(KEY_IC,0513,2818,architecture)
+	CompareConstant(KEY_IC,0513,2818,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_IC\n");
 cnt++;
@@ -969,7 +969,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_EIC
-	CompareConstant(KEY_EIC,0514,2819,architecture)
+	CompareConstant(KEY_EIC,0514,2819,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_EIC\n");
 cnt++;
@@ -979,7 +979,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_CLEAR
-	CompareConstant(KEY_CLEAR,0515,2820,architecture)
+	CompareConstant(KEY_CLEAR,0515,2820,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_CLEAR\n");
 cnt++;
@@ -989,7 +989,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_EOS
-	CompareConstant(KEY_EOS,0516,2821,architecture)
+	CompareConstant(KEY_EOS,0516,2821,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_EOS\n");
 cnt++;
@@ -999,7 +999,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_EOL
-	CompareConstant(KEY_EOL,0517,2822,architecture)
+	CompareConstant(KEY_EOL,0517,2822,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_EOL\n");
 cnt++;
@@ -1009,7 +1009,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SF
-	CompareConstant(KEY_SF,0520,2823,architecture)
+	CompareConstant(KEY_SF,0520,2823,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SF\n");
 cnt++;
@@ -1019,7 +1019,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SR
-	CompareConstant(KEY_SR,0521,2824,architecture)
+	CompareConstant(KEY_SR,0521,2824,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SR\n");
 cnt++;
@@ -1029,7 +1029,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_NPAGE
-	CompareConstant(KEY_NPAGE,0522,2825,architecture)
+	CompareConstant(KEY_NPAGE,0522,2825,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_NPAGE\n");
 cnt++;
@@ -1039,7 +1039,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_PPAGE
-	CompareConstant(KEY_PPAGE,0523,2826,architecture)
+	CompareConstant(KEY_PPAGE,0523,2826,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_PPAGE\n");
 cnt++;
@@ -1049,7 +1049,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_STAB
-	CompareConstant(KEY_STAB,0524,2827,architecture)
+	CompareConstant(KEY_STAB,0524,2827,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_STAB\n");
 cnt++;
@@ -1059,7 +1059,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_CTAB
-	CompareConstant(KEY_CTAB,0525,2828,architecture)
+	CompareConstant(KEY_CTAB,0525,2828,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_CTAB\n");
 cnt++;
@@ -1069,7 +1069,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_CATAB
-	CompareConstant(KEY_CATAB,0526,2829,architecture)
+	CompareConstant(KEY_CATAB,0526,2829,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_CATAB\n");
 cnt++;
@@ -1079,7 +1079,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_ENTER
-	CompareConstant(KEY_ENTER,0527,2830,architecture)
+	CompareConstant(KEY_ENTER,0527,2830,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_ENTER\n");
 cnt++;
@@ -1089,7 +1089,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SRESET
-	CompareConstant(KEY_SRESET,0530,2831,architecture)
+	CompareConstant(KEY_SRESET,0530,2831,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SRESET\n");
 cnt++;
@@ -1099,7 +1099,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_RESET
-	CompareConstant(KEY_RESET,0531,2832,architecture)
+	CompareConstant(KEY_RESET,0531,2832,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_RESET\n");
 cnt++;
@@ -1109,7 +1109,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_PRINT
-	CompareConstant(KEY_PRINT,0532,2833,architecture)
+	CompareConstant(KEY_PRINT,0532,2833,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_PRINT\n");
 cnt++;
@@ -1119,7 +1119,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_LL
-	CompareConstant(KEY_LL,0533,2834,architecture)
+	CompareConstant(KEY_LL,0533,2834,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_LL\n");
 cnt++;
@@ -1129,7 +1129,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_A1
-	CompareConstant(KEY_A1,0534,2835,architecture)
+	CompareConstant(KEY_A1,0534,2835,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_A1\n");
 cnt++;
@@ -1139,7 +1139,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_A3
-	CompareConstant(KEY_A3,0535,2836,architecture)
+	CompareConstant(KEY_A3,0535,2836,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_A3\n");
 cnt++;
@@ -1149,7 +1149,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_B2
-	CompareConstant(KEY_B2,0536,2837,architecture)
+	CompareConstant(KEY_B2,0536,2837,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_B2\n");
 cnt++;
@@ -1159,7 +1159,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_C1
-	CompareConstant(KEY_C1,0537,2838,architecture)
+	CompareConstant(KEY_C1,0537,2838,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_C1\n");
 cnt++;
@@ -1169,7 +1169,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_C3
-	CompareConstant(KEY_C3,0540,2839,architecture)
+	CompareConstant(KEY_C3,0540,2839,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_C3\n");
 cnt++;
@@ -1179,7 +1179,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_BTAB
-	CompareConstant(KEY_BTAB,0541,2840,architecture)
+	CompareConstant(KEY_BTAB,0541,2840,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_BTAB\n");
 cnt++;
@@ -1189,7 +1189,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_BEG
-	CompareConstant(KEY_BEG,0542,2841,architecture)
+	CompareConstant(KEY_BEG,0542,2841,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_BEG\n");
 cnt++;
@@ -1199,7 +1199,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_CANCEL
-	CompareConstant(KEY_CANCEL,0543,2842,architecture)
+	CompareConstant(KEY_CANCEL,0543,2842,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_CANCEL\n");
 cnt++;
@@ -1209,7 +1209,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_CLOSE
-	CompareConstant(KEY_CLOSE,0544,2843,architecture)
+	CompareConstant(KEY_CLOSE,0544,2843,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_CLOSE\n");
 cnt++;
@@ -1219,7 +1219,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_COMMAND
-	CompareConstant(KEY_COMMAND,0545,2844,architecture)
+	CompareConstant(KEY_COMMAND,0545,2844,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_COMMAND\n");
 cnt++;
@@ -1229,7 +1229,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_COPY
-	CompareConstant(KEY_COPY,0546,2845,architecture)
+	CompareConstant(KEY_COPY,0546,2845,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_COPY\n");
 cnt++;
@@ -1239,7 +1239,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_CREATE
-	CompareConstant(KEY_CREATE,0547,2846,architecture)
+	CompareConstant(KEY_CREATE,0547,2846,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_CREATE\n");
 cnt++;
@@ -1249,7 +1249,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_END
-	CompareConstant(KEY_END,0550,2847,architecture)
+	CompareConstant(KEY_END,0550,2847,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_END\n");
 cnt++;
@@ -1259,7 +1259,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_EXIT
-	CompareConstant(KEY_EXIT,0551,2848,architecture)
+	CompareConstant(KEY_EXIT,0551,2848,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_EXIT\n");
 cnt++;
@@ -1269,7 +1269,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_FIND
-	CompareConstant(KEY_FIND,0552,2849,architecture)
+	CompareConstant(KEY_FIND,0552,2849,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_FIND\n");
 cnt++;
@@ -1279,7 +1279,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_HELP
-	CompareConstant(KEY_HELP,0553,2850,architecture)
+	CompareConstant(KEY_HELP,0553,2850,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_HELP\n");
 cnt++;
@@ -1289,7 +1289,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_MARK
-	CompareConstant(KEY_MARK,0554,2851,architecture)
+	CompareConstant(KEY_MARK,0554,2851,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_MARK\n");
 cnt++;
@@ -1299,7 +1299,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_MESSAGE
-	CompareConstant(KEY_MESSAGE,0555,2852,architecture)
+	CompareConstant(KEY_MESSAGE,0555,2852,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_MESSAGE\n");
 cnt++;
@@ -1309,7 +1309,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_MOVE
-	CompareConstant(KEY_MOVE,0556,2853,architecture)
+	CompareConstant(KEY_MOVE,0556,2853,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_MOVE\n");
 cnt++;
@@ -1319,7 +1319,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_NEXT
-	CompareConstant(KEY_NEXT,0557,2854,architecture)
+	CompareConstant(KEY_NEXT,0557,2854,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_NEXT\n");
 cnt++;
@@ -1329,7 +1329,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_OPEN
-	CompareConstant(KEY_OPEN,0560,2855,architecture)
+	CompareConstant(KEY_OPEN,0560,2855,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_OPEN\n");
 cnt++;
@@ -1339,7 +1339,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_OPTIONS
-	CompareConstant(KEY_OPTIONS,0561,2856,architecture)
+	CompareConstant(KEY_OPTIONS,0561,2856,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_OPTIONS\n");
 cnt++;
@@ -1349,7 +1349,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_PREVIOUS
-	CompareConstant(KEY_PREVIOUS,0562,2857,architecture)
+	CompareConstant(KEY_PREVIOUS,0562,2857,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_PREVIOUS\n");
 cnt++;
@@ -1359,7 +1359,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_REDO
-	CompareConstant(KEY_REDO,0563,2858,architecture)
+	CompareConstant(KEY_REDO,0563,2858,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_REDO\n");
 cnt++;
@@ -1369,7 +1369,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_REFERENCE
-	CompareConstant(KEY_REFERENCE,0564,2859,architecture)
+	CompareConstant(KEY_REFERENCE,0564,2859,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_REFERENCE\n");
 cnt++;
@@ -1379,7 +1379,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_REFRESH
-	CompareConstant(KEY_REFRESH,0565,2860,architecture)
+	CompareConstant(KEY_REFRESH,0565,2860,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_REFRESH\n");
 cnt++;
@@ -1389,7 +1389,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_REPLACE
-	CompareConstant(KEY_REPLACE,0566,2861,architecture)
+	CompareConstant(KEY_REPLACE,0566,2861,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_REPLACE\n");
 cnt++;
@@ -1399,7 +1399,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_RESTART
-	CompareConstant(KEY_RESTART,0567,2862,architecture)
+	CompareConstant(KEY_RESTART,0567,2862,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_RESTART\n");
 cnt++;
@@ -1409,7 +1409,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_RESUME
-	CompareConstant(KEY_RESUME,0570,2863,architecture)
+	CompareConstant(KEY_RESUME,0570,2863,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_RESUME\n");
 cnt++;
@@ -1419,7 +1419,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SAVE
-	CompareConstant(KEY_SAVE,0571,2864,architecture)
+	CompareConstant(KEY_SAVE,0571,2864,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SAVE\n");
 cnt++;
@@ -1429,7 +1429,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SBEG
-	CompareConstant(KEY_SBEG,0572,2865,architecture)
+	CompareConstant(KEY_SBEG,0572,2865,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SBEG\n");
 cnt++;
@@ -1439,7 +1439,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SCANCEL
-	CompareConstant(KEY_SCANCEL,0573,2866,architecture)
+	CompareConstant(KEY_SCANCEL,0573,2866,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SCANCEL\n");
 cnt++;
@@ -1449,7 +1449,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SCOMMAND
-	CompareConstant(KEY_SCOMMAND,0574,2867,architecture)
+	CompareConstant(KEY_SCOMMAND,0574,2867,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SCOMMAND\n");
 cnt++;
@@ -1459,7 +1459,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SCOPY
-	CompareConstant(KEY_SCOPY,0575,2868,architecture)
+	CompareConstant(KEY_SCOPY,0575,2868,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SCOPY\n");
 cnt++;
@@ -1469,7 +1469,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SCREATE
-	CompareConstant(KEY_SCREATE,0576,2869,architecture)
+	CompareConstant(KEY_SCREATE,0576,2869,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SCREATE\n");
 cnt++;
@@ -1479,7 +1479,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SDC
-	CompareConstant(KEY_SDC,0577,2870,architecture)
+	CompareConstant(KEY_SDC,0577,2870,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SDC\n");
 cnt++;
@@ -1489,7 +1489,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SDL
-	CompareConstant(KEY_SDL,0600,2871,architecture)
+	CompareConstant(KEY_SDL,0600,2871,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SDL\n");
 cnt++;
@@ -1499,7 +1499,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SELECT
-	CompareConstant(KEY_SELECT,0601,2872,architecture)
+	CompareConstant(KEY_SELECT,0601,2872,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SELECT\n");
 cnt++;
@@ -1509,7 +1509,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SEND
-	CompareConstant(KEY_SEND,0602,2873,architecture)
+	CompareConstant(KEY_SEND,0602,2873,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SEND\n");
 cnt++;
@@ -1519,7 +1519,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SEOL
-	CompareConstant(KEY_SEOL,0603,2874,architecture)
+	CompareConstant(KEY_SEOL,0603,2874,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SEOL\n");
 cnt++;
@@ -1529,7 +1529,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SEXIT
-	CompareConstant(KEY_SEXIT,0604,2875,architecture)
+	CompareConstant(KEY_SEXIT,0604,2875,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SEXIT\n");
 cnt++;
@@ -1539,7 +1539,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SFIND
-	CompareConstant(KEY_SFIND,0605,2876,architecture)
+	CompareConstant(KEY_SFIND,0605,2876,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SFIND\n");
 cnt++;
@@ -1549,7 +1549,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SHELP
-	CompareConstant(KEY_SHELP,0606,2877,architecture)
+	CompareConstant(KEY_SHELP,0606,2877,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SHELP\n");
 cnt++;
@@ -1559,7 +1559,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SHOME
-	CompareConstant(KEY_SHOME,0607,2878,architecture)
+	CompareConstant(KEY_SHOME,0607,2878,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SHOME\n");
 cnt++;
@@ -1569,7 +1569,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SIC
-	CompareConstant(KEY_SIC,0610,2879,architecture)
+	CompareConstant(KEY_SIC,0610,2879,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SIC\n");
 cnt++;
@@ -1579,7 +1579,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SLEFT
-	CompareConstant(KEY_SLEFT,0611,2880,architecture)
+	CompareConstant(KEY_SLEFT,0611,2880,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SLEFT\n");
 cnt++;
@@ -1589,7 +1589,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SMESSAGE
-	CompareConstant(KEY_SMESSAGE,0612,2881,architecture)
+	CompareConstant(KEY_SMESSAGE,0612,2881,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SMESSAGE\n");
 cnt++;
@@ -1599,7 +1599,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SMOVE
-	CompareConstant(KEY_SMOVE,0613,2882,architecture)
+	CompareConstant(KEY_SMOVE,0613,2882,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SMOVE\n");
 cnt++;
@@ -1609,7 +1609,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SNEXT
-	CompareConstant(KEY_SNEXT,0614,2883,architecture)
+	CompareConstant(KEY_SNEXT,0614,2883,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SNEXT\n");
 cnt++;
@@ -1619,7 +1619,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SOPTIONS
-	CompareConstant(KEY_SOPTIONS,0615,2884,architecture)
+	CompareConstant(KEY_SOPTIONS,0615,2884,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SOPTIONS\n");
 cnt++;
@@ -1629,7 +1629,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SPREVIOUS
-	CompareConstant(KEY_SPREVIOUS,0616,2885,architecture)
+	CompareConstant(KEY_SPREVIOUS,0616,2885,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SPREVIOUS\n");
 cnt++;
@@ -1639,7 +1639,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SPRINT
-	CompareConstant(KEY_SPRINT,0617,2886,architecture)
+	CompareConstant(KEY_SPRINT,0617,2886,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SPRINT\n");
 cnt++;
@@ -1649,7 +1649,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SREDO
-	CompareConstant(KEY_SREDO,0620,2887,architecture)
+	CompareConstant(KEY_SREDO,0620,2887,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SREDO\n");
 cnt++;
@@ -1659,7 +1659,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SREPLACE
-	CompareConstant(KEY_SREPLACE,0621,2888,architecture)
+	CompareConstant(KEY_SREPLACE,0621,2888,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SREPLACE\n");
 cnt++;
@@ -1669,7 +1669,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SRIGHT
-	CompareConstant(KEY_SRIGHT,0622,2889,architecture)
+	CompareConstant(KEY_SRIGHT,0622,2889,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SRIGHT\n");
 cnt++;
@@ -1679,7 +1679,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SRSUME
-	CompareConstant(KEY_SRSUME,0623,2890,architecture)
+	CompareConstant(KEY_SRSUME,0623,2890,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SRSUME\n");
 cnt++;
@@ -1689,7 +1689,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SSAVE
-	CompareConstant(KEY_SSAVE,0624,2891,architecture)
+	CompareConstant(KEY_SSAVE,0624,2891,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SSAVE\n");
 cnt++;
@@ -1699,7 +1699,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SSUSPEND
-	CompareConstant(KEY_SSUSPEND,0625,2892,architecture)
+	CompareConstant(KEY_SSUSPEND,0625,2892,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SSUSPEND\n");
 cnt++;
@@ -1709,7 +1709,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SUNDO
-	CompareConstant(KEY_SUNDO,0626,2893,architecture)
+	CompareConstant(KEY_SUNDO,0626,2893,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SUNDO\n");
 cnt++;
@@ -1719,7 +1719,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_SUSPEND
-	CompareConstant(KEY_SUSPEND,0627,2894,architecture)
+	CompareConstant(KEY_SUSPEND,0627,2894,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_SUSPEND\n");
 cnt++;
@@ -1729,7 +1729,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_UNDO
-	CompareConstant(KEY_UNDO,0630,2895,architecture)
+	CompareConstant(KEY_UNDO,0630,2895,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_UNDO\n");
 cnt++;
@@ -1739,7 +1739,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_MOUSE
-	CompareConstant(KEY_MOUSE,0631,2896,architecture)
+	CompareConstant(KEY_MOUSE,0631,2896,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_MOUSE\n");
 cnt++;
@@ -1749,7 +1749,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_RESIZE
-	CompareConstant(KEY_RESIZE,0632,2897,architecture)
+	CompareConstant(KEY_RESIZE,0632,2897,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_RESIZE\n");
 cnt++;
@@ -1759,7 +1759,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef KEY_MAX
-	CompareConstant(KEY_MAX,0777,2898,architecture)
+	CompareConstant(KEY_MAX,0777,2898,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: KEY_MAX\n");
 cnt++;
@@ -1769,7 +1769,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef NCURSES_ATTR_SHIFT
-	CompareConstant(NCURSES_ATTR_SHIFT,8,5126,architecture)
+	CompareConstant(NCURSES_ATTR_SHIFT,8,5126,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: NCURSES_ATTR_SHIFT\n");
 cnt++;
@@ -1778,97 +1778,97 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(chtype,4, 8650, 2)
+CheckTypeSize(chtype,4, 8650, 2, 1.2, NULL, 9, NULL)
 #elif __ia64__
-CheckTypeSize(chtype,8, 8650, 3)
+CheckTypeSize(chtype,8, 8650, 3, 1.3, NULL, 9, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(chtype,4, 8650, 6)
+CheckTypeSize(chtype,4, 8650, 6, 1.2, NULL, 9, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(chtype,4, 8650, 10)
+CheckTypeSize(chtype,4, 8650, 10, 1.3, NULL, 9, NULL)
 #elif __powerpc64__
-CheckTypeSize(chtype,8, 8650, 9)
+CheckTypeSize(chtype,8, 8650, 9, 2.0, NULL, 9, NULL)
 #elif __s390x__
-CheckTypeSize(chtype,8, 8650, 12)
+CheckTypeSize(chtype,8, 8650, 12, 1.3, NULL, 9, NULL)
 #elif __x86_64__
-CheckTypeSize(chtype,8, 8650, 11)
+CheckTypeSize(chtype,8, 8650, 11, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8650,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,8650,0);
 Msg("Find size of chtype (8650)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(SCREEN,0, 8653, 2)
+CheckTypeSize(SCREEN,0, 8653, 2, 1.2, NULL, 8652, NULL)
 #elif __ia64__
-CheckTypeSize(SCREEN,0, 8653, 3)
+CheckTypeSize(SCREEN,0, 8653, 3, 1.3, NULL, 8652, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(SCREEN,0, 8653, 6)
+CheckTypeSize(SCREEN,0, 8653, 6, 1.2, NULL, 8652, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(SCREEN,0, 8653, 10)
+CheckTypeSize(SCREEN,0, 8653, 10, 1.3, NULL, 8652, NULL)
 #elif __powerpc64__
-CheckTypeSize(SCREEN,0, 8653, 9)
+CheckTypeSize(SCREEN,0, 8653, 9, 2.0, NULL, 8652, NULL)
 #elif __s390x__
-CheckTypeSize(SCREEN,0, 8653, 12)
+CheckTypeSize(SCREEN,0, 8653, 12, 1.3, NULL, 8652, NULL)
 #elif __x86_64__
-CheckTypeSize(SCREEN,0, 8653, 11)
+CheckTypeSize(SCREEN,0, 8653, 11, 2.0, NULL, 8652, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8653,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8652,NULL);\n",architecture,8653,0);
 Msg("Find size of SCREEN (8653)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(WINDOW,100, 8655, 2)
+CheckTypeSize(WINDOW,100, 8655, 2, 1.2, NULL, 8654, NULL)
 #elif __ia64__
-CheckTypeSize(WINDOW,128, 8655, 3)
+CheckTypeSize(WINDOW,128, 8655, 3, 1.3, NULL, 8654, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(WINDOW,100, 8655, 6)
+CheckTypeSize(WINDOW,100, 8655, 6, 1.2, NULL, 8654, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(WINDOW,100, 8655, 10)
+CheckTypeSize(WINDOW,100, 8655, 10, 1.3, NULL, 8654, NULL)
 #elif __powerpc64__
-CheckTypeSize(WINDOW,128, 8655, 9)
+CheckTypeSize(WINDOW,128, 8655, 9, 2.0, NULL, 8654, NULL)
 #elif __s390x__
-CheckTypeSize(WINDOW,128, 8655, 12)
+CheckTypeSize(WINDOW,128, 8655, 12, 1.3, NULL, 8654, NULL)
 #elif __x86_64__
-CheckTypeSize(WINDOW,128, 8655, 11)
+CheckTypeSize(WINDOW,128, 8655, 11, 2.0, NULL, 8654, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8655,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8654,NULL);\n",architecture,8655,0);
 Msg("Find size of WINDOW (8655)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(attr_t,4, 8656, 2)
+CheckTypeSize(attr_t,4, 8656, 2, 1.2, NULL, 8650, NULL)
 #elif __ia64__
-CheckTypeSize(attr_t,8, 8656, 3)
+CheckTypeSize(attr_t,8, 8656, 3, 1.3, NULL, 8650, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(attr_t,4, 8656, 6)
+CheckTypeSize(attr_t,4, 8656, 6, 1.2, NULL, 8650, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(attr_t,4, 8656, 10)
+CheckTypeSize(attr_t,4, 8656, 10, 1.3, NULL, 8650, NULL)
 #elif __powerpc64__
-CheckTypeSize(attr_t,8, 8656, 9)
+CheckTypeSize(attr_t,8, 8656, 9, 2.0, NULL, 8650, NULL)
 #elif __s390x__
-CheckTypeSize(attr_t,8, 8656, 12)
+CheckTypeSize(attr_t,8, 8656, 12, 1.3, NULL, 8650, NULL)
 #elif __x86_64__
-CheckTypeSize(attr_t,8, 8656, 11)
+CheckTypeSize(attr_t,8, 8656, 11, 2.0, NULL, 8650, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8656,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8650,NULL);\n",architecture,8656,0);
 Msg("Find size of attr_t (8656)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(cchar_t,24, 8658, 2)
+CheckTypeSize(cchar_t,24, 8658, 2, 1.2, NULL, 8657, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(cchar_t,24, 8658, 6)
+CheckTypeSize(cchar_t,24, 8658, 6, 1.2, NULL, 8657, NULL)
 #elif __ia64__
-CheckTypeSize(cchar_t,32, 8658, 3)
+CheckTypeSize(cchar_t,32, 8658, 3, 1.3, NULL, 8657, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(cchar_t,24, 8658, 10)
+CheckTypeSize(cchar_t,24, 8658, 10, 1.3, NULL, 8657, NULL)
 #elif __powerpc64__
-CheckTypeSize(cchar_t,32, 8658, 9)
+CheckTypeSize(cchar_t,32, 8658, 9, 2.0, NULL, 8657, NULL)
 #elif __s390x__
-CheckTypeSize(cchar_t,32, 8658, 12)
+CheckTypeSize(cchar_t,32, 8658, 12, 1.3, NULL, 8657, NULL)
 #elif __x86_64__
-CheckTypeSize(cchar_t,32, 8658, 11)
+CheckTypeSize(cchar_t,32, 8658, 11, 2.0, NULL, 8657, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8658,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8657,NULL);\n",architecture,8658,0);
 Msg("Find size of cchar_t (8658)\n");
 #endif
 
@@ -1880,7 +1880,7 @@ Msg("Find size of cchar_t (8658)\n");
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8663,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,8663,0);
 Msg("Find size of pdat (8663)\n");
 #endif
 
@@ -1892,12 +1892,12 @@ Msg("Find size of pdat (8663)\n");
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8654,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,8654,0);
 Msg("Find size of _win_st (8654)\n");
 #endif
 
 #if 1
-CheckTypeSize(bool,1, 8651, 1)
+CheckTypeSize(bool,1, 8651, 1, 1.3, NULL, 3, NULL)
 #endif
 
 extern int addch_db(const chtype);

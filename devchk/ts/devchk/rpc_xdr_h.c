@@ -54,45 +54,45 @@ CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159);
 CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160);
 CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161);
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9933,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9933,0);
 Msg("Find size of xdr_op (9933)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(XDR,24, 10412, 2)
+CheckTypeSize(XDR,24, 10412, 2, 1.3, NULL, 9934, NULL)
 #elif __ia64__
-CheckTypeSize(XDR,48, 10412, 3)
+CheckTypeSize(XDR,48, 10412, 3, 1.3, NULL, 9934, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(XDR,24, 10412, 10)
+CheckTypeSize(XDR,24, 10412, 10, 1.3, NULL, 9934, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(XDR,24, 10412, 6)
+CheckTypeSize(XDR,24, 10412, 6, 1.3, NULL, 9934, NULL)
 #elif __powerpc64__
-CheckTypeSize(XDR,48, 10412, 9)
+CheckTypeSize(XDR,48, 10412, 9, 2.0, NULL, 9934, NULL)
 #elif __s390x__
-CheckTypeSize(XDR,48, 10412, 12)
+CheckTypeSize(XDR,48, 10412, 12, 1.3, NULL, 9934, NULL)
 #elif __x86_64__
-CheckTypeSize(XDR,48, 10412, 11)
+CheckTypeSize(XDR,48, 10412, 11, 2.0, NULL, 9934, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10412,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9934,NULL);\n",architecture,10412,0);
 Msg("Find size of XDR (10412)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xdrproc_t,4, 9948, 2)
+CheckTypeSize(xdrproc_t,4, 9948, 2, 1.3, NULL, 9947, NULL)
 #elif __ia64__
-CheckTypeSize(xdrproc_t,8, 9948, 3)
+CheckTypeSize(xdrproc_t,8, 9948, 3, 1.3, NULL, 9947, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xdrproc_t,4, 9948, 10)
+CheckTypeSize(xdrproc_t,4, 9948, 10, 1.3, NULL, 9947, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xdrproc_t,4, 9948, 6)
+CheckTypeSize(xdrproc_t,4, 9948, 6, 1.3, NULL, 9947, NULL)
 #elif __powerpc64__
-CheckTypeSize(xdrproc_t,8, 9948, 9)
+CheckTypeSize(xdrproc_t,8, 9948, 9, 2.0, NULL, 9947, NULL)
 #elif __s390x__
-CheckTypeSize(xdrproc_t,8, 9948, 12)
+CheckTypeSize(xdrproc_t,8, 9948, 12, 1.3, NULL, 9947, NULL)
 #elif __x86_64__
-CheckTypeSize(xdrproc_t,8, 9948, 11)
+CheckTypeSize(xdrproc_t,8, 9948, 11, 2.0, NULL, 9947, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9948,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9947,NULL);\n",architecture,9948,0);
 Msg("Find size of xdrproc_t (9948)\n");
 #endif
 
@@ -104,7 +104,7 @@ Msg("Find size of xdrproc_t (9948)\n");
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9935,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9935,0);
 Msg("Find size of xdr_ops (9935)\n");
 #endif
 
@@ -116,7 +116,7 @@ Msg("Find size of xdr_ops (9935)\n");
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9949,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,9949,0);
 Msg("Find size of xdr_discrim (9949)\n");
 #endif
 

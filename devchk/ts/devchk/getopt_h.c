@@ -27,7 +27,7 @@ Msg("Checking data structures in getopt.h\n");
 printf("Checking data structures in getopt.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef no_argument
-	CompareConstant(no_argument,0,4378,architecture)
+	CompareConstant(no_argument,0,4378,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: no_argument\n");
 cnt++;
@@ -37,7 +37,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef required_argument
-	CompareConstant(required_argument,1,4379,architecture)
+	CompareConstant(required_argument,1,4379,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: required_argument\n");
 cnt++;
@@ -47,7 +47,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef optional_argument
-	CompareConstant(optional_argument,2,4380,architecture)
+	CompareConstant(optional_argument,2,4380,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: optional_argument\n");
 cnt++;
@@ -63,7 +63,7 @@ cnt++;
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10000,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10000,0);
 Msg("Find size of option (10000)\n");
 #endif
 

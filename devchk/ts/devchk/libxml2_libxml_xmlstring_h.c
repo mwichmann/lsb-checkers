@@ -30,21 +30,21 @@ printf("Checking data structures in libxml2/libxml/xmlstring.h\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlChar,1, 14547, 2)
+CheckTypeSize(xmlChar,1, 14547, 2, 3.1, NULL, 3, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlChar,1, 14547, 11)
+CheckTypeSize(xmlChar,1, 14547, 11, 3.1, NULL, 3, NULL)
 #elif __ia64__
-CheckTypeSize(xmlChar,1, 14547, 3)
+CheckTypeSize(xmlChar,1, 14547, 3, 3.1, NULL, 3, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlChar,1, 14547, 6)
+CheckTypeSize(xmlChar,1, 14547, 6, 3.1, NULL, 3, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlChar,1, 14547, 9)
+CheckTypeSize(xmlChar,1, 14547, 9, 3.1, NULL, 3, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlChar,1, 14547, 10)
+CheckTypeSize(xmlChar,1, 14547, 10, 3.1, NULL, 3, NULL)
 #elif __s390x__
-CheckTypeSize(xmlChar,1, 14547, 12)
+CheckTypeSize(xmlChar,1, 14547, 12, 3.1, NULL, 3, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14547,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,3, NULL);\n",architecture,14547,0);
 Msg("Find size of xmlChar (14547)\n");
 #endif
 

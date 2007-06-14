@@ -57,7 +57,7 @@ CheckEnum("AUTH_ERROR",AUTH_ERROR,1,34799);
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10417,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10417,0);
 Msg("Find size of accepted_reply (10417)\n");
 #endif
 
@@ -69,7 +69,7 @@ Msg("Find size of accepted_reply (10417)\n");
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10423,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10423,0);
 Msg("Find size of rejected_reply (10423)\n");
 #endif
 
@@ -81,7 +81,7 @@ Msg("Find size of rejected_reply (10423)\n");
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10425,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10425,0);
 Msg("Find size of reply_body (10425)\n");
 #endif
 
@@ -93,7 +93,7 @@ Msg("Find size of reply_body (10425)\n");
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10426,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10426,0);
 Msg("Find size of call_body (10426)\n");
 #endif
 
@@ -105,7 +105,7 @@ Msg("Find size of call_body (10426)\n");
 #elif __x86_64__
 #elif __powerpc64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9984,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,9984,0);
 Msg("Find size of rpc_msg (9984)\n");
 #endif
 

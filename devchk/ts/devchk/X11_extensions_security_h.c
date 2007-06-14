@@ -32,40 +32,40 @@ Msg("Checking data structures in X11/extensions/security.h\n");
 
 printf("Checking data structures in X11/extensions/security.h\n");
 #if __i386__
-CheckTypeSize(XSecurityAuthorization,4, 8596, 2)
+CheckTypeSize(XSecurityAuthorization,4, 8596, 2, 1.2, NULL, 9, NULL)
 #elif __ia64__
-CheckTypeSize(XSecurityAuthorization,8, 8596, 3)
+CheckTypeSize(XSecurityAuthorization,8, 8596, 3, 1.3, NULL, 9, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(XSecurityAuthorization,4, 8596, 6)
+CheckTypeSize(XSecurityAuthorization,4, 8596, 6, 1.2, NULL, 9, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(XSecurityAuthorization,4, 8596, 10)
+CheckTypeSize(XSecurityAuthorization,4, 8596, 10, 1.3, NULL, 9, NULL)
 #elif __powerpc64__
-CheckTypeSize(XSecurityAuthorization,8, 8596, 9)
+CheckTypeSize(XSecurityAuthorization,8, 8596, 9, 2.0, NULL, 9, NULL)
 #elif __s390x__
-CheckTypeSize(XSecurityAuthorization,8, 8596, 12)
+CheckTypeSize(XSecurityAuthorization,8, 8596, 12, 1.3, NULL, 9, NULL)
 #elif __x86_64__
-CheckTypeSize(XSecurityAuthorization,8, 8596, 11)
+CheckTypeSize(XSecurityAuthorization,8, 8596, 11, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8596,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,8596,0);
 Msg("Find size of XSecurityAuthorization (8596)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 2)
+CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 2, 1.2, NULL, 8597, NULL)
 #elif __ia64__
-CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 3)
+CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 3, 1.3, NULL, 8597, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 6)
+CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 6, 1.2, NULL, 8597, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 10)
+CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 10, 1.3, NULL, 8597, NULL)
 #elif __powerpc64__
-CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 9)
+CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 9, 2.0, NULL, 8597, NULL)
 #elif __s390x__
-CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 12)
+CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 12, 1.3, NULL, 8597, NULL)
 #elif __x86_64__
-CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 11)
+CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 11, 2.0, NULL, 8597, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8598,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8597, NULL);\n",architecture,8598,0);
 Msg("Find size of XSecurityAuthorizationAttributes (8598)\n");
 #endif
 

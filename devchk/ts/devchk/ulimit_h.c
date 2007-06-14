@@ -27,7 +27,7 @@ Msg("Checking data structures in ulimit.h\n");
 printf("Checking data structures in ulimit.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef UL_GETFSIZE
-	CompareConstant(UL_GETFSIZE,1,1916,architecture)
+	CompareConstant(UL_GETFSIZE,1,1916,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: UL_GETFSIZE\n");
 cnt++;
@@ -37,7 +37,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef UL_SETFSIZE
-	CompareConstant(UL_SETFSIZE,2,1917,architecture)
+	CompareConstant(UL_SETFSIZE,2,1917,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: UL_SETFSIZE\n");
 cnt++;

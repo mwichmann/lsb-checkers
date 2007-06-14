@@ -27,7 +27,7 @@ Msg("Checking data structures in sys/file.h\n");
 printf("Checking data structures in sys/file.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef LOCK_SH
-	CompareConstant(LOCK_SH,1,1203,architecture)
+	CompareConstant(LOCK_SH,1,1203,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: LOCK_SH\n");
 cnt++;
@@ -37,7 +37,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef LOCK_EX
-	CompareConstant(LOCK_EX,2,1204,architecture)
+	CompareConstant(LOCK_EX,2,1204,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: LOCK_EX\n");
 cnt++;
@@ -47,7 +47,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef LOCK_NB
-	CompareConstant(LOCK_NB,4,1205,architecture)
+	CompareConstant(LOCK_NB,4,1205,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: LOCK_NB\n");
 cnt++;
@@ -57,7 +57,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef LOCK_UN
-	CompareConstant(LOCK_UN,8,1206,architecture)
+	CompareConstant(LOCK_UN,8,1206,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: LOCK_UN\n");
 cnt++;

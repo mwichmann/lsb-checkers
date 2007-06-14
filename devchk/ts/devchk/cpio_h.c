@@ -27,7 +27,7 @@ Msg("Checking data structures in cpio.h\n");
 printf("Checking data structures in cpio.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef MAGIC
-	CompareStringConstant(MAGIC,"070707")
+	CompareStringConstant(MAGIC,"070707",1096,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: MAGIC\n");
 cnt++;
@@ -37,7 +37,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef C_IRUSR
-	CompareConstant(C_IRUSR,000400,1097,architecture)
+	CompareConstant(C_IRUSR,000400,1097,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: C_IRUSR\n");
 cnt++;
@@ -47,7 +47,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef C_IWUSR
-	CompareConstant(C_IWUSR,000200,1098,architecture)
+	CompareConstant(C_IWUSR,000200,1098,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: C_IWUSR\n");
 cnt++;
@@ -57,7 +57,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef C_IXUSR
-	CompareConstant(C_IXUSR,000100,1099,architecture)
+	CompareConstant(C_IXUSR,000100,1099,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: C_IXUSR\n");
 cnt++;
@@ -67,7 +67,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef C_IRGRP
-	CompareConstant(C_IRGRP,000040,1100,architecture)
+	CompareConstant(C_IRGRP,000040,1100,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: C_IRGRP\n");
 cnt++;
@@ -77,7 +77,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef C_IWGRP
-	CompareConstant(C_IWGRP,000020,1101,architecture)
+	CompareConstant(C_IWGRP,000020,1101,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: C_IWGRP\n");
 cnt++;
@@ -87,7 +87,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef C_IXGRP
-	CompareConstant(C_IXGRP,000010,1102,architecture)
+	CompareConstant(C_IXGRP,000010,1102,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: C_IXGRP\n");
 cnt++;
@@ -97,7 +97,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef C_IROTH
-	CompareConstant(C_IROTH,000004,1103,architecture)
+	CompareConstant(C_IROTH,000004,1103,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: C_IROTH\n");
 cnt++;
@@ -107,7 +107,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef C_IWOTH
-	CompareConstant(C_IWOTH,000002,1104,architecture)
+	CompareConstant(C_IWOTH,000002,1104,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: C_IWOTH\n");
 cnt++;
@@ -117,7 +117,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef C_IXOTH
-	CompareConstant(C_IXOTH,000001,1105,architecture)
+	CompareConstant(C_IXOTH,000001,1105,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: C_IXOTH\n");
 cnt++;
@@ -127,7 +127,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef C_ISUID
-	CompareConstant(C_ISUID,004000,1106,architecture)
+	CompareConstant(C_ISUID,004000,1106,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: C_ISUID\n");
 cnt++;
@@ -137,7 +137,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef C_ISGID
-	CompareConstant(C_ISGID,002000,1107,architecture)
+	CompareConstant(C_ISGID,002000,1107,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: C_ISGID\n");
 cnt++;
@@ -147,7 +147,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef C_ISVTX
-	CompareConstant(C_ISVTX,001000,1108,architecture)
+	CompareConstant(C_ISVTX,001000,1108,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: C_ISVTX\n");
 cnt++;
@@ -157,7 +157,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef C_ISBLK
-	CompareConstant(C_ISBLK,060000,1109,architecture)
+	CompareConstant(C_ISBLK,060000,1109,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: C_ISBLK\n");
 cnt++;
@@ -167,7 +167,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef C_ISCHR
-	CompareConstant(C_ISCHR,020000,1110,architecture)
+	CompareConstant(C_ISCHR,020000,1110,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: C_ISCHR\n");
 cnt++;
@@ -177,7 +177,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef C_ISDIR
-	CompareConstant(C_ISDIR,040000,1111,architecture)
+	CompareConstant(C_ISDIR,040000,1111,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: C_ISDIR\n");
 cnt++;
@@ -187,7 +187,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef C_ISFIFO
-	CompareConstant(C_ISFIFO,010000,1112,architecture)
+	CompareConstant(C_ISFIFO,010000,1112,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: C_ISFIFO\n");
 cnt++;
@@ -197,7 +197,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef C_ISSOCK
-	CompareConstant(C_ISSOCK,0140000,1113,architecture)
+	CompareConstant(C_ISSOCK,0140000,1113,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: C_ISSOCK\n");
 cnt++;
@@ -207,7 +207,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef C_ISLNK
-	CompareConstant(C_ISLNK,0120000,1114,architecture)
+	CompareConstant(C_ISLNK,0120000,1114,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: C_ISLNK\n");
 cnt++;
@@ -217,7 +217,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef C_ISCTG
-	CompareConstant(C_ISCTG,0110000,1115,architecture)
+	CompareConstant(C_ISCTG,0110000,1115,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: C_ISCTG\n");
 cnt++;
@@ -227,7 +227,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef C_ISREG
-	CompareConstant(C_ISREG,0100000,1116,architecture)
+	CompareConstant(C_ISREG,0100000,1116,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: C_ISREG\n");
 cnt++;

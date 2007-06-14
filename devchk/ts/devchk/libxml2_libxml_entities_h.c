@@ -28,97 +28,97 @@ Msg("Checking data structures in libxml2/libxml/entities.h\n");
 
 printf("Checking data structures in libxml2/libxml/entities.h\n");
 #if __i386__
-CheckTypeSize(xmlEntityType,4, 14718, 2)
+CheckTypeSize(xmlEntityType,4, 14718, 2, 3.1, NULL, 14717, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlEntityType,4, 14718, 11)
+CheckTypeSize(xmlEntityType,4, 14718, 11, 3.1, NULL, 14717, NULL)
 #elif __ia64__
-CheckTypeSize(xmlEntityType,4, 14718, 3)
+CheckTypeSize(xmlEntityType,4, 14718, 3, 3.1, NULL, 14717, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlEntityType,4, 14718, 6)
+CheckTypeSize(xmlEntityType,4, 14718, 6, 3.1, NULL, 14717, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlEntityType,4, 14718, 9)
+CheckTypeSize(xmlEntityType,4, 14718, 9, 3.1, NULL, 14717, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlEntityType,4, 14718, 10)
+CheckTypeSize(xmlEntityType,4, 14718, 10, 3.1, NULL, 14717, NULL)
 #elif __s390x__
-CheckTypeSize(xmlEntityType,4, 14718, 12)
+CheckTypeSize(xmlEntityType,4, 14718, 12, 3.1, NULL, 14717, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14718,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14717,NULL);\n",architecture,14718,0);
 Msg("Find size of xmlEntityType (14718)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlEntity,72, 14720, 2)
+CheckTypeSize(xmlEntity,72, 14720, 2, 3.1, NULL, 14716, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlEntity,136, 14720, 11)
+CheckTypeSize(xmlEntity,136, 14720, 11, 3.1, NULL, 14716, NULL)
 #elif __ia64__
-CheckTypeSize(xmlEntity,136, 14720, 3)
+CheckTypeSize(xmlEntity,136, 14720, 3, 3.1, NULL, 14716, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlEntity,72, 14720, 6)
+CheckTypeSize(xmlEntity,72, 14720, 6, 3.1, NULL, 14716, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlEntity,136, 14720, 9)
+CheckTypeSize(xmlEntity,136, 14720, 9, 3.1, NULL, 14716, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlEntity,72, 14720, 10)
+CheckTypeSize(xmlEntity,72, 14720, 10, 3.1, NULL, 14716, NULL)
 #elif __s390x__
-CheckTypeSize(xmlEntity,136, 14720, 12)
+CheckTypeSize(xmlEntity,136, 14720, 12, 3.1, NULL, 14716, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14720,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14716,NULL);\n",architecture,14720,0);
 Msg("Find size of xmlEntity (14720)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlEntityPtr,4, 14722, 2)
+CheckTypeSize(xmlEntityPtr,4, 14722, 2, 3.1, NULL, 14721, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlEntityPtr,8, 14722, 11)
+CheckTypeSize(xmlEntityPtr,8, 14722, 11, 3.1, NULL, 14721, NULL)
 #elif __ia64__
-CheckTypeSize(xmlEntityPtr,8, 14722, 3)
+CheckTypeSize(xmlEntityPtr,8, 14722, 3, 3.1, NULL, 14721, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlEntityPtr,4, 14722, 6)
+CheckTypeSize(xmlEntityPtr,4, 14722, 6, 3.1, NULL, 14721, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlEntityPtr,8, 14722, 9)
+CheckTypeSize(xmlEntityPtr,8, 14722, 9, 3.1, NULL, 14721, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlEntityPtr,4, 14722, 10)
+CheckTypeSize(xmlEntityPtr,4, 14722, 10, 3.1, NULL, 14721, NULL)
 #elif __s390x__
-CheckTypeSize(xmlEntityPtr,8, 14722, 12)
+CheckTypeSize(xmlEntityPtr,8, 14722, 12, 3.1, NULL, 14721, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14722,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14721,NULL);\n",architecture,14722,0);
 Msg("Find size of xmlEntityPtr (14722)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlEntitiesTable,0, 14724, 2)
+CheckTypeSize(xmlEntitiesTable,0, 14724, 2, 3.1, NULL, 14723, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlEntitiesTable,0, 14724, 11)
+CheckTypeSize(xmlEntitiesTable,0, 14724, 11, 3.1, NULL, 14723, NULL)
 #elif __ia64__
-CheckTypeSize(xmlEntitiesTable,0, 14724, 3)
+CheckTypeSize(xmlEntitiesTable,0, 14724, 3, 3.1, NULL, 14723, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlEntitiesTable,0, 14724, 6)
+CheckTypeSize(xmlEntitiesTable,0, 14724, 6, 3.1, NULL, 14723, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlEntitiesTable,0, 14724, 9)
+CheckTypeSize(xmlEntitiesTable,0, 14724, 9, 3.1, NULL, 14723, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlEntitiesTable,0, 14724, 10)
+CheckTypeSize(xmlEntitiesTable,0, 14724, 10, 3.1, NULL, 14723, NULL)
 #elif __s390x__
-CheckTypeSize(xmlEntitiesTable,0, 14724, 12)
+CheckTypeSize(xmlEntitiesTable,0, 14724, 12, 3.1, NULL, 14723, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14724,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14723,NULL);\n",architecture,14724,0);
 Msg("Find size of xmlEntitiesTable (14724)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlEntitiesTablePtr,4, 14726, 2)
+CheckTypeSize(xmlEntitiesTablePtr,4, 14726, 2, 3.1, NULL, 14725, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlEntitiesTablePtr,8, 14726, 11)
+CheckTypeSize(xmlEntitiesTablePtr,8, 14726, 11, 3.1, NULL, 14725, NULL)
 #elif __ia64__
-CheckTypeSize(xmlEntitiesTablePtr,8, 14726, 3)
+CheckTypeSize(xmlEntitiesTablePtr,8, 14726, 3, 3.1, NULL, 14725, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlEntitiesTablePtr,4, 14726, 6)
+CheckTypeSize(xmlEntitiesTablePtr,4, 14726, 6, 3.1, NULL, 14725, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlEntitiesTablePtr,8, 14726, 9)
+CheckTypeSize(xmlEntitiesTablePtr,8, 14726, 9, 3.1, NULL, 14725, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlEntitiesTablePtr,4, 14726, 10)
+CheckTypeSize(xmlEntitiesTablePtr,4, 14726, 10, 3.1, NULL, 14725, NULL)
 #elif __s390x__
-CheckTypeSize(xmlEntitiesTablePtr,8, 14726, 12)
+CheckTypeSize(xmlEntitiesTablePtr,8, 14726, 12, 3.1, NULL, 14725, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14726,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14725, NULL);\n",architecture,14726,0);
 Msg("Find size of xmlEntitiesTablePtr (14726)\n");
 #endif
 

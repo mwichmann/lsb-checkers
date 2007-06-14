@@ -26,373 +26,373 @@ Msg("Checking data structures in stdint.h\n");
 
 printf("Checking data structures in stdint.h\n");
 #if __i386__
-CheckTypeSize(int8_t,1, 6995, 2)
+CheckTypeSize(int8_t,1, 6995, 2, 1.2, NULL, 10505, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(int8_t,1, 6995, 6)
+CheckTypeSize(int8_t,1, 6995, 6, 1.2, NULL, 10505, NULL)
 #elif __ia64__
-CheckTypeSize(int8_t,1, 6995, 3)
+CheckTypeSize(int8_t,1, 6995, 3, 1.3, NULL, 10505, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(int8_t,1, 6995, 10)
+CheckTypeSize(int8_t,1, 6995, 10, 1.3, NULL, 10505, NULL)
 #elif __powerpc64__
-CheckTypeSize(int8_t,1, 6995, 9)
+CheckTypeSize(int8_t,1, 6995, 9, 2.0, NULL, 10505, NULL)
 #elif __s390x__
-CheckTypeSize(int8_t,1, 6995, 12)
+CheckTypeSize(int8_t,1, 6995, 12, 1.3, NULL, 10505, NULL)
 #elif __x86_64__
-CheckTypeSize(int8_t,1, 6995, 11)
+CheckTypeSize(int8_t,1, 6995, 11, 2.0, NULL, 10505, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6995,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10505,NULL);\n",architecture,6995,0);
 Msg("Find size of int8_t (6995)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(int16_t,2, 6996, 2)
+CheckTypeSize(int16_t,2, 6996, 2, 1.2, NULL, 4, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(int16_t,2, 6996, 6)
+CheckTypeSize(int16_t,2, 6996, 6, 1.2, NULL, 4, NULL)
 #elif __ia64__
-CheckTypeSize(int16_t,2, 6996, 3)
+CheckTypeSize(int16_t,2, 6996, 3, 1.3, NULL, 4, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(int16_t,2, 6996, 10)
+CheckTypeSize(int16_t,2, 6996, 10, 1.3, NULL, 4, NULL)
 #elif __powerpc64__
-CheckTypeSize(int16_t,2, 6996, 9)
+CheckTypeSize(int16_t,2, 6996, 9, 2.0, NULL, 4, NULL)
 #elif __s390x__
-CheckTypeSize(int16_t,2, 6996, 12)
+CheckTypeSize(int16_t,2, 6996, 12, 1.3, NULL, 4, NULL)
 #elif __x86_64__
-CheckTypeSize(int16_t,2, 6996, 11)
+CheckTypeSize(int16_t,2, 6996, 11, 2.0, NULL, 4, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6996,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,4,NULL);\n",architecture,6996,0);
 Msg("Find size of int16_t (6996)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(int32_t,4, 6997, 2)
+CheckTypeSize(int32_t,4, 6997, 2, 1.0, NULL, 6, NULL)
 #elif __ia64__
-CheckTypeSize(int32_t,4, 6997, 3)
+CheckTypeSize(int32_t,4, 6997, 3, 1.3, NULL, 6, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(int32_t,4, 6997, 6)
+CheckTypeSize(int32_t,4, 6997, 6, 1.2, NULL, 6, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(int32_t,4, 6997, 10)
+CheckTypeSize(int32_t,4, 6997, 10, 1.3, NULL, 6, NULL)
 #elif __powerpc64__
-CheckTypeSize(int32_t,4, 6997, 9)
+CheckTypeSize(int32_t,4, 6997, 9, 2.0, NULL, 6, NULL)
 #elif __s390x__
-CheckTypeSize(int32_t,4, 6997, 12)
+CheckTypeSize(int32_t,4, 6997, 12, 1.3, NULL, 6, NULL)
 #elif __x86_64__
-CheckTypeSize(int32_t,4, 6997, 11)
+CheckTypeSize(int32_t,4, 6997, 11, 2.0, NULL, 6, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6997,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,6997,0);
 Msg("Find size of int32_t (6997)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(int64_t,8, 6998, 2)
+CheckTypeSize(int64_t,8, 6998, 2, 2.0, NULL, 10, NULL)
 #elif __powerpc64__
-CheckTypeSize(int64_t,8, 6998, 9)
+CheckTypeSize(int64_t,8, 6998, 9, 2.0, NULL, 8, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(int64_t,8, 6998, 10)
+CheckTypeSize(int64_t,8, 6998, 10, 2.0, NULL, 10, NULL)
 #elif __x86_64__
-CheckTypeSize(int64_t,8, 6998, 11)
+CheckTypeSize(int64_t,8, 6998, 11, 2.0, NULL, 8, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(int64_t,8, 6998, 6)
+CheckTypeSize(int64_t,8, 6998, 6, 2.0, NULL, 10, NULL)
 #elif __s390x__
-CheckTypeSize(int64_t,8, 6998, 12)
+CheckTypeSize(int64_t,8, 6998, 12, 2.0, NULL, 8, NULL)
 #elif __ia64__
-CheckTypeSize(int64_t,8, 6998, 3)
+CheckTypeSize(int64_t,8, 6998, 3, 2.0, NULL, 8, NULL)
 #endif
 
 #if __i386__
-CheckTypeSize(intmax_t,8, 9016, 2)
+CheckTypeSize(intmax_t,8, 9016, 2, 2.0, NULL, 10, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(intmax_t,8, 9016, 6)
+CheckTypeSize(intmax_t,8, 9016, 6, 2.0, NULL, 10, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(intmax_t,8, 9016, 10)
+CheckTypeSize(intmax_t,8, 9016, 10, 2.0, NULL, 10, NULL)
 #elif __powerpc64__
-CheckTypeSize(intmax_t,8, 9016, 9)
+CheckTypeSize(intmax_t,8, 9016, 9, 2.0, NULL, 8, NULL)
 #elif __ia64__
-CheckTypeSize(intmax_t,8, 9016, 3)
+CheckTypeSize(intmax_t,8, 9016, 3, 2.0, NULL, 8, NULL)
 #elif __x86_64__
-CheckTypeSize(intmax_t,8, 9016, 11)
+CheckTypeSize(intmax_t,8, 9016, 11, 2.0, NULL, 8, NULL)
 #elif __s390x__
-CheckTypeSize(intmax_t,8, 9016, 12)
+CheckTypeSize(intmax_t,8, 9016, 12, 2.0, NULL, 8, NULL)
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckTypeSize(uintmax_t,8, 9017, 6)
+CheckTypeSize(uintmax_t,8, 9017, 6, 2.0, NULL, 11, NULL)
 #elif __ia64__
-CheckTypeSize(uintmax_t,8, 9017, 3)
+CheckTypeSize(uintmax_t,8, 9017, 3, 2.0, NULL, 9, NULL)
 #elif __i386__
-CheckTypeSize(uintmax_t,8, 9017, 2)
+CheckTypeSize(uintmax_t,8, 9017, 2, 2.0, NULL, 11, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(uintmax_t,8, 9017, 10)
+CheckTypeSize(uintmax_t,8, 9017, 10, 2.0, NULL, 11, NULL)
 #elif __powerpc64__
-CheckTypeSize(uintmax_t,8, 9017, 9)
+CheckTypeSize(uintmax_t,8, 9017, 9, 2.0, NULL, 9, NULL)
 #elif __x86_64__
-CheckTypeSize(uintmax_t,8, 9017, 11)
+CheckTypeSize(uintmax_t,8, 9017, 11, 2.0, NULL, 9, NULL)
 #elif __s390x__
-CheckTypeSize(uintmax_t,8, 9017, 12)
+CheckTypeSize(uintmax_t,8, 9017, 12, 2.0, NULL, 9, NULL)
 #endif
 
 #if __i386__
-CheckTypeSize(intptr_t,4, 9196, 2)
+CheckTypeSize(intptr_t,4, 9196, 2, 2.0, NULL, 6, NULL)
 #elif __powerpc64__
-CheckTypeSize(intptr_t,8, 9196, 9)
+CheckTypeSize(intptr_t,8, 9196, 9, 2.0, NULL, 8, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(intptr_t,4, 9196, 10)
+CheckTypeSize(intptr_t,4, 9196, 10, 2.0, NULL, 6, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(intptr_t,4, 9196, 6)
+CheckTypeSize(intptr_t,4, 9196, 6, 2.0, NULL, 6, NULL)
 #elif __ia64__
-CheckTypeSize(intptr_t,8, 9196, 3)
+CheckTypeSize(intptr_t,8, 9196, 3, 2.0, NULL, 8, NULL)
 #elif __x86_64__
-CheckTypeSize(intptr_t,8, 9196, 11)
+CheckTypeSize(intptr_t,8, 9196, 11, 2.0, NULL, 8, NULL)
 #elif __s390x__
-CheckTypeSize(intptr_t,8, 9196, 12)
+CheckTypeSize(intptr_t,8, 9196, 12, 2.0, NULL, 8, NULL)
 #endif
 
 #if __i386__
-CheckTypeSize(uint8_t,1, 9270, 2)
+CheckTypeSize(uint8_t,1, 9270, 2, 1.2, NULL, 3, NULL)
 #elif __ia64__
-CheckTypeSize(uint8_t,1, 9270, 3)
+CheckTypeSize(uint8_t,1, 9270, 3, 1.3, NULL, 3, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(uint8_t,1, 9270, 6)
+CheckTypeSize(uint8_t,1, 9270, 6, 1.2, NULL, 3, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(uint8_t,1, 9270, 10)
+CheckTypeSize(uint8_t,1, 9270, 10, 1.3, NULL, 3, NULL)
 #elif __powerpc64__
-CheckTypeSize(uint8_t,1, 9270, 9)
+CheckTypeSize(uint8_t,1, 9270, 9, 2.0, NULL, 3, NULL)
 #elif __s390x__
-CheckTypeSize(uint8_t,1, 9270, 12)
+CheckTypeSize(uint8_t,1, 9270, 12, 1.3, NULL, 3, NULL)
 #elif __x86_64__
-CheckTypeSize(uint8_t,1, 9270, 11)
+CheckTypeSize(uint8_t,1, 9270, 11, 2.0, NULL, 3, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9270,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,3,NULL);\n",architecture,9270,0);
 Msg("Find size of uint8_t (9270)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(uint16_t,2, 9271, 2)
+CheckTypeSize(uint16_t,2, 9271, 2, 1.2, NULL, 5, NULL)
 #elif __ia64__
-CheckTypeSize(uint16_t,2, 9271, 3)
+CheckTypeSize(uint16_t,2, 9271, 3, 1.3, NULL, 5, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(uint16_t,2, 9271, 6)
+CheckTypeSize(uint16_t,2, 9271, 6, 1.2, NULL, 5, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(uint16_t,2, 9271, 10)
+CheckTypeSize(uint16_t,2, 9271, 10, 1.3, NULL, 5, NULL)
 #elif __powerpc64__
-CheckTypeSize(uint16_t,2, 9271, 9)
+CheckTypeSize(uint16_t,2, 9271, 9, 2.0, NULL, 5, NULL)
 #elif __s390x__
-CheckTypeSize(uint16_t,2, 9271, 12)
+CheckTypeSize(uint16_t,2, 9271, 12, 1.3, NULL, 5, NULL)
 #elif __x86_64__
-CheckTypeSize(uint16_t,2, 9271, 11)
+CheckTypeSize(uint16_t,2, 9271, 11, 2.0, NULL, 5, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9271,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,5,NULL);\n",architecture,9271,0);
 Msg("Find size of uint16_t (9271)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(uint32_t,4, 9272, 2)
+CheckTypeSize(uint32_t,4, 9272, 2, 1.2, NULL, 7, NULL)
 #elif __ia64__
-CheckTypeSize(uint32_t,4, 9272, 3)
+CheckTypeSize(uint32_t,4, 9272, 3, 1.3, NULL, 7, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(uint32_t,4, 9272, 6)
+CheckTypeSize(uint32_t,4, 9272, 6, 1.2, NULL, 7, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(uint32_t,4, 9272, 10)
+CheckTypeSize(uint32_t,4, 9272, 10, 1.3, NULL, 7, NULL)
 #elif __powerpc64__
-CheckTypeSize(uint32_t,4, 9272, 9)
+CheckTypeSize(uint32_t,4, 9272, 9, 2.0, NULL, 7, NULL)
 #elif __s390x__
-CheckTypeSize(uint32_t,4, 9272, 12)
+CheckTypeSize(uint32_t,4, 9272, 12, 1.3, NULL, 7, NULL)
 #elif __x86_64__
-CheckTypeSize(uint32_t,4, 9272, 11)
+CheckTypeSize(uint32_t,4, 9272, 11, 2.0, NULL, 7, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9272,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,9272,0);
 Msg("Find size of uint32_t (9272)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(uintptr_t,4, 9308, 2)
+CheckTypeSize(uintptr_t,4, 9308, 2, 2.0, NULL, 7, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(uintptr_t,4, 9308, 6)
+CheckTypeSize(uintptr_t,4, 9308, 6, 2.0, NULL, 7, NULL)
 #elif __powerpc64__
-CheckTypeSize(uintptr_t,8, 9308, 9)
+CheckTypeSize(uintptr_t,8, 9308, 9, 2.0, NULL, 9, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(uintptr_t,4, 9308, 10)
+CheckTypeSize(uintptr_t,4, 9308, 10, 2.0, NULL, 7, NULL)
 #elif __ia64__
-CheckTypeSize(uintptr_t,8, 9308, 3)
+CheckTypeSize(uintptr_t,8, 9308, 3, 2.0, NULL, 9, NULL)
 #elif __x86_64__
-CheckTypeSize(uintptr_t,8, 9308, 11)
+CheckTypeSize(uintptr_t,8, 9308, 11, 2.0, NULL, 9, NULL)
 #elif __s390x__
-CheckTypeSize(uintptr_t,8, 9308, 12)
+CheckTypeSize(uintptr_t,8, 9308, 12, 2.0, NULL, 9, NULL)
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckTypeSize(uint64_t,8, 10176, 6)
+CheckTypeSize(uint64_t,8, 10176, 6, 2.0, NULL, 11, NULL)
 #elif __powerpc64__
-CheckTypeSize(uint64_t,8, 10176, 9)
+CheckTypeSize(uint64_t,8, 10176, 9, 2.0, NULL, 9, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(uint64_t,8, 10176, 10)
+CheckTypeSize(uint64_t,8, 10176, 10, 2.0, NULL, 11, NULL)
 #elif __ia64__
-CheckTypeSize(uint64_t,8, 10176, 3)
+CheckTypeSize(uint64_t,8, 10176, 3, 2.0, NULL, 9, NULL)
 #elif __x86_64__
-CheckTypeSize(uint64_t,8, 10176, 11)
+CheckTypeSize(uint64_t,8, 10176, 11, 2.0, NULL, 9, NULL)
 #elif __i386__
-CheckTypeSize(uint64_t,8, 10176, 2)
+CheckTypeSize(uint64_t,8, 10176, 2, 2.0, NULL, 11, NULL)
 #elif __s390x__
-CheckTypeSize(uint64_t,8, 10176, 12)
+CheckTypeSize(uint64_t,8, 10176, 12, 2.0, NULL, 9, NULL)
 #endif
 
 #if 1
-CheckTypeSize(int_least8_t,1, 16608, 1)
+CheckTypeSize(int_least8_t,1, 16608, 1, 3.2, NULL, 10505, NULL)
 #endif
 
 #if 1
-CheckTypeSize(int_least16_t,2, 16609, 1)
+CheckTypeSize(int_least16_t,2, 16609, 1, 3.2, NULL, 11264, NULL)
 #endif
 
 #if 1
-CheckTypeSize(int_least32_t,4, 16610, 1)
+CheckTypeSize(int_least32_t,4, 16610, 1, 3.2, NULL, 6, NULL)
 #endif
 
 #if 1
-CheckTypeSize(uint_least8_t,1, 16611, 1)
+CheckTypeSize(uint_least8_t,1, 16611, 1, 3.2, NULL, 3, NULL)
 #endif
 
 #if 1
-CheckTypeSize(uint_least16_t,2, 16612, 1)
+CheckTypeSize(uint_least16_t,2, 16612, 1, 3.2, NULL, 5, NULL)
 #endif
 
 #if 1
-CheckTypeSize(uint_least32_t,4, 16613, 1)
+CheckTypeSize(uint_least32_t,4, 16613, 1, 3.2, NULL, 7, NULL)
 #endif
 
 #if 1
-CheckTypeSize(int_fast8_t,1, 16614, 1)
+CheckTypeSize(int_fast8_t,1, 16614, 1, 3.2, NULL, 10505, NULL)
 #endif
 
 #if 1
-CheckTypeSize(uint_fast8_t,1, 16615, 1)
+CheckTypeSize(uint_fast8_t,1, 16615, 1, 3.2, NULL, 3, NULL)
 #endif
 
 #if __ia64__
-CheckTypeSize(int_least64_t,8, 16616, 3)
+CheckTypeSize(int_least64_t,8, 16616, 3, 3.2, NULL, 8, NULL)
 #elif __powerpc64__
-CheckTypeSize(int_least64_t,8, 16616, 9)
+CheckTypeSize(int_least64_t,8, 16616, 9, 3.2, NULL, 8, NULL)
 #elif __x86_64__
-CheckTypeSize(int_least64_t,8, 16616, 11)
+CheckTypeSize(int_least64_t,8, 16616, 11, 3.2, NULL, 8, NULL)
 #elif __s390x__
-CheckTypeSize(int_least64_t,8, 16616, 12)
+CheckTypeSize(int_least64_t,8, 16616, 12, 3.2, NULL, 8, NULL)
 #elif __i386__
-CheckTypeSize(int_least64_t,8, 16616, 2)
+CheckTypeSize(int_least64_t,8, 16616, 2, 3.2, NULL, 10, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(int_least64_t,8, 16616, 6)
+CheckTypeSize(int_least64_t,8, 16616, 6, 3.2, NULL, 10, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(int_least64_t,8, 16616, 10)
+CheckTypeSize(int_least64_t,8, 16616, 10, 3.2, NULL, 10, NULL)
 #endif
 
 #if __ia64__
-CheckTypeSize(uint_least64_t,8, 16617, 3)
+CheckTypeSize(uint_least64_t,8, 16617, 3, 3.2, NULL, 9, NULL)
 #elif __powerpc64__
-CheckTypeSize(uint_least64_t,8, 16617, 9)
+CheckTypeSize(uint_least64_t,8, 16617, 9, 3.2, NULL, 9, NULL)
 #elif __x86_64__
-CheckTypeSize(uint_least64_t,8, 16617, 11)
+CheckTypeSize(uint_least64_t,8, 16617, 11, 3.2, NULL, 9, NULL)
 #elif __s390x__
-CheckTypeSize(uint_least64_t,8, 16617, 12)
+CheckTypeSize(uint_least64_t,8, 16617, 12, 3.2, NULL, 9, NULL)
 #elif __i386__
-CheckTypeSize(uint_least64_t,8, 16617, 2)
+CheckTypeSize(uint_least64_t,8, 16617, 2, 3.2, NULL, 11, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(uint_least64_t,8, 16617, 6)
+CheckTypeSize(uint_least64_t,8, 16617, 6, 3.2, NULL, 11, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(uint_least64_t,8, 16617, 10)
+CheckTypeSize(uint_least64_t,8, 16617, 10, 3.2, NULL, 11, NULL)
 #endif
 
 #if __ia64__
-CheckTypeSize(int_fast16_t,8, 16618, 3)
+CheckTypeSize(int_fast16_t,8, 16618, 3, 3.2, NULL, 8, NULL)
 #elif __powerpc64__
-CheckTypeSize(int_fast16_t,8, 16618, 9)
+CheckTypeSize(int_fast16_t,8, 16618, 9, 3.2, NULL, 8, NULL)
 #elif __x86_64__
-CheckTypeSize(int_fast16_t,8, 16618, 11)
+CheckTypeSize(int_fast16_t,8, 16618, 11, 3.2, NULL, 8, NULL)
 #elif __s390x__
-CheckTypeSize(int_fast16_t,8, 16618, 12)
+CheckTypeSize(int_fast16_t,8, 16618, 12, 3.2, NULL, 8, NULL)
 #elif __i386__
-CheckTypeSize(int_fast16_t,4, 16618, 2)
+CheckTypeSize(int_fast16_t,4, 16618, 2, 3.2, NULL, 6, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(int_fast16_t,4, 16618, 6)
+CheckTypeSize(int_fast16_t,4, 16618, 6, 3.2, NULL, 6, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(int_fast16_t,4, 16618, 10)
+CheckTypeSize(int_fast16_t,4, 16618, 10, 3.2, NULL, 6, NULL)
 #endif
 
 #if __ia64__
-CheckTypeSize(int_fast32_t,8, 16619, 3)
+CheckTypeSize(int_fast32_t,8, 16619, 3, 3.2, NULL, 8, NULL)
 #elif __powerpc64__
-CheckTypeSize(int_fast32_t,8, 16619, 9)
+CheckTypeSize(int_fast32_t,8, 16619, 9, 3.2, NULL, 8, NULL)
 #elif __x86_64__
-CheckTypeSize(int_fast32_t,8, 16619, 11)
+CheckTypeSize(int_fast32_t,8, 16619, 11, 3.2, NULL, 8, NULL)
 #elif __s390x__
-CheckTypeSize(int_fast32_t,8, 16619, 12)
+CheckTypeSize(int_fast32_t,8, 16619, 12, 3.2, NULL, 8, NULL)
 #elif __i386__
-CheckTypeSize(int_fast32_t,4, 16619, 2)
+CheckTypeSize(int_fast32_t,4, 16619, 2, 3.2, NULL, 6, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(int_fast32_t,4, 16619, 6)
+CheckTypeSize(int_fast32_t,4, 16619, 6, 3.2, NULL, 6, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(int_fast32_t,4, 16619, 10)
+CheckTypeSize(int_fast32_t,4, 16619, 10, 3.2, NULL, 6, NULL)
 #endif
 
 #if __ia64__
-CheckTypeSize(int_fast64_t,8, 16620, 3)
+CheckTypeSize(int_fast64_t,8, 16620, 3, 3.2, NULL, 8, NULL)
 #elif __powerpc64__
-CheckTypeSize(int_fast64_t,8, 16620, 9)
+CheckTypeSize(int_fast64_t,8, 16620, 9, 3.2, NULL, 8, NULL)
 #elif __x86_64__
-CheckTypeSize(int_fast64_t,8, 16620, 11)
+CheckTypeSize(int_fast64_t,8, 16620, 11, 3.2, NULL, 8, NULL)
 #elif __s390x__
-CheckTypeSize(int_fast64_t,8, 16620, 12)
+CheckTypeSize(int_fast64_t,8, 16620, 12, 3.2, NULL, 8, NULL)
 #elif __i386__
-CheckTypeSize(int_fast64_t,8, 16620, 2)
+CheckTypeSize(int_fast64_t,8, 16620, 2, 3.2, NULL, 10, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(int_fast64_t,8, 16620, 6)
+CheckTypeSize(int_fast64_t,8, 16620, 6, 3.2, NULL, 10, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(int_fast64_t,8, 16620, 10)
+CheckTypeSize(int_fast64_t,8, 16620, 10, 3.2, NULL, 10, NULL)
 #endif
 
 #if __ia64__
-CheckTypeSize(uint_fast16_t,8, 16621, 3)
+CheckTypeSize(uint_fast16_t,8, 16621, 3, 3.2, NULL, 9, NULL)
 #elif __powerpc64__
-CheckTypeSize(uint_fast16_t,8, 16621, 9)
+CheckTypeSize(uint_fast16_t,8, 16621, 9, 3.2, NULL, 9, NULL)
 #elif __x86_64__
-CheckTypeSize(uint_fast16_t,8, 16621, 11)
+CheckTypeSize(uint_fast16_t,8, 16621, 11, 3.2, NULL, 9, NULL)
 #elif __s390x__
-CheckTypeSize(uint_fast16_t,8, 16621, 12)
+CheckTypeSize(uint_fast16_t,8, 16621, 12, 3.2, NULL, 9, NULL)
 #elif __i386__
-CheckTypeSize(uint_fast16_t,4, 16621, 2)
+CheckTypeSize(uint_fast16_t,4, 16621, 2, 3.2, NULL, 7, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(uint_fast16_t,4, 16621, 6)
+CheckTypeSize(uint_fast16_t,4, 16621, 6, 3.2, NULL, 7, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(uint_fast16_t,4, 16621, 10)
+CheckTypeSize(uint_fast16_t,4, 16621, 10, 3.2, NULL, 7, NULL)
 #endif
 
 #if __ia64__
-CheckTypeSize(uint_fast32_t,8, 16622, 3)
+CheckTypeSize(uint_fast32_t,8, 16622, 3, 3.2, NULL, 9, NULL)
 #elif __powerpc64__
-CheckTypeSize(uint_fast32_t,8, 16622, 9)
+CheckTypeSize(uint_fast32_t,8, 16622, 9, 3.2, NULL, 9, NULL)
 #elif __x86_64__
-CheckTypeSize(uint_fast32_t,8, 16622, 11)
+CheckTypeSize(uint_fast32_t,8, 16622, 11, 3.2, NULL, 9, NULL)
 #elif __s390x__
-CheckTypeSize(uint_fast32_t,8, 16622, 12)
+CheckTypeSize(uint_fast32_t,8, 16622, 12, 3.2, NULL, 9, NULL)
 #elif __i386__
-CheckTypeSize(uint_fast32_t,4, 16622, 2)
+CheckTypeSize(uint_fast32_t,4, 16622, 2, 3.2, NULL, 7, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(uint_fast32_t,4, 16622, 6)
+CheckTypeSize(uint_fast32_t,4, 16622, 6, 3.2, NULL, 7, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(uint_fast32_t,4, 16622, 10)
+CheckTypeSize(uint_fast32_t,4, 16622, 10, 3.2, NULL, 7, NULL)
 #endif
 
 #if __ia64__
-CheckTypeSize(uint_fast64_t,8, 16623, 3)
+CheckTypeSize(uint_fast64_t,8, 16623, 3, 3.2, NULL, 9, NULL)
 #elif __powerpc64__
-CheckTypeSize(uint_fast64_t,8, 16623, 9)
+CheckTypeSize(uint_fast64_t,8, 16623, 9, 3.2, NULL, 9, NULL)
 #elif __x86_64__
-CheckTypeSize(uint_fast64_t,8, 16623, 11)
+CheckTypeSize(uint_fast64_t,8, 16623, 11, 3.2, NULL, 9, NULL)
 #elif __s390x__
-CheckTypeSize(uint_fast64_t,8, 16623, 12)
+CheckTypeSize(uint_fast64_t,8, 16623, 12, 3.2, NULL, 9, NULL)
 #elif __i386__
-CheckTypeSize(uint_fast64_t,8, 16623, 2)
+CheckTypeSize(uint_fast64_t,8, 16623, 2, 3.2, NULL, 11, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(uint_fast64_t,8, 16623, 6)
+CheckTypeSize(uint_fast64_t,8, 16623, 6, 3.2, NULL, 11, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(uint_fast64_t,8, 16623, 10)
+CheckTypeSize(uint_fast64_t,8, 16623, 10, 3.2, NULL, 11, NULL)
 #endif
 
 #ifdef TET_TEST

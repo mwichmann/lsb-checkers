@@ -27,7 +27,7 @@ Msg("Checking data structures in fmtmsg.h\n");
 printf("Checking data structures in fmtmsg.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef MM_HARD
-	CompareConstant(MM_HARD,1,4876,architecture)
+	CompareConstant(MM_HARD,1,4876,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MM_HARD\n");
 cnt++;
@@ -37,7 +37,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef MM_SOFT
-	CompareConstant(MM_SOFT,2,4877,architecture)
+	CompareConstant(MM_SOFT,2,4877,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MM_SOFT\n");
 cnt++;
@@ -47,7 +47,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef MM_FIRM
-	CompareConstant(MM_FIRM,4,4878,architecture)
+	CompareConstant(MM_FIRM,4,4878,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MM_FIRM\n");
 cnt++;
@@ -57,7 +57,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef MM_APPL
-	CompareConstant(MM_APPL,8,4879,architecture)
+	CompareConstant(MM_APPL,8,4879,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MM_APPL\n");
 cnt++;
@@ -67,7 +67,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef MM_UTIL
-	CompareConstant(MM_UTIL,16,4880,architecture)
+	CompareConstant(MM_UTIL,16,4880,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MM_UTIL\n");
 cnt++;
@@ -77,7 +77,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef MM_OPSYS
-	CompareConstant(MM_OPSYS,32,4881,architecture)
+	CompareConstant(MM_OPSYS,32,4881,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MM_OPSYS\n");
 cnt++;
@@ -87,7 +87,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef MM_RECOVER
-	CompareConstant(MM_RECOVER,64,4882,architecture)
+	CompareConstant(MM_RECOVER,64,4882,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MM_RECOVER\n");
 cnt++;
@@ -97,7 +97,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef MM_NRECOV
-	CompareConstant(MM_NRECOV,128,4883,architecture)
+	CompareConstant(MM_NRECOV,128,4883,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MM_NRECOV\n");
 cnt++;
@@ -107,7 +107,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef MM_NOSEV
-	CompareConstant(MM_NOSEV,0,4886,architecture)
+	CompareConstant(MM_NOSEV,0,4886,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MM_NOSEV\n");
 cnt++;
@@ -117,7 +117,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef MM_HALT
-	CompareConstant(MM_HALT,1,4887,architecture)
+	CompareConstant(MM_HALT,1,4887,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MM_HALT\n");
 cnt++;
@@ -127,7 +127,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef MM_ERROR
-	CompareConstant(MM_ERROR,2,4888,architecture)
+	CompareConstant(MM_ERROR,2,4888,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MM_ERROR\n");
 cnt++;
@@ -137,7 +137,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef MM_NULLLBL
-	CompareConstant(MM_NULLLBL,((char *) 0),4891,architecture)
+	CompareConstant(MM_NULLLBL,((char *) 0),4891,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MM_NULLLBL\n");
 cnt++;

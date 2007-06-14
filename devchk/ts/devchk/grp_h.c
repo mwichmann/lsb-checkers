@@ -33,7 +33,7 @@ printf("Checking data structures in grp.h\n");
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6894,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,6894,0);
 Msg("Find size of group (6894)\n");
 #endif
 
