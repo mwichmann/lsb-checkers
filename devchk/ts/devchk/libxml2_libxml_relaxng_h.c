@@ -30,192 +30,192 @@ Msg("Checking data structures in libxml2/libxml/relaxng.h\n");
 
 printf("Checking data structures in libxml2/libxml/relaxng.h\n");
 #if __i386__
-CheckTypeSize(xmlRelaxNGParserCtxt,0, 14840, 2)
+CheckTypeSize(xmlRelaxNGParserCtxt,0, 14840, 2, 3.1, NULL, 14839, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlRelaxNGParserCtxt,0, 14840, 11)
+CheckTypeSize(xmlRelaxNGParserCtxt,0, 14840, 11, 3.1, NULL, 14839, NULL)
 #elif __ia64__
-CheckTypeSize(xmlRelaxNGParserCtxt,0, 14840, 3)
+CheckTypeSize(xmlRelaxNGParserCtxt,0, 14840, 3, 3.1, NULL, 14839, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlRelaxNGParserCtxt,0, 14840, 6)
+CheckTypeSize(xmlRelaxNGParserCtxt,0, 14840, 6, 3.1, NULL, 14839, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlRelaxNGParserCtxt,0, 14840, 9)
+CheckTypeSize(xmlRelaxNGParserCtxt,0, 14840, 9, 3.1, NULL, 14839, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlRelaxNGParserCtxt,0, 14840, 10)
+CheckTypeSize(xmlRelaxNGParserCtxt,0, 14840, 10, 3.1, NULL, 14839, NULL)
 #elif __s390x__
-CheckTypeSize(xmlRelaxNGParserCtxt,0, 14840, 12)
+CheckTypeSize(xmlRelaxNGParserCtxt,0, 14840, 12, 3.1, NULL, 14839, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14840,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14839,NULL);\n",architecture,14840,0);
 Msg("Find size of xmlRelaxNGParserCtxt (14840)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlRelaxNGParserCtxtPtr,4, 14842, 2)
+CheckTypeSize(xmlRelaxNGParserCtxtPtr,4, 14842, 2, 3.1, NULL, 14841, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlRelaxNGParserCtxtPtr,8, 14842, 11)
+CheckTypeSize(xmlRelaxNGParserCtxtPtr,8, 14842, 11, 3.1, NULL, 14841, NULL)
 #elif __ia64__
-CheckTypeSize(xmlRelaxNGParserCtxtPtr,8, 14842, 3)
+CheckTypeSize(xmlRelaxNGParserCtxtPtr,8, 14842, 3, 3.1, NULL, 14841, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlRelaxNGParserCtxtPtr,4, 14842, 6)
+CheckTypeSize(xmlRelaxNGParserCtxtPtr,4, 14842, 6, 3.1, NULL, 14841, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlRelaxNGParserCtxtPtr,8, 14842, 9)
+CheckTypeSize(xmlRelaxNGParserCtxtPtr,8, 14842, 9, 3.1, NULL, 14841, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlRelaxNGParserCtxtPtr,4, 14842, 10)
+CheckTypeSize(xmlRelaxNGParserCtxtPtr,4, 14842, 10, 3.1, NULL, 14841, NULL)
 #elif __s390x__
-CheckTypeSize(xmlRelaxNGParserCtxtPtr,8, 14842, 12)
+CheckTypeSize(xmlRelaxNGParserCtxtPtr,8, 14842, 12, 3.1, NULL, 14841, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14842,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14841,NULL);\n",architecture,14842,0);
 Msg("Find size of xmlRelaxNGParserCtxtPtr (14842)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlRelaxNGValidCtxt,0, 14844, 2)
+CheckTypeSize(xmlRelaxNGValidCtxt,0, 14844, 2, 3.1, NULL, 14843, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlRelaxNGValidCtxt,0, 14844, 11)
+CheckTypeSize(xmlRelaxNGValidCtxt,0, 14844, 11, 3.1, NULL, 14843, NULL)
 #elif __ia64__
-CheckTypeSize(xmlRelaxNGValidCtxt,0, 14844, 3)
+CheckTypeSize(xmlRelaxNGValidCtxt,0, 14844, 3, 3.1, NULL, 14843, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlRelaxNGValidCtxt,0, 14844, 6)
+CheckTypeSize(xmlRelaxNGValidCtxt,0, 14844, 6, 3.1, NULL, 14843, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlRelaxNGValidCtxt,0, 14844, 9)
+CheckTypeSize(xmlRelaxNGValidCtxt,0, 14844, 9, 3.1, NULL, 14843, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlRelaxNGValidCtxt,0, 14844, 10)
+CheckTypeSize(xmlRelaxNGValidCtxt,0, 14844, 10, 3.1, NULL, 14843, NULL)
 #elif __s390x__
-CheckTypeSize(xmlRelaxNGValidCtxt,0, 14844, 12)
+CheckTypeSize(xmlRelaxNGValidCtxt,0, 14844, 12, 3.1, NULL, 14843, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14844,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14843,NULL);\n",architecture,14844,0);
 Msg("Find size of xmlRelaxNGValidCtxt (14844)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlRelaxNGValidCtxtPtr,4, 14846, 2)
+CheckTypeSize(xmlRelaxNGValidCtxtPtr,4, 14846, 2, 3.1, NULL, 14845, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlRelaxNGValidCtxtPtr,8, 14846, 11)
+CheckTypeSize(xmlRelaxNGValidCtxtPtr,8, 14846, 11, 3.1, NULL, 14845, NULL)
 #elif __ia64__
-CheckTypeSize(xmlRelaxNGValidCtxtPtr,8, 14846, 3)
+CheckTypeSize(xmlRelaxNGValidCtxtPtr,8, 14846, 3, 3.1, NULL, 14845, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlRelaxNGValidCtxtPtr,4, 14846, 6)
+CheckTypeSize(xmlRelaxNGValidCtxtPtr,4, 14846, 6, 3.1, NULL, 14845, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlRelaxNGValidCtxtPtr,8, 14846, 9)
+CheckTypeSize(xmlRelaxNGValidCtxtPtr,8, 14846, 9, 3.1, NULL, 14845, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlRelaxNGValidCtxtPtr,4, 14846, 10)
+CheckTypeSize(xmlRelaxNGValidCtxtPtr,4, 14846, 10, 3.1, NULL, 14845, NULL)
 #elif __s390x__
-CheckTypeSize(xmlRelaxNGValidCtxtPtr,8, 14846, 12)
+CheckTypeSize(xmlRelaxNGValidCtxtPtr,8, 14846, 12, 3.1, NULL, 14845, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14846,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14845,NULL);\n",architecture,14846,0);
 Msg("Find size of xmlRelaxNGValidCtxtPtr (14846)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlRelaxNG,0, 14848, 2)
+CheckTypeSize(xmlRelaxNG,0, 14848, 2, 3.1, NULL, 14847, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlRelaxNG,0, 14848, 11)
+CheckTypeSize(xmlRelaxNG,0, 14848, 11, 3.1, NULL, 14847, NULL)
 #elif __ia64__
-CheckTypeSize(xmlRelaxNG,0, 14848, 3)
+CheckTypeSize(xmlRelaxNG,0, 14848, 3, 3.1, NULL, 14847, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlRelaxNG,0, 14848, 6)
+CheckTypeSize(xmlRelaxNG,0, 14848, 6, 3.1, NULL, 14847, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlRelaxNG,0, 14848, 9)
+CheckTypeSize(xmlRelaxNG,0, 14848, 9, 3.1, NULL, 14847, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlRelaxNG,0, 14848, 10)
+CheckTypeSize(xmlRelaxNG,0, 14848, 10, 3.1, NULL, 14847, NULL)
 #elif __s390x__
-CheckTypeSize(xmlRelaxNG,0, 14848, 12)
+CheckTypeSize(xmlRelaxNG,0, 14848, 12, 3.1, NULL, 14847, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14848,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14847,NULL);\n",architecture,14848,0);
 Msg("Find size of xmlRelaxNG (14848)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlRelaxNGPtr,4, 14850, 2)
+CheckTypeSize(xmlRelaxNGPtr,4, 14850, 2, 3.1, NULL, 14849, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlRelaxNGPtr,8, 14850, 11)
+CheckTypeSize(xmlRelaxNGPtr,8, 14850, 11, 3.1, NULL, 14849, NULL)
 #elif __ia64__
-CheckTypeSize(xmlRelaxNGPtr,8, 14850, 3)
+CheckTypeSize(xmlRelaxNGPtr,8, 14850, 3, 3.1, NULL, 14849, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlRelaxNGPtr,4, 14850, 6)
+CheckTypeSize(xmlRelaxNGPtr,4, 14850, 6, 3.1, NULL, 14849, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlRelaxNGPtr,8, 14850, 9)
+CheckTypeSize(xmlRelaxNGPtr,8, 14850, 9, 3.1, NULL, 14849, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlRelaxNGPtr,4, 14850, 10)
+CheckTypeSize(xmlRelaxNGPtr,4, 14850, 10, 3.1, NULL, 14849, NULL)
 #elif __s390x__
-CheckTypeSize(xmlRelaxNGPtr,8, 14850, 12)
+CheckTypeSize(xmlRelaxNGPtr,8, 14850, 12, 3.1, NULL, 14849, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14850,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14849,NULL);\n",architecture,14850,0);
 Msg("Find size of xmlRelaxNGPtr (14850)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlRelaxNGValidityErrorFunc,4, 14851, 2)
+CheckTypeSize(xmlRelaxNGValidityErrorFunc,4, 14851, 2, 3.1, NULL, 14655, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlRelaxNGValidityErrorFunc,8, 14851, 11)
+CheckTypeSize(xmlRelaxNGValidityErrorFunc,8, 14851, 11, 3.1, NULL, 14655, NULL)
 #elif __ia64__
-CheckTypeSize(xmlRelaxNGValidityErrorFunc,8, 14851, 3)
+CheckTypeSize(xmlRelaxNGValidityErrorFunc,8, 14851, 3, 3.1, NULL, 14655, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlRelaxNGValidityErrorFunc,4, 14851, 6)
+CheckTypeSize(xmlRelaxNGValidityErrorFunc,4, 14851, 6, 3.1, NULL, 14655, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlRelaxNGValidityErrorFunc,8, 14851, 9)
+CheckTypeSize(xmlRelaxNGValidityErrorFunc,8, 14851, 9, 3.1, NULL, 14655, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlRelaxNGValidityErrorFunc,4, 14851, 10)
+CheckTypeSize(xmlRelaxNGValidityErrorFunc,4, 14851, 10, 3.1, NULL, 14655, NULL)
 #elif __s390x__
-CheckTypeSize(xmlRelaxNGValidityErrorFunc,8, 14851, 12)
+CheckTypeSize(xmlRelaxNGValidityErrorFunc,8, 14851, 12, 3.1, NULL, 14655, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14851,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14655,NULL);\n",architecture,14851,0);
 Msg("Find size of xmlRelaxNGValidityErrorFunc (14851)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlRelaxNGValidityWarningFunc,4, 14852, 2)
+CheckTypeSize(xmlRelaxNGValidityWarningFunc,4, 14852, 2, 3.1, NULL, 14655, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlRelaxNGValidityWarningFunc,8, 14852, 11)
+CheckTypeSize(xmlRelaxNGValidityWarningFunc,8, 14852, 11, 3.1, NULL, 14655, NULL)
 #elif __ia64__
-CheckTypeSize(xmlRelaxNGValidityWarningFunc,8, 14852, 3)
+CheckTypeSize(xmlRelaxNGValidityWarningFunc,8, 14852, 3, 3.1, NULL, 14655, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlRelaxNGValidityWarningFunc,4, 14852, 6)
+CheckTypeSize(xmlRelaxNGValidityWarningFunc,4, 14852, 6, 3.1, NULL, 14655, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlRelaxNGValidityWarningFunc,8, 14852, 9)
+CheckTypeSize(xmlRelaxNGValidityWarningFunc,8, 14852, 9, 3.1, NULL, 14655, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlRelaxNGValidityWarningFunc,4, 14852, 10)
+CheckTypeSize(xmlRelaxNGValidityWarningFunc,4, 14852, 10, 3.1, NULL, 14655, NULL)
 #elif __s390x__
-CheckTypeSize(xmlRelaxNGValidityWarningFunc,8, 14852, 12)
+CheckTypeSize(xmlRelaxNGValidityWarningFunc,8, 14852, 12, 3.1, NULL, 14655, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14852,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14655,NULL);\n",architecture,14852,0);
 Msg("Find size of xmlRelaxNGValidityWarningFunc (14852)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlRelaxNGValidErr,4, 15090, 2)
+CheckTypeSize(xmlRelaxNGValidErr,4, 15090, 2, 3.1, NULL, 15089, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlRelaxNGValidErr,4, 15090, 11)
+CheckTypeSize(xmlRelaxNGValidErr,4, 15090, 11, 3.1, NULL, 15089, NULL)
 #elif __ia64__
-CheckTypeSize(xmlRelaxNGValidErr,4, 15090, 3)
+CheckTypeSize(xmlRelaxNGValidErr,4, 15090, 3, 3.1, NULL, 15089, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlRelaxNGValidErr,4, 15090, 6)
+CheckTypeSize(xmlRelaxNGValidErr,4, 15090, 6, 3.1, NULL, 15089, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlRelaxNGValidErr,4, 15090, 9)
+CheckTypeSize(xmlRelaxNGValidErr,4, 15090, 9, 3.1, NULL, 15089, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlRelaxNGValidErr,4, 15090, 10)
+CheckTypeSize(xmlRelaxNGValidErr,4, 15090, 10, 3.1, NULL, 15089, NULL)
 #elif __s390x__
-CheckTypeSize(xmlRelaxNGValidErr,4, 15090, 12)
+CheckTypeSize(xmlRelaxNGValidErr,4, 15090, 12, 3.1, NULL, 15089, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15090,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15089,NULL);\n",architecture,15090,0);
 Msg("Find size of xmlRelaxNGValidErr (15090)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlRelaxNGParserFlag,4, 15092, 2)
+CheckTypeSize(xmlRelaxNGParserFlag,4, 15092, 2, 3.1, NULL, 15091, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlRelaxNGParserFlag,4, 15092, 11)
+CheckTypeSize(xmlRelaxNGParserFlag,4, 15092, 11, 3.1, NULL, 15091, NULL)
 #elif __ia64__
-CheckTypeSize(xmlRelaxNGParserFlag,4, 15092, 3)
+CheckTypeSize(xmlRelaxNGParserFlag,4, 15092, 3, 3.1, NULL, 15091, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlRelaxNGParserFlag,4, 15092, 6)
+CheckTypeSize(xmlRelaxNGParserFlag,4, 15092, 6, 3.1, NULL, 15091, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlRelaxNGParserFlag,4, 15092, 9)
+CheckTypeSize(xmlRelaxNGParserFlag,4, 15092, 9, 3.1, NULL, 15091, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlRelaxNGParserFlag,4, 15092, 10)
+CheckTypeSize(xmlRelaxNGParserFlag,4, 15092, 10, 3.1, NULL, 15091, NULL)
 #elif __s390x__
-CheckTypeSize(xmlRelaxNGParserFlag,4, 15092, 12)
+CheckTypeSize(xmlRelaxNGParserFlag,4, 15092, 12, 3.1, NULL, 15091, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15092,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15091, NULL);\n",architecture,15092,0);
 Msg("Find size of xmlRelaxNGParserFlag (15092)\n");
 #endif
 

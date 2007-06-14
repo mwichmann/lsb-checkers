@@ -47,7 +47,7 @@ printf("Checking data structures in rpc/clnt.h\n");
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CLSET_TIMEOUT
-	CompareConstant(CLSET_TIMEOUT,1,4286,architecture)
+	CompareConstant(CLSET_TIMEOUT,1,4286,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: CLSET_TIMEOUT\n");
 cnt++;
@@ -57,7 +57,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CLGET_TIMEOUT
-	CompareConstant(CLGET_TIMEOUT,2,4287,architecture)
+	CompareConstant(CLGET_TIMEOUT,2,4287,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: CLGET_TIMEOUT\n");
 cnt++;
@@ -67,7 +67,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CLGET_SERVER_ADDR
-	CompareConstant(CLGET_SERVER_ADDR,3,4288,architecture)
+	CompareConstant(CLGET_SERVER_ADDR,3,4288,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: CLGET_SERVER_ADDR\n");
 cnt++;
@@ -77,7 +77,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CLGET_FD
-	CompareConstant(CLGET_FD,6,4289,architecture)
+	CompareConstant(CLGET_FD,6,4289,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: CLGET_FD\n");
 cnt++;
@@ -87,7 +87,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CLGET_SVC_ADDR
-	CompareConstant(CLGET_SVC_ADDR,7,4290,architecture)
+	CompareConstant(CLGET_SVC_ADDR,7,4290,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: CLGET_SVC_ADDR\n");
 cnt++;
@@ -97,7 +97,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CLSET_FD_CLOSE
-	CompareConstant(CLSET_FD_CLOSE,8,4291,architecture)
+	CompareConstant(CLSET_FD_CLOSE,8,4291,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: CLSET_FD_CLOSE\n");
 cnt++;
@@ -107,7 +107,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CLSET_FD_NCLOSE
-	CompareConstant(CLSET_FD_NCLOSE,9,4292,architecture)
+	CompareConstant(CLSET_FD_NCLOSE,9,4292,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: CLSET_FD_NCLOSE\n");
 cnt++;
@@ -117,7 +117,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CLGET_XID
-	CompareConstant(CLGET_XID,10,4293,architecture)
+	CompareConstant(CLGET_XID,10,4293,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: CLGET_XID\n");
 cnt++;
@@ -127,7 +127,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CLSET_XID
-	CompareConstant(CLSET_XID,11,4294,architecture)
+	CompareConstant(CLSET_XID,11,4294,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: CLSET_XID\n");
 cnt++;
@@ -137,7 +137,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CLGET_VERS
-	CompareConstant(CLGET_VERS,12,4295,architecture)
+	CompareConstant(CLGET_VERS,12,4295,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: CLGET_VERS\n");
 cnt++;
@@ -147,7 +147,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CLSET_VERS
-	CompareConstant(CLSET_VERS,13,4296,architecture)
+	CompareConstant(CLSET_VERS,13,4296,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: CLSET_VERS\n");
 cnt++;
@@ -157,7 +157,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CLGET_PROG
-	CompareConstant(CLGET_PROG,14,4297,architecture)
+	CompareConstant(CLGET_PROG,14,4297,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: CLGET_PROG\n");
 cnt++;
@@ -167,7 +167,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CLSET_PROG
-	CompareConstant(CLSET_PROG,15,4298,architecture)
+	CompareConstant(CLSET_PROG,15,4298,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: CLSET_PROG\n");
 cnt++;
@@ -177,7 +177,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CLSET_RETRY_TIMEOUT
-	CompareConstant(CLSET_RETRY_TIMEOUT,4,4302,architecture)
+	CompareConstant(CLSET_RETRY_TIMEOUT,4,4302,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: CLSET_RETRY_TIMEOUT\n");
 cnt++;
@@ -187,7 +187,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CLGET_RETRY_TIMEOUT
-	CompareConstant(CLGET_RETRY_TIMEOUT,5,4303,architecture)
+	CompareConstant(CLGET_RETRY_TIMEOUT,5,4303,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: CLGET_RETRY_TIMEOUT\n");
 cnt++;
@@ -201,7 +201,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef NULLPROC
-	CompareConstant(NULLPROC,((u_long)0),4310,architecture)
+	CompareConstant(NULLPROC,((u_long)0),4310,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: NULLPROC\n");
 cnt++;
@@ -399,7 +399,7 @@ CheckEnum("RPC_UDERROR",RPC_UDERROR,23,32090);
 CheckEnum("RPC_INPROGRESS",RPC_INPROGRESS,24,32091);
 CheckEnum("RPC_STALERACHANDLE",RPC_STALERACHANDLE,25,32092);
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9916,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9916,0);
 Msg("Find size of clnt_stat (9916)\n");
 #endif
 
@@ -411,7 +411,7 @@ Msg("Find size of clnt_stat (9916)\n");
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9917,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9917,0);
 Msg("Find size of rpc_err (9917)\n");
 #endif
 
@@ -423,26 +423,26 @@ Msg("Find size of rpc_err (9917)\n");
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9922,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9922,0);
 Msg("Find size of clnt_ops (9922)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(CLIENT,12, 10389, 2)
+CheckTypeSize(CLIENT,12, 10389, 2, 1.3, NULL, 9921, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(CLIENT,12, 10389, 10)
+CheckTypeSize(CLIENT,12, 10389, 10, 1.3, NULL, 9921, NULL)
 #elif __ia64__
-CheckTypeSize(CLIENT,24, 10389, 3)
+CheckTypeSize(CLIENT,24, 10389, 3, 1.3, NULL, 9921, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(CLIENT,12, 10389, 6)
+CheckTypeSize(CLIENT,12, 10389, 6, 1.3, NULL, 9921, NULL)
 #elif __powerpc64__
-CheckTypeSize(CLIENT,24, 10389, 9)
+CheckTypeSize(CLIENT,24, 10389, 9, 2.0, NULL, 9921, NULL)
 #elif __x86_64__
-CheckTypeSize(CLIENT,24, 10389, 11)
+CheckTypeSize(CLIENT,24, 10389, 11, 2.0, NULL, 9921, NULL)
 #elif __s390x__
-CheckTypeSize(CLIENT,24, 10389, 12)
+CheckTypeSize(CLIENT,24, 10389, 12, 1.3, NULL, 9921, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10389,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9921, NULL);\n",architecture,10389,0);
 Msg("Find size of CLIENT (10389)\n");
 #endif
 

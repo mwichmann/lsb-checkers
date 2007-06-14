@@ -27,7 +27,7 @@ Msg("Checking data structures in signal.h\n");
 printf("Checking data structures in signal.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef NSIG
-	CompareConstant(NSIG,65,2460,architecture)
+	CompareConstant(NSIG,65,2460,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: NSIG\n");
 cnt++;
@@ -37,7 +37,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SV_ONSTACK
-	CompareConstant(SV_ONSTACK,(1<<0),2462,architecture)
+	CompareConstant(SV_ONSTACK,(1<<0),2462,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SV_ONSTACK\n");
 cnt++;
@@ -47,7 +47,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SV_INTERRUPT
-	CompareConstant(SV_INTERRUPT,(1<<1),2463,architecture)
+	CompareConstant(SV_INTERRUPT,(1<<1),2463,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SV_INTERRUPT\n");
 cnt++;
@@ -57,7 +57,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SV_RESETHAND
-	CompareConstant(SV_RESETHAND,(1<<2),2464,architecture)
+	CompareConstant(SV_RESETHAND,(1<<2),2464,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SV_RESETHAND\n");
 cnt++;
@@ -67,7 +67,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SIGSET_NWORDS
-	CompareConstant(_SIGSET_NWORDS,(1024/(8*sizeof(unsigned long))),3098,architecture)
+	CompareConstant(_SIGSET_NWORDS,(1024/(8*sizeof(unsigned long))),3098,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: _SIGSET_NWORDS\n");
 cnt++;
@@ -77,7 +77,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGHUP
-	CompareConstant(SIGHUP,1,3102,architecture)
+	CompareConstant(SIGHUP,1,3102,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGHUP\n");
 cnt++;
@@ -87,7 +87,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGINT
-	CompareConstant(SIGINT,2,3103,architecture)
+	CompareConstant(SIGINT,2,3103,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGINT\n");
 cnt++;
@@ -97,7 +97,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGQUIT
-	CompareConstant(SIGQUIT,3,3104,architecture)
+	CompareConstant(SIGQUIT,3,3104,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGQUIT\n");
 cnt++;
@@ -107,7 +107,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGILL
-	CompareConstant(SIGILL,4,3105,architecture)
+	CompareConstant(SIGILL,4,3105,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGILL\n");
 cnt++;
@@ -117,7 +117,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGTRAP
-	CompareConstant(SIGTRAP,5,3106,architecture)
+	CompareConstant(SIGTRAP,5,3106,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGTRAP\n");
 cnt++;
@@ -127,7 +127,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGABRT
-	CompareConstant(SIGABRT,6,3107,architecture)
+	CompareConstant(SIGABRT,6,3107,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGABRT\n");
 cnt++;
@@ -137,7 +137,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGIOT
-	CompareConstant(SIGIOT,6,3108,architecture)
+	CompareConstant(SIGIOT,6,3108,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGIOT\n");
 cnt++;
@@ -147,7 +147,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGBUS
-	CompareConstant(SIGBUS,7,3109,architecture)
+	CompareConstant(SIGBUS,7,3109,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGBUS\n");
 cnt++;
@@ -157,7 +157,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGFPE
-	CompareConstant(SIGFPE,8,3110,architecture)
+	CompareConstant(SIGFPE,8,3110,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGFPE\n");
 cnt++;
@@ -167,7 +167,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGKILL
-	CompareConstant(SIGKILL,9,3111,architecture)
+	CompareConstant(SIGKILL,9,3111,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGKILL\n");
 cnt++;
@@ -177,7 +177,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGUSR1
-	CompareConstant(SIGUSR1,10,3112,architecture)
+	CompareConstant(SIGUSR1,10,3112,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGUSR1\n");
 cnt++;
@@ -187,7 +187,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGSEGV
-	CompareConstant(SIGSEGV,11,3113,architecture)
+	CompareConstant(SIGSEGV,11,3113,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGSEGV\n");
 cnt++;
@@ -197,7 +197,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGUSR2
-	CompareConstant(SIGUSR2,12,3114,architecture)
+	CompareConstant(SIGUSR2,12,3114,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGUSR2\n");
 cnt++;
@@ -207,7 +207,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGPIPE
-	CompareConstant(SIGPIPE,13,3115,architecture)
+	CompareConstant(SIGPIPE,13,3115,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGPIPE\n");
 cnt++;
@@ -217,7 +217,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGALRM
-	CompareConstant(SIGALRM,14,3116,architecture)
+	CompareConstant(SIGALRM,14,3116,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGALRM\n");
 cnt++;
@@ -227,7 +227,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGTERM
-	CompareConstant(SIGTERM,15,3117,architecture)
+	CompareConstant(SIGTERM,15,3117,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGTERM\n");
 cnt++;
@@ -237,7 +237,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGSTKFLT
-	CompareConstant(SIGSTKFLT,16,3118,architecture)
+	CompareConstant(SIGSTKFLT,16,3118,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGSTKFLT\n");
 cnt++;
@@ -247,7 +247,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGCHLD
-	CompareConstant(SIGCHLD,17,3119,architecture)
+	CompareConstant(SIGCHLD,17,3119,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGCHLD\n");
 cnt++;
@@ -257,7 +257,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGCLD
-	CompareConstant(SIGCLD,SIGCHLD,3120,architecture)
+	CompareConstant(SIGCLD,SIGCHLD,3120,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGCLD\n");
 cnt++;
@@ -267,7 +267,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGCONT
-	CompareConstant(SIGCONT,18,3121,architecture)
+	CompareConstant(SIGCONT,18,3121,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGCONT\n");
 cnt++;
@@ -277,7 +277,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGSTOP
-	CompareConstant(SIGSTOP,19,3122,architecture)
+	CompareConstant(SIGSTOP,19,3122,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGSTOP\n");
 cnt++;
@@ -287,7 +287,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGTSTP
-	CompareConstant(SIGTSTP,20,3123,architecture)
+	CompareConstant(SIGTSTP,20,3123,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGTSTP\n");
 cnt++;
@@ -297,7 +297,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGTTIN
-	CompareConstant(SIGTTIN,21,3124,architecture)
+	CompareConstant(SIGTTIN,21,3124,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGTTIN\n");
 cnt++;
@@ -307,7 +307,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGTTOU
-	CompareConstant(SIGTTOU,22,3125,architecture)
+	CompareConstant(SIGTTOU,22,3125,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGTTOU\n");
 cnt++;
@@ -317,7 +317,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGURG
-	CompareConstant(SIGURG,23,3126,architecture)
+	CompareConstant(SIGURG,23,3126,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SIGURG\n");
 cnt++;
@@ -327,7 +327,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGXCPU
-	CompareConstant(SIGXCPU,24,3127,architecture)
+	CompareConstant(SIGXCPU,24,3127,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGXCPU\n");
 cnt++;
@@ -337,7 +337,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGXFSZ
-	CompareConstant(SIGXFSZ,25,3128,architecture)
+	CompareConstant(SIGXFSZ,25,3128,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGXFSZ\n");
 cnt++;
@@ -347,7 +347,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGVTALRM
-	CompareConstant(SIGVTALRM,26,3129,architecture)
+	CompareConstant(SIGVTALRM,26,3129,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGVTALRM\n");
 cnt++;
@@ -357,7 +357,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGPROF
-	CompareConstant(SIGPROF,27,3130,architecture)
+	CompareConstant(SIGPROF,27,3130,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGPROF\n");
 cnt++;
@@ -367,7 +367,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGWINCH
-	CompareConstant(SIGWINCH,28,3131,architecture)
+	CompareConstant(SIGWINCH,28,3131,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGWINCH\n");
 cnt++;
@@ -377,7 +377,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGIO
-	CompareConstant(SIGIO,29,3132,architecture)
+	CompareConstant(SIGIO,29,3132,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGIO\n");
 cnt++;
@@ -387,7 +387,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGPOLL
-	CompareConstant(SIGPOLL,SIGIO,3133,architecture)
+	CompareConstant(SIGPOLL,SIGIO,3133,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGPOLL\n");
 cnt++;
@@ -397,7 +397,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGPWR
-	CompareConstant(SIGPWR,30,3134,architecture)
+	CompareConstant(SIGPWR,30,3134,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGPWR\n");
 cnt++;
@@ -407,7 +407,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGSYS
-	CompareConstant(SIGSYS,31,3135,architecture)
+	CompareConstant(SIGSYS,31,3135,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGSYS\n");
 cnt++;
@@ -417,7 +417,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGUNUSED
-	CompareConstant(SIGUNUSED,31,3136,architecture)
+	CompareConstant(SIGUNUSED,31,3136,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGUNUSED\n");
 cnt++;
@@ -427,7 +427,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGRTMIN
-	CompareConstant(SIGRTMIN,(__libc_current_sigrtmin ()),3137,architecture)
+	CompareConstant(SIGRTMIN,(__libc_current_sigrtmin ()),3137,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGRTMIN\n");
 cnt++;
@@ -437,7 +437,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGRTMAX
-	CompareConstant(SIGRTMAX,(__libc_current_sigrtmax ()),3138,architecture)
+	CompareConstant(SIGRTMAX,(__libc_current_sigrtmax ()),3138,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGRTMAX\n");
 cnt++;
@@ -447,7 +447,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SA_NOCLDSTOP
-	CompareConstant(SA_NOCLDSTOP,0x00000001,3139,architecture)
+	CompareConstant(SA_NOCLDSTOP,0x00000001,3139,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SA_NOCLDSTOP\n");
 cnt++;
@@ -457,7 +457,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SA_NOCLDWAIT
-	CompareConstant(SA_NOCLDWAIT,0x00000002,3140,architecture)
+	CompareConstant(SA_NOCLDWAIT,0x00000002,3140,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SA_NOCLDWAIT\n");
 cnt++;
@@ -467,7 +467,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SA_SIGINFO
-	CompareConstant(SA_SIGINFO,0x00000004,3141,architecture)
+	CompareConstant(SA_SIGINFO,0x00000004,3141,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SA_SIGINFO\n");
 cnt++;
@@ -477,7 +477,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SA_ONSTACK
-	CompareConstant(SA_ONSTACK,0x08000000,3143,architecture)
+	CompareConstant(SA_ONSTACK,0x08000000,3143,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SA_ONSTACK\n");
 cnt++;
@@ -487,7 +487,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SA_RESTART
-	CompareConstant(SA_RESTART,0x10000000,3144,architecture)
+	CompareConstant(SA_RESTART,0x10000000,3144,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SA_RESTART\n");
 cnt++;
@@ -497,7 +497,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SA_INTERRUPT
-	CompareConstant(SA_INTERRUPT,0x20000000,3145,architecture)
+	CompareConstant(SA_INTERRUPT,0x20000000,3145,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SA_INTERRUPT\n");
 cnt++;
@@ -507,7 +507,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SA_NODEFER
-	CompareConstant(SA_NODEFER,0x40000000,3146,architecture)
+	CompareConstant(SA_NODEFER,0x40000000,3146,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SA_NODEFER\n");
 cnt++;
@@ -517,7 +517,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SA_RESETHAND
-	CompareConstant(SA_RESETHAND,0x80000000,3147,architecture)
+	CompareConstant(SA_RESETHAND,0x80000000,3147,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SA_RESETHAND\n");
 cnt++;
@@ -527,7 +527,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SA_NOMASK
-	CompareConstant(SA_NOMASK,SA_NODEFER,3148,architecture)
+	CompareConstant(SA_NOMASK,SA_NODEFER,3148,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SA_NOMASK\n");
 cnt++;
@@ -537,7 +537,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SA_ONESHOT
-	CompareConstant(SA_ONESHOT,SA_RESETHAND,3149,architecture)
+	CompareConstant(SA_ONESHOT,SA_RESETHAND,3149,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SA_ONESHOT\n");
 cnt++;
@@ -547,7 +547,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SS_ONSTACK
-	CompareConstant(SS_ONSTACK,1,3150,architecture)
+	CompareConstant(SS_ONSTACK,1,3150,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: SS_ONSTACK\n");
 cnt++;
@@ -557,7 +557,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SS_DISABLE
-	CompareConstant(SS_DISABLE,2,3151,architecture)
+	CompareConstant(SS_DISABLE,2,3151,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: SS_DISABLE\n");
 cnt++;
@@ -567,7 +567,7 @@ cnt++;
 
 #if __powerpc64__
 #ifdef MINSIGSTKSZ
-	CompareConstant(MINSIGSTKSZ,2048,3152,architecture)
+	CompareConstant(MINSIGSTKSZ,2048,3152,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: MINSIGSTKSZ\n");
 cnt++;
@@ -575,7 +575,7 @@ cnt++;
 
 #elif __powerpc__ && !__powerpc64__
 #ifdef MINSIGSTKSZ
-	CompareConstant(MINSIGSTKSZ,2048,3152,architecture)
+	CompareConstant(MINSIGSTKSZ,2048,3152,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: MINSIGSTKSZ\n");
 cnt++;
@@ -583,7 +583,7 @@ cnt++;
 
 #elif __ia64__
 #ifdef MINSIGSTKSZ
-	CompareConstant(MINSIGSTKSZ,131027,3152,architecture)
+	CompareConstant(MINSIGSTKSZ,131027,3152,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: MINSIGSTKSZ\n");
 cnt++;
@@ -591,7 +591,7 @@ cnt++;
 
 #elif __i386__
 #ifdef MINSIGSTKSZ
-	CompareConstant(MINSIGSTKSZ,2048,3152,architecture)
+	CompareConstant(MINSIGSTKSZ,2048,3152,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: MINSIGSTKSZ\n");
 cnt++;
@@ -599,7 +599,7 @@ cnt++;
 
 #elif __s390x__
 #ifdef MINSIGSTKSZ
-	CompareConstant(MINSIGSTKSZ,2048,3152,architecture)
+	CompareConstant(MINSIGSTKSZ,2048,3152,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: MINSIGSTKSZ\n");
 cnt++;
@@ -607,7 +607,7 @@ cnt++;
 
 #elif __x86_64__
 #ifdef MINSIGSTKSZ
-	CompareConstant(MINSIGSTKSZ,2048,3152,architecture)
+	CompareConstant(MINSIGSTKSZ,2048,3152,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: MINSIGSTKSZ\n");
 cnt++;
@@ -615,7 +615,7 @@ cnt++;
 
 #elif __s390__ && !__s390x__
 #ifdef MINSIGSTKSZ
-	CompareConstant(MINSIGSTKSZ,2048,3152,architecture)
+	CompareConstant(MINSIGSTKSZ,2048,3152,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: MINSIGSTKSZ\n");
 cnt++;
@@ -624,12 +624,12 @@ cnt++;
 #else
 Msg( "No definition for MINSIGSTKSZ (3152, int) in db\n");
 #ifdef MINSIGSTKSZ
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3152,%d);\n", architecture, MINSIGSTKSZ);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3152,%d,'""2.0""',NULL);\n", architecture, MINSIGSTKSZ);
 #endif
 #endif
 #if __powerpc64__
 #ifdef SIGSTKSZ
-	CompareConstant(SIGSTKSZ,8192,3153,architecture)
+	CompareConstant(SIGSTKSZ,8192,3153,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: SIGSTKSZ\n");
 cnt++;
@@ -637,7 +637,7 @@ cnt++;
 
 #elif __powerpc__ && !__powerpc64__
 #ifdef SIGSTKSZ
-	CompareConstant(SIGSTKSZ,8192,3153,architecture)
+	CompareConstant(SIGSTKSZ,8192,3153,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: SIGSTKSZ\n");
 cnt++;
@@ -645,7 +645,7 @@ cnt++;
 
 #elif __ia64__
 #ifdef SIGSTKSZ
-	CompareConstant(SIGSTKSZ,262144,3153,architecture)
+	CompareConstant(SIGSTKSZ,262144,3153,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: SIGSTKSZ\n");
 cnt++;
@@ -653,7 +653,7 @@ cnt++;
 
 #elif __i386__
 #ifdef SIGSTKSZ
-	CompareConstant(SIGSTKSZ,8192,3153,architecture)
+	CompareConstant(SIGSTKSZ,8192,3153,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: SIGSTKSZ\n");
 cnt++;
@@ -661,7 +661,7 @@ cnt++;
 
 #elif __s390x__
 #ifdef SIGSTKSZ
-	CompareConstant(SIGSTKSZ,8192,3153,architecture)
+	CompareConstant(SIGSTKSZ,8192,3153,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: SIGSTKSZ\n");
 cnt++;
@@ -669,7 +669,7 @@ cnt++;
 
 #elif __x86_64__
 #ifdef SIGSTKSZ
-	CompareConstant(SIGSTKSZ,8192,3153,architecture)
+	CompareConstant(SIGSTKSZ,8192,3153,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: SIGSTKSZ\n");
 cnt++;
@@ -677,7 +677,7 @@ cnt++;
 
 #elif __s390__ && !__s390x__
 #ifdef SIGSTKSZ
-	CompareConstant(SIGSTKSZ,8192,3153,architecture)
+	CompareConstant(SIGSTKSZ,8192,3153,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: SIGSTKSZ\n");
 cnt++;
@@ -686,12 +686,12 @@ cnt++;
 #else
 Msg( "No definition for SIGSTKSZ (3153, int) in db\n");
 #ifdef SIGSTKSZ
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3153,%d);\n", architecture, SIGSTKSZ);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3153,%d,'""2.0""',NULL);\n", architecture, SIGSTKSZ);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
 #ifdef SIG_BLOCK
-	CompareConstant(SIG_BLOCK,0,3154,architecture)
+	CompareConstant(SIG_BLOCK,0,3154,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SIG_BLOCK\n");
 cnt++;
@@ -701,7 +701,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIG_UNBLOCK
-	CompareConstant(SIG_UNBLOCK,1,3155,architecture)
+	CompareConstant(SIG_UNBLOCK,1,3155,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SIG_UNBLOCK\n");
 cnt++;
@@ -711,7 +711,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIG_SETMASK
-	CompareConstant(SIG_SETMASK,2,3156,architecture)
+	CompareConstant(SIG_SETMASK,2,3156,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SIG_SETMASK\n");
 cnt++;
@@ -721,7 +721,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIG_DFL
-	CompareConstant(SIG_DFL,((sighandler_t)0),3157,architecture)
+	CompareConstant(SIG_DFL,((sighandler_t)0),3157,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIG_DFL\n");
 cnt++;
@@ -731,7 +731,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIG_IGN
-	CompareConstant(SIG_IGN,((sighandler_t)1),3158,architecture)
+	CompareConstant(SIG_IGN,((sighandler_t)1),3158,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIG_IGN\n");
 cnt++;
@@ -741,7 +741,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIG_ERR
-	CompareConstant(SIG_ERR,((sighandler_t)-1),3159,architecture)
+	CompareConstant(SIG_ERR,((sighandler_t)-1),3159,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SIG_ERR\n");
 cnt++;
@@ -751,7 +751,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SI_MAX_SIZE
-	CompareConstant(SI_MAX_SIZE,128,3160,architecture)
+	CompareConstant(SI_MAX_SIZE,128,3160,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: SI_MAX_SIZE\n");
 cnt++;
@@ -761,7 +761,7 @@ cnt++;
 
 #if __powerpc64__
 #ifdef SI_PAD_SIZE
-	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-4),3161,architecture)
+	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-4),3161,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: SI_PAD_SIZE\n");
 cnt++;
@@ -769,7 +769,7 @@ cnt++;
 
 #elif __powerpc__ && !__powerpc64__
 #ifdef SI_PAD_SIZE
-	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-3),3161,architecture)
+	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-3),3161,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: SI_PAD_SIZE\n");
 cnt++;
@@ -777,7 +777,7 @@ cnt++;
 
 #elif __ia64__
 #ifdef SI_PAD_SIZE
-	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-4),3161,architecture)
+	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-4),3161,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: SI_PAD_SIZE\n");
 cnt++;
@@ -785,7 +785,7 @@ cnt++;
 
 #elif __i386__
 #ifdef SI_PAD_SIZE
-	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-3),3161,architecture)
+	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-3),3161,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: SI_PAD_SIZE\n");
 cnt++;
@@ -793,7 +793,7 @@ cnt++;
 
 #elif __s390x__
 #ifdef SI_PAD_SIZE
-	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-4),3161,architecture)
+	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-4),3161,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: SI_PAD_SIZE\n");
 cnt++;
@@ -801,7 +801,7 @@ cnt++;
 
 #elif __x86_64__
 #ifdef SI_PAD_SIZE
-	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-4),3161,architecture)
+	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-4),3161,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: SI_PAD_SIZE\n");
 cnt++;
@@ -809,7 +809,7 @@ cnt++;
 
 #elif __s390__ && !__s390x__
 #ifdef SI_PAD_SIZE
-	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-3),3161,architecture)
+	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-3),3161,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: SI_PAD_SIZE\n");
 cnt++;
@@ -818,7 +818,7 @@ cnt++;
 #else
 Msg( "No definition for SI_PAD_SIZE (3161, int) in db\n");
 #ifdef SI_PAD_SIZE
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3161,%d);\n", architecture, SI_PAD_SIZE);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3161,%d,'""2.1""',NULL);\n", architecture, SI_PAD_SIZE);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -867,7 +867,7 @@ Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,3161,%d);\n", arch
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGEV_NONE
-	CompareConstant(SIGEV_NONE,1,4868,architecture)
+	CompareConstant(SIGEV_NONE,1,4868,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SIGEV_NONE\n");
 cnt++;
@@ -877,7 +877,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGEV_SIGNAL
-	CompareConstant(SIGEV_SIGNAL,0,4869,architecture)
+	CompareConstant(SIGEV_SIGNAL,0,4869,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SIGEV_SIGNAL\n");
 cnt++;
@@ -887,7 +887,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGEV_THREAD
-	CompareConstant(SIGEV_THREAD,2,4870,architecture)
+	CompareConstant(SIGEV_THREAD,2,4870,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SIGEV_THREAD\n");
 cnt++;
@@ -897,7 +897,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SI_ASYNCIO
-	CompareConstant(SI_ASYNCIO,-4,4871,architecture)
+	CompareConstant(SI_ASYNCIO,-4,4871,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SI_ASYNCIO\n");
 cnt++;
@@ -907,7 +907,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SI_MESGQ
-	CompareConstant(SI_MESGQ,-3,4872,architecture)
+	CompareConstant(SI_MESGQ,-3,4872,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SI_MESGQ\n");
 cnt++;
@@ -917,7 +917,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SI_QUEUE
-	CompareConstant(SI_QUEUE,-1,4873,architecture)
+	CompareConstant(SI_QUEUE,-1,4873,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SI_QUEUE\n");
 cnt++;
@@ -927,7 +927,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SI_TIMER
-	CompareConstant(SI_TIMER,-2,4874,architecture)
+	CompareConstant(SI_TIMER,-2,4874,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SI_TIMER\n");
 cnt++;
@@ -937,7 +937,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SI_USER
-	CompareConstant(SI_USER,0,4875,architecture)
+	CompareConstant(SI_USER,0,4875,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SI_USER\n");
 cnt++;
@@ -955,7 +955,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SIGEV_MAX_SIZE
-	CompareConstant(SIGEV_MAX_SIZE,64,5019,architecture)
+	CompareConstant(SIGEV_MAX_SIZE,64,5019,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGEV_MAX_SIZE\n");
 cnt++;
@@ -965,7 +965,7 @@ cnt++;
 
 #if __powerpc64__
 #ifdef SIGEV_PAD_SIZE
-	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-4),5020,architecture)
+	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-4),5020,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGEV_PAD_SIZE\n");
 cnt++;
@@ -973,7 +973,7 @@ cnt++;
 
 #elif __powerpc__ && !__powerpc64__
 #ifdef SIGEV_PAD_SIZE
-	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-3),5020,architecture)
+	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-3),5020,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGEV_PAD_SIZE\n");
 cnt++;
@@ -981,7 +981,7 @@ cnt++;
 
 #elif __ia64__
 #ifdef SIGEV_PAD_SIZE
-	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-4),5020,architecture)
+	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-4),5020,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGEV_PAD_SIZE\n");
 cnt++;
@@ -989,7 +989,7 @@ cnt++;
 
 #elif __i386__
 #ifdef SIGEV_PAD_SIZE
-	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-3),5020,architecture)
+	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-3),5020,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGEV_PAD_SIZE\n");
 cnt++;
@@ -997,7 +997,7 @@ cnt++;
 
 #elif __s390x__
 #ifdef SIGEV_PAD_SIZE
-	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-4),5020,architecture)
+	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-4),5020,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGEV_PAD_SIZE\n");
 cnt++;
@@ -1005,7 +1005,7 @@ cnt++;
 
 #elif __x86_64__
 #ifdef SIGEV_PAD_SIZE
-	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-4),5020,architecture)
+	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-4),5020,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGEV_PAD_SIZE\n");
 cnt++;
@@ -1013,7 +1013,7 @@ cnt++;
 
 #elif __s390__ && !__s390x__
 #ifdef SIGEV_PAD_SIZE
-	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-3),5020,architecture)
+	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-3),5020,architecture,2.1,NULL)
 #else
 Msg( "Error: Constant not found: SIGEV_PAD_SIZE\n");
 cnt++;
@@ -1022,12 +1022,12 @@ cnt++;
 #else
 Msg( "No definition for SIGEV_PAD_SIZE (5020, int) in db\n");
 #ifdef SIGEV_PAD_SIZE
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5020,%d);\n", architecture, SIGEV_PAD_SIZE);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5020,%d,'""2.1""',NULL);\n", architecture, SIGEV_PAD_SIZE);
 #endif
 #endif
 #if __s390x__
 #ifdef __NUM_GPRS
-	CompareConstant(__NUM_GPRS,16,5141,architecture)
+	CompareConstant(__NUM_GPRS,16,5141,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: __NUM_GPRS\n");
 cnt++;
@@ -1035,7 +1035,7 @@ cnt++;
 
 #elif __s390__ && !__s390x__
 #ifdef __NUM_GPRS
-	CompareConstant(__NUM_GPRS,16,5141,architecture)
+	CompareConstant(__NUM_GPRS,16,5141,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: __NUM_GPRS\n");
 cnt++;
@@ -1044,12 +1044,12 @@ cnt++;
 #else
 Msg( "No definition for __NUM_GPRS (5141, int) in db\n");
 #ifdef __NUM_GPRS
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5141,%d);\n", architecture, __NUM_GPRS);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5141,%d,'""2.0""',NULL);\n", architecture, __NUM_GPRS);
 #endif
 #endif
 #if __s390x__
 #ifdef __NUM_FPRS
-	CompareConstant(__NUM_FPRS,16,5142,architecture)
+	CompareConstant(__NUM_FPRS,16,5142,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: __NUM_FPRS\n");
 cnt++;
@@ -1057,7 +1057,7 @@ cnt++;
 
 #elif __s390__ && !__s390x__
 #ifdef __NUM_FPRS
-	CompareConstant(__NUM_FPRS,16,5142,architecture)
+	CompareConstant(__NUM_FPRS,16,5142,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: __NUM_FPRS\n");
 cnt++;
@@ -1066,12 +1066,12 @@ cnt++;
 #else
 Msg( "No definition for __NUM_FPRS (5142, int) in db\n");
 #ifdef __NUM_FPRS
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5142,%d);\n", architecture, __NUM_FPRS);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5142,%d,'""2.0""',NULL);\n", architecture, __NUM_FPRS);
 #endif
 #endif
 #if __s390x__
 #ifdef __NUM_ACRS
-	CompareConstant(__NUM_ACRS,16,5143,architecture)
+	CompareConstant(__NUM_ACRS,16,5143,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: __NUM_ACRS\n");
 cnt++;
@@ -1079,7 +1079,7 @@ cnt++;
 
 #elif __s390__ && !__s390x__
 #ifdef __NUM_ACRS
-	CompareConstant(__NUM_ACRS,16,5143,architecture)
+	CompareConstant(__NUM_ACRS,16,5143,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: __NUM_ACRS\n");
 cnt++;
@@ -1088,12 +1088,12 @@ cnt++;
 #else
 Msg( "No definition for __NUM_ACRS (5143, int) in db\n");
 #ifdef __NUM_ACRS
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue) VALUES (%d,5143,%d);\n", architecture, __NUM_ACRS);
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5143,%d,'""2.0""',NULL);\n", architecture, __NUM_ACRS);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
 #ifdef SI_ASYNCNL
-	CompareConstant(SI_ASYNCNL,-60,5144,architecture)
+	CompareConstant(SI_ASYNCNL,-60,5144,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: SI_ASYNCNL\n");
 cnt++;
@@ -1103,7 +1103,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SI_TKILL
-	CompareConstant(SI_TKILL,-6,5145,architecture)
+	CompareConstant(SI_TKILL,-6,5145,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: SI_TKILL\n");
 cnt++;
@@ -1113,7 +1113,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SI_SIGIO
-	CompareConstant(SI_SIGIO,-5,5146,architecture)
+	CompareConstant(SI_SIGIO,-5,5146,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: SI_SIGIO\n");
 cnt++;
@@ -1123,7 +1123,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SI_KERNEL
-	CompareConstant(SI_KERNEL,0x80,5147,architecture)
+	CompareConstant(SI_KERNEL,0x80,5147,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: SI_KERNEL\n");
 cnt++;
@@ -1137,7 +1137,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ILL_ILLOPC
-	CompareConstant(ILL_ILLOPC,1,5150,architecture)
+	CompareConstant(ILL_ILLOPC,1,5150,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ILL_ILLOPC\n");
 cnt++;
@@ -1147,7 +1147,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ILL_ILLOPN
-	CompareConstant(ILL_ILLOPN,2,5151,architecture)
+	CompareConstant(ILL_ILLOPN,2,5151,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ILL_ILLOPN\n");
 cnt++;
@@ -1157,7 +1157,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ILL_ILLADR
-	CompareConstant(ILL_ILLADR,3,5152,architecture)
+	CompareConstant(ILL_ILLADR,3,5152,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ILL_ILLADR\n");
 cnt++;
@@ -1167,7 +1167,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ILL_ILLTRP
-	CompareConstant(ILL_ILLTRP,4,5153,architecture)
+	CompareConstant(ILL_ILLTRP,4,5153,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ILL_ILLTRP\n");
 cnt++;
@@ -1177,7 +1177,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ILL_PRVOPC
-	CompareConstant(ILL_PRVOPC,5,5154,architecture)
+	CompareConstant(ILL_PRVOPC,5,5154,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ILL_PRVOPC\n");
 cnt++;
@@ -1187,7 +1187,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ILL_PRVREG
-	CompareConstant(ILL_PRVREG,6,5155,architecture)
+	CompareConstant(ILL_PRVREG,6,5155,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ILL_PRVREG\n");
 cnt++;
@@ -1197,7 +1197,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ILL_COPROC
-	CompareConstant(ILL_COPROC,7,5156,architecture)
+	CompareConstant(ILL_COPROC,7,5156,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ILL_COPROC\n");
 cnt++;
@@ -1207,7 +1207,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef ILL_BADSTK
-	CompareConstant(ILL_BADSTK,8,5157,architecture)
+	CompareConstant(ILL_BADSTK,8,5157,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ILL_BADSTK\n");
 cnt++;
@@ -1217,7 +1217,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FPE_INTDIV
-	CompareConstant(FPE_INTDIV,1,5158,architecture)
+	CompareConstant(FPE_INTDIV,1,5158,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: FPE_INTDIV\n");
 cnt++;
@@ -1227,7 +1227,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FPE_INTOVF
-	CompareConstant(FPE_INTOVF,2,5159,architecture)
+	CompareConstant(FPE_INTOVF,2,5159,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: FPE_INTOVF\n");
 cnt++;
@@ -1237,7 +1237,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FPE_FLTDIV
-	CompareConstant(FPE_FLTDIV,3,5160,architecture)
+	CompareConstant(FPE_FLTDIV,3,5160,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: FPE_FLTDIV\n");
 cnt++;
@@ -1247,7 +1247,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FPE_FLTOVF
-	CompareConstant(FPE_FLTOVF,4,5161,architecture)
+	CompareConstant(FPE_FLTOVF,4,5161,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: FPE_FLTOVF\n");
 cnt++;
@@ -1257,7 +1257,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FPE_FLTUND
-	CompareConstant(FPE_FLTUND,5,5162,architecture)
+	CompareConstant(FPE_FLTUND,5,5162,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: FPE_FLTUND\n");
 cnt++;
@@ -1267,7 +1267,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FPE_FLTRES
-	CompareConstant(FPE_FLTRES,6,5163,architecture)
+	CompareConstant(FPE_FLTRES,6,5163,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: FPE_FLTRES\n");
 cnt++;
@@ -1277,7 +1277,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FPE_FLTINV
-	CompareConstant(FPE_FLTINV,7,5164,architecture)
+	CompareConstant(FPE_FLTINV,7,5164,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: FPE_FLTINV\n");
 cnt++;
@@ -1287,7 +1287,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FPE_FLTSUB
-	CompareConstant(FPE_FLTSUB,8,5165,architecture)
+	CompareConstant(FPE_FLTSUB,8,5165,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: FPE_FLTSUB\n");
 cnt++;
@@ -1297,7 +1297,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SEGV_MAPERR
-	CompareConstant(SEGV_MAPERR,1,5166,architecture)
+	CompareConstant(SEGV_MAPERR,1,5166,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: SEGV_MAPERR\n");
 cnt++;
@@ -1307,7 +1307,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SEGV_ACCERR
-	CompareConstant(SEGV_ACCERR,2,5167,architecture)
+	CompareConstant(SEGV_ACCERR,2,5167,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: SEGV_ACCERR\n");
 cnt++;
@@ -1317,7 +1317,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef BUS_ADRALN
-	CompareConstant(BUS_ADRALN,1,5168,architecture)
+	CompareConstant(BUS_ADRALN,1,5168,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: BUS_ADRALN\n");
 cnt++;
@@ -1327,7 +1327,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef BUS_ADRERR
-	CompareConstant(BUS_ADRERR,2,5169,architecture)
+	CompareConstant(BUS_ADRERR,2,5169,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: BUS_ADRERR\n");
 cnt++;
@@ -1337,7 +1337,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef BUS_OBJERR
-	CompareConstant(BUS_OBJERR,3,5170,architecture)
+	CompareConstant(BUS_OBJERR,3,5170,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: BUS_OBJERR\n");
 cnt++;
@@ -1347,7 +1347,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef TRAP_BRKPT
-	CompareConstant(TRAP_BRKPT,1,5171,architecture)
+	CompareConstant(TRAP_BRKPT,1,5171,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: TRAP_BRKPT\n");
 cnt++;
@@ -1357,7 +1357,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef TRAP_TRACE
-	CompareConstant(TRAP_TRACE,2,5172,architecture)
+	CompareConstant(TRAP_TRACE,2,5172,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: TRAP_TRACE\n");
 cnt++;
@@ -1367,7 +1367,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CLD_EXITED
-	CompareConstant(CLD_EXITED,1,5173,architecture)
+	CompareConstant(CLD_EXITED,1,5173,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: CLD_EXITED\n");
 cnt++;
@@ -1377,7 +1377,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CLD_KILLED
-	CompareConstant(CLD_KILLED,2,5174,architecture)
+	CompareConstant(CLD_KILLED,2,5174,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: CLD_KILLED\n");
 cnt++;
@@ -1387,7 +1387,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CLD_DUMPED
-	CompareConstant(CLD_DUMPED,3,5175,architecture)
+	CompareConstant(CLD_DUMPED,3,5175,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: CLD_DUMPED\n");
 cnt++;
@@ -1397,7 +1397,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CLD_TRAPPED
-	CompareConstant(CLD_TRAPPED,4,5176,architecture)
+	CompareConstant(CLD_TRAPPED,4,5176,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: CLD_TRAPPED\n");
 cnt++;
@@ -1407,7 +1407,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CLD_STOPPED
-	CompareConstant(CLD_STOPPED,5,5177,architecture)
+	CompareConstant(CLD_STOPPED,5,5177,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: CLD_STOPPED\n");
 cnt++;
@@ -1417,7 +1417,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CLD_CONTINUED
-	CompareConstant(CLD_CONTINUED,6,5178,architecture)
+	CompareConstant(CLD_CONTINUED,6,5178,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: CLD_CONTINUED\n");
 cnt++;
@@ -1427,7 +1427,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef POLL_IN
-	CompareConstant(POLL_IN,1,5179,architecture)
+	CompareConstant(POLL_IN,1,5179,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: POLL_IN\n");
 cnt++;
@@ -1437,7 +1437,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef POLL_OUT
-	CompareConstant(POLL_OUT,2,5180,architecture)
+	CompareConstant(POLL_OUT,2,5180,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: POLL_OUT\n");
 cnt++;
@@ -1447,7 +1447,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef POLL_MSG
-	CompareConstant(POLL_MSG,3,5181,architecture)
+	CompareConstant(POLL_MSG,3,5181,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: POLL_MSG\n");
 cnt++;
@@ -1457,7 +1457,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef POLL_ERR
-	CompareConstant(POLL_ERR,4,5182,architecture)
+	CompareConstant(POLL_ERR,4,5182,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: POLL_ERR\n");
 cnt++;
@@ -1467,7 +1467,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef POLL_PRI
-	CompareConstant(POLL_PRI,5,5183,architecture)
+	CompareConstant(POLL_PRI,5,5183,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: POLL_PRI\n");
 cnt++;
@@ -1477,7 +1477,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef POLL_HUP
-	CompareConstant(POLL_HUP,6,5184,architecture)
+	CompareConstant(POLL_HUP,6,5184,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: POLL_HUP\n");
 cnt++;
@@ -1486,34 +1486,34 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(sig_atomic_t,4, 9092, 2)
+CheckTypeSize(sig_atomic_t,4, 9092, 2, 1.2, NULL, 6, NULL)
 #elif __ia64__
-CheckTypeSize(sig_atomic_t,4, 9092, 3)
+CheckTypeSize(sig_atomic_t,4, 9092, 3, 1.3, NULL, 6, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(sig_atomic_t,4, 9092, 6)
+CheckTypeSize(sig_atomic_t,4, 9092, 6, 1.2, NULL, 6, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(sig_atomic_t,4, 9092, 10)
+CheckTypeSize(sig_atomic_t,4, 9092, 10, 1.3, NULL, 6, NULL)
 #elif __powerpc64__
-CheckTypeSize(sig_atomic_t,4, 9092, 9)
+CheckTypeSize(sig_atomic_t,4, 9092, 9, 2.0, NULL, 6, NULL)
 #elif __s390x__
-CheckTypeSize(sig_atomic_t,4, 9092, 12)
+CheckTypeSize(sig_atomic_t,4, 9092, 12, 1.3, NULL, 6, NULL)
 #elif __x86_64__
-CheckTypeSize(sig_atomic_t,4, 9092, 11)
+CheckTypeSize(sig_atomic_t,4, 9092, 11, 2.0, NULL, 6, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9092,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,9092,0);
 Msg("Find size of sig_atomic_t (9092)\n");
 #endif
 
 #if __s390x__
-CheckTypeSize(_psw_t,16, 10571, 12)
+CheckTypeSize(_psw_t,16, 10571, 12, 2.0, NULL, 10570, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(_psw_t,8, 10571, 10)
+CheckTypeSize(_psw_t,8, 10571, 10, 2.0, NULL, 10570, NULL)
 #endif
 
 #if __s390__ && !__s390x__
-CheckTypeSize(_s390_regs_common,136, 10821, 10)
+CheckTypeSize(_s390_regs_common,136, 10821, 10, 2.0, NULL, 10820, NULL)
 #elif __s390x__
-CheckTypeSize(_s390_regs_common,208, 10821, 12)
+CheckTypeSize(_s390_regs_common,208, 10821, 12, 2.0, NULL, 10820, NULL)
 #endif
 
 #if __powerpc__ && !__powerpc64__
@@ -1521,97 +1521,97 @@ CheckTypeSize(_s390_regs_common,208, 10821, 12)
 #endif
 
 #if __i386__
-CheckTypeSize(sighandler_t,4, 9374, 2)
+CheckTypeSize(sighandler_t,4, 9374, 2, 2.0, NULL, 9373, NULL)
 #elif __powerpc64__
-CheckTypeSize(sighandler_t,8, 9374, 9)
+CheckTypeSize(sighandler_t,8, 9374, 9, 2.0, NULL, 9373, NULL)
 #elif __ia64__
-CheckTypeSize(sighandler_t,8, 9374, 3)
+CheckTypeSize(sighandler_t,8, 9374, 3, 2.0, NULL, 9373, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(sighandler_t,4, 9374, 6)
+CheckTypeSize(sighandler_t,4, 9374, 6, 2.0, NULL, 9373, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(sighandler_t,4, 9374, 10)
+CheckTypeSize(sighandler_t,4, 9374, 10, 2.0, NULL, 9373, NULL)
 #elif __s390x__
-CheckTypeSize(sighandler_t,8, 9374, 12)
+CheckTypeSize(sighandler_t,8, 9374, 12, 2.0, NULL, 9373, NULL)
 #elif __x86_64__
-CheckTypeSize(sighandler_t,8, 9374, 11)
+CheckTypeSize(sighandler_t,8, 9374, 11, 2.0, NULL, 9373, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9374,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9373,NULL);\n",architecture,9374,0);
 Msg("Find size of sighandler_t (9374)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(sigval_t,4, 9320, 2)
+CheckTypeSize(sigval_t,4, 9320, 2, 1.2, NULL, 9319, NULL)
 #elif __ia64__
-CheckTypeSize(sigval_t,8, 9320, 3)
+CheckTypeSize(sigval_t,8, 9320, 3, 1.3, NULL, 9319, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(sigval_t,4, 9320, 6)
+CheckTypeSize(sigval_t,4, 9320, 6, 1.2, NULL, 9319, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(sigval_t,4, 9320, 10)
+CheckTypeSize(sigval_t,4, 9320, 10, 1.3, NULL, 9319, NULL)
 #elif __powerpc64__
-CheckTypeSize(sigval_t,8, 9320, 9)
+CheckTypeSize(sigval_t,8, 9320, 9, 2.0, NULL, 9319, NULL)
 #elif __s390x__
-CheckTypeSize(sigval_t,8, 9320, 12)
+CheckTypeSize(sigval_t,8, 9320, 12, 1.3, NULL, 9319, NULL)
 #elif __x86_64__
-CheckTypeSize(sigval_t,8, 9320, 11)
+CheckTypeSize(sigval_t,8, 9320, 11, 2.0, NULL, 9319, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9320,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9319,NULL);\n",architecture,9320,0);
 Msg("Find size of sigval_t (9320)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(sigevent_t,64, 10190, 2)
+CheckTypeSize(sigevent_t,64, 10190, 2, 1.2, NULL, 10188, NULL)
 #elif __ia64__
-CheckTypeSize(sigevent_t,64, 10190, 3)
+CheckTypeSize(sigevent_t,64, 10190, 3, 1.3, NULL, 10188, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(sigevent_t,64, 10190, 6)
+CheckTypeSize(sigevent_t,64, 10190, 6, 1.2, NULL, 10188, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(sigevent_t,64, 10190, 10)
+CheckTypeSize(sigevent_t,64, 10190, 10, 1.3, NULL, 10188, NULL)
 #elif __powerpc64__
-CheckTypeSize(sigevent_t,64, 10190, 9)
+CheckTypeSize(sigevent_t,64, 10190, 9, 2.0, NULL, 10188, NULL)
 #elif __s390x__
-CheckTypeSize(sigevent_t,64, 10190, 12)
+CheckTypeSize(sigevent_t,64, 10190, 12, 1.3, NULL, 10188, NULL)
 #elif __x86_64__
-CheckTypeSize(sigevent_t,64, 10190, 11)
+CheckTypeSize(sigevent_t,64, 10190, 11, 2.0, NULL, 10188, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10190,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10188,NULL);\n",architecture,10190,0);
 Msg("Find size of sigevent_t (10190)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(siginfo_t,128, 9099, 2)
+CheckTypeSize(siginfo_t,128, 9099, 2, 1.2, NULL, 9321, NULL)
 #elif __ia64__
-CheckTypeSize(siginfo_t,128, 9099, 3)
+CheckTypeSize(siginfo_t,128, 9099, 3, 1.3, NULL, 9321, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(siginfo_t,128, 9099, 6)
+CheckTypeSize(siginfo_t,128, 9099, 6, 1.2, NULL, 9321, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(siginfo_t,128, 9099, 10)
+CheckTypeSize(siginfo_t,128, 9099, 10, 1.3, NULL, 9321, NULL)
 #elif __powerpc64__
-CheckTypeSize(siginfo_t,128, 9099, 9)
+CheckTypeSize(siginfo_t,128, 9099, 9, 2.0, NULL, 9321, NULL)
 #elif __s390x__
-CheckTypeSize(siginfo_t,128, 9099, 12)
+CheckTypeSize(siginfo_t,128, 9099, 12, 1.3, NULL, 9321, NULL)
 #elif __x86_64__
-CheckTypeSize(siginfo_t,128, 9099, 11)
+CheckTypeSize(siginfo_t,128, 9099, 11, 2.0, NULL, 9321, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9099,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9321,NULL);\n",architecture,9099,0);
 Msg("Find size of siginfo_t (9099)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(sigset_t,128, 10163, 2)
+CheckTypeSize(sigset_t,128, 10163, 2, 1.2, NULL, 9382, NULL)
 #elif __ia64__
-CheckTypeSize(sigset_t,128, 10163, 3)
+CheckTypeSize(sigset_t,128, 10163, 3, 1.3, NULL, 9382, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(sigset_t,128, 10163, 6)
+CheckTypeSize(sigset_t,128, 10163, 6, 1.2, NULL, 9382, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(sigset_t,128, 10163, 10)
+CheckTypeSize(sigset_t,128, 10163, 10, 1.3, NULL, 9382, NULL)
 #elif __s390x__
-CheckTypeSize(sigset_t,128, 10163, 12)
+CheckTypeSize(sigset_t,128, 10163, 12, 1.3, NULL, 9382, NULL)
 #elif __x86_64__
-CheckTypeSize(sigset_t,128, 10163, 11)
+CheckTypeSize(sigset_t,128, 10163, 11, 2.0, NULL, 9382, NULL)
 #elif __powerpc64__
-CheckTypeSize(sigset_t,128, 10163, 9)
+CheckTypeSize(sigset_t,128, 10163, 9, 2.0, NULL, 9382, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10163,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9382,NULL);\n",architecture,10163,0);
 Msg("Find size of sigset_t (10163)\n");
 #endif
 
@@ -1625,21 +1625,21 @@ Msg("Find size of sigset_t (10163)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(stack_t,12, 9314, 2)
+CheckTypeSize(stack_t,12, 9314, 2, 1.2, NULL, 9105, NULL)
 #elif __ia64__
-CheckTypeSize(stack_t,24, 9314, 3)
+CheckTypeSize(stack_t,24, 9314, 3, 1.3, NULL, 9105, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(stack_t,12, 9314, 6)
+CheckTypeSize(stack_t,12, 9314, 6, 1.2, NULL, 9105, NULL)
 #elif __s390x__
-CheckTypeSize(stack_t,24, 9314, 12)
+CheckTypeSize(stack_t,24, 9314, 12, 1.3, NULL, 9105, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(stack_t,12, 9314, 10)
+CheckTypeSize(stack_t,12, 9314, 10, 1.3, NULL, 9105, NULL)
 #elif __x86_64__
-CheckTypeSize(stack_t,24, 9314, 11)
+CheckTypeSize(stack_t,24, 9314, 11, 2.0, NULL, 9105, NULL)
 #elif __powerpc64__
-CheckTypeSize(stack_t,24, 9314, 9)
+CheckTypeSize(stack_t,24, 9314, 9, 2.0, NULL, 9105, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9314,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9105,NULL);\n",architecture,9314,0);
 Msg("Find size of stack_t (9314)\n");
 #endif
 
@@ -1662,15 +1662,15 @@ Msg("Find size of stack_t (9314)\n");
 #endif
 
 #if __s390__ && !__s390x__
-CheckTypeSize(_s390_fp_regs,136, 10832, 10)
+CheckTypeSize(_s390_fp_regs,136, 10832, 10, 2.0, NULL, 10831, NULL)
 #elif __s390x__
-CheckTypeSize(_s390_fp_regs,136, 10832, 12)
+CheckTypeSize(_s390_fp_regs,136, 10832, 12, 2.0, NULL, 10831, NULL)
 #endif
 
 #if __s390__ && !__s390x__
-CheckTypeSize(_sigregs,272, 10834, 10)
+CheckTypeSize(_sigregs,272, 10834, 10, 2.0, NULL, 10833, NULL)
 #elif __s390x__
-CheckTypeSize(_sigregs,344, 10834, 12)
+CheckTypeSize(_sigregs,344, 10834, 12, 2.0, NULL, 10833, NULL)
 #endif
 
 #if __i386__
@@ -1752,10 +1752,10 @@ extern int sigtimedwait_db(const sigset_t *, siginfo_t *, const struct timespec 
 CheckInterfacedef(sigtimedwait,sigtimedwait_db);
 extern sighandler_t bsd_signal_db(int, sighandler_t);
 CheckInterfacedef(bsd_signal,bsd_signal_db);
-/* XXX hand-edit
+#ifndef LSBCC_MODE	/* XXX hand-edit */
 extern int __xpg_sigpause_db(int);
 CheckInterfacedef(__xpg_sigpause,__xpg_sigpause_db);
-*/
+#endif
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

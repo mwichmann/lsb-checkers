@@ -26,116 +26,116 @@ Msg("Checking data structures in rpc/types.h\n");
 
 printf("Checking data structures in rpc/types.h\n");
 #if __powerpc64__
-CheckTypeSize(bool_t,4, 9890, 9)
+CheckTypeSize(bool_t,4, 9890, 9, 2.0, NULL, 6, NULL)
 #elif __ia64__
-CheckTypeSize(bool_t,4, 9890, 3)
+CheckTypeSize(bool_t,4, 9890, 3, 1.3, NULL, 6, NULL)
 #elif __i386__
-CheckTypeSize(bool_t,4, 9890, 2)
+CheckTypeSize(bool_t,4, 9890, 2, 1.3, NULL, 6, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(bool_t,4, 9890, 6)
+CheckTypeSize(bool_t,4, 9890, 6, 1.3, NULL, 6, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(bool_t,4, 9890, 10)
+CheckTypeSize(bool_t,4, 9890, 10, 1.3, NULL, 6, NULL)
 #elif __s390x__
-CheckTypeSize(bool_t,4, 9890, 12)
+CheckTypeSize(bool_t,4, 9890, 12, 1.3, NULL, 6, NULL)
 #elif __x86_64__
-CheckTypeSize(bool_t,4, 9890, 11)
+CheckTypeSize(bool_t,4, 9890, 11, 2.0, NULL, 6, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9890,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,9890,0);
 Msg("Find size of bool_t (9890)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(enum_t,4, 9895, 2)
+CheckTypeSize(enum_t,4, 9895, 2, 1.3, NULL, 6, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(enum_t,4, 9895, 10)
+CheckTypeSize(enum_t,4, 9895, 10, 1.3, NULL, 6, NULL)
 #elif __ia64__
-CheckTypeSize(enum_t,4, 9895, 3)
+CheckTypeSize(enum_t,4, 9895, 3, 1.3, NULL, 6, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(enum_t,4, 9895, 6)
+CheckTypeSize(enum_t,4, 9895, 6, 1.3, NULL, 6, NULL)
 #elif __powerpc64__
-CheckTypeSize(enum_t,4, 9895, 9)
+CheckTypeSize(enum_t,4, 9895, 9, 2.0, NULL, 6, NULL)
 #elif __s390x__
-CheckTypeSize(enum_t,4, 9895, 12)
+CheckTypeSize(enum_t,4, 9895, 12, 1.3, NULL, 6, NULL)
 #elif __x86_64__
-CheckTypeSize(enum_t,4, 9895, 11)
+CheckTypeSize(enum_t,4, 9895, 11, 2.0, NULL, 6, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9895,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,9895,0);
 Msg("Find size of enum_t (9895)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(rpcprog_t,4, 9992, 2)
+CheckTypeSize(rpcprog_t,4, 9992, 2, 2.0, NULL, 9, NULL)
 #elif __powerpc64__
-CheckTypeSize(rpcprog_t,8, 9992, 9)
+CheckTypeSize(rpcprog_t,8, 9992, 9, 2.0, NULL, 9, NULL)
 #elif __ia64__
-CheckTypeSize(rpcprog_t,8, 9992, 3)
+CheckTypeSize(rpcprog_t,8, 9992, 3, 2.0, NULL, 9, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(rpcprog_t,4, 9992, 6)
+CheckTypeSize(rpcprog_t,4, 9992, 6, 2.0, NULL, 9, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(rpcprog_t,4, 9992, 10)
+CheckTypeSize(rpcprog_t,4, 9992, 10, 2.0, NULL, 9, NULL)
 #elif __s390x__
-CheckTypeSize(rpcprog_t,8, 9992, 12)
+CheckTypeSize(rpcprog_t,8, 9992, 12, 2.0, NULL, 9, NULL)
 #elif __x86_64__
-CheckTypeSize(rpcprog_t,8, 9992, 11)
+CheckTypeSize(rpcprog_t,8, 9992, 11, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9992,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,9992,0);
 Msg("Find size of rpcprog_t (9992)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(rpcvers_t,4, 9993, 2)
+CheckTypeSize(rpcvers_t,4, 9993, 2, 1.3, NULL, 9, NULL)
 #elif __ia64__
-CheckTypeSize(rpcvers_t,8, 9993, 3)
+CheckTypeSize(rpcvers_t,8, 9993, 3, 1.3, NULL, 9, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(rpcvers_t,4, 9993, 10)
+CheckTypeSize(rpcvers_t,4, 9993, 10, 1.3, NULL, 9, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(rpcvers_t,4, 9993, 6)
+CheckTypeSize(rpcvers_t,4, 9993, 6, 1.3, NULL, 9, NULL)
 #elif __powerpc64__
-CheckTypeSize(rpcvers_t,8, 9993, 9)
+CheckTypeSize(rpcvers_t,8, 9993, 9, 2.0, NULL, 9, NULL)
 #elif __s390x__
-CheckTypeSize(rpcvers_t,8, 9993, 12)
+CheckTypeSize(rpcvers_t,8, 9993, 12, 1.3, NULL, 9, NULL)
 #elif __x86_64__
-CheckTypeSize(rpcvers_t,8, 9993, 11)
+CheckTypeSize(rpcvers_t,8, 9993, 11, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9993,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,9993,0);
 Msg("Find size of rpcvers_t (9993)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(rpcproc_t,4, 9994, 2)
+CheckTypeSize(rpcproc_t,4, 9994, 2, 2.0, NULL, 9, NULL)
 #elif __powerpc64__
-CheckTypeSize(rpcproc_t,8, 9994, 9)
+CheckTypeSize(rpcproc_t,8, 9994, 9, 2.0, NULL, 9, NULL)
 #elif __ia64__
-CheckTypeSize(rpcproc_t,8, 9994, 3)
+CheckTypeSize(rpcproc_t,8, 9994, 3, 2.0, NULL, 9, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(rpcproc_t,4, 9994, 6)
+CheckTypeSize(rpcproc_t,4, 9994, 6, 2.0, NULL, 9, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(rpcproc_t,4, 9994, 10)
+CheckTypeSize(rpcproc_t,4, 9994, 10, 2.0, NULL, 9, NULL)
 #elif __s390x__
-CheckTypeSize(rpcproc_t,8, 9994, 12)
+CheckTypeSize(rpcproc_t,8, 9994, 12, 2.0, NULL, 9, NULL)
 #elif __x86_64__
-CheckTypeSize(rpcproc_t,8, 9994, 11)
+CheckTypeSize(rpcproc_t,8, 9994, 11, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9994,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,9994,0);
 Msg("Find size of rpcproc_t (9994)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(rpcprot_t,4, 9998, 2)
+CheckTypeSize(rpcprot_t,4, 9998, 2, 2.0, NULL, 9, NULL)
 #elif __powerpc64__
-CheckTypeSize(rpcprot_t,8, 9998, 9)
+CheckTypeSize(rpcprot_t,8, 9998, 9, 2.0, NULL, 9, NULL)
 #elif __ia64__
-CheckTypeSize(rpcprot_t,8, 9998, 3)
+CheckTypeSize(rpcprot_t,8, 9998, 3, 2.0, NULL, 9, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(rpcprot_t,4, 9998, 6)
+CheckTypeSize(rpcprot_t,4, 9998, 6, 2.0, NULL, 9, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(rpcprot_t,4, 9998, 10)
+CheckTypeSize(rpcprot_t,4, 9998, 10, 2.0, NULL, 9, NULL)
 #elif __s390x__
-CheckTypeSize(rpcprot_t,8, 9998, 12)
+CheckTypeSize(rpcprot_t,8, 9998, 12, 2.0, NULL, 9, NULL)
 #elif __x86_64__
-CheckTypeSize(rpcprot_t,8, 9998, 11)
+CheckTypeSize(rpcprot_t,8, 9998, 11, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9998,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9, NULL);\n",architecture,9998,0);
 Msg("Find size of rpcprot_t (9998)\n");
 #endif
 

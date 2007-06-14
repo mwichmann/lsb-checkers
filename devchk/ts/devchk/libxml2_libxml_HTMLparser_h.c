@@ -39,230 +39,230 @@ printf("Checking data structures in libxml2/libxml/HTMLparser.h\n");
 #endif
 
 #if __i386__
-CheckTypeSize(htmlStatus,4, 15003, 2)
+CheckTypeSize(htmlStatus,4, 15003, 2, 3.1, NULL, 15002, NULL)
 #elif __x86_64__
-CheckTypeSize(htmlStatus,4, 15003, 11)
+CheckTypeSize(htmlStatus,4, 15003, 11, 3.1, NULL, 15002, NULL)
 #elif __ia64__
-CheckTypeSize(htmlStatus,4, 15003, 3)
+CheckTypeSize(htmlStatus,4, 15003, 3, 3.1, NULL, 15002, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(htmlStatus,4, 15003, 6)
+CheckTypeSize(htmlStatus,4, 15003, 6, 3.1, NULL, 15002, NULL)
 #elif __powerpc64__
-CheckTypeSize(htmlStatus,4, 15003, 9)
+CheckTypeSize(htmlStatus,4, 15003, 9, 3.1, NULL, 15002, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(htmlStatus,4, 15003, 10)
+CheckTypeSize(htmlStatus,4, 15003, 10, 3.1, NULL, 15002, NULL)
 #elif __s390x__
-CheckTypeSize(htmlStatus,4, 15003, 12)
+CheckTypeSize(htmlStatus,4, 15003, 12, 3.1, NULL, 15002, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15003,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15002,NULL);\n",architecture,15003,0);
 Msg("Find size of htmlStatus (15003)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(htmlElemDesc,36, 15005, 2)
+CheckTypeSize(htmlElemDesc,36, 15005, 2, 3.1, NULL, 15004, NULL)
 #elif __x86_64__
-CheckTypeSize(htmlElemDesc,64, 15005, 11)
+CheckTypeSize(htmlElemDesc,64, 15005, 11, 3.1, NULL, 15004, NULL)
 #elif __ia64__
-CheckTypeSize(htmlElemDesc,64, 15005, 3)
+CheckTypeSize(htmlElemDesc,64, 15005, 3, 3.1, NULL, 15004, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(htmlElemDesc,36, 15005, 6)
+CheckTypeSize(htmlElemDesc,36, 15005, 6, 3.1, NULL, 15004, NULL)
 #elif __powerpc64__
-CheckTypeSize(htmlElemDesc,64, 15005, 9)
+CheckTypeSize(htmlElemDesc,64, 15005, 9, 3.1, NULL, 15004, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(htmlElemDesc,36, 15005, 10)
+CheckTypeSize(htmlElemDesc,36, 15005, 10, 3.1, NULL, 15004, NULL)
 #elif __s390x__
-CheckTypeSize(htmlElemDesc,64, 15005, 12)
+CheckTypeSize(htmlElemDesc,64, 15005, 12, 3.1, NULL, 15004, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15005,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15004,NULL);\n",architecture,15005,0);
 Msg("Find size of htmlElemDesc (15005)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(htmlDocPtr,4, 15008, 2)
+CheckTypeSize(htmlDocPtr,4, 15008, 2, 3.1, NULL, 14612, NULL)
 #elif __x86_64__
-CheckTypeSize(htmlDocPtr,8, 15008, 11)
+CheckTypeSize(htmlDocPtr,8, 15008, 11, 3.1, NULL, 14612, NULL)
 #elif __ia64__
-CheckTypeSize(htmlDocPtr,8, 15008, 3)
+CheckTypeSize(htmlDocPtr,8, 15008, 3, 3.1, NULL, 14612, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(htmlDocPtr,4, 15008, 6)
+CheckTypeSize(htmlDocPtr,4, 15008, 6, 3.1, NULL, 14612, NULL)
 #elif __powerpc64__
-CheckTypeSize(htmlDocPtr,8, 15008, 9)
+CheckTypeSize(htmlDocPtr,8, 15008, 9, 3.1, NULL, 14612, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(htmlDocPtr,4, 15008, 10)
+CheckTypeSize(htmlDocPtr,4, 15008, 10, 3.1, NULL, 14612, NULL)
 #elif __s390x__
-CheckTypeSize(htmlDocPtr,8, 15008, 12)
+CheckTypeSize(htmlDocPtr,8, 15008, 12, 3.1, NULL, 14612, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15008,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14612,NULL);\n",architecture,15008,0);
 Msg("Find size of htmlDocPtr (15008)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(htmlSAXHandlerPtr,4, 15009, 2)
+CheckTypeSize(htmlSAXHandlerPtr,4, 15009, 2, 3.1, NULL, 14980, NULL)
 #elif __x86_64__
-CheckTypeSize(htmlSAXHandlerPtr,8, 15009, 11)
+CheckTypeSize(htmlSAXHandlerPtr,8, 15009, 11, 3.1, NULL, 14980, NULL)
 #elif __ia64__
-CheckTypeSize(htmlSAXHandlerPtr,8, 15009, 3)
+CheckTypeSize(htmlSAXHandlerPtr,8, 15009, 3, 3.1, NULL, 14980, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(htmlSAXHandlerPtr,4, 15009, 6)
+CheckTypeSize(htmlSAXHandlerPtr,4, 15009, 6, 3.1, NULL, 14980, NULL)
 #elif __powerpc64__
-CheckTypeSize(htmlSAXHandlerPtr,8, 15009, 9)
+CheckTypeSize(htmlSAXHandlerPtr,8, 15009, 9, 3.1, NULL, 14980, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(htmlSAXHandlerPtr,4, 15009, 10)
+CheckTypeSize(htmlSAXHandlerPtr,4, 15009, 10, 3.1, NULL, 14980, NULL)
 #elif __s390x__
-CheckTypeSize(htmlSAXHandlerPtr,8, 15009, 12)
+CheckTypeSize(htmlSAXHandlerPtr,8, 15009, 12, 3.1, NULL, 14980, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15009,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14980,NULL);\n",architecture,15009,0);
 Msg("Find size of htmlSAXHandlerPtr (15009)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(htmlParserCtxtPtr,4, 15010, 2)
+CheckTypeSize(htmlParserCtxtPtr,4, 15010, 2, 3.1, NULL, 14832, NULL)
 #elif __x86_64__
-CheckTypeSize(htmlParserCtxtPtr,8, 15010, 11)
+CheckTypeSize(htmlParserCtxtPtr,8, 15010, 11, 3.1, NULL, 14832, NULL)
 #elif __ia64__
-CheckTypeSize(htmlParserCtxtPtr,8, 15010, 3)
+CheckTypeSize(htmlParserCtxtPtr,8, 15010, 3, 3.1, NULL, 14832, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(htmlParserCtxtPtr,4, 15010, 6)
+CheckTypeSize(htmlParserCtxtPtr,4, 15010, 6, 3.1, NULL, 14832, NULL)
 #elif __powerpc64__
-CheckTypeSize(htmlParserCtxtPtr,8, 15010, 9)
+CheckTypeSize(htmlParserCtxtPtr,8, 15010, 9, 3.1, NULL, 14832, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(htmlParserCtxtPtr,4, 15010, 10)
+CheckTypeSize(htmlParserCtxtPtr,4, 15010, 10, 3.1, NULL, 14832, NULL)
 #elif __s390x__
-CheckTypeSize(htmlParserCtxtPtr,8, 15010, 12)
+CheckTypeSize(htmlParserCtxtPtr,8, 15010, 12, 3.1, NULL, 14832, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15010,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14832,NULL);\n",architecture,15010,0);
 Msg("Find size of htmlParserCtxtPtr (15010)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(htmlEntityDesc,12, 15012, 2)
+CheckTypeSize(htmlEntityDesc,12, 15012, 2, 3.1, NULL, 15011, NULL)
 #elif __x86_64__
-CheckTypeSize(htmlEntityDesc,24, 15012, 11)
+CheckTypeSize(htmlEntityDesc,24, 15012, 11, 3.1, NULL, 15011, NULL)
 #elif __ia64__
-CheckTypeSize(htmlEntityDesc,24, 15012, 3)
+CheckTypeSize(htmlEntityDesc,24, 15012, 3, 3.1, NULL, 15011, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(htmlEntityDesc,12, 15012, 6)
+CheckTypeSize(htmlEntityDesc,12, 15012, 6, 3.1, NULL, 15011, NULL)
 #elif __powerpc64__
-CheckTypeSize(htmlEntityDesc,24, 15012, 9)
+CheckTypeSize(htmlEntityDesc,24, 15012, 9, 3.1, NULL, 15011, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(htmlEntityDesc,12, 15012, 10)
+CheckTypeSize(htmlEntityDesc,12, 15012, 10, 3.1, NULL, 15011, NULL)
 #elif __s390x__
-CheckTypeSize(htmlEntityDesc,24, 15012, 12)
+CheckTypeSize(htmlEntityDesc,24, 15012, 12, 3.1, NULL, 15011, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15012,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15011,NULL);\n",architecture,15012,0);
 Msg("Find size of htmlEntityDesc (15012)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(htmlNodePtr,4, 15015, 2)
+CheckTypeSize(htmlNodePtr,4, 15015, 2, 3.1, NULL, 14609, NULL)
 #elif __x86_64__
-CheckTypeSize(htmlNodePtr,8, 15015, 11)
+CheckTypeSize(htmlNodePtr,8, 15015, 11, 3.1, NULL, 14609, NULL)
 #elif __ia64__
-CheckTypeSize(htmlNodePtr,8, 15015, 3)
+CheckTypeSize(htmlNodePtr,8, 15015, 3, 3.1, NULL, 14609, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(htmlNodePtr,4, 15015, 6)
+CheckTypeSize(htmlNodePtr,4, 15015, 6, 3.1, NULL, 14609, NULL)
 #elif __powerpc64__
-CheckTypeSize(htmlNodePtr,8, 15015, 9)
+CheckTypeSize(htmlNodePtr,8, 15015, 9, 3.1, NULL, 14609, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(htmlNodePtr,4, 15015, 10)
+CheckTypeSize(htmlNodePtr,4, 15015, 10, 3.1, NULL, 14609, NULL)
 #elif __s390x__
-CheckTypeSize(htmlNodePtr,8, 15015, 12)
+CheckTypeSize(htmlNodePtr,8, 15015, 12, 3.1, NULL, 14609, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15015,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14609,NULL);\n",architecture,15015,0);
 Msg("Find size of htmlNodePtr (15015)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(htmlParserOption,4, 15110, 2)
+CheckTypeSize(htmlParserOption,4, 15110, 2, 3.1, NULL, 15109, NULL)
 #elif __x86_64__
-CheckTypeSize(htmlParserOption,4, 15110, 11)
+CheckTypeSize(htmlParserOption,4, 15110, 11, 3.1, NULL, 15109, NULL)
 #elif __ia64__
-CheckTypeSize(htmlParserOption,4, 15110, 3)
+CheckTypeSize(htmlParserOption,4, 15110, 3, 3.1, NULL, 15109, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(htmlParserOption,4, 15110, 6)
+CheckTypeSize(htmlParserOption,4, 15110, 6, 3.1, NULL, 15109, NULL)
 #elif __powerpc64__
-CheckTypeSize(htmlParserOption,4, 15110, 9)
+CheckTypeSize(htmlParserOption,4, 15110, 9, 3.1, NULL, 15109, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(htmlParserOption,4, 15110, 10)
+CheckTypeSize(htmlParserOption,4, 15110, 10, 3.1, NULL, 15109, NULL)
 #elif __s390x__
-CheckTypeSize(htmlParserOption,4, 15110, 12)
+CheckTypeSize(htmlParserOption,4, 15110, 12, 3.1, NULL, 15109, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15110,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15109,NULL);\n",architecture,15110,0);
 Msg("Find size of htmlParserOption (15110)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(htmlParserInputPtr,4, 15111, 2)
+CheckTypeSize(htmlParserInputPtr,4, 15111, 2, 3.1, NULL, 14654, NULL)
 #elif __ia64__
-CheckTypeSize(htmlParserInputPtr,8, 15111, 3)
+CheckTypeSize(htmlParserInputPtr,8, 15111, 3, 3.1, NULL, 14654, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(htmlParserInputPtr,4, 15111, 6)
+CheckTypeSize(htmlParserInputPtr,4, 15111, 6, 3.1, NULL, 14654, NULL)
 #elif __powerpc64__
-CheckTypeSize(htmlParserInputPtr,8, 15111, 9)
+CheckTypeSize(htmlParserInputPtr,8, 15111, 9, 3.1, NULL, 14654, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(htmlParserInputPtr,4, 15111, 10)
+CheckTypeSize(htmlParserInputPtr,4, 15111, 10, 3.1, NULL, 14654, NULL)
 #elif __s390x__
-CheckTypeSize(htmlParserInputPtr,8, 15111, 12)
+CheckTypeSize(htmlParserInputPtr,8, 15111, 12, 3.1, NULL, 14654, NULL)
 #elif __x86_64__
-CheckTypeSize(htmlParserInputPtr,8, 15111, 11)
+CheckTypeSize(htmlParserInputPtr,8, 15111, 11, 3.1, NULL, 14654, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15111,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14654,NULL);\n",architecture,15111,0);
 Msg("Find size of htmlParserInputPtr (15111)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(htmlElemDescPtr,4, 15113, 2)
+CheckTypeSize(htmlElemDescPtr,4, 15113, 2, 3.1, NULL, 15112, NULL)
 #elif __ia64__
-CheckTypeSize(htmlElemDescPtr,8, 15113, 3)
+CheckTypeSize(htmlElemDescPtr,8, 15113, 3, 3.1, NULL, 15112, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(htmlElemDescPtr,4, 15113, 6)
+CheckTypeSize(htmlElemDescPtr,4, 15113, 6, 3.1, NULL, 15112, NULL)
 #elif __powerpc64__
-CheckTypeSize(htmlElemDescPtr,8, 15113, 9)
+CheckTypeSize(htmlElemDescPtr,8, 15113, 9, 3.1, NULL, 15112, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(htmlElemDescPtr,4, 15113, 10)
+CheckTypeSize(htmlElemDescPtr,4, 15113, 10, 3.1, NULL, 15112, NULL)
 #elif __s390x__
-CheckTypeSize(htmlElemDescPtr,8, 15113, 12)
+CheckTypeSize(htmlElemDescPtr,8, 15113, 12, 3.1, NULL, 15112, NULL)
 #elif __x86_64__
-CheckTypeSize(htmlElemDescPtr,8, 15113, 11)
+CheckTypeSize(htmlElemDescPtr,8, 15113, 11, 3.1, NULL, 15112, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15113,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15112,NULL);\n",architecture,15113,0);
 Msg("Find size of htmlElemDescPtr (15113)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(htmlEntityDescPtr,4, 15115, 2)
+CheckTypeSize(htmlEntityDescPtr,4, 15115, 2, 3.1, NULL, 15114, NULL)
 #elif __ia64__
-CheckTypeSize(htmlEntityDescPtr,8, 15115, 3)
+CheckTypeSize(htmlEntityDescPtr,8, 15115, 3, 3.1, NULL, 15114, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(htmlEntityDescPtr,4, 15115, 6)
+CheckTypeSize(htmlEntityDescPtr,4, 15115, 6, 3.1, NULL, 15114, NULL)
 #elif __powerpc64__
-CheckTypeSize(htmlEntityDescPtr,8, 15115, 9)
+CheckTypeSize(htmlEntityDescPtr,8, 15115, 9, 3.1, NULL, 15114, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(htmlEntityDescPtr,4, 15115, 10)
+CheckTypeSize(htmlEntityDescPtr,4, 15115, 10, 3.1, NULL, 15114, NULL)
 #elif __s390x__
-CheckTypeSize(htmlEntityDescPtr,8, 15115, 12)
+CheckTypeSize(htmlEntityDescPtr,8, 15115, 12, 3.1, NULL, 15114, NULL)
 #elif __x86_64__
-CheckTypeSize(htmlEntityDescPtr,8, 15115, 11)
+CheckTypeSize(htmlEntityDescPtr,8, 15115, 11, 3.1, NULL, 15114, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15115,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15114,NULL);\n",architecture,15115,0);
 Msg("Find size of htmlEntityDescPtr (15115)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(htmlParserInput,60, 15116, 2)
+CheckTypeSize(htmlParserInput,60, 15116, 2, 3.1, NULL, 14652, NULL)
 #elif __ia64__
-CheckTypeSize(htmlParserInput,104, 15116, 3)
+CheckTypeSize(htmlParserInput,104, 15116, 3, 3.1, NULL, 14652, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(htmlParserInput,60, 15116, 6)
+CheckTypeSize(htmlParserInput,60, 15116, 6, 3.1, NULL, 14652, NULL)
 #elif __powerpc64__
-CheckTypeSize(htmlParserInput,104, 15116, 9)
+CheckTypeSize(htmlParserInput,104, 15116, 9, 3.1, NULL, 14652, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(htmlParserInput,60, 15116, 10)
+CheckTypeSize(htmlParserInput,60, 15116, 10, 3.1, NULL, 14652, NULL)
 #elif __s390x__
-CheckTypeSize(htmlParserInput,104, 15116, 12)
+CheckTypeSize(htmlParserInput,104, 15116, 12, 3.1, NULL, 14652, NULL)
 #elif __x86_64__
-CheckTypeSize(htmlParserInput,104, 15116, 11)
+CheckTypeSize(htmlParserInput,104, 15116, 11, 3.1, NULL, 14652, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15116,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14652, NULL);\n",architecture,15116,0);
 Msg("Find size of htmlParserInput (15116)\n");
 #endif
 

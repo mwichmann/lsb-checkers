@@ -27,40 +27,40 @@ Msg("Checking data structures in libxml2/libxml/xpointer.h\n");
 
 printf("Checking data structures in libxml2/libxml/xpointer.h\n");
 #if __i386__
-CheckTypeSize(xmlLocationSet,12, 14911, 2)
+CheckTypeSize(xmlLocationSet,12, 14911, 2, 3.1, NULL, 14910, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlLocationSet,16, 14911, 11)
+CheckTypeSize(xmlLocationSet,16, 14911, 11, 3.1, NULL, 14910, NULL)
 #elif __ia64__
-CheckTypeSize(xmlLocationSet,16, 14911, 3)
+CheckTypeSize(xmlLocationSet,16, 14911, 3, 3.1, NULL, 14910, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlLocationSet,12, 14911, 6)
+CheckTypeSize(xmlLocationSet,12, 14911, 6, 3.1, NULL, 14910, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlLocationSet,16, 14911, 9)
+CheckTypeSize(xmlLocationSet,16, 14911, 9, 3.1, NULL, 14910, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlLocationSet,12, 14911, 10)
+CheckTypeSize(xmlLocationSet,12, 14911, 10, 3.1, NULL, 14910, NULL)
 #elif __s390x__
-CheckTypeSize(xmlLocationSet,16, 14911, 12)
+CheckTypeSize(xmlLocationSet,16, 14911, 12, 3.1, NULL, 14910, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14911,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14910,NULL);\n",architecture,14911,0);
 Msg("Find size of xmlLocationSet (14911)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlLocationSetPtr,4, 14913, 2)
+CheckTypeSize(xmlLocationSetPtr,4, 14913, 2, 3.1, NULL, 14912, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlLocationSetPtr,8, 14913, 11)
+CheckTypeSize(xmlLocationSetPtr,8, 14913, 11, 3.1, NULL, 14912, NULL)
 #elif __ia64__
-CheckTypeSize(xmlLocationSetPtr,8, 14913, 3)
+CheckTypeSize(xmlLocationSetPtr,8, 14913, 3, 3.1, NULL, 14912, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlLocationSetPtr,4, 14913, 6)
+CheckTypeSize(xmlLocationSetPtr,4, 14913, 6, 3.1, NULL, 14912, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlLocationSetPtr,8, 14913, 9)
+CheckTypeSize(xmlLocationSetPtr,8, 14913, 9, 3.1, NULL, 14912, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlLocationSetPtr,4, 14913, 10)
+CheckTypeSize(xmlLocationSetPtr,4, 14913, 10, 3.1, NULL, 14912, NULL)
 #elif __s390x__
-CheckTypeSize(xmlLocationSetPtr,8, 14913, 12)
+CheckTypeSize(xmlLocationSetPtr,8, 14913, 12, 3.1, NULL, 14912, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14913,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14912, NULL);\n",architecture,14913,0);
 Msg("Find size of xmlLocationSetPtr (14913)\n");
 #endif
 

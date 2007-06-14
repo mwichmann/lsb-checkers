@@ -27,7 +27,7 @@ Msg("Checking data structures in stddef.h\n");
 printf("Checking data structures in stddef.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef NULL
-	CompareConstant(NULL,(0L),906,architecture)
+	CompareConstant(NULL,(0L),906,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: NULL\n");
 cnt++;
@@ -40,51 +40,51 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(wchar_t,4, 8848, 2)
+CheckTypeSize(wchar_t,4, 8848, 2, 1.2, NULL, 8, NULL)
 #elif __ia64__
-CheckTypeSize(wchar_t,4, 8848, 3)
+CheckTypeSize(wchar_t,4, 8848, 3, 1.3, NULL, 6, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(wchar_t,4, 8848, 6)
+CheckTypeSize(wchar_t,4, 8848, 6, 1.2, NULL, 8, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(wchar_t,4, 8848, 10)
+CheckTypeSize(wchar_t,4, 8848, 10, 1.3, NULL, 6, NULL)
 #elif __powerpc64__
-CheckTypeSize(wchar_t,4, 8848, 9)
+CheckTypeSize(wchar_t,4, 8848, 9, 2.0, NULL, 6, NULL)
 #elif __s390x__
-CheckTypeSize(wchar_t,4, 8848, 12)
+CheckTypeSize(wchar_t,4, 8848, 12, 1.3, NULL, 6, NULL)
 #elif __x86_64__
-CheckTypeSize(wchar_t,4, 8848, 11)
+CheckTypeSize(wchar_t,4, 8848, 11, 2.0, NULL, 6, NULL)
 #endif
 
 #if __powerpc__ && !__powerpc64__
-CheckTypeSize(size_t,4, 8969, 6)
+CheckTypeSize(size_t,4, 8969, 6, 2.0, NULL, 7, NULL)
 #elif __ia64__
-CheckTypeSize(size_t,8, 8969, 3)
+CheckTypeSize(size_t,8, 8969, 3, 2.0, NULL, 9, NULL)
 #elif __powerpc64__
-CheckTypeSize(size_t,8, 8969, 9)
+CheckTypeSize(size_t,8, 8969, 9, 2.0, NULL, 9, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(size_t,4, 8969, 10)
+CheckTypeSize(size_t,4, 8969, 10, 2.0, NULL, 9, NULL)
 #elif __i386__
-CheckTypeSize(size_t,4, 8969, 2)
+CheckTypeSize(size_t,4, 8969, 2, 2.0, NULL, 7, NULL)
 #elif __s390x__
-CheckTypeSize(size_t,8, 8969, 12)
+CheckTypeSize(size_t,8, 8969, 12, 2.0, NULL, 9, NULL)
 #elif __x86_64__
-CheckTypeSize(size_t,8, 8969, 11)
+CheckTypeSize(size_t,8, 8969, 11, 2.0, NULL, 9, NULL)
 #endif
 
 #if __i386__
-CheckTypeSize(ptrdiff_t,4, 9027, 2)
+CheckTypeSize(ptrdiff_t,4, 9027, 2, 2.0, NULL, 6, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(ptrdiff_t,4, 9027, 6)
+CheckTypeSize(ptrdiff_t,4, 9027, 6, 2.0, NULL, 6, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(ptrdiff_t,4, 9027, 10)
+CheckTypeSize(ptrdiff_t,4, 9027, 10, 2.0, NULL, 6, NULL)
 #elif __powerpc64__
-CheckTypeSize(ptrdiff_t,8, 9027, 9)
+CheckTypeSize(ptrdiff_t,8, 9027, 9, 2.0, NULL, 8, NULL)
 #elif __x86_64__
-CheckTypeSize(ptrdiff_t,8, 9027, 11)
+CheckTypeSize(ptrdiff_t,8, 9027, 11, 2.0, NULL, 8, NULL)
 #elif __s390x__
-CheckTypeSize(ptrdiff_t,8, 9027, 12)
+CheckTypeSize(ptrdiff_t,8, 9027, 12, 2.0, NULL, 8, NULL)
 #elif __ia64__
-CheckTypeSize(ptrdiff_t,0, 9027, 3)
+CheckTypeSize(ptrdiff_t,0, 9027, 3, 2.0, NULL, 8, NULL)
 #endif
 
 #ifdef TET_TEST

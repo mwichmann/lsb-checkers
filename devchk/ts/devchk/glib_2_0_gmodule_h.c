@@ -42,78 +42,78 @@ printf("Checking data structures in glib-2.0/gmodule.h\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GModule,0, 12066, 2)
+CheckTypeSize(GModule,0, 12066, 2, 3.1, NULL, 12065, NULL)
 #elif __x86_64__
-CheckTypeSize(GModule,0, 12066, 11)
+CheckTypeSize(GModule,0, 12066, 11, 3.1, NULL, 12065, NULL)
 #elif __ia64__
-CheckTypeSize(GModule,0, 12066, 3)
+CheckTypeSize(GModule,0, 12066, 3, 3.1, NULL, 12065, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GModule,0, 12066, 6)
+CheckTypeSize(GModule,0, 12066, 6, 3.1, NULL, 12065, NULL)
 #elif __powerpc64__
-CheckTypeSize(GModule,0, 12066, 9)
+CheckTypeSize(GModule,0, 12066, 9, 3.1, NULL, 12065, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GModule,0, 12066, 10)
+CheckTypeSize(GModule,0, 12066, 10, 3.1, NULL, 12065, NULL)
 #elif __s390x__
-CheckTypeSize(GModule,0, 12066, 12)
+CheckTypeSize(GModule,0, 12066, 12, 3.1, NULL, 12065, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12066,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12065,NULL);\n",architecture,12066,0);
 Msg("Find size of GModule (12066)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GModuleFlags,4, 12069, 2)
+CheckTypeSize(GModuleFlags,4, 12069, 2, 3.1, NULL, 12068, NULL)
 #elif __x86_64__
-CheckTypeSize(GModuleFlags,4, 12069, 11)
+CheckTypeSize(GModuleFlags,4, 12069, 11, 3.1, NULL, 12068, NULL)
 #elif __ia64__
-CheckTypeSize(GModuleFlags,4, 12069, 3)
+CheckTypeSize(GModuleFlags,4, 12069, 3, 3.1, NULL, 12068, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GModuleFlags,4, 12069, 6)
+CheckTypeSize(GModuleFlags,4, 12069, 6, 3.1, NULL, 12068, NULL)
 #elif __powerpc64__
-CheckTypeSize(GModuleFlags,4, 12069, 9)
+CheckTypeSize(GModuleFlags,4, 12069, 9, 3.1, NULL, 12068, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GModuleFlags,4, 12069, 10)
+CheckTypeSize(GModuleFlags,4, 12069, 10, 3.1, NULL, 12068, NULL)
 #elif __s390x__
-CheckTypeSize(GModuleFlags,4, 12069, 12)
+CheckTypeSize(GModuleFlags,4, 12069, 12, 3.1, NULL, 12068, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12069,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12068,NULL);\n",architecture,12069,0);
 Msg("Find size of GModuleFlags (12069)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GModuleUnload,4, 12071, 2)
+CheckTypeSize(GModuleUnload,4, 12071, 2, 3.1, NULL, 12070, NULL)
 #elif __x86_64__
-CheckTypeSize(GModuleUnload,8, 12071, 11)
+CheckTypeSize(GModuleUnload,8, 12071, 11, 3.1, NULL, 12070, NULL)
 #elif __ia64__
-CheckTypeSize(GModuleUnload,8, 12071, 3)
+CheckTypeSize(GModuleUnload,8, 12071, 3, 3.1, NULL, 12070, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GModuleUnload,4, 12071, 6)
+CheckTypeSize(GModuleUnload,4, 12071, 6, 3.1, NULL, 12070, NULL)
 #elif __powerpc64__
-CheckTypeSize(GModuleUnload,8, 12071, 9)
+CheckTypeSize(GModuleUnload,8, 12071, 9, 3.1, NULL, 12070, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GModuleUnload,4, 12071, 10)
+CheckTypeSize(GModuleUnload,4, 12071, 10, 3.1, NULL, 12070, NULL)
 #elif __s390x__
-CheckTypeSize(GModuleUnload,8, 12071, 12)
+CheckTypeSize(GModuleUnload,8, 12071, 12, 3.1, NULL, 12070, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12071,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12070,NULL);\n",architecture,12071,0);
 Msg("Find size of GModuleUnload (12071)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GModuleCheckInit,4, 12073, 2)
+CheckTypeSize(GModuleCheckInit,4, 12073, 2, 3.1, NULL, 12072, NULL)
 #elif __x86_64__
-CheckTypeSize(GModuleCheckInit,8, 12073, 11)
+CheckTypeSize(GModuleCheckInit,8, 12073, 11, 3.1, NULL, 12072, NULL)
 #elif __ia64__
-CheckTypeSize(GModuleCheckInit,8, 12073, 3)
+CheckTypeSize(GModuleCheckInit,8, 12073, 3, 3.1, NULL, 12072, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GModuleCheckInit,4, 12073, 6)
+CheckTypeSize(GModuleCheckInit,4, 12073, 6, 3.1, NULL, 12072, NULL)
 #elif __powerpc64__
-CheckTypeSize(GModuleCheckInit,8, 12073, 9)
+CheckTypeSize(GModuleCheckInit,8, 12073, 9, 3.1, NULL, 12072, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GModuleCheckInit,4, 12073, 10)
+CheckTypeSize(GModuleCheckInit,4, 12073, 10, 3.1, NULL, 12072, NULL)
 #elif __s390x__
-CheckTypeSize(GModuleCheckInit,8, 12073, 12)
+CheckTypeSize(GModuleCheckInit,8, 12073, 12, 3.1, NULL, 12072, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12073,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12072, NULL);\n",architecture,12073,0);
 Msg("Find size of GModuleCheckInit (12073)\n");
 #endif
 

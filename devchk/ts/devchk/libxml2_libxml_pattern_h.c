@@ -30,97 +30,97 @@ Msg("Checking data structures in libxml2/libxml/pattern.h\n");
 
 printf("Checking data structures in libxml2/libxml/pattern.h\n");
 #if __i386__
-CheckTypeSize(xmlStreamCtxt,0, 14897, 2)
+CheckTypeSize(xmlStreamCtxt,0, 14897, 2, 3.1, NULL, 14896, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlStreamCtxt,0, 14897, 11)
+CheckTypeSize(xmlStreamCtxt,0, 14897, 11, 3.1, NULL, 14896, NULL)
 #elif __ia64__
-CheckTypeSize(xmlStreamCtxt,0, 14897, 3)
+CheckTypeSize(xmlStreamCtxt,0, 14897, 3, 3.1, NULL, 14896, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlStreamCtxt,0, 14897, 6)
+CheckTypeSize(xmlStreamCtxt,0, 14897, 6, 3.1, NULL, 14896, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlStreamCtxt,0, 14897, 9)
+CheckTypeSize(xmlStreamCtxt,0, 14897, 9, 3.1, NULL, 14896, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlStreamCtxt,0, 14897, 10)
+CheckTypeSize(xmlStreamCtxt,0, 14897, 10, 3.1, NULL, 14896, NULL)
 #elif __s390x__
-CheckTypeSize(xmlStreamCtxt,0, 14897, 12)
+CheckTypeSize(xmlStreamCtxt,0, 14897, 12, 3.1, NULL, 14896, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14897,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14896,NULL);\n",architecture,14897,0);
 Msg("Find size of xmlStreamCtxt (14897)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlStreamCtxtPtr,4, 14899, 2)
+CheckTypeSize(xmlStreamCtxtPtr,4, 14899, 2, 3.1, NULL, 14898, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlStreamCtxtPtr,8, 14899, 11)
+CheckTypeSize(xmlStreamCtxtPtr,8, 14899, 11, 3.1, NULL, 14898, NULL)
 #elif __ia64__
-CheckTypeSize(xmlStreamCtxtPtr,8, 14899, 3)
+CheckTypeSize(xmlStreamCtxtPtr,8, 14899, 3, 3.1, NULL, 14898, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlStreamCtxtPtr,4, 14899, 6)
+CheckTypeSize(xmlStreamCtxtPtr,4, 14899, 6, 3.1, NULL, 14898, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlStreamCtxtPtr,8, 14899, 9)
+CheckTypeSize(xmlStreamCtxtPtr,8, 14899, 9, 3.1, NULL, 14898, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlStreamCtxtPtr,4, 14899, 10)
+CheckTypeSize(xmlStreamCtxtPtr,4, 14899, 10, 3.1, NULL, 14898, NULL)
 #elif __s390x__
-CheckTypeSize(xmlStreamCtxtPtr,8, 14899, 12)
+CheckTypeSize(xmlStreamCtxtPtr,8, 14899, 12, 3.1, NULL, 14898, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14899,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14898,NULL);\n",architecture,14899,0);
 Msg("Find size of xmlStreamCtxtPtr (14899)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlPattern,0, 14901, 2)
+CheckTypeSize(xmlPattern,0, 14901, 2, 3.1, NULL, 14900, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlPattern,0, 14901, 11)
+CheckTypeSize(xmlPattern,0, 14901, 11, 3.1, NULL, 14900, NULL)
 #elif __ia64__
-CheckTypeSize(xmlPattern,0, 14901, 3)
+CheckTypeSize(xmlPattern,0, 14901, 3, 3.1, NULL, 14900, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlPattern,0, 14901, 6)
+CheckTypeSize(xmlPattern,0, 14901, 6, 3.1, NULL, 14900, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlPattern,0, 14901, 9)
+CheckTypeSize(xmlPattern,0, 14901, 9, 3.1, NULL, 14900, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlPattern,0, 14901, 10)
+CheckTypeSize(xmlPattern,0, 14901, 10, 3.1, NULL, 14900, NULL)
 #elif __s390x__
-CheckTypeSize(xmlPattern,0, 14901, 12)
+CheckTypeSize(xmlPattern,0, 14901, 12, 3.1, NULL, 14900, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14901,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14900,NULL);\n",architecture,14901,0);
 Msg("Find size of xmlPattern (14901)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlPatternPtr,4, 14903, 2)
+CheckTypeSize(xmlPatternPtr,4, 14903, 2, 3.1, NULL, 14902, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlPatternPtr,8, 14903, 11)
+CheckTypeSize(xmlPatternPtr,8, 14903, 11, 3.1, NULL, 14902, NULL)
 #elif __ia64__
-CheckTypeSize(xmlPatternPtr,8, 14903, 3)
+CheckTypeSize(xmlPatternPtr,8, 14903, 3, 3.1, NULL, 14902, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlPatternPtr,4, 14903, 6)
+CheckTypeSize(xmlPatternPtr,4, 14903, 6, 3.1, NULL, 14902, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlPatternPtr,8, 14903, 9)
+CheckTypeSize(xmlPatternPtr,8, 14903, 9, 3.1, NULL, 14902, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlPatternPtr,4, 14903, 10)
+CheckTypeSize(xmlPatternPtr,4, 14903, 10, 3.1, NULL, 14902, NULL)
 #elif __s390x__
-CheckTypeSize(xmlPatternPtr,8, 14903, 12)
+CheckTypeSize(xmlPatternPtr,8, 14903, 12, 3.1, NULL, 14902, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14903,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14902,NULL);\n",architecture,14903,0);
 Msg("Find size of xmlPatternPtr (14903)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlPatternFlags,4, 15106, 2)
+CheckTypeSize(xmlPatternFlags,4, 15106, 2, 3.1, NULL, 15105, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlPatternFlags,4, 15106, 11)
+CheckTypeSize(xmlPatternFlags,4, 15106, 11, 3.1, NULL, 15105, NULL)
 #elif __ia64__
-CheckTypeSize(xmlPatternFlags,4, 15106, 3)
+CheckTypeSize(xmlPatternFlags,4, 15106, 3, 3.1, NULL, 15105, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlPatternFlags,4, 15106, 6)
+CheckTypeSize(xmlPatternFlags,4, 15106, 6, 3.1, NULL, 15105, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlPatternFlags,4, 15106, 9)
+CheckTypeSize(xmlPatternFlags,4, 15106, 9, 3.1, NULL, 15105, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlPatternFlags,4, 15106, 10)
+CheckTypeSize(xmlPatternFlags,4, 15106, 10, 3.1, NULL, 15105, NULL)
 #elif __s390x__
-CheckTypeSize(xmlPatternFlags,4, 15106, 12)
+CheckTypeSize(xmlPatternFlags,4, 15106, 12, 3.1, NULL, 15105, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15106,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15105, NULL);\n",architecture,15106,0);
 Msg("Find size of xmlPatternFlags (15106)\n");
 #endif
 

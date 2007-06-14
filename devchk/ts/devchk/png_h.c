@@ -31,7 +31,7 @@ Msg("Checking data structures in png.h\n");
 printf("Checking data structures in png.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_LIBPNG_VER_STRING
-	CompareStringConstant(PNG_LIBPNG_VER_STRING,"1.2.8")
+	CompareStringConstant(PNG_LIBPNG_VER_STRING,"1.2.8",5415,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_LIBPNG_VER_STRING\n");
 cnt++;
@@ -41,7 +41,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_HEADER_VERSION_STRING
-	CompareStringConstant(PNG_HEADER_VERSION_STRING," libpng version 1.2.8 - December 3, 2004 (header)\n")
+	CompareStringConstant(PNG_HEADER_VERSION_STRING," libpng version 1.2.8 - December 3, 2004 (header)\n",5416,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_HEADER_VERSION_STRING\n");
 cnt++;
@@ -51,7 +51,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_LIBPNG_VER_SONUM
-	CompareConstant(PNG_LIBPNG_VER_SONUM,0,5417,architecture)
+	CompareConstant(PNG_LIBPNG_VER_SONUM,0,5417,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_LIBPNG_VER_SONUM\n");
 cnt++;
@@ -61,7 +61,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_LIBPNG_VER_DLLNUM
-	CompareConstant(PNG_LIBPNG_VER_DLLNUM,13,5418,architecture)
+	CompareConstant(PNG_LIBPNG_VER_DLLNUM,13,5418,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_LIBPNG_VER_DLLNUM\n");
 cnt++;
@@ -71,7 +71,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_LIBPNG_VER_MAJOR
-	CompareConstant(PNG_LIBPNG_VER_MAJOR,1,5419,architecture)
+	CompareConstant(PNG_LIBPNG_VER_MAJOR,1,5419,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_LIBPNG_VER_MAJOR\n");
 cnt++;
@@ -81,7 +81,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_LIBPNG_VER_MINOR
-	CompareConstant(PNG_LIBPNG_VER_MINOR,2,5420,architecture)
+	CompareConstant(PNG_LIBPNG_VER_MINOR,2,5420,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_LIBPNG_VER_MINOR\n");
 cnt++;
@@ -91,7 +91,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_LIBPNG_VER_RELEASE
-	CompareConstant(PNG_LIBPNG_VER_RELEASE,8,5421,architecture)
+	CompareConstant(PNG_LIBPNG_VER_RELEASE,8,5421,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_LIBPNG_VER_RELEASE\n");
 cnt++;
@@ -101,7 +101,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_LIBPNG_VER_BUILD
-	CompareConstant(PNG_LIBPNG_VER_BUILD,0,5422,architecture)
+	CompareConstant(PNG_LIBPNG_VER_BUILD,0,5422,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_LIBPNG_VER_BUILD\n");
 cnt++;
@@ -111,7 +111,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_LIBPNG_BUILD_ALPHA
-	CompareConstant(PNG_LIBPNG_BUILD_ALPHA,1,5423,architecture)
+	CompareConstant(PNG_LIBPNG_BUILD_ALPHA,1,5423,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_LIBPNG_BUILD_ALPHA\n");
 cnt++;
@@ -121,7 +121,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_LIBPNG_BUILD_BETA
-	CompareConstant(PNG_LIBPNG_BUILD_BETA,2,5424,architecture)
+	CompareConstant(PNG_LIBPNG_BUILD_BETA,2,5424,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_LIBPNG_BUILD_BETA\n");
 cnt++;
@@ -131,7 +131,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_LIBPNG_BUILD_RC
-	CompareConstant(PNG_LIBPNG_BUILD_RC,3,5425,architecture)
+	CompareConstant(PNG_LIBPNG_BUILD_RC,3,5425,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_LIBPNG_BUILD_RC\n");
 cnt++;
@@ -141,7 +141,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_LIBPNG_BUILD_STABLE
-	CompareConstant(PNG_LIBPNG_BUILD_STABLE,4,5426,architecture)
+	CompareConstant(PNG_LIBPNG_BUILD_STABLE,4,5426,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_LIBPNG_BUILD_STABLE\n");
 cnt++;
@@ -151,7 +151,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_LIBPNG_BUILD_RELEASE_STATUS_MASK
-	CompareConstant(PNG_LIBPNG_BUILD_RELEASE_STATUS_MASK,7,5427,architecture)
+	CompareConstant(PNG_LIBPNG_BUILD_RELEASE_STATUS_MASK,7,5427,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_LIBPNG_BUILD_RELEASE_STATUS_MASK\n");
 cnt++;
@@ -161,7 +161,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_LIBPNG_BUILD_PATCH
-	CompareConstant(PNG_LIBPNG_BUILD_PATCH,8,5428,architecture)
+	CompareConstant(PNG_LIBPNG_BUILD_PATCH,8,5428,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_LIBPNG_BUILD_PATCH\n");
 cnt++;
@@ -171,7 +171,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_LIBPNG_BUILD_PRIVATE
-	CompareConstant(PNG_LIBPNG_BUILD_PRIVATE,16,5429,architecture)
+	CompareConstant(PNG_LIBPNG_BUILD_PRIVATE,16,5429,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_LIBPNG_BUILD_PRIVATE\n");
 cnt++;
@@ -181,7 +181,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_LIBPNG_BUILD_SPECIAL
-	CompareConstant(PNG_LIBPNG_BUILD_SPECIAL,32,5430,architecture)
+	CompareConstant(PNG_LIBPNG_BUILD_SPECIAL,32,5430,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_LIBPNG_BUILD_SPECIAL\n");
 cnt++;
@@ -195,7 +195,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_LIBPNG_VER
-	CompareConstant(PNG_LIBPNG_VER,10208,5432,architecture)
+	CompareConstant(PNG_LIBPNG_VER,10208,5432,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_LIBPNG_VER\n");
 cnt++;
@@ -209,7 +209,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_ZBUF_SIZE
-	CompareConstant(PNG_ZBUF_SIZE,8192,5434,architecture)
+	CompareConstant(PNG_ZBUF_SIZE,8192,5434,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_ZBUF_SIZE\n");
 cnt++;
@@ -439,7 +439,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_USER_WIDTH_MAX
-	CompareConstant(PNG_USER_WIDTH_MAX,1000000L,5490,architecture)
+	CompareConstant(PNG_USER_WIDTH_MAX,1000000L,5490,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_USER_WIDTH_MAX\n");
 cnt++;
@@ -449,7 +449,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_USER_HEIGHT_MAX
-	CompareConstant(PNG_USER_HEIGHT_MAX,1000000L,5491,architecture)
+	CompareConstant(PNG_USER_HEIGHT_MAX,1000000L,5491,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_USER_HEIGHT_MAX\n");
 cnt++;
@@ -815,7 +815,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_TEXT_COMPRESSION_NONE_WR
-	CompareConstant(PNG_TEXT_COMPRESSION_NONE_WR,-3,5586,architecture)
+	CompareConstant(PNG_TEXT_COMPRESSION_NONE_WR,-3,5586,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_TEXT_COMPRESSION_NONE_WR\n");
 cnt++;
@@ -825,7 +825,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_TEXT_COMPRESSION_zTXt_WR
-	CompareConstant(PNG_TEXT_COMPRESSION_zTXt_WR,-2,5587,architecture)
+	CompareConstant(PNG_TEXT_COMPRESSION_zTXt_WR,-2,5587,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_TEXT_COMPRESSION_zTXt_WR\n");
 cnt++;
@@ -835,7 +835,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_TEXT_COMPRESSION_NONE
-	CompareConstant(PNG_TEXT_COMPRESSION_NONE,-1,5588,architecture)
+	CompareConstant(PNG_TEXT_COMPRESSION_NONE,-1,5588,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_TEXT_COMPRESSION_NONE\n");
 cnt++;
@@ -845,7 +845,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_TEXT_COMPRESSION_zTXt
-	CompareConstant(PNG_TEXT_COMPRESSION_zTXt,0,5589,architecture)
+	CompareConstant(PNG_TEXT_COMPRESSION_zTXt,0,5589,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_TEXT_COMPRESSION_zTXt\n");
 cnt++;
@@ -855,7 +855,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_ITXT_COMPRESSION_NONE
-	CompareConstant(PNG_ITXT_COMPRESSION_NONE,1,5590,architecture)
+	CompareConstant(PNG_ITXT_COMPRESSION_NONE,1,5590,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_ITXT_COMPRESSION_NONE\n");
 cnt++;
@@ -865,7 +865,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_ITXT_COMPRESSION_zTXt
-	CompareConstant(PNG_ITXT_COMPRESSION_zTXt,2,5591,architecture)
+	CompareConstant(PNG_ITXT_COMPRESSION_zTXt,2,5591,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_ITXT_COMPRESSION_zTXt\n");
 cnt++;
@@ -875,7 +875,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_TEXT_COMPRESSION_LAST
-	CompareConstant(PNG_TEXT_COMPRESSION_LAST,3,5592,architecture)
+	CompareConstant(PNG_TEXT_COMPRESSION_LAST,3,5592,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_TEXT_COMPRESSION_LAST\n");
 cnt++;
@@ -901,7 +901,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_COLOR_MASK_PALETTE
-	CompareConstant(PNG_COLOR_MASK_PALETTE,1,5597,architecture)
+	CompareConstant(PNG_COLOR_MASK_PALETTE,1,5597,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_COLOR_MASK_PALETTE\n");
 cnt++;
@@ -911,7 +911,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_COLOR_MASK_COLOR
-	CompareConstant(PNG_COLOR_MASK_COLOR,2,5598,architecture)
+	CompareConstant(PNG_COLOR_MASK_COLOR,2,5598,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_COLOR_MASK_COLOR\n");
 cnt++;
@@ -921,7 +921,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_COLOR_MASK_ALPHA
-	CompareConstant(PNG_COLOR_MASK_ALPHA,4,5599,architecture)
+	CompareConstant(PNG_COLOR_MASK_ALPHA,4,5599,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_COLOR_MASK_ALPHA\n");
 cnt++;
@@ -931,7 +931,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_COLOR_TYPE_GRAY
-	CompareConstant(PNG_COLOR_TYPE_GRAY,0,5600,architecture)
+	CompareConstant(PNG_COLOR_TYPE_GRAY,0,5600,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_COLOR_TYPE_GRAY\n");
 cnt++;
@@ -965,7 +965,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_COMPRESSION_TYPE_BASE
-	CompareConstant(PNG_COMPRESSION_TYPE_BASE,0,5607,architecture)
+	CompareConstant(PNG_COMPRESSION_TYPE_BASE,0,5607,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_COMPRESSION_TYPE_BASE\n");
 cnt++;
@@ -979,7 +979,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FILTER_TYPE_BASE
-	CompareConstant(PNG_FILTER_TYPE_BASE,0,5609,architecture)
+	CompareConstant(PNG_FILTER_TYPE_BASE,0,5609,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FILTER_TYPE_BASE\n");
 cnt++;
@@ -989,7 +989,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_INTRAPIXEL_DIFFERENCING
-	CompareConstant(PNG_INTRAPIXEL_DIFFERENCING,64,5610,architecture)
+	CompareConstant(PNG_INTRAPIXEL_DIFFERENCING,64,5610,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_INTRAPIXEL_DIFFERENCING\n");
 cnt++;
@@ -1003,7 +1003,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_INTERLACE_NONE
-	CompareConstant(PNG_INTERLACE_NONE,0,5612,architecture)
+	CompareConstant(PNG_INTERLACE_NONE,0,5612,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_INTERLACE_NONE\n");
 cnt++;
@@ -1013,7 +1013,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_INTERLACE_ADAM7
-	CompareConstant(PNG_INTERLACE_ADAM7,1,5613,architecture)
+	CompareConstant(PNG_INTERLACE_ADAM7,1,5613,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_INTERLACE_ADAM7\n");
 cnt++;
@@ -1023,7 +1023,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_INTERLACE_LAST
-	CompareConstant(PNG_INTERLACE_LAST,2,5614,architecture)
+	CompareConstant(PNG_INTERLACE_LAST,2,5614,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_INTERLACE_LAST\n");
 cnt++;
@@ -1033,7 +1033,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_OFFSET_PIXEL
-	CompareConstant(PNG_OFFSET_PIXEL,0,5615,architecture)
+	CompareConstant(PNG_OFFSET_PIXEL,0,5615,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_OFFSET_PIXEL\n");
 cnt++;
@@ -1043,7 +1043,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_OFFSET_MICROMETER
-	CompareConstant(PNG_OFFSET_MICROMETER,1,5616,architecture)
+	CompareConstant(PNG_OFFSET_MICROMETER,1,5616,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_OFFSET_MICROMETER\n");
 cnt++;
@@ -1053,7 +1053,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_OFFSET_LAST
-	CompareConstant(PNG_OFFSET_LAST,2,5617,architecture)
+	CompareConstant(PNG_OFFSET_LAST,2,5617,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_OFFSET_LAST\n");
 cnt++;
@@ -1063,7 +1063,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_EQUATION_LINEAR
-	CompareConstant(PNG_EQUATION_LINEAR,0,5618,architecture)
+	CompareConstant(PNG_EQUATION_LINEAR,0,5618,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_EQUATION_LINEAR\n");
 cnt++;
@@ -1073,7 +1073,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_EQUATION_BASE_E
-	CompareConstant(PNG_EQUATION_BASE_E,1,5619,architecture)
+	CompareConstant(PNG_EQUATION_BASE_E,1,5619,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_EQUATION_BASE_E\n");
 cnt++;
@@ -1083,7 +1083,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_EQUATION_ARBITRARY
-	CompareConstant(PNG_EQUATION_ARBITRARY,2,5620,architecture)
+	CompareConstant(PNG_EQUATION_ARBITRARY,2,5620,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_EQUATION_ARBITRARY\n");
 cnt++;
@@ -1093,7 +1093,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_EQUATION_HYPERBOLIC
-	CompareConstant(PNG_EQUATION_HYPERBOLIC,3,5621,architecture)
+	CompareConstant(PNG_EQUATION_HYPERBOLIC,3,5621,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_EQUATION_HYPERBOLIC\n");
 cnt++;
@@ -1103,7 +1103,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_EQUATION_LAST
-	CompareConstant(PNG_EQUATION_LAST,4,5622,architecture)
+	CompareConstant(PNG_EQUATION_LAST,4,5622,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_EQUATION_LAST\n");
 cnt++;
@@ -1113,7 +1113,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_SCALE_UNKNOWN
-	CompareConstant(PNG_SCALE_UNKNOWN,0,5623,architecture)
+	CompareConstant(PNG_SCALE_UNKNOWN,0,5623,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_SCALE_UNKNOWN\n");
 cnt++;
@@ -1123,7 +1123,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_SCALE_METER
-	CompareConstant(PNG_SCALE_METER,1,5624,architecture)
+	CompareConstant(PNG_SCALE_METER,1,5624,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_SCALE_METER\n");
 cnt++;
@@ -1133,7 +1133,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_SCALE_RADIAN
-	CompareConstant(PNG_SCALE_RADIAN,2,5625,architecture)
+	CompareConstant(PNG_SCALE_RADIAN,2,5625,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_SCALE_RADIAN\n");
 cnt++;
@@ -1143,7 +1143,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_SCALE_LAST
-	CompareConstant(PNG_SCALE_LAST,3,5626,architecture)
+	CompareConstant(PNG_SCALE_LAST,3,5626,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_SCALE_LAST\n");
 cnt++;
@@ -1153,7 +1153,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_RESOLUTION_UNKNOWN
-	CompareConstant(PNG_RESOLUTION_UNKNOWN,0,5627,architecture)
+	CompareConstant(PNG_RESOLUTION_UNKNOWN,0,5627,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_RESOLUTION_UNKNOWN\n");
 cnt++;
@@ -1163,7 +1163,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_RESOLUTION_METER
-	CompareConstant(PNG_RESOLUTION_METER,1,5628,architecture)
+	CompareConstant(PNG_RESOLUTION_METER,1,5628,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_RESOLUTION_METER\n");
 cnt++;
@@ -1173,7 +1173,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_RESOLUTION_LAST
-	CompareConstant(PNG_RESOLUTION_LAST,2,5629,architecture)
+	CompareConstant(PNG_RESOLUTION_LAST,2,5629,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_RESOLUTION_LAST\n");
 cnt++;
@@ -1183,7 +1183,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_sRGB_INTENT_PERCEPTUAL
-	CompareConstant(PNG_sRGB_INTENT_PERCEPTUAL,0,5630,architecture)
+	CompareConstant(PNG_sRGB_INTENT_PERCEPTUAL,0,5630,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_sRGB_INTENT_PERCEPTUAL\n");
 cnt++;
@@ -1193,7 +1193,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_sRGB_INTENT_RELATIVE
-	CompareConstant(PNG_sRGB_INTENT_RELATIVE,1,5631,architecture)
+	CompareConstant(PNG_sRGB_INTENT_RELATIVE,1,5631,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_sRGB_INTENT_RELATIVE\n");
 cnt++;
@@ -1203,7 +1203,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_sRGB_INTENT_SATURATION
-	CompareConstant(PNG_sRGB_INTENT_SATURATION,2,5632,architecture)
+	CompareConstant(PNG_sRGB_INTENT_SATURATION,2,5632,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_sRGB_INTENT_SATURATION\n");
 cnt++;
@@ -1213,7 +1213,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_sRGB_INTENT_ABSOLUTE
-	CompareConstant(PNG_sRGB_INTENT_ABSOLUTE,3,5633,architecture)
+	CompareConstant(PNG_sRGB_INTENT_ABSOLUTE,3,5633,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_sRGB_INTENT_ABSOLUTE\n");
 cnt++;
@@ -1223,7 +1223,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_sRGB_INTENT_LAST
-	CompareConstant(PNG_sRGB_INTENT_LAST,4,5634,architecture)
+	CompareConstant(PNG_sRGB_INTENT_LAST,4,5634,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_sRGB_INTENT_LAST\n");
 cnt++;
@@ -1233,7 +1233,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_KEYWORD_MAX_LENGTH
-	CompareConstant(PNG_KEYWORD_MAX_LENGTH,79,5635,architecture)
+	CompareConstant(PNG_KEYWORD_MAX_LENGTH,79,5635,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_KEYWORD_MAX_LENGTH\n");
 cnt++;
@@ -1243,7 +1243,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_MAX_PALETTE_LENGTH
-	CompareConstant(PNG_MAX_PALETTE_LENGTH,256,5636,architecture)
+	CompareConstant(PNG_MAX_PALETTE_LENGTH,256,5636,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_MAX_PALETTE_LENGTH\n");
 cnt++;
@@ -1253,7 +1253,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_INFO_gAMA
-	CompareConstant(PNG_INFO_gAMA,0x0001,5637,architecture)
+	CompareConstant(PNG_INFO_gAMA,0x0001,5637,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_INFO_gAMA\n");
 cnt++;
@@ -1263,7 +1263,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_INFO_sBIT
-	CompareConstant(PNG_INFO_sBIT,0x0002,5638,architecture)
+	CompareConstant(PNG_INFO_sBIT,0x0002,5638,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_INFO_sBIT\n");
 cnt++;
@@ -1273,7 +1273,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_INFO_cHRM
-	CompareConstant(PNG_INFO_cHRM,0x0004,5639,architecture)
+	CompareConstant(PNG_INFO_cHRM,0x0004,5639,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_INFO_cHRM\n");
 cnt++;
@@ -1283,7 +1283,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_INFO_PLTE
-	CompareConstant(PNG_INFO_PLTE,0x0008,5640,architecture)
+	CompareConstant(PNG_INFO_PLTE,0x0008,5640,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_INFO_PLTE\n");
 cnt++;
@@ -1293,7 +1293,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_INFO_tRNS
-	CompareConstant(PNG_INFO_tRNS,0x0010,5641,architecture)
+	CompareConstant(PNG_INFO_tRNS,0x0010,5641,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_INFO_tRNS\n");
 cnt++;
@@ -1303,7 +1303,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_INFO_bKGD
-	CompareConstant(PNG_INFO_bKGD,0x0020,5642,architecture)
+	CompareConstant(PNG_INFO_bKGD,0x0020,5642,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_INFO_bKGD\n");
 cnt++;
@@ -1313,7 +1313,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_INFO_hIST
-	CompareConstant(PNG_INFO_hIST,0x0040,5643,architecture)
+	CompareConstant(PNG_INFO_hIST,0x0040,5643,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_INFO_hIST\n");
 cnt++;
@@ -1323,7 +1323,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_INFO_pHYs
-	CompareConstant(PNG_INFO_pHYs,0x0080,5644,architecture)
+	CompareConstant(PNG_INFO_pHYs,0x0080,5644,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_INFO_pHYs\n");
 cnt++;
@@ -1333,7 +1333,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_INFO_oFFs
-	CompareConstant(PNG_INFO_oFFs,0x0100,5645,architecture)
+	CompareConstant(PNG_INFO_oFFs,0x0100,5645,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_INFO_oFFs\n");
 cnt++;
@@ -1343,7 +1343,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_INFO_tIME
-	CompareConstant(PNG_INFO_tIME,0x0200,5646,architecture)
+	CompareConstant(PNG_INFO_tIME,0x0200,5646,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_INFO_tIME\n");
 cnt++;
@@ -1353,7 +1353,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_INFO_pCAL
-	CompareConstant(PNG_INFO_pCAL,0x0400,5647,architecture)
+	CompareConstant(PNG_INFO_pCAL,0x0400,5647,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_INFO_pCAL\n");
 cnt++;
@@ -1363,7 +1363,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_INFO_sRGB
-	CompareConstant(PNG_INFO_sRGB,0x0800,5648,architecture)
+	CompareConstant(PNG_INFO_sRGB,0x0800,5648,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_INFO_sRGB\n");
 cnt++;
@@ -1373,7 +1373,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_INFO_iCCP
-	CompareConstant(PNG_INFO_iCCP,0x1000,5649,architecture)
+	CompareConstant(PNG_INFO_iCCP,0x1000,5649,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_INFO_iCCP\n");
 cnt++;
@@ -1383,7 +1383,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_INFO_sPLT
-	CompareConstant(PNG_INFO_sPLT,0x2000,5650,architecture)
+	CompareConstant(PNG_INFO_sPLT,0x2000,5650,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_INFO_sPLT\n");
 cnt++;
@@ -1393,7 +1393,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_INFO_sCAL
-	CompareConstant(PNG_INFO_sCAL,0x4000,5651,architecture)
+	CompareConstant(PNG_INFO_sCAL,0x4000,5651,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_INFO_sCAL\n");
 cnt++;
@@ -1403,7 +1403,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_INFO_IDAT
-	CompareConstant(PNG_INFO_IDAT,0x8000L,5652,architecture)
+	CompareConstant(PNG_INFO_IDAT,0x8000L,5652,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_INFO_IDAT\n");
 cnt++;
@@ -1413,7 +1413,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_TRANSFORM_IDENTITY
-	CompareConstant(PNG_TRANSFORM_IDENTITY,0x0000,5653,architecture)
+	CompareConstant(PNG_TRANSFORM_IDENTITY,0x0000,5653,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_TRANSFORM_IDENTITY\n");
 cnt++;
@@ -1423,7 +1423,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_TRANSFORM_STRIP_16
-	CompareConstant(PNG_TRANSFORM_STRIP_16,0x0001,5654,architecture)
+	CompareConstant(PNG_TRANSFORM_STRIP_16,0x0001,5654,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_TRANSFORM_STRIP_16\n");
 cnt++;
@@ -1433,7 +1433,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_TRANSFORM_STRIP_ALPHA
-	CompareConstant(PNG_TRANSFORM_STRIP_ALPHA,0x0002,5655,architecture)
+	CompareConstant(PNG_TRANSFORM_STRIP_ALPHA,0x0002,5655,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_TRANSFORM_STRIP_ALPHA\n");
 cnt++;
@@ -1443,7 +1443,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_TRANSFORM_PACKING
-	CompareConstant(PNG_TRANSFORM_PACKING,0x0004,5656,architecture)
+	CompareConstant(PNG_TRANSFORM_PACKING,0x0004,5656,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_TRANSFORM_PACKING\n");
 cnt++;
@@ -1453,7 +1453,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_TRANSFORM_PACKSWAP
-	CompareConstant(PNG_TRANSFORM_PACKSWAP,0x0008,5657,architecture)
+	CompareConstant(PNG_TRANSFORM_PACKSWAP,0x0008,5657,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_TRANSFORM_PACKSWAP\n");
 cnt++;
@@ -1463,7 +1463,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_TRANSFORM_EXPAND
-	CompareConstant(PNG_TRANSFORM_EXPAND,0x0010,5658,architecture)
+	CompareConstant(PNG_TRANSFORM_EXPAND,0x0010,5658,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_TRANSFORM_EXPAND\n");
 cnt++;
@@ -1473,7 +1473,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_TRANSFORM_INVERT_MONO
-	CompareConstant(PNG_TRANSFORM_INVERT_MONO,0x0020,5659,architecture)
+	CompareConstant(PNG_TRANSFORM_INVERT_MONO,0x0020,5659,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_TRANSFORM_INVERT_MONO\n");
 cnt++;
@@ -1483,7 +1483,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_TRANSFORM_SHIFT
-	CompareConstant(PNG_TRANSFORM_SHIFT,0x0040,5660,architecture)
+	CompareConstant(PNG_TRANSFORM_SHIFT,0x0040,5660,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_TRANSFORM_SHIFT\n");
 cnt++;
@@ -1493,7 +1493,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_TRANSFORM_BGR
-	CompareConstant(PNG_TRANSFORM_BGR,0x0080,5661,architecture)
+	CompareConstant(PNG_TRANSFORM_BGR,0x0080,5661,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_TRANSFORM_BGR\n");
 cnt++;
@@ -1503,7 +1503,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_TRANSFORM_SWAP_ALPHA
-	CompareConstant(PNG_TRANSFORM_SWAP_ALPHA,0x0100,5662,architecture)
+	CompareConstant(PNG_TRANSFORM_SWAP_ALPHA,0x0100,5662,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_TRANSFORM_SWAP_ALPHA\n");
 cnt++;
@@ -1513,7 +1513,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_TRANSFORM_SWAP_ENDIAN
-	CompareConstant(PNG_TRANSFORM_SWAP_ENDIAN,0x0200,5663,architecture)
+	CompareConstant(PNG_TRANSFORM_SWAP_ENDIAN,0x0200,5663,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_TRANSFORM_SWAP_ENDIAN\n");
 cnt++;
@@ -1523,7 +1523,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_TRANSFORM_INVERT_ALPHA
-	CompareConstant(PNG_TRANSFORM_INVERT_ALPHA,0x0400,5664,architecture)
+	CompareConstant(PNG_TRANSFORM_INVERT_ALPHA,0x0400,5664,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_TRANSFORM_INVERT_ALPHA\n");
 cnt++;
@@ -1533,7 +1533,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_TRANSFORM_STRIP_FILLER
-	CompareConstant(PNG_TRANSFORM_STRIP_FILLER,0x0800,5665,architecture)
+	CompareConstant(PNG_TRANSFORM_STRIP_FILLER,0x0800,5665,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_TRANSFORM_STRIP_FILLER\n");
 cnt++;
@@ -1543,7 +1543,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FLAG_MNG_EMPTY_PLTE
-	CompareConstant(PNG_FLAG_MNG_EMPTY_PLTE,0x01,5666,architecture)
+	CompareConstant(PNG_FLAG_MNG_EMPTY_PLTE,0x01,5666,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FLAG_MNG_EMPTY_PLTE\n");
 cnt++;
@@ -1553,7 +1553,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FLAG_MNG_FILTER_64
-	CompareConstant(PNG_FLAG_MNG_FILTER_64,0x04,5667,architecture)
+	CompareConstant(PNG_FLAG_MNG_FILTER_64,0x04,5667,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FLAG_MNG_FILTER_64\n");
 cnt++;
@@ -1563,7 +1563,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_ALL_MNG_FEATURES
-	CompareConstant(PNG_ALL_MNG_FEATURES,0x05,5668,architecture)
+	CompareConstant(PNG_ALL_MNG_FEATURES,0x05,5668,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_ALL_MNG_FEATURES\n");
 cnt++;
@@ -1577,7 +1577,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FILLER_BEFORE
-	CompareConstant(PNG_FILLER_BEFORE,0,5670,architecture)
+	CompareConstant(PNG_FILLER_BEFORE,0,5670,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FILLER_BEFORE\n");
 cnt++;
@@ -1587,7 +1587,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FILLER_AFTER
-	CompareConstant(PNG_FILLER_AFTER,1,5671,architecture)
+	CompareConstant(PNG_FILLER_AFTER,1,5671,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FILLER_AFTER\n");
 cnt++;
@@ -1597,7 +1597,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_BACKGROUND_GAMMA_UNKNOWN
-	CompareConstant(PNG_BACKGROUND_GAMMA_UNKNOWN,0,5672,architecture)
+	CompareConstant(PNG_BACKGROUND_GAMMA_UNKNOWN,0,5672,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_BACKGROUND_GAMMA_UNKNOWN\n");
 cnt++;
@@ -1607,7 +1607,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_BACKGROUND_GAMMA_SCREEN
-	CompareConstant(PNG_BACKGROUND_GAMMA_SCREEN,1,5673,architecture)
+	CompareConstant(PNG_BACKGROUND_GAMMA_SCREEN,1,5673,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_BACKGROUND_GAMMA_SCREEN\n");
 cnt++;
@@ -1617,7 +1617,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_BACKGROUND_GAMMA_FILE
-	CompareConstant(PNG_BACKGROUND_GAMMA_FILE,2,5674,architecture)
+	CompareConstant(PNG_BACKGROUND_GAMMA_FILE,2,5674,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_BACKGROUND_GAMMA_FILE\n");
 cnt++;
@@ -1627,7 +1627,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_BACKGROUND_GAMMA_UNIQUE
-	CompareConstant(PNG_BACKGROUND_GAMMA_UNIQUE,3,5675,architecture)
+	CompareConstant(PNG_BACKGROUND_GAMMA_UNIQUE,3,5675,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_BACKGROUND_GAMMA_UNIQUE\n");
 cnt++;
@@ -1637,7 +1637,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_CRC_DEFAULT
-	CompareConstant(PNG_CRC_DEFAULT,0,5676,architecture)
+	CompareConstant(PNG_CRC_DEFAULT,0,5676,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_CRC_DEFAULT\n");
 cnt++;
@@ -1647,7 +1647,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_CRC_ERROR_QUIT
-	CompareConstant(PNG_CRC_ERROR_QUIT,1,5677,architecture)
+	CompareConstant(PNG_CRC_ERROR_QUIT,1,5677,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_CRC_ERROR_QUIT\n");
 cnt++;
@@ -1657,7 +1657,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_CRC_WARN_DISCARD
-	CompareConstant(PNG_CRC_WARN_DISCARD,2,5678,architecture)
+	CompareConstant(PNG_CRC_WARN_DISCARD,2,5678,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_CRC_WARN_DISCARD\n");
 cnt++;
@@ -1667,7 +1667,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_CRC_WARN_USE
-	CompareConstant(PNG_CRC_WARN_USE,3,5679,architecture)
+	CompareConstant(PNG_CRC_WARN_USE,3,5679,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_CRC_WARN_USE\n");
 cnt++;
@@ -1677,7 +1677,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_CRC_QUIET_USE
-	CompareConstant(PNG_CRC_QUIET_USE,4,5680,architecture)
+	CompareConstant(PNG_CRC_QUIET_USE,4,5680,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_CRC_QUIET_USE\n");
 cnt++;
@@ -1687,7 +1687,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_CRC_NO_CHANGE
-	CompareConstant(PNG_CRC_NO_CHANGE,5,5681,architecture)
+	CompareConstant(PNG_CRC_NO_CHANGE,5,5681,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_CRC_NO_CHANGE\n");
 cnt++;
@@ -1697,7 +1697,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_NO_FILTERS
-	CompareConstant(PNG_NO_FILTERS,0x00,5682,architecture)
+	CompareConstant(PNG_NO_FILTERS,0x00,5682,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_NO_FILTERS\n");
 cnt++;
@@ -1707,7 +1707,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FILTER_NONE
-	CompareConstant(PNG_FILTER_NONE,0x08,5683,architecture)
+	CompareConstant(PNG_FILTER_NONE,0x08,5683,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FILTER_NONE\n");
 cnt++;
@@ -1717,7 +1717,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FILTER_SUB
-	CompareConstant(PNG_FILTER_SUB,0x10,5684,architecture)
+	CompareConstant(PNG_FILTER_SUB,0x10,5684,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FILTER_SUB\n");
 cnt++;
@@ -1727,7 +1727,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FILTER_UP
-	CompareConstant(PNG_FILTER_UP,0x20,5685,architecture)
+	CompareConstant(PNG_FILTER_UP,0x20,5685,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FILTER_UP\n");
 cnt++;
@@ -1737,7 +1737,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FILTER_AVG
-	CompareConstant(PNG_FILTER_AVG,0x40,5686,architecture)
+	CompareConstant(PNG_FILTER_AVG,0x40,5686,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FILTER_AVG\n");
 cnt++;
@@ -1747,7 +1747,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FILTER_PAETH
-	CompareConstant(PNG_FILTER_PAETH,0x80,5687,architecture)
+	CompareConstant(PNG_FILTER_PAETH,0x80,5687,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FILTER_PAETH\n");
 cnt++;
@@ -1761,7 +1761,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FILTER_VALUE_NONE
-	CompareConstant(PNG_FILTER_VALUE_NONE,0,5689,architecture)
+	CompareConstant(PNG_FILTER_VALUE_NONE,0,5689,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FILTER_VALUE_NONE\n");
 cnt++;
@@ -1771,7 +1771,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FILTER_VALUE_SUB
-	CompareConstant(PNG_FILTER_VALUE_SUB,1,5690,architecture)
+	CompareConstant(PNG_FILTER_VALUE_SUB,1,5690,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FILTER_VALUE_SUB\n");
 cnt++;
@@ -1781,7 +1781,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FILTER_VALUE_UP
-	CompareConstant(PNG_FILTER_VALUE_UP,2,5691,architecture)
+	CompareConstant(PNG_FILTER_VALUE_UP,2,5691,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FILTER_VALUE_UP\n");
 cnt++;
@@ -1791,7 +1791,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FILTER_VALUE_AVG
-	CompareConstant(PNG_FILTER_VALUE_AVG,3,5692,architecture)
+	CompareConstant(PNG_FILTER_VALUE_AVG,3,5692,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FILTER_VALUE_AVG\n");
 cnt++;
@@ -1801,7 +1801,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FILTER_VALUE_PAETH
-	CompareConstant(PNG_FILTER_VALUE_PAETH,4,5693,architecture)
+	CompareConstant(PNG_FILTER_VALUE_PAETH,4,5693,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FILTER_VALUE_PAETH\n");
 cnt++;
@@ -1811,7 +1811,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FILTER_VALUE_LAST
-	CompareConstant(PNG_FILTER_VALUE_LAST,5,5694,architecture)
+	CompareConstant(PNG_FILTER_VALUE_LAST,5,5694,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FILTER_VALUE_LAST\n");
 cnt++;
@@ -1821,7 +1821,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FILTER_HEURISTIC_DEFAULT
-	CompareConstant(PNG_FILTER_HEURISTIC_DEFAULT,0,5695,architecture)
+	CompareConstant(PNG_FILTER_HEURISTIC_DEFAULT,0,5695,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FILTER_HEURISTIC_DEFAULT\n");
 cnt++;
@@ -1831,7 +1831,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FILTER_HEURISTIC_UNWEIGHTED
-	CompareConstant(PNG_FILTER_HEURISTIC_UNWEIGHTED,1,5696,architecture)
+	CompareConstant(PNG_FILTER_HEURISTIC_UNWEIGHTED,1,5696,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FILTER_HEURISTIC_UNWEIGHTED\n");
 cnt++;
@@ -1841,7 +1841,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FILTER_HEURISTIC_WEIGHTED
-	CompareConstant(PNG_FILTER_HEURISTIC_WEIGHTED,2,5697,architecture)
+	CompareConstant(PNG_FILTER_HEURISTIC_WEIGHTED,2,5697,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FILTER_HEURISTIC_WEIGHTED\n");
 cnt++;
@@ -1851,7 +1851,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FILTER_HEURISTIC_LAST
-	CompareConstant(PNG_FILTER_HEURISTIC_LAST,3,5698,architecture)
+	CompareConstant(PNG_FILTER_HEURISTIC_LAST,3,5698,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FILTER_HEURISTIC_LAST\n");
 cnt++;
@@ -1861,7 +1861,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_DESTROY_WILL_FREE_DATA
-	CompareConstant(PNG_DESTROY_WILL_FREE_DATA,1,5699,architecture)
+	CompareConstant(PNG_DESTROY_WILL_FREE_DATA,1,5699,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_DESTROY_WILL_FREE_DATA\n");
 cnt++;
@@ -1871,7 +1871,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_SET_WILL_FREE_DATA
-	CompareConstant(PNG_SET_WILL_FREE_DATA,1,5700,architecture)
+	CompareConstant(PNG_SET_WILL_FREE_DATA,1,5700,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_SET_WILL_FREE_DATA\n");
 cnt++;
@@ -1881,7 +1881,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_USER_WILL_FREE_DATA
-	CompareConstant(PNG_USER_WILL_FREE_DATA,2,5701,architecture)
+	CompareConstant(PNG_USER_WILL_FREE_DATA,2,5701,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_USER_WILL_FREE_DATA\n");
 cnt++;
@@ -1891,7 +1891,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FREE_HIST
-	CompareConstant(PNG_FREE_HIST,0x0008,5702,architecture)
+	CompareConstant(PNG_FREE_HIST,0x0008,5702,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FREE_HIST\n");
 cnt++;
@@ -1901,7 +1901,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FREE_ICCP
-	CompareConstant(PNG_FREE_ICCP,0x0010,5703,architecture)
+	CompareConstant(PNG_FREE_ICCP,0x0010,5703,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FREE_ICCP\n");
 cnt++;
@@ -1911,7 +1911,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FREE_SPLT
-	CompareConstant(PNG_FREE_SPLT,0x0020,5704,architecture)
+	CompareConstant(PNG_FREE_SPLT,0x0020,5704,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FREE_SPLT\n");
 cnt++;
@@ -1921,7 +1921,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FREE_ROWS
-	CompareConstant(PNG_FREE_ROWS,0x0040,5705,architecture)
+	CompareConstant(PNG_FREE_ROWS,0x0040,5705,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FREE_ROWS\n");
 cnt++;
@@ -1931,7 +1931,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FREE_PCAL
-	CompareConstant(PNG_FREE_PCAL,0x0080,5706,architecture)
+	CompareConstant(PNG_FREE_PCAL,0x0080,5706,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FREE_PCAL\n");
 cnt++;
@@ -1941,7 +1941,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FREE_SCAL
-	CompareConstant(PNG_FREE_SCAL,0x0100,5707,architecture)
+	CompareConstant(PNG_FREE_SCAL,0x0100,5707,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FREE_SCAL\n");
 cnt++;
@@ -1951,7 +1951,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FREE_UNKN
-	CompareConstant(PNG_FREE_UNKN,0x0200,5708,architecture)
+	CompareConstant(PNG_FREE_UNKN,0x0200,5708,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FREE_UNKN\n");
 cnt++;
@@ -1961,7 +1961,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FREE_LIST
-	CompareConstant(PNG_FREE_LIST,0x0400,5709,architecture)
+	CompareConstant(PNG_FREE_LIST,0x0400,5709,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FREE_LIST\n");
 cnt++;
@@ -1971,7 +1971,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FREE_PLTE
-	CompareConstant(PNG_FREE_PLTE,0x1000,5710,architecture)
+	CompareConstant(PNG_FREE_PLTE,0x1000,5710,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FREE_PLTE\n");
 cnt++;
@@ -1981,7 +1981,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FREE_TRNS
-	CompareConstant(PNG_FREE_TRNS,0x2000,5711,architecture)
+	CompareConstant(PNG_FREE_TRNS,0x2000,5711,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FREE_TRNS\n");
 cnt++;
@@ -1991,7 +1991,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FREE_TEXT
-	CompareConstant(PNG_FREE_TEXT,0x4000,5712,architecture)
+	CompareConstant(PNG_FREE_TEXT,0x4000,5712,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FREE_TEXT\n");
 cnt++;
@@ -2001,7 +2001,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FREE_ALL
-	CompareConstant(PNG_FREE_ALL,0x7fff,5713,architecture)
+	CompareConstant(PNG_FREE_ALL,0x7fff,5713,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FREE_ALL\n");
 cnt++;
@@ -2011,7 +2011,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_FREE_MUL
-	CompareConstant(PNG_FREE_MUL,0x4220,5714,architecture)
+	CompareConstant(PNG_FREE_MUL,0x4220,5714,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_FREE_MUL\n");
 cnt++;
@@ -2021,7 +2021,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_HANDLE_CHUNK_AS_DEFAULT
-	CompareConstant(PNG_HANDLE_CHUNK_AS_DEFAULT,0,5715,architecture)
+	CompareConstant(PNG_HANDLE_CHUNK_AS_DEFAULT,0,5715,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_HANDLE_CHUNK_AS_DEFAULT\n");
 cnt++;
@@ -2031,7 +2031,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_HANDLE_CHUNK_NEVER
-	CompareConstant(PNG_HANDLE_CHUNK_NEVER,1,5716,architecture)
+	CompareConstant(PNG_HANDLE_CHUNK_NEVER,1,5716,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_HANDLE_CHUNK_NEVER\n");
 cnt++;
@@ -2041,7 +2041,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_HANDLE_CHUNK_IF_SAFE
-	CompareConstant(PNG_HANDLE_CHUNK_IF_SAFE,2,5717,architecture)
+	CompareConstant(PNG_HANDLE_CHUNK_IF_SAFE,2,5717,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_HANDLE_CHUNK_IF_SAFE\n");
 cnt++;
@@ -2051,7 +2051,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_HANDLE_CHUNK_ALWAYS
-	CompareConstant(PNG_HANDLE_CHUNK_ALWAYS,3,5718,architecture)
+	CompareConstant(PNG_HANDLE_CHUNK_ALWAYS,3,5718,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_HANDLE_CHUNK_ALWAYS\n");
 cnt++;
@@ -2061,7 +2061,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_ASM_FLAG_MMX_SUPPORT_COMPILED
-	CompareConstant(PNG_ASM_FLAG_MMX_SUPPORT_COMPILED,0x01,5719,architecture)
+	CompareConstant(PNG_ASM_FLAG_MMX_SUPPORT_COMPILED,0x01,5719,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_ASM_FLAG_MMX_SUPPORT_COMPILED\n");
 cnt++;
@@ -2071,7 +2071,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_ASM_FLAG_MMX_SUPPORT_IN_CPU
-	CompareConstant(PNG_ASM_FLAG_MMX_SUPPORT_IN_CPU,0x02,5720,architecture)
+	CompareConstant(PNG_ASM_FLAG_MMX_SUPPORT_IN_CPU,0x02,5720,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_ASM_FLAG_MMX_SUPPORT_IN_CPU\n");
 cnt++;
@@ -2081,7 +2081,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_ASM_FLAG_MMX_READ_COMBINE_ROW
-	CompareConstant(PNG_ASM_FLAG_MMX_READ_COMBINE_ROW,0x04,5721,architecture)
+	CompareConstant(PNG_ASM_FLAG_MMX_READ_COMBINE_ROW,0x04,5721,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_ASM_FLAG_MMX_READ_COMBINE_ROW\n");
 cnt++;
@@ -2091,7 +2091,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_ASM_FLAG_MMX_READ_INTERLACE
-	CompareConstant(PNG_ASM_FLAG_MMX_READ_INTERLACE,0x08,5722,architecture)
+	CompareConstant(PNG_ASM_FLAG_MMX_READ_INTERLACE,0x08,5722,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_ASM_FLAG_MMX_READ_INTERLACE\n");
 cnt++;
@@ -2101,7 +2101,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_ASM_FLAG_MMX_READ_FILTER_SUB
-	CompareConstant(PNG_ASM_FLAG_MMX_READ_FILTER_SUB,0x10,5723,architecture)
+	CompareConstant(PNG_ASM_FLAG_MMX_READ_FILTER_SUB,0x10,5723,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_ASM_FLAG_MMX_READ_FILTER_SUB\n");
 cnt++;
@@ -2111,7 +2111,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_ASM_FLAG_MMX_READ_FILTER_UP
-	CompareConstant(PNG_ASM_FLAG_MMX_READ_FILTER_UP,0x20,5724,architecture)
+	CompareConstant(PNG_ASM_FLAG_MMX_READ_FILTER_UP,0x20,5724,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_ASM_FLAG_MMX_READ_FILTER_UP\n");
 cnt++;
@@ -2121,7 +2121,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_ASM_FLAG_MMX_READ_FILTER_AVG
-	CompareConstant(PNG_ASM_FLAG_MMX_READ_FILTER_AVG,0x40,5725,architecture)
+	CompareConstant(PNG_ASM_FLAG_MMX_READ_FILTER_AVG,0x40,5725,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_ASM_FLAG_MMX_READ_FILTER_AVG\n");
 cnt++;
@@ -2131,7 +2131,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_ASM_FLAG_MMX_READ_FILTER_PAETH
-	CompareConstant(PNG_ASM_FLAG_MMX_READ_FILTER_PAETH,0x80,5726,architecture)
+	CompareConstant(PNG_ASM_FLAG_MMX_READ_FILTER_PAETH,0x80,5726,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_ASM_FLAG_MMX_READ_FILTER_PAETH\n");
 cnt++;
@@ -2141,7 +2141,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_ASM_FLAGS_INITIALIZED
-	CompareConstant(PNG_ASM_FLAGS_INITIALIZED,0x80000000,5727,architecture)
+	CompareConstant(PNG_ASM_FLAGS_INITIALIZED,0x80000000,5727,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_ASM_FLAGS_INITIALIZED\n");
 cnt++;
@@ -2163,7 +2163,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_SELECT_READ
-	CompareConstant(PNG_SELECT_READ,1,5731,architecture)
+	CompareConstant(PNG_SELECT_READ,1,5731,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_SELECT_READ\n");
 cnt++;
@@ -2173,7 +2173,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_SELECT_WRITE
-	CompareConstant(PNG_SELECT_WRITE,2,5732,architecture)
+	CompareConstant(PNG_SELECT_WRITE,2,5732,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_SELECT_WRITE\n");
 cnt++;
@@ -2198,1180 +2198,1180 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(png_struct,712, 11173, 2)
+CheckTypeSize(png_struct,712, 11173, 2, 3.1, NULL, 11172, NULL)
 #elif __x86_64__
-CheckTypeSize(png_struct,1208, 11173, 11)
+CheckTypeSize(png_struct,1208, 11173, 11, 3.1, NULL, 11172, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_struct,1152, 11173, 6)
+CheckTypeSize(png_struct,1152, 11173, 6, 3.1, NULL, 11172, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_struct,1664, 11173, 9)
+CheckTypeSize(png_struct,1664, 11173, 9, 3.1, NULL, 11172, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_struct,744, 11173, 10)
+CheckTypeSize(png_struct,744, 11173, 10, 3.1, NULL, 11172, NULL)
 #elif __s390x__
-CheckTypeSize(png_struct,1288, 11173, 12)
+CheckTypeSize(png_struct,1288, 11173, 12, 3.1, NULL, 11172, NULL)
 #elif __ia64__
-CheckTypeSize(png_struct,1712, 11173, 3)
+CheckTypeSize(png_struct,1712, 11173, 3, 3.1, NULL, 11172, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11173,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11172,NULL);\n",architecture,11173,0);
 Msg("Find size of png_struct (11173)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_structp,4, 11175, 2)
+CheckTypeSize(png_structp,4, 11175, 2, 3.1, NULL, 11174, NULL)
 #elif __x86_64__
-CheckTypeSize(png_structp,8, 11175, 11)
+CheckTypeSize(png_structp,8, 11175, 11, 3.1, NULL, 11174, NULL)
 #elif __ia64__
-CheckTypeSize(png_structp,8, 11175, 3)
+CheckTypeSize(png_structp,8, 11175, 3, 3.1, NULL, 11174, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_structp,4, 11175, 6)
+CheckTypeSize(png_structp,4, 11175, 6, 3.1, NULL, 11174, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_structp,8, 11175, 9)
+CheckTypeSize(png_structp,8, 11175, 9, 3.1, NULL, 11174, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_structp,4, 11175, 10)
+CheckTypeSize(png_structp,4, 11175, 10, 3.1, NULL, 11174, NULL)
 #elif __s390x__
-CheckTypeSize(png_structp,8, 11175, 12)
+CheckTypeSize(png_structp,8, 11175, 12, 3.1, NULL, 11174, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11175,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11174,NULL);\n",architecture,11175,0);
 Msg("Find size of png_structp (11175)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_info,288, 11177, 2)
+CheckTypeSize(png_info,288, 11177, 2, 3.1, NULL, 11176, NULL)
 #elif __x86_64__
-CheckTypeSize(png_info,464, 11177, 11)
+CheckTypeSize(png_info,464, 11177, 11, 3.1, NULL, 11176, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_info,288, 11177, 6)
+CheckTypeSize(png_info,288, 11177, 6, 3.1, NULL, 11176, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_info,464, 11177, 9)
+CheckTypeSize(png_info,464, 11177, 9, 3.1, NULL, 11176, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_info,288, 11177, 10)
+CheckTypeSize(png_info,288, 11177, 10, 3.1, NULL, 11176, NULL)
 #elif __s390x__
-CheckTypeSize(png_info,464, 11177, 12)
+CheckTypeSize(png_info,464, 11177, 12, 3.1, NULL, 11176, NULL)
 #elif __ia64__
-CheckTypeSize(png_info,464, 11177, 3)
+CheckTypeSize(png_info,464, 11177, 3, 3.1, NULL, 11176, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11177,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11176,NULL);\n",architecture,11177,0);
 Msg("Find size of png_info (11177)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_infop,4, 11179, 2)
+CheckTypeSize(png_infop,4, 11179, 2, 3.1, NULL, 11178, NULL)
 #elif __x86_64__
-CheckTypeSize(png_infop,8, 11179, 11)
+CheckTypeSize(png_infop,8, 11179, 11, 3.1, NULL, 11178, NULL)
 #elif __ia64__
-CheckTypeSize(png_infop,8, 11179, 3)
+CheckTypeSize(png_infop,8, 11179, 3, 3.1, NULL, 11178, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_infop,4, 11179, 6)
+CheckTypeSize(png_infop,4, 11179, 6, 3.1, NULL, 11178, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_infop,8, 11179, 9)
+CheckTypeSize(png_infop,8, 11179, 9, 3.1, NULL, 11178, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_infop,4, 11179, 10)
+CheckTypeSize(png_infop,4, 11179, 10, 3.1, NULL, 11178, NULL)
 #elif __s390x__
-CheckTypeSize(png_infop,8, 11179, 12)
+CheckTypeSize(png_infop,8, 11179, 12, 3.1, NULL, 11178, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11179,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11178,NULL);\n",architecture,11179,0);
 Msg("Find size of png_infop (11179)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_voidp,4, 11180, 2)
+CheckTypeSize(png_voidp,4, 11180, 2, 3.1, NULL, 40, NULL)
 #elif __x86_64__
-CheckTypeSize(png_voidp,8, 11180, 11)
+CheckTypeSize(png_voidp,8, 11180, 11, 3.1, NULL, 40, NULL)
 #elif __ia64__
-CheckTypeSize(png_voidp,8, 11180, 3)
+CheckTypeSize(png_voidp,8, 11180, 3, 3.1, NULL, 40, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_voidp,4, 11180, 6)
+CheckTypeSize(png_voidp,4, 11180, 6, 3.1, NULL, 40, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_voidp,8, 11180, 9)
+CheckTypeSize(png_voidp,8, 11180, 9, 3.1, NULL, 40, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_voidp,4, 11180, 10)
+CheckTypeSize(png_voidp,4, 11180, 10, 3.1, NULL, 40, NULL)
 #elif __s390x__
-CheckTypeSize(png_voidp,8, 11180, 12)
+CheckTypeSize(png_voidp,8, 11180, 12, 3.1, NULL, 40, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11180,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,40,NULL);\n",architecture,11180,0);
 Msg("Find size of png_voidp (11180)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_progressive_info_ptr,4, 11182, 2)
+CheckTypeSize(png_progressive_info_ptr,4, 11182, 2, 3.1, NULL, 11181, NULL)
 #elif __x86_64__
-CheckTypeSize(png_progressive_info_ptr,8, 11182, 11)
+CheckTypeSize(png_progressive_info_ptr,8, 11182, 11, 3.1, NULL, 11181, NULL)
 #elif __ia64__
-CheckTypeSize(png_progressive_info_ptr,8, 11182, 3)
+CheckTypeSize(png_progressive_info_ptr,8, 11182, 3, 3.1, NULL, 11181, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_progressive_info_ptr,4, 11182, 6)
+CheckTypeSize(png_progressive_info_ptr,4, 11182, 6, 3.1, NULL, 11181, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_progressive_info_ptr,8, 11182, 9)
+CheckTypeSize(png_progressive_info_ptr,8, 11182, 9, 3.1, NULL, 11181, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_progressive_info_ptr,4, 11182, 10)
+CheckTypeSize(png_progressive_info_ptr,4, 11182, 10, 3.1, NULL, 11181, NULL)
 #elif __s390x__
-CheckTypeSize(png_progressive_info_ptr,8, 11182, 12)
+CheckTypeSize(png_progressive_info_ptr,8, 11182, 12, 3.1, NULL, 11181, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11182,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11181,NULL);\n",architecture,11182,0);
 Msg("Find size of png_progressive_info_ptr (11182)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_byte,1, 11183, 2)
+CheckTypeSize(png_byte,1, 11183, 2, 3.1, NULL, 3, NULL)
 #elif __x86_64__
-CheckTypeSize(png_byte,1, 11183, 11)
+CheckTypeSize(png_byte,1, 11183, 11, 3.1, NULL, 3, NULL)
 #elif __ia64__
-CheckTypeSize(png_byte,1, 11183, 3)
+CheckTypeSize(png_byte,1, 11183, 3, 3.1, NULL, 3, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_byte,1, 11183, 6)
+CheckTypeSize(png_byte,1, 11183, 6, 3.1, NULL, 3, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_byte,1, 11183, 9)
+CheckTypeSize(png_byte,1, 11183, 9, 3.1, NULL, 3, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_byte,1, 11183, 10)
+CheckTypeSize(png_byte,1, 11183, 10, 3.1, NULL, 3, NULL)
 #elif __s390x__
-CheckTypeSize(png_byte,1, 11183, 12)
+CheckTypeSize(png_byte,1, 11183, 12, 3.1, NULL, 3, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11183,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,3,NULL);\n",architecture,11183,0);
 Msg("Find size of png_byte (11183)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_bytep,4, 11185, 2)
+CheckTypeSize(png_bytep,4, 11185, 2, 3.1, NULL, 11184, NULL)
 #elif __x86_64__
-CheckTypeSize(png_bytep,8, 11185, 11)
+CheckTypeSize(png_bytep,8, 11185, 11, 3.1, NULL, 11184, NULL)
 #elif __ia64__
-CheckTypeSize(png_bytep,8, 11185, 3)
+CheckTypeSize(png_bytep,8, 11185, 3, 3.1, NULL, 11184, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_bytep,4, 11185, 6)
+CheckTypeSize(png_bytep,4, 11185, 6, 3.1, NULL, 11184, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_bytep,8, 11185, 9)
+CheckTypeSize(png_bytep,8, 11185, 9, 3.1, NULL, 11184, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_bytep,4, 11185, 10)
+CheckTypeSize(png_bytep,4, 11185, 10, 3.1, NULL, 11184, NULL)
 #elif __s390x__
-CheckTypeSize(png_bytep,8, 11185, 12)
+CheckTypeSize(png_bytep,8, 11185, 12, 3.1, NULL, 11184, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11185,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11184,NULL);\n",architecture,11185,0);
 Msg("Find size of png_bytep (11185)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_uint_32,4, 11187, 2)
+CheckTypeSize(png_uint_32,4, 11187, 2, 3.1, NULL, 9, NULL)
 #elif __x86_64__
-CheckTypeSize(png_uint_32,8, 11187, 11)
+CheckTypeSize(png_uint_32,8, 11187, 11, 3.1, NULL, 9, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_uint_32,4, 11187, 6)
+CheckTypeSize(png_uint_32,4, 11187, 6, 3.1, NULL, 9, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_uint_32,8, 11187, 9)
+CheckTypeSize(png_uint_32,8, 11187, 9, 3.1, NULL, 9, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_uint_32,4, 11187, 10)
+CheckTypeSize(png_uint_32,4, 11187, 10, 3.1, NULL, 9, NULL)
 #elif __s390x__
-CheckTypeSize(png_uint_32,8, 11187, 12)
+CheckTypeSize(png_uint_32,8, 11187, 12, 3.1, NULL, 9, NULL)
 #elif __ia64__
-CheckTypeSize(png_uint_32,8, 11187, 3)
+CheckTypeSize(png_uint_32,8, 11187, 3, 3.1, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11187,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,9,NULL);\n",architecture,11187,0);
 Msg("Find size of png_uint_32 (11187)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_progressive_row_ptr,4, 11189, 2)
+CheckTypeSize(png_progressive_row_ptr,4, 11189, 2, 3.1, NULL, 11188, NULL)
 #elif __x86_64__
-CheckTypeSize(png_progressive_row_ptr,8, 11189, 11)
+CheckTypeSize(png_progressive_row_ptr,8, 11189, 11, 3.1, NULL, 11188, NULL)
 #elif __ia64__
-CheckTypeSize(png_progressive_row_ptr,8, 11189, 3)
+CheckTypeSize(png_progressive_row_ptr,8, 11189, 3, 3.1, NULL, 11188, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_progressive_row_ptr,4, 11189, 6)
+CheckTypeSize(png_progressive_row_ptr,4, 11189, 6, 3.1, NULL, 11188, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_progressive_row_ptr,8, 11189, 9)
+CheckTypeSize(png_progressive_row_ptr,8, 11189, 9, 3.1, NULL, 11188, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_progressive_row_ptr,4, 11189, 10)
+CheckTypeSize(png_progressive_row_ptr,4, 11189, 10, 3.1, NULL, 11188, NULL)
 #elif __s390x__
-CheckTypeSize(png_progressive_row_ptr,8, 11189, 12)
+CheckTypeSize(png_progressive_row_ptr,8, 11189, 12, 3.1, NULL, 11188, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11189,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11188,NULL);\n",architecture,11189,0);
 Msg("Find size of png_progressive_row_ptr (11189)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_progressive_end_ptr,4, 11190, 2)
+CheckTypeSize(png_progressive_end_ptr,4, 11190, 2, 3.1, NULL, 11181, NULL)
 #elif __x86_64__
-CheckTypeSize(png_progressive_end_ptr,8, 11190, 11)
+CheckTypeSize(png_progressive_end_ptr,8, 11190, 11, 3.1, NULL, 11181, NULL)
 #elif __ia64__
-CheckTypeSize(png_progressive_end_ptr,8, 11190, 3)
+CheckTypeSize(png_progressive_end_ptr,8, 11190, 3, 3.1, NULL, 11181, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_progressive_end_ptr,4, 11190, 6)
+CheckTypeSize(png_progressive_end_ptr,4, 11190, 6, 3.1, NULL, 11181, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_progressive_end_ptr,8, 11190, 9)
+CheckTypeSize(png_progressive_end_ptr,8, 11190, 9, 3.1, NULL, 11181, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_progressive_end_ptr,4, 11190, 10)
+CheckTypeSize(png_progressive_end_ptr,4, 11190, 10, 3.1, NULL, 11181, NULL)
 #elif __s390x__
-CheckTypeSize(png_progressive_end_ptr,8, 11190, 12)
+CheckTypeSize(png_progressive_end_ptr,8, 11190, 12, 3.1, NULL, 11181, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11190,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11181,NULL);\n",architecture,11190,0);
 Msg("Find size of png_progressive_end_ptr (11190)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_color_8,5, 11192, 2)
+CheckTypeSize(png_color_8,5, 11192, 2, 3.1, NULL, 11191, NULL)
 #elif __x86_64__
-CheckTypeSize(png_color_8,5, 11192, 11)
+CheckTypeSize(png_color_8,5, 11192, 11, 3.1, NULL, 11191, NULL)
 #elif __ia64__
-CheckTypeSize(png_color_8,5, 11192, 3)
+CheckTypeSize(png_color_8,5, 11192, 3, 3.1, NULL, 11191, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_color_8,5, 11192, 6)
+CheckTypeSize(png_color_8,5, 11192, 6, 3.1, NULL, 11191, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_color_8,5, 11192, 9)
+CheckTypeSize(png_color_8,5, 11192, 9, 3.1, NULL, 11191, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_color_8,5, 11192, 10)
+CheckTypeSize(png_color_8,5, 11192, 10, 3.1, NULL, 11191, NULL)
 #elif __s390x__
-CheckTypeSize(png_color_8,5, 11192, 12)
+CheckTypeSize(png_color_8,5, 11192, 12, 3.1, NULL, 11191, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11192,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11191,NULL);\n",architecture,11192,0);
 Msg("Find size of png_color_8 (11192)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_color_8p,4, 11194, 2)
+CheckTypeSize(png_color_8p,4, 11194, 2, 3.1, NULL, 11193, NULL)
 #elif __x86_64__
-CheckTypeSize(png_color_8p,8, 11194, 11)
+CheckTypeSize(png_color_8p,8, 11194, 11, 3.1, NULL, 11193, NULL)
 #elif __ia64__
-CheckTypeSize(png_color_8p,8, 11194, 3)
+CheckTypeSize(png_color_8p,8, 11194, 3, 3.1, NULL, 11193, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_color_8p,4, 11194, 6)
+CheckTypeSize(png_color_8p,4, 11194, 6, 3.1, NULL, 11193, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_color_8p,8, 11194, 9)
+CheckTypeSize(png_color_8p,8, 11194, 9, 3.1, NULL, 11193, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_color_8p,4, 11194, 10)
+CheckTypeSize(png_color_8p,4, 11194, 10, 3.1, NULL, 11193, NULL)
 #elif __s390x__
-CheckTypeSize(png_color_8p,8, 11194, 12)
+CheckTypeSize(png_color_8p,8, 11194, 12, 3.1, NULL, 11193, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11194,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11193,NULL);\n",architecture,11194,0);
 Msg("Find size of png_color_8p (11194)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_int_32,4, 11195, 2)
+CheckTypeSize(png_int_32,4, 11195, 2, 3.1, NULL, 8, NULL)
 #elif __x86_64__
-CheckTypeSize(png_int_32,8, 11195, 11)
+CheckTypeSize(png_int_32,8, 11195, 11, 3.1, NULL, 8, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_int_32,4, 11195, 6)
+CheckTypeSize(png_int_32,4, 11195, 6, 3.1, NULL, 8, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_int_32,8, 11195, 9)
+CheckTypeSize(png_int_32,8, 11195, 9, 3.1, NULL, 8, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_int_32,4, 11195, 10)
+CheckTypeSize(png_int_32,4, 11195, 10, 3.1, NULL, 8, NULL)
 #elif __s390x__
-CheckTypeSize(png_int_32,8, 11195, 12)
+CheckTypeSize(png_int_32,8, 11195, 12, 3.1, NULL, 8, NULL)
 #elif __ia64__
-CheckTypeSize(png_int_32,8, 11195, 3)
+CheckTypeSize(png_int_32,8, 11195, 3, 3.1, NULL, 8, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11195,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,8,NULL);\n",architecture,11195,0);
 Msg("Find size of png_int_32 (11195)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_charp,4, 11196, 2)
+CheckTypeSize(png_charp,4, 11196, 2, 3.1, NULL, 63, NULL)
 #elif __x86_64__
-CheckTypeSize(png_charp,8, 11196, 11)
+CheckTypeSize(png_charp,8, 11196, 11, 3.1, NULL, 63, NULL)
 #elif __ia64__
-CheckTypeSize(png_charp,8, 11196, 3)
+CheckTypeSize(png_charp,8, 11196, 3, 3.1, NULL, 63, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_charp,4, 11196, 6)
+CheckTypeSize(png_charp,4, 11196, 6, 3.1, NULL, 63, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_charp,8, 11196, 9)
+CheckTypeSize(png_charp,8, 11196, 9, 3.1, NULL, 63, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_charp,4, 11196, 10)
+CheckTypeSize(png_charp,4, 11196, 10, 3.1, NULL, 63, NULL)
 #elif __s390x__
-CheckTypeSize(png_charp,8, 11196, 12)
+CheckTypeSize(png_charp,8, 11196, 12, 3.1, NULL, 63, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11196,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,63,NULL);\n",architecture,11196,0);
 Msg("Find size of png_charp (11196)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_size_t,4, 11198, 2)
+CheckTypeSize(png_size_t,4, 11198, 2, 3.1, NULL, 8969, NULL)
 #elif __x86_64__
-CheckTypeSize(png_size_t,8, 11198, 11)
+CheckTypeSize(png_size_t,8, 11198, 11, 3.1, NULL, 8969, NULL)
 #elif __ia64__
-CheckTypeSize(png_size_t,8, 11198, 3)
+CheckTypeSize(png_size_t,8, 11198, 3, 3.1, NULL, 8969, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_size_t,4, 11198, 6)
+CheckTypeSize(png_size_t,4, 11198, 6, 3.1, NULL, 8969, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_size_t,8, 11198, 9)
+CheckTypeSize(png_size_t,8, 11198, 9, 3.1, NULL, 8969, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_size_t,4, 11198, 10)
+CheckTypeSize(png_size_t,4, 11198, 10, 3.1, NULL, 8969, NULL)
 #elif __s390x__
-CheckTypeSize(png_size_t,8, 11198, 12)
+CheckTypeSize(png_size_t,8, 11198, 12, 3.1, NULL, 8969, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11198,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,8969,NULL);\n",architecture,11198,0);
 Msg("Find size of png_size_t (11198)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_text,16, 11200, 2)
+CheckTypeSize(png_text,16, 11200, 2, 3.1, NULL, 11199, NULL)
 #elif __x86_64__
-CheckTypeSize(png_text,32, 11200, 11)
+CheckTypeSize(png_text,32, 11200, 11, 3.1, NULL, 11199, NULL)
 #elif __ia64__
-CheckTypeSize(png_text,32, 11200, 3)
+CheckTypeSize(png_text,32, 11200, 3, 3.1, NULL, 11199, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_text,16, 11200, 6)
+CheckTypeSize(png_text,16, 11200, 6, 3.1, NULL, 11199, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_text,32, 11200, 9)
+CheckTypeSize(png_text,32, 11200, 9, 3.1, NULL, 11199, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_text,16, 11200, 10)
+CheckTypeSize(png_text,16, 11200, 10, 3.1, NULL, 11199, NULL)
 #elif __s390x__
-CheckTypeSize(png_text,32, 11200, 12)
+CheckTypeSize(png_text,32, 11200, 12, 3.1, NULL, 11199, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11200,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11199,NULL);\n",architecture,11200,0);
 Msg("Find size of png_text (11200)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_textp,4, 11202, 2)
+CheckTypeSize(png_textp,4, 11202, 2, 3.1, NULL, 11201, NULL)
 #elif __x86_64__
-CheckTypeSize(png_textp,8, 11202, 11)
+CheckTypeSize(png_textp,8, 11202, 11, 3.1, NULL, 11201, NULL)
 #elif __ia64__
-CheckTypeSize(png_textp,8, 11202, 3)
+CheckTypeSize(png_textp,8, 11202, 3, 3.1, NULL, 11201, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_textp,4, 11202, 6)
+CheckTypeSize(png_textp,4, 11202, 6, 3.1, NULL, 11201, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_textp,8, 11202, 9)
+CheckTypeSize(png_textp,8, 11202, 9, 3.1, NULL, 11201, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_textp,4, 11202, 10)
+CheckTypeSize(png_textp,4, 11202, 10, 3.1, NULL, 11201, NULL)
 #elif __s390x__
-CheckTypeSize(png_textp,8, 11202, 12)
+CheckTypeSize(png_textp,8, 11202, 12, 3.1, NULL, 11201, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11202,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11201,NULL);\n",architecture,11202,0);
 Msg("Find size of png_textp (11202)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_bytepp,4, 11205, 2)
+CheckTypeSize(png_bytepp,4, 11205, 2, 3.1, NULL, 11204, NULL)
 #elif __x86_64__
-CheckTypeSize(png_bytepp,8, 11205, 11)
+CheckTypeSize(png_bytepp,8, 11205, 11, 3.1, NULL, 11204, NULL)
 #elif __ia64__
-CheckTypeSize(png_bytepp,8, 11205, 3)
+CheckTypeSize(png_bytepp,8, 11205, 3, 3.1, NULL, 11204, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_bytepp,4, 11205, 6)
+CheckTypeSize(png_bytepp,4, 11205, 6, 3.1, NULL, 11204, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_bytepp,8, 11205, 9)
+CheckTypeSize(png_bytepp,8, 11205, 9, 3.1, NULL, 11204, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_bytepp,4, 11205, 10)
+CheckTypeSize(png_bytepp,4, 11205, 10, 3.1, NULL, 11204, NULL)
 #elif __s390x__
-CheckTypeSize(png_bytepp,8, 11205, 12)
+CheckTypeSize(png_bytepp,8, 11205, 12, 3.1, NULL, 11204, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11205,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11204,NULL);\n",architecture,11205,0);
 Msg("Find size of png_bytepp (11205)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_uint_16,2, 11210, 2)
+CheckTypeSize(png_uint_16,2, 11210, 2, 3.1, NULL, 5, NULL)
 #elif __x86_64__
-CheckTypeSize(png_uint_16,2, 11210, 11)
+CheckTypeSize(png_uint_16,2, 11210, 11, 3.1, NULL, 5, NULL)
 #elif __ia64__
-CheckTypeSize(png_uint_16,2, 11210, 3)
+CheckTypeSize(png_uint_16,2, 11210, 3, 3.1, NULL, 5, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_uint_16,2, 11210, 6)
+CheckTypeSize(png_uint_16,2, 11210, 6, 3.1, NULL, 5, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_uint_16,2, 11210, 9)
+CheckTypeSize(png_uint_16,2, 11210, 9, 3.1, NULL, 5, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_uint_16,2, 11210, 10)
+CheckTypeSize(png_uint_16,2, 11210, 10, 3.1, NULL, 5, NULL)
 #elif __s390x__
-CheckTypeSize(png_uint_16,2, 11210, 12)
+CheckTypeSize(png_uint_16,2, 11210, 12, 3.1, NULL, 5, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11210,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,5,NULL);\n",architecture,11210,0);
 Msg("Find size of png_uint_16 (11210)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_color_16,10, 11211, 2)
+CheckTypeSize(png_color_16,10, 11211, 2, 3.1, NULL, 11208, NULL)
 #elif __x86_64__
-CheckTypeSize(png_color_16,10, 11211, 11)
+CheckTypeSize(png_color_16,10, 11211, 11, 3.1, NULL, 11208, NULL)
 #elif __ia64__
-CheckTypeSize(png_color_16,10, 11211, 3)
+CheckTypeSize(png_color_16,10, 11211, 3, 3.1, NULL, 11208, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_color_16,10, 11211, 6)
+CheckTypeSize(png_color_16,10, 11211, 6, 3.1, NULL, 11208, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_color_16,10, 11211, 9)
+CheckTypeSize(png_color_16,10, 11211, 9, 3.1, NULL, 11208, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_color_16,10, 11211, 10)
+CheckTypeSize(png_color_16,10, 11211, 10, 3.1, NULL, 11208, NULL)
 #elif __s390x__
-CheckTypeSize(png_color_16,10, 11211, 12)
+CheckTypeSize(png_color_16,10, 11211, 12, 3.1, NULL, 11208, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11211,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11208,NULL);\n",architecture,11211,0);
 Msg("Find size of png_color_16 (11211)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_color_16p,4, 11213, 2)
+CheckTypeSize(png_color_16p,4, 11213, 2, 3.1, NULL, 11212, NULL)
 #elif __x86_64__
-CheckTypeSize(png_color_16p,8, 11213, 11)
+CheckTypeSize(png_color_16p,8, 11213, 11, 3.1, NULL, 11212, NULL)
 #elif __ia64__
-CheckTypeSize(png_color_16p,8, 11213, 3)
+CheckTypeSize(png_color_16p,8, 11213, 3, 3.1, NULL, 11212, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_color_16p,4, 11213, 6)
+CheckTypeSize(png_color_16p,4, 11213, 6, 3.1, NULL, 11212, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_color_16p,8, 11213, 9)
+CheckTypeSize(png_color_16p,8, 11213, 9, 3.1, NULL, 11212, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_color_16p,4, 11213, 10)
+CheckTypeSize(png_color_16p,4, 11213, 10, 3.1, NULL, 11212, NULL)
 #elif __s390x__
-CheckTypeSize(png_color_16p,8, 11213, 12)
+CheckTypeSize(png_color_16p,8, 11213, 12, 3.1, NULL, 11212, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11213,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11212,NULL);\n",architecture,11213,0);
 Msg("Find size of png_color_16p (11213)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_color,3, 11216, 2)
+CheckTypeSize(png_color,3, 11216, 2, 3.1, NULL, 11215, NULL)
 #elif __x86_64__
-CheckTypeSize(png_color,3, 11216, 11)
+CheckTypeSize(png_color,3, 11216, 11, 3.1, NULL, 11215, NULL)
 #elif __ia64__
-CheckTypeSize(png_color,3, 11216, 3)
+CheckTypeSize(png_color,3, 11216, 3, 3.1, NULL, 11215, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_color,3, 11216, 6)
+CheckTypeSize(png_color,3, 11216, 6, 3.1, NULL, 11215, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_color,3, 11216, 9)
+CheckTypeSize(png_color,3, 11216, 9, 3.1, NULL, 11215, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_color,3, 11216, 10)
+CheckTypeSize(png_color,3, 11216, 10, 3.1, NULL, 11215, NULL)
 #elif __s390x__
-CheckTypeSize(png_color,3, 11216, 12)
+CheckTypeSize(png_color,3, 11216, 12, 3.1, NULL, 11215, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11216,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11215,NULL);\n",architecture,11216,0);
 Msg("Find size of png_color (11216)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_colorp,4, 11218, 2)
+CheckTypeSize(png_colorp,4, 11218, 2, 3.1, NULL, 11217, NULL)
 #elif __x86_64__
-CheckTypeSize(png_colorp,8, 11218, 11)
+CheckTypeSize(png_colorp,8, 11218, 11, 3.1, NULL, 11217, NULL)
 #elif __ia64__
-CheckTypeSize(png_colorp,8, 11218, 3)
+CheckTypeSize(png_colorp,8, 11218, 3, 3.1, NULL, 11217, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_colorp,4, 11218, 6)
+CheckTypeSize(png_colorp,4, 11218, 6, 3.1, NULL, 11217, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_colorp,8, 11218, 9)
+CheckTypeSize(png_colorp,8, 11218, 9, 3.1, NULL, 11217, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_colorp,4, 11218, 10)
+CheckTypeSize(png_colorp,4, 11218, 10, 3.1, NULL, 11217, NULL)
 #elif __s390x__
-CheckTypeSize(png_colorp,8, 11218, 12)
+CheckTypeSize(png_colorp,8, 11218, 12, 3.1, NULL, 11217, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11218,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11217,NULL);\n",architecture,11218,0);
 Msg("Find size of png_colorp (11218)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_const_charp,4, 11220, 2)
+CheckTypeSize(png_const_charp,4, 11220, 2, 3.1, NULL, 10295, NULL)
 #elif __x86_64__
-CheckTypeSize(png_const_charp,8, 11220, 11)
+CheckTypeSize(png_const_charp,8, 11220, 11, 3.1, NULL, 10295, NULL)
 #elif __ia64__
-CheckTypeSize(png_const_charp,8, 11220, 3)
+CheckTypeSize(png_const_charp,8, 11220, 3, 3.1, NULL, 10295, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_const_charp,4, 11220, 6)
+CheckTypeSize(png_const_charp,4, 11220, 6, 3.1, NULL, 10295, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_const_charp,8, 11220, 9)
+CheckTypeSize(png_const_charp,8, 11220, 9, 3.1, NULL, 10295, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_const_charp,4, 11220, 10)
+CheckTypeSize(png_const_charp,4, 11220, 10, 3.1, NULL, 10295, NULL)
 #elif __s390x__
-CheckTypeSize(png_const_charp,8, 11220, 12)
+CheckTypeSize(png_const_charp,8, 11220, 12, 3.1, NULL, 10295, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11220,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,10295,NULL);\n",architecture,11220,0);
 Msg("Find size of png_const_charp (11220)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_error_ptr,4, 11222, 2)
+CheckTypeSize(png_error_ptr,4, 11222, 2, 3.1, NULL, 11221, NULL)
 #elif __x86_64__
-CheckTypeSize(png_error_ptr,8, 11222, 11)
+CheckTypeSize(png_error_ptr,8, 11222, 11, 3.1, NULL, 11221, NULL)
 #elif __ia64__
-CheckTypeSize(png_error_ptr,8, 11222, 3)
+CheckTypeSize(png_error_ptr,8, 11222, 3, 3.1, NULL, 11221, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_error_ptr,4, 11222, 6)
+CheckTypeSize(png_error_ptr,4, 11222, 6, 3.1, NULL, 11221, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_error_ptr,8, 11222, 9)
+CheckTypeSize(png_error_ptr,8, 11222, 9, 3.1, NULL, 11221, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_error_ptr,4, 11222, 10)
+CheckTypeSize(png_error_ptr,4, 11222, 10, 3.1, NULL, 11221, NULL)
 #elif __s390x__
-CheckTypeSize(png_error_ptr,8, 11222, 12)
+CheckTypeSize(png_error_ptr,8, 11222, 12, 3.1, NULL, 11221, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11222,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11221,NULL);\n",architecture,11222,0);
 Msg("Find size of png_error_ptr (11222)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_rw_ptr,4, 11224, 2)
+CheckTypeSize(png_rw_ptr,4, 11224, 2, 3.1, NULL, 11223, NULL)
 #elif __x86_64__
-CheckTypeSize(png_rw_ptr,8, 11224, 11)
+CheckTypeSize(png_rw_ptr,8, 11224, 11, 3.1, NULL, 11223, NULL)
 #elif __ia64__
-CheckTypeSize(png_rw_ptr,8, 11224, 3)
+CheckTypeSize(png_rw_ptr,8, 11224, 3, 3.1, NULL, 11223, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_rw_ptr,4, 11224, 6)
+CheckTypeSize(png_rw_ptr,4, 11224, 6, 3.1, NULL, 11223, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_rw_ptr,8, 11224, 9)
+CheckTypeSize(png_rw_ptr,8, 11224, 9, 3.1, NULL, 11223, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_rw_ptr,4, 11224, 10)
+CheckTypeSize(png_rw_ptr,4, 11224, 10, 3.1, NULL, 11223, NULL)
 #elif __s390x__
-CheckTypeSize(png_rw_ptr,8, 11224, 12)
+CheckTypeSize(png_rw_ptr,8, 11224, 12, 3.1, NULL, 11223, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11224,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11223,NULL);\n",architecture,11224,0);
 Msg("Find size of png_rw_ptr (11224)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_time,8, 11226, 2)
+CheckTypeSize(png_time,8, 11226, 2, 3.1, NULL, 11225, NULL)
 #elif __x86_64__
-CheckTypeSize(png_time,8, 11226, 11)
+CheckTypeSize(png_time,8, 11226, 11, 3.1, NULL, 11225, NULL)
 #elif __ia64__
-CheckTypeSize(png_time,8, 11226, 3)
+CheckTypeSize(png_time,8, 11226, 3, 3.1, NULL, 11225, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_time,8, 11226, 6)
+CheckTypeSize(png_time,8, 11226, 6, 3.1, NULL, 11225, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_time,8, 11226, 9)
+CheckTypeSize(png_time,8, 11226, 9, 3.1, NULL, 11225, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_time,8, 11226, 10)
+CheckTypeSize(png_time,8, 11226, 10, 3.1, NULL, 11225, NULL)
 #elif __s390x__
-CheckTypeSize(png_time,8, 11226, 12)
+CheckTypeSize(png_time,8, 11226, 12, 3.1, NULL, 11225, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11226,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11225,NULL);\n",architecture,11226,0);
 Msg("Find size of png_time (11226)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_timep,4, 11228, 2)
+CheckTypeSize(png_timep,4, 11228, 2, 3.1, NULL, 11227, NULL)
 #elif __x86_64__
-CheckTypeSize(png_timep,8, 11228, 11)
+CheckTypeSize(png_timep,8, 11228, 11, 3.1, NULL, 11227, NULL)
 #elif __ia64__
-CheckTypeSize(png_timep,8, 11228, 3)
+CheckTypeSize(png_timep,8, 11228, 3, 3.1, NULL, 11227, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_timep,4, 11228, 6)
+CheckTypeSize(png_timep,4, 11228, 6, 3.1, NULL, 11227, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_timep,8, 11228, 9)
+CheckTypeSize(png_timep,8, 11228, 9, 3.1, NULL, 11227, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_timep,4, 11228, 10)
+CheckTypeSize(png_timep,4, 11228, 10, 3.1, NULL, 11227, NULL)
 #elif __s390x__
-CheckTypeSize(png_timep,8, 11228, 12)
+CheckTypeSize(png_timep,8, 11228, 12, 3.1, NULL, 11227, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11228,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11227,NULL);\n",architecture,11228,0);
 Msg("Find size of png_timep (11228)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_uint_16p,4, 11231, 2)
+CheckTypeSize(png_uint_16p,4, 11231, 2, 3.1, NULL, 11230, NULL)
 #elif __x86_64__
-CheckTypeSize(png_uint_16p,8, 11231, 11)
+CheckTypeSize(png_uint_16p,8, 11231, 11, 3.1, NULL, 11230, NULL)
 #elif __ia64__
-CheckTypeSize(png_uint_16p,8, 11231, 3)
+CheckTypeSize(png_uint_16p,8, 11231, 3, 3.1, NULL, 11230, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_uint_16p,4, 11231, 6)
+CheckTypeSize(png_uint_16p,4, 11231, 6, 3.1, NULL, 11230, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_uint_16p,8, 11231, 9)
+CheckTypeSize(png_uint_16p,8, 11231, 9, 3.1, NULL, 11230, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_uint_16p,4, 11231, 10)
+CheckTypeSize(png_uint_16p,4, 11231, 10, 3.1, NULL, 11230, NULL)
 #elif __s390x__
-CheckTypeSize(png_uint_16p,8, 11231, 12)
+CheckTypeSize(png_uint_16p,8, 11231, 12, 3.1, NULL, 11230, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11231,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11230,NULL);\n",architecture,11231,0);
 Msg("Find size of png_uint_16p (11231)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_flush_ptr,4, 11234, 2)
+CheckTypeSize(png_flush_ptr,4, 11234, 2, 3.1, NULL, 11233, NULL)
 #elif __x86_64__
-CheckTypeSize(png_flush_ptr,8, 11234, 11)
+CheckTypeSize(png_flush_ptr,8, 11234, 11, 3.1, NULL, 11233, NULL)
 #elif __ia64__
-CheckTypeSize(png_flush_ptr,8, 11234, 3)
+CheckTypeSize(png_flush_ptr,8, 11234, 3, 3.1, NULL, 11233, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_flush_ptr,4, 11234, 6)
+CheckTypeSize(png_flush_ptr,4, 11234, 6, 3.1, NULL, 11233, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_flush_ptr,8, 11234, 9)
+CheckTypeSize(png_flush_ptr,8, 11234, 9, 3.1, NULL, 11233, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_flush_ptr,4, 11234, 10)
+CheckTypeSize(png_flush_ptr,4, 11234, 10, 3.1, NULL, 11233, NULL)
 #elif __s390x__
-CheckTypeSize(png_flush_ptr,8, 11234, 12)
+CheckTypeSize(png_flush_ptr,8, 11234, 12, 3.1, NULL, 11233, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11234,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11233,NULL);\n",architecture,11234,0);
 Msg("Find size of png_flush_ptr (11234)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_charpp,4, 11236, 2)
+CheckTypeSize(png_charpp,4, 11236, 2, 3.1, NULL, 4855, NULL)
 #elif __x86_64__
-CheckTypeSize(png_charpp,8, 11236, 11)
+CheckTypeSize(png_charpp,8, 11236, 11, 3.1, NULL, 4855, NULL)
 #elif __ia64__
-CheckTypeSize(png_charpp,8, 11236, 3)
+CheckTypeSize(png_charpp,8, 11236, 3, 3.1, NULL, 4855, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_charpp,4, 11236, 6)
+CheckTypeSize(png_charpp,4, 11236, 6, 3.1, NULL, 4855, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_charpp,8, 11236, 9)
+CheckTypeSize(png_charpp,8, 11236, 9, 3.1, NULL, 4855, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_charpp,4, 11236, 10)
+CheckTypeSize(png_charpp,4, 11236, 10, 3.1, NULL, 4855, NULL)
 #elif __s390x__
-CheckTypeSize(png_charpp,8, 11236, 12)
+CheckTypeSize(png_charpp,8, 11236, 12, 3.1, NULL, 4855, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11236,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,4855,NULL);\n",architecture,11236,0);
 Msg("Find size of png_charpp (11236)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_structpp,4, 11239, 2)
+CheckTypeSize(png_structpp,4, 11239, 2, 3.1, NULL, 11238, NULL)
 #elif __x86_64__
-CheckTypeSize(png_structpp,8, 11239, 11)
+CheckTypeSize(png_structpp,8, 11239, 11, 3.1, NULL, 11238, NULL)
 #elif __ia64__
-CheckTypeSize(png_structpp,8, 11239, 3)
+CheckTypeSize(png_structpp,8, 11239, 3, 3.1, NULL, 11238, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_structpp,4, 11239, 6)
+CheckTypeSize(png_structpp,4, 11239, 6, 3.1, NULL, 11238, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_structpp,8, 11239, 9)
+CheckTypeSize(png_structpp,8, 11239, 9, 3.1, NULL, 11238, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_structpp,4, 11239, 10)
+CheckTypeSize(png_structpp,4, 11239, 10, 3.1, NULL, 11238, NULL)
 #elif __s390x__
-CheckTypeSize(png_structpp,8, 11239, 12)
+CheckTypeSize(png_structpp,8, 11239, 12, 3.1, NULL, 11238, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11239,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11238,NULL);\n",architecture,11239,0);
 Msg("Find size of png_structpp (11239)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_infopp,4, 11241, 2)
+CheckTypeSize(png_infopp,4, 11241, 2, 3.1, NULL, 11240, NULL)
 #elif __x86_64__
-CheckTypeSize(png_infopp,8, 11241, 11)
+CheckTypeSize(png_infopp,8, 11241, 11, 3.1, NULL, 11240, NULL)
 #elif __ia64__
-CheckTypeSize(png_infopp,8, 11241, 3)
+CheckTypeSize(png_infopp,8, 11241, 3, 3.1, NULL, 11240, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_infopp,4, 11241, 6)
+CheckTypeSize(png_infopp,4, 11241, 6, 3.1, NULL, 11240, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_infopp,8, 11241, 9)
+CheckTypeSize(png_infopp,8, 11241, 9, 3.1, NULL, 11240, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_infopp,4, 11241, 10)
+CheckTypeSize(png_infopp,4, 11241, 10, 3.1, NULL, 11240, NULL)
 #elif __s390x__
-CheckTypeSize(png_infopp,8, 11241, 12)
+CheckTypeSize(png_infopp,8, 11241, 12, 3.1, NULL, 11240, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11241,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11240,NULL);\n",architecture,11241,0);
 Msg("Find size of png_infopp (11241)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_FILE_p,4, 11243, 2)
+CheckTypeSize(png_FILE_p,4, 11243, 2, 3.1, NULL, 10124, NULL)
 #elif __x86_64__
-CheckTypeSize(png_FILE_p,8, 11243, 11)
+CheckTypeSize(png_FILE_p,8, 11243, 11, 3.1, NULL, 10124, NULL)
 #elif __ia64__
-CheckTypeSize(png_FILE_p,8, 11243, 3)
+CheckTypeSize(png_FILE_p,8, 11243, 3, 3.1, NULL, 10124, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_FILE_p,4, 11243, 6)
+CheckTypeSize(png_FILE_p,4, 11243, 6, 3.1, NULL, 10124, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_FILE_p,8, 11243, 9)
+CheckTypeSize(png_FILE_p,8, 11243, 9, 3.1, NULL, 10124, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_FILE_p,4, 11243, 10)
+CheckTypeSize(png_FILE_p,4, 11243, 10, 3.1, NULL, 10124, NULL)
 #elif __s390x__
-CheckTypeSize(png_FILE_p,8, 11243, 12)
+CheckTypeSize(png_FILE_p,8, 11243, 12, 3.1, NULL, 10124, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11243,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,10124,NULL);\n",architecture,11243,0);
 Msg("Find size of png_FILE_p (11243)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_row_info,12, 11245, 2)
+CheckTypeSize(png_row_info,12, 11245, 2, 3.1, NULL, 11244, NULL)
 #elif __x86_64__
-CheckTypeSize(png_row_info,24, 11245, 11)
+CheckTypeSize(png_row_info,24, 11245, 11, 3.1, NULL, 11244, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_row_info,12, 11245, 6)
+CheckTypeSize(png_row_info,12, 11245, 6, 3.1, NULL, 11244, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_row_info,24, 11245, 9)
+CheckTypeSize(png_row_info,24, 11245, 9, 3.1, NULL, 11244, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_row_info,12, 11245, 10)
+CheckTypeSize(png_row_info,12, 11245, 10, 3.1, NULL, 11244, NULL)
 #elif __s390x__
-CheckTypeSize(png_row_info,24, 11245, 12)
+CheckTypeSize(png_row_info,24, 11245, 12, 3.1, NULL, 11244, NULL)
 #elif __ia64__
-CheckTypeSize(png_row_info,24, 11245, 3)
+CheckTypeSize(png_row_info,24, 11245, 3, 3.1, NULL, 11244, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11245,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11244,NULL);\n",architecture,11245,0);
 Msg("Find size of png_row_info (11245)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_row_infop,4, 11247, 2)
+CheckTypeSize(png_row_infop,4, 11247, 2, 3.1, NULL, 11246, NULL)
 #elif __x86_64__
-CheckTypeSize(png_row_infop,8, 11247, 11)
+CheckTypeSize(png_row_infop,8, 11247, 11, 3.1, NULL, 11246, NULL)
 #elif __ia64__
-CheckTypeSize(png_row_infop,8, 11247, 3)
+CheckTypeSize(png_row_infop,8, 11247, 3, 3.1, NULL, 11246, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_row_infop,4, 11247, 6)
+CheckTypeSize(png_row_infop,4, 11247, 6, 3.1, NULL, 11246, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_row_infop,8, 11247, 9)
+CheckTypeSize(png_row_infop,8, 11247, 9, 3.1, NULL, 11246, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_row_infop,4, 11247, 10)
+CheckTypeSize(png_row_infop,4, 11247, 10, 3.1, NULL, 11246, NULL)
 #elif __s390x__
-CheckTypeSize(png_row_infop,8, 11247, 12)
+CheckTypeSize(png_row_infop,8, 11247, 12, 3.1, NULL, 11246, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11247,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11246,NULL);\n",architecture,11247,0);
 Msg("Find size of png_row_infop (11247)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(version_1_2_8,4, 11248, 2)
+CheckTypeSize(version_1_2_8,4, 11248, 2, 3.1, NULL, 11175, NULL)
 #elif __ia64__
-CheckTypeSize(version_1_2_8,8, 11248, 3)
+CheckTypeSize(version_1_2_8,8, 11248, 3, 3.1, NULL, 11175, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(version_1_2_8,4, 11248, 6)
+CheckTypeSize(version_1_2_8,4, 11248, 6, 3.1, NULL, 11175, NULL)
 #elif __powerpc64__
-CheckTypeSize(version_1_2_8,8, 11248, 9)
+CheckTypeSize(version_1_2_8,8, 11248, 9, 3.1, NULL, 11175, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(version_1_2_8,4, 11248, 10)
+CheckTypeSize(version_1_2_8,4, 11248, 10, 3.1, NULL, 11175, NULL)
 #elif __s390x__
-CheckTypeSize(version_1_2_8,8, 11248, 12)
+CheckTypeSize(version_1_2_8,8, 11248, 12, 3.1, NULL, 11175, NULL)
 #elif __x86_64__
-CheckTypeSize(version_1_2_8,8, 11248, 11)
+CheckTypeSize(version_1_2_8,8, 11248, 11, 3.1, NULL, 11175, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11248,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11175,NULL);\n",architecture,11248,0);
 Msg("Find size of version_1_2_8 (11248)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_uint_32p,4, 16182, 2)
+CheckTypeSize(png_uint_32p,4, 16182, 2, 3.1, NULL, 11214, NULL)
 #elif __x86_64__
-CheckTypeSize(png_uint_32p,8, 16182, 11)
+CheckTypeSize(png_uint_32p,8, 16182, 11, 3.1, NULL, 11214, NULL)
 #elif __ia64__
-CheckTypeSize(png_uint_32p,8, 16182, 3)
+CheckTypeSize(png_uint_32p,8, 16182, 3, 3.1, NULL, 11214, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_uint_32p,4, 16182, 6)
+CheckTypeSize(png_uint_32p,4, 16182, 6, 3.1, NULL, 11214, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_uint_32p,8, 16182, 9)
+CheckTypeSize(png_uint_32p,8, 16182, 9, 3.1, NULL, 11214, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_uint_32p,4, 16182, 10)
+CheckTypeSize(png_uint_32p,4, 16182, 10, 3.1, NULL, 11214, NULL)
 #elif __s390x__
-CheckTypeSize(png_uint_32p,8, 16182, 12)
+CheckTypeSize(png_uint_32p,8, 16182, 12, 3.1, NULL, 11214, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16182,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11214,NULL);\n",architecture,16182,0);
 Msg("Find size of png_uint_32p (16182)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_uint_16pp,4, 16184, 2)
+CheckTypeSize(png_uint_16pp,4, 16184, 2, 3.1, NULL, 16183, NULL)
 #elif __x86_64__
-CheckTypeSize(png_uint_16pp,8, 16184, 11)
+CheckTypeSize(png_uint_16pp,8, 16184, 11, 3.1, NULL, 16183, NULL)
 #elif __ia64__
-CheckTypeSize(png_uint_16pp,8, 16184, 3)
+CheckTypeSize(png_uint_16pp,8, 16184, 3, 3.1, NULL, 16183, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_uint_16pp,4, 16184, 6)
+CheckTypeSize(png_uint_16pp,4, 16184, 6, 3.1, NULL, 16183, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_uint_16pp,8, 16184, 9)
+CheckTypeSize(png_uint_16pp,8, 16184, 9, 3.1, NULL, 16183, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_uint_16pp,4, 16184, 10)
+CheckTypeSize(png_uint_16pp,4, 16184, 10, 3.1, NULL, 16183, NULL)
 #elif __s390x__
-CheckTypeSize(png_uint_16pp,8, 16184, 12)
+CheckTypeSize(png_uint_16pp,8, 16184, 12, 3.1, NULL, 16183, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16184,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16183,NULL);\n",architecture,16184,0);
 Msg("Find size of png_uint_16pp (16184)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_fixed_point,4, 16185, 2)
+CheckTypeSize(png_fixed_point,4, 16185, 2, 3.1, NULL, 11195, NULL)
 #elif __x86_64__
-CheckTypeSize(png_fixed_point,8, 16185, 11)
+CheckTypeSize(png_fixed_point,8, 16185, 11, 3.1, NULL, 11195, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_fixed_point,4, 16185, 6)
+CheckTypeSize(png_fixed_point,4, 16185, 6, 3.1, NULL, 11195, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_fixed_point,8, 16185, 9)
+CheckTypeSize(png_fixed_point,8, 16185, 9, 3.1, NULL, 11195, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_fixed_point,4, 16185, 10)
+CheckTypeSize(png_fixed_point,4, 16185, 10, 3.1, NULL, 11195, NULL)
 #elif __s390x__
-CheckTypeSize(png_fixed_point,8, 16185, 12)
+CheckTypeSize(png_fixed_point,8, 16185, 12, 3.1, NULL, 11195, NULL)
 #elif __ia64__
-CheckTypeSize(png_fixed_point,8, 16185, 3)
+CheckTypeSize(png_fixed_point,8, 16185, 3, 3.1, NULL, 11195, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16185,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11195,NULL);\n",architecture,16185,0);
 Msg("Find size of png_fixed_point (16185)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_doublep,4, 16186, 2)
+CheckTypeSize(png_doublep,4, 16186, 2, 3.1, NULL, 6280, NULL)
 #elif __x86_64__
-CheckTypeSize(png_doublep,8, 16186, 11)
+CheckTypeSize(png_doublep,8, 16186, 11, 3.1, NULL, 6280, NULL)
 #elif __ia64__
-CheckTypeSize(png_doublep,8, 16186, 3)
+CheckTypeSize(png_doublep,8, 16186, 3, 3.1, NULL, 6280, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_doublep,4, 16186, 6)
+CheckTypeSize(png_doublep,4, 16186, 6, 3.1, NULL, 6280, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_doublep,8, 16186, 9)
+CheckTypeSize(png_doublep,8, 16186, 9, 3.1, NULL, 6280, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_doublep,4, 16186, 10)
+CheckTypeSize(png_doublep,4, 16186, 10, 3.1, NULL, 6280, NULL)
 #elif __s390x__
-CheckTypeSize(png_doublep,8, 16186, 12)
+CheckTypeSize(png_doublep,8, 16186, 12, 3.1, NULL, 6280, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16186,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,6280,NULL);\n",architecture,16186,0);
 Msg("Find size of png_doublep (16186)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_zcharp,4, 16188, 2)
+CheckTypeSize(png_zcharp,4, 16188, 2, 3.1, NULL, 16187, NULL)
 #elif __x86_64__
-CheckTypeSize(png_zcharp,8, 16188, 11)
+CheckTypeSize(png_zcharp,8, 16188, 11, 3.1, NULL, 16187, NULL)
 #elif __ia64__
-CheckTypeSize(png_zcharp,8, 16188, 3)
+CheckTypeSize(png_zcharp,8, 16188, 3, 3.1, NULL, 16187, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_zcharp,4, 16188, 6)
+CheckTypeSize(png_zcharp,4, 16188, 6, 3.1, NULL, 16187, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_zcharp,8, 16188, 9)
+CheckTypeSize(png_zcharp,8, 16188, 9, 3.1, NULL, 16187, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_zcharp,4, 16188, 10)
+CheckTypeSize(png_zcharp,4, 16188, 10, 3.1, NULL, 16187, NULL)
 #elif __s390x__
-CheckTypeSize(png_zcharp,8, 16188, 12)
+CheckTypeSize(png_zcharp,8, 16188, 12, 3.1, NULL, 16187, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16188,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16187,NULL);\n",architecture,16188,0);
 Msg("Find size of png_zcharp (16188)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_fixed_point_p,4, 16190, 2)
+CheckTypeSize(png_fixed_point_p,4, 16190, 2, 3.1, NULL, 16189, NULL)
 #elif __x86_64__
-CheckTypeSize(png_fixed_point_p,8, 16190, 11)
+CheckTypeSize(png_fixed_point_p,8, 16190, 11, 3.1, NULL, 16189, NULL)
 #elif __ia64__
-CheckTypeSize(png_fixed_point_p,8, 16190, 3)
+CheckTypeSize(png_fixed_point_p,8, 16190, 3, 3.1, NULL, 16189, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_fixed_point_p,4, 16190, 6)
+CheckTypeSize(png_fixed_point_p,4, 16190, 6, 3.1, NULL, 16189, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_fixed_point_p,8, 16190, 9)
+CheckTypeSize(png_fixed_point_p,8, 16190, 9, 3.1, NULL, 16189, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_fixed_point_p,4, 16190, 10)
+CheckTypeSize(png_fixed_point_p,4, 16190, 10, 3.1, NULL, 16189, NULL)
 #elif __s390x__
-CheckTypeSize(png_fixed_point_p,8, 16190, 12)
+CheckTypeSize(png_fixed_point_p,8, 16190, 12, 3.1, NULL, 16189, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16190,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16189,NULL);\n",architecture,16190,0);
 Msg("Find size of png_fixed_point_p (16190)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_int_32p,4, 16191, 2)
+CheckTypeSize(png_int_32p,4, 16191, 2, 3.1, NULL, 11242, NULL)
 #elif __x86_64__
-CheckTypeSize(png_int_32p,8, 16191, 11)
+CheckTypeSize(png_int_32p,8, 16191, 11, 3.1, NULL, 11242, NULL)
 #elif __ia64__
-CheckTypeSize(png_int_32p,8, 16191, 3)
+CheckTypeSize(png_int_32p,8, 16191, 3, 3.1, NULL, 11242, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_int_32p,4, 16191, 6)
+CheckTypeSize(png_int_32p,4, 16191, 6, 3.1, NULL, 11242, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_int_32p,8, 16191, 9)
+CheckTypeSize(png_int_32p,8, 16191, 9, 3.1, NULL, 11242, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_int_32p,4, 16191, 10)
+CheckTypeSize(png_int_32p,4, 16191, 10, 3.1, NULL, 11242, NULL)
 #elif __s390x__
-CheckTypeSize(png_int_32p,8, 16191, 12)
+CheckTypeSize(png_int_32p,8, 16191, 12, 3.1, NULL, 11242, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16191,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11242,NULL);\n",architecture,16191,0);
 Msg("Find size of png_int_32p (16191)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_zstreamp,4, 16192, 2)
+CheckTypeSize(png_zstreamp,4, 16192, 2, 3.1, NULL, 9881, NULL)
 #elif __x86_64__
-CheckTypeSize(png_zstreamp,8, 16192, 11)
+CheckTypeSize(png_zstreamp,8, 16192, 11, 3.1, NULL, 9881, NULL)
 #elif __ia64__
-CheckTypeSize(png_zstreamp,8, 16192, 3)
+CheckTypeSize(png_zstreamp,8, 16192, 3, 3.1, NULL, 9881, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_zstreamp,4, 16192, 6)
+CheckTypeSize(png_zstreamp,4, 16192, 6, 3.1, NULL, 9881, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_zstreamp,8, 16192, 9)
+CheckTypeSize(png_zstreamp,8, 16192, 9, 3.1, NULL, 9881, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_zstreamp,4, 16192, 10)
+CheckTypeSize(png_zstreamp,4, 16192, 10, 3.1, NULL, 9881, NULL)
 #elif __s390x__
-CheckTypeSize(png_zstreamp,8, 16192, 12)
+CheckTypeSize(png_zstreamp,8, 16192, 12, 3.1, NULL, 9881, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16192,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,9881,NULL);\n",architecture,16192,0);
 Msg("Find size of png_zstreamp (16192)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_int_16,2, 16193, 2)
+CheckTypeSize(png_int_16,2, 16193, 2, 3.1, NULL, 4, NULL)
 #elif __x86_64__
-CheckTypeSize(png_int_16,2, 16193, 11)
+CheckTypeSize(png_int_16,2, 16193, 11, 3.1, NULL, 4, NULL)
 #elif __ia64__
-CheckTypeSize(png_int_16,2, 16193, 3)
+CheckTypeSize(png_int_16,2, 16193, 3, 3.1, NULL, 4, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_int_16,2, 16193, 6)
+CheckTypeSize(png_int_16,2, 16193, 6, 3.1, NULL, 4, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_int_16,2, 16193, 9)
+CheckTypeSize(png_int_16,2, 16193, 9, 3.1, NULL, 4, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_int_16,2, 16193, 10)
+CheckTypeSize(png_int_16,2, 16193, 10, 3.1, NULL, 4, NULL)
 #elif __s390x__
-CheckTypeSize(png_int_16,2, 16193, 12)
+CheckTypeSize(png_int_16,2, 16193, 12, 3.1, NULL, 4, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16193,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,4,NULL);\n",architecture,16193,0);
 Msg("Find size of png_int_16 (16193)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_int_16p,4, 16195, 2)
+CheckTypeSize(png_int_16p,4, 16195, 2, 3.1, NULL, 16194, NULL)
 #elif __x86_64__
-CheckTypeSize(png_int_16p,8, 16195, 11)
+CheckTypeSize(png_int_16p,8, 16195, 11, 3.1, NULL, 16194, NULL)
 #elif __ia64__
-CheckTypeSize(png_int_16p,8, 16195, 3)
+CheckTypeSize(png_int_16p,8, 16195, 3, 3.1, NULL, 16194, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_int_16p,4, 16195, 6)
+CheckTypeSize(png_int_16p,4, 16195, 6, 3.1, NULL, 16194, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_int_16p,8, 16195, 9)
+CheckTypeSize(png_int_16p,8, 16195, 9, 3.1, NULL, 16194, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_int_16p,4, 16195, 10)
+CheckTypeSize(png_int_16p,4, 16195, 10, 3.1, NULL, 16194, NULL)
 #elif __s390x__
-CheckTypeSize(png_int_16p,8, 16195, 12)
+CheckTypeSize(png_int_16p,8, 16195, 12, 3.1, NULL, 16194, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16195,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16194,NULL);\n",architecture,16195,0);
 Msg("Find size of png_int_16p (16195)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_int_16pp,4, 16197, 2)
+CheckTypeSize(png_int_16pp,4, 16197, 2, 3.1, NULL, 16196, NULL)
 #elif __x86_64__
-CheckTypeSize(png_int_16pp,8, 16197, 11)
+CheckTypeSize(png_int_16pp,8, 16197, 11, 3.1, NULL, 16196, NULL)
 #elif __ia64__
-CheckTypeSize(png_int_16pp,8, 16197, 3)
+CheckTypeSize(png_int_16pp,8, 16197, 3, 3.1, NULL, 16196, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_int_16pp,4, 16197, 6)
+CheckTypeSize(png_int_16pp,4, 16197, 6, 3.1, NULL, 16196, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_int_16pp,8, 16197, 9)
+CheckTypeSize(png_int_16pp,8, 16197, 9, 3.1, NULL, 16196, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_int_16pp,4, 16197, 10)
+CheckTypeSize(png_int_16pp,4, 16197, 10, 3.1, NULL, 16196, NULL)
 #elif __s390x__
-CheckTypeSize(png_int_16pp,8, 16197, 12)
+CheckTypeSize(png_int_16pp,8, 16197, 12, 3.1, NULL, 16196, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16197,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16196,NULL);\n",architecture,16197,0);
 Msg("Find size of png_int_16pp (16197)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_int_32pp,4, 16199, 2)
+CheckTypeSize(png_int_32pp,4, 16199, 2, 3.1, NULL, 16198, NULL)
 #elif __x86_64__
-CheckTypeSize(png_int_32pp,8, 16199, 11)
+CheckTypeSize(png_int_32pp,8, 16199, 11, 3.1, NULL, 16198, NULL)
 #elif __ia64__
-CheckTypeSize(png_int_32pp,8, 16199, 3)
+CheckTypeSize(png_int_32pp,8, 16199, 3, 3.1, NULL, 16198, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_int_32pp,4, 16199, 6)
+CheckTypeSize(png_int_32pp,4, 16199, 6, 3.1, NULL, 16198, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_int_32pp,8, 16199, 9)
+CheckTypeSize(png_int_32pp,8, 16199, 9, 3.1, NULL, 16198, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_int_32pp,4, 16199, 10)
+CheckTypeSize(png_int_32pp,4, 16199, 10, 3.1, NULL, 16198, NULL)
 #elif __s390x__
-CheckTypeSize(png_int_32pp,8, 16199, 12)
+CheckTypeSize(png_int_32pp,8, 16199, 12, 3.1, NULL, 16198, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16199,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16198,NULL);\n",architecture,16199,0);
 Msg("Find size of png_int_32pp (16199)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_uint_32pp,4, 16201, 2)
+CheckTypeSize(png_uint_32pp,4, 16201, 2, 3.1, NULL, 16200, NULL)
 #elif __x86_64__
-CheckTypeSize(png_uint_32pp,8, 16201, 11)
+CheckTypeSize(png_uint_32pp,8, 16201, 11, 3.1, NULL, 16200, NULL)
 #elif __ia64__
-CheckTypeSize(png_uint_32pp,8, 16201, 3)
+CheckTypeSize(png_uint_32pp,8, 16201, 3, 3.1, NULL, 16200, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_uint_32pp,4, 16201, 6)
+CheckTypeSize(png_uint_32pp,4, 16201, 6, 3.1, NULL, 16200, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_uint_32pp,8, 16201, 9)
+CheckTypeSize(png_uint_32pp,8, 16201, 9, 3.1, NULL, 16200, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_uint_32pp,4, 16201, 10)
+CheckTypeSize(png_uint_32pp,4, 16201, 10, 3.1, NULL, 16200, NULL)
 #elif __s390x__
-CheckTypeSize(png_uint_32pp,8, 16201, 12)
+CheckTypeSize(png_uint_32pp,8, 16201, 12, 3.1, NULL, 16200, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16201,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16200,NULL);\n",architecture,16201,0);
 Msg("Find size of png_uint_32pp (16201)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_zcharpp,4, 16203, 2)
+CheckTypeSize(png_zcharpp,4, 16203, 2, 3.1, NULL, 16202, NULL)
 #elif __x86_64__
-CheckTypeSize(png_zcharpp,8, 16203, 11)
+CheckTypeSize(png_zcharpp,8, 16203, 11, 3.1, NULL, 16202, NULL)
 #elif __ia64__
-CheckTypeSize(png_zcharpp,8, 16203, 3)
+CheckTypeSize(png_zcharpp,8, 16203, 3, 3.1, NULL, 16202, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_zcharpp,4, 16203, 6)
+CheckTypeSize(png_zcharpp,4, 16203, 6, 3.1, NULL, 16202, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_zcharpp,8, 16203, 9)
+CheckTypeSize(png_zcharpp,8, 16203, 9, 3.1, NULL, 16202, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_zcharpp,4, 16203, 10)
+CheckTypeSize(png_zcharpp,4, 16203, 10, 3.1, NULL, 16202, NULL)
 #elif __s390x__
-CheckTypeSize(png_zcharpp,8, 16203, 12)
+CheckTypeSize(png_zcharpp,8, 16203, 12, 3.1, NULL, 16202, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16203,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16202,NULL);\n",architecture,16203,0);
 Msg("Find size of png_zcharpp (16203)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_charppp,4, 16205, 2)
+CheckTypeSize(png_charppp,4, 16205, 2, 3.1, NULL, 16204, NULL)
 #elif __x86_64__
-CheckTypeSize(png_charppp,8, 16205, 11)
+CheckTypeSize(png_charppp,8, 16205, 11, 3.1, NULL, 16204, NULL)
 #elif __ia64__
-CheckTypeSize(png_charppp,8, 16205, 3)
+CheckTypeSize(png_charppp,8, 16205, 3, 3.1, NULL, 16204, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_charppp,4, 16205, 6)
+CheckTypeSize(png_charppp,4, 16205, 6, 3.1, NULL, 16204, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_charppp,8, 16205, 9)
+CheckTypeSize(png_charppp,8, 16205, 9, 3.1, NULL, 16204, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_charppp,4, 16205, 10)
+CheckTypeSize(png_charppp,4, 16205, 10, 3.1, NULL, 16204, NULL)
 #elif __s390x__
-CheckTypeSize(png_charppp,8, 16205, 12)
+CheckTypeSize(png_charppp,8, 16205, 12, 3.1, NULL, 16204, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16205,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16204,NULL);\n",architecture,16205,0);
 Msg("Find size of png_charppp (16205)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_const_charpp,4, 16207, 2)
+CheckTypeSize(png_const_charpp,4, 16207, 2, 3.1, NULL, 16206, NULL)
 #elif __x86_64__
-CheckTypeSize(png_const_charpp,8, 16207, 11)
+CheckTypeSize(png_const_charpp,8, 16207, 11, 3.1, NULL, 16206, NULL)
 #elif __ia64__
-CheckTypeSize(png_const_charpp,8, 16207, 3)
+CheckTypeSize(png_const_charpp,8, 16207, 3, 3.1, NULL, 16206, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_const_charpp,4, 16207, 6)
+CheckTypeSize(png_const_charpp,4, 16207, 6, 3.1, NULL, 16206, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_const_charpp,8, 16207, 9)
+CheckTypeSize(png_const_charpp,8, 16207, 9, 3.1, NULL, 16206, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_const_charpp,4, 16207, 10)
+CheckTypeSize(png_const_charpp,4, 16207, 10, 3.1, NULL, 16206, NULL)
 #elif __s390x__
-CheckTypeSize(png_const_charpp,8, 16207, 12)
+CheckTypeSize(png_const_charpp,8, 16207, 12, 3.1, NULL, 16206, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16207,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16206,NULL);\n",architecture,16207,0);
 Msg("Find size of png_const_charpp (16207)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_doublepp,4, 16209, 2)
+CheckTypeSize(png_doublepp,4, 16209, 2, 3.1, NULL, 16208, NULL)
 #elif __x86_64__
-CheckTypeSize(png_doublepp,8, 16209, 11)
+CheckTypeSize(png_doublepp,8, 16209, 11, 3.1, NULL, 16208, NULL)
 #elif __ia64__
-CheckTypeSize(png_doublepp,8, 16209, 3)
+CheckTypeSize(png_doublepp,8, 16209, 3, 3.1, NULL, 16208, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_doublepp,4, 16209, 6)
+CheckTypeSize(png_doublepp,4, 16209, 6, 3.1, NULL, 16208, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_doublepp,8, 16209, 9)
+CheckTypeSize(png_doublepp,8, 16209, 9, 3.1, NULL, 16208, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_doublepp,4, 16209, 10)
+CheckTypeSize(png_doublepp,4, 16209, 10, 3.1, NULL, 16208, NULL)
 #elif __s390x__
-CheckTypeSize(png_doublepp,8, 16209, 12)
+CheckTypeSize(png_doublepp,8, 16209, 12, 3.1, NULL, 16208, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16209,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16208,NULL);\n",architecture,16209,0);
 Msg("Find size of png_doublepp (16209)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_colorpp,4, 16210, 2)
+CheckTypeSize(png_colorpp,4, 16210, 2, 3.1, NULL, 11219, NULL)
 #elif __x86_64__
-CheckTypeSize(png_colorpp,8, 16210, 11)
+CheckTypeSize(png_colorpp,8, 16210, 11, 3.1, NULL, 11219, NULL)
 #elif __ia64__
-CheckTypeSize(png_colorpp,8, 16210, 3)
+CheckTypeSize(png_colorpp,8, 16210, 3, 3.1, NULL, 11219, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_colorpp,4, 16210, 6)
+CheckTypeSize(png_colorpp,4, 16210, 6, 3.1, NULL, 11219, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_colorpp,8, 16210, 9)
+CheckTypeSize(png_colorpp,8, 16210, 9, 3.1, NULL, 11219, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_colorpp,4, 16210, 10)
+CheckTypeSize(png_colorpp,4, 16210, 10, 3.1, NULL, 11219, NULL)
 #elif __s390x__
-CheckTypeSize(png_colorpp,8, 16210, 12)
+CheckTypeSize(png_colorpp,8, 16210, 12, 3.1, NULL, 11219, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16210,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11219,NULL);\n",architecture,16210,0);
 Msg("Find size of png_colorpp (16210)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_color_16pp,4, 16211, 2)
+CheckTypeSize(png_color_16pp,4, 16211, 2, 3.1, NULL, 11232, NULL)
 #elif __x86_64__
-CheckTypeSize(png_color_16pp,8, 16211, 11)
+CheckTypeSize(png_color_16pp,8, 16211, 11, 3.1, NULL, 11232, NULL)
 #elif __ia64__
-CheckTypeSize(png_color_16pp,8, 16211, 3)
+CheckTypeSize(png_color_16pp,8, 16211, 3, 3.1, NULL, 11232, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_color_16pp,4, 16211, 6)
+CheckTypeSize(png_color_16pp,4, 16211, 6, 3.1, NULL, 11232, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_color_16pp,8, 16211, 9)
+CheckTypeSize(png_color_16pp,8, 16211, 9, 3.1, NULL, 11232, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_color_16pp,4, 16211, 10)
+CheckTypeSize(png_color_16pp,4, 16211, 10, 3.1, NULL, 11232, NULL)
 #elif __s390x__
-CheckTypeSize(png_color_16pp,8, 16211, 12)
+CheckTypeSize(png_color_16pp,8, 16211, 12, 3.1, NULL, 11232, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16211,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11232,NULL);\n",architecture,16211,0);
 Msg("Find size of png_color_16pp (16211)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_color_8pp,4, 16212, 2)
+CheckTypeSize(png_color_8pp,4, 16212, 2, 3.1, NULL, 11197, NULL)
 #elif __x86_64__
-CheckTypeSize(png_color_8pp,8, 16212, 11)
+CheckTypeSize(png_color_8pp,8, 16212, 11, 3.1, NULL, 11197, NULL)
 #elif __ia64__
-CheckTypeSize(png_color_8pp,8, 16212, 3)
+CheckTypeSize(png_color_8pp,8, 16212, 3, 3.1, NULL, 11197, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_color_8pp,4, 16212, 6)
+CheckTypeSize(png_color_8pp,4, 16212, 6, 3.1, NULL, 11197, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_color_8pp,8, 16212, 9)
+CheckTypeSize(png_color_8pp,8, 16212, 9, 3.1, NULL, 11197, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_color_8pp,4, 16212, 10)
+CheckTypeSize(png_color_8pp,4, 16212, 10, 3.1, NULL, 11197, NULL)
 #elif __s390x__
-CheckTypeSize(png_color_8pp,8, 16212, 12)
+CheckTypeSize(png_color_8pp,8, 16212, 12, 3.1, NULL, 11197, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16212,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11197,NULL);\n",architecture,16212,0);
 Msg("Find size of png_color_8pp (16212)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_fixed_point_pp,4, 16214, 2)
+CheckTypeSize(png_fixed_point_pp,4, 16214, 2, 3.1, NULL, 16213, NULL)
 #elif __x86_64__
-CheckTypeSize(png_fixed_point_pp,8, 16214, 11)
+CheckTypeSize(png_fixed_point_pp,8, 16214, 11, 3.1, NULL, 16213, NULL)
 #elif __ia64__
-CheckTypeSize(png_fixed_point_pp,8, 16214, 3)
+CheckTypeSize(png_fixed_point_pp,8, 16214, 3, 3.1, NULL, 16213, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_fixed_point_pp,4, 16214, 6)
+CheckTypeSize(png_fixed_point_pp,4, 16214, 6, 3.1, NULL, 16213, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_fixed_point_pp,8, 16214, 9)
+CheckTypeSize(png_fixed_point_pp,8, 16214, 9, 3.1, NULL, 16213, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_fixed_point_pp,4, 16214, 10)
+CheckTypeSize(png_fixed_point_pp,4, 16214, 10, 3.1, NULL, 16213, NULL)
 #elif __s390x__
-CheckTypeSize(png_fixed_point_pp,8, 16214, 12)
+CheckTypeSize(png_fixed_point_pp,8, 16214, 12, 3.1, NULL, 16213, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16214,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16213,NULL);\n",architecture,16214,0);
 Msg("Find size of png_fixed_point_pp (16214)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_row_infopp,4, 16216, 2)
+CheckTypeSize(png_row_infopp,4, 16216, 2, 3.1, NULL, 16215, NULL)
 #elif __x86_64__
-CheckTypeSize(png_row_infopp,8, 16216, 11)
+CheckTypeSize(png_row_infopp,8, 16216, 11, 3.1, NULL, 16215, NULL)
 #elif __ia64__
-CheckTypeSize(png_row_infopp,8, 16216, 3)
+CheckTypeSize(png_row_infopp,8, 16216, 3, 3.1, NULL, 16215, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_row_infopp,4, 16216, 6)
+CheckTypeSize(png_row_infopp,4, 16216, 6, 3.1, NULL, 16215, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_row_infopp,8, 16216, 9)
+CheckTypeSize(png_row_infopp,8, 16216, 9, 3.1, NULL, 16215, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_row_infopp,4, 16216, 10)
+CheckTypeSize(png_row_infopp,4, 16216, 10, 3.1, NULL, 16215, NULL)
 #elif __s390x__
-CheckTypeSize(png_row_infopp,8, 16216, 12)
+CheckTypeSize(png_row_infopp,8, 16216, 12, 3.1, NULL, 16215, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16216,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16215,NULL);\n",architecture,16216,0);
 Msg("Find size of png_row_infopp (16216)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_textpp,4, 16217, 2)
+CheckTypeSize(png_textpp,4, 16217, 2, 3.1, NULL, 11203, NULL)
 #elif __x86_64__
-CheckTypeSize(png_textpp,8, 16217, 11)
+CheckTypeSize(png_textpp,8, 16217, 11, 3.1, NULL, 11203, NULL)
 #elif __ia64__
-CheckTypeSize(png_textpp,8, 16217, 3)
+CheckTypeSize(png_textpp,8, 16217, 3, 3.1, NULL, 11203, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_textpp,4, 16217, 6)
+CheckTypeSize(png_textpp,4, 16217, 6, 3.1, NULL, 11203, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_textpp,8, 16217, 9)
+CheckTypeSize(png_textpp,8, 16217, 9, 3.1, NULL, 11203, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_textpp,4, 16217, 10)
+CheckTypeSize(png_textpp,4, 16217, 10, 3.1, NULL, 11203, NULL)
 #elif __s390x__
-CheckTypeSize(png_textpp,8, 16217, 12)
+CheckTypeSize(png_textpp,8, 16217, 12, 3.1, NULL, 11203, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16217,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11203,NULL);\n",architecture,16217,0);
 Msg("Find size of png_textpp (16217)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(png_timepp,4, 16218, 2)
+CheckTypeSize(png_timepp,4, 16218, 2, 3.1, NULL, 11229, NULL)
 #elif __x86_64__
-CheckTypeSize(png_timepp,8, 16218, 11)
+CheckTypeSize(png_timepp,8, 16218, 11, 3.1, NULL, 11229, NULL)
 #elif __ia64__
-CheckTypeSize(png_timepp,8, 16218, 3)
+CheckTypeSize(png_timepp,8, 16218, 3, 3.1, NULL, 11229, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(png_timepp,4, 16218, 6)
+CheckTypeSize(png_timepp,4, 16218, 6, 3.1, NULL, 11229, NULL)
 #elif __powerpc64__
-CheckTypeSize(png_timepp,8, 16218, 9)
+CheckTypeSize(png_timepp,8, 16218, 9, 3.1, NULL, 11229, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(png_timepp,4, 16218, 10)
+CheckTypeSize(png_timepp,4, 16218, 10, 3.1, NULL, 11229, NULL)
 #elif __s390x__
-CheckTypeSize(png_timepp,8, 16218, 12)
+CheckTypeSize(png_timepp,8, 16218, 12, 3.1, NULL, 11229, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,16218,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11229, NULL);\n",architecture,16218,0);
 Msg("Find size of png_timepp (16218)\n");
 #endif
 

@@ -170,135 +170,135 @@ printf("Checking data structures in libxml2/libxml/globals.h\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlOutputBufferCreateFilenameFunc,4, 14917, 2)
+CheckTypeSize(xmlOutputBufferCreateFilenameFunc,4, 14917, 2, 3.1, NULL, 14916, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlOutputBufferCreateFilenameFunc,8, 14917, 11)
+CheckTypeSize(xmlOutputBufferCreateFilenameFunc,8, 14917, 11, 3.1, NULL, 14916, NULL)
 #elif __ia64__
-CheckTypeSize(xmlOutputBufferCreateFilenameFunc,8, 14917, 3)
+CheckTypeSize(xmlOutputBufferCreateFilenameFunc,8, 14917, 3, 3.1, NULL, 14916, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlOutputBufferCreateFilenameFunc,4, 14917, 6)
+CheckTypeSize(xmlOutputBufferCreateFilenameFunc,4, 14917, 6, 3.1, NULL, 14916, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlOutputBufferCreateFilenameFunc,8, 14917, 9)
+CheckTypeSize(xmlOutputBufferCreateFilenameFunc,8, 14917, 9, 3.1, NULL, 14916, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlOutputBufferCreateFilenameFunc,4, 14917, 10)
+CheckTypeSize(xmlOutputBufferCreateFilenameFunc,4, 14917, 10, 3.1, NULL, 14916, NULL)
 #elif __s390x__
-CheckTypeSize(xmlOutputBufferCreateFilenameFunc,8, 14917, 12)
+CheckTypeSize(xmlOutputBufferCreateFilenameFunc,8, 14917, 12, 3.1, NULL, 14916, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14917,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14916,NULL);\n",architecture,14917,0);
 Msg("Find size of xmlOutputBufferCreateFilenameFunc (14917)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlRegisterNodeFunc,4, 14920, 2)
+CheckTypeSize(xmlRegisterNodeFunc,4, 14920, 2, 3.1, NULL, 14919, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlRegisterNodeFunc,8, 14920, 11)
+CheckTypeSize(xmlRegisterNodeFunc,8, 14920, 11, 3.1, NULL, 14919, NULL)
 #elif __ia64__
-CheckTypeSize(xmlRegisterNodeFunc,8, 14920, 3)
+CheckTypeSize(xmlRegisterNodeFunc,8, 14920, 3, 3.1, NULL, 14919, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlRegisterNodeFunc,4, 14920, 6)
+CheckTypeSize(xmlRegisterNodeFunc,4, 14920, 6, 3.1, NULL, 14919, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlRegisterNodeFunc,8, 14920, 9)
+CheckTypeSize(xmlRegisterNodeFunc,8, 14920, 9, 3.1, NULL, 14919, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlRegisterNodeFunc,4, 14920, 10)
+CheckTypeSize(xmlRegisterNodeFunc,4, 14920, 10, 3.1, NULL, 14919, NULL)
 #elif __s390x__
-CheckTypeSize(xmlRegisterNodeFunc,8, 14920, 12)
+CheckTypeSize(xmlRegisterNodeFunc,8, 14920, 12, 3.1, NULL, 14919, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14920,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14919,NULL);\n",architecture,14920,0);
 Msg("Find size of xmlRegisterNodeFunc (14920)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlParserInputBufferCreateFilenameFunc,4, 14922, 2)
+CheckTypeSize(xmlParserInputBufferCreateFilenameFunc,4, 14922, 2, 3.1, NULL, 14921, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlParserInputBufferCreateFilenameFunc,8, 14922, 11)
+CheckTypeSize(xmlParserInputBufferCreateFilenameFunc,8, 14922, 11, 3.1, NULL, 14921, NULL)
 #elif __ia64__
-CheckTypeSize(xmlParserInputBufferCreateFilenameFunc,8, 14922, 3)
+CheckTypeSize(xmlParserInputBufferCreateFilenameFunc,8, 14922, 3, 3.1, NULL, 14921, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlParserInputBufferCreateFilenameFunc,4, 14922, 6)
+CheckTypeSize(xmlParserInputBufferCreateFilenameFunc,4, 14922, 6, 3.1, NULL, 14921, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlParserInputBufferCreateFilenameFunc,8, 14922, 9)
+CheckTypeSize(xmlParserInputBufferCreateFilenameFunc,8, 14922, 9, 3.1, NULL, 14921, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlParserInputBufferCreateFilenameFunc,4, 14922, 10)
+CheckTypeSize(xmlParserInputBufferCreateFilenameFunc,4, 14922, 10, 3.1, NULL, 14921, NULL)
 #elif __s390x__
-CheckTypeSize(xmlParserInputBufferCreateFilenameFunc,8, 14922, 12)
+CheckTypeSize(xmlParserInputBufferCreateFilenameFunc,8, 14922, 12, 3.1, NULL, 14921, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14922,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14921,NULL);\n",architecture,14922,0);
 Msg("Find size of xmlParserInputBufferCreateFilenameFunc (14922)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlSAXHandlerV1,112, 14925, 2)
+CheckTypeSize(xmlSAXHandlerV1,112, 14925, 2, 3.1, NULL, 14924, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlSAXHandlerV1,224, 14925, 11)
+CheckTypeSize(xmlSAXHandlerV1,224, 14925, 11, 3.1, NULL, 14924, NULL)
 #elif __ia64__
-CheckTypeSize(xmlSAXHandlerV1,224, 14925, 3)
+CheckTypeSize(xmlSAXHandlerV1,224, 14925, 3, 3.1, NULL, 14924, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSAXHandlerV1,112, 14925, 6)
+CheckTypeSize(xmlSAXHandlerV1,112, 14925, 6, 3.1, NULL, 14924, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlSAXHandlerV1,224, 14925, 9)
+CheckTypeSize(xmlSAXHandlerV1,224, 14925, 9, 3.1, NULL, 14924, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlSAXHandlerV1,112, 14925, 10)
+CheckTypeSize(xmlSAXHandlerV1,112, 14925, 10, 3.1, NULL, 14924, NULL)
 #elif __s390x__
-CheckTypeSize(xmlSAXHandlerV1,224, 14925, 12)
+CheckTypeSize(xmlSAXHandlerV1,224, 14925, 12, 3.1, NULL, 14924, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14925,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14924,NULL);\n",architecture,14925,0);
 Msg("Find size of xmlSAXHandlerV1 (14925)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlDeregisterNodeFunc,4, 14927, 2)
+CheckTypeSize(xmlDeregisterNodeFunc,4, 14927, 2, 3.1, NULL, 14919, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlDeregisterNodeFunc,8, 14927, 11)
+CheckTypeSize(xmlDeregisterNodeFunc,8, 14927, 11, 3.1, NULL, 14919, NULL)
 #elif __ia64__
-CheckTypeSize(xmlDeregisterNodeFunc,8, 14927, 3)
+CheckTypeSize(xmlDeregisterNodeFunc,8, 14927, 3, 3.1, NULL, 14919, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlDeregisterNodeFunc,4, 14927, 6)
+CheckTypeSize(xmlDeregisterNodeFunc,4, 14927, 6, 3.1, NULL, 14919, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlDeregisterNodeFunc,8, 14927, 9)
+CheckTypeSize(xmlDeregisterNodeFunc,8, 14927, 9, 3.1, NULL, 14919, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlDeregisterNodeFunc,4, 14927, 10)
+CheckTypeSize(xmlDeregisterNodeFunc,4, 14927, 10, 3.1, NULL, 14919, NULL)
 #elif __s390x__
-CheckTypeSize(xmlDeregisterNodeFunc,8, 14927, 12)
+CheckTypeSize(xmlDeregisterNodeFunc,8, 14927, 12, 3.1, NULL, 14919, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14927,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14919,NULL);\n",architecture,14927,0);
 Msg("Find size of xmlDeregisterNodeFunc (14927)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlGlobalState,512, 14933, 2)
+CheckTypeSize(xmlGlobalState,512, 14933, 2, 3.1, NULL, 14932, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlGlobalState,960, 14933, 11)
+CheckTypeSize(xmlGlobalState,960, 14933, 11, 3.1, NULL, 14932, NULL)
 #elif __ia64__
-CheckTypeSize(xmlGlobalState,960, 14933, 3)
+CheckTypeSize(xmlGlobalState,960, 14933, 3, 3.1, NULL, 14932, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlGlobalState,512, 14933, 6)
+CheckTypeSize(xmlGlobalState,512, 14933, 6, 3.1, NULL, 14932, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlGlobalState,960, 14933, 9)
+CheckTypeSize(xmlGlobalState,960, 14933, 9, 3.1, NULL, 14932, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlGlobalState,512, 14933, 10)
+CheckTypeSize(xmlGlobalState,512, 14933, 10, 3.1, NULL, 14932, NULL)
 #elif __s390x__
-CheckTypeSize(xmlGlobalState,960, 14933, 12)
+CheckTypeSize(xmlGlobalState,960, 14933, 12, 3.1, NULL, 14932, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14933,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14932,NULL);\n",architecture,14933,0);
 Msg("Find size of xmlGlobalState (14933)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlGlobalStatePtr,4, 14935, 2)
+CheckTypeSize(xmlGlobalStatePtr,4, 14935, 2, 3.1, NULL, 14934, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlGlobalStatePtr,8, 14935, 11)
+CheckTypeSize(xmlGlobalStatePtr,8, 14935, 11, 3.1, NULL, 14934, NULL)
 #elif __ia64__
-CheckTypeSize(xmlGlobalStatePtr,8, 14935, 3)
+CheckTypeSize(xmlGlobalStatePtr,8, 14935, 3, 3.1, NULL, 14934, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlGlobalStatePtr,4, 14935, 6)
+CheckTypeSize(xmlGlobalStatePtr,4, 14935, 6, 3.1, NULL, 14934, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlGlobalStatePtr,8, 14935, 9)
+CheckTypeSize(xmlGlobalStatePtr,8, 14935, 9, 3.1, NULL, 14934, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlGlobalStatePtr,4, 14935, 10)
+CheckTypeSize(xmlGlobalStatePtr,4, 14935, 10, 3.1, NULL, 14934, NULL)
 #elif __s390x__
-CheckTypeSize(xmlGlobalStatePtr,8, 14935, 12)
+CheckTypeSize(xmlGlobalStatePtr,8, 14935, 12, 3.1, NULL, 14934, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14935,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14934, NULL);\n",architecture,14935,0);
 Msg("Find size of xmlGlobalStatePtr (14935)\n");
 #endif
 

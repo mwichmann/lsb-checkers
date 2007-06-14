@@ -30,135 +30,135 @@ Msg("Checking data structures in GL/glx.h\n");
 
 printf("Checking data structures in GL/glx.h\n");
 #if __i386__
-CheckTypeSize(GLXContext,4, 8164, 2)
+CheckTypeSize(GLXContext,4, 8164, 2, 1.0, NULL, 7668, NULL)
 #elif __ia64__
-CheckTypeSize(GLXContext,8, 8164, 3)
+CheckTypeSize(GLXContext,8, 8164, 3, 1.3, NULL, 7668, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GLXContext,4, 8164, 6)
+CheckTypeSize(GLXContext,4, 8164, 6, 1.2, NULL, 7668, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GLXContext,4, 8164, 10)
+CheckTypeSize(GLXContext,4, 8164, 10, 1.3, NULL, 7668, NULL)
 #elif __powerpc64__
-CheckTypeSize(GLXContext,8, 8164, 9)
+CheckTypeSize(GLXContext,8, 8164, 9, 2.0, NULL, 7668, NULL)
 #elif __s390x__
-CheckTypeSize(GLXContext,8, 8164, 12)
+CheckTypeSize(GLXContext,8, 8164, 12, 1.3, NULL, 7668, NULL)
 #elif __x86_64__
-CheckTypeSize(GLXContext,8, 8164, 11)
+CheckTypeSize(GLXContext,8, 8164, 11, 2.0, NULL, 7668, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8164,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7668,NULL);\n",architecture,8164,0);
 Msg("Find size of GLXContext (8164)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GLXFBConfig,4, 8165, 2)
+CheckTypeSize(GLXFBConfig,4, 8165, 2, 1.2, NULL, 7671, NULL)
 #elif __ia64__
-CheckTypeSize(GLXFBConfig,8, 8165, 3)
+CheckTypeSize(GLXFBConfig,8, 8165, 3, 1.3, NULL, 7671, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GLXFBConfig,4, 8165, 6)
+CheckTypeSize(GLXFBConfig,4, 8165, 6, 1.2, NULL, 7671, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GLXFBConfig,4, 8165, 10)
+CheckTypeSize(GLXFBConfig,4, 8165, 10, 1.3, NULL, 7671, NULL)
 #elif __powerpc64__
-CheckTypeSize(GLXFBConfig,8, 8165, 9)
+CheckTypeSize(GLXFBConfig,8, 8165, 9, 2.0, NULL, 7671, NULL)
 #elif __s390x__
-CheckTypeSize(GLXFBConfig,8, 8165, 12)
+CheckTypeSize(GLXFBConfig,8, 8165, 12, 1.3, NULL, 7671, NULL)
 #elif __x86_64__
-CheckTypeSize(GLXFBConfig,8, 8165, 11)
+CheckTypeSize(GLXFBConfig,8, 8165, 11, 2.0, NULL, 7671, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8165,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7671,NULL);\n",architecture,8165,0);
 Msg("Find size of GLXFBConfig (8165)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GLXContextID,4, 8717, 2)
+CheckTypeSize(GLXContextID,4, 8717, 2, 1.0, NULL, 8171, NULL)
 #elif __ia64__
-CheckTypeSize(GLXContextID,8, 8717, 3)
+CheckTypeSize(GLXContextID,8, 8717, 3, 1.3, NULL, 8171, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GLXContextID,4, 8717, 6)
+CheckTypeSize(GLXContextID,4, 8717, 6, 1.2, NULL, 8171, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GLXContextID,4, 8717, 10)
+CheckTypeSize(GLXContextID,4, 8717, 10, 1.3, NULL, 8171, NULL)
 #elif __powerpc64__
-CheckTypeSize(GLXContextID,8, 8717, 9)
+CheckTypeSize(GLXContextID,8, 8717, 9, 2.0, NULL, 8171, NULL)
 #elif __s390x__
-CheckTypeSize(GLXContextID,8, 8717, 12)
+CheckTypeSize(GLXContextID,8, 8717, 12, 1.3, NULL, 8171, NULL)
 #elif __x86_64__
-CheckTypeSize(GLXContextID,8, 8717, 11)
+CheckTypeSize(GLXContextID,8, 8717, 11, 2.0, NULL, 8171, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8717,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8717,0);
 Msg("Find size of GLXContextID (8717)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GLXPixmap,4, 8718, 2)
+CheckTypeSize(GLXPixmap,4, 8718, 2, 1.0, NULL, 8171, NULL)
 #elif __ia64__
-CheckTypeSize(GLXPixmap,8, 8718, 3)
+CheckTypeSize(GLXPixmap,8, 8718, 3, 1.3, NULL, 8171, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GLXPixmap,4, 8718, 6)
+CheckTypeSize(GLXPixmap,4, 8718, 6, 1.2, NULL, 8171, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GLXPixmap,4, 8718, 10)
+CheckTypeSize(GLXPixmap,4, 8718, 10, 1.3, NULL, 8171, NULL)
 #elif __powerpc64__
-CheckTypeSize(GLXPixmap,8, 8718, 9)
+CheckTypeSize(GLXPixmap,8, 8718, 9, 2.0, NULL, 8171, NULL)
 #elif __s390x__
-CheckTypeSize(GLXPixmap,8, 8718, 12)
+CheckTypeSize(GLXPixmap,8, 8718, 12, 1.3, NULL, 8171, NULL)
 #elif __x86_64__
-CheckTypeSize(GLXPixmap,8, 8718, 11)
+CheckTypeSize(GLXPixmap,8, 8718, 11, 2.0, NULL, 8171, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8718,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8718,0);
 Msg("Find size of GLXPixmap (8718)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GLXDrawable,4, 8719, 2)
+CheckTypeSize(GLXDrawable,4, 8719, 2, 1.0, NULL, 8171, NULL)
 #elif __ia64__
-CheckTypeSize(GLXDrawable,8, 8719, 3)
+CheckTypeSize(GLXDrawable,8, 8719, 3, 1.3, NULL, 8171, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GLXDrawable,4, 8719, 6)
+CheckTypeSize(GLXDrawable,4, 8719, 6, 1.2, NULL, 8171, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GLXDrawable,4, 8719, 10)
+CheckTypeSize(GLXDrawable,4, 8719, 10, 1.3, NULL, 8171, NULL)
 #elif __powerpc64__
-CheckTypeSize(GLXDrawable,8, 8719, 9)
+CheckTypeSize(GLXDrawable,8, 8719, 9, 2.0, NULL, 8171, NULL)
 #elif __s390x__
-CheckTypeSize(GLXDrawable,8, 8719, 12)
+CheckTypeSize(GLXDrawable,8, 8719, 12, 1.3, NULL, 8171, NULL)
 #elif __x86_64__
-CheckTypeSize(GLXDrawable,8, 8719, 11)
+CheckTypeSize(GLXDrawable,8, 8719, 11, 2.0, NULL, 8171, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8719,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8719,0);
 Msg("Find size of GLXDrawable (8719)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GLXPbuffer,4, 8720, 2)
+CheckTypeSize(GLXPbuffer,4, 8720, 2, 1.0, NULL, 8171, NULL)
 #elif __ia64__
-CheckTypeSize(GLXPbuffer,8, 8720, 3)
+CheckTypeSize(GLXPbuffer,8, 8720, 3, 1.3, NULL, 8171, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GLXPbuffer,4, 8720, 6)
+CheckTypeSize(GLXPbuffer,4, 8720, 6, 1.2, NULL, 8171, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GLXPbuffer,4, 8720, 10)
+CheckTypeSize(GLXPbuffer,4, 8720, 10, 1.3, NULL, 8171, NULL)
 #elif __powerpc64__
-CheckTypeSize(GLXPbuffer,8, 8720, 9)
+CheckTypeSize(GLXPbuffer,8, 8720, 9, 2.0, NULL, 8171, NULL)
 #elif __s390x__
-CheckTypeSize(GLXPbuffer,8, 8720, 12)
+CheckTypeSize(GLXPbuffer,8, 8720, 12, 1.3, NULL, 8171, NULL)
 #elif __x86_64__
-CheckTypeSize(GLXPbuffer,8, 8720, 11)
+CheckTypeSize(GLXPbuffer,8, 8720, 11, 2.0, NULL, 8171, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8720,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8720,0);
 Msg("Find size of GLXPbuffer (8720)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GLXWindow,4, 8721, 2)
+CheckTypeSize(GLXWindow,4, 8721, 2, 1.0, NULL, 8171, NULL)
 #elif __ia64__
-CheckTypeSize(GLXWindow,8, 8721, 3)
+CheckTypeSize(GLXWindow,8, 8721, 3, 1.3, NULL, 8171, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GLXWindow,4, 8721, 6)
+CheckTypeSize(GLXWindow,4, 8721, 6, 1.2, NULL, 8171, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GLXWindow,4, 8721, 10)
+CheckTypeSize(GLXWindow,4, 8721, 10, 1.3, NULL, 8171, NULL)
 #elif __powerpc64__
-CheckTypeSize(GLXWindow,8, 8721, 9)
+CheckTypeSize(GLXWindow,8, 8721, 9, 2.0, NULL, 8171, NULL)
 #elif __s390x__
-CheckTypeSize(GLXWindow,8, 8721, 12)
+CheckTypeSize(GLXWindow,8, 8721, 12, 1.3, NULL, 8171, NULL)
 #elif __x86_64__
-CheckTypeSize(GLXWindow,8, 8721, 11)
+CheckTypeSize(GLXWindow,8, 8721, 11, 2.0, NULL, 8171, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8721,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171, NULL);\n",architecture,8721,0);
 Msg("Find size of GLXWindow (8721)\n");
 #endif
 

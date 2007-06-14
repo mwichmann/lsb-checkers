@@ -57,7 +57,7 @@ printf("Checking data structures in gtk-2.0/gdk-pixbuf/gdk-pixbuf.h\n");
 
 #if _LSB_DEFAULT_ARCH
 #ifdef GDK_PIXBUF_VERSION
-	CompareStringConstant(GDK_PIXBUF_VERSION,"2.6.10")
+	CompareStringConstant(GDK_PIXBUF_VERSION,"2.6.10",6616,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: GDK_PIXBUF_VERSION\n");
 cnt++;
@@ -154,249 +154,249 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPixbuf,0, 12611, 2)
+CheckTypeSize(GdkPixbuf,0, 12611, 2, 3.1, NULL, 12610, NULL)
 #elif __x86_64__
-CheckTypeSize(GdkPixbuf,0, 12611, 11)
+CheckTypeSize(GdkPixbuf,0, 12611, 11, 3.1, NULL, 12610, NULL)
 #elif __ia64__
-CheckTypeSize(GdkPixbuf,0, 12611, 3)
+CheckTypeSize(GdkPixbuf,0, 12611, 3, 3.1, NULL, 12610, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbuf,0, 12611, 6)
+CheckTypeSize(GdkPixbuf,0, 12611, 6, 3.1, NULL, 12610, NULL)
 #elif __powerpc64__
-CheckTypeSize(GdkPixbuf,0, 12611, 9)
+CheckTypeSize(GdkPixbuf,0, 12611, 9, 3.1, NULL, 12610, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbuf,0, 12611, 10)
+CheckTypeSize(GdkPixbuf,0, 12611, 10, 3.1, NULL, 12610, NULL)
 #elif __s390x__
-CheckTypeSize(GdkPixbuf,0, 12611, 12)
+CheckTypeSize(GdkPixbuf,0, 12611, 12, 3.1, NULL, 12610, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12611,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12610,NULL);\n",architecture,12611,0);
 Msg("Find size of GdkPixbuf (12611)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPixbufSaveFunc,4, 12614, 2)
+CheckTypeSize(GdkPixbufSaveFunc,4, 12614, 2, 3.1, NULL, 12613, NULL)
 #elif __x86_64__
-CheckTypeSize(GdkPixbufSaveFunc,8, 12614, 11)
+CheckTypeSize(GdkPixbufSaveFunc,8, 12614, 11, 3.1, NULL, 12613, NULL)
 #elif __ia64__
-CheckTypeSize(GdkPixbufSaveFunc,8, 12614, 3)
+CheckTypeSize(GdkPixbufSaveFunc,8, 12614, 3, 3.1, NULL, 12613, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbufSaveFunc,4, 12614, 6)
+CheckTypeSize(GdkPixbufSaveFunc,4, 12614, 6, 3.1, NULL, 12613, NULL)
 #elif __powerpc64__
-CheckTypeSize(GdkPixbufSaveFunc,8, 12614, 9)
+CheckTypeSize(GdkPixbufSaveFunc,8, 12614, 9, 3.1, NULL, 12613, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbufSaveFunc,4, 12614, 10)
+CheckTypeSize(GdkPixbufSaveFunc,4, 12614, 10, 3.1, NULL, 12613, NULL)
 #elif __s390x__
-CheckTypeSize(GdkPixbufSaveFunc,8, 12614, 12)
+CheckTypeSize(GdkPixbufSaveFunc,8, 12614, 12, 3.1, NULL, 12613, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12614,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12613,NULL);\n",architecture,12614,0);
 Msg("Find size of GdkPixbufSaveFunc (12614)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPixbufLoader,16, 12616, 2)
+CheckTypeSize(GdkPixbufLoader,16, 12616, 2, 3.1, NULL, 12615, NULL)
 #elif __x86_64__
-CheckTypeSize(GdkPixbufLoader,32, 12616, 11)
+CheckTypeSize(GdkPixbufLoader,32, 12616, 11, 3.1, NULL, 12615, NULL)
 #elif __ia64__
-CheckTypeSize(GdkPixbufLoader,32, 12616, 3)
+CheckTypeSize(GdkPixbufLoader,32, 12616, 3, 3.1, NULL, 12615, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbufLoader,16, 12616, 6)
+CheckTypeSize(GdkPixbufLoader,16, 12616, 6, 3.1, NULL, 12615, NULL)
 #elif __powerpc64__
-CheckTypeSize(GdkPixbufLoader,32, 12616, 9)
+CheckTypeSize(GdkPixbufLoader,32, 12616, 9, 3.1, NULL, 12615, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbufLoader,16, 12616, 10)
+CheckTypeSize(GdkPixbufLoader,16, 12616, 10, 3.1, NULL, 12615, NULL)
 #elif __s390x__
-CheckTypeSize(GdkPixbufLoader,32, 12616, 12)
+CheckTypeSize(GdkPixbufLoader,32, 12616, 12, 3.1, NULL, 12615, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12616,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12615,NULL);\n",architecture,12616,0);
 Msg("Find size of GdkPixbufLoader (12616)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPixbufFormat,0, 12621, 2)
+CheckTypeSize(GdkPixbufFormat,0, 12621, 2, 3.1, NULL, 12620, NULL)
 #elif __x86_64__
-CheckTypeSize(GdkPixbufFormat,0, 12621, 11)
+CheckTypeSize(GdkPixbufFormat,0, 12621, 11, 3.1, NULL, 12620, NULL)
 #elif __ia64__
-CheckTypeSize(GdkPixbufFormat,0, 12621, 3)
+CheckTypeSize(GdkPixbufFormat,0, 12621, 3, 3.1, NULL, 12620, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbufFormat,0, 12621, 6)
+CheckTypeSize(GdkPixbufFormat,0, 12621, 6, 3.1, NULL, 12620, NULL)
 #elif __powerpc64__
-CheckTypeSize(GdkPixbufFormat,0, 12621, 9)
+CheckTypeSize(GdkPixbufFormat,0, 12621, 9, 3.1, NULL, 12620, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbufFormat,0, 12621, 10)
+CheckTypeSize(GdkPixbufFormat,0, 12621, 10, 3.1, NULL, 12620, NULL)
 #elif __s390x__
-CheckTypeSize(GdkPixbufFormat,0, 12621, 12)
+CheckTypeSize(GdkPixbufFormat,0, 12621, 12, 3.1, NULL, 12620, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12621,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12620,NULL);\n",architecture,12621,0);
 Msg("Find size of GdkPixbufFormat (12621)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GdkInterpType,4, 12624, 2)
+CheckTypeSize(GdkInterpType,4, 12624, 2, 3.1, NULL, 12623, NULL)
 #elif __x86_64__
-CheckTypeSize(GdkInterpType,4, 12624, 11)
+CheckTypeSize(GdkInterpType,4, 12624, 11, 3.1, NULL, 12623, NULL)
 #elif __ia64__
-CheckTypeSize(GdkInterpType,4, 12624, 3)
+CheckTypeSize(GdkInterpType,4, 12624, 3, 3.1, NULL, 12623, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkInterpType,4, 12624, 6)
+CheckTypeSize(GdkInterpType,4, 12624, 6, 3.1, NULL, 12623, NULL)
 #elif __powerpc64__
-CheckTypeSize(GdkInterpType,4, 12624, 9)
+CheckTypeSize(GdkInterpType,4, 12624, 9, 3.1, NULL, 12623, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkInterpType,4, 12624, 10)
+CheckTypeSize(GdkInterpType,4, 12624, 10, 3.1, NULL, 12623, NULL)
 #elif __s390x__
-CheckTypeSize(GdkInterpType,4, 12624, 12)
+CheckTypeSize(GdkInterpType,4, 12624, 12, 3.1, NULL, 12623, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12624,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12623,NULL);\n",architecture,12624,0);
 Msg("Find size of GdkInterpType (12624)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GdkColorspace,4, 12628, 2)
+CheckTypeSize(GdkColorspace,4, 12628, 2, 3.1, NULL, 12627, NULL)
 #elif __x86_64__
-CheckTypeSize(GdkColorspace,4, 12628, 11)
+CheckTypeSize(GdkColorspace,4, 12628, 11, 3.1, NULL, 12627, NULL)
 #elif __ia64__
-CheckTypeSize(GdkColorspace,4, 12628, 3)
+CheckTypeSize(GdkColorspace,4, 12628, 3, 3.1, NULL, 12627, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkColorspace,4, 12628, 6)
+CheckTypeSize(GdkColorspace,4, 12628, 6, 3.1, NULL, 12627, NULL)
 #elif __powerpc64__
-CheckTypeSize(GdkColorspace,4, 12628, 9)
+CheckTypeSize(GdkColorspace,4, 12628, 9, 3.1, NULL, 12627, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkColorspace,4, 12628, 10)
+CheckTypeSize(GdkColorspace,4, 12628, 10, 3.1, NULL, 12627, NULL)
 #elif __s390x__
-CheckTypeSize(GdkColorspace,4, 12628, 12)
+CheckTypeSize(GdkColorspace,4, 12628, 12, 3.1, NULL, 12627, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12628,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12627,NULL);\n",architecture,12628,0);
 Msg("Find size of GdkColorspace (12628)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPixbufDestroyNotify,4, 12630, 2)
+CheckTypeSize(GdkPixbufDestroyNotify,4, 12630, 2, 3.1, NULL, 12629, NULL)
 #elif __x86_64__
-CheckTypeSize(GdkPixbufDestroyNotify,8, 12630, 11)
+CheckTypeSize(GdkPixbufDestroyNotify,8, 12630, 11, 3.1, NULL, 12629, NULL)
 #elif __ia64__
-CheckTypeSize(GdkPixbufDestroyNotify,8, 12630, 3)
+CheckTypeSize(GdkPixbufDestroyNotify,8, 12630, 3, 3.1, NULL, 12629, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbufDestroyNotify,4, 12630, 6)
+CheckTypeSize(GdkPixbufDestroyNotify,4, 12630, 6, 3.1, NULL, 12629, NULL)
 #elif __powerpc64__
-CheckTypeSize(GdkPixbufDestroyNotify,8, 12630, 9)
+CheckTypeSize(GdkPixbufDestroyNotify,8, 12630, 9, 3.1, NULL, 12629, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbufDestroyNotify,4, 12630, 10)
+CheckTypeSize(GdkPixbufDestroyNotify,4, 12630, 10, 3.1, NULL, 12629, NULL)
 #elif __s390x__
-CheckTypeSize(GdkPixbufDestroyNotify,8, 12630, 12)
+CheckTypeSize(GdkPixbufDestroyNotify,8, 12630, 12, 3.1, NULL, 12629, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12630,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12629,NULL);\n",architecture,12630,0);
 Msg("Find size of GdkPixbufDestroyNotify (12630)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 2)
+CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 2, 3.1, NULL, 12631, NULL)
 #elif __x86_64__
-CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 11)
+CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 11, 3.1, NULL, 12631, NULL)
 #elif __ia64__
-CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 3)
+CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 3, 3.1, NULL, 12631, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 6)
+CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 6, 3.1, NULL, 12631, NULL)
 #elif __powerpc64__
-CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 9)
+CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 9, 3.1, NULL, 12631, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 10)
+CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 10, 3.1, NULL, 12631, NULL)
 #elif __s390x__
-CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 12)
+CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 12, 3.1, NULL, 12631, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12632,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12631,NULL);\n",architecture,12632,0);
 Msg("Find size of GdkPixbufAnimationIter (12632)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPixbufAnimation,0, 12637, 2)
+CheckTypeSize(GdkPixbufAnimation,0, 12637, 2, 3.1, NULL, 12636, NULL)
 #elif __x86_64__
-CheckTypeSize(GdkPixbufAnimation,0, 12637, 11)
+CheckTypeSize(GdkPixbufAnimation,0, 12637, 11, 3.1, NULL, 12636, NULL)
 #elif __ia64__
-CheckTypeSize(GdkPixbufAnimation,0, 12637, 3)
+CheckTypeSize(GdkPixbufAnimation,0, 12637, 3, 3.1, NULL, 12636, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbufAnimation,0, 12637, 6)
+CheckTypeSize(GdkPixbufAnimation,0, 12637, 6, 3.1, NULL, 12636, NULL)
 #elif __powerpc64__
-CheckTypeSize(GdkPixbufAnimation,0, 12637, 9)
+CheckTypeSize(GdkPixbufAnimation,0, 12637, 9, 3.1, NULL, 12636, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbufAnimation,0, 12637, 10)
+CheckTypeSize(GdkPixbufAnimation,0, 12637, 10, 3.1, NULL, 12636, NULL)
 #elif __s390x__
-CheckTypeSize(GdkPixbufAnimation,0, 12637, 12)
+CheckTypeSize(GdkPixbufAnimation,0, 12637, 12, 3.1, NULL, 12636, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12637,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12636,NULL);\n",architecture,12637,0);
 Msg("Find size of GdkPixbufAnimation (12637)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPixbufRotation,4, 12640, 2)
+CheckTypeSize(GdkPixbufRotation,4, 12640, 2, 3.1, NULL, 12639, NULL)
 #elif __x86_64__
-CheckTypeSize(GdkPixbufRotation,4, 12640, 11)
+CheckTypeSize(GdkPixbufRotation,4, 12640, 11, 3.1, NULL, 12639, NULL)
 #elif __ia64__
-CheckTypeSize(GdkPixbufRotation,4, 12640, 3)
+CheckTypeSize(GdkPixbufRotation,4, 12640, 3, 3.1, NULL, 12639, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbufRotation,4, 12640, 6)
+CheckTypeSize(GdkPixbufRotation,4, 12640, 6, 3.1, NULL, 12639, NULL)
 #elif __powerpc64__
-CheckTypeSize(GdkPixbufRotation,4, 12640, 9)
+CheckTypeSize(GdkPixbufRotation,4, 12640, 9, 3.1, NULL, 12639, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbufRotation,4, 12640, 10)
+CheckTypeSize(GdkPixbufRotation,4, 12640, 10, 3.1, NULL, 12639, NULL)
 #elif __s390x__
-CheckTypeSize(GdkPixbufRotation,4, 12640, 12)
+CheckTypeSize(GdkPixbufRotation,4, 12640, 12, 3.1, NULL, 12639, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12640,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12639,NULL);\n",architecture,12640,0);
 Msg("Find size of GdkPixbufRotation (12640)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPixbufLoaderClass,84, 12645, 2)
+CheckTypeSize(GdkPixbufLoaderClass,84, 12645, 2, 3.1, NULL, 12641, NULL)
 #elif __x86_64__
-CheckTypeSize(GdkPixbufLoaderClass,168, 12645, 11)
+CheckTypeSize(GdkPixbufLoaderClass,168, 12645, 11, 3.1, NULL, 12641, NULL)
 #elif __ia64__
-CheckTypeSize(GdkPixbufLoaderClass,168, 12645, 3)
+CheckTypeSize(GdkPixbufLoaderClass,168, 12645, 3, 3.1, NULL, 12641, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbufLoaderClass,84, 12645, 6)
+CheckTypeSize(GdkPixbufLoaderClass,84, 12645, 6, 3.1, NULL, 12641, NULL)
 #elif __powerpc64__
-CheckTypeSize(GdkPixbufLoaderClass,168, 12645, 9)
+CheckTypeSize(GdkPixbufLoaderClass,168, 12645, 9, 3.1, NULL, 12641, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbufLoaderClass,84, 12645, 10)
+CheckTypeSize(GdkPixbufLoaderClass,84, 12645, 10, 3.1, NULL, 12641, NULL)
 #elif __s390x__
-CheckTypeSize(GdkPixbufLoaderClass,168, 12645, 12)
+CheckTypeSize(GdkPixbufLoaderClass,168, 12645, 12, 3.1, NULL, 12641, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12645,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12641,NULL);\n",architecture,12645,0);
 Msg("Find size of GdkPixbufLoaderClass (12645)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPixbufError,4, 12647, 2)
+CheckTypeSize(GdkPixbufError,4, 12647, 2, 3.1, NULL, 12646, NULL)
 #elif __x86_64__
-CheckTypeSize(GdkPixbufError,4, 12647, 11)
+CheckTypeSize(GdkPixbufError,4, 12647, 11, 3.1, NULL, 12646, NULL)
 #elif __ia64__
-CheckTypeSize(GdkPixbufError,4, 12647, 3)
+CheckTypeSize(GdkPixbufError,4, 12647, 3, 3.1, NULL, 12646, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbufError,4, 12647, 6)
+CheckTypeSize(GdkPixbufError,4, 12647, 6, 3.1, NULL, 12646, NULL)
 #elif __powerpc64__
-CheckTypeSize(GdkPixbufError,4, 12647, 9)
+CheckTypeSize(GdkPixbufError,4, 12647, 9, 3.1, NULL, 12646, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbufError,4, 12647, 10)
+CheckTypeSize(GdkPixbufError,4, 12647, 10, 3.1, NULL, 12646, NULL)
 #elif __s390x__
-CheckTypeSize(GdkPixbufError,4, 12647, 12)
+CheckTypeSize(GdkPixbufError,4, 12647, 12, 3.1, NULL, 12646, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12647,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12646,NULL);\n",architecture,12647,0);
 Msg("Find size of GdkPixbufError (12647)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 2)
+CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 2, 3.1, NULL, 12648, NULL)
 #elif __x86_64__
-CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 11)
+CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 11, 3.1, NULL, 12648, NULL)
 #elif __ia64__
-CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 3)
+CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 3, 3.1, NULL, 12648, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 6)
+CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 6, 3.1, NULL, 12648, NULL)
 #elif __powerpc64__
-CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 9)
+CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 9, 3.1, NULL, 12648, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 10)
+CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 10, 3.1, NULL, 12648, NULL)
 #elif __s390x__
-CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 12)
+CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 12, 3.1, NULL, 12648, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12649,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12648, NULL);\n",architecture,12649,0);
 Msg("Find size of GdkPixbufAlphaMode (12649)\n");
 #endif
 

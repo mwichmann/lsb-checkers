@@ -27,7 +27,7 @@ Msg("Checking data structures in regex.h\n");
 printf("Checking data structures in regex.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef REG_EXTENDED
-	CompareConstant(REG_EXTENDED,1,1593,architecture)
+	CompareConstant(REG_EXTENDED,1,1593,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: REG_EXTENDED\n");
 cnt++;
@@ -37,7 +37,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef REG_ICASE
-	CompareConstant(REG_ICASE,(REG_EXTENDED<<1),1594,architecture)
+	CompareConstant(REG_ICASE,(REG_EXTENDED<<1),1594,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: REG_ICASE\n");
 cnt++;
@@ -47,7 +47,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef REG_NEWLINE
-	CompareConstant(REG_NEWLINE,(REG_ICASE<<1),1595,architecture)
+	CompareConstant(REG_NEWLINE,(REG_ICASE<<1),1595,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: REG_NEWLINE\n");
 cnt++;
@@ -57,7 +57,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef REG_NOSUB
-	CompareConstant(REG_NOSUB,(REG_NEWLINE<<1),1596,architecture)
+	CompareConstant(REG_NOSUB,(REG_NEWLINE<<1),1596,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: REG_NOSUB\n");
 cnt++;
@@ -67,7 +67,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef REG_NOTBOL
-	CompareConstant(REG_NOTBOL,1,1597,architecture)
+	CompareConstant(REG_NOTBOL,1,1597,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: REG_NOTBOL\n");
 cnt++;
@@ -77,7 +77,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef REG_NOTEOL
-	CompareConstant(REG_NOTEOL,(1<<1),1598,architecture)
+	CompareConstant(REG_NOTEOL,(1<<1),1598,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: REG_NOTEOL\n");
 cnt++;
@@ -86,82 +86,82 @@ cnt++;
 #endif
 
 #if __i386__
-CheckTypeSize(reg_syntax_t,4, 6941, 2)
+CheckTypeSize(reg_syntax_t,4, 6941, 2, 1.2, NULL, 9, NULL)
 #elif __ia64__
-CheckTypeSize(reg_syntax_t,8, 6941, 3)
+CheckTypeSize(reg_syntax_t,8, 6941, 3, 1.3, NULL, 9, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(reg_syntax_t,4, 6941, 6)
+CheckTypeSize(reg_syntax_t,4, 6941, 6, 1.2, NULL, 9, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(reg_syntax_t,4, 6941, 10)
+CheckTypeSize(reg_syntax_t,4, 6941, 10, 1.3, NULL, 9, NULL)
 #elif __powerpc64__
-CheckTypeSize(reg_syntax_t,8, 6941, 9)
+CheckTypeSize(reg_syntax_t,8, 6941, 9, 2.0, NULL, 9, NULL)
 #elif __s390x__
-CheckTypeSize(reg_syntax_t,8, 6941, 12)
+CheckTypeSize(reg_syntax_t,8, 6941, 12, 1.3, NULL, 9, NULL)
 #elif __x86_64__
-CheckTypeSize(reg_syntax_t,8, 6941, 11)
+CheckTypeSize(reg_syntax_t,8, 6941, 11, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6941,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,6941,0);
 Msg("Find size of reg_syntax_t (6941)\n");
 #endif
 
 #if 1
-CheckTypeSize(reg_errcode_t,4, 9073, 1)
+CheckTypeSize(reg_errcode_t,4, 9073, 1, 2.1, NULL, 9072, NULL)
 #endif
 
 #if __i386__
-CheckTypeSize(regex_t,32, 6945, 2)
+CheckTypeSize(regex_t,32, 6945, 2, 1.2, NULL, 6944, NULL)
 #elif __ia64__
-CheckTypeSize(regex_t,64, 6945, 3)
+CheckTypeSize(regex_t,64, 6945, 3, 1.3, NULL, 6944, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(regex_t,32, 6945, 6)
+CheckTypeSize(regex_t,32, 6945, 6, 1.2, NULL, 6944, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(regex_t,32, 6945, 10)
+CheckTypeSize(regex_t,32, 6945, 10, 1.3, NULL, 6944, NULL)
 #elif __powerpc64__
-CheckTypeSize(regex_t,64, 6945, 9)
+CheckTypeSize(regex_t,64, 6945, 9, 2.0, NULL, 6944, NULL)
 #elif __s390x__
-CheckTypeSize(regex_t,64, 6945, 12)
+CheckTypeSize(regex_t,64, 6945, 12, 1.3, NULL, 6944, NULL)
 #elif __x86_64__
-CheckTypeSize(regex_t,64, 6945, 11)
+CheckTypeSize(regex_t,64, 6945, 11, 2.0, NULL, 6944, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6945,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6944,NULL);\n",architecture,6945,0);
 Msg("Find size of regex_t (6945)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(regoff_t,4, 6946, 2)
+CheckTypeSize(regoff_t,4, 6946, 2, 1.2, NULL, 6, NULL)
 #elif __ia64__
-CheckTypeSize(regoff_t,4, 6946, 3)
+CheckTypeSize(regoff_t,4, 6946, 3, 1.3, NULL, 6, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(regoff_t,4, 6946, 6)
+CheckTypeSize(regoff_t,4, 6946, 6, 1.2, NULL, 6, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(regoff_t,4, 6946, 10)
+CheckTypeSize(regoff_t,4, 6946, 10, 1.3, NULL, 6, NULL)
 #elif __powerpc64__
-CheckTypeSize(regoff_t,4, 6946, 9)
+CheckTypeSize(regoff_t,4, 6946, 9, 2.0, NULL, 6, NULL)
 #elif __s390x__
-CheckTypeSize(regoff_t,4, 6946, 12)
+CheckTypeSize(regoff_t,4, 6946, 12, 1.3, NULL, 6, NULL)
 #elif __x86_64__
-CheckTypeSize(regoff_t,4, 6946, 11)
+CheckTypeSize(regoff_t,4, 6946, 11, 2.0, NULL, 6, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6946,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,6946,0);
 Msg("Find size of regoff_t (6946)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(regmatch_t,8, 6949, 2)
+CheckTypeSize(regmatch_t,8, 6949, 2, 1.0, NULL, 6948, NULL)
 #elif __ia64__
-CheckTypeSize(regmatch_t,8, 6949, 3)
+CheckTypeSize(regmatch_t,8, 6949, 3, 1.3, NULL, 6948, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(regmatch_t,8, 6949, 6)
+CheckTypeSize(regmatch_t,8, 6949, 6, 1.2, NULL, 6948, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(regmatch_t,8, 6949, 10)
+CheckTypeSize(regmatch_t,8, 6949, 10, 1.3, NULL, 6948, NULL)
 #elif __powerpc64__
-CheckTypeSize(regmatch_t,8, 6949, 9)
+CheckTypeSize(regmatch_t,8, 6949, 9, 2.0, NULL, 6948, NULL)
 #elif __s390x__
-CheckTypeSize(regmatch_t,8, 6949, 12)
+CheckTypeSize(regmatch_t,8, 6949, 12, 1.3, NULL, 6948, NULL)
 #elif __x86_64__
-CheckTypeSize(regmatch_t,8, 6949, 11)
+CheckTypeSize(regmatch_t,8, 6949, 11, 2.0, NULL, 6948, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,6949,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6948, NULL);\n",architecture,6949,0);
 Msg("Find size of regmatch_t (6949)\n");
 #endif
 

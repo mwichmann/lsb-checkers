@@ -34,59 +34,59 @@ printf("Checking data structures in gtk-2.0/gdk-pixbuf/gdk-pixdata.h\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPixdata,28, 12651, 2)
+CheckTypeSize(GdkPixdata,28, 12651, 2, 3.1, NULL, 12650, NULL)
 #elif __x86_64__
-CheckTypeSize(GdkPixdata,32, 12651, 11)
+CheckTypeSize(GdkPixdata,32, 12651, 11, 3.1, NULL, 12650, NULL)
 #elif __ia64__
-CheckTypeSize(GdkPixdata,32, 12651, 3)
+CheckTypeSize(GdkPixdata,32, 12651, 3, 3.1, NULL, 12650, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixdata,28, 12651, 6)
+CheckTypeSize(GdkPixdata,28, 12651, 6, 3.1, NULL, 12650, NULL)
 #elif __powerpc64__
-CheckTypeSize(GdkPixdata,32, 12651, 9)
+CheckTypeSize(GdkPixdata,32, 12651, 9, 3.1, NULL, 12650, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixdata,28, 12651, 10)
+CheckTypeSize(GdkPixdata,28, 12651, 10, 3.1, NULL, 12650, NULL)
 #elif __s390x__
-CheckTypeSize(GdkPixdata,32, 12651, 12)
+CheckTypeSize(GdkPixdata,32, 12651, 12, 3.1, NULL, 12650, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12651,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12650,NULL);\n",architecture,12651,0);
 Msg("Find size of GdkPixdata (12651)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPixdataDumpType,4, 12656, 2)
+CheckTypeSize(GdkPixdataDumpType,4, 12656, 2, 3.1, NULL, 12655, NULL)
 #elif __x86_64__
-CheckTypeSize(GdkPixdataDumpType,4, 12656, 11)
+CheckTypeSize(GdkPixdataDumpType,4, 12656, 11, 3.1, NULL, 12655, NULL)
 #elif __ia64__
-CheckTypeSize(GdkPixdataDumpType,4, 12656, 3)
+CheckTypeSize(GdkPixdataDumpType,4, 12656, 3, 3.1, NULL, 12655, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixdataDumpType,4, 12656, 6)
+CheckTypeSize(GdkPixdataDumpType,4, 12656, 6, 3.1, NULL, 12655, NULL)
 #elif __powerpc64__
-CheckTypeSize(GdkPixdataDumpType,4, 12656, 9)
+CheckTypeSize(GdkPixdataDumpType,4, 12656, 9, 3.1, NULL, 12655, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixdataDumpType,4, 12656, 10)
+CheckTypeSize(GdkPixdataDumpType,4, 12656, 10, 3.1, NULL, 12655, NULL)
 #elif __s390x__
-CheckTypeSize(GdkPixdataDumpType,4, 12656, 12)
+CheckTypeSize(GdkPixdataDumpType,4, 12656, 12, 3.1, NULL, 12655, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12656,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12655,NULL);\n",architecture,12656,0);
 Msg("Find size of GdkPixdataDumpType (12656)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(GdkPixdataType,4, 12658, 2)
+CheckTypeSize(GdkPixdataType,4, 12658, 2, 3.1, NULL, 12657, NULL)
 #elif __x86_64__
-CheckTypeSize(GdkPixdataType,4, 12658, 11)
+CheckTypeSize(GdkPixdataType,4, 12658, 11, 3.1, NULL, 12657, NULL)
 #elif __ia64__
-CheckTypeSize(GdkPixdataType,4, 12658, 3)
+CheckTypeSize(GdkPixdataType,4, 12658, 3, 3.1, NULL, 12657, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(GdkPixdataType,4, 12658, 6)
+CheckTypeSize(GdkPixdataType,4, 12658, 6, 3.1, NULL, 12657, NULL)
 #elif __powerpc64__
-CheckTypeSize(GdkPixdataType,4, 12658, 9)
+CheckTypeSize(GdkPixdataType,4, 12658, 9, 3.1, NULL, 12657, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(GdkPixdataType,4, 12658, 10)
+CheckTypeSize(GdkPixdataType,4, 12658, 10, 3.1, NULL, 12657, NULL)
 #elif __s390x__
-CheckTypeSize(GdkPixdataType,4, 12658, 12)
+CheckTypeSize(GdkPixdataType,4, 12658, 12, 3.1, NULL, 12657, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,12658,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12657, NULL);\n",architecture,12658,0);
 Msg("Find size of GdkPixdataType (12658)\n");
 #endif
 

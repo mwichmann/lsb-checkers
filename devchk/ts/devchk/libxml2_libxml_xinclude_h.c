@@ -68,40 +68,40 @@ printf("Checking data structures in libxml2/libxml/xinclude.h\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlXIncludeCtxt,0, 14671, 2)
+CheckTypeSize(xmlXIncludeCtxt,0, 14671, 2, 3.1, NULL, 14670, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlXIncludeCtxt,0, 14671, 11)
+CheckTypeSize(xmlXIncludeCtxt,0, 14671, 11, 3.1, NULL, 14670, NULL)
 #elif __ia64__
-CheckTypeSize(xmlXIncludeCtxt,0, 14671, 3)
+CheckTypeSize(xmlXIncludeCtxt,0, 14671, 3, 3.1, NULL, 14670, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlXIncludeCtxt,0, 14671, 6)
+CheckTypeSize(xmlXIncludeCtxt,0, 14671, 6, 3.1, NULL, 14670, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlXIncludeCtxt,0, 14671, 9)
+CheckTypeSize(xmlXIncludeCtxt,0, 14671, 9, 3.1, NULL, 14670, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlXIncludeCtxt,0, 14671, 10)
+CheckTypeSize(xmlXIncludeCtxt,0, 14671, 10, 3.1, NULL, 14670, NULL)
 #elif __s390x__
-CheckTypeSize(xmlXIncludeCtxt,0, 14671, 12)
+CheckTypeSize(xmlXIncludeCtxt,0, 14671, 12, 3.1, NULL, 14670, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14671,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14670,NULL);\n",architecture,14671,0);
 Msg("Find size of xmlXIncludeCtxt (14671)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlXIncludeCtxtPtr,4, 14673, 2)
+CheckTypeSize(xmlXIncludeCtxtPtr,4, 14673, 2, 3.1, NULL, 14672, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlXIncludeCtxtPtr,8, 14673, 11)
+CheckTypeSize(xmlXIncludeCtxtPtr,8, 14673, 11, 3.1, NULL, 14672, NULL)
 #elif __ia64__
-CheckTypeSize(xmlXIncludeCtxtPtr,8, 14673, 3)
+CheckTypeSize(xmlXIncludeCtxtPtr,8, 14673, 3, 3.1, NULL, 14672, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlXIncludeCtxtPtr,4, 14673, 6)
+CheckTypeSize(xmlXIncludeCtxtPtr,4, 14673, 6, 3.1, NULL, 14672, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlXIncludeCtxtPtr,8, 14673, 9)
+CheckTypeSize(xmlXIncludeCtxtPtr,8, 14673, 9, 3.1, NULL, 14672, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlXIncludeCtxtPtr,4, 14673, 10)
+CheckTypeSize(xmlXIncludeCtxtPtr,4, 14673, 10, 3.1, NULL, 14672, NULL)
 #elif __s390x__
-CheckTypeSize(xmlXIncludeCtxtPtr,8, 14673, 12)
+CheckTypeSize(xmlXIncludeCtxtPtr,8, 14673, 12, 3.1, NULL, 14672, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14673,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14672, NULL);\n",architecture,14673,0);
 Msg("Find size of xmlXIncludeCtxtPtr (14673)\n");
 #endif
 

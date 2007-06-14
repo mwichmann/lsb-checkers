@@ -27,7 +27,7 @@ Msg("Checking data structures in time.h\n");
 printf("Checking data structures in time.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef CLOCKS_PER_SEC
-	CompareConstant(CLOCKS_PER_SEC,1000000l,2473,architecture)
+	CompareConstant(CLOCKS_PER_SEC,1000000l,2473,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: CLOCKS_PER_SEC\n");
 cnt++;
@@ -37,7 +37,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CLK_TCK
-	CompareConstant(CLK_TCK,((clock_t)__sysconf(2)),2474,architecture)
+	CompareConstant(CLK_TCK,((clock_t)__sysconf(2)),2474,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: CLK_TCK\n");
 cnt++;
@@ -47,7 +47,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CLOCK_REALTIME
-	CompareConstant(CLOCK_REALTIME,0,2475,architecture)
+	CompareConstant(CLOCK_REALTIME,0,2475,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: CLOCK_REALTIME\n");
 cnt++;
@@ -57,7 +57,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef TIMER_ABSTIME
-	CompareConstant(TIMER_ABSTIME,1,2478,architecture)
+	CompareConstant(TIMER_ABSTIME,1,2478,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: TIMER_ABSTIME\n");
 cnt++;
@@ -73,7 +73,7 @@ cnt++;
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7019,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,7019,0);
 Msg("Find size of tm (7019)\n");
 #endif
 
@@ -85,7 +85,7 @@ Msg("Find size of tm (7019)\n");
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10101,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10101,0);
 Msg("Find size of itimerspec (10101)\n");
 #endif
 

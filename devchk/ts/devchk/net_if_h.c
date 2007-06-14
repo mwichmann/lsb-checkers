@@ -27,7 +27,7 @@ Msg("Checking data structures in net/if.h\n");
 printf("Checking data structures in net/if.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef IFF_UP
-	CompareConstant(IFF_UP,0x01,4976,architecture)
+	CompareConstant(IFF_UP,0x01,4976,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: IFF_UP\n");
 cnt++;
@@ -37,7 +37,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef IFF_BROADCAST
-	CompareConstant(IFF_BROADCAST,0x02,4977,architecture)
+	CompareConstant(IFF_BROADCAST,0x02,4977,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: IFF_BROADCAST\n");
 cnt++;
@@ -47,7 +47,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef IFF_DEBUG
-	CompareConstant(IFF_DEBUG,0x04,4978,architecture)
+	CompareConstant(IFF_DEBUG,0x04,4978,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: IFF_DEBUG\n");
 cnt++;
@@ -57,7 +57,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef IFF_LOOPBACK
-	CompareConstant(IFF_LOOPBACK,0x08,4979,architecture)
+	CompareConstant(IFF_LOOPBACK,0x08,4979,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: IFF_LOOPBACK\n");
 cnt++;
@@ -67,7 +67,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef IFF_POINTOPOINT
-	CompareConstant(IFF_POINTOPOINT,0x10,4980,architecture)
+	CompareConstant(IFF_POINTOPOINT,0x10,4980,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: IFF_POINTOPOINT\n");
 cnt++;
@@ -77,7 +77,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef IFF_NOTRAILERS
-	CompareConstant(IFF_NOTRAILERS,0x20,4981,architecture)
+	CompareConstant(IFF_NOTRAILERS,0x20,4981,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: IFF_NOTRAILERS\n");
 cnt++;
@@ -87,7 +87,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef IFF_RUNNING
-	CompareConstant(IFF_RUNNING,0x40,4982,architecture)
+	CompareConstant(IFF_RUNNING,0x40,4982,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: IFF_RUNNING\n");
 cnt++;
@@ -97,7 +97,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef IFF_NOARP
-	CompareConstant(IFF_NOARP,0x80,4983,architecture)
+	CompareConstant(IFF_NOARP,0x80,4983,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: IFF_NOARP\n");
 cnt++;
@@ -107,7 +107,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef IFF_PROMISC
-	CompareConstant(IFF_PROMISC,0x100,4984,architecture)
+	CompareConstant(IFF_PROMISC,0x100,4984,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: IFF_PROMISC\n");
 cnt++;
@@ -117,7 +117,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef IFF_MULTICAST
-	CompareConstant(IFF_MULTICAST,0x1000,4985,architecture)
+	CompareConstant(IFF_MULTICAST,0x1000,4985,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: IFF_MULTICAST\n");
 cnt++;
@@ -127,7 +127,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef IFNAMSIZ
-	CompareConstant(IFNAMSIZ,IF_NAMESIZE,4988,architecture)
+	CompareConstant(IFNAMSIZ,IF_NAMESIZE,4988,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: IFNAMSIZ\n");
 cnt++;
@@ -137,7 +137,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef IF_NAMESIZE
-	CompareConstant(IF_NAMESIZE,16,4989,architecture)
+	CompareConstant(IF_NAMESIZE,16,4989,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: IF_NAMESIZE\n");
 cnt++;
@@ -153,7 +153,7 @@ cnt++;
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10286,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10286,0);
 Msg("Find size of ifaddr (10286)\n");
 #endif
 
@@ -165,7 +165,7 @@ Msg("Find size of ifaddr (10286)\n");
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10290,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10290,0);
 Msg("Find size of ifreq (10290)\n");
 #endif
 
@@ -177,7 +177,7 @@ Msg("Find size of ifreq (10290)\n");
 #elif __x86_64__
 #elif __powerpc64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10288,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10288,0);
 Msg("Find size of ifconf (10288)\n");
 #endif
 
@@ -189,7 +189,7 @@ Msg("Find size of ifconf (10288)\n");
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,11015,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.1""',NULL,0, NULL);\n",architecture,11015,0);
 Msg("Find size of if_nameindex (11015)\n");
 #endif
 

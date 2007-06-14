@@ -29,59 +29,59 @@ Msg("Checking data structures in libxml2/libxml/xmlsave.h\n");
 
 printf("Checking data structures in libxml2/libxml/xmlsave.h\n");
 #if __i386__
-CheckTypeSize(xmlSaveCtxt,0, 14836, 2)
+CheckTypeSize(xmlSaveCtxt,0, 14836, 2, 3.1, NULL, 14835, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlSaveCtxt,0, 14836, 11)
+CheckTypeSize(xmlSaveCtxt,0, 14836, 11, 3.1, NULL, 14835, NULL)
 #elif __ia64__
-CheckTypeSize(xmlSaveCtxt,0, 14836, 3)
+CheckTypeSize(xmlSaveCtxt,0, 14836, 3, 3.1, NULL, 14835, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSaveCtxt,0, 14836, 6)
+CheckTypeSize(xmlSaveCtxt,0, 14836, 6, 3.1, NULL, 14835, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlSaveCtxt,0, 14836, 9)
+CheckTypeSize(xmlSaveCtxt,0, 14836, 9, 3.1, NULL, 14835, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlSaveCtxt,0, 14836, 10)
+CheckTypeSize(xmlSaveCtxt,0, 14836, 10, 3.1, NULL, 14835, NULL)
 #elif __s390x__
-CheckTypeSize(xmlSaveCtxt,0, 14836, 12)
+CheckTypeSize(xmlSaveCtxt,0, 14836, 12, 3.1, NULL, 14835, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14836,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14835,NULL);\n",architecture,14836,0);
 Msg("Find size of xmlSaveCtxt (14836)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlSaveCtxtPtr,4, 14838, 2)
+CheckTypeSize(xmlSaveCtxtPtr,4, 14838, 2, 3.1, NULL, 14837, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlSaveCtxtPtr,8, 14838, 11)
+CheckTypeSize(xmlSaveCtxtPtr,8, 14838, 11, 3.1, NULL, 14837, NULL)
 #elif __ia64__
-CheckTypeSize(xmlSaveCtxtPtr,8, 14838, 3)
+CheckTypeSize(xmlSaveCtxtPtr,8, 14838, 3, 3.1, NULL, 14837, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSaveCtxtPtr,4, 14838, 6)
+CheckTypeSize(xmlSaveCtxtPtr,4, 14838, 6, 3.1, NULL, 14837, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlSaveCtxtPtr,8, 14838, 9)
+CheckTypeSize(xmlSaveCtxtPtr,8, 14838, 9, 3.1, NULL, 14837, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlSaveCtxtPtr,4, 14838, 10)
+CheckTypeSize(xmlSaveCtxtPtr,4, 14838, 10, 3.1, NULL, 14837, NULL)
 #elif __s390x__
-CheckTypeSize(xmlSaveCtxtPtr,8, 14838, 12)
+CheckTypeSize(xmlSaveCtxtPtr,8, 14838, 12, 3.1, NULL, 14837, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,14838,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14837,NULL);\n",architecture,14838,0);
 Msg("Find size of xmlSaveCtxtPtr (14838)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(xmlSaveOption,4, 15088, 2)
+CheckTypeSize(xmlSaveOption,4, 15088, 2, 3.1, NULL, 15087, NULL)
 #elif __x86_64__
-CheckTypeSize(xmlSaveOption,4, 15088, 11)
+CheckTypeSize(xmlSaveOption,4, 15088, 11, 3.1, NULL, 15087, NULL)
 #elif __ia64__
-CheckTypeSize(xmlSaveOption,4, 15088, 3)
+CheckTypeSize(xmlSaveOption,4, 15088, 3, 3.1, NULL, 15087, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(xmlSaveOption,4, 15088, 6)
+CheckTypeSize(xmlSaveOption,4, 15088, 6, 3.1, NULL, 15087, NULL)
 #elif __powerpc64__
-CheckTypeSize(xmlSaveOption,4, 15088, 9)
+CheckTypeSize(xmlSaveOption,4, 15088, 9, 3.1, NULL, 15087, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(xmlSaveOption,4, 15088, 10)
+CheckTypeSize(xmlSaveOption,4, 15088, 10, 3.1, NULL, 15087, NULL)
 #elif __s390x__
-CheckTypeSize(xmlSaveOption,4, 15088, 12)
+CheckTypeSize(xmlSaveOption,4, 15088, 12, 3.1, NULL, 15087, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,15088,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15087, NULL);\n",architecture,15088,0);
 Msg("Find size of xmlSaveOption (15088)\n");
 #endif
 

@@ -33,7 +33,7 @@ printf("Checking data structures in utime.h\n");
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,7023,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,7023,0);
 Msg("Find size of utimbuf (7023)\n");
 #endif
 

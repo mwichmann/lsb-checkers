@@ -29,40 +29,40 @@ Msg("Checking data structures in X11/ICE/ICEutil.h\n");
 
 printf("Checking data structures in X11/ICE/ICEutil.h\n");
 #if __i386__
-CheckTypeSize(IceAuthFileEntry,28, 8228, 2)
+CheckTypeSize(IceAuthFileEntry,28, 8228, 2, 1.2, NULL, 8227, NULL)
 #elif __ia64__
-CheckTypeSize(IceAuthFileEntry,56, 8228, 3)
+CheckTypeSize(IceAuthFileEntry,56, 8228, 3, 1.3, NULL, 8227, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(IceAuthFileEntry,28, 8228, 6)
+CheckTypeSize(IceAuthFileEntry,28, 8228, 6, 1.2, NULL, 8227, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(IceAuthFileEntry,28, 8228, 10)
+CheckTypeSize(IceAuthFileEntry,28, 8228, 10, 1.3, NULL, 8227, NULL)
 #elif __powerpc64__
-CheckTypeSize(IceAuthFileEntry,56, 8228, 9)
+CheckTypeSize(IceAuthFileEntry,56, 8228, 9, 2.0, NULL, 8227, NULL)
 #elif __s390x__
-CheckTypeSize(IceAuthFileEntry,56, 8228, 12)
+CheckTypeSize(IceAuthFileEntry,56, 8228, 12, 1.3, NULL, 8227, NULL)
 #elif __x86_64__
-CheckTypeSize(IceAuthFileEntry,56, 8228, 11)
+CheckTypeSize(IceAuthFileEntry,56, 8228, 11, 2.0, NULL, 8227, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8228,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8227,NULL);\n",architecture,8228,0);
 Msg("Find size of IceAuthFileEntry (8228)\n");
 #endif
 
 #if __i386__
-CheckTypeSize(IceAuthDataEntry,20, 8230, 2)
+CheckTypeSize(IceAuthDataEntry,20, 8230, 2, 1.2, NULL, 8229, NULL)
 #elif __ia64__
-CheckTypeSize(IceAuthDataEntry,40, 8230, 3)
+CheckTypeSize(IceAuthDataEntry,40, 8230, 3, 1.3, NULL, 8229, NULL)
 #elif __powerpc__ && !__powerpc64__
-CheckTypeSize(IceAuthDataEntry,20, 8230, 6)
+CheckTypeSize(IceAuthDataEntry,20, 8230, 6, 1.2, NULL, 8229, NULL)
 #elif __s390__ && !__s390x__
-CheckTypeSize(IceAuthDataEntry,20, 8230, 10)
+CheckTypeSize(IceAuthDataEntry,20, 8230, 10, 1.3, NULL, 8229, NULL)
 #elif __powerpc64__
-CheckTypeSize(IceAuthDataEntry,40, 8230, 9)
+CheckTypeSize(IceAuthDataEntry,40, 8230, 9, 2.0, NULL, 8229, NULL)
 #elif __s390x__
-CheckTypeSize(IceAuthDataEntry,40, 8230, 12)
+CheckTypeSize(IceAuthDataEntry,40, 8230, 12, 1.3, NULL, 8229, NULL)
 #elif __x86_64__
-CheckTypeSize(IceAuthDataEntry,40, 8230, 11)
+CheckTypeSize(IceAuthDataEntry,40, 8230, 11, 2.0, NULL, 8229, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,8230,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8229, NULL);\n",architecture,8230,0);
 Msg("Find size of IceAuthDataEntry (8230)\n");
 #endif
 

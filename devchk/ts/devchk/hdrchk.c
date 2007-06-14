@@ -185,6 +185,7 @@ tcnt+=setjmp_h();
 tcnt+=signal_h();
 tcnt+=spawn_h();
 tcnt+=stddef_h();
+tcnt+=stdint_h();
 tcnt+=stdio_h();
 tcnt+=stdlib_h();
 tcnt+=sys_file_h();

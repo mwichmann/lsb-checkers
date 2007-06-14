@@ -27,7 +27,7 @@ Msg("Checking data structures in sys/un.h\n");
 printf("Checking data structures in sys/un.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef UNIX_PATH_MAX
-	CompareConstant(UNIX_PATH_MAX,108,4992,architecture)
+	CompareConstant(UNIX_PATH_MAX,108,4992,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: UNIX_PATH_MAX\n");
 cnt++;
@@ -43,7 +43,7 @@ cnt++;
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,9152,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,9152,0);
 Msg("Find size of sockaddr_un (9152)\n");
 #endif
 

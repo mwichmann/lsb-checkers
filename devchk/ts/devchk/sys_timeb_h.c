@@ -33,7 +33,7 @@ printf("Checking data structures in sys/timeb.h\n");
 #elif __s390x__
 #elif __x86_64__
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d);\n",architecture,10216,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10216,0);
 Msg("Find size of timeb (10216)\n");
 #endif
 
