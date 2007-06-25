@@ -189,67 +189,67 @@ struct versym libQtOpenGL_so_4[] = {
 	{"_ZTV12QDashStroker","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV14QGLPixelBuffer","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV9QGLWidget","",0,LSB_Toolkit_Qt,0,0},
-#if __ia64__
+#if defined __ia64__
 	{"_ZThn16_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	{"_ZThn16_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	{"_ZThn16_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __s390x__
+#if defined __s390x__
 	{"_ZThn16_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __ia64__
+#if defined __ia64__
 	{"_ZThn16_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	{"_ZThn16_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	{"_ZThn16_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __s390x__
+#if defined __s390x__
 	{"_ZThn16_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __ia64__
+#if defined __ia64__
 	{"_ZThn16_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	{"_ZThn16_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	{"_ZThn16_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __s390x__
+#if defined __s390x__
 	{"_ZThn16_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __i386__
+#if defined ___i386__
 	{"_ZThn8_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn8_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __i386__
+#if defined ___i386__
 	{"_ZThn8_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn8_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __i386__
+#if defined ___i386__
 	{"_ZThn8_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn8_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 	{"_ZeqRK9QGLFormatS1_","",0,LSB_Toolkit_Qt,0,1},
@@ -385,109 +385,109 @@ const char *_9QGLWidget_vtable_name_0 [] = {
 	};
 
 const char *_9QGLWidget_vtable_name_1 [] = {
-#if __i386__
+#if defined ___i386__
 	"_ZThn8_N9QGLWidgetD1Ev",
 #endif
-#if __s390x__
+#if defined __s390x__
 	"_ZThn16_N9QGLWidgetD1Ev",
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	"_ZThn16_N9QGLWidgetD1Ev",
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn8_N9QGLWidgetD1Ev",
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	"_ZThn16_N9QGLWidgetD1Ev",
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N9QGLWidgetD1Ev",
 #endif
-#if __ia64__
+#if defined __ia64__
 	"_ZThn16_N9QGLWidgetD1Ev",
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	"_ZThn16_N9QGLWidgetD0Ev",
 #endif
-#if __ia64__
+#if defined __ia64__
 	"_ZThn16_N9QGLWidgetD0Ev",
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N9QGLWidgetD0Ev",
 #endif
-#if __s390x__
+#if defined __s390x__
 	"_ZThn16_N9QGLWidgetD0Ev",
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	"_ZThn16_N9QGLWidgetD0Ev",
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn8_N9QGLWidgetD0Ev",
 #endif
-#if __i386__
+#if defined ___i386__
 	"_ZThn8_N9QGLWidgetD0Ev",
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
-#if __ia64__
+#if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if __i386__
+#if defined ___i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
-#if __s390x__
+#if defined __s390x__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if __s390x__
+#if defined __s390x__
 	"_ZThn16_NK9QGLWidget11paintEngineEv",
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	"_ZThn16_NK9QGLWidget11paintEngineEv",
 #endif
-#if __i386__
+#if defined ___i386__
 	"_ZThn8_NK9QGLWidget11paintEngineEv",
 #endif
-#if __ia64__
+#if defined __ia64__
 	"_ZThn16_NK9QGLWidget11paintEngineEv",
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK9QGLWidget11paintEngineEv",
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	"_ZThn16_NK9QGLWidget11paintEngineEv",
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK9QGLWidget11paintEngineEv",
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
-#if __i386__
+#if defined ___i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
-#if __ia64__
+#if defined __ia64__
 	"_ZThn16_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	"_ZThn16_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	"_ZThn16_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
-#if __s390x__
+#if defined __s390x__
 	"_ZThn16_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 	};
@@ -502,31 +502,31 @@ struct classvtable _9QGLWidget_vtable [2] = {
 	_9QGLWidget_vtable_name_0,
 	},
 	{
-#if __i386__
+#if defined ___i386__
 	0,
 	-8,
 #endif
-#if __ia64__
+#if defined __ia64__
 	0,
 	-16,
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	0,
 	-8,
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	0,
 	-16,
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	0,
 	-8,
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	0,
 	-16,
 #endif
-#if __s390x__
+#if defined __s390x__
 	0,
 	-16,
 #endif
