@@ -19,76 +19,76 @@ struct DynamicInfo DynamicInfo[] = {
 	{"DT_INIT_ARRAY",DT_INIT_ARRAY,checkDT_INIT_ARRAY},
 	{"DT_INIT_ARRAYSZ",DT_INIT_ARRAYSZ,checkDT_INIT_ARRAYSZ},
 	{"DT_JMPREL",DT_JMPREL,checkDT_JMPREL},
-#if __ia64__
+#if defined __ia64__
 	{"DT_JMPREL",DT_JMPREL,checkDT_JMPREL},
-#endif /* __ia64__ */
-#if __powerpc__ && !__powerpc64__
+#endif /* defined __ia64__ */
+#if defined __powerpc__ && !defined __powerpc64__
 	{"DT_JMPREL",DT_JMPREL,checkDT_JMPREL},
-#endif /* __powerpc__ && !__powerpc64__ */
-#if __powerpc64__
+#endif /* defined __powerpc__ && !defined __powerpc64__ */
+#if defined __powerpc64__
 	{"DT_JMPREL",DT_JMPREL,checkDT_JMPREL},
-#endif /* __powerpc64__ */
-#if __s390__ && !__s390x__
+#endif /* defined __powerpc64__ */
+#if defined __s390__ && !defined __s390x__
 	{"DT_JMPREL",DT_JMPREL,checkDT_JMPREL},
-#endif /* __s390__ && !__s390x__ */
-#if __x86_64__
+#endif /* defined __s390__ && !defined __s390x__ */
+#if defined __x86_64__
 	{"DT_JMPREL",DT_JMPREL,checkDT_JMPREL},
-#endif /* __x86_64__ */
-#if __s390x__
+#endif /* defined __x86_64__ */
+#if defined __s390x__
 	{"DT_JMPREL",DT_JMPREL,checkDT_JMPREL},
-#endif /* __s390x__ */
+#endif /* defined __s390x__ */
 	{"DT_LOOS",DT_LOOS,checkDT_LOOS},
 	{"DT_LOPROC",DT_LOPROC,checkDT_LOPROC},
 	{"DT_NEEDED",DT_NEEDED,checkDT_NEEDED},
 	{"DT_NULL",DT_NULL,checkDT_NULL},
 	{"DT_NUM",DT_NUM,checkDT_NUM},
-#if __i386__
+#if defined ___i386__
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
-#endif /* __i386__ */
-#if __ia64__
+#endif /* defined ___i386__ */
+#if defined __ia64__
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
-#endif /* __ia64__ */
-#if __ia64__
+#endif /* defined __ia64__ */
+#if defined __ia64__
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
-#endif /* __ia64__ */
-#if __powerpc__ && !__powerpc64__
+#endif /* defined __ia64__ */
+#if defined __powerpc__ && !defined __powerpc64__
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
-#endif /* __powerpc__ && !__powerpc64__ */
-#if __powerpc64__
+#endif /* defined __powerpc__ && !defined __powerpc64__ */
+#if defined __powerpc64__
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
-#endif /* __powerpc64__ */
-#if __s390__ && !__s390x__
+#endif /* defined __powerpc64__ */
+#if defined __s390__ && !defined __s390x__
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
-#endif /* __s390__ && !__s390x__ */
-#if __x86_64__
+#endif /* defined __s390__ && !defined __s390x__ */
+#if defined __x86_64__
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
-#endif /* __x86_64__ */
-#if __s390x__
+#endif /* defined __x86_64__ */
+#if defined __s390x__
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
-#endif /* __s390x__ */
+#endif /* defined __s390x__ */
 	{"DT_PLTREL",DT_PLTREL,checkDT_PLTREL},
 	{"DT_PLTRELSZ",DT_PLTRELSZ,checkDT_PLTRELSZ},
 	{"DT_POSFLAG_1",DT_POSFLAG_1,checkDT_POSFLAG_1},
 	{"DT_REL",DT_REL,checkDT_REL},
 	{"DT_RELA",DT_RELA,checkDT_RELA},
-#if __ia64__
+#if defined __ia64__
 	{"DT_RELACOUNT",DT_RELACOUNT,checkDT_RELACOUNT},
-#endif /* __ia64__ */
-#if __powerpc__ && !__powerpc64__
+#endif /* defined __ia64__ */
+#if defined __powerpc__ && !defined __powerpc64__
 	{"DT_RELACOUNT",DT_RELACOUNT,checkDT_RELACOUNT},
-#endif /* __powerpc__ && !__powerpc64__ */
-#if __powerpc64__
+#endif /* defined __powerpc__ && !defined __powerpc64__ */
+#if defined __powerpc64__
 	{"DT_RELACOUNT",DT_RELACOUNT,checkDT_RELACOUNT},
-#endif /* __powerpc64__ */
-#if __s390__ && !__s390x__
+#endif /* defined __powerpc64__ */
+#if defined __s390__ && !defined __s390x__
 	{"DT_RELACOUNT",DT_RELACOUNT,checkDT_RELACOUNT},
-#endif /* __s390__ && !__s390x__ */
-#if __x86_64__
+#endif /* defined __s390__ && !defined __s390x__ */
+#if defined __x86_64__
 	{"DT_RELACOUNT",DT_RELACOUNT,checkDT_RELACOUNT},
-#endif /* __x86_64__ */
-#if __s390x__
+#endif /* defined __x86_64__ */
+#if defined __s390x__
 	{"DT_RELACOUNT",DT_RELACOUNT,checkDT_RELACOUNT},
-#endif /* __s390x__ */
+#endif /* defined __s390x__ */
 	{"DT_RELAENT",DT_RELAENT,checkDT_RELAENT},
 	{"DT_RELASZ",DT_RELASZ,checkDT_RELASZ},
 	{"DT_RELCOUNT",DT_RELCOUNT,checkDT_RELCOUNT},

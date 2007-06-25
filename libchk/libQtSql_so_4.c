@@ -395,46 +395,46 @@ struct versym libQtSql_so_4[] = {
 	{"_ZTV17QFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV24QSqlRelationalTableModel","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV26QSqlDriverFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
-#if __ia64__
+#if defined __ia64__
 	{"_ZThn16_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	{"_ZThn16_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	{"_ZThn16_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __s390x__
+#if defined __s390x__
 	{"_ZThn16_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __ia64__
+#if defined __ia64__
 	{"_ZThn16_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	{"_ZThn16_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	{"_ZThn16_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __s390x__
+#if defined __s390x__
 	{"_ZThn16_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __i386__
+#if defined ___i386__
 	{"_ZThn8_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn8_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __i386__
+#if defined ___i386__
 	{"_ZThn8_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn8_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 	{"_Zls6QDebugRK10QSqlRecord","",0,LSB_Toolkit_Qt,0,1},
@@ -586,46 +586,46 @@ const char *_16QSqlDriverPlugin_vtable_name_0 [] = {
 	};
 
 const char *_16QSqlDriverPlugin_vtable_name_1 [] = {
-#if __i386__
+#if defined ___i386__
 	"_ZThn8_N16QSqlDriverPluginD1Ev",
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	"_ZThn16_N16QSqlDriverPluginD1Ev",
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn8_N16QSqlDriverPluginD1Ev",
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	"_ZThn16_N16QSqlDriverPluginD1Ev",
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N16QSqlDriverPluginD1Ev",
 #endif
-#if __ia64__
+#if defined __ia64__
 	"_ZThn16_N16QSqlDriverPluginD1Ev",
 #endif
-#if __s390x__
+#if defined __s390x__
 	"_ZThn16_N16QSqlDriverPluginD1Ev",
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn8_N16QSqlDriverPluginD0Ev",
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	"_ZThn16_N16QSqlDriverPluginD0Ev",
 #endif
-#if __s390x__
+#if defined __s390x__
 	"_ZThn16_N16QSqlDriverPluginD0Ev",
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N16QSqlDriverPluginD0Ev",
 #endif
-#if __ia64__
+#if defined __ia64__
 	"_ZThn16_N16QSqlDriverPluginD0Ev",
 #endif
-#if __i386__
+#if defined ___i386__
 	"_ZThn8_N16QSqlDriverPluginD0Ev",
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	"_ZThn16_N16QSqlDriverPluginD0Ev",
 #endif
 	"__cxa_pure_virtual",
@@ -642,31 +642,31 @@ struct classvtable _16QSqlDriverPlugin_vtable [2] = {
 	_16QSqlDriverPlugin_vtable_name_0,
 	},
 	{
-#if __i386__
+#if defined ___i386__
 	0,
 	-8,
 #endif
-#if __ia64__
+#if defined __ia64__
 	0,
 	-16,
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	0,
 	-8,
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	0,
 	-16,
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	0,
 	-8,
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	0,
 	-16,
 #endif
-#if __s390x__
+#if defined __s390x__
 	0,
 	-16,
 #endif
@@ -679,25 +679,25 @@ struct classvtable _16QSqlDriverPlugin_vtable [2] = {
 
 struct base_type_info _16QSqlDriverPlugin_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
-#if __i386__
+#if defined ___i386__
 	{"_ZTI26QSqlDriverFactoryInterface",	2050U},
 #endif
-#if __ia64__
+#if defined __ia64__
 	{"_ZTI26QSqlDriverFactoryInterface",	4098U},
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	{"_ZTI26QSqlDriverFactoryInterface",	2050U},
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	{"_ZTI26QSqlDriverFactoryInterface",	4098U},
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	{"_ZTI26QSqlDriverFactoryInterface",	2050U},
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	{"_ZTI26QSqlDriverFactoryInterface",	4098U},
 #endif
-#if __s390x__
+#if defined __s390x__
 	{"_ZTI26QSqlDriverFactoryInterface",	4098U},
 #endif
 	};
