@@ -3,25 +3,25 @@
 struct versym libQtCore_so_4[] = {
 	{"_Z10forcepointR11QTextStream","",0,LSB_Toolkit_Qt,0,1},
 	{"_Z10noshowbaseR11QTextStream","",0,LSB_Toolkit_Qt,0,1},
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	{"_Z10qvsnprintfPcjPKcP13__va_list_tag","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __i386__
+#if defined ___i386__
 	{"_Z10qvsnprintfPcjPKcS_","",0,LSB_Toolkit_Qt,4,1},
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	{"_Z10qvsnprintfPcmPKcP13__va_list_tag","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	{"_Z10qvsnprintfPcmPKcP13__va_list_tag","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __s390x__
+#if defined __s390x__
 	{"_Z10qvsnprintfPcmPKcP13__va_list_tag","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __ia64__
+#if defined __ia64__
 	{"_Z10qvsnprintfPcmPKcPv","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	{"_Z10qvsnprintfPcmPKcS_","",0,LSB_Toolkit_Qt,1,1},
 #endif
 	{"_Z10scientificR11QTextStream","",0,LSB_Toolkit_Qt,0,1},
@@ -76,46 +76,46 @@ struct versym libQtCore_so_4[] = {
 	{"_Z6centerR11QTextStream","",0,LSB_Toolkit_Qt,0,1},
 	{"_Z6qDebugPKcz","",0,LSB_Toolkit_Qt,0,1},
 	{"_Z6qFatalPKcz","",0,LSB_Toolkit_Qt,0,1},
-#if __i386__
+#if defined ___i386__
 	{"_Z7qMallocj","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	{"_Z7qMallocj","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __ia64__
+#if defined __ia64__
 	{"_Z7qMallocm","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	{"_Z7qMallocm","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	{"_Z7qMallocm","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	{"_Z7qMallocm","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __s390x__
+#if defined __s390x__
 	{"_Z7qMallocm","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __i386__
+#if defined ___i386__
 	{"_Z7qMemSetPvij","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	{"_Z7qMemSetPvij","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __ia64__
+#if defined __ia64__
 	{"_Z7qMemSetPvim","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	{"_Z7qMemSetPvim","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	{"_Z7qMemSetPvim","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	{"_Z7qMemSetPvim","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __s390x__
+#if defined __s390x__
 	{"_Z7qMemSetPvim","",0,LSB_Toolkit_Qt,1,1},
 #endif
 	{"_Z7qgetenvPKc","",0,LSB_Toolkit_Qt,0,1},
@@ -123,46 +123,46 @@ struct versym libQtCore_so_4[] = {
 	{"_Z7qstrcpyPcPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_Z7qstrdupPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_Z8qAppNamev","",0,LSB_Toolkit_Qt,0,1},
-#if __i386__
+#if defined ___i386__
 	{"_Z8qMemCopyPvPKvj","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	{"_Z8qMemCopyPvPKvj","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __ia64__
+#if defined __ia64__
 	{"_Z8qMemCopyPvPKvm","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	{"_Z8qMemCopyPvPKvm","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	{"_Z8qMemCopyPvPKvm","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	{"_Z8qMemCopyPvPKvm","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __s390x__
+#if defined __s390x__
 	{"_Z8qMemCopyPvPKvm","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __i386__
+#if defined ___i386__
 	{"_Z8qReallocPvj","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	{"_Z8qReallocPvj","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __ia64__
+#if defined __ia64__
 	{"_Z8qReallocPvm","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	{"_Z8qReallocPvm","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	{"_Z8qReallocPvm","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	{"_Z8qReallocPvm","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if __s390x__
+#if defined __s390x__
 	{"_Z8qReallocPvm","",0,LSB_Toolkit_Qt,1,1},
 #endif
 	{"_Z8qVersionv","",0,LSB_Toolkit_Qt,0,1},
@@ -174,25 +174,25 @@ struct versym libQtCore_so_4[] = {
 	{"_Z9qChecksumPKcj","",0,LSB_Toolkit_Qt,0,1},
 	{"_Z9qCompressPKhii","",0,LSB_Toolkit_Qt,0,1},
 	{"_Z9qCriticalPKcz","",0,LSB_Toolkit_Qt,0,1},
-#if __i386__
+#if defined ___i386__
 	{"_Z9qsnprintfPcjPKcz","",0,LSB_Toolkit_Qt,4,1},
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	{"_Z9qsnprintfPcjPKcz","",0,LSB_Toolkit_Qt,4,1},
 #endif
-#if __ia64__
+#if defined __ia64__
 	{"_Z9qsnprintfPcmPKcz","",0,LSB_Toolkit_Qt,4,1},
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	{"_Z9qsnprintfPcmPKcz","",0,LSB_Toolkit_Qt,4,1},
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	{"_Z9qsnprintfPcmPKcz","",0,LSB_Toolkit_Qt,4,1},
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	{"_Z9qsnprintfPcmPKcz","",0,LSB_Toolkit_Qt,4,1},
 #endif
-#if __s390x__
+#if defined __s390x__
 	{"_Z9qsnprintfPcmPKcz","",0,LSB_Toolkit_Qt,4,1},
 #endif
 	{"_Z9qstrnicmpPKcS0_j","",0,LSB_Toolkit_Qt,0,1},
@@ -1099,7 +1099,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN7QString7sprintfEPKcz","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QString8fromUtf8EPKci","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QString8truncateEi","",0,LSB_Toolkit_Qt,0,1},
-#if __i386__
+#if defined ___i386__
 	{"_ZN7QString8vsprintfEPKcPc","",0,LSB_Toolkit_Qt,0,1},
 #endif
 	{"_ZN7QString9fromAsciiEPKci","",0,LSB_Toolkit_Qt,0,1},
@@ -2176,88 +2176,88 @@ struct versym libQtCore_so_4[] = {
 	{"_ZTV9QIODevice","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV9QMimeData","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV9QSettings","",0,LSB_Toolkit_Qt,0,0},
-#if __ia64__
+#if defined __ia64__
 	{"_ZThn16_N16QTextCodecPlugin6createERK7QString","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	{"_ZThn16_N16QTextCodecPlugin6createERK7QString","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	{"_ZThn16_N16QTextCodecPlugin6createERK7QString","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __s390x__
+#if defined __s390x__
 	{"_ZThn16_N16QTextCodecPlugin6createERK7QString","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __ia64__
+#if defined __ia64__
 	{"_ZThn16_N16QTextCodecPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	{"_ZThn16_N16QTextCodecPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	{"_ZThn16_N16QTextCodecPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __s390x__
+#if defined __s390x__
 	{"_ZThn16_N16QTextCodecPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __ia64__
+#if defined __ia64__
 	{"_ZThn16_N16QTextCodecPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	{"_ZThn16_N16QTextCodecPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	{"_ZThn16_N16QTextCodecPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __s390x__
+#if defined __s390x__
 	{"_ZThn16_N16QTextCodecPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __ia64__
+#if defined __ia64__
 	{"_ZThn16_NK16QTextCodecPlugin4keysEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	{"_ZThn16_NK16QTextCodecPlugin4keysEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	{"_ZThn16_NK16QTextCodecPlugin4keysEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __s390x__
+#if defined __s390x__
 	{"_ZThn16_NK16QTextCodecPlugin4keysEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __i386__
+#if defined ___i386__
 	{"_ZThn8_N16QTextCodecPlugin6createERK7QString","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn8_N16QTextCodecPlugin6createERK7QString","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N16QTextCodecPlugin6createERK7QString","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __i386__
+#if defined ___i386__
 	{"_ZThn8_N16QTextCodecPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn8_N16QTextCodecPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N16QTextCodecPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __i386__
+#if defined ___i386__
 	{"_ZThn8_N16QTextCodecPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn8_N16QTextCodecPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N16QTextCodecPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __i386__
+#if defined ___i386__
 	{"_ZThn8_NK16QTextCodecPlugin4keysEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn8_NK16QTextCodecPlugin4keysEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK16QTextCodecPlugin4keysEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 	{"_ZanRK9QBitArrayS1_","",0,LSB_Toolkit_Qt,0,1},
@@ -3295,88 +3295,88 @@ const char *_16QTextCodecPlugin_vtable_name_0 [] = {
 	};
 
 const char *_16QTextCodecPlugin_vtable_name_1 [] = {
-#if __i386__
+#if defined ___i386__
 	"_ZThn8_N16QTextCodecPluginD1Ev",
 #endif
-#if __ia64__
+#if defined __ia64__
 	"_ZThn16_N16QTextCodecPluginD1Ev",
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N16QTextCodecPluginD1Ev",
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	"_ZThn16_N16QTextCodecPluginD1Ev",
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn8_N16QTextCodecPluginD1Ev",
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	"_ZThn16_N16QTextCodecPluginD1Ev",
 #endif
-#if __s390x__
+#if defined __s390x__
 	"_ZThn16_N16QTextCodecPluginD1Ev",
 #endif
-#if __s390x__
+#if defined __s390x__
 	"_ZThn16_N16QTextCodecPluginD0Ev",
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	"_ZThn16_N16QTextCodecPluginD0Ev",
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn8_N16QTextCodecPluginD0Ev",
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	"_ZThn16_N16QTextCodecPluginD0Ev",
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N16QTextCodecPluginD0Ev",
 #endif
-#if __ia64__
+#if defined __ia64__
 	"_ZThn16_N16QTextCodecPluginD0Ev",
 #endif
-#if __i386__
+#if defined ___i386__
 	"_ZThn8_N16QTextCodecPluginD0Ev",
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	"_ZThn16_NK16QTextCodecPlugin4keysEv",
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK16QTextCodecPlugin4keysEv",
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	"_ZThn16_NK16QTextCodecPlugin4keysEv",
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK16QTextCodecPlugin4keysEv",
 #endif
-#if __ia64__
+#if defined __ia64__
 	"_ZThn16_NK16QTextCodecPlugin4keysEv",
 #endif
-#if __i386__
+#if defined ___i386__
 	"_ZThn8_NK16QTextCodecPlugin4keysEv",
 #endif
-#if __s390x__
+#if defined __s390x__
 	"_ZThn16_NK16QTextCodecPlugin4keysEv",
 #endif
-#if __i386__
+#if defined ___i386__
 	"_ZThn8_N16QTextCodecPlugin6createERK7QString",
 #endif
-#if __ia64__
+#if defined __ia64__
 	"_ZThn16_N16QTextCodecPlugin6createERK7QString",
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N16QTextCodecPlugin6createERK7QString",
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	"_ZThn16_N16QTextCodecPlugin6createERK7QString",
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn8_N16QTextCodecPlugin6createERK7QString",
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	"_ZThn16_N16QTextCodecPlugin6createERK7QString",
 #endif
-#if __s390x__
+#if defined __s390x__
 	"_ZThn16_N16QTextCodecPlugin6createERK7QString",
 #endif
 	};
@@ -3391,31 +3391,31 @@ struct classvtable _16QTextCodecPlugin_vtable [2] = {
 	_16QTextCodecPlugin_vtable_name_0,
 	},
 	{
-#if __i386__
+#if defined ___i386__
 	0,
 	-8,
 #endif
-#if __ia64__
+#if defined __ia64__
 	0,
 	-16,
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	0,
 	-8,
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	0,
 	-16,
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	0,
 	-8,
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	0,
 	-16,
 #endif
-#if __s390x__
+#if defined __s390x__
 	0,
 	-16,
 #endif
@@ -3428,25 +3428,25 @@ struct classvtable _16QTextCodecPlugin_vtable [2] = {
 
 struct base_type_info _16QTextCodecPlugin_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
-#if __i386__
+#if defined ___i386__
 	{"_ZTI26QTextCodecFactoryInterface",	2050U},
 #endif
-#if __ia64__
+#if defined __ia64__
 	{"_ZTI26QTextCodecFactoryInterface",	4098U},
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 	{"_ZTI26QTextCodecFactoryInterface",	2050U},
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 	{"_ZTI26QTextCodecFactoryInterface",	4098U},
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 	{"_ZTI26QTextCodecFactoryInterface",	2050U},
 #endif
-#if __x86_64__
+#if defined __x86_64__
 	{"_ZTI26QTextCodecFactoryInterface",	4098U},
 #endif
-#if __s390x__
+#if defined __s390x__
 	{"_ZTI26QTextCodecFactoryInterface",	4098U},
 #endif
 	};
