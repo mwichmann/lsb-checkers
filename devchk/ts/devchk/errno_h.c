@@ -1159,7 +1159,7 @@ cnt++;
 
 #endif
 
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef EDEADLOCK
 	CompareConstant(EDEADLOCK,58,92,architecture,2.0,NULL)
 #else
@@ -1167,7 +1167,7 @@ Msg( "Error: Constant not found: EDEADLOCK\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef EDEADLOCK
 	CompareConstant(EDEADLOCK,58,92,architecture,1.2,NULL)
 #else
@@ -1175,7 +1175,7 @@ Msg( "Error: Constant not found: EDEADLOCK\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef EDEADLOCK
 	CompareConstant(EDEADLOCK,EDEADLK,92,architecture,1.3,NULL)
 #else
@@ -1183,7 +1183,7 @@ Msg( "Error: Constant not found: EDEADLOCK\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef EDEADLOCK
 	CompareConstant(EDEADLOCK,EDEADLK,92,architecture,1.1,NULL)
 #else
@@ -1191,7 +1191,7 @@ Msg( "Error: Constant not found: EDEADLOCK\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef EDEADLOCK
 	CompareConstant(EDEADLOCK,35,92,architecture,1.3,NULL)
 #else
@@ -1199,7 +1199,7 @@ Msg( "Error: Constant not found: EDEADLOCK\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef EDEADLOCK
 	CompareConstant(EDEADLOCK,EDEADLK,92,architecture,2.0,NULL)
 #else
@@ -1207,7 +1207,7 @@ Msg( "Error: Constant not found: EDEADLOCK\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef EDEADLOCK
 	CompareConstant(EDEADLOCK,EDEADLK,92,architecture,1.3,NULL)
 #else

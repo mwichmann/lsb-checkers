@@ -25,31 +25,31 @@ Msg("Checking data structures in rpc/xdr.h\n");
 #endif
 
 printf("Checking data structures in rpc/xdr.h\n");
-#if __i386__
+#if defined __i386__
 CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159);
 CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160);
 CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161);
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159);
 CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160);
 CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161);
-#elif __ia64__
+#elif defined __ia64__
 CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159);
 CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160);
 CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161);
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159);
 CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160);
 CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161);
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159);
 CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160);
 CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161);
-#elif __s390x__
+#elif defined __s390x__
 CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159);
 CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160);
 CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161);
-#elif __x86_64__
+#elif defined __x86_64__
 CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159);
 CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160);
 CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161);
@@ -58,63 +58,63 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architect
 Msg("Find size of xdr_op (9933)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(XDR,24, 10412, 2, 1.3, NULL, 9934, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(XDR,48, 10412, 3, 1.3, NULL, 9934, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(XDR,24, 10412, 10, 1.3, NULL, 9934, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XDR,24, 10412, 6, 1.3, NULL, 9934, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(XDR,48, 10412, 9, 2.0, NULL, 9934, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(XDR,48, 10412, 12, 1.3, NULL, 9934, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(XDR,48, 10412, 11, 2.0, NULL, 9934, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9934,NULL);\n",architecture,10412,0);
 Msg("Find size of XDR (10412)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xdrproc_t,4, 9948, 2, 1.3, NULL, 9947, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xdrproc_t,8, 9948, 3, 1.3, NULL, 9947, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xdrproc_t,4, 9948, 10, 1.3, NULL, 9947, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xdrproc_t,4, 9948, 6, 1.3, NULL, 9947, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xdrproc_t,8, 9948, 9, 2.0, NULL, 9947, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xdrproc_t,8, 9948, 12, 1.3, NULL, 9947, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xdrproc_t,8, 9948, 11, 2.0, NULL, 9947, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9947,NULL);\n",architecture,9948,0);
 Msg("Find size of xdrproc_t (9948)\n");
 #endif
 
-#if __i386__
-#elif __s390__ && !__s390x__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9935,0);
 Msg("Find size of xdr_ops (9935)\n");
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,9949,0);
 Msg("Find size of xdr_discrim (9949)\n");

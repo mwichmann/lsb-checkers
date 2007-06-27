@@ -1,31 +1,31 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-#if __i386__
+#if defined __i386__
 int architecture=2;
 #define __found_arch__
 #endif
-#if __ia64__
+#if defined __ia64__
 int architecture=3;
 #define __found_arch__
 #endif
-#if __powerpc__ && !__powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
 int architecture=6;
 #define __found_arch__
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 int architecture=9;
 #define __found_arch__
 #endif
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 int architecture=10;
 #define __found_arch__
 #endif
-#if __x86_64__
+#if defined __x86_64__
 int architecture=11;
 #define __found_arch__
 #endif
-#if __s390x__
+#if defined __s390x__
 int architecture=12;
 #define __found_arch__
 #endif

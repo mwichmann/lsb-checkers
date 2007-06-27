@@ -26,76 +26,76 @@ Msg("Checking data structures in libxml2/libxml/debugXML.h\n");
 #endif
 
 printf("Checking data structures in libxml2/libxml/debugXML.h\n");
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlShellReadlineFunc,4, 14906, 2, 3.1, NULL, 14905, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlShellReadlineFunc,8, 14906, 11, 3.1, NULL, 14905, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlShellReadlineFunc,8, 14906, 3, 3.1, NULL, 14905, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlShellReadlineFunc,4, 14906, 6, 3.1, NULL, 14905, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlShellReadlineFunc,8, 14906, 9, 3.1, NULL, 14905, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlShellReadlineFunc,4, 14906, 10, 3.1, NULL, 14905, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlShellReadlineFunc,8, 14906, 12, 3.1, NULL, 14905, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14905,NULL);\n",architecture,14906,0);
 Msg("Find size of xmlShellReadlineFunc (14906)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlShellCtxt,28, 14907, 2, 3.1, NULL, 14904, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlShellCtxt,56, 14907, 11, 3.1, NULL, 14904, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlShellCtxt,56, 14907, 3, 3.1, NULL, 14904, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlShellCtxt,28, 14907, 6, 3.1, NULL, 14904, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlShellCtxt,56, 14907, 9, 3.1, NULL, 14904, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlShellCtxt,28, 14907, 10, 3.1, NULL, 14904, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlShellCtxt,56, 14907, 12, 3.1, NULL, 14904, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14904,NULL);\n",architecture,14907,0);
 Msg("Find size of xmlShellCtxt (14907)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlShellCtxtPtr,4, 14909, 2, 3.1, NULL, 14908, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlShellCtxtPtr,8, 14909, 11, 3.1, NULL, 14908, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlShellCtxtPtr,8, 14909, 3, 3.1, NULL, 14908, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlShellCtxtPtr,4, 14909, 6, 3.1, NULL, 14908, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlShellCtxtPtr,8, 14909, 9, 3.1, NULL, 14908, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlShellCtxtPtr,4, 14909, 10, 3.1, NULL, 14908, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlShellCtxtPtr,8, 14909, 12, 3.1, NULL, 14908, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14908,NULL);\n",architecture,14909,0);
 Msg("Find size of xmlShellCtxtPtr (14909)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlShellCmd,4, 15126, 2, 3.1, NULL, 15125, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlShellCmd,8, 15126, 3, 3.1, NULL, 15125, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlShellCmd,4, 15126, 6, 3.1, NULL, 15125, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlShellCmd,8, 15126, 9, 3.1, NULL, 15125, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlShellCmd,4, 15126, 10, 3.1, NULL, 15125, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlShellCmd,8, 15126, 12, 3.1, NULL, 15125, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlShellCmd,8, 15126, 11, 3.1, NULL, 15125, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15125, NULL);\n",architecture,15126,0);

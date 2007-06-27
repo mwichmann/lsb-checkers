@@ -27,19 +27,19 @@ Msg("Checking data structures in libxml2/libxml/c14n.h\n");
 #endif
 
 printf("Checking data structures in libxml2/libxml/c14n.h\n");
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlC14NIsVisibleCallback,4, 14915, 2, 3.1, NULL, 14914, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlC14NIsVisibleCallback,8, 14915, 11, 3.1, NULL, 14914, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlC14NIsVisibleCallback,8, 14915, 3, 3.1, NULL, 14914, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlC14NIsVisibleCallback,4, 14915, 6, 3.1, NULL, 14914, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlC14NIsVisibleCallback,8, 14915, 9, 3.1, NULL, 14914, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlC14NIsVisibleCallback,4, 14915, 10, 3.1, NULL, 14914, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlC14NIsVisibleCallback,8, 14915, 12, 3.1, NULL, 14914, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14914, NULL);\n",architecture,14915,0);

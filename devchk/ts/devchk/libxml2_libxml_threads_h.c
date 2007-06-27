@@ -28,76 +28,76 @@ Msg("Checking data structures in libxml2/libxml/threads.h\n");
 #endif
 
 printf("Checking data structures in libxml2/libxml/threads.h\n");
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlRMutex,0, 14995, 2, 3.1, NULL, 14994, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlRMutex,0, 14995, 11, 3.1, NULL, 14994, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlRMutex,0, 14995, 3, 3.1, NULL, 14994, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlRMutex,0, 14995, 6, 3.1, NULL, 14994, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlRMutex,0, 14995, 9, 3.1, NULL, 14994, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlRMutex,0, 14995, 10, 3.1, NULL, 14994, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlRMutex,0, 14995, 12, 3.1, NULL, 14994, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14994,NULL);\n",architecture,14995,0);
 Msg("Find size of xmlRMutex (14995)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlRMutexPtr,4, 14997, 2, 3.1, NULL, 14996, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlRMutexPtr,8, 14997, 11, 3.1, NULL, 14996, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlRMutexPtr,8, 14997, 3, 3.1, NULL, 14996, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlRMutexPtr,4, 14997, 6, 3.1, NULL, 14996, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlRMutexPtr,8, 14997, 9, 3.1, NULL, 14996, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlRMutexPtr,4, 14997, 10, 3.1, NULL, 14996, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlRMutexPtr,8, 14997, 12, 3.1, NULL, 14996, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14996,NULL);\n",architecture,14997,0);
 Msg("Find size of xmlRMutexPtr (14997)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlMutex,0, 14999, 2, 3.1, NULL, 14998, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlMutex,0, 14999, 11, 3.1, NULL, 14998, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlMutex,0, 14999, 3, 3.1, NULL, 14998, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlMutex,0, 14999, 6, 3.1, NULL, 14998, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlMutex,0, 14999, 9, 3.1, NULL, 14998, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlMutex,0, 14999, 10, 3.1, NULL, 14998, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlMutex,0, 14999, 12, 3.1, NULL, 14998, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14998,NULL);\n",architecture,14999,0);
 Msg("Find size of xmlMutex (14999)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlMutexPtr,4, 15001, 2, 3.1, NULL, 15000, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlMutexPtr,8, 15001, 11, 3.1, NULL, 15000, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlMutexPtr,8, 15001, 3, 3.1, NULL, 15000, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlMutexPtr,4, 15001, 6, 3.1, NULL, 15000, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlMutexPtr,8, 15001, 9, 3.1, NULL, 15000, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlMutexPtr,4, 15001, 10, 3.1, NULL, 15000, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlMutexPtr,8, 15001, 12, 3.1, NULL, 15000, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15000, NULL);\n",architecture,15001,0);

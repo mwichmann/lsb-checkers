@@ -209,7 +209,7 @@ cnt++;
 
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckEnum("RPC_SUCCESS",RPC_SUCCESS,0,32067);
 CheckEnum("RPC_CANTENCODEARGS",RPC_CANTENCODEARGS,1,32068);
 CheckEnum("RPC_CANTDECODERES",RPC_CANTDECODERES,2,32069);
@@ -236,7 +236,7 @@ CheckEnum("RPC_TLIERROR",RPC_TLIERROR,20,32089);
 CheckEnum("RPC_UDERROR",RPC_UDERROR,23,32090);
 CheckEnum("RPC_INPROGRESS",RPC_INPROGRESS,24,32091);
 CheckEnum("RPC_STALERACHANDLE",RPC_STALERACHANDLE,25,32092);
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckEnum("RPC_SUCCESS",RPC_SUCCESS,0,32067);
 CheckEnum("RPC_CANTENCODEARGS",RPC_CANTENCODEARGS,1,32068);
 CheckEnum("RPC_CANTDECODERES",RPC_CANTDECODERES,2,32069);
@@ -263,7 +263,7 @@ CheckEnum("RPC_TLIERROR",RPC_TLIERROR,20,32089);
 CheckEnum("RPC_UDERROR",RPC_UDERROR,23,32090);
 CheckEnum("RPC_INPROGRESS",RPC_INPROGRESS,24,32091);
 CheckEnum("RPC_STALERACHANDLE",RPC_STALERACHANDLE,25,32092);
-#elif __ia64__
+#elif defined __ia64__
 CheckEnum("RPC_SUCCESS",RPC_SUCCESS,0,32067);
 CheckEnum("RPC_CANTENCODEARGS",RPC_CANTENCODEARGS,1,32068);
 CheckEnum("RPC_CANTDECODERES",RPC_CANTDECODERES,2,32069);
@@ -290,7 +290,7 @@ CheckEnum("RPC_TLIERROR",RPC_TLIERROR,20,32089);
 CheckEnum("RPC_UDERROR",RPC_UDERROR,23,32090);
 CheckEnum("RPC_INPROGRESS",RPC_INPROGRESS,24,32091);
 CheckEnum("RPC_STALERACHANDLE",RPC_STALERACHANDLE,25,32092);
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckEnum("RPC_SUCCESS",RPC_SUCCESS,0,32067);
 CheckEnum("RPC_CANTENCODEARGS",RPC_CANTENCODEARGS,1,32068);
 CheckEnum("RPC_CANTDECODERES",RPC_CANTDECODERES,2,32069);
@@ -317,7 +317,7 @@ CheckEnum("RPC_TLIERROR",RPC_TLIERROR,20,32089);
 CheckEnum("RPC_UDERROR",RPC_UDERROR,23,32090);
 CheckEnum("RPC_INPROGRESS",RPC_INPROGRESS,24,32091);
 CheckEnum("RPC_STALERACHANDLE",RPC_STALERACHANDLE,25,32092);
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckEnum("RPC_SUCCESS",RPC_SUCCESS,0,32067);
 CheckEnum("RPC_CANTENCODEARGS",RPC_CANTENCODEARGS,1,32068);
 CheckEnum("RPC_CANTDECODERES",RPC_CANTDECODERES,2,32069);
@@ -344,7 +344,7 @@ CheckEnum("RPC_TLIERROR",RPC_TLIERROR,20,32089);
 CheckEnum("RPC_UDERROR",RPC_UDERROR,23,32090);
 CheckEnum("RPC_INPROGRESS",RPC_INPROGRESS,24,32091);
 CheckEnum("RPC_STALERACHANDLE",RPC_STALERACHANDLE,25,32092);
-#elif __s390x__
+#elif defined __s390x__
 CheckEnum("RPC_SUCCESS",RPC_SUCCESS,0,32067);
 CheckEnum("RPC_CANTENCODEARGS",RPC_CANTENCODEARGS,1,32068);
 CheckEnum("RPC_CANTDECODERES",RPC_CANTDECODERES,2,32069);
@@ -371,7 +371,7 @@ CheckEnum("RPC_TLIERROR",RPC_TLIERROR,20,32089);
 CheckEnum("RPC_UDERROR",RPC_UDERROR,23,32090);
 CheckEnum("RPC_INPROGRESS",RPC_INPROGRESS,24,32091);
 CheckEnum("RPC_STALERACHANDLE",RPC_STALERACHANDLE,25,32092);
-#elif __x86_64__
+#elif defined __x86_64__
 CheckEnum("RPC_SUCCESS",RPC_SUCCESS,0,32067);
 CheckEnum("RPC_CANTENCODEARGS",RPC_CANTENCODEARGS,1,32068);
 CheckEnum("RPC_CANTDECODERES",RPC_CANTDECODERES,2,32069);
@@ -403,43 +403,43 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architect
 Msg("Find size of clnt_stat (9916)\n");
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __s390__ && !__s390x__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9917,0);
 Msg("Find size of rpc_err (9917)\n");
 #endif
 
-#if __i386__
-#elif __s390__ && !__s390x__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9922,0);
 Msg("Find size of clnt_ops (9922)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(CLIENT,12, 10389, 2, 1.3, NULL, 9921, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(CLIENT,12, 10389, 10, 1.3, NULL, 9921, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(CLIENT,24, 10389, 3, 1.3, NULL, 9921, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(CLIENT,12, 10389, 6, 1.3, NULL, 9921, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(CLIENT,24, 10389, 9, 2.0, NULL, 9921, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(CLIENT,24, 10389, 11, 2.0, NULL, 9921, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(CLIENT,24, 10389, 12, 1.3, NULL, 9921, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9921, NULL);\n",architecture,10389,0);

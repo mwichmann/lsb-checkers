@@ -655,285 +655,285 @@ cnt++;
 
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GLenum,4, 8143, 2, 1.0, NULL, 7, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GLenum,4, 8143, 3, 1.3, NULL, 7, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GLenum,4, 8143, 6, 1.2, NULL, 7, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GLenum,4, 8143, 10, 1.3, NULL, 7, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GLenum,4, 8143, 9, 2.0, NULL, 7, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GLenum,4, 8143, 12, 1.3, NULL, 7, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GLenum,4, 8143, 11, 2.0, NULL, 7, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,8143,0);
 Msg("Find size of GLenum (8143)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GLboolean,1, 8144, 2, 1.2, NULL, 3, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GLboolean,1, 8144, 3, 1.3, NULL, 3, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GLboolean,1, 8144, 6, 1.2, NULL, 3, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GLboolean,1, 8144, 10, 1.3, NULL, 3, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GLboolean,1, 8144, 9, 2.0, NULL, 3, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GLboolean,1, 8144, 12, 1.3, NULL, 3, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GLboolean,1, 8144, 11, 2.0, NULL, 3, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,3,NULL);\n",architecture,8144,0);
 Msg("Find size of GLboolean (8144)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GLbitfield,4, 8145, 2, 1.0, NULL, 7, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GLbitfield,4, 8145, 3, 1.3, NULL, 7, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GLbitfield,4, 8145, 6, 1.2, NULL, 7, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GLbitfield,4, 8145, 10, 1.3, NULL, 7, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GLbitfield,4, 8145, 9, 2.0, NULL, 7, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GLbitfield,4, 8145, 12, 1.3, NULL, 7, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GLbitfield,4, 8145, 11, 2.0, NULL, 7, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,8145,0);
 Msg("Find size of GLbitfield (8145)\n");
 #endif
 
-#if __ia64__
+#if defined __ia64__
 CheckTypeSize(GLvoid,1, 8146, 3, 1.3, NULL, 1, NULL)
-#elif __i386__
+#elif defined __i386__
 CheckTypeSize(GLvoid,1, 8146, 2, 1.2, NULL, 1, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GLvoid,1, 8146, 6, 1.2, NULL, 1, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GLvoid,1, 8146, 10, 1.3, NULL, 1, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GLvoid,1, 8146, 9, 2.0, NULL, 1, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GLvoid,1, 8146, 12, 1.3, NULL, 1, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GLvoid,1, 8146, 11, 2.0, NULL, 1, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,1,NULL);\n",architecture,8146,0);
 Msg("Find size of GLvoid (8146)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GLbyte,1, 8147, 2, 1.2, NULL, 2, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GLbyte,1, 8147, 3, 1.3, NULL, 2, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GLbyte,1, 8147, 6, 1.2, NULL, 2, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GLbyte,1, 8147, 10, 1.3, NULL, 2, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GLbyte,1, 8147, 9, 2.0, NULL, 2, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GLbyte,1, 8147, 12, 1.3, NULL, 2, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GLbyte,1, 8147, 11, 2.0, NULL, 2, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,2,NULL);\n",architecture,8147,0);
 Msg("Find size of GLbyte (8147)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GLshort,2, 8148, 2, 1.2, NULL, 4, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GLshort,2, 8148, 3, 1.3, NULL, 4, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GLshort,2, 8148, 6, 1.2, NULL, 4, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GLshort,2, 8148, 10, 1.3, NULL, 4, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GLshort,2, 8148, 9, 2.0, NULL, 4, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GLshort,2, 8148, 12, 1.3, NULL, 4, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GLshort,2, 8148, 11, 2.0, NULL, 4, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,4,NULL);\n",architecture,8148,0);
 Msg("Find size of GLshort (8148)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GLint,4, 8149, 2, 1.2, NULL, 6, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GLint,4, 8149, 3, 1.3, NULL, 6, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GLint,4, 8149, 6, 1.2, NULL, 6, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GLint,4, 8149, 10, 1.3, NULL, 6, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GLint,4, 8149, 9, 2.0, NULL, 6, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GLint,4, 8149, 12, 1.3, NULL, 6, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GLint,4, 8149, 11, 2.0, NULL, 6, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,8149,0);
 Msg("Find size of GLint (8149)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GLubyte,1, 8150, 2, 1.2, NULL, 3, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GLubyte,1, 8150, 3, 1.3, NULL, 3, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GLubyte,1, 8150, 6, 1.2, NULL, 3, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GLubyte,1, 8150, 10, 1.3, NULL, 3, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GLubyte,1, 8150, 9, 2.0, NULL, 3, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GLubyte,1, 8150, 12, 1.3, NULL, 3, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GLubyte,1, 8150, 11, 2.0, NULL, 3, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,3,NULL);\n",architecture,8150,0);
 Msg("Find size of GLubyte (8150)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GLushort,2, 8151, 2, 1.2, NULL, 5, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GLushort,2, 8151, 3, 1.3, NULL, 5, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GLushort,2, 8151, 6, 1.2, NULL, 5, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GLushort,2, 8151, 10, 1.3, NULL, 5, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GLushort,2, 8151, 9, 2.0, NULL, 5, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GLushort,2, 8151, 12, 1.3, NULL, 5, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GLushort,2, 8151, 11, 2.0, NULL, 5, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,5,NULL);\n",architecture,8151,0);
 Msg("Find size of GLushort (8151)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GLuint,4, 8152, 2, 1.2, NULL, 7, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GLuint,4, 8152, 3, 1.3, NULL, 7, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GLuint,4, 8152, 6, 1.2, NULL, 7, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GLuint,4, 8152, 10, 1.3, NULL, 7, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GLuint,4, 8152, 9, 2.0, NULL, 7, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GLuint,4, 8152, 12, 1.3, NULL, 7, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GLuint,4, 8152, 11, 2.0, NULL, 7, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,8152,0);
 Msg("Find size of GLuint (8152)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GLsizei,4, 8153, 2, 1.0, NULL, 6, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GLsizei,4, 8153, 3, 1.3, NULL, 6, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GLsizei,4, 8153, 6, 1.2, NULL, 6, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GLsizei,4, 8153, 10, 1.3, NULL, 6, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GLsizei,4, 8153, 9, 2.0, NULL, 6, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GLsizei,4, 8153, 12, 1.3, NULL, 6, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GLsizei,4, 8153, 11, 2.0, NULL, 6, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,8153,0);
 Msg("Find size of GLsizei (8153)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GLfloat,4, 8154, 2, 1.2, NULL, 12, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GLfloat,4, 8154, 3, 1.3, NULL, 12, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GLfloat,4, 8154, 6, 1.2, NULL, 12, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GLfloat,4, 8154, 10, 1.3, NULL, 12, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GLfloat,4, 8154, 9, 2.0, NULL, 12, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GLfloat,4, 8154, 12, 1.3, NULL, 12, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GLfloat,4, 8154, 11, 2.0, NULL, 12, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,12,NULL);\n",architecture,8154,0);
 Msg("Find size of GLfloat (8154)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GLclampf,4, 8155, 2, 1.2, NULL, 12, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GLclampf,4, 8155, 3, 1.3, NULL, 12, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GLclampf,4, 8155, 6, 1.2, NULL, 12, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GLclampf,4, 8155, 10, 1.3, NULL, 12, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GLclampf,4, 8155, 9, 2.0, NULL, 12, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GLclampf,4, 8155, 12, 1.3, NULL, 12, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GLclampf,4, 8155, 11, 2.0, NULL, 12, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,12,NULL);\n",architecture,8155,0);
 Msg("Find size of GLclampf (8155)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GLdouble,8, 8156, 2, 1.2, NULL, 13, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GLdouble,8, 8156, 3, 1.3, NULL, 13, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GLdouble,8, 8156, 6, 1.2, NULL, 13, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GLdouble,8, 8156, 10, 1.3, NULL, 13, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GLdouble,8, 8156, 9, 2.0, NULL, 13, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GLdouble,8, 8156, 12, 1.3, NULL, 13, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GLdouble,8, 8156, 11, 2.0, NULL, 13, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,13,NULL);\n",architecture,8156,0);
 Msg("Find size of GLdouble (8156)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GLclampd,8, 8157, 2, 1.0, NULL, 13, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GLclampd,8, 8157, 3, 1.3, NULL, 13, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GLclampd,8, 8157, 6, 1.2, NULL, 13, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GLclampd,8, 8157, 10, 1.3, NULL, 13, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GLclampd,8, 8157, 9, 2.0, NULL, 13, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GLclampd,8, 8157, 12, 1.3, NULL, 13, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GLclampd,8, 8157, 11, 2.0, NULL, 13, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,13, NULL);\n",architecture,8157,0);

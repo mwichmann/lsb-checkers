@@ -215,38 +215,38 @@ cnt++;
 
 #endif
 
-#if __ia64__
+#if defined __ia64__
 CheckTypeSize(glob_t,72, 9005, 3, 1.3, NULL, 8999, NULL)
-#elif __i386__
+#elif defined __i386__
 CheckTypeSize(glob_t,36, 9005, 2, 1.2, NULL, 8999, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(glob_t,36, 9005, 6, 1.2, NULL, 8999, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(glob_t,36, 9005, 10, 1.3, NULL, 8999, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(glob_t,72, 9005, 9, 2.0, NULL, 8999, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(glob_t,72, 9005, 12, 1.3, NULL, 8999, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(glob_t,72, 9005, 11, 2.0, NULL, 8999, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8999,NULL);\n",architecture,9005,0);
 Msg("Find size of glob_t (9005)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(glob64_t,36, 9007, 2, 1.2, NULL, 9006, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(glob64_t,72, 9007, 3, 1.3, NULL, 9006, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(glob64_t,36, 9007, 6, 1.2, NULL, 9006, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(glob64_t,36, 9007, 10, 1.3, NULL, 9006, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(glob64_t,72, 9007, 9, 2.0, NULL, 9006, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(glob64_t,72, 9007, 12, 1.3, NULL, 9006, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(glob64_t,72, 9007, 11, 2.0, NULL, 9006, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9006, NULL);\n",architecture,9007,0);

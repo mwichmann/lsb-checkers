@@ -59,19 +59,19 @@ cnt++;
 
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(ExtendedVisualInfo,36, 11068, 2, 3.0, NULL, 11067, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(ExtendedVisualInfo,48, 11068, 3, 3.0, NULL, 11067, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(ExtendedVisualInfo,48, 11068, 9, 3.0, NULL, 11067, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(ExtendedVisualInfo,36, 11068, 6, 3.0, NULL, 11067, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(ExtendedVisualInfo,36, 11068, 10, 3.0, NULL, 11067, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(ExtendedVisualInfo,48, 11068, 11, 3.0, NULL, 11067, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(ExtendedVisualInfo,48, 11068, 12, 3.0, NULL, 11067, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.0""',NULL,11067, NULL);\n",architecture,11068,0);

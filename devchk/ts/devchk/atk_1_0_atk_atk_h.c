@@ -574,1330 +574,1330 @@ printf("Checking data structures in atk-1.0/atk/atk.h\n");
 /* No test for _TYPEDEF_ATK_VALUE__ */
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkText,0, 12076, 2, 3.1, NULL, 12075, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkText,0, 12076, 11, 3.1, NULL, 12075, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkText,0, 12076, 3, 3.1, NULL, 12075, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkText,0, 12076, 6, 3.1, NULL, 12075, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkText,0, 12076, 9, 3.1, NULL, 12075, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkText,0, 12076, 10, 3.1, NULL, 12075, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkText,0, 12076, 12, 3.1, NULL, 12075, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12075,NULL);\n",architecture,12076,0);
 Msg("Find size of AtkText (12076)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkObject,36, 12079, 2, 3.1, NULL, 12078, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkObject,72, 12079, 11, 3.1, NULL, 12078, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkObject,72, 12079, 3, 3.1, NULL, 12078, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkObject,36, 12079, 6, 3.1, NULL, 12078, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkObject,72, 12079, 9, 3.1, NULL, 12078, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkObject,36, 12079, 10, 3.1, NULL, 12078, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkObject,72, 12079, 12, 3.1, NULL, 12078, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12078,NULL);\n",architecture,12079,0);
 Msg("Find size of AtkObject (12079)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkRole,4, 12082, 2, 3.1, NULL, 12081, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkRole,4, 12082, 11, 3.1, NULL, 12081, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkRole,4, 12082, 3, 3.1, NULL, 12081, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkRole,4, 12082, 6, 3.1, NULL, 12081, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkRole,4, 12082, 9, 3.1, NULL, 12081, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkRole,4, 12082, 10, 3.1, NULL, 12081, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkRole,4, 12082, 12, 3.1, NULL, 12081, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12081,NULL);\n",architecture,12082,0);
 Msg("Find size of AtkRole (12082)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkRelationSet,16, 12084, 2, 3.1, NULL, 12083, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkRelationSet,32, 12084, 11, 3.1, NULL, 12083, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkRelationSet,32, 12084, 3, 3.1, NULL, 12083, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkRelationSet,16, 12084, 6, 3.1, NULL, 12083, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkRelationSet,32, 12084, 9, 3.1, NULL, 12083, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkRelationSet,16, 12084, 10, 3.1, NULL, 12083, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkRelationSet,32, 12084, 12, 3.1, NULL, 12083, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12083,NULL);\n",architecture,12084,0);
 Msg("Find size of AtkRelationSet (12084)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkLayer,4, 12087, 2, 3.1, NULL, 12086, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkLayer,4, 12087, 11, 3.1, NULL, 12086, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkLayer,4, 12087, 3, 3.1, NULL, 12086, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkLayer,4, 12087, 6, 3.1, NULL, 12086, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkLayer,4, 12087, 9, 3.1, NULL, 12086, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkLayer,4, 12087, 10, 3.1, NULL, 12086, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkLayer,4, 12087, 12, 3.1, NULL, 12086, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12086,NULL);\n",architecture,12087,0);
 Msg("Find size of AtkLayer (12087)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkPropertyValues,44, 12089, 2, 3.1, NULL, 12088, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkPropertyValues,56, 12089, 11, 3.1, NULL, 12088, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkPropertyValues,56, 12089, 3, 3.1, NULL, 12088, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkPropertyValues,56, 12089, 6, 3.1, NULL, 12088, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkPropertyValues,56, 12089, 9, 3.1, NULL, 12088, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkPropertyValues,56, 12089, 10, 3.1, NULL, 12088, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkPropertyValues,56, 12089, 12, 3.1, NULL, 12088, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12088,NULL);\n",architecture,12089,0);
 Msg("Find size of AtkPropertyValues (12089)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkPropertyChangeHandler,4, 12092, 2, 3.1, NULL, 12091, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkPropertyChangeHandler,8, 12092, 11, 3.1, NULL, 12091, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkPropertyChangeHandler,8, 12092, 3, 3.1, NULL, 12091, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkPropertyChangeHandler,4, 12092, 6, 3.1, NULL, 12091, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkPropertyChangeHandler,8, 12092, 9, 3.1, NULL, 12091, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkPropertyChangeHandler,4, 12092, 10, 3.1, NULL, 12091, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkPropertyChangeHandler,8, 12092, 12, 3.1, NULL, 12091, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12091,NULL);\n",architecture,12092,0);
 Msg("Find size of AtkPropertyChangeHandler (12092)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkImage,0, 12095, 2, 3.1, NULL, 12094, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkImage,0, 12095, 11, 3.1, NULL, 12094, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkImage,0, 12095, 3, 3.1, NULL, 12094, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkImage,0, 12095, 6, 3.1, NULL, 12094, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkImage,0, 12095, 9, 3.1, NULL, 12094, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkImage,0, 12095, 10, 3.1, NULL, 12094, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkImage,0, 12095, 12, 3.1, NULL, 12094, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12094,NULL);\n",architecture,12095,0);
 Msg("Find size of AtkImage (12095)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkCoordType,4, 12098, 2, 3.1, NULL, 12097, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkCoordType,4, 12098, 11, 3.1, NULL, 12097, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkCoordType,4, 12098, 3, 3.1, NULL, 12097, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkCoordType,4, 12098, 6, 3.1, NULL, 12097, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkCoordType,4, 12098, 9, 3.1, NULL, 12097, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkCoordType,4, 12098, 10, 3.1, NULL, 12097, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkCoordType,4, 12098, 12, 3.1, NULL, 12097, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12097,NULL);\n",architecture,12098,0);
 Msg("Find size of AtkCoordType (12098)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkRelationType,4, 12100, 2, 3.1, NULL, 12099, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkRelationType,4, 12100, 11, 3.1, NULL, 12099, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkRelationType,4, 12100, 3, 3.1, NULL, 12099, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkRelationType,4, 12100, 6, 3.1, NULL, 12099, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkRelationType,4, 12100, 9, 3.1, NULL, 12099, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkRelationType,4, 12100, 10, 3.1, NULL, 12099, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkRelationType,4, 12100, 12, 3.1, NULL, 12099, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12099,NULL);\n",architecture,12100,0);
 Msg("Find size of AtkRelationType (12100)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkRelation,20, 12102, 2, 3.1, NULL, 12101, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkRelation,40, 12102, 11, 3.1, NULL, 12101, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkRelation,40, 12102, 3, 3.1, NULL, 12101, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkRelation,20, 12102, 6, 3.1, NULL, 12101, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkRelation,40, 12102, 9, 3.1, NULL, 12101, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkRelation,20, 12102, 10, 3.1, NULL, 12101, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkRelation,40, 12102, 12, 3.1, NULL, 12101, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12101,NULL);\n",architecture,12102,0);
 Msg("Find size of AtkRelation (12102)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkDocument,0, 12105, 2, 3.1, NULL, 12104, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkDocument,0, 12105, 11, 3.1, NULL, 12104, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkDocument,0, 12105, 3, 3.1, NULL, 12104, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkDocument,0, 12105, 6, 3.1, NULL, 12104, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkDocument,0, 12105, 9, 3.1, NULL, 12104, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkDocument,0, 12105, 10, 3.1, NULL, 12104, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkDocument,0, 12105, 12, 3.1, NULL, 12104, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12104,NULL);\n",architecture,12105,0);
 Msg("Find size of AtkDocument (12105)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkTable,0, 12108, 2, 3.1, NULL, 12107, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkTable,0, 12108, 11, 3.1, NULL, 12107, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkTable,0, 12108, 3, 3.1, NULL, 12107, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkTable,0, 12108, 6, 3.1, NULL, 12107, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkTable,0, 12108, 9, 3.1, NULL, 12107, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkTable,0, 12108, 10, 3.1, NULL, 12107, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkTable,0, 12108, 12, 3.1, NULL, 12107, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12107,NULL);\n",architecture,12108,0);
 Msg("Find size of AtkTable (12108)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkHyperlink,12, 12111, 2, 3.1, NULL, 12110, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkHyperlink,24, 12111, 11, 3.1, NULL, 12110, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkHyperlink,24, 12111, 3, 3.1, NULL, 12110, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkHyperlink,12, 12111, 6, 3.1, NULL, 12110, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkHyperlink,24, 12111, 9, 3.1, NULL, 12110, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkHyperlink,12, 12111, 10, 3.1, NULL, 12110, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkHyperlink,24, 12111, 12, 3.1, NULL, 12110, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12110,NULL);\n",architecture,12111,0);
 Msg("Find size of AtkHyperlink (12111)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkStateSet,12, 12114, 2, 3.1, NULL, 12113, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkStateSet,24, 12114, 11, 3.1, NULL, 12113, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkStateSet,24, 12114, 3, 3.1, NULL, 12113, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkStateSet,12, 12114, 6, 3.1, NULL, 12113, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkStateSet,24, 12114, 9, 3.1, NULL, 12113, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkStateSet,12, 12114, 10, 3.1, NULL, 12113, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkStateSet,24, 12114, 12, 3.1, NULL, 12113, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12113,NULL);\n",architecture,12114,0);
 Msg("Find size of AtkStateSet (12114)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkObjectFactory,12, 12117, 2, 3.1, NULL, 12116, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkObjectFactory,24, 12117, 11, 3.1, NULL, 12116, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkObjectFactory,24, 12117, 3, 3.1, NULL, 12116, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkObjectFactory,12, 12117, 6, 3.1, NULL, 12116, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkObjectFactory,24, 12117, 9, 3.1, NULL, 12116, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkObjectFactory,12, 12117, 10, 3.1, NULL, 12116, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkObjectFactory,24, 12117, 12, 3.1, NULL, 12116, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12116,NULL);\n",architecture,12117,0);
 Msg("Find size of AtkObjectFactory (12117)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkRegistry,20, 12120, 2, 3.1, NULL, 12119, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkRegistry,40, 12120, 11, 3.1, NULL, 12119, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkRegistry,40, 12120, 3, 3.1, NULL, 12119, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkRegistry,20, 12120, 6, 3.1, NULL, 12119, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkRegistry,40, 12120, 9, 3.1, NULL, 12119, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkRegistry,20, 12120, 10, 3.1, NULL, 12119, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkRegistry,40, 12120, 12, 3.1, NULL, 12119, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12119,NULL);\n",architecture,12120,0);
 Msg("Find size of AtkRegistry (12120)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkEditableText,0, 12123, 2, 3.1, NULL, 12122, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkEditableText,0, 12123, 11, 3.1, NULL, 12122, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkEditableText,0, 12123, 3, 3.1, NULL, 12122, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkEditableText,0, 12123, 6, 3.1, NULL, 12122, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkEditableText,0, 12123, 9, 3.1, NULL, 12122, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkEditableText,0, 12123, 10, 3.1, NULL, 12122, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkEditableText,0, 12123, 12, 3.1, NULL, 12122, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12122,NULL);\n",architecture,12123,0);
 Msg("Find size of AtkEditableText (12123)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkAttributeSet,8, 12125, 2, 3.1, NULL, 11451, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkAttributeSet,16, 12125, 11, 3.1, NULL, 11451, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkAttributeSet,16, 12125, 3, 3.1, NULL, 11451, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkAttributeSet,8, 12125, 6, 3.1, NULL, 11451, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkAttributeSet,16, 12125, 9, 3.1, NULL, 11451, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkAttributeSet,8, 12125, 10, 3.1, NULL, 11451, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkAttributeSet,16, 12125, 12, 3.1, NULL, 11451, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11451,NULL);\n",architecture,12125,0);
 Msg("Find size of AtkAttributeSet (12125)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkHypertext,0, 12128, 2, 3.1, NULL, 12127, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkHypertext,0, 12128, 11, 3.1, NULL, 12127, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkHypertext,0, 12128, 3, 3.1, NULL, 12127, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkHypertext,0, 12128, 6, 3.1, NULL, 12127, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkHypertext,0, 12128, 9, 3.1, NULL, 12127, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkHypertext,0, 12128, 10, 3.1, NULL, 12127, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkHypertext,0, 12128, 12, 3.1, NULL, 12127, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12127,NULL);\n",architecture,12128,0);
 Msg("Find size of AtkHypertext (12128)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkSelection,0, 12131, 2, 3.1, NULL, 12130, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkSelection,0, 12131, 11, 3.1, NULL, 12130, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkSelection,0, 12131, 3, 3.1, NULL, 12130, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkSelection,0, 12131, 6, 3.1, NULL, 12130, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkSelection,0, 12131, 9, 3.1, NULL, 12130, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkSelection,0, 12131, 10, 3.1, NULL, 12130, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkSelection,0, 12131, 12, 3.1, NULL, 12130, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12130,NULL);\n",architecture,12131,0);
 Msg("Find size of AtkSelection (12131)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkAction,0, 12134, 2, 3.1, NULL, 12133, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkAction,0, 12134, 11, 3.1, NULL, 12133, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkAction,0, 12134, 3, 3.1, NULL, 12133, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkAction,0, 12134, 6, 3.1, NULL, 12133, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkAction,0, 12134, 9, 3.1, NULL, 12133, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkAction,0, 12134, 10, 3.1, NULL, 12133, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkAction,0, 12134, 12, 3.1, NULL, 12133, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12133,NULL);\n",architecture,12134,0);
 Msg("Find size of AtkAction (12134)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkComponent,0, 12137, 2, 3.1, NULL, 12136, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkComponent,0, 12137, 11, 3.1, NULL, 12136, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkComponent,0, 12137, 3, 3.1, NULL, 12136, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkComponent,0, 12137, 6, 3.1, NULL, 12136, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkComponent,0, 12137, 9, 3.1, NULL, 12136, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkComponent,0, 12137, 10, 3.1, NULL, 12136, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkComponent,0, 12137, 12, 3.1, NULL, 12136, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12136,NULL);\n",architecture,12137,0);
 Msg("Find size of AtkComponent (12137)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkValue,0, 12140, 2, 3.1, NULL, 12139, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkValue,0, 12140, 11, 3.1, NULL, 12139, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkValue,0, 12140, 3, 3.1, NULL, 12139, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkValue,0, 12140, 6, 3.1, NULL, 12139, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkValue,0, 12140, 9, 3.1, NULL, 12139, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkValue,0, 12140, 10, 3.1, NULL, 12139, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkValue,0, 12140, 12, 3.1, NULL, 12139, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12139,NULL);\n",architecture,12140,0);
 Msg("Find size of AtkValue (12140)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkStreamableContent,0, 12143, 2, 3.1, NULL, 12142, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkStreamableContent,0, 12143, 11, 3.1, NULL, 12142, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkStreamableContent,0, 12143, 3, 3.1, NULL, 12142, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkStreamableContent,0, 12143, 6, 3.1, NULL, 12142, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkStreamableContent,0, 12143, 9, 3.1, NULL, 12142, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkStreamableContent,0, 12143, 10, 3.1, NULL, 12142, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkStreamableContent,0, 12143, 12, 3.1, NULL, 12142, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12142,NULL);\n",architecture,12143,0);
 Msg("Find size of AtkStreamableContent (12143)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkEventListenerInit,4, 12145, 2, 3.1, NULL, 10318, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkEventListenerInit,8, 12145, 11, 3.1, NULL, 10318, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkEventListenerInit,8, 12145, 3, 3.1, NULL, 10318, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkEventListenerInit,4, 12145, 6, 3.1, NULL, 10318, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkEventListenerInit,8, 12145, 9, 3.1, NULL, 10318, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkEventListenerInit,4, 12145, 10, 3.1, NULL, 10318, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkEventListenerInit,8, 12145, 12, 3.1, NULL, 10318, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,10318,NULL);\n",architecture,12145,0);
 Msg("Find size of AtkEventListenerInit (12145)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkTextAttribute,4, 12147, 2, 3.1, NULL, 12146, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkTextAttribute,4, 12147, 11, 3.1, NULL, 12146, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkTextAttribute,4, 12147, 3, 3.1, NULL, 12146, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkTextAttribute,4, 12147, 6, 3.1, NULL, 12146, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkTextAttribute,4, 12147, 9, 3.1, NULL, 12146, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkTextAttribute,4, 12147, 10, 3.1, NULL, 12146, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkTextAttribute,4, 12147, 12, 3.1, NULL, 12146, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12146,NULL);\n",architecture,12147,0);
 Msg("Find size of AtkTextAttribute (12147)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkTextBoundary,4, 12149, 2, 3.1, NULL, 12148, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkTextBoundary,4, 12149, 11, 3.1, NULL, 12148, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkTextBoundary,4, 12149, 3, 3.1, NULL, 12148, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkTextBoundary,4, 12149, 6, 3.1, NULL, 12148, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkTextBoundary,4, 12149, 9, 3.1, NULL, 12148, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkTextBoundary,4, 12149, 10, 3.1, NULL, 12148, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkTextBoundary,4, 12149, 12, 3.1, NULL, 12148, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12148,NULL);\n",architecture,12149,0);
 Msg("Find size of AtkTextBoundary (12149)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkStateType,4, 12151, 2, 3.1, NULL, 12150, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkStateType,4, 12151, 11, 3.1, NULL, 12150, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkStateType,4, 12151, 3, 3.1, NULL, 12150, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkStateType,4, 12151, 6, 3.1, NULL, 12150, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkStateType,4, 12151, 9, 3.1, NULL, 12150, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkStateType,4, 12151, 10, 3.1, NULL, 12150, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkStateType,4, 12151, 12, 3.1, NULL, 12150, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12150,NULL);\n",architecture,12151,0);
 Msg("Find size of AtkStateType (12151)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkGObjectAccessible,36, 12153, 2, 3.1, NULL, 12152, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkGObjectAccessible,72, 12153, 11, 3.1, NULL, 12152, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkGObjectAccessible,72, 12153, 3, 3.1, NULL, 12152, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkGObjectAccessible,36, 12153, 6, 3.1, NULL, 12152, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkGObjectAccessible,72, 12153, 9, 3.1, NULL, 12152, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkGObjectAccessible,36, 12153, 10, 3.1, NULL, 12152, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkGObjectAccessible,72, 12153, 12, 3.1, NULL, 12152, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12152,NULL);\n",architecture,12153,0);
 Msg("Find size of AtkGObjectAccessible (12153)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkState,8, 12155, 2, 3.1, NULL, 11621, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkState,8, 12155, 11, 3.1, NULL, 11621, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkState,8, 12155, 3, 3.1, NULL, 11621, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkState,8, 12155, 6, 3.1, NULL, 11621, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkState,8, 12155, 9, 3.1, NULL, 11621, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkState,8, 12155, 10, 3.1, NULL, 11621, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkState,8, 12155, 12, 3.1, NULL, 11621, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11621,NULL);\n",architecture,12155,0);
 Msg("Find size of AtkState (12155)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkFocusHandler,4, 12158, 2, 3.1, NULL, 12157, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkFocusHandler,8, 12158, 11, 3.1, NULL, 12157, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkFocusHandler,8, 12158, 3, 3.1, NULL, 12157, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkFocusHandler,4, 12158, 6, 3.1, NULL, 12157, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkFocusHandler,8, 12158, 9, 3.1, NULL, 12157, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkFocusHandler,4, 12158, 10, 3.1, NULL, 12157, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkFocusHandler,8, 12158, 12, 3.1, NULL, 12157, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12157,NULL);\n",architecture,12158,0);
 Msg("Find size of AtkFocusHandler (12158)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkKeyEventStruct,28, 12160, 2, 3.1, NULL, 12159, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkKeyEventStruct,32, 12160, 11, 3.1, NULL, 12159, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkKeyEventStruct,32, 12160, 3, 3.1, NULL, 12159, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkKeyEventStruct,28, 12160, 6, 3.1, NULL, 12159, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkKeyEventStruct,32, 12160, 9, 3.1, NULL, 12159, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkKeyEventStruct,28, 12160, 10, 3.1, NULL, 12159, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkKeyEventStruct,32, 12160, 12, 3.1, NULL, 12159, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12159,NULL);\n",architecture,12160,0);
 Msg("Find size of AtkKeyEventStruct (12160)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkKeySnoopFunc,4, 12163, 2, 3.1, NULL, 12162, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkKeySnoopFunc,8, 12163, 11, 3.1, NULL, 12162, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkKeySnoopFunc,8, 12163, 3, 3.1, NULL, 12162, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkKeySnoopFunc,4, 12163, 6, 3.1, NULL, 12162, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkKeySnoopFunc,8, 12163, 9, 3.1, NULL, 12162, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkKeySnoopFunc,4, 12163, 10, 3.1, NULL, 12162, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkKeySnoopFunc,8, 12163, 12, 3.1, NULL, 12162, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12162,NULL);\n",architecture,12163,0);
 Msg("Find size of AtkKeySnoopFunc (12163)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkTextRectangle,16, 12166, 2, 3.1, NULL, 12165, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkTextRectangle,16, 12166, 11, 3.1, NULL, 12165, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkTextRectangle,16, 12166, 3, 3.1, NULL, 12165, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkTextRectangle,16, 12166, 6, 3.1, NULL, 12165, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkTextRectangle,16, 12166, 9, 3.1, NULL, 12165, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkTextRectangle,16, 12166, 10, 3.1, NULL, 12165, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkTextRectangle,16, 12166, 12, 3.1, NULL, 12165, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12165,NULL);\n",architecture,12166,0);
 Msg("Find size of AtkTextRectangle (12166)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkTextRange,28, 12167, 2, 3.1, NULL, 12164, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkTextRange,32, 12167, 11, 3.1, NULL, 12164, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkTextRange,32, 12167, 3, 3.1, NULL, 12164, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkTextRange,28, 12167, 6, 3.1, NULL, 12164, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkTextRange,32, 12167, 9, 3.1, NULL, 12164, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkTextRange,28, 12167, 10, 3.1, NULL, 12164, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkTextRange,32, 12167, 12, 3.1, NULL, 12164, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12164,NULL);\n",architecture,12167,0);
 Msg("Find size of AtkTextRange (12167)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkTextClipType,4, 12172, 2, 3.1, NULL, 12171, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkTextClipType,4, 12172, 11, 3.1, NULL, 12171, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkTextClipType,4, 12172, 3, 3.1, NULL, 12171, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkTextClipType,4, 12172, 6, 3.1, NULL, 12171, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkTextClipType,4, 12172, 9, 3.1, NULL, 12171, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkTextClipType,4, 12172, 10, 3.1, NULL, 12171, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkTextClipType,4, 12172, 12, 3.1, NULL, 12171, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12171,NULL);\n",architecture,12172,0);
 Msg("Find size of AtkTextClipType (12172)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkImplementor,0, 12176, 2, 3.1, NULL, 12175, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkImplementor,0, 12176, 11, 3.1, NULL, 12175, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkImplementor,0, 12176, 3, 3.1, NULL, 12175, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkImplementor,0, 12176, 6, 3.1, NULL, 12175, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkImplementor,0, 12176, 9, 3.1, NULL, 12175, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkImplementor,0, 12176, 10, 3.1, NULL, 12175, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkImplementor,0, 12176, 12, 3.1, NULL, 12175, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12175,NULL);\n",architecture,12176,0);
 Msg("Find size of AtkImplementor (12176)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkEventListener,4, 12179, 2, 3.1, NULL, 12178, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkEventListener,8, 12179, 11, 3.1, NULL, 12178, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkEventListener,8, 12179, 3, 3.1, NULL, 12178, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkEventListener,4, 12179, 6, 3.1, NULL, 12178, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkEventListener,8, 12179, 9, 3.1, NULL, 12178, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkEventListener,4, 12179, 10, 3.1, NULL, 12178, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkEventListener,8, 12179, 12, 3.1, NULL, 12178, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12178,NULL);\n",architecture,12179,0);
 Msg("Find size of AtkEventListener (12179)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkFunction,4, 12180, 2, 3.1, NULL, 11542, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkFunction,8, 12180, 11, 3.1, NULL, 11542, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkFunction,8, 12180, 3, 3.1, NULL, 11542, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkFunction,4, 12180, 6, 3.1, NULL, 11542, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkFunction,8, 12180, 9, 3.1, NULL, 11542, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkFunction,4, 12180, 10, 3.1, NULL, 11542, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkFunction,8, 12180, 12, 3.1, NULL, 11542, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11542,NULL);\n",architecture,12180,0);
 Msg("Find size of AtkFunction (12180)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkImplementorIface,12, 12183, 2, 3.1, NULL, 12181, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkImplementorIface,24, 12183, 11, 3.1, NULL, 12181, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkImplementorIface,24, 12183, 3, 3.1, NULL, 12181, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkImplementorIface,12, 12183, 6, 3.1, NULL, 12181, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkImplementorIface,24, 12183, 9, 3.1, NULL, 12181, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkImplementorIface,12, 12183, 10, 3.1, NULL, 12181, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkImplementorIface,24, 12183, 12, 3.1, NULL, 12181, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12181,NULL);\n",architecture,12183,0);
 Msg("Find size of AtkImplementorIface (12183)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkRegistryClass,68, 12185, 2, 3.1, NULL, 12184, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkRegistryClass,136, 12185, 11, 3.1, NULL, 12184, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkRegistryClass,136, 12185, 3, 3.1, NULL, 12184, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkRegistryClass,68, 12185, 6, 3.1, NULL, 12184, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkRegistryClass,136, 12185, 9, 3.1, NULL, 12184, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkRegistryClass,68, 12185, 10, 3.1, NULL, 12184, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkRegistryClass,136, 12185, 12, 3.1, NULL, 12184, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12184,NULL);\n",architecture,12185,0);
 Msg("Find size of AtkRegistryClass (12185)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkHypertextIface,36, 12191, 2, 3.1, NULL, 12186, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkHypertextIface,72, 12191, 11, 3.1, NULL, 12186, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkHypertextIface,72, 12191, 3, 3.1, NULL, 12186, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkHypertextIface,36, 12191, 6, 3.1, NULL, 12186, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkHypertextIface,72, 12191, 9, 3.1, NULL, 12186, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkHypertextIface,36, 12191, 10, 3.1, NULL, 12186, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkHypertextIface,72, 12191, 12, 3.1, NULL, 12186, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12186,NULL);\n",architecture,12191,0);
 Msg("Find size of AtkHypertextIface (12191)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkStreamableContentIface,36, 12196, 2, 3.1, NULL, 12192, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkStreamableContentIface,72, 12196, 11, 3.1, NULL, 12192, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkStreamableContentIface,72, 12196, 3, 3.1, NULL, 12192, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkStreamableContentIface,36, 12196, 6, 3.1, NULL, 12192, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkStreamableContentIface,72, 12196, 9, 3.1, NULL, 12192, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkStreamableContentIface,36, 12196, 10, 3.1, NULL, 12192, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkStreamableContentIface,72, 12196, 12, 3.1, NULL, 12192, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12192,NULL);\n",architecture,12196,0);
 Msg("Find size of AtkStreamableContentIface (12196)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkRectangle,16, 12198, 2, 3.1, NULL, 12197, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkRectangle,16, 12198, 11, 3.1, NULL, 12197, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkRectangle,16, 12198, 3, 3.1, NULL, 12197, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkRectangle,16, 12198, 6, 3.1, NULL, 12197, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkRectangle,16, 12198, 9, 3.1, NULL, 12197, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkRectangle,16, 12198, 10, 3.1, NULL, 12197, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkRectangle,16, 12198, 12, 3.1, NULL, 12197, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12197,NULL);\n",architecture,12198,0);
 Msg("Find size of AtkRectangle (12198)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkStateSetClass,68, 12200, 2, 3.1, NULL, 12199, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkStateSetClass,136, 12200, 11, 3.1, NULL, 12199, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkStateSetClass,136, 12200, 3, 3.1, NULL, 12199, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkStateSetClass,68, 12200, 6, 3.1, NULL, 12199, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkStateSetClass,136, 12200, 9, 3.1, NULL, 12199, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkStateSetClass,68, 12200, 10, 3.1, NULL, 12199, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkStateSetClass,136, 12200, 12, 3.1, NULL, 12199, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12199,NULL);\n",architecture,12200,0);
 Msg("Find size of AtkStateSetClass (12200)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkAttribute,8, 12202, 2, 3.1, NULL, 12201, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkAttribute,16, 12202, 11, 3.1, NULL, 12201, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkAttribute,16, 12202, 3, 3.1, NULL, 12201, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkAttribute,8, 12202, 6, 3.1, NULL, 12201, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkAttribute,16, 12202, 9, 3.1, NULL, 12201, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkAttribute,8, 12202, 10, 3.1, NULL, 12201, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkAttribute,16, 12202, 12, 3.1, NULL, 12201, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12201,NULL);\n",architecture,12202,0);
 Msg("Find size of AtkAttribute (12202)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkObjectClass,176, 12221, 2, 3.1, NULL, 12203, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkObjectClass,352, 12221, 11, 3.1, NULL, 12203, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkObjectClass,352, 12221, 3, 3.1, NULL, 12203, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkObjectClass,176, 12221, 6, 3.1, NULL, 12203, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkObjectClass,352, 12221, 9, 3.1, NULL, 12203, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkObjectClass,176, 12221, 10, 3.1, NULL, 12203, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkObjectClass,352, 12221, 12, 3.1, NULL, 12203, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12203,NULL);\n",architecture,12221,0);
 Msg("Find size of AtkObjectClass (12221)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkGObjectAccessibleClass,184, 12223, 2, 3.1, NULL, 12222, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkGObjectAccessibleClass,368, 12223, 11, 3.1, NULL, 12222, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkGObjectAccessibleClass,368, 12223, 3, 3.1, NULL, 12222, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkGObjectAccessibleClass,184, 12223, 6, 3.1, NULL, 12222, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkGObjectAccessibleClass,368, 12223, 9, 3.1, NULL, 12222, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkGObjectAccessibleClass,184, 12223, 10, 3.1, NULL, 12222, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkGObjectAccessibleClass,368, 12223, 12, 3.1, NULL, 12222, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12222,NULL);\n",architecture,12223,0);
 Msg("Find size of AtkGObjectAccessibleClass (12223)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkObjectFactoryClass,88, 12229, 2, 3.1, NULL, 12225, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkObjectFactoryClass,176, 12229, 11, 3.1, NULL, 12225, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkObjectFactoryClass,176, 12229, 3, 3.1, NULL, 12225, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkObjectFactoryClass,88, 12229, 6, 3.1, NULL, 12225, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkObjectFactoryClass,176, 12229, 9, 3.1, NULL, 12225, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkObjectFactoryClass,88, 12229, 10, 3.1, NULL, 12225, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkObjectFactoryClass,176, 12229, 12, 3.1, NULL, 12225, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12225,NULL);\n",architecture,12229,0);
 Msg("Find size of AtkObjectFactoryClass (12229)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkNoOpObjectFactoryClass,88, 12230, 2, 3.1, NULL, 12224, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkNoOpObjectFactoryClass,176, 12230, 11, 3.1, NULL, 12224, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkNoOpObjectFactoryClass,176, 12230, 3, 3.1, NULL, 12224, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkNoOpObjectFactoryClass,88, 12230, 6, 3.1, NULL, 12224, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkNoOpObjectFactoryClass,176, 12230, 9, 3.1, NULL, 12224, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkNoOpObjectFactoryClass,88, 12230, 10, 3.1, NULL, 12224, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkNoOpObjectFactoryClass,176, 12230, 12, 3.1, NULL, 12224, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12224,NULL);\n",architecture,12230,0);
 Msg("Find size of AtkNoOpObjectFactoryClass (12230)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkActionIface,40, 12236, 2, 3.1, NULL, 12231, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkActionIface,80, 12236, 11, 3.1, NULL, 12231, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkActionIface,80, 12236, 3, 3.1, NULL, 12231, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkActionIface,40, 12236, 6, 3.1, NULL, 12231, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkActionIface,80, 12236, 9, 3.1, NULL, 12231, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkActionIface,40, 12236, 10, 3.1, NULL, 12231, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkActionIface,80, 12236, 12, 3.1, NULL, 12231, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12231,NULL);\n",architecture,12236,0);
 Msg("Find size of AtkActionIface (12236)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkTableIface,168, 12253, 2, 3.1, NULL, 12237, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkTableIface,336, 12253, 11, 3.1, NULL, 12237, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkTableIface,336, 12253, 3, 3.1, NULL, 12237, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkTableIface,168, 12253, 6, 3.1, NULL, 12237, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkTableIface,336, 12253, 9, 3.1, NULL, 12237, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkTableIface,168, 12253, 10, 3.1, NULL, 12237, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkTableIface,336, 12253, 12, 3.1, NULL, 12237, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12237,NULL);\n",architecture,12253,0);
 Msg("Find size of AtkTableIface (12253)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkValueIface,32, 12257, 2, 3.1, NULL, 12254, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkValueIface,64, 12257, 11, 3.1, NULL, 12254, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkValueIface,64, 12257, 3, 3.1, NULL, 12254, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkValueIface,32, 12257, 6, 3.1, NULL, 12254, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkValueIface,64, 12257, 9, 3.1, NULL, 12254, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkValueIface,32, 12257, 10, 3.1, NULL, 12254, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkValueIface,64, 12257, 12, 3.1, NULL, 12254, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12254,NULL);\n",architecture,12257,0);
 Msg("Find size of AtkValueIface (12257)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkRelationClass,68, 12259, 2, 3.1, NULL, 12258, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkRelationClass,136, 12259, 11, 3.1, NULL, 12258, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkRelationClass,136, 12259, 3, 3.1, NULL, 12258, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkRelationClass,68, 12259, 6, 3.1, NULL, 12258, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkRelationClass,136, 12259, 9, 3.1, NULL, 12258, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkRelationClass,68, 12259, 10, 3.1, NULL, 12258, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkRelationClass,136, 12259, 12, 3.1, NULL, 12258, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12258,NULL);\n",architecture,12259,0);
 Msg("Find size of AtkRelationClass (12259)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkTextIface,104, 12278, 2, 3.1, NULL, 12260, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkTextIface,208, 12278, 11, 3.1, NULL, 12260, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkTextIface,208, 12278, 3, 3.1, NULL, 12260, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkTextIface,104, 12278, 6, 3.1, NULL, 12260, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkTextIface,208, 12278, 9, 3.1, NULL, 12260, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkTextIface,104, 12278, 10, 3.1, NULL, 12260, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkTextIface,208, 12278, 12, 3.1, NULL, 12260, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12260,NULL);\n",architecture,12278,0);
 Msg("Find size of AtkTextIface (12278)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkRelationSetClass,76, 12280, 2, 3.1, NULL, 12279, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkRelationSetClass,152, 12280, 11, 3.1, NULL, 12279, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkRelationSetClass,152, 12280, 3, 3.1, NULL, 12279, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkRelationSetClass,76, 12280, 6, 3.1, NULL, 12279, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkRelationSetClass,152, 12280, 9, 3.1, NULL, 12279, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkRelationSetClass,76, 12280, 10, 3.1, NULL, 12279, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkRelationSetClass,152, 12280, 12, 3.1, NULL, 12279, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12279,NULL);\n",architecture,12280,0);
 Msg("Find size of AtkRelationSetClass (12280)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkSelectionIface,48, 12287, 2, 3.1, NULL, 12281, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkSelectionIface,96, 12287, 11, 3.1, NULL, 12281, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkSelectionIface,96, 12287, 3, 3.1, NULL, 12281, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkSelectionIface,48, 12287, 6, 3.1, NULL, 12281, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkSelectionIface,96, 12287, 9, 3.1, NULL, 12281, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkSelectionIface,48, 12287, 10, 3.1, NULL, 12281, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkSelectionIface,96, 12287, 12, 3.1, NULL, 12281, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12281,NULL);\n",architecture,12287,0);
 Msg("Find size of AtkSelectionIface (12287)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkUtilClass,96, 12294, 2, 3.1, NULL, 12288, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkUtilClass,192, 12294, 11, 3.1, NULL, 12288, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkUtilClass,192, 12294, 3, 3.1, NULL, 12288, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkUtilClass,96, 12294, 6, 3.1, NULL, 12288, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkUtilClass,192, 12294, 9, 3.1, NULL, 12288, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkUtilClass,96, 12294, 10, 3.1, NULL, 12288, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkUtilClass,192, 12294, 12, 3.1, NULL, 12288, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12288,NULL);\n",architecture,12294,0);
 Msg("Find size of AtkUtilClass (12294)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkNoOpObjectClass,176, 12296, 2, 3.1, NULL, 12295, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkNoOpObjectClass,352, 12296, 11, 3.1, NULL, 12295, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkNoOpObjectClass,352, 12296, 3, 3.1, NULL, 12295, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkNoOpObjectClass,176, 12296, 6, 3.1, NULL, 12295, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkNoOpObjectClass,352, 12296, 9, 3.1, NULL, 12295, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkNoOpObjectClass,176, 12296, 10, 3.1, NULL, 12295, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkNoOpObjectClass,352, 12296, 12, 3.1, NULL, 12295, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12295,NULL);\n",architecture,12296,0);
 Msg("Find size of AtkNoOpObjectClass (12296)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkImageIface,32, 12302, 2, 3.1, NULL, 12297, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkImageIface,64, 12302, 11, 3.1, NULL, 12297, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkImageIface,64, 12302, 3, 3.1, NULL, 12297, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkImageIface,32, 12302, 6, 3.1, NULL, 12297, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkImageIface,64, 12302, 9, 3.1, NULL, 12297, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkImageIface,32, 12302, 10, 3.1, NULL, 12297, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkImageIface,64, 12302, 12, 3.1, NULL, 12297, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12297,NULL);\n",architecture,12302,0);
 Msg("Find size of AtkImageIface (12302)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkComponentIface,68, 12318, 2, 3.1, NULL, 12303, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkComponentIface,136, 12318, 11, 3.1, NULL, 12303, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkComponentIface,136, 12318, 3, 3.1, NULL, 12303, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkComponentIface,68, 12318, 6, 3.1, NULL, 12303, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkComponentIface,136, 12318, 9, 3.1, NULL, 12303, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkComponentIface,68, 12318, 10, 3.1, NULL, 12303, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkComponentIface,136, 12318, 12, 3.1, NULL, 12303, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12303,NULL);\n",architecture,12318,0);
 Msg("Find size of AtkComponentIface (12318)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkEditableTextIface,44, 12325, 2, 3.1, NULL, 12319, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkEditableTextIface,88, 12325, 11, 3.1, NULL, 12319, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkEditableTextIface,88, 12325, 3, 3.1, NULL, 12319, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkEditableTextIface,44, 12325, 6, 3.1, NULL, 12319, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkEditableTextIface,88, 12325, 9, 3.1, NULL, 12319, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkEditableTextIface,44, 12325, 10, 3.1, NULL, 12319, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkEditableTextIface,88, 12325, 12, 3.1, NULL, 12319, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12319,NULL);\n",architecture,12325,0);
 Msg("Find size of AtkEditableTextIface (12325)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkDocumentIface,48, 12329, 2, 3.1, NULL, 12326, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkDocumentIface,96, 12329, 11, 3.1, NULL, 12326, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkDocumentIface,96, 12329, 3, 3.1, NULL, 12326, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkDocumentIface,48, 12329, 6, 3.1, NULL, 12326, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkDocumentIface,96, 12329, 9, 3.1, NULL, 12326, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkDocumentIface,48, 12329, 10, 3.1, NULL, 12326, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkDocumentIface,96, 12329, 12, 3.1, NULL, 12326, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12326,NULL);\n",architecture,12329,0);
 Msg("Find size of AtkDocumentIface (12329)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkHyperlinkClass,108, 12337, 2, 3.1, NULL, 12330, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkHyperlinkClass,216, 12337, 11, 3.1, NULL, 12330, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkHyperlinkClass,216, 12337, 3, 3.1, NULL, 12330, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkHyperlinkClass,108, 12337, 6, 3.1, NULL, 12330, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkHyperlinkClass,216, 12337, 9, 3.1, NULL, 12330, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkHyperlinkClass,108, 12337, 10, 3.1, NULL, 12330, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkHyperlinkClass,216, 12337, 12, 3.1, NULL, 12330, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12330,NULL);\n",architecture,12337,0);
 Msg("Find size of AtkHyperlinkClass (12337)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkKeyEventType,4, 12339, 2, 3.1, NULL, 12338, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkKeyEventType,4, 12339, 11, 3.1, NULL, 12338, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkKeyEventType,4, 12339, 3, 3.1, NULL, 12338, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkKeyEventType,4, 12339, 6, 3.1, NULL, 12338, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkKeyEventType,4, 12339, 9, 3.1, NULL, 12338, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkKeyEventType,4, 12339, 10, 3.1, NULL, 12338, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkKeyEventType,4, 12339, 12, 3.1, NULL, 12338, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12338,NULL);\n",architecture,12339,0);
 Msg("Find size of AtkKeyEventType (12339)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkUtil,12, 12341, 2, 3.1, NULL, 12340, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkUtil,24, 12341, 3, 3.1, NULL, 12340, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkUtil,12, 12341, 6, 3.1, NULL, 12340, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkUtil,24, 12341, 9, 3.1, NULL, 12340, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkUtil,12, 12341, 10, 3.1, NULL, 12340, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkUtil,24, 12341, 12, 3.1, NULL, 12340, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkUtil,24, 12341, 11, 3.1, NULL, 12340, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12340,NULL);\n",architecture,12341,0);
 Msg("Find size of AtkUtil (12341)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkHyperlinkStateFlags,4, 12343, 2, 3.1, NULL, 12342, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkHyperlinkStateFlags,4, 12343, 11, 3.1, NULL, 12342, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkHyperlinkStateFlags,4, 12343, 3, 3.1, NULL, 12342, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkHyperlinkStateFlags,4, 12343, 6, 3.1, NULL, 12342, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkHyperlinkStateFlags,4, 12343, 9, 3.1, NULL, 12342, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkHyperlinkStateFlags,4, 12343, 10, 3.1, NULL, 12342, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkHyperlinkStateFlags,4, 12343, 12, 3.1, NULL, 12342, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12342,NULL);\n",architecture,12343,0);
 Msg("Find size of AtkHyperlinkStateFlags (12343)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkNoOpObjectFactory,12, 12345, 2, 3.1, NULL, 12344, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkNoOpObjectFactory,24, 12345, 3, 3.1, NULL, 12344, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkNoOpObjectFactory,12, 12345, 6, 3.1, NULL, 12344, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkNoOpObjectFactory,24, 12345, 9, 3.1, NULL, 12344, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkNoOpObjectFactory,12, 12345, 10, 3.1, NULL, 12344, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkNoOpObjectFactory,24, 12345, 12, 3.1, NULL, 12344, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkNoOpObjectFactory,24, 12345, 11, 3.1, NULL, 12344, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12344,NULL);\n",architecture,12345,0);
 Msg("Find size of AtkNoOpObjectFactory (12345)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AtkNoOpObject,36, 12347, 2, 3.1, NULL, 12346, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AtkNoOpObject,72, 12347, 3, 3.1, NULL, 12346, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AtkNoOpObject,36, 12347, 6, 3.1, NULL, 12346, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AtkNoOpObject,72, 12347, 9, 3.1, NULL, 12346, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AtkNoOpObject,36, 12347, 10, 3.1, NULL, 12346, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AtkNoOpObject,72, 12347, 12, 3.1, NULL, 12346, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AtkNoOpObject,72, 12347, 11, 3.1, NULL, 12346, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12346, NULL);\n",architecture,12347,0);

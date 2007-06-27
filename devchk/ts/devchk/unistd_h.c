@@ -1848,19 +1848,19 @@ cnt++;
 
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(off64_t,8, 9112, 2, 1.2, NULL, 10, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(off64_t,8, 9112, 3, 1.3, NULL, 10, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(off64_t,8, 9112, 6, 1.2, NULL, 10, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(off64_t,8, 9112, 10, 1.3, NULL, 10, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(off64_t,8, 9112, 9, 2.0, NULL, 10, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(off64_t,8, 9112, 12, 1.3, NULL, 10, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(off64_t,8, 9112, 11, 2.0, NULL, 10, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10, NULL);\n",architecture,9112,0);

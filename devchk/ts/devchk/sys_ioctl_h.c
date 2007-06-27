@@ -25,7 +25,7 @@ Msg("Checking data structures in sys/ioctl.h\n");
 #endif
 
 printf("Checking data structures in sys/ioctl.h\n");
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef TIOCGWINSZ
 	CompareConstant(TIOCGWINSZ,0x40087468,4611,architecture,3.0,NULL)
 #else
@@ -33,7 +33,7 @@ Msg( "Error: Constant not found: TIOCGWINSZ\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef TIOCGWINSZ
 	CompareConstant(TIOCGWINSZ,0x40087468,4611,architecture,3.0,NULL)
 #else
@@ -41,7 +41,7 @@ Msg( "Error: Constant not found: TIOCGWINSZ\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef TIOCGWINSZ
 	CompareConstant(TIOCGWINSZ,0x5413,4611,architecture,3.0,NULL)
 #else
@@ -49,7 +49,7 @@ Msg( "Error: Constant not found: TIOCGWINSZ\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef TIOCGWINSZ
 	CompareConstant(TIOCGWINSZ,0x5413,4611,architecture,3.0,NULL)
 #else
@@ -57,7 +57,7 @@ Msg( "Error: Constant not found: TIOCGWINSZ\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef TIOCGWINSZ
 	CompareConstant(TIOCGWINSZ,0x5413,4611,architecture,3.0,NULL)
 #else
@@ -65,7 +65,7 @@ Msg( "Error: Constant not found: TIOCGWINSZ\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef TIOCGWINSZ
 	CompareConstant(TIOCGWINSZ,0x5413,4611,architecture,3.0,NULL)
 #else
@@ -73,7 +73,7 @@ Msg( "Error: Constant not found: TIOCGWINSZ\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef TIOCGWINSZ
 	CompareConstant(TIOCGWINSZ,0x5413,4611,architecture,3.0,NULL)
 #else
@@ -87,7 +87,7 @@ Msg( "No definition for TIOCGWINSZ (4611, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,4611,%d,'""3.0""',NULL);\n", architecture, TIOCGWINSZ);
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef FIONREAD
 	CompareConstant(FIONREAD,1074030207,4619,architecture,2.0,NULL)
 #else
@@ -95,7 +95,7 @@ Msg( "Error: Constant not found: FIONREAD\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef FIONREAD
 	CompareConstant(FIONREAD,1074030207,4619,architecture,1.2,NULL)
 #else
@@ -103,7 +103,7 @@ Msg( "Error: Constant not found: FIONREAD\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef FIONREAD
 	CompareConstant(FIONREAD,0x541B,4619,architecture,1.3,NULL)
 #else
@@ -111,7 +111,7 @@ Msg( "Error: Constant not found: FIONREAD\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef FIONREAD
 	CompareConstant(FIONREAD,0x541B,4619,architecture,1.1,NULL)
 #else
@@ -119,7 +119,7 @@ Msg( "Error: Constant not found: FIONREAD\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef FIONREAD
 	CompareConstant(FIONREAD,21531,4619,architecture,1.3,NULL)
 #else
@@ -127,7 +127,7 @@ Msg( "Error: Constant not found: FIONREAD\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef FIONREAD
 	CompareConstant(FIONREAD,0x541B,4619,architecture,2.0,NULL)
 #else
@@ -135,7 +135,7 @@ Msg( "Error: Constant not found: FIONREAD\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef FIONREAD
 	CompareConstant(FIONREAD,0x541B,4619,architecture,1.3,NULL)
 #else
@@ -149,7 +149,7 @@ Msg( "No definition for FIONREAD (4619, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,4619,%d,'""1.3""',NULL);\n", architecture, FIONREAD);
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef TIOCNOTTY
 	CompareConstant(TIOCNOTTY,21538,4627,architecture,2.0,NULL)
 #else
@@ -157,7 +157,7 @@ Msg( "Error: Constant not found: TIOCNOTTY\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef TIOCNOTTY
 	CompareConstant(TIOCNOTTY,0x5422,4627,architecture,1.2,NULL)
 #else
@@ -165,7 +165,7 @@ Msg( "Error: Constant not found: TIOCNOTTY\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef TIOCNOTTY
 	CompareConstant(TIOCNOTTY,0x5422,4627,architecture,1.3,NULL)
 #else
@@ -173,7 +173,7 @@ Msg( "Error: Constant not found: TIOCNOTTY\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef TIOCNOTTY
 	CompareConstant(TIOCNOTTY,0x5422,4627,architecture,1.2,NULL)
 #else
@@ -181,7 +181,7 @@ Msg( "Error: Constant not found: TIOCNOTTY\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef TIOCNOTTY
 	CompareConstant(TIOCNOTTY,21538,4627,architecture,1.3,NULL)
 #else
@@ -189,7 +189,7 @@ Msg( "Error: Constant not found: TIOCNOTTY\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef TIOCNOTTY
 	CompareConstant(TIOCNOTTY,21538,4627,architecture,2.0,NULL)
 #else
@@ -197,7 +197,7 @@ Msg( "Error: Constant not found: TIOCNOTTY\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef TIOCNOTTY
 	CompareConstant(TIOCNOTTY,21538,4627,architecture,1.3,NULL)
 #else
@@ -211,13 +211,13 @@ Msg( "No definition for TIOCNOTTY (4627, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,4627,%d,'""1.3""',NULL);\n", architecture, TIOCNOTTY);
 #endif
 #endif
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10301,0);
 Msg("Find size of winsize (10301)\n");

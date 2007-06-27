@@ -55,25 +55,25 @@ cnt++;
 
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9855,0);
 Msg("Find size of timezone (9855)\n");
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9861,0);
 Msg("Find size of itimerval (9861)\n");
@@ -83,25 +83,25 @@ Msg("Find size of itimerval (9861)\n");
 CheckTypeSize(__itimer_which_t,4, 9862, 1, 2.0, NULL, 6, NULL)
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,7018,0);
 Msg("Find size of timespec (7018)\n");
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,9858,0);
 Msg("Find size of timeval (9858)\n");

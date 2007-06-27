@@ -85,7 +85,7 @@ cnt++;
 
 #endif
 
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef LONG_MAX
 	CompareConstant(LONG_MAX,9223372036854775807L,16,architecture,2.0,NULL)
 #else
@@ -93,7 +93,7 @@ Msg( "Error: Constant not found: LONG_MAX\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef LONG_MAX
 	CompareConstant(LONG_MAX,2147483647L,16,architecture,1.2,NULL)
 #else
@@ -101,7 +101,7 @@ Msg( "Error: Constant not found: LONG_MAX\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef LONG_MAX
 	CompareConstant(LONG_MAX,0x7FFFFFFFFFFFFFFFL,16,architecture,1.3,NULL)
 #else
@@ -109,7 +109,7 @@ Msg( "Error: Constant not found: LONG_MAX\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef LONG_MAX
 	CompareConstant(LONG_MAX,0x7FFFFFFFL,16,architecture,1.1,NULL)
 #else
@@ -117,7 +117,7 @@ Msg( "Error: Constant not found: LONG_MAX\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef LONG_MAX
 	CompareConstant(LONG_MAX,9223372036854775807L,16,architecture,1.3,NULL)
 #else
@@ -125,7 +125,7 @@ Msg( "Error: Constant not found: LONG_MAX\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef LONG_MAX
 	CompareConstant(LONG_MAX,0x7FFFFFFFFFFFFFFFL,16,architecture,2.0,NULL)
 #else
@@ -133,7 +133,7 @@ Msg( "Error: Constant not found: LONG_MAX\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef LONG_MAX
 	CompareConstant(LONG_MAX,2147483647,16,architecture,1.3,NULL)
 #else
@@ -157,7 +157,7 @@ cnt++;
 
 #endif
 
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef ULONG_MAX
 	CompareLongConstant(ULONG_MAX,0xFFFFFFFFFFFFFFFFUL,18,architecture,2.0,NULL)
 #else
@@ -165,7 +165,7 @@ Msg( "Error: Constant not found: ULONG_MAX\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef ULONG_MAX
 	CompareLongConstant(ULONG_MAX,0xFFFFFFFFUL,18,architecture,1.2,NULL)
 #else
@@ -173,7 +173,7 @@ Msg( "Error: Constant not found: ULONG_MAX\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef ULONG_MAX
 	CompareLongConstant(ULONG_MAX,0xFFFFFFFFFFFFFFFFUL,18,architecture,1.3,NULL)
 #else
@@ -181,7 +181,7 @@ Msg( "Error: Constant not found: ULONG_MAX\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef ULONG_MAX
 	CompareLongConstant(ULONG_MAX,0xFFFFFFFFUL,18,architecture,1.1,NULL)
 #else
@@ -189,7 +189,7 @@ Msg( "Error: Constant not found: ULONG_MAX\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef ULONG_MAX
 	CompareLongConstant(ULONG_MAX,0xFFFFFFFFFFFFFFFFUL,18,architecture,1.3,NULL)
 #else
@@ -197,7 +197,7 @@ Msg( "Error: Constant not found: ULONG_MAX\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef ULONG_MAX
 	CompareLongConstant(ULONG_MAX,0xFFFFFFFFFFFFFFFFUL,18,architecture,2.0,NULL)
 #else
@@ -205,7 +205,7 @@ Msg( "Error: Constant not found: ULONG_MAX\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef ULONG_MAX
 	CompareLongConstant(ULONG_MAX,0xFFFFFFFFUL,18,architecture,1.3,NULL)
 #else
@@ -339,7 +339,7 @@ cnt++;
 
 #endif
 
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef PTHREAD_STACK_MIN
 	CompareConstant(PTHREAD_STACK_MIN,16384,5310,architecture,3.0,NULL)
 #else
@@ -347,7 +347,7 @@ Msg( "Error: Constant not found: PTHREAD_STACK_MIN\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef PTHREAD_STACK_MIN
 	CompareConstant(PTHREAD_STACK_MIN,16384,5310,architecture,3.0,NULL)
 #else
@@ -355,7 +355,7 @@ Msg( "Error: Constant not found: PTHREAD_STACK_MIN\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef PTHREAD_STACK_MIN
 	CompareConstant(PTHREAD_STACK_MIN,196608,5310,architecture,3.0,NULL)
 #else
@@ -363,7 +363,7 @@ Msg( "Error: Constant not found: PTHREAD_STACK_MIN\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef PTHREAD_STACK_MIN
 	CompareConstant(PTHREAD_STACK_MIN,16384,5310,architecture,3.0,NULL)
 #else
@@ -371,7 +371,7 @@ Msg( "Error: Constant not found: PTHREAD_STACK_MIN\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef PTHREAD_STACK_MIN
 	CompareConstant(PTHREAD_STACK_MIN,16384,5310,architecture,3.0,NULL)
 #else
@@ -379,7 +379,7 @@ Msg( "Error: Constant not found: PTHREAD_STACK_MIN\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef PTHREAD_STACK_MIN
 	CompareConstant(PTHREAD_STACK_MIN,16384,5310,architecture,3.0,NULL)
 #else
@@ -387,7 +387,7 @@ Msg( "Error: Constant not found: PTHREAD_STACK_MIN\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef PTHREAD_STACK_MIN
 	CompareConstant(PTHREAD_STACK_MIN,16384,5310,architecture,3.0,NULL)
 #else
@@ -421,7 +421,7 @@ cnt++;
 
 #endif
 
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef CHAR_MIN
 	CompareConstant(CHAR_MIN,0,8,architecture,2.0,NULL)
 #else
@@ -429,7 +429,7 @@ Msg( "Error: Constant not found: CHAR_MIN\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef CHAR_MIN
 	CompareConstant(CHAR_MIN,0,8,architecture,1.2,NULL)
 #else
@@ -437,7 +437,7 @@ Msg( "Error: Constant not found: CHAR_MIN\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef CHAR_MIN
 	CompareConstant(CHAR_MIN,SCHAR_MIN,8,architecture,1.3,NULL)
 #else
@@ -445,7 +445,7 @@ Msg( "Error: Constant not found: CHAR_MIN\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef CHAR_MIN
 	CompareConstant(CHAR_MIN,SCHAR_MIN,8,architecture,1.1,NULL)
 #else
@@ -453,7 +453,7 @@ Msg( "Error: Constant not found: CHAR_MIN\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef CHAR_MIN
 	CompareConstant(CHAR_MIN,0,8,architecture,1.3,NULL)
 #else
@@ -461,7 +461,7 @@ Msg( "Error: Constant not found: CHAR_MIN\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef CHAR_MIN
 	CompareConstant(CHAR_MIN,SCHAR_MIN,8,architecture,2.0,NULL)
 #else
@@ -469,7 +469,7 @@ Msg( "Error: Constant not found: CHAR_MIN\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef CHAR_MIN
 	CompareConstant(CHAR_MIN,0,8,architecture,1.3,NULL)
 #else
@@ -483,7 +483,7 @@ Msg( "No definition for CHAR_MIN (8, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,8,%d,'""1.3""',NULL);\n", architecture, CHAR_MIN);
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef CHAR_MAX
 	CompareConstant(CHAR_MAX,255,9,architecture,2.0,NULL)
 #else
@@ -491,7 +491,7 @@ Msg( "Error: Constant not found: CHAR_MAX\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef CHAR_MAX
 	CompareConstant(CHAR_MAX,255,9,architecture,1.2,NULL)
 #else
@@ -499,7 +499,7 @@ Msg( "Error: Constant not found: CHAR_MAX\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef CHAR_MAX
 	CompareConstant(CHAR_MAX,SCHAR_MAX,9,architecture,1.3,NULL)
 #else
@@ -507,7 +507,7 @@ Msg( "Error: Constant not found: CHAR_MAX\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef CHAR_MAX
 	CompareConstant(CHAR_MAX,SCHAR_MAX,9,architecture,1.1,NULL)
 #else
@@ -515,7 +515,7 @@ Msg( "Error: Constant not found: CHAR_MAX\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef CHAR_MAX
 	CompareConstant(CHAR_MAX,255,9,architecture,1.3,NULL)
 #else
@@ -523,7 +523,7 @@ Msg( "Error: Constant not found: CHAR_MAX\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef CHAR_MAX
 	CompareConstant(CHAR_MAX,127,9,architecture,2.0,NULL)
 #else
@@ -531,7 +531,7 @@ Msg( "Error: Constant not found: CHAR_MAX\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef CHAR_MAX
 	CompareConstant(CHAR_MAX,255,9,architecture,1.3,NULL)
 #else

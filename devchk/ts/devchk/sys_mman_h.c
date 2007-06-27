@@ -145,7 +145,7 @@ cnt++;
 
 #endif
 
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef MCL_CURRENT
 	CompareConstant(MCL_CURRENT,8192,3519,architecture,2.0,NULL)
 #else
@@ -153,7 +153,7 @@ Msg( "Error: Constant not found: MCL_CURRENT\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef MCL_CURRENT
 	CompareConstant(MCL_CURRENT,8192,3519,architecture,1.2,NULL)
 #else
@@ -161,7 +161,7 @@ Msg( "Error: Constant not found: MCL_CURRENT\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef MCL_CURRENT
 	CompareConstant(MCL_CURRENT,1,3519,architecture,1.3,NULL)
 #else
@@ -169,7 +169,7 @@ Msg( "Error: Constant not found: MCL_CURRENT\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef MCL_CURRENT
 	CompareConstant(MCL_CURRENT,1,3519,architecture,1.2,NULL)
 #else
@@ -177,7 +177,7 @@ Msg( "Error: Constant not found: MCL_CURRENT\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef MCL_CURRENT
 	CompareConstant(MCL_CURRENT,1,3519,architecture,1.3,NULL)
 #else
@@ -185,7 +185,7 @@ Msg( "Error: Constant not found: MCL_CURRENT\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef MCL_CURRENT
 	CompareConstant(MCL_CURRENT,1,3519,architecture,2.0,NULL)
 #else
@@ -193,7 +193,7 @@ Msg( "Error: Constant not found: MCL_CURRENT\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef MCL_CURRENT
 	CompareConstant(MCL_CURRENT,1,3519,architecture,1.3,NULL)
 #else
@@ -207,7 +207,7 @@ Msg( "No definition for MCL_CURRENT (3519, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3519,%d,'""1.3""',NULL);\n", architecture, MCL_CURRENT);
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef MCL_FUTURE
 	CompareConstant(MCL_FUTURE,16384,3520,architecture,2.0,NULL)
 #else
@@ -215,7 +215,7 @@ Msg( "Error: Constant not found: MCL_FUTURE\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef MCL_FUTURE
 	CompareConstant(MCL_FUTURE,16384,3520,architecture,1.2,NULL)
 #else
@@ -223,7 +223,7 @@ Msg( "Error: Constant not found: MCL_FUTURE\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef MCL_FUTURE
 	CompareConstant(MCL_FUTURE,2,3520,architecture,1.3,NULL)
 #else
@@ -231,7 +231,7 @@ Msg( "Error: Constant not found: MCL_FUTURE\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef MCL_FUTURE
 	CompareConstant(MCL_FUTURE,2,3520,architecture,1.2,NULL)
 #else
@@ -239,7 +239,7 @@ Msg( "Error: Constant not found: MCL_FUTURE\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef MCL_FUTURE
 	CompareConstant(MCL_FUTURE,2,3520,architecture,1.3,NULL)
 #else
@@ -247,7 +247,7 @@ Msg( "Error: Constant not found: MCL_FUTURE\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef MCL_FUTURE
 	CompareConstant(MCL_FUTURE,2,3520,architecture,2.0,NULL)
 #else
@@ -255,7 +255,7 @@ Msg( "Error: Constant not found: MCL_FUTURE\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef MCL_FUTURE
 	CompareConstant(MCL_FUTURE,2,3520,architecture,1.3,NULL)
 #else

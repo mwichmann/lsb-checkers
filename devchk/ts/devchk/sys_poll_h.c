@@ -85,31 +85,31 @@ cnt++;
 
 #endif
 
-#if __i386__
-#elif __powerpc__ && !__powerpc64__
-#elif __ia64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __ia64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9913,0);
 Msg("Find size of pollfd (9913)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(nfds_t,4, 10978, 2, 2.0, NULL, 9, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(nfds_t,8, 10978, 3, 2.0, NULL, 9, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(nfds_t,8, 10978, 9, 2.0, NULL, 9, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(nfds_t,4, 10978, 6, 2.0, NULL, 9, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(nfds_t,8, 10978, 12, 2.0, NULL, 9, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(nfds_t,8, 10978, 11, 2.0, NULL, 9, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(nfds_t,4, 10978, 10, 2.0, NULL, 9, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9, NULL);\n",architecture,10978,0);

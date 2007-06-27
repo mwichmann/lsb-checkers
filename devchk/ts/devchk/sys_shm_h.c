@@ -25,7 +25,7 @@ Msg("Checking data structures in sys/shm.h\n");
 #endif
 
 printf("Checking data structures in sys/shm.h\n");
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef SHMLBA
 	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture,2.0,NULL)
 #else
@@ -33,7 +33,7 @@ Msg( "Error: Constant not found: SHMLBA\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef SHMLBA
 	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture,1.2,NULL)
 #else
@@ -41,7 +41,7 @@ Msg( "Error: Constant not found: SHMLBA\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef SHMLBA
 	CompareConstant(SHMLBA,(1024*1024),1681,architecture,1.3,NULL)
 #else
@@ -49,7 +49,7 @@ Msg( "Error: Constant not found: SHMLBA\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef SHMLBA
 	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture,1.1,NULL)
 #else
@@ -57,7 +57,7 @@ Msg( "Error: Constant not found: SHMLBA\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef SHMLBA
 	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture,1.3,NULL)
 #else
@@ -65,7 +65,7 @@ Msg( "Error: Constant not found: SHMLBA\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef SHMLBA
 	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture,2.0,NULL)
 #else
@@ -73,7 +73,7 @@ Msg( "Error: Constant not found: SHMLBA\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef SHMLBA
 	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture,1.3,NULL)
 #else
@@ -157,30 +157,30 @@ cnt++;
 
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(shmatt_t,4, 10212, 2, 2.0, NULL, 9, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(shmatt_t,4, 10212, 6, 2.0, NULL, 9, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(shmatt_t,4, 10212, 10, 2.0, NULL, 9, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(shmatt_t,8, 10212, 9, 2.0, NULL, 9, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(shmatt_t,8, 10212, 12, 2.0, NULL, 9, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(shmatt_t,8, 10212, 11, 2.0, NULL, 9, NULL)
 #endif
 
-#if __i386__
-#elif __powerpc__ && !__powerpc64__
-#elif __ia64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __ia64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #endif
 
-#if !__ia64__   /* XXX hand-edit */
+#if !defined__ia64__   /* XXX hand-edit */
 extern int __getpagesize_db(void);
 CheckInterfacedef(__getpagesize,__getpagesize_db);
 #endif

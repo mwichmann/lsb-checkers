@@ -29,190 +29,190 @@ Msg("Checking data structures in X11/extensions/sync.h\n");
 #endif
 
 printf("Checking data structures in X11/extensions/sync.h\n");
-#if __i386__
+#if defined __i386__
 CheckTypeSize(XSyncSystemCounter,16, 8615, 2, 1.2, NULL, 8614, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(XSyncSystemCounter,24, 8615, 3, 1.3, NULL, 8614, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XSyncSystemCounter,16, 8615, 6, 1.2, NULL, 8614, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(XSyncSystemCounter,16, 8615, 10, 1.3, NULL, 8614, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(XSyncSystemCounter,24, 8615, 9, 2.0, NULL, 8614, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(XSyncSystemCounter,24, 8615, 12, 1.3, NULL, 8614, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(XSyncSystemCounter,24, 8615, 11, 2.0, NULL, 8614, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8614,NULL);\n",architecture,8615,0);
 Msg("Find size of XSyncSystemCounter (8615)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(XSyncTrigger,20, 8617, 2, 1.2, NULL, 8616, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(XSyncTrigger,24, 8617, 3, 1.3, NULL, 8616, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XSyncTrigger,20, 8617, 6, 1.2, NULL, 8616, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(XSyncTrigger,20, 8617, 10, 1.3, NULL, 8616, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(XSyncTrigger,24, 8617, 9, 2.0, NULL, 8616, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(XSyncTrigger,24, 8617, 12, 1.3, NULL, 8616, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(XSyncTrigger,24, 8617, 11, 2.0, NULL, 8616, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8616,NULL);\n",architecture,8617,0);
 Msg("Find size of XSyncTrigger (8617)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(XSyncWaitCondition,28, 8619, 2, 1.2, NULL, 8618, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(XSyncWaitCondition,32, 8619, 3, 1.3, NULL, 8618, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XSyncWaitCondition,28, 8619, 6, 1.2, NULL, 8618, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(XSyncWaitCondition,28, 8619, 10, 1.3, NULL, 8618, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(XSyncWaitCondition,32, 8619, 9, 2.0, NULL, 8618, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(XSyncWaitCondition,32, 8619, 12, 1.3, NULL, 8618, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(XSyncWaitCondition,32, 8619, 11, 2.0, NULL, 8618, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8618,NULL);\n",architecture,8619,0);
 Msg("Find size of XSyncWaitCondition (8619)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(XSyncAlarmAttributes,36, 8621, 2, 1.2, NULL, 8620, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(XSyncAlarmAttributes,40, 8621, 3, 1.3, NULL, 8620, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XSyncAlarmAttributes,36, 8621, 6, 1.2, NULL, 8620, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(XSyncAlarmAttributes,36, 8621, 10, 1.3, NULL, 8620, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(XSyncAlarmAttributes,40, 8621, 9, 2.0, NULL, 8620, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(XSyncAlarmAttributes,40, 8621, 12, 1.3, NULL, 8620, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(XSyncAlarmAttributes,40, 8621, 11, 2.0, NULL, 8620, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8620,NULL);\n",architecture,8621,0);
 Msg("Find size of XSyncAlarmAttributes (8621)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(XSyncCounter,4, 8609, 2, 1.0, NULL, 8171, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(XSyncCounter,8, 8609, 3, 1.3, NULL, 8171, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XSyncCounter,4, 8609, 6, 1.2, NULL, 8171, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(XSyncCounter,4, 8609, 10, 1.3, NULL, 8171, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(XSyncCounter,8, 8609, 9, 2.0, NULL, 8171, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(XSyncCounter,8, 8609, 12, 1.3, NULL, 8171, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(XSyncCounter,8, 8609, 11, 2.0, NULL, 8171, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8609,0);
 Msg("Find size of XSyncCounter (8609)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(XSyncAlarm,4, 8610, 2, 1.0, NULL, 8171, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(XSyncAlarm,8, 8610, 3, 1.3, NULL, 8171, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XSyncAlarm,4, 8610, 6, 1.2, NULL, 8171, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(XSyncAlarm,4, 8610, 10, 1.3, NULL, 8171, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(XSyncAlarm,8, 8610, 9, 2.0, NULL, 8171, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(XSyncAlarm,8, 8610, 12, 1.3, NULL, 8171, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(XSyncAlarm,8, 8610, 11, 2.0, NULL, 8171, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8610,0);
 Msg("Find size of XSyncAlarm (8610)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(XSyncValue,8, 8612, 2, 1.2, NULL, 8611, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(XSyncValue,8, 8612, 3, 1.3, NULL, 8611, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XSyncValue,8, 8612, 6, 1.2, NULL, 8611, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(XSyncValue,8, 8612, 10, 1.3, NULL, 8611, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(XSyncValue,8, 8612, 9, 2.0, NULL, 8611, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(XSyncValue,8, 8612, 12, 1.3, NULL, 8611, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(XSyncValue,8, 8612, 11, 2.0, NULL, 8611, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8611,NULL);\n",architecture,8612,0);
 Msg("Find size of XSyncValue (8612)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(XSyncValueType,4, 8964, 2, 1.2, NULL, 8963, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(XSyncValueType,4, 8964, 3, 1.3, NULL, 8963, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XSyncValueType,4, 8964, 6, 1.2, NULL, 8963, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(XSyncValueType,4, 8964, 10, 1.3, NULL, 8963, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(XSyncValueType,4, 8964, 9, 2.0, NULL, 8963, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(XSyncValueType,4, 8964, 12, 1.3, NULL, 8963, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(XSyncValueType,4, 8964, 11, 2.0, NULL, 8963, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8963,NULL);\n",architecture,8964,0);
 Msg("Find size of XSyncValueType (8964)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(XSyncTestType,4, 8966, 2, 1.2, NULL, 8965, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(XSyncTestType,4, 8966, 3, 1.3, NULL, 8965, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XSyncTestType,4, 8966, 6, 1.2, NULL, 8965, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(XSyncTestType,4, 8966, 10, 1.3, NULL, 8965, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(XSyncTestType,4, 8966, 9, 2.0, NULL, 8965, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(XSyncTestType,4, 8966, 12, 1.3, NULL, 8965, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(XSyncTestType,4, 8966, 11, 2.0, NULL, 8965, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8965,NULL);\n",architecture,8966,0);
 Msg("Find size of XSyncTestType (8966)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(XSyncAlarmState,4, 8968, 2, 1.2, NULL, 8967, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(XSyncAlarmState,4, 8968, 3, 1.3, NULL, 8967, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XSyncAlarmState,4, 8968, 6, 1.2, NULL, 8967, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(XSyncAlarmState,4, 8968, 10, 1.3, NULL, 8967, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(XSyncAlarmState,4, 8968, 9, 2.0, NULL, 8967, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(XSyncAlarmState,4, 8968, 12, 1.3, NULL, 8967, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(XSyncAlarmState,4, 8968, 11, 2.0, NULL, 8967, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8967, NULL);\n",architecture,8968,0);
