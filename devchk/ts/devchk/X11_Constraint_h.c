@@ -32,19 +32,19 @@ Msg("Checking data structures in X11/Constraint.h\n");
 #endif
 
 printf("Checking data structures in X11/Constraint.h\n");
-#if __ia64__
+#if defined __ia64__
 CheckTypeSize(ConstraintWidgetClass,8, 10260, 3, 1.3, NULL, 10259, NULL)
-#elif __i386__
+#elif defined __i386__
 CheckTypeSize(ConstraintWidgetClass,4, 10260, 2, 1.2, NULL, 10259, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(ConstraintWidgetClass,4, 10260, 6, 1.2, NULL, 10259, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(ConstraintWidgetClass,4, 10260, 10, 1.3, NULL, 10259, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(ConstraintWidgetClass,8, 10260, 9, 2.0, NULL, 10259, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(ConstraintWidgetClass,8, 10260, 12, 1.3, NULL, 10259, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(ConstraintWidgetClass,8, 10260, 11, 2.0, NULL, 10259, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10259, NULL);\n",architecture,10260,0);

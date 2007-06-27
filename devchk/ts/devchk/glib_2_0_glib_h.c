@@ -327,26 +327,26 @@ cnt++;
 
 #endif
 
-#if __powerpc64__
+#if defined __powerpc64__
 /* No test for G_GINT64_CONSTANT(val) */
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 /* No test for G_GINT64_CONSTANT(val) */
-#elif __ia64__
+#elif defined __ia64__
 /* No test for G_GINT64_CONSTANT(val) */
-#elif __i386__
+#elif defined __i386__
 /* No test for G_GINT64_CONSTANT(val) */
-#elif __s390x__
+#elif defined __s390x__
 /* No test for G_GINT64_CONSTANT(val) */
-#elif __x86_64__
+#elif defined __x86_64__
 /* No test for G_GINT64_CONSTANT(val) */
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 /* No test for G_GINT64_CONSTANT(val) */
 #else
 Msg( "No definition for G_GINT64_CONSTANT(val) (5839, Unknown) in db\n");
 #ifdef G_GINT64_CONSTANT(val)
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef G_GINT64_MODIFIER
 	CompareStringConstant(G_GINT64_MODIFIER,"l",5840,architecture,3.1,NULL)
 #else
@@ -354,7 +354,7 @@ Msg( "Error: Constant not found: G_GINT64_MODIFIER\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef G_GINT64_MODIFIER
 	CompareStringConstant(G_GINT64_MODIFIER,"ll",5840,architecture,3.1,NULL)
 #else
@@ -362,7 +362,7 @@ Msg( "Error: Constant not found: G_GINT64_MODIFIER\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef G_GINT64_MODIFIER
 	CompareStringConstant(G_GINT64_MODIFIER,"l",5840,architecture,3.1,NULL)
 #else
@@ -370,7 +370,7 @@ Msg( "Error: Constant not found: G_GINT64_MODIFIER\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef G_GINT64_MODIFIER
 	CompareStringConstant(G_GINT64_MODIFIER,"ll",5840,architecture,3.1,NULL)
 #else
@@ -378,7 +378,7 @@ Msg( "Error: Constant not found: G_GINT64_MODIFIER\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef G_GINT64_MODIFIER
 	CompareStringConstant(G_GINT64_MODIFIER,"l",5840,architecture,3.1,NULL)
 #else
@@ -386,7 +386,7 @@ Msg( "Error: Constant not found: G_GINT64_MODIFIER\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef G_GINT64_MODIFIER
 	CompareStringConstant(G_GINT64_MODIFIER,"l",5840,architecture,3.1,NULL)
 #else
@@ -394,7 +394,7 @@ Msg( "Error: Constant not found: G_GINT64_MODIFIER\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef G_GINT64_MODIFIER
 	CompareStringConstant(G_GINT64_MODIFIER,"ll",5840,architecture,3.1,NULL)
 #else
@@ -408,7 +408,7 @@ Msg( "No definition for G_GINT64_MODIFIER (5840, string) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5840,%s,'""3.1""',NULL);\n", architecture, G_GINT64_MODIFIER);
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef G_GINT64_FORMAT
 	CompareStringConstant(G_GINT64_FORMAT,"li",5841,architecture,3.1,NULL)
 #else
@@ -416,7 +416,7 @@ Msg( "Error: Constant not found: G_GINT64_FORMAT\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef G_GINT64_FORMAT
 	CompareStringConstant(G_GINT64_FORMAT,"lli",5841,architecture,3.1,NULL)
 #else
@@ -424,7 +424,7 @@ Msg( "Error: Constant not found: G_GINT64_FORMAT\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef G_GINT64_FORMAT
 	CompareStringConstant(G_GINT64_FORMAT,"li",5841,architecture,3.1,NULL)
 #else
@@ -432,7 +432,7 @@ Msg( "Error: Constant not found: G_GINT64_FORMAT\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef G_GINT64_FORMAT
 	CompareStringConstant(G_GINT64_FORMAT,"lli",5841,architecture,3.1,NULL)
 #else
@@ -440,7 +440,7 @@ Msg( "Error: Constant not found: G_GINT64_FORMAT\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef G_GINT64_FORMAT
 	CompareStringConstant(G_GINT64_FORMAT,"li",5841,architecture,3.1,NULL)
 #else
@@ -448,7 +448,7 @@ Msg( "Error: Constant not found: G_GINT64_FORMAT\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef G_GINT64_FORMAT
 	CompareStringConstant(G_GINT64_FORMAT,"li",5841,architecture,3.1,NULL)
 #else
@@ -456,7 +456,7 @@ Msg( "Error: Constant not found: G_GINT64_FORMAT\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef G_GINT64_FORMAT
 	CompareStringConstant(G_GINT64_FORMAT,"lli",5841,architecture,3.1,NULL)
 #else
@@ -470,7 +470,7 @@ Msg( "No definition for G_GINT64_FORMAT (5841, string) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5841,%s,'""3.1""',NULL);\n", architecture, G_GINT64_FORMAT);
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef G_GUINT64_FORMAT
 	CompareStringConstant(G_GUINT64_FORMAT,"lu",5842,architecture,3.1,NULL)
 #else
@@ -478,7 +478,7 @@ Msg( "Error: Constant not found: G_GUINT64_FORMAT\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef G_GUINT64_FORMAT
 	CompareStringConstant(G_GUINT64_FORMAT,"llu",5842,architecture,3.1,NULL)
 #else
@@ -486,7 +486,7 @@ Msg( "Error: Constant not found: G_GUINT64_FORMAT\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef G_GUINT64_FORMAT
 	CompareStringConstant(G_GUINT64_FORMAT,"lu",5842,architecture,3.1,NULL)
 #else
@@ -494,7 +494,7 @@ Msg( "Error: Constant not found: G_GUINT64_FORMAT\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef G_GUINT64_FORMAT
 	CompareStringConstant(G_GUINT64_FORMAT,"llu",5842,architecture,3.1,NULL)
 #else
@@ -502,7 +502,7 @@ Msg( "Error: Constant not found: G_GUINT64_FORMAT\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef G_GUINT64_FORMAT
 	CompareStringConstant(G_GUINT64_FORMAT,"lu",5842,architecture,3.1,NULL)
 #else
@@ -510,7 +510,7 @@ Msg( "Error: Constant not found: G_GUINT64_FORMAT\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef G_GUINT64_FORMAT
 	CompareStringConstant(G_GUINT64_FORMAT,"lu",5842,architecture,3.1,NULL)
 #else
@@ -518,7 +518,7 @@ Msg( "Error: Constant not found: G_GUINT64_FORMAT\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef G_GUINT64_FORMAT
 	CompareStringConstant(G_GUINT64_FORMAT,"llu",5842,architecture,3.1,NULL)
 #else
@@ -532,7 +532,7 @@ Msg( "No definition for G_GUINT64_FORMAT (5842, string) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5842,%s,'""3.1""',NULL);\n", architecture, G_GUINT64_FORMAT);
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef GLIB_SIZEOF_VOID_P
 	CompareConstant(GLIB_SIZEOF_VOID_P,8,5843,architecture,3.1,NULL)
 #else
@@ -540,7 +540,7 @@ Msg( "Error: Constant not found: GLIB_SIZEOF_VOID_P\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef GLIB_SIZEOF_VOID_P
 	CompareConstant(GLIB_SIZEOF_VOID_P,4,5843,architecture,3.1,NULL)
 #else
@@ -548,7 +548,7 @@ Msg( "Error: Constant not found: GLIB_SIZEOF_VOID_P\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef GLIB_SIZEOF_VOID_P
 	CompareConstant(GLIB_SIZEOF_VOID_P,8,5843,architecture,3.1,NULL)
 #else
@@ -556,7 +556,7 @@ Msg( "Error: Constant not found: GLIB_SIZEOF_VOID_P\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef GLIB_SIZEOF_VOID_P
 	CompareConstant(GLIB_SIZEOF_VOID_P,4,5843,architecture,3.1,NULL)
 #else
@@ -564,7 +564,7 @@ Msg( "Error: Constant not found: GLIB_SIZEOF_VOID_P\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef GLIB_SIZEOF_VOID_P
 	CompareConstant(GLIB_SIZEOF_VOID_P,8,5843,architecture,3.1,NULL)
 #else
@@ -572,7 +572,7 @@ Msg( "Error: Constant not found: GLIB_SIZEOF_VOID_P\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef GLIB_SIZEOF_VOID_P
 	CompareConstant(GLIB_SIZEOF_VOID_P,8,5843,architecture,3.1,NULL)
 #else
@@ -580,7 +580,7 @@ Msg( "Error: Constant not found: GLIB_SIZEOF_VOID_P\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef GLIB_SIZEOF_VOID_P
 	CompareConstant(GLIB_SIZEOF_VOID_P,4,5843,architecture,3.1,NULL)
 #else
@@ -594,7 +594,7 @@ Msg( "No definition for GLIB_SIZEOF_VOID_P (5843, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5843,%d,'""3.1""',NULL);\n", architecture, GLIB_SIZEOF_VOID_P);
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef GLIB_SIZEOF_LONG
 	CompareConstant(GLIB_SIZEOF_LONG,8,5844,architecture,3.1,NULL)
 #else
@@ -602,7 +602,7 @@ Msg( "Error: Constant not found: GLIB_SIZEOF_LONG\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef GLIB_SIZEOF_LONG
 	CompareConstant(GLIB_SIZEOF_LONG,4,5844,architecture,3.1,NULL)
 #else
@@ -610,7 +610,7 @@ Msg( "Error: Constant not found: GLIB_SIZEOF_LONG\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef GLIB_SIZEOF_LONG
 	CompareConstant(GLIB_SIZEOF_LONG,8,5844,architecture,3.1,NULL)
 #else
@@ -618,7 +618,7 @@ Msg( "Error: Constant not found: GLIB_SIZEOF_LONG\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef GLIB_SIZEOF_LONG
 	CompareConstant(GLIB_SIZEOF_LONG,4,5844,architecture,3.1,NULL)
 #else
@@ -626,7 +626,7 @@ Msg( "Error: Constant not found: GLIB_SIZEOF_LONG\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef GLIB_SIZEOF_LONG
 	CompareConstant(GLIB_SIZEOF_LONG,8,5844,architecture,3.1,NULL)
 #else
@@ -634,7 +634,7 @@ Msg( "Error: Constant not found: GLIB_SIZEOF_LONG\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef GLIB_SIZEOF_LONG
 	CompareConstant(GLIB_SIZEOF_LONG,8,5844,architecture,3.1,NULL)
 #else
@@ -642,7 +642,7 @@ Msg( "Error: Constant not found: GLIB_SIZEOF_LONG\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef GLIB_SIZEOF_LONG
 	CompareConstant(GLIB_SIZEOF_LONG,4,5844,architecture,3.1,NULL)
 #else
@@ -656,7 +656,7 @@ Msg( "No definition for GLIB_SIZEOF_LONG (5844, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5844,%d,'""3.1""',NULL);\n", architecture, GLIB_SIZEOF_LONG);
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef GLIB_SIZEOF_SIZE_T
 	CompareConstant(GLIB_SIZEOF_SIZE_T,8,5845,architecture,3.1,NULL)
 #else
@@ -664,7 +664,7 @@ Msg( "Error: Constant not found: GLIB_SIZEOF_SIZE_T\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef GLIB_SIZEOF_SIZE_T
 	CompareConstant(GLIB_SIZEOF_SIZE_T,4,5845,architecture,3.1,NULL)
 #else
@@ -672,7 +672,7 @@ Msg( "Error: Constant not found: GLIB_SIZEOF_SIZE_T\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef GLIB_SIZEOF_SIZE_T
 	CompareConstant(GLIB_SIZEOF_SIZE_T,8,5845,architecture,3.1,NULL)
 #else
@@ -680,7 +680,7 @@ Msg( "Error: Constant not found: GLIB_SIZEOF_SIZE_T\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef GLIB_SIZEOF_SIZE_T
 	CompareConstant(GLIB_SIZEOF_SIZE_T,4,5845,architecture,3.1,NULL)
 #else
@@ -688,7 +688,7 @@ Msg( "Error: Constant not found: GLIB_SIZEOF_SIZE_T\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef GLIB_SIZEOF_SIZE_T
 	CompareConstant(GLIB_SIZEOF_SIZE_T,8,5845,architecture,3.1,NULL)
 #else
@@ -696,7 +696,7 @@ Msg( "Error: Constant not found: GLIB_SIZEOF_SIZE_T\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef GLIB_SIZEOF_SIZE_T
 	CompareConstant(GLIB_SIZEOF_SIZE_T,8,5845,architecture,3.1,NULL)
 #else
@@ -704,7 +704,7 @@ Msg( "Error: Constant not found: GLIB_SIZEOF_SIZE_T\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef GLIB_SIZEOF_SIZE_T
 	CompareConstant(GLIB_SIZEOF_SIZE_T,4,5845,architecture,3.1,NULL)
 #else
@@ -718,7 +718,7 @@ Msg( "No definition for GLIB_SIZEOF_SIZE_T (5845, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5845,%d,'""3.1""',NULL);\n", architecture, GLIB_SIZEOF_SIZE_T);
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef G_GSIZE_MODIFIER
 	CompareStringConstant(G_GSIZE_MODIFIER,"l",5846,architecture,3.1,NULL)
 #else
@@ -726,7 +726,7 @@ Msg( "Error: Constant not found: G_GSIZE_MODIFIER\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef G_GSIZE_MODIFIER
 	CompareStringConstant(G_GSIZE_MODIFIER,"",5846,architecture,3.1,NULL)
 #else
@@ -734,7 +734,7 @@ Msg( "Error: Constant not found: G_GSIZE_MODIFIER\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef G_GSIZE_MODIFIER
 	CompareStringConstant(G_GSIZE_MODIFIER,"l",5846,architecture,3.1,NULL)
 #else
@@ -742,7 +742,7 @@ Msg( "Error: Constant not found: G_GSIZE_MODIFIER\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef G_GSIZE_MODIFIER
 	CompareStringConstant(G_GSIZE_MODIFIER,"",5846,architecture,3.1,NULL)
 #else
@@ -750,7 +750,7 @@ Msg( "Error: Constant not found: G_GSIZE_MODIFIER\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef G_GSIZE_MODIFIER
 	CompareStringConstant(G_GSIZE_MODIFIER,"l",5846,architecture,3.1,NULL)
 #else
@@ -758,7 +758,7 @@ Msg( "Error: Constant not found: G_GSIZE_MODIFIER\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef G_GSIZE_MODIFIER
 	CompareStringConstant(G_GSIZE_MODIFIER,"l",5846,architecture,3.1,NULL)
 #else
@@ -766,7 +766,7 @@ Msg( "Error: Constant not found: G_GSIZE_MODIFIER\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef G_GSIZE_MODIFIER
 	CompareStringConstant(G_GSIZE_MODIFIER,"",5846,architecture,3.1,NULL)
 #else
@@ -780,7 +780,7 @@ Msg( "No definition for G_GSIZE_MODIFIER (5846, string) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5846,%s,'""3.1""',NULL);\n", architecture, G_GSIZE_MODIFIER);
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef G_GSSIZE_FORMAT
 	CompareStringConstant(G_GSSIZE_FORMAT,"li",5847,architecture,3.1,NULL)
 #else
@@ -788,7 +788,7 @@ Msg( "Error: Constant not found: G_GSSIZE_FORMAT\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef G_GSSIZE_FORMAT
 	CompareStringConstant(G_GSSIZE_FORMAT,"i",5847,architecture,3.1,NULL)
 #else
@@ -796,7 +796,7 @@ Msg( "Error: Constant not found: G_GSSIZE_FORMAT\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef G_GSSIZE_FORMAT
 	CompareStringConstant(G_GSSIZE_FORMAT,"li",5847,architecture,3.1,NULL)
 #else
@@ -804,7 +804,7 @@ Msg( "Error: Constant not found: G_GSSIZE_FORMAT\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef G_GSSIZE_FORMAT
 	CompareStringConstant(G_GSSIZE_FORMAT,"i",5847,architecture,3.1,NULL)
 #else
@@ -812,7 +812,7 @@ Msg( "Error: Constant not found: G_GSSIZE_FORMAT\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef G_GSSIZE_FORMAT
 	CompareStringConstant(G_GSSIZE_FORMAT,"li",5847,architecture,3.1,NULL)
 #else
@@ -820,7 +820,7 @@ Msg( "Error: Constant not found: G_GSSIZE_FORMAT\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef G_GSSIZE_FORMAT
 	CompareStringConstant(G_GSSIZE_FORMAT,"li",5847,architecture,3.1,NULL)
 #else
@@ -828,7 +828,7 @@ Msg( "Error: Constant not found: G_GSSIZE_FORMAT\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef G_GSSIZE_FORMAT
 	CompareStringConstant(G_GSSIZE_FORMAT,"i",5847,architecture,3.1,NULL)
 #else
@@ -842,7 +842,7 @@ Msg( "No definition for G_GSSIZE_FORMAT (5847, string) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5847,%s,'""3.1""',NULL);\n", architecture, G_GSSIZE_FORMAT);
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef G_GSIZE_FORMAT
 	CompareStringConstant(G_GSIZE_FORMAT,"lu",5848,architecture,3.1,NULL)
 #else
@@ -850,7 +850,7 @@ Msg( "Error: Constant not found: G_GSIZE_FORMAT\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef G_GSIZE_FORMAT
 	CompareStringConstant(G_GSIZE_FORMAT,"u",5848,architecture,3.1,NULL)
 #else
@@ -858,7 +858,7 @@ Msg( "Error: Constant not found: G_GSIZE_FORMAT\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef G_GSIZE_FORMAT
 	CompareStringConstant(G_GSIZE_FORMAT,"lu",5848,architecture,3.1,NULL)
 #else
@@ -866,7 +866,7 @@ Msg( "Error: Constant not found: G_GSIZE_FORMAT\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef G_GSIZE_FORMAT
 	CompareStringConstant(G_GSIZE_FORMAT,"u",5848,architecture,3.1,NULL)
 #else
@@ -874,7 +874,7 @@ Msg( "Error: Constant not found: G_GSIZE_FORMAT\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef G_GSIZE_FORMAT
 	CompareStringConstant(G_GSIZE_FORMAT,"lu",5848,architecture,3.1,NULL)
 #else
@@ -882,7 +882,7 @@ Msg( "Error: Constant not found: G_GSIZE_FORMAT\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef G_GSIZE_FORMAT
 	CompareStringConstant(G_GSIZE_FORMAT,"lu",5848,architecture,3.1,NULL)
 #else
@@ -890,7 +890,7 @@ Msg( "Error: Constant not found: G_GSIZE_FORMAT\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef G_GSIZE_FORMAT
 	CompareStringConstant(G_GSIZE_FORMAT,"u",5848,architecture,3.1,NULL)
 #else
@@ -904,95 +904,95 @@ Msg( "No definition for G_GSIZE_FORMAT (5848, string) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5848,%s,'""3.1""',NULL);\n", architecture, G_GSIZE_FORMAT);
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 /* No test for G_MAXSIZE */
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 /* No test for G_MAXSIZE */
-#elif __ia64__
+#elif defined __ia64__
 /* No test for G_MAXSIZE */
-#elif __i386__
+#elif defined __i386__
 /* No test for G_MAXSIZE */
-#elif __s390x__
+#elif defined __s390x__
 /* No test for G_MAXSIZE */
-#elif __x86_64__
+#elif defined __x86_64__
 /* No test for G_MAXSIZE */
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 /* No test for G_MAXSIZE */
 #else
 Msg( "No definition for G_MAXSIZE (5849, Unknown) in db\n");
 #ifdef G_MAXSIZE
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 /* No test for GPOINTER_TO_INT(p) */
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 /* No test for GPOINTER_TO_INT(p) */
-#elif __ia64__
+#elif defined __ia64__
 /* No test for GPOINTER_TO_INT(p) */
-#elif __i386__
+#elif defined __i386__
 /* No test for GPOINTER_TO_INT(p) */
-#elif __s390x__
+#elif defined __s390x__
 /* No test for GPOINTER_TO_INT(p) */
-#elif __x86_64__
+#elif defined __x86_64__
 /* No test for GPOINTER_TO_INT(p) */
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 /* No test for GPOINTER_TO_INT(p) */
 #else
 Msg( "No definition for GPOINTER_TO_INT(p) (5850, Unknown) in db\n");
 #ifdef GPOINTER_TO_INT(p)
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 /* No test for GPOINTER_TO_UINT(p) */
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 /* No test for GPOINTER_TO_UINT(p) */
-#elif __ia64__
+#elif defined __ia64__
 /* No test for GPOINTER_TO_UINT(p) */
-#elif __i386__
+#elif defined __i386__
 /* No test for GPOINTER_TO_UINT(p) */
-#elif __s390x__
+#elif defined __s390x__
 /* No test for GPOINTER_TO_UINT(p) */
-#elif __x86_64__
+#elif defined __x86_64__
 /* No test for GPOINTER_TO_UINT(p) */
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 /* No test for GPOINTER_TO_UINT(p) */
 #else
 Msg( "No definition for GPOINTER_TO_UINT(p) (5851, Unknown) in db\n");
 #ifdef GPOINTER_TO_UINT(p)
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 /* No test for GINT_TO_POINTER(i) */
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 /* No test for GINT_TO_POINTER(i) */
-#elif __ia64__
+#elif defined __ia64__
 /* No test for GINT_TO_POINTER(i) */
-#elif __i386__
+#elif defined __i386__
 /* No test for GINT_TO_POINTER(i) */
-#elif __s390x__
+#elif defined __s390x__
 /* No test for GINT_TO_POINTER(i) */
-#elif __x86_64__
+#elif defined __x86_64__
 /* No test for GINT_TO_POINTER(i) */
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 /* No test for GINT_TO_POINTER(i) */
 #else
 Msg( "No definition for GINT_TO_POINTER(i) (5852, Unknown) in db\n");
 #ifdef GINT_TO_POINTER(i)
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 /* No test for GUINT_TO_POINTER(u) */
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 /* No test for GUINT_TO_POINTER(u) */
-#elif __ia64__
+#elif defined __ia64__
 /* No test for GUINT_TO_POINTER(u) */
-#elif __i386__
+#elif defined __i386__
 /* No test for GUINT_TO_POINTER(u) */
-#elif __s390x__
+#elif defined __s390x__
 /* No test for GUINT_TO_POINTER(u) */
-#elif __x86_64__
+#elif defined __x86_64__
 /* No test for GUINT_TO_POINTER(u) */
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 /* No test for GUINT_TO_POINTER(u) */
 #else
 Msg( "No definition for GUINT_TO_POINTER(u) (5853, Unknown) in db\n");
@@ -1137,19 +1137,19 @@ cnt++;
 /* No test for G_THREADS_IMPL_POSIX */
 #endif
 
-#if __powerpc64__
+#if defined __powerpc64__
 /* No test for G_STATIC_MUTEX_INIT */
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 /* No test for G_STATIC_MUTEX_INIT */
-#elif __ia64__
+#elif defined __ia64__
 /* No test for G_STATIC_MUTEX_INIT */
-#elif __i386__
+#elif defined __i386__
 /* No test for G_STATIC_MUTEX_INIT */
-#elif __s390x__
+#elif defined __s390x__
 /* No test for G_STATIC_MUTEX_INIT */
-#elif __x86_64__
+#elif defined __x86_64__
 /* No test for G_STATIC_MUTEX_INIT */
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 /* No test for G_STATIC_MUTEX_INIT */
 #else
 Msg( "No definition for G_STATIC_MUTEX_INIT (5872, Unknown) in db\n");
@@ -1208,76 +1208,76 @@ Msg( "No definition for G_STATIC_MUTEX_INIT (5872, Unknown) in db\n");
 /* No test for GUINT64_TO_BE(val) */
 #endif
 
-#if __powerpc64__
+#if defined __powerpc64__
 /* No test for GLONG_TO_LE(val) */
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 /* No test for GLONG_TO_LE(val) */
-#elif __ia64__
+#elif defined __ia64__
 /* No test for GLONG_TO_LE(val) */
-#elif __i386__
+#elif defined __i386__
 /* No test for GLONG_TO_LE(val) */
-#elif __s390x__
+#elif defined __s390x__
 /* No test for GLONG_TO_LE(val) */
-#elif __x86_64__
+#elif defined __x86_64__
 /* No test for GLONG_TO_LE(val) */
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 /* No test for GLONG_TO_LE(val) */
 #else
 Msg( "No definition for GLONG_TO_LE(val) (5886, Unknown) in db\n");
 #ifdef GLONG_TO_LE(val)
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 /* No test for GULONG_TO_LE(val) */
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 /* No test for GULONG_TO_LE(val) */
-#elif __ia64__
+#elif defined __ia64__
 /* No test for GULONG_TO_LE(val) */
-#elif __i386__
+#elif defined __i386__
 /* No test for GULONG_TO_LE(val) */
-#elif __s390x__
+#elif defined __s390x__
 /* No test for GULONG_TO_LE(val) */
-#elif __x86_64__
+#elif defined __x86_64__
 /* No test for GULONG_TO_LE(val) */
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 /* No test for GULONG_TO_LE(val) */
 #else
 Msg( "No definition for GULONG_TO_LE(val) (5887, Unknown) in db\n");
 #ifdef GULONG_TO_LE(val)
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 /* No test for GLONG_TO_BE(val) */
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 /* No test for GLONG_TO_BE(val) */
-#elif __ia64__
+#elif defined __ia64__
 /* No test for GLONG_TO_BE(val) */
-#elif __i386__
+#elif defined __i386__
 /* No test for GLONG_TO_BE(val) */
-#elif __s390x__
+#elif defined __s390x__
 /* No test for GLONG_TO_BE(val) */
-#elif __x86_64__
+#elif defined __x86_64__
 /* No test for GLONG_TO_BE(val) */
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 /* No test for GLONG_TO_BE(val) */
 #else
 Msg( "No definition for GLONG_TO_BE(val) (5888, Unknown) in db\n");
 #ifdef GLONG_TO_BE(val)
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 /* No test for GULONG_TO_BE(val) */
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 /* No test for GULONG_TO_BE(val) */
-#elif __ia64__
+#elif defined __ia64__
 /* No test for GULONG_TO_BE(val) */
-#elif __i386__
+#elif defined __i386__
 /* No test for GULONG_TO_BE(val) */
-#elif __s390x__
+#elif defined __s390x__
 /* No test for GULONG_TO_BE(val) */
-#elif __x86_64__
+#elif defined __x86_64__
 /* No test for GULONG_TO_BE(val) */
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 /* No test for GULONG_TO_BE(val) */
 #else
 Msg( "No definition for GULONG_TO_BE(val) (5889, Unknown) in db\n");
@@ -1300,19 +1300,19 @@ Msg( "No definition for GULONG_TO_BE(val) (5889, Unknown) in db\n");
 /* No test for GUINT_TO_BE(val) */
 #endif
 
-#if __powerpc64__
+#if defined __powerpc64__
 /* No test for G_BYTE_ORDER */
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 /* No test for G_BYTE_ORDER */
-#elif __ia64__
+#elif defined __ia64__
 /* No test for G_BYTE_ORDER */
-#elif __i386__
+#elif defined __i386__
 /* No test for G_BYTE_ORDER */
-#elif __s390x__
+#elif defined __s390x__
 /* No test for G_BYTE_ORDER */
-#elif __x86_64__
+#elif defined __x86_64__
 /* No test for G_BYTE_ORDER */
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 /* No test for G_BYTE_ORDER */
 #else
 Msg( "No definition for G_BYTE_ORDER (5894, Unknown) in db\n");
@@ -2393,7 +2393,7 @@ cnt++;
 
 #endif
 
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef G_VA_COPY_AS_ARRAY
 	CompareConstant(G_VA_COPY_AS_ARRAY,1,9488,architecture,3.1,NULL)
 #else
@@ -2401,7 +2401,7 @@ Msg( "Error: Constant not found: G_VA_COPY_AS_ARRAY\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef G_VA_COPY_AS_ARRAY
 	CompareConstant(G_VA_COPY_AS_ARRAY,1,9488,architecture,3.1,NULL)
 #else
@@ -2409,7 +2409,7 @@ Msg( "Error: Constant not found: G_VA_COPY_AS_ARRAY\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef G_VA_COPY_AS_ARRAY
 	CompareConstant(G_VA_COPY_AS_ARRAY,1,9488,architecture,3.1,NULL)
 #else
@@ -2417,7 +2417,7 @@ Msg( "Error: Constant not found: G_VA_COPY_AS_ARRAY\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef G_VA_COPY_AS_ARRAY
 	CompareConstant(G_VA_COPY_AS_ARRAY,1,9488,architecture,3.1,NULL)
 #else
@@ -2425,7 +2425,7 @@ Msg( "Error: Constant not found: G_VA_COPY_AS_ARRAY\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef G_VA_COPY_AS_ARRAY
 	CompareConstant(G_VA_COPY_AS_ARRAY,1,9488,architecture,3.1,NULL)
 #else
@@ -2433,7 +2433,7 @@ Msg( "Error: Constant not found: G_VA_COPY_AS_ARRAY\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef G_VA_COPY_AS_ARRAY
 	CompareConstant(G_VA_COPY_AS_ARRAY,1,9488,architecture,3.1,NULL)
 #else
@@ -2447,7 +2447,7 @@ Msg( "No definition for G_VA_COPY_AS_ARRAY (9488, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,9488,%d,'""3.1""',NULL);\n", architecture, G_VA_COPY_AS_ARRAY);
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef GLIB_LSB_PADDING_SIZE
 	CompareConstant(GLIB_LSB_PADDING_SIZE,40,9489,architecture,3.1,NULL)
 #else
@@ -2455,7 +2455,7 @@ Msg( "Error: Constant not found: GLIB_LSB_PADDING_SIZE\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef GLIB_LSB_PADDING_SIZE
 	CompareConstant(GLIB_LSB_PADDING_SIZE,24,9489,architecture,3.1,NULL)
 #else
@@ -2463,7 +2463,7 @@ Msg( "Error: Constant not found: GLIB_LSB_PADDING_SIZE\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef GLIB_LSB_PADDING_SIZE
 	CompareConstant(GLIB_LSB_PADDING_SIZE,40,9489,architecture,3.1,NULL)
 #else
@@ -2471,7 +2471,7 @@ Msg( "Error: Constant not found: GLIB_LSB_PADDING_SIZE\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef GLIB_LSB_PADDING_SIZE
 	CompareConstant(GLIB_LSB_PADDING_SIZE,24,9489,architecture,3.1,NULL)
 #else
@@ -2479,7 +2479,7 @@ Msg( "Error: Constant not found: GLIB_LSB_PADDING_SIZE\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef GLIB_LSB_PADDING_SIZE
 	CompareConstant(GLIB_LSB_PADDING_SIZE,40,9489,architecture,3.1,NULL)
 #else
@@ -2487,7 +2487,7 @@ Msg( "Error: Constant not found: GLIB_LSB_PADDING_SIZE\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef GLIB_LSB_PADDING_SIZE
 	CompareConstant(GLIB_LSB_PADDING_SIZE,40,9489,architecture,3.1,NULL)
 #else
@@ -2495,7 +2495,7 @@ Msg( "Error: Constant not found: GLIB_LSB_PADDING_SIZE\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef GLIB_LSB_PADDING_SIZE
 	CompareConstant(GLIB_LSB_PADDING_SIZE,24,9489,architecture,3.1,NULL)
 #else
@@ -2509,7 +2509,7 @@ Msg( "No definition for GLIB_LSB_PADDING_SIZE (9489, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,9489,%d,'""3.1""',NULL);\n", architecture, GLIB_LSB_PADDING_SIZE);
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef GLIB_LSB_DATA_SIZE
 	CompareConstant(GLIB_LSB_DATA_SIZE,8,9490,architecture,3.1,NULL)
 #else
@@ -2517,7 +2517,7 @@ Msg( "Error: Constant not found: GLIB_LSB_DATA_SIZE\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef GLIB_LSB_DATA_SIZE
 	CompareConstant(GLIB_LSB_DATA_SIZE,4,9490,architecture,3.1,NULL)
 #else
@@ -2525,7 +2525,7 @@ Msg( "Error: Constant not found: GLIB_LSB_DATA_SIZE\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef GLIB_LSB_DATA_SIZE
 	CompareConstant(GLIB_LSB_DATA_SIZE,8,9490,architecture,3.1,NULL)
 #else
@@ -2533,7 +2533,7 @@ Msg( "Error: Constant not found: GLIB_LSB_DATA_SIZE\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef GLIB_LSB_DATA_SIZE
 	CompareConstant(GLIB_LSB_DATA_SIZE,4,9490,architecture,3.1,NULL)
 #else
@@ -2541,7 +2541,7 @@ Msg( "Error: Constant not found: GLIB_LSB_DATA_SIZE\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef GLIB_LSB_DATA_SIZE
 	CompareConstant(GLIB_LSB_DATA_SIZE,8,9490,architecture,3.1,NULL)
 #else
@@ -2549,7 +2549,7 @@ Msg( "Error: Constant not found: GLIB_LSB_DATA_SIZE\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef GLIB_LSB_DATA_SIZE
 	CompareConstant(GLIB_LSB_DATA_SIZE,8,9490,architecture,3.1,NULL)
 #else
@@ -2557,7 +2557,7 @@ Msg( "Error: Constant not found: GLIB_LSB_DATA_SIZE\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef GLIB_LSB_DATA_SIZE
 	CompareConstant(GLIB_LSB_DATA_SIZE,4,9490,architecture,3.1,NULL)
 #else
@@ -2571,3126 +2571,3126 @@ Msg( "No definition for GLIB_LSB_DATA_SIZE (9490, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,9490,%d,'""3.1""',NULL);\n", architecture, GLIB_LSB_DATA_SIZE);
 #endif
 #endif
-#if __i386__
+#if defined __i386__
 CheckTypeSize(guint16,2, 11396, 2, 3.1, NULL, 11209, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(guint16,2, 11396, 11, 3.1, NULL, 11209, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(guint16,2, 11396, 3, 3.1, NULL, 11209, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(guint16,2, 11396, 6, 3.1, NULL, 11209, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(guint16,2, 11396, 9, 3.1, NULL, 11209, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(guint16,2, 11396, 10, 3.1, NULL, 11209, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(guint16,2, 11396, 12, 3.1, NULL, 11209, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11209,NULL);\n",architecture,11396,0);
 Msg("Find size of guint16 (11396)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(gint,4, 11400, 2, 3.1, NULL, 6, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(gint,4, 11400, 11, 3.1, NULL, 6, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(gint,4, 11400, 3, 3.1, NULL, 6, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(gint,4, 11400, 6, 3.1, NULL, 6, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(gint,4, 11400, 9, 3.1, NULL, 6, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(gint,4, 11400, 10, 3.1, NULL, 6, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(gint,4, 11400, 12, 3.1, NULL, 6, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,6,NULL);\n",architecture,11400,0);
 Msg("Find size of gint (11400)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(gboolean,4, 11401, 2, 3.1, NULL, 11400, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(gboolean,4, 11401, 11, 3.1, NULL, 11400, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(gboolean,4, 11401, 3, 3.1, NULL, 11400, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(gboolean,4, 11401, 6, 3.1, NULL, 11400, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(gboolean,4, 11401, 9, 3.1, NULL, 11400, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(gboolean,4, 11401, 10, 3.1, NULL, 11400, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(gboolean,4, 11401, 12, 3.1, NULL, 11400, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11400,NULL);\n",architecture,11401,0);
 Msg("Find size of gboolean (11401)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(guint,4, 11402, 2, 3.1, NULL, 7, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(guint,4, 11402, 11, 3.1, NULL, 7, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(guint,4, 11402, 3, 3.1, NULL, 7, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(guint,4, 11402, 6, 3.1, NULL, 7, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(guint,4, 11402, 9, 3.1, NULL, 7, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(guint,4, 11402, 10, 3.1, NULL, 7, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(guint,4, 11402, 12, 3.1, NULL, 7, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,7,NULL);\n",architecture,11402,0);
 Msg("Find size of guint (11402)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(gpointer,4, 11404, 2, 3.1, NULL, 40, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(gpointer,8, 11404, 11, 3.1, NULL, 40, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(gpointer,8, 11404, 3, 3.1, NULL, 40, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(gpointer,4, 11404, 6, 3.1, NULL, 40, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(gpointer,8, 11404, 9, 3.1, NULL, 40, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(gpointer,4, 11404, 10, 3.1, NULL, 40, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(gpointer,8, 11404, 12, 3.1, NULL, 40, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,40,NULL);\n",architecture,11404,0);
 Msg("Find size of gpointer (11404)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GThreadFunc,4, 11406, 2, 3.1, NULL, 11405, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GThreadFunc,8, 11406, 11, 3.1, NULL, 11405, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GThreadFunc,8, 11406, 3, 3.1, NULL, 11405, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GThreadFunc,4, 11406, 6, 3.1, NULL, 11405, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GThreadFunc,8, 11406, 9, 3.1, NULL, 11405, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GThreadFunc,4, 11406, 10, 3.1, NULL, 11405, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GThreadFunc,8, 11406, 12, 3.1, NULL, 11405, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11405,NULL);\n",architecture,11406,0);
 Msg("Find size of GThreadFunc (11406)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GThreadPriority,4, 11408, 2, 3.1, NULL, 11407, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GThreadPriority,4, 11408, 11, 3.1, NULL, 11407, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GThreadPriority,4, 11408, 3, 3.1, NULL, 11407, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GThreadPriority,4, 11408, 6, 3.1, NULL, 11407, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GThreadPriority,4, 11408, 9, 3.1, NULL, 11407, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GThreadPriority,4, 11408, 10, 3.1, NULL, 11407, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GThreadPriority,4, 11408, 12, 3.1, NULL, 11407, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11407,NULL);\n",architecture,11408,0);
 Msg("Find size of GThreadPriority (11408)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GThread,16, 11409, 2, 3.1, NULL, 11403, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GThread,24, 11409, 11, 3.1, NULL, 11403, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GThread,24, 11409, 3, 3.1, NULL, 11403, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GThread,16, 11409, 6, 3.1, NULL, 11403, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GThread,24, 11409, 9, 3.1, NULL, 11403, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GThread,16, 11409, 10, 3.1, NULL, 11403, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GThread,24, 11409, 12, 3.1, NULL, 11403, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11403,NULL);\n",architecture,11409,0);
 Msg("Find size of GThread (11409)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(guint32,4, 11412, 2, 3.1, NULL, 7, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(guint32,4, 11412, 11, 3.1, NULL, 7, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(guint32,4, 11412, 3, 3.1, NULL, 7, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(guint32,4, 11412, 6, 3.1, NULL, 7, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(guint32,4, 11412, 9, 3.1, NULL, 7, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(guint32,4, 11412, 10, 3.1, NULL, 7, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(guint32,4, 11412, 12, 3.1, NULL, 7, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,7,NULL);\n",architecture,11412,0);
 Msg("Find size of guint32 (11412)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GQuark,4, 11413, 2, 3.1, NULL, 11412, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GQuark,4, 11413, 11, 3.1, NULL, 11412, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GQuark,4, 11413, 3, 3.1, NULL, 11412, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GQuark,4, 11413, 6, 3.1, NULL, 11412, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GQuark,4, 11413, 9, 3.1, NULL, 11412, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GQuark,4, 11413, 10, 3.1, NULL, 11412, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GQuark,4, 11413, 12, 3.1, NULL, 11412, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11412,NULL);\n",architecture,11413,0);
 Msg("Find size of GQuark (11413)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(gchar,1, 11414, 2, 3.1, NULL, 2, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(gchar,1, 11414, 11, 3.1, NULL, 2, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(gchar,1, 11414, 3, 3.1, NULL, 2, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(gchar,1, 11414, 6, 3.1, NULL, 2, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(gchar,1, 11414, 9, 3.1, NULL, 2, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(gchar,1, 11414, 10, 3.1, NULL, 2, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(gchar,1, 11414, 12, 3.1, NULL, 2, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,2,NULL);\n",architecture,11414,0);
 Msg("Find size of gchar (11414)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GError,12, 11416, 2, 3.1, NULL, 11411, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GError,16, 11416, 11, 3.1, NULL, 11411, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GError,16, 11416, 3, 3.1, NULL, 11411, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GError,12, 11416, 6, 3.1, NULL, 11411, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GError,16, 11416, 9, 3.1, NULL, 11411, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GError,12, 11416, 10, 3.1, NULL, 11411, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GError,16, 11416, 12, 3.1, NULL, 11411, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11411,NULL);\n",architecture,11416,0);
 Msg("Find size of GError (11416)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GPrintFunc,4, 11423, 2, 3.1, NULL, 11422, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GPrintFunc,8, 11423, 11, 3.1, NULL, 11422, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GPrintFunc,8, 11423, 3, 3.1, NULL, 11422, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GPrintFunc,4, 11423, 6, 3.1, NULL, 11422, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GPrintFunc,8, 11423, 9, 3.1, NULL, 11422, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GPrintFunc,4, 11423, 10, 3.1, NULL, 11422, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GPrintFunc,8, 11423, 12, 3.1, NULL, 11422, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11422,NULL);\n",architecture,11423,0);
 Msg("Find size of GPrintFunc (11423)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GMemChunk,0, 11425, 2, 3.1, NULL, 11424, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GMemChunk,0, 11425, 11, 3.1, NULL, 11424, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GMemChunk,0, 11425, 3, 3.1, NULL, 11424, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GMemChunk,0, 11425, 6, 3.1, NULL, 11424, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GMemChunk,0, 11425, 9, 3.1, NULL, 11424, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GMemChunk,0, 11425, 10, 3.1, NULL, 11424, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GMemChunk,0, 11425, 12, 3.1, NULL, 11424, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11424,NULL);\n",architecture,11425,0);
 Msg("Find size of GMemChunk (11425)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(gulong,4, 11427, 2, 3.1, NULL, 11186, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(gulong,8, 11427, 11, 3.1, NULL, 11186, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(gulong,8, 11427, 3, 3.1, NULL, 11186, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(gulong,4, 11427, 6, 3.1, NULL, 11186, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(gulong,8, 11427, 9, 3.1, NULL, 11186, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(gulong,4, 11427, 10, 3.1, NULL, 11186, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(gulong,8, 11427, 12, 3.1, NULL, 11186, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11186,NULL);\n",architecture,11427,0);
 Msg("Find size of gulong (11427)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GList,12, 11429, 2, 3.1, NULL, 11428, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GList,24, 11429, 11, 3.1, NULL, 11428, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GList,24, 11429, 3, 3.1, NULL, 11428, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GList,12, 11429, 6, 3.1, NULL, 11428, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GList,24, 11429, 9, 3.1, NULL, 11428, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GList,12, 11429, 10, 3.1, NULL, 11428, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GList,24, 11429, 12, 3.1, NULL, 11428, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11428,NULL);\n",architecture,11429,0);
 Msg("Find size of GList (11429)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GMainLoop,0, 11432, 2, 3.1, NULL, 11431, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GMainLoop,0, 11432, 11, 3.1, NULL, 11431, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GMainLoop,0, 11432, 3, 3.1, NULL, 11431, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GMainLoop,0, 11432, 6, 3.1, NULL, 11431, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GMainLoop,0, 11432, 9, 3.1, NULL, 11431, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GMainLoop,0, 11432, 10, 3.1, NULL, 11431, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GMainLoop,0, 11432, 12, 3.1, NULL, 11431, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11431,NULL);\n",architecture,11432,0);
 Msg("Find size of GMainLoop (11432)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GHook,32, 11436, 2, 3.1, NULL, 11435, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GHook,64, 11436, 11, 3.1, NULL, 11435, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GHook,64, 11436, 3, 3.1, NULL, 11435, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GHook,32, 11436, 6, 3.1, NULL, 11435, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GHook,64, 11436, 9, 3.1, NULL, 11435, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GHook,32, 11436, 10, 3.1, NULL, 11435, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GHook,64, 11436, 12, 3.1, NULL, 11435, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11435,NULL);\n",architecture,11436,0);
 Msg("Find size of GHook (11436)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GDestroyNotify,4, 11439, 2, 3.1, NULL, 11438, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GDestroyNotify,8, 11439, 11, 3.1, NULL, 11438, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GDestroyNotify,8, 11439, 3, 3.1, NULL, 11438, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GDestroyNotify,4, 11439, 6, 3.1, NULL, 11438, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GDestroyNotify,8, 11439, 9, 3.1, NULL, 11438, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GDestroyNotify,4, 11439, 10, 3.1, NULL, 11438, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GDestroyNotify,8, 11439, 12, 3.1, NULL, 11438, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11438,NULL);\n",architecture,11439,0);
 Msg("Find size of GDestroyNotify (11439)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GHookList,28, 11440, 2, 3.1, NULL, 11434, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GHookList,56, 11440, 11, 3.1, NULL, 11434, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GHookList,56, 11440, 3, 3.1, NULL, 11434, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GHookList,28, 11440, 6, 3.1, NULL, 11434, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GHookList,56, 11440, 9, 3.1, NULL, 11434, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GHookList,28, 11440, 10, 3.1, NULL, 11434, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GHookList,56, 11440, 12, 3.1, NULL, 11434, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11434,NULL);\n",architecture,11440,0);
 Msg("Find size of GHookList (11440)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GHookFinalizeFunc,4, 11443, 2, 3.1, NULL, 11442, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GHookFinalizeFunc,8, 11443, 11, 3.1, NULL, 11442, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GHookFinalizeFunc,8, 11443, 3, 3.1, NULL, 11442, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GHookFinalizeFunc,4, 11443, 6, 3.1, NULL, 11442, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GHookFinalizeFunc,8, 11443, 9, 3.1, NULL, 11442, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GHookFinalizeFunc,4, 11443, 10, 3.1, NULL, 11442, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GHookFinalizeFunc,8, 11443, 12, 3.1, NULL, 11442, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11442,NULL);\n",architecture,11443,0);
 Msg("Find size of GHookFinalizeFunc (11443)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GQueue,12, 11448, 2, 3.1, NULL, 11447, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GQueue,24, 11448, 11, 3.1, NULL, 11447, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GQueue,24, 11448, 3, 3.1, NULL, 11447, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GQueue,12, 11448, 6, 3.1, NULL, 11447, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GQueue,24, 11448, 9, 3.1, NULL, 11447, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GQueue,12, 11448, 10, 3.1, NULL, 11447, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GQueue,24, 11448, 12, 3.1, NULL, 11447, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11447,NULL);\n",architecture,11448,0);
 Msg("Find size of GQueue (11448)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GSList,8, 11451, 2, 3.1, NULL, 11450, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GSList,16, 11451, 11, 3.1, NULL, 11450, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GSList,16, 11451, 3, 3.1, NULL, 11450, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GSList,8, 11451, 6, 3.1, NULL, 11450, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GSList,16, 11451, 9, 3.1, NULL, 11450, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GSList,8, 11451, 10, 3.1, NULL, 11450, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GSList,16, 11451, 12, 3.1, NULL, 11450, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11450,NULL);\n",architecture,11451,0);
 Msg("Find size of GSList (11451)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(gsize,4, 11454, 2, 3.1, NULL, 7, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(gsize,8, 11454, 3, 3.1, NULL, 9, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(gsize,8, 11454, 11, 3.1, NULL, 9, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(gsize,4, 11454, 6, 3.1, NULL, 7, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(gsize,8, 11454, 9, 3.1, NULL, 9, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(gsize,4, 11454, 10, 3.1, NULL, 7, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(gsize,8, 11454, 12, 3.1, NULL, 9, NULL)
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GString,12, 11455, 2, 3.1, NULL, 11453, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GString,24, 11455, 11, 3.1, NULL, 11453, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GString,24, 11455, 3, 3.1, NULL, 11453, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GString,12, 11455, 6, 3.1, NULL, 11453, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GString,24, 11455, 9, 3.1, NULL, 11453, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GString,12, 11455, 10, 3.1, NULL, 11453, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GString,24, 11455, 12, 3.1, NULL, 11453, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11453,NULL);\n",architecture,11455,0);
 Msg("Find size of GString (11455)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GPtrArray,8, 11459, 2, 3.1, NULL, 11457, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GPtrArray,16, 11459, 11, 3.1, NULL, 11457, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GPtrArray,16, 11459, 3, 3.1, NULL, 11457, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GPtrArray,8, 11459, 6, 3.1, NULL, 11457, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GPtrArray,16, 11459, 9, 3.1, NULL, 11457, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GPtrArray,8, 11459, 10, 3.1, NULL, 11457, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GPtrArray,16, 11459, 12, 3.1, NULL, 11457, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11457,NULL);\n",architecture,11459,0);
 Msg("Find size of GPtrArray (11459)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GRand,0, 11462, 2, 3.1, NULL, 11461, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GRand,0, 11462, 11, 3.1, NULL, 11461, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GRand,0, 11462, 3, 3.1, NULL, 11461, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GRand,0, 11462, 6, 3.1, NULL, 11461, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GRand,0, 11462, 9, 3.1, NULL, 11461, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GRand,0, 11462, 10, 3.1, NULL, 11461, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GRand,0, 11462, 12, 3.1, NULL, 11461, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11461,NULL);\n",architecture,11462,0);
 Msg("Find size of GRand (11462)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GDir,0, 11467, 2, 3.1, NULL, 11466, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GDir,0, 11467, 11, 3.1, NULL, 11466, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GDir,0, 11467, 3, 3.1, NULL, 11466, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GDir,0, 11467, 6, 3.1, NULL, 11466, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GDir,0, 11467, 9, 3.1, NULL, 11466, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GDir,0, 11467, 10, 3.1, NULL, 11466, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GDir,0, 11467, 12, 3.1, NULL, 11466, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11466,NULL);\n",architecture,11467,0);
 Msg("Find size of GDir (11467)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GRelation,0, 11472, 2, 3.1, NULL, 11471, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GRelation,0, 11472, 11, 3.1, NULL, 11471, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GRelation,0, 11472, 3, 3.1, NULL, 11471, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GRelation,0, 11472, 6, 3.1, NULL, 11471, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GRelation,0, 11472, 9, 3.1, NULL, 11471, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GRelation,0, 11472, 10, 3.1, NULL, 11471, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GRelation,0, 11472, 12, 3.1, NULL, 11471, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11471,NULL);\n",architecture,11472,0);
 Msg("Find size of GRelation (11472)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GOptionContext,0, 11475, 2, 3.1, NULL, 11474, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GOptionContext,0, 11475, 11, 3.1, NULL, 11474, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GOptionContext,0, 11475, 3, 3.1, NULL, 11474, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GOptionContext,0, 11475, 6, 3.1, NULL, 11474, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GOptionContext,0, 11475, 9, 3.1, NULL, 11474, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GOptionContext,0, 11475, 10, 3.1, NULL, 11474, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GOptionContext,0, 11475, 12, 3.1, NULL, 11474, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11474,NULL);\n",architecture,11475,0);
 Msg("Find size of GOptionContext (11475)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GKeyFile,0, 11478, 2, 3.1, NULL, 11477, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GKeyFile,0, 11478, 11, 3.1, NULL, 11477, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GKeyFile,0, 11478, 3, 3.1, NULL, 11477, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GKeyFile,0, 11478, 6, 3.1, NULL, 11477, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GKeyFile,0, 11478, 9, 3.1, NULL, 11477, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GKeyFile,0, 11478, 10, 3.1, NULL, 11477, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GKeyFile,0, 11478, 12, 3.1, NULL, 11477, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11477,NULL);\n",architecture,11478,0);
 Msg("Find size of GKeyFile (11478)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GPatternSpec,0, 11483, 2, 3.1, NULL, 11482, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GPatternSpec,0, 11483, 11, 3.1, NULL, 11482, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GPatternSpec,0, 11483, 3, 3.1, NULL, 11482, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GPatternSpec,0, 11483, 6, 3.1, NULL, 11482, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GPatternSpec,0, 11483, 9, 3.1, NULL, 11482, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GPatternSpec,0, 11483, 10, 3.1, NULL, 11482, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GPatternSpec,0, 11483, 12, 3.1, NULL, 11482, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11482,NULL);\n",architecture,11483,0);
 Msg("Find size of GPatternSpec (11483)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(gunichar,4, 11486, 2, 3.1, NULL, 11412, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(gunichar,4, 11486, 11, 3.1, NULL, 11412, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(gunichar,4, 11486, 3, 3.1, NULL, 11412, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(gunichar,4, 11486, 6, 3.1, NULL, 11412, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(gunichar,4, 11486, 9, 3.1, NULL, 11412, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(gunichar,4, 11486, 10, 3.1, NULL, 11412, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(gunichar,4, 11486, 12, 3.1, NULL, 11412, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11412,NULL);\n",architecture,11486,0);
 Msg("Find size of gunichar (11486)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GCompletionFunc,4, 11489, 2, 3.1, NULL, 11488, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GCompletionFunc,8, 11489, 11, 3.1, NULL, 11488, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GCompletionFunc,8, 11489, 3, 3.1, NULL, 11488, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GCompletionFunc,4, 11489, 6, 3.1, NULL, 11488, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GCompletionFunc,8, 11489, 9, 3.1, NULL, 11488, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GCompletionFunc,4, 11489, 10, 3.1, NULL, 11488, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GCompletionFunc,8, 11489, 12, 3.1, NULL, 11488, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11488,NULL);\n",architecture,11489,0);
 Msg("Find size of GCompletionFunc (11489)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GCompletionStrncmpFunc,4, 11491, 2, 3.1, NULL, 11490, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GCompletionStrncmpFunc,8, 11491, 11, 3.1, NULL, 11490, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GCompletionStrncmpFunc,8, 11491, 3, 3.1, NULL, 11490, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GCompletionStrncmpFunc,4, 11491, 6, 3.1, NULL, 11490, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GCompletionStrncmpFunc,8, 11491, 9, 3.1, NULL, 11490, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GCompletionStrncmpFunc,4, 11491, 10, 3.1, NULL, 11490, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GCompletionStrncmpFunc,8, 11491, 12, 3.1, NULL, 11490, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11490,NULL);\n",architecture,11491,0);
 Msg("Find size of GCompletionStrncmpFunc (11491)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GCompletion,20, 11492, 2, 3.1, NULL, 11487, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GCompletion,40, 11492, 11, 3.1, NULL, 11487, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GCompletion,40, 11492, 3, 3.1, NULL, 11487, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GCompletion,20, 11492, 6, 3.1, NULL, 11487, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GCompletion,40, 11492, 9, 3.1, NULL, 11487, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GCompletion,20, 11492, 10, 3.1, NULL, 11487, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GCompletion,40, 11492, 12, 3.1, NULL, 11487, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11487,NULL);\n",architecture,11492,0);
 Msg("Find size of GCompletion (11492)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GTimer,0, 11495, 2, 3.1, NULL, 11494, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GTimer,0, 11495, 11, 3.1, NULL, 11494, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GTimer,0, 11495, 3, 3.1, NULL, 11494, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GTimer,0, 11495, 6, 3.1, NULL, 11494, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GTimer,0, 11495, 9, 3.1, NULL, 11494, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GTimer,0, 11495, 10, 3.1, NULL, 11494, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GTimer,0, 11495, 12, 3.1, NULL, 11494, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11494,NULL);\n",architecture,11495,0);
 Msg("Find size of GTimer (11495)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GHashTable,0, 11498, 2, 3.1, NULL, 11497, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GHashTable,0, 11498, 11, 3.1, NULL, 11497, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GHashTable,0, 11498, 3, 3.1, NULL, 11497, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GHashTable,0, 11498, 6, 3.1, NULL, 11497, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GHashTable,0, 11498, 9, 3.1, NULL, 11497, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GHashTable,0, 11498, 10, 3.1, NULL, 11497, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GHashTable,0, 11498, 12, 3.1, NULL, 11497, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11497,NULL);\n",architecture,11498,0);
 Msg("Find size of GHashTable (11498)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(gconstpointer,4, 11500, 2, 3.1, NULL, 10308, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(gconstpointer,8, 11500, 11, 3.1, NULL, 10308, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(gconstpointer,8, 11500, 3, 3.1, NULL, 10308, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(gconstpointer,4, 11500, 6, 3.1, NULL, 10308, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(gconstpointer,8, 11500, 9, 3.1, NULL, 10308, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(gconstpointer,4, 11500, 10, 3.1, NULL, 10308, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(gconstpointer,8, 11500, 12, 3.1, NULL, 10308, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,10308,NULL);\n",architecture,11500,0);
 Msg("Find size of gconstpointer (11500)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GHashFunc,4, 11502, 2, 3.1, NULL, 11501, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GHashFunc,8, 11502, 11, 3.1, NULL, 11501, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GHashFunc,8, 11502, 3, 3.1, NULL, 11501, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GHashFunc,4, 11502, 6, 3.1, NULL, 11501, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GHashFunc,8, 11502, 9, 3.1, NULL, 11501, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GHashFunc,4, 11502, 10, 3.1, NULL, 11501, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GHashFunc,8, 11502, 12, 3.1, NULL, 11501, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11501,NULL);\n",architecture,11502,0);
 Msg("Find size of GHashFunc (11502)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GEqualFunc,4, 11504, 2, 3.1, NULL, 11503, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GEqualFunc,8, 11504, 11, 3.1, NULL, 11503, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GEqualFunc,8, 11504, 3, 3.1, NULL, 11503, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GEqualFunc,4, 11504, 6, 3.1, NULL, 11503, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GEqualFunc,8, 11504, 9, 3.1, NULL, 11503, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GEqualFunc,4, 11504, 10, 3.1, NULL, 11503, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GEqualFunc,8, 11504, 12, 3.1, NULL, 11503, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11503,NULL);\n",architecture,11504,0);
 Msg("Find size of GEqualFunc (11504)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GStaticMutex,28, 11511, 2, 3.1, NULL, 11506, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GStaticMutex,48, 11511, 11, 3.1, NULL, 11506, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GStaticMutex,48, 11511, 3, 3.1, NULL, 11506, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GStaticMutex,32, 11511, 6, 3.1, NULL, 11506, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GStaticMutex,48, 11511, 9, 3.1, NULL, 11506, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GStaticMutex,32, 11511, 10, 3.1, NULL, 11506, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GStaticMutex,48, 11511, 12, 3.1, NULL, 11506, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11506,NULL);\n",architecture,11511,0);
 Msg("Find size of GStaticMutex (11511)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GSystemThread,8, 11513, 2, 3.1, NULL, 11512, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GSystemThread,8, 11513, 11, 3.1, NULL, 11512, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GSystemThread,8, 11513, 3, 3.1, NULL, 11512, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GSystemThread,8, 11513, 6, 3.1, NULL, 11512, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GSystemThread,8, 11513, 9, 3.1, NULL, 11512, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GSystemThread,8, 11513, 10, 3.1, NULL, 11512, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GSystemThread,8, 11513, 12, 3.1, NULL, 11512, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11512,NULL);\n",architecture,11513,0);
 Msg("Find size of GSystemThread (11513)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GStaticRecMutex,40, 11514, 2, 3.1, NULL, 11505, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GStaticRecMutex,64, 11514, 11, 3.1, NULL, 11505, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GStaticRecMutex,64, 11514, 3, 3.1, NULL, 11505, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GStaticRecMutex,48, 11514, 6, 3.1, NULL, 11505, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GStaticRecMutex,64, 11514, 9, 3.1, NULL, 11505, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GStaticRecMutex,48, 11514, 10, 3.1, NULL, 11505, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GStaticRecMutex,64, 11514, 12, 3.1, NULL, 11505, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11505,NULL);\n",architecture,11514,0);
 Msg("Find size of GStaticRecMutex (11514)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GMarkupParseContext,0, 11518, 2, 3.1, NULL, 11517, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GMarkupParseContext,0, 11518, 11, 3.1, NULL, 11517, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GMarkupParseContext,0, 11518, 3, 3.1, NULL, 11517, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GMarkupParseContext,0, 11518, 6, 3.1, NULL, 11517, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GMarkupParseContext,0, 11518, 9, 3.1, NULL, 11517, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GMarkupParseContext,0, 11518, 10, 3.1, NULL, 11517, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GMarkupParseContext,0, 11518, 12, 3.1, NULL, 11517, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11517,NULL);\n",architecture,11518,0);
 Msg("Find size of GMarkupParseContext (11518)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GData,0, 11522, 2, 3.1, NULL, 11521, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GData,0, 11522, 11, 3.1, NULL, 11521, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GData,0, 11522, 3, 3.1, NULL, 11521, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GData,0, 11522, 6, 3.1, NULL, 11521, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GData,0, 11522, 9, 3.1, NULL, 11521, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GData,0, 11522, 10, 3.1, NULL, 11521, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GData,0, 11522, 12, 3.1, NULL, 11521, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11521,NULL);\n",architecture,11522,0);
 Msg("Find size of GData (11522)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GIOStatus,4, 11526, 2, 3.1, NULL, 11525, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GIOStatus,4, 11526, 11, 3.1, NULL, 11525, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GIOStatus,4, 11526, 3, 3.1, NULL, 11525, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GIOStatus,4, 11526, 6, 3.1, NULL, 11525, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GIOStatus,4, 11526, 9, 3.1, NULL, 11525, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GIOStatus,4, 11526, 10, 3.1, NULL, 11525, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GIOStatus,4, 11526, 12, 3.1, NULL, 11525, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11525,NULL);\n",architecture,11526,0);
 Msg("Find size of GIOStatus (11526)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GIOChannel,60, 11529, 2, 3.1, NULL, 11527, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GIOChannel,112, 11529, 11, 3.1, NULL, 11527, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GIOChannel,112, 11529, 3, 3.1, NULL, 11527, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GIOChannel,60, 11529, 6, 3.1, NULL, 11527, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GIOChannel,112, 11529, 9, 3.1, NULL, 11527, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GIOChannel,60, 11529, 10, 3.1, NULL, 11527, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GIOChannel,112, 11529, 12, 3.1, NULL, 11527, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11527,NULL);\n",architecture,11529,0);
 Msg("Find size of GIOChannel (11529)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GSeekType,4, 11535, 2, 3.1, NULL, 11534, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GSeekType,4, 11535, 11, 3.1, NULL, 11534, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GSeekType,4, 11535, 3, 3.1, NULL, 11534, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GSeekType,4, 11535, 6, 3.1, NULL, 11534, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GSeekType,4, 11535, 9, 3.1, NULL, 11534, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GSeekType,4, 11535, 10, 3.1, NULL, 11534, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GSeekType,4, 11535, 12, 3.1, NULL, 11534, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11534,NULL);\n",architecture,11535,0);
 Msg("Find size of GSeekType (11535)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GSource,52, 11540, 2, 3.1, NULL, 11538, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GSource,96, 11540, 11, 3.1, NULL, 11538, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GSource,96, 11540, 3, 3.1, NULL, 11538, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GSource,52, 11540, 6, 3.1, NULL, 11538, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GSource,96, 11540, 9, 3.1, NULL, 11538, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GSource,52, 11540, 10, 3.1, NULL, 11538, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GSource,96, 11540, 12, 3.1, NULL, 11538, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11538,NULL);\n",architecture,11540,0);
 Msg("Find size of GSource (11540)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GSourceFunc,4, 11543, 2, 3.1, NULL, 11542, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GSourceFunc,8, 11543, 11, 3.1, NULL, 11542, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GSourceFunc,8, 11543, 3, 3.1, NULL, 11542, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GSourceFunc,4, 11543, 6, 3.1, NULL, 11542, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GSourceFunc,8, 11543, 9, 3.1, NULL, 11542, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GSourceFunc,4, 11543, 10, 3.1, NULL, 11542, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GSourceFunc,8, 11543, 12, 3.1, NULL, 11542, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11542,NULL);\n",architecture,11543,0);
 Msg("Find size of GSourceFunc (11543)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GSourceCallbackFuncs,12, 11546, 2, 3.1, NULL, 11539, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GSourceCallbackFuncs,24, 11546, 11, 3.1, NULL, 11539, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GSourceCallbackFuncs,24, 11546, 3, 3.1, NULL, 11539, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GSourceCallbackFuncs,12, 11546, 6, 3.1, NULL, 11539, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GSourceCallbackFuncs,24, 11546, 9, 3.1, NULL, 11539, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GSourceCallbackFuncs,12, 11546, 10, 3.1, NULL, 11539, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GSourceCallbackFuncs,24, 11546, 12, 3.1, NULL, 11539, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11539,NULL);\n",architecture,11546,0);
 Msg("Find size of GSourceCallbackFuncs (11546)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GSourceDummyMarshal,4, 11553, 2, 3.1, NULL, 10318, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GSourceDummyMarshal,8, 11553, 11, 3.1, NULL, 10318, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GSourceDummyMarshal,8, 11553, 3, 3.1, NULL, 10318, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GSourceDummyMarshal,4, 11553, 6, 3.1, NULL, 10318, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GSourceDummyMarshal,8, 11553, 9, 3.1, NULL, 10318, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GSourceDummyMarshal,4, 11553, 10, 3.1, NULL, 10318, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GSourceDummyMarshal,8, 11553, 12, 3.1, NULL, 10318, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,10318,NULL);\n",architecture,11553,0);
 Msg("Find size of GSourceDummyMarshal (11553)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GSourceFuncs,24, 11554, 2, 3.1, NULL, 11548, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GSourceFuncs,48, 11554, 11, 3.1, NULL, 11548, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GSourceFuncs,48, 11554, 3, 3.1, NULL, 11548, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GSourceFuncs,24, 11554, 6, 3.1, NULL, 11548, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GSourceFuncs,48, 11554, 9, 3.1, NULL, 11548, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GSourceFuncs,24, 11554, 10, 3.1, NULL, 11548, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GSourceFuncs,48, 11554, 12, 3.1, NULL, 11548, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11548,NULL);\n",architecture,11554,0);
 Msg("Find size of GSourceFuncs (11554)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GMainContext,0, 11557, 2, 3.1, NULL, 11556, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GMainContext,0, 11557, 11, 3.1, NULL, 11556, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GMainContext,0, 11557, 3, 3.1, NULL, 11556, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GMainContext,0, 11557, 6, 3.1, NULL, 11556, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GMainContext,0, 11557, 9, 3.1, NULL, 11556, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GMainContext,0, 11557, 10, 3.1, NULL, 11556, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GMainContext,0, 11557, 12, 3.1, NULL, 11556, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11556,NULL);\n",architecture,11557,0);
 Msg("Find size of GMainContext (11557)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GIOCondition,4, 11560, 2, 3.1, NULL, 11559, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GIOCondition,4, 11560, 11, 3.1, NULL, 11559, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GIOCondition,4, 11560, 3, 3.1, NULL, 11559, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GIOCondition,4, 11560, 6, 3.1, NULL, 11559, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GIOCondition,4, 11560, 9, 3.1, NULL, 11559, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GIOCondition,4, 11560, 10, 3.1, NULL, 11559, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GIOCondition,4, 11560, 12, 3.1, NULL, 11559, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11559,NULL);\n",architecture,11560,0);
 Msg("Find size of GIOCondition (11560)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GIOFlags,4, 11564, 2, 3.1, NULL, 11563, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GIOFlags,4, 11564, 11, 3.1, NULL, 11563, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GIOFlags,4, 11564, 3, 3.1, NULL, 11563, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GIOFlags,4, 11564, 6, 3.1, NULL, 11563, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GIOFlags,4, 11564, 9, 3.1, NULL, 11563, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GIOFlags,4, 11564, 10, 3.1, NULL, 11563, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GIOFlags,4, 11564, 12, 3.1, NULL, 11563, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11563,NULL);\n",architecture,11564,0);
 Msg("Find size of GIOFlags (11564)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GIOFuncs,32, 11567, 2, 3.1, NULL, 11528, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GIOFuncs,64, 11567, 11, 3.1, NULL, 11528, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GIOFuncs,64, 11567, 3, 3.1, NULL, 11528, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GIOFuncs,32, 11567, 6, 3.1, NULL, 11528, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GIOFuncs,64, 11567, 9, 3.1, NULL, 11528, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GIOFuncs,32, 11567, 10, 3.1, NULL, 11528, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GIOFuncs,64, 11567, 12, 3.1, NULL, 11528, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11528,NULL);\n",architecture,11567,0);
 Msg("Find size of GIOFuncs (11567)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GIConv,4, 11571, 2, 3.1, NULL, 11570, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GIConv,8, 11571, 11, 3.1, NULL, 11570, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GIConv,8, 11571, 3, 3.1, NULL, 11570, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GIConv,4, 11571, 6, 3.1, NULL, 11570, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GIConv,8, 11571, 9, 3.1, NULL, 11570, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GIConv,4, 11571, 10, 3.1, NULL, 11570, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GIConv,8, 11571, 12, 3.1, NULL, 11570, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11570,NULL);\n",architecture,11571,0);
 Msg("Find size of GIConv (11571)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GOptionGroup,0, 11574, 2, 3.1, NULL, 11573, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GOptionGroup,0, 11574, 11, 3.1, NULL, 11573, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GOptionGroup,0, 11574, 3, 3.1, NULL, 11573, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GOptionGroup,0, 11574, 6, 3.1, NULL, 11573, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GOptionGroup,0, 11574, 9, 3.1, NULL, 11573, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GOptionGroup,0, 11574, 10, 3.1, NULL, 11573, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GOptionGroup,0, 11574, 12, 3.1, NULL, 11573, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11573,NULL);\n",architecture,11574,0);
 Msg("Find size of GOptionGroup (11574)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GSpawnFlags,4, 11577, 2, 3.1, NULL, 11576, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GSpawnFlags,4, 11577, 11, 3.1, NULL, 11576, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GSpawnFlags,4, 11577, 3, 3.1, NULL, 11576, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GSpawnFlags,4, 11577, 6, 3.1, NULL, 11576, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GSpawnFlags,4, 11577, 9, 3.1, NULL, 11576, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GSpawnFlags,4, 11577, 10, 3.1, NULL, 11576, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GSpawnFlags,4, 11577, 12, 3.1, NULL, 11576, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11576,NULL);\n",architecture,11577,0);
 Msg("Find size of GSpawnFlags (11577)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GSpawnChildSetupFunc,4, 11578, 2, 3.1, NULL, 11438, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GSpawnChildSetupFunc,8, 11578, 11, 3.1, NULL, 11438, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GSpawnChildSetupFunc,8, 11578, 3, 3.1, NULL, 11438, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GSpawnChildSetupFunc,4, 11578, 6, 3.1, NULL, 11438, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GSpawnChildSetupFunc,8, 11578, 9, 3.1, NULL, 11438, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GSpawnChildSetupFunc,4, 11578, 10, 3.1, NULL, 11438, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GSpawnChildSetupFunc,8, 11578, 12, 3.1, NULL, 11438, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11438,NULL);\n",architecture,11578,0);
 Msg("Find size of GSpawnChildSetupFunc (11578)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GPid,4, 11579, 2, 3.1, NULL, 6, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GPid,4, 11579, 11, 3.1, NULL, 6, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GPid,4, 11579, 3, 3.1, NULL, 6, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GPid,4, 11579, 6, 3.1, NULL, 6, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GPid,4, 11579, 9, 3.1, NULL, 6, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GPid,4, 11579, 10, 3.1, NULL, 6, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GPid,4, 11579, 12, 3.1, NULL, 6, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,6,NULL);\n",architecture,11579,0);
 Msg("Find size of GPid (11579)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GFunc,4, 11583, 2, 3.1, NULL, 11582, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GFunc,8, 11583, 11, 3.1, NULL, 11582, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GFunc,8, 11583, 3, 3.1, NULL, 11582, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GFunc,4, 11583, 6, 3.1, NULL, 11582, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GFunc,8, 11583, 9, 3.1, NULL, 11582, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GFunc,4, 11583, 10, 3.1, NULL, 11582, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GFunc,8, 11583, 12, 3.1, NULL, 11582, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11582,NULL);\n",architecture,11583,0);
 Msg("Find size of GFunc (11583)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GThreadPool,12, 11584, 2, 3.1, NULL, 11581, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GThreadPool,24, 11584, 11, 3.1, NULL, 11581, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GThreadPool,24, 11584, 3, 3.1, NULL, 11581, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GThreadPool,12, 11584, 6, 3.1, NULL, 11581, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GThreadPool,24, 11584, 9, 3.1, NULL, 11581, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GThreadPool,12, 11584, 10, 3.1, NULL, 11581, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GThreadPool,24, 11584, 12, 3.1, NULL, 11581, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11581,NULL);\n",architecture,11584,0);
 Msg("Find size of GThreadPool (11584)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GDate,8, 11587, 2, 3.1, NULL, 11586, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GDate,8, 11587, 11, 3.1, NULL, 11586, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GDate,8, 11587, 3, 3.1, NULL, 11586, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GDate,8, 11587, 6, 3.1, NULL, 11586, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GDate,8, 11587, 9, 3.1, NULL, 11586, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GDate,8, 11587, 10, 3.1, NULL, 11586, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GDate,8, 11587, 12, 3.1, NULL, 11586, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11586,NULL);\n",architecture,11587,0);
 Msg("Find size of GDate (11587)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GDateMonth,4, 11590, 2, 3.1, NULL, 11589, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GDateMonth,4, 11590, 11, 3.1, NULL, 11589, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GDateMonth,4, 11590, 3, 3.1, NULL, 11589, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GDateMonth,4, 11590, 6, 3.1, NULL, 11589, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GDateMonth,4, 11590, 9, 3.1, NULL, 11589, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GDateMonth,4, 11590, 10, 3.1, NULL, 11589, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GDateMonth,4, 11590, 12, 3.1, NULL, 11589, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11589,NULL);\n",architecture,11590,0);
 Msg("Find size of GDateMonth (11590)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GAsyncQueue,0, 11592, 2, 3.1, NULL, 11591, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GAsyncQueue,0, 11592, 11, 3.1, NULL, 11591, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GAsyncQueue,0, 11592, 3, 3.1, NULL, 11591, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GAsyncQueue,0, 11592, 6, 3.1, NULL, 11591, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GAsyncQueue,0, 11592, 9, 3.1, NULL, 11591, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GAsyncQueue,0, 11592, 10, 3.1, NULL, 11591, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GAsyncQueue,0, 11592, 12, 3.1, NULL, 11591, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11591,NULL);\n",architecture,11592,0);
 Msg("Find size of GAsyncQueue (11592)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(gushort,2, 11595, 2, 3.1, NULL, 11209, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(gushort,2, 11595, 11, 3.1, NULL, 11209, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(gushort,2, 11595, 3, 3.1, NULL, 11209, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(gushort,2, 11595, 6, 3.1, NULL, 11209, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(gushort,2, 11595, 9, 3.1, NULL, 11209, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(gushort,2, 11595, 10, 3.1, NULL, 11209, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(gushort,2, 11595, 12, 3.1, NULL, 11209, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11209,NULL);\n",architecture,11595,0);
 Msg("Find size of gushort (11595)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GPollFD,8, 11596, 2, 3.1, NULL, 11594, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GPollFD,8, 11596, 11, 3.1, NULL, 11594, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GPollFD,8, 11596, 3, 3.1, NULL, 11594, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GPollFD,8, 11596, 6, 3.1, NULL, 11594, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GPollFD,8, 11596, 9, 3.1, NULL, 11594, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GPollFD,8, 11596, 10, 3.1, NULL, 11594, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GPollFD,8, 11596, 12, 3.1, NULL, 11594, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11594,NULL);\n",architecture,11596,0);
 Msg("Find size of GPollFD (11596)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(gdouble,8, 11598, 2, 3.1, NULL, 13, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(gdouble,8, 11598, 11, 3.1, NULL, 13, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(gdouble,8, 11598, 3, 3.1, NULL, 13, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(gdouble,8, 11598, 6, 3.1, NULL, 13, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(gdouble,8, 11598, 9, 3.1, NULL, 13, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(gdouble,8, 11598, 10, 3.1, NULL, 13, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(gdouble,8, 11598, 12, 3.1, NULL, 13, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13,NULL);\n",architecture,11598,0);
 Msg("Find size of gdouble (11598)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GTree,0, 11600, 2, 3.1, NULL, 11599, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GTree,0, 11600, 11, 3.1, NULL, 11599, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GTree,0, 11600, 3, 3.1, NULL, 11599, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GTree,0, 11600, 6, 3.1, NULL, 11599, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GTree,0, 11600, 9, 3.1, NULL, 11599, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GTree,0, 11600, 10, 3.1, NULL, 11599, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GTree,0, 11600, 12, 3.1, NULL, 11599, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11599,NULL);\n",architecture,11600,0);
 Msg("Find size of GTree (11600)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GCompareDataFunc,4, 11603, 2, 3.1, NULL, 11602, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GCompareDataFunc,8, 11603, 11, 3.1, NULL, 11602, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GCompareDataFunc,8, 11603, 3, 3.1, NULL, 11602, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GCompareDataFunc,4, 11603, 6, 3.1, NULL, 11602, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GCompareDataFunc,8, 11603, 9, 3.1, NULL, 11602, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GCompareDataFunc,4, 11603, 10, 3.1, NULL, 11602, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GCompareDataFunc,8, 11603, 12, 3.1, NULL, 11602, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11602,NULL);\n",architecture,11603,0);
 Msg("Find size of GCompareDataFunc (11603)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(guint8,1, 11604, 2, 3.1, NULL, 3, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(guint8,1, 11604, 11, 3.1, NULL, 3, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(guint8,1, 11604, 3, 3.1, NULL, 3, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(guint8,1, 11604, 6, 3.1, NULL, 3, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(guint8,1, 11604, 9, 3.1, NULL, 3, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(guint8,1, 11604, 10, 3.1, NULL, 3, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(guint8,1, 11604, 12, 3.1, NULL, 3, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,3,NULL);\n",architecture,11604,0);
 Msg("Find size of guint8 (11604)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GDateYear,2, 11605, 2, 3.1, NULL, 11396, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GDateYear,2, 11605, 11, 3.1, NULL, 11396, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GDateYear,2, 11605, 3, 3.1, NULL, 11396, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GDateYear,2, 11605, 6, 3.1, NULL, 11396, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GDateYear,2, 11605, 9, 3.1, NULL, 11396, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GDateYear,2, 11605, 10, 3.1, NULL, 11396, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GDateYear,2, 11605, 12, 3.1, NULL, 11396, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11396,NULL);\n",architecture,11605,0);
 Msg("Find size of GDateYear (11605)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GCache,0, 11607, 2, 3.1, NULL, 11606, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GCache,0, 11607, 11, 3.1, NULL, 11606, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GCache,0, 11607, 3, 3.1, NULL, 11606, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GCache,0, 11607, 6, 3.1, NULL, 11606, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GCache,0, 11607, 9, 3.1, NULL, 11606, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GCache,0, 11607, 10, 3.1, NULL, 11606, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GCache,0, 11607, 12, 3.1, NULL, 11606, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11606,NULL);\n",architecture,11607,0);
 Msg("Find size of GCache (11607)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GHFunc,4, 11610, 2, 3.1, NULL, 11609, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GHFunc,8, 11610, 11, 3.1, NULL, 11609, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GHFunc,8, 11610, 3, 3.1, NULL, 11609, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GHFunc,4, 11610, 6, 3.1, NULL, 11609, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GHFunc,8, 11610, 9, 3.1, NULL, 11609, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GHFunc,4, 11610, 10, 3.1, NULL, 11609, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GHFunc,8, 11610, 12, 3.1, NULL, 11609, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11609,NULL);\n",architecture,11610,0);
 Msg("Find size of GHFunc (11610)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GScannerConfig,24, 11615, 2, 3.1, NULL, 11614, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GScannerConfig,40, 11615, 11, 3.1, NULL, 11614, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GScannerConfig,40, 11615, 3, 3.1, NULL, 11614, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GScannerConfig,24, 11615, 6, 3.1, NULL, 11614, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GScannerConfig,40, 11615, 9, 3.1, NULL, 11614, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GScannerConfig,24, 11615, 10, 3.1, NULL, 11614, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GScannerConfig,40, 11615, 12, 3.1, NULL, 11614, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11614,NULL);\n",architecture,11615,0);
 Msg("Find size of GScannerConfig (11615)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GTokenType,4, 11618, 2, 3.1, NULL, 11617, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GTokenType,4, 11618, 11, 3.1, NULL, 11617, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GTokenType,4, 11618, 3, 3.1, NULL, 11617, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GTokenType,4, 11618, 6, 3.1, NULL, 11617, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GTokenType,4, 11618, 9, 3.1, NULL, 11617, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GTokenType,4, 11618, 10, 3.1, NULL, 11617, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GTokenType,4, 11618, 12, 3.1, NULL, 11617, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11617,NULL);\n",architecture,11618,0);
 Msg("Find size of GTokenType (11618)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(guchar,1, 11622, 2, 3.1, NULL, 3, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(guchar,1, 11622, 11, 3.1, NULL, 3, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(guchar,1, 11622, 3, 3.1, NULL, 3, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(guchar,1, 11622, 6, 3.1, NULL, 3, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(guchar,1, 11622, 9, 3.1, NULL, 3, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(guchar,1, 11622, 10, 3.1, NULL, 3, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(guchar,1, 11622, 12, 3.1, NULL, 3, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,3,NULL);\n",architecture,11622,0);
 Msg("Find size of guchar (11622)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GTokenValue,8, 11623, 2, 3.1, NULL, 11619, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GTokenValue,8, 11623, 11, 3.1, NULL, 11619, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GTokenValue,8, 11623, 3, 3.1, NULL, 11619, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GTokenValue,8, 11623, 6, 3.1, NULL, 11619, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GTokenValue,8, 11623, 9, 3.1, NULL, 11619, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GTokenValue,8, 11623, 10, 3.1, NULL, 11619, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GTokenValue,8, 11623, 12, 3.1, NULL, 11619, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11619,NULL);\n",architecture,11623,0);
 Msg("Find size of GTokenValue (11623)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GScanner,92, 11624, 2, 3.1, NULL, 11613, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GScanner,144, 11624, 11, 3.1, NULL, 11613, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GScanner,144, 11624, 3, 3.1, NULL, 11613, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GScanner,104, 11624, 6, 3.1, NULL, 11613, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GScanner,144, 11624, 9, 3.1, NULL, 11613, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GScanner,104, 11624, 10, 3.1, NULL, 11613, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GScanner,144, 11624, 12, 3.1, NULL, 11613, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11613,NULL);\n",architecture,11624,0);
 Msg("Find size of GScanner (11624)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GScannerMsgFunc,4, 11627, 2, 3.1, NULL, 11626, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GScannerMsgFunc,8, 11627, 11, 3.1, NULL, 11626, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GScannerMsgFunc,8, 11627, 3, 3.1, NULL, 11626, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GScannerMsgFunc,4, 11627, 6, 3.1, NULL, 11626, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GScannerMsgFunc,8, 11627, 9, 3.1, NULL, 11626, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GScannerMsgFunc,4, 11627, 10, 3.1, NULL, 11626, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GScannerMsgFunc,8, 11627, 12, 3.1, NULL, 11626, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11626,NULL);\n",architecture,11627,0);
 Msg("Find size of GScannerMsgFunc (11627)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GByteArray,8, 11630, 2, 3.1, NULL, 11628, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GByteArray,16, 11630, 11, 3.1, NULL, 11628, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GByteArray,16, 11630, 3, 3.1, NULL, 11628, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GByteArray,8, 11630, 6, 3.1, NULL, 11628, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GByteArray,16, 11630, 9, 3.1, NULL, 11628, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GByteArray,8, 11630, 10, 3.1, NULL, 11628, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GByteArray,16, 11630, 12, 3.1, NULL, 11628, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11628,NULL);\n",architecture,11630,0);
 Msg("Find size of GByteArray (11630)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GKeyFileFlags,4, 11633, 2, 3.1, NULL, 11632, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GKeyFileFlags,4, 11633, 11, 3.1, NULL, 11632, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GKeyFileFlags,4, 11633, 3, 3.1, NULL, 11632, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GKeyFileFlags,4, 11633, 6, 3.1, NULL, 11632, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GKeyFileFlags,4, 11633, 9, 3.1, NULL, 11632, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GKeyFileFlags,4, 11633, 10, 3.1, NULL, 11632, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GKeyFileFlags,4, 11633, 12, 3.1, NULL, 11632, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11632,NULL);\n",architecture,11633,0);
 Msg("Find size of GKeyFileFlags (11633)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GTrashStack,4, 11635, 2, 3.1, NULL, 11634, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GTrashStack,8, 11635, 11, 3.1, NULL, 11634, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GTrashStack,8, 11635, 3, 3.1, NULL, 11634, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GTrashStack,4, 11635, 6, 3.1, NULL, 11634, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GTrashStack,8, 11635, 9, 3.1, NULL, 11634, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GTrashStack,4, 11635, 10, 3.1, NULL, 11634, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GTrashStack,8, 11635, 12, 3.1, NULL, 11634, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11634,NULL);\n",architecture,11635,0);
 Msg("Find size of GTrashStack (11635)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(gunichar2,2, 11638, 2, 3.1, NULL, 11396, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(gunichar2,2, 11638, 11, 3.1, NULL, 11396, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(gunichar2,2, 11638, 3, 3.1, NULL, 11396, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(gunichar2,2, 11638, 6, 3.1, NULL, 11396, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(gunichar2,2, 11638, 9, 3.1, NULL, 11396, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(gunichar2,2, 11638, 10, 3.1, NULL, 11396, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(gunichar2,2, 11638, 12, 3.1, NULL, 11396, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11396,NULL);\n",architecture,11638,0);
 Msg("Find size of gunichar2 (11638)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(glong,4, 11642, 2, 3.1, NULL, 8, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(glong,8, 11642, 11, 3.1, NULL, 8, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(glong,8, 11642, 3, 3.1, NULL, 8, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(glong,4, 11642, 6, 3.1, NULL, 8, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(glong,8, 11642, 9, 3.1, NULL, 8, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(glong,4, 11642, 10, 3.1, NULL, 8, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(glong,8, 11642, 12, 3.1, NULL, 8, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,8,NULL);\n",architecture,11642,0);
 Msg("Find size of glong (11642)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GArray,8, 11645, 2, 3.1, NULL, 11644, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GArray,16, 11645, 11, 3.1, NULL, 11644, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GArray,16, 11645, 3, 3.1, NULL, 11644, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GArray,8, 11645, 6, 3.1, NULL, 11644, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GArray,16, 11645, 9, 3.1, NULL, 11644, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GArray,8, 11645, 10, 3.1, NULL, 11644, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GArray,16, 11645, 12, 3.1, NULL, 11644, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11644,NULL);\n",architecture,11645,0);
 Msg("Find size of GArray (11645)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GNode,20, 11648, 2, 3.1, NULL, 11647, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GNode,40, 11648, 11, 3.1, NULL, 11647, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GNode,40, 11648, 3, 3.1, NULL, 11647, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GNode,20, 11648, 6, 3.1, NULL, 11647, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GNode,40, 11648, 9, 3.1, NULL, 11647, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GNode,20, 11648, 10, 3.1, NULL, 11647, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GNode,40, 11648, 12, 3.1, NULL, 11647, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11647,NULL);\n",architecture,11648,0);
 Msg("Find size of GNode (11648)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GHRFunc,4, 11651, 2, 3.1, NULL, 11650, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GHRFunc,8, 11651, 11, 3.1, NULL, 11650, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GHRFunc,8, 11651, 3, 3.1, NULL, 11650, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GHRFunc,4, 11651, 6, 3.1, NULL, 11650, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GHRFunc,8, 11651, 9, 3.1, NULL, 11650, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GHRFunc,4, 11651, 10, 3.1, NULL, 11650, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GHRFunc,8, 11651, 12, 3.1, NULL, 11650, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11650,NULL);\n",architecture,11651,0);
 Msg("Find size of GHRFunc (11651)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GCompareFunc,4, 11653, 2, 3.1, NULL, 11652, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GCompareFunc,8, 11653, 11, 3.1, NULL, 11652, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GCompareFunc,8, 11653, 3, 3.1, NULL, 11652, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GCompareFunc,4, 11653, 6, 3.1, NULL, 11652, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GCompareFunc,8, 11653, 9, 3.1, NULL, 11652, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GCompareFunc,4, 11653, 10, 3.1, NULL, 11652, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GCompareFunc,8, 11653, 12, 3.1, NULL, 11652, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11652,NULL);\n",architecture,11653,0);
 Msg("Find size of GCompareFunc (11653)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(gint32,4, 11654, 2, 3.1, NULL, 6, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(gint32,4, 11654, 11, 3.1, NULL, 6, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(gint32,4, 11654, 3, 3.1, NULL, 6, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(gint32,4, 11654, 6, 3.1, NULL, 6, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(gint32,4, 11654, 9, 3.1, NULL, 6, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(gint32,4, 11654, 10, 3.1, NULL, 6, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(gint32,4, 11654, 12, 3.1, NULL, 6, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,6,NULL);\n",architecture,11654,0);
 Msg("Find size of gint32 (11654)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GTime,4, 11655, 2, 3.1, NULL, 11654, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GTime,4, 11655, 11, 3.1, NULL, 11654, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GTime,4, 11655, 3, 3.1, NULL, 11654, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GTime,4, 11655, 6, 3.1, NULL, 11654, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GTime,4, 11655, 9, 3.1, NULL, 11654, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GTime,4, 11655, 10, 3.1, NULL, 11654, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GTime,4, 11655, 12, 3.1, NULL, 11654, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11654,NULL);\n",architecture,11655,0);
 Msg("Find size of GTime (11655)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GPollFunc,4, 11657, 2, 3.1, NULL, 11656, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GPollFunc,8, 11657, 11, 3.1, NULL, 11656, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GPollFunc,8, 11657, 3, 3.1, NULL, 11656, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GPollFunc,4, 11657, 6, 3.1, NULL, 11656, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GPollFunc,8, 11657, 9, 3.1, NULL, 11656, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GPollFunc,4, 11657, 10, 3.1, NULL, 11656, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GPollFunc,8, 11657, 12, 3.1, NULL, 11656, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11656,NULL);\n",architecture,11657,0);
 Msg("Find size of GPollFunc (11657)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GDateDay,1, 11659, 2, 3.1, NULL, 11604, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GDateDay,1, 11659, 11, 3.1, NULL, 11604, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GDateDay,1, 11659, 3, 3.1, NULL, 11604, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GDateDay,1, 11659, 6, 3.1, NULL, 11604, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GDateDay,1, 11659, 9, 3.1, NULL, 11604, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GDateDay,1, 11659, 10, 3.1, NULL, 11604, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GDateDay,1, 11659, 12, 3.1, NULL, 11604, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11604,NULL);\n",architecture,11659,0);
 Msg("Find size of GDateDay (11659)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GUnicodeBreakType,4, 11661, 2, 3.1, NULL, 11660, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GUnicodeBreakType,4, 11661, 11, 3.1, NULL, 11660, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GUnicodeBreakType,4, 11661, 3, 3.1, NULL, 11660, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GUnicodeBreakType,4, 11661, 6, 3.1, NULL, 11660, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GUnicodeBreakType,4, 11661, 9, 3.1, NULL, 11660, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GUnicodeBreakType,4, 11661, 10, 3.1, NULL, 11660, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GUnicodeBreakType,4, 11661, 12, 3.1, NULL, 11660, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11660,NULL);\n",architecture,11661,0);
 Msg("Find size of GUnicodeBreakType (11661)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GStringChunk,0, 11663, 2, 3.1, NULL, 11662, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GStringChunk,0, 11663, 11, 3.1, NULL, 11662, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GStringChunk,0, 11663, 3, 3.1, NULL, 11662, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GStringChunk,0, 11663, 6, 3.1, NULL, 11662, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GStringChunk,0, 11663, 9, 3.1, NULL, 11662, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GStringChunk,0, 11663, 10, 3.1, NULL, 11662, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GStringChunk,0, 11663, 12, 3.1, NULL, 11662, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11662,NULL);\n",architecture,11663,0);
 Msg("Find size of GStringChunk (11663)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GCond,0, 11667, 2, 3.1, NULL, 11666, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GCond,0, 11667, 11, 3.1, NULL, 11666, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GCond,0, 11667, 3, 3.1, NULL, 11666, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GCond,0, 11667, 6, 3.1, NULL, 11666, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GCond,0, 11667, 9, 3.1, NULL, 11666, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GCond,0, 11667, 10, 3.1, NULL, 11666, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GCond,0, 11667, 12, 3.1, NULL, 11666, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11666,NULL);\n",architecture,11667,0);
 Msg("Find size of GCond (11667)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GStaticRWLock,52, 11669, 2, 3.1, NULL, 11665, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GStaticRWLock,80, 11669, 11, 3.1, NULL, 11665, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GStaticRWLock,80, 11669, 3, 3.1, NULL, 11665, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GStaticRWLock,56, 11669, 6, 3.1, NULL, 11665, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GStaticRWLock,80, 11669, 9, 3.1, NULL, 11665, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GStaticRWLock,56, 11669, 10, 3.1, NULL, 11665, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GStaticRWLock,80, 11669, 12, 3.1, NULL, 11665, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11665,NULL);\n",architecture,11669,0);
 Msg("Find size of GStaticRWLock (11669)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GChildWatchFunc,4, 11672, 2, 3.1, NULL, 11671, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GChildWatchFunc,8, 11672, 11, 3.1, NULL, 11671, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GChildWatchFunc,8, 11672, 3, 3.1, NULL, 11671, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GChildWatchFunc,4, 11672, 6, 3.1, NULL, 11671, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GChildWatchFunc,8, 11672, 9, 3.1, NULL, 11671, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GChildWatchFunc,4, 11672, 10, 3.1, NULL, 11671, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GChildWatchFunc,8, 11672, 12, 3.1, NULL, 11671, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11671,NULL);\n",architecture,11672,0);
 Msg("Find size of GChildWatchFunc (11672)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GTimeVal,8, 11675, 2, 3.1, NULL, 11674, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GTimeVal,16, 11675, 11, 3.1, NULL, 11674, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GTimeVal,16, 11675, 3, 3.1, NULL, 11674, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GTimeVal,8, 11675, 6, 3.1, NULL, 11674, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GTimeVal,16, 11675, 9, 3.1, NULL, 11674, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GTimeVal,8, 11675, 10, 3.1, NULL, 11674, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GTimeVal,16, 11675, 12, 3.1, NULL, 11674, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11674,NULL);\n",architecture,11675,0);
 Msg("Find size of GTimeVal (11675)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GLogLevelFlags,4, 11678, 2, 3.1, NULL, 11677, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GLogLevelFlags,4, 11678, 11, 3.1, NULL, 11677, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GLogLevelFlags,4, 11678, 3, 3.1, NULL, 11677, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GLogLevelFlags,4, 11678, 6, 3.1, NULL, 11677, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GLogLevelFlags,4, 11678, 9, 3.1, NULL, 11677, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GLogLevelFlags,4, 11678, 10, 3.1, NULL, 11677, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GLogLevelFlags,4, 11678, 12, 3.1, NULL, 11677, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11677,NULL);\n",architecture,11678,0);
 Msg("Find size of GLogLevelFlags (11678)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GDateWeekday,4, 11681, 2, 3.1, NULL, 11680, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GDateWeekday,4, 11681, 11, 3.1, NULL, 11680, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GDateWeekday,4, 11681, 3, 3.1, NULL, 11680, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GDateWeekday,4, 11681, 6, 3.1, NULL, 11680, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GDateWeekday,4, 11681, 9, 3.1, NULL, 11680, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GDateWeekday,4, 11681, 10, 3.1, NULL, 11680, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GDateWeekday,4, 11681, 12, 3.1, NULL, 11680, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11680,NULL);\n",architecture,11681,0);
 Msg("Find size of GDateWeekday (11681)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GTraverseType,4, 11683, 2, 3.1, NULL, 11682, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GTraverseType,4, 11683, 11, 3.1, NULL, 11682, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GTraverseType,4, 11683, 3, 3.1, NULL, 11682, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GTraverseType,4, 11683, 6, 3.1, NULL, 11682, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GTraverseType,4, 11683, 9, 3.1, NULL, 11682, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GTraverseType,4, 11683, 10, 3.1, NULL, 11682, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GTraverseType,4, 11683, 12, 3.1, NULL, 11682, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11682,NULL);\n",architecture,11683,0);
 Msg("Find size of GTraverseType (11683)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GTraverseFlags,4, 11685, 2, 3.1, NULL, 11684, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GTraverseFlags,4, 11685, 11, 3.1, NULL, 11684, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GTraverseFlags,4, 11685, 3, 3.1, NULL, 11684, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GTraverseFlags,4, 11685, 6, 3.1, NULL, 11684, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GTraverseFlags,4, 11685, 9, 3.1, NULL, 11684, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GTraverseFlags,4, 11685, 10, 3.1, NULL, 11684, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GTraverseFlags,4, 11685, 12, 3.1, NULL, 11684, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11684,NULL);\n",architecture,11685,0);
 Msg("Find size of GTraverseFlags (11685)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GMarkupParser,20, 11691, 2, 3.1, NULL, 11686, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GMarkupParser,40, 11691, 11, 3.1, NULL, 11686, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GMarkupParser,40, 11691, 3, 3.1, NULL, 11686, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GMarkupParser,20, 11691, 6, 3.1, NULL, 11686, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GMarkupParser,40, 11691, 9, 3.1, NULL, 11686, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GMarkupParser,20, 11691, 10, 3.1, NULL, 11686, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GMarkupParser,40, 11691, 12, 3.1, NULL, 11686, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11686,NULL);\n",architecture,11691,0);
 Msg("Find size of GMarkupParser (11691)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GMarkupParseFlags,4, 11695, 2, 3.1, NULL, 11694, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GMarkupParseFlags,4, 11695, 11, 3.1, NULL, 11694, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GMarkupParseFlags,4, 11695, 3, 3.1, NULL, 11694, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GMarkupParseFlags,4, 11695, 6, 3.1, NULL, 11694, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GMarkupParseFlags,4, 11695, 9, 3.1, NULL, 11694, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GMarkupParseFlags,4, 11695, 10, 3.1, NULL, 11694, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GMarkupParseFlags,4, 11695, 12, 3.1, NULL, 11694, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11694,NULL);\n",architecture,11695,0);
 Msg("Find size of GMarkupParseFlags (11695)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GHookCheckMarshaller,4, 11697, 2, 3.1, NULL, 11696, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GHookCheckMarshaller,8, 11697, 11, 3.1, NULL, 11696, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GHookCheckMarshaller,8, 11697, 3, 3.1, NULL, 11696, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GHookCheckMarshaller,4, 11697, 6, 3.1, NULL, 11696, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GHookCheckMarshaller,8, 11697, 9, 3.1, NULL, 11696, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GHookCheckMarshaller,4, 11697, 10, 3.1, NULL, 11696, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GHookCheckMarshaller,8, 11697, 12, 3.1, NULL, 11696, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11696,NULL);\n",architecture,11697,0);
 Msg("Find size of GHookCheckMarshaller (11697)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GNodeTraverseFunc,4, 11700, 2, 3.1, NULL, 11699, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GNodeTraverseFunc,8, 11700, 11, 3.1, NULL, 11699, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GNodeTraverseFunc,8, 11700, 3, 3.1, NULL, 11699, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GNodeTraverseFunc,4, 11700, 6, 3.1, NULL, 11699, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GNodeTraverseFunc,8, 11700, 9, 3.1, NULL, 11699, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GNodeTraverseFunc,4, 11700, 10, 3.1, NULL, 11699, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GNodeTraverseFunc,8, 11700, 12, 3.1, NULL, 11699, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11699,NULL);\n",architecture,11700,0);
 Msg("Find size of GNodeTraverseFunc (11700)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GNormalizeMode,4, 11702, 2, 3.1, NULL, 11701, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GNormalizeMode,4, 11702, 11, 3.1, NULL, 11701, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GNormalizeMode,4, 11702, 3, 3.1, NULL, 11701, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GNormalizeMode,4, 11702, 6, 3.1, NULL, 11701, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GNormalizeMode,4, 11702, 9, 3.1, NULL, 11701, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GNormalizeMode,4, 11702, 10, 3.1, NULL, 11701, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GNormalizeMode,4, 11702, 12, 3.1, NULL, 11701, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11701,NULL);\n",architecture,11702,0);
 Msg("Find size of GNormalizeMode (11702)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GMutex,0, 11703, 2, 3.1, NULL, 11507, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GMutex,0, 11703, 11, 3.1, NULL, 11507, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GMutex,0, 11703, 3, 3.1, NULL, 11507, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GMutex,0, 11703, 6, 3.1, NULL, 11507, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GMutex,0, 11703, 9, 3.1, NULL, 11507, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GMutex,0, 11703, 10, 3.1, NULL, 11507, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GMutex,0, 11703, 12, 3.1, NULL, 11507, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11507,NULL);\n",architecture,11703,0);
 Msg("Find size of GMutex (11703)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GStaticPrivate,4, 11707, 2, 3.1, NULL, 11706, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GStaticPrivate,4, 11707, 11, 3.1, NULL, 11706, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GStaticPrivate,4, 11707, 3, 3.1, NULL, 11706, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GStaticPrivate,4, 11707, 6, 3.1, NULL, 11706, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GStaticPrivate,4, 11707, 9, 3.1, NULL, 11706, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GStaticPrivate,4, 11707, 10, 3.1, NULL, 11706, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GStaticPrivate,4, 11707, 12, 3.1, NULL, 11706, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11706,NULL);\n",architecture,11707,0);
 Msg("Find size of GStaticPrivate (11707)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GFileError,4, 11710, 2, 3.1, NULL, 11709, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GFileError,4, 11710, 11, 3.1, NULL, 11709, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GFileError,4, 11710, 3, 3.1, NULL, 11709, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GFileError,4, 11710, 6, 3.1, NULL, 11709, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GFileError,4, 11710, 9, 3.1, NULL, 11709, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GFileError,4, 11710, 10, 3.1, NULL, 11709, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GFileError,4, 11710, 12, 3.1, NULL, 11709, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11709,NULL);\n",architecture,11710,0);
 Msg("Find size of GFileError (11710)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GDataForeachFunc,4, 11712, 2, 3.1, NULL, 11711, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GDataForeachFunc,8, 11712, 11, 3.1, NULL, 11711, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GDataForeachFunc,8, 11712, 3, 3.1, NULL, 11711, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GDataForeachFunc,4, 11712, 6, 3.1, NULL, 11711, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GDataForeachFunc,8, 11712, 9, 3.1, NULL, 11711, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GDataForeachFunc,4, 11712, 10, 3.1, NULL, 11711, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GDataForeachFunc,8, 11712, 12, 3.1, NULL, 11711, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11711,NULL);\n",architecture,11712,0);
 Msg("Find size of GDataForeachFunc (11712)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GMemVTable,24, 11717, 2, 3.1, NULL, 11713, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GMemVTable,48, 11717, 11, 3.1, NULL, 11713, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GMemVTable,48, 11717, 3, 3.1, NULL, 11713, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GMemVTable,24, 11717, 6, 3.1, NULL, 11713, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GMemVTable,48, 11717, 9, 3.1, NULL, 11713, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GMemVTable,24, 11717, 10, 3.1, NULL, 11713, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GMemVTable,48, 11717, 12, 3.1, NULL, 11713, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11713,NULL);\n",architecture,11717,0);
 Msg("Find size of GMemVTable (11717)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GOptionArg,4, 11721, 2, 3.1, NULL, 11720, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GOptionArg,4, 11721, 11, 3.1, NULL, 11720, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GOptionArg,4, 11721, 3, 3.1, NULL, 11720, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GOptionArg,4, 11721, 6, 3.1, NULL, 11720, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GOptionArg,4, 11721, 9, 3.1, NULL, 11720, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GOptionArg,4, 11721, 10, 3.1, NULL, 11720, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GOptionArg,4, 11721, 12, 3.1, NULL, 11720, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11720,NULL);\n",architecture,11721,0);
 Msg("Find size of GOptionArg (11721)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GOptionEntry,28, 11722, 2, 3.1, NULL, 11719, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GOptionEntry,48, 11722, 11, 3.1, NULL, 11719, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GOptionEntry,48, 11722, 3, 3.1, NULL, 11719, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GOptionEntry,28, 11722, 6, 3.1, NULL, 11719, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GOptionEntry,48, 11722, 9, 3.1, NULL, 11719, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GOptionEntry,28, 11722, 10, 3.1, NULL, 11719, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GOptionEntry,48, 11722, 12, 3.1, NULL, 11719, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11719,NULL);\n",architecture,11722,0);
 Msg("Find size of GOptionEntry (11722)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GUnicodeType,4, 11726, 2, 3.1, NULL, 11725, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GUnicodeType,4, 11726, 11, 3.1, NULL, 11725, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GUnicodeType,4, 11726, 3, 3.1, NULL, 11725, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GUnicodeType,4, 11726, 6, 3.1, NULL, 11725, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GUnicodeType,4, 11726, 9, 3.1, NULL, 11725, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GUnicodeType,4, 11726, 10, 3.1, NULL, 11725, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GUnicodeType,4, 11726, 12, 3.1, NULL, 11725, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11725,NULL);\n",architecture,11726,0);
 Msg("Find size of GUnicodeType (11726)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GLogFunc,4, 11728, 2, 3.1, NULL, 11727, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GLogFunc,8, 11728, 11, 3.1, NULL, 11727, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GLogFunc,8, 11728, 3, 3.1, NULL, 11727, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GLogFunc,4, 11728, 6, 3.1, NULL, 11727, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GLogFunc,8, 11728, 9, 3.1, NULL, 11727, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GLogFunc,4, 11728, 10, 3.1, NULL, 11727, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GLogFunc,8, 11728, 12, 3.1, NULL, 11727, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11727,NULL);\n",architecture,11728,0);
 Msg("Find size of GLogFunc (11728)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GAllocator,0, 11730, 2, 3.1, NULL, 11729, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GAllocator,0, 11730, 11, 3.1, NULL, 11729, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GAllocator,0, 11730, 3, 3.1, NULL, 11729, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GAllocator,0, 11730, 6, 3.1, NULL, 11729, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GAllocator,0, 11730, 9, 3.1, NULL, 11729, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GAllocator,0, 11730, 10, 3.1, NULL, 11729, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GAllocator,0, 11730, 12, 3.1, NULL, 11729, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11729,NULL);\n",architecture,11730,0);
 Msg("Find size of GAllocator (11730)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GTranslateFunc,4, 11733, 2, 3.1, NULL, 11732, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GTranslateFunc,8, 11733, 11, 3.1, NULL, 11732, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GTranslateFunc,8, 11733, 3, 3.1, NULL, 11732, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GTranslateFunc,4, 11733, 6, 3.1, NULL, 11732, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GTranslateFunc,8, 11733, 9, 3.1, NULL, 11732, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GTranslateFunc,4, 11733, 10, 3.1, NULL, 11732, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GTranslateFunc,8, 11733, 12, 3.1, NULL, 11732, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11732,NULL);\n",architecture,11733,0);
 Msg("Find size of GTranslateFunc (11733)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GOptionParseFunc,4, 11737, 2, 3.1, NULL, 11736, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GOptionParseFunc,8, 11737, 11, 3.1, NULL, 11736, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GOptionParseFunc,8, 11737, 3, 3.1, NULL, 11736, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GOptionParseFunc,4, 11737, 6, 3.1, NULL, 11736, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GOptionParseFunc,8, 11737, 9, 3.1, NULL, 11736, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GOptionParseFunc,4, 11737, 10, 3.1, NULL, 11736, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GOptionParseFunc,8, 11737, 12, 3.1, NULL, 11736, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11736,NULL);\n",architecture,11737,0);
 Msg("Find size of GOptionParseFunc (11737)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GVoidFunc,4, 11738, 2, 3.1, NULL, 10318, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GVoidFunc,8, 11738, 11, 3.1, NULL, 10318, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GVoidFunc,8, 11738, 3, 3.1, NULL, 10318, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GVoidFunc,4, 11738, 6, 3.1, NULL, 10318, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GVoidFunc,8, 11738, 9, 3.1, NULL, 10318, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GVoidFunc,4, 11738, 10, 3.1, NULL, 10318, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GVoidFunc,8, 11738, 12, 3.1, NULL, 10318, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,10318,NULL);\n",architecture,11738,0);
 Msg("Find size of GVoidFunc (11738)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GHookFindFunc,4, 11739, 2, 3.1, NULL, 11696, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GHookFindFunc,8, 11739, 11, 3.1, NULL, 11696, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GHookFindFunc,8, 11739, 3, 3.1, NULL, 11696, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GHookFindFunc,4, 11739, 6, 3.1, NULL, 11696, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GHookFindFunc,8, 11739, 9, 3.1, NULL, 11696, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GHookFindFunc,4, 11739, 10, 3.1, NULL, 11696, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GHookFindFunc,8, 11739, 12, 3.1, NULL, 11696, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11696,NULL);\n",architecture,11739,0);
 Msg("Find size of GHookFindFunc (11739)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GTuples,4, 11743, 2, 3.1, NULL, 11742, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GTuples,4, 11743, 11, 3.1, NULL, 11742, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GTuples,4, 11743, 3, 3.1, NULL, 11742, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GTuples,4, 11743, 6, 3.1, NULL, 11742, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GTuples,4, 11743, 9, 3.1, NULL, 11742, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GTuples,4, 11743, 10, 3.1, NULL, 11742, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GTuples,4, 11743, 12, 3.1, NULL, 11742, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11742,NULL);\n",architecture,11743,0);
 Msg("Find size of GTuples (11743)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GCopyFunc,4, 11746, 2, 3.1, NULL, 11745, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GCopyFunc,8, 11746, 11, 3.1, NULL, 11745, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GCopyFunc,8, 11746, 3, 3.1, NULL, 11745, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GCopyFunc,4, 11746, 6, 3.1, NULL, 11745, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GCopyFunc,8, 11746, 9, 3.1, NULL, 11745, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GCopyFunc,4, 11746, 10, 3.1, NULL, 11745, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GCopyFunc,8, 11746, 12, 3.1, NULL, 11745, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11745,NULL);\n",architecture,11746,0);
 Msg("Find size of GCopyFunc (11746)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GOptionErrorFunc,4, 11748, 2, 3.1, NULL, 11747, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GOptionErrorFunc,8, 11748, 11, 3.1, NULL, 11747, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GOptionErrorFunc,8, 11748, 3, 3.1, NULL, 11747, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GOptionErrorFunc,4, 11748, 6, 3.1, NULL, 11747, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GOptionErrorFunc,8, 11748, 9, 3.1, NULL, 11747, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GOptionErrorFunc,4, 11748, 10, 3.1, NULL, 11747, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GOptionErrorFunc,8, 11748, 12, 3.1, NULL, 11747, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11747,NULL);\n",architecture,11748,0);
 Msg("Find size of GOptionErrorFunc (11748)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GCacheNewFunc,4, 11749, 2, 3.1, NULL, 11405, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GCacheNewFunc,8, 11749, 11, 3.1, NULL, 11405, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GCacheNewFunc,8, 11749, 3, 3.1, NULL, 11405, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GCacheNewFunc,4, 11749, 6, 3.1, NULL, 11405, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GCacheNewFunc,8, 11749, 9, 3.1, NULL, 11405, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GCacheNewFunc,4, 11749, 10, 3.1, NULL, 11405, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GCacheNewFunc,8, 11749, 12, 3.1, NULL, 11405, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11405,NULL);\n",architecture,11749,0);
 Msg("Find size of GCacheNewFunc (11749)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GCacheDestroyFunc,4, 11750, 2, 3.1, NULL, 11438, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GCacheDestroyFunc,8, 11750, 11, 3.1, NULL, 11438, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GCacheDestroyFunc,8, 11750, 3, 3.1, NULL, 11438, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GCacheDestroyFunc,4, 11750, 6, 3.1, NULL, 11438, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GCacheDestroyFunc,8, 11750, 9, 3.1, NULL, 11438, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GCacheDestroyFunc,4, 11750, 10, 3.1, NULL, 11438, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GCacheDestroyFunc,8, 11750, 12, 3.1, NULL, 11438, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11438,NULL);\n",architecture,11750,0);
 Msg("Find size of GCacheDestroyFunc (11750)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GCacheDupFunc,4, 11751, 2, 3.1, NULL, 11405, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GCacheDupFunc,8, 11751, 11, 3.1, NULL, 11405, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GCacheDupFunc,8, 11751, 3, 3.1, NULL, 11405, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GCacheDupFunc,4, 11751, 6, 3.1, NULL, 11405, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GCacheDupFunc,8, 11751, 9, 3.1, NULL, 11405, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GCacheDupFunc,4, 11751, 10, 3.1, NULL, 11405, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GCacheDupFunc,8, 11751, 12, 3.1, NULL, 11405, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11405,NULL);\n",architecture,11751,0);
 Msg("Find size of GCacheDupFunc (11751)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GFileTest,4, 11753, 2, 3.1, NULL, 11752, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GFileTest,4, 11753, 11, 3.1, NULL, 11752, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GFileTest,4, 11753, 3, 3.1, NULL, 11752, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GFileTest,4, 11753, 6, 3.1, NULL, 11752, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GFileTest,4, 11753, 9, 3.1, NULL, 11752, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GFileTest,4, 11753, 10, 3.1, NULL, 11752, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GFileTest,4, 11753, 12, 3.1, NULL, 11752, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11752,NULL);\n",architecture,11753,0);
 Msg("Find size of GFileTest (11753)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GOnceStatus,4, 11756, 2, 3.1, NULL, 11755, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GOnceStatus,4, 11756, 11, 3.1, NULL, 11755, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GOnceStatus,4, 11756, 3, 3.1, NULL, 11755, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GOnceStatus,4, 11756, 6, 3.1, NULL, 11755, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GOnceStatus,4, 11756, 9, 3.1, NULL, 11755, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GOnceStatus,4, 11756, 10, 3.1, NULL, 11755, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GOnceStatus,4, 11756, 12, 3.1, NULL, 11755, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11755,NULL);\n",architecture,11756,0);
 Msg("Find size of GOnceStatus (11756)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GOnce,8, 11759, 2, 3.1, NULL, 11754, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GOnce,16, 11759, 11, 3.1, NULL, 11754, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GOnce,16, 11759, 3, 3.1, NULL, 11754, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GOnce,8, 11759, 6, 3.1, NULL, 11754, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GOnce,16, 11759, 9, 3.1, NULL, 11754, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GOnce,8, 11759, 10, 3.1, NULL, 11754, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GOnce,16, 11759, 12, 3.1, NULL, 11754, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11754,NULL);\n",architecture,11759,0);
 Msg("Find size of GOnce (11759)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GTraverseFunc,4, 11767, 2, 3.1, NULL, 11650, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GTraverseFunc,8, 11767, 11, 3.1, NULL, 11650, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GTraverseFunc,8, 11767, 3, 3.1, NULL, 11650, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GTraverseFunc,4, 11767, 6, 3.1, NULL, 11650, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GTraverseFunc,8, 11767, 9, 3.1, NULL, 11650, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GTraverseFunc,4, 11767, 10, 3.1, NULL, 11650, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GTraverseFunc,8, 11767, 12, 3.1, NULL, 11650, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11650,NULL);\n",architecture,11767,0);
 Msg("Find size of GTraverseFunc (11767)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GHookCompareFunc,4, 11769, 2, 3.1, NULL, 11768, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GHookCompareFunc,8, 11769, 11, 3.1, NULL, 11768, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GHookCompareFunc,8, 11769, 3, 3.1, NULL, 11768, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GHookCompareFunc,4, 11769, 6, 3.1, NULL, 11768, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GHookCompareFunc,8, 11769, 9, 3.1, NULL, 11768, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GHookCompareFunc,4, 11769, 10, 3.1, NULL, 11768, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GHookCompareFunc,8, 11769, 12, 3.1, NULL, 11768, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11768,NULL);\n",architecture,11769,0);
 Msg("Find size of GHookCompareFunc (11769)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GNodeForeachFunc,4, 11771, 2, 3.1, NULL, 11770, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GNodeForeachFunc,8, 11771, 11, 3.1, NULL, 11770, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GNodeForeachFunc,8, 11771, 3, 3.1, NULL, 11770, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GNodeForeachFunc,4, 11771, 6, 3.1, NULL, 11770, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GNodeForeachFunc,8, 11771, 9, 3.1, NULL, 11770, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GNodeForeachFunc,4, 11771, 10, 3.1, NULL, 11770, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GNodeForeachFunc,8, 11771, 12, 3.1, NULL, 11770, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11770,NULL);\n",architecture,11771,0);
 Msg("Find size of GNodeForeachFunc (11771)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GDebugKey,8, 11773, 2, 3.1, NULL, 11772, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GDebugKey,16, 11773, 11, 3.1, NULL, 11772, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GDebugKey,16, 11773, 3, 3.1, NULL, 11772, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GDebugKey,8, 11773, 6, 3.1, NULL, 11772, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GDebugKey,16, 11773, 9, 3.1, NULL, 11772, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GDebugKey,8, 11773, 10, 3.1, NULL, 11772, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GDebugKey,16, 11773, 12, 3.1, NULL, 11772, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11772,NULL);\n",architecture,11773,0);
 Msg("Find size of GDebugKey (11773)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GPrivate,0, 11785, 2, 3.1, NULL, 11784, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GPrivate,0, 11785, 11, 3.1, NULL, 11784, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GPrivate,0, 11785, 3, 3.1, NULL, 11784, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GPrivate,0, 11785, 6, 3.1, NULL, 11784, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GPrivate,0, 11785, 9, 3.1, NULL, 11784, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GPrivate,0, 11785, 10, 3.1, NULL, 11784, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GPrivate,0, 11785, 12, 3.1, NULL, 11784, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11784,NULL);\n",architecture,11785,0);
 Msg("Find size of GPrivate (11785)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GThreadFunctions,84, 11793, 2, 3.1, NULL, 11776, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GThreadFunctions,168, 11793, 11, 3.1, NULL, 11776, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GThreadFunctions,168, 11793, 3, 3.1, NULL, 11776, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GThreadFunctions,84, 11793, 6, 3.1, NULL, 11776, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GThreadFunctions,168, 11793, 9, 3.1, NULL, 11776, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GThreadFunctions,84, 11793, 10, 3.1, NULL, 11776, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GThreadFunctions,168, 11793, 12, 3.1, NULL, 11776, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11776,NULL);\n",architecture,11793,0);
 Msg("Find size of GThreadFunctions (11793)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GHookMarshaller,4, 11795, 2, 3.1, NULL, 11794, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GHookMarshaller,8, 11795, 11, 3.1, NULL, 11794, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GHookMarshaller,8, 11795, 3, 3.1, NULL, 11794, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GHookMarshaller,4, 11795, 6, 3.1, NULL, 11794, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GHookMarshaller,8, 11795, 9, 3.1, NULL, 11794, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GHookMarshaller,4, 11795, 10, 3.1, NULL, 11794, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GHookMarshaller,8, 11795, 12, 3.1, NULL, 11794, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11794,NULL);\n",architecture,11795,0);
 Msg("Find size of GHookMarshaller (11795)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GIOChannelError,4, 11797, 2, 3.1, NULL, 11796, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GIOChannelError,4, 11797, 11, 3.1, NULL, 11796, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GIOChannelError,4, 11797, 3, 3.1, NULL, 11796, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GIOChannelError,4, 11797, 6, 3.1, NULL, 11796, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GIOChannelError,4, 11797, 9, 3.1, NULL, 11796, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GIOChannelError,4, 11797, 10, 3.1, NULL, 11796, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GIOChannelError,4, 11797, 12, 3.1, NULL, 11796, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11796,NULL);\n",architecture,11797,0);
 Msg("Find size of GIOChannelError (11797)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GIOFunc,4, 11799, 2, 3.1, NULL, 11798, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GIOFunc,8, 11799, 11, 3.1, NULL, 11798, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GIOFunc,8, 11799, 3, 3.1, NULL, 11798, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GIOFunc,4, 11799, 6, 3.1, NULL, 11798, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GIOFunc,8, 11799, 9, 3.1, NULL, 11798, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GIOFunc,4, 11799, 10, 3.1, NULL, 11798, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GIOFunc,8, 11799, 12, 3.1, NULL, 11798, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11798,NULL);\n",architecture,11799,0);
 Msg("Find size of GIOFunc (11799)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GFreeFunc,4, 11800, 2, 3.1, NULL, 11438, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GFreeFunc,8, 11800, 11, 3.1, NULL, 11438, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GFreeFunc,8, 11800, 3, 3.1, NULL, 11438, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GFreeFunc,4, 11800, 6, 3.1, NULL, 11438, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GFreeFunc,8, 11800, 9, 3.1, NULL, 11438, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GFreeFunc,4, 11800, 10, 3.1, NULL, 11438, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GFreeFunc,8, 11800, 12, 3.1, NULL, 11438, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11438,NULL);\n",architecture,11800,0);
 Msg("Find size of GFreeFunc (11800)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GHookCheckFunc,4, 11801, 2, 3.1, NULL, 11542, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GHookCheckFunc,8, 11801, 11, 3.1, NULL, 11542, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GHookCheckFunc,8, 11801, 3, 3.1, NULL, 11542, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GHookCheckFunc,4, 11801, 6, 3.1, NULL, 11542, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GHookCheckFunc,8, 11801, 9, 3.1, NULL, 11542, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GHookCheckFunc,4, 11801, 10, 3.1, NULL, 11542, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GHookCheckFunc,8, 11801, 12, 3.1, NULL, 11542, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11542,NULL);\n",architecture,11801,0);
 Msg("Find size of GHookCheckFunc (11801)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GHookFunc,4, 11802, 2, 3.1, NULL, 11438, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GHookFunc,8, 11802, 11, 3.1, NULL, 11438, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GHookFunc,8, 11802, 3, 3.1, NULL, 11438, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GHookFunc,4, 11802, 6, 3.1, NULL, 11438, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GHookFunc,8, 11802, 9, 3.1, NULL, 11438, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GHookFunc,4, 11802, 10, 3.1, NULL, 11438, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GHookFunc,8, 11802, 12, 3.1, NULL, 11438, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11438,NULL);\n",architecture,11802,0);
 Msg("Find size of GHookFunc (11802)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(gint16,2, 11803, 2, 3.1, NULL, 11264, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(gint16,2, 11803, 11, 3.1, NULL, 11264, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(gint16,2, 11803, 3, 3.1, NULL, 11264, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(gint16,2, 11803, 6, 3.1, NULL, 11264, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(gint16,2, 11803, 9, 3.1, NULL, 11264, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(gint16,2, 11803, 10, 3.1, NULL, 11264, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(gint16,2, 11803, 12, 3.1, NULL, 11264, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11264,NULL);\n",architecture,11803,0);
 Msg("Find size of gint16 (11803)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GDateDMY,4, 11805, 2, 3.1, NULL, 11804, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GDateDMY,4, 11805, 11, 3.1, NULL, 11804, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GDateDMY,4, 11805, 3, 3.1, NULL, 11804, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GDateDMY,4, 11805, 6, 3.1, NULL, 11804, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GDateDMY,4, 11805, 9, 3.1, NULL, 11804, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GDateDMY,4, 11805, 10, 3.1, NULL, 11804, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GDateDMY,4, 11805, 12, 3.1, NULL, 11804, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11804,NULL);\n",architecture,11805,0);
 Msg("Find size of GDateDMY (11805)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(gint8,1, 11806, 2, 3.1, NULL, 10505, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(gint8,1, 11806, 11, 3.1, NULL, 10505, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(gint8,1, 11806, 3, 3.1, NULL, 10505, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(gint8,1, 11806, 6, 3.1, NULL, 10505, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(gint8,1, 11806, 9, 3.1, NULL, 10505, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(gint8,1, 11806, 10, 3.1, NULL, 10505, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(gint8,1, 11806, 12, 3.1, NULL, 10505, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,10505,NULL);\n",architecture,11806,0);
 Msg("Find size of gint8 (11806)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GMarkupError,4, 11808, 2, 3.1, NULL, 11807, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GMarkupError,4, 11808, 11, 3.1, NULL, 11807, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GMarkupError,4, 11808, 3, 3.1, NULL, 11807, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GMarkupError,4, 11808, 6, 3.1, NULL, 11807, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GMarkupError,4, 11808, 9, 3.1, NULL, 11807, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GMarkupError,4, 11808, 10, 3.1, NULL, 11807, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GMarkupError,4, 11808, 12, 3.1, NULL, 11807, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11807,NULL);\n",architecture,11808,0);
 Msg("Find size of GMarkupError (11808)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GIOError,4, 11810, 2, 3.1, NULL, 11809, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GIOError,4, 11810, 11, 3.1, NULL, 11809, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GIOError,4, 11810, 3, 3.1, NULL, 11809, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GIOError,4, 11810, 6, 3.1, NULL, 11809, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GIOError,4, 11810, 9, 3.1, NULL, 11809, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GIOError,4, 11810, 10, 3.1, NULL, 11809, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GIOError,4, 11810, 12, 3.1, NULL, 11809, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11809,NULL);\n",architecture,11810,0);
 Msg("Find size of GIOError (11810)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GOptionArgFunc,4, 11812, 2, 3.1, NULL, 11811, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GOptionArgFunc,8, 11812, 3, 3.1, NULL, 11811, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GOptionArgFunc,4, 11812, 6, 3.1, NULL, 11811, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GOptionArgFunc,8, 11812, 9, 3.1, NULL, 11811, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GOptionArgFunc,4, 11812, 10, 3.1, NULL, 11811, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GOptionArgFunc,8, 11812, 12, 3.1, NULL, 11811, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GOptionArgFunc,8, 11812, 11, 3.1, NULL, 11811, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11811,NULL);\n",architecture,11812,0);
 Msg("Find size of GOptionArgFunc (11812)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GOptionFlags,4, 11814, 2, 3.1, NULL, 11813, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GOptionFlags,4, 11814, 11, 3.1, NULL, 11813, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GOptionFlags,4, 11814, 3, 3.1, NULL, 11813, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GOptionFlags,4, 11814, 6, 3.1, NULL, 11813, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GOptionFlags,4, 11814, 9, 3.1, NULL, 11813, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GOptionFlags,4, 11814, 10, 3.1, NULL, 11813, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GOptionFlags,4, 11814, 12, 3.1, NULL, 11813, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11813,NULL);\n",architecture,11814,0);
 Msg("Find size of GOptionFlags (11814)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GConvertError,4, 11816, 2, 3.1, NULL, 11815, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GConvertError,4, 11816, 11, 3.1, NULL, 11815, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GConvertError,4, 11816, 3, 3.1, NULL, 11815, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GConvertError,4, 11816, 6, 3.1, NULL, 11815, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GConvertError,4, 11816, 9, 3.1, NULL, 11815, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GConvertError,4, 11816, 10, 3.1, NULL, 11815, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GConvertError,4, 11816, 12, 3.1, NULL, 11815, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11815,NULL);\n",architecture,11816,0);
 Msg("Find size of GConvertError (11816)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GErrorType,4, 11818, 2, 3.1, NULL, 11817, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GErrorType,4, 11818, 11, 3.1, NULL, 11817, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GErrorType,4, 11818, 3, 3.1, NULL, 11817, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GErrorType,4, 11818, 6, 3.1, NULL, 11817, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GErrorType,4, 11818, 9, 3.1, NULL, 11817, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GErrorType,4, 11818, 10, 3.1, NULL, 11817, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GErrorType,4, 11818, 12, 3.1, NULL, 11817, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11817,NULL);\n",architecture,11818,0);
 Msg("Find size of GErrorType (11818)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GKeyFileError,4, 11820, 2, 3.1, NULL, 11819, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GKeyFileError,4, 11820, 11, 3.1, NULL, 11819, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GKeyFileError,4, 11820, 3, 3.1, NULL, 11819, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GKeyFileError,4, 11820, 6, 3.1, NULL, 11819, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GKeyFileError,4, 11820, 9, 3.1, NULL, 11819, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GKeyFileError,4, 11820, 10, 3.1, NULL, 11819, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GKeyFileError,4, 11820, 12, 3.1, NULL, 11819, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11819,NULL);\n",architecture,11820,0);
 Msg("Find size of GKeyFileError (11820)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GSpawnError,4, 11822, 2, 3.1, NULL, 11821, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GSpawnError,4, 11822, 11, 3.1, NULL, 11821, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GSpawnError,4, 11822, 3, 3.1, NULL, 11821, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GSpawnError,4, 11822, 6, 3.1, NULL, 11821, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GSpawnError,4, 11822, 9, 3.1, NULL, 11821, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GSpawnError,4, 11822, 10, 3.1, NULL, 11821, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GSpawnError,4, 11822, 12, 3.1, NULL, 11821, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11821,NULL);\n",architecture,11822,0);
 Msg("Find size of GSpawnError (11822)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GHookFlagMask,4, 11824, 2, 3.1, NULL, 11823, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GHookFlagMask,4, 11824, 11, 3.1, NULL, 11823, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GHookFlagMask,4, 11824, 3, 3.1, NULL, 11823, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GHookFlagMask,4, 11824, 6, 3.1, NULL, 11823, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GHookFlagMask,4, 11824, 9, 3.1, NULL, 11823, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GHookFlagMask,4, 11824, 10, 3.1, NULL, 11823, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GHookFlagMask,4, 11824, 12, 3.1, NULL, 11823, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11823,NULL);\n",architecture,11824,0);
 Msg("Find size of GHookFlagMask (11824)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GThreadError,4, 11826, 2, 3.1, NULL, 11825, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GThreadError,4, 11826, 11, 3.1, NULL, 11825, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GThreadError,4, 11826, 3, 3.1, NULL, 11825, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GThreadError,4, 11826, 6, 3.1, NULL, 11825, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GThreadError,4, 11826, 9, 3.1, NULL, 11825, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GThreadError,4, 11826, 10, 3.1, NULL, 11825, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GThreadError,4, 11826, 12, 3.1, NULL, 11825, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11825,NULL);\n",architecture,11826,0);
 Msg("Find size of GThreadError (11826)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GOptionError,4, 11828, 2, 3.1, NULL, 11827, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GOptionError,4, 11828, 11, 3.1, NULL, 11827, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GOptionError,4, 11828, 3, 3.1, NULL, 11827, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GOptionError,4, 11828, 6, 3.1, NULL, 11827, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GOptionError,4, 11828, 9, 3.1, NULL, 11827, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GOptionError,4, 11828, 10, 3.1, NULL, 11827, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GOptionError,4, 11828, 12, 3.1, NULL, 11827, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11827,NULL);\n",architecture,11828,0);
 Msg("Find size of GOptionError (11828)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GAsciiType,4, 11830, 2, 3.1, NULL, 11829, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GAsciiType,4, 11830, 11, 3.1, NULL, 11829, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GAsciiType,4, 11830, 3, 3.1, NULL, 11829, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GAsciiType,4, 11830, 6, 3.1, NULL, 11829, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GAsciiType,4, 11830, 9, 3.1, NULL, 11829, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GAsciiType,4, 11830, 10, 3.1, NULL, 11829, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GAsciiType,4, 11830, 12, 3.1, NULL, 11829, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11829,NULL);\n",architecture,11830,0);
 Msg("Find size of GAsciiType (11830)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GShellError,4, 11832, 2, 3.1, NULL, 11831, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GShellError,4, 11832, 11, 3.1, NULL, 11831, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GShellError,4, 11832, 3, 3.1, NULL, 11831, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GShellError,4, 11832, 6, 3.1, NULL, 11831, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GShellError,4, 11832, 9, 3.1, NULL, 11831, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GShellError,4, 11832, 10, 3.1, NULL, 11831, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GShellError,4, 11832, 12, 3.1, NULL, 11831, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11831,NULL);\n",architecture,11832,0);
 Msg("Find size of GShellError (11832)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(gssize,4, 11520, 2, 3.1, NULL, 6, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(gssize,8, 11520, 3, 3.1, NULL, 8, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(gssize,8, 11520, 11, 3.1, NULL, 8, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(gssize,4, 11520, 6, 3.1, NULL, 6, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(gssize,8, 11520, 9, 3.1, NULL, 8, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(gssize,4, 11520, 10, 3.1, NULL, 6, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(gssize,8, 11520, 12, 3.1, NULL, 8, NULL)
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(gint64,8, 11533, 2, 3.1, NULL, 10, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(gint64,8, 11533, 11, 3.1, NULL, 8, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(gint64,8, 11533, 3, 3.1, NULL, 8, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(gint64,8, 11533, 6, 3.1, NULL, 10, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(gint64,8, 11533, 9, 3.1, NULL, 8, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(gint64,8, 11533, 10, 3.1, NULL, 10, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(gint64,8, 11533, 12, 3.1, NULL, 8, NULL)
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(guint64,8, 11621, 2, 3.1, NULL, 11620, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(guint64,8, 11621, 11, 3.1, NULL, 9, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(guint64,8, 11621, 3, 3.1, NULL, 9, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(guint64,8, 11621, 6, 3.1, NULL, 11620, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(guint64,8, 11621, 9, 3.1, NULL, 9, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(guint64,8, 11621, 10, 3.1, NULL, 11620, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(guint64,8, 11621, 12, 3.1, NULL, 9, NULL)
 #endif
 

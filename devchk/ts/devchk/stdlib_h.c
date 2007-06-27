@@ -66,88 +66,88 @@ cnt++;
 
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(__compar_fn_t,4, 9231, 2, 1.0, NULL, 9079, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(__compar_fn_t,8, 9231, 3, 1.3, NULL, 9079, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(__compar_fn_t,4, 9231, 6, 1.2, NULL, 9079, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(__compar_fn_t,4, 9231, 10, 1.3, NULL, 9079, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(__compar_fn_t,8, 9231, 9, 2.0, NULL, 9079, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(__compar_fn_t,8, 9231, 12, 1.3, NULL, 9079, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(__compar_fn_t,8, 9231, 11, 2.0, NULL, 9079, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9079,NULL);\n",architecture,9231,0);
 Msg("Find size of __compar_fn_t (9231)\n");
 #endif
 
-#if __i386__
-#elif __powerpc__ && !__powerpc64__
-#elif __ia64__
-#elif __s390x__
-#elif __s390__ && !__s390x__
-#elif __x86_64__
-#elif __powerpc64__
+#if defined __i386__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __ia64__
+#elif defined __s390x__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __x86_64__
+#elif defined __powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10483,0);
 Msg("Find size of random_data (10483)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(div_t,8, 6973, 2, 1.0, NULL, 6972, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(div_t,8, 6973, 3, 1.3, NULL, 6972, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(div_t,8, 6973, 6, 1.2, NULL, 6972, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(div_t,8, 6973, 10, 1.3, NULL, 6972, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(div_t,8, 6973, 9, 2.0, NULL, 6972, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(div_t,8, 6973, 12, 1.3, NULL, 6972, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(div_t,8, 6973, 11, 2.0, NULL, 6972, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6972,NULL);\n",architecture,6973,0);
 Msg("Find size of div_t (6973)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(ldiv_t,8, 6975, 2, 1.0, NULL, 6974, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(ldiv_t,16, 6975, 3, 1.3, NULL, 6974, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(ldiv_t,8, 6975, 6, 1.2, NULL, 6974, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(ldiv_t,8, 6975, 10, 1.3, NULL, 6974, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(ldiv_t,16, 6975, 9, 2.0, NULL, 6974, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(ldiv_t,16, 6975, 12, 1.3, NULL, 6974, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(ldiv_t,16, 6975, 11, 2.0, NULL, 6974, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6974,NULL);\n",architecture,6975,0);
 Msg("Find size of ldiv_t (6975)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(lldiv_t,16, 6897, 2, 1.2, NULL, 6976, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(lldiv_t,16, 6897, 3, 1.3, NULL, 6976, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(lldiv_t,16, 6897, 6, 1.2, NULL, 6976, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(lldiv_t,16, 6897, 10, 1.3, NULL, 6976, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(lldiv_t,16, 6897, 9, 2.0, NULL, 6976, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(lldiv_t,16, 6897, 12, 1.3, NULL, 6976, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(lldiv_t,16, 6897, 11, 2.0, NULL, 6976, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6976, NULL);\n",architecture,6897,0);

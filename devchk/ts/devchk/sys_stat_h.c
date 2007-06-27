@@ -325,7 +325,7 @@ cnt++;
 /* No test for S_ISSOCK(m) */
 #endif
 
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef _STAT_VER
 	CompareConstant(_STAT_VER,1,4955,architecture,2.0,NULL)
 #else
@@ -333,7 +333,7 @@ Msg( "Error: Constant not found: _STAT_VER\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef _STAT_VER
 	CompareConstant(_STAT_VER,3,4955,architecture,1.2,NULL)
 #else
@@ -341,7 +341,7 @@ Msg( "Error: Constant not found: _STAT_VER\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef _STAT_VER
 	CompareConstant(_STAT_VER,1,4955,architecture,1.3,NULL)
 #else
@@ -349,7 +349,7 @@ Msg( "Error: Constant not found: _STAT_VER\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef _STAT_VER
 	CompareConstant(_STAT_VER,3,4955,architecture,1.2,NULL)
 #else
@@ -357,7 +357,7 @@ Msg( "Error: Constant not found: _STAT_VER\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef _STAT_VER
 	CompareConstant(_STAT_VER,1,4955,architecture,1.3,NULL)
 #else
@@ -365,7 +365,7 @@ Msg( "Error: Constant not found: _STAT_VER\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef _STAT_VER
 	CompareConstant(_STAT_VER,1,4955,architecture,2.0,NULL)
 #else
@@ -373,7 +373,7 @@ Msg( "Error: Constant not found: _STAT_VER\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef _STAT_VER
 	CompareConstant(_STAT_VER,3,4955,architecture,1.3,NULL)
 #else
@@ -399,22 +399,22 @@ Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VA
 /* No test for st_ctime */
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390x__
-#elif __s390__ && !__s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __x86_64__
 #endif
 
-#if __i386__
-#elif __powerpc__ && !__powerpc64__
-#elif __ia64__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
-#elif __s390__ && !__s390x__
+#if defined __i386__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __ia64__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
+#elif defined __s390__ && !defined __s390x__
 #endif
 
 extern int __fxstat_db(int, int, struct stat *);

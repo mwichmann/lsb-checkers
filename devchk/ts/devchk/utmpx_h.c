@@ -26,13 +26,13 @@ Msg("Checking data structures in utmpx.h\n");
 #endif
 
 printf("Checking data structures in utmpx.h\n");
-#if __powerpc__ && !__powerpc64__
-#elif __ia64__
-#elif __powerpc64__
-#elif __s390__ && !__s390x__
-#elif __x86_64__
-#elif __i386__
-#elif __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
+#elif defined __ia64__
+#elif defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __x86_64__
+#elif defined __i386__
+#elif defined __s390x__
 #endif
 
 extern void endutxent_db(void);

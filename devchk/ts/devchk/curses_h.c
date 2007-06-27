@@ -1777,120 +1777,120 @@ cnt++;
 
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(chtype,4, 8650, 2, 1.2, NULL, 9, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(chtype,8, 8650, 3, 1.3, NULL, 9, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(chtype,4, 8650, 6, 1.2, NULL, 9, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(chtype,4, 8650, 10, 1.3, NULL, 9, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(chtype,8, 8650, 9, 2.0, NULL, 9, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(chtype,8, 8650, 12, 1.3, NULL, 9, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(chtype,8, 8650, 11, 2.0, NULL, 9, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,8650,0);
 Msg("Find size of chtype (8650)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(SCREEN,0, 8653, 2, 1.2, NULL, 8652, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(SCREEN,0, 8653, 3, 1.3, NULL, 8652, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(SCREEN,0, 8653, 6, 1.2, NULL, 8652, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(SCREEN,0, 8653, 10, 1.3, NULL, 8652, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(SCREEN,0, 8653, 9, 2.0, NULL, 8652, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(SCREEN,0, 8653, 12, 1.3, NULL, 8652, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(SCREEN,0, 8653, 11, 2.0, NULL, 8652, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8652,NULL);\n",architecture,8653,0);
 Msg("Find size of SCREEN (8653)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(WINDOW,100, 8655, 2, 1.2, NULL, 8654, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(WINDOW,128, 8655, 3, 1.3, NULL, 8654, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(WINDOW,100, 8655, 6, 1.2, NULL, 8654, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(WINDOW,100, 8655, 10, 1.3, NULL, 8654, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(WINDOW,128, 8655, 9, 2.0, NULL, 8654, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(WINDOW,128, 8655, 12, 1.3, NULL, 8654, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(WINDOW,128, 8655, 11, 2.0, NULL, 8654, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8654,NULL);\n",architecture,8655,0);
 Msg("Find size of WINDOW (8655)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(attr_t,4, 8656, 2, 1.2, NULL, 8650, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(attr_t,8, 8656, 3, 1.3, NULL, 8650, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(attr_t,4, 8656, 6, 1.2, NULL, 8650, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(attr_t,4, 8656, 10, 1.3, NULL, 8650, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(attr_t,8, 8656, 9, 2.0, NULL, 8650, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(attr_t,8, 8656, 12, 1.3, NULL, 8650, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(attr_t,8, 8656, 11, 2.0, NULL, 8650, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8650,NULL);\n",architecture,8656,0);
 Msg("Find size of attr_t (8656)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(cchar_t,24, 8658, 2, 1.2, NULL, 8657, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(cchar_t,24, 8658, 6, 1.2, NULL, 8657, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(cchar_t,32, 8658, 3, 1.3, NULL, 8657, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(cchar_t,24, 8658, 10, 1.3, NULL, 8657, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(cchar_t,32, 8658, 9, 2.0, NULL, 8657, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(cchar_t,32, 8658, 12, 1.3, NULL, 8657, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(cchar_t,32, 8658, 11, 2.0, NULL, 8657, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8657,NULL);\n",architecture,8658,0);
 Msg("Find size of cchar_t (8658)\n");
 #endif
 
-#if __i386__
-#elif __powerpc__ && !__powerpc64__
-#elif __ia64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __ia64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,8663,0);
 Msg("Find size of pdat (8663)\n");
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,8654,0);
 Msg("Find size of _win_st (8654)\n");

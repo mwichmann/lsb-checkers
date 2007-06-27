@@ -29,19 +29,19 @@ printf("Checking data structures in libxml2/libxml/xmlstring.h\n");
 /* No test for BAD_CAST */
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlChar,1, 14547, 2, 3.1, NULL, 3, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlChar,1, 14547, 11, 3.1, NULL, 3, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlChar,1, 14547, 3, 3.1, NULL, 3, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlChar,1, 14547, 6, 3.1, NULL, 3, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlChar,1, 14547, 9, 3.1, NULL, 3, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlChar,1, 14547, 10, 3.1, NULL, 3, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlChar,1, 14547, 12, 3.1, NULL, 3, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,3, NULL);\n",architecture,14547,0);

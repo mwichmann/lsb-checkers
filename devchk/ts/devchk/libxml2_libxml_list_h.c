@@ -27,133 +27,133 @@ Msg("Checking data structures in libxml2/libxml/list.h\n");
 #endif
 
 printf("Checking data structures in libxml2/libxml/list.h\n");
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlList,0, 14552, 2, 3.1, NULL, 14551, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlList,0, 14552, 11, 3.1, NULL, 14551, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlList,0, 14552, 3, 3.1, NULL, 14551, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlList,0, 14552, 6, 3.1, NULL, 14551, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlList,0, 14552, 9, 3.1, NULL, 14551, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlList,0, 14552, 10, 3.1, NULL, 14551, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlList,0, 14552, 12, 3.1, NULL, 14551, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14551,NULL);\n",architecture,14552,0);
 Msg("Find size of xmlList (14552)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlListPtr,4, 14554, 2, 3.1, NULL, 14553, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlListPtr,8, 14554, 11, 3.1, NULL, 14553, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlListPtr,8, 14554, 3, 3.1, NULL, 14553, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlListPtr,4, 14554, 6, 3.1, NULL, 14553, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlListPtr,8, 14554, 9, 3.1, NULL, 14553, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlListPtr,4, 14554, 10, 3.1, NULL, 14553, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlListPtr,8, 14554, 12, 3.1, NULL, 14553, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14553,NULL);\n",architecture,14554,0);
 Msg("Find size of xmlListPtr (14554)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlLink,0, 14556, 2, 3.1, NULL, 14555, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlLink,0, 14556, 11, 3.1, NULL, 14555, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlLink,0, 14556, 3, 3.1, NULL, 14555, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlLink,0, 14556, 6, 3.1, NULL, 14555, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlLink,0, 14556, 9, 3.1, NULL, 14555, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlLink,0, 14556, 10, 3.1, NULL, 14555, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlLink,0, 14556, 12, 3.1, NULL, 14555, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14555,NULL);\n",architecture,14556,0);
 Msg("Find size of xmlLink (14556)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlLinkPtr,4, 14558, 2, 3.1, NULL, 14557, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlLinkPtr,8, 14558, 11, 3.1, NULL, 14557, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlLinkPtr,8, 14558, 3, 3.1, NULL, 14557, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlLinkPtr,4, 14558, 6, 3.1, NULL, 14557, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlLinkPtr,8, 14558, 9, 3.1, NULL, 14557, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlLinkPtr,4, 14558, 10, 3.1, NULL, 14557, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlLinkPtr,8, 14558, 12, 3.1, NULL, 14557, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14557,NULL);\n",architecture,14558,0);
 Msg("Find size of xmlLinkPtr (14558)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlListWalker,4, 14561, 2, 3.1, NULL, 14560, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlListWalker,8, 14561, 11, 3.1, NULL, 14560, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlListWalker,8, 14561, 3, 3.1, NULL, 14560, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlListWalker,4, 14561, 6, 3.1, NULL, 14560, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlListWalker,8, 14561, 9, 3.1, NULL, 14560, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlListWalker,4, 14561, 10, 3.1, NULL, 14560, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlListWalker,8, 14561, 12, 3.1, NULL, 14560, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14560,NULL);\n",architecture,14561,0);
 Msg("Find size of xmlListWalker (14561)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlListDeallocator,4, 14563, 2, 3.1, NULL, 14562, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlListDeallocator,8, 14563, 11, 3.1, NULL, 14562, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlListDeallocator,8, 14563, 3, 3.1, NULL, 14562, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlListDeallocator,4, 14563, 6, 3.1, NULL, 14562, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlListDeallocator,8, 14563, 9, 3.1, NULL, 14562, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlListDeallocator,4, 14563, 10, 3.1, NULL, 14562, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlListDeallocator,8, 14563, 12, 3.1, NULL, 14562, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14562,NULL);\n",architecture,14563,0);
 Msg("Find size of xmlListDeallocator (14563)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlListDataCompare,4, 14564, 2, 3.1, NULL, 14560, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlListDataCompare,8, 14564, 11, 3.1, NULL, 14560, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlListDataCompare,8, 14564, 3, 3.1, NULL, 14560, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlListDataCompare,4, 14564, 6, 3.1, NULL, 14560, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlListDataCompare,8, 14564, 9, 3.1, NULL, 14560, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlListDataCompare,4, 14564, 10, 3.1, NULL, 14560, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlListDataCompare,8, 14564, 12, 3.1, NULL, 14560, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14560, NULL);\n",architecture,14564,0);

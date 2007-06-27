@@ -5056,9088 +5056,9088 @@ cnt++;
 /* No test for GTK_VSEPARATOR_GET_CLASS(obj) */
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkIconSet,0, 13041, 2, 3.1, NULL, 13040, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkIconSet,0, 13041, 11, 3.1, NULL, 13040, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkIconSet,0, 13041, 3, 3.1, NULL, 13040, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkIconSet,0, 13041, 6, 3.1, NULL, 13040, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkIconSet,0, 13041, 9, 3.1, NULL, 13040, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkIconSet,0, 13041, 10, 3.1, NULL, 13040, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkIconSet,0, 13041, 12, 3.1, NULL, 13040, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13040,NULL);\n",architecture,13041,0);
 Msg("Find size of GtkIconSet (13041)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkObject,16, 13045, 2, 3.1, NULL, 13044, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkObject,32, 13045, 11, 3.1, NULL, 13044, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkObject,32, 13045, 3, 3.1, NULL, 13044, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkObject,16, 13045, 6, 3.1, NULL, 13044, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkObject,32, 13045, 9, 3.1, NULL, 13044, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkObject,16, 13045, 10, 3.1, NULL, 13044, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkObject,32, 13045, 12, 3.1, NULL, 13044, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13044,NULL);\n",architecture,13045,0);
 Msg("Find size of GtkObject (13045)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkRcFlags,4, 13053, 2, 3.1, NULL, 13052, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkRcFlags,4, 13053, 11, 3.1, NULL, 13052, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkRcFlags,4, 13053, 3, 3.1, NULL, 13052, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkRcFlags,4, 13053, 6, 3.1, NULL, 13052, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkRcFlags,4, 13053, 9, 3.1, NULL, 13052, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkRcFlags,4, 13053, 10, 3.1, NULL, 13052, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkRcFlags,4, 13053, 12, 3.1, NULL, 13052, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13052,NULL);\n",architecture,13053,0);
 Msg("Find size of GtkRcFlags (13053)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkRcStyle,324, 13055, 2, 3.1, NULL, 13050, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkRcStyle,384, 13055, 11, 3.1, NULL, 13050, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkRcStyle,384, 13055, 3, 3.1, NULL, 13050, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkRcStyle,324, 13055, 6, 3.1, NULL, 13050, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkRcStyle,384, 13055, 9, 3.1, NULL, 13050, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkRcStyle,324, 13055, 10, 3.1, NULL, 13050, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkRcStyle,384, 13055, 12, 3.1, NULL, 13050, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13050,NULL);\n",architecture,13055,0);
 Msg("Find size of GtkRcStyle (13055)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkStyle,752, 13057, 2, 3.1, NULL, 13046, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkStyle,984, 13057, 11, 3.1, NULL, 13046, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkStyle,984, 13057, 3, 3.1, NULL, 13046, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkStyle,752, 13057, 6, 3.1, NULL, 13046, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkStyle,984, 13057, 9, 3.1, NULL, 13046, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkStyle,752, 13057, 10, 3.1, NULL, 13046, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkStyle,984, 13057, 12, 3.1, NULL, 13046, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13046,NULL);\n",architecture,13057,0);
 Msg("Find size of GtkStyle (13057)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkRequisition,8, 13060, 2, 3.1, NULL, 13059, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkRequisition,8, 13060, 11, 3.1, NULL, 13059, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkRequisition,8, 13060, 3, 3.1, NULL, 13059, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkRequisition,8, 13060, 6, 3.1, NULL, 13059, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkRequisition,8, 13060, 9, 3.1, NULL, 13059, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkRequisition,8, 13060, 10, 3.1, NULL, 13059, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkRequisition,8, 13060, 12, 3.1, NULL, 13059, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13059,NULL);\n",architecture,13060,0);
 Msg("Find size of GtkRequisition (13060)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAllocation,16, 13061, 2, 3.1, NULL, 12753, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAllocation,16, 13061, 11, 3.1, NULL, 12753, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAllocation,16, 13061, 3, 3.1, NULL, 12753, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAllocation,16, 13061, 6, 3.1, NULL, 12753, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAllocation,16, 13061, 9, 3.1, NULL, 12753, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAllocation,16, 13061, 10, 3.1, NULL, 12753, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAllocation,16, 13061, 12, 3.1, NULL, 12753, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12753,NULL);\n",architecture,13061,0);
 Msg("Find size of GtkAllocation (13061)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkWidget,60, 13062, 2, 3.1, NULL, 13043, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkWidget,96, 13062, 11, 3.1, NULL, 13043, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkWidget,96, 13062, 3, 3.1, NULL, 13043, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkWidget,60, 13062, 6, 3.1, NULL, 13043, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkWidget,96, 13062, 9, 3.1, NULL, 13043, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkWidget,60, 13062, 10, 3.1, NULL, 13043, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkWidget,96, 13062, 12, 3.1, NULL, 13043, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13043,NULL);\n",architecture,13062,0);
 Msg("Find size of GtkWidget (13062)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAdjustment,64, 13067, 2, 3.1, NULL, 13066, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAdjustment,80, 13067, 11, 3.1, NULL, 13066, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAdjustment,80, 13067, 3, 3.1, NULL, 13066, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAdjustment,64, 13067, 6, 3.1, NULL, 13066, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAdjustment,80, 13067, 9, 3.1, NULL, 13066, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAdjustment,64, 13067, 10, 3.1, NULL, 13066, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAdjustment,80, 13067, 12, 3.1, NULL, 13066, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13066,NULL);\n",architecture,13067,0);
 Msg("Find size of GtkAdjustment (13067)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkProgress,84, 13069, 2, 3.1, NULL, 13065, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkProgress,136, 13069, 11, 3.1, NULL, 13065, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkProgress,136, 13069, 3, 3.1, NULL, 13065, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkProgress,84, 13069, 6, 3.1, NULL, 13065, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkProgress,136, 13069, 9, 3.1, NULL, 13065, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkProgress,84, 13069, 10, 3.1, NULL, 13065, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkProgress,136, 13069, 12, 3.1, NULL, 13065, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13065,NULL);\n",architecture,13069,0);
 Msg("Find size of GtkProgress (13069)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkProgressBarStyle,4, 13071, 2, 3.1, NULL, 13070, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkProgressBarStyle,4, 13071, 11, 3.1, NULL, 13070, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkProgressBarStyle,4, 13071, 3, 3.1, NULL, 13070, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkProgressBarStyle,4, 13071, 6, 3.1, NULL, 13070, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkProgressBarStyle,4, 13071, 9, 3.1, NULL, 13070, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkProgressBarStyle,4, 13071, 10, 3.1, NULL, 13070, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkProgressBarStyle,4, 13071, 12, 3.1, NULL, 13070, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13070,NULL);\n",architecture,13071,0);
 Msg("Find size of GtkProgressBarStyle (13071)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkProgressBarOrientation,4, 13073, 2, 3.1, NULL, 13072, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkProgressBarOrientation,4, 13073, 11, 3.1, NULL, 13072, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkProgressBarOrientation,4, 13073, 3, 3.1, NULL, 13072, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkProgressBarOrientation,4, 13073, 6, 3.1, NULL, 13072, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkProgressBarOrientation,4, 13073, 9, 3.1, NULL, 13072, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkProgressBarOrientation,4, 13073, 10, 3.1, NULL, 13072, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkProgressBarOrientation,4, 13073, 12, 3.1, NULL, 13072, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13072,NULL);\n",architecture,13073,0);
 Msg("Find size of GtkProgressBarOrientation (13073)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkProgressBar,124, 13074, 2, 3.1, NULL, 13064, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkProgressBar,184, 13074, 11, 3.1, NULL, 13064, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkProgressBar,184, 13074, 3, 3.1, NULL, 13064, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkProgressBar,128, 13074, 6, 3.1, NULL, 13064, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkProgressBar,184, 13074, 9, 3.1, NULL, 13064, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkProgressBar,128, 13074, 10, 3.1, NULL, 13064, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkProgressBar,184, 13074, 12, 3.1, NULL, 13064, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13064,NULL);\n",architecture,13074,0);
 Msg("Find size of GtkProgressBar (13074)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTextTagTable,28, 13078, 2, 3.1, NULL, 13077, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTextTagTable,56, 13078, 11, 3.1, NULL, 13077, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTextTagTable,56, 13078, 3, 3.1, NULL, 13077, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTextTagTable,28, 13078, 6, 3.1, NULL, 13077, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTextTagTable,56, 13078, 9, 3.1, NULL, 13077, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTextTagTable,28, 13078, 10, 3.1, NULL, 13077, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTextTagTable,56, 13078, 12, 3.1, NULL, 13077, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13077,NULL);\n",architecture,13078,0);
 Msg("Find size of GtkTextTagTable (13078)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTextBTree,0, 13081, 2, 3.1, NULL, 13080, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTextBTree,0, 13081, 11, 3.1, NULL, 13080, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTextBTree,0, 13081, 3, 3.1, NULL, 13080, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTextBTree,0, 13081, 6, 3.1, NULL, 13080, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTextBTree,0, 13081, 9, 3.1, NULL, 13080, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTextBTree,0, 13081, 10, 3.1, NULL, 13080, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTextBTree,0, 13081, 12, 3.1, NULL, 13080, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13080,NULL);\n",architecture,13081,0);
 Msg("Find size of GtkTextBTree (13081)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTextLogAttrCache,0, 13084, 2, 3.1, NULL, 13083, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTextLogAttrCache,0, 13084, 11, 3.1, NULL, 13083, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTextLogAttrCache,0, 13084, 3, 3.1, NULL, 13083, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTextLogAttrCache,0, 13084, 6, 3.1, NULL, 13083, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTextLogAttrCache,0, 13084, 9, 3.1, NULL, 13083, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTextLogAttrCache,0, 13084, 10, 3.1, NULL, 13083, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTextLogAttrCache,0, 13084, 12, 3.1, NULL, 13083, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13083,NULL);\n",architecture,13084,0);
 Msg("Find size of GtkTextLogAttrCache (13084)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTextBuffer,40, 13086, 2, 3.1, NULL, 13076, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTextBuffer,72, 13086, 11, 3.1, NULL, 13076, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTextBuffer,72, 13086, 3, 3.1, NULL, 13076, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTextBuffer,40, 13086, 6, 3.1, NULL, 13076, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTextBuffer,72, 13086, 9, 3.1, NULL, 13076, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTextBuffer,40, 13086, 10, 3.1, NULL, 13076, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTextBuffer,72, 13086, 12, 3.1, NULL, 13076, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13076,NULL);\n",architecture,13086,0);
 Msg("Find size of GtkTextBuffer (13086)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTextIter,56, 13089, 2, 3.1, NULL, 13088, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTextIter,80, 13089, 11, 3.1, NULL, 13088, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTextIter,80, 13089, 3, 3.1, NULL, 13088, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTextIter,56, 13089, 6, 3.1, NULL, 13088, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTextIter,80, 13089, 9, 3.1, NULL, 13088, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTextIter,56, 13089, 10, 3.1, NULL, 13088, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTextIter,80, 13089, 12, 3.1, NULL, 13088, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13088,NULL);\n",architecture,13089,0);
 Msg("Find size of GtkTextIter (13089)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkType,4, 13091, 2, 3.1, NULL, 11836, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkType,8, 13091, 11, 3.1, NULL, 11836, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkType,8, 13091, 3, 3.1, NULL, 11836, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkType,4, 13091, 6, 3.1, NULL, 11836, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkType,8, 13091, 9, 3.1, NULL, 11836, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkType,4, 13091, 10, 3.1, NULL, 11836, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkType,8, 13091, 12, 3.1, NULL, 11836, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11836,NULL);\n",architecture,13091,0);
 Msg("Find size of GtkType (13091)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkContainer,68, 13095, 2, 3.1, NULL, 13094, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkContainer,112, 13095, 11, 3.1, NULL, 13094, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkContainer,112, 13095, 3, 3.1, NULL, 13094, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkContainer,68, 13095, 6, 3.1, NULL, 13094, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkContainer,112, 13095, 9, 3.1, NULL, 13094, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkContainer,68, 13095, 10, 3.1, NULL, 13094, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkContainer,112, 13095, 12, 3.1, NULL, 13094, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13094,NULL);\n",architecture,13095,0);
 Msg("Find size of GtkContainer (13095)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkBin,72, 13096, 2, 3.1, NULL, 13093, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkBin,120, 13096, 11, 3.1, NULL, 13093, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkBin,120, 13096, 3, 3.1, NULL, 13093, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkBin,72, 13096, 6, 3.1, NULL, 13093, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkBin,120, 13096, 9, 3.1, NULL, 13093, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkBin,72, 13096, 10, 3.1, NULL, 13093, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkBin,120, 13096, 12, 3.1, NULL, 13093, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13093,NULL);\n",architecture,13096,0);
 Msg("Find size of GtkBin (13096)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkComboBoxPrivate,0, 13098, 2, 3.1, NULL, 13097, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkComboBoxPrivate,0, 13098, 11, 3.1, NULL, 13097, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkComboBoxPrivate,0, 13098, 3, 3.1, NULL, 13097, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkComboBoxPrivate,0, 13098, 6, 3.1, NULL, 13097, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkComboBoxPrivate,0, 13098, 9, 3.1, NULL, 13097, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkComboBoxPrivate,0, 13098, 10, 3.1, NULL, 13097, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkComboBoxPrivate,0, 13098, 12, 3.1, NULL, 13097, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13097,NULL);\n",architecture,13098,0);
 Msg("Find size of GtkComboBoxPrivate (13098)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkComboBox,76, 13100, 2, 3.1, NULL, 13092, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkComboBox,128, 13100, 11, 3.1, NULL, 13092, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkComboBox,128, 13100, 3, 3.1, NULL, 13092, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkComboBox,76, 13100, 6, 3.1, NULL, 13092, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkComboBox,128, 13100, 9, 3.1, NULL, 13092, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkComboBox,76, 13100, 10, 3.1, NULL, 13092, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkComboBox,128, 13100, 12, 3.1, NULL, 13092, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13092,NULL);\n",architecture,13100,0);
 Msg("Find size of GtkComboBox (13100)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkMisc,72, 13103, 2, 3.1, NULL, 13102, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkMisc,112, 13103, 11, 3.1, NULL, 13102, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkMisc,112, 13103, 3, 3.1, NULL, 13102, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkMisc,72, 13103, 6, 3.1, NULL, 13102, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkMisc,112, 13103, 9, 3.1, NULL, 13102, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkMisc,72, 13103, 10, 3.1, NULL, 13102, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkMisc,112, 13103, 12, 3.1, NULL, 13102, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13102,NULL);\n",architecture,13103,0);
 Msg("Find size of GtkMisc (13103)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkBox,76, 13108, 2, 3.1, NULL, 13107, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkBox,128, 13108, 11, 3.1, NULL, 13107, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkBox,128, 13108, 3, 3.1, NULL, 13107, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkBox,76, 13108, 6, 3.1, NULL, 13107, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkBox,128, 13108, 9, 3.1, NULL, 13107, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkBox,76, 13108, 10, 3.1, NULL, 13107, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkBox,128, 13108, 12, 3.1, NULL, 13107, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13107,NULL);\n",architecture,13108,0);
 Msg("Find size of GtkBox (13108)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkHBox,76, 13109, 2, 3.1, NULL, 13106, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkHBox,128, 13109, 11, 3.1, NULL, 13106, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkHBox,128, 13109, 3, 3.1, NULL, 13106, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkHBox,76, 13109, 6, 3.1, NULL, 13106, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkHBox,128, 13109, 9, 3.1, NULL, 13106, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkHBox,76, 13109, 10, 3.1, NULL, 13106, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkHBox,128, 13109, 12, 3.1, NULL, 13106, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13106,NULL);\n",architecture,13109,0);
 Msg("Find size of GtkHBox (13109)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkStatusbar,108, 13110, 2, 3.1, NULL, 13105, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkStatusbar,184, 13110, 11, 3.1, NULL, 13105, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkStatusbar,184, 13110, 3, 3.1, NULL, 13105, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkStatusbar,108, 13110, 6, 3.1, NULL, 13105, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkStatusbar,184, 13110, 9, 3.1, NULL, 13105, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkStatusbar,108, 13110, 10, 3.1, NULL, 13105, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkStatusbar,184, 13110, 12, 3.1, NULL, 13105, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13105,NULL);\n",architecture,13110,0);
 Msg("Find size of GtkStatusbar (13110)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTargetList,8, 13113, 2, 3.1, NULL, 13112, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTargetList,16, 13113, 11, 3.1, NULL, 13112, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTargetList,16, 13113, 3, 3.1, NULL, 13112, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTargetList,8, 13113, 6, 3.1, NULL, 13112, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTargetList,16, 13113, 9, 3.1, NULL, 13112, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTargetList,8, 13113, 10, 3.1, NULL, 13112, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTargetList,16, 13113, 12, 3.1, NULL, 13112, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13112,NULL);\n",architecture,13113,0);
 Msg("Find size of GtkTargetList (13113)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkWindow,148, 13116, 2, 3.1, NULL, 13115, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkWindow,240, 13116, 11, 3.1, NULL, 13115, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkWindow,240, 13116, 3, 3.1, NULL, 13115, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkWindow,148, 13116, 6, 3.1, NULL, 13115, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkWindow,240, 13116, 9, 3.1, NULL, 13115, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkWindow,148, 13116, 10, 3.1, NULL, 13115, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkWindow,240, 13116, 12, 3.1, NULL, 13115, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13115,NULL);\n",architecture,13116,0);
 Msg("Find size of GtkWindow (13116)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkWindowGeometryInfo,0, 13119, 2, 3.1, NULL, 13118, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkWindowGeometryInfo,0, 13119, 11, 3.1, NULL, 13118, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkWindowGeometryInfo,0, 13119, 3, 3.1, NULL, 13118, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkWindowGeometryInfo,0, 13119, 6, 3.1, NULL, 13118, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkWindowGeometryInfo,0, 13119, 9, 3.1, NULL, 13118, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkWindowGeometryInfo,0, 13119, 10, 3.1, NULL, 13118, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkWindowGeometryInfo,0, 13119, 12, 3.1, NULL, 13118, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13118,NULL);\n",architecture,13119,0);
 Msg("Find size of GtkWindowGeometryInfo (13119)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkWindowGroup,16, 13122, 2, 3.1, NULL, 13121, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkWindowGroup,32, 13122, 11, 3.1, NULL, 13121, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkWindowGroup,32, 13122, 3, 3.1, NULL, 13121, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkWindowGroup,16, 13122, 6, 3.1, NULL, 13121, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkWindowGroup,32, 13122, 9, 3.1, NULL, 13121, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkWindowGroup,16, 13122, 10, 3.1, NULL, 13121, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkWindowGroup,32, 13122, 12, 3.1, NULL, 13121, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13121,NULL);\n",architecture,13122,0);
 Msg("Find size of GtkWindowGroup (13122)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkStateType,4, 13125, 2, 3.1, NULL, 13124, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkStateType,4, 13125, 11, 3.1, NULL, 13124, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkStateType,4, 13125, 3, 3.1, NULL, 13124, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkStateType,4, 13125, 6, 3.1, NULL, 13124, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkStateType,4, 13125, 9, 3.1, NULL, 13124, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkStateType,4, 13125, 10, 3.1, NULL, 13124, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkStateType,4, 13125, 12, 3.1, NULL, 13124, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13124,NULL);\n",architecture,13125,0);
 Msg("Find size of GtkStateType (13125)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeRowReference,0, 13127, 2, 3.1, NULL, 13126, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeRowReference,0, 13127, 11, 3.1, NULL, 13126, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeRowReference,0, 13127, 3, 3.1, NULL, 13126, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeRowReference,0, 13127, 6, 3.1, NULL, 13126, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeRowReference,0, 13127, 9, 3.1, NULL, 13126, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeRowReference,0, 13127, 10, 3.1, NULL, 13126, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeRowReference,0, 13127, 12, 3.1, NULL, 13126, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13126,NULL);\n",architecture,13127,0);
 Msg("Find size of GtkTreeRowReference (13127)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeModelFlags,4, 13130, 2, 3.1, NULL, 13129, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeModelFlags,4, 13130, 11, 3.1, NULL, 13129, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeModelFlags,4, 13130, 3, 3.1, NULL, 13129, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeModelFlags,4, 13130, 6, 3.1, NULL, 13129, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeModelFlags,4, 13130, 9, 3.1, NULL, 13129, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeModelFlags,4, 13130, 10, 3.1, NULL, 13129, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeModelFlags,4, 13130, 12, 3.1, NULL, 13129, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13129,NULL);\n",architecture,13130,0);
 Msg("Find size of GtkTreeModelFlags (13130)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeModel,0, 13132, 2, 3.1, NULL, 13131, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeModel,0, 13132, 11, 3.1, NULL, 13131, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeModel,0, 13132, 3, 3.1, NULL, 13131, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeModel,0, 13132, 6, 3.1, NULL, 13131, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeModel,0, 13132, 9, 3.1, NULL, 13131, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeModel,0, 13132, 10, 3.1, NULL, 13131, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeModel,0, 13132, 12, 3.1, NULL, 13131, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13131,NULL);\n",architecture,13132,0);
 Msg("Find size of GtkTreeModel (13132)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTargetEntry,12, 13135, 2, 3.1, NULL, 13134, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTargetEntry,16, 13135, 11, 3.1, NULL, 13134, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTargetEntry,16, 13135, 3, 3.1, NULL, 13134, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTargetEntry,12, 13135, 6, 3.1, NULL, 13134, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTargetEntry,16, 13135, 9, 3.1, NULL, 13134, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTargetEntry,12, 13135, 10, 3.1, NULL, 13134, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTargetEntry,16, 13135, 12, 3.1, NULL, 13134, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13134,NULL);\n",architecture,13135,0);
 Msg("Find size of GtkTargetEntry (13135)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkIMContext,12, 13140, 2, 3.1, NULL, 13139, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkIMContext,24, 13140, 11, 3.1, NULL, 13139, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkIMContext,24, 13140, 3, 3.1, NULL, 13139, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkIMContext,12, 13140, 6, 3.1, NULL, 13139, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkIMContext,24, 13140, 9, 3.1, NULL, 13139, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkIMContext,12, 13140, 10, 3.1, NULL, 13139, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkIMContext,24, 13140, 12, 3.1, NULL, 13139, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13139,NULL);\n",architecture,13140,0);
 Msg("Find size of GtkIMContext (13140)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkEntry,152, 13142, 2, 3.1, NULL, 13138, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkEntry,208, 13142, 11, 3.1, NULL, 13138, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkEntry,208, 13142, 3, 3.1, NULL, 13138, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkEntry,152, 13142, 6, 3.1, NULL, 13138, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkEntry,208, 13142, 9, 3.1, NULL, 13138, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkEntry,152, 13142, 10, 3.1, NULL, 13138, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkEntry,208, 13142, 12, 3.1, NULL, 13138, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13138,NULL);\n",architecture,13142,0);
 Msg("Find size of GtkEntry (13142)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkComboBoxEntryPrivate,0, 13149, 2, 3.1, NULL, 13148, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkComboBoxEntryPrivate,0, 13149, 11, 3.1, NULL, 13148, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkComboBoxEntryPrivate,0, 13149, 3, 3.1, NULL, 13148, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkComboBoxEntryPrivate,0, 13149, 6, 3.1, NULL, 13148, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkComboBoxEntryPrivate,0, 13149, 9, 3.1, NULL, 13148, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkComboBoxEntryPrivate,0, 13149, 10, 3.1, NULL, 13148, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkComboBoxEntryPrivate,0, 13149, 12, 3.1, NULL, 13148, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13148,NULL);\n",architecture,13149,0);
 Msg("Find size of GtkComboBoxEntryPrivate (13149)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkComboBoxEntry,80, 13151, 2, 3.1, NULL, 13147, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkComboBoxEntry,136, 13151, 11, 3.1, NULL, 13147, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkComboBoxEntry,136, 13151, 3, 3.1, NULL, 13147, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkComboBoxEntry,80, 13151, 6, 3.1, NULL, 13147, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkComboBoxEntry,136, 13151, 9, 3.1, NULL, 13147, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkComboBoxEntry,80, 13151, 10, 3.1, NULL, 13147, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkComboBoxEntry,136, 13151, 12, 3.1, NULL, 13147, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13147,NULL);\n",architecture,13151,0);
 Msg("Find size of GtkComboBoxEntry (13151)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkLayout,108, 13154, 2, 3.1, NULL, 13153, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkLayout,168, 13154, 11, 3.1, NULL, 13153, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkLayout,168, 13154, 3, 3.1, NULL, 13153, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkLayout,108, 13154, 6, 3.1, NULL, 13153, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkLayout,168, 13154, 9, 3.1, NULL, 13153, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkLayout,108, 13154, 10, 3.1, NULL, 13153, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkLayout,168, 13154, 12, 3.1, NULL, 13153, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13153,NULL);\n",architecture,13154,0);
 Msg("Find size of GtkLayout (13154)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkSortType,4, 13158, 2, 3.1, NULL, 13157, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkSortType,4, 13158, 11, 3.1, NULL, 13157, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkSortType,4, 13158, 3, 3.1, NULL, 13157, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkSortType,4, 13158, 6, 3.1, NULL, 13157, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkSortType,4, 13158, 9, 3.1, NULL, 13157, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkSortType,4, 13158, 10, 3.1, NULL, 13157, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkSortType,4, 13158, 12, 3.1, NULL, 13157, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13157,NULL);\n",architecture,13158,0);
 Msg("Find size of GtkSortType (13158)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeIter,16, 13160, 2, 3.1, NULL, 13159, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeIter,32, 13160, 11, 3.1, NULL, 13159, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeIter,32, 13160, 3, 3.1, NULL, 13159, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeIter,16, 13160, 6, 3.1, NULL, 13159, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeIter,32, 13160, 9, 3.1, NULL, 13159, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeIter,16, 13160, 10, 3.1, NULL, 13159, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeIter,32, 13160, 12, 3.1, NULL, 13159, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13159,NULL);\n",architecture,13160,0);
 Msg("Find size of GtkTreeIter (13160)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeIterCompareFunc,4, 13163, 2, 3.1, NULL, 13162, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeIterCompareFunc,8, 13163, 11, 3.1, NULL, 13162, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeIterCompareFunc,8, 13163, 3, 3.1, NULL, 13162, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeIterCompareFunc,4, 13163, 6, 3.1, NULL, 13162, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeIterCompareFunc,8, 13163, 9, 3.1, NULL, 13162, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeIterCompareFunc,4, 13163, 10, 3.1, NULL, 13162, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeIterCompareFunc,8, 13163, 12, 3.1, NULL, 13162, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13162,NULL);\n",architecture,13163,0);
 Msg("Find size of GtkTreeIterCompareFunc (13163)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkDestroyNotify,4, 13164, 2, 3.1, NULL, 11438, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkDestroyNotify,8, 13164, 11, 3.1, NULL, 11438, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkDestroyNotify,8, 13164, 3, 3.1, NULL, 11438, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkDestroyNotify,4, 13164, 6, 3.1, NULL, 11438, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkDestroyNotify,8, 13164, 9, 3.1, NULL, 11438, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkDestroyNotify,4, 13164, 10, 3.1, NULL, 11438, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkDestroyNotify,8, 13164, 12, 3.1, NULL, 11438, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11438,NULL);\n",architecture,13164,0);
 Msg("Find size of GtkDestroyNotify (13164)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeStore,60, 13165, 2, 3.1, NULL, 13156, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeStore,112, 13165, 11, 3.1, NULL, 13156, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeStore,112, 13165, 3, 3.1, NULL, 13156, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeStore,60, 13165, 6, 3.1, NULL, 13156, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeStore,112, 13165, 9, 3.1, NULL, 13156, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeStore,60, 13165, 10, 3.1, NULL, 13156, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeStore,112, 13165, 12, 3.1, NULL, 13156, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13156,NULL);\n",architecture,13165,0);
 Msg("Find size of GtkTreeStore (13165)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkDialog,160, 13169, 2, 3.1, NULL, 13168, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkDialog,264, 13169, 11, 3.1, NULL, 13168, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkDialog,264, 13169, 3, 3.1, NULL, 13168, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkDialog,160, 13169, 6, 3.1, NULL, 13168, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkDialog,264, 13169, 9, 3.1, NULL, 13168, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkDialog,160, 13169, 10, 3.1, NULL, 13168, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkDialog,264, 13169, 12, 3.1, NULL, 13168, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13168,NULL);\n",architecture,13169,0);
 Msg("Find size of GtkDialog (13169)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAboutDialog,164, 13170, 2, 3.1, NULL, 13167, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAboutDialog,272, 13170, 11, 3.1, NULL, 13167, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAboutDialog,272, 13170, 3, 3.1, NULL, 13167, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAboutDialog,164, 13170, 6, 3.1, NULL, 13167, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAboutDialog,272, 13170, 9, 3.1, NULL, 13167, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAboutDialog,164, 13170, 10, 3.1, NULL, 13167, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAboutDialog,272, 13170, 12, 3.1, NULL, 13167, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13167,NULL);\n",architecture,13170,0);
 Msg("Find size of GtkAboutDialog (13170)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAboutDialogActivateLinkFunc,4, 13173, 2, 3.1, NULL, 13172, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAboutDialogActivateLinkFunc,8, 13173, 11, 3.1, NULL, 13172, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAboutDialogActivateLinkFunc,8, 13173, 3, 3.1, NULL, 13172, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAboutDialogActivateLinkFunc,4, 13173, 6, 3.1, NULL, 13172, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAboutDialogActivateLinkFunc,8, 13173, 9, 3.1, NULL, 13172, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAboutDialogActivateLinkFunc,4, 13173, 10, 3.1, NULL, 13172, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAboutDialogActivateLinkFunc,8, 13173, 12, 3.1, NULL, 13172, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13172,NULL);\n",architecture,13173,0);
 Msg("Find size of GtkAboutDialogActivateLinkFunc (13173)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeSortable,0, 13175, 2, 3.1, NULL, 13174, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeSortable,0, 13175, 11, 3.1, NULL, 13174, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeSortable,0, 13175, 3, 3.1, NULL, 13174, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeSortable,0, 13175, 6, 3.1, NULL, 13174, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeSortable,0, 13175, 9, 3.1, NULL, 13174, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeSortable,0, 13175, 10, 3.1, NULL, 13174, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeSortable,0, 13175, 12, 3.1, NULL, 13174, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13174,NULL);\n",architecture,13175,0);
 Msg("Find size of GtkTreeSortable (13175)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkUpdateType,4, 13180, 2, 3.1, NULL, 13179, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkUpdateType,4, 13180, 11, 3.1, NULL, 13179, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkUpdateType,4, 13180, 3, 3.1, NULL, 13179, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkUpdateType,4, 13180, 6, 3.1, NULL, 13179, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkUpdateType,4, 13180, 9, 3.1, NULL, 13179, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkUpdateType,4, 13180, 10, 3.1, NULL, 13179, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkUpdateType,4, 13180, 12, 3.1, NULL, 13179, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13179,NULL);\n",architecture,13180,0);
 Msg("Find size of GtkUpdateType (13180)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkOrientation,4, 13182, 2, 3.1, NULL, 13181, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkOrientation,4, 13182, 11, 3.1, NULL, 13181, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkOrientation,4, 13182, 3, 3.1, NULL, 13181, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkOrientation,4, 13182, 6, 3.1, NULL, 13181, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkOrientation,4, 13182, 9, 3.1, NULL, 13181, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkOrientation,4, 13182, 10, 3.1, NULL, 13181, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkOrientation,4, 13182, 12, 3.1, NULL, 13181, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13181,NULL);\n",architecture,13182,0);
 Msg("Find size of GtkOrientation (13182)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkRangeLayout,0, 13184, 2, 3.1, NULL, 13183, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkRangeLayout,0, 13184, 11, 3.1, NULL, 13183, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkRangeLayout,0, 13184, 3, 3.1, NULL, 13183, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkRangeLayout,0, 13184, 6, 3.1, NULL, 13183, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkRangeLayout,0, 13184, 9, 3.1, NULL, 13183, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkRangeLayout,0, 13184, 10, 3.1, NULL, 13183, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkRangeLayout,0, 13184, 12, 3.1, NULL, 13183, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13183,NULL);\n",architecture,13184,0);
 Msg("Find size of GtkRangeLayout (13184)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkRangeStepTimer,0, 13187, 2, 3.1, NULL, 13186, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkRangeStepTimer,0, 13187, 11, 3.1, NULL, 13186, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkRangeStepTimer,0, 13187, 3, 3.1, NULL, 13186, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkRangeStepTimer,0, 13187, 6, 3.1, NULL, 13186, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkRangeStepTimer,0, 13187, 9, 3.1, NULL, 13186, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkRangeStepTimer,0, 13187, 10, 3.1, NULL, 13186, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkRangeStepTimer,0, 13187, 12, 3.1, NULL, 13186, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13186,NULL);\n",architecture,13187,0);
 Msg("Find size of GtkRangeStepTimer (13187)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkRange,136, 13189, 2, 3.1, NULL, 13178, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkRange,192, 13189, 11, 3.1, NULL, 13178, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkRange,192, 13189, 3, 3.1, NULL, 13178, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkRange,136, 13189, 6, 3.1, NULL, 13178, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkRange,192, 13189, 9, 3.1, NULL, 13178, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkRange,136, 13189, 10, 3.1, NULL, 13178, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkRange,192, 13189, 12, 3.1, NULL, 13178, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13178,NULL);\n",architecture,13189,0);
 Msg("Find size of GtkRange (13189)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAccelKey,12, 13197, 2, 3.1, NULL, 13196, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAccelKey,12, 13197, 11, 3.1, NULL, 13196, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAccelKey,12, 13197, 3, 3.1, NULL, 13196, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAccelKey,12, 13197, 6, 3.1, NULL, 13196, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAccelKey,12, 13197, 9, 3.1, NULL, 13196, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAccelKey,12, 13197, 10, 3.1, NULL, 13196, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAccelKey,12, 13197, 12, 3.1, NULL, 13196, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13196,NULL);\n",architecture,13197,0);
 Msg("Find size of GtkAccelKey (13197)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAccelGroupEntry,20, 13198, 2, 3.1, NULL, 13195, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAccelGroupEntry,32, 13198, 11, 3.1, NULL, 13195, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAccelGroupEntry,32, 13198, 3, 3.1, NULL, 13195, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAccelGroupEntry,20, 13198, 6, 3.1, NULL, 13195, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAccelGroupEntry,32, 13198, 9, 3.1, NULL, 13195, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAccelGroupEntry,20, 13198, 10, 3.1, NULL, 13195, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAccelGroupEntry,32, 13198, 12, 3.1, NULL, 13195, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13195,NULL);\n",architecture,13198,0);
 Msg("Find size of GtkAccelGroupEntry (13198)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAccelGroup,32, 13200, 2, 3.1, NULL, 13194, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAccelGroup,56, 13200, 11, 3.1, NULL, 13194, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAccelGroup,56, 13200, 3, 3.1, NULL, 13194, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAccelGroup,32, 13200, 6, 3.1, NULL, 13194, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAccelGroup,56, 13200, 9, 3.1, NULL, 13194, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAccelGroup,32, 13200, 10, 3.1, NULL, 13194, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAccelGroup,56, 13200, 12, 3.1, NULL, 13194, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13194,NULL);\n",architecture,13200,0);
 Msg("Find size of GtkAccelGroup (13200)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkSocket,96, 13202, 2, 3.1, NULL, 13193, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkSocket,160, 13202, 11, 3.1, NULL, 13193, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkSocket,160, 13202, 3, 3.1, NULL, 13193, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkSocket,96, 13202, 6, 3.1, NULL, 13193, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkSocket,160, 13202, 9, 3.1, NULL, 13193, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkSocket,96, 13202, 10, 3.1, NULL, 13193, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkSocket,160, 13202, 12, 3.1, NULL, 13193, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13193,NULL);\n",architecture,13202,0);
 Msg("Find size of GtkSocket (13202)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCellEditable,0, 13206, 2, 3.1, NULL, 13205, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCellEditable,0, 13206, 11, 3.1, NULL, 13205, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCellEditable,0, 13206, 3, 3.1, NULL, 13205, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCellEditable,0, 13206, 6, 3.1, NULL, 13205, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCellEditable,0, 13206, 9, 3.1, NULL, 13205, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCellEditable,0, 13206, 10, 3.1, NULL, 13205, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCellEditable,0, 13206, 12, 3.1, NULL, 13205, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13205,NULL);\n",architecture,13206,0);
 Msg("Find size of GtkCellEditable (13206)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeViewColumnSizing,4, 13209, 2, 3.1, NULL, 13208, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeViewColumnSizing,4, 13209, 11, 3.1, NULL, 13208, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeViewColumnSizing,4, 13209, 3, 3.1, NULL, 13208, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeViewColumnSizing,4, 13209, 6, 3.1, NULL, 13208, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeViewColumnSizing,4, 13209, 9, 3.1, NULL, 13208, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeViewColumnSizing,4, 13209, 10, 3.1, NULL, 13208, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeViewColumnSizing,4, 13209, 12, 3.1, NULL, 13208, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13208,NULL);\n",architecture,13209,0);
 Msg("Find size of GtkTreeViewColumnSizing (13209)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeViewColumn,124, 13210, 2, 3.1, NULL, 13204, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeViewColumn,184, 13210, 11, 3.1, NULL, 13204, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeViewColumn,184, 13210, 3, 3.1, NULL, 13204, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeViewColumn,124, 13210, 6, 3.1, NULL, 13204, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeViewColumn,184, 13210, 9, 3.1, NULL, 13204, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeViewColumn,124, 13210, 10, 3.1, NULL, 13204, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeViewColumn,184, 13210, 12, 3.1, NULL, 13204, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13204,NULL);\n",architecture,13210,0);
 Msg("Find size of GtkTreeViewColumn (13210)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCellRenderer,40, 13213, 2, 3.1, NULL, 13212, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCellRenderer,56, 13213, 11, 3.1, NULL, 13212, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCellRenderer,56, 13213, 3, 3.1, NULL, 13212, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCellRenderer,40, 13213, 6, 3.1, NULL, 13212, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCellRenderer,56, 13213, 9, 3.1, NULL, 13212, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCellRenderer,40, 13213, 10, 3.1, NULL, 13212, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCellRenderer,56, 13213, 12, 3.1, NULL, 13212, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13212,NULL);\n",architecture,13213,0);
 Msg("Find size of GtkCellRenderer (13213)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkButtonBoxStyle,4, 13216, 2, 3.1, NULL, 13215, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkButtonBoxStyle,4, 13216, 11, 3.1, NULL, 13215, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkButtonBoxStyle,4, 13216, 3, 3.1, NULL, 13215, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkButtonBoxStyle,4, 13216, 6, 3.1, NULL, 13215, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkButtonBoxStyle,4, 13216, 9, 3.1, NULL, 13215, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkButtonBoxStyle,4, 13216, 10, 3.1, NULL, 13215, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkButtonBoxStyle,4, 13216, 12, 3.1, NULL, 13215, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13215,NULL);\n",architecture,13216,0);
 Msg("Find size of GtkButtonBoxStyle (13216)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkButtonBox,96, 13218, 2, 3.1, NULL, 13217, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkButtonBox,152, 13218, 11, 3.1, NULL, 13217, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkButtonBox,152, 13218, 3, 3.1, NULL, 13217, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkButtonBox,96, 13218, 6, 3.1, NULL, 13217, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkButtonBox,152, 13218, 9, 3.1, NULL, 13217, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkButtonBox,96, 13218, 10, 3.1, NULL, 13217, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkButtonBox,152, 13218, 12, 3.1, NULL, 13217, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13217,NULL);\n",architecture,13218,0);
 Msg("Find size of GtkButtonBox (13218)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkActionPrivate,0, 13223, 2, 3.1, NULL, 13222, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkActionPrivate,0, 13223, 11, 3.1, NULL, 13222, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkActionPrivate,0, 13223, 3, 3.1, NULL, 13222, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkActionPrivate,0, 13223, 6, 3.1, NULL, 13222, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkActionPrivate,0, 13223, 9, 3.1, NULL, 13222, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkActionPrivate,0, 13223, 10, 3.1, NULL, 13222, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkActionPrivate,0, 13223, 12, 3.1, NULL, 13222, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13222,NULL);\n",architecture,13223,0);
 Msg("Find size of GtkActionPrivate (13223)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAction,16, 13225, 2, 3.1, NULL, 13221, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAction,32, 13225, 11, 3.1, NULL, 13221, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAction,32, 13225, 3, 3.1, NULL, 13221, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAction,16, 13225, 6, 3.1, NULL, 13221, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAction,32, 13225, 9, 3.1, NULL, 13221, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAction,16, 13225, 10, 3.1, NULL, 13221, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAction,32, 13225, 12, 3.1, NULL, 13221, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13221,NULL);\n",architecture,13225,0);
 Msg("Find size of GtkAction (13225)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkToggleActionPrivate,0, 13227, 2, 3.1, NULL, 13226, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkToggleActionPrivate,0, 13227, 11, 3.1, NULL, 13226, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkToggleActionPrivate,0, 13227, 3, 3.1, NULL, 13226, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkToggleActionPrivate,0, 13227, 6, 3.1, NULL, 13226, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkToggleActionPrivate,0, 13227, 9, 3.1, NULL, 13226, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkToggleActionPrivate,0, 13227, 10, 3.1, NULL, 13226, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkToggleActionPrivate,0, 13227, 12, 3.1, NULL, 13226, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13226,NULL);\n",architecture,13227,0);
 Msg("Find size of GtkToggleActionPrivate (13227)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkToggleAction,20, 13229, 2, 3.1, NULL, 13220, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkToggleAction,40, 13229, 11, 3.1, NULL, 13220, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkToggleAction,40, 13229, 3, 3.1, NULL, 13220, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkToggleAction,20, 13229, 6, 3.1, NULL, 13220, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkToggleAction,40, 13229, 9, 3.1, NULL, 13220, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkToggleAction,20, 13229, 10, 3.1, NULL, 13220, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkToggleAction,40, 13229, 12, 3.1, NULL, 13220, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13220,NULL);\n",architecture,13229,0);
 Msg("Find size of GtkToggleAction (13229)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTextAppearance,44, 13236, 2, 3.1, NULL, 13235, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTextAppearance,64, 13236, 11, 3.1, NULL, 13235, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTextAppearance,64, 13236, 3, 3.1, NULL, 13235, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTextAppearance,44, 13236, 6, 3.1, NULL, 13235, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTextAppearance,64, 13236, 9, 3.1, NULL, 13235, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTextAppearance,44, 13236, 10, 3.1, NULL, 13235, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTextAppearance,64, 13236, 12, 3.1, NULL, 13235, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13235,NULL);\n",architecture,13236,0);
 Msg("Find size of GtkTextAppearance (13236)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkJustification,4, 13238, 2, 3.1, NULL, 13237, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkJustification,4, 13238, 11, 3.1, NULL, 13237, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkJustification,4, 13238, 3, 3.1, NULL, 13237, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkJustification,4, 13238, 6, 3.1, NULL, 13237, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkJustification,4, 13238, 9, 3.1, NULL, 13237, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkJustification,4, 13238, 10, 3.1, NULL, 13237, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkJustification,4, 13238, 12, 3.1, NULL, 13237, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13237,NULL);\n",architecture,13238,0);
 Msg("Find size of GtkJustification (13238)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTextDirection,4, 13240, 2, 3.1, NULL, 13239, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTextDirection,4, 13240, 11, 3.1, NULL, 13239, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTextDirection,4, 13240, 3, 3.1, NULL, 13239, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTextDirection,4, 13240, 6, 3.1, NULL, 13239, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTextDirection,4, 13240, 9, 3.1, NULL, 13239, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTextDirection,4, 13240, 10, 3.1, NULL, 13239, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTextDirection,4, 13240, 12, 3.1, NULL, 13239, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13239,NULL);\n",architecture,13240,0);
 Msg("Find size of GtkTextDirection (13240)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkWrapMode,4, 13242, 2, 3.1, NULL, 13241, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkWrapMode,4, 13242, 11, 3.1, NULL, 13241, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkWrapMode,4, 13242, 3, 3.1, NULL, 13241, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkWrapMode,4, 13242, 6, 3.1, NULL, 13241, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkWrapMode,4, 13242, 9, 3.1, NULL, 13241, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkWrapMode,4, 13242, 10, 3.1, NULL, 13241, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkWrapMode,4, 13242, 12, 3.1, NULL, 13241, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13241,NULL);\n",architecture,13242,0);
 Msg("Find size of GtkWrapMode (13242)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTextAttributes,112, 13243, 2, 3.1, NULL, 13234, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTextAttributes,160, 13243, 11, 3.1, NULL, 13234, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTextAttributes,160, 13243, 3, 3.1, NULL, 13234, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTextAttributes,120, 13243, 6, 3.1, NULL, 13234, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTextAttributes,160, 13243, 9, 3.1, NULL, 13234, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTextAttributes,120, 13243, 10, 3.1, NULL, 13234, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTextAttributes,160, 13243, 12, 3.1, NULL, 13234, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13234,NULL);\n",architecture,13243,0);
 Msg("Find size of GtkTextAttributes (13243)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTextTag,32, 13245, 2, 3.1, NULL, 13233, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTextTag,64, 13245, 11, 3.1, NULL, 13233, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTextTag,64, 13245, 3, 3.1, NULL, 13233, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTextTag,32, 13245, 6, 3.1, NULL, 13233, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTextTag,64, 13245, 9, 3.1, NULL, 13233, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTextTag,32, 13245, 10, 3.1, NULL, 13233, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTextTag,64, 13245, 12, 3.1, NULL, 13233, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13233,NULL);\n",architecture,13245,0);
 Msg("Find size of GtkTextTag (13245)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFileFilter,0, 13248, 2, 3.1, NULL, 13247, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFileFilter,0, 13248, 11, 3.1, NULL, 13247, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFileFilter,0, 13248, 3, 3.1, NULL, 13247, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFileFilter,0, 13248, 6, 3.1, NULL, 13247, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFileFilter,0, 13248, 9, 3.1, NULL, 13247, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFileFilter,0, 13248, 10, 3.1, NULL, 13247, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFileFilter,0, 13248, 12, 3.1, NULL, 13247, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13247,NULL);\n",architecture,13248,0);
 Msg("Find size of GtkFileFilter (13248)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFileFilterFlags,4, 13252, 2, 3.1, NULL, 13251, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFileFilterFlags,4, 13252, 11, 3.1, NULL, 13251, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFileFilterFlags,4, 13252, 3, 3.1, NULL, 13251, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFileFilterFlags,4, 13252, 6, 3.1, NULL, 13251, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFileFilterFlags,4, 13252, 9, 3.1, NULL, 13251, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFileFilterFlags,4, 13252, 10, 3.1, NULL, 13251, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFileFilterFlags,4, 13252, 12, 3.1, NULL, 13251, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13251,NULL);\n",architecture,13252,0);
 Msg("Find size of GtkFileFilterFlags (13252)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFileFilterInfo,20, 13253, 2, 3.1, NULL, 13250, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFileFilterInfo,40, 13253, 11, 3.1, NULL, 13250, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFileFilterInfo,40, 13253, 3, 3.1, NULL, 13250, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFileFilterInfo,20, 13253, 6, 3.1, NULL, 13250, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFileFilterInfo,40, 13253, 9, 3.1, NULL, 13250, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFileFilterInfo,20, 13253, 10, 3.1, NULL, 13250, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFileFilterInfo,40, 13253, 12, 3.1, NULL, 13250, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13250,NULL);\n",architecture,13253,0);
 Msg("Find size of GtkFileFilterInfo (13253)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkIconSource,0, 13257, 2, 3.1, NULL, 13256, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkIconSource,0, 13257, 11, 3.1, NULL, 13256, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkIconSource,0, 13257, 3, 3.1, NULL, 13256, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkIconSource,0, 13257, 6, 3.1, NULL, 13256, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkIconSource,0, 13257, 9, 3.1, NULL, 13256, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkIconSource,0, 13257, 10, 3.1, NULL, 13256, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkIconSource,0, 13257, 12, 3.1, NULL, 13256, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13256,NULL);\n",architecture,13257,0);
 Msg("Find size of GtkIconSource (13257)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkToolItemPrivate,0, 13263, 2, 3.1, NULL, 13262, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkToolItemPrivate,0, 13263, 11, 3.1, NULL, 13262, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkToolItemPrivate,0, 13263, 3, 3.1, NULL, 13262, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkToolItemPrivate,0, 13263, 6, 3.1, NULL, 13262, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkToolItemPrivate,0, 13263, 9, 3.1, NULL, 13262, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkToolItemPrivate,0, 13263, 10, 3.1, NULL, 13262, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkToolItemPrivate,0, 13263, 12, 3.1, NULL, 13262, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13262,NULL);\n",architecture,13263,0);
 Msg("Find size of GtkToolItemPrivate (13263)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkToolItem,76, 13265, 2, 3.1, NULL, 13261, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkToolItem,128, 13265, 11, 3.1, NULL, 13261, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkToolItem,128, 13265, 3, 3.1, NULL, 13261, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkToolItem,76, 13265, 6, 3.1, NULL, 13261, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkToolItem,128, 13265, 9, 3.1, NULL, 13261, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkToolItem,76, 13265, 10, 3.1, NULL, 13261, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkToolItem,128, 13265, 12, 3.1, NULL, 13261, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13261,NULL);\n",architecture,13265,0);
 Msg("Find size of GtkToolItem (13265)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkToolButtonPrivate,0, 13267, 2, 3.1, NULL, 13266, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkToolButtonPrivate,0, 13267, 11, 3.1, NULL, 13266, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkToolButtonPrivate,0, 13267, 3, 3.1, NULL, 13266, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkToolButtonPrivate,0, 13267, 6, 3.1, NULL, 13266, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkToolButtonPrivate,0, 13267, 9, 3.1, NULL, 13266, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkToolButtonPrivate,0, 13267, 10, 3.1, NULL, 13266, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkToolButtonPrivate,0, 13267, 12, 3.1, NULL, 13266, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13266,NULL);\n",architecture,13267,0);
 Msg("Find size of GtkToolButtonPrivate (13267)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkToolButton,80, 13269, 2, 3.1, NULL, 13260, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkToolButton,136, 13269, 11, 3.1, NULL, 13260, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkToolButton,136, 13269, 3, 3.1, NULL, 13260, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkToolButton,80, 13269, 6, 3.1, NULL, 13260, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkToolButton,136, 13269, 9, 3.1, NULL, 13260, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkToolButton,80, 13269, 10, 3.1, NULL, 13260, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkToolButton,136, 13269, 12, 3.1, NULL, 13260, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13260,NULL);\n",architecture,13269,0);
 Msg("Find size of GtkToolButton (13269)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkIconViewPrivate,0, 13273, 2, 3.1, NULL, 13272, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkIconViewPrivate,0, 13273, 11, 3.1, NULL, 13272, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkIconViewPrivate,0, 13273, 3, 3.1, NULL, 13272, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkIconViewPrivate,0, 13273, 6, 3.1, NULL, 13272, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkIconViewPrivate,0, 13273, 9, 3.1, NULL, 13272, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkIconViewPrivate,0, 13273, 10, 3.1, NULL, 13272, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkIconViewPrivate,0, 13273, 12, 3.1, NULL, 13272, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13272,NULL);\n",architecture,13273,0);
 Msg("Find size of GtkIconViewPrivate (13273)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkIconView,72, 13275, 2, 3.1, NULL, 13271, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkIconView,120, 13275, 11, 3.1, NULL, 13271, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkIconView,120, 13275, 3, 3.1, NULL, 13271, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkIconView,72, 13275, 6, 3.1, NULL, 13271, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkIconView,120, 13275, 9, 3.1, NULL, 13271, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkIconView,72, 13275, 10, 3.1, NULL, 13271, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkIconView,120, 13275, 12, 3.1, NULL, 13271, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13271,NULL);\n",architecture,13275,0);
 Msg("Find size of GtkIconView (13275)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkLabelSelectionInfo,0, 13279, 2, 3.1, NULL, 13278, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkLabelSelectionInfo,0, 13279, 11, 3.1, NULL, 13278, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkLabelSelectionInfo,0, 13279, 3, 3.1, NULL, 13278, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkLabelSelectionInfo,0, 13279, 6, 3.1, NULL, 13278, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkLabelSelectionInfo,0, 13279, 9, 3.1, NULL, 13278, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkLabelSelectionInfo,0, 13279, 10, 3.1, NULL, 13278, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkLabelSelectionInfo,0, 13279, 12, 3.1, NULL, 13278, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13278,NULL);\n",architecture,13279,0);
 Msg("Find size of GtkLabelSelectionInfo (13279)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkLabel,112, 13281, 2, 3.1, NULL, 13277, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkLabel,184, 13281, 11, 3.1, NULL, 13277, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkLabel,184, 13281, 3, 3.1, NULL, 13277, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkLabel,112, 13281, 6, 3.1, NULL, 13277, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkLabel,184, 13281, 9, 3.1, NULL, 13277, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkLabel,112, 13281, 10, 3.1, NULL, 13277, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkLabel,184, 13281, 12, 3.1, NULL, 13277, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13277,NULL);\n",architecture,13281,0);
 Msg("Find size of GtkLabel (13281)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkSettingsPropertyValue,0, 13286, 2, 3.1, NULL, 13285, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkSettingsPropertyValue,0, 13286, 11, 3.1, NULL, 13285, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkSettingsPropertyValue,0, 13286, 3, 3.1, NULL, 13285, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkSettingsPropertyValue,0, 13286, 6, 3.1, NULL, 13285, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkSettingsPropertyValue,0, 13286, 9, 3.1, NULL, 13285, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkSettingsPropertyValue,0, 13286, 10, 3.1, NULL, 13285, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkSettingsPropertyValue,0, 13286, 12, 3.1, NULL, 13285, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13285,NULL);\n",architecture,13286,0);
 Msg("Find size of GtkSettingsPropertyValue (13286)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkRcContext,0, 13289, 2, 3.1, NULL, 13288, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkRcContext,0, 13289, 11, 3.1, NULL, 13288, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkRcContext,0, 13289, 3, 3.1, NULL, 13288, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkRcContext,0, 13289, 6, 3.1, NULL, 13288, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkRcContext,0, 13289, 9, 3.1, NULL, 13288, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkRcContext,0, 13289, 10, 3.1, NULL, 13288, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkRcContext,0, 13289, 12, 3.1, NULL, 13288, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13288,NULL);\n",architecture,13289,0);
 Msg("Find size of GtkRcContext (13289)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkSettings,28, 13291, 2, 3.1, NULL, 13284, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkSettings,56, 13291, 11, 3.1, NULL, 13284, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkSettings,56, 13291, 3, 3.1, NULL, 13284, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkSettings,28, 13291, 6, 3.1, NULL, 13284, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkSettings,56, 13291, 9, 3.1, NULL, 13284, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkSettings,28, 13291, 10, 3.1, NULL, 13284, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkSettings,56, 13291, 12, 3.1, NULL, 13284, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13284,NULL);\n",architecture,13291,0);
 Msg("Find size of GtkSettings (13291)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkUIManagerPrivate,0, 13295, 2, 3.1, NULL, 13294, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkUIManagerPrivate,0, 13295, 11, 3.1, NULL, 13294, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkUIManagerPrivate,0, 13295, 3, 3.1, NULL, 13294, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkUIManagerPrivate,0, 13295, 6, 3.1, NULL, 13294, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkUIManagerPrivate,0, 13295, 9, 3.1, NULL, 13294, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkUIManagerPrivate,0, 13295, 10, 3.1, NULL, 13294, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkUIManagerPrivate,0, 13295, 12, 3.1, NULL, 13294, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13294,NULL);\n",architecture,13295,0);
 Msg("Find size of GtkUIManagerPrivate (13295)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkUIManager,16, 13297, 2, 3.1, NULL, 13293, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkUIManager,32, 13297, 11, 3.1, NULL, 13293, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkUIManager,32, 13297, 3, 3.1, NULL, 13293, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkUIManager,16, 13297, 6, 3.1, NULL, 13293, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkUIManager,32, 13297, 9, 3.1, NULL, 13293, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkUIManager,16, 13297, 10, 3.1, NULL, 13293, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkUIManager,32, 13297, 12, 3.1, NULL, 13293, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13293,NULL);\n",architecture,13297,0);
 Msg("Find size of GtkUIManager (13297)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkItem,72, 13303, 2, 3.1, NULL, 13302, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkItem,120, 13303, 11, 3.1, NULL, 13302, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkItem,120, 13303, 3, 3.1, NULL, 13302, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkItem,72, 13303, 6, 3.1, NULL, 13302, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkItem,120, 13303, 9, 3.1, NULL, 13302, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkItem,72, 13303, 10, 3.1, NULL, 13302, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkItem,120, 13303, 12, 3.1, NULL, 13302, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13302,NULL);\n",architecture,13303,0);
 Msg("Find size of GtkItem (13303)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkMenuItem,96, 13304, 2, 3.1, NULL, 13301, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkMenuItem,160, 13304, 11, 3.1, NULL, 13301, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkMenuItem,160, 13304, 3, 3.1, NULL, 13301, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkMenuItem,96, 13304, 6, 3.1, NULL, 13301, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkMenuItem,160, 13304, 9, 3.1, NULL, 13301, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkMenuItem,96, 13304, 10, 3.1, NULL, 13301, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkMenuItem,160, 13304, 12, 3.1, NULL, 13301, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13301,NULL);\n",architecture,13304,0);
 Msg("Find size of GtkMenuItem (13304)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCheckMenuItem,100, 13305, 2, 3.1, NULL, 13300, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCheckMenuItem,168, 13305, 11, 3.1, NULL, 13300, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCheckMenuItem,168, 13305, 3, 3.1, NULL, 13300, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCheckMenuItem,100, 13305, 6, 3.1, NULL, 13300, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCheckMenuItem,168, 13305, 9, 3.1, NULL, 13300, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCheckMenuItem,100, 13305, 10, 3.1, NULL, 13300, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCheckMenuItem,168, 13305, 12, 3.1, NULL, 13300, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13300,NULL);\n",architecture,13305,0);
 Msg("Find size of GtkCheckMenuItem (13305)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkRadioMenuItem,104, 13306, 2, 3.1, NULL, 13299, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkRadioMenuItem,176, 13306, 11, 3.1, NULL, 13299, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkRadioMenuItem,176, 13306, 3, 3.1, NULL, 13299, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkRadioMenuItem,104, 13306, 6, 3.1, NULL, 13299, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkRadioMenuItem,176, 13306, 9, 3.1, NULL, 13299, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkRadioMenuItem,104, 13306, 10, 3.1, NULL, 13299, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkRadioMenuItem,176, 13306, 12, 3.1, NULL, 13299, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13299,NULL);\n",architecture,13306,0);
 Msg("Find size of GtkRadioMenuItem (13306)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCellViewPrivate,0, 13310, 2, 3.1, NULL, 13309, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCellViewPrivate,0, 13310, 11, 3.1, NULL, 13309, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCellViewPrivate,0, 13310, 3, 3.1, NULL, 13309, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCellViewPrivate,0, 13310, 6, 3.1, NULL, 13309, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCellViewPrivate,0, 13310, 9, 3.1, NULL, 13309, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCellViewPrivate,0, 13310, 10, 3.1, NULL, 13309, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCellViewPrivate,0, 13310, 12, 3.1, NULL, 13309, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13309,NULL);\n",architecture,13310,0);
 Msg("Find size of GtkCellViewPrivate (13310)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCellView,64, 13312, 2, 3.1, NULL, 13308, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCellView,104, 13312, 11, 3.1, NULL, 13308, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCellView,104, 13312, 3, 3.1, NULL, 13308, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCellView,64, 13312, 6, 3.1, NULL, 13308, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCellView,104, 13312, 9, 3.1, NULL, 13308, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCellView,64, 13312, 10, 3.1, NULL, 13308, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCellView,104, 13312, 12, 3.1, NULL, 13308, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13308,NULL);\n",architecture,13312,0);
 Msg("Find size of GtkCellView (13312)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkSelectionData,28, 13315, 2, 3.1, NULL, 13314, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkSelectionData,56, 13315, 11, 3.1, NULL, 13314, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkSelectionData,56, 13315, 3, 3.1, NULL, 13314, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkSelectionData,28, 13315, 6, 3.1, NULL, 13314, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkSelectionData,56, 13315, 9, 3.1, NULL, 13314, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkSelectionData,28, 13315, 10, 3.1, NULL, 13314, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkSelectionData,56, 13315, 12, 3.1, NULL, 13314, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13314,NULL);\n",architecture,13315,0);
 Msg("Find size of GtkSelectionData (13315)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFileChooser,0, 13318, 2, 3.1, NULL, 13317, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFileChooser,0, 13318, 11, 3.1, NULL, 13317, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFileChooser,0, 13318, 3, 3.1, NULL, 13317, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFileChooser,0, 13318, 6, 3.1, NULL, 13317, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFileChooser,0, 13318, 9, 3.1, NULL, 13317, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFileChooser,0, 13318, 10, 3.1, NULL, 13317, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFileChooser,0, 13318, 12, 3.1, NULL, 13317, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13317,NULL);\n",architecture,13318,0);
 Msg("Find size of GtkFileChooser (13318)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkDrawingArea,64, 13322, 2, 3.1, NULL, 13321, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkDrawingArea,104, 13322, 11, 3.1, NULL, 13321, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkDrawingArea,104, 13322, 3, 3.1, NULL, 13321, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkDrawingArea,64, 13322, 6, 3.1, NULL, 13321, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkDrawingArea,104, 13322, 9, 3.1, NULL, 13321, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkDrawingArea,64, 13322, 10, 3.1, NULL, 13321, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkDrawingArea,104, 13322, 12, 3.1, NULL, 13321, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13321,NULL);\n",architecture,13322,0);
 Msg("Find size of GtkDrawingArea (13322)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCurveType,4, 13324, 2, 3.1, NULL, 13323, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCurveType,4, 13324, 11, 3.1, NULL, 13323, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCurveType,4, 13324, 3, 3.1, NULL, 13323, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCurveType,4, 13324, 6, 3.1, NULL, 13323, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCurveType,4, 13324, 9, 3.1, NULL, 13323, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCurveType,4, 13324, 10, 3.1, NULL, 13323, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCurveType,4, 13324, 12, 3.1, NULL, 13323, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13323,NULL);\n",architecture,13324,0);
 Msg("Find size of GtkCurveType (13324)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCurve,120, 13327, 2, 3.1, NULL, 13320, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCurve,184, 13327, 11, 3.1, NULL, 13320, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCurve,184, 13327, 3, 3.1, NULL, 13320, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCurve,120, 13327, 6, 3.1, NULL, 13320, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCurve,184, 13327, 9, 3.1, NULL, 13320, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCurve,120, 13327, 10, 3.1, NULL, 13320, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCurve,184, 13327, 12, 3.1, NULL, 13320, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13320,NULL);\n",architecture,13327,0);
 Msg("Find size of GtkCurve (13327)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkNotebookPage,0, 13331, 2, 3.1, NULL, 13330, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkNotebookPage,0, 13331, 11, 3.1, NULL, 13330, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkNotebookPage,0, 13331, 3, 3.1, NULL, 13330, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkNotebookPage,0, 13331, 6, 3.1, NULL, 13330, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkNotebookPage,0, 13331, 9, 3.1, NULL, 13330, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkNotebookPage,0, 13331, 10, 3.1, NULL, 13330, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkNotebookPage,0, 13331, 12, 3.1, NULL, 13330, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13330,NULL);\n",architecture,13331,0);
 Msg("Find size of GtkNotebookPage (13331)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkNotebook,104, 13333, 2, 3.1, NULL, 13329, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkNotebook,176, 13333, 11, 3.1, NULL, 13329, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkNotebook,176, 13333, 3, 3.1, NULL, 13329, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkNotebook,104, 13333, 6, 3.1, NULL, 13329, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkNotebook,176, 13333, 9, 3.1, NULL, 13329, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkNotebook,104, 13333, 10, 3.1, NULL, 13329, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkNotebook,176, 13333, 12, 3.1, NULL, 13329, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13329,NULL);\n",architecture,13333,0);
 Msg("Find size of GtkNotebook (13333)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkIconFactory,16, 13336, 2, 3.1, NULL, 13335, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkIconFactory,32, 13336, 11, 3.1, NULL, 13335, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkIconFactory,32, 13336, 3, 3.1, NULL, 13335, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkIconFactory,16, 13336, 6, 3.1, NULL, 13335, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkIconFactory,32, 13336, 9, 3.1, NULL, 13335, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkIconFactory,16, 13336, 10, 3.1, NULL, 13335, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkIconFactory,32, 13336, 12, 3.1, NULL, 13335, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13335,NULL);\n",architecture,13336,0);
 Msg("Find size of GtkIconFactory (13336)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkRadioActionPrivate,0, 13342, 2, 3.1, NULL, 13341, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkRadioActionPrivate,0, 13342, 11, 3.1, NULL, 13341, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkRadioActionPrivate,0, 13342, 3, 3.1, NULL, 13341, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkRadioActionPrivate,0, 13342, 6, 3.1, NULL, 13341, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkRadioActionPrivate,0, 13342, 9, 3.1, NULL, 13341, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkRadioActionPrivate,0, 13342, 10, 3.1, NULL, 13341, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkRadioActionPrivate,0, 13342, 12, 3.1, NULL, 13341, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13341,NULL);\n",architecture,13342,0);
 Msg("Find size of GtkRadioActionPrivate (13342)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkRadioAction,24, 13344, 2, 3.1, NULL, 13340, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkRadioAction,48, 13344, 11, 3.1, NULL, 13340, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkRadioAction,48, 13344, 3, 3.1, NULL, 13340, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkRadioAction,24, 13344, 6, 3.1, NULL, 13340, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkRadioAction,48, 13344, 9, 3.1, NULL, 13340, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkRadioAction,24, 13344, 10, 3.1, NULL, 13340, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkRadioAction,48, 13344, 12, 3.1, NULL, 13340, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13340,NULL);\n",architecture,13344,0);
 Msg("Find size of GtkRadioAction (13344)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTextMark,16, 13347, 2, 3.1, NULL, 13346, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTextMark,32, 13347, 11, 3.1, NULL, 13346, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTextMark,32, 13347, 3, 3.1, NULL, 13346, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTextMark,16, 13347, 6, 3.1, NULL, 13346, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTextMark,32, 13347, 9, 3.1, NULL, 13346, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTextMark,16, 13347, 10, 3.1, NULL, 13346, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTextMark,32, 13347, 12, 3.1, NULL, 13346, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13346,NULL);\n",architecture,13347,0);
 Msg("Find size of GtkTextMark (13347)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkPackType,4, 13351, 2, 3.1, NULL, 13350, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkPackType,4, 13351, 11, 3.1, NULL, 13350, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkPackType,4, 13351, 3, 3.1, NULL, 13350, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkPackType,4, 13351, 6, 3.1, NULL, 13350, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkPackType,4, 13351, 9, 3.1, NULL, 13350, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkPackType,4, 13351, 10, 3.1, NULL, 13350, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkPackType,4, 13351, 12, 3.1, NULL, 13350, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13350,NULL);\n",architecture,13351,0);
 Msg("Find size of GtkPackType (13351)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkVBox,76, 13354, 2, 3.1, NULL, 13353, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkVBox,128, 13354, 11, 3.1, NULL, 13353, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkVBox,128, 13354, 3, 3.1, NULL, 13353, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkVBox,76, 13354, 6, 3.1, NULL, 13353, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkVBox,128, 13354, 9, 3.1, NULL, 13353, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkVBox,76, 13354, 10, 3.1, NULL, 13353, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkVBox,128, 13354, 12, 3.1, NULL, 13353, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13353,NULL);\n",architecture,13354,0);
 Msg("Find size of GtkVBox (13354)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkColorSelection,80, 13355, 2, 3.1, NULL, 13352, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkColorSelection,136, 13355, 11, 3.1, NULL, 13352, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkColorSelection,136, 13355, 3, 3.1, NULL, 13352, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkColorSelection,80, 13355, 6, 3.1, NULL, 13352, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkColorSelection,136, 13355, 9, 3.1, NULL, 13352, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkColorSelection,80, 13355, 10, 3.1, NULL, 13352, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkColorSelection,136, 13355, 12, 3.1, NULL, 13352, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13352,NULL);\n",architecture,13355,0);
 Msg("Find size of GtkColorSelection (13355)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCalendarDisplayOptions,4, 13361, 2, 3.1, NULL, 13360, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCalendarDisplayOptions,4, 13361, 11, 3.1, NULL, 13360, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCalendarDisplayOptions,4, 13361, 3, 3.1, NULL, 13360, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCalendarDisplayOptions,4, 13361, 6, 3.1, NULL, 13360, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCalendarDisplayOptions,4, 13361, 9, 3.1, NULL, 13360, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCalendarDisplayOptions,4, 13361, 10, 3.1, NULL, 13360, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCalendarDisplayOptions,4, 13361, 12, 3.1, NULL, 13360, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13360,NULL);\n",architecture,13361,0);
 Msg("Find size of GtkCalendarDisplayOptions (13361)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCalendar,996, 13364, 2, 3.1, NULL, 13357, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCalendar,1072, 13364, 11, 3.1, NULL, 13357, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCalendar,1072, 13364, 3, 3.1, NULL, 13357, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCalendar,996, 13364, 6, 3.1, NULL, 13357, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCalendar,1072, 13364, 9, 3.1, NULL, 13357, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCalendar,996, 13364, 10, 3.1, NULL, 13357, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCalendar,1072, 13364, 12, 3.1, NULL, 13357, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13357,NULL);\n",architecture,13364,0);
 Msg("Find size of GtkCalendar (13364)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkIconInfo,0, 13367, 2, 3.1, NULL, 13366, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkIconInfo,0, 13367, 11, 3.1, NULL, 13366, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkIconInfo,0, 13367, 3, 3.1, NULL, 13366, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkIconInfo,0, 13367, 6, 3.1, NULL, 13366, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkIconInfo,0, 13367, 9, 3.1, NULL, 13366, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkIconInfo,0, 13367, 10, 3.1, NULL, 13366, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkIconInfo,0, 13367, 12, 3.1, NULL, 13366, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13366,NULL);\n",architecture,13367,0);
 Msg("Find size of GtkIconInfo (13367)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreePath,0, 13370, 2, 3.1, NULL, 13369, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreePath,0, 13370, 11, 3.1, NULL, 13369, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreePath,0, 13370, 3, 3.1, NULL, 13369, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreePath,0, 13370, 6, 3.1, NULL, 13369, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreePath,0, 13370, 9, 3.1, NULL, 13369, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreePath,0, 13370, 10, 3.1, NULL, 13369, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreePath,0, 13370, 12, 3.1, NULL, 13369, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13369,NULL);\n",architecture,13370,0);
 Msg("Find size of GtkTreePath (13370)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeDragSource,0, 13373, 2, 3.1, NULL, 13372, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeDragSource,0, 13373, 11, 3.1, NULL, 13372, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeDragSource,0, 13373, 3, 3.1, NULL, 13372, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeDragSource,0, 13373, 6, 3.1, NULL, 13372, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeDragSource,0, 13373, 9, 3.1, NULL, 13372, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeDragSource,0, 13373, 10, 3.1, NULL, 13372, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeDragSource,0, 13373, 12, 3.1, NULL, 13372, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13372,NULL);\n",architecture,13373,0);
 Msg("Find size of GtkTreeDragSource (13373)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTableRowCol,8, 13377, 2, 3.1, NULL, 13376, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTableRowCol,8, 13377, 11, 3.1, NULL, 13376, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTableRowCol,8, 13377, 3, 3.1, NULL, 13376, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTableRowCol,8, 13377, 6, 3.1, NULL, 13376, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTableRowCol,8, 13377, 9, 3.1, NULL, 13376, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTableRowCol,8, 13377, 10, 3.1, NULL, 13376, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTableRowCol,8, 13377, 12, 3.1, NULL, 13376, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13376,NULL);\n",architecture,13377,0);
 Msg("Find size of GtkTableRowCol (13377)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTable,92, 13379, 2, 3.1, NULL, 13375, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTable,152, 13379, 11, 3.1, NULL, 13375, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTable,152, 13379, 3, 3.1, NULL, 13375, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTable,92, 13379, 6, 3.1, NULL, 13375, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTable,152, 13379, 9, 3.1, NULL, 13375, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTable,92, 13379, 10, 3.1, NULL, 13375, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTable,152, 13379, 12, 3.1, NULL, 13375, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13375,NULL);\n",architecture,13379,0);
 Msg("Find size of GtkTable (13379)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFunction,4, 13381, 2, 3.1, NULL, 11542, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFunction,8, 13381, 11, 3.1, NULL, 11542, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFunction,8, 13381, 3, 3.1, NULL, 11542, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFunction,4, 13381, 6, 3.1, NULL, 11542, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFunction,8, 13381, 9, 3.1, NULL, 11542, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFunction,4, 13381, 10, 3.1, NULL, 11542, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFunction,8, 13381, 12, 3.1, NULL, 11542, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11542,NULL);\n",architecture,13381,0);
 Msg("Find size of GtkFunction (13381)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkSignalFunc,4, 13384, 2, 3.1, NULL, 10318, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkSignalFunc,8, 13384, 11, 3.1, NULL, 10318, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkSignalFunc,8, 13384, 3, 3.1, NULL, 10318, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkSignalFunc,4, 13384, 6, 3.1, NULL, 10318, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkSignalFunc,8, 13384, 9, 3.1, NULL, 10318, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkSignalFunc,4, 13384, 10, 3.1, NULL, 10318, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkSignalFunc,8, 13384, 12, 3.1, NULL, 10318, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,10318,NULL);\n",architecture,13384,0);
 Msg("Find size of GtkSignalFunc (13384)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkArg,0, 13387, 2, 3.1, NULL, 13383, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkArg,0, 13387, 11, 3.1, NULL, 13383, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkArg,0, 13387, 3, 3.1, NULL, 13383, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkArg,0, 13387, 6, 3.1, NULL, 13383, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkArg,0, 13387, 9, 3.1, NULL, 13383, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkArg,0, 13387, 10, 3.1, NULL, 13383, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkArg,0, 13387, 12, 3.1, NULL, 13383, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13383,NULL);\n",architecture,13387,0);
 Msg("Find size of GtkArg (13387)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCallbackMarshal,4, 13390, 2, 3.1, NULL, 13389, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCallbackMarshal,8, 13390, 11, 3.1, NULL, 13389, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCallbackMarshal,8, 13390, 3, 3.1, NULL, 13389, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCallbackMarshal,4, 13390, 6, 3.1, NULL, 13389, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCallbackMarshal,8, 13390, 9, 3.1, NULL, 13389, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCallbackMarshal,4, 13390, 10, 3.1, NULL, 13389, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCallbackMarshal,8, 13390, 12, 3.1, NULL, 13389, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13389,NULL);\n",architecture,13390,0);
 Msg("Find size of GtkCallbackMarshal (13390)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkMenuShell,92, 13394, 2, 3.1, NULL, 13393, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkMenuShell,152, 13394, 11, 3.1, NULL, 13393, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkMenuShell,152, 13394, 3, 3.1, NULL, 13393, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkMenuShell,92, 13394, 6, 3.1, NULL, 13393, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkMenuShell,152, 13394, 9, 3.1, NULL, 13393, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkMenuShell,92, 13394, 10, 3.1, NULL, 13393, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkMenuShell,152, 13394, 12, 3.1, NULL, 13393, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13393,NULL);\n",architecture,13394,0);
 Msg("Find size of GtkMenuShell (13394)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkMenu,176, 13395, 2, 3.1, NULL, 13392, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkMenu,296, 13395, 11, 3.1, NULL, 13392, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkMenu,296, 13395, 3, 3.1, NULL, 13392, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkMenu,176, 13395, 6, 3.1, NULL, 13392, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkMenu,296, 13395, 9, 3.1, NULL, 13392, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkMenu,176, 13395, 10, 3.1, NULL, 13392, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkMenu,296, 13395, 12, 3.1, NULL, 13392, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13392,NULL);\n",architecture,13395,0);
 Msg("Find size of GtkMenu (13395)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkMenuPositionFunc,4, 13398, 2, 3.1, NULL, 13397, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkMenuPositionFunc,8, 13398, 11, 3.1, NULL, 13397, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkMenuPositionFunc,8, 13398, 3, 3.1, NULL, 13397, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkMenuPositionFunc,4, 13398, 6, 3.1, NULL, 13397, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkMenuPositionFunc,8, 13398, 9, 3.1, NULL, 13397, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkMenuPositionFunc,4, 13398, 10, 3.1, NULL, 13397, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkMenuPositionFunc,8, 13398, 12, 3.1, NULL, 13397, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13397,NULL);\n",architecture,13398,0);
 Msg("Find size of GtkMenuPositionFunc (13398)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkButton,88, 13401, 2, 3.1, NULL, 13400, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkButton,144, 13401, 11, 3.1, NULL, 13400, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkButton,144, 13401, 3, 3.1, NULL, 13400, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkButton,88, 13401, 6, 3.1, NULL, 13400, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkButton,144, 13401, 9, 3.1, NULL, 13400, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkButton,88, 13401, 10, 3.1, NULL, 13400, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkButton,144, 13401, 12, 3.1, NULL, 13400, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13400,NULL);\n",architecture,13401,0);
 Msg("Find size of GtkButton (13401)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkToggleButton,92, 13402, 2, 3.1, NULL, 13399, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkToggleButton,152, 13402, 11, 3.1, NULL, 13399, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkToggleButton,152, 13402, 3, 3.1, NULL, 13399, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkToggleButton,92, 13402, 6, 3.1, NULL, 13399, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkToggleButton,152, 13402, 9, 3.1, NULL, 13399, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkToggleButton,92, 13402, 10, 3.1, NULL, 13399, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkToggleButton,152, 13402, 12, 3.1, NULL, 13399, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13399,NULL);\n",architecture,13402,0);
 Msg("Find size of GtkToggleButton (13402)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkIconThemePrivate,0, 13406, 2, 3.1, NULL, 13405, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkIconThemePrivate,0, 13406, 11, 3.1, NULL, 13405, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkIconThemePrivate,0, 13406, 3, 3.1, NULL, 13405, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkIconThemePrivate,0, 13406, 6, 3.1, NULL, 13405, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkIconThemePrivate,0, 13406, 9, 3.1, NULL, 13405, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkIconThemePrivate,0, 13406, 10, 3.1, NULL, 13405, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkIconThemePrivate,0, 13406, 12, 3.1, NULL, 13405, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13405,NULL);\n",architecture,13406,0);
 Msg("Find size of GtkIconThemePrivate (13406)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkIconTheme,16, 13408, 2, 3.1, NULL, 13404, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkIconTheme,32, 13408, 11, 3.1, NULL, 13404, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkIconTheme,32, 13408, 3, 3.1, NULL, 13404, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkIconTheme,16, 13408, 6, 3.1, NULL, 13404, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkIconTheme,32, 13408, 9, 3.1, NULL, 13404, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkIconTheme,16, 13408, 10, 3.1, NULL, 13404, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkIconTheme,32, 13408, 12, 3.1, NULL, 13404, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13404,NULL);\n",architecture,13408,0);
 Msg("Find size of GtkIconTheme (13408)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkArrowType,4, 13411, 2, 3.1, NULL, 13410, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkArrowType,4, 13411, 11, 3.1, NULL, 13410, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkArrowType,4, 13411, 3, 3.1, NULL, 13410, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkArrowType,4, 13411, 6, 3.1, NULL, 13410, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkArrowType,4, 13411, 9, 3.1, NULL, 13410, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkArrowType,4, 13411, 10, 3.1, NULL, 13410, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkArrowType,4, 13411, 12, 3.1, NULL, 13410, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13410,NULL);\n",architecture,13411,0);
 Msg("Find size of GtkArrowType (13411)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkShadowType,4, 13413, 2, 3.1, NULL, 13412, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkShadowType,4, 13413, 11, 3.1, NULL, 13412, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkShadowType,4, 13413, 3, 3.1, NULL, 13412, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkShadowType,4, 13413, 6, 3.1, NULL, 13412, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkShadowType,4, 13413, 9, 3.1, NULL, 13412, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkShadowType,4, 13413, 10, 3.1, NULL, 13412, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkShadowType,4, 13413, 12, 3.1, NULL, 13412, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13412,NULL);\n",architecture,13413,0);
 Msg("Find size of GtkShadowType (13413)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTextWindow,0, 13418, 2, 3.1, NULL, 13417, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTextWindow,0, 13418, 11, 3.1, NULL, 13417, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTextWindow,0, 13418, 3, 3.1, NULL, 13417, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTextWindow,0, 13418, 6, 3.1, NULL, 13417, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTextWindow,0, 13418, 9, 3.1, NULL, 13417, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTextWindow,0, 13418, 10, 3.1, NULL, 13417, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTextWindow,0, 13418, 12, 3.1, NULL, 13417, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13417,NULL);\n",architecture,13418,0);
 Msg("Find size of GtkTextWindow (13418)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTextPendingScroll,0, 13421, 2, 3.1, NULL, 13420, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTextPendingScroll,0, 13421, 11, 3.1, NULL, 13420, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTextPendingScroll,0, 13421, 3, 3.1, NULL, 13420, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTextPendingScroll,0, 13421, 6, 3.1, NULL, 13420, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTextPendingScroll,0, 13421, 9, 3.1, NULL, 13420, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTextPendingScroll,0, 13421, 10, 3.1, NULL, 13420, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTextPendingScroll,0, 13421, 12, 3.1, NULL, 13420, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13420,NULL);\n",architecture,13421,0);
 Msg("Find size of GtkTextPendingScroll (13421)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTextView,228, 13423, 2, 3.1, NULL, 13414, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTextView,352, 13423, 11, 3.1, NULL, 13414, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTextView,352, 13423, 3, 3.1, NULL, 13414, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTextView,228, 13423, 6, 3.1, NULL, 13414, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTextView,352, 13423, 9, 3.1, NULL, 13414, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTextView,228, 13423, 10, 3.1, NULL, 13414, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTextView,352, 13423, 12, 3.1, NULL, 13414, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13414,NULL);\n",architecture,13423,0);
 Msg("Find size of GtkTextView (13423)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTextWindowType,4, 13426, 2, 3.1, NULL, 13425, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTextWindowType,4, 13426, 11, 3.1, NULL, 13425, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTextWindowType,4, 13426, 3, 3.1, NULL, 13425, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTextWindowType,4, 13426, 6, 3.1, NULL, 13425, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTextWindowType,4, 13426, 9, 3.1, NULL, 13425, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTextWindowType,4, 13426, 10, 3.1, NULL, 13425, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTextWindowType,4, 13426, 12, 3.1, NULL, 13425, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13425,NULL);\n",architecture,13426,0);
 Msg("Find size of GtkTextWindowType (13426)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkObjectClass,80, 13431, 2, 3.1, NULL, 13428, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkObjectClass,160, 13431, 11, 3.1, NULL, 13428, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkObjectClass,160, 13431, 3, 3.1, NULL, 13428, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkObjectClass,80, 13431, 6, 3.1, NULL, 13428, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkObjectClass,160, 13431, 9, 3.1, NULL, 13428, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkObjectClass,80, 13431, 10, 3.1, NULL, 13428, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkObjectClass,160, 13431, 12, 3.1, NULL, 13428, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13428,NULL);\n",architecture,13431,0);
 Msg("Find size of GtkObjectClass (13431)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkDirectionType,4, 13444, 2, 3.1, NULL, 13443, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkDirectionType,4, 13444, 11, 3.1, NULL, 13443, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkDirectionType,4, 13444, 3, 3.1, NULL, 13443, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkDirectionType,4, 13444, 6, 3.1, NULL, 13443, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkDirectionType,4, 13444, 9, 3.1, NULL, 13443, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkDirectionType,4, 13444, 10, 3.1, NULL, 13443, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkDirectionType,4, 13444, 12, 3.1, NULL, 13443, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13443,NULL);\n",architecture,13444,0);
 Msg("Find size of GtkDirectionType (13444)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkWidgetHelpType,4, 13485, 2, 3.1, NULL, 13484, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkWidgetHelpType,4, 13485, 11, 3.1, NULL, 13484, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkWidgetHelpType,4, 13485, 3, 3.1, NULL, 13484, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkWidgetHelpType,4, 13485, 6, 3.1, NULL, 13484, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkWidgetHelpType,4, 13485, 9, 3.1, NULL, 13484, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkWidgetHelpType,4, 13485, 10, 3.1, NULL, 13484, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkWidgetHelpType,4, 13485, 12, 3.1, NULL, 13484, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13484,NULL);\n",architecture,13485,0);
 Msg("Find size of GtkWidgetHelpType (13485)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkWidgetClass,364, 13490, 2, 3.1, NULL, 13427, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkWidgetClass,720, 13490, 11, 3.1, NULL, 13427, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkWidgetClass,720, 13490, 3, 3.1, NULL, 13427, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkWidgetClass,364, 13490, 6, 3.1, NULL, 13427, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkWidgetClass,720, 13490, 9, 3.1, NULL, 13427, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkWidgetClass,364, 13490, 10, 3.1, NULL, 13427, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkWidgetClass,720, 13490, 12, 3.1, NULL, 13427, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13427,NULL);\n",architecture,13490,0);
 Msg("Find size of GtkWidgetClass (13490)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkRcPropertyParser,4, 13495, 2, 3.1, NULL, 13494, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkRcPropertyParser,8, 13495, 11, 3.1, NULL, 13494, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkRcPropertyParser,8, 13495, 3, 3.1, NULL, 13494, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkRcPropertyParser,4, 13495, 6, 3.1, NULL, 13494, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkRcPropertyParser,8, 13495, 9, 3.1, NULL, 13494, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkRcPropertyParser,4, 13495, 10, 3.1, NULL, 13494, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkRcPropertyParser,8, 13495, 12, 3.1, NULL, 13494, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13494,NULL);\n",architecture,13495,0);
 Msg("Find size of GtkRcPropertyParser (13495)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkImageType,4, 13498, 2, 3.1, NULL, 13497, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkImageType,4, 13498, 11, 3.1, NULL, 13497, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkImageType,4, 13498, 3, 3.1, NULL, 13497, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkImageType,4, 13498, 6, 3.1, NULL, 13497, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkImageType,4, 13498, 9, 3.1, NULL, 13497, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkImageType,4, 13498, 10, 3.1, NULL, 13497, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkImageType,4, 13498, 12, 3.1, NULL, 13497, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13497,NULL);\n",architecture,13498,0);
 Msg("Find size of GtkImageType (13498)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkImagePixmapData,4, 13500, 2, 3.1, NULL, 13499, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkImagePixmapData,8, 13500, 11, 3.1, NULL, 13499, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkImagePixmapData,8, 13500, 3, 3.1, NULL, 13499, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkImagePixmapData,4, 13500, 6, 3.1, NULL, 13499, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkImagePixmapData,8, 13500, 9, 3.1, NULL, 13499, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkImagePixmapData,4, 13500, 10, 3.1, NULL, 13499, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkImagePixmapData,8, 13500, 12, 3.1, NULL, 13499, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13499,NULL);\n",architecture,13500,0);
 Msg("Find size of GtkImagePixmapData (13500)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkImageImageData,4, 13502, 2, 3.1, NULL, 13501, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkImageImageData,8, 13502, 11, 3.1, NULL, 13501, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkImageImageData,8, 13502, 3, 3.1, NULL, 13501, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkImageImageData,4, 13502, 6, 3.1, NULL, 13501, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkImageImageData,8, 13502, 9, 3.1, NULL, 13501, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkImageImageData,4, 13502, 10, 3.1, NULL, 13501, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkImageImageData,8, 13502, 12, 3.1, NULL, 13501, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13501,NULL);\n",architecture,13502,0);
 Msg("Find size of GtkImageImageData (13502)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkImagePixbufData,4, 13504, 2, 3.1, NULL, 13503, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkImagePixbufData,8, 13504, 11, 3.1, NULL, 13503, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkImagePixbufData,8, 13504, 3, 3.1, NULL, 13503, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkImagePixbufData,4, 13504, 6, 3.1, NULL, 13503, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkImagePixbufData,8, 13504, 9, 3.1, NULL, 13503, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkImagePixbufData,4, 13504, 10, 3.1, NULL, 13503, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkImagePixbufData,8, 13504, 12, 3.1, NULL, 13503, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13503,NULL);\n",architecture,13504,0);
 Msg("Find size of GtkImagePixbufData (13504)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkImageStockData,4, 13506, 2, 3.1, NULL, 13505, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkImageStockData,8, 13506, 11, 3.1, NULL, 13505, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkImageStockData,8, 13506, 3, 3.1, NULL, 13505, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkImageStockData,4, 13506, 6, 3.1, NULL, 13505, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkImageStockData,8, 13506, 9, 3.1, NULL, 13505, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkImageStockData,4, 13506, 10, 3.1, NULL, 13505, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkImageStockData,8, 13506, 12, 3.1, NULL, 13505, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13505,NULL);\n",architecture,13506,0);
 Msg("Find size of GtkImageStockData (13506)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkImageIconSetData,4, 13508, 2, 3.1, NULL, 13507, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkImageIconSetData,8, 13508, 11, 3.1, NULL, 13507, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkImageIconSetData,8, 13508, 3, 3.1, NULL, 13507, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkImageIconSetData,4, 13508, 6, 3.1, NULL, 13507, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkImageIconSetData,8, 13508, 9, 3.1, NULL, 13507, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkImageIconSetData,4, 13508, 10, 3.1, NULL, 13507, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkImageIconSetData,8, 13508, 12, 3.1, NULL, 13507, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13507,NULL);\n",architecture,13508,0);
 Msg("Find size of GtkImageIconSetData (13508)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkImageAnimationData,12, 13510, 2, 3.1, NULL, 13509, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkImageAnimationData,24, 13510, 11, 3.1, NULL, 13509, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkImageAnimationData,24, 13510, 3, 3.1, NULL, 13509, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkImageAnimationData,12, 13510, 6, 3.1, NULL, 13509, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkImageAnimationData,24, 13510, 9, 3.1, NULL, 13509, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkImageAnimationData,12, 13510, 10, 3.1, NULL, 13509, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkImageAnimationData,24, 13510, 12, 3.1, NULL, 13509, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13509,NULL);\n",architecture,13510,0);
 Msg("Find size of GtkImageAnimationData (13510)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkImageIconNameData,12, 13512, 2, 3.1, NULL, 13511, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkImageIconNameData,24, 13512, 11, 3.1, NULL, 13511, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkImageIconNameData,24, 13512, 3, 3.1, NULL, 13511, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkImageIconNameData,12, 13512, 6, 3.1, NULL, 13511, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkImageIconNameData,24, 13512, 9, 3.1, NULL, 13511, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkImageIconNameData,12, 13512, 10, 3.1, NULL, 13511, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkImageIconNameData,24, 13512, 12, 3.1, NULL, 13511, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13511,NULL);\n",architecture,13512,0);
 Msg("Find size of GtkImageIconNameData (13512)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkIconSize,4, 13515, 2, 3.1, NULL, 13514, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkIconSize,4, 13515, 11, 3.1, NULL, 13514, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkIconSize,4, 13515, 3, 3.1, NULL, 13514, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkIconSize,4, 13515, 6, 3.1, NULL, 13514, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkIconSize,4, 13515, 9, 3.1, NULL, 13514, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkIconSize,4, 13515, 10, 3.1, NULL, 13514, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkIconSize,4, 13515, 12, 3.1, NULL, 13514, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13514,NULL);\n",architecture,13515,0);
 Msg("Find size of GtkIconSize (13515)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkImage,96, 13516, 2, 3.1, NULL, 13496, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkImage,160, 13516, 11, 3.1, NULL, 13496, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkImage,160, 13516, 3, 3.1, NULL, 13496, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkImage,96, 13516, 6, 3.1, NULL, 13496, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkImage,160, 13516, 9, 3.1, NULL, 13496, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkImage,96, 13516, 10, 3.1, NULL, 13496, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkImage,160, 13516, 12, 3.1, NULL, 13496, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13496,NULL);\n",architecture,13516,0);
 Msg("Find size of GtkImage (13516)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeViewPrivate,0, 13520, 2, 3.1, NULL, 13519, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeViewPrivate,0, 13520, 11, 3.1, NULL, 13519, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeViewPrivate,0, 13520, 3, 3.1, NULL, 13519, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeViewPrivate,0, 13520, 6, 3.1, NULL, 13519, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeViewPrivate,0, 13520, 9, 3.1, NULL, 13519, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeViewPrivate,0, 13520, 10, 3.1, NULL, 13519, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeViewPrivate,0, 13520, 12, 3.1, NULL, 13519, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13519,NULL);\n",architecture,13520,0);
 Msg("Find size of GtkTreeViewPrivate (13520)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeView,72, 13522, 2, 3.1, NULL, 13518, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeView,120, 13522, 11, 3.1, NULL, 13518, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeView,120, 13522, 3, 3.1, NULL, 13518, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeView,72, 13522, 6, 3.1, NULL, 13518, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeView,120, 13522, 9, 3.1, NULL, 13518, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeView,72, 13522, 10, 3.1, NULL, 13518, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeView,120, 13522, 12, 3.1, NULL, 13518, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13518,NULL);\n",architecture,13522,0);
 Msg("Find size of GtkTreeView (13522)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkSpinButtonUpdatePolicy,4, 13526, 2, 3.1, NULL, 13525, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkSpinButtonUpdatePolicy,4, 13526, 11, 3.1, NULL, 13525, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkSpinButtonUpdatePolicy,4, 13526, 3, 3.1, NULL, 13525, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkSpinButtonUpdatePolicy,4, 13526, 6, 3.1, NULL, 13525, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkSpinButtonUpdatePolicy,4, 13526, 9, 3.1, NULL, 13525, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkSpinButtonUpdatePolicy,4, 13526, 10, 3.1, NULL, 13525, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkSpinButtonUpdatePolicy,4, 13526, 12, 3.1, NULL, 13525, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13525,NULL);\n",architecture,13526,0);
 Msg("Find size of GtkSpinButtonUpdatePolicy (13526)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkSpinButton,188, 13527, 2, 3.1, NULL, 13524, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkSpinButton,256, 13527, 11, 3.1, NULL, 13524, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkSpinButton,256, 13527, 3, 3.1, NULL, 13524, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkSpinButton,192, 13527, 6, 3.1, NULL, 13524, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkSpinButton,256, 13527, 9, 3.1, NULL, 13524, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkSpinButton,192, 13527, 10, 3.1, NULL, 13524, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkSpinButton,256, 13527, 12, 3.1, NULL, 13524, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13524,NULL);\n",architecture,13527,0);
 Msg("Find size of GtkSpinButton (13527)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCellLayout,0, 13530, 2, 3.1, NULL, 13529, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCellLayout,0, 13530, 11, 3.1, NULL, 13529, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCellLayout,0, 13530, 3, 3.1, NULL, 13529, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCellLayout,0, 13530, 6, 3.1, NULL, 13529, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCellLayout,0, 13530, 9, 3.1, NULL, 13529, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCellLayout,0, 13530, 10, 3.1, NULL, 13529, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCellLayout,0, 13530, 12, 3.1, NULL, 13529, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13529,NULL);\n",architecture,13530,0);
 Msg("Find size of GtkCellLayout (13530)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFileSelection,248, 13533, 2, 3.1, NULL, 13532, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFileSelection,440, 13533, 11, 3.1, NULL, 13532, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFileSelection,440, 13533, 3, 3.1, NULL, 13532, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFileSelection,248, 13533, 6, 3.1, NULL, 13532, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFileSelection,440, 13533, 9, 3.1, NULL, 13532, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFileSelection,248, 13533, 10, 3.1, NULL, 13532, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFileSelection,440, 13533, 12, 3.1, NULL, 13532, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13532,NULL);\n",architecture,13533,0);
 Msg("Find size of GtkFileSelection (13533)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTooltips,52, 13537, 2, 3.1, NULL, 13535, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTooltips,96, 13537, 11, 3.1, NULL, 13535, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTooltips,96, 13537, 3, 3.1, NULL, 13535, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTooltips,52, 13537, 6, 3.1, NULL, 13535, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTooltips,96, 13537, 9, 3.1, NULL, 13535, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTooltips,52, 13537, 10, 3.1, NULL, 13535, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTooltips,96, 13537, 12, 3.1, NULL, 13535, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13535,NULL);\n",architecture,13537,0);
 Msg("Find size of GtkTooltips (13537)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTooltipsData,16, 13539, 2, 3.1, NULL, 13536, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTooltipsData,32, 13539, 11, 3.1, NULL, 13536, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTooltipsData,32, 13539, 3, 3.1, NULL, 13536, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTooltipsData,16, 13539, 6, 3.1, NULL, 13536, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTooltipsData,32, 13539, 9, 3.1, NULL, 13536, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTooltipsData,16, 13539, 10, 3.1, NULL, 13536, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTooltipsData,32, 13539, 12, 3.1, NULL, 13536, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13536,NULL);\n",architecture,13539,0);
 Msg("Find size of GtkTooltipsData (13539)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeViewRowSeparatorFunc,4, 13542, 2, 3.1, NULL, 13541, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeViewRowSeparatorFunc,8, 13542, 11, 3.1, NULL, 13541, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeViewRowSeparatorFunc,8, 13542, 3, 3.1, NULL, 13541, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeViewRowSeparatorFunc,4, 13542, 6, 3.1, NULL, 13541, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeViewRowSeparatorFunc,8, 13542, 9, 3.1, NULL, 13541, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeViewRowSeparatorFunc,4, 13542, 10, 3.1, NULL, 13541, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeViewRowSeparatorFunc,8, 13542, 12, 3.1, NULL, 13541, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13541,NULL);\n",architecture,13542,0);
 Msg("Find size of GtkTreeViewRowSeparatorFunc (13542)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkEntryCompletionPrivate,0, 13545, 2, 3.1, NULL, 13544, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkEntryCompletionPrivate,0, 13545, 11, 3.1, NULL, 13544, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkEntryCompletionPrivate,0, 13545, 3, 3.1, NULL, 13544, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkEntryCompletionPrivate,0, 13545, 6, 3.1, NULL, 13544, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkEntryCompletionPrivate,0, 13545, 9, 3.1, NULL, 13544, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkEntryCompletionPrivate,0, 13545, 10, 3.1, NULL, 13544, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkEntryCompletionPrivate,0, 13545, 12, 3.1, NULL, 13544, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13544,NULL);\n",architecture,13545,0);
 Msg("Find size of GtkEntryCompletionPrivate (13545)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkEntryCompletion,16, 13547, 2, 3.1, NULL, 13543, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkEntryCompletion,32, 13547, 11, 3.1, NULL, 13543, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkEntryCompletion,32, 13547, 3, 3.1, NULL, 13543, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkEntryCompletion,16, 13547, 6, 3.1, NULL, 13543, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkEntryCompletion,32, 13547, 9, 3.1, NULL, 13543, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkEntryCompletion,16, 13547, 10, 3.1, NULL, 13543, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkEntryCompletion,32, 13547, 12, 3.1, NULL, 13543, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13543,NULL);\n",architecture,13547,0);
 Msg("Find size of GtkEntryCompletion (13547)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkClipboard,0, 13550, 2, 3.1, NULL, 13549, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkClipboard,0, 13550, 11, 3.1, NULL, 13549, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkClipboard,0, 13550, 3, 3.1, NULL, 13549, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkClipboard,0, 13550, 6, 3.1, NULL, 13549, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkClipboard,0, 13550, 9, 3.1, NULL, 13549, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkClipboard,0, 13550, 10, 3.1, NULL, 13549, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkClipboard,0, 13550, 12, 3.1, NULL, 13549, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13549,NULL);\n",architecture,13550,0);
 Msg("Find size of GtkClipboard (13550)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeModelFilterPrivate,0, 13554, 2, 3.1, NULL, 13553, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeModelFilterPrivate,0, 13554, 11, 3.1, NULL, 13553, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeModelFilterPrivate,0, 13554, 3, 3.1, NULL, 13553, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeModelFilterPrivate,0, 13554, 6, 3.1, NULL, 13553, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeModelFilterPrivate,0, 13554, 9, 3.1, NULL, 13553, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeModelFilterPrivate,0, 13554, 10, 3.1, NULL, 13553, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeModelFilterPrivate,0, 13554, 12, 3.1, NULL, 13553, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13553,NULL);\n",architecture,13554,0);
 Msg("Find size of GtkTreeModelFilterPrivate (13554)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeModelFilter,16, 13556, 2, 3.1, NULL, 13552, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeModelFilter,32, 13556, 11, 3.1, NULL, 13552, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeModelFilter,32, 13556, 3, 3.1, NULL, 13552, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeModelFilter,16, 13556, 6, 3.1, NULL, 13552, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeModelFilter,32, 13556, 9, 3.1, NULL, 13552, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeModelFilter,16, 13556, 10, 3.1, NULL, 13552, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeModelFilter,32, 13556, 12, 3.1, NULL, 13552, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13552,NULL);\n",architecture,13556,0);
 Msg("Find size of GtkTreeModelFilter (13556)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeModelSort,76, 13559, 2, 3.1, NULL, 13558, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeModelSort,120, 13559, 11, 3.1, NULL, 13558, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeModelSort,120, 13559, 3, 3.1, NULL, 13558, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeModelSort,76, 13559, 6, 3.1, NULL, 13558, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeModelSort,120, 13559, 9, 3.1, NULL, 13558, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeModelSort,76, 13559, 10, 3.1, NULL, 13558, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeModelSort,120, 13559, 12, 3.1, NULL, 13558, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13558,NULL);\n",architecture,13559,0);
 Msg("Find size of GtkTreeModelSort (13559)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeCellDataFunc,4, 13562, 2, 3.1, NULL, 13561, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeCellDataFunc,8, 13562, 11, 3.1, NULL, 13561, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeCellDataFunc,8, 13562, 3, 3.1, NULL, 13561, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeCellDataFunc,4, 13562, 6, 3.1, NULL, 13561, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeCellDataFunc,8, 13562, 9, 3.1, NULL, 13561, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeCellDataFunc,4, 13562, 10, 3.1, NULL, 13561, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeCellDataFunc,8, 13562, 12, 3.1, NULL, 13561, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13561,NULL);\n",architecture,13562,0);
 Msg("Find size of GtkTreeCellDataFunc (13562)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkColorButtonPrivate,0, 13565, 2, 3.1, NULL, 13564, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkColorButtonPrivate,0, 13565, 11, 3.1, NULL, 13564, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkColorButtonPrivate,0, 13565, 3, 3.1, NULL, 13564, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkColorButtonPrivate,0, 13565, 6, 3.1, NULL, 13564, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkColorButtonPrivate,0, 13565, 9, 3.1, NULL, 13564, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkColorButtonPrivate,0, 13565, 10, 3.1, NULL, 13564, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkColorButtonPrivate,0, 13565, 12, 3.1, NULL, 13564, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13564,NULL);\n",architecture,13565,0);
 Msg("Find size of GtkColorButtonPrivate (13565)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkColorButton,92, 13567, 2, 3.1, NULL, 13563, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkColorButton,152, 13567, 11, 3.1, NULL, 13563, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkColorButton,152, 13567, 3, 3.1, NULL, 13563, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkColorButton,92, 13567, 6, 3.1, NULL, 13563, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkColorButton,152, 13567, 9, 3.1, NULL, 13563, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkColorButton,92, 13567, 10, 3.1, NULL, 13563, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkColorButton,152, 13567, 12, 3.1, NULL, 13563, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13563,NULL);\n",architecture,13567,0);
 Msg("Find size of GtkColorButton (13567)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFileChooserAction,4, 13570, 2, 3.1, NULL, 13569, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFileChooserAction,4, 13570, 11, 3.1, NULL, 13569, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFileChooserAction,4, 13570, 3, 3.1, NULL, 13569, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFileChooserAction,4, 13570, 6, 3.1, NULL, 13569, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFileChooserAction,4, 13570, 9, 3.1, NULL, 13569, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFileChooserAction,4, 13570, 10, 3.1, NULL, 13569, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFileChooserAction,4, 13570, 12, 3.1, NULL, 13569, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13569,NULL);\n",architecture,13570,0);
 Msg("Find size of GtkFileChooserAction (13570)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCallback,4, 13572, 2, 3.1, NULL, 13571, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCallback,8, 13572, 11, 3.1, NULL, 13571, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCallback,8, 13572, 3, 3.1, NULL, 13571, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCallback,4, 13572, 6, 3.1, NULL, 13571, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCallback,8, 13572, 9, 3.1, NULL, 13571, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCallback,4, 13572, 10, 3.1, NULL, 13571, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCallback,8, 13572, 12, 3.1, NULL, 13571, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13571,NULL);\n",architecture,13572,0);
 Msg("Find size of GtkCallback (13572)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkHandleBox,128, 13575, 2, 3.1, NULL, 13574, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkHandleBox,184, 13575, 11, 3.1, NULL, 13574, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkHandleBox,184, 13575, 3, 3.1, NULL, 13574, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkHandleBox,128, 13575, 6, 3.1, NULL, 13574, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkHandleBox,184, 13575, 9, 3.1, NULL, 13574, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkHandleBox,128, 13575, 10, 3.1, NULL, 13574, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkHandleBox,184, 13575, 12, 3.1, NULL, 13574, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13574,NULL);\n",architecture,13575,0);
 Msg("Find size of GtkHandleBox (13575)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkSelectionMode,4, 13578, 2, 3.1, NULL, 13577, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkSelectionMode,4, 13578, 11, 3.1, NULL, 13577, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkSelectionMode,4, 13578, 3, 3.1, NULL, 13577, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkSelectionMode,4, 13578, 6, 3.1, NULL, 13577, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkSelectionMode,4, 13578, 9, 3.1, NULL, 13577, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkSelectionMode,4, 13578, 10, 3.1, NULL, 13577, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkSelectionMode,4, 13578, 12, 3.1, NULL, 13577, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13577,NULL);\n",architecture,13578,0);
 Msg("Find size of GtkSelectionMode (13578)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkActionGroupPrivate,0, 13582, 2, 3.1, NULL, 13581, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkActionGroupPrivate,0, 13582, 11, 3.1, NULL, 13581, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkActionGroupPrivate,0, 13582, 3, 3.1, NULL, 13581, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkActionGroupPrivate,0, 13582, 6, 3.1, NULL, 13581, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkActionGroupPrivate,0, 13582, 9, 3.1, NULL, 13581, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkActionGroupPrivate,0, 13582, 10, 3.1, NULL, 13581, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkActionGroupPrivate,0, 13582, 12, 3.1, NULL, 13581, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13581,NULL);\n",architecture,13582,0);
 Msg("Find size of GtkActionGroupPrivate (13582)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkActionGroup,16, 13584, 2, 3.1, NULL, 13580, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkActionGroup,32, 13584, 11, 3.1, NULL, 13580, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkActionGroup,32, 13584, 3, 3.1, NULL, 13580, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkActionGroup,16, 13584, 6, 3.1, NULL, 13580, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkActionGroup,32, 13584, 9, 3.1, NULL, 13580, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkActionGroup,16, 13584, 10, 3.1, NULL, 13580, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkActionGroup,32, 13584, 12, 3.1, NULL, 13580, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13580,NULL);\n",architecture,13584,0);
 Msg("Find size of GtkActionGroup (13584)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkBindingSet,32, 13588, 2, 3.1, NULL, 13586, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkBindingSet,64, 13588, 11, 3.1, NULL, 13586, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkBindingSet,64, 13588, 3, 3.1, NULL, 13586, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkBindingSet,32, 13588, 6, 3.1, NULL, 13586, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkBindingSet,64, 13588, 9, 3.1, NULL, 13586, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkBindingSet,32, 13588, 10, 3.1, NULL, 13586, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkBindingSet,64, 13588, 12, 3.1, NULL, 13586, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13586,NULL);\n",architecture,13588,0);
 Msg("Find size of GtkBindingSet (13588)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkBindingEntry,28, 13590, 2, 3.1, NULL, 13587, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkBindingEntry,48, 13590, 11, 3.1, NULL, 13587, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkBindingEntry,48, 13590, 3, 3.1, NULL, 13587, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkBindingEntry,28, 13590, 6, 3.1, NULL, 13587, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkBindingEntry,48, 13590, 9, 3.1, NULL, 13587, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkBindingEntry,28, 13590, 10, 3.1, NULL, 13587, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkBindingEntry,48, 13590, 12, 3.1, NULL, 13587, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13587,NULL);\n",architecture,13590,0);
 Msg("Find size of GtkBindingEntry (13590)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkBindingSignal,16, 13593, 2, 3.1, NULL, 13592, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkBindingSignal,32, 13593, 11, 3.1, NULL, 13592, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkBindingSignal,32, 13593, 3, 3.1, NULL, 13592, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkBindingSignal,16, 13593, 6, 3.1, NULL, 13592, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkBindingSignal,32, 13593, 9, 3.1, NULL, 13592, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkBindingSignal,16, 13593, 10, 3.1, NULL, 13592, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkBindingSignal,32, 13593, 12, 3.1, NULL, 13592, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13592,NULL);\n",architecture,13593,0);
 Msg("Find size of GtkBindingSignal (13593)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkBindingArg,12, 13597, 2, 3.1, NULL, 13595, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkBindingArg,16, 13597, 11, 3.1, NULL, 13595, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkBindingArg,16, 13597, 3, 3.1, NULL, 13595, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkBindingArg,16, 13597, 6, 3.1, NULL, 13595, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkBindingArg,16, 13597, 9, 3.1, NULL, 13595, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkBindingArg,16, 13597, 10, 3.1, NULL, 13595, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkBindingArg,16, 13597, 12, 3.1, NULL, 13595, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13595,NULL);\n",architecture,13597,0);
 Msg("Find size of GtkBindingArg (13597)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkScrolledWindow,84, 13601, 2, 3.1, NULL, 13600, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkScrolledWindow,144, 13601, 11, 3.1, NULL, 13600, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkScrolledWindow,144, 13601, 3, 3.1, NULL, 13600, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkScrolledWindow,84, 13601, 6, 3.1, NULL, 13600, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkScrolledWindow,144, 13601, 9, 3.1, NULL, 13600, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkScrolledWindow,84, 13601, 10, 3.1, NULL, 13600, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkScrolledWindow,144, 13601, 12, 3.1, NULL, 13600, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13600,NULL);\n",architecture,13601,0);
 Msg("Find size of GtkScrolledWindow (13601)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCornerType,4, 13604, 2, 3.1, NULL, 13603, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCornerType,4, 13604, 11, 3.1, NULL, 13603, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCornerType,4, 13604, 3, 3.1, NULL, 13603, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCornerType,4, 13604, 6, 3.1, NULL, 13603, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCornerType,4, 13604, 9, 3.1, NULL, 13603, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCornerType,4, 13604, 10, 3.1, NULL, 13603, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCornerType,4, 13604, 12, 3.1, NULL, 13603, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13603,NULL);\n",architecture,13604,0);
 Msg("Find size of GtkCornerType (13604)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFrame,104, 13606, 2, 3.1, NULL, 13605, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFrame,160, 13606, 11, 3.1, NULL, 13605, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFrame,160, 13606, 3, 3.1, NULL, 13605, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFrame,104, 13606, 6, 3.1, NULL, 13605, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFrame,160, 13606, 9, 3.1, NULL, 13605, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFrame,104, 13606, 10, 3.1, NULL, 13605, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFrame,160, 13606, 12, 3.1, NULL, 13605, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13605,NULL);\n",architecture,13606,0);
 Msg("Find size of GtkFrame (13606)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTextChildAnchor,16, 13609, 2, 3.1, NULL, 13608, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTextChildAnchor,32, 13609, 11, 3.1, NULL, 13608, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTextChildAnchor,32, 13609, 3, 3.1, NULL, 13608, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTextChildAnchor,16, 13609, 6, 3.1, NULL, 13608, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTextChildAnchor,32, 13609, 9, 3.1, NULL, 13608, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTextChildAnchor,16, 13609, 10, 3.1, NULL, 13608, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTextChildAnchor,32, 13609, 12, 3.1, NULL, 13608, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13608,NULL);\n",architecture,13609,0);
 Msg("Find size of GtkTextChildAnchor (13609)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkSeparatorToolItemPrivate,0, 13613, 2, 3.1, NULL, 13612, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkSeparatorToolItemPrivate,0, 13613, 11, 3.1, NULL, 13612, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkSeparatorToolItemPrivate,0, 13613, 3, 3.1, NULL, 13612, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkSeparatorToolItemPrivate,0, 13613, 6, 3.1, NULL, 13612, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkSeparatorToolItemPrivate,0, 13613, 9, 3.1, NULL, 13612, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkSeparatorToolItemPrivate,0, 13613, 10, 3.1, NULL, 13612, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkSeparatorToolItemPrivate,0, 13613, 12, 3.1, NULL, 13612, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13612,NULL);\n",architecture,13613,0);
 Msg("Find size of GtkSeparatorToolItemPrivate (13613)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkSeparatorToolItem,80, 13615, 2, 3.1, NULL, 13611, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkSeparatorToolItem,136, 13615, 11, 3.1, NULL, 13611, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkSeparatorToolItem,136, 13615, 3, 3.1, NULL, 13611, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkSeparatorToolItem,80, 13615, 6, 3.1, NULL, 13611, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkSeparatorToolItem,136, 13615, 9, 3.1, NULL, 13611, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkSeparatorToolItem,80, 13615, 10, 3.1, NULL, 13611, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkSeparatorToolItem,136, 13615, 12, 3.1, NULL, 13611, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13611,NULL);\n",architecture,13615,0);
 Msg("Find size of GtkSeparatorToolItem (13615)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeSelection,32, 13618, 2, 3.1, NULL, 13617, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeSelection,64, 13618, 11, 3.1, NULL, 13617, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeSelection,64, 13618, 3, 3.1, NULL, 13617, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeSelection,32, 13618, 6, 3.1, NULL, 13617, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeSelection,64, 13618, 9, 3.1, NULL, 13617, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeSelection,32, 13618, 10, 3.1, NULL, 13617, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeSelection,64, 13618, 12, 3.1, NULL, 13617, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13617,NULL);\n",architecture,13618,0);
 Msg("Find size of GtkTreeSelection (13618)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeSelectionFunc,4, 13621, 2, 3.1, NULL, 13620, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeSelectionFunc,8, 13621, 11, 3.1, NULL, 13620, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeSelectionFunc,8, 13621, 3, 3.1, NULL, 13620, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeSelectionFunc,4, 13621, 6, 3.1, NULL, 13620, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeSelectionFunc,8, 13621, 9, 3.1, NULL, 13620, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeSelectionFunc,4, 13621, 10, 3.1, NULL, 13620, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeSelectionFunc,8, 13621, 12, 3.1, NULL, 13620, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13620,NULL);\n",architecture,13621,0);
 Msg("Find size of GtkTreeSelectionFunc (13621)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkExpanderPrivate,0, 13624, 2, 3.1, NULL, 13623, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkExpanderPrivate,0, 13624, 11, 3.1, NULL, 13623, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkExpanderPrivate,0, 13624, 3, 3.1, NULL, 13623, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkExpanderPrivate,0, 13624, 6, 3.1, NULL, 13623, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkExpanderPrivate,0, 13624, 9, 3.1, NULL, 13623, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkExpanderPrivate,0, 13624, 10, 3.1, NULL, 13623, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkExpanderPrivate,0, 13624, 12, 3.1, NULL, 13623, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13623,NULL);\n",architecture,13624,0);
 Msg("Find size of GtkExpanderPrivate (13624)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkExpander,76, 13626, 2, 3.1, NULL, 13622, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkExpander,128, 13626, 11, 3.1, NULL, 13622, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkExpander,128, 13626, 3, 3.1, NULL, 13622, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkExpander,76, 13626, 6, 3.1, NULL, 13622, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkExpander,128, 13626, 9, 3.1, NULL, 13622, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkExpander,76, 13626, 10, 3.1, NULL, 13622, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkExpander,128, 13626, 12, 3.1, NULL, 13622, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13622,NULL);\n",architecture,13626,0);
 Msg("Find size of GtkExpander (13626)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkPositionType,4, 13629, 2, 3.1, NULL, 13628, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkPositionType,4, 13629, 11, 3.1, NULL, 13628, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkPositionType,4, 13629, 3, 3.1, NULL, 13628, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkPositionType,4, 13629, 6, 3.1, NULL, 13628, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkPositionType,4, 13629, 9, 3.1, NULL, 13628, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkPositionType,4, 13629, 10, 3.1, NULL, 13628, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkPositionType,4, 13629, 12, 3.1, NULL, 13628, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13628,NULL);\n",architecture,13629,0);
 Msg("Find size of GtkPositionType (13629)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkUIManagerItemType,4, 13631, 2, 3.1, NULL, 13630, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkUIManagerItemType,4, 13631, 11, 3.1, NULL, 13630, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkUIManagerItemType,4, 13631, 3, 3.1, NULL, 13630, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkUIManagerItemType,4, 13631, 6, 3.1, NULL, 13630, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkUIManagerItemType,4, 13631, 9, 3.1, NULL, 13630, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkUIManagerItemType,4, 13631, 10, 3.1, NULL, 13630, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkUIManagerItemType,4, 13631, 12, 3.1, NULL, 13630, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13630,NULL);\n",architecture,13631,0);
 Msg("Find size of GtkUIManagerItemType (13631)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFontSelectionDialog,192, 13633, 2, 3.1, NULL, 13632, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFontSelectionDialog,320, 13633, 11, 3.1, NULL, 13632, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFontSelectionDialog,320, 13633, 3, 3.1, NULL, 13632, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFontSelectionDialog,192, 13633, 6, 3.1, NULL, 13632, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFontSelectionDialog,320, 13633, 9, 3.1, NULL, 13632, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFontSelectionDialog,192, 13633, 10, 3.1, NULL, 13632, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFontSelectionDialog,320, 13633, 12, 3.1, NULL, 13632, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13632,NULL);\n",architecture,13633,0);
 Msg("Find size of GtkFontSelectionDialog (13633)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkPanedPrivate,0, 13637, 2, 3.1, NULL, 13636, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkPanedPrivate,0, 13637, 11, 3.1, NULL, 13636, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkPanedPrivate,0, 13637, 3, 3.1, NULL, 13636, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkPanedPrivate,0, 13637, 6, 3.1, NULL, 13636, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkPanedPrivate,0, 13637, 9, 3.1, NULL, 13636, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkPanedPrivate,0, 13637, 10, 3.1, NULL, 13636, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkPanedPrivate,0, 13637, 12, 3.1, NULL, 13636, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13636,NULL);\n",architecture,13637,0);
 Msg("Find size of GtkPanedPrivate (13637)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkPaned,144, 13639, 2, 3.1, NULL, 13635, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkPaned,216, 13639, 11, 3.1, NULL, 13635, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkPaned,216, 13639, 3, 3.1, NULL, 13635, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkPaned,144, 13639, 6, 3.1, NULL, 13635, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkPaned,216, 13639, 9, 3.1, NULL, 13635, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkPaned,144, 13639, 10, 3.1, NULL, 13635, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkPaned,216, 13639, 12, 3.1, NULL, 13635, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13635,NULL);\n",architecture,13639,0);
 Msg("Find size of GtkPaned (13639)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkViewport,92, 13644, 2, 3.1, NULL, 13643, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkViewport,160, 13644, 11, 3.1, NULL, 13643, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkViewport,160, 13644, 3, 3.1, NULL, 13643, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkViewport,92, 13644, 6, 3.1, NULL, 13643, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkViewport,160, 13644, 9, 3.1, NULL, 13643, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkViewport,92, 13644, 10, 3.1, NULL, 13643, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkViewport,160, 13644, 12, 3.1, NULL, 13643, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13643,NULL);\n",architecture,13644,0);
 Msg("Find size of GtkViewport (13644)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkScale,144, 13647, 2, 3.1, NULL, 13646, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkScale,200, 13647, 11, 3.1, NULL, 13646, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkScale,200, 13647, 3, 3.1, NULL, 13646, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkScale,144, 13647, 6, 3.1, NULL, 13646, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkScale,200, 13647, 9, 3.1, NULL, 13646, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkScale,144, 13647, 10, 3.1, NULL, 13646, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkScale,200, 13647, 12, 3.1, NULL, 13646, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13646,NULL);\n",architecture,13647,0);
 Msg("Find size of GtkScale (13647)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkListStore,64, 13650, 2, 3.1, NULL, 13649, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkListStore,120, 13650, 11, 3.1, NULL, 13649, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkListStore,120, 13650, 3, 3.1, NULL, 13649, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkListStore,64, 13650, 6, 3.1, NULL, 13649, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkListStore,120, 13650, 9, 3.1, NULL, 13649, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkListStore,64, 13650, 10, 3.1, NULL, 13649, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkListStore,120, 13650, 12, 3.1, NULL, 13649, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13649,NULL);\n",architecture,13650,0);
 Msg("Find size of GtkListStore (13650)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkEditable,0, 13653, 2, 3.1, NULL, 13652, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkEditable,0, 13653, 11, 3.1, NULL, 13652, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkEditable,0, 13653, 3, 3.1, NULL, 13652, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkEditable,0, 13653, 6, 3.1, NULL, 13652, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkEditable,0, 13653, 9, 3.1, NULL, 13652, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkEditable,0, 13653, 10, 3.1, NULL, 13652, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkEditable,0, 13653, 12, 3.1, NULL, 13652, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13652,NULL);\n",architecture,13653,0);
 Msg("Find size of GtkEditable (13653)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkClipboardGetFunc,4, 13657, 2, 3.1, NULL, 13656, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkClipboardGetFunc,8, 13657, 11, 3.1, NULL, 13656, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkClipboardGetFunc,8, 13657, 3, 3.1, NULL, 13656, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkClipboardGetFunc,4, 13657, 6, 3.1, NULL, 13656, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkClipboardGetFunc,8, 13657, 9, 3.1, NULL, 13656, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkClipboardGetFunc,4, 13657, 10, 3.1, NULL, 13656, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkClipboardGetFunc,8, 13657, 12, 3.1, NULL, 13656, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13656,NULL);\n",architecture,13657,0);
 Msg("Find size of GtkClipboardGetFunc (13657)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkClipboardClearFunc,4, 13659, 2, 3.1, NULL, 13658, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkClipboardClearFunc,8, 13659, 11, 3.1, NULL, 13658, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkClipboardClearFunc,8, 13659, 3, 3.1, NULL, 13658, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkClipboardClearFunc,4, 13659, 6, 3.1, NULL, 13658, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkClipboardClearFunc,8, 13659, 9, 3.1, NULL, 13658, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkClipboardClearFunc,4, 13659, 10, 3.1, NULL, 13658, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkClipboardClearFunc,8, 13659, 12, 3.1, NULL, 13658, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13658,NULL);\n",architecture,13659,0);
 Msg("Find size of GtkClipboardClearFunc (13659)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkRadioActionEntry,24, 13663, 2, 3.1, NULL, 13662, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkRadioActionEntry,48, 13663, 11, 3.1, NULL, 13662, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkRadioActionEntry,48, 13663, 3, 3.1, NULL, 13662, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkRadioActionEntry,24, 13663, 6, 3.1, NULL, 13662, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkRadioActionEntry,48, 13663, 9, 3.1, NULL, 13662, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkRadioActionEntry,24, 13663, 10, 3.1, NULL, 13662, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkRadioActionEntry,48, 13663, 12, 3.1, NULL, 13662, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13662,NULL);\n",architecture,13663,0);
 Msg("Find size of GtkRadioActionEntry (13663)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeViewColumnDropFunc,4, 13667, 2, 3.1, NULL, 13666, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeViewColumnDropFunc,8, 13667, 11, 3.1, NULL, 13666, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeViewColumnDropFunc,8, 13667, 3, 3.1, NULL, 13666, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeViewColumnDropFunc,4, 13667, 6, 3.1, NULL, 13666, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeViewColumnDropFunc,8, 13667, 9, 3.1, NULL, 13666, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeViewColumnDropFunc,4, 13667, 10, 3.1, NULL, 13666, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeViewColumnDropFunc,8, 13667, 12, 3.1, NULL, 13666, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13666,NULL);\n",architecture,13667,0);
 Msg("Find size of GtkTreeViewColumnDropFunc (13667)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkEventBox,72, 13669, 2, 3.1, NULL, 13668, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkEventBox,120, 13669, 11, 3.1, NULL, 13668, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkEventBox,120, 13669, 3, 3.1, NULL, 13668, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkEventBox,72, 13669, 6, 3.1, NULL, 13668, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkEventBox,120, 13669, 9, 3.1, NULL, 13668, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkEventBox,72, 13669, 10, 3.1, NULL, 13668, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkEventBox,120, 13669, 12, 3.1, NULL, 13668, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13668,NULL);\n",architecture,13669,0);
 Msg("Find size of GtkEventBox (13669)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeDragDest,0, 13672, 2, 3.1, NULL, 13671, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeDragDest,0, 13672, 11, 3.1, NULL, 13671, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeDragDest,0, 13672, 3, 3.1, NULL, 13671, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeDragDest,0, 13672, 6, 3.1, NULL, 13671, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeDragDest,0, 13672, 9, 3.1, NULL, 13671, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeDragDest,0, 13672, 10, 3.1, NULL, 13671, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeDragDest,0, 13672, 12, 3.1, NULL, 13671, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13671,NULL);\n",architecture,13672,0);
 Msg("Find size of GtkTreeDragDest (13672)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkToggleActionEntry,28, 13675, 2, 3.1, NULL, 13674, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkToggleActionEntry,56, 13675, 11, 3.1, NULL, 13674, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkToggleActionEntry,56, 13675, 3, 3.1, NULL, 13674, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkToggleActionEntry,28, 13675, 6, 3.1, NULL, 13674, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkToggleActionEntry,56, 13675, 9, 3.1, NULL, 13674, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkToggleActionEntry,28, 13675, 10, 3.1, NULL, 13674, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkToggleActionEntry,56, 13675, 12, 3.1, NULL, 13674, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13674,NULL);\n",architecture,13675,0);
 Msg("Find size of GtkToggleActionEntry (13675)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAccelLabel,140, 13679, 2, 3.1, NULL, 13678, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAccelLabel,232, 13679, 11, 3.1, NULL, 13678, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAccelLabel,232, 13679, 3, 3.1, NULL, 13678, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAccelLabel,140, 13679, 6, 3.1, NULL, 13678, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAccelLabel,232, 13679, 9, 3.1, NULL, 13678, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAccelLabel,140, 13679, 10, 3.1, NULL, 13678, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAccelLabel,232, 13679, 12, 3.1, NULL, 13678, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13678,NULL);\n",architecture,13679,0);
 Msg("Find size of GtkAccelLabel (13679)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkImageMenuItem,100, 13682, 2, 3.1, NULL, 13681, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkImageMenuItem,168, 13682, 11, 3.1, NULL, 13681, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkImageMenuItem,168, 13682, 3, 3.1, NULL, 13681, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkImageMenuItem,100, 13682, 6, 3.1, NULL, 13681, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkImageMenuItem,168, 13682, 9, 3.1, NULL, 13681, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkImageMenuItem,100, 13682, 10, 3.1, NULL, 13681, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkImageMenuItem,168, 13682, 12, 3.1, NULL, 13681, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13681,NULL);\n",architecture,13682,0);
 Msg("Find size of GtkImageMenuItem (13682)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkPlug,168, 13685, 2, 3.1, NULL, 13684, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkPlug,280, 13685, 11, 3.1, NULL, 13684, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkPlug,280, 13685, 3, 3.1, NULL, 13684, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkPlug,168, 13685, 6, 3.1, NULL, 13684, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkPlug,280, 13685, 9, 3.1, NULL, 13684, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkPlug,168, 13685, 10, 3.1, NULL, 13684, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkPlug,280, 13685, 12, 3.1, NULL, 13684, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13684,NULL);\n",architecture,13685,0);
 Msg("Find size of GtkPlug (13685)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFileChooserButtonPrivate,0, 13689, 2, 3.1, NULL, 13688, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFileChooserButtonPrivate,0, 13689, 11, 3.1, NULL, 13688, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFileChooserButtonPrivate,0, 13689, 3, 3.1, NULL, 13688, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFileChooserButtonPrivate,0, 13689, 6, 3.1, NULL, 13688, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFileChooserButtonPrivate,0, 13689, 9, 3.1, NULL, 13688, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFileChooserButtonPrivate,0, 13689, 10, 3.1, NULL, 13688, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFileChooserButtonPrivate,0, 13689, 12, 3.1, NULL, 13688, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13688,NULL);\n",architecture,13689,0);
 Msg("Find size of GtkFileChooserButtonPrivate (13689)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFileChooserButton,80, 13691, 2, 3.1, NULL, 13687, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFileChooserButton,136, 13691, 11, 3.1, NULL, 13687, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFileChooserButton,136, 13691, 3, 3.1, NULL, 13687, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFileChooserButton,80, 13691, 6, 3.1, NULL, 13687, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFileChooserButton,136, 13691, 9, 3.1, NULL, 13687, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFileChooserButton,80, 13691, 10, 3.1, NULL, 13687, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFileChooserButton,136, 13691, 12, 3.1, NULL, 13687, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13687,NULL);\n",architecture,13691,0);
 Msg("Find size of GtkFileChooserButton (13691)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkStockItem,20, 13694, 2, 3.1, NULL, 13693, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkStockItem,32, 13694, 11, 3.1, NULL, 13693, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkStockItem,32, 13694, 3, 3.1, NULL, 13693, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkStockItem,20, 13694, 6, 3.1, NULL, 13693, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkStockItem,32, 13694, 9, 3.1, NULL, 13693, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkStockItem,20, 13694, 10, 3.1, NULL, 13693, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkStockItem,32, 13694, 12, 3.1, NULL, 13693, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13693,NULL);\n",architecture,13694,0);
 Msg("Find size of GtkStockItem (13694)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTranslateFunc,4, 13697, 2, 3.1, NULL, 13696, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTranslateFunc,8, 13697, 11, 3.1, NULL, 13696, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTranslateFunc,8, 13697, 3, 3.1, NULL, 13696, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTranslateFunc,4, 13697, 6, 3.1, NULL, 13696, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTranslateFunc,8, 13697, 9, 3.1, NULL, 13696, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTranslateFunc,4, 13697, 10, 3.1, NULL, 13696, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTranslateFunc,8, 13697, 12, 3.1, NULL, 13696, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13696,NULL);\n",architecture,13697,0);
 Msg("Find size of GtkTranslateFunc (13697)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkToolbarStyle,4, 13700, 2, 3.1, NULL, 13699, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkToolbarStyle,4, 13700, 11, 3.1, NULL, 13699, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkToolbarStyle,4, 13700, 3, 3.1, NULL, 13699, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkToolbarStyle,4, 13700, 6, 3.1, NULL, 13699, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkToolbarStyle,4, 13700, 9, 3.1, NULL, 13699, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkToolbarStyle,4, 13700, 10, 3.1, NULL, 13699, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkToolbarStyle,4, 13700, 12, 3.1, NULL, 13699, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13699,NULL);\n",architecture,13700,0);
 Msg("Find size of GtkToolbarStyle (13700)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkToolbar,112, 13701, 2, 3.1, NULL, 13698, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkToolbar,176, 13701, 11, 3.1, NULL, 13698, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkToolbar,176, 13701, 3, 3.1, NULL, 13698, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkToolbar,112, 13701, 6, 3.1, NULL, 13698, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkToolbar,176, 13701, 9, 3.1, NULL, 13698, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkToolbar,112, 13701, 10, 3.1, NULL, 13698, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkToolbar,176, 13701, 12, 3.1, NULL, 13698, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13698,NULL);\n",architecture,13701,0);
 Msg("Find size of GtkToolbar (13701)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCellLayoutDataFunc,4, 13704, 2, 3.1, NULL, 13703, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCellLayoutDataFunc,8, 13704, 11, 3.1, NULL, 13703, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCellLayoutDataFunc,8, 13704, 3, 3.1, NULL, 13703, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCellLayoutDataFunc,4, 13704, 6, 3.1, NULL, 13703, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCellLayoutDataFunc,8, 13704, 9, 3.1, NULL, 13703, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCellLayoutDataFunc,4, 13704, 10, 3.1, NULL, 13703, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCellLayoutDataFunc,8, 13704, 12, 3.1, NULL, 13703, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13703,NULL);\n",architecture,13704,0);
 Msg("Find size of GtkCellLayoutDataFunc (13704)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCellRendererToggle,44, 13709, 2, 3.1, NULL, 13708, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCellRendererToggle,64, 13709, 11, 3.1, NULL, 13708, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCellRendererToggle,64, 13709, 3, 3.1, NULL, 13708, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCellRendererToggle,44, 13709, 6, 3.1, NULL, 13708, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCellRendererToggle,64, 13709, 9, 3.1, NULL, 13708, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCellRendererToggle,44, 13709, 10, 3.1, NULL, 13708, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCellRendererToggle,64, 13709, 12, 3.1, NULL, 13708, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13708,NULL);\n",architecture,13709,0);
 Msg("Find size of GtkCellRendererToggle (13709)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkReliefStyle,4, 13712, 2, 3.1, NULL, 13711, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkReliefStyle,4, 13712, 11, 3.1, NULL, 13711, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkReliefStyle,4, 13712, 3, 3.1, NULL, 13711, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkReliefStyle,4, 13712, 6, 3.1, NULL, 13711, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkReliefStyle,4, 13712, 9, 3.1, NULL, 13711, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkReliefStyle,4, 13712, 10, 3.1, NULL, 13711, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkReliefStyle,4, 13712, 12, 3.1, NULL, 13711, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13711,NULL);\n",architecture,13712,0);
 Msg("Find size of GtkReliefStyle (13712)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkClipboardImageReceivedFunc,4, 13715, 2, 3.1, NULL, 13714, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkClipboardImageReceivedFunc,8, 13715, 11, 3.1, NULL, 13714, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkClipboardImageReceivedFunc,8, 13715, 3, 3.1, NULL, 13714, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkClipboardImageReceivedFunc,4, 13715, 6, 3.1, NULL, 13714, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkClipboardImageReceivedFunc,8, 13715, 9, 3.1, NULL, 13714, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkClipboardImageReceivedFunc,4, 13715, 10, 3.1, NULL, 13714, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkClipboardImageReceivedFunc,8, 13715, 12, 3.1, NULL, 13714, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13714,NULL);\n",architecture,13715,0);
 Msg("Find size of GtkClipboardImageReceivedFunc (13715)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCellRendererState,4, 13717, 2, 3.1, NULL, 13716, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCellRendererState,4, 13717, 11, 3.1, NULL, 13716, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCellRendererState,4, 13717, 3, 3.1, NULL, 13716, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCellRendererState,4, 13717, 6, 3.1, NULL, 13716, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCellRendererState,4, 13717, 9, 3.1, NULL, 13716, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCellRendererState,4, 13717, 10, 3.1, NULL, 13716, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCellRendererState,4, 13717, 12, 3.1, NULL, 13716, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13716,NULL);\n",architecture,13717,0);
 Msg("Find size of GtkCellRendererState (13717)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkActionEntry,24, 13719, 2, 3.1, NULL, 13718, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkActionEntry,48, 13719, 11, 3.1, NULL, 13718, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkActionEntry,48, 13719, 3, 3.1, NULL, 13718, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkActionEntry,24, 13719, 6, 3.1, NULL, 13718, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkActionEntry,48, 13719, 9, 3.1, NULL, 13718, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkActionEntry,24, 13719, 10, 3.1, NULL, 13718, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkActionEntry,48, 13719, 12, 3.1, NULL, 13718, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13718,NULL);\n",architecture,13719,0);
 Msg("Find size of GtkActionEntry (13719)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCheckButton,92, 13724, 2, 3.1, NULL, 13723, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCheckButton,152, 13724, 11, 3.1, NULL, 13723, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCheckButton,152, 13724, 3, 3.1, NULL, 13723, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCheckButton,92, 13724, 6, 3.1, NULL, 13723, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCheckButton,152, 13724, 9, 3.1, NULL, 13723, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCheckButton,92, 13724, 10, 3.1, NULL, 13723, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCheckButton,152, 13724, 12, 3.1, NULL, 13723, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13723,NULL);\n",architecture,13724,0);
 Msg("Find size of GtkCheckButton (13724)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkRadioButton,96, 13725, 2, 3.1, NULL, 13722, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkRadioButton,160, 13725, 11, 3.1, NULL, 13722, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkRadioButton,160, 13725, 3, 3.1, NULL, 13722, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkRadioButton,96, 13725, 6, 3.1, NULL, 13722, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkRadioButton,160, 13725, 9, 3.1, NULL, 13722, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkRadioButton,96, 13725, 10, 3.1, NULL, 13722, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkRadioButton,160, 13725, 12, 3.1, NULL, 13722, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13722,NULL);\n",architecture,13725,0);
 Msg("Find size of GtkRadioButton (13725)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAlignment,88, 13729, 2, 3.1, NULL, 13728, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAlignment,136, 13729, 11, 3.1, NULL, 13728, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAlignment,136, 13729, 3, 3.1, NULL, 13728, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAlignment,88, 13729, 6, 3.1, NULL, 13728, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAlignment,136, 13729, 9, 3.1, NULL, 13728, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAlignment,88, 13729, 10, 3.1, NULL, 13728, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAlignment,136, 13729, 12, 3.1, NULL, 13728, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13728,NULL);\n",architecture,13729,0);
 Msg("Find size of GtkAlignment (13729)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkContainerClass,416, 13739, 2, 3.1, NULL, 13731, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkContainerClass,824, 13739, 11, 3.1, NULL, 13731, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkContainerClass,824, 13739, 3, 3.1, NULL, 13731, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkContainerClass,416, 13739, 6, 3.1, NULL, 13731, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkContainerClass,824, 13739, 9, 3.1, NULL, 13731, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkContainerClass,416, 13739, 10, 3.1, NULL, 13731, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkContainerClass,824, 13739, 12, 3.1, NULL, 13731, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13731,NULL);\n",architecture,13739,0);
 Msg("Find size of GtkContainerClass (13739)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFontButtonPrivate,0, 13743, 2, 3.1, NULL, 13742, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFontButtonPrivate,0, 13743, 11, 3.1, NULL, 13742, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFontButtonPrivate,0, 13743, 3, 3.1, NULL, 13742, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFontButtonPrivate,0, 13743, 6, 3.1, NULL, 13742, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFontButtonPrivate,0, 13743, 9, 3.1, NULL, 13742, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFontButtonPrivate,0, 13743, 10, 3.1, NULL, 13742, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFontButtonPrivate,0, 13743, 12, 3.1, NULL, 13742, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13742,NULL);\n",architecture,13743,0);
 Msg("Find size of GtkFontButtonPrivate (13743)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFontButton,92, 13745, 2, 3.1, NULL, 13741, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFontButton,152, 13745, 11, 3.1, NULL, 13741, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFontButton,152, 13745, 3, 3.1, NULL, 13741, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFontButton,92, 13745, 6, 3.1, NULL, 13741, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFontButton,152, 13745, 9, 3.1, NULL, 13741, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFontButton,92, 13745, 10, 3.1, NULL, 13741, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFontButton,152, 13745, 12, 3.1, NULL, 13741, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13741,NULL);\n",architecture,13745,0);
 Msg("Find size of GtkFontButton (13745)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkBorder,16, 13748, 2, 3.1, NULL, 13747, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkBorder,16, 13748, 11, 3.1, NULL, 13747, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkBorder,16, 13748, 3, 3.1, NULL, 13747, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkBorder,16, 13748, 6, 3.1, NULL, 13747, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkBorder,16, 13748, 9, 3.1, NULL, 13747, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkBorder,16, 13748, 10, 3.1, NULL, 13747, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkBorder,16, 13748, 12, 3.1, NULL, 13747, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13747,NULL);\n",architecture,13748,0);
 Msg("Find size of GtkBorder (13748)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkMessageDialog,168, 13751, 2, 3.1, NULL, 13750, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkMessageDialog,280, 13751, 11, 3.1, NULL, 13750, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkMessageDialog,280, 13751, 3, 3.1, NULL, 13750, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkMessageDialog,168, 13751, 6, 3.1, NULL, 13750, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkMessageDialog,280, 13751, 9, 3.1, NULL, 13750, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkMessageDialog,168, 13751, 10, 3.1, NULL, 13750, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkMessageDialog,280, 13751, 12, 3.1, NULL, 13750, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13750,NULL);\n",architecture,13751,0);
 Msg("Find size of GtkMessageDialog (13751)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkRulerMetric,116, 13757, 2, 3.1, NULL, 13754, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkRulerMetric,128, 13757, 11, 3.1, NULL, 13754, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkRulerMetric,128, 13757, 3, 3.1, NULL, 13754, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkRulerMetric,120, 13757, 6, 3.1, NULL, 13754, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkRulerMetric,128, 13757, 9, 3.1, NULL, 13754, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkRulerMetric,120, 13757, 10, 3.1, NULL, 13754, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkRulerMetric,128, 13757, 12, 3.1, NULL, 13754, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13754,NULL);\n",architecture,13757,0);
 Msg("Find size of GtkRulerMetric (13757)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkRuler,116, 13759, 2, 3.1, NULL, 13753, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkRuler,168, 13759, 11, 3.1, NULL, 13753, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkRuler,168, 13759, 3, 3.1, NULL, 13753, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkRuler,120, 13759, 6, 3.1, NULL, 13753, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkRuler,168, 13759, 9, 3.1, NULL, 13753, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkRuler,120, 13759, 10, 3.1, NULL, 13753, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkRuler,168, 13759, 12, 3.1, NULL, 13753, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13753,NULL);\n",architecture,13759,0);
 Msg("Find size of GtkRuler (13759)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAccelFlags,4, 13762, 2, 3.1, NULL, 13761, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAccelFlags,4, 13762, 11, 3.1, NULL, 13761, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAccelFlags,4, 13762, 3, 3.1, NULL, 13761, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAccelFlags,4, 13762, 6, 3.1, NULL, 13761, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAccelFlags,4, 13762, 9, 3.1, NULL, 13761, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAccelFlags,4, 13762, 10, 3.1, NULL, 13761, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAccelFlags,4, 13762, 12, 3.1, NULL, 13761, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13761,NULL);\n",architecture,13762,0);
 Msg("Find size of GtkAccelFlags (13762)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTextCharPredicate,4, 13764, 2, 3.1, NULL, 13763, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTextCharPredicate,8, 13764, 11, 3.1, NULL, 13763, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTextCharPredicate,8, 13764, 3, 3.1, NULL, 13763, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTextCharPredicate,4, 13764, 6, 3.1, NULL, 13763, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTextCharPredicate,8, 13764, 9, 3.1, NULL, 13763, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTextCharPredicate,4, 13764, 10, 3.1, NULL, 13763, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTextCharPredicate,8, 13764, 12, 3.1, NULL, 13763, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13763,NULL);\n",architecture,13764,0);
 Msg("Find size of GtkTextCharPredicate (13764)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkMenuToolButtonPrivate,0, 13767, 2, 3.1, NULL, 13766, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkMenuToolButtonPrivate,0, 13767, 11, 3.1, NULL, 13766, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkMenuToolButtonPrivate,0, 13767, 3, 3.1, NULL, 13766, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkMenuToolButtonPrivate,0, 13767, 6, 3.1, NULL, 13766, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkMenuToolButtonPrivate,0, 13767, 9, 3.1, NULL, 13766, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkMenuToolButtonPrivate,0, 13767, 10, 3.1, NULL, 13766, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkMenuToolButtonPrivate,0, 13767, 12, 3.1, NULL, 13766, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13766,NULL);\n",architecture,13767,0);
 Msg("Find size of GtkMenuToolButtonPrivate (13767)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkMenuToolButton,84, 13769, 2, 3.1, NULL, 13765, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkMenuToolButton,144, 13769, 11, 3.1, NULL, 13765, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkMenuToolButton,144, 13769, 3, 3.1, NULL, 13765, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkMenuToolButton,84, 13769, 6, 3.1, NULL, 13765, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkMenuToolButton,144, 13769, 9, 3.1, NULL, 13765, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkMenuToolButton,84, 13769, 10, 3.1, NULL, 13765, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkMenuToolButton,144, 13769, 12, 3.1, NULL, 13765, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13765,NULL);\n",architecture,13769,0);
 Msg("Find size of GtkMenuToolButton (13769)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkToggleToolButtonPrivate,0, 13774, 2, 3.1, NULL, 13773, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkToggleToolButtonPrivate,0, 13774, 11, 3.1, NULL, 13773, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkToggleToolButtonPrivate,0, 13774, 3, 3.1, NULL, 13773, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkToggleToolButtonPrivate,0, 13774, 6, 3.1, NULL, 13773, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkToggleToolButtonPrivate,0, 13774, 9, 3.1, NULL, 13773, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkToggleToolButtonPrivate,0, 13774, 10, 3.1, NULL, 13773, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkToggleToolButtonPrivate,0, 13774, 12, 3.1, NULL, 13773, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13773,NULL);\n",architecture,13774,0);
 Msg("Find size of GtkToggleToolButtonPrivate (13774)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkToggleToolButton,84, 13776, 2, 3.1, NULL, 13772, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkToggleToolButton,144, 13776, 11, 3.1, NULL, 13772, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkToggleToolButton,144, 13776, 3, 3.1, NULL, 13772, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkToggleToolButton,84, 13776, 6, 3.1, NULL, 13772, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkToggleToolButton,144, 13776, 9, 3.1, NULL, 13772, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkToggleToolButton,84, 13776, 10, 3.1, NULL, 13772, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkToggleToolButton,144, 13776, 12, 3.1, NULL, 13772, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13772,NULL);\n",architecture,13776,0);
 Msg("Find size of GtkToggleToolButton (13776)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkRadioToolButton,84, 13777, 2, 3.1, NULL, 13771, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkRadioToolButton,144, 13777, 11, 3.1, NULL, 13771, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkRadioToolButton,144, 13777, 3, 3.1, NULL, 13771, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkRadioToolButton,84, 13777, 6, 3.1, NULL, 13771, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkRadioToolButton,144, 13777, 9, 3.1, NULL, 13771, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkRadioToolButton,84, 13777, 10, 3.1, NULL, 13771, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkRadioToolButton,144, 13777, 12, 3.1, NULL, 13771, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13771,NULL);\n",architecture,13777,0);
 Msg("Find size of GtkRadioToolButton (13777)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkSizeGroup,28, 13780, 2, 3.1, NULL, 13779, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkSizeGroup,48, 13780, 11, 3.1, NULL, 13779, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkSizeGroup,48, 13780, 3, 3.1, NULL, 13779, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkSizeGroup,28, 13780, 6, 3.1, NULL, 13779, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkSizeGroup,48, 13780, 9, 3.1, NULL, 13779, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkSizeGroup,28, 13780, 10, 3.1, NULL, 13779, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkSizeGroup,48, 13780, 12, 3.1, NULL, 13779, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13779,NULL);\n",architecture,13780,0);
 Msg("Find size of GtkSizeGroup (13780)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkSizeGroupMode,4, 13783, 2, 3.1, NULL, 13782, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkSizeGroupMode,4, 13783, 11, 3.1, NULL, 13782, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkSizeGroupMode,4, 13783, 3, 3.1, NULL, 13782, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkSizeGroupMode,4, 13783, 6, 3.1, NULL, 13782, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkSizeGroupMode,4, 13783, 9, 3.1, NULL, 13782, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkSizeGroupMode,4, 13783, 10, 3.1, NULL, 13782, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkSizeGroupMode,4, 13783, 12, 3.1, NULL, 13782, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13782,NULL);\n",architecture,13783,0);
 Msg("Find size of GtkSizeGroupMode (13783)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkDialogFlags,4, 13785, 2, 3.1, NULL, 13784, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkDialogFlags,4, 13785, 11, 3.1, NULL, 13784, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkDialogFlags,4, 13785, 3, 3.1, NULL, 13784, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkDialogFlags,4, 13785, 6, 3.1, NULL, 13784, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkDialogFlags,4, 13785, 9, 3.1, NULL, 13784, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkDialogFlags,4, 13785, 10, 3.1, NULL, 13784, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkDialogFlags,4, 13785, 12, 3.1, NULL, 13784, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13784,NULL);\n",architecture,13785,0);
 Msg("Find size of GtkDialogFlags (13785)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeSelectionForeachFunc,4, 13787, 2, 3.1, NULL, 13786, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeSelectionForeachFunc,8, 13787, 11, 3.1, NULL, 13786, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeSelectionForeachFunc,8, 13787, 3, 3.1, NULL, 13786, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeSelectionForeachFunc,4, 13787, 6, 3.1, NULL, 13786, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeSelectionForeachFunc,8, 13787, 9, 3.1, NULL, 13786, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeSelectionForeachFunc,4, 13787, 10, 3.1, NULL, 13786, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeSelectionForeachFunc,8, 13787, 12, 3.1, NULL, 13786, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13786,NULL);\n",architecture,13787,0);
 Msg("Find size of GtkTreeSelectionForeachFunc (13787)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkIconLookupFlags,4, 13789, 2, 3.1, NULL, 13788, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkIconLookupFlags,4, 13789, 11, 3.1, NULL, 13788, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkIconLookupFlags,4, 13789, 3, 3.1, NULL, 13788, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkIconLookupFlags,4, 13789, 6, 3.1, NULL, 13788, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkIconLookupFlags,4, 13789, 9, 3.1, NULL, 13788, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkIconLookupFlags,4, 13789, 10, 3.1, NULL, 13788, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkIconLookupFlags,4, 13789, 12, 3.1, NULL, 13788, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13788,NULL);\n",architecture,13789,0);
 Msg("Find size of GtkIconLookupFlags (13789)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeViewSearchEqualFunc,4, 13791, 2, 3.1, NULL, 13790, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeViewSearchEqualFunc,8, 13791, 11, 3.1, NULL, 13790, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeViewSearchEqualFunc,8, 13791, 3, 3.1, NULL, 13790, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeViewSearchEqualFunc,4, 13791, 6, 3.1, NULL, 13790, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeViewSearchEqualFunc,8, 13791, 9, 3.1, NULL, 13790, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeViewSearchEqualFunc,4, 13791, 10, 3.1, NULL, 13790, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeViewSearchEqualFunc,8, 13791, 12, 3.1, NULL, 13790, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13790,NULL);\n",architecture,13791,0);
 Msg("Find size of GtkTreeViewSearchEqualFunc (13791)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkMetricType,4, 13793, 2, 3.1, NULL, 13792, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkMetricType,4, 13793, 11, 3.1, NULL, 13792, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkMetricType,4, 13793, 3, 3.1, NULL, 13792, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkMetricType,4, 13793, 6, 3.1, NULL, 13792, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkMetricType,4, 13793, 9, 3.1, NULL, 13792, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkMetricType,4, 13793, 10, 3.1, NULL, 13792, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkMetricType,4, 13793, 12, 3.1, NULL, 13792, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13792,NULL);\n",architecture,13793,0);
 Msg("Find size of GtkMetricType (13793)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkIMContextSimple,60, 13796, 2, 3.1, NULL, 13794, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkIMContextSimple,80, 13796, 11, 3.1, NULL, 13794, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkIMContextSimple,80, 13796, 3, 3.1, NULL, 13794, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkIMContextSimple,60, 13796, 6, 3.1, NULL, 13794, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkIMContextSimple,80, 13796, 9, 3.1, NULL, 13794, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkIMContextSimple,60, 13796, 10, 3.1, NULL, 13794, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkIMContextSimple,80, 13796, 12, 3.1, NULL, 13794, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13794,NULL);\n",architecture,13796,0);
 Msg("Find size of GtkIMContextSimple (13796)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkClipboardTargetsReceivedFunc,4, 13800, 2, 3.1, NULL, 13799, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkClipboardTargetsReceivedFunc,8, 13800, 11, 3.1, NULL, 13799, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkClipboardTargetsReceivedFunc,8, 13800, 3, 3.1, NULL, 13799, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkClipboardTargetsReceivedFunc,4, 13800, 6, 3.1, NULL, 13799, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkClipboardTargetsReceivedFunc,8, 13800, 9, 3.1, NULL, 13799, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkClipboardTargetsReceivedFunc,4, 13800, 10, 3.1, NULL, 13799, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkClipboardTargetsReceivedFunc,8, 13800, 12, 3.1, NULL, 13799, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13799,NULL);\n",architecture,13800,0);
 Msg("Find size of GtkClipboardTargetsReceivedFunc (13800)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAttachOptions,4, 13803, 2, 3.1, NULL, 13802, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAttachOptions,4, 13803, 11, 3.1, NULL, 13802, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAttachOptions,4, 13803, 3, 3.1, NULL, 13802, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAttachOptions,4, 13803, 6, 3.1, NULL, 13802, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAttachOptions,4, 13803, 9, 3.1, NULL, 13802, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAttachOptions,4, 13803, 10, 3.1, NULL, 13802, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAttachOptions,4, 13803, 12, 3.1, NULL, 13802, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13802,NULL);\n",architecture,13803,0);
 Msg("Find size of GtkAttachOptions (13803)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFontSelection,132, 13805, 2, 3.1, NULL, 13804, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFontSelection,240, 13805, 11, 3.1, NULL, 13804, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFontSelection,240, 13805, 3, 3.1, NULL, 13804, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFontSelection,132, 13805, 6, 3.1, NULL, 13804, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFontSelection,240, 13805, 9, 3.1, NULL, 13804, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFontSelection,132, 13805, 10, 3.1, NULL, 13804, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFontSelection,240, 13805, 12, 3.1, NULL, 13804, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13804,NULL);\n",architecture,13805,0);
 Msg("Find size of GtkFontSelection (13805)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkClipboardTextReceivedFunc,4, 13810, 2, 3.1, NULL, 13809, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkClipboardTextReceivedFunc,8, 13810, 11, 3.1, NULL, 13809, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkClipboardTextReceivedFunc,8, 13810, 3, 3.1, NULL, 13809, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkClipboardTextReceivedFunc,4, 13810, 6, 3.1, NULL, 13809, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkClipboardTextReceivedFunc,8, 13810, 9, 3.1, NULL, 13809, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkClipboardTextReceivedFunc,4, 13810, 10, 3.1, NULL, 13809, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkClipboardTextReceivedFunc,8, 13810, 12, 3.1, NULL, 13809, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13809,NULL);\n",architecture,13810,0);
 Msg("Find size of GtkClipboardTextReceivedFunc (13810)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAccelGroupFindFunc,4, 13812, 2, 3.1, NULL, 13811, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAccelGroupFindFunc,8, 13812, 11, 3.1, NULL, 13811, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAccelGroupFindFunc,8, 13812, 3, 3.1, NULL, 13811, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAccelGroupFindFunc,4, 13812, 6, 3.1, NULL, 13811, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAccelGroupFindFunc,8, 13812, 9, 3.1, NULL, 13811, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAccelGroupFindFunc,4, 13812, 10, 3.1, NULL, 13811, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAccelGroupFindFunc,8, 13812, 12, 3.1, NULL, 13811, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13811,NULL);\n",architecture,13812,0);
 Msg("Find size of GtkAccelGroupFindFunc (13812)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeDestroyCountFunc,4, 13814, 2, 3.1, NULL, 13813, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeDestroyCountFunc,8, 13814, 11, 3.1, NULL, 13813, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeDestroyCountFunc,8, 13814, 3, 3.1, NULL, 13813, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeDestroyCountFunc,4, 13814, 6, 3.1, NULL, 13813, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeDestroyCountFunc,8, 13814, 9, 3.1, NULL, 13813, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeDestroyCountFunc,4, 13814, 10, 3.1, NULL, 13813, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeDestroyCountFunc,8, 13814, 12, 3.1, NULL, 13813, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13813,NULL);\n",architecture,13814,0);
 Msg("Find size of GtkTreeDestroyCountFunc (13814)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeViewDropPosition,4, 13817, 2, 3.1, NULL, 13816, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeViewDropPosition,4, 13817, 11, 3.1, NULL, 13816, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeViewDropPosition,4, 13817, 3, 3.1, NULL, 13816, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeViewDropPosition,4, 13817, 6, 3.1, NULL, 13816, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeViewDropPosition,4, 13817, 9, 3.1, NULL, 13816, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeViewDropPosition,4, 13817, 10, 3.1, NULL, 13816, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeViewDropPosition,4, 13817, 12, 3.1, NULL, 13816, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13816,NULL);\n",architecture,13817,0);
 Msg("Find size of GtkTreeViewDropPosition (13817)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAspectFrame,136, 13821, 2, 3.1, NULL, 13820, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAspectFrame,192, 13821, 11, 3.1, NULL, 13820, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAspectFrame,192, 13821, 3, 3.1, NULL, 13820, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAspectFrame,136, 13821, 6, 3.1, NULL, 13820, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAspectFrame,192, 13821, 9, 3.1, NULL, 13820, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAspectFrame,136, 13821, 10, 3.1, NULL, 13820, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAspectFrame,192, 13821, 12, 3.1, NULL, 13820, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13820,NULL);\n",architecture,13821,0);
 Msg("Find size of GtkAspectFrame (13821)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFileFilterFunc,4, 13824, 2, 3.1, NULL, 13823, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFileFilterFunc,8, 13824, 11, 3.1, NULL, 13823, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFileFilterFunc,8, 13824, 3, 3.1, NULL, 13823, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFileFilterFunc,4, 13824, 6, 3.1, NULL, 13823, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFileFilterFunc,8, 13824, 9, 3.1, NULL, 13823, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFileFilterFunc,4, 13824, 10, 3.1, NULL, 13823, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFileFilterFunc,8, 13824, 12, 3.1, NULL, 13823, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13823,NULL);\n",architecture,13824,0);
 Msg("Find size of GtkFileFilterFunc (13824)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkIMMulticontextPrivate,0, 13828, 2, 3.1, NULL, 13827, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkIMMulticontextPrivate,0, 13828, 11, 3.1, NULL, 13827, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkIMMulticontextPrivate,0, 13828, 3, 3.1, NULL, 13827, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkIMMulticontextPrivate,0, 13828, 6, 3.1, NULL, 13827, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkIMMulticontextPrivate,0, 13828, 9, 3.1, NULL, 13827, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkIMMulticontextPrivate,0, 13828, 10, 3.1, NULL, 13827, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkIMMulticontextPrivate,0, 13828, 12, 3.1, NULL, 13827, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13827,NULL);\n",architecture,13828,0);
 Msg("Find size of GtkIMMulticontextPrivate (13828)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkIMMulticontext,24, 13830, 2, 3.1, NULL, 13826, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkIMMulticontext,48, 13830, 11, 3.1, NULL, 13826, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkIMMulticontext,48, 13830, 3, 3.1, NULL, 13826, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkIMMulticontext,24, 13830, 6, 3.1, NULL, 13826, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkIMMulticontext,48, 13830, 9, 3.1, NULL, 13826, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkIMMulticontext,24, 13830, 10, 3.1, NULL, 13826, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkIMMulticontext,48, 13830, 12, 3.1, NULL, 13826, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13826,NULL);\n",architecture,13830,0);
 Msg("Find size of GtkIMMulticontext (13830)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkMessageType,4, 13835, 2, 3.1, NULL, 13834, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkMessageType,4, 13835, 11, 3.1, NULL, 13834, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkMessageType,4, 13835, 3, 3.1, NULL, 13834, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkMessageType,4, 13835, 6, 3.1, NULL, 13834, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkMessageType,4, 13835, 9, 3.1, NULL, 13834, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkMessageType,4, 13835, 10, 3.1, NULL, 13834, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkMessageType,4, 13835, 12, 3.1, NULL, 13834, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13834,NULL);\n",architecture,13835,0);
 Msg("Find size of GtkMessageType (13835)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkButtonsType,4, 13837, 2, 3.1, NULL, 13836, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkButtonsType,4, 13837, 11, 3.1, NULL, 13836, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkButtonsType,4, 13837, 3, 3.1, NULL, 13836, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkButtonsType,4, 13837, 6, 3.1, NULL, 13836, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkButtonsType,4, 13837, 9, 3.1, NULL, 13836, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkButtonsType,4, 13837, 10, 3.1, NULL, 13836, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkButtonsType,4, 13837, 12, 3.1, NULL, 13836, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13836,NULL);\n",architecture,13837,0);
 Msg("Find size of GtkButtonsType (13837)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAccelMapForeach,4, 13840, 2, 3.1, NULL, 13839, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAccelMapForeach,8, 13840, 11, 3.1, NULL, 13839, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAccelMapForeach,8, 13840, 3, 3.1, NULL, 13839, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAccelMapForeach,4, 13840, 6, 3.1, NULL, 13839, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAccelMapForeach,8, 13840, 9, 3.1, NULL, 13839, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAccelMapForeach,4, 13840, 10, 3.1, NULL, 13839, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAccelMapForeach,8, 13840, 12, 3.1, NULL, 13839, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13839,NULL);\n",architecture,13840,0);
 Msg("Find size of GtkAccelMapForeach (13840)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkPolicyType,4, 13843, 2, 3.1, NULL, 13842, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkPolicyType,4, 13843, 11, 3.1, NULL, 13842, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkPolicyType,4, 13843, 3, 3.1, NULL, 13842, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkPolicyType,4, 13843, 6, 3.1, NULL, 13842, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkPolicyType,4, 13843, 9, 3.1, NULL, 13842, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkPolicyType,4, 13843, 10, 3.1, NULL, 13842, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkPolicyType,4, 13843, 12, 3.1, NULL, 13842, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13842,NULL);\n",architecture,13843,0);
 Msg("Find size of GtkPolicyType (13843)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkResizeMode,4, 13846, 2, 3.1, NULL, 13845, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkResizeMode,4, 13846, 11, 3.1, NULL, 13845, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkResizeMode,4, 13846, 3, 3.1, NULL, 13845, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkResizeMode,4, 13846, 6, 3.1, NULL, 13845, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkResizeMode,4, 13846, 9, 3.1, NULL, 13845, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkResizeMode,4, 13846, 10, 3.1, NULL, 13845, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkResizeMode,4, 13846, 12, 3.1, NULL, 13845, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13845,NULL);\n",architecture,13846,0);
 Msg("Find size of GtkResizeMode (13846)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkColorSelectionChangePaletteWithScreenFunc,4, 13848, 2, 3.1, NULL, 13847, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkColorSelectionChangePaletteWithScreenFunc,8, 13848, 11, 3.1, NULL, 13847, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkColorSelectionChangePaletteWithScreenFunc,8, 13848, 3, 3.1, NULL, 13847, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkColorSelectionChangePaletteWithScreenFunc,4, 13848, 6, 3.1, NULL, 13847, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkColorSelectionChangePaletteWithScreenFunc,8, 13848, 9, 3.1, NULL, 13847, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkColorSelectionChangePaletteWithScreenFunc,4, 13848, 10, 3.1, NULL, 13847, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkColorSelectionChangePaletteWithScreenFunc,8, 13848, 12, 3.1, NULL, 13847, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13847,NULL);\n",architecture,13848,0);
 Msg("Find size of GtkColorSelectionChangePaletteWithScreenFunc (13848)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkClipboardReceivedFunc,4, 13850, 2, 3.1, NULL, 13849, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkClipboardReceivedFunc,8, 13850, 11, 3.1, NULL, 13849, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkClipboardReceivedFunc,8, 13850, 3, 3.1, NULL, 13849, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkClipboardReceivedFunc,4, 13850, 6, 3.1, NULL, 13849, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkClipboardReceivedFunc,8, 13850, 9, 3.1, NULL, 13849, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkClipboardReceivedFunc,4, 13850, 10, 3.1, NULL, 13849, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkClipboardReceivedFunc,8, 13850, 12, 3.1, NULL, 13849, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13849,NULL);\n",architecture,13850,0);
 Msg("Find size of GtkClipboardReceivedFunc (13850)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeViewMappingFunc,4, 13853, 2, 3.1, NULL, 13852, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeViewMappingFunc,8, 13853, 11, 3.1, NULL, 13852, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeViewMappingFunc,8, 13853, 3, 3.1, NULL, 13852, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeViewMappingFunc,4, 13853, 6, 3.1, NULL, 13852, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeViewMappingFunc,8, 13853, 9, 3.1, NULL, 13852, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeViewMappingFunc,4, 13853, 10, 3.1, NULL, 13852, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeViewMappingFunc,8, 13853, 12, 3.1, NULL, 13852, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13852,NULL);\n",architecture,13853,0);
 Msg("Find size of GtkTreeViewMappingFunc (13853)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeModelFilterVisibleFunc,4, 13854, 2, 3.1, NULL, 13541, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeModelFilterVisibleFunc,8, 13854, 11, 3.1, NULL, 13541, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeModelFilterVisibleFunc,8, 13854, 3, 3.1, NULL, 13541, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeModelFilterVisibleFunc,4, 13854, 6, 3.1, NULL, 13541, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeModelFilterVisibleFunc,8, 13854, 9, 3.1, NULL, 13541, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeModelFilterVisibleFunc,4, 13854, 10, 3.1, NULL, 13541, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeModelFilterVisibleFunc,8, 13854, 12, 3.1, NULL, 13541, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13541,NULL);\n",architecture,13854,0);
 Msg("Find size of GtkTreeModelFilterVisibleFunc (13854)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTextSearchFlags,4, 13856, 2, 3.1, NULL, 13855, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTextSearchFlags,4, 13856, 11, 3.1, NULL, 13855, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTextSearchFlags,4, 13856, 3, 3.1, NULL, 13855, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTextSearchFlags,4, 13856, 6, 3.1, NULL, 13855, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTextSearchFlags,4, 13856, 9, 3.1, NULL, 13855, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTextSearchFlags,4, 13856, 10, 3.1, NULL, 13855, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTextSearchFlags,4, 13856, 12, 3.1, NULL, 13855, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13855,NULL);\n",architecture,13856,0);
 Msg("Find size of GtkTextSearchFlags (13856)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFixed,72, 13858, 2, 3.1, NULL, 13857, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFixed,120, 13858, 11, 3.1, NULL, 13857, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFixed,120, 13858, 3, 3.1, NULL, 13857, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFixed,72, 13858, 6, 3.1, NULL, 13857, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFixed,120, 13858, 9, 3.1, NULL, 13857, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFixed,72, 13858, 10, 3.1, NULL, 13857, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFixed,120, 13858, 12, 3.1, NULL, 13857, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13857,NULL);\n",architecture,13858,0);
 Msg("Find size of GtkFixed (13858)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkDestDefaults,4, 13861, 2, 3.1, NULL, 13860, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkDestDefaults,4, 13861, 11, 3.1, NULL, 13860, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkDestDefaults,4, 13861, 3, 3.1, NULL, 13860, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkDestDefaults,4, 13861, 6, 3.1, NULL, 13860, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkDestDefaults,4, 13861, 9, 3.1, NULL, 13860, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkDestDefaults,4, 13861, 10, 3.1, NULL, 13860, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkDestDefaults,4, 13861, 12, 3.1, NULL, 13860, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13860,NULL);\n",architecture,13861,0);
 Msg("Find size of GtkDestDefaults (13861)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkKeySnoopFunc,4, 13863, 2, 3.1, NULL, 13862, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkKeySnoopFunc,8, 13863, 11, 3.1, NULL, 13862, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkKeySnoopFunc,8, 13863, 3, 3.1, NULL, 13862, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkKeySnoopFunc,4, 13863, 6, 3.1, NULL, 13862, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkKeySnoopFunc,8, 13863, 9, 3.1, NULL, 13862, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkKeySnoopFunc,4, 13863, 10, 3.1, NULL, 13862, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkKeySnoopFunc,8, 13863, 12, 3.1, NULL, 13862, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13862,NULL);\n",architecture,13863,0);
 Msg("Find size of GtkKeySnoopFunc (13863)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkSpinType,4, 13865, 2, 3.1, NULL, 13864, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkSpinType,4, 13865, 11, 3.1, NULL, 13864, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkSpinType,4, 13865, 3, 3.1, NULL, 13864, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkSpinType,4, 13865, 6, 3.1, NULL, 13864, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkSpinType,4, 13865, 9, 3.1, NULL, 13864, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkSpinType,4, 13865, 10, 3.1, NULL, 13864, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkSpinType,4, 13865, 12, 3.1, NULL, 13864, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13864,NULL);\n",architecture,13865,0);
 Msg("Find size of GtkSpinType (13865)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkWindowType,4, 13867, 2, 3.1, NULL, 13866, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkWindowType,4, 13867, 11, 3.1, NULL, 13866, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkWindowType,4, 13867, 3, 3.1, NULL, 13866, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkWindowType,4, 13867, 6, 3.1, NULL, 13866, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkWindowType,4, 13867, 9, 3.1, NULL, 13866, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkWindowType,4, 13867, 10, 3.1, NULL, 13866, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkWindowType,4, 13867, 12, 3.1, NULL, 13866, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13866,NULL);\n",architecture,13867,0);
 Msg("Find size of GtkWindowType (13867)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkMenuDetachFunc,4, 13870, 2, 3.1, NULL, 13869, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkMenuDetachFunc,8, 13870, 11, 3.1, NULL, 13869, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkMenuDetachFunc,8, 13870, 3, 3.1, NULL, 13869, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkMenuDetachFunc,4, 13870, 6, 3.1, NULL, 13869, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkMenuDetachFunc,8, 13870, 9, 3.1, NULL, 13869, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkMenuDetachFunc,4, 13870, 10, 3.1, NULL, 13869, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkMenuDetachFunc,8, 13870, 12, 3.1, NULL, 13869, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13869,NULL);\n",architecture,13870,0);
 Msg("Find size of GtkMenuDetachFunc (13870)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkInvisible,68, 13872, 2, 3.1, NULL, 13871, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkInvisible,112, 13872, 11, 3.1, NULL, 13871, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkInvisible,112, 13872, 3, 3.1, NULL, 13871, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkInvisible,68, 13872, 6, 3.1, NULL, 13871, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkInvisible,112, 13872, 9, 3.1, NULL, 13871, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkInvisible,68, 13872, 10, 3.1, NULL, 13871, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkInvisible,112, 13872, 12, 3.1, NULL, 13871, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13871,NULL);\n",architecture,13872,0);
 Msg("Find size of GtkInvisible (13872)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkWindowPosition,4, 13875, 2, 3.1, NULL, 13874, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkWindowPosition,4, 13875, 11, 3.1, NULL, 13874, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkWindowPosition,4, 13875, 3, 3.1, NULL, 13874, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkWindowPosition,4, 13875, 6, 3.1, NULL, 13874, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkWindowPosition,4, 13875, 9, 3.1, NULL, 13874, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkWindowPosition,4, 13875, 10, 3.1, NULL, 13874, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkWindowPosition,4, 13875, 12, 3.1, NULL, 13874, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13874,NULL);\n",architecture,13875,0);
 Msg("Find size of GtkWindowPosition (13875)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTextTagTableForeach,4, 13877, 2, 3.1, NULL, 13876, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTextTagTableForeach,8, 13877, 11, 3.1, NULL, 13876, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTextTagTableForeach,8, 13877, 3, 3.1, NULL, 13876, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTextTagTableForeach,4, 13877, 6, 3.1, NULL, 13876, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTextTagTableForeach,8, 13877, 9, 3.1, NULL, 13876, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTextTagTableForeach,4, 13877, 10, 3.1, NULL, 13876, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTextTagTableForeach,8, 13877, 12, 3.1, NULL, 13876, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13876,NULL);\n",architecture,13877,0);
 Msg("Find size of GtkTextTagTableForeach (13877)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkEntryCompletionMatchFunc,4, 13880, 2, 3.1, NULL, 13879, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkEntryCompletionMatchFunc,8, 13880, 11, 3.1, NULL, 13879, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkEntryCompletionMatchFunc,8, 13880, 3, 3.1, NULL, 13879, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkEntryCompletionMatchFunc,4, 13880, 6, 3.1, NULL, 13879, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkEntryCompletionMatchFunc,8, 13880, 9, 3.1, NULL, 13879, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkEntryCompletionMatchFunc,4, 13880, 10, 3.1, NULL, 13879, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkEntryCompletionMatchFunc,8, 13880, 12, 3.1, NULL, 13879, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13879,NULL);\n",architecture,13880,0);
 Msg("Find size of GtkEntryCompletionMatchFunc (13880)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAccessible,40, 13882, 2, 3.1, NULL, 13881, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAccessible,80, 13882, 11, 3.1, NULL, 13881, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAccessible,80, 13882, 3, 3.1, NULL, 13881, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAccessible,40, 13882, 6, 3.1, NULL, 13881, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAccessible,80, 13882, 9, 3.1, NULL, 13881, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAccessible,40, 13882, 10, 3.1, NULL, 13881, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAccessible,80, 13882, 12, 3.1, NULL, 13881, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13881,NULL);\n",architecture,13882,0);
 Msg("Find size of GtkAccessible (13882)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkExpanderStyle,4, 13885, 2, 3.1, NULL, 13884, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkExpanderStyle,4, 13885, 11, 3.1, NULL, 13884, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkExpanderStyle,4, 13885, 3, 3.1, NULL, 13884, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkExpanderStyle,4, 13885, 6, 3.1, NULL, 13884, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkExpanderStyle,4, 13885, 9, 3.1, NULL, 13884, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkExpanderStyle,4, 13885, 10, 3.1, NULL, 13884, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkExpanderStyle,4, 13885, 12, 3.1, NULL, 13884, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13884,NULL);\n",architecture,13885,0);
 Msg("Find size of GtkExpanderStyle (13885)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkPathPriorityType,4, 13887, 2, 3.1, NULL, 13886, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkPathPriorityType,4, 13887, 11, 3.1, NULL, 13886, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkPathPriorityType,4, 13887, 3, 3.1, NULL, 13886, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkPathPriorityType,4, 13887, 6, 3.1, NULL, 13886, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkPathPriorityType,4, 13887, 9, 3.1, NULL, 13886, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkPathPriorityType,4, 13887, 10, 3.1, NULL, 13886, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkPathPriorityType,4, 13887, 12, 3.1, NULL, 13886, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13886,NULL);\n",architecture,13887,0);
 Msg("Find size of GtkPathPriorityType (13887)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkArrow,76, 13890, 2, 3.1, NULL, 13889, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkArrow,120, 13890, 11, 3.1, NULL, 13889, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkArrow,120, 13890, 3, 3.1, NULL, 13889, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkArrow,76, 13890, 6, 3.1, NULL, 13889, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkArrow,120, 13890, 9, 3.1, NULL, 13889, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkArrow,76, 13890, 10, 3.1, NULL, 13889, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkArrow,120, 13890, 12, 3.1, NULL, 13889, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13889,NULL);\n",architecture,13890,0);
 Msg("Find size of GtkArrow (13890)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkIconViewForeachFunc,4, 13893, 2, 3.1, NULL, 13892, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkIconViewForeachFunc,8, 13893, 11, 3.1, NULL, 13892, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkIconViewForeachFunc,8, 13893, 3, 3.1, NULL, 13892, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkIconViewForeachFunc,4, 13893, 6, 3.1, NULL, 13892, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkIconViewForeachFunc,8, 13893, 9, 3.1, NULL, 13892, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkIconViewForeachFunc,4, 13893, 10, 3.1, NULL, 13892, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkIconViewForeachFunc,8, 13893, 12, 3.1, NULL, 13892, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13892,NULL);\n",architecture,13893,0);
 Msg("Find size of GtkIconViewForeachFunc (13893)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeModelFilterModifyFunc,4, 13896, 2, 3.1, NULL, 13895, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeModelFilterModifyFunc,8, 13896, 11, 3.1, NULL, 13895, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeModelFilterModifyFunc,8, 13896, 3, 3.1, NULL, 13895, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeModelFilterModifyFunc,4, 13896, 6, 3.1, NULL, 13895, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeModelFilterModifyFunc,8, 13896, 9, 3.1, NULL, 13895, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeModelFilterModifyFunc,4, 13896, 10, 3.1, NULL, 13895, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeModelFilterModifyFunc,8, 13896, 12, 3.1, NULL, 13895, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13895,NULL);\n",architecture,13896,0);
 Msg("Find size of GtkTreeModelFilterModifyFunc (13896)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCellRendererText,88, 13899, 2, 3.1, NULL, 13898, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCellRendererText,120, 13899, 11, 3.1, NULL, 13898, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCellRendererText,120, 13899, 3, 3.1, NULL, 13898, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCellRendererText,88, 13899, 6, 3.1, NULL, 13898, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCellRendererText,120, 13899, 9, 3.1, NULL, 13898, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCellRendererText,88, 13899, 10, 3.1, NULL, 13898, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCellRendererText,120, 13899, 12, 3.1, NULL, 13898, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13898,NULL);\n",architecture,13899,0);
 Msg("Find size of GtkCellRendererText (13899)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeModelForeachFunc,4, 13904, 2, 3.1, NULL, 13903, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeModelForeachFunc,8, 13904, 11, 3.1, NULL, 13903, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeModelForeachFunc,8, 13904, 3, 3.1, NULL, 13903, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeModelForeachFunc,4, 13904, 6, 3.1, NULL, 13903, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeModelForeachFunc,8, 13904, 9, 3.1, NULL, 13903, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeModelForeachFunc,4, 13904, 10, 3.1, NULL, 13903, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeModelForeachFunc,8, 13904, 12, 3.1, NULL, 13903, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13903,NULL);\n",architecture,13904,0);
 Msg("Find size of GtkTreeModelForeachFunc (13904)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkSettingsValue,24, 13906, 2, 3.1, NULL, 13905, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkSettingsValue,32, 13906, 11, 3.1, NULL, 13905, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkSettingsValue,32, 13906, 3, 3.1, NULL, 13905, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkSettingsValue,32, 13906, 6, 3.1, NULL, 13905, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkSettingsValue,32, 13906, 9, 3.1, NULL, 13905, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkSettingsValue,32, 13906, 10, 3.1, NULL, 13905, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkSettingsValue,32, 13906, 12, 3.1, NULL, 13905, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13905,NULL);\n",architecture,13906,0);
 Msg("Find size of GtkSettingsValue (13906)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkPathType,4, 13910, 2, 3.1, NULL, 13909, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkPathType,4, 13910, 11, 3.1, NULL, 13909, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkPathType,4, 13910, 3, 3.1, NULL, 13909, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkPathType,4, 13910, 6, 3.1, NULL, 13909, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkPathType,4, 13910, 9, 3.1, NULL, 13909, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkPathType,4, 13910, 10, 3.1, NULL, 13909, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkPathType,4, 13910, 12, 3.1, NULL, 13909, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13909,NULL);\n",architecture,13910,0);
 Msg("Find size of GtkPathType (13910)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAccelMap,0, 13914, 2, 3.1, NULL, 13913, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAccelMap,0, 13914, 11, 3.1, NULL, 13913, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAccelMap,0, 13914, 3, 3.1, NULL, 13913, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAccelMap,0, 13914, 6, 3.1, NULL, 13913, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAccelMap,0, 13914, 9, 3.1, NULL, 13913, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAccelMap,0, 13914, 10, 3.1, NULL, 13913, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAccelMap,0, 13914, 12, 3.1, NULL, 13913, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13913,NULL);\n",architecture,13914,0);
 Msg("Find size of GtkAccelMap (13914)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkBinClass,416, 13918, 2, 3.1, NULL, 13917, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkBinClass,824, 13918, 11, 3.1, NULL, 13917, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkBinClass,824, 13918, 3, 3.1, NULL, 13917, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkBinClass,416, 13918, 6, 3.1, NULL, 13917, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkBinClass,824, 13918, 9, 3.1, NULL, 13917, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkBinClass,416, 13918, 10, 3.1, NULL, 13917, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkBinClass,824, 13918, 12, 3.1, NULL, 13917, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13917,NULL);\n",architecture,13918,0);
 Msg("Find size of GtkBinClass (13918)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkWindowClass,456, 13923, 2, 3.1, NULL, 13916, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkWindowClass,904, 13923, 11, 3.1, NULL, 13916, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkWindowClass,904, 13923, 3, 3.1, NULL, 13916, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkWindowClass,456, 13923, 6, 3.1, NULL, 13916, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkWindowClass,904, 13923, 9, 3.1, NULL, 13916, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkWindowClass,456, 13923, 10, 3.1, NULL, 13916, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkWindowClass,904, 13923, 12, 3.1, NULL, 13916, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13916,NULL);\n",architecture,13923,0);
 Msg("Find size of GtkWindowClass (13923)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkScrollType,4, 13929, 2, 3.1, NULL, 13928, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkScrollType,4, 13929, 11, 3.1, NULL, 13928, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkScrollType,4, 13929, 3, 3.1, NULL, 13928, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkScrollType,4, 13929, 6, 3.1, NULL, 13928, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkScrollType,4, 13929, 9, 3.1, NULL, 13928, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkScrollType,4, 13929, 10, 3.1, NULL, 13928, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkScrollType,4, 13929, 12, 3.1, NULL, 13928, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13928,NULL);\n",architecture,13929,0);
 Msg("Find size of GtkScrollType (13929)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkRangeClass,404, 13933, 2, 3.1, NULL, 13925, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkRangeClass,800, 13933, 11, 3.1, NULL, 13925, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkRangeClass,800, 13933, 3, 3.1, NULL, 13925, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkRangeClass,404, 13933, 6, 3.1, NULL, 13925, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkRangeClass,800, 13933, 9, 3.1, NULL, 13925, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkRangeClass,404, 13933, 10, 3.1, NULL, 13925, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkRangeClass,800, 13933, 12, 3.1, NULL, 13925, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13925,NULL);\n",architecture,13933,0);
 Msg("Find size of GtkRangeClass (13933)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkScaleClass,428, 13937, 2, 3.1, NULL, 13924, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkScaleClass,848, 13937, 11, 3.1, NULL, 13924, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkScaleClass,848, 13937, 3, 3.1, NULL, 13924, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkScaleClass,428, 13937, 6, 3.1, NULL, 13924, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkScaleClass,848, 13937, 9, 3.1, NULL, 13924, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkScaleClass,428, 13937, 10, 3.1, NULL, 13924, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkScaleClass,848, 13937, 12, 3.1, NULL, 13924, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13924,NULL);\n",architecture,13937,0);
 Msg("Find size of GtkScaleClass (13937)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkBoxClass,416, 13939, 2, 3.1, NULL, 13938, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkBoxClass,824, 13939, 11, 3.1, NULL, 13938, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkBoxClass,824, 13939, 3, 3.1, NULL, 13938, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkBoxClass,416, 13939, 6, 3.1, NULL, 13938, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkBoxClass,824, 13939, 9, 3.1, NULL, 13938, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkBoxClass,416, 13939, 10, 3.1, NULL, 13938, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkBoxClass,824, 13939, 12, 3.1, NULL, 13938, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13938,NULL);\n",architecture,13939,0);
 Msg("Find size of GtkBoxClass (13939)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkMiscClass,364, 13941, 2, 3.1, NULL, 13940, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkMiscClass,720, 13941, 11, 3.1, NULL, 13940, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkMiscClass,720, 13941, 3, 3.1, NULL, 13940, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkMiscClass,364, 13941, 6, 3.1, NULL, 13940, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkMiscClass,720, 13941, 9, 3.1, NULL, 13940, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkMiscClass,364, 13941, 10, 3.1, NULL, 13940, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkMiscClass,720, 13941, 12, 3.1, NULL, 13940, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13940,NULL);\n",architecture,13941,0);
 Msg("Find size of GtkMiscClass (13941)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkHRuler,116, 13943, 2, 3.1, NULL, 13942, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkHRuler,168, 13943, 11, 3.1, NULL, 13942, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkHRuler,168, 13943, 3, 3.1, NULL, 13942, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkHRuler,120, 13943, 6, 3.1, NULL, 13942, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkHRuler,168, 13943, 9, 3.1, NULL, 13942, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkHRuler,120, 13943, 10, 3.1, NULL, 13942, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkHRuler,168, 13943, 12, 3.1, NULL, 13942, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13942,NULL);\n",architecture,13943,0);
 Msg("Find size of GtkHRuler (13943)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkHBoxClass,416, 13945, 2, 3.1, NULL, 13944, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkHBoxClass,824, 13945, 11, 3.1, NULL, 13944, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkHBoxClass,824, 13945, 3, 3.1, NULL, 13944, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkHBoxClass,416, 13945, 6, 3.1, NULL, 13944, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkHBoxClass,824, 13945, 9, 3.1, NULL, 13944, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkHBoxClass,416, 13945, 10, 3.1, NULL, 13944, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkHBoxClass,824, 13945, 12, 3.1, NULL, 13944, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13944,NULL);\n",architecture,13945,0);
 Msg("Find size of GtkHBoxClass (13945)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkPanedClass,456, 13951, 2, 3.1, NULL, 13947, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkPanedClass,904, 13951, 11, 3.1, NULL, 13947, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkPanedClass,904, 13951, 3, 3.1, NULL, 13947, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkPanedClass,456, 13951, 6, 3.1, NULL, 13947, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkPanedClass,904, 13951, 9, 3.1, NULL, 13947, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkPanedClass,456, 13951, 10, 3.1, NULL, 13947, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkPanedClass,904, 13951, 12, 3.1, NULL, 13947, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13947,NULL);\n",architecture,13951,0);
 Msg("Find size of GtkPanedClass (13951)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkHPanedClass,456, 13952, 2, 3.1, NULL, 13946, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkHPanedClass,904, 13952, 11, 3.1, NULL, 13946, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkHPanedClass,904, 13952, 3, 3.1, NULL, 13946, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkHPanedClass,456, 13952, 6, 3.1, NULL, 13946, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkHPanedClass,904, 13952, 9, 3.1, NULL, 13946, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkHPanedClass,456, 13952, 10, 3.1, NULL, 13946, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkHPanedClass,904, 13952, 12, 3.1, NULL, 13946, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13946,NULL);\n",architecture,13952,0);
 Msg("Find size of GtkHPanedClass (13952)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkSizeGroupClass,84, 13954, 2, 3.1, NULL, 13953, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkSizeGroupClass,168, 13954, 11, 3.1, NULL, 13953, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkSizeGroupClass,168, 13954, 3, 3.1, NULL, 13953, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkSizeGroupClass,84, 13954, 6, 3.1, NULL, 13953, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkSizeGroupClass,168, 13954, 9, 3.1, NULL, 13953, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkSizeGroupClass,84, 13954, 10, 3.1, NULL, 13953, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkSizeGroupClass,168, 13954, 12, 3.1, NULL, 13953, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13953,NULL);\n",architecture,13954,0);
 Msg("Find size of GtkSizeGroupClass (13954)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkViewportClass,420, 13957, 2, 3.1, NULL, 13955, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkViewportClass,832, 13957, 11, 3.1, NULL, 13955, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkViewportClass,832, 13957, 3, 3.1, NULL, 13955, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkViewportClass,420, 13957, 6, 3.1, NULL, 13955, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkViewportClass,832, 13957, 9, 3.1, NULL, 13955, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkViewportClass,420, 13957, 10, 3.1, NULL, 13955, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkViewportClass,832, 13957, 12, 3.1, NULL, 13955, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13955,NULL);\n",architecture,13957,0);
 Msg("Find size of GtkViewportClass (13957)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkMovementStep,4, 13959, 2, 3.1, NULL, 13958, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkMovementStep,4, 13959, 11, 3.1, NULL, 13958, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkMovementStep,4, 13959, 3, 3.1, NULL, 13958, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkMovementStep,4, 13959, 6, 3.1, NULL, 13958, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkMovementStep,4, 13959, 9, 3.1, NULL, 13958, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkMovementStep,4, 13959, 10, 3.1, NULL, 13958, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkMovementStep,4, 13959, 12, 3.1, NULL, 13958, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13958,NULL);\n",architecture,13959,0);
 Msg("Find size of GtkMovementStep (13959)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkEditableClass,48, 13968, 2, 3.1, NULL, 13960, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkEditableClass,96, 13968, 11, 3.1, NULL, 13960, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkEditableClass,96, 13968, 3, 3.1, NULL, 13960, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkEditableClass,48, 13968, 6, 3.1, NULL, 13960, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkEditableClass,96, 13968, 9, 3.1, NULL, 13960, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkEditableClass,48, 13968, 10, 3.1, NULL, 13960, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkEditableClass,96, 13968, 12, 3.1, NULL, 13960, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13960,NULL);\n",architecture,13968,0);
 Msg("Find size of GtkEditableClass (13968)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkNotebookTab,4, 13970, 2, 3.1, NULL, 13969, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkNotebookTab,4, 13970, 11, 3.1, NULL, 13969, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkNotebookTab,4, 13970, 3, 3.1, NULL, 13969, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkNotebookTab,4, 13970, 6, 3.1, NULL, 13969, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkNotebookTab,4, 13970, 9, 3.1, NULL, 13969, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkNotebookTab,4, 13970, 10, 3.1, NULL, 13969, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkNotebookTab,4, 13970, 12, 3.1, NULL, 13969, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13969,NULL);\n",architecture,13970,0);
 Msg("Find size of GtkNotebookTab (13970)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkDialogClass,480, 13974, 2, 3.1, NULL, 13971, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkDialogClass,952, 13974, 11, 3.1, NULL, 13971, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkDialogClass,952, 13974, 3, 3.1, NULL, 13971, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkDialogClass,480, 13974, 6, 3.1, NULL, 13971, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkDialogClass,952, 13974, 9, 3.1, NULL, 13971, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkDialogClass,480, 13974, 10, 3.1, NULL, 13971, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkDialogClass,952, 13974, 12, 3.1, NULL, 13971, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13971,NULL);\n",architecture,13974,0);
 Msg("Find size of GtkDialogClass (13974)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCellRendererPixbuf,52, 13976, 2, 3.1, NULL, 13975, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCellRendererPixbuf,80, 13976, 11, 3.1, NULL, 13975, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCellRendererPixbuf,80, 13976, 3, 3.1, NULL, 13975, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCellRendererPixbuf,52, 13976, 6, 3.1, NULL, 13975, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCellRendererPixbuf,80, 13976, 9, 3.1, NULL, 13975, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCellRendererPixbuf,52, 13976, 10, 3.1, NULL, 13975, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCellRendererPixbuf,80, 13976, 12, 3.1, NULL, 13975, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13975,NULL);\n",architecture,13976,0);
 Msg("Find size of GtkCellRendererPixbuf (13976)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeViewColumnClass,100, 13979, 2, 3.1, NULL, 13977, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeViewColumnClass,200, 13979, 11, 3.1, NULL, 13977, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeViewColumnClass,200, 13979, 3, 3.1, NULL, 13977, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeViewColumnClass,100, 13979, 6, 3.1, NULL, 13977, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeViewColumnClass,200, 13979, 9, 3.1, NULL, 13977, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeViewColumnClass,100, 13979, 10, 3.1, NULL, 13977, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeViewColumnClass,200, 13979, 12, 3.1, NULL, 13977, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13977,NULL);\n",architecture,13979,0);
 Msg("Find size of GtkTreeViewColumnClass (13979)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkRulerClass,388, 13983, 2, 3.1, NULL, 13981, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkRulerClass,768, 13983, 11, 3.1, NULL, 13981, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkRulerClass,768, 13983, 3, 3.1, NULL, 13981, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkRulerClass,388, 13983, 6, 3.1, NULL, 13981, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkRulerClass,768, 13983, 9, 3.1, NULL, 13981, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkRulerClass,388, 13983, 10, 3.1, NULL, 13981, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkRulerClass,768, 13983, 12, 3.1, NULL, 13981, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13981,NULL);\n",architecture,13983,0);
 Msg("Find size of GtkRulerClass (13983)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkHRulerClass,388, 13984, 2, 3.1, NULL, 13980, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkHRulerClass,768, 13984, 11, 3.1, NULL, 13980, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkHRulerClass,768, 13984, 3, 3.1, NULL, 13980, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkHRulerClass,388, 13984, 6, 3.1, NULL, 13980, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkHRulerClass,768, 13984, 9, 3.1, NULL, 13980, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkHRulerClass,388, 13984, 10, 3.1, NULL, 13980, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkHRulerClass,768, 13984, 12, 3.1, NULL, 13980, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13980,NULL);\n",architecture,13984,0);
 Msg("Find size of GtkHRulerClass (13984)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAccelMapClass,0, 13986, 2, 3.1, NULL, 13985, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAccelMapClass,0, 13986, 11, 3.1, NULL, 13985, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAccelMapClass,0, 13986, 3, 3.1, NULL, 13985, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAccelMapClass,0, 13986, 6, 3.1, NULL, 13985, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAccelMapClass,0, 13986, 9, 3.1, NULL, 13985, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAccelMapClass,0, 13986, 10, 3.1, NULL, 13985, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAccelMapClass,0, 13986, 12, 3.1, NULL, 13985, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13985,NULL);\n",architecture,13986,0);
 Msg("Find size of GtkAccelMapClass (13986)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkInvisibleClass,380, 13988, 2, 3.1, NULL, 13987, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkInvisibleClass,752, 13988, 11, 3.1, NULL, 13987, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkInvisibleClass,752, 13988, 3, 3.1, NULL, 13987, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkInvisibleClass,380, 13988, 6, 3.1, NULL, 13987, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkInvisibleClass,752, 13988, 9, 3.1, NULL, 13987, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkInvisibleClass,380, 13988, 10, 3.1, NULL, 13987, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkInvisibleClass,752, 13988, 12, 3.1, NULL, 13987, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13987,NULL);\n",architecture,13988,0);
 Msg("Find size of GtkInvisibleClass (13988)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkVRulerClass,388, 13990, 2, 3.1, NULL, 13989, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkVRulerClass,768, 13990, 11, 3.1, NULL, 13989, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkVRulerClass,768, 13990, 3, 3.1, NULL, 13989, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkVRulerClass,388, 13990, 6, 3.1, NULL, 13989, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkVRulerClass,768, 13990, 9, 3.1, NULL, 13989, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkVRulerClass,388, 13990, 10, 3.1, NULL, 13989, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkVRulerClass,768, 13990, 12, 3.1, NULL, 13989, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13989,NULL);\n",architecture,13990,0);
 Msg("Find size of GtkVRulerClass (13990)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkToolItemClass,444, 13995, 2, 3.1, NULL, 13991, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkToolItemClass,880, 13995, 11, 3.1, NULL, 13991, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkToolItemClass,880, 13995, 3, 3.1, NULL, 13991, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkToolItemClass,444, 13995, 6, 3.1, NULL, 13991, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkToolItemClass,880, 13995, 9, 3.1, NULL, 13991, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkToolItemClass,444, 13995, 10, 3.1, NULL, 13991, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkToolItemClass,880, 13995, 12, 3.1, NULL, 13991, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13991,NULL);\n",architecture,13995,0);
 Msg("Find size of GtkToolItemClass (13995)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkWindowGroupClass,84, 13997, 2, 3.1, NULL, 13996, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkWindowGroupClass,168, 13997, 11, 3.1, NULL, 13996, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkWindowGroupClass,168, 13997, 3, 3.1, NULL, 13996, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkWindowGroupClass,84, 13997, 6, 3.1, NULL, 13996, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkWindowGroupClass,168, 13997, 9, 3.1, NULL, 13996, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkWindowGroupClass,84, 13997, 10, 3.1, NULL, 13996, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkWindowGroupClass,168, 13997, 12, 3.1, NULL, 13996, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13996,NULL);\n",architecture,13997,0);
 Msg("Find size of GtkWindowGroupClass (13997)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkWidgetAuxInfo,20, 13999, 2, 3.1, NULL, 13998, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkWidgetAuxInfo,20, 13999, 11, 3.1, NULL, 13998, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkWidgetAuxInfo,20, 13999, 3, 3.1, NULL, 13998, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkWidgetAuxInfo,20, 13999, 6, 3.1, NULL, 13998, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkWidgetAuxInfo,20, 13999, 9, 3.1, NULL, 13998, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkWidgetAuxInfo,20, 13999, 10, 3.1, NULL, 13998, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkWidgetAuxInfo,20, 13999, 12, 3.1, NULL, 13998, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13998,NULL);\n",architecture,13999,0);
 Msg("Find size of GtkWidgetAuxInfo (13999)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkItemClass,444, 14004, 2, 3.1, NULL, 14002, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkItemClass,880, 14004, 11, 3.1, NULL, 14002, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkItemClass,880, 14004, 3, 3.1, NULL, 14002, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkItemClass,444, 14004, 6, 3.1, NULL, 14002, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkItemClass,880, 14004, 9, 3.1, NULL, 14002, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkItemClass,444, 14004, 10, 3.1, NULL, 14002, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkItemClass,880, 14004, 12, 3.1, NULL, 14002, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14002,NULL);\n",architecture,14004,0);
 Msg("Find size of GtkItemClass (14004)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkMenuItemClass,480, 14008, 2, 3.1, NULL, 14001, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkMenuItemClass,952, 14008, 11, 3.1, NULL, 14001, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkMenuItemClass,952, 14008, 3, 3.1, NULL, 14001, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkMenuItemClass,480, 14008, 6, 3.1, NULL, 14001, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkMenuItemClass,952, 14008, 9, 3.1, NULL, 14001, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkMenuItemClass,480, 14008, 10, 3.1, NULL, 14001, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkMenuItemClass,952, 14008, 12, 3.1, NULL, 14001, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14001,NULL);\n",architecture,14008,0);
 Msg("Find size of GtkMenuItemClass (14008)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCheckMenuItemClass,504, 14011, 2, 3.1, NULL, 14000, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCheckMenuItemClass,1000, 14011, 11, 3.1, NULL, 14000, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCheckMenuItemClass,1000, 14011, 3, 3.1, NULL, 14000, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCheckMenuItemClass,504, 14011, 6, 3.1, NULL, 14000, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCheckMenuItemClass,1000, 14011, 9, 3.1, NULL, 14000, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCheckMenuItemClass,504, 14011, 10, 3.1, NULL, 14000, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCheckMenuItemClass,1000, 14011, 12, 3.1, NULL, 14000, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14000,NULL);\n",architecture,14011,0);
 Msg("Find size of GtkCheckMenuItemClass (14011)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkRcProperty,32, 14013, 2, 3.1, NULL, 14012, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkRcProperty,40, 14013, 11, 3.1, NULL, 14012, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkRcProperty,40, 14013, 3, 3.1, NULL, 14012, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkRcProperty,40, 14013, 6, 3.1, NULL, 14012, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkRcProperty,40, 14013, 9, 3.1, NULL, 14012, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkRcProperty,40, 14013, 10, 3.1, NULL, 14012, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkRcProperty,40, 14013, 12, 3.1, NULL, 14012, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14012,NULL);\n",architecture,14013,0);
 Msg("Find size of GtkRcProperty (14013)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFontSelectionDialogClass,496, 14015, 2, 3.1, NULL, 14014, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFontSelectionDialogClass,984, 14015, 11, 3.1, NULL, 14014, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFontSelectionDialogClass,984, 14015, 3, 3.1, NULL, 14014, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFontSelectionDialogClass,496, 14015, 6, 3.1, NULL, 14014, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFontSelectionDialogClass,984, 14015, 9, 3.1, NULL, 14014, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFontSelectionDialogClass,496, 14015, 10, 3.1, NULL, 14014, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFontSelectionDialogClass,984, 14015, 12, 3.1, NULL, 14014, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14014,NULL);\n",architecture,14015,0);
 Msg("Find size of GtkFontSelectionDialogClass (14015)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFileChooserDialogPrivate,0, 14018, 2, 3.1, NULL, 14017, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFileChooserDialogPrivate,0, 14018, 11, 3.1, NULL, 14017, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFileChooserDialogPrivate,0, 14018, 3, 3.1, NULL, 14017, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFileChooserDialogPrivate,0, 14018, 6, 3.1, NULL, 14017, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFileChooserDialogPrivate,0, 14018, 9, 3.1, NULL, 14017, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFileChooserDialogPrivate,0, 14018, 10, 3.1, NULL, 14017, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFileChooserDialogPrivate,0, 14018, 12, 3.1, NULL, 14017, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14017,NULL);\n",architecture,14018,0);
 Msg("Find size of GtkFileChooserDialogPrivate (14018)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFileChooserDialog,164, 14020, 2, 3.1, NULL, 14016, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFileChooserDialog,272, 14020, 11, 3.1, NULL, 14016, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFileChooserDialog,272, 14020, 3, 3.1, NULL, 14016, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFileChooserDialog,164, 14020, 6, 3.1, NULL, 14016, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFileChooserDialog,272, 14020, 9, 3.1, NULL, 14016, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFileChooserDialog,164, 14020, 10, 3.1, NULL, 14016, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFileChooserDialog,272, 14020, 12, 3.1, NULL, 14016, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14016,NULL);\n",architecture,14020,0);
 Msg("Find size of GtkFileChooserDialog (14020)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkActionClass,112, 14026, 2, 3.1, NULL, 14022, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkActionClass,224, 14026, 11, 3.1, NULL, 14022, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkActionClass,224, 14026, 3, 3.1, NULL, 14022, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkActionClass,112, 14026, 6, 3.1, NULL, 14022, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkActionClass,224, 14026, 9, 3.1, NULL, 14022, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkActionClass,112, 14026, 10, 3.1, NULL, 14022, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkActionClass,224, 14026, 12, 3.1, NULL, 14022, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14022,NULL);\n",architecture,14026,0);
 Msg("Find size of GtkActionClass (14026)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkToggleActionClass,132, 14028, 2, 3.1, NULL, 14021, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkToggleActionClass,264, 14028, 11, 3.1, NULL, 14021, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkToggleActionClass,264, 14028, 3, 3.1, NULL, 14021, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkToggleActionClass,132, 14028, 6, 3.1, NULL, 14021, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkToggleActionClass,264, 14028, 9, 3.1, NULL, 14021, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkToggleActionClass,132, 14028, 10, 3.1, NULL, 14021, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkToggleActionClass,264, 14028, 12, 3.1, NULL, 14021, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14021,NULL);\n",architecture,14028,0);
 Msg("Find size of GtkToggleActionClass (14028)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkVBoxClass,416, 14030, 2, 3.1, NULL, 14029, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkVBoxClass,824, 14030, 11, 3.1, NULL, 14029, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkVBoxClass,824, 14030, 3, 3.1, NULL, 14029, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkVBoxClass,416, 14030, 6, 3.1, NULL, 14029, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkVBoxClass,824, 14030, 9, 3.1, NULL, 14029, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkVBoxClass,416, 14030, 10, 3.1, NULL, 14029, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkVBoxClass,824, 14030, 12, 3.1, NULL, 14029, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14029,NULL);\n",architecture,14030,0);
 Msg("Find size of GtkVBoxClass (14030)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkButtonBoxClass,416, 14033, 2, 3.1, NULL, 14032, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkButtonBoxClass,824, 14033, 11, 3.1, NULL, 14032, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkButtonBoxClass,824, 14033, 3, 3.1, NULL, 14032, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkButtonBoxClass,416, 14033, 6, 3.1, NULL, 14032, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkButtonBoxClass,824, 14033, 9, 3.1, NULL, 14032, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkButtonBoxClass,416, 14033, 10, 3.1, NULL, 14032, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkButtonBoxClass,824, 14033, 12, 3.1, NULL, 14032, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14032,NULL);\n",architecture,14033,0);
 Msg("Find size of GtkButtonBoxClass (14033)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkHButtonBoxClass,416, 14034, 2, 3.1, NULL, 14031, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkHButtonBoxClass,824, 14034, 11, 3.1, NULL, 14031, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkHButtonBoxClass,824, 14034, 3, 3.1, NULL, 14031, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkHButtonBoxClass,416, 14034, 6, 3.1, NULL, 14031, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkHButtonBoxClass,824, 14034, 9, 3.1, NULL, 14031, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkHButtonBoxClass,416, 14034, 10, 3.1, NULL, 14031, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkHButtonBoxClass,824, 14034, 12, 3.1, NULL, 14031, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14031,NULL);\n",architecture,14034,0);
 Msg("Find size of GtkHButtonBoxClass (14034)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkThemeEngine,0, 14036, 2, 3.1, NULL, 14035, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkThemeEngine,0, 14036, 11, 3.1, NULL, 14035, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkThemeEngine,0, 14036, 3, 3.1, NULL, 14035, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkThemeEngine,0, 14036, 6, 3.1, NULL, 14035, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkThemeEngine,0, 14036, 9, 3.1, NULL, 14035, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkThemeEngine,0, 14036, 10, 3.1, NULL, 14035, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkThemeEngine,0, 14036, 12, 3.1, NULL, 14035, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14035,NULL);\n",architecture,14036,0);
 Msg("Find size of GtkThemeEngine (14036)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeStoreClass,84, 14038, 2, 3.1, NULL, 14037, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeStoreClass,168, 14038, 11, 3.1, NULL, 14037, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeStoreClass,168, 14038, 3, 3.1, NULL, 14037, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeStoreClass,84, 14038, 6, 3.1, NULL, 14037, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeStoreClass,168, 14038, 9, 3.1, NULL, 14037, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeStoreClass,84, 14038, 10, 3.1, NULL, 14037, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeStoreClass,168, 14038, 12, 3.1, NULL, 14037, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14037,NULL);\n",architecture,14038,0);
 Msg("Find size of GtkTreeStoreClass (14038)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkBoxChild,8, 14040, 2, 3.1, NULL, 14039, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkBoxChild,16, 14040, 11, 3.1, NULL, 14039, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkBoxChild,16, 14040, 3, 3.1, NULL, 14039, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkBoxChild,8, 14040, 6, 3.1, NULL, 14039, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkBoxChild,16, 14040, 9, 3.1, NULL, 14039, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkBoxChild,8, 14040, 10, 3.1, NULL, 14039, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkBoxChild,16, 14040, 12, 3.1, NULL, 14039, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14039,NULL);\n",architecture,14040,0);
 Msg("Find size of GtkBoxChild (14040)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkHButtonBox,96, 14042, 2, 3.1, NULL, 14041, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkHButtonBox,152, 14042, 11, 3.1, NULL, 14041, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkHButtonBox,152, 14042, 3, 3.1, NULL, 14041, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkHButtonBox,96, 14042, 6, 3.1, NULL, 14041, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkHButtonBox,152, 14042, 9, 3.1, NULL, 14041, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkHButtonBox,96, 14042, 10, 3.1, NULL, 14041, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkHButtonBox,152, 14042, 12, 3.1, NULL, 14041, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14041,NULL);\n",architecture,14042,0);
 Msg("Find size of GtkHButtonBox (14042)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAccelGroupClass,88, 14045, 2, 3.1, NULL, 14043, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAccelGroupClass,176, 14045, 11, 3.1, NULL, 14043, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAccelGroupClass,176, 14045, 3, 3.1, NULL, 14043, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAccelGroupClass,88, 14045, 6, 3.1, NULL, 14043, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAccelGroupClass,176, 14045, 9, 3.1, NULL, 14043, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAccelGroupClass,88, 14045, 10, 3.1, NULL, 14043, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAccelGroupClass,176, 14045, 12, 3.1, NULL, 14043, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14043,NULL);\n",architecture,14045,0);
 Msg("Find size of GtkAccelGroupClass (14045)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkSeparator,60, 14047, 2, 3.1, NULL, 14046, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkSeparator,96, 14047, 11, 3.1, NULL, 14046, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkSeparator,96, 14047, 3, 3.1, NULL, 14046, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkSeparator,60, 14047, 6, 3.1, NULL, 14046, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkSeparator,96, 14047, 9, 3.1, NULL, 14046, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkSeparator,60, 14047, 10, 3.1, NULL, 14046, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkSeparator,96, 14047, 12, 3.1, NULL, 14046, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14046,NULL);\n",architecture,14047,0);
 Msg("Find size of GtkSeparator (14047)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkButtonClass,456, 14050, 2, 3.1, NULL, 14048, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkButtonClass,904, 14050, 11, 3.1, NULL, 14048, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkButtonClass,904, 14050, 3, 3.1, NULL, 14048, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkButtonClass,456, 14050, 6, 3.1, NULL, 14048, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkButtonClass,904, 14050, 9, 3.1, NULL, 14048, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkButtonClass,456, 14050, 10, 3.1, NULL, 14048, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkButtonClass,904, 14050, 12, 3.1, NULL, 14048, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14048,NULL);\n",architecture,14050,0);
 Msg("Find size of GtkButtonClass (14050)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkWindowKeysForeachFunc,4, 14052, 2, 3.1, NULL, 14051, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkWindowKeysForeachFunc,8, 14052, 11, 3.1, NULL, 14051, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkWindowKeysForeachFunc,8, 14052, 3, 3.1, NULL, 14051, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkWindowKeysForeachFunc,4, 14052, 6, 3.1, NULL, 14051, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkWindowKeysForeachFunc,8, 14052, 9, 3.1, NULL, 14051, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkWindowKeysForeachFunc,4, 14052, 10, 3.1, NULL, 14051, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkWindowKeysForeachFunc,8, 14052, 12, 3.1, NULL, 14051, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14051,NULL);\n",architecture,14052,0);
 Msg("Find size of GtkWindowKeysForeachFunc (14052)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkIconFactoryClass,84, 14054, 2, 3.1, NULL, 14053, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkIconFactoryClass,168, 14054, 11, 3.1, NULL, 14053, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkIconFactoryClass,168, 14054, 3, 3.1, NULL, 14053, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkIconFactoryClass,84, 14054, 6, 3.1, NULL, 14053, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkIconFactoryClass,168, 14054, 9, 3.1, NULL, 14053, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkIconFactoryClass,84, 14054, 10, 3.1, NULL, 14053, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkIconFactoryClass,168, 14054, 12, 3.1, NULL, 14053, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14053,NULL);\n",architecture,14054,0);
 Msg("Find size of GtkIconFactoryClass (14054)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeSelectionClass,88, 14057, 2, 3.1, NULL, 14055, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeSelectionClass,176, 14057, 11, 3.1, NULL, 14055, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeSelectionClass,176, 14057, 3, 3.1, NULL, 14055, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeSelectionClass,88, 14057, 6, 3.1, NULL, 14055, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeSelectionClass,176, 14057, 9, 3.1, NULL, 14055, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeSelectionClass,88, 14057, 10, 3.1, NULL, 14055, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeSelectionClass,176, 14057, 12, 3.1, NULL, 14055, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14055,NULL);\n",architecture,14057,0);
 Msg("Find size of GtkTreeSelectionClass (14057)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkMenuDirectionType,4, 14061, 2, 3.1, NULL, 14060, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkMenuDirectionType,4, 14061, 11, 3.1, NULL, 14060, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkMenuDirectionType,4, 14061, 3, 3.1, NULL, 14060, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkMenuDirectionType,4, 14061, 6, 3.1, NULL, 14060, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkMenuDirectionType,4, 14061, 9, 3.1, NULL, 14060, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkMenuDirectionType,4, 14061, 10, 3.1, NULL, 14060, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkMenuDirectionType,4, 14061, 12, 3.1, NULL, 14060, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14060,NULL);\n",architecture,14061,0);
 Msg("Find size of GtkMenuDirectionType (14061)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkMenuShellClass,464, 14067, 2, 3.1, NULL, 14058, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkMenuShellClass,920, 14067, 11, 3.1, NULL, 14058, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkMenuShellClass,920, 14067, 3, 3.1, NULL, 14058, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkMenuShellClass,464, 14067, 6, 3.1, NULL, 14058, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkMenuShellClass,920, 14067, 9, 3.1, NULL, 14058, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkMenuShellClass,464, 14067, 10, 3.1, NULL, 14058, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkMenuShellClass,920, 14067, 12, 3.1, NULL, 14058, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14058,NULL);\n",architecture,14067,0);
 Msg("Find size of GtkMenuShellClass (14067)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeDragSourceIface,20, 14071, 2, 3.1, NULL, 14068, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeDragSourceIface,40, 14071, 11, 3.1, NULL, 14068, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeDragSourceIface,40, 14071, 3, 3.1, NULL, 14068, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeDragSourceIface,20, 14071, 6, 3.1, NULL, 14068, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeDragSourceIface,40, 14071, 9, 3.1, NULL, 14068, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeDragSourceIface,20, 14071, 10, 3.1, NULL, 14068, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeDragSourceIface,40, 14071, 12, 3.1, NULL, 14068, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14068,NULL);\n",architecture,14071,0);
 Msg("Find size of GtkTreeDragSourceIface (14071)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkLabelClass,392, 14076, 2, 3.1, NULL, 14072, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkLabelClass,776, 14076, 11, 3.1, NULL, 14072, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkLabelClass,776, 14076, 3, 3.1, NULL, 14072, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkLabelClass,392, 14076, 6, 3.1, NULL, 14072, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkLabelClass,776, 14076, 9, 3.1, NULL, 14072, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkLabelClass,392, 14076, 10, 3.1, NULL, 14072, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkLabelClass,776, 14076, 12, 3.1, NULL, 14072, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14072,NULL);\n",architecture,14076,0);
 Msg("Find size of GtkLabelClass (14076)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkScrollbar,136, 14078, 2, 3.1, NULL, 14077, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkScrollbar,192, 14078, 11, 3.1, NULL, 14077, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkScrollbar,192, 14078, 3, 3.1, NULL, 14077, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkScrollbar,136, 14078, 6, 3.1, NULL, 14077, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkScrollbar,192, 14078, 9, 3.1, NULL, 14077, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkScrollbar,136, 14078, 10, 3.1, NULL, 14077, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkScrollbar,192, 14078, 12, 3.1, NULL, 14077, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14077,NULL);\n",architecture,14078,0);
 Msg("Find size of GtkScrollbar (14078)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkWidgetShapeInfo,8, 14080, 2, 3.1, NULL, 14079, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkWidgetShapeInfo,16, 14080, 11, 3.1, NULL, 14079, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkWidgetShapeInfo,16, 14080, 3, 3.1, NULL, 14079, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkWidgetShapeInfo,8, 14080, 6, 3.1, NULL, 14079, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkWidgetShapeInfo,16, 14080, 9, 3.1, NULL, 14079, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkWidgetShapeInfo,8, 14080, 10, 3.1, NULL, 14079, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkWidgetShapeInfo,16, 14080, 12, 3.1, NULL, 14079, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14079,NULL);\n",architecture,14080,0);
 Msg("Find size of GtkWidgetShapeInfo (14080)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkActionGroupClass,88, 14083, 2, 3.1, NULL, 14081, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkActionGroupClass,176, 14083, 11, 3.1, NULL, 14081, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkActionGroupClass,176, 14083, 3, 3.1, NULL, 14081, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkActionGroupClass,88, 14083, 6, 3.1, NULL, 14081, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkActionGroupClass,176, 14083, 9, 3.1, NULL, 14081, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkActionGroupClass,88, 14083, 10, 3.1, NULL, 14081, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkActionGroupClass,176, 14083, 12, 3.1, NULL, 14081, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14081,NULL);\n",architecture,14083,0);
 Msg("Find size of GtkActionGroupClass (14083)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkSettingsClass,68, 14085, 2, 3.1, NULL, 14084, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkSettingsClass,136, 14085, 11, 3.1, NULL, 14084, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkSettingsClass,136, 14085, 3, 3.1, NULL, 14084, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkSettingsClass,68, 14085, 6, 3.1, NULL, 14084, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkSettingsClass,136, 14085, 9, 3.1, NULL, 14084, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkSettingsClass,68, 14085, 10, 3.1, NULL, 14084, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkSettingsClass,136, 14085, 12, 3.1, NULL, 14084, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14084,NULL);\n",architecture,14085,0);
 Msg("Find size of GtkSettingsClass (14085)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkIMContextClass,168, 14098, 2, 3.1, NULL, 14086, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkIMContextClass,336, 14098, 11, 3.1, NULL, 14086, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkIMContextClass,336, 14098, 3, 3.1, NULL, 14086, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkIMContextClass,168, 14098, 6, 3.1, NULL, 14086, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkIMContextClass,336, 14098, 9, 3.1, NULL, 14086, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkIMContextClass,168, 14098, 10, 3.1, NULL, 14086, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkIMContextClass,336, 14098, 12, 3.1, NULL, 14086, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14086,NULL);\n",architecture,14098,0);
 Msg("Find size of GtkIMContextClass (14098)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCellRendererClass,112, 14106, 2, 3.1, NULL, 14099, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCellRendererClass,224, 14106, 11, 3.1, NULL, 14099, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCellRendererClass,224, 14106, 3, 3.1, NULL, 14099, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCellRendererClass,112, 14106, 6, 3.1, NULL, 14099, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCellRendererClass,224, 14106, 9, 3.1, NULL, 14099, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCellRendererClass,112, 14106, 10, 3.1, NULL, 14099, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCellRendererClass,224, 14106, 12, 3.1, NULL, 14099, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14099,NULL);\n",architecture,14106,0);
 Msg("Find size of GtkCellRendererClass (14106)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkToolButtonClass,468, 14110, 2, 3.1, NULL, 14108, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkToolButtonClass,928, 14110, 11, 3.1, NULL, 14108, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkToolButtonClass,928, 14110, 3, 3.1, NULL, 14108, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkToolButtonClass,468, 14110, 6, 3.1, NULL, 14108, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkToolButtonClass,928, 14110, 9, 3.1, NULL, 14108, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkToolButtonClass,468, 14110, 10, 3.1, NULL, 14108, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkToolButtonClass,928, 14110, 12, 3.1, NULL, 14108, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14108,NULL);\n",architecture,14110,0);
 Msg("Find size of GtkToolButtonClass (14110)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkMenuToolButtonClass,488, 14112, 2, 3.1, NULL, 14107, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkMenuToolButtonClass,968, 14112, 11, 3.1, NULL, 14107, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkMenuToolButtonClass,968, 14112, 3, 3.1, NULL, 14107, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkMenuToolButtonClass,488, 14112, 6, 3.1, NULL, 14107, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkMenuToolButtonClass,968, 14112, 9, 3.1, NULL, 14107, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkMenuToolButtonClass,488, 14112, 10, 3.1, NULL, 14107, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkMenuToolButtonClass,968, 14112, 12, 3.1, NULL, 14107, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14107,NULL);\n",architecture,14112,0);
 Msg("Find size of GtkMenuToolButtonClass (14112)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkVSeparator,60, 14114, 2, 3.1, NULL, 14113, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkVSeparator,96, 14114, 11, 3.1, NULL, 14113, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkVSeparator,96, 14114, 3, 3.1, NULL, 14113, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkVSeparator,60, 14114, 6, 3.1, NULL, 14113, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkVSeparator,96, 14114, 9, 3.1, NULL, 14113, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkVSeparator,60, 14114, 10, 3.1, NULL, 14113, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkVSeparator,96, 14114, 12, 3.1, NULL, 14113, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14113,NULL);\n",architecture,14114,0);
 Msg("Find size of GtkVSeparator (14114)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkDrawingAreaClass,380, 14116, 2, 3.1, NULL, 14115, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkDrawingAreaClass,752, 14116, 11, 3.1, NULL, 14115, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkDrawingAreaClass,752, 14116, 3, 3.1, NULL, 14115, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkDrawingAreaClass,380, 14116, 6, 3.1, NULL, 14115, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkDrawingAreaClass,752, 14116, 9, 3.1, NULL, 14115, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkDrawingAreaClass,380, 14116, 10, 3.1, NULL, 14115, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkDrawingAreaClass,752, 14116, 12, 3.1, NULL, 14115, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14115,NULL);\n",architecture,14116,0);
 Msg("Find size of GtkDrawingAreaClass (14116)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTargetPair,12, 14118, 2, 3.1, NULL, 14117, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTargetPair,16, 14118, 11, 3.1, NULL, 14117, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTargetPair,16, 14118, 3, 3.1, NULL, 14117, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTargetPair,12, 14118, 6, 3.1, NULL, 14117, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTargetPair,16, 14118, 9, 3.1, NULL, 14117, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTargetPair,12, 14118, 10, 3.1, NULL, 14117, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTargetPair,16, 14118, 12, 3.1, NULL, 14117, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14117,NULL);\n",architecture,14118,0);
 Msg("Find size of GtkTargetPair (14118)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCellViewClass,364, 14120, 2, 3.1, NULL, 14119, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCellViewClass,720, 14120, 11, 3.1, NULL, 14119, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCellViewClass,720, 14120, 3, 3.1, NULL, 14119, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCellViewClass,364, 14120, 6, 3.1, NULL, 14119, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCellViewClass,720, 14120, 9, 3.1, NULL, 14119, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCellViewClass,364, 14120, 10, 3.1, NULL, 14119, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCellViewClass,720, 14120, 12, 3.1, NULL, 14119, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14119,NULL);\n",architecture,14120,0);
 Msg("Find size of GtkCellViewClass (14120)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCellLayoutIface,36, 14128, 2, 3.1, NULL, 14121, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCellLayoutIface,72, 14128, 11, 3.1, NULL, 14121, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCellLayoutIface,72, 14128, 3, 3.1, NULL, 14121, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCellLayoutIface,36, 14128, 6, 3.1, NULL, 14121, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCellLayoutIface,72, 14128, 9, 3.1, NULL, 14121, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCellLayoutIface,36, 14128, 10, 3.1, NULL, 14121, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCellLayoutIface,72, 14128, 12, 3.1, NULL, 14121, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14121,NULL);\n",architecture,14128,0);
 Msg("Find size of GtkCellLayoutIface (14128)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAlignmentPrivate,0, 14130, 2, 3.1, NULL, 14129, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAlignmentPrivate,0, 14130, 11, 3.1, NULL, 14129, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAlignmentPrivate,0, 14130, 3, 3.1, NULL, 14129, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAlignmentPrivate,0, 14130, 6, 3.1, NULL, 14129, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAlignmentPrivate,0, 14130, 9, 3.1, NULL, 14129, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAlignmentPrivate,0, 14130, 10, 3.1, NULL, 14129, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAlignmentPrivate,0, 14130, 12, 3.1, NULL, 14129, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14129,NULL);\n",architecture,14130,0);
 Msg("Find size of GtkAlignmentPrivate (14130)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFixedClass,416, 14132, 2, 3.1, NULL, 14131, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFixedClass,824, 14132, 11, 3.1, NULL, 14131, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFixedClass,824, 14132, 3, 3.1, NULL, 14131, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFixedClass,416, 14132, 6, 3.1, NULL, 14131, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFixedClass,824, 14132, 9, 3.1, NULL, 14131, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFixedClass,416, 14132, 10, 3.1, NULL, 14131, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFixedClass,824, 14132, 12, 3.1, NULL, 14131, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14131,NULL);\n",architecture,14132,0);
 Msg("Find size of GtkFixedClass (14132)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkHScaleClass,428, 14134, 2, 3.1, NULL, 14133, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkHScaleClass,848, 14134, 11, 3.1, NULL, 14133, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkHScaleClass,848, 14134, 3, 3.1, NULL, 14133, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkHScaleClass,428, 14134, 6, 3.1, NULL, 14133, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkHScaleClass,848, 14134, 9, 3.1, NULL, 14133, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkHScaleClass,428, 14134, 10, 3.1, NULL, 14133, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkHScaleClass,848, 14134, 12, 3.1, NULL, 14133, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14133,NULL);\n",architecture,14134,0);
 Msg("Find size of GtkHScaleClass (14134)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkScrollbarClass,420, 14136, 2, 3.1, NULL, 14135, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkScrollbarClass,832, 14136, 11, 3.1, NULL, 14135, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkScrollbarClass,832, 14136, 3, 3.1, NULL, 14135, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkScrollbarClass,420, 14136, 6, 3.1, NULL, 14135, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkScrollbarClass,832, 14136, 9, 3.1, NULL, 14135, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkScrollbarClass,420, 14136, 10, 3.1, NULL, 14135, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkScrollbarClass,832, 14136, 12, 3.1, NULL, 14135, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14135,NULL);\n",architecture,14136,0);
 Msg("Find size of GtkScrollbarClass (14136)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAccelLabelClass,440, 14138, 2, 3.1, NULL, 14137, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAccelLabelClass,872, 14138, 11, 3.1, NULL, 14137, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAccelLabelClass,872, 14138, 3, 3.1, NULL, 14137, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAccelLabelClass,440, 14138, 6, 3.1, NULL, 14137, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAccelLabelClass,872, 14138, 9, 3.1, NULL, 14137, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAccelLabelClass,440, 14138, 10, 3.1, NULL, 14137, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAccelLabelClass,872, 14138, 12, 3.1, NULL, 14137, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14137,NULL);\n",architecture,14138,0);
 Msg("Find size of GtkAccelLabelClass (14138)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkModuleDisplayInitFunc,4, 14140, 2, 3.1, NULL, 14139, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkModuleDisplayInitFunc,8, 14140, 11, 3.1, NULL, 14139, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkModuleDisplayInitFunc,8, 14140, 3, 3.1, NULL, 14139, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkModuleDisplayInitFunc,4, 14140, 6, 3.1, NULL, 14139, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkModuleDisplayInitFunc,8, 14140, 9, 3.1, NULL, 14139, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkModuleDisplayInitFunc,4, 14140, 10, 3.1, NULL, 14139, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkModuleDisplayInitFunc,8, 14140, 12, 3.1, NULL, 14139, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14139,NULL);\n",architecture,14140,0);
 Msg("Find size of GtkModuleDisplayInitFunc (14140)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTextBufferClass,140, 14150, 2, 3.1, NULL, 14141, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTextBufferClass,280, 14150, 11, 3.1, NULL, 14141, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTextBufferClass,280, 14150, 3, 3.1, NULL, 14141, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTextBufferClass,140, 14150, 6, 3.1, NULL, 14141, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTextBufferClass,280, 14150, 9, 3.1, NULL, 14141, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTextBufferClass,140, 14150, 10, 3.1, NULL, 14141, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTextBufferClass,280, 14150, 12, 3.1, NULL, 14141, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14141,NULL);\n",architecture,14150,0);
 Msg("Find size of GtkTextBufferClass (14150)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkVRuler,116, 14152, 2, 3.1, NULL, 14151, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkVRuler,168, 14152, 11, 3.1, NULL, 14151, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkVRuler,168, 14152, 3, 3.1, NULL, 14151, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkVRuler,120, 14152, 6, 3.1, NULL, 14151, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkVRuler,168, 14152, 9, 3.1, NULL, 14151, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkVRuler,120, 14152, 10, 3.1, NULL, 14151, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkVRuler,168, 14152, 12, 3.1, NULL, 14151, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14151,NULL);\n",architecture,14152,0);
 Msg("Find size of GtkVRuler (14152)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkSocketClass,440, 14156, 2, 3.1, NULL, 14153, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkSocketClass,872, 14156, 11, 3.1, NULL, 14153, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkSocketClass,872, 14156, 3, 3.1, NULL, 14153, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkSocketClass,440, 14156, 6, 3.1, NULL, 14153, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkSocketClass,872, 14156, 9, 3.1, NULL, 14153, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkSocketClass,440, 14156, 10, 3.1, NULL, 14153, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkSocketClass,872, 14156, 12, 3.1, NULL, 14153, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14153,NULL);\n",architecture,14156,0);
 Msg("Find size of GtkSocketClass (14156)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkIconThemeClass,72, 14159, 2, 3.1, NULL, 14157, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkIconThemeClass,144, 14159, 11, 3.1, NULL, 14157, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkIconThemeClass,144, 14159, 3, 3.1, NULL, 14157, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkIconThemeClass,72, 14159, 6, 3.1, NULL, 14157, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkIconThemeClass,144, 14159, 9, 3.1, NULL, 14157, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkIconThemeClass,72, 14159, 10, 3.1, NULL, 14157, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkIconThemeClass,144, 14159, 12, 3.1, NULL, 14157, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14157,NULL);\n",architecture,14159,0);
 Msg("Find size of GtkIconThemeClass (14159)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkVPaned,144, 14161, 2, 3.1, NULL, 14160, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkVPaned,216, 14161, 11, 3.1, NULL, 14160, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkVPaned,216, 14161, 3, 3.1, NULL, 14160, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkVPaned,144, 14161, 6, 3.1, NULL, 14160, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkVPaned,216, 14161, 9, 3.1, NULL, 14160, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkVPaned,144, 14161, 10, 3.1, NULL, 14160, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkVPaned,216, 14161, 12, 3.1, NULL, 14160, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14160,NULL);\n",architecture,14161,0);
 Msg("Find size of GtkVPaned (14161)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTableChild,20, 14163, 2, 3.1, NULL, 14162, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTableChild,24, 14163, 11, 3.1, NULL, 14162, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTableChild,24, 14163, 3, 3.1, NULL, 14162, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTableChild,20, 14163, 6, 3.1, NULL, 14162, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTableChild,24, 14163, 9, 3.1, NULL, 14162, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTableChild,20, 14163, 10, 3.1, NULL, 14162, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTableChild,24, 14163, 12, 3.1, NULL, 14162, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14162,NULL);\n",architecture,14163,0);
 Msg("Find size of GtkTableChild (14163)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkArrowClass,364, 14165, 2, 3.1, NULL, 14164, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkArrowClass,720, 14165, 11, 3.1, NULL, 14164, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkArrowClass,720, 14165, 3, 3.1, NULL, 14164, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkArrowClass,364, 14165, 6, 3.1, NULL, 14164, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkArrowClass,720, 14165, 9, 3.1, NULL, 14164, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkArrowClass,364, 14165, 10, 3.1, NULL, 14164, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkArrowClass,720, 14165, 12, 3.1, NULL, 14164, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14164,NULL);\n",architecture,14165,0);
 Msg("Find size of GtkArrowClass (14165)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkHScrollbar,136, 14167, 2, 3.1, NULL, 14166, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkHScrollbar,192, 14167, 11, 3.1, NULL, 14166, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkHScrollbar,192, 14167, 3, 3.1, NULL, 14166, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkHScrollbar,136, 14167, 6, 3.1, NULL, 14166, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkHScrollbar,192, 14167, 9, 3.1, NULL, 14166, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkHScrollbar,136, 14167, 10, 3.1, NULL, 14166, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkHScrollbar,192, 14167, 12, 3.1, NULL, 14166, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14166,NULL);\n",architecture,14167,0);
 Msg("Find size of GtkHScrollbar (14167)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFileChooserWidgetPrivate,0, 14170, 2, 3.1, NULL, 14169, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFileChooserWidgetPrivate,0, 14170, 11, 3.1, NULL, 14169, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFileChooserWidgetPrivate,0, 14170, 3, 3.1, NULL, 14169, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFileChooserWidgetPrivate,0, 14170, 6, 3.1, NULL, 14169, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFileChooserWidgetPrivate,0, 14170, 9, 3.1, NULL, 14169, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFileChooserWidgetPrivate,0, 14170, 10, 3.1, NULL, 14169, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFileChooserWidgetPrivate,0, 14170, 12, 3.1, NULL, 14169, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14169,NULL);\n",architecture,14170,0);
 Msg("Find size of GtkFileChooserWidgetPrivate (14170)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFileChooserWidget,80, 14172, 2, 3.1, NULL, 14168, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFileChooserWidget,136, 14172, 11, 3.1, NULL, 14168, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFileChooserWidget,136, 14172, 3, 3.1, NULL, 14168, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFileChooserWidget,80, 14172, 6, 3.1, NULL, 14168, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFileChooserWidget,136, 14172, 9, 3.1, NULL, 14168, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFileChooserWidget,80, 14172, 10, 3.1, NULL, 14168, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFileChooserWidget,136, 14172, 12, 3.1, NULL, 14168, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14168,NULL);\n",architecture,14172,0);
 Msg("Find size of GtkFileChooserWidget (14172)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkPlugClass,476, 14175, 2, 3.1, NULL, 14173, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkPlugClass,944, 14175, 11, 3.1, NULL, 14173, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkPlugClass,944, 14175, 3, 3.1, NULL, 14173, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkPlugClass,476, 14175, 6, 3.1, NULL, 14173, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkPlugClass,944, 14175, 9, 3.1, NULL, 14173, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkPlugClass,476, 14175, 10, 3.1, NULL, 14173, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkPlugClass,944, 14175, 12, 3.1, NULL, 14173, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14173,NULL);\n",architecture,14175,0);
 Msg("Find size of GtkPlugClass (14175)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCellRendererPixbufClass,128, 14177, 2, 3.1, NULL, 14176, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCellRendererPixbufClass,256, 14177, 11, 3.1, NULL, 14176, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCellRendererPixbufClass,256, 14177, 3, 3.1, NULL, 14176, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCellRendererPixbufClass,128, 14177, 6, 3.1, NULL, 14176, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCellRendererPixbufClass,256, 14177, 9, 3.1, NULL, 14176, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCellRendererPixbufClass,128, 14177, 10, 3.1, NULL, 14176, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCellRendererPixbufClass,256, 14177, 12, 3.1, NULL, 14176, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14176,NULL);\n",architecture,14177,0);
 Msg("Find size of GtkCellRendererPixbufClass (14177)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkVButtonBoxClass,416, 14179, 2, 3.1, NULL, 14178, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkVButtonBoxClass,824, 14179, 11, 3.1, NULL, 14178, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkVButtonBoxClass,824, 14179, 3, 3.1, NULL, 14178, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkVButtonBoxClass,416, 14179, 6, 3.1, NULL, 14178, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkVButtonBoxClass,824, 14179, 9, 3.1, NULL, 14178, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkVButtonBoxClass,416, 14179, 10, 3.1, NULL, 14178, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkVButtonBoxClass,824, 14179, 12, 3.1, NULL, 14178, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14178,NULL);\n",architecture,14179,0);
 Msg("Find size of GtkVButtonBoxClass (14179)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTextChildAnchorClass,84, 14181, 2, 3.1, NULL, 14180, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTextChildAnchorClass,168, 14181, 11, 3.1, NULL, 14180, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTextChildAnchorClass,168, 14181, 3, 3.1, NULL, 14180, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTextChildAnchorClass,84, 14181, 6, 3.1, NULL, 14180, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTextChildAnchorClass,168, 14181, 9, 3.1, NULL, 14180, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTextChildAnchorClass,84, 14181, 10, 3.1, NULL, 14180, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTextChildAnchorClass,168, 14181, 12, 3.1, NULL, 14180, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14180,NULL);\n",architecture,14181,0);
 Msg("Find size of GtkTextChildAnchorClass (14181)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCellRendererCombo,104, 14183, 2, 3.1, NULL, 14182, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCellRendererCombo,144, 14183, 11, 3.1, NULL, 14182, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCellRendererCombo,144, 14183, 3, 3.1, NULL, 14182, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCellRendererCombo,104, 14183, 6, 3.1, NULL, 14182, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCellRendererCombo,144, 14183, 9, 3.1, NULL, 14182, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCellRendererCombo,104, 14183, 10, 3.1, NULL, 14182, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCellRendererCombo,144, 14183, 12, 3.1, NULL, 14182, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14182,NULL);\n",architecture,14183,0);
 Msg("Find size of GtkCellRendererCombo (14183)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeModelIface,84, 14199, 2, 3.1, NULL, 14184, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeModelIface,168, 14199, 11, 3.1, NULL, 14184, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeModelIface,168, 14199, 3, 3.1, NULL, 14184, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeModelIface,84, 14199, 6, 3.1, NULL, 14184, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeModelIface,168, 14199, 9, 3.1, NULL, 14184, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeModelIface,84, 14199, 10, 3.1, NULL, 14184, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeModelIface,168, 14199, 12, 3.1, NULL, 14184, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14184,NULL);\n",architecture,14199,0);
 Msg("Find size of GtkTreeModelIface (14199)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAccessibleClass,196, 14202, 2, 3.1, NULL, 14200, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAccessibleClass,392, 14202, 11, 3.1, NULL, 14200, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAccessibleClass,392, 14202, 3, 3.1, NULL, 14200, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAccessibleClass,196, 14202, 6, 3.1, NULL, 14200, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAccessibleClass,392, 14202, 9, 3.1, NULL, 14200, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAccessibleClass,196, 14202, 10, 3.1, NULL, 14200, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAccessibleClass,392, 14202, 12, 3.1, NULL, 14200, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14200,NULL);\n",architecture,14202,0);
 Msg("Find size of GtkAccessibleClass (14202)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCellRendererTextClass,132, 14205, 2, 3.1, NULL, 14203, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCellRendererTextClass,264, 14205, 11, 3.1, NULL, 14203, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCellRendererTextClass,264, 14205, 3, 3.1, NULL, 14203, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCellRendererTextClass,132, 14205, 6, 3.1, NULL, 14203, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCellRendererTextClass,264, 14205, 9, 3.1, NULL, 14203, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCellRendererTextClass,132, 14205, 10, 3.1, NULL, 14203, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCellRendererTextClass,264, 14205, 12, 3.1, NULL, 14203, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14203,NULL);\n",architecture,14205,0);
 Msg("Find size of GtkCellRendererTextClass (14205)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkVScaleClass,428, 14207, 2, 3.1, NULL, 14206, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkVScaleClass,848, 14207, 11, 3.1, NULL, 14206, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkVScaleClass,848, 14207, 3, 3.1, NULL, 14206, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkVScaleClass,428, 14207, 6, 3.1, NULL, 14206, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkVScaleClass,848, 14207, 9, 3.1, NULL, 14206, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkVScaleClass,428, 14207, 10, 3.1, NULL, 14206, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkVScaleClass,848, 14207, 12, 3.1, NULL, 14206, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14206,NULL);\n",architecture,14207,0);
 Msg("Find size of GtkVScaleClass (14207)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCurveClass,400, 14210, 2, 3.1, NULL, 14208, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCurveClass,792, 14210, 11, 3.1, NULL, 14208, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCurveClass,792, 14210, 3, 3.1, NULL, 14208, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCurveClass,400, 14210, 6, 3.1, NULL, 14208, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCurveClass,792, 14210, 9, 3.1, NULL, 14208, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCurveClass,400, 14210, 10, 3.1, NULL, 14208, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCurveClass,792, 14210, 12, 3.1, NULL, 14208, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14208,NULL);\n",architecture,14210,0);
 Msg("Find size of GtkCurveClass (14210)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkSeparatorToolItemClass,460, 14212, 2, 3.1, NULL, 14211, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkSeparatorToolItemClass,912, 14212, 11, 3.1, NULL, 14211, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkSeparatorToolItemClass,912, 14212, 3, 3.1, NULL, 14211, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkSeparatorToolItemClass,460, 14212, 6, 3.1, NULL, 14211, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkSeparatorToolItemClass,912, 14212, 9, 3.1, NULL, 14211, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkSeparatorToolItemClass,460, 14212, 10, 3.1, NULL, 14211, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkSeparatorToolItemClass,912, 14212, 12, 3.1, NULL, 14211, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14211,NULL);\n",architecture,14212,0);
 Msg("Find size of GtkSeparatorToolItemClass (14212)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkStyleClass,228, 14232, 2, 3.1, NULL, 14213, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkStyleClass,456, 14232, 11, 3.1, NULL, 14213, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkStyleClass,456, 14232, 3, 3.1, NULL, 14213, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkStyleClass,228, 14232, 6, 3.1, NULL, 14213, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkStyleClass,456, 14232, 9, 3.1, NULL, 14213, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkStyleClass,228, 14232, 10, 3.1, NULL, 14213, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkStyleClass,456, 14232, 12, 3.1, NULL, 14213, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14213,NULL);\n",architecture,14232,0);
 Msg("Find size of GtkStyleClass (14232)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkSeparatorMenuItemClass,480, 14234, 2, 3.1, NULL, 14233, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkSeparatorMenuItemClass,952, 14234, 11, 3.1, NULL, 14233, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkSeparatorMenuItemClass,952, 14234, 3, 3.1, NULL, 14233, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkSeparatorMenuItemClass,480, 14234, 6, 3.1, NULL, 14233, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkSeparatorMenuItemClass,952, 14234, 9, 3.1, NULL, 14233, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkSeparatorMenuItemClass,480, 14234, 10, 3.1, NULL, 14233, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkSeparatorMenuItemClass,952, 14234, 12, 3.1, NULL, 14233, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14233,NULL);\n",architecture,14234,0);
 Msg("Find size of GtkSeparatorMenuItemClass (14234)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkIMMulticontextClass,184, 14236, 2, 3.1, NULL, 14235, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkIMMulticontextClass,368, 14236, 11, 3.1, NULL, 14235, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkIMMulticontextClass,368, 14236, 3, 3.1, NULL, 14235, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkIMMulticontextClass,184, 14236, 6, 3.1, NULL, 14235, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkIMMulticontextClass,368, 14236, 9, 3.1, NULL, 14235, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkIMMulticontextClass,184, 14236, 10, 3.1, NULL, 14235, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkIMMulticontextClass,368, 14236, 12, 3.1, NULL, 14235, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14235,NULL);\n",architecture,14236,0);
 Msg("Find size of GtkIMMulticontextClass (14236)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkToggleToolButtonClass,488, 14240, 2, 3.1, NULL, 14238, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkToggleToolButtonClass,968, 14240, 11, 3.1, NULL, 14238, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkToggleToolButtonClass,968, 14240, 3, 3.1, NULL, 14238, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkToggleToolButtonClass,488, 14240, 6, 3.1, NULL, 14238, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkToggleToolButtonClass,968, 14240, 9, 3.1, NULL, 14238, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkToggleToolButtonClass,488, 14240, 10, 3.1, NULL, 14238, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkToggleToolButtonClass,968, 14240, 12, 3.1, NULL, 14238, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14238,NULL);\n",architecture,14240,0);
 Msg("Find size of GtkToggleToolButtonClass (14240)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkRadioToolButtonClass,504, 14241, 2, 3.1, NULL, 14237, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkRadioToolButtonClass,1000, 14241, 11, 3.1, NULL, 14237, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkRadioToolButtonClass,1000, 14241, 3, 3.1, NULL, 14237, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkRadioToolButtonClass,504, 14241, 6, 3.1, NULL, 14237, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkRadioToolButtonClass,1000, 14241, 9, 3.1, NULL, 14237, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkRadioToolButtonClass,504, 14241, 10, 3.1, NULL, 14237, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkRadioToolButtonClass,1000, 14241, 12, 3.1, NULL, 14237, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14237,NULL);\n",architecture,14241,0);
 Msg("Find size of GtkRadioToolButtonClass (14241)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCellRendererProgressClass,128, 14243, 2, 3.1, NULL, 14242, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCellRendererProgressClass,256, 14243, 11, 3.1, NULL, 14242, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCellRendererProgressClass,256, 14243, 3, 3.1, NULL, 14242, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCellRendererProgressClass,128, 14243, 6, 3.1, NULL, 14242, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCellRendererProgressClass,256, 14243, 9, 3.1, NULL, 14242, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCellRendererProgressClass,128, 14243, 10, 3.1, NULL, 14242, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCellRendererProgressClass,256, 14243, 12, 3.1, NULL, 14242, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14242,NULL);\n",architecture,14243,0);
 Msg("Find size of GtkCellRendererProgressClass (14243)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkVScrollbar,136, 14245, 2, 3.1, NULL, 14244, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkVScrollbar,192, 14245, 11, 3.1, NULL, 14244, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkVScrollbar,192, 14245, 3, 3.1, NULL, 14244, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkVScrollbar,136, 14245, 6, 3.1, NULL, 14244, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkVScrollbar,192, 14245, 9, 3.1, NULL, 14244, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkVScrollbar,136, 14245, 10, 3.1, NULL, 14244, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkVScrollbar,192, 14245, 12, 3.1, NULL, 14244, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14244,NULL);\n",architecture,14245,0);
 Msg("Find size of GtkVScrollbar (14245)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkVPanedClass,456, 14247, 2, 3.1, NULL, 14246, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkVPanedClass,904, 14247, 11, 3.1, NULL, 14246, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkVPanedClass,904, 14247, 3, 3.1, NULL, 14246, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkVPanedClass,456, 14247, 6, 3.1, NULL, 14246, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkVPanedClass,904, 14247, 9, 3.1, NULL, 14246, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkVPanedClass,456, 14247, 10, 3.1, NULL, 14246, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkVPanedClass,904, 14247, 12, 3.1, NULL, 14246, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14246,NULL);\n",architecture,14247,0);
 Msg("Find size of GtkVPanedClass (14247)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkScrollStep,4, 14249, 2, 3.1, NULL, 14248, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkScrollStep,4, 14249, 11, 3.1, NULL, 14248, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkScrollStep,4, 14249, 3, 3.1, NULL, 14248, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkScrollStep,4, 14249, 6, 3.1, NULL, 14248, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkScrollStep,4, 14249, 9, 3.1, NULL, 14248, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkScrollStep,4, 14249, 10, 3.1, NULL, 14248, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkScrollStep,4, 14249, 12, 3.1, NULL, 14248, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14248,NULL);\n",architecture,14249,0);
 Msg("Find size of GtkScrollStep (14249)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkToggleButtonClass,476, 14252, 2, 3.1, NULL, 14250, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkToggleButtonClass,944, 14252, 11, 3.1, NULL, 14250, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkToggleButtonClass,944, 14252, 3, 3.1, NULL, 14250, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkToggleButtonClass,476, 14252, 6, 3.1, NULL, 14250, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkToggleButtonClass,944, 14252, 9, 3.1, NULL, 14250, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkToggleButtonClass,476, 14252, 10, 3.1, NULL, 14250, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkToggleButtonClass,944, 14252, 12, 3.1, NULL, 14250, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14250,NULL);\n",architecture,14252,0);
 Msg("Find size of GtkToggleButtonClass (14252)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCellRendererToggleClass,132, 14255, 2, 3.1, NULL, 14253, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCellRendererToggleClass,264, 14255, 11, 3.1, NULL, 14253, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCellRendererToggleClass,264, 14255, 3, 3.1, NULL, 14253, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCellRendererToggleClass,132, 14255, 6, 3.1, NULL, 14253, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCellRendererToggleClass,264, 14255, 9, 3.1, NULL, 14253, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCellRendererToggleClass,132, 14255, 10, 3.1, NULL, 14253, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCellRendererToggleClass,264, 14255, 12, 3.1, NULL, 14253, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14253,NULL);\n",architecture,14255,0);
 Msg("Find size of GtkCellRendererToggleClass (14255)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkVButtonBox,96, 14257, 2, 3.1, NULL, 14256, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkVButtonBox,152, 14257, 11, 3.1, NULL, 14256, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkVButtonBox,152, 14257, 3, 3.1, NULL, 14256, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkVButtonBox,96, 14257, 6, 3.1, NULL, 14256, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkVButtonBox,152, 14257, 9, 3.1, NULL, 14256, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkVButtonBox,96, 14257, 10, 3.1, NULL, 14256, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkVButtonBox,152, 14257, 12, 3.1, NULL, 14256, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14256,NULL);\n",architecture,14257,0);
 Msg("Find size of GtkVButtonBox (14257)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeDragDestIface,16, 14260, 2, 3.1, NULL, 14258, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeDragDestIface,32, 14260, 11, 3.1, NULL, 14258, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeDragDestIface,32, 14260, 3, 3.1, NULL, 14258, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeDragDestIface,16, 14260, 6, 3.1, NULL, 14258, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeDragDestIface,32, 14260, 9, 3.1, NULL, 14258, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeDragDestIface,16, 14260, 10, 3.1, NULL, 14258, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeDragDestIface,32, 14260, 12, 3.1, NULL, 14258, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14258,NULL);\n",architecture,14260,0);
 Msg("Find size of GtkTreeDragDestIface (14260)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkColorSelectionClass,436, 14263, 2, 3.1, NULL, 14261, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkColorSelectionClass,864, 14263, 11, 3.1, NULL, 14261, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkColorSelectionClass,864, 14263, 3, 3.1, NULL, 14261, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkColorSelectionClass,436, 14263, 6, 3.1, NULL, 14261, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkColorSelectionClass,864, 14263, 9, 3.1, NULL, 14261, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkColorSelectionClass,436, 14263, 10, 3.1, NULL, 14261, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkColorSelectionClass,864, 14263, 12, 3.1, NULL, 14261, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14261,NULL);\n",architecture,14263,0);
 Msg("Find size of GtkColorSelectionClass (14263)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCellRendererProgressPrivate,0, 14266, 2, 3.1, NULL, 14265, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCellRendererProgressPrivate,0, 14266, 11, 3.1, NULL, 14265, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCellRendererProgressPrivate,0, 14266, 3, 3.1, NULL, 14265, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCellRendererProgressPrivate,0, 14266, 6, 3.1, NULL, 14265, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCellRendererProgressPrivate,0, 14266, 9, 3.1, NULL, 14265, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCellRendererProgressPrivate,0, 14266, 10, 3.1, NULL, 14265, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCellRendererProgressPrivate,0, 14266, 12, 3.1, NULL, 14265, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14265,NULL);\n",architecture,14266,0);
 Msg("Find size of GtkCellRendererProgressPrivate (14266)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCellRendererProgress,44, 14268, 2, 3.1, NULL, 14264, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCellRendererProgress,64, 14268, 11, 3.1, NULL, 14264, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCellRendererProgress,64, 14268, 3, 3.1, NULL, 14264, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCellRendererProgress,44, 14268, 6, 3.1, NULL, 14264, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCellRendererProgress,64, 14268, 9, 3.1, NULL, 14264, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCellRendererProgress,44, 14268, 10, 3.1, NULL, 14264, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCellRendererProgress,64, 14268, 12, 3.1, NULL, 14264, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14264,NULL);\n",architecture,14268,0);
 Msg("Find size of GtkCellRendererProgress (14268)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkImageClass,380, 14270, 2, 3.1, NULL, 14269, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkImageClass,752, 14270, 11, 3.1, NULL, 14269, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkImageClass,752, 14270, 3, 3.1, NULL, 14269, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkImageClass,380, 14270, 6, 3.1, NULL, 14269, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkImageClass,752, 14270, 9, 3.1, NULL, 14269, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkImageClass,380, 14270, 10, 3.1, NULL, 14269, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkImageClass,752, 14270, 12, 3.1, NULL, 14269, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14269,NULL);\n",architecture,14270,0);
 Msg("Find size of GtkImageClass (14270)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkMessageDialogClass,496, 14272, 2, 3.1, NULL, 14271, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkMessageDialogClass,984, 14272, 11, 3.1, NULL, 14271, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkMessageDialogClass,984, 14272, 3, 3.1, NULL, 14271, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkMessageDialogClass,496, 14272, 6, 3.1, NULL, 14271, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkMessageDialogClass,984, 14272, 9, 3.1, NULL, 14271, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkMessageDialogClass,496, 14272, 10, 3.1, NULL, 14271, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkMessageDialogClass,984, 14272, 12, 3.1, NULL, 14271, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14271,NULL);\n",architecture,14272,0);
 Msg("Find size of GtkMessageDialogClass (14272)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkDeleteType,4, 14274, 2, 3.1, NULL, 14273, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkDeleteType,4, 14274, 11, 3.1, NULL, 14273, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkDeleteType,4, 14274, 3, 3.1, NULL, 14273, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkDeleteType,4, 14274, 6, 3.1, NULL, 14273, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkDeleteType,4, 14274, 9, 3.1, NULL, 14273, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkDeleteType,4, 14274, 10, 3.1, NULL, 14273, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkDeleteType,4, 14274, 12, 3.1, NULL, 14273, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14273,NULL);\n",architecture,14274,0);
 Msg("Find size of GtkDeleteType (14274)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeSortableIface,32, 14282, 2, 3.1, NULL, 14275, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeSortableIface,64, 14282, 11, 3.1, NULL, 14275, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeSortableIface,64, 14282, 3, 3.1, NULL, 14275, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeSortableIface,32, 14282, 6, 3.1, NULL, 14275, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeSortableIface,64, 14282, 9, 3.1, NULL, 14275, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeSortableIface,32, 14282, 10, 3.1, NULL, 14275, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeSortableIface,64, 14282, 12, 3.1, NULL, 14275, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14275,NULL);\n",architecture,14282,0);
 Msg("Find size of GtkTreeSortableIface (14282)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCalendarClass,392, 14285, 2, 3.1, NULL, 14283, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCalendarClass,776, 14285, 11, 3.1, NULL, 14283, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCalendarClass,776, 14285, 3, 3.1, NULL, 14283, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCalendarClass,392, 14285, 6, 3.1, NULL, 14283, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCalendarClass,776, 14285, 9, 3.1, NULL, 14283, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCalendarClass,392, 14285, 10, 3.1, NULL, 14283, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCalendarClass,776, 14285, 12, 3.1, NULL, 14283, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14283,NULL);\n",architecture,14285,0);
 Msg("Find size of GtkCalendarClass (14285)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkEntryClass,416, 14293, 2, 3.1, NULL, 14287, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkEntryClass,824, 14293, 11, 3.1, NULL, 14287, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkEntryClass,824, 14293, 3, 3.1, NULL, 14287, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkEntryClass,416, 14293, 6, 3.1, NULL, 14287, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkEntryClass,824, 14293, 9, 3.1, NULL, 14287, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkEntryClass,416, 14293, 10, 3.1, NULL, 14287, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkEntryClass,824, 14293, 12, 3.1, NULL, 14287, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14287,NULL);\n",architecture,14293,0);
 Msg("Find size of GtkEntryClass (14293)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkSpinButtonClass,448, 14298, 2, 3.1, NULL, 14286, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkSpinButtonClass,888, 14298, 11, 3.1, NULL, 14286, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkSpinButtonClass,888, 14298, 3, 3.1, NULL, 14286, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkSpinButtonClass,448, 14298, 6, 3.1, NULL, 14286, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkSpinButtonClass,888, 14298, 9, 3.1, NULL, 14286, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkSpinButtonClass,448, 14298, 10, 3.1, NULL, 14286, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkSpinButtonClass,888, 14298, 12, 3.1, NULL, 14286, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14286,NULL);\n",architecture,14298,0);
 Msg("Find size of GtkSpinButtonClass (14298)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkInputDialog,220, 14302, 2, 3.1, NULL, 14300, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkInputDialog,384, 14302, 11, 3.1, NULL, 14300, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkInputDialog,384, 14302, 3, 3.1, NULL, 14300, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkInputDialog,220, 14302, 6, 3.1, NULL, 14300, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkInputDialog,384, 14302, 9, 3.1, NULL, 14300, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkInputDialog,220, 14302, 10, 3.1, NULL, 14300, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkInputDialog,384, 14302, 12, 3.1, NULL, 14300, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14300,NULL);\n",architecture,14302,0);
 Msg("Find size of GtkInputDialog (14302)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkInputDialogClass,504, 14305, 2, 3.1, NULL, 14299, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkInputDialogClass,1000, 14305, 11, 3.1, NULL, 14299, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkInputDialogClass,1000, 14305, 3, 3.1, NULL, 14299, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkInputDialogClass,504, 14305, 6, 3.1, NULL, 14299, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkInputDialogClass,1000, 14305, 9, 3.1, NULL, 14299, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkInputDialogClass,504, 14305, 10, 3.1, NULL, 14299, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkInputDialogClass,1000, 14305, 12, 3.1, NULL, 14299, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14299,NULL);\n",architecture,14305,0);
 Msg("Find size of GtkInputDialogClass (14305)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkEntryCompletionClass,92, 14310, 2, 3.1, NULL, 14306, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkEntryCompletionClass,184, 14310, 11, 3.1, NULL, 14306, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkEntryCompletionClass,184, 14310, 3, 3.1, NULL, 14306, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkEntryCompletionClass,92, 14310, 6, 3.1, NULL, 14306, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkEntryCompletionClass,184, 14310, 9, 3.1, NULL, 14306, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkEntryCompletionClass,92, 14310, 10, 3.1, NULL, 14306, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkEntryCompletionClass,184, 14310, 12, 3.1, NULL, 14306, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14306,NULL);\n",architecture,14310,0);
 Msg("Find size of GtkEntryCompletionClass (14310)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAlignmentClass,416, 14312, 2, 3.1, NULL, 14311, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAlignmentClass,824, 14312, 11, 3.1, NULL, 14311, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAlignmentClass,824, 14312, 3, 3.1, NULL, 14311, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAlignmentClass,416, 14312, 6, 3.1, NULL, 14311, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAlignmentClass,824, 14312, 9, 3.1, NULL, 14311, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAlignmentClass,416, 14312, 10, 3.1, NULL, 14311, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAlignmentClass,824, 14312, 12, 3.1, NULL, 14311, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14311,NULL);\n",architecture,14312,0);
 Msg("Find size of GtkAlignmentClass (14312)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeModelFilterClass,84, 14314, 2, 3.1, NULL, 14313, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeModelFilterClass,168, 14314, 11, 3.1, NULL, 14313, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeModelFilterClass,168, 14314, 3, 3.1, NULL, 14313, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeModelFilterClass,84, 14314, 6, 3.1, NULL, 14313, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeModelFilterClass,168, 14314, 9, 3.1, NULL, 14313, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeModelFilterClass,84, 14314, 10, 3.1, NULL, 14313, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeModelFilterClass,168, 14314, 12, 3.1, NULL, 14313, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14313,NULL);\n",architecture,14314,0);
 Msg("Find size of GtkTreeModelFilterClass (14314)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkRcStyleClass,100, 14320, 2, 3.1, NULL, 14315, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkRcStyleClass,200, 14320, 11, 3.1, NULL, 14315, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkRcStyleClass,200, 14320, 3, 3.1, NULL, 14315, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkRcStyleClass,100, 14320, 6, 3.1, NULL, 14315, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkRcStyleClass,200, 14320, 9, 3.1, NULL, 14315, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkRcStyleClass,100, 14320, 10, 3.1, NULL, 14315, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkRcStyleClass,200, 14320, 12, 3.1, NULL, 14315, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14315,NULL);\n",architecture,14320,0);
 Msg("Find size of GtkRcStyleClass (14320)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkUIManagerClass,108, 14328, 2, 3.1, NULL, 14321, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkUIManagerClass,216, 14328, 11, 3.1, NULL, 14321, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkUIManagerClass,216, 14328, 3, 3.1, NULL, 14321, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkUIManagerClass,108, 14328, 6, 3.1, NULL, 14321, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkUIManagerClass,216, 14328, 9, 3.1, NULL, 14321, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkUIManagerClass,108, 14328, 10, 3.1, NULL, 14321, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkUIManagerClass,216, 14328, 12, 3.1, NULL, 14321, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14321,NULL);\n",architecture,14328,0);
 Msg("Find size of GtkUIManagerClass (14328)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkSeparatorClass,364, 14331, 2, 3.1, NULL, 14330, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkSeparatorClass,720, 14331, 11, 3.1, NULL, 14330, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkSeparatorClass,720, 14331, 3, 3.1, NULL, 14330, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkSeparatorClass,364, 14331, 6, 3.1, NULL, 14330, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkSeparatorClass,720, 14331, 9, 3.1, NULL, 14330, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkSeparatorClass,364, 14331, 10, 3.1, NULL, 14330, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkSeparatorClass,720, 14331, 12, 3.1, NULL, 14330, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14330,NULL);\n",architecture,14331,0);
 Msg("Find size of GtkSeparatorClass (14331)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkVSeparatorClass,364, 14332, 2, 3.1, NULL, 14329, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkVSeparatorClass,720, 14332, 11, 3.1, NULL, 14329, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkVSeparatorClass,720, 14332, 3, 3.1, NULL, 14329, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkVSeparatorClass,364, 14332, 6, 3.1, NULL, 14329, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkVSeparatorClass,720, 14332, 9, 3.1, NULL, 14329, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkVSeparatorClass,364, 14332, 10, 3.1, NULL, 14329, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkVSeparatorClass,720, 14332, 12, 3.1, NULL, 14329, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14329,NULL);\n",architecture,14332,0);
 Msg("Find size of GtkVSeparatorClass (14332)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCheckButtonClass,496, 14336, 2, 3.1, NULL, 14333, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCheckButtonClass,984, 14336, 11, 3.1, NULL, 14333, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCheckButtonClass,984, 14336, 3, 3.1, NULL, 14333, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCheckButtonClass,496, 14336, 6, 3.1, NULL, 14333, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCheckButtonClass,984, 14336, 9, 3.1, NULL, 14333, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCheckButtonClass,496, 14336, 10, 3.1, NULL, 14333, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCheckButtonClass,984, 14336, 12, 3.1, NULL, 14333, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14333,NULL);\n",architecture,14336,0);
 Msg("Find size of GtkCheckButtonClass (14336)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkVisibility,4, 14338, 2, 3.1, NULL, 14337, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkVisibility,4, 14338, 11, 3.1, NULL, 14337, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkVisibility,4, 14338, 3, 3.1, NULL, 14337, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkVisibility,4, 14338, 6, 3.1, NULL, 14337, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkVisibility,4, 14338, 9, 3.1, NULL, 14337, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkVisibility,4, 14338, 10, 3.1, NULL, 14337, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkVisibility,4, 14338, 12, 3.1, NULL, 14337, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14337,NULL);\n",architecture,14338,0);
 Msg("Find size of GtkVisibility (14338)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkRadioMenuItemClass,520, 14341, 2, 3.1, NULL, 14339, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkRadioMenuItemClass,1032, 14341, 11, 3.1, NULL, 14339, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkRadioMenuItemClass,1032, 14341, 3, 3.1, NULL, 14339, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkRadioMenuItemClass,520, 14341, 6, 3.1, NULL, 14339, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkRadioMenuItemClass,1032, 14341, 9, 3.1, NULL, 14339, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkRadioMenuItemClass,520, 14341, 10, 3.1, NULL, 14339, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkRadioMenuItemClass,1032, 14341, 12, 3.1, NULL, 14339, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14339,NULL);\n",architecture,14341,0);
 Msg("Find size of GtkRadioMenuItemClass (14341)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTextViewClass,496, 14351, 2, 3.1, NULL, 14342, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTextViewClass,984, 14351, 11, 3.1, NULL, 14342, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTextViewClass,984, 14351, 3, 3.1, NULL, 14342, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTextViewClass,496, 14351, 6, 3.1, NULL, 14342, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTextViewClass,984, 14351, 9, 3.1, NULL, 14342, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTextViewClass,496, 14351, 10, 3.1, NULL, 14342, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTextViewClass,984, 14351, 12, 3.1, NULL, 14342, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14342,NULL);\n",architecture,14351,0);
 Msg("Find size of GtkTextViewClass (14351)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkColorSelectionChangePaletteFunc,4, 14353, 2, 3.1, NULL, 14352, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkColorSelectionChangePaletteFunc,8, 14353, 11, 3.1, NULL, 14352, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkColorSelectionChangePaletteFunc,8, 14353, 3, 3.1, NULL, 14352, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkColorSelectionChangePaletteFunc,4, 14353, 6, 3.1, NULL, 14352, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkColorSelectionChangePaletteFunc,8, 14353, 9, 3.1, NULL, 14352, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkColorSelectionChangePaletteFunc,4, 14353, 10, 3.1, NULL, 14352, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkColorSelectionChangePaletteFunc,8, 14353, 12, 3.1, NULL, 14352, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14352,NULL);\n",architecture,14353,0);
 Msg("Find size of GtkColorSelectionChangePaletteFunc (14353)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeModelSortClass,84, 14355, 2, 3.1, NULL, 14354, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeModelSortClass,168, 14355, 11, 3.1, NULL, 14354, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeModelSortClass,168, 14355, 3, 3.1, NULL, 14354, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeModelSortClass,84, 14355, 6, 3.1, NULL, 14354, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeModelSortClass,168, 14355, 9, 3.1, NULL, 14354, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeModelSortClass,84, 14355, 10, 3.1, NULL, 14354, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeModelSortClass,168, 14355, 12, 3.1, NULL, 14354, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14354,NULL);\n",architecture,14355,0);
 Msg("Find size of GtkTreeModelSortClass (14355)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCellEditableIface,20, 14359, 2, 3.1, NULL, 14356, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCellEditableIface,40, 14359, 11, 3.1, NULL, 14356, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCellEditableIface,40, 14359, 3, 3.1, NULL, 14356, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCellEditableIface,20, 14359, 6, 3.1, NULL, 14356, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCellEditableIface,40, 14359, 9, 3.1, NULL, 14356, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCellEditableIface,20, 14359, 10, 3.1, NULL, 14356, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCellEditableIface,40, 14359, 12, 3.1, NULL, 14356, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14356,NULL);\n",architecture,14359,0);
 Msg("Find size of GtkCellEditableIface (14359)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkToolbarClass,440, 14364, 2, 3.1, NULL, 14360, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkToolbarClass,872, 14364, 11, 3.1, NULL, 14360, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkToolbarClass,872, 14364, 3, 3.1, NULL, 14360, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkToolbarClass,440, 14364, 6, 3.1, NULL, 14360, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkToolbarClass,872, 14364, 9, 3.1, NULL, 14360, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkToolbarClass,440, 14364, 10, 3.1, NULL, 14360, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkToolbarClass,872, 14364, 12, 3.1, NULL, 14360, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14360,NULL);\n",architecture,14364,0);
 Msg("Find size of GtkToolbarClass (14364)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkHandleBoxClass,440, 14367, 2, 3.1, NULL, 14365, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkHandleBoxClass,872, 14367, 11, 3.1, NULL, 14365, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkHandleBoxClass,872, 14367, 3, 3.1, NULL, 14365, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkHandleBoxClass,440, 14367, 6, 3.1, NULL, 14365, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkHandleBoxClass,872, 14367, 9, 3.1, NULL, 14365, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkHandleBoxClass,440, 14367, 10, 3.1, NULL, 14365, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkHandleBoxClass,872, 14367, 12, 3.1, NULL, 14365, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14365,NULL);\n",architecture,14367,0);
 Msg("Find size of GtkHandleBoxClass (14367)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkHSeparator,60, 14369, 2, 3.1, NULL, 14368, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkHSeparator,96, 14369, 11, 3.1, NULL, 14368, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkHSeparator,96, 14369, 3, 3.1, NULL, 14368, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkHSeparator,60, 14369, 6, 3.1, NULL, 14368, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkHSeparator,96, 14369, 9, 3.1, NULL, 14368, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkHSeparator,60, 14369, 10, 3.1, NULL, 14368, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkHSeparator,96, 14369, 12, 3.1, NULL, 14368, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14368,NULL);\n",architecture,14369,0);
 Msg("Find size of GtkHSeparator (14369)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTextTagTableClass,96, 14373, 2, 3.1, NULL, 14370, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTextTagTableClass,192, 14373, 11, 3.1, NULL, 14370, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTextTagTableClass,192, 14373, 3, 3.1, NULL, 14370, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTextTagTableClass,96, 14373, 6, 3.1, NULL, 14370, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTextTagTableClass,192, 14373, 9, 3.1, NULL, 14370, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTextTagTableClass,96, 14373, 10, 3.1, NULL, 14370, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTextTagTableClass,192, 14373, 12, 3.1, NULL, 14370, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14370,NULL);\n",architecture,14373,0);
 Msg("Find size of GtkTextTagTableClass (14373)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkComboBoxClass,436, 14378, 2, 3.1, NULL, 14375, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkComboBoxClass,864, 14378, 11, 3.1, NULL, 14375, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkComboBoxClass,864, 14378, 3, 3.1, NULL, 14375, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkComboBoxClass,436, 14378, 6, 3.1, NULL, 14375, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkComboBoxClass,864, 14378, 9, 3.1, NULL, 14375, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkComboBoxClass,436, 14378, 10, 3.1, NULL, 14375, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkComboBoxClass,864, 14378, 12, 3.1, NULL, 14375, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14375,NULL);\n",architecture,14378,0);
 Msg("Find size of GtkComboBoxClass (14378)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkComboBoxEntryClass,452, 14379, 2, 3.1, NULL, 14374, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkComboBoxEntryClass,896, 14379, 11, 3.1, NULL, 14374, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkComboBoxEntryClass,896, 14379, 3, 3.1, NULL, 14374, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkComboBoxEntryClass,452, 14379, 6, 3.1, NULL, 14374, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkComboBoxEntryClass,896, 14379, 9, 3.1, NULL, 14374, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkComboBoxEntryClass,452, 14379, 10, 3.1, NULL, 14374, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkComboBoxEntryClass,896, 14379, 12, 3.1, NULL, 14374, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14374,NULL);\n",architecture,14379,0);
 Msg("Find size of GtkComboBoxEntryClass (14379)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFontSelectionClass,432, 14381, 2, 3.1, NULL, 14380, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFontSelectionClass,856, 14381, 11, 3.1, NULL, 14380, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFontSelectionClass,856, 14381, 3, 3.1, NULL, 14380, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFontSelectionClass,432, 14381, 6, 3.1, NULL, 14380, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFontSelectionClass,856, 14381, 9, 3.1, NULL, 14380, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFontSelectionClass,432, 14381, 10, 3.1, NULL, 14380, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFontSelectionClass,856, 14381, 12, 3.1, NULL, 14380, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14380,NULL);\n",architecture,14381,0);
 Msg("Find size of GtkFontSelectionClass (14381)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFrameClass,420, 14384, 2, 3.1, NULL, 14382, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFrameClass,832, 14384, 11, 3.1, NULL, 14382, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFrameClass,832, 14384, 3, 3.1, NULL, 14382, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFrameClass,420, 14384, 6, 3.1, NULL, 14382, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFrameClass,832, 14384, 9, 3.1, NULL, 14382, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFrameClass,420, 14384, 10, 3.1, NULL, 14382, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFrameClass,832, 14384, 12, 3.1, NULL, 14382, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14382,NULL);\n",architecture,14384,0);
 Msg("Find size of GtkFrameClass (14384)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkHScrollbarClass,420, 14386, 2, 3.1, NULL, 14385, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkHScrollbarClass,832, 14386, 11, 3.1, NULL, 14385, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkHScrollbarClass,832, 14386, 3, 3.1, NULL, 14385, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkHScrollbarClass,420, 14386, 6, 3.1, NULL, 14385, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkHScrollbarClass,832, 14386, 9, 3.1, NULL, 14385, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkHScrollbarClass,420, 14386, 10, 3.1, NULL, 14385, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkHScrollbarClass,832, 14386, 12, 3.1, NULL, 14385, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14385,NULL);\n",architecture,14386,0);
 Msg("Find size of GtkHScrollbarClass (14386)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFileSelectionClass,496, 14388, 2, 3.1, NULL, 14387, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFileSelectionClass,984, 14388, 11, 3.1, NULL, 14387, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFileSelectionClass,984, 14388, 3, 3.1, NULL, 14387, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFileSelectionClass,496, 14388, 6, 3.1, NULL, 14387, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFileSelectionClass,984, 14388, 9, 3.1, NULL, 14387, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFileSelectionClass,496, 14388, 10, 3.1, NULL, 14387, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFileSelectionClass,984, 14388, 12, 3.1, NULL, 14387, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14387,NULL);\n",architecture,14388,0);
 Msg("Find size of GtkFileSelectionClass (14388)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkScrolledWindowClass,444, 14392, 2, 3.1, NULL, 14389, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkScrolledWindowClass,880, 14392, 11, 3.1, NULL, 14389, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkScrolledWindowClass,880, 14392, 3, 3.1, NULL, 14389, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkScrolledWindowClass,444, 14392, 6, 3.1, NULL, 14389, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkScrolledWindowClass,880, 14392, 9, 3.1, NULL, 14389, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkScrolledWindowClass,444, 14392, 10, 3.1, NULL, 14389, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkScrolledWindowClass,880, 14392, 12, 3.1, NULL, 14389, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14389,NULL);\n",architecture,14392,0);
 Msg("Find size of GtkScrolledWindowClass (14392)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTextMarkClass,84, 14394, 2, 3.1, NULL, 14393, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTextMarkClass,168, 14394, 11, 3.1, NULL, 14393, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTextMarkClass,168, 14394, 3, 3.1, NULL, 14393, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTextMarkClass,84, 14394, 6, 3.1, NULL, 14393, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTextMarkClass,168, 14394, 9, 3.1, NULL, 14393, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTextMarkClass,84, 14394, 10, 3.1, NULL, 14393, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTextMarkClass,168, 14394, 12, 3.1, NULL, 14393, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14393,NULL);\n",architecture,14394,0);
 Msg("Find size of GtkTextMarkClass (14394)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkToolbarPrivate,0, 14396, 2, 3.1, NULL, 14395, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkToolbarPrivate,0, 14396, 11, 3.1, NULL, 14395, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkToolbarPrivate,0, 14396, 3, 3.1, NULL, 14395, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkToolbarPrivate,0, 14396, 6, 3.1, NULL, 14395, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkToolbarPrivate,0, 14396, 9, 3.1, NULL, 14395, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkToolbarPrivate,0, 14396, 10, 3.1, NULL, 14395, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkToolbarPrivate,0, 14396, 12, 3.1, NULL, 14395, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14395,NULL);\n",architecture,14396,0);
 Msg("Find size of GtkToolbarPrivate (14396)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkVScale,144, 14398, 2, 3.1, NULL, 14397, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkVScale,200, 14398, 11, 3.1, NULL, 14397, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkVScale,200, 14398, 3, 3.1, NULL, 14397, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkVScale,144, 14398, 6, 3.1, NULL, 14397, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkVScale,200, 14398, 9, 3.1, NULL, 14397, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkVScale,144, 14398, 10, 3.1, NULL, 14397, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkVScale,200, 14398, 12, 3.1, NULL, 14397, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14397,NULL);\n",architecture,14398,0);
 Msg("Find size of GtkVScale (14398)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFixedChild,12, 14400, 2, 3.1, NULL, 14399, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFixedChild,16, 14400, 11, 3.1, NULL, 14399, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFixedChild,16, 14400, 3, 3.1, NULL, 14399, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFixedChild,12, 14400, 6, 3.1, NULL, 14399, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFixedChild,16, 14400, 9, 3.1, NULL, 14399, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFixedChild,12, 14400, 10, 3.1, NULL, 14399, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFixedChild,16, 14400, 12, 3.1, NULL, 14399, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14399,NULL);\n",architecture,14400,0);
 Msg("Find size of GtkFixedChild (14400)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkLayoutClass,436, 14403, 2, 3.1, NULL, 14401, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkLayoutClass,864, 14403, 11, 3.1, NULL, 14401, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkLayoutClass,864, 14403, 3, 3.1, NULL, 14401, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkLayoutClass,436, 14403, 6, 3.1, NULL, 14401, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkLayoutClass,864, 14403, 9, 3.1, NULL, 14401, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkLayoutClass,436, 14403, 10, 3.1, NULL, 14401, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkLayoutClass,864, 14403, 12, 3.1, NULL, 14401, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14401,NULL);\n",architecture,14403,0);
 Msg("Find size of GtkLayoutClass (14403)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkEventBoxClass,416, 14405, 2, 3.1, NULL, 14404, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkEventBoxClass,824, 14405, 11, 3.1, NULL, 14404, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkEventBoxClass,824, 14405, 3, 3.1, NULL, 14404, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkEventBoxClass,416, 14405, 6, 3.1, NULL, 14404, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkEventBoxClass,824, 14405, 9, 3.1, NULL, 14404, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkEventBoxClass,416, 14405, 10, 3.1, NULL, 14404, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkEventBoxClass,824, 14405, 12, 3.1, NULL, 14404, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14404,NULL);\n",architecture,14405,0);
 Msg("Find size of GtkEventBoxClass (14405)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkIMContextSimpleClass,168, 14407, 2, 3.1, NULL, 14406, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkIMContextSimpleClass,336, 14407, 11, 3.1, NULL, 14406, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkIMContextSimpleClass,336, 14407, 3, 3.1, NULL, 14406, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkIMContextSimpleClass,168, 14407, 6, 3.1, NULL, 14406, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkIMContextSimpleClass,336, 14407, 9, 3.1, NULL, 14406, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkIMContextSimpleClass,168, 14407, 10, 3.1, NULL, 14406, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkIMContextSimpleClass,336, 14407, 12, 3.1, NULL, 14406, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14406,NULL);\n",architecture,14407,0);
 Msg("Find size of GtkIMContextSimpleClass (14407)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkExpanderClass,420, 14410, 2, 3.1, NULL, 14408, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkExpanderClass,832, 14410, 11, 3.1, NULL, 14408, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkExpanderClass,832, 14410, 3, 3.1, NULL, 14408, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkExpanderClass,420, 14410, 6, 3.1, NULL, 14408, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkExpanderClass,832, 14410, 9, 3.1, NULL, 14408, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkExpanderClass,420, 14410, 10, 3.1, NULL, 14408, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkExpanderClass,832, 14410, 12, 3.1, NULL, 14408, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14408,NULL);\n",architecture,14410,0);
 Msg("Find size of GtkExpanderClass (14410)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkProgressClass,392, 14414, 2, 3.1, NULL, 14411, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkProgressClass,776, 14414, 11, 3.1, NULL, 14411, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkProgressClass,776, 14414, 3, 3.1, NULL, 14411, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkProgressClass,392, 14414, 6, 3.1, NULL, 14411, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkProgressClass,776, 14414, 9, 3.1, NULL, 14411, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkProgressClass,392, 14414, 10, 3.1, NULL, 14411, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkProgressClass,776, 14414, 12, 3.1, NULL, 14411, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14411,NULL);\n",architecture,14414,0);
 Msg("Find size of GtkProgressClass (14414)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkModuleInitFunc,4, 14416, 2, 3.1, NULL, 14415, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkModuleInitFunc,8, 14416, 11, 3.1, NULL, 14415, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkModuleInitFunc,8, 14416, 3, 3.1, NULL, 14415, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkModuleInitFunc,4, 14416, 6, 3.1, NULL, 14415, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkModuleInitFunc,8, 14416, 9, 3.1, NULL, 14415, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkModuleInitFunc,4, 14416, 10, 3.1, NULL, 14415, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkModuleInitFunc,8, 14416, 12, 3.1, NULL, 14415, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14415,NULL);\n",architecture,14416,0);
 Msg("Find size of GtkModuleInitFunc (14416)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFileChooserDialogClass,480, 14418, 2, 3.1, NULL, 14417, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFileChooserDialogClass,952, 14418, 11, 3.1, NULL, 14417, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFileChooserDialogClass,952, 14418, 3, 3.1, NULL, 14417, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFileChooserDialogClass,480, 14418, 6, 3.1, NULL, 14417, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFileChooserDialogClass,952, 14418, 9, 3.1, NULL, 14417, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFileChooserDialogClass,480, 14418, 10, 3.1, NULL, 14417, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFileChooserDialogClass,952, 14418, 12, 3.1, NULL, 14417, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14417,NULL);\n",architecture,14418,0);
 Msg("Find size of GtkFileChooserDialogClass (14418)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkVScrollbarClass,420, 14420, 2, 3.1, NULL, 14419, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkVScrollbarClass,832, 14420, 11, 3.1, NULL, 14419, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkVScrollbarClass,832, 14420, 3, 3.1, NULL, 14419, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkVScrollbarClass,420, 14420, 6, 3.1, NULL, 14419, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkVScrollbarClass,832, 14420, 9, 3.1, NULL, 14419, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkVScrollbarClass,420, 14420, 10, 3.1, NULL, 14419, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkVScrollbarClass,832, 14420, 12, 3.1, NULL, 14419, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14419,NULL);\n",architecture,14420,0);
 Msg("Find size of GtkVScrollbarClass (14420)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTableClass,416, 14422, 2, 3.1, NULL, 14421, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTableClass,824, 14422, 11, 3.1, NULL, 14421, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTableClass,824, 14422, 3, 3.1, NULL, 14421, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTableClass,416, 14422, 6, 3.1, NULL, 14421, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTableClass,824, 14422, 9, 3.1, NULL, 14421, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTableClass,416, 14422, 10, 3.1, NULL, 14421, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTableClass,824, 14422, 12, 3.1, NULL, 14421, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14421,NULL);\n",architecture,14422,0);
 Msg("Find size of GtkTableClass (14422)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFontButtonClass,476, 14425, 2, 3.1, NULL, 14423, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFontButtonClass,944, 14425, 11, 3.1, NULL, 14423, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFontButtonClass,944, 14425, 3, 3.1, NULL, 14423, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFontButtonClass,476, 14425, 6, 3.1, NULL, 14423, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFontButtonClass,944, 14425, 9, 3.1, NULL, 14423, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFontButtonClass,476, 14425, 10, 3.1, NULL, 14423, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFontButtonClass,944, 14425, 12, 3.1, NULL, 14423, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14423,NULL);\n",architecture,14425,0);
 Msg("Find size of GtkFontButtonClass (14425)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkHSeparatorClass,364, 14427, 2, 3.1, NULL, 14426, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkHSeparatorClass,720, 14427, 11, 3.1, NULL, 14426, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkHSeparatorClass,720, 14427, 3, 3.1, NULL, 14426, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkHSeparatorClass,364, 14427, 6, 3.1, NULL, 14426, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkHSeparatorClass,720, 14427, 9, 3.1, NULL, 14426, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkHSeparatorClass,364, 14427, 10, 3.1, NULL, 14426, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkHSeparatorClass,720, 14427, 12, 3.1, NULL, 14426, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14426,NULL);\n",architecture,14427,0);
 Msg("Find size of GtkHSeparatorClass (14427)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkColorSelectionDialogClass,496, 14429, 2, 3.1, NULL, 14428, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkColorSelectionDialogClass,984, 14429, 11, 3.1, NULL, 14428, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkColorSelectionDialogClass,984, 14429, 3, 3.1, NULL, 14428, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkColorSelectionDialogClass,496, 14429, 6, 3.1, NULL, 14428, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkColorSelectionDialogClass,984, 14429, 9, 3.1, NULL, 14428, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkColorSelectionDialogClass,496, 14429, 10, 3.1, NULL, 14428, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkColorSelectionDialogClass,984, 14429, 12, 3.1, NULL, 14428, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14428,NULL);\n",architecture,14429,0);
 Msg("Find size of GtkColorSelectionDialogClass (14429)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkColorButtonClass,476, 14432, 2, 3.1, NULL, 14430, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkColorButtonClass,944, 14432, 11, 3.1, NULL, 14430, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkColorButtonClass,944, 14432, 3, 3.1, NULL, 14430, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkColorButtonClass,476, 14432, 6, 3.1, NULL, 14430, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkColorButtonClass,944, 14432, 9, 3.1, NULL, 14430, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkColorButtonClass,476, 14432, 10, 3.1, NULL, 14430, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkColorButtonClass,944, 14432, 12, 3.1, NULL, 14430, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14430,NULL);\n",architecture,14432,0);
 Msg("Find size of GtkColorButtonClass (14432)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkMenuBar,92, 14434, 2, 3.1, NULL, 14433, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkMenuBar,152, 14434, 11, 3.1, NULL, 14433, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkMenuBar,152, 14434, 3, 3.1, NULL, 14433, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkMenuBar,92, 14434, 6, 3.1, NULL, 14433, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkMenuBar,152, 14434, 9, 3.1, NULL, 14433, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkMenuBar,92, 14434, 10, 3.1, NULL, 14433, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkMenuBar,152, 14434, 12, 3.1, NULL, 14433, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14433,NULL);\n",architecture,14434,0);
 Msg("Find size of GtkMenuBar (14434)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkMenuBarClass,480, 14436, 2, 3.1, NULL, 14435, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkMenuBarClass,952, 14436, 11, 3.1, NULL, 14435, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkMenuBarClass,952, 14436, 3, 3.1, NULL, 14435, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkMenuBarClass,480, 14436, 6, 3.1, NULL, 14435, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkMenuBarClass,952, 14436, 9, 3.1, NULL, 14435, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkMenuBarClass,480, 14436, 10, 3.1, NULL, 14435, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkMenuBarClass,952, 14436, 12, 3.1, NULL, 14435, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14435,NULL);\n",architecture,14436,0);
 Msg("Find size of GtkMenuBarClass (14436)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkColorSelectionDialog,176, 14438, 2, 3.1, NULL, 14437, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkColorSelectionDialog,296, 14438, 11, 3.1, NULL, 14437, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkColorSelectionDialog,296, 14438, 3, 3.1, NULL, 14437, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkColorSelectionDialog,176, 14438, 6, 3.1, NULL, 14437, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkColorSelectionDialog,296, 14438, 9, 3.1, NULL, 14437, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkColorSelectionDialog,176, 14438, 10, 3.1, NULL, 14437, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkColorSelectionDialog,296, 14438, 12, 3.1, NULL, 14437, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14437,NULL);\n",architecture,14438,0);
 Msg("Find size of GtkColorSelectionDialog (14438)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkStatusbarClass,444, 14441, 2, 3.1, NULL, 14439, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkStatusbarClass,880, 14441, 11, 3.1, NULL, 14439, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkStatusbarClass,880, 14441, 3, 3.1, NULL, 14439, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkStatusbarClass,444, 14441, 6, 3.1, NULL, 14439, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkStatusbarClass,880, 14441, 9, 3.1, NULL, 14439, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkStatusbarClass,444, 14441, 10, 3.1, NULL, 14439, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkStatusbarClass,880, 14441, 12, 3.1, NULL, 14439, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14439,NULL);\n",architecture,14441,0);
 Msg("Find size of GtkStatusbarClass (14441)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkSeparatorMenuItem,96, 14443, 2, 3.1, NULL, 14442, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkSeparatorMenuItem,160, 14443, 11, 3.1, NULL, 14442, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkSeparatorMenuItem,160, 14443, 3, 3.1, NULL, 14442, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkSeparatorMenuItem,96, 14443, 6, 3.1, NULL, 14442, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkSeparatorMenuItem,160, 14443, 9, 3.1, NULL, 14442, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkSeparatorMenuItem,96, 14443, 10, 3.1, NULL, 14442, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkSeparatorMenuItem,160, 14443, 12, 3.1, NULL, 14442, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14442,NULL);\n",architecture,14443,0);
 Msg("Find size of GtkSeparatorMenuItem (14443)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAboutDialogClass,496, 14445, 2, 3.1, NULL, 14444, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAboutDialogClass,984, 14445, 11, 3.1, NULL, 14444, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAboutDialogClass,984, 14445, 3, 3.1, NULL, 14444, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAboutDialogClass,496, 14445, 6, 3.1, NULL, 14444, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAboutDialogClass,984, 14445, 9, 3.1, NULL, 14444, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAboutDialogClass,496, 14445, 10, 3.1, NULL, 14444, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAboutDialogClass,984, 14445, 12, 3.1, NULL, 14444, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14444,NULL);\n",architecture,14445,0);
 Msg("Find size of GtkAboutDialogClass (14445)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkListStoreClass,84, 14447, 2, 3.1, NULL, 14446, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkListStoreClass,168, 14447, 11, 3.1, NULL, 14446, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkListStoreClass,168, 14447, 3, 3.1, NULL, 14446, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkListStoreClass,84, 14447, 6, 3.1, NULL, 14446, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkListStoreClass,168, 14447, 9, 3.1, NULL, 14446, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkListStoreClass,84, 14447, 10, 3.1, NULL, 14446, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkListStoreClass,168, 14447, 12, 3.1, NULL, 14446, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14446,NULL);\n",architecture,14447,0);
 Msg("Find size of GtkListStoreClass (14447)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFileChooserButtonClass,448, 14449, 2, 3.1, NULL, 14448, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFileChooserButtonClass,888, 14449, 11, 3.1, NULL, 14448, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFileChooserButtonClass,888, 14449, 3, 3.1, NULL, 14448, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFileChooserButtonClass,448, 14449, 6, 3.1, NULL, 14448, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFileChooserButtonClass,888, 14449, 9, 3.1, NULL, 14448, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFileChooserButtonClass,448, 14449, 10, 3.1, NULL, 14448, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFileChooserButtonClass,888, 14449, 12, 3.1, NULL, 14448, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14448,NULL);\n",architecture,14449,0);
 Msg("Find size of GtkFileChooserButtonClass (14449)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkToolbarSpaceStyle,4, 14451, 2, 3.1, NULL, 14450, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkToolbarSpaceStyle,4, 14451, 11, 3.1, NULL, 14450, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkToolbarSpaceStyle,4, 14451, 3, 3.1, NULL, 14450, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkToolbarSpaceStyle,4, 14451, 6, 3.1, NULL, 14450, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkToolbarSpaceStyle,4, 14451, 9, 3.1, NULL, 14450, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkToolbarSpaceStyle,4, 14451, 10, 3.1, NULL, 14450, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkToolbarSpaceStyle,4, 14451, 12, 3.1, NULL, 14450, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14450,NULL);\n",architecture,14451,0);
 Msg("Find size of GtkToolbarSpaceStyle (14451)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkMenuClass,480, 14453, 2, 3.1, NULL, 14452, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkMenuClass,952, 14453, 11, 3.1, NULL, 14452, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkMenuClass,952, 14453, 3, 3.1, NULL, 14452, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkMenuClass,480, 14453, 6, 3.1, NULL, 14452, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkMenuClass,952, 14453, 9, 3.1, NULL, 14452, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkMenuClass,480, 14453, 10, 3.1, NULL, 14452, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkMenuClass,952, 14453, 12, 3.1, NULL, 14452, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14452,NULL);\n",architecture,14453,0);
 Msg("Find size of GtkMenuClass (14453)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkHScale,144, 14455, 2, 3.1, NULL, 14454, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkHScale,200, 14455, 11, 3.1, NULL, 14454, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkHScale,200, 14455, 3, 3.1, NULL, 14454, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkHScale,144, 14455, 6, 3.1, NULL, 14454, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkHScale,200, 14455, 9, 3.1, NULL, 14454, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkHScale,144, 14455, 10, 3.1, NULL, 14454, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkHScale,200, 14455, 12, 3.1, NULL, 14454, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14454,NULL);\n",architecture,14455,0);
 Msg("Find size of GtkHScale (14455)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkGammaCurveClass,432, 14457, 2, 3.1, NULL, 14456, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkGammaCurveClass,856, 14457, 11, 3.1, NULL, 14456, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkGammaCurveClass,856, 14457, 3, 3.1, NULL, 14456, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkGammaCurveClass,432, 14457, 6, 3.1, NULL, 14456, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkGammaCurveClass,856, 14457, 9, 3.1, NULL, 14456, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkGammaCurveClass,432, 14457, 10, 3.1, NULL, 14456, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkGammaCurveClass,856, 14457, 12, 3.1, NULL, 14456, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14456,NULL);\n",architecture,14457,0);
 Msg("Find size of GtkGammaCurveClass (14457)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCellRendererComboClass,132, 14459, 2, 3.1, NULL, 14458, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCellRendererComboClass,264, 14459, 11, 3.1, NULL, 14458, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCellRendererComboClass,264, 14459, 3, 3.1, NULL, 14458, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCellRendererComboClass,132, 14459, 6, 3.1, NULL, 14458, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCellRendererComboClass,264, 14459, 9, 3.1, NULL, 14458, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCellRendererComboClass,132, 14459, 10, 3.1, NULL, 14458, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCellRendererComboClass,264, 14459, 12, 3.1, NULL, 14458, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14458,NULL);\n",architecture,14459,0);
 Msg("Find size of GtkCellRendererComboClass (14459)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTearoffMenuItem,100, 14461, 2, 3.1, NULL, 14460, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTearoffMenuItem,168, 14461, 11, 3.1, NULL, 14460, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTearoffMenuItem,168, 14461, 3, 3.1, NULL, 14460, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTearoffMenuItem,100, 14461, 6, 3.1, NULL, 14460, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTearoffMenuItem,168, 14461, 9, 3.1, NULL, 14460, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTearoffMenuItem,100, 14461, 10, 3.1, NULL, 14460, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTearoffMenuItem,168, 14461, 12, 3.1, NULL, 14460, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14460,NULL);\n",architecture,14461,0);
 Msg("Find size of GtkTearoffMenuItem (14461)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkNotebookClass,452, 14468, 2, 3.1, NULL, 14462, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkNotebookClass,896, 14468, 11, 3.1, NULL, 14462, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkNotebookClass,896, 14468, 3, 3.1, NULL, 14462, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkNotebookClass,452, 14468, 6, 3.1, NULL, 14462, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkNotebookClass,896, 14468, 9, 3.1, NULL, 14462, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkNotebookClass,452, 14468, 10, 3.1, NULL, 14462, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkNotebookClass,896, 14468, 12, 3.1, NULL, 14462, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14462,NULL);\n",architecture,14468,0);
 Msg("Find size of GtkNotebookClass (14468)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkImageMenuItemClass,480, 14470, 2, 3.1, NULL, 14469, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkImageMenuItemClass,952, 14470, 11, 3.1, NULL, 14469, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkImageMenuItemClass,952, 14470, 3, 3.1, NULL, 14469, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkImageMenuItemClass,480, 14470, 6, 3.1, NULL, 14469, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkImageMenuItemClass,952, 14470, 9, 3.1, NULL, 14469, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkImageMenuItemClass,480, 14470, 10, 3.1, NULL, 14469, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkImageMenuItemClass,952, 14470, 12, 3.1, NULL, 14469, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14469,NULL);\n",architecture,14470,0);
 Msg("Find size of GtkImageMenuItemClass (14470)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTooltipsClass,96, 14472, 2, 3.1, NULL, 14471, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTooltipsClass,192, 14472, 11, 3.1, NULL, 14471, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTooltipsClass,192, 14472, 3, 3.1, NULL, 14471, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTooltipsClass,96, 14472, 6, 3.1, NULL, 14471, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTooltipsClass,192, 14472, 9, 3.1, NULL, 14471, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTooltipsClass,96, 14472, 10, 3.1, NULL, 14471, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTooltipsClass,192, 14472, 12, 3.1, NULL, 14471, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14471,NULL);\n",architecture,14472,0);
 Msg("Find size of GtkTooltipsClass (14472)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTreeViewClass,500, 14483, 2, 3.1, NULL, 14473, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTreeViewClass,992, 14483, 11, 3.1, NULL, 14473, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTreeViewClass,992, 14483, 3, 3.1, NULL, 14473, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTreeViewClass,500, 14483, 6, 3.1, NULL, 14473, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTreeViewClass,992, 14483, 9, 3.1, NULL, 14473, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTreeViewClass,500, 14483, 10, 3.1, NULL, 14473, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTreeViewClass,992, 14483, 12, 3.1, NULL, 14473, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14473,NULL);\n",architecture,14483,0);
 Msg("Find size of GtkTreeViewClass (14483)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFileChooserWidgetClass,416, 14485, 2, 3.1, NULL, 14484, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFileChooserWidgetClass,824, 14485, 11, 3.1, NULL, 14484, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFileChooserWidgetClass,824, 14485, 3, 3.1, NULL, 14484, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFileChooserWidgetClass,416, 14485, 6, 3.1, NULL, 14484, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFileChooserWidgetClass,824, 14485, 9, 3.1, NULL, 14484, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFileChooserWidgetClass,416, 14485, 10, 3.1, NULL, 14484, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFileChooserWidgetClass,824, 14485, 12, 3.1, NULL, 14484, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14484,NULL);\n",architecture,14485,0);
 Msg("Find size of GtkFileChooserWidgetClass (14485)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTearoffMenuItemClass,496, 14487, 2, 3.1, NULL, 14486, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTearoffMenuItemClass,984, 14487, 11, 3.1, NULL, 14486, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTearoffMenuItemClass,984, 14487, 3, 3.1, NULL, 14486, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTearoffMenuItemClass,496, 14487, 6, 3.1, NULL, 14486, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTearoffMenuItemClass,984, 14487, 9, 3.1, NULL, 14486, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTearoffMenuItemClass,496, 14487, 10, 3.1, NULL, 14486, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTearoffMenuItemClass,984, 14487, 12, 3.1, NULL, 14486, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14486,NULL);\n",architecture,14487,0);
 Msg("Find size of GtkTearoffMenuItemClass (14487)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkRadioButtonClass,512, 14490, 2, 3.1, NULL, 14488, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkRadioButtonClass,1016, 14490, 11, 3.1, NULL, 14488, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkRadioButtonClass,1016, 14490, 3, 3.1, NULL, 14488, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkRadioButtonClass,512, 14490, 6, 3.1, NULL, 14488, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkRadioButtonClass,1016, 14490, 9, 3.1, NULL, 14488, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkRadioButtonClass,512, 14490, 10, 3.1, NULL, 14488, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkRadioButtonClass,1016, 14490, 12, 3.1, NULL, 14488, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14488,NULL);\n",architecture,14490,0);
 Msg("Find size of GtkRadioButtonClass (14490)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAdjustmentClass,104, 14493, 2, 3.1, NULL, 14491, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAdjustmentClass,208, 14493, 11, 3.1, NULL, 14491, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAdjustmentClass,208, 14493, 3, 3.1, NULL, 14491, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAdjustmentClass,104, 14493, 6, 3.1, NULL, 14491, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAdjustmentClass,208, 14493, 9, 3.1, NULL, 14491, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAdjustmentClass,104, 14493, 10, 3.1, NULL, 14491, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAdjustmentClass,208, 14493, 12, 3.1, NULL, 14491, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14491,NULL);\n",architecture,14493,0);
 Msg("Find size of GtkAdjustmentClass (14493)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkHPaned,144, 14495, 2, 3.1, NULL, 14494, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkHPaned,216, 14495, 11, 3.1, NULL, 14494, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkHPaned,216, 14495, 3, 3.1, NULL, 14494, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkHPaned,144, 14495, 6, 3.1, NULL, 14494, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkHPaned,216, 14495, 9, 3.1, NULL, 14494, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkHPaned,144, 14495, 10, 3.1, NULL, 14494, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkHPaned,216, 14495, 12, 3.1, NULL, 14494, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14494,NULL);\n",architecture,14495,0);
 Msg("Find size of GtkHPaned (14495)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkRadioActionClass,152, 14498, 2, 3.1, NULL, 14496, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkRadioActionClass,304, 14498, 11, 3.1, NULL, 14496, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkRadioActionClass,304, 14498, 3, 3.1, NULL, 14496, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkRadioActionClass,152, 14498, 6, 3.1, NULL, 14496, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkRadioActionClass,304, 14498, 9, 3.1, NULL, 14496, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkRadioActionClass,152, 14498, 10, 3.1, NULL, 14496, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkRadioActionClass,304, 14498, 12, 3.1, NULL, 14496, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14496,NULL);\n",architecture,14498,0);
 Msg("Find size of GtkRadioActionClass (14498)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTextTagClass,88, 14501, 2, 3.1, NULL, 14499, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTextTagClass,176, 14501, 11, 3.1, NULL, 14499, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTextTagClass,176, 14501, 3, 3.1, NULL, 14499, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTextTagClass,88, 14501, 6, 3.1, NULL, 14499, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTextTagClass,176, 14501, 9, 3.1, NULL, 14499, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTextTagClass,88, 14501, 10, 3.1, NULL, 14499, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTextTagClass,176, 14501, 12, 3.1, NULL, 14499, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14499,NULL);\n",architecture,14501,0);
 Msg("Find size of GtkTextTagClass (14501)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkIconViewClass,452, 14508, 2, 3.1, NULL, 14502, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkIconViewClass,896, 14508, 11, 3.1, NULL, 14502, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkIconViewClass,896, 14508, 3, 3.1, NULL, 14502, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkIconViewClass,452, 14508, 6, 3.1, NULL, 14502, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkIconViewClass,896, 14508, 9, 3.1, NULL, 14502, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkIconViewClass,452, 14508, 10, 3.1, NULL, 14502, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkIconViewClass,896, 14508, 12, 3.1, NULL, 14502, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14502,NULL);\n",architecture,14508,0);
 Msg("Find size of GtkIconViewClass (14508)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkProgressBarClass,408, 14510, 2, 3.1, NULL, 14509, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkProgressBarClass,808, 14510, 11, 3.1, NULL, 14509, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkProgressBarClass,808, 14510, 3, 3.1, NULL, 14509, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkProgressBarClass,408, 14510, 6, 3.1, NULL, 14509, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkProgressBarClass,808, 14510, 9, 3.1, NULL, 14509, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkProgressBarClass,408, 14510, 10, 3.1, NULL, 14509, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkProgressBarClass,808, 14510, 12, 3.1, NULL, 14509, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14509,NULL);\n",architecture,14510,0);
 Msg("Find size of GtkProgressBarClass (14510)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAspectFrameClass,420, 14512, 2, 3.1, NULL, 14511, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAspectFrameClass,832, 14512, 11, 3.1, NULL, 14511, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAspectFrameClass,832, 14512, 3, 3.1, NULL, 14511, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAspectFrameClass,420, 14512, 6, 3.1, NULL, 14511, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAspectFrameClass,832, 14512, 9, 3.1, NULL, 14511, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAspectFrameClass,420, 14512, 10, 3.1, NULL, 14511, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAspectFrameClass,832, 14512, 12, 3.1, NULL, 14511, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14511,NULL);\n",architecture,14512,0);
 Msg("Find size of GtkAspectFrameClass (14512)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkGammaCurve,116, 14515, 2, 3.1, NULL, 14513, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkGammaCurve,208, 14515, 11, 3.1, NULL, 14513, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkGammaCurve,208, 14515, 3, 3.1, NULL, 14513, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkGammaCurve,116, 14515, 6, 3.1, NULL, 14513, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkGammaCurve,208, 14515, 9, 3.1, NULL, 14513, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkGammaCurve,116, 14515, 10, 3.1, NULL, 14513, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkGammaCurve,208, 14515, 12, 3.1, NULL, 14513, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14513,NULL);\n",architecture,14515,0);
 Msg("Find size of GtkGammaCurve (14515)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAccelGroupActivate,4, 14517, 2, 3.1, NULL, 14516, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAccelGroupActivate,8, 14517, 3, 3.1, NULL, 14516, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAccelGroupActivate,4, 14517, 6, 3.1, NULL, 14516, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAccelGroupActivate,8, 14517, 9, 3.1, NULL, 14516, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAccelGroupActivate,4, 14517, 10, 3.1, NULL, 14516, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAccelGroupActivate,8, 14517, 12, 3.1, NULL, 14516, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAccelGroupActivate,8, 14517, 11, 3.1, NULL, 14516, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14516,NULL);\n",architecture,14517,0);
 Msg("Find size of GtkAccelGroupActivate (14517)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckEnum("GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID",GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID,-1,47621);
 CheckEnum("GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID",GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID,-2,47622);
-#elif __x86_64__
+#elif defined __x86_64__
 CheckEnum("GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID",GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID,-1,47621);
 CheckEnum("GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID",GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID,-2,47622);
-#elif __ia64__
+#elif defined __ia64__
 CheckEnum("GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID",GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID,-1,47621);
 CheckEnum("GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID",GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID,-2,47622);
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckEnum("GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID",GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID,-1,47621);
 CheckEnum("GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID",GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID,-2,47622);
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckEnum("GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID",GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID,-1,47621);
 CheckEnum("GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID",GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID,-2,47622);
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckEnum("GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID",GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID,-1,47621);
 CheckEnum("GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID",GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID,-2,47622);
-#elif __s390x__
+#elif defined __s390x__
 CheckEnum("GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID",GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID,-1,47621);
 CheckEnum("GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID",GTK_TREE_SORTABLE_UNSORTED_SORT_COLUMN_ID,-2,47622);
 #else
@@ -14145,228 +14145,228 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 Msg("Find size of anonymous-gtk.h.types-2 (14518)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkIMPreeditStyle,4, 14520, 2, 3.1, NULL, 14519, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkIMPreeditStyle,4, 14520, 11, 3.1, NULL, 14519, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkIMPreeditStyle,4, 14520, 3, 3.1, NULL, 14519, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkIMPreeditStyle,4, 14520, 6, 3.1, NULL, 14519, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkIMPreeditStyle,4, 14520, 9, 3.1, NULL, 14519, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkIMPreeditStyle,4, 14520, 10, 3.1, NULL, 14519, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkIMPreeditStyle,4, 14520, 12, 3.1, NULL, 14519, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14519,NULL);\n",architecture,14520,0);
 Msg("Find size of GtkIMPreeditStyle (14520)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkDebugFlag,4, 14522, 2, 3.1, NULL, 14521, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkDebugFlag,4, 14522, 11, 3.1, NULL, 14521, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkDebugFlag,4, 14522, 3, 3.1, NULL, 14521, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkDebugFlag,4, 14522, 6, 3.1, NULL, 14521, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkDebugFlag,4, 14522, 9, 3.1, NULL, 14521, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkDebugFlag,4, 14522, 10, 3.1, NULL, 14521, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkDebugFlag,4, 14522, 12, 3.1, NULL, 14521, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14521,NULL);\n",architecture,14522,0);
 Msg("Find size of GtkDebugFlag (14522)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkCellRendererMode,4, 14524, 2, 3.1, NULL, 14523, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkCellRendererMode,4, 14524, 11, 3.1, NULL, 14523, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkCellRendererMode,4, 14524, 3, 3.1, NULL, 14523, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkCellRendererMode,4, 14524, 6, 3.1, NULL, 14523, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkCellRendererMode,4, 14524, 9, 3.1, NULL, 14523, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkCellRendererMode,4, 14524, 10, 3.1, NULL, 14523, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkCellRendererMode,4, 14524, 12, 3.1, NULL, 14523, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14523,NULL);\n",architecture,14524,0);
 Msg("Find size of GtkCellRendererMode (14524)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkIconThemeError,4, 14526, 2, 3.1, NULL, 14525, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkIconThemeError,4, 14526, 11, 3.1, NULL, 14525, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkIconThemeError,4, 14526, 3, 3.1, NULL, 14525, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkIconThemeError,4, 14526, 6, 3.1, NULL, 14525, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkIconThemeError,4, 14526, 9, 3.1, NULL, 14525, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkIconThemeError,4, 14526, 10, 3.1, NULL, 14525, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkIconThemeError,4, 14526, 12, 3.1, NULL, 14525, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14525,NULL);\n",architecture,14526,0);
 Msg("Find size of GtkIconThemeError (14526)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkResponseType,4, 14528, 2, 3.1, NULL, 14527, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkResponseType,4, 14528, 11, 3.1, NULL, 14527, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkResponseType,4, 14528, 3, 3.1, NULL, 14527, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkResponseType,4, 14528, 6, 3.1, NULL, 14527, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkResponseType,4, 14528, 9, 3.1, NULL, 14527, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkResponseType,4, 14528, 10, 3.1, NULL, 14527, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkResponseType,4, 14528, 12, 3.1, NULL, 14527, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14527,NULL);\n",architecture,14528,0);
 Msg("Find size of GtkResponseType (14528)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkTargetFlags,4, 14530, 2, 3.1, NULL, 14529, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkTargetFlags,4, 14530, 11, 3.1, NULL, 14529, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkTargetFlags,4, 14530, 3, 3.1, NULL, 14529, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkTargetFlags,4, 14530, 6, 3.1, NULL, 14529, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkTargetFlags,4, 14530, 9, 3.1, NULL, 14529, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkTargetFlags,4, 14530, 10, 3.1, NULL, 14529, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkTargetFlags,4, 14530, 12, 3.1, NULL, 14529, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14529,NULL);\n",architecture,14530,0);
 Msg("Find size of GtkTargetFlags (14530)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkAnchorType,4, 14532, 2, 3.1, NULL, 14531, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkAnchorType,4, 14532, 11, 3.1, NULL, 14531, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkAnchorType,4, 14532, 3, 3.1, NULL, 14531, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkAnchorType,4, 14532, 6, 3.1, NULL, 14531, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkAnchorType,4, 14532, 9, 3.1, NULL, 14531, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkAnchorType,4, 14532, 10, 3.1, NULL, 14531, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkAnchorType,4, 14532, 12, 3.1, NULL, 14531, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14531,NULL);\n",architecture,14532,0);
 Msg("Find size of GtkAnchorType (14532)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkIMStatusStyle,4, 14534, 2, 3.1, NULL, 14533, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkIMStatusStyle,4, 14534, 11, 3.1, NULL, 14533, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkIMStatusStyle,4, 14534, 3, 3.1, NULL, 14533, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkIMStatusStyle,4, 14534, 6, 3.1, NULL, 14533, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkIMStatusStyle,4, 14534, 9, 3.1, NULL, 14533, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkIMStatusStyle,4, 14534, 10, 3.1, NULL, 14533, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkIMStatusStyle,4, 14534, 12, 3.1, NULL, 14533, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14533,NULL);\n",architecture,14534,0);
 Msg("Find size of GtkIMStatusStyle (14534)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkFileChooserError,4, 14536, 2, 3.1, NULL, 14535, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkFileChooserError,4, 14536, 11, 3.1, NULL, 14535, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkFileChooserError,4, 14536, 3, 3.1, NULL, 14535, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkFileChooserError,4, 14536, 6, 3.1, NULL, 14535, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkFileChooserError,4, 14536, 9, 3.1, NULL, 14535, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkFileChooserError,4, 14536, 10, 3.1, NULL, 14535, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkFileChooserError,4, 14536, 12, 3.1, NULL, 14535, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14535,NULL);\n",architecture,14536,0);
 Msg("Find size of GtkFileChooserError (14536)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkObjectFlags,4, 14538, 2, 3.1, NULL, 14537, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkObjectFlags,4, 14538, 11, 3.1, NULL, 14537, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkObjectFlags,4, 14538, 3, 3.1, NULL, 14537, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkObjectFlags,4, 14538, 6, 3.1, NULL, 14537, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkObjectFlags,4, 14538, 9, 3.1, NULL, 14537, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkObjectFlags,4, 14538, 10, 3.1, NULL, 14537, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkObjectFlags,4, 14538, 12, 3.1, NULL, 14537, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14537,NULL);\n",architecture,14538,0);
 Msg("Find size of GtkObjectFlags (14538)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkRcTokenType,4, 14540, 2, 3.1, NULL, 14539, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkRcTokenType,4, 14540, 11, 3.1, NULL, 14539, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkRcTokenType,4, 14540, 3, 3.1, NULL, 14539, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkRcTokenType,4, 14540, 6, 3.1, NULL, 14539, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkRcTokenType,4, 14540, 9, 3.1, NULL, 14539, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkRcTokenType,4, 14540, 10, 3.1, NULL, 14539, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkRcTokenType,4, 14540, 12, 3.1, NULL, 14539, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14539,NULL);\n",architecture,14540,0);
 Msg("Find size of GtkRcTokenType (14540)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(GtkWidgetFlags,4, 14542, 2, 3.1, NULL, 14541, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(GtkWidgetFlags,4, 14542, 11, 3.1, NULL, 14541, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(GtkWidgetFlags,4, 14542, 3, 3.1, NULL, 14541, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GtkWidgetFlags,4, 14542, 6, 3.1, NULL, 14541, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(GtkWidgetFlags,4, 14542, 9, 3.1, NULL, 14541, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GtkWidgetFlags,4, 14542, 10, 3.1, NULL, 14541, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(GtkWidgetFlags,4, 14542, 12, 3.1, NULL, 14541, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14541, NULL);\n",architecture,14542,0);

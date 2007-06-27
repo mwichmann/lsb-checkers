@@ -67,38 +67,38 @@ printf("Checking data structures in libxml2/libxml/xinclude.h\n");
 /* No test for XINCLUDE_PARSE_XPOINTER */
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlXIncludeCtxt,0, 14671, 2, 3.1, NULL, 14670, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlXIncludeCtxt,0, 14671, 11, 3.1, NULL, 14670, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlXIncludeCtxt,0, 14671, 3, 3.1, NULL, 14670, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlXIncludeCtxt,0, 14671, 6, 3.1, NULL, 14670, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlXIncludeCtxt,0, 14671, 9, 3.1, NULL, 14670, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlXIncludeCtxt,0, 14671, 10, 3.1, NULL, 14670, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlXIncludeCtxt,0, 14671, 12, 3.1, NULL, 14670, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14670,NULL);\n",architecture,14671,0);
 Msg("Find size of xmlXIncludeCtxt (14671)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlXIncludeCtxtPtr,4, 14673, 2, 3.1, NULL, 14672, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlXIncludeCtxtPtr,8, 14673, 11, 3.1, NULL, 14672, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlXIncludeCtxtPtr,8, 14673, 3, 3.1, NULL, 14672, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlXIncludeCtxtPtr,4, 14673, 6, 3.1, NULL, 14672, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlXIncludeCtxtPtr,8, 14673, 9, 3.1, NULL, 14672, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlXIncludeCtxtPtr,4, 14673, 10, 3.1, NULL, 14672, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlXIncludeCtxtPtr,8, 14673, 12, 3.1, NULL, 14672, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14672, NULL);\n",architecture,14673,0);

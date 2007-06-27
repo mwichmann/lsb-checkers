@@ -105,25 +105,25 @@ cnt++;
 
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#elif __x86_64__
-#elif __powerpc64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __s390x__
+#elif defined __x86_64__
+#elif defined __powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,6982,0);
 Msg("Find size of sembuf (6982)\n");
 #endif
 
-#if __ia64__
-#elif __i386__
-#elif __s390__ && !__s390x__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __ia64__
+#elif defined __i386__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #endif
 
 extern int semctl_db(int, int, int, ...);
