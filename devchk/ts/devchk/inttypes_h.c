@@ -27,19 +27,19 @@ Msg("Checking data structures in inttypes.h\n");
 #endif
 
 printf("Checking data structures in inttypes.h\n");
-#if __i386__
+#if defined __i386__
 CheckTypeSize(imaxdiv_t,16, 6898, 2, 1.0, NULL, 6897, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(imaxdiv_t,16, 6898, 3, 1.3, NULL, 6897, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(imaxdiv_t,16, 6898, 6, 1.2, NULL, 6897, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(imaxdiv_t,16, 6898, 10, 1.3, NULL, 6897, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(imaxdiv_t,16, 6898, 9, 2.0, NULL, 6897, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(imaxdiv_t,16, 6898, 12, 1.3, NULL, 6897, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(imaxdiv_t,16, 6898, 11, 2.0, NULL, 6897, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6897, NULL);\n",architecture,6898,0);

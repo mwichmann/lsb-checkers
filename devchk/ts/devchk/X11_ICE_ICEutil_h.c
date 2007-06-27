@@ -28,38 +28,38 @@ Msg("Checking data structures in X11/ICE/ICEutil.h\n");
 #endif
 
 printf("Checking data structures in X11/ICE/ICEutil.h\n");
-#if __i386__
+#if defined __i386__
 CheckTypeSize(IceAuthFileEntry,28, 8228, 2, 1.2, NULL, 8227, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(IceAuthFileEntry,56, 8228, 3, 1.3, NULL, 8227, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(IceAuthFileEntry,28, 8228, 6, 1.2, NULL, 8227, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(IceAuthFileEntry,28, 8228, 10, 1.3, NULL, 8227, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(IceAuthFileEntry,56, 8228, 9, 2.0, NULL, 8227, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(IceAuthFileEntry,56, 8228, 12, 1.3, NULL, 8227, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(IceAuthFileEntry,56, 8228, 11, 2.0, NULL, 8227, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8227,NULL);\n",architecture,8228,0);
 Msg("Find size of IceAuthFileEntry (8228)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(IceAuthDataEntry,20, 8230, 2, 1.2, NULL, 8229, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(IceAuthDataEntry,40, 8230, 3, 1.3, NULL, 8229, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(IceAuthDataEntry,20, 8230, 6, 1.2, NULL, 8229, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(IceAuthDataEntry,20, 8230, 10, 1.3, NULL, 8229, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(IceAuthDataEntry,40, 8230, 9, 2.0, NULL, 8229, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(IceAuthDataEntry,40, 8230, 12, 1.3, NULL, 8229, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(IceAuthDataEntry,40, 8230, 11, 2.0, NULL, 8229, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8229, NULL);\n",architecture,8230,0);

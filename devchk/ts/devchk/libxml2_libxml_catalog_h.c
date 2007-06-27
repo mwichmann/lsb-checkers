@@ -36,76 +36,76 @@ printf("Checking data structures in libxml2/libxml/catalog.h\n");
 /* No test for XML_CATALOG_PI */
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlCatalogAllow,4, 15069, 2, 3.1, NULL, 15068, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlCatalogAllow,4, 15069, 11, 3.1, NULL, 15068, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlCatalogAllow,4, 15069, 3, 3.1, NULL, 15068, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlCatalogAllow,4, 15069, 6, 3.1, NULL, 15068, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlCatalogAllow,4, 15069, 9, 3.1, NULL, 15068, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlCatalogAllow,4, 15069, 10, 3.1, NULL, 15068, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlCatalogAllow,4, 15069, 12, 3.1, NULL, 15068, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15068,NULL);\n",architecture,15069,0);
 Msg("Find size of xmlCatalogAllow (15069)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlCatalog,0, 15071, 2, 3.1, NULL, 15070, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlCatalog,0, 15071, 11, 3.1, NULL, 15070, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlCatalog,0, 15071, 3, 3.1, NULL, 15070, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlCatalog,0, 15071, 6, 3.1, NULL, 15070, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlCatalog,0, 15071, 9, 3.1, NULL, 15070, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlCatalog,0, 15071, 10, 3.1, NULL, 15070, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlCatalog,0, 15071, 12, 3.1, NULL, 15070, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15070,NULL);\n",architecture,15071,0);
 Msg("Find size of xmlCatalog (15071)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlCatalogPtr,4, 15073, 2, 3.1, NULL, 15072, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlCatalogPtr,8, 15073, 11, 3.1, NULL, 15072, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlCatalogPtr,8, 15073, 3, 3.1, NULL, 15072, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlCatalogPtr,4, 15073, 6, 3.1, NULL, 15072, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlCatalogPtr,8, 15073, 9, 3.1, NULL, 15072, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlCatalogPtr,4, 15073, 10, 3.1, NULL, 15072, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlCatalogPtr,8, 15073, 12, 3.1, NULL, 15072, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15072,NULL);\n",architecture,15073,0);
 Msg("Find size of xmlCatalogPtr (15073)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlCatalogPrefer,4, 15075, 2, 3.1, NULL, 15074, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlCatalogPrefer,4, 15075, 11, 3.1, NULL, 15074, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlCatalogPrefer,4, 15075, 3, 3.1, NULL, 15074, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlCatalogPrefer,4, 15075, 6, 3.1, NULL, 15074, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlCatalogPrefer,4, 15075, 9, 3.1, NULL, 15074, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlCatalogPrefer,4, 15075, 10, 3.1, NULL, 15074, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlCatalogPrefer,4, 15075, 12, 3.1, NULL, 15074, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15074, NULL);\n",architecture,15075,0);

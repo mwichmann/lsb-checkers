@@ -26,57 +26,57 @@ Msg("Checking data structures in libxml2/libxml/xmlmodule.h\n");
 #endif
 
 printf("Checking data structures in libxml2/libxml/xmlmodule.h\n");
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlModule,0, 14544, 2, 3.1, NULL, 14543, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlModule,0, 14544, 11, 3.1, NULL, 14543, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlModule,0, 14544, 3, 3.1, NULL, 14543, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlModule,0, 14544, 6, 3.1, NULL, 14543, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlModule,0, 14544, 9, 3.1, NULL, 14543, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlModule,0, 14544, 10, 3.1, NULL, 14543, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlModule,0, 14544, 12, 3.1, NULL, 14543, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14543,NULL);\n",architecture,14544,0);
 Msg("Find size of xmlModule (14544)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlModulePtr,4, 14546, 2, 3.1, NULL, 14545, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlModulePtr,8, 14546, 11, 3.1, NULL, 14545, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlModulePtr,8, 14546, 3, 3.1, NULL, 14545, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlModulePtr,4, 14546, 6, 3.1, NULL, 14545, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlModulePtr,8, 14546, 9, 3.1, NULL, 14545, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlModulePtr,4, 14546, 10, 3.1, NULL, 14545, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlModulePtr,8, 14546, 12, 3.1, NULL, 14545, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14545,NULL);\n",architecture,14546,0);
 Msg("Find size of xmlModulePtr (14546)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlModuleOption,4, 15082, 2, 3.1, NULL, 15081, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlModuleOption,4, 15082, 11, 3.1, NULL, 15081, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlModuleOption,4, 15082, 3, 3.1, NULL, 15081, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlModuleOption,4, 15082, 6, 3.1, NULL, 15081, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlModuleOption,4, 15082, 9, 3.1, NULL, 15081, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlModuleOption,4, 15082, 10, 3.1, NULL, 15081, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlModuleOption,4, 15082, 12, 3.1, NULL, 15081, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15081, NULL);\n",architecture,15082,0);

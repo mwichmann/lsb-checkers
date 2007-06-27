@@ -239,50 +239,50 @@ cnt++;
 
 #endif
 
-#if __i386__
-#elif __s390x__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __ia64__
-#elif __powerpc64__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __s390x__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __ia64__
+#elif defined __powerpc64__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,6931,0);
 Msg("Find size of _pthread_cleanup_buffer (6931)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(pthread_key_t,4, 9059, 2, 1.2, NULL, 7, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(pthread_key_t,4, 9059, 3, 1.3, NULL, 7, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(pthread_key_t,4, 9059, 6, 1.2, NULL, 7, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(pthread_key_t,4, 9059, 10, 1.3, NULL, 7, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(pthread_key_t,4, 9059, 9, 2.0, NULL, 7, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(pthread_key_t,4, 9059, 12, 1.3, NULL, 7, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(pthread_key_t,4, 9059, 11, 2.0, NULL, 7, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,9059,0);
 Msg("Find size of pthread_key_t (9059)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(pthread_once_t,4, 9062, 2, 1.2, NULL, 6, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(pthread_once_t,4, 9062, 3, 1.3, NULL, 6, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(pthread_once_t,4, 9062, 6, 1.2, NULL, 6, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(pthread_once_t,4, 9062, 10, 1.3, NULL, 6, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(pthread_once_t,4, 9062, 9, 2.0, NULL, 6, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(pthread_once_t,4, 9062, 12, 1.3, NULL, 6, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(pthread_once_t,4, 9062, 11, 2.0, NULL, 6, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,9062,0);
@@ -290,19 +290,19 @@ Msg("Find size of pthread_once_t (9062)\n");
 #endif
 
 #ifdef LSBCC_MODE       /* XXX hand-edit */
-#if __i386__
+#if defined __i386__
 CheckTypeSize(__pthread_cond_align_t,8, 10917, 2, 2.0, NULL, 10, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(__pthread_cond_align_t,8, 10917, 3, 2.0, NULL, 10, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(__pthread_cond_align_t,8, 10917, 6, 2.0, NULL, 10, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(__pthread_cond_align_t,8, 10917, 10, 2.0, NULL, 10, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(__pthread_cond_align_t,8, 10917, 9, 2.0, NULL, 10, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(__pthread_cond_align_t,8, 10917, 12, 2.0, NULL, 10, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(__pthread_cond_align_t,8, 10917, 11, 2.0, NULL, 10, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10,NULL);\n",architecture,10917,0);
@@ -310,126 +310,126 @@ Msg("Find size of __pthread_cond_align_t (10917)\n");
 #endif
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(pthread_t,4, 9040, 2, 1.2, NULL, 9, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(pthread_t,8, 9040, 3, 1.3, NULL, 9, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(pthread_t,4, 9040, 6, 1.2, NULL, 9, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(pthread_t,4, 9040, 10, 1.3, NULL, 9, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(pthread_t,8, 9040, 9, 2.0, NULL, 9, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(pthread_t,8, 9040, 12, 1.3, NULL, 9, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(pthread_t,8, 9040, 11, 2.0, NULL, 9, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,9040,0);
 Msg("Find size of pthread_t (9040)\n");
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10105,0);
 Msg("Find size of _pthread_fastlock (10105)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(pthread_mutex_t,24, 9047, 2, 1.2, NULL, 10106, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(pthread_mutex_t,40, 9047, 3, 1.3, NULL, 10106, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(pthread_mutex_t,24, 9047, 6, 1.2, NULL, 10106, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(pthread_mutex_t,24, 9047, 10, 1.3, NULL, 10106, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(pthread_mutex_t,40, 9047, 9, 2.0, NULL, 10106, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(pthread_mutex_t,40, 9047, 12, 1.3, NULL, 10106, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(pthread_mutex_t,40, 9047, 11, 2.0, NULL, 10106, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10106,NULL);\n",architecture,9047,0);
 Msg("Find size of pthread_mutex_t (9047)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(pthread_mutexattr_t,4, 9049, 2, 1.2, NULL, 10109, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(pthread_mutexattr_t,4, 9049, 3, 1.3, NULL, 10109, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(pthread_mutexattr_t,4, 9049, 6, 1.2, NULL, 10109, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(pthread_mutexattr_t,4, 9049, 10, 1.3, NULL, 10109, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(pthread_mutexattr_t,4, 9049, 9, 2.0, NULL, 10109, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(pthread_mutexattr_t,4, 9049, 12, 1.3, NULL, 10109, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(pthread_mutexattr_t,4, 9049, 11, 2.0, NULL, 10109, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10109,NULL);\n",architecture,9049,0);
 Msg("Find size of pthread_mutexattr_t (9049)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(pthread_attr_t,36, 9042, 2, 1.2, NULL, 10112, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(pthread_attr_t,56, 9042, 3, 1.3, NULL, 10112, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(pthread_attr_t,36, 9042, 6, 1.2, NULL, 10112, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(pthread_attr_t,36, 9042, 10, 1.3, NULL, 10112, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(pthread_attr_t,56, 9042, 9, 2.0, NULL, 10112, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(pthread_attr_t,56, 9042, 12, 1.3, NULL, 10112, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(pthread_attr_t,56, 9042, 11, 2.0, NULL, 10112, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10112,NULL);\n",architecture,9042,0);
 Msg("Find size of pthread_attr_t (9042)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(pthread_cond_t,48, 9051, 2, 1.2, NULL, 10110, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(pthread_cond_t,48, 9051, 3, 1.3, NULL, 10110, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(pthread_cond_t,48, 9051, 6, 1.2, NULL, 10110, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(pthread_cond_t,48, 9051, 10, 1.3, NULL, 10110, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(pthread_cond_t,48, 9051, 9, 2.0, NULL, 10110, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(pthread_cond_t,48, 9051, 12, 1.3, NULL, 10110, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(pthread_cond_t,48, 9051, 11, 2.0, NULL, 10110, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10110,NULL);\n",architecture,9051,0);
 Msg("Find size of pthread_cond_t (9051)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(pthread_condattr_t,4, 9053, 2, 1.2, NULL, 10434, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(pthread_condattr_t,4, 9053, 3, 1.3, NULL, 10434, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(pthread_condattr_t,4, 9053, 6, 1.2, NULL, 10434, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(pthread_condattr_t,4, 9053, 10, 1.3, NULL, 10434, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(pthread_condattr_t,4, 9053, 9, 2.0, NULL, 10434, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(pthread_condattr_t,4, 9053, 12, 1.3, NULL, 10434, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(pthread_condattr_t,4, 9053, 11, 2.0, NULL, 10434, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10434,NULL);\n",architecture,9053,0);
@@ -437,19 +437,19 @@ Msg("Find size of pthread_condattr_t (9053)\n");
 #endif
 
 #ifdef LSBCC_MODE       /* XXX hand-edit */
-#if __i386__
+#if defined __i386__
 CheckTypeSize(_pthread_descr,4, 9087, 2, 1.2, NULL, 10104, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(_pthread_descr,8, 9087, 3, 1.3, NULL, 10104, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(_pthread_descr,4, 9087, 6, 1.2, NULL, 10104, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(_pthread_descr,4, 9087, 10, 1.3, NULL, 10104, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(_pthread_descr,8, 9087, 9, 2.0, NULL, 10104, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(_pthread_descr,8, 9087, 12, 1.3, NULL, 10104, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(_pthread_descr,8, 9087, 11, 2.0, NULL, 10104, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10104,NULL);\n",architecture,9087,0);
@@ -457,38 +457,38 @@ Msg("Find size of _pthread_descr (9087)\n");
 #endif
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(pthread_rwlock_t,32, 9055, 2, 1.2, NULL, 10279, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(pthread_rwlock_t,32, 9055, 6, 1.2, NULL, 10279, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(pthread_rwlock_t,56, 9055, 3, 1.3, NULL, 10279, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(pthread_rwlock_t,32, 9055, 10, 1.3, NULL, 10279, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(pthread_rwlock_t,56, 9055, 9, 2.0, NULL, 10279, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(pthread_rwlock_t,56, 9055, 12, 1.3, NULL, 10279, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(pthread_rwlock_t,56, 9055, 11, 2.0, NULL, 10279, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10279,NULL);\n",architecture,9055,0);
 Msg("Find size of pthread_rwlock_t (9055)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(pthread_rwlockattr_t,8, 9057, 2, 1.2, NULL, 10280, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(pthread_rwlockattr_t,8, 9057, 6, 1.2, NULL, 10280, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(pthread_rwlockattr_t,8, 9057, 3, 1.3, NULL, 10280, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(pthread_rwlockattr_t,8, 9057, 10, 1.3, NULL, 10280, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(pthread_rwlockattr_t,8, 9057, 9, 2.0, NULL, 10280, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(pthread_rwlockattr_t,8, 9057, 12, 1.3, NULL, 10280, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(pthread_rwlockattr_t,8, 9057, 11, 2.0, NULL, 10280, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10280, NULL);\n",architecture,9057,0);

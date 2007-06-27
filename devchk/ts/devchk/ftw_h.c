@@ -96,7 +96,7 @@ cnt++;
 
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckEnum("FTW_F",FTW_F,0,29747);
 CheckEnum("FTW_D",FTW_D,(0) + 1,29748);
 CheckEnum("FTW_DNR",FTW_DNR,((0) + 1) + 1,29749);
@@ -104,7 +104,7 @@ CheckEnum("FTW_NS",FTW_NS,(((0) + 1) + 1) + 1,29750);
 CheckEnum("FTW_SL",FTW_SL,((((0) + 1) + 1) + 1) + 1,29751);
 CheckEnum("FTW_DP",FTW_DP,(((((0) + 1) + 1) + 1) + 1) + 1,29752);
 CheckEnum("FTW_SLN",FTW_SLN,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,29753);
-#elif __ia64__
+#elif defined __ia64__
 CheckEnum("FTW_F",FTW_F,0,29747);
 CheckEnum("FTW_D",FTW_D,(0) + 1,29748);
 CheckEnum("FTW_DNR",FTW_DNR,((0) + 1) + 1,29749);
@@ -112,7 +112,7 @@ CheckEnum("FTW_NS",FTW_NS,(((0) + 1) + 1) + 1,29750);
 CheckEnum("FTW_SL",FTW_SL,((((0) + 1) + 1) + 1) + 1,29751);
 CheckEnum("FTW_DP",FTW_DP,(((((0) + 1) + 1) + 1) + 1) + 1,29752);
 CheckEnum("FTW_SLN",FTW_SLN,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,29753);
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckEnum("FTW_F",FTW_F,0,29747);
 CheckEnum("FTW_D",FTW_D,(0) + 1,29748);
 CheckEnum("FTW_DNR",FTW_DNR,((0) + 1) + 1,29749);
@@ -120,7 +120,7 @@ CheckEnum("FTW_NS",FTW_NS,(((0) + 1) + 1) + 1,29750);
 CheckEnum("FTW_SL",FTW_SL,((((0) + 1) + 1) + 1) + 1,29751);
 CheckEnum("FTW_DP",FTW_DP,(((((0) + 1) + 1) + 1) + 1) + 1,29752);
 CheckEnum("FTW_SLN",FTW_SLN,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,29753);
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckEnum("FTW_F",FTW_F,0,29747);
 CheckEnum("FTW_D",FTW_D,(0) + 1,29748);
 CheckEnum("FTW_DNR",FTW_DNR,((0) + 1) + 1,29749);
@@ -128,7 +128,7 @@ CheckEnum("FTW_NS",FTW_NS,(((0) + 1) + 1) + 1,29750);
 CheckEnum("FTW_SL",FTW_SL,((((0) + 1) + 1) + 1) + 1,29751);
 CheckEnum("FTW_DP",FTW_DP,(((((0) + 1) + 1) + 1) + 1) + 1,29752);
 CheckEnum("FTW_SLN",FTW_SLN,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,29753);
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckEnum("FTW_F",FTW_F,0,29747);
 CheckEnum("FTW_D",FTW_D,(0) + 1,29748);
 CheckEnum("FTW_DNR",FTW_DNR,((0) + 1) + 1,29749);
@@ -136,7 +136,7 @@ CheckEnum("FTW_NS",FTW_NS,(((0) + 1) + 1) + 1,29750);
 CheckEnum("FTW_SL",FTW_SL,((((0) + 1) + 1) + 1) + 1,29751);
 CheckEnum("FTW_DP",FTW_DP,(((((0) + 1) + 1) + 1) + 1) + 1,29752);
 CheckEnum("FTW_SLN",FTW_SLN,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,29753);
-#elif __s390x__
+#elif defined __s390x__
 CheckEnum("FTW_F",FTW_F,0,29747);
 CheckEnum("FTW_D",FTW_D,(0) + 1,29748);
 CheckEnum("FTW_DNR",FTW_DNR,((0) + 1) + 1,29749);
@@ -144,7 +144,7 @@ CheckEnum("FTW_NS",FTW_NS,(((0) + 1) + 1) + 1,29750);
 CheckEnum("FTW_SL",FTW_SL,((((0) + 1) + 1) + 1) + 1,29751);
 CheckEnum("FTW_DP",FTW_DP,(((((0) + 1) + 1) + 1) + 1) + 1,29752);
 CheckEnum("FTW_SLN",FTW_SLN,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,29753);
-#elif __x86_64__
+#elif defined __x86_64__
 CheckEnum("FTW_F",FTW_F,0,29747);
 CheckEnum("FTW_D",FTW_D,(0) + 1,29748);
 CheckEnum("FTW_DNR",FTW_DNR,((0) + 1) + 1,29749);
@@ -157,37 +157,37 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architect
 Msg("Find size of anon-ftw.h-13 (8989)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckEnum("FTW_PHYS",FTW_PHYS,1,29754);
 CheckEnum("FTW_MOUNT",FTW_MOUNT,2,29755);
 CheckEnum("FTW_CHDIR",FTW_CHDIR,4,29756);
 CheckEnum("FTW_DEPTH",FTW_DEPTH,8,29757);
-#elif __ia64__
+#elif defined __ia64__
 CheckEnum("FTW_PHYS",FTW_PHYS,1,29754);
 CheckEnum("FTW_MOUNT",FTW_MOUNT,2,29755);
 CheckEnum("FTW_CHDIR",FTW_CHDIR,4,29756);
 CheckEnum("FTW_DEPTH",FTW_DEPTH,8,29757);
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckEnum("FTW_PHYS",FTW_PHYS,1,29754);
 CheckEnum("FTW_MOUNT",FTW_MOUNT,2,29755);
 CheckEnum("FTW_CHDIR",FTW_CHDIR,4,29756);
 CheckEnum("FTW_DEPTH",FTW_DEPTH,8,29757);
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckEnum("FTW_PHYS",FTW_PHYS,1,29754);
 CheckEnum("FTW_MOUNT",FTW_MOUNT,2,29755);
 CheckEnum("FTW_CHDIR",FTW_CHDIR,4,29756);
 CheckEnum("FTW_DEPTH",FTW_DEPTH,8,29757);
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckEnum("FTW_PHYS",FTW_PHYS,1,29754);
 CheckEnum("FTW_MOUNT",FTW_MOUNT,2,29755);
 CheckEnum("FTW_CHDIR",FTW_CHDIR,4,29756);
 CheckEnum("FTW_DEPTH",FTW_DEPTH,8,29757);
-#elif __s390x__
+#elif defined __s390x__
 CheckEnum("FTW_PHYS",FTW_PHYS,1,29754);
 CheckEnum("FTW_MOUNT",FTW_MOUNT,2,29755);
 CheckEnum("FTW_CHDIR",FTW_CHDIR,4,29756);
 CheckEnum("FTW_DEPTH",FTW_DEPTH,8,29757);
-#elif __x86_64__
+#elif defined __x86_64__
 CheckEnum("FTW_PHYS",FTW_PHYS,1,29754);
 CheckEnum("FTW_MOUNT",FTW_MOUNT,2,29755);
 CheckEnum("FTW_CHDIR",FTW_CHDIR,4,29756);
@@ -197,88 +197,88 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architect
 Msg("Find size of anon-ftw.h-34 (8990)\n");
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,8691,0);
 Msg("Find size of FTW (8691)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(__ftw_func_t,4, 8992, 2, 1.0, NULL, 8991, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(__ftw_func_t,8, 8992, 3, 1.3, NULL, 8991, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(__ftw_func_t,4, 8992, 6, 1.2, NULL, 8991, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(__ftw_func_t,4, 8992, 10, 1.3, NULL, 8991, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(__ftw_func_t,8, 8992, 9, 2.0, NULL, 8991, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(__ftw_func_t,8, 8992, 12, 1.3, NULL, 8991, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(__ftw_func_t,8, 8992, 11, 2.0, NULL, 8991, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8991,NULL);\n",architecture,8992,0);
 Msg("Find size of __ftw_func_t (8992)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(__ftw64_func_t,4, 8994, 2, 1.0, NULL, 8993, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(__ftw64_func_t,8, 8994, 3, 1.3, NULL, 8993, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(__ftw64_func_t,4, 8994, 6, 1.2, NULL, 8993, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(__ftw64_func_t,4, 8994, 10, 1.3, NULL, 8993, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(__ftw64_func_t,8, 8994, 9, 2.0, NULL, 8993, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(__ftw64_func_t,8, 8994, 12, 1.3, NULL, 8993, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(__ftw64_func_t,8, 8994, 11, 2.0, NULL, 8993, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8993,NULL);\n",architecture,8994,0);
 Msg("Find size of __ftw64_func_t (8994)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(__nftw_func_t,4, 8996, 2, 1.0, NULL, 8995, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(__nftw_func_t,8, 8996, 3, 1.3, NULL, 8995, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(__nftw_func_t,4, 8996, 6, 1.2, NULL, 8995, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(__nftw_func_t,4, 8996, 10, 1.3, NULL, 8995, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(__nftw_func_t,8, 8996, 9, 2.0, NULL, 8995, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(__nftw_func_t,8, 8996, 12, 1.3, NULL, 8995, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(__nftw_func_t,8, 8996, 11, 2.0, NULL, 8995, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8995,NULL);\n",architecture,8996,0);
 Msg("Find size of __nftw_func_t (8996)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(__nftw64_func_t,4, 8998, 2, 1.0, NULL, 8997, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(__nftw64_func_t,8, 8998, 3, 1.3, NULL, 8997, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(__nftw64_func_t,4, 8998, 6, 1.2, NULL, 8997, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(__nftw64_func_t,4, 8998, 10, 1.3, NULL, 8997, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(__nftw64_func_t,8, 8998, 9, 2.0, NULL, 8997, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(__nftw64_func_t,8, 8998, 12, 1.3, NULL, 8997, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(__nftw64_func_t,8, 8998, 11, 2.0, NULL, 8997, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8997, NULL);\n",architecture,8998,0);

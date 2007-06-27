@@ -69,63 +69,63 @@ CheckEnum("XPRT_MOREREQS",XPRT_MOREREQS,(0) + 1,32223);
 CheckEnum("XPRT_IDLE",XPRT_IDLE,((0) + 1) + 1,32224);
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(SVCXPRT,308, 10390, 2, 1.3, NULL, 9980, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(SVCXPRT,308, 10390, 10, 1.3, NULL, 9980, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(SVCXPRT,336, 10390, 3, 1.3, NULL, 9980, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(SVCXPRT,308, 10390, 6, 1.3, NULL, 9980, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(SVCXPRT,336, 10390, 9, 2.0, NULL, 9980, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(SVCXPRT,336, 10390, 12, 1.3, NULL, 9980, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(SVCXPRT,336, 10390, 11, 2.0, NULL, 9980, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9980,NULL);\n",architecture,10390,0);
 Msg("Find size of SVCXPRT (10390)\n");
 #endif
 
-#if __i386__
-#elif __s390__ && !__s390x__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390x__
-#elif __x86_64__
-#elif __powerpc64__
+#if defined __i386__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
+#elif defined __powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9981,0);
 Msg("Find size of xp_ops (9981)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(__dispatch_fn_t,4, 9997, 2, 2.0, NULL, 9995, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(__dispatch_fn_t,8, 9997, 9, 2.0, NULL, 9995, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(__dispatch_fn_t,8, 9997, 3, 2.0, NULL, 9995, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(__dispatch_fn_t,4, 9997, 6, 2.0, NULL, 9995, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(__dispatch_fn_t,4, 9997, 10, 2.0, NULL, 9995, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(__dispatch_fn_t,8, 9997, 12, 2.0, NULL, 9995, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(__dispatch_fn_t,8, 9997, 11, 2.0, NULL, 9995, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9995,NULL);\n",architecture,9997,0);
 Msg("Find size of __dispatch_fn_t (9997)\n");
 #endif
 
-#if __i386__
-#elif __powerpc64__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __powerpc64__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,9991,0);
 Msg("Find size of svc_req (9991)\n");

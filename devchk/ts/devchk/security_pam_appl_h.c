@@ -482,56 +482,56 @@ cnt++;
 
 #endif
 
-#if __i386__
-#elif __s390__ && !__s390x__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10352,0);
 Msg("Find size of pam_conv (10352)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(pam_handle_t,4, 10354, 2, 1.3, NULL, 10353, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(pam_handle_t,4, 10354, 10, 1.3, NULL, 10353, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(pam_handle_t,4, 10354, 3, 1.3, NULL, 10353, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(pam_handle_t,4, 10354, 6, 1.3, NULL, 10353, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(pam_handle_t,4, 10354, 9, 2.0, NULL, 10353, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(pam_handle_t,4, 10354, 12, 1.3, NULL, 10353, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(pam_handle_t,4, 10354, 11, 2.0, NULL, 10353, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10353,NULL);\n",architecture,10354,0);
 Msg("Find size of pam_handle_t (10354)\n");
 #endif
 
-#if __i386__
-#elif __s390__ && !__s390x__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10356,0);
 Msg("Find size of pam_message (10356)\n");
 #endif
 
-#if __i386__
-#elif __s390__ && !__s390x__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10358,0);
 Msg("Find size of pam_response (10358)\n");

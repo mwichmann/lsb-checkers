@@ -85,19 +85,19 @@ cnt++;
 
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(reg_syntax_t,4, 6941, 2, 1.2, NULL, 9, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(reg_syntax_t,8, 6941, 3, 1.3, NULL, 9, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(reg_syntax_t,4, 6941, 6, 1.2, NULL, 9, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(reg_syntax_t,4, 6941, 10, 1.3, NULL, 9, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(reg_syntax_t,8, 6941, 9, 2.0, NULL, 9, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(reg_syntax_t,8, 6941, 12, 1.3, NULL, 9, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(reg_syntax_t,8, 6941, 11, 2.0, NULL, 9, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,6941,0);
@@ -108,57 +108,57 @@ Msg("Find size of reg_syntax_t (6941)\n");
 CheckTypeSize(reg_errcode_t,4, 9073, 1, 2.1, NULL, 9072, NULL)
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(regex_t,32, 6945, 2, 1.2, NULL, 6944, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(regex_t,64, 6945, 3, 1.3, NULL, 6944, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(regex_t,32, 6945, 6, 1.2, NULL, 6944, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(regex_t,32, 6945, 10, 1.3, NULL, 6944, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(regex_t,64, 6945, 9, 2.0, NULL, 6944, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(regex_t,64, 6945, 12, 1.3, NULL, 6944, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(regex_t,64, 6945, 11, 2.0, NULL, 6944, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6944,NULL);\n",architecture,6945,0);
 Msg("Find size of regex_t (6945)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(regoff_t,4, 6946, 2, 1.2, NULL, 6, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(regoff_t,4, 6946, 3, 1.3, NULL, 6, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(regoff_t,4, 6946, 6, 1.2, NULL, 6, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(regoff_t,4, 6946, 10, 1.3, NULL, 6, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(regoff_t,4, 6946, 9, 2.0, NULL, 6, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(regoff_t,4, 6946, 12, 1.3, NULL, 6, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(regoff_t,4, 6946, 11, 2.0, NULL, 6, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,6946,0);
 Msg("Find size of regoff_t (6946)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(regmatch_t,8, 6949, 2, 1.0, NULL, 6948, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(regmatch_t,8, 6949, 3, 1.3, NULL, 6948, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(regmatch_t,8, 6949, 6, 1.2, NULL, 6948, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(regmatch_t,8, 6949, 10, 1.3, NULL, 6948, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(regmatch_t,8, 6949, 9, 2.0, NULL, 6948, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(regmatch_t,8, 6949, 12, 1.3, NULL, 6948, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(regmatch_t,8, 6949, 11, 2.0, NULL, 6948, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6948, NULL);\n",architecture,6949,0);

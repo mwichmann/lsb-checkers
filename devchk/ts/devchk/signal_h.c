@@ -565,7 +565,7 @@ cnt++;
 
 #endif
 
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef MINSIGSTKSZ
 	CompareConstant(MINSIGSTKSZ,2048,3152,architecture,2.0,NULL)
 #else
@@ -573,7 +573,7 @@ Msg( "Error: Constant not found: MINSIGSTKSZ\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef MINSIGSTKSZ
 	CompareConstant(MINSIGSTKSZ,2048,3152,architecture,2.0,NULL)
 #else
@@ -581,7 +581,7 @@ Msg( "Error: Constant not found: MINSIGSTKSZ\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef MINSIGSTKSZ
 	CompareConstant(MINSIGSTKSZ,131027,3152,architecture,2.0,NULL)
 #else
@@ -589,7 +589,7 @@ Msg( "Error: Constant not found: MINSIGSTKSZ\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef MINSIGSTKSZ
 	CompareConstant(MINSIGSTKSZ,2048,3152,architecture,2.0,NULL)
 #else
@@ -597,7 +597,7 @@ Msg( "Error: Constant not found: MINSIGSTKSZ\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef MINSIGSTKSZ
 	CompareConstant(MINSIGSTKSZ,2048,3152,architecture,2.0,NULL)
 #else
@@ -605,7 +605,7 @@ Msg( "Error: Constant not found: MINSIGSTKSZ\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef MINSIGSTKSZ
 	CompareConstant(MINSIGSTKSZ,2048,3152,architecture,2.0,NULL)
 #else
@@ -613,7 +613,7 @@ Msg( "Error: Constant not found: MINSIGSTKSZ\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef MINSIGSTKSZ
 	CompareConstant(MINSIGSTKSZ,2048,3152,architecture,2.0,NULL)
 #else
@@ -627,7 +627,7 @@ Msg( "No definition for MINSIGSTKSZ (3152, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3152,%d,'""2.0""',NULL);\n", architecture, MINSIGSTKSZ);
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef SIGSTKSZ
 	CompareConstant(SIGSTKSZ,8192,3153,architecture,2.0,NULL)
 #else
@@ -635,7 +635,7 @@ Msg( "Error: Constant not found: SIGSTKSZ\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef SIGSTKSZ
 	CompareConstant(SIGSTKSZ,8192,3153,architecture,2.0,NULL)
 #else
@@ -643,7 +643,7 @@ Msg( "Error: Constant not found: SIGSTKSZ\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef SIGSTKSZ
 	CompareConstant(SIGSTKSZ,262144,3153,architecture,2.0,NULL)
 #else
@@ -651,7 +651,7 @@ Msg( "Error: Constant not found: SIGSTKSZ\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef SIGSTKSZ
 	CompareConstant(SIGSTKSZ,8192,3153,architecture,2.0,NULL)
 #else
@@ -659,7 +659,7 @@ Msg( "Error: Constant not found: SIGSTKSZ\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef SIGSTKSZ
 	CompareConstant(SIGSTKSZ,8192,3153,architecture,2.0,NULL)
 #else
@@ -667,7 +667,7 @@ Msg( "Error: Constant not found: SIGSTKSZ\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef SIGSTKSZ
 	CompareConstant(SIGSTKSZ,8192,3153,architecture,2.0,NULL)
 #else
@@ -675,7 +675,7 @@ Msg( "Error: Constant not found: SIGSTKSZ\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef SIGSTKSZ
 	CompareConstant(SIGSTKSZ,8192,3153,architecture,2.0,NULL)
 #else
@@ -759,7 +759,7 @@ cnt++;
 
 #endif
 
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef SI_PAD_SIZE
 	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-4),3161,architecture,2.1,NULL)
 #else
@@ -767,7 +767,7 @@ Msg( "Error: Constant not found: SI_PAD_SIZE\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef SI_PAD_SIZE
 	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-3),3161,architecture,2.1,NULL)
 #else
@@ -775,7 +775,7 @@ Msg( "Error: Constant not found: SI_PAD_SIZE\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef SI_PAD_SIZE
 	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-4),3161,architecture,2.1,NULL)
 #else
@@ -783,7 +783,7 @@ Msg( "Error: Constant not found: SI_PAD_SIZE\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef SI_PAD_SIZE
 	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-3),3161,architecture,2.1,NULL)
 #else
@@ -791,7 +791,7 @@ Msg( "Error: Constant not found: SI_PAD_SIZE\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef SI_PAD_SIZE
 	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-4),3161,architecture,2.1,NULL)
 #else
@@ -799,7 +799,7 @@ Msg( "Error: Constant not found: SI_PAD_SIZE\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef SI_PAD_SIZE
 	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-4),3161,architecture,2.1,NULL)
 #else
@@ -807,7 +807,7 @@ Msg( "Error: Constant not found: SI_PAD_SIZE\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef SI_PAD_SIZE
 	CompareConstant(SI_PAD_SIZE,((SI_MAX_SIZE/sizeof(int))-3),3161,architecture,2.1,NULL)
 #else
@@ -963,7 +963,7 @@ cnt++;
 
 #endif
 
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef SIGEV_PAD_SIZE
 	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-4),5020,architecture,2.1,NULL)
 #else
@@ -971,7 +971,7 @@ Msg( "Error: Constant not found: SIGEV_PAD_SIZE\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef SIGEV_PAD_SIZE
 	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-3),5020,architecture,2.1,NULL)
 #else
@@ -979,7 +979,7 @@ Msg( "Error: Constant not found: SIGEV_PAD_SIZE\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef SIGEV_PAD_SIZE
 	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-4),5020,architecture,2.1,NULL)
 #else
@@ -987,7 +987,7 @@ Msg( "Error: Constant not found: SIGEV_PAD_SIZE\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef SIGEV_PAD_SIZE
 	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-3),5020,architecture,2.1,NULL)
 #else
@@ -995,7 +995,7 @@ Msg( "Error: Constant not found: SIGEV_PAD_SIZE\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef SIGEV_PAD_SIZE
 	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-4),5020,architecture,2.1,NULL)
 #else
@@ -1003,7 +1003,7 @@ Msg( "Error: Constant not found: SIGEV_PAD_SIZE\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef SIGEV_PAD_SIZE
 	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-4),5020,architecture,2.1,NULL)
 #else
@@ -1011,7 +1011,7 @@ Msg( "Error: Constant not found: SIGEV_PAD_SIZE\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef SIGEV_PAD_SIZE
 	CompareConstant(SIGEV_PAD_SIZE,((SIGEV_MAX_SIZE/sizeof(int))-3),5020,architecture,2.1,NULL)
 #else
@@ -1025,7 +1025,7 @@ Msg( "No definition for SIGEV_PAD_SIZE (5020, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5020,%d,'""2.1""',NULL);\n", architecture, SIGEV_PAD_SIZE);
 #endif
 #endif
-#if __s390x__
+#if defined __s390x__
 #ifdef __NUM_GPRS
 	CompareConstant(__NUM_GPRS,16,5141,architecture,2.0,NULL)
 #else
@@ -1033,7 +1033,7 @@ Msg( "Error: Constant not found: __NUM_GPRS\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef __NUM_GPRS
 	CompareConstant(__NUM_GPRS,16,5141,architecture,2.0,NULL)
 #else
@@ -1047,7 +1047,7 @@ Msg( "No definition for __NUM_GPRS (5141, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5141,%d,'""2.0""',NULL);\n", architecture, __NUM_GPRS);
 #endif
 #endif
-#if __s390x__
+#if defined __s390x__
 #ifdef __NUM_FPRS
 	CompareConstant(__NUM_FPRS,16,5142,architecture,2.0,NULL)
 #else
@@ -1055,7 +1055,7 @@ Msg( "Error: Constant not found: __NUM_FPRS\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef __NUM_FPRS
 	CompareConstant(__NUM_FPRS,16,5142,architecture,2.0,NULL)
 #else
@@ -1069,7 +1069,7 @@ Msg( "No definition for __NUM_FPRS (5142, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5142,%d,'""2.0""',NULL);\n", architecture, __NUM_FPRS);
 #endif
 #endif
-#if __s390x__
+#if defined __s390x__
 #ifdef __NUM_ACRS
 	CompareConstant(__NUM_ACRS,16,5143,architecture,2.0,NULL)
 #else
@@ -1077,7 +1077,7 @@ Msg( "Error: Constant not found: __NUM_ACRS\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef __NUM_ACRS
 	CompareConstant(__NUM_ACRS,16,5143,architecture,2.0,NULL)
 #else
@@ -1485,201 +1485,201 @@ cnt++;
 
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(sig_atomic_t,4, 9092, 2, 1.2, NULL, 6, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(sig_atomic_t,4, 9092, 3, 1.3, NULL, 6, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(sig_atomic_t,4, 9092, 6, 1.2, NULL, 6, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(sig_atomic_t,4, 9092, 10, 1.3, NULL, 6, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(sig_atomic_t,4, 9092, 9, 2.0, NULL, 6, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(sig_atomic_t,4, 9092, 12, 1.3, NULL, 6, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(sig_atomic_t,4, 9092, 11, 2.0, NULL, 6, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,9092,0);
 Msg("Find size of sig_atomic_t (9092)\n");
 #endif
 
-#if __s390x__
+#if defined __s390x__
 CheckTypeSize(_psw_t,16, 10571, 12, 2.0, NULL, 10570, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(_psw_t,8, 10571, 10, 2.0, NULL, 10570, NULL)
 #endif
 
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 CheckTypeSize(_s390_regs_common,136, 10821, 10, 2.0, NULL, 10820, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(_s390_regs_common,208, 10821, 12, 2.0, NULL, 10820, NULL)
 #endif
 
-#if __powerpc__ && !__powerpc64__
-#elif __powerpc64__
+#if defined __powerpc__ && !defined __powerpc64__
+#elif defined __powerpc64__
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(sighandler_t,4, 9374, 2, 2.0, NULL, 9373, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(sighandler_t,8, 9374, 9, 2.0, NULL, 9373, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(sighandler_t,8, 9374, 3, 2.0, NULL, 9373, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(sighandler_t,4, 9374, 6, 2.0, NULL, 9373, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(sighandler_t,4, 9374, 10, 2.0, NULL, 9373, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(sighandler_t,8, 9374, 12, 2.0, NULL, 9373, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(sighandler_t,8, 9374, 11, 2.0, NULL, 9373, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9373,NULL);\n",architecture,9374,0);
 Msg("Find size of sighandler_t (9374)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(sigval_t,4, 9320, 2, 1.2, NULL, 9319, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(sigval_t,8, 9320, 3, 1.3, NULL, 9319, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(sigval_t,4, 9320, 6, 1.2, NULL, 9319, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(sigval_t,4, 9320, 10, 1.3, NULL, 9319, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(sigval_t,8, 9320, 9, 2.0, NULL, 9319, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(sigval_t,8, 9320, 12, 1.3, NULL, 9319, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(sigval_t,8, 9320, 11, 2.0, NULL, 9319, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9319,NULL);\n",architecture,9320,0);
 Msg("Find size of sigval_t (9320)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(sigevent_t,64, 10190, 2, 1.2, NULL, 10188, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(sigevent_t,64, 10190, 3, 1.3, NULL, 10188, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(sigevent_t,64, 10190, 6, 1.2, NULL, 10188, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(sigevent_t,64, 10190, 10, 1.3, NULL, 10188, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(sigevent_t,64, 10190, 9, 2.0, NULL, 10188, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(sigevent_t,64, 10190, 12, 1.3, NULL, 10188, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(sigevent_t,64, 10190, 11, 2.0, NULL, 10188, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10188,NULL);\n",architecture,10190,0);
 Msg("Find size of sigevent_t (10190)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(siginfo_t,128, 9099, 2, 1.2, NULL, 9321, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(siginfo_t,128, 9099, 3, 1.3, NULL, 9321, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(siginfo_t,128, 9099, 6, 1.2, NULL, 9321, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(siginfo_t,128, 9099, 10, 1.3, NULL, 9321, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(siginfo_t,128, 9099, 9, 2.0, NULL, 9321, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(siginfo_t,128, 9099, 12, 1.3, NULL, 9321, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(siginfo_t,128, 9099, 11, 2.0, NULL, 9321, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9321,NULL);\n",architecture,9099,0);
 Msg("Find size of siginfo_t (9099)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(sigset_t,128, 10163, 2, 1.2, NULL, 9382, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(sigset_t,128, 10163, 3, 1.3, NULL, 9382, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(sigset_t,128, 10163, 6, 1.2, NULL, 9382, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(sigset_t,128, 10163, 10, 1.3, NULL, 9382, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(sigset_t,128, 10163, 12, 1.3, NULL, 9382, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(sigset_t,128, 10163, 11, 2.0, NULL, 9382, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(sigset_t,128, 10163, 9, 2.0, NULL, 9382, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9382,NULL);\n",architecture,10163,0);
 Msg("Find size of sigset_t (10163)\n");
 #endif
 
-#if __i386__
-#elif __s390__ && !__s390x__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(stack_t,12, 9314, 2, 1.2, NULL, 9105, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(stack_t,24, 9314, 3, 1.3, NULL, 9105, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(stack_t,12, 9314, 6, 1.2, NULL, 9105, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(stack_t,24, 9314, 12, 1.3, NULL, 9105, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(stack_t,12, 9314, 10, 1.3, NULL, 9105, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(stack_t,24, 9314, 11, 2.0, NULL, 9105, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(stack_t,24, 9314, 9, 2.0, NULL, 9105, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9105,NULL);\n",architecture,9314,0);
 Msg("Find size of stack_t (9314)\n");
 #endif
 
-#if __i386__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __x86_64__
 #endif
 
-#if __i386__
+#if defined __i386__
 #endif
 
-#if __i386__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __x86_64__
 #endif
 
-#if __i386__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __x86_64__
 #endif
 
-#if __ia64__
+#if defined __ia64__
 #endif
 
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 CheckTypeSize(_s390_fp_regs,136, 10832, 10, 2.0, NULL, 10831, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(_s390_fp_regs,136, 10832, 12, 2.0, NULL, 10831, NULL)
 #endif
 
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 CheckTypeSize(_sigregs,272, 10834, 10, 2.0, NULL, 10833, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(_sigregs,344, 10834, 12, 2.0, NULL, 10833, NULL)
 #endif
 
-#if __i386__
-#elif __powerpc__ && !__powerpc64__
-#elif __ia64__
-#elif __x86_64__
-#elif __s390__ && !__s390x__
-#elif __s390x__
-#elif __powerpc64__
+#if defined __i386__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __ia64__
+#elif defined __x86_64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __s390x__
+#elif defined __powerpc64__
 #endif
 
 extern int __libc_current_sigrtmax_db(void);
@@ -1752,7 +1752,7 @@ extern int sigtimedwait_db(const sigset_t *, siginfo_t *, const struct timespec 
 CheckInterfacedef(sigtimedwait,sigtimedwait_db);
 extern sighandler_t bsd_signal_db(int, sighandler_t);
 CheckInterfacedef(bsd_signal,bsd_signal_db);
-#ifdef LSBCC_MODE	/* XXX hand-edit */
+#ifdef LSBCC_MODE       /* XXX hand-edit */
 extern int __xpg_sigpause_db(int);
 CheckInterfacedef(__xpg_sigpause,__xpg_sigpause_db);
 #endif

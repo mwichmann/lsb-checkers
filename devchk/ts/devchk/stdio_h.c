@@ -137,7 +137,7 @@ cnt++;
 
 #endif
 
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef __IO_FILE_SIZE
 	CompareConstant(__IO_FILE_SIZE,216,5085,architecture,2.1,NULL)
 #else
@@ -145,7 +145,7 @@ Msg( "Error: Constant not found: __IO_FILE_SIZE\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef __IO_FILE_SIZE
 	CompareConstant(__IO_FILE_SIZE,152,5085,architecture,2.1,NULL)
 #else
@@ -153,7 +153,7 @@ Msg( "Error: Constant not found: __IO_FILE_SIZE\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef __IO_FILE_SIZE
 	CompareConstant(__IO_FILE_SIZE,216,5085,architecture,2.1,NULL)
 #else
@@ -161,7 +161,7 @@ Msg( "Error: Constant not found: __IO_FILE_SIZE\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef __IO_FILE_SIZE
 	CompareConstant(__IO_FILE_SIZE,148,5085,architecture,2.1,NULL)
 #else
@@ -169,7 +169,7 @@ Msg( "Error: Constant not found: __IO_FILE_SIZE\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef __IO_FILE_SIZE
 	CompareConstant(__IO_FILE_SIZE,216,5085,architecture,2.1,NULL)
 #else
@@ -177,7 +177,7 @@ Msg( "Error: Constant not found: __IO_FILE_SIZE\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef __IO_FILE_SIZE
 	CompareConstant(__IO_FILE_SIZE,216,5085,architecture,2.1,NULL)
 #else
@@ -185,7 +185,7 @@ Msg( "Error: Constant not found: __IO_FILE_SIZE\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef __IO_FILE_SIZE
 	CompareConstant(__IO_FILE_SIZE,152,5085,architecture,2.1,NULL)
 #else
@@ -199,57 +199,57 @@ Msg( "No definition for __IO_FILE_SIZE (5085, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5085,%d,'""2.1""',NULL);\n", architecture, __IO_FILE_SIZE);
 #endif
 #endif
-#if __i386__
+#if defined __i386__
 CheckTypeSize(fpos_t,12, 9108, 2, 1.2, NULL, 10274, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(fpos_t,16, 9108, 3, 1.3, NULL, 10274, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(fpos_t,12, 9108, 6, 1.2, NULL, 10274, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(fpos_t,12, 9108, 10, 1.3, NULL, 10274, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(fpos_t,16, 9108, 9, 2.0, NULL, 10274, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(fpos_t,16, 9108, 12, 1.3, NULL, 10274, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(fpos_t,16, 9108, 11, 2.0, NULL, 10274, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10274,NULL);\n",architecture,9108,0);
 Msg("Find size of fpos_t (9108)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(fpos64_t,16, 9109, 2, 1.2, NULL, 10275, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(fpos64_t,16, 9109, 3, 1.3, NULL, 10275, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(fpos64_t,16, 9109, 6, 1.2, NULL, 10275, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(fpos64_t,16, 9109, 10, 1.3, NULL, 10275, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(fpos64_t,16, 9109, 9, 2.0, NULL, 10275, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(fpos64_t,16, 9109, 12, 1.3, NULL, 10275, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(fpos64_t,16, 9109, 11, 2.0, NULL, 10275, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10275,NULL);\n",architecture,9109,0);
 Msg("Find size of fpos64_t (9109)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(FILE,148, 8782, 2, 1.0, NULL, 9107, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(FILE,216, 8782, 3, 1.3, NULL, 9107, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(FILE,152, 8782, 6, 1.2, NULL, 9107, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(FILE,152, 8782, 10, 1.3, NULL, 9107, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(FILE,216, 8782, 9, 2.0, NULL, 9107, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(FILE,216, 8782, 12, 1.3, NULL, 9107, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(FILE,216, 8782, 11, 2.0, NULL, 9107, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9107, NULL);\n",architecture,8782,0);

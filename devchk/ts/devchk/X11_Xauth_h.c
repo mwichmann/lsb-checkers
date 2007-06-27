@@ -25,19 +25,19 @@ Msg("Checking data structures in X11/Xauth.h\n");
 #endif
 
 printf("Checking data structures in X11/Xauth.h\n");
-#if __i386__
+#if defined __i386__
 CheckTypeSize(Xauth,32, 8961, 2, 1.2, NULL, 9290, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(Xauth,64, 8961, 3, 1.3, NULL, 9290, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(Xauth,32, 8961, 6, 1.2, NULL, 9290, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(Xauth,32, 8961, 10, 1.3, NULL, 9290, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(Xauth,64, 8961, 9, 2.0, NULL, 9290, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(Xauth,64, 8961, 12, 1.3, NULL, 9290, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(Xauth,64, 8961, 11, 2.0, NULL, 9290, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9290, NULL);\n",architecture,8961,0);

@@ -25,38 +25,38 @@ Msg("Checking data structures in gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h\n");
 #endif
 
 printf("Checking data structures in gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h\n");
-#if __i386__
+#if defined __i386__
 CheckTypeSize(XlibRgbDither,4, 12661, 2, 3.1, NULL, 12660, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(XlibRgbDither,4, 12661, 11, 3.1, NULL, 12660, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(XlibRgbDither,4, 12661, 3, 3.1, NULL, 12660, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XlibRgbDither,4, 12661, 6, 3.1, NULL, 12660, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(XlibRgbDither,4, 12661, 9, 3.1, NULL, 12660, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(XlibRgbDither,4, 12661, 10, 3.1, NULL, 12660, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(XlibRgbDither,4, 12661, 12, 3.1, NULL, 12660, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12660,NULL);\n",architecture,12661,0);
 Msg("Find size of XlibRgbDither (12661)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(XlibRgbCmap,1280, 12666, 2, 3.1, NULL, 12663, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(XlibRgbCmap,1280, 12666, 11, 3.1, NULL, 12663, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(XlibRgbCmap,1280, 12666, 3, 3.1, NULL, 12663, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XlibRgbCmap,1280, 12666, 6, 3.1, NULL, 12663, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(XlibRgbCmap,1280, 12666, 9, 3.1, NULL, 12663, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(XlibRgbCmap,1280, 12666, 10, 3.1, NULL, 12663, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(XlibRgbCmap,1280, 12666, 12, 3.1, NULL, 12663, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12663, NULL);\n",architecture,12666,0);

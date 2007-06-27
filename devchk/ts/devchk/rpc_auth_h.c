@@ -29,7 +29,7 @@ printf("Checking data structures in rpc/auth.h\n");
 /* No test for auth_destroy(auth) */
 #endif
 
-#if __ia64__
+#if defined __ia64__
 CheckEnum("AUTH_OK",AUTH_OK,0,32014);
 CheckEnum("AUTH_BADCRED",AUTH_BADCRED,1,32015);
 CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,2,32016);
@@ -38,7 +38,7 @@ CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,4,32018);
 CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,5,32019);
 CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,6,32020);
 CheckEnum("AUTH_FAILED",AUTH_FAILED,7,32021);
-#elif __i386__
+#elif defined __i386__
 CheckEnum("AUTH_OK",AUTH_OK,0,32014);
 CheckEnum("AUTH_BADCRED",AUTH_BADCRED,1,32015);
 CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,2,32016);
@@ -47,7 +47,7 @@ CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,4,32018);
 CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,5,32019);
 CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,6,32020);
 CheckEnum("AUTH_FAILED",AUTH_FAILED,7,32021);
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckEnum("AUTH_OK",AUTH_OK,0,32014);
 CheckEnum("AUTH_BADCRED",AUTH_BADCRED,1,32015);
 CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,2,32016);
@@ -56,7 +56,7 @@ CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,4,32018);
 CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,5,32019);
 CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,6,32020);
 CheckEnum("AUTH_FAILED",AUTH_FAILED,7,32021);
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckEnum("AUTH_OK",AUTH_OK,0,32014);
 CheckEnum("AUTH_BADCRED",AUTH_BADCRED,1,32015);
 CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,2,32016);
@@ -65,7 +65,7 @@ CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,4,32018);
 CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,5,32019);
 CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,6,32020);
 CheckEnum("AUTH_FAILED",AUTH_FAILED,7,32021);
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckEnum("AUTH_OK",AUTH_OK,0,32014);
 CheckEnum("AUTH_BADCRED",AUTH_BADCRED,1,32015);
 CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,2,32016);
@@ -74,7 +74,7 @@ CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,4,32018);
 CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,5,32019);
 CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,6,32020);
 CheckEnum("AUTH_FAILED",AUTH_FAILED,7,32021);
-#elif __s390x__
+#elif defined __s390x__
 CheckEnum("AUTH_OK",AUTH_OK,0,32014);
 CheckEnum("AUTH_BADCRED",AUTH_BADCRED,1,32015);
 CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,2,32016);
@@ -83,7 +83,7 @@ CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,4,32018);
 CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,5,32019);
 CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,6,32020);
 CheckEnum("AUTH_FAILED",AUTH_FAILED,7,32021);
-#elif __x86_64__
+#elif defined __x86_64__
 CheckEnum("AUTH_OK",AUTH_OK,0,32014);
 CheckEnum("AUTH_BADCRED",AUTH_BADCRED,1,32015);
 CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,2,32016);
@@ -97,56 +97,56 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architect
 Msg("Find size of auth_stat (9887)\n");
 #endif
 
-#if __i386__
-#elif __s390__ && !__s390x__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9894,0);
 Msg("Find size of opaque_auth (9894)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(AUTH,40, 10391, 2, 1.3, NULL, 9896, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(AUTH,40, 10391, 10, 1.3, NULL, 9896, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(AUTH,72, 10391, 3, 1.3, NULL, 9896, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(AUTH,40, 10391, 6, 1.3, NULL, 9896, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(AUTH,72, 10391, 9, 2.0, NULL, 9896, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(AUTH,72, 10391, 12, 1.3, NULL, 9896, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(AUTH,72, 10391, 11, 2.0, NULL, 9896, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9896,NULL);\n",architecture,10391,0);
 Msg("Find size of AUTH (10391)\n");
 #endif
 
-#if __i386__
-#elif __s390__ && !__s390x__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9897,0);
 Msg("Find size of auth_ops (9897)\n");
 #endif
 
-#if __i386__
-#elif __s390__ && !__s390x__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,9888,0);
 Msg("Find size of des_block (9888)\n");

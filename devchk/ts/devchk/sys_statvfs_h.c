@@ -25,22 +25,22 @@ Msg("Checking data structures in sys/statvfs.h\n");
 #endif
 
 printf("Checking data structures in sys/statvfs.h\n");
-#if __ia64__
-#elif __i386__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390x__
-#elif __s390__ && !__s390x__
-#elif __x86_64__
+#if defined __ia64__
+#elif defined __i386__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __x86_64__
 #endif
 
-#if __i386__
-#elif __powerpc__ && !__powerpc64__
-#elif __ia64__
-#elif __powerpc64__
-#elif __s390x__
-#elif __s390__ && !__s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __ia64__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __x86_64__
 #endif
 
 extern int fstatvfs_db(int, struct statvfs *);
