@@ -419,7 +419,7 @@ struct versym libQtSql_so_4[] = {
 #if defined __s390x__
 	{"_ZThn16_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -428,7 +428,7 @@ struct versym libQtSql_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -586,7 +586,7 @@ const char *_16QSqlDriverPlugin_vtable_name_0 [] = {
 	};
 
 const char *_16QSqlDriverPlugin_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N16QSqlDriverPluginD1Ev",
 #endif
 #if defined __x86_64__
@@ -622,7 +622,7 @@ const char *_16QSqlDriverPlugin_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N16QSqlDriverPluginD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N16QSqlDriverPluginD0Ev",
 #endif
 #if defined __x86_64__
@@ -642,7 +642,7 @@ struct classvtable _16QSqlDriverPlugin_vtable [2] = {
 	_16QSqlDriverPlugin_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -679,7 +679,7 @@ struct classvtable _16QSqlDriverPlugin_vtable [2] = {
 
 struct base_type_info _16QSqlDriverPlugin_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTI26QSqlDriverFactoryInterface",	2050U},
 #endif
 #if defined __ia64__

@@ -6,7 +6,7 @@ struct versym libQtCore_so_4[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_Z10qvsnprintfPcjPKcP13__va_list_tag","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_Z10qvsnprintfPcjPKcS_","",0,LSB_Toolkit_Qt,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
@@ -76,7 +76,7 @@ struct versym libQtCore_so_4[] = {
 	{"_Z6centerR11QTextStream","",0,LSB_Toolkit_Qt,0,1},
 	{"_Z6qDebugPKcz","",0,LSB_Toolkit_Qt,0,1},
 	{"_Z6qFatalPKcz","",0,LSB_Toolkit_Qt,0,1},
-#if defined ___i386__
+#if defined __i386__
 	{"_Z7qMallocj","",0,LSB_Toolkit_Qt,1,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -97,7 +97,7 @@ struct versym libQtCore_so_4[] = {
 #if defined __s390x__
 	{"_Z7qMallocm","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_Z7qMemSetPvij","",0,LSB_Toolkit_Qt,1,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -123,7 +123,7 @@ struct versym libQtCore_so_4[] = {
 	{"_Z7qstrcpyPcPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_Z7qstrdupPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_Z8qAppNamev","",0,LSB_Toolkit_Qt,0,1},
-#if defined ___i386__
+#if defined __i386__
 	{"_Z8qMemCopyPvPKvj","",0,LSB_Toolkit_Qt,1,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -144,7 +144,7 @@ struct versym libQtCore_so_4[] = {
 #if defined __s390x__
 	{"_Z8qMemCopyPvPKvm","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_Z8qReallocPvj","",0,LSB_Toolkit_Qt,1,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -174,7 +174,7 @@ struct versym libQtCore_so_4[] = {
 	{"_Z9qChecksumPKcj","",0,LSB_Toolkit_Qt,0,1},
 	{"_Z9qCompressPKhii","",0,LSB_Toolkit_Qt,0,1},
 	{"_Z9qCriticalPKcz","",0,LSB_Toolkit_Qt,0,1},
-#if defined ___i386__
+#if defined __i386__
 	{"_Z9qsnprintfPcjPKcz","",0,LSB_Toolkit_Qt,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -1099,7 +1099,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN7QString7sprintfEPKcz","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QString8fromUtf8EPKci","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QString8truncateEi","",0,LSB_Toolkit_Qt,0,1},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZN7QString8vsprintfEPKcPc","",0,LSB_Toolkit_Qt,0,1},
 #endif
 	{"_ZN7QString9fromAsciiEPKci","",0,LSB_Toolkit_Qt,0,1},
@@ -2224,7 +2224,7 @@ struct versym libQtCore_so_4[] = {
 #if defined __s390x__
 	{"_ZThn16_NK16QTextCodecPlugin4keysEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N16QTextCodecPlugin6createERK7QString","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -2233,7 +2233,7 @@ struct versym libQtCore_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N16QTextCodecPlugin6createERK7QString","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N16QTextCodecPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -2242,7 +2242,7 @@ struct versym libQtCore_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N16QTextCodecPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N16QTextCodecPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -2251,7 +2251,7 @@ struct versym libQtCore_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N16QTextCodecPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK16QTextCodecPlugin4keysEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -3295,7 +3295,7 @@ const char *_16QTextCodecPlugin_vtable_name_0 [] = {
 	};
 
 const char *_16QTextCodecPlugin_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N16QTextCodecPluginD1Ev",
 #endif
 #if defined __ia64__
@@ -3334,7 +3334,7 @@ const char *_16QTextCodecPlugin_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N16QTextCodecPluginD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N16QTextCodecPluginD0Ev",
 #endif
 #if defined __x86_64__
@@ -3352,13 +3352,13 @@ const char *_16QTextCodecPlugin_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK16QTextCodecPlugin4keysEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK16QTextCodecPlugin4keysEv",
 #endif
 #if defined __s390x__
 	"_ZThn16_NK16QTextCodecPlugin4keysEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N16QTextCodecPlugin6createERK7QString",
 #endif
 #if defined __ia64__
@@ -3391,7 +3391,7 @@ struct classvtable _16QTextCodecPlugin_vtable [2] = {
 	_16QTextCodecPlugin_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -3428,7 +3428,7 @@ struct classvtable _16QTextCodecPlugin_vtable [2] = {
 
 struct base_type_info _16QTextCodecPlugin_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTI26QTextCodecFactoryInterface",	2050U},
 #endif
 #if defined __ia64__

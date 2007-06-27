@@ -225,7 +225,7 @@ struct versym libQtOpenGL_so_4[] = {
 #if defined __s390x__
 	{"_ZThn16_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -234,7 +234,7 @@ struct versym libQtOpenGL_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -243,7 +243,7 @@ struct versym libQtOpenGL_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -385,7 +385,7 @@ const char *_9QGLWidget_vtable_name_0 [] = {
 	};
 
 const char *_9QGLWidget_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N9QGLWidgetD1Ev",
 #endif
 #if defined __s390x__
@@ -424,7 +424,7 @@ const char *_9QGLWidget_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_N9QGLWidgetD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N9QGLWidgetD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -439,7 +439,7 @@ const char *_9QGLWidget_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -454,7 +454,7 @@ const char *_9QGLWidget_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK9QGLWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK9QGLWidget11paintEngineEv",
 #endif
 #if defined __ia64__
@@ -475,7 +475,7 @@ const char *_9QGLWidget_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __ia64__
@@ -502,7 +502,7 @@ struct classvtable _9QGLWidget_vtable [2] = {
 	_9QGLWidget_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif

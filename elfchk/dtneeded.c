@@ -9,9 +9,9 @@ char *DtNeeded[] = {
 #if defined __s390__ && !defined __s390x__
 	"/lib/ld-lsb-s390.so.3",
 #endif /* defined __s390__ && !defined __s390x__ */
-#if defined ___i386__
+#if defined __i386__
 	"/lib/ld-lsb.so.3",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __powerpc64__
 	"/lib64/ld-lsb-ppc64.so.3",
 #endif /* defined __powerpc64__ */
@@ -22,9 +22,9 @@ char *DtNeeded[] = {
 	"/lib64/ld-lsb-x86-64.so.3",
 #endif /* defined __x86_64__ */
 	"libatk-1.0.so.0",
-#if defined ___i386__
+#if defined __i386__
 	"libatk-1.0.so.0",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libatk-1.0.so.0",
 #endif /* defined __ia64__ */
@@ -43,9 +43,9 @@ char *DtNeeded[] = {
 #if defined __s390x__
 	"libatk-1.0.so.0",
 #endif /* defined __s390x__ */
-#if defined ___i386__
+#if defined __i386__
 	"libc.so.6",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __powerpc__ && !defined __powerpc64__
 	"libc.so.6",
 #endif /* defined __powerpc__ && !defined __powerpc64__ */
@@ -65,9 +65,9 @@ char *DtNeeded[] = {
 	"libc.so.6.1",
 #endif /* defined __ia64__ */
 	"libcrypt.so.1",
-#if defined ___i386__
+#if defined __i386__
 	"libcrypt.so.1",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libcrypt.so.1",
 #endif /* defined __ia64__ */
@@ -87,9 +87,9 @@ char *DtNeeded[] = {
 	"libcrypt.so.1",
 #endif /* defined __s390x__ */
 	"libdl.so.2",
-#if defined ___i386__
+#if defined __i386__
 	"libdl.so.2",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libdl.so.2",
 #endif /* defined __ia64__ */
@@ -110,9 +110,9 @@ char *DtNeeded[] = {
 #endif /* defined __s390x__ */
 	"libfontconfig.so.1",
 	"libgcc_s.so.1",
-#if defined ___i386__
+#if defined __i386__
 	"libgcc_s.so.1",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libgcc_s.so.1",
 #endif /* defined __ia64__ */
@@ -132,9 +132,9 @@ char *DtNeeded[] = {
 	"libgcc_s.so.1",
 #endif /* defined __s390x__ */
 	"libgdk-x11-2.0.so.0",
-#if defined ___i386__
+#if defined __i386__
 	"libgdk-x11-2.0.so.0",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libgdk-x11-2.0.so.0",
 #endif /* defined __ia64__ */
@@ -154,9 +154,9 @@ char *DtNeeded[] = {
 	"libgdk-x11-2.0.so.0",
 #endif /* defined __s390x__ */
 	"libgdk_pixbuf-2.0.so.0",
-#if defined ___i386__
+#if defined __i386__
 	"libgdk_pixbuf-2.0.so.0",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libgdk_pixbuf-2.0.so.0",
 #endif /* defined __ia64__ */
@@ -176,9 +176,9 @@ char *DtNeeded[] = {
 	"libgdk_pixbuf-2.0.so.0",
 #endif /* defined __s390x__ */
 	"libgdk_pixbuf_xlib-2.0.so.0",
-#if defined ___i386__
+#if defined __i386__
 	"libgdk_pixbuf_xlib-2.0.so.0",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libgdk_pixbuf_xlib-2.0.so.0",
 #endif /* defined __ia64__ */
@@ -199,9 +199,9 @@ char *DtNeeded[] = {
 #endif /* defined __s390x__ */
 	"libGL.so.1",
 	"libglib-2.0.so.0",
-#if defined ___i386__
+#if defined __i386__
 	"libglib-2.0.so.0",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libglib-2.0.so.0",
 #endif /* defined __ia64__ */
@@ -221,9 +221,9 @@ char *DtNeeded[] = {
 	"libglib-2.0.so.0",
 #endif /* defined __s390x__ */
 	"libgmodule-2.0.so.0",
-#if defined ___i386__
+#if defined __i386__
 	"libgmodule-2.0.so.0",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libgmodule-2.0.so.0",
 #endif /* defined __ia64__ */
@@ -243,9 +243,9 @@ char *DtNeeded[] = {
 	"libgmodule-2.0.so.0",
 #endif /* defined __s390x__ */
 	"libgobject-2.0.so.0",
-#if defined ___i386__
+#if defined __i386__
 	"libgobject-2.0.so.0",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libgobject-2.0.so.0",
 #endif /* defined __ia64__ */
@@ -265,9 +265,9 @@ char *DtNeeded[] = {
 	"libgobject-2.0.so.0",
 #endif /* defined __s390x__ */
 	"libgthread-2.0.so.0",
-#if defined ___i386__
+#if defined __i386__
 	"libgthread-2.0.so.0",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libgthread-2.0.so.0",
 #endif /* defined __ia64__ */
@@ -287,9 +287,9 @@ char *DtNeeded[] = {
 	"libgthread-2.0.so.0",
 #endif /* defined __s390x__ */
 	"libgtk-x11-2.0.so.0",
-#if defined ___i386__
+#if defined __i386__
 	"libgtk-x11-2.0.so.0",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libgtk-x11-2.0.so.0",
 #endif /* defined __ia64__ */
@@ -310,9 +310,9 @@ char *DtNeeded[] = {
 #endif /* defined __s390x__ */
 	"libICE.so.6",
 	"libjpeg.so.62",
-#if defined ___i386__
+#if defined __i386__
 	"libm.so.6",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __powerpc__ && !defined __powerpc64__
 	"libm.so.6",
 #endif /* defined __powerpc__ && !defined __powerpc64__ */
@@ -332,9 +332,9 @@ char *DtNeeded[] = {
 	"libm.so.6.1",
 #endif /* defined __ia64__ */
 	"libncurses.so.5",
-#if defined ___i386__
+#if defined __i386__
 	"libncurses.so.5",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libncurses.so.5",
 #endif /* defined __ia64__ */
@@ -355,9 +355,9 @@ char *DtNeeded[] = {
 #endif /* defined __s390x__ */
 	"libpam.so.0",
 	"libpango-1.0.so.0",
-#if defined ___i386__
+#if defined __i386__
 	"libpango-1.0.so.0",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libpango-1.0.so.0",
 #endif /* defined __ia64__ */
@@ -377,9 +377,9 @@ char *DtNeeded[] = {
 	"libpango-1.0.so.0",
 #endif /* defined __s390x__ */
 	"libpangoft2-1.0.so.0",
-#if defined ___i386__
+#if defined __i386__
 	"libpangoft2-1.0.so.0",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libpangoft2-1.0.so.0",
 #endif /* defined __ia64__ */
@@ -399,9 +399,9 @@ char *DtNeeded[] = {
 	"libpangoft2-1.0.so.0",
 #endif /* defined __s390x__ */
 	"libpangoxft-1.0.so.0",
-#if defined ___i386__
+#if defined __i386__
 	"libpangoxft-1.0.so.0",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libpangoxft-1.0.so.0",
 #endif /* defined __ia64__ */
@@ -422,9 +422,9 @@ char *DtNeeded[] = {
 #endif /* defined __s390x__ */
 	"libpng12.so.0",
 	"libpthread.so.0",
-#if defined ___i386__
+#if defined __i386__
 	"libpthread.so.0",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libpthread.so.0",
 #endif /* defined __ia64__ */
@@ -444,9 +444,9 @@ char *DtNeeded[] = {
 	"libpthread.so.0",
 #endif /* defined __s390x__ */
 	"libqt-mt.so.3",
-#if defined ___i386__
+#if defined __i386__
 	"libqt-mt.so.3",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libqt-mt.so.3",
 #endif /* defined __ia64__ */
@@ -466,9 +466,9 @@ char *DtNeeded[] = {
 	"libqt-mt.so.3",
 #endif /* defined __s390x__ */
 	"libQtCore.so.4",
-#if defined ___i386__
+#if defined __i386__
 	"libQtCore.so.4",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libQtCore.so.4",
 #endif /* defined __ia64__ */
@@ -488,9 +488,9 @@ char *DtNeeded[] = {
 	"libQtCore.so.4",
 #endif /* defined __s390x__ */
 	"libQtGui.so.4",
-#if defined ___i386__
+#if defined __i386__
 	"libQtGui.so.4",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libQtGui.so.4",
 #endif /* defined __ia64__ */
@@ -510,9 +510,9 @@ char *DtNeeded[] = {
 	"libQtGui.so.4",
 #endif /* defined __s390x__ */
 	"libQtNetwork.so.4",
-#if defined ___i386__
+#if defined __i386__
 	"libQtNetwork.so.4",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libQtNetwork.so.4",
 #endif /* defined __ia64__ */
@@ -532,9 +532,9 @@ char *DtNeeded[] = {
 	"libQtNetwork.so.4",
 #endif /* defined __s390x__ */
 	"libQtOpenGL.so.4",
-#if defined ___i386__
+#if defined __i386__
 	"libQtOpenGL.so.4",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libQtOpenGL.so.4",
 #endif /* defined __ia64__ */
@@ -554,9 +554,9 @@ char *DtNeeded[] = {
 	"libQtOpenGL.so.4",
 #endif /* defined __s390x__ */
 	"libQtSql.so.4",
-#if defined ___i386__
+#if defined __i386__
 	"libQtSql.so.4",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libQtSql.so.4",
 #endif /* defined __ia64__ */
@@ -576,9 +576,9 @@ char *DtNeeded[] = {
 	"libQtSql.so.4",
 #endif /* defined __s390x__ */
 	"libQtSvg.so.4",
-#if defined ___i386__
+#if defined __i386__
 	"libQtSvg.so.4",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libQtSvg.so.4",
 #endif /* defined __ia64__ */
@@ -598,9 +598,9 @@ char *DtNeeded[] = {
 	"libQtSvg.so.4",
 #endif /* defined __s390x__ */
 	"libQtXml.so.4",
-#if defined ___i386__
+#if defined __i386__
 	"libQtXml.so.4",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libQtXml.so.4",
 #endif /* defined __ia64__ */
@@ -622,9 +622,9 @@ char *DtNeeded[] = {
 	"librt.so.1",
 	"libSM.so.6",
 	"libstdc++.so.6",
-#if defined ___i386__
+#if defined __i386__
 	"libstdc++.so.6",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libstdc++.so.6",
 #endif /* defined __ia64__ */
@@ -644,9 +644,9 @@ char *DtNeeded[] = {
 	"libstdc++.so.6",
 #endif /* defined __s390x__ */
 	"libutil.so.1",
-#if defined ___i386__
+#if defined __i386__
 	"libutil.so.1",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libutil.so.1",
 #endif /* defined __ia64__ */
@@ -671,9 +671,9 @@ char *DtNeeded[] = {
 	"libxml2.so.2",
 	"libXt.so.6",
 	"libz.so.1",
-#if defined ___i386__
+#if defined __i386__
 	"libz.so.1",
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	"libz.so.1",
 #endif /* defined __ia64__ */

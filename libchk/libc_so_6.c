@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "elfchk.h"
 struct versym libc_so_6[] = {
-#if defined ___i386__
+#if defined __i386__
 	{"_Exit","GLIBC_2.1.1",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -22,7 +22,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"_Exit","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_IO_feof","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -43,7 +43,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"_IO_feof","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_IO_getc","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -64,7 +64,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"_IO_getc","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_IO_putc","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -85,7 +85,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"_IO_putc","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_IO_puts","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -106,7 +106,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"_IO_puts","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__assert_fail","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -128,7 +128,7 @@ struct versym libc_so_6[] = {
 	{"__assert_fail","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
 	{"__ctype_b_loc","GLIBC_2.3",0,LSB_Core,0,1},
-#if defined ___i386__
+#if defined __i386__
 	{"__ctype_get_mb_cur_max","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -151,7 +151,7 @@ struct versym libc_so_6[] = {
 #endif
 	{"__ctype_tolower_loc","GLIBC_2.3",0,LSB_Core,0,1},
 	{"__ctype_toupper_loc","GLIBC_2.3",0,LSB_Core,0,1},
-#if defined ___i386__
+#if defined __i386__
 	{"__cxa_atexit","GLIBC_2.1.3",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -172,7 +172,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__cxa_atexit","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__daylight","GLIBC_2.0",0,LSB_Core,4,0},
 #endif
 #if defined __ia64__
@@ -193,7 +193,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__daylight","GLIBC_2.2",0,LSB_Core,4,0},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__environ","GLIBC_2.0",0,LSB_Core,4,0},
 #endif
 #if defined __ia64__
@@ -214,7 +214,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__environ","GLIBC_2.2",0,LSB_Core,8,0},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__errno_location","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -235,7 +235,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__errno_location","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__fpending","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -256,7 +256,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__fpending","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__fxstat","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -277,7 +277,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__fxstat","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__fxstat64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -298,7 +298,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__fxstat64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__getpagesize","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -319,7 +319,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__getpagesize","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__getpgid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -340,7 +340,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__getpgid","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__h_errno_location","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -361,7 +361,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__h_errno_location","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__isinf","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -382,7 +382,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__isinf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__isinff","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -403,7 +403,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__isinff","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__isinfl","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -424,7 +424,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__isinfl","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__isnan","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -445,7 +445,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__isnan","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__isnanf","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -466,7 +466,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__isnanf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__isnanl","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -487,7 +487,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__isnanl","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__libc_current_sigrtmax","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -508,7 +508,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__libc_current_sigrtmax","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__libc_current_sigrtmin","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -529,7 +529,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__libc_current_sigrtmin","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__libc_start_main","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -550,7 +550,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__libc_start_main","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__lxstat","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -571,7 +571,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__lxstat","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__lxstat64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -592,7 +592,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__lxstat64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__mempcpy","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -613,7 +613,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__mempcpy","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__rawmemchr","GLIBC_2.1",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -635,7 +635,7 @@ struct versym libc_so_6[] = {
 	{"__rawmemchr","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
 	{"__register_atfork","GLIBC_2.3.2",0,LSB_Core,0,1},
-#if defined ___i386__
+#if defined __i386__
 	{"__sigsetjmp","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -656,7 +656,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__sigsetjmp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__stpcpy","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -677,7 +677,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__stpcpy","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__strdup","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -698,7 +698,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__strdup","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__strtod_internal","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -719,7 +719,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__strtod_internal","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__strtof_internal","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -740,7 +740,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__strtof_internal","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__strtok_r","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -761,7 +761,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__strtok_r","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__strtol_internal","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -782,7 +782,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__strtol_internal","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__strtold_internal","GLIBC_2.0",0,LSB_Core,12,1},
 #endif
 #if defined __ia64__
@@ -803,7 +803,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__strtold_internal","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__strtoll_internal","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -824,7 +824,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__strtoll_internal","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__strtoul_internal","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -845,7 +845,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__strtoul_internal","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__strtoull_internal","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -866,7 +866,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__strtoull_internal","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__sysconf","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -887,7 +887,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__sysconf","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__sysv_signal","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -908,7 +908,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__sysv_signal","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__timezone","GLIBC_2.0",0,LSB_Core,4,0},
 #endif
 #if defined __ia64__
@@ -929,7 +929,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__timezone","GLIBC_2.2",0,LSB_Core,8,0},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__tzname","GLIBC_2.0",0,LSB_Core,8,0},
 #endif
 #if defined __ia64__
@@ -950,7 +950,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__tzname","GLIBC_2.2",0,LSB_Core,16,0},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__wcstod_internal","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -971,7 +971,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__wcstod_internal","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__wcstof_internal","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -992,7 +992,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__wcstof_internal","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__wcstol_internal","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1013,7 +1013,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__wcstol_internal","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__wcstold_internal","GLIBC_2.0",0,LSB_Core,12,1},
 #endif
 #if defined __ia64__
@@ -1034,7 +1034,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__wcstold_internal","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__wcstoul_internal","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1055,7 +1055,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__wcstoul_internal","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__xmknod","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1076,7 +1076,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__xmknod","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__xpg_basename","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1097,7 +1097,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__xpg_basename","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__xpg_sigpause","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1118,7 +1118,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__xpg_sigpause","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1139,7 +1139,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__xstat","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1160,7 +1160,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__xstat","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__xstat64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1181,7 +1181,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__xstat64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_environ","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1202,7 +1202,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"_environ","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_exit","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -1223,7 +1223,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"_exit","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_longjmp","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -1244,7 +1244,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"_longjmp","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_nl_msg_cat_cntr","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1265,7 +1265,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"_nl_msg_cat_cntr","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_setjmp","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1286,7 +1286,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"_setjmp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_sys_errlist","GLIBC_2.3",0,LSB_Core,0,0},
 #endif
 #if defined __ia64__
@@ -1307,7 +1307,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"_sys_errlist","GLIBC_2.3",0,LSB_Core,0,0},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_sys_siglist","GLIBC_2.3.3",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -1328,7 +1328,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"_sys_siglist","GLIBC_2.3.3",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_tolower","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1349,7 +1349,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"_tolower","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_toupper","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1370,7 +1370,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"_toupper","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"a64l","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1391,7 +1391,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"a64l","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"abort","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -1412,7 +1412,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"abort","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"abs","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1433,7 +1433,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"abs","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"accept","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1454,7 +1454,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"accept","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"access","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1475,7 +1475,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"access","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"acct","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1496,7 +1496,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"acct","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"adjtime","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1517,7 +1517,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"adjtime","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"alarm","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1538,7 +1538,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"alarm","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"asctime","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1559,7 +1559,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"asctime","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"asctime_r","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1580,7 +1580,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"asctime_r","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"asprintf","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1601,7 +1601,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"asprintf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"atof","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -1622,7 +1622,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"atof","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"atoi","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1643,7 +1643,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"atoi","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"atol","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1664,7 +1664,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"atol","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"atoll","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -1685,7 +1685,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"atoll","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"authnone_create","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -1706,7 +1706,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"authnone_create","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"basename","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1727,7 +1727,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"basename","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"bcmp","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1748,7 +1748,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"bcmp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"bcopy","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -1769,7 +1769,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"bcopy","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"bind","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1790,7 +1790,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"bind","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"bind_textdomain_codeset","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1811,7 +1811,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"bind_textdomain_codeset","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"bindresvport","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1832,7 +1832,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"bindresvport","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"bindtextdomain","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1853,7 +1853,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"bindtextdomain","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"brk","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1874,7 +1874,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"brk","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"bsd_signal","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1895,7 +1895,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"bsd_signal","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"bsearch","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -1916,7 +1916,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"bsearch","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"btowc","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1937,7 +1937,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"btowc","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"bzero","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -1958,7 +1958,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"bzero","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"calloc","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -1979,7 +1979,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"calloc","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"catclose","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2000,7 +2000,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"catclose","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"catgets","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2021,7 +2021,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"catgets","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"catopen","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2042,7 +2042,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"catopen","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cfgetispeed","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2063,7 +2063,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"cfgetispeed","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cfgetospeed","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2084,7 +2084,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"cfgetospeed","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cfmakeraw","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -2105,7 +2105,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"cfmakeraw","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cfsetispeed","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2126,7 +2126,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"cfsetispeed","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cfsetospeed","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2147,7 +2147,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"cfsetospeed","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cfsetspeed","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2168,7 +2168,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"cfsetspeed","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"chdir","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2189,7 +2189,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"chdir","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"chmod","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2210,7 +2210,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"chmod","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"chown","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2231,7 +2231,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"chown","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"chroot","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2252,7 +2252,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"chroot","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clearerr","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -2273,7 +2273,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"clearerr","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clnt_create","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -2294,7 +2294,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"clnt_create","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clnt_pcreateerror","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -2315,7 +2315,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"clnt_pcreateerror","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clnt_perrno","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -2336,7 +2336,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"clnt_perrno","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clnt_perror","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -2357,7 +2357,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"clnt_perror","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clnt_spcreateerror","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2378,7 +2378,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"clnt_spcreateerror","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clnt_sperrno","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2399,7 +2399,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"clnt_sperrno","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clnt_sperror","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2420,7 +2420,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"clnt_sperror","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clock","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2441,7 +2441,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"clock","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"close","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2462,7 +2462,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"close","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"closedir","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2483,7 +2483,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"closedir","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"closelog","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -2504,7 +2504,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"closelog","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"confstr","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2525,7 +2525,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"confstr","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"connect","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2546,7 +2546,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"connect","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"creat","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2567,7 +2567,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"creat","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"creat64","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2588,7 +2588,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"creat64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ctermid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2609,7 +2609,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ctermid","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ctime","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2630,7 +2630,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ctime","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ctime_r","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2651,7 +2651,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ctime_r","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cuserid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2672,7 +2672,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"cuserid","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"daemon","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2693,7 +2693,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"daemon","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"daylight","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2714,7 +2714,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"daylight","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"dcgettext","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2735,7 +2735,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"dcgettext","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"dcngettext","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2756,7 +2756,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"dcngettext","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"dgettext","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2777,7 +2777,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"dgettext","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"difftime","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -2798,7 +2798,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"difftime","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"dirname","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2819,7 +2819,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"dirname","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"div","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -2840,7 +2840,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"div","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"dngettext","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2861,7 +2861,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"dngettext","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"drand48","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -2882,7 +2882,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"drand48","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"dup","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2903,7 +2903,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"dup","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"dup2","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2925,7 +2925,7 @@ struct versym libc_so_6[] = {
 	{"dup2","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 	{"duplocale","GLIBC_2.3",0,LSB_Core,0,1},
-#if defined ___i386__
+#if defined __i386__
 	{"ecvt","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2946,7 +2946,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ecvt","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"endgrent","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -2967,7 +2967,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"endgrent","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"endprotoent","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -2988,7 +2988,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"endprotoent","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"endpwent","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -3009,7 +3009,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"endpwent","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"endservent","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -3030,7 +3030,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"endservent","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"endutent","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -3051,7 +3051,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"endutent","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"endutxent","GLIBC_2.1",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -3072,7 +3072,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"endutxent","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"environ","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3093,7 +3093,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"environ","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"erand48","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -3114,7 +3114,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"erand48","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"err","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -3135,7 +3135,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"err","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"error","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -3156,7 +3156,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"error","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"errx","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -3177,7 +3177,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"errx","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"execl","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3198,7 +3198,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"execl","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"execle","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3219,7 +3219,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"execle","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"execlp","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3240,7 +3240,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"execlp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"execv","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3261,7 +3261,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"execv","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"execve","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3282,7 +3282,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"execve","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"execvp","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3303,7 +3303,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"execvp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"exit","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -3324,7 +3324,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"exit","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fchdir","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3345,7 +3345,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fchdir","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fchmod","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3366,7 +3366,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fchmod","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fchown","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3387,7 +3387,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fchown","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fclose","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3408,7 +3408,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fclose","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fcntl","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3429,7 +3429,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fcntl","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fcvt","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3450,7 +3450,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fcvt","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fdatasync","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3471,7 +3471,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fdatasync","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fdopen","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3492,7 +3492,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fdopen","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"feof","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3513,7 +3513,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"feof","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ferror","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3534,7 +3534,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ferror","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fflush","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3555,7 +3555,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fflush","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fflush_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3576,7 +3576,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fflush_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ffs","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3597,7 +3597,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ffs","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fgetc","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3618,7 +3618,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fgetc","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fgetpos","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3639,7 +3639,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fgetpos","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fgetpos64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3660,7 +3660,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fgetpos64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fgets","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3681,7 +3681,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fgets","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fgetwc","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3702,7 +3702,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fgetwc","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fgetwc_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3723,7 +3723,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fgetwc_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fgetws","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -3744,7 +3744,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fgetws","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fileno","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3765,7 +3765,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fileno","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"flock","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3786,7 +3786,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"flock","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"flockfile","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -3807,7 +3807,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"flockfile","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fmtmsg","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3828,7 +3828,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fmtmsg","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fnmatch","GLIBC_2.2.3",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3849,7 +3849,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fnmatch","GLIBC_2.2.3",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fopen","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3870,7 +3870,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fopen","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fopen64","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3891,7 +3891,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fopen64","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fork","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3912,7 +3912,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fork","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fpathconf","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3933,7 +3933,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fpathconf","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fprintf","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3954,7 +3954,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fprintf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fputc","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3975,7 +3975,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fputc","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fputs","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3996,7 +3996,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fputs","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fputwc","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4017,7 +4017,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fputwc","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fputws","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4038,7 +4038,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fputws","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fread","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4059,7 +4059,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fread","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"free","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -4080,7 +4080,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"free","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"freeaddrinfo","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -4102,7 +4102,7 @@ struct versym libc_so_6[] = {
 	{"freeaddrinfo","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
 	{"freelocale","GLIBC_2.3",0,LSB_Core,0,1},
-#if defined ___i386__
+#if defined __i386__
 	{"freopen","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4123,7 +4123,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"freopen","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"freopen64","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4144,7 +4144,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"freopen64","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fscanf","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4165,7 +4165,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fscanf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fseek","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4186,7 +4186,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fseek","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fseeko","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4207,7 +4207,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fseeko","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fseeko64","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4228,7 +4228,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fseeko64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fsetpos","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4249,7 +4249,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fsetpos","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fsetpos64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4270,7 +4270,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fsetpos64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fstatfs","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4291,7 +4291,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fstatfs","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fstatfs64","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4312,7 +4312,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fstatfs64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fstatvfs","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4333,7 +4333,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fstatvfs","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fstatvfs64","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4354,7 +4354,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fstatvfs64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fsync","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4375,7 +4375,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fsync","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ftell","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4396,7 +4396,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ftell","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ftello","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4417,7 +4417,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ftello","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ftello64","GLIBC_2.1",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -4438,7 +4438,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ftello64","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ftime","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4459,7 +4459,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ftime","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ftok","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4480,7 +4480,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ftok","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ftruncate","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4501,7 +4501,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ftruncate","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ftruncate64","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4522,7 +4522,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ftruncate64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ftrylockfile","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4543,7 +4543,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ftrylockfile","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ftw","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4564,7 +4564,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ftw","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ftw64","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4585,7 +4585,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ftw64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"funlockfile","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -4606,7 +4606,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"funlockfile","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fwide","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4627,7 +4627,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fwide","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fwprintf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4648,7 +4648,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fwprintf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fwrite","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4669,7 +4669,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fwrite","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fwscanf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4690,7 +4690,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fwscanf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gai_strerror","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4711,7 +4711,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"gai_strerror","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gcvt","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4732,7 +4732,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"gcvt","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getaddrinfo","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4753,7 +4753,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getaddrinfo","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getc","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4774,7 +4774,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getc","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getc_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4795,7 +4795,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getc_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getchar","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4816,7 +4816,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getchar","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getchar_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4837,7 +4837,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getchar_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getcontext","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4858,7 +4858,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getcontext","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getcwd","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4879,7 +4879,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getcwd","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getdate","GLIBC_2.1",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -4900,7 +4900,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getdate","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getdate_err","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4921,7 +4921,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getdate_err","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getegid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4942,7 +4942,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getegid","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getenv","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4963,7 +4963,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getenv","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"geteuid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -4984,7 +4984,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"geteuid","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getgid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5005,7 +5005,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getgid","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getgrent","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -5026,7 +5026,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getgrent","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getgrgid","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -5047,7 +5047,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getgrgid","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getgrgid_r","GLIBC_2.1.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5068,7 +5068,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getgrgid_r","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getgrnam","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -5089,7 +5089,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getgrnam","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getgrnam_r","GLIBC_2.1.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5110,7 +5110,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getgrnam_r","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getgrouplist","GLIBC_2.2.4",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5131,7 +5131,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getgrouplist","GLIBC_2.2.4",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getgroups","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5152,7 +5152,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getgroups","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gethostbyaddr","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -5173,7 +5173,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"gethostbyaddr","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gethostbyaddr_r","GLIBC_2.1.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5194,7 +5194,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"gethostbyaddr_r","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gethostbyname","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -5215,7 +5215,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"gethostbyname","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gethostbyname_r","GLIBC_2.1.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5236,7 +5236,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"gethostbyname_r","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gethostid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5257,7 +5257,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"gethostid","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gethostname","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5278,7 +5278,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"gethostname","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getitimer","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5299,7 +5299,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getitimer","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getloadavg","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5320,7 +5320,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getloadavg","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getlogin","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5341,7 +5341,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getlogin","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getlogin_r","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5359,7 +5359,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getlogin_r","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getnameinfo","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5380,7 +5380,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getnameinfo","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getopt","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5401,7 +5401,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getopt","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getopt_long","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5422,7 +5422,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getopt_long","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getopt_long_only","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5443,7 +5443,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getopt_long_only","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getpagesize","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5464,7 +5464,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getpagesize","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getpeername","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5485,7 +5485,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getpeername","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getpgid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5506,7 +5506,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getpgid","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getpgrp","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5527,7 +5527,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getpgrp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getpid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5548,7 +5548,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getpid","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getppid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5569,7 +5569,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getppid","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getpriority","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5590,7 +5590,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getpriority","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getprotobyname","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -5611,7 +5611,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getprotobyname","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getprotobynumber","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -5632,7 +5632,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getprotobynumber","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getprotoent","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -5653,7 +5653,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getprotoent","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getpwent","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -5674,7 +5674,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getpwent","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getpwnam","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -5695,7 +5695,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getpwnam","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getpwnam_r","GLIBC_2.1.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5716,7 +5716,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getpwnam_r","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getpwuid","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -5737,7 +5737,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getpwuid","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getpwuid_r","GLIBC_2.1.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5758,7 +5758,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getpwuid_r","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getrlimit","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5779,7 +5779,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getrlimit","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getrlimit64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5800,7 +5800,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getrlimit64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getrusage","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5821,7 +5821,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getrusage","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getservbyname","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -5842,7 +5842,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getservbyname","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getservbyport","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -5863,7 +5863,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getservbyport","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getservent","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -5884,7 +5884,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getservent","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getsid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5905,7 +5905,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getsid","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getsockname","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5926,7 +5926,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getsockname","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getsockopt","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5947,7 +5947,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getsockopt","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getsubopt","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5968,7 +5968,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getsubopt","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gettext","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -5989,7 +5989,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"gettext","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gettimeofday","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6010,7 +6010,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"gettimeofday","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getuid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6031,7 +6031,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getuid","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getutent","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -6052,7 +6052,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getutent","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getutent_r","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6073,7 +6073,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getutent_r","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getutxent","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6094,7 +6094,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getutxent","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getutxid","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6115,7 +6115,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getutxid","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getutxline","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6136,7 +6136,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getutxline","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getw","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6157,7 +6157,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getw","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getwc","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6178,7 +6178,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getwc","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getwchar","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6199,7 +6199,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getwchar","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getwd","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6220,7 +6220,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"getwd","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"glob","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6241,7 +6241,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"glob","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"glob64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6262,7 +6262,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"glob64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"globfree","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -6283,7 +6283,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"globfree","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"globfree64","GLIBC_2.1",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -6304,7 +6304,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"globfree64","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gmtime","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -6325,7 +6325,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"gmtime","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gmtime_r","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -6346,7 +6346,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"gmtime_r","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"grantpt","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6367,7 +6367,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"grantpt","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"hcreate","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6388,7 +6388,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"hcreate","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"hdestroy","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -6409,7 +6409,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"hdestroy","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"hsearch","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -6430,7 +6430,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"hsearch","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"htonl","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6451,7 +6451,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"htonl","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"htons","GLIBC_2.0",0,LSB_Core,2,1},
 #endif
 #if defined __ia64__
@@ -6472,7 +6472,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"htons","GLIBC_2.2",0,LSB_Core,2,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iconv","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6493,7 +6493,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"iconv","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iconv_close","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6514,7 +6514,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"iconv_close","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iconv_open","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6535,7 +6535,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"iconv_open","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"if_freenameindex","GLIBC_2.1",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -6556,7 +6556,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"if_freenameindex","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"if_indextoname","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6577,7 +6577,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"if_indextoname","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"if_nameindex","GLIBC_2.1",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -6598,7 +6598,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"if_nameindex","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"if_nametoindex","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6619,7 +6619,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"if_nametoindex","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"imaxabs","GLIBC_2.1.1",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -6640,7 +6640,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"imaxabs","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"imaxdiv","GLIBC_2.1.1",0,LSB_Core,16,1},
 #endif
 #if defined __ia64__
@@ -6661,7 +6661,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"imaxdiv","GLIBC_2.2",0,LSB_Core,16,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"index","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6682,7 +6682,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"index","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"inet_addr","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -6703,7 +6703,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"inet_addr","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"inet_ntoa","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6724,7 +6724,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"inet_ntoa","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"inet_ntop","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6745,7 +6745,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"inet_ntop","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"inet_pton","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6766,7 +6766,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"inet_pton","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"initgroups","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6787,7 +6787,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"initgroups","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"initstate","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6808,7 +6808,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"initstate","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"insque","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -6829,7 +6829,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"insque","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ioctl","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6850,7 +6850,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ioctl","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"isalnum","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6871,7 +6871,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"isalnum","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"isalpha","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6892,7 +6892,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"isalpha","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"isascii","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6913,7 +6913,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"isascii","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"isatty","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6934,7 +6934,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"isatty","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"isblank","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6955,7 +6955,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"isblank","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iscntrl","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6976,7 +6976,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"iscntrl","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"isdigit","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6997,7 +6997,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"isdigit","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"isgraph","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7018,7 +7018,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"isgraph","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"islower","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7039,7 +7039,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"islower","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"isprint","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7060,7 +7060,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"isprint","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ispunct","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7081,7 +7081,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ispunct","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"isspace","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7102,7 +7102,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"isspace","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"isupper","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7123,7 +7123,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"isupper","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswalnum","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7144,7 +7144,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"iswalnum","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswalpha","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7165,7 +7165,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"iswalpha","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswblank","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7186,7 +7186,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"iswblank","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswcntrl","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7207,7 +7207,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"iswcntrl","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswctype","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7228,7 +7228,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"iswctype","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswdigit","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7249,7 +7249,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"iswdigit","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswgraph","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7270,7 +7270,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"iswgraph","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswlower","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7291,7 +7291,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"iswlower","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswprint","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7312,7 +7312,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"iswprint","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswpunct","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7333,7 +7333,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"iswpunct","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswspace","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7354,7 +7354,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"iswspace","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswupper","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7375,7 +7375,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"iswupper","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswxdigit","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7396,7 +7396,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"iswxdigit","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"isxdigit","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7417,7 +7417,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"isxdigit","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"jrand48","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7438,7 +7438,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"jrand48","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"key_decryptsession","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7459,7 +7459,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"key_decryptsession","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"kill","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7480,7 +7480,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"kill","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"killpg","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7501,7 +7501,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"killpg","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"l64a","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7522,7 +7522,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"l64a","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"labs","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7543,7 +7543,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"labs","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lchown","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7564,7 +7564,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"lchown","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lcong48","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -7585,7 +7585,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"lcong48","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ldiv","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -7606,7 +7606,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ldiv","GLIBC_2.2",0,LSB_Core,16,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lfind","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -7627,7 +7627,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"lfind","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"link","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7648,7 +7648,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"link","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"listen","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7669,7 +7669,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"listen","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"llabs","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -7690,7 +7690,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"llabs","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lldiv","GLIBC_2.0",0,LSB_Core,16,1},
 #endif
 #if defined __ia64__
@@ -7711,7 +7711,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"lldiv","GLIBC_2.2",0,LSB_Core,16,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"localeconv","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -7732,7 +7732,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"localeconv","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"localtime","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -7753,7 +7753,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"localtime","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"localtime_r","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -7774,7 +7774,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"localtime_r","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lockf","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7795,7 +7795,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"lockf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lockf64","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7816,7 +7816,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"lockf64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"longjmp","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -7837,7 +7837,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"longjmp","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lrand48","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7858,7 +7858,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"lrand48","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lsearch","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -7879,7 +7879,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"lsearch","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lseek","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7900,7 +7900,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"lseek","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"makecontext","GLIBC_2.1",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -7921,7 +7921,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"makecontext","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"malloc","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -7942,7 +7942,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"malloc","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mblen","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7963,7 +7963,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"mblen","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mbrlen","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7984,7 +7984,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"mbrlen","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mbrtowc","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8005,7 +8005,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"mbrtowc","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mbsinit","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8026,7 +8026,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"mbsinit","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mbsnrtowcs","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8047,7 +8047,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"mbsnrtowcs","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mbsrtowcs","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8068,7 +8068,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"mbsrtowcs","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mbstowcs","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8089,7 +8089,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"mbstowcs","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mbtowc","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8110,7 +8110,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"mbtowc","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"memccpy","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -8131,7 +8131,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"memccpy","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"memchr","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -8152,7 +8152,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"memchr","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"memcmp","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8173,7 +8173,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"memcmp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"memcpy","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -8194,7 +8194,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"memcpy","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"memmem","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -8215,7 +8215,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"memmem","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"memmove","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -8236,7 +8236,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"memmove","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"memrchr","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -8257,7 +8257,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"memrchr","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"memset","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -8278,7 +8278,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"memset","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mkdir","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8299,7 +8299,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"mkdir","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mkfifo","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8320,7 +8320,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"mkfifo","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mkstemp","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8341,7 +8341,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"mkstemp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mkstemp64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8362,7 +8362,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"mkstemp64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mktemp","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8383,7 +8383,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"mktemp","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mktime","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8404,7 +8404,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"mktime","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mlock","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8425,7 +8425,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"mlock","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mlockall","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8446,7 +8446,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"mlockall","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mmap","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -8467,7 +8467,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"mmap","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mmap64","GLIBC_2.1",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -8488,7 +8488,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"mmap64","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mprotect","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8509,7 +8509,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"mprotect","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mrand48","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8530,7 +8530,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"mrand48","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"msgctl","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8551,7 +8551,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"msgctl","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"msgget","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8572,7 +8572,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"msgget","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"msgrcv","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8593,7 +8593,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"msgrcv","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"msgsnd","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8614,7 +8614,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"msgsnd","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"msync","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8635,7 +8635,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"msync","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"munlock","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8656,7 +8656,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"munlock","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"munlockall","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8677,7 +8677,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"munlockall","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"munmap","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8698,7 +8698,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"munmap","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"nanosleep","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8720,7 +8720,7 @@ struct versym libc_so_6[] = {
 	{"nanosleep","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 	{"newlocale","GLIBC_2.3",0,LSB_Core,0,1},
-#if defined ___i386__
+#if defined __i386__
 	{"nftw","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8741,7 +8741,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"nftw","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"nftw64","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8762,7 +8762,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"nftw64","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ngettext","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8783,7 +8783,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ngettext","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"nice","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8804,7 +8804,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"nice","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"nl_langinfo","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8825,7 +8825,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"nl_langinfo","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"nrand48","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8846,7 +8846,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"nrand48","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ntohl","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8867,7 +8867,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ntohl","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ntohs","GLIBC_2.0",0,LSB_Core,2,1},
 #endif
 #if defined __ia64__
@@ -8888,7 +8888,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ntohs","GLIBC_2.2",0,LSB_Core,2,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"open","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8909,7 +8909,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"open","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"opendir","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -8930,7 +8930,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"opendir","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"openlog","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -8951,7 +8951,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"openlog","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"optarg","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8972,7 +8972,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"optarg","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"opterr","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -8993,7 +8993,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"opterr","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"optind","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9014,7 +9014,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"optind","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"optopt","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9035,7 +9035,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"optopt","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pathconf","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9056,7 +9056,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"pathconf","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pause","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9077,7 +9077,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"pause","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pclose","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9098,7 +9098,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"pclose","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"perror","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -9119,7 +9119,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"perror","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pipe","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9140,7 +9140,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"pipe","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pmap_getport","GLIBC_2.0",0,LSB_Core,2,1},
 #endif
 #if defined __ia64__
@@ -9161,7 +9161,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"pmap_getport","GLIBC_2.2",0,LSB_Core,2,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pmap_set","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9182,7 +9182,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"pmap_set","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pmap_unset","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9203,7 +9203,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"pmap_unset","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"poll","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9224,7 +9224,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"poll","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"popen","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9245,7 +9245,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"popen","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_fadvise","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9266,7 +9266,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_fadvise","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_fadvise64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9287,7 +9287,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_fadvise64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_fallocate","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9308,7 +9308,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_fallocate","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_fallocate64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9329,7 +9329,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_fallocate64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_madvise","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9350,7 +9350,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_madvise","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_memalign","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9371,7 +9371,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_memalign","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_openpt","GLIBC_2.2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9392,7 +9392,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_openpt","GLIBC_2.2.1",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawn","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9413,7 +9413,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_spawn","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawn_file_actions_addclose","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9434,7 +9434,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_spawn_file_actions_addclose","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawn_file_actions_adddup2","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9455,7 +9455,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_spawn_file_actions_adddup2","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawn_file_actions_addopen","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9476,7 +9476,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_spawn_file_actions_addopen","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawn_file_actions_destroy","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9497,7 +9497,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_spawn_file_actions_destroy","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawn_file_actions_init","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9518,7 +9518,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_spawn_file_actions_init","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_destroy","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9539,7 +9539,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_spawnattr_destroy","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_getflags","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9560,7 +9560,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_spawnattr_getflags","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_getpgroup","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9581,7 +9581,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_spawnattr_getpgroup","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_getschedparam","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9602,7 +9602,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_spawnattr_getschedparam","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_getschedpolicy","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9623,7 +9623,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_spawnattr_getschedpolicy","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_getsigdefault","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9644,7 +9644,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_spawnattr_getsigdefault","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_getsigmask","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9665,7 +9665,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_spawnattr_getsigmask","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_init","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9686,7 +9686,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_spawnattr_init","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_setflags","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9707,7 +9707,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_spawnattr_setflags","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_setpgroup","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9728,7 +9728,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_spawnattr_setpgroup","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_setschedparam","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9749,7 +9749,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_spawnattr_setschedparam","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_setschedpolicy","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9770,7 +9770,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_spawnattr_setschedpolicy","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_setsigdefault","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9791,7 +9791,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_spawnattr_setsigdefault","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_setsigmask","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9812,7 +9812,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_spawnattr_setsigmask","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9833,7 +9833,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"posix_spawnp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"printf","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9854,7 +9854,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"printf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pselect","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9875,7 +9875,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"pselect","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"psignal","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -9896,7 +9896,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"psignal","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ptsname","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9917,7 +9917,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ptsname","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"putc","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9938,7 +9938,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"putc","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"putc_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9959,7 +9959,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"putc_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"putchar","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -9980,7 +9980,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"putchar","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"putchar_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10001,7 +10001,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"putchar_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"putenv","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10022,7 +10022,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"putenv","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"puts","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10043,7 +10043,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"puts","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pututxline","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10064,7 +10064,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"pututxline","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"putw","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10085,7 +10085,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"putw","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"putwc","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10106,7 +10106,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"putwc","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"putwchar","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10127,7 +10127,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"putwchar","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"qsort","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -10148,7 +10148,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"qsort","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"raise","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10169,7 +10169,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"raise","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"rand","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10190,7 +10190,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"rand","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"rand_r","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10211,7 +10211,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"rand_r","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"random","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10232,7 +10232,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"random","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"read","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10253,7 +10253,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"read","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"readdir","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -10274,7 +10274,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"readdir","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"readdir64","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -10295,7 +10295,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"readdir64","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"readdir64_r","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10316,7 +10316,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"readdir64_r","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"readdir_r","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10337,7 +10337,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"readdir_r","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"readlink","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10358,7 +10358,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"readlink","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"readv","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10379,7 +10379,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"readv","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"realloc","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -10400,7 +10400,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"realloc","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"realpath","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10421,7 +10421,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"realpath","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"recv","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10442,7 +10442,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"recv","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"recvfrom","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10463,7 +10463,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"recvfrom","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"recvmsg","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10484,7 +10484,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"recvmsg","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"regcomp","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10505,7 +10505,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"regcomp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"regerror","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10526,7 +10526,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"regerror","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"regexec","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10547,7 +10547,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"regexec","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"regfree","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -10568,7 +10568,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"regfree","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"remove","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10589,7 +10589,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"remove","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"remque","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -10610,7 +10610,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"remque","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"rename","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10631,7 +10631,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"rename","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"rewind","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -10652,7 +10652,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"rewind","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"rewinddir","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -10673,7 +10673,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"rewinddir","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"rindex","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10694,7 +10694,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"rindex","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"rmdir","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10715,7 +10715,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"rmdir","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sbrk","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -10736,7 +10736,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sbrk","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"scanf","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10757,7 +10757,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"scanf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sched_get_priority_max","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10778,7 +10778,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sched_get_priority_max","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sched_get_priority_min","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10799,7 +10799,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sched_get_priority_min","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sched_getparam","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10820,7 +10820,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sched_getparam","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sched_getscheduler","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10841,7 +10841,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sched_getscheduler","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sched_rr_get_interval","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10862,7 +10862,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sched_rr_get_interval","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sched_setparam","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10883,7 +10883,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sched_setparam","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sched_setscheduler","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10904,7 +10904,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sched_setscheduler","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sched_yield","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10925,7 +10925,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sched_yield","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"seed48","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10946,7 +10946,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"seed48","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"seekdir","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -10967,7 +10967,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"seekdir","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"select","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -10988,7 +10988,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"select","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"semctl","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11009,7 +11009,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"semctl","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"semget","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11030,7 +11030,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"semget","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"semop","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11051,7 +11051,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"semop","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"send","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11072,7 +11072,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"send","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sendmsg","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11093,7 +11093,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sendmsg","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sendto","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11114,7 +11114,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sendto","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setbuf","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -11135,7 +11135,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setbuf","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setbuffer","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -11156,7 +11156,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setbuffer","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setcontext","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11177,7 +11177,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setcontext","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setegid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11198,7 +11198,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setegid","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setenv","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11219,7 +11219,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setenv","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"seteuid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11240,7 +11240,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"seteuid","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setgid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11261,7 +11261,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setgid","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setgrent","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -11282,7 +11282,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setgrent","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setgroups","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11303,7 +11303,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setgroups","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sethostname","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11324,7 +11324,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sethostname","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setitimer","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11345,7 +11345,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setitimer","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setlocale","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11366,7 +11366,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setlocale","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setlogmask","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11387,7 +11387,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setlogmask","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setpgid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11408,7 +11408,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setpgid","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setpgrp","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11429,7 +11429,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setpgrp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setpriority","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11450,7 +11450,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setpriority","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setprotoent","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -11471,7 +11471,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setprotoent","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setpwent","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -11492,7 +11492,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setpwent","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setregid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11513,7 +11513,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setregid","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setreuid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11534,7 +11534,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setreuid","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setrlimit","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11555,7 +11555,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setrlimit","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setrlimit64","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11576,7 +11576,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setrlimit64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setservent","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -11597,7 +11597,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setservent","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setsid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11618,7 +11618,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setsid","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setsockopt","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11639,7 +11639,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setsockopt","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setstate","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11660,7 +11660,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setstate","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setuid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11681,7 +11681,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setuid","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setutent","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -11702,7 +11702,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setutent","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setutxent","GLIBC_2.1",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -11723,7 +11723,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setutxent","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setvbuf","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11744,7 +11744,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"setvbuf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"shmat","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -11765,7 +11765,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"shmat","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"shmctl","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11786,7 +11786,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"shmctl","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"shmdt","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11807,7 +11807,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"shmdt","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"shmget","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11828,7 +11828,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"shmget","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"shutdown","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11849,7 +11849,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"shutdown","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigaction","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11870,7 +11870,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sigaction","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigaddset","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11891,7 +11891,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sigaddset","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigaltstack","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11912,7 +11912,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sigaltstack","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigandset","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11933,7 +11933,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sigandset","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigdelset","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11954,7 +11954,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sigdelset","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigemptyset","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11975,7 +11975,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sigemptyset","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigfillset","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11996,7 +11996,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sigfillset","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sighold","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12017,7 +12017,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sighold","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigignore","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12038,7 +12038,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sigignore","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"siginterrupt","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12059,7 +12059,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"siginterrupt","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigisemptyset","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12080,7 +12080,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sigisemptyset","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigismember","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12101,7 +12101,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sigismember","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"siglongjmp","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -12122,7 +12122,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"siglongjmp","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"signal","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12143,7 +12143,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"signal","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigorset","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12164,7 +12164,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sigorset","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigpause","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12185,7 +12185,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sigpause","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigpending","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12206,7 +12206,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sigpending","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigprocmask","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12227,7 +12227,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sigprocmask","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigqueue","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12248,7 +12248,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sigqueue","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigrelse","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12269,7 +12269,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sigrelse","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigreturn","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12290,7 +12290,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sigreturn","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigset","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12311,7 +12311,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sigset","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigsuspend","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12332,7 +12332,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sigsuspend","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigtimedwait","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12353,7 +12353,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sigtimedwait","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigwait","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12374,7 +12374,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sigwait","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigwaitinfo","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12395,7 +12395,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sigwaitinfo","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sleep","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12416,7 +12416,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sleep","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"snprintf","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12437,7 +12437,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"snprintf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sockatmark","GLIBC_2.2.4",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12458,7 +12458,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sockatmark","GLIBC_2.2.4",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"socket","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12479,7 +12479,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"socket","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"socketpair","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12500,7 +12500,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"socketpair","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sprintf","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12521,7 +12521,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sprintf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"srand","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -12542,7 +12542,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"srand","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"srand48","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -12563,7 +12563,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"srand48","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"srandom","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -12584,7 +12584,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"srandom","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sscanf","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12605,7 +12605,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sscanf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"statfs","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12626,7 +12626,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"statfs","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"statfs64","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12647,7 +12647,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"statfs64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"statvfs","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12668,7 +12668,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"statvfs","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"statvfs64","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12689,7 +12689,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"statvfs64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"stderr","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12710,7 +12710,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"stderr","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"stdin","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12731,7 +12731,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"stdin","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"stdout","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12752,7 +12752,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"stdout","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"stime","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12773,7 +12773,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"stime","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"stpcpy","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12794,7 +12794,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"stpcpy","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"stpncpy","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12815,7 +12815,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"stpncpy","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strcasecmp","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12836,7 +12836,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strcasecmp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strcasestr","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12857,7 +12857,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strcasestr","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strcat","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12878,7 +12878,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strcat","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strchr","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12899,7 +12899,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strchr","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strcmp","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12920,7 +12920,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strcmp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strcoll","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12941,7 +12941,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strcoll","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strcpy","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12962,7 +12962,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strcpy","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strcspn","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -12983,7 +12983,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strcspn","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strdup","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13004,7 +13004,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strdup","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strerror","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13025,7 +13025,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strerror","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strerror_r","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13046,7 +13046,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strerror_r","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strfmon","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13067,7 +13067,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strfmon","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strftime","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13088,7 +13088,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strftime","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strlen","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13109,7 +13109,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strlen","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strncasecmp","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13130,7 +13130,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strncasecmp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strncat","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13151,7 +13151,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strncat","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strncmp","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13172,7 +13172,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strncmp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strncpy","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13193,7 +13193,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strncpy","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strndup","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13214,7 +13214,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strndup","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strnlen","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13235,7 +13235,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strnlen","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strpbrk","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13256,7 +13256,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strpbrk","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strptime","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13277,7 +13277,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strptime","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strrchr","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13298,7 +13298,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strrchr","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strsep","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13319,7 +13319,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strsep","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strsignal","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13340,7 +13340,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strsignal","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strspn","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13361,7 +13361,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strspn","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strstr","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13382,7 +13382,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strstr","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtod","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -13403,7 +13403,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strtod","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtof","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13424,7 +13424,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strtof","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtoimax","GLIBC_2.1",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -13445,7 +13445,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strtoimax","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtok","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13466,7 +13466,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strtok","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtok_r","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13487,7 +13487,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strtok_r","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtol","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13508,7 +13508,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strtol","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtold","GLIBC_2.0",0,LSB_Core,12,1},
 #endif
 #if defined __ia64__
@@ -13529,7 +13529,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strtold","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtoll","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -13550,7 +13550,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strtoll","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtoq","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -13571,7 +13571,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strtoq","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtoul","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13592,7 +13592,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strtoul","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtoull","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -13613,7 +13613,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strtoull","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtoumax","GLIBC_2.1",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -13634,7 +13634,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strtoumax","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtouq","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -13655,7 +13655,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strtouq","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strxfrm","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13676,7 +13676,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"strxfrm","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"svc_getreqset","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -13697,7 +13697,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"svc_getreqset","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"svc_register","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13718,7 +13718,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"svc_register","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"svc_run","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -13739,7 +13739,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"svc_run","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"svc_sendreply","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13760,7 +13760,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"svc_sendreply","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"svcerr_auth","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -13781,7 +13781,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"svcerr_auth","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"svcerr_decode","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -13802,7 +13802,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"svcerr_decode","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"svcerr_noproc","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -13823,7 +13823,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"svcerr_noproc","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"svcerr_noprog","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -13844,7 +13844,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"svcerr_noprog","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"svcerr_progvers","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -13865,7 +13865,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"svcerr_progvers","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"svcerr_systemerr","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -13886,7 +13886,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"svcerr_systemerr","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"svcerr_weakauth","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -13907,7 +13907,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"svcerr_weakauth","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"svctcp_create","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -13928,7 +13928,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"svctcp_create","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"svcudp_create","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -13949,7 +13949,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"svcudp_create","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"swab","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -13970,7 +13970,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"swab","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"swapcontext","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -13991,7 +13991,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"swapcontext","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"swprintf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14012,7 +14012,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"swprintf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"swscanf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14033,7 +14033,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"swscanf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"symlink","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14054,7 +14054,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"symlink","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sync","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -14075,7 +14075,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sync","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sysconf","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14096,7 +14096,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sysconf","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"syslog","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -14117,7 +14117,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"syslog","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"system","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14138,7 +14138,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"system","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tcdrain","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14159,7 +14159,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"tcdrain","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tcflow","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14180,7 +14180,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"tcflow","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tcflush","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14201,7 +14201,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"tcflush","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tcgetattr","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14222,7 +14222,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"tcgetattr","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tcgetpgrp","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14243,7 +14243,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"tcgetpgrp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tcgetsid","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14264,7 +14264,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"tcgetsid","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tcsendbreak","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14285,7 +14285,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"tcsendbreak","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tcsetattr","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14306,7 +14306,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"tcsetattr","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tcsetpgrp","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14327,7 +14327,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"tcsetpgrp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tdelete","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -14348,7 +14348,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"tdelete","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"telldir","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14369,7 +14369,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"telldir","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tempnam","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14390,7 +14390,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"tempnam","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"textdomain","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14411,7 +14411,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"textdomain","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tfind","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -14432,7 +14432,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"tfind","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"time","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14453,7 +14453,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"time","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"times","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14474,7 +14474,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"times","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"timezone","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14495,7 +14495,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"timezone","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tmpfile","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14516,7 +14516,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"tmpfile","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tmpfile64","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14537,7 +14537,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"tmpfile64","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tmpnam","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14558,7 +14558,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"tmpnam","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"toascii","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14579,7 +14579,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"toascii","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tolower","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14600,7 +14600,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"tolower","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"toupper","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14621,7 +14621,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"toupper","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"towctrans","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14642,7 +14642,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"towctrans","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"towlower","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14663,7 +14663,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"towlower","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"towupper","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14684,7 +14684,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"towupper","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"truncate","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14705,7 +14705,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"truncate","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"truncate64","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14726,7 +14726,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"truncate64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tsearch","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -14747,7 +14747,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"tsearch","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ttyname","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14768,7 +14768,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ttyname","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ttyname_r","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14789,7 +14789,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ttyname_r","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"twalk","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -14810,7 +14810,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"twalk","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tzname","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -14831,7 +14831,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"tzname","GLIBC_2.2",0,LSB_Core,16,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tzset","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -14852,7 +14852,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"tzset","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ualarm","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14873,7 +14873,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ualarm","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ulimit","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14894,7 +14894,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ulimit","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"umask","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14915,7 +14915,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"umask","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"uname","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14936,7 +14936,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"uname","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ungetc","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14957,7 +14957,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ungetc","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ungetwc","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14978,7 +14978,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"ungetwc","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"unlink","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -14999,7 +14999,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"unlink","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"unlockpt","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15020,7 +15020,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"unlockpt","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"unsetenv","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15042,7 +15042,7 @@ struct versym libc_so_6[] = {
 	{"unsetenv","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 	{"uselocale","GLIBC_2.3",0,LSB_Core,0,1},
-#if defined ___i386__
+#if defined __i386__
 	{"usleep","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15063,7 +15063,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"usleep","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"utime","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15084,7 +15084,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"utime","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"utimes","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15105,7 +15105,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"utimes","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"utmpname","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15126,7 +15126,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"utmpname","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vasprintf","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15147,7 +15147,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"vasprintf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vdprintf","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15168,7 +15168,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"vdprintf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"verrx","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -15189,7 +15189,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"verrx","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vfork","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15210,7 +15210,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"vfork","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vfprintf","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15231,7 +15231,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"vfprintf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vfscanf","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15252,7 +15252,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"vfscanf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vfwprintf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15273,7 +15273,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"vfwprintf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vfwscanf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15294,7 +15294,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"vfwscanf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vprintf","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15315,7 +15315,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"vprintf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vscanf","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15336,7 +15336,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"vscanf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vsnprintf","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15357,7 +15357,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"vsnprintf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vsprintf","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15378,7 +15378,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"vsprintf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vsscanf","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15399,7 +15399,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"vsscanf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vswprintf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15420,7 +15420,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"vswprintf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vswscanf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15441,7 +15441,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"vswscanf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vsyslog","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -15462,7 +15462,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"vsyslog","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vwprintf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15483,7 +15483,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"vwprintf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vwscanf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15504,7 +15504,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"vwscanf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wait","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15525,7 +15525,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wait","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wait4","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15546,7 +15546,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wait4","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"waitpid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15567,7 +15567,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"waitpid","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"warn","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -15588,7 +15588,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"warn","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"warnx","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -15609,7 +15609,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"warnx","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcpcpy","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -15630,7 +15630,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcpcpy","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcpncpy","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -15651,7 +15651,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcpncpy","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcrtomb","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15672,7 +15672,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcrtomb","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcscasecmp","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15693,7 +15693,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcscasecmp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcscat","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -15714,7 +15714,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcscat","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcschr","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -15735,7 +15735,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcschr","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcscmp","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15756,7 +15756,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcscmp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcscoll","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15777,7 +15777,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcscoll","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcscpy","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -15798,7 +15798,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcscpy","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcscspn","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15819,7 +15819,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcscspn","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsdup","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -15840,7 +15840,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcsdup","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsftime","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15861,7 +15861,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcsftime","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcslen","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15882,7 +15882,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcslen","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsncasecmp","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15903,7 +15903,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcsncasecmp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsncat","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -15924,7 +15924,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcsncat","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsncmp","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15945,7 +15945,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcsncmp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsncpy","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -15966,7 +15966,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcsncpy","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsnlen","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -15987,7 +15987,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcsnlen","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsnrtombs","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16008,7 +16008,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcsnrtombs","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcspbrk","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -16029,7 +16029,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcspbrk","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsrchr","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -16050,7 +16050,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcsrchr","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsrtombs","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16071,7 +16071,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcsrtombs","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsspn","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16092,7 +16092,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcsspn","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsstr","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -16113,7 +16113,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcsstr","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstod","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -16134,7 +16134,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcstod","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstof","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16155,7 +16155,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcstof","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstoimax","GLIBC_2.1",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -16176,7 +16176,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcstoimax","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstok","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -16197,7 +16197,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcstok","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstol","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16218,7 +16218,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcstol","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstold","GLIBC_2.0",0,LSB_Core,12,1},
 #endif
 #if defined __ia64__
@@ -16239,7 +16239,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcstold","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstoll","GLIBC_2.1",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -16260,7 +16260,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcstoll","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstombs","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16281,7 +16281,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcstombs","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstoq","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -16302,7 +16302,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcstoq","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstoul","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16323,7 +16323,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcstoul","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstoull","GLIBC_2.1",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -16344,7 +16344,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcstoull","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstoumax","GLIBC_2.1",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -16365,7 +16365,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcstoumax","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstouq","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
@@ -16386,7 +16386,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcstouq","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcswcs","GLIBC_2.1",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -16407,7 +16407,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcswcs","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcswidth","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16428,7 +16428,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcswidth","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsxfrm","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16449,7 +16449,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcsxfrm","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wctob","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16470,7 +16470,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wctob","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wctomb","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16491,7 +16491,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wctomb","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wctrans","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16512,7 +16512,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wctrans","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wctype","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16533,7 +16533,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wctype","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcwidth","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16554,7 +16554,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wcwidth","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wmemchr","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -16575,7 +16575,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wmemchr","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wmemcmp","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16596,7 +16596,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wmemcmp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wmemcpy","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -16617,7 +16617,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wmemcpy","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wmemmove","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -16638,7 +16638,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wmemmove","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wmemset","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -16659,7 +16659,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wmemset","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wordexp","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16680,7 +16680,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wordexp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wordfree","GLIBC_2.1",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -16701,7 +16701,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wordfree","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wprintf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16722,7 +16722,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wprintf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"write","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16743,7 +16743,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"write","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"writev","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16764,7 +16764,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"writev","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wscanf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16785,7 +16785,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"wscanf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_accepted_reply","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -16806,7 +16806,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_accepted_reply","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_array","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16827,7 +16827,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_array","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_bool","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16848,7 +16848,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_bool","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_bytes","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16869,7 +16869,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_bytes","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_callhdr","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16890,7 +16890,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_callhdr","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_callmsg","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -16911,7 +16911,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_callmsg","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_char","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16932,7 +16932,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_char","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_double","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16953,7 +16953,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_double","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_enum","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16974,7 +16974,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_enum","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_float","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16995,7 +16995,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_float","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_free","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -17016,7 +17016,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_free","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_int","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -17037,7 +17037,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_int","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_long","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -17058,7 +17058,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_long","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_opaque","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -17079,7 +17079,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_opaque","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_opaque_auth","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -17100,7 +17100,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_opaque_auth","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_pointer","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -17121,7 +17121,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_pointer","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_reference","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -17142,7 +17142,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_reference","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_rejected_reply","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -17163,7 +17163,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_rejected_reply","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_replymsg","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -17184,7 +17184,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_replymsg","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_short","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -17205,7 +17205,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_short","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_string","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -17226,7 +17226,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_string","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_u_char","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -17247,7 +17247,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_u_char","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_u_int","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -17268,7 +17268,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_u_int","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_u_long","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -17289,7 +17289,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_u_long","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_u_short","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -17310,7 +17310,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_u_short","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_union","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -17331,7 +17331,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_union","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_vector","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -17352,7 +17352,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_vector","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_void","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -17373,7 +17373,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_void","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_wrapstring","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -17394,7 +17394,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdr_wrapstring","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdrmem_create","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -17415,7 +17415,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdrmem_create","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdrrec_create","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -17436,7 +17436,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdrrec_create","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdrrec_eof","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -17457,7 +17457,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"xdrrec_eof","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdrstdio_create","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
