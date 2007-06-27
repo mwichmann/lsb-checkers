@@ -42,9 +42,9 @@ struct DynamicInfo DynamicInfo[] = {
 	{"DT_NEEDED",DT_NEEDED,checkDT_NEEDED},
 	{"DT_NULL",DT_NULL,checkDT_NULL},
 	{"DT_NUM",DT_NUM,checkDT_NUM},
-#if defined ___i386__
+#if defined __i386__
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
 #endif /* defined __ia64__ */
