@@ -26,38 +26,38 @@ Msg("Checking data structures in libxml2/libxml/uri.h\n");
 #endif
 
 printf("Checking data structures in libxml2/libxml/uri.h\n");
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlURI,40, 14566, 2, 3.1, NULL, 14565, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlURI,80, 14566, 11, 3.1, NULL, 14565, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlURI,80, 14566, 3, 3.1, NULL, 14565, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlURI,40, 14566, 6, 3.1, NULL, 14565, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlURI,80, 14566, 9, 3.1, NULL, 14565, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlURI,40, 14566, 10, 3.1, NULL, 14565, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlURI,80, 14566, 12, 3.1, NULL, 14565, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14565,NULL);\n",architecture,14566,0);
 Msg("Find size of xmlURI (14566)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlURIPtr,4, 14568, 2, 3.1, NULL, 14567, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlURIPtr,8, 14568, 11, 3.1, NULL, 14567, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlURIPtr,8, 14568, 3, 3.1, NULL, 14567, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlURIPtr,4, 14568, 6, 3.1, NULL, 14567, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlURIPtr,8, 14568, 9, 3.1, NULL, 14567, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlURIPtr,4, 14568, 10, 3.1, NULL, 14567, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlURIPtr,8, 14568, 12, 3.1, NULL, 14567, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14567, NULL);\n",architecture,14568,0);

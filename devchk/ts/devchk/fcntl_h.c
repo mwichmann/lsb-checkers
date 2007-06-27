@@ -235,7 +235,7 @@ cnt++;
 
 #endif
 
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef F_GETLK64
 	CompareConstant(F_GETLK64,12,1192,architecture,2.1,NULL)
 #else
@@ -243,7 +243,7 @@ Msg( "Error: Constant not found: F_GETLK64\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef F_GETLK64
 	CompareConstant(F_GETLK64,12,1192,architecture,2.1,NULL)
 #else
@@ -251,7 +251,7 @@ Msg( "Error: Constant not found: F_GETLK64\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef F_GETLK64
 	CompareConstant(F_GETLK64,5,1192,architecture,2.1,NULL)
 #else
@@ -259,7 +259,7 @@ Msg( "Error: Constant not found: F_GETLK64\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef F_GETLK64
 	CompareConstant(F_GETLK64,12,1192,architecture,2.1,NULL)
 #else
@@ -267,7 +267,7 @@ Msg( "Error: Constant not found: F_GETLK64\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef F_GETLK64
 	CompareConstant(F_GETLK64,5,1192,architecture,2.1,NULL)
 #else
@@ -275,7 +275,7 @@ Msg( "Error: Constant not found: F_GETLK64\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef F_GETLK64
 	CompareConstant(F_GETLK64,5,1192,architecture,2.1,NULL)
 #else
@@ -283,7 +283,7 @@ Msg( "Error: Constant not found: F_GETLK64\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef F_GETLK64
 	CompareConstant(F_GETLK64,12,1192,architecture,2.1,NULL)
 #else
@@ -297,7 +297,7 @@ Msg( "No definition for F_GETLK64 (1192, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1192,%d,'""2.1""',NULL);\n", architecture, F_GETLK64);
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef F_SETLK64
 	CompareConstant(F_SETLK64,13,1193,architecture,2.1,NULL)
 #else
@@ -305,7 +305,7 @@ Msg( "Error: Constant not found: F_SETLK64\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef F_SETLK64
 	CompareConstant(F_SETLK64,13,1193,architecture,2.1,NULL)
 #else
@@ -313,7 +313,7 @@ Msg( "Error: Constant not found: F_SETLK64\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef F_SETLK64
 	CompareConstant(F_SETLK64,6,1193,architecture,2.1,NULL)
 #else
@@ -321,7 +321,7 @@ Msg( "Error: Constant not found: F_SETLK64\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef F_SETLK64
 	CompareConstant(F_SETLK64,13,1193,architecture,2.1,NULL)
 #else
@@ -329,7 +329,7 @@ Msg( "Error: Constant not found: F_SETLK64\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef F_SETLK64
 	CompareConstant(F_SETLK64,6,1193,architecture,2.1,NULL)
 #else
@@ -337,7 +337,7 @@ Msg( "Error: Constant not found: F_SETLK64\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef F_SETLK64
 	CompareConstant(F_SETLK64,6,1193,architecture,2.1,NULL)
 #else
@@ -345,7 +345,7 @@ Msg( "Error: Constant not found: F_SETLK64\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef F_SETLK64
 	CompareConstant(F_SETLK64,13,1193,architecture,2.1,NULL)
 #else
@@ -359,7 +359,7 @@ Msg( "No definition for F_SETLK64 (1193, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1193,%d,'""2.1""',NULL);\n", architecture, F_SETLK64);
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef F_SETLKW64
 	CompareConstant(F_SETLKW64,14,1194,architecture,2.1,NULL)
 #else
@@ -367,7 +367,7 @@ Msg( "Error: Constant not found: F_SETLKW64\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef F_SETLKW64
 	CompareConstant(F_SETLKW64,14,1194,architecture,2.1,NULL)
 #else
@@ -375,7 +375,7 @@ Msg( "Error: Constant not found: F_SETLKW64\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef F_SETLKW64
 	CompareConstant(F_SETLKW64,7,1194,architecture,2.1,NULL)
 #else
@@ -383,7 +383,7 @@ Msg( "Error: Constant not found: F_SETLKW64\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef F_SETLKW64
 	CompareConstant(F_SETLKW64,14,1194,architecture,2.1,NULL)
 #else
@@ -391,7 +391,7 @@ Msg( "Error: Constant not found: F_SETLKW64\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef F_SETLKW64
 	CompareConstant(F_SETLKW64,7,1194,architecture,2.1,NULL)
 #else
@@ -399,7 +399,7 @@ Msg( "Error: Constant not found: F_SETLKW64\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef F_SETLKW64
 	CompareConstant(F_SETLKW64,7,1194,architecture,2.1,NULL)
 #else
@@ -407,7 +407,7 @@ Msg( "Error: Constant not found: F_SETLKW64\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef F_SETLKW64
 	CompareConstant(F_SETLKW64,14,1194,architecture,2.1,NULL)
 #else
@@ -501,25 +501,25 @@ cnt++;
 
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10217,0);
 Msg("Find size of flock (10217)\n");
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10218,0);
 Msg("Find size of flock64 (10218)\n");

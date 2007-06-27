@@ -28,76 +28,76 @@ Msg("Checking data structures in libxml2/libxml/xmlautomata.h\n");
 #endif
 
 printf("Checking data structures in libxml2/libxml/xmlautomata.h\n");
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlAutomataState,0, 14709, 2, 3.1, NULL, 14708, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlAutomataState,0, 14709, 11, 3.1, NULL, 14708, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlAutomataState,0, 14709, 3, 3.1, NULL, 14708, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlAutomataState,0, 14709, 6, 3.1, NULL, 14708, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlAutomataState,0, 14709, 9, 3.1, NULL, 14708, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlAutomataState,0, 14709, 10, 3.1, NULL, 14708, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlAutomataState,0, 14709, 12, 3.1, NULL, 14708, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14708,NULL);\n",architecture,14709,0);
 Msg("Find size of xmlAutomataState (14709)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlAutomataStatePtr,4, 14711, 2, 3.1, NULL, 14710, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlAutomataStatePtr,8, 14711, 11, 3.1, NULL, 14710, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlAutomataStatePtr,8, 14711, 3, 3.1, NULL, 14710, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlAutomataStatePtr,4, 14711, 6, 3.1, NULL, 14710, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlAutomataStatePtr,8, 14711, 9, 3.1, NULL, 14710, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlAutomataStatePtr,4, 14711, 10, 3.1, NULL, 14710, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlAutomataStatePtr,8, 14711, 12, 3.1, NULL, 14710, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14710,NULL);\n",architecture,14711,0);
 Msg("Find size of xmlAutomataStatePtr (14711)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlAutomata,0, 14713, 2, 3.1, NULL, 14712, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlAutomata,0, 14713, 11, 3.1, NULL, 14712, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlAutomata,0, 14713, 3, 3.1, NULL, 14712, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlAutomata,0, 14713, 6, 3.1, NULL, 14712, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlAutomata,0, 14713, 9, 3.1, NULL, 14712, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlAutomata,0, 14713, 10, 3.1, NULL, 14712, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlAutomata,0, 14713, 12, 3.1, NULL, 14712, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14712,NULL);\n",architecture,14713,0);
 Msg("Find size of xmlAutomata (14713)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlAutomataPtr,4, 14715, 2, 3.1, NULL, 14714, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlAutomataPtr,8, 14715, 11, 3.1, NULL, 14714, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlAutomataPtr,8, 14715, 3, 3.1, NULL, 14714, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlAutomataPtr,4, 14715, 6, 3.1, NULL, 14714, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlAutomataPtr,8, 14715, 9, 3.1, NULL, 14714, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlAutomataPtr,4, 14715, 10, 3.1, NULL, 14714, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlAutomataPtr,8, 14715, 12, 3.1, NULL, 14714, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14714, NULL);\n",architecture,14715,0);

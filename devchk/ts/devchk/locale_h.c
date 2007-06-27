@@ -298,62 +298,62 @@ cnt++;
 
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,6919,0);
 Msg("Find size of lconv (6919)\n");
 #endif
 
-#if __i386__
-#elif __powerpc__ && !__powerpc64__
-#elif __ia64__
-#elif __s390x__
-#elif __s390__ && !__s390x__
-#elif __x86_64__
-#elif __powerpc64__
+#if defined __i386__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __ia64__
+#elif defined __s390x__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __x86_64__
+#elif defined __powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,10531,0);
 Msg("Find size of __locale_struct (10531)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(__locale_t,4, 10533, 2, 1.3, NULL, 10532, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(__locale_t,4, 10533, 6, 1.3, NULL, 10532, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(__locale_t,8, 10533, 3, 1.3, NULL, 10532, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(__locale_t,8, 10533, 12, 1.3, NULL, 10532, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(__locale_t,4, 10533, 10, 1.3, NULL, 10532, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(__locale_t,8, 10533, 11, 2.0, NULL, 10532, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(__locale_t,8, 10533, 9, 2.0, NULL, 10532, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10532,NULL);\n",architecture,10533,0);
 Msg("Find size of __locale_t (10533)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(locale_t,4, 10534, 2, 3.0, NULL, 10532, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(locale_t,4, 10534, 6, 3.0, NULL, 10532, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(locale_t,8, 10534, 3, 3.0, NULL, 10532, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(locale_t,8, 10534, 12, 3.0, NULL, 10532, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(locale_t,8, 10534, 9, 3.0, NULL, 10532, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(locale_t,4, 10534, 10, 3.0, NULL, 10532, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(locale_t,8, 10534, 11, 3.0, NULL, 10532, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.0""',NULL,10532, NULL);\n",architecture,10534,0);

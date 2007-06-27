@@ -45,38 +45,38 @@ cnt++;
 
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(nl_catd,4, 6923, 2, 1.0, NULL, 40, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(nl_catd,8, 6923, 3, 1.3, NULL, 40, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(nl_catd,4, 6923, 6, 1.2, NULL, 40, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(nl_catd,4, 6923, 10, 1.3, NULL, 40, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(nl_catd,8, 6923, 9, 2.0, NULL, 40, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(nl_catd,8, 6923, 12, 1.3, NULL, 40, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(nl_catd,8, 6923, 11, 2.0, NULL, 40, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,40,NULL);\n",architecture,6923,0);
 Msg("Find size of nl_catd (6923)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(nl_item,4, 6924, 2, 1.0, NULL, 6, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(nl_item,4, 6924, 3, 1.3, NULL, 6, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(nl_item,4, 6924, 6, 1.2, NULL, 6, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(nl_item,4, 6924, 10, 1.3, NULL, 6, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(nl_item,4, 6924, 9, 2.0, NULL, 6, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(nl_item,4, 6924, 12, 1.3, NULL, 6, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(nl_item,4, 6924, 11, 2.0, NULL, 6, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6, NULL);\n",architecture,6924,0);

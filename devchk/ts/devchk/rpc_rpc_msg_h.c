@@ -49,61 +49,61 @@ CheckEnum("RPC_MISMATCH",RPC_MISMATCH,0,34798);
 CheckEnum("AUTH_ERROR",AUTH_ERROR,1,34799);
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __s390__ && !__s390x__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10417,0);
 Msg("Find size of accepted_reply (10417)\n");
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __s390__ && !__s390x__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10423,0);
 Msg("Find size of rejected_reply (10423)\n");
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __s390__ && !__s390x__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10425,0);
 Msg("Find size of reply_body (10425)\n");
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __s390__ && !__s390x__
-#elif __powerpc__ && !__powerpc64__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10426,0);
 Msg("Find size of call_body (10426)\n");
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __s390__ && !__s390x__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390x__
-#elif __x86_64__
-#elif __powerpc64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
+#elif defined __powerpc64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,9984,0);
 Msg("Find size of rpc_msg (9984)\n");

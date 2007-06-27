@@ -63,38 +63,38 @@ printf("Checking data structures in pango-1.0/pango/pangofc-decoder.h\n");
 /* No test for PANGO_FC_DECODER_GET_CLASS(obj) */
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(PangoFcDecoder,12, 12597, 2, 3.1, NULL, 12596, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(PangoFcDecoder,24, 12597, 11, 3.1, NULL, 12596, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(PangoFcDecoder,24, 12597, 3, 3.1, NULL, 12596, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(PangoFcDecoder,12, 12597, 6, 3.1, NULL, 12596, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(PangoFcDecoder,24, 12597, 9, 3.1, NULL, 12596, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(PangoFcDecoder,12, 12597, 10, 3.1, NULL, 12596, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(PangoFcDecoder,24, 12597, 12, 3.1, NULL, 12596, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12596,NULL);\n",architecture,12597,0);
 Msg("Find size of PangoFcDecoder (12597)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(PangoFcDecoderClass,92, 12602, 2, 3.1, NULL, 12601, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(PangoFcDecoderClass,184, 12602, 3, 3.1, NULL, 12601, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(PangoFcDecoderClass,92, 12602, 6, 3.1, NULL, 12601, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(PangoFcDecoderClass,184, 12602, 9, 3.1, NULL, 12601, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(PangoFcDecoderClass,92, 12602, 10, 3.1, NULL, 12601, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(PangoFcDecoderClass,184, 12602, 12, 3.1, NULL, 12601, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(PangoFcDecoderClass,184, 12602, 11, 3.1, NULL, 12601, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12601, NULL);\n",architecture,12602,0);

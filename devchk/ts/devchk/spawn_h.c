@@ -85,19 +85,19 @@ cnt++;
 
 #endif
 
-#if __ia64__
+#if defined __ia64__
 CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 3, 3.2, NULL, 16584, NULL)
-#elif __i386__
+#elif defined __i386__
 CheckTypeSize(posix_spawn_file_actions_t,76, 16588, 2, 3.2, NULL, 16584, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(posix_spawn_file_actions_t,76, 16588, 6, 3.2, NULL, 16584, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 9, 3.2, NULL, 16584, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(posix_spawn_file_actions_t,76, 16588, 10, 3.2, NULL, 16584, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 11, 3.2, NULL, 16584, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 12, 3.2, NULL, 16584, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16584,NULL);\n",architecture,16588,0);

@@ -175,38 +175,38 @@ cnt++;
 
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(rlim_t,4, 10210, 2, 1.2, NULL, 9, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(rlim_t,8, 10210, 3, 1.3, NULL, 9, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(rlim_t,4, 10210, 6, 1.2, NULL, 9, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(rlim_t,4, 10210, 10, 1.3, NULL, 9, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(rlim_t,8, 10210, 9, 2.0, NULL, 9, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(rlim_t,8, 10210, 12, 1.3, NULL, 9, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(rlim_t,8, 10210, 11, 2.0, NULL, 9, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,10210,0);
 Msg("Find size of rlim_t (10210)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(rlim64_t,8, 10273, 2, 1.2, NULL, 11, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(rlim64_t,8, 10273, 3, 1.3, NULL, 11, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(rlim64_t,8, 10273, 6, 1.2, NULL, 11, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(rlim64_t,8, 10273, 10, 1.3, NULL, 11, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(rlim64_t,8, 10273, 9, 2.0, NULL, 11, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(rlim64_t,8, 10273, 12, 1.3, NULL, 11, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(rlim64_t,8, 10273, 11, 2.0, NULL, 11, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,11,NULL);\n",architecture,10273,0);
@@ -217,37 +217,37 @@ Msg("Find size of rlim64_t (10273)\n");
 CheckTypeSize(__rlimit_resource_t,4, 10969, 1, 2.0, NULL, 6, NULL)
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9120,0);
 Msg("Find size of rlimit (9120)\n");
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9122,0);
 Msg("Find size of rlimit64 (9122)\n");
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9125,0);
 Msg("Find size of rusage (9125)\n");

@@ -197,7 +197,7 @@ cnt++;
 
 #endif
 
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef SO_RCVLOWAT
 	CompareConstant(SO_RCVLOWAT,16,3230,architecture,2.1,NULL)
 #else
@@ -205,7 +205,7 @@ Msg( "Error: Constant not found: SO_RCVLOWAT\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef SO_RCVLOWAT
 	CompareConstant(SO_RCVLOWAT,16,3230,architecture,2.1,NULL)
 #else
@@ -213,7 +213,7 @@ Msg( "Error: Constant not found: SO_RCVLOWAT\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef SO_RCVLOWAT
 	CompareConstant(SO_RCVLOWAT,18,3230,architecture,2.1,NULL)
 #else
@@ -221,7 +221,7 @@ Msg( "Error: Constant not found: SO_RCVLOWAT\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef SO_RCVLOWAT
 	CompareConstant(SO_RCVLOWAT,18,3230,architecture,2.1,NULL)
 #else
@@ -229,7 +229,7 @@ Msg( "Error: Constant not found: SO_RCVLOWAT\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef SO_RCVLOWAT
 	CompareConstant(SO_RCVLOWAT,18,3230,architecture,2.1,NULL)
 #else
@@ -237,7 +237,7 @@ Msg( "Error: Constant not found: SO_RCVLOWAT\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef SO_RCVLOWAT
 	CompareConstant(SO_RCVLOWAT,18,3230,architecture,2.1,NULL)
 #else
@@ -245,7 +245,7 @@ Msg( "Error: Constant not found: SO_RCVLOWAT\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef SO_RCVLOWAT
 	CompareConstant(SO_RCVLOWAT,18,3230,architecture,2.1,NULL)
 #else
@@ -259,7 +259,7 @@ Msg( "No definition for SO_RCVLOWAT (3230, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3230,%d,'""2.1""',NULL);\n", architecture, SO_RCVLOWAT);
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef SO_SNDLOWAT
 	CompareConstant(SO_SNDLOWAT,17,3231,architecture,2.1,NULL)
 #else
@@ -267,7 +267,7 @@ Msg( "Error: Constant not found: SO_SNDLOWAT\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef SO_SNDLOWAT
 	CompareConstant(SO_SNDLOWAT,17,3231,architecture,2.1,NULL)
 #else
@@ -275,7 +275,7 @@ Msg( "Error: Constant not found: SO_SNDLOWAT\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef SO_SNDLOWAT
 	CompareConstant(SO_SNDLOWAT,19,3231,architecture,2.1,NULL)
 #else
@@ -283,7 +283,7 @@ Msg( "Error: Constant not found: SO_SNDLOWAT\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef SO_SNDLOWAT
 	CompareConstant(SO_SNDLOWAT,19,3231,architecture,2.1,NULL)
 #else
@@ -291,7 +291,7 @@ Msg( "Error: Constant not found: SO_SNDLOWAT\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef SO_SNDLOWAT
 	CompareConstant(SO_SNDLOWAT,19,3231,architecture,2.1,NULL)
 #else
@@ -299,7 +299,7 @@ Msg( "Error: Constant not found: SO_SNDLOWAT\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef SO_SNDLOWAT
 	CompareConstant(SO_SNDLOWAT,19,3231,architecture,2.1,NULL)
 #else
@@ -307,7 +307,7 @@ Msg( "Error: Constant not found: SO_SNDLOWAT\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef SO_SNDLOWAT
 	CompareConstant(SO_SNDLOWAT,19,3231,architecture,2.1,NULL)
 #else
@@ -321,7 +321,7 @@ Msg( "No definition for SO_SNDLOWAT (3231, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3231,%d,'""2.1""',NULL);\n", architecture, SO_SNDLOWAT);
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef SO_RCVTIMEO
 	CompareConstant(SO_RCVTIMEO,18,3232,architecture,2.1,NULL)
 #else
@@ -329,7 +329,7 @@ Msg( "Error: Constant not found: SO_RCVTIMEO\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef SO_RCVTIMEO
 	CompareConstant(SO_RCVTIMEO,18,3232,architecture,2.1,NULL)
 #else
@@ -337,7 +337,7 @@ Msg( "Error: Constant not found: SO_RCVTIMEO\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef SO_RCVTIMEO
 	CompareConstant(SO_RCVTIMEO,20,3232,architecture,2.1,NULL)
 #else
@@ -345,7 +345,7 @@ Msg( "Error: Constant not found: SO_RCVTIMEO\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef SO_RCVTIMEO
 	CompareConstant(SO_RCVTIMEO,20,3232,architecture,2.1,NULL)
 #else
@@ -353,7 +353,7 @@ Msg( "Error: Constant not found: SO_RCVTIMEO\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef SO_RCVTIMEO
 	CompareConstant(SO_RCVTIMEO,20,3232,architecture,2.1,NULL)
 #else
@@ -361,7 +361,7 @@ Msg( "Error: Constant not found: SO_RCVTIMEO\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef SO_RCVTIMEO
 	CompareConstant(SO_RCVTIMEO,20,3232,architecture,2.1,NULL)
 #else
@@ -369,7 +369,7 @@ Msg( "Error: Constant not found: SO_RCVTIMEO\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef SO_RCVTIMEO
 	CompareConstant(SO_RCVTIMEO,20,3232,architecture,2.1,NULL)
 #else
@@ -383,7 +383,7 @@ Msg( "No definition for SO_RCVTIMEO (3232, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3232,%d,'""2.1""',NULL);\n", architecture, SO_RCVTIMEO);
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef SO_SNDTIMEO
 	CompareConstant(SO_SNDTIMEO,19,3233,architecture,2.1,NULL)
 #else
@@ -391,7 +391,7 @@ Msg( "Error: Constant not found: SO_SNDTIMEO\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef SO_SNDTIMEO
 	CompareConstant(SO_SNDTIMEO,19,3233,architecture,2.1,NULL)
 #else
@@ -399,7 +399,7 @@ Msg( "Error: Constant not found: SO_SNDTIMEO\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef SO_SNDTIMEO
 	CompareConstant(SO_SNDTIMEO,21,3233,architecture,2.1,NULL)
 #else
@@ -407,7 +407,7 @@ Msg( "Error: Constant not found: SO_SNDTIMEO\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef SO_SNDTIMEO
 	CompareConstant(SO_SNDTIMEO,21,3233,architecture,2.1,NULL)
 #else
@@ -415,7 +415,7 @@ Msg( "Error: Constant not found: SO_SNDTIMEO\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef SO_SNDTIMEO
 	CompareConstant(SO_SNDTIMEO,21,3233,architecture,2.1,NULL)
 #else
@@ -423,7 +423,7 @@ Msg( "Error: Constant not found: SO_SNDTIMEO\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef SO_SNDTIMEO
 	CompareConstant(SO_SNDTIMEO,21,3233,architecture,2.1,NULL)
 #else
@@ -431,7 +431,7 @@ Msg( "Error: Constant not found: SO_SNDTIMEO\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef SO_SNDTIMEO
 	CompareConstant(SO_SNDTIMEO,21,3233,architecture,2.1,NULL)
 #else
@@ -809,127 +809,127 @@ cnt++;
 
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,6907,0);
 Msg("Find size of linger (6907)\n");
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,6909,0);
 Msg("Find size of cmsghdr (6909)\n");
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9022,0);
 Msg("Find size of iovec (9022)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(sa_family_t,2, 6905, 2, 1.2, NULL, 5, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(sa_family_t,2, 6905, 3, 1.3, NULL, 5, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(sa_family_t,2, 6905, 6, 1.2, NULL, 5, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(sa_family_t,2, 6905, 10, 1.3, NULL, 5, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(sa_family_t,2, 6905, 9, 2.0, NULL, 5, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(sa_family_t,2, 6905, 12, 1.3, NULL, 5, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(sa_family_t,2, 6905, 11, 2.0, NULL, 5, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,5,NULL);\n",architecture,6905,0);
 Msg("Find size of sa_family_t (6905)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(socklen_t,4, 9155, 2, 1.2, NULL, 7, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(socklen_t,4, 9155, 3, 1.3, NULL, 7, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(socklen_t,4, 9155, 6, 1.2, NULL, 7, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(socklen_t,4, 9155, 10, 1.3, NULL, 7, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(socklen_t,4, 9155, 9, 2.0, NULL, 7, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(socklen_t,4, 9155, 12, 1.3, NULL, 7, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(socklen_t,4, 9155, 11, 2.0, NULL, 7, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,9155,0);
 Msg("Find size of socklen_t (9155)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(__ss_aligntype,4, 11004, 2, 2.0, NULL, 9272, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(__ss_aligntype,8, 11004, 3, 2.0, NULL, 10176, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(__ss_aligntype,4, 11004, 6, 2.0, NULL, 9272, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(__ss_aligntype,8, 11004, 9, 2.0, NULL, 10176, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(__ss_aligntype,4, 11004, 10, 2.0, NULL, 9272, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(__ss_aligntype,8, 11004, 12, 2.0, NULL, 10176, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(__ss_aligntype,8, 11004, 11, 2.0, NULL, 10176, NULL)
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,6906,0);
 Msg("Find size of sockaddr (6906)\n");
 #endif
 
-#if __i386__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __ia64__
-#elif __powerpc64__
-#elif __x86_64__
-#elif __s390x__
+#if defined __i386__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __ia64__
+#elif defined __powerpc64__
+#elif defined __x86_64__
+#elif defined __s390x__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9345,0);
 Msg("Find size of sockaddr_storage (9345)\n");
 #endif
 
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,6908,0);
 Msg("Find size of msghdr (6908)\n");

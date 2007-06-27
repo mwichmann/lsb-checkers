@@ -1149,6 +1149,8 @@ $select = "SELECT DISTINCT * FROM Type ";
 $select .= "LEFT JOIN ArchType ON ATtid=Tid ";
 $select .= "LEFT JOIN Architecture ON Aid=ATaid ";
 $select .= "WHERE Ttype='Class' AND Theadergroup<669 ";
+$select .= "AND ATappearedin <> '' AND ATappearedin <='$lsbversion' ";
+$select .= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin >'$lsbversion') ";
 $select .= "ORDER BY Tname,ATaid";
 $tth = $Dbh->query($select) || die $Dbh->errmsg();
 if ( $tth->numrows == 0 ) {
@@ -1173,7 +1175,9 @@ print TESTS "#include <string>\n";
 print TESTS "#include <sstream>\n";
 print TESTS "#include <valarray>\n";
 print TESTS "#include <vector>\n";
-print TESTS "#include <backward/strstream>\n";
+if( $lsbversion < '3.0' ) {
+	print TESTS "#include <backward/strstream>\n";
+}
 print TESTS "#include <ext/stdio_filebuf.h>\n";
 print TESTS "#include <cxxabi.h>\n";
 print TESTS "#include \"hdrchk.h\"\n";

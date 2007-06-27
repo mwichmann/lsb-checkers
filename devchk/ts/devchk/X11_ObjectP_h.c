@@ -62,114 +62,114 @@ cnt++;
 
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(ObjectPart,28, 10264, 2, 1.2, NULL, 10261, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(ObjectPart,48, 10264, 3, 1.3, NULL, 10261, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(ObjectPart,28, 10264, 6, 1.2, NULL, 10261, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(ObjectPart,28, 10264, 10, 1.3, NULL, 10261, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(ObjectPart,48, 10264, 9, 2.0, NULL, 10261, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(ObjectPart,48, 10264, 12, 1.3, NULL, 10261, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(ObjectPart,48, 10264, 11, 2.0, NULL, 10261, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10261,NULL);\n",architecture,10264,0);
 Msg("Find size of ObjectPart (10264)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(ObjectRec,28, 10263, 2, 1.2, NULL, 10262, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(ObjectRec,48, 10263, 3, 1.3, NULL, 10262, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(ObjectRec,28, 10263, 6, 1.2, NULL, 10262, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(ObjectRec,28, 10263, 10, 1.3, NULL, 10262, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(ObjectRec,48, 10263, 9, 2.0, NULL, 10262, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(ObjectRec,48, 10263, 12, 1.3, NULL, 10262, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(ObjectRec,48, 10263, 11, 2.0, NULL, 10262, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10262,NULL);\n",architecture,10263,0);
 Msg("Find size of ObjectRec (10263)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(ObjectClassPart,116, 10266, 2, 1.2, NULL, 10265, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(ObjectClassPart,224, 10266, 3, 1.3, NULL, 10265, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(ObjectClassPart,116, 10266, 6, 1.2, NULL, 10265, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(ObjectClassPart,116, 10266, 10, 1.3, NULL, 10265, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(ObjectClassPart,224, 10266, 9, 2.0, NULL, 10265, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(ObjectClassPart,224, 10266, 12, 1.3, NULL, 10265, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(ObjectClassPart,224, 10266, 11, 2.0, NULL, 10265, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10265,NULL);\n",architecture,10266,0);
 Msg("Find size of ObjectClassPart (10266)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(ObjectClassExtensionRec,24, 10268, 2, 1.2, NULL, 10267, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(ObjectClassExtensionRec,48, 10268, 3, 1.3, NULL, 10267, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(ObjectClassExtensionRec,24, 10268, 6, 1.2, NULL, 10267, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(ObjectClassExtensionRec,24, 10268, 10, 1.3, NULL, 10267, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(ObjectClassExtensionRec,48, 10268, 9, 2.0, NULL, 10267, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(ObjectClassExtensionRec,48, 10268, 12, 1.3, NULL, 10267, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(ObjectClassExtensionRec,48, 10268, 11, 2.0, NULL, 10267, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10267,NULL);\n",architecture,10268,0);
 Msg("Find size of ObjectClassExtensionRec (10268)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(ObjectClassExtension,4, 10270, 2, 1.2, NULL, 10269, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(ObjectClassExtension,8, 10270, 3, 1.3, NULL, 10269, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(ObjectClassExtension,4, 10270, 6, 1.2, NULL, 10269, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(ObjectClassExtension,4, 10270, 10, 1.3, NULL, 10269, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(ObjectClassExtension,8, 10270, 9, 2.0, NULL, 10269, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(ObjectClassExtension,8, 10270, 12, 1.3, NULL, 10269, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(ObjectClassExtension,8, 10270, 11, 2.0, NULL, 10269, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10269,NULL);\n",architecture,10270,0);
 Msg("Find size of ObjectClassExtension (10270)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(ObjectClassRec,116, 10272, 2, 1.2, NULL, 10271, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(ObjectClassRec,224, 10272, 3, 1.3, NULL, 10271, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(ObjectClassRec,116, 10272, 6, 1.2, NULL, 10271, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(ObjectClassRec,116, 10272, 10, 1.3, NULL, 10271, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(ObjectClassRec,224, 10272, 9, 2.0, NULL, 10271, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(ObjectClassRec,224, 10272, 12, 1.3, NULL, 10271, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(ObjectClassRec,224, 10272, 11, 2.0, NULL, 10271, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10271,NULL);\n",architecture,10272,0);

@@ -8,7 +8,7 @@
 #ifdef LSBCC_MODE       /* XXX hand-edit */
 struct png_struct_def{};
 struct png_info_struct{};
-#endif			/* XXX */
+#endif                  /* XXX */
 #include "png.h"
 
 
@@ -2197,703 +2197,703 @@ cnt++;
 /* No test for PNG_SETJMP_SUPPORTED */
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_struct,712, 11173, 2, 3.1, NULL, 11172, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_struct,1208, 11173, 11, 3.1, NULL, 11172, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_struct,1152, 11173, 6, 3.1, NULL, 11172, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_struct,1664, 11173, 9, 3.1, NULL, 11172, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_struct,744, 11173, 10, 3.1, NULL, 11172, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_struct,1288, 11173, 12, 3.1, NULL, 11172, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_struct,1712, 11173, 3, 3.1, NULL, 11172, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11172,NULL);\n",architecture,11173,0);
 Msg("Find size of png_struct (11173)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_structp,4, 11175, 2, 3.1, NULL, 11174, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_structp,8, 11175, 11, 3.1, NULL, 11174, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_structp,8, 11175, 3, 3.1, NULL, 11174, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_structp,4, 11175, 6, 3.1, NULL, 11174, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_structp,8, 11175, 9, 3.1, NULL, 11174, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_structp,4, 11175, 10, 3.1, NULL, 11174, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_structp,8, 11175, 12, 3.1, NULL, 11174, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11174,NULL);\n",architecture,11175,0);
 Msg("Find size of png_structp (11175)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_info,288, 11177, 2, 3.1, NULL, 11176, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_info,464, 11177, 11, 3.1, NULL, 11176, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_info,288, 11177, 6, 3.1, NULL, 11176, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_info,464, 11177, 9, 3.1, NULL, 11176, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_info,288, 11177, 10, 3.1, NULL, 11176, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_info,464, 11177, 12, 3.1, NULL, 11176, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_info,464, 11177, 3, 3.1, NULL, 11176, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11176,NULL);\n",architecture,11177,0);
 Msg("Find size of png_info (11177)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_infop,4, 11179, 2, 3.1, NULL, 11178, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_infop,8, 11179, 11, 3.1, NULL, 11178, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_infop,8, 11179, 3, 3.1, NULL, 11178, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_infop,4, 11179, 6, 3.1, NULL, 11178, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_infop,8, 11179, 9, 3.1, NULL, 11178, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_infop,4, 11179, 10, 3.1, NULL, 11178, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_infop,8, 11179, 12, 3.1, NULL, 11178, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11178,NULL);\n",architecture,11179,0);
 Msg("Find size of png_infop (11179)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_voidp,4, 11180, 2, 3.1, NULL, 40, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_voidp,8, 11180, 11, 3.1, NULL, 40, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_voidp,8, 11180, 3, 3.1, NULL, 40, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_voidp,4, 11180, 6, 3.1, NULL, 40, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_voidp,8, 11180, 9, 3.1, NULL, 40, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_voidp,4, 11180, 10, 3.1, NULL, 40, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_voidp,8, 11180, 12, 3.1, NULL, 40, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,40,NULL);\n",architecture,11180,0);
 Msg("Find size of png_voidp (11180)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_progressive_info_ptr,4, 11182, 2, 3.1, NULL, 11181, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_progressive_info_ptr,8, 11182, 11, 3.1, NULL, 11181, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_progressive_info_ptr,8, 11182, 3, 3.1, NULL, 11181, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_progressive_info_ptr,4, 11182, 6, 3.1, NULL, 11181, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_progressive_info_ptr,8, 11182, 9, 3.1, NULL, 11181, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_progressive_info_ptr,4, 11182, 10, 3.1, NULL, 11181, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_progressive_info_ptr,8, 11182, 12, 3.1, NULL, 11181, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11181,NULL);\n",architecture,11182,0);
 Msg("Find size of png_progressive_info_ptr (11182)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_byte,1, 11183, 2, 3.1, NULL, 3, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_byte,1, 11183, 11, 3.1, NULL, 3, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_byte,1, 11183, 3, 3.1, NULL, 3, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_byte,1, 11183, 6, 3.1, NULL, 3, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_byte,1, 11183, 9, 3.1, NULL, 3, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_byte,1, 11183, 10, 3.1, NULL, 3, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_byte,1, 11183, 12, 3.1, NULL, 3, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,3,NULL);\n",architecture,11183,0);
 Msg("Find size of png_byte (11183)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_bytep,4, 11185, 2, 3.1, NULL, 11184, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_bytep,8, 11185, 11, 3.1, NULL, 11184, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_bytep,8, 11185, 3, 3.1, NULL, 11184, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_bytep,4, 11185, 6, 3.1, NULL, 11184, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_bytep,8, 11185, 9, 3.1, NULL, 11184, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_bytep,4, 11185, 10, 3.1, NULL, 11184, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_bytep,8, 11185, 12, 3.1, NULL, 11184, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11184,NULL);\n",architecture,11185,0);
 Msg("Find size of png_bytep (11185)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_uint_32,4, 11187, 2, 3.1, NULL, 9, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_uint_32,8, 11187, 11, 3.1, NULL, 9, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_uint_32,4, 11187, 6, 3.1, NULL, 9, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_uint_32,8, 11187, 9, 3.1, NULL, 9, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_uint_32,4, 11187, 10, 3.1, NULL, 9, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_uint_32,8, 11187, 12, 3.1, NULL, 9, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_uint_32,8, 11187, 3, 3.1, NULL, 9, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,9,NULL);\n",architecture,11187,0);
 Msg("Find size of png_uint_32 (11187)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_progressive_row_ptr,4, 11189, 2, 3.1, NULL, 11188, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_progressive_row_ptr,8, 11189, 11, 3.1, NULL, 11188, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_progressive_row_ptr,8, 11189, 3, 3.1, NULL, 11188, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_progressive_row_ptr,4, 11189, 6, 3.1, NULL, 11188, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_progressive_row_ptr,8, 11189, 9, 3.1, NULL, 11188, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_progressive_row_ptr,4, 11189, 10, 3.1, NULL, 11188, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_progressive_row_ptr,8, 11189, 12, 3.1, NULL, 11188, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11188,NULL);\n",architecture,11189,0);
 Msg("Find size of png_progressive_row_ptr (11189)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_progressive_end_ptr,4, 11190, 2, 3.1, NULL, 11181, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_progressive_end_ptr,8, 11190, 11, 3.1, NULL, 11181, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_progressive_end_ptr,8, 11190, 3, 3.1, NULL, 11181, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_progressive_end_ptr,4, 11190, 6, 3.1, NULL, 11181, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_progressive_end_ptr,8, 11190, 9, 3.1, NULL, 11181, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_progressive_end_ptr,4, 11190, 10, 3.1, NULL, 11181, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_progressive_end_ptr,8, 11190, 12, 3.1, NULL, 11181, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11181,NULL);\n",architecture,11190,0);
 Msg("Find size of png_progressive_end_ptr (11190)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_color_8,5, 11192, 2, 3.1, NULL, 11191, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_color_8,5, 11192, 11, 3.1, NULL, 11191, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_color_8,5, 11192, 3, 3.1, NULL, 11191, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_color_8,5, 11192, 6, 3.1, NULL, 11191, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_color_8,5, 11192, 9, 3.1, NULL, 11191, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_color_8,5, 11192, 10, 3.1, NULL, 11191, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_color_8,5, 11192, 12, 3.1, NULL, 11191, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11191,NULL);\n",architecture,11192,0);
 Msg("Find size of png_color_8 (11192)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_color_8p,4, 11194, 2, 3.1, NULL, 11193, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_color_8p,8, 11194, 11, 3.1, NULL, 11193, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_color_8p,8, 11194, 3, 3.1, NULL, 11193, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_color_8p,4, 11194, 6, 3.1, NULL, 11193, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_color_8p,8, 11194, 9, 3.1, NULL, 11193, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_color_8p,4, 11194, 10, 3.1, NULL, 11193, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_color_8p,8, 11194, 12, 3.1, NULL, 11193, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11193,NULL);\n",architecture,11194,0);
 Msg("Find size of png_color_8p (11194)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_int_32,4, 11195, 2, 3.1, NULL, 8, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_int_32,8, 11195, 11, 3.1, NULL, 8, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_int_32,4, 11195, 6, 3.1, NULL, 8, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_int_32,8, 11195, 9, 3.1, NULL, 8, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_int_32,4, 11195, 10, 3.1, NULL, 8, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_int_32,8, 11195, 12, 3.1, NULL, 8, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_int_32,8, 11195, 3, 3.1, NULL, 8, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,8,NULL);\n",architecture,11195,0);
 Msg("Find size of png_int_32 (11195)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_charp,4, 11196, 2, 3.1, NULL, 63, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_charp,8, 11196, 11, 3.1, NULL, 63, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_charp,8, 11196, 3, 3.1, NULL, 63, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_charp,4, 11196, 6, 3.1, NULL, 63, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_charp,8, 11196, 9, 3.1, NULL, 63, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_charp,4, 11196, 10, 3.1, NULL, 63, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_charp,8, 11196, 12, 3.1, NULL, 63, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,63,NULL);\n",architecture,11196,0);
 Msg("Find size of png_charp (11196)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_size_t,4, 11198, 2, 3.1, NULL, 8969, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_size_t,8, 11198, 11, 3.1, NULL, 8969, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_size_t,8, 11198, 3, 3.1, NULL, 8969, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_size_t,4, 11198, 6, 3.1, NULL, 8969, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_size_t,8, 11198, 9, 3.1, NULL, 8969, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_size_t,4, 11198, 10, 3.1, NULL, 8969, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_size_t,8, 11198, 12, 3.1, NULL, 8969, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,8969,NULL);\n",architecture,11198,0);
 Msg("Find size of png_size_t (11198)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_text,16, 11200, 2, 3.1, NULL, 11199, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_text,32, 11200, 11, 3.1, NULL, 11199, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_text,32, 11200, 3, 3.1, NULL, 11199, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_text,16, 11200, 6, 3.1, NULL, 11199, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_text,32, 11200, 9, 3.1, NULL, 11199, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_text,16, 11200, 10, 3.1, NULL, 11199, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_text,32, 11200, 12, 3.1, NULL, 11199, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11199,NULL);\n",architecture,11200,0);
 Msg("Find size of png_text (11200)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_textp,4, 11202, 2, 3.1, NULL, 11201, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_textp,8, 11202, 11, 3.1, NULL, 11201, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_textp,8, 11202, 3, 3.1, NULL, 11201, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_textp,4, 11202, 6, 3.1, NULL, 11201, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_textp,8, 11202, 9, 3.1, NULL, 11201, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_textp,4, 11202, 10, 3.1, NULL, 11201, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_textp,8, 11202, 12, 3.1, NULL, 11201, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11201,NULL);\n",architecture,11202,0);
 Msg("Find size of png_textp (11202)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_bytepp,4, 11205, 2, 3.1, NULL, 11204, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_bytepp,8, 11205, 11, 3.1, NULL, 11204, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_bytepp,8, 11205, 3, 3.1, NULL, 11204, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_bytepp,4, 11205, 6, 3.1, NULL, 11204, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_bytepp,8, 11205, 9, 3.1, NULL, 11204, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_bytepp,4, 11205, 10, 3.1, NULL, 11204, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_bytepp,8, 11205, 12, 3.1, NULL, 11204, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11204,NULL);\n",architecture,11205,0);
 Msg("Find size of png_bytepp (11205)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_uint_16,2, 11210, 2, 3.1, NULL, 5, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_uint_16,2, 11210, 11, 3.1, NULL, 5, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_uint_16,2, 11210, 3, 3.1, NULL, 5, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_uint_16,2, 11210, 6, 3.1, NULL, 5, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_uint_16,2, 11210, 9, 3.1, NULL, 5, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_uint_16,2, 11210, 10, 3.1, NULL, 5, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_uint_16,2, 11210, 12, 3.1, NULL, 5, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,5,NULL);\n",architecture,11210,0);
 Msg("Find size of png_uint_16 (11210)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_color_16,10, 11211, 2, 3.1, NULL, 11208, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_color_16,10, 11211, 11, 3.1, NULL, 11208, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_color_16,10, 11211, 3, 3.1, NULL, 11208, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_color_16,10, 11211, 6, 3.1, NULL, 11208, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_color_16,10, 11211, 9, 3.1, NULL, 11208, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_color_16,10, 11211, 10, 3.1, NULL, 11208, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_color_16,10, 11211, 12, 3.1, NULL, 11208, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11208,NULL);\n",architecture,11211,0);
 Msg("Find size of png_color_16 (11211)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_color_16p,4, 11213, 2, 3.1, NULL, 11212, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_color_16p,8, 11213, 11, 3.1, NULL, 11212, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_color_16p,8, 11213, 3, 3.1, NULL, 11212, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_color_16p,4, 11213, 6, 3.1, NULL, 11212, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_color_16p,8, 11213, 9, 3.1, NULL, 11212, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_color_16p,4, 11213, 10, 3.1, NULL, 11212, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_color_16p,8, 11213, 12, 3.1, NULL, 11212, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11212,NULL);\n",architecture,11213,0);
 Msg("Find size of png_color_16p (11213)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_color,3, 11216, 2, 3.1, NULL, 11215, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_color,3, 11216, 11, 3.1, NULL, 11215, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_color,3, 11216, 3, 3.1, NULL, 11215, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_color,3, 11216, 6, 3.1, NULL, 11215, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_color,3, 11216, 9, 3.1, NULL, 11215, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_color,3, 11216, 10, 3.1, NULL, 11215, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_color,3, 11216, 12, 3.1, NULL, 11215, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11215,NULL);\n",architecture,11216,0);
 Msg("Find size of png_color (11216)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_colorp,4, 11218, 2, 3.1, NULL, 11217, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_colorp,8, 11218, 11, 3.1, NULL, 11217, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_colorp,8, 11218, 3, 3.1, NULL, 11217, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_colorp,4, 11218, 6, 3.1, NULL, 11217, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_colorp,8, 11218, 9, 3.1, NULL, 11217, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_colorp,4, 11218, 10, 3.1, NULL, 11217, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_colorp,8, 11218, 12, 3.1, NULL, 11217, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11217,NULL);\n",architecture,11218,0);
 Msg("Find size of png_colorp (11218)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_const_charp,4, 11220, 2, 3.1, NULL, 10295, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_const_charp,8, 11220, 11, 3.1, NULL, 10295, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_const_charp,8, 11220, 3, 3.1, NULL, 10295, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_const_charp,4, 11220, 6, 3.1, NULL, 10295, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_const_charp,8, 11220, 9, 3.1, NULL, 10295, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_const_charp,4, 11220, 10, 3.1, NULL, 10295, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_const_charp,8, 11220, 12, 3.1, NULL, 10295, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,10295,NULL);\n",architecture,11220,0);
 Msg("Find size of png_const_charp (11220)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_error_ptr,4, 11222, 2, 3.1, NULL, 11221, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_error_ptr,8, 11222, 11, 3.1, NULL, 11221, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_error_ptr,8, 11222, 3, 3.1, NULL, 11221, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_error_ptr,4, 11222, 6, 3.1, NULL, 11221, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_error_ptr,8, 11222, 9, 3.1, NULL, 11221, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_error_ptr,4, 11222, 10, 3.1, NULL, 11221, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_error_ptr,8, 11222, 12, 3.1, NULL, 11221, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11221,NULL);\n",architecture,11222,0);
 Msg("Find size of png_error_ptr (11222)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_rw_ptr,4, 11224, 2, 3.1, NULL, 11223, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_rw_ptr,8, 11224, 11, 3.1, NULL, 11223, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_rw_ptr,8, 11224, 3, 3.1, NULL, 11223, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_rw_ptr,4, 11224, 6, 3.1, NULL, 11223, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_rw_ptr,8, 11224, 9, 3.1, NULL, 11223, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_rw_ptr,4, 11224, 10, 3.1, NULL, 11223, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_rw_ptr,8, 11224, 12, 3.1, NULL, 11223, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11223,NULL);\n",architecture,11224,0);
 Msg("Find size of png_rw_ptr (11224)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_time,8, 11226, 2, 3.1, NULL, 11225, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_time,8, 11226, 11, 3.1, NULL, 11225, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_time,8, 11226, 3, 3.1, NULL, 11225, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_time,8, 11226, 6, 3.1, NULL, 11225, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_time,8, 11226, 9, 3.1, NULL, 11225, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_time,8, 11226, 10, 3.1, NULL, 11225, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_time,8, 11226, 12, 3.1, NULL, 11225, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11225,NULL);\n",architecture,11226,0);
 Msg("Find size of png_time (11226)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_timep,4, 11228, 2, 3.1, NULL, 11227, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_timep,8, 11228, 11, 3.1, NULL, 11227, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_timep,8, 11228, 3, 3.1, NULL, 11227, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_timep,4, 11228, 6, 3.1, NULL, 11227, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_timep,8, 11228, 9, 3.1, NULL, 11227, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_timep,4, 11228, 10, 3.1, NULL, 11227, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_timep,8, 11228, 12, 3.1, NULL, 11227, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11227,NULL);\n",architecture,11228,0);
 Msg("Find size of png_timep (11228)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_uint_16p,4, 11231, 2, 3.1, NULL, 11230, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_uint_16p,8, 11231, 11, 3.1, NULL, 11230, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_uint_16p,8, 11231, 3, 3.1, NULL, 11230, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_uint_16p,4, 11231, 6, 3.1, NULL, 11230, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_uint_16p,8, 11231, 9, 3.1, NULL, 11230, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_uint_16p,4, 11231, 10, 3.1, NULL, 11230, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_uint_16p,8, 11231, 12, 3.1, NULL, 11230, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11230,NULL);\n",architecture,11231,0);
 Msg("Find size of png_uint_16p (11231)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_flush_ptr,4, 11234, 2, 3.1, NULL, 11233, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_flush_ptr,8, 11234, 11, 3.1, NULL, 11233, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_flush_ptr,8, 11234, 3, 3.1, NULL, 11233, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_flush_ptr,4, 11234, 6, 3.1, NULL, 11233, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_flush_ptr,8, 11234, 9, 3.1, NULL, 11233, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_flush_ptr,4, 11234, 10, 3.1, NULL, 11233, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_flush_ptr,8, 11234, 12, 3.1, NULL, 11233, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11233,NULL);\n",architecture,11234,0);
 Msg("Find size of png_flush_ptr (11234)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_charpp,4, 11236, 2, 3.1, NULL, 4855, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_charpp,8, 11236, 11, 3.1, NULL, 4855, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_charpp,8, 11236, 3, 3.1, NULL, 4855, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_charpp,4, 11236, 6, 3.1, NULL, 4855, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_charpp,8, 11236, 9, 3.1, NULL, 4855, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_charpp,4, 11236, 10, 3.1, NULL, 4855, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_charpp,8, 11236, 12, 3.1, NULL, 4855, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,4855,NULL);\n",architecture,11236,0);
 Msg("Find size of png_charpp (11236)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_structpp,4, 11239, 2, 3.1, NULL, 11238, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_structpp,8, 11239, 11, 3.1, NULL, 11238, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_structpp,8, 11239, 3, 3.1, NULL, 11238, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_structpp,4, 11239, 6, 3.1, NULL, 11238, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_structpp,8, 11239, 9, 3.1, NULL, 11238, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_structpp,4, 11239, 10, 3.1, NULL, 11238, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_structpp,8, 11239, 12, 3.1, NULL, 11238, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11238,NULL);\n",architecture,11239,0);
 Msg("Find size of png_structpp (11239)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_infopp,4, 11241, 2, 3.1, NULL, 11240, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_infopp,8, 11241, 11, 3.1, NULL, 11240, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_infopp,8, 11241, 3, 3.1, NULL, 11240, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_infopp,4, 11241, 6, 3.1, NULL, 11240, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_infopp,8, 11241, 9, 3.1, NULL, 11240, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_infopp,4, 11241, 10, 3.1, NULL, 11240, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_infopp,8, 11241, 12, 3.1, NULL, 11240, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11240,NULL);\n",architecture,11241,0);
 Msg("Find size of png_infopp (11241)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_FILE_p,4, 11243, 2, 3.1, NULL, 10124, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_FILE_p,8, 11243, 11, 3.1, NULL, 10124, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_FILE_p,8, 11243, 3, 3.1, NULL, 10124, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_FILE_p,4, 11243, 6, 3.1, NULL, 10124, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_FILE_p,8, 11243, 9, 3.1, NULL, 10124, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_FILE_p,4, 11243, 10, 3.1, NULL, 10124, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_FILE_p,8, 11243, 12, 3.1, NULL, 10124, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,10124,NULL);\n",architecture,11243,0);
 Msg("Find size of png_FILE_p (11243)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_row_info,12, 11245, 2, 3.1, NULL, 11244, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_row_info,24, 11245, 11, 3.1, NULL, 11244, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_row_info,12, 11245, 6, 3.1, NULL, 11244, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_row_info,24, 11245, 9, 3.1, NULL, 11244, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_row_info,12, 11245, 10, 3.1, NULL, 11244, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_row_info,24, 11245, 12, 3.1, NULL, 11244, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_row_info,24, 11245, 3, 3.1, NULL, 11244, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11244,NULL);\n",architecture,11245,0);
 Msg("Find size of png_row_info (11245)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_row_infop,4, 11247, 2, 3.1, NULL, 11246, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_row_infop,8, 11247, 11, 3.1, NULL, 11246, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_row_infop,8, 11247, 3, 3.1, NULL, 11246, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_row_infop,4, 11247, 6, 3.1, NULL, 11246, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_row_infop,8, 11247, 9, 3.1, NULL, 11246, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_row_infop,4, 11247, 10, 3.1, NULL, 11246, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_row_infop,8, 11247, 12, 3.1, NULL, 11246, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11246,NULL);\n",architecture,11247,0);
@@ -2901,19 +2901,19 @@ Msg("Find size of png_row_infop (11247)\n");
 #endif
 
 #ifdef LSBCC_MODE       /* XXX hand-edit */
-#if __i386__
+#if defined __i386__
 CheckTypeSize(version_1_2_8,4, 11248, 2, 3.1, NULL, 11175, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(version_1_2_8,8, 11248, 3, 3.1, NULL, 11175, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(version_1_2_8,4, 11248, 6, 3.1, NULL, 11175, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(version_1_2_8,8, 11248, 9, 3.1, NULL, 11175, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(version_1_2_8,4, 11248, 10, 3.1, NULL, 11175, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(version_1_2_8,8, 11248, 12, 3.1, NULL, 11175, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(version_1_2_8,8, 11248, 11, 3.1, NULL, 11175, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11175,NULL);\n",architecture,11248,0);
@@ -2921,456 +2921,456 @@ Msg("Find size of version_1_2_8 (11248)\n");
 #endif
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_uint_32p,4, 16182, 2, 3.1, NULL, 11214, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_uint_32p,8, 16182, 11, 3.1, NULL, 11214, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_uint_32p,8, 16182, 3, 3.1, NULL, 11214, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_uint_32p,4, 16182, 6, 3.1, NULL, 11214, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_uint_32p,8, 16182, 9, 3.1, NULL, 11214, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_uint_32p,4, 16182, 10, 3.1, NULL, 11214, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_uint_32p,8, 16182, 12, 3.1, NULL, 11214, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11214,NULL);\n",architecture,16182,0);
 Msg("Find size of png_uint_32p (16182)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_uint_16pp,4, 16184, 2, 3.1, NULL, 16183, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_uint_16pp,8, 16184, 11, 3.1, NULL, 16183, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_uint_16pp,8, 16184, 3, 3.1, NULL, 16183, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_uint_16pp,4, 16184, 6, 3.1, NULL, 16183, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_uint_16pp,8, 16184, 9, 3.1, NULL, 16183, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_uint_16pp,4, 16184, 10, 3.1, NULL, 16183, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_uint_16pp,8, 16184, 12, 3.1, NULL, 16183, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16183,NULL);\n",architecture,16184,0);
 Msg("Find size of png_uint_16pp (16184)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_fixed_point,4, 16185, 2, 3.1, NULL, 11195, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_fixed_point,8, 16185, 11, 3.1, NULL, 11195, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_fixed_point,4, 16185, 6, 3.1, NULL, 11195, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_fixed_point,8, 16185, 9, 3.1, NULL, 11195, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_fixed_point,4, 16185, 10, 3.1, NULL, 11195, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_fixed_point,8, 16185, 12, 3.1, NULL, 11195, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_fixed_point,8, 16185, 3, 3.1, NULL, 11195, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11195,NULL);\n",architecture,16185,0);
 Msg("Find size of png_fixed_point (16185)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_doublep,4, 16186, 2, 3.1, NULL, 6280, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_doublep,8, 16186, 11, 3.1, NULL, 6280, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_doublep,8, 16186, 3, 3.1, NULL, 6280, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_doublep,4, 16186, 6, 3.1, NULL, 6280, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_doublep,8, 16186, 9, 3.1, NULL, 6280, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_doublep,4, 16186, 10, 3.1, NULL, 6280, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_doublep,8, 16186, 12, 3.1, NULL, 6280, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,6280,NULL);\n",architecture,16186,0);
 Msg("Find size of png_doublep (16186)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_zcharp,4, 16188, 2, 3.1, NULL, 16187, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_zcharp,8, 16188, 11, 3.1, NULL, 16187, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_zcharp,8, 16188, 3, 3.1, NULL, 16187, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_zcharp,4, 16188, 6, 3.1, NULL, 16187, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_zcharp,8, 16188, 9, 3.1, NULL, 16187, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_zcharp,4, 16188, 10, 3.1, NULL, 16187, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_zcharp,8, 16188, 12, 3.1, NULL, 16187, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16187,NULL);\n",architecture,16188,0);
 Msg("Find size of png_zcharp (16188)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_fixed_point_p,4, 16190, 2, 3.1, NULL, 16189, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_fixed_point_p,8, 16190, 11, 3.1, NULL, 16189, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_fixed_point_p,8, 16190, 3, 3.1, NULL, 16189, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_fixed_point_p,4, 16190, 6, 3.1, NULL, 16189, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_fixed_point_p,8, 16190, 9, 3.1, NULL, 16189, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_fixed_point_p,4, 16190, 10, 3.1, NULL, 16189, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_fixed_point_p,8, 16190, 12, 3.1, NULL, 16189, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16189,NULL);\n",architecture,16190,0);
 Msg("Find size of png_fixed_point_p (16190)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_int_32p,4, 16191, 2, 3.1, NULL, 11242, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_int_32p,8, 16191, 11, 3.1, NULL, 11242, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_int_32p,8, 16191, 3, 3.1, NULL, 11242, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_int_32p,4, 16191, 6, 3.1, NULL, 11242, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_int_32p,8, 16191, 9, 3.1, NULL, 11242, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_int_32p,4, 16191, 10, 3.1, NULL, 11242, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_int_32p,8, 16191, 12, 3.1, NULL, 11242, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11242,NULL);\n",architecture,16191,0);
 Msg("Find size of png_int_32p (16191)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_zstreamp,4, 16192, 2, 3.1, NULL, 9881, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_zstreamp,8, 16192, 11, 3.1, NULL, 9881, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_zstreamp,8, 16192, 3, 3.1, NULL, 9881, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_zstreamp,4, 16192, 6, 3.1, NULL, 9881, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_zstreamp,8, 16192, 9, 3.1, NULL, 9881, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_zstreamp,4, 16192, 10, 3.1, NULL, 9881, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_zstreamp,8, 16192, 12, 3.1, NULL, 9881, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,9881,NULL);\n",architecture,16192,0);
 Msg("Find size of png_zstreamp (16192)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_int_16,2, 16193, 2, 3.1, NULL, 4, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_int_16,2, 16193, 11, 3.1, NULL, 4, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_int_16,2, 16193, 3, 3.1, NULL, 4, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_int_16,2, 16193, 6, 3.1, NULL, 4, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_int_16,2, 16193, 9, 3.1, NULL, 4, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_int_16,2, 16193, 10, 3.1, NULL, 4, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_int_16,2, 16193, 12, 3.1, NULL, 4, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,4,NULL);\n",architecture,16193,0);
 Msg("Find size of png_int_16 (16193)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_int_16p,4, 16195, 2, 3.1, NULL, 16194, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_int_16p,8, 16195, 11, 3.1, NULL, 16194, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_int_16p,8, 16195, 3, 3.1, NULL, 16194, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_int_16p,4, 16195, 6, 3.1, NULL, 16194, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_int_16p,8, 16195, 9, 3.1, NULL, 16194, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_int_16p,4, 16195, 10, 3.1, NULL, 16194, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_int_16p,8, 16195, 12, 3.1, NULL, 16194, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16194,NULL);\n",architecture,16195,0);
 Msg("Find size of png_int_16p (16195)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_int_16pp,4, 16197, 2, 3.1, NULL, 16196, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_int_16pp,8, 16197, 11, 3.1, NULL, 16196, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_int_16pp,8, 16197, 3, 3.1, NULL, 16196, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_int_16pp,4, 16197, 6, 3.1, NULL, 16196, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_int_16pp,8, 16197, 9, 3.1, NULL, 16196, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_int_16pp,4, 16197, 10, 3.1, NULL, 16196, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_int_16pp,8, 16197, 12, 3.1, NULL, 16196, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16196,NULL);\n",architecture,16197,0);
 Msg("Find size of png_int_16pp (16197)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_int_32pp,4, 16199, 2, 3.1, NULL, 16198, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_int_32pp,8, 16199, 11, 3.1, NULL, 16198, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_int_32pp,8, 16199, 3, 3.1, NULL, 16198, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_int_32pp,4, 16199, 6, 3.1, NULL, 16198, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_int_32pp,8, 16199, 9, 3.1, NULL, 16198, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_int_32pp,4, 16199, 10, 3.1, NULL, 16198, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_int_32pp,8, 16199, 12, 3.1, NULL, 16198, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16198,NULL);\n",architecture,16199,0);
 Msg("Find size of png_int_32pp (16199)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_uint_32pp,4, 16201, 2, 3.1, NULL, 16200, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_uint_32pp,8, 16201, 11, 3.1, NULL, 16200, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_uint_32pp,8, 16201, 3, 3.1, NULL, 16200, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_uint_32pp,4, 16201, 6, 3.1, NULL, 16200, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_uint_32pp,8, 16201, 9, 3.1, NULL, 16200, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_uint_32pp,4, 16201, 10, 3.1, NULL, 16200, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_uint_32pp,8, 16201, 12, 3.1, NULL, 16200, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16200,NULL);\n",architecture,16201,0);
 Msg("Find size of png_uint_32pp (16201)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_zcharpp,4, 16203, 2, 3.1, NULL, 16202, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_zcharpp,8, 16203, 11, 3.1, NULL, 16202, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_zcharpp,8, 16203, 3, 3.1, NULL, 16202, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_zcharpp,4, 16203, 6, 3.1, NULL, 16202, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_zcharpp,8, 16203, 9, 3.1, NULL, 16202, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_zcharpp,4, 16203, 10, 3.1, NULL, 16202, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_zcharpp,8, 16203, 12, 3.1, NULL, 16202, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16202,NULL);\n",architecture,16203,0);
 Msg("Find size of png_zcharpp (16203)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_charppp,4, 16205, 2, 3.1, NULL, 16204, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_charppp,8, 16205, 11, 3.1, NULL, 16204, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_charppp,8, 16205, 3, 3.1, NULL, 16204, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_charppp,4, 16205, 6, 3.1, NULL, 16204, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_charppp,8, 16205, 9, 3.1, NULL, 16204, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_charppp,4, 16205, 10, 3.1, NULL, 16204, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_charppp,8, 16205, 12, 3.1, NULL, 16204, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16204,NULL);\n",architecture,16205,0);
 Msg("Find size of png_charppp (16205)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_const_charpp,4, 16207, 2, 3.1, NULL, 16206, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_const_charpp,8, 16207, 11, 3.1, NULL, 16206, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_const_charpp,8, 16207, 3, 3.1, NULL, 16206, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_const_charpp,4, 16207, 6, 3.1, NULL, 16206, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_const_charpp,8, 16207, 9, 3.1, NULL, 16206, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_const_charpp,4, 16207, 10, 3.1, NULL, 16206, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_const_charpp,8, 16207, 12, 3.1, NULL, 16206, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16206,NULL);\n",architecture,16207,0);
 Msg("Find size of png_const_charpp (16207)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_doublepp,4, 16209, 2, 3.1, NULL, 16208, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_doublepp,8, 16209, 11, 3.1, NULL, 16208, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_doublepp,8, 16209, 3, 3.1, NULL, 16208, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_doublepp,4, 16209, 6, 3.1, NULL, 16208, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_doublepp,8, 16209, 9, 3.1, NULL, 16208, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_doublepp,4, 16209, 10, 3.1, NULL, 16208, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_doublepp,8, 16209, 12, 3.1, NULL, 16208, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16208,NULL);\n",architecture,16209,0);
 Msg("Find size of png_doublepp (16209)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_colorpp,4, 16210, 2, 3.1, NULL, 11219, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_colorpp,8, 16210, 11, 3.1, NULL, 11219, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_colorpp,8, 16210, 3, 3.1, NULL, 11219, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_colorpp,4, 16210, 6, 3.1, NULL, 11219, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_colorpp,8, 16210, 9, 3.1, NULL, 11219, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_colorpp,4, 16210, 10, 3.1, NULL, 11219, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_colorpp,8, 16210, 12, 3.1, NULL, 11219, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11219,NULL);\n",architecture,16210,0);
 Msg("Find size of png_colorpp (16210)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_color_16pp,4, 16211, 2, 3.1, NULL, 11232, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_color_16pp,8, 16211, 11, 3.1, NULL, 11232, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_color_16pp,8, 16211, 3, 3.1, NULL, 11232, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_color_16pp,4, 16211, 6, 3.1, NULL, 11232, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_color_16pp,8, 16211, 9, 3.1, NULL, 11232, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_color_16pp,4, 16211, 10, 3.1, NULL, 11232, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_color_16pp,8, 16211, 12, 3.1, NULL, 11232, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11232,NULL);\n",architecture,16211,0);
 Msg("Find size of png_color_16pp (16211)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_color_8pp,4, 16212, 2, 3.1, NULL, 11197, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_color_8pp,8, 16212, 11, 3.1, NULL, 11197, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_color_8pp,8, 16212, 3, 3.1, NULL, 11197, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_color_8pp,4, 16212, 6, 3.1, NULL, 11197, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_color_8pp,8, 16212, 9, 3.1, NULL, 11197, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_color_8pp,4, 16212, 10, 3.1, NULL, 11197, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_color_8pp,8, 16212, 12, 3.1, NULL, 11197, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11197,NULL);\n",architecture,16212,0);
 Msg("Find size of png_color_8pp (16212)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_fixed_point_pp,4, 16214, 2, 3.1, NULL, 16213, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_fixed_point_pp,8, 16214, 11, 3.1, NULL, 16213, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_fixed_point_pp,8, 16214, 3, 3.1, NULL, 16213, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_fixed_point_pp,4, 16214, 6, 3.1, NULL, 16213, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_fixed_point_pp,8, 16214, 9, 3.1, NULL, 16213, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_fixed_point_pp,4, 16214, 10, 3.1, NULL, 16213, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_fixed_point_pp,8, 16214, 12, 3.1, NULL, 16213, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16213,NULL);\n",architecture,16214,0);
 Msg("Find size of png_fixed_point_pp (16214)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_row_infopp,4, 16216, 2, 3.1, NULL, 16215, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_row_infopp,8, 16216, 11, 3.1, NULL, 16215, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_row_infopp,8, 16216, 3, 3.1, NULL, 16215, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_row_infopp,4, 16216, 6, 3.1, NULL, 16215, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_row_infopp,8, 16216, 9, 3.1, NULL, 16215, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_row_infopp,4, 16216, 10, 3.1, NULL, 16215, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_row_infopp,8, 16216, 12, 3.1, NULL, 16215, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16215,NULL);\n",architecture,16216,0);
 Msg("Find size of png_row_infopp (16216)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_textpp,4, 16217, 2, 3.1, NULL, 11203, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_textpp,8, 16217, 11, 3.1, NULL, 11203, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_textpp,8, 16217, 3, 3.1, NULL, 11203, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_textpp,4, 16217, 6, 3.1, NULL, 11203, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_textpp,8, 16217, 9, 3.1, NULL, 11203, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_textpp,4, 16217, 10, 3.1, NULL, 11203, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_textpp,8, 16217, 12, 3.1, NULL, 11203, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11203,NULL);\n",architecture,16217,0);
 Msg("Find size of png_textpp (16217)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(png_timepp,4, 16218, 2, 3.1, NULL, 11229, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(png_timepp,8, 16218, 11, 3.1, NULL, 11229, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(png_timepp,8, 16218, 3, 3.1, NULL, 11229, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(png_timepp,4, 16218, 6, 3.1, NULL, 11229, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(png_timepp,8, 16218, 9, 3.1, NULL, 11229, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(png_timepp,4, 16218, 10, 3.1, NULL, 11229, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(png_timepp,8, 16218, 12, 3.1, NULL, 11229, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11229, NULL);\n",architecture,16218,0);

@@ -174,19 +174,19 @@ cnt++;
 
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlEntityReferenceFunc,4, 15021, 2, 3.1, NULL, 15020, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 11, 3.1, NULL, 15020, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 3, 3.1, NULL, 15020, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlEntityReferenceFunc,4, 15021, 6, 3.1, NULL, 15020, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 9, 3.1, NULL, 15020, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlEntityReferenceFunc,4, 15021, 10, 3.1, NULL, 15020, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 12, 3.1, NULL, 15020, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15020, NULL);\n",architecture,15021,0);

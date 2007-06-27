@@ -77,114 +77,114 @@ cnt++;
 
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlSAXHandlerPtr,4, 14980, 2, 3.1, NULL, 14803, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlSAXHandlerPtr,8, 14980, 11, 3.1, NULL, 14803, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlSAXHandlerPtr,8, 14980, 3, 3.1, NULL, 14803, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlSAXHandlerPtr,4, 14980, 6, 3.1, NULL, 14803, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlSAXHandlerPtr,8, 14980, 9, 3.1, NULL, 14803, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlSAXHandlerPtr,4, 14980, 10, 3.1, NULL, 14803, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlSAXHandlerPtr,8, 14980, 12, 3.1, NULL, 14803, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14803,NULL);\n",architecture,14980,0);
 Msg("Find size of xmlSAXHandlerPtr (14980)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlParserNodeInfoSeqPtr,4, 14982, 2, 3.1, NULL, 14981, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlParserNodeInfoSeqPtr,8, 14982, 11, 3.1, NULL, 14981, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlParserNodeInfoSeqPtr,8, 14982, 3, 3.1, NULL, 14981, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlParserNodeInfoSeqPtr,4, 14982, 6, 3.1, NULL, 14981, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlParserNodeInfoSeqPtr,8, 14982, 9, 3.1, NULL, 14981, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlParserNodeInfoSeqPtr,4, 14982, 10, 3.1, NULL, 14981, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlParserNodeInfoSeqPtr,8, 14982, 12, 3.1, NULL, 14981, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14981,NULL);\n",architecture,14982,0);
 Msg("Find size of xmlParserNodeInfoSeqPtr (14982)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlExternalEntityLoader,4, 14989, 2, 3.1, NULL, 14988, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlExternalEntityLoader,8, 14989, 11, 3.1, NULL, 14988, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlExternalEntityLoader,8, 14989, 3, 3.1, NULL, 14988, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlExternalEntityLoader,4, 14989, 6, 3.1, NULL, 14988, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlExternalEntityLoader,8, 14989, 9, 3.1, NULL, 14988, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlExternalEntityLoader,4, 14989, 10, 3.1, NULL, 14988, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlExternalEntityLoader,8, 14989, 12, 3.1, NULL, 14988, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14988,NULL);\n",architecture,14989,0);
 Msg("Find size of xmlExternalEntityLoader (14989)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlParserNodeInfoPtr,4, 14990, 2, 3.1, NULL, 14817, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlParserNodeInfoPtr,8, 14990, 11, 3.1, NULL, 14817, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlParserNodeInfoPtr,8, 14990, 3, 3.1, NULL, 14817, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlParserNodeInfoPtr,4, 14990, 6, 3.1, NULL, 14817, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlParserNodeInfoPtr,8, 14990, 9, 3.1, NULL, 14817, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlParserNodeInfoPtr,4, 14990, 10, 3.1, NULL, 14817, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlParserNodeInfoPtr,8, 14990, 12, 3.1, NULL, 14817, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14817,NULL);\n",architecture,14990,0);
 Msg("Find size of xmlParserNodeInfoPtr (14990)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlFeature,4, 14993, 2, 3.1, NULL, 14992, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlFeature,4, 14993, 11, 3.1, NULL, 14992, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlFeature,4, 14993, 3, 3.1, NULL, 14992, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlFeature,4, 14993, 6, 3.1, NULL, 14992, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlFeature,4, 14993, 9, 3.1, NULL, 14992, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlFeature,4, 14993, 10, 3.1, NULL, 14992, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlFeature,4, 14993, 12, 3.1, NULL, 14992, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14992,NULL);\n",architecture,14993,0);
 Msg("Find size of xmlFeature (14993)\n");
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(xmlParserOption,4, 15108, 2, 3.1, NULL, 15107, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(xmlParserOption,4, 15108, 11, 3.1, NULL, 15107, NULL)
-#elif __ia64__
+#elif defined __ia64__
 CheckTypeSize(xmlParserOption,4, 15108, 3, 3.1, NULL, 15107, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(xmlParserOption,4, 15108, 6, 3.1, NULL, 15107, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(xmlParserOption,4, 15108, 9, 3.1, NULL, 15107, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlParserOption,4, 15108, 10, 3.1, NULL, 15107, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(xmlParserOption,4, 15108, 12, 3.1, NULL, 15107, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15107, NULL);\n",architecture,15108,0);

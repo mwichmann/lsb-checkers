@@ -35,41 +35,41 @@ cnt++;
 
 #endif
 
-#if __s390__ && !__s390x__
+#if defined __s390__ && !defined __s390x__
 CheckTypeSize(msgqnum_t,4, 10213, 10, 2.0, NULL, 9, NULL)
-#elif __i386__
+#elif defined __i386__
 CheckTypeSize(msgqnum_t,4, 10213, 2, 2.0, NULL, 9, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(msgqnum_t,4, 10213, 6, 2.0, NULL, 9, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(msgqnum_t,8, 10213, 12, 2.0, NULL, 9, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(msgqnum_t,8, 10213, 11, 2.0, NULL, 9, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(msgqnum_t,8, 10213, 9, 2.0, NULL, 9, NULL)
 #endif
 
-#if __i386__
+#if defined __i386__
 CheckTypeSize(msglen_t,4, 10214, 2, 2.0, NULL, 9, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(msglen_t,4, 10214, 10, 2.0, NULL, 9, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(msglen_t,4, 10214, 6, 2.0, NULL, 9, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(msglen_t,8, 10214, 12, 2.0, NULL, 9, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(msglen_t,8, 10214, 11, 2.0, NULL, 9, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(msglen_t,8, 10214, 9, 2.0, NULL, 9, NULL)
 #endif
 
-#if __i386__
-#elif __s390__ && !__s390x__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390x__
-#elif __x86_64__
-#elif __powerpc64__
+#if defined __i386__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
+#elif defined __powerpc64__
 #endif
 
 extern int msgctl_db(int, int, struct msqid_ds *);

@@ -245,19 +245,19 @@ cnt++;
 /* No test for isfinite(x) */
 #endif
 
-#if __powerpc64__
+#if defined __powerpc64__
 /* No test for fpclassify(x) */
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 /* No test for fpclassify(x) */
-#elif __ia64__
+#elif defined __ia64__
 /* No test for fpclassify(x) */
-#elif __i386__
+#elif defined __i386__
 /* No test for fpclassify(x) */
-#elif __s390x__
+#elif defined __s390x__
 /* No test for fpclassify(x) */
-#elif __x86_64__
+#elif defined __x86_64__
 /* No test for fpclassify(x) */
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 /* No test for fpclassify(x) */
 #else
 Msg( "No definition for fpclassify(x) (5248, macro) in db\n");
@@ -268,19 +268,19 @@ Msg( "No definition for fpclassify(x) (5248, macro) in db\n");
 /* No test for isnormal(x) */
 #endif
 
-#if __powerpc64__
+#if defined __powerpc64__
 /* No test for signbit(x) */
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 /* No test for signbit(x) */
-#elif __ia64__
+#elif defined __ia64__
 /* No test for signbit(x) */
-#elif __i386__
+#elif defined __i386__
 /* No test for signbit(x) */
-#elif __s390x__
+#elif defined __s390x__
 /* No test for signbit(x) */
-#elif __x86_64__
+#elif defined __x86_64__
 /* No test for signbit(x) */
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 /* No test for signbit(x) */
 #else
 Msg( "No definition for signbit(x) (5250, macro) in db\n");
@@ -361,7 +361,7 @@ cnt++;
 
 #endif
 
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef FP_ILOGB0
 	CompareConstant(FP_ILOGB0,-2147483647,5262,architecture,2.1,NULL)
 #else
@@ -369,7 +369,7 @@ Msg( "Error: Constant not found: FP_ILOGB0\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef FP_ILOGB0
 	CompareConstant(FP_ILOGB0,-2147483647,5262,architecture,2.1,NULL)
 #else
@@ -377,7 +377,7 @@ Msg( "Error: Constant not found: FP_ILOGB0\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef FP_ILOGB0
 	CompareConstant(FP_ILOGB0,-2147483648,5262,architecture,2.1,NULL)
 #else
@@ -385,7 +385,7 @@ Msg( "Error: Constant not found: FP_ILOGB0\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef FP_ILOGB0
 	CompareConstant(FP_ILOGB0,(-2147483647 - 1),5262,architecture,2.1,NULL)
 #else
@@ -393,7 +393,7 @@ Msg( "Error: Constant not found: FP_ILOGB0\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef FP_ILOGB0
 	CompareConstant(FP_ILOGB0,-2147483647,5262,architecture,2.1,NULL)
 #else
@@ -401,7 +401,7 @@ Msg( "Error: Constant not found: FP_ILOGB0\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef FP_ILOGB0
 	CompareConstant(FP_ILOGB0,-2147483648,5262,architecture,2.1,NULL)
 #else
@@ -409,7 +409,7 @@ Msg( "Error: Constant not found: FP_ILOGB0\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef FP_ILOGB0
 	CompareConstant(FP_ILOGB0,-2147483647,5262,architecture,2.1,NULL)
 #else
@@ -423,7 +423,7 @@ Msg( "No definition for FP_ILOGB0 (5262, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5262,%d,'""2.1""',NULL);\n", architecture, FP_ILOGB0);
 #endif
 #endif
-#if __powerpc64__
+#if defined __powerpc64__
 #ifdef FP_ILOGBNAN
 	CompareConstant(FP_ILOGBNAN,2147483647,5263,architecture,2.1,NULL)
 #else
@@ -431,7 +431,7 @@ Msg( "Error: Constant not found: FP_ILOGBNAN\n");
 cnt++;
 #endif
 
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 #ifdef FP_ILOGBNAN
 	CompareConstant(FP_ILOGBNAN,2147483647,5263,architecture,2.1,NULL)
 #else
@@ -439,7 +439,7 @@ Msg( "Error: Constant not found: FP_ILOGBNAN\n");
 cnt++;
 #endif
 
-#elif __ia64__
+#elif defined __ia64__
 #ifdef FP_ILOGBNAN
 	CompareConstant(FP_ILOGBNAN,2147483647,5263,architecture,2.1,NULL)
 #else
@@ -447,7 +447,7 @@ Msg( "Error: Constant not found: FP_ILOGBNAN\n");
 cnt++;
 #endif
 
-#elif __i386__
+#elif defined __i386__
 #ifdef FP_ILOGBNAN
 	CompareConstant(FP_ILOGBNAN,(-2147483647 - 1),5263,architecture,2.1,NULL)
 #else
@@ -455,7 +455,7 @@ Msg( "Error: Constant not found: FP_ILOGBNAN\n");
 cnt++;
 #endif
 
-#elif __s390x__
+#elif defined __s390x__
 #ifdef FP_ILOGBNAN
 	CompareConstant(FP_ILOGBNAN,2147483647,5263,architecture,2.1,NULL)
 #else
@@ -463,7 +463,7 @@ Msg( "Error: Constant not found: FP_ILOGBNAN\n");
 cnt++;
 #endif
 
-#elif __x86_64__
+#elif defined __x86_64__
 #ifdef FP_ILOGBNAN
 	CompareConstant(FP_ILOGBNAN,-2147483648,5263,architecture,2.1,NULL)
 #else
@@ -471,7 +471,7 @@ Msg( "Error: Constant not found: FP_ILOGBNAN\n");
 cnt++;
 #endif
 
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 #ifdef FP_ILOGBNAN
 	CompareConstant(FP_ILOGBNAN,2147483647,5263,architecture,2.1,NULL)
 #else
@@ -485,13 +485,13 @@ Msg( "No definition for FP_ILOGBNAN (5263, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5263,%d,'""2.1""',NULL);\n", architecture, FP_ILOGBNAN);
 #endif
 #endif
-#if __i386__
-#elif __ia64__
-#elif __powerpc__ && !__powerpc64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __s390x__
-#elif __x86_64__
+#if defined __i386__
+#elif defined __ia64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc64__
+#elif defined __s390x__
+#elif defined __x86_64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10010,0);
 Msg("Find size of exception (10010)\n");
@@ -529,17 +529,17 @@ extern int __fpclassify_db(double);
 CheckInterfacedef(__fpclassify,__fpclassify_db);
 extern int __fpclassifyf_db(float);
 CheckInterfacedef(__fpclassifyf,__fpclassifyf_db);
-#if __i386__
+#if defined __i386__
 /* IA32 */
 extern int __fpclassifyl_db(long double);
 CheckInterfacedef(__fpclassifyl,__fpclassifyl_db);
 #endif
-#if __ia64__
+#if defined __ia64__
 /* IA64 */
 extern int __fpclassifyl_db(long double);
 CheckInterfacedef(__fpclassifyl,__fpclassifyl_db);
 #endif
-#if __x86_64__
+#if defined __x86_64__
 /* x86-64 */
 extern int __fpclassifyl_db(long double);
 CheckInterfacedef(__fpclassifyl,__fpclassifyl_db);
@@ -772,17 +772,17 @@ extern double exp2_db(double);
 CheckInterfacedef(exp2,exp2_db);
 extern float exp2f_db(float);
 CheckInterfacedef(exp2f,exp2f_db);
-#if __i386__
+#if defined __i386__
 /* IA32 */
 extern long double exp2l_db(long double);
 CheckInterfacedef(exp2l,exp2l_db);
 #endif
-#if __ia64__
+#if defined __ia64__
 /* IA64 */
 extern long double exp2l_db(long double);
 CheckInterfacedef(exp2l,exp2l_db);
 #endif
-#if __x86_64__
+#if defined __x86_64__
 /* x86-64 */
 extern long double exp2l_db(long double);
 CheckInterfacedef(exp2l,exp2l_db);
@@ -1123,17 +1123,17 @@ CheckInterfacedef(ynf,ynf_db);
 extern long double ynl_db(int, long double);
 CheckInterfacedef(ynl,ynl_db);
 #endif		/* hack */
-#if __i386__
+#if defined __i386__
 /* IA32 */
 extern int __signbitl_db(long double);
 CheckInterfacedef(__signbitl,__signbitl_db);
 #endif
-#if __ia64__
+#if defined __ia64__
 /* IA64 */
 extern int __signbitl_db(long double);
 CheckInterfacedef(__signbitl,__signbitl_db);
 #endif
-#if __x86_64__
+#if defined __x86_64__
 /* x86-64 */
 extern int __signbitl_db(long double);
 CheckInterfacedef(__signbitl,__signbitl_db);

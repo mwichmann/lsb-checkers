@@ -29,13 +29,13 @@ printf("Checking data structures in mqueue.h\n");
 CheckTypeSize(mqd_t,4, 16573, 1, 3.2, NULL, 6, NULL)
 #endif
 
-#if __i386__
-#elif __s390x__
-#elif __x86_64__
-#elif __s390__ && !__s390x__
-#elif __powerpc64__
-#elif __powerpc__ && !__powerpc64__
-#elif __ia64__
+#if defined __i386__
+#elif defined __s390x__
+#elif defined __x86_64__
+#elif defined __s390__ && !defined __s390x__
+#elif defined __powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
+#elif defined __ia64__
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16575,0);
 Msg("Find size of mq_attr (16575)\n");

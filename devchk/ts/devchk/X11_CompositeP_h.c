@@ -60,38 +60,38 @@ cnt++;
 
 #endif
 
-#if __ia64__
+#if defined __ia64__
 CheckTypeSize(CompositeClassPart,40, 10244, 3, 1.3, NULL, 10242, NULL)
-#elif __i386__
+#elif defined __i386__
 CheckTypeSize(CompositeClassPart,20, 10244, 2, 1.2, NULL, 10242, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(CompositeClassPart,20, 10244, 6, 1.2, NULL, 10242, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(CompositeClassPart,20, 10244, 10, 1.3, NULL, 10242, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(CompositeClassPart,40, 10244, 9, 2.0, NULL, 10242, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(CompositeClassPart,40, 10244, 12, 1.3, NULL, 10242, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(CompositeClassPart,40, 10244, 11, 2.0, NULL, 10242, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10242,NULL);\n",architecture,10244,0);
 Msg("Find size of CompositeClassPart (10244)\n");
 #endif
 
-#if __ia64__
+#if defined __ia64__
 CheckTypeSize(CompositeClassRec,264, 10240, 3, 1.3, NULL, 10239, NULL)
-#elif __i386__
+#elif defined __i386__
 CheckTypeSize(CompositeClassRec,136, 10240, 2, 1.2, NULL, 10239, NULL)
-#elif __powerpc__ && !__powerpc64__
+#elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(CompositeClassRec,136, 10240, 6, 1.2, NULL, 10239, NULL)
-#elif __s390__ && !__s390x__
+#elif defined __s390__ && !defined __s390x__
 CheckTypeSize(CompositeClassRec,136, 10240, 10, 1.3, NULL, 10239, NULL)
-#elif __powerpc64__
+#elif defined __powerpc64__
 CheckTypeSize(CompositeClassRec,264, 10240, 9, 2.0, NULL, 10239, NULL)
-#elif __s390x__
+#elif defined __s390x__
 CheckTypeSize(CompositeClassRec,264, 10240, 12, 1.3, NULL, 10239, NULL)
-#elif __x86_64__
+#elif defined __x86_64__
 CheckTypeSize(CompositeClassRec,264, 10240, 11, 2.0, NULL, 10239, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10239, NULL);\n",architecture,10240,0);
