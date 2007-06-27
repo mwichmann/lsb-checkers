@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "elfchk.h"
 struct versym libcrypt_so_1[] = {
-#if defined ___i386__
+#if defined __i386__
 	{"crypt","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -22,7 +22,7 @@ struct versym libcrypt_so_1[] = {
 #if defined __s390x__
 	{"crypt","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"encrypt","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -43,7 +43,7 @@ struct versym libcrypt_so_1[] = {
 #if defined __s390x__
 	{"encrypt","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setkey","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__

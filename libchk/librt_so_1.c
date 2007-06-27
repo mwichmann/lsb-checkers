@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "elfchk.h"
 struct versym librt_so_1[] = {
-#if defined ___i386__
+#if defined __i386__
 	{"clock_getcpuclockid","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -22,7 +22,7 @@ struct versym librt_so_1[] = {
 #if defined __s390x__
 	{"clock_getcpuclockid","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clock_getres","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -43,7 +43,7 @@ struct versym librt_so_1[] = {
 #if defined __s390x__
 	{"clock_getres","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clock_gettime","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -64,7 +64,7 @@ struct versym librt_so_1[] = {
 #if defined __s390x__
 	{"clock_gettime","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clock_nanosleep","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -85,7 +85,7 @@ struct versym librt_so_1[] = {
 #if defined __s390x__
 	{"clock_nanosleep","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clock_settime","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -116,7 +116,7 @@ struct versym librt_so_1[] = {
 	{"mq_timedreceive","GLIBC_2.3.4",0,LSB_Core,0,1},
 	{"mq_timedsend","GLIBC_2.3.4",0,LSB_Core,0,1},
 	{"mq_unlink","GLIBC_2.3.4",0,LSB_Core,0,1},
-#if defined ___i386__
+#if defined __i386__
 	{"shm_open","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -137,7 +137,7 @@ struct versym librt_so_1[] = {
 #if defined __s390x__
 	{"shm_open","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"shm_unlink","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -158,7 +158,7 @@ struct versym librt_so_1[] = {
 #if defined __s390x__
 	{"shm_unlink","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"timer_create","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -179,7 +179,7 @@ struct versym librt_so_1[] = {
 #if defined __s390x__
 	{"timer_create","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"timer_delete","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -200,7 +200,7 @@ struct versym librt_so_1[] = {
 #if defined __s390x__
 	{"timer_delete","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"timer_getoverrun","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -221,7 +221,7 @@ struct versym librt_so_1[] = {
 #if defined __s390x__
 	{"timer_getoverrun","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"timer_gettime","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -242,7 +242,7 @@ struct versym librt_so_1[] = {
 #if defined __s390x__
 	{"timer_gettime","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"timer_settime","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
