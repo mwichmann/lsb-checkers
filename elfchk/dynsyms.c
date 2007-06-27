@@ -1401,7 +1401,7 @@ struct versym DynSyms[] = {
 	{"XwcTextListToTextProperty","",0,LSB_Graphics},
 	{"XwcTextPerCharExtents","",0,LSB_Graphics},
 	{"XwcTextPropertyToTextList","",0,LSB_Graphics},
-#if defined ___i386__
+#if defined __i386__
 	{"_Exit","GLIBC_2.1.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -1422,7 +1422,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_Exit","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_IO_feof","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -1443,7 +1443,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_IO_feof","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_IO_getc","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -1464,7 +1464,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_IO_getc","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_IO_putc","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -1485,7 +1485,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_IO_putc","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_IO_puts","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -1506,7 +1506,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_IO_puts","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_Unwind_Backtrace","GCC_3.3",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -1527,7 +1527,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_Unwind_Backtrace","GCC_3.3",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_Unwind_DeleteException","GCC_3.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -1548,7 +1548,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_Unwind_DeleteException","GCC_3.0",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_Unwind_FindEnclosingFunction","GCC_3.3",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -1569,7 +1569,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_Unwind_FindEnclosingFunction","GCC_3.3",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_Unwind_Find_FDE","GCC_3.0",0,LSB_Core},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -1587,7 +1587,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_Unwind_Find_FDE","GCC_3.0",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_Unwind_ForcedUnwind","GCC_3.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -1611,7 +1611,7 @@ struct versym DynSyms[] = {
 #if defined __ia64__
 	{"_Unwind_GetBSP","GCC_3.3.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_Unwind_GetCFA","GCC_3.3",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -1632,7 +1632,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_Unwind_GetCFA","GCC_3.3",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_Unwind_GetDataRelBase","GCC_3.0",0,LSB_Core},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -1650,7 +1650,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_Unwind_GetDataRelBase","GCC_3.0",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_Unwind_GetGR","GCC_3.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -1671,7 +1671,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_Unwind_GetGR","GCC_3.0",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_Unwind_GetIP","GCC_3.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -1692,7 +1692,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_Unwind_GetIP","GCC_3.0",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_Unwind_GetLanguageSpecificData","GCC_3.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -1713,7 +1713,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_Unwind_GetLanguageSpecificData","GCC_3.0",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_Unwind_GetRegionStart","GCC_3.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -1734,7 +1734,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_Unwind_GetRegionStart","GCC_3.0",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_Unwind_GetTextRelBase","GCC_3.0",0,LSB_Core},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -1752,7 +1752,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_Unwind_GetTextRelBase","GCC_3.0",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_Unwind_RaiseException","GCC_3.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -1773,7 +1773,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_Unwind_RaiseException","GCC_3.0",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_Unwind_Resume","GCC_3.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -1794,7 +1794,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_Unwind_Resume","GCC_3.0",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_Unwind_Resume_or_Rethrow","GCC_3.3",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -1815,7 +1815,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_Unwind_Resume_or_Rethrow","GCC_3.3",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_Unwind_SetGR","GCC_3.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -1836,7 +1836,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_Unwind_SetGR","GCC_3.0",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_Unwind_SetIP","GCC_3.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -1870,7 +1870,7 @@ struct versym DynSyms[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_Z10qvsnprintfPcjPKcP13__va_list_tag","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_Z10qvsnprintfPcjPKcS_","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __s390__ && !defined __s390x__
@@ -2035,7 +2035,7 @@ struct versym DynSyms[] = {
 	{"_Z6qFatalPKcz","",0,LSB_Toolkit_Qt3},
 	{"_Z7copyBltP7QPixmapiiPKS_iiii","",0,LSB_Toolkit_Qt},
 	{"_Z7copyBltP7QPixmapiiPKS_iiii","",0,LSB_Toolkit_Qt3},
-#if defined ___i386__
+#if defined __i386__
 	{"_Z7qMallocj","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -2056,7 +2056,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_Z7qMallocm","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_Z7qMemSetPvij","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -2085,7 +2085,7 @@ struct versym DynSyms[] = {
 	{"_Z7warningPKcz","",0,LSB_Toolkit_Qt3},
 	{"_Z8qAppNamev","",0,LSB_Toolkit_Qt},
 	{"_Z8qAppNamev","",0,LSB_Toolkit_Qt3},
-#if defined ___i386__
+#if defined __i386__
 	{"_Z8qMemCopyPvPKvj","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -2106,7 +2106,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_Z8qMemCopyPvPKvm","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_Z8qReallocPvj","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -2153,7 +2153,7 @@ struct versym DynSyms[] = {
 	{"_Z9qObsoletePKc","",0,LSB_Toolkit_Qt3},
 	{"_Z9qObsoletePKcS0_","",0,LSB_Toolkit_Qt3},
 	{"_Z9qObsoletePKcS0_S0_","",0,LSB_Toolkit_Qt3},
-#if defined ___i386__
+#if defined __i386__
 	{"_Z9qsnprintfPcjPKcz","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -13220,7 +13220,7 @@ struct versym DynSyms[] = {
 	{"_ZN7QString8setAsciiEPKci","",0,LSB_Toolkit_Qt3},
 	{"_ZN7QString8truncateEi","",0,LSB_Toolkit_Qt},
 	{"_ZN7QString8truncateEj","",0,LSB_Toolkit_Qt3},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZN7QString8vsprintfEPKcPc","",0,LSB_Toolkit_Qt},
 #endif
 	{"_ZN7QString9fromAsciiEPKci","",0,LSB_Toolkit_Qt},
@@ -17279,7 +17279,7 @@ struct versym DynSyms[] = {
 	{"_ZN9QtPrivate28QStringList_replaceInStringsEP11QStringListRK7QStringS4_N2Qt15CaseSensitivityE","",0,LSB_Toolkit_Qt},
 	{"_ZN9__gnu_cxx12__atomic_addEPVii","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZN9__gnu_cxx17__pool_alloc_base12_M_get_mutexEv","GLIBCXX_3.4.2",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZN9__gnu_cxx17__pool_alloc_base16_M_get_free_listEj","GLIBCXX_3.4.2",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -17300,7 +17300,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZN9__gnu_cxx17__pool_alloc_base16_M_get_free_listEm","GLIBCXX_3.4.2",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZN9__gnu_cxx17__pool_alloc_base9_M_refillEj","GLIBCXX_3.4.2",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -17844,7 +17844,7 @@ struct versym DynSyms[] = {
 	{"_ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj","CXXABI_1.3",0,LSB_Cpp},
 	{"_ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE","CXXABI_1.3",0,LSB_Cpp},
 	{"_ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv","CXXABI_1.3",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNK10__cxxabiv117__class_type_info12__do_dyncastEiNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE","CXXABI_1.3",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -17865,7 +17865,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNK10__cxxabiv117__class_type_info12__do_dyncastElNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE","CXXABI_1.3",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_S2_","CXXABI_1.3",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -17892,7 +17892,7 @@ struct versym DynSyms[] = {
 	{"_ZNK10__cxxabiv119__pointer_type_info15__pointer_catchEPKNS_17__pbase_type_infoEPPvj","CXXABI_1.3",0,LSB_Cpp},
 	{"_ZNK10__cxxabiv120__function_type_info15__is_function_pEv","CXXABI_1.3",0,LSB_Cpp},
 	{"_ZNK10__cxxabiv120__si_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE","CXXABI_1.3",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE","CXXABI_1.3",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -17913,7 +17913,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastElNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE","CXXABI_1.3",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_","CXXABI_1.3",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -17935,7 +17935,7 @@ struct versym DynSyms[] = {
 	{"_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_","CXXABI_1.3",0,LSB_Cpp},
 #endif
 	{"_ZNK10__cxxabiv121__vmi_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE","CXXABI_1.3",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNK10__cxxabiv121__vmi_class_type_info12__do_dyncastEiNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE","CXXABI_1.3",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -17956,7 +17956,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNK10__cxxabiv121__vmi_class_type_info12__do_dyncastElNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE","CXXABI_1.3",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcEiPKvPKNS_17__class_type_infoES2_","CXXABI_1.3",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -22944,13 +22944,13 @@ struct versym DynSyms[] = {
 	{"_ZNK9QTreeView7drawRowEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QTreeView7indexAtERK6QPoint","",0,LSB_Toolkit_Qt},
 	{"_ZNK9QTreeView8columnAtEi","",0,LSB_Toolkit_Qt},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE12find_last_ofEPKwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE12find_last_ofEPKwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE12find_last_ofEPKwjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -22986,7 +22986,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE12find_last_ofEPKwmm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE12find_last_ofERKS2_j","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23007,7 +23007,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE12find_last_ofERKS2_m","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE12find_last_ofEwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23028,13 +23028,13 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE12find_last_ofEwm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE13find_first_ofEPKwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE13find_first_ofEPKwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE13find_first_ofEPKwjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23070,7 +23070,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE13find_first_ofEPKwmm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE13find_first_ofERKS2_j","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23091,7 +23091,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE13find_first_ofERKS2_m","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE13find_first_ofEwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23113,13 +23113,13 @@ struct versym DynSyms[] = {
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE13find_first_ofEwm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE13get_allocatorEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE16find_last_not_ofEPKwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE16find_last_not_ofEPKwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE16find_last_not_ofEPKwjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23155,7 +23155,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE16find_last_not_ofEPKwmm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE16find_last_not_ofERKS2_j","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23176,7 +23176,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE16find_last_not_ofERKS2_m","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE16find_last_not_ofEwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23197,13 +23197,13 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE16find_last_not_ofEwm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE17find_first_not_ofEPKwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE17find_first_not_ofEPKwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE17find_first_not_ofEPKwjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23239,7 +23239,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE17find_first_not_ofEPKwmm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE17find_first_not_ofERKS2_j","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23260,7 +23260,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE17find_first_not_ofERKS2_m","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE17find_first_not_ofEwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23281,7 +23281,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE17find_first_not_ofEwm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE2atEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23305,7 +23305,7 @@ struct versym DynSyms[] = {
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE3endEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE4_Rep12_M_is_leakedEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE4_Rep12_M_is_sharedEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE4copyEPwjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23327,13 +23327,13 @@ struct versym DynSyms[] = {
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE4copyEPwmm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE4dataEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE4findEPKwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE4findEPKwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE4findEPKwjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23369,7 +23369,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE4findEPKwmm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE4findERKS2_j","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23390,7 +23390,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE4findERKS2_m","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE4findEwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23416,13 +23416,13 @@ struct versym DynSyms[] = {
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE5beginEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE5c_strEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE5emptyEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE5rfindEPKwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE5rfindEPKwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE5rfindEPKwjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23458,7 +23458,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE5rfindEPKwmm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE5rfindERKS2_j","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23479,7 +23479,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE5rfindERKS2_m","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE5rfindEwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23503,7 +23503,7 @@ struct versym DynSyms[] = {
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE6_M_repEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE6lengthEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE6rbeginEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE6substrEjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23528,25 +23528,25 @@ struct versym DynSyms[] = {
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE7_M_iendEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE7compareEPKw","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE7compareERKS2_","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE7compareEjjPKw","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE7compareEjjPKw","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE7compareEjjPKwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE7compareEjjPKwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE7compareEjjRKS2_","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE7compareEjjRKS2_","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE7compareEjjRKS2_jj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23612,7 +23612,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE7compareEmmRKS2_mm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE8_M_checkEjPKc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23633,7 +23633,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE8_M_checkEmPKc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE8_M_limitEjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23657,7 +23657,7 @@ struct versym DynSyms[] = {
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE8capacityEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE8max_sizeEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE9_M_ibeginEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEEixEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23681,13 +23681,13 @@ struct versym DynSyms[] = {
 	{"_ZNKSi6gcountEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSi6sentrycvbEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSo6sentrycvbEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs12find_last_ofEPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNKSs12find_last_ofEPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs12find_last_ofEPKcjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23723,7 +23723,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSs12find_last_ofEPKcmm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs12find_last_ofERKSsj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23744,7 +23744,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSs12find_last_ofERKSsm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs12find_last_ofEcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23765,13 +23765,13 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSs12find_last_ofEcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs13find_first_ofEPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNKSs13find_first_ofEPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs13find_first_ofEPKcjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23807,7 +23807,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSs13find_first_ofEPKcmm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs13find_first_ofERKSsj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23828,7 +23828,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSs13find_first_ofERKSsm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs13find_first_ofEcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23850,13 +23850,13 @@ struct versym DynSyms[] = {
 	{"_ZNKSs13find_first_ofEcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNKSs13get_allocatorEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs16find_last_not_ofEPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNKSs16find_last_not_ofEPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs16find_last_not_ofEPKcjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23892,7 +23892,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSs16find_last_not_ofEPKcmm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs16find_last_not_ofERKSsj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23913,7 +23913,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSs16find_last_not_ofERKSsm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs16find_last_not_ofEcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23934,13 +23934,13 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSs16find_last_not_ofEcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs17find_first_not_ofEPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNKSs17find_first_not_ofEPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs17find_first_not_ofEPKcjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23976,7 +23976,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSs17find_first_not_ofEPKcmm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs17find_first_not_ofERKSsj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23997,7 +23997,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSs17find_first_not_ofERKSsm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs17find_first_not_ofEcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24018,7 +24018,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSs17find_first_not_ofEcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs2atEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24042,7 +24042,7 @@ struct versym DynSyms[] = {
 	{"_ZNKSs3endEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSs4_Rep12_M_is_leakedEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSs4_Rep12_M_is_sharedEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs4copyEPcjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24064,13 +24064,13 @@ struct versym DynSyms[] = {
 	{"_ZNKSs4copyEPcmm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNKSs4dataEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs4findEPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNKSs4findEPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs4findEPKcjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24106,7 +24106,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSs4findEPKcmm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs4findERKSsj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24127,7 +24127,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSs4findERKSsm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs4findEcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24153,13 +24153,13 @@ struct versym DynSyms[] = {
 	{"_ZNKSs5beginEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSs5c_strEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSs5emptyEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs5rfindEPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNKSs5rfindEPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs5rfindEPKcjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24195,7 +24195,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSs5rfindEPKcmm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs5rfindERKSsj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24216,7 +24216,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSs5rfindERKSsm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs5rfindEcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24240,7 +24240,7 @@ struct versym DynSyms[] = {
 	{"_ZNKSs6_M_repEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSs6lengthEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSs6rbeginEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs6substrEjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24265,25 +24265,25 @@ struct versym DynSyms[] = {
 	{"_ZNKSs7_M_iendEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSs7compareEPKc","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSs7compareERKSs","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs7compareEjjPKc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNKSs7compareEjjPKc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs7compareEjjPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNKSs7compareEjjPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs7compareEjjRKSs","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNKSs7compareEjjRKSs","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs7compareEjjRKSsjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24349,7 +24349,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSs7compareEmmRKSsmm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs8_M_checkEjPKc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24370,7 +24370,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNKSs8_M_checkEmPKc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSs8_M_limitEjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24394,7 +24394,7 @@ struct versym DynSyms[] = {
 	{"_ZNKSs8capacityEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSs8max_sizeEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSs9_M_ibeginEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSsixEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24493,7 +24493,7 @@ struct versym DynSyms[] = {
 	{"_ZNKSt11__timepunctIcE19_M_days_abbreviatedEPPKc","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt11__timepunctIcE20_M_date_time_formatsEPPKc","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt11__timepunctIcE21_M_months_abbreviatedEPPKc","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSt11__timepunctIcE6_M_putEPcjPKcPK2tm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24523,7 +24523,7 @@ struct versym DynSyms[] = {
 	{"_ZNKSt11__timepunctIwE19_M_days_abbreviatedEPPKw","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt11__timepunctIwE20_M_date_time_formatsEPPKw","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt11__timepunctIwE21_M_months_abbreviatedEPPKw","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSt11__timepunctIwE6_M_putEPwjPKwPK2tm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24619,7 +24619,7 @@ struct versym DynSyms[] = {
 	{"_ZNKSt7codecvtIcc11__mbstate_tE16do_always_noconvEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt7codecvtIcc11__mbstate_tE5do_inERS0_PKcS4_RS4_PcS6_RS6_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt7codecvtIcc11__mbstate_tE6do_outERS0_PKcS4_RS4_PcS6_RS6_","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSt7codecvtIcc11__mbstate_tE9do_lengthERS0_PKcS4_j","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24646,7 +24646,7 @@ struct versym DynSyms[] = {
 	{"_ZNKSt7codecvtIwc11__mbstate_tE16do_always_noconvEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt7codecvtIwc11__mbstate_tE5do_inERS0_PKcS4_RS4_PwS6_RS6_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt7codecvtIwc11__mbstate_tE6do_outERS0_PKwS4_RS4_PcS6_RS6_","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSt7codecvtIwc11__mbstate_tE9do_lengthERS0_PKcS4_j","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24669,7 +24669,7 @@ struct versym DynSyms[] = {
 #endif
 	{"_ZNKSt7collateIcE10_M_compareEPKcS2_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt7collateIcE10do_compareEPKcS2_S2_S2_","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSt7collateIcE12_M_transformEPcPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24697,7 +24697,7 @@ struct versym DynSyms[] = {
 	{"_ZNKSt7collateIcE9transformEPKcS2_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt7collateIwE10_M_compareEPKwS2_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt7collateIwE10do_compareEPKwS2_S2_S2_","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSt7collateIwE12_M_transformEPwPKwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24781,7 +24781,7 @@ struct versym DynSyms[] = {
 	{"_ZNKSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES3_S3_RSt8ios_baseRSt12_Ios_IostateRt","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES3_S3_RSt8ios_baseRSt12_Ios_IostateRx","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES3_S3_RSt8ios_baseRSt12_Ios_IostateRy","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE12_M_group_intEPKcjcRSt8ios_basePcS9_Ri","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24806,7 +24806,7 @@ struct versym DynSyms[] = {
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE13_M_insert_intImEES3_S3_RSt8ios_basecT_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE13_M_insert_intIxEES3_S3_RSt8ios_basecT_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE13_M_insert_intIyEES3_S3_RSt8ios_basecT_","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE14_M_group_floatEPKcjcS6_PcS7_Ri","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24837,7 +24837,7 @@ struct versym DynSyms[] = {
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecm","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecx","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES3_RSt8ios_basecy","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6_M_padEciRSt8ios_basePcPKcRi","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24866,7 +24866,7 @@ struct versym DynSyms[] = {
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES3_RSt8ios_basecm","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES3_RSt8ios_basecx","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES3_RSt8ios_basecy","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE12_M_group_intEPKcjwRSt8ios_basePwS9_Ri","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24891,7 +24891,7 @@ struct versym DynSyms[] = {
 	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE13_M_insert_intImEES3_S3_RSt8ios_basewT_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE13_M_insert_intIxEES3_S3_RSt8ios_basewT_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE13_M_insert_intIyEES3_S3_RSt8ios_basewT_","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE14_M_group_floatEPKcjwPKwPwS9_Ri","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24922,7 +24922,7 @@ struct versym DynSyms[] = {
 	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES3_RSt8ios_basewm","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES3_RSt8ios_basewx","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES3_RSt8ios_basewy","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6_M_padEwiRSt8ios_basePwPKwRi","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -24997,7 +24997,7 @@ struct versym DynSyms[] = {
 	{"_ZNKSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE11get_weekdayES3_S3_RSt8ios_baseRSt12_Ios_IostateP2tm","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE13do_date_orderEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE13get_monthnameES3_S3_RSt8ios_baseRSt12_Ios_IostateP2tm","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE14_M_extract_numES3_S3_RiiijRSt8ios_baseRSt12_Ios_Iostate","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25019,7 +25019,7 @@ struct versym DynSyms[] = {
 	{"_ZNKSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE14_M_extract_numES3_S3_RiiimRSt8ios_baseRSt12_Ios_Iostate","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNKSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE14do_get_weekdayES3_S3_RSt8ios_baseRSt12_Ios_IostateP2tm","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE15_M_extract_nameES3_S3_RiPPKcjRSt8ios_baseRSt12_Ios_Iostate","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25052,7 +25052,7 @@ struct versym DynSyms[] = {
 	{"_ZNKSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE11get_weekdayES3_S3_RSt8ios_baseRSt12_Ios_IostateP2tm","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE13do_date_orderEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE13get_monthnameES3_S3_RSt8ios_baseRSt12_Ios_IostateP2tm","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE14_M_extract_numES3_S3_RiiijRSt8ios_baseRSt12_Ios_Iostate","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25074,7 +25074,7 @@ struct versym DynSyms[] = {
 	{"_ZNKSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE14_M_extract_numES3_S3_RiiimRSt8ios_baseRSt12_Ios_Iostate","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNKSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE14do_get_weekdayES3_S3_RSt8ios_baseRSt12_Ios_IostateP2tm","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE15_M_extract_nameES3_S3_RiPPKwjRSt8ios_baseRSt12_Ios_Iostate","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25106,7 +25106,7 @@ struct versym DynSyms[] = {
 	{"_ZNKSt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES3_RSt8ios_basewPK2tmPKwSB_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES3_RSt8ios_basewPK2tmcc","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNKSt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES3_RSt8ios_basewPK2tmcc","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNKSt8valarrayIjE4sizeEv","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25189,7 +25189,7 @@ struct versym DynSyms[] = {
 	{"_ZNSbIwSt11char_traitsIwESaIwEE12_Alloc_hiderC1EPwRKS1_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSbIwSt11char_traitsIwESaIwEE12_Alloc_hiderC2EPwRKS1_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSbIwSt11char_traitsIwESaIwEE12_M_leak_hardEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE12_S_constructEjwRKS1_","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25215,7 +25215,7 @@ struct versym DynSyms[] = {
 	{"_ZNSbIwSt11char_traitsIwESaIwEE13_S_copy_charsEPwN9__gnu_cxx17__normal_iteratorIS3_S2_EES6_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSbIwSt11char_traitsIwESaIwEE13_S_copy_charsEPwPKwS5_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSbIwSt11char_traitsIwESaIwEE13_S_copy_charsEPwS3_S3_","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE14_M_replace_auxEjjjw","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25236,7 +25236,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE14_M_replace_auxEmmmw","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE15_M_replace_safeEjjPKwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25257,7 +25257,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE15_M_replace_safeEmmPKwm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE2atEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25290,7 +25290,7 @@ struct versym DynSyms[] = {
 	{"_ZNSbIwSt11char_traitsIwESaIwEE4_Rep15_M_set_sharableEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSbIwSt11char_traitsIwESaIwEE4_Rep20_S_empty_rep_storageE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSbIwSt11char_traitsIwESaIwEE4_Rep7_M_grabERKS1_S5_","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE4_Rep8_M_cloneERKS1_j","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25311,7 +25311,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE4_Rep8_M_cloneERKS1_m","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE4_Rep9_S_createEjjRKS1_","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25339,7 +25339,7 @@ struct versym DynSyms[] = {
 	{"_ZNSbIwSt11char_traitsIwESaIwEE5clearEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSbIwSt11char_traitsIwESaIwEE5eraseEN9__gnu_cxx17__normal_iteratorIPwS2_EE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSbIwSt11char_traitsIwESaIwEE5eraseEN9__gnu_cxx17__normal_iteratorIPwS2_EES6_","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE5eraseEjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25361,7 +25361,7 @@ struct versym DynSyms[] = {
 	{"_ZNSbIwSt11char_traitsIwESaIwEE5eraseEmm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6appendEPKw","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6appendEPKwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25383,7 +25383,7 @@ struct versym DynSyms[] = {
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6appendEPKwm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6appendERKS2_","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6appendERKS2_jj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25404,7 +25404,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6appendERKS2_mm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6appendEjw","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25426,7 +25426,7 @@ struct versym DynSyms[] = {
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6appendEmw","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6assignEPKw","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6assignEPKwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25448,7 +25448,7 @@ struct versym DynSyms[] = {
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6assignEPKwm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6assignERKS2_","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6assignERKS2_jj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25469,7 +25469,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6assignERKS2_mm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6assignEjw","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25490,7 +25490,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6assignEmw","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6insertEN9__gnu_cxx17__normal_iteratorIPwS2_EEjw","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25512,31 +25512,31 @@ struct versym DynSyms[] = {
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6insertEN9__gnu_cxx17__normal_iteratorIPwS2_EEmw","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6insertEN9__gnu_cxx17__normal_iteratorIPwS2_EEw","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6insertEjPKw","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6insertEjPKw","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6insertEjPKwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6insertEjPKwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6insertEjRKS2_","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6insertEjRKS2_","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6insertEjRKS2_jj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6insertEjRKS2_jj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6insertEjjw","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25618,13 +25618,13 @@ struct versym DynSyms[] = {
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6insertEmmw","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6rbeginEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6resizeEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6resizeEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6resizeEjw","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25665,7 +25665,7 @@ struct versym DynSyms[] = {
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7replaceEN9__gnu_cxx17__normal_iteratorIPwS2_EES6_NS4_IPKwS2_EES9_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7replaceEN9__gnu_cxx17__normal_iteratorIPwS2_EES6_PKw","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7replaceEN9__gnu_cxx17__normal_iteratorIPwS2_EES6_PKwS8_","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7replaceEN9__gnu_cxx17__normal_iteratorIPwS2_EES6_PKwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25689,7 +25689,7 @@ struct versym DynSyms[] = {
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7replaceEN9__gnu_cxx17__normal_iteratorIPwS2_EES6_RKS2_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7replaceEN9__gnu_cxx17__normal_iteratorIPwS2_EES6_S5_S5_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7replaceEN9__gnu_cxx17__normal_iteratorIPwS2_EES6_S6_S6_","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7replaceEN9__gnu_cxx17__normal_iteratorIPwS2_EES6_jw","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25710,31 +25710,31 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7replaceEN9__gnu_cxx17__normal_iteratorIPwS2_EES6_mw","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7replaceEjjPKw","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7replaceEjjPKw","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7replaceEjjPKwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7replaceEjjPKwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7replaceEjjRKS2_","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7replaceEjjRKS2_","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7replaceEjjRKS2_jj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7replaceEjjRKS2_jj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7replaceEjjjw","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25815,7 +25815,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7replaceEmmmw","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7reserveEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25836,7 +25836,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7reserveEm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE9_M_mutateEjjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25859,7 +25859,7 @@ struct versym DynSyms[] = {
 #endif
 	{"_ZNSbIwSt11char_traitsIwESaIwEE9push_backEw","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC1EPKwRKS1_","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC1EPKwjRKS1_","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25882,13 +25882,13 @@ struct versym DynSyms[] = {
 #endif
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC1ERKS1_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC1ERKS2_","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC1ERKS2_jj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC1ERKS2_jj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC1ERKS2_jjRKS1_","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25924,7 +25924,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC1ERKS2_mmRKS1_","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC1EjwRKS1_","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25950,7 +25950,7 @@ struct versym DynSyms[] = {
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC1IPKwEET_S6_RKS1_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC1IPwEET_S5_RKS1_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC2EPKwRKS1_","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC2EPKwjRKS1_","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25973,13 +25973,13 @@ struct versym DynSyms[] = {
 #endif
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC2ERKS1_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC2ERKS2_","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC2ERKS2_jj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC2ERKS2_jj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC2ERKS2_jjRKS1_","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26015,7 +26015,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC2ERKS2_mmRKS1_","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEC2EjwRKS1_","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26045,7 +26045,7 @@ struct versym DynSyms[] = {
 	{"_ZNSbIwSt11char_traitsIwESaIwEEaSEPKw","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSbIwSt11char_traitsIwESaIwEEaSERKS2_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSbIwSt11char_traitsIwESaIwEEaSEw","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEEixEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26076,7 +26076,7 @@ struct versym DynSyms[] = {
 	{"_ZNSdD0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSdD1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSdD2Ev","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSi3getEPci","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26085,7 +26085,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZNSi3getEPci","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSi3getEPcic","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26123,7 +26123,7 @@ struct versym DynSyms[] = {
 	{"_ZNSi3getERc","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSi3getEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSi4peekEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSi4readEPci","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26158,7 +26158,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSi5seekgElSt12_Ios_Seekdir","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSi5seekgExSt12_Ios_Seekdir","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26169,7 +26169,7 @@ struct versym DynSyms[] = {
 #endif
 	{"_ZNSi5tellgEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSi5ungetEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSi6ignoreEii","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26192,7 +26192,7 @@ struct versym DynSyms[] = {
 #endif
 	{"_ZNSi6sentryC1ERSib","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSi6sentryC2ERSib","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSi7getlineEPci","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26201,7 +26201,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZNSi7getlineEPci","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSi7getlineEPcic","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26235,7 +26235,7 @@ struct versym DynSyms[] = {
 	{"_ZNSi7getlineEPclc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNSi7putbackEc","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSi8readsomeEPci","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26295,7 +26295,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSo5seekpElSt12_Ios_Seekdir","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSo5seekpExSt12_Ios_Seekdir","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26305,7 +26305,7 @@ struct versym DynSyms[] = {
 	{"_ZNSo5seekpExSt12_Ios_Seekdir","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNSo5tellpEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSo5writeEPKci","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26330,7 +26330,7 @@ struct versym DynSyms[] = {
 	{"_ZNSo6sentryC2ERSo","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSo6sentryD1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSo6sentryD2Ev","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSo8_M_writeEPKci","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26378,7 +26378,7 @@ struct versym DynSyms[] = {
 	{"_ZNSs12_Alloc_hiderC1EPcRKSaIcE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSs12_Alloc_hiderC2EPcRKSaIcE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSs12_M_leak_hardEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs12_S_constructEjcRKSaIcE","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26404,7 +26404,7 @@ struct versym DynSyms[] = {
 	{"_ZNSs13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS_SsEES2_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSs13_S_copy_charsEPcPKcS1_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSs13_S_copy_charsEPcS_S_","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs14_M_replace_auxEjjjc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26425,7 +26425,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSs14_M_replace_auxEmmmc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs15_M_replace_safeEjjPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26446,7 +26446,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSs15_M_replace_safeEmmPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs2atEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26479,7 +26479,7 @@ struct versym DynSyms[] = {
 	{"_ZNSs4_Rep15_M_set_sharableEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSs4_Rep20_S_empty_rep_storageE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSs4_Rep7_M_grabERKSaIcES2_","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs4_Rep8_M_cloneERKSaIcEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26500,7 +26500,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSs4_Rep8_M_cloneERKSaIcEm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs4_Rep9_S_createEjjRKSaIcE","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26528,7 +26528,7 @@ struct versym DynSyms[] = {
 	{"_ZNSs5clearEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSs5eraseEN9__gnu_cxx17__normal_iteratorIPcSsEE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSs5eraseEN9__gnu_cxx17__normal_iteratorIPcSsEES2_","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs5eraseEjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26550,7 +26550,7 @@ struct versym DynSyms[] = {
 	{"_ZNSs5eraseEmm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNSs6appendEPKc","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs6appendEPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26572,7 +26572,7 @@ struct versym DynSyms[] = {
 	{"_ZNSs6appendEPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNSs6appendERKSs","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs6appendERKSsjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26593,7 +26593,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSs6appendERKSsmm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs6appendEjc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26615,7 +26615,7 @@ struct versym DynSyms[] = {
 	{"_ZNSs6appendEmc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNSs6assignEPKc","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs6assignEPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26637,7 +26637,7 @@ struct versym DynSyms[] = {
 	{"_ZNSs6assignEPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNSs6assignERKSs","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs6assignERKSsjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26658,7 +26658,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSs6assignERKSsmm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs6assignEjc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26680,7 +26680,7 @@ struct versym DynSyms[] = {
 	{"_ZNSs6assignEmc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNSs6insertEN9__gnu_cxx17__normal_iteratorIPcSsEEc","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs6insertEN9__gnu_cxx17__normal_iteratorIPcSsEEjc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26701,31 +26701,31 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSs6insertEN9__gnu_cxx17__normal_iteratorIPcSsEEmc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs6insertEjPKc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSs6insertEjPKc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs6insertEjPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSs6insertEjPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs6insertEjRKSs","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSs6insertEjRKSs","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs6insertEjRKSsjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSs6insertEjRKSsjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs6insertEjjc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26807,13 +26807,13 @@ struct versym DynSyms[] = {
 	{"_ZNSs6insertEmmc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNSs6rbeginEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs6resizeEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSs6resizeEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs6resizeEjc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26854,7 +26854,7 @@ struct versym DynSyms[] = {
 	{"_ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_NS0_IPKcSsEES5_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_PKc","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_PKcS4_","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_PKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26878,7 +26878,7 @@ struct versym DynSyms[] = {
 	{"_ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_RKSs","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_S1_S1_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_S2_S2_","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_jc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26899,31 +26899,31 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_mc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs7replaceEjjPKc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSs7replaceEjjPKc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs7replaceEjjPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSs7replaceEjjPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs7replaceEjjRKSs","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSs7replaceEjjRKSs","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs7replaceEjjRKSsjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSs7replaceEjjRKSsjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs7replaceEjjjc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27004,7 +27004,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSs7replaceEmmmc","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs7reserveEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27025,7 +27025,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSs7reserveEm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSs9_M_mutateEjjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27048,7 +27048,7 @@ struct versym DynSyms[] = {
 #endif
 	{"_ZNSs9push_backEc","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSsC1EPKcRKSaIcE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSsC1EPKcjRKSaIcE","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27071,13 +27071,13 @@ struct versym DynSyms[] = {
 #endif
 	{"_ZNSsC1ERKSaIcE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSsC1ERKSs","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSsC1ERKSsjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSsC1ERKSsjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSsC1ERKSsjjRKSaIcE","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27113,7 +27113,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSsC1ERKSsmmRKSaIcE","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSsC1EjcRKSaIcE","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27139,7 +27139,7 @@ struct versym DynSyms[] = {
 	{"_ZNSsC1IPKcEET_S2_RKSaIcE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSsC1IPcEET_S1_RKSaIcE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSsC2EPKcRKSaIcE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSsC2EPKcjRKSaIcE","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27162,13 +27162,13 @@ struct versym DynSyms[] = {
 #endif
 	{"_ZNSsC2ERKSaIcE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSsC2ERKSs","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSsC2ERKSsjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSsC2ERKSsjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSsC2ERKSsjjRKSaIcE","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27204,7 +27204,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSsC2ERKSsmmRKSaIcE","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSsC2EjcRKSaIcE","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27234,7 +27234,7 @@ struct versym DynSyms[] = {
 	{"_ZNSsaSEPKc","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSsaSERKSs","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSsaSEc","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSsixEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27281,7 +27281,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt10moneypunctIcLb0EE24_M_initialize_moneypunctEP15__locale_structPKc","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt10moneypunctIcLb0EE2idE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt10moneypunctIcLb0EE4intlE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt10moneypunctIcLb0EEC1EP15__locale_structPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27302,7 +27302,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt10moneypunctIcLb0EEC1EP15__locale_structPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt10moneypunctIcLb0EEC1EPSt18__moneypunct_cacheIcLb0EEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27323,7 +27323,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt10moneypunctIcLb0EEC1EPSt18__moneypunct_cacheIcLb0EEm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt10moneypunctIcLb0EEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27344,7 +27344,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt10moneypunctIcLb0EEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt10moneypunctIcLb0EEC2EP15__locale_structPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27365,7 +27365,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt10moneypunctIcLb0EEC2EP15__locale_structPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt10moneypunctIcLb0EEC2EPSt18__moneypunct_cacheIcLb0EEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27386,7 +27386,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt10moneypunctIcLb0EEC2EPSt18__moneypunct_cacheIcLb0EEm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt10moneypunctIcLb0EEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27413,7 +27413,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt10moneypunctIcLb1EE24_M_initialize_moneypunctEP15__locale_structPKc","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt10moneypunctIcLb1EE2idE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt10moneypunctIcLb1EE4intlE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt10moneypunctIcLb1EEC1EP15__locale_structPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27434,7 +27434,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt10moneypunctIcLb1EEC1EP15__locale_structPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt10moneypunctIcLb1EEC1EPSt18__moneypunct_cacheIcLb1EEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27455,7 +27455,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt10moneypunctIcLb1EEC1EPSt18__moneypunct_cacheIcLb1EEm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt10moneypunctIcLb1EEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27476,7 +27476,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt10moneypunctIcLb1EEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt10moneypunctIcLb1EEC2EP15__locale_structPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27497,7 +27497,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt10moneypunctIcLb1EEC2EP15__locale_structPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt10moneypunctIcLb1EEC2EPSt18__moneypunct_cacheIcLb1EEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27518,7 +27518,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt10moneypunctIcLb1EEC2EPSt18__moneypunct_cacheIcLb1EEm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt10moneypunctIcLb1EEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27545,7 +27545,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt10moneypunctIwLb0EE24_M_initialize_moneypunctEP15__locale_structPKc","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt10moneypunctIwLb0EE2idE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt10moneypunctIwLb0EE4intlE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt10moneypunctIwLb0EEC1EP15__locale_structPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27566,7 +27566,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt10moneypunctIwLb0EEC1EP15__locale_structPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt10moneypunctIwLb0EEC1EPSt18__moneypunct_cacheIwLb0EEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27587,7 +27587,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt10moneypunctIwLb0EEC1EPSt18__moneypunct_cacheIwLb0EEm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt10moneypunctIwLb0EEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27608,7 +27608,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt10moneypunctIwLb0EEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt10moneypunctIwLb0EEC2EP15__locale_structPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27629,7 +27629,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt10moneypunctIwLb0EEC2EP15__locale_structPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt10moneypunctIwLb0EEC2EPSt18__moneypunct_cacheIwLb0EEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27650,7 +27650,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt10moneypunctIwLb0EEC2EPSt18__moneypunct_cacheIwLb0EEm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt10moneypunctIwLb0EEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27677,7 +27677,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt10moneypunctIwLb1EE24_M_initialize_moneypunctEP15__locale_structPKc","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt10moneypunctIwLb1EE2idE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt10moneypunctIwLb1EE4intlE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt10moneypunctIwLb1EEC1EP15__locale_structPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27698,7 +27698,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt10moneypunctIwLb1EEC1EP15__locale_structPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt10moneypunctIwLb1EEC1EPSt18__moneypunct_cacheIwLb1EEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27719,7 +27719,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt10moneypunctIwLb1EEC1EPSt18__moneypunct_cacheIwLb1EEm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt10moneypunctIwLb1EEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27740,7 +27740,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt10moneypunctIwLb1EEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt10moneypunctIwLb1EEC2EP15__locale_structPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27761,7 +27761,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt10moneypunctIwLb1EEC2EP15__locale_structPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt10moneypunctIwLb1EEC2EPSt18__moneypunct_cacheIwLb1EEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27782,7 +27782,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt10moneypunctIwLb1EEC2EPSt18__moneypunct_cacheIwLb1EEm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt10moneypunctIwLb1EEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27808,7 +27808,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt10moneypunctIwLb1EED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt11__timepunctIcE23_M_initialize_timepunctEP15__locale_struct","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt11__timepunctIcE2idE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt11__timepunctIcEC1EP15__locale_structPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27829,7 +27829,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt11__timepunctIcEC1EP15__locale_structPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt11__timepunctIcEC1EPSt17__timepunct_cacheIcEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27850,7 +27850,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt11__timepunctIcEC1EPSt17__timepunct_cacheIcEm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt11__timepunctIcEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27871,7 +27871,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt11__timepunctIcEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt11__timepunctIcEC2EP15__locale_structPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27892,7 +27892,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt11__timepunctIcEC2EP15__locale_structPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt11__timepunctIcEC2EPSt17__timepunct_cacheIcEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27913,7 +27913,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt11__timepunctIcEC2EPSt17__timepunct_cacheIcEm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt11__timepunctIcEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27939,7 +27939,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt11__timepunctIcED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt11__timepunctIwE23_M_initialize_timepunctEP15__locale_struct","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt11__timepunctIwE2idE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt11__timepunctIwEC1EP15__locale_structPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27960,7 +27960,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt11__timepunctIwEC1EP15__locale_structPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt11__timepunctIwEC1EPSt17__timepunct_cacheIwEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27981,7 +27981,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt11__timepunctIwEC1EPSt17__timepunct_cacheIwEm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt11__timepunctIwEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28002,7 +28002,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt11__timepunctIwEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt11__timepunctIwEC2EP15__locale_structPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28023,7 +28023,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt11__timepunctIwEC2EP15__locale_structPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt11__timepunctIwEC2EPSt17__timepunct_cacheIwEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28044,7 +28044,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt11__timepunctIwEC2EPSt17__timepunct_cacheIwEm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt11__timepunctIwEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28082,7 +28082,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt12__basic_fileIcE4openEPKcSt13_Ios_Openmodei","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt12__basic_fileIcE4syncEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt12__basic_fileIcE5closeEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt12__basic_fileIcE6xsgetnEPci","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28103,7 +28103,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt12__basic_fileIcE6xsgetnEPcl","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt12__basic_fileIcE6xsputnEPKci","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28136,7 +28136,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt12__basic_fileIcE7seekoffElSt12_Ios_Seekdir","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt12__basic_fileIcE7seekoffExSt12_Ios_Seekdir","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28147,7 +28147,7 @@ struct versym DynSyms[] = {
 #endif
 	{"_ZNSt12__basic_fileIcE8sys_openEP8_IO_FILESt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt12__basic_fileIcE8sys_openEiSt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt12__basic_fileIcE8xsputn_2EPKciS2_i","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28173,7 +28173,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt12__basic_fileIcEC2EP15pthread_mutex_t","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt12__basic_fileIcED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt12__basic_fileIcED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt12ctype_bynameIcEC1EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28194,7 +28194,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt12ctype_bynameIcEC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt12ctype_bynameIcEC2EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28218,7 +28218,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt12ctype_bynameIcED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt12ctype_bynameIcED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt12ctype_bynameIcED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt12ctype_bynameIwEC1EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28239,7 +28239,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt12ctype_bynameIwEC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt12ctype_bynameIwEC2EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28278,7 +28278,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt13bad_exceptionD0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt13bad_exceptionD1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt13bad_exceptionD2Ev","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE13_M_set_bufferEi","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28302,7 +28302,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE15_M_create_pbackEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE16_M_destroy_pbackEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE19_M_terminate_outputEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE22_M_convert_to_externalEPci","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28329,7 +28329,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE4syncEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE5closeEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE5imbueERKSt6locale","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPci","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28350,7 +28350,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPcl","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPci","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28371,7 +28371,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPcl","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKci","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28404,7 +28404,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE7_M_seekElSt12_Ios_Seekdir11__mbstate_t","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE7_M_seekExSt12_Ios_Seekdir11__mbstate_t","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28425,7 +28425,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28444,7 +28444,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt13basic_filebufIcSt11char_traitsIcEED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE13_M_set_bufferEi","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28468,7 +28468,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE15_M_create_pbackEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE16_M_destroy_pbackEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE19_M_terminate_outputEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE22_M_convert_to_externalEPwi","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28495,7 +28495,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE4syncEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE5closeEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE5imbueERKSt6locale","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwi","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28516,7 +28516,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE6setbufEPwl","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwi","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28537,7 +28537,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsgetnEPwl","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE6xsputnEPKwi","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28570,7 +28570,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE7_M_seekElSt12_Ios_Seekdir11__mbstate_t","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE7_M_seekExSt12_Ios_Seekdir11__mbstate_t","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28591,7 +28591,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt13basic_filebufIwSt11char_traitsIwEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28630,7 +28630,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt13basic_fstreamIwSt11char_traitsIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt13basic_fstreamIwSt11char_traitsIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt13basic_fstreamIwSt11char_traitsIwEED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE3getEPwi","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28639,7 +28639,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE3getEPwi","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE3getEPwiw","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28677,7 +28677,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE3getERw","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE3getEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE4peekEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE4readEPwi","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28712,7 +28712,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE5seekgElSt12_Ios_Seekdir","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE5seekgExSt12_Ios_Seekdir","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28723,7 +28723,7 @@ struct versym DynSyms[] = {
 #endif
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE5tellgEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE5ungetEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE6ignoreEij","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28746,7 +28746,7 @@ struct versym DynSyms[] = {
 #endif
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE6sentryC1ERS2_b","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE6sentryC2ERS2_b","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE7getlineEPwi","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28755,7 +28755,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE7getlineEPwi","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE7getlineEPwiw","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28789,7 +28789,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE7getlineEPwlw","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE7putbackEw","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE8readsomeEPwi","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28849,7 +28849,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEE5seekpElSt12_Ios_Seekdir","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEE5seekpExSt12_Ios_Seekdir","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28859,7 +28859,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEE5seekpExSt12_Ios_Seekdir","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEE5tellpEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEE5writeEPKwi","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28884,7 +28884,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEE6sentryC2ERS2_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEE6sentryD1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEE6sentryD2Ev","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEE8_M_writeEPKwi","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28981,7 +28981,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt14basic_ofstreamIwSt11char_traitsIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt14basic_ofstreamIwSt11char_traitsIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt14basic_ofstreamIwSt11char_traitsIwEED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt14codecvt_bynameIcc11__mbstate_tEC1EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29002,7 +29002,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt14codecvt_bynameIcc11__mbstate_tEC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt14codecvt_bynameIcc11__mbstate_tEC2EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29026,7 +29026,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt14codecvt_bynameIcc11__mbstate_tED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt14codecvt_bynameIcc11__mbstate_tED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt14codecvt_bynameIcc11__mbstate_tED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt14codecvt_bynameIwc11__mbstate_tEC1EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29047,7 +29047,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt14codecvt_bynameIwc11__mbstate_tEC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt14codecvt_bynameIwc11__mbstate_tEC2EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29071,7 +29071,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt14codecvt_bynameIwc11__mbstate_tED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt14codecvt_bynameIwc11__mbstate_tED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt14codecvt_bynameIwc11__mbstate_tED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt14collate_bynameIcEC1EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29092,7 +29092,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt14collate_bynameIcEC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt14collate_bynameIcEC2EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29116,7 +29116,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt14collate_bynameIcED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt14collate_bynameIcED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt14collate_bynameIcED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt14collate_bynameIwEC1EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29137,7 +29137,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt14collate_bynameIwEC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt14collate_bynameIwEC2EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29534,7 +29534,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE10pubseekoffElSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE10pubseekoffExSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29551,7 +29551,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE5imbueERKSt6locale","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE5pbumpEi","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE5sgetcEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE5sgetnEPci","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29573,7 +29573,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE5sgetnEPcl","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE5sputcEc","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE5sputnEPKci","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29596,7 +29596,7 @@ struct versym DynSyms[] = {
 #endif
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE5uflowEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6sbumpcEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPci","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29618,7 +29618,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPcl","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6snextcEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29639,7 +29639,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29673,7 +29673,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29688,7 +29688,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE8overflowEi","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE8pubimbueERKSt6locale","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE9pbackfailEi","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15basic_streambufIcSt11char_traitsIcEE9pubsetbufEPci","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29732,7 +29732,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE10pubseekoffElSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE10pubseekoffExSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29749,7 +29749,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE5imbueERKSt6locale","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE5pbumpEi","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE5sgetcEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE5sgetnEPwi","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29771,7 +29771,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE5sgetnEPwl","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE5sputcEw","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE5sputnEPKwi","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29794,7 +29794,7 @@ struct versym DynSyms[] = {
 #endif
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE5uflowEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6sbumpcEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwi","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29816,7 +29816,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6setbufEPwl","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6snextcEv","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwi","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29837,7 +29837,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsgetnEPwl","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE6xsputnEPKwi","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29871,7 +29871,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29886,7 +29886,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE8overflowEj","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE8pubimbueERKSt6locale","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE9pbackfailEj","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15basic_streambufIwSt11char_traitsIwEE9pubsetbufEPwi","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29921,7 +29921,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE15_M_update_egptrEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE17_M_stringbuf_initESt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE3strERKSs","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPci","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29942,7 +29942,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPcl","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7_M_syncEPcjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29975,7 +29975,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29997,7 +29997,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE15_M_update_egptrEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE17_M_stringbuf_initESt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE3strERKSbIwS1_S2_E","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwi","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30018,7 +30018,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE6setbufEPwl","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7_M_syncEPwjj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30051,7 +30051,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30070,7 +30070,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEEC2ESt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15messages_bynameIcEC1EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30091,7 +30091,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt15messages_bynameIcEC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15messages_bynameIcEC2EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30115,7 +30115,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt15messages_bynameIcED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15messages_bynameIcED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15messages_bynameIcED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15messages_bynameIwEC1EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30136,7 +30136,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt15messages_bynameIwEC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15messages_bynameIwEC2EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30160,7 +30160,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt15messages_bynameIwED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15messages_bynameIwED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15messages_bynameIwED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15numpunct_bynameIcEC1EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30181,7 +30181,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt15numpunct_bynameIcEC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15numpunct_bynameIcEC2EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30205,7 +30205,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt15numpunct_bynameIcED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15numpunct_bynameIcED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15numpunct_bynameIcED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15numpunct_bynameIwEC1EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30226,7 +30226,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt15numpunct_bynameIwEC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15numpunct_bynameIwEC2EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30250,7 +30250,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt15numpunct_bynameIwED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15numpunct_bynameIwED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15numpunct_bynameIwED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC1EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30271,7 +30271,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC2EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30295,7 +30295,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15time_get_bynameIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC1EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30316,7 +30316,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC2EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30340,7 +30340,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15time_get_bynameIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC1EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30361,7 +30361,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC2EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30385,7 +30385,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt15time_put_bynameIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC1EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30406,7 +30406,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt15time_put_bynameIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC2EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30441,7 +30441,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt17__timepunct_cacheIcE12_S_timezonesE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt17__timepunct_cacheIwE12_S_timezonesE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt17moneypunct_bynameIcLb0EE4intlE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt17moneypunct_bynameIcLb0EEC1EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30462,7 +30462,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt17moneypunct_bynameIcLb0EEC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt17moneypunct_bynameIcLb0EEC2EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30487,7 +30487,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt17moneypunct_bynameIcLb0EED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt17moneypunct_bynameIcLb0EED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt17moneypunct_bynameIcLb1EE4intlE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt17moneypunct_bynameIcLb1EEC1EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30508,7 +30508,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt17moneypunct_bynameIcLb1EEC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt17moneypunct_bynameIcLb1EEC2EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30533,7 +30533,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt17moneypunct_bynameIcLb1EED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt17moneypunct_bynameIcLb1EED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt17moneypunct_bynameIwLb0EE4intlE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt17moneypunct_bynameIwLb0EEC1EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30554,7 +30554,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt17moneypunct_bynameIwLb0EEC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt17moneypunct_bynameIwLb0EEC2EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30579,7 +30579,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt17moneypunct_bynameIwLb0EED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt17moneypunct_bynameIwLb0EED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt17moneypunct_bynameIwLb1EE4intlE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt17moneypunct_bynameIwLb1EEC1EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30600,7 +30600,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt17moneypunct_bynameIwLb1EEC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt17moneypunct_bynameIwLb1EEC2EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30697,7 +30697,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt5ctypeIcE10table_sizeE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt5ctypeIcE13classic_tableEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt5ctypeIcE2idE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt5ctypeIcEC1EP15__locale_structPKtbj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30718,7 +30718,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt5ctypeIcEC1EP15__locale_structPKtbm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt5ctypeIcEC1EPKtbj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30739,7 +30739,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt5ctypeIcEC1EPKtbm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt5ctypeIcEC2EP15__locale_structPKtbj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30760,7 +30760,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt5ctypeIcEC2EP15__locale_structPKtbm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt5ctypeIcEC2EPKtbj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30786,7 +30786,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt5ctypeIcED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt5ctypeIwE19_M_initialize_ctypeEv","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt5ctypeIwE2idE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt5ctypeIwEC1EP15__locale_structj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30807,7 +30807,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt5ctypeIwEC1EP15__locale_structm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt5ctypeIwEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30828,7 +30828,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt5ctypeIwEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt5ctypeIwEC2EP15__locale_structj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30849,7 +30849,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt5ctypeIwEC2EP15__locale_structm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt5ctypeIwEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30873,7 +30873,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt5ctypeIwED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt5ctypeIwED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt5ctypeIwED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt6gslice8_IndexerC1EjRKSt8valarrayIjES4_","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30894,7 +30894,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt6gslice8_IndexerC1EmRKSt8valarrayImES4_","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt6gslice8_IndexerC2EjRKSt8valarrayIjES4_","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30922,7 +30922,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt6locale4timeE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt6locale5_Impl16_M_install_facetEPKNS_2idEPKNS_5facetE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt6locale5_Impl16_M_replace_facetEPKS0_PKNS_2idE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt6locale5_ImplC1EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30943,7 +30943,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt6locale5_ImplC1EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt6locale5_ImplC1ERKS0_j","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30964,7 +30964,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt6locale5_ImplC1ERKS0_m","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt6locale5_ImplC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30985,7 +30985,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt6locale5_ImplC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt6locale5_ImplC2EPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31006,7 +31006,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt6locale5_ImplC2EPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt6locale5_ImplC2ERKS0_j","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31027,7 +31027,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt6locale5_ImplC2ERKS0_m","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt6locale5_ImplC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31080,7 +31080,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt6localeD2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt6localeaSERKS_","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt7codecvtIcc11__mbstate_tE2idE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt7codecvtIcc11__mbstate_tEC1EP15__locale_structj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31101,7 +31101,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt7codecvtIcc11__mbstate_tEC1EP15__locale_structm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt7codecvtIcc11__mbstate_tEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31122,7 +31122,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt7codecvtIcc11__mbstate_tEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt7codecvtIcc11__mbstate_tEC2EP15__locale_structj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31143,7 +31143,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt7codecvtIcc11__mbstate_tEC2EP15__locale_structm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt7codecvtIcc11__mbstate_tEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31168,7 +31168,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt7codecvtIcc11__mbstate_tED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt7codecvtIcc11__mbstate_tED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt7codecvtIwc11__mbstate_tE2idE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt7codecvtIwc11__mbstate_tEC1EP15__locale_structj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31189,7 +31189,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt7codecvtIwc11__mbstate_tEC1EP15__locale_structm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt7codecvtIwc11__mbstate_tEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31210,7 +31210,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt7codecvtIwc11__mbstate_tEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt7codecvtIwc11__mbstate_tEC2EP15__locale_structj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31231,7 +31231,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt7codecvtIwc11__mbstate_tEC2EP15__locale_structm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt7codecvtIwc11__mbstate_tEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31256,7 +31256,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt7codecvtIwc11__mbstate_tED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt7codecvtIwc11__mbstate_tED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt7collateIcE2idE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt7collateIcEC1EP15__locale_structj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31277,7 +31277,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt7collateIcEC1EP15__locale_structm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt7collateIcEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31298,7 +31298,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt7collateIcEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt7collateIcEC2EP15__locale_structj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31319,7 +31319,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt7collateIcEC2EP15__locale_structm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt7collateIcEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31344,7 +31344,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt7collateIcED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt7collateIcED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt7collateIwE2idE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt7collateIwEC1EP15__locale_structj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31365,7 +31365,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt7collateIwEC1EP15__locale_structm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt7collateIwEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31386,7 +31386,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt7collateIwEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt7collateIwEC2EP15__locale_structj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31407,7 +31407,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt7collateIwEC2EP15__locale_structm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt7collateIwEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31432,7 +31432,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt7collateIwED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt7collateIwED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE2idE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31453,7 +31453,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31478,7 +31478,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE2idE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31499,7 +31499,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31524,7 +31524,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE2idE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31545,7 +31545,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31570,7 +31570,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE2idE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31591,7 +31591,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31670,7 +31670,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt8ios_baseD1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt8ios_baseD2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt8messagesIcE2idE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8messagesIcEC1EP15__locale_structPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31691,7 +31691,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt8messagesIcEC1EP15__locale_structPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8messagesIcEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31712,7 +31712,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt8messagesIcEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8messagesIcEC2EP15__locale_structPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31733,7 +31733,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt8messagesIcEC2EP15__locale_structPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8messagesIcEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31758,7 +31758,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt8messagesIcED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt8messagesIcED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt8messagesIwE2idE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8messagesIwEC1EP15__locale_structPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31779,7 +31779,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt8messagesIwEC1EP15__locale_structPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8messagesIwEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31800,7 +31800,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt8messagesIwEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8messagesIwEC2EP15__locale_structPKcj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31821,7 +31821,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt8messagesIwEC2EP15__locale_structPKcm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8messagesIwEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31847,7 +31847,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt8messagesIwED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt8numpunctIcE22_M_initialize_numpunctEP15__locale_struct","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt8numpunctIcE2idE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8numpunctIcEC1EP15__locale_structj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31868,7 +31868,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt8numpunctIcEC1EP15__locale_structm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8numpunctIcEC1EPSt16__numpunct_cacheIcEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31889,7 +31889,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt8numpunctIcEC1EPSt16__numpunct_cacheIcEm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8numpunctIcEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31910,7 +31910,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt8numpunctIcEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8numpunctIcEC2EP15__locale_structj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31931,7 +31931,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt8numpunctIcEC2EP15__locale_structm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8numpunctIcEC2EPSt16__numpunct_cacheIcEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31952,7 +31952,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt8numpunctIcEC2EPSt16__numpunct_cacheIcEm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8numpunctIcEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31978,7 +31978,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt8numpunctIcED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt8numpunctIwE22_M_initialize_numpunctEP15__locale_struct","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt8numpunctIwE2idE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8numpunctIwEC1EP15__locale_structj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31999,7 +31999,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt8numpunctIwEC1EP15__locale_structm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8numpunctIwEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32020,7 +32020,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt8numpunctIwEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8numpunctIwEC2EP15__locale_structj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32041,7 +32041,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt8numpunctIwEC2EP15__locale_structm","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8numpunctIwEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32066,7 +32066,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt8numpunctIwED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt8numpunctIwED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE2idE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32087,7 +32087,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32112,7 +32112,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE2idE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32133,7 +32133,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32158,7 +32158,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE2idE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32179,7 +32179,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32204,7 +32204,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE2idE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32225,7 +32225,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32249,43 +32249,43 @@ struct versym DynSyms[] = {
 	{"_ZNSt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8valarrayIjEC1ERKS0_","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSt8valarrayIjEC1ERKS0_","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8valarrayIjEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSt8valarrayIjEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8valarrayIjEC2ERKS0_","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSt8valarrayIjEC2ERKS0_","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8valarrayIjEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSt8valarrayIjEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8valarrayIjED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSt8valarrayIjED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8valarrayIjED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSt8valarrayIjED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt8valarrayIjEixEj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32437,7 +32437,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt9exceptionD1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt9exceptionD2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE2idE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32458,7 +32458,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32483,7 +32483,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE2idE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32504,7 +32504,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32529,7 +32529,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE2idE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32550,7 +32550,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32575,7 +32575,7 @@ struct versym DynSyms[] = {
 	{"_ZNSt9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED2Ev","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZNSt9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE2idE","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC1Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32596,7 +32596,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZNSt9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC1Em","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZNSt9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC2Ej","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34468,7 +34468,7 @@ struct versym DynSyms[] = {
 	{"_ZTVSt9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZTVSt9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE","GLIBCXX_3.4",0,LSB_Cpp},
 	{"_ZTVSt9type_info","GLIBCXX_3.4",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn116_N10QScrollBar10stepChangeEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34477,7 +34477,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn116_N10QScrollBar10stepChangeEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn116_N10QScrollBar11rangeChangeEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34486,7 +34486,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn116_N10QScrollBar11rangeChangeEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn116_N10QScrollBar11valueChangeEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34495,7 +34495,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn116_N10QScrollBar11valueChangeEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn116_N10QScrollBarD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34504,7 +34504,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn116_N10QScrollBarD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn116_N10QScrollBarD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34513,7 +34513,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn116_N10QScrollBarD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn116_N5QDial11rangeChangeEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34522,7 +34522,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn116_N5QDial11rangeChangeEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn116_N5QDial11valueChangeEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34531,7 +34531,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn116_N5QDial11valueChangeEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn116_N5QDialD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34540,7 +34540,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn116_N5QDialD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn116_N5QDialD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34549,7 +34549,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn116_N5QDialD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn116_N7QSlider11rangeChangeEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34558,7 +34558,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn116_N7QSlider11rangeChangeEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn116_N7QSlider11valueChangeEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34567,7 +34567,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn116_N7QSlider11valueChangeEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn116_N7QSliderD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34576,7 +34576,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn116_N7QSliderD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn116_N7QSliderD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34585,7 +34585,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn116_N7QSliderD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn116_N8QSpinBox11rangeChangeEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34594,7 +34594,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn116_N8QSpinBox11rangeChangeEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn116_N8QSpinBox11valueChangeEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34603,7 +34603,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn116_N8QSpinBox11valueChangeEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn116_N8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34612,7 +34612,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn116_N8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn116_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34621,7 +34621,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn116_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn12_N10QDropEventD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34630,7 +34630,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn12_N10QDropEventD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn12_N10QDropEventD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34639,7 +34639,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn12_N10QDropEventD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn12_N14QDragMoveEventD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34648,7 +34648,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn12_N14QDragMoveEventD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn12_N14QDragMoveEventD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34657,7 +34657,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn12_N14QDragMoveEventD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn12_N15QDragEnterEventD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34666,7 +34666,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn12_N15QDragEnterEventD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn12_N15QDragEnterEventD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34675,7 +34675,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn12_N15QDragEnterEventD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn12_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34684,10 +34684,10 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn12_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn12_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn12_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34702,10 +34702,10 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn12_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn12_NK10QDropEvent11encodedDataEPKc","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn12_NK10QDropEvent11encodedDataEPKc","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34720,10 +34720,10 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn12_NK10QDropEvent11encodedDataEPKc","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn12_NK10QDropEvent6formatEi","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn12_NK10QDropEvent6formatEi","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34738,10 +34738,10 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn12_NK10QDropEvent6formatEi","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn12_NK10QDropEvent8providesEPKc","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn12_NK10QDropEvent8providesEPKc","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34756,7 +34756,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn12_NK10QDropEvent8providesEPKc","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn12_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34765,7 +34765,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn12_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn148_N10QPopupMenu10updateItemEi","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34774,7 +34774,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn148_N10QPopupMenu10updateItemEi","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn148_N10QPopupMenu12menuDelPopupEPS_","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34783,7 +34783,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn148_N10QPopupMenu12menuDelPopupEPS_","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn148_N10QPopupMenu12menuInsPopupEPS_","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34792,7 +34792,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn148_N10QPopupMenu12menuInsPopupEPS_","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn148_N10QPopupMenu14activateItemAtEi","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34801,7 +34801,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn148_N10QPopupMenu14activateItemAtEi","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn148_N10QPopupMenu16menuStateChangedEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34810,7 +34810,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn148_N10QPopupMenu16menuStateChangedEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn148_N10QPopupMenu19menuContentsChangedEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34819,7 +34819,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn148_N10QPopupMenu19menuContentsChangedEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn148_N10QPopupMenuD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34828,7 +34828,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn148_N10QPopupMenuD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn148_N10QPopupMenuD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34837,7 +34837,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn148_N10QPopupMenuD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn148_N8QMenuBar10updateItemEi","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34846,7 +34846,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn148_N8QMenuBar10updateItemEi","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn148_N8QMenuBar12menuDelPopupEP10QPopupMenu","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34855,7 +34855,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn148_N8QMenuBar12menuDelPopupEP10QPopupMenu","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn148_N8QMenuBar12menuInsPopupEP10QPopupMenu","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34864,7 +34864,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn148_N8QMenuBar12menuInsPopupEP10QPopupMenu","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn148_N8QMenuBar14activateItemAtEi","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34873,7 +34873,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn148_N8QMenuBar14activateItemAtEi","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn148_N8QMenuBar16menuStateChangedEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34882,7 +34882,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn148_N8QMenuBar16menuStateChangedEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn148_N8QMenuBar19menuContentsChangedEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34891,7 +34891,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn148_N8QMenuBar19menuContentsChangedEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn148_N8QMenuBarD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34900,7 +34900,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn148_N8QMenuBarD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn148_N8QMenuBarD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -36217,10 +36217,10 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZThn16_N18QX11EmbedContainerD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn16_N18QXmlDefaultHandler10startCDATAEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn16_N18QXmlDefaultHandler10startCDATAEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -36235,7 +36235,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn16_N18QXmlDefaultHandler10startCDATAEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn16_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __ia64__
@@ -36256,10 +36256,10 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZThn16_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn16_N18QXmlDefaultHandler11startEntityERK7QString","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn16_N18QXmlDefaultHandler11startEntityERK7QString","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -36322,10 +36322,10 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZThn16_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn16_N18QXmlDefaultHandler6endDTDEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn16_N18QXmlDefaultHandler6endDTDEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -36340,10 +36340,10 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn16_N18QXmlDefaultHandler6endDTDEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn16_N18QXmlDefaultHandler7commentERK7QString","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn16_N18QXmlDefaultHandler7commentERK7QString","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -36358,10 +36358,10 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn16_N18QXmlDefaultHandler7commentERK7QString","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn16_N18QXmlDefaultHandler8endCDATAEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn16_N18QXmlDefaultHandler8endCDATAEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -36376,10 +36376,10 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn16_N18QXmlDefaultHandler8endCDATAEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn16_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn16_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -36394,10 +36394,10 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn16_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn16_N18QXmlDefaultHandler9endEntityERK7QString","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn16_N18QXmlDefaultHandler9endEntityERK7QString","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -37312,7 +37312,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZThn16_NK16QTextCodecPlugin4keysEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn16_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __ia64__
@@ -37789,7 +37789,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZThn200_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn20_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -37798,10 +37798,10 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn20_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn20_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn20_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -37816,10 +37816,10 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn20_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn20_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn20_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -37834,10 +37834,10 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn20_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn20_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn20_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -37852,7 +37852,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn20_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn20_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38401,7 +38401,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZThn32_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QBoxLayout10invalidateEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38410,7 +38410,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QBoxLayout10invalidateEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QBoxLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38419,7 +38419,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QBoxLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QBoxLayout8iteratorEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38428,7 +38428,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QBoxLayout8iteratorEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38437,7 +38437,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38446,7 +38446,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QDataTableD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38455,7 +38455,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QDataTableD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QDataTableD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38464,7 +38464,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QDataTableD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QHGroupBoxD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38473,7 +38473,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QHGroupBoxD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QHGroupBoxD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38482,7 +38482,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QHGroupBoxD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QImageDragD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38491,7 +38491,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QImageDragD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QImageDragD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38500,7 +38500,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QImageDragD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QLCDNumberD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38509,7 +38509,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QLCDNumberD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QLCDNumberD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38518,7 +38518,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QLCDNumberD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QPopupMenuD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38527,7 +38527,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QPopupMenuD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QPopupMenuD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38536,7 +38536,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QPopupMenuD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QScrollBarD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38545,7 +38545,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QScrollBarD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QScrollBarD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38554,7 +38554,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QScrollBarD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QStatusBarD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38563,7 +38563,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QStatusBarD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QStatusBarD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38572,7 +38572,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QStatusBarD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QTabDialogD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38581,7 +38581,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QTabDialogD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QTabDialogD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38590,7 +38590,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QTabDialogD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QTabWidgetD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38599,7 +38599,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QTabWidgetD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QTabWidgetD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38608,7 +38608,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QTabWidgetD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QVGroupBoxD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38617,7 +38617,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QVGroupBoxD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QVGroupBoxD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38626,7 +38626,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QVGroupBoxD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QWorkspaceD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38635,7 +38635,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QWorkspaceD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N10QWorkspaceD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38644,7 +38644,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N10QWorkspaceD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QCanvasViewD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38653,7 +38653,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QCanvasViewD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QCanvasViewD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38662,7 +38662,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QCanvasViewD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QDockWindowD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38671,7 +38671,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QDockWindowD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QDockWindowD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38680,7 +38680,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QDockWindowD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QDragObjectD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38689,7 +38689,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QDragObjectD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QDragObjectD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38698,7 +38698,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QDragObjectD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QFileDialogD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38707,7 +38707,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QFileDialogD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QFileDialogD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38716,7 +38716,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QFileDialogD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QFontDialogD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38725,7 +38725,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QFontDialogD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QFontDialogD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38734,7 +38734,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QFontDialogD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QGridLayout10invalidateEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38743,7 +38743,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QGridLayout10invalidateEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QGridLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38752,7 +38752,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QGridLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QGridLayout8iteratorEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38761,7 +38761,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QGridLayout8iteratorEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QGridLayoutD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38770,7 +38770,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QGridLayoutD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QGridLayoutD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38779,7 +38779,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QGridLayoutD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QHBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38788,7 +38788,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QHBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QHBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38797,7 +38797,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QHBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QMainWindowD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38806,7 +38806,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QMainWindowD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QMainWindowD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38815,7 +38815,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QMainWindowD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QMessageBoxD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38824,7 +38824,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QMessageBoxD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QMessageBoxD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38833,7 +38833,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QMessageBoxD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QPushButtonD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38842,7 +38842,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QPushButtonD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QPushButtonD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38851,7 +38851,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QPushButtonD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QScrollViewD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38860,7 +38860,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QScrollViewD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QScrollViewD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38869,7 +38869,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QScrollViewD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QSpinWidgetD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38878,7 +38878,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QSpinWidgetD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QSpinWidgetD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38887,7 +38887,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QSpinWidgetD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QStoredDragD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38896,7 +38896,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QStoredDragD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QStoredDragD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38905,7 +38905,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QStoredDragD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QToolButtonD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38914,7 +38914,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QToolButtonD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QToolButtonD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38923,7 +38923,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QToolButtonD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QVBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38932,7 +38932,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QVBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N11QVBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38941,7 +38941,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N11QVBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N12QButtonGroupD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38950,7 +38950,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N12QButtonGroupD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N12QButtonGroupD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38959,7 +38959,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N12QButtonGroupD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N12QColorDialogD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38968,7 +38968,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N12QColorDialogD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N12QColorDialogD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38977,7 +38977,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N12QColorDialogD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N12QDataBrowserD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38986,7 +38986,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N12QDataBrowserD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N12QDataBrowserD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -38995,7 +38995,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N12QDataBrowserD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N12QInputDialogD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39004,7 +39004,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N12QInputDialogD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N12QInputDialogD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39013,7 +39013,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N12QInputDialogD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N12QPrintDialogD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39022,7 +39022,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N12QPrintDialogD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N12QPrintDialogD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39031,7 +39031,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N12QPrintDialogD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N12QTextBrowserD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39040,7 +39040,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N12QTextBrowserD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N12QTextBrowserD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39049,7 +39049,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N12QTextBrowserD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N12QUrlOperator4cdUpEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39058,7 +39058,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N12QUrlOperator4cdUpEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N12QUrlOperator5parseERK7QString","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39067,7 +39067,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N12QUrlOperator5parseERK7QString","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N12QUrlOperator5resetEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39076,7 +39076,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N12QUrlOperator5resetEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N12QUrlOperator7setPathERK7QString","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39085,7 +39085,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N12QUrlOperator7setPathERK7QString","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N12QUrlOperatorD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39094,7 +39094,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N12QUrlOperatorD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N12QUrlOperatorD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39103,7 +39103,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N12QUrlOperatorD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N12QWidgetStackD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39112,7 +39112,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N12QWidgetStackD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N12QWidgetStackD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39121,7 +39121,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N12QWidgetStackD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N13QDateTimeEditD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39130,7 +39130,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N13QDateTimeEditD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N13QDateTimeEditD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39139,7 +39139,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N13QDateTimeEditD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N13QErrorMessageD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39148,7 +39148,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N13QErrorMessageD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N13QErrorMessageD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39157,7 +39157,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N13QErrorMessageD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N13QHButtonGroupD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39166,7 +39166,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N13QHButtonGroupD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N13QHButtonGroupD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39175,7 +39175,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N13QHButtonGroupD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N13QSplashScreenD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39184,7 +39184,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N13QSplashScreenD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N13QSplashScreenD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39193,7 +39193,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N13QSplashScreenD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N13QVButtonGroupD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39202,7 +39202,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N13QVButtonGroupD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N13QVButtonGroupD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39211,7 +39211,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N13QVButtonGroupD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N14QDesktopWidgetD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39220,7 +39220,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N14QDesktopWidgetD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N14QDesktopWidgetD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39229,7 +39229,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N14QDesktopWidgetD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N14QMultiLineEditD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39238,7 +39238,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N14QMultiLineEditD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N14QMultiLineEditD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39247,7 +39247,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N14QMultiLineEditD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N15QDockAreaLayout10invalidateEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39256,7 +39256,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N15QDockAreaLayout10invalidateEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N15QDockAreaLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39265,7 +39265,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N15QDockAreaLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N15QDockAreaLayout8iteratorEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39274,7 +39274,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N15QDockAreaLayout8iteratorEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N15QProgressDialogD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39283,7 +39283,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N15QProgressDialogD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N15QProgressDialogD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39376,7 +39376,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N5QDialD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39385,7 +39385,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N5QDialD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N5QDialD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39394,7 +39394,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N5QDialD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N6QLabelD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39403,7 +39403,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N6QLabelD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N6QLabelD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39412,7 +39412,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N6QLabelD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N6QTableD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39421,7 +39421,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N6QTableD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N6QTableD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39430,7 +39430,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N6QTableD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QButtonD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39439,7 +39439,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QButtonD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QButtonD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39448,7 +39448,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QButtonD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QDialogD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39457,7 +39457,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QDialogD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QDialogD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39466,7 +39466,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QDialogD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QHeaderD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39475,7 +39475,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QHeaderD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QHeaderD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39484,7 +39484,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QHeaderD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QLayout10invalidateEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39493,7 +39493,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QLayout10invalidateEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QLayout6layoutEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39502,7 +39502,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QLayout6layoutEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QLayoutD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39511,7 +39511,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QLayoutD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QLayoutD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39520,7 +39520,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QLayoutD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QSliderD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39529,7 +39529,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QSliderD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QSliderD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39538,7 +39538,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QSliderD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QSocket10writeBlockEPKcm","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39547,7 +39547,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QSocket10writeBlockEPKcm","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QSocket2atEm","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39556,7 +39556,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QSocket2atEm","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QSocket4openEi","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39565,7 +39565,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QSocket4openEi","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QSocket5closeEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39574,7 +39574,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QSocket5closeEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QSocket5flushEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39583,7 +39583,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QSocket5flushEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QSocket5getchEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39592,7 +39592,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QSocket5getchEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QSocket5putchEi","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39601,7 +39601,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QSocket5putchEi","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QSocket7ungetchEi","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39610,7 +39610,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QSocket7ungetchEi","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QSocket8readLineEPcm","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39619,7 +39619,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QSocket8readLineEPcm","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QSocket9readBlockEPcm","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39628,7 +39628,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QSocket9readBlockEPcm","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QSocketD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39637,7 +39637,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QSocketD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QSocketD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39646,7 +39646,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QSocketD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QTabBarD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39655,7 +39655,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QTabBarD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QTabBarD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39664,7 +39664,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QTabBarD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QWidgetD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39673,7 +39673,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QWidgetD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QWidgetD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39682,7 +39682,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QWidgetD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QWizardD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39691,7 +39691,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QWizardD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N7QWizardD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39700,7 +39700,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N7QWizardD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N8QListBoxD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39709,7 +39709,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N8QListBoxD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N8QListBoxD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39718,7 +39718,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N8QListBoxD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N8QMenuBarD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39727,7 +39727,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N8QMenuBarD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N8QMenuBarD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39736,7 +39736,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N8QMenuBarD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39745,7 +39745,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39754,7 +39754,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N8QToolBarD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39763,7 +39763,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N8QToolBarD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N8QToolBarD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39772,7 +39772,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N8QToolBarD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N8QToolBoxD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39781,7 +39781,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N8QToolBoxD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N8QToolBoxD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39790,7 +39790,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N8QToolBoxD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N8QUriDragD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39799,7 +39799,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N8QUriDragD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N8QUriDragD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39808,7 +39808,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N8QUriDragD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QComboBoxD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39817,7 +39817,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QComboBoxD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QComboBoxD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39826,7 +39826,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QComboBoxD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QDataViewD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39835,7 +39835,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QDataViewD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QDataViewD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39844,7 +39844,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QDataViewD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QDateEditD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39853,7 +39853,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QDateEditD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QDateEditD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39862,7 +39862,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QDateEditD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QDockAreaD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39871,7 +39871,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QDockAreaD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QDockAreaD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39880,7 +39880,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QDockAreaD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39889,7 +39889,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39898,7 +39898,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QGridViewD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39907,7 +39907,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QGridViewD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QGridViewD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39916,7 +39916,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QGridViewD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QGroupBoxD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39925,7 +39925,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QGroupBoxD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QGroupBoxD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39934,7 +39934,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QGroupBoxD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QIconDragD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39943,7 +39943,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QIconDragD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QIconDragD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39952,7 +39952,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QIconDragD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QIconViewD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39961,7 +39961,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QIconViewD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QIconViewD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39970,7 +39970,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QIconViewD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QLineEditD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39979,7 +39979,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QLineEditD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QLineEditD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39988,7 +39988,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QLineEditD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QListViewD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -39997,7 +39997,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QListViewD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QListViewD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40006,7 +40006,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QListViewD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QSizeGripD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40015,7 +40015,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QSizeGripD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QSizeGripD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40024,7 +40024,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QSizeGripD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QSplitterD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40033,7 +40033,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QSplitterD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QSplitterD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40042,7 +40042,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QSplitterD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QTextDragD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40051,7 +40051,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QTextDragD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QTextDragD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40060,7 +40060,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QTextDragD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QTextEditD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40069,7 +40069,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QTextEditD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QTextEditD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40078,7 +40078,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QTextEditD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QTextViewD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40087,7 +40087,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QTextViewD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QTextViewD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40096,7 +40096,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QTextViewD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QTimeEditD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40105,7 +40105,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QTimeEditD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QTimeEditD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40114,7 +40114,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QTimeEditD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QTitleBarD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40123,7 +40123,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QTitleBarD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_N9QTitleBarD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40132,7 +40132,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N9QTitleBarD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK10QBoxLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40141,7 +40141,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK10QBoxLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK10QBoxLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40150,7 +40150,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK10QBoxLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK10QBoxLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40159,7 +40159,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK10QBoxLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK10QBoxLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40168,7 +40168,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK10QBoxLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK10QBoxLayout8sizeHintEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40177,7 +40177,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK10QBoxLayout8sizeHintEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK10QBoxLayout9expandingEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40186,7 +40186,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK10QBoxLayout9expandingEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK10QImageDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40195,7 +40195,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK10QImageDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK10QImageDrag6formatEi","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40204,7 +40204,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK10QImageDrag6formatEi","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK11QGridLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40213,7 +40213,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK11QGridLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK11QGridLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40222,7 +40222,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK11QGridLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK11QGridLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40231,7 +40231,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK11QGridLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK11QGridLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40240,7 +40240,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK11QGridLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK11QGridLayout8sizeHintEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40249,7 +40249,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK11QGridLayout8sizeHintEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK11QGridLayout9expandingEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40258,7 +40258,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK11QGridLayout9expandingEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK11QStoredDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40267,7 +40267,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK11QStoredDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK11QStoredDrag6formatEi","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40276,7 +40276,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK11QStoredDrag6formatEi","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK15QDockAreaLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40285,7 +40285,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK15QDockAreaLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK15QDockAreaLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40294,7 +40294,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK15QDockAreaLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK15QDockAreaLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40303,7 +40303,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK15QDockAreaLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK15QDockAreaLayout8sizeHintEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40324,7 +40324,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZThn40_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK7QLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40333,7 +40333,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK7QLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK7QLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40342,7 +40342,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK7QLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK7QLayout7isEmptyEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40351,7 +40351,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK7QLayout7isEmptyEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK7QLayout8geometryEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40360,7 +40360,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK7QLayout8geometryEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK7QLayout9expandingEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40369,7 +40369,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK7QLayout9expandingEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK7QSocket2atEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40378,7 +40378,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK7QSocket2atEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK7QSocket4sizeEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40387,7 +40387,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK7QSocket4sizeEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK7QSocket5atEndEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40396,7 +40396,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK7QSocket5atEndEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK7QWidget6metricEi","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40405,7 +40405,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK7QWidget6metricEi","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK9QIconDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40414,7 +40414,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK9QIconDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK9QIconDrag6formatEi","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40423,7 +40423,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK9QIconDrag6formatEi","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK9QTextDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40432,7 +40432,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK9QTextDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn40_NK9QTextDrag6formatEi","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40441,10 +40441,10 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn40_NK9QTextDrag6formatEi","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn4_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn4_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40459,7 +40459,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn4_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn4_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40468,10 +40468,10 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn4_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn4_N18QXmlDefaultHandler5errorERK18QXmlParseException","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn4_N18QXmlDefaultHandler5errorERK18QXmlParseException","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40486,10 +40486,10 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn4_N18QXmlDefaultHandler5errorERK18QXmlParseException","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn4_N18QXmlDefaultHandler7warningERK18QXmlParseException","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn4_N18QXmlDefaultHandler7warningERK18QXmlParseException","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -40504,7 +40504,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn4_N18QXmlDefaultHandler7warningERK18QXmlParseException","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn4_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43105,7 +43105,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZThn80_NK9QTextDrag6formatEi","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QBoxLayout10invalidateEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43114,7 +43114,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QBoxLayout10invalidateEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QBoxLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43123,7 +43123,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QBoxLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QBoxLayoutD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43132,7 +43132,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QBoxLayoutD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QBoxLayoutD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43141,7 +43141,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QBoxLayoutD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QLCDNumberD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43150,7 +43150,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QLCDNumberD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QLCDNumberD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43159,7 +43159,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QLCDNumberD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QScrollBarD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43168,7 +43168,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QScrollBarD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QScrollBarD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43177,7 +43177,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QScrollBarD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QSqlCursor4execERK7QString","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43186,7 +43186,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QSqlCursor4execERK7QString","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QSqlCursor9afterSeekEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43195,7 +43195,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QSqlCursor9afterSeekEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QSqlCursorD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43204,7 +43204,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QSqlCursorD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QSqlCursorD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43213,7 +43213,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QSqlCursorD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QStatusBarD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43222,7 +43222,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QStatusBarD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QStatusBarD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43231,7 +43231,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QStatusBarD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QSvgWidgetD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43240,7 +43240,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QSvgWidgetD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QSvgWidgetD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43249,7 +43249,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QSvgWidgetD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QTabWidgetD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43258,7 +43258,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QTabWidgetD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QTabWidgetD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43267,7 +43267,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QTabWidgetD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QTableViewD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43276,7 +43276,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QTableViewD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QTableViewD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43285,7 +43285,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QTableViewD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QWorkspaceD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43294,7 +43294,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QWorkspaceD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QWorkspaceD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43303,7 +43303,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QWorkspaceD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QDockWidgetD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43312,7 +43312,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QDockWidgetD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QDockWidgetD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43321,7 +43321,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QDockWidgetD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QFileDialogD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43330,7 +43330,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QFileDialogD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QFileDialogD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43339,7 +43339,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QFileDialogD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QFocusFrameD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43348,7 +43348,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QFocusFrameD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QFocusFrameD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43357,7 +43357,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QFocusFrameD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QFontDialogD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43366,7 +43366,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QFontDialogD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QFontDialogD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43375,7 +43375,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QFontDialogD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QGridLayout10invalidateEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43384,7 +43384,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QGridLayout10invalidateEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QGridLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43393,7 +43393,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QGridLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QGridLayoutD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43402,7 +43402,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QGridLayoutD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QGridLayoutD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43411,7 +43411,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QGridLayoutD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QHBoxLayoutD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43420,7 +43420,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QHBoxLayoutD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QHBoxLayoutD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43429,7 +43429,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QHBoxLayoutD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QHeaderViewD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43438,7 +43438,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QHeaderViewD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QHeaderViewD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43447,7 +43447,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QHeaderViewD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QListWidgetD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43456,7 +43456,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QListWidgetD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QListWidgetD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43465,7 +43465,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QListWidgetD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QMainWindowD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43474,7 +43474,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QMainWindowD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QMainWindowD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43483,7 +43483,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QMainWindowD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QMessageBoxD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43492,7 +43492,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QMessageBoxD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QMessageBoxD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43501,7 +43501,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QMessageBoxD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QPushButtonD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43510,7 +43510,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QPushButtonD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QPushButtonD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43519,7 +43519,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QPushButtonD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QRubberBandD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43528,7 +43528,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QRubberBandD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QRubberBandD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43537,7 +43537,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QRubberBandD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QScrollAreaD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43546,7 +43546,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QScrollAreaD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QScrollAreaD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43555,7 +43555,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QScrollAreaD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QToolButtonD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43564,7 +43564,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QToolButtonD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QToolButtonD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43573,7 +43573,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QToolButtonD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QTreeWidgetD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43582,7 +43582,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QTreeWidgetD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QTreeWidgetD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43591,7 +43591,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QTreeWidgetD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QVBoxLayoutD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43600,7 +43600,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QVBoxLayoutD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QVBoxLayoutD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43609,7 +43609,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QVBoxLayoutD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N12QColorDialogD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43618,7 +43618,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N12QColorDialogD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N12QColorDialogD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43627,7 +43627,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N12QColorDialogD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N12QInputDialogD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43636,7 +43636,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N12QInputDialogD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N12QInputDialogD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43645,7 +43645,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N12QInputDialogD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N12QPrintDialogD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43654,7 +43654,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N12QPrintDialogD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N12QPrintDialogD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43663,7 +43663,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N12QPrintDialogD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N12QStylePluginD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43672,7 +43672,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N12QStylePluginD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N12QStylePluginD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43681,7 +43681,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N12QStylePluginD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N12QTableWidgetD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43690,7 +43690,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N12QTableWidgetD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N12QTableWidgetD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43699,7 +43699,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N12QTableWidgetD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N12QTextBrowserD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43708,7 +43708,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N12QTextBrowserD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N12QTextBrowserD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43717,7 +43717,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N12QTextBrowserD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N13QErrorMessageD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43726,7 +43726,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N13QErrorMessageD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N13QErrorMessageD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43735,7 +43735,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N13QErrorMessageD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N13QSplashScreenD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43744,7 +43744,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N13QSplashScreenD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N13QSplashScreenD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43753,7 +43753,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N13QSplashScreenD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N14QDesktopWidgetD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43762,7 +43762,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N14QDesktopWidgetD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N14QDesktopWidgetD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43771,7 +43771,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N14QDesktopWidgetD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N14QImageIOPluginD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43780,7 +43780,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N14QImageIOPluginD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N14QImageIOPluginD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43789,7 +43789,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N14QImageIOPluginD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N14QStackedLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43798,7 +43798,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N14QStackedLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N14QStackedLayoutD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43807,7 +43807,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N14QStackedLayoutD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N14QStackedLayoutD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43816,7 +43816,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N14QStackedLayoutD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N14QStackedWidgetD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43825,7 +43825,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N14QStackedWidgetD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N14QStackedWidgetD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43834,7 +43834,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N14QStackedWidgetD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N15QAbstractButtonD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43843,7 +43843,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N15QAbstractButtonD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N15QAbstractButtonD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43852,7 +43852,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N15QAbstractButtonD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N15QAbstractSliderD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43861,7 +43861,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N15QAbstractSliderD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N15QAbstractSliderD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43870,7 +43870,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N15QAbstractSliderD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N15QProgressDialogD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43879,7 +43879,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N15QProgressDialogD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N15QProgressDialogD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43888,7 +43888,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N15QProgressDialogD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N15QX11EmbedWidgetD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43897,7 +43897,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N15QX11EmbedWidgetD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N15QX11EmbedWidgetD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43906,7 +43906,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N15QX11EmbedWidgetD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N16QAbstractSpinBoxD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43915,7 +43915,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N16QAbstractSpinBoxD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N16QAbstractSpinBoxD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43924,7 +43924,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N16QAbstractSpinBoxD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43933,7 +43933,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43942,7 +43942,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N16QSqlSelectCursor4execERK7QString","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43951,7 +43951,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N16QSqlSelectCursor4execERK7QString","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N16QSqlSelectCursorD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43960,7 +43960,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N16QSqlSelectCursorD0Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N16QSqlSelectCursorD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43969,7 +43969,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N16QSqlSelectCursorD1Ev","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N16QTextCodecPlugin6createERK7QString","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43978,7 +43978,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N16QTextCodecPlugin6createERK7QString","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N16QTextCodecPluginD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43987,7 +43987,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N16QTextCodecPluginD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N16QTextCodecPluginD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -43996,7 +43996,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N16QTextCodecPluginD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N17QAbstractItemViewD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44005,7 +44005,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N17QAbstractItemViewD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N17QAbstractItemViewD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44014,7 +44014,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N17QAbstractItemViewD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N17QAccessiblePluginD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44023,7 +44023,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N17QAccessiblePluginD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N17QAccessiblePluginD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44032,7 +44032,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N17QAccessiblePluginD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N17QIconEnginePluginD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44041,7 +44041,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N17QIconEnginePluginD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N17QIconEnginePluginD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44050,7 +44050,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N17QIconEnginePluginD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N17QTextImageHandler10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44059,7 +44059,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N17QTextImageHandler10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N17QTextImageHandler13intrinsicSizeEP13QTextDocumentiRK11QTextFormat","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44068,7 +44068,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N17QTextImageHandler13intrinsicSizeEP13QTextDocumentiRK11QTextFormat","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N18QX11EmbedContainerD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44077,7 +44077,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N18QX11EmbedContainerD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N18QX11EmbedContainerD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44110,7 +44110,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZThn8_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __ia64__
@@ -44131,10 +44131,10 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZThn8_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44149,10 +44149,10 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44215,7 +44215,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZThn8_N18QXmlDefaultHandler7warningERK18QXmlParseException","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N19QAbstractScrollAreaD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44224,7 +44224,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N19QAbstractScrollAreaD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N19QAbstractScrollAreaD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44233,7 +44233,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N19QAbstractScrollAreaD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N19QInputContextPluginD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44242,7 +44242,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N19QInputContextPluginD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N19QInputContextPluginD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44251,7 +44251,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N19QInputContextPluginD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44260,7 +44260,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44269,7 +44269,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N20QPictureFormatPluginD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44278,7 +44278,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N20QPictureFormatPluginD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N20QPictureFormatPluginD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44287,7 +44287,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N20QPictureFormatPluginD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N23QAccessibleBridgePluginD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44296,7 +44296,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N23QAccessibleBridgePluginD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N23QAccessibleBridgePluginD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44305,7 +44305,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N23QAccessibleBridgePluginD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N5QDialD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44314,7 +44314,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N5QDialD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N5QDialD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44323,7 +44323,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N5QDialD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N5QMenuD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44332,7 +44332,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N5QMenuD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N5QMenuD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44341,7 +44341,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N5QMenuD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N6QFrameD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44350,7 +44350,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N6QFrameD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N6QFrameD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44359,7 +44359,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N6QFrameD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N6QLabelD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44368,7 +44368,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N6QLabelD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N6QLabelD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44377,7 +44377,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N6QLabelD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N7QDialogD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44386,7 +44386,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N7QDialogD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N7QDialogD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44395,7 +44395,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N7QDialogD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N7QLayout10invalidateEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44404,7 +44404,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N7QLayout10invalidateEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N7QLayout6layoutEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44413,7 +44413,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N7QLayout6layoutEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N7QLayoutD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44422,7 +44422,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N7QLayoutD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N7QLayoutD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44431,7 +44431,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N7QLayoutD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N7QSliderD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44440,7 +44440,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N7QSliderD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N7QSliderD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44449,7 +44449,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N7QSliderD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N7QTabBarD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44458,7 +44458,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N7QTabBarD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N7QTabBarD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44467,7 +44467,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N7QTabBarD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N7QWidgetD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44476,7 +44476,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N7QWidgetD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N7QWidgetD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44485,7 +44485,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N7QWidgetD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N8QMenuBarD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44494,7 +44494,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N8QMenuBarD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N8QMenuBarD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44503,7 +44503,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N8QMenuBarD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N8QToolBarD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44512,7 +44512,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N8QToolBarD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N8QToolBarD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44521,7 +44521,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N8QToolBarD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N8QToolBoxD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44530,7 +44530,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N8QToolBoxD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N8QToolBoxD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44539,7 +44539,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N8QToolBoxD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QComboBoxD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44548,7 +44548,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QComboBoxD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QComboBoxD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44557,7 +44557,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QComboBoxD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44566,7 +44566,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44575,7 +44575,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QGroupBoxD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44584,7 +44584,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QGroupBoxD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QGroupBoxD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44593,7 +44593,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QGroupBoxD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QLineEditD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44602,7 +44602,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QLineEditD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QLineEditD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44611,7 +44611,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QLineEditD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QListViewD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44620,7 +44620,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QListViewD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QListViewD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44629,7 +44629,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QListViewD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QSizeGripD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44638,7 +44638,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QSizeGripD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QSizeGripD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44647,7 +44647,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QSizeGripD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QSplitterD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44656,7 +44656,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QSplitterD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QSplitterD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44665,7 +44665,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QSplitterD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QTextEditD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44674,7 +44674,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QTextEditD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QTextEditD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44683,7 +44683,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QTextEditD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QTreeViewD0Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44692,7 +44692,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QTreeViewD0Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QTreeViewD1Ev","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44701,7 +44701,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QTreeViewD1Ev","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK10QBoxLayout11maximumSizeEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44710,7 +44710,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK10QBoxLayout11maximumSizeEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK10QBoxLayout11minimumSizeEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44719,7 +44719,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK10QBoxLayout11minimumSizeEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK10QBoxLayout14heightForWidthEi","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44728,7 +44728,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK10QBoxLayout14heightForWidthEi","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK10QBoxLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44737,7 +44737,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK10QBoxLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK10QBoxLayout19expandingDirectionsEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44746,7 +44746,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK10QBoxLayout19expandingDirectionsEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK10QBoxLayout21minimumHeightForWidthEi","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44755,7 +44755,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK10QBoxLayout21minimumHeightForWidthEi","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK10QBoxLayout8sizeHintEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44764,7 +44764,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK10QBoxLayout8sizeHintEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK10QSqlCursor5valueEi","",0,LSB_Toolkit_Qt3},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44773,7 +44773,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK10QSqlCursor5valueEi","",0,LSB_Toolkit_Qt3},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK11QGridLayout11maximumSizeEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44782,7 +44782,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK11QGridLayout11maximumSizeEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK11QGridLayout11minimumSizeEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44791,7 +44791,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK11QGridLayout11minimumSizeEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK11QGridLayout14heightForWidthEi","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44800,7 +44800,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK11QGridLayout14heightForWidthEi","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK11QGridLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44809,7 +44809,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK11QGridLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK11QGridLayout19expandingDirectionsEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44818,7 +44818,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK11QGridLayout19expandingDirectionsEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK11QGridLayout21minimumHeightForWidthEi","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44827,7 +44827,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK11QGridLayout21minimumHeightForWidthEi","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK11QGridLayout8sizeHintEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44836,7 +44836,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK11QGridLayout8sizeHintEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK14QStackedLayout11minimumSizeEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44845,7 +44845,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK14QStackedLayout11minimumSizeEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK14QStackedLayout8sizeHintEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44854,7 +44854,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK14QStackedLayout8sizeHintEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK16QTextCodecPlugin4keysEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44863,7 +44863,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK16QTextCodecPlugin4keysEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __ia64__
@@ -44884,7 +44884,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_ZThn8_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK7QLayout11maximumSizeEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44893,7 +44893,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK7QLayout11maximumSizeEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK7QLayout11minimumSizeEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44902,7 +44902,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK7QLayout11minimumSizeEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK7QLayout19expandingDirectionsEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44911,7 +44911,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK7QLayout19expandingDirectionsEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK7QLayout7isEmptyEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44920,7 +44920,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK7QLayout7isEmptyEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK7QLayout8geometryEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44929,7 +44929,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK7QLayout8geometryEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK7QWidget11paintEngineEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44938,7 +44938,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK7QWidget11paintEngineEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44947,7 +44947,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK7QWidget7devTypeEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44956,7 +44956,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK7QWidget7devTypeEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44965,7 +44965,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NSdD0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44974,7 +44974,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NSdD0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NSdD1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44983,7 +44983,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NSdD1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NSt13basic_fstreamIcSt11char_traitsIcEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -44992,7 +44992,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NSt13basic_fstreamIcSt11char_traitsIcEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NSt13basic_fstreamIcSt11char_traitsIcEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45001,7 +45001,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NSt13basic_fstreamIcSt11char_traitsIcEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NSt13basic_fstreamIwSt11char_traitsIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45010,7 +45010,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NSt13basic_fstreamIwSt11char_traitsIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NSt13basic_fstreamIwSt11char_traitsIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45019,7 +45019,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NSt13basic_fstreamIwSt11char_traitsIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NSt14basic_iostreamIwSt11char_traitsIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45028,7 +45028,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NSt14basic_iostreamIwSt11char_traitsIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NSt14basic_iostreamIwSt11char_traitsIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45037,7 +45037,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NSt14basic_iostreamIwSt11char_traitsIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NSt18basic_stringstreamIcSt11char_traitsIcESaIcEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45046,7 +45046,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NSt18basic_stringstreamIcSt11char_traitsIcESaIcEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NSt18basic_stringstreamIcSt11char_traitsIcESaIcEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45055,7 +45055,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NSt18basic_stringstreamIcSt11char_traitsIcESaIcEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NSt18basic_stringstreamIwSt11char_traitsIwESaIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45064,7 +45064,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NSt18basic_stringstreamIwSt11char_traitsIwESaIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NSt18basic_stringstreamIwSt11char_traitsIwESaIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45073,7 +45073,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NSt18basic_stringstreamIwSt11char_traitsIwESaIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSdD0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45082,7 +45082,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSdD0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSdD1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45091,7 +45091,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSdD1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSiD0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45100,7 +45100,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSiD0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSiD1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45109,7 +45109,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSiD1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSoD0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45118,7 +45118,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSoD0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSoD1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45127,7 +45127,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSoD1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt13basic_fstreamIcSt11char_traitsIcEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45136,7 +45136,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt13basic_fstreamIcSt11char_traitsIcEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt13basic_fstreamIcSt11char_traitsIcEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45145,7 +45145,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt13basic_fstreamIcSt11char_traitsIcEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt13basic_fstreamIwSt11char_traitsIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45154,7 +45154,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt13basic_fstreamIwSt11char_traitsIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt13basic_fstreamIwSt11char_traitsIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45163,7 +45163,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt13basic_fstreamIwSt11char_traitsIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt13basic_istreamIwSt11char_traitsIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45172,7 +45172,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt13basic_istreamIwSt11char_traitsIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt13basic_istreamIwSt11char_traitsIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45181,7 +45181,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt13basic_istreamIwSt11char_traitsIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt13basic_ostreamIwSt11char_traitsIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45190,7 +45190,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt13basic_ostreamIwSt11char_traitsIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt13basic_ostreamIwSt11char_traitsIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45199,7 +45199,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt13basic_ostreamIwSt11char_traitsIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt14basic_ifstreamIcSt11char_traitsIcEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45208,7 +45208,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt14basic_ifstreamIcSt11char_traitsIcEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt14basic_ifstreamIcSt11char_traitsIcEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45217,7 +45217,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt14basic_ifstreamIcSt11char_traitsIcEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt14basic_ifstreamIwSt11char_traitsIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45226,7 +45226,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt14basic_ifstreamIwSt11char_traitsIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt14basic_ifstreamIwSt11char_traitsIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45235,7 +45235,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt14basic_ifstreamIwSt11char_traitsIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt14basic_iostreamIwSt11char_traitsIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45244,7 +45244,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt14basic_iostreamIwSt11char_traitsIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt14basic_iostreamIwSt11char_traitsIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45253,7 +45253,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt14basic_iostreamIwSt11char_traitsIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt14basic_ofstreamIcSt11char_traitsIcEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45262,7 +45262,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt14basic_ofstreamIcSt11char_traitsIcEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt14basic_ofstreamIcSt11char_traitsIcEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45271,7 +45271,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt14basic_ofstreamIcSt11char_traitsIcEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt14basic_ofstreamIwSt11char_traitsIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45280,7 +45280,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt14basic_ofstreamIwSt11char_traitsIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt14basic_ofstreamIwSt11char_traitsIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45289,7 +45289,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt14basic_ofstreamIwSt11char_traitsIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt18basic_stringstreamIcSt11char_traitsIcESaIcEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45298,7 +45298,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt18basic_stringstreamIcSt11char_traitsIcESaIcEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt18basic_stringstreamIcSt11char_traitsIcESaIcEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45307,7 +45307,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt18basic_stringstreamIcSt11char_traitsIcESaIcEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt18basic_stringstreamIwSt11char_traitsIwESaIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45316,7 +45316,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt18basic_stringstreamIwSt11char_traitsIwESaIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt18basic_stringstreamIwSt11char_traitsIwESaIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45325,7 +45325,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt18basic_stringstreamIwSt11char_traitsIwESaIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45334,7 +45334,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45343,7 +45343,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt19basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt19basic_istringstreamIwSt11char_traitsIwESaIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45352,7 +45352,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt19basic_istringstreamIwSt11char_traitsIwESaIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt19basic_istringstreamIwSt11char_traitsIwESaIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45361,7 +45361,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt19basic_istringstreamIwSt11char_traitsIwESaIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt19basic_ostringstreamIcSt11char_traitsIcESaIcEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45370,7 +45370,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt19basic_ostringstreamIcSt11char_traitsIcESaIcEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt19basic_ostringstreamIcSt11char_traitsIcESaIcEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45379,7 +45379,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt19basic_ostringstreamIcSt11char_traitsIcESaIcEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt19basic_ostringstreamIwSt11char_traitsIwESaIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45388,7 +45388,7 @@ struct versym DynSyms[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTv0_n12_NSt19basic_ostringstreamIwSt11char_traitsIwESaIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTv0_n12_NSt19basic_ostringstreamIwSt11char_traitsIwESaIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -45966,13 +45966,13 @@ struct versym DynSyms[] = {
 	{"_ZltRK7QStringS1_","",0,LSB_Toolkit_Qt3},
 	{"_ZmlRK12QPainterPathRK7QMatrix","",0,LSB_Toolkit_Qt},
 	{"_ZmlRK8QWMatrixS1_","",0,LSB_Toolkit_Qt3},
-#if defined ___i386__
+#if defined __i386__
 	{"_Znaj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_Znaj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZnajRKSt9nothrow_t","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -46014,13 +46014,13 @@ struct versym DynSyms[] = {
 	{"_ZneRK7QStringS1_","",0,LSB_Toolkit_Qt3},
 	{"_ZneRK9QGLFormatS1_","",0,LSB_Toolkit_Qt},
 	{"_ZneRK9QGLFormatS1_","",0,LSB_Toolkit_Qt3},
-#if defined ___i386__
+#if defined __i386__
 	{"_Znwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_Znwj","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZnwjRKSt9nothrow_t","GLIBCXX_3.4",0,LSB_Cpp},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -46133,7 +46133,7 @@ struct versym DynSyms[] = {
 	{"_ZrsR11QTextStreamR9QDockArea","",0,LSB_Toolkit_Qt3},
 	{"_ZrsR11QTextStreamR9QSplitter","",0,LSB_Toolkit_Qt},
 	{"_ZrsR11QTextStreamR9QSplitter","",0,LSB_Toolkit_Qt3},
-#if defined ___i386__
+#if defined __i386__
 	{"__assert_fail","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46155,7 +46155,7 @@ struct versym DynSyms[] = {
 	{"__assert_fail","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"__ctype_b_loc","GLIBC_2.3",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"__ctype_get_mb_cur_max","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46179,7 +46179,7 @@ struct versym DynSyms[] = {
 	{"__ctype_tolower_loc","GLIBC_2.3",0,LSB_Core},
 	{"__ctype_toupper_loc","GLIBC_2.3",0,LSB_Core},
 	{"__cxa_allocate_exception","CXXABI_1.3",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"__cxa_atexit","GLIBC_2.1.3",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46226,7 +46226,7 @@ struct versym DynSyms[] = {
 	{"__cxa_vec_new","CXXABI_1.3",0,LSB_Cpp},
 	{"__cxa_vec_new2","CXXABI_1.3",0,LSB_Cpp},
 	{"__cxa_vec_new3","CXXABI_1.3",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"__daylight","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46249,7 +46249,7 @@ struct versym DynSyms[] = {
 #endif
 	{"__docbDefaultSAXHandler","",0,LSB_XML},
 	{"__dynamic_cast","CXXABI_1.3",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"__environ","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46270,7 +46270,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__environ","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__errno_location","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46291,7 +46291,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__errno_location","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__finite","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46312,7 +46312,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__finite","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__finitef","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46333,7 +46333,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__finitef","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__finitel","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46354,7 +46354,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__finitel","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__fpclassify","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46375,7 +46375,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__fpclassify","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__fpclassifyf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46396,7 +46396,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__fpclassifyf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__fpclassifyl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46405,7 +46405,7 @@ struct versym DynSyms[] = {
 #if defined __x86_64__
 	{"__fpclassifyl","GLIBC_2.2.5",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__fpending","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46426,7 +46426,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__fpending","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__fxstat","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46447,7 +46447,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__fxstat","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__fxstat64","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46468,7 +46468,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__fxstat64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__getpagesize","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46489,7 +46489,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__getpagesize","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__getpgid","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46511,7 +46511,7 @@ struct versym DynSyms[] = {
 	{"__getpgid","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"__gxx_personality_v0","CXXABI_1.3",0,LSB_Cpp},
-#if defined ___i386__
+#if defined __i386__
 	{"__h_errno_location","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46533,7 +46533,7 @@ struct versym DynSyms[] = {
 	{"__h_errno_location","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"__htmlDefaultSAXHandler","",0,LSB_XML},
-#if defined ___i386__
+#if defined __i386__
 	{"__isinf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46554,7 +46554,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__isinf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__isinff","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46575,7 +46575,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__isinff","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__isinfl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46596,7 +46596,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__isinfl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__isnan","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46617,7 +46617,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__isnan","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__isnanf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46638,7 +46638,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__isnanf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__isnanl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46659,7 +46659,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__isnanl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__libc_current_sigrtmax","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46680,7 +46680,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__libc_current_sigrtmax","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__libc_current_sigrtmin","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46701,7 +46701,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__libc_current_sigrtmin","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__libc_start_main","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46722,7 +46722,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__libc_start_main","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__lxstat","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46743,7 +46743,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__lxstat","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__lxstat64","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46764,7 +46764,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__lxstat64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__mempcpy","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46786,7 +46786,7 @@ struct versym DynSyms[] = {
 	{"__mempcpy","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"__oldXMLWDcompatibility","",0,LSB_XML},
-#if defined ___i386__
+#if defined __i386__
 	{"__rawmemchr","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46808,7 +46808,7 @@ struct versym DynSyms[] = {
 	{"__rawmemchr","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"__register_atfork","GLIBC_2.3.2",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"__signbit","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46820,7 +46820,7 @@ struct versym DynSyms[] = {
 #if defined __powerpc64__
 	{"__signbit","GLIBC_2.3",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__signbitf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46832,7 +46832,7 @@ struct versym DynSyms[] = {
 #if defined __powerpc64__
 	{"__signbitf","GLIBC_2.3",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__signbitl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46841,7 +46841,7 @@ struct versym DynSyms[] = {
 #if defined __x86_64__
 	{"__signbitl","GLIBC_2.2.5",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__sigsetjmp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46862,7 +46862,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__sigsetjmp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__stpcpy","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46883,7 +46883,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__stpcpy","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__strdup","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46904,7 +46904,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__strdup","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__strtod_internal","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46925,7 +46925,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__strtod_internal","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__strtof_internal","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46946,7 +46946,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__strtof_internal","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__strtok_r","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46967,7 +46967,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__strtok_r","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__strtol_internal","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -46988,7 +46988,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__strtol_internal","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__strtold_internal","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47009,7 +47009,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__strtold_internal","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__strtoll_internal","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47030,7 +47030,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__strtoll_internal","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__strtoul_internal","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47051,7 +47051,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__strtoul_internal","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__strtoull_internal","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47072,7 +47072,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__strtoull_internal","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__sysconf","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47093,7 +47093,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__sysconf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__sysv_signal","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47114,7 +47114,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__sysv_signal","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__timezone","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47135,7 +47135,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__timezone","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__tzname","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47156,7 +47156,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__tzname","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__wcstod_internal","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47177,7 +47177,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__wcstod_internal","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__wcstof_internal","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47198,7 +47198,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__wcstof_internal","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__wcstol_internal","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47219,7 +47219,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__wcstol_internal","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__wcstold_internal","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47240,7 +47240,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__wcstold_internal","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__wcstoul_internal","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47261,7 +47261,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__wcstoul_internal","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__xmknod","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47306,7 +47306,7 @@ struct versym DynSyms[] = {
 	{"__xmlStructuredError","",0,LSB_XML},
 	{"__xmlSubstituteEntitiesDefaultValue","",0,LSB_XML},
 	{"__xmlTreeIndentString","",0,LSB_XML},
-#if defined ___i386__
+#if defined __i386__
 	{"__xpg_basename","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47327,7 +47327,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__xpg_basename","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__xpg_sigpause","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47348,7 +47348,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__xpg_sigpause","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47369,7 +47369,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__xstat","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47390,7 +47390,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__xstat","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"__xstat64","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47411,7 +47411,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"__xstat64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_environ","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47432,7 +47432,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_environ","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_exit","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47453,7 +47453,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_exit","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_longjmp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47474,7 +47474,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_longjmp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_nl_msg_cat_cntr","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47495,7 +47495,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_nl_msg_cat_cntr","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_pthread_cleanup_pop","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47516,7 +47516,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_pthread_cleanup_pop","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_pthread_cleanup_push","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47537,7 +47537,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_pthread_cleanup_push","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_setjmp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47558,7 +47558,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_setjmp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_sys_errlist","GLIBC_2.3",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47579,7 +47579,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_sys_errlist","GLIBC_2.3",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_sys_siglist","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47600,7 +47600,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_sys_siglist","GLIBC_2.3.3",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_tolower","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47621,7 +47621,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_tolower","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_toupper","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47642,7 +47642,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"_toupper","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"a64l","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47663,7 +47663,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"a64l","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"abort","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47684,7 +47684,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"abort","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"abs","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47705,7 +47705,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"abs","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"accept","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47726,7 +47726,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"accept","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"access","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47747,7 +47747,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"access","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"acct","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47768,7 +47768,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"acct","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"acos","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47789,7 +47789,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"acos","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"acosf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47810,7 +47810,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"acosf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"acosh","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47831,7 +47831,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"acosh","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"acoshf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47852,7 +47852,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"acoshf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"acoshl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47873,7 +47873,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"acoshl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"acosl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47900,7 +47900,7 @@ struct versym DynSyms[] = {
 	{"addchstr","",0,LSB_Core},
 	{"addnstr","",0,LSB_Core},
 	{"addstr","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"adjtime","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47922,7 +47922,7 @@ struct versym DynSyms[] = {
 	{"adjtime","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"adler32","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"alarm","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47944,7 +47944,7 @@ struct versym DynSyms[] = {
 	{"alarm","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"applicationShellWidgetClass","",0,LSB_Graphics},
-#if defined ___i386__
+#if defined __i386__
 	{"asctime","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47965,7 +47965,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"asctime","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"asctime_r","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -47986,7 +47986,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"asctime_r","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"asin","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48007,7 +48007,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"asin","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"asinf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48028,7 +48028,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"asinf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"asinh","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48049,7 +48049,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"asinh","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"asinhf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48070,7 +48070,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"asinhf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"asinhl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48091,7 +48091,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"asinhl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"asinl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48112,7 +48112,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"asinl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"asprintf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48133,7 +48133,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"asprintf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"atan","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48154,7 +48154,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"atan","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"atan2","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48175,7 +48175,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"atan2","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"atan2f","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48196,7 +48196,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"atan2f","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"atan2l","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48217,7 +48217,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"atan2l","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"atanf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48238,7 +48238,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"atanf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"atanh","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48259,7 +48259,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"atanh","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"atanhf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48280,7 +48280,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"atanhf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"atanhl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48301,7 +48301,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"atanhl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"atanl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48544,7 +48544,7 @@ struct versym DynSyms[] = {
 	{"atk_value_get_minimum_value","",0,LSB_Toolkit_Gtk},
 	{"atk_value_get_type","",0,LSB_Toolkit_Gtk},
 	{"atk_value_set_current_value","",0,LSB_Toolkit_Gtk},
-#if defined ___i386__
+#if defined __i386__
 	{"atof","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48565,7 +48565,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"atof","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"atoi","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48586,7 +48586,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"atoi","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"atol","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48607,7 +48607,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"atol","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"atoll","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48635,7 +48635,7 @@ struct versym DynSyms[] = {
 	{"attroff","",0,LSB_Core},
 	{"attron","",0,LSB_Core},
 	{"attrset","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"authnone_create","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48656,7 +48656,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"authnone_create","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"basename","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48678,7 +48678,7 @@ struct versym DynSyms[] = {
 	{"basename","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"baudrate","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"bcmp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48699,7 +48699,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"bcmp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"bcopy","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48721,7 +48721,7 @@ struct versym DynSyms[] = {
 	{"bcopy","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"beep","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"bind","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48742,7 +48742,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"bind","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"bind_textdomain_codeset","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48763,7 +48763,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"bind_textdomain_codeset","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"bindresvport","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48784,7 +48784,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"bindresvport","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"bindtextdomain","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48809,7 +48809,7 @@ struct versym DynSyms[] = {
 	{"bkgdset","",0,LSB_Core},
 	{"border","",0,LSB_Core},
 	{"box","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"brk","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48830,7 +48830,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"brk","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"bsd_signal","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48851,7 +48851,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"bsd_signal","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"bsearch","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48872,7 +48872,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"bsearch","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"btowc","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48893,7 +48893,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"btowc","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"bzero","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48914,7 +48914,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"bzero","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cabs","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48935,7 +48935,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cabs","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cabsf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48956,7 +48956,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cabsf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cabsl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48977,7 +48977,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cabsl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cacos","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -48998,7 +48998,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cacos","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cacosf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49019,7 +49019,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cacosf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cacosh","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49040,7 +49040,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cacosh","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cacoshf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49061,7 +49061,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cacoshf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cacoshl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49082,7 +49082,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cacoshl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cacosl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49103,7 +49103,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cacosl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"calloc","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49125,7 +49125,7 @@ struct versym DynSyms[] = {
 	{"calloc","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"can_change_color","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"carg","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49146,7 +49146,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"carg","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cargf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49167,7 +49167,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cargf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cargl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49188,7 +49188,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cargl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"casin","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49209,7 +49209,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"casin","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"casinf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49230,7 +49230,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"casinf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"casinh","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49251,7 +49251,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"casinh","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"casinhf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49272,7 +49272,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"casinhf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"casinhl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49293,7 +49293,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"casinhl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"casinl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49314,7 +49314,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"casinl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"catan","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49335,7 +49335,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"catan","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"catanf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49356,7 +49356,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"catanf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"catanh","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49377,7 +49377,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"catanh","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"catanhf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49398,7 +49398,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"catanhf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"catanhl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49419,7 +49419,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"catanhl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"catanl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49440,7 +49440,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"catanl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"catclose","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49461,7 +49461,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"catclose","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"catgets","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49482,7 +49482,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"catgets","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"catopen","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49504,7 +49504,7 @@ struct versym DynSyms[] = {
 	{"catopen","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"cbreak","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"cbrt","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49525,7 +49525,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cbrt","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cbrtf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49546,7 +49546,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cbrtf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cbrtl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49567,7 +49567,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cbrtl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ccos","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49588,7 +49588,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ccos","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ccosf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49609,7 +49609,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ccosf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ccosh","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49630,7 +49630,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ccosh","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ccoshf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49651,7 +49651,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ccoshf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ccoshl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49672,7 +49672,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ccoshl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ccosl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49693,7 +49693,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ccosl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ceil","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49714,7 +49714,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ceil","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ceilf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49735,7 +49735,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ceilf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ceill","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49756,7 +49756,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ceill","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cexp","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49777,7 +49777,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cexp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cexpf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49798,7 +49798,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cexpf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cexpl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49819,7 +49819,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cexpl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cfgetispeed","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49840,7 +49840,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cfgetispeed","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cfgetospeed","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49861,7 +49861,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cfgetospeed","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cfmakeraw","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49882,7 +49882,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cfmakeraw","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cfsetispeed","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49903,7 +49903,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cfsetispeed","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cfsetospeed","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49924,7 +49924,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cfsetospeed","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cfsetspeed","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49945,7 +49945,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cfsetspeed","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"chdir","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49967,7 +49967,7 @@ struct versym DynSyms[] = {
 	{"chdir","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"chgat","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"chmod","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -49988,7 +49988,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"chmod","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"chown","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50009,7 +50009,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"chown","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"chroot","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50030,7 +50030,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"chroot","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cimag","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50051,7 +50051,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cimag","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cimagf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50072,7 +50072,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cimagf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cimagl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50094,7 +50094,7 @@ struct versym DynSyms[] = {
 	{"cimagl","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"clear","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"clearerr","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50116,7 +50116,7 @@ struct versym DynSyms[] = {
 	{"clearerr","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"clearok","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"clnt_create","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50137,7 +50137,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"clnt_create","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clnt_pcreateerror","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50158,7 +50158,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"clnt_pcreateerror","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clnt_perrno","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50179,7 +50179,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"clnt_perrno","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clnt_perror","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50200,7 +50200,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"clnt_perror","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clnt_spcreateerror","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50221,7 +50221,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"clnt_spcreateerror","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clnt_sperrno","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50242,7 +50242,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"clnt_sperrno","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clnt_sperror","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50263,7 +50263,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"clnt_sperror","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clock","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50284,7 +50284,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"clock","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clock_getcpuclockid","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50305,7 +50305,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"clock_getcpuclockid","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clock_getres","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50326,7 +50326,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"clock_getres","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clock_gettime","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50347,7 +50347,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"clock_gettime","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clock_nanosleep","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50368,7 +50368,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"clock_nanosleep","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clock_settime","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50389,7 +50389,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"clock_settime","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clog","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50410,7 +50410,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"clog","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clog10","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50431,7 +50431,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"clog10","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clog10f","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50452,7 +50452,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"clog10f","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clog10l","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50473,7 +50473,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"clog10l","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clogf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50494,7 +50494,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"clogf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"clogl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50515,7 +50515,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"clogl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"close","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50536,7 +50536,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"close","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"closedir","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50557,7 +50557,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"closedir","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"closelog","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50587,7 +50587,7 @@ struct versym DynSyms[] = {
 	{"compress","",0,LSB_Core},
 	{"compress2","",0,LSB_Core},
 	{"compressBound","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"confstr","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50608,7 +50608,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"confstr","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"conj","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50629,7 +50629,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"conj","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"conjf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50650,7 +50650,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"conjf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"conjl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50671,7 +50671,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"conjl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"connect","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50694,7 +50694,7 @@ struct versym DynSyms[] = {
 #endif
 	{"constraintClassRec","",0,LSB_Graphics},
 	{"constraintWidgetClass","",0,LSB_Graphics},
-#if defined ___i386__
+#if defined __i386__
 	{"copysign","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50715,7 +50715,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"copysign","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"copysignf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50736,7 +50736,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"copysignf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"copysignl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50759,7 +50759,7 @@ struct versym DynSyms[] = {
 #endif
 	{"copywin","",0,LSB_Core},
 	{"coreWidgetClass","",0,LSB_Graphics},
-#if defined ___i386__
+#if defined __i386__
 	{"cos","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50780,7 +50780,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cos","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cosf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50801,7 +50801,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cosf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cosh","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50822,7 +50822,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cosh","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"coshf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50843,7 +50843,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"coshf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"coshl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50864,7 +50864,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"coshl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cosl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50885,7 +50885,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cosl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cpow","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50906,7 +50906,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cpow","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cpowf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50927,7 +50927,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cpowf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cpowl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50948,7 +50948,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cpowl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cproj","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50969,7 +50969,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cproj","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cprojf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -50990,7 +50990,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cprojf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"cprojl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51012,7 +51012,7 @@ struct versym DynSyms[] = {
 	{"cprojl","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"crc32","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"creal","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51033,7 +51033,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"creal","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"crealf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51054,7 +51054,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"crealf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"creall","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51075,7 +51075,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"creall","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"creat","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51096,7 +51096,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"creat","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"creat64","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51117,7 +51117,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"creat64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"crypt","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51138,7 +51138,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"crypt","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"csin","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51159,7 +51159,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"csin","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"csinf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51180,7 +51180,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"csinf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"csinh","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51201,7 +51201,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"csinh","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"csinhf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51222,7 +51222,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"csinhf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"csinhl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51243,7 +51243,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"csinhl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"csinl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51264,7 +51264,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"csinl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"csqrt","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51285,7 +51285,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"csqrt","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"csqrtf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51306,7 +51306,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"csqrtf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"csqrtl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51327,7 +51327,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"csqrtl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ctan","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51348,7 +51348,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ctan","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ctanf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51369,7 +51369,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ctanf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ctanh","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51390,7 +51390,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ctanh","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ctanhf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51411,7 +51411,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ctanhf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ctanhl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51432,7 +51432,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ctanhl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ctanl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51453,7 +51453,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ctanl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ctermid","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51474,7 +51474,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ctermid","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ctime","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51495,7 +51495,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ctime","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ctime_r","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51519,7 +51519,7 @@ struct versym DynSyms[] = {
 	{"cur_term","",0,LSB_Core},
 	{"curs_set","",0,LSB_Core},
 	{"curscr","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"cuserid","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51540,7 +51540,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"cuserid","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"daemon","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51561,7 +51561,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"daemon","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"daylight","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51582,7 +51582,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"daylight","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"dcgettext","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51603,7 +51603,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"dcgettext","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"dcngettext","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51642,7 +51642,7 @@ struct versym DynSyms[] = {
 	{"delscreen","",0,LSB_Core},
 	{"delwin","",0,LSB_Core},
 	{"derwin","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"dgettext","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51663,7 +51663,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"dgettext","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"difftime","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51684,7 +51684,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"difftime","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"dirname","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51705,7 +51705,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"dirname","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"div","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51726,7 +51726,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"div","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"dladdr","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51747,7 +51747,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"dladdr","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"dlclose","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51768,7 +51768,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"dlclose","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"dlerror","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51789,7 +51789,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"dlerror","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"dlopen","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51810,7 +51810,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"dlopen","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"dlsym","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51831,7 +51831,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"dlsym","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"dngettext","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51854,7 +51854,7 @@ struct versym DynSyms[] = {
 #endif
 	{"docbDefaultSAXHandlerInit","",0,LSB_XML},
 	{"doupdate","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"drand48","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51875,7 +51875,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"drand48","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"dremf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51896,7 +51896,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"dremf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"dreml","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51917,7 +51917,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"dreml","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"dup","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51938,7 +51938,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"dup","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"dup2","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51963,7 +51963,7 @@ struct versym DynSyms[] = {
 	{"dupwin","",0,LSB_Core},
 	{"echo","",0,LSB_Core},
 	{"echochar","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"ecvt","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -51985,7 +51985,7 @@ struct versym DynSyms[] = {
 	{"ecvt","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"emptyExp","",0,LSB_XML},
-#if defined ___i386__
+#if defined __i386__
 	{"encrypt","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52006,7 +52006,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"encrypt","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"endgrent","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52027,7 +52027,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"endgrent","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"endprotoent","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52048,7 +52048,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"endprotoent","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"endpwent","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52069,7 +52069,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"endpwent","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"endservent","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52090,7 +52090,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"endservent","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"endutent","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52111,7 +52111,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"endutent","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"endutxent","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52133,7 +52133,7 @@ struct versym DynSyms[] = {
 	{"endutxent","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"endwin","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"environ","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52154,7 +52154,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"environ","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"erand48","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52177,7 +52177,7 @@ struct versym DynSyms[] = {
 #endif
 	{"erase","",0,LSB_Core},
 	{"erasechar","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"erf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52198,7 +52198,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"erf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"erfc","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52219,7 +52219,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"erfc","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"erfcf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52240,7 +52240,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"erfcf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"erfcl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52261,7 +52261,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"erfcl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"erff","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52282,7 +52282,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"erff","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"erfl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52303,7 +52303,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"erfl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"err","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52324,7 +52324,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"err","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"error","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52345,7 +52345,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"error","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"errx","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52366,7 +52366,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"errx","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"execl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52387,7 +52387,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"execl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"execle","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52408,7 +52408,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"execle","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"execlp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52429,7 +52429,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"execlp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"execv","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52450,7 +52450,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"execv","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"execve","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52471,7 +52471,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"execve","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"execvp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52492,7 +52492,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"execvp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"exit","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52513,7 +52513,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"exit","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"exp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52534,7 +52534,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"exp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"exp2","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52555,7 +52555,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"exp2","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"exp2f","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52576,7 +52576,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"exp2f","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"exp2l","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52585,7 +52585,7 @@ struct versym DynSyms[] = {
 #if defined __x86_64__
 	{"exp2l","GLIBC_2.2.5",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"expf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52606,7 +52606,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"expf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"expl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52627,7 +52627,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"expl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"expm1","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52648,7 +52648,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"expm1","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"expm1f","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52669,7 +52669,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"expm1f","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"expm1l","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52690,7 +52690,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"expm1l","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fabs","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52711,7 +52711,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fabs","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fabsf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52732,7 +52732,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fabsf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fabsl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52753,7 +52753,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fabsl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fchdir","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52774,7 +52774,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fchdir","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fchmod","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52795,7 +52795,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fchmod","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fchown","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52816,7 +52816,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fchown","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fclose","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52837,7 +52837,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fclose","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fcntl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52858,7 +52858,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fcntl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fcvt","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52879,7 +52879,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fcvt","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fdatasync","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52900,7 +52900,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fdatasync","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fdim","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52921,7 +52921,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fdim","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fdimf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52942,7 +52942,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fdimf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fdiml","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52963,7 +52963,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fdiml","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fdopen","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -52984,7 +52984,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fdopen","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"feclearexcept","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53005,7 +53005,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"feclearexcept","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fegetenv","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53026,7 +53026,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fegetenv","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fegetexceptflag","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53047,7 +53047,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fegetexceptflag","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fegetround","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53068,7 +53068,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fegetround","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"feholdexcept","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53089,7 +53089,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"feholdexcept","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"feof","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53110,7 +53110,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"feof","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"feraiseexcept","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53131,7 +53131,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"feraiseexcept","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ferror","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53152,7 +53152,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ferror","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fesetenv","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53173,7 +53173,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fesetenv","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fesetexceptflag","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53194,7 +53194,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fesetexceptflag","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fesetround","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53215,7 +53215,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fesetround","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fetestexcept","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53236,7 +53236,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fetestexcept","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"feupdateenv","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53257,7 +53257,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"feupdateenv","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fflush","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53278,7 +53278,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fflush","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fflush_unlocked","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53299,7 +53299,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fflush_unlocked","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ffs","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53320,7 +53320,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ffs","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fgetc","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53341,7 +53341,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fgetc","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fgetpos","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53362,7 +53362,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fgetpos","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fgetpos64","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53383,7 +53383,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fgetpos64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fgets","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53404,7 +53404,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fgets","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fgetwc","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53425,7 +53425,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fgetwc","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fgetwc_unlocked","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53446,7 +53446,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fgetwc_unlocked","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fgetws","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53467,7 +53467,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fgetws","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fileno","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53489,7 +53489,7 @@ struct versym DynSyms[] = {
 	{"fileno","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"filter","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"finite","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53510,7 +53510,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"finite","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"finitef","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53531,7 +53531,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"finitef","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"finitel","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53553,7 +53553,7 @@ struct versym DynSyms[] = {
 	{"finitel","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"flash","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"flock","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53574,7 +53574,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"flock","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"flockfile","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53595,7 +53595,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"flockfile","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"floor","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53616,7 +53616,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"floor","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"floorf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53637,7 +53637,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"floorf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"floorl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53659,7 +53659,7 @@ struct versym DynSyms[] = {
 	{"floorl","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"flushinp","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"fma","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53680,7 +53680,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fma","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fmaf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53701,7 +53701,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fmaf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fmal","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53722,7 +53722,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fmal","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fmax","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53743,7 +53743,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fmax","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fmaxf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53764,7 +53764,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fmaxf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fmaxl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53785,7 +53785,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fmaxl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fmin","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53806,7 +53806,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fmin","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fminf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53827,7 +53827,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fminf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fminl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53848,7 +53848,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fminl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fmod","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53869,7 +53869,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fmod","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fmodf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53890,7 +53890,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fmodf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fmodl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53911,7 +53911,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fmodl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fmtmsg","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53932,7 +53932,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fmtmsg","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fnmatch","GLIBC_2.2.3",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53953,7 +53953,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fnmatch","GLIBC_2.2.3",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fopen","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53974,7 +53974,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fopen","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fopen64","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -53996,7 +53996,7 @@ struct versym DynSyms[] = {
 	{"fopen64","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"forbiddenExp","",0,LSB_XML},
-#if defined ___i386__
+#if defined __i386__
 	{"fork","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54017,7 +54017,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fork","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"forkpty","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54038,7 +54038,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"forkpty","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fpathconf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54059,7 +54059,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fpathconf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fprintf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54080,7 +54080,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fprintf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fputc","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54101,7 +54101,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fputc","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fputs","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54122,7 +54122,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fputs","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fputwc","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54143,7 +54143,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fputwc","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fputws","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54164,7 +54164,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fputws","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fread","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54185,7 +54185,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fread","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"free","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54206,7 +54206,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"free","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"freeaddrinfo","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54228,7 +54228,7 @@ struct versym DynSyms[] = {
 	{"freeaddrinfo","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"freelocale","GLIBC_2.3",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"freopen","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54249,7 +54249,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"freopen","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"freopen64","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54270,7 +54270,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"freopen64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"frexp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54291,7 +54291,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"frexp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"frexpf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54312,7 +54312,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"frexpf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"frexpl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54333,7 +54333,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"frexpl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fscanf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54354,7 +54354,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fscanf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fseek","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54375,7 +54375,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fseek","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fseeko","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54396,7 +54396,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fseeko","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fseeko64","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54417,7 +54417,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fseeko64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fsetpos","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54438,7 +54438,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fsetpos","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fsetpos64","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54459,7 +54459,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fsetpos64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fstatfs","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54480,7 +54480,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fstatfs","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fstatfs64","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54501,7 +54501,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fstatfs64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fstatvfs","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54522,7 +54522,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fstatvfs","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fstatvfs64","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54543,7 +54543,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fstatvfs64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fsync","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54564,7 +54564,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fsync","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ftell","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54585,7 +54585,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ftell","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ftello","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54606,7 +54606,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ftello","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ftello64","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54627,7 +54627,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ftello64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ftime","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54648,7 +54648,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ftime","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ftok","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54669,7 +54669,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ftok","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ftruncate","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54690,7 +54690,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ftruncate","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ftruncate64","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54711,7 +54711,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ftruncate64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ftrylockfile","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54732,7 +54732,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ftrylockfile","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ftw","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54753,7 +54753,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ftw","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ftw64","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54774,7 +54774,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ftw64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"funlockfile","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54795,7 +54795,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"funlockfile","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fwide","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54816,7 +54816,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fwide","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fwprintf","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54837,7 +54837,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fwprintf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fwrite","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -54858,7 +54858,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"fwrite","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"fwscanf","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -56044,7 +56044,7 @@ struct versym DynSyms[] = {
 	{"g_vprintf","",0,LSB_Toolkit_Gtk},
 	{"g_vsnprintf","",0,LSB_Toolkit_Gtk},
 	{"g_vsprintf","",0,LSB_Toolkit_Gtk},
-#if defined ___i386__
+#if defined __i386__
 	{"gai_strerror","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -56065,7 +56065,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"gai_strerror","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gamma","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -56086,7 +56086,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"gamma","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gammaf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -56107,7 +56107,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"gammaf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gammal","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -56128,7 +56128,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"gammal","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gcvt","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -56787,7 +56787,7 @@ struct versym DynSyms[] = {
 	{"gdk_xid_table_lookup_for_display","",0,LSB_Toolkit_Gtk},
 	{"gdkx_visual_get","",0,LSB_Toolkit_Gtk},
 	{"get_crc_table","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"getaddrinfo","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -56809,7 +56809,7 @@ struct versym DynSyms[] = {
 	{"getaddrinfo","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"getbkgd","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"getc","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -56830,7 +56830,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getc","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getc_unlocked","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -56852,7 +56852,7 @@ struct versym DynSyms[] = {
 	{"getc_unlocked","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"getch","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"getchar","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -56873,7 +56873,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getchar","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getchar_unlocked","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -56894,7 +56894,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getchar_unlocked","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getcontext","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -56915,7 +56915,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getcontext","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getcwd","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -56936,7 +56936,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getcwd","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getdate","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -56957,7 +56957,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getdate","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getdate_err","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -56978,7 +56978,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getdate_err","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getegid","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -56999,7 +56999,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getegid","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getenv","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57020,7 +57020,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getenv","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"geteuid","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57041,7 +57041,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"geteuid","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getgid","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57062,7 +57062,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getgid","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getgrent","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57083,7 +57083,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getgrent","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getgrgid","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57104,7 +57104,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getgrgid","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getgrgid_r","GLIBC_2.1.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57125,7 +57125,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getgrgid_r","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getgrnam","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57146,7 +57146,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getgrnam","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getgrnam_r","GLIBC_2.1.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57167,7 +57167,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getgrnam_r","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getgrouplist","GLIBC_2.2.4",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57188,7 +57188,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getgrouplist","GLIBC_2.2.4",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getgroups","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57209,7 +57209,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getgroups","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gethostbyaddr","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57230,7 +57230,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"gethostbyaddr","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gethostbyaddr_r","GLIBC_2.1.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57251,7 +57251,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"gethostbyaddr_r","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gethostbyname","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57272,7 +57272,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"gethostbyname","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gethostbyname_r","GLIBC_2.1.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57293,7 +57293,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"gethostbyname_r","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gethostid","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57314,7 +57314,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"gethostid","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gethostname","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57335,7 +57335,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"gethostname","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getitimer","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57356,7 +57356,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getitimer","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getloadavg","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57377,7 +57377,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getloadavg","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getlogin","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57398,7 +57398,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getlogin","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getlogin_r","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57416,7 +57416,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getlogin_r","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getnameinfo","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57438,7 +57438,7 @@ struct versym DynSyms[] = {
 	{"getnameinfo","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"getnstr","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"getopt","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57459,7 +57459,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getopt","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getopt_long","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57480,7 +57480,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getopt_long","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getopt_long_only","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57501,7 +57501,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getopt_long_only","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getpagesize","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57522,7 +57522,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getpagesize","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getpeername","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57543,7 +57543,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getpeername","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getpgid","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57564,7 +57564,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getpgid","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getpgrp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57585,7 +57585,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getpgrp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getpid","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57606,7 +57606,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getpid","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getppid","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57627,7 +57627,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getppid","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getpriority","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57648,7 +57648,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getpriority","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getprotobyname","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57669,7 +57669,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getprotobyname","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getprotobynumber","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57690,7 +57690,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getprotobynumber","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getprotoent","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57711,7 +57711,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getprotoent","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getpwent","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57732,7 +57732,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getpwent","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getpwnam","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57753,7 +57753,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getpwnam","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getpwnam_r","GLIBC_2.1.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57774,7 +57774,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getpwnam_r","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getpwuid","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57795,7 +57795,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getpwuid","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getpwuid_r","GLIBC_2.1.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57816,7 +57816,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getpwuid_r","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getrlimit","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57837,7 +57837,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getrlimit","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getrlimit64","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57858,7 +57858,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getrlimit64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getrusage","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57879,7 +57879,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getrusage","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getservbyname","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57900,7 +57900,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getservbyname","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getservbyport","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57921,7 +57921,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getservbyport","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getservent","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57942,7 +57942,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getservent","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getsid","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57963,7 +57963,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getsid","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getsockname","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -57984,7 +57984,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getsockname","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getsockopt","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -58006,7 +58006,7 @@ struct versym DynSyms[] = {
 	{"getsockopt","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"getstr","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"getsubopt","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -58027,7 +58027,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getsubopt","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gettext","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -58048,7 +58048,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"gettext","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gettimeofday","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -58069,7 +58069,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"gettimeofday","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getuid","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -58090,7 +58090,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getuid","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getutent","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -58111,7 +58111,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getutent","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getutent_r","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -58132,7 +58132,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getutent_r","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getutxent","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -58153,7 +58153,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getutxent","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getutxid","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -58174,7 +58174,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getutxid","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getutxline","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -58195,7 +58195,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getutxline","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getw","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -58216,7 +58216,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getw","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getwc","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -58237,7 +58237,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getwc","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getwchar","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -58258,7 +58258,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"getwchar","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"getwd","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -58737,7 +58737,7 @@ struct versym DynSyms[] = {
 	{"glib_mem_profiler_table","",0,LSB_Toolkit_Gtk},
 	{"glib_micro_version","",0,LSB_Toolkit_Gtk},
 	{"glib_minor_version","",0,LSB_Toolkit_Gtk},
-#if defined ___i386__
+#if defined __i386__
 	{"glob","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -58758,7 +58758,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"glob","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"glob64","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -58779,7 +58779,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"glob64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"globfree","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -58800,7 +58800,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"globfree","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"globfree64","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -58821,7 +58821,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"globfree64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gmtime","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -58842,7 +58842,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"gmtime","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"gmtime_r","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -58863,7 +58863,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"gmtime_r","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"grantpt","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61164,7 +61164,7 @@ struct versym DynSyms[] = {
 	{"has_colors","",0,LSB_Core},
 	{"has_ic","",0,LSB_Core},
 	{"has_il","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"hcreate","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61185,7 +61185,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"hcreate","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"hdestroy","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61207,7 +61207,7 @@ struct versym DynSyms[] = {
 	{"hdestroy","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"hline","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"hsearch","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61283,7 +61283,7 @@ struct versym DynSyms[] = {
 	{"htmlSaveFileFormat","",0,LSB_XML},
 	{"htmlSetMetaEncoding","",0,LSB_XML},
 	{"htmlTagLookup","",0,LSB_XML},
-#if defined ___i386__
+#if defined __i386__
 	{"htonl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61304,7 +61304,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"htonl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"htons","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61325,7 +61325,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"htons","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"hypot","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61346,7 +61346,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"hypot","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"hypotf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61367,7 +61367,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"hypotf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"hypotl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61388,7 +61388,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"hypotl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iconv","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61409,7 +61409,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"iconv","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iconv_close","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61430,7 +61430,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"iconv_close","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iconv_open","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61453,7 +61453,7 @@ struct versym DynSyms[] = {
 #endif
 	{"idcok","",0,LSB_Core},
 	{"idlok","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"if_freenameindex","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61474,7 +61474,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"if_freenameindex","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"if_indextoname","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61495,7 +61495,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"if_indextoname","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"if_nameindex","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61516,7 +61516,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"if_nameindex","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"if_nametoindex","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61537,7 +61537,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"if_nametoindex","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ilogb","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61558,7 +61558,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ilogb","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ilogbf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61579,7 +61579,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ilogbf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ilogbl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61600,7 +61600,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ilogbl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"imaxabs","GLIBC_2.1.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61621,7 +61621,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"imaxabs","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"imaxdiv","GLIBC_2.1.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61646,7 +61646,7 @@ struct versym DynSyms[] = {
 	{"inch","",0,LSB_Core},
 	{"inchnstr","",0,LSB_Core},
 	{"inchstr","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"index","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61667,7 +61667,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"index","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"inet_addr","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61688,7 +61688,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"inet_addr","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"inet_ntoa","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61709,7 +61709,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"inet_ntoa","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"inet_ntop","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61730,7 +61730,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"inet_ntop","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"inet_pton","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61762,7 +61762,7 @@ struct versym DynSyms[] = {
 	{"initGenericErrorDefaultFunc","",0,LSB_XML},
 	{"init_color","",0,LSB_Core},
 	{"init_pair","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"initgroups","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61784,7 +61784,7 @@ struct versym DynSyms[] = {
 	{"initgroups","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"initscr","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"initstate","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61812,7 +61812,7 @@ struct versym DynSyms[] = {
 	{"insdelln","",0,LSB_Core},
 	{"insertln","",0,LSB_Core},
 	{"insnstr","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"insque","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61836,7 +61836,7 @@ struct versym DynSyms[] = {
 	{"insstr","",0,LSB_Core},
 	{"instr","",0,LSB_Core},
 	{"intrflush","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"ioctl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61859,7 +61859,7 @@ struct versym DynSyms[] = {
 #endif
 	{"is_linetouched","",0,LSB_Core},
 	{"is_wintouched","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"isalnum","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61880,7 +61880,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"isalnum","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"isalpha","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61901,7 +61901,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"isalpha","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"isascii","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61922,7 +61922,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"isascii","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"isatty","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61943,7 +61943,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"isatty","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"isblank","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61964,7 +61964,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"isblank","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iscntrl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -61985,7 +61985,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"iscntrl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"isdigit","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62007,7 +62007,7 @@ struct versym DynSyms[] = {
 	{"isdigit","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"isendwin","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"isgraph","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62028,7 +62028,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"isgraph","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"islower","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62050,7 +62050,7 @@ struct versym DynSyms[] = {
 	{"islower","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"isolat1ToUTF8","",0,LSB_XML},
-#if defined ___i386__
+#if defined __i386__
 	{"isprint","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62071,7 +62071,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"isprint","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ispunct","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62092,7 +62092,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ispunct","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"isspace","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62113,7 +62113,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"isspace","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"isupper","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62134,7 +62134,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"isupper","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswalnum","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62155,7 +62155,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"iswalnum","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswalpha","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62176,7 +62176,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"iswalpha","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswblank","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62197,7 +62197,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"iswblank","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswcntrl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62218,7 +62218,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"iswcntrl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswctype","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62239,7 +62239,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"iswctype","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswdigit","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62260,7 +62260,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"iswdigit","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswgraph","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62281,7 +62281,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"iswgraph","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswlower","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62302,7 +62302,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"iswlower","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswprint","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62323,7 +62323,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"iswprint","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswpunct","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62344,7 +62344,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"iswpunct","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswspace","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62365,7 +62365,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"iswspace","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswupper","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62386,7 +62386,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"iswupper","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"iswxdigit","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62407,7 +62407,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"iswxdigit","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"isxdigit","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62428,7 +62428,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"isxdigit","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"j0","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62449,7 +62449,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"j0","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"j0f","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62470,7 +62470,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"j0f","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"j0l","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62491,7 +62491,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"j0l","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"j1","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62512,7 +62512,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"j1","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"j1f","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62533,7 +62533,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"j1f","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"j1l","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62554,7 +62554,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"j1l","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"jn","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62575,7 +62575,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"jn","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"jnf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62596,7 +62596,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"jnf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"jnl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62665,7 +62665,7 @@ struct versym DynSyms[] = {
 	{"jpeg_write_raw_data","",0,LSB_Graphics_Ext},
 	{"jpeg_write_scanlines","",0,LSB_Graphics_Ext},
 	{"jpeg_write_tables","",0,LSB_Graphics_Ext},
-#if defined ___i386__
+#if defined __i386__
 	{"jrand48","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62686,7 +62686,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"jrand48","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"key_decryptsession","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62709,7 +62709,7 @@ struct versym DynSyms[] = {
 #endif
 	{"keyname","",0,LSB_Core},
 	{"keypad","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"kill","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62731,7 +62731,7 @@ struct versym DynSyms[] = {
 	{"kill","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"killchar","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"killpg","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62752,7 +62752,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"killpg","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"l64a","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62773,7 +62773,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"l64a","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"labs","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62794,7 +62794,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"labs","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lchown","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62815,7 +62815,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"lchown","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lcong48","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62836,7 +62836,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"lcong48","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ldexp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62857,7 +62857,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ldexp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ldexpf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62878,7 +62878,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ldexpf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ldexpl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62899,7 +62899,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ldexpl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ldiv","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62921,7 +62921,7 @@ struct versym DynSyms[] = {
 	{"ldiv","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"leaveok","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"lfind","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62942,7 +62942,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"lfind","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lgamma","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62963,7 +62963,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"lgamma","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lgamma_r","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -62984,7 +62984,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"lgamma_r","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lgammaf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63005,7 +63005,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"lgammaf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lgammaf_r","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63026,7 +63026,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"lgammaf_r","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lgammal","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63047,7 +63047,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"lgammal","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lgammal_r","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63068,7 +63068,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"lgammal_r","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"link","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63089,7 +63089,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"link","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"listen","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63110,7 +63110,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"listen","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"llabs","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63131,7 +63131,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"llabs","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lldiv","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63152,7 +63152,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"lldiv","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"llrint","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63173,7 +63173,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"llrint","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"llrintf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63194,7 +63194,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"llrintf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"llrintl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63215,7 +63215,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"llrintl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"llround","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63236,7 +63236,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"llround","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"llroundf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63257,7 +63257,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"llroundf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"llroundl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63278,7 +63278,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"llroundl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"localeconv","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63299,7 +63299,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"localeconv","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"localtime","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63320,7 +63320,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"localtime","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"localtime_r","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63341,7 +63341,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"localtime_r","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lockf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63362,7 +63362,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"lockf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lockf64","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63383,7 +63383,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"lockf64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"log","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63404,7 +63404,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"log","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"log10","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63425,7 +63425,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"log10","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"log10f","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63446,7 +63446,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"log10f","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"log10l","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63467,7 +63467,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"log10l","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"log1p","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63488,7 +63488,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"log1p","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"log1pf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63509,7 +63509,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"log1pf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"log1pl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63530,7 +63530,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"log1pl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"log2","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63551,7 +63551,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"log2","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"log2f","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63572,7 +63572,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"log2f","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"log2l","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63593,7 +63593,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"log2l","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"logb","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63614,7 +63614,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"logb","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"logbf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63635,7 +63635,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"logbf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"logbl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63656,7 +63656,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"logbl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"logf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63677,7 +63677,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"logf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"login","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63698,7 +63698,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"login","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"login_tty","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63719,7 +63719,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"login_tty","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"logl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63740,7 +63740,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"logl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"logout","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63761,7 +63761,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"logout","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"logwtmp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63782,7 +63782,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"logwtmp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"longjmp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63804,7 +63804,7 @@ struct versym DynSyms[] = {
 	{"longjmp","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"longname","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"lrand48","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63825,7 +63825,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"lrand48","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lrint","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63846,7 +63846,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"lrint","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lrintf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63867,7 +63867,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"lrintf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lrintl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63888,7 +63888,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"lrintl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lround","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63909,7 +63909,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"lround","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lroundf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63930,7 +63930,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"lroundf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lroundl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63951,7 +63951,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"lroundl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lsearch","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63972,7 +63972,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"lsearch","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lseek","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -63993,7 +63993,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"lseek","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"lseek64","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64014,7 +64014,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"lseek64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"makecontext","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64035,7 +64035,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"makecontext","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"malloc","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64056,7 +64056,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"malloc","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"matherr","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64077,7 +64077,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"matherr","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mblen","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64098,7 +64098,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"mblen","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mbrlen","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64119,7 +64119,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"mbrlen","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mbrtowc","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64140,7 +64140,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"mbrtowc","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mbsinit","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64161,7 +64161,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"mbsinit","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mbsnrtowcs","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64182,7 +64182,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"mbsnrtowcs","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mbsrtowcs","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64203,7 +64203,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"mbsrtowcs","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mbstowcs","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64224,7 +64224,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"mbstowcs","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mbtowc","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64245,7 +64245,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"mbtowc","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"memccpy","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64266,7 +64266,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"memccpy","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"memchr","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64287,7 +64287,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"memchr","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"memcmp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64308,7 +64308,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"memcmp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"memcpy","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64329,7 +64329,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"memcpy","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"memmem","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64350,7 +64350,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"memmem","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"memmove","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64371,7 +64371,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"memmove","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"memrchr","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64392,7 +64392,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"memrchr","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"memset","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64414,7 +64414,7 @@ struct versym DynSyms[] = {
 	{"memset","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"meta","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"mkdir","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64435,7 +64435,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"mkdir","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mkfifo","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64456,7 +64456,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"mkfifo","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mkstemp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64477,7 +64477,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"mkstemp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mkstemp64","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64498,7 +64498,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"mkstemp64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mktemp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64519,7 +64519,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"mktemp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mktime","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64540,7 +64540,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"mktime","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mlock","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64561,7 +64561,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"mlock","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mlockall","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64582,7 +64582,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"mlockall","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mmap","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64603,7 +64603,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"mmap","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"mmap64","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64624,7 +64624,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"mmap64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"modf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64645,7 +64645,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"modf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"modff","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64666,7 +64666,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"modff","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"modfl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64688,7 +64688,7 @@ struct versym DynSyms[] = {
 	{"modfl","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"move","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"mprotect","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64719,7 +64719,7 @@ struct versym DynSyms[] = {
 	{"mq_timedreceive","GLIBC_2.3.4",0,LSB_Core},
 	{"mq_timedsend","GLIBC_2.3.4",0,LSB_Core},
 	{"mq_unlink","GLIBC_2.3.4",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"mrand48","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64740,7 +64740,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"mrand48","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"msgctl","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64761,7 +64761,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"msgctl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"msgget","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64782,7 +64782,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"msgget","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"msgrcv","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64803,7 +64803,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"msgrcv","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"msgsnd","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64824,7 +64824,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"msgsnd","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"msync","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64845,7 +64845,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"msync","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"munlock","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64866,7 +64866,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"munlock","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"munlockall","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64887,7 +64887,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"munlockall","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"munmap","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64957,7 +64957,7 @@ struct versym DynSyms[] = {
 	{"mvwvline","",0,LSB_Core},
 	{"namePop","",0,LSB_XML},
 	{"namePush","",0,LSB_XML},
-#if defined ___i386__
+#if defined __i386__
 	{"nan","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64978,7 +64978,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"nan","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"nanf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -64999,7 +64999,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"nanf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"nanl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65020,7 +65020,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"nanl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"nanosleep","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65042,7 +65042,7 @@ struct versym DynSyms[] = {
 	{"nanosleep","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"napms","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"nearbyint","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65063,7 +65063,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"nearbyint","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"nearbyintf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65084,7 +65084,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"nearbyintf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"nearbyintl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65109,7 +65109,7 @@ struct versym DynSyms[] = {
 	{"newpad","",0,LSB_Core},
 	{"newterm","",0,LSB_Core},
 	{"newwin","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"nextafter","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65130,7 +65130,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"nextafter","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"nextafterf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65151,7 +65151,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"nextafterf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"nextafterl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65172,7 +65172,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"nextafterl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"nexttoward","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65193,7 +65193,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"nexttoward","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"nexttowardf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65214,7 +65214,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"nexttowardf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"nexttowardl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65235,7 +65235,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"nexttowardl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"nftw","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65256,7 +65256,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"nftw","GLIBC_2.3.3",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"nftw64","GLIBC_2.3.3",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65277,7 +65277,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"nftw64","GLIBC_2.3.3",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ngettext","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65298,7 +65298,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ngettext","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"nice","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65320,7 +65320,7 @@ struct versym DynSyms[] = {
 	{"nice","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"nl","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"nl_langinfo","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65350,7 +65350,7 @@ struct versym DynSyms[] = {
 	{"noqiflush","",0,LSB_Core},
 	{"noraw","",0,LSB_Core},
 	{"notimeout","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"nrand48","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65371,7 +65371,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"nrand48","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ntohl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65392,7 +65392,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ntohl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ntohs","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65415,7 +65415,7 @@ struct versym DynSyms[] = {
 #endif
 	{"objectClass","",0,LSB_Graphics},
 	{"objectClassRec","",0,LSB_Graphics},
-#if defined ___i386__
+#if defined __i386__
 	{"open","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65436,7 +65436,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"open","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"open64","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65457,7 +65457,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"open64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"opendir","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65478,7 +65478,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"opendir","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"openlog","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65499,7 +65499,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"openlog","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"openpty","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65520,7 +65520,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"openpty","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"optarg","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65541,7 +65541,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"optarg","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"opterr","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65562,7 +65562,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"opterr","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"optind","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65583,7 +65583,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"optind","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"optopt","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65961,7 +65961,7 @@ struct versym DynSyms[] = {
 	{"pango_xft_set_default_substitute","",0,LSB_Toolkit_Gtk},
 	{"pango_xft_shutdown_display","",0,LSB_Toolkit_Gtk},
 	{"pango_xft_substitute_changed","",0,LSB_Toolkit_Gtk},
-#if defined ___i386__
+#if defined __i386__
 	{"pathconf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -65982,7 +65982,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pathconf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pause","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66003,7 +66003,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pause","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pclose","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66025,7 +66025,7 @@ struct versym DynSyms[] = {
 	{"pclose","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"pechochar","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"perror","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66046,7 +66046,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"perror","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pipe","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66067,7 +66067,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pipe","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pmap_getport","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66088,7 +66088,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pmap_getport","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pmap_set","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66109,7 +66109,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pmap_set","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pmap_unset","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66231,7 +66231,7 @@ struct versym DynSyms[] = {
 	{"png_write_row","",0,LSB_Graphics_Ext},
 	{"png_write_rows","",0,LSB_Graphics_Ext},
 	{"pnoutrefresh","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"poll","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66252,7 +66252,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"poll","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"popen","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66273,7 +66273,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"popen","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_fadvise","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66294,7 +66294,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_fadvise","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_fadvise64","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66315,7 +66315,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_fadvise64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_fallocate","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66336,7 +66336,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_fallocate","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_fallocate64","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66357,7 +66357,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_fallocate64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_madvise","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66378,7 +66378,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_madvise","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_memalign","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66399,7 +66399,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_memalign","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_openpt","GLIBC_2.2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66420,7 +66420,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_openpt","GLIBC_2.2.1",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawn","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66441,7 +66441,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_spawn","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawn_file_actions_addclose","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66462,7 +66462,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_spawn_file_actions_addclose","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawn_file_actions_adddup2","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66483,7 +66483,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_spawn_file_actions_adddup2","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawn_file_actions_addopen","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66504,7 +66504,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_spawn_file_actions_addopen","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawn_file_actions_destroy","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66525,7 +66525,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_spawn_file_actions_destroy","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawn_file_actions_init","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66546,7 +66546,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_spawn_file_actions_init","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_destroy","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66567,7 +66567,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_spawnattr_destroy","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_getflags","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66588,7 +66588,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_spawnattr_getflags","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_getpgroup","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66609,7 +66609,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_spawnattr_getpgroup","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_getschedparam","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66630,7 +66630,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_spawnattr_getschedparam","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_getschedpolicy","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66651,7 +66651,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_spawnattr_getschedpolicy","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_getsigdefault","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66672,7 +66672,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_spawnattr_getsigdefault","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_getsigmask","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66693,7 +66693,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_spawnattr_getsigmask","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_init","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66714,7 +66714,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_spawnattr_init","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_setflags","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66735,7 +66735,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_spawnattr_setflags","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_setpgroup","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66756,7 +66756,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_spawnattr_setpgroup","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_setschedparam","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66777,7 +66777,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_spawnattr_setschedparam","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_setschedpolicy","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66798,7 +66798,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_spawnattr_setschedpolicy","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_setsigdefault","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66819,7 +66819,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_spawnattr_setsigdefault","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnattr_setsigmask","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66840,7 +66840,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_spawnattr_setsigmask","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"posix_spawnp","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66861,7 +66861,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"posix_spawnp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pow","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66882,7 +66882,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pow","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pow10","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66903,7 +66903,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pow10","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pow10f","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66924,7 +66924,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pow10f","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pow10l","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66945,7 +66945,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pow10l","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"powf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66966,7 +66966,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"powf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"powl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -66987,7 +66987,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"powl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pread","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67008,7 +67008,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pread","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pread64","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67030,7 +67030,7 @@ struct versym DynSyms[] = {
 	{"pread64","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"prefresh","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"printf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67052,7 +67052,7 @@ struct versym DynSyms[] = {
 	{"printf","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"printw","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"pselect","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67073,7 +67073,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pselect","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"psignal","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67094,7 +67094,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"psignal","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_attr_destroy","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67115,7 +67115,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_attr_destroy","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_attr_getdetachstate","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67136,7 +67136,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_attr_getdetachstate","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_attr_getguardsize","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67157,7 +67157,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_attr_getguardsize","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_attr_getinheritsched","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67178,7 +67178,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_attr_getinheritsched","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_attr_getschedparam","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67199,7 +67199,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_attr_getschedparam","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_attr_getschedpolicy","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67220,7 +67220,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_attr_getschedpolicy","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_attr_getscope","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67241,7 +67241,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_attr_getscope","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_attr_getstack","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67262,7 +67262,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_attr_getstack","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_attr_getstackaddr","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67283,7 +67283,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_attr_getstackaddr","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_attr_getstacksize","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67304,7 +67304,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_attr_getstacksize","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_attr_init","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67325,7 +67325,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_attr_init","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_attr_setdetachstate","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67346,7 +67346,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_attr_setdetachstate","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_attr_setguardsize","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67367,7 +67367,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_attr_setguardsize","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_attr_setinheritsched","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67388,7 +67388,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_attr_setinheritsched","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_attr_setschedparam","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67409,7 +67409,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_attr_setschedparam","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_attr_setschedpolicy","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67430,7 +67430,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_attr_setschedpolicy","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_attr_setscope","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67451,10 +67451,10 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_attr_setscope","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_attr_setstack","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_attr_setstackaddr","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67475,7 +67475,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_attr_setstackaddr","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_attr_setstacksize","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67496,7 +67496,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_attr_setstacksize","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_cancel","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67517,7 +67517,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_cancel","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_cond_broadcast","GLIBC_2.3.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67538,7 +67538,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_cond_broadcast","GLIBC_2.3.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_cond_destroy","GLIBC_2.3.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67559,7 +67559,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_cond_destroy","GLIBC_2.3.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_cond_init","GLIBC_2.3.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67580,7 +67580,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_cond_init","GLIBC_2.3.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_cond_signal","GLIBC_2.3.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67601,7 +67601,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_cond_signal","GLIBC_2.3.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_cond_timedwait","GLIBC_2.3.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67622,7 +67622,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_cond_timedwait","GLIBC_2.3.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_cond_wait","GLIBC_2.3.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67643,7 +67643,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_cond_wait","GLIBC_2.3.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_condattr_destroy","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67664,7 +67664,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_condattr_destroy","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_condattr_getpshared","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67685,7 +67685,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_condattr_getpshared","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_condattr_init","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67706,7 +67706,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_condattr_init","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_condattr_setpshared","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67727,7 +67727,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_condattr_setpshared","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_create","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67748,7 +67748,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_create","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_detach","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67769,7 +67769,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_detach","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_equal","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67790,7 +67790,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_equal","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_exit","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67811,7 +67811,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_exit","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_getconcurrency","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67832,7 +67832,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_getconcurrency","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_getschedparam","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67853,7 +67853,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_getschedparam","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_getspecific","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67874,7 +67874,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_getspecific","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_join","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67895,7 +67895,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_join","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_key_create","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67916,7 +67916,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_key_create","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_key_delete","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67937,7 +67937,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_key_delete","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_kill","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67958,7 +67958,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_kill","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_mutex_destroy","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -67979,7 +67979,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_mutex_destroy","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_mutex_init","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68000,7 +68000,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_mutex_init","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_mutex_lock","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68021,7 +68021,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_mutex_lock","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_mutex_timedlock","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68042,7 +68042,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_mutex_timedlock","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_mutex_trylock","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68063,7 +68063,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_mutex_trylock","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_mutex_unlock","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68084,7 +68084,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_mutex_unlock","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_mutexattr_destroy","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68105,7 +68105,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_mutexattr_destroy","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_mutexattr_getpshared","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68126,7 +68126,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_mutexattr_getpshared","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_mutexattr_gettype","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68147,7 +68147,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_mutexattr_gettype","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_mutexattr_init","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68168,7 +68168,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_mutexattr_init","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_mutexattr_setpshared","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68189,7 +68189,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_mutexattr_setpshared","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_mutexattr_settype","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68210,7 +68210,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_mutexattr_settype","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_once","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68231,7 +68231,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_once","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_rwlock_destroy","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68252,7 +68252,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_rwlock_destroy","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_rwlock_init","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68273,7 +68273,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_rwlock_init","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_rwlock_rdlock","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68294,7 +68294,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_rwlock_rdlock","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_rwlock_timedrdlock","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68315,7 +68315,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_rwlock_timedrdlock","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_rwlock_timedwrlock","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68336,7 +68336,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_rwlock_timedwrlock","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_rwlock_tryrdlock","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68357,7 +68357,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_rwlock_tryrdlock","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_rwlock_trywrlock","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68378,7 +68378,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_rwlock_trywrlock","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_rwlock_unlock","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68399,7 +68399,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_rwlock_unlock","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_rwlock_wrlock","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68420,7 +68420,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_rwlock_wrlock","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_rwlockattr_destroy","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68441,7 +68441,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_rwlockattr_destroy","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_rwlockattr_getpshared","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68462,7 +68462,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_rwlockattr_getpshared","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_rwlockattr_init","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68483,7 +68483,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_rwlockattr_init","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_rwlockattr_setpshared","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68504,7 +68504,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_rwlockattr_setpshared","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_self","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68525,7 +68525,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_self","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_setcancelstate","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68546,7 +68546,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_setcancelstate","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_setcanceltype","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68567,7 +68567,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_setcanceltype","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_setconcurrency","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68588,7 +68588,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_setconcurrency","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_setschedparam","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68610,7 +68610,7 @@ struct versym DynSyms[] = {
 	{"pthread_setschedparam","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"pthread_setschedprio","GLIBC_2.3.4",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_setspecific","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68631,7 +68631,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_setspecific","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_sigmask","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68652,7 +68652,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_sigmask","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pthread_testcancel","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68673,7 +68673,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pthread_testcancel","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ptsname","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68694,7 +68694,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ptsname","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"putc","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68715,7 +68715,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"putc","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"putc_unlocked","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68736,7 +68736,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"putc_unlocked","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"putchar","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68757,7 +68757,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"putchar","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"putchar_unlocked","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68778,7 +68778,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"putchar_unlocked","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"putenv","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68800,7 +68800,7 @@ struct versym DynSyms[] = {
 	{"putenv","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"putp","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"puts","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68821,7 +68821,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"puts","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pututxline","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68842,7 +68842,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pututxline","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"putw","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68863,7 +68863,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"putw","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"putwc","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68884,7 +68884,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"putwc","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"putwchar","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68906,7 +68906,7 @@ struct versym DynSyms[] = {
 	{"putwchar","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"putwin","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"pwrite","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68927,7 +68927,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"pwrite","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"pwrite64","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68951,7 +68951,7 @@ struct versym DynSyms[] = {
 	{"qApp","",0,LSB_Toolkit_Qt3},
 	{"qNetworkProtocolRegister","",0,LSB_Toolkit_Qt3},
 	{"qiflush","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"qsort","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -68988,7 +68988,7 @@ struct versym DynSyms[] = {
 	{"qt_wm_take_focus","",0,LSB_Toolkit_Qt3},
 	{"qt_x_time","",0,LSB_Toolkit_Qt3},
 	{"qt_x_user_time","",0,LSB_Toolkit_Qt3},
-#if defined ___i386__
+#if defined __i386__
 	{"raise","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69009,7 +69009,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"raise","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"rand","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69030,7 +69030,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"rand","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"rand_r","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69051,7 +69051,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"rand_r","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"random","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69073,7 +69073,7 @@ struct versym DynSyms[] = {
 	{"random","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"raw","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"read","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69094,7 +69094,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"read","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"readdir","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69115,7 +69115,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"readdir","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"readdir64","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69136,7 +69136,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"readdir64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"readdir64_r","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69157,7 +69157,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"readdir64_r","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"readdir_r","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69178,7 +69178,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"readdir_r","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"readlink","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69199,7 +69199,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"readlink","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"readv","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69220,7 +69220,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"readv","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"realloc","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69241,7 +69241,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"realloc","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"realpath","GLIBC_2.3",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69264,7 +69264,7 @@ struct versym DynSyms[] = {
 #endif
 	{"rectObjClass","",0,LSB_Graphics},
 	{"rectObjClassRec","",0,LSB_Graphics},
-#if defined ___i386__
+#if defined __i386__
 	{"recv","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69285,7 +69285,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"recv","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"recvfrom","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69306,7 +69306,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"recvfrom","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"recvmsg","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69329,7 +69329,7 @@ struct versym DynSyms[] = {
 #endif
 	{"redrawwin","",0,LSB_Core},
 	{"refresh","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"regcomp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69350,7 +69350,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"regcomp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"regerror","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69371,7 +69371,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"regerror","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"regexec","GLIBC_2.3.4",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69392,7 +69392,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"regexec","GLIBC_2.3.4",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"regfree","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69413,7 +69413,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"regfree","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"remainder","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69434,7 +69434,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"remainder","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"remainderf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69455,7 +69455,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"remainderf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"remainderl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69476,7 +69476,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"remainderl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"remove","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69497,7 +69497,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"remove","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"remque","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69518,7 +69518,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"remque","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"remquo","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69539,7 +69539,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"remquo","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"remquof","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69560,7 +69560,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"remquof","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"remquol","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69581,7 +69581,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"remquol","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"rename","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69606,7 +69606,7 @@ struct versym DynSyms[] = {
 	{"reset_shell_mode","",0,LSB_Core},
 	{"resetty","",0,LSB_Core},
 	{"restartterm","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"rewind","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69627,7 +69627,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"rewind","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"rewinddir","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69648,7 +69648,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"rewinddir","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"rindex","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69669,7 +69669,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"rindex","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"rint","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69690,7 +69690,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"rint","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"rintf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69711,7 +69711,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"rintf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"rintl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69733,7 +69733,7 @@ struct versym DynSyms[] = {
 	{"rintl","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"ripoffline","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"rmdir","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69754,7 +69754,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"rmdir","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"round","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69775,7 +69775,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"round","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"roundf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69796,7 +69796,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"roundf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"roundl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69818,7 +69818,7 @@ struct versym DynSyms[] = {
 	{"roundl","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"savetty","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"sbrk","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69839,7 +69839,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sbrk","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"scalb","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69860,7 +69860,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"scalb","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"scalbf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69881,7 +69881,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"scalbf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"scalbl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69902,7 +69902,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"scalbl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"scalbln","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69923,7 +69923,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"scalbln","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"scalblnf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69944,7 +69944,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"scalblnf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"scalblnl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69965,7 +69965,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"scalblnl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"scalbn","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -69986,7 +69986,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"scalbn","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"scalbnf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70007,7 +70007,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"scalbnf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"scalbnl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70028,7 +70028,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"scalbnl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"scanf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70050,7 +70050,7 @@ struct versym DynSyms[] = {
 	{"scanf","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"scanw","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"sched_get_priority_max","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70071,7 +70071,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sched_get_priority_max","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sched_get_priority_min","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70092,7 +70092,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sched_get_priority_min","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sched_getparam","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70113,7 +70113,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sched_getparam","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sched_getscheduler","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70134,7 +70134,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sched_getscheduler","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sched_rr_get_interval","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70155,7 +70155,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sched_rr_get_interval","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sched_setparam","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70176,7 +70176,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sched_setparam","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sched_setscheduler","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70197,7 +70197,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sched_setscheduler","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sched_yield","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70225,7 +70225,7 @@ struct versym DynSyms[] = {
 	{"scrl","",0,LSB_Core},
 	{"scroll","",0,LSB_Core},
 	{"scrollok","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"seed48","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70246,7 +70246,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"seed48","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"seekdir","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70267,7 +70267,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"seekdir","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"select","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70288,7 +70288,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"select","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sem_close","GLIBC_2.1.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70309,7 +70309,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sem_close","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sem_destroy","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70330,7 +70330,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sem_destroy","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sem_getvalue","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70351,7 +70351,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sem_getvalue","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sem_init","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70372,7 +70372,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sem_init","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sem_open","GLIBC_2.1.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70393,7 +70393,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sem_open","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sem_post","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70414,7 +70414,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sem_post","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sem_timedwait","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70435,7 +70435,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sem_timedwait","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sem_trywait","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70456,7 +70456,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sem_trywait","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sem_unlink","GLIBC_2.1.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70477,7 +70477,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sem_unlink","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sem_wait","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70498,7 +70498,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sem_wait","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"semctl","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70519,7 +70519,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"semctl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"semget","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70540,7 +70540,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"semget","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"semop","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70561,7 +70561,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"semop","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"send","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70582,7 +70582,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"send","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sendmsg","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70603,7 +70603,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sendmsg","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sendto","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70628,7 +70628,7 @@ struct versym DynSyms[] = {
 	{"sessionShellWidgetClass","",0,LSB_Graphics},
 	{"set_curterm","",0,LSB_Core},
 	{"set_term","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"setbuf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70649,7 +70649,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setbuf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setbuffer","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70670,7 +70670,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setbuffer","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setcontext","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70691,7 +70691,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setcontext","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setegid","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70712,7 +70712,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setegid","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setenv","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70733,7 +70733,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setenv","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"seteuid","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70754,7 +70754,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"seteuid","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setgid","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70775,7 +70775,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setgid","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setgrent","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70796,7 +70796,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setgrent","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setgroups","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70817,7 +70817,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setgroups","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sethostname","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70838,7 +70838,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sethostname","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setitimer","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70859,7 +70859,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setitimer","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setkey","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70880,7 +70880,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setkey","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setlocale","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70901,7 +70901,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setlocale","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setlogmask","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70922,7 +70922,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setlogmask","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setpgid","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70943,7 +70943,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setpgid","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setpgrp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70964,7 +70964,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setpgrp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setpriority","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -70985,7 +70985,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setpriority","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setprotoent","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71006,7 +71006,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setprotoent","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setpwent","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71027,7 +71027,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setpwent","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setregid","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71048,7 +71048,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setregid","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setreuid","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71069,7 +71069,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setreuid","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setrlimit","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71090,7 +71090,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setrlimit","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setrlimit64","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71112,7 +71112,7 @@ struct versym DynSyms[] = {
 	{"setrlimit64","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"setscrreg","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"setservent","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71133,7 +71133,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setservent","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setsid","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71154,7 +71154,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setsid","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setsockopt","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71175,7 +71175,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setsockopt","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setstate","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71196,7 +71196,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setstate","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setuid","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71218,7 +71218,7 @@ struct versym DynSyms[] = {
 	{"setuid","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"setupterm","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"setutent","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71239,7 +71239,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setutent","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setutxent","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71260,7 +71260,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"setutxent","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"setvbuf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71283,7 +71283,7 @@ struct versym DynSyms[] = {
 #endif
 	{"shellClassRec","",0,LSB_Graphics},
 	{"shellWidgetClass","",0,LSB_Graphics},
-#if defined ___i386__
+#if defined __i386__
 	{"shm_open","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71304,7 +71304,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"shm_open","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"shm_unlink","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71325,7 +71325,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"shm_unlink","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"shmat","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71346,7 +71346,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"shmat","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"shmctl","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71367,7 +71367,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"shmctl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"shmdt","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71388,7 +71388,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"shmdt","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"shmget","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71409,7 +71409,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"shmget","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"shutdown","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71430,7 +71430,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"shutdown","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigaction","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71451,7 +71451,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sigaction","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigaddset","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71472,7 +71472,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sigaddset","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigaltstack","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71493,7 +71493,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sigaltstack","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigandset","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71514,7 +71514,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sigandset","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigdelset","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71535,7 +71535,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sigdelset","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigemptyset","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71556,7 +71556,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sigemptyset","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigfillset","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71577,7 +71577,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sigfillset","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sighold","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71598,7 +71598,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sighold","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigignore","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71619,7 +71619,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sigignore","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"siginterrupt","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71640,7 +71640,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"siginterrupt","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigisemptyset","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71661,7 +71661,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sigisemptyset","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigismember","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71682,7 +71682,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sigismember","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"siglongjmp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71703,7 +71703,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"siglongjmp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"signal","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71724,7 +71724,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"signal","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"signgam","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71745,7 +71745,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"signgam","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"significand","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71766,7 +71766,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"significand","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"significandf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71787,7 +71787,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"significandf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"significandl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71808,7 +71808,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"significandl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigorset","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71829,7 +71829,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sigorset","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigpause","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71850,7 +71850,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sigpause","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigpending","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71871,7 +71871,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sigpending","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigprocmask","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71892,7 +71892,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sigprocmask","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigqueue","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71913,7 +71913,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sigqueue","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigrelse","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71934,7 +71934,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sigrelse","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigreturn","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71955,7 +71955,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sigreturn","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigset","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71976,7 +71976,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sigset","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigsuspend","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -71997,7 +71997,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sigsuspend","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigtimedwait","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72018,7 +72018,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sigtimedwait","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigwait","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72039,7 +72039,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sigwait","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sigwaitinfo","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72060,7 +72060,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sigwaitinfo","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sin","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72081,7 +72081,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sin","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sincos","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72102,7 +72102,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sincos","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sincosf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72123,7 +72123,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sincosf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sincosl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72144,7 +72144,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sincosl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sinf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72165,7 +72165,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sinf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sinh","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72186,7 +72186,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sinh","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sinhf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72207,7 +72207,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sinhf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sinhl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72228,7 +72228,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sinhl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sinl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72249,7 +72249,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sinl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sleep","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72283,7 +72283,7 @@ struct versym DynSyms[] = {
 	{"slk_restore","",0,LSB_Core},
 	{"slk_set","",0,LSB_Core},
 	{"slk_touch","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"snprintf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72304,7 +72304,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"snprintf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sockatmark","GLIBC_2.2.4",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72325,7 +72325,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sockatmark","GLIBC_2.2.4",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"socket","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72346,7 +72346,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"socket","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"socketpair","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72367,7 +72367,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"socketpair","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sprintf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72388,7 +72388,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sprintf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sqrt","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72409,7 +72409,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sqrt","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sqrtf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72430,7 +72430,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sqrtf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sqrtl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72451,7 +72451,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sqrtl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"srand","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72472,7 +72472,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"srand","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"srand48","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72493,7 +72493,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"srand48","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"srandom","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72514,7 +72514,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"srandom","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sscanf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72538,7 +72538,7 @@ struct versym DynSyms[] = {
 	{"standend","",0,LSB_Core},
 	{"standout","",0,LSB_Core},
 	{"start_color","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"statfs","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72559,7 +72559,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"statfs","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"statfs64","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72592,7 +72592,7 @@ struct versym DynSyms[] = {
 	{"static_QUType_int","",0,LSB_Toolkit_Qt3},
 	{"static_QUType_ptr","",0,LSB_Toolkit_Qt3},
 	{"static_QUType_varptr","",0,LSB_Toolkit_Qt3},
-#if defined ___i386__
+#if defined __i386__
 	{"statvfs","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72613,7 +72613,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"statvfs","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"statvfs64","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72634,7 +72634,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"statvfs64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"stderr","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72655,7 +72655,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"stderr","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"stdin","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72676,7 +72676,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"stdin","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"stdout","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72698,7 +72698,7 @@ struct versym DynSyms[] = {
 	{"stdout","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"stdscr","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"stime","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72719,7 +72719,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"stime","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"stpcpy","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72740,7 +72740,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"stpcpy","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"stpncpy","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72761,7 +72761,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"stpncpy","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strcasecmp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72782,7 +72782,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strcasecmp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strcasestr","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72803,7 +72803,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strcasestr","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strcat","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72824,7 +72824,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strcat","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strchr","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72845,7 +72845,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strchr","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strcmp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72866,7 +72866,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strcmp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strcoll","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72887,7 +72887,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strcoll","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strcpy","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72908,7 +72908,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strcpy","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strcspn","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72929,7 +72929,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strcspn","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strdup","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72950,7 +72950,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strdup","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strerror","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72971,7 +72971,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strerror","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strerror_r","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -72992,7 +72992,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strerror_r","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strfmon","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73013,7 +73013,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strfmon","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strftime","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73034,7 +73034,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strftime","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strlen","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73055,7 +73055,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strlen","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strncasecmp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73076,7 +73076,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strncasecmp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strncat","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73097,7 +73097,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strncat","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strncmp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73118,7 +73118,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strncmp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strncpy","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73139,7 +73139,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strncpy","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strndup","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73160,7 +73160,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strndup","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strnlen","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73181,7 +73181,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strnlen","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strpbrk","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73202,7 +73202,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strpbrk","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strptime","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73223,7 +73223,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strptime","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strrchr","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73244,7 +73244,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strrchr","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strsep","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73265,7 +73265,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strsep","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strsignal","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73286,7 +73286,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strsignal","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strspn","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73307,7 +73307,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strspn","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strstr","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73328,7 +73328,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strstr","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtod","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73349,7 +73349,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strtod","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtof","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73370,7 +73370,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strtof","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtoimax","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73391,7 +73391,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strtoimax","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtok","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73412,7 +73412,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strtok","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtok_r","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73433,7 +73433,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strtok_r","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtol","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73454,7 +73454,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strtol","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtold","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73475,7 +73475,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strtold","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtoll","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73496,7 +73496,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strtoll","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtoq","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73517,7 +73517,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strtoq","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtoul","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73538,7 +73538,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strtoul","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtoull","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73559,7 +73559,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strtoull","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtoumax","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73580,7 +73580,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strtoumax","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strtouq","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73601,7 +73601,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"strtouq","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"strxfrm","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73624,7 +73624,7 @@ struct versym DynSyms[] = {
 #endif
 	{"subpad","",0,LSB_Core},
 	{"subwin","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"svc_getreqset","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73645,7 +73645,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"svc_getreqset","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"svc_register","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73666,7 +73666,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"svc_register","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"svc_run","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73687,7 +73687,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"svc_run","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"svc_sendreply","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73708,7 +73708,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"svc_sendreply","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"svcerr_auth","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73729,7 +73729,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"svcerr_auth","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"svcerr_decode","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73750,7 +73750,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"svcerr_decode","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"svcerr_noproc","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73771,7 +73771,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"svcerr_noproc","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"svcerr_noprog","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73792,7 +73792,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"svcerr_noprog","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"svcerr_progvers","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73813,7 +73813,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"svcerr_progvers","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"svcerr_systemerr","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73834,7 +73834,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"svcerr_systemerr","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"svcerr_weakauth","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73855,7 +73855,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"svcerr_weakauth","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"svctcp_create","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73876,7 +73876,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"svctcp_create","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"svcudp_create","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73897,7 +73897,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"svcudp_create","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"swab","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73918,7 +73918,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"swab","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"swapcontext","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73939,7 +73939,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"swapcontext","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"swprintf","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73960,7 +73960,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"swprintf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"swscanf","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -73981,7 +73981,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"swscanf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"symlink","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74002,7 +74002,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"symlink","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"sync","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74024,7 +74024,7 @@ struct versym DynSyms[] = {
 	{"sync","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"syncok","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"sysconf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74045,7 +74045,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"sysconf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"syslog","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74066,7 +74066,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"syslog","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"system","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74087,7 +74087,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"system","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tan","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74108,7 +74108,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"tan","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tanf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74129,7 +74129,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"tanf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tanh","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74150,7 +74150,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"tanh","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tanhf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74171,7 +74171,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"tanhf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tanhl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74192,7 +74192,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"tanhl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tanl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74213,7 +74213,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"tanl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tcdrain","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74234,7 +74234,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"tcdrain","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tcflow","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74255,7 +74255,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"tcflow","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tcflush","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74276,7 +74276,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"tcflush","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tcgetattr","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74297,7 +74297,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"tcgetattr","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tcgetpgrp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74318,7 +74318,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"tcgetpgrp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tcgetsid","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74339,7 +74339,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"tcgetsid","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tcsendbreak","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74360,7 +74360,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"tcsendbreak","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tcsetattr","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74381,7 +74381,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"tcsetattr","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tcsetpgrp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74402,7 +74402,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"tcsetpgrp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tdelete","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74423,7 +74423,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"tdelete","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"telldir","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74444,7 +74444,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"telldir","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tempnam","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74467,7 +74467,7 @@ struct versym DynSyms[] = {
 #endif
 	{"termattrs","",0,LSB_Core},
 	{"termname","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"textdomain","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74488,7 +74488,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"textdomain","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tfind","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74509,7 +74509,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"tfind","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tgamma","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74530,7 +74530,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"tgamma","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tgammaf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74551,7 +74551,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"tgammaf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tgammal","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74580,7 +74580,7 @@ struct versym DynSyms[] = {
 	{"tigetflag","",0,LSB_Core},
 	{"tigetnum","",0,LSB_Core},
 	{"tigetstr","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"time","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74602,7 +74602,7 @@ struct versym DynSyms[] = {
 	{"time","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"timeout","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"timer_create","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74623,7 +74623,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"timer_create","GLIBC_2.3.3",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"timer_delete","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74644,7 +74644,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"timer_delete","GLIBC_2.3.3",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"timer_getoverrun","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74665,7 +74665,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"timer_getoverrun","GLIBC_2.3.3",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"timer_gettime","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74686,7 +74686,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"timer_gettime","GLIBC_2.3.3",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"timer_settime","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74707,7 +74707,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"timer_settime","GLIBC_2.3.3",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"times","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74728,7 +74728,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"times","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"timezone","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74749,7 +74749,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"timezone","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tmpfile","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74770,7 +74770,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"tmpfile","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tmpfile64","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74791,7 +74791,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"tmpfile64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tmpnam","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74812,7 +74812,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"tmpnam","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"toascii","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74833,7 +74833,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"toascii","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tolower","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74858,7 +74858,7 @@ struct versym DynSyms[] = {
 	{"topLevelShellWidgetClass","",0,LSB_Graphics},
 	{"touchline","",0,LSB_Core},
 	{"touchwin","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"toupper","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74879,7 +74879,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"toupper","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"towctrans","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74900,7 +74900,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"towctrans","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"towlower","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74921,7 +74921,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"towlower","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"towupper","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74946,7 +74946,7 @@ struct versym DynSyms[] = {
 	{"tputs","",0,LSB_Core},
 	{"transientShellClassRec","",0,LSB_Graphics},
 	{"transientShellWidgetClass","",0,LSB_Graphics},
-#if defined ___i386__
+#if defined __i386__
 	{"trunc","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74967,7 +74967,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"trunc","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"truncate","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -74988,7 +74988,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"truncate","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"truncate64","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75009,7 +75009,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"truncate64","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"truncf","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75030,7 +75030,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"truncf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"truncl","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75051,7 +75051,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"truncl","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tsearch","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75072,7 +75072,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"tsearch","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ttyname","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75093,7 +75093,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ttyname","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ttyname_r","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75114,7 +75114,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ttyname_r","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"twalk","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75136,7 +75136,7 @@ struct versym DynSyms[] = {
 	{"twalk","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"typeahead","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"tzname","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75157,7 +75157,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"tzname","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"tzset","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75178,7 +75178,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"tzset","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ualarm","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75199,7 +75199,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ualarm","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ulimit","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75220,7 +75220,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ulimit","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"umask","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75241,7 +75241,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"umask","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"uname","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75264,7 +75264,7 @@ struct versym DynSyms[] = {
 #endif
 	{"uncompress","",0,LSB_Core},
 	{"unctrl","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"ungetc","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75286,7 +75286,7 @@ struct versym DynSyms[] = {
 	{"ungetc","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"ungetch","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"ungetwc","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75307,7 +75307,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ungetwc","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"unlink","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75328,7 +75328,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"unlink","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"unlockpt","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75349,7 +75349,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"unlockpt","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"unsetenv","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75373,7 +75373,7 @@ struct versym DynSyms[] = {
 	{"untouchwin","",0,LSB_Core},
 	{"use_env","",0,LSB_Core},
 	{"uselocale","GLIBC_2.3",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"usleep","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75394,7 +75394,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"usleep","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"utime","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75415,7 +75415,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"utime","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"utimes","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75436,7 +75436,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"utimes","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"utmpname","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75459,7 +75459,7 @@ struct versym DynSyms[] = {
 #endif
 	{"valuePop","",0,LSB_XML},
 	{"valuePush","",0,LSB_XML},
-#if defined ___i386__
+#if defined __i386__
 	{"vasprintf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75480,7 +75480,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"vasprintf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vdprintf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75501,7 +75501,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"vdprintf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"verrx","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75522,7 +75522,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"verrx","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vfork","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75543,7 +75543,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"vfork","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vfprintf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75564,7 +75564,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"vfprintf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vfscanf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75585,7 +75585,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"vfscanf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vfwprintf","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75606,7 +75606,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"vfwprintf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vfwscanf","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75630,7 +75630,7 @@ struct versym DynSyms[] = {
 	{"vidattr","",0,LSB_Core},
 	{"vidputs","",0,LSB_Core},
 	{"vline","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"vprintf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75651,7 +75651,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"vprintf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vscanf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75672,7 +75672,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"vscanf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vsnprintf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75693,7 +75693,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"vsnprintf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vsprintf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75714,7 +75714,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"vsprintf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vsscanf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75735,7 +75735,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"vsscanf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vswprintf","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75756,7 +75756,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"vswprintf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vswscanf","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75777,7 +75777,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"vswscanf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"vsyslog","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75800,7 +75800,7 @@ struct versym DynSyms[] = {
 #endif
 	{"vw_printw","",0,LSB_Core},
 	{"vw_scanw","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"vwprintf","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75822,7 +75822,7 @@ struct versym DynSyms[] = {
 	{"vwprintf","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"vwprintw","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"vwscanf","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75849,7 +75849,7 @@ struct versym DynSyms[] = {
 	{"waddchstr","",0,LSB_Core},
 	{"waddnstr","",0,LSB_Core},
 	{"waddstr","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"wait","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75870,7 +75870,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wait","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wait4","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75891,7 +75891,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wait4","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"waitpid","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75912,7 +75912,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"waitpid","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"warn","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75933,7 +75933,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"warn","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"warnx","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75969,7 +75969,7 @@ struct versym DynSyms[] = {
 	{"wclrtobot","",0,LSB_Core},
 	{"wclrtoeol","",0,LSB_Core},
 	{"wcolor_set","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"wcpcpy","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -75990,7 +75990,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcpcpy","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcpncpy","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76011,7 +76011,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcpncpy","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcrtomb","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76032,7 +76032,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcrtomb","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcscasecmp","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76053,7 +76053,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcscasecmp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcscat","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76074,7 +76074,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcscat","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcschr","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76095,7 +76095,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcschr","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcscmp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76116,7 +76116,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcscmp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcscoll","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76137,7 +76137,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcscoll","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcscpy","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76158,7 +76158,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcscpy","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcscspn","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76179,7 +76179,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcscspn","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsdup","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76200,7 +76200,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcsdup","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsftime","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76221,7 +76221,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcsftime","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcslen","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76242,7 +76242,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcslen","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsncasecmp","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76263,7 +76263,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcsncasecmp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsncat","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76284,7 +76284,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcsncat","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsncmp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76305,7 +76305,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcsncmp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsncpy","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76326,7 +76326,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcsncpy","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsnlen","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76347,7 +76347,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcsnlen","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsnrtombs","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76368,7 +76368,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcsnrtombs","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcspbrk","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76389,7 +76389,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcspbrk","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsrchr","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76410,7 +76410,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcsrchr","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsrtombs","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76431,7 +76431,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcsrtombs","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsspn","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76452,7 +76452,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcsspn","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsstr","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76473,7 +76473,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcsstr","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstod","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76494,7 +76494,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcstod","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstof","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76515,7 +76515,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcstof","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstoimax","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76536,7 +76536,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcstoimax","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstok","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76557,7 +76557,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcstok","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstol","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76578,7 +76578,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcstol","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstold","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76599,7 +76599,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcstold","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstoll","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76620,7 +76620,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcstoll","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstombs","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76641,7 +76641,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcstombs","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstoq","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76662,7 +76662,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcstoq","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstoul","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76683,7 +76683,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcstoul","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstoull","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76704,7 +76704,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcstoull","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstoumax","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76725,7 +76725,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcstoumax","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcstouq","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76746,7 +76746,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcstouq","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcswcs","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76767,7 +76767,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcswcs","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcswidth","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76788,7 +76788,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcswidth","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wcsxfrm","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76809,7 +76809,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wcsxfrm","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wctob","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76830,7 +76830,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wctob","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wctomb","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76851,7 +76851,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wctomb","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wctrans","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76872,7 +76872,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wctrans","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wctype","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76894,7 +76894,7 @@ struct versym DynSyms[] = {
 	{"wctype","GLIBC_2.2",0,LSB_Core},
 #endif
 	{"wcursyncup","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"wcwidth","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76937,7 +76937,7 @@ struct versym DynSyms[] = {
 	{"winstr","",0,LSB_Core},
 	{"wmShellClassRec","",0,LSB_Graphics},
 	{"wmShellWidgetClass","",0,LSB_Graphics},
-#if defined ___i386__
+#if defined __i386__
 	{"wmemchr","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76958,7 +76958,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wmemchr","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wmemcmp","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -76979,7 +76979,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wmemcmp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wmemcpy","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77000,7 +77000,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wmemcpy","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wmemmove","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77021,7 +77021,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wmemmove","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wmemset","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77044,7 +77044,7 @@ struct versym DynSyms[] = {
 #endif
 	{"wmove","",0,LSB_Core},
 	{"wnoutrefresh","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"wordexp","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77065,7 +77065,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wordexp","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wordfree","GLIBC_2.1",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77086,7 +77086,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"wordfree","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wprintf","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77110,7 +77110,7 @@ struct versym DynSyms[] = {
 	{"wprintw","",0,LSB_Core},
 	{"wredrawln","",0,LSB_Core},
 	{"wrefresh","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"write","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77131,7 +77131,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"write","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"writev","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77152,7 +77152,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"writev","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"wscanf","GLIBC_2.2",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77183,7 +77183,7 @@ struct versym DynSyms[] = {
 	{"wtimeout","",0,LSB_Core},
 	{"wtouchln","",0,LSB_Core},
 	{"wvline","",0,LSB_Core},
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_accepted_reply","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77204,7 +77204,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_accepted_reply","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_array","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77225,7 +77225,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_array","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_bool","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77246,7 +77246,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_bool","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_bytes","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77267,7 +77267,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_bytes","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_callhdr","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77288,7 +77288,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_callhdr","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_callmsg","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77309,7 +77309,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_callmsg","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_char","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77330,7 +77330,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_char","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_double","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77351,7 +77351,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_double","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_enum","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77372,7 +77372,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_enum","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_float","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77393,7 +77393,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_float","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_free","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77414,7 +77414,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_free","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_int","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77435,7 +77435,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_int","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_long","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77456,7 +77456,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_long","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_opaque","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77477,7 +77477,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_opaque","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_opaque_auth","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77498,7 +77498,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_opaque_auth","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_pointer","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77519,7 +77519,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_pointer","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_reference","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77540,7 +77540,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_reference","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_rejected_reply","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77561,7 +77561,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_rejected_reply","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_replymsg","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77582,7 +77582,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_replymsg","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_short","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77603,7 +77603,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_short","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_string","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77624,7 +77624,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_string","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_u_char","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77645,7 +77645,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_u_char","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_u_int","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77666,7 +77666,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_u_int","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_u_long","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77687,7 +77687,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_u_long","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_u_short","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77708,7 +77708,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_u_short","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_union","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77729,7 +77729,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_union","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_vector","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77750,7 +77750,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_vector","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_void","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77771,7 +77771,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_void","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdr_wrapstring","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77792,7 +77792,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdr_wrapstring","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdrmem_create","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77813,7 +77813,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdrmem_create","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdrrec_create","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77834,7 +77834,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdrrec_create","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdrrec_eof","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -77855,7 +77855,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"xdrrec_eof","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"xdrstdio_create","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -79099,7 +79099,7 @@ struct versym DynSyms[] = {
 	{"xmlXPtrNewRangePoints","",0,LSB_XML},
 	{"xmlXPtrRangeToFunction","",0,LSB_XML},
 	{"xmlXPtrWrapLocationSet","",0,LSB_XML},
-#if defined ___i386__
+#if defined __i386__
 	{"y0","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -79120,7 +79120,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"y0","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"y0f","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -79141,7 +79141,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"y0f","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"y0l","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -79162,7 +79162,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"y0l","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"y1","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -79183,7 +79183,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"y1","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"y1f","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -79204,7 +79204,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"y1f","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"y1l","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -79225,7 +79225,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"y1l","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"yn","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -79246,7 +79246,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"yn","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ynf","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__
@@ -79267,7 +79267,7 @@ struct versym DynSyms[] = {
 #if defined __s390x__
 	{"ynf","GLIBC_2.2",0,LSB_Core},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"ynl","GLIBC_2.0",0,LSB_Core},
 #endif
 #if defined __ia64__

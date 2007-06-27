@@ -6683,7 +6683,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTV9QTextList","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV9QTimeEdit","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV9QTreeView","",0,LSB_Toolkit_Qt,0,0},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn12_N10QDropEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -6692,7 +6692,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn12_N10QDropEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn12_N10QDropEventD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -6701,7 +6701,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn12_N10QDropEventD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn12_N14QDragMoveEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -6710,7 +6710,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn12_N14QDragMoveEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn12_N14QDragMoveEventD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -6719,7 +6719,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn12_N14QDragMoveEventD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn12_N15QDragEnterEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -6728,7 +6728,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn12_N15QDragEnterEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn12_N15QDragEnterEventD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -6737,7 +6737,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn12_N15QDragEnterEventD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn12_NK10QDropEvent11encodedDataEPKc","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -6746,7 +6746,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn12_NK10QDropEvent11encodedDataEPKc","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn12_NK10QDropEvent6formatEi","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -6755,7 +6755,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn12_NK10QDropEvent6formatEi","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn12_NK10QDropEvent8providesEPKc","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -8924,7 +8924,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390x__
 	{"_ZThn24_NK10QDropEvent8providesEPKc","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QBoxLayout10invalidateEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -8933,7 +8933,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QBoxLayout10invalidateEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QBoxLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -8942,7 +8942,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QBoxLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QBoxLayoutD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -8951,7 +8951,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QBoxLayoutD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QBoxLayoutD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -8960,7 +8960,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QBoxLayoutD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QLCDNumberD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -8969,7 +8969,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QLCDNumberD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QLCDNumberD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -8978,7 +8978,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QLCDNumberD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QScrollBarD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -8987,7 +8987,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QScrollBarD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QScrollBarD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -8996,7 +8996,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QScrollBarD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QStatusBarD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9005,7 +9005,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QStatusBarD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QStatusBarD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9014,7 +9014,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QStatusBarD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QTabWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9023,7 +9023,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QTabWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QTabWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9032,7 +9032,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QTabWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QTableViewD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9041,7 +9041,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QTableViewD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QTableViewD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9050,7 +9050,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QTableViewD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QWorkspaceD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9059,7 +9059,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QWorkspaceD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N10QWorkspaceD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9068,7 +9068,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QWorkspaceD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QDockWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9077,7 +9077,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QDockWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QDockWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9086,7 +9086,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QDockWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QFileDialogD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9095,7 +9095,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QFileDialogD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QFileDialogD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9104,7 +9104,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QFileDialogD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QFocusFrameD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9113,7 +9113,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QFocusFrameD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QFocusFrameD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9122,7 +9122,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QFocusFrameD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QFontDialogD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9131,7 +9131,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QFontDialogD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QFontDialogD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9140,7 +9140,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QFontDialogD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QGridLayout10invalidateEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9149,7 +9149,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QGridLayout10invalidateEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QGridLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9158,7 +9158,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QGridLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QGridLayoutD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9167,7 +9167,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QGridLayoutD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QGridLayoutD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9176,7 +9176,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QGridLayoutD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QHBoxLayoutD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9185,7 +9185,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QHBoxLayoutD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QHBoxLayoutD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9194,7 +9194,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QHBoxLayoutD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QHeaderViewD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9203,7 +9203,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QHeaderViewD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QHeaderViewD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9212,7 +9212,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QHeaderViewD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QListWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9221,7 +9221,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QListWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QListWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9230,7 +9230,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QListWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QMainWindowD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9239,7 +9239,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QMainWindowD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QMainWindowD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9248,7 +9248,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QMainWindowD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QMessageBoxD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9257,7 +9257,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QMessageBoxD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QMessageBoxD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9266,7 +9266,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QMessageBoxD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QPushButtonD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9275,7 +9275,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QPushButtonD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QPushButtonD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9284,7 +9284,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QPushButtonD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QRubberBandD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9293,7 +9293,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QRubberBandD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QRubberBandD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9302,7 +9302,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QRubberBandD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QScrollAreaD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9311,7 +9311,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QScrollAreaD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QScrollAreaD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9320,7 +9320,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QScrollAreaD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QToolButtonD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9329,7 +9329,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QToolButtonD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QToolButtonD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9338,7 +9338,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QToolButtonD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QTreeWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9347,7 +9347,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QTreeWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QTreeWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9356,7 +9356,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QTreeWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QVBoxLayoutD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9365,7 +9365,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QVBoxLayoutD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N11QVBoxLayoutD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9374,7 +9374,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N11QVBoxLayoutD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N12QColorDialogD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9383,7 +9383,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N12QColorDialogD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N12QColorDialogD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9392,7 +9392,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N12QColorDialogD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N12QInputDialogD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9401,7 +9401,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N12QInputDialogD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N12QInputDialogD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9410,7 +9410,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N12QInputDialogD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N12QPrintDialogD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9419,7 +9419,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N12QPrintDialogD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N12QPrintDialogD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9428,7 +9428,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N12QPrintDialogD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N12QStylePluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9437,7 +9437,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N12QStylePluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N12QStylePluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9446,7 +9446,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N12QStylePluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N12QTableWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9455,7 +9455,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N12QTableWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N12QTableWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9464,7 +9464,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N12QTableWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N12QTextBrowserD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9473,7 +9473,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N12QTextBrowserD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N12QTextBrowserD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9482,7 +9482,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N12QTextBrowserD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N13QErrorMessageD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9491,7 +9491,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N13QErrorMessageD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N13QErrorMessageD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9500,7 +9500,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N13QErrorMessageD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N13QSplashScreenD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9509,7 +9509,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N13QSplashScreenD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N13QSplashScreenD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9518,7 +9518,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N13QSplashScreenD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N14QDesktopWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9527,7 +9527,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N14QDesktopWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N14QDesktopWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9536,7 +9536,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N14QDesktopWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N14QImageIOPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9545,7 +9545,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N14QImageIOPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N14QImageIOPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9554,7 +9554,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N14QImageIOPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N14QStackedLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9563,7 +9563,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N14QStackedLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N14QStackedLayoutD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9572,7 +9572,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N14QStackedLayoutD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N14QStackedLayoutD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9581,7 +9581,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N14QStackedLayoutD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N14QStackedWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9590,7 +9590,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N14QStackedWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N14QStackedWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9599,7 +9599,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N14QStackedWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N15QAbstractButtonD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9608,7 +9608,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N15QAbstractButtonD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N15QAbstractButtonD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9617,7 +9617,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N15QAbstractButtonD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N15QAbstractSliderD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9626,7 +9626,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N15QAbstractSliderD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N15QAbstractSliderD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9635,7 +9635,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N15QAbstractSliderD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N15QProgressDialogD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9644,7 +9644,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N15QProgressDialogD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N15QProgressDialogD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9653,7 +9653,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N15QProgressDialogD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N15QX11EmbedWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9662,7 +9662,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N15QX11EmbedWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N15QX11EmbedWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9671,7 +9671,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N15QX11EmbedWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N16QAbstractSpinBoxD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9680,7 +9680,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N16QAbstractSpinBoxD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N16QAbstractSpinBoxD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9689,7 +9689,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N16QAbstractSpinBoxD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N17QAbstractItemViewD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9698,7 +9698,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N17QAbstractItemViewD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N17QAbstractItemViewD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9707,7 +9707,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N17QAbstractItemViewD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N17QAccessiblePluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9716,7 +9716,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N17QAccessiblePluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N17QAccessiblePluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9725,7 +9725,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N17QAccessiblePluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N17QIconEnginePluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9734,7 +9734,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N17QIconEnginePluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N17QIconEnginePluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9743,7 +9743,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N17QIconEnginePluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N17QTextImageHandler10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9752,7 +9752,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N17QTextImageHandler10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N17QTextImageHandler13intrinsicSizeEP13QTextDocumentiRK11QTextFormat","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9761,7 +9761,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N17QTextImageHandler13intrinsicSizeEP13QTextDocumentiRK11QTextFormat","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N18QX11EmbedContainerD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9770,7 +9770,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N18QX11EmbedContainerD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N18QX11EmbedContainerD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9779,7 +9779,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N18QX11EmbedContainerD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N19QAbstractScrollAreaD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9788,7 +9788,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N19QAbstractScrollAreaD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N19QAbstractScrollAreaD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9797,7 +9797,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N19QAbstractScrollAreaD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N19QInputContextPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9806,7 +9806,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N19QInputContextPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N19QInputContextPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9815,7 +9815,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N19QInputContextPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9824,7 +9824,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9833,7 +9833,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N20QPictureFormatPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9842,7 +9842,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N20QPictureFormatPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N20QPictureFormatPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9851,7 +9851,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N20QPictureFormatPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N23QAccessibleBridgePluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9860,7 +9860,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N23QAccessibleBridgePluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N23QAccessibleBridgePluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9869,7 +9869,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N23QAccessibleBridgePluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N5QDialD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9878,7 +9878,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N5QDialD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N5QDialD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9887,7 +9887,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N5QDialD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N5QMenuD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9896,7 +9896,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N5QMenuD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N5QMenuD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9905,7 +9905,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N5QMenuD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N6QFrameD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9914,7 +9914,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N6QFrameD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N6QFrameD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9923,7 +9923,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N6QFrameD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N6QLabelD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9932,7 +9932,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N6QLabelD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N6QLabelD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9941,7 +9941,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N6QLabelD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N7QDialogD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9950,7 +9950,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N7QDialogD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N7QDialogD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9959,7 +9959,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N7QDialogD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N7QLayout10invalidateEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9968,7 +9968,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N7QLayout10invalidateEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N7QLayout6layoutEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9977,7 +9977,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N7QLayout6layoutEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N7QLayoutD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9986,7 +9986,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N7QLayoutD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N7QLayoutD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -9995,7 +9995,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N7QLayoutD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N7QSliderD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10004,7 +10004,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N7QSliderD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N7QSliderD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10013,7 +10013,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N7QSliderD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N7QTabBarD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10022,7 +10022,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N7QTabBarD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N7QTabBarD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10031,7 +10031,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N7QTabBarD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N7QWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10040,7 +10040,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N7QWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N7QWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10049,7 +10049,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N7QWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N8QMenuBarD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10058,7 +10058,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N8QMenuBarD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N8QMenuBarD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10067,7 +10067,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N8QMenuBarD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N8QToolBarD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10076,7 +10076,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N8QToolBarD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N8QToolBarD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10085,7 +10085,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N8QToolBarD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N8QToolBoxD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10094,7 +10094,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N8QToolBoxD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N8QToolBoxD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10103,7 +10103,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N8QToolBoxD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QComboBoxD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10112,7 +10112,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QComboBoxD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QComboBoxD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10121,7 +10121,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QComboBoxD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QGroupBoxD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10130,7 +10130,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QGroupBoxD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QGroupBoxD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10139,7 +10139,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QGroupBoxD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QLineEditD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10148,7 +10148,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QLineEditD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QLineEditD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10157,7 +10157,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QLineEditD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QListViewD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10166,7 +10166,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QListViewD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QListViewD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10175,7 +10175,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QListViewD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QSizeGripD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10184,7 +10184,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QSizeGripD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QSizeGripD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10193,7 +10193,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QSizeGripD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QSplitterD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10202,7 +10202,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QSplitterD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QSplitterD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10211,7 +10211,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QSplitterD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QTextEditD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10220,7 +10220,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QTextEditD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QTextEditD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10229,7 +10229,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QTextEditD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QTreeViewD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10238,7 +10238,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QTreeViewD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_N9QTreeViewD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10247,7 +10247,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N9QTreeViewD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK10QBoxLayout11maximumSizeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10256,7 +10256,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK10QBoxLayout11maximumSizeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK10QBoxLayout11minimumSizeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10265,7 +10265,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK10QBoxLayout11minimumSizeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK10QBoxLayout14heightForWidthEi","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10274,7 +10274,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK10QBoxLayout14heightForWidthEi","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK10QBoxLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10283,7 +10283,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK10QBoxLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK10QBoxLayout19expandingDirectionsEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10292,7 +10292,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK10QBoxLayout19expandingDirectionsEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK10QBoxLayout21minimumHeightForWidthEi","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10301,7 +10301,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK10QBoxLayout21minimumHeightForWidthEi","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK10QBoxLayout8sizeHintEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10310,7 +10310,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK10QBoxLayout8sizeHintEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK11QGridLayout11maximumSizeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10319,7 +10319,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK11QGridLayout11maximumSizeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK11QGridLayout11minimumSizeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10328,7 +10328,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK11QGridLayout11minimumSizeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK11QGridLayout14heightForWidthEi","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10337,7 +10337,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK11QGridLayout14heightForWidthEi","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK11QGridLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10346,7 +10346,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK11QGridLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK11QGridLayout19expandingDirectionsEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10355,7 +10355,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK11QGridLayout19expandingDirectionsEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK11QGridLayout21minimumHeightForWidthEi","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10364,7 +10364,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK11QGridLayout21minimumHeightForWidthEi","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK11QGridLayout8sizeHintEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10373,7 +10373,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK11QGridLayout8sizeHintEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK14QStackedLayout11minimumSizeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10382,7 +10382,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK14QStackedLayout11minimumSizeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK14QStackedLayout8sizeHintEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10391,7 +10391,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK14QStackedLayout8sizeHintEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK7QLayout11maximumSizeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10400,7 +10400,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK7QLayout11maximumSizeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK7QLayout11minimumSizeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10409,7 +10409,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK7QLayout11minimumSizeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK7QLayout19expandingDirectionsEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10418,7 +10418,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK7QLayout19expandingDirectionsEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK7QLayout7isEmptyEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10427,7 +10427,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK7QLayout7isEmptyEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK7QLayout8geometryEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10436,7 +10436,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK7QLayout8geometryEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK7QWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10445,7 +10445,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK7QWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10454,7 +10454,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined ___i386__
+#if defined __i386__
 	{"_ZThn8_NK7QWidget7devTypeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -11727,7 +11727,7 @@ const char *_10QDropEvent_vtable_name_0 [] = {
 	};
 
 const char *_10QDropEvent_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn12_N10QDropEventD1Ev",
 #endif
 #if defined __s390x__
@@ -11751,7 +11751,7 @@ const char *_10QDropEvent_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn24_N10QDropEventD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn12_N10QDropEventD0Ev",
 #endif
 #if defined __ia64__
@@ -11787,7 +11787,7 @@ const char *_10QDropEvent_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn24_NK10QDropEvent6formatEi",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn12_NK10QDropEvent6formatEi",
 #endif
 #if defined __ia64__
@@ -11808,7 +11808,7 @@ const char *_10QDropEvent_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn24_NK10QDropEvent8providesEPKc",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn12_NK10QDropEvent8providesEPKc",
 #endif
 #if defined __s390x__
@@ -11826,7 +11826,7 @@ const char *_10QDropEvent_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn12_NK10QDropEvent11encodedDataEPKc",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn12_NK10QDropEvent11encodedDataEPKc",
 #endif
 #if defined __ia64__
@@ -11844,7 +11844,7 @@ struct classvtable _10QDropEvent_vtable [2] = {
 	_10QDropEvent_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-12,
 #endif
@@ -11881,7 +11881,7 @@ struct classvtable _10QDropEvent_vtable [2] = {
 
 struct base_type_info _10QDropEvent_baseinfo[] = {
 	{"_ZTI6QEvent",	2U},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTI11QMimeSource",	3074U},
 #endif
 #if defined __ia64__
@@ -11939,7 +11939,7 @@ const char *_14QDragMoveEvent_vtable_name_0 [] = {
 	};
 
 const char *_14QDragMoveEvent_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn12_N14QDragMoveEventD1Ev",
 #endif
 #if defined __s390x__
@@ -11963,7 +11963,7 @@ const char *_14QDragMoveEvent_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn24_N14QDragMoveEventD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn12_N14QDragMoveEventD0Ev",
 #endif
 #if defined __ia64__
@@ -11999,7 +11999,7 @@ const char *_14QDragMoveEvent_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn24_NK10QDropEvent6formatEi",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn12_NK10QDropEvent6formatEi",
 #endif
 #if defined __ia64__
@@ -12020,7 +12020,7 @@ const char *_14QDragMoveEvent_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn24_NK10QDropEvent8providesEPKc",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn12_NK10QDropEvent8providesEPKc",
 #endif
 #if defined __s390x__
@@ -12038,7 +12038,7 @@ const char *_14QDragMoveEvent_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn12_NK10QDropEvent11encodedDataEPKc",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn12_NK10QDropEvent11encodedDataEPKc",
 #endif
 #if defined __ia64__
@@ -12056,7 +12056,7 @@ struct classvtable _14QDragMoveEvent_vtable [2] = {
 	_14QDragMoveEvent_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-12,
 #endif
@@ -12129,7 +12129,7 @@ const char *_15QDragEnterEvent_vtable_name_0 [] = {
 	};
 
 const char *_15QDragEnterEvent_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn12_N15QDragEnterEventD1Ev",
 #endif
 #if defined __s390x__
@@ -12153,7 +12153,7 @@ const char *_15QDragEnterEvent_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn24_N15QDragEnterEventD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn12_N15QDragEnterEventD0Ev",
 #endif
 #if defined __ia64__
@@ -12189,7 +12189,7 @@ const char *_15QDragEnterEvent_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn24_NK10QDropEvent6formatEi",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn12_NK10QDropEvent6formatEi",
 #endif
 #if defined __ia64__
@@ -12210,7 +12210,7 @@ const char *_15QDragEnterEvent_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn24_NK10QDropEvent8providesEPKc",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn12_NK10QDropEvent8providesEPKc",
 #endif
 #if defined __s390x__
@@ -12228,7 +12228,7 @@ const char *_15QDragEnterEvent_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn12_NK10QDropEvent11encodedDataEPKc",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn12_NK10QDropEvent11encodedDataEPKc",
 #endif
 #if defined __ia64__
@@ -12246,7 +12246,7 @@ struct classvtable _15QDragEnterEvent_vtable [2] = {
 	_15QDragEnterEvent_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-12,
 #endif
@@ -13179,7 +13179,7 @@ const char *_7QWidget_vtable_name_0 [] = {
 	};
 
 const char *_7QWidget_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N7QWidgetD1Ev",
 #endif
 #if defined __s390x__
@@ -13218,7 +13218,7 @@ const char *_7QWidget_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N7QWidgetD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N7QWidgetD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -13236,7 +13236,7 @@ const char *_7QWidget_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -13245,7 +13245,7 @@ const char *_7QWidget_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -13263,7 +13263,7 @@ const char *_7QWidget_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -13296,7 +13296,7 @@ struct classvtable _7QWidget_vtable [2] = {
 	_7QWidget_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -13333,7 +13333,7 @@ struct classvtable _7QWidget_vtable [2] = {
 
 struct base_type_info _7QWidget_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTI12QPaintDevice",	2050U},
 #endif
 #if defined __ia64__
@@ -13443,7 +13443,7 @@ const char *_7QDialog_vtable_name_0 [] = {
 	};
 
 const char *_7QDialog_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N7QDialogD1Ev",
 #endif
 #if defined __s390x__
@@ -13482,7 +13482,7 @@ const char *_7QDialog_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N7QDialogD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N7QDialogD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -13500,7 +13500,7 @@ const char *_7QDialog_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -13509,7 +13509,7 @@ const char *_7QDialog_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -13527,7 +13527,7 @@ const char *_7QDialog_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -13560,7 +13560,7 @@ struct classvtable _7QDialog_vtable [2] = {
 	_7QDialog_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -13686,7 +13686,7 @@ const char *_24QAbstractPageSetupDialog_vtable_name_0 [] = {
 	};
 
 const char *_24QAbstractPageSetupDialog_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N24QAbstractPageSetupDialogD1Ev",
 #endif
 #if defined __ia64__
@@ -13725,7 +13725,7 @@ const char *_24QAbstractPageSetupDialog_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N24QAbstractPageSetupDialogD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N24QAbstractPageSetupDialogD0Ev",
 #endif
 #if defined __ia64__
@@ -13746,13 +13746,13 @@ const char *_24QAbstractPageSetupDialog_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -13776,7 +13776,7 @@ const char *_24QAbstractPageSetupDialog_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __s390x__
@@ -13803,7 +13803,7 @@ struct classvtable _24QAbstractPageSetupDialog_vtable [2] = {
 	_24QAbstractPageSetupDialog_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -13928,7 +13928,7 @@ const char *_12QColorDialog_vtable_name_0 [] = {
 	};
 
 const char *_12QColorDialog_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N12QColorDialogD1Ev",
 #endif
 #if defined __s390x__
@@ -13967,7 +13967,7 @@ const char *_12QColorDialog_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N12QColorDialogD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N12QColorDialogD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -13985,7 +13985,7 @@ const char *_12QColorDialog_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -13994,7 +13994,7 @@ const char *_12QColorDialog_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -14012,7 +14012,7 @@ const char *_12QColorDialog_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -14045,7 +14045,7 @@ struct classvtable _12QColorDialog_vtable [2] = {
 	_12QColorDialog_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -14170,7 +14170,7 @@ const char *_11QFontDialog_vtable_name_0 [] = {
 	};
 
 const char *_11QFontDialog_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QFontDialogD1Ev",
 #endif
 #if defined __s390x__
@@ -14209,7 +14209,7 @@ const char *_11QFontDialog_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N11QFontDialogD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QFontDialogD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -14227,7 +14227,7 @@ const char *_11QFontDialog_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -14236,7 +14236,7 @@ const char *_11QFontDialog_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -14254,7 +14254,7 @@ const char *_11QFontDialog_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -14287,7 +14287,7 @@ struct classvtable _11QFontDialog_vtable [2] = {
 	_11QFontDialog_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -14412,7 +14412,7 @@ const char *_11QMessageBox_vtable_name_0 [] = {
 	};
 
 const char *_11QMessageBox_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QMessageBoxD1Ev",
 #endif
 #if defined __s390x__
@@ -14451,7 +14451,7 @@ const char *_11QMessageBox_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N11QMessageBoxD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QMessageBoxD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -14469,7 +14469,7 @@ const char *_11QMessageBox_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -14478,7 +14478,7 @@ const char *_11QMessageBox_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -14496,7 +14496,7 @@ const char *_11QMessageBox_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -14529,7 +14529,7 @@ struct classvtable _11QMessageBox_vtable [2] = {
 	_11QMessageBox_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -14654,7 +14654,7 @@ const char *_15QProgressDialog_vtable_name_0 [] = {
 	};
 
 const char *_15QProgressDialog_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N15QProgressDialogD1Ev",
 #endif
 #if defined __s390x__
@@ -14693,7 +14693,7 @@ const char *_15QProgressDialog_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N15QProgressDialogD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N15QProgressDialogD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -14711,7 +14711,7 @@ const char *_15QProgressDialog_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -14720,7 +14720,7 @@ const char *_15QProgressDialog_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -14738,7 +14738,7 @@ const char *_15QProgressDialog_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -14771,7 +14771,7 @@ struct classvtable _15QProgressDialog_vtable [2] = {
 	_15QProgressDialog_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -14896,7 +14896,7 @@ const char *_13QErrorMessage_vtable_name_0 [] = {
 	};
 
 const char *_13QErrorMessage_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N13QErrorMessageD1Ev",
 #endif
 #if defined __s390x__
@@ -14935,7 +14935,7 @@ const char *_13QErrorMessage_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N13QErrorMessageD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N13QErrorMessageD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -14953,7 +14953,7 @@ const char *_13QErrorMessage_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -14962,7 +14962,7 @@ const char *_13QErrorMessage_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -14980,7 +14980,7 @@ const char *_13QErrorMessage_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -15013,7 +15013,7 @@ struct classvtable _13QErrorMessage_vtable [2] = {
 	_13QErrorMessage_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -15138,7 +15138,7 @@ const char *_11QFileDialog_vtable_name_0 [] = {
 	};
 
 const char *_11QFileDialog_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QFileDialogD1Ev",
 #endif
 #if defined __s390x__
@@ -15177,7 +15177,7 @@ const char *_11QFileDialog_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N11QFileDialogD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QFileDialogD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -15195,7 +15195,7 @@ const char *_11QFileDialog_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -15204,7 +15204,7 @@ const char *_11QFileDialog_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -15222,7 +15222,7 @@ const char *_11QFileDialog_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -15255,7 +15255,7 @@ struct classvtable _11QFileDialog_vtable [2] = {
 	_11QFileDialog_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -15381,7 +15381,7 @@ const char *_20QAbstractPrintDialog_vtable_name_0 [] = {
 	};
 
 const char *_20QAbstractPrintDialog_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N20QAbstractPrintDialogD1Ev",
 #endif
 #if defined __ia64__
@@ -15420,7 +15420,7 @@ const char *_20QAbstractPrintDialog_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N20QAbstractPrintDialogD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N20QAbstractPrintDialogD0Ev",
 #endif
 #if defined __ia64__
@@ -15441,13 +15441,13 @@ const char *_20QAbstractPrintDialog_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -15471,7 +15471,7 @@ const char *_20QAbstractPrintDialog_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __s390x__
@@ -15498,7 +15498,7 @@ struct classvtable _20QAbstractPrintDialog_vtable [2] = {
 	_20QAbstractPrintDialog_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -15624,7 +15624,7 @@ const char *_12QPrintDialog_vtable_name_0 [] = {
 	};
 
 const char *_12QPrintDialog_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N12QPrintDialogD1Ev",
 #endif
 #if defined __s390x__
@@ -15663,7 +15663,7 @@ const char *_12QPrintDialog_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N12QPrintDialogD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N12QPrintDialogD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -15681,7 +15681,7 @@ const char *_12QPrintDialog_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -15690,7 +15690,7 @@ const char *_12QPrintDialog_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -15708,7 +15708,7 @@ const char *_12QPrintDialog_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -15741,7 +15741,7 @@ struct classvtable _12QPrintDialog_vtable [2] = {
 	_12QPrintDialog_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -15867,7 +15867,7 @@ const char *_16QPageSetupDialog_vtable_name_0 [] = {
 	};
 
 const char *_16QPageSetupDialog_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N16QPageSetupDialogD1Ev",
 #endif
 #if defined __ia64__
@@ -15906,7 +15906,7 @@ const char *_16QPageSetupDialog_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N16QPageSetupDialogD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N16QPageSetupDialogD0Ev",
 #endif
 #if defined __ia64__
@@ -15927,13 +15927,13 @@ const char *_16QPageSetupDialog_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -15957,7 +15957,7 @@ const char *_16QPageSetupDialog_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __s390x__
@@ -15984,7 +15984,7 @@ struct classvtable _16QPageSetupDialog_vtable [2] = {
 	_16QPageSetupDialog_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -16106,7 +16106,7 @@ const char *_6QFrame_vtable_name_0 [] = {
 	};
 
 const char *_6QFrame_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N6QFrameD1Ev",
 #endif
 #if defined __s390x__
@@ -16145,7 +16145,7 @@ const char *_6QFrame_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N6QFrameD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N6QFrameD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -16163,7 +16163,7 @@ const char *_6QFrame_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -16172,7 +16172,7 @@ const char *_6QFrame_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -16190,7 +16190,7 @@ const char *_6QFrame_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -16223,7 +16223,7 @@ struct classvtable _6QFrame_vtable [2] = {
 	_6QFrame_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -16345,7 +16345,7 @@ const char *_9QLineEdit_vtable_name_0 [] = {
 	};
 
 const char *_9QLineEdit_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N9QLineEditD1Ev",
 #endif
 #if defined __s390x__
@@ -16384,7 +16384,7 @@ const char *_9QLineEdit_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N9QLineEditD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N9QLineEditD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -16402,7 +16402,7 @@ const char *_9QLineEdit_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -16411,7 +16411,7 @@ const char *_9QLineEdit_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -16429,7 +16429,7 @@ const char *_9QLineEdit_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -16462,7 +16462,7 @@ struct classvtable _9QLineEdit_vtable [2] = {
 	_9QLineEdit_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -16587,7 +16587,7 @@ const char *_12QInputDialog_vtable_name_0 [] = {
 	};
 
 const char *_12QInputDialog_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N12QInputDialogD1Ev",
 #endif
 #if defined __s390x__
@@ -16626,7 +16626,7 @@ const char *_12QInputDialog_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N12QInputDialogD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N12QInputDialogD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -16644,7 +16644,7 @@ const char *_12QInputDialog_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -16653,7 +16653,7 @@ const char *_12QInputDialog_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -16671,7 +16671,7 @@ const char *_12QInputDialog_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -16704,7 +16704,7 @@ struct classvtable _12QInputDialog_vtable [2] = {
 	_12QInputDialog_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -16987,7 +16987,7 @@ const char *_14QImageIOPlugin_vtable_name_0 [] = {
 	};
 
 const char *_14QImageIOPlugin_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N14QImageIOPluginD1Ev",
 #endif
 #if defined __x86_64__
@@ -17023,7 +17023,7 @@ const char *_14QImageIOPlugin_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N14QImageIOPluginD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N14QImageIOPluginD0Ev",
 #endif
 #if defined __x86_64__
@@ -17043,7 +17043,7 @@ struct classvtable _14QImageIOPlugin_vtable [2] = {
 	_14QImageIOPlugin_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -17080,7 +17080,7 @@ struct classvtable _14QImageIOPlugin_vtable [2] = {
 
 struct base_type_info _14QImageIOPlugin_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTI31QImageIOHandlerFactoryInterface",	2050U},
 #endif
 #if defined __ia64__
@@ -17297,7 +17297,7 @@ const char *_17QIconEnginePlugin_vtable_name_0 [] = {
 	};
 
 const char *_17QIconEnginePlugin_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N17QIconEnginePluginD1Ev",
 #endif
 #if defined __x86_64__
@@ -17333,7 +17333,7 @@ const char *_17QIconEnginePlugin_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N17QIconEnginePluginD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N17QIconEnginePluginD0Ev",
 #endif
 #if defined __x86_64__
@@ -17353,7 +17353,7 @@ struct classvtable _17QIconEnginePlugin_vtable [2] = {
 	_17QIconEnginePlugin_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -17390,7 +17390,7 @@ struct classvtable _17QIconEnginePlugin_vtable [2] = {
 
 struct base_type_info _17QIconEnginePlugin_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTI27QIconEngineFactoryInterface",	2050U},
 #endif
 #if defined __ia64__
@@ -17604,7 +17604,7 @@ const char *_20QPictureFormatPlugin_vtable_name_0 [] = {
 	};
 
 const char *_20QPictureFormatPlugin_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N20QPictureFormatPluginD1Ev",
 #endif
 #if defined __x86_64__
@@ -17643,11 +17643,11 @@ const char *_20QPictureFormatPlugin_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N20QPictureFormatPluginD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N20QPictureFormatPluginD0Ev",
 #endif
 	"__cxa_pure_virtual",
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -17668,7 +17668,7 @@ const char *_20QPictureFormatPlugin_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_N20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture",
 #endif
 #if defined __s390x__
@@ -17702,7 +17702,7 @@ struct classvtable _20QPictureFormatPlugin_vtable [2] = {
 	_20QPictureFormatPlugin_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -17739,7 +17739,7 @@ struct classvtable _20QPictureFormatPlugin_vtable [2] = {
 
 struct base_type_info _20QPictureFormatPlugin_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTI23QPictureFormatInterface",	2050U},
 #endif
 #if defined __ia64__
@@ -18145,7 +18145,7 @@ const char *_19QAbstractScrollArea_vtable_name_0 [] = {
 	};
 
 const char *_19QAbstractScrollArea_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N19QAbstractScrollAreaD1Ev",
 #endif
 #if defined __s390x__
@@ -18184,7 +18184,7 @@ const char *_19QAbstractScrollArea_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N19QAbstractScrollAreaD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N19QAbstractScrollAreaD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -18202,7 +18202,7 @@ const char *_19QAbstractScrollArea_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -18211,7 +18211,7 @@ const char *_19QAbstractScrollArea_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -18229,7 +18229,7 @@ const char *_19QAbstractScrollArea_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -18262,7 +18262,7 @@ struct classvtable _19QAbstractScrollArea_vtable [2] = {
 	_19QAbstractScrollArea_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -18619,7 +18619,7 @@ const char *_16QAbstractSpinBox_vtable_name_0 [] = {
 	};
 
 const char *_16QAbstractSpinBox_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N16QAbstractSpinBoxD1Ev",
 #endif
 #if defined __s390x__
@@ -18658,7 +18658,7 @@ const char *_16QAbstractSpinBox_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N16QAbstractSpinBoxD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N16QAbstractSpinBoxD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -18676,7 +18676,7 @@ const char *_16QAbstractSpinBox_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -18685,7 +18685,7 @@ const char *_16QAbstractSpinBox_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -18703,7 +18703,7 @@ const char *_16QAbstractSpinBox_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -18736,7 +18736,7 @@ struct classvtable _16QAbstractSpinBox_vtable [2] = {
 	_16QAbstractSpinBox_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -18859,7 +18859,7 @@ const char *_15QAbstractSlider_vtable_name_0 [] = {
 	};
 
 const char *_15QAbstractSlider_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N15QAbstractSliderD1Ev",
 #endif
 #if defined __s390x__
@@ -18898,7 +18898,7 @@ const char *_15QAbstractSlider_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N15QAbstractSliderD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N15QAbstractSliderD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -18916,7 +18916,7 @@ const char *_15QAbstractSlider_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -18925,7 +18925,7 @@ const char *_15QAbstractSlider_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -18943,7 +18943,7 @@ const char *_15QAbstractSlider_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -18976,7 +18976,7 @@ struct classvtable _15QAbstractSlider_vtable [2] = {
 	_15QAbstractSlider_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -19099,7 +19099,7 @@ const char *_7QSlider_vtable_name_0 [] = {
 	};
 
 const char *_7QSlider_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N7QSliderD1Ev",
 #endif
 #if defined __s390x__
@@ -19138,7 +19138,7 @@ const char *_7QSlider_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N7QSliderD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N7QSliderD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -19156,7 +19156,7 @@ const char *_7QSlider_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -19165,7 +19165,7 @@ const char *_7QSlider_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -19183,7 +19183,7 @@ const char *_7QSlider_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -19216,7 +19216,7 @@ struct classvtable _7QSlider_vtable [2] = {
 	_7QSlider_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -19342,7 +19342,7 @@ const char *_7QTabBar_vtable_name_0 [] = {
 	};
 
 const char *_7QTabBar_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N7QTabBarD1Ev",
 #endif
 #if defined __s390x__
@@ -19381,7 +19381,7 @@ const char *_7QTabBar_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N7QTabBarD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N7QTabBarD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -19399,7 +19399,7 @@ const char *_7QTabBar_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -19408,7 +19408,7 @@ const char *_7QTabBar_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -19426,7 +19426,7 @@ const char *_7QTabBar_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -19459,7 +19459,7 @@ struct classvtable _7QTabBar_vtable [2] = {
 	_7QTabBar_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -19583,7 +19583,7 @@ const char *_10QTabWidget_vtable_name_0 [] = {
 	};
 
 const char *_10QTabWidget_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N10QTabWidgetD1Ev",
 #endif
 #if defined __s390x__
@@ -19622,7 +19622,7 @@ const char *_10QTabWidget_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N10QTabWidgetD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N10QTabWidgetD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -19640,7 +19640,7 @@ const char *_10QTabWidget_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -19649,7 +19649,7 @@ const char *_10QTabWidget_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -19667,7 +19667,7 @@ const char *_10QTabWidget_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -19700,7 +19700,7 @@ struct classvtable _10QTabWidget_vtable [2] = {
 	_10QTabWidget_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -19822,7 +19822,7 @@ const char *_11QRubberBand_vtable_name_0 [] = {
 	};
 
 const char *_11QRubberBand_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QRubberBandD1Ev",
 #endif
 #if defined __s390x__
@@ -19861,7 +19861,7 @@ const char *_11QRubberBand_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N11QRubberBandD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QRubberBandD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -19879,7 +19879,7 @@ const char *_11QRubberBand_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -19888,7 +19888,7 @@ const char *_11QRubberBand_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -19906,7 +19906,7 @@ const char *_11QRubberBand_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -19939,7 +19939,7 @@ struct classvtable _11QRubberBand_vtable [2] = {
 	_11QRubberBand_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -20163,7 +20163,7 @@ const char *_17QAbstractItemView_vtable_name_0 [] = {
 	};
 
 const char *_17QAbstractItemView_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N17QAbstractItemViewD1Ev",
 #endif
 #if defined __s390x__
@@ -20202,7 +20202,7 @@ const char *_17QAbstractItemView_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N17QAbstractItemViewD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N17QAbstractItemViewD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -20220,7 +20220,7 @@ const char *_17QAbstractItemView_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -20229,7 +20229,7 @@ const char *_17QAbstractItemView_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -20247,7 +20247,7 @@ const char *_17QAbstractItemView_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -20280,7 +20280,7 @@ struct classvtable _17QAbstractItemView_vtable [2] = {
 	_17QAbstractItemView_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -20525,7 +20525,7 @@ const char *_9QListView_vtable_name_0 [] = {
 	};
 
 const char *_9QListView_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N9QListViewD1Ev",
 #endif
 #if defined __s390x__
@@ -20564,7 +20564,7 @@ const char *_9QListView_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N9QListViewD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N9QListViewD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -20582,7 +20582,7 @@ const char *_9QListView_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -20591,7 +20591,7 @@ const char *_9QListView_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -20609,7 +20609,7 @@ const char *_9QListView_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -20642,7 +20642,7 @@ struct classvtable _9QListView_vtable [2] = {
 	_9QListView_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -20859,7 +20859,7 @@ const char *_11QListWidget_vtable_name_0 [] = {
 	};
 
 const char *_11QListWidget_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QListWidgetD1Ev",
 #endif
 #if defined __s390x__
@@ -20898,7 +20898,7 @@ const char *_11QListWidget_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N11QListWidgetD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QListWidgetD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -20916,7 +20916,7 @@ const char *_11QListWidget_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -20925,7 +20925,7 @@ const char *_11QListWidget_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -20943,7 +20943,7 @@ const char *_11QListWidget_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -20976,7 +20976,7 @@ struct classvtable _11QListWidget_vtable [2] = {
 	_11QListWidget_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -21596,7 +21596,7 @@ const char *_10QTableView_vtable_name_0 [] = {
 	};
 
 const char *_10QTableView_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N10QTableViewD1Ev",
 #endif
 #if defined __s390x__
@@ -21635,7 +21635,7 @@ const char *_10QTableView_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N10QTableViewD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N10QTableViewD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -21653,7 +21653,7 @@ const char *_10QTableView_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -21662,7 +21662,7 @@ const char *_10QTableView_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -21680,7 +21680,7 @@ const char *_10QTableView_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -21713,7 +21713,7 @@ struct classvtable _10QTableView_vtable [2] = {
 	_10QTableView_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -21929,7 +21929,7 @@ const char *_12QTableWidget_vtable_name_0 [] = {
 	};
 
 const char *_12QTableWidget_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N12QTableWidgetD1Ev",
 #endif
 #if defined __s390x__
@@ -21968,7 +21968,7 @@ const char *_12QTableWidget_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N12QTableWidgetD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N12QTableWidgetD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -21986,7 +21986,7 @@ const char *_12QTableWidget_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -21995,7 +21995,7 @@ const char *_12QTableWidget_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -22013,7 +22013,7 @@ const char *_12QTableWidget_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -22046,7 +22046,7 @@ struct classvtable _12QTableWidget_vtable [2] = {
 	_12QTableWidget_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -22210,7 +22210,7 @@ const char *_9QTreeView_vtable_name_0 [] = {
 	};
 
 const char *_9QTreeView_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N9QTreeViewD1Ev",
 #endif
 #if defined __s390x__
@@ -22249,7 +22249,7 @@ const char *_9QTreeView_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N9QTreeViewD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N9QTreeViewD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -22267,7 +22267,7 @@ const char *_9QTreeView_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -22276,7 +22276,7 @@ const char *_9QTreeView_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -22294,7 +22294,7 @@ const char *_9QTreeView_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -22327,7 +22327,7 @@ struct classvtable _9QTreeView_vtable [2] = {
 	_9QTreeView_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -22575,7 +22575,7 @@ const char *_11QHeaderView_vtable_name_0 [] = {
 	};
 
 const char *_11QHeaderView_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QHeaderViewD1Ev",
 #endif
 #if defined __s390x__
@@ -22614,7 +22614,7 @@ const char *_11QHeaderView_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N11QHeaderViewD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QHeaderViewD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -22632,7 +22632,7 @@ const char *_11QHeaderView_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -22641,7 +22641,7 @@ const char *_11QHeaderView_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -22659,7 +22659,7 @@ const char *_11QHeaderView_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -22692,7 +22692,7 @@ struct classvtable _11QHeaderView_vtable [2] = {
 	_11QHeaderView_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -22956,7 +22956,7 @@ const char *_11QTreeWidget_vtable_name_0 [] = {
 	};
 
 const char *_11QTreeWidget_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QTreeWidgetD1Ev",
 #endif
 #if defined __s390x__
@@ -22995,7 +22995,7 @@ const char *_11QTreeWidget_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N11QTreeWidgetD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QTreeWidgetD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23013,7 +23013,7 @@ const char *_11QTreeWidget_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -23022,7 +23022,7 @@ const char *_11QTreeWidget_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23040,7 +23040,7 @@ const char *_11QTreeWidget_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -23073,7 +23073,7 @@ struct classvtable _11QTreeWidget_vtable [2] = {
 	_11QTreeWidget_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -23201,7 +23201,7 @@ const char *_23QAccessibleBridgePlugin_vtable_name_0 [] = {
 	};
 
 const char *_23QAccessibleBridgePlugin_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N23QAccessibleBridgePluginD1Ev",
 #endif
 #if defined __x86_64__
@@ -23237,7 +23237,7 @@ const char *_23QAccessibleBridgePlugin_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N23QAccessibleBridgePluginD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N23QAccessibleBridgePluginD0Ev",
 #endif
 #if defined __x86_64__
@@ -23257,7 +23257,7 @@ struct classvtable _23QAccessibleBridgePlugin_vtable [2] = {
 	_23QAccessibleBridgePlugin_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -23294,7 +23294,7 @@ struct classvtable _23QAccessibleBridgePlugin_vtable [2] = {
 
 struct base_type_info _23QAccessibleBridgePlugin_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTI33QAccessibleBridgeFactoryInterface",	2050U},
 #endif
 #if defined __ia64__
@@ -23648,7 +23648,7 @@ const char *_17QAccessiblePlugin_vtable_name_0 [] = {
 	};
 
 const char *_17QAccessiblePlugin_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N17QAccessiblePluginD1Ev",
 #endif
 #if defined __x86_64__
@@ -23684,7 +23684,7 @@ const char *_17QAccessiblePlugin_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N17QAccessiblePluginD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N17QAccessiblePluginD0Ev",
 #endif
 #if defined __x86_64__
@@ -23704,7 +23704,7 @@ struct classvtable _17QAccessiblePlugin_vtable [2] = {
 	_17QAccessiblePlugin_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -23741,7 +23741,7 @@ struct classvtable _17QAccessiblePlugin_vtable [2] = {
 
 struct base_type_info _17QAccessiblePlugin_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTI27QAccessibleFactoryInterface",	2050U},
 #endif
 #if defined __ia64__
@@ -23903,7 +23903,7 @@ const char *_14QDesktopWidget_vtable_name_0 [] = {
 	};
 
 const char *_14QDesktopWidget_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N14QDesktopWidgetD1Ev",
 #endif
 #if defined __s390x__
@@ -23942,7 +23942,7 @@ const char *_14QDesktopWidget_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N14QDesktopWidgetD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N14QDesktopWidgetD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23960,7 +23960,7 @@ const char *_14QDesktopWidget_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -23969,7 +23969,7 @@ const char *_14QDesktopWidget_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -23987,7 +23987,7 @@ const char *_14QDesktopWidget_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -24020,7 +24020,7 @@ struct classvtable _14QDesktopWidget_vtable [2] = {
 	_14QDesktopWidget_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -24288,7 +24288,7 @@ const char *_7QLayout_vtable_name_0 [] = {
 	};
 
 const char *_7QLayout_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N7QLayoutD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
@@ -24327,7 +24327,7 @@ const char *_7QLayout_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_N7QLayoutD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N7QLayoutD0Ev",
 #endif
 	"__cxa_pure_virtual",
@@ -24346,7 +24346,7 @@ const char *_7QLayout_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QLayout11minimumSizeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QLayout11minimumSizeEv",
 #endif
 #if defined __s390__ && !defined __s390x__
@@ -24364,7 +24364,7 @@ const char *_7QLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK7QLayout11maximumSizeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QLayout11maximumSizeEv",
 #endif
 #if defined __x86_64__
@@ -24373,7 +24373,7 @@ const char *_7QLayout_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK7QLayout11maximumSizeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QLayout19expandingDirectionsEv",
 #endif
 #if defined __powerpc64__
@@ -24413,7 +24413,7 @@ const char *_7QLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK7QLayout8geometryEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QLayout8geometryEv",
 #endif
 #if defined __s390x__
@@ -24422,7 +24422,7 @@ const char *_7QLayout_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QLayout7isEmptyEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QLayout7isEmptyEv",
 #endif
 #if defined __powerpc64__
@@ -24446,7 +24446,7 @@ const char *_7QLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N7QLayout10invalidateEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N7QLayout10invalidateEv",
 #endif
 #if defined __x86_64__
@@ -24480,7 +24480,7 @@ const char *_7QLayout_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N7QLayout6layoutEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
 	"_ZN11QLayoutItem10spacerItemEv",
@@ -24496,7 +24496,7 @@ struct classvtable _7QLayout_vtable [2] = {
 	_7QLayout_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -24533,7 +24533,7 @@ struct classvtable _7QLayout_vtable [2] = {
 
 struct base_type_info _7QLayout_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTI11QLayoutItem",	2050U},
 #endif
 #if defined __ia64__
@@ -24615,7 +24615,7 @@ const char *_11QGridLayout_vtable_name_0 [] = {
 	};
 
 const char *_11QGridLayout_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QGridLayoutD1Ev",
 #endif
 #if defined __ia64__
@@ -24636,7 +24636,7 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N11QGridLayoutD1Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QGridLayoutD0Ev",
 #endif
 #if defined __ia64__
@@ -24657,7 +24657,7 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N11QGridLayoutD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK11QGridLayout8sizeHintEv",
 #endif
 #if defined __ia64__
@@ -24678,7 +24678,7 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK11QGridLayout8sizeHintEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK11QGridLayout11minimumSizeEv",
 #endif
 #if defined __ia64__
@@ -24699,7 +24699,7 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK11QGridLayout11minimumSizeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK11QGridLayout11maximumSizeEv",
 #endif
 #if defined __ia64__
@@ -24720,7 +24720,7 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK11QGridLayout11maximumSizeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK11QGridLayout19expandingDirectionsEv",
 #endif
 #if defined __ia64__
@@ -24741,7 +24741,7 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK11QGridLayout19expandingDirectionsEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QGridLayout11setGeometryERK5QRect",
 #endif
 #if defined __ia64__
@@ -24762,7 +24762,7 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N11QGridLayout11setGeometryERK5QRect",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QLayout8geometryEv",
 #endif
 #if defined __ia64__
@@ -24783,7 +24783,7 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK7QLayout8geometryEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QLayout7isEmptyEv",
 #endif
 #if defined __ia64__
@@ -24804,7 +24804,7 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK7QLayout7isEmptyEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK11QGridLayout17hasHeightForWidthEv",
 #endif
 #if defined __ia64__
@@ -24825,7 +24825,7 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK11QGridLayout17hasHeightForWidthEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK11QGridLayout14heightForWidthEi",
 #endif
 #if defined __ia64__
@@ -24846,7 +24846,7 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK11QGridLayout14heightForWidthEi",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK11QGridLayout21minimumHeightForWidthEi",
 #endif
 #if defined __ia64__
@@ -24867,7 +24867,7 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK11QGridLayout21minimumHeightForWidthEi",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QGridLayout10invalidateEv",
 #endif
 #if defined __ia64__
@@ -24889,7 +24889,7 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 	"_ZThn16_N11QGridLayout10invalidateEv",
 #endif
 	"_ZN11QLayoutItem6widgetEv",
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
 #if defined __ia64__
@@ -24923,7 +24923,7 @@ struct classvtable _11QGridLayout_vtable [2] = {
 	_11QGridLayout_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -25020,7 +25020,7 @@ const char *_10QBoxLayout_vtable_name_0 [] = {
 	};
 
 const char *_10QBoxLayout_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N10QBoxLayoutD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25050,7 +25050,7 @@ const char *_10QBoxLayout_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N10QBoxLayoutD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N10QBoxLayoutD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
@@ -25068,7 +25068,7 @@ const char *_10QBoxLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK10QBoxLayout8sizeHintEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK10QBoxLayout8sizeHintEv",
 #endif
 #if defined __ia64__
@@ -25089,7 +25089,7 @@ const char *_10QBoxLayout_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK10QBoxLayout11minimumSizeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK10QBoxLayout11minimumSizeEv",
 #endif
 #if defined __s390__ && !defined __s390x__
@@ -25104,7 +25104,7 @@ const char *_10QBoxLayout_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK10QBoxLayout11minimumSizeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK10QBoxLayout11maximumSizeEv",
 #endif
 #if defined __s390__ && !defined __s390x__
@@ -25143,13 +25143,13 @@ const char *_10QBoxLayout_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK10QBoxLayout19expandingDirectionsEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK10QBoxLayout19expandingDirectionsEv",
 #endif
 #if defined __x86_64__
 	"_ZThn16_N10QBoxLayout11setGeometryERK5QRect",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N10QBoxLayout11setGeometryERK5QRect",
 #endif
 #if defined __powerpc64__
@@ -25182,13 +25182,13 @@ const char *_10QBoxLayout_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QLayout8geometryEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QLayout8geometryEv",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK7QLayout8geometryEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QLayout7isEmptyEv",
 #endif
 #if defined __x86_64__
@@ -25209,7 +25209,7 @@ const char *_10QBoxLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK7QLayout7isEmptyEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
 #if defined __s390x__
@@ -25230,7 +25230,7 @@ const char *_10QBoxLayout_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK10QBoxLayout14heightForWidthEi",
 #endif
 #if defined __s390x__
@@ -25266,7 +25266,7 @@ const char *_10QBoxLayout_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK10QBoxLayout21minimumHeightForWidthEi",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK10QBoxLayout21minimumHeightForWidthEi",
 #endif
 #if defined __ia64__
@@ -25290,7 +25290,7 @@ const char *_10QBoxLayout_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N10QBoxLayout10invalidateEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N10QBoxLayout10invalidateEv",
 #endif
 	"_ZN11QLayoutItem6widgetEv",
@@ -25309,7 +25309,7 @@ const char *_10QBoxLayout_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
 #if defined __powerpc64__
@@ -25328,7 +25328,7 @@ struct classvtable _10QBoxLayout_vtable [2] = {
 	_10QBoxLayout_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -25425,7 +25425,7 @@ const char *_11QHBoxLayout_vtable_name_0 [] = {
 	};
 
 const char *_11QHBoxLayout_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QHBoxLayoutD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -25455,7 +25455,7 @@ const char *_11QHBoxLayout_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N11QHBoxLayoutD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QHBoxLayoutD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
@@ -25473,7 +25473,7 @@ const char *_11QHBoxLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK10QBoxLayout8sizeHintEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK10QBoxLayout8sizeHintEv",
 #endif
 #if defined __ia64__
@@ -25494,7 +25494,7 @@ const char *_11QHBoxLayout_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK10QBoxLayout11minimumSizeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK10QBoxLayout11minimumSizeEv",
 #endif
 #if defined __s390__ && !defined __s390x__
@@ -25509,7 +25509,7 @@ const char *_11QHBoxLayout_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK10QBoxLayout11minimumSizeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK10QBoxLayout11maximumSizeEv",
 #endif
 #if defined __s390__ && !defined __s390x__
@@ -25548,13 +25548,13 @@ const char *_11QHBoxLayout_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK10QBoxLayout19expandingDirectionsEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK10QBoxLayout19expandingDirectionsEv",
 #endif
 #if defined __x86_64__
 	"_ZThn16_N10QBoxLayout11setGeometryERK5QRect",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N10QBoxLayout11setGeometryERK5QRect",
 #endif
 #if defined __powerpc64__
@@ -25587,13 +25587,13 @@ const char *_11QHBoxLayout_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QLayout8geometryEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QLayout8geometryEv",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK7QLayout8geometryEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QLayout7isEmptyEv",
 #endif
 #if defined __x86_64__
@@ -25614,7 +25614,7 @@ const char *_11QHBoxLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK7QLayout7isEmptyEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
 #if defined __s390x__
@@ -25635,7 +25635,7 @@ const char *_11QHBoxLayout_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK10QBoxLayout14heightForWidthEi",
 #endif
 #if defined __s390x__
@@ -25671,7 +25671,7 @@ const char *_11QHBoxLayout_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK10QBoxLayout21minimumHeightForWidthEi",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK10QBoxLayout21minimumHeightForWidthEi",
 #endif
 #if defined __ia64__
@@ -25695,7 +25695,7 @@ const char *_11QHBoxLayout_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N10QBoxLayout10invalidateEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N10QBoxLayout10invalidateEv",
 #endif
 	"_ZN11QLayoutItem6widgetEv",
@@ -25714,7 +25714,7 @@ const char *_11QHBoxLayout_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
 #if defined __powerpc64__
@@ -25733,7 +25733,7 @@ struct classvtable _11QHBoxLayout_vtable [2] = {
 	_11QHBoxLayout_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -25830,7 +25830,7 @@ const char *_11QVBoxLayout_vtable_name_0 [] = {
 	};
 
 const char *_11QVBoxLayout_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QVBoxLayoutD1Ev",
 #endif
 #if defined __ia64__
@@ -25851,7 +25851,7 @@ const char *_11QVBoxLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N11QVBoxLayoutD1Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QVBoxLayoutD0Ev",
 #endif
 #if defined __ia64__
@@ -25872,7 +25872,7 @@ const char *_11QVBoxLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N11QVBoxLayoutD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK10QBoxLayout8sizeHintEv",
 #endif
 #if defined __ia64__
@@ -25893,7 +25893,7 @@ const char *_11QVBoxLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK10QBoxLayout8sizeHintEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK10QBoxLayout11minimumSizeEv",
 #endif
 #if defined __ia64__
@@ -25914,7 +25914,7 @@ const char *_11QVBoxLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK10QBoxLayout11minimumSizeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK10QBoxLayout11maximumSizeEv",
 #endif
 #if defined __ia64__
@@ -25935,7 +25935,7 @@ const char *_11QVBoxLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK10QBoxLayout11maximumSizeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK10QBoxLayout19expandingDirectionsEv",
 #endif
 #if defined __ia64__
@@ -25956,7 +25956,7 @@ const char *_11QVBoxLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK10QBoxLayout19expandingDirectionsEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N10QBoxLayout11setGeometryERK5QRect",
 #endif
 #if defined __ia64__
@@ -25977,7 +25977,7 @@ const char *_11QVBoxLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N10QBoxLayout11setGeometryERK5QRect",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QLayout8geometryEv",
 #endif
 #if defined __ia64__
@@ -25998,7 +25998,7 @@ const char *_11QVBoxLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK7QLayout8geometryEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QLayout7isEmptyEv",
 #endif
 #if defined __ia64__
@@ -26019,7 +26019,7 @@ const char *_11QVBoxLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK7QLayout7isEmptyEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
 #if defined __ia64__
@@ -26040,7 +26040,7 @@ const char *_11QVBoxLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK10QBoxLayout14heightForWidthEi",
 #endif
 #if defined __ia64__
@@ -26061,7 +26061,7 @@ const char *_11QVBoxLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK10QBoxLayout14heightForWidthEi",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK10QBoxLayout21minimumHeightForWidthEi",
 #endif
 #if defined __ia64__
@@ -26082,7 +26082,7 @@ const char *_11QVBoxLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK10QBoxLayout21minimumHeightForWidthEi",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N10QBoxLayout10invalidateEv",
 #endif
 #if defined __ia64__
@@ -26104,7 +26104,7 @@ const char *_11QVBoxLayout_vtable_name_1 [] = {
 	"_ZThn16_N10QBoxLayout10invalidateEv",
 #endif
 	"_ZN11QLayoutItem6widgetEv",
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
 #if defined __ia64__
@@ -26138,7 +26138,7 @@ struct classvtable _11QVBoxLayout_vtable [2] = {
 	_11QVBoxLayout_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -26568,7 +26568,7 @@ const char *_14QStackedLayout_vtable_name_0 [] = {
 	};
 
 const char *_14QStackedLayout_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N14QStackedLayoutD1Ev",
 #endif
 #if defined __ia64__
@@ -26607,7 +26607,7 @@ const char *_14QStackedLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N14QStackedLayoutD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N14QStackedLayoutD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26628,13 +26628,13 @@ const char *_14QStackedLayout_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK14QStackedLayout8sizeHintEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK14QStackedLayout8sizeHintEv",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK14QStackedLayout11minimumSizeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK14QStackedLayout11minimumSizeEv",
 #endif
 #if defined __s390x__
@@ -26652,7 +26652,7 @@ const char *_14QStackedLayout_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK14QStackedLayout11minimumSizeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QLayout11maximumSizeEv",
 #endif
 #if defined __ia64__
@@ -26682,7 +26682,7 @@ const char *_14QStackedLayout_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QLayout19expandingDirectionsEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QLayout19expandingDirectionsEv",
 #endif
 #if defined __powerpc64__
@@ -26706,7 +26706,7 @@ const char *_14QStackedLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N14QStackedLayout11setGeometryERK5QRect",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N14QStackedLayout11setGeometryERK5QRect",
 #endif
 #if defined __ia64__
@@ -26727,7 +26727,7 @@ const char *_14QStackedLayout_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QLayout8geometryEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QLayout8geometryEv",
 #endif
 #if defined __powerpc64__
@@ -26742,7 +26742,7 @@ const char *_14QStackedLayout_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QLayout7isEmptyEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QLayout7isEmptyEv",
 #endif
 #if defined __ia64__
@@ -26778,11 +26778,11 @@ const char *_14QStackedLayout_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N7QLayout10invalidateEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N7QLayout10invalidateEv",
 #endif
 	"_ZN11QLayoutItem6widgetEv",
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -26816,7 +26816,7 @@ struct classvtable _14QStackedLayout_vtable [2] = {
 	_14QStackedLayout_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -27096,7 +27096,7 @@ const char *_12QStylePlugin_vtable_name_0 [] = {
 	};
 
 const char *_12QStylePlugin_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N12QStylePluginD1Ev",
 #endif
 #if defined __x86_64__
@@ -27132,7 +27132,7 @@ const char *_12QStylePlugin_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N12QStylePluginD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N12QStylePluginD0Ev",
 #endif
 #if defined __x86_64__
@@ -27152,7 +27152,7 @@ struct classvtable _12QStylePlugin_vtable [2] = {
 	_12QStylePlugin_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -27189,7 +27189,7 @@ struct classvtable _12QStylePlugin_vtable [2] = {
 
 struct base_type_info _12QStylePlugin_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTI22QStyleFactoryInterface",	2050U},
 #endif
 #if defined __ia64__
@@ -27536,7 +27536,7 @@ const char *_19QInputContextPlugin_vtable_name_0 [] = {
 	};
 
 const char *_19QInputContextPlugin_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N19QInputContextPluginD1Ev",
 #endif
 #if defined __x86_64__
@@ -27560,7 +27560,7 @@ const char *_19QInputContextPlugin_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N19QInputContextPluginD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N19QInputContextPluginD0Ev",
 #endif
 #if defined __powerpc64__
@@ -27595,7 +27595,7 @@ struct classvtable _19QInputContextPlugin_vtable [2] = {
 	_19QInputContextPlugin_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -27632,7 +27632,7 @@ struct classvtable _19QInputContextPlugin_vtable [2] = {
 
 struct base_type_info _19QInputContextPlugin_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
-#if defined ___i386__
+#if defined __i386__
 	{"_ZTI29QInputContextFactoryInterface",	2050U},
 #endif
 #if defined __ia64__
@@ -27809,7 +27809,7 @@ const char *_15QAbstractButton_vtable_name_0 [] = {
 	};
 
 const char *_15QAbstractButton_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N15QAbstractButtonD1Ev",
 #endif
 #if defined __s390x__
@@ -27848,7 +27848,7 @@ const char *_15QAbstractButton_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N15QAbstractButtonD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N15QAbstractButtonD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27866,7 +27866,7 @@ const char *_15QAbstractButton_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -27875,7 +27875,7 @@ const char *_15QAbstractButton_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -27893,7 +27893,7 @@ const char *_15QAbstractButton_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -27926,7 +27926,7 @@ struct classvtable _15QAbstractButton_vtable [2] = {
 	_15QAbstractButton_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -28051,7 +28051,7 @@ const char *_9QCheckBox_vtable_name_0 [] = {
 	};
 
 const char *_9QCheckBox_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N9QCheckBoxD1Ev",
 #endif
 #if defined __ia64__
@@ -28090,7 +28090,7 @@ const char *_9QCheckBox_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N9QCheckBoxD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N9QCheckBoxD0Ev",
 #endif
 #if defined __ia64__
@@ -28111,13 +28111,13 @@ const char *_9QCheckBox_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28141,7 +28141,7 @@ const char *_9QCheckBox_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __s390x__
@@ -28168,7 +28168,7 @@ struct classvtable _9QCheckBox_vtable [2] = {
 	_9QCheckBox_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -28290,7 +28290,7 @@ const char *_5QMenu_vtable_name_0 [] = {
 	};
 
 const char *_5QMenu_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N5QMenuD1Ev",
 #endif
 #if defined __s390x__
@@ -28329,7 +28329,7 @@ const char *_5QMenu_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N5QMenuD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N5QMenuD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28347,7 +28347,7 @@ const char *_5QMenu_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -28356,7 +28356,7 @@ const char *_5QMenu_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28374,7 +28374,7 @@ const char *_5QMenu_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -28407,7 +28407,7 @@ struct classvtable _5QMenu_vtable [2] = {
 	_5QMenu_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -28529,7 +28529,7 @@ const char *_10QWorkspace_vtable_name_0 [] = {
 	};
 
 const char *_10QWorkspace_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N10QWorkspaceD1Ev",
 #endif
 #if defined __s390x__
@@ -28568,7 +28568,7 @@ const char *_10QWorkspace_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N10QWorkspaceD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N10QWorkspaceD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28586,7 +28586,7 @@ const char *_10QWorkspace_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -28595,7 +28595,7 @@ const char *_10QWorkspace_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28613,7 +28613,7 @@ const char *_10QWorkspace_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -28646,7 +28646,7 @@ struct classvtable _10QWorkspace_vtable [2] = {
 	_10QWorkspace_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -28830,7 +28830,7 @@ const char *_8QSpinBox_vtable_name_0 [] = {
 	};
 
 const char *_8QSpinBox_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N8QSpinBoxD1Ev",
 #endif
 #if defined __ia64__
@@ -28869,7 +28869,7 @@ const char *_8QSpinBox_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N8QSpinBoxD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N8QSpinBoxD0Ev",
 #endif
 #if defined __ia64__
@@ -28890,13 +28890,13 @@ const char *_8QSpinBox_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -28920,7 +28920,7 @@ const char *_8QSpinBox_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __s390x__
@@ -28947,7 +28947,7 @@ struct classvtable _8QSpinBox_vtable [2] = {
 	_8QSpinBox_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -29076,7 +29076,7 @@ const char *_14QDoubleSpinBox_vtable_name_0 [] = {
 	};
 
 const char *_14QDoubleSpinBox_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N14QDoubleSpinBoxD1Ev",
 #endif
 #if defined __ia64__
@@ -29115,7 +29115,7 @@ const char *_14QDoubleSpinBox_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N14QDoubleSpinBoxD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N14QDoubleSpinBoxD0Ev",
 #endif
 #if defined __ia64__
@@ -29136,13 +29136,13 @@ const char *_14QDoubleSpinBox_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29166,7 +29166,7 @@ const char *_14QDoubleSpinBox_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __s390x__
@@ -29193,7 +29193,7 @@ struct classvtable _14QDoubleSpinBox_vtable [2] = {
 	_14QDoubleSpinBox_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -29315,7 +29315,7 @@ const char *_10QLCDNumber_vtable_name_0 [] = {
 	};
 
 const char *_10QLCDNumber_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N10QLCDNumberD1Ev",
 #endif
 #if defined __s390x__
@@ -29354,7 +29354,7 @@ const char *_10QLCDNumber_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N10QLCDNumberD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N10QLCDNumberD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29372,7 +29372,7 @@ const char *_10QLCDNumber_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -29381,7 +29381,7 @@ const char *_10QLCDNumber_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29399,7 +29399,7 @@ const char *_10QLCDNumber_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -29432,7 +29432,7 @@ struct classvtable _10QLCDNumber_vtable [2] = {
 	_10QLCDNumber_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -29554,7 +29554,7 @@ const char *_14QStackedWidget_vtable_name_0 [] = {
 	};
 
 const char *_14QStackedWidget_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N14QStackedWidgetD1Ev",
 #endif
 #if defined __s390x__
@@ -29593,7 +29593,7 @@ const char *_14QStackedWidget_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N14QStackedWidgetD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N14QStackedWidgetD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29611,7 +29611,7 @@ const char *_14QStackedWidget_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -29620,7 +29620,7 @@ const char *_14QStackedWidget_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29638,7 +29638,7 @@ const char *_14QStackedWidget_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -29671,7 +29671,7 @@ struct classvtable _14QStackedWidget_vtable [2] = {
 	_14QStackedWidget_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -29796,7 +29796,7 @@ const char *_11QPushButton_vtable_name_0 [] = {
 	};
 
 const char *_11QPushButton_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QPushButtonD1Ev",
 #endif
 #if defined __s390x__
@@ -29835,7 +29835,7 @@ const char *_11QPushButton_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N11QPushButtonD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QPushButtonD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29853,7 +29853,7 @@ const char *_11QPushButton_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -29862,7 +29862,7 @@ const char *_11QPushButton_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -29880,7 +29880,7 @@ const char *_11QPushButton_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -29913,7 +29913,7 @@ struct classvtable _11QPushButton_vtable [2] = {
 	_11QPushButton_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -30036,7 +30036,7 @@ const char *_13QSplashScreen_vtable_name_0 [] = {
 	};
 
 const char *_13QSplashScreen_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N13QSplashScreenD1Ev",
 #endif
 #if defined __s390x__
@@ -30075,7 +30075,7 @@ const char *_13QSplashScreen_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N13QSplashScreenD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N13QSplashScreenD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30093,7 +30093,7 @@ const char *_13QSplashScreen_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -30102,7 +30102,7 @@ const char *_13QSplashScreen_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30120,7 +30120,7 @@ const char *_13QSplashScreen_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -30153,7 +30153,7 @@ struct classvtable _13QSplashScreen_vtable [2] = {
 	_13QSplashScreen_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -30282,7 +30282,7 @@ const char *_13QDateTimeEdit_vtable_name_0 [] = {
 	};
 
 const char *_13QDateTimeEdit_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N13QDateTimeEditD1Ev",
 #endif
 #if defined __ia64__
@@ -30321,7 +30321,7 @@ const char *_13QDateTimeEdit_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N13QDateTimeEditD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N13QDateTimeEditD0Ev",
 #endif
 #if defined __ia64__
@@ -30342,13 +30342,13 @@ const char *_13QDateTimeEdit_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30372,7 +30372,7 @@ const char *_13QDateTimeEdit_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __s390x__
@@ -30399,7 +30399,7 @@ struct classvtable _13QDateTimeEdit_vtable [2] = {
 	_13QDateTimeEdit_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -30528,7 +30528,7 @@ const char *_9QTimeEdit_vtable_name_0 [] = {
 	};
 
 const char *_9QTimeEdit_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N9QTimeEditD1Ev",
 #endif
 #if defined __ia64__
@@ -30567,7 +30567,7 @@ const char *_9QTimeEdit_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N9QTimeEditD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N9QTimeEditD0Ev",
 #endif
 #if defined __ia64__
@@ -30588,13 +30588,13 @@ const char *_9QTimeEdit_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30618,7 +30618,7 @@ const char *_9QTimeEdit_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __s390x__
@@ -30645,7 +30645,7 @@ struct classvtable _9QTimeEdit_vtable [2] = {
 	_9QTimeEdit_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -30774,7 +30774,7 @@ const char *_9QDateEdit_vtable_name_0 [] = {
 	};
 
 const char *_9QDateEdit_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N9QDateEditD1Ev",
 #endif
 #if defined __ia64__
@@ -30813,7 +30813,7 @@ const char *_9QDateEdit_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N9QDateEditD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N9QDateEditD0Ev",
 #endif
 #if defined __ia64__
@@ -30834,13 +30834,13 @@ const char *_9QDateEdit_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -30864,7 +30864,7 @@ const char *_9QDateEdit_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __s390x__
@@ -30891,7 +30891,7 @@ struct classvtable _9QDateEdit_vtable [2] = {
 	_9QDateEdit_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -31013,7 +31013,7 @@ const char *_6QLabel_vtable_name_0 [] = {
 	};
 
 const char *_6QLabel_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N6QLabelD1Ev",
 #endif
 #if defined __s390x__
@@ -31052,7 +31052,7 @@ const char *_6QLabel_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N6QLabelD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N6QLabelD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31070,7 +31070,7 @@ const char *_6QLabel_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -31079,7 +31079,7 @@ const char *_6QLabel_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31097,7 +31097,7 @@ const char *_6QLabel_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -31130,7 +31130,7 @@ struct classvtable _6QLabel_vtable [2] = {
 	_6QLabel_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -31252,7 +31252,7 @@ const char *_11QDockWidget_vtable_name_0 [] = {
 	};
 
 const char *_11QDockWidget_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QDockWidgetD1Ev",
 #endif
 #if defined __s390x__
@@ -31291,7 +31291,7 @@ const char *_11QDockWidget_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N11QDockWidgetD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QDockWidgetD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31309,7 +31309,7 @@ const char *_11QDockWidget_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -31318,7 +31318,7 @@ const char *_11QDockWidget_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31336,7 +31336,7 @@ const char *_11QDockWidget_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -31369,7 +31369,7 @@ struct classvtable _11QDockWidget_vtable [2] = {
 	_11QDockWidget_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -31491,7 +31491,7 @@ const char *_9QGroupBox_vtable_name_0 [] = {
 	};
 
 const char *_9QGroupBox_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N9QGroupBoxD1Ev",
 #endif
 #if defined __s390x__
@@ -31530,7 +31530,7 @@ const char *_9QGroupBox_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N9QGroupBoxD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N9QGroupBoxD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31548,7 +31548,7 @@ const char *_9QGroupBox_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -31557,7 +31557,7 @@ const char *_9QGroupBox_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31575,7 +31575,7 @@ const char *_9QGroupBox_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -31608,7 +31608,7 @@ struct classvtable _9QGroupBox_vtable [2] = {
 	_9QGroupBox_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -31731,7 +31731,7 @@ const char *_11QMainWindow_vtable_name_0 [] = {
 	};
 
 const char *_11QMainWindow_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QMainWindowD1Ev",
 #endif
 #if defined __s390x__
@@ -31770,7 +31770,7 @@ const char *_11QMainWindow_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N11QMainWindowD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QMainWindowD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31788,7 +31788,7 @@ const char *_11QMainWindow_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -31797,7 +31797,7 @@ const char *_11QMainWindow_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -31815,7 +31815,7 @@ const char *_11QMainWindow_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -31848,7 +31848,7 @@ struct classvtable _11QMainWindow_vtable [2] = {
 	_11QMainWindow_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -31976,7 +31976,7 @@ const char *_9QTextEdit_vtable_name_0 [] = {
 	};
 
 const char *_9QTextEdit_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N9QTextEditD1Ev",
 #endif
 #if defined __s390x__
@@ -32015,7 +32015,7 @@ const char *_9QTextEdit_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N9QTextEditD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N9QTextEditD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32033,7 +32033,7 @@ const char *_9QTextEdit_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -32042,7 +32042,7 @@ const char *_9QTextEdit_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32060,7 +32060,7 @@ const char *_9QTextEdit_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -32093,7 +32093,7 @@ struct classvtable _9QTextEdit_vtable [2] = {
 	_9QTextEdit_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -32216,7 +32216,7 @@ const char *_12QProgressBar_vtable_name_0 [] = {
 	};
 
 const char *_12QProgressBar_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N12QProgressBarD1Ev",
 #endif
 #if defined __ia64__
@@ -32255,7 +32255,7 @@ const char *_12QProgressBar_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N12QProgressBarD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N12QProgressBarD0Ev",
 #endif
 #if defined __ia64__
@@ -32276,13 +32276,13 @@ const char *_12QProgressBar_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32306,7 +32306,7 @@ const char *_12QProgressBar_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __s390x__
@@ -32333,7 +32333,7 @@ struct classvtable _12QProgressBar_vtable [2] = {
 	_12QProgressBar_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -32456,7 +32456,7 @@ const char *_10QScrollBar_vtable_name_0 [] = {
 	};
 
 const char *_10QScrollBar_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N10QScrollBarD1Ev",
 #endif
 #if defined __s390x__
@@ -32495,7 +32495,7 @@ const char *_10QScrollBar_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N10QScrollBarD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N10QScrollBarD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32513,7 +32513,7 @@ const char *_10QScrollBar_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -32522,7 +32522,7 @@ const char *_10QScrollBar_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32540,7 +32540,7 @@ const char *_10QScrollBar_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -32573,7 +32573,7 @@ struct classvtable _10QScrollBar_vtable [2] = {
 	_10QScrollBar_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -32695,7 +32695,7 @@ const char *_9QSizeGrip_vtable_name_0 [] = {
 	};
 
 const char *_9QSizeGrip_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N9QSizeGripD1Ev",
 #endif
 #if defined __s390x__
@@ -32734,7 +32734,7 @@ const char *_9QSizeGrip_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N9QSizeGripD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N9QSizeGripD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32752,7 +32752,7 @@ const char *_9QSizeGrip_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -32761,7 +32761,7 @@ const char *_9QSizeGrip_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -32779,7 +32779,7 @@ const char *_9QSizeGrip_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -32812,7 +32812,7 @@ struct classvtable _9QSizeGrip_vtable [2] = {
 	_9QSizeGrip_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -32945,7 +32945,7 @@ const char *_12QTextBrowser_vtable_name_0 [] = {
 	};
 
 const char *_12QTextBrowser_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N12QTextBrowserD1Ev",
 #endif
 #if defined __s390x__
@@ -32984,7 +32984,7 @@ const char *_12QTextBrowser_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N12QTextBrowserD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N12QTextBrowserD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -33002,7 +33002,7 @@ const char *_12QTextBrowser_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -33011,7 +33011,7 @@ const char *_12QTextBrowser_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -33029,7 +33029,7 @@ const char *_12QTextBrowser_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -33062,7 +33062,7 @@ struct classvtable _12QTextBrowser_vtable [2] = {
 	_12QTextBrowser_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -33184,7 +33184,7 @@ const char *_10QStatusBar_vtable_name_0 [] = {
 	};
 
 const char *_10QStatusBar_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N10QStatusBarD1Ev",
 #endif
 #if defined __s390x__
@@ -33223,7 +33223,7 @@ const char *_10QStatusBar_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N10QStatusBarD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N10QStatusBarD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -33241,7 +33241,7 @@ const char *_10QStatusBar_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -33250,7 +33250,7 @@ const char *_10QStatusBar_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -33268,7 +33268,7 @@ const char *_10QStatusBar_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -33301,7 +33301,7 @@ struct classvtable _10QStatusBar_vtable [2] = {
 	_10QStatusBar_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -33425,7 +33425,7 @@ const char *_11QScrollArea_vtable_name_0 [] = {
 	};
 
 const char *_11QScrollArea_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QScrollAreaD1Ev",
 #endif
 #if defined __s390x__
@@ -33464,7 +33464,7 @@ const char *_11QScrollArea_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N11QScrollAreaD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QScrollAreaD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -33482,7 +33482,7 @@ const char *_11QScrollArea_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -33491,7 +33491,7 @@ const char *_11QScrollArea_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -33509,7 +33509,7 @@ const char *_11QScrollArea_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -33542,7 +33542,7 @@ struct classvtable _11QScrollArea_vtable [2] = {
 	_11QScrollArea_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -33667,7 +33667,7 @@ const char *_11QToolButton_vtable_name_0 [] = {
 	};
 
 const char *_11QToolButton_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QToolButtonD1Ev",
 #endif
 #if defined __s390x__
@@ -33706,7 +33706,7 @@ const char *_11QToolButton_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N11QToolButtonD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QToolButtonD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -33724,7 +33724,7 @@ const char *_11QToolButton_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -33733,7 +33733,7 @@ const char *_11QToolButton_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -33751,7 +33751,7 @@ const char *_11QToolButton_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -33784,7 +33784,7 @@ struct classvtable _11QToolButton_vtable [2] = {
 	_11QToolButton_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -33908,7 +33908,7 @@ const char *_9QComboBox_vtable_name_0 [] = {
 	};
 
 const char *_9QComboBox_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N9QComboBoxD1Ev",
 #endif
 #if defined __s390x__
@@ -33947,7 +33947,7 @@ const char *_9QComboBox_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N9QComboBoxD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N9QComboBoxD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -33965,7 +33965,7 @@ const char *_9QComboBox_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -33974,7 +33974,7 @@ const char *_9QComboBox_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -33992,7 +33992,7 @@ const char *_9QComboBox_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -34025,7 +34025,7 @@ struct classvtable _9QComboBox_vtable [2] = {
 	_9QComboBox_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -34205,7 +34205,7 @@ const char *_12QRadioButton_vtable_name_0 [] = {
 	};
 
 const char *_12QRadioButton_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N12QRadioButtonD1Ev",
 #endif
 #if defined __ia64__
@@ -34244,7 +34244,7 @@ const char *_12QRadioButton_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N12QRadioButtonD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N12QRadioButtonD0Ev",
 #endif
 #if defined __ia64__
@@ -34265,13 +34265,13 @@ const char *_12QRadioButton_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34295,7 +34295,7 @@ const char *_12QRadioButton_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __s390x__
@@ -34322,7 +34322,7 @@ struct classvtable _12QRadioButton_vtable [2] = {
 	_12QRadioButton_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -34444,7 +34444,7 @@ const char *_8QMenuBar_vtable_name_0 [] = {
 	};
 
 const char *_8QMenuBar_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N8QMenuBarD1Ev",
 #endif
 #if defined __s390x__
@@ -34483,7 +34483,7 @@ const char *_8QMenuBar_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N8QMenuBarD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N8QMenuBarD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34501,7 +34501,7 @@ const char *_8QMenuBar_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -34510,7 +34510,7 @@ const char *_8QMenuBar_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34528,7 +34528,7 @@ const char *_8QMenuBar_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -34561,7 +34561,7 @@ struct classvtable _8QMenuBar_vtable [2] = {
 	_8QMenuBar_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -34683,7 +34683,7 @@ const char *_11QFocusFrame_vtable_name_0 [] = {
 	};
 
 const char *_11QFocusFrame_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QFocusFrameD1Ev",
 #endif
 #if defined __s390x__
@@ -34722,7 +34722,7 @@ const char *_11QFocusFrame_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N11QFocusFrameD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N11QFocusFrameD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34740,7 +34740,7 @@ const char *_11QFocusFrame_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -34749,7 +34749,7 @@ const char *_11QFocusFrame_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34767,7 +34767,7 @@ const char *_11QFocusFrame_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -34800,7 +34800,7 @@ struct classvtable _11QFocusFrame_vtable [2] = {
 	_11QFocusFrame_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -34922,7 +34922,7 @@ const char *_8QToolBar_vtable_name_0 [] = {
 	};
 
 const char *_8QToolBar_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N8QToolBarD1Ev",
 #endif
 #if defined __s390x__
@@ -34961,7 +34961,7 @@ const char *_8QToolBar_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N8QToolBarD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N8QToolBarD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -34979,7 +34979,7 @@ const char *_8QToolBar_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -34988,7 +34988,7 @@ const char *_8QToolBar_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -35006,7 +35006,7 @@ const char *_8QToolBar_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -35039,7 +35039,7 @@ struct classvtable _8QToolBar_vtable [2] = {
 	_8QToolBar_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -35163,7 +35163,7 @@ const char *_8QToolBox_vtable_name_0 [] = {
 	};
 
 const char *_8QToolBox_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N8QToolBoxD1Ev",
 #endif
 #if defined __s390x__
@@ -35202,7 +35202,7 @@ const char *_8QToolBox_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N8QToolBoxD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N8QToolBoxD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -35220,7 +35220,7 @@ const char *_8QToolBox_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -35229,7 +35229,7 @@ const char *_8QToolBox_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -35247,7 +35247,7 @@ const char *_8QToolBox_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -35280,7 +35280,7 @@ struct classvtable _8QToolBox_vtable [2] = {
 	_8QToolBox_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -35403,7 +35403,7 @@ const char *_9QSplitter_vtable_name_0 [] = {
 	};
 
 const char *_9QSplitter_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N9QSplitterD1Ev",
 #endif
 #if defined __s390x__
@@ -35442,7 +35442,7 @@ const char *_9QSplitter_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N9QSplitterD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N9QSplitterD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -35460,7 +35460,7 @@ const char *_9QSplitter_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -35469,7 +35469,7 @@ const char *_9QSplitter_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -35487,7 +35487,7 @@ const char *_9QSplitter_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -35520,7 +35520,7 @@ struct classvtable _9QSplitter_vtable [2] = {
 	_9QSplitter_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -35642,7 +35642,7 @@ const char *_15QSplitterHandle_vtable_name_0 [] = {
 	};
 
 const char *_15QSplitterHandle_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N15QSplitterHandleD1Ev",
 #endif
 #if defined __ia64__
@@ -35681,7 +35681,7 @@ const char *_15QSplitterHandle_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N15QSplitterHandleD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N15QSplitterHandleD0Ev",
 #endif
 #if defined __ia64__
@@ -35702,13 +35702,13 @@ const char *_15QSplitterHandle_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -35732,7 +35732,7 @@ const char *_15QSplitterHandle_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __s390x__
@@ -35759,7 +35759,7 @@ struct classvtable _15QSplitterHandle_vtable [2] = {
 	_15QSplitterHandle_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif
@@ -35882,7 +35882,7 @@ const char *_5QDial_vtable_name_0 [] = {
 	};
 
 const char *_5QDial_vtable_name_1 [] = {
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N5QDialD1Ev",
 #endif
 #if defined __s390x__
@@ -35921,7 +35921,7 @@ const char *_5QDial_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_N5QDialD0Ev",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_N5QDialD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -35939,7 +35939,7 @@ const char *_5QDial_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -35948,7 +35948,7 @@ const char *_5QDial_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -35966,7 +35966,7 @@ const char *_5QDial_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined ___i386__
+#if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc64__
@@ -35999,7 +35999,7 @@ struct classvtable _5QDial_vtable [2] = {
 	_5QDial_vtable_name_0,
 	},
 	{
-#if defined ___i386__
+#if defined __i386__
 	0,
 	-8,
 #endif

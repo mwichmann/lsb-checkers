@@ -28,9 +28,9 @@ struct SectionInfo SectionInfo[] = {
 	{".gnu.version",SHT_GNU_versym,SHF_ALLOC,checkGNU_versym},
 	{".gnu.version_d",SHT_GNU_verdef,SHF_ALLOC,checkGNU_verdef},
 	{".gnu.version_r",SHT_GNU_verneed,SHF_ALLOC,checkGNU_verneed},
-#if defined ___i386__
+#if defined __i386__
 	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	{".got",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE+SHF_IA_64_SHORT,checkPROGBITS},
 #endif /* defined __ia64__ */
@@ -79,9 +79,9 @@ struct SectionInfo SectionInfo[] = {
 #if defined __powerpc64__
 	{".opd",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* defined __powerpc64__ */
-#if defined ___i386__
+#if defined __i386__
 	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __ia64__
 	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
 #endif /* defined __ia64__ */
@@ -101,36 +101,36 @@ struct SectionInfo SectionInfo[] = {
 	{".plt",SHT_PROGBITS,SHF_ALLOC+SHF_EXECINSTR,checkPROGBITS},
 #endif /* defined __s390x__ */
 	{".preinit_array",SHT_PREINIT_ARRAY,SHF_ALLOC+SHF_WRITE,checkPREINIT_ARRAY},
-#if defined ___i386__
+#if defined __i386__
 	{".rel.bss",SHT_REL,SHF_ALLOC,checkREL},
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __x86_64__
 	{".rel.bss",SHT_REL,SHF_ALLOC,checkREL},
 #endif /* defined __x86_64__ */
-#if defined ___i386__
+#if defined __i386__
 	{".rel.data",SHT_REL,0,checkREL},
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __x86_64__
 	{".rel.data",SHT_REL,SHF_ALLOC,checkREL},
 #endif /* defined __x86_64__ */
-#if defined ___i386__
+#if defined __i386__
 	{".rel.dyn",SHT_REL,SHF_ALLOC,checkREL},
-#endif /* defined ___i386__ */
-#if defined ___i386__
+#endif /* defined __i386__ */
+#if defined __i386__
 	{".rel.got",SHT_REL,SHF_ALLOC,checkREL},
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __x86_64__
 	{".rel.got",SHT_REL,SHF_ALLOC,checkREL},
 #endif /* defined __x86_64__ */
-#if defined ___i386__
+#if defined __i386__
 	{".rel.plt",SHT_REL,SHF_ALLOC,checkREL},
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __x86_64__
 	{".rel.plt",SHT_REL,SHF_ALLOC,checkREL},
 #endif /* defined __x86_64__ */
-#if defined ___i386__
+#if defined __i386__
 	{".rel.text",SHT_REL,0,checkREL},
-#endif /* defined ___i386__ */
+#endif /* defined __i386__ */
 #if defined __x86_64__
 	{".rel.text",SHT_REL,SHF_ALLOC,checkREL},
 #endif /* defined __x86_64__ */
