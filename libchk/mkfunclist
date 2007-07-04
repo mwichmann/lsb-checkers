@@ -45,9 +45,10 @@ my($select,%entry);
 $classbase=$$class{'CIname'};
 $classbase=~s/_Z//;
 
-if( $seenclass{$classbase} ) {
-	die "Already seen $classbase\n";
-	}
+# This check is not a good idea - Qt3 and Qt4 have a lot of similar classes
+# if( $seenclass{$classbase} ) {
+# 	die "Already seen $classbase\n";
+# 	}
 $seenclass{$classbase}=1;
 		
 #
@@ -93,11 +94,9 @@ $select.= "LEFT JOIN Interface ON Iid=VTviid ";
 $select.= "LEFT JOIN ArchInt ON Iid=AIint ";
 $select.= "WHERE VTcid=".$$class{'CIid'}." ";
 $select.= "AND VTvtpos=$pos ";
-$select.= "AND (AIarch IS NOT NULL OR Iname IS NULL) ";
+$select.= "AND (AIarch IS NOT NULL OR Iname IS NULL) "; # Iname here looks like a hack...
 # $select.= "AND AIarch = VTarch ";
 $select.= "ORDER BY VTpos";
-
-#print $select . "\n";
 
 print $LIB "const char *".$vtablename."_name_$pos [] = {\n";
 $vsth = $Dbh->query($select) || die $Dbh->errmsg();
@@ -315,10 +314,14 @@ print "$numsyms symbols\n";
 # Now, look for class data that me be present
 #
 $select = "SELECT DISTINCT * FROM ClassInfo ";
+$select.= "LEFT JOIN ArchClass ON ACcid=CIid ";
 $select.= "LEFT JOIN LibGroup ON LibGroup.LGid=CIlibg ";
 $select.= "LEFT JOIN Library ON LibGroup.LGLIB=Library.Lid ";
 $select.= "WHERE Library.Lid=$lid ";
-$select.= "AND CInumvtab > 0";
+$select.= "AND ACappearedin<>'' AND ACappearedin <= '$lsbversion' ";
+$select.= "AND (ACwithdrawnin IS NULL OR ACwithdrawnin > '$lsbversion') ";
+$select.= "AND CInumvtab > 0 ";
+$select.= "GROUP BY ACcid";
 #$select.= "AND CIname LIKE '_ZSd'";
 
 #print $select."\n";
