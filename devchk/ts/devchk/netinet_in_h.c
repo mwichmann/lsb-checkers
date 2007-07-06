@@ -324,6 +324,9 @@ cnt++;
 #endif
 
 #if 1
+CheckTypeSize(struct in_addr,4, 10143, 1, 1.1, NULL, 0, NULL)
+CheckMemberSize(struct in_addr,s_addr,4,1,33767)
+CheckOffset(struct in_addr,s_addr,0,1,33767)
 #endif
 
 #if 1
@@ -331,12 +334,25 @@ CheckTypeSize(in_addr_t,4, 10302, 1, 1.3, NULL, 9272, NULL)
 #endif
 
 #if 1
+CheckTypeSize(struct in6_addr,16, 6900, 1, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct in6_addr,in6_u,16,1,33783)
+CheckOffset(struct in6_addr,in6_u,0,1,33783)
 #endif
 
 #if 1
+CheckTypeSize(struct ipv6_mreq,20, 6903, 1, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct ipv6_mreq,ipv6mr_multiaddr,16,1,33789)
+CheckOffset(struct ipv6_mreq,ipv6mr_multiaddr,0,1,33789)
+CheckMemberSize(struct ipv6_mreq,ipv6mr_interface,4,1,33790)
+CheckOffset(struct ipv6_mreq,ipv6mr_interface,16,1,33790)
 #endif
 
 #if 1
+CheckTypeSize(struct ip_mreq,8, 10146, 1, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct ip_mreq,imr_multiaddr,4,1,33768)
+CheckOffset(struct ip_mreq,imr_multiaddr,0,1,33768)
+CheckMemberSize(struct ip_mreq,imr_interface,4,1,33769)
+CheckOffset(struct ip_mreq,imr_interface,4,1,33769)
 #endif
 
 #if 1
@@ -344,9 +360,29 @@ CheckTypeSize(in_port_t,2, 10888, 1, 2.0, NULL, 9271, NULL)
 #endif
 
 #if 1
+CheckTypeSize(struct sockaddr_in,16, 9141, 1, 1.1, NULL, 0, NULL)
+CheckMemberSize(struct sockaddr_in,sin_family,2,1,33776)
+CheckOffset(struct sockaddr_in,sin_family,0,1,33776)
+CheckMemberSize(struct sockaddr_in,sin_port,2,1,33777)
+CheckOffset(struct sockaddr_in,sin_port,2,1,33777)
+CheckMemberSize(struct sockaddr_in,sin_addr,4,1,33778)
+CheckOffset(struct sockaddr_in,sin_addr,4,1,33778)
+CheckMemberSize(struct sockaddr_in,sin_zero,8,1,33779)
+CheckOffset(struct sockaddr_in,sin_zero,8,1,33779)
 #endif
 
 #if 1
+CheckTypeSize(struct sockaddr_in6,28, 6902, 1, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct sockaddr_in6,sin6_family,2,1,33784)
+CheckOffset(struct sockaddr_in6,sin6_family,0,1,33784)
+CheckMemberSize(struct sockaddr_in6,sin6_port,2,1,33785)
+CheckOffset(struct sockaddr_in6,sin6_port,2,1,33785)
+CheckMemberSize(struct sockaddr_in6,sin6_flowinfo,4,1,33786)
+CheckOffset(struct sockaddr_in6,sin6_flowinfo,4,1,33786)
+CheckMemberSize(struct sockaddr_in6,sin6_addr,16,1,33787)
+CheckOffset(struct sockaddr_in6,sin6_addr,8,1,33787)
+CheckMemberSize(struct sockaddr_in6,sin6_scope_id,4,1,33788)
+CheckOffset(struct sockaddr_in6,sin6_scope_id,24,1,33788)
 #endif
 
 extern int bindresvport_db(int, struct sockaddr_in *);

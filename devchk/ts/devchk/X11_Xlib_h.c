@@ -28,12 +28,26 @@ Msg("Checking data structures in X11/Xlib.h\n");
 
 printf("Checking data structures in X11/Xlib.h\n");
 #if defined __i386__
+CheckTypeSize(struct _XDisplay,176, 7053, 2, 1.2, NULL, 0, NULL)
+Msg("Missing member data for _XDisplay on IA32\n");
 #elif defined __ia64__
+CheckTypeSize(struct _XDisplay,296, 7053, 3, 1.3, NULL, 0, NULL)
+Msg("Missing member data for _XDisplay on IA64\n");
 #elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _XDisplay,176, 7053, 6, 1.2, NULL, 0, NULL)
+Msg("Missing member data for _XDisplay on PPC32\n");
 #elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _XDisplay,176, 7053, 10, 1.3, NULL, 0, NULL)
+Msg("Missing member data for _XDisplay on S390\n");
 #elif defined __powerpc64__
+CheckTypeSize(struct _XDisplay,296, 7053, 9, 2.0, NULL, 0, NULL)
+Msg("Missing member data for _XDisplay on PPC64\n");
 #elif defined __s390x__
+CheckTypeSize(struct _XDisplay,296, 7053, 12, 1.3, NULL, 0, NULL)
+Msg("Missing member data for _XDisplay on S390X\n");
 #elif defined __x86_64__
+CheckTypeSize(struct _XDisplay,296, 7053, 11, 2.0, NULL, 0, NULL)
+Msg("Missing member data for _XDisplay on x86-64\n");
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,7053,0);
 Msg("Find size of _XDisplay (7053)\n");

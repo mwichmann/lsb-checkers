@@ -617,12 +617,33 @@ Msg("Find size of free_func (9873)\n");
 #endif
 
 #if defined __i386__
+CheckTypeSize(struct internal_state,4, 9874, 2, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct internal_state,dummy,4,2,34081)
+CheckOffset(struct internal_state,dummy,0,2,34081)
 #elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct internal_state,4, 9874, 6, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct internal_state,dummy,4,6,34081)
+CheckOffset(struct internal_state,dummy,0,6,34081)
 #elif defined __ia64__
+CheckTypeSize(struct internal_state,4, 9874, 3, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct internal_state,dummy,4,3,34081)
+CheckOffset(struct internal_state,dummy,0,3,34081)
 #elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct internal_state,4, 9874, 10, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct internal_state,dummy,4,10,34081)
+CheckOffset(struct internal_state,dummy,0,10,34081)
 #elif defined __powerpc64__
+CheckTypeSize(struct internal_state,4, 9874, 9, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct internal_state,dummy,4,9,34081)
+CheckOffset(struct internal_state,dummy,0,9,34081)
 #elif defined __s390x__
+CheckTypeSize(struct internal_state,4, 9874, 12, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct internal_state,dummy,4,12,34081)
+CheckOffset(struct internal_state,dummy,0,12,34081)
 #elif defined __x86_64__
+CheckTypeSize(struct internal_state,4, 9874, 11, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct internal_state,dummy,4,11,34081)
+CheckOffset(struct internal_state,dummy,0,11,34081)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9874,0);
 Msg("Find size of internal_state (9874)\n");

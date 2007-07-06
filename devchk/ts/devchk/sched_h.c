@@ -56,6 +56,9 @@ cnt++;
 #endif
 
 #if 1
+CheckTypeSize(struct sched_param,4, 9045, 1, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct sched_param,sched_priority,4,1,33571)
+CheckOffset(struct sched_param,sched_priority,0,1,33571)
 #endif
 
 extern int sched_get_priority_max_db(int);
