@@ -36,12 +36,33 @@ cnt++;
 #endif
 
 #if defined __i386__
+CheckTypeSize(struct sockaddr_un,110, 9152, 2, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct sockaddr_un,sun_path,108,2,34486)
+CheckOffset(struct sockaddr_un,sun_path,2,2,34486)
 #elif defined __ia64__
+CheckTypeSize(struct sockaddr_un,110, 9152, 3, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct sockaddr_un,sun_path,108,3,34486)
+CheckOffset(struct sockaddr_un,sun_path,2,3,34486)
 #elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct sockaddr_un,110, 9152, 10, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct sockaddr_un,sun_path,108,10,34486)
+CheckOffset(struct sockaddr_un,sun_path,2,10,34486)
 #elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct sockaddr_un,110, 9152, 6, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct sockaddr_un,sun_path,108,6,34486)
+CheckOffset(struct sockaddr_un,sun_path,2,6,34486)
 #elif defined __powerpc64__
+CheckTypeSize(struct sockaddr_un,110, 9152, 9, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct sockaddr_un,sun_path,108,9,34486)
+CheckOffset(struct sockaddr_un,sun_path,2,9,34486)
 #elif defined __s390x__
+CheckTypeSize(struct sockaddr_un,110, 9152, 12, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct sockaddr_un,sun_path,108,12,34486)
+CheckOffset(struct sockaddr_un,sun_path,2,12,34486)
 #elif defined __x86_64__
+CheckTypeSize(struct sockaddr_un,110, 9152, 11, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct sockaddr_un,sun_path,108,11,34486)
+CheckOffset(struct sockaddr_un,sun_path,2,11,34486)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,9152,0);
 Msg("Find size of sockaddr_un (9152)\n");

@@ -26,12 +26,63 @@ Msg("Checking data structures in grp.h\n");
 
 printf("Checking data structures in grp.h\n");
 #if defined __i386__
+CheckTypeSize(struct group,16, 6894, 2, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct group,gr_name,4,2,29792)
+CheckOffset(struct group,gr_name,0,2,29792)
+CheckMemberSize(struct group,gr_passwd,4,2,29793)
+CheckOffset(struct group,gr_passwd,4,2,29793)
+CheckMemberSize(struct group,gr_gid,4,2,29794)
+CheckOffset(struct group,gr_gid,8,2,29794)
+CheckMemberSize(struct group,gr_mem,4,2,29795)
+CheckOffset(struct group,gr_mem,12,2,29795)
 #elif defined __ia64__
+CheckTypeSize(struct group,32, 6894, 3, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct group,gr_passwd,8,3,29793)
+CheckOffset(struct group,gr_passwd,8,3,29793)
+CheckMemberSize(struct group,gr_gid,4,3,29794)
+CheckOffset(struct group,gr_gid,16,3,29794)
+CheckMemberSize(struct group,gr_mem,8,3,29795)
+CheckOffset(struct group,gr_mem,24,3,29795)
 #elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct group,16, 6894, 6, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct group,gr_passwd,4,6,29793)
+CheckOffset(struct group,gr_passwd,4,6,29793)
+CheckMemberSize(struct group,gr_gid,4,6,29794)
+CheckOffset(struct group,gr_gid,8,6,29794)
+CheckMemberSize(struct group,gr_mem,4,6,29795)
+CheckOffset(struct group,gr_mem,12,6,29795)
 #elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct group,16, 6894, 10, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct group,gr_passwd,4,10,29793)
+CheckOffset(struct group,gr_passwd,4,10,29793)
+CheckMemberSize(struct group,gr_gid,4,10,29794)
+CheckOffset(struct group,gr_gid,8,10,29794)
+CheckMemberSize(struct group,gr_mem,4,10,29795)
+CheckOffset(struct group,gr_mem,12,10,29795)
 #elif defined __powerpc64__
+CheckTypeSize(struct group,32, 6894, 9, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct group,gr_passwd,8,9,29793)
+CheckOffset(struct group,gr_passwd,8,9,29793)
+CheckMemberSize(struct group,gr_gid,4,9,29794)
+CheckOffset(struct group,gr_gid,16,9,29794)
+CheckMemberSize(struct group,gr_mem,8,9,29795)
+CheckOffset(struct group,gr_mem,24,9,29795)
 #elif defined __s390x__
+CheckTypeSize(struct group,32, 6894, 12, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct group,gr_passwd,8,12,29793)
+CheckOffset(struct group,gr_passwd,8,12,29793)
+CheckMemberSize(struct group,gr_gid,4,12,29794)
+CheckOffset(struct group,gr_gid,16,12,29794)
+CheckMemberSize(struct group,gr_mem,8,12,29795)
+CheckOffset(struct group,gr_mem,24,12,29795)
 #elif defined __x86_64__
+CheckTypeSize(struct group,32, 6894, 11, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct group,gr_passwd,8,11,29793)
+CheckOffset(struct group,gr_passwd,8,11,29793)
+CheckMemberSize(struct group,gr_gid,4,11,29794)
+CheckOffset(struct group,gr_gid,16,11,29794)
+CheckMemberSize(struct group,gr_mem,8,11,29795)
+CheckOffset(struct group,gr_mem,24,11,29795)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,6894,0);
 Msg("Find size of group (6894)\n");
