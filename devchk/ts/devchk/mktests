@@ -602,7 +602,7 @@ sub writetest($$) {
 # 			$tselect .= " OR Tindirect='Yes')";
 			$ttth    = $Dbh->query($tselect) || die $Dbh->errmsg();
 			%ttentry = $ttth->fetchhash;
-			if ($ttentry{'Tid'}) {
+			if( $ttentry{'Tid'} or ($tentry{'ATbasetype'} == 0) ) {
 				$withdrawnin = $ATwithdrawnin ? "'$ATwithdrawnin'" : "NULL";
 				$attribute = $ATattribute ? "'$ATattribute'" : "NULL";
            		print TESTS "CheckTypeSize($type $Tname,$ATsize, $Tid, $Aid, $ATappearedin, $withdrawnin, $ATbasetype, $attribute)\n";
@@ -700,14 +700,14 @@ sub writetest($$) {
                 %tmentry = $tmh->fetchhash;
                 if ( $tmentry{'TMarray'} ne '' ) {
                     $lastvalue = "$tmentry{'TMarray'}";
-                    print TESTS "CheckEnum(\"$tmentry{'TMname'}\",$tmentry{'TMname'},$tmentry{'TMarray'},$tmentry{'TMid'});\n";
+                    print TESTS "CheckEnum(\"$tmentry{'TMname'}\",$tmentry{'TMname'},$tmentry{'TMarray'},$tmentry{'TMid'})\n";
                 } else {
                     if ( $_ == 1 ) {
                         $lastvalue = "0";
                     } else {
                         $lastvalue = "(" . $lastvalue . ") + 1";
                     }
-                    print TESTS "CheckEnum(\"$tmentry{'TMname'}\",$tmentry{'TMname'},$lastvalue,$tmentry{'TMid'});\n";
+                    print TESTS "CheckEnum(\"$tmentry{'TMname'}\",$tmentry{'TMname'},$lastvalue,$tmentry{'TMid'})\n";
                 }
             }
             next;
@@ -767,7 +767,7 @@ sub writetest($$) {
 					$tselect .= "AND Tid=" . $ttentry{'ATbasetype'};
 					$ttth = $Dbh->query($tselect) || die $Dbh->errmsg();
 					%ttentry = $ttth->fetchhash;
-					if ($ttentry{'Tid'}) {
+					if ($ttentry{'Tid'} or ($ttentry{'ATbasetype'} == 0) ) {
 						print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid, $ATappearedin, $withdrawnin, $ATbasetype, $attribute)\n";
 					}
 				} else {
