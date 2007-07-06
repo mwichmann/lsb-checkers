@@ -2140,6 +2140,7 @@ CheckInterfacedef(bsd_signal,bsd_signal_db);
 extern int __xpg_sigpause_db(int);
 CheckInterfacedef(__xpg_sigpause,__xpg_sigpause_db);
 #endif
+#ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
 else
