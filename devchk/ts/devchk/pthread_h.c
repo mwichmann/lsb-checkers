@@ -240,12 +240,75 @@ cnt++;
 #endif
 
 #if defined __i386__
+CheckTypeSize(struct _pthread_cleanup_buffer,16, 6931, 2, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct _pthread_cleanup_buffer,__routine,4,2,40619)
+CheckOffset(struct _pthread_cleanup_buffer,__routine,0,2,40619)
+CheckMemberSize(struct _pthread_cleanup_buffer,__arg,4,2,40620)
+CheckOffset(struct _pthread_cleanup_buffer,__arg,4,2,40620)
+CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,2,40621)
+CheckOffset(struct _pthread_cleanup_buffer,__canceltype,8,2,40621)
+CheckMemberSize(struct _pthread_cleanup_buffer,__prev,4,2,40622)
+CheckOffset(struct _pthread_cleanup_buffer,__prev,12,2,40622)
 #elif defined __s390x__
+CheckTypeSize(struct _pthread_cleanup_buffer,32, 6931, 12, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct _pthread_cleanup_buffer,__routine,8,12,40619)
+CheckOffset(struct _pthread_cleanup_buffer,__routine,0,12,40619)
+CheckMemberSize(struct _pthread_cleanup_buffer,__arg,8,12,40620)
+CheckOffset(struct _pthread_cleanup_buffer,__arg,8,12,40620)
+CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,12,40621)
+CheckOffset(struct _pthread_cleanup_buffer,__canceltype,16,12,40621)
+CheckMemberSize(struct _pthread_cleanup_buffer,__prev,8,12,40622)
+CheckOffset(struct _pthread_cleanup_buffer,__prev,24,12,40622)
 #elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _pthread_cleanup_buffer,16, 6931, 6, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct _pthread_cleanup_buffer,__routine,4,6,40619)
+CheckOffset(struct _pthread_cleanup_buffer,__routine,0,6,40619)
+CheckMemberSize(struct _pthread_cleanup_buffer,__arg,4,6,40620)
+CheckOffset(struct _pthread_cleanup_buffer,__arg,4,6,40620)
+CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,6,40621)
+CheckOffset(struct _pthread_cleanup_buffer,__canceltype,8,6,40621)
+CheckMemberSize(struct _pthread_cleanup_buffer,__prev,4,6,40622)
+CheckOffset(struct _pthread_cleanup_buffer,__prev,12,6,40622)
 #elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _pthread_cleanup_buffer,16, 6931, 10, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct _pthread_cleanup_buffer,__routine,4,10,40619)
+CheckOffset(struct _pthread_cleanup_buffer,__routine,0,10,40619)
+CheckMemberSize(struct _pthread_cleanup_buffer,__arg,4,10,40620)
+CheckOffset(struct _pthread_cleanup_buffer,__arg,4,10,40620)
+CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,10,40621)
+CheckOffset(struct _pthread_cleanup_buffer,__canceltype,8,10,40621)
+CheckMemberSize(struct _pthread_cleanup_buffer,__prev,4,10,40622)
+CheckOffset(struct _pthread_cleanup_buffer,__prev,12,10,40622)
 #elif defined __ia64__
+CheckTypeSize(struct _pthread_cleanup_buffer,32, 6931, 3, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct _pthread_cleanup_buffer,__routine,8,3,40619)
+CheckOffset(struct _pthread_cleanup_buffer,__routine,0,3,40619)
+CheckMemberSize(struct _pthread_cleanup_buffer,__arg,8,3,40620)
+CheckOffset(struct _pthread_cleanup_buffer,__arg,8,3,40620)
+CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,3,40621)
+CheckOffset(struct _pthread_cleanup_buffer,__canceltype,16,3,40621)
+CheckMemberSize(struct _pthread_cleanup_buffer,__prev,8,3,40622)
+CheckOffset(struct _pthread_cleanup_buffer,__prev,24,3,40622)
 #elif defined __powerpc64__
+CheckTypeSize(struct _pthread_cleanup_buffer,32, 6931, 9, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct _pthread_cleanup_buffer,__routine,8,9,40619)
+CheckOffset(struct _pthread_cleanup_buffer,__routine,0,9,40619)
+CheckMemberSize(struct _pthread_cleanup_buffer,__arg,8,9,40620)
+CheckOffset(struct _pthread_cleanup_buffer,__arg,8,9,40620)
+CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,9,40621)
+CheckOffset(struct _pthread_cleanup_buffer,__canceltype,16,9,40621)
+CheckMemberSize(struct _pthread_cleanup_buffer,__prev,8,9,40622)
+CheckOffset(struct _pthread_cleanup_buffer,__prev,24,9,40622)
 #elif defined __x86_64__
+CheckTypeSize(struct _pthread_cleanup_buffer,32, 6931, 11, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct _pthread_cleanup_buffer,__routine,8,11,40619)
+CheckOffset(struct _pthread_cleanup_buffer,__routine,0,11,40619)
+CheckMemberSize(struct _pthread_cleanup_buffer,__arg,8,11,40620)
+CheckOffset(struct _pthread_cleanup_buffer,__arg,8,11,40620)
+CheckMemberSize(struct _pthread_cleanup_buffer,__canceltype,4,11,40621)
+CheckOffset(struct _pthread_cleanup_buffer,__canceltype,16,11,40621)
+CheckMemberSize(struct _pthread_cleanup_buffer,__prev,8,11,40622)
+CheckOffset(struct _pthread_cleanup_buffer,__prev,24,11,40622)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,6931,0);
 Msg("Find size of _pthread_cleanup_buffer (6931)\n");
@@ -330,12 +393,35 @@ Msg("Find size of pthread_t (9040)\n");
 #endif
 
 #if defined __i386__
+CheckTypeSize(struct _pthread_fastlock,8, 10105, 2, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _pthread_fastlock,__status,4,2,33602)
+CheckOffset(struct _pthread_fastlock,__status,0,2,33602)
+CheckMemberSize(struct _pthread_fastlock,__spinlock,4,2,34427)
+CheckOffset(struct _pthread_fastlock,__spinlock,4,2,34427)
 #elif defined __ia64__
+CheckTypeSize(struct _pthread_fastlock,16, 10105, 3, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct _pthread_fastlock,__spinlock,4,3,34427)
+CheckOffset(struct _pthread_fastlock,__spinlock,8,3,34427)
 #elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _pthread_fastlock,8, 10105, 6, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _pthread_fastlock,__spinlock,4,6,34427)
+CheckOffset(struct _pthread_fastlock,__spinlock,4,6,34427)
 #elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _pthread_fastlock,8, 10105, 10, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct _pthread_fastlock,__spinlock,4,10,34427)
+CheckOffset(struct _pthread_fastlock,__spinlock,4,10,34427)
 #elif defined __powerpc64__
+CheckTypeSize(struct _pthread_fastlock,16, 10105, 9, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct _pthread_fastlock,__spinlock,4,9,34427)
+CheckOffset(struct _pthread_fastlock,__spinlock,8,9,34427)
 #elif defined __s390x__
+CheckTypeSize(struct _pthread_fastlock,16, 10105, 12, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct _pthread_fastlock,__spinlock,4,12,34427)
+CheckOffset(struct _pthread_fastlock,__spinlock,8,12,34427)
 #elif defined __x86_64__
+CheckTypeSize(struct _pthread_fastlock,16, 10105, 11, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct _pthread_fastlock,__spinlock,4,11,34427)
+CheckOffset(struct _pthread_fastlock,__spinlock,8,11,34427)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10105,0);
 Msg("Find size of _pthread_fastlock (10105)\n");
