@@ -84,7 +84,7 @@ CheckTypeSize(ptrdiff_t,8, 9027, 11, 2.0, NULL, 8, NULL)
 #elif defined __s390x__
 CheckTypeSize(ptrdiff_t,8, 9027, 12, 2.0, NULL, 8, NULL)
 #elif defined __ia64__
-CheckTypeSize(ptrdiff_t,0, 9027, 3, 2.0, NULL, 8, NULL)
+CheckTypeSize(ptrdiff_t,8, 9027, 3, 2.0, NULL, 8, NULL)
 #endif
 
 #ifdef TET_TEST
