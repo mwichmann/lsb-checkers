@@ -392,6 +392,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architect
 Msg("Find size of pthread_t (9040)\n");
 #endif
 
+#ifdef LSBCC_MODE       /* XXX hand-edit */
 #if defined __i386__
 CheckTypeSize(struct _pthread_fastlock,8, 10105, 2, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct _pthread_fastlock,__status,4,2,33602)
@@ -425,6 +426,7 @@ CheckOffset(struct _pthread_fastlock,__spinlock,8,11,34427)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10105,0);
 Msg("Find size of _pthread_fastlock (10105)\n");
+#endif
 #endif
 
 #if defined __i386__
