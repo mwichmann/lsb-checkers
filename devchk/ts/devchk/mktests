@@ -286,70 +286,6 @@ sub writetest($$) {
     local ($lastid);
     my (%entry);
 
-    #
-    # Get the return types
-    #
-    $select = "SELECT Ireturn FROM Interface ";
-    $select .= "LEFT JOIN ArchInt ON Iid=AIint ";
-    $select .= "WHERE Iheader=$Hid ";
-	$select .= "AND (AIappearedin <= '$lsbversion' and AIappearedin<>'') ";
-	$select .= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin >'$lsbversion')";
-
-    #$select.= "AND AIarch=$Aid";
-    print $select, "\n" if $trace;
-    $sth = $Dbh->query($select) || die $Dbh->errmsg();
-    for ( 1 .. $sth->numrows ) {
-        %entry = $sth->fetchhash;
-        $type{ $entry{'Ireturn'} } = 1;
-    }
-
-    #
-    # Get the parameter types
-    #
-    $select = "SELECT Ptype FROM Interface LEFT JOIN Parameter ON Pint=Iid ";
-    $select .= "LEFT JOIN ArchInt ON AIint=Iid ";
-    $select .= "WHERE Iheader=$Hid ";
-    $select .= "AND (AIappearedin <= '$lsbversion' and AIappearedin<>'') ";
-    $select .= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin >'$lsbversion')";
-
-    #$select.= "AND AIarch=$Aid";
-    print $select, "\n" if $trace;
-    $sth = $Dbh->query($select) || die $Dbh->errmsg();
-    for ( 1 .. $sth->numrows ) {
-        %entry = $sth->fetchhash;
-        if( $entry{'Ptype'} ) {
-        	$type{ $entry{'Ptype'} } = 1;
-        }
-    }
-
-    $typelist = join ',', keys(%type);
-
-    if ( $typelist eq "" ) {
-		print "No types to tests to write for $Hname\n";
-		return 0;
-    }
-
-    # Get referenced types
-    $select = "SELECT DISTINCT * FROM Type ";
-    $select.= "LEFT JOIN ArchType ON ATtid=Tid ";
-    $select .= "WHERE Tid IN ($typelist) ";
-    $select .= "AND Ttype = 'Pointer'";
-    $sth = $Dbh->query($select) || die $Dbh->errmsg();
-    for ( 1 .. $sth->numrows ) {
-        %entry = $sth->fetchhash;
-        $type{ $entry{'ATbasetype'} } = 1;
-    }
-
-    $typelist = join ',', keys(%type);
-
-    $fname = $Hname;
-    $fname =~ tr/\/.-/__/;
-    $filename = $fname . ".c";
-    $objname  = $fname . ".o";
-
-    open( TESTS, ">$filename" ) || die "Can't open $filename for writing";
-    print "Writing tests for $Hname to $filename\n";
-
     # Get Constants
     $select = "SELECT DISTINCT * FROM Constant ";
     $select .= "INNER JOIN HeaderGroup on CHeadgroup=HGid ";
@@ -367,15 +303,22 @@ sub writetest($$) {
     $select .= "LEFT JOIN ArchType ON ATtid=Tid ";
     $select .= "LEFT JOIN Architecture ON Aid=ATaid ";
     $select .= "WHERE HGheader=$Hid ";
-
-    #$select.= "AND Tid IN ($typelist) ";
 	$select.= "AND ( (ATappearedin <= '$lsbversion' AND ATappearedin<>'') ";
 	$select.= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin >'$lsbversion') ) ";
 #     $select .= "OR Tindirect = 'Yes' )";
     $select .= "ORDER BY Theadergroup,Tid ";
     $tth = $Dbh->query($select) || die $Dbh->errmsg();
 
+    $fname = $Hname;
+    $fname =~ tr/\/.-/__/;
+    $filename = $fname . ".c";
+    $objname  = $fname . ".o";
+
+    open( TESTS, ">$filename" ) || die "Can't open $filename for writing";
+    print "Writing tests for $Hname to $filename\n";
+
     if ( $cth->numrows == 0 && $tth->numrows == 0 ) {
+    	print "No types to tests to write for $Hname\n";
         print TESTS "/*\n * No values in $Hname\n */\n";
         close(TESTS);
         return;
