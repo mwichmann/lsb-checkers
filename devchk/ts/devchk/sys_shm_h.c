@@ -347,7 +347,7 @@ CheckMemberSize(struct shmid_ds,__unused5,8,11,40748)
 CheckOffset(struct shmid_ds,__unused5,104,11,40748)
 #endif
 
-#if !defined__ia64__   /* XXX hand-edit */
+#if !defined __ia64__   /* XXX hand-edit */
 extern int __getpagesize_db(void);
 CheckInterfacedef(__getpagesize,__getpagesize_db);
 #endif
