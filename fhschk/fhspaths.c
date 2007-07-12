@@ -25,9 +25,10 @@ static struct fhspath fhspaths[] = {
     {"/dev/tty", FHS_READ | FHS_WRITE, "6.1.3"},
     {"/dev/zero", FHS_READ, "6.1.3"},
     {"/dev/", FHS_PREFIX | FHS_READ | FHS_WRITE, "3.6"},
-    {"/etc/init.d/", FHS_PREFIX | FHS_READ | FHS_INSTALL, "0.0"},	/* bug 1368 */
+    {"/etc/init.d/", FHS_PREFIX | FHS_READ | FHS_INSTALL, "LSB 16.2"}, /* bug 1368 */
     {"/etc/opt/%s/", FHS_PREFIX | FHS_FORMAT | FHS_READ | FHS_INSTALL, "3.7.4"},
     {"/etc/opt/%s", FHS_FORMAT | FHS_READ | FHS_INSTALL, "3.7.4"},
+    {"/etc/profile.d/", FHS_PREFIX | FHS_READ | FHS_INSTALL, "LSB 16.2"}, /* bug 1368 */
     {"/etc/", FHS_PREFIX, "3.7"},
     {"/home/", FHS_PREFIX, "3.8"},
     {"/lib/cpp", FHS_PREFIX | FHS_EXEC, "3.9.2"},
