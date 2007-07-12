@@ -127,13 +127,27 @@ checksymbols(ElfFile *file, int modules)
             RESULT(tetj_activity_count, tetj_tp_count, TETJ_WARNING);
             PURPOSE_END(tetj_activity_count, tetj_tp_count);
           }
+
 	/*
 	 * Check to see if the symbol is "ioctl". If so, issue a special 
 	 * warning.
 	 */
 	if( strcmp( DynSyms[j].name, "ioctl" ) == 0 ) {
             snprintf(tmp_string, TMP_STRING_LENGTH,
-                     "Unable to determine if parameters to ioctl() are used in accordance with the LSB. ");
+                     "Unable to determine if parameters to ioctl() are used in accordance with the LSB");
+            TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
+                          tmp_string);
+            RESULT(tetj_activity_count, tetj_tp_count, TETJ_FIP);
+            PURPOSE_END(tetj_activity_count, tetj_tp_count);
+            continue;
+          }
+
+	/*
+	 * do the same for "ioctl"
+	 */
+	if( strcmp( DynSyms[j].name, "dlopen" ) == 0 ) {
+            snprintf(tmp_string, TMP_STRING_LENGTH,
+                     "Unable to automatically check libraries accessed via dlopen()");
             TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
                           tmp_string);
             RESULT(tetj_activity_count, tetj_tp_count, TETJ_FIP);
