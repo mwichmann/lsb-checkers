@@ -5,7 +5,7 @@
  * License information for this file should be found in the file
  * "LICENSE".  If this file is missing, please contact us for proper
  * license information.  Current contact information can be found at
- * http://www.freestandards.org/.
+ * http://www.linux-foundation.org/.
  */
 
 #include "output.h"
@@ -335,7 +335,7 @@ void output_purpose_end(unsigned int activity, unsigned int tpnumber)
 
         prepared = stringprep(current_testcase);
         snprintf(urlbuf, PATH_MAX, 
-                 "http://developer.freestandards.org/lsbchk?suite=appchk&arch=%s&testcase=%s&tpnum=%u&result=%s",
+                 "http://developer.linux-foundation.org/lsbchk?suite=appchk&arch=%s&testcase=%s&tpnum=%u&result=%s",
                  ARCH, prepared, tpnumber, translate_result(current_result));
 
         if (current_purpose != NULL) {
