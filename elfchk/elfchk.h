@@ -269,6 +269,7 @@ extern int checkElf(ElfFile *file1, int isProgram,
                      struct tetj_handle *journal);
 extern char *getmodulename(int mod);
 extern int getmoduleval(char *mod);
+extern char *getlsbprofile(const char* lsb_version, int mod);
 
 /* note.c */
 extern int check_NOTE(ElfFile *file, unsigned char *notes, int length, struct tetj_handle *journal);

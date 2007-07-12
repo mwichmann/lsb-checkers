@@ -5,7 +5,7 @@
  * License information for this file should be found in the file
  * "LICENSE".  If this file is missing, please contact us for proper
  * license information.  Current contact information can be found at
- * http://www.freestandards.org/.
+ * http://www.linux-foundation.org/.
  */
 
 #ifndef __OUTPUT_H
