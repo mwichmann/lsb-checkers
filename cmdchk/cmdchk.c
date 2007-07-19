@@ -148,7 +148,7 @@ void usage(char *progname)
 	   "  -v, --version                  show version and LSB version\n"
 	   "  -n, --nojournal                do not write a journal file\n"
 	   "  -j JOURNAL, --version=JOURNAL  use JOURNAL as file/path for journal file\n"
-	   "  -p PREFIX, --prefix=PREFIX     prefix to append to all paths\n",
+	   "  -p PREFIX, --prefix=PREFIX     prefix to append to all paths\n"
 	   "  -T [core,c++|core,c++,desktop], --lsb-product [core|desktop]\n"
 	   "                                 Lsb product/spec to target\n",
     progname);

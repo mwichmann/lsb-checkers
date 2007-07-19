@@ -2,13 +2,13 @@ LSBLIBCHK_VERSION=unofficial
 
 include libs.mk
 
-OBJS = libchk.o libs.o classchk.o $(LIBOBJS)
+OBJS = libchk.o libs.o classchk.o lsb_ver.o $(LIBOBJS)
 
 CFLAGS=-g -I../elfchk -I../tetj -DUSE_CXXABI_DEMANGLE -DLSBVERSION=\"$$LSBVERSION\" -DLSBLIBCHK_VERSION=\"$(LSBLIBCHK_VERSION)\" -Wall
 
-GENSRCS=libs.h libs.c
+GENSRCS=libs.h libs.c lsb_ver.c
 
-all:: libchk dummy_link
+all: libchk dummy_link
 
 include ../Makefile.common
 
@@ -17,7 +17,7 @@ libchk: $(OBJS) ../elfchk/libelfchk.a ../tetj/libtetj.a
 
 gensrc: $(GENSRCS)
 
-libs.c libs.h:
+libs.c libs.h lsb_ver.c:
 	./mkfunclist -v `cat LSB_VERSION`
 
 LSB_LINKER=`./lsb_linker`

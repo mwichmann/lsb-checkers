@@ -1,8 +1,8 @@
 CFLAGS=-g -Wall -I../tetj
 
 OBJS=dynamic.o elfchk.o hdr.o proghdr.o sections.o symvers.o util.o \
-	proginterp.o progbits.o note.o dumpbytes.o dwarf.o
-GENSRCS=dynsyms.c dtneeded.c sectinfo.c secttype.c dyntags.c modules.c
+	proginterp.o progbits.o note.o dumpbytes.o dwarf.o ../lsb_version.o
+GENSRCS=dynsyms.c dtneeded.c sectinfo.c secttype.c dyntags.c modules.c ../lsb_version.c
 GENOBJS=$(shell echo $(GENSRCS) | sed s/\\.c/.o/g)
 LIBS= ../tetj/libtetj.a
 LIB=libelfchk.a
@@ -12,6 +12,8 @@ OBJS_APPCHK=$(shell echo $(OBJS) | perl -pe 's/(\S+)\.o/\1_appchk.o/g')
 LIB_APPCHK=libelfchk_appchk.a
 
 all: modules.c $(LIB) $(LIB_APPCHK) test
+
+include ../Makefile.common
 
 install:
 

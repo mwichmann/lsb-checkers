@@ -1,7 +1,7 @@
 
-OBJS = libchk.o classchk.o libstdcxx_so_6.o tetj.o util.o hdr.o symvers.o ../elfchk/modules.o
+OBJS = libchk.o classchk.o libstdcxx_so_6.o tetj.o util.o hdr.o symvers.o lsb_ver.o ../lsb_version.o ../elfchk/modules.o
 SRCS = classchk.c elfchk.h hdr.h libchk.c libchk.h libstdcxx_so_6.c \
-	tetj.c tetj.h util.c hdr.c symvers.c symvers.h
+	tetj.c tetj.h util.c hdr.c symvers.c symvers.h lsb_ver.c ../lsb_version.c
 
 CFLAGS=-g -DLSBVERSION=\"$$LSBVERSION\" -DLSBLIBCHK_VERSION=\"$$LSBVERSION\" -D_CXXABICHK_ -Wall -I../elfchk
 LSBLIBCHK_VERSION=unofficial
@@ -22,25 +22,28 @@ tetj.h:
 libchk.c: elfchk.h tetj.h ../libchk/libchk.c ../libchk/libchk.h
 	cp ../libchk/libchk.c .
 	cp ../libchk/libchk.h .
-	
+
 classchk.c: elfchk.h ../libchk/classchk.c
 	cp ../libchk/classchk.c .
-	
+
 libstdcxx_so_6.c: ../libchk/libstdcxx_so_6.c
 	cp ../libchk/libstdcxx_so_6.c .
-	
+
 tetj.c: tetj.h
 	cp ../tetj/tetj.c .
-	
+
 util.c: ../elfchk/util.c
 	cp ../elfchk/util.c .
-	
+
 hdr.c:
 	cp ../elfchk/hdr.c .
-	
+
 symvers.c:
 	cp ../elfchk/symvers.c .
-	
+
+lsb_ver.c: ../libchk/lsb_ver.c
+	cp ../libchk/lsb_ver.c .
+
 dist: $(SRCS) README
 	cd ..;tar zcf cxxabichk.tar.gz cxxabichk
 

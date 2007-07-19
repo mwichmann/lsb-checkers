@@ -79,7 +79,7 @@ if( rpmchkdebug&DEBUG_TRACE_TAGS )
 			ntohl(hdr->hsize), hoffset, (long)file1->storeaddr);
 
 checkRpmHdr(file1, journal);
-checkRpmIdx(file1, hindex, SigTags, numSigIdxTags, journal);
+checkRpmIdx(file1, hindex, SigTags[LSB_Version], numSigIdxTags[LSB_Version], journal);
 
 file1->nexthdr=(RpmHeader *)(file1->addr+hoffset);
 }
@@ -105,7 +105,7 @@ if( rpmchkdebug&DEBUG_TRACE_TAGS )
 			ntohl(hdr->hsize), hoffset, (long)file1->storeaddr);
 
 checkRpmHdr(file1, journal);
-checkRpmIdx(file1, hindex, HdrTags, numHdrIdxTags, journal);
+checkRpmIdx(file1, hindex, HdrTags[LSB_Version], numHdrIdxTags[LSB_Version], journal);
 
 file1->nexthdr=(RpmHeader *)(file1->addr+hoffset);
 }

@@ -52,15 +52,15 @@ checksymbols(ElfFile *file, struct tetj_handle *journal)
       }
 #endif
 
-      for (j=0; j<numDynSyms; j++) 
+      for (j=0; j<numDynSyms[LSB_Version]; j++) 
       {
-	if( !(modules&DynSyms[j].modname) )
+	if( !(modules&DynSyms[LSB_Version][j].modname) )
 	  continue;
 
-        if (!strcmp(symbol_name, DynSyms[j].name))
+        if (!strcmp(symbol_name, DynSyms[LSB_Version][j].name))
           break;
       }
-      if ( j == numDynSyms ) 
+      if ( j == numDynSyms[LSB_Version] ) 
       {
         if (!symbolinlibrary(symbol_name, journal))
         {
@@ -97,12 +97,12 @@ checksymbols(ElfFile *file, struct tetj_handle *journal)
                   symbol_name, file->vers[i],
                   file->versionnames[file->vers[i]]);
 #endif
-          if(strcmp(file->versionnames[file->vers[i]],DynSyms[j].vername) != 0)
+          if(strcmp(file->versionnames[file->vers[i]],DynSyms[LSB_Version][j].vername) != 0)
           {
             snprintf(tmp_string, TMP_STRING_LENGTH,
                      "Symbol %s has version %s expecting %s",
                      symbol_name,
-                     file->versionnames[file->vers[i]], DynSyms[j].vername);
+                     file->versionnames[file->vers[i]], DynSyms[LSB_Version][j].vername);
             printf("%s\n", tmp_string);
             tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0,
                                0, 0, tmp_string);
@@ -117,10 +117,10 @@ checksymbols(ElfFile *file, struct tetj_handle *journal)
 	 * Check to see if the symbol has been deprecated. If so, issue a
 	 * warning.
 	 */
-	if( DynSyms[j].deprecated ) {
+	if( DynSyms[LSB_Version][j].deprecated ) {
             snprintf(tmp_string, TMP_STRING_LENGTH,
                      "Symbol %s has been deprecated",
-                     DynSyms[j].name);
+                     DynSyms[LSB_Version][j].name);
             printf("%s\n", tmp_string);
             tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0,
                                0, 0, tmp_string);
@@ -132,7 +132,7 @@ checksymbols(ElfFile *file, struct tetj_handle *journal)
 	 * Check to see if the symbol is "ioctl". If so, issue a special 
 	 * warning.
 	 */
-	if( strcmp( DynSyms[j].name, "ioctl" ) == 0 ) {
+	if( strcmp( DynSyms[LSB_Version][j].name, "ioctl" ) == 0 ) {
             snprintf(tmp_string, TMP_STRING_LENGTH,
                      "Unable to determine if parameters to ioctl() are used in accordance with the LSB. ");
             printf("%s\n", tmp_string);

@@ -51,12 +51,12 @@ checkDT_NEEDED(ElfFile *file1, Elf_Shdr *hdr1, Elf_Dyn *dyn1, struct tetj_handle
           ElfGetStringIndex(file1,dyn1->d_un.d_val, hdr1->sh_link));
 #endif /* VERBOSE */
 
-  for(j=0;j<numDtNeeded;j++) {
+  for(j=0;j<numDtNeeded[LSB_Version];j++) {
 	if( !strcmp(
 		ElfGetStringIndex(file1,dyn1->d_un.d_val, hdr1->sh_link),
-		DtNeeded[j]) ) break;
+		DtNeeded[LSB_Version][j]) ) break;
 	}
-  if ( j == numDtNeeded ) 
+  if ( j == numDtNeeded[LSB_Version] ) 
   {
     /* DT_NEEDED not found in table */
     /* Check application specific list */
@@ -560,18 +560,18 @@ checkDYNAMIC(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal )
 
   for(i=0;i<numdyn;i++)
   {
-    for(j=0;j<numDynamicInfo;j++) {
-//fprintf(stderr,"Comparing %d to %d\n", dyn1[i].d_tag, DynamicInfo[j].tag );
-      if (dyn1[i].d_tag == DynamicInfo[j].tag ) {
+    for(j=0;j<numDynamicInfo[LSB_Version];j++) {
+//fprintf(stderr,"Comparing %d to %d\n", dyn1[i].d_tag, DynamicInfo[LSB_Version][j].tag );
+      if (dyn1[i].d_tag == DynamicInfo[LSB_Version][j].tag ) {
         //fprintf(stderr,"matched dyn tag %d\n",dyn1[i].d_tag );
-        if (!DynamicInfo[j].func(file1, hdr1, &dyn1[i], journal))
+        if (!DynamicInfo[LSB_Version][j].func(file1, hdr1, &dyn1[i], journal))
         {
           pass = 0;
         };
         break;
       }
     }
-    if( j == numDynamicInfo )
+    if( j == numDynamicInfo[LSB_Version] )
     {
       snprintf(tmp_string, TMP_STRING_SIZE ,
                "Dynamic Tag 0x%lx unknown", (u_long)dyn1[i].d_tag);

@@ -269,8 +269,8 @@ extern struct classinfo libstdcxx_so_6_classinfo[];
 #define MAX_LENGTH_STRING 80
 struct libpath 
 {
-	char library[MAX_LENGTH_STRING+1];
-	char fullpath[MAX_LENGTH_STRING+1];
+        char library[MAX_LENGTH_STRING+1];
+        char fullpath[MAX_LENGTH_STRING+1];
 };
 static struct libpath *library_paths = NULL;
 static int library_path_count = 0;
@@ -301,8 +301,8 @@ find_elf_file(char *libname, char *filename, int maxlen)
     /* Find the library */
     for (i=0; i<library_path_count; i++) {
       if (strcmp(libname, library_paths[i].library) == 0) {
-	strncpy(filename, library_paths[i].fullpath, maxlen);
-	break;
+        strncpy(filename, library_paths[i].fullpath, maxlen);
+        break;
       }
     }
   } else {
@@ -343,13 +343,13 @@ extra_vers(ElfFile * file, int index, int vers, char *msg, char *vername)
 {
 
     printf("    %s has %s version %s ",
-	   ElfGetStringIndex(file, file->syms[index].st_name,
-			     file->symhdr->sh_link),
-	   msg, file->versionnames[vers]);
+           ElfGetStringIndex(file, file->syms[index].st_name,
+                             file->symhdr->sh_link),
+           msg, file->versionnames[vers]);
     if (strlen(vername) > 0)
-	printf("(db %s)\n", vername);
+        printf("(db %s)\n", vername);
     else
-	printf("(db unversioned)\n");
+        printf("(db unversioned)\n");
 }
 
 /* Retrieve the list of dependencies for a ELF file. */
@@ -441,7 +441,7 @@ check_symbol(ElfFile *file, struct versym *entry)
                              file->symhdr->sh_link),entry->name);
 #endif
     symbol_name = ElfGetStringIndex(file,file->syms[j].st_name,
-				    file->symhdr->sh_link);
+                                    file->symhdr->sh_link);
 #if __powerpc64__
     /*
      * On PPC64 systems the real text for functions is stored in a symbol
@@ -452,7 +452,7 @@ check_symbol(ElfFile *file, struct versym *entry)
      * until systems generally catch up
      */
     if (symbol_name[0]=='.' && ELF32_ST_TYPE(file->syms[j].st_info)==STT_FUNC) {
-	symbol_name++;
+        symbol_name++;
     }
 #endif
     if (strcmp(symbol_name,entry->name) == 0) {
@@ -472,15 +472,15 @@ check_symbol(ElfFile *file, struct versym *entry)
       /* One means the symbol is defined & available, but not versioned */
       if (vers == 1) {
         if (entry->vername[0] != '\000') {
-	  /*
-	   * this was a warning, then an error... but actually, we don't
-	   * know yet. seems some libraries do have both an unversioned
-	   * and a versioned symbol in the library. so set a flag,
-	   * keep checking, and if we didn't find what we needed,
-	   * error out at that point
-	   */
-	  pendingerr=j;
-	  continue;
+          /*
+           * this was a warning, then an error... but actually, we don't
+           * know yet. seems some libraries do have both an unversioned
+           * and a versioned symbol in the library. so set a flag,
+           * keep checking, and if we didn't find what we needed,
+           * error out at that point
+           */
+          pendingerr=j;
+          continue;
         } else {
           /* Found an expected unversioned symbol */
           return 1;
@@ -544,13 +544,13 @@ check_symbol(ElfFile *file, struct versym *entry)
                                        file->symhdr->sh_link));
               if (libchk_debug & (LIBCHK_DEBUG_NEWVERS | LIBCHK_DEBUG_OLDVERS))
                 printf("        found version %s\n", file->versionnames[vers]);
-              foundit=1;	/* pretend vers was found */
+              foundit=1;        /* pretend vers was found */
             } else {
               printf("    Warning: did not find version tag %s in library\n",
                      entry->vername);
               if (libchk_debug & (LIBCHK_DEBUG_NEWVERS | LIBCHK_DEBUG_OLDVERS))
                 printf("        available version is %s\n", file->versionnames[vers]);
-	    }
+            }
           }
       }
 
@@ -629,9 +629,9 @@ check_symbol(ElfFile *file, struct versym *entry)
   /* check for possible error saved from above */
   if (!foundit && pendingerr) {
     printf("    Error: found unversioned symbol %s, expecting version %s\n",
-	   ElfGetStringIndex(file,file->syms[pendingerr].st_name,
-			     file->symhdr->sh_link),
-	   entry->vername);
+           ElfGetStringIndex(file,file->syms[pendingerr].st_name,
+                             file->symhdr->sh_link),
+           entry->vername);
     /* and fall through: already know foundit=0 */
   } 
 
@@ -659,7 +659,7 @@ check_size(ElfFile *file, struct versym *entry)
                              file->symhdr->sh_link),entry->name);
 #endif
     symbol_name = ElfGetStringIndex(file,file->syms[j].st_name,
-				    file->symhdr->sh_link);
+                                    file->symhdr->sh_link);
 #if __powerpc64__
     /*
      * On PPC64 systems the real text for functions is stored in a symbol
@@ -670,26 +670,26 @@ check_size(ElfFile *file, struct versym *entry)
      * until systems generally catch up
      */
     if (symbol_name[0]=='.' && ELF32_ST_TYPE(file->syms[j].st_info)==STT_FUNC) {
-	symbol_name++;
+        symbol_name++;
     }
 #endif
     if (strcmp(symbol_name,entry->name) == 0) {
       /* Now, check to see if it has the right size associated with it */
 
       if( entry->size == 0 ) {
-	/* Until the DB is fully populated, skip the check is the size is 0 */
-	return 0;
+        /* Until the DB is fully populated, skip the check is the size is 0 */
+        return 0;
       }
       if( file->syms[j].st_size != entry->size ) {
-	fprintf(stderr, "size for %s doesn't match %ld vs %d\n",
-		symbol_name, (u_long)file->syms[j].st_size, entry->size );
-	return -1;
+        fprintf(stderr, "size for %s doesn't match %ld vs %d\n",
+                symbol_name, (u_long)file->syms[j].st_size, entry->size );
+        return -1;
       } else {
 #ifdef DEBUG
-	fprintf(stderr, "size for %s does match %ld vs %d\n",
-		symbol_name, (u_long)file->syms[j].st_size, entry->size );
+        fprintf(stderr, "size for %s does match %ld vs %d\n",
+                symbol_name, (u_long)file->syms[j].st_size, entry->size );
 #endif
-	return 1;
+        return 1;
       }
     }
   }
@@ -719,7 +719,7 @@ get_size(ElfFile *file, char *symname)
                              file->symhdr->sh_link),symname);
 #endif
     symbol_name = ElfGetStringIndex(file,file->syms[j].st_name,
-				    file->symhdr->sh_link);
+                                    file->symhdr->sh_link);
 #if __powerpc64__
     /*
      * On PPC64 systems the real text for functions is stored in a symbol
@@ -730,7 +730,7 @@ get_size(ElfFile *file, char *symname)
      * until systems generally catch up
      */
     if (symbol_name[0]=='.' && ELF32_ST_TYPE(file->syms[j].st_info)==STT_FUNC) {
-	symbol_name++;
+        symbol_name++;
     }
 #endif
     if (strcmp(symbol_name,symname) == 0) {
@@ -802,7 +802,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
   if (pclose(md5_proc) == -1) {
     /* XXX should this be a failure? */
     tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, 
-		       "Failed to calculate md5sum of binary");
+                       "Failed to calculate md5sum of binary");
   } else {
     tmp_string[32] = 0;
     snprintf(tmp_string2, TMP_STRING_SIZE, "BINARY_MD5SUM=%s", tmp_string);
@@ -839,39 +839,39 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
     } else {
       /* Failed to match */
       snprintf(tmp_string2, TMP_STRING_SIZE, "Did not find %s in %s",
-	       tmp_string, libname);
+               tmp_string, libname);
       printf("%s\n", tmp_string2);
       tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-			 0, 0, 0, tmp_string2);
+                         0, 0, 0, tmp_string2);
       tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
     }
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
     /* Check the symbol size, if it's an OBJT */
     switch(check_size(file, entries+i)) {
-	case 0: /* Not an obj */
-	    break;
-	case 1: /* Passed */
-	    tetj_tp_count++;
-	    tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
-			       tmp_string);
-	    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
-	    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
-	    break;
-	case -1: /* Failed */
-	    tetj_tp_count++;
-	    tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
-			       tmp_string);
+        case 0: /* Not an obj */
+            break;
+        case 1: /* Passed */
+            tetj_tp_count++;
+            tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
+                               tmp_string);
+            tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+            tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+            break;
+        case -1: /* Failed */
+            tetj_tp_count++;
+            tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
+                               tmp_string);
 #if 0
-	    /* Failed to match */
+            /* Failed to match */
             snprintf(tmp_string2, TMP_STRING_SIZE, "Did not find %s in %s",
-	             tmp_string, libname);
-	    printf("%s\n", tmp_string2);
-	    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-			       0, 0, 0, tmp_string2);
+                     tmp_string, libname);
+            printf("%s\n", tmp_string2);
+            tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+                               0, 0, 0, tmp_string2);
 #endif
-	    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-	    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+            tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+            tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
      }
   }
 
@@ -884,79 +884,78 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
 #ifndef _CXXABICHK_
 void check_libs(struct tetj_handle *journal)
 {
-	int	i=0;
-	do {
-		if( module&modlibs[i].modname )
-			check_lib(modlibs[i].runname, modlibs[i].symbols,
-				modlibs[i].classinfo, journal);
-	} while( modlibs[++i].modname );
+        int        i=0;
+        do {
+                if( module&modlibs[i].modname )
+                        check_lib(modlibs[i].runname, modlibs[i].symbols,
+                                modlibs[i].classinfo, journal);
+        } while( modlibs[++i].modname );
 
 }
 #endif
 
 void init_library_table(char *filename)
 {
-	FILE *in_file;
-	char tmp_str[MAX_LENGTH_STRING+1];
-	char key[MAX_LENGTH_STRING+1];
-	int have_key = 0;
+        FILE *in_file;
+        char tmp_str[MAX_LENGTH_STRING+1];
+        char key[MAX_LENGTH_STRING+1];
+        int have_key = 0;
 
 
-	in_file = fopen(filename, "r");
-	if (in_file==NULL)
-	{
-		fprintf(stderr, "Attempted to open %s\n", filename);
-		perror("Unable to open file: %s");
-		exit(1);
-	}
+        in_file = fopen(filename, "r");
+        if (in_file==NULL)
+        {
+                fprintf(stderr, "Attempted to open %s\n", filename);
+                perror("Unable to open file: %s");
+                exit(1);
+        }
 
-	while (fgets(tmp_str, MAX_LENGTH_STRING, in_file))
-	{
-		if (have_key)
-		{
-			if (key[0]!='/')
-			{
-				/* Have key, and now value */
-				library_path_count += 1;
-				library_paths = realloc(library_paths, 
-																library_path_count*sizeof(struct libpath));
-				if (!library_paths)
-				{
-					perror("Out of memory");
-					exit(1);
-				}
+        while (fgets(tmp_str, MAX_LENGTH_STRING, in_file))
+        {
+                if (have_key)
+                {
+                        if (key[0]!='/')
+                        {
+                                /* Have key, and now value */
+                                library_path_count += 1;
+                                library_paths = realloc(library_paths, library_path_count*sizeof(struct libpath));
+                                if (!library_paths)
+                                {
+                                        perror("Out of memory");
+                                        exit(1);
+                                }
 
-				if (strlen(key)>0 && key[strlen(key)-1]=='\n') 
-					key[strlen(key)-1] = 0;
-				if (strlen(tmp_str)>0 && tmp_str[strlen(tmp_str)-1]=='\n') 
-					tmp_str[strlen(tmp_str)-1] = 0;
+                                if (strlen(key)>0 && key[strlen(key)-1]=='\n') 
+                                        key[strlen(key)-1] = 0;
+                                if (strlen(tmp_str)>0 && tmp_str[strlen(tmp_str)-1]=='\n') 
+                                        tmp_str[strlen(tmp_str)-1] = 0;
 
-				strcpy(library_paths[library_path_count-1].library, key);
-				strcpy(library_paths[library_path_count-1].fullpath, tmp_str);
-			}
-			have_key = 0;
-		}
-		else 
-		{
-			strcpy(key, tmp_str); 
-			have_key = 1;
-		}
-	}	
+                                strcpy(library_paths[library_path_count-1].library, key);
+                                strcpy(library_paths[library_path_count-1].fullpath, tmp_str);
+                        }
+                        have_key = 0;
+                }
+                else 
+                {
+                        strcpy(key, tmp_str); 
+                        have_key = 1;
+                }
+        }        
 
 }
 
 void
 usage(char *progname)
 {
-  printf("usage: %s [options] library_map\n"
-"  -h, --help                     show this help message and exit\n"
-"  -v, --version                  show version and LSB version\n"
-"  -n, --nojournal                do not write a journal file\n"
-"  -T, --lsb-product=[core,c++|core,c++,desktop]\n"
-"                                 target product to load modules for\n"
-"  -M MODULE, --module=MODULE     check only the libraries found in MODULE\n"
-"  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n",
-progname);
+    printf("usage: %s [options] library_map\n"
+           "  -h, --help                     show this help message and exit\n"
+           "  -v, --version                  show version and LSB version\n"
+           "  -n, --nojournal                do not write a journal file\n"
+           "  -T, --lsb-product=[core,c++|core,c++,desktop]\n"
+           "                                 target product to load modules for\n"
+           "  -M MODULE, --module=MODULE     check only the libraries found in MODULE\n"
+           "  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n",
+           progname);
 }
 
 int
@@ -966,7 +965,8 @@ main(int argc, char *argv[])
   char *ptr,tmp_string[TMP_STRING_SIZE+1];
   char journal_filename[TMP_STRING_SIZE+1];
   int option_index = 0;
-  
+  int i;
+
 #if 0
   /* Ignore LSB_PRODUCT env variable for LSB 3.1 */
   char *s = getenv("LSB_PRODUCT");
@@ -981,11 +981,24 @@ main(int argc, char *argv[])
       printf("warning: env var LSB_PRODUCT specifies an invalid product, ignoring it.\n");
       module = LSB_Core_Modules;
     }
-  } else
+  }
+  else
     module = LSB_Core_Modules;
 #endif
 
-  module = LSB_Desktop_Modules;	// default to all modules in cert program
+  /* Ensure compatibility between single-LSB-version libchk and multi-LSB-version elfchk. */
+  for (i = 0; i < num_LSB_Versions; ++i) {
+    if (strcmp(LSB_Version_str, LSB_Versions[i]) == 0) {
+        LSB_Version = i;
+        break;
+    }
+  }
+  if (LSB_Version == -1) {
+    printf("Internal error: LSB version '%s' is not implemented!\n", LSB_Version_str);
+    exit(2);
+  }
+  
+  module = LSB_Desktop_Modules[LSB_Version];   // default to all modules in cert program
   if ((ptr = getenv("LIBCHK_DEBUG")) != NULL) {
     libchk_debug = strtod(ptr,NULL);
   }
@@ -994,12 +1007,12 @@ main(int argc, char *argv[])
   while (1) {
     int c;
     static struct option long_options[] = {
-      {"help",     no_argument,        NULL, 'h'},
-      {"version",  no_argument,        NULL, 'v'},
-      {"nojournal",no_argument,        NULL, 'n'},
-      {"module",   required_argument,  NULL, 'M'},
-      {"lsb-product",   required_argument,  NULL, 'T'},
-      {"journal",  required_argument,  NULL, 'j'},
+      {"help",        no_argument,       NULL, 'h'},
+      {"version",     no_argument,       NULL, 'v'},
+      {"nojournal",   no_argument,       NULL, 'n'},
+      {"module",      required_argument, NULL, 'M'},
+      {"lsb-product", required_argument, NULL, 'T'},
+      {"journal",     required_argument, NULL, 'j'},
       {0, 0, 0, 0}
     };
 
@@ -1008,38 +1021,38 @@ main(int argc, char *argv[])
       break;
     switch (c) {
       case 'h':
-	usage(argv[0]);
-	exit (0);
+        usage(argv[0]);
+        exit (0);
       case 'v':
-	printf("%s %s for LSB Specification %s\n", argv[0],
-	       LSBLIBCHK_VERSION, LSBVERSION);
-	break;
+        printf("%s %s for LSB Specification %s\n", argv[0],
+               LSBLIBCHK_VERSION, LSBVERSION);
+        break;
       case 'n':
-	snprintf(journal_filename, TMP_STRING_SIZE, "/dev/null");
-	break;
+        snprintf(journal_filename, TMP_STRING_SIZE, "/dev/null");
+        break;
       case 'T':
-	if(strcasecmp(optarg, "core,c++") == 0)
-	  module = LSB_Core_Modules;
-	else if(strcasecmp(optarg, "core,c++,desktop") == 0)
-	  module |= LSB_Desktop_Modules;
-	else if(strcasecmp(optarg, "all") == 0)
-	  module |= LSB_All_Modules;
-	else {
-	  printf("product '%s' is not valid!\n", optarg);
-	  usage(argv[0]);
-	  exit(1);
-	}
-	break;
+        if(strcasecmp(optarg, "core,c++") == 0)
+          module = LSB_Core_Modules;
+        else if(strcasecmp(optarg, "core,c++,desktop") == 0)
+          module |= LSB_Desktop_Modules[LSB_Version];
+        else if(strcasecmp(optarg, "all") == 0)
+          module |= LSB_All_Modules;
+        else {
+          printf("product '%s' is not valid!\n", optarg);
+          usage(argv[0]);
+          exit(1);
+        }
+        break;
       case 'M':
-	module |= getmoduleval(optarg);
-	printf("Only checking libraries in module %s\n", optarg);
-	break;
+        module |= getmoduleval(optarg);
+        printf("Only checking libraries in module %s\n", optarg);
+        break;
       case 'j':
-	snprintf(journal_filename, TMP_STRING_SIZE, optarg);
-	break;
+        snprintf(journal_filename, TMP_STRING_SIZE, optarg);
+        break;
       default:
-	usage(argv[0]);
-	exit (0);
+        usage(argv[0]);
+        exit (0);
     }
   }
 #ifndef _CXXABICHK_
@@ -1051,10 +1064,9 @@ main(int argc, char *argv[])
   init_library_table(argv[optind]);
 #endif
 
-
   if (tetj_start_journal(journal_filename, &journal, "libchk") != 0) {
     snprintf(tmp_string, TMP_STRING_SIZE, "Could not open journal file %s",
-	     journal_filename);
+             journal_filename);
     perror(tmp_string);
     fprintf(stderr, "Use -j <filename> to specify an alternate location for the journal file\n");
     exit(1);
@@ -1064,14 +1076,14 @@ main(int argc, char *argv[])
   snprintf(tmp_string, TMP_STRING_SIZE, "C++ ABI Checker" );
   tetj_add_config(journal, tmp_string);
   check_lib(argc==2?argv[1]:"/usr/lib/libstdc++.so.6",
-		  libstdcxx_so_6,libstdcxx_so_6_classinfo,journal);
+                  libstdcxx_so_6,libstdcxx_so_6_classinfo,journal);
 #else
   /*
    * new journal standard requires arch in the
    * VSX_NAME line in order to fetch waiver files correctly
    */
   snprintf(tmp_string, TMP_STRING_SIZE,
-	   "VSX_NAME=lsblibchk %s (%s)", LSBLIBCHK_VERSION, tetj_arch);
+           "VSX_NAME=lsblibchk %s (%s)", LSBLIBCHK_VERSION, tetj_arch);
   tetj_add_config(journal, tmp_string);
   snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION=%s", LSBVERSION);
   tetj_add_config(journal, tmp_string);

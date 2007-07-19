@@ -407,6 +407,30 @@ checkRpmIdxPGP(RpmFile * file1, RpmHdrIndex * hidx,
     return fail;
 }
 
+/* Ensure LSB 3.0 compatibility */
+int
+checkRpmIdxSHA1HEADER(RpmFile * file1, RpmHdrIndex * hidx,
+		      struct tetj_handle *journal)
+{
+    return checkRpmIdxSHA1(file1, hidx, journal);
+}
+
+int
+checkRpmIdxDSAHEADER(RpmFile * file1, RpmHdrIndex * hidx,
+		     struct tetj_handle *journal)
+{
+    return checkRpmIdxDSA(file1, hidx, journal);
+}
+
+int
+checkRpmIdxRSAHEADER(RpmFile * file1, RpmHdrIndex * hidx,
+		     struct tetj_handle *journal)
+{
+    return checkRpmIdxRSA(file1, hidx, journal);
+}
+
+/* END OF: Ensure LSB 3.0 compatibility */
+
 int
 checkRpmIdxSHA1(RpmFile * file1, RpmHdrIndex * hidx,
 		      struct tetj_handle *journal)
