@@ -1,0 +1,18 @@
+#!/usr/bin/perl
+use strict;
+use Getopt::Long;
+
+sub usage()
+{
+print STDERR "Usage: mklsbver -v <lsbversion(s)>\n";
+print STDERR "    LSB versions should be comma-separated.\n";
+die;
+}
+
+my $lsbversion;
+GetOptions("v=s" => \$lsbversion);
+if( !$lsbversion ) { usage(); }
+
+my @lsbversions = sort split(/,/, $lsbversion);
+
+print "char* LSB_Versions[] = {\"".join("\", \"", @lsbversions)."\"};\nint num_LSB_Versions = sizeof(LSB_Versions)/sizeof(char *);\n\nint LSB_Version = -1;\n";

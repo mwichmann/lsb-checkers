@@ -33,14 +33,25 @@ static const char * __attribute((unused)) archk_revision = "$Revision: 1.9 $";
 void
 usage(char *progname)
 {
-  printf("usage: %s [options] archive ...\n%s%s%s%s%s%s%s", progname,
-"  -h, --help                     show this help message and exit\n",
-"  -v, --version                  show version and LSB version\n",
-"  -n, --nojournal                do not write a journal file\n",
-"  -A                             check the symbols in all aailable modules\n",
-"  -M MODULE, --module=MODULE     add MODULE to list of checked modules\n",
-"  -L LIB                         add LIB to list of checked libraries\n",
-"  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n");
+    int i;
+    char lsb_list[1024] = "";
+    for (i = 0; i < num_LSB_Versions; ++i) {
+        if (lsb_list[0] != '\0')
+            strcat(lsb_list, ", ");
+        strcat(lsb_list, LSB_Versions[i]);
+    }
+    printf("usage: %s [options] archive ...\n"
+           "  -h, --help                     show this help message and exit\n"
+           "  -v, --version                  show version and LSB version\n"
+           "  -n, --nojournal                do not write a journal file\n"
+           "  -r VERSION, --lsb-version=VERSION\n"
+           "                                 LSB version to test against\n"
+           "                                   (supported are: %s)\n"
+           "  -A                             check the symbols in all available modules\n"
+           "  -M MODULE, --module=MODULE     add MODULE to list of checked modules\n"
+           "  -L LIB                         add LIB to list of checked libraries\n"
+           "  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n",
+           progname, lsb_list);
 }
 
 int
@@ -70,12 +81,13 @@ main(int argc, char *argv[])
       {"help",     no_argument,        NULL, 'h'},
       {"version",  no_argument,        NULL, 'v'},
       {"nojournal",no_argument,        NULL, 'n'},
+      {"lsb-version", required_argument, NULL, 'r'},
       {"module",   required_argument,  NULL, 'M'},
       {"journal",  required_argument,  NULL, 'j'},
       {0, 0, 0, 0}
     };
 
-    c = getopt_long (argc, argv, "hvnAM:L:j:", long_options, &option_index);
+    c = getopt_long (argc, argv, "hvnr:AM:L:j:", long_options, &option_index);
     if (c == -1)
       break;
     switch (c) {
@@ -90,6 +102,19 @@ main(int argc, char *argv[])
 	snprintf(journal_filename, TMP_STRING_SIZE, "/dev/null");
 	overrideJournalFilename = 1;
 	break;
+      case 'r':
+        for (i = 0; i < num_LSB_Versions; ++i) {
+            if (strcmp(optarg, LSB_Versions[i]) == 0) {
+                LSB_Version = i;
+                break;
+            }
+        }
+        if (LSB_Version == -1) {
+            printf("LSB version '%s' is not supported!\n", optarg);
+            usage(argv[0]);
+            exit(1);
+        }
+        break;
       case 'A':
 	modules = LSB_All_Modules;
 	printf("Checking symbols in all modules\n");
@@ -119,6 +144,11 @@ main(int argc, char *argv[])
   if (optind >= argc) {
     usage(argv[0]);
     exit (1);
+  }
+
+  if (LSB_Version == -1) {
+    LSB_Version = 0;
+    printf("LSB version is not specified, using %s by default.\n\n", LSB_Versions[LSB_Version]);
   }
 
   /* Start journal logging */

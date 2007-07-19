@@ -8,6 +8,8 @@
 #define LIBCHK_DEBUG_CLASSDETAILS	0x0004
 #define LIBCHK_DEBUG_CXXHUSH		0x0008
 
+extern char* LSB_Version_str;
+
 extern int libchk_debug;
 
 /*

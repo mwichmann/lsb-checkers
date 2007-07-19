@@ -1,12 +1,14 @@
 CFLAGS=-g -Wall -DLSBVERSION=\"$$LSBVERSION\"
 
 OBJS=archive.o hdr.o idxtag.o lead.o rpmchk.o util.o vals.o fhs.o idxtbl.o \
-	md5c.o check.o dependencies.o
-GENSRCS=rpmtag.h idxtbl.c
+	md5c.o check.o dependencies.o ../lsb_version.o
+GENSRCS=rpmtag.h idxtbl.c ../lsb_version.c
 LIBS= ../tetj/libtetj.a ../elfchk/libelfchk.a ../appchk/libappchk.a ../fhschk/libfhschk.a
 LIB=librpmchk.a
 
 all: $(LIB)
+
+include ../Makefile.common
 
 install:
 

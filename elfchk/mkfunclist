@@ -6,7 +6,8 @@ use Getopt::Long;
 
 sub usage()
 {
-print STDERR "mkfunclist -v <lsbversion>\n";
+print STDERR "Usage: mkfunclist -v <lsbversion(s)>\n";
+print STDERR "    LSB versions should be comma-separated.\n";
 die;
 }
 
@@ -17,90 +18,99 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
-$select = "SELECT DISTINCT Iid,Iname,Isrconly,Iisdeprecated,AIappearedin,AIwithdrawnin,Vname,Asymbol,Aname,Aid,Mname FROM Interface ";
-$select.= "LEFT JOIN LGInt ON Iid=LGIint ";
-$select.= "LEFT JOIN LibGroup ON LGid=LGIlibg ";
-$select.= "LEFT JOIN Library ON Lid=LGlib ";
-$select.= "LEFT JOIN ModLib ON MLlid=Lid ";
-$select.= "LEFT JOIN ArchLib ON ALlid=Lid ";
-$select.= "LEFT JOIN Module ON Mid=MLmid ";
-$select.= "LEFT OUTER JOIN ArchInt ON Iid=AIint ";
-$select.= "LEFT OUTER JOIN Architecture ON Aid=AIarch ";
-$select.= "LEFT OUTER JOIN Version ON Vid=AIversion ";
-# $select.= "WHERE Interface.Iid=LGInt.LGIint ";
-# $select.= "AND AIarch=ALaid ";
-$select.= "WHERE ( (ALappearedin <= '$lsbversion' and ALappearedin<>'') ";
-$select.= "AND (ALwithdrawnin IS NULL OR ALwithdrawnin > '$lsbversion') ) ";
-$select.= "AND ( (AIappearedin <= '$lsbversion' and AIappearedin<>'') ";
-$select.= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin > '$lsbversion') ) ";
-$select.= "ORDER BY Iname,Aid,Vid ";
-
-#print $select;
-
-$sth = $Dbh->query($select) || die $Dbh->errmsg();
-
-my %processed;
-
 print "/* Generated file - Do Not Edit */\n";
-print "#include \"elfchk.h\"\n";
-print "struct versym DynSyms[] = {\n";
-for(1..$sth->numrows) {
-	%entry=$sth->fetchhash;
+print "#include \"elfchk.h\"\n\n";
 
-	if( $entry{'AIwithdrawnin'} ) {
-		# Let's check if there is an interface with newer version
-		$selectNewly = "SELECT AIint FROM ArchInt ";
-		$selectNewly.= "WHERE AIint=$entry{'Iid'} AND AIarch=$entry{'Aid'} ";
-		$selectNewly.= "AND AIappearedin > $entry{'AIappearedin'} ";
-	
-		$sthNewly = $Dbh->query($selectNewly) || die $Dbh->errmsg();
-		if( $sthNewly->numrows ) {
-			next;
-		}
-	}
-	
-	# There can be duplicated entries in the Interface table - skip them
- 	if( $processed{ ($entry{'Aname'},$entry{'Iname'},$entry{'Mname'}) } ) {
- 		next;
- 	}
- 	$processed{ ($entry{'Aname'},$entry{'Iname'},$entry{'Mname'}) } = 1;
-		
-	if (not $entry{'Aname'}) {
-		next; # unsupported architecture found
-	}
-	
-	if ($entry{'Aname'} && $entry{'Aname'} ne "All")
-	{
-		print "#if $entry{'Asymbol'}\n";
-	}
-	elsif ($entry{'Aname'} && $entry{'Aname'} eq "All")
-	{
-		$selectNotGeneric = "SELECT AIarch FROM ArchInt ";
-		$selectNotGeneric.= "WHERE AIint=$entry{'Iid'} AND AIarch<>1 ";
-#  		$selectNotGeneric.= "AND ( (AIappearedin <= '$lsbversion' and AIappearedin<>'') ";
-#  		$selectNotGeneric.= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin > '$lsbversion') ) ";
-		$sthNotGeneric = $Dbh->query($selectNotGeneric) || die $Dbh->errmsg();
-		
-		# Some architecture specific records found - don't check generic information
-		if( $sthNotGeneric->numrows )
-		{
-			next;
-		}
-	}
-	printf "\t{\"%s\",\"%s\",",$entry{'Iname'},$entry{'Vname'};
-	if( $entry{'Iisdeprecated'} eq 'Yes' ) {
-		printf "1";
-	} else {
-		printf "0";
-	}
-	printf ",%s",$entry{'Mname'};
-	printf "},\n";
-	if ($entry{'Aname'} && $entry{'Aname'} ne "All")
-	{
-		print "#endif\n";
-	}
-
+@lsbversions = sort split(/,/, $lsbversion);
+@lsbvernames = @lsbversions;
+for ($i = 0; $i <= $#lsbvernames; $i++) {
+	$lsbvernames[$i] =~ s/\.//g;
 }
-print "\t};\n";
-print "int numDynSyms = sizeof(DynSyms)/sizeof(struct versym);\n";
 
+foreach $ver (@lsbversions) {
+	$select = "SELECT DISTINCT Iid,Iname,Isrconly,Iisdeprecated,AIappearedin,AIwithdrawnin,Vname,Asymbol,Aname,Aid,Mname FROM Interface ";
+	$select.= "LEFT JOIN LGInt ON Iid=LGIint ";
+	$select.= "LEFT JOIN LibGroup ON LGid=LGIlibg ";
+	$select.= "LEFT JOIN Library ON Lid=LGlib ";
+	$select.= "LEFT JOIN ModLib ON MLlid=Lid ";
+	$select.= "LEFT JOIN ArchLib ON ALlid=Lid ";
+	$select.= "LEFT JOIN Module ON Mid=MLmid ";
+	$select.= "LEFT OUTER JOIN ArchInt ON Iid=AIint ";
+	$select.= "LEFT OUTER JOIN Architecture ON Aid=AIarch ";
+	$select.= "LEFT OUTER JOIN Version ON Vid=AIversion ";
+	# $select.= "WHERE Interface.Iid=LGInt.LGIint ";
+	# $select.= "AND AIarch=ALaid ";
+	$select.= "WHERE ( (ALappearedin <= '$ver' and ALappearedin<>'') ";
+	$select.= "AND (ALwithdrawnin IS NULL OR ALwithdrawnin > '$ver') ) ";
+	$select.= "AND ( (AIappearedin <= '$ver' and AIappearedin<>'') ";
+	$select.= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin > '$ver') ) ";
+	$select.= "ORDER BY Iname,Aid,Vid ";
+
+	# print $select;
+
+	$sth = $Dbh->query($select) || die $Dbh->errmsg();
+
+	my %processed;
+
+	$suffix = "_LSB$ver";
+	$suffix =~ s/\.//g;
+	print "struct versym DynSyms".$suffix."[] = {\n";
+	for (1..$sth->numrows) {
+		%entry=$sth->fetchhash;
+
+		if ($entry{'AIwithdrawnin'}) {
+			# Let's check if there is an interface with newer version
+			$selectNewly = "SELECT AIint FROM ArchInt ";
+			$selectNewly.= "WHERE AIint=$entry{'Iid'} AND AIarch=$entry{'Aid'} ";
+			$selectNewly.= "AND AIappearedin > $entry{'AIappearedin'} ";
+		
+			$sthNewly = $Dbh->query($selectNewly) || die $Dbh->errmsg();
+			if ($sthNewly->numrows) {
+				next;
+			}
+		}
+		
+		# There can be duplicated entries in the Interface table - skip them
+	 	if ($processed{ ($entry{'Aname'},$entry{'Iname'},$entry{'Mname'}) }) {
+	 		next;
+	 	}
+	 	$processed{ ($entry{'Aname'},$entry{'Iname'},$entry{'Mname'}) } = 1;
+			
+		if (not $entry{'Aname'}) {
+			next; # unsupported architecture found
+		}
+		
+		if ($entry{'Aname'} && $entry{'Aname'} ne "All") {
+			print "#if $entry{'Asymbol'}\n";
+		}
+		elsif ($entry{'Aname'} && $entry{'Aname'} eq "All") {
+			$selectNotGeneric = "SELECT AIarch FROM ArchInt ";
+			$selectNotGeneric.= "WHERE AIint=$entry{'Iid'} AND AIarch<>1 ";
+			# $selectNotGeneric.= "AND ( (AIappearedin <= '$ver' and AIappearedin<>'') ";
+			# $selectNotGeneric.= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin > '$ver') ) ";
+			$sthNotGeneric = $Dbh->query($selectNotGeneric) || die $Dbh->errmsg();
+			
+			# Some architecture specific records found - don't check generic information
+			if ($sthNotGeneric->numrows) {
+				next;
+			}
+		}
+		printf "\t{\"%s\",\"%s\",",$entry{'Iname'},$entry{'Vname'};
+		if ($entry{'Iisdeprecated'} eq 'Yes') {
+			printf "1";
+		} else {
+			printf "0";
+		}
+		printf ",%s",$entry{'Mname'};
+		printf "},\n";
+		if ($entry{'Aname'} && $entry{'Aname'} ne "All") {
+			print "#endif\n";
+		}
+
+	}
+	print "};\n\n";
+	print "int numDynSyms$suffix = sizeof(DynSyms$suffix)/sizeof(struct versym);\n\n";
+}
+
+print "struct versym* DynSyms[] = {DynSyms_LSB".join(", DynSyms_LSB", @lsbvernames)."};\n";
+print "int numDynSyms[] = {sizeof(DynSyms_LSB".join(")/sizeof(struct versym), sizeof(DynSyms_LSB", @lsbvernames).")/sizeof(struct versym)};\n";

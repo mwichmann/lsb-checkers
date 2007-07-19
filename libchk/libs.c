@@ -5,7 +5,7 @@
 
 #include "../tetj/tetj.h"
 
-struct modlib modlibs [] = { 
+struct modlib modlibs [] = {
 #if defined __ia64__
 	{LSB_Core,"/lib/ld-lsb-ia64.so.3",ld_lsb_ia64_so_3,ld_lsb_ia64_so_3_classinfo},
 #endif

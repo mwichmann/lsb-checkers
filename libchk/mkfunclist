@@ -8,7 +8,7 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 sub usage()
 {
-print STDERR "mkfunclist -a <archname> -v <lsbversion>\n";
+    print STDERR "Usage: mkfunclist -v <lsbversion>\n";
 die;
 }
 
@@ -289,8 +289,7 @@ for(1..$lsth->numrows) {
 				$sthNotGeneric = $Dbh->query($selectNotGeneric) || die $Dbh->errmsg();
 	
 				# Some architecture specific records found - don't check generic information
-				if( $sthNotGeneric->numrows )
-				{
+                    if ($sthNotGeneric->numrows) {
 					next;
 				}
 			}
@@ -352,6 +351,10 @@ $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::d
 # 3) Get the list of libs, and process them
 #
 
+open(LSB_VER, ">lsb_ver.c");
+print LSB_VER "char* LSB_Version_str = \"$lsbversion\";\n";
+close(LSB_VER);
+
 open(LIBS,">libs.c");
 print LIBS "/* Generated file */\n";
 print LIBS "#include <unistd.h>\n";
@@ -359,7 +362,7 @@ print LIBS "#include \"libs.h\"\n";
 print LIBS "#include \"libchk.h\"\n\n";
 print LIBS "#include \"../tetj/tetj.h\"\n\n";
 
-print LIBS "struct modlib modlibs [] = { \n";
+print LIBS "struct modlib modlibs [] = {\n";
 
 open(LIBSH,">libs.h");
 print LIBSH "/* Generated file */\n";
@@ -426,4 +429,3 @@ print LIBS "};\n";
 close(LIBS);
 close(LIBH);
 close(MAKE);
-
