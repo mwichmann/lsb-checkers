@@ -4,46 +4,60 @@ use CGI;
 use Mysql;
 use Getopt::Long;
 
+use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
+
 sub usage()
 {
-print STDERR "mkdtneededlist -v <lsbversion>\n";
+print STDERR "Usage: mkdtneededlist -v <lsbversion(s)>\n";
+print STDERR "    LSB versions should be comma-separated.\n";
 die;
 }
 
 GetOptions("v=s" => \$lsbversion);
 if( !$lsbversion ) { usage(); }
 
-use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
-
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
-$select = "SELECT DISTINCT * FROM Library ";
-$select.= "LEFT JOIN ArchLib ON Lid=ALlid ";
-$select.= "LEFT JOIN Architecture ON Aid=ALaid ";
-$select.= "WHERE ( (ALappearedin <= '$lsbversion' and ALappearedin<>'') ";
-$select.= "AND (ALwithdrawnin IS NULL OR ALwithdrawnin > '$lsbversion') ) ";
-$select.= "AND Architecture.Aname!='None' ";
-$select.= "ORDER BY ALrunname,Aid ";
+print "/* Generated file - Do Not Edit */\n\n";
 
-#print $select;
-
-$sth = $Dbh->query($select) || die $Dbh->errmsg();
-
-print "/* Generated file - Do Not Edit */\n";
-print "char *DtNeeded[] = {\n";
-for(1..$sth->numrows) {
-	%entry=$sth->fetchhash;
-	if( $entry{'ALrunname'} eq "" ) {
-		next;
-		}
-	if( $entry{'Aname'} ne "All" ) {
-                print "#if ".$entry{'Asymbol'}."\n";
-        }
-	printf "\t\"%s\",\n",$entry{'ALrunname'};
-	if( $entry{'Aname'} ne "All" ) {
-                print "#endif /* ".$entry{'Asymbol'}." */\n";
-        }
+@lsbversions = sort split(/,/, $lsbversion);
+@lsbvernames = @lsbversions;
+for ($i = 0; $i <= $#lsbvernames; $i++) {
+	$lsbvernames[$i] =~ s/\.//g;
 }
-print "\t};\n";
-print "int numDtNeeded = sizeof(DtNeeded)/sizeof(char *);\n";
 
+foreach $ver (@lsbversions) {
+	$select = "SELECT DISTINCT * FROM Library ";
+	$select.= "LEFT JOIN ArchLib ON Lid=ALlid ";
+	$select.= "LEFT JOIN Architecture ON Aid=ALaid ";
+	$select.= "WHERE ( (ALappearedin <= '$ver' and ALappearedin<>'') ";
+	$select.= "AND (ALwithdrawnin IS NULL OR ALwithdrawnin > '$ver') ) ";
+	$select.= "AND Architecture.Aname!='None' ";
+	$select.= "ORDER BY ALrunname,Aid ";
+
+	#print $select;
+
+	$sth = $Dbh->query($select) || die $Dbh->errmsg();
+
+	$suffix = "_LSB$ver";
+	$suffix =~ s/\.//g;
+	print "char *DtNeeded".$suffix."[] = {\n";
+	for (1..$sth->numrows) {
+		%entry=$sth->fetchhash;
+		if ($entry{'ALrunname'} eq "") {
+			next;
+		}
+		if ($entry{'Aname'} ne "All") {
+	                print "#if ".$entry{'Asymbol'}."\n";
+	    }
+		printf "\t\"%s\",\n",$entry{'ALrunname'};
+		if ($entry{'Aname'} ne "All") {
+	                print "#endif /* ".$entry{'Asymbol'}." */\n";
+	    }
+	}
+	print "};\n\n";
+	print "int numDtNeeded$suffix = sizeof(DtNeeded$suffix)/sizeof(char *);\n\n";
+}
+
+print "char** DtNeeded[] = {DtNeeded_LSB".join(", DtNeeded_LSB", @lsbvernames)."};\n";
+print "int numDtNeeded[] = {sizeof(DtNeeded_LSB".join(")/sizeof(char *), sizeof(DtNeeded_LSB", @lsbvernames).")/sizeof(char *)};\n\n";

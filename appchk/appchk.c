@@ -82,12 +82,21 @@ static const char *__attribute((unused)) appchk_revision =
 void
 usage(char *progname)
 {
-  printf("usage: %s [options] appname ...\n"
+    int i;
+    char lsb_list[1024] = "";
+    for (i = 0; i < num_LSB_Versions; ++i) {
+        if (lsb_list[0] != '\0')
+            strcat(lsb_list, ", ");
+        strcat(lsb_list, LSB_Versions[i]);
+    }
+    printf("usage: %s [options] appname ...\n"
 "  -h, --help                     show this help message and exit\n"
 "  -v, --version                  show version and LSB version\n"
 "  -j, --journal                  write a journal file\n"
 "  -n, --no-journal               do not write a journal file\n"
 "  -s, --missing-symbols          report only on missing symbols\n"
+"  -r, --lsb-version=VERSION      LSB version to test against\n"
+"                                 (supported are: %s)\n"
 "  -T, --lsb-product=[core,c++|core,c++,desktop]\n"
 "                                 target product to load modules for\n"
 "  -M MODULE, --module=MODULE     add MODULE to list of checked modules\n"
@@ -95,7 +104,7 @@ usage(char *progname)
 "  -D DIR[:DIR...], --shared-libpath=DIR[:DIR...]\n"
 "                                 add all libs in DIR to checked lib list\n"
 "  -o FILE, --output-file=FILE    write output to FILE\n",
-progname);
+progname, lsb_list);
 }
 
 int
@@ -131,8 +140,6 @@ main(int argc, char *argv[])
     } else
         modules = LSB_Core | LSB_Graphics | LSB_Cpp;
 */
-    modules = LSB_Desktop_Modules;   // default to all modules in cert program
-
     /* Set defaults. */
     do_journal = 0;
     output_filename[0] = '\0';
@@ -156,6 +163,16 @@ main(int argc, char *argv[])
 	command_line = concat_string(command_line, " ");
     }
 
+    /* Set of desktop modules depends on the LSB version selected.
+     * The order of the command line options is not fixed, so we have to determine the
+     * version first, remember which set of modules is needed and only then calculate the
+     * real set of modules depending on the LSB version.
+     * 0: no -T option specified.
+     * 1: -T core,c++
+     * 2: -T core,c++,desktop
+     */
+    int modules_pre = 0;
+    modules = 0;
     while (1) {
 	int c;
 	static struct option long_options[] = {
@@ -166,12 +183,13 @@ main(int argc, char *argv[])
             {"missing-symbols", no_argument,   NULL, 's'},
 	    {"output-file", required_argument, NULL, 'o'},
 	    {"module",   required_argument,    NULL, 'M'},
+            {"lsb-version",     required_argument, NULL, 'r'},
 	    {"lsb-product", required_argument, NULL, 'T'},
 	    {"shared-libpath", required_argument, NULL, 'D'},
 	    {0, 0, 0, 0}
       };
 
-      c = getopt_long (argc, argv, "hnjsvAo:M:L:T:D:", 
+        c = getopt_long(argc, argv, "hvjnsAo:M:L:r:T:D:",
                        long_options, &option_index);
       if (c == -1)
 	  break;
@@ -183,13 +201,26 @@ main(int argc, char *argv[])
 	      printf("%s %s for LSB Specification %s\n", argv[0],
 		     LSBAPPCHK_VERSION, LSBVERSION);
 	      break;
+            case 'r':
+                for (i = 0; i < num_LSB_Versions; ++i) {
+                    if (strcmp(optarg, LSB_Versions[i]) == 0) {
+                        LSB_Version = i;
+                        break;
+                    }
+                }
+                if (LSB_Version == -1) {
+                    printf("LSB version '%s' is not supported!\n", optarg);
+                    usage(argv[0]);
+                    exit(1);
+                }
+                break;
 	   case 'T':
 	      if(strcasecmp(optarg, "core,c++") == 0)
-		modules = LSB_Core | LSB_Cpp;
+                    modules_pre = 1;
 	      else if(strcasecmp(optarg, "core,c++,desktop") == 0)
-		modules = LSB_Desktop_Modules;
+                    modules_pre = 2;
 	      /* else if(strcasecmp(optarg, "all") == 0)
-		modules = LSB_All_Modules; */
+                    modules_pre = 3; */
 	      else {
 		printf("product '%s' is not valid!\n", optarg);
 		usage(argv[0]);
@@ -202,13 +233,11 @@ main(int argc, char *argv[])
 	      break;
 	  case 'L':
 	      extra_lib_count++;
-	      extra_lib_list = realloc(extra_lib_list, 
-				       sizeof(char *)*extra_lib_count);
+                extra_lib_list = realloc(extra_lib_list, sizeof(char *)*extra_lib_count);
 	      extra_lib_list[extra_lib_count-1] = strdup(optarg);
 	      break;
           case 'D':
-              for (token = strtok(optarg, ":"); token != NULL; 
-                   token = strtok(NULL, ":")) {
+                for (token = strtok(optarg, ":"); token != NULL; token = strtok(NULL, ":")) {
                 extra_lib_count = add_library_dir(token, &extra_lib_list, 
                                                   extra_lib_count);
                 if (extra_lib_count < 0)
@@ -235,6 +264,24 @@ main(int argc, char *argv[])
     if (optind >= argc && !extra_lib_count) {
 	usage(argv[0]);
 	exit (1);
+    }
+
+    if (LSB_Version == -1) {
+        LSB_Version = 0;
+        printf("LSB version is not specified, using %s by default.\n\n", LSB_Versions[LSB_Version]);
+    }
+
+    /* Now calculate final set of modules. */
+    switch (modules_pre) {
+        case 1:     /* core,c++ */
+            modules |= LSB_Core | LSB_Cpp;
+            break;
+        case 2:     /* core,c++,desktop */
+            modules |= LSB_Desktop_Modules[LSB_Version];
+            break;
+        default:
+            modules |= LSB_Desktop_Modules[LSB_Version];
+            break;
     }
 
     extra_libraries = strdup("EXTRA_LIBRARIES=");

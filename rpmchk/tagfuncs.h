@@ -81,3 +81,8 @@ extern int checkRpmIdxPREIN(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handl
 extern int checkRpmIdxPOSTIN(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern int checkRpmIdxPREUN(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
 extern int checkRpmIdxPOSTUN(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+
+/* Ensure LSB 3.0 compatibility */
+extern int checkRpmIdxSHA1HEADER(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern int checkRpmIdxDSAHEADER(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);
+extern int checkRpmIdxRSAHEADER(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal);

@@ -71,5 +71,5 @@ struct DynamicInfo {
 	DynTagsFcn	func;
 	};
 
-extern	struct DynamicInfo DynamicInfo[];
-extern	int numDynamicInfo;
+extern	struct DynamicInfo* DynamicInfo[];
+extern	int numDynamicInfo[];

@@ -7,12 +7,20 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 sub usage()
 {
-print STDERR "mktaghdr -v <lsbversion>\n";
+print STDERR "Usage: mktaghdr -v <lsbversion(s)>\n";
+print STDERR "    LSB versions should be comma-separated.\n";
 die;
 }
 
 GetOptions("v=s" => \$lsbversion);
 if( !$lsbversion ) { usage(); }
+
+$lsbversion_min = "";
+$lsbversion_max = "";
+foreach (split(/,/, $lsbversion)) {
+	$lsbversion_min = $_ if (($lsbversion_min eq "") or ($lsbversion_min > $_));
+	$lsbversion_max = $_ if (($lsbversion_max eq "") or ($lsbversion_max < $_));
+}
 
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
@@ -21,10 +29,10 @@ dumpenum($$)
 {
 local($condition,$tname)=@_;
 
-$select = "SELECT DISTINCT * FROM RpmTag ";
+$select = "SELECT DISTINCT Rname,Rtag FROM RpmTag ";
 $select.= "WHERE ".$condition." ";
-$select.= "AND (Rappearedin IS NOT NULL and Rappearedin <= '$lsbversion' and Rappearedin<>'') ";
-$select.= "AND (Rwithdrawnin IS NULL OR Rwithdrawnin > '$lsbversion') ";
+$select.= "AND (Rappearedin IS NOT NULL and Rappearedin <= '$lsbversion_max' and Rappearedin<>'') ";
+$select.= "AND (Rwithdrawnin IS NULL OR Rwithdrawnin > '$lsbversion_min') ";
 $select.= "ORDER BY Rtag ";
 
 #print "$select\n";

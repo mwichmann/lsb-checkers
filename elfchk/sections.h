@@ -51,8 +51,8 @@ struct SectionType {
 	SectionFcn	func;
 	};
 
-extern	struct SectionInfo SectionInfo[];
-extern	int numSectionInfo;
+extern	struct SectionInfo* SectionInfo[];
+extern	int numSectionInfo[];
 extern	struct SectionType SectionType[];
 extern	int numSectionType;
 
