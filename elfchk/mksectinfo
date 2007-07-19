@@ -8,7 +8,8 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 sub usage()
 {
-print STDERR "mksectinfo -v lsbversion\n";
+print STDERR "Usage: mksectinfo -v <lsbversion(s)>\n";
+print STDERR "    LSB versions should be comma-separated.\n";
 die;
 }
 
@@ -17,46 +18,58 @@ if( !$lsbversion ) { usage(); }
 
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
-$select = "SELECT DISTINCT * FROM SectionTypes, ElfSections ";
-$select.= "LEFT JOIN ArchES ON AESesid=ESid ";
-$select.= "LEFT JOIN Architecture ON Aid=AESaid ";
-$select.= "WHERE AEStype=STid ";
-$select.= "AND (AESappearedin <= '$lsbversion' and AESappearedin<>'') ";
-$select.= "AND (AESwithdrawnin IS NULL OR AESwithdrawnin > '$lsbversion') ";
-$select.= "ORDER BY ESname ";
-
-#print "$select\n";
-
-$sth = $Dbh->query($select) || die $Dbh->errmsg();
-
 print "/* Generated file - Do Not Edit */\n";
 print "#include \"elfchk.h\"\n";
 print "#include \"sections.h\"\n\n";
 
-print "struct SectionInfo SectionInfo[] = {\n";
-for(1..$sth->numrows) {
-	%entry=$sth->fetchhash;
-	
-	if (not $entry{'Aname'}) {
-		next; # unsupported architecture found
-	}
-	
-	if( $entry{'Aname'} ne "All" ) {
-		print "#if ".$entry{'Asymbol'}."\n";
-	}
-	printf "\t{\"%s\",",$entry{'ESname'};
-	printf "%s,",$entry{'STname'};
-	printf "%s,",$entry{'AESattributes'};
-	@typename=split('_',$entry{'STname'},2);
-	if( @typename[1] ) {
-		printf "check%s},\n",@typename[1];
-	} else {
-		printf "checkDUMMY},\n";
-	}
-	if( $entry{'Aname'} ne "All" ) {
-		print "#endif /* ".$entry{'Asymbol'}." */\n";
-	}
+@lsbversions = sort split(/,/, $lsbversion);
+@lsbvernames = @lsbversions;
+for ($i = 0; $i <= $#lsbvernames; $i++) {
+	$lsbvernames[$i] =~ s/\.//g;
 }
-print "\t};\n\n";
-print "int numSectionInfo = sizeof(SectionInfo)/sizeof(struct SectionInfo);\n";
 
+foreach $ver (@lsbversions) {
+	$select = "SELECT DISTINCT * FROM SectionTypes, ElfSections ";
+	$select.= "LEFT JOIN ArchES ON AESesid=ESid ";
+	$select.= "LEFT JOIN Architecture ON Aid=AESaid ";
+	$select.= "WHERE AEStype=STid ";
+	$select.= "AND (AESappearedin <= '$ver' and AESappearedin<>'') ";
+	$select.= "AND (AESwithdrawnin IS NULL OR AESwithdrawnin > '$ver') ";
+	$select.= "ORDER BY ESname ";
+
+	#print "$select\n";
+
+	$sth = $Dbh->query($select) || die $Dbh->errmsg();
+
+	$suffix = "_LSB$ver";
+	$suffix =~ s/\.//g;
+	print "struct SectionInfo SectionInfo".$suffix."[] = {\n";
+	for (1..$sth->numrows) {
+		%entry=$sth->fetchhash;
+		
+		if (not $entry{'Aname'}) {
+			next; # unsupported architecture found
+		}
+		
+		if ($entry{'Aname'} ne "All") {
+			print "#if ".$entry{'Asymbol'}."\n";
+		}
+		printf "\t{\"%s\",",$entry{'ESname'};
+		printf "%s,",$entry{'STname'};
+		printf "%s,",$entry{'AESattributes'};
+		@typename=split('_',$entry{'STname'},2);
+		if (@typename[1]) {
+			printf "check%s},\n",@typename[1];
+		} else {
+			printf "checkDUMMY},\n";
+		}
+		if ($entry{'Aname'} ne "All") {
+			print "#endif /* ".$entry{'Asymbol'}." */\n";
+		}
+	}
+	print "};\n\n";
+	print "int numSectionInfo$suffix = sizeof(SectionInfo$suffix)/sizeof(struct SectionInfo);\n\n";
+}
+
+print "struct SectionInfo* SectionInfo[] = {SectionInfo_LSB".join(", SectionInfo_LSB", @lsbvernames)."};\n";
+print "int numSectionInfo[] = {sizeof(SectionInfo_LSB".join(")/sizeof(struct SectionInfo), sizeof(SectionInfo_LSB", @lsbvernames).")/sizeof(struct SectionInfo)};\n\n";

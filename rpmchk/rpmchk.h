@@ -13,6 +13,10 @@
 
 struct tetj_handle;
 
+extern char* LSB_Versions[];
+extern int num_LSB_Versions;
+extern int LSB_Version;
+
 /*
  * RPM file Lead
  */
@@ -149,10 +153,10 @@ typedef struct	{
 	RpmIdxStatus	status;
 	} RpmIdxTagFuncRec;
 
-extern RpmIdxTagFuncRec SigTags[];
-extern int numSigIdxTags;
-extern RpmIdxTagFuncRec HdrTags[];
-extern int numHdrIdxTags;
+extern RpmIdxTagFuncRec* SigTags[];
+extern int numSigIdxTags[];
+extern RpmIdxTagFuncRec* HdrTags[];
+extern int numHdrIdxTags[];
 
 /*
  * REQUIRED* - ie dependency things

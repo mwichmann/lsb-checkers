@@ -1,7 +1,7 @@
 LSBARCHK_VERSION=unofficial
 CFLAGS=-g -DLSBVERSION=\"$$LSBVERSION\" -DLSBARCHK_VERSION=\"$(LSBARCHK_VERSION)\" -Wall
 
-OBJS=archk.o libraries.o symbols.o check_archive.o
+OBJS=archk.o libraries.o symbols.o check_archive.o ../lsb_version.o
 LIBS=../rpmchk/librpmchk.a ../appchk/libappchk.a ../elfchk/libelfchk.a ../tetj/libtetj.a
 
 all: archk

@@ -104,7 +104,7 @@ void CloseElfFile (ElfFile *efile)
 char *
 getmodulename(int mod)
 {
-	struct lsb_module *m = LSB_Modules;
+	struct lsb_module *m = LSB_Modules[LSB_Version];
     int count=0;
     static char buf[1024];
     buf[0] = '\0';
@@ -132,7 +132,7 @@ getmodulename(int mod)
 int
 getmoduleval(char *mod)
 {
-	struct lsb_module *m = LSB_Modules;
+	struct lsb_module *m = LSB_Modules[LSB_Version];
 	int flag = 0;
 	char *p;
 
@@ -156,13 +156,15 @@ getlsbprofile(const char* lsb_version,int mod)
 	if (mod == LSB_Core_Modules) {
 	    sprintf( buf, "LSB %s (Core & C++)", lsb_version);
 	}
-	else if (mod == LSB_Desktop_Modules) {
+	else if (mod == LSB_Desktop_Modules[LSB_Version]) {
 	    sprintf(buf, "LSB %s (Core & C++ & Desktop)", lsb_version);
 	}
-	else if (mod == (LSB_Desktop_Modules | LSB_Toolkit_Qt)) {
+#ifdef LSB_Toolkit_Qt
+	else if (mod == (LSB_Desktop_Modules[LSB_Version] | LSB_Toolkit_Qt)) {
 	    sprintf(buf, "LSB %s (Core & C++ & Desktop & Qt4(optional))",
 		    lsb_version);
 	}
+#endif
 	else {
 	    sprintf(buf, "LSB %s (UNKNOWN PROFILE)", lsb_version);
 	}

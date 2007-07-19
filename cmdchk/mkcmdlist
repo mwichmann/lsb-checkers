@@ -67,6 +67,6 @@ for(1..$sth->numrows) {
 	%entry=$sth->fetchhash;
 	print CMDS "	{\"$entry{'Cname'}\", \"$entry{'Cpath'}\"},\n";
 }
-print CMDS "};";
+print CMDS "};\n";
 
 close(CMDS);

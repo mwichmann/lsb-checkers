@@ -13,6 +13,10 @@
 
 struct tetj_handle;
 
+extern char* LSB_Versions[];
+extern int num_LSB_Versions;
+extern int LSB_Version;
+
 struct versym {
 	char *name;
 	char *vername;
@@ -210,10 +214,10 @@ extern int elfchk_debug;
  */
 
 
-extern char *DtNeeded[];
-extern int numDtNeeded;
-extern struct versym DynSyms[];
-extern int numDynSyms;
+extern char **DtNeeded[];
+extern int numDtNeeded[];
+extern struct versym* DynSyms[];
+extern int numDynSyms[];
 
 /*
  * Global values that may be checked in various places.

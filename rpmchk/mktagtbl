@@ -7,7 +7,8 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 sub usage()
 {
-print STDERR "mktagtbl -v <lsbversion>\n";
+print STDERR "Usage: mktagtbl -v <lsbversion(s)>\n";
+print STDERR "    LSB versions should be comma-separated.\n";
 die;
 }
 
@@ -17,14 +18,14 @@ if( !$lsbversion ) { usage(); }
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
 sub
-dumptable($$)
+dumptable($$$)
 {
-local($condition,$tname)=@_;
+local($condition,$tname,$lsbver)=@_;
 
 $select = "SELECT DISTINCT * FROM RpmTag ";
 $select.= "WHERE (Rgroup='Private' OR ".$condition.") ";
-$select.= "AND (Rappearedin IS NOT NULL and Rappearedin <= '$lsbversion' and Rappearedin<>'') ";
-$select.= "AND (Rwithdrawnin IS NULL OR Rwithdrawnin > '$lsbversion') ";
+$select.= "AND (Rappearedin IS NOT NULL and Rappearedin <= '$lsbver' and Rappearedin<>'') ";
+$select.= "AND (Rwithdrawnin IS NULL OR Rwithdrawnin > '$lsbver') ";
 $select.= "ORDER BY Rgroup,Rtag ";
 
 #print "$select\n";
@@ -35,7 +36,7 @@ printf "RpmIdxTagFuncRec %s[] = {\n", $tname;
 
 for(1..$sth->numrows) {
 	%entry=$sth->fetchhash;
-	printf "{%s,\t", $entry{'Rname'};
+	printf "\t{%s,\t", $entry{'Rname'};
 	printf "\"%s\",\t", $entry{'Rname'};
 	printf "%s,\t", $entry{'Rtype'};
 	printf "%s,\t", $entry{'Rcount'};
@@ -45,15 +46,35 @@ for(1..$sth->numrows) {
 	printf "%s,\t", $entry{'Rstatus'};
 	printf "NotSeen},\n";
 	}
-printf "\t};\n\n", $tname;
+printf "};\n\n", $tname;
 }
 
 print "/* Generated file - Do Not Edit */\n\n";
 print "#include \"rpmchk.h\"\n";
 print "#include \"tagfuncs.h\"\n\n";
 
-dumptable("Rgroup LIKE 'Sig%'","SigTags");
-print "\nint numSigIdxTags = sizeof(SigTags)/sizeof(RpmIdxTagFuncRec);\n\n";
-dumptable("(Rgroup NOT LIKE 'Sig%' AND Rgroup!='Ignore')","HdrTags");
-print "int numHdrIdxTags = sizeof(HdrTags)/sizeof(RpmIdxTagFuncRec);\n";
+@lsbversions = sort split(/,/, $lsbversion);
+@lsbvernames = @lsbversions;
+for ($i = 0; $i <= $#lsbvernames; $i++) {
+	$lsbvernames[$i] =~ s/\.//g;
+}
 
+foreach $ver (@lsbversions) {
+	$suffix = "_LSB$ver";
+	$suffix =~ s/\.//g;
+	dumptable("Rgroup LIKE 'Sig%'","SigTags$suffix",$ver);
+	print "int numSigIdxTags$suffix = sizeof(SigTags$suffix)/sizeof(RpmIdxTagFuncRec);\n\n";
+}
+
+print "RpmIdxTagFuncRec* SigTags[] = {SigTags_LSB".join(", SigTags_LSB", @lsbvernames)."};\n";
+print "int numSigIdxTags[] = {sizeof(SigTags_LSB".join(")/sizeof(RpmIdxTagFuncRec), sizeof(SigTags_LSB", @lsbvernames).")/sizeof(RpmIdxTagFuncRec)};\n\n";
+
+foreach $ver (@lsbversions) {
+	$suffix = "_LSB$ver";
+	$suffix =~ s/\.//g;
+	dumptable("(Rgroup NOT LIKE 'Sig%' AND Rgroup!='Ignore')","HdrTags$suffix",$ver);
+	print "int numHdrIdxTags$suffix = sizeof(HdrTags$suffix)/sizeof(RpmIdxTagFuncRec);\n\n";
+}
+
+print "RpmIdxTagFuncRec* HdrTags[] = {HdrTags_LSB".join(", HdrTags_LSB", @lsbvernames)."};\n";
+print "int numHdrIdxTags[] = {sizeof(HdrTags_LSB".join(")/sizeof(RpmIdxTagFuncRec), sizeof(HdrTags_LSB", @lsbvernames).")/sizeof(RpmIdxTagFuncRec)};\n\n";

@@ -339,36 +339,36 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
            ElfGetString(file1, hdr1->sh_name));
   tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, tmp_string);
 
-  for(i=0;i<numSectionInfo;i++)
+  for(i=0;i<numSectionInfo[LSB_Version];i++)
   {
     if( strcmp(ElfGetString(file1, hdr1->sh_name),
-               SectionInfo[i].name ) == 0 ) 
+               SectionInfo[LSB_Version][i].name ) == 0 ) 
     {
     /*
      * We recognize the section. Process it here.
      */
 #ifdef VERBOSE
       fprintf( stderr, "Section[%2d] %-12.12s %s\n",
-               index, SectionInfo[i].name,
+               index, SectionInfo[LSB_Version][i].name,
                ElfGetString(file1, hdr1->sh_name) );
 #endif /* VERBOSE */
-      if( hdr1->sh_type != SectionInfo[i].type ) 
+      if( hdr1->sh_type != SectionInfo[LSB_Version][i].type ) 
       {
         snprintf(tmp_string, TMP_STRING_SIZE,
                  "Section %s: sh_type is wrong. Expecting %x, got %x",
-                 SectionInfo[i].name, SectionInfo[i].type, hdr1->sh_type);
+                 SectionInfo[LSB_Version][i].name, SectionInfo[LSB_Version][i].type, hdr1->sh_type);
         fprintf(stderr, "%s\n", tmp_string);
         tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
                            0, 0, 0, tmp_string);
         fail = 1;
       }
-      if( hdr1->sh_flags != SectionInfo[i].attributes )
+      if( hdr1->sh_flags != SectionInfo[LSB_Version][i].attributes )
       {
-        if( (hdr1->sh_flags|SHF_ALLOC) != SectionInfo[i].attributes ) 
+        if( (hdr1->sh_flags|SHF_ALLOC) != SectionInfo[LSB_Version][i].attributes ) 
         {
           snprintf(tmp_string, TMP_STRING_SIZE,
                    "Section %s: sh_flags is wrong. expecting %x, got %lx",
-                   SectionInfo[i].name, SectionInfo[i].attributes, 
+                   SectionInfo[LSB_Version][i].name, SectionInfo[LSB_Version][i].attributes, 
                    (u_long)hdr1->sh_flags);
           fprintf(stderr, "%s\n", tmp_string);
           tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
@@ -376,13 +376,13 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
           fail = 1;
         }
       }
-      switch (SectionInfo[i].func(file1, hdr1, journal)) {
+      switch (SectionInfo[LSB_Version][i].func(file1, hdr1, journal)) {
 	      case 1: /* Pass */
 			break;
 	      case 0: /* Not checked */
 			if( elfchk_debug&DEBUG_SECTION_CONTENTS ) {
 				fprintf( stderr, "Section [%2d] %-12.12s Not checked\n",
-						i, SectionInfo[i].name );
+						i, SectionInfo[LSB_Version][i].name );
 			}
 			break;
 	      case -1: /* Fail */

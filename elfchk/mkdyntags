@@ -8,7 +8,8 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 sub usage()
 {
-print STDERR "mkdyntags -v lsbversion\n";
+print STDERR "Usage: mkdyntags -v <lsbversion(s)>\n";
+print STDERR "    LSB versions should be comma-separated.\n";
 die;
 }
 
@@ -17,38 +18,51 @@ if( !$lsbversion ) { usage(); }
 
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
-$select = "SELECT DISTINCT * FROM DynamicEntries ";
-$select.= "LEFT JOIN ArchDE ON ADEdeid=DEid ";
-$select.= "LEFT JOIN Architecture ON Aid=ADEaid ";
-$select.= "WHERE (ADEappearedin <= '$lsbversion' and ADEappearedin<>'') ";
-$select.= "AND (ADEwithdrawnin IS NULL OR ADEwithdrawnin > '$lsbversion') ";
-$select.= "ORDER BY DEname,Aid ";
-
-#print $select;
-
-$sth = $Dbh->query($select) || die $Dbh->errmsg();
-
 print "/* Generated file - Do Not Edit */\n";
 print "#include \"elfchk.h\"\n";
 print "#include \"dynamic.h\"\n\n";
 
-print "struct DynamicInfo DynamicInfo[] = {\n";
-for(1..$sth->numrows) {
-	%entry=$sth->fetchhash;
-	if( not $entry{'Aname'} ) {
-		next;
-	}
-	
-	if( $entry{'Aname'} ne "All" ) {
-		print "#if ".$entry{'Asymbol'}."\n";
-	}
-	printf "\t{\"%s\",",$entry{'DEname'};
-	printf "%s,",$entry{'DEname'};
-	printf "check%s},\n",$entry{'DEname'};
-	if( $entry{'Aname'} ne "All" ) {
-		print "#endif /* ".$entry{'Asymbol'}." */\n";
-	}
+@lsbversions = sort split(/,/, $lsbversion);
+@lsbvernames = @lsbversions;
+for ($i = 0; $i <= $#lsbvernames; $i++) {
+	$lsbvernames[$i] =~ s/\.//g;
 }
-print "\t};\n\n";
-print "int numDynamicInfo = sizeof(DynamicInfo)/sizeof(struct DynamicInfo);\n";
 
+foreach $ver (@lsbversions) {
+	$select = "SELECT DISTINCT * FROM DynamicEntries ";
+	$select.= "LEFT JOIN ArchDE ON ADEdeid=DEid ";
+	$select.= "LEFT JOIN Architecture ON Aid=ADEaid ";
+	$select.= "WHERE (ADEappearedin <= '$ver' and ADEappearedin<>'') ";
+	$select.= "AND (ADEwithdrawnin IS NULL OR ADEwithdrawnin > '$ver') ";
+	$select.= "ORDER BY DEname,Aid ";
+
+	#print $select;
+
+	$sth = $Dbh->query($select) || die $Dbh->errmsg();
+
+	$suffix = "_LSB$ver";
+	$suffix =~ s/\.//g;
+	print "struct DynamicInfo DynamicInfo".$suffix."[] = {\n";
+	for (1..$sth->numrows) {
+		%entry=$sth->fetchhash;
+
+		if (not $entry{'Aname'}) {
+			next;
+		}
+		
+		if ($entry{'Aname'} ne "All") {
+			print "#if ".$entry{'Asymbol'}."\n";
+		}
+		printf "\t{\"%s\",",$entry{'DEname'};
+		printf "%s,",$entry{'DEname'};
+		printf "check%s},\n",$entry{'DEname'};
+		if ($entry{'Aname'} ne "All") {
+			print "#endif /* ".$entry{'Asymbol'}." */\n";
+		}
+	}
+	print "};\n\n";
+	print "int numDynamicInfo$suffix = sizeof(DynamicInfo$suffix)/sizeof(struct DynamicInfo);\n\n";
+}
+
+print "struct DynamicInfo* DynamicInfo[] = {DynamicInfo_LSB".join(", DynamicInfo_LSB", @lsbvernames)."};\n";
+print "int numDynamicInfo[] = {sizeof(DynamicInfo_LSB".join(")/sizeof(struct DynamicInfo), sizeof(DynamicInfo_LSB", @lsbvernames).")/sizeof(struct DynamicInfo)};\n\n";
