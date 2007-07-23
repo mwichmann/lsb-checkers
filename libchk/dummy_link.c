@@ -154,6 +154,9 @@ int main()
     /* libxml2 */
     htmlCtxtReadDoc();
 
+    /* libXrender */
+    XRenderAddGlyphs();
+
     /* libQtCore */
     _Z10forcepointR11QTextStream();
 
