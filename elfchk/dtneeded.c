@@ -1620,6 +1620,7 @@ char *DtNeeded_LSB32[] = {
 	"libXext.so.6",
 	"libXi.so.6",
 	"libxml2.so.2",
+	"libXrender.so.1",
 	"libXt.so.6",
 	"libz.so.1",
 #if defined __i386__
