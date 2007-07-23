@@ -865,6 +865,8 @@ extern struct versym libXi_so_6[];
 extern struct classinfo libXi_so_6_classinfo[];
 extern struct versym libxml2_so_2[];
 extern struct classinfo libxml2_so_2_classinfo[];
+extern struct versym libXrender_so_1[];
+extern struct classinfo libXrender_so_1_classinfo[];
 extern struct versym libXt_so_6[];
 extern struct classinfo libXt_so_6_classinfo[];
 #if defined __s390x__
