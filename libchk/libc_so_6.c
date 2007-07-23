@@ -23,88 +23,88 @@ struct versym libc_so_6[] = {
 	{"_Exit","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
 #if defined __i386__
-	{"_IO_feof","GLIBC_2.0",0,LSB_Core,0,1},
+	{"_IO_feof","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"_IO_feof","GLIBC_2.2",0,LSB_Core,0,1},
+	{"_IO_feof","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_IO_feof","GLIBC_2.0",0,LSB_Core,0,1},
+	{"_IO_feof","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"_IO_feof","GLIBC_2.3",0,LSB_Core,0,1},
+	{"_IO_feof","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_IO_feof","GLIBC_2.0",0,LSB_Core,0,1},
+	{"_IO_feof","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"_IO_feof","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"_IO_feof","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"_IO_feof","GLIBC_2.2",0,LSB_Core,0,1},
+	{"_IO_feof","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"_IO_getc","GLIBC_2.0",0,LSB_Core,0,1},
+	{"_IO_getc","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"_IO_getc","GLIBC_2.2",0,LSB_Core,0,1},
+	{"_IO_getc","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_IO_getc","GLIBC_2.0",0,LSB_Core,0,1},
+	{"_IO_getc","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"_IO_getc","GLIBC_2.3",0,LSB_Core,0,1},
+	{"_IO_getc","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_IO_getc","GLIBC_2.0",0,LSB_Core,0,1},
+	{"_IO_getc","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"_IO_getc","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"_IO_getc","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"_IO_getc","GLIBC_2.2",0,LSB_Core,0,1},
+	{"_IO_getc","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"_IO_putc","GLIBC_2.0",0,LSB_Core,0,1},
+	{"_IO_putc","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"_IO_putc","GLIBC_2.2",0,LSB_Core,0,1},
+	{"_IO_putc","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_IO_putc","GLIBC_2.0",0,LSB_Core,0,1},
+	{"_IO_putc","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"_IO_putc","GLIBC_2.3",0,LSB_Core,0,1},
+	{"_IO_putc","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_IO_putc","GLIBC_2.0",0,LSB_Core,0,1},
+	{"_IO_putc","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"_IO_putc","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"_IO_putc","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"_IO_putc","GLIBC_2.2",0,LSB_Core,0,1},
+	{"_IO_putc","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"_IO_puts","GLIBC_2.0",0,LSB_Core,0,1},
+	{"_IO_puts","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"_IO_puts","GLIBC_2.2",0,LSB_Core,0,1},
+	{"_IO_puts","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_IO_puts","GLIBC_2.0",0,LSB_Core,0,1},
+	{"_IO_puts","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"_IO_puts","GLIBC_2.3",0,LSB_Core,0,1},
+	{"_IO_puts","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_IO_puts","GLIBC_2.0",0,LSB_Core,0,1},
+	{"_IO_puts","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"_IO_puts","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"_IO_puts","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"_IO_puts","GLIBC_2.2",0,LSB_Core,0,1},
+	{"_IO_puts","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"__assert_fail","GLIBC_2.0",0,LSB_Core,1,1},
@@ -867,25 +867,25 @@ struct versym libc_so_6[] = {
 	{"__strtoull_internal","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
-	{"__sysconf","GLIBC_2.2",0,LSB_Core,0,1},
+	{"__sysconf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"__sysconf","GLIBC_2.2",0,LSB_Core,0,1},
+	{"__sysconf","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"__sysconf","GLIBC_2.2",0,LSB_Core,0,1},
+	{"__sysconf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"__sysconf","GLIBC_2.3",0,LSB_Core,0,1},
+	{"__sysconf","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"__sysconf","GLIBC_2.2",0,LSB_Core,0,1},
+	{"__sysconf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"__sysconf","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"__sysconf","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
 #if defined __s390x__
-	{"__sysconf","GLIBC_2.2",0,LSB_Core,0,1},
+	{"__sysconf","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
 	{"__sysv_signal","GLIBC_2.0",0,LSB_Core,4,1},

@@ -50,5 +50,6 @@ LIBOBJS = \
 	libXext_so_6.o \
 	libXi_so_6.o \
 	libxml2_so_2.o \
+	libXrender_so_1.o \
 	libXt_so_6.o \
 	libz_so_1.o \
