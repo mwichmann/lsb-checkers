@@ -145,6 +145,31 @@ cnt++;
 /* No test for X11/extensions/Xrender.h */
 #endif
 
+#if defined __i386__
+CheckTypeSize(XTrapezoid,0, 12569, 2, 3.2, NULL, 12568, NULL)
+#elif 
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""""',NULL,,NULL);\n",architecture,12569,0);
+Msg("Find size of XTrapezoid (12569)\n");
+#elif defined __powerpc__ && !defined __powerpc64__
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""""',NULL,,NULL);\n",architecture,12569,0);
+Msg("Find size of XTrapezoid (12569)\n");
+#elif defined __powerpc64__
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""""',NULL,,NULL);\n",architecture,12569,0);
+Msg("Find size of XTrapezoid (12569)\n");
+#elif defined __s390__ && !defined __s390x__
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""""',NULL,,NULL);\n",architecture,12569,0);
+Msg("Find size of XTrapezoid (12569)\n");
+#elif defined __x86_64__
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""""',NULL,,NULL);\n",architecture,12569,0);
+Msg("Find size of XTrapezoid (12569)\n");
+#elif defined __s390x__
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""""',NULL,,NULL);\n",architecture,12569,0);
+Msg("Find size of XTrapezoid (12569)\n");
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12568,NULL);\n",architecture,12569,0);
+Msg("Find size of XTrapezoid (12569)\n");
+#endif
+
 #if 1
 CheckTypeSize(GlyphSet,0, 16624, 1, 3.2, NULL, 11186, NULL)
 #endif
@@ -186,35 +211,70 @@ CheckTypeSize(XFilters,0, 16653, 1, 3.2, NULL, 16652, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XAnimCursor,0, 16657, 1, 3.2, NULL, 16656, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XGlyphElt32,0, 16660, 1, 3.2, NULL, 16659, NULL)
+CheckTypeSize(XTransform,0, 16658, 1, 3.2, NULL, 16656, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XGlyphElt8,0, 16664, 1, 3.2, NULL, 16663, NULL)
+CheckTypeSize(XAnimCursor,0, 16661, 1, 3.2, NULL, 16660, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XRenderPictureAttributes,0, 16671, 1, 3.2, NULL, 16670, NULL)
+CheckTypeSize(XCircle,0, 16665, 1, 3.2, NULL, 16664, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XSpanFix,0, 16676, 1, 3.2, NULL, 16675, NULL)
+CheckTypeSize(XRadialGradient,0, 16666, 1, 3.2, NULL, 16663, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XTrap,0, 16677, 1, 3.2, NULL, 16674, NULL)
+CheckTypeSize(XGlyphElt32,0, 16672, 1, 3.2, NULL, 16671, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XGlyphElt16,0, 16683, 1, 3.2, NULL, 16680, NULL)
+CheckTypeSize(XGlyphElt8,0, 16676, 1, 3.2, NULL, 16675, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XTriangle,0, 16687, 1, 3.2, NULL, 16686, NULL)
+CheckTypeSize(XConicalGradient,0, 16680, 1, 3.2, NULL, 16679, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XLinearGradient,0, 16686, 1, 3.2, NULL, 16685, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XDouble,0, 16690, 1, 3.2, NULL, 13, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XPointDouble,0, 16691, 1, 3.2, NULL, 16689, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XRenderPictureAttributes,0, 16698, 1, 3.2, NULL, 16697, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XSpanFix,0, 16703, 1, 3.2, NULL, 16702, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XTrap,0, 16704, 1, 3.2, NULL, 16701, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XIndexValue,0, 16708, 1, 3.2, NULL, 16707, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XGlyphElt16,0, 16713, 1, 3.2, NULL, 16710, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XTriangle,0, 16717, 1, 3.2, NULL, 16716, NULL)
 #endif
 
 #ifdef TET_TEST
