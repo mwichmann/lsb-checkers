@@ -647,6 +647,7 @@ struct modlib modlibs [] = {
 #endif
 	{LSB_Graphics,"libX11.so.6",libX11_so_6,libX11_so_6_classinfo},
 	{LSB_Graphics,"libXext.so.6",libXext_so_6,libXext_so_6_classinfo},
+	{LSB_Graphics,"libXft.so.2",libXft_so_2,libXft_so_2_classinfo},
 	{LSB_Graphics,"libXi.so.6",libXi_so_6,libXi_so_6_classinfo},
 	{LSB_XML,"libxml2.so.2",libxml2_so_2,libxml2_so_2_classinfo},
 	{LSB_Graphics,"libXrender.so.1",libXrender_so_1,libXrender_so_1_classinfo},
