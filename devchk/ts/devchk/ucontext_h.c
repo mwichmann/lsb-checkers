@@ -110,14 +110,14 @@ CheckMemberSize(struct _libc_xmmreg,element,16,11,40470)
 CheckOffset(struct _libc_xmmreg,element,0,11,40470)
 #endif
 
-#if defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(vrregset_t,528, 10909, 6, 2.0, NULL, 10908, '(__aligned__(16))')
-#elif defined __powerpc64__
-CheckTypeSize(vrregset_t,544, 10909, 9, 2.0, NULL, 10908, '(__aligned__(16))')
+#if defined __powerpc64__
+CheckTypeSize(vscr_t,16, 10909, 9, 3.0, NULL, 11034, NULL)
 #endif
 
-#if defined __powerpc64__
-CheckTypeSize(vscr_t,16, 11035, 9, 3.0, NULL, 11034, NULL)
+#if defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(vrregset_t,528, 11035, 6, 2.0, NULL, 10908, '(__aligned__(16))')
+#elif defined __powerpc64__
+CheckTypeSize(vrregset_t,544, 11035, 9, 2.0, NULL, 10908, '(__aligned__(16))')
 #endif
 
 #if defined __i386__

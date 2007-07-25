@@ -16,6 +16,8 @@ OBJS = hdrchk.o \
 	X11_Xlib_h.o \
 	X11_Xutil_h.o \
 	X11_extensions_XEVI_h.o \
+	X11_extensions_Xrender_h.o \
+	X11_extensions_render_h.o \
 	X11_extensions_security_h.o \
 	X11_extensions_sync_h.o \
 	atk_1_0_atk_atk_enum_types_h.o \
@@ -33,6 +35,39 @@ OBJS = hdrchk.o \
 	fnmatch_h.o \
 	fontconfig_fcprivate_h.o \
 	fontconfig_fontconfig_h.o \
+	freetype_config_ftheader_h.o \
+	freetype_config_ftmodule_h.o \
+	freetype_config_ftoption_h.o \
+	freetype_config_ftstdlib_h.o \
+	freetype_freetype_h.o \
+	freetype_ftbbox_h.o \
+	freetype_ftbdf_h.o \
+	freetype_ftbitmap_h.o \
+	freetype_fterrdef_h.o \
+	freetype_fterrors_h.o \
+	freetype_ftglyph_h.o \
+	freetype_ftimage_h.o \
+	freetype_ftincrem_h.o \
+	freetype_ftlist_h.o \
+	freetype_ftmm_h.o \
+	freetype_ftmodapi_h.o \
+	freetype_ftmoderr_h.o \
+	freetype_ftotval_h.o \
+	freetype_ftoutln_h.o \
+	freetype_ftpfr_h.o \
+	freetype_ftrender_h.o \
+	freetype_ftsizes_h.o \
+	freetype_ftsnames_h.o \
+	freetype_ftstroke_h.o \
+	freetype_ftsynth_h.o \
+	freetype_fttrigon_h.o \
+	freetype_fttypes_h.o \
+	freetype_ftxf86_h.o \
+	freetype_t1tables_h.o \
+	freetype_ttnameid_h.o \
+	freetype_tttables_h.o \
+	freetype_tttags_h.o \
+	freetype_ttunpat_h.o \
 	ftw_h.o \
 	getopt_h.o \
 	glib_2_0_glib_object_h.o \
@@ -175,7 +210,7 @@ else
 EXTRALIBS =
 endif
 
-CFLAGS=-O -DQT_THREAD_SUPPORT -D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include -I/usr/include/glib-2.0 -I/usr/include/atk-1.0 -I/usr/include/pango-1.0 -I/usr/include/gtk-2.0 -I/usr/include/freetype2 -I/usr/lib64/gtk-2.0/include -I/usr/lib/gtk-2.0/include -I/usr/lib64/glib-2.0/include -I/usr/lib/glib-2.0/include -I/usr/include/libxml2 -I/usr/include/fontconfig -I/usr/include/cairo -I/usr/lib64/qt3/include -I/usr/lib/qt3/include -I/usr/lib64/qt-3.3/include -I/usr/lib/qt-3.3/include -I/opt/gnome/include -I/opt/gnome/include/atk-1.0 -I/opt/gnome/include/glib-2.0 -I/opt/gnome/include/gtk-2.0 -I/opt/gnome/include/pango-1.0 -I/opt/gnome/lib64/glib-2.0/include -I/opt/gnome/lib/glib-2.0/include -I/opt/gnome/lib64/gtk-2.0/include -I/opt/gnome/lib/gtk-2.0/include 
+CFLAGS=-O -DQT_THREAD_SUPPORT -D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include -I/usr/include/glib-2.0 -I/usr/include/atk-1.0 -I/usr/include/pango-1.0 -I/usr/include/gtk-2.0 -I/usr/include/freetype2 -I/usr/lib64/gtk-2.0/include -I/usr/lib/gtk-2.0/include -I/usr/lib64/glib-2.0/include -I/usr/lib/glib-2.0/include -I/usr/include/libxml2 -I/usr/include/fontconfig -I/usr/include/cairo -I/usr/lib64/qt3/include -I/usr/lib/qt3/include -I/usr/lib64/qt-3.3/include -I/usr/lib/qt-3.3/include -I/opt/gnome/include -I/opt/gnome/include/atk-1.0 -I/opt/gnome/include/glib-2.0 -I/opt/gnome/include/gtk-2.0 -I/opt/gnome/include/pango-1.0 -I/opt/gnome/lib64/glib-2.0/include -I/opt/gnome/lib/glib-2.0/include -I/opt/gnome/lib64/gtk-2.0/include -I/opt/gnome/lib/gtk-2.0/include
 
 ifdef LSB_PRODUCT
 CFLAGS=-DLSBCC_MODE -D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include -I/opt/lsb/include/glib-2.0 -I/opt/lsb/include/atk-1.0 -I/opt/lsb/include/pango-1.0 -I/opt/lsb/include/gtk-2.0 -I/usr/include/freetype2 -I/opt/lsb/include/libxml2 -I/opt/lsb/include/fontconfig

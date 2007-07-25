@@ -30,6 +30,27 @@ printf("Checking data structures in freetype/ftoutln.h\n");
 #endif
 
 #if defined __i386__
+CheckTypeSize(FT_Face,0, 11168, 2, 3.2, NULL, 11167, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11167,NULL);\n",architecture,11168,0);
+Msg("Find size of FT_Face (11168)\n");
+#endif
+
+#if defined __i386__
+CheckTypeSize(FT_UInt,0, 11171, 2, 3.2, NULL, 7, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,7,NULL);\n",architecture,11171,0);
+Msg("Find size of FT_UInt (11171)\n");
+#endif
+
+#if defined __i386__
+CheckTypeSize(FT_Bitmap,0, 12594, 2, 3.2, NULL, 12593, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12593,NULL);\n",architecture,12594,0);
+Msg("Find size of FT_Bitmap (12594)\n");
+#endif
+
+#if defined __i386__
 CheckTypeSize(struct FT_LibraryRec_,196, 16747, 2, 3.2, NULL, 0, NULL)
 Msg("Missing member data for FT_LibraryRec_ on IA32\n");
 CheckOffset(struct FT_LibraryRec_,memory,0,2,53966)
