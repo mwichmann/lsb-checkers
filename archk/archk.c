@@ -33,13 +33,6 @@ static const char * __attribute((unused)) archk_revision = "$Revision: 1.9 $";
 void
 usage(char *progname)
 {
-    int i;
-    char lsb_list[1024] = "";
-    for (i = 0; i < num_LSB_Versions; ++i) {
-        if (lsb_list[0] != '\0')
-            strcat(lsb_list, ", ");
-        strcat(lsb_list, LSB_Versions[i]);
-    }
     printf("usage: %s [options] archive ...\n"
            "  -h, --help                     show this help message and exit\n"
            "  -v, --version                  show version and LSB version\n"
@@ -51,7 +44,7 @@ usage(char *progname)
            "  -M MODULE, --module=MODULE     add MODULE to list of checked modules\n"
            "  -L LIB                         add LIB to list of checked libraries\n"
            "  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n",
-           progname, lsb_list);
+           progname, LSB_Versions_list);
 }
 
 int
@@ -95,8 +88,8 @@ main(int argc, char *argv[])
 	usage(argv[0]);
 	exit (0);
       case 'v':
-	printf("%s %s for LSB Specification %s\n", argv[0],
-	       LSBARCHK_VERSION, LSBVERSION);
+	printf("%s %s for LSB Specifications %s\n", argv[0],
+	       LSBARCHK_VERSION, LSB_Versions_list);
 	break;
       case 'n':
 	snprintf(journal_filename, TMP_STRING_SIZE, "/dev/null");
@@ -147,7 +140,7 @@ main(int argc, char *argv[])
   }
 
   if (LSB_Version == -1) {
-    LSB_Version = 0;
+    LSB_Version = LSB_Version_default;
     printf("LSB version is not specified, using %s by default.\n\n", LSB_Versions[LSB_Version]);
   }
 
@@ -172,7 +165,7 @@ main(int argc, char *argv[])
   snprintf(tmp_string, TMP_STRING_SIZE,
 	   "VSX_NAME=lsbarchk %s (%s)", LSBARCHK_VERSION, tetj_arch);
   tetj_add_config(journal, tmp_string);
-  snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION=%s", LSBVERSION);
+  snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION=%s", LSB_Versions[LSB_Version]);
   tetj_add_config(journal, tmp_string);
   snprintf(tmp_string, TMP_STRING_SIZE, "LSB_MODULES=%s", getmodulename(modules));
   tetj_add_config(journal, tmp_string);
