@@ -49,6 +49,7 @@ LIBOBJS = \
 	libutil_so_1.o \
 	libX11_so_6.o \
 	libXext_so_6.o \
+	libXft_so_2.o \
 	libXi_so_6.o \
 	libxml2_so_2.o \
 	libXrender_so_1.o \

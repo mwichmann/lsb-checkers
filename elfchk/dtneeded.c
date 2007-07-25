@@ -1619,6 +1619,7 @@ char *DtNeeded_LSB32[] = {
 #endif /* defined __s390x__ */
 	"libX11.so.6",
 	"libXext.so.6",
+	"libXft.so.2",
 	"libXi.so.6",
 	"libxml2.so.2",
 	"libXrender.so.1",
