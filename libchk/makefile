@@ -13,7 +13,7 @@ all: libchk dummy_link
 include ../Makefile.common
 
 libchk: $(OBJS) ../elfchk/libelfchk.a ../tetj/libtetj.a
-	$(CC) $(CFLAGS) -o libchk $(OBJS) -L../elfchk -L ../tetj -lelfchk -ltetj -lstdc++ -ldl
+	$(CXX) $(CFLAGS) -o libchk $(OBJS) -L../elfchk -L ../tetj -lelfchk -ltetj -lstdc++ -ldl
 
 gensrc: $(GENSRCS)
 
