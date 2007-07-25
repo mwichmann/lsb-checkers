@@ -863,6 +863,8 @@ extern struct versym libX11_so_6[];
 extern struct classinfo libX11_so_6_classinfo[];
 extern struct versym libXext_so_6[];
 extern struct classinfo libXext_so_6_classinfo[];
+extern struct versym libXft_so_2[];
+extern struct classinfo libXft_so_2_classinfo[];
 extern struct versym libXi_so_6[];
 extern struct classinfo libXi_so_6_classinfo[];
 extern struct versym libxml2_so_2[];
