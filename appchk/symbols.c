@@ -68,7 +68,7 @@ checksymbols(ElfFile *file, int modules)
 
           snprintf(tmp_string, TMP_STRING_LENGTH, 
                    "Symbol %s is used, but is not included in %s",
-                   symbol_name, getlsbprofile(LSBVERSION,modules) );
+                   symbol_name, getlsbprofile(LSB_Versions[LSB_Version], modules) );
           TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
                         tmp_string);
           RESULT(tetj_activity_count, tetj_tp_count, TETJ_FAIL);

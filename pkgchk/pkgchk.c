@@ -16,10 +16,6 @@
 #include "rpmchk.h"
 #include "../appchk/output.h"
 
-extern char* LSB_Versions[];
-extern int num_LSB_Versions;
-extern int LSB_Version;
-
 /* Set of desktop modules depends on the LSB version selected.
  * The order of the command line options is not fixed, so we have to determine the
  * version first, remember which set of modules is needed and only then calculate the
@@ -36,13 +32,6 @@ int modules = 0;
 void
 usage(char *progname)
 {
-    int i;
-    char lsb_list[1024] = "";
-    for (i = 0; i < num_LSB_Versions; ++i) {
-        if (lsb_list[0] != '\0')
-            strcat(lsb_list, ", ");
-        strcat(lsb_list, LSB_Versions[i]);
-    }
     printf("usage: %s [options] pkgname\n"
         "  -h, --help                     show this help message and exit\n"
         "  -v, --version                  show version and LSB version\n"
@@ -60,7 +49,7 @@ usage(char *progname)
         "                                 add DEPENDENCY provided by another\n"
         "                                 customer provided package to list of\n"
         "                                 expected dependencies\n",
-        progname, lsb_list);
+        progname, LSB_Versions_list);
 }
 
 char *
@@ -137,8 +126,8 @@ main(int argc, char *argv[])
         usage(argv[0]);
         exit (0);
       case 'v':
-        printf("%s %s for LSB Specification %s\n", argv[0],
-               LSBPKGCHK_VERSION, LSBVERSION);
+        printf("%s %s for LSB Specifications %s\n", argv[0],
+               LSBPKGCHK_VERSION, LSB_Versions_list);
         break;
       case 'n':
         snprintf(journal_filename, TMP_STRING_SIZE, "/dev/null");
@@ -202,7 +191,7 @@ main(int argc, char *argv[])
   }
 
   if (LSB_Version == -1) {
-      LSB_Version = 0;
+      LSB_Version = LSB_Version_default;
       printf("LSB version is not specified, using %s by default.\n\n", LSB_Versions[LSB_Version]);
   }
 
@@ -254,7 +243,7 @@ main(int argc, char *argv[])
   snprintf(tmp_string, TMP_STRING_SIZE,
            "VSX_NAME=lsbpkgchk %s (%s)", LSBPKGCHK_VERSION, tetj_arch);
   tetj_add_config(journal, tmp_string);
-  snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION=%s", LSBVERSION);
+  snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION=%s", LSB_Versions[LSB_Version]);
   tetj_add_config(journal, tmp_string);
   if (check_app) {
     snprintf(tmp_string, TMP_STRING_SIZE, "LSB_MODULES=%s", getmodulename(modules));

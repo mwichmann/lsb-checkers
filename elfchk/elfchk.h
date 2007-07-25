@@ -14,8 +14,10 @@
 struct tetj_handle;
 
 extern char* LSB_Versions[];
+extern char* LSB_Versions_list;
 extern int num_LSB_Versions;
 extern int LSB_Version;
+extern int LSB_Version_default;
 
 struct versym {
 	char *name;

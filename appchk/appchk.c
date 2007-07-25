@@ -12,18 +12,17 @@
 #include "symbols.h"
 #include "output.h"
 
-
 char *
 concat_string(char *input, char *addition)
 {
     char *tmp;
     if (input) { 
-	tmp = realloc(input, strlen(input) + strlen(addition) + 1);
-	if (!tmp)
-	    abort();
-	return strcat(tmp, addition);
+        tmp = realloc(input, strlen(input) + strlen(addition) + 1);
+        if (!tmp)
+            abort();
+        return strcat(tmp, addition);
     } else {
-	return strdup(addition);
+        return strdup(addition);
     }
 }
 
@@ -82,13 +81,6 @@ static const char *__attribute((unused)) appchk_revision =
 void
 usage(char *progname)
 {
-    int i;
-    char lsb_list[1024] = "";
-    for (i = 0; i < num_LSB_Versions; ++i) {
-        if (lsb_list[0] != '\0')
-            strcat(lsb_list, ", ");
-        strcat(lsb_list, LSB_Versions[i]);
-    }
     printf("usage: %s [options] appname ...\n"
 "  -h, --help                     show this help message and exit\n"
 "  -v, --version                  show version and LSB version\n"
@@ -96,7 +88,7 @@ usage(char *progname)
 "  -n, --no-journal               do not write a journal file\n"
 "  -s, --missing-symbols          report only on missing symbols\n"
 "  -r, --lsb-version=VERSION      LSB version to test against\n"
-"                                 (supported are: %s)\n"
+"                                   (supported are: %s)\n"
 "  -T, --lsb-product=[core,c++|core,c++,desktop]\n"
 "                                 target product to load modules for\n"
 "  -M MODULE, --module=MODULE     add MODULE to list of checked modules\n"
@@ -104,7 +96,7 @@ usage(char *progname)
 "  -D DIR[:DIR...], --shared-libpath=DIR[:DIR...]\n"
 "                                 add all libs in DIR to checked lib list\n"
 "  -o FILE, --output-file=FILE    write output to FILE\n",
-progname, lsb_list);
+progname, LSB_Versions_list);
 }
 
 int
@@ -140,6 +132,7 @@ main(int argc, char *argv[])
     } else
         modules = LSB_Core | LSB_Graphics | LSB_Cpp;
 */
+
     /* Set defaults. */
     do_journal = 0;
     output_filename[0] = '\0';
@@ -159,8 +152,8 @@ main(int argc, char *argv[])
     }
 
     for (i = 0; i < argc; i++) {
-	command_line = concat_string(command_line, argv[i]);
-	command_line = concat_string(command_line, " ");
+        command_line = concat_string(command_line, argv[i]);
+        command_line = concat_string(command_line, " ");
     }
 
     /* Set of desktop modules depends on the LSB version selected.
@@ -174,103 +167,103 @@ main(int argc, char *argv[])
     int modules_pre = 0;
     modules = 0;
     while (1) {
-	int c;
-	static struct option long_options[] = {
-	    {"help",     no_argument,          NULL, 'h'},
-	    {"version",  no_argument,          NULL, 'v'},
-	    {"journal",  no_argument,          NULL, 'j'},
+        int c;
+        static struct option long_options[] = {
+            {"help",     no_argument,          NULL, 'h'},
+            {"version",  no_argument,          NULL, 'v'},
+            {"journal",  no_argument,          NULL, 'j'},
             {"no-journal", no_argument,        NULL, 'n'},
             {"missing-symbols", no_argument,   NULL, 's'},
-	    {"output-file", required_argument, NULL, 'o'},
-	    {"module",   required_argument,    NULL, 'M'},
+            {"output-file", required_argument, NULL, 'o'},
+            {"module",   required_argument,    NULL, 'M'},
             {"lsb-version",     required_argument, NULL, 'r'},
-	    {"lsb-product", required_argument, NULL, 'T'},
-	    {"shared-libpath", required_argument, NULL, 'D'},
-	    {0, 0, 0, 0}
+            {"lsb-product", required_argument, NULL, 'T'},
+            {"shared-libpath", required_argument, NULL, 'D'},
+            {0, 0, 0, 0}
       };
 
-        c = getopt_long(argc, argv, "hvjnsAo:M:L:r:T:D:",
-                       long_options, &option_index);
-      if (c == -1)
-	  break;
-      switch (c) {
-	  case 'h':
-	      usage(argv[0]);
-	      exit (0);
-	  case 'v':
-	      printf("%s %s for LSB Specification %s\n", argv[0],
-		     LSBAPPCHK_VERSION, LSBVERSION);
-	      break;
-            case 'r':
-                for (i = 0; i < num_LSB_Versions; ++i) {
-                    if (strcmp(optarg, LSB_Versions[i]) == 0) {
-                        LSB_Version = i;
-                        break;
-                    }
+    c = getopt_long(argc, argv, "hvjnsAo:M:L:r:T:D:",
+                    long_options, &option_index);
+    if (c == -1)
+          break;
+    switch (c) {
+        case 'h':
+            usage(argv[0]);
+            exit (0);
+        case 'v':
+            printf("%s %s for LSB Specifications %s\n", argv[0],
+                   LSBAPPCHK_VERSION, LSB_Versions_list);
+            break;
+        case 'r':
+            for (i = 0; i < num_LSB_Versions; ++i) {
+                if (strcmp(optarg, LSB_Versions[i]) == 0) {
+                    LSB_Version = i;
+                    break;
                 }
-                if (LSB_Version == -1) {
-                    printf("LSB version '%s' is not supported!\n", optarg);
-                    usage(argv[0]);
-                    exit(1);
-                }
-                break;
-	   case 'T':
-	      if(strcasecmp(optarg, "core,c++") == 0)
-                    modules_pre = 1;
-	      else if(strcasecmp(optarg, "core,c++,desktop") == 0)
-                    modules_pre = 2;
-	      /* else if(strcasecmp(optarg, "all") == 0)
-                    modules_pre = 3; */
-	      else {
-		printf("product '%s' is not valid!\n", optarg);
-		usage(argv[0]);
-		exit(1);
-	      }
-	      break;
-	  case 'M':
-	      modules |= getmoduleval(optarg);
-	      printf("also checking symbols in module %s\n", optarg);
-	      break;
-	  case 'L':
-	      extra_lib_count++;
-                extra_lib_list = realloc(extra_lib_list, sizeof(char *)*extra_lib_count);
-	      extra_lib_list[extra_lib_count-1] = strdup(optarg);
-	      break;
-          case 'D':
-                for (token = strtok(optarg, ":"); token != NULL; token = strtok(NULL, ":")) {
+            }
+            if (LSB_Version == -1) {
+                printf("LSB version '%s' is not supported!\n", optarg);
+                usage(argv[0]);
+                exit(1);
+            }
+            break;
+        case 'T':
+            if (strcasecmp(optarg, "core,c++") == 0)
+                modules_pre = 1;
+            else if (strcasecmp(optarg, "core,c++,desktop") == 0)
+                modules_pre = 2;
+            /* else if(strcasecmp(optarg, "all") == 0)
+                  modules_pre = 3; */
+            else {
+                printf("product '%s' is not valid!\n", optarg);
+                usage(argv[0]);
+                exit(1);
+            }
+            break;
+        case 'M':
+            modules |= getmoduleval(optarg);
+            printf("also checking symbols in module %s\n", optarg);
+            break;
+        case 'L':
+            extra_lib_count++;
+            extra_lib_list = realloc(extra_lib_list, sizeof(char *)*extra_lib_count);
+            extra_lib_list[extra_lib_count-1] = strdup(optarg);
+            break;
+        case 'D':
+            for (token = strtok(optarg, ":"); token != NULL; token = strtok(NULL, ":")) {
                 extra_lib_count = add_library_dir(token, &extra_lib_list, 
                                                   extra_lib_count);
                 if (extra_lib_count < 0)
-                  exit(1);
-              }
-              break;
-          case 'o':
-              snprintf(output_filename, TMP_STRING_SIZE, optarg);
-              break;
-	  case 'j':
-              do_journal = 1;
-	      break;
-          case 'n':
-              do_journal = 0;
-              break;
-          case 's':
-              do_missing_symbol = 1;
-              break;
-	  default:
-	      usage(argv[0]);
-	      exit (0);
-	}
+                    exit(1);
+            }
+            break;
+        case 'o':
+            snprintf(output_filename, TMP_STRING_SIZE, optarg);
+            break;
+        case 'j':
+            do_journal = 1;
+            break;
+        case 'n':
+            do_journal = 0;
+            break;
+        case 's':
+            do_missing_symbol = 1;
+            break;
+        default:
+            usage(argv[0]);
+            exit(0);
+        }
     }
     if (optind >= argc && !extra_lib_count) {
-	usage(argv[0]);
-	exit (1);
+        usage(argv[0]);
+        exit (1);
     }
 
     if (LSB_Version == -1) {
-        LSB_Version = 0;
+        LSB_Version = LSB_Version_default;
         printf("LSB version is not specified, using %s by default.\n\n", LSB_Versions[LSB_Version]);
     }
-
+    
     /* Now calculate final set of modules. */
     switch (modules_pre) {
         case 1:     /* core,c++ */
@@ -322,13 +315,13 @@ main(int argc, char *argv[])
         snprintf(tmp_string, TMP_STRING_SIZE,
                  "VSX_NAME=lsbappchk %s (%s)", LSBAPPCHK_VERSION, tetj_arch);
         tetj_add_config(journal, tmp_string);
-        snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION=%s", LSBVERSION);
+        snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION=%s", LSB_Versions[LSB_Version]);
         tetj_add_config(journal, tmp_string);
         snprintf(tmp_string, TMP_STRING_SIZE, "LSB_MODULES=%s",
                  getmodulename(modules));
         tetj_add_config(journal, tmp_string);
         snprintf(tmp_string, TMP_STRING_SIZE, "LSB_PROFILE=%s",
-                 getlsbprofile(LSBVERSION,modules));
+                 getlsbprofile(LSB_Versions[LSB_Version] ,modules));
         tetj_add_config(journal, tmp_string);
 
         /* Log extra libraries to look for symbols in */
@@ -355,91 +348,91 @@ main(int argc, char *argv[])
 
     /* Add all extra libs to DT_NEEDED list */
     for (i = 0; i < extra_lib_count; i++)
-	addDTNeeded(extra_lib_list[i]);
+        addDTNeeded(extra_lib_list[i]);
 
     /* Add symbols from extra libs to list */
     for (i = 0; i < extra_lib_count; i++) {
-	TESTCASE_START(tetj_activity_count, extra_lib_list[i],"");
-	tetj_tp_count = 0;
-	elffile = OpenElfFile(extra_lib_list[i]);
-	if (elffile == NULL) {
-	    /* make a dummy container if it failed to open */
-	    snprintf(tmp_string, TMP_STRING_SIZE, "Opening lib %s",
-	                                          extra_lib_list[i]);
-	    PURPOSE_START(tetj_activity_count, ++tetj_tp_count, tmp_string);
-	    snprintf(tmp_string, TMP_STRING_SIZE, "Could not open %s",
-	                                           extra_lib_list[i]);
-	    /* error already printed by call:
-	    perror(tmp_string);
-	    */
-	    TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
+        TESTCASE_START(tetj_activity_count, extra_lib_list[i],"");
+        tetj_tp_count = 0;
+        elffile = OpenElfFile(extra_lib_list[i]);
+        if (elffile == NULL) {
+            /* make a dummy container if it failed to open */
+            snprintf(tmp_string, TMP_STRING_SIZE, "Opening lib %s",
+                                                  extra_lib_list[i]);
+            PURPOSE_START(tetj_activity_count, ++tetj_tp_count, tmp_string);
+            snprintf(tmp_string, TMP_STRING_SIZE, "Could not open %s",
+                                                   extra_lib_list[i]);
+            /* error already printed by call:
+            perror(tmp_string);
+            */
+            TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
                           tmp_string);
-	    RESULT(tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-	    PURPOSE_END(tetj_activity_count, tetj_tp_count);
-	    TESTCASE_END(tetj_activity_count++, 0, "");
-	    continue;
-	}
-	check_file(elffile, ELF_IS_DSO);
-	add_library_symbols(elffile, journal, modules);
-	TESTCASE_END(tetj_activity_count++, 0, "");
-	CloseElfFile(elffile);
+            RESULT(tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+            PURPOSE_END(tetj_activity_count, tetj_tp_count);
+            TESTCASE_END(tetj_activity_count++, 0, "");
+            continue;
+        }
+        check_file(elffile, ELF_IS_DSO);
+        add_library_symbols(elffile, journal, modules);
+        TESTCASE_END(tetj_activity_count++, 0, "");
+        CloseElfFile(elffile);
     }
 
     /* Check all extra libs */
     for (i = 0; i < extra_lib_count; i++) {
-	snprintf(tmp_string, TMP_STRING_SIZE, "%s-pass2", extra_lib_list[i]);
-	TESTCASE_START(tetj_activity_count, tmp_string,"");
-	tetj_tp_count = 0;
+        snprintf(tmp_string, TMP_STRING_SIZE, "%s-pass2", extra_lib_list[i]);
+        TESTCASE_START(tetj_activity_count, tmp_string,"");
+        tetj_tp_count = 0;
 
-	elffile = OpenElfFile(extra_lib_list[i]);
-	if (elffile == NULL) {
-	    /* make a dummy container if it failed to open */
-	    snprintf(tmp_string, TMP_STRING_SIZE, "Opening lib %s",
-	                                           extra_lib_list[i]);
-	    PURPOSE_START(tetj_activity_count, ++tetj_tp_count,
+        elffile = OpenElfFile(extra_lib_list[i]);
+        if (elffile == NULL) {
+            /* make a dummy container if it failed to open */
+            snprintf(tmp_string, TMP_STRING_SIZE, "Opening lib %s",
+                                                   extra_lib_list[i]);
+            PURPOSE_START(tetj_activity_count, ++tetj_tp_count,
                           tmp_string);
-	    snprintf(tmp_string, TMP_STRING_SIZE, "Could not open %s",
-	                                           extra_lib_list[i]);
-	    /* error already printed by call:
-	    perror(tmp_string);
-	    */
-	    TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
+            snprintf(tmp_string, TMP_STRING_SIZE, "Could not open %s",
+                                                   extra_lib_list[i]);
+            /* error already printed by call:
+            perror(tmp_string);
+            */
+            TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
                           tmp_string);
-	    RESULT(tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-	    PURPOSE_END(tetj_activity_count, tetj_tp_count);
-	    TESTCASE_END(tetj_activity_count++, 0, "");
-	    continue;
-	}
-	check_lib(elffile, ELF_IS_DSO, modules);
-	TESTCASE_END(tetj_activity_count++, 0, "");
-	CloseElfFile(elffile);
+            RESULT(tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+            PURPOSE_END(tetj_activity_count, tetj_tp_count);
+            TESTCASE_END(tetj_activity_count++, 0, "");
+            continue;
+        }
+        check_lib(elffile, ELF_IS_DSO, modules);
+        TESTCASE_END(tetj_activity_count++, 0, "");
+        CloseElfFile(elffile);
     }
 
     /* Check binary */
     for (i = optind; i < argc; i++) {
-	TESTCASE_START(tetj_activity_count, argv[i], "");
-	tetj_tp_count = 0;
+        TESTCASE_START(tetj_activity_count, argv[i], "");
+        tetj_tp_count = 0;
 
-	elffile = OpenElfFile(argv[i]);
-	if (elffile == NULL) {
-	    /* make a dummy container if it failed to open */
-	    snprintf(tmp_string, TMP_STRING_SIZE, "Opening binary %s", argv[i]);
-	    PURPOSE_START(tetj_activity_count, ++tetj_tp_count, tmp_string);
-	    snprintf(tmp_string, TMP_STRING_SIZE, "Could not open %s", argv[i]);
-	    /* error already printed by call:
-	    perror(tmp_string);
-	    */
-	    TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
+        elffile = OpenElfFile(argv[i]);
+        if (elffile == NULL) {
+            /* make a dummy container if it failed to open */
+            snprintf(tmp_string, TMP_STRING_SIZE, "Opening binary %s", argv[i]);
+            PURPOSE_START(tetj_activity_count, ++tetj_tp_count, tmp_string);
+            snprintf(tmp_string, TMP_STRING_SIZE, "Could not open %s", argv[i]);
+            /* error already printed by call:
+            perror(tmp_string);
+            */
+            TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
                           tmp_string);
-	    RESULT(tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-	    PURPOSE_END(tetj_activity_count, tetj_tp_count);
-	    TESTCASE_END(tetj_activity_count++, 0, "");
-	    continue;
-	}
-	check_file(elffile, ELF_IS_EXEC);
-	checksymbols(elffile, modules);
-	TESTCASE_END(tetj_activity_count++, 0, "");
-	CloseElfFile(elffile);
+            RESULT(tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+            PURPOSE_END(tetj_activity_count, tetj_tp_count);
+            TESTCASE_END(tetj_activity_count++, 0, "");
+            continue;
+        }
+        check_file(elffile, ELF_IS_EXEC);
+        checksymbols(elffile, modules);
+        TESTCASE_END(tetj_activity_count++, 0, "");
+        CloseElfFile(elffile);
     }
 
     if (do_journal)

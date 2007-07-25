@@ -22,11 +22,13 @@ check_dependencies(struct tetj_handle *journal)
     char *name, *vername;
     int fail = TETJ_PASS;
     char tmp_string[TMP_STRING_SIZE + 1];
+    RpmRequireRec lsb_req = {"lsb", LSB_Versions[LSB_Version], 0, 1};
 
     numalldeps = numdeps;
     for (i = 0; i < numdeps; i++) {
 	alldeps[i] = validdeps[i];
     }
+	alldeps[numalldeps++] = lsb_req;
 
 /* Ignore is_graphics and is_desktop for LSB 3.1
     if (is_graphics) {
