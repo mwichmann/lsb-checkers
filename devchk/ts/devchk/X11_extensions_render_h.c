@@ -1163,24 +1163,6 @@ cnt++;
 
 #if defined __i386__
 CheckTypeSize(Picture,0, 12562, 2, 3.2, NULL, 11186, NULL)
-#elif 
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""""',NULL,,NULL);\n",architecture,12562,0);
-Msg("Find size of Picture (12562)\n");
-#elif defined __powerpc__ && !defined __powerpc64__
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""""',NULL,,NULL);\n",architecture,12562,0);
-Msg("Find size of Picture (12562)\n");
-#elif defined __powerpc64__
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""""',NULL,,NULL);\n",architecture,12562,0);
-Msg("Find size of Picture (12562)\n");
-#elif defined __s390__ && !defined __s390x__
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""""',NULL,,NULL);\n",architecture,12562,0);
-Msg("Find size of Picture (12562)\n");
-#elif defined __x86_64__
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""""',NULL,,NULL);\n",architecture,12562,0);
-Msg("Find size of Picture (12562)\n");
-#elif defined __s390x__
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""""',NULL,,NULL);\n",architecture,12562,0);
-Msg("Find size of Picture (12562)\n");
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11186, NULL);\n",architecture,12562,0);
 Msg("Find size of Picture (12562)\n");
