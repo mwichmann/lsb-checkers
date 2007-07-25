@@ -44,7 +44,7 @@ RpmRequireRec validdeps[] = {
 	{"rpmlib(PayloadFilesHavePrefix)","4.0-1", 0, 0 },
 	{"rpmlib(CompressedFileNames)","3.0.4-1", 0, 0 },
 	{"/bin/sh","", 0, 0 },
-	{"lsb",LSBVERSION, 0, 1 },
+/*	{"lsb",LSBVERSION, 0, 1 }, - LSB version is now dynamic, so add it later, in check_dependencies() */
 	{"lsb-core-noarch","3.0", 0, 0 },
 #if __i386__
 	{"lsb-core-ia32","3.0", 0, 0 },
