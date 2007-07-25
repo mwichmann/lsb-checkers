@@ -35,6 +35,9 @@ extern void xlib_draw_gray_image(void);
 extern void gdk_beep(void);
 extern void gtk_accel_group_find(void);
 extern void htmlCtxtReadDoc(void);
+extern void XRenderAddGlyphs(void);
+extern void FT_List_Insert(void);
+extern void XftInit(void);
 
 extern void _Z10forcepointR11QTextStream(void);
 extern void _ZN10QHideEventD2Ev (void);
@@ -156,6 +159,12 @@ int main()
 
     /* libXrender */
     XRenderAddGlyphs();
+
+    /* libfreetype */
+    FT_List_Insert();
+
+    /* libXft */
+    XftInit();
 
     /* libQtCore */
     _Z10forcepointR11QTextStream();
