@@ -1,5 +1,5 @@
 LSBAPPCHK_VERSION=unofficial
-CFLAGS=-g -DLSBVERSION=\"$$LSBVERSION\" -DLSBAPPCHK_VERSION=\"$(LSBAPPCHK_VERSION)\" -Wall -I../elfchk
+CFLAGS=-g -DLSBAPPCHK_VERSION=\"$(LSBAPPCHK_VERSION)\" -Wall -I../elfchk
 
 OBJS=libraries.o symbols.o check_file.o output.o ../lsb_version.o
 LIBS=../rpmchk/librpmchk.a ../elfchk/libelfchk_appchk.a ../elfchk/libelfchk.a \

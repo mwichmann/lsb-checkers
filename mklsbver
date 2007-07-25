@@ -15,4 +15,4 @@ if( !$lsbversion ) { usage(); }
 
 my @lsbversions = sort split(/,/, $lsbversion);
 
-print "char* LSB_Versions[] = {\"".join("\", \"", @lsbversions)."\"};\nint num_LSB_Versions = sizeof(LSB_Versions)/sizeof(char *);\n\nint LSB_Version = -1;\n";
+print "char* LSB_Versions[] = {\"".join("\", \"", @lsbversions)."\"};\nchar* LSB_Versions_list = \"".join(", ", @lsbversions)."\";\nint num_LSB_Versions = sizeof(LSB_Versions)/sizeof(char *);\n\nint LSB_Version = -1;\n\n/* Default LSB version is 3.1 */\nint LSB_Version_default = 1;\n";
