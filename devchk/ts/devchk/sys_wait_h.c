@@ -103,6 +103,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9184, NULL);\n",archi
 Msg("Find size of idtype_t (9185)\n");
 #endif
 
+extern int waitid_db(idtype_t, id_t, siginfo_t *, int);
+CheckInterfacedef(waitid,waitid_db);
 extern pid_t wait_db(int *);
 CheckInterfacedef(wait,wait_db);
 extern pid_t waitpid_db(pid_t, int *, int);
