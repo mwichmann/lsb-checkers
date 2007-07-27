@@ -6,10 +6,6 @@
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #include <stdarg.h>
-#ifndef LSBCC_MODE      /* XXX hand-edit */
-/* for native ehaders, must define before including wchar.h */
-#define __OPTIMIZE__ 1
-#endif
 #include "wchar.h"
 
 

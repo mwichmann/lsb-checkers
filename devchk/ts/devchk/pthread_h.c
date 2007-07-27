@@ -352,7 +352,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architect
 Msg("Find size of pthread_once_t (9062)\n");
 #endif
 
-#ifdef LSBCC_MODE       /* XXX hand-edit */
 #if defined __i386__
 CheckTypeSize(__pthread_cond_align_t,8, 10917, 2, 2.0, NULL, 10, NULL)
 #elif defined __ia64__
@@ -370,7 +369,6 @@ CheckTypeSize(__pthread_cond_align_t,8, 10917, 11, 2.0, NULL, 10, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10,NULL);\n",architecture,10917,0);
 Msg("Find size of __pthread_cond_align_t (10917)\n");
-#endif
 #endif
 
 #if defined __i386__
@@ -392,7 +390,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architect
 Msg("Find size of pthread_t (9040)\n");
 #endif
 
-#ifdef LSBCC_MODE       /* XXX hand-edit */
 #if defined __i386__
 CheckTypeSize(struct _pthread_fastlock,8, 10105, 2, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct _pthread_fastlock,__status,4,2,33602)
@@ -426,7 +423,6 @@ CheckOffset(struct _pthread_fastlock,__spinlock,8,11,34427)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10105,0);
 Msg("Find size of _pthread_fastlock (10105)\n");
-#endif
 #endif
 
 #if defined __i386__
@@ -524,7 +520,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10434,NULL);\n",archi
 Msg("Find size of pthread_condattr_t (9053)\n");
 #endif
 
-#ifdef LSBCC_MODE       /* XXX hand-edit */
 #if defined __i386__
 CheckTypeSize(_pthread_descr,4, 9087, 2, 1.2, NULL, 10104, NULL)
 #elif defined __ia64__
@@ -542,7 +537,6 @@ CheckTypeSize(_pthread_descr,8, 9087, 11, 2.0, NULL, 10104, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10104,NULL);\n",architecture,9087,0);
 Msg("Find size of _pthread_descr (9087)\n");
-#endif
 #endif
 
 #if defined __i386__
@@ -585,13 +579,11 @@ Msg("Find size of pthread_rwlockattr_t (9057)\n");
 
 extern int pthread_mutex_timedlock_db(pthread_mutex_t *, const struct timespec *);
 CheckInterfacedef(pthread_mutex_timedlock,pthread_mutex_timedlock_db);
-#ifdef LSBCC_MODE       /* XXX hand-edit */
 extern void _pthread_cleanup_pop_db(struct _pthread_cleanup_buffer *, int);
 CheckInterfacedef(_pthread_cleanup_pop,_pthread_cleanup_pop_db);
 extern void _pthread_cleanup_push_db(struct _pthread_cleanup_buffer *, void(*__routine)(void *)
 , void *);
 CheckInterfacedef(_pthread_cleanup_push,_pthread_cleanup_push_db);
-#endif
 extern int pthread_atfork_db(void(*prepare)(void)
 , void(*parent)(void)
 , void(*child)(void)
@@ -746,13 +738,11 @@ extern int pthread_rwlock_timedrdlock_db(pthread_rwlock_t *, const struct timesp
 CheckInterfacedef(pthread_rwlock_timedrdlock,pthread_rwlock_timedrdlock_db);
 extern int pthread_rwlock_timedwrlock_db(pthread_rwlock_t *, const struct timespec *);
 CheckInterfacedef(pthread_rwlock_timedwrlock,pthread_rwlock_timedwrlock_db);
-#ifdef LSBCC_MODE       /* XXX hand-edit */
 extern int __register_atfork_db(void(*prepare)(void)
 , void(*parent)(void)
 , void(*child)(void)
 , void *);
 CheckInterfacedef(__register_atfork,__register_atfork_db);
-#endif
 extern int pthread_setschedprio_db(pthread_t, int);
 CheckInterfacedef(pthread_setschedprio,pthread_setschedprio_db);
 #ifdef TET_TEST
