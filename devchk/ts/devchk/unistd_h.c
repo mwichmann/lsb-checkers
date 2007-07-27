@@ -1905,6 +1905,8 @@ extern int fdatasync_db(int);
 CheckInterfacedef(fdatasync,fdatasync_db);
 extern int ftruncate64_db(int, off64_t);
 CheckInterfacedef(ftruncate64,ftruncate64_db);
+extern int getdomainname_db(char *, size_t);
+CheckInterfacedef(getdomainname,getdomainname_db);
 extern long int gethostid_db(void);
 CheckInterfacedef(gethostid,gethostid_db);
 extern char * getlogin_db(void);

@@ -112,7 +112,7 @@ struct modlib modlibs [] = {
 	{LSB_Core,"libdl.so.2",libdl_so_2,libdl_so_2_classinfo},
 #endif
 	{LSB_Graphics_Ext,"libfontconfig.so.1",libfontconfig_so_1,libfontconfig_so_1_classinfo},
-	{LSB_Graphics,"libfreetype.so.6.3.8",libfreetype_so_6_3_8,libfreetype_so_6_3_8_classinfo},
+	{LSB_Graphics_Ext,"libfreetype.so.6.3.8",libfreetype_so_6_3_8,libfreetype_so_6_3_8_classinfo},
 #if defined __s390x__
 	{LSB_Core,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo},
 #endif
@@ -647,10 +647,10 @@ struct modlib modlibs [] = {
 #endif
 	{LSB_Graphics,"libX11.so.6",libX11_so_6,libX11_so_6_classinfo},
 	{LSB_Graphics,"libXext.so.6",libXext_so_6,libXext_so_6_classinfo},
-	{LSB_Graphics,"libXft.so.2",libXft_so_2,libXft_so_2_classinfo},
+	{LSB_Graphics_Ext,"libXft.so.2",libXft_so_2,libXft_so_2_classinfo},
 	{LSB_Graphics,"libXi.so.6",libXi_so_6,libXi_so_6_classinfo},
 	{LSB_XML,"libxml2.so.2",libxml2_so_2,libxml2_so_2_classinfo},
-	{LSB_Graphics,"libXrender.so.1",libXrender_so_1,libXrender_so_1_classinfo},
+	{LSB_Graphics_Ext,"libXrender.so.1",libXrender_so_1,libXrender_so_1_classinfo},
 	{LSB_Graphics,"libXt.so.6",libXt_so_6,libXt_so_6_classinfo},
 #if defined __s390x__
 	{LSB_Core,"libz.so.1",libz_so_1,libz_so_1_classinfo},
