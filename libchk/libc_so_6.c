@@ -9267,19 +9267,19 @@ struct versym libc_so_6[] = {
 	{"posix_fadvise","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"posix_fadvise64","GLIBC_2.2",0,LSB_Core,4,1},
+	{"posix_fadvise64","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
 	{"posix_fadvise64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"posix_fadvise64","GLIBC_2.2",0,LSB_Core,4,1},
+	{"posix_fadvise64","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
 	{"posix_fadvise64","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"posix_fadvise64","GLIBC_2.2",0,LSB_Core,4,1},
+	{"posix_fadvise64","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
 	{"posix_fadvise64","GLIBC_2.2.5",0,LSB_Core,4,1},
@@ -9309,19 +9309,19 @@ struct versym libc_so_6[] = {
 	{"posix_fallocate","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"posix_fallocate64","GLIBC_2.2",0,LSB_Core,4,1},
+	{"posix_fallocate64","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
 	{"posix_fallocate64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"posix_fallocate64","GLIBC_2.2",0,LSB_Core,4,1},
+	{"posix_fallocate64","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
 	{"posix_fallocate64","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"posix_fallocate64","GLIBC_2.2",0,LSB_Core,4,1},
+	{"posix_fallocate64","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
 	{"posix_fallocate64","GLIBC_2.2.5",0,LSB_Core,4,1},
