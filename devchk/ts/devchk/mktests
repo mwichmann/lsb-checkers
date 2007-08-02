@@ -303,15 +303,27 @@ sub writetest($$) {
     $select .= "LEFT JOIN ArchType ON ATtid=Tid ";
     $select .= "LEFT JOIN Architecture ON Aid=ATaid ";
     $select .= "WHERE HGheader=$Hid ";
-	$select.= "AND ( (ATappearedin <= '$lsbversion' AND ATappearedin<>'') ";
-	$select.= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin >'$lsbversion') ) ";
-#     $select .= "OR Tindirect = 'Yes' )";
+	$select.= "AND (ATappearedin <= '$lsbversion' AND ATappearedin<>'') ";
+	$select.= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin >'$lsbversion')";
     $select .= "ORDER BY Theadergroup,Tid ";
     $tth = $Dbh->query($select) || die $Dbh->errmsg();
 
     $fname = $Hname;
     $fname =~ tr/\/.-/__/;
-    $filename = $fname . ".c";
+
+	# Try to guess if we have a cpp header
+    $select = "SELECT * FROM Type ";
+    $select.= "LEFT JOIN HeaderGroup ON Theadergroup=HGid ";
+    $select.= "WHERE HGheader=$Hid ";
+    $select.= "AND (Ttype='Class' OR Ttype='TemplateInstance' OR Tclass>0) ";
+    $classth = $Dbh->query($select) || die $Dbh->errmsg();
+
+    if( $classth->numrows ) {
+    	$filename = $fname . ".C";
+    }
+    else {
+    	$filename = $fname . ".c";
+    }
     $objname  = $fname . ".o";
 
     open( TESTS, ">$filename" ) || die "Can't open $filename for writing";
@@ -366,10 +378,10 @@ sub writetest($$) {
     foreach $cid ( sort keys %constHash ) {
         $archCount = 0;
         foreach $archId ( reverse sort keys %{ $constHash{$cid} } ) {
-            %centry     = %{ $constHash{$cid}{$archId} };
-            $cname_save = $centry{'Cname'};
-            $type_save  = $centry{'Ctype'};
-            $cid_save   = $centry{'Cid'};
+            %centry       = %{ $constHash{$cid}{$archId} };
+            $cname_save   = $centry{'Cname'};
+            $type_save    = $centry{'Ctype'};
+            $cid_save     = $centry{'Cid'};
             $cappearedin  = $centry{'ACappearedin'};
             $cwithdrawnin = $centry{'ACwithdrawnin'};
 
@@ -513,7 +525,7 @@ sub writetest($$) {
         $lastid   = $tentry{'Tid'};
         $lastaid  = $tentry{'Aid'};
         $Tid      = $tentry{'Tid'};
-        $Tname    = $tentry{'Tname'};
+        $Tname    = $tentry{'Tunmangled'} ? $tentry{'Tunmangled'} : $tentry{'Tname'};
         $Ttype    = $tentry{'Ttype'};
         $ATsize   = $tentry{'ATsize'};
         $Aid      = $tentry{'Aid'};
@@ -723,9 +735,13 @@ sub writetest($$) {
             next;
         }
 
+        if ( $tentry{'Ttype'} eq 'Class' ) {
+        	next;
+        }
+
         # Default case
 		$withdrawnin = $ATwithdrawnin ? "'$ATwithdrawnin'" : "NULL";
-		print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid, $ATappearedin, $withdrawnin)\n"
+		print TESTS "CheckTypeSize($Tname,$ATsize, $Tid, $Aid, $ATappearedin, $withdrawnin, $ATbasetype, $attribute)\n"
 		if $tentry{'Ttype'} ne 'Array';
     }
 
@@ -774,7 +790,7 @@ sub writetest($$) {
 		$select .= "LEFT JOIN ArchInt ON Iid=AIint ";
 		$select .= "LEFT JOIN ArchType ON ATtid=Tid AND ATaid=AIarch ";
 		$select .= "LEFT JOIN Architecture ON AIarch=Aid ";
- 		$select .= "WHERE (Isrconly='Yes' OR (";
+ 		$select .= "WHERE (Isrcbin='SrcOnly' OR (";
 		$select .= "(AIappearedin <= '$lsbversion' and AIappearedin<>'') ";
 		$select .= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin >'$lsbversion') ) )";
 		$select .= "AND Hid=$Hid";
@@ -807,35 +823,41 @@ sub writetest($$) {
 				elsif ( $special) {
 					print TESTS $mathstring;
 				}
-				print TESTS "extern ";
-				displaytyperef( \%entry, 1, $entry{'Aid'} );
-				print TESTS " $entry{'Iname'}_db(";
-				$select = "SELECT Tid,Tname,Ttype,ATbasetype,Parsize FROM Parameter,Type ";
-				$select .= "LEFT JOIN ArchType ON ATtid=Tid ";
-				$select .= "WHERE Pint=" . $entry{'Iid'} . " AND Ptype=Tid ";
-				$select .= "GROUP BY Ppos ORDER BY Ppos";
-				$sth2 = $Dbh->query($select) || die $Dbh->errmsg();
 
-				if ( $sth2->numrows ) {
-					for ( 1 .. $sth2->numrows ) {
-						%entry2 = $sth2->fetchhash;
+				# Class interfaces are not checked at the moment...
+ 				if( $entry{'Iclass'} == 0 ) {
+					print TESTS "extern ";
+					displaytyperef( \%entry, 1, $entry{'Aid'} );
+					print TESTS " $entry{'Iname'}_db(";
 
-						#print TESTS ", ";
-						displaytyperef( \%entry2, 1, $entry{'Aid'} );
-						if ( $entry2{'Ttype'} eq "Array" ) {
-							print TESTS "[";
-							if ( $entry2{'Parsize'} != 0 ) {
-								print TESTS "$entry2{'Parsize'}";
+					$select = "SELECT Tid,Tname,Ttype,ATbasetype,Parsize FROM Parameter,Type ";
+					$select .= "LEFT JOIN ArchType ON ATtid=Tid ";
+					$select .= "WHERE Pint=" . $entry{'Iid'} . " AND Ptype=Tid ";
+					$select .= "GROUP BY Ppos ORDER BY Ppos";
+					$sth2 = $Dbh->query($select) || die $Dbh->errmsg();
+
+					if ( $sth2->numrows ) {
+						for ( 1 .. $sth2->numrows ) {
+							%entry2 = $sth2->fetchhash;
+
+							#print TESTS ", ";
+							displaytyperef( \%entry2, 1, $entry{'Aid'} );
+							if ( $entry2{'Ttype'} eq "Array" ) {
+								print TESTS "[";
+								if ( $entry2{'Parsize'} != 0 ) {
+									print TESTS "$entry2{'Parsize'}";
+								}
+								print TESTS "]";
 							}
-							print TESTS "]";
+							if ( $_ != $sth2->numrows ) { print TESTS ", "; }
 						}
-						if ( $_ != $sth2->numrows ) { print TESTS ", "; }
+					} else {
+						print TESTS "void";
 					}
-				} else {
-					print TESTS "void";
+					print TESTS ");\n";
+					print TESTS "CheckInterfacedef($entry{'Iname'},$entry{'Iname'}_db);\n";
 				}
-				print TESTS ");\n";
-				print TESTS "CheckInterfacedef($entry{'Iname'},$entry{'Iname'}_db);\n";
+
 				if ( $entry{'Aid'} && $entry{'Aname'} ne "All" ) {
 					print TESTS "#endif\n";
 				}
@@ -949,7 +971,7 @@ open( SUBDEFS, ">testdefs.h" ) || die "Can't open testdefs.h for writing";
 
 $select = "SELECT DISTINCT * FROM Header ";
 $select.= "WHERE (Happearedin is not NULL and Happearedin <= '$lsbversion' and Happearedin<>\'\') ";
-$select.= "AND (Hwithdrawnin IS NULL OR Hwithdrawnin > '$lsbversion' )",
+$select.= "AND (Hwithdrawnin IS NULL OR Hwithdrawnin > '$lsbversion' ) ",
 $select .= "ORDER BY Hname ";
 
 #
@@ -1060,7 +1082,7 @@ for ( 1 .. $tth->numrows ) {
 	$attribute = $ATattribute ? "'$ATattribute'" : "NULL";
 
     print TESTS "CheckTypeSize($Tname,$ATsize,$Tid,$Aid, \"\", \"NULL\",0,\"NULL\")\n"
-      if $tentry{'Tname'} ne 'bool';
+		if $tentry{'Tname'} ne 'bool';
 }
 print TESTS "#else\n";
 print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";

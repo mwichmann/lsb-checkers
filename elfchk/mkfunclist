@@ -28,7 +28,7 @@ for ($i = 0; $i <= $#lsbvernames; $i++) {
 }
 
 foreach $ver (@lsbversions) {
-	$select = "SELECT DISTINCT Iid,Iname,Isrconly,Iisdeprecated,AIappearedin,AIwithdrawnin,Vname,Asymbol,Aname,Aid,Mname FROM Interface ";
+	$select = "SELECT DISTINCT Iid,Iname,Isrcbin,Iisdeprecated,AIappearedin,AIwithdrawnin,Vname,Asymbol,Aname,Aid,Mname FROM Interface ";
 	$select.= "LEFT JOIN LGInt ON Iid=LGIint ";
 	$select.= "LEFT JOIN LibGroup ON LGid=LGIlibg ";
 	$select.= "LEFT JOIN Library ON Lid=LGlib ";
@@ -114,3 +114,4 @@ foreach $ver (@lsbversions) {
 
 print "struct versym* DynSyms[] = {DynSyms_LSB".join(", DynSyms_LSB", @lsbvernames)."};\n";
 print "int numDynSyms[] = {sizeof(DynSyms_LSB".join(")/sizeof(struct versym), sizeof(DynSyms_LSB", @lsbvernames).")/sizeof(struct versym)};\n";
+
