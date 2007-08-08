@@ -112,7 +112,7 @@ struct modlib modlibs [] = {
 	{LSB_Core,"libdl.so.2",libdl_so_2,libdl_so_2_classinfo},
 #endif
 	{LSB_Graphics_Ext,"libfontconfig.so.1",libfontconfig_so_1,libfontconfig_so_1_classinfo},
-	{LSB_Graphics_Ext,"libfreetype.so.6.3.8",libfreetype_so_6_3_8,libfreetype_so_6_3_8_classinfo},
+	{LSB_Graphics_Ext,"libfreetype.so.6",libfreetype_so_6,libfreetype_so_6_classinfo},
 #if defined __s390x__
 	{LSB_Core,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo},
 #endif

@@ -45,10 +45,6 @@ CheckTypeSize(FT_UInt32,0, 16930, 2, 3.2, NULL, 7, NULL)
 CheckTypeSize(BDF_PropertyRec,0, 16932, 2, 3.2, NULL, 16927, NULL)
 #endif
 
-extern FT_Error FT_Get_BDF_Property_db(FT_Face, const char *, BDF_PropertyRec *);
-CheckInterfacedef(FT_Get_BDF_Property,FT_Get_BDF_Property_db);
-extern FT_Error FT_Get_BDF_Charset_ID_db(FT_Face, const char * *, const char * *);
-CheckInterfacedef(FT_Get_BDF_Charset_ID,FT_Get_BDF_Charset_ID_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

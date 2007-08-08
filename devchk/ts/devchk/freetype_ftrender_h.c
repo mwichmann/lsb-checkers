@@ -73,10 +73,6 @@ CheckTypeSize(FT_Renderer,0, 16782, 2, 3.2, NULL, 16781, NULL)
 CheckTypeSize(FT_Parameter,0, 16913, 2, 3.2, NULL, 16912, NULL)
 #endif
 
-extern FT_Error FT_Set_Renderer_db(FT_Library, FT_Renderer, FT_UInt, FT_Parameter *);
-CheckInterfacedef(FT_Set_Renderer,FT_Set_Renderer_db);
-extern FT_Renderer FT_Get_Renderer_db(FT_Library, FT_Glyph_Format);
-CheckInterfacedef(FT_Get_Renderer,FT_Get_Renderer_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

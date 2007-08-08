@@ -29,12 +29,6 @@ printf("Checking data structures in freetype/ftbitmap.h\n");
 /* No test for freetype/ftbitmap.h */
 #endif
 
-extern FT_Error FT_Bitmap_Done_db(FT_Library, FT_Bitmap *);
-CheckInterfacedef(FT_Bitmap_Done,FT_Bitmap_Done_db);
-extern FT_Error FT_Bitmap_Convert_db(FT_Library, const FT_Bitmap *, FT_Bitmap *, FT_Int);
-CheckInterfacedef(FT_Bitmap_Convert,FT_Bitmap_Convert_db);
-extern void FT_Bitmap_New_db(FT_Bitmap *);
-CheckInterfacedef(FT_Bitmap_New,FT_Bitmap_New_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -1060,7 +1060,7 @@ char *DtNeeded_LSB32[] = {
 	"libdl.so.2",
 #endif /* defined __s390x__ */
 	"libfontconfig.so.1",
-	"libfreetype.so.6.3.8",
+	"libfreetype.so.6",
 	"libgcc_s.so.1",
 #if defined __i386__
 	"libgcc_s.so.1",
