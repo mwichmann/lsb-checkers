@@ -12,6 +12,7 @@ extern void X11_SM_SMlib_h();
 extern void X11_X_h();
 extern void X11_Xauth_h();
 extern void X11_Xcms_h();
+extern void X11_Xft_Xft_h();
 extern void X11_Xlib_h();
 extern void X11_Xutil_h();
 extern void X11_extensions_XEVI_h();

@@ -17800,17 +17800,17 @@ struct versym libqt_mt_so_3[] = {
 	{"static_QUType_varptr","",0,LSB_Toolkit_Qt3,0,0},
 	{0,0}};
 
-char *__Y10QUtf8Codec_typeinfo_name[] = {
+char *_10QUtf8Codec_typeinfo_name[] = {
 	"_ZTI10QTextCodec",
 	};
 
-struct classtypeinfo __Y10QUtf8Codec_typeinfo = {
+struct classtypeinfo _10QUtf8Codec_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y10QUtf8Codec",
-	__Y10QUtf8Codec_typeinfo_name,
+	"_ZTS10QUtf8Codec",
+	_10QUtf8Codec_typeinfo_name,
 	};
 
-const char *__Y10QUtf8Codec_vtable_name_0 [] = {
+const char *_10QUtf8Codec_vtable_name_0 [] = {
 	"_ZN10QUtf8CodecD1Ev",
 	"_ZN10QUtf8CodecD0Ev",
 	"_ZNK10QUtf8Codec4nameEv",
@@ -17828,47 +17828,47 @@ const char *__Y10QUtf8Codec_vtable_name_0 [] = {
 	"_ZNK10QTextCodec20characterFromUnicodeERK7QStringi",
 	};
 
-struct classvtable __Y10QUtf8Codec_vtable [1] = {
+struct classvtable _10QUtf8Codec_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	15,	/* Number of Vfuncs */
 	"_ZTI10QUtf8Codec",
-	__Y10QUtf8Codec_vtable_name_0,
+	_10QUtf8Codec_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y10QUtf8Codec_baseinfo[] = {
+struct base_type_info _10QUtf8Codec_baseinfo[] = {
 	};
 
-struct classinfo _Y10QUtf8Codec_classinfo = {
-	"_Y10QUtf8Codec",
+struct classinfo _Z10QUtf8Codec_classinfo = {
+	"_Z10QUtf8Codec",
 	"_ZTV10QUtf8Codec",
 	"_ZTI10QUtf8Codec",	/* RTTI */
 	"_ZTI10QTextCodec",
-	"_ZTT_Y10QUtf8Codec",	/* VTT */
+	"_ZTT10QUtf8Codec",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QUtf8Codec_typeinfo,
-	__Y10QUtf8Codec_vtable,
-	__Y10QUtf8Codec_baseinfo,
+	&_10QUtf8Codec_typeinfo,
+	_10QUtf8Codec_vtable,
+	_10QUtf8Codec_baseinfo,
 	};
 
-char *__Y6QTimer_typeinfo_name[] = {
+char *_6QTimer_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y6QTimer_typeinfo = {
+struct classtypeinfo _6QTimer_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y6QTimer",
-	__Y6QTimer_typeinfo_name,
+	"_ZTS6QTimer",
+	_6QTimer_typeinfo_name,
 	};
 
-const char *__Y6QTimer_vtable_name_0 [] = {
+const char *_6QTimer_vtable_name_0 [] = {
 	"_ZNK6QTimer10metaObjectEv",
 	"_ZNK6QTimer9classNameEv",
 	"_ZN6QTimer7qt_castEPKc",
@@ -17892,91 +17892,91 @@ const char *__Y6QTimer_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable __Y6QTimer_vtable [1] = {
+struct classvtable _6QTimer_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI6QTimer",
-	__Y6QTimer_vtable_name_0,
+	_6QTimer_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y6QTimer_baseinfo[] = {
+struct base_type_info _6QTimer_baseinfo[] = {
 	};
 
-struct classinfo _Y6QTimer_classinfo = {
-	"_Y6QTimer",
+struct classinfo _Z6QTimer_classinfo = {
+	"_Z6QTimer",
 	"_ZTV6QTimer",
 	"_ZTI6QTimer",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y6QTimer",	/* VTT */
+	"_ZTT6QTimer",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y6QTimer_typeinfo,
-	__Y6QTimer_vtable,
-	__Y6QTimer_baseinfo,
+	&_6QTimer_typeinfo,
+	_6QTimer_vtable,
+	_6QTimer_baseinfo,
 	};
 
-char *__Y18QXmlEntityResolver_typeinfo_name[] = {
+char *_18QXmlEntityResolver_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y18QXmlEntityResolver_typeinfo = {
+struct classtypeinfo _18QXmlEntityResolver_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y18QXmlEntityResolver",
-	__Y18QXmlEntityResolver_typeinfo_name,
+	"_ZTS18QXmlEntityResolver",
+	_18QXmlEntityResolver_typeinfo_name,
 	};
 
-const char *__Y18QXmlEntityResolver_vtable_name_0 [] = {
+const char *_18QXmlEntityResolver_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y18QXmlEntityResolver_vtable [1] = {
+struct classvtable _18QXmlEntityResolver_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI18QXmlEntityResolver",
-	__Y18QXmlEntityResolver_vtable_name_0,
+	_18QXmlEntityResolver_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y18QXmlEntityResolver_baseinfo[] = {
+struct base_type_info _18QXmlEntityResolver_baseinfo[] = {
 	};
 
-struct classinfo _Y18QXmlEntityResolver_classinfo = {
-	"_Y18QXmlEntityResolver",
+struct classinfo _Z18QXmlEntityResolver_classinfo = {
+	"_Z18QXmlEntityResolver",
 	"_ZTV18QXmlEntityResolver",
 	"_ZTI18QXmlEntityResolver",	/* RTTI */
 	"",
-	"_ZTT_Y18QXmlEntityResolver",	/* VTT */
+	"_ZTT18QXmlEntityResolver",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y18QXmlEntityResolver_typeinfo,
-	__Y18QXmlEntityResolver_vtable,
-	__Y18QXmlEntityResolver_baseinfo,
+	&_18QXmlEntityResolver_typeinfo,
+	_18QXmlEntityResolver_vtable,
+	_18QXmlEntityResolver_baseinfo,
 	};
 
-char *__Y21QObjectCleanupHandler_typeinfo_name[] = {
+char *_21QObjectCleanupHandler_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y21QObjectCleanupHandler_typeinfo = {
+struct classtypeinfo _21QObjectCleanupHandler_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y21QObjectCleanupHandler",
-	__Y21QObjectCleanupHandler_typeinfo_name,
+	"_ZTS21QObjectCleanupHandler",
+	_21QObjectCleanupHandler_typeinfo_name,
 	};
 
-const char *__Y21QObjectCleanupHandler_vtable_name_0 [] = {
+const char *_21QObjectCleanupHandler_vtable_name_0 [] = {
 	"_ZNK21QObjectCleanupHandler10metaObjectEv",
 	"_ZNK21QObjectCleanupHandler9classNameEv",
 	"_ZN21QObjectCleanupHandler7qt_castEPKc",
@@ -18000,46 +18000,46 @@ const char *__Y21QObjectCleanupHandler_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable __Y21QObjectCleanupHandler_vtable [1] = {
+struct classvtable _21QObjectCleanupHandler_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI21QObjectCleanupHandler",
-	__Y21QObjectCleanupHandler_vtable_name_0,
+	_21QObjectCleanupHandler_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y21QObjectCleanupHandler_baseinfo[] = {
+struct base_type_info _21QObjectCleanupHandler_baseinfo[] = {
 	};
 
-struct classinfo _Y21QObjectCleanupHandler_classinfo = {
-	"_Y21QObjectCleanupHandler",
+struct classinfo _Z21QObjectCleanupHandler_classinfo = {
+	"_Z21QObjectCleanupHandler",
 	"_ZTV21QObjectCleanupHandler",
 	"_ZTI21QObjectCleanupHandler",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y21QObjectCleanupHandler",	/* VTT */
+	"_ZTT21QObjectCleanupHandler",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y21QObjectCleanupHandler_typeinfo,
-	__Y21QObjectCleanupHandler_vtable,
-	__Y21QObjectCleanupHandler_baseinfo,
+	&_21QObjectCleanupHandler_typeinfo,
+	_21QObjectCleanupHandler_vtable,
+	_21QObjectCleanupHandler_baseinfo,
 	};
 
-char *__Y14QPtrCollection_typeinfo_name[] = {
+char *_14QPtrCollection_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y14QPtrCollection_typeinfo = {
+struct classtypeinfo _14QPtrCollection_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y14QPtrCollection",
-	__Y14QPtrCollection_typeinfo_name,
+	"_ZTS14QPtrCollection",
+	_14QPtrCollection_typeinfo_name,
 	};
 
-const char *__Y14QPtrCollection_vtable_name_0 [] = {
+const char *_14QPtrCollection_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"_ZN14QPtrCollectionD1Ev",
@@ -18048,47 +18048,47 @@ const char *__Y14QPtrCollection_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y14QPtrCollection_vtable [1] = {
+struct classvtable _14QPtrCollection_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	6,	/* Number of Vfuncs */
 	"_ZTI14QPtrCollection",
-	__Y14QPtrCollection_vtable_name_0,
+	_14QPtrCollection_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y14QPtrCollection_baseinfo[] = {
+struct base_type_info _14QPtrCollection_baseinfo[] = {
 	};
 
-struct classinfo _Y14QPtrCollection_classinfo = {
-	"_Y14QPtrCollection",
+struct classinfo _Z14QPtrCollection_classinfo = {
+	"_Z14QPtrCollection",
 	"_ZTV14QPtrCollection",
 	"_ZTI14QPtrCollection",	/* RTTI */
 	"",
-	"_ZTT_Y14QPtrCollection",	/* VTT */
+	"_ZTT14QPtrCollection",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y14QPtrCollection_typeinfo,
-	__Y14QPtrCollection_vtable,
-	__Y14QPtrCollection_baseinfo,
+	&_14QPtrCollection_typeinfo,
+	_14QPtrCollection_vtable,
+	_14QPtrCollection_baseinfo,
 	};
 
-char *__Y5QHBox_typeinfo_name[] = {
+char *_5QHBox_typeinfo_name[] = {
 	"_ZTI6QFrame",
 	};
 
-struct classtypeinfo __Y5QHBox_typeinfo = {
+struct classtypeinfo _5QHBox_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y5QHBox",
-	__Y5QHBox_typeinfo_name,
+	"_ZTS5QHBox",
+	_5QHBox_typeinfo_name,
 	};
 
-const char *__Y5QHBox_vtable_name_0 [] = {
+const char *_5QHBox_vtable_name_0 [] = {
 	"_ZNK5QHBox10metaObjectEv",
 	"_ZNK5QHBox9classNameEv",
 	"_ZN5QHBox7qt_castEPKc",
@@ -18209,7 +18209,7 @@ const char *__Y5QHBox_vtable_name_0 [] = {
 	"_ZN5QHBox12frameChangedEv",
 	};
 
-const char *__Y5QHBox_vtable_name_1 [] = {
+const char *_5QHBox_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N5QHBoxD1Ev",
 #endif
@@ -18283,14 +18283,14 @@ const char *__Y5QHBox_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y5QHBox_vtable [2] = {
+struct classvtable _5QHBox_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	118,	/* Number of Vfuncs */
 	"_ZTI5QHBox",
-	__Y5QHBox_vtable_name_0,
+	_5QHBox_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -18324,40 +18324,40 @@ struct classvtable __Y5QHBox_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI5QHBox",
-	__Y5QHBox_vtable_name_1,
+	_5QHBox_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y5QHBox_baseinfo[] = {
+struct base_type_info _5QHBox_baseinfo[] = {
 	};
 
-struct classinfo _Y5QHBox_classinfo = {
-	"_Y5QHBox",
+struct classinfo _Z5QHBox_classinfo = {
+	"_Z5QHBox",
 	"_ZTV5QHBox",
 	"_ZTI5QHBox",	/* RTTI */
 	"_ZTI6QFrame",
-	"_ZTT_Y5QHBox",	/* VTT */
+	"_ZTT5QHBox",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y5QHBox_typeinfo,
-	__Y5QHBox_vtable,
-	__Y5QHBox_baseinfo,
+	&_5QHBox_typeinfo,
+	_5QHBox_vtable,
+	_5QHBox_baseinfo,
 	};
 
-char *__Y8QGVector_typeinfo_name[] = {
+char *_8QGVector_typeinfo_name[] = {
 	"_ZTI14QPtrCollection",
 	};
 
-struct classtypeinfo __Y8QGVector_typeinfo = {
+struct classtypeinfo _8QGVector_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y8QGVector",
-	__Y8QGVector_typeinfo_name,
+	"_ZTS8QGVector",
+	_8QGVector_typeinfo_name,
 	};
 
-const char *__Y8QGVector_vtable_name_0 [] = {
+const char *_8QGVector_vtable_name_0 [] = {
 	"_ZNK8QGVector5countEv",
 	"_ZN8QGVector5clearEv",
 	"_ZN8QGVectorD1Ev",
@@ -18369,47 +18369,47 @@ const char *__Y8QGVector_vtable_name_0 [] = {
 	"_ZNK8QGVector5writeER11QDataStreamPv",
 	};
 
-struct classvtable __Y8QGVector_vtable [1] = {
+struct classvtable _8QGVector_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI8QGVector",
-	__Y8QGVector_vtable_name_0,
+	_8QGVector_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y8QGVector_baseinfo[] = {
+struct base_type_info _8QGVector_baseinfo[] = {
 	};
 
-struct classinfo _Y8QGVector_classinfo = {
-	"_Y8QGVector",
+struct classinfo _Z8QGVector_classinfo = {
+	"_Z8QGVector",
 	"_ZTV8QGVector",
 	"_ZTI8QGVector",	/* RTTI */
 	"_ZTI14QPtrCollection",
-	"_ZTT_Y8QGVector",	/* VTT */
+	"_ZTT8QGVector",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y8QGVector_typeinfo,
-	__Y8QGVector_vtable,
-	__Y8QGVector_baseinfo,
+	&_8QGVector_typeinfo,
+	_8QGVector_vtable,
+	_8QGVector_baseinfo,
 	};
 
-char *__Y8QToolBar_typeinfo_name[] = {
+char *_8QToolBar_typeinfo_name[] = {
 	"_ZTI11QDockWindow",
 	};
 
-struct classtypeinfo __Y8QToolBar_typeinfo = {
+struct classtypeinfo _8QToolBar_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y8QToolBar",
-	__Y8QToolBar_typeinfo_name,
+	"_ZTS8QToolBar",
+	_8QToolBar_typeinfo_name,
 	};
 
-const char *__Y8QToolBar_vtable_name_0 [] = {
+const char *_8QToolBar_vtable_name_0 [] = {
 	"_ZNK8QToolBar10metaObjectEv",
 	"_ZNK8QToolBar9classNameEv",
 	"_ZN8QToolBar7qt_castEPKc",
@@ -18548,7 +18548,7 @@ const char *__Y8QToolBar_vtable_name_0 [] = {
 	"_ZN8QToolBar5clearEv",
 	};
 
-const char *__Y8QToolBar_vtable_name_1 [] = {
+const char *_8QToolBar_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N8QToolBarD1Ev",
 #endif
@@ -18622,14 +18622,14 @@ const char *__Y8QToolBar_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y8QToolBar_vtable [2] = {
+struct classvtable _8QToolBar_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	136,	/* Number of Vfuncs */
 	"_ZTI8QToolBar",
-	__Y8QToolBar_vtable_name_0,
+	_8QToolBar_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -18663,40 +18663,40 @@ struct classvtable __Y8QToolBar_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI8QToolBar",
-	__Y8QToolBar_vtable_name_1,
+	_8QToolBar_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y8QToolBar_baseinfo[] = {
+struct base_type_info _8QToolBar_baseinfo[] = {
 	};
 
-struct classinfo _Y8QToolBar_classinfo = {
-	"_Y8QToolBar",
+struct classinfo _Z8QToolBar_classinfo = {
+	"_Z8QToolBar",
 	"_ZTV8QToolBar",
 	"_ZTI8QToolBar",	/* RTTI */
 	"_ZTI11QDockWindow",
-	"_ZTT_Y8QToolBar",	/* VTT */
+	"_ZTT8QToolBar",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y8QToolBar_typeinfo,
-	__Y8QToolBar_vtable,
-	__Y8QToolBar_baseinfo,
+	&_8QToolBar_typeinfo,
+	_8QToolBar_vtable,
+	_8QToolBar_baseinfo,
 	};
 
-char *__Y11QDataSource_typeinfo_name[] = {
+char *_11QDataSource_typeinfo_name[] = {
 	"_ZTI8QAsyncIO",
 	};
 
-struct classtypeinfo __Y11QDataSource_typeinfo = {
+struct classtypeinfo _11QDataSource_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QDataSource",
-	__Y11QDataSource_typeinfo_name,
+	"_ZTS11QDataSource",
+	_11QDataSource_typeinfo_name,
 	};
 
-const char *__Y11QDataSource_vtable_name_0 [] = {
+const char *_11QDataSource_vtable_name_0 [] = {
 	"_ZN11QDataSourceD1Ev",
 	"_ZN11QDataSourceD0Ev",
 	"__cxa_pure_virtual",
@@ -18706,47 +18706,47 @@ const char *__Y11QDataSource_vtable_name_0 [] = {
 	"_ZN11QDataSource6rewindEv",
 	};
 
-struct classvtable __Y11QDataSource_vtable [1] = {
+struct classvtable _11QDataSource_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	7,	/* Number of Vfuncs */
 	"_ZTI11QDataSource",
-	__Y11QDataSource_vtable_name_0,
+	_11QDataSource_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QDataSource_baseinfo[] = {
+struct base_type_info _11QDataSource_baseinfo[] = {
 	};
 
-struct classinfo _Y11QDataSource_classinfo = {
-	"_Y11QDataSource",
+struct classinfo _Z11QDataSource_classinfo = {
+	"_Z11QDataSource",
 	"_ZTV11QDataSource",
 	"_ZTI11QDataSource",	/* RTTI */
 	"_ZTI8QAsyncIO",
-	"_ZTT_Y11QDataSource",	/* VTT */
+	"_ZTT11QDataSource",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QDataSource_typeinfo,
-	__Y11QDataSource_vtable,
-	__Y11QDataSource_baseinfo,
+	&_11QDataSource_typeinfo,
+	_11QDataSource_vtable,
+	_11QDataSource_baseinfo,
 	};
 
-char *__Y11QCanvasItem_typeinfo_name[] = {
+char *_11QCanvasItem_typeinfo_name[] = {
 	"_ZTI2Qt",
 	};
 
-struct classtypeinfo __Y11QCanvasItem_typeinfo = {
+struct classtypeinfo _11QCanvasItem_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QCanvasItem",
-	__Y11QCanvasItem_typeinfo_name,
+	"_ZTS11QCanvasItem",
+	_11QCanvasItem_typeinfo_name,
 	};
 
-const char *__Y11QCanvasItem_vtable_name_0 [] = {
+const char *_11QCanvasItem_vtable_name_0 [] = {
 	"_ZN11QCanvasItemD1Ev",
 	"_ZN11QCanvasItemD0Ev",
 	"_ZN11QCanvasItem6moveByEdd",
@@ -18770,91 +18770,91 @@ const char *__Y11QCanvasItem_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y11QCanvasItem_vtable [1] = {
+struct classvtable _11QCanvasItem_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI11QCanvasItem",
-	__Y11QCanvasItem_vtable_name_0,
+	_11QCanvasItem_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QCanvasItem_baseinfo[] = {
+struct base_type_info _11QCanvasItem_baseinfo[] = {
 	};
 
-struct classinfo _Y11QCanvasItem_classinfo = {
-	"_Y11QCanvasItem",
+struct classinfo _Z11QCanvasItem_classinfo = {
+	"_Z11QCanvasItem",
 	"_ZTV11QCanvasItem",
 	"_ZTI11QCanvasItem",	/* RTTI */
 	"_ZTI2Qt",
-	"_ZTT_Y11QCanvasItem",	/* VTT */
+	"_ZTT11QCanvasItem",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QCanvasItem_typeinfo,
-	__Y11QCanvasItem_vtable,
-	__Y11QCanvasItem_baseinfo,
+	&_11QCanvasItem_typeinfo,
+	_11QCanvasItem_vtable,
+	_11QCanvasItem_baseinfo,
 	};
 
-char *__Y14QWaitCondition_typeinfo_name[] = {
+char *_14QWaitCondition_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y14QWaitCondition_typeinfo = {
+struct classtypeinfo _14QWaitCondition_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y14QWaitCondition",
-	__Y14QWaitCondition_typeinfo_name,
+	"_ZTS14QWaitCondition",
+	_14QWaitCondition_typeinfo_name,
 	};
 
-const char *__Y14QWaitCondition_vtable_name_0 [] = {
+const char *_14QWaitCondition_vtable_name_0 [] = {
 	"_ZN14QWaitConditionD1Ev",
 	"_ZN14QWaitConditionD0Ev",
 	};
 
-struct classvtable __Y14QWaitCondition_vtable [1] = {
+struct classvtable _14QWaitCondition_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI14QWaitCondition",
-	__Y14QWaitCondition_vtable_name_0,
+	_14QWaitCondition_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y14QWaitCondition_baseinfo[] = {
+struct base_type_info _14QWaitCondition_baseinfo[] = {
 	};
 
-struct classinfo _Y14QWaitCondition_classinfo = {
-	"_Y14QWaitCondition",
+struct classinfo _Z14QWaitCondition_classinfo = {
+	"_Z14QWaitCondition",
 	"_ZTV14QWaitCondition",
 	"_ZTI14QWaitCondition",	/* RTTI */
 	"",
-	"_ZTT_Y14QWaitCondition",	/* VTT */
+	"_ZTT14QWaitCondition",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y14QWaitCondition_typeinfo,
-	__Y14QWaitCondition_vtable,
-	__Y14QWaitCondition_baseinfo,
+	&_14QWaitCondition_typeinfo,
+	_14QWaitCondition_vtable,
+	_14QWaitCondition_baseinfo,
 	};
 
-char *__Y6QFrame_typeinfo_name[] = {
+char *_6QFrame_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo __Y6QFrame_typeinfo = {
+struct classtypeinfo _6QFrame_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y6QFrame",
-	__Y6QFrame_typeinfo_name,
+	"_ZTS6QFrame",
+	_6QFrame_typeinfo_name,
 	};
 
-const char *__Y6QFrame_vtable_name_0 [] = {
+const char *_6QFrame_vtable_name_0 [] = {
 	"_ZNK6QFrame10metaObjectEv",
 	"_ZNK6QFrame9classNameEv",
 	"_ZN6QFrame7qt_castEPKc",
@@ -18975,7 +18975,7 @@ const char *__Y6QFrame_vtable_name_0 [] = {
 	"_ZN6QFrame12frameChangedEv",
 	};
 
-const char *__Y6QFrame_vtable_name_1 [] = {
+const char *_6QFrame_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N6QFrameD1Ev",
 #endif
@@ -19049,14 +19049,14 @@ const char *__Y6QFrame_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y6QFrame_vtable [2] = {
+struct classvtable _6QFrame_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	118,	/* Number of Vfuncs */
 	"_ZTI6QFrame",
-	__Y6QFrame_vtable_name_0,
+	_6QFrame_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -19090,40 +19090,40 @@ struct classvtable __Y6QFrame_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI6QFrame",
-	__Y6QFrame_vtable_name_1,
+	_6QFrame_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y6QFrame_baseinfo[] = {
+struct base_type_info _6QFrame_baseinfo[] = {
 	};
 
-struct classinfo _Y6QFrame_classinfo = {
-	"_Y6QFrame",
+struct classinfo _Z6QFrame_classinfo = {
+	"_Z6QFrame",
 	"_ZTV6QFrame",
 	"_ZTI6QFrame",	/* RTTI */
 	"_ZTI7QWidget",
-	"_ZTT_Y6QFrame",	/* VTT */
+	"_ZTT6QFrame",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y6QFrame_typeinfo,
-	__Y6QFrame_vtable,
-	__Y6QFrame_baseinfo,
+	&_6QFrame_typeinfo,
+	_6QFrame_vtable,
+	_6QFrame_baseinfo,
 	};
 
-char *__Y11QScrollView_typeinfo_name[] = {
+char *_11QScrollView_typeinfo_name[] = {
 	"_ZTI6QFrame",
 	};
 
-struct classtypeinfo __Y11QScrollView_typeinfo = {
+struct classtypeinfo _11QScrollView_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QScrollView",
-	__Y11QScrollView_typeinfo_name,
+	"_ZTS11QScrollView",
+	_11QScrollView_typeinfo_name,
 	};
 
-const char *__Y11QScrollView_vtable_name_0 [] = {
+const char *_11QScrollView_vtable_name_0 [] = {
 	"_ZNK11QScrollView10metaObjectEv",
 	"_ZNK11QScrollView9classNameEv",
 	"_ZN11QScrollView7qt_castEPKc",
@@ -19280,7 +19280,7 @@ const char *__Y11QScrollView_vtable_name_0 [] = {
 	"_ZN11QScrollView15setVBarGeometryER10QScrollBariiii",
 	};
 
-const char *__Y11QScrollView_vtable_name_1 [] = {
+const char *_11QScrollView_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QScrollViewD1Ev",
 #endif
@@ -19354,14 +19354,14 @@ const char *__Y11QScrollView_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y11QScrollView_vtable [2] = {
+struct classvtable _11QScrollView_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	154,	/* Number of Vfuncs */
 	"_ZTI11QScrollView",
-	__Y11QScrollView_vtable_name_0,
+	_11QScrollView_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -19395,40 +19395,40 @@ struct classvtable __Y11QScrollView_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI11QScrollView",
-	__Y11QScrollView_vtable_name_1,
+	_11QScrollView_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y11QScrollView_baseinfo[] = {
+struct base_type_info _11QScrollView_baseinfo[] = {
 	};
 
-struct classinfo _Y11QScrollView_classinfo = {
-	"_Y11QScrollView",
+struct classinfo _Z11QScrollView_classinfo = {
+	"_Z11QScrollView",
 	"_ZTV11QScrollView",
 	"_ZTI11QScrollView",	/* RTTI */
 	"_ZTI6QFrame",
-	"_ZTT_Y11QScrollView",	/* VTT */
+	"_ZTT11QScrollView",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QScrollView_typeinfo,
-	__Y11QScrollView_vtable,
-	__Y11QScrollView_baseinfo,
+	&_11QScrollView_typeinfo,
+	_11QScrollView_vtable,
+	_11QScrollView_baseinfo,
 	};
 
-char *__Y12QTextBrowser_typeinfo_name[] = {
+char *_12QTextBrowser_typeinfo_name[] = {
 	"_ZTI9QTextEdit",
 	};
 
-struct classtypeinfo __Y12QTextBrowser_typeinfo = {
+struct classtypeinfo _12QTextBrowser_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y12QTextBrowser",
-	__Y12QTextBrowser_typeinfo_name,
+	"_ZTS12QTextBrowser",
+	_12QTextBrowser_typeinfo_name,
 	};
 
-const char *__Y12QTextBrowser_vtable_name_0 [] = {
+const char *_12QTextBrowser_vtable_name_0 [] = {
 	"_ZNK12QTextBrowser10metaObjectEv",
 	"_ZNK12QTextBrowser9classNameEv",
 	"_ZN12QTextBrowser7qt_castEPKc",
@@ -19660,7 +19660,7 @@ const char *__Y12QTextBrowser_vtable_name_0 [] = {
 	"_ZN12QTextBrowser6reloadEv",
 	};
 
-const char *__Y12QTextBrowser_vtable_name_1 [] = {
+const char *_12QTextBrowser_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N12QTextBrowserD1Ev",
 #endif
@@ -19734,14 +19734,14 @@ const char *__Y12QTextBrowser_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y12QTextBrowser_vtable [2] = {
+struct classvtable _12QTextBrowser_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	229,	/* Number of Vfuncs */
 	"_ZTI12QTextBrowser",
-	__Y12QTextBrowser_vtable_name_0,
+	_12QTextBrowser_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -19775,40 +19775,40 @@ struct classvtable __Y12QTextBrowser_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI12QTextBrowser",
-	__Y12QTextBrowser_vtable_name_1,
+	_12QTextBrowser_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y12QTextBrowser_baseinfo[] = {
+struct base_type_info _12QTextBrowser_baseinfo[] = {
 	};
 
-struct classinfo _Y12QTextBrowser_classinfo = {
-	"_Y12QTextBrowser",
+struct classinfo _Z12QTextBrowser_classinfo = {
+	"_Z12QTextBrowser",
 	"_ZTV12QTextBrowser",
 	"_ZTI12QTextBrowser",	/* RTTI */
 	"_ZTI9QTextEdit",
-	"_ZTT_Y12QTextBrowser",	/* VTT */
+	"_ZTT12QTextBrowser",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QTextBrowser_typeinfo,
-	__Y12QTextBrowser_vtable,
-	__Y12QTextBrowser_baseinfo,
+	&_12QTextBrowser_typeinfo,
+	_12QTextBrowser_vtable,
+	_12QTextBrowser_baseinfo,
 	};
 
-char *__Y13QCanvasSprite_typeinfo_name[] = {
+char *_13QCanvasSprite_typeinfo_name[] = {
 	"_ZTI11QCanvasItem",
 	};
 
-struct classtypeinfo __Y13QCanvasSprite_typeinfo = {
+struct classtypeinfo _13QCanvasSprite_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y13QCanvasSprite",
-	__Y13QCanvasSprite_typeinfo_name,
+	"_ZTS13QCanvasSprite",
+	_13QCanvasSprite_typeinfo_name,
 	};
 
-const char *__Y13QCanvasSprite_vtable_name_0 [] = {
+const char *_13QCanvasSprite_vtable_name_0 [] = {
 	"_ZN13QCanvasSpriteD1Ev",
 	"_ZN13QCanvasSpriteD0Ev",
 	"_ZN11QCanvasItem6moveByEdd",
@@ -19835,47 +19835,47 @@ const char *__Y13QCanvasSprite_vtable_name_0 [] = {
 	"_ZNK13QCanvasSprite13imageAdvancedEv",
 	};
 
-struct classvtable __Y13QCanvasSprite_vtable [1] = {
+struct classvtable _13QCanvasSprite_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	24,	/* Number of Vfuncs */
 	"_ZTI13QCanvasSprite",
-	__Y13QCanvasSprite_vtable_name_0,
+	_13QCanvasSprite_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y13QCanvasSprite_baseinfo[] = {
+struct base_type_info _13QCanvasSprite_baseinfo[] = {
 	};
 
-struct classinfo _Y13QCanvasSprite_classinfo = {
-	"_Y13QCanvasSprite",
+struct classinfo _Z13QCanvasSprite_classinfo = {
+	"_Z13QCanvasSprite",
 	"_ZTV13QCanvasSprite",
 	"_ZTI13QCanvasSprite",	/* RTTI */
 	"_ZTI11QCanvasItem",
-	"_ZTT_Y13QCanvasSprite",	/* VTT */
+	"_ZTT13QCanvasSprite",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y13QCanvasSprite_typeinfo,
-	__Y13QCanvasSprite_vtable,
-	__Y13QCanvasSprite_baseinfo,
+	&_13QCanvasSprite_typeinfo,
+	_13QCanvasSprite_vtable,
+	_13QCanvasSprite_baseinfo,
 	};
 
-char *__Y9QSplitter_typeinfo_name[] = {
+char *_9QSplitter_typeinfo_name[] = {
 	"_ZTI6QFrame",
 	};
 
-struct classtypeinfo __Y9QSplitter_typeinfo = {
+struct classtypeinfo _9QSplitter_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y9QSplitter",
-	__Y9QSplitter_typeinfo_name,
+	"_ZTS9QSplitter",
+	_9QSplitter_typeinfo_name,
 	};
 
-const char *__Y9QSplitter_vtable_name_0 [] = {
+const char *_9QSplitter_vtable_name_0 [] = {
 	"_ZNK9QSplitter10metaObjectEv",
 	"_ZNK9QSplitter9classNameEv",
 	"_ZN9QSplitter7qt_castEPKc",
@@ -20001,7 +20001,7 @@ const char *__Y9QSplitter_vtable_name_0 [] = {
 	"_ZN9QSplitter13setRubberbandEi",
 	};
 
-const char *__Y9QSplitter_vtable_name_1 [] = {
+const char *_9QSplitter_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QSplitterD1Ev",
 #endif
@@ -20075,14 +20075,14 @@ const char *__Y9QSplitter_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y9QSplitter_vtable [2] = {
+struct classvtable _9QSplitter_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	123,	/* Number of Vfuncs */
 	"_ZTI9QSplitter",
-	__Y9QSplitter_vtable_name_0,
+	_9QSplitter_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -20116,40 +20116,40 @@ struct classvtable __Y9QSplitter_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QSplitter",
-	__Y9QSplitter_vtable_name_1,
+	_9QSplitter_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y9QSplitter_baseinfo[] = {
+struct base_type_info _9QSplitter_baseinfo[] = {
 	};
 
-struct classinfo _Y9QSplitter_classinfo = {
-	"_Y9QSplitter",
+struct classinfo _Z9QSplitter_classinfo = {
+	"_Z9QSplitter",
 	"_ZTV9QSplitter",
 	"_ZTI9QSplitter",	/* RTTI */
 	"_ZTI6QFrame",
-	"_ZTT_Y9QSplitter",	/* VTT */
+	"_ZTT9QSplitter",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QSplitter_typeinfo,
-	__Y9QSplitter_vtable,
-	__Y9QSplitter_baseinfo,
+	&_9QSplitter_typeinfo,
+	_9QSplitter_vtable,
+	_9QSplitter_baseinfo,
 	};
 
-char *__Y9QLineEdit_typeinfo_name[] = {
+char *_9QLineEdit_typeinfo_name[] = {
 	"_ZTI6QFrame",
 	};
 
-struct classtypeinfo __Y9QLineEdit_typeinfo = {
+struct classtypeinfo _9QLineEdit_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y9QLineEdit",
-	__Y9QLineEdit_typeinfo_name,
+	"_ZTS9QLineEdit",
+	_9QLineEdit_typeinfo_name,
 	};
 
-const char *__Y9QLineEdit_vtable_name_0 [] = {
+const char *_9QLineEdit_vtable_name_0 [] = {
 	"_ZNK9QLineEdit10metaObjectEv",
 	"_ZNK9QLineEdit9classNameEv",
 	"_ZN9QLineEdit7qt_castEPKc",
@@ -20291,7 +20291,7 @@ const char *__Y9QLineEdit_vtable_name_0 [] = {
 	"_ZN9QLineEdit15createPopupMenuEv",
 	};
 
-const char *__Y9QLineEdit_vtable_name_1 [] = {
+const char *_9QLineEdit_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QLineEditD1Ev",
 #endif
@@ -20365,14 +20365,14 @@ const char *__Y9QLineEdit_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y9QLineEdit_vtable [2] = {
+struct classvtable _9QLineEdit_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	139,	/* Number of Vfuncs */
 	"_ZTI9QLineEdit",
-	__Y9QLineEdit_vtable_name_0,
+	_9QLineEdit_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -20406,40 +20406,40 @@ struct classvtable __Y9QLineEdit_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QLineEdit",
-	__Y9QLineEdit_vtable_name_1,
+	_9QLineEdit_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y9QLineEdit_baseinfo[] = {
+struct base_type_info _9QLineEdit_baseinfo[] = {
 	};
 
-struct classinfo _Y9QLineEdit_classinfo = {
-	"_Y9QLineEdit",
+struct classinfo _Z9QLineEdit_classinfo = {
+	"_Z9QLineEdit",
 	"_ZTV9QLineEdit",
 	"_ZTI9QLineEdit",	/* RTTI */
 	"_ZTI6QFrame",
-	"_ZTT_Y9QLineEdit",	/* VTT */
+	"_ZTT9QLineEdit",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QLineEdit_typeinfo,
-	__Y9QLineEdit_vtable,
-	__Y9QLineEdit_baseinfo,
+	&_9QLineEdit_typeinfo,
+	_9QLineEdit_vtable,
+	_9QLineEdit_baseinfo,
 	};
 
-char *__Y5QVBox_typeinfo_name[] = {
+char *_5QVBox_typeinfo_name[] = {
 	"_ZTI5QHBox",
 	};
 
-struct classtypeinfo __Y5QVBox_typeinfo = {
+struct classtypeinfo _5QVBox_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y5QVBox",
-	__Y5QVBox_typeinfo_name,
+	"_ZTS5QVBox",
+	_5QVBox_typeinfo_name,
 	};
 
-const char *__Y5QVBox_vtable_name_0 [] = {
+const char *_5QVBox_vtable_name_0 [] = {
 	"_ZNK5QVBox10metaObjectEv",
 	"_ZNK5QVBox9classNameEv",
 	"_ZN5QVBox7qt_castEPKc",
@@ -20560,7 +20560,7 @@ const char *__Y5QVBox_vtable_name_0 [] = {
 	"_ZN5QHBox12frameChangedEv",
 	};
 
-const char *__Y5QVBox_vtable_name_1 [] = {
+const char *_5QVBox_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N5QVBoxD1Ev",
 #endif
@@ -20634,14 +20634,14 @@ const char *__Y5QVBox_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y5QVBox_vtable [2] = {
+struct classvtable _5QVBox_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	118,	/* Number of Vfuncs */
 	"_ZTI5QVBox",
-	__Y5QVBox_vtable_name_0,
+	_5QVBox_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -20675,85 +20675,85 @@ struct classvtable __Y5QVBox_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI5QVBox",
-	__Y5QVBox_vtable_name_1,
+	_5QVBox_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y5QVBox_baseinfo[] = {
+struct base_type_info _5QVBox_baseinfo[] = {
 	};
 
-struct classinfo _Y5QVBox_classinfo = {
-	"_Y5QVBox",
+struct classinfo _Z5QVBox_classinfo = {
+	"_Z5QVBox",
 	"_ZTV5QVBox",
 	"_ZTI5QVBox",	/* RTTI */
 	"_ZTI5QHBox",
-	"_ZTT_Y5QVBox",	/* VTT */
+	"_ZTT5QVBox",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y5QVBox_typeinfo,
-	__Y5QVBox_vtable,
-	__Y5QVBox_baseinfo,
+	&_5QVBox_typeinfo,
+	_5QVBox_vtable,
+	_5QVBox_baseinfo,
 	};
 
-char *__Y17QContextMenuEvent_typeinfo_name[] = {
+char *_17QContextMenuEvent_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo __Y17QContextMenuEvent_typeinfo = {
+struct classtypeinfo _17QContextMenuEvent_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y17QContextMenuEvent",
-	__Y17QContextMenuEvent_typeinfo_name,
+	"_ZTS17QContextMenuEvent",
+	_17QContextMenuEvent_typeinfo_name,
 	};
 
-const char *__Y17QContextMenuEvent_vtable_name_0 [] = {
+const char *_17QContextMenuEvent_vtable_name_0 [] = {
 	"_ZN17QContextMenuEventD1Ev",
 	"_ZN17QContextMenuEventD0Ev",
 	};
 
-struct classvtable __Y17QContextMenuEvent_vtable [1] = {
+struct classvtable _17QContextMenuEvent_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI17QContextMenuEvent",
-	__Y17QContextMenuEvent_vtable_name_0,
+	_17QContextMenuEvent_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y17QContextMenuEvent_baseinfo[] = {
+struct base_type_info _17QContextMenuEvent_baseinfo[] = {
 	};
 
-struct classinfo _Y17QContextMenuEvent_classinfo = {
-	"_Y17QContextMenuEvent",
+struct classinfo _Z17QContextMenuEvent_classinfo = {
+	"_Z17QContextMenuEvent",
 	"_ZTV17QContextMenuEvent",
 	"_ZTI17QContextMenuEvent",	/* RTTI */
 	"_ZTI6QEvent",
-	"_ZTT_Y17QContextMenuEvent",	/* VTT */
+	"_ZTT17QContextMenuEvent",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y17QContextMenuEvent_typeinfo,
-	__Y17QContextMenuEvent_vtable,
-	__Y17QContextMenuEvent_baseinfo,
+	&_17QContextMenuEvent_typeinfo,
+	_17QContextMenuEvent_vtable,
+	_17QContextMenuEvent_baseinfo,
 	};
 
-char *__Y8QProcess_typeinfo_name[] = {
+char *_8QProcess_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y8QProcess_typeinfo = {
+struct classtypeinfo _8QProcess_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y8QProcess",
-	__Y8QProcess_typeinfo_name,
+	"_ZTS8QProcess",
+	_8QProcess_typeinfo_name,
 	};
 
-const char *__Y8QProcess_vtable_name_0 [] = {
+const char *_8QProcess_vtable_name_0 [] = {
 	"_ZNK8QProcess10metaObjectEv",
 	"_ZNK8QProcess9classNameEv",
 	"_ZN8QProcess7qt_castEPKc",
@@ -20790,92 +20790,92 @@ const char *__Y8QProcess_vtable_name_0 [] = {
 	"_ZN8QProcess10closeStdinEv",
 	};
 
-struct classvtable __Y8QProcess_vtable [1] = {
+struct classvtable _8QProcess_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	34,	/* Number of Vfuncs */
 	"_ZTI8QProcess",
-	__Y8QProcess_vtable_name_0,
+	_8QProcess_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y8QProcess_baseinfo[] = {
+struct base_type_info _8QProcess_baseinfo[] = {
 	};
 
-struct classinfo _Y8QProcess_classinfo = {
-	"_Y8QProcess",
+struct classinfo _Z8QProcess_classinfo = {
+	"_Z8QProcess",
 	"_ZTV8QProcess",
 	"_ZTI8QProcess",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y8QProcess",	/* VTT */
+	"_ZTT8QProcess",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y8QProcess_typeinfo,
-	__Y8QProcess_vtable,
-	__Y8QProcess_baseinfo,
+	&_8QProcess_typeinfo,
+	_8QProcess_vtable,
+	_8QProcess_baseinfo,
 	};
 
-char *__Y12QImageFormat_typeinfo_name[] = {
+char *_12QImageFormat_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y12QImageFormat_typeinfo = {
+struct classtypeinfo _12QImageFormat_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y12QImageFormat",
-	__Y12QImageFormat_typeinfo_name,
+	"_ZTS12QImageFormat",
+	_12QImageFormat_typeinfo_name,
 	};
 
-const char *__Y12QImageFormat_vtable_name_0 [] = {
+const char *_12QImageFormat_vtable_name_0 [] = {
 	"_ZN12QImageFormatD1Ev",
 	"_ZN12QImageFormatD0Ev",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y12QImageFormat_vtable [1] = {
+struct classvtable _12QImageFormat_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	3,	/* Number of Vfuncs */
 	"_ZTI12QImageFormat",
-	__Y12QImageFormat_vtable_name_0,
+	_12QImageFormat_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y12QImageFormat_baseinfo[] = {
+struct base_type_info _12QImageFormat_baseinfo[] = {
 	};
 
-struct classinfo _Y12QImageFormat_classinfo = {
-	"_Y12QImageFormat",
+struct classinfo _Z12QImageFormat_classinfo = {
+	"_Z12QImageFormat",
 	"_ZTV12QImageFormat",
 	"_ZTI12QImageFormat",	/* RTTI */
 	"",
-	"_ZTT_Y12QImageFormat",	/* VTT */
+	"_ZTT12QImageFormat",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QImageFormat_typeinfo,
-	__Y12QImageFormat_vtable,
-	__Y12QImageFormat_baseinfo,
+	&_12QImageFormat_typeinfo,
+	_12QImageFormat_vtable,
+	_12QImageFormat_baseinfo,
 	};
 
-char *__Y11QTranslator_typeinfo_name[] = {
+char *_11QTranslator_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y11QTranslator_typeinfo = {
+struct classtypeinfo _11QTranslator_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QTranslator",
-	__Y11QTranslator_typeinfo_name,
+	"_ZTS11QTranslator",
+	_11QTranslator_typeinfo_name,
 	};
 
-const char *__Y11QTranslator_vtable_name_0 [] = {
+const char *_11QTranslator_vtable_name_0 [] = {
 	"_ZNK11QTranslator10metaObjectEv",
 	"_ZNK11QTranslator9classNameEv",
 	"_ZN11QTranslator7qt_castEPKc",
@@ -20900,92 +20900,92 @@ const char *__Y11QTranslator_vtable_name_0 [] = {
 	"_ZNK11QTranslator11findMessageEPKcS1_S1_",
 	};
 
-struct classvtable __Y11QTranslator_vtable [1] = {
+struct classvtable _11QTranslator_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	22,	/* Number of Vfuncs */
 	"_ZTI11QTranslator",
-	__Y11QTranslator_vtable_name_0,
+	_11QTranslator_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QTranslator_baseinfo[] = {
+struct base_type_info _11QTranslator_baseinfo[] = {
 	};
 
-struct classinfo _Y11QTranslator_classinfo = {
-	"_Y11QTranslator",
+struct classinfo _Z11QTranslator_classinfo = {
+	"_Z11QTranslator",
 	"_ZTV11QTranslator",
 	"_ZTI11QTranslator",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y11QTranslator",	/* VTT */
+	"_ZTT11QTranslator",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QTranslator_typeinfo,
-	__Y11QTranslator_vtable,
-	__Y11QTranslator_baseinfo,
+	&_11QTranslator_typeinfo,
+	_11QTranslator_vtable,
+	_11QTranslator_baseinfo,
 	};
 
-char *__Y11QXmlLocator_typeinfo_name[] = {
+char *_11QXmlLocator_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y11QXmlLocator_typeinfo = {
+struct classtypeinfo _11QXmlLocator_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y11QXmlLocator",
-	__Y11QXmlLocator_typeinfo_name,
+	"_ZTS11QXmlLocator",
+	_11QXmlLocator_typeinfo_name,
 	};
 
-const char *__Y11QXmlLocator_vtable_name_0 [] = {
+const char *_11QXmlLocator_vtable_name_0 [] = {
 	"_ZN11QXmlLocatorD1Ev",
 	"_ZN11QXmlLocatorD0Ev",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y11QXmlLocator_vtable [1] = {
+struct classvtable _11QXmlLocator_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	4,	/* Number of Vfuncs */
 	"_ZTI11QXmlLocator",
-	__Y11QXmlLocator_vtable_name_0,
+	_11QXmlLocator_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QXmlLocator_baseinfo[] = {
+struct base_type_info _11QXmlLocator_baseinfo[] = {
 	};
 
-struct classinfo _Y11QXmlLocator_classinfo = {
-	"_Y11QXmlLocator",
+struct classinfo _Z11QXmlLocator_classinfo = {
+	"_Z11QXmlLocator",
 	"_ZTV11QXmlLocator",
 	"_ZTI11QXmlLocator",	/* RTTI */
 	"",
-	"_ZTT_Y11QXmlLocator",	/* VTT */
+	"_ZTT11QXmlLocator",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QXmlLocator_typeinfo,
-	__Y11QXmlLocator_vtable,
-	__Y11QXmlLocator_baseinfo,
+	&_11QXmlLocator_typeinfo,
+	_11QXmlLocator_vtable,
+	_11QXmlLocator_baseinfo,
 	};
 
-char *__Y10QPopupMenu_typeinfo_name[] = {
+char *_10QPopupMenu_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y10QPopupMenu_typeinfo = {
+struct classtypeinfo _10QPopupMenu_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
-	"_ZTS_Y10QPopupMenu",
-	__Y10QPopupMenu_typeinfo_name,
+	"_ZTS10QPopupMenu",
+	_10QPopupMenu_typeinfo_name,
 	};
 
-const char *__Y10QPopupMenu_vtable_name_0 [] = {
+const char *_10QPopupMenu_vtable_name_0 [] = {
 	"_ZNK10QPopupMenu10metaObjectEv",
 	"_ZNK10QPopupMenu9classNameEv",
 	"_ZN10QPopupMenu7qt_castEPKc",
@@ -21115,7 +21115,7 @@ const char *__Y10QPopupMenu_vtable_name_0 [] = {
 	"_ZN10QPopupMenu18setFirstItemActiveEv",
 	};
 
-const char *__Y10QPopupMenu_vtable_name_1 [] = {
+const char *_10QPopupMenu_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QPopupMenuD1Ev",
 #endif
@@ -21189,7 +21189,7 @@ const char *__Y10QPopupMenu_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-const char *__Y10QPopupMenu_vtable_name_2 [] = {
+const char *_10QPopupMenu_vtable_name_2 [] = {
 #if defined __i386__
 	"_ZThn148_N10QPopupMenuD1Ev",
 #endif
@@ -21361,14 +21361,14 @@ const char *__Y10QPopupMenu_vtable_name_2 [] = {
 #endif
 	};
 
-struct classvtable __Y10QPopupMenu_vtable [3] = {
+struct classvtable _10QPopupMenu_vtable [3] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	127,	/* Number of Vfuncs */
 	"_ZTI10QPopupMenu",
-	__Y10QPopupMenu_vtable_name_0,
+	_10QPopupMenu_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -21402,7 +21402,7 @@ struct classvtable __Y10QPopupMenu_vtable [3] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI10QPopupMenu",
-	__Y10QPopupMenu_vtable_name_1,
+	_10QPopupMenu_vtable_name_1,
 	},
 	{
 #if defined __i386__
@@ -21436,11 +21436,11 @@ struct classvtable __Y10QPopupMenu_vtable [3] = {
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI10QPopupMenu",
-	__Y10QPopupMenu_vtable_name_2,
+	_10QPopupMenu_vtable_name_2,
 	},
 };
 
-struct base_type_info __Y10QPopupMenu_baseinfo[] = {
+struct base_type_info _10QPopupMenu_baseinfo[] = {
 	{"_ZTI6QFrame",	2U},
 #if defined __i386__
 	{"_ZTI9QMenuData",	37890U},
@@ -21465,33 +21465,33 @@ struct base_type_info __Y10QPopupMenu_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Y10QPopupMenu_classinfo = {
-	"_Y10QPopupMenu",
+struct classinfo _Z10QPopupMenu_classinfo = {
+	"_Z10QPopupMenu",
 	"_ZTV10QPopupMenu",
 	"_ZTI10QPopupMenu",	/* RTTI */
 	"_ZTI6QFrame",
-	"_ZTT_Y10QPopupMenu",	/* VTT */
+	"_ZTT10QPopupMenu",	/* VTT */
 	3,
 	0,
 	2,
 	0,	/* numVTT */
 	0U,
-	&__Y10QPopupMenu_typeinfo,
-	__Y10QPopupMenu_vtable,
-	__Y10QPopupMenu_baseinfo,
+	&_10QPopupMenu_typeinfo,
+	_10QPopupMenu_vtable,
+	_10QPopupMenu_baseinfo,
 	};
 
-char *__Y10QImageDrag_typeinfo_name[] = {
+char *_10QImageDrag_typeinfo_name[] = {
 	"_ZTI11QDragObject",
 	};
 
-struct classtypeinfo __Y10QImageDrag_typeinfo = {
+struct classtypeinfo _10QImageDrag_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y10QImageDrag",
-	__Y10QImageDrag_typeinfo_name,
+	"_ZTS10QImageDrag",
+	_10QImageDrag_typeinfo_name,
 	};
 
-const char *__Y10QImageDrag_vtable_name_0 [] = {
+const char *_10QImageDrag_vtable_name_0 [] = {
 	"_ZNK10QImageDrag10metaObjectEv",
 	"_ZNK10QImageDrag9classNameEv",
 	"_ZN10QImageDrag7qt_castEPKc",
@@ -21521,7 +21521,7 @@ const char *__Y10QImageDrag_vtable_name_0 [] = {
 	"_ZNK10QImageDrag11encodedDataEPKc",
 	};
 
-const char *__Y10QImageDrag_vtable_name_1 [] = {
+const char *_10QImageDrag_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QImageDragD1Ev",
 #endif
@@ -21609,14 +21609,14 @@ const char *__Y10QImageDrag_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable __Y10QImageDrag_vtable [2] = {
+struct classvtable _10QImageDrag_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	27,	/* Number of Vfuncs */
 	"_ZTI10QImageDrag",
-	__Y10QImageDrag_vtable_name_0,
+	_10QImageDrag_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -21650,39 +21650,39 @@ struct classvtable __Y10QImageDrag_vtable [2] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI10QImageDrag",
-	__Y10QImageDrag_vtable_name_1,
+	_10QImageDrag_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y10QImageDrag_baseinfo[] = {
+struct base_type_info _10QImageDrag_baseinfo[] = {
 	};
 
-struct classinfo _Y10QImageDrag_classinfo = {
-	"_Y10QImageDrag",
+struct classinfo _Z10QImageDrag_classinfo = {
+	"_Z10QImageDrag",
 	"_ZTV10QImageDrag",
 	"_ZTI10QImageDrag",	/* RTTI */
 	"_ZTI11QDragObject",
-	"_ZTT_Y10QImageDrag",	/* VTT */
+	"_ZTT10QImageDrag",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QImageDrag_typeinfo,
-	__Y10QImageDrag_vtable,
-	__Y10QImageDrag_baseinfo,
+	&_10QImageDrag_typeinfo,
+	_10QImageDrag_vtable,
+	_10QImageDrag_baseinfo,
 	};
 
-char *__Y18QMimeSourceFactory_typeinfo_name[] = {
+char *_18QMimeSourceFactory_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y18QMimeSourceFactory_typeinfo = {
+struct classtypeinfo _18QMimeSourceFactory_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y18QMimeSourceFactory",
-	__Y18QMimeSourceFactory_typeinfo_name,
+	"_ZTS18QMimeSourceFactory",
+	_18QMimeSourceFactory_typeinfo_name,
 	};
 
-const char *__Y18QMimeSourceFactory_vtable_name_0 [] = {
+const char *_18QMimeSourceFactory_vtable_name_0 [] = {
 	"_ZN18QMimeSourceFactoryD1Ev",
 	"_ZN18QMimeSourceFactoryD0Ev",
 	"_ZNK18QMimeSourceFactory4dataERK7QString",
@@ -21696,47 +21696,47 @@ const char *__Y18QMimeSourceFactory_vtable_name_0 [] = {
 	"_ZN18QMimeSourceFactory16setExtensionTypeERK7QStringPKc",
 	};
 
-struct classvtable __Y18QMimeSourceFactory_vtable [1] = {
+struct classvtable _18QMimeSourceFactory_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI18QMimeSourceFactory",
-	__Y18QMimeSourceFactory_vtable_name_0,
+	_18QMimeSourceFactory_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y18QMimeSourceFactory_baseinfo[] = {
+struct base_type_info _18QMimeSourceFactory_baseinfo[] = {
 	};
 
-struct classinfo _Y18QMimeSourceFactory_classinfo = {
-	"_Y18QMimeSourceFactory",
+struct classinfo _Z18QMimeSourceFactory_classinfo = {
+	"_Z18QMimeSourceFactory",
 	"_ZTV18QMimeSourceFactory",
 	"_ZTI18QMimeSourceFactory",	/* RTTI */
 	"",
-	"_ZTT_Y18QMimeSourceFactory",	/* VTT */
+	"_ZTT18QMimeSourceFactory",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y18QMimeSourceFactory_typeinfo,
-	__Y18QMimeSourceFactory_vtable,
-	__Y18QMimeSourceFactory_baseinfo,
+	&_18QMimeSourceFactory_typeinfo,
+	_18QMimeSourceFactory_vtable,
+	_18QMimeSourceFactory_baseinfo,
 	};
 
-char *__Y12QListBoxText_typeinfo_name[] = {
+char *_12QListBoxText_typeinfo_name[] = {
 	"_ZTI12QListBoxItem",
 	};
 
-struct classtypeinfo __Y12QListBoxText_typeinfo = {
+struct classtypeinfo _12QListBoxText_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y12QListBoxText",
-	__Y12QListBoxText_typeinfo_name,
+	"_ZTS12QListBoxText",
+	_12QListBoxText_typeinfo_name,
 	};
 
-const char *__Y12QListBoxText_vtable_name_0 [] = {
+const char *_12QListBoxText_vtable_name_0 [] = {
 	"_ZN12QListBoxTextD1Ev",
 	"_ZN12QListBoxTextD0Ev",
 	"_ZNK12QListBoxItem4textEv",
@@ -21748,47 +21748,47 @@ const char *__Y12QListBoxText_vtable_name_0 [] = {
 	"_ZN12QListBoxItem7setTextERK7QString",
 	};
 
-struct classvtable __Y12QListBoxText_vtable [1] = {
+struct classvtable _12QListBoxText_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI12QListBoxText",
-	__Y12QListBoxText_vtable_name_0,
+	_12QListBoxText_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y12QListBoxText_baseinfo[] = {
+struct base_type_info _12QListBoxText_baseinfo[] = {
 	};
 
-struct classinfo _Y12QListBoxText_classinfo = {
-	"_Y12QListBoxText",
+struct classinfo _Z12QListBoxText_classinfo = {
+	"_Z12QListBoxText",
 	"_ZTV12QListBoxText",
 	"_ZTI12QListBoxText",	/* RTTI */
 	"_ZTI12QListBoxItem",
-	"_ZTT_Y12QListBoxText",	/* VTT */
+	"_ZTT12QListBoxText",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QListBoxText_typeinfo,
-	__Y12QListBoxText_vtable,
-	__Y12QListBoxText_baseinfo,
+	&_12QListBoxText_typeinfo,
+	_12QListBoxText_vtable,
+	_12QListBoxText_baseinfo,
 	};
 
-char *__Y9QGroupBox_typeinfo_name[] = {
+char *_9QGroupBox_typeinfo_name[] = {
 	"_ZTI6QFrame",
 	};
 
-struct classtypeinfo __Y9QGroupBox_typeinfo = {
+struct classtypeinfo _9QGroupBox_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y9QGroupBox",
-	__Y9QGroupBox_typeinfo_name,
+	"_ZTS9QGroupBox",
+	_9QGroupBox_typeinfo_name,
 	};
 
-const char *__Y9QGroupBox_vtable_name_0 [] = {
+const char *_9QGroupBox_vtable_name_0 [] = {
 	"_ZNK9QGroupBox10metaObjectEv",
 	"_ZNK9QGroupBox9classNameEv",
 	"_ZN9QGroupBox7qt_castEPKc",
@@ -21912,7 +21912,7 @@ const char *__Y9QGroupBox_vtable_name_0 [] = {
 	"_ZN9QGroupBox12setAlignmentEi",
 	};
 
-const char *__Y9QGroupBox_vtable_name_1 [] = {
+const char *_9QGroupBox_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QGroupBoxD1Ev",
 #endif
@@ -21986,14 +21986,14 @@ const char *__Y9QGroupBox_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y9QGroupBox_vtable [2] = {
+struct classvtable _9QGroupBox_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	121,	/* Number of Vfuncs */
 	"_ZTI9QGroupBox",
-	__Y9QGroupBox_vtable_name_0,
+	_9QGroupBox_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -22027,39 +22027,39 @@ struct classvtable __Y9QGroupBox_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QGroupBox",
-	__Y9QGroupBox_vtable_name_1,
+	_9QGroupBox_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y9QGroupBox_baseinfo[] = {
+struct base_type_info _9QGroupBox_baseinfo[] = {
 	};
 
-struct classinfo _Y9QGroupBox_classinfo = {
-	"_Y9QGroupBox",
+struct classinfo _Z9QGroupBox_classinfo = {
+	"_Z9QGroupBox",
 	"_ZTV9QGroupBox",
 	"_ZTI9QGroupBox",	/* RTTI */
 	"_ZTI6QFrame",
-	"_ZTT_Y9QGroupBox",	/* VTT */
+	"_ZTT9QGroupBox",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QGroupBox_typeinfo,
-	__Y9QGroupBox_vtable,
-	__Y9QGroupBox_baseinfo,
+	&_9QGroupBox_typeinfo,
+	_9QGroupBox_vtable,
+	_9QGroupBox_baseinfo,
 	};
 
-char *__Y8QMenuBar_typeinfo_name[] = {
+char *_8QMenuBar_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y8QMenuBar_typeinfo = {
+struct classtypeinfo _8QMenuBar_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
-	"_ZTS_Y8QMenuBar",
-	__Y8QMenuBar_typeinfo_name,
+	"_ZTS8QMenuBar",
+	_8QMenuBar_typeinfo_name,
 	};
 
-const char *__Y8QMenuBar_vtable_name_0 [] = {
+const char *_8QMenuBar_vtable_name_0 [] = {
 	"_ZNK8QMenuBar10metaObjectEv",
 	"_ZNK8QMenuBar9classNameEv",
 	"_ZN8QMenuBar7qt_castEPKc",
@@ -22187,7 +22187,7 @@ const char *__Y8QMenuBar_vtable_name_0 [] = {
 	"_ZN8QMenuBar12menuDelPopupEP10QPopupMenu",
 	};
 
-const char *__Y8QMenuBar_vtable_name_1 [] = {
+const char *_8QMenuBar_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N8QMenuBarD1Ev",
 #endif
@@ -22261,7 +22261,7 @@ const char *__Y8QMenuBar_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-const char *__Y8QMenuBar_vtable_name_2 [] = {
+const char *_8QMenuBar_vtable_name_2 [] = {
 #if defined __i386__
 	"_ZThn148_N8QMenuBarD1Ev",
 #endif
@@ -22433,14 +22433,14 @@ const char *__Y8QMenuBar_vtable_name_2 [] = {
 #endif
 	};
 
-struct classvtable __Y8QMenuBar_vtable [3] = {
+struct classvtable _8QMenuBar_vtable [3] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	125,	/* Number of Vfuncs */
 	"_ZTI8QMenuBar",
-	__Y8QMenuBar_vtable_name_0,
+	_8QMenuBar_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -22474,7 +22474,7 @@ struct classvtable __Y8QMenuBar_vtable [3] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI8QMenuBar",
-	__Y8QMenuBar_vtable_name_1,
+	_8QMenuBar_vtable_name_1,
 	},
 	{
 #if defined __i386__
@@ -22508,11 +22508,11 @@ struct classvtable __Y8QMenuBar_vtable [3] = {
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI8QMenuBar",
-	__Y8QMenuBar_vtable_name_2,
+	_8QMenuBar_vtable_name_2,
 	},
 };
 
-struct base_type_info __Y8QMenuBar_baseinfo[] = {
+struct base_type_info _8QMenuBar_baseinfo[] = {
 	{"_ZTI6QFrame",	2U},
 #if defined __i386__
 	{"_ZTI9QMenuData",	37890U},
@@ -22537,33 +22537,33 @@ struct base_type_info __Y8QMenuBar_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Y8QMenuBar_classinfo = {
-	"_Y8QMenuBar",
+struct classinfo _Z8QMenuBar_classinfo = {
+	"_Z8QMenuBar",
 	"_ZTV8QMenuBar",
 	"_ZTI8QMenuBar",	/* RTTI */
 	"_ZTI6QFrame",
-	"_ZTT_Y8QMenuBar",	/* VTT */
+	"_ZTT8QMenuBar",	/* VTT */
 	3,
 	0,
 	2,
 	0,	/* numVTT */
 	0U,
-	&__Y8QMenuBar_typeinfo,
-	__Y8QMenuBar_vtable,
-	__Y8QMenuBar_baseinfo,
+	&_8QMenuBar_typeinfo,
+	_8QMenuBar_vtable,
+	_8QMenuBar_baseinfo,
 	};
 
-char *__Y15QProgressDialog_typeinfo_name[] = {
+char *_15QProgressDialog_typeinfo_name[] = {
 	"_ZTI7QDialog",
 	};
 
-struct classtypeinfo __Y15QProgressDialog_typeinfo = {
+struct classtypeinfo _15QProgressDialog_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y15QProgressDialog",
-	__Y15QProgressDialog_typeinfo_name,
+	"_ZTS15QProgressDialog",
+	_15QProgressDialog_typeinfo_name,
 	};
 
-const char *__Y15QProgressDialog_vtable_name_0 [] = {
+const char *_15QProgressDialog_vtable_name_0 [] = {
 	"_ZNK15QProgressDialog10metaObjectEv",
 	"_ZNK15QProgressDialog9classNameEv",
 	"_ZN15QProgressDialog7qt_castEPKc",
@@ -22679,7 +22679,7 @@ const char *__Y15QProgressDialog_vtable_name_0 [] = {
 	"_ZN7QDialog6rejectEv",
 	};
 
-const char *__Y15QProgressDialog_vtable_name_1 [] = {
+const char *_15QProgressDialog_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N15QProgressDialogD1Ev",
 #endif
@@ -22753,14 +22753,14 @@ const char *__Y15QProgressDialog_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y15QProgressDialog_vtable [2] = {
+struct classvtable _15QProgressDialog_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	113,	/* Number of Vfuncs */
 	"_ZTI15QProgressDialog",
-	__Y15QProgressDialog_vtable_name_0,
+	_15QProgressDialog_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -22794,40 +22794,40 @@ struct classvtable __Y15QProgressDialog_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI15QProgressDialog",
-	__Y15QProgressDialog_vtable_name_1,
+	_15QProgressDialog_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y15QProgressDialog_baseinfo[] = {
+struct base_type_info _15QProgressDialog_baseinfo[] = {
 	};
 
-struct classinfo _Y15QProgressDialog_classinfo = {
-	"_Y15QProgressDialog",
+struct classinfo _Z15QProgressDialog_classinfo = {
+	"_Z15QProgressDialog",
 	"_ZTV15QProgressDialog",
 	"_ZTI15QProgressDialog",	/* RTTI */
 	"_ZTI7QDialog",
-	"_ZTT_Y15QProgressDialog",	/* VTT */
+	"_ZTT15QProgressDialog",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y15QProgressDialog_typeinfo,
-	__Y15QProgressDialog_vtable,
-	__Y15QProgressDialog_baseinfo,
+	&_15QProgressDialog_typeinfo,
+	_15QProgressDialog_vtable,
+	_15QProgressDialog_baseinfo,
 	};
 
-char *__Y13QDateTimeEdit_typeinfo_name[] = {
+char *_13QDateTimeEdit_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo __Y13QDateTimeEdit_typeinfo = {
+struct classtypeinfo _13QDateTimeEdit_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y13QDateTimeEdit",
-	__Y13QDateTimeEdit_typeinfo_name,
+	"_ZTS13QDateTimeEdit",
+	_13QDateTimeEdit_typeinfo_name,
 	};
 
-const char *__Y13QDateTimeEdit_vtable_name_0 [] = {
+const char *_13QDateTimeEdit_vtable_name_0 [] = {
 	"_ZNK13QDateTimeEdit10metaObjectEv",
 	"_ZNK13QDateTimeEdit9classNameEv",
 	"_ZN13QDateTimeEdit7qt_castEPKc",
@@ -22942,7 +22942,7 @@ const char *__Y13QDateTimeEdit_vtable_name_0 [] = {
 	"_ZN13QDateTimeEdit14setAutoAdvanceEb",
 	};
 
-const char *__Y13QDateTimeEdit_vtable_name_1 [] = {
+const char *_13QDateTimeEdit_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N13QDateTimeEditD1Ev",
 #endif
@@ -23016,14 +23016,14 @@ const char *__Y13QDateTimeEdit_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y13QDateTimeEdit_vtable [2] = {
+struct classvtable _13QDateTimeEdit_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	112,	/* Number of Vfuncs */
 	"_ZTI13QDateTimeEdit",
-	__Y13QDateTimeEdit_vtable_name_0,
+	_13QDateTimeEdit_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -23057,39 +23057,39 @@ struct classvtable __Y13QDateTimeEdit_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI13QDateTimeEdit",
-	__Y13QDateTimeEdit_vtable_name_1,
+	_13QDateTimeEdit_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y13QDateTimeEdit_baseinfo[] = {
+struct base_type_info _13QDateTimeEdit_baseinfo[] = {
 	};
 
-struct classinfo _Y13QDateTimeEdit_classinfo = {
-	"_Y13QDateTimeEdit",
+struct classinfo _Z13QDateTimeEdit_classinfo = {
+	"_Z13QDateTimeEdit",
 	"_ZTV13QDateTimeEdit",
 	"_ZTI13QDateTimeEdit",	/* RTTI */
 	"_ZTI7QWidget",
-	"_ZTT_Y13QDateTimeEdit",	/* VTT */
+	"_ZTT13QDateTimeEdit",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y13QDateTimeEdit_typeinfo,
-	__Y13QDateTimeEdit_vtable,
-	__Y13QDateTimeEdit_baseinfo,
+	&_13QDateTimeEdit_typeinfo,
+	_13QDateTimeEdit_vtable,
+	_13QDateTimeEdit_baseinfo,
 	};
 
-char *__Y10QSqlResult_typeinfo_name[] = {
+char *_10QSqlResult_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y10QSqlResult_typeinfo = {
+struct classtypeinfo _10QSqlResult_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y10QSqlResult",
-	__Y10QSqlResult_typeinfo_name,
+	"_ZTS10QSqlResult",
+	_10QSqlResult_typeinfo_name,
 	};
 
-const char *__Y10QSqlResult_vtable_name_0 [] = {
+const char *_10QSqlResult_vtable_name_0 [] = {
 	"_ZN10QSqlResultD1Ev",
 	"_ZN10QSqlResultD0Ev",
 	"_ZN10QSqlResult5setAtEi",
@@ -23110,47 +23110,47 @@ const char *__Y10QSqlResult_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y10QSqlResult_vtable [1] = {
+struct classvtable _10QSqlResult_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	18,	/* Number of Vfuncs */
 	"_ZTI10QSqlResult",
-	__Y10QSqlResult_vtable_name_0,
+	_10QSqlResult_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y10QSqlResult_baseinfo[] = {
+struct base_type_info _10QSqlResult_baseinfo[] = {
 	};
 
-struct classinfo _Y10QSqlResult_classinfo = {
-	"_Y10QSqlResult",
+struct classinfo _Z10QSqlResult_classinfo = {
+	"_Z10QSqlResult",
 	"_ZTV10QSqlResult",
 	"_ZTI10QSqlResult",	/* RTTI */
 	"",
-	"_ZTT_Y10QSqlResult",	/* VTT */
+	"_ZTT10QSqlResult",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QSqlResult_typeinfo,
-	__Y10QSqlResult_vtable,
-	__Y10QSqlResult_baseinfo,
+	&_10QSqlResult_typeinfo,
+	_10QSqlResult_vtable,
+	_10QSqlResult_baseinfo,
 	};
 
-char *__Y16QRegExpValidator_typeinfo_name[] = {
+char *_16QRegExpValidator_typeinfo_name[] = {
 	"_ZTI10QValidator",
 	};
 
-struct classtypeinfo __Y16QRegExpValidator_typeinfo = {
+struct classtypeinfo _16QRegExpValidator_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y16QRegExpValidator",
-	__Y16QRegExpValidator_typeinfo_name,
+	"_ZTS16QRegExpValidator",
+	_16QRegExpValidator_typeinfo_name,
 	};
 
-const char *__Y16QRegExpValidator_vtable_name_0 [] = {
+const char *_16QRegExpValidator_vtable_name_0 [] = {
 	"_ZNK16QRegExpValidator10metaObjectEv",
 	"_ZNK16QRegExpValidator9classNameEv",
 	"_ZN16QRegExpValidator7qt_castEPKc",
@@ -23176,47 +23176,47 @@ const char *__Y16QRegExpValidator_vtable_name_0 [] = {
 	"_ZNK10QValidator5fixupER7QString",
 	};
 
-struct classvtable __Y16QRegExpValidator_vtable [1] = {
+struct classvtable _16QRegExpValidator_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	23,	/* Number of Vfuncs */
 	"_ZTI16QRegExpValidator",
-	__Y16QRegExpValidator_vtable_name_0,
+	_16QRegExpValidator_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y16QRegExpValidator_baseinfo[] = {
+struct base_type_info _16QRegExpValidator_baseinfo[] = {
 	};
 
-struct classinfo _Y16QRegExpValidator_classinfo = {
-	"_Y16QRegExpValidator",
+struct classinfo _Z16QRegExpValidator_classinfo = {
+	"_Z16QRegExpValidator",
 	"_ZTV16QRegExpValidator",
 	"_ZTI16QRegExpValidator",	/* RTTI */
 	"_ZTI10QValidator",
-	"_ZTT_Y16QRegExpValidator",	/* VTT */
+	"_ZTT16QRegExpValidator",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y16QRegExpValidator_typeinfo,
-	__Y16QRegExpValidator_vtable,
-	__Y16QRegExpValidator_baseinfo,
+	&_16QRegExpValidator_typeinfo,
+	_16QRegExpValidator_vtable,
+	_16QRegExpValidator_baseinfo,
 	};
 
-char *__Y15QDockAreaLayout_typeinfo_name[] = {
+char *_15QDockAreaLayout_typeinfo_name[] = {
 	"_ZTI7QLayout",
 	};
 
-struct classtypeinfo __Y15QDockAreaLayout_typeinfo = {
+struct classtypeinfo _15QDockAreaLayout_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y15QDockAreaLayout",
-	__Y15QDockAreaLayout_typeinfo_name,
+	"_ZTS15QDockAreaLayout",
+	_15QDockAreaLayout_typeinfo_name,
 	};
 
-const char *__Y15QDockAreaLayout_vtable_name_0 [] = {
+const char *_15QDockAreaLayout_vtable_name_0 [] = {
 	"_ZNK15QDockAreaLayout10metaObjectEv",
 	"_ZNK15QDockAreaLayout9classNameEv",
 	"_ZN15QDockAreaLayout7qt_castEPKc",
@@ -23257,7 +23257,7 @@ const char *__Y15QDockAreaLayout_vtable_name_0 [] = {
 	"_ZNK15QDockAreaLayout8sizeHintEv",
 	};
 
-const char *__Y15QDockAreaLayout_vtable_name_1 [] = {
+const char *_15QDockAreaLayout_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N15QDockAreaLayoutD1Ev",
 #endif
@@ -23557,14 +23557,14 @@ const char *__Y15QDockAreaLayout_vtable_name_1 [] = {
 	"_ZN11QLayoutItem12setAlignmentEi",
 	};
 
-struct classvtable __Y15QDockAreaLayout_vtable [2] = {
+struct classvtable _15QDockAreaLayout_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	38,	/* Number of Vfuncs */
 	"_ZTI15QDockAreaLayout",
-	__Y15QDockAreaLayout_vtable_name_0,
+	_15QDockAreaLayout_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -23598,85 +23598,85 @@ struct classvtable __Y15QDockAreaLayout_vtable [2] = {
 	1,	/* Vtable category */
 	17,	/* Number of Vfuncs */
 	"_ZTI15QDockAreaLayout",
-	__Y15QDockAreaLayout_vtable_name_1,
+	_15QDockAreaLayout_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y15QDockAreaLayout_baseinfo[] = {
+struct base_type_info _15QDockAreaLayout_baseinfo[] = {
 	};
 
-struct classinfo _Y15QDockAreaLayout_classinfo = {
-	"_Y15QDockAreaLayout",
+struct classinfo _Z15QDockAreaLayout_classinfo = {
+	"_Z15QDockAreaLayout",
 	"_ZTV15QDockAreaLayout",
 	"_ZTI15QDockAreaLayout",	/* RTTI */
 	"_ZTI7QLayout",
-	"_ZTT_Y15QDockAreaLayout",	/* VTT */
+	"_ZTT15QDockAreaLayout",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y15QDockAreaLayout_typeinfo,
-	__Y15QDockAreaLayout_vtable,
-	__Y15QDockAreaLayout_baseinfo,
+	&_15QDockAreaLayout_typeinfo,
+	_15QDockAreaLayout_vtable,
+	_15QDockAreaLayout_baseinfo,
 	};
 
-char *__Y15QDragLeaveEvent_typeinfo_name[] = {
+char *_15QDragLeaveEvent_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo __Y15QDragLeaveEvent_typeinfo = {
+struct classtypeinfo _15QDragLeaveEvent_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y15QDragLeaveEvent",
-	__Y15QDragLeaveEvent_typeinfo_name,
+	"_ZTS15QDragLeaveEvent",
+	_15QDragLeaveEvent_typeinfo_name,
 	};
 
-const char *__Y15QDragLeaveEvent_vtable_name_0 [] = {
+const char *_15QDragLeaveEvent_vtable_name_0 [] = {
 	"_ZN15QDragLeaveEventD1Ev",
 	"_ZN15QDragLeaveEventD0Ev",
 	};
 
-struct classvtable __Y15QDragLeaveEvent_vtable [1] = {
+struct classvtable _15QDragLeaveEvent_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI15QDragLeaveEvent",
-	__Y15QDragLeaveEvent_vtable_name_0,
+	_15QDragLeaveEvent_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y15QDragLeaveEvent_baseinfo[] = {
+struct base_type_info _15QDragLeaveEvent_baseinfo[] = {
 	};
 
-struct classinfo _Y15QDragLeaveEvent_classinfo = {
-	"_Y15QDragLeaveEvent",
+struct classinfo _Z15QDragLeaveEvent_classinfo = {
+	"_Z15QDragLeaveEvent",
 	"_ZTV15QDragLeaveEvent",
 	"_ZTI15QDragLeaveEvent",	/* RTTI */
 	"_ZTI6QEvent",
-	"_ZTT_Y15QDragLeaveEvent",	/* VTT */
+	"_ZTT15QDragLeaveEvent",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y15QDragLeaveEvent_typeinfo,
-	__Y15QDragLeaveEvent_vtable,
-	__Y15QDragLeaveEvent_baseinfo,
+	&_15QDragLeaveEvent_typeinfo,
+	_15QDragLeaveEvent_vtable,
+	_15QDragLeaveEvent_baseinfo,
 	};
 
-char *__Y10QLCDNumber_typeinfo_name[] = {
+char *_10QLCDNumber_typeinfo_name[] = {
 	"_ZTI6QFrame",
 	};
 
-struct classtypeinfo __Y10QLCDNumber_typeinfo = {
+struct classtypeinfo _10QLCDNumber_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y10QLCDNumber",
-	__Y10QLCDNumber_typeinfo_name,
+	"_ZTS10QLCDNumber",
+	_10QLCDNumber_typeinfo_name,
 	};
 
-const char *__Y10QLCDNumber_vtable_name_0 [] = {
+const char *_10QLCDNumber_vtable_name_0 [] = {
 	"_ZNK10QLCDNumber10metaObjectEv",
 	"_ZNK10QLCDNumber9classNameEv",
 	"_ZN10QLCDNumber7qt_castEPKc",
@@ -23805,7 +23805,7 @@ const char *__Y10QLCDNumber_vtable_name_0 [] = {
 	"_ZN10QLCDNumber20setSmallDecimalPointEb",
 	};
 
-const char *__Y10QLCDNumber_vtable_name_1 [] = {
+const char *_10QLCDNumber_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QLCDNumberD1Ev",
 #endif
@@ -23879,14 +23879,14 @@ const char *__Y10QLCDNumber_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y10QLCDNumber_vtable [2] = {
+struct classvtable _10QLCDNumber_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	126,	/* Number of Vfuncs */
 	"_ZTI10QLCDNumber",
-	__Y10QLCDNumber_vtable_name_0,
+	_10QLCDNumber_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -23920,39 +23920,39 @@ struct classvtable __Y10QLCDNumber_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI10QLCDNumber",
-	__Y10QLCDNumber_vtable_name_1,
+	_10QLCDNumber_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y10QLCDNumber_baseinfo[] = {
+struct base_type_info _10QLCDNumber_baseinfo[] = {
 	};
 
-struct classinfo _Y10QLCDNumber_classinfo = {
-	"_Y10QLCDNumber",
+struct classinfo _Z10QLCDNumber_classinfo = {
+	"_Z10QLCDNumber",
 	"_ZTV10QLCDNumber",
 	"_ZTI10QLCDNumber",	/* RTTI */
 	"_ZTI6QFrame",
-	"_ZTT_Y10QLCDNumber",	/* VTT */
+	"_ZTT10QLCDNumber",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QLCDNumber_typeinfo,
-	__Y10QLCDNumber_vtable,
-	__Y10QLCDNumber_baseinfo,
+	&_10QLCDNumber_typeinfo,
+	_10QLCDNumber_vtable,
+	_10QLCDNumber_baseinfo,
 	};
 
-char *__Y12QUrlOperator_typeinfo_name[] = {
+char *_12QUrlOperator_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y12QUrlOperator_typeinfo = {
+struct classtypeinfo _12QUrlOperator_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
-	"_ZTS_Y12QUrlOperator",
-	__Y12QUrlOperator_typeinfo_name,
+	"_ZTS12QUrlOperator",
+	_12QUrlOperator_typeinfo_name,
 	};
 
-const char *__Y12QUrlOperator_vtable_name_0 [] = {
+const char *_12QUrlOperator_vtable_name_0 [] = {
 	"_ZNK12QUrlOperator10metaObjectEv",
 	"_ZNK12QUrlOperator9classNameEv",
 	"_ZN12QUrlOperator7qt_castEPKc",
@@ -23994,7 +23994,7 @@ const char *__Y12QUrlOperator_vtable_name_0 [] = {
 	"_ZN12QUrlOperator12clearEntriesEv",
 	};
 
-const char *__Y12QUrlOperator_vtable_name_1 [] = {
+const char *_12QUrlOperator_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N12QUrlOperatorD1Ev",
 #endif
@@ -24134,14 +24134,14 @@ const char *__Y12QUrlOperator_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable __Y12QUrlOperator_vtable [2] = {
+struct classvtable _12QUrlOperator_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	39,	/* Number of Vfuncs */
 	"_ZTI12QUrlOperator",
-	__Y12QUrlOperator_vtable_name_0,
+	_12QUrlOperator_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -24175,11 +24175,11 @@ struct classvtable __Y12QUrlOperator_vtable [2] = {
 	1,	/* Vtable category */
 	17,	/* Number of Vfuncs */
 	"_ZTI12QUrlOperator",
-	__Y12QUrlOperator_vtable_name_1,
+	_12QUrlOperator_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y12QUrlOperator_baseinfo[] = {
+struct base_type_info _12QUrlOperator_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
 #if defined __i386__
 	{"_ZTI4QUrl",	10242U},
@@ -24204,32 +24204,32 @@ struct base_type_info __Y12QUrlOperator_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Y12QUrlOperator_classinfo = {
-	"_Y12QUrlOperator",
+struct classinfo _Z12QUrlOperator_classinfo = {
+	"_Z12QUrlOperator",
 	"_ZTV12QUrlOperator",
 	"_ZTI12QUrlOperator",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y12QUrlOperator",	/* VTT */
+	"_ZTT12QUrlOperator",	/* VTT */
 	2,
 	0,
 	2,
 	0,	/* numVTT */
 	0U,
-	&__Y12QUrlOperator_typeinfo,
-	__Y12QUrlOperator_vtable,
-	__Y12QUrlOperator_baseinfo,
+	&_12QUrlOperator_typeinfo,
+	_12QUrlOperator_vtable,
+	_12QUrlOperator_baseinfo,
 	};
 
-char *__Y7QSocket_typeinfo_name[] = {
+char *_7QSocket_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y7QSocket_typeinfo = {
+struct classtypeinfo _7QSocket_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
-	"_ZTS_Y7QSocket",
-	__Y7QSocket_typeinfo_name,
+	"_ZTS7QSocket",
+	_7QSocket_typeinfo_name,
 	};
 
-const char *__Y7QSocket_vtable_name_0 [] = {
+const char *_7QSocket_vtable_name_0 [] = {
 	"_ZNK7QSocket10metaObjectEv",
 	"_ZNK7QSocket9classNameEv",
 	"_ZN7QSocket7qt_castEPKc",
@@ -24272,7 +24272,7 @@ const char *__Y7QSocket_vtable_name_0 [] = {
 	"_ZN7QSocket8sn_writeEv",
 	};
 
-const char *__Y7QSocket_vtable_name_1 [] = {
+const char *_7QSocket_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N7QSocketD1Ev",
 #endif
@@ -24591,14 +24591,14 @@ const char *__Y7QSocket_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable __Y7QSocket_vtable [2] = {
+struct classvtable _7QSocket_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	40,	/* Number of Vfuncs */
 	"_ZTI7QSocket",
-	__Y7QSocket_vtable_name_0,
+	_7QSocket_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -24632,11 +24632,11 @@ struct classvtable __Y7QSocket_vtable [2] = {
 	1,	/* Vtable category */
 	16,	/* Number of Vfuncs */
 	"_ZTI7QSocket",
-	__Y7QSocket_vtable_name_1,
+	_7QSocket_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y7QSocket_baseinfo[] = {
+struct base_type_info _7QSocket_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
 #if defined __i386__
 	{"_ZTI9QIODevice",	10242U},
@@ -24661,33 +24661,33 @@ struct base_type_info __Y7QSocket_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Y7QSocket_classinfo = {
-	"_Y7QSocket",
+struct classinfo _Z7QSocket_classinfo = {
+	"_Z7QSocket",
 	"_ZTV7QSocket",
 	"_ZTI7QSocket",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y7QSocket",	/* VTT */
+	"_ZTT7QSocket",	/* VTT */
 	2,
 	0,
 	2,
 	0,	/* numVTT */
 	0U,
-	&__Y7QSocket_typeinfo,
-	__Y7QSocket_vtable,
-	__Y7QSocket_baseinfo,
+	&_7QSocket_typeinfo,
+	_7QSocket_vtable,
+	_7QSocket_baseinfo,
 	};
 
-char *__Y9QGridView_typeinfo_name[] = {
+char *_9QGridView_typeinfo_name[] = {
 	"_ZTI11QScrollView",
 	};
 
-struct classtypeinfo __Y9QGridView_typeinfo = {
+struct classtypeinfo _9QGridView_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y9QGridView",
-	__Y9QGridView_typeinfo_name,
+	"_ZTS9QGridView",
+	_9QGridView_typeinfo_name,
 	};
 
-const char *__Y9QGridView_vtable_name_0 [] = {
+const char *_9QGridView_vtable_name_0 [] = {
 	"_ZNK9QGridView10metaObjectEv",
 	"_ZNK9QGridView9classNameEv",
 	"_ZN9QGridView7qt_castEPKc",
@@ -24851,7 +24851,7 @@ const char *__Y9QGridView_vtable_name_0 [] = {
 	"_ZN9QGridView15dimensionChangeEii",
 	};
 
-const char *__Y9QGridView_vtable_name_1 [] = {
+const char *_9QGridView_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QGridViewD1Ev",
 #endif
@@ -24925,14 +24925,14 @@ const char *__Y9QGridView_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y9QGridView_vtable [2] = {
+struct classvtable _9QGridView_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	161,	/* Number of Vfuncs */
 	"_ZTI9QGridView",
-	__Y9QGridView_vtable_name_0,
+	_9QGridView_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -24966,40 +24966,40 @@ struct classvtable __Y9QGridView_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QGridView",
-	__Y9QGridView_vtable_name_1,
+	_9QGridView_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y9QGridView_baseinfo[] = {
+struct base_type_info _9QGridView_baseinfo[] = {
 	};
 
-struct classinfo _Y9QGridView_classinfo = {
-	"_Y9QGridView",
+struct classinfo _Z9QGridView_classinfo = {
+	"_Z9QGridView",
 	"_ZTV9QGridView",
 	"_ZTI9QGridView",	/* RTTI */
 	"_ZTI11QScrollView",
-	"_ZTT_Y9QGridView",	/* VTT */
+	"_ZTT9QGridView",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QGridView_typeinfo,
-	__Y9QGridView_vtable,
-	__Y9QGridView_baseinfo,
+	&_9QGridView_typeinfo,
+	_9QGridView_vtable,
+	_9QGridView_baseinfo,
 	};
 
-char *__Y10QBoxLayout_typeinfo_name[] = {
+char *_10QBoxLayout_typeinfo_name[] = {
 	"_ZTI7QLayout",
 	};
 
-struct classtypeinfo __Y10QBoxLayout_typeinfo = {
+struct classtypeinfo _10QBoxLayout_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y10QBoxLayout",
-	__Y10QBoxLayout_typeinfo_name,
+	"_ZTS10QBoxLayout",
+	_10QBoxLayout_typeinfo_name,
 	};
 
-const char *__Y10QBoxLayout_vtable_name_0 [] = {
+const char *_10QBoxLayout_vtable_name_0 [] = {
 	"_ZNK10QBoxLayout10metaObjectEv",
 	"_ZNK10QBoxLayout9classNameEv",
 	"_ZN10QBoxLayout7qt_castEPKc",
@@ -25040,7 +25040,7 @@ const char *__Y10QBoxLayout_vtable_name_0 [] = {
 	"_ZNK10QBoxLayout14heightForWidthEi",
 	};
 
-const char *__Y10QBoxLayout_vtable_name_1 [] = {
+const char *_10QBoxLayout_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QBoxLayoutD1Ev",
 #endif
@@ -25340,14 +25340,14 @@ const char *__Y10QBoxLayout_vtable_name_1 [] = {
 	"_ZN11QLayoutItem12setAlignmentEi",
 	};
 
-struct classvtable __Y10QBoxLayout_vtable [2] = {
+struct classvtable _10QBoxLayout_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	38,	/* Number of Vfuncs */
 	"_ZTI10QBoxLayout",
-	__Y10QBoxLayout_vtable_name_0,
+	_10QBoxLayout_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -25381,84 +25381,84 @@ struct classvtable __Y10QBoxLayout_vtable [2] = {
 	1,	/* Vtable category */
 	17,	/* Number of Vfuncs */
 	"_ZTI10QBoxLayout",
-	__Y10QBoxLayout_vtable_name_1,
+	_10QBoxLayout_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y10QBoxLayout_baseinfo[] = {
+struct base_type_info _10QBoxLayout_baseinfo[] = {
 	};
 
-struct classinfo _Y10QBoxLayout_classinfo = {
-	"_Y10QBoxLayout",
+struct classinfo _Z10QBoxLayout_classinfo = {
+	"_Z10QBoxLayout",
 	"_ZTV10QBoxLayout",
 	"_ZTI10QBoxLayout",	/* RTTI */
 	"_ZTI7QLayout",
-	"_ZTT_Y10QBoxLayout",	/* VTT */
+	"_ZTT10QBoxLayout",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QBoxLayout_typeinfo,
-	__Y10QBoxLayout_vtable,
-	__Y10QBoxLayout_baseinfo,
+	&_10QBoxLayout_typeinfo,
+	_10QBoxLayout_vtable,
+	_10QBoxLayout_baseinfo,
 	};
 
-char *__Y8QIMEvent_typeinfo_name[] = {
+char *_8QIMEvent_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo __Y8QIMEvent_typeinfo = {
+struct classtypeinfo _8QIMEvent_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y8QIMEvent",
-	__Y8QIMEvent_typeinfo_name,
+	"_ZTS8QIMEvent",
+	_8QIMEvent_typeinfo_name,
 	};
 
-const char *__Y8QIMEvent_vtable_name_0 [] = {
+const char *_8QIMEvent_vtable_name_0 [] = {
 	"_ZN8QIMEventD1Ev",
 	"_ZN8QIMEventD0Ev",
 	};
 
-struct classvtable __Y8QIMEvent_vtable [1] = {
+struct classvtable _8QIMEvent_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI8QIMEvent",
-	__Y8QIMEvent_vtable_name_0,
+	_8QIMEvent_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y8QIMEvent_baseinfo[] = {
+struct base_type_info _8QIMEvent_baseinfo[] = {
 	};
 
-struct classinfo _Y8QIMEvent_classinfo = {
-	"_Y8QIMEvent",
+struct classinfo _Z8QIMEvent_classinfo = {
+	"_Z8QIMEvent",
 	"_ZTV8QIMEvent",
 	"_ZTI8QIMEvent",	/* RTTI */
 	"_ZTI6QEvent",
-	"_ZTT_Y8QIMEvent",	/* VTT */
+	"_ZTT8QIMEvent",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y8QIMEvent_typeinfo,
-	__Y8QIMEvent_vtable,
-	__Y8QIMEvent_baseinfo,
+	&_8QIMEvent_typeinfo,
+	_8QIMEvent_vtable,
+	_8QIMEvent_baseinfo,
 	};
 
-char *__Y7QLayout_typeinfo_name[] = {
+char *_7QLayout_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y7QLayout_typeinfo = {
+struct classtypeinfo _7QLayout_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
-	"_ZTS_Y7QLayout",
-	__Y7QLayout_typeinfo_name,
+	"_ZTS7QLayout",
+	_7QLayout_typeinfo_name,
 	};
 
-const char *__Y7QLayout_vtable_name_0 [] = {
+const char *_7QLayout_vtable_name_0 [] = {
 	"_ZNK7QLayout10metaObjectEv",
 	"_ZNK7QLayout9classNameEv",
 	"_ZN7QLayout7qt_castEPKc",
@@ -25496,7 +25496,7 @@ const char *__Y7QLayout_vtable_name_0 [] = {
 	"_ZN7QLayout6layoutEv",
 	};
 
-const char *__Y7QLayout_vtable_name_1 [] = {
+const char *_7QLayout_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N7QLayoutD1Ev",
 #endif
@@ -25696,14 +25696,14 @@ const char *__Y7QLayout_vtable_name_1 [] = {
 	"_ZN11QLayoutItem12setAlignmentEi",
 	};
 
-struct classvtable __Y7QLayout_vtable [2] = {
+struct classvtable _7QLayout_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	35,	/* Number of Vfuncs */
 	"_ZTI7QLayout",
-	__Y7QLayout_vtable_name_0,
+	_7QLayout_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -25737,11 +25737,11 @@ struct classvtable __Y7QLayout_vtable [2] = {
 	1,	/* Vtable category */
 	17,	/* Number of Vfuncs */
 	"_ZTI7QLayout",
-	__Y7QLayout_vtable_name_1,
+	_7QLayout_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y7QLayout_baseinfo[] = {
+struct base_type_info _7QLayout_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
 #if defined __i386__
 	{"_ZTI11QLayoutItem",	10242U},
@@ -25766,33 +25766,33 @@ struct base_type_info __Y7QLayout_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Y7QLayout_classinfo = {
-	"_Y7QLayout",
+struct classinfo _Z7QLayout_classinfo = {
+	"_Z7QLayout",
 	"_ZTV7QLayout",
 	"_ZTI7QLayout",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y7QLayout",	/* VTT */
+	"_ZTT7QLayout",	/* VTT */
 	2,
 	0,
 	2,
 	0,	/* numVTT */
 	0U,
-	&__Y7QLayout_typeinfo,
-	__Y7QLayout_vtable,
-	__Y7QLayout_baseinfo,
+	&_7QLayout_typeinfo,
+	_7QLayout_vtable,
+	_7QLayout_baseinfo,
 	};
 
-char *__Y15QSocketNotifier_typeinfo_name[] = {
+char *_15QSocketNotifier_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y15QSocketNotifier_typeinfo = {
+struct classtypeinfo _15QSocketNotifier_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y15QSocketNotifier",
-	__Y15QSocketNotifier_typeinfo_name,
+	"_ZTS15QSocketNotifier",
+	_15QSocketNotifier_typeinfo_name,
 	};
 
-const char *__Y15QSocketNotifier_vtable_name_0 [] = {
+const char *_15QSocketNotifier_vtable_name_0 [] = {
 	"_ZNK15QSocketNotifier10metaObjectEv",
 	"_ZNK15QSocketNotifier9classNameEv",
 	"_ZN15QSocketNotifier7qt_castEPKc",
@@ -25817,47 +25817,47 @@ const char *__Y15QSocketNotifier_vtable_name_0 [] = {
 	"_ZN15QSocketNotifier10setEnabledEb",
 	};
 
-struct classvtable __Y15QSocketNotifier_vtable [1] = {
+struct classvtable _15QSocketNotifier_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	22,	/* Number of Vfuncs */
 	"_ZTI15QSocketNotifier",
-	__Y15QSocketNotifier_vtable_name_0,
+	_15QSocketNotifier_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y15QSocketNotifier_baseinfo[] = {
+struct base_type_info _15QSocketNotifier_baseinfo[] = {
 	};
 
-struct classinfo _Y15QSocketNotifier_classinfo = {
-	"_Y15QSocketNotifier",
+struct classinfo _Z15QSocketNotifier_classinfo = {
+	"_Z15QSocketNotifier",
 	"_ZTV15QSocketNotifier",
 	"_ZTI15QSocketNotifier",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y15QSocketNotifier",	/* VTT */
+	"_ZTT15QSocketNotifier",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y15QSocketNotifier_typeinfo,
-	__Y15QSocketNotifier_vtable,
-	__Y15QSocketNotifier_baseinfo,
+	&_15QSocketNotifier_typeinfo,
+	_15QSocketNotifier_vtable,
+	_15QSocketNotifier_baseinfo,
 	};
 
-char *__Y7QButton_typeinfo_name[] = {
+char *_7QButton_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo __Y7QButton_typeinfo = {
+struct classtypeinfo _7QButton_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y7QButton",
-	__Y7QButton_typeinfo_name,
+	"_ZTS7QButton",
+	_7QButton_typeinfo_name,
 	};
 
-const char *__Y7QButton_vtable_name_0 [] = {
+const char *_7QButton_vtable_name_0 [] = {
 	"_ZNK7QButton10metaObjectEv",
 	"_ZNK7QButton9classNameEv",
 	"_ZN7QButton7qt_castEPKc",
@@ -25981,7 +25981,7 @@ const char *__Y7QButton_vtable_name_0 [] = {
 	"_ZN7QButton8setGroupEP12QButtonGroup",
 	};
 
-const char *__Y7QButton_vtable_name_1 [] = {
+const char *_7QButton_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N7QButtonD1Ev",
 #endif
@@ -26055,14 +26055,14 @@ const char *__Y7QButton_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y7QButton_vtable [2] = {
+struct classvtable _7QButton_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	121,	/* Number of Vfuncs */
 	"_ZTI7QButton",
-	__Y7QButton_vtable_name_0,
+	_7QButton_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -26096,40 +26096,40 @@ struct classvtable __Y7QButton_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI7QButton",
-	__Y7QButton_vtable_name_1,
+	_7QButton_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y7QButton_baseinfo[] = {
+struct base_type_info _7QButton_baseinfo[] = {
 	};
 
-struct classinfo _Y7QButton_classinfo = {
-	"_Y7QButton",
+struct classinfo _Z7QButton_classinfo = {
+	"_Z7QButton",
 	"_ZTV7QButton",
 	"_ZTI7QButton",	/* RTTI */
 	"_ZTI7QWidget",
-	"_ZTT_Y7QButton",	/* VTT */
+	"_ZTT7QButton",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y7QButton_typeinfo,
-	__Y7QButton_vtable,
-	__Y7QButton_baseinfo,
+	&_7QButton_typeinfo,
+	_7QButton_vtable,
+	_7QButton_baseinfo,
 	};
 
-char *__Y13QIntValidator_typeinfo_name[] = {
+char *_13QIntValidator_typeinfo_name[] = {
 	"_ZTI10QValidator",
 	};
 
-struct classtypeinfo __Y13QIntValidator_typeinfo = {
+struct classtypeinfo _13QIntValidator_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y13QIntValidator",
-	__Y13QIntValidator_typeinfo_name,
+	"_ZTS13QIntValidator",
+	_13QIntValidator_typeinfo_name,
 	};
 
-const char *__Y13QIntValidator_vtable_name_0 [] = {
+const char *_13QIntValidator_vtable_name_0 [] = {
 	"_ZNK13QIntValidator10metaObjectEv",
 	"_ZNK13QIntValidator9classNameEv",
 	"_ZN13QIntValidator7qt_castEPKc",
@@ -26156,47 +26156,47 @@ const char *__Y13QIntValidator_vtable_name_0 [] = {
 	"_ZN13QIntValidator8setRangeEii",
 	};
 
-struct classvtable __Y13QIntValidator_vtable [1] = {
+struct classvtable _13QIntValidator_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	24,	/* Number of Vfuncs */
 	"_ZTI13QIntValidator",
-	__Y13QIntValidator_vtable_name_0,
+	_13QIntValidator_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y13QIntValidator_baseinfo[] = {
+struct base_type_info _13QIntValidator_baseinfo[] = {
 	};
 
-struct classinfo _Y13QIntValidator_classinfo = {
-	"_Y13QIntValidator",
+struct classinfo _Z13QIntValidator_classinfo = {
+	"_Z13QIntValidator",
 	"_ZTV13QIntValidator",
 	"_ZTI13QIntValidator",	/* RTTI */
 	"_ZTI10QValidator",
-	"_ZTT_Y13QIntValidator",	/* VTT */
+	"_ZTT13QIntValidator",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y13QIntValidator_typeinfo,
-	__Y13QIntValidator_vtable,
-	__Y13QIntValidator_baseinfo,
+	&_13QIntValidator_typeinfo,
+	_13QIntValidator_vtable,
+	_13QIntValidator_baseinfo,
 	};
 
-char *__Y7QWizard_typeinfo_name[] = {
+char *_7QWizard_typeinfo_name[] = {
 	"_ZTI7QDialog",
 	};
 
-struct classtypeinfo __Y7QWizard_typeinfo = {
+struct classtypeinfo _7QWizard_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y7QWizard",
-	__Y7QWizard_typeinfo_name,
+	"_ZTS7QWizard",
+	_7QWizard_typeinfo_name,
 	};
 
-const char *__Y7QWizard_vtable_name_0 [] = {
+const char *_7QWizard_vtable_name_0 [] = {
 	"_ZNK7QWizard10metaObjectEv",
 	"_ZNK7QWizard9classNameEv",
 	"_ZN7QWizard7qt_castEPKc",
@@ -26328,7 +26328,7 @@ const char *__Y7QWizard_vtable_name_0 [] = {
 	"_ZN7QWizard14layOutTitleRowEP11QHBoxLayoutRK7QString",
 	};
 
-const char *__Y7QWizard_vtable_name_1 [] = {
+const char *_7QWizard_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N7QWizardD1Ev",
 #endif
@@ -26402,14 +26402,14 @@ const char *__Y7QWizard_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y7QWizard_vtable [2] = {
+struct classvtable _7QWizard_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	129,	/* Number of Vfuncs */
 	"_ZTI7QWizard",
-	__Y7QWizard_vtable_name_0,
+	_7QWizard_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -26443,40 +26443,40 @@ struct classvtable __Y7QWizard_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI7QWizard",
-	__Y7QWizard_vtable_name_1,
+	_7QWizard_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y7QWizard_baseinfo[] = {
+struct base_type_info _7QWizard_baseinfo[] = {
 	};
 
-struct classinfo _Y7QWizard_classinfo = {
-	"_Y7QWizard",
+struct classinfo _Z7QWizard_classinfo = {
+	"_Z7QWizard",
 	"_ZTV7QWizard",
 	"_ZTI7QWizard",	/* RTTI */
 	"_ZTI7QDialog",
-	"_ZTT_Y7QWizard",	/* VTT */
+	"_ZTT7QWizard",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y7QWizard_typeinfo,
-	__Y7QWizard_vtable,
-	__Y7QWizard_baseinfo,
+	&_7QWizard_typeinfo,
+	_7QWizard_vtable,
+	_7QWizard_baseinfo,
 	};
 
-char *__Y20QCanvasPolygonalItem_typeinfo_name[] = {
+char *_20QCanvasPolygonalItem_typeinfo_name[] = {
 	"_ZTI11QCanvasItem",
 	};
 
-struct classtypeinfo __Y20QCanvasPolygonalItem_typeinfo = {
+struct classtypeinfo _20QCanvasPolygonalItem_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y20QCanvasPolygonalItem",
-	__Y20QCanvasPolygonalItem_typeinfo_name,
+	"_ZTS20QCanvasPolygonalItem",
+	_20QCanvasPolygonalItem_typeinfo_name,
 	};
 
-const char *__Y20QCanvasPolygonalItem_vtable_name_0 [] = {
+const char *_20QCanvasPolygonalItem_vtable_name_0 [] = {
 	"_ZN20QCanvasPolygonalItemD1Ev",
 	"_ZN20QCanvasPolygonalItemD0Ev",
 	"_ZN11QCanvasItem6moveByEdd",
@@ -26505,47 +26505,47 @@ const char *__Y20QCanvasPolygonalItem_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y20QCanvasPolygonalItem_vtable [1] = {
+struct classvtable _20QCanvasPolygonalItem_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	26,	/* Number of Vfuncs */
 	"_ZTI20QCanvasPolygonalItem",
-	__Y20QCanvasPolygonalItem_vtable_name_0,
+	_20QCanvasPolygonalItem_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y20QCanvasPolygonalItem_baseinfo[] = {
+struct base_type_info _20QCanvasPolygonalItem_baseinfo[] = {
 	};
 
-struct classinfo _Y20QCanvasPolygonalItem_classinfo = {
-	"_Y20QCanvasPolygonalItem",
+struct classinfo _Z20QCanvasPolygonalItem_classinfo = {
+	"_Z20QCanvasPolygonalItem",
 	"_ZTV20QCanvasPolygonalItem",
 	"_ZTI20QCanvasPolygonalItem",	/* RTTI */
 	"_ZTI11QCanvasItem",
-	"_ZTT_Y20QCanvasPolygonalItem",	/* VTT */
+	"_ZTT20QCanvasPolygonalItem",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y20QCanvasPolygonalItem_typeinfo,
-	__Y20QCanvasPolygonalItem_vtable,
-	__Y20QCanvasPolygonalItem_baseinfo,
+	&_20QCanvasPolygonalItem_typeinfo,
+	_20QCanvasPolygonalItem_vtable,
+	_20QCanvasPolygonalItem_baseinfo,
 	};
 
-char *__Y16QSqlSelectCursor_typeinfo_name[] = {
+char *_16QSqlSelectCursor_typeinfo_name[] = {
 	"_ZTI10QSqlCursor",
 	};
 
-struct classtypeinfo __Y16QSqlSelectCursor_typeinfo = {
+struct classtypeinfo _16QSqlSelectCursor_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y16QSqlSelectCursor",
-	__Y16QSqlSelectCursor_typeinfo_name,
+	"_ZTS16QSqlSelectCursor",
+	_16QSqlSelectCursor_typeinfo_name,
 	};
 
-const char *__Y16QSqlSelectCursor_vtable_name_0 [] = {
+const char *_16QSqlSelectCursor_vtable_name_0 [] = {
 	"_ZN16QSqlSelectCursorD1Ev",
 	"_ZN16QSqlSelectCursorD0Ev",
 	"_ZNK10QSqlCursor5valueEi",
@@ -26592,7 +26592,7 @@ const char *__Y16QSqlSelectCursor_vtable_name_0 [] = {
 	"_ZNK10QSqlCursor8toStringERK9QSqlIndexP10QSqlRecordRK7QStringS7_S7_",
 	};
 
-const char *__Y16QSqlSelectCursor_vtable_name_1 [] = {
+const char *_16QSqlSelectCursor_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn8_N16QSqlSelectCursorD1Ev",
 #endif
@@ -26706,14 +26706,14 @@ const char *__Y16QSqlSelectCursor_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable __Y16QSqlSelectCursor_vtable [2] = {
+struct classvtable _16QSqlSelectCursor_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	44,	/* Number of Vfuncs */
 	"_ZTI16QSqlSelectCursor",
-	__Y16QSqlSelectCursor_vtable_name_0,
+	_16QSqlSelectCursor_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -26747,40 +26747,40 @@ struct classvtable __Y16QSqlSelectCursor_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI16QSqlSelectCursor",
-	__Y16QSqlSelectCursor_vtable_name_1,
+	_16QSqlSelectCursor_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y16QSqlSelectCursor_baseinfo[] = {
+struct base_type_info _16QSqlSelectCursor_baseinfo[] = {
 	};
 
-struct classinfo _Y16QSqlSelectCursor_classinfo = {
-	"_Y16QSqlSelectCursor",
+struct classinfo _Z16QSqlSelectCursor_classinfo = {
+	"_Z16QSqlSelectCursor",
 	"_ZTV16QSqlSelectCursor",
 	"_ZTI16QSqlSelectCursor",	/* RTTI */
 	"_ZTI10QSqlCursor",
-	"_ZTT_Y16QSqlSelectCursor",	/* VTT */
+	"_ZTT16QSqlSelectCursor",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y16QSqlSelectCursor_typeinfo,
-	__Y16QSqlSelectCursor_vtable,
-	__Y16QSqlSelectCursor_baseinfo,
+	&_16QSqlSelectCursor_typeinfo,
+	_16QSqlSelectCursor_vtable,
+	_16QSqlSelectCursor_baseinfo,
 	};
 
-char *__Y10QTabWidget_typeinfo_name[] = {
+char *_10QTabWidget_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo __Y10QTabWidget_typeinfo = {
+struct classtypeinfo _10QTabWidget_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y10QTabWidget",
-	__Y10QTabWidget_typeinfo_name,
+	"_ZTS10QTabWidget",
+	_10QTabWidget_typeinfo_name,
 	};
 
-const char *__Y10QTabWidget_vtable_name_0 [] = {
+const char *_10QTabWidget_vtable_name_0 [] = {
 	"_ZNK10QTabWidget10metaObjectEv",
 	"_ZNK10QTabWidget9classNameEv",
 	"_ZN10QTabWidget7qt_castEPKc",
@@ -26901,7 +26901,7 @@ const char *__Y10QTabWidget_vtable_name_0 [] = {
 	"_ZN10QTabWidget10removePageEP7QWidget",
 	};
 
-const char *__Y10QTabWidget_vtable_name_1 [] = {
+const char *_10QTabWidget_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QTabWidgetD1Ev",
 #endif
@@ -26975,14 +26975,14 @@ const char *__Y10QTabWidget_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y10QTabWidget_vtable [2] = {
+struct classvtable _10QTabWidget_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	118,	/* Number of Vfuncs */
 	"_ZTI10QTabWidget",
-	__Y10QTabWidget_vtable_name_0,
+	_10QTabWidget_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -27016,40 +27016,40 @@ struct classvtable __Y10QTabWidget_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI10QTabWidget",
-	__Y10QTabWidget_vtable_name_1,
+	_10QTabWidget_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y10QTabWidget_baseinfo[] = {
+struct base_type_info _10QTabWidget_baseinfo[] = {
 	};
 
-struct classinfo _Y10QTabWidget_classinfo = {
-	"_Y10QTabWidget",
+struct classinfo _Z10QTabWidget_classinfo = {
+	"_Z10QTabWidget",
 	"_ZTV10QTabWidget",
 	"_ZTI10QTabWidget",	/* RTTI */
 	"_ZTI7QWidget",
-	"_ZTT_Y10QTabWidget",	/* VTT */
+	"_ZTT10QTabWidget",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QTabWidget_typeinfo,
-	__Y10QTabWidget_vtable,
-	__Y10QTabWidget_baseinfo,
+	&_10QTabWidget_typeinfo,
+	_10QTabWidget_vtable,
+	_10QTabWidget_baseinfo,
 	};
 
-char *__Y11QDomElement_typeinfo_name[] = {
+char *_11QDomElement_typeinfo_name[] = {
 	"_ZTI8QDomNode",
 	};
 
-struct classtypeinfo __Y11QDomElement_typeinfo = {
+struct classtypeinfo _11QDomElement_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QDomElement",
-	__Y11QDomElement_typeinfo_name,
+	"_ZTS11QDomElement",
+	_11QDomElement_typeinfo_name,
 	};
 
-const char *__Y11QDomElement_vtable_name_0 [] = {
+const char *_11QDomElement_vtable_name_0 [] = {
 	"_ZN11QDomElementD1Ev",
 	"_ZN11QDomElementD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -27095,47 +27095,47 @@ const char *__Y11QDomElement_vtable_name_0 [] = {
 	"_ZNK11QDomElement19elementsByTagNameNSERK7QStringS2_",
 	};
 
-struct classvtable __Y11QDomElement_vtable [1] = {
+struct classvtable _11QDomElement_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	43,	/* Number of Vfuncs */
 	"_ZTI11QDomElement",
-	__Y11QDomElement_vtable_name_0,
+	_11QDomElement_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QDomElement_baseinfo[] = {
+struct base_type_info _11QDomElement_baseinfo[] = {
 	};
 
-struct classinfo _Y11QDomElement_classinfo = {
-	"_Y11QDomElement",
+struct classinfo _Z11QDomElement_classinfo = {
+	"_Z11QDomElement",
 	"_ZTV11QDomElement",
 	"_ZTI11QDomElement",	/* RTTI */
 	"_ZTI8QDomNode",
-	"_ZTT_Y11QDomElement",	/* VTT */
+	"_ZTT11QDomElement",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QDomElement_typeinfo,
-	__Y11QDomElement_vtable,
-	__Y11QDomElement_baseinfo,
+	&_11QDomElement_typeinfo,
+	_11QDomElement_vtable,
+	_11QDomElement_baseinfo,
 	};
 
-char *__Y10QSqlDriver_typeinfo_name[] = {
+char *_10QSqlDriver_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y10QSqlDriver_typeinfo = {
+struct classtypeinfo _10QSqlDriver_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y10QSqlDriver",
-	__Y10QSqlDriver_typeinfo_name,
+	"_ZTS10QSqlDriver",
+	_10QSqlDriver_typeinfo_name,
 	};
 
-const char *__Y10QSqlDriver_vtable_name_0 [] = {
+const char *_10QSqlDriver_vtable_name_0 [] = {
 	"_ZNK10QSqlDriver10metaObjectEv",
 	"_ZNK10QSqlDriver9classNameEv",
 	"_ZN10QSqlDriver7qt_castEPKc",
@@ -27177,47 +27177,47 @@ const char *__Y10QSqlDriver_vtable_name_0 [] = {
 	"_ZN10QSqlDriver12setLastErrorERK9QSqlError",
 	};
 
-struct classvtable __Y10QSqlDriver_vtable [1] = {
+struct classvtable _10QSqlDriver_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	39,	/* Number of Vfuncs */
 	"_ZTI10QSqlDriver",
-	__Y10QSqlDriver_vtable_name_0,
+	_10QSqlDriver_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y10QSqlDriver_baseinfo[] = {
+struct base_type_info _10QSqlDriver_baseinfo[] = {
 	};
 
-struct classinfo _Y10QSqlDriver_classinfo = {
-	"_Y10QSqlDriver",
+struct classinfo _Z10QSqlDriver_classinfo = {
+	"_Z10QSqlDriver",
 	"_ZTV10QSqlDriver",
 	"_ZTI10QSqlDriver",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y10QSqlDriver",	/* VTT */
+	"_ZTT10QSqlDriver",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QSqlDriver_typeinfo,
-	__Y10QSqlDriver_vtable,
-	__Y10QSqlDriver_baseinfo,
+	&_10QSqlDriver_typeinfo,
+	_10QSqlDriver_vtable,
+	_10QSqlDriver_baseinfo,
 	};
 
-char *__Y10QTableItem_typeinfo_name[] = {
+char *_10QTableItem_typeinfo_name[] = {
 	"_ZTI2Qt",
 	};
 
-struct classtypeinfo __Y10QTableItem_typeinfo = {
+struct classtypeinfo _10QTableItem_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y10QTableItem",
-	__Y10QTableItem_typeinfo_name,
+	"_ZTS10QTableItem",
+	_10QTableItem_typeinfo_name,
 	};
 
-const char *__Y10QTableItem_vtable_name_0 [] = {
+const char *_10QTableItem_vtable_name_0 [] = {
 	"_ZN10QTableItemD1Ev",
 	"_ZN10QTableItemD0Ev",
 	"_ZNK10QTableItem6pixmapEv",
@@ -27239,46 +27239,46 @@ const char *__Y10QTableItem_vtable_name_0 [] = {
 	"_ZNK10QTableItem4rttiEv",
 	};
 
-struct classvtable __Y10QTableItem_vtable [1] = {
+struct classvtable _10QTableItem_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	19,	/* Number of Vfuncs */
 	"_ZTI10QTableItem",
-	__Y10QTableItem_vtable_name_0,
+	_10QTableItem_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y10QTableItem_baseinfo[] = {
+struct base_type_info _10QTableItem_baseinfo[] = {
 	};
 
-struct classinfo _Y10QTableItem_classinfo = {
-	"_Y10QTableItem",
+struct classinfo _Z10QTableItem_classinfo = {
+	"_Z10QTableItem",
 	"_ZTV10QTableItem",
 	"_ZTI10QTableItem",	/* RTTI */
 	"_ZTI2Qt",
-	"_ZTT_Y10QTableItem",	/* VTT */
+	"_ZTT10QTableItem",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QTableItem_typeinfo,
-	__Y10QTableItem_vtable,
-	__Y10QTableItem_baseinfo,
+	&_10QTableItem_typeinfo,
+	_10QTableItem_vtable,
+	_10QTableItem_baseinfo,
 	};
 
-char *__Y18QDomImplementation_typeinfo_name[] = {
+char *_18QDomImplementation_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y18QDomImplementation_typeinfo = {
+struct classtypeinfo _18QDomImplementation_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y18QDomImplementation",
-	__Y18QDomImplementation_typeinfo_name,
+	"_ZTS18QDomImplementation",
+	_18QDomImplementation_typeinfo_name,
 	};
 
-const char *__Y18QDomImplementation_vtable_name_0 [] = {
+const char *_18QDomImplementation_vtable_name_0 [] = {
 	"_ZN18QDomImplementationD1Ev",
 	"_ZN18QDomImplementationD0Ev",
 	"_ZN18QDomImplementation10hasFeatureERK7QStringS2_",
@@ -27286,47 +27286,47 @@ const char *__Y18QDomImplementation_vtable_name_0 [] = {
 	"_ZN18QDomImplementation14createDocumentERK7QStringS2_RK16QDomDocumentType",
 	};
 
-struct classvtable __Y18QDomImplementation_vtable [1] = {
+struct classvtable _18QDomImplementation_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI18QDomImplementation",
-	__Y18QDomImplementation_vtable_name_0,
+	_18QDomImplementation_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y18QDomImplementation_baseinfo[] = {
+struct base_type_info _18QDomImplementation_baseinfo[] = {
 	};
 
-struct classinfo _Y18QDomImplementation_classinfo = {
-	"_Y18QDomImplementation",
+struct classinfo _Z18QDomImplementation_classinfo = {
+	"_Z18QDomImplementation",
 	"_ZTV18QDomImplementation",
 	"_ZTI18QDomImplementation",	/* RTTI */
 	"",
-	"_ZTT_Y18QDomImplementation",	/* VTT */
+	"_ZTT18QDomImplementation",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y18QDomImplementation_typeinfo,
-	__Y18QDomImplementation_vtable,
-	__Y18QDomImplementation_baseinfo,
+	&_18QDomImplementation_typeinfo,
+	_18QDomImplementation_vtable,
+	_18QDomImplementation_baseinfo,
 	};
 
-char *__Y8QGPlugin_typeinfo_name[] = {
+char *_8QGPlugin_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y8QGPlugin_typeinfo = {
+struct classtypeinfo _8QGPlugin_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y8QGPlugin",
-	__Y8QGPlugin_typeinfo_name,
+	"_ZTS8QGPlugin",
+	_8QGPlugin_typeinfo_name,
 	};
 
-const char *__Y8QGPlugin_vtable_name_0 [] = {
+const char *_8QGPlugin_vtable_name_0 [] = {
 	"_ZNK8QGPlugin10metaObjectEv",
 	"_ZNK8QGPlugin9classNameEv",
 	"_ZN8QGPlugin7qt_castEPKc",
@@ -27350,47 +27350,47 @@ const char *__Y8QGPlugin_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable __Y8QGPlugin_vtable [1] = {
+struct classvtable _8QGPlugin_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI8QGPlugin",
-	__Y8QGPlugin_vtable_name_0,
+	_8QGPlugin_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y8QGPlugin_baseinfo[] = {
+struct base_type_info _8QGPlugin_baseinfo[] = {
 	};
 
-struct classinfo _Y8QGPlugin_classinfo = {
-	"_Y8QGPlugin",
+struct classinfo _Z8QGPlugin_classinfo = {
+	"_Z8QGPlugin",
 	"_ZTV8QGPlugin",
 	"_ZTI8QGPlugin",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y8QGPlugin",	/* VTT */
+	"_ZTT8QGPlugin",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y8QGPlugin_typeinfo,
-	__Y8QGPlugin_vtable,
-	__Y8QGPlugin_baseinfo,
+	&_8QGPlugin_typeinfo,
+	_8QGPlugin_vtable,
+	_8QGPlugin_baseinfo,
 	};
 
-char *__Y13QGb18030Codec_typeinfo_name[] = {
+char *_13QGb18030Codec_typeinfo_name[] = {
 	"_ZTI10QTextCodec",
 	};
 
-struct classtypeinfo __Y13QGb18030Codec_typeinfo = {
+struct classtypeinfo _13QGb18030Codec_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y13QGb18030Codec",
-	__Y13QGb18030Codec_typeinfo_name,
+	"_ZTS13QGb18030Codec",
+	_13QGb18030Codec_typeinfo_name,
 	};
 
-const char *__Y13QGb18030Codec_vtable_name_0 [] = {
+const char *_13QGb18030Codec_vtable_name_0 [] = {
 	"_ZN13QGb18030CodecD1Ev",
 	"_ZN13QGb18030CodecD0Ev",
 	"_ZNK13QGb18030Codec4nameEv",
@@ -27408,47 +27408,47 @@ const char *__Y13QGb18030Codec_vtable_name_0 [] = {
 	"_ZNK10QTextCodec20characterFromUnicodeERK7QStringi",
 	};
 
-struct classvtable __Y13QGb18030Codec_vtable [1] = {
+struct classvtable _13QGb18030Codec_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	15,	/* Number of Vfuncs */
 	"_ZTI13QGb18030Codec",
-	__Y13QGb18030Codec_vtable_name_0,
+	_13QGb18030Codec_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y13QGb18030Codec_baseinfo[] = {
+struct base_type_info _13QGb18030Codec_baseinfo[] = {
 	};
 
-struct classinfo _Y13QGb18030Codec_classinfo = {
-	"_Y13QGb18030Codec",
+struct classinfo _Z13QGb18030Codec_classinfo = {
+	"_Z13QGb18030Codec",
 	"_ZTV13QGb18030Codec",
 	"_ZTI13QGb18030Codec",	/* RTTI */
 	"_ZTI10QTextCodec",
-	"_ZTT_Y13QGb18030Codec",	/* VTT */
+	"_ZTT13QGb18030Codec",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y13QGb18030Codec_typeinfo,
-	__Y13QGb18030Codec_vtable,
-	__Y13QGb18030Codec_baseinfo,
+	&_13QGb18030Codec_typeinfo,
+	_13QGb18030Codec_vtable,
+	_13QGb18030Codec_baseinfo,
 	};
 
-char *__Y6QGList_typeinfo_name[] = {
+char *_6QGList_typeinfo_name[] = {
 	"_ZTI14QPtrCollection",
 	};
 
-struct classtypeinfo __Y6QGList_typeinfo = {
+struct classtypeinfo _6QGList_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y6QGList",
-	__Y6QGList_typeinfo_name,
+	"_ZTS6QGList",
+	_6QGList_typeinfo_name,
 	};
 
-const char *__Y6QGList_vtable_name_0 [] = {
+const char *_6QGList_vtable_name_0 [] = {
 	"_ZNK6QGList5countEv",
 	"_ZN6QGList5clearEv",
 	"_ZN6QGListD1Ev",
@@ -27460,47 +27460,47 @@ const char *__Y6QGList_vtable_name_0 [] = {
 	"_ZNK6QGList5writeER11QDataStreamPv",
 	};
 
-struct classvtable __Y6QGList_vtable [1] = {
+struct classvtable _6QGList_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI6QGList",
-	__Y6QGList_vtable_name_0,
+	_6QGList_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y6QGList_baseinfo[] = {
+struct base_type_info _6QGList_baseinfo[] = {
 	};
 
-struct classinfo _Y6QGList_classinfo = {
-	"_Y6QGList",
+struct classinfo _Z6QGList_classinfo = {
+	"_Z6QGList",
 	"_ZTV6QGList",
 	"_ZTI6QGList",	/* RTTI */
 	"_ZTI14QPtrCollection",
-	"_ZTT_Y6QGList",	/* VTT */
+	"_ZTT6QGList",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y6QGList_typeinfo,
-	__Y6QGList_vtable,
-	__Y6QGList_baseinfo,
+	&_6QGList_typeinfo,
+	_6QGList_vtable,
+	_6QGList_baseinfo,
 	};
 
-char *__Y9QDataPump_typeinfo_name[] = {
+char *_9QDataPump_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y9QDataPump_typeinfo = {
+struct classtypeinfo _9QDataPump_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y9QDataPump",
-	__Y9QDataPump_typeinfo_name,
+	"_ZTS9QDataPump",
+	_9QDataPump_typeinfo_name,
 	};
 
-const char *__Y9QDataPump_vtable_name_0 [] = {
+const char *_9QDataPump_vtable_name_0 [] = {
 	"_ZNK9QDataPump10metaObjectEv",
 	"_ZNK9QDataPump9classNameEv",
 	"_ZN9QDataPump7qt_castEPKc",
@@ -27524,46 +27524,46 @@ const char *__Y9QDataPump_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable __Y9QDataPump_vtable [1] = {
+struct classvtable _9QDataPump_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI9QDataPump",
-	__Y9QDataPump_vtable_name_0,
+	_9QDataPump_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y9QDataPump_baseinfo[] = {
+struct base_type_info _9QDataPump_baseinfo[] = {
 	};
 
-struct classinfo _Y9QDataPump_classinfo = {
-	"_Y9QDataPump",
+struct classinfo _Z9QDataPump_classinfo = {
+	"_Z9QDataPump",
 	"_ZTV9QDataPump",
 	"_ZTI9QDataPump",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y9QDataPump",	/* VTT */
+	"_ZTT9QDataPump",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QDataPump_typeinfo,
-	__Y9QDataPump_vtable,
-	__Y9QDataPump_baseinfo,
+	&_9QDataPump_typeinfo,
+	_9QDataPump_vtable,
+	_9QDataPump_baseinfo,
 	};
 
-char *__Y12QPaintDevice_typeinfo_name[] = {
+char *_12QPaintDevice_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y12QPaintDevice_typeinfo = {
+struct classtypeinfo _12QPaintDevice_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y12QPaintDevice",
-	__Y12QPaintDevice_typeinfo_name,
+	"_ZTS12QPaintDevice",
+	_12QPaintDevice_typeinfo_name,
 	};
 
-const char *__Y12QPaintDevice_vtable_name_0 [] = {
+const char *_12QPaintDevice_vtable_name_0 [] = {
 	"_ZN12QPaintDeviceD1Ev",
 	"_ZN12QPaintDeviceD0Ev",
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -27577,47 +27577,47 @@ const char *__Y12QPaintDevice_vtable_name_0 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y12QPaintDevice_vtable [1] = {
+struct classvtable _12QPaintDevice_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI12QPaintDevice",
-	__Y12QPaintDevice_vtable_name_0,
+	_12QPaintDevice_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y12QPaintDevice_baseinfo[] = {
+struct base_type_info _12QPaintDevice_baseinfo[] = {
 	};
 
-struct classinfo _Y12QPaintDevice_classinfo = {
-	"_Y12QPaintDevice",
+struct classinfo _Z12QPaintDevice_classinfo = {
+	"_Z12QPaintDevice",
 	"_ZTV12QPaintDevice",
 	"_ZTI12QPaintDevice",	/* RTTI */
 	"",
-	"_ZTT_Y12QPaintDevice",	/* VTT */
+	"_ZTT12QPaintDevice",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QPaintDevice_typeinfo,
-	__Y12QPaintDevice_vtable,
-	__Y12QPaintDevice_baseinfo,
+	&_12QPaintDevice_typeinfo,
+	_12QPaintDevice_vtable,
+	_12QPaintDevice_baseinfo,
 	};
 
-char *__Y15QCheckTableItem_typeinfo_name[] = {
+char *_15QCheckTableItem_typeinfo_name[] = {
 	"_ZTI10QTableItem",
 	};
 
-struct classtypeinfo __Y15QCheckTableItem_typeinfo = {
+struct classtypeinfo _15QCheckTableItem_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y15QCheckTableItem",
-	__Y15QCheckTableItem_typeinfo_name,
+	"_ZTS15QCheckTableItem",
+	_15QCheckTableItem_typeinfo_name,
 	};
 
-const char *__Y15QCheckTableItem_vtable_name_0 [] = {
+const char *_15QCheckTableItem_vtable_name_0 [] = {
 	"_ZN15QCheckTableItemD1Ev",
 	"_ZN15QCheckTableItemD0Ev",
 	"_ZNK10QTableItem6pixmapEv",
@@ -27640,47 +27640,47 @@ const char *__Y15QCheckTableItem_vtable_name_0 [] = {
 	"_ZN15QCheckTableItem10setCheckedEb",
 	};
 
-struct classvtable __Y15QCheckTableItem_vtable [1] = {
+struct classvtable _15QCheckTableItem_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	20,	/* Number of Vfuncs */
 	"_ZTI15QCheckTableItem",
-	__Y15QCheckTableItem_vtable_name_0,
+	_15QCheckTableItem_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y15QCheckTableItem_baseinfo[] = {
+struct base_type_info _15QCheckTableItem_baseinfo[] = {
 	};
 
-struct classinfo _Y15QCheckTableItem_classinfo = {
-	"_Y15QCheckTableItem",
+struct classinfo _Z15QCheckTableItem_classinfo = {
+	"_Z15QCheckTableItem",
 	"_ZTV15QCheckTableItem",
 	"_ZTI15QCheckTableItem",	/* RTTI */
 	"_ZTI10QTableItem",
-	"_ZTT_Y15QCheckTableItem",	/* VTT */
+	"_ZTT15QCheckTableItem",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y15QCheckTableItem_typeinfo,
-	__Y15QCheckTableItem_vtable,
-	__Y15QCheckTableItem_baseinfo,
+	&_15QCheckTableItem_typeinfo,
+	_15QCheckTableItem_vtable,
+	_15QCheckTableItem_baseinfo,
 	};
 
-char *__Y12QCommonStyle_typeinfo_name[] = {
+char *_12QCommonStyle_typeinfo_name[] = {
 	"_ZTI6QStyle",
 	};
 
-struct classtypeinfo __Y12QCommonStyle_typeinfo = {
+struct classtypeinfo _12QCommonStyle_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y12QCommonStyle",
-	__Y12QCommonStyle_typeinfo_name,
+	"_ZTS12QCommonStyle",
+	_12QCommonStyle_typeinfo_name,
 	};
 
-const char *__Y12QCommonStyle_vtable_name_0 [] = {
+const char *_12QCommonStyle_vtable_name_0 [] = {
 	"_ZNK12QCommonStyle10metaObjectEv",
 	"_ZNK12QCommonStyle9classNameEv",
 	"_ZN12QCommonStyle7qt_castEPKc",
@@ -27724,47 +27724,47 @@ const char *__Y12QCommonStyle_vtable_name_0 [] = {
 	"_ZNK12QCommonStyle11stylePixmapEN6QStyle11StylePixmapEPK7QWidgetRK12QStyleOption",
 	};
 
-struct classvtable __Y12QCommonStyle_vtable [1] = {
+struct classvtable _12QCommonStyle_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	41,	/* Number of Vfuncs */
 	"_ZTI12QCommonStyle",
-	__Y12QCommonStyle_vtable_name_0,
+	_12QCommonStyle_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y12QCommonStyle_baseinfo[] = {
+struct base_type_info _12QCommonStyle_baseinfo[] = {
 	};
 
-struct classinfo _Y12QCommonStyle_classinfo = {
-	"_Y12QCommonStyle",
+struct classinfo _Z12QCommonStyle_classinfo = {
+	"_Z12QCommonStyle",
 	"_ZTV12QCommonStyle",
 	"_ZTI12QCommonStyle",	/* RTTI */
 	"_ZTI6QStyle",
-	"_ZTT_Y12QCommonStyle",	/* VTT */
+	"_ZTT12QCommonStyle",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QCommonStyle_typeinfo,
-	__Y12QCommonStyle_vtable,
-	__Y12QCommonStyle_baseinfo,
+	&_12QCommonStyle_typeinfo,
+	_12QCommonStyle_vtable,
+	_12QCommonStyle_baseinfo,
 	};
 
-char *__Y9QTextView_typeinfo_name[] = {
+char *_9QTextView_typeinfo_name[] = {
 	"_ZTI9QTextEdit",
 	};
 
-struct classtypeinfo __Y9QTextView_typeinfo = {
+struct classtypeinfo _9QTextView_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y9QTextView",
-	__Y9QTextView_typeinfo_name,
+	"_ZTS9QTextView",
+	_9QTextView_typeinfo_name,
 	};
 
-const char *__Y9QTextView_vtable_name_0 [] = {
+const char *_9QTextView_vtable_name_0 [] = {
 	"_ZNK9QTextView10metaObjectEv",
 	"_ZNK9QTextView9classNameEv",
 	"_ZN9QTextView7qt_castEPKc",
@@ -27991,7 +27991,7 @@ const char *__Y9QTextView_vtable_name_0 [] = {
 	"_ZN9QTextEdit15emitLinkClickedERK7QString",
 	};
 
-const char *__Y9QTextView_vtable_name_1 [] = {
+const char *_9QTextView_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QTextViewD1Ev",
 #endif
@@ -28065,14 +28065,14 @@ const char *__Y9QTextView_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y9QTextView_vtable [2] = {
+struct classvtable _9QTextView_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	224,	/* Number of Vfuncs */
 	"_ZTI9QTextView",
-	__Y9QTextView_vtable_name_0,
+	_9QTextView_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -28106,86 +28106,86 @@ struct classvtable __Y9QTextView_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QTextView",
-	__Y9QTextView_vtable_name_1,
+	_9QTextView_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y9QTextView_baseinfo[] = {
+struct base_type_info _9QTextView_baseinfo[] = {
 	};
 
-struct classinfo _Y9QTextView_classinfo = {
-	"_Y9QTextView",
+struct classinfo _Z9QTextView_classinfo = {
+	"_Z9QTextView",
 	"_ZTV9QTextView",
 	"_ZTI9QTextView",	/* RTTI */
 	"_ZTI9QTextEdit",
-	"_ZTT_Y9QTextView",	/* VTT */
+	"_ZTT9QTextView",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QTextView_typeinfo,
-	__Y9QTextView_vtable,
-	__Y9QTextView_baseinfo,
+	&_9QTextView_typeinfo,
+	_9QTextView_vtable,
+	_9QTextView_baseinfo,
 	};
 
-char *__Y18QSyntaxHighlighter_typeinfo_name[] = {
+char *_18QSyntaxHighlighter_typeinfo_name[] = {
 	"_ZTI2Qt",
 	};
 
-struct classtypeinfo __Y18QSyntaxHighlighter_typeinfo = {
+struct classtypeinfo _18QSyntaxHighlighter_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y18QSyntaxHighlighter",
-	__Y18QSyntaxHighlighter_typeinfo_name,
+	"_ZTS18QSyntaxHighlighter",
+	_18QSyntaxHighlighter_typeinfo_name,
 	};
 
-const char *__Y18QSyntaxHighlighter_vtable_name_0 [] = {
+const char *_18QSyntaxHighlighter_vtable_name_0 [] = {
 	"_ZN18QSyntaxHighlighterD1Ev",
 	"_ZN18QSyntaxHighlighterD0Ev",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y18QSyntaxHighlighter_vtable [1] = {
+struct classvtable _18QSyntaxHighlighter_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	3,	/* Number of Vfuncs */
 	"_ZTI18QSyntaxHighlighter",
-	__Y18QSyntaxHighlighter_vtable_name_0,
+	_18QSyntaxHighlighter_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y18QSyntaxHighlighter_baseinfo[] = {
+struct base_type_info _18QSyntaxHighlighter_baseinfo[] = {
 	};
 
-struct classinfo _Y18QSyntaxHighlighter_classinfo = {
-	"_Y18QSyntaxHighlighter",
+struct classinfo _Z18QSyntaxHighlighter_classinfo = {
+	"_Z18QSyntaxHighlighter",
 	"_ZTV18QSyntaxHighlighter",
 	"_ZTI18QSyntaxHighlighter",	/* RTTI */
 	"_ZTI2Qt",
-	"_ZTT_Y18QSyntaxHighlighter",	/* VTT */
+	"_ZTT18QSyntaxHighlighter",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y18QSyntaxHighlighter_typeinfo,
-	__Y18QSyntaxHighlighter_vtable,
-	__Y18QSyntaxHighlighter_baseinfo,
+	&_18QSyntaxHighlighter_typeinfo,
+	_18QSyntaxHighlighter_vtable,
+	_18QSyntaxHighlighter_baseinfo,
 	};
 
-char *__Y10QSemiModal_typeinfo_name[] = {
+char *_10QSemiModal_typeinfo_name[] = {
 	"_ZTI7QDialog",
 	};
 
-struct classtypeinfo __Y10QSemiModal_typeinfo = {
+struct classtypeinfo _10QSemiModal_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y10QSemiModal",
-	__Y10QSemiModal_typeinfo_name,
+	"_ZTS10QSemiModal",
+	_10QSemiModal_typeinfo_name,
 	};
 
-const char *__Y10QSemiModal_vtable_name_0 [] = {
+const char *_10QSemiModal_vtable_name_0 [] = {
 	"_ZNK10QSemiModal10metaObjectEv",
 	"_ZNK10QSemiModal9classNameEv",
 	"_ZN10QSemiModal7qt_castEPKc",
@@ -28301,7 +28301,7 @@ const char *__Y10QSemiModal_vtable_name_0 [] = {
 	"_ZN7QDialog6rejectEv",
 	};
 
-const char *__Y10QSemiModal_vtable_name_1 [] = {
+const char *_10QSemiModal_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QSemiModalD1Ev",
 #endif
@@ -28375,14 +28375,14 @@ const char *__Y10QSemiModal_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y10QSemiModal_vtable [2] = {
+struct classvtable _10QSemiModal_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	113,	/* Number of Vfuncs */
 	"_ZTI10QSemiModal",
-	__Y10QSemiModal_vtable_name_0,
+	_10QSemiModal_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -28416,128 +28416,128 @@ struct classvtable __Y10QSemiModal_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI10QSemiModal",
-	__Y10QSemiModal_vtable_name_1,
+	_10QSemiModal_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y10QSemiModal_baseinfo[] = {
+struct base_type_info _10QSemiModal_baseinfo[] = {
 	};
 
-struct classinfo _Y10QSemiModal_classinfo = {
-	"_Y10QSemiModal",
+struct classinfo _Z10QSemiModal_classinfo = {
+	"_Z10QSemiModal",
 	"_ZTV10QSemiModal",
 	"_ZTI10QSemiModal",	/* RTTI */
 	"_ZTI7QDialog",
-	"_ZTT_Y10QSemiModal",	/* VTT */
+	"_ZTT10QSemiModal",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QSemiModal_typeinfo,
-	__Y10QSemiModal_vtable,
-	__Y10QSemiModal_baseinfo,
+	&_10QSemiModal_typeinfo,
+	_10QSemiModal_vtable,
+	_10QSemiModal_baseinfo,
 	};
 
-char *__Y4QTab_typeinfo_name[] = {
+char *_4QTab_typeinfo_name[] = {
 	"_ZTI2Qt",
 	};
 
-struct classtypeinfo __Y4QTab_typeinfo = {
+struct classtypeinfo _4QTab_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y4QTab",
-	__Y4QTab_typeinfo_name,
+	"_ZTS4QTab",
+	_4QTab_typeinfo_name,
 	};
 
-const char *__Y4QTab_vtable_name_0 [] = {
+const char *_4QTab_vtable_name_0 [] = {
 	"_ZN4QTabD1Ev",
 	"_ZN4QTabD0Ev",
 	};
 
-struct classvtable __Y4QTab_vtable [1] = {
+struct classvtable _4QTab_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI4QTab",
-	__Y4QTab_vtable_name_0,
+	_4QTab_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y4QTab_baseinfo[] = {
+struct base_type_info _4QTab_baseinfo[] = {
 	};
 
-struct classinfo _Y4QTab_classinfo = {
-	"_Y4QTab",
+struct classinfo _Z4QTab_classinfo = {
+	"_Z4QTab",
 	"_ZTV4QTab",
 	"_ZTI4QTab",	/* RTTI */
 	"_ZTI2Qt",
-	"_ZTT_Y4QTab",	/* VTT */
+	"_ZTT4QTab",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y4QTab_typeinfo,
-	__Y4QTab_vtable,
-	__Y4QTab_baseinfo,
+	&_4QTab_typeinfo,
+	_4QTab_vtable,
+	_4QTab_baseinfo,
 	};
 
-char *__Y15QPolygonScanner_typeinfo_name[] = {
+char *_15QPolygonScanner_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y15QPolygonScanner_typeinfo = {
+struct classtypeinfo _15QPolygonScanner_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y15QPolygonScanner",
-	__Y15QPolygonScanner_typeinfo_name,
+	"_ZTS15QPolygonScanner",
+	_15QPolygonScanner_typeinfo_name,
 	};
 
-const char *__Y15QPolygonScanner_vtable_name_0 [] = {
+const char *_15QPolygonScanner_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y15QPolygonScanner_vtable [1] = {
+struct classvtable _15QPolygonScanner_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	1,	/* Number of Vfuncs */
 	"_ZTI15QPolygonScanner",
-	__Y15QPolygonScanner_vtable_name_0,
+	_15QPolygonScanner_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y15QPolygonScanner_baseinfo[] = {
+struct base_type_info _15QPolygonScanner_baseinfo[] = {
 	};
 
-struct classinfo _Y15QPolygonScanner_classinfo = {
-	"_Y15QPolygonScanner",
+struct classinfo _Z15QPolygonScanner_classinfo = {
+	"_Z15QPolygonScanner",
 	"_ZTV15QPolygonScanner",
 	"_ZTI15QPolygonScanner",	/* RTTI */
 	"",
-	"_ZTT_Y15QPolygonScanner",	/* VTT */
+	"_ZTT15QPolygonScanner",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y15QPolygonScanner_typeinfo,
-	__Y15QPolygonScanner_vtable,
-	__Y15QPolygonScanner_baseinfo,
+	&_15QPolygonScanner_typeinfo,
+	_15QPolygonScanner_vtable,
+	_15QPolygonScanner_baseinfo,
 	};
 
-char *__Y16QNetworkProtocol_typeinfo_name[] = {
+char *_16QNetworkProtocol_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y16QNetworkProtocol_typeinfo = {
+struct classtypeinfo _16QNetworkProtocol_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y16QNetworkProtocol",
-	__Y16QNetworkProtocol_typeinfo_name,
+	"_ZTS16QNetworkProtocol",
+	_16QNetworkProtocol_typeinfo_name,
 	};
 
-const char *__Y16QNetworkProtocol_vtable_name_0 [] = {
+const char *_16QNetworkProtocol_vtable_name_0 [] = {
 	"_ZNK16QNetworkProtocol10metaObjectEv",
 	"_ZNK16QNetworkProtocol9classNameEv",
 	"_ZN16QNetworkProtocol7qt_castEPKc",
@@ -28576,90 +28576,90 @@ const char *__Y16QNetworkProtocol_vtable_name_0 [] = {
 	"_ZN16QNetworkProtocol15checkConnectionEP17QNetworkOperation",
 	};
 
-struct classvtable __Y16QNetworkProtocol_vtable [1] = {
+struct classvtable _16QNetworkProtocol_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	36,	/* Number of Vfuncs */
 	"_ZTI16QNetworkProtocol",
-	__Y16QNetworkProtocol_vtable_name_0,
+	_16QNetworkProtocol_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y16QNetworkProtocol_baseinfo[] = {
+struct base_type_info _16QNetworkProtocol_baseinfo[] = {
 	};
 
-struct classinfo _Y16QNetworkProtocol_classinfo = {
-	"_Y16QNetworkProtocol",
+struct classinfo _Z16QNetworkProtocol_classinfo = {
+	"_Z16QNetworkProtocol",
 	"_ZTV16QNetworkProtocol",
 	"_ZTI16QNetworkProtocol",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y16QNetworkProtocol",	/* VTT */
+	"_ZTT16QNetworkProtocol",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y16QNetworkProtocol_typeinfo,
-	__Y16QNetworkProtocol_vtable,
-	__Y16QNetworkProtocol_baseinfo,
+	&_16QNetworkProtocol_typeinfo,
+	_16QNetworkProtocol_vtable,
+	_16QNetworkProtocol_baseinfo,
 	};
 
-char *__Y15QObjectUserData_typeinfo_name[] = {
+char *_15QObjectUserData_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y15QObjectUserData_typeinfo = {
+struct classtypeinfo _15QObjectUserData_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y15QObjectUserData",
-	__Y15QObjectUserData_typeinfo_name,
+	"_ZTS15QObjectUserData",
+	_15QObjectUserData_typeinfo_name,
 	};
 
-const char *__Y15QObjectUserData_vtable_name_0 [] = {
+const char *_15QObjectUserData_vtable_name_0 [] = {
 	"_ZN15QObjectUserDataD1Ev",
 	"_ZN15QObjectUserDataD0Ev",
 	};
 
-struct classvtable __Y15QObjectUserData_vtable [1] = {
+struct classvtable _15QObjectUserData_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI15QObjectUserData",
-	__Y15QObjectUserData_vtable_name_0,
+	_15QObjectUserData_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y15QObjectUserData_baseinfo[] = {
+struct base_type_info _15QObjectUserData_baseinfo[] = {
 	};
 
-struct classinfo _Y15QObjectUserData_classinfo = {
-	"_Y15QObjectUserData",
+struct classinfo _Z15QObjectUserData_classinfo = {
+	"_Z15QObjectUserData",
 	"_ZTV15QObjectUserData",
 	"_ZTI15QObjectUserData",	/* RTTI */
 	"",
-	"_ZTT_Y15QObjectUserData",	/* VTT */
+	"_ZTT15QObjectUserData",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y15QObjectUserData_typeinfo,
-	__Y15QObjectUserData_vtable,
-	__Y15QObjectUserData_baseinfo,
+	&_15QObjectUserData_typeinfo,
+	_15QObjectUserData_vtable,
+	_15QObjectUserData_baseinfo,
 	};
 
-char *__Y13QRangeControl_typeinfo_name[] = {
+char *_13QRangeControl_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y13QRangeControl_typeinfo = {
+struct classtypeinfo _13QRangeControl_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y13QRangeControl",
-	__Y13QRangeControl_typeinfo_name,
+	"_ZTS13QRangeControl",
+	_13QRangeControl_typeinfo_name,
 	};
 
-const char *__Y13QRangeControl_vtable_name_0 [] = {
+const char *_13QRangeControl_vtable_name_0 [] = {
 	"_ZN13QRangeControlD1Ev",
 	"_ZN13QRangeControlD0Ev",
 	"_ZN13QRangeControl11valueChangeEv",
@@ -28667,47 +28667,47 @@ const char *__Y13QRangeControl_vtable_name_0 [] = {
 	"_ZN13QRangeControl10stepChangeEv",
 	};
 
-struct classvtable __Y13QRangeControl_vtable [1] = {
+struct classvtable _13QRangeControl_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI13QRangeControl",
-	__Y13QRangeControl_vtable_name_0,
+	_13QRangeControl_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y13QRangeControl_baseinfo[] = {
+struct base_type_info _13QRangeControl_baseinfo[] = {
 	};
 
-struct classinfo _Y13QRangeControl_classinfo = {
-	"_Y13QRangeControl",
+struct classinfo _Z13QRangeControl_classinfo = {
+	"_Z13QRangeControl",
 	"_ZTV13QRangeControl",
 	"_ZTI13QRangeControl",	/* RTTI */
 	"",
-	"_ZTT_Y13QRangeControl",	/* VTT */
+	"_ZTT13QRangeControl",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y13QRangeControl_typeinfo,
-	__Y13QRangeControl_vtable,
-	__Y13QRangeControl_baseinfo,
+	&_13QRangeControl_typeinfo,
+	_13QRangeControl_vtable,
+	_13QRangeControl_baseinfo,
 	};
 
-char *__Y10QHGroupBox_typeinfo_name[] = {
+char *_10QHGroupBox_typeinfo_name[] = {
 	"_ZTI9QGroupBox",
 	};
 
-struct classtypeinfo __Y10QHGroupBox_typeinfo = {
+struct classtypeinfo _10QHGroupBox_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y10QHGroupBox",
-	__Y10QHGroupBox_typeinfo_name,
+	"_ZTS10QHGroupBox",
+	_10QHGroupBox_typeinfo_name,
 	};
 
-const char *__Y10QHGroupBox_vtable_name_0 [] = {
+const char *_10QHGroupBox_vtable_name_0 [] = {
 	"_ZNK10QHGroupBox10metaObjectEv",
 	"_ZNK10QHGroupBox9classNameEv",
 	"_ZN10QHGroupBox7qt_castEPKc",
@@ -28831,7 +28831,7 @@ const char *__Y10QHGroupBox_vtable_name_0 [] = {
 	"_ZN9QGroupBox12setAlignmentEi",
 	};
 
-const char *__Y10QHGroupBox_vtable_name_1 [] = {
+const char *_10QHGroupBox_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QHGroupBoxD1Ev",
 #endif
@@ -28905,14 +28905,14 @@ const char *__Y10QHGroupBox_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y10QHGroupBox_vtable [2] = {
+struct classvtable _10QHGroupBox_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	121,	/* Number of Vfuncs */
 	"_ZTI10QHGroupBox",
-	__Y10QHGroupBox_vtable_name_0,
+	_10QHGroupBox_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -28946,85 +28946,85 @@ struct classvtable __Y10QHGroupBox_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI10QHGroupBox",
-	__Y10QHGroupBox_vtable_name_1,
+	_10QHGroupBox_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y10QHGroupBox_baseinfo[] = {
+struct base_type_info _10QHGroupBox_baseinfo[] = {
 	};
 
-struct classinfo _Y10QHGroupBox_classinfo = {
-	"_Y10QHGroupBox",
+struct classinfo _Z10QHGroupBox_classinfo = {
+	"_Z10QHGroupBox",
 	"_ZTV10QHGroupBox",
 	"_ZTI10QHGroupBox",	/* RTTI */
 	"_ZTI9QGroupBox",
-	"_ZTT_Y10QHGroupBox",	/* VTT */
+	"_ZTT10QHGroupBox",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QHGroupBox_typeinfo,
-	__Y10QHGroupBox_vtable,
-	__Y10QHGroupBox_baseinfo,
+	&_10QHGroupBox_typeinfo,
+	_10QHGroupBox_vtable,
+	_10QHGroupBox_baseinfo,
 	};
 
-char *__Y11QTimerEvent_typeinfo_name[] = {
+char *_11QTimerEvent_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo __Y11QTimerEvent_typeinfo = {
+struct classtypeinfo _11QTimerEvent_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QTimerEvent",
-	__Y11QTimerEvent_typeinfo_name,
+	"_ZTS11QTimerEvent",
+	_11QTimerEvent_typeinfo_name,
 	};
 
-const char *__Y11QTimerEvent_vtable_name_0 [] = {
+const char *_11QTimerEvent_vtable_name_0 [] = {
 	"_ZN11QTimerEventD1Ev",
 	"_ZN11QTimerEventD0Ev",
 	};
 
-struct classvtable __Y11QTimerEvent_vtable [1] = {
+struct classvtable _11QTimerEvent_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI11QTimerEvent",
-	__Y11QTimerEvent_vtable_name_0,
+	_11QTimerEvent_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QTimerEvent_baseinfo[] = {
+struct base_type_info _11QTimerEvent_baseinfo[] = {
 	};
 
-struct classinfo _Y11QTimerEvent_classinfo = {
-	"_Y11QTimerEvent",
+struct classinfo _Z11QTimerEvent_classinfo = {
+	"_Z11QTimerEvent",
 	"_ZTV11QTimerEvent",
 	"_ZTI11QTimerEvent",	/* RTTI */
 	"_ZTI6QEvent",
-	"_ZTT_Y11QTimerEvent",	/* VTT */
+	"_ZTT11QTimerEvent",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QTimerEvent_typeinfo,
-	__Y11QTimerEvent_vtable,
-	__Y11QTimerEvent_baseinfo,
+	&_11QTimerEvent_typeinfo,
+	_11QTimerEvent_vtable,
+	_11QTimerEvent_baseinfo,
 	};
 
-char *__Y7QHeader_typeinfo_name[] = {
+char *_7QHeader_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo __Y7QHeader_typeinfo = {
+struct classtypeinfo _7QHeader_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y7QHeader",
-	__Y7QHeader_typeinfo_name,
+	"_ZTS7QHeader",
+	_7QHeader_typeinfo_name,
 	};
 
-const char *__Y7QHeader_vtable_name_0 [] = {
+const char *_7QHeader_vtable_name_0 [] = {
 	"_ZNK7QHeader10metaObjectEv",
 	"_ZNK7QHeader9classNameEv",
 	"_ZN7QHeader7qt_castEPKc",
@@ -29150,7 +29150,7 @@ const char *__Y7QHeader_vtable_name_0 [] = {
 	"_ZN7QHeader17paintSectionLabelEP8QPainteriRK5QRect",
 	};
 
-const char *__Y7QHeader_vtable_name_1 [] = {
+const char *_7QHeader_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N7QHeaderD1Ev",
 #endif
@@ -29224,14 +29224,14 @@ const char *__Y7QHeader_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y7QHeader_vtable [2] = {
+struct classvtable _7QHeader_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	123,	/* Number of Vfuncs */
 	"_ZTI7QHeader",
-	__Y7QHeader_vtable_name_0,
+	_7QHeader_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -29265,40 +29265,40 @@ struct classvtable __Y7QHeader_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI7QHeader",
-	__Y7QHeader_vtable_name_1,
+	_7QHeader_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y7QHeader_baseinfo[] = {
+struct base_type_info _7QHeader_baseinfo[] = {
 	};
 
-struct classinfo _Y7QHeader_classinfo = {
-	"_Y7QHeader",
+struct classinfo _Z7QHeader_classinfo = {
+	"_Z7QHeader",
 	"_ZTV7QHeader",
 	"_ZTI7QHeader",	/* RTTI */
 	"_ZTI7QWidget",
-	"_ZTT_Y7QHeader",	/* VTT */
+	"_ZTT7QHeader",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y7QHeader_typeinfo,
-	__Y7QHeader_vtable,
-	__Y7QHeader_baseinfo,
+	&_7QHeader_typeinfo,
+	_7QHeader_vtable,
+	_7QHeader_baseinfo,
 	};
 
-char *__Y9QGbkCodec_typeinfo_name[] = {
+char *_9QGbkCodec_typeinfo_name[] = {
 	"_ZTI13QGb18030Codec",
 	};
 
-struct classtypeinfo __Y9QGbkCodec_typeinfo = {
+struct classtypeinfo _9QGbkCodec_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y9QGbkCodec",
-	__Y9QGbkCodec_typeinfo_name,
+	"_ZTS9QGbkCodec",
+	_9QGbkCodec_typeinfo_name,
 	};
 
-const char *__Y9QGbkCodec_vtable_name_0 [] = {
+const char *_9QGbkCodec_vtable_name_0 [] = {
 	"_ZN9QGbkCodecD1Ev",
 	"_ZN9QGbkCodecD0Ev",
 	"_ZNK9QGbkCodec4nameEv",
@@ -29316,47 +29316,47 @@ const char *__Y9QGbkCodec_vtable_name_0 [] = {
 	"_ZNK10QTextCodec20characterFromUnicodeERK7QStringi",
 	};
 
-struct classvtable __Y9QGbkCodec_vtable [1] = {
+struct classvtable _9QGbkCodec_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	15,	/* Number of Vfuncs */
 	"_ZTI9QGbkCodec",
-	__Y9QGbkCodec_vtable_name_0,
+	_9QGbkCodec_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y9QGbkCodec_baseinfo[] = {
+struct base_type_info _9QGbkCodec_baseinfo[] = {
 	};
 
-struct classinfo _Y9QGbkCodec_classinfo = {
-	"_Y9QGbkCodec",
+struct classinfo _Z9QGbkCodec_classinfo = {
+	"_Z9QGbkCodec",
 	"_ZTV9QGbkCodec",
 	"_ZTI9QGbkCodec",	/* RTTI */
 	"_ZTI13QGb18030Codec",
-	"_ZTT_Y9QGbkCodec",	/* VTT */
+	"_ZTT9QGbkCodec",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QGbkCodec_typeinfo,
-	__Y9QGbkCodec_vtable,
-	__Y9QGbkCodec_baseinfo,
+	&_9QGbkCodec_typeinfo,
+	_9QGbkCodec_vtable,
+	_9QGbkCodec_baseinfo,
 	};
 
-char *__Y13QSplashScreen_typeinfo_name[] = {
+char *_13QSplashScreen_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo __Y13QSplashScreen_typeinfo = {
+struct classtypeinfo _13QSplashScreen_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y13QSplashScreen",
-	__Y13QSplashScreen_typeinfo_name,
+	"_ZTS13QSplashScreen",
+	_13QSplashScreen_typeinfo_name,
 	};
 
-const char *__Y13QSplashScreen_vtable_name_0 [] = {
+const char *_13QSplashScreen_vtable_name_0 [] = {
 	"_ZNK13QSplashScreen10metaObjectEv",
 	"_ZNK13QSplashScreen9classNameEv",
 	"_ZN13QSplashScreen7qt_castEPKc",
@@ -29470,7 +29470,7 @@ const char *__Y13QSplashScreen_vtable_name_0 [] = {
 	"_ZN13QSplashScreen12drawContentsEP8QPainter",
 	};
 
-const char *__Y13QSplashScreen_vtable_name_1 [] = {
+const char *_13QSplashScreen_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N13QSplashScreenD1Ev",
 #endif
@@ -29544,14 +29544,14 @@ const char *__Y13QSplashScreen_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y13QSplashScreen_vtable [2] = {
+struct classvtable _13QSplashScreen_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	111,	/* Number of Vfuncs */
 	"_ZTI13QSplashScreen",
-	__Y13QSplashScreen_vtable_name_0,
+	_13QSplashScreen_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -29585,174 +29585,174 @@ struct classvtable __Y13QSplashScreen_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI13QSplashScreen",
-	__Y13QSplashScreen_vtable_name_1,
+	_13QSplashScreen_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y13QSplashScreen_baseinfo[] = {
+struct base_type_info _13QSplashScreen_baseinfo[] = {
 	};
 
-struct classinfo _Y13QSplashScreen_classinfo = {
-	"_Y13QSplashScreen",
+struct classinfo _Z13QSplashScreen_classinfo = {
+	"_Z13QSplashScreen",
 	"_ZTV13QSplashScreen",
 	"_ZTI13QSplashScreen",	/* RTTI */
 	"_ZTI7QWidget",
-	"_ZTT_Y13QSplashScreen",	/* VTT */
+	"_ZTT13QSplashScreen",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y13QSplashScreen_typeinfo,
-	__Y13QSplashScreen_vtable,
-	__Y13QSplashScreen_baseinfo,
+	&_13QSplashScreen_typeinfo,
+	_13QSplashScreen_vtable,
+	_13QSplashScreen_baseinfo,
 	};
 
-char *__Y6QMutex_typeinfo_name[] = {
+char *_6QMutex_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y6QMutex_typeinfo = {
+struct classtypeinfo _6QMutex_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y6QMutex",
-	__Y6QMutex_typeinfo_name,
+	"_ZTS6QMutex",
+	_6QMutex_typeinfo_name,
 	};
 
-const char *__Y6QMutex_vtable_name_0 [] = {
+const char *_6QMutex_vtable_name_0 [] = {
 	"_ZN6QMutexD1Ev",
 	"_ZN6QMutexD0Ev",
 	};
 
-struct classvtable __Y6QMutex_vtable [1] = {
+struct classvtable _6QMutex_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI6QMutex",
-	__Y6QMutex_vtable_name_0,
+	_6QMutex_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y6QMutex_baseinfo[] = {
+struct base_type_info _6QMutex_baseinfo[] = {
 	};
 
-struct classinfo _Y6QMutex_classinfo = {
-	"_Y6QMutex",
+struct classinfo _Z6QMutex_classinfo = {
+	"_Z6QMutex",
 	"_ZTV6QMutex",
 	"_ZTI6QMutex",	/* RTTI */
 	"",
-	"_ZTT_Y6QMutex",	/* VTT */
+	"_ZTT6QMutex",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y6QMutex_typeinfo,
-	__Y6QMutex_vtable,
-	__Y6QMutex_baseinfo,
+	&_6QMutex_typeinfo,
+	_6QMutex_vtable,
+	_6QMutex_baseinfo,
 	};
 
-char *__Y15QSqlPropertyMap_typeinfo_name[] = {
+char *_15QSqlPropertyMap_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y15QSqlPropertyMap_typeinfo = {
+struct classtypeinfo _15QSqlPropertyMap_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y15QSqlPropertyMap",
-	__Y15QSqlPropertyMap_typeinfo_name,
+	"_ZTS15QSqlPropertyMap",
+	_15QSqlPropertyMap_typeinfo_name,
 	};
 
-const char *__Y15QSqlPropertyMap_vtable_name_0 [] = {
+const char *_15QSqlPropertyMap_vtable_name_0 [] = {
 	"_ZN15QSqlPropertyMapD1Ev",
 	"_ZN15QSqlPropertyMapD0Ev",
 	"_ZN15QSqlPropertyMap11setPropertyEP7QWidgetRK8QVariant",
 	};
 
-struct classvtable __Y15QSqlPropertyMap_vtable [1] = {
+struct classvtable _15QSqlPropertyMap_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	3,	/* Number of Vfuncs */
 	"_ZTI15QSqlPropertyMap",
-	__Y15QSqlPropertyMap_vtable_name_0,
+	_15QSqlPropertyMap_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y15QSqlPropertyMap_baseinfo[] = {
+struct base_type_info _15QSqlPropertyMap_baseinfo[] = {
 	};
 
-struct classinfo _Y15QSqlPropertyMap_classinfo = {
-	"_Y15QSqlPropertyMap",
+struct classinfo _Z15QSqlPropertyMap_classinfo = {
+	"_Z15QSqlPropertyMap",
 	"_ZTV15QSqlPropertyMap",
 	"_ZTI15QSqlPropertyMap",	/* RTTI */
 	"",
-	"_ZTT_Y15QSqlPropertyMap",	/* VTT */
+	"_ZTT15QSqlPropertyMap",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y15QSqlPropertyMap_typeinfo,
-	__Y15QSqlPropertyMap_vtable,
-	__Y15QSqlPropertyMap_baseinfo,
+	&_15QSqlPropertyMap_typeinfo,
+	_15QSqlPropertyMap_vtable,
+	_15QSqlPropertyMap_baseinfo,
 	};
 
-char *__Y9QKeyEvent_typeinfo_name[] = {
+char *_9QKeyEvent_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo __Y9QKeyEvent_typeinfo = {
+struct classtypeinfo _9QKeyEvent_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y9QKeyEvent",
-	__Y9QKeyEvent_typeinfo_name,
+	"_ZTS9QKeyEvent",
+	_9QKeyEvent_typeinfo_name,
 	};
 
-const char *__Y9QKeyEvent_vtable_name_0 [] = {
+const char *_9QKeyEvent_vtable_name_0 [] = {
 	"_ZN9QKeyEventD1Ev",
 	"_ZN9QKeyEventD0Ev",
 	};
 
-struct classvtable __Y9QKeyEvent_vtable [1] = {
+struct classvtable _9QKeyEvent_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI9QKeyEvent",
-	__Y9QKeyEvent_vtable_name_0,
+	_9QKeyEvent_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y9QKeyEvent_baseinfo[] = {
+struct base_type_info _9QKeyEvent_baseinfo[] = {
 	};
 
-struct classinfo _Y9QKeyEvent_classinfo = {
-	"_Y9QKeyEvent",
+struct classinfo _Z9QKeyEvent_classinfo = {
+	"_Z9QKeyEvent",
 	"_ZTV9QKeyEvent",
 	"_ZTI9QKeyEvent",	/* RTTI */
 	"_ZTI6QEvent",
-	"_ZTT_Y9QKeyEvent",	/* VTT */
+	"_ZTT9QKeyEvent",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QKeyEvent_typeinfo,
-	__Y9QKeyEvent_vtable,
-	__Y9QKeyEvent_baseinfo,
+	&_9QKeyEvent_typeinfo,
+	_9QKeyEvent_vtable,
+	_9QKeyEvent_baseinfo,
 	};
 
-char *__Y7QGCache_typeinfo_name[] = {
+char *_7QGCache_typeinfo_name[] = {
 	"_ZTI14QPtrCollection",
 	};
 
-struct classtypeinfo __Y7QGCache_typeinfo = {
+struct classtypeinfo _7QGCache_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y7QGCache",
-	__Y7QGCache_typeinfo_name,
+	"_ZTS7QGCache",
+	_7QGCache_typeinfo_name,
 	};
 
-const char *__Y7QGCache_vtable_name_0 [] = {
+const char *_7QGCache_vtable_name_0 [] = {
 	"_ZNK7QGCache5countEv",
 	"_ZN7QGCache5clearEv",
 	"_ZN7QGCacheD1Ev",
@@ -29761,46 +29761,46 @@ const char *__Y7QGCache_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y7QGCache_vtable [1] = {
+struct classvtable _7QGCache_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	6,	/* Number of Vfuncs */
 	"_ZTI7QGCache",
-	__Y7QGCache_vtable_name_0,
+	_7QGCache_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y7QGCache_baseinfo[] = {
+struct base_type_info _7QGCache_baseinfo[] = {
 	};
 
-struct classinfo _Y7QGCache_classinfo = {
-	"_Y7QGCache",
+struct classinfo _Z7QGCache_classinfo = {
+	"_Z7QGCache",
 	"_ZTV7QGCache",
 	"_ZTI7QGCache",	/* RTTI */
 	"_ZTI14QPtrCollection",
-	"_ZTT_Y7QGCache",	/* VTT */
+	"_ZTT7QGCache",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y7QGCache_typeinfo,
-	__Y7QGCache_vtable,
-	__Y7QGCache_baseinfo,
+	&_7QGCache_typeinfo,
+	_7QGCache_vtable,
+	_7QGCache_baseinfo,
 	};
 
-char *__Y5QDial_typeinfo_name[] = {
+char *_5QDial_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y5QDial_typeinfo = {
+struct classtypeinfo _5QDial_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
-	"_ZTS_Y5QDial",
-	__Y5QDial_typeinfo_name,
+	"_ZTS5QDial",
+	_5QDial_typeinfo_name,
 	};
 
-const char *__Y5QDial_vtable_name_0 [] = {
+const char *_5QDial_vtable_name_0 [] = {
 	"_ZNK5QDial10metaObjectEv",
 	"_ZNK5QDial9classNameEv",
 	"_ZN5QDial7qt_castEPKc",
@@ -29921,7 +29921,7 @@ const char *__Y5QDial_vtable_name_0 [] = {
 	"_ZN5QDial13repaintScreenEPK5QRect",
 	};
 
-const char *__Y5QDial_vtable_name_1 [] = {
+const char *_5QDial_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N5QDialD1Ev",
 #endif
@@ -29995,7 +29995,7 @@ const char *__Y5QDial_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-const char *__Y5QDial_vtable_name_2 [] = {
+const char *_5QDial_vtable_name_2 [] = {
 #if defined __i386__
 	"_ZThn116_N5QDialD1Ev",
 #endif
@@ -30083,14 +30083,14 @@ const char *__Y5QDial_vtable_name_2 [] = {
 	"_ZN13QRangeControl10stepChangeEv",
 	};
 
-struct classvtable __Y5QDial_vtable [3] = {
+struct classvtable _5QDial_vtable [3] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	118,	/* Number of Vfuncs */
 	"_ZTI5QDial",
-	__Y5QDial_vtable_name_0,
+	_5QDial_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -30124,7 +30124,7 @@ struct classvtable __Y5QDial_vtable [3] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI5QDial",
-	__Y5QDial_vtable_name_1,
+	_5QDial_vtable_name_1,
 	},
 	{
 #if defined __i386__
@@ -30158,11 +30158,11 @@ struct classvtable __Y5QDial_vtable [3] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI5QDial",
-	__Y5QDial_vtable_name_2,
+	_5QDial_vtable_name_2,
 	},
 };
 
-struct base_type_info __Y5QDial_baseinfo[] = {
+struct base_type_info _5QDial_baseinfo[] = {
 	{"_ZTI7QWidget",	2U},
 #if defined __i386__
 	{"_ZTI13QRangeControl",	29698U},
@@ -30187,32 +30187,32 @@ struct base_type_info __Y5QDial_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Y5QDial_classinfo = {
-	"_Y5QDial",
+struct classinfo _Z5QDial_classinfo = {
+	"_Z5QDial",
 	"_ZTV5QDial",
 	"_ZTI5QDial",	/* RTTI */
 	"_ZTI7QWidget",
-	"_ZTT_Y5QDial",	/* VTT */
+	"_ZTT5QDial",	/* VTT */
 	3,
 	0,
 	2,
 	0,	/* numVTT */
 	0U,
-	&__Y5QDial_typeinfo,
-	__Y5QDial_vtable,
-	__Y5QDial_baseinfo,
+	&_5QDial_typeinfo,
+	_5QDial_vtable,
+	_5QDial_baseinfo,
 	};
 
-char *__Y4QUrl_typeinfo_name[] = {
+char *_4QUrl_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y4QUrl_typeinfo = {
+struct classtypeinfo _4QUrl_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y4QUrl",
-	__Y4QUrl_typeinfo_name,
+	"_ZTS4QUrl",
+	_4QUrl_typeinfo_name,
 	};
 
-const char *__Y4QUrl_vtable_name_0 [] = {
+const char *_4QUrl_vtable_name_0 [] = {
 	"_ZN4QUrlD1Ev",
 	"_ZN4QUrlD0Ev",
 	"_ZN4QUrl11setProtocolERK7QString",
@@ -30232,47 +30232,47 @@ const char *__Y4QUrl_vtable_name_0 [] = {
 	"_ZN4QUrl5parseERK7QString",
 	};
 
-struct classvtable __Y4QUrl_vtable [1] = {
+struct classvtable _4QUrl_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	17,	/* Number of Vfuncs */
 	"_ZTI4QUrl",
-	__Y4QUrl_vtable_name_0,
+	_4QUrl_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y4QUrl_baseinfo[] = {
+struct base_type_info _4QUrl_baseinfo[] = {
 	};
 
-struct classinfo _Y4QUrl_classinfo = {
-	"_Y4QUrl",
+struct classinfo _Z4QUrl_classinfo = {
+	"_Z4QUrl",
 	"_ZTV4QUrl",
 	"_ZTI4QUrl",	/* RTTI */
 	"",
-	"_ZTT_Y4QUrl",	/* VTT */
+	"_ZTT4QUrl",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y4QUrl_typeinfo,
-	__Y4QUrl_vtable,
-	__Y4QUrl_baseinfo,
+	&_4QUrl_typeinfo,
+	_4QUrl_vtable,
+	_4QUrl_baseinfo,
 	};
 
-char *__Y9QListView_typeinfo_name[] = {
+char *_9QListView_typeinfo_name[] = {
 	"_ZTI11QScrollView",
 	};
 
-struct classtypeinfo __Y9QListView_typeinfo = {
+struct classtypeinfo _9QListView_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y9QListView",
-	__Y9QListView_typeinfo_name,
+	"_ZTS9QListView",
+	_9QListView_typeinfo_name,
 	};
 
-const char *__Y9QListView_vtable_name_0 [] = {
+const char *_9QListView_vtable_name_0 [] = {
 	"_ZNK9QListView10metaObjectEv",
 	"_ZNK9QListView9classNameEv",
 	"_ZN9QListView7qt_castEPKc",
@@ -30461,7 +30461,7 @@ const char *__Y9QListView_vtable_name_0 [] = {
 	"_ZN9QListView14paintEmptyAreaEP8QPainterRK5QRect",
 	};
 
-const char *__Y9QListView_vtable_name_1 [] = {
+const char *_9QListView_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QListViewD1Ev",
 #endif
@@ -30535,14 +30535,14 @@ const char *__Y9QListView_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y9QListView_vtable [2] = {
+struct classvtable _9QListView_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	186,	/* Number of Vfuncs */
 	"_ZTI9QListView",
-	__Y9QListView_vtable_name_0,
+	_9QListView_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -30576,40 +30576,40 @@ struct classvtable __Y9QListView_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QListView",
-	__Y9QListView_vtable_name_1,
+	_9QListView_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y9QListView_baseinfo[] = {
+struct base_type_info _9QListView_baseinfo[] = {
 	};
 
-struct classinfo _Y9QListView_classinfo = {
-	"_Y9QListView",
+struct classinfo _Z9QListView_classinfo = {
+	"_Z9QListView",
 	"_ZTV9QListView",
 	"_ZTI9QListView",	/* RTTI */
 	"_ZTI11QScrollView",
-	"_ZTT_Y9QListView",	/* VTT */
+	"_ZTT9QListView",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QListView_typeinfo,
-	__Y9QListView_vtable,
-	__Y9QListView_baseinfo,
+	&_9QListView_typeinfo,
+	_9QListView_vtable,
+	_9QListView_baseinfo,
 	};
 
-char *__Y12QStylePlugin_typeinfo_name[] = {
+char *_12QStylePlugin_typeinfo_name[] = {
 	"_ZTI8QGPlugin",
 	};
 
-struct classtypeinfo __Y12QStylePlugin_typeinfo = {
+struct classtypeinfo _12QStylePlugin_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y12QStylePlugin",
-	__Y12QStylePlugin_typeinfo_name,
+	"_ZTS12QStylePlugin",
+	_12QStylePlugin_typeinfo_name,
 	};
 
-const char *__Y12QStylePlugin_vtable_name_0 [] = {
+const char *_12QStylePlugin_vtable_name_0 [] = {
 	"_ZNK12QStylePlugin10metaObjectEv",
 	"_ZNK12QStylePlugin9classNameEv",
 	"_ZN12QStylePlugin7qt_castEPKc",
@@ -30635,47 +30635,47 @@ const char *__Y12QStylePlugin_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y12QStylePlugin_vtable [1] = {
+struct classvtable _12QStylePlugin_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	23,	/* Number of Vfuncs */
 	"_ZTI12QStylePlugin",
-	__Y12QStylePlugin_vtable_name_0,
+	_12QStylePlugin_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y12QStylePlugin_baseinfo[] = {
+struct base_type_info _12QStylePlugin_baseinfo[] = {
 	};
 
-struct classinfo _Y12QStylePlugin_classinfo = {
-	"_Y12QStylePlugin",
+struct classinfo _Z12QStylePlugin_classinfo = {
+	"_Z12QStylePlugin",
 	"_ZTV12QStylePlugin",
 	"_ZTI12QStylePlugin",	/* RTTI */
 	"_ZTI8QGPlugin",
-	"_ZTT_Y12QStylePlugin",	/* VTT */
+	"_ZTT12QStylePlugin",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QStylePlugin_typeinfo,
-	__Y12QStylePlugin_vtable,
-	__Y12QStylePlugin_baseinfo,
+	&_12QStylePlugin_typeinfo,
+	_12QStylePlugin_vtable,
+	_12QStylePlugin_baseinfo,
 	};
 
-char *__Y11QFileDialog_typeinfo_name[] = {
+char *_11QFileDialog_typeinfo_name[] = {
 	"_ZTI7QDialog",
 	};
 
-struct classtypeinfo __Y11QFileDialog_typeinfo = {
+struct classtypeinfo _11QFileDialog_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QFileDialog",
-	__Y11QFileDialog_typeinfo_name,
+	"_ZTS11QFileDialog",
+	_11QFileDialog_typeinfo_name,
 	};
 
-const char *__Y11QFileDialog_vtable_name_0 [] = {
+const char *_11QFileDialog_vtable_name_0 [] = {
 	"_ZNK11QFileDialog10metaObjectEv",
 	"_ZNK11QFileDialog9classNameEv",
 	"_ZN11QFileDialog7qt_castEPKc",
@@ -30793,7 +30793,7 @@ const char *__Y11QFileDialog_vtable_name_0 [] = {
 	"_ZN11QFileDialog17setSelectedFilterEi",
 	};
 
-const char *__Y11QFileDialog_vtable_name_1 [] = {
+const char *_11QFileDialog_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QFileDialogD1Ev",
 #endif
@@ -30867,14 +30867,14 @@ const char *__Y11QFileDialog_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y11QFileDialog_vtable [2] = {
+struct classvtable _11QFileDialog_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	115,	/* Number of Vfuncs */
 	"_ZTI11QFileDialog",
-	__Y11QFileDialog_vtable_name_0,
+	_11QFileDialog_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -30908,40 +30908,40 @@ struct classvtable __Y11QFileDialog_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI11QFileDialog",
-	__Y11QFileDialog_vtable_name_1,
+	_11QFileDialog_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y11QFileDialog_baseinfo[] = {
+struct base_type_info _11QFileDialog_baseinfo[] = {
 	};
 
-struct classinfo _Y11QFileDialog_classinfo = {
-	"_Y11QFileDialog",
+struct classinfo _Z11QFileDialog_classinfo = {
+	"_Z11QFileDialog",
 	"_ZTV11QFileDialog",
 	"_ZTI11QFileDialog",	/* RTTI */
 	"_ZTI7QDialog",
-	"_ZTT_Y11QFileDialog",	/* VTT */
+	"_ZTT11QFileDialog",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QFileDialog_typeinfo,
-	__Y11QFileDialog_vtable,
-	__Y11QFileDialog_baseinfo,
+	&_11QFileDialog_typeinfo,
+	_11QFileDialog_vtable,
+	_11QFileDialog_baseinfo,
 	};
 
-char *__Y13QHButtonGroup_typeinfo_name[] = {
+char *_13QHButtonGroup_typeinfo_name[] = {
 	"_ZTI12QButtonGroup",
 	};
 
-struct classtypeinfo __Y13QHButtonGroup_typeinfo = {
+struct classtypeinfo _13QHButtonGroup_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y13QHButtonGroup",
-	__Y13QHButtonGroup_typeinfo_name,
+	"_ZTS13QHButtonGroup",
+	_13QHButtonGroup_typeinfo_name,
 	};
 
-const char *__Y13QHButtonGroup_vtable_name_0 [] = {
+const char *_13QHButtonGroup_vtable_name_0 [] = {
 	"_ZNK13QHButtonGroup10metaObjectEv",
 	"_ZNK13QHButtonGroup9classNameEv",
 	"_ZN13QHButtonGroup7qt_castEPKc",
@@ -31069,7 +31069,7 @@ const char *__Y13QHButtonGroup_vtable_name_0 [] = {
 	"_ZN12QButtonGroup9moveFocusEi",
 	};
 
-const char *__Y13QHButtonGroup_vtable_name_1 [] = {
+const char *_13QHButtonGroup_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N13QHButtonGroupD1Ev",
 #endif
@@ -31143,14 +31143,14 @@ const char *__Y13QHButtonGroup_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y13QHButtonGroup_vtable [2] = {
+struct classvtable _13QHButtonGroup_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	125,	/* Number of Vfuncs */
 	"_ZTI13QHButtonGroup",
-	__Y13QHButtonGroup_vtable_name_0,
+	_13QHButtonGroup_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -31184,40 +31184,40 @@ struct classvtable __Y13QHButtonGroup_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI13QHButtonGroup",
-	__Y13QHButtonGroup_vtable_name_1,
+	_13QHButtonGroup_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y13QHButtonGroup_baseinfo[] = {
+struct base_type_info _13QHButtonGroup_baseinfo[] = {
 	};
 
-struct classinfo _Y13QHButtonGroup_classinfo = {
-	"_Y13QHButtonGroup",
+struct classinfo _Z13QHButtonGroup_classinfo = {
+	"_Z13QHButtonGroup",
 	"_ZTV13QHButtonGroup",
 	"_ZTI13QHButtonGroup",	/* RTTI */
 	"_ZTI12QButtonGroup",
-	"_ZTT_Y13QHButtonGroup",	/* VTT */
+	"_ZTT13QHButtonGroup",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y13QHButtonGroup_typeinfo,
-	__Y13QHButtonGroup_vtable,
-	__Y13QHButtonGroup_baseinfo,
+	&_13QHButtonGroup_typeinfo,
+	_13QHButtonGroup_vtable,
+	_13QHButtonGroup_baseinfo,
 	};
 
-char *__Y10QColorDrag_typeinfo_name[] = {
+char *_10QColorDrag_typeinfo_name[] = {
 	"_ZTI11QStoredDrag",
 	};
 
-struct classtypeinfo __Y10QColorDrag_typeinfo = {
+struct classtypeinfo _10QColorDrag_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y10QColorDrag",
-	__Y10QColorDrag_typeinfo_name,
+	"_ZTS10QColorDrag",
+	_10QColorDrag_typeinfo_name,
 	};
 
-const char *__Y10QColorDrag_vtable_name_0 [] = {
+const char *_10QColorDrag_vtable_name_0 [] = {
 	"_ZNK10QColorDrag10metaObjectEv",
 	"_ZNK10QColorDrag9classNameEv",
 	"_ZN10QColorDrag7qt_castEPKc",
@@ -31247,7 +31247,7 @@ const char *__Y10QColorDrag_vtable_name_0 [] = {
 	"_ZNK11QStoredDrag11encodedDataEPKc",
 	};
 
-const char *__Y10QColorDrag_vtable_name_1 [] = {
+const char *_10QColorDrag_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QColorDragD1Ev",
 #endif
@@ -31335,14 +31335,14 @@ const char *__Y10QColorDrag_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable __Y10QColorDrag_vtable [2] = {
+struct classvtable _10QColorDrag_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	27,	/* Number of Vfuncs */
 	"_ZTI10QColorDrag",
-	__Y10QColorDrag_vtable_name_0,
+	_10QColorDrag_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -31376,40 +31376,40 @@ struct classvtable __Y10QColorDrag_vtable [2] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI10QColorDrag",
-	__Y10QColorDrag_vtable_name_1,
+	_10QColorDrag_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y10QColorDrag_baseinfo[] = {
+struct base_type_info _10QColorDrag_baseinfo[] = {
 	};
 
-struct classinfo _Y10QColorDrag_classinfo = {
-	"_Y10QColorDrag",
+struct classinfo _Z10QColorDrag_classinfo = {
+	"_Z10QColorDrag",
 	"_ZTV10QColorDrag",
 	"_ZTI10QColorDrag",	/* RTTI */
 	"_ZTI11QStoredDrag",
-	"_ZTT_Y10QColorDrag",	/* VTT */
+	"_ZTT10QColorDrag",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QColorDrag_typeinfo,
-	__Y10QColorDrag_vtable,
-	__Y10QColorDrag_baseinfo,
+	&_10QColorDrag_typeinfo,
+	_10QColorDrag_vtable,
+	_10QColorDrag_baseinfo,
 	};
 
-char *__Y14QDesktopWidget_typeinfo_name[] = {
+char *_14QDesktopWidget_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo __Y14QDesktopWidget_typeinfo = {
+struct classtypeinfo _14QDesktopWidget_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y14QDesktopWidget",
-	__Y14QDesktopWidget_typeinfo_name,
+	"_ZTS14QDesktopWidget",
+	_14QDesktopWidget_typeinfo_name,
 	};
 
-const char *__Y14QDesktopWidget_vtable_name_0 [] = {
+const char *_14QDesktopWidget_vtable_name_0 [] = {
 	"_ZNK14QDesktopWidget10metaObjectEv",
 	"_ZNK14QDesktopWidget9classNameEv",
 	"_ZN14QDesktopWidget7qt_castEPKc",
@@ -31522,7 +31522,7 @@ const char *__Y14QDesktopWidget_vtable_name_0 [] = {
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
 	};
 
-const char *__Y14QDesktopWidget_vtable_name_1 [] = {
+const char *_14QDesktopWidget_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N14QDesktopWidgetD1Ev",
 #endif
@@ -31596,14 +31596,14 @@ const char *__Y14QDesktopWidget_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y14QDesktopWidget_vtable [2] = {
+struct classvtable _14QDesktopWidget_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	110,	/* Number of Vfuncs */
 	"_ZTI14QDesktopWidget",
-	__Y14QDesktopWidget_vtable_name_0,
+	_14QDesktopWidget_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -31637,39 +31637,39 @@ struct classvtable __Y14QDesktopWidget_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI14QDesktopWidget",
-	__Y14QDesktopWidget_vtable_name_1,
+	_14QDesktopWidget_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y14QDesktopWidget_baseinfo[] = {
+struct base_type_info _14QDesktopWidget_baseinfo[] = {
 	};
 
-struct classinfo _Y14QDesktopWidget_classinfo = {
-	"_Y14QDesktopWidget",
+struct classinfo _Z14QDesktopWidget_classinfo = {
+	"_Z14QDesktopWidget",
 	"_ZTV14QDesktopWidget",
 	"_ZTI14QDesktopWidget",	/* RTTI */
 	"_ZTI7QWidget",
-	"_ZTT_Y14QDesktopWidget",	/* VTT */
+	"_ZTT14QDesktopWidget",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y14QDesktopWidget_typeinfo,
-	__Y14QDesktopWidget_vtable,
-	__Y14QDesktopWidget_baseinfo,
+	&_14QDesktopWidget_typeinfo,
+	_14QDesktopWidget_vtable,
+	_14QDesktopWidget_baseinfo,
 	};
 
-char *__Y9QSqlQuery_typeinfo_name[] = {
+char *_9QSqlQuery_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y9QSqlQuery_typeinfo = {
+struct classtypeinfo _9QSqlQuery_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y9QSqlQuery",
-	__Y9QSqlQuery_typeinfo_name,
+	"_ZTS9QSqlQuery",
+	_9QSqlQuery_typeinfo_name,
 	};
 
-const char *__Y9QSqlQuery_vtable_name_0 [] = {
+const char *_9QSqlQuery_vtable_name_0 [] = {
 	"_ZN9QSqlQueryD1Ev",
 	"_ZN9QSqlQueryD0Ev",
 	"_ZN9QSqlQuery4execERK7QString",
@@ -31683,47 +31683,47 @@ const char *__Y9QSqlQuery_vtable_name_0 [] = {
 	"_ZN9QSqlQuery9afterSeekEv",
 	};
 
-struct classvtable __Y9QSqlQuery_vtable [1] = {
+struct classvtable _9QSqlQuery_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QSqlQuery",
-	__Y9QSqlQuery_vtable_name_0,
+	_9QSqlQuery_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y9QSqlQuery_baseinfo[] = {
+struct base_type_info _9QSqlQuery_baseinfo[] = {
 	};
 
-struct classinfo _Y9QSqlQuery_classinfo = {
-	"_Y9QSqlQuery",
+struct classinfo _Z9QSqlQuery_classinfo = {
+	"_Z9QSqlQuery",
 	"_ZTV9QSqlQuery",
 	"_ZTI9QSqlQuery",	/* RTTI */
 	"",
-	"_ZTT_Y9QSqlQuery",	/* VTT */
+	"_ZTT9QSqlQuery",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QSqlQuery_typeinfo,
-	__Y9QSqlQuery_vtable,
-	__Y9QSqlQuery_baseinfo,
+	&_9QSqlQuery_typeinfo,
+	_9QSqlQuery_vtable,
+	_9QSqlQuery_baseinfo,
 	};
 
-char *__Y11QUtf16Codec_typeinfo_name[] = {
+char *_11QUtf16Codec_typeinfo_name[] = {
 	"_ZTI10QTextCodec",
 	};
 
-struct classtypeinfo __Y11QUtf16Codec_typeinfo = {
+struct classtypeinfo _11QUtf16Codec_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QUtf16Codec",
-	__Y11QUtf16Codec_typeinfo_name,
+	"_ZTS11QUtf16Codec",
+	_11QUtf16Codec_typeinfo_name,
 	};
 
-const char *__Y11QUtf16Codec_vtable_name_0 [] = {
+const char *_11QUtf16Codec_vtable_name_0 [] = {
 	"_ZN11QUtf16CodecD1Ev",
 	"_ZN11QUtf16CodecD0Ev",
 	"_ZNK11QUtf16Codec4nameEv",
@@ -31741,47 +31741,47 @@ const char *__Y11QUtf16Codec_vtable_name_0 [] = {
 	"_ZNK10QTextCodec20characterFromUnicodeERK7QStringi",
 	};
 
-struct classvtable __Y11QUtf16Codec_vtable [1] = {
+struct classvtable _11QUtf16Codec_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	15,	/* Number of Vfuncs */
 	"_ZTI11QUtf16Codec",
-	__Y11QUtf16Codec_vtable_name_0,
+	_11QUtf16Codec_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QUtf16Codec_baseinfo[] = {
+struct base_type_info _11QUtf16Codec_baseinfo[] = {
 	};
 
-struct classinfo _Y11QUtf16Codec_classinfo = {
-	"_Y11QUtf16Codec",
+struct classinfo _Z11QUtf16Codec_classinfo = {
+	"_Z11QUtf16Codec",
 	"_ZTV11QUtf16Codec",
 	"_ZTI11QUtf16Codec",	/* RTTI */
 	"_ZTI10QTextCodec",
-	"_ZTT_Y11QUtf16Codec",	/* VTT */
+	"_ZTT11QUtf16Codec",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QUtf16Codec_typeinfo,
-	__Y11QUtf16Codec_vtable,
-	__Y11QUtf16Codec_baseinfo,
+	&_11QUtf16Codec_typeinfo,
+	_11QUtf16Codec_vtable,
+	_11QUtf16Codec_baseinfo,
 	};
 
-char *__Y7QObject_typeinfo_name[] = {
+char *_7QObject_typeinfo_name[] = {
 	"_ZTI2Qt",
 	};
 
-struct classtypeinfo __Y7QObject_typeinfo = {
+struct classtypeinfo _7QObject_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y7QObject",
-	__Y7QObject_typeinfo_name,
+	"_ZTS7QObject",
+	_7QObject_typeinfo_name,
 	};
 
-const char *__Y7QObject_vtable_name_0 [] = {
+const char *_7QObject_vtable_name_0 [] = {
 	"_ZNK7QObject10metaObjectEv",
 	"_ZNK7QObject9classNameEv",
 	"_ZN7QObject7qt_castEPKc",
@@ -31805,47 +31805,47 @@ const char *__Y7QObject_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable __Y7QObject_vtable [1] = {
+struct classvtable _7QObject_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI7QObject",
-	__Y7QObject_vtable_name_0,
+	_7QObject_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y7QObject_baseinfo[] = {
+struct base_type_info _7QObject_baseinfo[] = {
 	};
 
-struct classinfo _Y7QObject_classinfo = {
-	"_Y7QObject",
+struct classinfo _Z7QObject_classinfo = {
+	"_Z7QObject",
 	"_ZTV7QObject",
 	"_ZTI7QObject",	/* RTTI */
 	"_ZTI2Qt",
-	"_ZTT_Y7QObject",	/* VTT */
+	"_ZTT7QObject",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y7QObject_typeinfo,
-	__Y7QObject_vtable,
-	__Y7QObject_baseinfo,
+	&_7QObject_typeinfo,
+	_7QObject_vtable,
+	_7QObject_baseinfo,
 	};
 
-char *__Y5QFile_typeinfo_name[] = {
+char *_5QFile_typeinfo_name[] = {
 	"_ZTI9QIODevice",
 	};
 
-struct classtypeinfo __Y5QFile_typeinfo = {
+struct classtypeinfo _5QFile_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y5QFile",
-	__Y5QFile_typeinfo_name,
+	"_ZTS5QFile",
+	_5QFile_typeinfo_name,
 	};
 
-const char *__Y5QFile_vtable_name_0 [] = {
+const char *_5QFile_vtable_name_0 [] = {
 	"_ZN5QFileD1Ev",
 	"_ZN5QFileD0Ev",
 	"_ZN5QFile4openEi",
@@ -31864,47 +31864,47 @@ const char *__Y5QFile_vtable_name_0 [] = {
 	"_ZN5QFile7ungetchEi",
 	};
 
-struct classvtable __Y5QFile_vtable [1] = {
+struct classvtable _5QFile_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	16,	/* Number of Vfuncs */
 	"_ZTI5QFile",
-	__Y5QFile_vtable_name_0,
+	_5QFile_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y5QFile_baseinfo[] = {
+struct base_type_info _5QFile_baseinfo[] = {
 	};
 
-struct classinfo _Y5QFile_classinfo = {
-	"_Y5QFile",
+struct classinfo _Z5QFile_classinfo = {
+	"_Z5QFile",
 	"_ZTV5QFile",
 	"_ZTI5QFile",	/* RTTI */
 	"_ZTI9QIODevice",
-	"_ZTT_Y5QFile",	/* VTT */
+	"_ZTT5QFile",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y5QFile_typeinfo,
-	__Y5QFile_vtable,
-	__Y5QFile_baseinfo,
+	&_5QFile_typeinfo,
+	_5QFile_vtable,
+	_5QFile_baseinfo,
 	};
 
-char *__Y16QDomDocumentType_typeinfo_name[] = {
+char *_16QDomDocumentType_typeinfo_name[] = {
 	"_ZTI8QDomNode",
 	};
 
-struct classtypeinfo __Y16QDomDocumentType_typeinfo = {
+struct classtypeinfo _16QDomDocumentType_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y16QDomDocumentType",
-	__Y16QDomDocumentType_typeinfo_name,
+	"_ZTS16QDomDocumentType",
+	_16QDomDocumentType_typeinfo_name,
 	};
 
-const char *__Y16QDomDocumentType_vtable_name_0 [] = {
+const char *_16QDomDocumentType_vtable_name_0 [] = {
 	"_ZN16QDomDocumentTypeD1Ev",
 	"_ZN16QDomDocumentTypeD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -31954,46 +31954,46 @@ const char *__Y16QDomDocumentType_vtable_name_0 [] = {
 	"_ZNK16QDomDocumentType14internalSubsetEv",
 	};
 
-struct classvtable __Y16QDomDocumentType_vtable [1] = {
+struct classvtable _16QDomDocumentType_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	47,	/* Number of Vfuncs */
 	"_ZTI16QDomDocumentType",
-	__Y16QDomDocumentType_vtable_name_0,
+	_16QDomDocumentType_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y16QDomDocumentType_baseinfo[] = {
+struct base_type_info _16QDomDocumentType_baseinfo[] = {
 	};
 
-struct classinfo _Y16QDomDocumentType_classinfo = {
-	"_Y16QDomDocumentType",
+struct classinfo _Z16QDomDocumentType_classinfo = {
+	"_Z16QDomDocumentType",
 	"_ZTV16QDomDocumentType",
 	"_ZTI16QDomDocumentType",	/* RTTI */
 	"_ZTI8QDomNode",
-	"_ZTT_Y16QDomDocumentType",	/* VTT */
+	"_ZTT16QDomDocumentType",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y16QDomDocumentType_typeinfo,
-	__Y16QDomDocumentType_vtable,
-	__Y16QDomDocumentType_baseinfo,
+	&_16QDomDocumentType_typeinfo,
+	_16QDomDocumentType_vtable,
+	_16QDomDocumentType_baseinfo,
 	};
 
-char *__Y12QListBoxItem_typeinfo_name[] = {
+char *_12QListBoxItem_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y12QListBoxItem_typeinfo = {
+struct classtypeinfo _12QListBoxItem_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y12QListBoxItem",
-	__Y12QListBoxItem_typeinfo_name,
+	"_ZTS12QListBoxItem",
+	_12QListBoxItem_typeinfo_name,
 	};
 
-const char *__Y12QListBoxItem_vtable_name_0 [] = {
+const char *_12QListBoxItem_vtable_name_0 [] = {
 	"_ZN12QListBoxItemD1Ev",
 	"_ZN12QListBoxItemD0Ev",
 	"_ZNK12QListBoxItem4textEv",
@@ -32005,92 +32005,92 @@ const char *__Y12QListBoxItem_vtable_name_0 [] = {
 	"_ZN12QListBoxItem7setTextERK7QString",
 	};
 
-struct classvtable __Y12QListBoxItem_vtable [1] = {
+struct classvtable _12QListBoxItem_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI12QListBoxItem",
-	__Y12QListBoxItem_vtable_name_0,
+	_12QListBoxItem_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y12QListBoxItem_baseinfo[] = {
+struct base_type_info _12QListBoxItem_baseinfo[] = {
 	};
 
-struct classinfo _Y12QListBoxItem_classinfo = {
-	"_Y12QListBoxItem",
+struct classinfo _Z12QListBoxItem_classinfo = {
+	"_Z12QListBoxItem",
 	"_ZTV12QListBoxItem",
 	"_ZTI12QListBoxItem",	/* RTTI */
 	"",
-	"_ZTT_Y12QListBoxItem",	/* VTT */
+	"_ZTT12QListBoxItem",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QListBoxItem_typeinfo,
-	__Y12QListBoxItem_vtable,
-	__Y12QListBoxItem_baseinfo,
+	&_12QListBoxItem_typeinfo,
+	_12QListBoxItem_vtable,
+	_12QListBoxItem_baseinfo,
 	};
 
-char *__Y18QDragResponseEvent_typeinfo_name[] = {
+char *_18QDragResponseEvent_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo __Y18QDragResponseEvent_typeinfo = {
+struct classtypeinfo _18QDragResponseEvent_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y18QDragResponseEvent",
-	__Y18QDragResponseEvent_typeinfo_name,
+	"_ZTS18QDragResponseEvent",
+	_18QDragResponseEvent_typeinfo_name,
 	};
 
-const char *__Y18QDragResponseEvent_vtable_name_0 [] = {
+const char *_18QDragResponseEvent_vtable_name_0 [] = {
 	"_ZN18QDragResponseEventD1Ev",
 	"_ZN18QDragResponseEventD0Ev",
 	};
 
-struct classvtable __Y18QDragResponseEvent_vtable [1] = {
+struct classvtable _18QDragResponseEvent_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI18QDragResponseEvent",
-	__Y18QDragResponseEvent_vtable_name_0,
+	_18QDragResponseEvent_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y18QDragResponseEvent_baseinfo[] = {
+struct base_type_info _18QDragResponseEvent_baseinfo[] = {
 	};
 
-struct classinfo _Y18QDragResponseEvent_classinfo = {
-	"_Y18QDragResponseEvent",
+struct classinfo _Z18QDragResponseEvent_classinfo = {
+	"_Z18QDragResponseEvent",
 	"_ZTV18QDragResponseEvent",
 	"_ZTI18QDragResponseEvent",	/* RTTI */
 	"_ZTI6QEvent",
-	"_ZTT_Y18QDragResponseEvent",	/* VTT */
+	"_ZTT18QDragResponseEvent",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y18QDragResponseEvent_typeinfo,
-	__Y18QDragResponseEvent_vtable,
-	__Y18QDragResponseEvent_baseinfo,
+	&_18QDragResponseEvent_typeinfo,
+	_18QDragResponseEvent_vtable,
+	_18QDragResponseEvent_baseinfo,
 	};
 
-char *__Y12QDomDocument_typeinfo_name[] = {
+char *_12QDomDocument_typeinfo_name[] = {
 	"_ZTI8QDomNode",
 	};
 
-struct classtypeinfo __Y12QDomDocument_typeinfo = {
+struct classtypeinfo _12QDomDocument_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y12QDomDocument",
-	__Y12QDomDocument_typeinfo_name,
+	"_ZTS12QDomDocument",
+	_12QDomDocument_typeinfo_name,
 	};
 
-const char *__Y12QDomDocument_vtable_name_0 [] = {
+const char *_12QDomDocument_vtable_name_0 [] = {
 	"_ZN12QDomDocumentD1Ev",
 	"_ZN12QDomDocumentD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -32134,47 +32134,47 @@ const char *__Y12QDomDocument_vtable_name_0 [] = {
 	"_ZNK8QDomNode9isCommentEv",
 	};
 
-struct classvtable __Y12QDomDocument_vtable [1] = {
+struct classvtable _12QDomDocument_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	41,	/* Number of Vfuncs */
 	"_ZTI12QDomDocument",
-	__Y12QDomDocument_vtable_name_0,
+	_12QDomDocument_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y12QDomDocument_baseinfo[] = {
+struct base_type_info _12QDomDocument_baseinfo[] = {
 	};
 
-struct classinfo _Y12QDomDocument_classinfo = {
-	"_Y12QDomDocument",
+struct classinfo _Z12QDomDocument_classinfo = {
+	"_Z12QDomDocument",
 	"_ZTV12QDomDocument",
 	"_ZTI12QDomDocument",	/* RTTI */
 	"_ZTI8QDomNode",
-	"_ZTT_Y12QDomDocument",	/* VTT */
+	"_ZTT12QDomDocument",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QDomDocument_typeinfo,
-	__Y12QDomDocument_vtable,
-	__Y12QDomDocument_baseinfo,
+	&_12QDomDocument_typeinfo,
+	_12QDomDocument_vtable,
+	_12QDomDocument_baseinfo,
 	};
 
-char *__Y16QTextCodecPlugin_typeinfo_name[] = {
+char *_16QTextCodecPlugin_typeinfo_name[] = {
 	"_ZTI8QGPlugin",
 	};
 
-struct classtypeinfo __Y16QTextCodecPlugin_typeinfo = {
+struct classtypeinfo _16QTextCodecPlugin_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y16QTextCodecPlugin",
-	__Y16QTextCodecPlugin_typeinfo_name,
+	"_ZTS16QTextCodecPlugin",
+	_16QTextCodecPlugin_typeinfo_name,
 	};
 
-const char *__Y16QTextCodecPlugin_vtable_name_0 [] = {
+const char *_16QTextCodecPlugin_vtable_name_0 [] = {
 	"_ZNK16QTextCodecPlugin10metaObjectEv",
 	"_ZNK16QTextCodecPlugin9classNameEv",
 	"_ZN16QTextCodecPlugin7qt_castEPKc",
@@ -32202,47 +32202,47 @@ const char *__Y16QTextCodecPlugin_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y16QTextCodecPlugin_vtable [1] = {
+struct classvtable _16QTextCodecPlugin_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	25,	/* Number of Vfuncs */
 	"_ZTI16QTextCodecPlugin",
-	__Y16QTextCodecPlugin_vtable_name_0,
+	_16QTextCodecPlugin_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y16QTextCodecPlugin_baseinfo[] = {
+struct base_type_info _16QTextCodecPlugin_baseinfo[] = {
 	};
 
-struct classinfo _Y16QTextCodecPlugin_classinfo = {
-	"_Y16QTextCodecPlugin",
+struct classinfo _Z16QTextCodecPlugin_classinfo = {
+	"_Z16QTextCodecPlugin",
 	"_ZTV16QTextCodecPlugin",
 	"_ZTI16QTextCodecPlugin",	/* RTTI */
 	"_ZTI8QGPlugin",
-	"_ZTT_Y16QTextCodecPlugin",	/* VTT */
+	"_ZTT16QTextCodecPlugin",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y16QTextCodecPlugin_typeinfo,
-	__Y16QTextCodecPlugin_vtable,
-	__Y16QTextCodecPlugin_baseinfo,
+	&_16QTextCodecPlugin_typeinfo,
+	_16QTextCodecPlugin_vtable,
+	_16QTextCodecPlugin_baseinfo,
 	};
 
-char *__Y13QWidgetPlugin_typeinfo_name[] = {
+char *_13QWidgetPlugin_typeinfo_name[] = {
 	"_ZTI8QGPlugin",
 	};
 
-struct classtypeinfo __Y13QWidgetPlugin_typeinfo = {
+struct classtypeinfo _13QWidgetPlugin_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y13QWidgetPlugin",
-	__Y13QWidgetPlugin_typeinfo_name,
+	"_ZTS13QWidgetPlugin",
+	_13QWidgetPlugin_typeinfo_name,
 	};
 
-const char *__Y13QWidgetPlugin_vtable_name_0 [] = {
+const char *_13QWidgetPlugin_vtable_name_0 [] = {
 	"_ZNK13QWidgetPlugin10metaObjectEv",
 	"_ZNK13QWidgetPlugin9classNameEv",
 	"_ZN13QWidgetPlugin7qt_castEPKc",
@@ -32274,46 +32274,46 @@ const char *__Y13QWidgetPlugin_vtable_name_0 [] = {
 	"_ZNK13QWidgetPlugin11isContainerERK7QString",
 	};
 
-struct classvtable __Y13QWidgetPlugin_vtable [1] = {
+struct classvtable _13QWidgetPlugin_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	29,	/* Number of Vfuncs */
 	"_ZTI13QWidgetPlugin",
-	__Y13QWidgetPlugin_vtable_name_0,
+	_13QWidgetPlugin_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y13QWidgetPlugin_baseinfo[] = {
+struct base_type_info _13QWidgetPlugin_baseinfo[] = {
 	};
 
-struct classinfo _Y13QWidgetPlugin_classinfo = {
-	"_Y13QWidgetPlugin",
+struct classinfo _Z13QWidgetPlugin_classinfo = {
+	"_Z13QWidgetPlugin",
 	"_ZTV13QWidgetPlugin",
 	"_ZTI13QWidgetPlugin",	/* RTTI */
 	"_ZTI8QGPlugin",
-	"_ZTT_Y13QWidgetPlugin",	/* VTT */
+	"_ZTT13QWidgetPlugin",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y13QWidgetPlugin_typeinfo,
-	__Y13QWidgetPlugin_vtable,
-	__Y13QWidgetPlugin_baseinfo,
+	&_13QWidgetPlugin_typeinfo,
+	_13QWidgetPlugin_vtable,
+	_13QWidgetPlugin_baseinfo,
 	};
 
-char *__Y10QScrollBar_typeinfo_name[] = {
+char *_10QScrollBar_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y10QScrollBar_typeinfo = {
+struct classtypeinfo _10QScrollBar_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
-	"_ZTS_Y10QScrollBar",
-	__Y10QScrollBar_typeinfo_name,
+	"_ZTS10QScrollBar",
+	_10QScrollBar_typeinfo_name,
 	};
 
-const char *__Y10QScrollBar_vtable_name_0 [] = {
+const char *_10QScrollBar_vtable_name_0 [] = {
 	"_ZNK10QScrollBar10metaObjectEv",
 	"_ZNK10QScrollBar9classNameEv",
 	"_ZN10QScrollBar7qt_castEPKc",
@@ -32431,7 +32431,7 @@ const char *__Y10QScrollBar_vtable_name_0 [] = {
 	"_ZN10QScrollBar11rangeChangeEv",
 	};
 
-const char *__Y10QScrollBar_vtable_name_1 [] = {
+const char *_10QScrollBar_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QScrollBarD1Ev",
 #endif
@@ -32505,7 +32505,7 @@ const char *__Y10QScrollBar_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-const char *__Y10QScrollBar_vtable_name_2 [] = {
+const char *_10QScrollBar_vtable_name_2 [] = {
 #if defined __i386__
 	"_ZThn116_N10QScrollBarD1Ev",
 #endif
@@ -32613,14 +32613,14 @@ const char *__Y10QScrollBar_vtable_name_2 [] = {
 #endif
 	};
 
-struct classvtable __Y10QScrollBar_vtable [3] = {
+struct classvtable _10QScrollBar_vtable [3] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	115,	/* Number of Vfuncs */
 	"_ZTI10QScrollBar",
-	__Y10QScrollBar_vtable_name_0,
+	_10QScrollBar_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -32654,7 +32654,7 @@ struct classvtable __Y10QScrollBar_vtable [3] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI10QScrollBar",
-	__Y10QScrollBar_vtable_name_1,
+	_10QScrollBar_vtable_name_1,
 	},
 	{
 #if defined __i386__
@@ -32688,11 +32688,11 @@ struct classvtable __Y10QScrollBar_vtable [3] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI10QScrollBar",
-	__Y10QScrollBar_vtable_name_2,
+	_10QScrollBar_vtable_name_2,
 	},
 };
 
-struct base_type_info __Y10QScrollBar_baseinfo[] = {
+struct base_type_info _10QScrollBar_baseinfo[] = {
 	{"_ZTI7QWidget",	2U},
 #if defined __i386__
 	{"_ZTI13QRangeControl",	29698U},
@@ -32717,33 +32717,33 @@ struct base_type_info __Y10QScrollBar_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Y10QScrollBar_classinfo = {
-	"_Y10QScrollBar",
+struct classinfo _Z10QScrollBar_classinfo = {
+	"_Z10QScrollBar",
 	"_ZTV10QScrollBar",
 	"_ZTI10QScrollBar",	/* RTTI */
 	"_ZTI7QWidget",
-	"_ZTT_Y10QScrollBar",	/* VTT */
+	"_ZTT10QScrollBar",	/* VTT */
 	3,
 	0,
 	2,
 	0,	/* numVTT */
 	0U,
-	&__Y10QScrollBar_typeinfo,
-	__Y10QScrollBar_vtable,
-	__Y10QScrollBar_baseinfo,
+	&_10QScrollBar_typeinfo,
+	_10QScrollBar_vtable,
+	_10QScrollBar_baseinfo,
 	};
 
-char *__Y7QBitmap_typeinfo_name[] = {
+char *_7QBitmap_typeinfo_name[] = {
 	"_ZTI7QPixmap",
 	};
 
-struct classtypeinfo __Y7QBitmap_typeinfo = {
+struct classtypeinfo _7QBitmap_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y7QBitmap",
-	__Y7QBitmap_typeinfo_name,
+	"_ZTS7QBitmap",
+	_7QBitmap_typeinfo_name,
 	};
 
-const char *__Y7QBitmap_vtable_name_0 [] = {
+const char *_7QBitmap_vtable_name_0 [] = {
 	"_ZN7QBitmapD1Ev",
 	"_ZN7QBitmapD0Ev",
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -32758,63 +32758,63 @@ const char *__Y7QBitmap_vtable_name_0 [] = {
 	"_ZN7QPixmap6detachEv",
 	};
 
-struct classvtable __Y7QBitmap_vtable [1] = {
+struct classvtable _7QBitmap_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	12,	/* Number of Vfuncs */
 	"_ZTI7QBitmap",
-	__Y7QBitmap_vtable_name_0,
+	_7QBitmap_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y7QBitmap_baseinfo[] = {
+struct base_type_info _7QBitmap_baseinfo[] = {
 	};
 
-struct classinfo _Y7QBitmap_classinfo = {
-	"_Y7QBitmap",
+struct classinfo _Z7QBitmap_classinfo = {
+	"_Z7QBitmap",
 	"_ZTV7QBitmap",
 	"_ZTI7QBitmap",	/* RTTI */
 	"_ZTI7QPixmap",
-	"_ZTT_Y7QBitmap",	/* VTT */
+	"_ZTT7QBitmap",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y7QBitmap_typeinfo,
-	__Y7QBitmap_vtable,
-	__Y7QBitmap_baseinfo,
+	&_7QBitmap_typeinfo,
+	_7QBitmap_vtable,
+	_7QBitmap_baseinfo,
 	};
 
-char *__Y12QIconFactory_typeinfo_name[] = {
+char *_12QIconFactory_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y12QIconFactory_typeinfo = {
+struct classtypeinfo _12QIconFactory_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
-	"_ZTS_Y12QIconFactory",
-	__Y12QIconFactory_typeinfo_name,
+	"_ZTS12QIconFactory",
+	_12QIconFactory_typeinfo_name,
 	};
 
-const char *__Y12QIconFactory_vtable_name_0 [] = {
+const char *_12QIconFactory_vtable_name_0 [] = {
 	"_ZN12QIconFactoryD1Ev",
 	"_ZN12QIconFactoryD0Ev",
 	"_ZN12QIconFactory12createPixmapERK8QIconSetNS0_4SizeENS0_4ModeENS0_5StateE",
 	};
 
-struct classvtable __Y12QIconFactory_vtable [1] = {
+struct classvtable _12QIconFactory_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	3,	/* Number of Vfuncs */
 	"_ZTI12QIconFactory",
-	__Y12QIconFactory_vtable_name_0,
+	_12QIconFactory_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y12QIconFactory_baseinfo[] = {
+struct base_type_info _12QIconFactory_baseinfo[] = {
 #if defined __i386__
 	{"_ZTI7QShared",	1024U},
 #endif
@@ -32838,32 +32838,32 @@ struct base_type_info __Y12QIconFactory_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Y12QIconFactory_classinfo = {
-	"_Y12QIconFactory",
+struct classinfo _Z12QIconFactory_classinfo = {
+	"_Z12QIconFactory",
 	"_ZTV12QIconFactory",
 	"_ZTI12QIconFactory",	/* RTTI */
 	"_ZTI7QShared",
-	"_ZTT_Y12QIconFactory",	/* VTT */
+	"_ZTT12QIconFactory",	/* VTT */
 	1,
 	0,
 	1,
 	0,	/* numVTT */
 	0U,
-	&__Y12QIconFactory_typeinfo,
-	__Y12QIconFactory_vtable,
-	__Y12QIconFactory_baseinfo,
+	&_12QIconFactory_typeinfo,
+	_12QIconFactory_vtable,
+	_12QIconFactory_baseinfo,
 	};
 
-char *__Y8QSpinBox_typeinfo_name[] = {
+char *_8QSpinBox_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y8QSpinBox_typeinfo = {
+struct classtypeinfo _8QSpinBox_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
-	"_ZTS_Y8QSpinBox",
-	__Y8QSpinBox_typeinfo_name,
+	"_ZTS8QSpinBox",
+	_8QSpinBox_typeinfo_name,
 	};
 
-const char *__Y8QSpinBox_vtable_name_0 [] = {
+const char *_8QSpinBox_vtable_name_0 [] = {
 	"_ZNK8QSpinBox10metaObjectEv",
 	"_ZNK8QSpinBox9classNameEv",
 	"_ZN8QSpinBox7qt_castEPKc",
@@ -32995,7 +32995,7 @@ const char *__Y8QSpinBox_vtable_name_0 [] = {
 	"_ZN8QSpinBox11rangeChangeEv",
 	};
 
-const char *__Y8QSpinBox_vtable_name_1 [] = {
+const char *_8QSpinBox_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N8QSpinBoxD1Ev",
 #endif
@@ -33069,7 +33069,7 @@ const char *__Y8QSpinBox_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-const char *__Y8QSpinBox_vtable_name_2 [] = {
+const char *_8QSpinBox_vtable_name_2 [] = {
 #if defined __i386__
 	"_ZThn116_N8QSpinBoxD1Ev",
 #endif
@@ -33157,14 +33157,14 @@ const char *__Y8QSpinBox_vtable_name_2 [] = {
 	"_ZN13QRangeControl10stepChangeEv",
 	};
 
-struct classvtable __Y8QSpinBox_vtable [3] = {
+struct classvtable _8QSpinBox_vtable [3] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	129,	/* Number of Vfuncs */
 	"_ZTI8QSpinBox",
-	__Y8QSpinBox_vtable_name_0,
+	_8QSpinBox_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -33198,7 +33198,7 @@ struct classvtable __Y8QSpinBox_vtable [3] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI8QSpinBox",
-	__Y8QSpinBox_vtable_name_1,
+	_8QSpinBox_vtable_name_1,
 	},
 	{
 #if defined __i386__
@@ -33232,11 +33232,11 @@ struct classvtable __Y8QSpinBox_vtable [3] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI8QSpinBox",
-	__Y8QSpinBox_vtable_name_2,
+	_8QSpinBox_vtable_name_2,
 	},
 };
 
-struct base_type_info __Y8QSpinBox_baseinfo[] = {
+struct base_type_info _8QSpinBox_baseinfo[] = {
 	{"_ZTI7QWidget",	2U},
 #if defined __i386__
 	{"_ZTI13QRangeControl",	29698U},
@@ -33261,78 +33261,78 @@ struct base_type_info __Y8QSpinBox_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Y8QSpinBox_classinfo = {
-	"_Y8QSpinBox",
+struct classinfo _Z8QSpinBox_classinfo = {
+	"_Z8QSpinBox",
 	"_ZTV8QSpinBox",
 	"_ZTI8QSpinBox",	/* RTTI */
 	"_ZTI7QWidget",
-	"_ZTT_Y8QSpinBox",	/* VTT */
+	"_ZTT8QSpinBox",	/* VTT */
 	3,
 	0,
 	2,
 	0,	/* numVTT */
 	0U,
-	&__Y8QSpinBox_typeinfo,
-	__Y8QSpinBox_vtable,
-	__Y8QSpinBox_baseinfo,
+	&_8QSpinBox_typeinfo,
+	_8QSpinBox_vtable,
+	_8QSpinBox_baseinfo,
 	};
 
-char *__Y8QLibrary_typeinfo_name[] = {
+char *_8QLibrary_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y8QLibrary_typeinfo = {
+struct classtypeinfo _8QLibrary_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y8QLibrary",
-	__Y8QLibrary_typeinfo_name,
+	"_ZTS8QLibrary",
+	_8QLibrary_typeinfo_name,
 	};
 
-const char *__Y8QLibrary_vtable_name_0 [] = {
+const char *_8QLibrary_vtable_name_0 [] = {
 	"_ZN8QLibraryD1Ev",
 	"_ZN8QLibraryD0Ev",
 	"_ZN8QLibrary6unloadEv",
 	};
 
-struct classvtable __Y8QLibrary_vtable [1] = {
+struct classvtable _8QLibrary_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	3,	/* Number of Vfuncs */
 	"_ZTI8QLibrary",
-	__Y8QLibrary_vtable_name_0,
+	_8QLibrary_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y8QLibrary_baseinfo[] = {
+struct base_type_info _8QLibrary_baseinfo[] = {
 	};
 
-struct classinfo _Y8QLibrary_classinfo = {
-	"_Y8QLibrary",
+struct classinfo _Z8QLibrary_classinfo = {
+	"_Z8QLibrary",
 	"_ZTV8QLibrary",
 	"_ZTI8QLibrary",	/* RTTI */
 	"",
-	"_ZTT_Y8QLibrary",	/* VTT */
+	"_ZTT8QLibrary",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y8QLibrary_typeinfo,
-	__Y8QLibrary_vtable,
-	__Y8QLibrary_baseinfo,
+	&_8QLibrary_typeinfo,
+	_8QLibrary_vtable,
+	_8QLibrary_baseinfo,
 	};
 
-char *__Y11QEucKrCodec_typeinfo_name[] = {
+char *_11QEucKrCodec_typeinfo_name[] = {
 	"_ZTI10QTextCodec",
 	};
 
-struct classtypeinfo __Y11QEucKrCodec_typeinfo = {
+struct classtypeinfo _11QEucKrCodec_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QEucKrCodec",
-	__Y11QEucKrCodec_typeinfo_name,
+	"_ZTS11QEucKrCodec",
+	_11QEucKrCodec_typeinfo_name,
 	};
 
-const char *__Y11QEucKrCodec_vtable_name_0 [] = {
+const char *_11QEucKrCodec_vtable_name_0 [] = {
 	"_ZN11QEucKrCodecD1Ev",
 	"_ZN11QEucKrCodecD0Ev",
 	"_ZNK11QEucKrCodec4nameEv",
@@ -33350,47 +33350,47 @@ const char *__Y11QEucKrCodec_vtable_name_0 [] = {
 	"_ZNK10QTextCodec20characterFromUnicodeERK7QStringi",
 	};
 
-struct classvtable __Y11QEucKrCodec_vtable [1] = {
+struct classvtable _11QEucKrCodec_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	15,	/* Number of Vfuncs */
 	"_ZTI11QEucKrCodec",
-	__Y11QEucKrCodec_vtable_name_0,
+	_11QEucKrCodec_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QEucKrCodec_baseinfo[] = {
+struct base_type_info _11QEucKrCodec_baseinfo[] = {
 	};
 
-struct classinfo _Y11QEucKrCodec_classinfo = {
-	"_Y11QEucKrCodec",
+struct classinfo _Z11QEucKrCodec_classinfo = {
+	"_Z11QEucKrCodec",
 	"_ZTV11QEucKrCodec",
 	"_ZTI11QEucKrCodec",	/* RTTI */
 	"_ZTI10QTextCodec",
-	"_ZTT_Y11QEucKrCodec",	/* VTT */
+	"_ZTT11QEucKrCodec",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QEucKrCodec_typeinfo,
-	__Y11QEucKrCodec_vtable,
-	__Y11QEucKrCodec_baseinfo,
+	&_11QEucKrCodec_typeinfo,
+	_11QEucKrCodec_vtable,
+	_11QEucKrCodec_baseinfo,
 	};
 
-char *__Y12QWidgetStack_typeinfo_name[] = {
+char *_12QWidgetStack_typeinfo_name[] = {
 	"_ZTI6QFrame",
 	};
 
-struct classtypeinfo __Y12QWidgetStack_typeinfo = {
+struct classtypeinfo _12QWidgetStack_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y12QWidgetStack",
-	__Y12QWidgetStack_typeinfo_name,
+	"_ZTS12QWidgetStack",
+	_12QWidgetStack_typeinfo_name,
 	};
 
-const char *__Y12QWidgetStack_vtable_name_0 [] = {
+const char *_12QWidgetStack_vtable_name_0 [] = {
 	"_ZNK12QWidgetStack10metaObjectEv",
 	"_ZNK12QWidgetStack9classNameEv",
 	"_ZN12QWidgetStack7qt_castEPKc",
@@ -33512,7 +33512,7 @@ const char *__Y12QWidgetStack_vtable_name_0 [] = {
 	"_ZN12QWidgetStack18setChildGeometriesEv",
 	};
 
-const char *__Y12QWidgetStack_vtable_name_1 [] = {
+const char *_12QWidgetStack_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N12QWidgetStackD1Ev",
 #endif
@@ -33586,14 +33586,14 @@ const char *__Y12QWidgetStack_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y12QWidgetStack_vtable [2] = {
+struct classvtable _12QWidgetStack_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	119,	/* Number of Vfuncs */
 	"_ZTI12QWidgetStack",
-	__Y12QWidgetStack_vtable_name_0,
+	_12QWidgetStack_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -33627,40 +33627,40 @@ struct classvtable __Y12QWidgetStack_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI12QWidgetStack",
-	__Y12QWidgetStack_vtable_name_1,
+	_12QWidgetStack_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y12QWidgetStack_baseinfo[] = {
+struct base_type_info _12QWidgetStack_baseinfo[] = {
 	};
 
-struct classinfo _Y12QWidgetStack_classinfo = {
-	"_Y12QWidgetStack",
+struct classinfo _Z12QWidgetStack_classinfo = {
+	"_Z12QWidgetStack",
 	"_ZTV12QWidgetStack",
 	"_ZTI12QWidgetStack",	/* RTTI */
 	"_ZTI6QFrame",
-	"_ZTT_Y12QWidgetStack",	/* VTT */
+	"_ZTT12QWidgetStack",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QWidgetStack_typeinfo,
-	__Y12QWidgetStack_vtable,
-	__Y12QWidgetStack_baseinfo,
+	&_12QWidgetStack_typeinfo,
+	_12QWidgetStack_vtable,
+	_12QWidgetStack_baseinfo,
 	};
 
-char *__Y6QLabel_typeinfo_name[] = {
+char *_6QLabel_typeinfo_name[] = {
 	"_ZTI6QFrame",
 	};
 
-struct classtypeinfo __Y6QLabel_typeinfo = {
+struct classtypeinfo _6QLabel_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y6QLabel",
-	__Y6QLabel_typeinfo_name,
+	"_ZTS6QLabel",
+	_6QLabel_typeinfo_name,
 	};
 
-const char *__Y6QLabel_vtable_name_0 [] = {
+const char *_6QLabel_vtable_name_0 [] = {
 	"_ZNK6QLabel10metaObjectEv",
 	"_ZNK6QLabel9classNameEv",
 	"_ZN6QLabel7qt_castEPKc",
@@ -33790,7 +33790,7 @@ const char *__Y6QLabel_vtable_name_0 [] = {
 	"_ZN6QLabel6setNumEd",
 	};
 
-const char *__Y6QLabel_vtable_name_1 [] = {
+const char *_6QLabel_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N6QLabelD1Ev",
 #endif
@@ -33864,14 +33864,14 @@ const char *__Y6QLabel_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y6QLabel_vtable [2] = {
+struct classvtable _6QLabel_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	127,	/* Number of Vfuncs */
 	"_ZTI6QLabel",
-	__Y6QLabel_vtable_name_0,
+	_6QLabel_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -33905,40 +33905,40 @@ struct classvtable __Y6QLabel_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI6QLabel",
-	__Y6QLabel_vtable_name_1,
+	_6QLabel_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y6QLabel_baseinfo[] = {
+struct base_type_info _6QLabel_baseinfo[] = {
 	};
 
-struct classinfo _Y6QLabel_classinfo = {
-	"_Y6QLabel",
+struct classinfo _Z6QLabel_classinfo = {
+	"_Z6QLabel",
 	"_ZTV6QLabel",
 	"_ZTI6QLabel",	/* RTTI */
 	"_ZTI6QFrame",
-	"_ZTT_Y6QLabel",	/* VTT */
+	"_ZTT6QLabel",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y6QLabel_typeinfo,
-	__Y6QLabel_vtable,
-	__Y6QLabel_baseinfo,
+	&_6QLabel_typeinfo,
+	_6QLabel_vtable,
+	_6QLabel_baseinfo,
 	};
 
-char *__Y11QStyleSheet_typeinfo_name[] = {
+char *_11QStyleSheet_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y11QStyleSheet_typeinfo = {
+struct classtypeinfo _11QStyleSheet_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QStyleSheet",
-	__Y11QStyleSheet_typeinfo_name,
+	"_ZTS11QStyleSheet",
+	_11QStyleSheet_typeinfo_name,
 	};
 
-const char *__Y11QStyleSheet_vtable_name_0 [] = {
+const char *_11QStyleSheet_vtable_name_0 [] = {
 	"_ZNK11QStyleSheet10metaObjectEv",
 	"_ZNK11QStyleSheet9classNameEv",
 	"_ZN11QStyleSheet7qt_castEPKc",
@@ -33965,92 +33965,92 @@ const char *__Y11QStyleSheet_vtable_name_0 [] = {
 	"_ZNK11QStyleSheet5errorERK7QString",
 	};
 
-struct classvtable __Y11QStyleSheet_vtable [1] = {
+struct classvtable _11QStyleSheet_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	24,	/* Number of Vfuncs */
 	"_ZTI11QStyleSheet",
-	__Y11QStyleSheet_vtable_name_0,
+	_11QStyleSheet_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QStyleSheet_baseinfo[] = {
+struct base_type_info _11QStyleSheet_baseinfo[] = {
 	};
 
-struct classinfo _Y11QStyleSheet_classinfo = {
-	"_Y11QStyleSheet",
+struct classinfo _Z11QStyleSheet_classinfo = {
+	"_Z11QStyleSheet",
 	"_ZTV11QStyleSheet",
 	"_ZTI11QStyleSheet",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y11QStyleSheet",	/* VTT */
+	"_ZTT11QStyleSheet",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QStyleSheet_typeinfo,
-	__Y11QStyleSheet_vtable,
-	__Y11QStyleSheet_baseinfo,
+	&_11QStyleSheet_typeinfo,
+	_11QStyleSheet_vtable,
+	_11QStyleSheet_baseinfo,
 	};
 
-char *__Y12QCustomEvent_typeinfo_name[] = {
+char *_12QCustomEvent_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo __Y12QCustomEvent_typeinfo = {
+struct classtypeinfo _12QCustomEvent_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y12QCustomEvent",
-	__Y12QCustomEvent_typeinfo_name,
+	"_ZTS12QCustomEvent",
+	_12QCustomEvent_typeinfo_name,
 	};
 
-const char *__Y12QCustomEvent_vtable_name_0 [] = {
+const char *_12QCustomEvent_vtable_name_0 [] = {
 	"_ZN12QCustomEventD1Ev",
 	"_ZN12QCustomEventD0Ev",
 	};
 
-struct classvtable __Y12QCustomEvent_vtable [1] = {
+struct classvtable _12QCustomEvent_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI12QCustomEvent",
-	__Y12QCustomEvent_vtable_name_0,
+	_12QCustomEvent_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y12QCustomEvent_baseinfo[] = {
+struct base_type_info _12QCustomEvent_baseinfo[] = {
 	};
 
-struct classinfo _Y12QCustomEvent_classinfo = {
-	"_Y12QCustomEvent",
+struct classinfo _Z12QCustomEvent_classinfo = {
+	"_Z12QCustomEvent",
 	"_ZTV12QCustomEvent",
 	"_ZTI12QCustomEvent",	/* RTTI */
 	"_ZTI6QEvent",
-	"_ZTT_Y12QCustomEvent",	/* VTT */
+	"_ZTT12QCustomEvent",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QCustomEvent_typeinfo,
-	__Y12QCustomEvent_vtable,
-	__Y12QCustomEvent_baseinfo,
+	&_12QCustomEvent_typeinfo,
+	_12QCustomEvent_vtable,
+	_12QCustomEvent_baseinfo,
 	};
 
-char *__Y14QListBoxPixmap_typeinfo_name[] = {
+char *_14QListBoxPixmap_typeinfo_name[] = {
 	"_ZTI12QListBoxItem",
 	};
 
-struct classtypeinfo __Y14QListBoxPixmap_typeinfo = {
+struct classtypeinfo _14QListBoxPixmap_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y14QListBoxPixmap",
-	__Y14QListBoxPixmap_typeinfo_name,
+	"_ZTS14QListBoxPixmap",
+	_14QListBoxPixmap_typeinfo_name,
 	};
 
-const char *__Y14QListBoxPixmap_vtable_name_0 [] = {
+const char *_14QListBoxPixmap_vtable_name_0 [] = {
 	"_ZN14QListBoxPixmapD1Ev",
 	"_ZN14QListBoxPixmapD0Ev",
 	"_ZNK12QListBoxItem4textEv",
@@ -34062,47 +34062,47 @@ const char *__Y14QListBoxPixmap_vtable_name_0 [] = {
 	"_ZN12QListBoxItem7setTextERK7QString",
 	};
 
-struct classvtable __Y14QListBoxPixmap_vtable [1] = {
+struct classvtable _14QListBoxPixmap_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI14QListBoxPixmap",
-	__Y14QListBoxPixmap_vtable_name_0,
+	_14QListBoxPixmap_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y14QListBoxPixmap_baseinfo[] = {
+struct base_type_info _14QListBoxPixmap_baseinfo[] = {
 	};
 
-struct classinfo _Y14QListBoxPixmap_classinfo = {
-	"_Y14QListBoxPixmap",
+struct classinfo _Z14QListBoxPixmap_classinfo = {
+	"_Z14QListBoxPixmap",
 	"_ZTV14QListBoxPixmap",
 	"_ZTI14QListBoxPixmap",	/* RTTI */
 	"_ZTI12QListBoxItem",
-	"_ZTT_Y14QListBoxPixmap",	/* VTT */
+	"_ZTT14QListBoxPixmap",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y14QListBoxPixmap_typeinfo,
-	__Y14QListBoxPixmap_vtable,
-	__Y14QListBoxPixmap_baseinfo,
+	&_14QListBoxPixmap_typeinfo,
+	_14QListBoxPixmap_vtable,
+	_14QListBoxPixmap_baseinfo,
 	};
 
-char *__Y12QDragManager_typeinfo_name[] = {
+char *_12QDragManager_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y12QDragManager_typeinfo = {
+struct classtypeinfo _12QDragManager_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y12QDragManager",
-	__Y12QDragManager_typeinfo_name,
+	"_ZTS12QDragManager",
+	_12QDragManager_typeinfo_name,
 	};
 
-const char *__Y12QDragManager_vtable_name_0 [] = {
+const char *_12QDragManager_vtable_name_0 [] = {
 	"_ZNK12QDragManager10metaObjectEv",
 	"_ZNK12QDragManager9classNameEv",
 	"_ZN12QDragManager7qt_castEPKc",
@@ -34126,47 +34126,47 @@ const char *__Y12QDragManager_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable __Y12QDragManager_vtable [1] = {
+struct classvtable _12QDragManager_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI12QDragManager",
-	__Y12QDragManager_vtable_name_0,
+	_12QDragManager_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y12QDragManager_baseinfo[] = {
+struct base_type_info _12QDragManager_baseinfo[] = {
 	};
 
-struct classinfo _Y12QDragManager_classinfo = {
-	"_Y12QDragManager",
+struct classinfo _Z12QDragManager_classinfo = {
+	"_Z12QDragManager",
 	"_ZTV12QDragManager",
 	"_ZTI12QDragManager",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y12QDragManager",	/* VTT */
+	"_ZTT12QDragManager",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QDragManager_typeinfo,
-	__Y12QDragManager_vtable,
-	__Y12QDragManager_baseinfo,
+	&_12QDragManager_typeinfo,
+	_12QDragManager_vtable,
+	_12QDragManager_baseinfo,
 	};
 
-char *__Y8QDomAttr_typeinfo_name[] = {
+char *_8QDomAttr_typeinfo_name[] = {
 	"_ZTI8QDomNode",
 	};
 
-struct classtypeinfo __Y8QDomAttr_typeinfo = {
+struct classtypeinfo _8QDomAttr_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y8QDomAttr",
-	__Y8QDomAttr_typeinfo_name,
+	"_ZTS8QDomAttr",
+	_8QDomAttr_typeinfo_name,
 	};
 
-const char *__Y8QDomAttr_vtable_name_0 [] = {
+const char *_8QDomAttr_vtable_name_0 [] = {
 	"_ZN8QDomAttrD1Ev",
 	"_ZN8QDomAttrD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -34215,140 +34215,140 @@ const char *__Y8QDomAttr_vtable_name_0 [] = {
 	"_ZN8QDomAttr8setValueERK7QString",
 	};
 
-struct classvtable __Y8QDomAttr_vtable [1] = {
+struct classvtable _8QDomAttr_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	46,	/* Number of Vfuncs */
 	"_ZTI8QDomAttr",
-	__Y8QDomAttr_vtable_name_0,
+	_8QDomAttr_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y8QDomAttr_baseinfo[] = {
+struct base_type_info _8QDomAttr_baseinfo[] = {
 	};
 
-struct classinfo _Y8QDomAttr_classinfo = {
-	"_Y8QDomAttr",
+struct classinfo _Z8QDomAttr_classinfo = {
+	"_Z8QDomAttr",
 	"_ZTV8QDomAttr",
 	"_ZTI8QDomAttr",	/* RTTI */
 	"_ZTI8QDomNode",
-	"_ZTT_Y8QDomAttr",	/* VTT */
+	"_ZTT8QDomAttr",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y8QDomAttr_typeinfo,
-	__Y8QDomAttr_vtable,
-	__Y8QDomAttr_baseinfo,
+	&_8QDomAttr_typeinfo,
+	_8QDomAttr_vtable,
+	_8QDomAttr_baseinfo,
 	};
 
-char *__Y10QWhatsThis_typeinfo_name[] = {
+char *_10QWhatsThis_typeinfo_name[] = {
 	"_ZTI2Qt",
 	};
 
-struct classtypeinfo __Y10QWhatsThis_typeinfo = {
+struct classtypeinfo _10QWhatsThis_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y10QWhatsThis",
-	__Y10QWhatsThis_typeinfo_name,
+	"_ZTS10QWhatsThis",
+	_10QWhatsThis_typeinfo_name,
 	};
 
-const char *__Y10QWhatsThis_vtable_name_0 [] = {
+const char *_10QWhatsThis_vtable_name_0 [] = {
 	"_ZN10QWhatsThisD1Ev",
 	"_ZN10QWhatsThisD0Ev",
 	"_ZN10QWhatsThis4textERK6QPoint",
 	"_ZN10QWhatsThis7clickedERK7QString",
 	};
 
-struct classvtable __Y10QWhatsThis_vtable [1] = {
+struct classvtable _10QWhatsThis_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	4,	/* Number of Vfuncs */
 	"_ZTI10QWhatsThis",
-	__Y10QWhatsThis_vtable_name_0,
+	_10QWhatsThis_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y10QWhatsThis_baseinfo[] = {
+struct base_type_info _10QWhatsThis_baseinfo[] = {
 	};
 
-struct classinfo _Y10QWhatsThis_classinfo = {
-	"_Y10QWhatsThis",
+struct classinfo _Z10QWhatsThis_classinfo = {
+	"_Z10QWhatsThis",
 	"_ZTV10QWhatsThis",
 	"_ZTI10QWhatsThis",	/* RTTI */
 	"_ZTI2Qt",
-	"_ZTT_Y10QWhatsThis",	/* VTT */
+	"_ZTT10QWhatsThis",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QWhatsThis_typeinfo,
-	__Y10QWhatsThis_vtable,
-	__Y10QWhatsThis_baseinfo,
+	&_10QWhatsThis_typeinfo,
+	_10QWhatsThis_vtable,
+	_10QWhatsThis_baseinfo,
 	};
 
-char *__Y12QDomNodeList_typeinfo_name[] = {
+char *_12QDomNodeList_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y12QDomNodeList_typeinfo = {
+struct classtypeinfo _12QDomNodeList_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y12QDomNodeList",
-	__Y12QDomNodeList_typeinfo_name,
+	"_ZTS12QDomNodeList",
+	_12QDomNodeList_typeinfo_name,
 	};
 
-const char *__Y12QDomNodeList_vtable_name_0 [] = {
+const char *_12QDomNodeList_vtable_name_0 [] = {
 	"_ZN12QDomNodeListD1Ev",
 	"_ZN12QDomNodeListD0Ev",
 	"_ZNK12QDomNodeList4itemEi",
 	"_ZNK12QDomNodeList6lengthEv",
 	};
 
-struct classvtable __Y12QDomNodeList_vtable [1] = {
+struct classvtable _12QDomNodeList_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	4,	/* Number of Vfuncs */
 	"_ZTI12QDomNodeList",
-	__Y12QDomNodeList_vtable_name_0,
+	_12QDomNodeList_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y12QDomNodeList_baseinfo[] = {
+struct base_type_info _12QDomNodeList_baseinfo[] = {
 	};
 
-struct classinfo _Y12QDomNodeList_classinfo = {
-	"_Y12QDomNodeList",
+struct classinfo _Z12QDomNodeList_classinfo = {
+	"_Z12QDomNodeList",
 	"_ZTV12QDomNodeList",
 	"_ZTI12QDomNodeList",	/* RTTI */
 	"",
-	"_ZTT_Y12QDomNodeList",	/* VTT */
+	"_ZTT12QDomNodeList",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QDomNodeList_typeinfo,
-	__Y12QDomNodeList_vtable,
-	__Y12QDomNodeList_baseinfo,
+	&_12QDomNodeList_typeinfo,
+	_12QDomNodeList_vtable,
+	_12QDomNodeList_baseinfo,
 	};
 
-char *__Y9QJisCodec_typeinfo_name[] = {
+char *_9QJisCodec_typeinfo_name[] = {
 	"_ZTI10QTextCodec",
 	};
 
-struct classtypeinfo __Y9QJisCodec_typeinfo = {
+struct classtypeinfo _9QJisCodec_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y9QJisCodec",
-	__Y9QJisCodec_typeinfo_name,
+	"_ZTS9QJisCodec",
+	_9QJisCodec_typeinfo_name,
 	};
 
-const char *__Y9QJisCodec_vtable_name_0 [] = {
+const char *_9QJisCodec_vtable_name_0 [] = {
 	"_ZN9QJisCodecD1Ev",
 	"_ZN9QJisCodecD0Ev",
 	"_ZNK9QJisCodec4nameEv",
@@ -34366,47 +34366,47 @@ const char *__Y9QJisCodec_vtable_name_0 [] = {
 	"_ZNK10QTextCodec20characterFromUnicodeERK7QStringi",
 	};
 
-struct classvtable __Y9QJisCodec_vtable [1] = {
+struct classvtable _9QJisCodec_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	15,	/* Number of Vfuncs */
 	"_ZTI9QJisCodec",
-	__Y9QJisCodec_vtable_name_0,
+	_9QJisCodec_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y9QJisCodec_baseinfo[] = {
+struct base_type_info _9QJisCodec_baseinfo[] = {
 	};
 
-struct classinfo _Y9QJisCodec_classinfo = {
-	"_Y9QJisCodec",
+struct classinfo _Z9QJisCodec_classinfo = {
+	"_Z9QJisCodec",
 	"_ZTV9QJisCodec",
 	"_ZTI9QJisCodec",	/* RTTI */
 	"_ZTI10QTextCodec",
-	"_ZTT_Y9QJisCodec",	/* VTT */
+	"_ZTT9QJisCodec",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QJisCodec_typeinfo,
-	__Y9QJisCodec_vtable,
-	__Y9QJisCodec_baseinfo,
+	&_9QJisCodec_typeinfo,
+	_9QJisCodec_vtable,
+	_9QJisCodec_baseinfo,
 	};
 
-char *__Y11QPointArray_typeinfo_name[] = {
+char *_11QPointArray_typeinfo_name[] = {
 	"_ZTI9QMemArrayI6QPointE",
 	};
 
-struct classtypeinfo __Y11QPointArray_typeinfo = {
+struct classtypeinfo _11QPointArray_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QPointArray",
-	__Y11QPointArray_typeinfo_name,
+	"_ZTS11QPointArray",
+	_11QPointArray_typeinfo_name,
 	};
 
-const char *__Y11QPointArray_vtable_name_0 [] = {
+const char *_11QPointArray_vtable_name_0 [] = {
 	"_ZN11QPointArrayD1Ev",
 	"_ZN11QPointArrayD0Ev",
 	"_ZN9QMemArrayI6QPointE6detachEv",
@@ -34414,47 +34414,47 @@ const char *__Y11QPointArray_vtable_name_0 [] = {
 	"_ZN7QGArray10deleteDataEPNS_10array_dataE",
 	};
 
-struct classvtable __Y11QPointArray_vtable [1] = {
+struct classvtable _11QPointArray_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI11QPointArray",
-	__Y11QPointArray_vtable_name_0,
+	_11QPointArray_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QPointArray_baseinfo[] = {
+struct base_type_info _11QPointArray_baseinfo[] = {
 	};
 
-struct classinfo _Y11QPointArray_classinfo = {
-	"_Y11QPointArray",
+struct classinfo _Z11QPointArray_classinfo = {
+	"_Z11QPointArray",
 	"_ZTV11QPointArray",
 	"_ZTI11QPointArray",	/* RTTI */
 	"_ZTI9QMemArrayI6QPointE",
-	"_ZTT_Y11QPointArray",	/* VTT */
+	"_ZTT11QPointArray",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QPointArray_typeinfo,
-	__Y11QPointArray_vtable,
-	__Y11QPointArray_baseinfo,
+	&_11QPointArray_typeinfo,
+	_11QPointArray_vtable,
+	_11QPointArray_baseinfo,
 	};
 
-char *__Y14QMultiLineEdit_typeinfo_name[] = {
+char *_14QMultiLineEdit_typeinfo_name[] = {
 	"_ZTI9QTextEdit",
 	};
 
-struct classtypeinfo __Y14QMultiLineEdit_typeinfo = {
+struct classtypeinfo _14QMultiLineEdit_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y14QMultiLineEdit",
-	__Y14QMultiLineEdit_typeinfo_name,
+	"_ZTS14QMultiLineEdit",
+	_14QMultiLineEdit_typeinfo_name,
 	};
 
-const char *__Y14QMultiLineEdit_vtable_name_0 [] = {
+const char *_14QMultiLineEdit_vtable_name_0 [] = {
 	"_ZNK14QMultiLineEdit10metaObjectEv",
 	"_ZNK14QMultiLineEdit9classNameEv",
 	"_ZN14QMultiLineEdit7qt_castEPKc",
@@ -34698,7 +34698,7 @@ const char *__Y14QMultiLineEdit_vtable_name_0 [] = {
 	"_ZN14QMultiLineEdit3endEb",
 	};
 
-const char *__Y14QMultiLineEdit_vtable_name_1 [] = {
+const char *_14QMultiLineEdit_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N14QMultiLineEditD1Ev",
 #endif
@@ -34772,14 +34772,14 @@ const char *__Y14QMultiLineEdit_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y14QMultiLineEdit_vtable [2] = {
+struct classvtable _14QMultiLineEdit_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	241,	/* Number of Vfuncs */
 	"_ZTI14QMultiLineEdit",
-	__Y14QMultiLineEdit_vtable_name_0,
+	_14QMultiLineEdit_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -34813,83 +34813,83 @@ struct classvtable __Y14QMultiLineEdit_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI14QMultiLineEdit",
-	__Y14QMultiLineEdit_vtable_name_1,
+	_14QMultiLineEdit_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y14QMultiLineEdit_baseinfo[] = {
+struct base_type_info _14QMultiLineEdit_baseinfo[] = {
 	};
 
-struct classinfo _Y14QMultiLineEdit_classinfo = {
-	"_Y14QMultiLineEdit",
+struct classinfo _Z14QMultiLineEdit_classinfo = {
+	"_Z14QMultiLineEdit",
 	"_ZTV14QMultiLineEdit",
 	"_ZTI14QMultiLineEdit",	/* RTTI */
 	"_ZTI9QTextEdit",
-	"_ZTT_Y14QMultiLineEdit",	/* VTT */
+	"_ZTT14QMultiLineEdit",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y14QMultiLineEdit_typeinfo,
-	__Y14QMultiLineEdit_vtable,
-	__Y14QMultiLineEdit_baseinfo,
+	&_14QMultiLineEdit_typeinfo,
+	_14QMultiLineEdit_vtable,
+	_14QMultiLineEdit_baseinfo,
 	};
 
-char *__Y27QNetworkProtocolFactoryBase_typeinfo_name[] = {
+char *_27QNetworkProtocolFactoryBase_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y27QNetworkProtocolFactoryBase_typeinfo = {
+struct classtypeinfo _27QNetworkProtocolFactoryBase_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y27QNetworkProtocolFactoryBase",
-	__Y27QNetworkProtocolFactoryBase_typeinfo_name,
+	"_ZTS27QNetworkProtocolFactoryBase",
+	_27QNetworkProtocolFactoryBase_typeinfo_name,
 	};
 
-const char *__Y27QNetworkProtocolFactoryBase_vtable_name_0 [] = {
+const char *_27QNetworkProtocolFactoryBase_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y27QNetworkProtocolFactoryBase_vtable [1] = {
+struct classvtable _27QNetworkProtocolFactoryBase_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	1,	/* Number of Vfuncs */
 	"_ZTI27QNetworkProtocolFactoryBase",
-	__Y27QNetworkProtocolFactoryBase_vtable_name_0,
+	_27QNetworkProtocolFactoryBase_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y27QNetworkProtocolFactoryBase_baseinfo[] = {
+struct base_type_info _27QNetworkProtocolFactoryBase_baseinfo[] = {
 	};
 
-struct classinfo _Y27QNetworkProtocolFactoryBase_classinfo = {
-	"_Y27QNetworkProtocolFactoryBase",
+struct classinfo _Z27QNetworkProtocolFactoryBase_classinfo = {
+	"_Z27QNetworkProtocolFactoryBase",
 	"_ZTV27QNetworkProtocolFactoryBase",
 	"_ZTI27QNetworkProtocolFactoryBase",	/* RTTI */
 	"",
-	"_ZTT_Y27QNetworkProtocolFactoryBase",	/* VTT */
+	"_ZTT27QNetworkProtocolFactoryBase",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y27QNetworkProtocolFactoryBase_typeinfo,
-	__Y27QNetworkProtocolFactoryBase_vtable,
-	__Y27QNetworkProtocolFactoryBase_baseinfo,
+	&_27QNetworkProtocolFactoryBase_typeinfo,
+	_27QNetworkProtocolFactoryBase_vtable,
+	_27QNetworkProtocolFactoryBase_baseinfo,
 	};
 
-char *__Y11QHBoxLayout_typeinfo_name[] = {
+char *_11QHBoxLayout_typeinfo_name[] = {
 	"_ZTI10QBoxLayout",
 	};
 
-struct classtypeinfo __Y11QHBoxLayout_typeinfo = {
+struct classtypeinfo _11QHBoxLayout_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QHBoxLayout",
-	__Y11QHBoxLayout_typeinfo_name,
+	"_ZTS11QHBoxLayout",
+	_11QHBoxLayout_typeinfo_name,
 	};
 
-const char *__Y11QHBoxLayout_vtable_name_0 [] = {
+const char *_11QHBoxLayout_vtable_name_0 [] = {
 	"_ZNK11QHBoxLayout10metaObjectEv",
 	"_ZNK11QHBoxLayout9classNameEv",
 	"_ZN11QHBoxLayout7qt_castEPKc",
@@ -34930,7 +34930,7 @@ const char *__Y11QHBoxLayout_vtable_name_0 [] = {
 	"_ZNK10QBoxLayout14heightForWidthEi",
 	};
 
-const char *__Y11QHBoxLayout_vtable_name_1 [] = {
+const char *_11QHBoxLayout_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QHBoxLayoutD1Ev",
 #endif
@@ -35230,14 +35230,14 @@ const char *__Y11QHBoxLayout_vtable_name_1 [] = {
 	"_ZN11QLayoutItem12setAlignmentEi",
 	};
 
-struct classvtable __Y11QHBoxLayout_vtable [2] = {
+struct classvtable _11QHBoxLayout_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	38,	/* Number of Vfuncs */
 	"_ZTI11QHBoxLayout",
-	__Y11QHBoxLayout_vtable_name_0,
+	_11QHBoxLayout_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -35271,40 +35271,40 @@ struct classvtable __Y11QHBoxLayout_vtable [2] = {
 	1,	/* Vtable category */
 	17,	/* Number of Vfuncs */
 	"_ZTI11QHBoxLayout",
-	__Y11QHBoxLayout_vtable_name_1,
+	_11QHBoxLayout_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y11QHBoxLayout_baseinfo[] = {
+struct base_type_info _11QHBoxLayout_baseinfo[] = {
 	};
 
-struct classinfo _Y11QHBoxLayout_classinfo = {
-	"_Y11QHBoxLayout",
+struct classinfo _Z11QHBoxLayout_classinfo = {
+	"_Z11QHBoxLayout",
 	"_ZTV11QHBoxLayout",
 	"_ZTI11QHBoxLayout",	/* RTTI */
 	"_ZTI10QBoxLayout",
-	"_ZTT_Y11QHBoxLayout",	/* VTT */
+	"_ZTT11QHBoxLayout",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QHBoxLayout_typeinfo,
-	__Y11QHBoxLayout_vtable,
-	__Y11QHBoxLayout_baseinfo,
+	&_11QHBoxLayout_typeinfo,
+	_11QHBoxLayout_vtable,
+	_11QHBoxLayout_baseinfo,
 	};
 
-char *__Y13QSocketDevice_typeinfo_name[] = {
+char *_13QSocketDevice_typeinfo_name[] = {
 	"_ZTI9QIODevice",
 	};
 
-struct classtypeinfo __Y13QSocketDevice_typeinfo = {
+struct classtypeinfo _13QSocketDevice_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y13QSocketDevice",
-	__Y13QSocketDevice_typeinfo_name,
+	"_ZTS13QSocketDevice",
+	_13QSocketDevice_typeinfo_name,
 	};
 
-const char *__Y13QSocketDevice_vtable_name_0 [] = {
+const char *_13QSocketDevice_vtable_name_0 [] = {
 	"_ZN13QSocketDeviceD1Ev",
 	"_ZN13QSocketDeviceD0Ev",
 	"_ZN13QSocketDevice4openEi",
@@ -35334,46 +35334,46 @@ const char *__Y13QSocketDevice_vtable_name_0 [] = {
 	"_ZN13QSocketDevice9setOptionENS_6OptionEi",
 	};
 
-struct classvtable __Y13QSocketDevice_vtable [1] = {
+struct classvtable _13QSocketDevice_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	27,	/* Number of Vfuncs */
 	"_ZTI13QSocketDevice",
-	__Y13QSocketDevice_vtable_name_0,
+	_13QSocketDevice_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y13QSocketDevice_baseinfo[] = {
+struct base_type_info _13QSocketDevice_baseinfo[] = {
 	};
 
-struct classinfo _Y13QSocketDevice_classinfo = {
-	"_Y13QSocketDevice",
+struct classinfo _Z13QSocketDevice_classinfo = {
+	"_Z13QSocketDevice",
 	"_ZTV13QSocketDevice",
 	"_ZTI13QSocketDevice",	/* RTTI */
 	"_ZTI9QIODevice",
-	"_ZTT_Y13QSocketDevice",	/* VTT */
+	"_ZTT13QSocketDevice",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y13QSocketDevice_typeinfo,
-	__Y13QSocketDevice_vtable,
-	__Y13QSocketDevice_baseinfo,
+	&_13QSocketDevice_typeinfo,
+	_13QSocketDevice_vtable,
+	_13QSocketDevice_baseinfo,
 	};
 
-char *__Y10QXmlReader_typeinfo_name[] = {
+char *_10QXmlReader_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y10QXmlReader_typeinfo = {
+struct classtypeinfo _10QXmlReader_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y10QXmlReader",
-	__Y10QXmlReader_typeinfo_name,
+	"_ZTS10QXmlReader",
+	_10QXmlReader_typeinfo_name,
 	};
 
-const char *__Y10QXmlReader_vtable_name_0 [] = {
+const char *_10QXmlReader_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
@@ -35396,47 +35396,47 @@ const char *__Y10QXmlReader_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y10QXmlReader_vtable [1] = {
+struct classvtable _10QXmlReader_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	20,	/* Number of Vfuncs */
 	"_ZTI10QXmlReader",
-	__Y10QXmlReader_vtable_name_0,
+	_10QXmlReader_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y10QXmlReader_baseinfo[] = {
+struct base_type_info _10QXmlReader_baseinfo[] = {
 	};
 
-struct classinfo _Y10QXmlReader_classinfo = {
-	"_Y10QXmlReader",
+struct classinfo _Z10QXmlReader_classinfo = {
+	"_Z10QXmlReader",
 	"_ZTV10QXmlReader",
 	"_ZTI10QXmlReader",	/* RTTI */
 	"",
-	"_ZTT_Y10QXmlReader",	/* VTT */
+	"_ZTT10QXmlReader",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QXmlReader_typeinfo,
-	__Y10QXmlReader_vtable,
-	__Y10QXmlReader_baseinfo,
+	&_10QXmlReader_typeinfo,
+	_10QXmlReader_vtable,
+	_10QXmlReader_baseinfo,
 	};
 
-char *__Y10QDomEntity_typeinfo_name[] = {
+char *_10QDomEntity_typeinfo_name[] = {
 	"_ZTI8QDomNode",
 	};
 
-struct classtypeinfo __Y10QDomEntity_typeinfo = {
+struct classtypeinfo _10QDomEntity_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y10QDomEntity",
-	__Y10QDomEntity_typeinfo_name,
+	"_ZTS10QDomEntity",
+	_10QDomEntity_typeinfo_name,
 	};
 
-const char *__Y10QDomEntity_vtable_name_0 [] = {
+const char *_10QDomEntity_vtable_name_0 [] = {
 	"_ZN10QDomEntityD1Ev",
 	"_ZN10QDomEntityD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -35483,91 +35483,91 @@ const char *__Y10QDomEntity_vtable_name_0 [] = {
 	"_ZNK10QDomEntity12notationNameEv",
 	};
 
-struct classvtable __Y10QDomEntity_vtable [1] = {
+struct classvtable _10QDomEntity_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	44,	/* Number of Vfuncs */
 	"_ZTI10QDomEntity",
-	__Y10QDomEntity_vtable_name_0,
+	_10QDomEntity_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y10QDomEntity_baseinfo[] = {
+struct base_type_info _10QDomEntity_baseinfo[] = {
 	};
 
-struct classinfo _Y10QDomEntity_classinfo = {
-	"_Y10QDomEntity",
+struct classinfo _Z10QDomEntity_classinfo = {
+	"_Z10QDomEntity",
 	"_ZTV10QDomEntity",
 	"_ZTI10QDomEntity",	/* RTTI */
 	"_ZTI8QDomNode",
-	"_ZTT_Y10QDomEntity",	/* VTT */
+	"_ZTT10QDomEntity",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QDomEntity_typeinfo,
-	__Y10QDomEntity_vtable,
-	__Y10QDomEntity_baseinfo,
+	&_10QDomEntity_typeinfo,
+	_10QDomEntity_vtable,
+	_10QDomEntity_baseinfo,
 	};
 
-char *__Y11QMetaObject_typeinfo_name[] = {
+char *_11QMetaObject_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y11QMetaObject_typeinfo = {
+struct classtypeinfo _11QMetaObject_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y11QMetaObject",
-	__Y11QMetaObject_typeinfo_name,
+	"_ZTS11QMetaObject",
+	_11QMetaObject_typeinfo_name,
 	};
 
-const char *__Y11QMetaObject_vtable_name_0 [] = {
+const char *_11QMetaObject_vtable_name_0 [] = {
 	"_ZN11QMetaObjectD1Ev",
 	"_ZN11QMetaObjectD0Ev",
 	};
 
-struct classvtable __Y11QMetaObject_vtable [1] = {
+struct classvtable _11QMetaObject_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI11QMetaObject",
-	__Y11QMetaObject_vtable_name_0,
+	_11QMetaObject_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QMetaObject_baseinfo[] = {
+struct base_type_info _11QMetaObject_baseinfo[] = {
 	};
 
-struct classinfo _Y11QMetaObject_classinfo = {
-	"_Y11QMetaObject",
+struct classinfo _Z11QMetaObject_classinfo = {
+	"_Z11QMetaObject",
 	"_ZTV11QMetaObject",
 	"_ZTI11QMetaObject",	/* RTTI */
 	"",
-	"_ZTT_Y11QMetaObject",	/* VTT */
+	"_ZTT11QMetaObject",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QMetaObject_typeinfo,
-	__Y11QMetaObject_vtable,
-	__Y11QMetaObject_baseinfo,
+	&_11QMetaObject_typeinfo,
+	_11QMetaObject_vtable,
+	_11QMetaObject_baseinfo,
 	};
 
-char *__Y13QErrorMessage_typeinfo_name[] = {
+char *_13QErrorMessage_typeinfo_name[] = {
 	"_ZTI7QDialog",
 	};
 
-struct classtypeinfo __Y13QErrorMessage_typeinfo = {
+struct classtypeinfo _13QErrorMessage_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y13QErrorMessage",
-	__Y13QErrorMessage_typeinfo_name,
+	"_ZTS13QErrorMessage",
+	_13QErrorMessage_typeinfo_name,
 	};
 
-const char *__Y13QErrorMessage_vtable_name_0 [] = {
+const char *_13QErrorMessage_vtable_name_0 [] = {
 	"_ZNK13QErrorMessage10metaObjectEv",
 	"_ZNK13QErrorMessage9classNameEv",
 	"_ZN13QErrorMessage7qt_castEPKc",
@@ -35683,7 +35683,7 @@ const char *__Y13QErrorMessage_vtable_name_0 [] = {
 	"_ZN7QDialog6rejectEv",
 	};
 
-const char *__Y13QErrorMessage_vtable_name_1 [] = {
+const char *_13QErrorMessage_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N13QErrorMessageD1Ev",
 #endif
@@ -35757,14 +35757,14 @@ const char *__Y13QErrorMessage_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y13QErrorMessage_vtable [2] = {
+struct classvtable _13QErrorMessage_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	113,	/* Number of Vfuncs */
 	"_ZTI13QErrorMessage",
-	__Y13QErrorMessage_vtable_name_0,
+	_13QErrorMessage_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -35798,40 +35798,40 @@ struct classvtable __Y13QErrorMessage_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI13QErrorMessage",
-	__Y13QErrorMessage_vtable_name_1,
+	_13QErrorMessage_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y13QErrorMessage_baseinfo[] = {
+struct base_type_info _13QErrorMessage_baseinfo[] = {
 	};
 
-struct classinfo _Y13QErrorMessage_classinfo = {
-	"_Y13QErrorMessage",
+struct classinfo _Z13QErrorMessage_classinfo = {
+	"_Z13QErrorMessage",
 	"_ZTV13QErrorMessage",
 	"_ZTI13QErrorMessage",	/* RTTI */
 	"_ZTI7QDialog",
-	"_ZTT_Y13QErrorMessage",	/* VTT */
+	"_ZTT13QErrorMessage",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y13QErrorMessage_typeinfo,
-	__Y13QErrorMessage_vtable,
-	__Y13QErrorMessage_baseinfo,
+	&_13QErrorMessage_typeinfo,
+	_13QErrorMessage_vtable,
+	_13QErrorMessage_baseinfo,
 	};
 
-char *__Y8QListBox_typeinfo_name[] = {
+char *_8QListBox_typeinfo_name[] = {
 	"_ZTI11QScrollView",
 	};
 
-struct classtypeinfo __Y8QListBox_typeinfo = {
+struct classtypeinfo _8QListBox_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y8QListBox",
-	__Y8QListBox_typeinfo_name,
+	"_ZTS8QListBox",
+	_8QListBox_typeinfo_name,
 	};
 
-const char *__Y8QListBox_vtable_name_0 [] = {
+const char *_8QListBox_vtable_name_0 [] = {
 	"_ZNK8QListBox10metaObjectEv",
 	"_ZNK8QListBox9classNameEv",
 	"_ZN8QListBox7qt_castEPKc",
@@ -36005,7 +36005,7 @@ const char *__Y8QListBox_vtable_name_0 [] = {
 	"_ZN8QListBox9paintCellEP8QPainterii",
 	};
 
-const char *__Y8QListBox_vtable_name_1 [] = {
+const char *_8QListBox_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N8QListBoxD1Ev",
 #endif
@@ -36079,14 +36079,14 @@ const char *__Y8QListBox_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y8QListBox_vtable [2] = {
+struct classvtable _8QListBox_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	171,	/* Number of Vfuncs */
 	"_ZTI8QListBox",
-	__Y8QListBox_vtable_name_0,
+	_8QListBox_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -36120,40 +36120,40 @@ struct classvtable __Y8QListBox_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI8QListBox",
-	__Y8QListBox_vtable_name_1,
+	_8QListBox_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y8QListBox_baseinfo[] = {
+struct base_type_info _8QListBox_baseinfo[] = {
 	};
 
-struct classinfo _Y8QListBox_classinfo = {
-	"_Y8QListBox",
+struct classinfo _Z8QListBox_classinfo = {
+	"_Z8QListBox",
 	"_ZTV8QListBox",
 	"_ZTI8QListBox",	/* RTTI */
 	"_ZTI11QScrollView",
-	"_ZTT_Y8QListBox",	/* VTT */
+	"_ZTT8QListBox",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y8QListBox_typeinfo,
-	__Y8QListBox_vtable,
-	__Y8QListBox_baseinfo,
+	&_8QListBox_typeinfo,
+	_8QListBox_vtable,
+	_8QListBox_baseinfo,
 	};
 
-char *__Y15QCustomMenuItem_typeinfo_name[] = {
+char *_15QCustomMenuItem_typeinfo_name[] = {
 	"_ZTI2Qt",
 	};
 
-struct classtypeinfo __Y15QCustomMenuItem_typeinfo = {
+struct classtypeinfo _15QCustomMenuItem_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y15QCustomMenuItem",
-	__Y15QCustomMenuItem_typeinfo_name,
+	"_ZTS15QCustomMenuItem",
+	_15QCustomMenuItem_typeinfo_name,
 	};
 
-const char *__Y15QCustomMenuItem_vtable_name_0 [] = {
+const char *_15QCustomMenuItem_vtable_name_0 [] = {
 	"_ZN15QCustomMenuItemD1Ev",
 	"_ZN15QCustomMenuItemD0Ev",
 	"_ZNK15QCustomMenuItem8fullSpanEv",
@@ -36163,47 +36163,47 @@ const char *__Y15QCustomMenuItem_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y15QCustomMenuItem_vtable [1] = {
+struct classvtable _15QCustomMenuItem_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	7,	/* Number of Vfuncs */
 	"_ZTI15QCustomMenuItem",
-	__Y15QCustomMenuItem_vtable_name_0,
+	_15QCustomMenuItem_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y15QCustomMenuItem_baseinfo[] = {
+struct base_type_info _15QCustomMenuItem_baseinfo[] = {
 	};
 
-struct classinfo _Y15QCustomMenuItem_classinfo = {
-	"_Y15QCustomMenuItem",
+struct classinfo _Z15QCustomMenuItem_classinfo = {
+	"_Z15QCustomMenuItem",
 	"_ZTV15QCustomMenuItem",
 	"_ZTI15QCustomMenuItem",	/* RTTI */
 	"_ZTI2Qt",
-	"_ZTT_Y15QCustomMenuItem",	/* VTT */
+	"_ZTT15QCustomMenuItem",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y15QCustomMenuItem_typeinfo,
-	__Y15QCustomMenuItem_vtable,
-	__Y15QCustomMenuItem_baseinfo,
+	&_15QCustomMenuItem_typeinfo,
+	_15QCustomMenuItem_vtable,
+	_15QCustomMenuItem_baseinfo,
 	};
 
-char *__Y9QIconDrag_typeinfo_name[] = {
+char *_9QIconDrag_typeinfo_name[] = {
 	"_ZTI11QDragObject",
 	};
 
-struct classtypeinfo __Y9QIconDrag_typeinfo = {
+struct classtypeinfo _9QIconDrag_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y9QIconDrag",
-	__Y9QIconDrag_typeinfo_name,
+	"_ZTS9QIconDrag",
+	_9QIconDrag_typeinfo_name,
 	};
 
-const char *__Y9QIconDrag_vtable_name_0 [] = {
+const char *_9QIconDrag_vtable_name_0 [] = {
 	"_ZNK9QIconDrag10metaObjectEv",
 	"_ZNK9QIconDrag9classNameEv",
 	"_ZN9QIconDrag7qt_castEPKc",
@@ -36232,7 +36232,7 @@ const char *__Y9QIconDrag_vtable_name_0 [] = {
 	"_ZNK9QIconDrag11encodedDataEPKc",
 	};
 
-const char *__Y9QIconDrag_vtable_name_1 [] = {
+const char *_9QIconDrag_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QIconDragD1Ev",
 #endif
@@ -36320,14 +36320,14 @@ const char *__Y9QIconDrag_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable __Y9QIconDrag_vtable [2] = {
+struct classvtable _9QIconDrag_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	26,	/* Number of Vfuncs */
 	"_ZTI9QIconDrag",
-	__Y9QIconDrag_vtable_name_0,
+	_9QIconDrag_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -36361,40 +36361,40 @@ struct classvtable __Y9QIconDrag_vtable [2] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI9QIconDrag",
-	__Y9QIconDrag_vtable_name_1,
+	_9QIconDrag_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y9QIconDrag_baseinfo[] = {
+struct base_type_info _9QIconDrag_baseinfo[] = {
 	};
 
-struct classinfo _Y9QIconDrag_classinfo = {
-	"_Y9QIconDrag",
+struct classinfo _Z9QIconDrag_classinfo = {
+	"_Z9QIconDrag",
 	"_ZTV9QIconDrag",
 	"_ZTI9QIconDrag",	/* RTTI */
 	"_ZTI11QDragObject",
-	"_ZTT_Y9QIconDrag",	/* VTT */
+	"_ZTT9QIconDrag",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QIconDrag_typeinfo,
-	__Y9QIconDrag_vtable,
-	__Y9QIconDrag_baseinfo,
+	&_9QIconDrag_typeinfo,
+	_9QIconDrag_vtable,
+	_9QIconDrag_baseinfo,
 	};
 
-char *__Y8QUriDrag_typeinfo_name[] = {
+char *_8QUriDrag_typeinfo_name[] = {
 	"_ZTI11QStoredDrag",
 	};
 
-struct classtypeinfo __Y8QUriDrag_typeinfo = {
+struct classtypeinfo _8QUriDrag_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y8QUriDrag",
-	__Y8QUriDrag_typeinfo_name,
+	"_ZTS8QUriDrag",
+	_8QUriDrag_typeinfo_name,
 	};
 
-const char *__Y8QUriDrag_vtable_name_0 [] = {
+const char *_8QUriDrag_vtable_name_0 [] = {
 	"_ZNK8QUriDrag10metaObjectEv",
 	"_ZNK8QUriDrag9classNameEv",
 	"_ZN8QUriDrag7qt_castEPKc",
@@ -36425,7 +36425,7 @@ const char *__Y8QUriDrag_vtable_name_0 [] = {
 	"_ZN8QUriDrag7setUrisE8QStrList",
 	};
 
-const char *__Y8QUriDrag_vtable_name_1 [] = {
+const char *_8QUriDrag_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N8QUriDragD1Ev",
 #endif
@@ -36513,14 +36513,14 @@ const char *__Y8QUriDrag_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable __Y8QUriDrag_vtable [2] = {
+struct classvtable _8QUriDrag_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	28,	/* Number of Vfuncs */
 	"_ZTI8QUriDrag",
-	__Y8QUriDrag_vtable_name_0,
+	_8QUriDrag_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -36554,86 +36554,86 @@ struct classvtable __Y8QUriDrag_vtable [2] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI8QUriDrag",
-	__Y8QUriDrag_vtable_name_1,
+	_8QUriDrag_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y8QUriDrag_baseinfo[] = {
+struct base_type_info _8QUriDrag_baseinfo[] = {
 	};
 
-struct classinfo _Y8QUriDrag_classinfo = {
-	"_Y8QUriDrag",
+struct classinfo _Z8QUriDrag_classinfo = {
+	"_Z8QUriDrag",
 	"_ZTV8QUriDrag",
 	"_ZTI8QUriDrag",	/* RTTI */
 	"_ZTI11QStoredDrag",
-	"_ZTT_Y8QUriDrag",	/* VTT */
+	"_ZTT8QUriDrag",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y8QUriDrag_typeinfo,
-	__Y8QUriDrag_vtable,
-	__Y8QUriDrag_baseinfo,
+	&_8QUriDrag_typeinfo,
+	_8QUriDrag_vtable,
+	_8QUriDrag_baseinfo,
 	};
 
-char *__Y15QXmlDeclHandler_typeinfo_name[] = {
+char *_15QXmlDeclHandler_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y15QXmlDeclHandler_typeinfo = {
+struct classtypeinfo _15QXmlDeclHandler_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y15QXmlDeclHandler",
-	__Y15QXmlDeclHandler_typeinfo_name,
+	"_ZTS15QXmlDeclHandler",
+	_15QXmlDeclHandler_typeinfo_name,
 	};
 
-const char *__Y15QXmlDeclHandler_vtable_name_0 [] = {
+const char *_15QXmlDeclHandler_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y15QXmlDeclHandler_vtable [1] = {
+struct classvtable _15QXmlDeclHandler_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	4,	/* Number of Vfuncs */
 	"_ZTI15QXmlDeclHandler",
-	__Y15QXmlDeclHandler_vtable_name_0,
+	_15QXmlDeclHandler_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y15QXmlDeclHandler_baseinfo[] = {
+struct base_type_info _15QXmlDeclHandler_baseinfo[] = {
 	};
 
-struct classinfo _Y15QXmlDeclHandler_classinfo = {
-	"_Y15QXmlDeclHandler",
+struct classinfo _Z15QXmlDeclHandler_classinfo = {
+	"_Z15QXmlDeclHandler",
 	"_ZTV15QXmlDeclHandler",
 	"_ZTI15QXmlDeclHandler",	/* RTTI */
 	"",
-	"_ZTT_Y15QXmlDeclHandler",	/* VTT */
+	"_ZTT15QXmlDeclHandler",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y15QXmlDeclHandler_typeinfo,
-	__Y15QXmlDeclHandler_vtable,
-	__Y15QXmlDeclHandler_baseinfo,
+	&_15QXmlDeclHandler_typeinfo,
+	_15QXmlDeclHandler_vtable,
+	_15QXmlDeclHandler_baseinfo,
 	};
 
-char *__Y11QVBoxLayout_typeinfo_name[] = {
+char *_11QVBoxLayout_typeinfo_name[] = {
 	"_ZTI10QBoxLayout",
 	};
 
-struct classtypeinfo __Y11QVBoxLayout_typeinfo = {
+struct classtypeinfo _11QVBoxLayout_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QVBoxLayout",
-	__Y11QVBoxLayout_typeinfo_name,
+	"_ZTS11QVBoxLayout",
+	_11QVBoxLayout_typeinfo_name,
 	};
 
-const char *__Y11QVBoxLayout_vtable_name_0 [] = {
+const char *_11QVBoxLayout_vtable_name_0 [] = {
 	"_ZNK11QVBoxLayout10metaObjectEv",
 	"_ZNK11QVBoxLayout9classNameEv",
 	"_ZN11QVBoxLayout7qt_castEPKc",
@@ -36674,7 +36674,7 @@ const char *__Y11QVBoxLayout_vtable_name_0 [] = {
 	"_ZNK10QBoxLayout14heightForWidthEi",
 	};
 
-const char *__Y11QVBoxLayout_vtable_name_1 [] = {
+const char *_11QVBoxLayout_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QVBoxLayoutD1Ev",
 #endif
@@ -36974,14 +36974,14 @@ const char *__Y11QVBoxLayout_vtable_name_1 [] = {
 	"_ZN11QLayoutItem12setAlignmentEi",
 	};
 
-struct classvtable __Y11QVBoxLayout_vtable [2] = {
+struct classvtable _11QVBoxLayout_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	38,	/* Number of Vfuncs */
 	"_ZTI11QVBoxLayout",
-	__Y11QVBoxLayout_vtable_name_0,
+	_11QVBoxLayout_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -37015,39 +37015,39 @@ struct classvtable __Y11QVBoxLayout_vtable [2] = {
 	1,	/* Vtable category */
 	17,	/* Number of Vfuncs */
 	"_ZTI11QVBoxLayout",
-	__Y11QVBoxLayout_vtable_name_1,
+	_11QVBoxLayout_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y11QVBoxLayout_baseinfo[] = {
+struct base_type_info _11QVBoxLayout_baseinfo[] = {
 	};
 
-struct classinfo _Y11QVBoxLayout_classinfo = {
-	"_Y11QVBoxLayout",
+struct classinfo _Z11QVBoxLayout_classinfo = {
+	"_Z11QVBoxLayout",
 	"_ZTV11QVBoxLayout",
 	"_ZTI11QVBoxLayout",	/* RTTI */
 	"_ZTI10QBoxLayout",
-	"_ZTT_Y11QVBoxLayout",	/* VTT */
+	"_ZTT11QVBoxLayout",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QVBoxLayout_typeinfo,
-	__Y11QVBoxLayout_vtable,
-	__Y11QVBoxLayout_baseinfo,
+	&_11QVBoxLayout_typeinfo,
+	_11QVBoxLayout_vtable,
+	_11QVBoxLayout_baseinfo,
 	};
 
-char *__Y8QDomNode_typeinfo_name[] = {
+char *_8QDomNode_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y8QDomNode_typeinfo = {
+struct classtypeinfo _8QDomNode_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y8QDomNode",
-	__Y8QDomNode_typeinfo_name,
+	"_ZTS8QDomNode",
+	_8QDomNode_typeinfo_name,
 	};
 
-const char *__Y8QDomNode_vtable_name_0 [] = {
+const char *_8QDomNode_vtable_name_0 [] = {
 	"_ZN8QDomNodeD1Ev",
 	"_ZN8QDomNodeD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -37091,47 +37091,47 @@ const char *__Y8QDomNode_vtable_name_0 [] = {
 	"_ZNK8QDomNode9isCommentEv",
 	};
 
-struct classvtable __Y8QDomNode_vtable [1] = {
+struct classvtable _8QDomNode_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	41,	/* Number of Vfuncs */
 	"_ZTI8QDomNode",
-	__Y8QDomNode_vtable_name_0,
+	_8QDomNode_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y8QDomNode_baseinfo[] = {
+struct base_type_info _8QDomNode_baseinfo[] = {
 	};
 
-struct classinfo _Y8QDomNode_classinfo = {
-	"_Y8QDomNode",
+struct classinfo _Z8QDomNode_classinfo = {
+	"_Z8QDomNode",
 	"_ZTV8QDomNode",
 	"_ZTI8QDomNode",	/* RTTI */
 	"",
-	"_ZTT_Y8QDomNode",	/* VTT */
+	"_ZTT8QDomNode",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y8QDomNode_typeinfo,
-	__Y8QDomNode_vtable,
-	__Y8QDomNode_baseinfo,
+	&_8QDomNode_typeinfo,
+	_8QDomNode_vtable,
+	_8QDomNode_baseinfo,
 	};
 
-char *__Y7QBuffer_typeinfo_name[] = {
+char *_7QBuffer_typeinfo_name[] = {
 	"_ZTI9QIODevice",
 	};
 
-struct classtypeinfo __Y7QBuffer_typeinfo = {
+struct classtypeinfo _7QBuffer_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y7QBuffer",
-	__Y7QBuffer_typeinfo_name,
+	"_ZTS7QBuffer",
+	_7QBuffer_typeinfo_name,
 	};
 
-const char *__Y7QBuffer_vtable_name_0 [] = {
+const char *_7QBuffer_vtable_name_0 [] = {
 	"_ZN7QBufferD1Ev",
 	"_ZN7QBufferD0Ev",
 	"_ZN7QBuffer4openEi",
@@ -37150,47 +37150,47 @@ const char *__Y7QBuffer_vtable_name_0 [] = {
 	"_ZN7QBuffer7ungetchEi",
 	};
 
-struct classvtable __Y7QBuffer_vtable [1] = {
+struct classvtable _7QBuffer_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	16,	/* Number of Vfuncs */
 	"_ZTI7QBuffer",
-	__Y7QBuffer_vtable_name_0,
+	_7QBuffer_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y7QBuffer_baseinfo[] = {
+struct base_type_info _7QBuffer_baseinfo[] = {
 	};
 
-struct classinfo _Y7QBuffer_classinfo = {
-	"_Y7QBuffer",
+struct classinfo _Z7QBuffer_classinfo = {
+	"_Z7QBuffer",
 	"_ZTV7QBuffer",
 	"_ZTI7QBuffer",	/* RTTI */
 	"_ZTI9QIODevice",
-	"_ZTT_Y7QBuffer",	/* VTT */
+	"_ZTT7QBuffer",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y7QBuffer_typeinfo,
-	__Y7QBuffer_vtable,
-	__Y7QBuffer_baseinfo,
+	&_7QBuffer_typeinfo,
+	_7QBuffer_vtable,
+	_7QBuffer_baseinfo,
 	};
 
-char *__Y16QCanvasRectangle_typeinfo_name[] = {
+char *_16QCanvasRectangle_typeinfo_name[] = {
 	"_ZTI20QCanvasPolygonalItem",
 	};
 
-struct classtypeinfo __Y16QCanvasRectangle_typeinfo = {
+struct classtypeinfo _16QCanvasRectangle_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y16QCanvasRectangle",
-	__Y16QCanvasRectangle_typeinfo_name,
+	"_ZTS16QCanvasRectangle",
+	_16QCanvasRectangle_typeinfo_name,
 	};
 
-const char *__Y16QCanvasRectangle_vtable_name_0 [] = {
+const char *_16QCanvasRectangle_vtable_name_0 [] = {
 	"_ZN16QCanvasRectangleD1Ev",
 	"_ZN16QCanvasRectangleD0Ev",
 	"_ZN11QCanvasItem6moveByEdd",
@@ -37219,183 +37219,183 @@ const char *__Y16QCanvasRectangle_vtable_name_0 [] = {
 	"_ZN16QCanvasRectangle9drawShapeER8QPainter",
 	};
 
-struct classvtable __Y16QCanvasRectangle_vtable [1] = {
+struct classvtable _16QCanvasRectangle_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	26,	/* Number of Vfuncs */
 	"_ZTI16QCanvasRectangle",
-	__Y16QCanvasRectangle_vtable_name_0,
+	_16QCanvasRectangle_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y16QCanvasRectangle_baseinfo[] = {
+struct base_type_info _16QCanvasRectangle_baseinfo[] = {
 	};
 
-struct classinfo _Y16QCanvasRectangle_classinfo = {
-	"_Y16QCanvasRectangle",
+struct classinfo _Z16QCanvasRectangle_classinfo = {
+	"_Z16QCanvasRectangle",
 	"_ZTV16QCanvasRectangle",
 	"_ZTI16QCanvasRectangle",	/* RTTI */
 	"_ZTI20QCanvasPolygonalItem",
-	"_ZTT_Y16QCanvasRectangle",	/* VTT */
+	"_ZTT16QCanvasRectangle",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y16QCanvasRectangle_typeinfo,
-	__Y16QCanvasRectangle_vtable,
-	__Y16QCanvasRectangle_baseinfo,
+	&_16QCanvasRectangle_typeinfo,
+	_16QCanvasRectangle_vtable,
+	_16QCanvasRectangle_baseinfo,
 	};
 
-char *__Y8QIconSet_typeinfo_name[] = {
+char *_8QIconSet_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y8QIconSet_typeinfo = {
+struct classtypeinfo _8QIconSet_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y8QIconSet",
-	__Y8QIconSet_typeinfo_name,
+	"_ZTS8QIconSet",
+	_8QIconSet_typeinfo_name,
 	};
 
-const char *__Y8QIconSet_vtable_name_0 [] = {
+const char *_8QIconSet_vtable_name_0 [] = {
 	"_ZN8QIconSetD1Ev",
 	"_ZN8QIconSetD0Ev",
 	"_ZN8QIconSet9setPixmapERK7QPixmapNS_4SizeENS_4ModeENS_5StateE",
 	"_ZN8QIconSet9setPixmapERK7QStringNS_4SizeENS_4ModeENS_5StateE",
 	};
 
-struct classvtable __Y8QIconSet_vtable [1] = {
+struct classvtable _8QIconSet_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	4,	/* Number of Vfuncs */
 	"_ZTI8QIconSet",
-	__Y8QIconSet_vtable_name_0,
+	_8QIconSet_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y8QIconSet_baseinfo[] = {
+struct base_type_info _8QIconSet_baseinfo[] = {
 	};
 
-struct classinfo _Y8QIconSet_classinfo = {
-	"_Y8QIconSet",
+struct classinfo _Z8QIconSet_classinfo = {
+	"_Z8QIconSet",
 	"_ZTV8QIconSet",
 	"_ZTI8QIconSet",	/* RTTI */
 	"",
-	"_ZTT_Y8QIconSet",	/* VTT */
+	"_ZTT8QIconSet",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y8QIconSet_typeinfo,
-	__Y8QIconSet_vtable,
-	__Y8QIconSet_baseinfo,
+	&_8QIconSet_typeinfo,
+	_8QIconSet_vtable,
+	_8QIconSet_baseinfo,
 	};
 
-char *__Y9QDropSite_typeinfo_name[] = {
+char *_9QDropSite_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y9QDropSite_typeinfo = {
+struct classtypeinfo _9QDropSite_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y9QDropSite",
-	__Y9QDropSite_typeinfo_name,
+	"_ZTS9QDropSite",
+	_9QDropSite_typeinfo_name,
 	};
 
-const char *__Y9QDropSite_vtable_name_0 [] = {
+const char *_9QDropSite_vtable_name_0 [] = {
 	"_ZN9QDropSiteD1Ev",
 	"_ZN9QDropSiteD0Ev",
 	};
 
-struct classvtable __Y9QDropSite_vtable [1] = {
+struct classvtable _9QDropSite_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI9QDropSite",
-	__Y9QDropSite_vtable_name_0,
+	_9QDropSite_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y9QDropSite_baseinfo[] = {
+struct base_type_info _9QDropSite_baseinfo[] = {
 	};
 
-struct classinfo _Y9QDropSite_classinfo = {
-	"_Y9QDropSite",
+struct classinfo _Z9QDropSite_classinfo = {
+	"_Z9QDropSite",
 	"_ZTV9QDropSite",
 	"_ZTI9QDropSite",	/* RTTI */
 	"",
-	"_ZTT_Y9QDropSite",	/* VTT */
+	"_ZTT9QDropSite",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QDropSite_typeinfo,
-	__Y9QDropSite_vtable,
-	__Y9QDropSite_baseinfo,
+	&_9QDropSite_typeinfo,
+	_9QDropSite_vtable,
+	_9QDropSite_baseinfo,
 	};
 
-char *__Y7QThread_typeinfo_name[] = {
+char *_7QThread_typeinfo_name[] = {
 	"_ZTI2Qt",
 	};
 
-struct classtypeinfo __Y7QThread_typeinfo = {
+struct classtypeinfo _7QThread_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y7QThread",
-	__Y7QThread_typeinfo_name,
+	"_ZTS7QThread",
+	_7QThread_typeinfo_name,
 	};
 
-const char *__Y7QThread_vtable_name_0 [] = {
+const char *_7QThread_vtable_name_0 [] = {
 	"_ZN7QThreadD1Ev",
 	"_ZN7QThreadD0Ev",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y7QThread_vtable [1] = {
+struct classvtable _7QThread_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	3,	/* Number of Vfuncs */
 	"_ZTI7QThread",
-	__Y7QThread_vtable_name_0,
+	_7QThread_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y7QThread_baseinfo[] = {
+struct base_type_info _7QThread_baseinfo[] = {
 	};
 
-struct classinfo _Y7QThread_classinfo = {
-	"_Y7QThread",
+struct classinfo _Z7QThread_classinfo = {
+	"_Z7QThread",
 	"_ZTV7QThread",
 	"_ZTI7QThread",	/* RTTI */
 	"_ZTI2Qt",
-	"_ZTT_Y7QThread",	/* VTT */
+	"_ZTT7QThread",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y7QThread_typeinfo,
-	__Y7QThread_vtable,
-	__Y7QThread_baseinfo,
+	&_7QThread_typeinfo,
+	_7QThread_vtable,
+	_7QThread_baseinfo,
 	};
 
-char *__Y11QStoredDrag_typeinfo_name[] = {
+char *_11QStoredDrag_typeinfo_name[] = {
 	"_ZTI11QDragObject",
 	};
 
-struct classtypeinfo __Y11QStoredDrag_typeinfo = {
+struct classtypeinfo _11QStoredDrag_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QStoredDrag",
-	__Y11QStoredDrag_typeinfo_name,
+	"_ZTS11QStoredDrag",
+	_11QStoredDrag_typeinfo_name,
 	};
 
-const char *__Y11QStoredDrag_vtable_name_0 [] = {
+const char *_11QStoredDrag_vtable_name_0 [] = {
 	"_ZNK11QStoredDrag10metaObjectEv",
 	"_ZNK11QStoredDrag9classNameEv",
 	"_ZN11QStoredDrag7qt_castEPKc",
@@ -37425,7 +37425,7 @@ const char *__Y11QStoredDrag_vtable_name_0 [] = {
 	"_ZNK11QStoredDrag11encodedDataEPKc",
 	};
 
-const char *__Y11QStoredDrag_vtable_name_1 [] = {
+const char *_11QStoredDrag_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QStoredDragD1Ev",
 #endif
@@ -37513,14 +37513,14 @@ const char *__Y11QStoredDrag_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable __Y11QStoredDrag_vtable [2] = {
+struct classvtable _11QStoredDrag_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	27,	/* Number of Vfuncs */
 	"_ZTI11QStoredDrag",
-	__Y11QStoredDrag_vtable_name_0,
+	_11QStoredDrag_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -37554,40 +37554,40 @@ struct classvtable __Y11QStoredDrag_vtable [2] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI11QStoredDrag",
-	__Y11QStoredDrag_vtable_name_1,
+	_11QStoredDrag_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y11QStoredDrag_baseinfo[] = {
+struct base_type_info _11QStoredDrag_baseinfo[] = {
 	};
 
-struct classinfo _Y11QStoredDrag_classinfo = {
-	"_Y11QStoredDrag",
+struct classinfo _Z11QStoredDrag_classinfo = {
+	"_Z11QStoredDrag",
 	"_ZTV11QStoredDrag",
 	"_ZTI11QStoredDrag",	/* RTTI */
 	"_ZTI11QDragObject",
-	"_ZTT_Y11QStoredDrag",	/* VTT */
+	"_ZTT11QStoredDrag",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QStoredDrag_typeinfo,
-	__Y11QStoredDrag_vtable,
-	__Y11QStoredDrag_baseinfo,
+	&_11QStoredDrag_typeinfo,
+	_11QStoredDrag_vtable,
+	_11QStoredDrag_baseinfo,
 	};
 
-char *__Y9QTextDrag_typeinfo_name[] = {
+char *_9QTextDrag_typeinfo_name[] = {
 	"_ZTI11QDragObject",
 	};
 
-struct classtypeinfo __Y9QTextDrag_typeinfo = {
+struct classtypeinfo _9QTextDrag_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y9QTextDrag",
-	__Y9QTextDrag_typeinfo_name,
+	"_ZTS9QTextDrag",
+	_9QTextDrag_typeinfo_name,
 	};
 
-const char *__Y9QTextDrag_vtable_name_0 [] = {
+const char *_9QTextDrag_vtable_name_0 [] = {
 	"_ZNK9QTextDrag10metaObjectEv",
 	"_ZNK9QTextDrag9classNameEv",
 	"_ZN9QTextDrag7qt_castEPKc",
@@ -37618,7 +37618,7 @@ const char *__Y9QTextDrag_vtable_name_0 [] = {
 	"_ZNK9QTextDrag11encodedDataEPKc",
 	};
 
-const char *__Y9QTextDrag_vtable_name_1 [] = {
+const char *_9QTextDrag_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QTextDragD1Ev",
 #endif
@@ -37706,14 +37706,14 @@ const char *__Y9QTextDrag_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable __Y9QTextDrag_vtable [2] = {
+struct classvtable _9QTextDrag_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	28,	/* Number of Vfuncs */
 	"_ZTI9QTextDrag",
-	__Y9QTextDrag_vtable_name_0,
+	_9QTextDrag_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -37747,83 +37747,83 @@ struct classvtable __Y9QTextDrag_vtable [2] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI9QTextDrag",
-	__Y9QTextDrag_vtable_name_1,
+	_9QTextDrag_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y9QTextDrag_baseinfo[] = {
+struct base_type_info _9QTextDrag_baseinfo[] = {
 	};
 
-struct classinfo _Y9QTextDrag_classinfo = {
-	"_Y9QTextDrag",
+struct classinfo _Z9QTextDrag_classinfo = {
+	"_Z9QTextDrag",
 	"_ZTV9QTextDrag",
 	"_ZTI9QTextDrag",	/* RTTI */
 	"_ZTI11QDragObject",
-	"_ZTT_Y9QTextDrag",	/* VTT */
+	"_ZTT9QTextDrag",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QTextDrag_typeinfo,
-	__Y9QTextDrag_vtable,
-	__Y9QTextDrag_baseinfo,
+	&_9QTextDrag_typeinfo,
+	_9QTextDrag_vtable,
+	_9QTextDrag_baseinfo,
 	};
 
-char *__Y12QFilePreview_typeinfo_name[] = {
+char *_12QFilePreview_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y12QFilePreview_typeinfo = {
+struct classtypeinfo _12QFilePreview_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y12QFilePreview",
-	__Y12QFilePreview_typeinfo_name,
+	"_ZTS12QFilePreview",
+	_12QFilePreview_typeinfo_name,
 	};
 
-const char *__Y12QFilePreview_vtable_name_0 [] = {
+const char *_12QFilePreview_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y12QFilePreview_vtable [1] = {
+struct classvtable _12QFilePreview_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	1,	/* Number of Vfuncs */
 	"_ZTI12QFilePreview",
-	__Y12QFilePreview_vtable_name_0,
+	_12QFilePreview_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y12QFilePreview_baseinfo[] = {
+struct base_type_info _12QFilePreview_baseinfo[] = {
 	};
 
-struct classinfo _Y12QFilePreview_classinfo = {
-	"_Y12QFilePreview",
+struct classinfo _Z12QFilePreview_classinfo = {
+	"_Z12QFilePreview",
 	"_ZTV12QFilePreview",
 	"_ZTI12QFilePreview",	/* RTTI */
 	"",
-	"_ZTT_Y12QFilePreview",	/* VTT */
+	"_ZTT12QFilePreview",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QFilePreview_typeinfo,
-	__Y12QFilePreview_vtable,
-	__Y12QFilePreview_baseinfo,
+	&_12QFilePreview_typeinfo,
+	_12QFilePreview_vtable,
+	_12QFilePreview_baseinfo,
 	};
 
-char *__Y12QButtonGroup_typeinfo_name[] = {
+char *_12QButtonGroup_typeinfo_name[] = {
 	"_ZTI9QGroupBox",
 	};
 
-struct classtypeinfo __Y12QButtonGroup_typeinfo = {
+struct classtypeinfo _12QButtonGroup_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y12QButtonGroup",
-	__Y12QButtonGroup_typeinfo_name,
+	"_ZTS12QButtonGroup",
+	_12QButtonGroup_typeinfo_name,
 	};
 
-const char *__Y12QButtonGroup_vtable_name_0 [] = {
+const char *_12QButtonGroup_vtable_name_0 [] = {
 	"_ZNK12QButtonGroup10metaObjectEv",
 	"_ZNK12QButtonGroup9classNameEv",
 	"_ZN12QButtonGroup7qt_castEPKc",
@@ -37951,7 +37951,7 @@ const char *__Y12QButtonGroup_vtable_name_0 [] = {
 	"_ZN12QButtonGroup9moveFocusEi",
 	};
 
-const char *__Y12QButtonGroup_vtable_name_1 [] = {
+const char *_12QButtonGroup_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N12QButtonGroupD1Ev",
 #endif
@@ -38025,14 +38025,14 @@ const char *__Y12QButtonGroup_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y12QButtonGroup_vtable [2] = {
+struct classvtable _12QButtonGroup_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	125,	/* Number of Vfuncs */
 	"_ZTI12QButtonGroup",
-	__Y12QButtonGroup_vtable_name_0,
+	_12QButtonGroup_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -38066,39 +38066,39 @@ struct classvtable __Y12QButtonGroup_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI12QButtonGroup",
-	__Y12QButtonGroup_vtable_name_1,
+	_12QButtonGroup_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y12QButtonGroup_baseinfo[] = {
+struct base_type_info _12QButtonGroup_baseinfo[] = {
 	};
 
-struct classinfo _Y12QButtonGroup_classinfo = {
-	"_Y12QButtonGroup",
+struct classinfo _Z12QButtonGroup_classinfo = {
+	"_Z12QButtonGroup",
 	"_ZTV12QButtonGroup",
 	"_ZTI12QButtonGroup",	/* RTTI */
 	"_ZTI9QGroupBox",
-	"_ZTT_Y12QButtonGroup",	/* VTT */
+	"_ZTT12QButtonGroup",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QButtonGroup_typeinfo,
-	__Y12QButtonGroup_vtable,
-	__Y12QButtonGroup_baseinfo,
+	&_12QButtonGroup_typeinfo,
+	_12QButtonGroup_vtable,
+	_12QButtonGroup_baseinfo,
 	};
 
-char *__Y10QSqlRecord_typeinfo_name[] = {
+char *_10QSqlRecord_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y10QSqlRecord_typeinfo = {
+struct classtypeinfo _10QSqlRecord_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y10QSqlRecord",
-	__Y10QSqlRecord_typeinfo_name,
+	"_ZTS10QSqlRecord",
+	_10QSqlRecord_typeinfo_name,
 	};
 
-const char *__Y10QSqlRecord_vtable_name_0 [] = {
+const char *_10QSqlRecord_vtable_name_0 [] = {
 	"_ZN10QSqlRecordD1Ev",
 	"_ZN10QSqlRecordD0Ev",
 	"_ZNK10QSqlRecord5valueEi",
@@ -38118,47 +38118,47 @@ const char *__Y10QSqlRecord_vtable_name_0 [] = {
 	"_ZNK10QSqlRecord12toStringListERK7QString",
 	};
 
-struct classvtable __Y10QSqlRecord_vtable [1] = {
+struct classvtable _10QSqlRecord_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	17,	/* Number of Vfuncs */
 	"_ZTI10QSqlRecord",
-	__Y10QSqlRecord_vtable_name_0,
+	_10QSqlRecord_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y10QSqlRecord_baseinfo[] = {
+struct base_type_info _10QSqlRecord_baseinfo[] = {
 	};
 
-struct classinfo _Y10QSqlRecord_classinfo = {
-	"_Y10QSqlRecord",
+struct classinfo _Z10QSqlRecord_classinfo = {
+	"_Z10QSqlRecord",
 	"_ZTV10QSqlRecord",
 	"_ZTI10QSqlRecord",	/* RTTI */
 	"",
-	"_ZTT_Y10QSqlRecord",	/* VTT */
+	"_ZTT10QSqlRecord",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QSqlRecord_typeinfo,
-	__Y10QSqlRecord_vtable,
-	__Y10QSqlRecord_baseinfo,
+	&_10QSqlRecord_typeinfo,
+	_10QSqlRecord_vtable,
+	_10QSqlRecord_baseinfo,
 	};
 
-char *__Y8QPicture_typeinfo_name[] = {
+char *_8QPicture_typeinfo_name[] = {
 	"_ZTI12QPaintDevice",
 	};
 
-struct classtypeinfo __Y8QPicture_typeinfo = {
+struct classtypeinfo _8QPicture_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y8QPicture",
-	__Y8QPicture_typeinfo_name,
+	"_ZTS8QPicture",
+	_8QPicture_typeinfo_name,
 	};
 
-const char *__Y8QPicture_vtable_name_0 [] = {
+const char *_8QPicture_vtable_name_0 [] = {
 	"_ZN8QPictureD1Ev",
 	"_ZN8QPictureD0Ev",
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -38173,91 +38173,91 @@ const char *__Y8QPicture_vtable_name_0 [] = {
 	"_ZN8QPicture7setDataEPKcj",
 	};
 
-struct classvtable __Y8QPicture_vtable [1] = {
+struct classvtable _8QPicture_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	12,	/* Number of Vfuncs */
 	"_ZTI8QPicture",
-	__Y8QPicture_vtable_name_0,
+	_8QPicture_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y8QPicture_baseinfo[] = {
+struct base_type_info _8QPicture_baseinfo[] = {
 	};
 
-struct classinfo _Y8QPicture_classinfo = {
-	"_Y8QPicture",
+struct classinfo _Z8QPicture_classinfo = {
+	"_Z8QPicture",
 	"_ZTV8QPicture",
 	"_ZTI8QPicture",	/* RTTI */
 	"_ZTI12QPaintDevice",
-	"_ZTT_Y8QPicture",	/* VTT */
+	"_ZTT8QPicture",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y8QPicture_typeinfo,
-	__Y8QPicture_vtable,
-	__Y8QPicture_baseinfo,
+	&_8QPicture_typeinfo,
+	_8QPicture_vtable,
+	_8QPicture_baseinfo,
 	};
 
-char *__Y10QSemaphore_typeinfo_name[] = {
+char *_10QSemaphore_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y10QSemaphore_typeinfo = {
+struct classtypeinfo _10QSemaphore_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y10QSemaphore",
-	__Y10QSemaphore_typeinfo_name,
+	"_ZTS10QSemaphore",
+	_10QSemaphore_typeinfo_name,
 	};
 
-const char *__Y10QSemaphore_vtable_name_0 [] = {
+const char *_10QSemaphore_vtable_name_0 [] = {
 	"_ZN10QSemaphoreD1Ev",
 	"_ZN10QSemaphoreD0Ev",
 	};
 
-struct classvtable __Y10QSemaphore_vtable [1] = {
+struct classvtable _10QSemaphore_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI10QSemaphore",
-	__Y10QSemaphore_vtable_name_0,
+	_10QSemaphore_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y10QSemaphore_baseinfo[] = {
+struct base_type_info _10QSemaphore_baseinfo[] = {
 	};
 
-struct classinfo _Y10QSemaphore_classinfo = {
-	"_Y10QSemaphore",
+struct classinfo _Z10QSemaphore_classinfo = {
+	"_Z10QSemaphore",
 	"_ZTV10QSemaphore",
 	"_ZTI10QSemaphore",	/* RTTI */
 	"",
-	"_ZTT_Y10QSemaphore",	/* VTT */
+	"_ZTT10QSemaphore",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QSemaphore_typeinfo,
-	__Y10QSemaphore_vtable,
-	__Y10QSemaphore_baseinfo,
+	&_10QSemaphore_typeinfo,
+	_10QSemaphore_vtable,
+	_10QSemaphore_baseinfo,
 	};
 
-char *__Y9QComboBox_typeinfo_name[] = {
+char *_9QComboBox_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo __Y9QComboBox_typeinfo = {
+struct classtypeinfo _9QComboBox_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y9QComboBox",
-	__Y9QComboBox_typeinfo_name,
+	"_ZTS9QComboBox",
+	_9QComboBox_typeinfo_name,
 	};
 
-const char *__Y9QComboBox_vtable_name_0 [] = {
+const char *_9QComboBox_vtable_name_0 [] = {
 	"_ZNK9QComboBox10metaObjectEv",
 	"_ZNK9QComboBox9classNameEv",
 	"_ZN9QComboBox7qt_castEPKc",
@@ -38382,7 +38382,7 @@ const char *__Y9QComboBox_vtable_name_0 [] = {
 	"_ZN9QComboBox11setEditTextERK7QString",
 	};
 
-const char *__Y9QComboBox_vtable_name_1 [] = {
+const char *_9QComboBox_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QComboBoxD1Ev",
 #endif
@@ -38456,14 +38456,14 @@ const char *__Y9QComboBox_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y9QComboBox_vtable [2] = {
+struct classvtable _9QComboBox_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	122,	/* Number of Vfuncs */
 	"_ZTI9QComboBox",
-	__Y9QComboBox_vtable_name_0,
+	_9QComboBox_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -38497,40 +38497,40 @@ struct classvtable __Y9QComboBox_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QComboBox",
-	__Y9QComboBox_vtable_name_1,
+	_9QComboBox_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y9QComboBox_baseinfo[] = {
+struct base_type_info _9QComboBox_baseinfo[] = {
 	};
 
-struct classinfo _Y9QComboBox_classinfo = {
-	"_Y9QComboBox",
+struct classinfo _Z9QComboBox_classinfo = {
+	"_Z9QComboBox",
 	"_ZTV9QComboBox",
 	"_ZTI9QComboBox",	/* RTTI */
 	"_ZTI7QWidget",
-	"_ZTT_Y9QComboBox",	/* VTT */
+	"_ZTT9QComboBox",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QComboBox_typeinfo,
-	__Y9QComboBox_vtable,
-	__Y9QComboBox_baseinfo,
+	&_9QComboBox_typeinfo,
+	_9QComboBox_vtable,
+	_9QComboBox_baseinfo,
 	};
 
-char *__Y8QDomText_typeinfo_name[] = {
+char *_8QDomText_typeinfo_name[] = {
 	"_ZTI17QDomCharacterData",
 	};
 
-struct classtypeinfo __Y8QDomText_typeinfo = {
+struct classtypeinfo _8QDomText_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y8QDomText",
-	__Y8QDomText_typeinfo_name,
+	"_ZTS8QDomText",
+	_8QDomText_typeinfo_name,
 	};
 
-const char *__Y8QDomText_vtable_name_0 [] = {
+const char *_8QDomText_vtable_name_0 [] = {
 	"_ZN8QDomTextD1Ev",
 	"_ZN8QDomTextD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -38582,47 +38582,47 @@ const char *__Y8QDomText_vtable_name_0 [] = {
 	"_ZN17QDomCharacterData7setDataERK7QString",
 	};
 
-struct classvtable __Y8QDomText_vtable [1] = {
+struct classvtable _8QDomText_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	49,	/* Number of Vfuncs */
 	"_ZTI8QDomText",
-	__Y8QDomText_vtable_name_0,
+	_8QDomText_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y8QDomText_baseinfo[] = {
+struct base_type_info _8QDomText_baseinfo[] = {
 	};
 
-struct classinfo _Y8QDomText_classinfo = {
-	"_Y8QDomText",
+struct classinfo _Z8QDomText_classinfo = {
+	"_Z8QDomText",
 	"_ZTV8QDomText",
 	"_ZTI8QDomText",	/* RTTI */
 	"_ZTI17QDomCharacterData",
-	"_ZTT_Y8QDomText",	/* VTT */
+	"_ZTT8QDomText",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y8QDomText_typeinfo,
-	__Y8QDomText_vtable,
-	__Y8QDomText_baseinfo,
+	&_8QDomText_typeinfo,
+	_8QDomText_vtable,
+	_8QDomText_baseinfo,
 	};
 
-char *__Y13QVButtonGroup_typeinfo_name[] = {
+char *_13QVButtonGroup_typeinfo_name[] = {
 	"_ZTI12QButtonGroup",
 	};
 
-struct classtypeinfo __Y13QVButtonGroup_typeinfo = {
+struct classtypeinfo _13QVButtonGroup_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y13QVButtonGroup",
-	__Y13QVButtonGroup_typeinfo_name,
+	"_ZTS13QVButtonGroup",
+	_13QVButtonGroup_typeinfo_name,
 	};
 
-const char *__Y13QVButtonGroup_vtable_name_0 [] = {
+const char *_13QVButtonGroup_vtable_name_0 [] = {
 	"_ZNK13QVButtonGroup10metaObjectEv",
 	"_ZNK13QVButtonGroup9classNameEv",
 	"_ZN13QVButtonGroup7qt_castEPKc",
@@ -38750,7 +38750,7 @@ const char *__Y13QVButtonGroup_vtable_name_0 [] = {
 	"_ZN12QButtonGroup9moveFocusEi",
 	};
 
-const char *__Y13QVButtonGroup_vtable_name_1 [] = {
+const char *_13QVButtonGroup_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N13QVButtonGroupD1Ev",
 #endif
@@ -38824,14 +38824,14 @@ const char *__Y13QVButtonGroup_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y13QVButtonGroup_vtable [2] = {
+struct classvtable _13QVButtonGroup_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	125,	/* Number of Vfuncs */
 	"_ZTI13QVButtonGroup",
-	__Y13QVButtonGroup_vtable_name_0,
+	_13QVButtonGroup_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -38865,40 +38865,40 @@ struct classvtable __Y13QVButtonGroup_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI13QVButtonGroup",
-	__Y13QVButtonGroup_vtable_name_1,
+	_13QVButtonGroup_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y13QVButtonGroup_baseinfo[] = {
+struct base_type_info _13QVButtonGroup_baseinfo[] = {
 	};
 
-struct classinfo _Y13QVButtonGroup_classinfo = {
-	"_Y13QVButtonGroup",
+struct classinfo _Z13QVButtonGroup_classinfo = {
+	"_Z13QVButtonGroup",
 	"_ZTV13QVButtonGroup",
 	"_ZTI13QVButtonGroup",	/* RTTI */
 	"_ZTI12QButtonGroup",
-	"_ZTT_Y13QVButtonGroup",	/* VTT */
+	"_ZTT13QVButtonGroup",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y13QVButtonGroup_typeinfo,
-	__Y13QVButtonGroup_vtable,
-	__Y13QVButtonGroup_baseinfo,
+	&_13QVButtonGroup_typeinfo,
+	_13QVButtonGroup_vtable,
+	_13QVButtonGroup_baseinfo,
 	};
 
-char *__Y10QClipboard_typeinfo_name[] = {
+char *_10QClipboard_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y10QClipboard_typeinfo = {
+struct classtypeinfo _10QClipboard_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y10QClipboard",
-	__Y10QClipboard_typeinfo_name,
+	"_ZTS10QClipboard",
+	_10QClipboard_typeinfo_name,
 	};
 
-const char *__Y10QClipboard_vtable_name_0 [] = {
+const char *_10QClipboard_vtable_name_0 [] = {
 	"_ZNK10QClipboard10metaObjectEv",
 	"_ZNK10QClipboard9classNameEv",
 	"_ZN10QClipboard7qt_castEPKc",
@@ -38922,92 +38922,92 @@ const char *__Y10QClipboard_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable __Y10QClipboard_vtable [1] = {
+struct classvtable _10QClipboard_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI10QClipboard",
-	__Y10QClipboard_vtable_name_0,
+	_10QClipboard_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y10QClipboard_baseinfo[] = {
+struct base_type_info _10QClipboard_baseinfo[] = {
 	};
 
-struct classinfo _Y10QClipboard_classinfo = {
-	"_Y10QClipboard",
+struct classinfo _Z10QClipboard_classinfo = {
+	"_Z10QClipboard",
 	"_ZTV10QClipboard",
 	"_ZTI10QClipboard",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y10QClipboard",	/* VTT */
+	"_ZTT10QClipboard",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QClipboard_typeinfo,
-	__Y10QClipboard_vtable,
-	__Y10QClipboard_baseinfo,
+	&_10QClipboard_typeinfo,
+	_10QClipboard_vtable,
+	_10QClipboard_baseinfo,
 	};
 
-char *__Y12QTextEncoder_typeinfo_name[] = {
+char *_12QTextEncoder_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y12QTextEncoder_typeinfo = {
+struct classtypeinfo _12QTextEncoder_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y12QTextEncoder",
-	__Y12QTextEncoder_typeinfo_name,
+	"_ZTS12QTextEncoder",
+	_12QTextEncoder_typeinfo_name,
 	};
 
-const char *__Y12QTextEncoder_vtable_name_0 [] = {
+const char *_12QTextEncoder_vtable_name_0 [] = {
 	"_ZN12QTextEncoderD1Ev",
 	"_ZN12QTextEncoderD0Ev",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y12QTextEncoder_vtable [1] = {
+struct classvtable _12QTextEncoder_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	3,	/* Number of Vfuncs */
 	"_ZTI12QTextEncoder",
-	__Y12QTextEncoder_vtable_name_0,
+	_12QTextEncoder_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y12QTextEncoder_baseinfo[] = {
+struct base_type_info _12QTextEncoder_baseinfo[] = {
 	};
 
-struct classinfo _Y12QTextEncoder_classinfo = {
-	"_Y12QTextEncoder",
+struct classinfo _Z12QTextEncoder_classinfo = {
+	"_Z12QTextEncoder",
 	"_ZTV12QTextEncoder",
 	"_ZTI12QTextEncoder",	/* RTTI */
 	"",
-	"_ZTT_Y12QTextEncoder",	/* VTT */
+	"_ZTT12QTextEncoder",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QTextEncoder_typeinfo,
-	__Y12QTextEncoder_vtable,
-	__Y12QTextEncoder_baseinfo,
+	&_12QTextEncoder_typeinfo,
+	_12QTextEncoder_vtable,
+	_12QTextEncoder_baseinfo,
 	};
 
-char *__Y11QCanvasView_typeinfo_name[] = {
+char *_11QCanvasView_typeinfo_name[] = {
 	"_ZTI11QScrollView",
 	};
 
-struct classtypeinfo __Y11QCanvasView_typeinfo = {
+struct classtypeinfo _11QCanvasView_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QCanvasView",
-	__Y11QCanvasView_typeinfo_name,
+	"_ZTS11QCanvasView",
+	_11QCanvasView_typeinfo_name,
 	};
 
-const char *__Y11QCanvasView_vtable_name_0 [] = {
+const char *_11QCanvasView_vtable_name_0 [] = {
 	"_ZNK11QCanvasView10metaObjectEv",
 	"_ZNK11QCanvasView9classNameEv",
 	"_ZN11QCanvasView7qt_castEPKc",
@@ -39164,7 +39164,7 @@ const char *__Y11QCanvasView_vtable_name_0 [] = {
 	"_ZN11QScrollView15setVBarGeometryER10QScrollBariiii",
 	};
 
-const char *__Y11QCanvasView_vtable_name_1 [] = {
+const char *_11QCanvasView_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QCanvasViewD1Ev",
 #endif
@@ -39238,14 +39238,14 @@ const char *__Y11QCanvasView_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y11QCanvasView_vtable [2] = {
+struct classvtable _11QCanvasView_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	154,	/* Number of Vfuncs */
 	"_ZTI11QCanvasView",
-	__Y11QCanvasView_vtable_name_0,
+	_11QCanvasView_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -39279,39 +39279,39 @@ struct classvtable __Y11QCanvasView_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI11QCanvasView",
-	__Y11QCanvasView_vtable_name_1,
+	_11QCanvasView_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y11QCanvasView_baseinfo[] = {
+struct base_type_info _11QCanvasView_baseinfo[] = {
 	};
 
-struct classinfo _Y11QCanvasView_classinfo = {
-	"_Y11QCanvasView",
+struct classinfo _Z11QCanvasView_classinfo = {
+	"_Z11QCanvasView",
 	"_ZTV11QCanvasView",
 	"_ZTI11QCanvasView",	/* RTTI */
 	"_ZTI11QScrollView",
-	"_ZTT_Y11QCanvasView",	/* VTT */
+	"_ZTT11QCanvasView",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QCanvasView_typeinfo,
-	__Y11QCanvasView_vtable,
-	__Y11QCanvasView_baseinfo,
+	&_11QCanvasView_typeinfo,
+	_11QCanvasView_vtable,
+	_11QCanvasView_baseinfo,
 	};
 
-char *__Y7QPixmap_typeinfo_name[] = {
+char *_7QPixmap_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y7QPixmap_typeinfo = {
+struct classtypeinfo _7QPixmap_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
-	"_ZTS_Y7QPixmap",
-	__Y7QPixmap_typeinfo_name,
+	"_ZTS7QPixmap",
+	_7QPixmap_typeinfo_name,
 	};
 
-const char *__Y7QPixmap_vtable_name_0 [] = {
+const char *_7QPixmap_vtable_name_0 [] = {
 	"_ZN7QPixmapD1Ev",
 	"_ZN7QPixmapD0Ev",
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -39326,49 +39326,49 @@ const char *__Y7QPixmap_vtable_name_0 [] = {
 	"_ZN7QPixmap6detachEv",
 	};
 
-struct classvtable __Y7QPixmap_vtable [1] = {
+struct classvtable _7QPixmap_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	12,	/* Number of Vfuncs */
 	"_ZTI7QPixmap",
-	__Y7QPixmap_vtable_name_0,
+	_7QPixmap_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y7QPixmap_baseinfo[] = {
+struct base_type_info _7QPixmap_baseinfo[] = {
 	{"_ZTI12QPaintDevice",	2U},
 	{"_ZTI2Qt",	2U},
 	};
 
-struct classinfo _Y7QPixmap_classinfo = {
-	"_Y7QPixmap",
+struct classinfo _Z7QPixmap_classinfo = {
+	"_Z7QPixmap",
 	"_ZTV7QPixmap",
 	"_ZTI7QPixmap",	/* RTTI */
 	"_ZTI12QPaintDevice",
-	"_ZTT_Y7QPixmap",	/* VTT */
+	"_ZTT7QPixmap",	/* VTT */
 	1,
 	0,
 	2,
 	0,	/* numVTT */
 	0U,
-	&__Y7QPixmap_typeinfo,
-	__Y7QPixmap_vtable,
-	__Y7QPixmap_baseinfo,
+	&_7QPixmap_typeinfo,
+	_7QPixmap_vtable,
+	_7QPixmap_baseinfo,
 	};
 
-char *__Y5QGrid_typeinfo_name[] = {
+char *_5QGrid_typeinfo_name[] = {
 	"_ZTI6QFrame",
 	};
 
-struct classtypeinfo __Y5QGrid_typeinfo = {
+struct classtypeinfo _5QGrid_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y5QGrid",
-	__Y5QGrid_typeinfo_name,
+	"_ZTS5QGrid",
+	_5QGrid_typeinfo_name,
 	};
 
-const char *__Y5QGrid_vtable_name_0 [] = {
+const char *_5QGrid_vtable_name_0 [] = {
 	"_ZNK5QGrid10metaObjectEv",
 	"_ZNK5QGrid9classNameEv",
 	"_ZN5QGrid7qt_castEPKc",
@@ -39489,7 +39489,7 @@ const char *__Y5QGrid_vtable_name_0 [] = {
 	"_ZN5QGrid12frameChangedEv",
 	};
 
-const char *__Y5QGrid_vtable_name_1 [] = {
+const char *_5QGrid_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N5QGridD1Ev",
 #endif
@@ -39563,14 +39563,14 @@ const char *__Y5QGrid_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y5QGrid_vtable [2] = {
+struct classvtable _5QGrid_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	118,	/* Number of Vfuncs */
 	"_ZTI5QGrid",
-	__Y5QGrid_vtable_name_0,
+	_5QGrid_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -39604,40 +39604,40 @@ struct classvtable __Y5QGrid_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI5QGrid",
-	__Y5QGrid_vtable_name_1,
+	_5QGrid_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y5QGrid_baseinfo[] = {
+struct base_type_info _5QGrid_baseinfo[] = {
 	};
 
-struct classinfo _Y5QGrid_classinfo = {
-	"_Y5QGrid",
+struct classinfo _Z5QGrid_classinfo = {
+	"_Z5QGrid",
 	"_ZTV5QGrid",
 	"_ZTI5QGrid",	/* RTTI */
 	"_ZTI6QFrame",
-	"_ZTT_Y5QGrid",	/* VTT */
+	"_ZTT5QGrid",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y5QGrid_typeinfo,
-	__Y5QGrid_vtable,
-	__Y5QGrid_baseinfo,
+	&_5QGrid_typeinfo,
+	_5QGrid_vtable,
+	_5QGrid_baseinfo,
 	};
 
-char *__Y12QRadioButton_typeinfo_name[] = {
+char *_12QRadioButton_typeinfo_name[] = {
 	"_ZTI7QButton",
 	};
 
-struct classtypeinfo __Y12QRadioButton_typeinfo = {
+struct classtypeinfo _12QRadioButton_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y12QRadioButton",
-	__Y12QRadioButton_typeinfo_name,
+	"_ZTS12QRadioButton",
+	_12QRadioButton_typeinfo_name,
 	};
 
-const char *__Y12QRadioButton_vtable_name_0 [] = {
+const char *_12QRadioButton_vtable_name_0 [] = {
 	"_ZNK12QRadioButton10metaObjectEv",
 	"_ZNK12QRadioButton9classNameEv",
 	"_ZN12QRadioButton7qt_castEPKc",
@@ -39762,7 +39762,7 @@ const char *__Y12QRadioButton_vtable_name_0 [] = {
 	"_ZN12QRadioButton10setCheckedEb",
 	};
 
-const char *__Y12QRadioButton_vtable_name_1 [] = {
+const char *_12QRadioButton_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N12QRadioButtonD1Ev",
 #endif
@@ -39836,14 +39836,14 @@ const char *__Y12QRadioButton_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y12QRadioButton_vtable [2] = {
+struct classvtable _12QRadioButton_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	122,	/* Number of Vfuncs */
 	"_ZTI12QRadioButton",
-	__Y12QRadioButton_vtable_name_0,
+	_12QRadioButton_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -39877,83 +39877,83 @@ struct classvtable __Y12QRadioButton_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI12QRadioButton",
-	__Y12QRadioButton_vtable_name_1,
+	_12QRadioButton_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y12QRadioButton_baseinfo[] = {
+struct base_type_info _12QRadioButton_baseinfo[] = {
 	};
 
-struct classinfo _Y12QRadioButton_classinfo = {
-	"_Y12QRadioButton",
+struct classinfo _Z12QRadioButton_classinfo = {
+	"_Z12QRadioButton",
 	"_ZTV12QRadioButton",
 	"_ZTI12QRadioButton",	/* RTTI */
 	"_ZTI7QButton",
-	"_ZTT_Y12QRadioButton",	/* VTT */
+	"_ZTT12QRadioButton",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QRadioButton_typeinfo,
-	__Y12QRadioButton_vtable,
-	__Y12QRadioButton_baseinfo,
+	&_12QRadioButton_typeinfo,
+	_12QRadioButton_vtable,
+	_12QRadioButton_baseinfo,
 	};
 
-char *__Y8QAsyncIO_typeinfo_name[] = {
+char *_8QAsyncIO_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y8QAsyncIO_typeinfo = {
+struct classtypeinfo _8QAsyncIO_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y8QAsyncIO",
-	__Y8QAsyncIO_typeinfo_name,
+	"_ZTS8QAsyncIO",
+	_8QAsyncIO_typeinfo_name,
 	};
 
-const char *__Y8QAsyncIO_vtable_name_0 [] = {
+const char *_8QAsyncIO_vtable_name_0 [] = {
 	"_ZN8QAsyncIOD1Ev",
 	"_ZN8QAsyncIOD0Ev",
 	};
 
-struct classvtable __Y8QAsyncIO_vtable [1] = {
+struct classvtable _8QAsyncIO_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI8QAsyncIO",
-	__Y8QAsyncIO_vtable_name_0,
+	_8QAsyncIO_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y8QAsyncIO_baseinfo[] = {
+struct base_type_info _8QAsyncIO_baseinfo[] = {
 	};
 
-struct classinfo _Y8QAsyncIO_classinfo = {
-	"_Y8QAsyncIO",
+struct classinfo _Z8QAsyncIO_classinfo = {
+	"_Z8QAsyncIO",
 	"_ZTV8QAsyncIO",
 	"_ZTI8QAsyncIO",	/* RTTI */
 	"",
-	"_ZTT_Y8QAsyncIO",	/* VTT */
+	"_ZTT8QAsyncIO",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y8QAsyncIO_typeinfo,
-	__Y8QAsyncIO_vtable,
-	__Y8QAsyncIO_baseinfo,
+	&_8QAsyncIO_typeinfo,
+	_8QAsyncIO_vtable,
+	_8QAsyncIO_baseinfo,
 	};
 
-char *__Y7QSlider_typeinfo_name[] = {
+char *_7QSlider_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y7QSlider_typeinfo = {
+struct classtypeinfo _7QSlider_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
-	"_ZTS_Y7QSlider",
-	__Y7QSlider_typeinfo_name,
+	"_ZTS7QSlider",
+	_7QSlider_typeinfo_name,
 	};
 
-const char *__Y7QSlider_vtable_name_0 [] = {
+const char *_7QSlider_vtable_name_0 [] = {
 	"_ZNK7QSlider10metaObjectEv",
 	"_ZNK7QSlider9classNameEv",
 	"_ZN7QSlider7qt_castEPKc",
@@ -40073,7 +40073,7 @@ const char *__Y7QSlider_vtable_name_0 [] = {
 	"_ZN7QSlider11rangeChangeEv",
 	};
 
-const char *__Y7QSlider_vtable_name_1 [] = {
+const char *_7QSlider_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N7QSliderD1Ev",
 #endif
@@ -40147,7 +40147,7 @@ const char *__Y7QSlider_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-const char *__Y7QSlider_vtable_name_2 [] = {
+const char *_7QSlider_vtable_name_2 [] = {
 #if defined __i386__
 	"_ZThn116_N7QSliderD1Ev",
 #endif
@@ -40235,14 +40235,14 @@ const char *__Y7QSlider_vtable_name_2 [] = {
 	"_ZN13QRangeControl10stepChangeEv",
 	};
 
-struct classvtable __Y7QSlider_vtable [3] = {
+struct classvtable _7QSlider_vtable [3] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	117,	/* Number of Vfuncs */
 	"_ZTI7QSlider",
-	__Y7QSlider_vtable_name_0,
+	_7QSlider_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -40276,7 +40276,7 @@ struct classvtable __Y7QSlider_vtable [3] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI7QSlider",
-	__Y7QSlider_vtable_name_1,
+	_7QSlider_vtable_name_1,
 	},
 	{
 #if defined __i386__
@@ -40310,11 +40310,11 @@ struct classvtable __Y7QSlider_vtable [3] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI7QSlider",
-	__Y7QSlider_vtable_name_2,
+	_7QSlider_vtable_name_2,
 	},
 };
 
-struct base_type_info __Y7QSlider_baseinfo[] = {
+struct base_type_info _7QSlider_baseinfo[] = {
 	{"_ZTI7QWidget",	2U},
 #if defined __i386__
 	{"_ZTI13QRangeControl",	29698U},
@@ -40339,33 +40339,33 @@ struct base_type_info __Y7QSlider_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Y7QSlider_classinfo = {
-	"_Y7QSlider",
+struct classinfo _Z7QSlider_classinfo = {
+	"_Z7QSlider",
 	"_ZTV7QSlider",
 	"_ZTI7QSlider",	/* RTTI */
 	"_ZTI7QWidget",
-	"_ZTT_Y7QSlider",	/* VTT */
+	"_ZTT7QSlider",	/* VTT */
 	3,
 	0,
 	2,
 	0,	/* numVTT */
 	0U,
-	&__Y7QSlider_typeinfo,
-	__Y7QSlider_vtable,
-	__Y7QSlider_baseinfo,
+	&_7QSlider_typeinfo,
+	_7QSlider_vtable,
+	_7QSlider_baseinfo,
 	};
 
-char *__Y19QHttpResponseHeader_typeinfo_name[] = {
+char *_19QHttpResponseHeader_typeinfo_name[] = {
 	"_ZTI11QHttpHeader",
 	};
 
-struct classtypeinfo __Y19QHttpResponseHeader_typeinfo = {
+struct classtypeinfo _19QHttpResponseHeader_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y19QHttpResponseHeader",
-	__Y19QHttpResponseHeader_typeinfo_name,
+	"_ZTS19QHttpResponseHeader",
+	_19QHttpResponseHeader_typeinfo_name,
 	};
 
-const char *__Y19QHttpResponseHeader_vtable_name_0 [] = {
+const char *_19QHttpResponseHeader_vtable_name_0 [] = {
 	"_ZN19QHttpResponseHeaderD1Ev",
 	"_ZN19QHttpResponseHeaderD0Ev",
 	"_ZNK19QHttpResponseHeader8toStringEv",
@@ -40374,47 +40374,47 @@ const char *__Y19QHttpResponseHeader_vtable_name_0 [] = {
 	"_ZN19QHttpResponseHeader9parseLineERK7QStringi",
 	};
 
-struct classvtable __Y19QHttpResponseHeader_vtable [1] = {
+struct classvtable _19QHttpResponseHeader_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	6,	/* Number of Vfuncs */
 	"_ZTI19QHttpResponseHeader",
-	__Y19QHttpResponseHeader_vtable_name_0,
+	_19QHttpResponseHeader_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y19QHttpResponseHeader_baseinfo[] = {
+struct base_type_info _19QHttpResponseHeader_baseinfo[] = {
 	};
 
-struct classinfo _Y19QHttpResponseHeader_classinfo = {
-	"_Y19QHttpResponseHeader",
+struct classinfo _Z19QHttpResponseHeader_classinfo = {
+	"_Z19QHttpResponseHeader",
 	"_ZTV19QHttpResponseHeader",
 	"_ZTI19QHttpResponseHeader",	/* RTTI */
 	"_ZTI11QHttpHeader",
-	"_ZTT_Y19QHttpResponseHeader",	/* VTT */
+	"_ZTT19QHttpResponseHeader",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y19QHttpResponseHeader_typeinfo,
-	__Y19QHttpResponseHeader_vtable,
-	__Y19QHttpResponseHeader_baseinfo,
+	&_19QHttpResponseHeader_typeinfo,
+	_19QHttpResponseHeader_vtable,
+	_19QHttpResponseHeader_baseinfo,
 	};
 
-char *__Y17QDomCharacterData_typeinfo_name[] = {
+char *_17QDomCharacterData_typeinfo_name[] = {
 	"_ZTI8QDomNode",
 	};
 
-struct classtypeinfo __Y17QDomCharacterData_typeinfo = {
+struct classtypeinfo _17QDomCharacterData_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y17QDomCharacterData",
-	__Y17QDomCharacterData_typeinfo_name,
+	"_ZTS17QDomCharacterData",
+	_17QDomCharacterData_typeinfo_name,
 	};
 
-const char *__Y17QDomCharacterData_vtable_name_0 [] = {
+const char *_17QDomCharacterData_vtable_name_0 [] = {
 	"_ZN17QDomCharacterDataD1Ev",
 	"_ZN17QDomCharacterDataD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -40466,47 +40466,47 @@ const char *__Y17QDomCharacterData_vtable_name_0 [] = {
 	"_ZN17QDomCharacterData7setDataERK7QString",
 	};
 
-struct classvtable __Y17QDomCharacterData_vtable [1] = {
+struct classvtable _17QDomCharacterData_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	49,	/* Number of Vfuncs */
 	"_ZTI17QDomCharacterData",
-	__Y17QDomCharacterData_vtable_name_0,
+	_17QDomCharacterData_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y17QDomCharacterData_baseinfo[] = {
+struct base_type_info _17QDomCharacterData_baseinfo[] = {
 	};
 
-struct classinfo _Y17QDomCharacterData_classinfo = {
-	"_Y17QDomCharacterData",
+struct classinfo _Z17QDomCharacterData_classinfo = {
+	"_Z17QDomCharacterData",
 	"_ZTV17QDomCharacterData",
 	"_ZTI17QDomCharacterData",	/* RTTI */
 	"_ZTI8QDomNode",
-	"_ZTT_Y17QDomCharacterData",	/* VTT */
+	"_ZTT17QDomCharacterData",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y17QDomCharacterData_typeinfo,
-	__Y17QDomCharacterData_vtable,
-	__Y17QDomCharacterData_baseinfo,
+	&_17QDomCharacterData_typeinfo,
+	_17QDomCharacterData_vtable,
+	_17QDomCharacterData_baseinfo,
 	};
 
-char *__Y15QDragEnterEvent_typeinfo_name[] = {
+char *_15QDragEnterEvent_typeinfo_name[] = {
 	"_ZTI14QDragMoveEvent",
 	};
 
-struct classtypeinfo __Y15QDragEnterEvent_typeinfo = {
+struct classtypeinfo _15QDragEnterEvent_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y15QDragEnterEvent",
-	__Y15QDragEnterEvent_typeinfo_name,
+	"_ZTS15QDragEnterEvent",
+	_15QDragEnterEvent_typeinfo_name,
 	};
 
-const char *__Y15QDragEnterEvent_vtable_name_0 [] = {
+const char *_15QDragEnterEvent_vtable_name_0 [] = {
 	"_ZN15QDragEnterEventD1Ev",
 	"_ZN15QDragEnterEventD0Ev",
 	"_ZNK10QDropEvent6formatEi",
@@ -40514,7 +40514,7 @@ const char *__Y15QDragEnterEvent_vtable_name_0 [] = {
 	"_ZNK10QDropEvent8providesEPKc",
 	};
 
-const char *__Y15QDragEnterEvent_vtable_name_1 [] = {
+const char *_15QDragEnterEvent_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn12_N15QDragEnterEventD1Ev",
 #endif
@@ -40622,14 +40622,14 @@ const char *__Y15QDragEnterEvent_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable __Y15QDragEnterEvent_vtable [2] = {
+struct classvtable _15QDragEnterEvent_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI15QDragEnterEvent",
-	__Y15QDragEnterEvent_vtable_name_0,
+	_15QDragEnterEvent_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -40663,40 +40663,40 @@ struct classvtable __Y15QDragEnterEvent_vtable [2] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI15QDragEnterEvent",
-	__Y15QDragEnterEvent_vtable_name_1,
+	_15QDragEnterEvent_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y15QDragEnterEvent_baseinfo[] = {
+struct base_type_info _15QDragEnterEvent_baseinfo[] = {
 	};
 
-struct classinfo _Y15QDragEnterEvent_classinfo = {
-	"_Y15QDragEnterEvent",
+struct classinfo _Z15QDragEnterEvent_classinfo = {
+	"_Z15QDragEnterEvent",
 	"_ZTV15QDragEnterEvent",
 	"_ZTI15QDragEnterEvent",	/* RTTI */
 	"_ZTI14QDragMoveEvent",
-	"_ZTT_Y15QDragEnterEvent",	/* VTT */
+	"_ZTT15QDragEnterEvent",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y15QDragEnterEvent_typeinfo,
-	__Y15QDragEnterEvent_vtable,
-	__Y15QDragEnterEvent_baseinfo,
+	&_15QDragEnterEvent_typeinfo,
+	_15QDragEnterEvent_vtable,
+	_15QDragEnterEvent_baseinfo,
 	};
 
-char *__Y12QActionGroup_typeinfo_name[] = {
+char *_12QActionGroup_typeinfo_name[] = {
 	"_ZTI7QAction",
 	};
 
-struct classtypeinfo __Y12QActionGroup_typeinfo = {
+struct classtypeinfo _12QActionGroup_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y12QActionGroup",
-	__Y12QActionGroup_typeinfo_name,
+	"_ZTS12QActionGroup",
+	_12QActionGroup_typeinfo_name,
 	};
 
-const char *__Y12QActionGroup_vtable_name_0 [] = {
+const char *_12QActionGroup_vtable_name_0 [] = {
 	"_ZNK12QActionGroup10metaObjectEv",
 	"_ZNK12QActionGroup9classNameEv",
 	"_ZN12QActionGroup7qt_castEPKc",
@@ -40736,47 +40736,47 @@ const char *__Y12QActionGroup_vtable_name_0 [] = {
 	"_ZN12QActionGroup7addedToEiP10QPopupMenuP7QAction",
 	};
 
-struct classvtable __Y12QActionGroup_vtable [1] = {
+struct classvtable _12QActionGroup_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	37,	/* Number of Vfuncs */
 	"_ZTI12QActionGroup",
-	__Y12QActionGroup_vtable_name_0,
+	_12QActionGroup_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y12QActionGroup_baseinfo[] = {
+struct base_type_info _12QActionGroup_baseinfo[] = {
 	};
 
-struct classinfo _Y12QActionGroup_classinfo = {
-	"_Y12QActionGroup",
+struct classinfo _Z12QActionGroup_classinfo = {
+	"_Z12QActionGroup",
 	"_ZTV12QActionGroup",
 	"_ZTI12QActionGroup",	/* RTTI */
 	"_ZTI7QAction",
-	"_ZTT_Y12QActionGroup",	/* VTT */
+	"_ZTT12QActionGroup",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QActionGroup_typeinfo,
-	__Y12QActionGroup_vtable,
-	__Y12QActionGroup_baseinfo,
+	&_12QActionGroup_typeinfo,
+	_12QActionGroup_vtable,
+	_12QActionGroup_baseinfo,
 	};
 
-char *__Y10QDataTable_typeinfo_name[] = {
+char *_10QDataTable_typeinfo_name[] = {
 	"_ZTI6QTable",
 	};
 
-struct classtypeinfo __Y10QDataTable_typeinfo = {
+struct classtypeinfo _10QDataTable_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y10QDataTable",
-	__Y10QDataTable_typeinfo_name,
+	"_ZTS10QDataTable",
+	_10QDataTable_typeinfo_name,
 	};
 
-const char *__Y10QDataTable_vtable_name_0 [] = {
+const char *_10QDataTable_vtable_name_0 [] = {
 	"_ZNK10QDataTable10metaObjectEv",
 	"_ZNK10QDataTable9classNameEv",
 	"_ZN10QDataTable7qt_castEPKc",
@@ -41044,7 +41044,7 @@ const char *__Y10QDataTable_vtable_name_0 [] = {
 	"_ZN10QDataTable14fieldAlignmentEPK9QSqlField",
 	};
 
-const char *__Y10QDataTable_vtable_name_1 [] = {
+const char *_10QDataTable_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QDataTableD1Ev",
 #endif
@@ -41118,14 +41118,14 @@ const char *__Y10QDataTable_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y10QDataTable_vtable [2] = {
+struct classvtable _10QDataTable_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	265,	/* Number of Vfuncs */
 	"_ZTI10QDataTable",
-	__Y10QDataTable_vtable_name_0,
+	_10QDataTable_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -41159,40 +41159,40 @@ struct classvtable __Y10QDataTable_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI10QDataTable",
-	__Y10QDataTable_vtable_name_1,
+	_10QDataTable_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y10QDataTable_baseinfo[] = {
+struct base_type_info _10QDataTable_baseinfo[] = {
 	};
 
-struct classinfo _Y10QDataTable_classinfo = {
-	"_Y10QDataTable",
+struct classinfo _Z10QDataTable_classinfo = {
+	"_Z10QDataTable",
 	"_ZTV10QDataTable",
 	"_ZTI10QDataTable",	/* RTTI */
 	"_ZTI6QTable",
-	"_ZTT_Y10QDataTable",	/* VTT */
+	"_ZTT10QDataTable",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QDataTable_typeinfo,
-	__Y10QDataTable_vtable,
-	__Y10QDataTable_baseinfo,
+	&_10QDataTable_typeinfo,
+	_10QDataTable_vtable,
+	_10QDataTable_baseinfo,
 	};
 
-char *__Y14QDragMoveEvent_typeinfo_name[] = {
+char *_14QDragMoveEvent_typeinfo_name[] = {
 	"_ZTI10QDropEvent",
 	};
 
-struct classtypeinfo __Y14QDragMoveEvent_typeinfo = {
+struct classtypeinfo _14QDragMoveEvent_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y14QDragMoveEvent",
-	__Y14QDragMoveEvent_typeinfo_name,
+	"_ZTS14QDragMoveEvent",
+	_14QDragMoveEvent_typeinfo_name,
 	};
 
-const char *__Y14QDragMoveEvent_vtable_name_0 [] = {
+const char *_14QDragMoveEvent_vtable_name_0 [] = {
 	"_ZN14QDragMoveEventD1Ev",
 	"_ZN14QDragMoveEventD0Ev",
 	"_ZNK10QDropEvent6formatEi",
@@ -41200,7 +41200,7 @@ const char *__Y14QDragMoveEvent_vtable_name_0 [] = {
 	"_ZNK10QDropEvent8providesEPKc",
 	};
 
-const char *__Y14QDragMoveEvent_vtable_name_1 [] = {
+const char *_14QDragMoveEvent_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn12_N14QDragMoveEventD1Ev",
 #endif
@@ -41308,14 +41308,14 @@ const char *__Y14QDragMoveEvent_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable __Y14QDragMoveEvent_vtable [2] = {
+struct classvtable _14QDragMoveEvent_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI14QDragMoveEvent",
-	__Y14QDragMoveEvent_vtable_name_0,
+	_14QDragMoveEvent_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -41349,40 +41349,40 @@ struct classvtable __Y14QDragMoveEvent_vtable [2] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI14QDragMoveEvent",
-	__Y14QDragMoveEvent_vtable_name_1,
+	_14QDragMoveEvent_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y14QDragMoveEvent_baseinfo[] = {
+struct base_type_info _14QDragMoveEvent_baseinfo[] = {
 	};
 
-struct classinfo _Y14QDragMoveEvent_classinfo = {
-	"_Y14QDragMoveEvent",
+struct classinfo _Z14QDragMoveEvent_classinfo = {
+	"_Z14QDragMoveEvent",
 	"_ZTV14QDragMoveEvent",
 	"_ZTI14QDragMoveEvent",	/* RTTI */
 	"_ZTI10QDropEvent",
-	"_ZTT_Y14QDragMoveEvent",	/* VTT */
+	"_ZTT14QDragMoveEvent",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y14QDragMoveEvent_typeinfo,
-	__Y14QDragMoveEvent_vtable,
-	__Y14QDragMoveEvent_baseinfo,
+	&_14QDragMoveEvent_typeinfo,
+	_14QDragMoveEvent_vtable,
+	_14QDragMoveEvent_baseinfo,
 	};
 
-char *__Y14QCanvasEllipse_typeinfo_name[] = {
+char *_14QCanvasEllipse_typeinfo_name[] = {
 	"_ZTI20QCanvasPolygonalItem",
 	};
 
-struct classtypeinfo __Y14QCanvasEllipse_typeinfo = {
+struct classtypeinfo _14QCanvasEllipse_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y14QCanvasEllipse",
-	__Y14QCanvasEllipse_typeinfo_name,
+	"_ZTS14QCanvasEllipse",
+	_14QCanvasEllipse_typeinfo_name,
 	};
 
-const char *__Y14QCanvasEllipse_vtable_name_0 [] = {
+const char *_14QCanvasEllipse_vtable_name_0 [] = {
 	"_ZN14QCanvasEllipseD1Ev",
 	"_ZN14QCanvasEllipseD0Ev",
 	"_ZN11QCanvasItem6moveByEdd",
@@ -41411,46 +41411,46 @@ const char *__Y14QCanvasEllipse_vtable_name_0 [] = {
 	"_ZN14QCanvasEllipse9drawShapeER8QPainter",
 	};
 
-struct classvtable __Y14QCanvasEllipse_vtable [1] = {
+struct classvtable _14QCanvasEllipse_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	26,	/* Number of Vfuncs */
 	"_ZTI14QCanvasEllipse",
-	__Y14QCanvasEllipse_vtable_name_0,
+	_14QCanvasEllipse_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y14QCanvasEllipse_baseinfo[] = {
+struct base_type_info _14QCanvasEllipse_baseinfo[] = {
 	};
 
-struct classinfo _Y14QCanvasEllipse_classinfo = {
-	"_Y14QCanvasEllipse",
+struct classinfo _Z14QCanvasEllipse_classinfo = {
+	"_Z14QCanvasEllipse",
 	"_ZTV14QCanvasEllipse",
 	"_ZTI14QCanvasEllipse",	/* RTTI */
 	"_ZTI20QCanvasPolygonalItem",
-	"_ZTT_Y14QCanvasEllipse",	/* VTT */
+	"_ZTT14QCanvasEllipse",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y14QCanvasEllipse_typeinfo,
-	__Y14QCanvasEllipse_vtable,
-	__Y14QCanvasEllipse_baseinfo,
+	&_14QCanvasEllipse_typeinfo,
+	_14QCanvasEllipse_vtable,
+	_14QCanvasEllipse_baseinfo,
 	};
 
-char *__Y10QDropEvent_typeinfo_name[] = {
+char *_10QDropEvent_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y10QDropEvent_typeinfo = {
+struct classtypeinfo _10QDropEvent_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
-	"_ZTS_Y10QDropEvent",
-	__Y10QDropEvent_typeinfo_name,
+	"_ZTS10QDropEvent",
+	_10QDropEvent_typeinfo_name,
 	};
 
-const char *__Y10QDropEvent_vtable_name_0 [] = {
+const char *_10QDropEvent_vtable_name_0 [] = {
 	"_ZN10QDropEventD1Ev",
 	"_ZN10QDropEventD0Ev",
 	"_ZNK10QDropEvent6formatEi",
@@ -41458,7 +41458,7 @@ const char *__Y10QDropEvent_vtable_name_0 [] = {
 	"_ZNK10QDropEvent8providesEPKc",
 	};
 
-const char *__Y10QDropEvent_vtable_name_1 [] = {
+const char *_10QDropEvent_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn12_N10QDropEventD1Ev",
 #endif
@@ -41566,14 +41566,14 @@ const char *__Y10QDropEvent_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable __Y10QDropEvent_vtable [2] = {
+struct classvtable _10QDropEvent_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI10QDropEvent",
-	__Y10QDropEvent_vtable_name_0,
+	_10QDropEvent_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -41607,11 +41607,11 @@ struct classvtable __Y10QDropEvent_vtable [2] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI10QDropEvent",
-	__Y10QDropEvent_vtable_name_1,
+	_10QDropEvent_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y10QDropEvent_baseinfo[] = {
+struct base_type_info _10QDropEvent_baseinfo[] = {
 	{"_ZTI6QEvent",	2U},
 #if defined __i386__
 	{"_ZTI11QMimeSource",	3074U},
@@ -41636,33 +41636,33 @@ struct base_type_info __Y10QDropEvent_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Y10QDropEvent_classinfo = {
-	"_Y10QDropEvent",
+struct classinfo _Z10QDropEvent_classinfo = {
+	"_Z10QDropEvent",
 	"_ZTV10QDropEvent",
 	"_ZTI10QDropEvent",	/* RTTI */
 	"_ZTI6QEvent",
-	"_ZTT_Y10QDropEvent",	/* VTT */
+	"_ZTT10QDropEvent",	/* VTT */
 	2,
 	0,
 	2,
 	0,	/* numVTT */
 	0U,
-	&__Y10QDropEvent_typeinfo,
-	__Y10QDropEvent_vtable,
-	__Y10QDropEvent_baseinfo,
+	&_10QDropEvent_typeinfo,
+	_10QDropEvent_vtable,
+	_10QDropEvent_baseinfo,
 	};
 
-char *__Y11QMainWindow_typeinfo_name[] = {
+char *_11QMainWindow_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo __Y11QMainWindow_typeinfo = {
+struct classtypeinfo _11QMainWindow_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QMainWindow",
-	__Y11QMainWindow_typeinfo_name,
+	"_ZTS11QMainWindow",
+	_11QMainWindow_typeinfo_name,
 	};
 
-const char *__Y11QMainWindow_vtable_name_0 [] = {
+const char *_11QMainWindow_vtable_name_0 [] = {
 	"_ZNK11QMainWindow10metaObjectEv",
 	"_ZNK11QMainWindow9classNameEv",
 	"_ZN11QMainWindow7qt_castEPKc",
@@ -41799,7 +41799,7 @@ const char *__Y11QMainWindow_vtable_name_0 [] = {
 	"_ZN11QMainWindow15setToolTipGroupEP13QToolTipGroup",
 	};
 
-const char *__Y11QMainWindow_vtable_name_1 [] = {
+const char *_11QMainWindow_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QMainWindowD1Ev",
 #endif
@@ -41873,14 +41873,14 @@ const char *__Y11QMainWindow_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y11QMainWindow_vtable [2] = {
+struct classvtable _11QMainWindow_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	134,	/* Number of Vfuncs */
 	"_ZTI11QMainWindow",
-	__Y11QMainWindow_vtable_name_0,
+	_11QMainWindow_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -41914,40 +41914,40 @@ struct classvtable __Y11QMainWindow_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI11QMainWindow",
-	__Y11QMainWindow_vtable_name_1,
+	_11QMainWindow_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y11QMainWindow_baseinfo[] = {
+struct base_type_info _11QMainWindow_baseinfo[] = {
 	};
 
-struct classinfo _Y11QMainWindow_classinfo = {
-	"_Y11QMainWindow",
+struct classinfo _Z11QMainWindow_classinfo = {
+	"_Z11QMainWindow",
 	"_ZTV11QMainWindow",
 	"_ZTI11QMainWindow",	/* RTTI */
 	"_ZTI7QWidget",
-	"_ZTT_Y11QMainWindow",	/* VTT */
+	"_ZTT11QMainWindow",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QMainWindow_typeinfo,
-	__Y11QMainWindow_vtable,
-	__Y11QMainWindow_baseinfo,
+	&_11QMainWindow_typeinfo,
+	_11QMainWindow_vtable,
+	_11QMainWindow_baseinfo,
 	};
 
-char *__Y10QStatusBar_typeinfo_name[] = {
+char *_10QStatusBar_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo __Y10QStatusBar_typeinfo = {
+struct classtypeinfo _10QStatusBar_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y10QStatusBar",
-	__Y10QStatusBar_typeinfo_name,
+	"_ZTS10QStatusBar",
+	_10QStatusBar_typeinfo_name,
 	};
 
-const char *__Y10QStatusBar_vtable_name_0 [] = {
+const char *_10QStatusBar_vtable_name_0 [] = {
 	"_ZNK10QStatusBar10metaObjectEv",
 	"_ZNK10QStatusBar9classNameEv",
 	"_ZN10QStatusBar7qt_castEPKc",
@@ -42062,7 +42062,7 @@ const char *__Y10QStatusBar_vtable_name_0 [] = {
 	"_ZN10QStatusBar12removeWidgetEP7QWidget",
 	};
 
-const char *__Y10QStatusBar_vtable_name_1 [] = {
+const char *_10QStatusBar_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QStatusBarD1Ev",
 #endif
@@ -42136,14 +42136,14 @@ const char *__Y10QStatusBar_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y10QStatusBar_vtable [2] = {
+struct classvtable _10QStatusBar_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	112,	/* Number of Vfuncs */
 	"_ZTI10QStatusBar",
-	__Y10QStatusBar_vtable_name_0,
+	_10QStatusBar_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -42177,40 +42177,40 @@ struct classvtable __Y10QStatusBar_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI10QStatusBar",
-	__Y10QStatusBar_vtable_name_1,
+	_10QStatusBar_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y10QStatusBar_baseinfo[] = {
+struct base_type_info _10QStatusBar_baseinfo[] = {
 	};
 
-struct classinfo _Y10QStatusBar_classinfo = {
-	"_Y10QStatusBar",
+struct classinfo _Z10QStatusBar_classinfo = {
+	"_Z10QStatusBar",
 	"_ZTV10QStatusBar",
 	"_ZTI10QStatusBar",	/* RTTI */
 	"_ZTI7QWidget",
-	"_ZTT_Y10QStatusBar",	/* VTT */
+	"_ZTT10QStatusBar",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QStatusBar_typeinfo,
-	__Y10QStatusBar_vtable,
-	__Y10QStatusBar_baseinfo,
+	&_10QStatusBar_typeinfo,
+	_10QStatusBar_vtable,
+	_10QStatusBar_baseinfo,
 	};
 
-char *__Y8QStrList_typeinfo_name[] = {
+char *_8QStrList_typeinfo_name[] = {
 	"_ZTI8QPtrListIcE",
 	};
 
-struct classtypeinfo __Y8QStrList_typeinfo = {
+struct classtypeinfo _8QStrList_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y8QStrList",
-	__Y8QStrList_typeinfo_name,
+	"_ZTS8QStrList",
+	_8QStrList_typeinfo_name,
 	};
 
-const char *__Y8QStrList_vtable_name_0 [] = {
+const char *_8QStrList_vtable_name_0 [] = {
 	"_ZNK8QPtrListIcE5countEv",
 	"_ZN8QPtrListIcE5clearEv",
 	"_ZN8QStrListD1Ev",
@@ -42222,47 +42222,47 @@ const char *__Y8QStrList_vtable_name_0 [] = {
 	"_ZNK8QStrList5writeER11QDataStreamPv",
 	};
 
-struct classvtable __Y8QStrList_vtable [1] = {
+struct classvtable _8QStrList_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI8QStrList",
-	__Y8QStrList_vtable_name_0,
+	_8QStrList_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y8QStrList_baseinfo[] = {
+struct base_type_info _8QStrList_baseinfo[] = {
 	};
 
-struct classinfo _Y8QStrList_classinfo = {
-	"_Y8QStrList",
+struct classinfo _Z8QStrList_classinfo = {
+	"_Z8QStrList",
 	"_ZTV8QStrList",
 	"_ZTI8QStrList",	/* RTTI */
 	"_ZTI8QPtrListIcE",
-	"_ZTT_Y8QStrList",	/* VTT */
+	"_ZTT8QStrList",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y8QStrList_typeinfo,
-	__Y8QStrList_vtable,
-	__Y8QStrList_baseinfo,
+	&_8QStrList_typeinfo,
+	_8QStrList_vtable,
+	_8QStrList_baseinfo,
 	};
 
-char *__Y11QTsciiCodec_typeinfo_name[] = {
+char *_11QTsciiCodec_typeinfo_name[] = {
 	"_ZTI10QTextCodec",
 	};
 
-struct classtypeinfo __Y11QTsciiCodec_typeinfo = {
+struct classtypeinfo _11QTsciiCodec_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QTsciiCodec",
-	__Y11QTsciiCodec_typeinfo_name,
+	"_ZTS11QTsciiCodec",
+	_11QTsciiCodec_typeinfo_name,
 	};
 
-const char *__Y11QTsciiCodec_vtable_name_0 [] = {
+const char *_11QTsciiCodec_vtable_name_0 [] = {
 	"_ZN11QTsciiCodecD1Ev",
 	"_ZN11QTsciiCodecD0Ev",
 	"_ZNK11QTsciiCodec4nameEv",
@@ -42280,47 +42280,47 @@ const char *__Y11QTsciiCodec_vtable_name_0 [] = {
 	"_ZNK10QTextCodec20characterFromUnicodeERK7QStringi",
 	};
 
-struct classvtable __Y11QTsciiCodec_vtable [1] = {
+struct classvtable _11QTsciiCodec_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	15,	/* Number of Vfuncs */
 	"_ZTI11QTsciiCodec",
-	__Y11QTsciiCodec_vtable_name_0,
+	_11QTsciiCodec_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QTsciiCodec_baseinfo[] = {
+struct base_type_info _11QTsciiCodec_baseinfo[] = {
 	};
 
-struct classinfo _Y11QTsciiCodec_classinfo = {
-	"_Y11QTsciiCodec",
+struct classinfo _Z11QTsciiCodec_classinfo = {
+	"_Z11QTsciiCodec",
 	"_ZTV11QTsciiCodec",
 	"_ZTI11QTsciiCodec",	/* RTTI */
 	"_ZTI10QTextCodec",
-	"_ZTT_Y11QTsciiCodec",	/* VTT */
+	"_ZTT11QTsciiCodec",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QTsciiCodec_typeinfo,
-	__Y11QTsciiCodec_vtable,
-	__Y11QTsciiCodec_baseinfo,
+	&_11QTsciiCodec_typeinfo,
+	_11QTsciiCodec_vtable,
+	_11QTsciiCodec_baseinfo,
 	};
 
-char *__Y12QSqlDatabase_typeinfo_name[] = {
+char *_12QSqlDatabase_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y12QSqlDatabase_typeinfo = {
+struct classtypeinfo _12QSqlDatabase_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y12QSqlDatabase",
-	__Y12QSqlDatabase_typeinfo_name,
+	"_ZTS12QSqlDatabase",
+	_12QSqlDatabase_typeinfo_name,
 	};
 
-const char *__Y12QSqlDatabase_vtable_name_0 [] = {
+const char *_12QSqlDatabase_vtable_name_0 [] = {
 	"_ZNK12QSqlDatabase10metaObjectEv",
 	"_ZNK12QSqlDatabase9classNameEv",
 	"_ZN12QSqlDatabase7qt_castEPKc",
@@ -42349,47 +42349,47 @@ const char *__Y12QSqlDatabase_vtable_name_0 [] = {
 	"_ZN12QSqlDatabase7setPortEi",
 	};
 
-struct classvtable __Y12QSqlDatabase_vtable [1] = {
+struct classvtable _12QSqlDatabase_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	26,	/* Number of Vfuncs */
 	"_ZTI12QSqlDatabase",
-	__Y12QSqlDatabase_vtable_name_0,
+	_12QSqlDatabase_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y12QSqlDatabase_baseinfo[] = {
+struct base_type_info _12QSqlDatabase_baseinfo[] = {
 	};
 
-struct classinfo _Y12QSqlDatabase_classinfo = {
-	"_Y12QSqlDatabase",
+struct classinfo _Z12QSqlDatabase_classinfo = {
+	"_Z12QSqlDatabase",
 	"_ZTV12QSqlDatabase",
 	"_ZTI12QSqlDatabase",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y12QSqlDatabase",	/* VTT */
+	"_ZTT12QSqlDatabase",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QSqlDatabase_typeinfo,
-	__Y12QSqlDatabase_vtable,
-	__Y12QSqlDatabase_baseinfo,
+	&_12QSqlDatabase_typeinfo,
+	_12QSqlDatabase_vtable,
+	_12QSqlDatabase_baseinfo,
 	};
 
-char *__Y13QCanvasPixmap_typeinfo_name[] = {
+char *_13QCanvasPixmap_typeinfo_name[] = {
 	"_ZTI7QPixmap",
 	};
 
-struct classtypeinfo __Y13QCanvasPixmap_typeinfo = {
+struct classtypeinfo _13QCanvasPixmap_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y13QCanvasPixmap",
-	__Y13QCanvasPixmap_typeinfo_name,
+	"_ZTS13QCanvasPixmap",
+	_13QCanvasPixmap_typeinfo_name,
 	};
 
-const char *__Y13QCanvasPixmap_vtable_name_0 [] = {
+const char *_13QCanvasPixmap_vtable_name_0 [] = {
 	"_ZN13QCanvasPixmapD1Ev",
 	"_ZN13QCanvasPixmapD0Ev",
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -42404,47 +42404,47 @@ const char *__Y13QCanvasPixmap_vtable_name_0 [] = {
 	"_ZN7QPixmap6detachEv",
 	};
 
-struct classvtable __Y13QCanvasPixmap_vtable [1] = {
+struct classvtable _13QCanvasPixmap_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	12,	/* Number of Vfuncs */
 	"_ZTI13QCanvasPixmap",
-	__Y13QCanvasPixmap_vtable_name_0,
+	_13QCanvasPixmap_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y13QCanvasPixmap_baseinfo[] = {
+struct base_type_info _13QCanvasPixmap_baseinfo[] = {
 	};
 
-struct classinfo _Y13QCanvasPixmap_classinfo = {
-	"_Y13QCanvasPixmap",
+struct classinfo _Z13QCanvasPixmap_classinfo = {
+	"_Z13QCanvasPixmap",
 	"_ZTV13QCanvasPixmap",
 	"_ZTI13QCanvasPixmap",	/* RTTI */
 	"_ZTI7QPixmap",
-	"_ZTT_Y13QCanvasPixmap",	/* VTT */
+	"_ZTT13QCanvasPixmap",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y13QCanvasPixmap_typeinfo,
-	__Y13QCanvasPixmap_vtable,
-	__Y13QCanvasPixmap_baseinfo,
+	&_13QCanvasPixmap_typeinfo,
+	_13QCanvasPixmap_vtable,
+	_13QCanvasPixmap_baseinfo,
 	};
 
-char *__Y8QPrinter_typeinfo_name[] = {
+char *_8QPrinter_typeinfo_name[] = {
 	"_ZTI12QPaintDevice",
 	};
 
-struct classtypeinfo __Y8QPrinter_typeinfo = {
+struct classtypeinfo _8QPrinter_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y8QPrinter",
-	__Y8QPrinter_typeinfo_name,
+	"_ZTS8QPrinter",
+	_8QPrinter_typeinfo_name,
 	};
 
-const char *__Y8QPrinter_vtable_name_0 [] = {
+const char *_8QPrinter_vtable_name_0 [] = {
 	"_ZN8QPrinterD1Ev",
 	"_ZN8QPrinterD0Ev",
 	"_ZN8QPrinter13setResolutionEi",
@@ -42474,47 +42474,47 @@ const char *__Y8QPrinter_vtable_name_0 [] = {
 	"_ZN8QPrinter14setPaperSourceENS_11PaperSourceE",
 	};
 
-struct classvtable __Y8QPrinter_vtable [1] = {
+struct classvtable _8QPrinter_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	27,	/* Number of Vfuncs */
 	"_ZTI8QPrinter",
-	__Y8QPrinter_vtable_name_0,
+	_8QPrinter_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y8QPrinter_baseinfo[] = {
+struct base_type_info _8QPrinter_baseinfo[] = {
 	};
 
-struct classinfo _Y8QPrinter_classinfo = {
-	"_Y8QPrinter",
+struct classinfo _Z8QPrinter_classinfo = {
+	"_Z8QPrinter",
 	"_ZTV8QPrinter",
 	"_ZTI8QPrinter",	/* RTTI */
 	"_ZTI12QPaintDevice",
-	"_ZTT_Y8QPrinter",	/* VTT */
+	"_ZTT8QPrinter",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y8QPrinter_typeinfo,
-	__Y8QPrinter_vtable,
-	__Y8QPrinter_baseinfo,
+	&_8QPrinter_typeinfo,
+	_8QPrinter_vtable,
+	_8QPrinter_baseinfo,
 	};
 
-char *__Y10QSjisCodec_typeinfo_name[] = {
+char *_10QSjisCodec_typeinfo_name[] = {
 	"_ZTI10QTextCodec",
 	};
 
-struct classtypeinfo __Y10QSjisCodec_typeinfo = {
+struct classtypeinfo _10QSjisCodec_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y10QSjisCodec",
-	__Y10QSjisCodec_typeinfo_name,
+	"_ZTS10QSjisCodec",
+	_10QSjisCodec_typeinfo_name,
 	};
 
-const char *__Y10QSjisCodec_vtable_name_0 [] = {
+const char *_10QSjisCodec_vtable_name_0 [] = {
 	"_ZN10QSjisCodecD1Ev",
 	"_ZN10QSjisCodecD0Ev",
 	"_ZNK10QSjisCodec4nameEv",
@@ -42532,47 +42532,47 @@ const char *__Y10QSjisCodec_vtable_name_0 [] = {
 	"_ZNK10QTextCodec20characterFromUnicodeERK7QStringi",
 	};
 
-struct classvtable __Y10QSjisCodec_vtable [1] = {
+struct classvtable _10QSjisCodec_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	15,	/* Number of Vfuncs */
 	"_ZTI10QSjisCodec",
-	__Y10QSjisCodec_vtable_name_0,
+	_10QSjisCodec_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y10QSjisCodec_baseinfo[] = {
+struct base_type_info _10QSjisCodec_baseinfo[] = {
 	};
 
-struct classinfo _Y10QSjisCodec_classinfo = {
-	"_Y10QSjisCodec",
+struct classinfo _Z10QSjisCodec_classinfo = {
+	"_Z10QSjisCodec",
 	"_ZTV10QSjisCodec",
 	"_ZTI10QSjisCodec",	/* RTTI */
 	"_ZTI10QTextCodec",
-	"_ZTT_Y10QSjisCodec",	/* VTT */
+	"_ZTT10QSjisCodec",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QSjisCodec_typeinfo,
-	__Y10QSjisCodec_vtable,
-	__Y10QSjisCodec_baseinfo,
+	&_10QSjisCodec_typeinfo,
+	_10QSjisCodec_vtable,
+	_10QSjisCodec_baseinfo,
 	};
 
-char *__Y11QMessageBox_typeinfo_name[] = {
+char *_11QMessageBox_typeinfo_name[] = {
 	"_ZTI7QDialog",
 	};
 
-struct classtypeinfo __Y11QMessageBox_typeinfo = {
+struct classtypeinfo _11QMessageBox_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QMessageBox",
-	__Y11QMessageBox_typeinfo_name,
+	"_ZTS11QMessageBox",
+	_11QMessageBox_typeinfo_name,
 	};
 
-const char *__Y11QMessageBox_vtable_name_0 [] = {
+const char *_11QMessageBox_vtable_name_0 [] = {
 	"_ZNK11QMessageBox10metaObjectEv",
 	"_ZNK11QMessageBox9classNameEv",
 	"_ZN11QMessageBox7qt_castEPKc",
@@ -42688,7 +42688,7 @@ const char *__Y11QMessageBox_vtable_name_0 [] = {
 	"_ZN7QDialog6rejectEv",
 	};
 
-const char *__Y11QMessageBox_vtable_name_1 [] = {
+const char *_11QMessageBox_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QMessageBoxD1Ev",
 #endif
@@ -42762,14 +42762,14 @@ const char *__Y11QMessageBox_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y11QMessageBox_vtable [2] = {
+struct classvtable _11QMessageBox_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	113,	/* Number of Vfuncs */
 	"_ZTI11QMessageBox",
-	__Y11QMessageBox_vtable_name_0,
+	_11QMessageBox_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -42803,40 +42803,40 @@ struct classvtable __Y11QMessageBox_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI11QMessageBox",
-	__Y11QMessageBox_vtable_name_1,
+	_11QMessageBox_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y11QMessageBox_baseinfo[] = {
+struct base_type_info _11QMessageBox_baseinfo[] = {
 	};
 
-struct classinfo _Y11QMessageBox_classinfo = {
-	"_Y11QMessageBox",
+struct classinfo _Z11QMessageBox_classinfo = {
+	"_Z11QMessageBox",
 	"_ZTV11QMessageBox",
 	"_ZTI11QMessageBox",	/* RTTI */
 	"_ZTI7QDialog",
-	"_ZTT_Y11QMessageBox",	/* VTT */
+	"_ZTT11QMessageBox",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QMessageBox_typeinfo,
-	__Y11QMessageBox_vtable,
-	__Y11QMessageBox_baseinfo,
+	&_11QMessageBox_typeinfo,
+	_11QMessageBox_vtable,
+	_11QMessageBox_baseinfo,
 	};
 
-char *__Y6QSound_typeinfo_name[] = {
+char *_6QSound_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y6QSound_typeinfo = {
+struct classtypeinfo _6QSound_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y6QSound",
-	__Y6QSound_typeinfo_name,
+	"_ZTS6QSound",
+	_6QSound_typeinfo_name,
 	};
 
-const char *__Y6QSound_vtable_name_0 [] = {
+const char *_6QSound_vtable_name_0 [] = {
 	"_ZNK6QSound10metaObjectEv",
 	"_ZNK6QSound9classNameEv",
 	"_ZN6QSound7qt_castEPKc",
@@ -42860,47 +42860,47 @@ const char *__Y6QSound_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable __Y6QSound_vtable [1] = {
+struct classvtable _6QSound_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI6QSound",
-	__Y6QSound_vtable_name_0,
+	_6QSound_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y6QSound_baseinfo[] = {
+struct base_type_info _6QSound_baseinfo[] = {
 	};
 
-struct classinfo _Y6QSound_classinfo = {
-	"_Y6QSound",
+struct classinfo _Z6QSound_classinfo = {
+	"_Z6QSound",
 	"_ZTV6QSound",
 	"_ZTI6QSound",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y6QSound",	/* VTT */
+	"_ZTT6QSound",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y6QSound_typeinfo,
-	__Y6QSound_vtable,
-	__Y6QSound_baseinfo,
+	&_6QSound_typeinfo,
+	_6QSound_vtable,
+	_6QSound_baseinfo,
 	};
 
-char *__Y14QEditorFactory_typeinfo_name[] = {
+char *_14QEditorFactory_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y14QEditorFactory_typeinfo = {
+struct classtypeinfo _14QEditorFactory_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y14QEditorFactory",
-	__Y14QEditorFactory_typeinfo_name,
+	"_ZTS14QEditorFactory",
+	_14QEditorFactory_typeinfo_name,
 	};
 
-const char *__Y14QEditorFactory_vtable_name_0 [] = {
+const char *_14QEditorFactory_vtable_name_0 [] = {
 	"_ZNK7QObject10metaObjectEv",
 	"_ZNK7QObject9classNameEv",
 	"_ZN7QObject7qt_castEPKc",
@@ -42925,47 +42925,47 @@ const char *__Y14QEditorFactory_vtable_name_0 [] = {
 	"_ZN14QEditorFactory12createEditorEP7QWidgetRK8QVariant",
 	};
 
-struct classvtable __Y14QEditorFactory_vtable [1] = {
+struct classvtable _14QEditorFactory_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	22,	/* Number of Vfuncs */
 	"_ZTI14QEditorFactory",
-	__Y14QEditorFactory_vtable_name_0,
+	_14QEditorFactory_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y14QEditorFactory_baseinfo[] = {
+struct base_type_info _14QEditorFactory_baseinfo[] = {
 	};
 
-struct classinfo _Y14QEditorFactory_classinfo = {
-	"_Y14QEditorFactory",
+struct classinfo _Z14QEditorFactory_classinfo = {
+	"_Z14QEditorFactory",
 	"_ZTV14QEditorFactory",
 	"_ZTI14QEditorFactory",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y14QEditorFactory",	/* VTT */
+	"_ZTT14QEditorFactory",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y14QEditorFactory_typeinfo,
-	__Y14QEditorFactory_vtable,
-	__Y14QEditorFactory_baseinfo,
+	&_14QEditorFactory_typeinfo,
+	_14QEditorFactory_vtable,
+	_14QEditorFactory_baseinfo,
 	};
 
-char *__Y10QEventLoop_typeinfo_name[] = {
+char *_10QEventLoop_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y10QEventLoop_typeinfo = {
+struct classtypeinfo _10QEventLoop_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y10QEventLoop",
-	__Y10QEventLoop_typeinfo_name,
+	"_ZTS10QEventLoop",
+	_10QEventLoop_typeinfo_name,
 	};
 
-const char *__Y10QEventLoop_vtable_name_0 [] = {
+const char *_10QEventLoop_vtable_name_0 [] = {
 	"_ZNK10QEventLoop10metaObjectEv",
 	"_ZNK10QEventLoop9classNameEv",
 	"_ZN10QEventLoop7qt_castEPKc",
@@ -43001,47 +43001,47 @@ const char *__Y10QEventLoop_vtable_name_0 [] = {
 	"_ZN10QEventLoop14appClosingDownEv",
 	};
 
-struct classvtable __Y10QEventLoop_vtable [1] = {
+struct classvtable _10QEventLoop_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	33,	/* Number of Vfuncs */
 	"_ZTI10QEventLoop",
-	__Y10QEventLoop_vtable_name_0,
+	_10QEventLoop_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y10QEventLoop_baseinfo[] = {
+struct base_type_info _10QEventLoop_baseinfo[] = {
 	};
 
-struct classinfo _Y10QEventLoop_classinfo = {
-	"_Y10QEventLoop",
+struct classinfo _Z10QEventLoop_classinfo = {
+	"_Z10QEventLoop",
 	"_ZTV10QEventLoop",
 	"_ZTI10QEventLoop",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y10QEventLoop",	/* VTT */
+	"_ZTT10QEventLoop",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QEventLoop_typeinfo,
-	__Y10QEventLoop_vtable,
-	__Y10QEventLoop_baseinfo,
+	&_10QEventLoop_typeinfo,
+	_10QEventLoop_vtable,
+	_10QEventLoop_baseinfo,
 	};
 
-char *__Y7QSignal_typeinfo_name[] = {
+char *_7QSignal_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y7QSignal_typeinfo = {
+struct classtypeinfo _7QSignal_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y7QSignal",
-	__Y7QSignal_typeinfo_name,
+	"_ZTS7QSignal",
+	_7QSignal_typeinfo_name,
 	};
 
-const char *__Y7QSignal_vtable_name_0 [] = {
+const char *_7QSignal_vtable_name_0 [] = {
 	"_ZNK7QSignal10metaObjectEv",
 	"_ZNK7QSignal9classNameEv",
 	"_ZN7QSignal7qt_castEPKc",
@@ -43065,47 +43065,47 @@ const char *__Y7QSignal_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable __Y7QSignal_vtable [1] = {
+struct classvtable _7QSignal_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI7QSignal",
-	__Y7QSignal_vtable_name_0,
+	_7QSignal_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y7QSignal_baseinfo[] = {
+struct base_type_info _7QSignal_baseinfo[] = {
 	};
 
-struct classinfo _Y7QSignal_classinfo = {
-	"_Y7QSignal",
+struct classinfo _Z7QSignal_classinfo = {
+	"_Z7QSignal",
 	"_ZTV7QSignal",
 	"_ZTI7QSignal",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y7QSignal",	/* VTT */
+	"_ZTT7QSignal",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y7QSignal_typeinfo,
-	__Y7QSignal_vtable,
-	__Y7QSignal_baseinfo,
+	&_7QSignal_typeinfo,
+	_7QSignal_vtable,
+	_7QSignal_baseinfo,
 	};
 
-char *__Y9QSizeGrip_typeinfo_name[] = {
+char *_9QSizeGrip_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo __Y9QSizeGrip_typeinfo = {
+struct classtypeinfo _9QSizeGrip_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y9QSizeGrip",
-	__Y9QSizeGrip_typeinfo_name,
+	"_ZTS9QSizeGrip",
+	_9QSizeGrip_typeinfo_name,
 	};
 
-const char *__Y9QSizeGrip_vtable_name_0 [] = {
+const char *_9QSizeGrip_vtable_name_0 [] = {
 	"_ZNK9QSizeGrip10metaObjectEv",
 	"_ZNK9QSizeGrip9classNameEv",
 	"_ZN9QSizeGrip7qt_castEPKc",
@@ -43218,7 +43218,7 @@ const char *__Y9QSizeGrip_vtable_name_0 [] = {
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
 	};
 
-const char *__Y9QSizeGrip_vtable_name_1 [] = {
+const char *_9QSizeGrip_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QSizeGripD1Ev",
 #endif
@@ -43292,14 +43292,14 @@ const char *__Y9QSizeGrip_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y9QSizeGrip_vtable [2] = {
+struct classvtable _9QSizeGrip_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	110,	/* Number of Vfuncs */
 	"_ZTI9QSizeGrip",
-	__Y9QSizeGrip_vtable_name_0,
+	_9QSizeGrip_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -43333,40 +43333,40 @@ struct classvtable __Y9QSizeGrip_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QSizeGrip",
-	__Y9QSizeGrip_vtable_name_1,
+	_9QSizeGrip_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y9QSizeGrip_baseinfo[] = {
+struct base_type_info _9QSizeGrip_baseinfo[] = {
 	};
 
-struct classinfo _Y9QSizeGrip_classinfo = {
-	"_Y9QSizeGrip",
+struct classinfo _Z9QSizeGrip_classinfo = {
+	"_Z9QSizeGrip",
 	"_ZTV9QSizeGrip",
 	"_ZTI9QSizeGrip",	/* RTTI */
 	"_ZTI7QWidget",
-	"_ZTT_Y9QSizeGrip",	/* VTT */
+	"_ZTT9QSizeGrip",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QSizeGrip_typeinfo,
-	__Y9QSizeGrip_vtable,
-	__Y9QSizeGrip_baseinfo,
+	&_9QSizeGrip_typeinfo,
+	_9QSizeGrip_vtable,
+	_9QSizeGrip_baseinfo,
 	};
 
-char *__Y11QObjectList_typeinfo_name[] = {
+char *_11QObjectList_typeinfo_name[] = {
 	"_ZTI8QPtrListI7QObjectE",
 	};
 
-struct classtypeinfo __Y11QObjectList_typeinfo = {
+struct classtypeinfo _11QObjectList_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QObjectList",
-	__Y11QObjectList_typeinfo_name,
+	"_ZTS11QObjectList",
+	_11QObjectList_typeinfo_name,
 	};
 
-const char *__Y11QObjectList_vtable_name_0 [] = {
+const char *_11QObjectList_vtable_name_0 [] = {
 	"_ZNK8QPtrListI7QObjectE5countEv",
 	"_ZN8QPtrListI7QObjectE5clearEv",
 	"_ZN11QObjectListD1Ev",
@@ -43378,47 +43378,47 @@ const char *__Y11QObjectList_vtable_name_0 [] = {
 	"_ZNK6QGList5writeER11QDataStreamPv",
 	};
 
-struct classvtable __Y11QObjectList_vtable [1] = {
+struct classvtable _11QObjectList_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI11QObjectList",
-	__Y11QObjectList_vtable_name_0,
+	_11QObjectList_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QObjectList_baseinfo[] = {
+struct base_type_info _11QObjectList_baseinfo[] = {
 	};
 
-struct classinfo _Y11QObjectList_classinfo = {
-	"_Y11QObjectList",
+struct classinfo _Z11QObjectList_classinfo = {
+	"_Z11QObjectList",
 	"_ZTV11QObjectList",
 	"_ZTI11QObjectList",	/* RTTI */
 	"_ZTI8QPtrListI7QObjectE",
-	"_ZTT_Y11QObjectList",	/* VTT */
+	"_ZTT11QObjectList",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QObjectList_typeinfo,
-	__Y11QObjectList_vtable,
-	__Y11QObjectList_baseinfo,
+	&_11QObjectList_typeinfo,
+	_11QObjectList_vtable,
+	_11QObjectList_baseinfo,
 	};
 
-char *__Y11QDomComment_typeinfo_name[] = {
+char *_11QDomComment_typeinfo_name[] = {
 	"_ZTI17QDomCharacterData",
 	};
 
-struct classtypeinfo __Y11QDomComment_typeinfo = {
+struct classtypeinfo _11QDomComment_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QDomComment",
-	__Y11QDomComment_typeinfo_name,
+	"_ZTS11QDomComment",
+	_11QDomComment_typeinfo_name,
 	};
 
-const char *__Y11QDomComment_vtable_name_0 [] = {
+const char *_11QDomComment_vtable_name_0 [] = {
 	"_ZN11QDomCommentD1Ev",
 	"_ZN11QDomCommentD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -43470,46 +43470,46 @@ const char *__Y11QDomComment_vtable_name_0 [] = {
 	"_ZN17QDomCharacterData7setDataERK7QString",
 	};
 
-struct classvtable __Y11QDomComment_vtable [1] = {
+struct classvtable _11QDomComment_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	49,	/* Number of Vfuncs */
 	"_ZTI11QDomComment",
-	__Y11QDomComment_vtable_name_0,
+	_11QDomComment_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QDomComment_baseinfo[] = {
+struct base_type_info _11QDomComment_baseinfo[] = {
 	};
 
-struct classinfo _Y11QDomComment_classinfo = {
-	"_Y11QDomComment",
+struct classinfo _Z11QDomComment_classinfo = {
+	"_Z11QDomComment",
 	"_ZTV11QDomComment",
 	"_ZTI11QDomComment",	/* RTTI */
 	"_ZTI17QDomCharacterData",
-	"_ZTT_Y11QDomComment",	/* VTT */
+	"_ZTT11QDomComment",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QDomComment_typeinfo,
-	__Y11QDomComment_vtable,
-	__Y11QDomComment_baseinfo,
+	&_11QDomComment_typeinfo,
+	_11QDomComment_vtable,
+	_11QDomComment_baseinfo,
 	};
 
-char *__Y18QXmlDefaultHandler_typeinfo_name[] = {
+char *_18QXmlDefaultHandler_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y18QXmlDefaultHandler_typeinfo = {
+struct classtypeinfo _18QXmlDefaultHandler_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
-	"_ZTS_Y18QXmlDefaultHandler",
-	__Y18QXmlDefaultHandler_typeinfo_name,
+	"_ZTS18QXmlDefaultHandler",
+	_18QXmlDefaultHandler_typeinfo_name,
 	};
 
-const char *__Y18QXmlDefaultHandler_vtable_name_0 [] = {
+const char *_18QXmlDefaultHandler_vtable_name_0 [] = {
 	"_ZN18QXmlDefaultHandler18setDocumentLocatorEP11QXmlLocator",
 	"_ZN18QXmlDefaultHandler13startDocumentEv",
 	"_ZN18QXmlDefaultHandler11endDocumentEv",
@@ -43542,7 +43542,7 @@ const char *__Y18QXmlDefaultHandler_vtable_name_0 [] = {
 	"_ZN18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
 	};
 
-const char *__Y18QXmlDefaultHandler_vtable_name_1 [] = {
+const char *_18QXmlDefaultHandler_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn4_N18QXmlDefaultHandler7warningERK18QXmlParseException",
 #endif
@@ -43629,7 +43629,7 @@ const char *__Y18QXmlDefaultHandler_vtable_name_1 [] = {
 #endif
 	};
 
-const char *__Y18QXmlDefaultHandler_vtable_name_2 [] = {
+const char *_18QXmlDefaultHandler_vtable_name_2 [] = {
 #if defined __i386__
 	"_ZThn8_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
 #endif
@@ -43695,7 +43695,7 @@ const char *__Y18QXmlDefaultHandler_vtable_name_2 [] = {
 #endif
 	};
 
-const char *__Y18QXmlDefaultHandler_vtable_name_3 [] = {
+const char *_18QXmlDefaultHandler_vtable_name_3 [] = {
 #if defined __i386__
 	"_ZThn12_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
 #endif
@@ -43740,7 +43740,7 @@ const char *__Y18QXmlDefaultHandler_vtable_name_3 [] = {
 #endif
 	};
 
-const char *__Y18QXmlDefaultHandler_vtable_name_4 [] = {
+const char *_18QXmlDefaultHandler_vtable_name_4 [] = {
 #if defined __i386__
 	"_ZThn16_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_",
 #endif
@@ -43911,7 +43911,7 @@ const char *__Y18QXmlDefaultHandler_vtable_name_4 [] = {
 #endif
 	};
 
-const char *__Y18QXmlDefaultHandler_vtable_name_5 [] = {
+const char *_18QXmlDefaultHandler_vtable_name_5 [] = {
 #if defined __i386__
 	"_ZThn20_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
 #endif
@@ -43998,14 +43998,14 @@ const char *__Y18QXmlDefaultHandler_vtable_name_5 [] = {
 #endif
 	};
 
-struct classvtable __Y18QXmlDefaultHandler_vtable [6] = {
+struct classvtable _18QXmlDefaultHandler_vtable [6] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	30,	/* Number of Vfuncs */
 	"_ZTI18QXmlDefaultHandler",
-	__Y18QXmlDefaultHandler_vtable_name_0,
+	_18QXmlDefaultHandler_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -44039,7 +44039,7 @@ struct classvtable __Y18QXmlDefaultHandler_vtable [6] = {
 	1,	/* Vtable category */
 	4,	/* Number of Vfuncs */
 	"_ZTI18QXmlDefaultHandler",
-	__Y18QXmlDefaultHandler_vtable_name_1,
+	_18QXmlDefaultHandler_vtable_name_1,
 	},
 	{
 #if defined __i386__
@@ -44073,7 +44073,7 @@ struct classvtable __Y18QXmlDefaultHandler_vtable [6] = {
 	1,	/* Vtable category */
 	3,	/* Number of Vfuncs */
 	"_ZTI18QXmlDefaultHandler",
-	__Y18QXmlDefaultHandler_vtable_name_2,
+	_18QXmlDefaultHandler_vtable_name_2,
 	},
 	{
 #if defined __i386__
@@ -44107,7 +44107,7 @@ struct classvtable __Y18QXmlDefaultHandler_vtable [6] = {
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI18QXmlDefaultHandler",
-	__Y18QXmlDefaultHandler_vtable_name_3,
+	_18QXmlDefaultHandler_vtable_name_3,
 	},
 	{
 #if defined __i386__
@@ -44141,7 +44141,7 @@ struct classvtable __Y18QXmlDefaultHandler_vtable [6] = {
 	1,	/* Vtable category */
 	8,	/* Number of Vfuncs */
 	"_ZTI18QXmlDefaultHandler",
-	__Y18QXmlDefaultHandler_vtable_name_4,
+	_18QXmlDefaultHandler_vtable_name_4,
 	},
 	{
 #if defined __i386__
@@ -44175,11 +44175,11 @@ struct classvtable __Y18QXmlDefaultHandler_vtable [6] = {
 	1,	/* Vtable category */
 	4,	/* Number of Vfuncs */
 	"_ZTI18QXmlDefaultHandler",
-	__Y18QXmlDefaultHandler_vtable_name_5,
+	_18QXmlDefaultHandler_vtable_name_5,
 	},
 };
 
-struct base_type_info __Y18QXmlDefaultHandler_baseinfo[] = {
+struct base_type_info _18QXmlDefaultHandler_baseinfo[] = {
 	{"_ZTI18QXmlContentHandler",	2U},
 #if defined __i386__
 	{"_ZTI16QXmlErrorHandler",	1026U},
@@ -44288,33 +44288,33 @@ struct base_type_info __Y18QXmlDefaultHandler_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Y18QXmlDefaultHandler_classinfo = {
-	"_Y18QXmlDefaultHandler",
+struct classinfo _Z18QXmlDefaultHandler_classinfo = {
+	"_Z18QXmlDefaultHandler",
 	"_ZTV18QXmlDefaultHandler",
 	"_ZTI18QXmlDefaultHandler",	/* RTTI */
 	"_ZTI18QXmlContentHandler",
-	"_ZTT_Y18QXmlDefaultHandler",	/* VTT */
+	"_ZTT18QXmlDefaultHandler",	/* VTT */
 	6,
 	0,
 	6,
 	0,	/* numVTT */
 	0U,
-	&__Y18QXmlDefaultHandler_typeinfo,
-	__Y18QXmlDefaultHandler_vtable,
-	__Y18QXmlDefaultHandler_baseinfo,
+	&_18QXmlDefaultHandler_typeinfo,
+	_18QXmlDefaultHandler_vtable,
+	_18QXmlDefaultHandler_baseinfo,
 	};
 
-char *__Y9QDataSink_typeinfo_name[] = {
+char *_9QDataSink_typeinfo_name[] = {
 	"_ZTI8QAsyncIO",
 	};
 
-struct classtypeinfo __Y9QDataSink_typeinfo = {
+struct classtypeinfo _9QDataSink_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y9QDataSink",
-	__Y9QDataSink_typeinfo_name,
+	"_ZTS9QDataSink",
+	_9QDataSink_typeinfo_name,
 	};
 
-const char *__Y9QDataSink_vtable_name_0 [] = {
+const char *_9QDataSink_vtable_name_0 [] = {
 	"_ZN9QDataSinkD1Ev",
 	"_ZN9QDataSinkD0Ev",
 	"__cxa_pure_virtual",
@@ -44322,47 +44322,47 @@ const char *__Y9QDataSink_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y9QDataSink_vtable [1] = {
+struct classvtable _9QDataSink_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI9QDataSink",
-	__Y9QDataSink_vtable_name_0,
+	_9QDataSink_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y9QDataSink_baseinfo[] = {
+struct base_type_info _9QDataSink_baseinfo[] = {
 	};
 
-struct classinfo _Y9QDataSink_classinfo = {
-	"_Y9QDataSink",
+struct classinfo _Z9QDataSink_classinfo = {
+	"_Z9QDataSink",
 	"_ZTV9QDataSink",
 	"_ZTI9QDataSink",	/* RTTI */
 	"_ZTI8QAsyncIO",
-	"_ZTT_Y9QDataSink",	/* VTT */
+	"_ZTT9QDataSink",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QDataSink_typeinfo,
-	__Y9QDataSink_vtable,
-	__Y9QDataSink_baseinfo,
+	&_9QDataSink_typeinfo,
+	_9QDataSink_vtable,
+	_9QDataSink_baseinfo,
 	};
 
-char *__Y16QSqlDriverPlugin_typeinfo_name[] = {
+char *_16QSqlDriverPlugin_typeinfo_name[] = {
 	"_ZTI8QGPlugin",
 	};
 
-struct classtypeinfo __Y16QSqlDriverPlugin_typeinfo = {
+struct classtypeinfo _16QSqlDriverPlugin_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y16QSqlDriverPlugin",
-	__Y16QSqlDriverPlugin_typeinfo_name,
+	"_ZTS16QSqlDriverPlugin",
+	_16QSqlDriverPlugin_typeinfo_name,
 	};
 
-const char *__Y16QSqlDriverPlugin_vtable_name_0 [] = {
+const char *_16QSqlDriverPlugin_vtable_name_0 [] = {
 	"_ZNK16QSqlDriverPlugin10metaObjectEv",
 	"_ZNK16QSqlDriverPlugin9classNameEv",
 	"_ZN16QSqlDriverPlugin7qt_castEPKc",
@@ -44388,47 +44388,47 @@ const char *__Y16QSqlDriverPlugin_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y16QSqlDriverPlugin_vtable [1] = {
+struct classvtable _16QSqlDriverPlugin_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	23,	/* Number of Vfuncs */
 	"_ZTI16QSqlDriverPlugin",
-	__Y16QSqlDriverPlugin_vtable_name_0,
+	_16QSqlDriverPlugin_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y16QSqlDriverPlugin_baseinfo[] = {
+struct base_type_info _16QSqlDriverPlugin_baseinfo[] = {
 	};
 
-struct classinfo _Y16QSqlDriverPlugin_classinfo = {
-	"_Y16QSqlDriverPlugin",
+struct classinfo _Z16QSqlDriverPlugin_classinfo = {
+	"_Z16QSqlDriverPlugin",
 	"_ZTV16QSqlDriverPlugin",
 	"_ZTI16QSqlDriverPlugin",	/* RTTI */
 	"_ZTI8QGPlugin",
-	"_ZTT_Y16QSqlDriverPlugin",	/* VTT */
+	"_ZTT16QSqlDriverPlugin",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y16QSqlDriverPlugin_typeinfo,
-	__Y16QSqlDriverPlugin_vtable,
-	__Y16QSqlDriverPlugin_baseinfo,
+	&_16QSqlDriverPlugin_typeinfo,
+	_16QSqlDriverPlugin_vtable,
+	_16QSqlDriverPlugin_baseinfo,
 	};
 
-char *__Y11QToolButton_typeinfo_name[] = {
+char *_11QToolButton_typeinfo_name[] = {
 	"_ZTI7QButton",
 	};
 
-struct classtypeinfo __Y11QToolButton_typeinfo = {
+struct classtypeinfo _11QToolButton_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QToolButton",
-	__Y11QToolButton_typeinfo_name,
+	"_ZTS11QToolButton",
+	_11QToolButton_typeinfo_name,
 	};
 
-const char *__Y11QToolButton_vtable_name_0 [] = {
+const char *_11QToolButton_vtable_name_0 [] = {
 	"_ZNK11QToolButton10metaObjectEv",
 	"_ZNK11QToolButton9classNameEv",
 	"_ZN11QToolButton7qt_castEPKc",
@@ -44558,7 +44558,7 @@ const char *__Y11QToolButton_vtable_name_0 [] = {
 	"_ZN11QToolButton5setOnEb",
 	};
 
-const char *__Y11QToolButton_vtable_name_1 [] = {
+const char *_11QToolButton_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QToolButtonD1Ev",
 #endif
@@ -44632,14 +44632,14 @@ const char *__Y11QToolButton_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y11QToolButton_vtable [2] = {
+struct classvtable _11QToolButton_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	127,	/* Number of Vfuncs */
 	"_ZTI11QToolButton",
-	__Y11QToolButton_vtable_name_0,
+	_11QToolButton_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -44673,40 +44673,40 @@ struct classvtable __Y11QToolButton_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI11QToolButton",
-	__Y11QToolButton_vtable_name_1,
+	_11QToolButton_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y11QToolButton_baseinfo[] = {
+struct base_type_info _11QToolButton_baseinfo[] = {
 	};
 
-struct classinfo _Y11QToolButton_classinfo = {
-	"_Y11QToolButton",
+struct classinfo _Z11QToolButton_classinfo = {
+	"_Z11QToolButton",
 	"_ZTV11QToolButton",
 	"_ZTI11QToolButton",	/* RTTI */
 	"_ZTI7QButton",
-	"_ZTT_Y11QToolButton",	/* VTT */
+	"_ZTT11QToolButton",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QToolButton_typeinfo,
-	__Y11QToolButton_vtable,
-	__Y11QToolButton_baseinfo,
+	&_11QToolButton_typeinfo,
+	_11QToolButton_vtable,
+	_11QToolButton_baseinfo,
 	};
 
-char *__Y14QWidgetIntDict_typeinfo_name[] = {
+char *_14QWidgetIntDict_typeinfo_name[] = {
 	"_ZTI8QIntDictI7QWidgetE",
 	};
 
-struct classtypeinfo __Y14QWidgetIntDict_typeinfo = {
+struct classtypeinfo _14QWidgetIntDict_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y14QWidgetIntDict",
-	__Y14QWidgetIntDict_typeinfo_name,
+	"_ZTS14QWidgetIntDict",
+	_14QWidgetIntDict_typeinfo_name,
 	};
 
-const char *__Y14QWidgetIntDict_vtable_name_0 [] = {
+const char *_14QWidgetIntDict_vtable_name_0 [] = {
 	"_ZNK8QIntDictI7QWidgetE5countEv",
 	"_ZN8QIntDictI7QWidgetE5clearEv",
 	"_ZN14QWidgetIntDictD1Ev",
@@ -44717,47 +44717,47 @@ const char *__Y14QWidgetIntDict_vtable_name_0 [] = {
 	"_ZNK6QGDict5writeER11QDataStreamPv",
 	};
 
-struct classvtable __Y14QWidgetIntDict_vtable [1] = {
+struct classvtable _14QWidgetIntDict_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	8,	/* Number of Vfuncs */
 	"_ZTI14QWidgetIntDict",
-	__Y14QWidgetIntDict_vtable_name_0,
+	_14QWidgetIntDict_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y14QWidgetIntDict_baseinfo[] = {
+struct base_type_info _14QWidgetIntDict_baseinfo[] = {
 	};
 
-struct classinfo _Y14QWidgetIntDict_classinfo = {
-	"_Y14QWidgetIntDict",
+struct classinfo _Z14QWidgetIntDict_classinfo = {
+	"_Z14QWidgetIntDict",
 	"_ZTV14QWidgetIntDict",
 	"_ZTI14QWidgetIntDict",	/* RTTI */
 	"_ZTI8QIntDictI7QWidgetE",
-	"_ZTT_Y14QWidgetIntDict",	/* VTT */
+	"_ZTT14QWidgetIntDict",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y14QWidgetIntDict_typeinfo,
-	__Y14QWidgetIntDict_vtable,
-	__Y14QWidgetIntDict_baseinfo,
+	&_14QWidgetIntDict_typeinfo,
+	_14QWidgetIntDict_vtable,
+	_14QWidgetIntDict_baseinfo,
 	};
 
-char *__Y7QTabBar_typeinfo_name[] = {
+char *_7QTabBar_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo __Y7QTabBar_typeinfo = {
+struct classtypeinfo _7QTabBar_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y7QTabBar",
-	__Y7QTabBar_typeinfo_name,
+	"_ZTS7QTabBar",
+	_7QTabBar_typeinfo_name,
 	};
 
-const char *__Y7QTabBar_vtable_name_0 [] = {
+const char *_7QTabBar_vtable_name_0 [] = {
 	"_ZNK7QTabBar10metaObjectEv",
 	"_ZNK7QTabBar9classNameEv",
 	"_ZN7QTabBar7qt_castEPKc",
@@ -44881,7 +44881,7 @@ const char *__Y7QTabBar_vtable_name_0 [] = {
 	"_ZNK7QTabBar10paintLabelEP8QPainterRK5QRectP4QTabb",
 	};
 
-const char *__Y7QTabBar_vtable_name_1 [] = {
+const char *_7QTabBar_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N7QTabBarD1Ev",
 #endif
@@ -44955,14 +44955,14 @@ const char *__Y7QTabBar_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y7QTabBar_vtable [2] = {
+struct classvtable _7QTabBar_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	121,	/* Number of Vfuncs */
 	"_ZTI7QTabBar",
-	__Y7QTabBar_vtable_name_0,
+	_7QTabBar_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -44996,40 +44996,40 @@ struct classvtable __Y7QTabBar_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI7QTabBar",
-	__Y7QTabBar_vtable_name_1,
+	_7QTabBar_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y7QTabBar_baseinfo[] = {
+struct base_type_info _7QTabBar_baseinfo[] = {
 	};
 
-struct classinfo _Y7QTabBar_classinfo = {
-	"_Y7QTabBar",
+struct classinfo _Z7QTabBar_classinfo = {
+	"_Z7QTabBar",
 	"_ZTV7QTabBar",
 	"_ZTI7QTabBar",	/* RTTI */
 	"_ZTI7QWidget",
-	"_ZTT_Y7QTabBar",	/* VTT */
+	"_ZTT7QTabBar",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y7QTabBar_typeinfo,
-	__Y7QTabBar_vtable,
-	__Y7QTabBar_baseinfo,
+	&_7QTabBar_typeinfo,
+	_7QTabBar_vtable,
+	_7QTabBar_baseinfo,
 	};
 
-char *__Y12QDomNotation_typeinfo_name[] = {
+char *_12QDomNotation_typeinfo_name[] = {
 	"_ZTI8QDomNode",
 	};
 
-struct classtypeinfo __Y12QDomNotation_typeinfo = {
+struct classtypeinfo _12QDomNotation_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y12QDomNotation",
-	__Y12QDomNotation_typeinfo_name,
+	"_ZTS12QDomNotation",
+	_12QDomNotation_typeinfo_name,
 	};
 
-const char *__Y12QDomNotation_vtable_name_0 [] = {
+const char *_12QDomNotation_vtable_name_0 [] = {
 	"_ZN12QDomNotationD1Ev",
 	"_ZN12QDomNotationD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -45073,47 +45073,47 @@ const char *__Y12QDomNotation_vtable_name_0 [] = {
 	"_ZNK8QDomNode9isCommentEv",
 	};
 
-struct classvtable __Y12QDomNotation_vtable [1] = {
+struct classvtable _12QDomNotation_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	41,	/* Number of Vfuncs */
 	"_ZTI12QDomNotation",
-	__Y12QDomNotation_vtable_name_0,
+	_12QDomNotation_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y12QDomNotation_baseinfo[] = {
+struct base_type_info _12QDomNotation_baseinfo[] = {
 	};
 
-struct classinfo _Y12QDomNotation_classinfo = {
-	"_Y12QDomNotation",
+struct classinfo _Z12QDomNotation_classinfo = {
+	"_Z12QDomNotation",
 	"_ZTV12QDomNotation",
 	"_ZTI12QDomNotation",	/* RTTI */
 	"_ZTI8QDomNode",
-	"_ZTT_Y12QDomNotation",	/* VTT */
+	"_ZTT12QDomNotation",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QDomNotation_typeinfo,
-	__Y12QDomNotation_vtable,
-	__Y12QDomNotation_baseinfo,
+	&_12QDomNotation_typeinfo,
+	_12QDomNotation_vtable,
+	_12QDomNotation_baseinfo,
 	};
 
-char *__Y16QXmlSimpleReader_typeinfo_name[] = {
+char *_16QXmlSimpleReader_typeinfo_name[] = {
 	"_ZTI10QXmlReader",
 	};
 
-struct classtypeinfo __Y16QXmlSimpleReader_typeinfo = {
+struct classtypeinfo _16QXmlSimpleReader_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y16QXmlSimpleReader",
-	__Y16QXmlSimpleReader_typeinfo_name,
+	"_ZTS16QXmlSimpleReader",
+	_16QXmlSimpleReader_typeinfo_name,
 	};
 
-const char *__Y16QXmlSimpleReader_vtable_name_0 [] = {
+const char *_16QXmlSimpleReader_vtable_name_0 [] = {
 	"_ZNK16QXmlSimpleReader7featureERK7QStringPb",
 	"_ZN16QXmlSimpleReader10setFeatureERK7QStringb",
 	"_ZNK16QXmlSimpleReader10hasFeatureERK7QString",
@@ -45140,180 +45140,180 @@ const char *__Y16QXmlSimpleReader_vtable_name_0 [] = {
 	"_ZN16QXmlSimpleReader13parseContinueEv",
 	};
 
-struct classvtable __Y16QXmlSimpleReader_vtable [1] = {
+struct classvtable _16QXmlSimpleReader_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	24,	/* Number of Vfuncs */
 	"_ZTI16QXmlSimpleReader",
-	__Y16QXmlSimpleReader_vtable_name_0,
+	_16QXmlSimpleReader_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y16QXmlSimpleReader_baseinfo[] = {
+struct base_type_info _16QXmlSimpleReader_baseinfo[] = {
 	};
 
-struct classinfo _Y16QXmlSimpleReader_classinfo = {
-	"_Y16QXmlSimpleReader",
+struct classinfo _Z16QXmlSimpleReader_classinfo = {
+	"_Z16QXmlSimpleReader",
 	"_ZTV16QXmlSimpleReader",
 	"_ZTI16QXmlSimpleReader",	/* RTTI */
 	"_ZTI10QXmlReader",
-	"_ZTT_Y16QXmlSimpleReader",	/* VTT */
+	"_ZTT16QXmlSimpleReader",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y16QXmlSimpleReader_typeinfo,
-	__Y16QXmlSimpleReader_vtable,
-	__Y16QXmlSimpleReader_baseinfo,
+	&_16QXmlSimpleReader_typeinfo,
+	_16QXmlSimpleReader_vtable,
+	_16QXmlSimpleReader_baseinfo,
 	};
 
-char *__Y10QHideEvent_typeinfo_name[] = {
+char *_10QHideEvent_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo __Y10QHideEvent_typeinfo = {
+struct classtypeinfo _10QHideEvent_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y10QHideEvent",
-	__Y10QHideEvent_typeinfo_name,
+	"_ZTS10QHideEvent",
+	_10QHideEvent_typeinfo_name,
 	};
 
-const char *__Y10QHideEvent_vtable_name_0 [] = {
+const char *_10QHideEvent_vtable_name_0 [] = {
 	"_ZN10QHideEventD1Ev",
 	"_ZN10QHideEventD0Ev",
 	};
 
-struct classvtable __Y10QHideEvent_vtable [1] = {
+struct classvtable _10QHideEvent_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI10QHideEvent",
-	__Y10QHideEvent_vtable_name_0,
+	_10QHideEvent_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y10QHideEvent_baseinfo[] = {
+struct base_type_info _10QHideEvent_baseinfo[] = {
 	};
 
-struct classinfo _Y10QHideEvent_classinfo = {
-	"_Y10QHideEvent",
+struct classinfo _Z10QHideEvent_classinfo = {
+	"_Z10QHideEvent",
 	"_ZTV10QHideEvent",
 	"_ZTI10QHideEvent",	/* RTTI */
 	"_ZTI6QEvent",
-	"_ZTT_Y10QHideEvent",	/* VTT */
+	"_ZTT10QHideEvent",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QHideEvent_typeinfo,
-	__Y10QHideEvent_vtable,
-	__Y10QHideEvent_baseinfo,
+	&_10QHideEvent_typeinfo,
+	_10QHideEvent_vtable,
+	_10QHideEvent_baseinfo,
 	};
 
-char *__Y8QToolTip_typeinfo_name[] = {
+char *_8QToolTip_typeinfo_name[] = {
 	"_ZTI2Qt",
 	};
 
-struct classtypeinfo __Y8QToolTip_typeinfo = {
+struct classtypeinfo _8QToolTip_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y8QToolTip",
-	__Y8QToolTip_typeinfo_name,
+	"_ZTS8QToolTip",
+	_8QToolTip_typeinfo_name,
 	};
 
-const char *__Y8QToolTip_vtable_name_0 [] = {
+const char *_8QToolTip_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y8QToolTip_vtable [1] = {
+struct classvtable _8QToolTip_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	1,	/* Number of Vfuncs */
 	"_ZTI8QToolTip",
-	__Y8QToolTip_vtable_name_0,
+	_8QToolTip_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y8QToolTip_baseinfo[] = {
+struct base_type_info _8QToolTip_baseinfo[] = {
 	};
 
-struct classinfo _Y8QToolTip_classinfo = {
-	"_Y8QToolTip",
+struct classinfo _Z8QToolTip_classinfo = {
+	"_Z8QToolTip",
 	"_ZTV8QToolTip",
 	"_ZTI8QToolTip",	/* RTTI */
 	"_ZTI2Qt",
-	"_ZTT_Y8QToolTip",	/* VTT */
+	"_ZTT8QToolTip",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y8QToolTip_typeinfo,
-	__Y8QToolTip_vtable,
-	__Y8QToolTip_baseinfo,
+	&_8QToolTip_typeinfo,
+	_8QToolTip_vtable,
+	_8QToolTip_baseinfo,
 	};
 
-char *__Y12QResizeEvent_typeinfo_name[] = {
+char *_12QResizeEvent_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo __Y12QResizeEvent_typeinfo = {
+struct classtypeinfo _12QResizeEvent_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y12QResizeEvent",
-	__Y12QResizeEvent_typeinfo_name,
+	"_ZTS12QResizeEvent",
+	_12QResizeEvent_typeinfo_name,
 	};
 
-const char *__Y12QResizeEvent_vtable_name_0 [] = {
+const char *_12QResizeEvent_vtable_name_0 [] = {
 	"_ZN12QResizeEventD1Ev",
 	"_ZN12QResizeEventD0Ev",
 	};
 
-struct classvtable __Y12QResizeEvent_vtable [1] = {
+struct classvtable _12QResizeEvent_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI12QResizeEvent",
-	__Y12QResizeEvent_vtable_name_0,
+	_12QResizeEvent_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y12QResizeEvent_baseinfo[] = {
+struct base_type_info _12QResizeEvent_baseinfo[] = {
 	};
 
-struct classinfo _Y12QResizeEvent_classinfo = {
-	"_Y12QResizeEvent",
+struct classinfo _Z12QResizeEvent_classinfo = {
+	"_Z12QResizeEvent",
 	"_ZTV12QResizeEvent",
 	"_ZTI12QResizeEvent",	/* RTTI */
 	"_ZTI6QEvent",
-	"_ZTT_Y12QResizeEvent",	/* VTT */
+	"_ZTT12QResizeEvent",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QResizeEvent_typeinfo,
-	__Y12QResizeEvent_vtable,
-	__Y12QResizeEvent_baseinfo,
+	&_12QResizeEvent_typeinfo,
+	_12QResizeEvent_vtable,
+	_12QResizeEvent_baseinfo,
 	};
 
-char *__Y18QXmlLexicalHandler_typeinfo_name[] = {
+char *_18QXmlLexicalHandler_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y18QXmlLexicalHandler_typeinfo = {
+struct classtypeinfo _18QXmlLexicalHandler_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y18QXmlLexicalHandler",
-	__Y18QXmlLexicalHandler_typeinfo_name,
+	"_ZTS18QXmlLexicalHandler",
+	_18QXmlLexicalHandler_typeinfo_name,
 	};
 
-const char *__Y18QXmlLexicalHandler_vtable_name_0 [] = {
+const char *_18QXmlLexicalHandler_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
@@ -45324,47 +45324,47 @@ const char *__Y18QXmlLexicalHandler_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y18QXmlLexicalHandler_vtable [1] = {
+struct classvtable _18QXmlLexicalHandler_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	8,	/* Number of Vfuncs */
 	"_ZTI18QXmlLexicalHandler",
-	__Y18QXmlLexicalHandler_vtable_name_0,
+	_18QXmlLexicalHandler_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y18QXmlLexicalHandler_baseinfo[] = {
+struct base_type_info _18QXmlLexicalHandler_baseinfo[] = {
 	};
 
-struct classinfo _Y18QXmlLexicalHandler_classinfo = {
-	"_Y18QXmlLexicalHandler",
+struct classinfo _Z18QXmlLexicalHandler_classinfo = {
+	"_Z18QXmlLexicalHandler",
 	"_ZTV18QXmlLexicalHandler",
 	"_ZTI18QXmlLexicalHandler",	/* RTTI */
 	"",
-	"_ZTT_Y18QXmlLexicalHandler",	/* VTT */
+	"_ZTT18QXmlLexicalHandler",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y18QXmlLexicalHandler_typeinfo,
-	__Y18QXmlLexicalHandler_vtable,
-	__Y18QXmlLexicalHandler_baseinfo,
+	&_18QXmlLexicalHandler_typeinfo,
+	_18QXmlLexicalHandler_vtable,
+	_18QXmlLexicalHandler_baseinfo,
 	};
 
-char *__Y11QCanvasLine_typeinfo_name[] = {
+char *_11QCanvasLine_typeinfo_name[] = {
 	"_ZTI20QCanvasPolygonalItem",
 	};
 
-struct classtypeinfo __Y11QCanvasLine_typeinfo = {
+struct classtypeinfo _11QCanvasLine_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QCanvasLine",
-	__Y11QCanvasLine_typeinfo_name,
+	"_ZTS11QCanvasLine",
+	_11QCanvasLine_typeinfo_name,
 	};
 
-const char *__Y11QCanvasLine_vtable_name_0 [] = {
+const char *_11QCanvasLine_vtable_name_0 [] = {
 	"_ZN11QCanvasLineD1Ev",
 	"_ZN11QCanvasLineD0Ev",
 	"_ZN11QCanvasLine6moveByEdd",
@@ -45393,91 +45393,91 @@ const char *__Y11QCanvasLine_vtable_name_0 [] = {
 	"_ZN11QCanvasLine9drawShapeER8QPainter",
 	};
 
-struct classvtable __Y11QCanvasLine_vtable [1] = {
+struct classvtable _11QCanvasLine_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	26,	/* Number of Vfuncs */
 	"_ZTI11QCanvasLine",
-	__Y11QCanvasLine_vtable_name_0,
+	_11QCanvasLine_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QCanvasLine_baseinfo[] = {
+struct base_type_info _11QCanvasLine_baseinfo[] = {
 	};
 
-struct classinfo _Y11QCanvasLine_classinfo = {
-	"_Y11QCanvasLine",
+struct classinfo _Z11QCanvasLine_classinfo = {
+	"_Z11QCanvasLine",
 	"_ZTV11QCanvasLine",
 	"_ZTI11QCanvasLine",	/* RTTI */
 	"_ZTI20QCanvasPolygonalItem",
-	"_ZTT_Y11QCanvasLine",	/* VTT */
+	"_ZTT11QCanvasLine",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QCanvasLine_typeinfo,
-	__Y11QCanvasLine_vtable,
-	__Y11QCanvasLine_baseinfo,
+	&_11QCanvasLine_typeinfo,
+	_11QCanvasLine_vtable,
+	_11QCanvasLine_baseinfo,
 	};
 
-char *__Y14QXmlAttributes_typeinfo_name[] = {
+char *_14QXmlAttributes_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y14QXmlAttributes_typeinfo = {
+struct classtypeinfo _14QXmlAttributes_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y14QXmlAttributes",
-	__Y14QXmlAttributes_typeinfo_name,
+	"_ZTS14QXmlAttributes",
+	_14QXmlAttributes_typeinfo_name,
 	};
 
-const char *__Y14QXmlAttributes_vtable_name_0 [] = {
+const char *_14QXmlAttributes_vtable_name_0 [] = {
 	"_ZN14QXmlAttributesD1Ev",
 	"_ZN14QXmlAttributesD0Ev",
 	};
 
-struct classvtable __Y14QXmlAttributes_vtable [1] = {
+struct classvtable _14QXmlAttributes_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI14QXmlAttributes",
-	__Y14QXmlAttributes_vtable_name_0,
+	_14QXmlAttributes_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y14QXmlAttributes_baseinfo[] = {
+struct base_type_info _14QXmlAttributes_baseinfo[] = {
 	};
 
-struct classinfo _Y14QXmlAttributes_classinfo = {
-	"_Y14QXmlAttributes",
+struct classinfo _Z14QXmlAttributes_classinfo = {
+	"_Z14QXmlAttributes",
 	"_ZTV14QXmlAttributes",
 	"_ZTI14QXmlAttributes",	/* RTTI */
 	"",
-	"_ZTT_Y14QXmlAttributes",	/* VTT */
+	"_ZTT14QXmlAttributes",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y14QXmlAttributes_typeinfo,
-	__Y14QXmlAttributes_vtable,
-	__Y14QXmlAttributes_baseinfo,
+	&_14QXmlAttributes_typeinfo,
+	_14QXmlAttributes_vtable,
+	_14QXmlAttributes_baseinfo,
 	};
 
-char *__Y7QDialog_typeinfo_name[] = {
+char *_7QDialog_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo __Y7QDialog_typeinfo = {
+struct classtypeinfo _7QDialog_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y7QDialog",
-	__Y7QDialog_typeinfo_name,
+	"_ZTS7QDialog",
+	_7QDialog_typeinfo_name,
 	};
 
-const char *__Y7QDialog_vtable_name_0 [] = {
+const char *_7QDialog_vtable_name_0 [] = {
 	"_ZNK7QDialog10metaObjectEv",
 	"_ZNK7QDialog9classNameEv",
 	"_ZN7QDialog7qt_castEPKc",
@@ -45593,7 +45593,7 @@ const char *__Y7QDialog_vtable_name_0 [] = {
 	"_ZN7QDialog6rejectEv",
 	};
 
-const char *__Y7QDialog_vtable_name_1 [] = {
+const char *_7QDialog_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N7QDialogD1Ev",
 #endif
@@ -45667,14 +45667,14 @@ const char *__Y7QDialog_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y7QDialog_vtable [2] = {
+struct classvtable _7QDialog_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	113,	/* Number of Vfuncs */
 	"_ZTI7QDialog",
-	__Y7QDialog_vtable_name_0,
+	_7QDialog_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -45708,39 +45708,39 @@ struct classvtable __Y7QDialog_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI7QDialog",
-	__Y7QDialog_vtable_name_1,
+	_7QDialog_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y7QDialog_baseinfo[] = {
+struct base_type_info _7QDialog_baseinfo[] = {
 	};
 
-struct classinfo _Y7QDialog_classinfo = {
-	"_Y7QDialog",
+struct classinfo _Z7QDialog_classinfo = {
+	"_Z7QDialog",
 	"_ZTV7QDialog",
 	"_ZTI7QDialog",	/* RTTI */
 	"_ZTI7QWidget",
-	"_ZTT_Y7QDialog",	/* VTT */
+	"_ZTT7QDialog",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y7QDialog_typeinfo,
-	__Y7QDialog_vtable,
-	__Y7QDialog_baseinfo,
+	&_7QDialog_typeinfo,
+	_7QDialog_vtable,
+	_7QDialog_baseinfo,
 	};
 
-char *__Y16QGLayoutIterator_typeinfo_name[] = {
+char *_16QGLayoutIterator_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y16QGLayoutIterator_typeinfo = {
+struct classtypeinfo _16QGLayoutIterator_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
-	"_ZTS_Y16QGLayoutIterator",
-	__Y16QGLayoutIterator_typeinfo_name,
+	"_ZTS16QGLayoutIterator",
+	_16QGLayoutIterator_typeinfo_name,
 	};
 
-const char *__Y16QGLayoutIterator_vtable_name_0 [] = {
+const char *_16QGLayoutIterator_vtable_name_0 [] = {
 	"_ZN16QGLayoutIteratorD1Ev",
 	"_ZN16QGLayoutIteratorD0Ev",
 	"__cxa_pure_virtual",
@@ -45748,18 +45748,18 @@ const char *__Y16QGLayoutIterator_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y16QGLayoutIterator_vtable [1] = {
+struct classvtable _16QGLayoutIterator_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI16QGLayoutIterator",
-	__Y16QGLayoutIterator_vtable_name_0,
+	_16QGLayoutIterator_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y16QGLayoutIterator_baseinfo[] = {
+struct base_type_info _16QGLayoutIterator_baseinfo[] = {
 #if defined __i386__
 	{"_ZTI7QShared",	1026U},
 #endif
@@ -45783,78 +45783,78 @@ struct base_type_info __Y16QGLayoutIterator_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Y16QGLayoutIterator_classinfo = {
-	"_Y16QGLayoutIterator",
+struct classinfo _Z16QGLayoutIterator_classinfo = {
+	"_Z16QGLayoutIterator",
 	"_ZTV16QGLayoutIterator",
 	"_ZTI16QGLayoutIterator",	/* RTTI */
 	"_ZTI7QShared",
-	"_ZTT_Y16QGLayoutIterator",	/* VTT */
+	"_ZTT16QGLayoutIterator",	/* VTT */
 	1,
 	0,
 	1,
 	0,	/* numVTT */
 	0U,
-	&__Y16QGLayoutIterator_typeinfo,
-	__Y16QGLayoutIterator_vtable,
-	__Y16QGLayoutIterator_baseinfo,
+	&_16QGLayoutIterator_typeinfo,
+	_16QGLayoutIterator_vtable,
+	_16QGLayoutIterator_baseinfo,
 	};
 
-char *__Y12QTabletEvent_typeinfo_name[] = {
+char *_12QTabletEvent_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo __Y12QTabletEvent_typeinfo = {
+struct classtypeinfo _12QTabletEvent_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y12QTabletEvent",
-	__Y12QTabletEvent_typeinfo_name,
+	"_ZTS12QTabletEvent",
+	_12QTabletEvent_typeinfo_name,
 	};
 
-const char *__Y12QTabletEvent_vtable_name_0 [] = {
+const char *_12QTabletEvent_vtable_name_0 [] = {
 	"_ZN12QTabletEventD1Ev",
 	"_ZN12QTabletEventD0Ev",
 	};
 
-struct classvtable __Y12QTabletEvent_vtable [1] = {
+struct classvtable _12QTabletEvent_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI12QTabletEvent",
-	__Y12QTabletEvent_vtable_name_0,
+	_12QTabletEvent_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y12QTabletEvent_baseinfo[] = {
+struct base_type_info _12QTabletEvent_baseinfo[] = {
 	};
 
-struct classinfo _Y12QTabletEvent_classinfo = {
-	"_Y12QTabletEvent",
+struct classinfo _Z12QTabletEvent_classinfo = {
+	"_Z12QTabletEvent",
 	"_ZTV12QTabletEvent",
 	"_ZTI12QTabletEvent",	/* RTTI */
 	"_ZTI6QEvent",
-	"_ZTT_Y12QTabletEvent",	/* VTT */
+	"_ZTT12QTabletEvent",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QTabletEvent_typeinfo,
-	__Y12QTabletEvent_vtable,
-	__Y12QTabletEvent_baseinfo,
+	&_12QTabletEvent_typeinfo,
+	_12QTabletEvent_vtable,
+	_12QTabletEvent_baseinfo,
 	};
 
-char *__Y11QWidgetItem_typeinfo_name[] = {
+char *_11QWidgetItem_typeinfo_name[] = {
 	"_ZTI11QLayoutItem",
 	};
 
-struct classtypeinfo __Y11QWidgetItem_typeinfo = {
+struct classtypeinfo _11QWidgetItem_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QWidgetItem",
-	__Y11QWidgetItem_typeinfo_name,
+	"_ZTS11QWidgetItem",
+	_11QWidgetItem_typeinfo_name,
 	};
 
-const char *__Y11QWidgetItem_vtable_name_0 [] = {
+const char *_11QWidgetItem_vtable_name_0 [] = {
 	"_ZN11QWidgetItemD1Ev",
 	"_ZN11QWidgetItemD0Ev",
 	"_ZNK11QWidgetItem8sizeHintEv",
@@ -45874,46 +45874,46 @@ const char *__Y11QWidgetItem_vtable_name_0 [] = {
 	"_ZN11QLayoutItem12setAlignmentEi",
 	};
 
-struct classvtable __Y11QWidgetItem_vtable [1] = {
+struct classvtable _11QWidgetItem_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	17,	/* Number of Vfuncs */
 	"_ZTI11QWidgetItem",
-	__Y11QWidgetItem_vtable_name_0,
+	_11QWidgetItem_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QWidgetItem_baseinfo[] = {
+struct base_type_info _11QWidgetItem_baseinfo[] = {
 	};
 
-struct classinfo _Y11QWidgetItem_classinfo = {
-	"_Y11QWidgetItem",
+struct classinfo _Z11QWidgetItem_classinfo = {
+	"_Z11QWidgetItem",
 	"_ZTV11QWidgetItem",
 	"_ZTI11QWidgetItem",	/* RTTI */
 	"_ZTI11QLayoutItem",
-	"_ZTT_Y11QWidgetItem",	/* VTT */
+	"_ZTT11QWidgetItem",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QWidgetItem_typeinfo,
-	__Y11QWidgetItem_vtable,
-	__Y11QWidgetItem_baseinfo,
+	&_11QWidgetItem_typeinfo,
+	_11QWidgetItem_vtable,
+	_11QWidgetItem_baseinfo,
 	};
 
-char *__Y4QDir_typeinfo_name[] = {
+char *_4QDir_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y4QDir_typeinfo = {
+struct classtypeinfo _4QDir_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y4QDir",
-	__Y4QDir_typeinfo_name,
+	"_ZTS4QDir",
+	_4QDir_typeinfo_name,
 	};
 
-const char *__Y4QDir_vtable_name_0 [] = {
+const char *_4QDir_vtable_name_0 [] = {
 	"_ZN4QDirD1Ev",
 	"_ZN4QDirD0Ev",
 	"_ZN4QDir7setPathERK7QString",
@@ -45950,47 +45950,47 @@ const char *__Y4QDir_vtable_name_0 [] = {
 	"_ZN4QDir14readDirEntriesERK7QStringii",
 	};
 
-struct classvtable __Y4QDir_vtable [1] = {
+struct classvtable _4QDir_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	34,	/* Number of Vfuncs */
 	"_ZTI4QDir",
-	__Y4QDir_vtable_name_0,
+	_4QDir_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y4QDir_baseinfo[] = {
+struct base_type_info _4QDir_baseinfo[] = {
 	};
 
-struct classinfo _Y4QDir_classinfo = {
-	"_Y4QDir",
+struct classinfo _Z4QDir_classinfo = {
+	"_Z4QDir",
 	"_ZTV4QDir",
 	"_ZTI4QDir",	/* RTTI */
 	"",
-	"_ZTT_Y4QDir",	/* VTT */
+	"_ZTT4QDir",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y4QDir_typeinfo,
-	__Y4QDir_vtable,
-	__Y4QDir_baseinfo,
+	&_4QDir_typeinfo,
+	_4QDir_vtable,
+	_4QDir_baseinfo,
 	};
 
-char *__Y25QDomProcessingInstruction_typeinfo_name[] = {
+char *_25QDomProcessingInstruction_typeinfo_name[] = {
 	"_ZTI8QDomNode",
 	};
 
-struct classtypeinfo __Y25QDomProcessingInstruction_typeinfo = {
+struct classtypeinfo _25QDomProcessingInstruction_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y25QDomProcessingInstruction",
-	__Y25QDomProcessingInstruction_typeinfo_name,
+	"_ZTS25QDomProcessingInstruction",
+	_25QDomProcessingInstruction_typeinfo_name,
 	};
 
-const char *__Y25QDomProcessingInstruction_vtable_name_0 [] = {
+const char *_25QDomProcessingInstruction_vtable_name_0 [] = {
 	"_ZN25QDomProcessingInstructionD1Ev",
 	"_ZN25QDomProcessingInstructionD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -46037,47 +46037,47 @@ const char *__Y25QDomProcessingInstruction_vtable_name_0 [] = {
 	"_ZN25QDomProcessingInstruction7setDataERK7QString",
 	};
 
-struct classvtable __Y25QDomProcessingInstruction_vtable [1] = {
+struct classvtable _25QDomProcessingInstruction_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	44,	/* Number of Vfuncs */
 	"_ZTI25QDomProcessingInstruction",
-	__Y25QDomProcessingInstruction_vtable_name_0,
+	_25QDomProcessingInstruction_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y25QDomProcessingInstruction_baseinfo[] = {
+struct base_type_info _25QDomProcessingInstruction_baseinfo[] = {
 	};
 
-struct classinfo _Y25QDomProcessingInstruction_classinfo = {
-	"_Y25QDomProcessingInstruction",
+struct classinfo _Z25QDomProcessingInstruction_classinfo = {
+	"_Z25QDomProcessingInstruction",
 	"_ZTV25QDomProcessingInstruction",
 	"_ZTI25QDomProcessingInstruction",	/* RTTI */
 	"_ZTI8QDomNode",
-	"_ZTT_Y25QDomProcessingInstruction",	/* VTT */
+	"_ZTT25QDomProcessingInstruction",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y25QDomProcessingInstruction_typeinfo,
-	__Y25QDomProcessingInstruction_vtable,
-	__Y25QDomProcessingInstruction_baseinfo,
+	&_25QDomProcessingInstruction_typeinfo,
+	_25QDomProcessingInstruction_vtable,
+	_25QDomProcessingInstruction_baseinfo,
 	};
 
-char *__Y13QCanvasSpline_typeinfo_name[] = {
+char *_13QCanvasSpline_typeinfo_name[] = {
 	"_ZTI14QCanvasPolygon",
 	};
 
-struct classtypeinfo __Y13QCanvasSpline_typeinfo = {
+struct classtypeinfo _13QCanvasSpline_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y13QCanvasSpline",
-	__Y13QCanvasSpline_typeinfo_name,
+	"_ZTS13QCanvasSpline",
+	_13QCanvasSpline_typeinfo_name,
 	};
 
-const char *__Y13QCanvasSpline_vtable_name_0 [] = {
+const char *_13QCanvasSpline_vtable_name_0 [] = {
 	"_ZN13QCanvasSplineD1Ev",
 	"_ZN13QCanvasSplineD0Ev",
 	"_ZN14QCanvasPolygon6moveByEdd",
@@ -46106,47 +46106,47 @@ const char *__Y13QCanvasSpline_vtable_name_0 [] = {
 	"_ZN14QCanvasPolygon9drawShapeER8QPainter",
 	};
 
-struct classvtable __Y13QCanvasSpline_vtable [1] = {
+struct classvtable _13QCanvasSpline_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	26,	/* Number of Vfuncs */
 	"_ZTI13QCanvasSpline",
-	__Y13QCanvasSpline_vtable_name_0,
+	_13QCanvasSpline_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y13QCanvasSpline_baseinfo[] = {
+struct base_type_info _13QCanvasSpline_baseinfo[] = {
 	};
 
-struct classinfo _Y13QCanvasSpline_classinfo = {
-	"_Y13QCanvasSpline",
+struct classinfo _Z13QCanvasSpline_classinfo = {
+	"_Z13QCanvasSpline",
 	"_ZTV13QCanvasSpline",
 	"_ZTI13QCanvasSpline",	/* RTTI */
 	"_ZTI14QCanvasPolygon",
-	"_ZTT_Y13QCanvasSpline",	/* VTT */
+	"_ZTT13QCanvasSpline",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y13QCanvasSpline_typeinfo,
-	__Y13QCanvasSpline_vtable,
-	__Y13QCanvasSpline_baseinfo,
+	&_13QCanvasSpline_typeinfo,
+	_13QCanvasSpline_vtable,
+	_13QCanvasSpline_baseinfo,
 	};
 
-char *__Y11QFontDialog_typeinfo_name[] = {
+char *_11QFontDialog_typeinfo_name[] = {
 	"_ZTI7QDialog",
 	};
 
-struct classtypeinfo __Y11QFontDialog_typeinfo = {
+struct classtypeinfo _11QFontDialog_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QFontDialog",
-	__Y11QFontDialog_typeinfo_name,
+	"_ZTS11QFontDialog",
+	_11QFontDialog_typeinfo_name,
 	};
 
-const char *__Y11QFontDialog_vtable_name_0 [] = {
+const char *_11QFontDialog_vtable_name_0 [] = {
 	"_ZNK11QFontDialog10metaObjectEv",
 	"_ZNK11QFontDialog9classNameEv",
 	"_ZN11QFontDialog7qt_castEPKc",
@@ -46262,7 +46262,7 @@ const char *__Y11QFontDialog_vtable_name_0 [] = {
 	"_ZN7QDialog6rejectEv",
 	};
 
-const char *__Y11QFontDialog_vtable_name_1 [] = {
+const char *_11QFontDialog_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QFontDialogD1Ev",
 #endif
@@ -46336,14 +46336,14 @@ const char *__Y11QFontDialog_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y11QFontDialog_vtable [2] = {
+struct classvtable _11QFontDialog_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	113,	/* Number of Vfuncs */
 	"_ZTI11QFontDialog",
-	__Y11QFontDialog_vtable_name_0,
+	_11QFontDialog_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -46377,39 +46377,39 @@ struct classvtable __Y11QFontDialog_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI11QFontDialog",
-	__Y11QFontDialog_vtable_name_1,
+	_11QFontDialog_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y11QFontDialog_baseinfo[] = {
+struct base_type_info _11QFontDialog_baseinfo[] = {
 	};
 
-struct classinfo _Y11QFontDialog_classinfo = {
-	"_Y11QFontDialog",
+struct classinfo _Z11QFontDialog_classinfo = {
+	"_Z11QFontDialog",
 	"_ZTV11QFontDialog",
 	"_ZTI11QFontDialog",	/* RTTI */
 	"_ZTI7QDialog",
-	"_ZTT_Y11QFontDialog",	/* VTT */
+	"_ZTT11QFontDialog",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QFontDialog_typeinfo,
-	__Y11QFontDialog_vtable,
-	__Y11QFontDialog_baseinfo,
+	&_11QFontDialog_typeinfo,
+	_11QFontDialog_vtable,
+	_11QFontDialog_baseinfo,
 	};
 
-char *__Y7QGArray_typeinfo_name[] = {
+char *_7QGArray_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y7QGArray_typeinfo = {
+struct classtypeinfo _7QGArray_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y7QGArray",
-	__Y7QGArray_typeinfo_name,
+	"_ZTS7QGArray",
+	_7QGArray_typeinfo_name,
 	};
 
-const char *__Y7QGArray_vtable_name_0 [] = {
+const char *_7QGArray_vtable_name_0 [] = {
 	"_ZN7QGArrayD1Ev",
 	"_ZN7QGArrayD0Ev",
 	"_ZN7QGArray6detachEv",
@@ -46417,47 +46417,47 @@ const char *__Y7QGArray_vtable_name_0 [] = {
 	"_ZN7QGArray10deleteDataEPNS_10array_dataE",
 	};
 
-struct classvtable __Y7QGArray_vtable [1] = {
+struct classvtable _7QGArray_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI7QGArray",
-	__Y7QGArray_vtable_name_0,
+	_7QGArray_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y7QGArray_baseinfo[] = {
+struct base_type_info _7QGArray_baseinfo[] = {
 	};
 
-struct classinfo _Y7QGArray_classinfo = {
-	"_Y7QGArray",
+struct classinfo _Z7QGArray_classinfo = {
+	"_Z7QGArray",
 	"_ZTV7QGArray",
 	"_ZTI7QGArray",	/* RTTI */
 	"",
-	"_ZTT_Y7QGArray",	/* VTT */
+	"_ZTT7QGArray",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y7QGArray_typeinfo,
-	__Y7QGArray_vtable,
-	__Y7QGArray_baseinfo,
+	&_7QGArray_typeinfo,
+	_7QGArray_vtable,
+	_7QGArray_baseinfo,
 	};
 
-char *__Y9QBitArray_typeinfo_name[] = {
+char *_9QBitArray_typeinfo_name[] = {
 	"_ZTI9QMemArrayIcE",
 	};
 
-struct classtypeinfo __Y9QBitArray_typeinfo = {
+struct classtypeinfo _9QBitArray_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y9QBitArray",
-	__Y9QBitArray_typeinfo_name,
+	"_ZTS9QBitArray",
+	_9QBitArray_typeinfo_name,
 	};
 
-const char *__Y9QBitArray_vtable_name_0 [] = {
+const char *_9QBitArray_vtable_name_0 [] = {
 	"_ZN9QBitArrayD1Ev",
 	"_ZN9QBitArrayD0Ev",
 	"_ZN9QBitArray6detachEv",
@@ -46465,47 +46465,47 @@ const char *__Y9QBitArray_vtable_name_0 [] = {
 	"_ZN9QBitArray10deleteDataEPN7QGArray10array_dataE",
 	};
 
-struct classvtable __Y9QBitArray_vtable [1] = {
+struct classvtable _9QBitArray_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI9QBitArray",
-	__Y9QBitArray_vtable_name_0,
+	_9QBitArray_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y9QBitArray_baseinfo[] = {
+struct base_type_info _9QBitArray_baseinfo[] = {
 	};
 
-struct classinfo _Y9QBitArray_classinfo = {
-	"_Y9QBitArray",
+struct classinfo _Z9QBitArray_classinfo = {
+	"_Z9QBitArray",
 	"_ZTV9QBitArray",
 	"_ZTI9QBitArray",	/* RTTI */
 	"_ZTI9QMemArrayIcE",
-	"_ZTT_Y9QBitArray",	/* VTT */
+	"_ZTT9QBitArray",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QBitArray_typeinfo,
-	__Y9QBitArray_vtable,
-	__Y9QBitArray_baseinfo,
+	&_9QBitArray_typeinfo,
+	_9QBitArray_vtable,
+	_9QBitArray_baseinfo,
 	};
 
-char *__Y9QCheckBox_typeinfo_name[] = {
+char *_9QCheckBox_typeinfo_name[] = {
 	"_ZTI7QButton",
 	};
 
-struct classtypeinfo __Y9QCheckBox_typeinfo = {
+struct classtypeinfo _9QCheckBox_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y9QCheckBox",
-	__Y9QCheckBox_typeinfo_name,
+	"_ZTS9QCheckBox",
+	_9QCheckBox_typeinfo_name,
 	};
 
-const char *__Y9QCheckBox_vtable_name_0 [] = {
+const char *_9QCheckBox_vtable_name_0 [] = {
 	"_ZNK9QCheckBox10metaObjectEv",
 	"_ZNK9QCheckBox9classNameEv",
 	"_ZN9QCheckBox7qt_castEPKc",
@@ -46629,7 +46629,7 @@ const char *__Y9QCheckBox_vtable_name_0 [] = {
 	"_ZN7QButton8setGroupEP12QButtonGroup",
 	};
 
-const char *__Y9QCheckBox_vtable_name_1 [] = {
+const char *_9QCheckBox_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QCheckBoxD1Ev",
 #endif
@@ -46703,14 +46703,14 @@ const char *__Y9QCheckBox_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y9QCheckBox_vtable [2] = {
+struct classvtable _9QCheckBox_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	121,	/* Number of Vfuncs */
 	"_ZTI9QCheckBox",
-	__Y9QCheckBox_vtable_name_0,
+	_9QCheckBox_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -46744,40 +46744,40 @@ struct classvtable __Y9QCheckBox_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QCheckBox",
-	__Y9QCheckBox_vtable_name_1,
+	_9QCheckBox_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y9QCheckBox_baseinfo[] = {
+struct base_type_info _9QCheckBox_baseinfo[] = {
 	};
 
-struct classinfo _Y9QCheckBox_classinfo = {
-	"_Y9QCheckBox",
+struct classinfo _Z9QCheckBox_classinfo = {
+	"_Z9QCheckBox",
 	"_ZTV9QCheckBox",
 	"_ZTI9QCheckBox",	/* RTTI */
 	"_ZTI7QButton",
-	"_ZTT_Y9QCheckBox",	/* VTT */
+	"_ZTT9QCheckBox",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QCheckBox_typeinfo,
-	__Y9QCheckBox_vtable,
-	__Y9QCheckBox_baseinfo,
+	&_9QCheckBox_typeinfo,
+	_9QCheckBox_vtable,
+	_9QCheckBox_baseinfo,
 	};
 
-char *__Y11QDockWindow_typeinfo_name[] = {
+char *_11QDockWindow_typeinfo_name[] = {
 	"_ZTI6QFrame",
 	};
 
-struct classtypeinfo __Y11QDockWindow_typeinfo = {
+struct classtypeinfo _11QDockWindow_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QDockWindow",
-	__Y11QDockWindow_typeinfo_name,
+	"_ZTS11QDockWindow",
+	_11QDockWindow_typeinfo_name,
 	};
 
-const char *__Y11QDockWindow_vtable_name_0 [] = {
+const char *_11QDockWindow_vtable_name_0 [] = {
 	"_ZNK11QDockWindow10metaObjectEv",
 	"_ZNK11QDockWindow9classNameEv",
 	"_ZN11QDockWindow7qt_castEPKc",
@@ -46913,7 +46913,7 @@ const char *__Y11QDockWindow_vtable_name_0 [] = {
 	"_ZN11QDockWindow14setOrientationEN2Qt11OrientationE",
 	};
 
-const char *__Y11QDockWindow_vtable_name_1 [] = {
+const char *_11QDockWindow_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QDockWindowD1Ev",
 #endif
@@ -46987,14 +46987,14 @@ const char *__Y11QDockWindow_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y11QDockWindow_vtable [2] = {
+struct classvtable _11QDockWindow_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	133,	/* Number of Vfuncs */
 	"_ZTI11QDockWindow",
-	__Y11QDockWindow_vtable_name_0,
+	_11QDockWindow_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -47028,40 +47028,40 @@ struct classvtable __Y11QDockWindow_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI11QDockWindow",
-	__Y11QDockWindow_vtable_name_1,
+	_11QDockWindow_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y11QDockWindow_baseinfo[] = {
+struct base_type_info _11QDockWindow_baseinfo[] = {
 	};
 
-struct classinfo _Y11QDockWindow_classinfo = {
-	"_Y11QDockWindow",
+struct classinfo _Z11QDockWindow_classinfo = {
+	"_Z11QDockWindow",
 	"_ZTV11QDockWindow",
 	"_ZTI11QDockWindow",	/* RTTI */
 	"_ZTI6QFrame",
-	"_ZTT_Y11QDockWindow",	/* VTT */
+	"_ZTT11QDockWindow",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QDockWindow_typeinfo,
-	__Y11QDockWindow_vtable,
-	__Y11QDockWindow_baseinfo,
+	&_11QDockWindow_typeinfo,
+	_11QDockWindow_vtable,
+	_11QDockWindow_baseinfo,
 	};
 
-char *__Y18QImageFormatPlugin_typeinfo_name[] = {
+char *_18QImageFormatPlugin_typeinfo_name[] = {
 	"_ZTI8QGPlugin",
 	};
 
-struct classtypeinfo __Y18QImageFormatPlugin_typeinfo = {
+struct classtypeinfo _18QImageFormatPlugin_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y18QImageFormatPlugin",
-	__Y18QImageFormatPlugin_typeinfo_name,
+	"_ZTS18QImageFormatPlugin",
+	_18QImageFormatPlugin_typeinfo_name,
 	};
 
-const char *__Y18QImageFormatPlugin_vtable_name_0 [] = {
+const char *_18QImageFormatPlugin_vtable_name_0 [] = {
 	"_ZNK18QImageFormatPlugin10metaObjectEv",
 	"_ZNK18QImageFormatPlugin9classNameEv",
 	"_ZN18QImageFormatPlugin7qt_castEPKc",
@@ -47089,47 +47089,47 @@ const char *__Y18QImageFormatPlugin_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y18QImageFormatPlugin_vtable [1] = {
+struct classvtable _18QImageFormatPlugin_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	25,	/* Number of Vfuncs */
 	"_ZTI18QImageFormatPlugin",
-	__Y18QImageFormatPlugin_vtable_name_0,
+	_18QImageFormatPlugin_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y18QImageFormatPlugin_baseinfo[] = {
+struct base_type_info _18QImageFormatPlugin_baseinfo[] = {
 	};
 
-struct classinfo _Y18QImageFormatPlugin_classinfo = {
-	"_Y18QImageFormatPlugin",
+struct classinfo _Z18QImageFormatPlugin_classinfo = {
+	"_Z18QImageFormatPlugin",
 	"_ZTV18QImageFormatPlugin",
 	"_ZTI18QImageFormatPlugin",	/* RTTI */
 	"_ZTI8QGPlugin",
-	"_ZTT_Y18QImageFormatPlugin",	/* VTT */
+	"_ZTT18QImageFormatPlugin",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y18QImageFormatPlugin_typeinfo,
-	__Y18QImageFormatPlugin_vtable,
-	__Y18QImageFormatPlugin_baseinfo,
+	&_18QImageFormatPlugin_typeinfo,
+	_18QImageFormatPlugin_vtable,
+	_18QImageFormatPlugin_baseinfo,
 	};
 
-char *__Y11QEucJpCodec_typeinfo_name[] = {
+char *_11QEucJpCodec_typeinfo_name[] = {
 	"_ZTI10QTextCodec",
 	};
 
-struct classtypeinfo __Y11QEucJpCodec_typeinfo = {
+struct classtypeinfo _11QEucJpCodec_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QEucJpCodec",
-	__Y11QEucJpCodec_typeinfo_name,
+	"_ZTS11QEucJpCodec",
+	_11QEucJpCodec_typeinfo_name,
 	};
 
-const char *__Y11QEucJpCodec_vtable_name_0 [] = {
+const char *_11QEucJpCodec_vtable_name_0 [] = {
 	"_ZN11QEucJpCodecD1Ev",
 	"_ZN11QEucJpCodecD0Ev",
 	"_ZNK11QEucJpCodec4nameEv",
@@ -47147,46 +47147,46 @@ const char *__Y11QEucJpCodec_vtable_name_0 [] = {
 	"_ZNK10QTextCodec20characterFromUnicodeERK7QStringi",
 	};
 
-struct classvtable __Y11QEucJpCodec_vtable [1] = {
+struct classvtable _11QEucJpCodec_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	15,	/* Number of Vfuncs */
 	"_ZTI11QEucJpCodec",
-	__Y11QEucJpCodec_vtable_name_0,
+	_11QEucJpCodec_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QEucJpCodec_baseinfo[] = {
+struct base_type_info _11QEucJpCodec_baseinfo[] = {
 	};
 
-struct classinfo _Y11QEucJpCodec_classinfo = {
-	"_Y11QEucJpCodec",
+struct classinfo _Z11QEucJpCodec_classinfo = {
+	"_Z11QEucJpCodec",
 	"_ZTV11QEucJpCodec",
 	"_ZTI11QEucJpCodec",	/* RTTI */
 	"_ZTI10QTextCodec",
-	"_ZTT_Y11QEucJpCodec",	/* VTT */
+	"_ZTT11QEucJpCodec",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QEucJpCodec_typeinfo,
-	__Y11QEucJpCodec_vtable,
-	__Y11QEucJpCodec_baseinfo,
+	&_11QEucJpCodec_typeinfo,
+	_11QEucJpCodec_vtable,
+	_11QEucJpCodec_baseinfo,
 	};
 
-char *__Y16QSqlResultShared_typeinfo_name[] = {
+char *_16QSqlResultShared_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y16QSqlResultShared_typeinfo = {
+struct classtypeinfo _16QSqlResultShared_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
-	"_ZTS_Y16QSqlResultShared",
-	__Y16QSqlResultShared_typeinfo_name,
+	"_ZTS16QSqlResultShared",
+	_16QSqlResultShared_typeinfo_name,
 	};
 
-const char *__Y16QSqlResultShared_vtable_name_0 [] = {
+const char *_16QSqlResultShared_vtable_name_0 [] = {
 	"_ZNK16QSqlResultShared10metaObjectEv",
 	"_ZNK16QSqlResultShared9classNameEv",
 	"_ZN16QSqlResultShared7qt_castEPKc",
@@ -47210,18 +47210,18 @@ const char *__Y16QSqlResultShared_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable __Y16QSqlResultShared_vtable [1] = {
+struct classvtable _16QSqlResultShared_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI16QSqlResultShared",
-	__Y16QSqlResultShared_vtable_name_0,
+	_16QSqlResultShared_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y16QSqlResultShared_baseinfo[] = {
+struct base_type_info _16QSqlResultShared_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
 #if defined __i386__
 	{"_ZTI7QShared",	10242U},
@@ -47246,32 +47246,32 @@ struct base_type_info __Y16QSqlResultShared_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Y16QSqlResultShared_classinfo = {
-	"_Y16QSqlResultShared",
+struct classinfo _Z16QSqlResultShared_classinfo = {
+	"_Z16QSqlResultShared",
 	"_ZTV16QSqlResultShared",
 	"_ZTI16QSqlResultShared",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y16QSqlResultShared",	/* VTT */
+	"_ZTT16QSqlResultShared",	/* VTT */
 	1,
 	0,
 	2,
 	0,	/* numVTT */
 	0U,
-	&__Y16QSqlResultShared_typeinfo,
-	__Y16QSqlResultShared_vtable,
-	__Y16QSqlResultShared_baseinfo,
+	&_16QSqlResultShared_typeinfo,
+	_16QSqlResultShared_vtable,
+	_16QSqlResultShared_baseinfo,
 	};
 
-char *__Y9QSqlError_typeinfo_name[] = {
+char *_9QSqlError_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y9QSqlError_typeinfo = {
+struct classtypeinfo _9QSqlError_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y9QSqlError",
-	__Y9QSqlError_typeinfo_name,
+	"_ZTS9QSqlError",
+	_9QSqlError_typeinfo_name,
 	};
 
-const char *__Y9QSqlError_vtable_name_0 [] = {
+const char *_9QSqlError_vtable_name_0 [] = {
 	"_ZN9QSqlErrorD1Ev",
 	"_ZN9QSqlErrorD0Ev",
 	"_ZN9QSqlError13setDriverTextERK7QString",
@@ -47280,47 +47280,47 @@ const char *__Y9QSqlError_vtable_name_0 [] = {
 	"_ZN9QSqlError9setNumberEi",
 	};
 
-struct classvtable __Y9QSqlError_vtable [1] = {
+struct classvtable _9QSqlError_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	6,	/* Number of Vfuncs */
 	"_ZTI9QSqlError",
-	__Y9QSqlError_vtable_name_0,
+	_9QSqlError_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y9QSqlError_baseinfo[] = {
+struct base_type_info _9QSqlError_baseinfo[] = {
 	};
 
-struct classinfo _Y9QSqlError_classinfo = {
-	"_Y9QSqlError",
+struct classinfo _Z9QSqlError_classinfo = {
+	"_Z9QSqlError",
 	"_ZTV9QSqlError",
 	"_ZTI9QSqlError",	/* RTTI */
 	"",
-	"_ZTT_Y9QSqlError",	/* VTT */
+	"_ZTT9QSqlError",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QSqlError_typeinfo,
-	__Y9QSqlError_vtable,
-	__Y9QSqlError_baseinfo,
+	&_9QSqlError_typeinfo,
+	_9QSqlError_vtable,
+	_9QSqlError_baseinfo,
 	};
 
-char *__Y13QServerSocket_typeinfo_name[] = {
+char *_13QServerSocket_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y13QServerSocket_typeinfo = {
+struct classtypeinfo _13QServerSocket_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y13QServerSocket",
-	__Y13QServerSocket_typeinfo_name,
+	"_ZTS13QServerSocket",
+	_13QServerSocket_typeinfo_name,
 	};
 
-const char *__Y13QServerSocket_vtable_name_0 [] = {
+const char *_13QServerSocket_vtable_name_0 [] = {
 	"_ZNK13QServerSocket10metaObjectEv",
 	"_ZNK13QServerSocket9classNameEv",
 	"_ZN13QServerSocket7qt_castEPKc",
@@ -47346,46 +47346,46 @@ const char *__Y13QServerSocket_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y13QServerSocket_vtable [1] = {
+struct classvtable _13QServerSocket_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	23,	/* Number of Vfuncs */
 	"_ZTI13QServerSocket",
-	__Y13QServerSocket_vtable_name_0,
+	_13QServerSocket_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y13QServerSocket_baseinfo[] = {
+struct base_type_info _13QServerSocket_baseinfo[] = {
 	};
 
-struct classinfo _Y13QServerSocket_classinfo = {
-	"_Y13QServerSocket",
+struct classinfo _Z13QServerSocket_classinfo = {
+	"_Z13QServerSocket",
 	"_ZTV13QServerSocket",
 	"_ZTI13QServerSocket",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y13QServerSocket",	/* VTT */
+	"_ZTT13QServerSocket",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y13QServerSocket_typeinfo,
-	__Y13QServerSocket_vtable,
-	__Y13QServerSocket_baseinfo,
+	&_13QServerSocket_typeinfo,
+	_13QServerSocket_vtable,
+	_13QServerSocket_baseinfo,
 	};
 
-char *__Y18QXmlContentHandler_typeinfo_name[] = {
+char *_18QXmlContentHandler_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y18QXmlContentHandler_typeinfo = {
+struct classtypeinfo _18QXmlContentHandler_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y18QXmlContentHandler",
-	__Y18QXmlContentHandler_typeinfo_name,
+	"_ZTS18QXmlContentHandler",
+	_18QXmlContentHandler_typeinfo_name,
 	};
 
-const char *__Y18QXmlContentHandler_vtable_name_0 [] = {
+const char *_18QXmlContentHandler_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
@@ -47400,47 +47400,47 @@ const char *__Y18QXmlContentHandler_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y18QXmlContentHandler_vtable [1] = {
+struct classvtable _18QXmlContentHandler_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	12,	/* Number of Vfuncs */
 	"_ZTI18QXmlContentHandler",
-	__Y18QXmlContentHandler_vtable_name_0,
+	_18QXmlContentHandler_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y18QXmlContentHandler_baseinfo[] = {
+struct base_type_info _18QXmlContentHandler_baseinfo[] = {
 	};
 
-struct classinfo _Y18QXmlContentHandler_classinfo = {
-	"_Y18QXmlContentHandler",
+struct classinfo _Z18QXmlContentHandler_classinfo = {
+	"_Z18QXmlContentHandler",
 	"_ZTV18QXmlContentHandler",
 	"_ZTI18QXmlContentHandler",	/* RTTI */
 	"",
-	"_ZTT_Y18QXmlContentHandler",	/* VTT */
+	"_ZTT18QXmlContentHandler",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y18QXmlContentHandler_typeinfo,
-	__Y18QXmlContentHandler_vtable,
-	__Y18QXmlContentHandler_baseinfo,
+	&_18QXmlContentHandler_typeinfo,
+	_18QXmlContentHandler_vtable,
+	_18QXmlContentHandler_baseinfo,
 	};
 
-char *__Y12QGb2312Codec_typeinfo_name[] = {
+char *_12QGb2312Codec_typeinfo_name[] = {
 	"_ZTI13QGb18030Codec",
 	};
 
-struct classtypeinfo __Y12QGb2312Codec_typeinfo = {
+struct classtypeinfo _12QGb2312Codec_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y12QGb2312Codec",
-	__Y12QGb2312Codec_typeinfo_name,
+	"_ZTS12QGb2312Codec",
+	_12QGb2312Codec_typeinfo_name,
 	};
 
-const char *__Y12QGb2312Codec_vtable_name_0 [] = {
+const char *_12QGb2312Codec_vtable_name_0 [] = {
 	"_ZN12QGb2312CodecD1Ev",
 	"_ZN12QGb2312CodecD0Ev",
 	"_ZNK12QGb2312Codec4nameEv",
@@ -47458,136 +47458,136 @@ const char *__Y12QGb2312Codec_vtable_name_0 [] = {
 	"_ZNK10QTextCodec20characterFromUnicodeERK7QStringi",
 	};
 
-struct classvtable __Y12QGb2312Codec_vtable [1] = {
+struct classvtable _12QGb2312Codec_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	15,	/* Number of Vfuncs */
 	"_ZTI12QGb2312Codec",
-	__Y12QGb2312Codec_vtable_name_0,
+	_12QGb2312Codec_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y12QGb2312Codec_baseinfo[] = {
+struct base_type_info _12QGb2312Codec_baseinfo[] = {
 	};
 
-struct classinfo _Y12QGb2312Codec_classinfo = {
-	"_Y12QGb2312Codec",
+struct classinfo _Z12QGb2312Codec_classinfo = {
+	"_Z12QGb2312Codec",
 	"_ZTV12QGb2312Codec",
 	"_ZTI12QGb2312Codec",	/* RTTI */
 	"_ZTI13QGb18030Codec",
-	"_ZTT_Y12QGb2312Codec",	/* VTT */
+	"_ZTT12QGb2312Codec",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QGb2312Codec_typeinfo,
-	__Y12QGb2312Codec_vtable,
-	__Y12QGb2312Codec_baseinfo,
+	&_12QGb2312Codec_typeinfo,
+	_12QGb2312Codec_vtable,
+	_12QGb2312Codec_baseinfo,
 	};
 
-char *__Y11QFocusEvent_typeinfo_name[] = {
+char *_11QFocusEvent_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo __Y11QFocusEvent_typeinfo = {
+struct classtypeinfo _11QFocusEvent_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QFocusEvent",
-	__Y11QFocusEvent_typeinfo_name,
+	"_ZTS11QFocusEvent",
+	_11QFocusEvent_typeinfo_name,
 	};
 
-const char *__Y11QFocusEvent_vtable_name_0 [] = {
+const char *_11QFocusEvent_vtable_name_0 [] = {
 	"_ZN11QFocusEventD1Ev",
 	"_ZN11QFocusEventD0Ev",
 	};
 
-struct classvtable __Y11QFocusEvent_vtable [1] = {
+struct classvtable _11QFocusEvent_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI11QFocusEvent",
-	__Y11QFocusEvent_vtable_name_0,
+	_11QFocusEvent_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QFocusEvent_baseinfo[] = {
+struct base_type_info _11QFocusEvent_baseinfo[] = {
 	};
 
-struct classinfo _Y11QFocusEvent_classinfo = {
-	"_Y11QFocusEvent",
+struct classinfo _Z11QFocusEvent_classinfo = {
+	"_Z11QFocusEvent",
 	"_ZTV11QFocusEvent",
 	"_ZTI11QFocusEvent",	/* RTTI */
 	"_ZTI6QEvent",
-	"_ZTT_Y11QFocusEvent",	/* VTT */
+	"_ZTT11QFocusEvent",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QFocusEvent_typeinfo,
-	__Y11QFocusEvent_vtable,
-	__Y11QFocusEvent_baseinfo,
+	&_11QFocusEvent_typeinfo,
+	_11QFocusEvent_vtable,
+	_11QFocusEvent_baseinfo,
 	};
 
-char *__Y11QMouseEvent_typeinfo_name[] = {
+char *_11QMouseEvent_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo __Y11QMouseEvent_typeinfo = {
+struct classtypeinfo _11QMouseEvent_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QMouseEvent",
-	__Y11QMouseEvent_typeinfo_name,
+	"_ZTS11QMouseEvent",
+	_11QMouseEvent_typeinfo_name,
 	};
 
-const char *__Y11QMouseEvent_vtable_name_0 [] = {
+const char *_11QMouseEvent_vtable_name_0 [] = {
 	"_ZN11QMouseEventD1Ev",
 	"_ZN11QMouseEventD0Ev",
 	};
 
-struct classvtable __Y11QMouseEvent_vtable [1] = {
+struct classvtable _11QMouseEvent_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI11QMouseEvent",
-	__Y11QMouseEvent_vtable_name_0,
+	_11QMouseEvent_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QMouseEvent_baseinfo[] = {
+struct base_type_info _11QMouseEvent_baseinfo[] = {
 	};
 
-struct classinfo _Y11QMouseEvent_classinfo = {
-	"_Y11QMouseEvent",
+struct classinfo _Z11QMouseEvent_classinfo = {
+	"_Z11QMouseEvent",
 	"_ZTV11QMouseEvent",
 	"_ZTI11QMouseEvent",	/* RTTI */
 	"_ZTI6QEvent",
-	"_ZTT_Y11QMouseEvent",	/* VTT */
+	"_ZTT11QMouseEvent",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QMouseEvent_typeinfo,
-	__Y11QMouseEvent_vtable,
-	__Y11QMouseEvent_baseinfo,
+	&_11QMouseEvent_typeinfo,
+	_11QMouseEvent_vtable,
+	_11QMouseEvent_baseinfo,
 	};
 
-char *__Y8QUrlInfo_typeinfo_name[] = {
+char *_8QUrlInfo_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y8QUrlInfo_typeinfo = {
+struct classtypeinfo _8QUrlInfo_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y8QUrlInfo",
-	__Y8QUrlInfo_typeinfo_name,
+	"_ZTS8QUrlInfo",
+	_8QUrlInfo_typeinfo_name,
 	};
 
-const char *__Y8QUrlInfo_vtable_name_0 [] = {
+const char *_8QUrlInfo_vtable_name_0 [] = {
 	"_ZN8QUrlInfoD1Ev",
 	"_ZN8QUrlInfoD0Ev",
 	"_ZN8QUrlInfo7setNameERK7QString",
@@ -47603,46 +47603,46 @@ const char *__Y8QUrlInfo_vtable_name_0 [] = {
 	"_ZN8QUrlInfo15setLastModifiedERK9QDateTime",
 	};
 
-struct classvtable __Y8QUrlInfo_vtable [1] = {
+struct classvtable _8QUrlInfo_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	13,	/* Number of Vfuncs */
 	"_ZTI8QUrlInfo",
-	__Y8QUrlInfo_vtable_name_0,
+	_8QUrlInfo_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y8QUrlInfo_baseinfo[] = {
+struct base_type_info _8QUrlInfo_baseinfo[] = {
 	};
 
-struct classinfo _Y8QUrlInfo_classinfo = {
-	"_Y8QUrlInfo",
+struct classinfo _Z8QUrlInfo_classinfo = {
+	"_Z8QUrlInfo",
 	"_ZTV8QUrlInfo",
 	"_ZTI8QUrlInfo",	/* RTTI */
 	"",
-	"_ZTT_Y8QUrlInfo",	/* VTT */
+	"_ZTT8QUrlInfo",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y8QUrlInfo_typeinfo,
-	__Y8QUrlInfo_vtable,
-	__Y8QUrlInfo_baseinfo,
+	&_8QUrlInfo_typeinfo,
+	_8QUrlInfo_vtable,
+	_8QUrlInfo_baseinfo,
 	};
 
-char *__Y14QImageConsumer_typeinfo_name[] = {
+char *_14QImageConsumer_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y14QImageConsumer_typeinfo = {
+struct classtypeinfo _14QImageConsumer_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y14QImageConsumer",
-	__Y14QImageConsumer_typeinfo_name,
+	"_ZTS14QImageConsumer",
+	_14QImageConsumer_typeinfo_name,
 	};
 
-const char *__Y14QImageConsumer_vtable_name_0 [] = {
+const char *_14QImageConsumer_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
@@ -47652,47 +47652,47 @@ const char *__Y14QImageConsumer_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y14QImageConsumer_vtable [1] = {
+struct classvtable _14QImageConsumer_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	7,	/* Number of Vfuncs */
 	"_ZTI14QImageConsumer",
-	__Y14QImageConsumer_vtable_name_0,
+	_14QImageConsumer_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y14QImageConsumer_baseinfo[] = {
+struct base_type_info _14QImageConsumer_baseinfo[] = {
 	};
 
-struct classinfo _Y14QImageConsumer_classinfo = {
-	"_Y14QImageConsumer",
+struct classinfo _Z14QImageConsumer_classinfo = {
+	"_Z14QImageConsumer",
 	"_ZTV14QImageConsumer",
 	"_ZTI14QImageConsumer",	/* RTTI */
 	"",
-	"_ZTT_Y14QImageConsumer",	/* VTT */
+	"_ZTT14QImageConsumer",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y14QImageConsumer_typeinfo,
-	__Y14QImageConsumer_vtable,
-	__Y14QImageConsumer_baseinfo,
+	&_14QImageConsumer_typeinfo,
+	_14QImageConsumer_vtable,
+	_14QImageConsumer_baseinfo,
 	};
 
-char *__Y19QDomEntityReference_typeinfo_name[] = {
+char *_19QDomEntityReference_typeinfo_name[] = {
 	"_ZTI8QDomNode",
 	};
 
-struct classtypeinfo __Y19QDomEntityReference_typeinfo = {
+struct classtypeinfo _19QDomEntityReference_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y19QDomEntityReference",
-	__Y19QDomEntityReference_typeinfo_name,
+	"_ZTS19QDomEntityReference",
+	_19QDomEntityReference_typeinfo_name,
 	};
 
-const char *__Y19QDomEntityReference_vtable_name_0 [] = {
+const char *_19QDomEntityReference_vtable_name_0 [] = {
 	"_ZN19QDomEntityReferenceD1Ev",
 	"_ZN19QDomEntityReferenceD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -47736,47 +47736,47 @@ const char *__Y19QDomEntityReference_vtable_name_0 [] = {
 	"_ZNK8QDomNode9isCommentEv",
 	};
 
-struct classvtable __Y19QDomEntityReference_vtable [1] = {
+struct classvtable _19QDomEntityReference_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	41,	/* Number of Vfuncs */
 	"_ZTI19QDomEntityReference",
-	__Y19QDomEntityReference_vtable_name_0,
+	_19QDomEntityReference_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y19QDomEntityReference_baseinfo[] = {
+struct base_type_info _19QDomEntityReference_baseinfo[] = {
 	};
 
-struct classinfo _Y19QDomEntityReference_classinfo = {
-	"_Y19QDomEntityReference",
+struct classinfo _Z19QDomEntityReference_classinfo = {
+	"_Z19QDomEntityReference",
 	"_ZTV19QDomEntityReference",
 	"_ZTI19QDomEntityReference",	/* RTTI */
 	"_ZTI8QDomNode",
-	"_ZTT_Y19QDomEntityReference",	/* VTT */
+	"_ZTT19QDomEntityReference",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y19QDomEntityReference_typeinfo,
-	__Y19QDomEntityReference_vtable,
-	__Y19QDomEntityReference_baseinfo,
+	&_19QDomEntityReference_typeinfo,
+	_19QDomEntityReference_vtable,
+	_19QDomEntityReference_baseinfo,
 	};
 
-char *__Y11QSpinWidget_typeinfo_name[] = {
+char *_11QSpinWidget_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo __Y11QSpinWidget_typeinfo = {
+struct classtypeinfo _11QSpinWidget_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QSpinWidget",
-	__Y11QSpinWidget_typeinfo_name,
+	"_ZTS11QSpinWidget",
+	_11QSpinWidget_typeinfo_name,
 	};
 
-const char *__Y11QSpinWidget_vtable_name_0 [] = {
+const char *_11QSpinWidget_vtable_name_0 [] = {
 	"_ZNK11QSpinWidget10metaObjectEv",
 	"_ZNK11QSpinWidget9classNameEv",
 	"_ZN11QSpinWidget7qt_castEPKc",
@@ -47890,7 +47890,7 @@ const char *__Y11QSpinWidget_vtable_name_0 [] = {
 	"_ZN11QSpinWidget16setButtonSymbolsENS_13ButtonSymbolsE",
 	};
 
-const char *__Y11QSpinWidget_vtable_name_1 [] = {
+const char *_11QSpinWidget_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QSpinWidgetD1Ev",
 #endif
@@ -47964,14 +47964,14 @@ const char *__Y11QSpinWidget_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y11QSpinWidget_vtable [2] = {
+struct classvtable _11QSpinWidget_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	111,	/* Number of Vfuncs */
 	"_ZTI11QSpinWidget",
-	__Y11QSpinWidget_vtable_name_0,
+	_11QSpinWidget_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -48005,130 +48005,130 @@ struct classvtable __Y11QSpinWidget_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI11QSpinWidget",
-	__Y11QSpinWidget_vtable_name_1,
+	_11QSpinWidget_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y11QSpinWidget_baseinfo[] = {
+struct base_type_info _11QSpinWidget_baseinfo[] = {
 	};
 
-struct classinfo _Y11QSpinWidget_classinfo = {
-	"_Y11QSpinWidget",
+struct classinfo _Z11QSpinWidget_classinfo = {
+	"_Z11QSpinWidget",
 	"_ZTV11QSpinWidget",
 	"_ZTI11QSpinWidget",	/* RTTI */
 	"_ZTI7QWidget",
-	"_ZTT_Y11QSpinWidget",	/* VTT */
+	"_ZTT11QSpinWidget",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QSpinWidget_typeinfo,
-	__Y11QSpinWidget_vtable,
-	__Y11QSpinWidget_baseinfo,
+	&_11QSpinWidget_typeinfo,
+	_11QSpinWidget_vtable,
+	_11QSpinWidget_baseinfo,
 	};
 
-char *__Y11QChildEvent_typeinfo_name[] = {
+char *_11QChildEvent_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo __Y11QChildEvent_typeinfo = {
+struct classtypeinfo _11QChildEvent_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QChildEvent",
-	__Y11QChildEvent_typeinfo_name,
+	"_ZTS11QChildEvent",
+	_11QChildEvent_typeinfo_name,
 	};
 
-const char *__Y11QChildEvent_vtable_name_0 [] = {
+const char *_11QChildEvent_vtable_name_0 [] = {
 	"_ZN11QChildEventD1Ev",
 	"_ZN11QChildEventD0Ev",
 	};
 
-struct classvtable __Y11QChildEvent_vtable [1] = {
+struct classvtable _11QChildEvent_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI11QChildEvent",
-	__Y11QChildEvent_vtable_name_0,
+	_11QChildEvent_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QChildEvent_baseinfo[] = {
+struct base_type_info _11QChildEvent_baseinfo[] = {
 	};
 
-struct classinfo _Y11QChildEvent_classinfo = {
-	"_Y11QChildEvent",
+struct classinfo _Z11QChildEvent_classinfo = {
+	"_Z11QChildEvent",
 	"_ZTV11QChildEvent",
 	"_ZTI11QChildEvent",	/* RTTI */
 	"_ZTI6QEvent",
-	"_ZTT_Y11QChildEvent",	/* VTT */
+	"_ZTT11QChildEvent",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QChildEvent_typeinfo,
-	__Y11QChildEvent_vtable,
-	__Y11QChildEvent_baseinfo,
+	&_11QChildEvent_typeinfo,
+	_11QChildEvent_vtable,
+	_11QChildEvent_baseinfo,
 	};
 
-char *__Y12QTextOStream_typeinfo_name[] = {
+char *_12QTextOStream_typeinfo_name[] = {
 	"_ZTI11QTextStream",
 	};
 
-struct classtypeinfo __Y12QTextOStream_typeinfo = {
+struct classtypeinfo _12QTextOStream_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y12QTextOStream",
-	__Y12QTextOStream_typeinfo_name,
+	"_ZTS12QTextOStream",
+	_12QTextOStream_typeinfo_name,
 	};
 
-const char *__Y12QTextOStream_vtable_name_0 [] = {
+const char *_12QTextOStream_vtable_name_0 [] = {
 	"_ZN12QTextOStreamD1Ev",
 	"_ZN12QTextOStreamD0Ev",
 	};
 
-struct classvtable __Y12QTextOStream_vtable [1] = {
+struct classvtable _12QTextOStream_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI12QTextOStream",
-	__Y12QTextOStream_vtable_name_0,
+	_12QTextOStream_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y12QTextOStream_baseinfo[] = {
+struct base_type_info _12QTextOStream_baseinfo[] = {
 	};
 
-struct classinfo _Y12QTextOStream_classinfo = {
-	"_Y12QTextOStream",
+struct classinfo _Z12QTextOStream_classinfo = {
+	"_Z12QTextOStream",
 	"_ZTV12QTextOStream",
 	"_ZTI12QTextOStream",	/* RTTI */
 	"_ZTI11QTextStream",
-	"_ZTT_Y12QTextOStream",	/* VTT */
+	"_ZTT12QTextOStream",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QTextOStream_typeinfo,
-	__Y12QTextOStream_vtable,
-	__Y12QTextOStream_baseinfo,
+	&_12QTextOStream_typeinfo,
+	_12QTextOStream_vtable,
+	_12QTextOStream_baseinfo,
 	};
 
-char *__Y10QSignalVec_typeinfo_name[] = {
+char *_10QSignalVec_typeinfo_name[] = {
 	"_ZTI10QPtrVectorI15QConnectionListE",
 	};
 
-struct classtypeinfo __Y10QSignalVec_typeinfo = {
+struct classtypeinfo _10QSignalVec_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y10QSignalVec",
-	__Y10QSignalVec_typeinfo_name,
+	"_ZTS10QSignalVec",
+	_10QSignalVec_typeinfo_name,
 	};
 
-const char *__Y10QSignalVec_vtable_name_0 [] = {
+const char *_10QSignalVec_vtable_name_0 [] = {
 	"_ZNK10QPtrVectorI15QConnectionListE5countEv",
 	"_ZN10QPtrVectorI15QConnectionListE5clearEv",
 	"_ZN10QSignalVecD1Ev",
@@ -48140,47 +48140,47 @@ const char *__Y10QSignalVec_vtable_name_0 [] = {
 	"_ZNK8QGVector5writeER11QDataStreamPv",
 	};
 
-struct classvtable __Y10QSignalVec_vtable [1] = {
+struct classvtable _10QSignalVec_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI10QSignalVec",
-	__Y10QSignalVec_vtable_name_0,
+	_10QSignalVec_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y10QSignalVec_baseinfo[] = {
+struct base_type_info _10QSignalVec_baseinfo[] = {
 	};
 
-struct classinfo _Y10QSignalVec_classinfo = {
-	"_Y10QSignalVec",
+struct classinfo _Z10QSignalVec_classinfo = {
+	"_Z10QSignalVec",
 	"_ZTV10QSignalVec",
 	"_ZTI10QSignalVec",	/* RTTI */
 	"_ZTI10QPtrVectorI15QConnectionListE",
-	"_ZTT_Y10QSignalVec",	/* VTT */
+	"_ZTT10QSignalVec",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QSignalVec_typeinfo,
-	__Y10QSignalVec_vtable,
-	__Y10QSignalVec_baseinfo,
+	&_10QSignalVec_typeinfo,
+	_10QSignalVec_vtable,
+	_10QSignalVec_baseinfo,
 	};
 
-char *__Y10QValidator_typeinfo_name[] = {
+char *_10QValidator_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y10QValidator_typeinfo = {
+struct classtypeinfo _10QValidator_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y10QValidator",
-	__Y10QValidator_typeinfo_name,
+	"_ZTS10QValidator",
+	_10QValidator_typeinfo_name,
 	};
 
-const char *__Y10QValidator_vtable_name_0 [] = {
+const char *_10QValidator_vtable_name_0 [] = {
 	"_ZNK10QValidator10metaObjectEv",
 	"_ZNK10QValidator9classNameEv",
 	"_ZN10QValidator7qt_castEPKc",
@@ -48206,47 +48206,47 @@ const char *__Y10QValidator_vtable_name_0 [] = {
 	"_ZNK10QValidator5fixupER7QString",
 	};
 
-struct classvtable __Y10QValidator_vtable [1] = {
+struct classvtable _10QValidator_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	23,	/* Number of Vfuncs */
 	"_ZTI10QValidator",
-	__Y10QValidator_vtable_name_0,
+	_10QValidator_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y10QValidator_baseinfo[] = {
+struct base_type_info _10QValidator_baseinfo[] = {
 	};
 
-struct classinfo _Y10QValidator_classinfo = {
-	"_Y10QValidator",
+struct classinfo _Z10QValidator_classinfo = {
+	"_Z10QValidator",
 	"_ZTV10QValidator",
 	"_ZTI10QValidator",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y10QValidator",	/* VTT */
+	"_ZTT10QValidator",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QValidator_typeinfo,
-	__Y10QValidator_vtable,
-	__Y10QValidator_baseinfo,
+	&_10QValidator_typeinfo,
+	_10QValidator_vtable,
+	_10QValidator_baseinfo,
 	};
 
-char *__Y11QGridLayout_typeinfo_name[] = {
+char *_11QGridLayout_typeinfo_name[] = {
 	"_ZTI7QLayout",
 	};
 
-struct classtypeinfo __Y11QGridLayout_typeinfo = {
+struct classtypeinfo _11QGridLayout_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QGridLayout",
-	__Y11QGridLayout_typeinfo_name,
+	"_ZTS11QGridLayout",
+	_11QGridLayout_typeinfo_name,
 	};
 
-const char *__Y11QGridLayout_vtable_name_0 [] = {
+const char *_11QGridLayout_vtable_name_0 [] = {
 	"_ZNK11QGridLayout10metaObjectEv",
 	"_ZNK11QGridLayout9classNameEv",
 	"_ZN11QGridLayout7qt_castEPKc",
@@ -48289,7 +48289,7 @@ const char *__Y11QGridLayout_vtable_name_0 [] = {
 	"_ZNK11QGridLayout14heightForWidthEi",
 	};
 
-const char *__Y11QGridLayout_vtable_name_1 [] = {
+const char *_11QGridLayout_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QGridLayoutD1Ev",
 #endif
@@ -48589,14 +48589,14 @@ const char *__Y11QGridLayout_vtable_name_1 [] = {
 	"_ZN11QLayoutItem12setAlignmentEi",
 	};
 
-struct classvtable __Y11QGridLayout_vtable [2] = {
+struct classvtable _11QGridLayout_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	40,	/* Number of Vfuncs */
 	"_ZTI11QGridLayout",
-	__Y11QGridLayout_vtable_name_0,
+	_11QGridLayout_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -48630,40 +48630,40 @@ struct classvtable __Y11QGridLayout_vtable [2] = {
 	1,	/* Vtable category */
 	17,	/* Number of Vfuncs */
 	"_ZTI11QGridLayout",
-	__Y11QGridLayout_vtable_name_1,
+	_11QGridLayout_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y11QGridLayout_baseinfo[] = {
+struct base_type_info _11QGridLayout_baseinfo[] = {
 	};
 
-struct classinfo _Y11QGridLayout_classinfo = {
-	"_Y11QGridLayout",
+struct classinfo _Z11QGridLayout_classinfo = {
+	"_Z11QGridLayout",
 	"_ZTV11QGridLayout",
 	"_ZTI11QGridLayout",	/* RTTI */
 	"_ZTI7QLayout",
-	"_ZTT_Y11QGridLayout",	/* VTT */
+	"_ZTT11QGridLayout",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QGridLayout_typeinfo,
-	__Y11QGridLayout_vtable,
-	__Y11QGridLayout_baseinfo,
+	&_11QGridLayout_typeinfo,
+	_11QGridLayout_vtable,
+	_11QGridLayout_baseinfo,
 	};
 
-char *__Y12QHebrewCodec_typeinfo_name[] = {
+char *_12QHebrewCodec_typeinfo_name[] = {
 	"_ZTI10QTextCodec",
 	};
 
-struct classtypeinfo __Y12QHebrewCodec_typeinfo = {
+struct classtypeinfo _12QHebrewCodec_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y12QHebrewCodec",
-	__Y12QHebrewCodec_typeinfo_name,
+	"_ZTS12QHebrewCodec",
+	_12QHebrewCodec_typeinfo_name,
 	};
 
-const char *__Y12QHebrewCodec_vtable_name_0 [] = {
+const char *_12QHebrewCodec_vtable_name_0 [] = {
 	"_ZN12QHebrewCodecD1Ev",
 	"_ZN12QHebrewCodecD0Ev",
 	"_ZNK12QHebrewCodec4nameEv",
@@ -48681,47 +48681,47 @@ const char *__Y12QHebrewCodec_vtable_name_0 [] = {
 	"_ZNK10QTextCodec20characterFromUnicodeERK7QStringi",
 	};
 
-struct classvtable __Y12QHebrewCodec_vtable [1] = {
+struct classvtable _12QHebrewCodec_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	15,	/* Number of Vfuncs */
 	"_ZTI12QHebrewCodec",
-	__Y12QHebrewCodec_vtable_name_0,
+	_12QHebrewCodec_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y12QHebrewCodec_baseinfo[] = {
+struct base_type_info _12QHebrewCodec_baseinfo[] = {
 	};
 
-struct classinfo _Y12QHebrewCodec_classinfo = {
-	"_Y12QHebrewCodec",
+struct classinfo _Z12QHebrewCodec_classinfo = {
+	"_Z12QHebrewCodec",
 	"_ZTV12QHebrewCodec",
 	"_ZTI12QHebrewCodec",	/* RTTI */
 	"_ZTI10QTextCodec",
-	"_ZTT_Y12QHebrewCodec",	/* VTT */
+	"_ZTT12QHebrewCodec",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QHebrewCodec_typeinfo,
-	__Y12QHebrewCodec_vtable,
-	__Y12QHebrewCodec_baseinfo,
+	&_12QHebrewCodec_typeinfo,
+	_12QHebrewCodec_vtable,
+	_12QHebrewCodec_baseinfo,
 	};
 
-char *__Y8QToolBox_typeinfo_name[] = {
+char *_8QToolBox_typeinfo_name[] = {
 	"_ZTI6QFrame",
 	};
 
-struct classtypeinfo __Y8QToolBox_typeinfo = {
+struct classtypeinfo _8QToolBox_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y8QToolBox",
-	__Y8QToolBox_typeinfo_name,
+	"_ZTS8QToolBox",
+	_8QToolBox_typeinfo_name,
 	};
 
-const char *__Y8QToolBox_vtable_name_0 [] = {
+const char *_8QToolBox_vtable_name_0 [] = {
 	"_ZNK8QToolBox10metaObjectEv",
 	"_ZNK8QToolBox9classNameEv",
 	"_ZN8QToolBox7qt_castEPKc",
@@ -48844,7 +48844,7 @@ const char *__Y8QToolBox_vtable_name_0 [] = {
 	"_ZN8QToolBox11itemRemovedEi",
 	};
 
-const char *__Y8QToolBox_vtable_name_1 [] = {
+const char *_8QToolBox_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N8QToolBoxD1Ev",
 #endif
@@ -48918,14 +48918,14 @@ const char *__Y8QToolBox_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y8QToolBox_vtable [2] = {
+struct classvtable _8QToolBox_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	120,	/* Number of Vfuncs */
 	"_ZTI8QToolBox",
-	__Y8QToolBox_vtable_name_0,
+	_8QToolBox_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -48959,40 +48959,40 @@ struct classvtable __Y8QToolBox_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI8QToolBox",
-	__Y8QToolBox_vtable_name_1,
+	_8QToolBox_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y8QToolBox_baseinfo[] = {
+struct base_type_info _8QToolBox_baseinfo[] = {
 	};
 
-struct classinfo _Y8QToolBox_classinfo = {
-	"_Y8QToolBox",
+struct classinfo _Z8QToolBox_classinfo = {
+	"_Z8QToolBox",
 	"_ZTV8QToolBox",
 	"_ZTI8QToolBox",	/* RTTI */
 	"_ZTI6QFrame",
-	"_ZTT_Y8QToolBox",	/* VTT */
+	"_ZTT8QToolBox",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y8QToolBox_typeinfo,
-	__Y8QToolBox_vtable,
-	__Y8QToolBox_baseinfo,
+	&_8QToolBox_typeinfo,
+	_8QToolBox_vtable,
+	_8QToolBox_baseinfo,
 	};
 
-char *__Y17QNetworkOperation_typeinfo_name[] = {
+char *_17QNetworkOperation_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y17QNetworkOperation_typeinfo = {
+struct classtypeinfo _17QNetworkOperation_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y17QNetworkOperation",
-	__Y17QNetworkOperation_typeinfo_name,
+	"_ZTS17QNetworkOperation",
+	_17QNetworkOperation_typeinfo_name,
 	};
 
-const char *__Y17QNetworkOperation_vtable_name_0 [] = {
+const char *_17QNetworkOperation_vtable_name_0 [] = {
 	"_ZNK17QNetworkOperation10metaObjectEv",
 	"_ZNK17QNetworkOperation9classNameEv",
 	"_ZN17QNetworkOperation7qt_castEPKc",
@@ -49016,47 +49016,47 @@ const char *__Y17QNetworkOperation_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable __Y17QNetworkOperation_vtable [1] = {
+struct classvtable _17QNetworkOperation_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI17QNetworkOperation",
-	__Y17QNetworkOperation_vtable_name_0,
+	_17QNetworkOperation_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y17QNetworkOperation_baseinfo[] = {
+struct base_type_info _17QNetworkOperation_baseinfo[] = {
 	};
 
-struct classinfo _Y17QNetworkOperation_classinfo = {
-	"_Y17QNetworkOperation",
+struct classinfo _Z17QNetworkOperation_classinfo = {
+	"_Z17QNetworkOperation",
 	"_ZTV17QNetworkOperation",
 	"_ZTI17QNetworkOperation",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y17QNetworkOperation",	/* VTT */
+	"_ZTT17QNetworkOperation",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y17QNetworkOperation_typeinfo,
-	__Y17QNetworkOperation_vtable,
-	__Y17QNetworkOperation_baseinfo,
+	&_17QNetworkOperation_typeinfo,
+	_17QNetworkOperation_vtable,
+	_17QNetworkOperation_baseinfo,
 	};
 
-char *__Y5QHttp_typeinfo_name[] = {
+char *_5QHttp_typeinfo_name[] = {
 	"_ZTI16QNetworkProtocol",
 	};
 
-struct classtypeinfo __Y5QHttp_typeinfo = {
+struct classtypeinfo _5QHttp_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y5QHttp",
-	__Y5QHttp_typeinfo_name,
+	"_ZTS5QHttp",
+	_5QHttp_typeinfo_name,
 	};
 
-const char *__Y5QHttp_vtable_name_0 [] = {
+const char *_5QHttp_vtable_name_0 [] = {
 	"_ZNK5QHttp10metaObjectEv",
 	"_ZNK5QHttp9classNameEv",
 	"_ZN5QHttp7qt_castEPKc",
@@ -49095,47 +49095,47 @@ const char *__Y5QHttp_vtable_name_0 [] = {
 	"_ZN16QNetworkProtocol15checkConnectionEP17QNetworkOperation",
 	};
 
-struct classvtable __Y5QHttp_vtable [1] = {
+struct classvtable _5QHttp_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	36,	/* Number of Vfuncs */
 	"_ZTI5QHttp",
-	__Y5QHttp_vtable_name_0,
+	_5QHttp_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y5QHttp_baseinfo[] = {
+struct base_type_info _5QHttp_baseinfo[] = {
 	};
 
-struct classinfo _Y5QHttp_classinfo = {
-	"_Y5QHttp",
+struct classinfo _Z5QHttp_classinfo = {
+	"_Z5QHttp",
 	"_ZTV5QHttp",
 	"_ZTI5QHttp",	/* RTTI */
 	"_ZTI16QNetworkProtocol",
-	"_ZTT_Y5QHttp",	/* VTT */
+	"_ZTT5QHttp",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y5QHttp_typeinfo,
-	__Y5QHttp_vtable,
-	__Y5QHttp_baseinfo,
+	&_5QHttp_typeinfo,
+	_5QHttp_vtable,
+	_5QHttp_baseinfo,
 	};
 
-char *__Y8QSqlForm_typeinfo_name[] = {
+char *_8QSqlForm_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y8QSqlForm_typeinfo = {
+struct classtypeinfo _8QSqlForm_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y8QSqlForm",
-	__Y8QSqlForm_typeinfo_name,
+	"_ZTS8QSqlForm",
+	_8QSqlForm_typeinfo_name,
 	};
 
-const char *__Y8QSqlForm_vtable_name_0 [] = {
+const char *_8QSqlForm_vtable_name_0 [] = {
 	"_ZNK8QSqlForm10metaObjectEv",
 	"_ZNK8QSqlForm9classNameEv",
 	"_ZN8QSqlForm7qt_castEPKc",
@@ -49171,91 +49171,91 @@ const char *__Y8QSqlForm_vtable_name_0 [] = {
 	"_ZN8QSqlForm4syncEv",
 	};
 
-struct classvtable __Y8QSqlForm_vtable [1] = {
+struct classvtable _8QSqlForm_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	33,	/* Number of Vfuncs */
 	"_ZTI8QSqlForm",
-	__Y8QSqlForm_vtable_name_0,
+	_8QSqlForm_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y8QSqlForm_baseinfo[] = {
+struct base_type_info _8QSqlForm_baseinfo[] = {
 	};
 
-struct classinfo _Y8QSqlForm_classinfo = {
-	"_Y8QSqlForm",
+struct classinfo _Z8QSqlForm_classinfo = {
+	"_Z8QSqlForm",
 	"_ZTV8QSqlForm",
 	"_ZTI8QSqlForm",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y8QSqlForm",	/* VTT */
+	"_ZTT8QSqlForm",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y8QSqlForm_typeinfo,
-	__Y8QSqlForm_vtable,
-	__Y8QSqlForm_baseinfo,
+	&_8QSqlForm_typeinfo,
+	_8QSqlForm_vtable,
+	_8QSqlForm_baseinfo,
 	};
 
-char *__Y6QEvent_typeinfo_name[] = {
+char *_6QEvent_typeinfo_name[] = {
 	"_ZTI2Qt",
 	};
 
-struct classtypeinfo __Y6QEvent_typeinfo = {
+struct classtypeinfo _6QEvent_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y6QEvent",
-	__Y6QEvent_typeinfo_name,
+	"_ZTS6QEvent",
+	_6QEvent_typeinfo_name,
 	};
 
-const char *__Y6QEvent_vtable_name_0 [] = {
+const char *_6QEvent_vtable_name_0 [] = {
 	"_ZN6QEventD1Ev",
 	"_ZN6QEventD0Ev",
 	};
 
-struct classvtable __Y6QEvent_vtable [1] = {
+struct classvtable _6QEvent_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI6QEvent",
-	__Y6QEvent_vtable_name_0,
+	_6QEvent_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y6QEvent_baseinfo[] = {
+struct base_type_info _6QEvent_baseinfo[] = {
 	};
 
-struct classinfo _Y6QEvent_classinfo = {
-	"_Y6QEvent",
+struct classinfo _Z6QEvent_classinfo = {
+	"_Z6QEvent",
 	"_ZTV6QEvent",
 	"_ZTI6QEvent",	/* RTTI */
 	"_ZTI2Qt",
-	"_ZTT_Y6QEvent",	/* VTT */
+	"_ZTT6QEvent",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y6QEvent_typeinfo,
-	__Y6QEvent_vtable,
-	__Y6QEvent_baseinfo,
+	&_6QEvent_typeinfo,
+	_6QEvent_vtable,
+	_6QEvent_baseinfo,
 	};
 
-char *__Y11QMimeSource_typeinfo_name[] = {
+char *_11QMimeSource_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y11QMimeSource_typeinfo = {
+struct classtypeinfo _11QMimeSource_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y11QMimeSource",
-	__Y11QMimeSource_typeinfo_name,
+	"_ZTS11QMimeSource",
+	_11QMimeSource_typeinfo_name,
 	};
 
-const char *__Y11QMimeSource_vtable_name_0 [] = {
+const char *_11QMimeSource_vtable_name_0 [] = {
 	"_ZN11QMimeSourceD1Ev",
 	"_ZN11QMimeSourceD0Ev",
 	"__cxa_pure_virtual",
@@ -49263,137 +49263,137 @@ const char *__Y11QMimeSource_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y11QMimeSource_vtable [1] = {
+struct classvtable _11QMimeSource_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI11QMimeSource",
-	__Y11QMimeSource_vtable_name_0,
+	_11QMimeSource_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QMimeSource_baseinfo[] = {
+struct base_type_info _11QMimeSource_baseinfo[] = {
 	};
 
-struct classinfo _Y11QMimeSource_classinfo = {
-	"_Y11QMimeSource",
+struct classinfo _Z11QMimeSource_classinfo = {
+	"_Z11QMimeSource",
 	"_ZTV11QMimeSource",
 	"_ZTI11QMimeSource",	/* RTTI */
 	"",
-	"_ZTT_Y11QMimeSource",	/* VTT */
+	"_ZTT11QMimeSource",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QMimeSource_typeinfo,
-	__Y11QMimeSource_vtable,
-	__Y11QMimeSource_baseinfo,
+	&_11QMimeSource_typeinfo,
+	_11QMimeSource_vtable,
+	_11QMimeSource_baseinfo,
 	};
 
-char *__Y15QIMComposeEvent_typeinfo_name[] = {
+char *_15QIMComposeEvent_typeinfo_name[] = {
 	"_ZTI8QIMEvent",
 	};
 
-struct classtypeinfo __Y15QIMComposeEvent_typeinfo = {
+struct classtypeinfo _15QIMComposeEvent_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y15QIMComposeEvent",
-	__Y15QIMComposeEvent_typeinfo_name,
+	"_ZTS15QIMComposeEvent",
+	_15QIMComposeEvent_typeinfo_name,
 	};
 
-const char *__Y15QIMComposeEvent_vtable_name_0 [] = {
+const char *_15QIMComposeEvent_vtable_name_0 [] = {
 	"_ZN15QIMComposeEventD1Ev",
 	"_ZN15QIMComposeEventD0Ev",
 	};
 
-struct classvtable __Y15QIMComposeEvent_vtable [1] = {
+struct classvtable _15QIMComposeEvent_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI15QIMComposeEvent",
-	__Y15QIMComposeEvent_vtable_name_0,
+	_15QIMComposeEvent_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y15QIMComposeEvent_baseinfo[] = {
+struct base_type_info _15QIMComposeEvent_baseinfo[] = {
 	};
 
-struct classinfo _Y15QIMComposeEvent_classinfo = {
-	"_Y15QIMComposeEvent",
+struct classinfo _Z15QIMComposeEvent_classinfo = {
+	"_Z15QIMComposeEvent",
 	"_ZTV15QIMComposeEvent",
 	"_ZTI15QIMComposeEvent",	/* RTTI */
 	"_ZTI8QIMEvent",
-	"_ZTT_Y15QIMComposeEvent",	/* VTT */
+	"_ZTT15QIMComposeEvent",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y15QIMComposeEvent_typeinfo,
-	__Y15QIMComposeEvent_vtable,
-	__Y15QIMComposeEvent_baseinfo,
+	&_15QIMComposeEvent_typeinfo,
+	_15QIMComposeEvent_vtable,
+	_15QIMComposeEvent_baseinfo,
 	};
 
-char *__Y12QTextDecoder_typeinfo_name[] = {
+char *_12QTextDecoder_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y12QTextDecoder_typeinfo = {
+struct classtypeinfo _12QTextDecoder_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y12QTextDecoder",
-	__Y12QTextDecoder_typeinfo_name,
+	"_ZTS12QTextDecoder",
+	_12QTextDecoder_typeinfo_name,
 	};
 
-const char *__Y12QTextDecoder_vtable_name_0 [] = {
+const char *_12QTextDecoder_vtable_name_0 [] = {
 	"_ZN12QTextDecoderD1Ev",
 	"_ZN12QTextDecoderD0Ev",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y12QTextDecoder_vtable [1] = {
+struct classvtable _12QTextDecoder_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	3,	/* Number of Vfuncs */
 	"_ZTI12QTextDecoder",
-	__Y12QTextDecoder_vtable_name_0,
+	_12QTextDecoder_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y12QTextDecoder_baseinfo[] = {
+struct base_type_info _12QTextDecoder_baseinfo[] = {
 	};
 
-struct classinfo _Y12QTextDecoder_classinfo = {
-	"_Y12QTextDecoder",
+struct classinfo _Z12QTextDecoder_classinfo = {
+	"_Z12QTextDecoder",
 	"_ZTV12QTextDecoder",
 	"_ZTI12QTextDecoder",	/* RTTI */
 	"",
-	"_ZTT_Y12QTextDecoder",	/* VTT */
+	"_ZTT12QTextDecoder",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QTextDecoder_typeinfo,
-	__Y12QTextDecoder_vtable,
-	__Y12QTextDecoder_baseinfo,
+	&_12QTextDecoder_typeinfo,
+	_12QTextDecoder_vtable,
+	_12QTextDecoder_baseinfo,
 	};
 
-char *__Y15QSessionManager_typeinfo_name[] = {
+char *_15QSessionManager_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y15QSessionManager_typeinfo = {
+struct classtypeinfo _15QSessionManager_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y15QSessionManager",
-	__Y15QSessionManager_typeinfo_name,
+	"_ZTS15QSessionManager",
+	_15QSessionManager_typeinfo_name,
 	};
 
-const char *__Y15QSessionManager_vtable_name_0 [] = {
+const char *_15QSessionManager_vtable_name_0 [] = {
 	"_ZNK15QSessionManager10metaObjectEv",
 	"_ZNK15QSessionManager9classNameEv",
 	"_ZN15QSessionManager7qt_castEPKc",
@@ -49417,92 +49417,92 @@ const char *__Y15QSessionManager_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable __Y15QSessionManager_vtable [1] = {
+struct classvtable _15QSessionManager_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI15QSessionManager",
-	__Y15QSessionManager_vtable_name_0,
+	_15QSessionManager_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y15QSessionManager_baseinfo[] = {
+struct base_type_info _15QSessionManager_baseinfo[] = {
 	};
 
-struct classinfo _Y15QSessionManager_classinfo = {
-	"_Y15QSessionManager",
+struct classinfo _Z15QSessionManager_classinfo = {
+	"_Z15QSessionManager",
 	"_ZTV15QSessionManager",
 	"_ZTI15QSessionManager",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y15QSessionManager",	/* VTT */
+	"_ZTT15QSessionManager",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y15QSessionManager_typeinfo,
-	__Y15QSessionManager_vtable,
-	__Y15QSessionManager_baseinfo,
+	&_15QSessionManager_typeinfo,
+	_15QSessionManager_vtable,
+	_15QSessionManager_baseinfo,
 	};
 
-char *__Y16QImageFormatType_typeinfo_name[] = {
+char *_16QImageFormatType_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y16QImageFormatType_typeinfo = {
+struct classtypeinfo _16QImageFormatType_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y16QImageFormatType",
-	__Y16QImageFormatType_typeinfo_name,
+	"_ZTS16QImageFormatType",
+	_16QImageFormatType_typeinfo_name,
 	};
 
-const char *__Y16QImageFormatType_vtable_name_0 [] = {
+const char *_16QImageFormatType_vtable_name_0 [] = {
 	"_ZN16QImageFormatTypeD1Ev",
 	"_ZN16QImageFormatTypeD0Ev",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y16QImageFormatType_vtable [1] = {
+struct classvtable _16QImageFormatType_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	4,	/* Number of Vfuncs */
 	"_ZTI16QImageFormatType",
-	__Y16QImageFormatType_vtable_name_0,
+	_16QImageFormatType_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y16QImageFormatType_baseinfo[] = {
+struct base_type_info _16QImageFormatType_baseinfo[] = {
 	};
 
-struct classinfo _Y16QImageFormatType_classinfo = {
-	"_Y16QImageFormatType",
+struct classinfo _Z16QImageFormatType_classinfo = {
+	"_Z16QImageFormatType",
 	"_ZTV16QImageFormatType",
 	"_ZTI16QImageFormatType",	/* RTTI */
 	"",
-	"_ZTT_Y16QImageFormatType",	/* VTT */
+	"_ZTT16QImageFormatType",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y16QImageFormatType_typeinfo,
-	__Y16QImageFormatType_vtable,
-	__Y16QImageFormatType_baseinfo,
+	&_16QImageFormatType_typeinfo,
+	_16QImageFormatType_vtable,
+	_16QImageFormatType_baseinfo,
 	};
 
-char *__Y10QTextCodec_typeinfo_name[] = {
+char *_10QTextCodec_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y10QTextCodec_typeinfo = {
+struct classtypeinfo _10QTextCodec_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y10QTextCodec",
-	__Y10QTextCodec_typeinfo_name,
+	"_ZTS10QTextCodec",
+	_10QTextCodec_typeinfo_name,
 	};
 
-const char *__Y10QTextCodec_vtable_name_0 [] = {
+const char *_10QTextCodec_vtable_name_0 [] = {
 	"_ZN10QTextCodecD1Ev",
 	"_ZN10QTextCodecD0Ev",
 	"__cxa_pure_virtual",
@@ -49520,47 +49520,47 @@ const char *__Y10QTextCodec_vtable_name_0 [] = {
 	"_ZNK10QTextCodec20characterFromUnicodeERK7QStringi",
 	};
 
-struct classvtable __Y10QTextCodec_vtable [1] = {
+struct classvtable _10QTextCodec_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	15,	/* Number of Vfuncs */
 	"_ZTI10QTextCodec",
-	__Y10QTextCodec_vtable_name_0,
+	_10QTextCodec_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y10QTextCodec_baseinfo[] = {
+struct base_type_info _10QTextCodec_baseinfo[] = {
 	};
 
-struct classinfo _Y10QTextCodec_classinfo = {
-	"_Y10QTextCodec",
+struct classinfo _Z10QTextCodec_classinfo = {
+	"_Z10QTextCodec",
 	"_ZTV10QTextCodec",
 	"_ZTI10QTextCodec",	/* RTTI */
 	"",
-	"_ZTT_Y10QTextCodec",	/* VTT */
+	"_ZTT10QTextCodec",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QTextCodec_typeinfo,
-	__Y10QTextCodec_vtable,
-	__Y10QTextCodec_baseinfo,
+	&_10QTextCodec_typeinfo,
+	_10QTextCodec_vtable,
+	_10QTextCodec_baseinfo,
 	};
 
-char *__Y11QSpacerItem_typeinfo_name[] = {
+char *_11QSpacerItem_typeinfo_name[] = {
 	"_ZTI11QLayoutItem",
 	};
 
-struct classtypeinfo __Y11QSpacerItem_typeinfo = {
+struct classtypeinfo _11QSpacerItem_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QSpacerItem",
-	__Y11QSpacerItem_typeinfo_name,
+	"_ZTS11QSpacerItem",
+	_11QSpacerItem_typeinfo_name,
 	};
 
-const char *__Y11QSpacerItem_vtable_name_0 [] = {
+const char *_11QSpacerItem_vtable_name_0 [] = {
 	"_ZN11QSpacerItemD1Ev",
 	"_ZN11QSpacerItemD0Ev",
 	"_ZNK11QSpacerItem8sizeHintEv",
@@ -49580,47 +49580,47 @@ const char *__Y11QSpacerItem_vtable_name_0 [] = {
 	"_ZN11QLayoutItem12setAlignmentEi",
 	};
 
-struct classvtable __Y11QSpacerItem_vtable [1] = {
+struct classvtable _11QSpacerItem_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	17,	/* Number of Vfuncs */
 	"_ZTI11QSpacerItem",
-	__Y11QSpacerItem_vtable_name_0,
+	_11QSpacerItem_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QSpacerItem_baseinfo[] = {
+struct base_type_info _11QSpacerItem_baseinfo[] = {
 	};
 
-struct classinfo _Y11QSpacerItem_classinfo = {
-	"_Y11QSpacerItem",
+struct classinfo _Z11QSpacerItem_classinfo = {
+	"_Z11QSpacerItem",
 	"_ZTV11QSpacerItem",
 	"_ZTI11QSpacerItem",	/* RTTI */
 	"_ZTI11QLayoutItem",
-	"_ZTT_Y11QSpacerItem",	/* VTT */
+	"_ZTT11QSpacerItem",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QSpacerItem_typeinfo,
-	__Y11QSpacerItem_vtable,
-	__Y11QSpacerItem_baseinfo,
+	&_11QSpacerItem_typeinfo,
+	_11QSpacerItem_vtable,
+	_11QSpacerItem_baseinfo,
 	};
 
-char *__Y12QPrintDialog_typeinfo_name[] = {
+char *_12QPrintDialog_typeinfo_name[] = {
 	"_ZTI7QDialog",
 	};
 
-struct classtypeinfo __Y12QPrintDialog_typeinfo = {
+struct classtypeinfo _12QPrintDialog_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y12QPrintDialog",
-	__Y12QPrintDialog_typeinfo_name,
+	"_ZTS12QPrintDialog",
+	_12QPrintDialog_typeinfo_name,
 	};
 
-const char *__Y12QPrintDialog_vtable_name_0 [] = {
+const char *_12QPrintDialog_vtable_name_0 [] = {
 	"_ZNK12QPrintDialog10metaObjectEv",
 	"_ZNK12QPrintDialog9classNameEv",
 	"_ZN12QPrintDialog7qt_castEPKc",
@@ -49736,7 +49736,7 @@ const char *__Y12QPrintDialog_vtable_name_0 [] = {
 	"_ZN7QDialog6rejectEv",
 	};
 
-const char *__Y12QPrintDialog_vtable_name_1 [] = {
+const char *_12QPrintDialog_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N12QPrintDialogD1Ev",
 #endif
@@ -49810,14 +49810,14 @@ const char *__Y12QPrintDialog_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y12QPrintDialog_vtable [2] = {
+struct classvtable _12QPrintDialog_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	113,	/* Number of Vfuncs */
 	"_ZTI12QPrintDialog",
-	__Y12QPrintDialog_vtable_name_0,
+	_12QPrintDialog_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -49851,40 +49851,40 @@ struct classvtable __Y12QPrintDialog_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI12QPrintDialog",
-	__Y12QPrintDialog_vtable_name_1,
+	_12QPrintDialog_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y12QPrintDialog_baseinfo[] = {
+struct base_type_info _12QPrintDialog_baseinfo[] = {
 	};
 
-struct classinfo _Y12QPrintDialog_classinfo = {
-	"_Y12QPrintDialog",
+struct classinfo _Z12QPrintDialog_classinfo = {
+	"_Z12QPrintDialog",
 	"_ZTV12QPrintDialog",
 	"_ZTI12QPrintDialog",	/* RTTI */
 	"_ZTI7QDialog",
-	"_ZTT_Y12QPrintDialog",	/* VTT */
+	"_ZTT12QPrintDialog",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QPrintDialog_typeinfo,
-	__Y12QPrintDialog_vtable,
-	__Y12QPrintDialog_baseinfo,
+	&_12QPrintDialog_typeinfo,
+	_12QPrintDialog_vtable,
+	_12QPrintDialog_baseinfo,
 	};
 
-char *__Y12QProgressBar_typeinfo_name[] = {
+char *_12QProgressBar_typeinfo_name[] = {
 	"_ZTI6QFrame",
 	};
 
-struct classtypeinfo __Y12QProgressBar_typeinfo = {
+struct classtypeinfo _12QProgressBar_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y12QProgressBar",
-	__Y12QProgressBar_typeinfo_name,
+	"_ZTS12QProgressBar",
+	_12QProgressBar_typeinfo_name,
 	};
 
-const char *__Y12QProgressBar_vtable_name_0 [] = {
+const char *_12QProgressBar_vtable_name_0 [] = {
 	"_ZNK12QProgressBar10metaObjectEv",
 	"_ZNK12QProgressBar9classNameEv",
 	"_ZN12QProgressBar7qt_castEPKc",
@@ -50008,7 +50008,7 @@ const char *__Y12QProgressBar_vtable_name_0 [] = {
 	"_ZN12QProgressBar12setIndicatorER7QStringii",
 	};
 
-const char *__Y12QProgressBar_vtable_name_1 [] = {
+const char *_12QProgressBar_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N12QProgressBarD1Ev",
 #endif
@@ -50082,14 +50082,14 @@ const char *__Y12QProgressBar_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y12QProgressBar_vtable [2] = {
+struct classvtable _12QProgressBar_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	121,	/* Number of Vfuncs */
 	"_ZTI12QProgressBar",
-	__Y12QProgressBar_vtable_name_0,
+	_12QProgressBar_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -50123,40 +50123,40 @@ struct classvtable __Y12QProgressBar_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI12QProgressBar",
-	__Y12QProgressBar_vtable_name_1,
+	_12QProgressBar_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y12QProgressBar_baseinfo[] = {
+struct base_type_info _12QProgressBar_baseinfo[] = {
 	};
 
-struct classinfo _Y12QProgressBar_classinfo = {
-	"_Y12QProgressBar",
+struct classinfo _Z12QProgressBar_classinfo = {
+	"_Z12QProgressBar",
 	"_ZTV12QProgressBar",
 	"_ZTI12QProgressBar",	/* RTTI */
 	"_ZTI6QFrame",
-	"_ZTT_Y12QProgressBar",	/* VTT */
+	"_ZTT12QProgressBar",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QProgressBar_typeinfo,
-	__Y12QProgressBar_vtable,
-	__Y12QProgressBar_baseinfo,
+	&_12QProgressBar_typeinfo,
+	_12QProgressBar_vtable,
+	_12QProgressBar_baseinfo,
 	};
 
-char *__Y13QIconViewItem_typeinfo_name[] = {
+char *_13QIconViewItem_typeinfo_name[] = {
 	"_ZTI2Qt",
 	};
 
-struct classtypeinfo __Y13QIconViewItem_typeinfo = {
+struct classtypeinfo _13QIconViewItem_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y13QIconViewItem",
-	__Y13QIconViewItem_typeinfo_name,
+	"_ZTS13QIconViewItem",
+	_13QIconViewItem_typeinfo_name,
 	};
 
-const char *__Y13QIconViewItem_vtable_name_0 [] = {
+const char *_13QIconViewItem_vtable_name_0 [] = {
 	"_ZN13QIconViewItemD1Ev",
 	"_ZN13QIconViewItemD0Ev",
 	"_ZN13QIconViewItem16setRenameEnabledEb",
@@ -50192,47 +50192,47 @@ const char *__Y13QIconViewItem_vtable_name_0 [] = {
 	"_ZN13QIconViewItem8dragLeftEv",
 	};
 
-struct classvtable __Y13QIconViewItem_vtable [1] = {
+struct classvtable _13QIconViewItem_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	33,	/* Number of Vfuncs */
 	"_ZTI13QIconViewItem",
-	__Y13QIconViewItem_vtable_name_0,
+	_13QIconViewItem_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y13QIconViewItem_baseinfo[] = {
+struct base_type_info _13QIconViewItem_baseinfo[] = {
 	};
 
-struct classinfo _Y13QIconViewItem_classinfo = {
-	"_Y13QIconViewItem",
+struct classinfo _Z13QIconViewItem_classinfo = {
+	"_Z13QIconViewItem",
 	"_ZTV13QIconViewItem",
 	"_ZTI13QIconViewItem",	/* RTTI */
 	"_ZTI2Qt",
-	"_ZTT_Y13QIconViewItem",	/* VTT */
+	"_ZTT13QIconViewItem",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y13QIconViewItem_typeinfo,
-	__Y13QIconViewItem_vtable,
-	__Y13QIconViewItem_baseinfo,
+	&_13QIconViewItem_typeinfo,
+	_13QIconViewItem_vtable,
+	_13QIconViewItem_baseinfo,
 	};
 
-char *__Y16QDomCDATASection_typeinfo_name[] = {
+char *_16QDomCDATASection_typeinfo_name[] = {
 	"_ZTI8QDomText",
 	};
 
-struct classtypeinfo __Y16QDomCDATASection_typeinfo = {
+struct classtypeinfo _16QDomCDATASection_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y16QDomCDATASection",
-	__Y16QDomCDATASection_typeinfo_name,
+	"_ZTS16QDomCDATASection",
+	_16QDomCDATASection_typeinfo_name,
 	};
 
-const char *__Y16QDomCDATASection_vtable_name_0 [] = {
+const char *_16QDomCDATASection_vtable_name_0 [] = {
 	"_ZN16QDomCDATASectionD1Ev",
 	"_ZN16QDomCDATASectionD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -50284,91 +50284,91 @@ const char *__Y16QDomCDATASection_vtable_name_0 [] = {
 	"_ZN17QDomCharacterData7setDataERK7QString",
 	};
 
-struct classvtable __Y16QDomCDATASection_vtable [1] = {
+struct classvtable _16QDomCDATASection_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	49,	/* Number of Vfuncs */
 	"_ZTI16QDomCDATASection",
-	__Y16QDomCDATASection_vtable_name_0,
+	_16QDomCDATASection_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y16QDomCDATASection_baseinfo[] = {
+struct base_type_info _16QDomCDATASection_baseinfo[] = {
 	};
 
-struct classinfo _Y16QDomCDATASection_classinfo = {
-	"_Y16QDomCDATASection",
+struct classinfo _Z16QDomCDATASection_classinfo = {
+	"_Z16QDomCDATASection",
 	"_ZTV16QDomCDATASection",
 	"_ZTI16QDomCDATASection",	/* RTTI */
 	"_ZTI8QDomText",
-	"_ZTT_Y16QDomCDATASection",	/* VTT */
+	"_ZTT16QDomCDATASection",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y16QDomCDATASection_typeinfo,
-	__Y16QDomCDATASection_vtable,
-	__Y16QDomCDATASection_baseinfo,
+	&_16QDomCDATASection_typeinfo,
+	_16QDomCDATASection_vtable,
+	_16QDomCDATASection_baseinfo,
 	};
 
-char *__Y11QTextStream_typeinfo_name[] = {
+char *_11QTextStream_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y11QTextStream_typeinfo = {
+struct classtypeinfo _11QTextStream_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y11QTextStream",
-	__Y11QTextStream_typeinfo_name,
+	"_ZTS11QTextStream",
+	_11QTextStream_typeinfo_name,
 	};
 
-const char *__Y11QTextStream_vtable_name_0 [] = {
+const char *_11QTextStream_vtable_name_0 [] = {
 	"_ZN11QTextStreamD1Ev",
 	"_ZN11QTextStreamD0Ev",
 	};
 
-struct classvtable __Y11QTextStream_vtable [1] = {
+struct classvtable _11QTextStream_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI11QTextStream",
-	__Y11QTextStream_vtable_name_0,
+	_11QTextStream_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QTextStream_baseinfo[] = {
+struct base_type_info _11QTextStream_baseinfo[] = {
 	};
 
-struct classinfo _Y11QTextStream_classinfo = {
-	"_Y11QTextStream",
+struct classinfo _Z11QTextStream_classinfo = {
+	"_Z11QTextStream",
 	"_ZTV11QTextStream",
 	"_ZTI11QTextStream",	/* RTTI */
 	"",
-	"_ZTT_Y11QTextStream",	/* VTT */
+	"_ZTT11QTextStream",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QTextStream_typeinfo,
-	__Y11QTextStream_vtable,
-	__Y11QTextStream_baseinfo,
+	&_11QTextStream_typeinfo,
+	_11QTextStream_vtable,
+	_11QTextStream_baseinfo,
 	};
 
-char *__Y14QCheckListItem_typeinfo_name[] = {
+char *_14QCheckListItem_typeinfo_name[] = {
 	"_ZTI13QListViewItem",
 	};
 
-struct classtypeinfo __Y14QCheckListItem_typeinfo = {
+struct classtypeinfo _14QCheckListItem_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y14QCheckListItem",
-	__Y14QCheckListItem_typeinfo_name,
+	"_ZTS14QCheckListItem",
+	_14QCheckListItem_typeinfo_name,
 	};
 
-const char *__Y14QCheckListItem_vtable_name_0 [] = {
+const char *_14QCheckListItem_vtable_name_0 [] = {
 	"_ZN14QCheckListItemD1Ev",
 	"_ZN14QCheckListItemD0Ev",
 	"_ZN13QListViewItem10insertItemEPS_",
@@ -50412,47 +50412,47 @@ const char *__Y14QCheckListItem_vtable_name_0 [] = {
 	"_ZN14QCheckListItem11stateChangeEb",
 	};
 
-struct classvtable __Y14QCheckListItem_vtable [1] = {
+struct classvtable _14QCheckListItem_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	41,	/* Number of Vfuncs */
 	"_ZTI14QCheckListItem",
-	__Y14QCheckListItem_vtable_name_0,
+	_14QCheckListItem_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y14QCheckListItem_baseinfo[] = {
+struct base_type_info _14QCheckListItem_baseinfo[] = {
 	};
 
-struct classinfo _Y14QCheckListItem_classinfo = {
-	"_Y14QCheckListItem",
+struct classinfo _Z14QCheckListItem_classinfo = {
+	"_Z14QCheckListItem",
 	"_ZTV14QCheckListItem",
 	"_ZTI14QCheckListItem",	/* RTTI */
 	"_ZTI13QListViewItem",
-	"_ZTT_Y14QCheckListItem",	/* VTT */
+	"_ZTT14QCheckListItem",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y14QCheckListItem_typeinfo,
-	__Y14QCheckListItem_vtable,
-	__Y14QCheckListItem_baseinfo,
+	&_14QCheckListItem_typeinfo,
+	_14QCheckListItem_vtable,
+	_14QCheckListItem_baseinfo,
 	};
 
-char *__Y13QSignalMapper_typeinfo_name[] = {
+char *_13QSignalMapper_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y13QSignalMapper_typeinfo = {
+struct classtypeinfo _13QSignalMapper_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y13QSignalMapper",
-	__Y13QSignalMapper_typeinfo_name,
+	"_ZTS13QSignalMapper",
+	_13QSignalMapper_typeinfo_name,
 	};
 
-const char *__Y13QSignalMapper_vtable_name_0 [] = {
+const char *_13QSignalMapper_vtable_name_0 [] = {
 	"_ZNK13QSignalMapper10metaObjectEv",
 	"_ZNK13QSignalMapper9classNameEv",
 	"_ZN13QSignalMapper7qt_castEPKc",
@@ -50478,47 +50478,47 @@ const char *__Y13QSignalMapper_vtable_name_0 [] = {
 	"_ZN13QSignalMapper10setMappingEPK7QObjectRK7QString",
 	};
 
-struct classvtable __Y13QSignalMapper_vtable [1] = {
+struct classvtable _13QSignalMapper_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	23,	/* Number of Vfuncs */
 	"_ZTI13QSignalMapper",
-	__Y13QSignalMapper_vtable_name_0,
+	_13QSignalMapper_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y13QSignalMapper_baseinfo[] = {
+struct base_type_info _13QSignalMapper_baseinfo[] = {
 	};
 
-struct classinfo _Y13QSignalMapper_classinfo = {
-	"_Y13QSignalMapper",
+struct classinfo _Z13QSignalMapper_classinfo = {
+	"_Z13QSignalMapper",
 	"_ZTV13QSignalMapper",
 	"_ZTI13QSignalMapper",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y13QSignalMapper",	/* VTT */
+	"_ZTT13QSignalMapper",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y13QSignalMapper_typeinfo,
-	__Y13QSignalMapper_vtable,
-	__Y13QSignalMapper_baseinfo,
+	&_13QSignalMapper_typeinfo,
+	_13QSignalMapper_vtable,
+	_13QSignalMapper_baseinfo,
 	};
 
-char *__Y9QDockArea_typeinfo_name[] = {
+char *_9QDockArea_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo __Y9QDockArea_typeinfo = {
+struct classtypeinfo _9QDockArea_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y9QDockArea",
-	__Y9QDockArea_typeinfo_name,
+	"_ZTS9QDockArea",
+	_9QDockArea_typeinfo_name,
 	};
 
-const char *__Y9QDockArea_vtable_name_0 [] = {
+const char *_9QDockArea_vtable_name_0 [] = {
 	"_ZNK9QDockArea10metaObjectEv",
 	"_ZNK9QDockArea9classNameEv",
 	"_ZN9QDockArea7qt_castEPKc",
@@ -50631,7 +50631,7 @@ const char *__Y9QDockArea_vtable_name_0 [] = {
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
 	};
 
-const char *__Y9QDockArea_vtable_name_1 [] = {
+const char *_9QDockArea_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QDockAreaD1Ev",
 #endif
@@ -50705,14 +50705,14 @@ const char *__Y9QDockArea_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y9QDockArea_vtable [2] = {
+struct classvtable _9QDockArea_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	110,	/* Number of Vfuncs */
 	"_ZTI9QDockArea",
-	__Y9QDockArea_vtable_name_0,
+	_9QDockArea_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -50746,40 +50746,40 @@ struct classvtable __Y9QDockArea_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QDockArea",
-	__Y9QDockArea_vtable_name_1,
+	_9QDockArea_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y9QDockArea_baseinfo[] = {
+struct base_type_info _9QDockArea_baseinfo[] = {
 	};
 
-struct classinfo _Y9QDockArea_classinfo = {
-	"_Y9QDockArea",
+struct classinfo _Z9QDockArea_classinfo = {
+	"_Z9QDockArea",
 	"_ZTV9QDockArea",
 	"_ZTI9QDockArea",	/* RTTI */
 	"_ZTI7QWidget",
-	"_ZTT_Y9QDockArea",	/* VTT */
+	"_ZTT9QDockArea",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QDockArea_typeinfo,
-	__Y9QDockArea_vtable,
-	__Y9QDockArea_baseinfo,
+	&_9QDockArea_typeinfo,
+	_9QDockArea_vtable,
+	_9QDockArea_baseinfo,
 	};
 
-char *__Y8QCString_typeinfo_name[] = {
+char *_8QCString_typeinfo_name[] = {
 	"_ZTI9QMemArrayIcE",
 	};
 
-struct classtypeinfo __Y8QCString_typeinfo = {
+struct classtypeinfo _8QCString_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y8QCString",
-	__Y8QCString_typeinfo_name,
+	"_ZTS8QCString",
+	_8QCString_typeinfo_name,
 	};
 
-const char *__Y8QCString_vtable_name_0 [] = {
+const char *_8QCString_vtable_name_0 [] = {
 	"_ZN8QCStringD1Ev",
 	"_ZN8QCStringD0Ev",
 	"_ZN9QMemArrayIcE6detachEv",
@@ -50787,47 +50787,47 @@ const char *__Y8QCString_vtable_name_0 [] = {
 	"_ZN7QGArray10deleteDataEPNS_10array_dataE",
 	};
 
-struct classvtable __Y8QCString_vtable [1] = {
+struct classvtable _8QCString_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI8QCString",
-	__Y8QCString_vtable_name_0,
+	_8QCString_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y8QCString_baseinfo[] = {
+struct base_type_info _8QCString_baseinfo[] = {
 	};
 
-struct classinfo _Y8QCString_classinfo = {
-	"_Y8QCString",
+struct classinfo _Z8QCString_classinfo = {
+	"_Z8QCString",
 	"_ZTV8QCString",
 	"_ZTI8QCString",	/* RTTI */
 	"_ZTI9QMemArrayIcE",
-	"_ZTT_Y8QCString",	/* VTT */
+	"_ZTT8QCString",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y8QCString_typeinfo,
-	__Y8QCString_vtable,
-	__Y8QCString_baseinfo,
+	&_8QCString_typeinfo,
+	_8QCString_vtable,
+	_8QCString_baseinfo,
 	};
 
-char *__Y6QStyle_typeinfo_name[] = {
+char *_6QStyle_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y6QStyle_typeinfo = {
+struct classtypeinfo _6QStyle_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y6QStyle",
-	__Y6QStyle_typeinfo_name,
+	"_ZTS6QStyle",
+	_6QStyle_typeinfo_name,
 	};
 
-const char *__Y6QStyle_vtable_name_0 [] = {
+const char *_6QStyle_vtable_name_0 [] = {
 	"_ZNK6QStyle10metaObjectEv",
 	"_ZNK6QStyle9classNameEv",
 	"_ZN6QStyle7qt_castEPKc",
@@ -50871,92 +50871,92 @@ const char *__Y6QStyle_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y6QStyle_vtable [1] = {
+struct classvtable _6QStyle_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	41,	/* Number of Vfuncs */
 	"_ZTI6QStyle",
-	__Y6QStyle_vtable_name_0,
+	_6QStyle_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y6QStyle_baseinfo[] = {
+struct base_type_info _6QStyle_baseinfo[] = {
 	};
 
-struct classinfo _Y6QStyle_classinfo = {
-	"_Y6QStyle",
+struct classinfo _Z6QStyle_classinfo = {
+	"_Z6QStyle",
 	"_ZTV6QStyle",
 	"_ZTI6QStyle",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y6QStyle",	/* VTT */
+	"_ZTT6QStyle",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y6QStyle_typeinfo,
-	__Y6QStyle_vtable,
-	__Y6QStyle_baseinfo,
+	&_6QStyle_typeinfo,
+	_6QStyle_vtable,
+	_6QStyle_baseinfo,
 	};
 
-char *__Y14QXmlDTDHandler_typeinfo_name[] = {
+char *_14QXmlDTDHandler_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y14QXmlDTDHandler_typeinfo = {
+struct classtypeinfo _14QXmlDTDHandler_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y14QXmlDTDHandler",
-	__Y14QXmlDTDHandler_typeinfo_name,
+	"_ZTS14QXmlDTDHandler",
+	_14QXmlDTDHandler_typeinfo_name,
 	};
 
-const char *__Y14QXmlDTDHandler_vtable_name_0 [] = {
+const char *_14QXmlDTDHandler_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y14QXmlDTDHandler_vtable [1] = {
+struct classvtable _14QXmlDTDHandler_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	3,	/* Number of Vfuncs */
 	"_ZTI14QXmlDTDHandler",
-	__Y14QXmlDTDHandler_vtable_name_0,
+	_14QXmlDTDHandler_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y14QXmlDTDHandler_baseinfo[] = {
+struct base_type_info _14QXmlDTDHandler_baseinfo[] = {
 	};
 
-struct classinfo _Y14QXmlDTDHandler_classinfo = {
-	"_Y14QXmlDTDHandler",
+struct classinfo _Z14QXmlDTDHandler_classinfo = {
+	"_Z14QXmlDTDHandler",
 	"_ZTV14QXmlDTDHandler",
 	"_ZTI14QXmlDTDHandler",	/* RTTI */
 	"",
-	"_ZTT_Y14QXmlDTDHandler",	/* VTT */
+	"_ZTT14QXmlDTDHandler",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y14QXmlDTDHandler_typeinfo,
-	__Y14QXmlDTDHandler_vtable,
-	__Y14QXmlDTDHandler_baseinfo,
+	&_14QXmlDTDHandler_typeinfo,
+	_14QXmlDTDHandler_vtable,
+	_14QXmlDTDHandler_baseinfo,
 	};
 
-char *__Y12QColorDialog_typeinfo_name[] = {
+char *_12QColorDialog_typeinfo_name[] = {
 	"_ZTI7QDialog",
 	};
 
-struct classtypeinfo __Y12QColorDialog_typeinfo = {
+struct classtypeinfo _12QColorDialog_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y12QColorDialog",
-	__Y12QColorDialog_typeinfo_name,
+	"_ZTS12QColorDialog",
+	_12QColorDialog_typeinfo_name,
 	};
 
-const char *__Y12QColorDialog_vtable_name_0 [] = {
+const char *_12QColorDialog_vtable_name_0 [] = {
 	"_ZNK12QColorDialog10metaObjectEv",
 	"_ZNK12QColorDialog9classNameEv",
 	"_ZN12QColorDialog7qt_castEPKc",
@@ -51072,7 +51072,7 @@ const char *__Y12QColorDialog_vtable_name_0 [] = {
 	"_ZN7QDialog6rejectEv",
 	};
 
-const char *__Y12QColorDialog_vtable_name_1 [] = {
+const char *_12QColorDialog_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N12QColorDialogD1Ev",
 #endif
@@ -51146,14 +51146,14 @@ const char *__Y12QColorDialog_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y12QColorDialog_vtable [2] = {
+struct classvtable _12QColorDialog_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	113,	/* Number of Vfuncs */
 	"_ZTI12QColorDialog",
-	__Y12QColorDialog_vtable_name_0,
+	_12QColorDialog_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -51187,39 +51187,39 @@ struct classvtable __Y12QColorDialog_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI12QColorDialog",
-	__Y12QColorDialog_vtable_name_1,
+	_12QColorDialog_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y12QColorDialog_baseinfo[] = {
+struct base_type_info _12QColorDialog_baseinfo[] = {
 	};
 
-struct classinfo _Y12QColorDialog_classinfo = {
-	"_Y12QColorDialog",
+struct classinfo _Z12QColorDialog_classinfo = {
+	"_Z12QColorDialog",
 	"_ZTV12QColorDialog",
 	"_ZTI12QColorDialog",	/* RTTI */
 	"_ZTI7QDialog",
-	"_ZTT_Y12QColorDialog",	/* VTT */
+	"_ZTT12QColorDialog",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QColorDialog_typeinfo,
-	__Y12QColorDialog_vtable,
-	__Y12QColorDialog_baseinfo,
+	&_12QColorDialog_typeinfo,
+	_12QColorDialog_vtable,
+	_12QColorDialog_baseinfo,
 	};
 
-char *__Y18QGuardedPtrPrivate_typeinfo_name[] = {
+char *_18QGuardedPtrPrivate_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y18QGuardedPtrPrivate_typeinfo = {
+struct classtypeinfo _18QGuardedPtrPrivate_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
-	"_ZTS_Y18QGuardedPtrPrivate",
-	__Y18QGuardedPtrPrivate_typeinfo_name,
+	"_ZTS18QGuardedPtrPrivate",
+	_18QGuardedPtrPrivate_typeinfo_name,
 	};
 
-const char *__Y18QGuardedPtrPrivate_vtable_name_0 [] = {
+const char *_18QGuardedPtrPrivate_vtable_name_0 [] = {
 	"_ZNK18QGuardedPtrPrivate10metaObjectEv",
 	"_ZNK18QGuardedPtrPrivate9classNameEv",
 	"_ZN18QGuardedPtrPrivate7qt_castEPKc",
@@ -51243,18 +51243,18 @@ const char *__Y18QGuardedPtrPrivate_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable __Y18QGuardedPtrPrivate_vtable [1] = {
+struct classvtable _18QGuardedPtrPrivate_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI18QGuardedPtrPrivate",
-	__Y18QGuardedPtrPrivate_vtable_name_0,
+	_18QGuardedPtrPrivate_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y18QGuardedPtrPrivate_baseinfo[] = {
+struct base_type_info _18QGuardedPtrPrivate_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
 #if defined __i386__
 	{"_ZTI7QShared",	10242U},
@@ -51279,33 +51279,33 @@ struct base_type_info __Y18QGuardedPtrPrivate_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Y18QGuardedPtrPrivate_classinfo = {
-	"_Y18QGuardedPtrPrivate",
+struct classinfo _Z18QGuardedPtrPrivate_classinfo = {
+	"_Z18QGuardedPtrPrivate",
 	"_ZTV18QGuardedPtrPrivate",
 	"_ZTI18QGuardedPtrPrivate",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y18QGuardedPtrPrivate",	/* VTT */
+	"_ZTT18QGuardedPtrPrivate",	/* VTT */
 	1,
 	0,
 	2,
 	0,	/* numVTT */
 	0U,
-	&__Y18QGuardedPtrPrivate_typeinfo,
-	__Y18QGuardedPtrPrivate_vtable,
-	__Y18QGuardedPtrPrivate_baseinfo,
+	&_18QGuardedPtrPrivate_typeinfo,
+	_18QGuardedPtrPrivate_vtable,
+	_18QGuardedPtrPrivate_baseinfo,
 	};
 
-char *__Y12QApplication_typeinfo_name[] = {
+char *_12QApplication_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y12QApplication_typeinfo = {
+struct classtypeinfo _12QApplication_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y12QApplication",
-	__Y12QApplication_typeinfo_name,
+	"_ZTS12QApplication",
+	_12QApplication_typeinfo_name,
 	};
 
-const char *__Y12QApplication_vtable_name_0 [] = {
+const char *_12QApplication_vtable_name_0 [] = {
 	"_ZNK12QApplication10metaObjectEv",
 	"_ZNK12QApplication9classNameEv",
 	"_ZN12QApplication7qt_castEPKc",
@@ -51336,47 +51336,47 @@ const char *__Y12QApplication_vtable_name_0 [] = {
 	"_ZN12QApplication9saveStateER15QSessionManager",
 	};
 
-struct classvtable __Y12QApplication_vtable [1] = {
+struct classvtable _12QApplication_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	28,	/* Number of Vfuncs */
 	"_ZTI12QApplication",
-	__Y12QApplication_vtable_name_0,
+	_12QApplication_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y12QApplication_baseinfo[] = {
+struct base_type_info _12QApplication_baseinfo[] = {
 	};
 
-struct classinfo _Y12QApplication_classinfo = {
-	"_Y12QApplication",
+struct classinfo _Z12QApplication_classinfo = {
+	"_Z12QApplication",
 	"_ZTV12QApplication",
 	"_ZTI12QApplication",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y12QApplication",	/* VTT */
+	"_ZTT12QApplication",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QApplication_typeinfo,
-	__Y12QApplication_vtable,
-	__Y12QApplication_baseinfo,
+	&_12QApplication_typeinfo,
+	_12QApplication_vtable,
+	_12QApplication_baseinfo,
 	};
 
-char *__Y13QListViewItem_typeinfo_name[] = {
+char *_13QListViewItem_typeinfo_name[] = {
 	"_ZTI2Qt",
 	};
 
-struct classtypeinfo __Y13QListViewItem_typeinfo = {
+struct classtypeinfo _13QListViewItem_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y13QListViewItem",
-	__Y13QListViewItem_typeinfo_name,
+	"_ZTS13QListViewItem",
+	_13QListViewItem_typeinfo_name,
 	};
 
-const char *__Y13QListViewItem_vtable_name_0 [] = {
+const char *_13QListViewItem_vtable_name_0 [] = {
 	"_ZN13QListViewItemD1Ev",
 	"_ZN13QListViewItemD0Ev",
 	"_ZN13QListViewItem10insertItemEPS_",
@@ -51418,47 +51418,47 @@ const char *__Y13QListViewItem_vtable_name_0 [] = {
 	"_ZN13QListViewItem12cancelRenameEi",
 	};
 
-struct classvtable __Y13QListViewItem_vtable [1] = {
+struct classvtable _13QListViewItem_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	39,	/* Number of Vfuncs */
 	"_ZTI13QListViewItem",
-	__Y13QListViewItem_vtable_name_0,
+	_13QListViewItem_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y13QListViewItem_baseinfo[] = {
+struct base_type_info _13QListViewItem_baseinfo[] = {
 	};
 
-struct classinfo _Y13QListViewItem_classinfo = {
-	"_Y13QListViewItem",
+struct classinfo _Z13QListViewItem_classinfo = {
+	"_Z13QListViewItem",
 	"_ZTV13QListViewItem",
 	"_ZTI13QListViewItem",	/* RTTI */
 	"_ZTI2Qt",
-	"_ZTT_Y13QListViewItem",	/* VTT */
+	"_ZTT13QListViewItem",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y13QListViewItem_typeinfo,
-	__Y13QListViewItem_vtable,
-	__Y13QListViewItem_baseinfo,
+	&_13QListViewItem_typeinfo,
+	_13QListViewItem_vtable,
+	_13QListViewItem_baseinfo,
 	};
 
-char *__Y9QIconView_typeinfo_name[] = {
+char *_9QIconView_typeinfo_name[] = {
 	"_ZTI11QScrollView",
 	};
 
-struct classtypeinfo __Y9QIconView_typeinfo = {
+struct classtypeinfo _9QIconView_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y9QIconView",
-	__Y9QIconView_typeinfo_name,
+	"_ZTS9QIconView",
+	_9QIconView_typeinfo_name,
 	};
 
-const char *__Y9QIconView_vtable_name_0 [] = {
+const char *_9QIconView_vtable_name_0 [] = {
 	"_ZNK9QIconView10metaObjectEv",
 	"_ZNK9QIconView9classNameEv",
 	"_ZN9QIconView7qt_castEPKc",
@@ -51652,7 +51652,7 @@ const char *__Y9QIconView_vtable_name_0 [] = {
 	"_ZN9QIconView13initDragEnterEP10QDropEvent",
 	};
 
-const char *__Y9QIconView_vtable_name_1 [] = {
+const char *_9QIconView_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QIconViewD1Ev",
 #endif
@@ -51726,14 +51726,14 @@ const char *__Y9QIconView_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y9QIconView_vtable [2] = {
+struct classvtable _9QIconView_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	191,	/* Number of Vfuncs */
 	"_ZTI9QIconView",
-	__Y9QIconView_vtable_name_0,
+	_9QIconView_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -51767,40 +51767,40 @@ struct classvtable __Y9QIconView_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QIconView",
-	__Y9QIconView_vtable_name_1,
+	_9QIconView_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y9QIconView_baseinfo[] = {
+struct base_type_info _9QIconView_baseinfo[] = {
 	};
 
-struct classinfo _Y9QIconView_classinfo = {
-	"_Y9QIconView",
+struct classinfo _Z9QIconView_classinfo = {
+	"_Z9QIconView",
 	"_ZTV9QIconView",
 	"_ZTI9QIconView",	/* RTTI */
 	"_ZTI11QScrollView",
-	"_ZTT_Y9QIconView",	/* VTT */
+	"_ZTT9QIconView",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QIconView_typeinfo,
-	__Y9QIconView_vtable,
-	__Y9QIconView_baseinfo,
+	&_9QIconView_typeinfo,
+	_9QIconView_vtable,
+	_9QIconView_baseinfo,
 	};
 
-char *__Y15QComboTableItem_typeinfo_name[] = {
+char *_15QComboTableItem_typeinfo_name[] = {
 	"_ZTI10QTableItem",
 	};
 
-struct classtypeinfo __Y15QComboTableItem_typeinfo = {
+struct classtypeinfo _15QComboTableItem_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y15QComboTableItem",
-	__Y15QComboTableItem_typeinfo_name,
+	"_ZTS15QComboTableItem",
+	_15QComboTableItem_typeinfo_name,
 	};
 
-const char *__Y15QComboTableItem_vtable_name_0 [] = {
+const char *_15QComboTableItem_vtable_name_0 [] = {
 	"_ZN15QComboTableItemD1Ev",
 	"_ZN15QComboTableItemD0Ev",
 	"_ZNK10QTableItem6pixmapEv",
@@ -51826,46 +51826,46 @@ const char *__Y15QComboTableItem_vtable_name_0 [] = {
 	"_ZN15QComboTableItem13setStringListERK11QStringList",
 	};
 
-struct classvtable __Y15QComboTableItem_vtable [1] = {
+struct classvtable _15QComboTableItem_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	23,	/* Number of Vfuncs */
 	"_ZTI15QComboTableItem",
-	__Y15QComboTableItem_vtable_name_0,
+	_15QComboTableItem_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y15QComboTableItem_baseinfo[] = {
+struct base_type_info _15QComboTableItem_baseinfo[] = {
 	};
 
-struct classinfo _Y15QComboTableItem_classinfo = {
-	"_Y15QComboTableItem",
+struct classinfo _Z15QComboTableItem_classinfo = {
+	"_Z15QComboTableItem",
 	"_ZTV15QComboTableItem",
 	"_ZTI15QComboTableItem",	/* RTTI */
 	"_ZTI10QTableItem",
-	"_ZTT_Y15QComboTableItem",	/* VTT */
+	"_ZTT15QComboTableItem",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y15QComboTableItem_typeinfo,
-	__Y15QComboTableItem_vtable,
-	__Y15QComboTableItem_baseinfo,
+	&_15QComboTableItem_typeinfo,
+	_15QComboTableItem_vtable,
+	_15QComboTableItem_baseinfo,
 	};
 
-char *__Y7QWidget_typeinfo_name[] = {
+char *_7QWidget_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y7QWidget_typeinfo = {
+struct classtypeinfo _7QWidget_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
-	"_ZTS_Y7QWidget",
-	__Y7QWidget_typeinfo_name,
+	"_ZTS7QWidget",
+	_7QWidget_typeinfo_name,
 	};
 
-const char *__Y7QWidget_vtable_name_0 [] = {
+const char *_7QWidget_vtable_name_0 [] = {
 	"_ZNK7QWidget10metaObjectEv",
 	"_ZNK7QWidget9classNameEv",
 	"_ZN7QWidget7qt_castEPKc",
@@ -51978,7 +51978,7 @@ const char *__Y7QWidget_vtable_name_0 [] = {
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
 	};
 
-const char *__Y7QWidget_vtable_name_1 [] = {
+const char *_7QWidget_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N7QWidgetD1Ev",
 #endif
@@ -52052,14 +52052,14 @@ const char *__Y7QWidget_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y7QWidget_vtable [2] = {
+struct classvtable _7QWidget_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	110,	/* Number of Vfuncs */
 	"_ZTI7QWidget",
-	__Y7QWidget_vtable_name_0,
+	_7QWidget_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -52093,11 +52093,11 @@ struct classvtable __Y7QWidget_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI7QWidget",
-	__Y7QWidget_vtable_name_1,
+	_7QWidget_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y7QWidget_baseinfo[] = {
+struct base_type_info _7QWidget_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
 #if defined __i386__
 	{"_ZTI12QPaintDevice",	10242U},
@@ -52122,33 +52122,33 @@ struct base_type_info __Y7QWidget_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Y7QWidget_classinfo = {
-	"_Y7QWidget",
+struct classinfo _Z7QWidget_classinfo = {
+	"_Z7QWidget",
 	"_ZTV7QWidget",
 	"_ZTI7QWidget",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y7QWidget",	/* VTT */
+	"_ZTT7QWidget",	/* VTT */
 	2,
 	0,
 	2,
 	0,	/* numVTT */
 	0U,
-	&__Y7QWidget_typeinfo,
-	__Y7QWidget_vtable,
-	__Y7QWidget_baseinfo,
+	&_7QWidget_typeinfo,
+	_7QWidget_vtable,
+	_7QWidget_baseinfo,
 	};
 
-char *__Y4QDns_typeinfo_name[] = {
+char *_4QDns_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y4QDns_typeinfo = {
+struct classtypeinfo _4QDns_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y4QDns",
-	__Y4QDns_typeinfo_name,
+	"_ZTS4QDns",
+	_4QDns_typeinfo_name,
 	};
 
-const char *__Y4QDns_vtable_name_0 [] = {
+const char *_4QDns_vtable_name_0 [] = {
 	"_ZNK4QDns10metaObjectEv",
 	"_ZNK4QDns9classNameEv",
 	"_ZN4QDns7qt_castEPKc",
@@ -52175,47 +52175,47 @@ const char *__Y4QDns_vtable_name_0 [] = {
 	"_ZN4QDns13setRecordTypeENS_10RecordTypeE",
 	};
 
-struct classvtable __Y4QDns_vtable [1] = {
+struct classvtable _4QDns_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	24,	/* Number of Vfuncs */
 	"_ZTI4QDns",
-	__Y4QDns_vtable_name_0,
+	_4QDns_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y4QDns_baseinfo[] = {
+struct base_type_info _4QDns_baseinfo[] = {
 	};
 
-struct classinfo _Y4QDns_classinfo = {
-	"_Y4QDns",
+struct classinfo _Z4QDns_classinfo = {
+	"_Z4QDns",
 	"_ZTV4QDns",
 	"_ZTI4QDns",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y4QDns",	/* VTT */
+	"_ZTT4QDns",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y4QDns_typeinfo,
-	__Y4QDns_vtable,
-	__Y4QDns_baseinfo,
+	&_4QDns_typeinfo,
+	_4QDns_vtable,
+	_4QDns_baseinfo,
 	};
 
-char *__Y15QIODeviceSource_typeinfo_name[] = {
+char *_15QIODeviceSource_typeinfo_name[] = {
 	"_ZTI11QDataSource",
 	};
 
-struct classtypeinfo __Y15QIODeviceSource_typeinfo = {
+struct classtypeinfo _15QIODeviceSource_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y15QIODeviceSource",
-	__Y15QIODeviceSource_typeinfo_name,
+	"_ZTS15QIODeviceSource",
+	_15QIODeviceSource_typeinfo_name,
 	};
 
-const char *__Y15QIODeviceSource_vtable_name_0 [] = {
+const char *_15QIODeviceSource_vtable_name_0 [] = {
 	"_ZN15QIODeviceSourceD1Ev",
 	"_ZN15QIODeviceSourceD0Ev",
 	"_ZN15QIODeviceSource11readyToSendEv",
@@ -52225,47 +52225,47 @@ const char *__Y15QIODeviceSource_vtable_name_0 [] = {
 	"_ZN15QIODeviceSource6rewindEv",
 	};
 
-struct classvtable __Y15QIODeviceSource_vtable [1] = {
+struct classvtable _15QIODeviceSource_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	7,	/* Number of Vfuncs */
 	"_ZTI15QIODeviceSource",
-	__Y15QIODeviceSource_vtable_name_0,
+	_15QIODeviceSource_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y15QIODeviceSource_baseinfo[] = {
+struct base_type_info _15QIODeviceSource_baseinfo[] = {
 	};
 
-struct classinfo _Y15QIODeviceSource_classinfo = {
-	"_Y15QIODeviceSource",
+struct classinfo _Z15QIODeviceSource_classinfo = {
+	"_Z15QIODeviceSource",
 	"_ZTV15QIODeviceSource",
 	"_ZTI15QIODeviceSource",	/* RTTI */
 	"_ZTI11QDataSource",
-	"_ZTT_Y15QIODeviceSource",	/* VTT */
+	"_ZTT15QIODeviceSource",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y15QIODeviceSource_typeinfo,
-	__Y15QIODeviceSource_vtable,
-	__Y15QIODeviceSource_baseinfo,
+	&_15QIODeviceSource_typeinfo,
+	_15QIODeviceSource_vtable,
+	_15QIODeviceSource_baseinfo,
 	};
 
-char *__Y11QCanvasText_typeinfo_name[] = {
+char *_11QCanvasText_typeinfo_name[] = {
 	"_ZTI11QCanvasItem",
 	};
 
-struct classtypeinfo __Y11QCanvasText_typeinfo = {
+struct classtypeinfo _11QCanvasText_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QCanvasText",
-	__Y11QCanvasText_typeinfo_name,
+	"_ZTS11QCanvasText",
+	_11QCanvasText_typeinfo_name,
 	};
 
-const char *__Y11QCanvasText_vtable_name_0 [] = {
+const char *_11QCanvasText_vtable_name_0 [] = {
 	"_ZN11QCanvasTextD1Ev",
 	"_ZN11QCanvasTextD0Ev",
 	"_ZN11QCanvasText6moveByEdd",
@@ -52289,46 +52289,46 @@ const char *__Y11QCanvasText_vtable_name_0 [] = {
 	"_ZNK11QCanvasText12collidesWithEPK13QCanvasSpritePK20QCanvasPolygonalItemPK16QCanvasRectanglePK14QCanvasEllipsePKS_",
 	};
 
-struct classvtable __Y11QCanvasText_vtable [1] = {
+struct classvtable _11QCanvasText_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI11QCanvasText",
-	__Y11QCanvasText_vtable_name_0,
+	_11QCanvasText_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QCanvasText_baseinfo[] = {
+struct base_type_info _11QCanvasText_baseinfo[] = {
 	};
 
-struct classinfo _Y11QCanvasText_classinfo = {
-	"_Y11QCanvasText",
+struct classinfo _Z11QCanvasText_classinfo = {
+	"_Z11QCanvasText",
 	"_ZTV11QCanvasText",
 	"_ZTI11QCanvasText",	/* RTTI */
 	"_ZTI11QCanvasItem",
-	"_ZTT_Y11QCanvasText",	/* VTT */
+	"_ZTT11QCanvasText",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QCanvasText_typeinfo,
-	__Y11QCanvasText_vtable,
-	__Y11QCanvasText_baseinfo,
+	&_11QCanvasText_typeinfo,
+	_11QCanvasText_vtable,
+	_11QCanvasText_baseinfo,
 	};
 
-char *__Y15QXmlInputSource_typeinfo_name[] = {
+char *_15QXmlInputSource_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y15QXmlInputSource_typeinfo = {
+struct classtypeinfo _15QXmlInputSource_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y15QXmlInputSource",
-	__Y15QXmlInputSource_typeinfo_name,
+	"_ZTS15QXmlInputSource",
+	_15QXmlInputSource_typeinfo_name,
 	};
 
-const char *__Y15QXmlInputSource_vtable_name_0 [] = {
+const char *_15QXmlInputSource_vtable_name_0 [] = {
 	"_ZN15QXmlInputSourceD1Ev",
 	"_ZN15QXmlInputSourceD0Ev",
 	"_ZN15QXmlInputSource7setDataERK7QString",
@@ -52340,47 +52340,47 @@ const char *__Y15QXmlInputSource_vtable_name_0 [] = {
 	"_ZN15QXmlInputSource11fromRawDataERK9QMemArrayIcEb",
 	};
 
-struct classvtable __Y15QXmlInputSource_vtable [1] = {
+struct classvtable _15QXmlInputSource_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI15QXmlInputSource",
-	__Y15QXmlInputSource_vtable_name_0,
+	_15QXmlInputSource_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y15QXmlInputSource_baseinfo[] = {
+struct base_type_info _15QXmlInputSource_baseinfo[] = {
 	};
 
-struct classinfo _Y15QXmlInputSource_classinfo = {
-	"_Y15QXmlInputSource",
+struct classinfo _Z15QXmlInputSource_classinfo = {
+	"_Z15QXmlInputSource",
 	"_ZTV15QXmlInputSource",
 	"_ZTI15QXmlInputSource",	/* RTTI */
 	"",
-	"_ZTT_Y15QXmlInputSource",	/* VTT */
+	"_ZTT15QXmlInputSource",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y15QXmlInputSource_typeinfo,
-	__Y15QXmlInputSource_vtable,
-	__Y15QXmlInputSource_baseinfo,
+	&_15QXmlInputSource_typeinfo,
+	_15QXmlInputSource_vtable,
+	_15QXmlInputSource_baseinfo,
 	};
 
-char *__Y16QDoubleValidator_typeinfo_name[] = {
+char *_16QDoubleValidator_typeinfo_name[] = {
 	"_ZTI10QValidator",
 	};
 
-struct classtypeinfo __Y16QDoubleValidator_typeinfo = {
+struct classtypeinfo _16QDoubleValidator_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y16QDoubleValidator",
-	__Y16QDoubleValidator_typeinfo_name,
+	"_ZTS16QDoubleValidator",
+	_16QDoubleValidator_typeinfo_name,
 	};
 
-const char *__Y16QDoubleValidator_vtable_name_0 [] = {
+const char *_16QDoubleValidator_vtable_name_0 [] = {
 	"_ZNK16QDoubleValidator10metaObjectEv",
 	"_ZNK16QDoubleValidator9classNameEv",
 	"_ZN16QDoubleValidator7qt_castEPKc",
@@ -52407,46 +52407,46 @@ const char *__Y16QDoubleValidator_vtable_name_0 [] = {
 	"_ZN16QDoubleValidator8setRangeEddi",
 	};
 
-struct classvtable __Y16QDoubleValidator_vtable [1] = {
+struct classvtable _16QDoubleValidator_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	24,	/* Number of Vfuncs */
 	"_ZTI16QDoubleValidator",
-	__Y16QDoubleValidator_vtable_name_0,
+	_16QDoubleValidator_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y16QDoubleValidator_baseinfo[] = {
+struct base_type_info _16QDoubleValidator_baseinfo[] = {
 	};
 
-struct classinfo _Y16QDoubleValidator_classinfo = {
-	"_Y16QDoubleValidator",
+struct classinfo _Z16QDoubleValidator_classinfo = {
+	"_Z16QDoubleValidator",
 	"_ZTV16QDoubleValidator",
 	"_ZTI16QDoubleValidator",	/* RTTI */
 	"_ZTI10QValidator",
-	"_ZTT_Y16QDoubleValidator",	/* VTT */
+	"_ZTT16QDoubleValidator",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y16QDoubleValidator_typeinfo,
-	__Y16QDoubleValidator_vtable,
-	__Y16QDoubleValidator_baseinfo,
+	&_16QDoubleValidator_typeinfo,
+	_16QDoubleValidator_vtable,
+	_16QDoubleValidator_baseinfo,
 	};
 
-char *__Y9QIODevice_typeinfo_name[] = {
+char *_9QIODevice_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y9QIODevice_typeinfo = {
+struct classtypeinfo _9QIODevice_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y9QIODevice",
-	__Y9QIODevice_typeinfo_name,
+	"_ZTS9QIODevice",
+	_9QIODevice_typeinfo_name,
 	};
 
-const char *__Y9QIODevice_vtable_name_0 [] = {
+const char *_9QIODevice_vtable_name_0 [] = {
 	"_ZN9QIODeviceD1Ev",
 	"_ZN9QIODeviceD0Ev",
 	"__cxa_pure_virtual",
@@ -52465,47 +52465,47 @@ const char *__Y9QIODevice_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y9QIODevice_vtable [1] = {
+struct classvtable _9QIODevice_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	16,	/* Number of Vfuncs */
 	"_ZTI9QIODevice",
-	__Y9QIODevice_vtable_name_0,
+	_9QIODevice_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y9QIODevice_baseinfo[] = {
+struct base_type_info _9QIODevice_baseinfo[] = {
 	};
 
-struct classinfo _Y9QIODevice_classinfo = {
-	"_Y9QIODevice",
+struct classinfo _Z9QIODevice_classinfo = {
+	"_Z9QIODevice",
 	"_ZTV9QIODevice",
 	"_ZTI9QIODevice",	/* RTTI */
 	"",
-	"_ZTT_Y9QIODevice",	/* VTT */
+	"_ZTT9QIODevice",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QIODevice_typeinfo,
-	__Y9QIODevice_vtable,
-	__Y9QIODevice_baseinfo,
+	&_9QIODevice_typeinfo,
+	_9QIODevice_vtable,
+	_9QIODevice_baseinfo,
 	};
 
-char *__Y12QInputDialog_typeinfo_name[] = {
+char *_12QInputDialog_typeinfo_name[] = {
 	"_ZTI7QDialog",
 	};
 
-struct classtypeinfo __Y12QInputDialog_typeinfo = {
+struct classtypeinfo _12QInputDialog_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y12QInputDialog",
-	__Y12QInputDialog_typeinfo_name,
+	"_ZTS12QInputDialog",
+	_12QInputDialog_typeinfo_name,
 	};
 
-const char *__Y12QInputDialog_vtable_name_0 [] = {
+const char *_12QInputDialog_vtable_name_0 [] = {
 	"_ZNK12QInputDialog10metaObjectEv",
 	"_ZNK12QInputDialog9classNameEv",
 	"_ZN12QInputDialog7qt_castEPKc",
@@ -52621,7 +52621,7 @@ const char *__Y12QInputDialog_vtable_name_0 [] = {
 	"_ZN7QDialog6rejectEv",
 	};
 
-const char *__Y12QInputDialog_vtable_name_1 [] = {
+const char *_12QInputDialog_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N12QInputDialogD1Ev",
 #endif
@@ -52695,14 +52695,14 @@ const char *__Y12QInputDialog_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y12QInputDialog_vtable [2] = {
+struct classvtable _12QInputDialog_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	113,	/* Number of Vfuncs */
 	"_ZTI12QInputDialog",
-	__Y12QInputDialog_vtable_name_0,
+	_12QInputDialog_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -52736,40 +52736,40 @@ struct classvtable __Y12QInputDialog_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI12QInputDialog",
-	__Y12QInputDialog_vtable_name_1,
+	_12QInputDialog_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y12QInputDialog_baseinfo[] = {
+struct base_type_info _12QInputDialog_baseinfo[] = {
 	};
 
-struct classinfo _Y12QInputDialog_classinfo = {
-	"_Y12QInputDialog",
+struct classinfo _Z12QInputDialog_classinfo = {
+	"_Z12QInputDialog",
 	"_ZTV12QInputDialog",
 	"_ZTI12QInputDialog",	/* RTTI */
 	"_ZTI7QDialog",
-	"_ZTT_Y12QInputDialog",	/* VTT */
+	"_ZTT12QInputDialog",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QInputDialog_typeinfo,
-	__Y12QInputDialog_vtable,
-	__Y12QInputDialog_baseinfo,
+	&_12QInputDialog_typeinfo,
+	_12QInputDialog_vtable,
+	_12QInputDialog_baseinfo,
 	};
 
-char *__Y6QGDict_typeinfo_name[] = {
+char *_6QGDict_typeinfo_name[] = {
 	"_ZTI14QPtrCollection",
 	};
 
-struct classtypeinfo __Y6QGDict_typeinfo = {
+struct classtypeinfo _6QGDict_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y6QGDict",
-	__Y6QGDict_typeinfo_name,
+	"_ZTS6QGDict",
+	_6QGDict_typeinfo_name,
 	};
 
-const char *__Y6QGDict_vtable_name_0 [] = {
+const char *_6QGDict_vtable_name_0 [] = {
 	"_ZNK6QGDict5countEv",
 	"_ZN6QGDict5clearEv",
 	"_ZN6QGDictD1Ev",
@@ -52780,93 +52780,93 @@ const char *__Y6QGDict_vtable_name_0 [] = {
 	"_ZNK6QGDict5writeER11QDataStreamPv",
 	};
 
-struct classvtable __Y6QGDict_vtable [1] = {
+struct classvtable _6QGDict_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	8,	/* Number of Vfuncs */
 	"_ZTI6QGDict",
-	__Y6QGDict_vtable_name_0,
+	_6QGDict_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y6QGDict_baseinfo[] = {
+struct base_type_info _6QGDict_baseinfo[] = {
 	};
 
-struct classinfo _Y6QGDict_classinfo = {
-	"_Y6QGDict",
+struct classinfo _Z6QGDict_classinfo = {
+	"_Z6QGDict",
 	"_ZTV6QGDict",
 	"_ZTI6QGDict",	/* RTTI */
 	"_ZTI14QPtrCollection",
-	"_ZTT_Y6QGDict",	/* VTT */
+	"_ZTT6QGDict",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y6QGDict_typeinfo,
-	__Y6QGDict_vtable,
-	__Y6QGDict_baseinfo,
+	&_6QGDict_typeinfo,
+	_6QGDict_vtable,
+	_6QGDict_baseinfo,
 	};
 
-char *__Y16QXmlErrorHandler_typeinfo_name[] = {
+char *_16QXmlErrorHandler_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y16QXmlErrorHandler_typeinfo = {
+struct classtypeinfo _16QXmlErrorHandler_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y16QXmlErrorHandler",
-	__Y16QXmlErrorHandler_typeinfo_name,
+	"_ZTS16QXmlErrorHandler",
+	_16QXmlErrorHandler_typeinfo_name,
 	};
 
-const char *__Y16QXmlErrorHandler_vtable_name_0 [] = {
+const char *_16QXmlErrorHandler_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y16QXmlErrorHandler_vtable [1] = {
+struct classvtable _16QXmlErrorHandler_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	4,	/* Number of Vfuncs */
 	"_ZTI16QXmlErrorHandler",
-	__Y16QXmlErrorHandler_vtable_name_0,
+	_16QXmlErrorHandler_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y16QXmlErrorHandler_baseinfo[] = {
+struct base_type_info _16QXmlErrorHandler_baseinfo[] = {
 	};
 
-struct classinfo _Y16QXmlErrorHandler_classinfo = {
-	"_Y16QXmlErrorHandler",
+struct classinfo _Z16QXmlErrorHandler_classinfo = {
+	"_Z16QXmlErrorHandler",
 	"_ZTV16QXmlErrorHandler",
 	"_ZTI16QXmlErrorHandler",	/* RTTI */
 	"",
-	"_ZTT_Y16QXmlErrorHandler",	/* VTT */
+	"_ZTT16QXmlErrorHandler",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y16QXmlErrorHandler_typeinfo,
-	__Y16QXmlErrorHandler_vtable,
-	__Y16QXmlErrorHandler_baseinfo,
+	&_16QXmlErrorHandler_typeinfo,
+	_16QXmlErrorHandler_vtable,
+	_16QXmlErrorHandler_baseinfo,
 	};
 
-char *__Y10QWorkspace_typeinfo_name[] = {
+char *_10QWorkspace_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo __Y10QWorkspace_typeinfo = {
+struct classtypeinfo _10QWorkspace_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y10QWorkspace",
-	__Y10QWorkspace_typeinfo_name,
+	"_ZTS10QWorkspace",
+	_10QWorkspace_typeinfo_name,
 	};
 
-const char *__Y10QWorkspace_vtable_name_0 [] = {
+const char *_10QWorkspace_vtable_name_0 [] = {
 	"_ZNK10QWorkspace10metaObjectEv",
 	"_ZNK10QWorkspace9classNameEv",
 	"_ZN10QWorkspace7qt_castEPKc",
@@ -52979,7 +52979,7 @@ const char *__Y10QWorkspace_vtable_name_0 [] = {
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
 	};
 
-const char *__Y10QWorkspace_vtable_name_1 [] = {
+const char *_10QWorkspace_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QWorkspaceD1Ev",
 #endif
@@ -53053,14 +53053,14 @@ const char *__Y10QWorkspace_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y10QWorkspace_vtable [2] = {
+struct classvtable _10QWorkspace_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	110,	/* Number of Vfuncs */
 	"_ZTI10QWorkspace",
-	__Y10QWorkspace_vtable_name_0,
+	_10QWorkspace_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -53094,40 +53094,40 @@ struct classvtable __Y10QWorkspace_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI10QWorkspace",
-	__Y10QWorkspace_vtable_name_1,
+	_10QWorkspace_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y10QWorkspace_baseinfo[] = {
+struct base_type_info _10QWorkspace_baseinfo[] = {
 	};
 
-struct classinfo _Y10QWorkspace_classinfo = {
-	"_Y10QWorkspace",
+struct classinfo _Z10QWorkspace_classinfo = {
+	"_Z10QWorkspace",
 	"_ZTV10QWorkspace",
 	"_ZTI10QWorkspace",	/* RTTI */
 	"_ZTI7QWidget",
-	"_ZTT_Y10QWorkspace",	/* VTT */
+	"_ZTT10QWorkspace",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QWorkspace_typeinfo,
-	__Y10QWorkspace_vtable,
-	__Y10QWorkspace_baseinfo,
+	&_10QWorkspace_typeinfo,
+	_10QWorkspace_vtable,
+	_10QWorkspace_baseinfo,
 	};
 
-char *__Y10QTabDialog_typeinfo_name[] = {
+char *_10QTabDialog_typeinfo_name[] = {
 	"_ZTI7QDialog",
 	};
 
-struct classtypeinfo __Y10QTabDialog_typeinfo = {
+struct classtypeinfo _10QTabDialog_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y10QTabDialog",
-	__Y10QTabDialog_typeinfo_name,
+	"_ZTS10QTabDialog",
+	_10QTabDialog_typeinfo_name,
 	};
 
-const char *__Y10QTabDialog_vtable_name_0 [] = {
+const char *_10QTabDialog_vtable_name_0 [] = {
 	"_ZNK10QTabDialog10metaObjectEv",
 	"_ZNK10QTabDialog9classNameEv",
 	"_ZN10QTabDialog7qt_castEPKc",
@@ -53243,7 +53243,7 @@ const char *__Y10QTabDialog_vtable_name_0 [] = {
 	"_ZN7QDialog6rejectEv",
 	};
 
-const char *__Y10QTabDialog_vtable_name_1 [] = {
+const char *_10QTabDialog_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QTabDialogD1Ev",
 #endif
@@ -53317,14 +53317,14 @@ const char *__Y10QTabDialog_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y10QTabDialog_vtable [2] = {
+struct classvtable _10QTabDialog_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	113,	/* Number of Vfuncs */
 	"_ZTI10QTabDialog",
-	__Y10QTabDialog_vtable_name_0,
+	_10QTabDialog_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -53358,40 +53358,40 @@ struct classvtable __Y10QTabDialog_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI10QTabDialog",
-	__Y10QTabDialog_vtable_name_1,
+	_10QTabDialog_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y10QTabDialog_baseinfo[] = {
+struct base_type_info _10QTabDialog_baseinfo[] = {
 	};
 
-struct classinfo _Y10QTabDialog_classinfo = {
-	"_Y10QTabDialog",
+struct classinfo _Z10QTabDialog_classinfo = {
+	"_Z10QTabDialog",
 	"_ZTV10QTabDialog",
 	"_ZTI10QTabDialog",	/* RTTI */
 	"_ZTI7QDialog",
-	"_ZTT_Y10QTabDialog",	/* VTT */
+	"_ZTT10QTabDialog",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QTabDialog_typeinfo,
-	__Y10QTabDialog_vtable,
-	__Y10QTabDialog_baseinfo,
+	&_10QTabDialog_typeinfo,
+	_10QTabDialog_vtable,
+	_10QTabDialog_baseinfo,
 	};
 
-char *__Y18QHttpRequestHeader_typeinfo_name[] = {
+char *_18QHttpRequestHeader_typeinfo_name[] = {
 	"_ZTI11QHttpHeader",
 	};
 
-struct classtypeinfo __Y18QHttpRequestHeader_typeinfo = {
+struct classtypeinfo _18QHttpRequestHeader_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y18QHttpRequestHeader",
-	__Y18QHttpRequestHeader_typeinfo_name,
+	"_ZTS18QHttpRequestHeader",
+	_18QHttpRequestHeader_typeinfo_name,
 	};
 
-const char *__Y18QHttpRequestHeader_vtable_name_0 [] = {
+const char *_18QHttpRequestHeader_vtable_name_0 [] = {
 	"_ZN18QHttpRequestHeaderD1Ev",
 	"_ZN18QHttpRequestHeaderD0Ev",
 	"_ZNK18QHttpRequestHeader8toStringEv",
@@ -53400,46 +53400,46 @@ const char *__Y18QHttpRequestHeader_vtable_name_0 [] = {
 	"_ZN18QHttpRequestHeader9parseLineERK7QStringi",
 	};
 
-struct classvtable __Y18QHttpRequestHeader_vtable [1] = {
+struct classvtable _18QHttpRequestHeader_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	6,	/* Number of Vfuncs */
 	"_ZTI18QHttpRequestHeader",
-	__Y18QHttpRequestHeader_vtable_name_0,
+	_18QHttpRequestHeader_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y18QHttpRequestHeader_baseinfo[] = {
+struct base_type_info _18QHttpRequestHeader_baseinfo[] = {
 	};
 
-struct classinfo _Y18QHttpRequestHeader_classinfo = {
-	"_Y18QHttpRequestHeader",
+struct classinfo _Z18QHttpRequestHeader_classinfo = {
+	"_Z18QHttpRequestHeader",
 	"_ZTV18QHttpRequestHeader",
 	"_ZTI18QHttpRequestHeader",	/* RTTI */
 	"_ZTI11QHttpHeader",
-	"_ZTT_Y18QHttpRequestHeader",	/* VTT */
+	"_ZTT18QHttpRequestHeader",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y18QHttpRequestHeader_typeinfo,
-	__Y18QHttpRequestHeader_vtable,
-	__Y18QHttpRequestHeader_baseinfo,
+	&_18QHttpRequestHeader_typeinfo,
+	_18QHttpRequestHeader_vtable,
+	_18QHttpRequestHeader_baseinfo,
 	};
 
-char *__Y11QDragObject_typeinfo_name[] = {
+char *_11QDragObject_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y11QDragObject_typeinfo = {
+struct classtypeinfo _11QDragObject_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
-	"_ZTS_Y11QDragObject",
-	__Y11QDragObject_typeinfo_name,
+	"_ZTS11QDragObject",
+	_11QDragObject_typeinfo_name,
 	};
 
-const char *__Y11QDragObject_vtable_name_0 [] = {
+const char *_11QDragObject_vtable_name_0 [] = {
 	"_ZNK11QDragObject10metaObjectEv",
 	"_ZNK11QDragObject9classNameEv",
 	"_ZN11QDragObject7qt_castEPKc",
@@ -53466,7 +53466,7 @@ const char *__Y11QDragObject_vtable_name_0 [] = {
 	"_ZN11QDragObject4dragENS_8DragModeE",
 	};
 
-const char *__Y11QDragObject_vtable_name_1 [] = {
+const char *_11QDragObject_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QDragObjectD1Ev",
 #endif
@@ -53514,14 +53514,14 @@ const char *__Y11QDragObject_vtable_name_1 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable __Y11QDragObject_vtable [2] = {
+struct classvtable _11QDragObject_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	24,	/* Number of Vfuncs */
 	"_ZTI11QDragObject",
-	__Y11QDragObject_vtable_name_0,
+	_11QDragObject_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -53555,11 +53555,11 @@ struct classvtable __Y11QDragObject_vtable [2] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI11QDragObject",
-	__Y11QDragObject_vtable_name_1,
+	_11QDragObject_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y11QDragObject_baseinfo[] = {
+struct base_type_info _11QDragObject_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
 #if defined __i386__
 	{"_ZTI11QMimeSource",	10242U},
@@ -53584,33 +53584,33 @@ struct base_type_info __Y11QDragObject_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Y11QDragObject_classinfo = {
-	"_Y11QDragObject",
+struct classinfo _Z11QDragObject_classinfo = {
+	"_Z11QDragObject",
 	"_ZTV11QDragObject",
 	"_ZTI11QDragObject",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y11QDragObject",	/* VTT */
+	"_ZTT11QDragObject",	/* VTT */
 	2,
 	0,
 	2,
 	0,	/* numVTT */
 	0U,
-	&__Y11QDragObject_typeinfo,
-	__Y11QDragObject_vtable,
-	__Y11QDragObject_baseinfo,
+	&_11QDragObject_typeinfo,
+	_11QDragObject_vtable,
+	_11QDragObject_baseinfo,
 	};
 
-char *__Y13QToolTipGroup_typeinfo_name[] = {
+char *_13QToolTipGroup_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y13QToolTipGroup_typeinfo = {
+struct classtypeinfo _13QToolTipGroup_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y13QToolTipGroup",
-	__Y13QToolTipGroup_typeinfo_name,
+	"_ZTS13QToolTipGroup",
+	_13QToolTipGroup_typeinfo_name,
 	};
 
-const char *__Y13QToolTipGroup_vtable_name_0 [] = {
+const char *_13QToolTipGroup_vtable_name_0 [] = {
 	"_ZNK13QToolTipGroup10metaObjectEv",
 	"_ZNK13QToolTipGroup9classNameEv",
 	"_ZN13QToolTipGroup7qt_castEPKc",
@@ -53634,47 +53634,47 @@ const char *__Y13QToolTipGroup_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable __Y13QToolTipGroup_vtable [1] = {
+struct classvtable _13QToolTipGroup_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI13QToolTipGroup",
-	__Y13QToolTipGroup_vtable_name_0,
+	_13QToolTipGroup_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y13QToolTipGroup_baseinfo[] = {
+struct base_type_info _13QToolTipGroup_baseinfo[] = {
 	};
 
-struct classinfo _Y13QToolTipGroup_classinfo = {
-	"_Y13QToolTipGroup",
+struct classinfo _Z13QToolTipGroup_classinfo = {
+	"_Z13QToolTipGroup",
 	"_ZTV13QToolTipGroup",
 	"_ZTI13QToolTipGroup",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y13QToolTipGroup",	/* VTT */
+	"_ZTT13QToolTipGroup",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y13QToolTipGroup_typeinfo,
-	__Y13QToolTipGroup_vtable,
-	__Y13QToolTipGroup_baseinfo,
+	&_13QToolTipGroup_typeinfo,
+	_13QToolTipGroup_vtable,
+	_13QToolTipGroup_baseinfo,
 	};
 
-char *__Y17QDateTimeEditBase_typeinfo_name[] = {
+char *_17QDateTimeEditBase_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo __Y17QDateTimeEditBase_typeinfo = {
+struct classtypeinfo _17QDateTimeEditBase_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y17QDateTimeEditBase",
-	__Y17QDateTimeEditBase_typeinfo_name,
+	"_ZTS17QDateTimeEditBase",
+	_17QDateTimeEditBase_typeinfo_name,
 	};
 
-const char *__Y17QDateTimeEditBase_vtable_name_0 [] = {
+const char *_17QDateTimeEditBase_vtable_name_0 [] = {
 	"_ZNK17QDateTimeEditBase10metaObjectEv",
 	"_ZNK17QDateTimeEditBase9classNameEv",
 	"_ZN17QDateTimeEditBase7qt_castEPKc",
@@ -53793,7 +53793,7 @@ const char *__Y17QDateTimeEditBase_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-const char *__Y17QDateTimeEditBase_vtable_name_1 [] = {
+const char *_17QDateTimeEditBase_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N17QDateTimeEditBaseD1Ev",
 #endif
@@ -53867,14 +53867,14 @@ const char *__Y17QDateTimeEditBase_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y17QDateTimeEditBase_vtable [2] = {
+struct classvtable _17QDateTimeEditBase_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	116,	/* Number of Vfuncs */
 	"_ZTI17QDateTimeEditBase",
-	__Y17QDateTimeEditBase_vtable_name_0,
+	_17QDateTimeEditBase_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -53908,39 +53908,39 @@ struct classvtable __Y17QDateTimeEditBase_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI17QDateTimeEditBase",
-	__Y17QDateTimeEditBase_vtable_name_1,
+	_17QDateTimeEditBase_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y17QDateTimeEditBase_baseinfo[] = {
+struct base_type_info _17QDateTimeEditBase_baseinfo[] = {
 	};
 
-struct classinfo _Y17QDateTimeEditBase_classinfo = {
-	"_Y17QDateTimeEditBase",
+struct classinfo _Z17QDateTimeEditBase_classinfo = {
+	"_Z17QDateTimeEditBase",
 	"_ZTV17QDateTimeEditBase",
 	"_ZTI17QDateTimeEditBase",	/* RTTI */
 	"_ZTI7QWidget",
-	"_ZTT_Y17QDateTimeEditBase",	/* VTT */
+	"_ZTT17QDateTimeEditBase",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y17QDateTimeEditBase_typeinfo,
-	__Y17QDateTimeEditBase_vtable,
-	__Y17QDateTimeEditBase_baseinfo,
+	&_17QDateTimeEditBase_typeinfo,
+	_17QDateTimeEditBase_vtable,
+	_17QDateTimeEditBase_baseinfo,
 	};
 
-char *__Y11QHttpHeader_typeinfo_name[] = {
+char *_11QHttpHeader_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y11QHttpHeader_typeinfo = {
+struct classtypeinfo _11QHttpHeader_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y11QHttpHeader",
-	__Y11QHttpHeader_typeinfo_name,
+	"_ZTS11QHttpHeader",
+	_11QHttpHeader_typeinfo_name,
 	};
 
-const char *__Y11QHttpHeader_vtable_name_0 [] = {
+const char *_11QHttpHeader_vtable_name_0 [] = {
 	"_ZN11QHttpHeaderD1Ev",
 	"_ZN11QHttpHeaderD0Ev",
 	"_ZNK11QHttpHeader8toStringEv",
@@ -53949,92 +53949,92 @@ const char *__Y11QHttpHeader_vtable_name_0 [] = {
 	"_ZN11QHttpHeader9parseLineERK7QStringi",
 	};
 
-struct classvtable __Y11QHttpHeader_vtable [1] = {
+struct classvtable _11QHttpHeader_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	6,	/* Number of Vfuncs */
 	"_ZTI11QHttpHeader",
-	__Y11QHttpHeader_vtable_name_0,
+	_11QHttpHeader_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QHttpHeader_baseinfo[] = {
+struct base_type_info _11QHttpHeader_baseinfo[] = {
 	};
 
-struct classinfo _Y11QHttpHeader_classinfo = {
-	"_Y11QHttpHeader",
+struct classinfo _Z11QHttpHeader_classinfo = {
+	"_Z11QHttpHeader",
 	"_ZTV11QHttpHeader",
 	"_ZTI11QHttpHeader",	/* RTTI */
 	"",
-	"_ZTT_Y11QHttpHeader",	/* VTT */
+	"_ZTT11QHttpHeader",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QHttpHeader_typeinfo,
-	__Y11QHttpHeader_vtable,
-	__Y11QHttpHeader_baseinfo,
+	&_11QHttpHeader_typeinfo,
+	_11QHttpHeader_vtable,
+	_11QHttpHeader_baseinfo,
 	};
 
-char *__Y10QShowEvent_typeinfo_name[] = {
+char *_10QShowEvent_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo __Y10QShowEvent_typeinfo = {
+struct classtypeinfo _10QShowEvent_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y10QShowEvent",
-	__Y10QShowEvent_typeinfo_name,
+	"_ZTS10QShowEvent",
+	_10QShowEvent_typeinfo_name,
 	};
 
-const char *__Y10QShowEvent_vtable_name_0 [] = {
+const char *_10QShowEvent_vtable_name_0 [] = {
 	"_ZN10QShowEventD1Ev",
 	"_ZN10QShowEventD0Ev",
 	};
 
-struct classvtable __Y10QShowEvent_vtable [1] = {
+struct classvtable _10QShowEvent_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI10QShowEvent",
-	__Y10QShowEvent_vtable_name_0,
+	_10QShowEvent_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y10QShowEvent_baseinfo[] = {
+struct base_type_info _10QShowEvent_baseinfo[] = {
 	};
 
-struct classinfo _Y10QShowEvent_classinfo = {
-	"_Y10QShowEvent",
+struct classinfo _Z10QShowEvent_classinfo = {
+	"_Z10QShowEvent",
 	"_ZTV10QShowEvent",
 	"_ZTI10QShowEvent",	/* RTTI */
 	"_ZTI6QEvent",
-	"_ZTT_Y10QShowEvent",	/* VTT */
+	"_ZTT10QShowEvent",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QShowEvent_typeinfo,
-	__Y10QShowEvent_vtable,
-	__Y10QShowEvent_baseinfo,
+	&_10QShowEvent_typeinfo,
+	_10QShowEvent_vtable,
+	_10QShowEvent_baseinfo,
 	};
 
-char *__Y6QTable_typeinfo_name[] = {
+char *_6QTable_typeinfo_name[] = {
 	"_ZTI11QScrollView",
 	};
 
-struct classtypeinfo __Y6QTable_typeinfo = {
+struct classtypeinfo _6QTable_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y6QTable",
-	__Y6QTable_typeinfo_name,
+	"_ZTS6QTable",
+	_6QTable_typeinfo_name,
 	};
 
-const char *__Y6QTable_vtable_name_0 [] = {
+const char *_6QTable_vtable_name_0 [] = {
 	"_ZNK6QTable10metaObjectEv",
 	"_ZNK6QTable9classNameEv",
 	"_ZN6QTable7qt_castEPKc",
@@ -54270,7 +54270,7 @@ const char *__Y6QTable_vtable_name_0 [] = {
 	"_ZN6QTable13columnClickedEi",
 	};
 
-const char *__Y6QTable_vtable_name_1 [] = {
+const char *_6QTable_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N6QTableD1Ev",
 #endif
@@ -54344,14 +54344,14 @@ const char *__Y6QTable_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y6QTable_vtable [2] = {
+struct classvtable _6QTable_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	233,	/* Number of Vfuncs */
 	"_ZTI6QTable",
-	__Y6QTable_vtable_name_0,
+	_6QTable_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -54385,40 +54385,40 @@ struct classvtable __Y6QTable_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI6QTable",
-	__Y6QTable_vtable_name_1,
+	_6QTable_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y6QTable_baseinfo[] = {
+struct base_type_info _6QTable_baseinfo[] = {
 	};
 
-struct classinfo _Y6QTable_classinfo = {
-	"_Y6QTable",
+struct classinfo _Z6QTable_classinfo = {
+	"_Z6QTable",
 	"_ZTV6QTable",
 	"_ZTI6QTable",	/* RTTI */
 	"_ZTI11QScrollView",
-	"_ZTT_Y6QTable",	/* VTT */
+	"_ZTT6QTable",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y6QTable_typeinfo,
-	__Y6QTable_vtable,
-	__Y6QTable_baseinfo,
+	&_6QTable_typeinfo,
+	_6QTable_vtable,
+	_6QTable_baseinfo,
 	};
 
-char *__Y8QLocalFs_typeinfo_name[] = {
+char *_8QLocalFs_typeinfo_name[] = {
 	"_ZTI16QNetworkProtocol",
 	};
 
-struct classtypeinfo __Y8QLocalFs_typeinfo = {
+struct classtypeinfo _8QLocalFs_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y8QLocalFs",
-	__Y8QLocalFs_typeinfo_name,
+	"_ZTS8QLocalFs",
+	_8QLocalFs_typeinfo_name,
 	};
 
-const char *__Y8QLocalFs_vtable_name_0 [] = {
+const char *_8QLocalFs_vtable_name_0 [] = {
 	"_ZNK8QLocalFs10metaObjectEv",
 	"_ZNK8QLocalFs9classNameEv",
 	"_ZN8QLocalFs7qt_castEPKc",
@@ -54457,47 +54457,47 @@ const char *__Y8QLocalFs_vtable_name_0 [] = {
 	"_ZN16QNetworkProtocol15checkConnectionEP17QNetworkOperation",
 	};
 
-struct classvtable __Y8QLocalFs_vtable [1] = {
+struct classvtable _8QLocalFs_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	36,	/* Number of Vfuncs */
 	"_ZTI8QLocalFs",
-	__Y8QLocalFs_vtable_name_0,
+	_8QLocalFs_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y8QLocalFs_baseinfo[] = {
+struct base_type_info _8QLocalFs_baseinfo[] = {
 	};
 
-struct classinfo _Y8QLocalFs_classinfo = {
-	"_Y8QLocalFs",
+struct classinfo _Z8QLocalFs_classinfo = {
+	"_Z8QLocalFs",
 	"_ZTV8QLocalFs",
 	"_ZTI8QLocalFs",	/* RTTI */
 	"_ZTI16QNetworkProtocol",
-	"_ZTT_Y8QLocalFs",	/* VTT */
+	"_ZTT8QLocalFs",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y8QLocalFs_typeinfo,
-	__Y8QLocalFs_vtable,
-	__Y8QLocalFs_baseinfo,
+	&_8QLocalFs_typeinfo,
+	_8QLocalFs_vtable,
+	_8QLocalFs_baseinfo,
 	};
 
-char *__Y14QCanvasPolygon_typeinfo_name[] = {
+char *_14QCanvasPolygon_typeinfo_name[] = {
 	"_ZTI20QCanvasPolygonalItem",
 	};
 
-struct classtypeinfo __Y14QCanvasPolygon_typeinfo = {
+struct classtypeinfo _14QCanvasPolygon_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y14QCanvasPolygon",
-	__Y14QCanvasPolygon_typeinfo_name,
+	"_ZTS14QCanvasPolygon",
+	_14QCanvasPolygon_typeinfo_name,
 	};
 
-const char *__Y14QCanvasPolygon_vtable_name_0 [] = {
+const char *_14QCanvasPolygon_vtable_name_0 [] = {
 	"_ZN14QCanvasPolygonD1Ev",
 	"_ZN14QCanvasPolygonD0Ev",
 	"_ZN14QCanvasPolygon6moveByEdd",
@@ -54526,47 +54526,47 @@ const char *__Y14QCanvasPolygon_vtable_name_0 [] = {
 	"_ZN14QCanvasPolygon9drawShapeER8QPainter",
 	};
 
-struct classvtable __Y14QCanvasPolygon_vtable [1] = {
+struct classvtable _14QCanvasPolygon_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	26,	/* Number of Vfuncs */
 	"_ZTI14QCanvasPolygon",
-	__Y14QCanvasPolygon_vtable_name_0,
+	_14QCanvasPolygon_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y14QCanvasPolygon_baseinfo[] = {
+struct base_type_info _14QCanvasPolygon_baseinfo[] = {
 	};
 
-struct classinfo _Y14QCanvasPolygon_classinfo = {
-	"_Y14QCanvasPolygon",
+struct classinfo _Z14QCanvasPolygon_classinfo = {
+	"_Z14QCanvasPolygon",
 	"_ZTV14QCanvasPolygon",
 	"_ZTI14QCanvasPolygon",	/* RTTI */
 	"_ZTI20QCanvasPolygonalItem",
-	"_ZTT_Y14QCanvasPolygon",	/* VTT */
+	"_ZTT14QCanvasPolygon",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y14QCanvasPolygon_typeinfo,
-	__Y14QCanvasPolygon_vtable,
-	__Y14QCanvasPolygon_baseinfo,
+	&_14QCanvasPolygon_typeinfo,
+	_14QCanvasPolygon_vtable,
+	_14QCanvasPolygon_baseinfo,
 	};
 
-char *__Y9QDateEdit_typeinfo_name[] = {
+char *_9QDateEdit_typeinfo_name[] = {
 	"_ZTI17QDateTimeEditBase",
 	};
 
-struct classtypeinfo __Y9QDateEdit_typeinfo = {
+struct classtypeinfo _9QDateEdit_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y9QDateEdit",
-	__Y9QDateEdit_typeinfo_name,
+	"_ZTS9QDateEdit",
+	_9QDateEdit_typeinfo_name,
 	};
 
-const char *__Y9QDateEdit_vtable_name_0 [] = {
+const char *_9QDateEdit_vtable_name_0 [] = {
 	"_ZNK9QDateEdit10metaObjectEv",
 	"_ZNK9QDateEdit9classNameEv",
 	"_ZN9QDateEdit7qt_castEPKc",
@@ -54697,7 +54697,7 @@ const char *__Y9QDateEdit_vtable_name_0 [] = {
 	"_ZNK9QDateEdit10outOfRangeEiii",
 	};
 
-const char *__Y9QDateEdit_vtable_name_1 [] = {
+const char *_9QDateEdit_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QDateEditD1Ev",
 #endif
@@ -54771,14 +54771,14 @@ const char *__Y9QDateEdit_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y9QDateEdit_vtable [2] = {
+struct classvtable _9QDateEdit_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	128,	/* Number of Vfuncs */
 	"_ZTI9QDateEdit",
-	__Y9QDateEdit_vtable_name_0,
+	_9QDateEdit_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -54812,85 +54812,85 @@ struct classvtable __Y9QDateEdit_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QDateEdit",
-	__Y9QDateEdit_vtable_name_1,
+	_9QDateEdit_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y9QDateEdit_baseinfo[] = {
+struct base_type_info _9QDateEdit_baseinfo[] = {
 	};
 
-struct classinfo _Y9QDateEdit_classinfo = {
-	"_Y9QDateEdit",
+struct classinfo _Z9QDateEdit_classinfo = {
+	"_Z9QDateEdit",
 	"_ZTV9QDateEdit",
 	"_ZTI9QDateEdit",	/* RTTI */
 	"_ZTI17QDateTimeEditBase",
-	"_ZTT_Y9QDateEdit",	/* VTT */
+	"_ZTT9QDateEdit",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QDateEdit_typeinfo,
-	__Y9QDateEdit_vtable,
-	__Y9QDateEdit_baseinfo,
+	&_9QDateEdit_typeinfo,
+	_9QDateEdit_vtable,
+	_9QDateEdit_baseinfo,
 	};
 
-char *__Y11QPaintEvent_typeinfo_name[] = {
+char *_11QPaintEvent_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo __Y11QPaintEvent_typeinfo = {
+struct classtypeinfo _11QPaintEvent_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QPaintEvent",
-	__Y11QPaintEvent_typeinfo_name,
+	"_ZTS11QPaintEvent",
+	_11QPaintEvent_typeinfo_name,
 	};
 
-const char *__Y11QPaintEvent_vtable_name_0 [] = {
+const char *_11QPaintEvent_vtable_name_0 [] = {
 	"_ZN11QPaintEventD1Ev",
 	"_ZN11QPaintEventD0Ev",
 	};
 
-struct classvtable __Y11QPaintEvent_vtable [1] = {
+struct classvtable _11QPaintEvent_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI11QPaintEvent",
-	__Y11QPaintEvent_vtable_name_0,
+	_11QPaintEvent_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QPaintEvent_baseinfo[] = {
+struct base_type_info _11QPaintEvent_baseinfo[] = {
 	};
 
-struct classinfo _Y11QPaintEvent_classinfo = {
-	"_Y11QPaintEvent",
+struct classinfo _Z11QPaintEvent_classinfo = {
+	"_Z11QPaintEvent",
 	"_ZTV11QPaintEvent",
 	"_ZTI11QPaintEvent",	/* RTTI */
 	"_ZTI6QEvent",
-	"_ZTT_Y11QPaintEvent",	/* VTT */
+	"_ZTT11QPaintEvent",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QPaintEvent_typeinfo,
-	__Y11QPaintEvent_vtable,
-	__Y11QPaintEvent_baseinfo,
+	&_11QPaintEvent_typeinfo,
+	_11QPaintEvent_vtable,
+	_11QPaintEvent_baseinfo,
 	};
 
-char *__Y6QAccel_typeinfo_name[] = {
+char *_6QAccel_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y6QAccel_typeinfo = {
+struct classtypeinfo _6QAccel_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y6QAccel",
-	__Y6QAccel_typeinfo_name,
+	"_ZTS6QAccel",
+	_6QAccel_typeinfo_name,
 	};
 
-const char *__Y6QAccel_vtable_name_0 [] = {
+const char *_6QAccel_vtable_name_0 [] = {
 	"_ZNK6QAccel10metaObjectEv",
 	"_ZNK6QAccel9classNameEv",
 	"_ZN6QAccel7qt_castEPKc",
@@ -54914,47 +54914,47 @@ const char *__Y6QAccel_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable __Y6QAccel_vtable [1] = {
+struct classvtable _6QAccel_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI6QAccel",
-	__Y6QAccel_vtable_name_0,
+	_6QAccel_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y6QAccel_baseinfo[] = {
+struct base_type_info _6QAccel_baseinfo[] = {
 	};
 
-struct classinfo _Y6QAccel_classinfo = {
-	"_Y6QAccel",
+struct classinfo _Z6QAccel_classinfo = {
+	"_Z6QAccel",
 	"_ZTV6QAccel",
 	"_ZTI6QAccel",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y6QAccel",	/* VTT */
+	"_ZTT6QAccel",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y6QAccel_typeinfo,
-	__Y6QAccel_vtable,
-	__Y6QAccel_baseinfo,
+	&_6QAccel_typeinfo,
+	_6QAccel_vtable,
+	_6QAccel_baseinfo,
 	};
 
-char *__Y7QCanvas_typeinfo_name[] = {
+char *_7QCanvas_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y7QCanvas_typeinfo = {
+struct classtypeinfo _7QCanvas_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y7QCanvas",
-	__Y7QCanvas_typeinfo_name,
+	"_ZTS7QCanvas",
+	_7QCanvas_typeinfo_name,
 	};
 
-const char *__Y7QCanvas_vtable_name_0 [] = {
+const char *_7QCanvas_vtable_name_0 [] = {
 	"_ZNK7QCanvas10metaObjectEv",
 	"_ZNK7QCanvas9classNameEv",
 	"_ZN7QCanvas7qt_castEPKc",
@@ -55002,47 +55002,47 @@ const char *__Y7QCanvas_vtable_name_0 [] = {
 	"_ZN7QCanvas14drawForegroundER8QPainterRK5QRect",
 	};
 
-struct classvtable __Y7QCanvas_vtable [1] = {
+struct classvtable _7QCanvas_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	45,	/* Number of Vfuncs */
 	"_ZTI7QCanvas",
-	__Y7QCanvas_vtable_name_0,
+	_7QCanvas_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y7QCanvas_baseinfo[] = {
+struct base_type_info _7QCanvas_baseinfo[] = {
 	};
 
-struct classinfo _Y7QCanvas_classinfo = {
-	"_Y7QCanvas",
+struct classinfo _Z7QCanvas_classinfo = {
+	"_Z7QCanvas",
 	"_ZTV7QCanvas",
 	"_ZTI7QCanvas",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y7QCanvas",	/* VTT */
+	"_ZTT7QCanvas",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y7QCanvas_typeinfo,
-	__Y7QCanvas_vtable,
-	__Y7QCanvas_baseinfo,
+	&_7QCanvas_typeinfo,
+	_7QCanvas_vtable,
+	_7QCanvas_baseinfo,
 	};
 
-char *__Y20QDomDocumentFragment_typeinfo_name[] = {
+char *_20QDomDocumentFragment_typeinfo_name[] = {
 	"_ZTI8QDomNode",
 	};
 
-struct classtypeinfo __Y20QDomDocumentFragment_typeinfo = {
+struct classtypeinfo _20QDomDocumentFragment_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y20QDomDocumentFragment",
-	__Y20QDomDocumentFragment_typeinfo_name,
+	"_ZTS20QDomDocumentFragment",
+	_20QDomDocumentFragment_typeinfo_name,
 	};
 
-const char *__Y20QDomDocumentFragment_vtable_name_0 [] = {
+const char *_20QDomDocumentFragment_vtable_name_0 [] = {
 	"_ZN20QDomDocumentFragmentD1Ev",
 	"_ZN20QDomDocumentFragmentD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -55086,90 +55086,90 @@ const char *__Y20QDomDocumentFragment_vtable_name_0 [] = {
 	"_ZNK8QDomNode9isCommentEv",
 	};
 
-struct classvtable __Y20QDomDocumentFragment_vtable [1] = {
+struct classvtable _20QDomDocumentFragment_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	41,	/* Number of Vfuncs */
 	"_ZTI20QDomDocumentFragment",
-	__Y20QDomDocumentFragment_vtable_name_0,
+	_20QDomDocumentFragment_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y20QDomDocumentFragment_baseinfo[] = {
+struct base_type_info _20QDomDocumentFragment_baseinfo[] = {
 	};
 
-struct classinfo _Y20QDomDocumentFragment_classinfo = {
-	"_Y20QDomDocumentFragment",
+struct classinfo _Z20QDomDocumentFragment_classinfo = {
+	"_Z20QDomDocumentFragment",
 	"_ZTV20QDomDocumentFragment",
 	"_ZTI20QDomDocumentFragment",	/* RTTI */
 	"_ZTI8QDomNode",
-	"_ZTT_Y20QDomDocumentFragment",	/* VTT */
+	"_ZTT20QDomDocumentFragment",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y20QDomDocumentFragment_typeinfo,
-	__Y20QDomDocumentFragment_vtable,
-	__Y20QDomDocumentFragment_baseinfo,
+	&_20QDomDocumentFragment_typeinfo,
+	_20QDomDocumentFragment_vtable,
+	_20QDomDocumentFragment_baseinfo,
 	};
 
-char *__Y11QDataStream_typeinfo_name[] = {
+char *_11QDataStream_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y11QDataStream_typeinfo = {
+struct classtypeinfo _11QDataStream_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y11QDataStream",
-	__Y11QDataStream_typeinfo_name,
+	"_ZTS11QDataStream",
+	_11QDataStream_typeinfo_name,
 	};
 
-const char *__Y11QDataStream_vtable_name_0 [] = {
+const char *_11QDataStream_vtable_name_0 [] = {
 	"_ZN11QDataStreamD1Ev",
 	"_ZN11QDataStreamD0Ev",
 	};
 
-struct classvtable __Y11QDataStream_vtable [1] = {
+struct classvtable _11QDataStream_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI11QDataStream",
-	__Y11QDataStream_vtable_name_0,
+	_11QDataStream_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QDataStream_baseinfo[] = {
+struct base_type_info _11QDataStream_baseinfo[] = {
 	};
 
-struct classinfo _Y11QDataStream_classinfo = {
-	"_Y11QDataStream",
+struct classinfo _Z11QDataStream_classinfo = {
+	"_Z11QDataStream",
 	"_ZTV11QDataStream",
 	"_ZTI11QDataStream",	/* RTTI */
 	"",
-	"_ZTT_Y11QDataStream",	/* VTT */
+	"_ZTT11QDataStream",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QDataStream_typeinfo,
-	__Y11QDataStream_vtable,
-	__Y11QDataStream_baseinfo,
+	&_11QDataStream_typeinfo,
+	_11QDataStream_vtable,
+	_11QDataStream_baseinfo,
 	};
 
-char *__Y14QJpUnicodeConv_typeinfo_name[] = {
+char *_14QJpUnicodeConv_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y14QJpUnicodeConv_typeinfo = {
+struct classtypeinfo _14QJpUnicodeConv_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y14QJpUnicodeConv",
-	__Y14QJpUnicodeConv_typeinfo_name,
+	"_ZTS14QJpUnicodeConv",
+	_14QJpUnicodeConv_typeinfo_name,
 	};
 
-const char *__Y14QJpUnicodeConv_vtable_name_0 [] = {
+const char *_14QJpUnicodeConv_vtable_name_0 [] = {
 	"_ZNK14QJpUnicodeConv14asciiToUnicodeEjj",
 	"_ZNK14QJpUnicodeConv22jisx0201LatinToUnicodeEjj",
 	"_ZNK14QJpUnicodeConv17jisx0208ToUnicodeEjj",
@@ -55180,47 +55180,47 @@ const char *__Y14QJpUnicodeConv_vtable_name_0 [] = {
 	"_ZNK14QJpUnicodeConv17unicodeToJisx0212Ejj",
 	};
 
-struct classvtable __Y14QJpUnicodeConv_vtable [1] = {
+struct classvtable _14QJpUnicodeConv_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	8,	/* Number of Vfuncs */
 	"_ZTI14QJpUnicodeConv",
-	__Y14QJpUnicodeConv_vtable_name_0,
+	_14QJpUnicodeConv_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y14QJpUnicodeConv_baseinfo[] = {
+struct base_type_info _14QJpUnicodeConv_baseinfo[] = {
 	};
 
-struct classinfo _Y14QJpUnicodeConv_classinfo = {
-	"_Y14QJpUnicodeConv",
+struct classinfo _Z14QJpUnicodeConv_classinfo = {
+	"_Z14QJpUnicodeConv",
 	"_ZTV14QJpUnicodeConv",
 	"_ZTI14QJpUnicodeConv",	/* RTTI */
 	"",
-	"_ZTT_Y14QJpUnicodeConv",	/* VTT */
+	"_ZTT14QJpUnicodeConv",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y14QJpUnicodeConv_typeinfo,
-	__Y14QJpUnicodeConv_vtable,
-	__Y14QJpUnicodeConv_baseinfo,
+	&_14QJpUnicodeConv_typeinfo,
+	_14QJpUnicodeConv_vtable,
+	_14QJpUnicodeConv_baseinfo,
 	};
 
-char *__Y11QPushButton_typeinfo_name[] = {
+char *_11QPushButton_typeinfo_name[] = {
 	"_ZTI7QButton",
 	};
 
-struct classtypeinfo __Y11QPushButton_typeinfo = {
+struct classtypeinfo _11QPushButton_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QPushButton",
-	__Y11QPushButton_typeinfo_name,
+	"_ZTS11QPushButton",
+	_11QPushButton_typeinfo_name,
 	};
 
-const char *__Y11QPushButton_vtable_name_0 [] = {
+const char *_11QPushButton_vtable_name_0 [] = {
 	"_ZNK11QPushButton10metaObjectEv",
 	"_ZNK11QPushButton9classNameEv",
 	"_ZN11QPushButton7qt_castEPKc",
@@ -55348,7 +55348,7 @@ const char *__Y11QPushButton_vtable_name_0 [] = {
 	"_ZN11QPushButton5setOnEb",
 	};
 
-const char *__Y11QPushButton_vtable_name_1 [] = {
+const char *_11QPushButton_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QPushButtonD1Ev",
 #endif
@@ -55422,14 +55422,14 @@ const char *__Y11QPushButton_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y11QPushButton_vtable [2] = {
+struct classvtable _11QPushButton_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	125,	/* Number of Vfuncs */
 	"_ZTI11QPushButton",
-	__Y11QPushButton_vtable_name_0,
+	_11QPushButton_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -55463,40 +55463,40 @@ struct classvtable __Y11QPushButton_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI11QPushButton",
-	__Y11QPushButton_vtable_name_1,
+	_11QPushButton_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y11QPushButton_baseinfo[] = {
+struct base_type_info _11QPushButton_baseinfo[] = {
 	};
 
-struct classinfo _Y11QPushButton_classinfo = {
-	"_Y11QPushButton",
+struct classinfo _Z11QPushButton_classinfo = {
+	"_Z11QPushButton",
 	"_ZTV11QPushButton",
 	"_ZTI11QPushButton",	/* RTTI */
 	"_ZTI7QButton",
-	"_ZTT_Y11QPushButton",	/* VTT */
+	"_ZTT11QPushButton",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QPushButton_typeinfo,
-	__Y11QPushButton_vtable,
-	__Y11QPushButton_baseinfo,
+	&_11QPushButton_typeinfo,
+	_11QPushButton_vtable,
+	_11QPushButton_baseinfo,
 	};
 
-char *__Y11QWidgetList_typeinfo_name[] = {
+char *_11QWidgetList_typeinfo_name[] = {
 	"_ZTI8QPtrListI7QWidgetE",
 	};
 
-struct classtypeinfo __Y11QWidgetList_typeinfo = {
+struct classtypeinfo _11QWidgetList_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QWidgetList",
-	__Y11QWidgetList_typeinfo_name,
+	"_ZTS11QWidgetList",
+	_11QWidgetList_typeinfo_name,
 	};
 
-const char *__Y11QWidgetList_vtable_name_0 [] = {
+const char *_11QWidgetList_vtable_name_0 [] = {
 	"_ZNK8QPtrListI7QWidgetE5countEv",
 	"_ZN8QPtrListI7QWidgetE5clearEv",
 	"_ZN11QWidgetListD1Ev",
@@ -55508,46 +55508,46 @@ const char *__Y11QWidgetList_vtable_name_0 [] = {
 	"_ZNK6QGList5writeER11QDataStreamPv",
 	};
 
-struct classvtable __Y11QWidgetList_vtable [1] = {
+struct classvtable _11QWidgetList_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI11QWidgetList",
-	__Y11QWidgetList_vtable_name_0,
+	_11QWidgetList_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QWidgetList_baseinfo[] = {
+struct base_type_info _11QWidgetList_baseinfo[] = {
 	};
 
-struct classinfo _Y11QWidgetList_classinfo = {
-	"_Y11QWidgetList",
+struct classinfo _Z11QWidgetList_classinfo = {
+	"_Z11QWidgetList",
 	"_ZTV11QWidgetList",
 	"_ZTI11QWidgetList",	/* RTTI */
 	"_ZTI8QPtrListI7QWidgetE",
-	"_ZTT_Y11QWidgetList",	/* VTT */
+	"_ZTT11QWidgetList",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QWidgetList_typeinfo,
-	__Y11QWidgetList_vtable,
-	__Y11QWidgetList_baseinfo,
+	&_11QWidgetList_typeinfo,
+	_11QWidgetList_vtable,
+	_11QWidgetList_baseinfo,
 	};
 
-char *__Y9QMenuData_typeinfo_name[] = {
+char *_9QMenuData_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y9QMenuData_typeinfo = {
+struct classtypeinfo _9QMenuData_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y9QMenuData",
-	__Y9QMenuData_typeinfo_name,
+	"_ZTS9QMenuData",
+	_9QMenuData_typeinfo_name,
 	};
 
-const char *__Y9QMenuData_vtable_name_0 [] = {
+const char *_9QMenuData_vtable_name_0 [] = {
 	"_ZN9QMenuDataD1Ev",
 	"_ZN9QMenuDataD0Ev",
 	"_ZN9QMenuData10updateItemEi",
@@ -55559,47 +55559,47 @@ const char *__Y9QMenuData_vtable_name_0 [] = {
 	"_ZN9QMenuData12menuDelPopupEP10QPopupMenu",
 	};
 
-struct classvtable __Y9QMenuData_vtable [1] = {
+struct classvtable _9QMenuData_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI9QMenuData",
-	__Y9QMenuData_vtable_name_0,
+	_9QMenuData_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y9QMenuData_baseinfo[] = {
+struct base_type_info _9QMenuData_baseinfo[] = {
 	};
 
-struct classinfo _Y9QMenuData_classinfo = {
-	"_Y9QMenuData",
+struct classinfo _Z9QMenuData_classinfo = {
+	"_Z9QMenuData",
 	"_ZTV9QMenuData",
 	"_ZTI9QMenuData",	/* RTTI */
 	"",
-	"_ZTT_Y9QMenuData",	/* VTT */
+	"_ZTT9QMenuData",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QMenuData_typeinfo,
-	__Y9QMenuData_vtable,
-	__Y9QMenuData_baseinfo,
+	&_9QMenuData_typeinfo,
+	_9QMenuData_vtable,
+	_9QMenuData_baseinfo,
 	};
 
-char *__Y9QDataView_typeinfo_name[] = {
+char *_9QDataView_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo __Y9QDataView_typeinfo = {
+struct classtypeinfo _9QDataView_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y9QDataView",
-	__Y9QDataView_typeinfo_name,
+	"_ZTS9QDataView",
+	_9QDataView_typeinfo_name,
 	};
 
-const char *__Y9QDataView_vtable_name_0 [] = {
+const char *_9QDataView_vtable_name_0 [] = {
 	"_ZNK9QDataView10metaObjectEv",
 	"_ZNK9QDataView9classNameEv",
 	"_ZN9QDataView7qt_castEPKc",
@@ -55718,7 +55718,7 @@ const char *__Y9QDataView_vtable_name_0 [] = {
 	"_ZN9QDataView11clearValuesEv",
 	};
 
-const char *__Y9QDataView_vtable_name_1 [] = {
+const char *_9QDataView_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QDataViewD1Ev",
 #endif
@@ -55792,14 +55792,14 @@ const char *__Y9QDataView_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y9QDataView_vtable [2] = {
+struct classvtable _9QDataView_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	116,	/* Number of Vfuncs */
 	"_ZTI9QDataView",
-	__Y9QDataView_vtable_name_0,
+	_9QDataView_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -55833,40 +55833,40 @@ struct classvtable __Y9QDataView_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QDataView",
-	__Y9QDataView_vtable_name_1,
+	_9QDataView_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y9QDataView_baseinfo[] = {
+struct base_type_info _9QDataView_baseinfo[] = {
 	};
 
-struct classinfo _Y9QDataView_classinfo = {
-	"_Y9QDataView",
+struct classinfo _Z9QDataView_classinfo = {
+	"_Z9QDataView",
 	"_ZTV9QDataView",
 	"_ZTI9QDataView",	/* RTTI */
 	"_ZTI7QWidget",
-	"_ZTT_Y9QDataView",	/* VTT */
+	"_ZTT9QDataView",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QDataView_typeinfo,
-	__Y9QDataView_vtable,
-	__Y9QDataView_baseinfo,
+	&_9QDataView_typeinfo,
+	_9QDataView_vtable,
+	_9QDataView_baseinfo,
 	};
 
-char *__Y17QSqlEditorFactory_typeinfo_name[] = {
+char *_17QSqlEditorFactory_typeinfo_name[] = {
 	"_ZTI14QEditorFactory",
 	};
 
-struct classtypeinfo __Y17QSqlEditorFactory_typeinfo = {
+struct classtypeinfo _17QSqlEditorFactory_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y17QSqlEditorFactory",
-	__Y17QSqlEditorFactory_typeinfo_name,
+	"_ZTS17QSqlEditorFactory",
+	_17QSqlEditorFactory_typeinfo_name,
 	};
 
-const char *__Y17QSqlEditorFactory_vtable_name_0 [] = {
+const char *_17QSqlEditorFactory_vtable_name_0 [] = {
 	"_ZNK7QObject10metaObjectEv",
 	"_ZNK7QObject9classNameEv",
 	"_ZN7QObject7qt_castEPKc",
@@ -55892,47 +55892,47 @@ const char *__Y17QSqlEditorFactory_vtable_name_0 [] = {
 	"_ZN17QSqlEditorFactory12createEditorEP7QWidgetPK9QSqlField",
 	};
 
-struct classvtable __Y17QSqlEditorFactory_vtable [1] = {
+struct classvtable _17QSqlEditorFactory_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	23,	/* Number of Vfuncs */
 	"_ZTI17QSqlEditorFactory",
-	__Y17QSqlEditorFactory_vtable_name_0,
+	_17QSqlEditorFactory_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y17QSqlEditorFactory_baseinfo[] = {
+struct base_type_info _17QSqlEditorFactory_baseinfo[] = {
 	};
 
-struct classinfo _Y17QSqlEditorFactory_classinfo = {
-	"_Y17QSqlEditorFactory",
+struct classinfo _Z17QSqlEditorFactory_classinfo = {
+	"_Z17QSqlEditorFactory",
 	"_ZTV17QSqlEditorFactory",
 	"_ZTI17QSqlEditorFactory",	/* RTTI */
 	"_ZTI14QEditorFactory",
-	"_ZTT_Y17QSqlEditorFactory",	/* VTT */
+	"_ZTT17QSqlEditorFactory",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y17QSqlEditorFactory_typeinfo,
-	__Y17QSqlEditorFactory_vtable,
-	__Y17QSqlEditorFactory_baseinfo,
+	&_17QSqlEditorFactory_typeinfo,
+	_17QSqlEditorFactory_vtable,
+	_17QSqlEditorFactory_baseinfo,
 	};
 
-char *__Y15QConnectionList_typeinfo_name[] = {
+char *_15QConnectionList_typeinfo_name[] = {
 	"_ZTI8QPtrListI11QConnectionE",
 	};
 
-struct classtypeinfo __Y15QConnectionList_typeinfo = {
+struct classtypeinfo _15QConnectionList_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y15QConnectionList",
-	__Y15QConnectionList_typeinfo_name,
+	"_ZTS15QConnectionList",
+	_15QConnectionList_typeinfo_name,
 	};
 
-const char *__Y15QConnectionList_vtable_name_0 [] = {
+const char *_15QConnectionList_vtable_name_0 [] = {
 	"_ZNK8QPtrListI11QConnectionE5countEv",
 	"_ZN8QPtrListI11QConnectionE5clearEv",
 	"_ZN15QConnectionListD1Ev",
@@ -55944,46 +55944,46 @@ const char *__Y15QConnectionList_vtable_name_0 [] = {
 	"_ZNK6QGList5writeER11QDataStreamPv",
 	};
 
-struct classvtable __Y15QConnectionList_vtable [1] = {
+struct classvtable _15QConnectionList_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI15QConnectionList",
-	__Y15QConnectionList_vtable_name_0,
+	_15QConnectionList_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y15QConnectionList_baseinfo[] = {
+struct base_type_info _15QConnectionList_baseinfo[] = {
 	};
 
-struct classinfo _Y15QConnectionList_classinfo = {
-	"_Y15QConnectionList",
+struct classinfo _Z15QConnectionList_classinfo = {
+	"_Z15QConnectionList",
 	"_ZTV15QConnectionList",
 	"_ZTI15QConnectionList",	/* RTTI */
 	"_ZTI8QPtrListI11QConnectionE",
-	"_ZTT_Y15QConnectionList",	/* VTT */
+	"_ZTT15QConnectionList",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y15QConnectionList_typeinfo,
-	__Y15QConnectionList_vtable,
-	__Y15QConnectionList_baseinfo,
+	&_15QConnectionList_typeinfo,
+	_15QConnectionList_vtable,
+	_15QConnectionList_baseinfo,
 	};
 
-char *__Y10QSqlCursor_typeinfo_name[] = {
+char *_10QSqlCursor_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y10QSqlCursor_typeinfo = {
+struct classtypeinfo _10QSqlCursor_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
-	"_ZTS_Y10QSqlCursor",
-	__Y10QSqlCursor_typeinfo_name,
+	"_ZTS10QSqlCursor",
+	_10QSqlCursor_typeinfo_name,
 	};
 
-const char *__Y10QSqlCursor_vtable_name_0 [] = {
+const char *_10QSqlCursor_vtable_name_0 [] = {
 	"_ZN10QSqlCursorD1Ev",
 	"_ZN10QSqlCursorD0Ev",
 	"_ZNK10QSqlCursor5valueEi",
@@ -56030,7 +56030,7 @@ const char *__Y10QSqlCursor_vtable_name_0 [] = {
 	"_ZNK10QSqlCursor8toStringERK9QSqlIndexP10QSqlRecordRK7QStringS7_S7_",
 	};
 
-const char *__Y10QSqlCursor_vtable_name_1 [] = {
+const char *_10QSqlCursor_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn8_N10QSqlCursorD1Ev",
 #endif
@@ -56144,14 +56144,14 @@ const char *__Y10QSqlCursor_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable __Y10QSqlCursor_vtable [2] = {
+struct classvtable _10QSqlCursor_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	44,	/* Number of Vfuncs */
 	"_ZTI10QSqlCursor",
-	__Y10QSqlCursor_vtable_name_0,
+	_10QSqlCursor_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -56185,11 +56185,11 @@ struct classvtable __Y10QSqlCursor_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI10QSqlCursor",
-	__Y10QSqlCursor_vtable_name_1,
+	_10QSqlCursor_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y10QSqlCursor_baseinfo[] = {
+struct base_type_info _10QSqlCursor_baseinfo[] = {
 	{"_ZTI10QSqlRecord",	2U},
 #if defined __i386__
 	{"_ZTI9QSqlQuery",	2050U},
@@ -56214,33 +56214,33 @@ struct base_type_info __Y10QSqlCursor_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Y10QSqlCursor_classinfo = {
-	"_Y10QSqlCursor",
+struct classinfo _Z10QSqlCursor_classinfo = {
+	"_Z10QSqlCursor",
 	"_ZTV10QSqlCursor",
 	"_ZTI10QSqlCursor",	/* RTTI */
 	"_ZTI10QSqlRecord",
-	"_ZTT_Y10QSqlCursor",	/* VTT */
+	"_ZTT10QSqlCursor",	/* VTT */
 	2,
 	0,
 	2,
 	0,	/* numVTT */
 	0U,
-	&__Y10QSqlCursor_typeinfo,
-	__Y10QSqlCursor_vtable,
-	__Y10QSqlCursor_baseinfo,
+	&_10QSqlCursor_typeinfo,
+	_10QSqlCursor_vtable,
+	_10QSqlCursor_baseinfo,
 	};
 
-char *__Y7QAction_typeinfo_name[] = {
+char *_7QAction_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y7QAction_typeinfo = {
+struct classtypeinfo _7QAction_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y7QAction",
-	__Y7QAction_typeinfo_name,
+	"_ZTS7QAction",
+	_7QAction_typeinfo_name,
 	};
 
-const char *__Y7QAction_vtable_name_0 [] = {
+const char *_7QAction_vtable_name_0 [] = {
 	"_ZNK7QAction10metaObjectEv",
 	"_ZNK7QAction9classNameEv",
 	"_ZN7QAction7qt_castEPKc",
@@ -56278,136 +56278,136 @@ const char *__Y7QAction_vtable_name_0 [] = {
 	"_ZN7QAction10setEnabledEb",
 	};
 
-struct classvtable __Y7QAction_vtable [1] = {
+struct classvtable _7QAction_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	35,	/* Number of Vfuncs */
 	"_ZTI7QAction",
-	__Y7QAction_vtable_name_0,
+	_7QAction_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y7QAction_baseinfo[] = {
+struct base_type_info _7QAction_baseinfo[] = {
 	};
 
-struct classinfo _Y7QAction_classinfo = {
-	"_Y7QAction",
+struct classinfo _Z7QAction_classinfo = {
+	"_Z7QAction",
 	"_ZTV7QAction",
 	"_ZTI7QAction",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y7QAction",	/* VTT */
+	"_ZTT7QAction",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y7QAction_typeinfo,
-	__Y7QAction_vtable,
-	__Y7QAction_baseinfo,
+	&_7QAction_typeinfo,
+	_7QAction_vtable,
+	_7QAction_baseinfo,
 	};
 
-char *__Y12QHostAddress_typeinfo_name[] = {
+char *_12QHostAddress_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y12QHostAddress_typeinfo = {
+struct classtypeinfo _12QHostAddress_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y12QHostAddress",
-	__Y12QHostAddress_typeinfo_name,
+	"_ZTS12QHostAddress",
+	_12QHostAddress_typeinfo_name,
 	};
 
-const char *__Y12QHostAddress_vtable_name_0 [] = {
+const char *_12QHostAddress_vtable_name_0 [] = {
 	"_ZN12QHostAddressD1Ev",
 	"_ZN12QHostAddressD0Ev",
 	};
 
-struct classvtable __Y12QHostAddress_vtable [1] = {
+struct classvtable _12QHostAddress_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI12QHostAddress",
-	__Y12QHostAddress_vtable_name_0,
+	_12QHostAddress_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y12QHostAddress_baseinfo[] = {
+struct base_type_info _12QHostAddress_baseinfo[] = {
 	};
 
-struct classinfo _Y12QHostAddress_classinfo = {
-	"_Y12QHostAddress",
+struct classinfo _Z12QHostAddress_classinfo = {
+	"_Z12QHostAddress",
 	"_ZTV12QHostAddress",
 	"_ZTI12QHostAddress",	/* RTTI */
 	"",
-	"_ZTT_Y12QHostAddress",	/* VTT */
+	"_ZTT12QHostAddress",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QHostAddress_typeinfo,
-	__Y12QHostAddress_vtable,
-	__Y12QHostAddress_baseinfo,
+	&_12QHostAddress_typeinfo,
+	_12QHostAddress_vtable,
+	_12QHostAddress_baseinfo,
 	};
 
-char *__Y11QWheelEvent_typeinfo_name[] = {
+char *_11QWheelEvent_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo __Y11QWheelEvent_typeinfo = {
+struct classtypeinfo _11QWheelEvent_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QWheelEvent",
-	__Y11QWheelEvent_typeinfo_name,
+	"_ZTS11QWheelEvent",
+	_11QWheelEvent_typeinfo_name,
 	};
 
-const char *__Y11QWheelEvent_vtable_name_0 [] = {
+const char *_11QWheelEvent_vtable_name_0 [] = {
 	"_ZN11QWheelEventD1Ev",
 	"_ZN11QWheelEventD0Ev",
 	};
 
-struct classvtable __Y11QWheelEvent_vtable [1] = {
+struct classvtable _11QWheelEvent_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI11QWheelEvent",
-	__Y11QWheelEvent_vtable_name_0,
+	_11QWheelEvent_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QWheelEvent_baseinfo[] = {
+struct base_type_info _11QWheelEvent_baseinfo[] = {
 	};
 
-struct classinfo _Y11QWheelEvent_classinfo = {
-	"_Y11QWheelEvent",
+struct classinfo _Z11QWheelEvent_classinfo = {
+	"_Z11QWheelEvent",
 	"_ZTV11QWheelEvent",
 	"_ZTI11QWheelEvent",	/* RTTI */
 	"_ZTI6QEvent",
-	"_ZTT_Y11QWheelEvent",	/* VTT */
+	"_ZTT11QWheelEvent",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QWheelEvent_typeinfo,
-	__Y11QWheelEvent_vtable,
-	__Y11QWheelEvent_baseinfo,
+	&_11QWheelEvent_typeinfo,
+	_11QWheelEvent_vtable,
+	_11QWheelEvent_baseinfo,
 	};
 
-char *__Y12QDataBrowser_typeinfo_name[] = {
+char *_12QDataBrowser_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo __Y12QDataBrowser_typeinfo = {
+struct classtypeinfo _12QDataBrowser_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y12QDataBrowser",
-	__Y12QDataBrowser_typeinfo_name,
+	"_ZTS12QDataBrowser",
+	_12QDataBrowser_typeinfo_name,
 	};
 
-const char *__Y12QDataBrowser_vtable_name_0 [] = {
+const char *_12QDataBrowser_vtable_name_0 [] = {
 	"_ZNK12QDataBrowser10metaObjectEv",
 	"_ZNK12QDataBrowser9classNameEv",
 	"_ZN12QDataBrowser7qt_castEPKc",
@@ -56548,7 +56548,7 @@ const char *__Y12QDataBrowser_vtable_name_0 [] = {
 	"_ZN12QDataBrowser11handleErrorERK9QSqlError",
 	};
 
-const char *__Y12QDataBrowser_vtable_name_1 [] = {
+const char *_12QDataBrowser_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N12QDataBrowserD1Ev",
 #endif
@@ -56622,14 +56622,14 @@ const char *__Y12QDataBrowser_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y12QDataBrowser_vtable [2] = {
+struct classvtable _12QDataBrowser_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	138,	/* Number of Vfuncs */
 	"_ZTI12QDataBrowser",
-	__Y12QDataBrowser_vtable_name_0,
+	_12QDataBrowser_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -56663,40 +56663,40 @@ struct classvtable __Y12QDataBrowser_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI12QDataBrowser",
-	__Y12QDataBrowser_vtable_name_1,
+	_12QDataBrowser_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y12QDataBrowser_baseinfo[] = {
+struct base_type_info _12QDataBrowser_baseinfo[] = {
 	};
 
-struct classinfo _Y12QDataBrowser_classinfo = {
-	"_Y12QDataBrowser",
+struct classinfo _Z12QDataBrowser_classinfo = {
+	"_Z12QDataBrowser",
 	"_ZTV12QDataBrowser",
 	"_ZTI12QDataBrowser",	/* RTTI */
 	"_ZTI7QWidget",
-	"_ZTT_Y12QDataBrowser",	/* VTT */
+	"_ZTT12QDataBrowser",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y12QDataBrowser_typeinfo,
-	__Y12QDataBrowser_vtable,
-	__Y12QDataBrowser_baseinfo,
+	&_12QDataBrowser_typeinfo,
+	_12QDataBrowser_vtable,
+	_12QDataBrowser_baseinfo,
 	};
 
-char *__Y9QTimeEdit_typeinfo_name[] = {
+char *_9QTimeEdit_typeinfo_name[] = {
 	"_ZTI17QDateTimeEditBase",
 	};
 
-struct classtypeinfo __Y9QTimeEdit_typeinfo = {
+struct classtypeinfo _9QTimeEdit_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y9QTimeEdit",
-	__Y9QTimeEdit_typeinfo_name,
+	"_ZTS9QTimeEdit",
+	_9QTimeEdit_typeinfo_name,
 	};
 
-const char *__Y9QTimeEdit_vtable_name_0 [] = {
+const char *_9QTimeEdit_vtable_name_0 [] = {
 	"_ZNK9QTimeEdit10metaObjectEv",
 	"_ZNK9QTimeEdit9classNameEv",
 	"_ZN9QTimeEdit7qt_castEPKc",
@@ -56825,7 +56825,7 @@ const char *__Y9QTimeEdit_vtable_name_0 [] = {
 	"_ZN9QTimeEdit9setSecondEi",
 	};
 
-const char *__Y9QTimeEdit_vtable_name_1 [] = {
+const char *_9QTimeEdit_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QTimeEditD1Ev",
 #endif
@@ -56899,14 +56899,14 @@ const char *__Y9QTimeEdit_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y9QTimeEdit_vtable [2] = {
+struct classvtable _9QTimeEdit_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	126,	/* Number of Vfuncs */
 	"_ZTI9QTimeEdit",
-	__Y9QTimeEdit_vtable_name_0,
+	_9QTimeEdit_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -56940,85 +56940,85 @@ struct classvtable __Y9QTimeEdit_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QTimeEdit",
-	__Y9QTimeEdit_vtable_name_1,
+	_9QTimeEdit_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y9QTimeEdit_baseinfo[] = {
+struct base_type_info _9QTimeEdit_baseinfo[] = {
 	};
 
-struct classinfo _Y9QTimeEdit_classinfo = {
-	"_Y9QTimeEdit",
+struct classinfo _Z9QTimeEdit_classinfo = {
+	"_Z9QTimeEdit",
 	"_ZTV9QTimeEdit",
 	"_ZTI9QTimeEdit",	/* RTTI */
 	"_ZTI17QDateTimeEditBase",
-	"_ZTT_Y9QTimeEdit",	/* VTT */
+	"_ZTT9QTimeEdit",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QTimeEdit_typeinfo,
-	__Y9QTimeEdit_vtable,
-	__Y9QTimeEdit_baseinfo,
+	&_9QTimeEdit_typeinfo,
+	_9QTimeEdit_vtable,
+	_9QTimeEdit_baseinfo,
 	};
 
-char *__Y13QIconDragItem_typeinfo_name[] = {
+char *_13QIconDragItem_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y13QIconDragItem_typeinfo = {
+struct classtypeinfo _13QIconDragItem_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y13QIconDragItem",
-	__Y13QIconDragItem_typeinfo_name,
+	"_ZTS13QIconDragItem",
+	_13QIconDragItem_typeinfo_name,
 	};
 
-const char *__Y13QIconDragItem_vtable_name_0 [] = {
+const char *_13QIconDragItem_vtable_name_0 [] = {
 	"_ZN13QIconDragItemD1Ev",
 	"_ZN13QIconDragItemD0Ev",
 	"_ZNK13QIconDragItem4dataEv",
 	"_ZN13QIconDragItem7setDataERK9QMemArrayIcE",
 	};
 
-struct classvtable __Y13QIconDragItem_vtable [1] = {
+struct classvtable _13QIconDragItem_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	4,	/* Number of Vfuncs */
 	"_ZTI13QIconDragItem",
-	__Y13QIconDragItem_vtable_name_0,
+	_13QIconDragItem_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y13QIconDragItem_baseinfo[] = {
+struct base_type_info _13QIconDragItem_baseinfo[] = {
 	};
 
-struct classinfo _Y13QIconDragItem_classinfo = {
-	"_Y13QIconDragItem",
+struct classinfo _Z13QIconDragItem_classinfo = {
+	"_Z13QIconDragItem",
 	"_ZTV13QIconDragItem",
 	"_ZTI13QIconDragItem",	/* RTTI */
 	"",
-	"_ZTT_Y13QIconDragItem",	/* VTT */
+	"_ZTT13QIconDragItem",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y13QIconDragItem_typeinfo,
-	__Y13QIconDragItem_vtable,
-	__Y13QIconDragItem_baseinfo,
+	&_13QIconDragItem_typeinfo,
+	_13QIconDragItem_vtable,
+	_13QIconDragItem_baseinfo,
 	};
 
-char *__Y13QSqlFieldInfo_typeinfo_name[] = {
+char *_13QSqlFieldInfo_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y13QSqlFieldInfo_typeinfo = {
+struct classtypeinfo _13QSqlFieldInfo_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y13QSqlFieldInfo",
-	__Y13QSqlFieldInfo_typeinfo_name,
+	"_ZTS13QSqlFieldInfo",
+	_13QSqlFieldInfo_typeinfo_name,
 	};
 
-const char *__Y13QSqlFieldInfo_vtable_name_0 [] = {
+const char *_13QSqlFieldInfo_vtable_name_0 [] = {
 	"_ZN13QSqlFieldInfoD1Ev",
 	"_ZN13QSqlFieldInfoD0Ev",
 	"_ZN13QSqlFieldInfo7setTrimEb",
@@ -57026,47 +57026,47 @@ const char *__Y13QSqlFieldInfo_vtable_name_0 [] = {
 	"_ZN13QSqlFieldInfo13setCalculatedEb",
 	};
 
-struct classvtable __Y13QSqlFieldInfo_vtable [1] = {
+struct classvtable _13QSqlFieldInfo_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI13QSqlFieldInfo",
-	__Y13QSqlFieldInfo_vtable_name_0,
+	_13QSqlFieldInfo_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y13QSqlFieldInfo_baseinfo[] = {
+struct base_type_info _13QSqlFieldInfo_baseinfo[] = {
 	};
 
-struct classinfo _Y13QSqlFieldInfo_classinfo = {
-	"_Y13QSqlFieldInfo",
+struct classinfo _Z13QSqlFieldInfo_classinfo = {
+	"_Z13QSqlFieldInfo",
 	"_ZTV13QSqlFieldInfo",
 	"_ZTI13QSqlFieldInfo",	/* RTTI */
 	"",
-	"_ZTT_Y13QSqlFieldInfo",	/* VTT */
+	"_ZTT13QSqlFieldInfo",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y13QSqlFieldInfo_typeinfo,
-	__Y13QSqlFieldInfo_vtable,
-	__Y13QSqlFieldInfo_baseinfo,
+	&_13QSqlFieldInfo_typeinfo,
+	_13QSqlFieldInfo_vtable,
+	_13QSqlFieldInfo_baseinfo,
 	};
 
-char *__Y4QFtp_typeinfo_name[] = {
+char *_4QFtp_typeinfo_name[] = {
 	"_ZTI16QNetworkProtocol",
 	};
 
-struct classtypeinfo __Y4QFtp_typeinfo = {
+struct classtypeinfo _4QFtp_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y4QFtp",
-	__Y4QFtp_typeinfo_name,
+	"_ZTS4QFtp",
+	_4QFtp_typeinfo_name,
 	};
 
-const char *__Y4QFtp_vtable_name_0 [] = {
+const char *_4QFtp_vtable_name_0 [] = {
 	"_ZNK4QFtp10metaObjectEv",
 	"_ZNK4QFtp9classNameEv",
 	"_ZN4QFtp7qt_castEPKc",
@@ -57105,46 +57105,46 @@ const char *__Y4QFtp_vtable_name_0 [] = {
 	"_ZN4QFtp15checkConnectionEP17QNetworkOperation",
 	};
 
-struct classvtable __Y4QFtp_vtable [1] = {
+struct classvtable _4QFtp_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	36,	/* Number of Vfuncs */
 	"_ZTI4QFtp",
-	__Y4QFtp_vtable_name_0,
+	_4QFtp_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y4QFtp_baseinfo[] = {
+struct base_type_info _4QFtp_baseinfo[] = {
 	};
 
-struct classinfo _Y4QFtp_classinfo = {
-	"_Y4QFtp",
+struct classinfo _Z4QFtp_classinfo = {
+	"_Z4QFtp",
 	"_ZTV4QFtp",
 	"_ZTI4QFtp",	/* RTTI */
 	"_ZTI16QNetworkProtocol",
-	"_ZTT_Y4QFtp",	/* VTT */
+	"_ZTT4QFtp",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y4QFtp_typeinfo,
-	__Y4QFtp_vtable,
-	__Y4QFtp_baseinfo,
+	&_4QFtp_typeinfo,
+	_4QFtp_vtable,
+	_4QFtp_baseinfo,
 	};
 
-char *__Y11QLayoutItem_typeinfo_name[] = {
+char *_11QLayoutItem_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y11QLayoutItem_typeinfo = {
+struct classtypeinfo _11QLayoutItem_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y11QLayoutItem",
-	__Y11QLayoutItem_typeinfo_name,
+	"_ZTS11QLayoutItem",
+	_11QLayoutItem_typeinfo_name,
 	};
 
-const char *__Y11QLayoutItem_vtable_name_0 [] = {
+const char *_11QLayoutItem_vtable_name_0 [] = {
 	"_ZN11QLayoutItemD1Ev",
 	"_ZN11QLayoutItemD0Ev",
 	"__cxa_pure_virtual",
@@ -57164,92 +57164,92 @@ const char *__Y11QLayoutItem_vtable_name_0 [] = {
 	"_ZN11QLayoutItem12setAlignmentEi",
 	};
 
-struct classvtable __Y11QLayoutItem_vtable [1] = {
+struct classvtable _11QLayoutItem_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	17,	/* Number of Vfuncs */
 	"_ZTI11QLayoutItem",
-	__Y11QLayoutItem_vtable_name_0,
+	_11QLayoutItem_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QLayoutItem_baseinfo[] = {
+struct base_type_info _11QLayoutItem_baseinfo[] = {
 	};
 
-struct classinfo _Y11QLayoutItem_classinfo = {
-	"_Y11QLayoutItem",
+struct classinfo _Z11QLayoutItem_classinfo = {
+	"_Z11QLayoutItem",
 	"_ZTV11QLayoutItem",
 	"_ZTI11QLayoutItem",	/* RTTI */
 	"",
-	"_ZTT_Y11QLayoutItem",	/* VTT */
+	"_ZTT11QLayoutItem",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QLayoutItem_typeinfo,
-	__Y11QLayoutItem_vtable,
-	__Y11QLayoutItem_baseinfo,
+	&_11QLayoutItem_typeinfo,
+	_11QLayoutItem_vtable,
+	_11QLayoutItem_baseinfo,
 	};
 
-char *__Y10QMoveEvent_typeinfo_name[] = {
+char *_10QMoveEvent_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo __Y10QMoveEvent_typeinfo = {
+struct classtypeinfo _10QMoveEvent_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y10QMoveEvent",
-	__Y10QMoveEvent_typeinfo_name,
+	"_ZTS10QMoveEvent",
+	_10QMoveEvent_typeinfo_name,
 	};
 
-const char *__Y10QMoveEvent_vtable_name_0 [] = {
+const char *_10QMoveEvent_vtable_name_0 [] = {
 	"_ZN10QMoveEventD1Ev",
 	"_ZN10QMoveEventD0Ev",
 	};
 
-struct classvtable __Y10QMoveEvent_vtable [1] = {
+struct classvtable _10QMoveEvent_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI10QMoveEvent",
-	__Y10QMoveEvent_vtable_name_0,
+	_10QMoveEvent_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y10QMoveEvent_baseinfo[] = {
+struct base_type_info _10QMoveEvent_baseinfo[] = {
 	};
 
-struct classinfo _Y10QMoveEvent_classinfo = {
-	"_Y10QMoveEvent",
+struct classinfo _Z10QMoveEvent_classinfo = {
+	"_Z10QMoveEvent",
 	"_ZTV10QMoveEvent",
 	"_ZTI10QMoveEvent",	/* RTTI */
 	"_ZTI6QEvent",
-	"_ZTT_Y10QMoveEvent",	/* VTT */
+	"_ZTT10QMoveEvent",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QMoveEvent_typeinfo,
-	__Y10QMoveEvent_vtable,
-	__Y10QMoveEvent_baseinfo,
+	&_10QMoveEvent_typeinfo,
+	_10QMoveEvent_vtable,
+	_10QMoveEvent_baseinfo,
 	};
 
-char *__Y9QTextEdit_typeinfo_name[] = {
+char *_9QTextEdit_typeinfo_name[] = {
 	"_ZTI11QScrollView",
 	};
 
-struct classtypeinfo __Y9QTextEdit_typeinfo = {
+struct classtypeinfo _9QTextEdit_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y9QTextEdit",
-	__Y9QTextEdit_typeinfo_name,
+	"_ZTS9QTextEdit",
+	_9QTextEdit_typeinfo_name,
 	};
 
-const char *__Y9QTextEdit_vtable_name_0 [] = {
+const char *_9QTextEdit_vtable_name_0 [] = {
 	"_ZNK9QTextEdit10metaObjectEv",
 	"_ZNK9QTextEdit9classNameEv",
 	"_ZN9QTextEdit7qt_castEPKc",
@@ -57476,7 +57476,7 @@ const char *__Y9QTextEdit_vtable_name_0 [] = {
 	"_ZN9QTextEdit15emitLinkClickedERK7QString",
 	};
 
-const char *__Y9QTextEdit_vtable_name_1 [] = {
+const char *_9QTextEdit_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QTextEditD1Ev",
 #endif
@@ -57550,14 +57550,14 @@ const char *__Y9QTextEdit_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y9QTextEdit_vtable [2] = {
+struct classvtable _9QTextEdit_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	224,	/* Number of Vfuncs */
 	"_ZTI9QTextEdit",
-	__Y9QTextEdit_vtable_name_0,
+	_9QTextEdit_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -57591,40 +57591,40 @@ struct classvtable __Y9QTextEdit_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QTextEdit",
-	__Y9QTextEdit_vtable_name_1,
+	_9QTextEdit_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y9QTextEdit_baseinfo[] = {
+struct base_type_info _9QTextEdit_baseinfo[] = {
 	};
 
-struct classinfo _Y9QTextEdit_classinfo = {
-	"_Y9QTextEdit",
+struct classinfo _Z9QTextEdit_classinfo = {
+	"_Z9QTextEdit",
 	"_ZTV9QTextEdit",
 	"_ZTI9QTextEdit",	/* RTTI */
 	"_ZTI11QScrollView",
-	"_ZTT_Y9QTextEdit",	/* VTT */
+	"_ZTT9QTextEdit",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QTextEdit_typeinfo,
-	__Y9QTextEdit_vtable,
-	__Y9QTextEdit_baseinfo,
+	&_9QTextEdit_typeinfo,
+	_9QTextEdit_vtable,
+	_9QTextEdit_baseinfo,
 	};
 
-char *__Y17QFileIconProvider_typeinfo_name[] = {
+char *_17QFileIconProvider_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo __Y17QFileIconProvider_typeinfo = {
+struct classtypeinfo _17QFileIconProvider_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y17QFileIconProvider",
-	__Y17QFileIconProvider_typeinfo_name,
+	"_ZTS17QFileIconProvider",
+	_17QFileIconProvider_typeinfo_name,
 	};
 
-const char *__Y17QFileIconProvider_vtable_name_0 [] = {
+const char *_17QFileIconProvider_vtable_name_0 [] = {
 	"_ZNK17QFileIconProvider10metaObjectEv",
 	"_ZNK17QFileIconProvider9classNameEv",
 	"_ZN17QFileIconProvider7qt_castEPKc",
@@ -57649,47 +57649,47 @@ const char *__Y17QFileIconProvider_vtable_name_0 [] = {
 	"_ZN17QFileIconProvider6pixmapERK9QFileInfo",
 	};
 
-struct classvtable __Y17QFileIconProvider_vtable [1] = {
+struct classvtable _17QFileIconProvider_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	22,	/* Number of Vfuncs */
 	"_ZTI17QFileIconProvider",
-	__Y17QFileIconProvider_vtable_name_0,
+	_17QFileIconProvider_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y17QFileIconProvider_baseinfo[] = {
+struct base_type_info _17QFileIconProvider_baseinfo[] = {
 	};
 
-struct classinfo _Y17QFileIconProvider_classinfo = {
-	"_Y17QFileIconProvider",
+struct classinfo _Z17QFileIconProvider_classinfo = {
+	"_Z17QFileIconProvider",
 	"_ZTV17QFileIconProvider",
 	"_ZTI17QFileIconProvider",	/* RTTI */
 	"_ZTI7QObject",
-	"_ZTT_Y17QFileIconProvider",	/* VTT */
+	"_ZTT17QFileIconProvider",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y17QFileIconProvider_typeinfo,
-	__Y17QFileIconProvider_vtable,
-	__Y17QFileIconProvider_baseinfo,
+	&_17QFileIconProvider_typeinfo,
+	_17QFileIconProvider_vtable,
+	_17QFileIconProvider_baseinfo,
 	};
 
-char *__Y9QSqlIndex_typeinfo_name[] = {
+char *_9QSqlIndex_typeinfo_name[] = {
 	"_ZTI10QSqlRecord",
 	};
 
-struct classtypeinfo __Y9QSqlIndex_typeinfo = {
+struct classtypeinfo _9QSqlIndex_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y9QSqlIndex",
-	__Y9QSqlIndex_typeinfo_name,
+	"_ZTS9QSqlIndex",
+	_9QSqlIndex_typeinfo_name,
 	};
 
-const char *__Y9QSqlIndex_vtable_name_0 [] = {
+const char *_9QSqlIndex_vtable_name_0 [] = {
 	"_ZN9QSqlIndexD1Ev",
 	"_ZN9QSqlIndexD0Ev",
 	"_ZNK10QSqlRecord5valueEi",
@@ -57713,46 +57713,46 @@ const char *__Y9QSqlIndex_vtable_name_0 [] = {
 	"_ZN9QSqlIndex13setDescendingEib",
 	};
 
-struct classvtable __Y9QSqlIndex_vtable [1] = {
+struct classvtable _9QSqlIndex_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI9QSqlIndex",
-	__Y9QSqlIndex_vtable_name_0,
+	_9QSqlIndex_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y9QSqlIndex_baseinfo[] = {
+struct base_type_info _9QSqlIndex_baseinfo[] = {
 	};
 
-struct classinfo _Y9QSqlIndex_classinfo = {
-	"_Y9QSqlIndex",
+struct classinfo _Z9QSqlIndex_classinfo = {
+	"_Z9QSqlIndex",
 	"_ZTV9QSqlIndex",
 	"_ZTI9QSqlIndex",	/* RTTI */
 	"_ZTI10QSqlRecord",
-	"_ZTT_Y9QSqlIndex",	/* VTT */
+	"_ZTT9QSqlIndex",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QSqlIndex_typeinfo,
-	__Y9QSqlIndex_vtable,
-	__Y9QSqlIndex_baseinfo,
+	&_9QSqlIndex_typeinfo,
+	_9QSqlIndex_vtable,
+	_9QSqlIndex_baseinfo,
 	};
 
-char *__Y9QSqlField_typeinfo_name[] = {
+char *_9QSqlField_typeinfo_name[] = {
 	};
 
-struct classtypeinfo __Y9QSqlField_typeinfo = {
+struct classtypeinfo _9QSqlField_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
-	"_ZTS_Y9QSqlField",
-	__Y9QSqlField_typeinfo_name,
+	"_ZTS9QSqlField",
+	_9QSqlField_typeinfo_name,
 	};
 
-const char *__Y9QSqlField_vtable_name_0 [] = {
+const char *_9QSqlField_vtable_name_0 [] = {
 	"_ZN9QSqlFieldD1Ev",
 	"_ZN9QSqlFieldD0Ev",
 	"_ZN9QSqlField8setValueERK8QVariant",
@@ -57762,47 +57762,47 @@ const char *__Y9QSqlField_vtable_name_0 [] = {
 	"_ZN9QSqlField11setReadOnlyEb",
 	};
 
-struct classvtable __Y9QSqlField_vtable [1] = {
+struct classvtable _9QSqlField_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	7,	/* Number of Vfuncs */
 	"_ZTI9QSqlField",
-	__Y9QSqlField_vtable_name_0,
+	_9QSqlField_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y9QSqlField_baseinfo[] = {
+struct base_type_info _9QSqlField_baseinfo[] = {
 	};
 
-struct classinfo _Y9QSqlField_classinfo = {
-	"_Y9QSqlField",
+struct classinfo _Z9QSqlField_classinfo = {
+	"_Z9QSqlField",
 	"_ZTV9QSqlField",
 	"_ZTI9QSqlField",	/* RTTI */
 	"",
-	"_ZTT_Y9QSqlField",	/* VTT */
+	"_ZTT9QSqlField",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y9QSqlField_typeinfo,
-	__Y9QSqlField_vtable,
-	__Y9QSqlField_baseinfo,
+	&_9QSqlField_typeinfo,
+	_9QSqlField_vtable,
+	_9QSqlField_baseinfo,
 	};
 
-char *__Y10QVGroupBox_typeinfo_name[] = {
+char *_10QVGroupBox_typeinfo_name[] = {
 	"_ZTI9QGroupBox",
 	};
 
-struct classtypeinfo __Y10QVGroupBox_typeinfo = {
+struct classtypeinfo _10QVGroupBox_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y10QVGroupBox",
-	__Y10QVGroupBox_typeinfo_name,
+	"_ZTS10QVGroupBox",
+	_10QVGroupBox_typeinfo_name,
 	};
 
-const char *__Y10QVGroupBox_vtable_name_0 [] = {
+const char *_10QVGroupBox_vtable_name_0 [] = {
 	"_ZNK10QVGroupBox10metaObjectEv",
 	"_ZNK10QVGroupBox9classNameEv",
 	"_ZN10QVGroupBox7qt_castEPKc",
@@ -57926,7 +57926,7 @@ const char *__Y10QVGroupBox_vtable_name_0 [] = {
 	"_ZN9QGroupBox12setAlignmentEi",
 	};
 
-const char *__Y10QVGroupBox_vtable_name_1 [] = {
+const char *_10QVGroupBox_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QVGroupBoxD1Ev",
 #endif
@@ -58000,14 +58000,14 @@ const char *__Y10QVGroupBox_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable __Y10QVGroupBox_vtable [2] = {
+struct classvtable _10QVGroupBox_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	121,	/* Number of Vfuncs */
 	"_ZTI10QVGroupBox",
-	__Y10QVGroupBox_vtable_name_0,
+	_10QVGroupBox_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -58041,373 +58041,373 @@ struct classvtable __Y10QVGroupBox_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI10QVGroupBox",
-	__Y10QVGroupBox_vtable_name_1,
+	_10QVGroupBox_vtable_name_1,
 	},
 };
 
-struct base_type_info __Y10QVGroupBox_baseinfo[] = {
+struct base_type_info _10QVGroupBox_baseinfo[] = {
 	};
 
-struct classinfo _Y10QVGroupBox_classinfo = {
-	"_Y10QVGroupBox",
+struct classinfo _Z10QVGroupBox_classinfo = {
+	"_Z10QVGroupBox",
 	"_ZTV10QVGroupBox",
 	"_ZTI10QVGroupBox",	/* RTTI */
 	"_ZTI9QGroupBox",
-	"_ZTT_Y10QVGroupBox",	/* VTT */
+	"_ZTT10QVGroupBox",	/* VTT */
 	2,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y10QVGroupBox_typeinfo,
-	__Y10QVGroupBox_vtable,
-	__Y10QVGroupBox_baseinfo,
+	&_10QVGroupBox_typeinfo,
+	_10QVGroupBox_vtable,
+	_10QVGroupBox_baseinfo,
 	};
 
-char *__Y11QCloseEvent_typeinfo_name[] = {
+char *_11QCloseEvent_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo __Y11QCloseEvent_typeinfo = {
+struct classtypeinfo _11QCloseEvent_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS_Y11QCloseEvent",
-	__Y11QCloseEvent_typeinfo_name,
+	"_ZTS11QCloseEvent",
+	_11QCloseEvent_typeinfo_name,
 	};
 
-const char *__Y11QCloseEvent_vtable_name_0 [] = {
+const char *_11QCloseEvent_vtable_name_0 [] = {
 	"_ZN11QCloseEventD1Ev",
 	"_ZN11QCloseEventD0Ev",
 	};
 
-struct classvtable __Y11QCloseEvent_vtable [1] = {
+struct classvtable _11QCloseEvent_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI11QCloseEvent",
-	__Y11QCloseEvent_vtable_name_0,
+	_11QCloseEvent_vtable_name_0,
 	},
 };
 
-struct base_type_info __Y11QCloseEvent_baseinfo[] = {
+struct base_type_info _11QCloseEvent_baseinfo[] = {
 	};
 
-struct classinfo _Y11QCloseEvent_classinfo = {
-	"_Y11QCloseEvent",
+struct classinfo _Z11QCloseEvent_classinfo = {
+	"_Z11QCloseEvent",
 	"_ZTV11QCloseEvent",
 	"_ZTI11QCloseEvent",	/* RTTI */
 	"_ZTI6QEvent",
-	"_ZTT_Y11QCloseEvent",	/* VTT */
+	"_ZTT11QCloseEvent",	/* VTT */
 	1,
 	1,
 	0,
 	0,	/* numVTT */
 	0U,
-	&__Y11QCloseEvent_typeinfo,
-	__Y11QCloseEvent_vtable,
-	__Y11QCloseEvent_baseinfo,
+	&_11QCloseEvent_typeinfo,
+	_11QCloseEvent_vtable,
+	_11QCloseEvent_baseinfo,
 	};
 
 struct classinfo *libqt_mt_so_3_classinfo[] = {
-	&_Y10QUtf8Codec_classinfo,
-	&_Y6QTimer_classinfo,
-	&_Y18QXmlEntityResolver_classinfo,
-	&_Y21QObjectCleanupHandler_classinfo,
-	&_Y14QPtrCollection_classinfo,
-	&_Y5QHBox_classinfo,
-	&_Y8QGVector_classinfo,
-	&_Y8QToolBar_classinfo,
-	&_Y11QDataSource_classinfo,
-	&_Y11QCanvasItem_classinfo,
-	&_Y14QWaitCondition_classinfo,
-	&_Y6QFrame_classinfo,
-	&_Y11QScrollView_classinfo,
-	&_Y12QTextBrowser_classinfo,
-	&_Y13QCanvasSprite_classinfo,
-	&_Y9QSplitter_classinfo,
-	&_Y9QLineEdit_classinfo,
-	&_Y5QVBox_classinfo,
-	&_Y17QContextMenuEvent_classinfo,
-	&_Y8QProcess_classinfo,
-	&_Y12QImageFormat_classinfo,
-	&_Y11QTranslator_classinfo,
-	&_Y11QXmlLocator_classinfo,
-	&_Y10QPopupMenu_classinfo,
-	&_Y10QImageDrag_classinfo,
-	&_Y18QMimeSourceFactory_classinfo,
-	&_Y12QListBoxText_classinfo,
-	&_Y9QGroupBox_classinfo,
-	&_Y8QMenuBar_classinfo,
-	&_Y15QProgressDialog_classinfo,
-	&_Y13QDateTimeEdit_classinfo,
-	&_Y10QSqlResult_classinfo,
-	&_Y16QRegExpValidator_classinfo,
-	&_Y15QDockAreaLayout_classinfo,
-	&_Y15QDragLeaveEvent_classinfo,
-	&_Y10QLCDNumber_classinfo,
-	&_Y12QUrlOperator_classinfo,
-	&_Y7QSocket_classinfo,
-	&_Y9QGridView_classinfo,
-	&_Y10QBoxLayout_classinfo,
-	&_Y8QIMEvent_classinfo,
-	&_Y7QLayout_classinfo,
-	&_Y15QSocketNotifier_classinfo,
-	&_Y7QButton_classinfo,
-	&_Y13QIntValidator_classinfo,
-	&_Y7QWizard_classinfo,
-	&_Y20QCanvasPolygonalItem_classinfo,
-	&_Y16QSqlSelectCursor_classinfo,
-	&_Y10QTabWidget_classinfo,
-	&_Y11QDomElement_classinfo,
-	&_Y10QSqlDriver_classinfo,
-	&_Y10QTableItem_classinfo,
-	&_Y18QDomImplementation_classinfo,
-	&_Y8QGPlugin_classinfo,
-	&_Y13QGb18030Codec_classinfo,
-	&_Y6QGList_classinfo,
-	&_Y9QDataPump_classinfo,
-	&_Y12QPaintDevice_classinfo,
-	&_Y15QCheckTableItem_classinfo,
-	&_Y12QCommonStyle_classinfo,
-	&_Y9QTextView_classinfo,
-	&_Y18QSyntaxHighlighter_classinfo,
-	&_Y10QSemiModal_classinfo,
-	&_Y4QTab_classinfo,
-	&_Y15QPolygonScanner_classinfo,
-	&_Y16QNetworkProtocol_classinfo,
-	&_Y15QObjectUserData_classinfo,
-	&_Y13QRangeControl_classinfo,
-	&_Y10QHGroupBox_classinfo,
-	&_Y11QTimerEvent_classinfo,
-	&_Y7QHeader_classinfo,
-	&_Y9QGbkCodec_classinfo,
-	&_Y13QSplashScreen_classinfo,
-	&_Y6QMutex_classinfo,
-	&_Y15QSqlPropertyMap_classinfo,
-	&_Y9QKeyEvent_classinfo,
-	&_Y7QGCache_classinfo,
-	&_Y5QDial_classinfo,
-	&_Y4QUrl_classinfo,
-	&_Y9QListView_classinfo,
-	&_Y12QStylePlugin_classinfo,
-	&_Y11QFileDialog_classinfo,
-	&_Y13QHButtonGroup_classinfo,
-	&_Y10QColorDrag_classinfo,
-	&_Y14QDesktopWidget_classinfo,
-	&_Y9QSqlQuery_classinfo,
-	&_Y11QUtf16Codec_classinfo,
-	&_Y7QObject_classinfo,
-	&_Y5QFile_classinfo,
-	&_Y16QDomDocumentType_classinfo,
-	&_Y12QListBoxItem_classinfo,
-	&_Y18QDragResponseEvent_classinfo,
-	&_Y12QDomDocument_classinfo,
-	&_Y16QTextCodecPlugin_classinfo,
-	&_Y13QWidgetPlugin_classinfo,
-	&_Y10QScrollBar_classinfo,
-	&_Y7QBitmap_classinfo,
-	&_Y12QIconFactory_classinfo,
-	&_Y8QSpinBox_classinfo,
-	&_Y8QLibrary_classinfo,
-	&_Y11QEucKrCodec_classinfo,
-	&_Y12QWidgetStack_classinfo,
-	&_Y6QLabel_classinfo,
-	&_Y11QStyleSheet_classinfo,
-	&_Y12QCustomEvent_classinfo,
-	&_Y14QListBoxPixmap_classinfo,
-	&_Y12QDragManager_classinfo,
-	&_Y8QDomAttr_classinfo,
-	&_Y10QWhatsThis_classinfo,
-	&_Y12QDomNodeList_classinfo,
-	&_Y9QJisCodec_classinfo,
-	&_Y11QPointArray_classinfo,
-	&_Y14QMultiLineEdit_classinfo,
-	&_Y27QNetworkProtocolFactoryBase_classinfo,
-	&_Y11QHBoxLayout_classinfo,
-	&_Y13QSocketDevice_classinfo,
-	&_Y10QXmlReader_classinfo,
-	&_Y10QDomEntity_classinfo,
-	&_Y11QMetaObject_classinfo,
-	&_Y13QErrorMessage_classinfo,
-	&_Y8QListBox_classinfo,
-	&_Y15QCustomMenuItem_classinfo,
-	&_Y9QIconDrag_classinfo,
-	&_Y8QUriDrag_classinfo,
-	&_Y15QXmlDeclHandler_classinfo,
-	&_Y11QVBoxLayout_classinfo,
-	&_Y8QDomNode_classinfo,
-	&_Y7QBuffer_classinfo,
-	&_Y16QCanvasRectangle_classinfo,
-	&_Y8QIconSet_classinfo,
-	&_Y9QDropSite_classinfo,
-	&_Y7QThread_classinfo,
-	&_Y11QStoredDrag_classinfo,
-	&_Y9QTextDrag_classinfo,
-	&_Y12QFilePreview_classinfo,
-	&_Y12QButtonGroup_classinfo,
-	&_Y10QSqlRecord_classinfo,
-	&_Y8QPicture_classinfo,
-	&_Y10QSemaphore_classinfo,
-	&_Y9QComboBox_classinfo,
-	&_Y8QDomText_classinfo,
-	&_Y13QVButtonGroup_classinfo,
-	&_Y10QClipboard_classinfo,
-	&_Y12QTextEncoder_classinfo,
-	&_Y11QCanvasView_classinfo,
-	&_Y7QPixmap_classinfo,
-	&_Y5QGrid_classinfo,
-	&_Y12QRadioButton_classinfo,
-	&_Y8QAsyncIO_classinfo,
-	&_Y7QSlider_classinfo,
-	&_Y19QHttpResponseHeader_classinfo,
-	&_Y17QDomCharacterData_classinfo,
-	&_Y15QDragEnterEvent_classinfo,
-	&_Y12QActionGroup_classinfo,
-	&_Y10QDataTable_classinfo,
-	&_Y14QDragMoveEvent_classinfo,
-	&_Y14QCanvasEllipse_classinfo,
-	&_Y10QDropEvent_classinfo,
-	&_Y11QMainWindow_classinfo,
-	&_Y10QStatusBar_classinfo,
-	&_Y8QStrList_classinfo,
-	&_Y11QTsciiCodec_classinfo,
-	&_Y12QSqlDatabase_classinfo,
-	&_Y13QCanvasPixmap_classinfo,
-	&_Y8QPrinter_classinfo,
-	&_Y10QSjisCodec_classinfo,
-	&_Y11QMessageBox_classinfo,
-	&_Y6QSound_classinfo,
-	&_Y14QEditorFactory_classinfo,
-	&_Y10QEventLoop_classinfo,
-	&_Y7QSignal_classinfo,
-	&_Y9QSizeGrip_classinfo,
-	&_Y11QObjectList_classinfo,
-	&_Y11QDomComment_classinfo,
-	&_Y18QXmlDefaultHandler_classinfo,
-	&_Y9QDataSink_classinfo,
-	&_Y16QSqlDriverPlugin_classinfo,
-	&_Y11QToolButton_classinfo,
-	&_Y14QWidgetIntDict_classinfo,
-	&_Y7QTabBar_classinfo,
-	&_Y12QDomNotation_classinfo,
-	&_Y16QXmlSimpleReader_classinfo,
-	&_Y10QHideEvent_classinfo,
-	&_Y8QToolTip_classinfo,
-	&_Y12QResizeEvent_classinfo,
-	&_Y18QXmlLexicalHandler_classinfo,
-	&_Y11QCanvasLine_classinfo,
-	&_Y14QXmlAttributes_classinfo,
-	&_Y7QDialog_classinfo,
-	&_Y16QGLayoutIterator_classinfo,
-	&_Y12QTabletEvent_classinfo,
-	&_Y11QWidgetItem_classinfo,
-	&_Y4QDir_classinfo,
-	&_Y25QDomProcessingInstruction_classinfo,
-	&_Y13QCanvasSpline_classinfo,
-	&_Y11QFontDialog_classinfo,
-	&_Y7QGArray_classinfo,
-	&_Y9QBitArray_classinfo,
-	&_Y9QCheckBox_classinfo,
-	&_Y11QDockWindow_classinfo,
-	&_Y18QImageFormatPlugin_classinfo,
-	&_Y11QEucJpCodec_classinfo,
-	&_Y16QSqlResultShared_classinfo,
-	&_Y9QSqlError_classinfo,
-	&_Y13QServerSocket_classinfo,
-	&_Y18QXmlContentHandler_classinfo,
-	&_Y12QGb2312Codec_classinfo,
-	&_Y11QFocusEvent_classinfo,
-	&_Y11QMouseEvent_classinfo,
-	&_Y8QUrlInfo_classinfo,
-	&_Y14QImageConsumer_classinfo,
-	&_Y19QDomEntityReference_classinfo,
-	&_Y11QSpinWidget_classinfo,
-	&_Y11QChildEvent_classinfo,
-	&_Y12QTextOStream_classinfo,
-	&_Y10QSignalVec_classinfo,
-	&_Y10QValidator_classinfo,
-	&_Y11QGridLayout_classinfo,
-	&_Y12QHebrewCodec_classinfo,
-	&_Y8QToolBox_classinfo,
-	&_Y17QNetworkOperation_classinfo,
-	&_Y5QHttp_classinfo,
-	&_Y8QSqlForm_classinfo,
-	&_Y6QEvent_classinfo,
-	&_Y11QMimeSource_classinfo,
-	&_Y15QIMComposeEvent_classinfo,
-	&_Y12QTextDecoder_classinfo,
-	&_Y15QSessionManager_classinfo,
-	&_Y16QImageFormatType_classinfo,
-	&_Y10QTextCodec_classinfo,
-	&_Y11QSpacerItem_classinfo,
-	&_Y12QPrintDialog_classinfo,
-	&_Y12QProgressBar_classinfo,
-	&_Y13QIconViewItem_classinfo,
-	&_Y16QDomCDATASection_classinfo,
-	&_Y11QTextStream_classinfo,
-	&_Y14QCheckListItem_classinfo,
-	&_Y13QSignalMapper_classinfo,
-	&_Y9QDockArea_classinfo,
-	&_Y8QCString_classinfo,
-	&_Y6QStyle_classinfo,
-	&_Y14QXmlDTDHandler_classinfo,
-	&_Y12QColorDialog_classinfo,
-	&_Y18QGuardedPtrPrivate_classinfo,
-	&_Y12QApplication_classinfo,
-	&_Y13QListViewItem_classinfo,
-	&_Y9QIconView_classinfo,
-	&_Y15QComboTableItem_classinfo,
-	&_Y7QWidget_classinfo,
-	&_Y4QDns_classinfo,
-	&_Y15QIODeviceSource_classinfo,
-	&_Y11QCanvasText_classinfo,
-	&_Y15QXmlInputSource_classinfo,
-	&_Y16QDoubleValidator_classinfo,
-	&_Y9QIODevice_classinfo,
-	&_Y12QInputDialog_classinfo,
-	&_Y6QGDict_classinfo,
-	&_Y16QXmlErrorHandler_classinfo,
-	&_Y10QWorkspace_classinfo,
-	&_Y10QTabDialog_classinfo,
-	&_Y18QHttpRequestHeader_classinfo,
-	&_Y11QDragObject_classinfo,
-	&_Y13QToolTipGroup_classinfo,
-	&_Y17QDateTimeEditBase_classinfo,
-	&_Y11QHttpHeader_classinfo,
-	&_Y10QShowEvent_classinfo,
-	&_Y6QTable_classinfo,
-	&_Y8QLocalFs_classinfo,
-	&_Y14QCanvasPolygon_classinfo,
-	&_Y9QDateEdit_classinfo,
-	&_Y11QPaintEvent_classinfo,
-	&_Y6QAccel_classinfo,
-	&_Y7QCanvas_classinfo,
-	&_Y20QDomDocumentFragment_classinfo,
-	&_Y11QDataStream_classinfo,
-	&_Y14QJpUnicodeConv_classinfo,
-	&_Y11QPushButton_classinfo,
-	&_Y11QWidgetList_classinfo,
-	&_Y9QMenuData_classinfo,
-	&_Y9QDataView_classinfo,
-	&_Y17QSqlEditorFactory_classinfo,
-	&_Y15QConnectionList_classinfo,
-	&_Y10QSqlCursor_classinfo,
-	&_Y7QAction_classinfo,
-	&_Y12QHostAddress_classinfo,
-	&_Y11QWheelEvent_classinfo,
-	&_Y12QDataBrowser_classinfo,
-	&_Y9QTimeEdit_classinfo,
-	&_Y13QIconDragItem_classinfo,
-	&_Y13QSqlFieldInfo_classinfo,
-	&_Y4QFtp_classinfo,
-	&_Y11QLayoutItem_classinfo,
-	&_Y10QMoveEvent_classinfo,
-	&_Y9QTextEdit_classinfo,
-	&_Y17QFileIconProvider_classinfo,
-	&_Y9QSqlIndex_classinfo,
-	&_Y9QSqlField_classinfo,
-	&_Y10QVGroupBox_classinfo,
-	&_Y11QCloseEvent_classinfo,
+	&_Z10QUtf8Codec_classinfo,
+	&_Z6QTimer_classinfo,
+	&_Z18QXmlEntityResolver_classinfo,
+	&_Z21QObjectCleanupHandler_classinfo,
+	&_Z14QPtrCollection_classinfo,
+	&_Z5QHBox_classinfo,
+	&_Z8QGVector_classinfo,
+	&_Z8QToolBar_classinfo,
+	&_Z11QDataSource_classinfo,
+	&_Z11QCanvasItem_classinfo,
+	&_Z14QWaitCondition_classinfo,
+	&_Z6QFrame_classinfo,
+	&_Z11QScrollView_classinfo,
+	&_Z12QTextBrowser_classinfo,
+	&_Z13QCanvasSprite_classinfo,
+	&_Z9QSplitter_classinfo,
+	&_Z9QLineEdit_classinfo,
+	&_Z5QVBox_classinfo,
+	&_Z17QContextMenuEvent_classinfo,
+	&_Z8QProcess_classinfo,
+	&_Z12QImageFormat_classinfo,
+	&_Z11QTranslator_classinfo,
+	&_Z11QXmlLocator_classinfo,
+	&_Z10QPopupMenu_classinfo,
+	&_Z10QImageDrag_classinfo,
+	&_Z18QMimeSourceFactory_classinfo,
+	&_Z12QListBoxText_classinfo,
+	&_Z9QGroupBox_classinfo,
+	&_Z8QMenuBar_classinfo,
+	&_Z15QProgressDialog_classinfo,
+	&_Z13QDateTimeEdit_classinfo,
+	&_Z10QSqlResult_classinfo,
+	&_Z16QRegExpValidator_classinfo,
+	&_Z15QDockAreaLayout_classinfo,
+	&_Z15QDragLeaveEvent_classinfo,
+	&_Z10QLCDNumber_classinfo,
+	&_Z12QUrlOperator_classinfo,
+	&_Z7QSocket_classinfo,
+	&_Z9QGridView_classinfo,
+	&_Z10QBoxLayout_classinfo,
+	&_Z8QIMEvent_classinfo,
+	&_Z7QLayout_classinfo,
+	&_Z15QSocketNotifier_classinfo,
+	&_Z7QButton_classinfo,
+	&_Z13QIntValidator_classinfo,
+	&_Z7QWizard_classinfo,
+	&_Z20QCanvasPolygonalItem_classinfo,
+	&_Z16QSqlSelectCursor_classinfo,
+	&_Z10QTabWidget_classinfo,
+	&_Z11QDomElement_classinfo,
+	&_Z10QSqlDriver_classinfo,
+	&_Z10QTableItem_classinfo,
+	&_Z18QDomImplementation_classinfo,
+	&_Z8QGPlugin_classinfo,
+	&_Z13QGb18030Codec_classinfo,
+	&_Z6QGList_classinfo,
+	&_Z9QDataPump_classinfo,
+	&_Z12QPaintDevice_classinfo,
+	&_Z15QCheckTableItem_classinfo,
+	&_Z12QCommonStyle_classinfo,
+	&_Z9QTextView_classinfo,
+	&_Z18QSyntaxHighlighter_classinfo,
+	&_Z10QSemiModal_classinfo,
+	&_Z4QTab_classinfo,
+	&_Z15QPolygonScanner_classinfo,
+	&_Z16QNetworkProtocol_classinfo,
+	&_Z15QObjectUserData_classinfo,
+	&_Z13QRangeControl_classinfo,
+	&_Z10QHGroupBox_classinfo,
+	&_Z11QTimerEvent_classinfo,
+	&_Z7QHeader_classinfo,
+	&_Z9QGbkCodec_classinfo,
+	&_Z13QSplashScreen_classinfo,
+	&_Z6QMutex_classinfo,
+	&_Z15QSqlPropertyMap_classinfo,
+	&_Z9QKeyEvent_classinfo,
+	&_Z7QGCache_classinfo,
+	&_Z5QDial_classinfo,
+	&_Z4QUrl_classinfo,
+	&_Z9QListView_classinfo,
+	&_Z12QStylePlugin_classinfo,
+	&_Z11QFileDialog_classinfo,
+	&_Z13QHButtonGroup_classinfo,
+	&_Z10QColorDrag_classinfo,
+	&_Z14QDesktopWidget_classinfo,
+	&_Z9QSqlQuery_classinfo,
+	&_Z11QUtf16Codec_classinfo,
+	&_Z7QObject_classinfo,
+	&_Z5QFile_classinfo,
+	&_Z16QDomDocumentType_classinfo,
+	&_Z12QListBoxItem_classinfo,
+	&_Z18QDragResponseEvent_classinfo,
+	&_Z12QDomDocument_classinfo,
+	&_Z16QTextCodecPlugin_classinfo,
+	&_Z13QWidgetPlugin_classinfo,
+	&_Z10QScrollBar_classinfo,
+	&_Z7QBitmap_classinfo,
+	&_Z12QIconFactory_classinfo,
+	&_Z8QSpinBox_classinfo,
+	&_Z8QLibrary_classinfo,
+	&_Z11QEucKrCodec_classinfo,
+	&_Z12QWidgetStack_classinfo,
+	&_Z6QLabel_classinfo,
+	&_Z11QStyleSheet_classinfo,
+	&_Z12QCustomEvent_classinfo,
+	&_Z14QListBoxPixmap_classinfo,
+	&_Z12QDragManager_classinfo,
+	&_Z8QDomAttr_classinfo,
+	&_Z10QWhatsThis_classinfo,
+	&_Z12QDomNodeList_classinfo,
+	&_Z9QJisCodec_classinfo,
+	&_Z11QPointArray_classinfo,
+	&_Z14QMultiLineEdit_classinfo,
+	&_Z27QNetworkProtocolFactoryBase_classinfo,
+	&_Z11QHBoxLayout_classinfo,
+	&_Z13QSocketDevice_classinfo,
+	&_Z10QXmlReader_classinfo,
+	&_Z10QDomEntity_classinfo,
+	&_Z11QMetaObject_classinfo,
+	&_Z13QErrorMessage_classinfo,
+	&_Z8QListBox_classinfo,
+	&_Z15QCustomMenuItem_classinfo,
+	&_Z9QIconDrag_classinfo,
+	&_Z8QUriDrag_classinfo,
+	&_Z15QXmlDeclHandler_classinfo,
+	&_Z11QVBoxLayout_classinfo,
+	&_Z8QDomNode_classinfo,
+	&_Z7QBuffer_classinfo,
+	&_Z16QCanvasRectangle_classinfo,
+	&_Z8QIconSet_classinfo,
+	&_Z9QDropSite_classinfo,
+	&_Z7QThread_classinfo,
+	&_Z11QStoredDrag_classinfo,
+	&_Z9QTextDrag_classinfo,
+	&_Z12QFilePreview_classinfo,
+	&_Z12QButtonGroup_classinfo,
+	&_Z10QSqlRecord_classinfo,
+	&_Z8QPicture_classinfo,
+	&_Z10QSemaphore_classinfo,
+	&_Z9QComboBox_classinfo,
+	&_Z8QDomText_classinfo,
+	&_Z13QVButtonGroup_classinfo,
+	&_Z10QClipboard_classinfo,
+	&_Z12QTextEncoder_classinfo,
+	&_Z11QCanvasView_classinfo,
+	&_Z7QPixmap_classinfo,
+	&_Z5QGrid_classinfo,
+	&_Z12QRadioButton_classinfo,
+	&_Z8QAsyncIO_classinfo,
+	&_Z7QSlider_classinfo,
+	&_Z19QHttpResponseHeader_classinfo,
+	&_Z17QDomCharacterData_classinfo,
+	&_Z15QDragEnterEvent_classinfo,
+	&_Z12QActionGroup_classinfo,
+	&_Z10QDataTable_classinfo,
+	&_Z14QDragMoveEvent_classinfo,
+	&_Z14QCanvasEllipse_classinfo,
+	&_Z10QDropEvent_classinfo,
+	&_Z11QMainWindow_classinfo,
+	&_Z10QStatusBar_classinfo,
+	&_Z8QStrList_classinfo,
+	&_Z11QTsciiCodec_classinfo,
+	&_Z12QSqlDatabase_classinfo,
+	&_Z13QCanvasPixmap_classinfo,
+	&_Z8QPrinter_classinfo,
+	&_Z10QSjisCodec_classinfo,
+	&_Z11QMessageBox_classinfo,
+	&_Z6QSound_classinfo,
+	&_Z14QEditorFactory_classinfo,
+	&_Z10QEventLoop_classinfo,
+	&_Z7QSignal_classinfo,
+	&_Z9QSizeGrip_classinfo,
+	&_Z11QObjectList_classinfo,
+	&_Z11QDomComment_classinfo,
+	&_Z18QXmlDefaultHandler_classinfo,
+	&_Z9QDataSink_classinfo,
+	&_Z16QSqlDriverPlugin_classinfo,
+	&_Z11QToolButton_classinfo,
+	&_Z14QWidgetIntDict_classinfo,
+	&_Z7QTabBar_classinfo,
+	&_Z12QDomNotation_classinfo,
+	&_Z16QXmlSimpleReader_classinfo,
+	&_Z10QHideEvent_classinfo,
+	&_Z8QToolTip_classinfo,
+	&_Z12QResizeEvent_classinfo,
+	&_Z18QXmlLexicalHandler_classinfo,
+	&_Z11QCanvasLine_classinfo,
+	&_Z14QXmlAttributes_classinfo,
+	&_Z7QDialog_classinfo,
+	&_Z16QGLayoutIterator_classinfo,
+	&_Z12QTabletEvent_classinfo,
+	&_Z11QWidgetItem_classinfo,
+	&_Z4QDir_classinfo,
+	&_Z25QDomProcessingInstruction_classinfo,
+	&_Z13QCanvasSpline_classinfo,
+	&_Z11QFontDialog_classinfo,
+	&_Z7QGArray_classinfo,
+	&_Z9QBitArray_classinfo,
+	&_Z9QCheckBox_classinfo,
+	&_Z11QDockWindow_classinfo,
+	&_Z18QImageFormatPlugin_classinfo,
+	&_Z11QEucJpCodec_classinfo,
+	&_Z16QSqlResultShared_classinfo,
+	&_Z9QSqlError_classinfo,
+	&_Z13QServerSocket_classinfo,
+	&_Z18QXmlContentHandler_classinfo,
+	&_Z12QGb2312Codec_classinfo,
+	&_Z11QFocusEvent_classinfo,
+	&_Z11QMouseEvent_classinfo,
+	&_Z8QUrlInfo_classinfo,
+	&_Z14QImageConsumer_classinfo,
+	&_Z19QDomEntityReference_classinfo,
+	&_Z11QSpinWidget_classinfo,
+	&_Z11QChildEvent_classinfo,
+	&_Z12QTextOStream_classinfo,
+	&_Z10QSignalVec_classinfo,
+	&_Z10QValidator_classinfo,
+	&_Z11QGridLayout_classinfo,
+	&_Z12QHebrewCodec_classinfo,
+	&_Z8QToolBox_classinfo,
+	&_Z17QNetworkOperation_classinfo,
+	&_Z5QHttp_classinfo,
+	&_Z8QSqlForm_classinfo,
+	&_Z6QEvent_classinfo,
+	&_Z11QMimeSource_classinfo,
+	&_Z15QIMComposeEvent_classinfo,
+	&_Z12QTextDecoder_classinfo,
+	&_Z15QSessionManager_classinfo,
+	&_Z16QImageFormatType_classinfo,
+	&_Z10QTextCodec_classinfo,
+	&_Z11QSpacerItem_classinfo,
+	&_Z12QPrintDialog_classinfo,
+	&_Z12QProgressBar_classinfo,
+	&_Z13QIconViewItem_classinfo,
+	&_Z16QDomCDATASection_classinfo,
+	&_Z11QTextStream_classinfo,
+	&_Z14QCheckListItem_classinfo,
+	&_Z13QSignalMapper_classinfo,
+	&_Z9QDockArea_classinfo,
+	&_Z8QCString_classinfo,
+	&_Z6QStyle_classinfo,
+	&_Z14QXmlDTDHandler_classinfo,
+	&_Z12QColorDialog_classinfo,
+	&_Z18QGuardedPtrPrivate_classinfo,
+	&_Z12QApplication_classinfo,
+	&_Z13QListViewItem_classinfo,
+	&_Z9QIconView_classinfo,
+	&_Z15QComboTableItem_classinfo,
+	&_Z7QWidget_classinfo,
+	&_Z4QDns_classinfo,
+	&_Z15QIODeviceSource_classinfo,
+	&_Z11QCanvasText_classinfo,
+	&_Z15QXmlInputSource_classinfo,
+	&_Z16QDoubleValidator_classinfo,
+	&_Z9QIODevice_classinfo,
+	&_Z12QInputDialog_classinfo,
+	&_Z6QGDict_classinfo,
+	&_Z16QXmlErrorHandler_classinfo,
+	&_Z10QWorkspace_classinfo,
+	&_Z10QTabDialog_classinfo,
+	&_Z18QHttpRequestHeader_classinfo,
+	&_Z11QDragObject_classinfo,
+	&_Z13QToolTipGroup_classinfo,
+	&_Z17QDateTimeEditBase_classinfo,
+	&_Z11QHttpHeader_classinfo,
+	&_Z10QShowEvent_classinfo,
+	&_Z6QTable_classinfo,
+	&_Z8QLocalFs_classinfo,
+	&_Z14QCanvasPolygon_classinfo,
+	&_Z9QDateEdit_classinfo,
+	&_Z11QPaintEvent_classinfo,
+	&_Z6QAccel_classinfo,
+	&_Z7QCanvas_classinfo,
+	&_Z20QDomDocumentFragment_classinfo,
+	&_Z11QDataStream_classinfo,
+	&_Z14QJpUnicodeConv_classinfo,
+	&_Z11QPushButton_classinfo,
+	&_Z11QWidgetList_classinfo,
+	&_Z9QMenuData_classinfo,
+	&_Z9QDataView_classinfo,
+	&_Z17QSqlEditorFactory_classinfo,
+	&_Z15QConnectionList_classinfo,
+	&_Z10QSqlCursor_classinfo,
+	&_Z7QAction_classinfo,
+	&_Z12QHostAddress_classinfo,
+	&_Z11QWheelEvent_classinfo,
+	&_Z12QDataBrowser_classinfo,
+	&_Z9QTimeEdit_classinfo,
+	&_Z13QIconDragItem_classinfo,
+	&_Z13QSqlFieldInfo_classinfo,
+	&_Z4QFtp_classinfo,
+	&_Z11QLayoutItem_classinfo,
+	&_Z10QMoveEvent_classinfo,
+	&_Z9QTextEdit_classinfo,
+	&_Z17QFileIconProvider_classinfo,
+	&_Z9QSqlIndex_classinfo,
+	&_Z9QSqlField_classinfo,
+	&_Z10QVGroupBox_classinfo,
+	&_Z11QCloseEvent_classinfo,
 
 	NULL	};

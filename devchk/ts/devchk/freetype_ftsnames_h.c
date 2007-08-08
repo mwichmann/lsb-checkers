@@ -33,10 +33,6 @@ printf("Checking data structures in freetype/ftsnames.h\n");
 CheckTypeSize(FT_SfntName,0, 16963, 2, 3.2, NULL, 16962, NULL)
 #endif
 
-extern FT_Error FT_Get_Sfnt_Name_db(FT_Face, FT_UInt, FT_SfntName *);
-CheckInterfacedef(FT_Get_Sfnt_Name,FT_Get_Sfnt_Name_db);
-extern FT_UInt FT_Get_Sfnt_Name_Count_db(FT_Face);
-CheckInterfacedef(FT_Get_Sfnt_Name_Count,FT_Get_Sfnt_Name_Count_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

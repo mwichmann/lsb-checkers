@@ -72,6 +72,7 @@ tcnt+=X11_SM_SMlib_h();
 tcnt+=X11_X_h();
 tcnt+=X11_Xauth_h();
 tcnt+=X11_Xcms_h();
+tcnt+=X11_Xft_Xft_h();
 tcnt+=X11_Xlib_h();
 tcnt+=X11_Xutil_h();
 tcnt+=X11_extensions_XEVI_h();

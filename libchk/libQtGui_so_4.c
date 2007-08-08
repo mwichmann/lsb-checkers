@@ -24618,12 +24618,12 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn8_N11QGridLayoutD1Ev",
 #endif
-#if defined __ia64__
-	"_ZThn16_N11QGridLayoutD1Ev",
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N11QGridLayoutD1Ev",
 #endif
+#if defined __ia64__
+	"_ZThn16_N11QGridLayoutD1Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn16_N11QGridLayoutD1Ev",
 #endif
@@ -24636,8 +24636,8 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N11QGridLayoutD1Ev",
 #endif
-#if defined __i386__
-	"_ZThn8_N11QGridLayoutD0Ev",
+#if defined __powerpc64__
+	"_ZThn16_N11QGridLayoutD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn16_N11QGridLayoutD0Ev",
@@ -24645,8 +24645,8 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N11QGridLayoutD0Ev",
 #endif
-#if defined __powerpc64__
-	"_ZThn16_N11QGridLayoutD0Ev",
+#if defined __i386__
+	"_ZThn8_N11QGridLayoutD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_N11QGridLayoutD0Ev",
@@ -24656,6 +24656,12 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #endif
 #if defined __s390x__
 	"_ZThn16_N11QGridLayoutD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn16_NK11QGridLayout8sizeHintEv",
+#endif
+#if defined __s390x__
+	"_ZThn16_NK11QGridLayout8sizeHintEv",
 #endif
 #if defined __i386__
 	"_ZThn8_NK11QGridLayout8sizeHintEv",
@@ -24672,23 +24678,14 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK11QGridLayout8sizeHintEv",
 #endif
-#if defined __x86_64__
-	"_ZThn16_NK11QGridLayout8sizeHintEv",
-#endif
-#if defined __s390x__
-	"_ZThn16_NK11QGridLayout8sizeHintEv",
-#endif
-#if defined __i386__
-	"_ZThn8_NK11QGridLayout11minimumSizeEv",
-#endif
 #if defined __ia64__
 	"_ZThn16_NK11QGridLayout11minimumSizeEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK11QGridLayout11minimumSizeEv",
 #endif
-#if defined __powerpc64__
-	"_ZThn16_NK11QGridLayout11minimumSizeEv",
+#if defined __i386__
+	"_ZThn8_NK11QGridLayout11minimumSizeEv",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK11QGridLayout11minimumSizeEv",
@@ -24699,17 +24696,11 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK11QGridLayout11minimumSizeEv",
 #endif
+#if defined __powerpc64__
+	"_ZThn16_NK11QGridLayout11minimumSizeEv",
+#endif
 #if defined __i386__
 	"_ZThn8_NK11QGridLayout11maximumSizeEv",
-#endif
-#if defined __ia64__
-	"_ZThn16_NK11QGridLayout11maximumSizeEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_NK11QGridLayout11maximumSizeEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn16_NK11QGridLayout11maximumSizeEv",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK11QGridLayout11maximumSizeEv",
@@ -24717,32 +24708,47 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK11QGridLayout11maximumSizeEv",
 #endif
+#if defined __ia64__
+	"_ZThn16_NK11QGridLayout11maximumSizeEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_NK11QGridLayout11maximumSizeEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn16_NK11QGridLayout11maximumSizeEv",
+#endif
 #if defined __s390x__
 	"_ZThn16_NK11QGridLayout11maximumSizeEv",
 #endif
-#if defined __i386__
-	"_ZThn8_NK11QGridLayout19expandingDirectionsEv",
+#if defined __x86_64__
+	"_ZThn16_NK11QGridLayout19expandingDirectionsEv",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK11QGridLayout19expandingDirectionsEv",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_NK11QGridLayout19expandingDirectionsEv",
-#endif
 #if defined __powerpc64__
-	"_ZThn16_NK11QGridLayout19expandingDirectionsEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_NK11QGridLayout19expandingDirectionsEv",
-#endif
-#if defined __x86_64__
 	"_ZThn16_NK11QGridLayout19expandingDirectionsEv",
 #endif
 #if defined __s390x__
 	"_ZThn16_NK11QGridLayout19expandingDirectionsEv",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_NK11QGridLayout19expandingDirectionsEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_NK11QGridLayout19expandingDirectionsEv",
+#endif
+#if defined __i386__
+	"_ZThn8_NK11QGridLayout19expandingDirectionsEv",
+#endif
+#if defined __x86_64__
+	"_ZThn16_N11QGridLayout11setGeometryERK5QRect",
+#endif
 #if defined __i386__
 	"_ZThn8_N11QGridLayout11setGeometryERK5QRect",
+#endif
+#if defined __powerpc64__
+	"_ZThn16_N11QGridLayout11setGeometryERK5QRect",
 #endif
 #if defined __ia64__
 	"_ZThn16_N11QGridLayout11setGeometryERK5QRect",
@@ -24750,56 +24756,50 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N11QGridLayout11setGeometryERK5QRect",
 #endif
-#if defined __powerpc64__
-	"_ZThn16_N11QGridLayout11setGeometryERK5QRect",
-#endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_N11QGridLayout11setGeometryERK5QRect",
-#endif
-#if defined __x86_64__
-	"_ZThn16_N11QGridLayout11setGeometryERK5QRect",
 #endif
 #if defined __s390x__
 	"_ZThn16_N11QGridLayout11setGeometryERK5QRect",
 #endif
-#if defined __i386__
-	"_ZThn8_NK7QLayout8geometryEv",
-#endif
-#if defined __ia64__
-	"_ZThn16_NK7QLayout8geometryEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_NK7QLayout8geometryEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn16_NK7QLayout8geometryEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_NK7QLayout8geometryEv",
-#endif
-#if defined __x86_64__
-	"_ZThn16_NK7QLayout8geometryEv",
-#endif
 #if defined __s390x__
 	"_ZThn16_NK7QLayout8geometryEv",
 #endif
+#if defined __ia64__
+	"_ZThn16_NK7QLayout8geometryEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_NK7QLayout8geometryEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn16_NK7QLayout8geometryEv",
+#endif
+#if defined __x86_64__
+	"_ZThn16_NK7QLayout8geometryEv",
+#endif
+#if defined __i386__
+	"_ZThn8_NK7QLayout8geometryEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_NK7QLayout8geometryEv",
+#endif
 #if defined __i386__
 	"_ZThn8_NK7QLayout7isEmptyEv",
 #endif
-#if defined __ia64__
+#if defined __x86_64__
 	"_ZThn16_NK7QLayout7isEmptyEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QLayout7isEmptyEv",
+#endif
+#if defined __ia64__
+	"_ZThn16_NK7QLayout7isEmptyEv",
 #endif
 #if defined __powerpc64__
 	"_ZThn16_NK7QLayout7isEmptyEv",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK7QLayout7isEmptyEv",
-#endif
-#if defined __x86_64__
-	"_ZThn16_NK7QLayout7isEmptyEv",
 #endif
 #if defined __s390x__
 	"_ZThn16_NK7QLayout7isEmptyEv",
@@ -24807,76 +24807,67 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn8_NK11QGridLayout17hasHeightForWidthEv",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn16_NK11QGridLayout17hasHeightForWidthEv",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_NK11QGridLayout17hasHeightForWidthEv",
-#endif
-#if defined __powerpc64__
+#if defined __x86_64__
 	"_ZThn16_NK11QGridLayout17hasHeightForWidthEv",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK11QGridLayout17hasHeightForWidthEv",
 #endif
-#if defined __x86_64__
+#if defined __powerpc64__
 	"_ZThn16_NK11QGridLayout17hasHeightForWidthEv",
 #endif
-#if defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_NK11QGridLayout17hasHeightForWidthEv",
+#endif
+#if defined __ia64__
 	"_ZThn16_NK11QGridLayout17hasHeightForWidthEv",
 #endif
 #if defined __i386__
 	"_ZThn8_NK11QGridLayout14heightForWidthEi",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn16_NK11QGridLayout14heightForWidthEi",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_NK11QGridLayout14heightForWidthEi",
-#endif
-#if defined __powerpc64__
+#if defined __x86_64__
 	"_ZThn16_NK11QGridLayout14heightForWidthEi",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK11QGridLayout14heightForWidthEi",
 #endif
-#if defined __x86_64__
+#if defined __powerpc64__
+	"_ZThn16_NK11QGridLayout14heightForWidthEi",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_NK11QGridLayout14heightForWidthEi",
+#endif
+#if defined __ia64__
 	"_ZThn16_NK11QGridLayout14heightForWidthEi",
 #endif
 #if defined __s390x__
-	"_ZThn16_NK11QGridLayout14heightForWidthEi",
-#endif
-#if defined __i386__
-	"_ZThn8_NK11QGridLayout21minimumHeightForWidthEi",
-#endif
-#if defined __ia64__
 	"_ZThn16_NK11QGridLayout21minimumHeightForWidthEi",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_NK11QGridLayout21minimumHeightForWidthEi",
-#endif
-#if defined __powerpc64__
+#if defined __x86_64__
 	"_ZThn16_NK11QGridLayout21minimumHeightForWidthEi",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK11QGridLayout21minimumHeightForWidthEi",
 #endif
-#if defined __x86_64__
+#if defined __powerpc64__
+	"_ZThn16_NK11QGridLayout21minimumHeightForWidthEi",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_NK11QGridLayout21minimumHeightForWidthEi",
+#endif
+#if defined __i386__
+	"_ZThn8_NK11QGridLayout21minimumHeightForWidthEi",
+#endif
+#if defined __ia64__
 	"_ZThn16_NK11QGridLayout21minimumHeightForWidthEi",
 #endif
 #if defined __s390x__
-	"_ZThn16_NK11QGridLayout21minimumHeightForWidthEi",
-#endif
-#if defined __i386__
-	"_ZThn8_N11QGridLayout10invalidateEv",
-#endif
-#if defined __ia64__
-	"_ZThn16_N11QGridLayout10invalidateEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N11QGridLayout10invalidateEv",
-#endif
-#if defined __powerpc64__
 	"_ZThn16_N11QGridLayout10invalidateEv",
 #endif
 #if defined __s390__ && !defined __s390x__
@@ -24885,11 +24876,26 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_N11QGridLayout10invalidateEv",
 #endif
-#if defined __s390x__
+#if defined __powerpc64__
 	"_ZThn16_N11QGridLayout10invalidateEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_N11QGridLayout10invalidateEv",
+#endif
+#if defined __ia64__
+	"_ZThn16_N11QGridLayout10invalidateEv",
+#endif
+#if defined __i386__
+	"_ZThn8_N11QGridLayout10invalidateEv",
 #endif
 	"_ZN11QLayoutItem6widgetEv",
-#if defined __i386__
+#if defined __s390x__
+	"_ZThn16_N7QLayout6layoutEv",
+#endif
+#if defined __x86_64__
+	"_ZThn16_N7QLayout6layoutEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
 #if defined __ia64__
@@ -24898,16 +24904,10 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
-#if defined __powerpc64__
-	"_ZThn16_N7QLayout6layoutEv",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __i386__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
-#if defined __x86_64__
-	"_ZThn16_N7QLayout6layoutEv",
-#endif
-#if defined __s390x__
+#if defined __powerpc64__
 	"_ZThn16_N7QLayout6layoutEv",
 #endif
 	"_ZN11QLayoutItem10spacerItemEv",
@@ -25833,12 +25833,12 @@ const char *_11QVBoxLayout_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn8_N11QVBoxLayoutD1Ev",
 #endif
-#if defined __ia64__
-	"_ZThn16_N11QVBoxLayoutD1Ev",
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N11QVBoxLayoutD1Ev",
 #endif
+#if defined __ia64__
+	"_ZThn16_N11QVBoxLayoutD1Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn16_N11QVBoxLayoutD1Ev",
 #endif
@@ -25851,8 +25851,8 @@ const char *_11QVBoxLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N11QVBoxLayoutD1Ev",
 #endif
-#if defined __i386__
-	"_ZThn8_N11QVBoxLayoutD0Ev",
+#if defined __powerpc64__
+	"_ZThn16_N11QVBoxLayoutD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn16_N11QVBoxLayoutD0Ev",
@@ -25860,8 +25860,8 @@ const char *_11QVBoxLayout_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N11QVBoxLayoutD0Ev",
 #endif
-#if defined __powerpc64__
-	"_ZThn16_N11QVBoxLayoutD0Ev",
+#if defined __i386__
+	"_ZThn8_N11QVBoxLayoutD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_N11QVBoxLayoutD0Ev",
@@ -25871,6 +25871,12 @@ const char *_11QVBoxLayout_vtable_name_1 [] = {
 #endif
 #if defined __s390x__
 	"_ZThn16_N11QVBoxLayoutD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn16_NK10QBoxLayout8sizeHintEv",
+#endif
+#if defined __s390x__
+	"_ZThn16_NK10QBoxLayout8sizeHintEv",
 #endif
 #if defined __i386__
 	"_ZThn8_NK10QBoxLayout8sizeHintEv",
@@ -25887,23 +25893,14 @@ const char *_11QVBoxLayout_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK10QBoxLayout8sizeHintEv",
 #endif
-#if defined __x86_64__
-	"_ZThn16_NK10QBoxLayout8sizeHintEv",
-#endif
-#if defined __s390x__
-	"_ZThn16_NK10QBoxLayout8sizeHintEv",
-#endif
-#if defined __i386__
-	"_ZThn8_NK10QBoxLayout11minimumSizeEv",
-#endif
 #if defined __ia64__
 	"_ZThn16_NK10QBoxLayout11minimumSizeEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK10QBoxLayout11minimumSizeEv",
 #endif
-#if defined __powerpc64__
-	"_ZThn16_NK10QBoxLayout11minimumSizeEv",
+#if defined __i386__
+	"_ZThn8_NK10QBoxLayout11minimumSizeEv",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK10QBoxLayout11minimumSizeEv",
@@ -25914,17 +25911,11 @@ const char *_11QVBoxLayout_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_NK10QBoxLayout11minimumSizeEv",
 #endif
+#if defined __powerpc64__
+	"_ZThn16_NK10QBoxLayout11minimumSizeEv",
+#endif
 #if defined __i386__
 	"_ZThn8_NK10QBoxLayout11maximumSizeEv",
-#endif
-#if defined __ia64__
-	"_ZThn16_NK10QBoxLayout11maximumSizeEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_NK10QBoxLayout11maximumSizeEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn16_NK10QBoxLayout11maximumSizeEv",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK10QBoxLayout11maximumSizeEv",
@@ -25932,32 +25923,47 @@ const char *_11QVBoxLayout_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK10QBoxLayout11maximumSizeEv",
 #endif
+#if defined __ia64__
+	"_ZThn16_NK10QBoxLayout11maximumSizeEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_NK10QBoxLayout11maximumSizeEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn16_NK10QBoxLayout11maximumSizeEv",
+#endif
 #if defined __s390x__
 	"_ZThn16_NK10QBoxLayout11maximumSizeEv",
 #endif
-#if defined __i386__
-	"_ZThn8_NK10QBoxLayout19expandingDirectionsEv",
+#if defined __x86_64__
+	"_ZThn16_NK10QBoxLayout19expandingDirectionsEv",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK10QBoxLayout19expandingDirectionsEv",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_NK10QBoxLayout19expandingDirectionsEv",
-#endif
 #if defined __powerpc64__
-	"_ZThn16_NK10QBoxLayout19expandingDirectionsEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_NK10QBoxLayout19expandingDirectionsEv",
-#endif
-#if defined __x86_64__
 	"_ZThn16_NK10QBoxLayout19expandingDirectionsEv",
 #endif
 #if defined __s390x__
 	"_ZThn16_NK10QBoxLayout19expandingDirectionsEv",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_NK10QBoxLayout19expandingDirectionsEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_NK10QBoxLayout19expandingDirectionsEv",
+#endif
+#if defined __i386__
+	"_ZThn8_NK10QBoxLayout19expandingDirectionsEv",
+#endif
+#if defined __x86_64__
+	"_ZThn16_N10QBoxLayout11setGeometryERK5QRect",
+#endif
 #if defined __i386__
 	"_ZThn8_N10QBoxLayout11setGeometryERK5QRect",
+#endif
+#if defined __powerpc64__
+	"_ZThn16_N10QBoxLayout11setGeometryERK5QRect",
 #endif
 #if defined __ia64__
 	"_ZThn16_N10QBoxLayout11setGeometryERK5QRect",
@@ -25965,56 +25971,50 @@ const char *_11QVBoxLayout_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N10QBoxLayout11setGeometryERK5QRect",
 #endif
-#if defined __powerpc64__
-	"_ZThn16_N10QBoxLayout11setGeometryERK5QRect",
-#endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_N10QBoxLayout11setGeometryERK5QRect",
-#endif
-#if defined __x86_64__
-	"_ZThn16_N10QBoxLayout11setGeometryERK5QRect",
 #endif
 #if defined __s390x__
 	"_ZThn16_N10QBoxLayout11setGeometryERK5QRect",
 #endif
-#if defined __i386__
-	"_ZThn8_NK7QLayout8geometryEv",
-#endif
-#if defined __ia64__
-	"_ZThn16_NK7QLayout8geometryEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_NK7QLayout8geometryEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn16_NK7QLayout8geometryEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_NK7QLayout8geometryEv",
-#endif
-#if defined __x86_64__
-	"_ZThn16_NK7QLayout8geometryEv",
-#endif
 #if defined __s390x__
 	"_ZThn16_NK7QLayout8geometryEv",
 #endif
+#if defined __ia64__
+	"_ZThn16_NK7QLayout8geometryEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_NK7QLayout8geometryEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn16_NK7QLayout8geometryEv",
+#endif
+#if defined __x86_64__
+	"_ZThn16_NK7QLayout8geometryEv",
+#endif
+#if defined __i386__
+	"_ZThn8_NK7QLayout8geometryEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_NK7QLayout8geometryEv",
+#endif
 #if defined __i386__
 	"_ZThn8_NK7QLayout7isEmptyEv",
 #endif
-#if defined __ia64__
+#if defined __x86_64__
 	"_ZThn16_NK7QLayout7isEmptyEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QLayout7isEmptyEv",
+#endif
+#if defined __ia64__
+	"_ZThn16_NK7QLayout7isEmptyEv",
 #endif
 #if defined __powerpc64__
 	"_ZThn16_NK7QLayout7isEmptyEv",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK7QLayout7isEmptyEv",
-#endif
-#if defined __x86_64__
-	"_ZThn16_NK7QLayout7isEmptyEv",
 #endif
 #if defined __s390x__
 	"_ZThn16_NK7QLayout7isEmptyEv",
@@ -26022,76 +26022,67 @@ const char *_11QVBoxLayout_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn8_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn16_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_NK10QBoxLayout17hasHeightForWidthEv",
-#endif
-#if defined __powerpc64__
+#if defined __x86_64__
 	"_ZThn16_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
-#if defined __x86_64__
+#if defined __powerpc64__
 	"_ZThn16_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
-#if defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_NK10QBoxLayout17hasHeightForWidthEv",
+#endif
+#if defined __ia64__
 	"_ZThn16_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
 #if defined __i386__
 	"_ZThn8_NK10QBoxLayout14heightForWidthEi",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn16_NK10QBoxLayout14heightForWidthEi",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_NK10QBoxLayout14heightForWidthEi",
-#endif
-#if defined __powerpc64__
+#if defined __x86_64__
 	"_ZThn16_NK10QBoxLayout14heightForWidthEi",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK10QBoxLayout14heightForWidthEi",
 #endif
-#if defined __x86_64__
+#if defined __powerpc64__
+	"_ZThn16_NK10QBoxLayout14heightForWidthEi",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_NK10QBoxLayout14heightForWidthEi",
+#endif
+#if defined __ia64__
 	"_ZThn16_NK10QBoxLayout14heightForWidthEi",
 #endif
 #if defined __s390x__
-	"_ZThn16_NK10QBoxLayout14heightForWidthEi",
-#endif
-#if defined __i386__
-	"_ZThn8_NK10QBoxLayout21minimumHeightForWidthEi",
-#endif
-#if defined __ia64__
 	"_ZThn16_NK10QBoxLayout21minimumHeightForWidthEi",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_NK10QBoxLayout21minimumHeightForWidthEi",
-#endif
-#if defined __powerpc64__
+#if defined __x86_64__
 	"_ZThn16_NK10QBoxLayout21minimumHeightForWidthEi",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK10QBoxLayout21minimumHeightForWidthEi",
 #endif
-#if defined __x86_64__
+#if defined __powerpc64__
+	"_ZThn16_NK10QBoxLayout21minimumHeightForWidthEi",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_NK10QBoxLayout21minimumHeightForWidthEi",
+#endif
+#if defined __i386__
+	"_ZThn8_NK10QBoxLayout21minimumHeightForWidthEi",
+#endif
+#if defined __ia64__
 	"_ZThn16_NK10QBoxLayout21minimumHeightForWidthEi",
 #endif
 #if defined __s390x__
-	"_ZThn16_NK10QBoxLayout21minimumHeightForWidthEi",
-#endif
-#if defined __i386__
-	"_ZThn8_N10QBoxLayout10invalidateEv",
-#endif
-#if defined __ia64__
-	"_ZThn16_N10QBoxLayout10invalidateEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N10QBoxLayout10invalidateEv",
-#endif
-#if defined __powerpc64__
 	"_ZThn16_N10QBoxLayout10invalidateEv",
 #endif
 #if defined __s390__ && !defined __s390x__
@@ -26100,11 +26091,26 @@ const char *_11QVBoxLayout_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_N10QBoxLayout10invalidateEv",
 #endif
-#if defined __s390x__
+#if defined __powerpc64__
 	"_ZThn16_N10QBoxLayout10invalidateEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_N10QBoxLayout10invalidateEv",
+#endif
+#if defined __ia64__
+	"_ZThn16_N10QBoxLayout10invalidateEv",
+#endif
+#if defined __i386__
+	"_ZThn8_N10QBoxLayout10invalidateEv",
 #endif
 	"_ZN11QLayoutItem6widgetEv",
-#if defined __i386__
+#if defined __s390x__
+	"_ZThn16_N7QLayout6layoutEv",
+#endif
+#if defined __x86_64__
+	"_ZThn16_N7QLayout6layoutEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
 #if defined __ia64__
@@ -26113,16 +26119,10 @@ const char *_11QVBoxLayout_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
-#if defined __powerpc64__
-	"_ZThn16_N7QLayout6layoutEv",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __i386__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
-#if defined __x86_64__
-	"_ZThn16_N7QLayout6layoutEv",
-#endif
-#if defined __s390x__
+#if defined __powerpc64__
 	"_ZThn16_N7QLayout6layoutEv",
 #endif
 	"_ZN11QLayoutItem10spacerItemEv",

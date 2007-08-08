@@ -56,18 +56,6 @@ CheckTypeSize(FT_Var_Named_Style,0, 16946, 2, 3.2, NULL, 16945, NULL)
 CheckTypeSize(FT_MM_Var,0, 16948, 2, 3.2, NULL, 16941, NULL)
 #endif
 
-extern FT_Error FT_Get_Multi_Master_db(FT_Face, FT_Multi_Master *);
-CheckInterfacedef(FT_Get_Multi_Master,FT_Get_Multi_Master_db);
-extern FT_Error FT_Set_MM_Design_Coordinates_db(FT_Face, FT_UInt, FT_Long *);
-CheckInterfacedef(FT_Set_MM_Design_Coordinates,FT_Set_MM_Design_Coordinates_db);
-extern FT_Error FT_Get_MM_Var_db(FT_Face, FT_MM_Var * *);
-CheckInterfacedef(FT_Get_MM_Var,FT_Get_MM_Var_db);
-extern FT_Error FT_Set_Var_Blend_Coordinates_db(FT_Face, FT_UInt, FT_Fixed *);
-CheckInterfacedef(FT_Set_Var_Blend_Coordinates,FT_Set_Var_Blend_Coordinates_db);
-extern FT_Error FT_Set_MM_Blend_Coordinates_db(FT_Face, FT_UInt, FT_Fixed *);
-CheckInterfacedef(FT_Set_MM_Blend_Coordinates,FT_Set_MM_Blend_Coordinates_db);
-extern FT_Error FT_Set_Var_Design_Coordinates_db(FT_Face, FT_UInt, FT_Fixed *);
-CheckInterfacedef(FT_Set_Var_Design_Coordinates,FT_Set_Var_Design_Coordinates_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -29,8 +29,6 @@ printf("Checking data structures in freetype/ftxf86.h\n");
 /* No test for freetype/ftxf86.h */
 #endif
 
-extern const char * FT_Get_X11_Font_Format_db(FT_Face);
-CheckInterfacedef(FT_Get_X11_Font_Format,FT_Get_X11_Font_Format_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

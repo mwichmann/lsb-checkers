@@ -13,7 +13,7 @@ LIBOBJS = \
 	libcrypt_so_1.o \
 	libdl_so_2.o \
 	libfontconfig_so_1.o \
-	libfreetype_so_6_3_8.o \
+	libfreetype_so_6.o \
 	libgcc_s_so_1.o \
 	libgdk_x11_2_0_so_0.o \
 	libgdk_pixbuf_2_0_so_0.o \

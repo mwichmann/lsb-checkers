@@ -392,17 +392,17 @@ Msg("Find size of fd_mask (10131)\n");
 #if defined __i386__
 CheckTypeSize(timer_t,4, 10208, 2, 1.2, NULL, 40, NULL)
 #elif defined __ia64__
-CheckTypeSize(timer_t,8, 10208, 3, 1.3, NULL, 40, NULL)
+CheckTypeSize(timer_t,4, 10208, 3, 1.3, NULL, 40, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(timer_t,4, 10208, 6, 1.2, NULL, 40, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(timer_t,4, 10208, 10, 1.3, NULL, 40, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(timer_t,8, 10208, 9, 2.0, NULL, 40, NULL)
+CheckTypeSize(timer_t,4, 10208, 9, 2.0, NULL, 40, NULL)
 #elif defined __s390x__
-CheckTypeSize(timer_t,8, 10208, 12, 1.3, NULL, 40, NULL)
+CheckTypeSize(timer_t,4, 10208, 12, 1.3, NULL, 40, NULL)
 #elif defined __x86_64__
-CheckTypeSize(timer_t,8, 10208, 11, 2.0, NULL, 40, NULL)
+CheckTypeSize(timer_t,4, 10208, 11, 2.0, NULL, 40, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,40,NULL);\n",architecture,10208,0);
 Msg("Find size of timer_t (10208)\n");
