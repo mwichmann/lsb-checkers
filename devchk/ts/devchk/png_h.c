@@ -5,6 +5,10 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#ifdef LSBCC_MODE       /* XXX hand-edit */
+struct png_struct_def{};
+struct png_info_struct{};
+#endif                  /* XXX */
 #include "png.h"
 
 
@@ -2896,6 +2900,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11246,NULL);\n",archi
 Msg("Find size of png_row_infop (11247)\n");
 #endif
 
+#ifdef LSBCC_MODE       /* XXX hand-edit */
 #if defined __i386__
 CheckTypeSize(version_1_2_8,4, 11248, 2, 3.1, NULL, 11175, NULL)
 #elif defined __ia64__
@@ -2913,6 +2918,7 @@ CheckTypeSize(version_1_2_8,8, 11248, 11, 3.1, NULL, 11175, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11175,NULL);\n",architecture,11248,0);
 Msg("Find size of version_1_2_8 (11248)\n");
+#endif
 #endif
 
 #if defined __i386__

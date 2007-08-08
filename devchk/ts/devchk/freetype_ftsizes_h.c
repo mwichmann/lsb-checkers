@@ -63,12 +63,6 @@ CheckTypeSize(FT_Size_Internal,0, 16956, 2, 3.2, NULL, 16955, NULL)
 CheckTypeSize(FT_Size,0, 16958, 2, 3.2, NULL, 16957, NULL)
 #endif
 
-extern FT_Error FT_New_Size_db(FT_Face, FT_Size *);
-CheckInterfacedef(FT_New_Size,FT_New_Size_db);
-extern FT_Error FT_Activate_Size_db(FT_Size);
-CheckInterfacedef(FT_Activate_Size,FT_Activate_Size_db);
-extern FT_Error FT_Done_Size_db(FT_Size);
-CheckInterfacedef(FT_Done_Size,FT_Done_Size_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

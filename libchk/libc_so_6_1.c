@@ -152,25 +152,25 @@ struct versym libc_so_6_1[] = {
 	{"__ctype_tolower_loc","GLIBC_2.3",0,LSB_Core,0,1},
 	{"__ctype_toupper_loc","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
-	{"__cxa_atexit","GLIBC_2.1.3",0,LSB_Core,0,1},
+	{"__cxa_atexit","GLIBC_2.1.3",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"__cxa_atexit","GLIBC_2.2",0,LSB_Core,0,1},
+	{"__cxa_atexit","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"__cxa_atexit","GLIBC_2.1.3",0,LSB_Core,0,1},
+	{"__cxa_atexit","GLIBC_2.1.3",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"__cxa_atexit","GLIBC_2.3",0,LSB_Core,0,1},
+	{"__cxa_atexit","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"__cxa_atexit","GLIBC_2.1.3",0,LSB_Core,0,1},
+	{"__cxa_atexit","GLIBC_2.1.3",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"__cxa_atexit","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"__cxa_atexit","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"__cxa_atexit","GLIBC_2.2",0,LSB_Core,0,1},
+	{"__cxa_atexit","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"__daylight","GLIBC_2.0",0,LSB_Core,4,0},
@@ -4922,6 +4922,27 @@ struct versym libc_so_6_1[] = {
 	{"getdate_err","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
+	{"getdomainname","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"getdomainname","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"getdomainname","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"getdomainname","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"getdomainname","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"getdomainname","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"getdomainname","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
 	{"getegid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6702,6 +6723,27 @@ struct versym libc_so_6_1[] = {
 #endif
 #if defined __s390x__
 	{"inet_addr","GLIBC_2.2",0,LSB_Core,0,1},
+#endif
+#if defined __i386__
+	{"inet_aton","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"inet_aton","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"inet_aton","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"inet_aton","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"inet_aton","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"inet_aton","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"inet_aton","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"inet_ntoa","GLIBC_2.0",0,LSB_Core,4,1},
@@ -15547,6 +15589,27 @@ struct versym libc_so_6_1[] = {
 	{"wait4","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
+	{"waitid","GLIBC_2.1",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"waitid","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"waitid","GLIBC_2.1",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"waitid","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"waitid","GLIBC_2.1",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"waitid","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"waitid","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
 	{"waitpid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -16786,25 +16849,25 @@ struct versym libc_so_6_1[] = {
 	{"wscanf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"xdr_accepted_reply","GLIBC_2.0",0,LSB_Core,0,1},
+	{"xdr_accepted_reply","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"xdr_accepted_reply","GLIBC_2.2",0,LSB_Core,0,1},
+	{"xdr_accepted_reply","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"xdr_accepted_reply","GLIBC_2.0",0,LSB_Core,0,1},
+	{"xdr_accepted_reply","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"xdr_accepted_reply","GLIBC_2.3",0,LSB_Core,0,1},
+	{"xdr_accepted_reply","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"xdr_accepted_reply","GLIBC_2.0",0,LSB_Core,0,1},
+	{"xdr_accepted_reply","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"xdr_accepted_reply","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"xdr_accepted_reply","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"xdr_accepted_reply","GLIBC_2.2",0,LSB_Core,0,1},
+	{"xdr_accepted_reply","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"xdr_array","GLIBC_2.0",0,LSB_Core,4,1},
@@ -16891,25 +16954,25 @@ struct versym libc_so_6_1[] = {
 	{"xdr_callhdr","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"xdr_callmsg","GLIBC_2.0",0,LSB_Core,0,1},
+	{"xdr_callmsg","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"xdr_callmsg","GLIBC_2.2",0,LSB_Core,0,1},
+	{"xdr_callmsg","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"xdr_callmsg","GLIBC_2.0",0,LSB_Core,0,1},
+	{"xdr_callmsg","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"xdr_callmsg","GLIBC_2.3",0,LSB_Core,0,1},
+	{"xdr_callmsg","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"xdr_callmsg","GLIBC_2.0",0,LSB_Core,0,1},
+	{"xdr_callmsg","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"xdr_callmsg","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"xdr_callmsg","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"xdr_callmsg","GLIBC_2.2",0,LSB_Core,0,1},
+	{"xdr_callmsg","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"xdr_char","GLIBC_2.0",0,LSB_Core,4,1},
@@ -17143,46 +17206,46 @@ struct versym libc_so_6_1[] = {
 	{"xdr_reference","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"xdr_rejected_reply","GLIBC_2.0",0,LSB_Core,0,1},
+	{"xdr_rejected_reply","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"xdr_rejected_reply","GLIBC_2.2",0,LSB_Core,0,1},
+	{"xdr_rejected_reply","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"xdr_rejected_reply","GLIBC_2.0",0,LSB_Core,0,1},
+	{"xdr_rejected_reply","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"xdr_rejected_reply","GLIBC_2.3",0,LSB_Core,0,1},
+	{"xdr_rejected_reply","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"xdr_rejected_reply","GLIBC_2.0",0,LSB_Core,0,1},
+	{"xdr_rejected_reply","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"xdr_rejected_reply","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"xdr_rejected_reply","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"xdr_rejected_reply","GLIBC_2.2",0,LSB_Core,0,1},
+	{"xdr_rejected_reply","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"xdr_replymsg","GLIBC_2.0",0,LSB_Core,0,1},
+	{"xdr_replymsg","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"xdr_replymsg","GLIBC_2.2",0,LSB_Core,0,1},
+	{"xdr_replymsg","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"xdr_replymsg","GLIBC_2.0",0,LSB_Core,0,1},
+	{"xdr_replymsg","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"xdr_replymsg","GLIBC_2.3",0,LSB_Core,0,1},
+	{"xdr_replymsg","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"xdr_replymsg","GLIBC_2.0",0,LSB_Core,0,1},
+	{"xdr_replymsg","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"xdr_replymsg","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"xdr_replymsg","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"xdr_replymsg","GLIBC_2.2",0,LSB_Core,0,1},
+	{"xdr_replymsg","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"xdr_short","GLIBC_2.0",0,LSB_Core,4,1},

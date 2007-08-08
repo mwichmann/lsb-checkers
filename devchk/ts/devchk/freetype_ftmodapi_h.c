@@ -143,20 +143,6 @@ CheckTypeSize(FT_Library,0, 16773, 2, 3.2, NULL, 16772, NULL)
 CheckTypeSize(FT_DebugHook_Func,0, 16868, 2, 3.2, NULL, 6988, NULL)
 #endif
 
-extern FT_Module FT_Get_Module_db(FT_Library, const char *);
-CheckInterfacedef(FT_Get_Module,FT_Get_Module_db);
-extern FT_Error FT_Done_Library_db(FT_Library);
-CheckInterfacedef(FT_Done_Library,FT_Done_Library_db);
-extern void FT_Set_Debug_Hook_db(FT_Library, FT_UInt, FT_DebugHook_Func);
-CheckInterfacedef(FT_Set_Debug_Hook,FT_Set_Debug_Hook_db);
-extern void FT_Add_Default_Modules_db(FT_Library);
-CheckInterfacedef(FT_Add_Default_Modules,FT_Add_Default_Modules_db);
-extern FT_Error FT_New_Library_db(FT_Memory, FT_Library *);
-CheckInterfacedef(FT_New_Library,FT_New_Library_db);
-extern FT_Error FT_Remove_Module_db(FT_Library, FT_Module);
-CheckInterfacedef(FT_Remove_Module,FT_Remove_Module_db);
-extern FT_Error FT_Add_Module_db(FT_Library, const FT_Module_Class *);
-CheckInterfacedef(FT_Add_Module,FT_Add_Module_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
