@@ -143,8 +143,8 @@ extern struct classinfo libdl_so_2_classinfo[];
 #endif
 extern struct versym libfontconfig_so_1[];
 extern struct classinfo libfontconfig_so_1_classinfo[];
-extern struct versym libfreetype_so_6_3_8[];
-extern struct classinfo libfreetype_so_6_3_8_classinfo[];
+extern struct versym libfreetype_so_6[];
+extern struct classinfo libfreetype_so_6_classinfo[];
 #if defined __s390x__
 extern struct versym libgcc_s_so_1[];
 extern struct classinfo libgcc_s_so_1_classinfo[];

@@ -13,6 +13,7 @@ OBJS = hdrchk.o \
 	X11_X_h.o \
 	X11_Xauth_h.o \
 	X11_Xcms_h.o \
+	X11_Xft_Xft_h.o \
 	X11_Xlib_h.o \
 	X11_Xutil_h.o \
 	X11_extensions_XEVI_h.o \

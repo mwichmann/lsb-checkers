@@ -29,8 +29,6 @@ printf("Checking data structures in freetype/ftbbox.h\n");
 /* No test for freetype/ftbbox.h */
 #endif
 
-extern FT_Error FT_Outline_Get_BBox_db(FT_Outline *, FT_BBox *);
-CheckInterfacedef(FT_Outline_Get_BBox,FT_Outline_Get_BBox_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

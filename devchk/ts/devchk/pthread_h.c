@@ -25,6 +25,76 @@ Msg("Checking data structures in pthread.h\n");
 #endif
 
 printf("Checking data structures in pthread.h\n");
+#if defined __powerpc64__
+#ifdef __SIZEOF_PTHREAD_BARRIER_T
+	CompareConstant(__SIZEOF_PTHREAD_BARRIER_T,32,10672,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_BARRIER_T\n");
+cnt++;
+#endif
+
+#elif defined __powerpc__ && !defined __powerpc64__
+#ifdef __SIZEOF_PTHREAD_BARRIER_T
+	CompareConstant(__SIZEOF_PTHREAD_BARRIER_T,20,10672,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_BARRIER_T\n");
+cnt++;
+#endif
+
+#elif defined __ia64__
+#ifdef __SIZEOF_PTHREAD_BARRIER_T
+	CompareConstant(__SIZEOF_PTHREAD_BARRIER_T,32,10672,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_BARRIER_T\n");
+cnt++;
+#endif
+
+#elif defined __i386__
+#ifdef __SIZEOF_PTHREAD_BARRIER_T
+	CompareConstant(__SIZEOF_PTHREAD_BARRIER_T,20,10672,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_BARRIER_T\n");
+cnt++;
+#endif
+
+#elif defined __s390x__
+#ifdef __SIZEOF_PTHREAD_BARRIER_T
+	CompareConstant(__SIZEOF_PTHREAD_BARRIER_T,32,10672,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_BARRIER_T\n");
+cnt++;
+#endif
+
+#elif defined __x86_64__
+#ifdef __SIZEOF_PTHREAD_BARRIER_T
+	CompareConstant(__SIZEOF_PTHREAD_BARRIER_T,32,10672,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_BARRIER_T\n");
+cnt++;
+#endif
+
+#elif defined __s390__ && !defined __s390x__
+#ifdef __SIZEOF_PTHREAD_BARRIER_T
+	CompareConstant(__SIZEOF_PTHREAD_BARRIER_T,20,10672,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_BARRIER_T\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for __SIZEOF_PTHREAD_BARRIER_T (10672, int) in db\n");
+#ifdef __SIZEOF_PTHREAD_BARRIER_T
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10672,%d,'""3.2""',NULL);\n", architecture, __SIZEOF_PTHREAD_BARRIER_T);
+#endif
+#endif
+#if _LSB_DEFAULT_ARCH
+#ifdef __SIZEOF_PTHREAD_BARRIERATTR_T
+	CompareConstant(__SIZEOF_PTHREAD_BARRIERATTR_T,4,10673,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_BARRIERATTR_T\n");
+cnt++;
+#endif
+#endif
 #if _LSB_DEFAULT_ARCH
 /* No test for PTHREAD_MUTEX_INITIALIZER */
 #endif
@@ -352,6 +422,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architect
 Msg("Find size of pthread_once_t (9062)\n");
 #endif
 
+#ifdef LSBCC_MODE       /* XXX hand-edit */
 #if defined __i386__
 CheckTypeSize(__pthread_cond_align_t,8, 10917, 2, 2.0, NULL, 10, NULL)
 #elif defined __ia64__
@@ -369,6 +440,53 @@ CheckTypeSize(__pthread_cond_align_t,8, 10917, 11, 2.0, NULL, 10, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10,NULL);\n",architecture,10917,0);
 Msg("Find size of __pthread_cond_align_t (10917)\n");
+#endif
+#endif
+
+#if 1
+CheckTypeSize(pthread_spinlock_t,4, 16581, 1, 3.2, NULL, 16601, NULL)
+#endif
+
+#if defined __i386__
+CheckTypeSize(union pthread_barrier_t,20, 16602, 2, 3.2, NULL, 0, NULL)
+Msg("Missing member data for pthread_barrier_t on IA32\n");
+CheckOffset(union pthread_barrier_t,__size,0,2,63847)
+CheckOffset(union pthread_barrier_t,__align,0,2,63848)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(union pthread_barrier_t,20, 16602, 6, 3.2, NULL, 0, NULL)
+Msg("Missing member data for pthread_barrier_t on PPC32\n");
+CheckOffset(union pthread_barrier_t,__size,0,6,63847)
+CheckOffset(union pthread_barrier_t,__align,0,6,63848)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(union pthread_barrier_t,20, 16602, 10, 3.2, NULL, 0, NULL)
+Msg("Missing member data for pthread_barrier_t on S390\n");
+CheckOffset(union pthread_barrier_t,__size,0,10,63847)
+CheckOffset(union pthread_barrier_t,__align,0,10,63848)
+#elif defined __ia64__
+CheckTypeSize(union pthread_barrier_t,32, 16602, 3, 3.2, NULL, 0, NULL)
+Msg("Missing member data for pthread_barrier_t on IA64\n");
+CheckOffset(union pthread_barrier_t,__size,0,3,63847)
+CheckOffset(union pthread_barrier_t,__align,0,3,63848)
+#elif defined __powerpc64__
+CheckTypeSize(union pthread_barrier_t,32, 16602, 9, 3.2, NULL, 0, NULL)
+Msg("Missing member data for pthread_barrier_t on PPC64\n");
+CheckOffset(union pthread_barrier_t,__size,0,9,63847)
+CheckOffset(union pthread_barrier_t,__align,0,9,63848)
+#elif defined __x86_64__
+CheckTypeSize(union pthread_barrier_t,32, 16602, 11, 3.2, NULL, 0, NULL)
+Msg("Missing member data for pthread_barrier_t on x86-64\n");
+CheckOffset(union pthread_barrier_t,__size,0,11,63847)
+CheckOffset(union pthread_barrier_t,__align,0,11,63848)
+#elif defined __s390x__
+CheckTypeSize(union pthread_barrier_t,32, 16602, 12, 3.2, NULL, 0, NULL)
+Msg("Missing member data for pthread_barrier_t on S390X\n");
+CheckOffset(union pthread_barrier_t,__size,0,12,63847)
+CheckOffset(union pthread_barrier_t,__align,0,12,63848)
+#endif
+
+#if 1
+CheckTypeSize(union pthread_barrierattr_t,4, 16604, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for pthread_barrierattr_t on All\n");
 #endif
 
 #if defined __i386__
@@ -390,6 +508,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architect
 Msg("Find size of pthread_t (9040)\n");
 #endif
 
+#ifdef LSBCC_MODE       /* XXX hand-edit */
 #if defined __i386__
 CheckTypeSize(struct _pthread_fastlock,8, 10105, 2, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct _pthread_fastlock,__status,4,2,33602)
@@ -423,6 +542,7 @@ CheckOffset(struct _pthread_fastlock,__spinlock,8,11,34427)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10105,0);
 Msg("Find size of _pthread_fastlock (10105)\n");
+#endif
 #endif
 
 #if defined __i386__
@@ -520,6 +640,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10434,NULL);\n",archi
 Msg("Find size of pthread_condattr_t (9053)\n");
 #endif
 
+#ifdef LSBCC_MODE       /* XXX hand-edit */
 #if defined __i386__
 CheckTypeSize(_pthread_descr,4, 9087, 2, 1.2, NULL, 10104, NULL)
 #elif defined __ia64__
@@ -537,6 +658,7 @@ CheckTypeSize(_pthread_descr,8, 9087, 11, 2.0, NULL, 10104, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10104,NULL);\n",architecture,9087,0);
 Msg("Find size of _pthread_descr (9087)\n");
+#endif
 #endif
 
 #if defined __i386__
@@ -579,11 +701,13 @@ Msg("Find size of pthread_rwlockattr_t (9057)\n");
 
 extern int pthread_mutex_timedlock_db(pthread_mutex_t *, const struct timespec *);
 CheckInterfacedef(pthread_mutex_timedlock,pthread_mutex_timedlock_db);
+#ifdef LSBCC_MODE       /* XXX hand-edit */
 extern void _pthread_cleanup_pop_db(struct _pthread_cleanup_buffer *, int);
 CheckInterfacedef(_pthread_cleanup_pop,_pthread_cleanup_pop_db);
 extern void _pthread_cleanup_push_db(struct _pthread_cleanup_buffer *, void(*__routine)(void *)
 , void *);
 CheckInterfacedef(_pthread_cleanup_push,_pthread_cleanup_push_db);
+#endif
 extern int pthread_atfork_db(void(*prepare)(void)
 , void(*parent)(void)
 , void(*child)(void)
@@ -738,11 +862,13 @@ extern int pthread_rwlock_timedrdlock_db(pthread_rwlock_t *, const struct timesp
 CheckInterfacedef(pthread_rwlock_timedrdlock,pthread_rwlock_timedrdlock_db);
 extern int pthread_rwlock_timedwrlock_db(pthread_rwlock_t *, const struct timespec *);
 CheckInterfacedef(pthread_rwlock_timedwrlock,pthread_rwlock_timedwrlock_db);
+#ifdef LSBCC_MODE       /* XXX hand-edit */
 extern int __register_atfork_db(void(*prepare)(void)
 , void(*parent)(void)
 , void(*child)(void)
 , void *);
 CheckInterfacedef(__register_atfork,__register_atfork_db);
+#endif
 extern int pthread_setschedprio_db(pthread_t, int);
 CheckInterfacedef(pthread_setschedprio,pthread_setschedprio_db);
 #ifdef TET_TEST

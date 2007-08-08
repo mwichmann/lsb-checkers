@@ -17,7 +17,7 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
-$select = "SELECT DISTINCT Iid,Iname,Isrconly,Iisdeprecated,Vname,Asymbol,Aname,Mname FROM Interface ";
+$select = "SELECT DISTINCT Iid,Iname,Isrcbin,Iisdeprecated,Vname,Asymbol,Aname,Mname FROM Interface ";
 $select.= "LEFT JOIN ArchInt ON Iid=AIint ";
 $select.= "LEFT JOIN Architecture ON Aid=AIarch ";
 $select.= "LEFT JOIN Version ON Vid=AIversion ";

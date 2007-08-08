@@ -178,12 +178,6 @@ CheckTypeSize(PS_PrivateRec,0, 16987, 2, 3.2, NULL, 16980, NULL)
 CheckTypeSize(PS_FontInfoRec,0, 16990, 2, 3.2, NULL, 16989, NULL)
 #endif
 
-extern FT_Int FT_Has_PS_Glyph_Names_db(FT_Face);
-CheckInterfacedef(FT_Has_PS_Glyph_Names,FT_Has_PS_Glyph_Names_db);
-extern FT_Error FT_Get_PS_Font_Private_db(FT_Face, PS_PrivateRec *);
-CheckInterfacedef(FT_Get_PS_Font_Private,FT_Get_PS_Font_Private_db);
-extern FT_Error FT_Get_PS_Font_Info_db(FT_Face, PS_FontInfoRec *);
-CheckInterfacedef(FT_Get_PS_Font_Info,FT_Get_PS_Font_Info_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
