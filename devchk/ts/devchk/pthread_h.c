@@ -699,8 +699,34 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10280, NULL);\n",arch
 Msg("Find size of pthread_rwlockattr_t (9057)\n");
 #endif
 
+extern int pthread_barrier_destroy_db(union pthread_barrier_t *);
+CheckInterfacedef(pthread_barrier_destroy,pthread_barrier_destroy_db);
+extern int pthread_barrier_init_db(union pthread_barrier_t *, const union pthread_barrierattr_t *, unsigned int);
+CheckInterfacedef(pthread_barrier_init,pthread_barrier_init_db);
+extern int pthread_barrier_wait_db(union pthread_barrier_t *);
+CheckInterfacedef(pthread_barrier_wait,pthread_barrier_wait_db);
+extern int pthread_barrierattr_destroy_db(union pthread_barrierattr_t *);
+CheckInterfacedef(pthread_barrierattr_destroy,pthread_barrierattr_destroy_db);
+extern int pthread_barrierattr_init_db(union pthread_barrierattr_t *);
+CheckInterfacedef(pthread_barrierattr_init,pthread_barrierattr_init_db);
+extern int pthread_barrierattr_setpshared_db(union pthread_barrierattr_t *, int);
+CheckInterfacedef(pthread_barrierattr_setpshared,pthread_barrierattr_setpshared_db);
+extern int pthread_getcpuclockid_db(pthread_t, clockid_t *);
+CheckInterfacedef(pthread_getcpuclockid,pthread_getcpuclockid_db);
+extern int pthread_spin_destroy_db(pthread_spinlock_t *);
+CheckInterfacedef(pthread_spin_destroy,pthread_spin_destroy_db);
+extern int pthread_spin_init_db(pthread_spinlock_t *, int);
+CheckInterfacedef(pthread_spin_init,pthread_spin_init_db);
+extern int pthread_spin_lock_db(pthread_spinlock_t *);
+CheckInterfacedef(pthread_spin_lock,pthread_spin_lock_db);
+extern int pthread_spin_trylock_db(pthread_spinlock_t *);
+CheckInterfacedef(pthread_spin_trylock,pthread_spin_trylock_db);
+extern int pthread_spin_unlock_db(pthread_spinlock_t *);
+CheckInterfacedef(pthread_spin_unlock,pthread_spin_unlock_db);
 extern int pthread_mutex_timedlock_db(pthread_mutex_t *, const struct timespec *);
 CheckInterfacedef(pthread_mutex_timedlock,pthread_mutex_timedlock_db);
+extern int pthread_barrierattr_getpshared_db(const union pthread_barrierattr_t *, int *);
+CheckInterfacedef(pthread_barrierattr_getpshared,pthread_barrierattr_getpshared_db);
 #ifdef LSBCC_MODE       /* XXX hand-edit */
 extern void _pthread_cleanup_pop_db(struct _pthread_cleanup_buffer *, int);
 CheckInterfacedef(_pthread_cleanup_pop,_pthread_cleanup_pop_db);

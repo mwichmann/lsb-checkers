@@ -530,6 +530,133 @@ struct versym libpthread_so_0[] = {
 	{"pthread_attr_setstacksize","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
+	{"pthread_barrier_destroy","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"pthread_barrier_destroy","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"pthread_barrier_destroy","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"pthread_barrier_destroy","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"pthread_barrier_destroy","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"pthread_barrier_destroy","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"pthread_barrier_destroy","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
+	{"pthread_barrier_init","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"pthread_barrier_init","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"pthread_barrier_init","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"pthread_barrier_init","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"pthread_barrier_init","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"pthread_barrier_init","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"pthread_barrier_init","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
+	{"pthread_barrier_wait","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"pthread_barrier_wait","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"pthread_barrier_wait","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"pthread_barrier_wait","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"pthread_barrier_wait","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"pthread_barrier_wait","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"pthread_barrier_wait","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
+	{"pthread_barrierattr_destroy","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"pthread_barrierattr_destroy","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"pthread_barrierattr_destroy","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"pthread_barrierattr_destroy","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"pthread_barrierattr_destroy","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"pthread_barrierattr_destroy","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"pthread_barrierattr_destroy","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+	{"pthread_barrierattr_getpshared","GLIBC_2.3.3",0,LSB_Core,0,1},
+#if defined __i386__
+	{"pthread_barrierattr_init","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"pthread_barrierattr_init","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"pthread_barrierattr_init","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"pthread_barrierattr_init","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"pthread_barrierattr_init","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"pthread_barrierattr_init","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"pthread_barrierattr_init","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
+	{"pthread_barrierattr_setpshared","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"pthread_barrierattr_setpshared","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"pthread_barrierattr_setpshared","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"pthread_barrierattr_setpshared","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"pthread_barrierattr_setpshared","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"pthread_barrierattr_setpshared","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"pthread_barrierattr_setpshared","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
 	{"pthread_cancel","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -864,6 +991,27 @@ struct versym libpthread_so_0[] = {
 #endif
 #if defined __s390x__
 	{"pthread_getconcurrency","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
+	{"pthread_getcpuclockid","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"pthread_getcpuclockid","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"pthread_getcpuclockid","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"pthread_getcpuclockid","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"pthread_getcpuclockid","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"pthread_getcpuclockid","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"pthread_getcpuclockid","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"pthread_getschedparam","GLIBC_2.0",0,LSB_Core,4,1},
@@ -1684,6 +1832,111 @@ struct versym libpthread_so_0[] = {
 #endif
 #if defined __s390x__
 	{"pthread_sigmask","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
+	{"pthread_spin_destroy","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"pthread_spin_destroy","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"pthread_spin_destroy","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"pthread_spin_destroy","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"pthread_spin_destroy","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"pthread_spin_destroy","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"pthread_spin_destroy","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
+	{"pthread_spin_init","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"pthread_spin_init","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"pthread_spin_init","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"pthread_spin_init","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"pthread_spin_init","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"pthread_spin_init","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"pthread_spin_init","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
+	{"pthread_spin_lock","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"pthread_spin_lock","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"pthread_spin_lock","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"pthread_spin_lock","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"pthread_spin_lock","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"pthread_spin_lock","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"pthread_spin_lock","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
+	{"pthread_spin_trylock","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"pthread_spin_trylock","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"pthread_spin_trylock","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"pthread_spin_trylock","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"pthread_spin_trylock","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"pthread_spin_trylock","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"pthread_spin_trylock","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
+	{"pthread_spin_unlock","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"pthread_spin_unlock","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"pthread_spin_unlock","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"pthread_spin_unlock","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"pthread_spin_unlock","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"pthread_spin_unlock","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"pthread_spin_unlock","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"pthread_testcancel","GLIBC_2.0",0,LSB_Core,1,1},
