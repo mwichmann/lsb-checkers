@@ -108,17 +108,17 @@ struct versym libQtSvg_so_4[] = {
 #endif
 	{0,0}};
 
-char *_12QSvgRenderer_typeinfo_name[] = {
+char *_12QSvgRenderer_of_libQtSvg_so_4_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _12QSvgRenderer_typeinfo = {
+struct classtypeinfo _12QSvgRenderer_of_libQtSvg_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QSvgRenderer",
-	_12QSvgRenderer_typeinfo_name,
+	_12QSvgRenderer_of_libQtSvg_so_4_typeinfo_name,
 	};
 
-const char *_12QSvgRenderer_vtable_name_0 [] = {
+const char *_12QSvgRenderer_of_libQtSvg_so_4_vtable_name_0 [] = {
 	"_ZNK12QSvgRenderer10metaObjectEv",
 	"_ZN12QSvgRenderer11qt_metacastEPKc",
 	"_ZN12QSvgRenderer11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -133,21 +133,21 @@ const char *_12QSvgRenderer_vtable_name_0 [] = {
 	"_ZN7QObject16disconnectNotifyEPKc",
 	};
 
-struct classvtable _12QSvgRenderer_vtable [1] = {
+struct classvtable _12QSvgRenderer_of_libQtSvg_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	12,	/* Number of Vfuncs */
 	"_ZTI12QSvgRenderer",
-	_12QSvgRenderer_vtable_name_0,
+	_12QSvgRenderer_of_libQtSvg_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QSvgRenderer_baseinfo[] = {
+struct base_type_info _12QSvgRenderer_of_libQtSvg_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z12QSvgRenderer_classinfo = {
+struct classinfo _Z12QSvgRenderer_of_libQtSvg_so_4_classinfo = {
 	"_Z12QSvgRenderer",
 	"_ZTV12QSvgRenderer",
 	"_ZTI12QSvgRenderer",	/* RTTI */
@@ -158,22 +158,22 @@ struct classinfo _Z12QSvgRenderer_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QSvgRenderer_typeinfo,
-	_12QSvgRenderer_vtable,
-	_12QSvgRenderer_baseinfo,
+	&_12QSvgRenderer_of_libQtSvg_so_4_typeinfo,
+	_12QSvgRenderer_of_libQtSvg_so_4_vtable,
+	_12QSvgRenderer_of_libQtSvg_so_4_baseinfo,
 	};
 
-char *_10QSvgWidget_typeinfo_name[] = {
+char *_10QSvgWidget_of_libQtSvg_so_4_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo _10QSvgWidget_typeinfo = {
+struct classtypeinfo _10QSvgWidget_of_libQtSvg_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QSvgWidget",
-	_10QSvgWidget_typeinfo_name,
+	_10QSvgWidget_of_libQtSvg_so_4_typeinfo_name,
 	};
 
-const char *_10QSvgWidget_vtable_name_0 [] = {
+const char *_10QSvgWidget_of_libQtSvg_so_4_vtable_name_0 [] = {
 	"_ZNK10QSvgWidget10metaObjectEv",
 	"_ZN10QSvgWidget11qt_metacastEPKc",
 	"_ZN10QSvgWidget11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -230,7 +230,7 @@ const char *_10QSvgWidget_vtable_name_0 [] = {
 	"_ZN7QWidget14languageChangeEv",
 	};
 
-const char *_10QSvgWidget_vtable_name_1 [] = {
+const char *_10QSvgWidget_of_libQtSvg_so_4_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn8_N10QSvgWidgetD1Ev",
 #endif
@@ -338,14 +338,14 @@ const char *_10QSvgWidget_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable _10QSvgWidget_vtable [2] = {
+struct classvtable _10QSvgWidget_of_libQtSvg_so_4_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	54,	/* Number of Vfuncs */
 	"_ZTI10QSvgWidget",
-	_10QSvgWidget_vtable_name_0,
+	_10QSvgWidget_of_libQtSvg_so_4_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -379,14 +379,14 @@ struct classvtable _10QSvgWidget_vtable [2] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI10QSvgWidget",
-	_10QSvgWidget_vtable_name_1,
+	_10QSvgWidget_of_libQtSvg_so_4_vtable_name_1,
 	},
 };
 
-struct base_type_info _10QSvgWidget_baseinfo[] = {
+struct base_type_info _10QSvgWidget_of_libQtSvg_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z10QSvgWidget_classinfo = {
+struct classinfo _Z10QSvgWidget_of_libQtSvg_so_4_classinfo = {
 	"_Z10QSvgWidget",
 	"_ZTV10QSvgWidget",
 	"_ZTI10QSvgWidget",	/* RTTI */
@@ -397,13 +397,13 @@ struct classinfo _Z10QSvgWidget_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QSvgWidget_typeinfo,
-	_10QSvgWidget_vtable,
-	_10QSvgWidget_baseinfo,
+	&_10QSvgWidget_of_libQtSvg_so_4_typeinfo,
+	_10QSvgWidget_of_libQtSvg_so_4_vtable,
+	_10QSvgWidget_of_libQtSvg_so_4_baseinfo,
 	};
 
 struct classinfo *libQtSvg_so_4_classinfo[] = {
-	&_Z12QSvgRenderer_classinfo,
-	&_Z10QSvgWidget_classinfo,
+	&_Z12QSvgRenderer_of_libQtSvg_so_4_classinfo,
+	&_Z10QSvgWidget_of_libQtSvg_so_4_classinfo,
 
 	NULL	};

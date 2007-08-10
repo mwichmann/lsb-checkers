@@ -443,16 +443,16 @@ struct versym libQtSql_so_4[] = {
 	{"_Zls6QDebugRK9QSqlField","",0,LSB_Toolkit_Qt,0,1},
 	{0,0}};
 
-char *_10QSqlResult_typeinfo_name[] = {
+char *_10QSqlResult_of_libQtSql_so_4_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _10QSqlResult_typeinfo = {
+struct classtypeinfo _10QSqlResult_of_libQtSql_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS10QSqlResult",
-	_10QSqlResult_typeinfo_name,
+	_10QSqlResult_of_libQtSql_so_4_typeinfo_name,
 	};
 
-const char *_10QSqlResult_vtable_name_0 [] = {
+const char *_10QSqlResult_of_libQtSql_so_4_vtable_name_0 [] = {
 	"_ZN10QSqlResultD1Ev",
 	"_ZN10QSqlResultD0Ev",
 	"_ZNK10QSqlResult6handleEv",
@@ -482,21 +482,21 @@ const char *_10QSqlResult_vtable_name_0 [] = {
 	"_ZN10QSqlResult12virtual_hookEiPv",
 	};
 
-struct classvtable _10QSqlResult_vtable [1] = {
+struct classvtable _10QSqlResult_of_libQtSql_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	27,	/* Number of Vfuncs */
 	"_ZTI10QSqlResult",
-	_10QSqlResult_vtable_name_0,
+	_10QSqlResult_of_libQtSql_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _10QSqlResult_baseinfo[] = {
+struct base_type_info _10QSqlResult_of_libQtSql_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z10QSqlResult_classinfo = {
+struct classinfo _Z10QSqlResult_of_libQtSql_so_4_classinfo = {
 	"_Z10QSqlResult",
 	"_ZTV10QSqlResult",
 	"_ZTI10QSqlResult",	/* RTTI */
@@ -507,43 +507,43 @@ struct classinfo _Z10QSqlResult_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QSqlResult_typeinfo,
-	_10QSqlResult_vtable,
-	_10QSqlResult_baseinfo,
+	&_10QSqlResult_of_libQtSql_so_4_typeinfo,
+	_10QSqlResult_of_libQtSql_so_4_vtable,
+	_10QSqlResult_of_libQtSql_so_4_baseinfo,
 	};
 
-char *_26QSqlDriverFactoryInterface_typeinfo_name[] = {
+char *_26QSqlDriverFactoryInterface_of_libQtSql_so_4_typeinfo_name[] = {
 	"_ZTI17QFactoryInterface",
 	};
 
-struct classtypeinfo _26QSqlDriverFactoryInterface_typeinfo = {
+struct classtypeinfo _26QSqlDriverFactoryInterface_of_libQtSql_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS26QSqlDriverFactoryInterface",
-	_26QSqlDriverFactoryInterface_typeinfo_name,
+	_26QSqlDriverFactoryInterface_of_libQtSql_so_4_typeinfo_name,
 	};
 
-const char *_26QSqlDriverFactoryInterface_vtable_name_0 [] = {
+const char *_26QSqlDriverFactoryInterface_of_libQtSql_so_4_vtable_name_0 [] = {
 	"_ZN26QSqlDriverFactoryInterfaceD1Ev",
 	"_ZN26QSqlDriverFactoryInterfaceD0Ev",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _26QSqlDriverFactoryInterface_vtable [1] = {
+struct classvtable _26QSqlDriverFactoryInterface_of_libQtSql_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	4,	/* Number of Vfuncs */
 	"_ZTI26QSqlDriverFactoryInterface",
-	_26QSqlDriverFactoryInterface_vtable_name_0,
+	_26QSqlDriverFactoryInterface_of_libQtSql_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _26QSqlDriverFactoryInterface_baseinfo[] = {
+struct base_type_info _26QSqlDriverFactoryInterface_of_libQtSql_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z26QSqlDriverFactoryInterface_classinfo = {
+struct classinfo _Z26QSqlDriverFactoryInterface_of_libQtSql_so_4_classinfo = {
 	"_Z26QSqlDriverFactoryInterface",
 	"_ZTV26QSqlDriverFactoryInterface",
 	"_ZTI26QSqlDriverFactoryInterface",	/* RTTI */
@@ -554,21 +554,21 @@ struct classinfo _Z26QSqlDriverFactoryInterface_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_26QSqlDriverFactoryInterface_typeinfo,
-	_26QSqlDriverFactoryInterface_vtable,
-	_26QSqlDriverFactoryInterface_baseinfo,
+	&_26QSqlDriverFactoryInterface_of_libQtSql_so_4_typeinfo,
+	_26QSqlDriverFactoryInterface_of_libQtSql_so_4_vtable,
+	_26QSqlDriverFactoryInterface_of_libQtSql_so_4_baseinfo,
 	};
 
-char *_16QSqlDriverPlugin_typeinfo_name[] = {
+char *_16QSqlDriverPlugin_of_libQtSql_so_4_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _16QSqlDriverPlugin_typeinfo = {
+struct classtypeinfo _16QSqlDriverPlugin_of_libQtSql_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
 	"_ZTS16QSqlDriverPlugin",
-	_16QSqlDriverPlugin_typeinfo_name,
+	_16QSqlDriverPlugin_of_libQtSql_so_4_typeinfo_name,
 	};
 
-const char *_16QSqlDriverPlugin_vtable_name_0 [] = {
+const char *_16QSqlDriverPlugin_of_libQtSql_so_4_vtable_name_0 [] = {
 	"_ZNK16QSqlDriverPlugin10metaObjectEv",
 	"_ZN16QSqlDriverPlugin11qt_metacastEPKc",
 	"_ZN16QSqlDriverPlugin11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -585,7 +585,7 @@ const char *_16QSqlDriverPlugin_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-const char *_16QSqlDriverPlugin_vtable_name_1 [] = {
+const char *_16QSqlDriverPlugin_of_libQtSql_so_4_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn8_N16QSqlDriverPluginD1Ev",
 #endif
@@ -632,14 +632,14 @@ const char *_16QSqlDriverPlugin_vtable_name_1 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _16QSqlDriverPlugin_vtable [2] = {
+struct classvtable _16QSqlDriverPlugin_of_libQtSql_so_4_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	14,	/* Number of Vfuncs */
 	"_ZTI16QSqlDriverPlugin",
-	_16QSqlDriverPlugin_vtable_name_0,
+	_16QSqlDriverPlugin_of_libQtSql_so_4_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -673,11 +673,11 @@ struct classvtable _16QSqlDriverPlugin_vtable [2] = {
 	1,	/* Vtable category */
 	4,	/* Number of Vfuncs */
 	"_ZTI16QSqlDriverPlugin",
-	_16QSqlDriverPlugin_vtable_name_1,
+	_16QSqlDriverPlugin_of_libQtSql_so_4_vtable_name_1,
 	},
 };
 
-struct base_type_info _16QSqlDriverPlugin_baseinfo[] = {
+struct base_type_info _16QSqlDriverPlugin_of_libQtSql_so_4_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
 #if defined __i386__
 	{"_ZTI26QSqlDriverFactoryInterface",	2050U},
@@ -702,7 +702,7 @@ struct base_type_info _16QSqlDriverPlugin_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Z16QSqlDriverPlugin_classinfo = {
+struct classinfo _Z16QSqlDriverPlugin_of_libQtSql_so_4_classinfo = {
 	"_Z16QSqlDriverPlugin",
 	"_ZTV16QSqlDriverPlugin",
 	"_ZTI16QSqlDriverPlugin",	/* RTTI */
@@ -713,22 +713,22 @@ struct classinfo _Z16QSqlDriverPlugin_classinfo = {
 	2,
 	0,	/* numVTT */
 	0U,
-	&_16QSqlDriverPlugin_typeinfo,
-	_16QSqlDriverPlugin_vtable,
-	_16QSqlDriverPlugin_baseinfo,
+	&_16QSqlDriverPlugin_of_libQtSql_so_4_typeinfo,
+	_16QSqlDriverPlugin_of_libQtSql_so_4_vtable,
+	_16QSqlDriverPlugin_of_libQtSql_so_4_baseinfo,
 	};
 
-char *_10QSqlDriver_typeinfo_name[] = {
+char *_10QSqlDriver_of_libQtSql_so_4_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _10QSqlDriver_typeinfo = {
+struct classtypeinfo _10QSqlDriver_of_libQtSql_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QSqlDriver",
-	_10QSqlDriver_typeinfo_name,
+	_10QSqlDriver_of_libQtSql_so_4_typeinfo_name,
 	};
 
-const char *_10QSqlDriver_vtable_name_0 [] = {
+const char *_10QSqlDriver_of_libQtSql_so_4_vtable_name_0 [] = {
 	"_ZNK10QSqlDriver10metaObjectEv",
 	"_ZN10QSqlDriver11qt_metacastEPKc",
 	"_ZN10QSqlDriver11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -761,21 +761,21 @@ const char *_10QSqlDriver_vtable_name_0 [] = {
 	"_ZN10QSqlDriver12setLastErrorERK9QSqlError",
 	};
 
-struct classvtable _10QSqlDriver_vtable [1] = {
+struct classvtable _10QSqlDriver_of_libQtSql_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	30,	/* Number of Vfuncs */
 	"_ZTI10QSqlDriver",
-	_10QSqlDriver_vtable_name_0,
+	_10QSqlDriver_of_libQtSql_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _10QSqlDriver_baseinfo[] = {
+struct base_type_info _10QSqlDriver_of_libQtSql_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z10QSqlDriver_classinfo = {
+struct classinfo _Z10QSqlDriver_of_libQtSql_so_4_classinfo = {
 	"_Z10QSqlDriver",
 	"_ZTV10QSqlDriver",
 	"_ZTI10QSqlDriver",	/* RTTI */
@@ -786,22 +786,22 @@ struct classinfo _Z10QSqlDriver_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QSqlDriver_typeinfo,
-	_10QSqlDriver_vtable,
-	_10QSqlDriver_baseinfo,
+	&_10QSqlDriver_of_libQtSql_so_4_typeinfo,
+	_10QSqlDriver_of_libQtSql_so_4_vtable,
+	_10QSqlDriver_of_libQtSql_so_4_baseinfo,
 	};
 
-char *_14QSqlQueryModel_typeinfo_name[] = {
+char *_14QSqlQueryModel_of_libQtSql_so_4_typeinfo_name[] = {
 	"_ZTI19QAbstractTableModel",
 	};
 
-struct classtypeinfo _14QSqlQueryModel_typeinfo = {
+struct classtypeinfo _14QSqlQueryModel_of_libQtSql_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS14QSqlQueryModel",
-	_14QSqlQueryModel_typeinfo_name,
+	_14QSqlQueryModel_of_libQtSql_so_4_typeinfo_name,
 	};
 
-const char *_14QSqlQueryModel_vtable_name_0 [] = {
+const char *_14QSqlQueryModel_of_libQtSql_so_4_vtable_name_0 [] = {
 	"_ZNK14QSqlQueryModel10metaObjectEv",
 	"_ZN14QSqlQueryModel11qt_metacastEPKc",
 	"_ZN14QSqlQueryModel11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -846,21 +846,21 @@ const char *_14QSqlQueryModel_vtable_name_0 [] = {
 	"_ZN14QSqlQueryModel11queryChangeEv",
 	};
 
-struct classvtable _14QSqlQueryModel_vtable [1] = {
+struct classvtable _14QSqlQueryModel_of_libQtSql_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	42,	/* Number of Vfuncs */
 	"_ZTI14QSqlQueryModel",
-	_14QSqlQueryModel_vtable_name_0,
+	_14QSqlQueryModel_of_libQtSql_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _14QSqlQueryModel_baseinfo[] = {
+struct base_type_info _14QSqlQueryModel_of_libQtSql_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z14QSqlQueryModel_classinfo = {
+struct classinfo _Z14QSqlQueryModel_of_libQtSql_so_4_classinfo = {
 	"_Z14QSqlQueryModel",
 	"_ZTV14QSqlQueryModel",
 	"_ZTI14QSqlQueryModel",	/* RTTI */
@@ -871,22 +871,22 @@ struct classinfo _Z14QSqlQueryModel_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_14QSqlQueryModel_typeinfo,
-	_14QSqlQueryModel_vtable,
-	_14QSqlQueryModel_baseinfo,
+	&_14QSqlQueryModel_of_libQtSql_so_4_typeinfo,
+	_14QSqlQueryModel_of_libQtSql_so_4_vtable,
+	_14QSqlQueryModel_of_libQtSql_so_4_baseinfo,
 	};
 
-char *_14QSqlTableModel_typeinfo_name[] = {
+char *_14QSqlTableModel_of_libQtSql_so_4_typeinfo_name[] = {
 	"_ZTI14QSqlQueryModel",
 	};
 
-struct classtypeinfo _14QSqlTableModel_typeinfo = {
+struct classtypeinfo _14QSqlTableModel_of_libQtSql_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS14QSqlTableModel",
-	_14QSqlTableModel_typeinfo_name,
+	_14QSqlTableModel_of_libQtSql_so_4_typeinfo_name,
 	};
 
-const char *_14QSqlTableModel_vtable_name_0 [] = {
+const char *_14QSqlTableModel_of_libQtSql_so_4_vtable_name_0 [] = {
 	"_ZNK14QSqlTableModel10metaObjectEv",
 	"_ZN14QSqlTableModel11qt_metacastEPKc",
 	"_ZN14QSqlTableModel11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -942,21 +942,21 @@ const char *_14QSqlTableModel_vtable_name_0 [] = {
 	"_ZNK14QSqlTableModel15selectStatementEv",
 	};
 
-struct classvtable _14QSqlTableModel_vtable [1] = {
+struct classvtable _14QSqlTableModel_of_libQtSql_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	53,	/* Number of Vfuncs */
 	"_ZTI14QSqlTableModel",
-	_14QSqlTableModel_vtable_name_0,
+	_14QSqlTableModel_of_libQtSql_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _14QSqlTableModel_baseinfo[] = {
+struct base_type_info _14QSqlTableModel_of_libQtSql_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z14QSqlTableModel_classinfo = {
+struct classinfo _Z14QSqlTableModel_of_libQtSql_so_4_classinfo = {
 	"_Z14QSqlTableModel",
 	"_ZTV14QSqlTableModel",
 	"_ZTI14QSqlTableModel",	/* RTTI */
@@ -967,22 +967,22 @@ struct classinfo _Z14QSqlTableModel_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_14QSqlTableModel_typeinfo,
-	_14QSqlTableModel_vtable,
-	_14QSqlTableModel_baseinfo,
+	&_14QSqlTableModel_of_libQtSql_so_4_typeinfo,
+	_14QSqlTableModel_of_libQtSql_so_4_vtable,
+	_14QSqlTableModel_of_libQtSql_so_4_baseinfo,
 	};
 
-char *_24QSqlRelationalTableModel_typeinfo_name[] = {
+char *_24QSqlRelationalTableModel_of_libQtSql_so_4_typeinfo_name[] = {
 	"_ZTI14QSqlTableModel",
 	};
 
-struct classtypeinfo _24QSqlRelationalTableModel_typeinfo = {
+struct classtypeinfo _24QSqlRelationalTableModel_of_libQtSql_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS24QSqlRelationalTableModel",
-	_24QSqlRelationalTableModel_typeinfo_name,
+	_24QSqlRelationalTableModel_of_libQtSql_so_4_typeinfo_name,
 	};
 
-const char *_24QSqlRelationalTableModel_vtable_name_0 [] = {
+const char *_24QSqlRelationalTableModel_of_libQtSql_so_4_vtable_name_0 [] = {
 	"_ZNK24QSqlRelationalTableModel10metaObjectEv",
 	"_ZN24QSqlRelationalTableModel11qt_metacastEPKc",
 	"_ZN24QSqlRelationalTableModel11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -1040,21 +1040,21 @@ const char *_24QSqlRelationalTableModel_vtable_name_0 [] = {
 	"_ZNK24QSqlRelationalTableModel13relationModelEi",
 	};
 
-struct classvtable _24QSqlRelationalTableModel_vtable [1] = {
+struct classvtable _24QSqlRelationalTableModel_of_libQtSql_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	55,	/* Number of Vfuncs */
 	"_ZTI24QSqlRelationalTableModel",
-	_24QSqlRelationalTableModel_vtable_name_0,
+	_24QSqlRelationalTableModel_of_libQtSql_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _24QSqlRelationalTableModel_baseinfo[] = {
+struct base_type_info _24QSqlRelationalTableModel_of_libQtSql_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z24QSqlRelationalTableModel_classinfo = {
+struct classinfo _Z24QSqlRelationalTableModel_of_libQtSql_so_4_classinfo = {
 	"_Z24QSqlRelationalTableModel",
 	"_ZTV24QSqlRelationalTableModel",
 	"_ZTI24QSqlRelationalTableModel",	/* RTTI */
@@ -1065,18 +1065,18 @@ struct classinfo _Z24QSqlRelationalTableModel_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_24QSqlRelationalTableModel_typeinfo,
-	_24QSqlRelationalTableModel_vtable,
-	_24QSqlRelationalTableModel_baseinfo,
+	&_24QSqlRelationalTableModel_of_libQtSql_so_4_typeinfo,
+	_24QSqlRelationalTableModel_of_libQtSql_so_4_vtable,
+	_24QSqlRelationalTableModel_of_libQtSql_so_4_baseinfo,
 	};
 
 struct classinfo *libQtSql_so_4_classinfo[] = {
-	&_Z10QSqlResult_classinfo,
-	&_Z26QSqlDriverFactoryInterface_classinfo,
-	&_Z16QSqlDriverPlugin_classinfo,
-	&_Z10QSqlDriver_classinfo,
-	&_Z14QSqlQueryModel_classinfo,
-	&_Z14QSqlTableModel_classinfo,
-	&_Z24QSqlRelationalTableModel_classinfo,
+	&_Z10QSqlResult_of_libQtSql_so_4_classinfo,
+	&_Z26QSqlDriverFactoryInterface_of_libQtSql_so_4_classinfo,
+	&_Z16QSqlDriverPlugin_of_libQtSql_so_4_classinfo,
+	&_Z10QSqlDriver_of_libQtSql_so_4_classinfo,
+	&_Z14QSqlQueryModel_of_libQtSql_so_4_classinfo,
+	&_Z14QSqlTableModel_of_libQtSql_so_4_classinfo,
+	&_Z24QSqlRelationalTableModel_of_libQtSql_so_4_classinfo,
 
 	NULL	};
