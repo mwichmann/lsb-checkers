@@ -487,6 +487,8 @@ CheckOffset(union pthread_barrier_t,__align,0,12,63848)
 #if 1
 CheckTypeSize(union pthread_barrierattr_t,4, 16604, 1, 3.2, NULL, 0, NULL)
 Msg("Missing member data for pthread_barrierattr_t on All\n");
+CheckOffset(union pthread_barrierattr_t,__size,0,1,63849)
+CheckOffset(union pthread_barrierattr_t,__align,0,1,63850)
 #endif
 
 #if defined __i386__
