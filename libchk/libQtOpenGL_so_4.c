@@ -256,16 +256,16 @@ struct versym libQtOpenGL_so_4[] = {
 	{"_ZneRK9QGLFormatS1_","",0,LSB_Toolkit_Qt,0,1},
 	{0,0}};
 
-char *_10QGLContext_typeinfo_name[] = {
+char *_10QGLContext_of_libQtOpenGL_so_4_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _10QGLContext_typeinfo = {
+struct classtypeinfo _10QGLContext_of_libQtOpenGL_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS10QGLContext",
-	_10QGLContext_typeinfo_name,
+	_10QGLContext_of_libQtOpenGL_so_4_typeinfo_name,
 	};
 
-const char *_10QGLContext_vtable_name_0 [] = {
+const char *_10QGLContext_of_libQtOpenGL_so_4_vtable_name_0 [] = {
 	"_ZN10QGLContextD1Ev",
 	"_ZN10QGLContextD0Ev",
 	"_ZN10QGLContext6createEPKS_",
@@ -277,21 +277,21 @@ const char *_10QGLContext_vtable_name_0 [] = {
 	"_ZN10QGLContext12chooseVisualEv",
 	};
 
-struct classvtable _10QGLContext_vtable [1] = {
+struct classvtable _10QGLContext_of_libQtOpenGL_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI10QGLContext",
-	_10QGLContext_vtable_name_0,
+	_10QGLContext_of_libQtOpenGL_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _10QGLContext_baseinfo[] = {
+struct base_type_info _10QGLContext_of_libQtOpenGL_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z10QGLContext_classinfo = {
+struct classinfo _Z10QGLContext_of_libQtOpenGL_so_4_classinfo = {
 	"_Z10QGLContext",
 	"_ZTV10QGLContext",
 	"_ZTI10QGLContext",	/* RTTI */
@@ -302,22 +302,22 @@ struct classinfo _Z10QGLContext_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QGLContext_typeinfo,
-	_10QGLContext_vtable,
-	_10QGLContext_baseinfo,
+	&_10QGLContext_of_libQtOpenGL_so_4_typeinfo,
+	_10QGLContext_of_libQtOpenGL_so_4_vtable,
+	_10QGLContext_of_libQtOpenGL_so_4_baseinfo,
 	};
 
-char *_9QGLWidget_typeinfo_name[] = {
+char *_9QGLWidget_of_libQtOpenGL_so_4_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo _9QGLWidget_typeinfo = {
+struct classtypeinfo _9QGLWidget_of_libQtOpenGL_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QGLWidget",
-	_9QGLWidget_typeinfo_name,
+	_9QGLWidget_of_libQtOpenGL_so_4_typeinfo_name,
 	};
 
-const char *_9QGLWidget_vtable_name_0 [] = {
+const char *_9QGLWidget_of_libQtOpenGL_so_4_vtable_name_0 [] = {
 	"_ZNK9QGLWidget10metaObjectEv",
 	"_ZN9QGLWidget11qt_metacastEPKc",
 	"_ZN9QGLWidget11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -384,7 +384,7 @@ const char *_9QGLWidget_vtable_name_0 [] = {
 	"_ZN9QGLWidget6glDrawEv",
 	};
 
-const char *_9QGLWidget_vtable_name_1 [] = {
+const char *_9QGLWidget_of_libQtOpenGL_so_4_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn8_N9QGLWidgetD1Ev",
 #endif
@@ -492,14 +492,14 @@ const char *_9QGLWidget_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable _9QGLWidget_vtable [2] = {
+struct classvtable _9QGLWidget_of_libQtOpenGL_so_4_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	64,	/* Number of Vfuncs */
 	"_ZTI9QGLWidget",
-	_9QGLWidget_vtable_name_0,
+	_9QGLWidget_of_libQtOpenGL_so_4_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -533,14 +533,14 @@ struct classvtable _9QGLWidget_vtable [2] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI9QGLWidget",
-	_9QGLWidget_vtable_name_1,
+	_9QGLWidget_of_libQtOpenGL_so_4_vtable_name_1,
 	},
 };
 
-struct base_type_info _9QGLWidget_baseinfo[] = {
+struct base_type_info _9QGLWidget_of_libQtOpenGL_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z9QGLWidget_classinfo = {
+struct classinfo _Z9QGLWidget_of_libQtOpenGL_so_4_classinfo = {
 	"_Z9QGLWidget",
 	"_ZTV9QGLWidget",
 	"_ZTI9QGLWidget",	/* RTTI */
@@ -551,22 +551,22 @@ struct classinfo _Z9QGLWidget_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QGLWidget_typeinfo,
-	_9QGLWidget_vtable,
-	_9QGLWidget_baseinfo,
+	&_9QGLWidget_of_libQtOpenGL_so_4_typeinfo,
+	_9QGLWidget_of_libQtOpenGL_so_4_vtable,
+	_9QGLWidget_of_libQtOpenGL_so_4_baseinfo,
 	};
 
-char *_14QGLPixelBuffer_typeinfo_name[] = {
+char *_14QGLPixelBuffer_of_libQtOpenGL_so_4_typeinfo_name[] = {
 	"_ZTI12QPaintDevice",
 	};
 
-struct classtypeinfo _14QGLPixelBuffer_typeinfo = {
+struct classtypeinfo _14QGLPixelBuffer_of_libQtOpenGL_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS14QGLPixelBuffer",
-	_14QGLPixelBuffer_typeinfo_name,
+	_14QGLPixelBuffer_of_libQtOpenGL_so_4_typeinfo_name,
 	};
 
-const char *_14QGLPixelBuffer_vtable_name_0 [] = {
+const char *_14QGLPixelBuffer_of_libQtOpenGL_so_4_vtable_name_0 [] = {
 	"_ZN14QGLPixelBufferD1Ev",
 	"_ZN14QGLPixelBufferD0Ev",
 	"_ZNK14QGLPixelBuffer7devTypeEv",
@@ -574,21 +574,21 @@ const char *_14QGLPixelBuffer_vtable_name_0 [] = {
 	"_ZNK14QGLPixelBuffer6metricEN12QPaintDevice17PaintDeviceMetricE",
 	};
 
-struct classvtable _14QGLPixelBuffer_vtable [1] = {
+struct classvtable _14QGLPixelBuffer_of_libQtOpenGL_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI14QGLPixelBuffer",
-	_14QGLPixelBuffer_vtable_name_0,
+	_14QGLPixelBuffer_of_libQtOpenGL_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _14QGLPixelBuffer_baseinfo[] = {
+struct base_type_info _14QGLPixelBuffer_of_libQtOpenGL_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z14QGLPixelBuffer_classinfo = {
+struct classinfo _Z14QGLPixelBuffer_of_libQtOpenGL_so_4_classinfo = {
 	"_Z14QGLPixelBuffer",
 	"_ZTV14QGLPixelBuffer",
 	"_ZTI14QGLPixelBuffer",	/* RTTI */
@@ -599,14 +599,14 @@ struct classinfo _Z14QGLPixelBuffer_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_14QGLPixelBuffer_typeinfo,
-	_14QGLPixelBuffer_vtable,
-	_14QGLPixelBuffer_baseinfo,
+	&_14QGLPixelBuffer_of_libQtOpenGL_so_4_typeinfo,
+	_14QGLPixelBuffer_of_libQtOpenGL_so_4_vtable,
+	_14QGLPixelBuffer_of_libQtOpenGL_so_4_baseinfo,
 	};
 
 struct classinfo *libQtOpenGL_so_4_classinfo[] = {
-	&_Z10QGLContext_classinfo,
-	&_Z9QGLWidget_classinfo,
-	&_Z14QGLPixelBuffer_classinfo,
+	&_Z10QGLContext_of_libQtOpenGL_so_4_classinfo,
+	&_Z9QGLWidget_of_libQtOpenGL_so_4_classinfo,
+	&_Z14QGLPixelBuffer_of_libQtOpenGL_so_4_classinfo,
 
 	NULL	};
