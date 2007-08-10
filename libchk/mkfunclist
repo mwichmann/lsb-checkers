@@ -37,9 +37,9 @@ $intname[$Iid] = $entry{'Iname'};
 return $entry{'Iname'};
 }
 
-sub mkclassinfo($$)
+sub mkclassinfo($$$)
 {
-local($LIB,$class)=@_;
+local($LIB,$libname,$class)=@_;
 my($select,%entry);
 
 $classbase=$$class{'CIname'};
@@ -54,7 +54,7 @@ $seenclass{$classbase}=1;
 #
 # Output array of BaseTypes entries
 #
-$typeinfoname="_".$classbase."_typeinfo";
+$typeinfoname="_".$classbase."_of_".$libname."_typeinfo";
 
 $select = "SELECT * FROM BaseTypes ";
 $select.= "WHERE BTcid=".$$class{'CIid'}." ";
@@ -86,7 +86,7 @@ foreach my $pos ( 0..$$class{'CInumvtab'}-1) {
 #
 # Output array of Vtable entries
 #
-$vtablename="_".$classbase."_vtable";
+$vtablename="_".$classbase."_of_".$libname."_vtable";
 
 $select = "SELECT Vtable.*,Architecture.*,Interface.Iid,Interface.Iname,ArchInt.AIarch FROM Vtable ";
 $select.= "LEFT JOIN Architecture ON Aid=VTarch ";
@@ -186,7 +186,7 @@ print $LIB "};\n\n";
 #
 # Output base info type here.
 #
-$baseinfoname="_".$classbase."_baseinfo";
+$baseinfoname="_".$classbase."_of_".$libname."_baseinfo";
 
 $select = "SELECT * FROM VMIBaseTypes ";
 $select.= "LEFT JOIN Architecture ON Aid=VBTaid ";
@@ -215,7 +215,7 @@ for(1..$vsth->numrows) {
 }
 print $LIB "\t};\n\n";
 
-print $LIB "struct classinfo ".$$class{'CIname'}."_classinfo = {\n";
+print $LIB "struct classinfo ".$$class{'CIname'}."_of_".$libname."_classinfo = {\n";
 print $LIB "\t\"".$$class{'CIname'}."\",\n";
 print $LIB "\t\"".getinterfacename($$class{'CIvtable'})."\",\n";
 print $LIB "\t\"".getinterfacename($$class{'CIrtti'})."\",\t/* RTTI */\n";
@@ -330,8 +330,8 @@ $classinfos="";
 for(1..$lsth->numrows) {
 	%entry=$lsth->fetchhash;
 	#print $_.":".$entry{'CIname'}."\n";
-	mkclassinfo(LIB,\%entry);
-	$classinfos.=$classinfo."\t&".$entry{'CIname'}."_classinfo,\n";
+	mkclassinfo(LIB,$libname,\%entry);
+	$classinfos.=$classinfo."\t&".$entry{'CIname'}."_of_".$libname."_classinfo,\n";
 }
 
 print LIB "struct classinfo *".$libname."_classinfo[] = {\n";

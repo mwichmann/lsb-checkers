@@ -17800,17 +17800,17 @@ struct versym libqt_mt_so_3[] = {
 	{"static_QUType_varptr","",0,LSB_Toolkit_Qt3,0,0},
 	{0,0}};
 
-char *_10QUtf8Codec_typeinfo_name[] = {
+char *_10QUtf8Codec_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI10QTextCodec",
 	};
 
-struct classtypeinfo _10QUtf8Codec_typeinfo = {
+struct classtypeinfo _10QUtf8Codec_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QUtf8Codec",
-	_10QUtf8Codec_typeinfo_name,
+	_10QUtf8Codec_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QUtf8Codec_vtable_name_0 [] = {
+const char *_10QUtf8Codec_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN10QUtf8CodecD1Ev",
 	"_ZN10QUtf8CodecD0Ev",
 	"_ZNK10QUtf8Codec4nameEv",
@@ -17828,21 +17828,21 @@ const char *_10QUtf8Codec_vtable_name_0 [] = {
 	"_ZNK10QTextCodec20characterFromUnicodeERK7QStringi",
 	};
 
-struct classvtable _10QUtf8Codec_vtable [1] = {
+struct classvtable _10QUtf8Codec_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	15,	/* Number of Vfuncs */
 	"_ZTI10QUtf8Codec",
-	_10QUtf8Codec_vtable_name_0,
+	_10QUtf8Codec_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _10QUtf8Codec_baseinfo[] = {
+struct base_type_info _10QUtf8Codec_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QUtf8Codec_classinfo = {
+struct classinfo _Z10QUtf8Codec_of_libqt_mt_so_3_classinfo = {
 	"_Z10QUtf8Codec",
 	"_ZTV10QUtf8Codec",
 	"_ZTI10QUtf8Codec",	/* RTTI */
@@ -17853,22 +17853,22 @@ struct classinfo _Z10QUtf8Codec_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QUtf8Codec_typeinfo,
-	_10QUtf8Codec_vtable,
-	_10QUtf8Codec_baseinfo,
+	&_10QUtf8Codec_of_libqt_mt_so_3_typeinfo,
+	_10QUtf8Codec_of_libqt_mt_so_3_vtable,
+	_10QUtf8Codec_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_6QTimer_typeinfo_name[] = {
+char *_6QTimer_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _6QTimer_typeinfo = {
+struct classtypeinfo _6QTimer_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS6QTimer",
-	_6QTimer_typeinfo_name,
+	_6QTimer_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_6QTimer_vtable_name_0 [] = {
+const char *_6QTimer_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK6QTimer10metaObjectEv",
 	"_ZNK6QTimer9classNameEv",
 	"_ZN6QTimer7qt_castEPKc",
@@ -17892,21 +17892,21 @@ const char *_6QTimer_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable _6QTimer_vtable [1] = {
+struct classvtable _6QTimer_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI6QTimer",
-	_6QTimer_vtable_name_0,
+	_6QTimer_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _6QTimer_baseinfo[] = {
+struct base_type_info _6QTimer_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z6QTimer_classinfo = {
+struct classinfo _Z6QTimer_of_libqt_mt_so_3_classinfo = {
 	"_Z6QTimer",
 	"_ZTV6QTimer",
 	"_ZTI6QTimer",	/* RTTI */
@@ -17917,40 +17917,40 @@ struct classinfo _Z6QTimer_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_6QTimer_typeinfo,
-	_6QTimer_vtable,
-	_6QTimer_baseinfo,
+	&_6QTimer_of_libqt_mt_so_3_typeinfo,
+	_6QTimer_of_libqt_mt_so_3_vtable,
+	_6QTimer_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_18QXmlEntityResolver_typeinfo_name[] = {
+char *_18QXmlEntityResolver_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _18QXmlEntityResolver_typeinfo = {
+struct classtypeinfo _18QXmlEntityResolver_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS18QXmlEntityResolver",
-	_18QXmlEntityResolver_typeinfo_name,
+	_18QXmlEntityResolver_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_18QXmlEntityResolver_vtable_name_0 [] = {
+const char *_18QXmlEntityResolver_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _18QXmlEntityResolver_vtable [1] = {
+struct classvtable _18QXmlEntityResolver_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI18QXmlEntityResolver",
-	_18QXmlEntityResolver_vtable_name_0,
+	_18QXmlEntityResolver_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _18QXmlEntityResolver_baseinfo[] = {
+struct base_type_info _18QXmlEntityResolver_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z18QXmlEntityResolver_classinfo = {
+struct classinfo _Z18QXmlEntityResolver_of_libqt_mt_so_3_classinfo = {
 	"_Z18QXmlEntityResolver",
 	"_ZTV18QXmlEntityResolver",
 	"_ZTI18QXmlEntityResolver",	/* RTTI */
@@ -17961,22 +17961,22 @@ struct classinfo _Z18QXmlEntityResolver_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_18QXmlEntityResolver_typeinfo,
-	_18QXmlEntityResolver_vtable,
-	_18QXmlEntityResolver_baseinfo,
+	&_18QXmlEntityResolver_of_libqt_mt_so_3_typeinfo,
+	_18QXmlEntityResolver_of_libqt_mt_so_3_vtable,
+	_18QXmlEntityResolver_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_21QObjectCleanupHandler_typeinfo_name[] = {
+char *_21QObjectCleanupHandler_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _21QObjectCleanupHandler_typeinfo = {
+struct classtypeinfo _21QObjectCleanupHandler_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS21QObjectCleanupHandler",
-	_21QObjectCleanupHandler_typeinfo_name,
+	_21QObjectCleanupHandler_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_21QObjectCleanupHandler_vtable_name_0 [] = {
+const char *_21QObjectCleanupHandler_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK21QObjectCleanupHandler10metaObjectEv",
 	"_ZNK21QObjectCleanupHandler9classNameEv",
 	"_ZN21QObjectCleanupHandler7qt_castEPKc",
@@ -18000,21 +18000,21 @@ const char *_21QObjectCleanupHandler_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable _21QObjectCleanupHandler_vtable [1] = {
+struct classvtable _21QObjectCleanupHandler_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI21QObjectCleanupHandler",
-	_21QObjectCleanupHandler_vtable_name_0,
+	_21QObjectCleanupHandler_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _21QObjectCleanupHandler_baseinfo[] = {
+struct base_type_info _21QObjectCleanupHandler_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z21QObjectCleanupHandler_classinfo = {
+struct classinfo _Z21QObjectCleanupHandler_of_libqt_mt_so_3_classinfo = {
 	"_Z21QObjectCleanupHandler",
 	"_ZTV21QObjectCleanupHandler",
 	"_ZTI21QObjectCleanupHandler",	/* RTTI */
@@ -18025,21 +18025,21 @@ struct classinfo _Z21QObjectCleanupHandler_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_21QObjectCleanupHandler_typeinfo,
-	_21QObjectCleanupHandler_vtable,
-	_21QObjectCleanupHandler_baseinfo,
+	&_21QObjectCleanupHandler_of_libqt_mt_so_3_typeinfo,
+	_21QObjectCleanupHandler_of_libqt_mt_so_3_vtable,
+	_21QObjectCleanupHandler_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_14QPtrCollection_typeinfo_name[] = {
+char *_14QPtrCollection_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _14QPtrCollection_typeinfo = {
+struct classtypeinfo _14QPtrCollection_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS14QPtrCollection",
-	_14QPtrCollection_typeinfo_name,
+	_14QPtrCollection_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_14QPtrCollection_vtable_name_0 [] = {
+const char *_14QPtrCollection_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"_ZN14QPtrCollectionD1Ev",
@@ -18048,21 +18048,21 @@ const char *_14QPtrCollection_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _14QPtrCollection_vtable [1] = {
+struct classvtable _14QPtrCollection_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	6,	/* Number of Vfuncs */
 	"_ZTI14QPtrCollection",
-	_14QPtrCollection_vtable_name_0,
+	_14QPtrCollection_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _14QPtrCollection_baseinfo[] = {
+struct base_type_info _14QPtrCollection_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z14QPtrCollection_classinfo = {
+struct classinfo _Z14QPtrCollection_of_libqt_mt_so_3_classinfo = {
 	"_Z14QPtrCollection",
 	"_ZTV14QPtrCollection",
 	"_ZTI14QPtrCollection",	/* RTTI */
@@ -18073,22 +18073,22 @@ struct classinfo _Z14QPtrCollection_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_14QPtrCollection_typeinfo,
-	_14QPtrCollection_vtable,
-	_14QPtrCollection_baseinfo,
+	&_14QPtrCollection_of_libqt_mt_so_3_typeinfo,
+	_14QPtrCollection_of_libqt_mt_so_3_vtable,
+	_14QPtrCollection_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_5QHBox_typeinfo_name[] = {
+char *_5QHBox_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QFrame",
 	};
 
-struct classtypeinfo _5QHBox_typeinfo = {
+struct classtypeinfo _5QHBox_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS5QHBox",
-	_5QHBox_typeinfo_name,
+	_5QHBox_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_5QHBox_vtable_name_0 [] = {
+const char *_5QHBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK5QHBox10metaObjectEv",
 	"_ZNK5QHBox9classNameEv",
 	"_ZN5QHBox7qt_castEPKc",
@@ -18209,7 +18209,7 @@ const char *_5QHBox_vtable_name_0 [] = {
 	"_ZN5QHBox12frameChangedEv",
 	};
 
-const char *_5QHBox_vtable_name_1 [] = {
+const char *_5QHBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N5QHBoxD1Ev",
 #endif
@@ -18283,14 +18283,14 @@ const char *_5QHBox_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _5QHBox_vtable [2] = {
+struct classvtable _5QHBox_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	118,	/* Number of Vfuncs */
 	"_ZTI5QHBox",
-	_5QHBox_vtable_name_0,
+	_5QHBox_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -18324,14 +18324,14 @@ struct classvtable _5QHBox_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI5QHBox",
-	_5QHBox_vtable_name_1,
+	_5QHBox_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _5QHBox_baseinfo[] = {
+struct base_type_info _5QHBox_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z5QHBox_classinfo = {
+struct classinfo _Z5QHBox_of_libqt_mt_so_3_classinfo = {
 	"_Z5QHBox",
 	"_ZTV5QHBox",
 	"_ZTI5QHBox",	/* RTTI */
@@ -18342,22 +18342,22 @@ struct classinfo _Z5QHBox_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_5QHBox_typeinfo,
-	_5QHBox_vtable,
-	_5QHBox_baseinfo,
+	&_5QHBox_of_libqt_mt_so_3_typeinfo,
+	_5QHBox_of_libqt_mt_so_3_vtable,
+	_5QHBox_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_8QGVector_typeinfo_name[] = {
+char *_8QGVector_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI14QPtrCollection",
 	};
 
-struct classtypeinfo _8QGVector_typeinfo = {
+struct classtypeinfo _8QGVector_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS8QGVector",
-	_8QGVector_typeinfo_name,
+	_8QGVector_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_8QGVector_vtable_name_0 [] = {
+const char *_8QGVector_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK8QGVector5countEv",
 	"_ZN8QGVector5clearEv",
 	"_ZN8QGVectorD1Ev",
@@ -18369,21 +18369,21 @@ const char *_8QGVector_vtable_name_0 [] = {
 	"_ZNK8QGVector5writeER11QDataStreamPv",
 	};
 
-struct classvtable _8QGVector_vtable [1] = {
+struct classvtable _8QGVector_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI8QGVector",
-	_8QGVector_vtable_name_0,
+	_8QGVector_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _8QGVector_baseinfo[] = {
+struct base_type_info _8QGVector_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z8QGVector_classinfo = {
+struct classinfo _Z8QGVector_of_libqt_mt_so_3_classinfo = {
 	"_Z8QGVector",
 	"_ZTV8QGVector",
 	"_ZTI8QGVector",	/* RTTI */
@@ -18394,22 +18394,22 @@ struct classinfo _Z8QGVector_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_8QGVector_typeinfo,
-	_8QGVector_vtable,
-	_8QGVector_baseinfo,
+	&_8QGVector_of_libqt_mt_so_3_typeinfo,
+	_8QGVector_of_libqt_mt_so_3_vtable,
+	_8QGVector_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_8QToolBar_typeinfo_name[] = {
+char *_8QToolBar_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI11QDockWindow",
 	};
 
-struct classtypeinfo _8QToolBar_typeinfo = {
+struct classtypeinfo _8QToolBar_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS8QToolBar",
-	_8QToolBar_typeinfo_name,
+	_8QToolBar_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_8QToolBar_vtable_name_0 [] = {
+const char *_8QToolBar_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK8QToolBar10metaObjectEv",
 	"_ZNK8QToolBar9classNameEv",
 	"_ZN8QToolBar7qt_castEPKc",
@@ -18548,7 +18548,7 @@ const char *_8QToolBar_vtable_name_0 [] = {
 	"_ZN8QToolBar5clearEv",
 	};
 
-const char *_8QToolBar_vtable_name_1 [] = {
+const char *_8QToolBar_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N8QToolBarD1Ev",
 #endif
@@ -18622,14 +18622,14 @@ const char *_8QToolBar_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _8QToolBar_vtable [2] = {
+struct classvtable _8QToolBar_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	136,	/* Number of Vfuncs */
 	"_ZTI8QToolBar",
-	_8QToolBar_vtable_name_0,
+	_8QToolBar_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -18663,14 +18663,14 @@ struct classvtable _8QToolBar_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI8QToolBar",
-	_8QToolBar_vtable_name_1,
+	_8QToolBar_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _8QToolBar_baseinfo[] = {
+struct base_type_info _8QToolBar_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z8QToolBar_classinfo = {
+struct classinfo _Z8QToolBar_of_libqt_mt_so_3_classinfo = {
 	"_Z8QToolBar",
 	"_ZTV8QToolBar",
 	"_ZTI8QToolBar",	/* RTTI */
@@ -18681,22 +18681,22 @@ struct classinfo _Z8QToolBar_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_8QToolBar_typeinfo,
-	_8QToolBar_vtable,
-	_8QToolBar_baseinfo,
+	&_8QToolBar_of_libqt_mt_so_3_typeinfo,
+	_8QToolBar_of_libqt_mt_so_3_vtable,
+	_8QToolBar_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QDataSource_typeinfo_name[] = {
+char *_11QDataSource_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI8QAsyncIO",
 	};
 
-struct classtypeinfo _11QDataSource_typeinfo = {
+struct classtypeinfo _11QDataSource_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QDataSource",
-	_11QDataSource_typeinfo_name,
+	_11QDataSource_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QDataSource_vtable_name_0 [] = {
+const char *_11QDataSource_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QDataSourceD1Ev",
 	"_ZN11QDataSourceD0Ev",
 	"__cxa_pure_virtual",
@@ -18706,21 +18706,21 @@ const char *_11QDataSource_vtable_name_0 [] = {
 	"_ZN11QDataSource6rewindEv",
 	};
 
-struct classvtable _11QDataSource_vtable [1] = {
+struct classvtable _11QDataSource_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	7,	/* Number of Vfuncs */
 	"_ZTI11QDataSource",
-	_11QDataSource_vtable_name_0,
+	_11QDataSource_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QDataSource_baseinfo[] = {
+struct base_type_info _11QDataSource_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QDataSource_classinfo = {
+struct classinfo _Z11QDataSource_of_libqt_mt_so_3_classinfo = {
 	"_Z11QDataSource",
 	"_ZTV11QDataSource",
 	"_ZTI11QDataSource",	/* RTTI */
@@ -18731,22 +18731,22 @@ struct classinfo _Z11QDataSource_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QDataSource_typeinfo,
-	_11QDataSource_vtable,
-	_11QDataSource_baseinfo,
+	&_11QDataSource_of_libqt_mt_so_3_typeinfo,
+	_11QDataSource_of_libqt_mt_so_3_vtable,
+	_11QDataSource_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QCanvasItem_typeinfo_name[] = {
+char *_11QCanvasItem_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI2Qt",
 	};
 
-struct classtypeinfo _11QCanvasItem_typeinfo = {
+struct classtypeinfo _11QCanvasItem_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QCanvasItem",
-	_11QCanvasItem_typeinfo_name,
+	_11QCanvasItem_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QCanvasItem_vtable_name_0 [] = {
+const char *_11QCanvasItem_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QCanvasItemD1Ev",
 	"_ZN11QCanvasItemD0Ev",
 	"_ZN11QCanvasItem6moveByEdd",
@@ -18770,21 +18770,21 @@ const char *_11QCanvasItem_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _11QCanvasItem_vtable [1] = {
+struct classvtable _11QCanvasItem_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI11QCanvasItem",
-	_11QCanvasItem_vtable_name_0,
+	_11QCanvasItem_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QCanvasItem_baseinfo[] = {
+struct base_type_info _11QCanvasItem_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QCanvasItem_classinfo = {
+struct classinfo _Z11QCanvasItem_of_libqt_mt_so_3_classinfo = {
 	"_Z11QCanvasItem",
 	"_ZTV11QCanvasItem",
 	"_ZTI11QCanvasItem",	/* RTTI */
@@ -18795,40 +18795,40 @@ struct classinfo _Z11QCanvasItem_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QCanvasItem_typeinfo,
-	_11QCanvasItem_vtable,
-	_11QCanvasItem_baseinfo,
+	&_11QCanvasItem_of_libqt_mt_so_3_typeinfo,
+	_11QCanvasItem_of_libqt_mt_so_3_vtable,
+	_11QCanvasItem_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_14QWaitCondition_typeinfo_name[] = {
+char *_14QWaitCondition_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _14QWaitCondition_typeinfo = {
+struct classtypeinfo _14QWaitCondition_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS14QWaitCondition",
-	_14QWaitCondition_typeinfo_name,
+	_14QWaitCondition_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_14QWaitCondition_vtable_name_0 [] = {
+const char *_14QWaitCondition_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN14QWaitConditionD1Ev",
 	"_ZN14QWaitConditionD0Ev",
 	};
 
-struct classvtable _14QWaitCondition_vtable [1] = {
+struct classvtable _14QWaitCondition_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI14QWaitCondition",
-	_14QWaitCondition_vtable_name_0,
+	_14QWaitCondition_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _14QWaitCondition_baseinfo[] = {
+struct base_type_info _14QWaitCondition_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z14QWaitCondition_classinfo = {
+struct classinfo _Z14QWaitCondition_of_libqt_mt_so_3_classinfo = {
 	"_Z14QWaitCondition",
 	"_ZTV14QWaitCondition",
 	"_ZTI14QWaitCondition",	/* RTTI */
@@ -18839,22 +18839,22 @@ struct classinfo _Z14QWaitCondition_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_14QWaitCondition_typeinfo,
-	_14QWaitCondition_vtable,
-	_14QWaitCondition_baseinfo,
+	&_14QWaitCondition_of_libqt_mt_so_3_typeinfo,
+	_14QWaitCondition_of_libqt_mt_so_3_vtable,
+	_14QWaitCondition_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_6QFrame_typeinfo_name[] = {
+char *_6QFrame_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo _6QFrame_typeinfo = {
+struct classtypeinfo _6QFrame_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS6QFrame",
-	_6QFrame_typeinfo_name,
+	_6QFrame_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_6QFrame_vtable_name_0 [] = {
+const char *_6QFrame_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK6QFrame10metaObjectEv",
 	"_ZNK6QFrame9classNameEv",
 	"_ZN6QFrame7qt_castEPKc",
@@ -18975,7 +18975,7 @@ const char *_6QFrame_vtable_name_0 [] = {
 	"_ZN6QFrame12frameChangedEv",
 	};
 
-const char *_6QFrame_vtable_name_1 [] = {
+const char *_6QFrame_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N6QFrameD1Ev",
 #endif
@@ -19049,14 +19049,14 @@ const char *_6QFrame_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _6QFrame_vtable [2] = {
+struct classvtable _6QFrame_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	118,	/* Number of Vfuncs */
 	"_ZTI6QFrame",
-	_6QFrame_vtable_name_0,
+	_6QFrame_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -19090,14 +19090,14 @@ struct classvtable _6QFrame_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI6QFrame",
-	_6QFrame_vtable_name_1,
+	_6QFrame_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _6QFrame_baseinfo[] = {
+struct base_type_info _6QFrame_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z6QFrame_classinfo = {
+struct classinfo _Z6QFrame_of_libqt_mt_so_3_classinfo = {
 	"_Z6QFrame",
 	"_ZTV6QFrame",
 	"_ZTI6QFrame",	/* RTTI */
@@ -19108,22 +19108,22 @@ struct classinfo _Z6QFrame_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_6QFrame_typeinfo,
-	_6QFrame_vtable,
-	_6QFrame_baseinfo,
+	&_6QFrame_of_libqt_mt_so_3_typeinfo,
+	_6QFrame_of_libqt_mt_so_3_vtable,
+	_6QFrame_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QScrollView_typeinfo_name[] = {
+char *_11QScrollView_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QFrame",
 	};
 
-struct classtypeinfo _11QScrollView_typeinfo = {
+struct classtypeinfo _11QScrollView_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QScrollView",
-	_11QScrollView_typeinfo_name,
+	_11QScrollView_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QScrollView_vtable_name_0 [] = {
+const char *_11QScrollView_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK11QScrollView10metaObjectEv",
 	"_ZNK11QScrollView9classNameEv",
 	"_ZN11QScrollView7qt_castEPKc",
@@ -19280,7 +19280,7 @@ const char *_11QScrollView_vtable_name_0 [] = {
 	"_ZN11QScrollView15setVBarGeometryER10QScrollBariiii",
 	};
 
-const char *_11QScrollView_vtable_name_1 [] = {
+const char *_11QScrollView_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QScrollViewD1Ev",
 #endif
@@ -19354,14 +19354,14 @@ const char *_11QScrollView_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _11QScrollView_vtable [2] = {
+struct classvtable _11QScrollView_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	154,	/* Number of Vfuncs */
 	"_ZTI11QScrollView",
-	_11QScrollView_vtable_name_0,
+	_11QScrollView_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -19395,14 +19395,14 @@ struct classvtable _11QScrollView_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI11QScrollView",
-	_11QScrollView_vtable_name_1,
+	_11QScrollView_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _11QScrollView_baseinfo[] = {
+struct base_type_info _11QScrollView_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QScrollView_classinfo = {
+struct classinfo _Z11QScrollView_of_libqt_mt_so_3_classinfo = {
 	"_Z11QScrollView",
 	"_ZTV11QScrollView",
 	"_ZTI11QScrollView",	/* RTTI */
@@ -19413,22 +19413,22 @@ struct classinfo _Z11QScrollView_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QScrollView_typeinfo,
-	_11QScrollView_vtable,
-	_11QScrollView_baseinfo,
+	&_11QScrollView_of_libqt_mt_so_3_typeinfo,
+	_11QScrollView_of_libqt_mt_so_3_vtable,
+	_11QScrollView_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QTextBrowser_typeinfo_name[] = {
+char *_12QTextBrowser_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI9QTextEdit",
 	};
 
-struct classtypeinfo _12QTextBrowser_typeinfo = {
+struct classtypeinfo _12QTextBrowser_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QTextBrowser",
-	_12QTextBrowser_typeinfo_name,
+	_12QTextBrowser_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QTextBrowser_vtable_name_0 [] = {
+const char *_12QTextBrowser_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK12QTextBrowser10metaObjectEv",
 	"_ZNK12QTextBrowser9classNameEv",
 	"_ZN12QTextBrowser7qt_castEPKc",
@@ -19660,7 +19660,7 @@ const char *_12QTextBrowser_vtable_name_0 [] = {
 	"_ZN12QTextBrowser6reloadEv",
 	};
 
-const char *_12QTextBrowser_vtable_name_1 [] = {
+const char *_12QTextBrowser_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N12QTextBrowserD1Ev",
 #endif
@@ -19734,14 +19734,14 @@ const char *_12QTextBrowser_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _12QTextBrowser_vtable [2] = {
+struct classvtable _12QTextBrowser_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	229,	/* Number of Vfuncs */
 	"_ZTI12QTextBrowser",
-	_12QTextBrowser_vtable_name_0,
+	_12QTextBrowser_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -19775,14 +19775,14 @@ struct classvtable _12QTextBrowser_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI12QTextBrowser",
-	_12QTextBrowser_vtable_name_1,
+	_12QTextBrowser_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _12QTextBrowser_baseinfo[] = {
+struct base_type_info _12QTextBrowser_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QTextBrowser_classinfo = {
+struct classinfo _Z12QTextBrowser_of_libqt_mt_so_3_classinfo = {
 	"_Z12QTextBrowser",
 	"_ZTV12QTextBrowser",
 	"_ZTI12QTextBrowser",	/* RTTI */
@@ -19793,22 +19793,22 @@ struct classinfo _Z12QTextBrowser_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QTextBrowser_typeinfo,
-	_12QTextBrowser_vtable,
-	_12QTextBrowser_baseinfo,
+	&_12QTextBrowser_of_libqt_mt_so_3_typeinfo,
+	_12QTextBrowser_of_libqt_mt_so_3_vtable,
+	_12QTextBrowser_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_13QCanvasSprite_typeinfo_name[] = {
+char *_13QCanvasSprite_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI11QCanvasItem",
 	};
 
-struct classtypeinfo _13QCanvasSprite_typeinfo = {
+struct classtypeinfo _13QCanvasSprite_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS13QCanvasSprite",
-	_13QCanvasSprite_typeinfo_name,
+	_13QCanvasSprite_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_13QCanvasSprite_vtable_name_0 [] = {
+const char *_13QCanvasSprite_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN13QCanvasSpriteD1Ev",
 	"_ZN13QCanvasSpriteD0Ev",
 	"_ZN11QCanvasItem6moveByEdd",
@@ -19835,21 +19835,21 @@ const char *_13QCanvasSprite_vtable_name_0 [] = {
 	"_ZNK13QCanvasSprite13imageAdvancedEv",
 	};
 
-struct classvtable _13QCanvasSprite_vtable [1] = {
+struct classvtable _13QCanvasSprite_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	24,	/* Number of Vfuncs */
 	"_ZTI13QCanvasSprite",
-	_13QCanvasSprite_vtable_name_0,
+	_13QCanvasSprite_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _13QCanvasSprite_baseinfo[] = {
+struct base_type_info _13QCanvasSprite_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z13QCanvasSprite_classinfo = {
+struct classinfo _Z13QCanvasSprite_of_libqt_mt_so_3_classinfo = {
 	"_Z13QCanvasSprite",
 	"_ZTV13QCanvasSprite",
 	"_ZTI13QCanvasSprite",	/* RTTI */
@@ -19860,22 +19860,22 @@ struct classinfo _Z13QCanvasSprite_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_13QCanvasSprite_typeinfo,
-	_13QCanvasSprite_vtable,
-	_13QCanvasSprite_baseinfo,
+	&_13QCanvasSprite_of_libqt_mt_so_3_typeinfo,
+	_13QCanvasSprite_of_libqt_mt_so_3_vtable,
+	_13QCanvasSprite_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QSplitter_typeinfo_name[] = {
+char *_9QSplitter_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QFrame",
 	};
 
-struct classtypeinfo _9QSplitter_typeinfo = {
+struct classtypeinfo _9QSplitter_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QSplitter",
-	_9QSplitter_typeinfo_name,
+	_9QSplitter_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QSplitter_vtable_name_0 [] = {
+const char *_9QSplitter_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK9QSplitter10metaObjectEv",
 	"_ZNK9QSplitter9classNameEv",
 	"_ZN9QSplitter7qt_castEPKc",
@@ -20001,7 +20001,7 @@ const char *_9QSplitter_vtable_name_0 [] = {
 	"_ZN9QSplitter13setRubberbandEi",
 	};
 
-const char *_9QSplitter_vtable_name_1 [] = {
+const char *_9QSplitter_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QSplitterD1Ev",
 #endif
@@ -20075,14 +20075,14 @@ const char *_9QSplitter_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _9QSplitter_vtable [2] = {
+struct classvtable _9QSplitter_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	123,	/* Number of Vfuncs */
 	"_ZTI9QSplitter",
-	_9QSplitter_vtable_name_0,
+	_9QSplitter_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -20116,14 +20116,14 @@ struct classvtable _9QSplitter_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QSplitter",
-	_9QSplitter_vtable_name_1,
+	_9QSplitter_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _9QSplitter_baseinfo[] = {
+struct base_type_info _9QSplitter_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QSplitter_classinfo = {
+struct classinfo _Z9QSplitter_of_libqt_mt_so_3_classinfo = {
 	"_Z9QSplitter",
 	"_ZTV9QSplitter",
 	"_ZTI9QSplitter",	/* RTTI */
@@ -20134,22 +20134,22 @@ struct classinfo _Z9QSplitter_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QSplitter_typeinfo,
-	_9QSplitter_vtable,
-	_9QSplitter_baseinfo,
+	&_9QSplitter_of_libqt_mt_so_3_typeinfo,
+	_9QSplitter_of_libqt_mt_so_3_vtable,
+	_9QSplitter_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QLineEdit_typeinfo_name[] = {
+char *_9QLineEdit_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QFrame",
 	};
 
-struct classtypeinfo _9QLineEdit_typeinfo = {
+struct classtypeinfo _9QLineEdit_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QLineEdit",
-	_9QLineEdit_typeinfo_name,
+	_9QLineEdit_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QLineEdit_vtable_name_0 [] = {
+const char *_9QLineEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK9QLineEdit10metaObjectEv",
 	"_ZNK9QLineEdit9classNameEv",
 	"_ZN9QLineEdit7qt_castEPKc",
@@ -20291,7 +20291,7 @@ const char *_9QLineEdit_vtable_name_0 [] = {
 	"_ZN9QLineEdit15createPopupMenuEv",
 	};
 
-const char *_9QLineEdit_vtable_name_1 [] = {
+const char *_9QLineEdit_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QLineEditD1Ev",
 #endif
@@ -20365,14 +20365,14 @@ const char *_9QLineEdit_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _9QLineEdit_vtable [2] = {
+struct classvtable _9QLineEdit_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	139,	/* Number of Vfuncs */
 	"_ZTI9QLineEdit",
-	_9QLineEdit_vtable_name_0,
+	_9QLineEdit_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -20406,14 +20406,14 @@ struct classvtable _9QLineEdit_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QLineEdit",
-	_9QLineEdit_vtable_name_1,
+	_9QLineEdit_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _9QLineEdit_baseinfo[] = {
+struct base_type_info _9QLineEdit_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QLineEdit_classinfo = {
+struct classinfo _Z9QLineEdit_of_libqt_mt_so_3_classinfo = {
 	"_Z9QLineEdit",
 	"_ZTV9QLineEdit",
 	"_ZTI9QLineEdit",	/* RTTI */
@@ -20424,22 +20424,22 @@ struct classinfo _Z9QLineEdit_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QLineEdit_typeinfo,
-	_9QLineEdit_vtable,
-	_9QLineEdit_baseinfo,
+	&_9QLineEdit_of_libqt_mt_so_3_typeinfo,
+	_9QLineEdit_of_libqt_mt_so_3_vtable,
+	_9QLineEdit_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_5QVBox_typeinfo_name[] = {
+char *_5QVBox_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI5QHBox",
 	};
 
-struct classtypeinfo _5QVBox_typeinfo = {
+struct classtypeinfo _5QVBox_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS5QVBox",
-	_5QVBox_typeinfo_name,
+	_5QVBox_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_5QVBox_vtable_name_0 [] = {
+const char *_5QVBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK5QVBox10metaObjectEv",
 	"_ZNK5QVBox9classNameEv",
 	"_ZN5QVBox7qt_castEPKc",
@@ -20560,7 +20560,7 @@ const char *_5QVBox_vtable_name_0 [] = {
 	"_ZN5QHBox12frameChangedEv",
 	};
 
-const char *_5QVBox_vtable_name_1 [] = {
+const char *_5QVBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N5QVBoxD1Ev",
 #endif
@@ -20634,14 +20634,14 @@ const char *_5QVBox_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _5QVBox_vtable [2] = {
+struct classvtable _5QVBox_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	118,	/* Number of Vfuncs */
 	"_ZTI5QVBox",
-	_5QVBox_vtable_name_0,
+	_5QVBox_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -20675,14 +20675,14 @@ struct classvtable _5QVBox_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI5QVBox",
-	_5QVBox_vtable_name_1,
+	_5QVBox_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _5QVBox_baseinfo[] = {
+struct base_type_info _5QVBox_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z5QVBox_classinfo = {
+struct classinfo _Z5QVBox_of_libqt_mt_so_3_classinfo = {
 	"_Z5QVBox",
 	"_ZTV5QVBox",
 	"_ZTI5QVBox",	/* RTTI */
@@ -20693,41 +20693,41 @@ struct classinfo _Z5QVBox_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_5QVBox_typeinfo,
-	_5QVBox_vtable,
-	_5QVBox_baseinfo,
+	&_5QVBox_of_libqt_mt_so_3_typeinfo,
+	_5QVBox_of_libqt_mt_so_3_vtable,
+	_5QVBox_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_17QContextMenuEvent_typeinfo_name[] = {
+char *_17QContextMenuEvent_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo _17QContextMenuEvent_typeinfo = {
+struct classtypeinfo _17QContextMenuEvent_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS17QContextMenuEvent",
-	_17QContextMenuEvent_typeinfo_name,
+	_17QContextMenuEvent_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_17QContextMenuEvent_vtable_name_0 [] = {
+const char *_17QContextMenuEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN17QContextMenuEventD1Ev",
 	"_ZN17QContextMenuEventD0Ev",
 	};
 
-struct classvtable _17QContextMenuEvent_vtable [1] = {
+struct classvtable _17QContextMenuEvent_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI17QContextMenuEvent",
-	_17QContextMenuEvent_vtable_name_0,
+	_17QContextMenuEvent_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _17QContextMenuEvent_baseinfo[] = {
+struct base_type_info _17QContextMenuEvent_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z17QContextMenuEvent_classinfo = {
+struct classinfo _Z17QContextMenuEvent_of_libqt_mt_so_3_classinfo = {
 	"_Z17QContextMenuEvent",
 	"_ZTV17QContextMenuEvent",
 	"_ZTI17QContextMenuEvent",	/* RTTI */
@@ -20738,22 +20738,22 @@ struct classinfo _Z17QContextMenuEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_17QContextMenuEvent_typeinfo,
-	_17QContextMenuEvent_vtable,
-	_17QContextMenuEvent_baseinfo,
+	&_17QContextMenuEvent_of_libqt_mt_so_3_typeinfo,
+	_17QContextMenuEvent_of_libqt_mt_so_3_vtable,
+	_17QContextMenuEvent_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_8QProcess_typeinfo_name[] = {
+char *_8QProcess_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _8QProcess_typeinfo = {
+struct classtypeinfo _8QProcess_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS8QProcess",
-	_8QProcess_typeinfo_name,
+	_8QProcess_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_8QProcess_vtable_name_0 [] = {
+const char *_8QProcess_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK8QProcess10metaObjectEv",
 	"_ZNK8QProcess9classNameEv",
 	"_ZN8QProcess7qt_castEPKc",
@@ -20790,21 +20790,21 @@ const char *_8QProcess_vtable_name_0 [] = {
 	"_ZN8QProcess10closeStdinEv",
 	};
 
-struct classvtable _8QProcess_vtable [1] = {
+struct classvtable _8QProcess_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	34,	/* Number of Vfuncs */
 	"_ZTI8QProcess",
-	_8QProcess_vtable_name_0,
+	_8QProcess_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _8QProcess_baseinfo[] = {
+struct base_type_info _8QProcess_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z8QProcess_classinfo = {
+struct classinfo _Z8QProcess_of_libqt_mt_so_3_classinfo = {
 	"_Z8QProcess",
 	"_ZTV8QProcess",
 	"_ZTI8QProcess",	/* RTTI */
@@ -20815,41 +20815,41 @@ struct classinfo _Z8QProcess_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_8QProcess_typeinfo,
-	_8QProcess_vtable,
-	_8QProcess_baseinfo,
+	&_8QProcess_of_libqt_mt_so_3_typeinfo,
+	_8QProcess_of_libqt_mt_so_3_vtable,
+	_8QProcess_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QImageFormat_typeinfo_name[] = {
+char *_12QImageFormat_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _12QImageFormat_typeinfo = {
+struct classtypeinfo _12QImageFormat_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS12QImageFormat",
-	_12QImageFormat_typeinfo_name,
+	_12QImageFormat_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QImageFormat_vtable_name_0 [] = {
+const char *_12QImageFormat_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN12QImageFormatD1Ev",
 	"_ZN12QImageFormatD0Ev",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _12QImageFormat_vtable [1] = {
+struct classvtable _12QImageFormat_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	3,	/* Number of Vfuncs */
 	"_ZTI12QImageFormat",
-	_12QImageFormat_vtable_name_0,
+	_12QImageFormat_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QImageFormat_baseinfo[] = {
+struct base_type_info _12QImageFormat_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QImageFormat_classinfo = {
+struct classinfo _Z12QImageFormat_of_libqt_mt_so_3_classinfo = {
 	"_Z12QImageFormat",
 	"_ZTV12QImageFormat",
 	"_ZTI12QImageFormat",	/* RTTI */
@@ -20860,22 +20860,22 @@ struct classinfo _Z12QImageFormat_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QImageFormat_typeinfo,
-	_12QImageFormat_vtable,
-	_12QImageFormat_baseinfo,
+	&_12QImageFormat_of_libqt_mt_so_3_typeinfo,
+	_12QImageFormat_of_libqt_mt_so_3_vtable,
+	_12QImageFormat_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QTranslator_typeinfo_name[] = {
+char *_11QTranslator_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _11QTranslator_typeinfo = {
+struct classtypeinfo _11QTranslator_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QTranslator",
-	_11QTranslator_typeinfo_name,
+	_11QTranslator_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QTranslator_vtable_name_0 [] = {
+const char *_11QTranslator_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK11QTranslator10metaObjectEv",
 	"_ZNK11QTranslator9classNameEv",
 	"_ZN11QTranslator7qt_castEPKc",
@@ -20900,21 +20900,21 @@ const char *_11QTranslator_vtable_name_0 [] = {
 	"_ZNK11QTranslator11findMessageEPKcS1_S1_",
 	};
 
-struct classvtable _11QTranslator_vtable [1] = {
+struct classvtable _11QTranslator_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	22,	/* Number of Vfuncs */
 	"_ZTI11QTranslator",
-	_11QTranslator_vtable_name_0,
+	_11QTranslator_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QTranslator_baseinfo[] = {
+struct base_type_info _11QTranslator_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QTranslator_classinfo = {
+struct classinfo _Z11QTranslator_of_libqt_mt_so_3_classinfo = {
 	"_Z11QTranslator",
 	"_ZTV11QTranslator",
 	"_ZTI11QTranslator",	/* RTTI */
@@ -20925,42 +20925,42 @@ struct classinfo _Z11QTranslator_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QTranslator_typeinfo,
-	_11QTranslator_vtable,
-	_11QTranslator_baseinfo,
+	&_11QTranslator_of_libqt_mt_so_3_typeinfo,
+	_11QTranslator_of_libqt_mt_so_3_vtable,
+	_11QTranslator_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QXmlLocator_typeinfo_name[] = {
+char *_11QXmlLocator_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _11QXmlLocator_typeinfo = {
+struct classtypeinfo _11QXmlLocator_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS11QXmlLocator",
-	_11QXmlLocator_typeinfo_name,
+	_11QXmlLocator_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QXmlLocator_vtable_name_0 [] = {
+const char *_11QXmlLocator_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QXmlLocatorD1Ev",
 	"_ZN11QXmlLocatorD0Ev",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _11QXmlLocator_vtable [1] = {
+struct classvtable _11QXmlLocator_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	4,	/* Number of Vfuncs */
 	"_ZTI11QXmlLocator",
-	_11QXmlLocator_vtable_name_0,
+	_11QXmlLocator_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QXmlLocator_baseinfo[] = {
+struct base_type_info _11QXmlLocator_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QXmlLocator_classinfo = {
+struct classinfo _Z11QXmlLocator_of_libqt_mt_so_3_classinfo = {
 	"_Z11QXmlLocator",
 	"_ZTV11QXmlLocator",
 	"_ZTI11QXmlLocator",	/* RTTI */
@@ -20971,21 +20971,21 @@ struct classinfo _Z11QXmlLocator_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QXmlLocator_typeinfo,
-	_11QXmlLocator_vtable,
-	_11QXmlLocator_baseinfo,
+	&_11QXmlLocator_of_libqt_mt_so_3_typeinfo,
+	_11QXmlLocator_of_libqt_mt_so_3_vtable,
+	_11QXmlLocator_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QPopupMenu_typeinfo_name[] = {
+char *_10QPopupMenu_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _10QPopupMenu_typeinfo = {
+struct classtypeinfo _10QPopupMenu_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
 	"_ZTS10QPopupMenu",
-	_10QPopupMenu_typeinfo_name,
+	_10QPopupMenu_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QPopupMenu_vtable_name_0 [] = {
+const char *_10QPopupMenu_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK10QPopupMenu10metaObjectEv",
 	"_ZNK10QPopupMenu9classNameEv",
 	"_ZN10QPopupMenu7qt_castEPKc",
@@ -21115,7 +21115,7 @@ const char *_10QPopupMenu_vtable_name_0 [] = {
 	"_ZN10QPopupMenu18setFirstItemActiveEv",
 	};
 
-const char *_10QPopupMenu_vtable_name_1 [] = {
+const char *_10QPopupMenu_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QPopupMenuD1Ev",
 #endif
@@ -21189,7 +21189,7 @@ const char *_10QPopupMenu_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-const char *_10QPopupMenu_vtable_name_2 [] = {
+const char *_10QPopupMenu_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __i386__
 	"_ZThn148_N10QPopupMenuD1Ev",
 #endif
@@ -21361,14 +21361,14 @@ const char *_10QPopupMenu_vtable_name_2 [] = {
 #endif
 	};
 
-struct classvtable _10QPopupMenu_vtable [3] = {
+struct classvtable _10QPopupMenu_of_libqt_mt_so_3_vtable [3] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	127,	/* Number of Vfuncs */
 	"_ZTI10QPopupMenu",
-	_10QPopupMenu_vtable_name_0,
+	_10QPopupMenu_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -21402,7 +21402,7 @@ struct classvtable _10QPopupMenu_vtable [3] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI10QPopupMenu",
-	_10QPopupMenu_vtable_name_1,
+	_10QPopupMenu_of_libqt_mt_so_3_vtable_name_1,
 	},
 	{
 #if defined __i386__
@@ -21436,11 +21436,11 @@ struct classvtable _10QPopupMenu_vtable [3] = {
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI10QPopupMenu",
-	_10QPopupMenu_vtable_name_2,
+	_10QPopupMenu_of_libqt_mt_so_3_vtable_name_2,
 	},
 };
 
-struct base_type_info _10QPopupMenu_baseinfo[] = {
+struct base_type_info _10QPopupMenu_of_libqt_mt_so_3_baseinfo[] = {
 	{"_ZTI6QFrame",	2U},
 #if defined __i386__
 	{"_ZTI9QMenuData",	37890U},
@@ -21465,7 +21465,7 @@ struct base_type_info _10QPopupMenu_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Z10QPopupMenu_classinfo = {
+struct classinfo _Z10QPopupMenu_of_libqt_mt_so_3_classinfo = {
 	"_Z10QPopupMenu",
 	"_ZTV10QPopupMenu",
 	"_ZTI10QPopupMenu",	/* RTTI */
@@ -21476,22 +21476,22 @@ struct classinfo _Z10QPopupMenu_classinfo = {
 	2,
 	0,	/* numVTT */
 	0U,
-	&_10QPopupMenu_typeinfo,
-	_10QPopupMenu_vtable,
-	_10QPopupMenu_baseinfo,
+	&_10QPopupMenu_of_libqt_mt_so_3_typeinfo,
+	_10QPopupMenu_of_libqt_mt_so_3_vtable,
+	_10QPopupMenu_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QImageDrag_typeinfo_name[] = {
+char *_10QImageDrag_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI11QDragObject",
 	};
 
-struct classtypeinfo _10QImageDrag_typeinfo = {
+struct classtypeinfo _10QImageDrag_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QImageDrag",
-	_10QImageDrag_typeinfo_name,
+	_10QImageDrag_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QImageDrag_vtable_name_0 [] = {
+const char *_10QImageDrag_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK10QImageDrag10metaObjectEv",
 	"_ZNK10QImageDrag9classNameEv",
 	"_ZN10QImageDrag7qt_castEPKc",
@@ -21521,7 +21521,7 @@ const char *_10QImageDrag_vtable_name_0 [] = {
 	"_ZNK10QImageDrag11encodedDataEPKc",
 	};
 
-const char *_10QImageDrag_vtable_name_1 [] = {
+const char *_10QImageDrag_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QImageDragD1Ev",
 #endif
@@ -21609,14 +21609,14 @@ const char *_10QImageDrag_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable _10QImageDrag_vtable [2] = {
+struct classvtable _10QImageDrag_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	27,	/* Number of Vfuncs */
 	"_ZTI10QImageDrag",
-	_10QImageDrag_vtable_name_0,
+	_10QImageDrag_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -21650,14 +21650,14 @@ struct classvtable _10QImageDrag_vtable [2] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI10QImageDrag",
-	_10QImageDrag_vtable_name_1,
+	_10QImageDrag_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _10QImageDrag_baseinfo[] = {
+struct base_type_info _10QImageDrag_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QImageDrag_classinfo = {
+struct classinfo _Z10QImageDrag_of_libqt_mt_so_3_classinfo = {
 	"_Z10QImageDrag",
 	"_ZTV10QImageDrag",
 	"_ZTI10QImageDrag",	/* RTTI */
@@ -21668,21 +21668,21 @@ struct classinfo _Z10QImageDrag_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QImageDrag_typeinfo,
-	_10QImageDrag_vtable,
-	_10QImageDrag_baseinfo,
+	&_10QImageDrag_of_libqt_mt_so_3_typeinfo,
+	_10QImageDrag_of_libqt_mt_so_3_vtable,
+	_10QImageDrag_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_18QMimeSourceFactory_typeinfo_name[] = {
+char *_18QMimeSourceFactory_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _18QMimeSourceFactory_typeinfo = {
+struct classtypeinfo _18QMimeSourceFactory_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS18QMimeSourceFactory",
-	_18QMimeSourceFactory_typeinfo_name,
+	_18QMimeSourceFactory_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_18QMimeSourceFactory_vtable_name_0 [] = {
+const char *_18QMimeSourceFactory_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN18QMimeSourceFactoryD1Ev",
 	"_ZN18QMimeSourceFactoryD0Ev",
 	"_ZNK18QMimeSourceFactory4dataERK7QString",
@@ -21696,21 +21696,21 @@ const char *_18QMimeSourceFactory_vtable_name_0 [] = {
 	"_ZN18QMimeSourceFactory16setExtensionTypeERK7QStringPKc",
 	};
 
-struct classvtable _18QMimeSourceFactory_vtable [1] = {
+struct classvtable _18QMimeSourceFactory_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI18QMimeSourceFactory",
-	_18QMimeSourceFactory_vtable_name_0,
+	_18QMimeSourceFactory_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _18QMimeSourceFactory_baseinfo[] = {
+struct base_type_info _18QMimeSourceFactory_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z18QMimeSourceFactory_classinfo = {
+struct classinfo _Z18QMimeSourceFactory_of_libqt_mt_so_3_classinfo = {
 	"_Z18QMimeSourceFactory",
 	"_ZTV18QMimeSourceFactory",
 	"_ZTI18QMimeSourceFactory",	/* RTTI */
@@ -21721,22 +21721,22 @@ struct classinfo _Z18QMimeSourceFactory_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_18QMimeSourceFactory_typeinfo,
-	_18QMimeSourceFactory_vtable,
-	_18QMimeSourceFactory_baseinfo,
+	&_18QMimeSourceFactory_of_libqt_mt_so_3_typeinfo,
+	_18QMimeSourceFactory_of_libqt_mt_so_3_vtable,
+	_18QMimeSourceFactory_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QListBoxText_typeinfo_name[] = {
+char *_12QListBoxText_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI12QListBoxItem",
 	};
 
-struct classtypeinfo _12QListBoxText_typeinfo = {
+struct classtypeinfo _12QListBoxText_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QListBoxText",
-	_12QListBoxText_typeinfo_name,
+	_12QListBoxText_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QListBoxText_vtable_name_0 [] = {
+const char *_12QListBoxText_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN12QListBoxTextD1Ev",
 	"_ZN12QListBoxTextD0Ev",
 	"_ZNK12QListBoxItem4textEv",
@@ -21748,21 +21748,21 @@ const char *_12QListBoxText_vtable_name_0 [] = {
 	"_ZN12QListBoxItem7setTextERK7QString",
 	};
 
-struct classvtable _12QListBoxText_vtable [1] = {
+struct classvtable _12QListBoxText_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI12QListBoxText",
-	_12QListBoxText_vtable_name_0,
+	_12QListBoxText_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QListBoxText_baseinfo[] = {
+struct base_type_info _12QListBoxText_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QListBoxText_classinfo = {
+struct classinfo _Z12QListBoxText_of_libqt_mt_so_3_classinfo = {
 	"_Z12QListBoxText",
 	"_ZTV12QListBoxText",
 	"_ZTI12QListBoxText",	/* RTTI */
@@ -21773,22 +21773,22 @@ struct classinfo _Z12QListBoxText_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QListBoxText_typeinfo,
-	_12QListBoxText_vtable,
-	_12QListBoxText_baseinfo,
+	&_12QListBoxText_of_libqt_mt_so_3_typeinfo,
+	_12QListBoxText_of_libqt_mt_so_3_vtable,
+	_12QListBoxText_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QGroupBox_typeinfo_name[] = {
+char *_9QGroupBox_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QFrame",
 	};
 
-struct classtypeinfo _9QGroupBox_typeinfo = {
+struct classtypeinfo _9QGroupBox_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QGroupBox",
-	_9QGroupBox_typeinfo_name,
+	_9QGroupBox_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QGroupBox_vtable_name_0 [] = {
+const char *_9QGroupBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK9QGroupBox10metaObjectEv",
 	"_ZNK9QGroupBox9classNameEv",
 	"_ZN9QGroupBox7qt_castEPKc",
@@ -21912,7 +21912,7 @@ const char *_9QGroupBox_vtable_name_0 [] = {
 	"_ZN9QGroupBox12setAlignmentEi",
 	};
 
-const char *_9QGroupBox_vtable_name_1 [] = {
+const char *_9QGroupBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QGroupBoxD1Ev",
 #endif
@@ -21986,14 +21986,14 @@ const char *_9QGroupBox_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _9QGroupBox_vtable [2] = {
+struct classvtable _9QGroupBox_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	121,	/* Number of Vfuncs */
 	"_ZTI9QGroupBox",
-	_9QGroupBox_vtable_name_0,
+	_9QGroupBox_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -22027,14 +22027,14 @@ struct classvtable _9QGroupBox_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QGroupBox",
-	_9QGroupBox_vtable_name_1,
+	_9QGroupBox_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _9QGroupBox_baseinfo[] = {
+struct base_type_info _9QGroupBox_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QGroupBox_classinfo = {
+struct classinfo _Z9QGroupBox_of_libqt_mt_so_3_classinfo = {
 	"_Z9QGroupBox",
 	"_ZTV9QGroupBox",
 	"_ZTI9QGroupBox",	/* RTTI */
@@ -22045,21 +22045,21 @@ struct classinfo _Z9QGroupBox_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QGroupBox_typeinfo,
-	_9QGroupBox_vtable,
-	_9QGroupBox_baseinfo,
+	&_9QGroupBox_of_libqt_mt_so_3_typeinfo,
+	_9QGroupBox_of_libqt_mt_so_3_vtable,
+	_9QGroupBox_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_8QMenuBar_typeinfo_name[] = {
+char *_8QMenuBar_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _8QMenuBar_typeinfo = {
+struct classtypeinfo _8QMenuBar_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
 	"_ZTS8QMenuBar",
-	_8QMenuBar_typeinfo_name,
+	_8QMenuBar_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_8QMenuBar_vtable_name_0 [] = {
+const char *_8QMenuBar_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK8QMenuBar10metaObjectEv",
 	"_ZNK8QMenuBar9classNameEv",
 	"_ZN8QMenuBar7qt_castEPKc",
@@ -22187,7 +22187,7 @@ const char *_8QMenuBar_vtable_name_0 [] = {
 	"_ZN8QMenuBar12menuDelPopupEP10QPopupMenu",
 	};
 
-const char *_8QMenuBar_vtable_name_1 [] = {
+const char *_8QMenuBar_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N8QMenuBarD1Ev",
 #endif
@@ -22261,7 +22261,7 @@ const char *_8QMenuBar_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-const char *_8QMenuBar_vtable_name_2 [] = {
+const char *_8QMenuBar_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __i386__
 	"_ZThn148_N8QMenuBarD1Ev",
 #endif
@@ -22433,14 +22433,14 @@ const char *_8QMenuBar_vtable_name_2 [] = {
 #endif
 	};
 
-struct classvtable _8QMenuBar_vtable [3] = {
+struct classvtable _8QMenuBar_of_libqt_mt_so_3_vtable [3] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	125,	/* Number of Vfuncs */
 	"_ZTI8QMenuBar",
-	_8QMenuBar_vtable_name_0,
+	_8QMenuBar_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -22474,7 +22474,7 @@ struct classvtable _8QMenuBar_vtable [3] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI8QMenuBar",
-	_8QMenuBar_vtable_name_1,
+	_8QMenuBar_of_libqt_mt_so_3_vtable_name_1,
 	},
 	{
 #if defined __i386__
@@ -22508,11 +22508,11 @@ struct classvtable _8QMenuBar_vtable [3] = {
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI8QMenuBar",
-	_8QMenuBar_vtable_name_2,
+	_8QMenuBar_of_libqt_mt_so_3_vtable_name_2,
 	},
 };
 
-struct base_type_info _8QMenuBar_baseinfo[] = {
+struct base_type_info _8QMenuBar_of_libqt_mt_so_3_baseinfo[] = {
 	{"_ZTI6QFrame",	2U},
 #if defined __i386__
 	{"_ZTI9QMenuData",	37890U},
@@ -22537,7 +22537,7 @@ struct base_type_info _8QMenuBar_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Z8QMenuBar_classinfo = {
+struct classinfo _Z8QMenuBar_of_libqt_mt_so_3_classinfo = {
 	"_Z8QMenuBar",
 	"_ZTV8QMenuBar",
 	"_ZTI8QMenuBar",	/* RTTI */
@@ -22548,22 +22548,22 @@ struct classinfo _Z8QMenuBar_classinfo = {
 	2,
 	0,	/* numVTT */
 	0U,
-	&_8QMenuBar_typeinfo,
-	_8QMenuBar_vtable,
-	_8QMenuBar_baseinfo,
+	&_8QMenuBar_of_libqt_mt_so_3_typeinfo,
+	_8QMenuBar_of_libqt_mt_so_3_vtable,
+	_8QMenuBar_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_15QProgressDialog_typeinfo_name[] = {
+char *_15QProgressDialog_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QDialog",
 	};
 
-struct classtypeinfo _15QProgressDialog_typeinfo = {
+struct classtypeinfo _15QProgressDialog_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS15QProgressDialog",
-	_15QProgressDialog_typeinfo_name,
+	_15QProgressDialog_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_15QProgressDialog_vtable_name_0 [] = {
+const char *_15QProgressDialog_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK15QProgressDialog10metaObjectEv",
 	"_ZNK15QProgressDialog9classNameEv",
 	"_ZN15QProgressDialog7qt_castEPKc",
@@ -22679,7 +22679,7 @@ const char *_15QProgressDialog_vtable_name_0 [] = {
 	"_ZN7QDialog6rejectEv",
 	};
 
-const char *_15QProgressDialog_vtable_name_1 [] = {
+const char *_15QProgressDialog_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N15QProgressDialogD1Ev",
 #endif
@@ -22753,14 +22753,14 @@ const char *_15QProgressDialog_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _15QProgressDialog_vtable [2] = {
+struct classvtable _15QProgressDialog_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	113,	/* Number of Vfuncs */
 	"_ZTI15QProgressDialog",
-	_15QProgressDialog_vtable_name_0,
+	_15QProgressDialog_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -22794,14 +22794,14 @@ struct classvtable _15QProgressDialog_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI15QProgressDialog",
-	_15QProgressDialog_vtable_name_1,
+	_15QProgressDialog_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _15QProgressDialog_baseinfo[] = {
+struct base_type_info _15QProgressDialog_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z15QProgressDialog_classinfo = {
+struct classinfo _Z15QProgressDialog_of_libqt_mt_so_3_classinfo = {
 	"_Z15QProgressDialog",
 	"_ZTV15QProgressDialog",
 	"_ZTI15QProgressDialog",	/* RTTI */
@@ -22812,22 +22812,22 @@ struct classinfo _Z15QProgressDialog_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_15QProgressDialog_typeinfo,
-	_15QProgressDialog_vtable,
-	_15QProgressDialog_baseinfo,
+	&_15QProgressDialog_of_libqt_mt_so_3_typeinfo,
+	_15QProgressDialog_of_libqt_mt_so_3_vtable,
+	_15QProgressDialog_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_13QDateTimeEdit_typeinfo_name[] = {
+char *_13QDateTimeEdit_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo _13QDateTimeEdit_typeinfo = {
+struct classtypeinfo _13QDateTimeEdit_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS13QDateTimeEdit",
-	_13QDateTimeEdit_typeinfo_name,
+	_13QDateTimeEdit_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_13QDateTimeEdit_vtable_name_0 [] = {
+const char *_13QDateTimeEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK13QDateTimeEdit10metaObjectEv",
 	"_ZNK13QDateTimeEdit9classNameEv",
 	"_ZN13QDateTimeEdit7qt_castEPKc",
@@ -22942,7 +22942,7 @@ const char *_13QDateTimeEdit_vtable_name_0 [] = {
 	"_ZN13QDateTimeEdit14setAutoAdvanceEb",
 	};
 
-const char *_13QDateTimeEdit_vtable_name_1 [] = {
+const char *_13QDateTimeEdit_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N13QDateTimeEditD1Ev",
 #endif
@@ -23016,14 +23016,14 @@ const char *_13QDateTimeEdit_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _13QDateTimeEdit_vtable [2] = {
+struct classvtable _13QDateTimeEdit_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	112,	/* Number of Vfuncs */
 	"_ZTI13QDateTimeEdit",
-	_13QDateTimeEdit_vtable_name_0,
+	_13QDateTimeEdit_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -23057,14 +23057,14 @@ struct classvtable _13QDateTimeEdit_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI13QDateTimeEdit",
-	_13QDateTimeEdit_vtable_name_1,
+	_13QDateTimeEdit_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _13QDateTimeEdit_baseinfo[] = {
+struct base_type_info _13QDateTimeEdit_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z13QDateTimeEdit_classinfo = {
+struct classinfo _Z13QDateTimeEdit_of_libqt_mt_so_3_classinfo = {
 	"_Z13QDateTimeEdit",
 	"_ZTV13QDateTimeEdit",
 	"_ZTI13QDateTimeEdit",	/* RTTI */
@@ -23075,21 +23075,21 @@ struct classinfo _Z13QDateTimeEdit_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_13QDateTimeEdit_typeinfo,
-	_13QDateTimeEdit_vtable,
-	_13QDateTimeEdit_baseinfo,
+	&_13QDateTimeEdit_of_libqt_mt_so_3_typeinfo,
+	_13QDateTimeEdit_of_libqt_mt_so_3_vtable,
+	_13QDateTimeEdit_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QSqlResult_typeinfo_name[] = {
+char *_10QSqlResult_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _10QSqlResult_typeinfo = {
+struct classtypeinfo _10QSqlResult_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS10QSqlResult",
-	_10QSqlResult_typeinfo_name,
+	_10QSqlResult_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QSqlResult_vtable_name_0 [] = {
+const char *_10QSqlResult_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN10QSqlResultD1Ev",
 	"_ZN10QSqlResultD0Ev",
 	"_ZN10QSqlResult5setAtEi",
@@ -23110,21 +23110,21 @@ const char *_10QSqlResult_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _10QSqlResult_vtable [1] = {
+struct classvtable _10QSqlResult_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	18,	/* Number of Vfuncs */
 	"_ZTI10QSqlResult",
-	_10QSqlResult_vtable_name_0,
+	_10QSqlResult_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _10QSqlResult_baseinfo[] = {
+struct base_type_info _10QSqlResult_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QSqlResult_classinfo = {
+struct classinfo _Z10QSqlResult_of_libqt_mt_so_3_classinfo = {
 	"_Z10QSqlResult",
 	"_ZTV10QSqlResult",
 	"_ZTI10QSqlResult",	/* RTTI */
@@ -23135,22 +23135,22 @@ struct classinfo _Z10QSqlResult_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QSqlResult_typeinfo,
-	_10QSqlResult_vtable,
-	_10QSqlResult_baseinfo,
+	&_10QSqlResult_of_libqt_mt_so_3_typeinfo,
+	_10QSqlResult_of_libqt_mt_so_3_vtable,
+	_10QSqlResult_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_16QRegExpValidator_typeinfo_name[] = {
+char *_16QRegExpValidator_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI10QValidator",
 	};
 
-struct classtypeinfo _16QRegExpValidator_typeinfo = {
+struct classtypeinfo _16QRegExpValidator_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS16QRegExpValidator",
-	_16QRegExpValidator_typeinfo_name,
+	_16QRegExpValidator_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_16QRegExpValidator_vtable_name_0 [] = {
+const char *_16QRegExpValidator_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK16QRegExpValidator10metaObjectEv",
 	"_ZNK16QRegExpValidator9classNameEv",
 	"_ZN16QRegExpValidator7qt_castEPKc",
@@ -23176,21 +23176,21 @@ const char *_16QRegExpValidator_vtable_name_0 [] = {
 	"_ZNK10QValidator5fixupER7QString",
 	};
 
-struct classvtable _16QRegExpValidator_vtable [1] = {
+struct classvtable _16QRegExpValidator_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	23,	/* Number of Vfuncs */
 	"_ZTI16QRegExpValidator",
-	_16QRegExpValidator_vtable_name_0,
+	_16QRegExpValidator_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _16QRegExpValidator_baseinfo[] = {
+struct base_type_info _16QRegExpValidator_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z16QRegExpValidator_classinfo = {
+struct classinfo _Z16QRegExpValidator_of_libqt_mt_so_3_classinfo = {
 	"_Z16QRegExpValidator",
 	"_ZTV16QRegExpValidator",
 	"_ZTI16QRegExpValidator",	/* RTTI */
@@ -23201,22 +23201,22 @@ struct classinfo _Z16QRegExpValidator_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_16QRegExpValidator_typeinfo,
-	_16QRegExpValidator_vtable,
-	_16QRegExpValidator_baseinfo,
+	&_16QRegExpValidator_of_libqt_mt_so_3_typeinfo,
+	_16QRegExpValidator_of_libqt_mt_so_3_vtable,
+	_16QRegExpValidator_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_15QDockAreaLayout_typeinfo_name[] = {
+char *_15QDockAreaLayout_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QLayout",
 	};
 
-struct classtypeinfo _15QDockAreaLayout_typeinfo = {
+struct classtypeinfo _15QDockAreaLayout_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS15QDockAreaLayout",
-	_15QDockAreaLayout_typeinfo_name,
+	_15QDockAreaLayout_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_15QDockAreaLayout_vtable_name_0 [] = {
+const char *_15QDockAreaLayout_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK15QDockAreaLayout10metaObjectEv",
 	"_ZNK15QDockAreaLayout9classNameEv",
 	"_ZN15QDockAreaLayout7qt_castEPKc",
@@ -23257,7 +23257,7 @@ const char *_15QDockAreaLayout_vtable_name_0 [] = {
 	"_ZNK15QDockAreaLayout8sizeHintEv",
 	};
 
-const char *_15QDockAreaLayout_vtable_name_1 [] = {
+const char *_15QDockAreaLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N15QDockAreaLayoutD1Ev",
 #endif
@@ -23557,14 +23557,14 @@ const char *_15QDockAreaLayout_vtable_name_1 [] = {
 	"_ZN11QLayoutItem12setAlignmentEi",
 	};
 
-struct classvtable _15QDockAreaLayout_vtable [2] = {
+struct classvtable _15QDockAreaLayout_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	38,	/* Number of Vfuncs */
 	"_ZTI15QDockAreaLayout",
-	_15QDockAreaLayout_vtable_name_0,
+	_15QDockAreaLayout_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -23598,14 +23598,14 @@ struct classvtable _15QDockAreaLayout_vtable [2] = {
 	1,	/* Vtable category */
 	17,	/* Number of Vfuncs */
 	"_ZTI15QDockAreaLayout",
-	_15QDockAreaLayout_vtable_name_1,
+	_15QDockAreaLayout_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _15QDockAreaLayout_baseinfo[] = {
+struct base_type_info _15QDockAreaLayout_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z15QDockAreaLayout_classinfo = {
+struct classinfo _Z15QDockAreaLayout_of_libqt_mt_so_3_classinfo = {
 	"_Z15QDockAreaLayout",
 	"_ZTV15QDockAreaLayout",
 	"_ZTI15QDockAreaLayout",	/* RTTI */
@@ -23616,41 +23616,41 @@ struct classinfo _Z15QDockAreaLayout_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_15QDockAreaLayout_typeinfo,
-	_15QDockAreaLayout_vtable,
-	_15QDockAreaLayout_baseinfo,
+	&_15QDockAreaLayout_of_libqt_mt_so_3_typeinfo,
+	_15QDockAreaLayout_of_libqt_mt_so_3_vtable,
+	_15QDockAreaLayout_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_15QDragLeaveEvent_typeinfo_name[] = {
+char *_15QDragLeaveEvent_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo _15QDragLeaveEvent_typeinfo = {
+struct classtypeinfo _15QDragLeaveEvent_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS15QDragLeaveEvent",
-	_15QDragLeaveEvent_typeinfo_name,
+	_15QDragLeaveEvent_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_15QDragLeaveEvent_vtable_name_0 [] = {
+const char *_15QDragLeaveEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN15QDragLeaveEventD1Ev",
 	"_ZN15QDragLeaveEventD0Ev",
 	};
 
-struct classvtable _15QDragLeaveEvent_vtable [1] = {
+struct classvtable _15QDragLeaveEvent_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI15QDragLeaveEvent",
-	_15QDragLeaveEvent_vtable_name_0,
+	_15QDragLeaveEvent_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _15QDragLeaveEvent_baseinfo[] = {
+struct base_type_info _15QDragLeaveEvent_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z15QDragLeaveEvent_classinfo = {
+struct classinfo _Z15QDragLeaveEvent_of_libqt_mt_so_3_classinfo = {
 	"_Z15QDragLeaveEvent",
 	"_ZTV15QDragLeaveEvent",
 	"_ZTI15QDragLeaveEvent",	/* RTTI */
@@ -23661,22 +23661,22 @@ struct classinfo _Z15QDragLeaveEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_15QDragLeaveEvent_typeinfo,
-	_15QDragLeaveEvent_vtable,
-	_15QDragLeaveEvent_baseinfo,
+	&_15QDragLeaveEvent_of_libqt_mt_so_3_typeinfo,
+	_15QDragLeaveEvent_of_libqt_mt_so_3_vtable,
+	_15QDragLeaveEvent_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QLCDNumber_typeinfo_name[] = {
+char *_10QLCDNumber_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QFrame",
 	};
 
-struct classtypeinfo _10QLCDNumber_typeinfo = {
+struct classtypeinfo _10QLCDNumber_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QLCDNumber",
-	_10QLCDNumber_typeinfo_name,
+	_10QLCDNumber_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QLCDNumber_vtable_name_0 [] = {
+const char *_10QLCDNumber_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK10QLCDNumber10metaObjectEv",
 	"_ZNK10QLCDNumber9classNameEv",
 	"_ZN10QLCDNumber7qt_castEPKc",
@@ -23805,7 +23805,7 @@ const char *_10QLCDNumber_vtable_name_0 [] = {
 	"_ZN10QLCDNumber20setSmallDecimalPointEb",
 	};
 
-const char *_10QLCDNumber_vtable_name_1 [] = {
+const char *_10QLCDNumber_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QLCDNumberD1Ev",
 #endif
@@ -23879,14 +23879,14 @@ const char *_10QLCDNumber_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _10QLCDNumber_vtable [2] = {
+struct classvtable _10QLCDNumber_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	126,	/* Number of Vfuncs */
 	"_ZTI10QLCDNumber",
-	_10QLCDNumber_vtable_name_0,
+	_10QLCDNumber_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -23920,14 +23920,14 @@ struct classvtable _10QLCDNumber_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI10QLCDNumber",
-	_10QLCDNumber_vtable_name_1,
+	_10QLCDNumber_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _10QLCDNumber_baseinfo[] = {
+struct base_type_info _10QLCDNumber_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QLCDNumber_classinfo = {
+struct classinfo _Z10QLCDNumber_of_libqt_mt_so_3_classinfo = {
 	"_Z10QLCDNumber",
 	"_ZTV10QLCDNumber",
 	"_ZTI10QLCDNumber",	/* RTTI */
@@ -23938,21 +23938,21 @@ struct classinfo _Z10QLCDNumber_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QLCDNumber_typeinfo,
-	_10QLCDNumber_vtable,
-	_10QLCDNumber_baseinfo,
+	&_10QLCDNumber_of_libqt_mt_so_3_typeinfo,
+	_10QLCDNumber_of_libqt_mt_so_3_vtable,
+	_10QLCDNumber_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QUrlOperator_typeinfo_name[] = {
+char *_12QUrlOperator_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _12QUrlOperator_typeinfo = {
+struct classtypeinfo _12QUrlOperator_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
 	"_ZTS12QUrlOperator",
-	_12QUrlOperator_typeinfo_name,
+	_12QUrlOperator_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QUrlOperator_vtable_name_0 [] = {
+const char *_12QUrlOperator_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK12QUrlOperator10metaObjectEv",
 	"_ZNK12QUrlOperator9classNameEv",
 	"_ZN12QUrlOperator7qt_castEPKc",
@@ -23994,7 +23994,7 @@ const char *_12QUrlOperator_vtable_name_0 [] = {
 	"_ZN12QUrlOperator12clearEntriesEv",
 	};
 
-const char *_12QUrlOperator_vtable_name_1 [] = {
+const char *_12QUrlOperator_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N12QUrlOperatorD1Ev",
 #endif
@@ -24134,14 +24134,14 @@ const char *_12QUrlOperator_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable _12QUrlOperator_vtable [2] = {
+struct classvtable _12QUrlOperator_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	39,	/* Number of Vfuncs */
 	"_ZTI12QUrlOperator",
-	_12QUrlOperator_vtable_name_0,
+	_12QUrlOperator_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -24175,11 +24175,11 @@ struct classvtable _12QUrlOperator_vtable [2] = {
 	1,	/* Vtable category */
 	17,	/* Number of Vfuncs */
 	"_ZTI12QUrlOperator",
-	_12QUrlOperator_vtable_name_1,
+	_12QUrlOperator_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _12QUrlOperator_baseinfo[] = {
+struct base_type_info _12QUrlOperator_of_libqt_mt_so_3_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
 #if defined __i386__
 	{"_ZTI4QUrl",	10242U},
@@ -24204,7 +24204,7 @@ struct base_type_info _12QUrlOperator_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Z12QUrlOperator_classinfo = {
+struct classinfo _Z12QUrlOperator_of_libqt_mt_so_3_classinfo = {
 	"_Z12QUrlOperator",
 	"_ZTV12QUrlOperator",
 	"_ZTI12QUrlOperator",	/* RTTI */
@@ -24215,21 +24215,21 @@ struct classinfo _Z12QUrlOperator_classinfo = {
 	2,
 	0,	/* numVTT */
 	0U,
-	&_12QUrlOperator_typeinfo,
-	_12QUrlOperator_vtable,
-	_12QUrlOperator_baseinfo,
+	&_12QUrlOperator_of_libqt_mt_so_3_typeinfo,
+	_12QUrlOperator_of_libqt_mt_so_3_vtable,
+	_12QUrlOperator_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_7QSocket_typeinfo_name[] = {
+char *_7QSocket_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _7QSocket_typeinfo = {
+struct classtypeinfo _7QSocket_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
 	"_ZTS7QSocket",
-	_7QSocket_typeinfo_name,
+	_7QSocket_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_7QSocket_vtable_name_0 [] = {
+const char *_7QSocket_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QSocket10metaObjectEv",
 	"_ZNK7QSocket9classNameEv",
 	"_ZN7QSocket7qt_castEPKc",
@@ -24272,7 +24272,7 @@ const char *_7QSocket_vtable_name_0 [] = {
 	"_ZN7QSocket8sn_writeEv",
 	};
 
-const char *_7QSocket_vtable_name_1 [] = {
+const char *_7QSocket_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N7QSocketD1Ev",
 #endif
@@ -24591,14 +24591,14 @@ const char *_7QSocket_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable _7QSocket_vtable [2] = {
+struct classvtable _7QSocket_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	40,	/* Number of Vfuncs */
 	"_ZTI7QSocket",
-	_7QSocket_vtable_name_0,
+	_7QSocket_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -24632,11 +24632,11 @@ struct classvtable _7QSocket_vtable [2] = {
 	1,	/* Vtable category */
 	16,	/* Number of Vfuncs */
 	"_ZTI7QSocket",
-	_7QSocket_vtable_name_1,
+	_7QSocket_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _7QSocket_baseinfo[] = {
+struct base_type_info _7QSocket_of_libqt_mt_so_3_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
 #if defined __i386__
 	{"_ZTI9QIODevice",	10242U},
@@ -24661,7 +24661,7 @@ struct base_type_info _7QSocket_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Z7QSocket_classinfo = {
+struct classinfo _Z7QSocket_of_libqt_mt_so_3_classinfo = {
 	"_Z7QSocket",
 	"_ZTV7QSocket",
 	"_ZTI7QSocket",	/* RTTI */
@@ -24672,22 +24672,22 @@ struct classinfo _Z7QSocket_classinfo = {
 	2,
 	0,	/* numVTT */
 	0U,
-	&_7QSocket_typeinfo,
-	_7QSocket_vtable,
-	_7QSocket_baseinfo,
+	&_7QSocket_of_libqt_mt_so_3_typeinfo,
+	_7QSocket_of_libqt_mt_so_3_vtable,
+	_7QSocket_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QGridView_typeinfo_name[] = {
+char *_9QGridView_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI11QScrollView",
 	};
 
-struct classtypeinfo _9QGridView_typeinfo = {
+struct classtypeinfo _9QGridView_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QGridView",
-	_9QGridView_typeinfo_name,
+	_9QGridView_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QGridView_vtable_name_0 [] = {
+const char *_9QGridView_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK9QGridView10metaObjectEv",
 	"_ZNK9QGridView9classNameEv",
 	"_ZN9QGridView7qt_castEPKc",
@@ -24851,7 +24851,7 @@ const char *_9QGridView_vtable_name_0 [] = {
 	"_ZN9QGridView15dimensionChangeEii",
 	};
 
-const char *_9QGridView_vtable_name_1 [] = {
+const char *_9QGridView_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QGridViewD1Ev",
 #endif
@@ -24925,14 +24925,14 @@ const char *_9QGridView_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _9QGridView_vtable [2] = {
+struct classvtable _9QGridView_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	161,	/* Number of Vfuncs */
 	"_ZTI9QGridView",
-	_9QGridView_vtable_name_0,
+	_9QGridView_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -24966,14 +24966,14 @@ struct classvtable _9QGridView_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QGridView",
-	_9QGridView_vtable_name_1,
+	_9QGridView_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _9QGridView_baseinfo[] = {
+struct base_type_info _9QGridView_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QGridView_classinfo = {
+struct classinfo _Z9QGridView_of_libqt_mt_so_3_classinfo = {
 	"_Z9QGridView",
 	"_ZTV9QGridView",
 	"_ZTI9QGridView",	/* RTTI */
@@ -24984,22 +24984,22 @@ struct classinfo _Z9QGridView_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QGridView_typeinfo,
-	_9QGridView_vtable,
-	_9QGridView_baseinfo,
+	&_9QGridView_of_libqt_mt_so_3_typeinfo,
+	_9QGridView_of_libqt_mt_so_3_vtable,
+	_9QGridView_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QBoxLayout_typeinfo_name[] = {
+char *_10QBoxLayout_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QLayout",
 	};
 
-struct classtypeinfo _10QBoxLayout_typeinfo = {
+struct classtypeinfo _10QBoxLayout_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QBoxLayout",
-	_10QBoxLayout_typeinfo_name,
+	_10QBoxLayout_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QBoxLayout_vtable_name_0 [] = {
+const char *_10QBoxLayout_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK10QBoxLayout10metaObjectEv",
 	"_ZNK10QBoxLayout9classNameEv",
 	"_ZN10QBoxLayout7qt_castEPKc",
@@ -25040,7 +25040,7 @@ const char *_10QBoxLayout_vtable_name_0 [] = {
 	"_ZNK10QBoxLayout14heightForWidthEi",
 	};
 
-const char *_10QBoxLayout_vtable_name_1 [] = {
+const char *_10QBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QBoxLayoutD1Ev",
 #endif
@@ -25340,14 +25340,14 @@ const char *_10QBoxLayout_vtable_name_1 [] = {
 	"_ZN11QLayoutItem12setAlignmentEi",
 	};
 
-struct classvtable _10QBoxLayout_vtable [2] = {
+struct classvtable _10QBoxLayout_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	38,	/* Number of Vfuncs */
 	"_ZTI10QBoxLayout",
-	_10QBoxLayout_vtable_name_0,
+	_10QBoxLayout_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -25381,14 +25381,14 @@ struct classvtable _10QBoxLayout_vtable [2] = {
 	1,	/* Vtable category */
 	17,	/* Number of Vfuncs */
 	"_ZTI10QBoxLayout",
-	_10QBoxLayout_vtable_name_1,
+	_10QBoxLayout_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _10QBoxLayout_baseinfo[] = {
+struct base_type_info _10QBoxLayout_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QBoxLayout_classinfo = {
+struct classinfo _Z10QBoxLayout_of_libqt_mt_so_3_classinfo = {
 	"_Z10QBoxLayout",
 	"_ZTV10QBoxLayout",
 	"_ZTI10QBoxLayout",	/* RTTI */
@@ -25399,41 +25399,41 @@ struct classinfo _Z10QBoxLayout_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QBoxLayout_typeinfo,
-	_10QBoxLayout_vtable,
-	_10QBoxLayout_baseinfo,
+	&_10QBoxLayout_of_libqt_mt_so_3_typeinfo,
+	_10QBoxLayout_of_libqt_mt_so_3_vtable,
+	_10QBoxLayout_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_8QIMEvent_typeinfo_name[] = {
+char *_8QIMEvent_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo _8QIMEvent_typeinfo = {
+struct classtypeinfo _8QIMEvent_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS8QIMEvent",
-	_8QIMEvent_typeinfo_name,
+	_8QIMEvent_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_8QIMEvent_vtable_name_0 [] = {
+const char *_8QIMEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN8QIMEventD1Ev",
 	"_ZN8QIMEventD0Ev",
 	};
 
-struct classvtable _8QIMEvent_vtable [1] = {
+struct classvtable _8QIMEvent_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI8QIMEvent",
-	_8QIMEvent_vtable_name_0,
+	_8QIMEvent_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _8QIMEvent_baseinfo[] = {
+struct base_type_info _8QIMEvent_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z8QIMEvent_classinfo = {
+struct classinfo _Z8QIMEvent_of_libqt_mt_so_3_classinfo = {
 	"_Z8QIMEvent",
 	"_ZTV8QIMEvent",
 	"_ZTI8QIMEvent",	/* RTTI */
@@ -25444,21 +25444,21 @@ struct classinfo _Z8QIMEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_8QIMEvent_typeinfo,
-	_8QIMEvent_vtable,
-	_8QIMEvent_baseinfo,
+	&_8QIMEvent_of_libqt_mt_so_3_typeinfo,
+	_8QIMEvent_of_libqt_mt_so_3_vtable,
+	_8QIMEvent_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_7QLayout_typeinfo_name[] = {
+char *_7QLayout_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _7QLayout_typeinfo = {
+struct classtypeinfo _7QLayout_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
 	"_ZTS7QLayout",
-	_7QLayout_typeinfo_name,
+	_7QLayout_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_7QLayout_vtable_name_0 [] = {
+const char *_7QLayout_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QLayout10metaObjectEv",
 	"_ZNK7QLayout9classNameEv",
 	"_ZN7QLayout7qt_castEPKc",
@@ -25496,7 +25496,7 @@ const char *_7QLayout_vtable_name_0 [] = {
 	"_ZN7QLayout6layoutEv",
 	};
 
-const char *_7QLayout_vtable_name_1 [] = {
+const char *_7QLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N7QLayoutD1Ev",
 #endif
@@ -25696,14 +25696,14 @@ const char *_7QLayout_vtable_name_1 [] = {
 	"_ZN11QLayoutItem12setAlignmentEi",
 	};
 
-struct classvtable _7QLayout_vtable [2] = {
+struct classvtable _7QLayout_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	35,	/* Number of Vfuncs */
 	"_ZTI7QLayout",
-	_7QLayout_vtable_name_0,
+	_7QLayout_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -25737,11 +25737,11 @@ struct classvtable _7QLayout_vtable [2] = {
 	1,	/* Vtable category */
 	17,	/* Number of Vfuncs */
 	"_ZTI7QLayout",
-	_7QLayout_vtable_name_1,
+	_7QLayout_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _7QLayout_baseinfo[] = {
+struct base_type_info _7QLayout_of_libqt_mt_so_3_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
 #if defined __i386__
 	{"_ZTI11QLayoutItem",	10242U},
@@ -25766,7 +25766,7 @@ struct base_type_info _7QLayout_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Z7QLayout_classinfo = {
+struct classinfo _Z7QLayout_of_libqt_mt_so_3_classinfo = {
 	"_Z7QLayout",
 	"_ZTV7QLayout",
 	"_ZTI7QLayout",	/* RTTI */
@@ -25777,22 +25777,22 @@ struct classinfo _Z7QLayout_classinfo = {
 	2,
 	0,	/* numVTT */
 	0U,
-	&_7QLayout_typeinfo,
-	_7QLayout_vtable,
-	_7QLayout_baseinfo,
+	&_7QLayout_of_libqt_mt_so_3_typeinfo,
+	_7QLayout_of_libqt_mt_so_3_vtable,
+	_7QLayout_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_15QSocketNotifier_typeinfo_name[] = {
+char *_15QSocketNotifier_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _15QSocketNotifier_typeinfo = {
+struct classtypeinfo _15QSocketNotifier_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS15QSocketNotifier",
-	_15QSocketNotifier_typeinfo_name,
+	_15QSocketNotifier_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_15QSocketNotifier_vtable_name_0 [] = {
+const char *_15QSocketNotifier_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK15QSocketNotifier10metaObjectEv",
 	"_ZNK15QSocketNotifier9classNameEv",
 	"_ZN15QSocketNotifier7qt_castEPKc",
@@ -25817,21 +25817,21 @@ const char *_15QSocketNotifier_vtable_name_0 [] = {
 	"_ZN15QSocketNotifier10setEnabledEb",
 	};
 
-struct classvtable _15QSocketNotifier_vtable [1] = {
+struct classvtable _15QSocketNotifier_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	22,	/* Number of Vfuncs */
 	"_ZTI15QSocketNotifier",
-	_15QSocketNotifier_vtable_name_0,
+	_15QSocketNotifier_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _15QSocketNotifier_baseinfo[] = {
+struct base_type_info _15QSocketNotifier_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z15QSocketNotifier_classinfo = {
+struct classinfo _Z15QSocketNotifier_of_libqt_mt_so_3_classinfo = {
 	"_Z15QSocketNotifier",
 	"_ZTV15QSocketNotifier",
 	"_ZTI15QSocketNotifier",	/* RTTI */
@@ -25842,22 +25842,22 @@ struct classinfo _Z15QSocketNotifier_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_15QSocketNotifier_typeinfo,
-	_15QSocketNotifier_vtable,
-	_15QSocketNotifier_baseinfo,
+	&_15QSocketNotifier_of_libqt_mt_so_3_typeinfo,
+	_15QSocketNotifier_of_libqt_mt_so_3_vtable,
+	_15QSocketNotifier_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_7QButton_typeinfo_name[] = {
+char *_7QButton_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo _7QButton_typeinfo = {
+struct classtypeinfo _7QButton_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS7QButton",
-	_7QButton_typeinfo_name,
+	_7QButton_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_7QButton_vtable_name_0 [] = {
+const char *_7QButton_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QButton10metaObjectEv",
 	"_ZNK7QButton9classNameEv",
 	"_ZN7QButton7qt_castEPKc",
@@ -25981,7 +25981,7 @@ const char *_7QButton_vtable_name_0 [] = {
 	"_ZN7QButton8setGroupEP12QButtonGroup",
 	};
 
-const char *_7QButton_vtable_name_1 [] = {
+const char *_7QButton_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N7QButtonD1Ev",
 #endif
@@ -26055,14 +26055,14 @@ const char *_7QButton_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _7QButton_vtable [2] = {
+struct classvtable _7QButton_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	121,	/* Number of Vfuncs */
 	"_ZTI7QButton",
-	_7QButton_vtable_name_0,
+	_7QButton_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -26096,14 +26096,14 @@ struct classvtable _7QButton_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI7QButton",
-	_7QButton_vtable_name_1,
+	_7QButton_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _7QButton_baseinfo[] = {
+struct base_type_info _7QButton_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z7QButton_classinfo = {
+struct classinfo _Z7QButton_of_libqt_mt_so_3_classinfo = {
 	"_Z7QButton",
 	"_ZTV7QButton",
 	"_ZTI7QButton",	/* RTTI */
@@ -26114,22 +26114,22 @@ struct classinfo _Z7QButton_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_7QButton_typeinfo,
-	_7QButton_vtable,
-	_7QButton_baseinfo,
+	&_7QButton_of_libqt_mt_so_3_typeinfo,
+	_7QButton_of_libqt_mt_so_3_vtable,
+	_7QButton_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_13QIntValidator_typeinfo_name[] = {
+char *_13QIntValidator_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI10QValidator",
 	};
 
-struct classtypeinfo _13QIntValidator_typeinfo = {
+struct classtypeinfo _13QIntValidator_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS13QIntValidator",
-	_13QIntValidator_typeinfo_name,
+	_13QIntValidator_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_13QIntValidator_vtable_name_0 [] = {
+const char *_13QIntValidator_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK13QIntValidator10metaObjectEv",
 	"_ZNK13QIntValidator9classNameEv",
 	"_ZN13QIntValidator7qt_castEPKc",
@@ -26156,21 +26156,21 @@ const char *_13QIntValidator_vtable_name_0 [] = {
 	"_ZN13QIntValidator8setRangeEii",
 	};
 
-struct classvtable _13QIntValidator_vtable [1] = {
+struct classvtable _13QIntValidator_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	24,	/* Number of Vfuncs */
 	"_ZTI13QIntValidator",
-	_13QIntValidator_vtable_name_0,
+	_13QIntValidator_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _13QIntValidator_baseinfo[] = {
+struct base_type_info _13QIntValidator_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z13QIntValidator_classinfo = {
+struct classinfo _Z13QIntValidator_of_libqt_mt_so_3_classinfo = {
 	"_Z13QIntValidator",
 	"_ZTV13QIntValidator",
 	"_ZTI13QIntValidator",	/* RTTI */
@@ -26181,22 +26181,22 @@ struct classinfo _Z13QIntValidator_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_13QIntValidator_typeinfo,
-	_13QIntValidator_vtable,
-	_13QIntValidator_baseinfo,
+	&_13QIntValidator_of_libqt_mt_so_3_typeinfo,
+	_13QIntValidator_of_libqt_mt_so_3_vtable,
+	_13QIntValidator_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_7QWizard_typeinfo_name[] = {
+char *_7QWizard_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QDialog",
 	};
 
-struct classtypeinfo _7QWizard_typeinfo = {
+struct classtypeinfo _7QWizard_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS7QWizard",
-	_7QWizard_typeinfo_name,
+	_7QWizard_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_7QWizard_vtable_name_0 [] = {
+const char *_7QWizard_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWizard10metaObjectEv",
 	"_ZNK7QWizard9classNameEv",
 	"_ZN7QWizard7qt_castEPKc",
@@ -26328,7 +26328,7 @@ const char *_7QWizard_vtable_name_0 [] = {
 	"_ZN7QWizard14layOutTitleRowEP11QHBoxLayoutRK7QString",
 	};
 
-const char *_7QWizard_vtable_name_1 [] = {
+const char *_7QWizard_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N7QWizardD1Ev",
 #endif
@@ -26402,14 +26402,14 @@ const char *_7QWizard_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _7QWizard_vtable [2] = {
+struct classvtable _7QWizard_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	129,	/* Number of Vfuncs */
 	"_ZTI7QWizard",
-	_7QWizard_vtable_name_0,
+	_7QWizard_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -26443,14 +26443,14 @@ struct classvtable _7QWizard_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI7QWizard",
-	_7QWizard_vtable_name_1,
+	_7QWizard_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _7QWizard_baseinfo[] = {
+struct base_type_info _7QWizard_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z7QWizard_classinfo = {
+struct classinfo _Z7QWizard_of_libqt_mt_so_3_classinfo = {
 	"_Z7QWizard",
 	"_ZTV7QWizard",
 	"_ZTI7QWizard",	/* RTTI */
@@ -26461,22 +26461,22 @@ struct classinfo _Z7QWizard_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_7QWizard_typeinfo,
-	_7QWizard_vtable,
-	_7QWizard_baseinfo,
+	&_7QWizard_of_libqt_mt_so_3_typeinfo,
+	_7QWizard_of_libqt_mt_so_3_vtable,
+	_7QWizard_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_20QCanvasPolygonalItem_typeinfo_name[] = {
+char *_20QCanvasPolygonalItem_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI11QCanvasItem",
 	};
 
-struct classtypeinfo _20QCanvasPolygonalItem_typeinfo = {
+struct classtypeinfo _20QCanvasPolygonalItem_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS20QCanvasPolygonalItem",
-	_20QCanvasPolygonalItem_typeinfo_name,
+	_20QCanvasPolygonalItem_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_20QCanvasPolygonalItem_vtable_name_0 [] = {
+const char *_20QCanvasPolygonalItem_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN20QCanvasPolygonalItemD1Ev",
 	"_ZN20QCanvasPolygonalItemD0Ev",
 	"_ZN11QCanvasItem6moveByEdd",
@@ -26505,21 +26505,21 @@ const char *_20QCanvasPolygonalItem_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _20QCanvasPolygonalItem_vtable [1] = {
+struct classvtable _20QCanvasPolygonalItem_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	26,	/* Number of Vfuncs */
 	"_ZTI20QCanvasPolygonalItem",
-	_20QCanvasPolygonalItem_vtable_name_0,
+	_20QCanvasPolygonalItem_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _20QCanvasPolygonalItem_baseinfo[] = {
+struct base_type_info _20QCanvasPolygonalItem_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z20QCanvasPolygonalItem_classinfo = {
+struct classinfo _Z20QCanvasPolygonalItem_of_libqt_mt_so_3_classinfo = {
 	"_Z20QCanvasPolygonalItem",
 	"_ZTV20QCanvasPolygonalItem",
 	"_ZTI20QCanvasPolygonalItem",	/* RTTI */
@@ -26530,22 +26530,22 @@ struct classinfo _Z20QCanvasPolygonalItem_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_20QCanvasPolygonalItem_typeinfo,
-	_20QCanvasPolygonalItem_vtable,
-	_20QCanvasPolygonalItem_baseinfo,
+	&_20QCanvasPolygonalItem_of_libqt_mt_so_3_typeinfo,
+	_20QCanvasPolygonalItem_of_libqt_mt_so_3_vtable,
+	_20QCanvasPolygonalItem_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_16QSqlSelectCursor_typeinfo_name[] = {
+char *_16QSqlSelectCursor_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI10QSqlCursor",
 	};
 
-struct classtypeinfo _16QSqlSelectCursor_typeinfo = {
+struct classtypeinfo _16QSqlSelectCursor_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS16QSqlSelectCursor",
-	_16QSqlSelectCursor_typeinfo_name,
+	_16QSqlSelectCursor_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_16QSqlSelectCursor_vtable_name_0 [] = {
+const char *_16QSqlSelectCursor_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN16QSqlSelectCursorD1Ev",
 	"_ZN16QSqlSelectCursorD0Ev",
 	"_ZNK10QSqlCursor5valueEi",
@@ -26592,7 +26592,7 @@ const char *_16QSqlSelectCursor_vtable_name_0 [] = {
 	"_ZNK10QSqlCursor8toStringERK9QSqlIndexP10QSqlRecordRK7QStringS7_S7_",
 	};
 
-const char *_16QSqlSelectCursor_vtable_name_1 [] = {
+const char *_16QSqlSelectCursor_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn8_N16QSqlSelectCursorD1Ev",
 #endif
@@ -26706,14 +26706,14 @@ const char *_16QSqlSelectCursor_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable _16QSqlSelectCursor_vtable [2] = {
+struct classvtable _16QSqlSelectCursor_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	44,	/* Number of Vfuncs */
 	"_ZTI16QSqlSelectCursor",
-	_16QSqlSelectCursor_vtable_name_0,
+	_16QSqlSelectCursor_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -26747,14 +26747,14 @@ struct classvtable _16QSqlSelectCursor_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI16QSqlSelectCursor",
-	_16QSqlSelectCursor_vtable_name_1,
+	_16QSqlSelectCursor_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _16QSqlSelectCursor_baseinfo[] = {
+struct base_type_info _16QSqlSelectCursor_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z16QSqlSelectCursor_classinfo = {
+struct classinfo _Z16QSqlSelectCursor_of_libqt_mt_so_3_classinfo = {
 	"_Z16QSqlSelectCursor",
 	"_ZTV16QSqlSelectCursor",
 	"_ZTI16QSqlSelectCursor",	/* RTTI */
@@ -26765,22 +26765,22 @@ struct classinfo _Z16QSqlSelectCursor_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_16QSqlSelectCursor_typeinfo,
-	_16QSqlSelectCursor_vtable,
-	_16QSqlSelectCursor_baseinfo,
+	&_16QSqlSelectCursor_of_libqt_mt_so_3_typeinfo,
+	_16QSqlSelectCursor_of_libqt_mt_so_3_vtable,
+	_16QSqlSelectCursor_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QTabWidget_typeinfo_name[] = {
+char *_10QTabWidget_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo _10QTabWidget_typeinfo = {
+struct classtypeinfo _10QTabWidget_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QTabWidget",
-	_10QTabWidget_typeinfo_name,
+	_10QTabWidget_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QTabWidget_vtable_name_0 [] = {
+const char *_10QTabWidget_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK10QTabWidget10metaObjectEv",
 	"_ZNK10QTabWidget9classNameEv",
 	"_ZN10QTabWidget7qt_castEPKc",
@@ -26901,7 +26901,7 @@ const char *_10QTabWidget_vtable_name_0 [] = {
 	"_ZN10QTabWidget10removePageEP7QWidget",
 	};
 
-const char *_10QTabWidget_vtable_name_1 [] = {
+const char *_10QTabWidget_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QTabWidgetD1Ev",
 #endif
@@ -26975,14 +26975,14 @@ const char *_10QTabWidget_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _10QTabWidget_vtable [2] = {
+struct classvtable _10QTabWidget_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	118,	/* Number of Vfuncs */
 	"_ZTI10QTabWidget",
-	_10QTabWidget_vtable_name_0,
+	_10QTabWidget_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -27016,14 +27016,14 @@ struct classvtable _10QTabWidget_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI10QTabWidget",
-	_10QTabWidget_vtable_name_1,
+	_10QTabWidget_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _10QTabWidget_baseinfo[] = {
+struct base_type_info _10QTabWidget_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QTabWidget_classinfo = {
+struct classinfo _Z10QTabWidget_of_libqt_mt_so_3_classinfo = {
 	"_Z10QTabWidget",
 	"_ZTV10QTabWidget",
 	"_ZTI10QTabWidget",	/* RTTI */
@@ -27034,22 +27034,22 @@ struct classinfo _Z10QTabWidget_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QTabWidget_typeinfo,
-	_10QTabWidget_vtable,
-	_10QTabWidget_baseinfo,
+	&_10QTabWidget_of_libqt_mt_so_3_typeinfo,
+	_10QTabWidget_of_libqt_mt_so_3_vtable,
+	_10QTabWidget_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QDomElement_typeinfo_name[] = {
+char *_11QDomElement_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI8QDomNode",
 	};
 
-struct classtypeinfo _11QDomElement_typeinfo = {
+struct classtypeinfo _11QDomElement_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QDomElement",
-	_11QDomElement_typeinfo_name,
+	_11QDomElement_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QDomElement_vtable_name_0 [] = {
+const char *_11QDomElement_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QDomElementD1Ev",
 	"_ZN11QDomElementD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -27095,21 +27095,21 @@ const char *_11QDomElement_vtable_name_0 [] = {
 	"_ZNK11QDomElement19elementsByTagNameNSERK7QStringS2_",
 	};
 
-struct classvtable _11QDomElement_vtable [1] = {
+struct classvtable _11QDomElement_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	43,	/* Number of Vfuncs */
 	"_ZTI11QDomElement",
-	_11QDomElement_vtable_name_0,
+	_11QDomElement_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QDomElement_baseinfo[] = {
+struct base_type_info _11QDomElement_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QDomElement_classinfo = {
+struct classinfo _Z11QDomElement_of_libqt_mt_so_3_classinfo = {
 	"_Z11QDomElement",
 	"_ZTV11QDomElement",
 	"_ZTI11QDomElement",	/* RTTI */
@@ -27120,22 +27120,22 @@ struct classinfo _Z11QDomElement_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QDomElement_typeinfo,
-	_11QDomElement_vtable,
-	_11QDomElement_baseinfo,
+	&_11QDomElement_of_libqt_mt_so_3_typeinfo,
+	_11QDomElement_of_libqt_mt_so_3_vtable,
+	_11QDomElement_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QSqlDriver_typeinfo_name[] = {
+char *_10QSqlDriver_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _10QSqlDriver_typeinfo = {
+struct classtypeinfo _10QSqlDriver_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QSqlDriver",
-	_10QSqlDriver_typeinfo_name,
+	_10QSqlDriver_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QSqlDriver_vtable_name_0 [] = {
+const char *_10QSqlDriver_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK10QSqlDriver10metaObjectEv",
 	"_ZNK10QSqlDriver9classNameEv",
 	"_ZN10QSqlDriver7qt_castEPKc",
@@ -27177,21 +27177,21 @@ const char *_10QSqlDriver_vtable_name_0 [] = {
 	"_ZN10QSqlDriver12setLastErrorERK9QSqlError",
 	};
 
-struct classvtable _10QSqlDriver_vtable [1] = {
+struct classvtable _10QSqlDriver_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	39,	/* Number of Vfuncs */
 	"_ZTI10QSqlDriver",
-	_10QSqlDriver_vtable_name_0,
+	_10QSqlDriver_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _10QSqlDriver_baseinfo[] = {
+struct base_type_info _10QSqlDriver_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QSqlDriver_classinfo = {
+struct classinfo _Z10QSqlDriver_of_libqt_mt_so_3_classinfo = {
 	"_Z10QSqlDriver",
 	"_ZTV10QSqlDriver",
 	"_ZTI10QSqlDriver",	/* RTTI */
@@ -27202,22 +27202,22 @@ struct classinfo _Z10QSqlDriver_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QSqlDriver_typeinfo,
-	_10QSqlDriver_vtable,
-	_10QSqlDriver_baseinfo,
+	&_10QSqlDriver_of_libqt_mt_so_3_typeinfo,
+	_10QSqlDriver_of_libqt_mt_so_3_vtable,
+	_10QSqlDriver_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QTableItem_typeinfo_name[] = {
+char *_10QTableItem_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI2Qt",
 	};
 
-struct classtypeinfo _10QTableItem_typeinfo = {
+struct classtypeinfo _10QTableItem_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QTableItem",
-	_10QTableItem_typeinfo_name,
+	_10QTableItem_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QTableItem_vtable_name_0 [] = {
+const char *_10QTableItem_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN10QTableItemD1Ev",
 	"_ZN10QTableItemD0Ev",
 	"_ZNK10QTableItem6pixmapEv",
@@ -27239,21 +27239,21 @@ const char *_10QTableItem_vtable_name_0 [] = {
 	"_ZNK10QTableItem4rttiEv",
 	};
 
-struct classvtable _10QTableItem_vtable [1] = {
+struct classvtable _10QTableItem_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	19,	/* Number of Vfuncs */
 	"_ZTI10QTableItem",
-	_10QTableItem_vtable_name_0,
+	_10QTableItem_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _10QTableItem_baseinfo[] = {
+struct base_type_info _10QTableItem_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QTableItem_classinfo = {
+struct classinfo _Z10QTableItem_of_libqt_mt_so_3_classinfo = {
 	"_Z10QTableItem",
 	"_ZTV10QTableItem",
 	"_ZTI10QTableItem",	/* RTTI */
@@ -27264,21 +27264,21 @@ struct classinfo _Z10QTableItem_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QTableItem_typeinfo,
-	_10QTableItem_vtable,
-	_10QTableItem_baseinfo,
+	&_10QTableItem_of_libqt_mt_so_3_typeinfo,
+	_10QTableItem_of_libqt_mt_so_3_vtable,
+	_10QTableItem_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_18QDomImplementation_typeinfo_name[] = {
+char *_18QDomImplementation_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _18QDomImplementation_typeinfo = {
+struct classtypeinfo _18QDomImplementation_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS18QDomImplementation",
-	_18QDomImplementation_typeinfo_name,
+	_18QDomImplementation_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_18QDomImplementation_vtable_name_0 [] = {
+const char *_18QDomImplementation_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN18QDomImplementationD1Ev",
 	"_ZN18QDomImplementationD0Ev",
 	"_ZN18QDomImplementation10hasFeatureERK7QStringS2_",
@@ -27286,21 +27286,21 @@ const char *_18QDomImplementation_vtable_name_0 [] = {
 	"_ZN18QDomImplementation14createDocumentERK7QStringS2_RK16QDomDocumentType",
 	};
 
-struct classvtable _18QDomImplementation_vtable [1] = {
+struct classvtable _18QDomImplementation_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI18QDomImplementation",
-	_18QDomImplementation_vtable_name_0,
+	_18QDomImplementation_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _18QDomImplementation_baseinfo[] = {
+struct base_type_info _18QDomImplementation_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z18QDomImplementation_classinfo = {
+struct classinfo _Z18QDomImplementation_of_libqt_mt_so_3_classinfo = {
 	"_Z18QDomImplementation",
 	"_ZTV18QDomImplementation",
 	"_ZTI18QDomImplementation",	/* RTTI */
@@ -27311,22 +27311,22 @@ struct classinfo _Z18QDomImplementation_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_18QDomImplementation_typeinfo,
-	_18QDomImplementation_vtable,
-	_18QDomImplementation_baseinfo,
+	&_18QDomImplementation_of_libqt_mt_so_3_typeinfo,
+	_18QDomImplementation_of_libqt_mt_so_3_vtable,
+	_18QDomImplementation_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_8QGPlugin_typeinfo_name[] = {
+char *_8QGPlugin_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _8QGPlugin_typeinfo = {
+struct classtypeinfo _8QGPlugin_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS8QGPlugin",
-	_8QGPlugin_typeinfo_name,
+	_8QGPlugin_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_8QGPlugin_vtable_name_0 [] = {
+const char *_8QGPlugin_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK8QGPlugin10metaObjectEv",
 	"_ZNK8QGPlugin9classNameEv",
 	"_ZN8QGPlugin7qt_castEPKc",
@@ -27350,21 +27350,21 @@ const char *_8QGPlugin_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable _8QGPlugin_vtable [1] = {
+struct classvtable _8QGPlugin_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI8QGPlugin",
-	_8QGPlugin_vtable_name_0,
+	_8QGPlugin_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _8QGPlugin_baseinfo[] = {
+struct base_type_info _8QGPlugin_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z8QGPlugin_classinfo = {
+struct classinfo _Z8QGPlugin_of_libqt_mt_so_3_classinfo = {
 	"_Z8QGPlugin",
 	"_ZTV8QGPlugin",
 	"_ZTI8QGPlugin",	/* RTTI */
@@ -27375,22 +27375,22 @@ struct classinfo _Z8QGPlugin_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_8QGPlugin_typeinfo,
-	_8QGPlugin_vtable,
-	_8QGPlugin_baseinfo,
+	&_8QGPlugin_of_libqt_mt_so_3_typeinfo,
+	_8QGPlugin_of_libqt_mt_so_3_vtable,
+	_8QGPlugin_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_13QGb18030Codec_typeinfo_name[] = {
+char *_13QGb18030Codec_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI10QTextCodec",
 	};
 
-struct classtypeinfo _13QGb18030Codec_typeinfo = {
+struct classtypeinfo _13QGb18030Codec_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS13QGb18030Codec",
-	_13QGb18030Codec_typeinfo_name,
+	_13QGb18030Codec_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_13QGb18030Codec_vtable_name_0 [] = {
+const char *_13QGb18030Codec_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN13QGb18030CodecD1Ev",
 	"_ZN13QGb18030CodecD0Ev",
 	"_ZNK13QGb18030Codec4nameEv",
@@ -27408,21 +27408,21 @@ const char *_13QGb18030Codec_vtable_name_0 [] = {
 	"_ZNK10QTextCodec20characterFromUnicodeERK7QStringi",
 	};
 
-struct classvtable _13QGb18030Codec_vtable [1] = {
+struct classvtable _13QGb18030Codec_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	15,	/* Number of Vfuncs */
 	"_ZTI13QGb18030Codec",
-	_13QGb18030Codec_vtable_name_0,
+	_13QGb18030Codec_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _13QGb18030Codec_baseinfo[] = {
+struct base_type_info _13QGb18030Codec_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z13QGb18030Codec_classinfo = {
+struct classinfo _Z13QGb18030Codec_of_libqt_mt_so_3_classinfo = {
 	"_Z13QGb18030Codec",
 	"_ZTV13QGb18030Codec",
 	"_ZTI13QGb18030Codec",	/* RTTI */
@@ -27433,22 +27433,22 @@ struct classinfo _Z13QGb18030Codec_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_13QGb18030Codec_typeinfo,
-	_13QGb18030Codec_vtable,
-	_13QGb18030Codec_baseinfo,
+	&_13QGb18030Codec_of_libqt_mt_so_3_typeinfo,
+	_13QGb18030Codec_of_libqt_mt_so_3_vtable,
+	_13QGb18030Codec_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_6QGList_typeinfo_name[] = {
+char *_6QGList_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI14QPtrCollection",
 	};
 
-struct classtypeinfo _6QGList_typeinfo = {
+struct classtypeinfo _6QGList_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS6QGList",
-	_6QGList_typeinfo_name,
+	_6QGList_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_6QGList_vtable_name_0 [] = {
+const char *_6QGList_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK6QGList5countEv",
 	"_ZN6QGList5clearEv",
 	"_ZN6QGListD1Ev",
@@ -27460,21 +27460,21 @@ const char *_6QGList_vtable_name_0 [] = {
 	"_ZNK6QGList5writeER11QDataStreamPv",
 	};
 
-struct classvtable _6QGList_vtable [1] = {
+struct classvtable _6QGList_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI6QGList",
-	_6QGList_vtable_name_0,
+	_6QGList_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _6QGList_baseinfo[] = {
+struct base_type_info _6QGList_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z6QGList_classinfo = {
+struct classinfo _Z6QGList_of_libqt_mt_so_3_classinfo = {
 	"_Z6QGList",
 	"_ZTV6QGList",
 	"_ZTI6QGList",	/* RTTI */
@@ -27485,22 +27485,22 @@ struct classinfo _Z6QGList_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_6QGList_typeinfo,
-	_6QGList_vtable,
-	_6QGList_baseinfo,
+	&_6QGList_of_libqt_mt_so_3_typeinfo,
+	_6QGList_of_libqt_mt_so_3_vtable,
+	_6QGList_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QDataPump_typeinfo_name[] = {
+char *_9QDataPump_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _9QDataPump_typeinfo = {
+struct classtypeinfo _9QDataPump_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QDataPump",
-	_9QDataPump_typeinfo_name,
+	_9QDataPump_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QDataPump_vtable_name_0 [] = {
+const char *_9QDataPump_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK9QDataPump10metaObjectEv",
 	"_ZNK9QDataPump9classNameEv",
 	"_ZN9QDataPump7qt_castEPKc",
@@ -27524,21 +27524,21 @@ const char *_9QDataPump_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable _9QDataPump_vtable [1] = {
+struct classvtable _9QDataPump_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI9QDataPump",
-	_9QDataPump_vtable_name_0,
+	_9QDataPump_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _9QDataPump_baseinfo[] = {
+struct base_type_info _9QDataPump_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QDataPump_classinfo = {
+struct classinfo _Z9QDataPump_of_libqt_mt_so_3_classinfo = {
 	"_Z9QDataPump",
 	"_ZTV9QDataPump",
 	"_ZTI9QDataPump",	/* RTTI */
@@ -27549,21 +27549,21 @@ struct classinfo _Z9QDataPump_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QDataPump_typeinfo,
-	_9QDataPump_vtable,
-	_9QDataPump_baseinfo,
+	&_9QDataPump_of_libqt_mt_so_3_typeinfo,
+	_9QDataPump_of_libqt_mt_so_3_vtable,
+	_9QDataPump_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QPaintDevice_typeinfo_name[] = {
+char *_12QPaintDevice_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _12QPaintDevice_typeinfo = {
+struct classtypeinfo _12QPaintDevice_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS12QPaintDevice",
-	_12QPaintDevice_typeinfo_name,
+	_12QPaintDevice_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QPaintDevice_vtable_name_0 [] = {
+const char *_12QPaintDevice_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN12QPaintDeviceD1Ev",
 	"_ZN12QPaintDeviceD0Ev",
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -27577,21 +27577,21 @@ const char *_12QPaintDevice_vtable_name_0 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _12QPaintDevice_vtable [1] = {
+struct classvtable _12QPaintDevice_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI12QPaintDevice",
-	_12QPaintDevice_vtable_name_0,
+	_12QPaintDevice_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QPaintDevice_baseinfo[] = {
+struct base_type_info _12QPaintDevice_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QPaintDevice_classinfo = {
+struct classinfo _Z12QPaintDevice_of_libqt_mt_so_3_classinfo = {
 	"_Z12QPaintDevice",
 	"_ZTV12QPaintDevice",
 	"_ZTI12QPaintDevice",	/* RTTI */
@@ -27602,22 +27602,22 @@ struct classinfo _Z12QPaintDevice_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QPaintDevice_typeinfo,
-	_12QPaintDevice_vtable,
-	_12QPaintDevice_baseinfo,
+	&_12QPaintDevice_of_libqt_mt_so_3_typeinfo,
+	_12QPaintDevice_of_libqt_mt_so_3_vtable,
+	_12QPaintDevice_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_15QCheckTableItem_typeinfo_name[] = {
+char *_15QCheckTableItem_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI10QTableItem",
 	};
 
-struct classtypeinfo _15QCheckTableItem_typeinfo = {
+struct classtypeinfo _15QCheckTableItem_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS15QCheckTableItem",
-	_15QCheckTableItem_typeinfo_name,
+	_15QCheckTableItem_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_15QCheckTableItem_vtable_name_0 [] = {
+const char *_15QCheckTableItem_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN15QCheckTableItemD1Ev",
 	"_ZN15QCheckTableItemD0Ev",
 	"_ZNK10QTableItem6pixmapEv",
@@ -27640,21 +27640,21 @@ const char *_15QCheckTableItem_vtable_name_0 [] = {
 	"_ZN15QCheckTableItem10setCheckedEb",
 	};
 
-struct classvtable _15QCheckTableItem_vtable [1] = {
+struct classvtable _15QCheckTableItem_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	20,	/* Number of Vfuncs */
 	"_ZTI15QCheckTableItem",
-	_15QCheckTableItem_vtable_name_0,
+	_15QCheckTableItem_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _15QCheckTableItem_baseinfo[] = {
+struct base_type_info _15QCheckTableItem_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z15QCheckTableItem_classinfo = {
+struct classinfo _Z15QCheckTableItem_of_libqt_mt_so_3_classinfo = {
 	"_Z15QCheckTableItem",
 	"_ZTV15QCheckTableItem",
 	"_ZTI15QCheckTableItem",	/* RTTI */
@@ -27665,22 +27665,22 @@ struct classinfo _Z15QCheckTableItem_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_15QCheckTableItem_typeinfo,
-	_15QCheckTableItem_vtable,
-	_15QCheckTableItem_baseinfo,
+	&_15QCheckTableItem_of_libqt_mt_so_3_typeinfo,
+	_15QCheckTableItem_of_libqt_mt_so_3_vtable,
+	_15QCheckTableItem_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QCommonStyle_typeinfo_name[] = {
+char *_12QCommonStyle_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QStyle",
 	};
 
-struct classtypeinfo _12QCommonStyle_typeinfo = {
+struct classtypeinfo _12QCommonStyle_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QCommonStyle",
-	_12QCommonStyle_typeinfo_name,
+	_12QCommonStyle_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QCommonStyle_vtable_name_0 [] = {
+const char *_12QCommonStyle_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK12QCommonStyle10metaObjectEv",
 	"_ZNK12QCommonStyle9classNameEv",
 	"_ZN12QCommonStyle7qt_castEPKc",
@@ -27724,21 +27724,21 @@ const char *_12QCommonStyle_vtable_name_0 [] = {
 	"_ZNK12QCommonStyle11stylePixmapEN6QStyle11StylePixmapEPK7QWidgetRK12QStyleOption",
 	};
 
-struct classvtable _12QCommonStyle_vtable [1] = {
+struct classvtable _12QCommonStyle_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	41,	/* Number of Vfuncs */
 	"_ZTI12QCommonStyle",
-	_12QCommonStyle_vtable_name_0,
+	_12QCommonStyle_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QCommonStyle_baseinfo[] = {
+struct base_type_info _12QCommonStyle_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QCommonStyle_classinfo = {
+struct classinfo _Z12QCommonStyle_of_libqt_mt_so_3_classinfo = {
 	"_Z12QCommonStyle",
 	"_ZTV12QCommonStyle",
 	"_ZTI12QCommonStyle",	/* RTTI */
@@ -27749,22 +27749,22 @@ struct classinfo _Z12QCommonStyle_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QCommonStyle_typeinfo,
-	_12QCommonStyle_vtable,
-	_12QCommonStyle_baseinfo,
+	&_12QCommonStyle_of_libqt_mt_so_3_typeinfo,
+	_12QCommonStyle_of_libqt_mt_so_3_vtable,
+	_12QCommonStyle_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QTextView_typeinfo_name[] = {
+char *_9QTextView_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI9QTextEdit",
 	};
 
-struct classtypeinfo _9QTextView_typeinfo = {
+struct classtypeinfo _9QTextView_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QTextView",
-	_9QTextView_typeinfo_name,
+	_9QTextView_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QTextView_vtable_name_0 [] = {
+const char *_9QTextView_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK9QTextView10metaObjectEv",
 	"_ZNK9QTextView9classNameEv",
 	"_ZN9QTextView7qt_castEPKc",
@@ -27991,7 +27991,7 @@ const char *_9QTextView_vtable_name_0 [] = {
 	"_ZN9QTextEdit15emitLinkClickedERK7QString",
 	};
 
-const char *_9QTextView_vtable_name_1 [] = {
+const char *_9QTextView_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QTextViewD1Ev",
 #endif
@@ -28065,14 +28065,14 @@ const char *_9QTextView_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _9QTextView_vtable [2] = {
+struct classvtable _9QTextView_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	224,	/* Number of Vfuncs */
 	"_ZTI9QTextView",
-	_9QTextView_vtable_name_0,
+	_9QTextView_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -28106,14 +28106,14 @@ struct classvtable _9QTextView_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QTextView",
-	_9QTextView_vtable_name_1,
+	_9QTextView_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _9QTextView_baseinfo[] = {
+struct base_type_info _9QTextView_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QTextView_classinfo = {
+struct classinfo _Z9QTextView_of_libqt_mt_so_3_classinfo = {
 	"_Z9QTextView",
 	"_ZTV9QTextView",
 	"_ZTI9QTextView",	/* RTTI */
@@ -28124,42 +28124,42 @@ struct classinfo _Z9QTextView_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QTextView_typeinfo,
-	_9QTextView_vtable,
-	_9QTextView_baseinfo,
+	&_9QTextView_of_libqt_mt_so_3_typeinfo,
+	_9QTextView_of_libqt_mt_so_3_vtable,
+	_9QTextView_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_18QSyntaxHighlighter_typeinfo_name[] = {
+char *_18QSyntaxHighlighter_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI2Qt",
 	};
 
-struct classtypeinfo _18QSyntaxHighlighter_typeinfo = {
+struct classtypeinfo _18QSyntaxHighlighter_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS18QSyntaxHighlighter",
-	_18QSyntaxHighlighter_typeinfo_name,
+	_18QSyntaxHighlighter_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_18QSyntaxHighlighter_vtable_name_0 [] = {
+const char *_18QSyntaxHighlighter_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN18QSyntaxHighlighterD1Ev",
 	"_ZN18QSyntaxHighlighterD0Ev",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _18QSyntaxHighlighter_vtable [1] = {
+struct classvtable _18QSyntaxHighlighter_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	3,	/* Number of Vfuncs */
 	"_ZTI18QSyntaxHighlighter",
-	_18QSyntaxHighlighter_vtable_name_0,
+	_18QSyntaxHighlighter_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _18QSyntaxHighlighter_baseinfo[] = {
+struct base_type_info _18QSyntaxHighlighter_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z18QSyntaxHighlighter_classinfo = {
+struct classinfo _Z18QSyntaxHighlighter_of_libqt_mt_so_3_classinfo = {
 	"_Z18QSyntaxHighlighter",
 	"_ZTV18QSyntaxHighlighter",
 	"_ZTI18QSyntaxHighlighter",	/* RTTI */
@@ -28170,22 +28170,22 @@ struct classinfo _Z18QSyntaxHighlighter_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_18QSyntaxHighlighter_typeinfo,
-	_18QSyntaxHighlighter_vtable,
-	_18QSyntaxHighlighter_baseinfo,
+	&_18QSyntaxHighlighter_of_libqt_mt_so_3_typeinfo,
+	_18QSyntaxHighlighter_of_libqt_mt_so_3_vtable,
+	_18QSyntaxHighlighter_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QSemiModal_typeinfo_name[] = {
+char *_10QSemiModal_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QDialog",
 	};
 
-struct classtypeinfo _10QSemiModal_typeinfo = {
+struct classtypeinfo _10QSemiModal_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QSemiModal",
-	_10QSemiModal_typeinfo_name,
+	_10QSemiModal_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QSemiModal_vtable_name_0 [] = {
+const char *_10QSemiModal_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK10QSemiModal10metaObjectEv",
 	"_ZNK10QSemiModal9classNameEv",
 	"_ZN10QSemiModal7qt_castEPKc",
@@ -28301,7 +28301,7 @@ const char *_10QSemiModal_vtable_name_0 [] = {
 	"_ZN7QDialog6rejectEv",
 	};
 
-const char *_10QSemiModal_vtable_name_1 [] = {
+const char *_10QSemiModal_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QSemiModalD1Ev",
 #endif
@@ -28375,14 +28375,14 @@ const char *_10QSemiModal_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _10QSemiModal_vtable [2] = {
+struct classvtable _10QSemiModal_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	113,	/* Number of Vfuncs */
 	"_ZTI10QSemiModal",
-	_10QSemiModal_vtable_name_0,
+	_10QSemiModal_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -28416,14 +28416,14 @@ struct classvtable _10QSemiModal_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI10QSemiModal",
-	_10QSemiModal_vtable_name_1,
+	_10QSemiModal_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _10QSemiModal_baseinfo[] = {
+struct base_type_info _10QSemiModal_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QSemiModal_classinfo = {
+struct classinfo _Z10QSemiModal_of_libqt_mt_so_3_classinfo = {
 	"_Z10QSemiModal",
 	"_ZTV10QSemiModal",
 	"_ZTI10QSemiModal",	/* RTTI */
@@ -28434,41 +28434,41 @@ struct classinfo _Z10QSemiModal_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QSemiModal_typeinfo,
-	_10QSemiModal_vtable,
-	_10QSemiModal_baseinfo,
+	&_10QSemiModal_of_libqt_mt_so_3_typeinfo,
+	_10QSemiModal_of_libqt_mt_so_3_vtable,
+	_10QSemiModal_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_4QTab_typeinfo_name[] = {
+char *_4QTab_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI2Qt",
 	};
 
-struct classtypeinfo _4QTab_typeinfo = {
+struct classtypeinfo _4QTab_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS4QTab",
-	_4QTab_typeinfo_name,
+	_4QTab_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_4QTab_vtable_name_0 [] = {
+const char *_4QTab_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN4QTabD1Ev",
 	"_ZN4QTabD0Ev",
 	};
 
-struct classvtable _4QTab_vtable [1] = {
+struct classvtable _4QTab_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI4QTab",
-	_4QTab_vtable_name_0,
+	_4QTab_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _4QTab_baseinfo[] = {
+struct base_type_info _4QTab_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z4QTab_classinfo = {
+struct classinfo _Z4QTab_of_libqt_mt_so_3_classinfo = {
 	"_Z4QTab",
 	"_ZTV4QTab",
 	"_ZTI4QTab",	/* RTTI */
@@ -28479,39 +28479,39 @@ struct classinfo _Z4QTab_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_4QTab_typeinfo,
-	_4QTab_vtable,
-	_4QTab_baseinfo,
+	&_4QTab_of_libqt_mt_so_3_typeinfo,
+	_4QTab_of_libqt_mt_so_3_vtable,
+	_4QTab_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_15QPolygonScanner_typeinfo_name[] = {
+char *_15QPolygonScanner_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _15QPolygonScanner_typeinfo = {
+struct classtypeinfo _15QPolygonScanner_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS15QPolygonScanner",
-	_15QPolygonScanner_typeinfo_name,
+	_15QPolygonScanner_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_15QPolygonScanner_vtable_name_0 [] = {
+const char *_15QPolygonScanner_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _15QPolygonScanner_vtable [1] = {
+struct classvtable _15QPolygonScanner_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	1,	/* Number of Vfuncs */
 	"_ZTI15QPolygonScanner",
-	_15QPolygonScanner_vtable_name_0,
+	_15QPolygonScanner_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _15QPolygonScanner_baseinfo[] = {
+struct base_type_info _15QPolygonScanner_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z15QPolygonScanner_classinfo = {
+struct classinfo _Z15QPolygonScanner_of_libqt_mt_so_3_classinfo = {
 	"_Z15QPolygonScanner",
 	"_ZTV15QPolygonScanner",
 	"_ZTI15QPolygonScanner",	/* RTTI */
@@ -28522,22 +28522,22 @@ struct classinfo _Z15QPolygonScanner_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_15QPolygonScanner_typeinfo,
-	_15QPolygonScanner_vtable,
-	_15QPolygonScanner_baseinfo,
+	&_15QPolygonScanner_of_libqt_mt_so_3_typeinfo,
+	_15QPolygonScanner_of_libqt_mt_so_3_vtable,
+	_15QPolygonScanner_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_16QNetworkProtocol_typeinfo_name[] = {
+char *_16QNetworkProtocol_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _16QNetworkProtocol_typeinfo = {
+struct classtypeinfo _16QNetworkProtocol_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS16QNetworkProtocol",
-	_16QNetworkProtocol_typeinfo_name,
+	_16QNetworkProtocol_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_16QNetworkProtocol_vtable_name_0 [] = {
+const char *_16QNetworkProtocol_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK16QNetworkProtocol10metaObjectEv",
 	"_ZNK16QNetworkProtocol9classNameEv",
 	"_ZN16QNetworkProtocol7qt_castEPKc",
@@ -28576,21 +28576,21 @@ const char *_16QNetworkProtocol_vtable_name_0 [] = {
 	"_ZN16QNetworkProtocol15checkConnectionEP17QNetworkOperation",
 	};
 
-struct classvtable _16QNetworkProtocol_vtable [1] = {
+struct classvtable _16QNetworkProtocol_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	36,	/* Number of Vfuncs */
 	"_ZTI16QNetworkProtocol",
-	_16QNetworkProtocol_vtable_name_0,
+	_16QNetworkProtocol_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _16QNetworkProtocol_baseinfo[] = {
+struct base_type_info _16QNetworkProtocol_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z16QNetworkProtocol_classinfo = {
+struct classinfo _Z16QNetworkProtocol_of_libqt_mt_so_3_classinfo = {
 	"_Z16QNetworkProtocol",
 	"_ZTV16QNetworkProtocol",
 	"_ZTI16QNetworkProtocol",	/* RTTI */
@@ -28601,40 +28601,40 @@ struct classinfo _Z16QNetworkProtocol_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_16QNetworkProtocol_typeinfo,
-	_16QNetworkProtocol_vtable,
-	_16QNetworkProtocol_baseinfo,
+	&_16QNetworkProtocol_of_libqt_mt_so_3_typeinfo,
+	_16QNetworkProtocol_of_libqt_mt_so_3_vtable,
+	_16QNetworkProtocol_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_15QObjectUserData_typeinfo_name[] = {
+char *_15QObjectUserData_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _15QObjectUserData_typeinfo = {
+struct classtypeinfo _15QObjectUserData_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS15QObjectUserData",
-	_15QObjectUserData_typeinfo_name,
+	_15QObjectUserData_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_15QObjectUserData_vtable_name_0 [] = {
+const char *_15QObjectUserData_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN15QObjectUserDataD1Ev",
 	"_ZN15QObjectUserDataD0Ev",
 	};
 
-struct classvtable _15QObjectUserData_vtable [1] = {
+struct classvtable _15QObjectUserData_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI15QObjectUserData",
-	_15QObjectUserData_vtable_name_0,
+	_15QObjectUserData_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _15QObjectUserData_baseinfo[] = {
+struct base_type_info _15QObjectUserData_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z15QObjectUserData_classinfo = {
+struct classinfo _Z15QObjectUserData_of_libqt_mt_so_3_classinfo = {
 	"_Z15QObjectUserData",
 	"_ZTV15QObjectUserData",
 	"_ZTI15QObjectUserData",	/* RTTI */
@@ -28645,21 +28645,21 @@ struct classinfo _Z15QObjectUserData_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_15QObjectUserData_typeinfo,
-	_15QObjectUserData_vtable,
-	_15QObjectUserData_baseinfo,
+	&_15QObjectUserData_of_libqt_mt_so_3_typeinfo,
+	_15QObjectUserData_of_libqt_mt_so_3_vtable,
+	_15QObjectUserData_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_13QRangeControl_typeinfo_name[] = {
+char *_13QRangeControl_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _13QRangeControl_typeinfo = {
+struct classtypeinfo _13QRangeControl_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS13QRangeControl",
-	_13QRangeControl_typeinfo_name,
+	_13QRangeControl_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_13QRangeControl_vtable_name_0 [] = {
+const char *_13QRangeControl_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN13QRangeControlD1Ev",
 	"_ZN13QRangeControlD0Ev",
 	"_ZN13QRangeControl11valueChangeEv",
@@ -28667,21 +28667,21 @@ const char *_13QRangeControl_vtable_name_0 [] = {
 	"_ZN13QRangeControl10stepChangeEv",
 	};
 
-struct classvtable _13QRangeControl_vtable [1] = {
+struct classvtable _13QRangeControl_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI13QRangeControl",
-	_13QRangeControl_vtable_name_0,
+	_13QRangeControl_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _13QRangeControl_baseinfo[] = {
+struct base_type_info _13QRangeControl_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z13QRangeControl_classinfo = {
+struct classinfo _Z13QRangeControl_of_libqt_mt_so_3_classinfo = {
 	"_Z13QRangeControl",
 	"_ZTV13QRangeControl",
 	"_ZTI13QRangeControl",	/* RTTI */
@@ -28692,22 +28692,22 @@ struct classinfo _Z13QRangeControl_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_13QRangeControl_typeinfo,
-	_13QRangeControl_vtable,
-	_13QRangeControl_baseinfo,
+	&_13QRangeControl_of_libqt_mt_so_3_typeinfo,
+	_13QRangeControl_of_libqt_mt_so_3_vtable,
+	_13QRangeControl_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QHGroupBox_typeinfo_name[] = {
+char *_10QHGroupBox_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI9QGroupBox",
 	};
 
-struct classtypeinfo _10QHGroupBox_typeinfo = {
+struct classtypeinfo _10QHGroupBox_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QHGroupBox",
-	_10QHGroupBox_typeinfo_name,
+	_10QHGroupBox_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QHGroupBox_vtable_name_0 [] = {
+const char *_10QHGroupBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK10QHGroupBox10metaObjectEv",
 	"_ZNK10QHGroupBox9classNameEv",
 	"_ZN10QHGroupBox7qt_castEPKc",
@@ -28831,7 +28831,7 @@ const char *_10QHGroupBox_vtable_name_0 [] = {
 	"_ZN9QGroupBox12setAlignmentEi",
 	};
 
-const char *_10QHGroupBox_vtable_name_1 [] = {
+const char *_10QHGroupBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QHGroupBoxD1Ev",
 #endif
@@ -28905,14 +28905,14 @@ const char *_10QHGroupBox_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _10QHGroupBox_vtable [2] = {
+struct classvtable _10QHGroupBox_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	121,	/* Number of Vfuncs */
 	"_ZTI10QHGroupBox",
-	_10QHGroupBox_vtable_name_0,
+	_10QHGroupBox_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -28946,14 +28946,14 @@ struct classvtable _10QHGroupBox_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI10QHGroupBox",
-	_10QHGroupBox_vtable_name_1,
+	_10QHGroupBox_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _10QHGroupBox_baseinfo[] = {
+struct base_type_info _10QHGroupBox_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QHGroupBox_classinfo = {
+struct classinfo _Z10QHGroupBox_of_libqt_mt_so_3_classinfo = {
 	"_Z10QHGroupBox",
 	"_ZTV10QHGroupBox",
 	"_ZTI10QHGroupBox",	/* RTTI */
@@ -28964,41 +28964,41 @@ struct classinfo _Z10QHGroupBox_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QHGroupBox_typeinfo,
-	_10QHGroupBox_vtable,
-	_10QHGroupBox_baseinfo,
+	&_10QHGroupBox_of_libqt_mt_so_3_typeinfo,
+	_10QHGroupBox_of_libqt_mt_so_3_vtable,
+	_10QHGroupBox_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QTimerEvent_typeinfo_name[] = {
+char *_11QTimerEvent_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo _11QTimerEvent_typeinfo = {
+struct classtypeinfo _11QTimerEvent_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QTimerEvent",
-	_11QTimerEvent_typeinfo_name,
+	_11QTimerEvent_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QTimerEvent_vtable_name_0 [] = {
+const char *_11QTimerEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QTimerEventD1Ev",
 	"_ZN11QTimerEventD0Ev",
 	};
 
-struct classvtable _11QTimerEvent_vtable [1] = {
+struct classvtable _11QTimerEvent_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI11QTimerEvent",
-	_11QTimerEvent_vtable_name_0,
+	_11QTimerEvent_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QTimerEvent_baseinfo[] = {
+struct base_type_info _11QTimerEvent_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QTimerEvent_classinfo = {
+struct classinfo _Z11QTimerEvent_of_libqt_mt_so_3_classinfo = {
 	"_Z11QTimerEvent",
 	"_ZTV11QTimerEvent",
 	"_ZTI11QTimerEvent",	/* RTTI */
@@ -29009,22 +29009,22 @@ struct classinfo _Z11QTimerEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QTimerEvent_typeinfo,
-	_11QTimerEvent_vtable,
-	_11QTimerEvent_baseinfo,
+	&_11QTimerEvent_of_libqt_mt_so_3_typeinfo,
+	_11QTimerEvent_of_libqt_mt_so_3_vtable,
+	_11QTimerEvent_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_7QHeader_typeinfo_name[] = {
+char *_7QHeader_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo _7QHeader_typeinfo = {
+struct classtypeinfo _7QHeader_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS7QHeader",
-	_7QHeader_typeinfo_name,
+	_7QHeader_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_7QHeader_vtable_name_0 [] = {
+const char *_7QHeader_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QHeader10metaObjectEv",
 	"_ZNK7QHeader9classNameEv",
 	"_ZN7QHeader7qt_castEPKc",
@@ -29150,7 +29150,7 @@ const char *_7QHeader_vtable_name_0 [] = {
 	"_ZN7QHeader17paintSectionLabelEP8QPainteriRK5QRect",
 	};
 
-const char *_7QHeader_vtable_name_1 [] = {
+const char *_7QHeader_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N7QHeaderD1Ev",
 #endif
@@ -29224,14 +29224,14 @@ const char *_7QHeader_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _7QHeader_vtable [2] = {
+struct classvtable _7QHeader_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	123,	/* Number of Vfuncs */
 	"_ZTI7QHeader",
-	_7QHeader_vtable_name_0,
+	_7QHeader_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -29265,14 +29265,14 @@ struct classvtable _7QHeader_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI7QHeader",
-	_7QHeader_vtable_name_1,
+	_7QHeader_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _7QHeader_baseinfo[] = {
+struct base_type_info _7QHeader_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z7QHeader_classinfo = {
+struct classinfo _Z7QHeader_of_libqt_mt_so_3_classinfo = {
 	"_Z7QHeader",
 	"_ZTV7QHeader",
 	"_ZTI7QHeader",	/* RTTI */
@@ -29283,22 +29283,22 @@ struct classinfo _Z7QHeader_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_7QHeader_typeinfo,
-	_7QHeader_vtable,
-	_7QHeader_baseinfo,
+	&_7QHeader_of_libqt_mt_so_3_typeinfo,
+	_7QHeader_of_libqt_mt_so_3_vtable,
+	_7QHeader_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QGbkCodec_typeinfo_name[] = {
+char *_9QGbkCodec_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI13QGb18030Codec",
 	};
 
-struct classtypeinfo _9QGbkCodec_typeinfo = {
+struct classtypeinfo _9QGbkCodec_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QGbkCodec",
-	_9QGbkCodec_typeinfo_name,
+	_9QGbkCodec_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QGbkCodec_vtable_name_0 [] = {
+const char *_9QGbkCodec_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QGbkCodecD1Ev",
 	"_ZN9QGbkCodecD0Ev",
 	"_ZNK9QGbkCodec4nameEv",
@@ -29316,21 +29316,21 @@ const char *_9QGbkCodec_vtable_name_0 [] = {
 	"_ZNK10QTextCodec20characterFromUnicodeERK7QStringi",
 	};
 
-struct classvtable _9QGbkCodec_vtable [1] = {
+struct classvtable _9QGbkCodec_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	15,	/* Number of Vfuncs */
 	"_ZTI9QGbkCodec",
-	_9QGbkCodec_vtable_name_0,
+	_9QGbkCodec_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _9QGbkCodec_baseinfo[] = {
+struct base_type_info _9QGbkCodec_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QGbkCodec_classinfo = {
+struct classinfo _Z9QGbkCodec_of_libqt_mt_so_3_classinfo = {
 	"_Z9QGbkCodec",
 	"_ZTV9QGbkCodec",
 	"_ZTI9QGbkCodec",	/* RTTI */
@@ -29341,22 +29341,22 @@ struct classinfo _Z9QGbkCodec_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QGbkCodec_typeinfo,
-	_9QGbkCodec_vtable,
-	_9QGbkCodec_baseinfo,
+	&_9QGbkCodec_of_libqt_mt_so_3_typeinfo,
+	_9QGbkCodec_of_libqt_mt_so_3_vtable,
+	_9QGbkCodec_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_13QSplashScreen_typeinfo_name[] = {
+char *_13QSplashScreen_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo _13QSplashScreen_typeinfo = {
+struct classtypeinfo _13QSplashScreen_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS13QSplashScreen",
-	_13QSplashScreen_typeinfo_name,
+	_13QSplashScreen_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_13QSplashScreen_vtable_name_0 [] = {
+const char *_13QSplashScreen_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK13QSplashScreen10metaObjectEv",
 	"_ZNK13QSplashScreen9classNameEv",
 	"_ZN13QSplashScreen7qt_castEPKc",
@@ -29470,7 +29470,7 @@ const char *_13QSplashScreen_vtable_name_0 [] = {
 	"_ZN13QSplashScreen12drawContentsEP8QPainter",
 	};
 
-const char *_13QSplashScreen_vtable_name_1 [] = {
+const char *_13QSplashScreen_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N13QSplashScreenD1Ev",
 #endif
@@ -29544,14 +29544,14 @@ const char *_13QSplashScreen_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _13QSplashScreen_vtable [2] = {
+struct classvtable _13QSplashScreen_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	111,	/* Number of Vfuncs */
 	"_ZTI13QSplashScreen",
-	_13QSplashScreen_vtable_name_0,
+	_13QSplashScreen_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -29585,14 +29585,14 @@ struct classvtable _13QSplashScreen_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI13QSplashScreen",
-	_13QSplashScreen_vtable_name_1,
+	_13QSplashScreen_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _13QSplashScreen_baseinfo[] = {
+struct base_type_info _13QSplashScreen_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z13QSplashScreen_classinfo = {
+struct classinfo _Z13QSplashScreen_of_libqt_mt_so_3_classinfo = {
 	"_Z13QSplashScreen",
 	"_ZTV13QSplashScreen",
 	"_ZTI13QSplashScreen",	/* RTTI */
@@ -29603,40 +29603,40 @@ struct classinfo _Z13QSplashScreen_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_13QSplashScreen_typeinfo,
-	_13QSplashScreen_vtable,
-	_13QSplashScreen_baseinfo,
+	&_13QSplashScreen_of_libqt_mt_so_3_typeinfo,
+	_13QSplashScreen_of_libqt_mt_so_3_vtable,
+	_13QSplashScreen_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_6QMutex_typeinfo_name[] = {
+char *_6QMutex_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _6QMutex_typeinfo = {
+struct classtypeinfo _6QMutex_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS6QMutex",
-	_6QMutex_typeinfo_name,
+	_6QMutex_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_6QMutex_vtable_name_0 [] = {
+const char *_6QMutex_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN6QMutexD1Ev",
 	"_ZN6QMutexD0Ev",
 	};
 
-struct classvtable _6QMutex_vtable [1] = {
+struct classvtable _6QMutex_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI6QMutex",
-	_6QMutex_vtable_name_0,
+	_6QMutex_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _6QMutex_baseinfo[] = {
+struct base_type_info _6QMutex_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z6QMutex_classinfo = {
+struct classinfo _Z6QMutex_of_libqt_mt_so_3_classinfo = {
 	"_Z6QMutex",
 	"_ZTV6QMutex",
 	"_ZTI6QMutex",	/* RTTI */
@@ -29647,41 +29647,41 @@ struct classinfo _Z6QMutex_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_6QMutex_typeinfo,
-	_6QMutex_vtable,
-	_6QMutex_baseinfo,
+	&_6QMutex_of_libqt_mt_so_3_typeinfo,
+	_6QMutex_of_libqt_mt_so_3_vtable,
+	_6QMutex_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_15QSqlPropertyMap_typeinfo_name[] = {
+char *_15QSqlPropertyMap_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _15QSqlPropertyMap_typeinfo = {
+struct classtypeinfo _15QSqlPropertyMap_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS15QSqlPropertyMap",
-	_15QSqlPropertyMap_typeinfo_name,
+	_15QSqlPropertyMap_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_15QSqlPropertyMap_vtable_name_0 [] = {
+const char *_15QSqlPropertyMap_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN15QSqlPropertyMapD1Ev",
 	"_ZN15QSqlPropertyMapD0Ev",
 	"_ZN15QSqlPropertyMap11setPropertyEP7QWidgetRK8QVariant",
 	};
 
-struct classvtable _15QSqlPropertyMap_vtable [1] = {
+struct classvtable _15QSqlPropertyMap_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	3,	/* Number of Vfuncs */
 	"_ZTI15QSqlPropertyMap",
-	_15QSqlPropertyMap_vtable_name_0,
+	_15QSqlPropertyMap_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _15QSqlPropertyMap_baseinfo[] = {
+struct base_type_info _15QSqlPropertyMap_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z15QSqlPropertyMap_classinfo = {
+struct classinfo _Z15QSqlPropertyMap_of_libqt_mt_so_3_classinfo = {
 	"_Z15QSqlPropertyMap",
 	"_ZTV15QSqlPropertyMap",
 	"_ZTI15QSqlPropertyMap",	/* RTTI */
@@ -29692,41 +29692,41 @@ struct classinfo _Z15QSqlPropertyMap_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_15QSqlPropertyMap_typeinfo,
-	_15QSqlPropertyMap_vtable,
-	_15QSqlPropertyMap_baseinfo,
+	&_15QSqlPropertyMap_of_libqt_mt_so_3_typeinfo,
+	_15QSqlPropertyMap_of_libqt_mt_so_3_vtable,
+	_15QSqlPropertyMap_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QKeyEvent_typeinfo_name[] = {
+char *_9QKeyEvent_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo _9QKeyEvent_typeinfo = {
+struct classtypeinfo _9QKeyEvent_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QKeyEvent",
-	_9QKeyEvent_typeinfo_name,
+	_9QKeyEvent_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QKeyEvent_vtable_name_0 [] = {
+const char *_9QKeyEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QKeyEventD1Ev",
 	"_ZN9QKeyEventD0Ev",
 	};
 
-struct classvtable _9QKeyEvent_vtable [1] = {
+struct classvtable _9QKeyEvent_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI9QKeyEvent",
-	_9QKeyEvent_vtable_name_0,
+	_9QKeyEvent_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _9QKeyEvent_baseinfo[] = {
+struct base_type_info _9QKeyEvent_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QKeyEvent_classinfo = {
+struct classinfo _Z9QKeyEvent_of_libqt_mt_so_3_classinfo = {
 	"_Z9QKeyEvent",
 	"_ZTV9QKeyEvent",
 	"_ZTI9QKeyEvent",	/* RTTI */
@@ -29737,22 +29737,22 @@ struct classinfo _Z9QKeyEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QKeyEvent_typeinfo,
-	_9QKeyEvent_vtable,
-	_9QKeyEvent_baseinfo,
+	&_9QKeyEvent_of_libqt_mt_so_3_typeinfo,
+	_9QKeyEvent_of_libqt_mt_so_3_vtable,
+	_9QKeyEvent_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_7QGCache_typeinfo_name[] = {
+char *_7QGCache_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI14QPtrCollection",
 	};
 
-struct classtypeinfo _7QGCache_typeinfo = {
+struct classtypeinfo _7QGCache_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS7QGCache",
-	_7QGCache_typeinfo_name,
+	_7QGCache_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_7QGCache_vtable_name_0 [] = {
+const char *_7QGCache_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QGCache5countEv",
 	"_ZN7QGCache5clearEv",
 	"_ZN7QGCacheD1Ev",
@@ -29761,21 +29761,21 @@ const char *_7QGCache_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _7QGCache_vtable [1] = {
+struct classvtable _7QGCache_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	6,	/* Number of Vfuncs */
 	"_ZTI7QGCache",
-	_7QGCache_vtable_name_0,
+	_7QGCache_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _7QGCache_baseinfo[] = {
+struct base_type_info _7QGCache_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z7QGCache_classinfo = {
+struct classinfo _Z7QGCache_of_libqt_mt_so_3_classinfo = {
 	"_Z7QGCache",
 	"_ZTV7QGCache",
 	"_ZTI7QGCache",	/* RTTI */
@@ -29786,21 +29786,21 @@ struct classinfo _Z7QGCache_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_7QGCache_typeinfo,
-	_7QGCache_vtable,
-	_7QGCache_baseinfo,
+	&_7QGCache_of_libqt_mt_so_3_typeinfo,
+	_7QGCache_of_libqt_mt_so_3_vtable,
+	_7QGCache_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_5QDial_typeinfo_name[] = {
+char *_5QDial_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _5QDial_typeinfo = {
+struct classtypeinfo _5QDial_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
 	"_ZTS5QDial",
-	_5QDial_typeinfo_name,
+	_5QDial_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_5QDial_vtable_name_0 [] = {
+const char *_5QDial_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK5QDial10metaObjectEv",
 	"_ZNK5QDial9classNameEv",
 	"_ZN5QDial7qt_castEPKc",
@@ -29921,7 +29921,7 @@ const char *_5QDial_vtable_name_0 [] = {
 	"_ZN5QDial13repaintScreenEPK5QRect",
 	};
 
-const char *_5QDial_vtable_name_1 [] = {
+const char *_5QDial_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N5QDialD1Ev",
 #endif
@@ -29995,7 +29995,7 @@ const char *_5QDial_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-const char *_5QDial_vtable_name_2 [] = {
+const char *_5QDial_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __i386__
 	"_ZThn116_N5QDialD1Ev",
 #endif
@@ -30083,14 +30083,14 @@ const char *_5QDial_vtable_name_2 [] = {
 	"_ZN13QRangeControl10stepChangeEv",
 	};
 
-struct classvtable _5QDial_vtable [3] = {
+struct classvtable _5QDial_of_libqt_mt_so_3_vtable [3] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	118,	/* Number of Vfuncs */
 	"_ZTI5QDial",
-	_5QDial_vtable_name_0,
+	_5QDial_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -30124,7 +30124,7 @@ struct classvtable _5QDial_vtable [3] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI5QDial",
-	_5QDial_vtable_name_1,
+	_5QDial_of_libqt_mt_so_3_vtable_name_1,
 	},
 	{
 #if defined __i386__
@@ -30158,11 +30158,11 @@ struct classvtable _5QDial_vtable [3] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI5QDial",
-	_5QDial_vtable_name_2,
+	_5QDial_of_libqt_mt_so_3_vtable_name_2,
 	},
 };
 
-struct base_type_info _5QDial_baseinfo[] = {
+struct base_type_info _5QDial_of_libqt_mt_so_3_baseinfo[] = {
 	{"_ZTI7QWidget",	2U},
 #if defined __i386__
 	{"_ZTI13QRangeControl",	29698U},
@@ -30187,7 +30187,7 @@ struct base_type_info _5QDial_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Z5QDial_classinfo = {
+struct classinfo _Z5QDial_of_libqt_mt_so_3_classinfo = {
 	"_Z5QDial",
 	"_ZTV5QDial",
 	"_ZTI5QDial",	/* RTTI */
@@ -30198,21 +30198,21 @@ struct classinfo _Z5QDial_classinfo = {
 	2,
 	0,	/* numVTT */
 	0U,
-	&_5QDial_typeinfo,
-	_5QDial_vtable,
-	_5QDial_baseinfo,
+	&_5QDial_of_libqt_mt_so_3_typeinfo,
+	_5QDial_of_libqt_mt_so_3_vtable,
+	_5QDial_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_4QUrl_typeinfo_name[] = {
+char *_4QUrl_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _4QUrl_typeinfo = {
+struct classtypeinfo _4QUrl_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS4QUrl",
-	_4QUrl_typeinfo_name,
+	_4QUrl_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_4QUrl_vtable_name_0 [] = {
+const char *_4QUrl_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN4QUrlD1Ev",
 	"_ZN4QUrlD0Ev",
 	"_ZN4QUrl11setProtocolERK7QString",
@@ -30232,21 +30232,21 @@ const char *_4QUrl_vtable_name_0 [] = {
 	"_ZN4QUrl5parseERK7QString",
 	};
 
-struct classvtable _4QUrl_vtable [1] = {
+struct classvtable _4QUrl_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	17,	/* Number of Vfuncs */
 	"_ZTI4QUrl",
-	_4QUrl_vtable_name_0,
+	_4QUrl_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _4QUrl_baseinfo[] = {
+struct base_type_info _4QUrl_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z4QUrl_classinfo = {
+struct classinfo _Z4QUrl_of_libqt_mt_so_3_classinfo = {
 	"_Z4QUrl",
 	"_ZTV4QUrl",
 	"_ZTI4QUrl",	/* RTTI */
@@ -30257,22 +30257,22 @@ struct classinfo _Z4QUrl_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_4QUrl_typeinfo,
-	_4QUrl_vtable,
-	_4QUrl_baseinfo,
+	&_4QUrl_of_libqt_mt_so_3_typeinfo,
+	_4QUrl_of_libqt_mt_so_3_vtable,
+	_4QUrl_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QListView_typeinfo_name[] = {
+char *_9QListView_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI11QScrollView",
 	};
 
-struct classtypeinfo _9QListView_typeinfo = {
+struct classtypeinfo _9QListView_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QListView",
-	_9QListView_typeinfo_name,
+	_9QListView_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QListView_vtable_name_0 [] = {
+const char *_9QListView_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK9QListView10metaObjectEv",
 	"_ZNK9QListView9classNameEv",
 	"_ZN9QListView7qt_castEPKc",
@@ -30461,7 +30461,7 @@ const char *_9QListView_vtable_name_0 [] = {
 	"_ZN9QListView14paintEmptyAreaEP8QPainterRK5QRect",
 	};
 
-const char *_9QListView_vtable_name_1 [] = {
+const char *_9QListView_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QListViewD1Ev",
 #endif
@@ -30535,14 +30535,14 @@ const char *_9QListView_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _9QListView_vtable [2] = {
+struct classvtable _9QListView_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	186,	/* Number of Vfuncs */
 	"_ZTI9QListView",
-	_9QListView_vtable_name_0,
+	_9QListView_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -30576,14 +30576,14 @@ struct classvtable _9QListView_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QListView",
-	_9QListView_vtable_name_1,
+	_9QListView_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _9QListView_baseinfo[] = {
+struct base_type_info _9QListView_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QListView_classinfo = {
+struct classinfo _Z9QListView_of_libqt_mt_so_3_classinfo = {
 	"_Z9QListView",
 	"_ZTV9QListView",
 	"_ZTI9QListView",	/* RTTI */
@@ -30594,22 +30594,22 @@ struct classinfo _Z9QListView_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QListView_typeinfo,
-	_9QListView_vtable,
-	_9QListView_baseinfo,
+	&_9QListView_of_libqt_mt_so_3_typeinfo,
+	_9QListView_of_libqt_mt_so_3_vtable,
+	_9QListView_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QStylePlugin_typeinfo_name[] = {
+char *_12QStylePlugin_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI8QGPlugin",
 	};
 
-struct classtypeinfo _12QStylePlugin_typeinfo = {
+struct classtypeinfo _12QStylePlugin_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QStylePlugin",
-	_12QStylePlugin_typeinfo_name,
+	_12QStylePlugin_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QStylePlugin_vtable_name_0 [] = {
+const char *_12QStylePlugin_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK12QStylePlugin10metaObjectEv",
 	"_ZNK12QStylePlugin9classNameEv",
 	"_ZN12QStylePlugin7qt_castEPKc",
@@ -30635,21 +30635,21 @@ const char *_12QStylePlugin_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _12QStylePlugin_vtable [1] = {
+struct classvtable _12QStylePlugin_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	23,	/* Number of Vfuncs */
 	"_ZTI12QStylePlugin",
-	_12QStylePlugin_vtable_name_0,
+	_12QStylePlugin_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QStylePlugin_baseinfo[] = {
+struct base_type_info _12QStylePlugin_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QStylePlugin_classinfo = {
+struct classinfo _Z12QStylePlugin_of_libqt_mt_so_3_classinfo = {
 	"_Z12QStylePlugin",
 	"_ZTV12QStylePlugin",
 	"_ZTI12QStylePlugin",	/* RTTI */
@@ -30660,22 +30660,22 @@ struct classinfo _Z12QStylePlugin_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QStylePlugin_typeinfo,
-	_12QStylePlugin_vtable,
-	_12QStylePlugin_baseinfo,
+	&_12QStylePlugin_of_libqt_mt_so_3_typeinfo,
+	_12QStylePlugin_of_libqt_mt_so_3_vtable,
+	_12QStylePlugin_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QFileDialog_typeinfo_name[] = {
+char *_11QFileDialog_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QDialog",
 	};
 
-struct classtypeinfo _11QFileDialog_typeinfo = {
+struct classtypeinfo _11QFileDialog_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QFileDialog",
-	_11QFileDialog_typeinfo_name,
+	_11QFileDialog_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QFileDialog_vtable_name_0 [] = {
+const char *_11QFileDialog_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK11QFileDialog10metaObjectEv",
 	"_ZNK11QFileDialog9classNameEv",
 	"_ZN11QFileDialog7qt_castEPKc",
@@ -30793,7 +30793,7 @@ const char *_11QFileDialog_vtable_name_0 [] = {
 	"_ZN11QFileDialog17setSelectedFilterEi",
 	};
 
-const char *_11QFileDialog_vtable_name_1 [] = {
+const char *_11QFileDialog_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QFileDialogD1Ev",
 #endif
@@ -30867,14 +30867,14 @@ const char *_11QFileDialog_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _11QFileDialog_vtable [2] = {
+struct classvtable _11QFileDialog_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	115,	/* Number of Vfuncs */
 	"_ZTI11QFileDialog",
-	_11QFileDialog_vtable_name_0,
+	_11QFileDialog_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -30908,14 +30908,14 @@ struct classvtable _11QFileDialog_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI11QFileDialog",
-	_11QFileDialog_vtable_name_1,
+	_11QFileDialog_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _11QFileDialog_baseinfo[] = {
+struct base_type_info _11QFileDialog_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QFileDialog_classinfo = {
+struct classinfo _Z11QFileDialog_of_libqt_mt_so_3_classinfo = {
 	"_Z11QFileDialog",
 	"_ZTV11QFileDialog",
 	"_ZTI11QFileDialog",	/* RTTI */
@@ -30926,22 +30926,22 @@ struct classinfo _Z11QFileDialog_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QFileDialog_typeinfo,
-	_11QFileDialog_vtable,
-	_11QFileDialog_baseinfo,
+	&_11QFileDialog_of_libqt_mt_so_3_typeinfo,
+	_11QFileDialog_of_libqt_mt_so_3_vtable,
+	_11QFileDialog_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_13QHButtonGroup_typeinfo_name[] = {
+char *_13QHButtonGroup_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI12QButtonGroup",
 	};
 
-struct classtypeinfo _13QHButtonGroup_typeinfo = {
+struct classtypeinfo _13QHButtonGroup_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS13QHButtonGroup",
-	_13QHButtonGroup_typeinfo_name,
+	_13QHButtonGroup_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_13QHButtonGroup_vtable_name_0 [] = {
+const char *_13QHButtonGroup_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK13QHButtonGroup10metaObjectEv",
 	"_ZNK13QHButtonGroup9classNameEv",
 	"_ZN13QHButtonGroup7qt_castEPKc",
@@ -31069,7 +31069,7 @@ const char *_13QHButtonGroup_vtable_name_0 [] = {
 	"_ZN12QButtonGroup9moveFocusEi",
 	};
 
-const char *_13QHButtonGroup_vtable_name_1 [] = {
+const char *_13QHButtonGroup_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N13QHButtonGroupD1Ev",
 #endif
@@ -31143,14 +31143,14 @@ const char *_13QHButtonGroup_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _13QHButtonGroup_vtable [2] = {
+struct classvtable _13QHButtonGroup_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	125,	/* Number of Vfuncs */
 	"_ZTI13QHButtonGroup",
-	_13QHButtonGroup_vtable_name_0,
+	_13QHButtonGroup_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -31184,14 +31184,14 @@ struct classvtable _13QHButtonGroup_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI13QHButtonGroup",
-	_13QHButtonGroup_vtable_name_1,
+	_13QHButtonGroup_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _13QHButtonGroup_baseinfo[] = {
+struct base_type_info _13QHButtonGroup_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z13QHButtonGroup_classinfo = {
+struct classinfo _Z13QHButtonGroup_of_libqt_mt_so_3_classinfo = {
 	"_Z13QHButtonGroup",
 	"_ZTV13QHButtonGroup",
 	"_ZTI13QHButtonGroup",	/* RTTI */
@@ -31202,22 +31202,22 @@ struct classinfo _Z13QHButtonGroup_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_13QHButtonGroup_typeinfo,
-	_13QHButtonGroup_vtable,
-	_13QHButtonGroup_baseinfo,
+	&_13QHButtonGroup_of_libqt_mt_so_3_typeinfo,
+	_13QHButtonGroup_of_libqt_mt_so_3_vtable,
+	_13QHButtonGroup_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QColorDrag_typeinfo_name[] = {
+char *_10QColorDrag_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI11QStoredDrag",
 	};
 
-struct classtypeinfo _10QColorDrag_typeinfo = {
+struct classtypeinfo _10QColorDrag_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QColorDrag",
-	_10QColorDrag_typeinfo_name,
+	_10QColorDrag_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QColorDrag_vtable_name_0 [] = {
+const char *_10QColorDrag_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK10QColorDrag10metaObjectEv",
 	"_ZNK10QColorDrag9classNameEv",
 	"_ZN10QColorDrag7qt_castEPKc",
@@ -31247,7 +31247,7 @@ const char *_10QColorDrag_vtable_name_0 [] = {
 	"_ZNK11QStoredDrag11encodedDataEPKc",
 	};
 
-const char *_10QColorDrag_vtable_name_1 [] = {
+const char *_10QColorDrag_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QColorDragD1Ev",
 #endif
@@ -31335,14 +31335,14 @@ const char *_10QColorDrag_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable _10QColorDrag_vtable [2] = {
+struct classvtable _10QColorDrag_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	27,	/* Number of Vfuncs */
 	"_ZTI10QColorDrag",
-	_10QColorDrag_vtable_name_0,
+	_10QColorDrag_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -31376,14 +31376,14 @@ struct classvtable _10QColorDrag_vtable [2] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI10QColorDrag",
-	_10QColorDrag_vtable_name_1,
+	_10QColorDrag_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _10QColorDrag_baseinfo[] = {
+struct base_type_info _10QColorDrag_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QColorDrag_classinfo = {
+struct classinfo _Z10QColorDrag_of_libqt_mt_so_3_classinfo = {
 	"_Z10QColorDrag",
 	"_ZTV10QColorDrag",
 	"_ZTI10QColorDrag",	/* RTTI */
@@ -31394,22 +31394,22 @@ struct classinfo _Z10QColorDrag_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QColorDrag_typeinfo,
-	_10QColorDrag_vtable,
-	_10QColorDrag_baseinfo,
+	&_10QColorDrag_of_libqt_mt_so_3_typeinfo,
+	_10QColorDrag_of_libqt_mt_so_3_vtable,
+	_10QColorDrag_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_14QDesktopWidget_typeinfo_name[] = {
+char *_14QDesktopWidget_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo _14QDesktopWidget_typeinfo = {
+struct classtypeinfo _14QDesktopWidget_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS14QDesktopWidget",
-	_14QDesktopWidget_typeinfo_name,
+	_14QDesktopWidget_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_14QDesktopWidget_vtable_name_0 [] = {
+const char *_14QDesktopWidget_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK14QDesktopWidget10metaObjectEv",
 	"_ZNK14QDesktopWidget9classNameEv",
 	"_ZN14QDesktopWidget7qt_castEPKc",
@@ -31522,7 +31522,7 @@ const char *_14QDesktopWidget_vtable_name_0 [] = {
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
 	};
 
-const char *_14QDesktopWidget_vtable_name_1 [] = {
+const char *_14QDesktopWidget_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N14QDesktopWidgetD1Ev",
 #endif
@@ -31596,14 +31596,14 @@ const char *_14QDesktopWidget_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _14QDesktopWidget_vtable [2] = {
+struct classvtable _14QDesktopWidget_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	110,	/* Number of Vfuncs */
 	"_ZTI14QDesktopWidget",
-	_14QDesktopWidget_vtable_name_0,
+	_14QDesktopWidget_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -31637,14 +31637,14 @@ struct classvtable _14QDesktopWidget_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI14QDesktopWidget",
-	_14QDesktopWidget_vtable_name_1,
+	_14QDesktopWidget_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _14QDesktopWidget_baseinfo[] = {
+struct base_type_info _14QDesktopWidget_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z14QDesktopWidget_classinfo = {
+struct classinfo _Z14QDesktopWidget_of_libqt_mt_so_3_classinfo = {
 	"_Z14QDesktopWidget",
 	"_ZTV14QDesktopWidget",
 	"_ZTI14QDesktopWidget",	/* RTTI */
@@ -31655,21 +31655,21 @@ struct classinfo _Z14QDesktopWidget_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_14QDesktopWidget_typeinfo,
-	_14QDesktopWidget_vtable,
-	_14QDesktopWidget_baseinfo,
+	&_14QDesktopWidget_of_libqt_mt_so_3_typeinfo,
+	_14QDesktopWidget_of_libqt_mt_so_3_vtable,
+	_14QDesktopWidget_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QSqlQuery_typeinfo_name[] = {
+char *_9QSqlQuery_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _9QSqlQuery_typeinfo = {
+struct classtypeinfo _9QSqlQuery_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS9QSqlQuery",
-	_9QSqlQuery_typeinfo_name,
+	_9QSqlQuery_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QSqlQuery_vtable_name_0 [] = {
+const char *_9QSqlQuery_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QSqlQueryD1Ev",
 	"_ZN9QSqlQueryD0Ev",
 	"_ZN9QSqlQuery4execERK7QString",
@@ -31683,21 +31683,21 @@ const char *_9QSqlQuery_vtable_name_0 [] = {
 	"_ZN9QSqlQuery9afterSeekEv",
 	};
 
-struct classvtable _9QSqlQuery_vtable [1] = {
+struct classvtable _9QSqlQuery_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QSqlQuery",
-	_9QSqlQuery_vtable_name_0,
+	_9QSqlQuery_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _9QSqlQuery_baseinfo[] = {
+struct base_type_info _9QSqlQuery_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QSqlQuery_classinfo = {
+struct classinfo _Z9QSqlQuery_of_libqt_mt_so_3_classinfo = {
 	"_Z9QSqlQuery",
 	"_ZTV9QSqlQuery",
 	"_ZTI9QSqlQuery",	/* RTTI */
@@ -31708,22 +31708,22 @@ struct classinfo _Z9QSqlQuery_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QSqlQuery_typeinfo,
-	_9QSqlQuery_vtable,
-	_9QSqlQuery_baseinfo,
+	&_9QSqlQuery_of_libqt_mt_so_3_typeinfo,
+	_9QSqlQuery_of_libqt_mt_so_3_vtable,
+	_9QSqlQuery_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QUtf16Codec_typeinfo_name[] = {
+char *_11QUtf16Codec_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI10QTextCodec",
 	};
 
-struct classtypeinfo _11QUtf16Codec_typeinfo = {
+struct classtypeinfo _11QUtf16Codec_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QUtf16Codec",
-	_11QUtf16Codec_typeinfo_name,
+	_11QUtf16Codec_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QUtf16Codec_vtable_name_0 [] = {
+const char *_11QUtf16Codec_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QUtf16CodecD1Ev",
 	"_ZN11QUtf16CodecD0Ev",
 	"_ZNK11QUtf16Codec4nameEv",
@@ -31741,21 +31741,21 @@ const char *_11QUtf16Codec_vtable_name_0 [] = {
 	"_ZNK10QTextCodec20characterFromUnicodeERK7QStringi",
 	};
 
-struct classvtable _11QUtf16Codec_vtable [1] = {
+struct classvtable _11QUtf16Codec_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	15,	/* Number of Vfuncs */
 	"_ZTI11QUtf16Codec",
-	_11QUtf16Codec_vtable_name_0,
+	_11QUtf16Codec_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QUtf16Codec_baseinfo[] = {
+struct base_type_info _11QUtf16Codec_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QUtf16Codec_classinfo = {
+struct classinfo _Z11QUtf16Codec_of_libqt_mt_so_3_classinfo = {
 	"_Z11QUtf16Codec",
 	"_ZTV11QUtf16Codec",
 	"_ZTI11QUtf16Codec",	/* RTTI */
@@ -31766,22 +31766,22 @@ struct classinfo _Z11QUtf16Codec_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QUtf16Codec_typeinfo,
-	_11QUtf16Codec_vtable,
-	_11QUtf16Codec_baseinfo,
+	&_11QUtf16Codec_of_libqt_mt_so_3_typeinfo,
+	_11QUtf16Codec_of_libqt_mt_so_3_vtable,
+	_11QUtf16Codec_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_7QObject_typeinfo_name[] = {
+char *_7QObject_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI2Qt",
 	};
 
-struct classtypeinfo _7QObject_typeinfo = {
+struct classtypeinfo _7QObject_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS7QObject",
-	_7QObject_typeinfo_name,
+	_7QObject_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_7QObject_vtable_name_0 [] = {
+const char *_7QObject_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QObject10metaObjectEv",
 	"_ZNK7QObject9classNameEv",
 	"_ZN7QObject7qt_castEPKc",
@@ -31805,21 +31805,21 @@ const char *_7QObject_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable _7QObject_vtable [1] = {
+struct classvtable _7QObject_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI7QObject",
-	_7QObject_vtable_name_0,
+	_7QObject_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _7QObject_baseinfo[] = {
+struct base_type_info _7QObject_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z7QObject_classinfo = {
+struct classinfo _Z7QObject_of_libqt_mt_so_3_classinfo = {
 	"_Z7QObject",
 	"_ZTV7QObject",
 	"_ZTI7QObject",	/* RTTI */
@@ -31830,22 +31830,22 @@ struct classinfo _Z7QObject_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_7QObject_typeinfo,
-	_7QObject_vtable,
-	_7QObject_baseinfo,
+	&_7QObject_of_libqt_mt_so_3_typeinfo,
+	_7QObject_of_libqt_mt_so_3_vtable,
+	_7QObject_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_5QFile_typeinfo_name[] = {
+char *_5QFile_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI9QIODevice",
 	};
 
-struct classtypeinfo _5QFile_typeinfo = {
+struct classtypeinfo _5QFile_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS5QFile",
-	_5QFile_typeinfo_name,
+	_5QFile_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_5QFile_vtable_name_0 [] = {
+const char *_5QFile_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN5QFileD1Ev",
 	"_ZN5QFileD0Ev",
 	"_ZN5QFile4openEi",
@@ -31864,21 +31864,21 @@ const char *_5QFile_vtable_name_0 [] = {
 	"_ZN5QFile7ungetchEi",
 	};
 
-struct classvtable _5QFile_vtable [1] = {
+struct classvtable _5QFile_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	16,	/* Number of Vfuncs */
 	"_ZTI5QFile",
-	_5QFile_vtable_name_0,
+	_5QFile_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _5QFile_baseinfo[] = {
+struct base_type_info _5QFile_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z5QFile_classinfo = {
+struct classinfo _Z5QFile_of_libqt_mt_so_3_classinfo = {
 	"_Z5QFile",
 	"_ZTV5QFile",
 	"_ZTI5QFile",	/* RTTI */
@@ -31889,22 +31889,22 @@ struct classinfo _Z5QFile_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_5QFile_typeinfo,
-	_5QFile_vtable,
-	_5QFile_baseinfo,
+	&_5QFile_of_libqt_mt_so_3_typeinfo,
+	_5QFile_of_libqt_mt_so_3_vtable,
+	_5QFile_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_16QDomDocumentType_typeinfo_name[] = {
+char *_16QDomDocumentType_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI8QDomNode",
 	};
 
-struct classtypeinfo _16QDomDocumentType_typeinfo = {
+struct classtypeinfo _16QDomDocumentType_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS16QDomDocumentType",
-	_16QDomDocumentType_typeinfo_name,
+	_16QDomDocumentType_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_16QDomDocumentType_vtable_name_0 [] = {
+const char *_16QDomDocumentType_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN16QDomDocumentTypeD1Ev",
 	"_ZN16QDomDocumentTypeD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -31954,21 +31954,21 @@ const char *_16QDomDocumentType_vtable_name_0 [] = {
 	"_ZNK16QDomDocumentType14internalSubsetEv",
 	};
 
-struct classvtable _16QDomDocumentType_vtable [1] = {
+struct classvtable _16QDomDocumentType_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	47,	/* Number of Vfuncs */
 	"_ZTI16QDomDocumentType",
-	_16QDomDocumentType_vtable_name_0,
+	_16QDomDocumentType_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _16QDomDocumentType_baseinfo[] = {
+struct base_type_info _16QDomDocumentType_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z16QDomDocumentType_classinfo = {
+struct classinfo _Z16QDomDocumentType_of_libqt_mt_so_3_classinfo = {
 	"_Z16QDomDocumentType",
 	"_ZTV16QDomDocumentType",
 	"_ZTI16QDomDocumentType",	/* RTTI */
@@ -31979,21 +31979,21 @@ struct classinfo _Z16QDomDocumentType_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_16QDomDocumentType_typeinfo,
-	_16QDomDocumentType_vtable,
-	_16QDomDocumentType_baseinfo,
+	&_16QDomDocumentType_of_libqt_mt_so_3_typeinfo,
+	_16QDomDocumentType_of_libqt_mt_so_3_vtable,
+	_16QDomDocumentType_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QListBoxItem_typeinfo_name[] = {
+char *_12QListBoxItem_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _12QListBoxItem_typeinfo = {
+struct classtypeinfo _12QListBoxItem_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS12QListBoxItem",
-	_12QListBoxItem_typeinfo_name,
+	_12QListBoxItem_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QListBoxItem_vtable_name_0 [] = {
+const char *_12QListBoxItem_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN12QListBoxItemD1Ev",
 	"_ZN12QListBoxItemD0Ev",
 	"_ZNK12QListBoxItem4textEv",
@@ -32005,21 +32005,21 @@ const char *_12QListBoxItem_vtable_name_0 [] = {
 	"_ZN12QListBoxItem7setTextERK7QString",
 	};
 
-struct classvtable _12QListBoxItem_vtable [1] = {
+struct classvtable _12QListBoxItem_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI12QListBoxItem",
-	_12QListBoxItem_vtable_name_0,
+	_12QListBoxItem_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QListBoxItem_baseinfo[] = {
+struct base_type_info _12QListBoxItem_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QListBoxItem_classinfo = {
+struct classinfo _Z12QListBoxItem_of_libqt_mt_so_3_classinfo = {
 	"_Z12QListBoxItem",
 	"_ZTV12QListBoxItem",
 	"_ZTI12QListBoxItem",	/* RTTI */
@@ -32030,41 +32030,41 @@ struct classinfo _Z12QListBoxItem_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QListBoxItem_typeinfo,
-	_12QListBoxItem_vtable,
-	_12QListBoxItem_baseinfo,
+	&_12QListBoxItem_of_libqt_mt_so_3_typeinfo,
+	_12QListBoxItem_of_libqt_mt_so_3_vtable,
+	_12QListBoxItem_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_18QDragResponseEvent_typeinfo_name[] = {
+char *_18QDragResponseEvent_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo _18QDragResponseEvent_typeinfo = {
+struct classtypeinfo _18QDragResponseEvent_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS18QDragResponseEvent",
-	_18QDragResponseEvent_typeinfo_name,
+	_18QDragResponseEvent_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_18QDragResponseEvent_vtable_name_0 [] = {
+const char *_18QDragResponseEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN18QDragResponseEventD1Ev",
 	"_ZN18QDragResponseEventD0Ev",
 	};
 
-struct classvtable _18QDragResponseEvent_vtable [1] = {
+struct classvtable _18QDragResponseEvent_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI18QDragResponseEvent",
-	_18QDragResponseEvent_vtable_name_0,
+	_18QDragResponseEvent_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _18QDragResponseEvent_baseinfo[] = {
+struct base_type_info _18QDragResponseEvent_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z18QDragResponseEvent_classinfo = {
+struct classinfo _Z18QDragResponseEvent_of_libqt_mt_so_3_classinfo = {
 	"_Z18QDragResponseEvent",
 	"_ZTV18QDragResponseEvent",
 	"_ZTI18QDragResponseEvent",	/* RTTI */
@@ -32075,22 +32075,22 @@ struct classinfo _Z18QDragResponseEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_18QDragResponseEvent_typeinfo,
-	_18QDragResponseEvent_vtable,
-	_18QDragResponseEvent_baseinfo,
+	&_18QDragResponseEvent_of_libqt_mt_so_3_typeinfo,
+	_18QDragResponseEvent_of_libqt_mt_so_3_vtable,
+	_18QDragResponseEvent_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QDomDocument_typeinfo_name[] = {
+char *_12QDomDocument_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI8QDomNode",
 	};
 
-struct classtypeinfo _12QDomDocument_typeinfo = {
+struct classtypeinfo _12QDomDocument_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QDomDocument",
-	_12QDomDocument_typeinfo_name,
+	_12QDomDocument_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QDomDocument_vtable_name_0 [] = {
+const char *_12QDomDocument_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN12QDomDocumentD1Ev",
 	"_ZN12QDomDocumentD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -32134,21 +32134,21 @@ const char *_12QDomDocument_vtable_name_0 [] = {
 	"_ZNK8QDomNode9isCommentEv",
 	};
 
-struct classvtable _12QDomDocument_vtable [1] = {
+struct classvtable _12QDomDocument_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	41,	/* Number of Vfuncs */
 	"_ZTI12QDomDocument",
-	_12QDomDocument_vtable_name_0,
+	_12QDomDocument_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QDomDocument_baseinfo[] = {
+struct base_type_info _12QDomDocument_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QDomDocument_classinfo = {
+struct classinfo _Z12QDomDocument_of_libqt_mt_so_3_classinfo = {
 	"_Z12QDomDocument",
 	"_ZTV12QDomDocument",
 	"_ZTI12QDomDocument",	/* RTTI */
@@ -32159,22 +32159,22 @@ struct classinfo _Z12QDomDocument_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QDomDocument_typeinfo,
-	_12QDomDocument_vtable,
-	_12QDomDocument_baseinfo,
+	&_12QDomDocument_of_libqt_mt_so_3_typeinfo,
+	_12QDomDocument_of_libqt_mt_so_3_vtable,
+	_12QDomDocument_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_16QTextCodecPlugin_typeinfo_name[] = {
+char *_16QTextCodecPlugin_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI8QGPlugin",
 	};
 
-struct classtypeinfo _16QTextCodecPlugin_typeinfo = {
+struct classtypeinfo _16QTextCodecPlugin_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS16QTextCodecPlugin",
-	_16QTextCodecPlugin_typeinfo_name,
+	_16QTextCodecPlugin_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_16QTextCodecPlugin_vtable_name_0 [] = {
+const char *_16QTextCodecPlugin_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK16QTextCodecPlugin10metaObjectEv",
 	"_ZNK16QTextCodecPlugin9classNameEv",
 	"_ZN16QTextCodecPlugin7qt_castEPKc",
@@ -32202,21 +32202,21 @@ const char *_16QTextCodecPlugin_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _16QTextCodecPlugin_vtable [1] = {
+struct classvtable _16QTextCodecPlugin_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	25,	/* Number of Vfuncs */
 	"_ZTI16QTextCodecPlugin",
-	_16QTextCodecPlugin_vtable_name_0,
+	_16QTextCodecPlugin_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _16QTextCodecPlugin_baseinfo[] = {
+struct base_type_info _16QTextCodecPlugin_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z16QTextCodecPlugin_classinfo = {
+struct classinfo _Z16QTextCodecPlugin_of_libqt_mt_so_3_classinfo = {
 	"_Z16QTextCodecPlugin",
 	"_ZTV16QTextCodecPlugin",
 	"_ZTI16QTextCodecPlugin",	/* RTTI */
@@ -32227,22 +32227,22 @@ struct classinfo _Z16QTextCodecPlugin_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_16QTextCodecPlugin_typeinfo,
-	_16QTextCodecPlugin_vtable,
-	_16QTextCodecPlugin_baseinfo,
+	&_16QTextCodecPlugin_of_libqt_mt_so_3_typeinfo,
+	_16QTextCodecPlugin_of_libqt_mt_so_3_vtable,
+	_16QTextCodecPlugin_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_13QWidgetPlugin_typeinfo_name[] = {
+char *_13QWidgetPlugin_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI8QGPlugin",
 	};
 
-struct classtypeinfo _13QWidgetPlugin_typeinfo = {
+struct classtypeinfo _13QWidgetPlugin_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS13QWidgetPlugin",
-	_13QWidgetPlugin_typeinfo_name,
+	_13QWidgetPlugin_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_13QWidgetPlugin_vtable_name_0 [] = {
+const char *_13QWidgetPlugin_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK13QWidgetPlugin10metaObjectEv",
 	"_ZNK13QWidgetPlugin9classNameEv",
 	"_ZN13QWidgetPlugin7qt_castEPKc",
@@ -32274,21 +32274,21 @@ const char *_13QWidgetPlugin_vtable_name_0 [] = {
 	"_ZNK13QWidgetPlugin11isContainerERK7QString",
 	};
 
-struct classvtable _13QWidgetPlugin_vtable [1] = {
+struct classvtable _13QWidgetPlugin_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	29,	/* Number of Vfuncs */
 	"_ZTI13QWidgetPlugin",
-	_13QWidgetPlugin_vtable_name_0,
+	_13QWidgetPlugin_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _13QWidgetPlugin_baseinfo[] = {
+struct base_type_info _13QWidgetPlugin_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z13QWidgetPlugin_classinfo = {
+struct classinfo _Z13QWidgetPlugin_of_libqt_mt_so_3_classinfo = {
 	"_Z13QWidgetPlugin",
 	"_ZTV13QWidgetPlugin",
 	"_ZTI13QWidgetPlugin",	/* RTTI */
@@ -32299,21 +32299,21 @@ struct classinfo _Z13QWidgetPlugin_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_13QWidgetPlugin_typeinfo,
-	_13QWidgetPlugin_vtable,
-	_13QWidgetPlugin_baseinfo,
+	&_13QWidgetPlugin_of_libqt_mt_so_3_typeinfo,
+	_13QWidgetPlugin_of_libqt_mt_so_3_vtable,
+	_13QWidgetPlugin_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QScrollBar_typeinfo_name[] = {
+char *_10QScrollBar_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _10QScrollBar_typeinfo = {
+struct classtypeinfo _10QScrollBar_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
 	"_ZTS10QScrollBar",
-	_10QScrollBar_typeinfo_name,
+	_10QScrollBar_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QScrollBar_vtable_name_0 [] = {
+const char *_10QScrollBar_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK10QScrollBar10metaObjectEv",
 	"_ZNK10QScrollBar9classNameEv",
 	"_ZN10QScrollBar7qt_castEPKc",
@@ -32431,7 +32431,7 @@ const char *_10QScrollBar_vtable_name_0 [] = {
 	"_ZN10QScrollBar11rangeChangeEv",
 	};
 
-const char *_10QScrollBar_vtable_name_1 [] = {
+const char *_10QScrollBar_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QScrollBarD1Ev",
 #endif
@@ -32505,7 +32505,7 @@ const char *_10QScrollBar_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-const char *_10QScrollBar_vtable_name_2 [] = {
+const char *_10QScrollBar_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __i386__
 	"_ZThn116_N10QScrollBarD1Ev",
 #endif
@@ -32613,14 +32613,14 @@ const char *_10QScrollBar_vtable_name_2 [] = {
 #endif
 	};
 
-struct classvtable _10QScrollBar_vtable [3] = {
+struct classvtable _10QScrollBar_of_libqt_mt_so_3_vtable [3] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	115,	/* Number of Vfuncs */
 	"_ZTI10QScrollBar",
-	_10QScrollBar_vtable_name_0,
+	_10QScrollBar_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -32654,7 +32654,7 @@ struct classvtable _10QScrollBar_vtable [3] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI10QScrollBar",
-	_10QScrollBar_vtable_name_1,
+	_10QScrollBar_of_libqt_mt_so_3_vtable_name_1,
 	},
 	{
 #if defined __i386__
@@ -32688,11 +32688,11 @@ struct classvtable _10QScrollBar_vtable [3] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI10QScrollBar",
-	_10QScrollBar_vtable_name_2,
+	_10QScrollBar_of_libqt_mt_so_3_vtable_name_2,
 	},
 };
 
-struct base_type_info _10QScrollBar_baseinfo[] = {
+struct base_type_info _10QScrollBar_of_libqt_mt_so_3_baseinfo[] = {
 	{"_ZTI7QWidget",	2U},
 #if defined __i386__
 	{"_ZTI13QRangeControl",	29698U},
@@ -32717,7 +32717,7 @@ struct base_type_info _10QScrollBar_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Z10QScrollBar_classinfo = {
+struct classinfo _Z10QScrollBar_of_libqt_mt_so_3_classinfo = {
 	"_Z10QScrollBar",
 	"_ZTV10QScrollBar",
 	"_ZTI10QScrollBar",	/* RTTI */
@@ -32728,22 +32728,22 @@ struct classinfo _Z10QScrollBar_classinfo = {
 	2,
 	0,	/* numVTT */
 	0U,
-	&_10QScrollBar_typeinfo,
-	_10QScrollBar_vtable,
-	_10QScrollBar_baseinfo,
+	&_10QScrollBar_of_libqt_mt_so_3_typeinfo,
+	_10QScrollBar_of_libqt_mt_so_3_vtable,
+	_10QScrollBar_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_7QBitmap_typeinfo_name[] = {
+char *_7QBitmap_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QPixmap",
 	};
 
-struct classtypeinfo _7QBitmap_typeinfo = {
+struct classtypeinfo _7QBitmap_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS7QBitmap",
-	_7QBitmap_typeinfo_name,
+	_7QBitmap_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_7QBitmap_vtable_name_0 [] = {
+const char *_7QBitmap_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QBitmapD1Ev",
 	"_ZN7QBitmapD0Ev",
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -32758,21 +32758,21 @@ const char *_7QBitmap_vtable_name_0 [] = {
 	"_ZN7QPixmap6detachEv",
 	};
 
-struct classvtable _7QBitmap_vtable [1] = {
+struct classvtable _7QBitmap_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	12,	/* Number of Vfuncs */
 	"_ZTI7QBitmap",
-	_7QBitmap_vtable_name_0,
+	_7QBitmap_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _7QBitmap_baseinfo[] = {
+struct base_type_info _7QBitmap_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z7QBitmap_classinfo = {
+struct classinfo _Z7QBitmap_of_libqt_mt_so_3_classinfo = {
 	"_Z7QBitmap",
 	"_ZTV7QBitmap",
 	"_ZTI7QBitmap",	/* RTTI */
@@ -32783,38 +32783,38 @@ struct classinfo _Z7QBitmap_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_7QBitmap_typeinfo,
-	_7QBitmap_vtable,
-	_7QBitmap_baseinfo,
+	&_7QBitmap_of_libqt_mt_so_3_typeinfo,
+	_7QBitmap_of_libqt_mt_so_3_vtable,
+	_7QBitmap_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QIconFactory_typeinfo_name[] = {
+char *_12QIconFactory_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _12QIconFactory_typeinfo = {
+struct classtypeinfo _12QIconFactory_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
 	"_ZTS12QIconFactory",
-	_12QIconFactory_typeinfo_name,
+	_12QIconFactory_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QIconFactory_vtable_name_0 [] = {
+const char *_12QIconFactory_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN12QIconFactoryD1Ev",
 	"_ZN12QIconFactoryD0Ev",
 	"_ZN12QIconFactory12createPixmapERK8QIconSetNS0_4SizeENS0_4ModeENS0_5StateE",
 	};
 
-struct classvtable _12QIconFactory_vtable [1] = {
+struct classvtable _12QIconFactory_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	3,	/* Number of Vfuncs */
 	"_ZTI12QIconFactory",
-	_12QIconFactory_vtable_name_0,
+	_12QIconFactory_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QIconFactory_baseinfo[] = {
+struct base_type_info _12QIconFactory_of_libqt_mt_so_3_baseinfo[] = {
 #if defined __i386__
 	{"_ZTI7QShared",	1024U},
 #endif
@@ -32838,7 +32838,7 @@ struct base_type_info _12QIconFactory_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Z12QIconFactory_classinfo = {
+struct classinfo _Z12QIconFactory_of_libqt_mt_so_3_classinfo = {
 	"_Z12QIconFactory",
 	"_ZTV12QIconFactory",
 	"_ZTI12QIconFactory",	/* RTTI */
@@ -32849,21 +32849,21 @@ struct classinfo _Z12QIconFactory_classinfo = {
 	1,
 	0,	/* numVTT */
 	0U,
-	&_12QIconFactory_typeinfo,
-	_12QIconFactory_vtable,
-	_12QIconFactory_baseinfo,
+	&_12QIconFactory_of_libqt_mt_so_3_typeinfo,
+	_12QIconFactory_of_libqt_mt_so_3_vtable,
+	_12QIconFactory_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_8QSpinBox_typeinfo_name[] = {
+char *_8QSpinBox_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _8QSpinBox_typeinfo = {
+struct classtypeinfo _8QSpinBox_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
 	"_ZTS8QSpinBox",
-	_8QSpinBox_typeinfo_name,
+	_8QSpinBox_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_8QSpinBox_vtable_name_0 [] = {
+const char *_8QSpinBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK8QSpinBox10metaObjectEv",
 	"_ZNK8QSpinBox9classNameEv",
 	"_ZN8QSpinBox7qt_castEPKc",
@@ -32995,7 +32995,7 @@ const char *_8QSpinBox_vtable_name_0 [] = {
 	"_ZN8QSpinBox11rangeChangeEv",
 	};
 
-const char *_8QSpinBox_vtable_name_1 [] = {
+const char *_8QSpinBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N8QSpinBoxD1Ev",
 #endif
@@ -33069,7 +33069,7 @@ const char *_8QSpinBox_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-const char *_8QSpinBox_vtable_name_2 [] = {
+const char *_8QSpinBox_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __i386__
 	"_ZThn116_N8QSpinBoxD1Ev",
 #endif
@@ -33157,14 +33157,14 @@ const char *_8QSpinBox_vtable_name_2 [] = {
 	"_ZN13QRangeControl10stepChangeEv",
 	};
 
-struct classvtable _8QSpinBox_vtable [3] = {
+struct classvtable _8QSpinBox_of_libqt_mt_so_3_vtable [3] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	129,	/* Number of Vfuncs */
 	"_ZTI8QSpinBox",
-	_8QSpinBox_vtable_name_0,
+	_8QSpinBox_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -33198,7 +33198,7 @@ struct classvtable _8QSpinBox_vtable [3] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI8QSpinBox",
-	_8QSpinBox_vtable_name_1,
+	_8QSpinBox_of_libqt_mt_so_3_vtable_name_1,
 	},
 	{
 #if defined __i386__
@@ -33232,11 +33232,11 @@ struct classvtable _8QSpinBox_vtable [3] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI8QSpinBox",
-	_8QSpinBox_vtable_name_2,
+	_8QSpinBox_of_libqt_mt_so_3_vtable_name_2,
 	},
 };
 
-struct base_type_info _8QSpinBox_baseinfo[] = {
+struct base_type_info _8QSpinBox_of_libqt_mt_so_3_baseinfo[] = {
 	{"_ZTI7QWidget",	2U},
 #if defined __i386__
 	{"_ZTI13QRangeControl",	29698U},
@@ -33261,7 +33261,7 @@ struct base_type_info _8QSpinBox_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Z8QSpinBox_classinfo = {
+struct classinfo _Z8QSpinBox_of_libqt_mt_so_3_classinfo = {
 	"_Z8QSpinBox",
 	"_ZTV8QSpinBox",
 	"_ZTI8QSpinBox",	/* RTTI */
@@ -33272,41 +33272,41 @@ struct classinfo _Z8QSpinBox_classinfo = {
 	2,
 	0,	/* numVTT */
 	0U,
-	&_8QSpinBox_typeinfo,
-	_8QSpinBox_vtable,
-	_8QSpinBox_baseinfo,
+	&_8QSpinBox_of_libqt_mt_so_3_typeinfo,
+	_8QSpinBox_of_libqt_mt_so_3_vtable,
+	_8QSpinBox_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_8QLibrary_typeinfo_name[] = {
+char *_8QLibrary_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _8QLibrary_typeinfo = {
+struct classtypeinfo _8QLibrary_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS8QLibrary",
-	_8QLibrary_typeinfo_name,
+	_8QLibrary_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_8QLibrary_vtable_name_0 [] = {
+const char *_8QLibrary_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN8QLibraryD1Ev",
 	"_ZN8QLibraryD0Ev",
 	"_ZN8QLibrary6unloadEv",
 	};
 
-struct classvtable _8QLibrary_vtable [1] = {
+struct classvtable _8QLibrary_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	3,	/* Number of Vfuncs */
 	"_ZTI8QLibrary",
-	_8QLibrary_vtable_name_0,
+	_8QLibrary_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _8QLibrary_baseinfo[] = {
+struct base_type_info _8QLibrary_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z8QLibrary_classinfo = {
+struct classinfo _Z8QLibrary_of_libqt_mt_so_3_classinfo = {
 	"_Z8QLibrary",
 	"_ZTV8QLibrary",
 	"_ZTI8QLibrary",	/* RTTI */
@@ -33317,22 +33317,22 @@ struct classinfo _Z8QLibrary_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_8QLibrary_typeinfo,
-	_8QLibrary_vtable,
-	_8QLibrary_baseinfo,
+	&_8QLibrary_of_libqt_mt_so_3_typeinfo,
+	_8QLibrary_of_libqt_mt_so_3_vtable,
+	_8QLibrary_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QEucKrCodec_typeinfo_name[] = {
+char *_11QEucKrCodec_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI10QTextCodec",
 	};
 
-struct classtypeinfo _11QEucKrCodec_typeinfo = {
+struct classtypeinfo _11QEucKrCodec_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QEucKrCodec",
-	_11QEucKrCodec_typeinfo_name,
+	_11QEucKrCodec_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QEucKrCodec_vtable_name_0 [] = {
+const char *_11QEucKrCodec_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QEucKrCodecD1Ev",
 	"_ZN11QEucKrCodecD0Ev",
 	"_ZNK11QEucKrCodec4nameEv",
@@ -33350,21 +33350,21 @@ const char *_11QEucKrCodec_vtable_name_0 [] = {
 	"_ZNK10QTextCodec20characterFromUnicodeERK7QStringi",
 	};
 
-struct classvtable _11QEucKrCodec_vtable [1] = {
+struct classvtable _11QEucKrCodec_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	15,	/* Number of Vfuncs */
 	"_ZTI11QEucKrCodec",
-	_11QEucKrCodec_vtable_name_0,
+	_11QEucKrCodec_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QEucKrCodec_baseinfo[] = {
+struct base_type_info _11QEucKrCodec_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QEucKrCodec_classinfo = {
+struct classinfo _Z11QEucKrCodec_of_libqt_mt_so_3_classinfo = {
 	"_Z11QEucKrCodec",
 	"_ZTV11QEucKrCodec",
 	"_ZTI11QEucKrCodec",	/* RTTI */
@@ -33375,22 +33375,22 @@ struct classinfo _Z11QEucKrCodec_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QEucKrCodec_typeinfo,
-	_11QEucKrCodec_vtable,
-	_11QEucKrCodec_baseinfo,
+	&_11QEucKrCodec_of_libqt_mt_so_3_typeinfo,
+	_11QEucKrCodec_of_libqt_mt_so_3_vtable,
+	_11QEucKrCodec_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QWidgetStack_typeinfo_name[] = {
+char *_12QWidgetStack_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QFrame",
 	};
 
-struct classtypeinfo _12QWidgetStack_typeinfo = {
+struct classtypeinfo _12QWidgetStack_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QWidgetStack",
-	_12QWidgetStack_typeinfo_name,
+	_12QWidgetStack_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QWidgetStack_vtable_name_0 [] = {
+const char *_12QWidgetStack_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK12QWidgetStack10metaObjectEv",
 	"_ZNK12QWidgetStack9classNameEv",
 	"_ZN12QWidgetStack7qt_castEPKc",
@@ -33512,7 +33512,7 @@ const char *_12QWidgetStack_vtable_name_0 [] = {
 	"_ZN12QWidgetStack18setChildGeometriesEv",
 	};
 
-const char *_12QWidgetStack_vtable_name_1 [] = {
+const char *_12QWidgetStack_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N12QWidgetStackD1Ev",
 #endif
@@ -33586,14 +33586,14 @@ const char *_12QWidgetStack_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _12QWidgetStack_vtable [2] = {
+struct classvtable _12QWidgetStack_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	119,	/* Number of Vfuncs */
 	"_ZTI12QWidgetStack",
-	_12QWidgetStack_vtable_name_0,
+	_12QWidgetStack_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -33627,14 +33627,14 @@ struct classvtable _12QWidgetStack_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI12QWidgetStack",
-	_12QWidgetStack_vtable_name_1,
+	_12QWidgetStack_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _12QWidgetStack_baseinfo[] = {
+struct base_type_info _12QWidgetStack_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QWidgetStack_classinfo = {
+struct classinfo _Z12QWidgetStack_of_libqt_mt_so_3_classinfo = {
 	"_Z12QWidgetStack",
 	"_ZTV12QWidgetStack",
 	"_ZTI12QWidgetStack",	/* RTTI */
@@ -33645,22 +33645,22 @@ struct classinfo _Z12QWidgetStack_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QWidgetStack_typeinfo,
-	_12QWidgetStack_vtable,
-	_12QWidgetStack_baseinfo,
+	&_12QWidgetStack_of_libqt_mt_so_3_typeinfo,
+	_12QWidgetStack_of_libqt_mt_so_3_vtable,
+	_12QWidgetStack_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_6QLabel_typeinfo_name[] = {
+char *_6QLabel_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QFrame",
 	};
 
-struct classtypeinfo _6QLabel_typeinfo = {
+struct classtypeinfo _6QLabel_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS6QLabel",
-	_6QLabel_typeinfo_name,
+	_6QLabel_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_6QLabel_vtable_name_0 [] = {
+const char *_6QLabel_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK6QLabel10metaObjectEv",
 	"_ZNK6QLabel9classNameEv",
 	"_ZN6QLabel7qt_castEPKc",
@@ -33790,7 +33790,7 @@ const char *_6QLabel_vtable_name_0 [] = {
 	"_ZN6QLabel6setNumEd",
 	};
 
-const char *_6QLabel_vtable_name_1 [] = {
+const char *_6QLabel_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N6QLabelD1Ev",
 #endif
@@ -33864,14 +33864,14 @@ const char *_6QLabel_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _6QLabel_vtable [2] = {
+struct classvtable _6QLabel_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	127,	/* Number of Vfuncs */
 	"_ZTI6QLabel",
-	_6QLabel_vtable_name_0,
+	_6QLabel_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -33905,14 +33905,14 @@ struct classvtable _6QLabel_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI6QLabel",
-	_6QLabel_vtable_name_1,
+	_6QLabel_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _6QLabel_baseinfo[] = {
+struct base_type_info _6QLabel_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z6QLabel_classinfo = {
+struct classinfo _Z6QLabel_of_libqt_mt_so_3_classinfo = {
 	"_Z6QLabel",
 	"_ZTV6QLabel",
 	"_ZTI6QLabel",	/* RTTI */
@@ -33923,22 +33923,22 @@ struct classinfo _Z6QLabel_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_6QLabel_typeinfo,
-	_6QLabel_vtable,
-	_6QLabel_baseinfo,
+	&_6QLabel_of_libqt_mt_so_3_typeinfo,
+	_6QLabel_of_libqt_mt_so_3_vtable,
+	_6QLabel_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QStyleSheet_typeinfo_name[] = {
+char *_11QStyleSheet_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _11QStyleSheet_typeinfo = {
+struct classtypeinfo _11QStyleSheet_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QStyleSheet",
-	_11QStyleSheet_typeinfo_name,
+	_11QStyleSheet_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QStyleSheet_vtable_name_0 [] = {
+const char *_11QStyleSheet_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK11QStyleSheet10metaObjectEv",
 	"_ZNK11QStyleSheet9classNameEv",
 	"_ZN11QStyleSheet7qt_castEPKc",
@@ -33965,21 +33965,21 @@ const char *_11QStyleSheet_vtable_name_0 [] = {
 	"_ZNK11QStyleSheet5errorERK7QString",
 	};
 
-struct classvtable _11QStyleSheet_vtable [1] = {
+struct classvtable _11QStyleSheet_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	24,	/* Number of Vfuncs */
 	"_ZTI11QStyleSheet",
-	_11QStyleSheet_vtable_name_0,
+	_11QStyleSheet_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QStyleSheet_baseinfo[] = {
+struct base_type_info _11QStyleSheet_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QStyleSheet_classinfo = {
+struct classinfo _Z11QStyleSheet_of_libqt_mt_so_3_classinfo = {
 	"_Z11QStyleSheet",
 	"_ZTV11QStyleSheet",
 	"_ZTI11QStyleSheet",	/* RTTI */
@@ -33990,41 +33990,41 @@ struct classinfo _Z11QStyleSheet_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QStyleSheet_typeinfo,
-	_11QStyleSheet_vtable,
-	_11QStyleSheet_baseinfo,
+	&_11QStyleSheet_of_libqt_mt_so_3_typeinfo,
+	_11QStyleSheet_of_libqt_mt_so_3_vtable,
+	_11QStyleSheet_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QCustomEvent_typeinfo_name[] = {
+char *_12QCustomEvent_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo _12QCustomEvent_typeinfo = {
+struct classtypeinfo _12QCustomEvent_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QCustomEvent",
-	_12QCustomEvent_typeinfo_name,
+	_12QCustomEvent_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QCustomEvent_vtable_name_0 [] = {
+const char *_12QCustomEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN12QCustomEventD1Ev",
 	"_ZN12QCustomEventD0Ev",
 	};
 
-struct classvtable _12QCustomEvent_vtable [1] = {
+struct classvtable _12QCustomEvent_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI12QCustomEvent",
-	_12QCustomEvent_vtable_name_0,
+	_12QCustomEvent_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QCustomEvent_baseinfo[] = {
+struct base_type_info _12QCustomEvent_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QCustomEvent_classinfo = {
+struct classinfo _Z12QCustomEvent_of_libqt_mt_so_3_classinfo = {
 	"_Z12QCustomEvent",
 	"_ZTV12QCustomEvent",
 	"_ZTI12QCustomEvent",	/* RTTI */
@@ -34035,22 +34035,22 @@ struct classinfo _Z12QCustomEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QCustomEvent_typeinfo,
-	_12QCustomEvent_vtable,
-	_12QCustomEvent_baseinfo,
+	&_12QCustomEvent_of_libqt_mt_so_3_typeinfo,
+	_12QCustomEvent_of_libqt_mt_so_3_vtable,
+	_12QCustomEvent_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_14QListBoxPixmap_typeinfo_name[] = {
+char *_14QListBoxPixmap_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI12QListBoxItem",
 	};
 
-struct classtypeinfo _14QListBoxPixmap_typeinfo = {
+struct classtypeinfo _14QListBoxPixmap_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS14QListBoxPixmap",
-	_14QListBoxPixmap_typeinfo_name,
+	_14QListBoxPixmap_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_14QListBoxPixmap_vtable_name_0 [] = {
+const char *_14QListBoxPixmap_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN14QListBoxPixmapD1Ev",
 	"_ZN14QListBoxPixmapD0Ev",
 	"_ZNK12QListBoxItem4textEv",
@@ -34062,21 +34062,21 @@ const char *_14QListBoxPixmap_vtable_name_0 [] = {
 	"_ZN12QListBoxItem7setTextERK7QString",
 	};
 
-struct classvtable _14QListBoxPixmap_vtable [1] = {
+struct classvtable _14QListBoxPixmap_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI14QListBoxPixmap",
-	_14QListBoxPixmap_vtable_name_0,
+	_14QListBoxPixmap_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _14QListBoxPixmap_baseinfo[] = {
+struct base_type_info _14QListBoxPixmap_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z14QListBoxPixmap_classinfo = {
+struct classinfo _Z14QListBoxPixmap_of_libqt_mt_so_3_classinfo = {
 	"_Z14QListBoxPixmap",
 	"_ZTV14QListBoxPixmap",
 	"_ZTI14QListBoxPixmap",	/* RTTI */
@@ -34087,22 +34087,22 @@ struct classinfo _Z14QListBoxPixmap_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_14QListBoxPixmap_typeinfo,
-	_14QListBoxPixmap_vtable,
-	_14QListBoxPixmap_baseinfo,
+	&_14QListBoxPixmap_of_libqt_mt_so_3_typeinfo,
+	_14QListBoxPixmap_of_libqt_mt_so_3_vtable,
+	_14QListBoxPixmap_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QDragManager_typeinfo_name[] = {
+char *_12QDragManager_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _12QDragManager_typeinfo = {
+struct classtypeinfo _12QDragManager_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QDragManager",
-	_12QDragManager_typeinfo_name,
+	_12QDragManager_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QDragManager_vtable_name_0 [] = {
+const char *_12QDragManager_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK12QDragManager10metaObjectEv",
 	"_ZNK12QDragManager9classNameEv",
 	"_ZN12QDragManager7qt_castEPKc",
@@ -34126,21 +34126,21 @@ const char *_12QDragManager_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable _12QDragManager_vtable [1] = {
+struct classvtable _12QDragManager_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI12QDragManager",
-	_12QDragManager_vtable_name_0,
+	_12QDragManager_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QDragManager_baseinfo[] = {
+struct base_type_info _12QDragManager_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QDragManager_classinfo = {
+struct classinfo _Z12QDragManager_of_libqt_mt_so_3_classinfo = {
 	"_Z12QDragManager",
 	"_ZTV12QDragManager",
 	"_ZTI12QDragManager",	/* RTTI */
@@ -34151,22 +34151,22 @@ struct classinfo _Z12QDragManager_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QDragManager_typeinfo,
-	_12QDragManager_vtable,
-	_12QDragManager_baseinfo,
+	&_12QDragManager_of_libqt_mt_so_3_typeinfo,
+	_12QDragManager_of_libqt_mt_so_3_vtable,
+	_12QDragManager_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_8QDomAttr_typeinfo_name[] = {
+char *_8QDomAttr_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI8QDomNode",
 	};
 
-struct classtypeinfo _8QDomAttr_typeinfo = {
+struct classtypeinfo _8QDomAttr_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS8QDomAttr",
-	_8QDomAttr_typeinfo_name,
+	_8QDomAttr_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_8QDomAttr_vtable_name_0 [] = {
+const char *_8QDomAttr_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN8QDomAttrD1Ev",
 	"_ZN8QDomAttrD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -34215,21 +34215,21 @@ const char *_8QDomAttr_vtable_name_0 [] = {
 	"_ZN8QDomAttr8setValueERK7QString",
 	};
 
-struct classvtable _8QDomAttr_vtable [1] = {
+struct classvtable _8QDomAttr_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	46,	/* Number of Vfuncs */
 	"_ZTI8QDomAttr",
-	_8QDomAttr_vtable_name_0,
+	_8QDomAttr_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _8QDomAttr_baseinfo[] = {
+struct base_type_info _8QDomAttr_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z8QDomAttr_classinfo = {
+struct classinfo _Z8QDomAttr_of_libqt_mt_so_3_classinfo = {
 	"_Z8QDomAttr",
 	"_ZTV8QDomAttr",
 	"_ZTI8QDomAttr",	/* RTTI */
@@ -34240,43 +34240,43 @@ struct classinfo _Z8QDomAttr_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_8QDomAttr_typeinfo,
-	_8QDomAttr_vtable,
-	_8QDomAttr_baseinfo,
+	&_8QDomAttr_of_libqt_mt_so_3_typeinfo,
+	_8QDomAttr_of_libqt_mt_so_3_vtable,
+	_8QDomAttr_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QWhatsThis_typeinfo_name[] = {
+char *_10QWhatsThis_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI2Qt",
 	};
 
-struct classtypeinfo _10QWhatsThis_typeinfo = {
+struct classtypeinfo _10QWhatsThis_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QWhatsThis",
-	_10QWhatsThis_typeinfo_name,
+	_10QWhatsThis_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QWhatsThis_vtable_name_0 [] = {
+const char *_10QWhatsThis_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN10QWhatsThisD1Ev",
 	"_ZN10QWhatsThisD0Ev",
 	"_ZN10QWhatsThis4textERK6QPoint",
 	"_ZN10QWhatsThis7clickedERK7QString",
 	};
 
-struct classvtable _10QWhatsThis_vtable [1] = {
+struct classvtable _10QWhatsThis_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	4,	/* Number of Vfuncs */
 	"_ZTI10QWhatsThis",
-	_10QWhatsThis_vtable_name_0,
+	_10QWhatsThis_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _10QWhatsThis_baseinfo[] = {
+struct base_type_info _10QWhatsThis_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QWhatsThis_classinfo = {
+struct classinfo _Z10QWhatsThis_of_libqt_mt_so_3_classinfo = {
 	"_Z10QWhatsThis",
 	"_ZTV10QWhatsThis",
 	"_ZTI10QWhatsThis",	/* RTTI */
@@ -34287,42 +34287,42 @@ struct classinfo _Z10QWhatsThis_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QWhatsThis_typeinfo,
-	_10QWhatsThis_vtable,
-	_10QWhatsThis_baseinfo,
+	&_10QWhatsThis_of_libqt_mt_so_3_typeinfo,
+	_10QWhatsThis_of_libqt_mt_so_3_vtable,
+	_10QWhatsThis_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QDomNodeList_typeinfo_name[] = {
+char *_12QDomNodeList_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _12QDomNodeList_typeinfo = {
+struct classtypeinfo _12QDomNodeList_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS12QDomNodeList",
-	_12QDomNodeList_typeinfo_name,
+	_12QDomNodeList_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QDomNodeList_vtable_name_0 [] = {
+const char *_12QDomNodeList_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN12QDomNodeListD1Ev",
 	"_ZN12QDomNodeListD0Ev",
 	"_ZNK12QDomNodeList4itemEi",
 	"_ZNK12QDomNodeList6lengthEv",
 	};
 
-struct classvtable _12QDomNodeList_vtable [1] = {
+struct classvtable _12QDomNodeList_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	4,	/* Number of Vfuncs */
 	"_ZTI12QDomNodeList",
-	_12QDomNodeList_vtable_name_0,
+	_12QDomNodeList_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QDomNodeList_baseinfo[] = {
+struct base_type_info _12QDomNodeList_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QDomNodeList_classinfo = {
+struct classinfo _Z12QDomNodeList_of_libqt_mt_so_3_classinfo = {
 	"_Z12QDomNodeList",
 	"_ZTV12QDomNodeList",
 	"_ZTI12QDomNodeList",	/* RTTI */
@@ -34333,22 +34333,22 @@ struct classinfo _Z12QDomNodeList_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QDomNodeList_typeinfo,
-	_12QDomNodeList_vtable,
-	_12QDomNodeList_baseinfo,
+	&_12QDomNodeList_of_libqt_mt_so_3_typeinfo,
+	_12QDomNodeList_of_libqt_mt_so_3_vtable,
+	_12QDomNodeList_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QJisCodec_typeinfo_name[] = {
+char *_9QJisCodec_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI10QTextCodec",
 	};
 
-struct classtypeinfo _9QJisCodec_typeinfo = {
+struct classtypeinfo _9QJisCodec_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QJisCodec",
-	_9QJisCodec_typeinfo_name,
+	_9QJisCodec_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QJisCodec_vtable_name_0 [] = {
+const char *_9QJisCodec_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QJisCodecD1Ev",
 	"_ZN9QJisCodecD0Ev",
 	"_ZNK9QJisCodec4nameEv",
@@ -34366,21 +34366,21 @@ const char *_9QJisCodec_vtable_name_0 [] = {
 	"_ZNK10QTextCodec20characterFromUnicodeERK7QStringi",
 	};
 
-struct classvtable _9QJisCodec_vtable [1] = {
+struct classvtable _9QJisCodec_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	15,	/* Number of Vfuncs */
 	"_ZTI9QJisCodec",
-	_9QJisCodec_vtable_name_0,
+	_9QJisCodec_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _9QJisCodec_baseinfo[] = {
+struct base_type_info _9QJisCodec_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QJisCodec_classinfo = {
+struct classinfo _Z9QJisCodec_of_libqt_mt_so_3_classinfo = {
 	"_Z9QJisCodec",
 	"_ZTV9QJisCodec",
 	"_ZTI9QJisCodec",	/* RTTI */
@@ -34391,22 +34391,22 @@ struct classinfo _Z9QJisCodec_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QJisCodec_typeinfo,
-	_9QJisCodec_vtable,
-	_9QJisCodec_baseinfo,
+	&_9QJisCodec_of_libqt_mt_so_3_typeinfo,
+	_9QJisCodec_of_libqt_mt_so_3_vtable,
+	_9QJisCodec_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QPointArray_typeinfo_name[] = {
+char *_11QPointArray_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI9QMemArrayI6QPointE",
 	};
 
-struct classtypeinfo _11QPointArray_typeinfo = {
+struct classtypeinfo _11QPointArray_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QPointArray",
-	_11QPointArray_typeinfo_name,
+	_11QPointArray_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QPointArray_vtable_name_0 [] = {
+const char *_11QPointArray_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QPointArrayD1Ev",
 	"_ZN11QPointArrayD0Ev",
 	"_ZN9QMemArrayI6QPointE6detachEv",
@@ -34414,21 +34414,21 @@ const char *_11QPointArray_vtable_name_0 [] = {
 	"_ZN7QGArray10deleteDataEPNS_10array_dataE",
 	};
 
-struct classvtable _11QPointArray_vtable [1] = {
+struct classvtable _11QPointArray_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI11QPointArray",
-	_11QPointArray_vtable_name_0,
+	_11QPointArray_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QPointArray_baseinfo[] = {
+struct base_type_info _11QPointArray_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QPointArray_classinfo = {
+struct classinfo _Z11QPointArray_of_libqt_mt_so_3_classinfo = {
 	"_Z11QPointArray",
 	"_ZTV11QPointArray",
 	"_ZTI11QPointArray",	/* RTTI */
@@ -34439,22 +34439,22 @@ struct classinfo _Z11QPointArray_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QPointArray_typeinfo,
-	_11QPointArray_vtable,
-	_11QPointArray_baseinfo,
+	&_11QPointArray_of_libqt_mt_so_3_typeinfo,
+	_11QPointArray_of_libqt_mt_so_3_vtable,
+	_11QPointArray_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_14QMultiLineEdit_typeinfo_name[] = {
+char *_14QMultiLineEdit_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI9QTextEdit",
 	};
 
-struct classtypeinfo _14QMultiLineEdit_typeinfo = {
+struct classtypeinfo _14QMultiLineEdit_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS14QMultiLineEdit",
-	_14QMultiLineEdit_typeinfo_name,
+	_14QMultiLineEdit_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_14QMultiLineEdit_vtable_name_0 [] = {
+const char *_14QMultiLineEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK14QMultiLineEdit10metaObjectEv",
 	"_ZNK14QMultiLineEdit9classNameEv",
 	"_ZN14QMultiLineEdit7qt_castEPKc",
@@ -34698,7 +34698,7 @@ const char *_14QMultiLineEdit_vtable_name_0 [] = {
 	"_ZN14QMultiLineEdit3endEb",
 	};
 
-const char *_14QMultiLineEdit_vtable_name_1 [] = {
+const char *_14QMultiLineEdit_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N14QMultiLineEditD1Ev",
 #endif
@@ -34772,14 +34772,14 @@ const char *_14QMultiLineEdit_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _14QMultiLineEdit_vtable [2] = {
+struct classvtable _14QMultiLineEdit_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	241,	/* Number of Vfuncs */
 	"_ZTI14QMultiLineEdit",
-	_14QMultiLineEdit_vtable_name_0,
+	_14QMultiLineEdit_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -34813,14 +34813,14 @@ struct classvtable _14QMultiLineEdit_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI14QMultiLineEdit",
-	_14QMultiLineEdit_vtable_name_1,
+	_14QMultiLineEdit_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _14QMultiLineEdit_baseinfo[] = {
+struct base_type_info _14QMultiLineEdit_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z14QMultiLineEdit_classinfo = {
+struct classinfo _Z14QMultiLineEdit_of_libqt_mt_so_3_classinfo = {
 	"_Z14QMultiLineEdit",
 	"_ZTV14QMultiLineEdit",
 	"_ZTI14QMultiLineEdit",	/* RTTI */
@@ -34831,39 +34831,39 @@ struct classinfo _Z14QMultiLineEdit_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_14QMultiLineEdit_typeinfo,
-	_14QMultiLineEdit_vtable,
-	_14QMultiLineEdit_baseinfo,
+	&_14QMultiLineEdit_of_libqt_mt_so_3_typeinfo,
+	_14QMultiLineEdit_of_libqt_mt_so_3_vtable,
+	_14QMultiLineEdit_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_27QNetworkProtocolFactoryBase_typeinfo_name[] = {
+char *_27QNetworkProtocolFactoryBase_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _27QNetworkProtocolFactoryBase_typeinfo = {
+struct classtypeinfo _27QNetworkProtocolFactoryBase_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS27QNetworkProtocolFactoryBase",
-	_27QNetworkProtocolFactoryBase_typeinfo_name,
+	_27QNetworkProtocolFactoryBase_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_27QNetworkProtocolFactoryBase_vtable_name_0 [] = {
+const char *_27QNetworkProtocolFactoryBase_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _27QNetworkProtocolFactoryBase_vtable [1] = {
+struct classvtable _27QNetworkProtocolFactoryBase_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	1,	/* Number of Vfuncs */
 	"_ZTI27QNetworkProtocolFactoryBase",
-	_27QNetworkProtocolFactoryBase_vtable_name_0,
+	_27QNetworkProtocolFactoryBase_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _27QNetworkProtocolFactoryBase_baseinfo[] = {
+struct base_type_info _27QNetworkProtocolFactoryBase_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z27QNetworkProtocolFactoryBase_classinfo = {
+struct classinfo _Z27QNetworkProtocolFactoryBase_of_libqt_mt_so_3_classinfo = {
 	"_Z27QNetworkProtocolFactoryBase",
 	"_ZTV27QNetworkProtocolFactoryBase",
 	"_ZTI27QNetworkProtocolFactoryBase",	/* RTTI */
@@ -34874,22 +34874,22 @@ struct classinfo _Z27QNetworkProtocolFactoryBase_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_27QNetworkProtocolFactoryBase_typeinfo,
-	_27QNetworkProtocolFactoryBase_vtable,
-	_27QNetworkProtocolFactoryBase_baseinfo,
+	&_27QNetworkProtocolFactoryBase_of_libqt_mt_so_3_typeinfo,
+	_27QNetworkProtocolFactoryBase_of_libqt_mt_so_3_vtable,
+	_27QNetworkProtocolFactoryBase_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QHBoxLayout_typeinfo_name[] = {
+char *_11QHBoxLayout_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI10QBoxLayout",
 	};
 
-struct classtypeinfo _11QHBoxLayout_typeinfo = {
+struct classtypeinfo _11QHBoxLayout_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QHBoxLayout",
-	_11QHBoxLayout_typeinfo_name,
+	_11QHBoxLayout_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QHBoxLayout_vtable_name_0 [] = {
+const char *_11QHBoxLayout_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK11QHBoxLayout10metaObjectEv",
 	"_ZNK11QHBoxLayout9classNameEv",
 	"_ZN11QHBoxLayout7qt_castEPKc",
@@ -34930,7 +34930,7 @@ const char *_11QHBoxLayout_vtable_name_0 [] = {
 	"_ZNK10QBoxLayout14heightForWidthEi",
 	};
 
-const char *_11QHBoxLayout_vtable_name_1 [] = {
+const char *_11QHBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QHBoxLayoutD1Ev",
 #endif
@@ -35230,14 +35230,14 @@ const char *_11QHBoxLayout_vtable_name_1 [] = {
 	"_ZN11QLayoutItem12setAlignmentEi",
 	};
 
-struct classvtable _11QHBoxLayout_vtable [2] = {
+struct classvtable _11QHBoxLayout_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	38,	/* Number of Vfuncs */
 	"_ZTI11QHBoxLayout",
-	_11QHBoxLayout_vtable_name_0,
+	_11QHBoxLayout_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -35271,14 +35271,14 @@ struct classvtable _11QHBoxLayout_vtable [2] = {
 	1,	/* Vtable category */
 	17,	/* Number of Vfuncs */
 	"_ZTI11QHBoxLayout",
-	_11QHBoxLayout_vtable_name_1,
+	_11QHBoxLayout_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _11QHBoxLayout_baseinfo[] = {
+struct base_type_info _11QHBoxLayout_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QHBoxLayout_classinfo = {
+struct classinfo _Z11QHBoxLayout_of_libqt_mt_so_3_classinfo = {
 	"_Z11QHBoxLayout",
 	"_ZTV11QHBoxLayout",
 	"_ZTI11QHBoxLayout",	/* RTTI */
@@ -35289,22 +35289,22 @@ struct classinfo _Z11QHBoxLayout_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QHBoxLayout_typeinfo,
-	_11QHBoxLayout_vtable,
-	_11QHBoxLayout_baseinfo,
+	&_11QHBoxLayout_of_libqt_mt_so_3_typeinfo,
+	_11QHBoxLayout_of_libqt_mt_so_3_vtable,
+	_11QHBoxLayout_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_13QSocketDevice_typeinfo_name[] = {
+char *_13QSocketDevice_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI9QIODevice",
 	};
 
-struct classtypeinfo _13QSocketDevice_typeinfo = {
+struct classtypeinfo _13QSocketDevice_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS13QSocketDevice",
-	_13QSocketDevice_typeinfo_name,
+	_13QSocketDevice_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_13QSocketDevice_vtable_name_0 [] = {
+const char *_13QSocketDevice_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN13QSocketDeviceD1Ev",
 	"_ZN13QSocketDeviceD0Ev",
 	"_ZN13QSocketDevice4openEi",
@@ -35334,21 +35334,21 @@ const char *_13QSocketDevice_vtable_name_0 [] = {
 	"_ZN13QSocketDevice9setOptionENS_6OptionEi",
 	};
 
-struct classvtable _13QSocketDevice_vtable [1] = {
+struct classvtable _13QSocketDevice_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	27,	/* Number of Vfuncs */
 	"_ZTI13QSocketDevice",
-	_13QSocketDevice_vtable_name_0,
+	_13QSocketDevice_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _13QSocketDevice_baseinfo[] = {
+struct base_type_info _13QSocketDevice_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z13QSocketDevice_classinfo = {
+struct classinfo _Z13QSocketDevice_of_libqt_mt_so_3_classinfo = {
 	"_Z13QSocketDevice",
 	"_ZTV13QSocketDevice",
 	"_ZTI13QSocketDevice",	/* RTTI */
@@ -35359,21 +35359,21 @@ struct classinfo _Z13QSocketDevice_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_13QSocketDevice_typeinfo,
-	_13QSocketDevice_vtable,
-	_13QSocketDevice_baseinfo,
+	&_13QSocketDevice_of_libqt_mt_so_3_typeinfo,
+	_13QSocketDevice_of_libqt_mt_so_3_vtable,
+	_13QSocketDevice_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QXmlReader_typeinfo_name[] = {
+char *_10QXmlReader_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _10QXmlReader_typeinfo = {
+struct classtypeinfo _10QXmlReader_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS10QXmlReader",
-	_10QXmlReader_typeinfo_name,
+	_10QXmlReader_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QXmlReader_vtable_name_0 [] = {
+const char *_10QXmlReader_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
@@ -35396,21 +35396,21 @@ const char *_10QXmlReader_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _10QXmlReader_vtable [1] = {
+struct classvtable _10QXmlReader_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	20,	/* Number of Vfuncs */
 	"_ZTI10QXmlReader",
-	_10QXmlReader_vtable_name_0,
+	_10QXmlReader_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _10QXmlReader_baseinfo[] = {
+struct base_type_info _10QXmlReader_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QXmlReader_classinfo = {
+struct classinfo _Z10QXmlReader_of_libqt_mt_so_3_classinfo = {
 	"_Z10QXmlReader",
 	"_ZTV10QXmlReader",
 	"_ZTI10QXmlReader",	/* RTTI */
@@ -35421,22 +35421,22 @@ struct classinfo _Z10QXmlReader_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QXmlReader_typeinfo,
-	_10QXmlReader_vtable,
-	_10QXmlReader_baseinfo,
+	&_10QXmlReader_of_libqt_mt_so_3_typeinfo,
+	_10QXmlReader_of_libqt_mt_so_3_vtable,
+	_10QXmlReader_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QDomEntity_typeinfo_name[] = {
+char *_10QDomEntity_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI8QDomNode",
 	};
 
-struct classtypeinfo _10QDomEntity_typeinfo = {
+struct classtypeinfo _10QDomEntity_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QDomEntity",
-	_10QDomEntity_typeinfo_name,
+	_10QDomEntity_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QDomEntity_vtable_name_0 [] = {
+const char *_10QDomEntity_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN10QDomEntityD1Ev",
 	"_ZN10QDomEntityD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -35483,21 +35483,21 @@ const char *_10QDomEntity_vtable_name_0 [] = {
 	"_ZNK10QDomEntity12notationNameEv",
 	};
 
-struct classvtable _10QDomEntity_vtable [1] = {
+struct classvtable _10QDomEntity_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	44,	/* Number of Vfuncs */
 	"_ZTI10QDomEntity",
-	_10QDomEntity_vtable_name_0,
+	_10QDomEntity_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _10QDomEntity_baseinfo[] = {
+struct base_type_info _10QDomEntity_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QDomEntity_classinfo = {
+struct classinfo _Z10QDomEntity_of_libqt_mt_so_3_classinfo = {
 	"_Z10QDomEntity",
 	"_ZTV10QDomEntity",
 	"_ZTI10QDomEntity",	/* RTTI */
@@ -35508,40 +35508,40 @@ struct classinfo _Z10QDomEntity_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QDomEntity_typeinfo,
-	_10QDomEntity_vtable,
-	_10QDomEntity_baseinfo,
+	&_10QDomEntity_of_libqt_mt_so_3_typeinfo,
+	_10QDomEntity_of_libqt_mt_so_3_vtable,
+	_10QDomEntity_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QMetaObject_typeinfo_name[] = {
+char *_11QMetaObject_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _11QMetaObject_typeinfo = {
+struct classtypeinfo _11QMetaObject_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS11QMetaObject",
-	_11QMetaObject_typeinfo_name,
+	_11QMetaObject_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QMetaObject_vtable_name_0 [] = {
+const char *_11QMetaObject_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QMetaObjectD1Ev",
 	"_ZN11QMetaObjectD0Ev",
 	};
 
-struct classvtable _11QMetaObject_vtable [1] = {
+struct classvtable _11QMetaObject_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI11QMetaObject",
-	_11QMetaObject_vtable_name_0,
+	_11QMetaObject_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QMetaObject_baseinfo[] = {
+struct base_type_info _11QMetaObject_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QMetaObject_classinfo = {
+struct classinfo _Z11QMetaObject_of_libqt_mt_so_3_classinfo = {
 	"_Z11QMetaObject",
 	"_ZTV11QMetaObject",
 	"_ZTI11QMetaObject",	/* RTTI */
@@ -35552,22 +35552,22 @@ struct classinfo _Z11QMetaObject_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QMetaObject_typeinfo,
-	_11QMetaObject_vtable,
-	_11QMetaObject_baseinfo,
+	&_11QMetaObject_of_libqt_mt_so_3_typeinfo,
+	_11QMetaObject_of_libqt_mt_so_3_vtable,
+	_11QMetaObject_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_13QErrorMessage_typeinfo_name[] = {
+char *_13QErrorMessage_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QDialog",
 	};
 
-struct classtypeinfo _13QErrorMessage_typeinfo = {
+struct classtypeinfo _13QErrorMessage_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS13QErrorMessage",
-	_13QErrorMessage_typeinfo_name,
+	_13QErrorMessage_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_13QErrorMessage_vtable_name_0 [] = {
+const char *_13QErrorMessage_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK13QErrorMessage10metaObjectEv",
 	"_ZNK13QErrorMessage9classNameEv",
 	"_ZN13QErrorMessage7qt_castEPKc",
@@ -35683,7 +35683,7 @@ const char *_13QErrorMessage_vtable_name_0 [] = {
 	"_ZN7QDialog6rejectEv",
 	};
 
-const char *_13QErrorMessage_vtable_name_1 [] = {
+const char *_13QErrorMessage_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N13QErrorMessageD1Ev",
 #endif
@@ -35757,14 +35757,14 @@ const char *_13QErrorMessage_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _13QErrorMessage_vtable [2] = {
+struct classvtable _13QErrorMessage_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	113,	/* Number of Vfuncs */
 	"_ZTI13QErrorMessage",
-	_13QErrorMessage_vtable_name_0,
+	_13QErrorMessage_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -35798,14 +35798,14 @@ struct classvtable _13QErrorMessage_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI13QErrorMessage",
-	_13QErrorMessage_vtable_name_1,
+	_13QErrorMessage_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _13QErrorMessage_baseinfo[] = {
+struct base_type_info _13QErrorMessage_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z13QErrorMessage_classinfo = {
+struct classinfo _Z13QErrorMessage_of_libqt_mt_so_3_classinfo = {
 	"_Z13QErrorMessage",
 	"_ZTV13QErrorMessage",
 	"_ZTI13QErrorMessage",	/* RTTI */
@@ -35816,22 +35816,22 @@ struct classinfo _Z13QErrorMessage_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_13QErrorMessage_typeinfo,
-	_13QErrorMessage_vtable,
-	_13QErrorMessage_baseinfo,
+	&_13QErrorMessage_of_libqt_mt_so_3_typeinfo,
+	_13QErrorMessage_of_libqt_mt_so_3_vtable,
+	_13QErrorMessage_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_8QListBox_typeinfo_name[] = {
+char *_8QListBox_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI11QScrollView",
 	};
 
-struct classtypeinfo _8QListBox_typeinfo = {
+struct classtypeinfo _8QListBox_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS8QListBox",
-	_8QListBox_typeinfo_name,
+	_8QListBox_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_8QListBox_vtable_name_0 [] = {
+const char *_8QListBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK8QListBox10metaObjectEv",
 	"_ZNK8QListBox9classNameEv",
 	"_ZN8QListBox7qt_castEPKc",
@@ -36005,7 +36005,7 @@ const char *_8QListBox_vtable_name_0 [] = {
 	"_ZN8QListBox9paintCellEP8QPainterii",
 	};
 
-const char *_8QListBox_vtable_name_1 [] = {
+const char *_8QListBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N8QListBoxD1Ev",
 #endif
@@ -36079,14 +36079,14 @@ const char *_8QListBox_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _8QListBox_vtable [2] = {
+struct classvtable _8QListBox_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	171,	/* Number of Vfuncs */
 	"_ZTI8QListBox",
-	_8QListBox_vtable_name_0,
+	_8QListBox_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -36120,14 +36120,14 @@ struct classvtable _8QListBox_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI8QListBox",
-	_8QListBox_vtable_name_1,
+	_8QListBox_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _8QListBox_baseinfo[] = {
+struct base_type_info _8QListBox_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z8QListBox_classinfo = {
+struct classinfo _Z8QListBox_of_libqt_mt_so_3_classinfo = {
 	"_Z8QListBox",
 	"_ZTV8QListBox",
 	"_ZTI8QListBox",	/* RTTI */
@@ -36138,22 +36138,22 @@ struct classinfo _Z8QListBox_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_8QListBox_typeinfo,
-	_8QListBox_vtable,
-	_8QListBox_baseinfo,
+	&_8QListBox_of_libqt_mt_so_3_typeinfo,
+	_8QListBox_of_libqt_mt_so_3_vtable,
+	_8QListBox_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_15QCustomMenuItem_typeinfo_name[] = {
+char *_15QCustomMenuItem_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI2Qt",
 	};
 
-struct classtypeinfo _15QCustomMenuItem_typeinfo = {
+struct classtypeinfo _15QCustomMenuItem_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS15QCustomMenuItem",
-	_15QCustomMenuItem_typeinfo_name,
+	_15QCustomMenuItem_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_15QCustomMenuItem_vtable_name_0 [] = {
+const char *_15QCustomMenuItem_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN15QCustomMenuItemD1Ev",
 	"_ZN15QCustomMenuItemD0Ev",
 	"_ZNK15QCustomMenuItem8fullSpanEv",
@@ -36163,21 +36163,21 @@ const char *_15QCustomMenuItem_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _15QCustomMenuItem_vtable [1] = {
+struct classvtable _15QCustomMenuItem_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	7,	/* Number of Vfuncs */
 	"_ZTI15QCustomMenuItem",
-	_15QCustomMenuItem_vtable_name_0,
+	_15QCustomMenuItem_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _15QCustomMenuItem_baseinfo[] = {
+struct base_type_info _15QCustomMenuItem_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z15QCustomMenuItem_classinfo = {
+struct classinfo _Z15QCustomMenuItem_of_libqt_mt_so_3_classinfo = {
 	"_Z15QCustomMenuItem",
 	"_ZTV15QCustomMenuItem",
 	"_ZTI15QCustomMenuItem",	/* RTTI */
@@ -36188,22 +36188,22 @@ struct classinfo _Z15QCustomMenuItem_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_15QCustomMenuItem_typeinfo,
-	_15QCustomMenuItem_vtable,
-	_15QCustomMenuItem_baseinfo,
+	&_15QCustomMenuItem_of_libqt_mt_so_3_typeinfo,
+	_15QCustomMenuItem_of_libqt_mt_so_3_vtable,
+	_15QCustomMenuItem_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QIconDrag_typeinfo_name[] = {
+char *_9QIconDrag_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI11QDragObject",
 	};
 
-struct classtypeinfo _9QIconDrag_typeinfo = {
+struct classtypeinfo _9QIconDrag_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QIconDrag",
-	_9QIconDrag_typeinfo_name,
+	_9QIconDrag_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QIconDrag_vtable_name_0 [] = {
+const char *_9QIconDrag_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK9QIconDrag10metaObjectEv",
 	"_ZNK9QIconDrag9classNameEv",
 	"_ZN9QIconDrag7qt_castEPKc",
@@ -36232,7 +36232,7 @@ const char *_9QIconDrag_vtable_name_0 [] = {
 	"_ZNK9QIconDrag11encodedDataEPKc",
 	};
 
-const char *_9QIconDrag_vtable_name_1 [] = {
+const char *_9QIconDrag_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QIconDragD1Ev",
 #endif
@@ -36320,14 +36320,14 @@ const char *_9QIconDrag_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable _9QIconDrag_vtable [2] = {
+struct classvtable _9QIconDrag_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	26,	/* Number of Vfuncs */
 	"_ZTI9QIconDrag",
-	_9QIconDrag_vtable_name_0,
+	_9QIconDrag_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -36361,14 +36361,14 @@ struct classvtable _9QIconDrag_vtable [2] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI9QIconDrag",
-	_9QIconDrag_vtable_name_1,
+	_9QIconDrag_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _9QIconDrag_baseinfo[] = {
+struct base_type_info _9QIconDrag_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QIconDrag_classinfo = {
+struct classinfo _Z9QIconDrag_of_libqt_mt_so_3_classinfo = {
 	"_Z9QIconDrag",
 	"_ZTV9QIconDrag",
 	"_ZTI9QIconDrag",	/* RTTI */
@@ -36379,22 +36379,22 @@ struct classinfo _Z9QIconDrag_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QIconDrag_typeinfo,
-	_9QIconDrag_vtable,
-	_9QIconDrag_baseinfo,
+	&_9QIconDrag_of_libqt_mt_so_3_typeinfo,
+	_9QIconDrag_of_libqt_mt_so_3_vtable,
+	_9QIconDrag_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_8QUriDrag_typeinfo_name[] = {
+char *_8QUriDrag_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI11QStoredDrag",
 	};
 
-struct classtypeinfo _8QUriDrag_typeinfo = {
+struct classtypeinfo _8QUriDrag_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS8QUriDrag",
-	_8QUriDrag_typeinfo_name,
+	_8QUriDrag_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_8QUriDrag_vtable_name_0 [] = {
+const char *_8QUriDrag_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK8QUriDrag10metaObjectEv",
 	"_ZNK8QUriDrag9classNameEv",
 	"_ZN8QUriDrag7qt_castEPKc",
@@ -36425,7 +36425,7 @@ const char *_8QUriDrag_vtable_name_0 [] = {
 	"_ZN8QUriDrag7setUrisE8QStrList",
 	};
 
-const char *_8QUriDrag_vtable_name_1 [] = {
+const char *_8QUriDrag_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N8QUriDragD1Ev",
 #endif
@@ -36513,14 +36513,14 @@ const char *_8QUriDrag_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable _8QUriDrag_vtable [2] = {
+struct classvtable _8QUriDrag_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	28,	/* Number of Vfuncs */
 	"_ZTI8QUriDrag",
-	_8QUriDrag_vtable_name_0,
+	_8QUriDrag_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -36554,14 +36554,14 @@ struct classvtable _8QUriDrag_vtable [2] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI8QUriDrag",
-	_8QUriDrag_vtable_name_1,
+	_8QUriDrag_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _8QUriDrag_baseinfo[] = {
+struct base_type_info _8QUriDrag_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z8QUriDrag_classinfo = {
+struct classinfo _Z8QUriDrag_of_libqt_mt_so_3_classinfo = {
 	"_Z8QUriDrag",
 	"_ZTV8QUriDrag",
 	"_ZTI8QUriDrag",	/* RTTI */
@@ -36572,42 +36572,42 @@ struct classinfo _Z8QUriDrag_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_8QUriDrag_typeinfo,
-	_8QUriDrag_vtable,
-	_8QUriDrag_baseinfo,
+	&_8QUriDrag_of_libqt_mt_so_3_typeinfo,
+	_8QUriDrag_of_libqt_mt_so_3_vtable,
+	_8QUriDrag_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_15QXmlDeclHandler_typeinfo_name[] = {
+char *_15QXmlDeclHandler_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _15QXmlDeclHandler_typeinfo = {
+struct classtypeinfo _15QXmlDeclHandler_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS15QXmlDeclHandler",
-	_15QXmlDeclHandler_typeinfo_name,
+	_15QXmlDeclHandler_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_15QXmlDeclHandler_vtable_name_0 [] = {
+const char *_15QXmlDeclHandler_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _15QXmlDeclHandler_vtable [1] = {
+struct classvtable _15QXmlDeclHandler_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	4,	/* Number of Vfuncs */
 	"_ZTI15QXmlDeclHandler",
-	_15QXmlDeclHandler_vtable_name_0,
+	_15QXmlDeclHandler_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _15QXmlDeclHandler_baseinfo[] = {
+struct base_type_info _15QXmlDeclHandler_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z15QXmlDeclHandler_classinfo = {
+struct classinfo _Z15QXmlDeclHandler_of_libqt_mt_so_3_classinfo = {
 	"_Z15QXmlDeclHandler",
 	"_ZTV15QXmlDeclHandler",
 	"_ZTI15QXmlDeclHandler",	/* RTTI */
@@ -36618,22 +36618,22 @@ struct classinfo _Z15QXmlDeclHandler_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_15QXmlDeclHandler_typeinfo,
-	_15QXmlDeclHandler_vtable,
-	_15QXmlDeclHandler_baseinfo,
+	&_15QXmlDeclHandler_of_libqt_mt_so_3_typeinfo,
+	_15QXmlDeclHandler_of_libqt_mt_so_3_vtable,
+	_15QXmlDeclHandler_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QVBoxLayout_typeinfo_name[] = {
+char *_11QVBoxLayout_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI10QBoxLayout",
 	};
 
-struct classtypeinfo _11QVBoxLayout_typeinfo = {
+struct classtypeinfo _11QVBoxLayout_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QVBoxLayout",
-	_11QVBoxLayout_typeinfo_name,
+	_11QVBoxLayout_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QVBoxLayout_vtable_name_0 [] = {
+const char *_11QVBoxLayout_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK11QVBoxLayout10metaObjectEv",
 	"_ZNK11QVBoxLayout9classNameEv",
 	"_ZN11QVBoxLayout7qt_castEPKc",
@@ -36674,7 +36674,7 @@ const char *_11QVBoxLayout_vtable_name_0 [] = {
 	"_ZNK10QBoxLayout14heightForWidthEi",
 	};
 
-const char *_11QVBoxLayout_vtable_name_1 [] = {
+const char *_11QVBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QVBoxLayoutD1Ev",
 #endif
@@ -36974,14 +36974,14 @@ const char *_11QVBoxLayout_vtable_name_1 [] = {
 	"_ZN11QLayoutItem12setAlignmentEi",
 	};
 
-struct classvtable _11QVBoxLayout_vtable [2] = {
+struct classvtable _11QVBoxLayout_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	38,	/* Number of Vfuncs */
 	"_ZTI11QVBoxLayout",
-	_11QVBoxLayout_vtable_name_0,
+	_11QVBoxLayout_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -37015,14 +37015,14 @@ struct classvtable _11QVBoxLayout_vtable [2] = {
 	1,	/* Vtable category */
 	17,	/* Number of Vfuncs */
 	"_ZTI11QVBoxLayout",
-	_11QVBoxLayout_vtable_name_1,
+	_11QVBoxLayout_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _11QVBoxLayout_baseinfo[] = {
+struct base_type_info _11QVBoxLayout_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QVBoxLayout_classinfo = {
+struct classinfo _Z11QVBoxLayout_of_libqt_mt_so_3_classinfo = {
 	"_Z11QVBoxLayout",
 	"_ZTV11QVBoxLayout",
 	"_ZTI11QVBoxLayout",	/* RTTI */
@@ -37033,21 +37033,21 @@ struct classinfo _Z11QVBoxLayout_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QVBoxLayout_typeinfo,
-	_11QVBoxLayout_vtable,
-	_11QVBoxLayout_baseinfo,
+	&_11QVBoxLayout_of_libqt_mt_so_3_typeinfo,
+	_11QVBoxLayout_of_libqt_mt_so_3_vtable,
+	_11QVBoxLayout_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_8QDomNode_typeinfo_name[] = {
+char *_8QDomNode_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _8QDomNode_typeinfo = {
+struct classtypeinfo _8QDomNode_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS8QDomNode",
-	_8QDomNode_typeinfo_name,
+	_8QDomNode_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_8QDomNode_vtable_name_0 [] = {
+const char *_8QDomNode_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN8QDomNodeD1Ev",
 	"_ZN8QDomNodeD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -37091,21 +37091,21 @@ const char *_8QDomNode_vtable_name_0 [] = {
 	"_ZNK8QDomNode9isCommentEv",
 	};
 
-struct classvtable _8QDomNode_vtable [1] = {
+struct classvtable _8QDomNode_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	41,	/* Number of Vfuncs */
 	"_ZTI8QDomNode",
-	_8QDomNode_vtable_name_0,
+	_8QDomNode_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _8QDomNode_baseinfo[] = {
+struct base_type_info _8QDomNode_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z8QDomNode_classinfo = {
+struct classinfo _Z8QDomNode_of_libqt_mt_so_3_classinfo = {
 	"_Z8QDomNode",
 	"_ZTV8QDomNode",
 	"_ZTI8QDomNode",	/* RTTI */
@@ -37116,22 +37116,22 @@ struct classinfo _Z8QDomNode_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_8QDomNode_typeinfo,
-	_8QDomNode_vtable,
-	_8QDomNode_baseinfo,
+	&_8QDomNode_of_libqt_mt_so_3_typeinfo,
+	_8QDomNode_of_libqt_mt_so_3_vtable,
+	_8QDomNode_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_7QBuffer_typeinfo_name[] = {
+char *_7QBuffer_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI9QIODevice",
 	};
 
-struct classtypeinfo _7QBuffer_typeinfo = {
+struct classtypeinfo _7QBuffer_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS7QBuffer",
-	_7QBuffer_typeinfo_name,
+	_7QBuffer_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_7QBuffer_vtable_name_0 [] = {
+const char *_7QBuffer_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QBufferD1Ev",
 	"_ZN7QBufferD0Ev",
 	"_ZN7QBuffer4openEi",
@@ -37150,21 +37150,21 @@ const char *_7QBuffer_vtable_name_0 [] = {
 	"_ZN7QBuffer7ungetchEi",
 	};
 
-struct classvtable _7QBuffer_vtable [1] = {
+struct classvtable _7QBuffer_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	16,	/* Number of Vfuncs */
 	"_ZTI7QBuffer",
-	_7QBuffer_vtable_name_0,
+	_7QBuffer_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _7QBuffer_baseinfo[] = {
+struct base_type_info _7QBuffer_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z7QBuffer_classinfo = {
+struct classinfo _Z7QBuffer_of_libqt_mt_so_3_classinfo = {
 	"_Z7QBuffer",
 	"_ZTV7QBuffer",
 	"_ZTI7QBuffer",	/* RTTI */
@@ -37175,22 +37175,22 @@ struct classinfo _Z7QBuffer_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_7QBuffer_typeinfo,
-	_7QBuffer_vtable,
-	_7QBuffer_baseinfo,
+	&_7QBuffer_of_libqt_mt_so_3_typeinfo,
+	_7QBuffer_of_libqt_mt_so_3_vtable,
+	_7QBuffer_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_16QCanvasRectangle_typeinfo_name[] = {
+char *_16QCanvasRectangle_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI20QCanvasPolygonalItem",
 	};
 
-struct classtypeinfo _16QCanvasRectangle_typeinfo = {
+struct classtypeinfo _16QCanvasRectangle_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS16QCanvasRectangle",
-	_16QCanvasRectangle_typeinfo_name,
+	_16QCanvasRectangle_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_16QCanvasRectangle_vtable_name_0 [] = {
+const char *_16QCanvasRectangle_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN16QCanvasRectangleD1Ev",
 	"_ZN16QCanvasRectangleD0Ev",
 	"_ZN11QCanvasItem6moveByEdd",
@@ -37219,21 +37219,21 @@ const char *_16QCanvasRectangle_vtable_name_0 [] = {
 	"_ZN16QCanvasRectangle9drawShapeER8QPainter",
 	};
 
-struct classvtable _16QCanvasRectangle_vtable [1] = {
+struct classvtable _16QCanvasRectangle_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	26,	/* Number of Vfuncs */
 	"_ZTI16QCanvasRectangle",
-	_16QCanvasRectangle_vtable_name_0,
+	_16QCanvasRectangle_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _16QCanvasRectangle_baseinfo[] = {
+struct base_type_info _16QCanvasRectangle_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z16QCanvasRectangle_classinfo = {
+struct classinfo _Z16QCanvasRectangle_of_libqt_mt_so_3_classinfo = {
 	"_Z16QCanvasRectangle",
 	"_ZTV16QCanvasRectangle",
 	"_ZTI16QCanvasRectangle",	/* RTTI */
@@ -37244,42 +37244,42 @@ struct classinfo _Z16QCanvasRectangle_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_16QCanvasRectangle_typeinfo,
-	_16QCanvasRectangle_vtable,
-	_16QCanvasRectangle_baseinfo,
+	&_16QCanvasRectangle_of_libqt_mt_so_3_typeinfo,
+	_16QCanvasRectangle_of_libqt_mt_so_3_vtable,
+	_16QCanvasRectangle_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_8QIconSet_typeinfo_name[] = {
+char *_8QIconSet_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _8QIconSet_typeinfo = {
+struct classtypeinfo _8QIconSet_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS8QIconSet",
-	_8QIconSet_typeinfo_name,
+	_8QIconSet_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_8QIconSet_vtable_name_0 [] = {
+const char *_8QIconSet_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN8QIconSetD1Ev",
 	"_ZN8QIconSetD0Ev",
 	"_ZN8QIconSet9setPixmapERK7QPixmapNS_4SizeENS_4ModeENS_5StateE",
 	"_ZN8QIconSet9setPixmapERK7QStringNS_4SizeENS_4ModeENS_5StateE",
 	};
 
-struct classvtable _8QIconSet_vtable [1] = {
+struct classvtable _8QIconSet_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	4,	/* Number of Vfuncs */
 	"_ZTI8QIconSet",
-	_8QIconSet_vtable_name_0,
+	_8QIconSet_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _8QIconSet_baseinfo[] = {
+struct base_type_info _8QIconSet_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z8QIconSet_classinfo = {
+struct classinfo _Z8QIconSet_of_libqt_mt_so_3_classinfo = {
 	"_Z8QIconSet",
 	"_ZTV8QIconSet",
 	"_ZTI8QIconSet",	/* RTTI */
@@ -37290,40 +37290,40 @@ struct classinfo _Z8QIconSet_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_8QIconSet_typeinfo,
-	_8QIconSet_vtable,
-	_8QIconSet_baseinfo,
+	&_8QIconSet_of_libqt_mt_so_3_typeinfo,
+	_8QIconSet_of_libqt_mt_so_3_vtable,
+	_8QIconSet_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QDropSite_typeinfo_name[] = {
+char *_9QDropSite_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _9QDropSite_typeinfo = {
+struct classtypeinfo _9QDropSite_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS9QDropSite",
-	_9QDropSite_typeinfo_name,
+	_9QDropSite_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QDropSite_vtable_name_0 [] = {
+const char *_9QDropSite_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QDropSiteD1Ev",
 	"_ZN9QDropSiteD0Ev",
 	};
 
-struct classvtable _9QDropSite_vtable [1] = {
+struct classvtable _9QDropSite_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI9QDropSite",
-	_9QDropSite_vtable_name_0,
+	_9QDropSite_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _9QDropSite_baseinfo[] = {
+struct base_type_info _9QDropSite_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QDropSite_classinfo = {
+struct classinfo _Z9QDropSite_of_libqt_mt_so_3_classinfo = {
 	"_Z9QDropSite",
 	"_ZTV9QDropSite",
 	"_ZTI9QDropSite",	/* RTTI */
@@ -37334,42 +37334,42 @@ struct classinfo _Z9QDropSite_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QDropSite_typeinfo,
-	_9QDropSite_vtable,
-	_9QDropSite_baseinfo,
+	&_9QDropSite_of_libqt_mt_so_3_typeinfo,
+	_9QDropSite_of_libqt_mt_so_3_vtable,
+	_9QDropSite_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_7QThread_typeinfo_name[] = {
+char *_7QThread_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI2Qt",
 	};
 
-struct classtypeinfo _7QThread_typeinfo = {
+struct classtypeinfo _7QThread_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS7QThread",
-	_7QThread_typeinfo_name,
+	_7QThread_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_7QThread_vtable_name_0 [] = {
+const char *_7QThread_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QThreadD1Ev",
 	"_ZN7QThreadD0Ev",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _7QThread_vtable [1] = {
+struct classvtable _7QThread_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	3,	/* Number of Vfuncs */
 	"_ZTI7QThread",
-	_7QThread_vtable_name_0,
+	_7QThread_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _7QThread_baseinfo[] = {
+struct base_type_info _7QThread_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z7QThread_classinfo = {
+struct classinfo _Z7QThread_of_libqt_mt_so_3_classinfo = {
 	"_Z7QThread",
 	"_ZTV7QThread",
 	"_ZTI7QThread",	/* RTTI */
@@ -37380,22 +37380,22 @@ struct classinfo _Z7QThread_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_7QThread_typeinfo,
-	_7QThread_vtable,
-	_7QThread_baseinfo,
+	&_7QThread_of_libqt_mt_so_3_typeinfo,
+	_7QThread_of_libqt_mt_so_3_vtable,
+	_7QThread_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QStoredDrag_typeinfo_name[] = {
+char *_11QStoredDrag_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI11QDragObject",
 	};
 
-struct classtypeinfo _11QStoredDrag_typeinfo = {
+struct classtypeinfo _11QStoredDrag_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QStoredDrag",
-	_11QStoredDrag_typeinfo_name,
+	_11QStoredDrag_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QStoredDrag_vtable_name_0 [] = {
+const char *_11QStoredDrag_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK11QStoredDrag10metaObjectEv",
 	"_ZNK11QStoredDrag9classNameEv",
 	"_ZN11QStoredDrag7qt_castEPKc",
@@ -37425,7 +37425,7 @@ const char *_11QStoredDrag_vtable_name_0 [] = {
 	"_ZNK11QStoredDrag11encodedDataEPKc",
 	};
 
-const char *_11QStoredDrag_vtable_name_1 [] = {
+const char *_11QStoredDrag_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QStoredDragD1Ev",
 #endif
@@ -37513,14 +37513,14 @@ const char *_11QStoredDrag_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable _11QStoredDrag_vtable [2] = {
+struct classvtable _11QStoredDrag_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	27,	/* Number of Vfuncs */
 	"_ZTI11QStoredDrag",
-	_11QStoredDrag_vtable_name_0,
+	_11QStoredDrag_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -37554,14 +37554,14 @@ struct classvtable _11QStoredDrag_vtable [2] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI11QStoredDrag",
-	_11QStoredDrag_vtable_name_1,
+	_11QStoredDrag_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _11QStoredDrag_baseinfo[] = {
+struct base_type_info _11QStoredDrag_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QStoredDrag_classinfo = {
+struct classinfo _Z11QStoredDrag_of_libqt_mt_so_3_classinfo = {
 	"_Z11QStoredDrag",
 	"_ZTV11QStoredDrag",
 	"_ZTI11QStoredDrag",	/* RTTI */
@@ -37572,22 +37572,22 @@ struct classinfo _Z11QStoredDrag_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QStoredDrag_typeinfo,
-	_11QStoredDrag_vtable,
-	_11QStoredDrag_baseinfo,
+	&_11QStoredDrag_of_libqt_mt_so_3_typeinfo,
+	_11QStoredDrag_of_libqt_mt_so_3_vtable,
+	_11QStoredDrag_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QTextDrag_typeinfo_name[] = {
+char *_9QTextDrag_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI11QDragObject",
 	};
 
-struct classtypeinfo _9QTextDrag_typeinfo = {
+struct classtypeinfo _9QTextDrag_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QTextDrag",
-	_9QTextDrag_typeinfo_name,
+	_9QTextDrag_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QTextDrag_vtable_name_0 [] = {
+const char *_9QTextDrag_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK9QTextDrag10metaObjectEv",
 	"_ZNK9QTextDrag9classNameEv",
 	"_ZN9QTextDrag7qt_castEPKc",
@@ -37618,7 +37618,7 @@ const char *_9QTextDrag_vtable_name_0 [] = {
 	"_ZNK9QTextDrag11encodedDataEPKc",
 	};
 
-const char *_9QTextDrag_vtable_name_1 [] = {
+const char *_9QTextDrag_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QTextDragD1Ev",
 #endif
@@ -37706,14 +37706,14 @@ const char *_9QTextDrag_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable _9QTextDrag_vtable [2] = {
+struct classvtable _9QTextDrag_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	28,	/* Number of Vfuncs */
 	"_ZTI9QTextDrag",
-	_9QTextDrag_vtable_name_0,
+	_9QTextDrag_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -37747,14 +37747,14 @@ struct classvtable _9QTextDrag_vtable [2] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI9QTextDrag",
-	_9QTextDrag_vtable_name_1,
+	_9QTextDrag_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _9QTextDrag_baseinfo[] = {
+struct base_type_info _9QTextDrag_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QTextDrag_classinfo = {
+struct classinfo _Z9QTextDrag_of_libqt_mt_so_3_classinfo = {
 	"_Z9QTextDrag",
 	"_ZTV9QTextDrag",
 	"_ZTI9QTextDrag",	/* RTTI */
@@ -37765,39 +37765,39 @@ struct classinfo _Z9QTextDrag_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QTextDrag_typeinfo,
-	_9QTextDrag_vtable,
-	_9QTextDrag_baseinfo,
+	&_9QTextDrag_of_libqt_mt_so_3_typeinfo,
+	_9QTextDrag_of_libqt_mt_so_3_vtable,
+	_9QTextDrag_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QFilePreview_typeinfo_name[] = {
+char *_12QFilePreview_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _12QFilePreview_typeinfo = {
+struct classtypeinfo _12QFilePreview_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS12QFilePreview",
-	_12QFilePreview_typeinfo_name,
+	_12QFilePreview_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QFilePreview_vtable_name_0 [] = {
+const char *_12QFilePreview_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _12QFilePreview_vtable [1] = {
+struct classvtable _12QFilePreview_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	1,	/* Number of Vfuncs */
 	"_ZTI12QFilePreview",
-	_12QFilePreview_vtable_name_0,
+	_12QFilePreview_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QFilePreview_baseinfo[] = {
+struct base_type_info _12QFilePreview_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QFilePreview_classinfo = {
+struct classinfo _Z12QFilePreview_of_libqt_mt_so_3_classinfo = {
 	"_Z12QFilePreview",
 	"_ZTV12QFilePreview",
 	"_ZTI12QFilePreview",	/* RTTI */
@@ -37808,22 +37808,22 @@ struct classinfo _Z12QFilePreview_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QFilePreview_typeinfo,
-	_12QFilePreview_vtable,
-	_12QFilePreview_baseinfo,
+	&_12QFilePreview_of_libqt_mt_so_3_typeinfo,
+	_12QFilePreview_of_libqt_mt_so_3_vtable,
+	_12QFilePreview_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QButtonGroup_typeinfo_name[] = {
+char *_12QButtonGroup_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI9QGroupBox",
 	};
 
-struct classtypeinfo _12QButtonGroup_typeinfo = {
+struct classtypeinfo _12QButtonGroup_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QButtonGroup",
-	_12QButtonGroup_typeinfo_name,
+	_12QButtonGroup_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QButtonGroup_vtable_name_0 [] = {
+const char *_12QButtonGroup_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK12QButtonGroup10metaObjectEv",
 	"_ZNK12QButtonGroup9classNameEv",
 	"_ZN12QButtonGroup7qt_castEPKc",
@@ -37951,7 +37951,7 @@ const char *_12QButtonGroup_vtable_name_0 [] = {
 	"_ZN12QButtonGroup9moveFocusEi",
 	};
 
-const char *_12QButtonGroup_vtable_name_1 [] = {
+const char *_12QButtonGroup_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N12QButtonGroupD1Ev",
 #endif
@@ -38025,14 +38025,14 @@ const char *_12QButtonGroup_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _12QButtonGroup_vtable [2] = {
+struct classvtable _12QButtonGroup_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	125,	/* Number of Vfuncs */
 	"_ZTI12QButtonGroup",
-	_12QButtonGroup_vtable_name_0,
+	_12QButtonGroup_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -38066,14 +38066,14 @@ struct classvtable _12QButtonGroup_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI12QButtonGroup",
-	_12QButtonGroup_vtable_name_1,
+	_12QButtonGroup_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _12QButtonGroup_baseinfo[] = {
+struct base_type_info _12QButtonGroup_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QButtonGroup_classinfo = {
+struct classinfo _Z12QButtonGroup_of_libqt_mt_so_3_classinfo = {
 	"_Z12QButtonGroup",
 	"_ZTV12QButtonGroup",
 	"_ZTI12QButtonGroup",	/* RTTI */
@@ -38084,21 +38084,21 @@ struct classinfo _Z12QButtonGroup_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QButtonGroup_typeinfo,
-	_12QButtonGroup_vtable,
-	_12QButtonGroup_baseinfo,
+	&_12QButtonGroup_of_libqt_mt_so_3_typeinfo,
+	_12QButtonGroup_of_libqt_mt_so_3_vtable,
+	_12QButtonGroup_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QSqlRecord_typeinfo_name[] = {
+char *_10QSqlRecord_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _10QSqlRecord_typeinfo = {
+struct classtypeinfo _10QSqlRecord_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS10QSqlRecord",
-	_10QSqlRecord_typeinfo_name,
+	_10QSqlRecord_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QSqlRecord_vtable_name_0 [] = {
+const char *_10QSqlRecord_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN10QSqlRecordD1Ev",
 	"_ZN10QSqlRecordD0Ev",
 	"_ZNK10QSqlRecord5valueEi",
@@ -38118,21 +38118,21 @@ const char *_10QSqlRecord_vtable_name_0 [] = {
 	"_ZNK10QSqlRecord12toStringListERK7QString",
 	};
 
-struct classvtable _10QSqlRecord_vtable [1] = {
+struct classvtable _10QSqlRecord_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	17,	/* Number of Vfuncs */
 	"_ZTI10QSqlRecord",
-	_10QSqlRecord_vtable_name_0,
+	_10QSqlRecord_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _10QSqlRecord_baseinfo[] = {
+struct base_type_info _10QSqlRecord_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QSqlRecord_classinfo = {
+struct classinfo _Z10QSqlRecord_of_libqt_mt_so_3_classinfo = {
 	"_Z10QSqlRecord",
 	"_ZTV10QSqlRecord",
 	"_ZTI10QSqlRecord",	/* RTTI */
@@ -38143,22 +38143,22 @@ struct classinfo _Z10QSqlRecord_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QSqlRecord_typeinfo,
-	_10QSqlRecord_vtable,
-	_10QSqlRecord_baseinfo,
+	&_10QSqlRecord_of_libqt_mt_so_3_typeinfo,
+	_10QSqlRecord_of_libqt_mt_so_3_vtable,
+	_10QSqlRecord_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_8QPicture_typeinfo_name[] = {
+char *_8QPicture_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI12QPaintDevice",
 	};
 
-struct classtypeinfo _8QPicture_typeinfo = {
+struct classtypeinfo _8QPicture_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS8QPicture",
-	_8QPicture_typeinfo_name,
+	_8QPicture_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_8QPicture_vtable_name_0 [] = {
+const char *_8QPicture_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN8QPictureD1Ev",
 	"_ZN8QPictureD0Ev",
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -38173,21 +38173,21 @@ const char *_8QPicture_vtable_name_0 [] = {
 	"_ZN8QPicture7setDataEPKcj",
 	};
 
-struct classvtable _8QPicture_vtable [1] = {
+struct classvtable _8QPicture_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	12,	/* Number of Vfuncs */
 	"_ZTI8QPicture",
-	_8QPicture_vtable_name_0,
+	_8QPicture_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _8QPicture_baseinfo[] = {
+struct base_type_info _8QPicture_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z8QPicture_classinfo = {
+struct classinfo _Z8QPicture_of_libqt_mt_so_3_classinfo = {
 	"_Z8QPicture",
 	"_ZTV8QPicture",
 	"_ZTI8QPicture",	/* RTTI */
@@ -38198,40 +38198,40 @@ struct classinfo _Z8QPicture_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_8QPicture_typeinfo,
-	_8QPicture_vtable,
-	_8QPicture_baseinfo,
+	&_8QPicture_of_libqt_mt_so_3_typeinfo,
+	_8QPicture_of_libqt_mt_so_3_vtable,
+	_8QPicture_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QSemaphore_typeinfo_name[] = {
+char *_10QSemaphore_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _10QSemaphore_typeinfo = {
+struct classtypeinfo _10QSemaphore_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS10QSemaphore",
-	_10QSemaphore_typeinfo_name,
+	_10QSemaphore_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QSemaphore_vtable_name_0 [] = {
+const char *_10QSemaphore_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN10QSemaphoreD1Ev",
 	"_ZN10QSemaphoreD0Ev",
 	};
 
-struct classvtable _10QSemaphore_vtable [1] = {
+struct classvtable _10QSemaphore_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI10QSemaphore",
-	_10QSemaphore_vtable_name_0,
+	_10QSemaphore_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _10QSemaphore_baseinfo[] = {
+struct base_type_info _10QSemaphore_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QSemaphore_classinfo = {
+struct classinfo _Z10QSemaphore_of_libqt_mt_so_3_classinfo = {
 	"_Z10QSemaphore",
 	"_ZTV10QSemaphore",
 	"_ZTI10QSemaphore",	/* RTTI */
@@ -38242,22 +38242,22 @@ struct classinfo _Z10QSemaphore_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QSemaphore_typeinfo,
-	_10QSemaphore_vtable,
-	_10QSemaphore_baseinfo,
+	&_10QSemaphore_of_libqt_mt_so_3_typeinfo,
+	_10QSemaphore_of_libqt_mt_so_3_vtable,
+	_10QSemaphore_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QComboBox_typeinfo_name[] = {
+char *_9QComboBox_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo _9QComboBox_typeinfo = {
+struct classtypeinfo _9QComboBox_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QComboBox",
-	_9QComboBox_typeinfo_name,
+	_9QComboBox_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QComboBox_vtable_name_0 [] = {
+const char *_9QComboBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK9QComboBox10metaObjectEv",
 	"_ZNK9QComboBox9classNameEv",
 	"_ZN9QComboBox7qt_castEPKc",
@@ -38382,7 +38382,7 @@ const char *_9QComboBox_vtable_name_0 [] = {
 	"_ZN9QComboBox11setEditTextERK7QString",
 	};
 
-const char *_9QComboBox_vtable_name_1 [] = {
+const char *_9QComboBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QComboBoxD1Ev",
 #endif
@@ -38456,14 +38456,14 @@ const char *_9QComboBox_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _9QComboBox_vtable [2] = {
+struct classvtable _9QComboBox_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	122,	/* Number of Vfuncs */
 	"_ZTI9QComboBox",
-	_9QComboBox_vtable_name_0,
+	_9QComboBox_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -38497,14 +38497,14 @@ struct classvtable _9QComboBox_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QComboBox",
-	_9QComboBox_vtable_name_1,
+	_9QComboBox_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _9QComboBox_baseinfo[] = {
+struct base_type_info _9QComboBox_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QComboBox_classinfo = {
+struct classinfo _Z9QComboBox_of_libqt_mt_so_3_classinfo = {
 	"_Z9QComboBox",
 	"_ZTV9QComboBox",
 	"_ZTI9QComboBox",	/* RTTI */
@@ -38515,22 +38515,22 @@ struct classinfo _Z9QComboBox_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QComboBox_typeinfo,
-	_9QComboBox_vtable,
-	_9QComboBox_baseinfo,
+	&_9QComboBox_of_libqt_mt_so_3_typeinfo,
+	_9QComboBox_of_libqt_mt_so_3_vtable,
+	_9QComboBox_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_8QDomText_typeinfo_name[] = {
+char *_8QDomText_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI17QDomCharacterData",
 	};
 
-struct classtypeinfo _8QDomText_typeinfo = {
+struct classtypeinfo _8QDomText_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS8QDomText",
-	_8QDomText_typeinfo_name,
+	_8QDomText_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_8QDomText_vtable_name_0 [] = {
+const char *_8QDomText_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN8QDomTextD1Ev",
 	"_ZN8QDomTextD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -38582,21 +38582,21 @@ const char *_8QDomText_vtable_name_0 [] = {
 	"_ZN17QDomCharacterData7setDataERK7QString",
 	};
 
-struct classvtable _8QDomText_vtable [1] = {
+struct classvtable _8QDomText_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	49,	/* Number of Vfuncs */
 	"_ZTI8QDomText",
-	_8QDomText_vtable_name_0,
+	_8QDomText_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _8QDomText_baseinfo[] = {
+struct base_type_info _8QDomText_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z8QDomText_classinfo = {
+struct classinfo _Z8QDomText_of_libqt_mt_so_3_classinfo = {
 	"_Z8QDomText",
 	"_ZTV8QDomText",
 	"_ZTI8QDomText",	/* RTTI */
@@ -38607,22 +38607,22 @@ struct classinfo _Z8QDomText_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_8QDomText_typeinfo,
-	_8QDomText_vtable,
-	_8QDomText_baseinfo,
+	&_8QDomText_of_libqt_mt_so_3_typeinfo,
+	_8QDomText_of_libqt_mt_so_3_vtable,
+	_8QDomText_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_13QVButtonGroup_typeinfo_name[] = {
+char *_13QVButtonGroup_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI12QButtonGroup",
 	};
 
-struct classtypeinfo _13QVButtonGroup_typeinfo = {
+struct classtypeinfo _13QVButtonGroup_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS13QVButtonGroup",
-	_13QVButtonGroup_typeinfo_name,
+	_13QVButtonGroup_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_13QVButtonGroup_vtable_name_0 [] = {
+const char *_13QVButtonGroup_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK13QVButtonGroup10metaObjectEv",
 	"_ZNK13QVButtonGroup9classNameEv",
 	"_ZN13QVButtonGroup7qt_castEPKc",
@@ -38750,7 +38750,7 @@ const char *_13QVButtonGroup_vtable_name_0 [] = {
 	"_ZN12QButtonGroup9moveFocusEi",
 	};
 
-const char *_13QVButtonGroup_vtable_name_1 [] = {
+const char *_13QVButtonGroup_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N13QVButtonGroupD1Ev",
 #endif
@@ -38824,14 +38824,14 @@ const char *_13QVButtonGroup_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _13QVButtonGroup_vtable [2] = {
+struct classvtable _13QVButtonGroup_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	125,	/* Number of Vfuncs */
 	"_ZTI13QVButtonGroup",
-	_13QVButtonGroup_vtable_name_0,
+	_13QVButtonGroup_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -38865,14 +38865,14 @@ struct classvtable _13QVButtonGroup_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI13QVButtonGroup",
-	_13QVButtonGroup_vtable_name_1,
+	_13QVButtonGroup_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _13QVButtonGroup_baseinfo[] = {
+struct base_type_info _13QVButtonGroup_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z13QVButtonGroup_classinfo = {
+struct classinfo _Z13QVButtonGroup_of_libqt_mt_so_3_classinfo = {
 	"_Z13QVButtonGroup",
 	"_ZTV13QVButtonGroup",
 	"_ZTI13QVButtonGroup",	/* RTTI */
@@ -38883,22 +38883,22 @@ struct classinfo _Z13QVButtonGroup_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_13QVButtonGroup_typeinfo,
-	_13QVButtonGroup_vtable,
-	_13QVButtonGroup_baseinfo,
+	&_13QVButtonGroup_of_libqt_mt_so_3_typeinfo,
+	_13QVButtonGroup_of_libqt_mt_so_3_vtable,
+	_13QVButtonGroup_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QClipboard_typeinfo_name[] = {
+char *_10QClipboard_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _10QClipboard_typeinfo = {
+struct classtypeinfo _10QClipboard_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QClipboard",
-	_10QClipboard_typeinfo_name,
+	_10QClipboard_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QClipboard_vtable_name_0 [] = {
+const char *_10QClipboard_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK10QClipboard10metaObjectEv",
 	"_ZNK10QClipboard9classNameEv",
 	"_ZN10QClipboard7qt_castEPKc",
@@ -38922,21 +38922,21 @@ const char *_10QClipboard_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable _10QClipboard_vtable [1] = {
+struct classvtable _10QClipboard_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI10QClipboard",
-	_10QClipboard_vtable_name_0,
+	_10QClipboard_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _10QClipboard_baseinfo[] = {
+struct base_type_info _10QClipboard_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QClipboard_classinfo = {
+struct classinfo _Z10QClipboard_of_libqt_mt_so_3_classinfo = {
 	"_Z10QClipboard",
 	"_ZTV10QClipboard",
 	"_ZTI10QClipboard",	/* RTTI */
@@ -38947,41 +38947,41 @@ struct classinfo _Z10QClipboard_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QClipboard_typeinfo,
-	_10QClipboard_vtable,
-	_10QClipboard_baseinfo,
+	&_10QClipboard_of_libqt_mt_so_3_typeinfo,
+	_10QClipboard_of_libqt_mt_so_3_vtable,
+	_10QClipboard_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QTextEncoder_typeinfo_name[] = {
+char *_12QTextEncoder_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _12QTextEncoder_typeinfo = {
+struct classtypeinfo _12QTextEncoder_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS12QTextEncoder",
-	_12QTextEncoder_typeinfo_name,
+	_12QTextEncoder_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QTextEncoder_vtable_name_0 [] = {
+const char *_12QTextEncoder_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN12QTextEncoderD1Ev",
 	"_ZN12QTextEncoderD0Ev",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _12QTextEncoder_vtable [1] = {
+struct classvtable _12QTextEncoder_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	3,	/* Number of Vfuncs */
 	"_ZTI12QTextEncoder",
-	_12QTextEncoder_vtable_name_0,
+	_12QTextEncoder_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QTextEncoder_baseinfo[] = {
+struct base_type_info _12QTextEncoder_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QTextEncoder_classinfo = {
+struct classinfo _Z12QTextEncoder_of_libqt_mt_so_3_classinfo = {
 	"_Z12QTextEncoder",
 	"_ZTV12QTextEncoder",
 	"_ZTI12QTextEncoder",	/* RTTI */
@@ -38992,22 +38992,22 @@ struct classinfo _Z12QTextEncoder_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QTextEncoder_typeinfo,
-	_12QTextEncoder_vtable,
-	_12QTextEncoder_baseinfo,
+	&_12QTextEncoder_of_libqt_mt_so_3_typeinfo,
+	_12QTextEncoder_of_libqt_mt_so_3_vtable,
+	_12QTextEncoder_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QCanvasView_typeinfo_name[] = {
+char *_11QCanvasView_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI11QScrollView",
 	};
 
-struct classtypeinfo _11QCanvasView_typeinfo = {
+struct classtypeinfo _11QCanvasView_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QCanvasView",
-	_11QCanvasView_typeinfo_name,
+	_11QCanvasView_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QCanvasView_vtable_name_0 [] = {
+const char *_11QCanvasView_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK11QCanvasView10metaObjectEv",
 	"_ZNK11QCanvasView9classNameEv",
 	"_ZN11QCanvasView7qt_castEPKc",
@@ -39164,7 +39164,7 @@ const char *_11QCanvasView_vtable_name_0 [] = {
 	"_ZN11QScrollView15setVBarGeometryER10QScrollBariiii",
 	};
 
-const char *_11QCanvasView_vtable_name_1 [] = {
+const char *_11QCanvasView_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QCanvasViewD1Ev",
 #endif
@@ -39238,14 +39238,14 @@ const char *_11QCanvasView_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _11QCanvasView_vtable [2] = {
+struct classvtable _11QCanvasView_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	154,	/* Number of Vfuncs */
 	"_ZTI11QCanvasView",
-	_11QCanvasView_vtable_name_0,
+	_11QCanvasView_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -39279,14 +39279,14 @@ struct classvtable _11QCanvasView_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI11QCanvasView",
-	_11QCanvasView_vtable_name_1,
+	_11QCanvasView_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _11QCanvasView_baseinfo[] = {
+struct base_type_info _11QCanvasView_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QCanvasView_classinfo = {
+struct classinfo _Z11QCanvasView_of_libqt_mt_so_3_classinfo = {
 	"_Z11QCanvasView",
 	"_ZTV11QCanvasView",
 	"_ZTI11QCanvasView",	/* RTTI */
@@ -39297,21 +39297,21 @@ struct classinfo _Z11QCanvasView_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QCanvasView_typeinfo,
-	_11QCanvasView_vtable,
-	_11QCanvasView_baseinfo,
+	&_11QCanvasView_of_libqt_mt_so_3_typeinfo,
+	_11QCanvasView_of_libqt_mt_so_3_vtable,
+	_11QCanvasView_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_7QPixmap_typeinfo_name[] = {
+char *_7QPixmap_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _7QPixmap_typeinfo = {
+struct classtypeinfo _7QPixmap_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
 	"_ZTS7QPixmap",
-	_7QPixmap_typeinfo_name,
+	_7QPixmap_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_7QPixmap_vtable_name_0 [] = {
+const char *_7QPixmap_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QPixmapD1Ev",
 	"_ZN7QPixmapD0Ev",
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -39326,23 +39326,23 @@ const char *_7QPixmap_vtable_name_0 [] = {
 	"_ZN7QPixmap6detachEv",
 	};
 
-struct classvtable _7QPixmap_vtable [1] = {
+struct classvtable _7QPixmap_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	12,	/* Number of Vfuncs */
 	"_ZTI7QPixmap",
-	_7QPixmap_vtable_name_0,
+	_7QPixmap_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _7QPixmap_baseinfo[] = {
+struct base_type_info _7QPixmap_of_libqt_mt_so_3_baseinfo[] = {
 	{"_ZTI12QPaintDevice",	2U},
 	{"_ZTI2Qt",	2U},
 	};
 
-struct classinfo _Z7QPixmap_classinfo = {
+struct classinfo _Z7QPixmap_of_libqt_mt_so_3_classinfo = {
 	"_Z7QPixmap",
 	"_ZTV7QPixmap",
 	"_ZTI7QPixmap",	/* RTTI */
@@ -39353,22 +39353,22 @@ struct classinfo _Z7QPixmap_classinfo = {
 	2,
 	0,	/* numVTT */
 	0U,
-	&_7QPixmap_typeinfo,
-	_7QPixmap_vtable,
-	_7QPixmap_baseinfo,
+	&_7QPixmap_of_libqt_mt_so_3_typeinfo,
+	_7QPixmap_of_libqt_mt_so_3_vtable,
+	_7QPixmap_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_5QGrid_typeinfo_name[] = {
+char *_5QGrid_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QFrame",
 	};
 
-struct classtypeinfo _5QGrid_typeinfo = {
+struct classtypeinfo _5QGrid_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS5QGrid",
-	_5QGrid_typeinfo_name,
+	_5QGrid_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_5QGrid_vtable_name_0 [] = {
+const char *_5QGrid_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK5QGrid10metaObjectEv",
 	"_ZNK5QGrid9classNameEv",
 	"_ZN5QGrid7qt_castEPKc",
@@ -39489,7 +39489,7 @@ const char *_5QGrid_vtable_name_0 [] = {
 	"_ZN5QGrid12frameChangedEv",
 	};
 
-const char *_5QGrid_vtable_name_1 [] = {
+const char *_5QGrid_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N5QGridD1Ev",
 #endif
@@ -39563,14 +39563,14 @@ const char *_5QGrid_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _5QGrid_vtable [2] = {
+struct classvtable _5QGrid_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	118,	/* Number of Vfuncs */
 	"_ZTI5QGrid",
-	_5QGrid_vtable_name_0,
+	_5QGrid_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -39604,14 +39604,14 @@ struct classvtable _5QGrid_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI5QGrid",
-	_5QGrid_vtable_name_1,
+	_5QGrid_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _5QGrid_baseinfo[] = {
+struct base_type_info _5QGrid_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z5QGrid_classinfo = {
+struct classinfo _Z5QGrid_of_libqt_mt_so_3_classinfo = {
 	"_Z5QGrid",
 	"_ZTV5QGrid",
 	"_ZTI5QGrid",	/* RTTI */
@@ -39622,22 +39622,22 @@ struct classinfo _Z5QGrid_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_5QGrid_typeinfo,
-	_5QGrid_vtable,
-	_5QGrid_baseinfo,
+	&_5QGrid_of_libqt_mt_so_3_typeinfo,
+	_5QGrid_of_libqt_mt_so_3_vtable,
+	_5QGrid_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QRadioButton_typeinfo_name[] = {
+char *_12QRadioButton_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QButton",
 	};
 
-struct classtypeinfo _12QRadioButton_typeinfo = {
+struct classtypeinfo _12QRadioButton_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QRadioButton",
-	_12QRadioButton_typeinfo_name,
+	_12QRadioButton_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QRadioButton_vtable_name_0 [] = {
+const char *_12QRadioButton_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK12QRadioButton10metaObjectEv",
 	"_ZNK12QRadioButton9classNameEv",
 	"_ZN12QRadioButton7qt_castEPKc",
@@ -39762,7 +39762,7 @@ const char *_12QRadioButton_vtable_name_0 [] = {
 	"_ZN12QRadioButton10setCheckedEb",
 	};
 
-const char *_12QRadioButton_vtable_name_1 [] = {
+const char *_12QRadioButton_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N12QRadioButtonD1Ev",
 #endif
@@ -39836,14 +39836,14 @@ const char *_12QRadioButton_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _12QRadioButton_vtable [2] = {
+struct classvtable _12QRadioButton_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	122,	/* Number of Vfuncs */
 	"_ZTI12QRadioButton",
-	_12QRadioButton_vtable_name_0,
+	_12QRadioButton_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -39877,14 +39877,14 @@ struct classvtable _12QRadioButton_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI12QRadioButton",
-	_12QRadioButton_vtable_name_1,
+	_12QRadioButton_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _12QRadioButton_baseinfo[] = {
+struct base_type_info _12QRadioButton_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QRadioButton_classinfo = {
+struct classinfo _Z12QRadioButton_of_libqt_mt_so_3_classinfo = {
 	"_Z12QRadioButton",
 	"_ZTV12QRadioButton",
 	"_ZTI12QRadioButton",	/* RTTI */
@@ -39895,40 +39895,40 @@ struct classinfo _Z12QRadioButton_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QRadioButton_typeinfo,
-	_12QRadioButton_vtable,
-	_12QRadioButton_baseinfo,
+	&_12QRadioButton_of_libqt_mt_so_3_typeinfo,
+	_12QRadioButton_of_libqt_mt_so_3_vtable,
+	_12QRadioButton_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_8QAsyncIO_typeinfo_name[] = {
+char *_8QAsyncIO_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _8QAsyncIO_typeinfo = {
+struct classtypeinfo _8QAsyncIO_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS8QAsyncIO",
-	_8QAsyncIO_typeinfo_name,
+	_8QAsyncIO_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_8QAsyncIO_vtable_name_0 [] = {
+const char *_8QAsyncIO_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN8QAsyncIOD1Ev",
 	"_ZN8QAsyncIOD0Ev",
 	};
 
-struct classvtable _8QAsyncIO_vtable [1] = {
+struct classvtable _8QAsyncIO_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI8QAsyncIO",
-	_8QAsyncIO_vtable_name_0,
+	_8QAsyncIO_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _8QAsyncIO_baseinfo[] = {
+struct base_type_info _8QAsyncIO_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z8QAsyncIO_classinfo = {
+struct classinfo _Z8QAsyncIO_of_libqt_mt_so_3_classinfo = {
 	"_Z8QAsyncIO",
 	"_ZTV8QAsyncIO",
 	"_ZTI8QAsyncIO",	/* RTTI */
@@ -39939,21 +39939,21 @@ struct classinfo _Z8QAsyncIO_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_8QAsyncIO_typeinfo,
-	_8QAsyncIO_vtable,
-	_8QAsyncIO_baseinfo,
+	&_8QAsyncIO_of_libqt_mt_so_3_typeinfo,
+	_8QAsyncIO_of_libqt_mt_so_3_vtable,
+	_8QAsyncIO_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_7QSlider_typeinfo_name[] = {
+char *_7QSlider_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _7QSlider_typeinfo = {
+struct classtypeinfo _7QSlider_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
 	"_ZTS7QSlider",
-	_7QSlider_typeinfo_name,
+	_7QSlider_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_7QSlider_vtable_name_0 [] = {
+const char *_7QSlider_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QSlider10metaObjectEv",
 	"_ZNK7QSlider9classNameEv",
 	"_ZN7QSlider7qt_castEPKc",
@@ -40073,7 +40073,7 @@ const char *_7QSlider_vtable_name_0 [] = {
 	"_ZN7QSlider11rangeChangeEv",
 	};
 
-const char *_7QSlider_vtable_name_1 [] = {
+const char *_7QSlider_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N7QSliderD1Ev",
 #endif
@@ -40147,7 +40147,7 @@ const char *_7QSlider_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-const char *_7QSlider_vtable_name_2 [] = {
+const char *_7QSlider_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __i386__
 	"_ZThn116_N7QSliderD1Ev",
 #endif
@@ -40235,14 +40235,14 @@ const char *_7QSlider_vtable_name_2 [] = {
 	"_ZN13QRangeControl10stepChangeEv",
 	};
 
-struct classvtable _7QSlider_vtable [3] = {
+struct classvtable _7QSlider_of_libqt_mt_so_3_vtable [3] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	117,	/* Number of Vfuncs */
 	"_ZTI7QSlider",
-	_7QSlider_vtable_name_0,
+	_7QSlider_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -40276,7 +40276,7 @@ struct classvtable _7QSlider_vtable [3] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI7QSlider",
-	_7QSlider_vtable_name_1,
+	_7QSlider_of_libqt_mt_so_3_vtable_name_1,
 	},
 	{
 #if defined __i386__
@@ -40310,11 +40310,11 @@ struct classvtable _7QSlider_vtable [3] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI7QSlider",
-	_7QSlider_vtable_name_2,
+	_7QSlider_of_libqt_mt_so_3_vtable_name_2,
 	},
 };
 
-struct base_type_info _7QSlider_baseinfo[] = {
+struct base_type_info _7QSlider_of_libqt_mt_so_3_baseinfo[] = {
 	{"_ZTI7QWidget",	2U},
 #if defined __i386__
 	{"_ZTI13QRangeControl",	29698U},
@@ -40339,7 +40339,7 @@ struct base_type_info _7QSlider_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Z7QSlider_classinfo = {
+struct classinfo _Z7QSlider_of_libqt_mt_so_3_classinfo = {
 	"_Z7QSlider",
 	"_ZTV7QSlider",
 	"_ZTI7QSlider",	/* RTTI */
@@ -40350,22 +40350,22 @@ struct classinfo _Z7QSlider_classinfo = {
 	2,
 	0,	/* numVTT */
 	0U,
-	&_7QSlider_typeinfo,
-	_7QSlider_vtable,
-	_7QSlider_baseinfo,
+	&_7QSlider_of_libqt_mt_so_3_typeinfo,
+	_7QSlider_of_libqt_mt_so_3_vtable,
+	_7QSlider_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_19QHttpResponseHeader_typeinfo_name[] = {
+char *_19QHttpResponseHeader_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI11QHttpHeader",
 	};
 
-struct classtypeinfo _19QHttpResponseHeader_typeinfo = {
+struct classtypeinfo _19QHttpResponseHeader_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS19QHttpResponseHeader",
-	_19QHttpResponseHeader_typeinfo_name,
+	_19QHttpResponseHeader_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_19QHttpResponseHeader_vtable_name_0 [] = {
+const char *_19QHttpResponseHeader_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN19QHttpResponseHeaderD1Ev",
 	"_ZN19QHttpResponseHeaderD0Ev",
 	"_ZNK19QHttpResponseHeader8toStringEv",
@@ -40374,21 +40374,21 @@ const char *_19QHttpResponseHeader_vtable_name_0 [] = {
 	"_ZN19QHttpResponseHeader9parseLineERK7QStringi",
 	};
 
-struct classvtable _19QHttpResponseHeader_vtable [1] = {
+struct classvtable _19QHttpResponseHeader_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	6,	/* Number of Vfuncs */
 	"_ZTI19QHttpResponseHeader",
-	_19QHttpResponseHeader_vtable_name_0,
+	_19QHttpResponseHeader_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _19QHttpResponseHeader_baseinfo[] = {
+struct base_type_info _19QHttpResponseHeader_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z19QHttpResponseHeader_classinfo = {
+struct classinfo _Z19QHttpResponseHeader_of_libqt_mt_so_3_classinfo = {
 	"_Z19QHttpResponseHeader",
 	"_ZTV19QHttpResponseHeader",
 	"_ZTI19QHttpResponseHeader",	/* RTTI */
@@ -40399,22 +40399,22 @@ struct classinfo _Z19QHttpResponseHeader_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_19QHttpResponseHeader_typeinfo,
-	_19QHttpResponseHeader_vtable,
-	_19QHttpResponseHeader_baseinfo,
+	&_19QHttpResponseHeader_of_libqt_mt_so_3_typeinfo,
+	_19QHttpResponseHeader_of_libqt_mt_so_3_vtable,
+	_19QHttpResponseHeader_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_17QDomCharacterData_typeinfo_name[] = {
+char *_17QDomCharacterData_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI8QDomNode",
 	};
 
-struct classtypeinfo _17QDomCharacterData_typeinfo = {
+struct classtypeinfo _17QDomCharacterData_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS17QDomCharacterData",
-	_17QDomCharacterData_typeinfo_name,
+	_17QDomCharacterData_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_17QDomCharacterData_vtable_name_0 [] = {
+const char *_17QDomCharacterData_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN17QDomCharacterDataD1Ev",
 	"_ZN17QDomCharacterDataD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -40466,21 +40466,21 @@ const char *_17QDomCharacterData_vtable_name_0 [] = {
 	"_ZN17QDomCharacterData7setDataERK7QString",
 	};
 
-struct classvtable _17QDomCharacterData_vtable [1] = {
+struct classvtable _17QDomCharacterData_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	49,	/* Number of Vfuncs */
 	"_ZTI17QDomCharacterData",
-	_17QDomCharacterData_vtable_name_0,
+	_17QDomCharacterData_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _17QDomCharacterData_baseinfo[] = {
+struct base_type_info _17QDomCharacterData_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z17QDomCharacterData_classinfo = {
+struct classinfo _Z17QDomCharacterData_of_libqt_mt_so_3_classinfo = {
 	"_Z17QDomCharacterData",
 	"_ZTV17QDomCharacterData",
 	"_ZTI17QDomCharacterData",	/* RTTI */
@@ -40491,22 +40491,22 @@ struct classinfo _Z17QDomCharacterData_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_17QDomCharacterData_typeinfo,
-	_17QDomCharacterData_vtable,
-	_17QDomCharacterData_baseinfo,
+	&_17QDomCharacterData_of_libqt_mt_so_3_typeinfo,
+	_17QDomCharacterData_of_libqt_mt_so_3_vtable,
+	_17QDomCharacterData_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_15QDragEnterEvent_typeinfo_name[] = {
+char *_15QDragEnterEvent_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI14QDragMoveEvent",
 	};
 
-struct classtypeinfo _15QDragEnterEvent_typeinfo = {
+struct classtypeinfo _15QDragEnterEvent_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS15QDragEnterEvent",
-	_15QDragEnterEvent_typeinfo_name,
+	_15QDragEnterEvent_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_15QDragEnterEvent_vtable_name_0 [] = {
+const char *_15QDragEnterEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN15QDragEnterEventD1Ev",
 	"_ZN15QDragEnterEventD0Ev",
 	"_ZNK10QDropEvent6formatEi",
@@ -40514,7 +40514,7 @@ const char *_15QDragEnterEvent_vtable_name_0 [] = {
 	"_ZNK10QDropEvent8providesEPKc",
 	};
 
-const char *_15QDragEnterEvent_vtable_name_1 [] = {
+const char *_15QDragEnterEvent_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn12_N15QDragEnterEventD1Ev",
 #endif
@@ -40622,14 +40622,14 @@ const char *_15QDragEnterEvent_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable _15QDragEnterEvent_vtable [2] = {
+struct classvtable _15QDragEnterEvent_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI15QDragEnterEvent",
-	_15QDragEnterEvent_vtable_name_0,
+	_15QDragEnterEvent_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -40663,14 +40663,14 @@ struct classvtable _15QDragEnterEvent_vtable [2] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI15QDragEnterEvent",
-	_15QDragEnterEvent_vtable_name_1,
+	_15QDragEnterEvent_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _15QDragEnterEvent_baseinfo[] = {
+struct base_type_info _15QDragEnterEvent_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z15QDragEnterEvent_classinfo = {
+struct classinfo _Z15QDragEnterEvent_of_libqt_mt_so_3_classinfo = {
 	"_Z15QDragEnterEvent",
 	"_ZTV15QDragEnterEvent",
 	"_ZTI15QDragEnterEvent",	/* RTTI */
@@ -40681,22 +40681,22 @@ struct classinfo _Z15QDragEnterEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_15QDragEnterEvent_typeinfo,
-	_15QDragEnterEvent_vtable,
-	_15QDragEnterEvent_baseinfo,
+	&_15QDragEnterEvent_of_libqt_mt_so_3_typeinfo,
+	_15QDragEnterEvent_of_libqt_mt_so_3_vtable,
+	_15QDragEnterEvent_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QActionGroup_typeinfo_name[] = {
+char *_12QActionGroup_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QAction",
 	};
 
-struct classtypeinfo _12QActionGroup_typeinfo = {
+struct classtypeinfo _12QActionGroup_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QActionGroup",
-	_12QActionGroup_typeinfo_name,
+	_12QActionGroup_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QActionGroup_vtable_name_0 [] = {
+const char *_12QActionGroup_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK12QActionGroup10metaObjectEv",
 	"_ZNK12QActionGroup9classNameEv",
 	"_ZN12QActionGroup7qt_castEPKc",
@@ -40736,21 +40736,21 @@ const char *_12QActionGroup_vtable_name_0 [] = {
 	"_ZN12QActionGroup7addedToEiP10QPopupMenuP7QAction",
 	};
 
-struct classvtable _12QActionGroup_vtable [1] = {
+struct classvtable _12QActionGroup_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	37,	/* Number of Vfuncs */
 	"_ZTI12QActionGroup",
-	_12QActionGroup_vtable_name_0,
+	_12QActionGroup_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QActionGroup_baseinfo[] = {
+struct base_type_info _12QActionGroup_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QActionGroup_classinfo = {
+struct classinfo _Z12QActionGroup_of_libqt_mt_so_3_classinfo = {
 	"_Z12QActionGroup",
 	"_ZTV12QActionGroup",
 	"_ZTI12QActionGroup",	/* RTTI */
@@ -40761,22 +40761,22 @@ struct classinfo _Z12QActionGroup_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QActionGroup_typeinfo,
-	_12QActionGroup_vtable,
-	_12QActionGroup_baseinfo,
+	&_12QActionGroup_of_libqt_mt_so_3_typeinfo,
+	_12QActionGroup_of_libqt_mt_so_3_vtable,
+	_12QActionGroup_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QDataTable_typeinfo_name[] = {
+char *_10QDataTable_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QTable",
 	};
 
-struct classtypeinfo _10QDataTable_typeinfo = {
+struct classtypeinfo _10QDataTable_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QDataTable",
-	_10QDataTable_typeinfo_name,
+	_10QDataTable_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QDataTable_vtable_name_0 [] = {
+const char *_10QDataTable_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK10QDataTable10metaObjectEv",
 	"_ZNK10QDataTable9classNameEv",
 	"_ZN10QDataTable7qt_castEPKc",
@@ -41044,7 +41044,7 @@ const char *_10QDataTable_vtable_name_0 [] = {
 	"_ZN10QDataTable14fieldAlignmentEPK9QSqlField",
 	};
 
-const char *_10QDataTable_vtable_name_1 [] = {
+const char *_10QDataTable_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QDataTableD1Ev",
 #endif
@@ -41118,14 +41118,14 @@ const char *_10QDataTable_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _10QDataTable_vtable [2] = {
+struct classvtable _10QDataTable_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	265,	/* Number of Vfuncs */
 	"_ZTI10QDataTable",
-	_10QDataTable_vtable_name_0,
+	_10QDataTable_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -41159,14 +41159,14 @@ struct classvtable _10QDataTable_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI10QDataTable",
-	_10QDataTable_vtable_name_1,
+	_10QDataTable_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _10QDataTable_baseinfo[] = {
+struct base_type_info _10QDataTable_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QDataTable_classinfo = {
+struct classinfo _Z10QDataTable_of_libqt_mt_so_3_classinfo = {
 	"_Z10QDataTable",
 	"_ZTV10QDataTable",
 	"_ZTI10QDataTable",	/* RTTI */
@@ -41177,22 +41177,22 @@ struct classinfo _Z10QDataTable_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QDataTable_typeinfo,
-	_10QDataTable_vtable,
-	_10QDataTable_baseinfo,
+	&_10QDataTable_of_libqt_mt_so_3_typeinfo,
+	_10QDataTable_of_libqt_mt_so_3_vtable,
+	_10QDataTable_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_14QDragMoveEvent_typeinfo_name[] = {
+char *_14QDragMoveEvent_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI10QDropEvent",
 	};
 
-struct classtypeinfo _14QDragMoveEvent_typeinfo = {
+struct classtypeinfo _14QDragMoveEvent_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS14QDragMoveEvent",
-	_14QDragMoveEvent_typeinfo_name,
+	_14QDragMoveEvent_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_14QDragMoveEvent_vtable_name_0 [] = {
+const char *_14QDragMoveEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN14QDragMoveEventD1Ev",
 	"_ZN14QDragMoveEventD0Ev",
 	"_ZNK10QDropEvent6formatEi",
@@ -41200,7 +41200,7 @@ const char *_14QDragMoveEvent_vtable_name_0 [] = {
 	"_ZNK10QDropEvent8providesEPKc",
 	};
 
-const char *_14QDragMoveEvent_vtable_name_1 [] = {
+const char *_14QDragMoveEvent_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn12_N14QDragMoveEventD1Ev",
 #endif
@@ -41308,14 +41308,14 @@ const char *_14QDragMoveEvent_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable _14QDragMoveEvent_vtable [2] = {
+struct classvtable _14QDragMoveEvent_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI14QDragMoveEvent",
-	_14QDragMoveEvent_vtable_name_0,
+	_14QDragMoveEvent_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -41349,14 +41349,14 @@ struct classvtable _14QDragMoveEvent_vtable [2] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI14QDragMoveEvent",
-	_14QDragMoveEvent_vtable_name_1,
+	_14QDragMoveEvent_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _14QDragMoveEvent_baseinfo[] = {
+struct base_type_info _14QDragMoveEvent_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z14QDragMoveEvent_classinfo = {
+struct classinfo _Z14QDragMoveEvent_of_libqt_mt_so_3_classinfo = {
 	"_Z14QDragMoveEvent",
 	"_ZTV14QDragMoveEvent",
 	"_ZTI14QDragMoveEvent",	/* RTTI */
@@ -41367,22 +41367,22 @@ struct classinfo _Z14QDragMoveEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_14QDragMoveEvent_typeinfo,
-	_14QDragMoveEvent_vtable,
-	_14QDragMoveEvent_baseinfo,
+	&_14QDragMoveEvent_of_libqt_mt_so_3_typeinfo,
+	_14QDragMoveEvent_of_libqt_mt_so_3_vtable,
+	_14QDragMoveEvent_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_14QCanvasEllipse_typeinfo_name[] = {
+char *_14QCanvasEllipse_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI20QCanvasPolygonalItem",
 	};
 
-struct classtypeinfo _14QCanvasEllipse_typeinfo = {
+struct classtypeinfo _14QCanvasEllipse_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS14QCanvasEllipse",
-	_14QCanvasEllipse_typeinfo_name,
+	_14QCanvasEllipse_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_14QCanvasEllipse_vtable_name_0 [] = {
+const char *_14QCanvasEllipse_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN14QCanvasEllipseD1Ev",
 	"_ZN14QCanvasEllipseD0Ev",
 	"_ZN11QCanvasItem6moveByEdd",
@@ -41411,21 +41411,21 @@ const char *_14QCanvasEllipse_vtable_name_0 [] = {
 	"_ZN14QCanvasEllipse9drawShapeER8QPainter",
 	};
 
-struct classvtable _14QCanvasEllipse_vtable [1] = {
+struct classvtable _14QCanvasEllipse_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	26,	/* Number of Vfuncs */
 	"_ZTI14QCanvasEllipse",
-	_14QCanvasEllipse_vtable_name_0,
+	_14QCanvasEllipse_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _14QCanvasEllipse_baseinfo[] = {
+struct base_type_info _14QCanvasEllipse_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z14QCanvasEllipse_classinfo = {
+struct classinfo _Z14QCanvasEllipse_of_libqt_mt_so_3_classinfo = {
 	"_Z14QCanvasEllipse",
 	"_ZTV14QCanvasEllipse",
 	"_ZTI14QCanvasEllipse",	/* RTTI */
@@ -41436,21 +41436,21 @@ struct classinfo _Z14QCanvasEllipse_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_14QCanvasEllipse_typeinfo,
-	_14QCanvasEllipse_vtable,
-	_14QCanvasEllipse_baseinfo,
+	&_14QCanvasEllipse_of_libqt_mt_so_3_typeinfo,
+	_14QCanvasEllipse_of_libqt_mt_so_3_vtable,
+	_14QCanvasEllipse_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QDropEvent_typeinfo_name[] = {
+char *_10QDropEvent_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _10QDropEvent_typeinfo = {
+struct classtypeinfo _10QDropEvent_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
 	"_ZTS10QDropEvent",
-	_10QDropEvent_typeinfo_name,
+	_10QDropEvent_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QDropEvent_vtable_name_0 [] = {
+const char *_10QDropEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN10QDropEventD1Ev",
 	"_ZN10QDropEventD0Ev",
 	"_ZNK10QDropEvent6formatEi",
@@ -41458,7 +41458,7 @@ const char *_10QDropEvent_vtable_name_0 [] = {
 	"_ZNK10QDropEvent8providesEPKc",
 	};
 
-const char *_10QDropEvent_vtable_name_1 [] = {
+const char *_10QDropEvent_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn12_N10QDropEventD1Ev",
 #endif
@@ -41566,14 +41566,14 @@ const char *_10QDropEvent_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable _10QDropEvent_vtable [2] = {
+struct classvtable _10QDropEvent_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI10QDropEvent",
-	_10QDropEvent_vtable_name_0,
+	_10QDropEvent_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -41607,11 +41607,11 @@ struct classvtable _10QDropEvent_vtable [2] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI10QDropEvent",
-	_10QDropEvent_vtable_name_1,
+	_10QDropEvent_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _10QDropEvent_baseinfo[] = {
+struct base_type_info _10QDropEvent_of_libqt_mt_so_3_baseinfo[] = {
 	{"_ZTI6QEvent",	2U},
 #if defined __i386__
 	{"_ZTI11QMimeSource",	3074U},
@@ -41636,7 +41636,7 @@ struct base_type_info _10QDropEvent_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Z10QDropEvent_classinfo = {
+struct classinfo _Z10QDropEvent_of_libqt_mt_so_3_classinfo = {
 	"_Z10QDropEvent",
 	"_ZTV10QDropEvent",
 	"_ZTI10QDropEvent",	/* RTTI */
@@ -41647,22 +41647,22 @@ struct classinfo _Z10QDropEvent_classinfo = {
 	2,
 	0,	/* numVTT */
 	0U,
-	&_10QDropEvent_typeinfo,
-	_10QDropEvent_vtable,
-	_10QDropEvent_baseinfo,
+	&_10QDropEvent_of_libqt_mt_so_3_typeinfo,
+	_10QDropEvent_of_libqt_mt_so_3_vtable,
+	_10QDropEvent_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QMainWindow_typeinfo_name[] = {
+char *_11QMainWindow_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo _11QMainWindow_typeinfo = {
+struct classtypeinfo _11QMainWindow_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QMainWindow",
-	_11QMainWindow_typeinfo_name,
+	_11QMainWindow_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QMainWindow_vtable_name_0 [] = {
+const char *_11QMainWindow_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK11QMainWindow10metaObjectEv",
 	"_ZNK11QMainWindow9classNameEv",
 	"_ZN11QMainWindow7qt_castEPKc",
@@ -41799,7 +41799,7 @@ const char *_11QMainWindow_vtable_name_0 [] = {
 	"_ZN11QMainWindow15setToolTipGroupEP13QToolTipGroup",
 	};
 
-const char *_11QMainWindow_vtable_name_1 [] = {
+const char *_11QMainWindow_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QMainWindowD1Ev",
 #endif
@@ -41873,14 +41873,14 @@ const char *_11QMainWindow_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _11QMainWindow_vtable [2] = {
+struct classvtable _11QMainWindow_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	134,	/* Number of Vfuncs */
 	"_ZTI11QMainWindow",
-	_11QMainWindow_vtable_name_0,
+	_11QMainWindow_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -41914,14 +41914,14 @@ struct classvtable _11QMainWindow_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI11QMainWindow",
-	_11QMainWindow_vtable_name_1,
+	_11QMainWindow_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _11QMainWindow_baseinfo[] = {
+struct base_type_info _11QMainWindow_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QMainWindow_classinfo = {
+struct classinfo _Z11QMainWindow_of_libqt_mt_so_3_classinfo = {
 	"_Z11QMainWindow",
 	"_ZTV11QMainWindow",
 	"_ZTI11QMainWindow",	/* RTTI */
@@ -41932,22 +41932,22 @@ struct classinfo _Z11QMainWindow_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QMainWindow_typeinfo,
-	_11QMainWindow_vtable,
-	_11QMainWindow_baseinfo,
+	&_11QMainWindow_of_libqt_mt_so_3_typeinfo,
+	_11QMainWindow_of_libqt_mt_so_3_vtable,
+	_11QMainWindow_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QStatusBar_typeinfo_name[] = {
+char *_10QStatusBar_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo _10QStatusBar_typeinfo = {
+struct classtypeinfo _10QStatusBar_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QStatusBar",
-	_10QStatusBar_typeinfo_name,
+	_10QStatusBar_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QStatusBar_vtable_name_0 [] = {
+const char *_10QStatusBar_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK10QStatusBar10metaObjectEv",
 	"_ZNK10QStatusBar9classNameEv",
 	"_ZN10QStatusBar7qt_castEPKc",
@@ -42062,7 +42062,7 @@ const char *_10QStatusBar_vtable_name_0 [] = {
 	"_ZN10QStatusBar12removeWidgetEP7QWidget",
 	};
 
-const char *_10QStatusBar_vtable_name_1 [] = {
+const char *_10QStatusBar_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QStatusBarD1Ev",
 #endif
@@ -42136,14 +42136,14 @@ const char *_10QStatusBar_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _10QStatusBar_vtable [2] = {
+struct classvtable _10QStatusBar_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	112,	/* Number of Vfuncs */
 	"_ZTI10QStatusBar",
-	_10QStatusBar_vtable_name_0,
+	_10QStatusBar_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -42177,14 +42177,14 @@ struct classvtable _10QStatusBar_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI10QStatusBar",
-	_10QStatusBar_vtable_name_1,
+	_10QStatusBar_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _10QStatusBar_baseinfo[] = {
+struct base_type_info _10QStatusBar_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QStatusBar_classinfo = {
+struct classinfo _Z10QStatusBar_of_libqt_mt_so_3_classinfo = {
 	"_Z10QStatusBar",
 	"_ZTV10QStatusBar",
 	"_ZTI10QStatusBar",	/* RTTI */
@@ -42195,22 +42195,22 @@ struct classinfo _Z10QStatusBar_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QStatusBar_typeinfo,
-	_10QStatusBar_vtable,
-	_10QStatusBar_baseinfo,
+	&_10QStatusBar_of_libqt_mt_so_3_typeinfo,
+	_10QStatusBar_of_libqt_mt_so_3_vtable,
+	_10QStatusBar_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_8QStrList_typeinfo_name[] = {
+char *_8QStrList_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI8QPtrListIcE",
 	};
 
-struct classtypeinfo _8QStrList_typeinfo = {
+struct classtypeinfo _8QStrList_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS8QStrList",
-	_8QStrList_typeinfo_name,
+	_8QStrList_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_8QStrList_vtable_name_0 [] = {
+const char *_8QStrList_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK8QPtrListIcE5countEv",
 	"_ZN8QPtrListIcE5clearEv",
 	"_ZN8QStrListD1Ev",
@@ -42222,21 +42222,21 @@ const char *_8QStrList_vtable_name_0 [] = {
 	"_ZNK8QStrList5writeER11QDataStreamPv",
 	};
 
-struct classvtable _8QStrList_vtable [1] = {
+struct classvtable _8QStrList_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI8QStrList",
-	_8QStrList_vtable_name_0,
+	_8QStrList_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _8QStrList_baseinfo[] = {
+struct base_type_info _8QStrList_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z8QStrList_classinfo = {
+struct classinfo _Z8QStrList_of_libqt_mt_so_3_classinfo = {
 	"_Z8QStrList",
 	"_ZTV8QStrList",
 	"_ZTI8QStrList",	/* RTTI */
@@ -42247,22 +42247,22 @@ struct classinfo _Z8QStrList_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_8QStrList_typeinfo,
-	_8QStrList_vtable,
-	_8QStrList_baseinfo,
+	&_8QStrList_of_libqt_mt_so_3_typeinfo,
+	_8QStrList_of_libqt_mt_so_3_vtable,
+	_8QStrList_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QTsciiCodec_typeinfo_name[] = {
+char *_11QTsciiCodec_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI10QTextCodec",
 	};
 
-struct classtypeinfo _11QTsciiCodec_typeinfo = {
+struct classtypeinfo _11QTsciiCodec_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QTsciiCodec",
-	_11QTsciiCodec_typeinfo_name,
+	_11QTsciiCodec_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QTsciiCodec_vtable_name_0 [] = {
+const char *_11QTsciiCodec_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QTsciiCodecD1Ev",
 	"_ZN11QTsciiCodecD0Ev",
 	"_ZNK11QTsciiCodec4nameEv",
@@ -42280,21 +42280,21 @@ const char *_11QTsciiCodec_vtable_name_0 [] = {
 	"_ZNK10QTextCodec20characterFromUnicodeERK7QStringi",
 	};
 
-struct classvtable _11QTsciiCodec_vtable [1] = {
+struct classvtable _11QTsciiCodec_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	15,	/* Number of Vfuncs */
 	"_ZTI11QTsciiCodec",
-	_11QTsciiCodec_vtable_name_0,
+	_11QTsciiCodec_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QTsciiCodec_baseinfo[] = {
+struct base_type_info _11QTsciiCodec_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QTsciiCodec_classinfo = {
+struct classinfo _Z11QTsciiCodec_of_libqt_mt_so_3_classinfo = {
 	"_Z11QTsciiCodec",
 	"_ZTV11QTsciiCodec",
 	"_ZTI11QTsciiCodec",	/* RTTI */
@@ -42305,22 +42305,22 @@ struct classinfo _Z11QTsciiCodec_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QTsciiCodec_typeinfo,
-	_11QTsciiCodec_vtable,
-	_11QTsciiCodec_baseinfo,
+	&_11QTsciiCodec_of_libqt_mt_so_3_typeinfo,
+	_11QTsciiCodec_of_libqt_mt_so_3_vtable,
+	_11QTsciiCodec_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QSqlDatabase_typeinfo_name[] = {
+char *_12QSqlDatabase_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _12QSqlDatabase_typeinfo = {
+struct classtypeinfo _12QSqlDatabase_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QSqlDatabase",
-	_12QSqlDatabase_typeinfo_name,
+	_12QSqlDatabase_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QSqlDatabase_vtable_name_0 [] = {
+const char *_12QSqlDatabase_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK12QSqlDatabase10metaObjectEv",
 	"_ZNK12QSqlDatabase9classNameEv",
 	"_ZN12QSqlDatabase7qt_castEPKc",
@@ -42349,21 +42349,21 @@ const char *_12QSqlDatabase_vtable_name_0 [] = {
 	"_ZN12QSqlDatabase7setPortEi",
 	};
 
-struct classvtable _12QSqlDatabase_vtable [1] = {
+struct classvtable _12QSqlDatabase_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	26,	/* Number of Vfuncs */
 	"_ZTI12QSqlDatabase",
-	_12QSqlDatabase_vtable_name_0,
+	_12QSqlDatabase_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QSqlDatabase_baseinfo[] = {
+struct base_type_info _12QSqlDatabase_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QSqlDatabase_classinfo = {
+struct classinfo _Z12QSqlDatabase_of_libqt_mt_so_3_classinfo = {
 	"_Z12QSqlDatabase",
 	"_ZTV12QSqlDatabase",
 	"_ZTI12QSqlDatabase",	/* RTTI */
@@ -42374,22 +42374,22 @@ struct classinfo _Z12QSqlDatabase_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QSqlDatabase_typeinfo,
-	_12QSqlDatabase_vtable,
-	_12QSqlDatabase_baseinfo,
+	&_12QSqlDatabase_of_libqt_mt_so_3_typeinfo,
+	_12QSqlDatabase_of_libqt_mt_so_3_vtable,
+	_12QSqlDatabase_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_13QCanvasPixmap_typeinfo_name[] = {
+char *_13QCanvasPixmap_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QPixmap",
 	};
 
-struct classtypeinfo _13QCanvasPixmap_typeinfo = {
+struct classtypeinfo _13QCanvasPixmap_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS13QCanvasPixmap",
-	_13QCanvasPixmap_typeinfo_name,
+	_13QCanvasPixmap_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_13QCanvasPixmap_vtable_name_0 [] = {
+const char *_13QCanvasPixmap_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN13QCanvasPixmapD1Ev",
 	"_ZN13QCanvasPixmapD0Ev",
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -42404,21 +42404,21 @@ const char *_13QCanvasPixmap_vtable_name_0 [] = {
 	"_ZN7QPixmap6detachEv",
 	};
 
-struct classvtable _13QCanvasPixmap_vtable [1] = {
+struct classvtable _13QCanvasPixmap_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	12,	/* Number of Vfuncs */
 	"_ZTI13QCanvasPixmap",
-	_13QCanvasPixmap_vtable_name_0,
+	_13QCanvasPixmap_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _13QCanvasPixmap_baseinfo[] = {
+struct base_type_info _13QCanvasPixmap_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z13QCanvasPixmap_classinfo = {
+struct classinfo _Z13QCanvasPixmap_of_libqt_mt_so_3_classinfo = {
 	"_Z13QCanvasPixmap",
 	"_ZTV13QCanvasPixmap",
 	"_ZTI13QCanvasPixmap",	/* RTTI */
@@ -42429,22 +42429,22 @@ struct classinfo _Z13QCanvasPixmap_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_13QCanvasPixmap_typeinfo,
-	_13QCanvasPixmap_vtable,
-	_13QCanvasPixmap_baseinfo,
+	&_13QCanvasPixmap_of_libqt_mt_so_3_typeinfo,
+	_13QCanvasPixmap_of_libqt_mt_so_3_vtable,
+	_13QCanvasPixmap_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_8QPrinter_typeinfo_name[] = {
+char *_8QPrinter_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI12QPaintDevice",
 	};
 
-struct classtypeinfo _8QPrinter_typeinfo = {
+struct classtypeinfo _8QPrinter_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS8QPrinter",
-	_8QPrinter_typeinfo_name,
+	_8QPrinter_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_8QPrinter_vtable_name_0 [] = {
+const char *_8QPrinter_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN8QPrinterD1Ev",
 	"_ZN8QPrinterD0Ev",
 	"_ZN8QPrinter13setResolutionEi",
@@ -42474,21 +42474,21 @@ const char *_8QPrinter_vtable_name_0 [] = {
 	"_ZN8QPrinter14setPaperSourceENS_11PaperSourceE",
 	};
 
-struct classvtable _8QPrinter_vtable [1] = {
+struct classvtable _8QPrinter_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	27,	/* Number of Vfuncs */
 	"_ZTI8QPrinter",
-	_8QPrinter_vtable_name_0,
+	_8QPrinter_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _8QPrinter_baseinfo[] = {
+struct base_type_info _8QPrinter_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z8QPrinter_classinfo = {
+struct classinfo _Z8QPrinter_of_libqt_mt_so_3_classinfo = {
 	"_Z8QPrinter",
 	"_ZTV8QPrinter",
 	"_ZTI8QPrinter",	/* RTTI */
@@ -42499,22 +42499,22 @@ struct classinfo _Z8QPrinter_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_8QPrinter_typeinfo,
-	_8QPrinter_vtable,
-	_8QPrinter_baseinfo,
+	&_8QPrinter_of_libqt_mt_so_3_typeinfo,
+	_8QPrinter_of_libqt_mt_so_3_vtable,
+	_8QPrinter_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QSjisCodec_typeinfo_name[] = {
+char *_10QSjisCodec_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI10QTextCodec",
 	};
 
-struct classtypeinfo _10QSjisCodec_typeinfo = {
+struct classtypeinfo _10QSjisCodec_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QSjisCodec",
-	_10QSjisCodec_typeinfo_name,
+	_10QSjisCodec_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QSjisCodec_vtable_name_0 [] = {
+const char *_10QSjisCodec_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN10QSjisCodecD1Ev",
 	"_ZN10QSjisCodecD0Ev",
 	"_ZNK10QSjisCodec4nameEv",
@@ -42532,21 +42532,21 @@ const char *_10QSjisCodec_vtable_name_0 [] = {
 	"_ZNK10QTextCodec20characterFromUnicodeERK7QStringi",
 	};
 
-struct classvtable _10QSjisCodec_vtable [1] = {
+struct classvtable _10QSjisCodec_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	15,	/* Number of Vfuncs */
 	"_ZTI10QSjisCodec",
-	_10QSjisCodec_vtable_name_0,
+	_10QSjisCodec_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _10QSjisCodec_baseinfo[] = {
+struct base_type_info _10QSjisCodec_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QSjisCodec_classinfo = {
+struct classinfo _Z10QSjisCodec_of_libqt_mt_so_3_classinfo = {
 	"_Z10QSjisCodec",
 	"_ZTV10QSjisCodec",
 	"_ZTI10QSjisCodec",	/* RTTI */
@@ -42557,22 +42557,22 @@ struct classinfo _Z10QSjisCodec_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QSjisCodec_typeinfo,
-	_10QSjisCodec_vtable,
-	_10QSjisCodec_baseinfo,
+	&_10QSjisCodec_of_libqt_mt_so_3_typeinfo,
+	_10QSjisCodec_of_libqt_mt_so_3_vtable,
+	_10QSjisCodec_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QMessageBox_typeinfo_name[] = {
+char *_11QMessageBox_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QDialog",
 	};
 
-struct classtypeinfo _11QMessageBox_typeinfo = {
+struct classtypeinfo _11QMessageBox_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QMessageBox",
-	_11QMessageBox_typeinfo_name,
+	_11QMessageBox_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QMessageBox_vtable_name_0 [] = {
+const char *_11QMessageBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK11QMessageBox10metaObjectEv",
 	"_ZNK11QMessageBox9classNameEv",
 	"_ZN11QMessageBox7qt_castEPKc",
@@ -42688,7 +42688,7 @@ const char *_11QMessageBox_vtable_name_0 [] = {
 	"_ZN7QDialog6rejectEv",
 	};
 
-const char *_11QMessageBox_vtable_name_1 [] = {
+const char *_11QMessageBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QMessageBoxD1Ev",
 #endif
@@ -42762,14 +42762,14 @@ const char *_11QMessageBox_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _11QMessageBox_vtable [2] = {
+struct classvtable _11QMessageBox_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	113,	/* Number of Vfuncs */
 	"_ZTI11QMessageBox",
-	_11QMessageBox_vtable_name_0,
+	_11QMessageBox_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -42803,14 +42803,14 @@ struct classvtable _11QMessageBox_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI11QMessageBox",
-	_11QMessageBox_vtable_name_1,
+	_11QMessageBox_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _11QMessageBox_baseinfo[] = {
+struct base_type_info _11QMessageBox_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QMessageBox_classinfo = {
+struct classinfo _Z11QMessageBox_of_libqt_mt_so_3_classinfo = {
 	"_Z11QMessageBox",
 	"_ZTV11QMessageBox",
 	"_ZTI11QMessageBox",	/* RTTI */
@@ -42821,22 +42821,22 @@ struct classinfo _Z11QMessageBox_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QMessageBox_typeinfo,
-	_11QMessageBox_vtable,
-	_11QMessageBox_baseinfo,
+	&_11QMessageBox_of_libqt_mt_so_3_typeinfo,
+	_11QMessageBox_of_libqt_mt_so_3_vtable,
+	_11QMessageBox_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_6QSound_typeinfo_name[] = {
+char *_6QSound_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _6QSound_typeinfo = {
+struct classtypeinfo _6QSound_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS6QSound",
-	_6QSound_typeinfo_name,
+	_6QSound_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_6QSound_vtable_name_0 [] = {
+const char *_6QSound_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK6QSound10metaObjectEv",
 	"_ZNK6QSound9classNameEv",
 	"_ZN6QSound7qt_castEPKc",
@@ -42860,21 +42860,21 @@ const char *_6QSound_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable _6QSound_vtable [1] = {
+struct classvtable _6QSound_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI6QSound",
-	_6QSound_vtable_name_0,
+	_6QSound_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _6QSound_baseinfo[] = {
+struct base_type_info _6QSound_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z6QSound_classinfo = {
+struct classinfo _Z6QSound_of_libqt_mt_so_3_classinfo = {
 	"_Z6QSound",
 	"_ZTV6QSound",
 	"_ZTI6QSound",	/* RTTI */
@@ -42885,22 +42885,22 @@ struct classinfo _Z6QSound_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_6QSound_typeinfo,
-	_6QSound_vtable,
-	_6QSound_baseinfo,
+	&_6QSound_of_libqt_mt_so_3_typeinfo,
+	_6QSound_of_libqt_mt_so_3_vtable,
+	_6QSound_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_14QEditorFactory_typeinfo_name[] = {
+char *_14QEditorFactory_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _14QEditorFactory_typeinfo = {
+struct classtypeinfo _14QEditorFactory_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS14QEditorFactory",
-	_14QEditorFactory_typeinfo_name,
+	_14QEditorFactory_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_14QEditorFactory_vtable_name_0 [] = {
+const char *_14QEditorFactory_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QObject10metaObjectEv",
 	"_ZNK7QObject9classNameEv",
 	"_ZN7QObject7qt_castEPKc",
@@ -42925,21 +42925,21 @@ const char *_14QEditorFactory_vtable_name_0 [] = {
 	"_ZN14QEditorFactory12createEditorEP7QWidgetRK8QVariant",
 	};
 
-struct classvtable _14QEditorFactory_vtable [1] = {
+struct classvtable _14QEditorFactory_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	22,	/* Number of Vfuncs */
 	"_ZTI14QEditorFactory",
-	_14QEditorFactory_vtable_name_0,
+	_14QEditorFactory_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _14QEditorFactory_baseinfo[] = {
+struct base_type_info _14QEditorFactory_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z14QEditorFactory_classinfo = {
+struct classinfo _Z14QEditorFactory_of_libqt_mt_so_3_classinfo = {
 	"_Z14QEditorFactory",
 	"_ZTV14QEditorFactory",
 	"_ZTI14QEditorFactory",	/* RTTI */
@@ -42950,22 +42950,22 @@ struct classinfo _Z14QEditorFactory_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_14QEditorFactory_typeinfo,
-	_14QEditorFactory_vtable,
-	_14QEditorFactory_baseinfo,
+	&_14QEditorFactory_of_libqt_mt_so_3_typeinfo,
+	_14QEditorFactory_of_libqt_mt_so_3_vtable,
+	_14QEditorFactory_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QEventLoop_typeinfo_name[] = {
+char *_10QEventLoop_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _10QEventLoop_typeinfo = {
+struct classtypeinfo _10QEventLoop_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QEventLoop",
-	_10QEventLoop_typeinfo_name,
+	_10QEventLoop_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QEventLoop_vtable_name_0 [] = {
+const char *_10QEventLoop_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK10QEventLoop10metaObjectEv",
 	"_ZNK10QEventLoop9classNameEv",
 	"_ZN10QEventLoop7qt_castEPKc",
@@ -43001,21 +43001,21 @@ const char *_10QEventLoop_vtable_name_0 [] = {
 	"_ZN10QEventLoop14appClosingDownEv",
 	};
 
-struct classvtable _10QEventLoop_vtable [1] = {
+struct classvtable _10QEventLoop_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	33,	/* Number of Vfuncs */
 	"_ZTI10QEventLoop",
-	_10QEventLoop_vtable_name_0,
+	_10QEventLoop_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _10QEventLoop_baseinfo[] = {
+struct base_type_info _10QEventLoop_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QEventLoop_classinfo = {
+struct classinfo _Z10QEventLoop_of_libqt_mt_so_3_classinfo = {
 	"_Z10QEventLoop",
 	"_ZTV10QEventLoop",
 	"_ZTI10QEventLoop",	/* RTTI */
@@ -43026,22 +43026,22 @@ struct classinfo _Z10QEventLoop_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QEventLoop_typeinfo,
-	_10QEventLoop_vtable,
-	_10QEventLoop_baseinfo,
+	&_10QEventLoop_of_libqt_mt_so_3_typeinfo,
+	_10QEventLoop_of_libqt_mt_so_3_vtable,
+	_10QEventLoop_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_7QSignal_typeinfo_name[] = {
+char *_7QSignal_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _7QSignal_typeinfo = {
+struct classtypeinfo _7QSignal_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS7QSignal",
-	_7QSignal_typeinfo_name,
+	_7QSignal_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_7QSignal_vtable_name_0 [] = {
+const char *_7QSignal_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QSignal10metaObjectEv",
 	"_ZNK7QSignal9classNameEv",
 	"_ZN7QSignal7qt_castEPKc",
@@ -43065,21 +43065,21 @@ const char *_7QSignal_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable _7QSignal_vtable [1] = {
+struct classvtable _7QSignal_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI7QSignal",
-	_7QSignal_vtable_name_0,
+	_7QSignal_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _7QSignal_baseinfo[] = {
+struct base_type_info _7QSignal_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z7QSignal_classinfo = {
+struct classinfo _Z7QSignal_of_libqt_mt_so_3_classinfo = {
 	"_Z7QSignal",
 	"_ZTV7QSignal",
 	"_ZTI7QSignal",	/* RTTI */
@@ -43090,22 +43090,22 @@ struct classinfo _Z7QSignal_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_7QSignal_typeinfo,
-	_7QSignal_vtable,
-	_7QSignal_baseinfo,
+	&_7QSignal_of_libqt_mt_so_3_typeinfo,
+	_7QSignal_of_libqt_mt_so_3_vtable,
+	_7QSignal_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QSizeGrip_typeinfo_name[] = {
+char *_9QSizeGrip_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo _9QSizeGrip_typeinfo = {
+struct classtypeinfo _9QSizeGrip_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QSizeGrip",
-	_9QSizeGrip_typeinfo_name,
+	_9QSizeGrip_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QSizeGrip_vtable_name_0 [] = {
+const char *_9QSizeGrip_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK9QSizeGrip10metaObjectEv",
 	"_ZNK9QSizeGrip9classNameEv",
 	"_ZN9QSizeGrip7qt_castEPKc",
@@ -43218,7 +43218,7 @@ const char *_9QSizeGrip_vtable_name_0 [] = {
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
 	};
 
-const char *_9QSizeGrip_vtable_name_1 [] = {
+const char *_9QSizeGrip_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QSizeGripD1Ev",
 #endif
@@ -43292,14 +43292,14 @@ const char *_9QSizeGrip_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _9QSizeGrip_vtable [2] = {
+struct classvtable _9QSizeGrip_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	110,	/* Number of Vfuncs */
 	"_ZTI9QSizeGrip",
-	_9QSizeGrip_vtable_name_0,
+	_9QSizeGrip_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -43333,14 +43333,14 @@ struct classvtable _9QSizeGrip_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QSizeGrip",
-	_9QSizeGrip_vtable_name_1,
+	_9QSizeGrip_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _9QSizeGrip_baseinfo[] = {
+struct base_type_info _9QSizeGrip_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QSizeGrip_classinfo = {
+struct classinfo _Z9QSizeGrip_of_libqt_mt_so_3_classinfo = {
 	"_Z9QSizeGrip",
 	"_ZTV9QSizeGrip",
 	"_ZTI9QSizeGrip",	/* RTTI */
@@ -43351,22 +43351,22 @@ struct classinfo _Z9QSizeGrip_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QSizeGrip_typeinfo,
-	_9QSizeGrip_vtable,
-	_9QSizeGrip_baseinfo,
+	&_9QSizeGrip_of_libqt_mt_so_3_typeinfo,
+	_9QSizeGrip_of_libqt_mt_so_3_vtable,
+	_9QSizeGrip_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QObjectList_typeinfo_name[] = {
+char *_11QObjectList_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI8QPtrListI7QObjectE",
 	};
 
-struct classtypeinfo _11QObjectList_typeinfo = {
+struct classtypeinfo _11QObjectList_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QObjectList",
-	_11QObjectList_typeinfo_name,
+	_11QObjectList_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QObjectList_vtable_name_0 [] = {
+const char *_11QObjectList_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK8QPtrListI7QObjectE5countEv",
 	"_ZN8QPtrListI7QObjectE5clearEv",
 	"_ZN11QObjectListD1Ev",
@@ -43378,21 +43378,21 @@ const char *_11QObjectList_vtable_name_0 [] = {
 	"_ZNK6QGList5writeER11QDataStreamPv",
 	};
 
-struct classvtable _11QObjectList_vtable [1] = {
+struct classvtable _11QObjectList_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI11QObjectList",
-	_11QObjectList_vtable_name_0,
+	_11QObjectList_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QObjectList_baseinfo[] = {
+struct base_type_info _11QObjectList_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QObjectList_classinfo = {
+struct classinfo _Z11QObjectList_of_libqt_mt_so_3_classinfo = {
 	"_Z11QObjectList",
 	"_ZTV11QObjectList",
 	"_ZTI11QObjectList",	/* RTTI */
@@ -43403,22 +43403,22 @@ struct classinfo _Z11QObjectList_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QObjectList_typeinfo,
-	_11QObjectList_vtable,
-	_11QObjectList_baseinfo,
+	&_11QObjectList_of_libqt_mt_so_3_typeinfo,
+	_11QObjectList_of_libqt_mt_so_3_vtable,
+	_11QObjectList_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QDomComment_typeinfo_name[] = {
+char *_11QDomComment_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI17QDomCharacterData",
 	};
 
-struct classtypeinfo _11QDomComment_typeinfo = {
+struct classtypeinfo _11QDomComment_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QDomComment",
-	_11QDomComment_typeinfo_name,
+	_11QDomComment_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QDomComment_vtable_name_0 [] = {
+const char *_11QDomComment_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QDomCommentD1Ev",
 	"_ZN11QDomCommentD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -43470,21 +43470,21 @@ const char *_11QDomComment_vtable_name_0 [] = {
 	"_ZN17QDomCharacterData7setDataERK7QString",
 	};
 
-struct classvtable _11QDomComment_vtable [1] = {
+struct classvtable _11QDomComment_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	49,	/* Number of Vfuncs */
 	"_ZTI11QDomComment",
-	_11QDomComment_vtable_name_0,
+	_11QDomComment_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QDomComment_baseinfo[] = {
+struct base_type_info _11QDomComment_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QDomComment_classinfo = {
+struct classinfo _Z11QDomComment_of_libqt_mt_so_3_classinfo = {
 	"_Z11QDomComment",
 	"_ZTV11QDomComment",
 	"_ZTI11QDomComment",	/* RTTI */
@@ -43495,21 +43495,21 @@ struct classinfo _Z11QDomComment_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QDomComment_typeinfo,
-	_11QDomComment_vtable,
-	_11QDomComment_baseinfo,
+	&_11QDomComment_of_libqt_mt_so_3_typeinfo,
+	_11QDomComment_of_libqt_mt_so_3_vtable,
+	_11QDomComment_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_18QXmlDefaultHandler_typeinfo_name[] = {
+char *_18QXmlDefaultHandler_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _18QXmlDefaultHandler_typeinfo = {
+struct classtypeinfo _18QXmlDefaultHandler_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
 	"_ZTS18QXmlDefaultHandler",
-	_18QXmlDefaultHandler_typeinfo_name,
+	_18QXmlDefaultHandler_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_18QXmlDefaultHandler_vtable_name_0 [] = {
+const char *_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN18QXmlDefaultHandler18setDocumentLocatorEP11QXmlLocator",
 	"_ZN18QXmlDefaultHandler13startDocumentEv",
 	"_ZN18QXmlDefaultHandler11endDocumentEv",
@@ -43542,7 +43542,7 @@ const char *_18QXmlDefaultHandler_vtable_name_0 [] = {
 	"_ZN18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
 	};
 
-const char *_18QXmlDefaultHandler_vtable_name_1 [] = {
+const char *_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn4_N18QXmlDefaultHandler7warningERK18QXmlParseException",
 #endif
@@ -43629,7 +43629,7 @@ const char *_18QXmlDefaultHandler_vtable_name_1 [] = {
 #endif
 	};
 
-const char *_18QXmlDefaultHandler_vtable_name_2 [] = {
+const char *_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __i386__
 	"_ZThn8_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
 #endif
@@ -43695,7 +43695,7 @@ const char *_18QXmlDefaultHandler_vtable_name_2 [] = {
 #endif
 	};
 
-const char *_18QXmlDefaultHandler_vtable_name_3 [] = {
+const char *_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_3 [] = {
 #if defined __i386__
 	"_ZThn12_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
 #endif
@@ -43740,7 +43740,7 @@ const char *_18QXmlDefaultHandler_vtable_name_3 [] = {
 #endif
 	};
 
-const char *_18QXmlDefaultHandler_vtable_name_4 [] = {
+const char *_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_4 [] = {
 #if defined __i386__
 	"_ZThn16_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_",
 #endif
@@ -43911,7 +43911,7 @@ const char *_18QXmlDefaultHandler_vtable_name_4 [] = {
 #endif
 	};
 
-const char *_18QXmlDefaultHandler_vtable_name_5 [] = {
+const char *_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_5 [] = {
 #if defined __i386__
 	"_ZThn20_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
 #endif
@@ -43998,14 +43998,14 @@ const char *_18QXmlDefaultHandler_vtable_name_5 [] = {
 #endif
 	};
 
-struct classvtable _18QXmlDefaultHandler_vtable [6] = {
+struct classvtable _18QXmlDefaultHandler_of_libqt_mt_so_3_vtable [6] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	30,	/* Number of Vfuncs */
 	"_ZTI18QXmlDefaultHandler",
-	_18QXmlDefaultHandler_vtable_name_0,
+	_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -44039,7 +44039,7 @@ struct classvtable _18QXmlDefaultHandler_vtable [6] = {
 	1,	/* Vtable category */
 	4,	/* Number of Vfuncs */
 	"_ZTI18QXmlDefaultHandler",
-	_18QXmlDefaultHandler_vtable_name_1,
+	_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_1,
 	},
 	{
 #if defined __i386__
@@ -44073,7 +44073,7 @@ struct classvtable _18QXmlDefaultHandler_vtable [6] = {
 	1,	/* Vtable category */
 	3,	/* Number of Vfuncs */
 	"_ZTI18QXmlDefaultHandler",
-	_18QXmlDefaultHandler_vtable_name_2,
+	_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_2,
 	},
 	{
 #if defined __i386__
@@ -44107,7 +44107,7 @@ struct classvtable _18QXmlDefaultHandler_vtable [6] = {
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI18QXmlDefaultHandler",
-	_18QXmlDefaultHandler_vtable_name_3,
+	_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_3,
 	},
 	{
 #if defined __i386__
@@ -44141,7 +44141,7 @@ struct classvtable _18QXmlDefaultHandler_vtable [6] = {
 	1,	/* Vtable category */
 	8,	/* Number of Vfuncs */
 	"_ZTI18QXmlDefaultHandler",
-	_18QXmlDefaultHandler_vtable_name_4,
+	_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_4,
 	},
 	{
 #if defined __i386__
@@ -44175,11 +44175,11 @@ struct classvtable _18QXmlDefaultHandler_vtable [6] = {
 	1,	/* Vtable category */
 	4,	/* Number of Vfuncs */
 	"_ZTI18QXmlDefaultHandler",
-	_18QXmlDefaultHandler_vtable_name_5,
+	_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_5,
 	},
 };
 
-struct base_type_info _18QXmlDefaultHandler_baseinfo[] = {
+struct base_type_info _18QXmlDefaultHandler_of_libqt_mt_so_3_baseinfo[] = {
 	{"_ZTI18QXmlContentHandler",	2U},
 #if defined __i386__
 	{"_ZTI16QXmlErrorHandler",	1026U},
@@ -44288,7 +44288,7 @@ struct base_type_info _18QXmlDefaultHandler_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Z18QXmlDefaultHandler_classinfo = {
+struct classinfo _Z18QXmlDefaultHandler_of_libqt_mt_so_3_classinfo = {
 	"_Z18QXmlDefaultHandler",
 	"_ZTV18QXmlDefaultHandler",
 	"_ZTI18QXmlDefaultHandler",	/* RTTI */
@@ -44299,22 +44299,22 @@ struct classinfo _Z18QXmlDefaultHandler_classinfo = {
 	6,
 	0,	/* numVTT */
 	0U,
-	&_18QXmlDefaultHandler_typeinfo,
-	_18QXmlDefaultHandler_vtable,
-	_18QXmlDefaultHandler_baseinfo,
+	&_18QXmlDefaultHandler_of_libqt_mt_so_3_typeinfo,
+	_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable,
+	_18QXmlDefaultHandler_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QDataSink_typeinfo_name[] = {
+char *_9QDataSink_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI8QAsyncIO",
 	};
 
-struct classtypeinfo _9QDataSink_typeinfo = {
+struct classtypeinfo _9QDataSink_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QDataSink",
-	_9QDataSink_typeinfo_name,
+	_9QDataSink_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QDataSink_vtable_name_0 [] = {
+const char *_9QDataSink_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QDataSinkD1Ev",
 	"_ZN9QDataSinkD0Ev",
 	"__cxa_pure_virtual",
@@ -44322,21 +44322,21 @@ const char *_9QDataSink_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _9QDataSink_vtable [1] = {
+struct classvtable _9QDataSink_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI9QDataSink",
-	_9QDataSink_vtable_name_0,
+	_9QDataSink_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _9QDataSink_baseinfo[] = {
+struct base_type_info _9QDataSink_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QDataSink_classinfo = {
+struct classinfo _Z9QDataSink_of_libqt_mt_so_3_classinfo = {
 	"_Z9QDataSink",
 	"_ZTV9QDataSink",
 	"_ZTI9QDataSink",	/* RTTI */
@@ -44347,22 +44347,22 @@ struct classinfo _Z9QDataSink_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QDataSink_typeinfo,
-	_9QDataSink_vtable,
-	_9QDataSink_baseinfo,
+	&_9QDataSink_of_libqt_mt_so_3_typeinfo,
+	_9QDataSink_of_libqt_mt_so_3_vtable,
+	_9QDataSink_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_16QSqlDriverPlugin_typeinfo_name[] = {
+char *_16QSqlDriverPlugin_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI8QGPlugin",
 	};
 
-struct classtypeinfo _16QSqlDriverPlugin_typeinfo = {
+struct classtypeinfo _16QSqlDriverPlugin_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS16QSqlDriverPlugin",
-	_16QSqlDriverPlugin_typeinfo_name,
+	_16QSqlDriverPlugin_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_16QSqlDriverPlugin_vtable_name_0 [] = {
+const char *_16QSqlDriverPlugin_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK16QSqlDriverPlugin10metaObjectEv",
 	"_ZNK16QSqlDriverPlugin9classNameEv",
 	"_ZN16QSqlDriverPlugin7qt_castEPKc",
@@ -44388,21 +44388,21 @@ const char *_16QSqlDriverPlugin_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _16QSqlDriverPlugin_vtable [1] = {
+struct classvtable _16QSqlDriverPlugin_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	23,	/* Number of Vfuncs */
 	"_ZTI16QSqlDriverPlugin",
-	_16QSqlDriverPlugin_vtable_name_0,
+	_16QSqlDriverPlugin_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _16QSqlDriverPlugin_baseinfo[] = {
+struct base_type_info _16QSqlDriverPlugin_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z16QSqlDriverPlugin_classinfo = {
+struct classinfo _Z16QSqlDriverPlugin_of_libqt_mt_so_3_classinfo = {
 	"_Z16QSqlDriverPlugin",
 	"_ZTV16QSqlDriverPlugin",
 	"_ZTI16QSqlDriverPlugin",	/* RTTI */
@@ -44413,22 +44413,22 @@ struct classinfo _Z16QSqlDriverPlugin_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_16QSqlDriverPlugin_typeinfo,
-	_16QSqlDriverPlugin_vtable,
-	_16QSqlDriverPlugin_baseinfo,
+	&_16QSqlDriverPlugin_of_libqt_mt_so_3_typeinfo,
+	_16QSqlDriverPlugin_of_libqt_mt_so_3_vtable,
+	_16QSqlDriverPlugin_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QToolButton_typeinfo_name[] = {
+char *_11QToolButton_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QButton",
 	};
 
-struct classtypeinfo _11QToolButton_typeinfo = {
+struct classtypeinfo _11QToolButton_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QToolButton",
-	_11QToolButton_typeinfo_name,
+	_11QToolButton_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QToolButton_vtable_name_0 [] = {
+const char *_11QToolButton_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK11QToolButton10metaObjectEv",
 	"_ZNK11QToolButton9classNameEv",
 	"_ZN11QToolButton7qt_castEPKc",
@@ -44558,7 +44558,7 @@ const char *_11QToolButton_vtable_name_0 [] = {
 	"_ZN11QToolButton5setOnEb",
 	};
 
-const char *_11QToolButton_vtable_name_1 [] = {
+const char *_11QToolButton_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QToolButtonD1Ev",
 #endif
@@ -44632,14 +44632,14 @@ const char *_11QToolButton_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _11QToolButton_vtable [2] = {
+struct classvtable _11QToolButton_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	127,	/* Number of Vfuncs */
 	"_ZTI11QToolButton",
-	_11QToolButton_vtable_name_0,
+	_11QToolButton_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -44673,14 +44673,14 @@ struct classvtable _11QToolButton_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI11QToolButton",
-	_11QToolButton_vtable_name_1,
+	_11QToolButton_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _11QToolButton_baseinfo[] = {
+struct base_type_info _11QToolButton_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QToolButton_classinfo = {
+struct classinfo _Z11QToolButton_of_libqt_mt_so_3_classinfo = {
 	"_Z11QToolButton",
 	"_ZTV11QToolButton",
 	"_ZTI11QToolButton",	/* RTTI */
@@ -44691,22 +44691,22 @@ struct classinfo _Z11QToolButton_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QToolButton_typeinfo,
-	_11QToolButton_vtable,
-	_11QToolButton_baseinfo,
+	&_11QToolButton_of_libqt_mt_so_3_typeinfo,
+	_11QToolButton_of_libqt_mt_so_3_vtable,
+	_11QToolButton_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_14QWidgetIntDict_typeinfo_name[] = {
+char *_14QWidgetIntDict_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI8QIntDictI7QWidgetE",
 	};
 
-struct classtypeinfo _14QWidgetIntDict_typeinfo = {
+struct classtypeinfo _14QWidgetIntDict_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS14QWidgetIntDict",
-	_14QWidgetIntDict_typeinfo_name,
+	_14QWidgetIntDict_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_14QWidgetIntDict_vtable_name_0 [] = {
+const char *_14QWidgetIntDict_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK8QIntDictI7QWidgetE5countEv",
 	"_ZN8QIntDictI7QWidgetE5clearEv",
 	"_ZN14QWidgetIntDictD1Ev",
@@ -44717,21 +44717,21 @@ const char *_14QWidgetIntDict_vtable_name_0 [] = {
 	"_ZNK6QGDict5writeER11QDataStreamPv",
 	};
 
-struct classvtable _14QWidgetIntDict_vtable [1] = {
+struct classvtable _14QWidgetIntDict_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	8,	/* Number of Vfuncs */
 	"_ZTI14QWidgetIntDict",
-	_14QWidgetIntDict_vtable_name_0,
+	_14QWidgetIntDict_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _14QWidgetIntDict_baseinfo[] = {
+struct base_type_info _14QWidgetIntDict_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z14QWidgetIntDict_classinfo = {
+struct classinfo _Z14QWidgetIntDict_of_libqt_mt_so_3_classinfo = {
 	"_Z14QWidgetIntDict",
 	"_ZTV14QWidgetIntDict",
 	"_ZTI14QWidgetIntDict",	/* RTTI */
@@ -44742,22 +44742,22 @@ struct classinfo _Z14QWidgetIntDict_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_14QWidgetIntDict_typeinfo,
-	_14QWidgetIntDict_vtable,
-	_14QWidgetIntDict_baseinfo,
+	&_14QWidgetIntDict_of_libqt_mt_so_3_typeinfo,
+	_14QWidgetIntDict_of_libqt_mt_so_3_vtable,
+	_14QWidgetIntDict_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_7QTabBar_typeinfo_name[] = {
+char *_7QTabBar_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo _7QTabBar_typeinfo = {
+struct classtypeinfo _7QTabBar_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS7QTabBar",
-	_7QTabBar_typeinfo_name,
+	_7QTabBar_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_7QTabBar_vtable_name_0 [] = {
+const char *_7QTabBar_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QTabBar10metaObjectEv",
 	"_ZNK7QTabBar9classNameEv",
 	"_ZN7QTabBar7qt_castEPKc",
@@ -44881,7 +44881,7 @@ const char *_7QTabBar_vtable_name_0 [] = {
 	"_ZNK7QTabBar10paintLabelEP8QPainterRK5QRectP4QTabb",
 	};
 
-const char *_7QTabBar_vtable_name_1 [] = {
+const char *_7QTabBar_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N7QTabBarD1Ev",
 #endif
@@ -44955,14 +44955,14 @@ const char *_7QTabBar_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _7QTabBar_vtable [2] = {
+struct classvtable _7QTabBar_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	121,	/* Number of Vfuncs */
 	"_ZTI7QTabBar",
-	_7QTabBar_vtable_name_0,
+	_7QTabBar_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -44996,14 +44996,14 @@ struct classvtable _7QTabBar_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI7QTabBar",
-	_7QTabBar_vtable_name_1,
+	_7QTabBar_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _7QTabBar_baseinfo[] = {
+struct base_type_info _7QTabBar_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z7QTabBar_classinfo = {
+struct classinfo _Z7QTabBar_of_libqt_mt_so_3_classinfo = {
 	"_Z7QTabBar",
 	"_ZTV7QTabBar",
 	"_ZTI7QTabBar",	/* RTTI */
@@ -45014,22 +45014,22 @@ struct classinfo _Z7QTabBar_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_7QTabBar_typeinfo,
-	_7QTabBar_vtable,
-	_7QTabBar_baseinfo,
+	&_7QTabBar_of_libqt_mt_so_3_typeinfo,
+	_7QTabBar_of_libqt_mt_so_3_vtable,
+	_7QTabBar_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QDomNotation_typeinfo_name[] = {
+char *_12QDomNotation_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI8QDomNode",
 	};
 
-struct classtypeinfo _12QDomNotation_typeinfo = {
+struct classtypeinfo _12QDomNotation_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QDomNotation",
-	_12QDomNotation_typeinfo_name,
+	_12QDomNotation_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QDomNotation_vtable_name_0 [] = {
+const char *_12QDomNotation_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN12QDomNotationD1Ev",
 	"_ZN12QDomNotationD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -45073,21 +45073,21 @@ const char *_12QDomNotation_vtable_name_0 [] = {
 	"_ZNK8QDomNode9isCommentEv",
 	};
 
-struct classvtable _12QDomNotation_vtable [1] = {
+struct classvtable _12QDomNotation_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	41,	/* Number of Vfuncs */
 	"_ZTI12QDomNotation",
-	_12QDomNotation_vtable_name_0,
+	_12QDomNotation_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QDomNotation_baseinfo[] = {
+struct base_type_info _12QDomNotation_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QDomNotation_classinfo = {
+struct classinfo _Z12QDomNotation_of_libqt_mt_so_3_classinfo = {
 	"_Z12QDomNotation",
 	"_ZTV12QDomNotation",
 	"_ZTI12QDomNotation",	/* RTTI */
@@ -45098,22 +45098,22 @@ struct classinfo _Z12QDomNotation_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QDomNotation_typeinfo,
-	_12QDomNotation_vtable,
-	_12QDomNotation_baseinfo,
+	&_12QDomNotation_of_libqt_mt_so_3_typeinfo,
+	_12QDomNotation_of_libqt_mt_so_3_vtable,
+	_12QDomNotation_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_16QXmlSimpleReader_typeinfo_name[] = {
+char *_16QXmlSimpleReader_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI10QXmlReader",
 	};
 
-struct classtypeinfo _16QXmlSimpleReader_typeinfo = {
+struct classtypeinfo _16QXmlSimpleReader_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS16QXmlSimpleReader",
-	_16QXmlSimpleReader_typeinfo_name,
+	_16QXmlSimpleReader_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_16QXmlSimpleReader_vtable_name_0 [] = {
+const char *_16QXmlSimpleReader_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK16QXmlSimpleReader7featureERK7QStringPb",
 	"_ZN16QXmlSimpleReader10setFeatureERK7QStringb",
 	"_ZNK16QXmlSimpleReader10hasFeatureERK7QString",
@@ -45140,21 +45140,21 @@ const char *_16QXmlSimpleReader_vtable_name_0 [] = {
 	"_ZN16QXmlSimpleReader13parseContinueEv",
 	};
 
-struct classvtable _16QXmlSimpleReader_vtable [1] = {
+struct classvtable _16QXmlSimpleReader_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	24,	/* Number of Vfuncs */
 	"_ZTI16QXmlSimpleReader",
-	_16QXmlSimpleReader_vtable_name_0,
+	_16QXmlSimpleReader_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _16QXmlSimpleReader_baseinfo[] = {
+struct base_type_info _16QXmlSimpleReader_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z16QXmlSimpleReader_classinfo = {
+struct classinfo _Z16QXmlSimpleReader_of_libqt_mt_so_3_classinfo = {
 	"_Z16QXmlSimpleReader",
 	"_ZTV16QXmlSimpleReader",
 	"_ZTI16QXmlSimpleReader",	/* RTTI */
@@ -45165,41 +45165,41 @@ struct classinfo _Z16QXmlSimpleReader_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_16QXmlSimpleReader_typeinfo,
-	_16QXmlSimpleReader_vtable,
-	_16QXmlSimpleReader_baseinfo,
+	&_16QXmlSimpleReader_of_libqt_mt_so_3_typeinfo,
+	_16QXmlSimpleReader_of_libqt_mt_so_3_vtable,
+	_16QXmlSimpleReader_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QHideEvent_typeinfo_name[] = {
+char *_10QHideEvent_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo _10QHideEvent_typeinfo = {
+struct classtypeinfo _10QHideEvent_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QHideEvent",
-	_10QHideEvent_typeinfo_name,
+	_10QHideEvent_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QHideEvent_vtable_name_0 [] = {
+const char *_10QHideEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN10QHideEventD1Ev",
 	"_ZN10QHideEventD0Ev",
 	};
 
-struct classvtable _10QHideEvent_vtable [1] = {
+struct classvtable _10QHideEvent_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI10QHideEvent",
-	_10QHideEvent_vtable_name_0,
+	_10QHideEvent_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _10QHideEvent_baseinfo[] = {
+struct base_type_info _10QHideEvent_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QHideEvent_classinfo = {
+struct classinfo _Z10QHideEvent_of_libqt_mt_so_3_classinfo = {
 	"_Z10QHideEvent",
 	"_ZTV10QHideEvent",
 	"_ZTI10QHideEvent",	/* RTTI */
@@ -45210,40 +45210,40 @@ struct classinfo _Z10QHideEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QHideEvent_typeinfo,
-	_10QHideEvent_vtable,
-	_10QHideEvent_baseinfo,
+	&_10QHideEvent_of_libqt_mt_so_3_typeinfo,
+	_10QHideEvent_of_libqt_mt_so_3_vtable,
+	_10QHideEvent_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_8QToolTip_typeinfo_name[] = {
+char *_8QToolTip_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI2Qt",
 	};
 
-struct classtypeinfo _8QToolTip_typeinfo = {
+struct classtypeinfo _8QToolTip_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS8QToolTip",
-	_8QToolTip_typeinfo_name,
+	_8QToolTip_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_8QToolTip_vtable_name_0 [] = {
+const char *_8QToolTip_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _8QToolTip_vtable [1] = {
+struct classvtable _8QToolTip_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	1,	/* Number of Vfuncs */
 	"_ZTI8QToolTip",
-	_8QToolTip_vtable_name_0,
+	_8QToolTip_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _8QToolTip_baseinfo[] = {
+struct base_type_info _8QToolTip_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z8QToolTip_classinfo = {
+struct classinfo _Z8QToolTip_of_libqt_mt_so_3_classinfo = {
 	"_Z8QToolTip",
 	"_ZTV8QToolTip",
 	"_ZTI8QToolTip",	/* RTTI */
@@ -45254,41 +45254,41 @@ struct classinfo _Z8QToolTip_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_8QToolTip_typeinfo,
-	_8QToolTip_vtable,
-	_8QToolTip_baseinfo,
+	&_8QToolTip_of_libqt_mt_so_3_typeinfo,
+	_8QToolTip_of_libqt_mt_so_3_vtable,
+	_8QToolTip_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QResizeEvent_typeinfo_name[] = {
+char *_12QResizeEvent_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo _12QResizeEvent_typeinfo = {
+struct classtypeinfo _12QResizeEvent_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QResizeEvent",
-	_12QResizeEvent_typeinfo_name,
+	_12QResizeEvent_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QResizeEvent_vtable_name_0 [] = {
+const char *_12QResizeEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN12QResizeEventD1Ev",
 	"_ZN12QResizeEventD0Ev",
 	};
 
-struct classvtable _12QResizeEvent_vtable [1] = {
+struct classvtable _12QResizeEvent_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI12QResizeEvent",
-	_12QResizeEvent_vtable_name_0,
+	_12QResizeEvent_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QResizeEvent_baseinfo[] = {
+struct base_type_info _12QResizeEvent_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QResizeEvent_classinfo = {
+struct classinfo _Z12QResizeEvent_of_libqt_mt_so_3_classinfo = {
 	"_Z12QResizeEvent",
 	"_ZTV12QResizeEvent",
 	"_ZTI12QResizeEvent",	/* RTTI */
@@ -45299,21 +45299,21 @@ struct classinfo _Z12QResizeEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QResizeEvent_typeinfo,
-	_12QResizeEvent_vtable,
-	_12QResizeEvent_baseinfo,
+	&_12QResizeEvent_of_libqt_mt_so_3_typeinfo,
+	_12QResizeEvent_of_libqt_mt_so_3_vtable,
+	_12QResizeEvent_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_18QXmlLexicalHandler_typeinfo_name[] = {
+char *_18QXmlLexicalHandler_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _18QXmlLexicalHandler_typeinfo = {
+struct classtypeinfo _18QXmlLexicalHandler_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS18QXmlLexicalHandler",
-	_18QXmlLexicalHandler_typeinfo_name,
+	_18QXmlLexicalHandler_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_18QXmlLexicalHandler_vtable_name_0 [] = {
+const char *_18QXmlLexicalHandler_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
@@ -45324,21 +45324,21 @@ const char *_18QXmlLexicalHandler_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _18QXmlLexicalHandler_vtable [1] = {
+struct classvtable _18QXmlLexicalHandler_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	8,	/* Number of Vfuncs */
 	"_ZTI18QXmlLexicalHandler",
-	_18QXmlLexicalHandler_vtable_name_0,
+	_18QXmlLexicalHandler_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _18QXmlLexicalHandler_baseinfo[] = {
+struct base_type_info _18QXmlLexicalHandler_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z18QXmlLexicalHandler_classinfo = {
+struct classinfo _Z18QXmlLexicalHandler_of_libqt_mt_so_3_classinfo = {
 	"_Z18QXmlLexicalHandler",
 	"_ZTV18QXmlLexicalHandler",
 	"_ZTI18QXmlLexicalHandler",	/* RTTI */
@@ -45349,22 +45349,22 @@ struct classinfo _Z18QXmlLexicalHandler_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_18QXmlLexicalHandler_typeinfo,
-	_18QXmlLexicalHandler_vtable,
-	_18QXmlLexicalHandler_baseinfo,
+	&_18QXmlLexicalHandler_of_libqt_mt_so_3_typeinfo,
+	_18QXmlLexicalHandler_of_libqt_mt_so_3_vtable,
+	_18QXmlLexicalHandler_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QCanvasLine_typeinfo_name[] = {
+char *_11QCanvasLine_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI20QCanvasPolygonalItem",
 	};
 
-struct classtypeinfo _11QCanvasLine_typeinfo = {
+struct classtypeinfo _11QCanvasLine_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QCanvasLine",
-	_11QCanvasLine_typeinfo_name,
+	_11QCanvasLine_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QCanvasLine_vtable_name_0 [] = {
+const char *_11QCanvasLine_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QCanvasLineD1Ev",
 	"_ZN11QCanvasLineD0Ev",
 	"_ZN11QCanvasLine6moveByEdd",
@@ -45393,21 +45393,21 @@ const char *_11QCanvasLine_vtable_name_0 [] = {
 	"_ZN11QCanvasLine9drawShapeER8QPainter",
 	};
 
-struct classvtable _11QCanvasLine_vtable [1] = {
+struct classvtable _11QCanvasLine_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	26,	/* Number of Vfuncs */
 	"_ZTI11QCanvasLine",
-	_11QCanvasLine_vtable_name_0,
+	_11QCanvasLine_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QCanvasLine_baseinfo[] = {
+struct base_type_info _11QCanvasLine_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QCanvasLine_classinfo = {
+struct classinfo _Z11QCanvasLine_of_libqt_mt_so_3_classinfo = {
 	"_Z11QCanvasLine",
 	"_ZTV11QCanvasLine",
 	"_ZTI11QCanvasLine",	/* RTTI */
@@ -45418,40 +45418,40 @@ struct classinfo _Z11QCanvasLine_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QCanvasLine_typeinfo,
-	_11QCanvasLine_vtable,
-	_11QCanvasLine_baseinfo,
+	&_11QCanvasLine_of_libqt_mt_so_3_typeinfo,
+	_11QCanvasLine_of_libqt_mt_so_3_vtable,
+	_11QCanvasLine_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_14QXmlAttributes_typeinfo_name[] = {
+char *_14QXmlAttributes_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _14QXmlAttributes_typeinfo = {
+struct classtypeinfo _14QXmlAttributes_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS14QXmlAttributes",
-	_14QXmlAttributes_typeinfo_name,
+	_14QXmlAttributes_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_14QXmlAttributes_vtable_name_0 [] = {
+const char *_14QXmlAttributes_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN14QXmlAttributesD1Ev",
 	"_ZN14QXmlAttributesD0Ev",
 	};
 
-struct classvtable _14QXmlAttributes_vtable [1] = {
+struct classvtable _14QXmlAttributes_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI14QXmlAttributes",
-	_14QXmlAttributes_vtable_name_0,
+	_14QXmlAttributes_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _14QXmlAttributes_baseinfo[] = {
+struct base_type_info _14QXmlAttributes_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z14QXmlAttributes_classinfo = {
+struct classinfo _Z14QXmlAttributes_of_libqt_mt_so_3_classinfo = {
 	"_Z14QXmlAttributes",
 	"_ZTV14QXmlAttributes",
 	"_ZTI14QXmlAttributes",	/* RTTI */
@@ -45462,22 +45462,22 @@ struct classinfo _Z14QXmlAttributes_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_14QXmlAttributes_typeinfo,
-	_14QXmlAttributes_vtable,
-	_14QXmlAttributes_baseinfo,
+	&_14QXmlAttributes_of_libqt_mt_so_3_typeinfo,
+	_14QXmlAttributes_of_libqt_mt_so_3_vtable,
+	_14QXmlAttributes_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_7QDialog_typeinfo_name[] = {
+char *_7QDialog_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo _7QDialog_typeinfo = {
+struct classtypeinfo _7QDialog_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS7QDialog",
-	_7QDialog_typeinfo_name,
+	_7QDialog_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_7QDialog_vtable_name_0 [] = {
+const char *_7QDialog_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QDialog10metaObjectEv",
 	"_ZNK7QDialog9classNameEv",
 	"_ZN7QDialog7qt_castEPKc",
@@ -45593,7 +45593,7 @@ const char *_7QDialog_vtable_name_0 [] = {
 	"_ZN7QDialog6rejectEv",
 	};
 
-const char *_7QDialog_vtable_name_1 [] = {
+const char *_7QDialog_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N7QDialogD1Ev",
 #endif
@@ -45667,14 +45667,14 @@ const char *_7QDialog_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _7QDialog_vtable [2] = {
+struct classvtable _7QDialog_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	113,	/* Number of Vfuncs */
 	"_ZTI7QDialog",
-	_7QDialog_vtable_name_0,
+	_7QDialog_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -45708,14 +45708,14 @@ struct classvtable _7QDialog_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI7QDialog",
-	_7QDialog_vtable_name_1,
+	_7QDialog_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _7QDialog_baseinfo[] = {
+struct base_type_info _7QDialog_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z7QDialog_classinfo = {
+struct classinfo _Z7QDialog_of_libqt_mt_so_3_classinfo = {
 	"_Z7QDialog",
 	"_ZTV7QDialog",
 	"_ZTI7QDialog",	/* RTTI */
@@ -45726,21 +45726,21 @@ struct classinfo _Z7QDialog_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_7QDialog_typeinfo,
-	_7QDialog_vtable,
-	_7QDialog_baseinfo,
+	&_7QDialog_of_libqt_mt_so_3_typeinfo,
+	_7QDialog_of_libqt_mt_so_3_vtable,
+	_7QDialog_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_16QGLayoutIterator_typeinfo_name[] = {
+char *_16QGLayoutIterator_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _16QGLayoutIterator_typeinfo = {
+struct classtypeinfo _16QGLayoutIterator_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
 	"_ZTS16QGLayoutIterator",
-	_16QGLayoutIterator_typeinfo_name,
+	_16QGLayoutIterator_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_16QGLayoutIterator_vtable_name_0 [] = {
+const char *_16QGLayoutIterator_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN16QGLayoutIteratorD1Ev",
 	"_ZN16QGLayoutIteratorD0Ev",
 	"__cxa_pure_virtual",
@@ -45748,18 +45748,18 @@ const char *_16QGLayoutIterator_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _16QGLayoutIterator_vtable [1] = {
+struct classvtable _16QGLayoutIterator_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI16QGLayoutIterator",
-	_16QGLayoutIterator_vtable_name_0,
+	_16QGLayoutIterator_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _16QGLayoutIterator_baseinfo[] = {
+struct base_type_info _16QGLayoutIterator_of_libqt_mt_so_3_baseinfo[] = {
 #if defined __i386__
 	{"_ZTI7QShared",	1026U},
 #endif
@@ -45783,7 +45783,7 @@ struct base_type_info _16QGLayoutIterator_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Z16QGLayoutIterator_classinfo = {
+struct classinfo _Z16QGLayoutIterator_of_libqt_mt_so_3_classinfo = {
 	"_Z16QGLayoutIterator",
 	"_ZTV16QGLayoutIterator",
 	"_ZTI16QGLayoutIterator",	/* RTTI */
@@ -45794,41 +45794,41 @@ struct classinfo _Z16QGLayoutIterator_classinfo = {
 	1,
 	0,	/* numVTT */
 	0U,
-	&_16QGLayoutIterator_typeinfo,
-	_16QGLayoutIterator_vtable,
-	_16QGLayoutIterator_baseinfo,
+	&_16QGLayoutIterator_of_libqt_mt_so_3_typeinfo,
+	_16QGLayoutIterator_of_libqt_mt_so_3_vtable,
+	_16QGLayoutIterator_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QTabletEvent_typeinfo_name[] = {
+char *_12QTabletEvent_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo _12QTabletEvent_typeinfo = {
+struct classtypeinfo _12QTabletEvent_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QTabletEvent",
-	_12QTabletEvent_typeinfo_name,
+	_12QTabletEvent_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QTabletEvent_vtable_name_0 [] = {
+const char *_12QTabletEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN12QTabletEventD1Ev",
 	"_ZN12QTabletEventD0Ev",
 	};
 
-struct classvtable _12QTabletEvent_vtable [1] = {
+struct classvtable _12QTabletEvent_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI12QTabletEvent",
-	_12QTabletEvent_vtable_name_0,
+	_12QTabletEvent_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QTabletEvent_baseinfo[] = {
+struct base_type_info _12QTabletEvent_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QTabletEvent_classinfo = {
+struct classinfo _Z12QTabletEvent_of_libqt_mt_so_3_classinfo = {
 	"_Z12QTabletEvent",
 	"_ZTV12QTabletEvent",
 	"_ZTI12QTabletEvent",	/* RTTI */
@@ -45839,22 +45839,22 @@ struct classinfo _Z12QTabletEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QTabletEvent_typeinfo,
-	_12QTabletEvent_vtable,
-	_12QTabletEvent_baseinfo,
+	&_12QTabletEvent_of_libqt_mt_so_3_typeinfo,
+	_12QTabletEvent_of_libqt_mt_so_3_vtable,
+	_12QTabletEvent_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QWidgetItem_typeinfo_name[] = {
+char *_11QWidgetItem_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI11QLayoutItem",
 	};
 
-struct classtypeinfo _11QWidgetItem_typeinfo = {
+struct classtypeinfo _11QWidgetItem_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QWidgetItem",
-	_11QWidgetItem_typeinfo_name,
+	_11QWidgetItem_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QWidgetItem_vtable_name_0 [] = {
+const char *_11QWidgetItem_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QWidgetItemD1Ev",
 	"_ZN11QWidgetItemD0Ev",
 	"_ZNK11QWidgetItem8sizeHintEv",
@@ -45874,21 +45874,21 @@ const char *_11QWidgetItem_vtable_name_0 [] = {
 	"_ZN11QLayoutItem12setAlignmentEi",
 	};
 
-struct classvtable _11QWidgetItem_vtable [1] = {
+struct classvtable _11QWidgetItem_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	17,	/* Number of Vfuncs */
 	"_ZTI11QWidgetItem",
-	_11QWidgetItem_vtable_name_0,
+	_11QWidgetItem_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QWidgetItem_baseinfo[] = {
+struct base_type_info _11QWidgetItem_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QWidgetItem_classinfo = {
+struct classinfo _Z11QWidgetItem_of_libqt_mt_so_3_classinfo = {
 	"_Z11QWidgetItem",
 	"_ZTV11QWidgetItem",
 	"_ZTI11QWidgetItem",	/* RTTI */
@@ -45899,21 +45899,21 @@ struct classinfo _Z11QWidgetItem_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QWidgetItem_typeinfo,
-	_11QWidgetItem_vtable,
-	_11QWidgetItem_baseinfo,
+	&_11QWidgetItem_of_libqt_mt_so_3_typeinfo,
+	_11QWidgetItem_of_libqt_mt_so_3_vtable,
+	_11QWidgetItem_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_4QDir_typeinfo_name[] = {
+char *_4QDir_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _4QDir_typeinfo = {
+struct classtypeinfo _4QDir_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS4QDir",
-	_4QDir_typeinfo_name,
+	_4QDir_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_4QDir_vtable_name_0 [] = {
+const char *_4QDir_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN4QDirD1Ev",
 	"_ZN4QDirD0Ev",
 	"_ZN4QDir7setPathERK7QString",
@@ -45950,21 +45950,21 @@ const char *_4QDir_vtable_name_0 [] = {
 	"_ZN4QDir14readDirEntriesERK7QStringii",
 	};
 
-struct classvtable _4QDir_vtable [1] = {
+struct classvtable _4QDir_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	34,	/* Number of Vfuncs */
 	"_ZTI4QDir",
-	_4QDir_vtable_name_0,
+	_4QDir_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _4QDir_baseinfo[] = {
+struct base_type_info _4QDir_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z4QDir_classinfo = {
+struct classinfo _Z4QDir_of_libqt_mt_so_3_classinfo = {
 	"_Z4QDir",
 	"_ZTV4QDir",
 	"_ZTI4QDir",	/* RTTI */
@@ -45975,22 +45975,22 @@ struct classinfo _Z4QDir_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_4QDir_typeinfo,
-	_4QDir_vtable,
-	_4QDir_baseinfo,
+	&_4QDir_of_libqt_mt_so_3_typeinfo,
+	_4QDir_of_libqt_mt_so_3_vtable,
+	_4QDir_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_25QDomProcessingInstruction_typeinfo_name[] = {
+char *_25QDomProcessingInstruction_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI8QDomNode",
 	};
 
-struct classtypeinfo _25QDomProcessingInstruction_typeinfo = {
+struct classtypeinfo _25QDomProcessingInstruction_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS25QDomProcessingInstruction",
-	_25QDomProcessingInstruction_typeinfo_name,
+	_25QDomProcessingInstruction_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_25QDomProcessingInstruction_vtable_name_0 [] = {
+const char *_25QDomProcessingInstruction_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN25QDomProcessingInstructionD1Ev",
 	"_ZN25QDomProcessingInstructionD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -46037,21 +46037,21 @@ const char *_25QDomProcessingInstruction_vtable_name_0 [] = {
 	"_ZN25QDomProcessingInstruction7setDataERK7QString",
 	};
 
-struct classvtable _25QDomProcessingInstruction_vtable [1] = {
+struct classvtable _25QDomProcessingInstruction_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	44,	/* Number of Vfuncs */
 	"_ZTI25QDomProcessingInstruction",
-	_25QDomProcessingInstruction_vtable_name_0,
+	_25QDomProcessingInstruction_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _25QDomProcessingInstruction_baseinfo[] = {
+struct base_type_info _25QDomProcessingInstruction_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z25QDomProcessingInstruction_classinfo = {
+struct classinfo _Z25QDomProcessingInstruction_of_libqt_mt_so_3_classinfo = {
 	"_Z25QDomProcessingInstruction",
 	"_ZTV25QDomProcessingInstruction",
 	"_ZTI25QDomProcessingInstruction",	/* RTTI */
@@ -46062,22 +46062,22 @@ struct classinfo _Z25QDomProcessingInstruction_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_25QDomProcessingInstruction_typeinfo,
-	_25QDomProcessingInstruction_vtable,
-	_25QDomProcessingInstruction_baseinfo,
+	&_25QDomProcessingInstruction_of_libqt_mt_so_3_typeinfo,
+	_25QDomProcessingInstruction_of_libqt_mt_so_3_vtable,
+	_25QDomProcessingInstruction_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_13QCanvasSpline_typeinfo_name[] = {
+char *_13QCanvasSpline_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI14QCanvasPolygon",
 	};
 
-struct classtypeinfo _13QCanvasSpline_typeinfo = {
+struct classtypeinfo _13QCanvasSpline_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS13QCanvasSpline",
-	_13QCanvasSpline_typeinfo_name,
+	_13QCanvasSpline_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_13QCanvasSpline_vtable_name_0 [] = {
+const char *_13QCanvasSpline_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN13QCanvasSplineD1Ev",
 	"_ZN13QCanvasSplineD0Ev",
 	"_ZN14QCanvasPolygon6moveByEdd",
@@ -46106,21 +46106,21 @@ const char *_13QCanvasSpline_vtable_name_0 [] = {
 	"_ZN14QCanvasPolygon9drawShapeER8QPainter",
 	};
 
-struct classvtable _13QCanvasSpline_vtable [1] = {
+struct classvtable _13QCanvasSpline_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	26,	/* Number of Vfuncs */
 	"_ZTI13QCanvasSpline",
-	_13QCanvasSpline_vtable_name_0,
+	_13QCanvasSpline_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _13QCanvasSpline_baseinfo[] = {
+struct base_type_info _13QCanvasSpline_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z13QCanvasSpline_classinfo = {
+struct classinfo _Z13QCanvasSpline_of_libqt_mt_so_3_classinfo = {
 	"_Z13QCanvasSpline",
 	"_ZTV13QCanvasSpline",
 	"_ZTI13QCanvasSpline",	/* RTTI */
@@ -46131,22 +46131,22 @@ struct classinfo _Z13QCanvasSpline_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_13QCanvasSpline_typeinfo,
-	_13QCanvasSpline_vtable,
-	_13QCanvasSpline_baseinfo,
+	&_13QCanvasSpline_of_libqt_mt_so_3_typeinfo,
+	_13QCanvasSpline_of_libqt_mt_so_3_vtable,
+	_13QCanvasSpline_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QFontDialog_typeinfo_name[] = {
+char *_11QFontDialog_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QDialog",
 	};
 
-struct classtypeinfo _11QFontDialog_typeinfo = {
+struct classtypeinfo _11QFontDialog_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QFontDialog",
-	_11QFontDialog_typeinfo_name,
+	_11QFontDialog_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QFontDialog_vtable_name_0 [] = {
+const char *_11QFontDialog_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK11QFontDialog10metaObjectEv",
 	"_ZNK11QFontDialog9classNameEv",
 	"_ZN11QFontDialog7qt_castEPKc",
@@ -46262,7 +46262,7 @@ const char *_11QFontDialog_vtable_name_0 [] = {
 	"_ZN7QDialog6rejectEv",
 	};
 
-const char *_11QFontDialog_vtable_name_1 [] = {
+const char *_11QFontDialog_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QFontDialogD1Ev",
 #endif
@@ -46336,14 +46336,14 @@ const char *_11QFontDialog_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _11QFontDialog_vtable [2] = {
+struct classvtable _11QFontDialog_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	113,	/* Number of Vfuncs */
 	"_ZTI11QFontDialog",
-	_11QFontDialog_vtable_name_0,
+	_11QFontDialog_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -46377,14 +46377,14 @@ struct classvtable _11QFontDialog_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI11QFontDialog",
-	_11QFontDialog_vtable_name_1,
+	_11QFontDialog_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _11QFontDialog_baseinfo[] = {
+struct base_type_info _11QFontDialog_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QFontDialog_classinfo = {
+struct classinfo _Z11QFontDialog_of_libqt_mt_so_3_classinfo = {
 	"_Z11QFontDialog",
 	"_ZTV11QFontDialog",
 	"_ZTI11QFontDialog",	/* RTTI */
@@ -46395,21 +46395,21 @@ struct classinfo _Z11QFontDialog_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QFontDialog_typeinfo,
-	_11QFontDialog_vtable,
-	_11QFontDialog_baseinfo,
+	&_11QFontDialog_of_libqt_mt_so_3_typeinfo,
+	_11QFontDialog_of_libqt_mt_so_3_vtable,
+	_11QFontDialog_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_7QGArray_typeinfo_name[] = {
+char *_7QGArray_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _7QGArray_typeinfo = {
+struct classtypeinfo _7QGArray_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS7QGArray",
-	_7QGArray_typeinfo_name,
+	_7QGArray_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_7QGArray_vtable_name_0 [] = {
+const char *_7QGArray_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QGArrayD1Ev",
 	"_ZN7QGArrayD0Ev",
 	"_ZN7QGArray6detachEv",
@@ -46417,21 +46417,21 @@ const char *_7QGArray_vtable_name_0 [] = {
 	"_ZN7QGArray10deleteDataEPNS_10array_dataE",
 	};
 
-struct classvtable _7QGArray_vtable [1] = {
+struct classvtable _7QGArray_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI7QGArray",
-	_7QGArray_vtable_name_0,
+	_7QGArray_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _7QGArray_baseinfo[] = {
+struct base_type_info _7QGArray_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z7QGArray_classinfo = {
+struct classinfo _Z7QGArray_of_libqt_mt_so_3_classinfo = {
 	"_Z7QGArray",
 	"_ZTV7QGArray",
 	"_ZTI7QGArray",	/* RTTI */
@@ -46442,22 +46442,22 @@ struct classinfo _Z7QGArray_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_7QGArray_typeinfo,
-	_7QGArray_vtable,
-	_7QGArray_baseinfo,
+	&_7QGArray_of_libqt_mt_so_3_typeinfo,
+	_7QGArray_of_libqt_mt_so_3_vtable,
+	_7QGArray_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QBitArray_typeinfo_name[] = {
+char *_9QBitArray_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI9QMemArrayIcE",
 	};
 
-struct classtypeinfo _9QBitArray_typeinfo = {
+struct classtypeinfo _9QBitArray_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QBitArray",
-	_9QBitArray_typeinfo_name,
+	_9QBitArray_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QBitArray_vtable_name_0 [] = {
+const char *_9QBitArray_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QBitArrayD1Ev",
 	"_ZN9QBitArrayD0Ev",
 	"_ZN9QBitArray6detachEv",
@@ -46465,21 +46465,21 @@ const char *_9QBitArray_vtable_name_0 [] = {
 	"_ZN9QBitArray10deleteDataEPN7QGArray10array_dataE",
 	};
 
-struct classvtable _9QBitArray_vtable [1] = {
+struct classvtable _9QBitArray_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI9QBitArray",
-	_9QBitArray_vtable_name_0,
+	_9QBitArray_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _9QBitArray_baseinfo[] = {
+struct base_type_info _9QBitArray_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QBitArray_classinfo = {
+struct classinfo _Z9QBitArray_of_libqt_mt_so_3_classinfo = {
 	"_Z9QBitArray",
 	"_ZTV9QBitArray",
 	"_ZTI9QBitArray",	/* RTTI */
@@ -46490,22 +46490,22 @@ struct classinfo _Z9QBitArray_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QBitArray_typeinfo,
-	_9QBitArray_vtable,
-	_9QBitArray_baseinfo,
+	&_9QBitArray_of_libqt_mt_so_3_typeinfo,
+	_9QBitArray_of_libqt_mt_so_3_vtable,
+	_9QBitArray_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QCheckBox_typeinfo_name[] = {
+char *_9QCheckBox_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QButton",
 	};
 
-struct classtypeinfo _9QCheckBox_typeinfo = {
+struct classtypeinfo _9QCheckBox_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QCheckBox",
-	_9QCheckBox_typeinfo_name,
+	_9QCheckBox_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QCheckBox_vtable_name_0 [] = {
+const char *_9QCheckBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK9QCheckBox10metaObjectEv",
 	"_ZNK9QCheckBox9classNameEv",
 	"_ZN9QCheckBox7qt_castEPKc",
@@ -46629,7 +46629,7 @@ const char *_9QCheckBox_vtable_name_0 [] = {
 	"_ZN7QButton8setGroupEP12QButtonGroup",
 	};
 
-const char *_9QCheckBox_vtable_name_1 [] = {
+const char *_9QCheckBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QCheckBoxD1Ev",
 #endif
@@ -46703,14 +46703,14 @@ const char *_9QCheckBox_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _9QCheckBox_vtable [2] = {
+struct classvtable _9QCheckBox_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	121,	/* Number of Vfuncs */
 	"_ZTI9QCheckBox",
-	_9QCheckBox_vtable_name_0,
+	_9QCheckBox_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -46744,14 +46744,14 @@ struct classvtable _9QCheckBox_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QCheckBox",
-	_9QCheckBox_vtable_name_1,
+	_9QCheckBox_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _9QCheckBox_baseinfo[] = {
+struct base_type_info _9QCheckBox_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QCheckBox_classinfo = {
+struct classinfo _Z9QCheckBox_of_libqt_mt_so_3_classinfo = {
 	"_Z9QCheckBox",
 	"_ZTV9QCheckBox",
 	"_ZTI9QCheckBox",	/* RTTI */
@@ -46762,22 +46762,22 @@ struct classinfo _Z9QCheckBox_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QCheckBox_typeinfo,
-	_9QCheckBox_vtable,
-	_9QCheckBox_baseinfo,
+	&_9QCheckBox_of_libqt_mt_so_3_typeinfo,
+	_9QCheckBox_of_libqt_mt_so_3_vtable,
+	_9QCheckBox_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QDockWindow_typeinfo_name[] = {
+char *_11QDockWindow_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QFrame",
 	};
 
-struct classtypeinfo _11QDockWindow_typeinfo = {
+struct classtypeinfo _11QDockWindow_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QDockWindow",
-	_11QDockWindow_typeinfo_name,
+	_11QDockWindow_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QDockWindow_vtable_name_0 [] = {
+const char *_11QDockWindow_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK11QDockWindow10metaObjectEv",
 	"_ZNK11QDockWindow9classNameEv",
 	"_ZN11QDockWindow7qt_castEPKc",
@@ -46913,7 +46913,7 @@ const char *_11QDockWindow_vtable_name_0 [] = {
 	"_ZN11QDockWindow14setOrientationEN2Qt11OrientationE",
 	};
 
-const char *_11QDockWindow_vtable_name_1 [] = {
+const char *_11QDockWindow_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QDockWindowD1Ev",
 #endif
@@ -46987,14 +46987,14 @@ const char *_11QDockWindow_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _11QDockWindow_vtable [2] = {
+struct classvtable _11QDockWindow_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	133,	/* Number of Vfuncs */
 	"_ZTI11QDockWindow",
-	_11QDockWindow_vtable_name_0,
+	_11QDockWindow_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -47028,14 +47028,14 @@ struct classvtable _11QDockWindow_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI11QDockWindow",
-	_11QDockWindow_vtable_name_1,
+	_11QDockWindow_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _11QDockWindow_baseinfo[] = {
+struct base_type_info _11QDockWindow_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QDockWindow_classinfo = {
+struct classinfo _Z11QDockWindow_of_libqt_mt_so_3_classinfo = {
 	"_Z11QDockWindow",
 	"_ZTV11QDockWindow",
 	"_ZTI11QDockWindow",	/* RTTI */
@@ -47046,22 +47046,22 @@ struct classinfo _Z11QDockWindow_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QDockWindow_typeinfo,
-	_11QDockWindow_vtable,
-	_11QDockWindow_baseinfo,
+	&_11QDockWindow_of_libqt_mt_so_3_typeinfo,
+	_11QDockWindow_of_libqt_mt_so_3_vtable,
+	_11QDockWindow_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_18QImageFormatPlugin_typeinfo_name[] = {
+char *_18QImageFormatPlugin_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI8QGPlugin",
 	};
 
-struct classtypeinfo _18QImageFormatPlugin_typeinfo = {
+struct classtypeinfo _18QImageFormatPlugin_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS18QImageFormatPlugin",
-	_18QImageFormatPlugin_typeinfo_name,
+	_18QImageFormatPlugin_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_18QImageFormatPlugin_vtable_name_0 [] = {
+const char *_18QImageFormatPlugin_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK18QImageFormatPlugin10metaObjectEv",
 	"_ZNK18QImageFormatPlugin9classNameEv",
 	"_ZN18QImageFormatPlugin7qt_castEPKc",
@@ -47089,21 +47089,21 @@ const char *_18QImageFormatPlugin_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _18QImageFormatPlugin_vtable [1] = {
+struct classvtable _18QImageFormatPlugin_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	25,	/* Number of Vfuncs */
 	"_ZTI18QImageFormatPlugin",
-	_18QImageFormatPlugin_vtable_name_0,
+	_18QImageFormatPlugin_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _18QImageFormatPlugin_baseinfo[] = {
+struct base_type_info _18QImageFormatPlugin_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z18QImageFormatPlugin_classinfo = {
+struct classinfo _Z18QImageFormatPlugin_of_libqt_mt_so_3_classinfo = {
 	"_Z18QImageFormatPlugin",
 	"_ZTV18QImageFormatPlugin",
 	"_ZTI18QImageFormatPlugin",	/* RTTI */
@@ -47114,22 +47114,22 @@ struct classinfo _Z18QImageFormatPlugin_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_18QImageFormatPlugin_typeinfo,
-	_18QImageFormatPlugin_vtable,
-	_18QImageFormatPlugin_baseinfo,
+	&_18QImageFormatPlugin_of_libqt_mt_so_3_typeinfo,
+	_18QImageFormatPlugin_of_libqt_mt_so_3_vtable,
+	_18QImageFormatPlugin_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QEucJpCodec_typeinfo_name[] = {
+char *_11QEucJpCodec_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI10QTextCodec",
 	};
 
-struct classtypeinfo _11QEucJpCodec_typeinfo = {
+struct classtypeinfo _11QEucJpCodec_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QEucJpCodec",
-	_11QEucJpCodec_typeinfo_name,
+	_11QEucJpCodec_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QEucJpCodec_vtable_name_0 [] = {
+const char *_11QEucJpCodec_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QEucJpCodecD1Ev",
 	"_ZN11QEucJpCodecD0Ev",
 	"_ZNK11QEucJpCodec4nameEv",
@@ -47147,21 +47147,21 @@ const char *_11QEucJpCodec_vtable_name_0 [] = {
 	"_ZNK10QTextCodec20characterFromUnicodeERK7QStringi",
 	};
 
-struct classvtable _11QEucJpCodec_vtable [1] = {
+struct classvtable _11QEucJpCodec_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	15,	/* Number of Vfuncs */
 	"_ZTI11QEucJpCodec",
-	_11QEucJpCodec_vtable_name_0,
+	_11QEucJpCodec_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QEucJpCodec_baseinfo[] = {
+struct base_type_info _11QEucJpCodec_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QEucJpCodec_classinfo = {
+struct classinfo _Z11QEucJpCodec_of_libqt_mt_so_3_classinfo = {
 	"_Z11QEucJpCodec",
 	"_ZTV11QEucJpCodec",
 	"_ZTI11QEucJpCodec",	/* RTTI */
@@ -47172,21 +47172,21 @@ struct classinfo _Z11QEucJpCodec_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QEucJpCodec_typeinfo,
-	_11QEucJpCodec_vtable,
-	_11QEucJpCodec_baseinfo,
+	&_11QEucJpCodec_of_libqt_mt_so_3_typeinfo,
+	_11QEucJpCodec_of_libqt_mt_so_3_vtable,
+	_11QEucJpCodec_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_16QSqlResultShared_typeinfo_name[] = {
+char *_16QSqlResultShared_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _16QSqlResultShared_typeinfo = {
+struct classtypeinfo _16QSqlResultShared_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
 	"_ZTS16QSqlResultShared",
-	_16QSqlResultShared_typeinfo_name,
+	_16QSqlResultShared_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_16QSqlResultShared_vtable_name_0 [] = {
+const char *_16QSqlResultShared_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK16QSqlResultShared10metaObjectEv",
 	"_ZNK16QSqlResultShared9classNameEv",
 	"_ZN16QSqlResultShared7qt_castEPKc",
@@ -47210,18 +47210,18 @@ const char *_16QSqlResultShared_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable _16QSqlResultShared_vtable [1] = {
+struct classvtable _16QSqlResultShared_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI16QSqlResultShared",
-	_16QSqlResultShared_vtable_name_0,
+	_16QSqlResultShared_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _16QSqlResultShared_baseinfo[] = {
+struct base_type_info _16QSqlResultShared_of_libqt_mt_so_3_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
 #if defined __i386__
 	{"_ZTI7QShared",	10242U},
@@ -47246,7 +47246,7 @@ struct base_type_info _16QSqlResultShared_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Z16QSqlResultShared_classinfo = {
+struct classinfo _Z16QSqlResultShared_of_libqt_mt_so_3_classinfo = {
 	"_Z16QSqlResultShared",
 	"_ZTV16QSqlResultShared",
 	"_ZTI16QSqlResultShared",	/* RTTI */
@@ -47257,21 +47257,21 @@ struct classinfo _Z16QSqlResultShared_classinfo = {
 	2,
 	0,	/* numVTT */
 	0U,
-	&_16QSqlResultShared_typeinfo,
-	_16QSqlResultShared_vtable,
-	_16QSqlResultShared_baseinfo,
+	&_16QSqlResultShared_of_libqt_mt_so_3_typeinfo,
+	_16QSqlResultShared_of_libqt_mt_so_3_vtable,
+	_16QSqlResultShared_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QSqlError_typeinfo_name[] = {
+char *_9QSqlError_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _9QSqlError_typeinfo = {
+struct classtypeinfo _9QSqlError_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS9QSqlError",
-	_9QSqlError_typeinfo_name,
+	_9QSqlError_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QSqlError_vtable_name_0 [] = {
+const char *_9QSqlError_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QSqlErrorD1Ev",
 	"_ZN9QSqlErrorD0Ev",
 	"_ZN9QSqlError13setDriverTextERK7QString",
@@ -47280,21 +47280,21 @@ const char *_9QSqlError_vtable_name_0 [] = {
 	"_ZN9QSqlError9setNumberEi",
 	};
 
-struct classvtable _9QSqlError_vtable [1] = {
+struct classvtable _9QSqlError_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	6,	/* Number of Vfuncs */
 	"_ZTI9QSqlError",
-	_9QSqlError_vtable_name_0,
+	_9QSqlError_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _9QSqlError_baseinfo[] = {
+struct base_type_info _9QSqlError_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QSqlError_classinfo = {
+struct classinfo _Z9QSqlError_of_libqt_mt_so_3_classinfo = {
 	"_Z9QSqlError",
 	"_ZTV9QSqlError",
 	"_ZTI9QSqlError",	/* RTTI */
@@ -47305,22 +47305,22 @@ struct classinfo _Z9QSqlError_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QSqlError_typeinfo,
-	_9QSqlError_vtable,
-	_9QSqlError_baseinfo,
+	&_9QSqlError_of_libqt_mt_so_3_typeinfo,
+	_9QSqlError_of_libqt_mt_so_3_vtable,
+	_9QSqlError_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_13QServerSocket_typeinfo_name[] = {
+char *_13QServerSocket_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _13QServerSocket_typeinfo = {
+struct classtypeinfo _13QServerSocket_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS13QServerSocket",
-	_13QServerSocket_typeinfo_name,
+	_13QServerSocket_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_13QServerSocket_vtable_name_0 [] = {
+const char *_13QServerSocket_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK13QServerSocket10metaObjectEv",
 	"_ZNK13QServerSocket9classNameEv",
 	"_ZN13QServerSocket7qt_castEPKc",
@@ -47346,21 +47346,21 @@ const char *_13QServerSocket_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _13QServerSocket_vtable [1] = {
+struct classvtable _13QServerSocket_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	23,	/* Number of Vfuncs */
 	"_ZTI13QServerSocket",
-	_13QServerSocket_vtable_name_0,
+	_13QServerSocket_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _13QServerSocket_baseinfo[] = {
+struct base_type_info _13QServerSocket_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z13QServerSocket_classinfo = {
+struct classinfo _Z13QServerSocket_of_libqt_mt_so_3_classinfo = {
 	"_Z13QServerSocket",
 	"_ZTV13QServerSocket",
 	"_ZTI13QServerSocket",	/* RTTI */
@@ -47371,21 +47371,21 @@ struct classinfo _Z13QServerSocket_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_13QServerSocket_typeinfo,
-	_13QServerSocket_vtable,
-	_13QServerSocket_baseinfo,
+	&_13QServerSocket_of_libqt_mt_so_3_typeinfo,
+	_13QServerSocket_of_libqt_mt_so_3_vtable,
+	_13QServerSocket_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_18QXmlContentHandler_typeinfo_name[] = {
+char *_18QXmlContentHandler_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _18QXmlContentHandler_typeinfo = {
+struct classtypeinfo _18QXmlContentHandler_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS18QXmlContentHandler",
-	_18QXmlContentHandler_typeinfo_name,
+	_18QXmlContentHandler_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_18QXmlContentHandler_vtable_name_0 [] = {
+const char *_18QXmlContentHandler_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
@@ -47400,21 +47400,21 @@ const char *_18QXmlContentHandler_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _18QXmlContentHandler_vtable [1] = {
+struct classvtable _18QXmlContentHandler_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	12,	/* Number of Vfuncs */
 	"_ZTI18QXmlContentHandler",
-	_18QXmlContentHandler_vtable_name_0,
+	_18QXmlContentHandler_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _18QXmlContentHandler_baseinfo[] = {
+struct base_type_info _18QXmlContentHandler_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z18QXmlContentHandler_classinfo = {
+struct classinfo _Z18QXmlContentHandler_of_libqt_mt_so_3_classinfo = {
 	"_Z18QXmlContentHandler",
 	"_ZTV18QXmlContentHandler",
 	"_ZTI18QXmlContentHandler",	/* RTTI */
@@ -47425,22 +47425,22 @@ struct classinfo _Z18QXmlContentHandler_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_18QXmlContentHandler_typeinfo,
-	_18QXmlContentHandler_vtable,
-	_18QXmlContentHandler_baseinfo,
+	&_18QXmlContentHandler_of_libqt_mt_so_3_typeinfo,
+	_18QXmlContentHandler_of_libqt_mt_so_3_vtable,
+	_18QXmlContentHandler_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QGb2312Codec_typeinfo_name[] = {
+char *_12QGb2312Codec_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI13QGb18030Codec",
 	};
 
-struct classtypeinfo _12QGb2312Codec_typeinfo = {
+struct classtypeinfo _12QGb2312Codec_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QGb2312Codec",
-	_12QGb2312Codec_typeinfo_name,
+	_12QGb2312Codec_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QGb2312Codec_vtable_name_0 [] = {
+const char *_12QGb2312Codec_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN12QGb2312CodecD1Ev",
 	"_ZN12QGb2312CodecD0Ev",
 	"_ZNK12QGb2312Codec4nameEv",
@@ -47458,21 +47458,21 @@ const char *_12QGb2312Codec_vtable_name_0 [] = {
 	"_ZNK10QTextCodec20characterFromUnicodeERK7QStringi",
 	};
 
-struct classvtable _12QGb2312Codec_vtable [1] = {
+struct classvtable _12QGb2312Codec_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	15,	/* Number of Vfuncs */
 	"_ZTI12QGb2312Codec",
-	_12QGb2312Codec_vtable_name_0,
+	_12QGb2312Codec_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QGb2312Codec_baseinfo[] = {
+struct base_type_info _12QGb2312Codec_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QGb2312Codec_classinfo = {
+struct classinfo _Z12QGb2312Codec_of_libqt_mt_so_3_classinfo = {
 	"_Z12QGb2312Codec",
 	"_ZTV12QGb2312Codec",
 	"_ZTI12QGb2312Codec",	/* RTTI */
@@ -47483,41 +47483,41 @@ struct classinfo _Z12QGb2312Codec_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QGb2312Codec_typeinfo,
-	_12QGb2312Codec_vtable,
-	_12QGb2312Codec_baseinfo,
+	&_12QGb2312Codec_of_libqt_mt_so_3_typeinfo,
+	_12QGb2312Codec_of_libqt_mt_so_3_vtable,
+	_12QGb2312Codec_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QFocusEvent_typeinfo_name[] = {
+char *_11QFocusEvent_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo _11QFocusEvent_typeinfo = {
+struct classtypeinfo _11QFocusEvent_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QFocusEvent",
-	_11QFocusEvent_typeinfo_name,
+	_11QFocusEvent_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QFocusEvent_vtable_name_0 [] = {
+const char *_11QFocusEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QFocusEventD1Ev",
 	"_ZN11QFocusEventD0Ev",
 	};
 
-struct classvtable _11QFocusEvent_vtable [1] = {
+struct classvtable _11QFocusEvent_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI11QFocusEvent",
-	_11QFocusEvent_vtable_name_0,
+	_11QFocusEvent_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QFocusEvent_baseinfo[] = {
+struct base_type_info _11QFocusEvent_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QFocusEvent_classinfo = {
+struct classinfo _Z11QFocusEvent_of_libqt_mt_so_3_classinfo = {
 	"_Z11QFocusEvent",
 	"_ZTV11QFocusEvent",
 	"_ZTI11QFocusEvent",	/* RTTI */
@@ -47528,41 +47528,41 @@ struct classinfo _Z11QFocusEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QFocusEvent_typeinfo,
-	_11QFocusEvent_vtable,
-	_11QFocusEvent_baseinfo,
+	&_11QFocusEvent_of_libqt_mt_so_3_typeinfo,
+	_11QFocusEvent_of_libqt_mt_so_3_vtable,
+	_11QFocusEvent_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QMouseEvent_typeinfo_name[] = {
+char *_11QMouseEvent_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo _11QMouseEvent_typeinfo = {
+struct classtypeinfo _11QMouseEvent_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QMouseEvent",
-	_11QMouseEvent_typeinfo_name,
+	_11QMouseEvent_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QMouseEvent_vtable_name_0 [] = {
+const char *_11QMouseEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QMouseEventD1Ev",
 	"_ZN11QMouseEventD0Ev",
 	};
 
-struct classvtable _11QMouseEvent_vtable [1] = {
+struct classvtable _11QMouseEvent_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI11QMouseEvent",
-	_11QMouseEvent_vtable_name_0,
+	_11QMouseEvent_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QMouseEvent_baseinfo[] = {
+struct base_type_info _11QMouseEvent_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QMouseEvent_classinfo = {
+struct classinfo _Z11QMouseEvent_of_libqt_mt_so_3_classinfo = {
 	"_Z11QMouseEvent",
 	"_ZTV11QMouseEvent",
 	"_ZTI11QMouseEvent",	/* RTTI */
@@ -47573,21 +47573,21 @@ struct classinfo _Z11QMouseEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QMouseEvent_typeinfo,
-	_11QMouseEvent_vtable,
-	_11QMouseEvent_baseinfo,
+	&_11QMouseEvent_of_libqt_mt_so_3_typeinfo,
+	_11QMouseEvent_of_libqt_mt_so_3_vtable,
+	_11QMouseEvent_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_8QUrlInfo_typeinfo_name[] = {
+char *_8QUrlInfo_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _8QUrlInfo_typeinfo = {
+struct classtypeinfo _8QUrlInfo_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS8QUrlInfo",
-	_8QUrlInfo_typeinfo_name,
+	_8QUrlInfo_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_8QUrlInfo_vtable_name_0 [] = {
+const char *_8QUrlInfo_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN8QUrlInfoD1Ev",
 	"_ZN8QUrlInfoD0Ev",
 	"_ZN8QUrlInfo7setNameERK7QString",
@@ -47603,21 +47603,21 @@ const char *_8QUrlInfo_vtable_name_0 [] = {
 	"_ZN8QUrlInfo15setLastModifiedERK9QDateTime",
 	};
 
-struct classvtable _8QUrlInfo_vtable [1] = {
+struct classvtable _8QUrlInfo_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	13,	/* Number of Vfuncs */
 	"_ZTI8QUrlInfo",
-	_8QUrlInfo_vtable_name_0,
+	_8QUrlInfo_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _8QUrlInfo_baseinfo[] = {
+struct base_type_info _8QUrlInfo_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z8QUrlInfo_classinfo = {
+struct classinfo _Z8QUrlInfo_of_libqt_mt_so_3_classinfo = {
 	"_Z8QUrlInfo",
 	"_ZTV8QUrlInfo",
 	"_ZTI8QUrlInfo",	/* RTTI */
@@ -47628,21 +47628,21 @@ struct classinfo _Z8QUrlInfo_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_8QUrlInfo_typeinfo,
-	_8QUrlInfo_vtable,
-	_8QUrlInfo_baseinfo,
+	&_8QUrlInfo_of_libqt_mt_so_3_typeinfo,
+	_8QUrlInfo_of_libqt_mt_so_3_vtable,
+	_8QUrlInfo_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_14QImageConsumer_typeinfo_name[] = {
+char *_14QImageConsumer_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _14QImageConsumer_typeinfo = {
+struct classtypeinfo _14QImageConsumer_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS14QImageConsumer",
-	_14QImageConsumer_typeinfo_name,
+	_14QImageConsumer_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_14QImageConsumer_vtable_name_0 [] = {
+const char *_14QImageConsumer_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
@@ -47652,21 +47652,21 @@ const char *_14QImageConsumer_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _14QImageConsumer_vtable [1] = {
+struct classvtable _14QImageConsumer_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	7,	/* Number of Vfuncs */
 	"_ZTI14QImageConsumer",
-	_14QImageConsumer_vtable_name_0,
+	_14QImageConsumer_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _14QImageConsumer_baseinfo[] = {
+struct base_type_info _14QImageConsumer_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z14QImageConsumer_classinfo = {
+struct classinfo _Z14QImageConsumer_of_libqt_mt_so_3_classinfo = {
 	"_Z14QImageConsumer",
 	"_ZTV14QImageConsumer",
 	"_ZTI14QImageConsumer",	/* RTTI */
@@ -47677,22 +47677,22 @@ struct classinfo _Z14QImageConsumer_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_14QImageConsumer_typeinfo,
-	_14QImageConsumer_vtable,
-	_14QImageConsumer_baseinfo,
+	&_14QImageConsumer_of_libqt_mt_so_3_typeinfo,
+	_14QImageConsumer_of_libqt_mt_so_3_vtable,
+	_14QImageConsumer_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_19QDomEntityReference_typeinfo_name[] = {
+char *_19QDomEntityReference_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI8QDomNode",
 	};
 
-struct classtypeinfo _19QDomEntityReference_typeinfo = {
+struct classtypeinfo _19QDomEntityReference_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS19QDomEntityReference",
-	_19QDomEntityReference_typeinfo_name,
+	_19QDomEntityReference_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_19QDomEntityReference_vtable_name_0 [] = {
+const char *_19QDomEntityReference_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN19QDomEntityReferenceD1Ev",
 	"_ZN19QDomEntityReferenceD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -47736,21 +47736,21 @@ const char *_19QDomEntityReference_vtable_name_0 [] = {
 	"_ZNK8QDomNode9isCommentEv",
 	};
 
-struct classvtable _19QDomEntityReference_vtable [1] = {
+struct classvtable _19QDomEntityReference_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	41,	/* Number of Vfuncs */
 	"_ZTI19QDomEntityReference",
-	_19QDomEntityReference_vtable_name_0,
+	_19QDomEntityReference_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _19QDomEntityReference_baseinfo[] = {
+struct base_type_info _19QDomEntityReference_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z19QDomEntityReference_classinfo = {
+struct classinfo _Z19QDomEntityReference_of_libqt_mt_so_3_classinfo = {
 	"_Z19QDomEntityReference",
 	"_ZTV19QDomEntityReference",
 	"_ZTI19QDomEntityReference",	/* RTTI */
@@ -47761,22 +47761,22 @@ struct classinfo _Z19QDomEntityReference_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_19QDomEntityReference_typeinfo,
-	_19QDomEntityReference_vtable,
-	_19QDomEntityReference_baseinfo,
+	&_19QDomEntityReference_of_libqt_mt_so_3_typeinfo,
+	_19QDomEntityReference_of_libqt_mt_so_3_vtable,
+	_19QDomEntityReference_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QSpinWidget_typeinfo_name[] = {
+char *_11QSpinWidget_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo _11QSpinWidget_typeinfo = {
+struct classtypeinfo _11QSpinWidget_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QSpinWidget",
-	_11QSpinWidget_typeinfo_name,
+	_11QSpinWidget_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QSpinWidget_vtable_name_0 [] = {
+const char *_11QSpinWidget_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK11QSpinWidget10metaObjectEv",
 	"_ZNK11QSpinWidget9classNameEv",
 	"_ZN11QSpinWidget7qt_castEPKc",
@@ -47890,7 +47890,7 @@ const char *_11QSpinWidget_vtable_name_0 [] = {
 	"_ZN11QSpinWidget16setButtonSymbolsENS_13ButtonSymbolsE",
 	};
 
-const char *_11QSpinWidget_vtable_name_1 [] = {
+const char *_11QSpinWidget_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QSpinWidgetD1Ev",
 #endif
@@ -47964,14 +47964,14 @@ const char *_11QSpinWidget_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _11QSpinWidget_vtable [2] = {
+struct classvtable _11QSpinWidget_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	111,	/* Number of Vfuncs */
 	"_ZTI11QSpinWidget",
-	_11QSpinWidget_vtable_name_0,
+	_11QSpinWidget_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -48005,14 +48005,14 @@ struct classvtable _11QSpinWidget_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI11QSpinWidget",
-	_11QSpinWidget_vtable_name_1,
+	_11QSpinWidget_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _11QSpinWidget_baseinfo[] = {
+struct base_type_info _11QSpinWidget_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QSpinWidget_classinfo = {
+struct classinfo _Z11QSpinWidget_of_libqt_mt_so_3_classinfo = {
 	"_Z11QSpinWidget",
 	"_ZTV11QSpinWidget",
 	"_ZTI11QSpinWidget",	/* RTTI */
@@ -48023,41 +48023,41 @@ struct classinfo _Z11QSpinWidget_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QSpinWidget_typeinfo,
-	_11QSpinWidget_vtable,
-	_11QSpinWidget_baseinfo,
+	&_11QSpinWidget_of_libqt_mt_so_3_typeinfo,
+	_11QSpinWidget_of_libqt_mt_so_3_vtable,
+	_11QSpinWidget_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QChildEvent_typeinfo_name[] = {
+char *_11QChildEvent_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo _11QChildEvent_typeinfo = {
+struct classtypeinfo _11QChildEvent_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QChildEvent",
-	_11QChildEvent_typeinfo_name,
+	_11QChildEvent_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QChildEvent_vtable_name_0 [] = {
+const char *_11QChildEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QChildEventD1Ev",
 	"_ZN11QChildEventD0Ev",
 	};
 
-struct classvtable _11QChildEvent_vtable [1] = {
+struct classvtable _11QChildEvent_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI11QChildEvent",
-	_11QChildEvent_vtable_name_0,
+	_11QChildEvent_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QChildEvent_baseinfo[] = {
+struct base_type_info _11QChildEvent_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QChildEvent_classinfo = {
+struct classinfo _Z11QChildEvent_of_libqt_mt_so_3_classinfo = {
 	"_Z11QChildEvent",
 	"_ZTV11QChildEvent",
 	"_ZTI11QChildEvent",	/* RTTI */
@@ -48068,41 +48068,41 @@ struct classinfo _Z11QChildEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QChildEvent_typeinfo,
-	_11QChildEvent_vtable,
-	_11QChildEvent_baseinfo,
+	&_11QChildEvent_of_libqt_mt_so_3_typeinfo,
+	_11QChildEvent_of_libqt_mt_so_3_vtable,
+	_11QChildEvent_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QTextOStream_typeinfo_name[] = {
+char *_12QTextOStream_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI11QTextStream",
 	};
 
-struct classtypeinfo _12QTextOStream_typeinfo = {
+struct classtypeinfo _12QTextOStream_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QTextOStream",
-	_12QTextOStream_typeinfo_name,
+	_12QTextOStream_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QTextOStream_vtable_name_0 [] = {
+const char *_12QTextOStream_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN12QTextOStreamD1Ev",
 	"_ZN12QTextOStreamD0Ev",
 	};
 
-struct classvtable _12QTextOStream_vtable [1] = {
+struct classvtable _12QTextOStream_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI12QTextOStream",
-	_12QTextOStream_vtable_name_0,
+	_12QTextOStream_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QTextOStream_baseinfo[] = {
+struct base_type_info _12QTextOStream_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QTextOStream_classinfo = {
+struct classinfo _Z12QTextOStream_of_libqt_mt_so_3_classinfo = {
 	"_Z12QTextOStream",
 	"_ZTV12QTextOStream",
 	"_ZTI12QTextOStream",	/* RTTI */
@@ -48113,22 +48113,22 @@ struct classinfo _Z12QTextOStream_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QTextOStream_typeinfo,
-	_12QTextOStream_vtable,
-	_12QTextOStream_baseinfo,
+	&_12QTextOStream_of_libqt_mt_so_3_typeinfo,
+	_12QTextOStream_of_libqt_mt_so_3_vtable,
+	_12QTextOStream_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QSignalVec_typeinfo_name[] = {
+char *_10QSignalVec_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI10QPtrVectorI15QConnectionListE",
 	};
 
-struct classtypeinfo _10QSignalVec_typeinfo = {
+struct classtypeinfo _10QSignalVec_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QSignalVec",
-	_10QSignalVec_typeinfo_name,
+	_10QSignalVec_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QSignalVec_vtable_name_0 [] = {
+const char *_10QSignalVec_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK10QPtrVectorI15QConnectionListE5countEv",
 	"_ZN10QPtrVectorI15QConnectionListE5clearEv",
 	"_ZN10QSignalVecD1Ev",
@@ -48140,21 +48140,21 @@ const char *_10QSignalVec_vtable_name_0 [] = {
 	"_ZNK8QGVector5writeER11QDataStreamPv",
 	};
 
-struct classvtable _10QSignalVec_vtable [1] = {
+struct classvtable _10QSignalVec_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI10QSignalVec",
-	_10QSignalVec_vtable_name_0,
+	_10QSignalVec_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _10QSignalVec_baseinfo[] = {
+struct base_type_info _10QSignalVec_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QSignalVec_classinfo = {
+struct classinfo _Z10QSignalVec_of_libqt_mt_so_3_classinfo = {
 	"_Z10QSignalVec",
 	"_ZTV10QSignalVec",
 	"_ZTI10QSignalVec",	/* RTTI */
@@ -48165,22 +48165,22 @@ struct classinfo _Z10QSignalVec_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QSignalVec_typeinfo,
-	_10QSignalVec_vtable,
-	_10QSignalVec_baseinfo,
+	&_10QSignalVec_of_libqt_mt_so_3_typeinfo,
+	_10QSignalVec_of_libqt_mt_so_3_vtable,
+	_10QSignalVec_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QValidator_typeinfo_name[] = {
+char *_10QValidator_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _10QValidator_typeinfo = {
+struct classtypeinfo _10QValidator_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QValidator",
-	_10QValidator_typeinfo_name,
+	_10QValidator_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QValidator_vtable_name_0 [] = {
+const char *_10QValidator_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK10QValidator10metaObjectEv",
 	"_ZNK10QValidator9classNameEv",
 	"_ZN10QValidator7qt_castEPKc",
@@ -48206,21 +48206,21 @@ const char *_10QValidator_vtable_name_0 [] = {
 	"_ZNK10QValidator5fixupER7QString",
 	};
 
-struct classvtable _10QValidator_vtable [1] = {
+struct classvtable _10QValidator_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	23,	/* Number of Vfuncs */
 	"_ZTI10QValidator",
-	_10QValidator_vtable_name_0,
+	_10QValidator_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _10QValidator_baseinfo[] = {
+struct base_type_info _10QValidator_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QValidator_classinfo = {
+struct classinfo _Z10QValidator_of_libqt_mt_so_3_classinfo = {
 	"_Z10QValidator",
 	"_ZTV10QValidator",
 	"_ZTI10QValidator",	/* RTTI */
@@ -48231,22 +48231,22 @@ struct classinfo _Z10QValidator_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QValidator_typeinfo,
-	_10QValidator_vtable,
-	_10QValidator_baseinfo,
+	&_10QValidator_of_libqt_mt_so_3_typeinfo,
+	_10QValidator_of_libqt_mt_so_3_vtable,
+	_10QValidator_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QGridLayout_typeinfo_name[] = {
+char *_11QGridLayout_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QLayout",
 	};
 
-struct classtypeinfo _11QGridLayout_typeinfo = {
+struct classtypeinfo _11QGridLayout_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QGridLayout",
-	_11QGridLayout_typeinfo_name,
+	_11QGridLayout_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QGridLayout_vtable_name_0 [] = {
+const char *_11QGridLayout_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK11QGridLayout10metaObjectEv",
 	"_ZNK11QGridLayout9classNameEv",
 	"_ZN11QGridLayout7qt_castEPKc",
@@ -48289,7 +48289,7 @@ const char *_11QGridLayout_vtable_name_0 [] = {
 	"_ZNK11QGridLayout14heightForWidthEi",
 	};
 
-const char *_11QGridLayout_vtable_name_1 [] = {
+const char *_11QGridLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QGridLayoutD1Ev",
 #endif
@@ -48589,14 +48589,14 @@ const char *_11QGridLayout_vtable_name_1 [] = {
 	"_ZN11QLayoutItem12setAlignmentEi",
 	};
 
-struct classvtable _11QGridLayout_vtable [2] = {
+struct classvtable _11QGridLayout_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	40,	/* Number of Vfuncs */
 	"_ZTI11QGridLayout",
-	_11QGridLayout_vtable_name_0,
+	_11QGridLayout_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -48630,14 +48630,14 @@ struct classvtable _11QGridLayout_vtable [2] = {
 	1,	/* Vtable category */
 	17,	/* Number of Vfuncs */
 	"_ZTI11QGridLayout",
-	_11QGridLayout_vtable_name_1,
+	_11QGridLayout_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _11QGridLayout_baseinfo[] = {
+struct base_type_info _11QGridLayout_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QGridLayout_classinfo = {
+struct classinfo _Z11QGridLayout_of_libqt_mt_so_3_classinfo = {
 	"_Z11QGridLayout",
 	"_ZTV11QGridLayout",
 	"_ZTI11QGridLayout",	/* RTTI */
@@ -48648,22 +48648,22 @@ struct classinfo _Z11QGridLayout_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QGridLayout_typeinfo,
-	_11QGridLayout_vtable,
-	_11QGridLayout_baseinfo,
+	&_11QGridLayout_of_libqt_mt_so_3_typeinfo,
+	_11QGridLayout_of_libqt_mt_so_3_vtable,
+	_11QGridLayout_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QHebrewCodec_typeinfo_name[] = {
+char *_12QHebrewCodec_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI10QTextCodec",
 	};
 
-struct classtypeinfo _12QHebrewCodec_typeinfo = {
+struct classtypeinfo _12QHebrewCodec_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QHebrewCodec",
-	_12QHebrewCodec_typeinfo_name,
+	_12QHebrewCodec_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QHebrewCodec_vtable_name_0 [] = {
+const char *_12QHebrewCodec_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN12QHebrewCodecD1Ev",
 	"_ZN12QHebrewCodecD0Ev",
 	"_ZNK12QHebrewCodec4nameEv",
@@ -48681,21 +48681,21 @@ const char *_12QHebrewCodec_vtable_name_0 [] = {
 	"_ZNK10QTextCodec20characterFromUnicodeERK7QStringi",
 	};
 
-struct classvtable _12QHebrewCodec_vtable [1] = {
+struct classvtable _12QHebrewCodec_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	15,	/* Number of Vfuncs */
 	"_ZTI12QHebrewCodec",
-	_12QHebrewCodec_vtable_name_0,
+	_12QHebrewCodec_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QHebrewCodec_baseinfo[] = {
+struct base_type_info _12QHebrewCodec_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QHebrewCodec_classinfo = {
+struct classinfo _Z12QHebrewCodec_of_libqt_mt_so_3_classinfo = {
 	"_Z12QHebrewCodec",
 	"_ZTV12QHebrewCodec",
 	"_ZTI12QHebrewCodec",	/* RTTI */
@@ -48706,22 +48706,22 @@ struct classinfo _Z12QHebrewCodec_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QHebrewCodec_typeinfo,
-	_12QHebrewCodec_vtable,
-	_12QHebrewCodec_baseinfo,
+	&_12QHebrewCodec_of_libqt_mt_so_3_typeinfo,
+	_12QHebrewCodec_of_libqt_mt_so_3_vtable,
+	_12QHebrewCodec_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_8QToolBox_typeinfo_name[] = {
+char *_8QToolBox_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QFrame",
 	};
 
-struct classtypeinfo _8QToolBox_typeinfo = {
+struct classtypeinfo _8QToolBox_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS8QToolBox",
-	_8QToolBox_typeinfo_name,
+	_8QToolBox_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_8QToolBox_vtable_name_0 [] = {
+const char *_8QToolBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK8QToolBox10metaObjectEv",
 	"_ZNK8QToolBox9classNameEv",
 	"_ZN8QToolBox7qt_castEPKc",
@@ -48844,7 +48844,7 @@ const char *_8QToolBox_vtable_name_0 [] = {
 	"_ZN8QToolBox11itemRemovedEi",
 	};
 
-const char *_8QToolBox_vtable_name_1 [] = {
+const char *_8QToolBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N8QToolBoxD1Ev",
 #endif
@@ -48918,14 +48918,14 @@ const char *_8QToolBox_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _8QToolBox_vtable [2] = {
+struct classvtable _8QToolBox_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	120,	/* Number of Vfuncs */
 	"_ZTI8QToolBox",
-	_8QToolBox_vtable_name_0,
+	_8QToolBox_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -48959,14 +48959,14 @@ struct classvtable _8QToolBox_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI8QToolBox",
-	_8QToolBox_vtable_name_1,
+	_8QToolBox_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _8QToolBox_baseinfo[] = {
+struct base_type_info _8QToolBox_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z8QToolBox_classinfo = {
+struct classinfo _Z8QToolBox_of_libqt_mt_so_3_classinfo = {
 	"_Z8QToolBox",
 	"_ZTV8QToolBox",
 	"_ZTI8QToolBox",	/* RTTI */
@@ -48977,22 +48977,22 @@ struct classinfo _Z8QToolBox_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_8QToolBox_typeinfo,
-	_8QToolBox_vtable,
-	_8QToolBox_baseinfo,
+	&_8QToolBox_of_libqt_mt_so_3_typeinfo,
+	_8QToolBox_of_libqt_mt_so_3_vtable,
+	_8QToolBox_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_17QNetworkOperation_typeinfo_name[] = {
+char *_17QNetworkOperation_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _17QNetworkOperation_typeinfo = {
+struct classtypeinfo _17QNetworkOperation_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS17QNetworkOperation",
-	_17QNetworkOperation_typeinfo_name,
+	_17QNetworkOperation_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_17QNetworkOperation_vtable_name_0 [] = {
+const char *_17QNetworkOperation_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK17QNetworkOperation10metaObjectEv",
 	"_ZNK17QNetworkOperation9classNameEv",
 	"_ZN17QNetworkOperation7qt_castEPKc",
@@ -49016,21 +49016,21 @@ const char *_17QNetworkOperation_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable _17QNetworkOperation_vtable [1] = {
+struct classvtable _17QNetworkOperation_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI17QNetworkOperation",
-	_17QNetworkOperation_vtable_name_0,
+	_17QNetworkOperation_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _17QNetworkOperation_baseinfo[] = {
+struct base_type_info _17QNetworkOperation_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z17QNetworkOperation_classinfo = {
+struct classinfo _Z17QNetworkOperation_of_libqt_mt_so_3_classinfo = {
 	"_Z17QNetworkOperation",
 	"_ZTV17QNetworkOperation",
 	"_ZTI17QNetworkOperation",	/* RTTI */
@@ -49041,22 +49041,22 @@ struct classinfo _Z17QNetworkOperation_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_17QNetworkOperation_typeinfo,
-	_17QNetworkOperation_vtable,
-	_17QNetworkOperation_baseinfo,
+	&_17QNetworkOperation_of_libqt_mt_so_3_typeinfo,
+	_17QNetworkOperation_of_libqt_mt_so_3_vtable,
+	_17QNetworkOperation_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_5QHttp_typeinfo_name[] = {
+char *_5QHttp_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI16QNetworkProtocol",
 	};
 
-struct classtypeinfo _5QHttp_typeinfo = {
+struct classtypeinfo _5QHttp_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS5QHttp",
-	_5QHttp_typeinfo_name,
+	_5QHttp_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_5QHttp_vtable_name_0 [] = {
+const char *_5QHttp_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK5QHttp10metaObjectEv",
 	"_ZNK5QHttp9classNameEv",
 	"_ZN5QHttp7qt_castEPKc",
@@ -49095,21 +49095,21 @@ const char *_5QHttp_vtable_name_0 [] = {
 	"_ZN16QNetworkProtocol15checkConnectionEP17QNetworkOperation",
 	};
 
-struct classvtable _5QHttp_vtable [1] = {
+struct classvtable _5QHttp_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	36,	/* Number of Vfuncs */
 	"_ZTI5QHttp",
-	_5QHttp_vtable_name_0,
+	_5QHttp_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _5QHttp_baseinfo[] = {
+struct base_type_info _5QHttp_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z5QHttp_classinfo = {
+struct classinfo _Z5QHttp_of_libqt_mt_so_3_classinfo = {
 	"_Z5QHttp",
 	"_ZTV5QHttp",
 	"_ZTI5QHttp",	/* RTTI */
@@ -49120,22 +49120,22 @@ struct classinfo _Z5QHttp_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_5QHttp_typeinfo,
-	_5QHttp_vtable,
-	_5QHttp_baseinfo,
+	&_5QHttp_of_libqt_mt_so_3_typeinfo,
+	_5QHttp_of_libqt_mt_so_3_vtable,
+	_5QHttp_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_8QSqlForm_typeinfo_name[] = {
+char *_8QSqlForm_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _8QSqlForm_typeinfo = {
+struct classtypeinfo _8QSqlForm_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS8QSqlForm",
-	_8QSqlForm_typeinfo_name,
+	_8QSqlForm_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_8QSqlForm_vtable_name_0 [] = {
+const char *_8QSqlForm_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK8QSqlForm10metaObjectEv",
 	"_ZNK8QSqlForm9classNameEv",
 	"_ZN8QSqlForm7qt_castEPKc",
@@ -49171,21 +49171,21 @@ const char *_8QSqlForm_vtable_name_0 [] = {
 	"_ZN8QSqlForm4syncEv",
 	};
 
-struct classvtable _8QSqlForm_vtable [1] = {
+struct classvtable _8QSqlForm_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	33,	/* Number of Vfuncs */
 	"_ZTI8QSqlForm",
-	_8QSqlForm_vtable_name_0,
+	_8QSqlForm_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _8QSqlForm_baseinfo[] = {
+struct base_type_info _8QSqlForm_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z8QSqlForm_classinfo = {
+struct classinfo _Z8QSqlForm_of_libqt_mt_so_3_classinfo = {
 	"_Z8QSqlForm",
 	"_ZTV8QSqlForm",
 	"_ZTI8QSqlForm",	/* RTTI */
@@ -49196,41 +49196,41 @@ struct classinfo _Z8QSqlForm_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_8QSqlForm_typeinfo,
-	_8QSqlForm_vtable,
-	_8QSqlForm_baseinfo,
+	&_8QSqlForm_of_libqt_mt_so_3_typeinfo,
+	_8QSqlForm_of_libqt_mt_so_3_vtable,
+	_8QSqlForm_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_6QEvent_typeinfo_name[] = {
+char *_6QEvent_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI2Qt",
 	};
 
-struct classtypeinfo _6QEvent_typeinfo = {
+struct classtypeinfo _6QEvent_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS6QEvent",
-	_6QEvent_typeinfo_name,
+	_6QEvent_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_6QEvent_vtable_name_0 [] = {
+const char *_6QEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN6QEventD1Ev",
 	"_ZN6QEventD0Ev",
 	};
 
-struct classvtable _6QEvent_vtable [1] = {
+struct classvtable _6QEvent_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI6QEvent",
-	_6QEvent_vtable_name_0,
+	_6QEvent_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _6QEvent_baseinfo[] = {
+struct base_type_info _6QEvent_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z6QEvent_classinfo = {
+struct classinfo _Z6QEvent_of_libqt_mt_so_3_classinfo = {
 	"_Z6QEvent",
 	"_ZTV6QEvent",
 	"_ZTI6QEvent",	/* RTTI */
@@ -49241,21 +49241,21 @@ struct classinfo _Z6QEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_6QEvent_typeinfo,
-	_6QEvent_vtable,
-	_6QEvent_baseinfo,
+	&_6QEvent_of_libqt_mt_so_3_typeinfo,
+	_6QEvent_of_libqt_mt_so_3_vtable,
+	_6QEvent_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QMimeSource_typeinfo_name[] = {
+char *_11QMimeSource_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _11QMimeSource_typeinfo = {
+struct classtypeinfo _11QMimeSource_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS11QMimeSource",
-	_11QMimeSource_typeinfo_name,
+	_11QMimeSource_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QMimeSource_vtable_name_0 [] = {
+const char *_11QMimeSource_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QMimeSourceD1Ev",
 	"_ZN11QMimeSourceD0Ev",
 	"__cxa_pure_virtual",
@@ -49263,21 +49263,21 @@ const char *_11QMimeSource_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _11QMimeSource_vtable [1] = {
+struct classvtable _11QMimeSource_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI11QMimeSource",
-	_11QMimeSource_vtable_name_0,
+	_11QMimeSource_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QMimeSource_baseinfo[] = {
+struct base_type_info _11QMimeSource_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QMimeSource_classinfo = {
+struct classinfo _Z11QMimeSource_of_libqt_mt_so_3_classinfo = {
 	"_Z11QMimeSource",
 	"_ZTV11QMimeSource",
 	"_ZTI11QMimeSource",	/* RTTI */
@@ -49288,41 +49288,41 @@ struct classinfo _Z11QMimeSource_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QMimeSource_typeinfo,
-	_11QMimeSource_vtable,
-	_11QMimeSource_baseinfo,
+	&_11QMimeSource_of_libqt_mt_so_3_typeinfo,
+	_11QMimeSource_of_libqt_mt_so_3_vtable,
+	_11QMimeSource_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_15QIMComposeEvent_typeinfo_name[] = {
+char *_15QIMComposeEvent_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI8QIMEvent",
 	};
 
-struct classtypeinfo _15QIMComposeEvent_typeinfo = {
+struct classtypeinfo _15QIMComposeEvent_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS15QIMComposeEvent",
-	_15QIMComposeEvent_typeinfo_name,
+	_15QIMComposeEvent_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_15QIMComposeEvent_vtable_name_0 [] = {
+const char *_15QIMComposeEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN15QIMComposeEventD1Ev",
 	"_ZN15QIMComposeEventD0Ev",
 	};
 
-struct classvtable _15QIMComposeEvent_vtable [1] = {
+struct classvtable _15QIMComposeEvent_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI15QIMComposeEvent",
-	_15QIMComposeEvent_vtable_name_0,
+	_15QIMComposeEvent_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _15QIMComposeEvent_baseinfo[] = {
+struct base_type_info _15QIMComposeEvent_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z15QIMComposeEvent_classinfo = {
+struct classinfo _Z15QIMComposeEvent_of_libqt_mt_so_3_classinfo = {
 	"_Z15QIMComposeEvent",
 	"_ZTV15QIMComposeEvent",
 	"_ZTI15QIMComposeEvent",	/* RTTI */
@@ -49333,41 +49333,41 @@ struct classinfo _Z15QIMComposeEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_15QIMComposeEvent_typeinfo,
-	_15QIMComposeEvent_vtable,
-	_15QIMComposeEvent_baseinfo,
+	&_15QIMComposeEvent_of_libqt_mt_so_3_typeinfo,
+	_15QIMComposeEvent_of_libqt_mt_so_3_vtable,
+	_15QIMComposeEvent_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QTextDecoder_typeinfo_name[] = {
+char *_12QTextDecoder_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _12QTextDecoder_typeinfo = {
+struct classtypeinfo _12QTextDecoder_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS12QTextDecoder",
-	_12QTextDecoder_typeinfo_name,
+	_12QTextDecoder_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QTextDecoder_vtable_name_0 [] = {
+const char *_12QTextDecoder_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN12QTextDecoderD1Ev",
 	"_ZN12QTextDecoderD0Ev",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _12QTextDecoder_vtable [1] = {
+struct classvtable _12QTextDecoder_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	3,	/* Number of Vfuncs */
 	"_ZTI12QTextDecoder",
-	_12QTextDecoder_vtable_name_0,
+	_12QTextDecoder_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QTextDecoder_baseinfo[] = {
+struct base_type_info _12QTextDecoder_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QTextDecoder_classinfo = {
+struct classinfo _Z12QTextDecoder_of_libqt_mt_so_3_classinfo = {
 	"_Z12QTextDecoder",
 	"_ZTV12QTextDecoder",
 	"_ZTI12QTextDecoder",	/* RTTI */
@@ -49378,22 +49378,22 @@ struct classinfo _Z12QTextDecoder_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QTextDecoder_typeinfo,
-	_12QTextDecoder_vtable,
-	_12QTextDecoder_baseinfo,
+	&_12QTextDecoder_of_libqt_mt_so_3_typeinfo,
+	_12QTextDecoder_of_libqt_mt_so_3_vtable,
+	_12QTextDecoder_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_15QSessionManager_typeinfo_name[] = {
+char *_15QSessionManager_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _15QSessionManager_typeinfo = {
+struct classtypeinfo _15QSessionManager_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS15QSessionManager",
-	_15QSessionManager_typeinfo_name,
+	_15QSessionManager_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_15QSessionManager_vtable_name_0 [] = {
+const char *_15QSessionManager_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK15QSessionManager10metaObjectEv",
 	"_ZNK15QSessionManager9classNameEv",
 	"_ZN15QSessionManager7qt_castEPKc",
@@ -49417,21 +49417,21 @@ const char *_15QSessionManager_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable _15QSessionManager_vtable [1] = {
+struct classvtable _15QSessionManager_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI15QSessionManager",
-	_15QSessionManager_vtable_name_0,
+	_15QSessionManager_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _15QSessionManager_baseinfo[] = {
+struct base_type_info _15QSessionManager_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z15QSessionManager_classinfo = {
+struct classinfo _Z15QSessionManager_of_libqt_mt_so_3_classinfo = {
 	"_Z15QSessionManager",
 	"_ZTV15QSessionManager",
 	"_ZTI15QSessionManager",	/* RTTI */
@@ -49442,42 +49442,42 @@ struct classinfo _Z15QSessionManager_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_15QSessionManager_typeinfo,
-	_15QSessionManager_vtable,
-	_15QSessionManager_baseinfo,
+	&_15QSessionManager_of_libqt_mt_so_3_typeinfo,
+	_15QSessionManager_of_libqt_mt_so_3_vtable,
+	_15QSessionManager_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_16QImageFormatType_typeinfo_name[] = {
+char *_16QImageFormatType_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _16QImageFormatType_typeinfo = {
+struct classtypeinfo _16QImageFormatType_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS16QImageFormatType",
-	_16QImageFormatType_typeinfo_name,
+	_16QImageFormatType_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_16QImageFormatType_vtable_name_0 [] = {
+const char *_16QImageFormatType_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN16QImageFormatTypeD1Ev",
 	"_ZN16QImageFormatTypeD0Ev",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _16QImageFormatType_vtable [1] = {
+struct classvtable _16QImageFormatType_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	4,	/* Number of Vfuncs */
 	"_ZTI16QImageFormatType",
-	_16QImageFormatType_vtable_name_0,
+	_16QImageFormatType_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _16QImageFormatType_baseinfo[] = {
+struct base_type_info _16QImageFormatType_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z16QImageFormatType_classinfo = {
+struct classinfo _Z16QImageFormatType_of_libqt_mt_so_3_classinfo = {
 	"_Z16QImageFormatType",
 	"_ZTV16QImageFormatType",
 	"_ZTI16QImageFormatType",	/* RTTI */
@@ -49488,21 +49488,21 @@ struct classinfo _Z16QImageFormatType_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_16QImageFormatType_typeinfo,
-	_16QImageFormatType_vtable,
-	_16QImageFormatType_baseinfo,
+	&_16QImageFormatType_of_libqt_mt_so_3_typeinfo,
+	_16QImageFormatType_of_libqt_mt_so_3_vtable,
+	_16QImageFormatType_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QTextCodec_typeinfo_name[] = {
+char *_10QTextCodec_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _10QTextCodec_typeinfo = {
+struct classtypeinfo _10QTextCodec_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS10QTextCodec",
-	_10QTextCodec_typeinfo_name,
+	_10QTextCodec_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QTextCodec_vtable_name_0 [] = {
+const char *_10QTextCodec_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN10QTextCodecD1Ev",
 	"_ZN10QTextCodecD0Ev",
 	"__cxa_pure_virtual",
@@ -49520,21 +49520,21 @@ const char *_10QTextCodec_vtable_name_0 [] = {
 	"_ZNK10QTextCodec20characterFromUnicodeERK7QStringi",
 	};
 
-struct classvtable _10QTextCodec_vtable [1] = {
+struct classvtable _10QTextCodec_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	15,	/* Number of Vfuncs */
 	"_ZTI10QTextCodec",
-	_10QTextCodec_vtable_name_0,
+	_10QTextCodec_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _10QTextCodec_baseinfo[] = {
+struct base_type_info _10QTextCodec_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QTextCodec_classinfo = {
+struct classinfo _Z10QTextCodec_of_libqt_mt_so_3_classinfo = {
 	"_Z10QTextCodec",
 	"_ZTV10QTextCodec",
 	"_ZTI10QTextCodec",	/* RTTI */
@@ -49545,22 +49545,22 @@ struct classinfo _Z10QTextCodec_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QTextCodec_typeinfo,
-	_10QTextCodec_vtable,
-	_10QTextCodec_baseinfo,
+	&_10QTextCodec_of_libqt_mt_so_3_typeinfo,
+	_10QTextCodec_of_libqt_mt_so_3_vtable,
+	_10QTextCodec_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QSpacerItem_typeinfo_name[] = {
+char *_11QSpacerItem_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI11QLayoutItem",
 	};
 
-struct classtypeinfo _11QSpacerItem_typeinfo = {
+struct classtypeinfo _11QSpacerItem_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QSpacerItem",
-	_11QSpacerItem_typeinfo_name,
+	_11QSpacerItem_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QSpacerItem_vtable_name_0 [] = {
+const char *_11QSpacerItem_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QSpacerItemD1Ev",
 	"_ZN11QSpacerItemD0Ev",
 	"_ZNK11QSpacerItem8sizeHintEv",
@@ -49580,21 +49580,21 @@ const char *_11QSpacerItem_vtable_name_0 [] = {
 	"_ZN11QLayoutItem12setAlignmentEi",
 	};
 
-struct classvtable _11QSpacerItem_vtable [1] = {
+struct classvtable _11QSpacerItem_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	17,	/* Number of Vfuncs */
 	"_ZTI11QSpacerItem",
-	_11QSpacerItem_vtable_name_0,
+	_11QSpacerItem_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QSpacerItem_baseinfo[] = {
+struct base_type_info _11QSpacerItem_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QSpacerItem_classinfo = {
+struct classinfo _Z11QSpacerItem_of_libqt_mt_so_3_classinfo = {
 	"_Z11QSpacerItem",
 	"_ZTV11QSpacerItem",
 	"_ZTI11QSpacerItem",	/* RTTI */
@@ -49605,22 +49605,22 @@ struct classinfo _Z11QSpacerItem_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QSpacerItem_typeinfo,
-	_11QSpacerItem_vtable,
-	_11QSpacerItem_baseinfo,
+	&_11QSpacerItem_of_libqt_mt_so_3_typeinfo,
+	_11QSpacerItem_of_libqt_mt_so_3_vtable,
+	_11QSpacerItem_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QPrintDialog_typeinfo_name[] = {
+char *_12QPrintDialog_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QDialog",
 	};
 
-struct classtypeinfo _12QPrintDialog_typeinfo = {
+struct classtypeinfo _12QPrintDialog_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QPrintDialog",
-	_12QPrintDialog_typeinfo_name,
+	_12QPrintDialog_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QPrintDialog_vtable_name_0 [] = {
+const char *_12QPrintDialog_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK12QPrintDialog10metaObjectEv",
 	"_ZNK12QPrintDialog9classNameEv",
 	"_ZN12QPrintDialog7qt_castEPKc",
@@ -49736,7 +49736,7 @@ const char *_12QPrintDialog_vtable_name_0 [] = {
 	"_ZN7QDialog6rejectEv",
 	};
 
-const char *_12QPrintDialog_vtable_name_1 [] = {
+const char *_12QPrintDialog_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N12QPrintDialogD1Ev",
 #endif
@@ -49810,14 +49810,14 @@ const char *_12QPrintDialog_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _12QPrintDialog_vtable [2] = {
+struct classvtable _12QPrintDialog_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	113,	/* Number of Vfuncs */
 	"_ZTI12QPrintDialog",
-	_12QPrintDialog_vtable_name_0,
+	_12QPrintDialog_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -49851,14 +49851,14 @@ struct classvtable _12QPrintDialog_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI12QPrintDialog",
-	_12QPrintDialog_vtable_name_1,
+	_12QPrintDialog_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _12QPrintDialog_baseinfo[] = {
+struct base_type_info _12QPrintDialog_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QPrintDialog_classinfo = {
+struct classinfo _Z12QPrintDialog_of_libqt_mt_so_3_classinfo = {
 	"_Z12QPrintDialog",
 	"_ZTV12QPrintDialog",
 	"_ZTI12QPrintDialog",	/* RTTI */
@@ -49869,22 +49869,22 @@ struct classinfo _Z12QPrintDialog_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QPrintDialog_typeinfo,
-	_12QPrintDialog_vtable,
-	_12QPrintDialog_baseinfo,
+	&_12QPrintDialog_of_libqt_mt_so_3_typeinfo,
+	_12QPrintDialog_of_libqt_mt_so_3_vtable,
+	_12QPrintDialog_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QProgressBar_typeinfo_name[] = {
+char *_12QProgressBar_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QFrame",
 	};
 
-struct classtypeinfo _12QProgressBar_typeinfo = {
+struct classtypeinfo _12QProgressBar_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QProgressBar",
-	_12QProgressBar_typeinfo_name,
+	_12QProgressBar_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QProgressBar_vtable_name_0 [] = {
+const char *_12QProgressBar_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK12QProgressBar10metaObjectEv",
 	"_ZNK12QProgressBar9classNameEv",
 	"_ZN12QProgressBar7qt_castEPKc",
@@ -50008,7 +50008,7 @@ const char *_12QProgressBar_vtable_name_0 [] = {
 	"_ZN12QProgressBar12setIndicatorER7QStringii",
 	};
 
-const char *_12QProgressBar_vtable_name_1 [] = {
+const char *_12QProgressBar_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N12QProgressBarD1Ev",
 #endif
@@ -50082,14 +50082,14 @@ const char *_12QProgressBar_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _12QProgressBar_vtable [2] = {
+struct classvtable _12QProgressBar_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	121,	/* Number of Vfuncs */
 	"_ZTI12QProgressBar",
-	_12QProgressBar_vtable_name_0,
+	_12QProgressBar_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -50123,14 +50123,14 @@ struct classvtable _12QProgressBar_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI12QProgressBar",
-	_12QProgressBar_vtable_name_1,
+	_12QProgressBar_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _12QProgressBar_baseinfo[] = {
+struct base_type_info _12QProgressBar_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QProgressBar_classinfo = {
+struct classinfo _Z12QProgressBar_of_libqt_mt_so_3_classinfo = {
 	"_Z12QProgressBar",
 	"_ZTV12QProgressBar",
 	"_ZTI12QProgressBar",	/* RTTI */
@@ -50141,22 +50141,22 @@ struct classinfo _Z12QProgressBar_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QProgressBar_typeinfo,
-	_12QProgressBar_vtable,
-	_12QProgressBar_baseinfo,
+	&_12QProgressBar_of_libqt_mt_so_3_typeinfo,
+	_12QProgressBar_of_libqt_mt_so_3_vtable,
+	_12QProgressBar_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_13QIconViewItem_typeinfo_name[] = {
+char *_13QIconViewItem_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI2Qt",
 	};
 
-struct classtypeinfo _13QIconViewItem_typeinfo = {
+struct classtypeinfo _13QIconViewItem_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS13QIconViewItem",
-	_13QIconViewItem_typeinfo_name,
+	_13QIconViewItem_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_13QIconViewItem_vtable_name_0 [] = {
+const char *_13QIconViewItem_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN13QIconViewItemD1Ev",
 	"_ZN13QIconViewItemD0Ev",
 	"_ZN13QIconViewItem16setRenameEnabledEb",
@@ -50192,21 +50192,21 @@ const char *_13QIconViewItem_vtable_name_0 [] = {
 	"_ZN13QIconViewItem8dragLeftEv",
 	};
 
-struct classvtable _13QIconViewItem_vtable [1] = {
+struct classvtable _13QIconViewItem_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	33,	/* Number of Vfuncs */
 	"_ZTI13QIconViewItem",
-	_13QIconViewItem_vtable_name_0,
+	_13QIconViewItem_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _13QIconViewItem_baseinfo[] = {
+struct base_type_info _13QIconViewItem_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z13QIconViewItem_classinfo = {
+struct classinfo _Z13QIconViewItem_of_libqt_mt_so_3_classinfo = {
 	"_Z13QIconViewItem",
 	"_ZTV13QIconViewItem",
 	"_ZTI13QIconViewItem",	/* RTTI */
@@ -50217,22 +50217,22 @@ struct classinfo _Z13QIconViewItem_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_13QIconViewItem_typeinfo,
-	_13QIconViewItem_vtable,
-	_13QIconViewItem_baseinfo,
+	&_13QIconViewItem_of_libqt_mt_so_3_typeinfo,
+	_13QIconViewItem_of_libqt_mt_so_3_vtable,
+	_13QIconViewItem_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_16QDomCDATASection_typeinfo_name[] = {
+char *_16QDomCDATASection_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI8QDomText",
 	};
 
-struct classtypeinfo _16QDomCDATASection_typeinfo = {
+struct classtypeinfo _16QDomCDATASection_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS16QDomCDATASection",
-	_16QDomCDATASection_typeinfo_name,
+	_16QDomCDATASection_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_16QDomCDATASection_vtable_name_0 [] = {
+const char *_16QDomCDATASection_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN16QDomCDATASectionD1Ev",
 	"_ZN16QDomCDATASectionD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -50284,21 +50284,21 @@ const char *_16QDomCDATASection_vtable_name_0 [] = {
 	"_ZN17QDomCharacterData7setDataERK7QString",
 	};
 
-struct classvtable _16QDomCDATASection_vtable [1] = {
+struct classvtable _16QDomCDATASection_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	49,	/* Number of Vfuncs */
 	"_ZTI16QDomCDATASection",
-	_16QDomCDATASection_vtable_name_0,
+	_16QDomCDATASection_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _16QDomCDATASection_baseinfo[] = {
+struct base_type_info _16QDomCDATASection_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z16QDomCDATASection_classinfo = {
+struct classinfo _Z16QDomCDATASection_of_libqt_mt_so_3_classinfo = {
 	"_Z16QDomCDATASection",
 	"_ZTV16QDomCDATASection",
 	"_ZTI16QDomCDATASection",	/* RTTI */
@@ -50309,40 +50309,40 @@ struct classinfo _Z16QDomCDATASection_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_16QDomCDATASection_typeinfo,
-	_16QDomCDATASection_vtable,
-	_16QDomCDATASection_baseinfo,
+	&_16QDomCDATASection_of_libqt_mt_so_3_typeinfo,
+	_16QDomCDATASection_of_libqt_mt_so_3_vtable,
+	_16QDomCDATASection_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QTextStream_typeinfo_name[] = {
+char *_11QTextStream_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _11QTextStream_typeinfo = {
+struct classtypeinfo _11QTextStream_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS11QTextStream",
-	_11QTextStream_typeinfo_name,
+	_11QTextStream_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QTextStream_vtable_name_0 [] = {
+const char *_11QTextStream_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QTextStreamD1Ev",
 	"_ZN11QTextStreamD0Ev",
 	};
 
-struct classvtable _11QTextStream_vtable [1] = {
+struct classvtable _11QTextStream_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI11QTextStream",
-	_11QTextStream_vtable_name_0,
+	_11QTextStream_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QTextStream_baseinfo[] = {
+struct base_type_info _11QTextStream_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QTextStream_classinfo = {
+struct classinfo _Z11QTextStream_of_libqt_mt_so_3_classinfo = {
 	"_Z11QTextStream",
 	"_ZTV11QTextStream",
 	"_ZTI11QTextStream",	/* RTTI */
@@ -50353,22 +50353,22 @@ struct classinfo _Z11QTextStream_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QTextStream_typeinfo,
-	_11QTextStream_vtable,
-	_11QTextStream_baseinfo,
+	&_11QTextStream_of_libqt_mt_so_3_typeinfo,
+	_11QTextStream_of_libqt_mt_so_3_vtable,
+	_11QTextStream_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_14QCheckListItem_typeinfo_name[] = {
+char *_14QCheckListItem_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI13QListViewItem",
 	};
 
-struct classtypeinfo _14QCheckListItem_typeinfo = {
+struct classtypeinfo _14QCheckListItem_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS14QCheckListItem",
-	_14QCheckListItem_typeinfo_name,
+	_14QCheckListItem_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_14QCheckListItem_vtable_name_0 [] = {
+const char *_14QCheckListItem_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN14QCheckListItemD1Ev",
 	"_ZN14QCheckListItemD0Ev",
 	"_ZN13QListViewItem10insertItemEPS_",
@@ -50412,21 +50412,21 @@ const char *_14QCheckListItem_vtable_name_0 [] = {
 	"_ZN14QCheckListItem11stateChangeEb",
 	};
 
-struct classvtable _14QCheckListItem_vtable [1] = {
+struct classvtable _14QCheckListItem_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	41,	/* Number of Vfuncs */
 	"_ZTI14QCheckListItem",
-	_14QCheckListItem_vtable_name_0,
+	_14QCheckListItem_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _14QCheckListItem_baseinfo[] = {
+struct base_type_info _14QCheckListItem_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z14QCheckListItem_classinfo = {
+struct classinfo _Z14QCheckListItem_of_libqt_mt_so_3_classinfo = {
 	"_Z14QCheckListItem",
 	"_ZTV14QCheckListItem",
 	"_ZTI14QCheckListItem",	/* RTTI */
@@ -50437,22 +50437,22 @@ struct classinfo _Z14QCheckListItem_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_14QCheckListItem_typeinfo,
-	_14QCheckListItem_vtable,
-	_14QCheckListItem_baseinfo,
+	&_14QCheckListItem_of_libqt_mt_so_3_typeinfo,
+	_14QCheckListItem_of_libqt_mt_so_3_vtable,
+	_14QCheckListItem_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_13QSignalMapper_typeinfo_name[] = {
+char *_13QSignalMapper_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _13QSignalMapper_typeinfo = {
+struct classtypeinfo _13QSignalMapper_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS13QSignalMapper",
-	_13QSignalMapper_typeinfo_name,
+	_13QSignalMapper_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_13QSignalMapper_vtable_name_0 [] = {
+const char *_13QSignalMapper_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK13QSignalMapper10metaObjectEv",
 	"_ZNK13QSignalMapper9classNameEv",
 	"_ZN13QSignalMapper7qt_castEPKc",
@@ -50478,21 +50478,21 @@ const char *_13QSignalMapper_vtable_name_0 [] = {
 	"_ZN13QSignalMapper10setMappingEPK7QObjectRK7QString",
 	};
 
-struct classvtable _13QSignalMapper_vtable [1] = {
+struct classvtable _13QSignalMapper_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	23,	/* Number of Vfuncs */
 	"_ZTI13QSignalMapper",
-	_13QSignalMapper_vtable_name_0,
+	_13QSignalMapper_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _13QSignalMapper_baseinfo[] = {
+struct base_type_info _13QSignalMapper_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z13QSignalMapper_classinfo = {
+struct classinfo _Z13QSignalMapper_of_libqt_mt_so_3_classinfo = {
 	"_Z13QSignalMapper",
 	"_ZTV13QSignalMapper",
 	"_ZTI13QSignalMapper",	/* RTTI */
@@ -50503,22 +50503,22 @@ struct classinfo _Z13QSignalMapper_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_13QSignalMapper_typeinfo,
-	_13QSignalMapper_vtable,
-	_13QSignalMapper_baseinfo,
+	&_13QSignalMapper_of_libqt_mt_so_3_typeinfo,
+	_13QSignalMapper_of_libqt_mt_so_3_vtable,
+	_13QSignalMapper_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QDockArea_typeinfo_name[] = {
+char *_9QDockArea_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo _9QDockArea_typeinfo = {
+struct classtypeinfo _9QDockArea_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QDockArea",
-	_9QDockArea_typeinfo_name,
+	_9QDockArea_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QDockArea_vtable_name_0 [] = {
+const char *_9QDockArea_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK9QDockArea10metaObjectEv",
 	"_ZNK9QDockArea9classNameEv",
 	"_ZN9QDockArea7qt_castEPKc",
@@ -50631,7 +50631,7 @@ const char *_9QDockArea_vtable_name_0 [] = {
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
 	};
 
-const char *_9QDockArea_vtable_name_1 [] = {
+const char *_9QDockArea_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QDockAreaD1Ev",
 #endif
@@ -50705,14 +50705,14 @@ const char *_9QDockArea_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _9QDockArea_vtable [2] = {
+struct classvtable _9QDockArea_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	110,	/* Number of Vfuncs */
 	"_ZTI9QDockArea",
-	_9QDockArea_vtable_name_0,
+	_9QDockArea_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -50746,14 +50746,14 @@ struct classvtable _9QDockArea_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QDockArea",
-	_9QDockArea_vtable_name_1,
+	_9QDockArea_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _9QDockArea_baseinfo[] = {
+struct base_type_info _9QDockArea_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QDockArea_classinfo = {
+struct classinfo _Z9QDockArea_of_libqt_mt_so_3_classinfo = {
 	"_Z9QDockArea",
 	"_ZTV9QDockArea",
 	"_ZTI9QDockArea",	/* RTTI */
@@ -50764,22 +50764,22 @@ struct classinfo _Z9QDockArea_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QDockArea_typeinfo,
-	_9QDockArea_vtable,
-	_9QDockArea_baseinfo,
+	&_9QDockArea_of_libqt_mt_so_3_typeinfo,
+	_9QDockArea_of_libqt_mt_so_3_vtable,
+	_9QDockArea_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_8QCString_typeinfo_name[] = {
+char *_8QCString_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI9QMemArrayIcE",
 	};
 
-struct classtypeinfo _8QCString_typeinfo = {
+struct classtypeinfo _8QCString_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS8QCString",
-	_8QCString_typeinfo_name,
+	_8QCString_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_8QCString_vtable_name_0 [] = {
+const char *_8QCString_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN8QCStringD1Ev",
 	"_ZN8QCStringD0Ev",
 	"_ZN9QMemArrayIcE6detachEv",
@@ -50787,21 +50787,21 @@ const char *_8QCString_vtable_name_0 [] = {
 	"_ZN7QGArray10deleteDataEPNS_10array_dataE",
 	};
 
-struct classvtable _8QCString_vtable [1] = {
+struct classvtable _8QCString_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI8QCString",
-	_8QCString_vtable_name_0,
+	_8QCString_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _8QCString_baseinfo[] = {
+struct base_type_info _8QCString_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z8QCString_classinfo = {
+struct classinfo _Z8QCString_of_libqt_mt_so_3_classinfo = {
 	"_Z8QCString",
 	"_ZTV8QCString",
 	"_ZTI8QCString",	/* RTTI */
@@ -50812,22 +50812,22 @@ struct classinfo _Z8QCString_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_8QCString_typeinfo,
-	_8QCString_vtable,
-	_8QCString_baseinfo,
+	&_8QCString_of_libqt_mt_so_3_typeinfo,
+	_8QCString_of_libqt_mt_so_3_vtable,
+	_8QCString_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_6QStyle_typeinfo_name[] = {
+char *_6QStyle_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _6QStyle_typeinfo = {
+struct classtypeinfo _6QStyle_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS6QStyle",
-	_6QStyle_typeinfo_name,
+	_6QStyle_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_6QStyle_vtable_name_0 [] = {
+const char *_6QStyle_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK6QStyle10metaObjectEv",
 	"_ZNK6QStyle9classNameEv",
 	"_ZN6QStyle7qt_castEPKc",
@@ -50871,21 +50871,21 @@ const char *_6QStyle_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _6QStyle_vtable [1] = {
+struct classvtable _6QStyle_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	41,	/* Number of Vfuncs */
 	"_ZTI6QStyle",
-	_6QStyle_vtable_name_0,
+	_6QStyle_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _6QStyle_baseinfo[] = {
+struct base_type_info _6QStyle_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z6QStyle_classinfo = {
+struct classinfo _Z6QStyle_of_libqt_mt_so_3_classinfo = {
 	"_Z6QStyle",
 	"_ZTV6QStyle",
 	"_ZTI6QStyle",	/* RTTI */
@@ -50896,41 +50896,41 @@ struct classinfo _Z6QStyle_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_6QStyle_typeinfo,
-	_6QStyle_vtable,
-	_6QStyle_baseinfo,
+	&_6QStyle_of_libqt_mt_so_3_typeinfo,
+	_6QStyle_of_libqt_mt_so_3_vtable,
+	_6QStyle_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_14QXmlDTDHandler_typeinfo_name[] = {
+char *_14QXmlDTDHandler_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _14QXmlDTDHandler_typeinfo = {
+struct classtypeinfo _14QXmlDTDHandler_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS14QXmlDTDHandler",
-	_14QXmlDTDHandler_typeinfo_name,
+	_14QXmlDTDHandler_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_14QXmlDTDHandler_vtable_name_0 [] = {
+const char *_14QXmlDTDHandler_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _14QXmlDTDHandler_vtable [1] = {
+struct classvtable _14QXmlDTDHandler_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	3,	/* Number of Vfuncs */
 	"_ZTI14QXmlDTDHandler",
-	_14QXmlDTDHandler_vtable_name_0,
+	_14QXmlDTDHandler_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _14QXmlDTDHandler_baseinfo[] = {
+struct base_type_info _14QXmlDTDHandler_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z14QXmlDTDHandler_classinfo = {
+struct classinfo _Z14QXmlDTDHandler_of_libqt_mt_so_3_classinfo = {
 	"_Z14QXmlDTDHandler",
 	"_ZTV14QXmlDTDHandler",
 	"_ZTI14QXmlDTDHandler",	/* RTTI */
@@ -50941,22 +50941,22 @@ struct classinfo _Z14QXmlDTDHandler_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_14QXmlDTDHandler_typeinfo,
-	_14QXmlDTDHandler_vtable,
-	_14QXmlDTDHandler_baseinfo,
+	&_14QXmlDTDHandler_of_libqt_mt_so_3_typeinfo,
+	_14QXmlDTDHandler_of_libqt_mt_so_3_vtable,
+	_14QXmlDTDHandler_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QColorDialog_typeinfo_name[] = {
+char *_12QColorDialog_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QDialog",
 	};
 
-struct classtypeinfo _12QColorDialog_typeinfo = {
+struct classtypeinfo _12QColorDialog_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QColorDialog",
-	_12QColorDialog_typeinfo_name,
+	_12QColorDialog_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QColorDialog_vtable_name_0 [] = {
+const char *_12QColorDialog_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK12QColorDialog10metaObjectEv",
 	"_ZNK12QColorDialog9classNameEv",
 	"_ZN12QColorDialog7qt_castEPKc",
@@ -51072,7 +51072,7 @@ const char *_12QColorDialog_vtable_name_0 [] = {
 	"_ZN7QDialog6rejectEv",
 	};
 
-const char *_12QColorDialog_vtable_name_1 [] = {
+const char *_12QColorDialog_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N12QColorDialogD1Ev",
 #endif
@@ -51146,14 +51146,14 @@ const char *_12QColorDialog_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _12QColorDialog_vtable [2] = {
+struct classvtable _12QColorDialog_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	113,	/* Number of Vfuncs */
 	"_ZTI12QColorDialog",
-	_12QColorDialog_vtable_name_0,
+	_12QColorDialog_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -51187,14 +51187,14 @@ struct classvtable _12QColorDialog_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI12QColorDialog",
-	_12QColorDialog_vtable_name_1,
+	_12QColorDialog_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _12QColorDialog_baseinfo[] = {
+struct base_type_info _12QColorDialog_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QColorDialog_classinfo = {
+struct classinfo _Z12QColorDialog_of_libqt_mt_so_3_classinfo = {
 	"_Z12QColorDialog",
 	"_ZTV12QColorDialog",
 	"_ZTI12QColorDialog",	/* RTTI */
@@ -51205,21 +51205,21 @@ struct classinfo _Z12QColorDialog_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QColorDialog_typeinfo,
-	_12QColorDialog_vtable,
-	_12QColorDialog_baseinfo,
+	&_12QColorDialog_of_libqt_mt_so_3_typeinfo,
+	_12QColorDialog_of_libqt_mt_so_3_vtable,
+	_12QColorDialog_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_18QGuardedPtrPrivate_typeinfo_name[] = {
+char *_18QGuardedPtrPrivate_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _18QGuardedPtrPrivate_typeinfo = {
+struct classtypeinfo _18QGuardedPtrPrivate_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
 	"_ZTS18QGuardedPtrPrivate",
-	_18QGuardedPtrPrivate_typeinfo_name,
+	_18QGuardedPtrPrivate_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_18QGuardedPtrPrivate_vtable_name_0 [] = {
+const char *_18QGuardedPtrPrivate_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK18QGuardedPtrPrivate10metaObjectEv",
 	"_ZNK18QGuardedPtrPrivate9classNameEv",
 	"_ZN18QGuardedPtrPrivate7qt_castEPKc",
@@ -51243,18 +51243,18 @@ const char *_18QGuardedPtrPrivate_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable _18QGuardedPtrPrivate_vtable [1] = {
+struct classvtable _18QGuardedPtrPrivate_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI18QGuardedPtrPrivate",
-	_18QGuardedPtrPrivate_vtable_name_0,
+	_18QGuardedPtrPrivate_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _18QGuardedPtrPrivate_baseinfo[] = {
+struct base_type_info _18QGuardedPtrPrivate_of_libqt_mt_so_3_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
 #if defined __i386__
 	{"_ZTI7QShared",	10242U},
@@ -51279,7 +51279,7 @@ struct base_type_info _18QGuardedPtrPrivate_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Z18QGuardedPtrPrivate_classinfo = {
+struct classinfo _Z18QGuardedPtrPrivate_of_libqt_mt_so_3_classinfo = {
 	"_Z18QGuardedPtrPrivate",
 	"_ZTV18QGuardedPtrPrivate",
 	"_ZTI18QGuardedPtrPrivate",	/* RTTI */
@@ -51290,22 +51290,22 @@ struct classinfo _Z18QGuardedPtrPrivate_classinfo = {
 	2,
 	0,	/* numVTT */
 	0U,
-	&_18QGuardedPtrPrivate_typeinfo,
-	_18QGuardedPtrPrivate_vtable,
-	_18QGuardedPtrPrivate_baseinfo,
+	&_18QGuardedPtrPrivate_of_libqt_mt_so_3_typeinfo,
+	_18QGuardedPtrPrivate_of_libqt_mt_so_3_vtable,
+	_18QGuardedPtrPrivate_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QApplication_typeinfo_name[] = {
+char *_12QApplication_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _12QApplication_typeinfo = {
+struct classtypeinfo _12QApplication_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QApplication",
-	_12QApplication_typeinfo_name,
+	_12QApplication_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QApplication_vtable_name_0 [] = {
+const char *_12QApplication_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK12QApplication10metaObjectEv",
 	"_ZNK12QApplication9classNameEv",
 	"_ZN12QApplication7qt_castEPKc",
@@ -51336,21 +51336,21 @@ const char *_12QApplication_vtable_name_0 [] = {
 	"_ZN12QApplication9saveStateER15QSessionManager",
 	};
 
-struct classvtable _12QApplication_vtable [1] = {
+struct classvtable _12QApplication_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	28,	/* Number of Vfuncs */
 	"_ZTI12QApplication",
-	_12QApplication_vtable_name_0,
+	_12QApplication_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QApplication_baseinfo[] = {
+struct base_type_info _12QApplication_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QApplication_classinfo = {
+struct classinfo _Z12QApplication_of_libqt_mt_so_3_classinfo = {
 	"_Z12QApplication",
 	"_ZTV12QApplication",
 	"_ZTI12QApplication",	/* RTTI */
@@ -51361,22 +51361,22 @@ struct classinfo _Z12QApplication_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QApplication_typeinfo,
-	_12QApplication_vtable,
-	_12QApplication_baseinfo,
+	&_12QApplication_of_libqt_mt_so_3_typeinfo,
+	_12QApplication_of_libqt_mt_so_3_vtable,
+	_12QApplication_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_13QListViewItem_typeinfo_name[] = {
+char *_13QListViewItem_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI2Qt",
 	};
 
-struct classtypeinfo _13QListViewItem_typeinfo = {
+struct classtypeinfo _13QListViewItem_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS13QListViewItem",
-	_13QListViewItem_typeinfo_name,
+	_13QListViewItem_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_13QListViewItem_vtable_name_0 [] = {
+const char *_13QListViewItem_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN13QListViewItemD1Ev",
 	"_ZN13QListViewItemD0Ev",
 	"_ZN13QListViewItem10insertItemEPS_",
@@ -51418,21 +51418,21 @@ const char *_13QListViewItem_vtable_name_0 [] = {
 	"_ZN13QListViewItem12cancelRenameEi",
 	};
 
-struct classvtable _13QListViewItem_vtable [1] = {
+struct classvtable _13QListViewItem_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	39,	/* Number of Vfuncs */
 	"_ZTI13QListViewItem",
-	_13QListViewItem_vtable_name_0,
+	_13QListViewItem_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _13QListViewItem_baseinfo[] = {
+struct base_type_info _13QListViewItem_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z13QListViewItem_classinfo = {
+struct classinfo _Z13QListViewItem_of_libqt_mt_so_3_classinfo = {
 	"_Z13QListViewItem",
 	"_ZTV13QListViewItem",
 	"_ZTI13QListViewItem",	/* RTTI */
@@ -51443,22 +51443,22 @@ struct classinfo _Z13QListViewItem_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_13QListViewItem_typeinfo,
-	_13QListViewItem_vtable,
-	_13QListViewItem_baseinfo,
+	&_13QListViewItem_of_libqt_mt_so_3_typeinfo,
+	_13QListViewItem_of_libqt_mt_so_3_vtable,
+	_13QListViewItem_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QIconView_typeinfo_name[] = {
+char *_9QIconView_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI11QScrollView",
 	};
 
-struct classtypeinfo _9QIconView_typeinfo = {
+struct classtypeinfo _9QIconView_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QIconView",
-	_9QIconView_typeinfo_name,
+	_9QIconView_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QIconView_vtable_name_0 [] = {
+const char *_9QIconView_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK9QIconView10metaObjectEv",
 	"_ZNK9QIconView9classNameEv",
 	"_ZN9QIconView7qt_castEPKc",
@@ -51652,7 +51652,7 @@ const char *_9QIconView_vtable_name_0 [] = {
 	"_ZN9QIconView13initDragEnterEP10QDropEvent",
 	};
 
-const char *_9QIconView_vtable_name_1 [] = {
+const char *_9QIconView_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QIconViewD1Ev",
 #endif
@@ -51726,14 +51726,14 @@ const char *_9QIconView_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _9QIconView_vtable [2] = {
+struct classvtable _9QIconView_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	191,	/* Number of Vfuncs */
 	"_ZTI9QIconView",
-	_9QIconView_vtable_name_0,
+	_9QIconView_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -51767,14 +51767,14 @@ struct classvtable _9QIconView_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QIconView",
-	_9QIconView_vtable_name_1,
+	_9QIconView_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _9QIconView_baseinfo[] = {
+struct base_type_info _9QIconView_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QIconView_classinfo = {
+struct classinfo _Z9QIconView_of_libqt_mt_so_3_classinfo = {
 	"_Z9QIconView",
 	"_ZTV9QIconView",
 	"_ZTI9QIconView",	/* RTTI */
@@ -51785,22 +51785,22 @@ struct classinfo _Z9QIconView_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QIconView_typeinfo,
-	_9QIconView_vtable,
-	_9QIconView_baseinfo,
+	&_9QIconView_of_libqt_mt_so_3_typeinfo,
+	_9QIconView_of_libqt_mt_so_3_vtable,
+	_9QIconView_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_15QComboTableItem_typeinfo_name[] = {
+char *_15QComboTableItem_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI10QTableItem",
 	};
 
-struct classtypeinfo _15QComboTableItem_typeinfo = {
+struct classtypeinfo _15QComboTableItem_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS15QComboTableItem",
-	_15QComboTableItem_typeinfo_name,
+	_15QComboTableItem_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_15QComboTableItem_vtable_name_0 [] = {
+const char *_15QComboTableItem_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN15QComboTableItemD1Ev",
 	"_ZN15QComboTableItemD0Ev",
 	"_ZNK10QTableItem6pixmapEv",
@@ -51826,21 +51826,21 @@ const char *_15QComboTableItem_vtable_name_0 [] = {
 	"_ZN15QComboTableItem13setStringListERK11QStringList",
 	};
 
-struct classvtable _15QComboTableItem_vtable [1] = {
+struct classvtable _15QComboTableItem_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	23,	/* Number of Vfuncs */
 	"_ZTI15QComboTableItem",
-	_15QComboTableItem_vtable_name_0,
+	_15QComboTableItem_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _15QComboTableItem_baseinfo[] = {
+struct base_type_info _15QComboTableItem_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z15QComboTableItem_classinfo = {
+struct classinfo _Z15QComboTableItem_of_libqt_mt_so_3_classinfo = {
 	"_Z15QComboTableItem",
 	"_ZTV15QComboTableItem",
 	"_ZTI15QComboTableItem",	/* RTTI */
@@ -51851,21 +51851,21 @@ struct classinfo _Z15QComboTableItem_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_15QComboTableItem_typeinfo,
-	_15QComboTableItem_vtable,
-	_15QComboTableItem_baseinfo,
+	&_15QComboTableItem_of_libqt_mt_so_3_typeinfo,
+	_15QComboTableItem_of_libqt_mt_so_3_vtable,
+	_15QComboTableItem_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_7QWidget_typeinfo_name[] = {
+char *_7QWidget_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _7QWidget_typeinfo = {
+struct classtypeinfo _7QWidget_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
 	"_ZTS7QWidget",
-	_7QWidget_typeinfo_name,
+	_7QWidget_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_7QWidget_vtable_name_0 [] = {
+const char *_7QWidget_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget10metaObjectEv",
 	"_ZNK7QWidget9classNameEv",
 	"_ZN7QWidget7qt_castEPKc",
@@ -51978,7 +51978,7 @@ const char *_7QWidget_vtable_name_0 [] = {
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
 	};
 
-const char *_7QWidget_vtable_name_1 [] = {
+const char *_7QWidget_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N7QWidgetD1Ev",
 #endif
@@ -52052,14 +52052,14 @@ const char *_7QWidget_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _7QWidget_vtable [2] = {
+struct classvtable _7QWidget_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	110,	/* Number of Vfuncs */
 	"_ZTI7QWidget",
-	_7QWidget_vtable_name_0,
+	_7QWidget_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -52093,11 +52093,11 @@ struct classvtable _7QWidget_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI7QWidget",
-	_7QWidget_vtable_name_1,
+	_7QWidget_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _7QWidget_baseinfo[] = {
+struct base_type_info _7QWidget_of_libqt_mt_so_3_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
 #if defined __i386__
 	{"_ZTI12QPaintDevice",	10242U},
@@ -52122,7 +52122,7 @@ struct base_type_info _7QWidget_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Z7QWidget_classinfo = {
+struct classinfo _Z7QWidget_of_libqt_mt_so_3_classinfo = {
 	"_Z7QWidget",
 	"_ZTV7QWidget",
 	"_ZTI7QWidget",	/* RTTI */
@@ -52133,22 +52133,22 @@ struct classinfo _Z7QWidget_classinfo = {
 	2,
 	0,	/* numVTT */
 	0U,
-	&_7QWidget_typeinfo,
-	_7QWidget_vtable,
-	_7QWidget_baseinfo,
+	&_7QWidget_of_libqt_mt_so_3_typeinfo,
+	_7QWidget_of_libqt_mt_so_3_vtable,
+	_7QWidget_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_4QDns_typeinfo_name[] = {
+char *_4QDns_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _4QDns_typeinfo = {
+struct classtypeinfo _4QDns_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS4QDns",
-	_4QDns_typeinfo_name,
+	_4QDns_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_4QDns_vtable_name_0 [] = {
+const char *_4QDns_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK4QDns10metaObjectEv",
 	"_ZNK4QDns9classNameEv",
 	"_ZN4QDns7qt_castEPKc",
@@ -52175,21 +52175,21 @@ const char *_4QDns_vtable_name_0 [] = {
 	"_ZN4QDns13setRecordTypeENS_10RecordTypeE",
 	};
 
-struct classvtable _4QDns_vtable [1] = {
+struct classvtable _4QDns_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	24,	/* Number of Vfuncs */
 	"_ZTI4QDns",
-	_4QDns_vtable_name_0,
+	_4QDns_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _4QDns_baseinfo[] = {
+struct base_type_info _4QDns_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z4QDns_classinfo = {
+struct classinfo _Z4QDns_of_libqt_mt_so_3_classinfo = {
 	"_Z4QDns",
 	"_ZTV4QDns",
 	"_ZTI4QDns",	/* RTTI */
@@ -52200,22 +52200,22 @@ struct classinfo _Z4QDns_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_4QDns_typeinfo,
-	_4QDns_vtable,
-	_4QDns_baseinfo,
+	&_4QDns_of_libqt_mt_so_3_typeinfo,
+	_4QDns_of_libqt_mt_so_3_vtable,
+	_4QDns_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_15QIODeviceSource_typeinfo_name[] = {
+char *_15QIODeviceSource_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI11QDataSource",
 	};
 
-struct classtypeinfo _15QIODeviceSource_typeinfo = {
+struct classtypeinfo _15QIODeviceSource_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS15QIODeviceSource",
-	_15QIODeviceSource_typeinfo_name,
+	_15QIODeviceSource_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_15QIODeviceSource_vtable_name_0 [] = {
+const char *_15QIODeviceSource_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN15QIODeviceSourceD1Ev",
 	"_ZN15QIODeviceSourceD0Ev",
 	"_ZN15QIODeviceSource11readyToSendEv",
@@ -52225,21 +52225,21 @@ const char *_15QIODeviceSource_vtable_name_0 [] = {
 	"_ZN15QIODeviceSource6rewindEv",
 	};
 
-struct classvtable _15QIODeviceSource_vtable [1] = {
+struct classvtable _15QIODeviceSource_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	7,	/* Number of Vfuncs */
 	"_ZTI15QIODeviceSource",
-	_15QIODeviceSource_vtable_name_0,
+	_15QIODeviceSource_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _15QIODeviceSource_baseinfo[] = {
+struct base_type_info _15QIODeviceSource_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z15QIODeviceSource_classinfo = {
+struct classinfo _Z15QIODeviceSource_of_libqt_mt_so_3_classinfo = {
 	"_Z15QIODeviceSource",
 	"_ZTV15QIODeviceSource",
 	"_ZTI15QIODeviceSource",	/* RTTI */
@@ -52250,22 +52250,22 @@ struct classinfo _Z15QIODeviceSource_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_15QIODeviceSource_typeinfo,
-	_15QIODeviceSource_vtable,
-	_15QIODeviceSource_baseinfo,
+	&_15QIODeviceSource_of_libqt_mt_so_3_typeinfo,
+	_15QIODeviceSource_of_libqt_mt_so_3_vtable,
+	_15QIODeviceSource_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QCanvasText_typeinfo_name[] = {
+char *_11QCanvasText_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI11QCanvasItem",
 	};
 
-struct classtypeinfo _11QCanvasText_typeinfo = {
+struct classtypeinfo _11QCanvasText_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QCanvasText",
-	_11QCanvasText_typeinfo_name,
+	_11QCanvasText_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QCanvasText_vtable_name_0 [] = {
+const char *_11QCanvasText_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QCanvasTextD1Ev",
 	"_ZN11QCanvasTextD0Ev",
 	"_ZN11QCanvasText6moveByEdd",
@@ -52289,21 +52289,21 @@ const char *_11QCanvasText_vtable_name_0 [] = {
 	"_ZNK11QCanvasText12collidesWithEPK13QCanvasSpritePK20QCanvasPolygonalItemPK16QCanvasRectanglePK14QCanvasEllipsePKS_",
 	};
 
-struct classvtable _11QCanvasText_vtable [1] = {
+struct classvtable _11QCanvasText_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI11QCanvasText",
-	_11QCanvasText_vtable_name_0,
+	_11QCanvasText_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QCanvasText_baseinfo[] = {
+struct base_type_info _11QCanvasText_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QCanvasText_classinfo = {
+struct classinfo _Z11QCanvasText_of_libqt_mt_so_3_classinfo = {
 	"_Z11QCanvasText",
 	"_ZTV11QCanvasText",
 	"_ZTI11QCanvasText",	/* RTTI */
@@ -52314,21 +52314,21 @@ struct classinfo _Z11QCanvasText_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QCanvasText_typeinfo,
-	_11QCanvasText_vtable,
-	_11QCanvasText_baseinfo,
+	&_11QCanvasText_of_libqt_mt_so_3_typeinfo,
+	_11QCanvasText_of_libqt_mt_so_3_vtable,
+	_11QCanvasText_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_15QXmlInputSource_typeinfo_name[] = {
+char *_15QXmlInputSource_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _15QXmlInputSource_typeinfo = {
+struct classtypeinfo _15QXmlInputSource_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS15QXmlInputSource",
-	_15QXmlInputSource_typeinfo_name,
+	_15QXmlInputSource_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_15QXmlInputSource_vtable_name_0 [] = {
+const char *_15QXmlInputSource_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN15QXmlInputSourceD1Ev",
 	"_ZN15QXmlInputSourceD0Ev",
 	"_ZN15QXmlInputSource7setDataERK7QString",
@@ -52340,21 +52340,21 @@ const char *_15QXmlInputSource_vtable_name_0 [] = {
 	"_ZN15QXmlInputSource11fromRawDataERK9QMemArrayIcEb",
 	};
 
-struct classvtable _15QXmlInputSource_vtable [1] = {
+struct classvtable _15QXmlInputSource_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI15QXmlInputSource",
-	_15QXmlInputSource_vtable_name_0,
+	_15QXmlInputSource_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _15QXmlInputSource_baseinfo[] = {
+struct base_type_info _15QXmlInputSource_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z15QXmlInputSource_classinfo = {
+struct classinfo _Z15QXmlInputSource_of_libqt_mt_so_3_classinfo = {
 	"_Z15QXmlInputSource",
 	"_ZTV15QXmlInputSource",
 	"_ZTI15QXmlInputSource",	/* RTTI */
@@ -52365,22 +52365,22 @@ struct classinfo _Z15QXmlInputSource_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_15QXmlInputSource_typeinfo,
-	_15QXmlInputSource_vtable,
-	_15QXmlInputSource_baseinfo,
+	&_15QXmlInputSource_of_libqt_mt_so_3_typeinfo,
+	_15QXmlInputSource_of_libqt_mt_so_3_vtable,
+	_15QXmlInputSource_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_16QDoubleValidator_typeinfo_name[] = {
+char *_16QDoubleValidator_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI10QValidator",
 	};
 
-struct classtypeinfo _16QDoubleValidator_typeinfo = {
+struct classtypeinfo _16QDoubleValidator_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS16QDoubleValidator",
-	_16QDoubleValidator_typeinfo_name,
+	_16QDoubleValidator_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_16QDoubleValidator_vtable_name_0 [] = {
+const char *_16QDoubleValidator_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK16QDoubleValidator10metaObjectEv",
 	"_ZNK16QDoubleValidator9classNameEv",
 	"_ZN16QDoubleValidator7qt_castEPKc",
@@ -52407,21 +52407,21 @@ const char *_16QDoubleValidator_vtable_name_0 [] = {
 	"_ZN16QDoubleValidator8setRangeEddi",
 	};
 
-struct classvtable _16QDoubleValidator_vtable [1] = {
+struct classvtable _16QDoubleValidator_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	24,	/* Number of Vfuncs */
 	"_ZTI16QDoubleValidator",
-	_16QDoubleValidator_vtable_name_0,
+	_16QDoubleValidator_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _16QDoubleValidator_baseinfo[] = {
+struct base_type_info _16QDoubleValidator_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z16QDoubleValidator_classinfo = {
+struct classinfo _Z16QDoubleValidator_of_libqt_mt_so_3_classinfo = {
 	"_Z16QDoubleValidator",
 	"_ZTV16QDoubleValidator",
 	"_ZTI16QDoubleValidator",	/* RTTI */
@@ -52432,21 +52432,21 @@ struct classinfo _Z16QDoubleValidator_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_16QDoubleValidator_typeinfo,
-	_16QDoubleValidator_vtable,
-	_16QDoubleValidator_baseinfo,
+	&_16QDoubleValidator_of_libqt_mt_so_3_typeinfo,
+	_16QDoubleValidator_of_libqt_mt_so_3_vtable,
+	_16QDoubleValidator_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QIODevice_typeinfo_name[] = {
+char *_9QIODevice_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _9QIODevice_typeinfo = {
+struct classtypeinfo _9QIODevice_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS9QIODevice",
-	_9QIODevice_typeinfo_name,
+	_9QIODevice_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QIODevice_vtable_name_0 [] = {
+const char *_9QIODevice_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QIODeviceD1Ev",
 	"_ZN9QIODeviceD0Ev",
 	"__cxa_pure_virtual",
@@ -52465,21 +52465,21 @@ const char *_9QIODevice_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _9QIODevice_vtable [1] = {
+struct classvtable _9QIODevice_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	16,	/* Number of Vfuncs */
 	"_ZTI9QIODevice",
-	_9QIODevice_vtable_name_0,
+	_9QIODevice_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _9QIODevice_baseinfo[] = {
+struct base_type_info _9QIODevice_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QIODevice_classinfo = {
+struct classinfo _Z9QIODevice_of_libqt_mt_so_3_classinfo = {
 	"_Z9QIODevice",
 	"_ZTV9QIODevice",
 	"_ZTI9QIODevice",	/* RTTI */
@@ -52490,22 +52490,22 @@ struct classinfo _Z9QIODevice_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QIODevice_typeinfo,
-	_9QIODevice_vtable,
-	_9QIODevice_baseinfo,
+	&_9QIODevice_of_libqt_mt_so_3_typeinfo,
+	_9QIODevice_of_libqt_mt_so_3_vtable,
+	_9QIODevice_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QInputDialog_typeinfo_name[] = {
+char *_12QInputDialog_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QDialog",
 	};
 
-struct classtypeinfo _12QInputDialog_typeinfo = {
+struct classtypeinfo _12QInputDialog_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QInputDialog",
-	_12QInputDialog_typeinfo_name,
+	_12QInputDialog_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QInputDialog_vtable_name_0 [] = {
+const char *_12QInputDialog_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK12QInputDialog10metaObjectEv",
 	"_ZNK12QInputDialog9classNameEv",
 	"_ZN12QInputDialog7qt_castEPKc",
@@ -52621,7 +52621,7 @@ const char *_12QInputDialog_vtable_name_0 [] = {
 	"_ZN7QDialog6rejectEv",
 	};
 
-const char *_12QInputDialog_vtable_name_1 [] = {
+const char *_12QInputDialog_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N12QInputDialogD1Ev",
 #endif
@@ -52695,14 +52695,14 @@ const char *_12QInputDialog_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _12QInputDialog_vtable [2] = {
+struct classvtable _12QInputDialog_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	113,	/* Number of Vfuncs */
 	"_ZTI12QInputDialog",
-	_12QInputDialog_vtable_name_0,
+	_12QInputDialog_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -52736,14 +52736,14 @@ struct classvtable _12QInputDialog_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI12QInputDialog",
-	_12QInputDialog_vtable_name_1,
+	_12QInputDialog_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _12QInputDialog_baseinfo[] = {
+struct base_type_info _12QInputDialog_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QInputDialog_classinfo = {
+struct classinfo _Z12QInputDialog_of_libqt_mt_so_3_classinfo = {
 	"_Z12QInputDialog",
 	"_ZTV12QInputDialog",
 	"_ZTI12QInputDialog",	/* RTTI */
@@ -52754,22 +52754,22 @@ struct classinfo _Z12QInputDialog_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QInputDialog_typeinfo,
-	_12QInputDialog_vtable,
-	_12QInputDialog_baseinfo,
+	&_12QInputDialog_of_libqt_mt_so_3_typeinfo,
+	_12QInputDialog_of_libqt_mt_so_3_vtable,
+	_12QInputDialog_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_6QGDict_typeinfo_name[] = {
+char *_6QGDict_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI14QPtrCollection",
 	};
 
-struct classtypeinfo _6QGDict_typeinfo = {
+struct classtypeinfo _6QGDict_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS6QGDict",
-	_6QGDict_typeinfo_name,
+	_6QGDict_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_6QGDict_vtable_name_0 [] = {
+const char *_6QGDict_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK6QGDict5countEv",
 	"_ZN6QGDict5clearEv",
 	"_ZN6QGDictD1Ev",
@@ -52780,21 +52780,21 @@ const char *_6QGDict_vtable_name_0 [] = {
 	"_ZNK6QGDict5writeER11QDataStreamPv",
 	};
 
-struct classvtable _6QGDict_vtable [1] = {
+struct classvtable _6QGDict_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	8,	/* Number of Vfuncs */
 	"_ZTI6QGDict",
-	_6QGDict_vtable_name_0,
+	_6QGDict_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _6QGDict_baseinfo[] = {
+struct base_type_info _6QGDict_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z6QGDict_classinfo = {
+struct classinfo _Z6QGDict_of_libqt_mt_so_3_classinfo = {
 	"_Z6QGDict",
 	"_ZTV6QGDict",
 	"_ZTI6QGDict",	/* RTTI */
@@ -52805,42 +52805,42 @@ struct classinfo _Z6QGDict_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_6QGDict_typeinfo,
-	_6QGDict_vtable,
-	_6QGDict_baseinfo,
+	&_6QGDict_of_libqt_mt_so_3_typeinfo,
+	_6QGDict_of_libqt_mt_so_3_vtable,
+	_6QGDict_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_16QXmlErrorHandler_typeinfo_name[] = {
+char *_16QXmlErrorHandler_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _16QXmlErrorHandler_typeinfo = {
+struct classtypeinfo _16QXmlErrorHandler_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS16QXmlErrorHandler",
-	_16QXmlErrorHandler_typeinfo_name,
+	_16QXmlErrorHandler_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_16QXmlErrorHandler_vtable_name_0 [] = {
+const char *_16QXmlErrorHandler_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _16QXmlErrorHandler_vtable [1] = {
+struct classvtable _16QXmlErrorHandler_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	4,	/* Number of Vfuncs */
 	"_ZTI16QXmlErrorHandler",
-	_16QXmlErrorHandler_vtable_name_0,
+	_16QXmlErrorHandler_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _16QXmlErrorHandler_baseinfo[] = {
+struct base_type_info _16QXmlErrorHandler_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z16QXmlErrorHandler_classinfo = {
+struct classinfo _Z16QXmlErrorHandler_of_libqt_mt_so_3_classinfo = {
 	"_Z16QXmlErrorHandler",
 	"_ZTV16QXmlErrorHandler",
 	"_ZTI16QXmlErrorHandler",	/* RTTI */
@@ -52851,22 +52851,22 @@ struct classinfo _Z16QXmlErrorHandler_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_16QXmlErrorHandler_typeinfo,
-	_16QXmlErrorHandler_vtable,
-	_16QXmlErrorHandler_baseinfo,
+	&_16QXmlErrorHandler_of_libqt_mt_so_3_typeinfo,
+	_16QXmlErrorHandler_of_libqt_mt_so_3_vtable,
+	_16QXmlErrorHandler_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QWorkspace_typeinfo_name[] = {
+char *_10QWorkspace_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo _10QWorkspace_typeinfo = {
+struct classtypeinfo _10QWorkspace_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QWorkspace",
-	_10QWorkspace_typeinfo_name,
+	_10QWorkspace_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QWorkspace_vtable_name_0 [] = {
+const char *_10QWorkspace_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK10QWorkspace10metaObjectEv",
 	"_ZNK10QWorkspace9classNameEv",
 	"_ZN10QWorkspace7qt_castEPKc",
@@ -52979,7 +52979,7 @@ const char *_10QWorkspace_vtable_name_0 [] = {
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
 	};
 
-const char *_10QWorkspace_vtable_name_1 [] = {
+const char *_10QWorkspace_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QWorkspaceD1Ev",
 #endif
@@ -53053,14 +53053,14 @@ const char *_10QWorkspace_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _10QWorkspace_vtable [2] = {
+struct classvtable _10QWorkspace_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	110,	/* Number of Vfuncs */
 	"_ZTI10QWorkspace",
-	_10QWorkspace_vtable_name_0,
+	_10QWorkspace_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -53094,14 +53094,14 @@ struct classvtable _10QWorkspace_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI10QWorkspace",
-	_10QWorkspace_vtable_name_1,
+	_10QWorkspace_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _10QWorkspace_baseinfo[] = {
+struct base_type_info _10QWorkspace_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QWorkspace_classinfo = {
+struct classinfo _Z10QWorkspace_of_libqt_mt_so_3_classinfo = {
 	"_Z10QWorkspace",
 	"_ZTV10QWorkspace",
 	"_ZTI10QWorkspace",	/* RTTI */
@@ -53112,22 +53112,22 @@ struct classinfo _Z10QWorkspace_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QWorkspace_typeinfo,
-	_10QWorkspace_vtable,
-	_10QWorkspace_baseinfo,
+	&_10QWorkspace_of_libqt_mt_so_3_typeinfo,
+	_10QWorkspace_of_libqt_mt_so_3_vtable,
+	_10QWorkspace_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QTabDialog_typeinfo_name[] = {
+char *_10QTabDialog_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QDialog",
 	};
 
-struct classtypeinfo _10QTabDialog_typeinfo = {
+struct classtypeinfo _10QTabDialog_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QTabDialog",
-	_10QTabDialog_typeinfo_name,
+	_10QTabDialog_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QTabDialog_vtable_name_0 [] = {
+const char *_10QTabDialog_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK10QTabDialog10metaObjectEv",
 	"_ZNK10QTabDialog9classNameEv",
 	"_ZN10QTabDialog7qt_castEPKc",
@@ -53243,7 +53243,7 @@ const char *_10QTabDialog_vtable_name_0 [] = {
 	"_ZN7QDialog6rejectEv",
 	};
 
-const char *_10QTabDialog_vtable_name_1 [] = {
+const char *_10QTabDialog_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QTabDialogD1Ev",
 #endif
@@ -53317,14 +53317,14 @@ const char *_10QTabDialog_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _10QTabDialog_vtable [2] = {
+struct classvtable _10QTabDialog_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	113,	/* Number of Vfuncs */
 	"_ZTI10QTabDialog",
-	_10QTabDialog_vtable_name_0,
+	_10QTabDialog_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -53358,14 +53358,14 @@ struct classvtable _10QTabDialog_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI10QTabDialog",
-	_10QTabDialog_vtable_name_1,
+	_10QTabDialog_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _10QTabDialog_baseinfo[] = {
+struct base_type_info _10QTabDialog_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QTabDialog_classinfo = {
+struct classinfo _Z10QTabDialog_of_libqt_mt_so_3_classinfo = {
 	"_Z10QTabDialog",
 	"_ZTV10QTabDialog",
 	"_ZTI10QTabDialog",	/* RTTI */
@@ -53376,22 +53376,22 @@ struct classinfo _Z10QTabDialog_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QTabDialog_typeinfo,
-	_10QTabDialog_vtable,
-	_10QTabDialog_baseinfo,
+	&_10QTabDialog_of_libqt_mt_so_3_typeinfo,
+	_10QTabDialog_of_libqt_mt_so_3_vtable,
+	_10QTabDialog_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_18QHttpRequestHeader_typeinfo_name[] = {
+char *_18QHttpRequestHeader_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI11QHttpHeader",
 	};
 
-struct classtypeinfo _18QHttpRequestHeader_typeinfo = {
+struct classtypeinfo _18QHttpRequestHeader_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS18QHttpRequestHeader",
-	_18QHttpRequestHeader_typeinfo_name,
+	_18QHttpRequestHeader_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_18QHttpRequestHeader_vtable_name_0 [] = {
+const char *_18QHttpRequestHeader_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN18QHttpRequestHeaderD1Ev",
 	"_ZN18QHttpRequestHeaderD0Ev",
 	"_ZNK18QHttpRequestHeader8toStringEv",
@@ -53400,21 +53400,21 @@ const char *_18QHttpRequestHeader_vtable_name_0 [] = {
 	"_ZN18QHttpRequestHeader9parseLineERK7QStringi",
 	};
 
-struct classvtable _18QHttpRequestHeader_vtable [1] = {
+struct classvtable _18QHttpRequestHeader_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	6,	/* Number of Vfuncs */
 	"_ZTI18QHttpRequestHeader",
-	_18QHttpRequestHeader_vtable_name_0,
+	_18QHttpRequestHeader_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _18QHttpRequestHeader_baseinfo[] = {
+struct base_type_info _18QHttpRequestHeader_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z18QHttpRequestHeader_classinfo = {
+struct classinfo _Z18QHttpRequestHeader_of_libqt_mt_so_3_classinfo = {
 	"_Z18QHttpRequestHeader",
 	"_ZTV18QHttpRequestHeader",
 	"_ZTI18QHttpRequestHeader",	/* RTTI */
@@ -53425,21 +53425,21 @@ struct classinfo _Z18QHttpRequestHeader_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_18QHttpRequestHeader_typeinfo,
-	_18QHttpRequestHeader_vtable,
-	_18QHttpRequestHeader_baseinfo,
+	&_18QHttpRequestHeader_of_libqt_mt_so_3_typeinfo,
+	_18QHttpRequestHeader_of_libqt_mt_so_3_vtable,
+	_18QHttpRequestHeader_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QDragObject_typeinfo_name[] = {
+char *_11QDragObject_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _11QDragObject_typeinfo = {
+struct classtypeinfo _11QDragObject_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
 	"_ZTS11QDragObject",
-	_11QDragObject_typeinfo_name,
+	_11QDragObject_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QDragObject_vtable_name_0 [] = {
+const char *_11QDragObject_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK11QDragObject10metaObjectEv",
 	"_ZNK11QDragObject9classNameEv",
 	"_ZN11QDragObject7qt_castEPKc",
@@ -53466,7 +53466,7 @@ const char *_11QDragObject_vtable_name_0 [] = {
 	"_ZN11QDragObject4dragENS_8DragModeE",
 	};
 
-const char *_11QDragObject_vtable_name_1 [] = {
+const char *_11QDragObject_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QDragObjectD1Ev",
 #endif
@@ -53514,14 +53514,14 @@ const char *_11QDragObject_vtable_name_1 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _11QDragObject_vtable [2] = {
+struct classvtable _11QDragObject_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	24,	/* Number of Vfuncs */
 	"_ZTI11QDragObject",
-	_11QDragObject_vtable_name_0,
+	_11QDragObject_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -53555,11 +53555,11 @@ struct classvtable _11QDragObject_vtable [2] = {
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI11QDragObject",
-	_11QDragObject_vtable_name_1,
+	_11QDragObject_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _11QDragObject_baseinfo[] = {
+struct base_type_info _11QDragObject_of_libqt_mt_so_3_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
 #if defined __i386__
 	{"_ZTI11QMimeSource",	10242U},
@@ -53584,7 +53584,7 @@ struct base_type_info _11QDragObject_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Z11QDragObject_classinfo = {
+struct classinfo _Z11QDragObject_of_libqt_mt_so_3_classinfo = {
 	"_Z11QDragObject",
 	"_ZTV11QDragObject",
 	"_ZTI11QDragObject",	/* RTTI */
@@ -53595,22 +53595,22 @@ struct classinfo _Z11QDragObject_classinfo = {
 	2,
 	0,	/* numVTT */
 	0U,
-	&_11QDragObject_typeinfo,
-	_11QDragObject_vtable,
-	_11QDragObject_baseinfo,
+	&_11QDragObject_of_libqt_mt_so_3_typeinfo,
+	_11QDragObject_of_libqt_mt_so_3_vtable,
+	_11QDragObject_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_13QToolTipGroup_typeinfo_name[] = {
+char *_13QToolTipGroup_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _13QToolTipGroup_typeinfo = {
+struct classtypeinfo _13QToolTipGroup_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS13QToolTipGroup",
-	_13QToolTipGroup_typeinfo_name,
+	_13QToolTipGroup_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_13QToolTipGroup_vtable_name_0 [] = {
+const char *_13QToolTipGroup_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK13QToolTipGroup10metaObjectEv",
 	"_ZNK13QToolTipGroup9classNameEv",
 	"_ZN13QToolTipGroup7qt_castEPKc",
@@ -53634,21 +53634,21 @@ const char *_13QToolTipGroup_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable _13QToolTipGroup_vtable [1] = {
+struct classvtable _13QToolTipGroup_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI13QToolTipGroup",
-	_13QToolTipGroup_vtable_name_0,
+	_13QToolTipGroup_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _13QToolTipGroup_baseinfo[] = {
+struct base_type_info _13QToolTipGroup_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z13QToolTipGroup_classinfo = {
+struct classinfo _Z13QToolTipGroup_of_libqt_mt_so_3_classinfo = {
 	"_Z13QToolTipGroup",
 	"_ZTV13QToolTipGroup",
 	"_ZTI13QToolTipGroup",	/* RTTI */
@@ -53659,22 +53659,22 @@ struct classinfo _Z13QToolTipGroup_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_13QToolTipGroup_typeinfo,
-	_13QToolTipGroup_vtable,
-	_13QToolTipGroup_baseinfo,
+	&_13QToolTipGroup_of_libqt_mt_so_3_typeinfo,
+	_13QToolTipGroup_of_libqt_mt_so_3_vtable,
+	_13QToolTipGroup_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_17QDateTimeEditBase_typeinfo_name[] = {
+char *_17QDateTimeEditBase_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo _17QDateTimeEditBase_typeinfo = {
+struct classtypeinfo _17QDateTimeEditBase_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS17QDateTimeEditBase",
-	_17QDateTimeEditBase_typeinfo_name,
+	_17QDateTimeEditBase_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_17QDateTimeEditBase_vtable_name_0 [] = {
+const char *_17QDateTimeEditBase_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK17QDateTimeEditBase10metaObjectEv",
 	"_ZNK17QDateTimeEditBase9classNameEv",
 	"_ZN17QDateTimeEditBase7qt_castEPKc",
@@ -53793,7 +53793,7 @@ const char *_17QDateTimeEditBase_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-const char *_17QDateTimeEditBase_vtable_name_1 [] = {
+const char *_17QDateTimeEditBase_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N17QDateTimeEditBaseD1Ev",
 #endif
@@ -53867,14 +53867,14 @@ const char *_17QDateTimeEditBase_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _17QDateTimeEditBase_vtable [2] = {
+struct classvtable _17QDateTimeEditBase_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	116,	/* Number of Vfuncs */
 	"_ZTI17QDateTimeEditBase",
-	_17QDateTimeEditBase_vtable_name_0,
+	_17QDateTimeEditBase_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -53908,14 +53908,14 @@ struct classvtable _17QDateTimeEditBase_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI17QDateTimeEditBase",
-	_17QDateTimeEditBase_vtable_name_1,
+	_17QDateTimeEditBase_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _17QDateTimeEditBase_baseinfo[] = {
+struct base_type_info _17QDateTimeEditBase_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z17QDateTimeEditBase_classinfo = {
+struct classinfo _Z17QDateTimeEditBase_of_libqt_mt_so_3_classinfo = {
 	"_Z17QDateTimeEditBase",
 	"_ZTV17QDateTimeEditBase",
 	"_ZTI17QDateTimeEditBase",	/* RTTI */
@@ -53926,21 +53926,21 @@ struct classinfo _Z17QDateTimeEditBase_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_17QDateTimeEditBase_typeinfo,
-	_17QDateTimeEditBase_vtable,
-	_17QDateTimeEditBase_baseinfo,
+	&_17QDateTimeEditBase_of_libqt_mt_so_3_typeinfo,
+	_17QDateTimeEditBase_of_libqt_mt_so_3_vtable,
+	_17QDateTimeEditBase_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QHttpHeader_typeinfo_name[] = {
+char *_11QHttpHeader_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _11QHttpHeader_typeinfo = {
+struct classtypeinfo _11QHttpHeader_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS11QHttpHeader",
-	_11QHttpHeader_typeinfo_name,
+	_11QHttpHeader_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QHttpHeader_vtable_name_0 [] = {
+const char *_11QHttpHeader_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QHttpHeaderD1Ev",
 	"_ZN11QHttpHeaderD0Ev",
 	"_ZNK11QHttpHeader8toStringEv",
@@ -53949,21 +53949,21 @@ const char *_11QHttpHeader_vtable_name_0 [] = {
 	"_ZN11QHttpHeader9parseLineERK7QStringi",
 	};
 
-struct classvtable _11QHttpHeader_vtable [1] = {
+struct classvtable _11QHttpHeader_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	6,	/* Number of Vfuncs */
 	"_ZTI11QHttpHeader",
-	_11QHttpHeader_vtable_name_0,
+	_11QHttpHeader_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QHttpHeader_baseinfo[] = {
+struct base_type_info _11QHttpHeader_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QHttpHeader_classinfo = {
+struct classinfo _Z11QHttpHeader_of_libqt_mt_so_3_classinfo = {
 	"_Z11QHttpHeader",
 	"_ZTV11QHttpHeader",
 	"_ZTI11QHttpHeader",	/* RTTI */
@@ -53974,41 +53974,41 @@ struct classinfo _Z11QHttpHeader_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QHttpHeader_typeinfo,
-	_11QHttpHeader_vtable,
-	_11QHttpHeader_baseinfo,
+	&_11QHttpHeader_of_libqt_mt_so_3_typeinfo,
+	_11QHttpHeader_of_libqt_mt_so_3_vtable,
+	_11QHttpHeader_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QShowEvent_typeinfo_name[] = {
+char *_10QShowEvent_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo _10QShowEvent_typeinfo = {
+struct classtypeinfo _10QShowEvent_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QShowEvent",
-	_10QShowEvent_typeinfo_name,
+	_10QShowEvent_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QShowEvent_vtable_name_0 [] = {
+const char *_10QShowEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN10QShowEventD1Ev",
 	"_ZN10QShowEventD0Ev",
 	};
 
-struct classvtable _10QShowEvent_vtable [1] = {
+struct classvtable _10QShowEvent_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI10QShowEvent",
-	_10QShowEvent_vtable_name_0,
+	_10QShowEvent_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _10QShowEvent_baseinfo[] = {
+struct base_type_info _10QShowEvent_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QShowEvent_classinfo = {
+struct classinfo _Z10QShowEvent_of_libqt_mt_so_3_classinfo = {
 	"_Z10QShowEvent",
 	"_ZTV10QShowEvent",
 	"_ZTI10QShowEvent",	/* RTTI */
@@ -54019,22 +54019,22 @@ struct classinfo _Z10QShowEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QShowEvent_typeinfo,
-	_10QShowEvent_vtable,
-	_10QShowEvent_baseinfo,
+	&_10QShowEvent_of_libqt_mt_so_3_typeinfo,
+	_10QShowEvent_of_libqt_mt_so_3_vtable,
+	_10QShowEvent_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_6QTable_typeinfo_name[] = {
+char *_6QTable_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI11QScrollView",
 	};
 
-struct classtypeinfo _6QTable_typeinfo = {
+struct classtypeinfo _6QTable_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS6QTable",
-	_6QTable_typeinfo_name,
+	_6QTable_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_6QTable_vtable_name_0 [] = {
+const char *_6QTable_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK6QTable10metaObjectEv",
 	"_ZNK6QTable9classNameEv",
 	"_ZN6QTable7qt_castEPKc",
@@ -54270,7 +54270,7 @@ const char *_6QTable_vtable_name_0 [] = {
 	"_ZN6QTable13columnClickedEi",
 	};
 
-const char *_6QTable_vtable_name_1 [] = {
+const char *_6QTable_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N6QTableD1Ev",
 #endif
@@ -54344,14 +54344,14 @@ const char *_6QTable_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _6QTable_vtable [2] = {
+struct classvtable _6QTable_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	233,	/* Number of Vfuncs */
 	"_ZTI6QTable",
-	_6QTable_vtable_name_0,
+	_6QTable_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -54385,14 +54385,14 @@ struct classvtable _6QTable_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI6QTable",
-	_6QTable_vtable_name_1,
+	_6QTable_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _6QTable_baseinfo[] = {
+struct base_type_info _6QTable_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z6QTable_classinfo = {
+struct classinfo _Z6QTable_of_libqt_mt_so_3_classinfo = {
 	"_Z6QTable",
 	"_ZTV6QTable",
 	"_ZTI6QTable",	/* RTTI */
@@ -54403,22 +54403,22 @@ struct classinfo _Z6QTable_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_6QTable_typeinfo,
-	_6QTable_vtable,
-	_6QTable_baseinfo,
+	&_6QTable_of_libqt_mt_so_3_typeinfo,
+	_6QTable_of_libqt_mt_so_3_vtable,
+	_6QTable_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_8QLocalFs_typeinfo_name[] = {
+char *_8QLocalFs_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI16QNetworkProtocol",
 	};
 
-struct classtypeinfo _8QLocalFs_typeinfo = {
+struct classtypeinfo _8QLocalFs_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS8QLocalFs",
-	_8QLocalFs_typeinfo_name,
+	_8QLocalFs_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_8QLocalFs_vtable_name_0 [] = {
+const char *_8QLocalFs_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK8QLocalFs10metaObjectEv",
 	"_ZNK8QLocalFs9classNameEv",
 	"_ZN8QLocalFs7qt_castEPKc",
@@ -54457,21 +54457,21 @@ const char *_8QLocalFs_vtable_name_0 [] = {
 	"_ZN16QNetworkProtocol15checkConnectionEP17QNetworkOperation",
 	};
 
-struct classvtable _8QLocalFs_vtable [1] = {
+struct classvtable _8QLocalFs_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	36,	/* Number of Vfuncs */
 	"_ZTI8QLocalFs",
-	_8QLocalFs_vtable_name_0,
+	_8QLocalFs_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _8QLocalFs_baseinfo[] = {
+struct base_type_info _8QLocalFs_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z8QLocalFs_classinfo = {
+struct classinfo _Z8QLocalFs_of_libqt_mt_so_3_classinfo = {
 	"_Z8QLocalFs",
 	"_ZTV8QLocalFs",
 	"_ZTI8QLocalFs",	/* RTTI */
@@ -54482,22 +54482,22 @@ struct classinfo _Z8QLocalFs_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_8QLocalFs_typeinfo,
-	_8QLocalFs_vtable,
-	_8QLocalFs_baseinfo,
+	&_8QLocalFs_of_libqt_mt_so_3_typeinfo,
+	_8QLocalFs_of_libqt_mt_so_3_vtable,
+	_8QLocalFs_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_14QCanvasPolygon_typeinfo_name[] = {
+char *_14QCanvasPolygon_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI20QCanvasPolygonalItem",
 	};
 
-struct classtypeinfo _14QCanvasPolygon_typeinfo = {
+struct classtypeinfo _14QCanvasPolygon_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS14QCanvasPolygon",
-	_14QCanvasPolygon_typeinfo_name,
+	_14QCanvasPolygon_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_14QCanvasPolygon_vtable_name_0 [] = {
+const char *_14QCanvasPolygon_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN14QCanvasPolygonD1Ev",
 	"_ZN14QCanvasPolygonD0Ev",
 	"_ZN14QCanvasPolygon6moveByEdd",
@@ -54526,21 +54526,21 @@ const char *_14QCanvasPolygon_vtable_name_0 [] = {
 	"_ZN14QCanvasPolygon9drawShapeER8QPainter",
 	};
 
-struct classvtable _14QCanvasPolygon_vtable [1] = {
+struct classvtable _14QCanvasPolygon_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	26,	/* Number of Vfuncs */
 	"_ZTI14QCanvasPolygon",
-	_14QCanvasPolygon_vtable_name_0,
+	_14QCanvasPolygon_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _14QCanvasPolygon_baseinfo[] = {
+struct base_type_info _14QCanvasPolygon_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z14QCanvasPolygon_classinfo = {
+struct classinfo _Z14QCanvasPolygon_of_libqt_mt_so_3_classinfo = {
 	"_Z14QCanvasPolygon",
 	"_ZTV14QCanvasPolygon",
 	"_ZTI14QCanvasPolygon",	/* RTTI */
@@ -54551,22 +54551,22 @@ struct classinfo _Z14QCanvasPolygon_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_14QCanvasPolygon_typeinfo,
-	_14QCanvasPolygon_vtable,
-	_14QCanvasPolygon_baseinfo,
+	&_14QCanvasPolygon_of_libqt_mt_so_3_typeinfo,
+	_14QCanvasPolygon_of_libqt_mt_so_3_vtable,
+	_14QCanvasPolygon_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QDateEdit_typeinfo_name[] = {
+char *_9QDateEdit_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI17QDateTimeEditBase",
 	};
 
-struct classtypeinfo _9QDateEdit_typeinfo = {
+struct classtypeinfo _9QDateEdit_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QDateEdit",
-	_9QDateEdit_typeinfo_name,
+	_9QDateEdit_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QDateEdit_vtable_name_0 [] = {
+const char *_9QDateEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK9QDateEdit10metaObjectEv",
 	"_ZNK9QDateEdit9classNameEv",
 	"_ZN9QDateEdit7qt_castEPKc",
@@ -54697,7 +54697,7 @@ const char *_9QDateEdit_vtable_name_0 [] = {
 	"_ZNK9QDateEdit10outOfRangeEiii",
 	};
 
-const char *_9QDateEdit_vtable_name_1 [] = {
+const char *_9QDateEdit_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QDateEditD1Ev",
 #endif
@@ -54771,14 +54771,14 @@ const char *_9QDateEdit_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _9QDateEdit_vtable [2] = {
+struct classvtable _9QDateEdit_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	128,	/* Number of Vfuncs */
 	"_ZTI9QDateEdit",
-	_9QDateEdit_vtable_name_0,
+	_9QDateEdit_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -54812,14 +54812,14 @@ struct classvtable _9QDateEdit_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QDateEdit",
-	_9QDateEdit_vtable_name_1,
+	_9QDateEdit_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _9QDateEdit_baseinfo[] = {
+struct base_type_info _9QDateEdit_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QDateEdit_classinfo = {
+struct classinfo _Z9QDateEdit_of_libqt_mt_so_3_classinfo = {
 	"_Z9QDateEdit",
 	"_ZTV9QDateEdit",
 	"_ZTI9QDateEdit",	/* RTTI */
@@ -54830,41 +54830,41 @@ struct classinfo _Z9QDateEdit_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QDateEdit_typeinfo,
-	_9QDateEdit_vtable,
-	_9QDateEdit_baseinfo,
+	&_9QDateEdit_of_libqt_mt_so_3_typeinfo,
+	_9QDateEdit_of_libqt_mt_so_3_vtable,
+	_9QDateEdit_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QPaintEvent_typeinfo_name[] = {
+char *_11QPaintEvent_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo _11QPaintEvent_typeinfo = {
+struct classtypeinfo _11QPaintEvent_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QPaintEvent",
-	_11QPaintEvent_typeinfo_name,
+	_11QPaintEvent_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QPaintEvent_vtable_name_0 [] = {
+const char *_11QPaintEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QPaintEventD1Ev",
 	"_ZN11QPaintEventD0Ev",
 	};
 
-struct classvtable _11QPaintEvent_vtable [1] = {
+struct classvtable _11QPaintEvent_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI11QPaintEvent",
-	_11QPaintEvent_vtable_name_0,
+	_11QPaintEvent_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QPaintEvent_baseinfo[] = {
+struct base_type_info _11QPaintEvent_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QPaintEvent_classinfo = {
+struct classinfo _Z11QPaintEvent_of_libqt_mt_so_3_classinfo = {
 	"_Z11QPaintEvent",
 	"_ZTV11QPaintEvent",
 	"_ZTI11QPaintEvent",	/* RTTI */
@@ -54875,22 +54875,22 @@ struct classinfo _Z11QPaintEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QPaintEvent_typeinfo,
-	_11QPaintEvent_vtable,
-	_11QPaintEvent_baseinfo,
+	&_11QPaintEvent_of_libqt_mt_so_3_typeinfo,
+	_11QPaintEvent_of_libqt_mt_so_3_vtable,
+	_11QPaintEvent_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_6QAccel_typeinfo_name[] = {
+char *_6QAccel_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _6QAccel_typeinfo = {
+struct classtypeinfo _6QAccel_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS6QAccel",
-	_6QAccel_typeinfo_name,
+	_6QAccel_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_6QAccel_vtable_name_0 [] = {
+const char *_6QAccel_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK6QAccel10metaObjectEv",
 	"_ZNK6QAccel9classNameEv",
 	"_ZN6QAccel7qt_castEPKc",
@@ -54914,21 +54914,21 @@ const char *_6QAccel_vtable_name_0 [] = {
 	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
 	};
 
-struct classvtable _6QAccel_vtable [1] = {
+struct classvtable _6QAccel_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI6QAccel",
-	_6QAccel_vtable_name_0,
+	_6QAccel_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _6QAccel_baseinfo[] = {
+struct base_type_info _6QAccel_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z6QAccel_classinfo = {
+struct classinfo _Z6QAccel_of_libqt_mt_so_3_classinfo = {
 	"_Z6QAccel",
 	"_ZTV6QAccel",
 	"_ZTI6QAccel",	/* RTTI */
@@ -54939,22 +54939,22 @@ struct classinfo _Z6QAccel_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_6QAccel_typeinfo,
-	_6QAccel_vtable,
-	_6QAccel_baseinfo,
+	&_6QAccel_of_libqt_mt_so_3_typeinfo,
+	_6QAccel_of_libqt_mt_so_3_vtable,
+	_6QAccel_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_7QCanvas_typeinfo_name[] = {
+char *_7QCanvas_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _7QCanvas_typeinfo = {
+struct classtypeinfo _7QCanvas_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS7QCanvas",
-	_7QCanvas_typeinfo_name,
+	_7QCanvas_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_7QCanvas_vtable_name_0 [] = {
+const char *_7QCanvas_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QCanvas10metaObjectEv",
 	"_ZNK7QCanvas9classNameEv",
 	"_ZN7QCanvas7qt_castEPKc",
@@ -55002,21 +55002,21 @@ const char *_7QCanvas_vtable_name_0 [] = {
 	"_ZN7QCanvas14drawForegroundER8QPainterRK5QRect",
 	};
 
-struct classvtable _7QCanvas_vtable [1] = {
+struct classvtable _7QCanvas_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	45,	/* Number of Vfuncs */
 	"_ZTI7QCanvas",
-	_7QCanvas_vtable_name_0,
+	_7QCanvas_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _7QCanvas_baseinfo[] = {
+struct base_type_info _7QCanvas_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z7QCanvas_classinfo = {
+struct classinfo _Z7QCanvas_of_libqt_mt_so_3_classinfo = {
 	"_Z7QCanvas",
 	"_ZTV7QCanvas",
 	"_ZTI7QCanvas",	/* RTTI */
@@ -55027,22 +55027,22 @@ struct classinfo _Z7QCanvas_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_7QCanvas_typeinfo,
-	_7QCanvas_vtable,
-	_7QCanvas_baseinfo,
+	&_7QCanvas_of_libqt_mt_so_3_typeinfo,
+	_7QCanvas_of_libqt_mt_so_3_vtable,
+	_7QCanvas_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_20QDomDocumentFragment_typeinfo_name[] = {
+char *_20QDomDocumentFragment_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI8QDomNode",
 	};
 
-struct classtypeinfo _20QDomDocumentFragment_typeinfo = {
+struct classtypeinfo _20QDomDocumentFragment_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS20QDomDocumentFragment",
-	_20QDomDocumentFragment_typeinfo_name,
+	_20QDomDocumentFragment_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_20QDomDocumentFragment_vtable_name_0 [] = {
+const char *_20QDomDocumentFragment_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN20QDomDocumentFragmentD1Ev",
 	"_ZN20QDomDocumentFragmentD0Ev",
 	"_ZN8QDomNode12insertBeforeERKS_S1_",
@@ -55086,21 +55086,21 @@ const char *_20QDomDocumentFragment_vtable_name_0 [] = {
 	"_ZNK8QDomNode9isCommentEv",
 	};
 
-struct classvtable _20QDomDocumentFragment_vtable [1] = {
+struct classvtable _20QDomDocumentFragment_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	41,	/* Number of Vfuncs */
 	"_ZTI20QDomDocumentFragment",
-	_20QDomDocumentFragment_vtable_name_0,
+	_20QDomDocumentFragment_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _20QDomDocumentFragment_baseinfo[] = {
+struct base_type_info _20QDomDocumentFragment_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z20QDomDocumentFragment_classinfo = {
+struct classinfo _Z20QDomDocumentFragment_of_libqt_mt_so_3_classinfo = {
 	"_Z20QDomDocumentFragment",
 	"_ZTV20QDomDocumentFragment",
 	"_ZTI20QDomDocumentFragment",	/* RTTI */
@@ -55111,40 +55111,40 @@ struct classinfo _Z20QDomDocumentFragment_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_20QDomDocumentFragment_typeinfo,
-	_20QDomDocumentFragment_vtable,
-	_20QDomDocumentFragment_baseinfo,
+	&_20QDomDocumentFragment_of_libqt_mt_so_3_typeinfo,
+	_20QDomDocumentFragment_of_libqt_mt_so_3_vtable,
+	_20QDomDocumentFragment_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QDataStream_typeinfo_name[] = {
+char *_11QDataStream_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _11QDataStream_typeinfo = {
+struct classtypeinfo _11QDataStream_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS11QDataStream",
-	_11QDataStream_typeinfo_name,
+	_11QDataStream_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QDataStream_vtable_name_0 [] = {
+const char *_11QDataStream_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QDataStreamD1Ev",
 	"_ZN11QDataStreamD0Ev",
 	};
 
-struct classvtable _11QDataStream_vtable [1] = {
+struct classvtable _11QDataStream_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI11QDataStream",
-	_11QDataStream_vtable_name_0,
+	_11QDataStream_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QDataStream_baseinfo[] = {
+struct base_type_info _11QDataStream_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QDataStream_classinfo = {
+struct classinfo _Z11QDataStream_of_libqt_mt_so_3_classinfo = {
 	"_Z11QDataStream",
 	"_ZTV11QDataStream",
 	"_ZTI11QDataStream",	/* RTTI */
@@ -55155,21 +55155,21 @@ struct classinfo _Z11QDataStream_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QDataStream_typeinfo,
-	_11QDataStream_vtable,
-	_11QDataStream_baseinfo,
+	&_11QDataStream_of_libqt_mt_so_3_typeinfo,
+	_11QDataStream_of_libqt_mt_so_3_vtable,
+	_11QDataStream_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_14QJpUnicodeConv_typeinfo_name[] = {
+char *_14QJpUnicodeConv_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _14QJpUnicodeConv_typeinfo = {
+struct classtypeinfo _14QJpUnicodeConv_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS14QJpUnicodeConv",
-	_14QJpUnicodeConv_typeinfo_name,
+	_14QJpUnicodeConv_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_14QJpUnicodeConv_vtable_name_0 [] = {
+const char *_14QJpUnicodeConv_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK14QJpUnicodeConv14asciiToUnicodeEjj",
 	"_ZNK14QJpUnicodeConv22jisx0201LatinToUnicodeEjj",
 	"_ZNK14QJpUnicodeConv17jisx0208ToUnicodeEjj",
@@ -55180,21 +55180,21 @@ const char *_14QJpUnicodeConv_vtable_name_0 [] = {
 	"_ZNK14QJpUnicodeConv17unicodeToJisx0212Ejj",
 	};
 
-struct classvtable _14QJpUnicodeConv_vtable [1] = {
+struct classvtable _14QJpUnicodeConv_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	8,	/* Number of Vfuncs */
 	"_ZTI14QJpUnicodeConv",
-	_14QJpUnicodeConv_vtable_name_0,
+	_14QJpUnicodeConv_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _14QJpUnicodeConv_baseinfo[] = {
+struct base_type_info _14QJpUnicodeConv_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z14QJpUnicodeConv_classinfo = {
+struct classinfo _Z14QJpUnicodeConv_of_libqt_mt_so_3_classinfo = {
 	"_Z14QJpUnicodeConv",
 	"_ZTV14QJpUnicodeConv",
 	"_ZTI14QJpUnicodeConv",	/* RTTI */
@@ -55205,22 +55205,22 @@ struct classinfo _Z14QJpUnicodeConv_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_14QJpUnicodeConv_typeinfo,
-	_14QJpUnicodeConv_vtable,
-	_14QJpUnicodeConv_baseinfo,
+	&_14QJpUnicodeConv_of_libqt_mt_so_3_typeinfo,
+	_14QJpUnicodeConv_of_libqt_mt_so_3_vtable,
+	_14QJpUnicodeConv_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QPushButton_typeinfo_name[] = {
+char *_11QPushButton_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QButton",
 	};
 
-struct classtypeinfo _11QPushButton_typeinfo = {
+struct classtypeinfo _11QPushButton_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QPushButton",
-	_11QPushButton_typeinfo_name,
+	_11QPushButton_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QPushButton_vtable_name_0 [] = {
+const char *_11QPushButton_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK11QPushButton10metaObjectEv",
 	"_ZNK11QPushButton9classNameEv",
 	"_ZN11QPushButton7qt_castEPKc",
@@ -55348,7 +55348,7 @@ const char *_11QPushButton_vtable_name_0 [] = {
 	"_ZN11QPushButton5setOnEb",
 	};
 
-const char *_11QPushButton_vtable_name_1 [] = {
+const char *_11QPushButton_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QPushButtonD1Ev",
 #endif
@@ -55422,14 +55422,14 @@ const char *_11QPushButton_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _11QPushButton_vtable [2] = {
+struct classvtable _11QPushButton_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	125,	/* Number of Vfuncs */
 	"_ZTI11QPushButton",
-	_11QPushButton_vtable_name_0,
+	_11QPushButton_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -55463,14 +55463,14 @@ struct classvtable _11QPushButton_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI11QPushButton",
-	_11QPushButton_vtable_name_1,
+	_11QPushButton_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _11QPushButton_baseinfo[] = {
+struct base_type_info _11QPushButton_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QPushButton_classinfo = {
+struct classinfo _Z11QPushButton_of_libqt_mt_so_3_classinfo = {
 	"_Z11QPushButton",
 	"_ZTV11QPushButton",
 	"_ZTI11QPushButton",	/* RTTI */
@@ -55481,22 +55481,22 @@ struct classinfo _Z11QPushButton_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QPushButton_typeinfo,
-	_11QPushButton_vtable,
-	_11QPushButton_baseinfo,
+	&_11QPushButton_of_libqt_mt_so_3_typeinfo,
+	_11QPushButton_of_libqt_mt_so_3_vtable,
+	_11QPushButton_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QWidgetList_typeinfo_name[] = {
+char *_11QWidgetList_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI8QPtrListI7QWidgetE",
 	};
 
-struct classtypeinfo _11QWidgetList_typeinfo = {
+struct classtypeinfo _11QWidgetList_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QWidgetList",
-	_11QWidgetList_typeinfo_name,
+	_11QWidgetList_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QWidgetList_vtable_name_0 [] = {
+const char *_11QWidgetList_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK8QPtrListI7QWidgetE5countEv",
 	"_ZN8QPtrListI7QWidgetE5clearEv",
 	"_ZN11QWidgetListD1Ev",
@@ -55508,21 +55508,21 @@ const char *_11QWidgetList_vtable_name_0 [] = {
 	"_ZNK6QGList5writeER11QDataStreamPv",
 	};
 
-struct classvtable _11QWidgetList_vtable [1] = {
+struct classvtable _11QWidgetList_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI11QWidgetList",
-	_11QWidgetList_vtable_name_0,
+	_11QWidgetList_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QWidgetList_baseinfo[] = {
+struct base_type_info _11QWidgetList_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QWidgetList_classinfo = {
+struct classinfo _Z11QWidgetList_of_libqt_mt_so_3_classinfo = {
 	"_Z11QWidgetList",
 	"_ZTV11QWidgetList",
 	"_ZTI11QWidgetList",	/* RTTI */
@@ -55533,21 +55533,21 @@ struct classinfo _Z11QWidgetList_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QWidgetList_typeinfo,
-	_11QWidgetList_vtable,
-	_11QWidgetList_baseinfo,
+	&_11QWidgetList_of_libqt_mt_so_3_typeinfo,
+	_11QWidgetList_of_libqt_mt_so_3_vtable,
+	_11QWidgetList_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QMenuData_typeinfo_name[] = {
+char *_9QMenuData_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _9QMenuData_typeinfo = {
+struct classtypeinfo _9QMenuData_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS9QMenuData",
-	_9QMenuData_typeinfo_name,
+	_9QMenuData_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QMenuData_vtable_name_0 [] = {
+const char *_9QMenuData_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QMenuDataD1Ev",
 	"_ZN9QMenuDataD0Ev",
 	"_ZN9QMenuData10updateItemEi",
@@ -55559,21 +55559,21 @@ const char *_9QMenuData_vtable_name_0 [] = {
 	"_ZN9QMenuData12menuDelPopupEP10QPopupMenu",
 	};
 
-struct classvtable _9QMenuData_vtable [1] = {
+struct classvtable _9QMenuData_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI9QMenuData",
-	_9QMenuData_vtable_name_0,
+	_9QMenuData_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _9QMenuData_baseinfo[] = {
+struct base_type_info _9QMenuData_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QMenuData_classinfo = {
+struct classinfo _Z9QMenuData_of_libqt_mt_so_3_classinfo = {
 	"_Z9QMenuData",
 	"_ZTV9QMenuData",
 	"_ZTI9QMenuData",	/* RTTI */
@@ -55584,22 +55584,22 @@ struct classinfo _Z9QMenuData_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QMenuData_typeinfo,
-	_9QMenuData_vtable,
-	_9QMenuData_baseinfo,
+	&_9QMenuData_of_libqt_mt_so_3_typeinfo,
+	_9QMenuData_of_libqt_mt_so_3_vtable,
+	_9QMenuData_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QDataView_typeinfo_name[] = {
+char *_9QDataView_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo _9QDataView_typeinfo = {
+struct classtypeinfo _9QDataView_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QDataView",
-	_9QDataView_typeinfo_name,
+	_9QDataView_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QDataView_vtable_name_0 [] = {
+const char *_9QDataView_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK9QDataView10metaObjectEv",
 	"_ZNK9QDataView9classNameEv",
 	"_ZN9QDataView7qt_castEPKc",
@@ -55718,7 +55718,7 @@ const char *_9QDataView_vtable_name_0 [] = {
 	"_ZN9QDataView11clearValuesEv",
 	};
 
-const char *_9QDataView_vtable_name_1 [] = {
+const char *_9QDataView_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QDataViewD1Ev",
 #endif
@@ -55792,14 +55792,14 @@ const char *_9QDataView_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _9QDataView_vtable [2] = {
+struct classvtable _9QDataView_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	116,	/* Number of Vfuncs */
 	"_ZTI9QDataView",
-	_9QDataView_vtable_name_0,
+	_9QDataView_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -55833,14 +55833,14 @@ struct classvtable _9QDataView_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QDataView",
-	_9QDataView_vtable_name_1,
+	_9QDataView_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _9QDataView_baseinfo[] = {
+struct base_type_info _9QDataView_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QDataView_classinfo = {
+struct classinfo _Z9QDataView_of_libqt_mt_so_3_classinfo = {
 	"_Z9QDataView",
 	"_ZTV9QDataView",
 	"_ZTI9QDataView",	/* RTTI */
@@ -55851,22 +55851,22 @@ struct classinfo _Z9QDataView_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QDataView_typeinfo,
-	_9QDataView_vtable,
-	_9QDataView_baseinfo,
+	&_9QDataView_of_libqt_mt_so_3_typeinfo,
+	_9QDataView_of_libqt_mt_so_3_vtable,
+	_9QDataView_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_17QSqlEditorFactory_typeinfo_name[] = {
+char *_17QSqlEditorFactory_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI14QEditorFactory",
 	};
 
-struct classtypeinfo _17QSqlEditorFactory_typeinfo = {
+struct classtypeinfo _17QSqlEditorFactory_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS17QSqlEditorFactory",
-	_17QSqlEditorFactory_typeinfo_name,
+	_17QSqlEditorFactory_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_17QSqlEditorFactory_vtable_name_0 [] = {
+const char *_17QSqlEditorFactory_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QObject10metaObjectEv",
 	"_ZNK7QObject9classNameEv",
 	"_ZN7QObject7qt_castEPKc",
@@ -55892,21 +55892,21 @@ const char *_17QSqlEditorFactory_vtable_name_0 [] = {
 	"_ZN17QSqlEditorFactory12createEditorEP7QWidgetPK9QSqlField",
 	};
 
-struct classvtable _17QSqlEditorFactory_vtable [1] = {
+struct classvtable _17QSqlEditorFactory_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	23,	/* Number of Vfuncs */
 	"_ZTI17QSqlEditorFactory",
-	_17QSqlEditorFactory_vtable_name_0,
+	_17QSqlEditorFactory_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _17QSqlEditorFactory_baseinfo[] = {
+struct base_type_info _17QSqlEditorFactory_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z17QSqlEditorFactory_classinfo = {
+struct classinfo _Z17QSqlEditorFactory_of_libqt_mt_so_3_classinfo = {
 	"_Z17QSqlEditorFactory",
 	"_ZTV17QSqlEditorFactory",
 	"_ZTI17QSqlEditorFactory",	/* RTTI */
@@ -55917,22 +55917,22 @@ struct classinfo _Z17QSqlEditorFactory_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_17QSqlEditorFactory_typeinfo,
-	_17QSqlEditorFactory_vtable,
-	_17QSqlEditorFactory_baseinfo,
+	&_17QSqlEditorFactory_of_libqt_mt_so_3_typeinfo,
+	_17QSqlEditorFactory_of_libqt_mt_so_3_vtable,
+	_17QSqlEditorFactory_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_15QConnectionList_typeinfo_name[] = {
+char *_15QConnectionList_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI8QPtrListI11QConnectionE",
 	};
 
-struct classtypeinfo _15QConnectionList_typeinfo = {
+struct classtypeinfo _15QConnectionList_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS15QConnectionList",
-	_15QConnectionList_typeinfo_name,
+	_15QConnectionList_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_15QConnectionList_vtable_name_0 [] = {
+const char *_15QConnectionList_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK8QPtrListI11QConnectionE5countEv",
 	"_ZN8QPtrListI11QConnectionE5clearEv",
 	"_ZN15QConnectionListD1Ev",
@@ -55944,21 +55944,21 @@ const char *_15QConnectionList_vtable_name_0 [] = {
 	"_ZNK6QGList5writeER11QDataStreamPv",
 	};
 
-struct classvtable _15QConnectionList_vtable [1] = {
+struct classvtable _15QConnectionList_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	9,	/* Number of Vfuncs */
 	"_ZTI15QConnectionList",
-	_15QConnectionList_vtable_name_0,
+	_15QConnectionList_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _15QConnectionList_baseinfo[] = {
+struct base_type_info _15QConnectionList_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z15QConnectionList_classinfo = {
+struct classinfo _Z15QConnectionList_of_libqt_mt_so_3_classinfo = {
 	"_Z15QConnectionList",
 	"_ZTV15QConnectionList",
 	"_ZTI15QConnectionList",	/* RTTI */
@@ -55969,21 +55969,21 @@ struct classinfo _Z15QConnectionList_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_15QConnectionList_typeinfo,
-	_15QConnectionList_vtable,
-	_15QConnectionList_baseinfo,
+	&_15QConnectionList_of_libqt_mt_so_3_typeinfo,
+	_15QConnectionList_of_libqt_mt_so_3_vtable,
+	_15QConnectionList_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QSqlCursor_typeinfo_name[] = {
+char *_10QSqlCursor_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _10QSqlCursor_typeinfo = {
+struct classtypeinfo _10QSqlCursor_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
 	"_ZTS10QSqlCursor",
-	_10QSqlCursor_typeinfo_name,
+	_10QSqlCursor_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QSqlCursor_vtable_name_0 [] = {
+const char *_10QSqlCursor_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN10QSqlCursorD1Ev",
 	"_ZN10QSqlCursorD0Ev",
 	"_ZNK10QSqlCursor5valueEi",
@@ -56030,7 +56030,7 @@ const char *_10QSqlCursor_vtable_name_0 [] = {
 	"_ZNK10QSqlCursor8toStringERK9QSqlIndexP10QSqlRecordRK7QStringS7_S7_",
 	};
 
-const char *_10QSqlCursor_vtable_name_1 [] = {
+const char *_10QSqlCursor_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn8_N10QSqlCursorD1Ev",
 #endif
@@ -56144,14 +56144,14 @@ const char *_10QSqlCursor_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable _10QSqlCursor_vtable [2] = {
+struct classvtable _10QSqlCursor_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	44,	/* Number of Vfuncs */
 	"_ZTI10QSqlCursor",
-	_10QSqlCursor_vtable_name_0,
+	_10QSqlCursor_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -56185,11 +56185,11 @@ struct classvtable _10QSqlCursor_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI10QSqlCursor",
-	_10QSqlCursor_vtable_name_1,
+	_10QSqlCursor_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _10QSqlCursor_baseinfo[] = {
+struct base_type_info _10QSqlCursor_of_libqt_mt_so_3_baseinfo[] = {
 	{"_ZTI10QSqlRecord",	2U},
 #if defined __i386__
 	{"_ZTI9QSqlQuery",	2050U},
@@ -56214,7 +56214,7 @@ struct base_type_info _10QSqlCursor_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Z10QSqlCursor_classinfo = {
+struct classinfo _Z10QSqlCursor_of_libqt_mt_so_3_classinfo = {
 	"_Z10QSqlCursor",
 	"_ZTV10QSqlCursor",
 	"_ZTI10QSqlCursor",	/* RTTI */
@@ -56225,22 +56225,22 @@ struct classinfo _Z10QSqlCursor_classinfo = {
 	2,
 	0,	/* numVTT */
 	0U,
-	&_10QSqlCursor_typeinfo,
-	_10QSqlCursor_vtable,
-	_10QSqlCursor_baseinfo,
+	&_10QSqlCursor_of_libqt_mt_so_3_typeinfo,
+	_10QSqlCursor_of_libqt_mt_so_3_vtable,
+	_10QSqlCursor_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_7QAction_typeinfo_name[] = {
+char *_7QAction_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _7QAction_typeinfo = {
+struct classtypeinfo _7QAction_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS7QAction",
-	_7QAction_typeinfo_name,
+	_7QAction_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_7QAction_vtable_name_0 [] = {
+const char *_7QAction_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QAction10metaObjectEv",
 	"_ZNK7QAction9classNameEv",
 	"_ZN7QAction7qt_castEPKc",
@@ -56278,21 +56278,21 @@ const char *_7QAction_vtable_name_0 [] = {
 	"_ZN7QAction10setEnabledEb",
 	};
 
-struct classvtable _7QAction_vtable [1] = {
+struct classvtable _7QAction_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	35,	/* Number of Vfuncs */
 	"_ZTI7QAction",
-	_7QAction_vtable_name_0,
+	_7QAction_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _7QAction_baseinfo[] = {
+struct base_type_info _7QAction_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z7QAction_classinfo = {
+struct classinfo _Z7QAction_of_libqt_mt_so_3_classinfo = {
 	"_Z7QAction",
 	"_ZTV7QAction",
 	"_ZTI7QAction",	/* RTTI */
@@ -56303,40 +56303,40 @@ struct classinfo _Z7QAction_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_7QAction_typeinfo,
-	_7QAction_vtable,
-	_7QAction_baseinfo,
+	&_7QAction_of_libqt_mt_so_3_typeinfo,
+	_7QAction_of_libqt_mt_so_3_vtable,
+	_7QAction_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QHostAddress_typeinfo_name[] = {
+char *_12QHostAddress_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _12QHostAddress_typeinfo = {
+struct classtypeinfo _12QHostAddress_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS12QHostAddress",
-	_12QHostAddress_typeinfo_name,
+	_12QHostAddress_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QHostAddress_vtable_name_0 [] = {
+const char *_12QHostAddress_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN12QHostAddressD1Ev",
 	"_ZN12QHostAddressD0Ev",
 	};
 
-struct classvtable _12QHostAddress_vtable [1] = {
+struct classvtable _12QHostAddress_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI12QHostAddress",
-	_12QHostAddress_vtable_name_0,
+	_12QHostAddress_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QHostAddress_baseinfo[] = {
+struct base_type_info _12QHostAddress_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QHostAddress_classinfo = {
+struct classinfo _Z12QHostAddress_of_libqt_mt_so_3_classinfo = {
 	"_Z12QHostAddress",
 	"_ZTV12QHostAddress",
 	"_ZTI12QHostAddress",	/* RTTI */
@@ -56347,41 +56347,41 @@ struct classinfo _Z12QHostAddress_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QHostAddress_typeinfo,
-	_12QHostAddress_vtable,
-	_12QHostAddress_baseinfo,
+	&_12QHostAddress_of_libqt_mt_so_3_typeinfo,
+	_12QHostAddress_of_libqt_mt_so_3_vtable,
+	_12QHostAddress_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QWheelEvent_typeinfo_name[] = {
+char *_11QWheelEvent_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo _11QWheelEvent_typeinfo = {
+struct classtypeinfo _11QWheelEvent_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QWheelEvent",
-	_11QWheelEvent_typeinfo_name,
+	_11QWheelEvent_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QWheelEvent_vtable_name_0 [] = {
+const char *_11QWheelEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QWheelEventD1Ev",
 	"_ZN11QWheelEventD0Ev",
 	};
 
-struct classvtable _11QWheelEvent_vtable [1] = {
+struct classvtable _11QWheelEvent_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI11QWheelEvent",
-	_11QWheelEvent_vtable_name_0,
+	_11QWheelEvent_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QWheelEvent_baseinfo[] = {
+struct base_type_info _11QWheelEvent_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QWheelEvent_classinfo = {
+struct classinfo _Z11QWheelEvent_of_libqt_mt_so_3_classinfo = {
 	"_Z11QWheelEvent",
 	"_ZTV11QWheelEvent",
 	"_ZTI11QWheelEvent",	/* RTTI */
@@ -56392,22 +56392,22 @@ struct classinfo _Z11QWheelEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QWheelEvent_typeinfo,
-	_11QWheelEvent_vtable,
-	_11QWheelEvent_baseinfo,
+	&_11QWheelEvent_of_libqt_mt_so_3_typeinfo,
+	_11QWheelEvent_of_libqt_mt_so_3_vtable,
+	_11QWheelEvent_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_12QDataBrowser_typeinfo_name[] = {
+char *_12QDataBrowser_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QWidget",
 	};
 
-struct classtypeinfo _12QDataBrowser_typeinfo = {
+struct classtypeinfo _12QDataBrowser_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QDataBrowser",
-	_12QDataBrowser_typeinfo_name,
+	_12QDataBrowser_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_12QDataBrowser_vtable_name_0 [] = {
+const char *_12QDataBrowser_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK12QDataBrowser10metaObjectEv",
 	"_ZNK12QDataBrowser9classNameEv",
 	"_ZN12QDataBrowser7qt_castEPKc",
@@ -56548,7 +56548,7 @@ const char *_12QDataBrowser_vtable_name_0 [] = {
 	"_ZN12QDataBrowser11handleErrorERK9QSqlError",
 	};
 
-const char *_12QDataBrowser_vtable_name_1 [] = {
+const char *_12QDataBrowser_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N12QDataBrowserD1Ev",
 #endif
@@ -56622,14 +56622,14 @@ const char *_12QDataBrowser_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _12QDataBrowser_vtable [2] = {
+struct classvtable _12QDataBrowser_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	138,	/* Number of Vfuncs */
 	"_ZTI12QDataBrowser",
-	_12QDataBrowser_vtable_name_0,
+	_12QDataBrowser_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -56663,14 +56663,14 @@ struct classvtable _12QDataBrowser_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI12QDataBrowser",
-	_12QDataBrowser_vtable_name_1,
+	_12QDataBrowser_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _12QDataBrowser_baseinfo[] = {
+struct base_type_info _12QDataBrowser_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z12QDataBrowser_classinfo = {
+struct classinfo _Z12QDataBrowser_of_libqt_mt_so_3_classinfo = {
 	"_Z12QDataBrowser",
 	"_ZTV12QDataBrowser",
 	"_ZTI12QDataBrowser",	/* RTTI */
@@ -56681,22 +56681,22 @@ struct classinfo _Z12QDataBrowser_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QDataBrowser_typeinfo,
-	_12QDataBrowser_vtable,
-	_12QDataBrowser_baseinfo,
+	&_12QDataBrowser_of_libqt_mt_so_3_typeinfo,
+	_12QDataBrowser_of_libqt_mt_so_3_vtable,
+	_12QDataBrowser_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QTimeEdit_typeinfo_name[] = {
+char *_9QTimeEdit_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI17QDateTimeEditBase",
 	};
 
-struct classtypeinfo _9QTimeEdit_typeinfo = {
+struct classtypeinfo _9QTimeEdit_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QTimeEdit",
-	_9QTimeEdit_typeinfo_name,
+	_9QTimeEdit_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QTimeEdit_vtable_name_0 [] = {
+const char *_9QTimeEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK9QTimeEdit10metaObjectEv",
 	"_ZNK9QTimeEdit9classNameEv",
 	"_ZN9QTimeEdit7qt_castEPKc",
@@ -56825,7 +56825,7 @@ const char *_9QTimeEdit_vtable_name_0 [] = {
 	"_ZN9QTimeEdit9setSecondEi",
 	};
 
-const char *_9QTimeEdit_vtable_name_1 [] = {
+const char *_9QTimeEdit_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QTimeEditD1Ev",
 #endif
@@ -56899,14 +56899,14 @@ const char *_9QTimeEdit_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _9QTimeEdit_vtable [2] = {
+struct classvtable _9QTimeEdit_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	126,	/* Number of Vfuncs */
 	"_ZTI9QTimeEdit",
-	_9QTimeEdit_vtable_name_0,
+	_9QTimeEdit_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -56940,14 +56940,14 @@ struct classvtable _9QTimeEdit_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QTimeEdit",
-	_9QTimeEdit_vtable_name_1,
+	_9QTimeEdit_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _9QTimeEdit_baseinfo[] = {
+struct base_type_info _9QTimeEdit_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QTimeEdit_classinfo = {
+struct classinfo _Z9QTimeEdit_of_libqt_mt_so_3_classinfo = {
 	"_Z9QTimeEdit",
 	"_ZTV9QTimeEdit",
 	"_ZTI9QTimeEdit",	/* RTTI */
@@ -56958,42 +56958,42 @@ struct classinfo _Z9QTimeEdit_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QTimeEdit_typeinfo,
-	_9QTimeEdit_vtable,
-	_9QTimeEdit_baseinfo,
+	&_9QTimeEdit_of_libqt_mt_so_3_typeinfo,
+	_9QTimeEdit_of_libqt_mt_so_3_vtable,
+	_9QTimeEdit_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_13QIconDragItem_typeinfo_name[] = {
+char *_13QIconDragItem_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _13QIconDragItem_typeinfo = {
+struct classtypeinfo _13QIconDragItem_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS13QIconDragItem",
-	_13QIconDragItem_typeinfo_name,
+	_13QIconDragItem_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_13QIconDragItem_vtable_name_0 [] = {
+const char *_13QIconDragItem_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN13QIconDragItemD1Ev",
 	"_ZN13QIconDragItemD0Ev",
 	"_ZNK13QIconDragItem4dataEv",
 	"_ZN13QIconDragItem7setDataERK9QMemArrayIcE",
 	};
 
-struct classvtable _13QIconDragItem_vtable [1] = {
+struct classvtable _13QIconDragItem_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	4,	/* Number of Vfuncs */
 	"_ZTI13QIconDragItem",
-	_13QIconDragItem_vtable_name_0,
+	_13QIconDragItem_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _13QIconDragItem_baseinfo[] = {
+struct base_type_info _13QIconDragItem_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z13QIconDragItem_classinfo = {
+struct classinfo _Z13QIconDragItem_of_libqt_mt_so_3_classinfo = {
 	"_Z13QIconDragItem",
 	"_ZTV13QIconDragItem",
 	"_ZTI13QIconDragItem",	/* RTTI */
@@ -57004,21 +57004,21 @@ struct classinfo _Z13QIconDragItem_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_13QIconDragItem_typeinfo,
-	_13QIconDragItem_vtable,
-	_13QIconDragItem_baseinfo,
+	&_13QIconDragItem_of_libqt_mt_so_3_typeinfo,
+	_13QIconDragItem_of_libqt_mt_so_3_vtable,
+	_13QIconDragItem_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_13QSqlFieldInfo_typeinfo_name[] = {
+char *_13QSqlFieldInfo_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _13QSqlFieldInfo_typeinfo = {
+struct classtypeinfo _13QSqlFieldInfo_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS13QSqlFieldInfo",
-	_13QSqlFieldInfo_typeinfo_name,
+	_13QSqlFieldInfo_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_13QSqlFieldInfo_vtable_name_0 [] = {
+const char *_13QSqlFieldInfo_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN13QSqlFieldInfoD1Ev",
 	"_ZN13QSqlFieldInfoD0Ev",
 	"_ZN13QSqlFieldInfo7setTrimEb",
@@ -57026,21 +57026,21 @@ const char *_13QSqlFieldInfo_vtable_name_0 [] = {
 	"_ZN13QSqlFieldInfo13setCalculatedEb",
 	};
 
-struct classvtable _13QSqlFieldInfo_vtable [1] = {
+struct classvtable _13QSqlFieldInfo_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	5,	/* Number of Vfuncs */
 	"_ZTI13QSqlFieldInfo",
-	_13QSqlFieldInfo_vtable_name_0,
+	_13QSqlFieldInfo_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _13QSqlFieldInfo_baseinfo[] = {
+struct base_type_info _13QSqlFieldInfo_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z13QSqlFieldInfo_classinfo = {
+struct classinfo _Z13QSqlFieldInfo_of_libqt_mt_so_3_classinfo = {
 	"_Z13QSqlFieldInfo",
 	"_ZTV13QSqlFieldInfo",
 	"_ZTI13QSqlFieldInfo",	/* RTTI */
@@ -57051,22 +57051,22 @@ struct classinfo _Z13QSqlFieldInfo_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_13QSqlFieldInfo_typeinfo,
-	_13QSqlFieldInfo_vtable,
-	_13QSqlFieldInfo_baseinfo,
+	&_13QSqlFieldInfo_of_libqt_mt_so_3_typeinfo,
+	_13QSqlFieldInfo_of_libqt_mt_so_3_vtable,
+	_13QSqlFieldInfo_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_4QFtp_typeinfo_name[] = {
+char *_4QFtp_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI16QNetworkProtocol",
 	};
 
-struct classtypeinfo _4QFtp_typeinfo = {
+struct classtypeinfo _4QFtp_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS4QFtp",
-	_4QFtp_typeinfo_name,
+	_4QFtp_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_4QFtp_vtable_name_0 [] = {
+const char *_4QFtp_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK4QFtp10metaObjectEv",
 	"_ZNK4QFtp9classNameEv",
 	"_ZN4QFtp7qt_castEPKc",
@@ -57105,21 +57105,21 @@ const char *_4QFtp_vtable_name_0 [] = {
 	"_ZN4QFtp15checkConnectionEP17QNetworkOperation",
 	};
 
-struct classvtable _4QFtp_vtable [1] = {
+struct classvtable _4QFtp_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	36,	/* Number of Vfuncs */
 	"_ZTI4QFtp",
-	_4QFtp_vtable_name_0,
+	_4QFtp_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _4QFtp_baseinfo[] = {
+struct base_type_info _4QFtp_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z4QFtp_classinfo = {
+struct classinfo _Z4QFtp_of_libqt_mt_so_3_classinfo = {
 	"_Z4QFtp",
 	"_ZTV4QFtp",
 	"_ZTI4QFtp",	/* RTTI */
@@ -57130,21 +57130,21 @@ struct classinfo _Z4QFtp_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_4QFtp_typeinfo,
-	_4QFtp_vtable,
-	_4QFtp_baseinfo,
+	&_4QFtp_of_libqt_mt_so_3_typeinfo,
+	_4QFtp_of_libqt_mt_so_3_vtable,
+	_4QFtp_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QLayoutItem_typeinfo_name[] = {
+char *_11QLayoutItem_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _11QLayoutItem_typeinfo = {
+struct classtypeinfo _11QLayoutItem_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS11QLayoutItem",
-	_11QLayoutItem_typeinfo_name,
+	_11QLayoutItem_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QLayoutItem_vtable_name_0 [] = {
+const char *_11QLayoutItem_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QLayoutItemD1Ev",
 	"_ZN11QLayoutItemD0Ev",
 	"__cxa_pure_virtual",
@@ -57164,21 +57164,21 @@ const char *_11QLayoutItem_vtable_name_0 [] = {
 	"_ZN11QLayoutItem12setAlignmentEi",
 	};
 
-struct classvtable _11QLayoutItem_vtable [1] = {
+struct classvtable _11QLayoutItem_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	17,	/* Number of Vfuncs */
 	"_ZTI11QLayoutItem",
-	_11QLayoutItem_vtable_name_0,
+	_11QLayoutItem_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QLayoutItem_baseinfo[] = {
+struct base_type_info _11QLayoutItem_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QLayoutItem_classinfo = {
+struct classinfo _Z11QLayoutItem_of_libqt_mt_so_3_classinfo = {
 	"_Z11QLayoutItem",
 	"_ZTV11QLayoutItem",
 	"_ZTI11QLayoutItem",	/* RTTI */
@@ -57189,41 +57189,41 @@ struct classinfo _Z11QLayoutItem_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QLayoutItem_typeinfo,
-	_11QLayoutItem_vtable,
-	_11QLayoutItem_baseinfo,
+	&_11QLayoutItem_of_libqt_mt_so_3_typeinfo,
+	_11QLayoutItem_of_libqt_mt_so_3_vtable,
+	_11QLayoutItem_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QMoveEvent_typeinfo_name[] = {
+char *_10QMoveEvent_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo _10QMoveEvent_typeinfo = {
+struct classtypeinfo _10QMoveEvent_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QMoveEvent",
-	_10QMoveEvent_typeinfo_name,
+	_10QMoveEvent_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QMoveEvent_vtable_name_0 [] = {
+const char *_10QMoveEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN10QMoveEventD1Ev",
 	"_ZN10QMoveEventD0Ev",
 	};
 
-struct classvtable _10QMoveEvent_vtable [1] = {
+struct classvtable _10QMoveEvent_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI10QMoveEvent",
-	_10QMoveEvent_vtable_name_0,
+	_10QMoveEvent_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _10QMoveEvent_baseinfo[] = {
+struct base_type_info _10QMoveEvent_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QMoveEvent_classinfo = {
+struct classinfo _Z10QMoveEvent_of_libqt_mt_so_3_classinfo = {
 	"_Z10QMoveEvent",
 	"_ZTV10QMoveEvent",
 	"_ZTI10QMoveEvent",	/* RTTI */
@@ -57234,22 +57234,22 @@ struct classinfo _Z10QMoveEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QMoveEvent_typeinfo,
-	_10QMoveEvent_vtable,
-	_10QMoveEvent_baseinfo,
+	&_10QMoveEvent_of_libqt_mt_so_3_typeinfo,
+	_10QMoveEvent_of_libqt_mt_so_3_vtable,
+	_10QMoveEvent_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QTextEdit_typeinfo_name[] = {
+char *_9QTextEdit_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI11QScrollView",
 	};
 
-struct classtypeinfo _9QTextEdit_typeinfo = {
+struct classtypeinfo _9QTextEdit_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QTextEdit",
-	_9QTextEdit_typeinfo_name,
+	_9QTextEdit_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QTextEdit_vtable_name_0 [] = {
+const char *_9QTextEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK9QTextEdit10metaObjectEv",
 	"_ZNK9QTextEdit9classNameEv",
 	"_ZN9QTextEdit7qt_castEPKc",
@@ -57476,7 +57476,7 @@ const char *_9QTextEdit_vtable_name_0 [] = {
 	"_ZN9QTextEdit15emitLinkClickedERK7QString",
 	};
 
-const char *_9QTextEdit_vtable_name_1 [] = {
+const char *_9QTextEdit_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QTextEditD1Ev",
 #endif
@@ -57550,14 +57550,14 @@ const char *_9QTextEdit_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _9QTextEdit_vtable [2] = {
+struct classvtable _9QTextEdit_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	224,	/* Number of Vfuncs */
 	"_ZTI9QTextEdit",
-	_9QTextEdit_vtable_name_0,
+	_9QTextEdit_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -57591,14 +57591,14 @@ struct classvtable _9QTextEdit_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI9QTextEdit",
-	_9QTextEdit_vtable_name_1,
+	_9QTextEdit_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _9QTextEdit_baseinfo[] = {
+struct base_type_info _9QTextEdit_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QTextEdit_classinfo = {
+struct classinfo _Z9QTextEdit_of_libqt_mt_so_3_classinfo = {
 	"_Z9QTextEdit",
 	"_ZTV9QTextEdit",
 	"_ZTI9QTextEdit",	/* RTTI */
@@ -57609,22 +57609,22 @@ struct classinfo _Z9QTextEdit_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QTextEdit_typeinfo,
-	_9QTextEdit_vtable,
-	_9QTextEdit_baseinfo,
+	&_9QTextEdit_of_libqt_mt_so_3_typeinfo,
+	_9QTextEdit_of_libqt_mt_so_3_vtable,
+	_9QTextEdit_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_17QFileIconProvider_typeinfo_name[] = {
+char *_17QFileIconProvider_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _17QFileIconProvider_typeinfo = {
+struct classtypeinfo _17QFileIconProvider_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS17QFileIconProvider",
-	_17QFileIconProvider_typeinfo_name,
+	_17QFileIconProvider_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_17QFileIconProvider_vtable_name_0 [] = {
+const char *_17QFileIconProvider_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK17QFileIconProvider10metaObjectEv",
 	"_ZNK17QFileIconProvider9classNameEv",
 	"_ZN17QFileIconProvider7qt_castEPKc",
@@ -57649,21 +57649,21 @@ const char *_17QFileIconProvider_vtable_name_0 [] = {
 	"_ZN17QFileIconProvider6pixmapERK9QFileInfo",
 	};
 
-struct classvtable _17QFileIconProvider_vtable [1] = {
+struct classvtable _17QFileIconProvider_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	22,	/* Number of Vfuncs */
 	"_ZTI17QFileIconProvider",
-	_17QFileIconProvider_vtable_name_0,
+	_17QFileIconProvider_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _17QFileIconProvider_baseinfo[] = {
+struct base_type_info _17QFileIconProvider_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z17QFileIconProvider_classinfo = {
+struct classinfo _Z17QFileIconProvider_of_libqt_mt_so_3_classinfo = {
 	"_Z17QFileIconProvider",
 	"_ZTV17QFileIconProvider",
 	"_ZTI17QFileIconProvider",	/* RTTI */
@@ -57674,22 +57674,22 @@ struct classinfo _Z17QFileIconProvider_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_17QFileIconProvider_typeinfo,
-	_17QFileIconProvider_vtable,
-	_17QFileIconProvider_baseinfo,
+	&_17QFileIconProvider_of_libqt_mt_so_3_typeinfo,
+	_17QFileIconProvider_of_libqt_mt_so_3_vtable,
+	_17QFileIconProvider_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QSqlIndex_typeinfo_name[] = {
+char *_9QSqlIndex_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI10QSqlRecord",
 	};
 
-struct classtypeinfo _9QSqlIndex_typeinfo = {
+struct classtypeinfo _9QSqlIndex_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QSqlIndex",
-	_9QSqlIndex_typeinfo_name,
+	_9QSqlIndex_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QSqlIndex_vtable_name_0 [] = {
+const char *_9QSqlIndex_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QSqlIndexD1Ev",
 	"_ZN9QSqlIndexD0Ev",
 	"_ZNK10QSqlRecord5valueEi",
@@ -57713,21 +57713,21 @@ const char *_9QSqlIndex_vtable_name_0 [] = {
 	"_ZN9QSqlIndex13setDescendingEib",
 	};
 
-struct classvtable _9QSqlIndex_vtable [1] = {
+struct classvtable _9QSqlIndex_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	21,	/* Number of Vfuncs */
 	"_ZTI9QSqlIndex",
-	_9QSqlIndex_vtable_name_0,
+	_9QSqlIndex_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _9QSqlIndex_baseinfo[] = {
+struct base_type_info _9QSqlIndex_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QSqlIndex_classinfo = {
+struct classinfo _Z9QSqlIndex_of_libqt_mt_so_3_classinfo = {
 	"_Z9QSqlIndex",
 	"_ZTV9QSqlIndex",
 	"_ZTI9QSqlIndex",	/* RTTI */
@@ -57738,21 +57738,21 @@ struct classinfo _Z9QSqlIndex_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QSqlIndex_typeinfo,
-	_9QSqlIndex_vtable,
-	_9QSqlIndex_baseinfo,
+	&_9QSqlIndex_of_libqt_mt_so_3_typeinfo,
+	_9QSqlIndex_of_libqt_mt_so_3_vtable,
+	_9QSqlIndex_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_9QSqlField_typeinfo_name[] = {
+char *_9QSqlField_of_libqt_mt_so_3_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _9QSqlField_typeinfo = {
+struct classtypeinfo _9QSqlField_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS9QSqlField",
-	_9QSqlField_typeinfo_name,
+	_9QSqlField_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_9QSqlField_vtable_name_0 [] = {
+const char *_9QSqlField_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QSqlFieldD1Ev",
 	"_ZN9QSqlFieldD0Ev",
 	"_ZN9QSqlField8setValueERK8QVariant",
@@ -57762,21 +57762,21 @@ const char *_9QSqlField_vtable_name_0 [] = {
 	"_ZN9QSqlField11setReadOnlyEb",
 	};
 
-struct classvtable _9QSqlField_vtable [1] = {
+struct classvtable _9QSqlField_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	7,	/* Number of Vfuncs */
 	"_ZTI9QSqlField",
-	_9QSqlField_vtable_name_0,
+	_9QSqlField_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _9QSqlField_baseinfo[] = {
+struct base_type_info _9QSqlField_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z9QSqlField_classinfo = {
+struct classinfo _Z9QSqlField_of_libqt_mt_so_3_classinfo = {
 	"_Z9QSqlField",
 	"_ZTV9QSqlField",
 	"_ZTI9QSqlField",	/* RTTI */
@@ -57787,22 +57787,22 @@ struct classinfo _Z9QSqlField_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QSqlField_typeinfo,
-	_9QSqlField_vtable,
-	_9QSqlField_baseinfo,
+	&_9QSqlField_of_libqt_mt_so_3_typeinfo,
+	_9QSqlField_of_libqt_mt_so_3_vtable,
+	_9QSqlField_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_10QVGroupBox_typeinfo_name[] = {
+char *_10QVGroupBox_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI9QGroupBox",
 	};
 
-struct classtypeinfo _10QVGroupBox_typeinfo = {
+struct classtypeinfo _10QVGroupBox_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QVGroupBox",
-	_10QVGroupBox_typeinfo_name,
+	_10QVGroupBox_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_10QVGroupBox_vtable_name_0 [] = {
+const char *_10QVGroupBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK10QVGroupBox10metaObjectEv",
 	"_ZNK10QVGroupBox9classNameEv",
 	"_ZN10QVGroupBox7qt_castEPKc",
@@ -57926,7 +57926,7 @@ const char *_10QVGroupBox_vtable_name_0 [] = {
 	"_ZN9QGroupBox12setAlignmentEi",
 	};
 
-const char *_10QVGroupBox_vtable_name_1 [] = {
+const char *_10QVGroupBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QVGroupBoxD1Ev",
 #endif
@@ -58000,14 +58000,14 @@ const char *_10QVGroupBox_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
 	};
 
-struct classvtable _10QVGroupBox_vtable [2] = {
+struct classvtable _10QVGroupBox_of_libqt_mt_so_3_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	121,	/* Number of Vfuncs */
 	"_ZTI10QVGroupBox",
-	_10QVGroupBox_vtable_name_0,
+	_10QVGroupBox_of_libqt_mt_so_3_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -58041,14 +58041,14 @@ struct classvtable _10QVGroupBox_vtable [2] = {
 	1,	/* Vtable category */
 	11,	/* Number of Vfuncs */
 	"_ZTI10QVGroupBox",
-	_10QVGroupBox_vtable_name_1,
+	_10QVGroupBox_of_libqt_mt_so_3_vtable_name_1,
 	},
 };
 
-struct base_type_info _10QVGroupBox_baseinfo[] = {
+struct base_type_info _10QVGroupBox_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z10QVGroupBox_classinfo = {
+struct classinfo _Z10QVGroupBox_of_libqt_mt_so_3_classinfo = {
 	"_Z10QVGroupBox",
 	"_ZTV10QVGroupBox",
 	"_ZTI10QVGroupBox",	/* RTTI */
@@ -58059,41 +58059,41 @@ struct classinfo _Z10QVGroupBox_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QVGroupBox_typeinfo,
-	_10QVGroupBox_vtable,
-	_10QVGroupBox_baseinfo,
+	&_10QVGroupBox_of_libqt_mt_so_3_typeinfo,
+	_10QVGroupBox_of_libqt_mt_so_3_vtable,
+	_10QVGroupBox_of_libqt_mt_so_3_baseinfo,
 	};
 
-char *_11QCloseEvent_typeinfo_name[] = {
+char *_11QCloseEvent_of_libqt_mt_so_3_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo _11QCloseEvent_typeinfo = {
+struct classtypeinfo _11QCloseEvent_of_libqt_mt_so_3_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QCloseEvent",
-	_11QCloseEvent_typeinfo_name,
+	_11QCloseEvent_of_libqt_mt_so_3_typeinfo_name,
 	};
 
-const char *_11QCloseEvent_vtable_name_0 [] = {
+const char *_11QCloseEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QCloseEventD1Ev",
 	"_ZN11QCloseEventD0Ev",
 	};
 
-struct classvtable _11QCloseEvent_vtable [1] = {
+struct classvtable _11QCloseEvent_of_libqt_mt_so_3_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI11QCloseEvent",
-	_11QCloseEvent_vtable_name_0,
+	_11QCloseEvent_of_libqt_mt_so_3_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QCloseEvent_baseinfo[] = {
+struct base_type_info _11QCloseEvent_of_libqt_mt_so_3_baseinfo[] = {
 	};
 
-struct classinfo _Z11QCloseEvent_classinfo = {
+struct classinfo _Z11QCloseEvent_of_libqt_mt_so_3_classinfo = {
 	"_Z11QCloseEvent",
 	"_ZTV11QCloseEvent",
 	"_ZTI11QCloseEvent",	/* RTTI */
@@ -58104,310 +58104,310 @@ struct classinfo _Z11QCloseEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QCloseEvent_typeinfo,
-	_11QCloseEvent_vtable,
-	_11QCloseEvent_baseinfo,
+	&_11QCloseEvent_of_libqt_mt_so_3_typeinfo,
+	_11QCloseEvent_of_libqt_mt_so_3_vtable,
+	_11QCloseEvent_of_libqt_mt_so_3_baseinfo,
 	};
 
 struct classinfo *libqt_mt_so_3_classinfo[] = {
-	&_Z10QUtf8Codec_classinfo,
-	&_Z6QTimer_classinfo,
-	&_Z18QXmlEntityResolver_classinfo,
-	&_Z21QObjectCleanupHandler_classinfo,
-	&_Z14QPtrCollection_classinfo,
-	&_Z5QHBox_classinfo,
-	&_Z8QGVector_classinfo,
-	&_Z8QToolBar_classinfo,
-	&_Z11QDataSource_classinfo,
-	&_Z11QCanvasItem_classinfo,
-	&_Z14QWaitCondition_classinfo,
-	&_Z6QFrame_classinfo,
-	&_Z11QScrollView_classinfo,
-	&_Z12QTextBrowser_classinfo,
-	&_Z13QCanvasSprite_classinfo,
-	&_Z9QSplitter_classinfo,
-	&_Z9QLineEdit_classinfo,
-	&_Z5QVBox_classinfo,
-	&_Z17QContextMenuEvent_classinfo,
-	&_Z8QProcess_classinfo,
-	&_Z12QImageFormat_classinfo,
-	&_Z11QTranslator_classinfo,
-	&_Z11QXmlLocator_classinfo,
-	&_Z10QPopupMenu_classinfo,
-	&_Z10QImageDrag_classinfo,
-	&_Z18QMimeSourceFactory_classinfo,
-	&_Z12QListBoxText_classinfo,
-	&_Z9QGroupBox_classinfo,
-	&_Z8QMenuBar_classinfo,
-	&_Z15QProgressDialog_classinfo,
-	&_Z13QDateTimeEdit_classinfo,
-	&_Z10QSqlResult_classinfo,
-	&_Z16QRegExpValidator_classinfo,
-	&_Z15QDockAreaLayout_classinfo,
-	&_Z15QDragLeaveEvent_classinfo,
-	&_Z10QLCDNumber_classinfo,
-	&_Z12QUrlOperator_classinfo,
-	&_Z7QSocket_classinfo,
-	&_Z9QGridView_classinfo,
-	&_Z10QBoxLayout_classinfo,
-	&_Z8QIMEvent_classinfo,
-	&_Z7QLayout_classinfo,
-	&_Z15QSocketNotifier_classinfo,
-	&_Z7QButton_classinfo,
-	&_Z13QIntValidator_classinfo,
-	&_Z7QWizard_classinfo,
-	&_Z20QCanvasPolygonalItem_classinfo,
-	&_Z16QSqlSelectCursor_classinfo,
-	&_Z10QTabWidget_classinfo,
-	&_Z11QDomElement_classinfo,
-	&_Z10QSqlDriver_classinfo,
-	&_Z10QTableItem_classinfo,
-	&_Z18QDomImplementation_classinfo,
-	&_Z8QGPlugin_classinfo,
-	&_Z13QGb18030Codec_classinfo,
-	&_Z6QGList_classinfo,
-	&_Z9QDataPump_classinfo,
-	&_Z12QPaintDevice_classinfo,
-	&_Z15QCheckTableItem_classinfo,
-	&_Z12QCommonStyle_classinfo,
-	&_Z9QTextView_classinfo,
-	&_Z18QSyntaxHighlighter_classinfo,
-	&_Z10QSemiModal_classinfo,
-	&_Z4QTab_classinfo,
-	&_Z15QPolygonScanner_classinfo,
-	&_Z16QNetworkProtocol_classinfo,
-	&_Z15QObjectUserData_classinfo,
-	&_Z13QRangeControl_classinfo,
-	&_Z10QHGroupBox_classinfo,
-	&_Z11QTimerEvent_classinfo,
-	&_Z7QHeader_classinfo,
-	&_Z9QGbkCodec_classinfo,
-	&_Z13QSplashScreen_classinfo,
-	&_Z6QMutex_classinfo,
-	&_Z15QSqlPropertyMap_classinfo,
-	&_Z9QKeyEvent_classinfo,
-	&_Z7QGCache_classinfo,
-	&_Z5QDial_classinfo,
-	&_Z4QUrl_classinfo,
-	&_Z9QListView_classinfo,
-	&_Z12QStylePlugin_classinfo,
-	&_Z11QFileDialog_classinfo,
-	&_Z13QHButtonGroup_classinfo,
-	&_Z10QColorDrag_classinfo,
-	&_Z14QDesktopWidget_classinfo,
-	&_Z9QSqlQuery_classinfo,
-	&_Z11QUtf16Codec_classinfo,
-	&_Z7QObject_classinfo,
-	&_Z5QFile_classinfo,
-	&_Z16QDomDocumentType_classinfo,
-	&_Z12QListBoxItem_classinfo,
-	&_Z18QDragResponseEvent_classinfo,
-	&_Z12QDomDocument_classinfo,
-	&_Z16QTextCodecPlugin_classinfo,
-	&_Z13QWidgetPlugin_classinfo,
-	&_Z10QScrollBar_classinfo,
-	&_Z7QBitmap_classinfo,
-	&_Z12QIconFactory_classinfo,
-	&_Z8QSpinBox_classinfo,
-	&_Z8QLibrary_classinfo,
-	&_Z11QEucKrCodec_classinfo,
-	&_Z12QWidgetStack_classinfo,
-	&_Z6QLabel_classinfo,
-	&_Z11QStyleSheet_classinfo,
-	&_Z12QCustomEvent_classinfo,
-	&_Z14QListBoxPixmap_classinfo,
-	&_Z12QDragManager_classinfo,
-	&_Z8QDomAttr_classinfo,
-	&_Z10QWhatsThis_classinfo,
-	&_Z12QDomNodeList_classinfo,
-	&_Z9QJisCodec_classinfo,
-	&_Z11QPointArray_classinfo,
-	&_Z14QMultiLineEdit_classinfo,
-	&_Z27QNetworkProtocolFactoryBase_classinfo,
-	&_Z11QHBoxLayout_classinfo,
-	&_Z13QSocketDevice_classinfo,
-	&_Z10QXmlReader_classinfo,
-	&_Z10QDomEntity_classinfo,
-	&_Z11QMetaObject_classinfo,
-	&_Z13QErrorMessage_classinfo,
-	&_Z8QListBox_classinfo,
-	&_Z15QCustomMenuItem_classinfo,
-	&_Z9QIconDrag_classinfo,
-	&_Z8QUriDrag_classinfo,
-	&_Z15QXmlDeclHandler_classinfo,
-	&_Z11QVBoxLayout_classinfo,
-	&_Z8QDomNode_classinfo,
-	&_Z7QBuffer_classinfo,
-	&_Z16QCanvasRectangle_classinfo,
-	&_Z8QIconSet_classinfo,
-	&_Z9QDropSite_classinfo,
-	&_Z7QThread_classinfo,
-	&_Z11QStoredDrag_classinfo,
-	&_Z9QTextDrag_classinfo,
-	&_Z12QFilePreview_classinfo,
-	&_Z12QButtonGroup_classinfo,
-	&_Z10QSqlRecord_classinfo,
-	&_Z8QPicture_classinfo,
-	&_Z10QSemaphore_classinfo,
-	&_Z9QComboBox_classinfo,
-	&_Z8QDomText_classinfo,
-	&_Z13QVButtonGroup_classinfo,
-	&_Z10QClipboard_classinfo,
-	&_Z12QTextEncoder_classinfo,
-	&_Z11QCanvasView_classinfo,
-	&_Z7QPixmap_classinfo,
-	&_Z5QGrid_classinfo,
-	&_Z12QRadioButton_classinfo,
-	&_Z8QAsyncIO_classinfo,
-	&_Z7QSlider_classinfo,
-	&_Z19QHttpResponseHeader_classinfo,
-	&_Z17QDomCharacterData_classinfo,
-	&_Z15QDragEnterEvent_classinfo,
-	&_Z12QActionGroup_classinfo,
-	&_Z10QDataTable_classinfo,
-	&_Z14QDragMoveEvent_classinfo,
-	&_Z14QCanvasEllipse_classinfo,
-	&_Z10QDropEvent_classinfo,
-	&_Z11QMainWindow_classinfo,
-	&_Z10QStatusBar_classinfo,
-	&_Z8QStrList_classinfo,
-	&_Z11QTsciiCodec_classinfo,
-	&_Z12QSqlDatabase_classinfo,
-	&_Z13QCanvasPixmap_classinfo,
-	&_Z8QPrinter_classinfo,
-	&_Z10QSjisCodec_classinfo,
-	&_Z11QMessageBox_classinfo,
-	&_Z6QSound_classinfo,
-	&_Z14QEditorFactory_classinfo,
-	&_Z10QEventLoop_classinfo,
-	&_Z7QSignal_classinfo,
-	&_Z9QSizeGrip_classinfo,
-	&_Z11QObjectList_classinfo,
-	&_Z11QDomComment_classinfo,
-	&_Z18QXmlDefaultHandler_classinfo,
-	&_Z9QDataSink_classinfo,
-	&_Z16QSqlDriverPlugin_classinfo,
-	&_Z11QToolButton_classinfo,
-	&_Z14QWidgetIntDict_classinfo,
-	&_Z7QTabBar_classinfo,
-	&_Z12QDomNotation_classinfo,
-	&_Z16QXmlSimpleReader_classinfo,
-	&_Z10QHideEvent_classinfo,
-	&_Z8QToolTip_classinfo,
-	&_Z12QResizeEvent_classinfo,
-	&_Z18QXmlLexicalHandler_classinfo,
-	&_Z11QCanvasLine_classinfo,
-	&_Z14QXmlAttributes_classinfo,
-	&_Z7QDialog_classinfo,
-	&_Z16QGLayoutIterator_classinfo,
-	&_Z12QTabletEvent_classinfo,
-	&_Z11QWidgetItem_classinfo,
-	&_Z4QDir_classinfo,
-	&_Z25QDomProcessingInstruction_classinfo,
-	&_Z13QCanvasSpline_classinfo,
-	&_Z11QFontDialog_classinfo,
-	&_Z7QGArray_classinfo,
-	&_Z9QBitArray_classinfo,
-	&_Z9QCheckBox_classinfo,
-	&_Z11QDockWindow_classinfo,
-	&_Z18QImageFormatPlugin_classinfo,
-	&_Z11QEucJpCodec_classinfo,
-	&_Z16QSqlResultShared_classinfo,
-	&_Z9QSqlError_classinfo,
-	&_Z13QServerSocket_classinfo,
-	&_Z18QXmlContentHandler_classinfo,
-	&_Z12QGb2312Codec_classinfo,
-	&_Z11QFocusEvent_classinfo,
-	&_Z11QMouseEvent_classinfo,
-	&_Z8QUrlInfo_classinfo,
-	&_Z14QImageConsumer_classinfo,
-	&_Z19QDomEntityReference_classinfo,
-	&_Z11QSpinWidget_classinfo,
-	&_Z11QChildEvent_classinfo,
-	&_Z12QTextOStream_classinfo,
-	&_Z10QSignalVec_classinfo,
-	&_Z10QValidator_classinfo,
-	&_Z11QGridLayout_classinfo,
-	&_Z12QHebrewCodec_classinfo,
-	&_Z8QToolBox_classinfo,
-	&_Z17QNetworkOperation_classinfo,
-	&_Z5QHttp_classinfo,
-	&_Z8QSqlForm_classinfo,
-	&_Z6QEvent_classinfo,
-	&_Z11QMimeSource_classinfo,
-	&_Z15QIMComposeEvent_classinfo,
-	&_Z12QTextDecoder_classinfo,
-	&_Z15QSessionManager_classinfo,
-	&_Z16QImageFormatType_classinfo,
-	&_Z10QTextCodec_classinfo,
-	&_Z11QSpacerItem_classinfo,
-	&_Z12QPrintDialog_classinfo,
-	&_Z12QProgressBar_classinfo,
-	&_Z13QIconViewItem_classinfo,
-	&_Z16QDomCDATASection_classinfo,
-	&_Z11QTextStream_classinfo,
-	&_Z14QCheckListItem_classinfo,
-	&_Z13QSignalMapper_classinfo,
-	&_Z9QDockArea_classinfo,
-	&_Z8QCString_classinfo,
-	&_Z6QStyle_classinfo,
-	&_Z14QXmlDTDHandler_classinfo,
-	&_Z12QColorDialog_classinfo,
-	&_Z18QGuardedPtrPrivate_classinfo,
-	&_Z12QApplication_classinfo,
-	&_Z13QListViewItem_classinfo,
-	&_Z9QIconView_classinfo,
-	&_Z15QComboTableItem_classinfo,
-	&_Z7QWidget_classinfo,
-	&_Z4QDns_classinfo,
-	&_Z15QIODeviceSource_classinfo,
-	&_Z11QCanvasText_classinfo,
-	&_Z15QXmlInputSource_classinfo,
-	&_Z16QDoubleValidator_classinfo,
-	&_Z9QIODevice_classinfo,
-	&_Z12QInputDialog_classinfo,
-	&_Z6QGDict_classinfo,
-	&_Z16QXmlErrorHandler_classinfo,
-	&_Z10QWorkspace_classinfo,
-	&_Z10QTabDialog_classinfo,
-	&_Z18QHttpRequestHeader_classinfo,
-	&_Z11QDragObject_classinfo,
-	&_Z13QToolTipGroup_classinfo,
-	&_Z17QDateTimeEditBase_classinfo,
-	&_Z11QHttpHeader_classinfo,
-	&_Z10QShowEvent_classinfo,
-	&_Z6QTable_classinfo,
-	&_Z8QLocalFs_classinfo,
-	&_Z14QCanvasPolygon_classinfo,
-	&_Z9QDateEdit_classinfo,
-	&_Z11QPaintEvent_classinfo,
-	&_Z6QAccel_classinfo,
-	&_Z7QCanvas_classinfo,
-	&_Z20QDomDocumentFragment_classinfo,
-	&_Z11QDataStream_classinfo,
-	&_Z14QJpUnicodeConv_classinfo,
-	&_Z11QPushButton_classinfo,
-	&_Z11QWidgetList_classinfo,
-	&_Z9QMenuData_classinfo,
-	&_Z9QDataView_classinfo,
-	&_Z17QSqlEditorFactory_classinfo,
-	&_Z15QConnectionList_classinfo,
-	&_Z10QSqlCursor_classinfo,
-	&_Z7QAction_classinfo,
-	&_Z12QHostAddress_classinfo,
-	&_Z11QWheelEvent_classinfo,
-	&_Z12QDataBrowser_classinfo,
-	&_Z9QTimeEdit_classinfo,
-	&_Z13QIconDragItem_classinfo,
-	&_Z13QSqlFieldInfo_classinfo,
-	&_Z4QFtp_classinfo,
-	&_Z11QLayoutItem_classinfo,
-	&_Z10QMoveEvent_classinfo,
-	&_Z9QTextEdit_classinfo,
-	&_Z17QFileIconProvider_classinfo,
-	&_Z9QSqlIndex_classinfo,
-	&_Z9QSqlField_classinfo,
-	&_Z10QVGroupBox_classinfo,
-	&_Z11QCloseEvent_classinfo,
+	&_Z10QUtf8Codec_of_libqt_mt_so_3_classinfo,
+	&_Z6QTimer_of_libqt_mt_so_3_classinfo,
+	&_Z18QXmlEntityResolver_of_libqt_mt_so_3_classinfo,
+	&_Z21QObjectCleanupHandler_of_libqt_mt_so_3_classinfo,
+	&_Z14QPtrCollection_of_libqt_mt_so_3_classinfo,
+	&_Z5QHBox_of_libqt_mt_so_3_classinfo,
+	&_Z8QGVector_of_libqt_mt_so_3_classinfo,
+	&_Z8QToolBar_of_libqt_mt_so_3_classinfo,
+	&_Z11QDataSource_of_libqt_mt_so_3_classinfo,
+	&_Z11QCanvasItem_of_libqt_mt_so_3_classinfo,
+	&_Z14QWaitCondition_of_libqt_mt_so_3_classinfo,
+	&_Z6QFrame_of_libqt_mt_so_3_classinfo,
+	&_Z11QScrollView_of_libqt_mt_so_3_classinfo,
+	&_Z12QTextBrowser_of_libqt_mt_so_3_classinfo,
+	&_Z13QCanvasSprite_of_libqt_mt_so_3_classinfo,
+	&_Z9QSplitter_of_libqt_mt_so_3_classinfo,
+	&_Z9QLineEdit_of_libqt_mt_so_3_classinfo,
+	&_Z5QVBox_of_libqt_mt_so_3_classinfo,
+	&_Z17QContextMenuEvent_of_libqt_mt_so_3_classinfo,
+	&_Z8QProcess_of_libqt_mt_so_3_classinfo,
+	&_Z12QImageFormat_of_libqt_mt_so_3_classinfo,
+	&_Z11QTranslator_of_libqt_mt_so_3_classinfo,
+	&_Z11QXmlLocator_of_libqt_mt_so_3_classinfo,
+	&_Z10QPopupMenu_of_libqt_mt_so_3_classinfo,
+	&_Z10QImageDrag_of_libqt_mt_so_3_classinfo,
+	&_Z18QMimeSourceFactory_of_libqt_mt_so_3_classinfo,
+	&_Z12QListBoxText_of_libqt_mt_so_3_classinfo,
+	&_Z9QGroupBox_of_libqt_mt_so_3_classinfo,
+	&_Z8QMenuBar_of_libqt_mt_so_3_classinfo,
+	&_Z15QProgressDialog_of_libqt_mt_so_3_classinfo,
+	&_Z13QDateTimeEdit_of_libqt_mt_so_3_classinfo,
+	&_Z10QSqlResult_of_libqt_mt_so_3_classinfo,
+	&_Z16QRegExpValidator_of_libqt_mt_so_3_classinfo,
+	&_Z15QDockAreaLayout_of_libqt_mt_so_3_classinfo,
+	&_Z15QDragLeaveEvent_of_libqt_mt_so_3_classinfo,
+	&_Z10QLCDNumber_of_libqt_mt_so_3_classinfo,
+	&_Z12QUrlOperator_of_libqt_mt_so_3_classinfo,
+	&_Z7QSocket_of_libqt_mt_so_3_classinfo,
+	&_Z9QGridView_of_libqt_mt_so_3_classinfo,
+	&_Z10QBoxLayout_of_libqt_mt_so_3_classinfo,
+	&_Z8QIMEvent_of_libqt_mt_so_3_classinfo,
+	&_Z7QLayout_of_libqt_mt_so_3_classinfo,
+	&_Z15QSocketNotifier_of_libqt_mt_so_3_classinfo,
+	&_Z7QButton_of_libqt_mt_so_3_classinfo,
+	&_Z13QIntValidator_of_libqt_mt_so_3_classinfo,
+	&_Z7QWizard_of_libqt_mt_so_3_classinfo,
+	&_Z20QCanvasPolygonalItem_of_libqt_mt_so_3_classinfo,
+	&_Z16QSqlSelectCursor_of_libqt_mt_so_3_classinfo,
+	&_Z10QTabWidget_of_libqt_mt_so_3_classinfo,
+	&_Z11QDomElement_of_libqt_mt_so_3_classinfo,
+	&_Z10QSqlDriver_of_libqt_mt_so_3_classinfo,
+	&_Z10QTableItem_of_libqt_mt_so_3_classinfo,
+	&_Z18QDomImplementation_of_libqt_mt_so_3_classinfo,
+	&_Z8QGPlugin_of_libqt_mt_so_3_classinfo,
+	&_Z13QGb18030Codec_of_libqt_mt_so_3_classinfo,
+	&_Z6QGList_of_libqt_mt_so_3_classinfo,
+	&_Z9QDataPump_of_libqt_mt_so_3_classinfo,
+	&_Z12QPaintDevice_of_libqt_mt_so_3_classinfo,
+	&_Z15QCheckTableItem_of_libqt_mt_so_3_classinfo,
+	&_Z12QCommonStyle_of_libqt_mt_so_3_classinfo,
+	&_Z9QTextView_of_libqt_mt_so_3_classinfo,
+	&_Z18QSyntaxHighlighter_of_libqt_mt_so_3_classinfo,
+	&_Z10QSemiModal_of_libqt_mt_so_3_classinfo,
+	&_Z4QTab_of_libqt_mt_so_3_classinfo,
+	&_Z15QPolygonScanner_of_libqt_mt_so_3_classinfo,
+	&_Z16QNetworkProtocol_of_libqt_mt_so_3_classinfo,
+	&_Z15QObjectUserData_of_libqt_mt_so_3_classinfo,
+	&_Z13QRangeControl_of_libqt_mt_so_3_classinfo,
+	&_Z10QHGroupBox_of_libqt_mt_so_3_classinfo,
+	&_Z11QTimerEvent_of_libqt_mt_so_3_classinfo,
+	&_Z7QHeader_of_libqt_mt_so_3_classinfo,
+	&_Z9QGbkCodec_of_libqt_mt_so_3_classinfo,
+	&_Z13QSplashScreen_of_libqt_mt_so_3_classinfo,
+	&_Z6QMutex_of_libqt_mt_so_3_classinfo,
+	&_Z15QSqlPropertyMap_of_libqt_mt_so_3_classinfo,
+	&_Z9QKeyEvent_of_libqt_mt_so_3_classinfo,
+	&_Z7QGCache_of_libqt_mt_so_3_classinfo,
+	&_Z5QDial_of_libqt_mt_so_3_classinfo,
+	&_Z4QUrl_of_libqt_mt_so_3_classinfo,
+	&_Z9QListView_of_libqt_mt_so_3_classinfo,
+	&_Z12QStylePlugin_of_libqt_mt_so_3_classinfo,
+	&_Z11QFileDialog_of_libqt_mt_so_3_classinfo,
+	&_Z13QHButtonGroup_of_libqt_mt_so_3_classinfo,
+	&_Z10QColorDrag_of_libqt_mt_so_3_classinfo,
+	&_Z14QDesktopWidget_of_libqt_mt_so_3_classinfo,
+	&_Z9QSqlQuery_of_libqt_mt_so_3_classinfo,
+	&_Z11QUtf16Codec_of_libqt_mt_so_3_classinfo,
+	&_Z7QObject_of_libqt_mt_so_3_classinfo,
+	&_Z5QFile_of_libqt_mt_so_3_classinfo,
+	&_Z16QDomDocumentType_of_libqt_mt_so_3_classinfo,
+	&_Z12QListBoxItem_of_libqt_mt_so_3_classinfo,
+	&_Z18QDragResponseEvent_of_libqt_mt_so_3_classinfo,
+	&_Z12QDomDocument_of_libqt_mt_so_3_classinfo,
+	&_Z16QTextCodecPlugin_of_libqt_mt_so_3_classinfo,
+	&_Z13QWidgetPlugin_of_libqt_mt_so_3_classinfo,
+	&_Z10QScrollBar_of_libqt_mt_so_3_classinfo,
+	&_Z7QBitmap_of_libqt_mt_so_3_classinfo,
+	&_Z12QIconFactory_of_libqt_mt_so_3_classinfo,
+	&_Z8QSpinBox_of_libqt_mt_so_3_classinfo,
+	&_Z8QLibrary_of_libqt_mt_so_3_classinfo,
+	&_Z11QEucKrCodec_of_libqt_mt_so_3_classinfo,
+	&_Z12QWidgetStack_of_libqt_mt_so_3_classinfo,
+	&_Z6QLabel_of_libqt_mt_so_3_classinfo,
+	&_Z11QStyleSheet_of_libqt_mt_so_3_classinfo,
+	&_Z12QCustomEvent_of_libqt_mt_so_3_classinfo,
+	&_Z14QListBoxPixmap_of_libqt_mt_so_3_classinfo,
+	&_Z12QDragManager_of_libqt_mt_so_3_classinfo,
+	&_Z8QDomAttr_of_libqt_mt_so_3_classinfo,
+	&_Z10QWhatsThis_of_libqt_mt_so_3_classinfo,
+	&_Z12QDomNodeList_of_libqt_mt_so_3_classinfo,
+	&_Z9QJisCodec_of_libqt_mt_so_3_classinfo,
+	&_Z11QPointArray_of_libqt_mt_so_3_classinfo,
+	&_Z14QMultiLineEdit_of_libqt_mt_so_3_classinfo,
+	&_Z27QNetworkProtocolFactoryBase_of_libqt_mt_so_3_classinfo,
+	&_Z11QHBoxLayout_of_libqt_mt_so_3_classinfo,
+	&_Z13QSocketDevice_of_libqt_mt_so_3_classinfo,
+	&_Z10QXmlReader_of_libqt_mt_so_3_classinfo,
+	&_Z10QDomEntity_of_libqt_mt_so_3_classinfo,
+	&_Z11QMetaObject_of_libqt_mt_so_3_classinfo,
+	&_Z13QErrorMessage_of_libqt_mt_so_3_classinfo,
+	&_Z8QListBox_of_libqt_mt_so_3_classinfo,
+	&_Z15QCustomMenuItem_of_libqt_mt_so_3_classinfo,
+	&_Z9QIconDrag_of_libqt_mt_so_3_classinfo,
+	&_Z8QUriDrag_of_libqt_mt_so_3_classinfo,
+	&_Z15QXmlDeclHandler_of_libqt_mt_so_3_classinfo,
+	&_Z11QVBoxLayout_of_libqt_mt_so_3_classinfo,
+	&_Z8QDomNode_of_libqt_mt_so_3_classinfo,
+	&_Z7QBuffer_of_libqt_mt_so_3_classinfo,
+	&_Z16QCanvasRectangle_of_libqt_mt_so_3_classinfo,
+	&_Z8QIconSet_of_libqt_mt_so_3_classinfo,
+	&_Z9QDropSite_of_libqt_mt_so_3_classinfo,
+	&_Z7QThread_of_libqt_mt_so_3_classinfo,
+	&_Z11QStoredDrag_of_libqt_mt_so_3_classinfo,
+	&_Z9QTextDrag_of_libqt_mt_so_3_classinfo,
+	&_Z12QFilePreview_of_libqt_mt_so_3_classinfo,
+	&_Z12QButtonGroup_of_libqt_mt_so_3_classinfo,
+	&_Z10QSqlRecord_of_libqt_mt_so_3_classinfo,
+	&_Z8QPicture_of_libqt_mt_so_3_classinfo,
+	&_Z10QSemaphore_of_libqt_mt_so_3_classinfo,
+	&_Z9QComboBox_of_libqt_mt_so_3_classinfo,
+	&_Z8QDomText_of_libqt_mt_so_3_classinfo,
+	&_Z13QVButtonGroup_of_libqt_mt_so_3_classinfo,
+	&_Z10QClipboard_of_libqt_mt_so_3_classinfo,
+	&_Z12QTextEncoder_of_libqt_mt_so_3_classinfo,
+	&_Z11QCanvasView_of_libqt_mt_so_3_classinfo,
+	&_Z7QPixmap_of_libqt_mt_so_3_classinfo,
+	&_Z5QGrid_of_libqt_mt_so_3_classinfo,
+	&_Z12QRadioButton_of_libqt_mt_so_3_classinfo,
+	&_Z8QAsyncIO_of_libqt_mt_so_3_classinfo,
+	&_Z7QSlider_of_libqt_mt_so_3_classinfo,
+	&_Z19QHttpResponseHeader_of_libqt_mt_so_3_classinfo,
+	&_Z17QDomCharacterData_of_libqt_mt_so_3_classinfo,
+	&_Z15QDragEnterEvent_of_libqt_mt_so_3_classinfo,
+	&_Z12QActionGroup_of_libqt_mt_so_3_classinfo,
+	&_Z10QDataTable_of_libqt_mt_so_3_classinfo,
+	&_Z14QDragMoveEvent_of_libqt_mt_so_3_classinfo,
+	&_Z14QCanvasEllipse_of_libqt_mt_so_3_classinfo,
+	&_Z10QDropEvent_of_libqt_mt_so_3_classinfo,
+	&_Z11QMainWindow_of_libqt_mt_so_3_classinfo,
+	&_Z10QStatusBar_of_libqt_mt_so_3_classinfo,
+	&_Z8QStrList_of_libqt_mt_so_3_classinfo,
+	&_Z11QTsciiCodec_of_libqt_mt_so_3_classinfo,
+	&_Z12QSqlDatabase_of_libqt_mt_so_3_classinfo,
+	&_Z13QCanvasPixmap_of_libqt_mt_so_3_classinfo,
+	&_Z8QPrinter_of_libqt_mt_so_3_classinfo,
+	&_Z10QSjisCodec_of_libqt_mt_so_3_classinfo,
+	&_Z11QMessageBox_of_libqt_mt_so_3_classinfo,
+	&_Z6QSound_of_libqt_mt_so_3_classinfo,
+	&_Z14QEditorFactory_of_libqt_mt_so_3_classinfo,
+	&_Z10QEventLoop_of_libqt_mt_so_3_classinfo,
+	&_Z7QSignal_of_libqt_mt_so_3_classinfo,
+	&_Z9QSizeGrip_of_libqt_mt_so_3_classinfo,
+	&_Z11QObjectList_of_libqt_mt_so_3_classinfo,
+	&_Z11QDomComment_of_libqt_mt_so_3_classinfo,
+	&_Z18QXmlDefaultHandler_of_libqt_mt_so_3_classinfo,
+	&_Z9QDataSink_of_libqt_mt_so_3_classinfo,
+	&_Z16QSqlDriverPlugin_of_libqt_mt_so_3_classinfo,
+	&_Z11QToolButton_of_libqt_mt_so_3_classinfo,
+	&_Z14QWidgetIntDict_of_libqt_mt_so_3_classinfo,
+	&_Z7QTabBar_of_libqt_mt_so_3_classinfo,
+	&_Z12QDomNotation_of_libqt_mt_so_3_classinfo,
+	&_Z16QXmlSimpleReader_of_libqt_mt_so_3_classinfo,
+	&_Z10QHideEvent_of_libqt_mt_so_3_classinfo,
+	&_Z8QToolTip_of_libqt_mt_so_3_classinfo,
+	&_Z12QResizeEvent_of_libqt_mt_so_3_classinfo,
+	&_Z18QXmlLexicalHandler_of_libqt_mt_so_3_classinfo,
+	&_Z11QCanvasLine_of_libqt_mt_so_3_classinfo,
+	&_Z14QXmlAttributes_of_libqt_mt_so_3_classinfo,
+	&_Z7QDialog_of_libqt_mt_so_3_classinfo,
+	&_Z16QGLayoutIterator_of_libqt_mt_so_3_classinfo,
+	&_Z12QTabletEvent_of_libqt_mt_so_3_classinfo,
+	&_Z11QWidgetItem_of_libqt_mt_so_3_classinfo,
+	&_Z4QDir_of_libqt_mt_so_3_classinfo,
+	&_Z25QDomProcessingInstruction_of_libqt_mt_so_3_classinfo,
+	&_Z13QCanvasSpline_of_libqt_mt_so_3_classinfo,
+	&_Z11QFontDialog_of_libqt_mt_so_3_classinfo,
+	&_Z7QGArray_of_libqt_mt_so_3_classinfo,
+	&_Z9QBitArray_of_libqt_mt_so_3_classinfo,
+	&_Z9QCheckBox_of_libqt_mt_so_3_classinfo,
+	&_Z11QDockWindow_of_libqt_mt_so_3_classinfo,
+	&_Z18QImageFormatPlugin_of_libqt_mt_so_3_classinfo,
+	&_Z11QEucJpCodec_of_libqt_mt_so_3_classinfo,
+	&_Z16QSqlResultShared_of_libqt_mt_so_3_classinfo,
+	&_Z9QSqlError_of_libqt_mt_so_3_classinfo,
+	&_Z13QServerSocket_of_libqt_mt_so_3_classinfo,
+	&_Z18QXmlContentHandler_of_libqt_mt_so_3_classinfo,
+	&_Z12QGb2312Codec_of_libqt_mt_so_3_classinfo,
+	&_Z11QFocusEvent_of_libqt_mt_so_3_classinfo,
+	&_Z11QMouseEvent_of_libqt_mt_so_3_classinfo,
+	&_Z8QUrlInfo_of_libqt_mt_so_3_classinfo,
+	&_Z14QImageConsumer_of_libqt_mt_so_3_classinfo,
+	&_Z19QDomEntityReference_of_libqt_mt_so_3_classinfo,
+	&_Z11QSpinWidget_of_libqt_mt_so_3_classinfo,
+	&_Z11QChildEvent_of_libqt_mt_so_3_classinfo,
+	&_Z12QTextOStream_of_libqt_mt_so_3_classinfo,
+	&_Z10QSignalVec_of_libqt_mt_so_3_classinfo,
+	&_Z10QValidator_of_libqt_mt_so_3_classinfo,
+	&_Z11QGridLayout_of_libqt_mt_so_3_classinfo,
+	&_Z12QHebrewCodec_of_libqt_mt_so_3_classinfo,
+	&_Z8QToolBox_of_libqt_mt_so_3_classinfo,
+	&_Z17QNetworkOperation_of_libqt_mt_so_3_classinfo,
+	&_Z5QHttp_of_libqt_mt_so_3_classinfo,
+	&_Z8QSqlForm_of_libqt_mt_so_3_classinfo,
+	&_Z6QEvent_of_libqt_mt_so_3_classinfo,
+	&_Z11QMimeSource_of_libqt_mt_so_3_classinfo,
+	&_Z15QIMComposeEvent_of_libqt_mt_so_3_classinfo,
+	&_Z12QTextDecoder_of_libqt_mt_so_3_classinfo,
+	&_Z15QSessionManager_of_libqt_mt_so_3_classinfo,
+	&_Z16QImageFormatType_of_libqt_mt_so_3_classinfo,
+	&_Z10QTextCodec_of_libqt_mt_so_3_classinfo,
+	&_Z11QSpacerItem_of_libqt_mt_so_3_classinfo,
+	&_Z12QPrintDialog_of_libqt_mt_so_3_classinfo,
+	&_Z12QProgressBar_of_libqt_mt_so_3_classinfo,
+	&_Z13QIconViewItem_of_libqt_mt_so_3_classinfo,
+	&_Z16QDomCDATASection_of_libqt_mt_so_3_classinfo,
+	&_Z11QTextStream_of_libqt_mt_so_3_classinfo,
+	&_Z14QCheckListItem_of_libqt_mt_so_3_classinfo,
+	&_Z13QSignalMapper_of_libqt_mt_so_3_classinfo,
+	&_Z9QDockArea_of_libqt_mt_so_3_classinfo,
+	&_Z8QCString_of_libqt_mt_so_3_classinfo,
+	&_Z6QStyle_of_libqt_mt_so_3_classinfo,
+	&_Z14QXmlDTDHandler_of_libqt_mt_so_3_classinfo,
+	&_Z12QColorDialog_of_libqt_mt_so_3_classinfo,
+	&_Z18QGuardedPtrPrivate_of_libqt_mt_so_3_classinfo,
+	&_Z12QApplication_of_libqt_mt_so_3_classinfo,
+	&_Z13QListViewItem_of_libqt_mt_so_3_classinfo,
+	&_Z9QIconView_of_libqt_mt_so_3_classinfo,
+	&_Z15QComboTableItem_of_libqt_mt_so_3_classinfo,
+	&_Z7QWidget_of_libqt_mt_so_3_classinfo,
+	&_Z4QDns_of_libqt_mt_so_3_classinfo,
+	&_Z15QIODeviceSource_of_libqt_mt_so_3_classinfo,
+	&_Z11QCanvasText_of_libqt_mt_so_3_classinfo,
+	&_Z15QXmlInputSource_of_libqt_mt_so_3_classinfo,
+	&_Z16QDoubleValidator_of_libqt_mt_so_3_classinfo,
+	&_Z9QIODevice_of_libqt_mt_so_3_classinfo,
+	&_Z12QInputDialog_of_libqt_mt_so_3_classinfo,
+	&_Z6QGDict_of_libqt_mt_so_3_classinfo,
+	&_Z16QXmlErrorHandler_of_libqt_mt_so_3_classinfo,
+	&_Z10QWorkspace_of_libqt_mt_so_3_classinfo,
+	&_Z10QTabDialog_of_libqt_mt_so_3_classinfo,
+	&_Z18QHttpRequestHeader_of_libqt_mt_so_3_classinfo,
+	&_Z11QDragObject_of_libqt_mt_so_3_classinfo,
+	&_Z13QToolTipGroup_of_libqt_mt_so_3_classinfo,
+	&_Z17QDateTimeEditBase_of_libqt_mt_so_3_classinfo,
+	&_Z11QHttpHeader_of_libqt_mt_so_3_classinfo,
+	&_Z10QShowEvent_of_libqt_mt_so_3_classinfo,
+	&_Z6QTable_of_libqt_mt_so_3_classinfo,
+	&_Z8QLocalFs_of_libqt_mt_so_3_classinfo,
+	&_Z14QCanvasPolygon_of_libqt_mt_so_3_classinfo,
+	&_Z9QDateEdit_of_libqt_mt_so_3_classinfo,
+	&_Z11QPaintEvent_of_libqt_mt_so_3_classinfo,
+	&_Z6QAccel_of_libqt_mt_so_3_classinfo,
+	&_Z7QCanvas_of_libqt_mt_so_3_classinfo,
+	&_Z20QDomDocumentFragment_of_libqt_mt_so_3_classinfo,
+	&_Z11QDataStream_of_libqt_mt_so_3_classinfo,
+	&_Z14QJpUnicodeConv_of_libqt_mt_so_3_classinfo,
+	&_Z11QPushButton_of_libqt_mt_so_3_classinfo,
+	&_Z11QWidgetList_of_libqt_mt_so_3_classinfo,
+	&_Z9QMenuData_of_libqt_mt_so_3_classinfo,
+	&_Z9QDataView_of_libqt_mt_so_3_classinfo,
+	&_Z17QSqlEditorFactory_of_libqt_mt_so_3_classinfo,
+	&_Z15QConnectionList_of_libqt_mt_so_3_classinfo,
+	&_Z10QSqlCursor_of_libqt_mt_so_3_classinfo,
+	&_Z7QAction_of_libqt_mt_so_3_classinfo,
+	&_Z12QHostAddress_of_libqt_mt_so_3_classinfo,
+	&_Z11QWheelEvent_of_libqt_mt_so_3_classinfo,
+	&_Z12QDataBrowser_of_libqt_mt_so_3_classinfo,
+	&_Z9QTimeEdit_of_libqt_mt_so_3_classinfo,
+	&_Z13QIconDragItem_of_libqt_mt_so_3_classinfo,
+	&_Z13QSqlFieldInfo_of_libqt_mt_so_3_classinfo,
+	&_Z4QFtp_of_libqt_mt_so_3_classinfo,
+	&_Z11QLayoutItem_of_libqt_mt_so_3_classinfo,
+	&_Z10QMoveEvent_of_libqt_mt_so_3_classinfo,
+	&_Z9QTextEdit_of_libqt_mt_so_3_classinfo,
+	&_Z17QFileIconProvider_of_libqt_mt_so_3_classinfo,
+	&_Z9QSqlIndex_of_libqt_mt_so_3_classinfo,
+	&_Z9QSqlField_of_libqt_mt_so_3_classinfo,
+	&_Z10QVGroupBox_of_libqt_mt_so_3_classinfo,
+	&_Z11QCloseEvent_of_libqt_mt_so_3_classinfo,
 
 	NULL	};
