@@ -2325,16 +2325,16 @@ struct versym libQtCore_so_4[] = {
 	{"_ZrsR11QDataStreamRN8QVariant4TypeE","",0,LSB_Toolkit_Qt,0,1},
 	{0,0}};
 
-char *_7QObject_typeinfo_name[] = {
+char *_7QObject_of_libQtCore_so_4_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _7QObject_typeinfo = {
+struct classtypeinfo _7QObject_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS7QObject",
-	_7QObject_typeinfo_name,
+	_7QObject_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_7QObject_vtable_name_0 [] = {
+const char *_7QObject_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZNK7QObject10metaObjectEv",
 	"_ZN7QObject11qt_metacastEPKc",
 	"_ZN7QObject11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -2349,21 +2349,21 @@ const char *_7QObject_vtable_name_0 [] = {
 	"_ZN7QObject16disconnectNotifyEPKc",
 	};
 
-struct classvtable _7QObject_vtable [1] = {
+struct classvtable _7QObject_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	12,	/* Number of Vfuncs */
 	"_ZTI7QObject",
-	_7QObject_vtable_name_0,
+	_7QObject_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _7QObject_baseinfo[] = {
+struct base_type_info _7QObject_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z7QObject_classinfo = {
+struct classinfo _Z7QObject_of_libQtCore_so_4_classinfo = {
 	"_Z7QObject",
 	"_ZTV7QObject",
 	"_ZTI7QObject",	/* RTTI */
@@ -2374,40 +2374,40 @@ struct classinfo _Z7QObject_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_7QObject_typeinfo,
-	_7QObject_vtable,
-	_7QObject_baseinfo,
+	&_7QObject_of_libQtCore_so_4_typeinfo,
+	_7QObject_of_libQtCore_so_4_vtable,
+	_7QObject_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_15QObjectUserData_typeinfo_name[] = {
+char *_15QObjectUserData_of_libQtCore_so_4_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _15QObjectUserData_typeinfo = {
+struct classtypeinfo _15QObjectUserData_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS15QObjectUserData",
-	_15QObjectUserData_typeinfo_name,
+	_15QObjectUserData_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_15QObjectUserData_vtable_name_0 [] = {
+const char *_15QObjectUserData_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZN15QObjectUserDataD1Ev",
 	"_ZN15QObjectUserDataD0Ev",
 	};
 
-struct classvtable _15QObjectUserData_vtable [1] = {
+struct classvtable _15QObjectUserData_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI15QObjectUserData",
-	_15QObjectUserData_vtable_name_0,
+	_15QObjectUserData_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _15QObjectUserData_baseinfo[] = {
+struct base_type_info _15QObjectUserData_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z15QObjectUserData_classinfo = {
+struct classinfo _Z15QObjectUserData_of_libQtCore_so_4_classinfo = {
 	"_Z15QObjectUserData",
 	"_ZTV15QObjectUserData",
 	"_ZTI15QObjectUserData",	/* RTTI */
@@ -2418,22 +2418,22 @@ struct classinfo _Z15QObjectUserData_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_15QObjectUserData_typeinfo,
-	_15QObjectUserData_vtable,
-	_15QObjectUserData_baseinfo,
+	&_15QObjectUserData_of_libQtCore_so_4_typeinfo,
+	_15QObjectUserData_of_libQtCore_so_4_vtable,
+	_15QObjectUserData_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_9QIODevice_typeinfo_name[] = {
+char *_9QIODevice_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _9QIODevice_typeinfo = {
+struct classtypeinfo _9QIODevice_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QIODevice",
-	_9QIODevice_typeinfo_name,
+	_9QIODevice_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_9QIODevice_vtable_name_0 [] = {
+const char *_9QIODevice_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZNK9QIODevice10metaObjectEv",
 	"_ZN9QIODevice11qt_metacastEPKc",
 	"_ZN9QIODevice11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -2464,21 +2464,21 @@ const char *_9QIODevice_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _9QIODevice_vtable [1] = {
+struct classvtable _9QIODevice_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	28,	/* Number of Vfuncs */
 	"_ZTI9QIODevice",
-	_9QIODevice_vtable_name_0,
+	_9QIODevice_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _9QIODevice_baseinfo[] = {
+struct base_type_info _9QIODevice_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z9QIODevice_classinfo = {
+struct classinfo _Z9QIODevice_of_libQtCore_so_4_classinfo = {
 	"_Z9QIODevice",
 	"_ZTV9QIODevice",
 	"_ZTI9QIODevice",	/* RTTI */
@@ -2489,40 +2489,40 @@ struct classinfo _Z9QIODevice_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QIODevice_typeinfo,
-	_9QIODevice_vtable,
-	_9QIODevice_baseinfo,
+	&_9QIODevice_of_libQtCore_so_4_typeinfo,
+	_9QIODevice_of_libQtCore_so_4_vtable,
+	_9QIODevice_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_11QDataStream_typeinfo_name[] = {
+char *_11QDataStream_of_libQtCore_so_4_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _11QDataStream_typeinfo = {
+struct classtypeinfo _11QDataStream_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS11QDataStream",
-	_11QDataStream_typeinfo_name,
+	_11QDataStream_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_11QDataStream_vtable_name_0 [] = {
+const char *_11QDataStream_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZN11QDataStreamD1Ev",
 	"_ZN11QDataStreamD0Ev",
 	};
 
-struct classvtable _11QDataStream_vtable [1] = {
+struct classvtable _11QDataStream_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI11QDataStream",
-	_11QDataStream_vtable_name_0,
+	_11QDataStream_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QDataStream_baseinfo[] = {
+struct base_type_info _11QDataStream_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z11QDataStream_classinfo = {
+struct classinfo _Z11QDataStream_of_libQtCore_so_4_classinfo = {
 	"_Z11QDataStream",
 	"_ZTV11QDataStream",
 	"_ZTI11QDataStream",	/* RTTI */
@@ -2533,21 +2533,21 @@ struct classinfo _Z11QDataStream_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QDataStream_typeinfo,
-	_11QDataStream_vtable,
-	_11QDataStream_baseinfo,
+	&_11QDataStream_of_libQtCore_so_4_typeinfo,
+	_11QDataStream_of_libQtCore_so_4_vtable,
+	_11QDataStream_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_10QTextCodec_typeinfo_name[] = {
+char *_10QTextCodec_of_libQtCore_so_4_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _10QTextCodec_typeinfo = {
+struct classtypeinfo _10QTextCodec_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS10QTextCodec",
-	_10QTextCodec_typeinfo_name,
+	_10QTextCodec_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_10QTextCodec_vtable_name_0 [] = {
+const char *_10QTextCodec_of_libQtCore_so_4_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	"_ZNK10QTextCodec7aliasesEv",
 	"__cxa_pure_virtual",
@@ -2557,21 +2557,21 @@ const char *_10QTextCodec_vtable_name_0 [] = {
 	"_ZN10QTextCodecD0Ev",
 	};
 
-struct classvtable _10QTextCodec_vtable [1] = {
+struct classvtable _10QTextCodec_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	7,	/* Number of Vfuncs */
 	"_ZTI10QTextCodec",
-	_10QTextCodec_vtable_name_0,
+	_10QTextCodec_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _10QTextCodec_baseinfo[] = {
+struct base_type_info _10QTextCodec_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z10QTextCodec_classinfo = {
+struct classinfo _Z10QTextCodec_of_libQtCore_so_4_classinfo = {
 	"_Z10QTextCodec",
 	"_ZTV10QTextCodec",
 	"_ZTI10QTextCodec",	/* RTTI */
@@ -2582,40 +2582,40 @@ struct classinfo _Z10QTextCodec_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QTextCodec_typeinfo,
-	_10QTextCodec_vtable,
-	_10QTextCodec_baseinfo,
+	&_10QTextCodec_of_libQtCore_so_4_typeinfo,
+	_10QTextCodec_of_libQtCore_so_4_vtable,
+	_10QTextCodec_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_11QTextStream_typeinfo_name[] = {
+char *_11QTextStream_of_libQtCore_so_4_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _11QTextStream_typeinfo = {
+struct classtypeinfo _11QTextStream_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS11QTextStream",
-	_11QTextStream_typeinfo_name,
+	_11QTextStream_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_11QTextStream_vtable_name_0 [] = {
+const char *_11QTextStream_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZN11QTextStreamD1Ev",
 	"_ZN11QTextStreamD0Ev",
 	};
 
-struct classvtable _11QTextStream_vtable [1] = {
+struct classvtable _11QTextStream_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI11QTextStream",
-	_11QTextStream_vtable_name_0,
+	_11QTextStream_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QTextStream_baseinfo[] = {
+struct base_type_info _11QTextStream_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z11QTextStream_classinfo = {
+struct classinfo _Z11QTextStream_of_libQtCore_so_4_classinfo = {
 	"_Z11QTextStream",
 	"_ZTV11QTextStream",
 	"_ZTI11QTextStream",	/* RTTI */
@@ -2626,22 +2626,22 @@ struct classinfo _Z11QTextStream_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QTextStream_typeinfo,
-	_11QTextStream_vtable,
-	_11QTextStream_baseinfo,
+	&_11QTextStream_of_libQtCore_so_4_typeinfo,
+	_11QTextStream_of_libQtCore_so_4_vtable,
+	_11QTextStream_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_5QFile_typeinfo_name[] = {
+char *_5QFile_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI9QIODevice",
 	};
 
-struct classtypeinfo _5QFile_typeinfo = {
+struct classtypeinfo _5QFile_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS5QFile",
-	_5QFile_typeinfo_name,
+	_5QFile_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_5QFile_vtable_name_0 [] = {
+const char *_5QFile_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZNK5QFile10metaObjectEv",
 	"_ZN5QFile11qt_metacastEPKc",
 	"_ZN5QFile11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -2673,21 +2673,21 @@ const char *_5QFile_vtable_name_0 [] = {
 	"_ZNK5QFile10fileEngineEv",
 	};
 
-struct classvtable _5QFile_vtable [1] = {
+struct classvtable _5QFile_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	29,	/* Number of Vfuncs */
 	"_ZTI5QFile",
-	_5QFile_vtable_name_0,
+	_5QFile_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _5QFile_baseinfo[] = {
+struct base_type_info _5QFile_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z5QFile_classinfo = {
+struct classinfo _Z5QFile_of_libQtCore_so_4_classinfo = {
 	"_Z5QFile",
 	"_ZTV5QFile",
 	"_ZTI5QFile",	/* RTTI */
@@ -2698,22 +2698,22 @@ struct classinfo _Z5QFile_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_5QFile_typeinfo,
-	_5QFile_vtable,
-	_5QFile_baseinfo,
+	&_5QFile_of_libQtCore_so_4_typeinfo,
+	_5QFile_of_libQtCore_so_4_vtable,
+	_5QFile_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_14QTemporaryFile_typeinfo_name[] = {
+char *_14QTemporaryFile_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI5QFile",
 	};
 
-struct classtypeinfo _14QTemporaryFile_typeinfo = {
+struct classtypeinfo _14QTemporaryFile_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS14QTemporaryFile",
-	_14QTemporaryFile_typeinfo_name,
+	_14QTemporaryFile_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_14QTemporaryFile_vtable_name_0 [] = {
+const char *_14QTemporaryFile_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZNK14QTemporaryFile10metaObjectEv",
 	"_ZN14QTemporaryFile11qt_metacastEPKc",
 	"_ZN14QTemporaryFile11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -2745,21 +2745,21 @@ const char *_14QTemporaryFile_vtable_name_0 [] = {
 	"_ZNK14QTemporaryFile10fileEngineEv",
 	};
 
-struct classvtable _14QTemporaryFile_vtable [1] = {
+struct classvtable _14QTemporaryFile_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	29,	/* Number of Vfuncs */
 	"_ZTI14QTemporaryFile",
-	_14QTemporaryFile_vtable_name_0,
+	_14QTemporaryFile_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _14QTemporaryFile_baseinfo[] = {
+struct base_type_info _14QTemporaryFile_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z14QTemporaryFile_classinfo = {
+struct classinfo _Z14QTemporaryFile_of_libQtCore_so_4_classinfo = {
 	"_Z14QTemporaryFile",
 	"_ZTV14QTemporaryFile",
 	"_ZTI14QTemporaryFile",	/* RTTI */
@@ -2770,21 +2770,21 @@ struct classinfo _Z14QTemporaryFile_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_14QTemporaryFile_typeinfo,
-	_14QTemporaryFile_vtable,
-	_14QTemporaryFile_baseinfo,
+	&_14QTemporaryFile_of_libQtCore_so_4_typeinfo,
+	_14QTemporaryFile_of_libQtCore_so_4_vtable,
+	_14QTemporaryFile_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_19QAbstractFileEngine_typeinfo_name[] = {
+char *_19QAbstractFileEngine_of_libQtCore_so_4_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _19QAbstractFileEngine_typeinfo = {
+struct classtypeinfo _19QAbstractFileEngine_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS19QAbstractFileEngine",
-	_19QAbstractFileEngine_typeinfo_name,
+	_19QAbstractFileEngine_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_19QAbstractFileEngine_vtable_name_0 [] = {
+const char *_19QAbstractFileEngine_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZN19QAbstractFileEngineD1Ev",
 	"_ZN19QAbstractFileEngineD0Ev",
 	"_ZN19QAbstractFileEngine4openE6QFlagsIN9QIODevice12OpenModeFlagEE",
@@ -2821,21 +2821,21 @@ const char *_19QAbstractFileEngine_vtable_name_0 [] = {
 	"_ZNK19QAbstractFileEngine17supportsExtensionENS_9ExtensionE",
 	};
 
-struct classvtable _19QAbstractFileEngine_vtable [1] = {
+struct classvtable _19QAbstractFileEngine_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	34,	/* Number of Vfuncs */
 	"_ZTI19QAbstractFileEngine",
-	_19QAbstractFileEngine_vtable_name_0,
+	_19QAbstractFileEngine_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _19QAbstractFileEngine_baseinfo[] = {
+struct base_type_info _19QAbstractFileEngine_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z19QAbstractFileEngine_classinfo = {
+struct classinfo _Z19QAbstractFileEngine_of_libQtCore_so_4_classinfo = {
 	"_Z19QAbstractFileEngine",
 	"_ZTV19QAbstractFileEngine",
 	"_ZTI19QAbstractFileEngine",	/* RTTI */
@@ -2846,41 +2846,41 @@ struct classinfo _Z19QAbstractFileEngine_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_19QAbstractFileEngine_typeinfo,
-	_19QAbstractFileEngine_vtable,
-	_19QAbstractFileEngine_baseinfo,
+	&_19QAbstractFileEngine_of_libQtCore_so_4_typeinfo,
+	_19QAbstractFileEngine_of_libQtCore_so_4_vtable,
+	_19QAbstractFileEngine_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_26QAbstractFileEngineHandler_typeinfo_name[] = {
+char *_26QAbstractFileEngineHandler_of_libQtCore_so_4_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _26QAbstractFileEngineHandler_typeinfo = {
+struct classtypeinfo _26QAbstractFileEngineHandler_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS26QAbstractFileEngineHandler",
-	_26QAbstractFileEngineHandler_typeinfo_name,
+	_26QAbstractFileEngineHandler_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_26QAbstractFileEngineHandler_vtable_name_0 [] = {
+const char *_26QAbstractFileEngineHandler_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZN26QAbstractFileEngineHandlerD1Ev",
 	"_ZN26QAbstractFileEngineHandlerD0Ev",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _26QAbstractFileEngineHandler_vtable [1] = {
+struct classvtable _26QAbstractFileEngineHandler_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	3,	/* Number of Vfuncs */
 	"_ZTI26QAbstractFileEngineHandler",
-	_26QAbstractFileEngineHandler_vtable_name_0,
+	_26QAbstractFileEngineHandler_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _26QAbstractFileEngineHandler_baseinfo[] = {
+struct base_type_info _26QAbstractFileEngineHandler_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z26QAbstractFileEngineHandler_classinfo = {
+struct classinfo _Z26QAbstractFileEngineHandler_of_libQtCore_so_4_classinfo = {
 	"_Z26QAbstractFileEngineHandler",
 	"_ZTV26QAbstractFileEngineHandler",
 	"_ZTI26QAbstractFileEngineHandler",	/* RTTI */
@@ -2891,22 +2891,22 @@ struct classinfo _Z26QAbstractFileEngineHandler_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_26QAbstractFileEngineHandler_typeinfo,
-	_26QAbstractFileEngineHandler_vtable,
-	_26QAbstractFileEngineHandler_baseinfo,
+	&_26QAbstractFileEngineHandler_of_libQtCore_so_4_typeinfo,
+	_26QAbstractFileEngineHandler_of_libQtCore_so_4_vtable,
+	_26QAbstractFileEngineHandler_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_13QFSFileEngine_typeinfo_name[] = {
+char *_13QFSFileEngine_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI19QAbstractFileEngine",
 	};
 
-struct classtypeinfo _13QFSFileEngine_typeinfo = {
+struct classtypeinfo _13QFSFileEngine_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS13QFSFileEngine",
-	_13QFSFileEngine_typeinfo_name,
+	_13QFSFileEngine_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_13QFSFileEngine_vtable_name_0 [] = {
+const char *_13QFSFileEngine_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZN13QFSFileEngineD1Ev",
 	"_ZN13QFSFileEngineD0Ev",
 	"_ZN13QFSFileEngine4openE6QFlagsIN9QIODevice12OpenModeFlagEE",
@@ -2943,21 +2943,21 @@ const char *_13QFSFileEngine_vtable_name_0 [] = {
 	"_ZNK13QFSFileEngine17supportsExtensionEN19QAbstractFileEngine9ExtensionE",
 	};
 
-struct classvtable _13QFSFileEngine_vtable [1] = {
+struct classvtable _13QFSFileEngine_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	34,	/* Number of Vfuncs */
 	"_ZTI13QFSFileEngine",
-	_13QFSFileEngine_vtable_name_0,
+	_13QFSFileEngine_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _13QFSFileEngine_baseinfo[] = {
+struct base_type_info _13QFSFileEngine_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z13QFSFileEngine_classinfo = {
+struct classinfo _Z13QFSFileEngine_of_libQtCore_so_4_classinfo = {
 	"_Z13QFSFileEngine",
 	"_ZTV13QFSFileEngine",
 	"_ZTI13QFSFileEngine",	/* RTTI */
@@ -2968,22 +2968,22 @@ struct classinfo _Z13QFSFileEngine_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_13QFSFileEngine_typeinfo,
-	_13QFSFileEngine_vtable,
-	_13QFSFileEngine_baseinfo,
+	&_13QFSFileEngine_of_libQtCore_so_4_typeinfo,
+	_13QFSFileEngine_of_libQtCore_so_4_vtable,
+	_13QFSFileEngine_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_8QProcess_typeinfo_name[] = {
+char *_8QProcess_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI9QIODevice",
 	};
 
-struct classtypeinfo _8QProcess_typeinfo = {
+struct classtypeinfo _8QProcess_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS8QProcess",
-	_8QProcess_typeinfo_name,
+	_8QProcess_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_8QProcess_vtable_name_0 [] = {
+const char *_8QProcess_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZNK8QProcess10metaObjectEv",
 	"_ZN8QProcess11qt_metacastEPKc",
 	"_ZN8QProcess11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -3015,21 +3015,21 @@ const char *_8QProcess_vtable_name_0 [] = {
 	"_ZN8QProcess17setupChildProcessEv",
 	};
 
-struct classvtable _8QProcess_vtable [1] = {
+struct classvtable _8QProcess_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	29,	/* Number of Vfuncs */
 	"_ZTI8QProcess",
-	_8QProcess_vtable_name_0,
+	_8QProcess_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _8QProcess_baseinfo[] = {
+struct base_type_info _8QProcess_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z8QProcess_classinfo = {
+struct classinfo _Z8QProcess_of_libQtCore_so_4_classinfo = {
 	"_Z8QProcess",
 	"_ZTV8QProcess",
 	"_ZTI8QProcess",	/* RTTI */
@@ -3040,22 +3040,22 @@ struct classinfo _Z8QProcess_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_8QProcess_typeinfo,
-	_8QProcess_vtable,
-	_8QProcess_baseinfo,
+	&_8QProcess_of_libQtCore_so_4_typeinfo,
+	_8QProcess_of_libQtCore_so_4_vtable,
+	_8QProcess_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_7QBuffer_typeinfo_name[] = {
+char *_7QBuffer_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI9QIODevice",
 	};
 
-struct classtypeinfo _7QBuffer_typeinfo = {
+struct classtypeinfo _7QBuffer_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS7QBuffer",
-	_7QBuffer_typeinfo_name,
+	_7QBuffer_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_7QBuffer_vtable_name_0 [] = {
+const char *_7QBuffer_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZNK7QBuffer10metaObjectEv",
 	"_ZN7QBuffer11qt_metacastEPKc",
 	"_ZN7QBuffer11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -3086,21 +3086,21 @@ const char *_7QBuffer_vtable_name_0 [] = {
 	"_ZN7QBuffer9writeDataEPKcx",
 	};
 
-struct classvtable _7QBuffer_vtable [1] = {
+struct classvtable _7QBuffer_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	28,	/* Number of Vfuncs */
 	"_ZTI7QBuffer",
-	_7QBuffer_vtable_name_0,
+	_7QBuffer_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _7QBuffer_baseinfo[] = {
+struct base_type_info _7QBuffer_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z7QBuffer_classinfo = {
+struct classinfo _Z7QBuffer_of_libQtCore_so_4_classinfo = {
 	"_Z7QBuffer",
 	"_ZTV7QBuffer",
 	"_ZTI7QBuffer",	/* RTTI */
@@ -3111,22 +3111,22 @@ struct classinfo _Z7QBuffer_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_7QBuffer_typeinfo,
-	_7QBuffer_vtable,
-	_7QBuffer_baseinfo,
+	&_7QBuffer_of_libQtCore_so_4_typeinfo,
+	_7QBuffer_of_libQtCore_so_4_vtable,
+	_7QBuffer_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_9QSettings_typeinfo_name[] = {
+char *_9QSettings_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _9QSettings_typeinfo = {
+struct classtypeinfo _9QSettings_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QSettings",
-	_9QSettings_typeinfo_name,
+	_9QSettings_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_9QSettings_vtable_name_0 [] = {
+const char *_9QSettings_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZNK9QSettings10metaObjectEv",
 	"_ZN9QSettings11qt_metacastEPKc",
 	"_ZN9QSettings11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -3141,21 +3141,21 @@ const char *_9QSettings_vtable_name_0 [] = {
 	"_ZN7QObject16disconnectNotifyEPKc",
 	};
 
-struct classvtable _9QSettings_vtable [1] = {
+struct classvtable _9QSettings_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	12,	/* Number of Vfuncs */
 	"_ZTI9QSettings",
-	_9QSettings_vtable_name_0,
+	_9QSettings_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _9QSettings_baseinfo[] = {
+struct base_type_info _9QSettings_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z9QSettings_classinfo = {
+struct classinfo _Z9QSettings_of_libQtCore_so_4_classinfo = {
 	"_Z9QSettings",
 	"_ZTV9QSettings",
 	"_ZTI9QSettings",	/* RTTI */
@@ -3166,41 +3166,41 @@ struct classinfo _Z9QSettings_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QSettings_typeinfo,
-	_9QSettings_vtable,
-	_9QSettings_baseinfo,
+	&_9QSettings_of_libQtCore_so_4_typeinfo,
+	_9QSettings_of_libQtCore_so_4_vtable,
+	_9QSettings_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_17QFactoryInterface_typeinfo_name[] = {
+char *_17QFactoryInterface_of_libQtCore_so_4_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _17QFactoryInterface_typeinfo = {
+struct classtypeinfo _17QFactoryInterface_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS17QFactoryInterface",
-	_17QFactoryInterface_typeinfo_name,
+	_17QFactoryInterface_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_17QFactoryInterface_vtable_name_0 [] = {
+const char *_17QFactoryInterface_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZN17QFactoryInterfaceD1Ev",
 	"_ZN17QFactoryInterfaceD0Ev",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _17QFactoryInterface_vtable [1] = {
+struct classvtable _17QFactoryInterface_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	3,	/* Number of Vfuncs */
 	"_ZTI17QFactoryInterface",
-	_17QFactoryInterface_vtable_name_0,
+	_17QFactoryInterface_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _17QFactoryInterface_baseinfo[] = {
+struct base_type_info _17QFactoryInterface_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z17QFactoryInterface_classinfo = {
+struct classinfo _Z17QFactoryInterface_of_libQtCore_so_4_classinfo = {
 	"_Z17QFactoryInterface",
 	"_ZTV17QFactoryInterface",
 	"_ZTI17QFactoryInterface",	/* RTTI */
@@ -3211,43 +3211,43 @@ struct classinfo _Z17QFactoryInterface_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_17QFactoryInterface_typeinfo,
-	_17QFactoryInterface_vtable,
-	_17QFactoryInterface_baseinfo,
+	&_17QFactoryInterface_of_libQtCore_so_4_typeinfo,
+	_17QFactoryInterface_of_libQtCore_so_4_vtable,
+	_17QFactoryInterface_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_26QTextCodecFactoryInterface_typeinfo_name[] = {
+char *_26QTextCodecFactoryInterface_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI17QFactoryInterface",
 	};
 
-struct classtypeinfo _26QTextCodecFactoryInterface_typeinfo = {
+struct classtypeinfo _26QTextCodecFactoryInterface_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS26QTextCodecFactoryInterface",
-	_26QTextCodecFactoryInterface_typeinfo_name,
+	_26QTextCodecFactoryInterface_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_26QTextCodecFactoryInterface_vtable_name_0 [] = {
+const char *_26QTextCodecFactoryInterface_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZN26QTextCodecFactoryInterfaceD1Ev",
 	"_ZN26QTextCodecFactoryInterfaceD0Ev",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _26QTextCodecFactoryInterface_vtable [1] = {
+struct classvtable _26QTextCodecFactoryInterface_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	4,	/* Number of Vfuncs */
 	"_ZTI26QTextCodecFactoryInterface",
-	_26QTextCodecFactoryInterface_vtable_name_0,
+	_26QTextCodecFactoryInterface_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _26QTextCodecFactoryInterface_baseinfo[] = {
+struct base_type_info _26QTextCodecFactoryInterface_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z26QTextCodecFactoryInterface_classinfo = {
+struct classinfo _Z26QTextCodecFactoryInterface_of_libQtCore_so_4_classinfo = {
 	"_Z26QTextCodecFactoryInterface",
 	"_ZTV26QTextCodecFactoryInterface",
 	"_ZTI26QTextCodecFactoryInterface",	/* RTTI */
@@ -3258,21 +3258,21 @@ struct classinfo _Z26QTextCodecFactoryInterface_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_26QTextCodecFactoryInterface_typeinfo,
-	_26QTextCodecFactoryInterface_vtable,
-	_26QTextCodecFactoryInterface_baseinfo,
+	&_26QTextCodecFactoryInterface_of_libQtCore_so_4_typeinfo,
+	_26QTextCodecFactoryInterface_of_libQtCore_so_4_vtable,
+	_26QTextCodecFactoryInterface_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_16QTextCodecPlugin_typeinfo_name[] = {
+char *_16QTextCodecPlugin_of_libQtCore_so_4_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _16QTextCodecPlugin_typeinfo = {
+struct classtypeinfo _16QTextCodecPlugin_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
 	"_ZTS16QTextCodecPlugin",
-	_16QTextCodecPlugin_typeinfo_name,
+	_16QTextCodecPlugin_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_16QTextCodecPlugin_vtable_name_0 [] = {
+const char *_16QTextCodecPlugin_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZNK16QTextCodecPlugin10metaObjectEv",
 	"_ZN16QTextCodecPlugin11qt_metacastEPKc",
 	"_ZN16QTextCodecPlugin11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -3294,7 +3294,7 @@ const char *_16QTextCodecPlugin_vtable_name_0 [] = {
 	"_ZN16QTextCodecPlugin6createERK7QString",
 	};
 
-const char *_16QTextCodecPlugin_vtable_name_1 [] = {
+const char *_16QTextCodecPlugin_of_libQtCore_so_4_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn8_N16QTextCodecPluginD1Ev",
 #endif
@@ -3381,14 +3381,14 @@ const char *_16QTextCodecPlugin_vtable_name_1 [] = {
 #endif
 	};
 
-struct classvtable _16QTextCodecPlugin_vtable [2] = {
+struct classvtable _16QTextCodecPlugin_of_libQtCore_so_4_vtable [2] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	19,	/* Number of Vfuncs */
 	"_ZTI16QTextCodecPlugin",
-	_16QTextCodecPlugin_vtable_name_0,
+	_16QTextCodecPlugin_of_libQtCore_so_4_vtable_name_0,
 	},
 	{
 #if defined __i386__
@@ -3422,11 +3422,11 @@ struct classvtable _16QTextCodecPlugin_vtable [2] = {
 	1,	/* Vtable category */
 	4,	/* Number of Vfuncs */
 	"_ZTI16QTextCodecPlugin",
-	_16QTextCodecPlugin_vtable_name_1,
+	_16QTextCodecPlugin_of_libQtCore_so_4_vtable_name_1,
 	},
 };
 
-struct base_type_info _16QTextCodecPlugin_baseinfo[] = {
+struct base_type_info _16QTextCodecPlugin_of_libQtCore_so_4_baseinfo[] = {
 	{"_ZTI7QObject",	2U},
 #if defined __i386__
 	{"_ZTI26QTextCodecFactoryInterface",	2050U},
@@ -3451,7 +3451,7 @@ struct base_type_info _16QTextCodecPlugin_baseinfo[] = {
 #endif
 	};
 
-struct classinfo _Z16QTextCodecPlugin_classinfo = {
+struct classinfo _Z16QTextCodecPlugin_of_libQtCore_so_4_classinfo = {
 	"_Z16QTextCodecPlugin",
 	"_ZTV16QTextCodecPlugin",
 	"_ZTI16QTextCodecPlugin",	/* RTTI */
@@ -3462,22 +3462,22 @@ struct classinfo _Z16QTextCodecPlugin_classinfo = {
 	2,
 	0,	/* numVTT */
 	0U,
-	&_16QTextCodecPlugin_typeinfo,
-	_16QTextCodecPlugin_vtable,
-	_16QTextCodecPlugin_baseinfo,
+	&_16QTextCodecPlugin_of_libQtCore_so_4_typeinfo,
+	_16QTextCodecPlugin_of_libQtCore_so_4_vtable,
+	_16QTextCodecPlugin_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_11QTranslator_typeinfo_name[] = {
+char *_11QTranslator_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _11QTranslator_typeinfo = {
+struct classtypeinfo _11QTranslator_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QTranslator",
-	_11QTranslator_typeinfo_name,
+	_11QTranslator_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_11QTranslator_vtable_name_0 [] = {
+const char *_11QTranslator_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZNK11QTranslator10metaObjectEv",
 	"_ZN11QTranslator11qt_metacastEPKc",
 	"_ZN11QTranslator11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -3494,21 +3494,21 @@ const char *_11QTranslator_vtable_name_0 [] = {
 	"_ZNK11QTranslator7isEmptyEv",
 	};
 
-struct classvtable _11QTranslator_vtable [1] = {
+struct classvtable _11QTranslator_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	14,	/* Number of Vfuncs */
 	"_ZTI11QTranslator",
-	_11QTranslator_vtable_name_0,
+	_11QTranslator_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QTranslator_baseinfo[] = {
+struct base_type_info _11QTranslator_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z11QTranslator_classinfo = {
+struct classinfo _Z11QTranslator_of_libQtCore_so_4_classinfo = {
 	"_Z11QTranslator",
 	"_ZTV11QTranslator",
 	"_ZTI11QTranslator",	/* RTTI */
@@ -3519,22 +3519,22 @@ struct classinfo _Z11QTranslator_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QTranslator_typeinfo,
-	_11QTranslator_vtable,
-	_11QTranslator_baseinfo,
+	&_11QTranslator_of_libQtCore_so_4_typeinfo,
+	_11QTranslator_of_libQtCore_so_4_vtable,
+	_11QTranslator_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_9QMimeData_typeinfo_name[] = {
+char *_9QMimeData_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _9QMimeData_typeinfo = {
+struct classtypeinfo _9QMimeData_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS9QMimeData",
-	_9QMimeData_typeinfo_name,
+	_9QMimeData_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_9QMimeData_vtable_name_0 [] = {
+const char *_9QMimeData_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZNK9QMimeData10metaObjectEv",
 	"_ZN9QMimeData11qt_metacastEPKc",
 	"_ZN9QMimeData11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -3552,21 +3552,21 @@ const char *_9QMimeData_vtable_name_0 [] = {
 	"_ZNK9QMimeData12retrieveDataERK7QStringN8QVariant4TypeE",
 	};
 
-struct classvtable _9QMimeData_vtable [1] = {
+struct classvtable _9QMimeData_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	15,	/* Number of Vfuncs */
 	"_ZTI9QMimeData",
-	_9QMimeData_vtable_name_0,
+	_9QMimeData_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _9QMimeData_baseinfo[] = {
+struct base_type_info _9QMimeData_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z9QMimeData_classinfo = {
+struct classinfo _Z9QMimeData_of_libQtCore_so_4_classinfo = {
 	"_Z9QMimeData",
 	"_ZTV9QMimeData",
 	"_ZTI9QMimeData",	/* RTTI */
@@ -3577,22 +3577,22 @@ struct classinfo _Z9QMimeData_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_9QMimeData_typeinfo,
-	_9QMimeData_vtable,
-	_9QMimeData_baseinfo,
+	&_9QMimeData_of_libQtCore_so_4_typeinfo,
+	_9QMimeData_of_libQtCore_so_4_vtable,
+	_9QMimeData_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_10QEventLoop_typeinfo_name[] = {
+char *_10QEventLoop_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _10QEventLoop_typeinfo = {
+struct classtypeinfo _10QEventLoop_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS10QEventLoop",
-	_10QEventLoop_typeinfo_name,
+	_10QEventLoop_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_10QEventLoop_vtable_name_0 [] = {
+const char *_10QEventLoop_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZNK10QEventLoop10metaObjectEv",
 	"_ZN10QEventLoop11qt_metacastEPKc",
 	"_ZN10QEventLoop11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -3607,21 +3607,21 @@ const char *_10QEventLoop_vtable_name_0 [] = {
 	"_ZN7QObject16disconnectNotifyEPKc",
 	};
 
-struct classvtable _10QEventLoop_vtable [1] = {
+struct classvtable _10QEventLoop_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	12,	/* Number of Vfuncs */
 	"_ZTI10QEventLoop",
-	_10QEventLoop_vtable_name_0,
+	_10QEventLoop_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _10QEventLoop_baseinfo[] = {
+struct base_type_info _10QEventLoop_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z10QEventLoop_classinfo = {
+struct classinfo _Z10QEventLoop_of_libQtCore_so_4_classinfo = {
 	"_Z10QEventLoop",
 	"_ZTV10QEventLoop",
 	"_ZTI10QEventLoop",	/* RTTI */
@@ -3632,40 +3632,40 @@ struct classinfo _Z10QEventLoop_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_10QEventLoop_typeinfo,
-	_10QEventLoop_vtable,
-	_10QEventLoop_baseinfo,
+	&_10QEventLoop_of_libQtCore_so_4_typeinfo,
+	_10QEventLoop_of_libQtCore_so_4_vtable,
+	_10QEventLoop_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_6QEvent_typeinfo_name[] = {
+char *_6QEvent_of_libQtCore_so_4_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _6QEvent_typeinfo = {
+struct classtypeinfo _6QEvent_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv117__class_type_infoE",
 	"_ZTS6QEvent",
-	_6QEvent_typeinfo_name,
+	_6QEvent_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_6QEvent_vtable_name_0 [] = {
+const char *_6QEvent_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZN6QEventD1Ev",
 	"_ZN6QEventD0Ev",
 	};
 
-struct classvtable _6QEvent_vtable [1] = {
+struct classvtable _6QEvent_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI6QEvent",
-	_6QEvent_vtable_name_0,
+	_6QEvent_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _6QEvent_baseinfo[] = {
+struct base_type_info _6QEvent_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z6QEvent_classinfo = {
+struct classinfo _Z6QEvent_of_libQtCore_so_4_classinfo = {
 	"_Z6QEvent",
 	"_ZTV6QEvent",
 	"_ZTI6QEvent",	/* RTTI */
@@ -3676,41 +3676,41 @@ struct classinfo _Z6QEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_6QEvent_typeinfo,
-	_6QEvent_vtable,
-	_6QEvent_baseinfo,
+	&_6QEvent_of_libQtCore_so_4_typeinfo,
+	_6QEvent_of_libQtCore_so_4_vtable,
+	_6QEvent_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_11QTimerEvent_typeinfo_name[] = {
+char *_11QTimerEvent_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo _11QTimerEvent_typeinfo = {
+struct classtypeinfo _11QTimerEvent_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QTimerEvent",
-	_11QTimerEvent_typeinfo_name,
+	_11QTimerEvent_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_11QTimerEvent_vtable_name_0 [] = {
+const char *_11QTimerEvent_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZN11QTimerEventD1Ev",
 	"_ZN11QTimerEventD0Ev",
 	};
 
-struct classvtable _11QTimerEvent_vtable [1] = {
+struct classvtable _11QTimerEvent_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI11QTimerEvent",
-	_11QTimerEvent_vtable_name_0,
+	_11QTimerEvent_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QTimerEvent_baseinfo[] = {
+struct base_type_info _11QTimerEvent_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z11QTimerEvent_classinfo = {
+struct classinfo _Z11QTimerEvent_of_libQtCore_so_4_classinfo = {
 	"_Z11QTimerEvent",
 	"_ZTV11QTimerEvent",
 	"_ZTI11QTimerEvent",	/* RTTI */
@@ -3721,41 +3721,41 @@ struct classinfo _Z11QTimerEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QTimerEvent_typeinfo,
-	_11QTimerEvent_vtable,
-	_11QTimerEvent_baseinfo,
+	&_11QTimerEvent_of_libQtCore_so_4_typeinfo,
+	_11QTimerEvent_of_libQtCore_so_4_vtable,
+	_11QTimerEvent_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_11QChildEvent_typeinfo_name[] = {
+char *_11QChildEvent_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo _11QChildEvent_typeinfo = {
+struct classtypeinfo _11QChildEvent_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS11QChildEvent",
-	_11QChildEvent_typeinfo_name,
+	_11QChildEvent_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_11QChildEvent_vtable_name_0 [] = {
+const char *_11QChildEvent_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZN11QChildEventD1Ev",
 	"_ZN11QChildEventD0Ev",
 	};
 
-struct classvtable _11QChildEvent_vtable [1] = {
+struct classvtable _11QChildEvent_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI11QChildEvent",
-	_11QChildEvent_vtable_name_0,
+	_11QChildEvent_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _11QChildEvent_baseinfo[] = {
+struct base_type_info _11QChildEvent_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z11QChildEvent_classinfo = {
+struct classinfo _Z11QChildEvent_of_libQtCore_so_4_classinfo = {
 	"_Z11QChildEvent",
 	"_ZTV11QChildEvent",
 	"_ZTI11QChildEvent",	/* RTTI */
@@ -3766,41 +3766,41 @@ struct classinfo _Z11QChildEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_11QChildEvent_typeinfo,
-	_11QChildEvent_vtable,
-	_11QChildEvent_baseinfo,
+	&_11QChildEvent_of_libQtCore_so_4_typeinfo,
+	_11QChildEvent_of_libQtCore_so_4_vtable,
+	_11QChildEvent_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_12QCustomEvent_typeinfo_name[] = {
+char *_12QCustomEvent_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI6QEvent",
 	};
 
-struct classtypeinfo _12QCustomEvent_typeinfo = {
+struct classtypeinfo _12QCustomEvent_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS12QCustomEvent",
-	_12QCustomEvent_typeinfo_name,
+	_12QCustomEvent_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_12QCustomEvent_vtable_name_0 [] = {
+const char *_12QCustomEvent_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZN12QCustomEventD1Ev",
 	"_ZN12QCustomEventD0Ev",
 	};
 
-struct classvtable _12QCustomEvent_vtable [1] = {
+struct classvtable _12QCustomEvent_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	2,	/* Number of Vfuncs */
 	"_ZTI12QCustomEvent",
-	_12QCustomEvent_vtable_name_0,
+	_12QCustomEvent_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _12QCustomEvent_baseinfo[] = {
+struct base_type_info _12QCustomEvent_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z12QCustomEvent_classinfo = {
+struct classinfo _Z12QCustomEvent_of_libQtCore_so_4_classinfo = {
 	"_Z12QCustomEvent",
 	"_ZTV12QCustomEvent",
 	"_ZTI12QCustomEvent",	/* RTTI */
@@ -3811,22 +3811,22 @@ struct classinfo _Z12QCustomEvent_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_12QCustomEvent_typeinfo,
-	_12QCustomEvent_vtable,
-	_12QCustomEvent_baseinfo,
+	&_12QCustomEvent_of_libQtCore_so_4_typeinfo,
+	_12QCustomEvent_of_libQtCore_so_4_vtable,
+	_12QCustomEvent_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_16QCoreApplication_typeinfo_name[] = {
+char *_16QCoreApplication_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _16QCoreApplication_typeinfo = {
+struct classtypeinfo _16QCoreApplication_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS16QCoreApplication",
-	_16QCoreApplication_typeinfo_name,
+	_16QCoreApplication_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_16QCoreApplication_vtable_name_0 [] = {
+const char *_16QCoreApplication_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZNK16QCoreApplication10metaObjectEv",
 	"_ZN16QCoreApplication11qt_metacastEPKc",
 	"_ZN16QCoreApplication11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -3843,21 +3843,21 @@ const char *_16QCoreApplication_vtable_name_0 [] = {
 	"_ZN16QCoreApplication13compressEventEP6QEventP7QObjectP14QPostEventList",
 	};
 
-struct classvtable _16QCoreApplication_vtable [1] = {
+struct classvtable _16QCoreApplication_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	14,	/* Number of Vfuncs */
 	"_ZTI16QCoreApplication",
-	_16QCoreApplication_vtable_name_0,
+	_16QCoreApplication_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _16QCoreApplication_baseinfo[] = {
+struct base_type_info _16QCoreApplication_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z16QCoreApplication_classinfo = {
+struct classinfo _Z16QCoreApplication_of_libQtCore_so_4_classinfo = {
 	"_Z16QCoreApplication",
 	"_ZTV16QCoreApplication",
 	"_ZTI16QCoreApplication",	/* RTTI */
@@ -3868,22 +3868,22 @@ struct classinfo _Z16QCoreApplication_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_16QCoreApplication_typeinfo,
-	_16QCoreApplication_vtable,
-	_16QCoreApplication_baseinfo,
+	&_16QCoreApplication_of_libQtCore_so_4_typeinfo,
+	_16QCoreApplication_of_libQtCore_so_4_vtable,
+	_16QCoreApplication_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_18QAbstractItemModel_typeinfo_name[] = {
+char *_18QAbstractItemModel_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _18QAbstractItemModel_typeinfo = {
+struct classtypeinfo _18QAbstractItemModel_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS18QAbstractItemModel",
-	_18QAbstractItemModel_typeinfo_name,
+	_18QAbstractItemModel_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_18QAbstractItemModel_vtable_name_0 [] = {
+const char *_18QAbstractItemModel_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZNK18QAbstractItemModel10metaObjectEv",
 	"_ZN18QAbstractItemModel11qt_metacastEPKc",
 	"_ZN18QAbstractItemModel11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -3926,21 +3926,21 @@ const char *_18QAbstractItemModel_vtable_name_0 [] = {
 	"_ZN18QAbstractItemModel6revertEv",
 	};
 
-struct classvtable _18QAbstractItemModel_vtable [1] = {
+struct classvtable _18QAbstractItemModel_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	40,	/* Number of Vfuncs */
 	"_ZTI18QAbstractItemModel",
-	_18QAbstractItemModel_vtable_name_0,
+	_18QAbstractItemModel_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _18QAbstractItemModel_baseinfo[] = {
+struct base_type_info _18QAbstractItemModel_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z18QAbstractItemModel_classinfo = {
+struct classinfo _Z18QAbstractItemModel_of_libQtCore_so_4_classinfo = {
 	"_Z18QAbstractItemModel",
 	"_ZTV18QAbstractItemModel",
 	"_ZTI18QAbstractItemModel",	/* RTTI */
@@ -3951,22 +3951,22 @@ struct classinfo _Z18QAbstractItemModel_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_18QAbstractItemModel_typeinfo,
-	_18QAbstractItemModel_vtable,
-	_18QAbstractItemModel_baseinfo,
+	&_18QAbstractItemModel_of_libQtCore_so_4_typeinfo,
+	_18QAbstractItemModel_of_libQtCore_so_4_vtable,
+	_18QAbstractItemModel_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_19QAbstractTableModel_typeinfo_name[] = {
+char *_19QAbstractTableModel_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI18QAbstractItemModel",
 	};
 
-struct classtypeinfo _19QAbstractTableModel_typeinfo = {
+struct classtypeinfo _19QAbstractTableModel_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS19QAbstractTableModel",
-	_19QAbstractTableModel_typeinfo_name,
+	_19QAbstractTableModel_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_19QAbstractTableModel_vtable_name_0 [] = {
+const char *_19QAbstractTableModel_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZNK19QAbstractTableModel10metaObjectEv",
 	"_ZN19QAbstractTableModel11qt_metacastEPKc",
 	"_ZN19QAbstractTableModel11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -4009,21 +4009,21 @@ const char *_19QAbstractTableModel_vtable_name_0 [] = {
 	"_ZN18QAbstractItemModel6revertEv",
 	};
 
-struct classvtable _19QAbstractTableModel_vtable [1] = {
+struct classvtable _19QAbstractTableModel_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	40,	/* Number of Vfuncs */
 	"_ZTI19QAbstractTableModel",
-	_19QAbstractTableModel_vtable_name_0,
+	_19QAbstractTableModel_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _19QAbstractTableModel_baseinfo[] = {
+struct base_type_info _19QAbstractTableModel_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z19QAbstractTableModel_classinfo = {
+struct classinfo _Z19QAbstractTableModel_of_libQtCore_so_4_classinfo = {
 	"_Z19QAbstractTableModel",
 	"_ZTV19QAbstractTableModel",
 	"_ZTI19QAbstractTableModel",	/* RTTI */
@@ -4034,22 +4034,22 @@ struct classinfo _Z19QAbstractTableModel_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_19QAbstractTableModel_typeinfo,
-	_19QAbstractTableModel_vtable,
-	_19QAbstractTableModel_baseinfo,
+	&_19QAbstractTableModel_of_libQtCore_so_4_typeinfo,
+	_19QAbstractTableModel_of_libQtCore_so_4_vtable,
+	_19QAbstractTableModel_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_18QAbstractListModel_typeinfo_name[] = {
+char *_18QAbstractListModel_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI18QAbstractItemModel",
 	};
 
-struct classtypeinfo _18QAbstractListModel_typeinfo = {
+struct classtypeinfo _18QAbstractListModel_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS18QAbstractListModel",
-	_18QAbstractListModel_typeinfo_name,
+	_18QAbstractListModel_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_18QAbstractListModel_vtable_name_0 [] = {
+const char *_18QAbstractListModel_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZNK18QAbstractListModel10metaObjectEv",
 	"_ZN18QAbstractListModel11qt_metacastEPKc",
 	"_ZN18QAbstractListModel11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -4092,21 +4092,21 @@ const char *_18QAbstractListModel_vtable_name_0 [] = {
 	"_ZN18QAbstractItemModel6revertEv",
 	};
 
-struct classvtable _18QAbstractListModel_vtable [1] = {
+struct classvtable _18QAbstractListModel_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	40,	/* Number of Vfuncs */
 	"_ZTI18QAbstractListModel",
-	_18QAbstractListModel_vtable_name_0,
+	_18QAbstractListModel_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _18QAbstractListModel_baseinfo[] = {
+struct base_type_info _18QAbstractListModel_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z18QAbstractListModel_classinfo = {
+struct classinfo _Z18QAbstractListModel_of_libQtCore_so_4_classinfo = {
 	"_Z18QAbstractListModel",
 	"_ZTV18QAbstractListModel",
 	"_ZTI18QAbstractListModel",	/* RTTI */
@@ -4117,22 +4117,22 @@ struct classinfo _Z18QAbstractListModel_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_18QAbstractListModel_typeinfo,
-	_18QAbstractListModel_vtable,
-	_18QAbstractListModel_baseinfo,
+	&_18QAbstractListModel_of_libQtCore_so_4_typeinfo,
+	_18QAbstractListModel_of_libQtCore_so_4_vtable,
+	_18QAbstractListModel_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_13QSignalMapper_typeinfo_name[] = {
+char *_13QSignalMapper_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _13QSignalMapper_typeinfo = {
+struct classtypeinfo _13QSignalMapper_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS13QSignalMapper",
-	_13QSignalMapper_typeinfo_name,
+	_13QSignalMapper_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_13QSignalMapper_vtable_name_0 [] = {
+const char *_13QSignalMapper_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZNK13QSignalMapper10metaObjectEv",
 	"_ZN13QSignalMapper11qt_metacastEPKc",
 	"_ZN13QSignalMapper11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -4147,21 +4147,21 @@ const char *_13QSignalMapper_vtable_name_0 [] = {
 	"_ZN7QObject16disconnectNotifyEPKc",
 	};
 
-struct classvtable _13QSignalMapper_vtable [1] = {
+struct classvtable _13QSignalMapper_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	12,	/* Number of Vfuncs */
 	"_ZTI13QSignalMapper",
-	_13QSignalMapper_vtable_name_0,
+	_13QSignalMapper_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _13QSignalMapper_baseinfo[] = {
+struct base_type_info _13QSignalMapper_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z13QSignalMapper_classinfo = {
+struct classinfo _Z13QSignalMapper_of_libQtCore_so_4_classinfo = {
 	"_Z13QSignalMapper",
 	"_ZTV13QSignalMapper",
 	"_ZTI13QSignalMapper",	/* RTTI */
@@ -4172,22 +4172,22 @@ struct classinfo _Z13QSignalMapper_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_13QSignalMapper_typeinfo,
-	_13QSignalMapper_vtable,
-	_13QSignalMapper_baseinfo,
+	&_13QSignalMapper_of_libQtCore_so_4_typeinfo,
+	_13QSignalMapper_of_libQtCore_so_4_vtable,
+	_13QSignalMapper_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_21QObjectCleanupHandler_typeinfo_name[] = {
+char *_21QObjectCleanupHandler_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _21QObjectCleanupHandler_typeinfo = {
+struct classtypeinfo _21QObjectCleanupHandler_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS21QObjectCleanupHandler",
-	_21QObjectCleanupHandler_typeinfo_name,
+	_21QObjectCleanupHandler_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_21QObjectCleanupHandler_vtable_name_0 [] = {
+const char *_21QObjectCleanupHandler_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZNK21QObjectCleanupHandler10metaObjectEv",
 	"_ZN21QObjectCleanupHandler11qt_metacastEPKc",
 	"_ZN21QObjectCleanupHandler11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -4202,21 +4202,21 @@ const char *_21QObjectCleanupHandler_vtable_name_0 [] = {
 	"_ZN7QObject16disconnectNotifyEPKc",
 	};
 
-struct classvtable _21QObjectCleanupHandler_vtable [1] = {
+struct classvtable _21QObjectCleanupHandler_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	12,	/* Number of Vfuncs */
 	"_ZTI21QObjectCleanupHandler",
-	_21QObjectCleanupHandler_vtable_name_0,
+	_21QObjectCleanupHandler_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _21QObjectCleanupHandler_baseinfo[] = {
+struct base_type_info _21QObjectCleanupHandler_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z21QObjectCleanupHandler_classinfo = {
+struct classinfo _Z21QObjectCleanupHandler_of_libQtCore_so_4_classinfo = {
 	"_Z21QObjectCleanupHandler",
 	"_ZTV21QObjectCleanupHandler",
 	"_ZTI21QObjectCleanupHandler",	/* RTTI */
@@ -4227,22 +4227,22 @@ struct classinfo _Z21QObjectCleanupHandler_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_21QObjectCleanupHandler_typeinfo,
-	_21QObjectCleanupHandler_vtable,
-	_21QObjectCleanupHandler_baseinfo,
+	&_21QObjectCleanupHandler_of_libQtCore_so_4_typeinfo,
+	_21QObjectCleanupHandler_of_libQtCore_so_4_vtable,
+	_21QObjectCleanupHandler_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_15QSocketNotifier_typeinfo_name[] = {
+char *_15QSocketNotifier_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _15QSocketNotifier_typeinfo = {
+struct classtypeinfo _15QSocketNotifier_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS15QSocketNotifier",
-	_15QSocketNotifier_typeinfo_name,
+	_15QSocketNotifier_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_15QSocketNotifier_vtable_name_0 [] = {
+const char *_15QSocketNotifier_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZNK15QSocketNotifier10metaObjectEv",
 	"_ZN15QSocketNotifier11qt_metacastEPKc",
 	"_ZN15QSocketNotifier11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -4257,21 +4257,21 @@ const char *_15QSocketNotifier_vtable_name_0 [] = {
 	"_ZN7QObject16disconnectNotifyEPKc",
 	};
 
-struct classvtable _15QSocketNotifier_vtable [1] = {
+struct classvtable _15QSocketNotifier_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	12,	/* Number of Vfuncs */
 	"_ZTI15QSocketNotifier",
-	_15QSocketNotifier_vtable_name_0,
+	_15QSocketNotifier_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _15QSocketNotifier_baseinfo[] = {
+struct base_type_info _15QSocketNotifier_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z15QSocketNotifier_classinfo = {
+struct classinfo _Z15QSocketNotifier_of_libQtCore_so_4_classinfo = {
 	"_Z15QSocketNotifier",
 	"_ZTV15QSocketNotifier",
 	"_ZTI15QSocketNotifier",	/* RTTI */
@@ -4282,22 +4282,22 @@ struct classinfo _Z15QSocketNotifier_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_15QSocketNotifier_typeinfo,
-	_15QSocketNotifier_vtable,
-	_15QSocketNotifier_baseinfo,
+	&_15QSocketNotifier_of_libQtCore_so_4_typeinfo,
+	_15QSocketNotifier_of_libQtCore_so_4_vtable,
+	_15QSocketNotifier_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_6QTimer_typeinfo_name[] = {
+char *_6QTimer_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _6QTimer_typeinfo = {
+struct classtypeinfo _6QTimer_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS6QTimer",
-	_6QTimer_typeinfo_name,
+	_6QTimer_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_6QTimer_vtable_name_0 [] = {
+const char *_6QTimer_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZNK6QTimer10metaObjectEv",
 	"_ZN6QTimer11qt_metacastEPKc",
 	"_ZN6QTimer11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -4312,21 +4312,21 @@ const char *_6QTimer_vtable_name_0 [] = {
 	"_ZN7QObject16disconnectNotifyEPKc",
 	};
 
-struct classvtable _6QTimer_vtable [1] = {
+struct classvtable _6QTimer_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	12,	/* Number of Vfuncs */
 	"_ZTI6QTimer",
-	_6QTimer_vtable_name_0,
+	_6QTimer_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _6QTimer_baseinfo[] = {
+struct base_type_info _6QTimer_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z6QTimer_classinfo = {
+struct classinfo _Z6QTimer_of_libQtCore_so_4_classinfo = {
 	"_Z6QTimer",
 	"_ZTV6QTimer",
 	"_ZTI6QTimer",	/* RTTI */
@@ -4337,22 +4337,22 @@ struct classinfo _Z6QTimer_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_6QTimer_typeinfo,
-	_6QTimer_vtable,
-	_6QTimer_baseinfo,
+	&_6QTimer_of_libQtCore_so_4_typeinfo,
+	_6QTimer_of_libQtCore_so_4_vtable,
+	_6QTimer_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_24QAbstractEventDispatcher_typeinfo_name[] = {
+char *_24QAbstractEventDispatcher_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _24QAbstractEventDispatcher_typeinfo = {
+struct classtypeinfo _24QAbstractEventDispatcher_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS24QAbstractEventDispatcher",
-	_24QAbstractEventDispatcher_typeinfo_name,
+	_24QAbstractEventDispatcher_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_24QAbstractEventDispatcher_vtable_name_0 [] = {
+const char *_24QAbstractEventDispatcher_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZNK24QAbstractEventDispatcher10metaObjectEv",
 	"_ZN24QAbstractEventDispatcher11qt_metacastEPKc",
 	"_ZN24QAbstractEventDispatcher11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -4380,21 +4380,21 @@ const char *_24QAbstractEventDispatcher_vtable_name_0 [] = {
 	"_ZN24QAbstractEventDispatcher11closingDownEv",
 	};
 
-struct classvtable _24QAbstractEventDispatcher_vtable [1] = {
+struct classvtable _24QAbstractEventDispatcher_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	25,	/* Number of Vfuncs */
 	"_ZTI24QAbstractEventDispatcher",
-	_24QAbstractEventDispatcher_vtable_name_0,
+	_24QAbstractEventDispatcher_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _24QAbstractEventDispatcher_baseinfo[] = {
+struct base_type_info _24QAbstractEventDispatcher_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z24QAbstractEventDispatcher_classinfo = {
+struct classinfo _Z24QAbstractEventDispatcher_of_libQtCore_so_4_classinfo = {
 	"_Z24QAbstractEventDispatcher",
 	"_ZTV24QAbstractEventDispatcher",
 	"_ZTI24QAbstractEventDispatcher",	/* RTTI */
@@ -4405,22 +4405,22 @@ struct classinfo _Z24QAbstractEventDispatcher_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_24QAbstractEventDispatcher_typeinfo,
-	_24QAbstractEventDispatcher_vtable,
-	_24QAbstractEventDispatcher_baseinfo,
+	&_24QAbstractEventDispatcher_of_libQtCore_so_4_typeinfo,
+	_24QAbstractEventDispatcher_of_libQtCore_so_4_vtable,
+	_24QAbstractEventDispatcher_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_13QPluginLoader_typeinfo_name[] = {
+char *_13QPluginLoader_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _13QPluginLoader_typeinfo = {
+struct classtypeinfo _13QPluginLoader_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS13QPluginLoader",
-	_13QPluginLoader_typeinfo_name,
+	_13QPluginLoader_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_13QPluginLoader_vtable_name_0 [] = {
+const char *_13QPluginLoader_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZNK13QPluginLoader10metaObjectEv",
 	"_ZN13QPluginLoader11qt_metacastEPKc",
 	"_ZN13QPluginLoader11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -4435,21 +4435,21 @@ const char *_13QPluginLoader_vtable_name_0 [] = {
 	"_ZN7QObject16disconnectNotifyEPKc",
 	};
 
-struct classvtable _13QPluginLoader_vtable [1] = {
+struct classvtable _13QPluginLoader_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	12,	/* Number of Vfuncs */
 	"_ZTI13QPluginLoader",
-	_13QPluginLoader_vtable_name_0,
+	_13QPluginLoader_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _13QPluginLoader_baseinfo[] = {
+struct base_type_info _13QPluginLoader_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z13QPluginLoader_classinfo = {
+struct classinfo _Z13QPluginLoader_of_libQtCore_so_4_classinfo = {
 	"_Z13QPluginLoader",
 	"_ZTV13QPluginLoader",
 	"_ZTI13QPluginLoader",	/* RTTI */
@@ -4460,22 +4460,22 @@ struct classinfo _Z13QPluginLoader_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_13QPluginLoader_typeinfo,
-	_13QPluginLoader_vtable,
-	_13QPluginLoader_baseinfo,
+	&_13QPluginLoader_of_libQtCore_so_4_typeinfo,
+	_13QPluginLoader_of_libQtCore_so_4_vtable,
+	_13QPluginLoader_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_8QLibrary_typeinfo_name[] = {
+char *_8QLibrary_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _8QLibrary_typeinfo = {
+struct classtypeinfo _8QLibrary_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS8QLibrary",
-	_8QLibrary_typeinfo_name,
+	_8QLibrary_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_8QLibrary_vtable_name_0 [] = {
+const char *_8QLibrary_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZNK8QLibrary10metaObjectEv",
 	"_ZN8QLibrary11qt_metacastEPKc",
 	"_ZN8QLibrary11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -4490,21 +4490,21 @@ const char *_8QLibrary_vtable_name_0 [] = {
 	"_ZN7QObject16disconnectNotifyEPKc",
 	};
 
-struct classvtable _8QLibrary_vtable [1] = {
+struct classvtable _8QLibrary_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	12,	/* Number of Vfuncs */
 	"_ZTI8QLibrary",
-	_8QLibrary_vtable_name_0,
+	_8QLibrary_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _8QLibrary_baseinfo[] = {
+struct base_type_info _8QLibrary_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z8QLibrary_classinfo = {
+struct classinfo _Z8QLibrary_of_libQtCore_so_4_classinfo = {
 	"_Z8QLibrary",
 	"_ZTV8QLibrary",
 	"_ZTI8QLibrary",	/* RTTI */
@@ -4515,22 +4515,22 @@ struct classinfo _Z8QLibrary_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_8QLibrary_typeinfo,
-	_8QLibrary_vtable,
-	_8QLibrary_baseinfo,
+	&_8QLibrary_of_libQtCore_so_4_typeinfo,
+	_8QLibrary_of_libQtCore_so_4_vtable,
+	_8QLibrary_of_libQtCore_so_4_baseinfo,
 	};
 
-char *_7QThread_typeinfo_name[] = {
+char *_7QThread_of_libQtCore_so_4_typeinfo_name[] = {
 	"_ZTI7QObject",
 	};
 
-struct classtypeinfo _7QThread_typeinfo = {
+struct classtypeinfo _7QThread_of_libQtCore_so_4_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS7QThread",
-	_7QThread_typeinfo_name,
+	_7QThread_of_libQtCore_so_4_typeinfo_name,
 	};
 
-const char *_7QThread_vtable_name_0 [] = {
+const char *_7QThread_of_libQtCore_so_4_vtable_name_0 [] = {
 	"_ZNK7QThread10metaObjectEv",
 	"_ZN7QThread11qt_metacastEPKc",
 	"_ZN7QThread11qt_metacallEN11QMetaObject4CallEiPPv",
@@ -4546,21 +4546,21 @@ const char *_7QThread_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	};
 
-struct classvtable _7QThread_vtable [1] = {
+struct classvtable _7QThread_of_libQtCore_so_4_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	13,	/* Number of Vfuncs */
 	"_ZTI7QThread",
-	_7QThread_vtable_name_0,
+	_7QThread_of_libQtCore_so_4_vtable_name_0,
 	},
 };
 
-struct base_type_info _7QThread_baseinfo[] = {
+struct base_type_info _7QThread_of_libQtCore_so_4_baseinfo[] = {
 	};
 
-struct classinfo _Z7QThread_classinfo = {
+struct classinfo _Z7QThread_of_libQtCore_so_4_classinfo = {
 	"_Z7QThread",
 	"_ZTV7QThread",
 	"_ZTI7QThread",	/* RTTI */
@@ -4571,47 +4571,47 @@ struct classinfo _Z7QThread_classinfo = {
 	0,
 	0,	/* numVTT */
 	0U,
-	&_7QThread_typeinfo,
-	_7QThread_vtable,
-	_7QThread_baseinfo,
+	&_7QThread_of_libQtCore_so_4_typeinfo,
+	_7QThread_of_libQtCore_so_4_vtable,
+	_7QThread_of_libQtCore_so_4_baseinfo,
 	};
 
 struct classinfo *libQtCore_so_4_classinfo[] = {
-	&_Z7QObject_classinfo,
-	&_Z15QObjectUserData_classinfo,
-	&_Z9QIODevice_classinfo,
-	&_Z11QDataStream_classinfo,
-	&_Z10QTextCodec_classinfo,
-	&_Z11QTextStream_classinfo,
-	&_Z5QFile_classinfo,
-	&_Z14QTemporaryFile_classinfo,
-	&_Z19QAbstractFileEngine_classinfo,
-	&_Z26QAbstractFileEngineHandler_classinfo,
-	&_Z13QFSFileEngine_classinfo,
-	&_Z8QProcess_classinfo,
-	&_Z7QBuffer_classinfo,
-	&_Z9QSettings_classinfo,
-	&_Z17QFactoryInterface_classinfo,
-	&_Z26QTextCodecFactoryInterface_classinfo,
-	&_Z16QTextCodecPlugin_classinfo,
-	&_Z11QTranslator_classinfo,
-	&_Z9QMimeData_classinfo,
-	&_Z10QEventLoop_classinfo,
-	&_Z6QEvent_classinfo,
-	&_Z11QTimerEvent_classinfo,
-	&_Z11QChildEvent_classinfo,
-	&_Z12QCustomEvent_classinfo,
-	&_Z16QCoreApplication_classinfo,
-	&_Z18QAbstractItemModel_classinfo,
-	&_Z19QAbstractTableModel_classinfo,
-	&_Z18QAbstractListModel_classinfo,
-	&_Z13QSignalMapper_classinfo,
-	&_Z21QObjectCleanupHandler_classinfo,
-	&_Z15QSocketNotifier_classinfo,
-	&_Z6QTimer_classinfo,
-	&_Z24QAbstractEventDispatcher_classinfo,
-	&_Z13QPluginLoader_classinfo,
-	&_Z8QLibrary_classinfo,
-	&_Z7QThread_classinfo,
+	&_Z7QObject_of_libQtCore_so_4_classinfo,
+	&_Z15QObjectUserData_of_libQtCore_so_4_classinfo,
+	&_Z9QIODevice_of_libQtCore_so_4_classinfo,
+	&_Z11QDataStream_of_libQtCore_so_4_classinfo,
+	&_Z10QTextCodec_of_libQtCore_so_4_classinfo,
+	&_Z11QTextStream_of_libQtCore_so_4_classinfo,
+	&_Z5QFile_of_libQtCore_so_4_classinfo,
+	&_Z14QTemporaryFile_of_libQtCore_so_4_classinfo,
+	&_Z19QAbstractFileEngine_of_libQtCore_so_4_classinfo,
+	&_Z26QAbstractFileEngineHandler_of_libQtCore_so_4_classinfo,
+	&_Z13QFSFileEngine_of_libQtCore_so_4_classinfo,
+	&_Z8QProcess_of_libQtCore_so_4_classinfo,
+	&_Z7QBuffer_of_libQtCore_so_4_classinfo,
+	&_Z9QSettings_of_libQtCore_so_4_classinfo,
+	&_Z17QFactoryInterface_of_libQtCore_so_4_classinfo,
+	&_Z26QTextCodecFactoryInterface_of_libQtCore_so_4_classinfo,
+	&_Z16QTextCodecPlugin_of_libQtCore_so_4_classinfo,
+	&_Z11QTranslator_of_libQtCore_so_4_classinfo,
+	&_Z9QMimeData_of_libQtCore_so_4_classinfo,
+	&_Z10QEventLoop_of_libQtCore_so_4_classinfo,
+	&_Z6QEvent_of_libQtCore_so_4_classinfo,
+	&_Z11QTimerEvent_of_libQtCore_so_4_classinfo,
+	&_Z11QChildEvent_of_libQtCore_so_4_classinfo,
+	&_Z12QCustomEvent_of_libQtCore_so_4_classinfo,
+	&_Z16QCoreApplication_of_libQtCore_so_4_classinfo,
+	&_Z18QAbstractItemModel_of_libQtCore_so_4_classinfo,
+	&_Z19QAbstractTableModel_of_libQtCore_so_4_classinfo,
+	&_Z18QAbstractListModel_of_libQtCore_so_4_classinfo,
+	&_Z13QSignalMapper_of_libQtCore_so_4_classinfo,
+	&_Z21QObjectCleanupHandler_of_libQtCore_so_4_classinfo,
+	&_Z15QSocketNotifier_of_libQtCore_so_4_classinfo,
+	&_Z6QTimer_of_libQtCore_so_4_classinfo,
+	&_Z24QAbstractEventDispatcher_of_libQtCore_so_4_classinfo,
+	&_Z13QPluginLoader_of_libQtCore_so_4_classinfo,
+	&_Z8QLibrary_of_libQtCore_so_4_classinfo,
+	&_Z7QThread_of_libQtCore_so_4_classinfo,
 
 	NULL	};
