@@ -29,8 +29,8 @@ printf("Checking data structures in freetype/ftsnames.h\n");
 /* No test for freetype/ftsnames.h */
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_SfntName,0, 16963, 2, 3.2, NULL, 16962, NULL)
+#if 1
+CheckTypeSize(FT_SfntName,0, 16963, 1, 3.2, NULL, 16962, NULL)
 #endif
 
 #ifdef TET_TEST

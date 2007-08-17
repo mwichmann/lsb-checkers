@@ -129,24 +129,24 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12575,NULL);\n",archi
 Msg("Find size of XftGlyphSpec (12576)\n");
 #endif
 
-#if defined __i386__
-CheckTypeSize(XftCharSpec,0, 16995, 2, 3.2, NULL, 16994, NULL)
+#if 1
+CheckTypeSize(XftCharSpec,0, 16995, 1, 3.2, NULL, 16994, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(XftFtFile,0, 17004, 2, 3.2, NULL, 17002, NULL)
+#if 1
+CheckTypeSize(XftFtFile,0, 17004, 1, 3.2, NULL, 17002, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(XftFontInfo,0, 17006, 2, 3.2, NULL, 17001, NULL)
+#if 1
+CheckTypeSize(XftFontInfo,0, 17006, 1, 3.2, NULL, 17001, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(XftCharFontSpec,0, 17009, 2, 3.2, NULL, 17008, NULL)
+#if 1
+CheckTypeSize(XftCharFontSpec,0, 17009, 1, 3.2, NULL, 17008, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(XftGlyphFontSpec,0, 17017, 2, 3.2, NULL, 17016, NULL)
+#if 1
+CheckTypeSize(XftGlyphFontSpec,0, 17017, 1, 3.2, NULL, 17016, NULL)
 #endif
 
 #ifdef TET_TEST

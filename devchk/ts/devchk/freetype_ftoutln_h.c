@@ -50,283 +50,272 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12593,NULL);\n",archi
 Msg("Find size of FT_Bitmap (12594)\n");
 #endif
 
-#if defined __i386__
-CheckTypeSize(struct FT_LibraryRec_,196, 16747, 2, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_LibraryRec_ on IA32\n");
-CheckOffset(struct FT_LibraryRec_,memory,0,2,53966)
-CheckOffset(struct FT_LibraryRec_,generic,0,2,53969)
-CheckOffset(struct FT_LibraryRec_,version_major,0,2,53970)
-CheckOffset(struct FT_LibraryRec_,version_minor,0,2,53971)
-CheckOffset(struct FT_LibraryRec_,version_patch,0,2,53972)
-CheckOffset(struct FT_LibraryRec_,num_modules,0,2,53973)
-CheckOffset(struct FT_LibraryRec_,modules,0,2,53991)
-CheckOffset(struct FT_LibraryRec_,renderers,0,2,53992)
-CheckOffset(struct FT_LibraryRec_,cur_renderer,0,2,54160)
-CheckOffset(struct FT_LibraryRec_,auto_hinter,0,2,54161)
-CheckOffset(struct FT_LibraryRec_,raster_pool,0,2,54162)
-CheckOffset(struct FT_LibraryRec_,raster_pool_size,0,2,54163)
-CheckOffset(struct FT_LibraryRec_,debug_hooks,0,2,54164)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Generic_Finalizer,0, 16749, 2, 3.2, NULL, 6988, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Module_Constructor,0, 16763, 2, 3.2, NULL, 16762, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Module_Destructor,0, 16765, 2, 3.2, NULL, 16764, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Module_Interface,0, 16767, 2, 3.2, NULL, 16766, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Module_Requester,0, 16769, 2, 3.2, NULL, 16768, NULL)
+#if 1
+CheckTypeSize(struct FT_LibraryRec_,196, 16747, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_LibraryRec_ on All\n");
+CheckOffset(struct FT_LibraryRec_,memory,0,1,53966)
+CheckOffset(struct FT_LibraryRec_,generic,0,1,53969)
+CheckOffset(struct FT_LibraryRec_,version_major,0,1,53970)
+CheckOffset(struct FT_LibraryRec_,version_minor,0,1,53971)
+CheckOffset(struct FT_LibraryRec_,version_patch,0,1,53972)
+CheckOffset(struct FT_LibraryRec_,num_modules,0,1,53973)
+CheckOffset(struct FT_LibraryRec_,modules,0,1,53991)
+CheckOffset(struct FT_LibraryRec_,renderers,0,1,53992)
+CheckOffset(struct FT_LibraryRec_,cur_renderer,0,1,54160)
+CheckOffset(struct FT_LibraryRec_,auto_hinter,0,1,54161)
+CheckOffset(struct FT_LibraryRec_,raster_pool,0,1,54162)
+CheckOffset(struct FT_LibraryRec_,raster_pool_size,0,1,54163)
+CheckOffset(struct FT_LibraryRec_,debug_hooks,0,1,54164)
 #endif
 
 #if 1
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_ListRec,0, 16775, 2, 3.2, NULL, 16720, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(struct FT_RendererRec_,72, 16776, 2, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_RendererRec_ on IA32\n");
-CheckOffset(struct FT_RendererRec_,root,0,2,53993)
-CheckOffset(struct FT_RendererRec_,clazz,0,2,54124)
-CheckOffset(struct FT_RendererRec_,glyph_format,0,2,54125)
-CheckOffset(struct FT_RendererRec_,glyph_class,0,2,54150)
-CheckOffset(struct FT_RendererRec_,raster,0,2,54151)
-CheckOffset(struct FT_RendererRec_,raster_render,0,2,54154)
-CheckOffset(struct FT_RendererRec_,render,0,2,54159)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_ModuleRec,0, 16777, 2, 3.2, NULL, 16752, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(struct FT_GlyphSlotRec_,160, 16783, 2, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_GlyphSlotRec_ on IA32\n");
-CheckOffset(struct FT_GlyphSlotRec_,library,0,2,54001)
-CheckOffset(struct FT_GlyphSlotRec_,face,0,2,54002)
-CheckOffset(struct FT_GlyphSlotRec_,next,0,2,54003)
-CheckOffset(struct FT_GlyphSlotRec_,reserved,0,2,54004)
-CheckOffset(struct FT_GlyphSlotRec_,generic,0,2,54005)
-CheckOffset(struct FT_GlyphSlotRec_,metrics,0,2,54014)
-CheckOffset(struct FT_GlyphSlotRec_,linearHoriAdvance,0,2,54015)
-CheckOffset(struct FT_GlyphSlotRec_,linearVertAdvance,0,2,54016)
-CheckOffset(struct FT_GlyphSlotRec_,advance,0,2,54017)
-CheckOffset(struct FT_GlyphSlotRec_,format,0,2,54018)
-CheckOffset(struct FT_GlyphSlotRec_,bitmap,0,2,54019)
-CheckOffset(struct FT_GlyphSlotRec_,bitmap_left,0,2,54020)
-CheckOffset(struct FT_GlyphSlotRec_,bitmap_top,0,2,54021)
-CheckOffset(struct FT_GlyphSlotRec_,outline,0,2,54022)
-CheckOffset(struct FT_GlyphSlotRec_,num_subglyphs,0,2,54023)
-CheckOffset(struct FT_GlyphSlotRec_,subglyphs,0,2,54033)
-CheckOffset(struct FT_GlyphSlotRec_,control_data,0,2,54034)
-CheckOffset(struct FT_GlyphSlotRec_,control_len,0,2,54035)
-CheckOffset(struct FT_GlyphSlotRec_,lsb_delta,0,2,54036)
-CheckOffset(struct FT_GlyphSlotRec_,rsb_delta,0,2,54037)
-CheckOffset(struct FT_GlyphSlotRec_,other,0,2,54038)
-CheckOffset(struct FT_GlyphSlotRec_,internal,0,2,54057)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Glyph_Metrics,0, 16787, 2, 3.2, NULL, 16786, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(struct FT_SubGlyphRec_,32, 16788, 2, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_SubGlyphRec_ on IA32\n");
-CheckOffset(struct FT_SubGlyphRec_,index,0,2,54024)
-CheckOffset(struct FT_SubGlyphRec_,flags,0,2,54025)
-CheckOffset(struct FT_SubGlyphRec_,arg1,0,2,54026)
-CheckOffset(struct FT_SubGlyphRec_,arg2,0,2,54027)
-CheckOffset(struct FT_SubGlyphRec_,transform,0,2,54032)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_SubGlyph,0, 16793, 2, 3.2, NULL, 16792, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(struct FT_Slot_InternalRec_,40, 16794, 2, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_Slot_InternalRec_ on IA32\n");
-CheckOffset(struct FT_Slot_InternalRec_,loader,0,2,54051)
-CheckOffset(struct FT_Slot_InternalRec_,flags,0,2,54052)
-CheckOffset(struct FT_Slot_InternalRec_,glyph_transformed,0,2,54053)
-CheckOffset(struct FT_Slot_InternalRec_,glyph_matrix,0,2,54054)
-CheckOffset(struct FT_Slot_InternalRec_,glyph_delta,0,2,54055)
-CheckOffset(struct FT_Slot_InternalRec_,glyph_hints,0,2,54056)
-#endif
-
-#if defined __i386__
-CheckTypeSize(struct FT_GlyphLoaderRec_,88, 16795, 2, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_GlyphLoaderRec_ on IA32\n");
-CheckOffset(struct FT_GlyphLoaderRec_,memory,0,2,54039)
-CheckOffset(struct FT_GlyphLoaderRec_,max_points,0,2,54040)
-CheckOffset(struct FT_GlyphLoaderRec_,max_contours,0,2,54041)
-CheckOffset(struct FT_GlyphLoaderRec_,max_subglyphs,0,2,54042)
-CheckOffset(struct FT_GlyphLoaderRec_,use_extra,0,2,54043)
-CheckOffset(struct FT_GlyphLoaderRec_,base,0,2,54048)
-CheckOffset(struct FT_GlyphLoaderRec_,current,0,2,54049)
-CheckOffset(struct FT_GlyphLoaderRec_,other,0,2,54050)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_GlyphLoadRec,0, 16798, 2, 3.2, NULL, 16797, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_GlyphLoader,0, 16800, 2, 3.2, NULL, 16799, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Slot_Internal,0, 16802, 2, 3.2, NULL, 16801, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Renderer_RenderFunc,0, 16804, 2, 3.2, NULL, 16803, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Renderer_TransformFunc,0, 16807, 2, 3.2, NULL, 16806, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Renderer_GetCBoxFunc,0, 16812, 2, 3.2, NULL, 16811, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Renderer_SetModeFunc,0, 16814, 2, 3.2, NULL, 16813, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(struct FT_RasterRec_,0, 16816, 2, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_RasterRec_ on IA32\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Raster,0, 16818, 2, 3.2, NULL, 16817, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Raster_NewFunc,0, 16821, 2, 3.2, NULL, 16820, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Raster_ResetFunc,0, 16823, 2, 3.2, NULL, 16822, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Raster_SetModeFunc,0, 16825, 2, 3.2, NULL, 16824, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Span,0, 16830, 2, 3.2, NULL, 16829, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_SpanFunc,0, 16833, 2, 3.2, NULL, 16832, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Raster_BitTest_Func,0, 16835, 2, 3.2, NULL, 16834, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Raster_BitSet_Func,0, 16837, 2, 3.2, NULL, 16836, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Raster_Params,0, 16838, 2, 3.2, NULL, 16826, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Raster_RenderFunc,0, 16841, 2, 3.2, NULL, 16840, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Raster_DoneFunc,0, 16843, 2, 3.2, NULL, 16842, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Raster_Funcs,0, 16844, 2, 3.2, NULL, 16815, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Renderer_Class,0, 16846, 2, 3.2, NULL, 16778, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(struct FT_GlyphRec_,20, 16849, 2, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_GlyphRec_ on IA32\n");
-CheckOffset(struct FT_GlyphRec_,library,0,2,54128)
-CheckOffset(struct FT_GlyphRec_,clazz,0,2,54129)
-CheckOffset(struct FT_GlyphRec_,format,0,2,54130)
-CheckOffset(struct FT_GlyphRec_,advance,0,2,54131)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Glyph_Class,0, 16850, 2, 3.2, NULL, 16848, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Glyph_InitFunc,0, 16856, 2, 3.2, NULL, 16855, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Glyph_DoneFunc,0, 16858, 2, 3.2, NULL, 16857, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Glyph_CopyFunc,0, 16860, 2, 3.2, NULL, 16859, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Glyph_TransformFunc,0, 16862, 2, 3.2, NULL, 16861, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Glyph_GetBBoxFunc,0, 16864, 2, 3.2, NULL, 16863, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Glyph_PrepareFunc,0, 16865, 2, 3.2, NULL, 16855, NULL)
+CheckTypeSize(FT_Generic_Finalizer,0, 16749, 1, 3.2, NULL, 6988, NULL)
 #endif
 
 #if 1
+CheckTypeSize(FT_Module_Constructor,0, 16763, 1, 3.2, NULL, 16762, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Outline_MoveToFunc,0, 16876, 2, 3.2, NULL, 16875, NULL)
+#if 1
+CheckTypeSize(FT_Module_Destructor,0, 16765, 1, 3.2, NULL, 16764, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Outline_LineToFunc,0, 16877, 2, 3.2, NULL, 16875, NULL)
+#if 1
+CheckTypeSize(FT_Module_Interface,0, 16767, 1, 3.2, NULL, 16766, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Outline_ConicToFunc,0, 16879, 2, 3.2, NULL, 16878, NULL)
+#if 1
+CheckTypeSize(FT_Module_Requester,0, 16769, 1, 3.2, NULL, 16768, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Outline_CubicToFunc,0, 16881, 2, 3.2, NULL, 16880, NULL)
+#if 1
+CheckTypeSize(FT_ListRec,0, 16775, 1, 3.2, NULL, 16720, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Outline_Funcs,0, 16882, 2, 3.2, NULL, 16874, NULL)
+#if 1
+CheckTypeSize(struct FT_RendererRec_,72, 16776, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_RendererRec_ on All\n");
+CheckOffset(struct FT_RendererRec_,root,0,1,53993)
+CheckOffset(struct FT_RendererRec_,clazz,0,1,54124)
+CheckOffset(struct FT_RendererRec_,glyph_format,0,1,54125)
+CheckOffset(struct FT_RendererRec_,glyph_class,0,1,54150)
+CheckOffset(struct FT_RendererRec_,raster,0,1,54151)
+CheckOffset(struct FT_RendererRec_,raster_render,0,1,54154)
+CheckOffset(struct FT_RendererRec_,render,0,1,54159)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Orientation,0, 16886, 2, 3.2, NULL, 16885, NULL)
+#if 1
+CheckTypeSize(FT_ModuleRec,0, 16777, 1, 3.2, NULL, 16752, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct FT_GlyphSlotRec_,160, 16783, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_GlyphSlotRec_ on All\n");
+CheckOffset(struct FT_GlyphSlotRec_,library,0,1,54001)
+CheckOffset(struct FT_GlyphSlotRec_,face,0,1,54002)
+CheckOffset(struct FT_GlyphSlotRec_,next,0,1,54003)
+CheckOffset(struct FT_GlyphSlotRec_,reserved,0,1,54004)
+CheckOffset(struct FT_GlyphSlotRec_,generic,0,1,54005)
+CheckOffset(struct FT_GlyphSlotRec_,metrics,0,1,54014)
+CheckOffset(struct FT_GlyphSlotRec_,linearHoriAdvance,0,1,54015)
+CheckOffset(struct FT_GlyphSlotRec_,linearVertAdvance,0,1,54016)
+CheckOffset(struct FT_GlyphSlotRec_,advance,0,1,54017)
+CheckOffset(struct FT_GlyphSlotRec_,format,0,1,54018)
+CheckOffset(struct FT_GlyphSlotRec_,bitmap,0,1,54019)
+CheckOffset(struct FT_GlyphSlotRec_,bitmap_left,0,1,54020)
+CheckOffset(struct FT_GlyphSlotRec_,bitmap_top,0,1,54021)
+CheckOffset(struct FT_GlyphSlotRec_,outline,0,1,54022)
+CheckOffset(struct FT_GlyphSlotRec_,num_subglyphs,0,1,54023)
+CheckOffset(struct FT_GlyphSlotRec_,subglyphs,0,1,54033)
+CheckOffset(struct FT_GlyphSlotRec_,control_data,0,1,54034)
+CheckOffset(struct FT_GlyphSlotRec_,control_len,0,1,54035)
+CheckOffset(struct FT_GlyphSlotRec_,lsb_delta,0,1,54036)
+CheckOffset(struct FT_GlyphSlotRec_,rsb_delta,0,1,54037)
+CheckOffset(struct FT_GlyphSlotRec_,other,0,1,54038)
+CheckOffset(struct FT_GlyphSlotRec_,internal,0,1,54057)
+#endif
+
+#if 1
+CheckTypeSize(FT_Glyph_Metrics,0, 16787, 1, 3.2, NULL, 16786, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct FT_SubGlyphRec_,32, 16788, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_SubGlyphRec_ on All\n");
+CheckOffset(struct FT_SubGlyphRec_,index,0,1,54024)
+CheckOffset(struct FT_SubGlyphRec_,flags,0,1,54025)
+CheckOffset(struct FT_SubGlyphRec_,arg1,0,1,54026)
+CheckOffset(struct FT_SubGlyphRec_,arg2,0,1,54027)
+CheckOffset(struct FT_SubGlyphRec_,transform,0,1,54032)
+#endif
+
+#if 1
+CheckTypeSize(FT_SubGlyph,0, 16793, 1, 3.2, NULL, 16792, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct FT_Slot_InternalRec_,40, 16794, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Slot_InternalRec_ on All\n");
+CheckOffset(struct FT_Slot_InternalRec_,loader,0,1,54051)
+CheckOffset(struct FT_Slot_InternalRec_,flags,0,1,54052)
+CheckOffset(struct FT_Slot_InternalRec_,glyph_transformed,0,1,54053)
+CheckOffset(struct FT_Slot_InternalRec_,glyph_matrix,0,1,54054)
+CheckOffset(struct FT_Slot_InternalRec_,glyph_delta,0,1,54055)
+CheckOffset(struct FT_Slot_InternalRec_,glyph_hints,0,1,54056)
+#endif
+
+#if 1
+CheckTypeSize(struct FT_GlyphLoaderRec_,88, 16795, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_GlyphLoaderRec_ on All\n");
+CheckOffset(struct FT_GlyphLoaderRec_,memory,0,1,54039)
+CheckOffset(struct FT_GlyphLoaderRec_,max_points,0,1,54040)
+CheckOffset(struct FT_GlyphLoaderRec_,max_contours,0,1,54041)
+CheckOffset(struct FT_GlyphLoaderRec_,max_subglyphs,0,1,54042)
+CheckOffset(struct FT_GlyphLoaderRec_,use_extra,0,1,54043)
+CheckOffset(struct FT_GlyphLoaderRec_,base,0,1,54048)
+CheckOffset(struct FT_GlyphLoaderRec_,current,0,1,54049)
+CheckOffset(struct FT_GlyphLoaderRec_,other,0,1,54050)
+#endif
+
+#if 1
+CheckTypeSize(FT_GlyphLoadRec,0, 16798, 1, 3.2, NULL, 16797, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_GlyphLoader,0, 16800, 1, 3.2, NULL, 16799, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Slot_Internal,0, 16802, 1, 3.2, NULL, 16801, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Renderer_RenderFunc,0, 16804, 1, 3.2, NULL, 16803, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Renderer_TransformFunc,0, 16807, 1, 3.2, NULL, 16806, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Renderer_GetCBoxFunc,0, 16812, 1, 3.2, NULL, 16811, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Renderer_SetModeFunc,0, 16814, 1, 3.2, NULL, 16813, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Raster,0, 16818, 1, 3.2, NULL, 16817, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Raster_NewFunc,0, 16821, 1, 3.2, NULL, 16820, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Raster_ResetFunc,0, 16823, 1, 3.2, NULL, 16822, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Raster_SetModeFunc,0, 16825, 1, 3.2, NULL, 16824, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Span,0, 16830, 1, 3.2, NULL, 16829, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_SpanFunc,0, 16833, 1, 3.2, NULL, 16832, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Raster_BitTest_Func,0, 16835, 1, 3.2, NULL, 16834, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Raster_BitSet_Func,0, 16837, 1, 3.2, NULL, 16836, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Raster_Params,0, 16838, 1, 3.2, NULL, 16826, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Raster_RenderFunc,0, 16841, 1, 3.2, NULL, 16840, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Raster_DoneFunc,0, 16843, 1, 3.2, NULL, 16842, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Raster_Funcs,0, 16844, 1, 3.2, NULL, 16815, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Renderer_Class,0, 16846, 1, 3.2, NULL, 16778, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct FT_GlyphRec_,20, 16849, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_GlyphRec_ on All\n");
+CheckOffset(struct FT_GlyphRec_,library,0,1,54128)
+CheckOffset(struct FT_GlyphRec_,clazz,0,1,54129)
+CheckOffset(struct FT_GlyphRec_,format,0,1,54130)
+CheckOffset(struct FT_GlyphRec_,advance,0,1,54131)
+#endif
+
+#if 1
+CheckTypeSize(FT_Glyph_Class,0, 16850, 1, 3.2, NULL, 16848, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Glyph_InitFunc,0, 16856, 1, 3.2, NULL, 16855, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Glyph_DoneFunc,0, 16858, 1, 3.2, NULL, 16857, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Glyph_CopyFunc,0, 16860, 1, 3.2, NULL, 16859, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Glyph_TransformFunc,0, 16862, 1, 3.2, NULL, 16861, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Glyph_GetBBoxFunc,0, 16864, 1, 3.2, NULL, 16863, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Glyph_PrepareFunc,0, 16865, 1, 3.2, NULL, 16855, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Outline_MoveToFunc,0, 16876, 1, 3.2, NULL, 16875, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Outline_LineToFunc,0, 16877, 1, 3.2, NULL, 16875, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Outline_ConicToFunc,0, 16879, 1, 3.2, NULL, 16878, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Outline_CubicToFunc,0, 16881, 1, 3.2, NULL, 16880, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Outline_Funcs,0, 16882, 1, 3.2, NULL, 16874, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Orientation,0, 16886, 1, 3.2, NULL, 16885, NULL)
 #endif
 
 extern void FT_Outline_Reverse_db(FT_Outline *);
