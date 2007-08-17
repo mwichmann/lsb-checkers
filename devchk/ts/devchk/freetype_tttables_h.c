@@ -29,12 +29,12 @@ printf("Checking data structures in freetype/tttables.h\n");
 /* No test for freetype/tttables.h */
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_CharMap,0, 16891, 2, 3.2, NULL, 16890, NULL)
+#if 1
+CheckTypeSize(FT_CharMap,0, 16891, 1, 3.2, NULL, 16890, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Sfnt_Tag,0, 16925, 2, 3.2, NULL, 16924, NULL)
+#if 1
+CheckTypeSize(FT_Sfnt_Tag,0, 16925, 1, 3.2, NULL, 16924, NULL)
 #endif
 
 #ifdef TET_TEST

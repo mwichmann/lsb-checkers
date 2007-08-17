@@ -61,16 +61,16 @@ printf("Checking data structures in freetype/ftrender.h\n");
 /* No test for freetype/ftrender.h */
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Glyph_Format,0, 16780, 2, 3.2, NULL, 16779, NULL)
+#if 1
+CheckTypeSize(FT_Glyph_Format,0, 16780, 1, 3.2, NULL, 16779, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Renderer,0, 16782, 2, 3.2, NULL, 16781, NULL)
+#if 1
+CheckTypeSize(FT_Renderer,0, 16782, 1, 3.2, NULL, 16781, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Parameter,0, 16913, 2, 3.2, NULL, 16912, NULL)
+#if 1
+CheckTypeSize(FT_Parameter,0, 16913, 1, 3.2, NULL, 16912, NULL)
 #endif
 
 #ifdef TET_TEST

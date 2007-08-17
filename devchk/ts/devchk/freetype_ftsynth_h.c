@@ -29,8 +29,8 @@ printf("Checking data structures in freetype/ftsynth.h\n");
 /* No test for freetype/ftsynth.h */
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_GlyphSlot,0, 16785, 2, 3.2, NULL, 16784, NULL)
+#if 1
+CheckTypeSize(FT_GlyphSlot,0, 16785, 1, 3.2, NULL, 16784, NULL)
 #endif
 
 #ifdef TET_TEST

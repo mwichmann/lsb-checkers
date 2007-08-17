@@ -259,6 +259,10 @@ CheckTypeSize(XGlyphElt16,0, 16713, 1, 3.2, NULL, 16710, NULL)
 CheckTypeSize(XTriangle,0, 16717, 1, 3.2, NULL, 16716, NULL)
 #endif
 
+#if 1
+CheckTypeSize(XLineFixed,0, 17025, 1, 3.2, NULL, 17024, NULL)
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

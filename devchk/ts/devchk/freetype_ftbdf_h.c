@@ -29,20 +29,20 @@ printf("Checking data structures in freetype/ftbdf.h\n");
 /* No test for freetype/ftbdf.h */
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Int32,0, 16894, 2, 3.2, NULL, 6, NULL)
+#if 1
+CheckTypeSize(FT_Int32,0, 16894, 1, 3.2, NULL, 6, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(BDF_PropertyType,0, 16929, 2, 3.2, NULL, 16928, NULL)
+#if 1
+CheckTypeSize(BDF_PropertyType,0, 16929, 1, 3.2, NULL, 16928, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_UInt32,0, 16930, 2, 3.2, NULL, 7, NULL)
+#if 1
+CheckTypeSize(FT_UInt32,0, 16930, 1, 3.2, NULL, 7, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(BDF_PropertyRec,0, 16932, 2, 3.2, NULL, 16927, NULL)
+#if 1
+CheckTypeSize(BDF_PropertyRec,0, 16932, 1, 3.2, NULL, 16927, NULL)
 #endif
 
 #ifdef TET_TEST
