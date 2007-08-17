@@ -489,47 +489,47 @@ cnt++;
 /* No test for freetype/freetype.h */
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Pointer,0, 16766, 2, 3.2, NULL, 40, NULL)
+#if 1
+CheckTypeSize(FT_Pointer,0, 16766, 1, 3.2, NULL, 40, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Encoding,0, 16889, 2, 3.2, NULL, 16888, NULL)
+#if 1
+CheckTypeSize(FT_Encoding,0, 16889, 1, 3.2, NULL, 16888, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_F26Dot6,0, 16897, 2, 3.2, NULL, 8, NULL)
+#if 1
+CheckTypeSize(FT_F26Dot6,0, 16897, 1, 3.2, NULL, 8, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(struct FT_StreamRec_,40, 16903, 2, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_StreamRec_ on IA32\n");
-CheckOffset(struct FT_StreamRec_,base,0,2,54219)
-CheckOffset(struct FT_StreamRec_,size,0,2,54220)
-CheckOffset(struct FT_StreamRec_,pos,0,2,54221)
-CheckOffset(struct FT_StreamRec_,descriptor,0,2,54224)
-CheckOffset(struct FT_StreamRec_,pathname,0,2,54225)
-CheckOffset(struct FT_StreamRec_,read,0,2,54230)
-CheckOffset(struct FT_StreamRec_,close,0,2,54232)
-CheckOffset(struct FT_StreamRec_,memory,0,2,54233)
-CheckOffset(struct FT_StreamRec_,cursor,0,2,54234)
-CheckOffset(struct FT_StreamRec_,limit,0,2,54235)
+#if 1
+CheckTypeSize(struct FT_StreamRec_,40, 16903, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_StreamRec_ on All\n");
+CheckOffset(struct FT_StreamRec_,base,0,1,54219)
+CheckOffset(struct FT_StreamRec_,size,0,1,54220)
+CheckOffset(struct FT_StreamRec_,pos,0,1,54221)
+CheckOffset(struct FT_StreamRec_,descriptor,0,1,54224)
+CheckOffset(struct FT_StreamRec_,pathname,0,1,54225)
+CheckOffset(struct FT_StreamRec_,read,0,1,54230)
+CheckOffset(struct FT_StreamRec_,close,0,1,54232)
+CheckOffset(struct FT_StreamRec_,memory,0,1,54233)
+CheckOffset(struct FT_StreamRec_,cursor,0,1,54234)
+CheckOffset(struct FT_StreamRec_,limit,0,1,54235)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_StreamDesc,0, 16905, 2, 3.2, NULL, 16904, NULL)
+#if 1
+CheckTypeSize(FT_StreamDesc,0, 16905, 1, 3.2, NULL, 16904, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Stream_IoFunc,0, 16909, 2, 3.2, NULL, 16908, NULL)
+#if 1
+CheckTypeSize(FT_Stream_IoFunc,0, 16909, 1, 3.2, NULL, 16908, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Stream_CloseFunc,0, 16911, 2, 3.2, NULL, 16910, NULL)
+#if 1
+CheckTypeSize(FT_Stream_CloseFunc,0, 16911, 1, 3.2, NULL, 16910, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Open_Args,0, 16915, 2, 3.2, NULL, 16901, NULL)
+#if 1
+CheckTypeSize(FT_Open_Args,0, 16915, 1, 3.2, NULL, 16901, NULL)
 #endif
 
 extern FT_Int FT_Get_Charmap_Index_db(FT_CharMap);

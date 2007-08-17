@@ -29,31 +29,28 @@ printf("Checking data structures in freetype/ftmm.h\n");
 /* No test for freetype/ftmm.h */
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_ULong,0, 16754, 2, 3.2, NULL, 11186, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_MM_Axis,0, 16936, 2, 3.2, NULL, 16935, NULL)
+#if 1
+CheckTypeSize(FT_ULong,0, 16754, 1, 3.2, NULL, 11186, NULL)
 #endif
 
 #if 1
+CheckTypeSize(FT_MM_Axis,0, 16936, 1, 3.2, NULL, 16935, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Multi_Master,0, 16938, 2, 3.2, NULL, 16934, NULL)
+#if 1
+CheckTypeSize(FT_Multi_Master,0, 16938, 1, 3.2, NULL, 16934, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Var_Axis,0, 16943, 2, 3.2, NULL, 16942, NULL)
+#if 1
+CheckTypeSize(FT_Var_Axis,0, 16943, 1, 3.2, NULL, 16942, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Var_Named_Style,0, 16946, 2, 3.2, NULL, 16945, NULL)
+#if 1
+CheckTypeSize(FT_Var_Named_Style,0, 16946, 1, 3.2, NULL, 16945, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_MM_Var,0, 16948, 2, 3.2, NULL, 16941, NULL)
+#if 1
+CheckTypeSize(FT_MM_Var,0, 16948, 1, 3.2, NULL, 16941, NULL)
 #endif
 
 #ifdef TET_TEST

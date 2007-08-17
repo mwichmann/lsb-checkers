@@ -114,11 +114,8 @@ CheckOffset(struct mq_attr,mq_curmsgs,24,3,53760)
 CheckMemberSize(struct mq_attr,__pad,32,3,53761)
 CheckOffset(struct mq_attr,__pad,32,3,53761)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16575,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0, NULL);\n",architecture,16575,0);
 Msg("Find size of mq_attr (16575)\n");
-#endif
-
-#if 1
 #endif
 
 extern int mq_close_db(mqd_t);

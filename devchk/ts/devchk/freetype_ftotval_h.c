@@ -83,8 +83,8 @@ cnt++;
 /* No test for freetype/ftotval.h */
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Bytes,0, 16978, 2, 3.2, NULL, 16896, NULL)
+#if 1
+CheckTypeSize(FT_Bytes,0, 16978, 1, 3.2, NULL, 16896, NULL)
 #endif
 
 #ifdef TET_TEST
