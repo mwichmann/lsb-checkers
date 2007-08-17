@@ -29,49 +29,49 @@ printf("Checking data structures in freetype/ftlist.h\n");
 /* No test for freetype/ftlist.h */
 #endif
 
-#if defined __i386__
-CheckTypeSize(struct FT_ListNodeRec_,12, 16721, 2, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_ListNodeRec_ on IA32\n");
-CheckOffset(struct FT_ListNodeRec_,prev,0,2,53936)
-CheckOffset(struct FT_ListNodeRec_,next,0,2,53937)
-CheckOffset(struct FT_ListNodeRec_,data,0,2,53938)
+#if 1
+CheckTypeSize(struct FT_ListNodeRec_,12, 16721, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_ListNodeRec_ on All\n");
+CheckOffset(struct FT_ListNodeRec_,prev,0,1,53936)
+CheckOffset(struct FT_ListNodeRec_,next,0,1,53937)
+CheckOffset(struct FT_ListNodeRec_,data,0,1,53938)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_ListNode,0, 16723, 2, 3.2, NULL, 16722, NULL)
+#if 1
+CheckTypeSize(FT_ListNode,0, 16723, 1, 3.2, NULL, 16722, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_List,0, 16725, 2, 3.2, NULL, 16724, NULL)
+#if 1
+CheckTypeSize(FT_List,0, 16725, 1, 3.2, NULL, 16724, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(struct FT_MemoryRec_,16, 16726, 2, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_MemoryRec_ on IA32\n");
-CheckOffset(struct FT_MemoryRec_,user,0,2,53941)
-CheckOffset(struct FT_MemoryRec_,alloc,0,2,53944)
-CheckOffset(struct FT_MemoryRec_,free,0,2,53947)
-CheckOffset(struct FT_MemoryRec_,realloc,0,2,53952)
+#if 1
+CheckTypeSize(struct FT_MemoryRec_,16, 16726, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_MemoryRec_ on All\n");
+CheckOffset(struct FT_MemoryRec_,user,0,1,53941)
+CheckOffset(struct FT_MemoryRec_,alloc,0,1,53944)
+CheckOffset(struct FT_MemoryRec_,free,0,1,53947)
+CheckOffset(struct FT_MemoryRec_,realloc,0,1,53952)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Alloc_Func,0, 16730, 2, 3.2, NULL, 16729, NULL)
+#if 1
+CheckTypeSize(FT_Alloc_Func,0, 16730, 1, 3.2, NULL, 16729, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Free_Func,0, 16732, 2, 3.2, NULL, 16731, NULL)
+#if 1
+CheckTypeSize(FT_Free_Func,0, 16732, 1, 3.2, NULL, 16731, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Realloc_Func,0, 16734, 2, 3.2, NULL, 16733, NULL)
+#if 1
+CheckTypeSize(FT_Realloc_Func,0, 16734, 1, 3.2, NULL, 16733, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_List_Destructor,0, 16736, 2, 3.2, NULL, 16735, NULL)
+#if 1
+CheckTypeSize(FT_List_Destructor,0, 16736, 1, 3.2, NULL, 16735, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_List_Iterator,0, 16739, 2, 3.2, NULL, 16738, NULL)
+#if 1
+CheckTypeSize(FT_List_Iterator,0, 16739, 1, 3.2, NULL, 16738, NULL)
 #endif
 
 extern void FT_List_Finalize_db(FT_List, FT_List_Destructor, FT_Memory, void *);

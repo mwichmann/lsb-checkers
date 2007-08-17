@@ -119,63 +119,48 @@ cnt++;
 /* No test for freetype/t1tables.h */
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Error,0, 16737, 2, 3.2, NULL, 6, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Int,0, 16751, 2, 3.2, NULL, 6, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Long,0, 16755, 2, 3.2, NULL, 8, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_String,0, 16756, 2, 3.2, NULL, 2, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Fixed,0, 16759, 2, 3.2, NULL, 8, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_UShort,0, 16789, 2, 3.2, NULL, 11209, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Bool,0, 16796, 2, 3.2, NULL, 3, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Byte,0, 16866, 2, 3.2, NULL, 3, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Short,0, 16981, 2, 3.2, NULL, 11264, NULL)
+#if 1
+CheckTypeSize(FT_Error,0, 16737, 1, 3.2, NULL, 6, NULL)
 #endif
 
 #if 1
+CheckTypeSize(FT_Int,0, 16751, 1, 3.2, NULL, 6, NULL)
 #endif
 
 #if 1
+CheckTypeSize(FT_Long,0, 16755, 1, 3.2, NULL, 8, NULL)
 #endif
 
 #if 1
+CheckTypeSize(FT_String,0, 16756, 1, 3.2, NULL, 2, NULL)
 #endif
 
 #if 1
+CheckTypeSize(FT_Fixed,0, 16759, 1, 3.2, NULL, 8, NULL)
 #endif
 
 #if 1
+CheckTypeSize(FT_UShort,0, 16789, 1, 3.2, NULL, 11209, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(PS_PrivateRec,0, 16987, 2, 3.2, NULL, 16980, NULL)
+#if 1
+CheckTypeSize(FT_Bool,0, 16796, 1, 3.2, NULL, 3, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(PS_FontInfoRec,0, 16990, 2, 3.2, NULL, 16989, NULL)
+#if 1
+CheckTypeSize(FT_Byte,0, 16866, 1, 3.2, NULL, 3, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Short,0, 16981, 1, 3.2, NULL, 11264, NULL)
+#endif
+
+#if 1
+CheckTypeSize(PS_PrivateRec,0, 16987, 1, 3.2, NULL, 16980, NULL)
+#endif
+
+#if 1
+CheckTypeSize(PS_FontInfoRec,0, 16990, 1, 3.2, NULL, 16989, NULL)
 #endif
 
 #ifdef TET_TEST

@@ -49,16 +49,16 @@ printf("Checking data structures in freetype/ftglyph.h\n");
 /* No test for freetype/ftglyph.h */
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Matrix,0, 16791, 2, 3.2, NULL, 16790, NULL)
+#if 1
+CheckTypeSize(FT_Matrix,0, 16791, 1, 3.2, NULL, 16790, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_BBox,0, 16809, 2, 3.2, NULL, 16808, NULL)
+#if 1
+CheckTypeSize(FT_BBox,0, 16809, 1, 3.2, NULL, 16808, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Render_Mode,0, 16900, 2, 3.2, NULL, 16899, NULL)
+#if 1
+CheckTypeSize(FT_Render_Mode,0, 16900, 1, 3.2, NULL, 16899, NULL)
 #endif
 
 #ifdef TET_TEST

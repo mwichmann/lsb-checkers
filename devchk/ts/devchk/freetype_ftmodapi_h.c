@@ -127,20 +127,20 @@ cnt++;
 /* No test for freetype/ftmodapi.h */
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Module,0, 16761, 2, 3.2, NULL, 16760, NULL)
+#if 1
+CheckTypeSize(FT_Module,0, 16761, 1, 3.2, NULL, 16760, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Module_Class,0, 16770, 2, 3.2, NULL, 16753, NULL)
+#if 1
+CheckTypeSize(FT_Module_Class,0, 16770, 1, 3.2, NULL, 16753, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_Library,0, 16773, 2, 3.2, NULL, 16772, NULL)
+#if 1
+CheckTypeSize(FT_Library,0, 16773, 1, 3.2, NULL, 16772, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(FT_DebugHook_Func,0, 16868, 2, 3.2, NULL, 6988, NULL)
+#if 1
+CheckTypeSize(FT_DebugHook_Func,0, 16868, 1, 3.2, NULL, 6988, NULL)
 #endif
 
 #ifdef TET_TEST
