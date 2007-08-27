@@ -1226,9 +1226,14 @@ for ( 1 .. $tth->numrows ) {
     $ATattribute   = $tentry{'ATattribute'};
 
     # Unmangled types have commas, which confuse the preprocessor
-    print TESTS "#define TYPE _Z" . "$Tname\n";
-	$withdrawnin = $ATwithdrawnin ? "'$ATwithdrawnin'" : "NULL";
-	$attribute = $ATattribute ? "'$ATattribute'" : "NULL";
+    if( $Tname =~ "^_Z" ) {
+       print TESTS "#define TYPE " . "$Tname\n";
+    }
+    else {
+       print TESTS "#define TYPE _Z" . "$Tname\n";
+    }
+    $withdrawnin = $ATwithdrawnin ? "'$ATwithdrawnin'" : "NULL";
+    $attribute = $ATattribute ? "'$ATattribute'" : "NULL";
     print TESTS "CheckTypeSize(TYPE,$ATsize,$Tid,$Aid, $ATappearedin, $withdrawnin, $ATbasetype, $attribute)\n";
     print TESTS "#undef TYPE\n";
 }
