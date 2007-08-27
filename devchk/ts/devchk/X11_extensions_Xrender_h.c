@@ -86,51 +86,123 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PictFormatAlpha */
+#ifdef PictFormatAlpha
+	CompareConstant(PictFormatAlpha,(1 << 9),9637,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: PictFormatAlpha\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PictFormatAlphaMask */
+#ifdef PictFormatAlphaMask
+	CompareConstant(PictFormatAlphaMask,(1 << 10),9638,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: PictFormatAlphaMask\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PictFormatBlue */
+#ifdef PictFormatBlue
+	CompareConstant(PictFormatBlue,(1 << 7),9639,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: PictFormatBlue\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PictFormatBlueMask */
+#ifdef PictFormatBlueMask
+	CompareConstant(PictFormatBlueMask,(1 << 8),9640,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: PictFormatBlueMask\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PictFormatColormap */
+#ifdef PictFormatColormap
+	CompareConstant(PictFormatColormap,(1 << 11),9641,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: PictFormatColormap\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PictFormatDepth */
+#ifdef PictFormatDepth
+	CompareConstant(PictFormatDepth,(1 << 2),9642,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: PictFormatDepth\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PictFormatGreen */
+#ifdef PictFormatGreen
+	CompareConstant(PictFormatGreen,(1 << 5),9643,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: PictFormatGreen\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PictFormatGreenMask */
+#ifdef PictFormatGreenMask
+	CompareConstant(PictFormatGreenMask,(1 << 6),9644,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: PictFormatGreenMask\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PictFormatID */
+#ifdef PictFormatID
+	CompareConstant(PictFormatID,(1 << 0),9645,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: PictFormatID\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PictFormatRed */
+#ifdef PictFormatRed
+	CompareConstant(PictFormatRed,(1 << 3),9646,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: PictFormatRed\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PictFormatRedMask */
+#ifdef PictFormatRedMask
+	CompareConstant(PictFormatRedMask,(1 << 4),9647,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: PictFormatRedMask\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PictFormatType */
+#ifdef PictFormatType
+	CompareConstant(PictFormatType,(1 << 1),9648,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: PictFormatType\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -150,10 +222,6 @@ CheckTypeSize(XTrapezoid,0, 12569, 2, 3.2, NULL, 12568, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12568,NULL);\n",architecture,12569,0);
 Msg("Find size of XTrapezoid (12569)\n");
-#endif
-
-#if 1
-CheckTypeSize(GlyphSet,0, 16624, 1, 3.2, NULL, 11186, NULL)
 #endif
 
 #if 1
@@ -177,14 +245,6 @@ CheckTypeSize(XRenderPictFormat,0, 16640, 1, 3.2, NULL, 16639, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XFixed,0, 16644, 1, 3.2, NULL, 6, NULL)
-#endif
-
-#if 1
-CheckTypeSize(XPointFixed,0, 16645, 1, 3.2, NULL, 16643, NULL)
-#endif
-
-#if 1
 CheckTypeSize(XGlyphInfo,0, 16649, 1, 3.2, NULL, 16648, NULL)
 #endif
 
@@ -193,18 +253,11 @@ CheckTypeSize(XFilters,0, 16653, 1, 3.2, NULL, 16652, NULL)
 #endif
 
 #if 1
-#endif
-
-#if 1
 CheckTypeSize(XTransform,0, 16658, 1, 3.2, NULL, 16656, NULL)
 #endif
 
 #if 1
 CheckTypeSize(XAnimCursor,0, 16661, 1, 3.2, NULL, 16660, NULL)
-#endif
-
-#if 1
-CheckTypeSize(XCircle,0, 16665, 1, 3.2, NULL, 16664, NULL)
 #endif
 
 #if 1
@@ -228,19 +281,11 @@ CheckTypeSize(XLinearGradient,0, 16686, 1, 3.2, NULL, 16685, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XDouble,0, 16690, 1, 3.2, NULL, 13, NULL)
-#endif
-
-#if 1
 CheckTypeSize(XPointDouble,0, 16691, 1, 3.2, NULL, 16689, NULL)
 #endif
 
 #if 1
 CheckTypeSize(XRenderPictureAttributes,0, 16698, 1, 3.2, NULL, 16697, NULL)
-#endif
-
-#if 1
-CheckTypeSize(XSpanFix,0, 16703, 1, 3.2, NULL, 16702, NULL)
 #endif
 
 #if 1
@@ -257,6 +302,30 @@ CheckTypeSize(XGlyphElt16,0, 16713, 1, 3.2, NULL, 16710, NULL)
 
 #if 1
 CheckTypeSize(XTriangle,0, 16717, 1, 3.2, NULL, 16716, NULL)
+#endif
+
+#if 1
+CheckTypeSize(GlyphSet,0, 16624, 1, 3.2, NULL, 11186, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XFixed,0, 16644, 1, 3.2, NULL, 6, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XPointFixed,0, 16645, 1, 3.2, NULL, 16643, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XCircle,0, 16665, 1, 3.2, NULL, 16664, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XDouble,0, 16690, 1, 3.2, NULL, 13, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XSpanFix,0, 16703, 1, 3.2, NULL, 16702, NULL)
 #endif
 
 #if 1
