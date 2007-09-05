@@ -267,7 +267,7 @@ main(int argc, char *argv[])
     /* Now calculate final set of modules. */
     switch (modules_pre) {
         case 1:     /* core,c++ */
-            modules |= LSB_Core | LSB_Cpp;
+            modules |= LSB_Core_Modules;
             break;
         case 2:     /* core,c++,desktop */
             modules |= LSB_Desktop_Modules[LSB_Version];
@@ -321,7 +321,7 @@ main(int argc, char *argv[])
                  getmodulename(modules));
         tetj_add_config(journal, tmp_string);
         snprintf(tmp_string, TMP_STRING_SIZE, "LSB_PROFILE=%s",
-                 getlsbprofile(LSB_Versions[LSB_Version] ,modules));
+                 getlsbprofile(LSB_Versions[LSB_Version], modules));
         tetj_add_config(journal, tmp_string);
 
         /* Log extra libraries to look for symbols in */
