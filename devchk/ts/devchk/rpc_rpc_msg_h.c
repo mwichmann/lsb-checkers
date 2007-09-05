@@ -312,8 +312,16 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architec
 Msg("Find size of rpc_msg (9984)\n");
 #endif
 
+extern bool_t xdr_accepted_reply_db(XDR *, struct accepted_reply *);
+CheckInterfacedef(xdr_accepted_reply,xdr_accepted_reply_db);
 extern bool_t xdr_callhdr_db(XDR *, struct rpc_msg *);
 CheckInterfacedef(xdr_callhdr,xdr_callhdr_db);
+extern bool_t xdr_callmsg_db(XDR *, struct rpc_msg *);
+CheckInterfacedef(xdr_callmsg,xdr_callmsg_db);
+extern bool_t xdr_rejected_reply_db(XDR *, struct rejected_reply *);
+CheckInterfacedef(xdr_rejected_reply,xdr_rejected_reply_db);
+extern bool_t xdr_replymsg_db(XDR *, struct rpc_msg *);
+CheckInterfacedef(xdr_replymsg,xdr_replymsg_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
