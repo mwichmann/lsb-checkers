@@ -448,47 +448,23 @@ CheckTypeSize(pthread_spinlock_t,4, 16581, 1, 3.2, NULL, 16601, NULL)
 #endif
 
 #if defined __i386__
-CheckTypeSize(union pthread_barrier_t,20, 16602, 2, 3.2, NULL, 0, NULL)
-Msg("Missing member data for pthread_barrier_t on IA32\n");
-CheckOffset(union pthread_barrier_t,__size,0,2,63847)
-CheckOffset(union pthread_barrier_t,__align,0,2,63848)
+CheckTypeSize(pthread_barrier_t,20, 22154, 2, 3.2, NULL, 16602, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(union pthread_barrier_t,20, 16602, 6, 3.2, NULL, 0, NULL)
-Msg("Missing member data for pthread_barrier_t on PPC32\n");
-CheckOffset(union pthread_barrier_t,__size,0,6,63847)
-CheckOffset(union pthread_barrier_t,__align,0,6,63848)
+CheckTypeSize(pthread_barrier_t,20, 22154, 6, 3.2, NULL, 16602, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(union pthread_barrier_t,20, 16602, 10, 3.2, NULL, 0, NULL)
-Msg("Missing member data for pthread_barrier_t on S390\n");
-CheckOffset(union pthread_barrier_t,__size,0,10,63847)
-CheckOffset(union pthread_barrier_t,__align,0,10,63848)
+CheckTypeSize(pthread_barrier_t,20, 22154, 10, 3.2, NULL, 16602, NULL)
 #elif defined __ia64__
-CheckTypeSize(union pthread_barrier_t,32, 16602, 3, 3.2, NULL, 0, NULL)
-Msg("Missing member data for pthread_barrier_t on IA64\n");
-CheckOffset(union pthread_barrier_t,__size,0,3,63847)
-CheckOffset(union pthread_barrier_t,__align,0,3,63848)
+CheckTypeSize(pthread_barrier_t,32, 22154, 3, 3.2, NULL, 16602, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(union pthread_barrier_t,32, 16602, 9, 3.2, NULL, 0, NULL)
-Msg("Missing member data for pthread_barrier_t on PPC64\n");
-CheckOffset(union pthread_barrier_t,__size,0,9,63847)
-CheckOffset(union pthread_barrier_t,__align,0,9,63848)
+CheckTypeSize(pthread_barrier_t,32, 22154, 9, 3.2, NULL, 16602, NULL)
 #elif defined __x86_64__
-CheckTypeSize(union pthread_barrier_t,32, 16602, 11, 3.2, NULL, 0, NULL)
-Msg("Missing member data for pthread_barrier_t on x86-64\n");
-CheckOffset(union pthread_barrier_t,__size,0,11,63847)
-CheckOffset(union pthread_barrier_t,__align,0,11,63848)
+CheckTypeSize(pthread_barrier_t,32, 22154, 11, 3.2, NULL, 16602, NULL)
 #elif defined __s390x__
-CheckTypeSize(union pthread_barrier_t,32, 16602, 12, 3.2, NULL, 0, NULL)
-Msg("Missing member data for pthread_barrier_t on S390X\n");
-CheckOffset(union pthread_barrier_t,__size,0,12,63847)
-CheckOffset(union pthread_barrier_t,__align,0,12,63848)
+CheckTypeSize(pthread_barrier_t,32, 22154, 12, 3.2, NULL, 16602, NULL)
 #endif
 
 #if 1
-CheckTypeSize(union pthread_barrierattr_t,4, 16604, 1, 3.2, NULL, 0, NULL)
-Msg("Missing member data for pthread_barrierattr_t on All\n");
-CheckOffset(union pthread_barrierattr_t,__size,0,1,63849)
-CheckOffset(union pthread_barrierattr_t,__align,0,1,63850)
+CheckTypeSize(pthread_barrierattr_t,4, 22155, 1, 3.2, NULL, 16604, NULL)
 #endif
 
 #if defined __i386__
@@ -701,17 +677,17 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10280, NULL);\n",arch
 Msg("Find size of pthread_rwlockattr_t (9057)\n");
 #endif
 
-extern int pthread_barrier_destroy_db(union pthread_barrier_t *);
+extern int pthread_barrier_destroy_db(pthread_barrier_t *);
 CheckInterfacedef(pthread_barrier_destroy,pthread_barrier_destroy_db);
-extern int pthread_barrier_init_db(union pthread_barrier_t *, const union pthread_barrierattr_t *, unsigned int);
+extern int pthread_barrier_init_db(pthread_barrier_t *, const pthread_barrierattr_t *, unsigned int);
 CheckInterfacedef(pthread_barrier_init,pthread_barrier_init_db);
-extern int pthread_barrier_wait_db(union pthread_barrier_t *);
+extern int pthread_barrier_wait_db(pthread_barrier_t *);
 CheckInterfacedef(pthread_barrier_wait,pthread_barrier_wait_db);
-extern int pthread_barrierattr_destroy_db(union pthread_barrierattr_t *);
+extern int pthread_barrierattr_destroy_db(pthread_barrierattr_t *);
 CheckInterfacedef(pthread_barrierattr_destroy,pthread_barrierattr_destroy_db);
-extern int pthread_barrierattr_init_db(union pthread_barrierattr_t *);
+extern int pthread_barrierattr_init_db(pthread_barrierattr_t *);
 CheckInterfacedef(pthread_barrierattr_init,pthread_barrierattr_init_db);
-extern int pthread_barrierattr_setpshared_db(union pthread_barrierattr_t *, int);
+extern int pthread_barrierattr_setpshared_db(pthread_barrierattr_t *, int);
 CheckInterfacedef(pthread_barrierattr_setpshared,pthread_barrierattr_setpshared_db);
 extern int pthread_getcpuclockid_db(pthread_t, clockid_t *);
 CheckInterfacedef(pthread_getcpuclockid,pthread_getcpuclockid_db);
@@ -727,7 +703,7 @@ extern int pthread_spin_unlock_db(pthread_spinlock_t *);
 CheckInterfacedef(pthread_spin_unlock,pthread_spin_unlock_db);
 extern int pthread_mutex_timedlock_db(pthread_mutex_t *, const struct timespec *);
 CheckInterfacedef(pthread_mutex_timedlock,pthread_mutex_timedlock_db);
-extern int pthread_barrierattr_getpshared_db(const union pthread_barrierattr_t *, int *);
+extern int pthread_barrierattr_getpshared_db(const pthread_barrierattr_t *, int *);
 CheckInterfacedef(pthread_barrierattr_getpshared,pthread_barrierattr_getpshared_db);
 #ifdef LSBCC_MODE       /* XXX hand-edit */
 extern void _pthread_cleanup_pop_db(struct _pthread_cleanup_buffer *, int);
