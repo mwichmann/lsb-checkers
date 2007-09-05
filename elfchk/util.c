@@ -152,9 +152,12 @@ char *
 getlsbprofile(const char* lsb_version,int mod)
 {
     static char buf[1024];
-	
+
+	/* Temporarily disable unsupported modules */
+	mod &= ~(LSB_Optional | LSB_Printing);
+
 	if (mod == LSB_Core_Modules) {
-	    sprintf( buf, "LSB %s (Core & C++)", lsb_version);
+	    sprintf(buf, "LSB %s (Core & C++)", lsb_version);
 	}
 	else if (mod == LSB_Desktop_Modules[LSB_Version]) {
 	    sprintf(buf, "LSB %s (Core & C++ & Desktop)", lsb_version);

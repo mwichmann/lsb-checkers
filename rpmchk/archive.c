@@ -120,6 +120,7 @@ int	i;
 ElfFile* elfFile;
 char* uncompFile;
 char* execFile;
+char* rpm_filename;
 
 file1->archive=(caddr_t)file1->nexthdr;
 
@@ -538,23 +539,34 @@ if( filesizesum != rpmtagsize ) {
              elfFile->size = elfFiles[i]->filesize;
 
              if( (execFile=(char *)calloc(1,elfFile->size)) != NULL ) {
-			    fprintf (stderr, "\ncheckRpmArchive: Inflating file %s-pass2 size %d ...\n", 
-				                  elfFiles[i]->filename, elfFile->size);
-                gzread(zfile, execFile, elfFile->size);
-                elfFile->addr = execFile;
-                snprintf(tmp_string, TMP_STRING_SIZE,
-                    "Checking ELF file %s ...", elfFiles[i]->filename); 
-                fprintf(stderr, "%s\n", tmp_string); 
-                tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-							0, 0, 0, tmp_string);
+                if ((rpm_filename = malloc(strlen(elfFiles[i]->filename) + 6)) != NULL) {
+                    strcpy(rpm_filename, "RPM: ");
+                    strcat(rpm_filename, elfFiles[i]->filename);
+                    tetj_testcase_end(journal, tetj_activity_count, NULL, "");
+                    tetj_testcase_start(journal, tetj_activity_count, rpm_filename, "");
+    			    fprintf (stderr, "\ncheckRpmArchive: Inflating file %s-pass2 size %d ...\n", 
+    				                  elfFiles[i]->filename, elfFile->size);
+                    gzread(zfile, execFile, elfFile->size);
+                    elfFile->addr = execFile;
+                    snprintf(tmp_string, TMP_STRING_SIZE,
+                        "Checking ELF file %s ...", elfFiles[i]->filename); 
+                    fprintf(stderr, "%s\n", tmp_string); 
+                    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+    							0, 0, 0, tmp_string);
 
-                if (elfFiles[i]->filetype == ET_EXEC) {
-                   checkElf(elfFile, ELF_IS_EXEC, journal); 
-                   checksymbols(elfFile, modules); 
-				} else if (elfFiles[i]->filetype == ET_DYN) {
-                   checkElf(elfFile, ELF_IS_DSO, journal); 
-				   check_lib(elfFile, ELF_IS_DSO, modules);
-				}
+                    if (elfFiles[i]->filetype == ET_EXEC) {
+                       checkElf(elfFile, ELF_IS_EXEC, journal); 
+                       checksymbols(elfFile, modules); 
+    				} else if (elfFiles[i]->filetype == ET_DYN) {
+                       checkElf(elfFile, ELF_IS_DSO, journal); 
+    				   check_lib(elfFile, ELF_IS_DSO, modules);
+    				}
+                    free(rpm_filename);
+                }
+                else {
+                    fprintf(stderr, "Unable to alloc memory for copy of the file name %s\n", 
+    				                        elfFiles[i]->filename);
+                }
              } else {
                 fprintf(stderr, "Unable to alloc memory for uncompressed file %s\n", 
 				                            elfFiles[i]->filename);
