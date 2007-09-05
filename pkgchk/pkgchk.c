@@ -197,10 +197,10 @@ main(int argc, char *argv[])
 
   switch (modules_pre) {
       case 1:     /* core,c++ */
-          modules |= LSB_Core | LSB_Cpp;
+          modules |= LSB_Core_Modules;
           break;
       case 2:     /* core,c++,desktop */
-          modules |= LSB_All_Modules;
+          modules |= LSB_Desktop_Modules[LSB_Version];
           break;
       default:
           modules |= LSB_Desktop_Modules[LSB_Version];
@@ -249,6 +249,8 @@ main(int argc, char *argv[])
     snprintf(tmp_string, TMP_STRING_SIZE, "LSB_MODULES=%s", getmodulename(modules));
     tetj_add_config(journal, tmp_string);
   }
+  snprintf(tmp_string, TMP_STRING_SIZE, "LSB_PROFILE=%s", getlsbprofile(LSB_Versions[LSB_Version], modules));
+  tetj_add_config(journal, tmp_string);
 
   tetj_testcase_start(journal, tetj_activity_count, argv[optind], "");
   checkRpm(rpmfile, journal, check_app, modules);
