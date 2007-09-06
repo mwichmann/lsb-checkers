@@ -29,6 +29,866 @@ Msg("Checking data structures in unistd.h\n");
 
 printf("Checking data structures in unistd.h\n");
 #if _LSB_DEFAULT_ARCH
+#ifdef _SC_2_PBS
+	CompareConstant(_SC_2_PBS,168,10735,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_2_PBS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_EQUIV_CLASS_MAX
+	CompareConstant(_SC_EQUIV_CLASS_MAX,41,10736,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_EQUIV_CLASS_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_CHARCLASS_NAME_MAX
+	CompareConstant(_SC_CHARCLASS_NAME_MAX,45,10737,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_CHARCLASS_NAME_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_PII
+	CompareConstant(_SC_PII,53,10738,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_PII\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_PII_XTI
+	CompareConstant(_SC_PII_XTI,54,10739,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_PII_XTI\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_PII_SOCKET
+	CompareConstant(_SC_PII_SOCKET,55,10740,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_PII_SOCKET\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_PII_INTERNET
+	CompareConstant(_SC_PII_INTERNET,56,10741,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_PII_INTERNET\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_PII_OSI
+	CompareConstant(_SC_PII_OSI,57,10742,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_PII_OSI\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_POLL
+	CompareConstant(_SC_POLL,58,10743,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_POLL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_SELECT
+	CompareConstant(_SC_SELECT,59,10744,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_SELECT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_UIO_MAXIOV
+	CompareConstant(_SC_UIO_MAXIOV,60,10745,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_UIO_MAXIOV\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_PII_INTERNET_STREAM
+	CompareConstant(_SC_PII_INTERNET_STREAM,61,10746,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_PII_INTERNET_STREAM\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_PII_INTERNET_DGRAM
+	CompareConstant(_SC_PII_INTERNET_DGRAM,62,10747,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_PII_INTERNET_DGRAM\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_PII_OSI_COTS
+	CompareConstant(_SC_PII_OSI_COTS,63,10748,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_PII_OSI_COTS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_PII_OSI_CLTS
+	CompareConstant(_SC_PII_OSI_CLTS,64,10749,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_PII_OSI_CLTS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_PII_OSI_M
+	CompareConstant(_SC_PII_OSI_M,65,10750,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_PII_OSI_M\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_T_IOV_MAX
+	CompareConstant(_SC_T_IOV_MAX,66,10751,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_T_IOV_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_NPROCESSORS_CONF
+	CompareConstant(_SC_NPROCESSORS_CONF,83,10752,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_NPROCESSORS_CONF\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_NPROCESSORS_ONLN
+	CompareConstant(_SC_NPROCESSORS_ONLN,84,10753,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_NPROCESSORS_ONLN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_PHYS_PAGES
+	CompareConstant(_SC_PHYS_PAGES,85,10754,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_PHYS_PAGES\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_AVPHYS_PAGES
+	CompareConstant(_SC_AVPHYS_PAGES,86,10755,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_AVPHYS_PAGES\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_XOPEN_XCU_VERSION
+	CompareConstant(_SC_XOPEN_XCU_VERSION,90,10756,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_XOPEN_XCU_VERSION\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_XOPEN_XPG2
+	CompareConstant(_SC_XOPEN_XPG2,98,10757,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_XOPEN_XPG2\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_XOPEN_XPG3
+	CompareConstant(_SC_XOPEN_XPG3,99,10758,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_XOPEN_XPG3\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_XOPEN_XPG4
+	CompareConstant(_SC_XOPEN_XPG4,100,10759,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_XOPEN_XPG4\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_CHAR_BIT
+	CompareConstant(_SC_CHAR_BIT,101,10760,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_CHAR_BIT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_CHAR_MAX
+	CompareConstant(_SC_CHAR_MAX,102,10761,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_CHAR_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_CHAR_MIN
+	CompareConstant(_SC_CHAR_MIN,103,10762,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_CHAR_MIN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_INT_MAX
+	CompareConstant(_SC_INT_MAX,104,10763,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_INT_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_INT_MIN
+	CompareConstant(_SC_INT_MIN,105,10764,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_INT_MIN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_LONG_BIT
+	CompareConstant(_SC_LONG_BIT,106,10765,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_LONG_BIT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_WORD_BIT
+	CompareConstant(_SC_WORD_BIT,107,10766,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_WORD_BIT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_MB_LEN_MAX
+	CompareConstant(_SC_MB_LEN_MAX,108,10767,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_MB_LEN_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_NZERO
+	CompareConstant(_SC_NZERO,109,10768,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_NZERO\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_SSIZE_MAX
+	CompareConstant(_SC_SSIZE_MAX,110,10769,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_SSIZE_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_SCHAR_MAX
+	CompareConstant(_SC_SCHAR_MAX,111,10770,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_SCHAR_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_SCHAR_MIN
+	CompareConstant(_SC_SCHAR_MIN,112,10771,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_SCHAR_MIN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_SHRT_MAX
+	CompareConstant(_SC_SHRT_MAX,113,10772,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_SHRT_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_SHRT_MIN
+	CompareConstant(_SC_SHRT_MIN,114,10773,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_SHRT_MIN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_UCHAR_MAX
+	CompareConstant(_SC_UCHAR_MAX,115,10774,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_UCHAR_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_UINT_MAX
+	CompareConstant(_SC_UINT_MAX,116,10775,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_UINT_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_ULONG_MAX
+	CompareConstant(_SC_ULONG_MAX,117,10776,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_ULONG_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_USHRT_MAX
+	CompareConstant(_SC_USHRT_MAX,118,10777,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_USHRT_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_NL_ARGMAX
+	CompareConstant(_SC_NL_ARGMAX,119,10778,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_NL_ARGMAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_NL_LANGMAX
+	CompareConstant(_SC_NL_LANGMAX,120,10779,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_NL_LANGMAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_NL_MSGMAX
+	CompareConstant(_SC_NL_MSGMAX,121,10780,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_NL_MSGMAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_NL_NMAX
+	CompareConstant(_SC_NL_NMAX,122,10781,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_NL_NMAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_NL_SETMAX
+	CompareConstant(_SC_NL_SETMAX,123,10782,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_NL_SETMAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_NL_TEXTMAX
+	CompareConstant(_SC_NL_TEXTMAX,124,10783,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_NL_TEXTMAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_BASE
+	CompareConstant(_SC_BASE,134,10784,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_BASE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_C_LANG_SUPPORT
+	CompareConstant(_SC_C_LANG_SUPPORT,135,10785,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_C_LANG_SUPPORT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_C_LANG_SUPPORT_R
+	CompareConstant(_SC_C_LANG_SUPPORT_R,136,10786,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_C_LANG_SUPPORT_R\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_DEVICE_IO
+	CompareConstant(_SC_DEVICE_IO,140,10787,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_DEVICE_IO\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_DEVICE_SPECIFIC
+	CompareConstant(_SC_DEVICE_SPECIFIC,141,10788,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_DEVICE_SPECIFIC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_DEVICE_SPECIFIC_R
+	CompareConstant(_SC_DEVICE_SPECIFIC_R,142,10789,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_DEVICE_SPECIFIC_R\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_FD_MGMT
+	CompareConstant(_SC_FD_MGMT,143,10790,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_FD_MGMT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_FIFO
+	CompareConstant(_SC_FIFO,144,10791,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_FIFO\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_PIPE
+	CompareConstant(_SC_PIPE,145,10792,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_PIPE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_FILE_ATTRIBUTES
+	CompareConstant(_SC_FILE_ATTRIBUTES,146,10793,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_FILE_ATTRIBUTES\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_FILE_LOCKING
+	CompareConstant(_SC_FILE_LOCKING,147,10794,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_FILE_LOCKING\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_FILE_SYSTEM
+	CompareConstant(_SC_FILE_SYSTEM,148,10795,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_FILE_SYSTEM\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_MULTI_PROCESS
+	CompareConstant(_SC_MULTI_PROCESS,150,10796,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_MULTI_PROCESS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_SINGLE_PROCESS
+	CompareConstant(_SC_SINGLE_PROCESS,151,10797,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_SINGLE_PROCESS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_NETWORKING
+	CompareConstant(_SC_NETWORKING,152,10798,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_NETWORKING\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_REGEX_VERSION
+	CompareConstant(_SC_REGEX_VERSION,156,10799,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_REGEX_VERSION\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_SIGNALS
+	CompareConstant(_SC_SIGNALS,158,10800,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_SIGNALS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_SYSTEM_DATABASE
+	CompareConstant(_SC_SYSTEM_DATABASE,162,10801,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_SYSTEM_DATABASE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_SYSTEM_DATABASE_R
+	CompareConstant(_SC_SYSTEM_DATABASE_R,163,10802,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_SYSTEM_DATABASE_R\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_USER_GROUPS
+	CompareConstant(_SC_USER_GROUPS,166,10803,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_USER_GROUPS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_USER_GROUPS_R
+	CompareConstant(_SC_USER_GROUPS_R,167,10804,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_USER_GROUPS_R\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_STREAMS
+	CompareConstant(_SC_STREAMS,174,10805,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_STREAMS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_LEVEL1_ICACHE_SIZE
+	CompareConstant(_SC_LEVEL1_ICACHE_SIZE,185,10806,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_LEVEL1_ICACHE_SIZE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_LEVEL1_ICACHE_ASSOC
+	CompareConstant(_SC_LEVEL1_ICACHE_ASSOC,186,10807,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_LEVEL1_ICACHE_ASSOC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_LEVEL1_ICACHE_LINESIZE
+	CompareConstant(_SC_LEVEL1_ICACHE_LINESIZE,187,10808,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_LEVEL1_ICACHE_LINESIZE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_LEVEL1_DCACHE_SIZE
+	CompareConstant(_SC_LEVEL1_DCACHE_SIZE,188,10809,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_LEVEL1_DCACHE_SIZE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_LEVEL1_DCACHE_ASSOC
+	CompareConstant(_SC_LEVEL1_DCACHE_ASSOC,189,10810,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_LEVEL1_DCACHE_ASSOC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_LEVEL1_DCACHE_LINESIZE
+	CompareConstant(_SC_LEVEL1_DCACHE_LINESIZE,190,10811,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_LEVEL1_DCACHE_LINESIZE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_LEVEL2_CACHE_SIZE
+	CompareConstant(_SC_LEVEL2_CACHE_SIZE,191,10812,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_LEVEL2_CACHE_SIZE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_LEVEL2_CACHE_ASSOC
+	CompareConstant(_SC_LEVEL2_CACHE_ASSOC,192,10813,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_LEVEL2_CACHE_ASSOC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_LEVEL2_CACHE_LINESIZE
+	CompareConstant(_SC_LEVEL2_CACHE_LINESIZE,193,10814,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_LEVEL2_CACHE_LINESIZE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_LEVEL3_CACHE_SIZE
+	CompareConstant(_SC_LEVEL3_CACHE_SIZE,194,10815,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_LEVEL3_CACHE_SIZE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_LEVEL3_CACHE_ASSOC
+	CompareConstant(_SC_LEVEL3_CACHE_ASSOC,195,10816,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_LEVEL3_CACHE_ASSOC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_LEVEL3_CACHE_LINESIZE
+	CompareConstant(_SC_LEVEL3_CACHE_LINESIZE,196,10817,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_LEVEL3_CACHE_LINESIZE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_LEVEL4_CACHE_SIZE
+	CompareConstant(_SC_LEVEL4_CACHE_SIZE,197,10818,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_LEVEL4_CACHE_SIZE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_LEVEL4_CACHE_ASSOC
+	CompareConstant(_SC_LEVEL4_CACHE_ASSOC,198,10819,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_LEVEL4_CACHE_ASSOC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_LEVEL4_CACHE_LINESIZE
+	CompareConstant(_SC_LEVEL4_CACHE_LINESIZE,199,10820,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_LEVEL4_CACHE_LINESIZE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef R_OK
 	CompareConstant(R_OK,4,1212,architecture,1.1,NULL)
 #else
@@ -1609,6 +2469,16 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef _SC_IPV6
+	CompareConstant(_SC_IPV6,235,5214,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_IPV6\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef _SC_LOGIN_NAME_MAX
 	CompareConstant(_SC_LOGIN_NAME_MAX,71,5215,architecture,2.0,NULL)
 #else
@@ -1623,6 +2493,16 @@ cnt++;
 	CompareConstant(_SC_MONOTONIC_CLOCK,149,5216,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _SC_MONOTONIC_CLOCK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _SC_RAW_SOCKETS
+	CompareConstant(_SC_RAW_SOCKETS,236,5218,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _SC_RAW_SOCKETS\n");
 cnt++;
 #endif
 
