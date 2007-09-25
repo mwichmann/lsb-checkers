@@ -266,10 +266,13 @@ typedef	struct	{
 	}	ElfFile;
 
 /* util.c */
+#define ELFFILE_FATAL_ERROR ((ElfFile *)1)
 extern char *ElfGetStringIndex(ElfFile *file, int offset, int index);
 extern char *ElfGetString(ElfFile *file, int offset);
+extern ElfFile *OpenElfFileNoExit(char *name);
 extern ElfFile *OpenElfFile(char *name);
-void CloseElfFile(ElfFile *efile);
+extern void CloseElfFile(ElfFile *efile);
+extern ElfFile *OpenFileNoExit(char *name);
 extern ElfFile *OpenFile(char *name);
 extern int checkElf(ElfFile *file1, int isProgram, 
                      struct tetj_handle *journal);
