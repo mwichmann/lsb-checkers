@@ -5,6 +5,9 @@
 #include <libgen.h>
 #include <limits.h>
 #include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
 #include <dirent.h>
 #include "../tetj/tetj.h"
 #include "check_file.h"
@@ -82,21 +85,59 @@ void
 usage(char *progname)
 {
     printf("usage: %s [options] appname ...\n"
-"  -h, --help                     show this help message and exit\n"
-"  -v, --version                  show version and LSB version\n"
-"  -j, --journal                  write a journal file\n"
-"  -n, --no-journal               do not write a journal file\n"
-"  -s, --missing-symbols          report only on missing symbols\n"
-"  -r, --lsb-version=VERSION      LSB version to test against\n"
-"                                   (supported are: %s)\n"
-"  -T, --lsb-product=[core,c++|core,c++,desktop]\n"
-"                                 target product to load modules for\n"
-"  -M MODULE, --module=MODULE     add MODULE to list of checked modules\n"
-"  -L LIB                         add LIB to list of checked libraries\n"
-"  -D DIR[:DIR...], --shared-libpath=DIR[:DIR...]\n"
-"                                 add all libs in DIR to checked lib list\n"
-"  -o FILE, --output-file=FILE    write output to FILE\n",
-progname, LSB_Versions_list);
+        "  -h, --help                     show this help message and exit\n"
+        "  -v, --version                  show version and LSB version\n"
+        "  -j, --journal                  write a journal file\n"
+        "  -n, --no-journal               do not write a journal file\n"
+        "  -s, --missing-symbols          report only on missing symbols\n"
+        "  -r, --lsb-version=VERSION      LSB version to test against\n"
+        "                                   (supported are: %s)\n"
+        "  -T, --lsb-product=[core,c++|core,c++,desktop]\n"
+        "                                 target product to load modules for\n"
+        "  -M MODULE, --module=MODULE     add MODULE to list of checked modules\n"
+        "  -L LIB                         add LIB to list of checked libraries\n"
+        "  -D DIR[:DIR...], --shared-libpath=DIR[:DIR...]\n"
+        "                                 add all libs in DIR to checked lib list\n"
+        "  -o FILE, --output-file=FILE    write output to FILE\n"
+        "  -l LIST, --file-list=LIST      take files to test from the list file\n"
+        "                                   specified; -o specifies where to put\n"
+        "                                   journals (separate for each file)\n",
+        progname, LSB_Versions_list);
+}
+
+#define TMP_STRING_SIZE (PATH_MAX+20)
+
+void start_journal_file(char* output_filename, char* command_line, int modules, char* extra_libraries)
+{
+    char tmp_string[TMP_STRING_SIZE + 1];
+
+    if (tetj_start_journal(output_filename, &journal, command_line) != 0) {
+        snprintf(tmp_string, TMP_STRING_SIZE, "Could not open journal file %s",
+                 output_filename);
+        perror(tmp_string);
+        printf("Use -o FILE to specify an alternate location for the journal file\n");
+        exit(1);
+    }
+
+    /*
+     * new journal standard requires arch in the
+     * VSX_NAME line in order to fetch waiver files correctly
+     */
+    snprintf(tmp_string, TMP_STRING_SIZE,
+             "VSX_NAME=lsbappchk %s (%s)", LSBAPPCHK_VERSION, tetj_arch);
+    tetj_add_config(journal, tmp_string);
+    snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION=%s", LSB_Versions[LSB_Version]);
+    tetj_add_config(journal, tmp_string);
+    snprintf(tmp_string, TMP_STRING_SIZE, "LSB_MODULES=%s",
+             getmodulename(modules));
+    tetj_add_config(journal, tmp_string);
+    snprintf(tmp_string, TMP_STRING_SIZE, "LSB_PROFILE=%s",
+             getlsbprofile(LSB_Versions[LSB_Version], modules));
+    tetj_add_config(journal, tmp_string);
+
+    /* Log extra libraries to look for symbols in */
+    if (extra_libraries != NULL)
+        tetj_add_config(journal, extra_libraries);
 }
 
 int
@@ -107,16 +148,24 @@ main(int argc, char *argv[])
     char *token;
     char *env;
     int i;
-    char *extra_libraries;
+    int j;
+    char *extra_libraries = NULL;
     char **extra_lib_list = NULL;
     int extra_lib_count = 0;
-#define TMP_STRING_SIZE (PATH_MAX+20)
+    char **test_binaries_list = NULL;
+    int test_binaries_count = 0;
     char tmp_string[TMP_STRING_SIZE + 1];
     char output_filename[TMP_STRING_SIZE + 1];
+    char list_filename[TMP_STRING_SIZE + 1];
     int modules = 0;
     int option_index = 0;
     int do_missing_symbol = 0;
-
+    int h_list_files;
+    struct stat list_files_stat;
+    char *list_files = NULL;
+    int separate_journals = 0;
+    int elf_type;
+    int was_error = 0;
 
 /* Ignore LSB_PRODUCT env variable for LSB 3.1
     char *s = getenv("LSB_PRODUCT");
@@ -136,6 +185,7 @@ main(int argc, char *argv[])
     /* Set defaults. */
     do_journal = 0;
     output_filename[0] = '\0';
+    list_filename[0] = '\0';
 
     /* Prime setttings from the environment. */
     env = getenv("LSB_SHAREDLIBPATH");
@@ -169,24 +219,25 @@ main(int argc, char *argv[])
     while (1) {
         int c;
         static struct option long_options[] = {
-            {"help",     no_argument,          NULL, 'h'},
-            {"version",  no_argument,          NULL, 'v'},
-            {"journal",  no_argument,          NULL, 'j'},
-            {"no-journal", no_argument,        NULL, 'n'},
-            {"missing-symbols", no_argument,   NULL, 's'},
-            {"output-file", required_argument, NULL, 'o'},
-            {"module",   required_argument,    NULL, 'M'},
+            {"help",            no_argument,       NULL, 'h'},
+            {"version",         no_argument,       NULL, 'v'},
+            {"journal",         no_argument,       NULL, 'j'},
+            {"no-journal",      no_argument,       NULL, 'n'},
+            {"missing-symbols", no_argument,       NULL, 's'},
+            {"output-file",     required_argument, NULL, 'o'},
+            {"module",          required_argument, NULL, 'M'},
             {"lsb-version",     required_argument, NULL, 'r'},
-            {"lsb-product", required_argument, NULL, 'T'},
-            {"shared-libpath", required_argument, NULL, 'D'},
+            {"lsb-product",     required_argument, NULL, 'T'},
+            {"shared-libpath",  required_argument, NULL, 'D'},
+            {"file-list",       required_argument, NULL, 'l'},
             {0, 0, 0, 0}
-      };
+        };
 
-    c = getopt_long(argc, argv, "hvjnsAo:M:L:r:T:D:",
-                    long_options, &option_index);
-    if (c == -1)
-          break;
-    switch (c) {
+        c = getopt_long(argc, argv, "hvjnsAo:M:L:r:T:D:l:",
+                        long_options, &option_index);
+        if (c == -1)
+            break;
+        switch (c) {
         case 'h':
             usage(argv[0]);
             exit (0);
@@ -249,14 +300,92 @@ main(int argc, char *argv[])
         case 's':
             do_missing_symbol = 1;
             break;
+        case 'l':
+            snprintf(list_filename, TMP_STRING_SIZE, optarg);
+            break;
         default:
             usage(argv[0]);
             exit(0);
         }
     }
-    if (optind >= argc && !extra_lib_count) {
+    if (optind >= argc && !extra_lib_count && list_filename[0] == '\0') {
         usage(argv[0]);
         exit (1);
+    }
+
+    for (i = optind; i < argc; ++i) {
+        ++test_binaries_count;
+        test_binaries_list = realloc(test_binaries_list, sizeof(char *) * test_binaries_count);
+        test_binaries_list[test_binaries_count - 1] = strdup(argv[i]);
+    }
+
+    if (list_filename[0] != '\0') {
+        if ((h_list_files = open(list_filename, O_RDONLY)) != -1) {
+            if (!fstat(h_list_files, &list_files_stat)) {
+                list_files = malloc(list_files_stat.st_size + 1);
+                if (list_files != NULL) {
+                    if (read(h_list_files, list_files, list_files_stat.st_size) == list_files_stat.st_size) {
+                        list_files[list_files_stat.st_size] = '\0';
+                        j = 0;
+                        for (i=0; i<=list_files_stat.st_size; ++i) {
+                            switch (list_files[i]) {
+                            case '\x0d':
+                                break;
+                            case '\x0a':
+                            case '\0':
+                                tmp_string[j] = '\0';
+                                if (j != 0) {
+                                    elffile = OpenElfFileNoExit(tmp_string);
+                                    if (elffile != NULL) {
+                                        elf_type = getElfType(elffile);
+                                        switch (elf_type) {
+                                        case ET_EXEC:
+                                            ++test_binaries_count;
+                                            test_binaries_list = realloc(test_binaries_list, sizeof(char *) * test_binaries_count);
+                                            test_binaries_list[test_binaries_count - 1] = strdup(tmp_string);
+                                            break;
+                                        case ET_DYN:
+                                            ++extra_lib_count;
+                                            extra_lib_list = realloc(extra_lib_list, sizeof(char *) * extra_lib_count);
+                                            extra_lib_list[extra_lib_count - 1] = strdup(tmp_string);
+                                            break;
+                                        default:
+                                            printf("File %s is of unsupported ELF type.\n", tmp_string);
+                                        }
+                                        CloseElfFile(elffile);
+                                    }
+                                    j = 0;
+                                }
+                                break;
+                            default:
+                                tmp_string[j++] = list_files[i];
+                            }
+                        }
+                    }
+                    else {
+                        printf("Cannot read data from list file!\n");
+                        was_error = 1;
+                    }
+                }
+                else {
+                    printf("Cannot allocate memory to read list file!\n");
+                    was_error = 1;
+                }
+            }
+            else {
+                printf("Cannot stat list file!\n");
+                was_error = 1;
+            }
+            close(h_list_files);
+        }
+        else {
+            printf("Cannot open list file %s\n", list_filename);
+            was_error = 1;
+        }
+    }
+
+    if (was_error) {
+        exit(1);
     }
 
     if (LSB_Version == -1) {
@@ -277,58 +406,41 @@ main(int argc, char *argv[])
             break;
     }
 
-    extra_libraries = strdup("EXTRA_LIBRARIES=");
-    for (i = 0; i < extra_lib_count; i++) {
-      extra_libraries = concat_string(extra_libraries, extra_lib_list[i]);
-      extra_libraries = concat_string(extra_libraries, " ");
+    if (extra_lib_count) {
+        extra_libraries = strdup("EXTRA_LIBRARIES=");
+        for (i = 0; i < extra_lib_count; i++) {
+          extra_libraries = concat_string(extra_libraries, extra_lib_list[i]);
+          extra_libraries = concat_string(extra_libraries, " ");
+        }
     }
 
     /* Start journal logging */
     if (do_journal) {
-        if (output_filename[0] == '\0') {
-            if (optind >= argc && extra_lib_count) {
-                /* No binary supplied on command line */
-                if (extra_lib_count == 1) {
+        if (list_files != NULL) {
+            /* If -l option was specified, create separate journal files for every file tested. */
+            separate_journals= 1;
+            /* Open fake journal to simplify the `for' cycle later. */
+            tetj_start_journal("/dev/null", &journal, command_line);
+        }
+        else {
+            /* If no -l option was specified, only single journal is created. */
+            if (output_filename[0] == '\0') {
+                if ((extra_lib_count == 1) && (test_binaries_count == 0)) {
                     snprintf(output_filename, TMP_STRING_SIZE, "journal.appchk.%s",
                              basename(extra_lib_list[0]));
-                } else {
+                }
+                else if ((extra_lib_count == 0) && (test_binaries_count == 1)) {
+                    snprintf(output_filename, TMP_STRING_SIZE, "journal.appchk.%s",
+                             basename(test_binaries_list[0]));
+                }
+                else {
                     snprintf(output_filename, TMP_STRING_SIZE, "journal.appchk.DSO");
                 }
-            } else {
-                snprintf(output_filename, TMP_STRING_SIZE, "journal.appchk.%s",
-                         basename(argv[optind]));
             }
+
+            start_journal_file(output_filename, command_line, modules, extra_libraries);
         }
-
-        if (tetj_start_journal(output_filename, &journal, command_line) != 0) {
-            snprintf(tmp_string, TMP_STRING_SIZE, "Could not open journal file %s",
-                     output_filename);
-            perror(tmp_string);
-            printf("Use -o FILE to specify an alternate location for the journal file\n");
-            exit(1);
-        }
-
-        /*
-         * new journal standard requires arch in the
-         * VSX_NAME line in order to fetch waiver files correctly
-         */
-        snprintf(tmp_string, TMP_STRING_SIZE,
-                 "VSX_NAME=lsbappchk %s (%s)", LSBAPPCHK_VERSION, tetj_arch);
-        tetj_add_config(journal, tmp_string);
-        snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION=%s", LSB_Versions[LSB_Version]);
-        tetj_add_config(journal, tmp_string);
-        snprintf(tmp_string, TMP_STRING_SIZE, "LSB_MODULES=%s",
-                 getmodulename(modules));
-        tetj_add_config(journal, tmp_string);
-        snprintf(tmp_string, TMP_STRING_SIZE, "LSB_PROFILE=%s",
-                 getlsbprofile(LSB_Versions[LSB_Version], modules));
-        tetj_add_config(journal, tmp_string);
-
-        /* Log extra libraries to look for symbols in */
-        if (extra_lib_count)
-            tetj_add_config(journal, extra_libraries);
     }
-
     /* Or, if no journal logging, set up report output. */
     else {
         if (output_filename[0] == '\0') {
@@ -352,13 +464,15 @@ main(int argc, char *argv[])
 
     /* Add symbols from extra libs to list */
     for (i = 0; i < extra_lib_count; i++) {
-        TESTCASE_START(tetj_activity_count, extra_lib_list[i],"");
-        tetj_tp_count = 0;
-        elffile = OpenElfFile(extra_lib_list[i]);
+        if (!separate_journals) {
+            TESTCASE_START(tetj_activity_count, extra_lib_list[i],"");
+            tetj_tp_count = 0;
+        }
+        elffile = OpenElfFileNoExit(extra_lib_list[i]);
         if (elffile == NULL) {
             /* make a dummy container if it failed to open */
             snprintf(tmp_string, TMP_STRING_SIZE, "Opening lib %s",
-                                                  extra_lib_list[i]);
+                                                   extra_lib_list[i]);
             PURPOSE_START(tetj_activity_count, ++tetj_tp_count, tmp_string);
             snprintf(tmp_string, TMP_STRING_SIZE, "Could not open %s",
                                                    extra_lib_list[i]);
@@ -380,11 +494,21 @@ main(int argc, char *argv[])
 
     /* Check all extra libs */
     for (i = 0; i < extra_lib_count; i++) {
+        if (do_journal && separate_journals) {
+            tetj_close_journal(journal);
+            /* Use file inode and device ID to get unique journal file name. */
+            if (stat(extra_lib_list[i], &list_files_stat)) {
+                list_files_stat.st_dev = list_files_stat.st_ino = 0;
+            }
+            snprintf(tmp_string, TMP_STRING_SIZE, "%s/lsbappchk.%s.%lu-%lu.journal", output_filename, basename(extra_lib_list[i]),
+                     (unsigned long)list_files_stat.st_dev, (unsigned long)list_files_stat.st_ino);
+            start_journal_file(tmp_string, command_line, modules, extra_libraries);
+        }
         snprintf(tmp_string, TMP_STRING_SIZE, "%s-pass2", extra_lib_list[i]);
-        TESTCASE_START(tetj_activity_count, tmp_string,"");
+        TESTCASE_START(tetj_activity_count, tmp_string, "");
         tetj_tp_count = 0;
 
-        elffile = OpenElfFile(extra_lib_list[i]);
+        elffile = OpenElfFileNoExit(extra_lib_list[i]);
         if (elffile == NULL) {
             /* make a dummy container if it failed to open */
             snprintf(tmp_string, TMP_STRING_SIZE, "Opening lib %s",
@@ -409,16 +533,26 @@ main(int argc, char *argv[])
     }
 
     /* Check binary */
-    for (i = optind; i < argc; i++) {
-        TESTCASE_START(tetj_activity_count, argv[i], "");
+    for (i = 0; i < test_binaries_count; i++) {
+        if (do_journal && separate_journals) {
+            tetj_close_journal(journal);
+            /* Use file inode and device ID to get unique journal file name. */
+            if (stat(test_binaries_list[i], &list_files_stat)) {
+                list_files_stat.st_dev = list_files_stat.st_ino = 0;
+            }
+            snprintf(tmp_string, TMP_STRING_SIZE, "%s/lsbappchk.%s.%lu-%lu.journal", output_filename, basename(test_binaries_list[i]),
+                     (unsigned long)list_files_stat.st_dev, (unsigned long)list_files_stat.st_ino);
+            start_journal_file(tmp_string, command_line, modules, extra_libraries);
+        }
+        TESTCASE_START(tetj_activity_count, test_binaries_list[i], "");
         tetj_tp_count = 0;
 
-        elffile = OpenElfFile(argv[i]);
+        elffile = OpenElfFileNoExit(test_binaries_list[i]);
         if (elffile == NULL) {
             /* make a dummy container if it failed to open */
-            snprintf(tmp_string, TMP_STRING_SIZE, "Opening binary %s", argv[i]);
+            snprintf(tmp_string, TMP_STRING_SIZE, "Opening binary %s", test_binaries_list[i]);
             PURPOSE_START(tetj_activity_count, ++tetj_tp_count, tmp_string);
-            snprintf(tmp_string, TMP_STRING_SIZE, "Could not open %s", argv[i]);
+            snprintf(tmp_string, TMP_STRING_SIZE, "Could not open %s", test_binaries_list[i]);
             /* error already printed by call:
             perror(tmp_string);
             */
@@ -439,6 +573,16 @@ main(int argc, char *argv[])
         tetj_close_journal(journal);
     else
         output_close();
+
+    /* Cleanup */
+    if (extra_libraries != NULL)
+        free(extra_libraries);
+    if (extra_lib_list != NULL)
+        free(extra_lib_list);
+    if (test_binaries_list != NULL)
+        free(test_binaries_list);
+    if (list_files != NULL)
+        free(list_files);
 
     exit(0);
 }
