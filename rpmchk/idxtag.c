@@ -8,6 +8,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
+#include <arpa/inet.h>
 #include "rpmchk.h"
 #include "md5.h"
 #include "tagfuncs.h"
