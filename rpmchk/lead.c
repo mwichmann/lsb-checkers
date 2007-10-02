@@ -6,6 +6,7 @@
  */
 #include <stdio.h>
 #include <string.h>
+#include <arpa/inet.h>
 #include "rpmchk.h"
 #include "../tetj/tetj.h"
 
