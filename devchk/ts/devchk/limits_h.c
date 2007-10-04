@@ -36,6 +36,506 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_AIO_LISTIO_MAX
+	CompareConstant(_POSIX_AIO_LISTIO_MAX,2,10821,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_AIO_LISTIO_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_AIO_MAX
+	CompareConstant(_POSIX_AIO_MAX,1,10822,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_AIO_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_ARG_MAX
+	CompareConstant(_POSIX_ARG_MAX,4096,10823,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_ARG_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_CHILD_MAX
+	CompareConstant(_POSIX_CHILD_MAX,25,10824,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_CHILD_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_DELAYTIMER_MAX
+	CompareConstant(_POSIX_DELAYTIMER_MAX,32,10825,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_DELAYTIMER_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_HOST_NAME_MAX
+	CompareConstant(_POSIX_HOST_NAME_MAX,255,10826,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_HOST_NAME_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_LINK_MAX
+	CompareConstant(_POSIX_LINK_MAX,8,10827,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_LINK_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_LOGIN_NAME_MAX
+	CompareConstant(_POSIX_LOGIN_NAME_MAX,9,10828,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_LOGIN_NAME_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_MAX_CANON
+	CompareConstant(_POSIX_MAX_CANON,255,10829,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_MAX_CANON\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_MAX_INPUT
+	CompareConstant(_POSIX_MAX_INPUT,255,10830,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_MAX_INPUT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_MQ_OPEN_MAX
+	CompareConstant(_POSIX_MQ_OPEN_MAX,8,10831,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_MQ_OPEN_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_MQ_PRIO_MAX
+	CompareConstant(_POSIX_MQ_PRIO_MAX,32,10832,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_MQ_PRIO_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_NAME_MAX
+	CompareConstant(_POSIX_NAME_MAX,14,10833,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_NAME_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_NGROUPS_MAX
+	CompareConstant(_POSIX_NGROUPS_MAX,8,10834,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_NGROUPS_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_OPEN_MAX
+	CompareConstant(_POSIX_OPEN_MAX,20,10835,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_OPEN_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_FD_SETSIZE
+	CompareConstant(_POSIX_FD_SETSIZE,_POSIX_OPEN_MAX,10836,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_FD_SETSIZE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_PATH_MAX
+	CompareConstant(_POSIX_PATH_MAX,256,10837,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_PATH_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_PIPE_BUF
+	CompareConstant(_POSIX_PIPE_BUF,512,10838,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_PIPE_BUF\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_RE_DUP_MAX
+	CompareConstant(_POSIX_RE_DUP_MAX,255,10839,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_RE_DUP_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_RTSIG_MAX
+	CompareConstant(_POSIX_RTSIG_MAX,8,10840,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_RTSIG_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_SEM_NSEMS_MAX
+	CompareConstant(_POSIX_SEM_NSEMS_MAX,256,10841,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_SEM_NSEMS_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_SEM_VALUE_MAX
+	CompareConstant(_POSIX_SEM_VALUE_MAX,32767,10842,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_SEM_VALUE_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_SIGQUEUE_MAX
+	CompareConstant(_POSIX_SIGQUEUE_MAX,32,10843,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_SIGQUEUE_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_SSIZE_MAX
+	CompareConstant(_POSIX_SSIZE_MAX,32767,10844,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_SSIZE_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_STREAM_MAX
+	CompareConstant(_POSIX_STREAM_MAX,8,10845,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_STREAM_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_SYMLINK_MAX
+	CompareConstant(_POSIX_SYMLINK_MAX,255,10846,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_SYMLINK_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_SYMLOOP_MAX
+	CompareConstant(_POSIX_SYMLOOP_MAX,8,10847,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_SYMLOOP_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_TIMER_MAX
+	CompareConstant(_POSIX_TIMER_MAX,32,10848,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_TIMER_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_TTY_NAME_MAX
+	CompareConstant(_POSIX_TTY_NAME_MAX,9,10849,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_TTY_NAME_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_TZNAME_MAX
+	CompareConstant(_POSIX_TZNAME_MAX,6,10850,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_TZNAME_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_QLIMIT
+	CompareConstant(_POSIX_QLIMIT,1,10851,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_QLIMIT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_HIWAT
+	CompareConstant(_POSIX_HIWAT,_POSIX_PIPE_BUF,10852,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_HIWAT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_UIO_MAXIOV
+	CompareConstant(_POSIX_UIO_MAXIOV,16,10853,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_UIO_MAXIOV\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_CLOCKRES_MIN
+	CompareConstant(_POSIX_CLOCKRES_MIN,20000000,10854,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_CLOCKRES_MIN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX2_BC_BASE_MAX
+	CompareConstant(_POSIX2_BC_BASE_MAX,99,10855,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX2_BC_BASE_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX2_BC_DIM_MAX
+	CompareConstant(_POSIX2_BC_DIM_MAX,2048,10856,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX2_BC_DIM_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX2_BC_SCALE_MAX
+	CompareConstant(_POSIX2_BC_SCALE_MAX,99,10857,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX2_BC_SCALE_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX2_BC_STRING_MAX
+	CompareConstant(_POSIX2_BC_STRING_MAX,1000,10858,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX2_BC_STRING_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX2_COLL_WEIGHTS_MAX
+	CompareConstant(_POSIX2_COLL_WEIGHTS_MAX,2,10859,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX2_COLL_WEIGHTS_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX2_EXPR_NEST_MAX
+	CompareConstant(_POSIX2_EXPR_NEST_MAX,32,10860,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX2_EXPR_NEST_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX2_LINE_MAX
+	CompareConstant(_POSIX2_LINE_MAX,2048,10861,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX2_LINE_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX2_RE_DUP_MAX
+	CompareConstant(_POSIX2_RE_DUP_MAX,255,10862,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX2_RE_DUP_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX2_CHARCLASS_NAME_MAX
+	CompareConstant(_POSIX2_CHARCLASS_NAME_MAX,14,10863,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX2_CHARCLASS_NAME_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef BC_BASE_MAX
+	CompareConstant(BC_BASE_MAX,_POSIX2_BC_BASE_MAX,10864,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: BC_BASE_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef BC_DIM_MAX
+	CompareConstant(BC_DIM_MAX,_POSIX2_BC_DIM_MAX,10865,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: BC_DIM_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef BC_SCALE_MAX
+	CompareConstant(BC_SCALE_MAX,_POSIX2_BC_SCALE_MAX,10866,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: BC_SCALE_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef BC_STRING_MAX
+	CompareConstant(BC_STRING_MAX,_POSIX2_BC_STRING_MAX,10867,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: BC_STRING_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef COLL_WEIGHTS_MAX
+	CompareConstant(COLL_WEIGHTS_MAX,255,10868,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: COLL_WEIGHTS_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef EXPR_NEST_MAX
+	CompareConstant(EXPR_NEST_MAX,_POSIX2_EXPR_NEST_MAX,10869,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: EXPR_NEST_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef CHARCLASS_NAME_MAX
+	CompareConstant(CHARCLASS_NAME_MAX,2048,10870,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: CHARCLASS_NAME_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef SHRT_MAX
 	CompareConstant(SHRT_MAX,32767,11,architecture,1.1,NULL)
 #else
@@ -274,6 +774,16 @@ cnt++;
 	CompareConstant(ULLONG_MAX,18446744073709551615ULL,3064,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: ULLONG_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef LINE_MAX
+	CompareConstant(LINE_MAX,2048,3066,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: LINE_MAX\n");
 cnt++;
 #endif
 
