@@ -37,13 +37,10 @@ OBJS = hdrchk.o \
 	fontconfig_fcprivate_h.o \
 	fontconfig_fontconfig_h.o \
 	freetype_config_ftheader_h.o \
-	freetype_config_ftmodule_h.o \
 	freetype_config_ftoption_h.o \
 	freetype_config_ftstdlib_h.o \
 	freetype_freetype_h.o \
-	freetype_ftbbox_h.o \
 	freetype_ftbdf_h.o \
-	freetype_ftbitmap_h.o \
 	freetype_fterrdef_h.o \
 	freetype_fterrors_h.o \
 	freetype_ftglyph_h.o \
@@ -55,20 +52,20 @@ OBJS = hdrchk.o \
 	freetype_ftmoderr_h.o \
 	freetype_ftotval_h.o \
 	freetype_ftoutln_h.o \
-	freetype_ftpfr_h.o \
 	freetype_ftrender_h.o \
 	freetype_ftsizes_h.o \
 	freetype_ftsnames_h.o \
 	freetype_ftstroke_h.o \
 	freetype_ftsynth_h.o \
+	freetype_ftsystem_h.o \
 	freetype_fttrigon_h.o \
 	freetype_fttypes_h.o \
-	freetype_ftxf86_h.o \
 	freetype_t1tables_h.o \
 	freetype_ttnameid_h.o \
 	freetype_tttables_h.o \
 	freetype_tttags_h.o \
 	freetype_ttunpat_h.o \
+	ft2build_h.o \
 	ftw_h.o \
 	getopt_h.o \
 	glib_2_0_glib_object_h.o \

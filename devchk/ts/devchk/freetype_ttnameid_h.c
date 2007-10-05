@@ -2176,10 +2176,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for freetype/ttnameid.h */
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef TT_ADOBE_ID_CUSTOM
 	CompareConstant(TT_ADOBE_ID_CUSTOM,2,9736,architecture,3.2,NULL)
 #else

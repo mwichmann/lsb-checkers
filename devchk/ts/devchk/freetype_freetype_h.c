@@ -485,12 +485,337 @@ cnt++;
 /* No test for FT_STYLE_FLAG_ITALIC */
 #endif
 
-#if _LSB_DEFAULT_ARCH
-/* No test for freetype/freetype.h */
+#if defined __i386__
+CheckTypeSize(struct FT_FaceRec_,132, 11166, 2, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_FaceRec_ on IA32\n");
+CheckOffset(struct FT_FaceRec_,num_faces,0,2,64024)
+CheckOffset(struct FT_FaceRec_,face_index,0,2,64025)
+CheckOffset(struct FT_FaceRec_,face_flags,0,2,64026)
+CheckOffset(struct FT_FaceRec_,style_flags,0,2,64027)
+CheckOffset(struct FT_FaceRec_,num_glyphs,0,2,64028)
+CheckOffset(struct FT_FaceRec_,family_name,0,2,64029)
+CheckOffset(struct FT_FaceRec_,style_name,0,2,64030)
+CheckOffset(struct FT_FaceRec_,num_fixed_sizes,0,2,64031)
+CheckOffset(struct FT_FaceRec_,available_sizes,0,2,64032)
+CheckOffset(struct FT_FaceRec_,num_charmaps,0,2,64033)
+CheckOffset(struct FT_FaceRec_,charmaps,0,2,64034)
+CheckOffset(struct FT_FaceRec_,generic,0,2,64035)
+CheckOffset(struct FT_FaceRec_,bbox,0,2,64036)
+CheckOffset(struct FT_FaceRec_,units_per_EM,0,2,64037)
+CheckOffset(struct FT_FaceRec_,ascender,0,2,64038)
+CheckOffset(struct FT_FaceRec_,descender,0,2,64039)
+CheckOffset(struct FT_FaceRec_,height,0,2,64040)
+CheckOffset(struct FT_FaceRec_,max_advance_width,0,2,64041)
+CheckOffset(struct FT_FaceRec_,max_advance_weight,0,2,64042)
+CheckOffset(struct FT_FaceRec_,underline_position,0,2,64043)
+CheckOffset(struct FT_FaceRec_,underline_thickness,0,2,64044)
+CheckOffset(struct FT_FaceRec_,glyph,0,2,64045)
+CheckOffset(struct FT_FaceRec_,size,0,2,64046)
+CheckOffset(struct FT_FaceRec_,charmap,0,2,64047)
+CheckOffset(struct FT_FaceRec_,driver,0,2,64048)
+CheckOffset(struct FT_FaceRec_,memory,0,2,64049)
+CheckOffset(struct FT_FaceRec_,stream,0,2,64050)
+CheckOffset(struct FT_FaceRec_,sizes_list,0,2,64051)
+CheckOffset(struct FT_FaceRec_,autohint,0,2,64052)
+CheckOffset(struct FT_FaceRec_,extensions,0,2,64053)
+CheckOffset(struct FT_FaceRec_,internal,0,2,64054)
+#elif defined __ia64__
+CheckTypeSize(struct FT_FaceRec_,0, 11166, 3, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_FaceRec_ on IA64\n");
+CheckOffset(struct FT_FaceRec_,num_faces,0,3,64024)
+CheckOffset(struct FT_FaceRec_,face_index,0,3,64025)
+CheckOffset(struct FT_FaceRec_,face_flags,0,3,64026)
+CheckOffset(struct FT_FaceRec_,style_flags,0,3,64027)
+CheckOffset(struct FT_FaceRec_,num_glyphs,0,3,64028)
+CheckOffset(struct FT_FaceRec_,family_name,0,3,64029)
+CheckOffset(struct FT_FaceRec_,style_name,0,3,64030)
+CheckOffset(struct FT_FaceRec_,num_fixed_sizes,0,3,64031)
+CheckOffset(struct FT_FaceRec_,available_sizes,0,3,64032)
+CheckOffset(struct FT_FaceRec_,num_charmaps,0,3,64033)
+CheckOffset(struct FT_FaceRec_,charmaps,0,3,64034)
+CheckOffset(struct FT_FaceRec_,generic,0,3,64035)
+CheckOffset(struct FT_FaceRec_,bbox,0,3,64036)
+CheckOffset(struct FT_FaceRec_,units_per_EM,0,3,64037)
+CheckOffset(struct FT_FaceRec_,ascender,0,3,64038)
+CheckOffset(struct FT_FaceRec_,descender,0,3,64039)
+CheckOffset(struct FT_FaceRec_,height,0,3,64040)
+CheckOffset(struct FT_FaceRec_,max_advance_width,0,3,64041)
+CheckOffset(struct FT_FaceRec_,max_advance_weight,0,3,64042)
+CheckOffset(struct FT_FaceRec_,underline_position,0,3,64043)
+CheckOffset(struct FT_FaceRec_,underline_thickness,0,3,64044)
+CheckOffset(struct FT_FaceRec_,glyph,0,3,64045)
+CheckOffset(struct FT_FaceRec_,size,0,3,64046)
+CheckOffset(struct FT_FaceRec_,charmap,0,3,64047)
+CheckOffset(struct FT_FaceRec_,driver,0,3,64048)
+CheckOffset(struct FT_FaceRec_,memory,0,3,64049)
+CheckOffset(struct FT_FaceRec_,stream,0,3,64050)
+CheckOffset(struct FT_FaceRec_,sizes_list,0,3,64051)
+CheckOffset(struct FT_FaceRec_,autohint,0,3,64052)
+CheckOffset(struct FT_FaceRec_,extensions,0,3,64053)
+CheckOffset(struct FT_FaceRec_,internal,0,3,64054)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct FT_FaceRec_,0, 11166, 6, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_FaceRec_ on PPC32\n");
+CheckOffset(struct FT_FaceRec_,num_faces,0,6,64024)
+CheckOffset(struct FT_FaceRec_,face_index,0,6,64025)
+CheckOffset(struct FT_FaceRec_,face_flags,0,6,64026)
+CheckOffset(struct FT_FaceRec_,style_flags,0,6,64027)
+CheckOffset(struct FT_FaceRec_,num_glyphs,0,6,64028)
+CheckOffset(struct FT_FaceRec_,family_name,0,6,64029)
+CheckOffset(struct FT_FaceRec_,style_name,0,6,64030)
+CheckOffset(struct FT_FaceRec_,num_fixed_sizes,0,6,64031)
+CheckOffset(struct FT_FaceRec_,available_sizes,0,6,64032)
+CheckOffset(struct FT_FaceRec_,num_charmaps,0,6,64033)
+CheckOffset(struct FT_FaceRec_,charmaps,0,6,64034)
+CheckOffset(struct FT_FaceRec_,generic,0,6,64035)
+CheckOffset(struct FT_FaceRec_,bbox,0,6,64036)
+CheckOffset(struct FT_FaceRec_,units_per_EM,0,6,64037)
+CheckOffset(struct FT_FaceRec_,ascender,0,6,64038)
+CheckOffset(struct FT_FaceRec_,descender,0,6,64039)
+CheckOffset(struct FT_FaceRec_,height,0,6,64040)
+CheckOffset(struct FT_FaceRec_,max_advance_width,0,6,64041)
+CheckOffset(struct FT_FaceRec_,max_advance_weight,0,6,64042)
+CheckOffset(struct FT_FaceRec_,underline_position,0,6,64043)
+CheckOffset(struct FT_FaceRec_,underline_thickness,0,6,64044)
+CheckOffset(struct FT_FaceRec_,glyph,0,6,64045)
+CheckOffset(struct FT_FaceRec_,size,0,6,64046)
+CheckOffset(struct FT_FaceRec_,charmap,0,6,64047)
+CheckOffset(struct FT_FaceRec_,driver,0,6,64048)
+CheckOffset(struct FT_FaceRec_,memory,0,6,64049)
+CheckOffset(struct FT_FaceRec_,stream,0,6,64050)
+CheckOffset(struct FT_FaceRec_,sizes_list,0,6,64051)
+CheckOffset(struct FT_FaceRec_,autohint,0,6,64052)
+CheckOffset(struct FT_FaceRec_,extensions,0,6,64053)
+CheckOffset(struct FT_FaceRec_,internal,0,6,64054)
+#elif defined __powerpc64__
+CheckTypeSize(struct FT_FaceRec_,0, 11166, 9, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_FaceRec_ on PPC64\n");
+CheckOffset(struct FT_FaceRec_,num_faces,0,9,64024)
+CheckOffset(struct FT_FaceRec_,face_index,0,9,64025)
+CheckOffset(struct FT_FaceRec_,face_flags,0,9,64026)
+CheckOffset(struct FT_FaceRec_,style_flags,0,9,64027)
+CheckOffset(struct FT_FaceRec_,num_glyphs,0,9,64028)
+CheckOffset(struct FT_FaceRec_,family_name,0,9,64029)
+CheckOffset(struct FT_FaceRec_,style_name,0,9,64030)
+CheckOffset(struct FT_FaceRec_,num_fixed_sizes,0,9,64031)
+CheckOffset(struct FT_FaceRec_,available_sizes,0,9,64032)
+CheckOffset(struct FT_FaceRec_,num_charmaps,0,9,64033)
+CheckOffset(struct FT_FaceRec_,charmaps,0,9,64034)
+CheckOffset(struct FT_FaceRec_,generic,0,9,64035)
+CheckOffset(struct FT_FaceRec_,bbox,0,9,64036)
+CheckOffset(struct FT_FaceRec_,units_per_EM,0,9,64037)
+CheckOffset(struct FT_FaceRec_,ascender,0,9,64038)
+CheckOffset(struct FT_FaceRec_,descender,0,9,64039)
+CheckOffset(struct FT_FaceRec_,height,0,9,64040)
+CheckOffset(struct FT_FaceRec_,max_advance_width,0,9,64041)
+CheckOffset(struct FT_FaceRec_,max_advance_weight,0,9,64042)
+CheckOffset(struct FT_FaceRec_,underline_position,0,9,64043)
+CheckOffset(struct FT_FaceRec_,underline_thickness,0,9,64044)
+CheckOffset(struct FT_FaceRec_,glyph,0,9,64045)
+CheckOffset(struct FT_FaceRec_,size,0,9,64046)
+CheckOffset(struct FT_FaceRec_,charmap,0,9,64047)
+CheckOffset(struct FT_FaceRec_,driver,0,9,64048)
+CheckOffset(struct FT_FaceRec_,memory,0,9,64049)
+CheckOffset(struct FT_FaceRec_,stream,0,9,64050)
+CheckOffset(struct FT_FaceRec_,sizes_list,0,9,64051)
+CheckOffset(struct FT_FaceRec_,autohint,0,9,64052)
+CheckOffset(struct FT_FaceRec_,extensions,0,9,64053)
+CheckOffset(struct FT_FaceRec_,internal,0,9,64054)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct FT_FaceRec_,0, 11166, 10, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_FaceRec_ on S390\n");
+CheckOffset(struct FT_FaceRec_,num_faces,0,10,64024)
+CheckOffset(struct FT_FaceRec_,face_index,0,10,64025)
+CheckOffset(struct FT_FaceRec_,face_flags,0,10,64026)
+CheckOffset(struct FT_FaceRec_,style_flags,0,10,64027)
+CheckOffset(struct FT_FaceRec_,num_glyphs,0,10,64028)
+CheckOffset(struct FT_FaceRec_,family_name,0,10,64029)
+CheckOffset(struct FT_FaceRec_,style_name,0,10,64030)
+CheckOffset(struct FT_FaceRec_,num_fixed_sizes,0,10,64031)
+CheckOffset(struct FT_FaceRec_,available_sizes,0,10,64032)
+CheckOffset(struct FT_FaceRec_,num_charmaps,0,10,64033)
+CheckOffset(struct FT_FaceRec_,charmaps,0,10,64034)
+CheckOffset(struct FT_FaceRec_,generic,0,10,64035)
+CheckOffset(struct FT_FaceRec_,bbox,0,10,64036)
+CheckOffset(struct FT_FaceRec_,units_per_EM,0,10,64037)
+CheckOffset(struct FT_FaceRec_,ascender,0,10,64038)
+CheckOffset(struct FT_FaceRec_,descender,0,10,64039)
+CheckOffset(struct FT_FaceRec_,height,0,10,64040)
+CheckOffset(struct FT_FaceRec_,max_advance_width,0,10,64041)
+CheckOffset(struct FT_FaceRec_,max_advance_weight,0,10,64042)
+CheckOffset(struct FT_FaceRec_,underline_position,0,10,64043)
+CheckOffset(struct FT_FaceRec_,underline_thickness,0,10,64044)
+CheckOffset(struct FT_FaceRec_,glyph,0,10,64045)
+CheckOffset(struct FT_FaceRec_,size,0,10,64046)
+CheckOffset(struct FT_FaceRec_,charmap,0,10,64047)
+CheckOffset(struct FT_FaceRec_,driver,0,10,64048)
+CheckOffset(struct FT_FaceRec_,memory,0,10,64049)
+CheckOffset(struct FT_FaceRec_,stream,0,10,64050)
+CheckOffset(struct FT_FaceRec_,sizes_list,0,10,64051)
+CheckOffset(struct FT_FaceRec_,autohint,0,10,64052)
+CheckOffset(struct FT_FaceRec_,extensions,0,10,64053)
+CheckOffset(struct FT_FaceRec_,internal,0,10,64054)
+#elif defined __x86_64__
+CheckTypeSize(struct FT_FaceRec_,0, 11166, 11, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_FaceRec_ on x86-64\n");
+CheckOffset(struct FT_FaceRec_,num_faces,0,11,64024)
+CheckOffset(struct FT_FaceRec_,face_index,0,11,64025)
+CheckOffset(struct FT_FaceRec_,face_flags,0,11,64026)
+CheckOffset(struct FT_FaceRec_,style_flags,0,11,64027)
+CheckOffset(struct FT_FaceRec_,num_glyphs,0,11,64028)
+CheckOffset(struct FT_FaceRec_,family_name,0,11,64029)
+CheckOffset(struct FT_FaceRec_,style_name,0,11,64030)
+CheckOffset(struct FT_FaceRec_,num_fixed_sizes,0,11,64031)
+CheckOffset(struct FT_FaceRec_,available_sizes,0,11,64032)
+CheckOffset(struct FT_FaceRec_,num_charmaps,0,11,64033)
+CheckOffset(struct FT_FaceRec_,charmaps,0,11,64034)
+CheckOffset(struct FT_FaceRec_,generic,0,11,64035)
+CheckOffset(struct FT_FaceRec_,bbox,0,11,64036)
+CheckOffset(struct FT_FaceRec_,units_per_EM,0,11,64037)
+CheckOffset(struct FT_FaceRec_,ascender,0,11,64038)
+CheckOffset(struct FT_FaceRec_,descender,0,11,64039)
+CheckOffset(struct FT_FaceRec_,height,0,11,64040)
+CheckOffset(struct FT_FaceRec_,max_advance_width,0,11,64041)
+CheckOffset(struct FT_FaceRec_,max_advance_weight,0,11,64042)
+CheckOffset(struct FT_FaceRec_,underline_position,0,11,64043)
+CheckOffset(struct FT_FaceRec_,underline_thickness,0,11,64044)
+CheckOffset(struct FT_FaceRec_,glyph,0,11,64045)
+CheckOffset(struct FT_FaceRec_,size,0,11,64046)
+CheckOffset(struct FT_FaceRec_,charmap,0,11,64047)
+CheckOffset(struct FT_FaceRec_,driver,0,11,64048)
+CheckOffset(struct FT_FaceRec_,memory,0,11,64049)
+CheckOffset(struct FT_FaceRec_,stream,0,11,64050)
+CheckOffset(struct FT_FaceRec_,sizes_list,0,11,64051)
+CheckOffset(struct FT_FaceRec_,autohint,0,11,64052)
+CheckOffset(struct FT_FaceRec_,extensions,0,11,64053)
+CheckOffset(struct FT_FaceRec_,internal,0,11,64054)
+#elif defined __s390x__
+CheckTypeSize(struct FT_FaceRec_,0, 11166, 12, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_FaceRec_ on S390X\n");
+CheckOffset(struct FT_FaceRec_,num_faces,0,12,64024)
+CheckOffset(struct FT_FaceRec_,face_index,0,12,64025)
+CheckOffset(struct FT_FaceRec_,face_flags,0,12,64026)
+CheckOffset(struct FT_FaceRec_,style_flags,0,12,64027)
+CheckOffset(struct FT_FaceRec_,num_glyphs,0,12,64028)
+CheckOffset(struct FT_FaceRec_,family_name,0,12,64029)
+CheckOffset(struct FT_FaceRec_,style_name,0,12,64030)
+CheckOffset(struct FT_FaceRec_,num_fixed_sizes,0,12,64031)
+CheckOffset(struct FT_FaceRec_,available_sizes,0,12,64032)
+CheckOffset(struct FT_FaceRec_,num_charmaps,0,12,64033)
+CheckOffset(struct FT_FaceRec_,charmaps,0,12,64034)
+CheckOffset(struct FT_FaceRec_,generic,0,12,64035)
+CheckOffset(struct FT_FaceRec_,bbox,0,12,64036)
+CheckOffset(struct FT_FaceRec_,units_per_EM,0,12,64037)
+CheckOffset(struct FT_FaceRec_,ascender,0,12,64038)
+CheckOffset(struct FT_FaceRec_,descender,0,12,64039)
+CheckOffset(struct FT_FaceRec_,height,0,12,64040)
+CheckOffset(struct FT_FaceRec_,max_advance_width,0,12,64041)
+CheckOffset(struct FT_FaceRec_,max_advance_weight,0,12,64042)
+CheckOffset(struct FT_FaceRec_,underline_position,0,12,64043)
+CheckOffset(struct FT_FaceRec_,underline_thickness,0,12,64044)
+CheckOffset(struct FT_FaceRec_,glyph,0,12,64045)
+CheckOffset(struct FT_FaceRec_,size,0,12,64046)
+CheckOffset(struct FT_FaceRec_,charmap,0,12,64047)
+CheckOffset(struct FT_FaceRec_,driver,0,12,64048)
+CheckOffset(struct FT_FaceRec_,memory,0,12,64049)
+CheckOffset(struct FT_FaceRec_,stream,0,12,64050)
+CheckOffset(struct FT_FaceRec_,sizes_list,0,12,64051)
+CheckOffset(struct FT_FaceRec_,autohint,0,12,64052)
+CheckOffset(struct FT_FaceRec_,extensions,0,12,64053)
+CheckOffset(struct FT_FaceRec_,internal,0,12,64054)
 #endif
 
-#if 1
-CheckTypeSize(FT_Pointer,0, 16766, 1, 3.2, NULL, 40, NULL)
+#if defined __i386__
+CheckTypeSize(FT_Face,0, 11168, 2, 3.2, NULL, 11167, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11167,NULL);\n",architecture,11168,0);
+Msg("Find size of FT_Face (11168)\n");
+#endif
+
+#if defined __i386__
+CheckTypeSize(struct FT_Bitmap_,24, 12593, 2, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Bitmap_ on IA32\n");
+CheckOffset(struct FT_Bitmap_,rows,0,2,64008)
+CheckOffset(struct FT_Bitmap_,width,0,2,64009)
+CheckOffset(struct FT_Bitmap_,pitch,0,2,64010)
+CheckOffset(struct FT_Bitmap_,buffer,0,2,64011)
+CheckOffset(struct FT_Bitmap_,num_grays,0,2,64012)
+CheckOffset(struct FT_Bitmap_,pixel_mode,0,2,64013)
+CheckOffset(struct FT_Bitmap_,palette_mode,0,2,64014)
+CheckOffset(struct FT_Bitmap_,palette,0,2,64015)
+#elif defined __ia64__
+CheckTypeSize(struct FT_Bitmap_,0, 12593, 3, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Bitmap_ on IA64\n");
+CheckOffset(struct FT_Bitmap_,rows,0,3,64008)
+CheckOffset(struct FT_Bitmap_,width,0,3,64009)
+CheckOffset(struct FT_Bitmap_,pitch,0,3,64010)
+CheckOffset(struct FT_Bitmap_,buffer,0,3,64011)
+CheckOffset(struct FT_Bitmap_,num_grays,0,3,64012)
+CheckOffset(struct FT_Bitmap_,pixel_mode,0,3,64013)
+CheckOffset(struct FT_Bitmap_,palette_mode,0,3,64014)
+CheckOffset(struct FT_Bitmap_,palette,0,3,64015)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct FT_Bitmap_,0, 12593, 6, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Bitmap_ on PPC32\n");
+CheckOffset(struct FT_Bitmap_,rows,0,6,64008)
+CheckOffset(struct FT_Bitmap_,width,0,6,64009)
+CheckOffset(struct FT_Bitmap_,pitch,0,6,64010)
+CheckOffset(struct FT_Bitmap_,buffer,0,6,64011)
+CheckOffset(struct FT_Bitmap_,num_grays,0,6,64012)
+CheckOffset(struct FT_Bitmap_,pixel_mode,0,6,64013)
+CheckOffset(struct FT_Bitmap_,palette_mode,0,6,64014)
+CheckOffset(struct FT_Bitmap_,palette,0,6,64015)
+#elif defined __powerpc64__
+CheckTypeSize(struct FT_Bitmap_,0, 12593, 9, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Bitmap_ on PPC64\n");
+CheckOffset(struct FT_Bitmap_,rows,0,9,64008)
+CheckOffset(struct FT_Bitmap_,width,0,9,64009)
+CheckOffset(struct FT_Bitmap_,pitch,0,9,64010)
+CheckOffset(struct FT_Bitmap_,buffer,0,9,64011)
+CheckOffset(struct FT_Bitmap_,num_grays,0,9,64012)
+CheckOffset(struct FT_Bitmap_,pixel_mode,0,9,64013)
+CheckOffset(struct FT_Bitmap_,palette_mode,0,9,64014)
+CheckOffset(struct FT_Bitmap_,palette,0,9,64015)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct FT_Bitmap_,0, 12593, 10, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Bitmap_ on S390\n");
+CheckOffset(struct FT_Bitmap_,rows,0,10,64008)
+CheckOffset(struct FT_Bitmap_,width,0,10,64009)
+CheckOffset(struct FT_Bitmap_,pitch,0,10,64010)
+CheckOffset(struct FT_Bitmap_,buffer,0,10,64011)
+CheckOffset(struct FT_Bitmap_,num_grays,0,10,64012)
+CheckOffset(struct FT_Bitmap_,pixel_mode,0,10,64013)
+CheckOffset(struct FT_Bitmap_,palette_mode,0,10,64014)
+CheckOffset(struct FT_Bitmap_,palette,0,10,64015)
+#elif defined __x86_64__
+CheckTypeSize(struct FT_Bitmap_,0, 12593, 11, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Bitmap_ on x86-64\n");
+CheckOffset(struct FT_Bitmap_,rows,0,11,64008)
+CheckOffset(struct FT_Bitmap_,width,0,11,64009)
+CheckOffset(struct FT_Bitmap_,pitch,0,11,64010)
+CheckOffset(struct FT_Bitmap_,buffer,0,11,64011)
+CheckOffset(struct FT_Bitmap_,num_grays,0,11,64012)
+CheckOffset(struct FT_Bitmap_,pixel_mode,0,11,64013)
+CheckOffset(struct FT_Bitmap_,palette_mode,0,11,64014)
+CheckOffset(struct FT_Bitmap_,palette,0,11,64015)
+#elif defined __s390x__
+CheckTypeSize(struct FT_Bitmap_,0, 12593, 12, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Bitmap_ on S390X\n");
+CheckOffset(struct FT_Bitmap_,rows,0,12,64008)
+CheckOffset(struct FT_Bitmap_,width,0,12,64009)
+CheckOffset(struct FT_Bitmap_,pitch,0,12,64010)
+CheckOffset(struct FT_Bitmap_,buffer,0,12,64011)
+CheckOffset(struct FT_Bitmap_,num_grays,0,12,64012)
+CheckOffset(struct FT_Bitmap_,pixel_mode,0,12,64013)
+CheckOffset(struct FT_Bitmap_,palette_mode,0,12,64014)
+CheckOffset(struct FT_Bitmap_,palette,0,12,64015)
+#endif
+
+#if defined __i386__
+CheckTypeSize(FT_Bitmap,0, 12594, 2, 3.2, NULL, 12593, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12593,NULL);\n",architecture,12594,0);
+Msg("Find size of FT_Bitmap (12594)\n");
 #endif
 
 #if 1
@@ -501,19 +826,87 @@ CheckTypeSize(FT_Encoding,0, 16889, 1, 3.2, NULL, 16888, NULL)
 CheckTypeSize(FT_F26Dot6,0, 16897, 1, 3.2, NULL, 8, NULL)
 #endif
 
-#if 1
-CheckTypeSize(struct FT_StreamRec_,40, 16903, 1, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_StreamRec_ on All\n");
-CheckOffset(struct FT_StreamRec_,base,0,1,54219)
-CheckOffset(struct FT_StreamRec_,size,0,1,54220)
-CheckOffset(struct FT_StreamRec_,pos,0,1,54221)
-CheckOffset(struct FT_StreamRec_,descriptor,0,1,54224)
-CheckOffset(struct FT_StreamRec_,pathname,0,1,54225)
-CheckOffset(struct FT_StreamRec_,read,0,1,54230)
-CheckOffset(struct FT_StreamRec_,close,0,1,54232)
-CheckOffset(struct FT_StreamRec_,memory,0,1,54233)
-CheckOffset(struct FT_StreamRec_,cursor,0,1,54234)
-CheckOffset(struct FT_StreamRec_,limit,0,1,54235)
+#if defined __ia64__
+CheckTypeSize(struct FT_StreamRec_,0, 16903, 3, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_StreamRec_ on IA64\n");
+CheckOffset(struct FT_StreamRec_,base,0,3,54219)
+CheckOffset(struct FT_StreamRec_,size,0,3,54220)
+CheckOffset(struct FT_StreamRec_,pos,0,3,54221)
+CheckOffset(struct FT_StreamRec_,descriptor,0,3,54224)
+CheckOffset(struct FT_StreamRec_,pathname,0,3,54225)
+CheckOffset(struct FT_StreamRec_,read,0,3,54230)
+CheckOffset(struct FT_StreamRec_,close,0,3,54232)
+CheckOffset(struct FT_StreamRec_,memory,0,3,54233)
+CheckOffset(struct FT_StreamRec_,cursor,0,3,54234)
+CheckOffset(struct FT_StreamRec_,limit,0,3,54235)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct FT_StreamRec_,0, 16903, 6, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_StreamRec_ on PPC32\n");
+CheckOffset(struct FT_StreamRec_,base,0,6,54219)
+CheckOffset(struct FT_StreamRec_,size,0,6,54220)
+CheckOffset(struct FT_StreamRec_,pos,0,6,54221)
+CheckOffset(struct FT_StreamRec_,descriptor,0,6,54224)
+CheckOffset(struct FT_StreamRec_,pathname,0,6,54225)
+CheckOffset(struct FT_StreamRec_,read,0,6,54230)
+CheckOffset(struct FT_StreamRec_,close,0,6,54232)
+CheckOffset(struct FT_StreamRec_,memory,0,6,54233)
+CheckOffset(struct FT_StreamRec_,cursor,0,6,54234)
+CheckOffset(struct FT_StreamRec_,limit,0,6,54235)
+#elif defined __powerpc64__
+CheckTypeSize(struct FT_StreamRec_,0, 16903, 9, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_StreamRec_ on PPC64\n");
+CheckOffset(struct FT_StreamRec_,base,0,9,54219)
+CheckOffset(struct FT_StreamRec_,size,0,9,54220)
+CheckOffset(struct FT_StreamRec_,pos,0,9,54221)
+CheckOffset(struct FT_StreamRec_,descriptor,0,9,54224)
+CheckOffset(struct FT_StreamRec_,pathname,0,9,54225)
+CheckOffset(struct FT_StreamRec_,read,0,9,54230)
+CheckOffset(struct FT_StreamRec_,close,0,9,54232)
+CheckOffset(struct FT_StreamRec_,memory,0,9,54233)
+CheckOffset(struct FT_StreamRec_,cursor,0,9,54234)
+CheckOffset(struct FT_StreamRec_,limit,0,9,54235)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct FT_StreamRec_,0, 16903, 10, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_StreamRec_ on S390\n");
+CheckOffset(struct FT_StreamRec_,base,0,10,54219)
+CheckOffset(struct FT_StreamRec_,size,0,10,54220)
+CheckOffset(struct FT_StreamRec_,pos,0,10,54221)
+CheckOffset(struct FT_StreamRec_,descriptor,0,10,54224)
+CheckOffset(struct FT_StreamRec_,pathname,0,10,54225)
+CheckOffset(struct FT_StreamRec_,read,0,10,54230)
+CheckOffset(struct FT_StreamRec_,close,0,10,54232)
+CheckOffset(struct FT_StreamRec_,memory,0,10,54233)
+CheckOffset(struct FT_StreamRec_,cursor,0,10,54234)
+CheckOffset(struct FT_StreamRec_,limit,0,10,54235)
+#elif defined __x86_64__
+CheckTypeSize(struct FT_StreamRec_,0, 16903, 11, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_StreamRec_ on x86-64\n");
+CheckOffset(struct FT_StreamRec_,base,0,11,54219)
+CheckOffset(struct FT_StreamRec_,size,0,11,54220)
+CheckOffset(struct FT_StreamRec_,pos,0,11,54221)
+CheckOffset(struct FT_StreamRec_,descriptor,0,11,54224)
+CheckOffset(struct FT_StreamRec_,pathname,0,11,54225)
+CheckOffset(struct FT_StreamRec_,read,0,11,54230)
+CheckOffset(struct FT_StreamRec_,close,0,11,54232)
+CheckOffset(struct FT_StreamRec_,memory,0,11,54233)
+CheckOffset(struct FT_StreamRec_,cursor,0,11,54234)
+CheckOffset(struct FT_StreamRec_,limit,0,11,54235)
+#elif defined __s390x__
+CheckTypeSize(struct FT_StreamRec_,0, 16903, 12, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_StreamRec_ on S390X\n");
+CheckOffset(struct FT_StreamRec_,base,0,12,54219)
+CheckOffset(struct FT_StreamRec_,size,0,12,54220)
+CheckOffset(struct FT_StreamRec_,pos,0,12,54221)
+CheckOffset(struct FT_StreamRec_,descriptor,0,12,54224)
+CheckOffset(struct FT_StreamRec_,pathname,0,12,54225)
+CheckOffset(struct FT_StreamRec_,read,0,12,54230)
+CheckOffset(struct FT_StreamRec_,close,0,12,54232)
+CheckOffset(struct FT_StreamRec_,memory,0,12,54233)
+CheckOffset(struct FT_StreamRec_,cursor,0,12,54234)
+CheckOffset(struct FT_StreamRec_,limit,0,12,54235)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16903,0);
+Msg("Find size of FT_StreamRec_ (16903)\n");
 #endif
 
 #if 1
@@ -530,6 +923,105 @@ CheckTypeSize(FT_Stream_CloseFunc,0, 16911, 1, 3.2, NULL, 16910, NULL)
 
 #if 1
 CheckTypeSize(FT_Open_Args,0, 16915, 1, 3.2, NULL, 16901, NULL)
+#endif
+
+#if defined __i386__
+CheckTypeSize(struct FT_Bitmap_Size_,16, 22157, 2, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Bitmap_Size_ on IA32\n");
+CheckOffset(struct FT_Bitmap_Size_,height,0,2,64019)
+CheckOffset(struct FT_Bitmap_Size_,width,0,2,64020)
+CheckOffset(struct FT_Bitmap_Size_,size,0,2,64021)
+CheckOffset(struct FT_Bitmap_Size_,x_ppem,0,2,64022)
+CheckOffset(struct FT_Bitmap_Size_,y_ppem,0,2,64023)
+#elif defined __ia64__
+CheckTypeSize(struct FT_Bitmap_Size_,0, 22157, 3, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Bitmap_Size_ on IA64\n");
+CheckOffset(struct FT_Bitmap_Size_,height,0,3,64019)
+CheckOffset(struct FT_Bitmap_Size_,width,0,3,64020)
+CheckOffset(struct FT_Bitmap_Size_,size,0,3,64021)
+CheckOffset(struct FT_Bitmap_Size_,x_ppem,0,3,64022)
+CheckOffset(struct FT_Bitmap_Size_,y_ppem,0,3,64023)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct FT_Bitmap_Size_,16, 22157, 6, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Bitmap_Size_ on PPC32\n");
+CheckOffset(struct FT_Bitmap_Size_,height,0,6,64019)
+CheckOffset(struct FT_Bitmap_Size_,width,0,6,64020)
+CheckOffset(struct FT_Bitmap_Size_,size,0,6,64021)
+CheckOffset(struct FT_Bitmap_Size_,x_ppem,0,6,64022)
+CheckOffset(struct FT_Bitmap_Size_,y_ppem,0,6,64023)
+#elif defined __powerpc64__
+CheckTypeSize(struct FT_Bitmap_Size_,0, 22157, 9, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Bitmap_Size_ on PPC64\n");
+CheckOffset(struct FT_Bitmap_Size_,height,0,9,64019)
+CheckOffset(struct FT_Bitmap_Size_,width,0,9,64020)
+CheckOffset(struct FT_Bitmap_Size_,size,0,9,64021)
+CheckOffset(struct FT_Bitmap_Size_,x_ppem,0,9,64022)
+CheckOffset(struct FT_Bitmap_Size_,y_ppem,0,9,64023)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct FT_Bitmap_Size_,16, 22157, 10, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Bitmap_Size_ on S390\n");
+CheckOffset(struct FT_Bitmap_Size_,height,0,10,64019)
+CheckOffset(struct FT_Bitmap_Size_,width,0,10,64020)
+CheckOffset(struct FT_Bitmap_Size_,size,0,10,64021)
+CheckOffset(struct FT_Bitmap_Size_,x_ppem,0,10,64022)
+CheckOffset(struct FT_Bitmap_Size_,y_ppem,0,10,64023)
+#elif defined __x86_64__
+CheckTypeSize(struct FT_Bitmap_Size_,0, 22157, 11, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Bitmap_Size_ on x86-64\n");
+CheckOffset(struct FT_Bitmap_Size_,height,0,11,64019)
+CheckOffset(struct FT_Bitmap_Size_,width,0,11,64020)
+CheckOffset(struct FT_Bitmap_Size_,size,0,11,64021)
+CheckOffset(struct FT_Bitmap_Size_,x_ppem,0,11,64022)
+CheckOffset(struct FT_Bitmap_Size_,y_ppem,0,11,64023)
+#elif defined __s390x__
+CheckTypeSize(struct FT_Bitmap_Size_,0, 22157, 12, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Bitmap_Size_ on S390X\n");
+CheckOffset(struct FT_Bitmap_Size_,height,0,12,64019)
+CheckOffset(struct FT_Bitmap_Size_,width,0,12,64020)
+CheckOffset(struct FT_Bitmap_Size_,size,0,12,64021)
+CheckOffset(struct FT_Bitmap_Size_,x_ppem,0,12,64022)
+CheckOffset(struct FT_Bitmap_Size_,y_ppem,0,12,64023)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,22157,0);
+Msg("Find size of FT_Bitmap_Size_ (22157)\n");
+#endif
+
+#if defined __i386__
+CheckTypeSize(FT_Face_Internal,4, 22162, 2, 3.2, NULL, 22161, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_Face_Internal,8, 22162, 3, 3.2, NULL, 22161, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(FT_Face_Internal,4, 22162, 6, 3.2, NULL, 22161, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(FT_Face_Internal,8, 22162, 9, 3.2, NULL, 22161, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Face_Internal,4, 22162, 10, 3.2, NULL, 22161, NULL)
+#elif defined __x86_64__
+CheckTypeSize(FT_Face_Internal,8, 22162, 11, 3.2, NULL, 22161, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Face_Internal,8, 22162, 12, 3.2, NULL, 22161, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,22161,NULL);\n",architecture,22162,0);
+Msg("Find size of FT_Face_Internal (22162)\n");
+#endif
+
+#if defined __i386__
+CheckTypeSize(FT_Driver,4, 22165, 2, 3.2, NULL, 22164, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_Driver,8, 22165, 3, 3.2, NULL, 22164, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(FT_Driver,4, 22165, 6, 3.2, NULL, 22164, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(FT_Driver,8, 22165, 9, 3.2, NULL, 22164, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Driver,4, 22165, 10, 3.2, NULL, 22164, NULL)
+#elif defined __x86_64__
+CheckTypeSize(FT_Driver,8, 22165, 11, 3.2, NULL, 22164, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Driver,8, 22165, 12, 3.2, NULL, 22164, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,22164, NULL);\n",architecture,22165,0);
+Msg("Find size of FT_Driver (22165)\n");
 #endif
 
 extern FT_Int FT_Get_Charmap_Index_db(FT_CharMap);

@@ -79,14 +79,8 @@ cnt++;
 /* No test for FT_VALIDATE_OT */
 #endif
 
-#if _LSB_DEFAULT_ARCH
-/* No test for freetype/ftotval.h */
-#endif
-
-#if 1
-CheckTypeSize(FT_Bytes,0, 16978, 1, 3.2, NULL, 16896, NULL)
-#endif
-
+extern FT_Error FT_OpenType_Validate_db(FT_Face, FT_UInt, FT_Bytes *, FT_Bytes *, FT_Bytes *, FT_Bytes *, FT_Bytes *);
+CheckInterfacedef(FT_OpenType_Validate,FT_OpenType_Validate_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

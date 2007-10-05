@@ -151,10 +151,6 @@ cnt++;
 /* No test for TT_CONFIG_OPTION_UNPATENTED_HINTING */
 #endif
 
-#if _LSB_DEFAULT_ARCH
-/* No test for freetype/config/ftoption.h */
-#endif
-
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

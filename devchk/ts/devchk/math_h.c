@@ -711,6 +711,8 @@ extern double y1_db(double);
 CheckInterfacedef(y1,y1_db);
 extern double yn_db(int, double);
 CheckInterfacedef(yn,yn_db);
+extern double drem_db(double, double);
+CheckInterfacedef(drem,drem_db);
 extern float copysignf_db(float, float);
 CheckInterfacedef(copysignf,copysignf_db);
 #if ! __powerpc__ && ! __s390__	/* hack */
@@ -841,6 +843,12 @@ CheckInterfacedef(erff,erff_db);
 extern long double erfl_db(long double);
 CheckInterfacedef(erfl,erfl_db);
 #endif		/* hack */
+extern double exp10_db(double);
+CheckInterfacedef(exp10,exp10_db);
+extern float exp10f_db(float);
+CheckInterfacedef(exp10f,exp10f_db);
+extern long double exp10l_db(long double);
+CheckInterfacedef(exp10l,exp10l_db);
 extern double exp2_db(double);
 CheckInterfacedef(exp2,exp2_db);
 extern float exp2f_db(float);

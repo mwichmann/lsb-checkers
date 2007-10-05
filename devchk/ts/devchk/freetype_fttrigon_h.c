@@ -41,10 +41,6 @@ printf("Checking data structures in freetype/fttrigon.h\n");
 /* No test for FT_ANGLE_PI4 */
 #endif
 
-#if _LSB_DEFAULT_ARCH
-/* No test for freetype/fttrigon.h */
-#endif
-
 extern FT_Angle FT_Angle_Diff_db(FT_Angle, FT_Angle);
 CheckInterfacedef(FT_Angle_Diff,FT_Angle_Diff_db);
 extern FT_Fixed FT_Vector_Length_db(FT_Vector *);
