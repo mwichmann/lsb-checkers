@@ -25,10 +25,6 @@ Msg("Checking data structures in freetype/ftlist.h\n");
 #endif
 
 printf("Checking data structures in freetype/ftlist.h\n");
-#if _LSB_DEFAULT_ARCH
-/* No test for freetype/ftlist.h */
-#endif
-
 #if 1
 CheckTypeSize(struct FT_ListNodeRec_,12, 16721, 1, 3.2, NULL, 0, NULL)
 Msg("Missing member data for FT_ListNodeRec_ on All\n");
@@ -43,15 +39,6 @@ CheckTypeSize(FT_ListNode,0, 16723, 1, 3.2, NULL, 16722, NULL)
 
 #if 1
 CheckTypeSize(FT_List,0, 16725, 1, 3.2, NULL, 16724, NULL)
-#endif
-
-#if 1
-CheckTypeSize(struct FT_MemoryRec_,16, 16726, 1, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_MemoryRec_ on All\n");
-CheckOffset(struct FT_MemoryRec_,user,0,1,53941)
-CheckOffset(struct FT_MemoryRec_,alloc,0,1,53944)
-CheckOffset(struct FT_MemoryRec_,free,0,1,53947)
-CheckOffset(struct FT_MemoryRec_,realloc,0,1,53952)
 #endif
 
 #if 1

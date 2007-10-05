@@ -25,10 +25,6 @@ Msg("Checking data structures in freetype/tttables.h\n");
 #endif
 
 printf("Checking data structures in freetype/tttables.h\n");
-#if _LSB_DEFAULT_ARCH
-/* No test for freetype/tttables.h */
-#endif
-
 #if 1
 CheckTypeSize(FT_CharMap,0, 16891, 1, 3.2, NULL, 16890, NULL)
 #endif
@@ -37,6 +33,14 @@ CheckTypeSize(FT_CharMap,0, 16891, 1, 3.2, NULL, 16890, NULL)
 CheckTypeSize(FT_Sfnt_Tag,0, 16925, 1, 3.2, NULL, 16924, NULL)
 #endif
 
+extern FT_ULong FT_Get_CMap_Language_ID_db(FT_CharMap);
+CheckInterfacedef(FT_Get_CMap_Language_ID,FT_Get_CMap_Language_ID_db);
+extern FT_Error FT_Load_Sfnt_Table_db(FT_Face, FT_ULong, FT_Long, FT_Byte *, FT_ULong *);
+CheckInterfacedef(FT_Load_Sfnt_Table,FT_Load_Sfnt_Table_db);
+extern void * FT_Get_Sfnt_Table_db(FT_Face, FT_Sfnt_Tag);
+CheckInterfacedef(FT_Get_Sfnt_Table,FT_Get_Sfnt_Table_db);
+extern FT_Error FT_Sfnt_Table_Info_db(FT_Face, FT_UInt, FT_ULong *, FT_ULong *);
+CheckInterfacedef(FT_Sfnt_Table_Info,FT_Sfnt_Table_Info_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

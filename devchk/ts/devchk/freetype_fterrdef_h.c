@@ -349,10 +349,6 @@ printf("Checking data structures in freetype/fterrdef.h\n");
 /* No test for FT_NOERRORDEF_( Ok, 0x00, "no error" ) */
 #endif
 
-#if _LSB_DEFAULT_ARCH
-/* No test for freetype/fterrdef.h */
-#endif
-
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

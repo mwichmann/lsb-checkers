@@ -1157,10 +1157,6 @@ cnt++;
 /* No test for RenderNumberRequests */
 #endif
 
-#if _LSB_DEFAULT_ARCH
-/* No test for X11/extensions/render.h */
-#endif
-
 #if defined __i386__
 CheckTypeSize(Picture,0, 12562, 2, 3.2, NULL, 11186, NULL)
 #else

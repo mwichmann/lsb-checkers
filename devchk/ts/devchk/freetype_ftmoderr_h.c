@@ -37,10 +37,6 @@ printf("Checking data structures in freetype/ftmoderr.h\n");
 /* No test for FT_MODERR_START_LIST */
 #endif
 
-#if _LSB_DEFAULT_ARCH
-/* No test for freetype/ftmoderr.h */
-#endif
-
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

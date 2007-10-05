@@ -25,10 +25,6 @@ Msg("Checking data structures in freetype/ftbdf.h\n");
 #endif
 
 printf("Checking data structures in freetype/ftbdf.h\n");
-#if _LSB_DEFAULT_ARCH
-/* No test for freetype/ftbdf.h */
-#endif
-
 #if 1
 CheckTypeSize(FT_Int32,0, 16894, 1, 3.2, NULL, 6, NULL)
 #endif
@@ -45,6 +41,10 @@ CheckTypeSize(FT_UInt32,0, 16930, 1, 3.2, NULL, 7, NULL)
 CheckTypeSize(BDF_PropertyRec,0, 16932, 1, 3.2, NULL, 16927, NULL)
 #endif
 
+extern FT_Error FT_Get_BDF_Property_db(FT_Face, const char *, BDF_PropertyRec *);
+CheckInterfacedef(FT_Get_BDF_Property,FT_Get_BDF_Property_db);
+extern FT_Error FT_Get_BDF_Charset_ID_db(FT_Face, const char * *, const char * *);
+CheckInterfacedef(FT_Get_BDF_Charset_ID,FT_Get_BDF_Charset_ID_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
