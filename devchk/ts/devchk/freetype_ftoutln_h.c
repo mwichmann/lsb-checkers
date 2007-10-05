@@ -25,31 +25,6 @@ Msg("Checking data structures in freetype/ftoutln.h\n");
 #endif
 
 printf("Checking data structures in freetype/ftoutln.h\n");
-#if _LSB_DEFAULT_ARCH
-/* No test for freetype/ftoutln.h */
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Face,0, 11168, 2, 3.2, NULL, 11167, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11167,NULL);\n",architecture,11168,0);
-Msg("Find size of FT_Face (11168)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_UInt,0, 11171, 2, 3.2, NULL, 7, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,7,NULL);\n",architecture,11171,0);
-Msg("Find size of FT_UInt (11171)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(FT_Bitmap,0, 12594, 2, 3.2, NULL, 12593, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12593,NULL);\n",architecture,12594,0);
-Msg("Find size of FT_Bitmap (12594)\n");
-#endif
-
 #if 1
 CheckTypeSize(struct FT_LibraryRec_,196, 16747, 1, 3.2, NULL, 0, NULL)
 Msg("Missing member data for FT_LibraryRec_ on All\n");
@@ -66,10 +41,6 @@ CheckOffset(struct FT_LibraryRec_,auto_hinter,0,1,54161)
 CheckOffset(struct FT_LibraryRec_,raster_pool,0,1,54162)
 CheckOffset(struct FT_LibraryRec_,raster_pool_size,0,1,54163)
 CheckOffset(struct FT_LibraryRec_,debug_hooks,0,1,54164)
-#endif
-
-#if 1
-CheckTypeSize(FT_Generic_Finalizer,0, 16749, 1, 3.2, NULL, 6988, NULL)
 #endif
 
 #if 1

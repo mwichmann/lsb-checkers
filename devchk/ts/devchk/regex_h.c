@@ -26,6 +26,16 @@ Msg("Checking data structures in regex.h\n");
 
 printf("Checking data structures in regex.h\n");
 #if _LSB_DEFAULT_ARCH
+#ifdef RE_DUP_MAX
+	CompareConstant(RE_DUP_MAX,(0x7fff),1592,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: RE_DUP_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef REG_EXTENDED
 	CompareConstant(REG_EXTENDED,1,1593,architecture,1.1,NULL)
 #else

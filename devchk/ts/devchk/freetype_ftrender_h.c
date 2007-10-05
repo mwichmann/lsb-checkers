@@ -57,14 +57,6 @@ printf("Checking data structures in freetype/ftrender.h\n");
 /* No test for FTRenderer_transform */
 #endif
 
-#if _LSB_DEFAULT_ARCH
-/* No test for freetype/ftrender.h */
-#endif
-
-#if 1
-CheckTypeSize(FT_Glyph_Format,0, 16780, 1, 3.2, NULL, 16779, NULL)
-#endif
-
 #if 1
 CheckTypeSize(FT_Renderer,0, 16782, 1, 3.2, NULL, 16781, NULL)
 #endif
@@ -73,6 +65,10 @@ CheckTypeSize(FT_Renderer,0, 16782, 1, 3.2, NULL, 16781, NULL)
 CheckTypeSize(FT_Parameter,0, 16913, 1, 3.2, NULL, 16912, NULL)
 #endif
 
+extern FT_Error FT_Set_Renderer_db(FT_Library, FT_Renderer, FT_UInt, FT_Parameter *);
+CheckInterfacedef(FT_Set_Renderer,FT_Set_Renderer_db);
+extern FT_Renderer FT_Get_Renderer_db(FT_Library, FT_Glyph_Format);
+CheckInterfacedef(FT_Get_Renderer,FT_Get_Renderer_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

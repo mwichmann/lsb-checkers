@@ -341,8 +341,8 @@ cnt++;
 /* No test for FT_Raster_Span_Func */
 #endif
 
-#if _LSB_DEFAULT_ARCH
-/* No test for freetype/ftimage.h */
+#if 1
+CheckTypeSize(FT_Glyph_Format,0, 16780, 1, 3.2, NULL, 16779, NULL)
 #endif
 
 #ifdef TET_TEST

@@ -34,7 +34,23 @@ printf("Checking data structures in freetype/config/ftheader.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
+/* No test for FT_BBOX_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_BDF_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_BITMAP_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 /* No test for FT_CACHE_CHARMAP_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_CACHE_H */
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -42,11 +58,211 @@ printf("Checking data structures in freetype/config/ftheader.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
+/* No test for FT_CACHE_INTERNAL_CACHE_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_CACHE_INTERNAL_GLYPH_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_CACHE_INTERNAL_IMAGE_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_CACHE_INTERNAL_MANAGER_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_CACHE_INTERNAL_MRU_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_CACHE_INTERNAL_SBITS_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_CACHE_MANAGER_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 /* No test for FT_CACHE_SMALL_BITMAPS_H */
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for freetype/config/ftheader.h */
+/* No test for FT_CONFIG_CONFIG_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_CONFIG_MODULES_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_CONFIG_OPTIONS_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_CONFIG_STANDARD_LIBRARY_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_ERROR_DEFINITIONS_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_ERRORS_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_FREETYPE_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_GLYPH_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_GZIP_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_IMAGE_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_INCREMENTAL_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_LIST_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_LZW_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_MAC_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_MODULE_ERRORS_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_MODULE_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_MULTIPLE_MASTERS_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_OPENTYPE_VALIDATE_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_OUTLINE_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_RENDER_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_SFNT_NAMES_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_SIZES_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_STROKER_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_SYNTHESIS_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_SYSTEM_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_TRIGONOMETRY_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_TRUETYPE_IDS_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_TRUETYPE_TABLES_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_TRUETYPE_TAGS_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_TRUETYPE_UNPATENTED_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_TYPE1_TABLES_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_TYPES_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_WINFONTS_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_XFREE86_H */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef FT_GX_VALIDATE_H
+	CompareConstant(FT_GX_VALIDATE_H,<freetype/ftgxval.h>,10872,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: FT_GX_VALIDATE_H\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef FT_PFR_H
+	CompareConstant(FT_PFR_H,<freetype/ftpfr.h>,10873,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: FT_PFR_H\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef FT_LCD_FILTER_H
+	CompareConstant(FT_LCD_FILTER_H,<freetype/ftlcdfil.h>,10874,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: FT_LCD_FILTER_H\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef FT_GASP_H
+	CompareConstant(FT_GASP_H,<freetype/ftgasp.h>,10875,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: FT_GASP_H\n");
+cnt++;
+#endif
+
 #endif
 
 #ifdef TET_TEST

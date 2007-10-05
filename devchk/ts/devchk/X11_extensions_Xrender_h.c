@@ -213,10 +213,6 @@ cnt++;
 /* No test for XFixedToDouble(f) */
 #endif
 
-#if _LSB_DEFAULT_ARCH
-/* No test for X11/extensions/Xrender.h */
-#endif
-
 #if defined __i386__
 CheckTypeSize(XTrapezoid,0, 12569, 2, 3.2, NULL, 12568, NULL)
 #else

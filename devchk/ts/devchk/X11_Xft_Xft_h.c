@@ -97,10 +97,6 @@ cnt++;
 /* No test for _XFT_H_ */
 #endif
 
-#if _LSB_DEFAULT_ARCH
-/* No test for X11/Xft/Xft.h */
-#endif
-
 #if defined __i386__
 CheckTypeSize(XftDraw,0, 12554, 2, 3.2, NULL, 12553, NULL)
 #else
