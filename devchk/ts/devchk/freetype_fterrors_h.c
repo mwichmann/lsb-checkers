@@ -67,10 +67,6 @@ cnt++;
 /* No test for FT_NOERRORDEF_(e,v,s) */
 #endif
 
-#if _LSB_DEFAULT_ARCH
-/* No test for freetype/fterrors.h */
-#endif
-
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
