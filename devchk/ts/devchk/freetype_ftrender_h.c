@@ -58,11 +58,23 @@ printf("Checking data structures in freetype/ftrender.h\n");
 #endif
 
 #if 1
-CheckTypeSize(FT_Renderer,0, 16782, 1, 3.2, NULL, 16781, NULL)
+CheckTypeSize(FT_Renderer_RenderFunc,0, 16804, 1, 3.2, NULL, 16803, NULL)
 #endif
 
 #if 1
-CheckTypeSize(FT_Parameter,0, 16913, 1, 3.2, NULL, 16912, NULL)
+CheckTypeSize(FT_Renderer_TransformFunc,0, 16807, 1, 3.2, NULL, 16806, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Renderer_GetCBoxFunc,0, 16812, 1, 3.2, NULL, 16811, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Renderer_SetModeFunc,0, 16814, 1, 3.2, NULL, 16813, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Renderer_Class,0, 16846, 1, 3.2, NULL, 16778, NULL)
 #endif
 
 extern FT_Error FT_Set_Renderer_db(FT_Library, FT_Renderer, FT_UInt, FT_Parameter *);

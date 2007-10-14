@@ -26,34 +26,6 @@ Msg("Checking data structures in freetype/ftlist.h\n");
 
 printf("Checking data structures in freetype/ftlist.h\n");
 #if 1
-CheckTypeSize(struct FT_ListNodeRec_,12, 16721, 1, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_ListNodeRec_ on All\n");
-CheckOffset(struct FT_ListNodeRec_,prev,0,1,53936)
-CheckOffset(struct FT_ListNodeRec_,next,0,1,53937)
-CheckOffset(struct FT_ListNodeRec_,data,0,1,53938)
-#endif
-
-#if 1
-CheckTypeSize(FT_ListNode,0, 16723, 1, 3.2, NULL, 16722, NULL)
-#endif
-
-#if 1
-CheckTypeSize(FT_List,0, 16725, 1, 3.2, NULL, 16724, NULL)
-#endif
-
-#if 1
-CheckTypeSize(FT_Alloc_Func,0, 16730, 1, 3.2, NULL, 16729, NULL)
-#endif
-
-#if 1
-CheckTypeSize(FT_Free_Func,0, 16732, 1, 3.2, NULL, 16731, NULL)
-#endif
-
-#if 1
-CheckTypeSize(FT_Realloc_Func,0, 16734, 1, 3.2, NULL, 16733, NULL)
-#endif
-
-#if 1
 CheckTypeSize(FT_List_Destructor,0, 16736, 1, 3.2, NULL, 16735, NULL)
 #endif
 

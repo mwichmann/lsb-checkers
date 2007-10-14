@@ -26,28 +26,11 @@ Msg("Checking data structures in freetype/ftsizes.h\n");
 
 printf("Checking data structures in freetype/ftsizes.h\n");
 #if 1
-CheckTypeSize(FT_Pos,0, 16742, 1, 3.2, NULL, 8, NULL)
-#endif
-
-#if 1
-CheckTypeSize(struct FT_SizeRec_,44, 16951, 1, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_SizeRec_ on All\n");
-CheckOffset(struct FT_SizeRec_,face,0,1,54278)
-CheckOffset(struct FT_SizeRec_,generic,0,1,54279)
-CheckOffset(struct FT_SizeRec_,metrics,0,1,54288)
-CheckOffset(struct FT_SizeRec_,internal,0,1,54289)
-#endif
-
-#if 1
 CheckTypeSize(FT_Size_Metrics,0, 16953, 1, 3.2, NULL, 16952, NULL)
 #endif
 
 #if 1
 CheckTypeSize(FT_Size_Internal,0, 16956, 1, 3.2, NULL, 16955, NULL)
-#endif
-
-#if 1
-CheckTypeSize(FT_Size,0, 16958, 1, 3.2, NULL, 16957, NULL)
 #endif
 
 extern FT_Error FT_New_Size_db(FT_Face, FT_Size *);

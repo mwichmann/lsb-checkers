@@ -55,7 +55,6 @@ extern void freetype_ftrender_h();
 extern void freetype_ftsizes_h();
 extern void freetype_ftsnames_h();
 extern void freetype_ftstroke_h();
-extern void freetype_ftsynth_h();
 extern void freetype_ftsystem_h();
 extern void freetype_fttrigon_h();
 extern void freetype_fttypes_h();

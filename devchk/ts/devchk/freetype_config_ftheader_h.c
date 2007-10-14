@@ -225,46 +225,6 @@ printf("Checking data structures in freetype/config/ftheader.h\n");
 /* No test for FT_XFREE86_H */
 #endif
 
-#if _LSB_DEFAULT_ARCH
-#ifdef FT_GX_VALIDATE_H
-	CompareConstant(FT_GX_VALIDATE_H,<freetype/ftgxval.h>,10872,architecture,3.2,NULL)
-#else
-Msg( "Error: Constant not found: FT_GX_VALIDATE_H\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef FT_PFR_H
-	CompareConstant(FT_PFR_H,<freetype/ftpfr.h>,10873,architecture,3.2,NULL)
-#else
-Msg( "Error: Constant not found: FT_PFR_H\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef FT_LCD_FILTER_H
-	CompareConstant(FT_LCD_FILTER_H,<freetype/ftlcdfil.h>,10874,architecture,3.2,NULL)
-#else
-Msg( "Error: Constant not found: FT_LCD_FILTER_H\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef FT_GASP_H
-	CompareConstant(FT_GASP_H,<freetype/ftgasp.h>,10875,architecture,3.2,NULL)
-#else
-Msg( "Error: Constant not found: FT_GASP_H\n");
-cnt++;
-#endif
-
-#endif
-
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
