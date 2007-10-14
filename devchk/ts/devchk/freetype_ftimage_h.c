@@ -214,26 +214,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ft_glyph_format_bitmap */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_glyph_format_composite */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_glyph_format_none */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_glyph_format_outline */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_glyph_format_plotter */
-#endif
-
-#if _LSB_DEFAULT_ARCH
 /* No test for FT_IMAGE_TAG(value,_x1,_x2,_x3,_x4) */
 #endif
 
@@ -246,18 +226,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ft_outline_even_odd_fill */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_outline_high_precision */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_outline_ignore_dropouts */
-#endif
-
-#if _LSB_DEFAULT_ARCH
 /* No test for FT_Outline_LineTo_Func */
 #endif
 
@@ -266,59 +234,7 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ft_outline_none */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_outline_owner */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_outline_reverse_fill */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_outline_single_pass */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_pixel_mode_grays */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_pixel_mode_mono */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_pixel_mode_none */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_pixel_mode_pal2 */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_pixel_mode_pal4 */
-#endif
-
-#if _LSB_DEFAULT_ARCH
 /* No test for FT_Raster_Done_Func */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_raster_flag_aa */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_raster_flag_clip */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_raster_flag_default */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_raster_flag_direct */
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -341,8 +257,194 @@ cnt++;
 /* No test for FT_Raster_Span_Func */
 #endif
 
+#if defined __i386__
+CheckTypeSize(struct FT_Bitmap_,24, 12593, 2, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Bitmap_ on IA32\n");
+CheckOffset(struct FT_Bitmap_,rows,0,2,64008)
+CheckOffset(struct FT_Bitmap_,width,0,2,64009)
+CheckOffset(struct FT_Bitmap_,pitch,0,2,64010)
+CheckOffset(struct FT_Bitmap_,buffer,0,2,64011)
+CheckOffset(struct FT_Bitmap_,num_grays,0,2,64012)
+CheckOffset(struct FT_Bitmap_,pixel_mode,0,2,64013)
+CheckOffset(struct FT_Bitmap_,palette_mode,0,2,64014)
+CheckOffset(struct FT_Bitmap_,palette,0,2,64015)
+#elif defined __ia64__
+CheckTypeSize(struct FT_Bitmap_,0, 12593, 3, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Bitmap_ on IA64\n");
+CheckOffset(struct FT_Bitmap_,rows,0,3,64008)
+CheckOffset(struct FT_Bitmap_,width,0,3,64009)
+CheckOffset(struct FT_Bitmap_,pitch,0,3,64010)
+CheckOffset(struct FT_Bitmap_,buffer,0,3,64011)
+CheckOffset(struct FT_Bitmap_,num_grays,0,3,64012)
+CheckOffset(struct FT_Bitmap_,pixel_mode,0,3,64013)
+CheckOffset(struct FT_Bitmap_,palette_mode,0,3,64014)
+CheckOffset(struct FT_Bitmap_,palette,0,3,64015)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct FT_Bitmap_,0, 12593, 6, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Bitmap_ on PPC32\n");
+CheckOffset(struct FT_Bitmap_,rows,0,6,64008)
+CheckOffset(struct FT_Bitmap_,width,0,6,64009)
+CheckOffset(struct FT_Bitmap_,pitch,0,6,64010)
+CheckOffset(struct FT_Bitmap_,buffer,0,6,64011)
+CheckOffset(struct FT_Bitmap_,num_grays,0,6,64012)
+CheckOffset(struct FT_Bitmap_,pixel_mode,0,6,64013)
+CheckOffset(struct FT_Bitmap_,palette_mode,0,6,64014)
+CheckOffset(struct FT_Bitmap_,palette,0,6,64015)
+#elif defined __powerpc64__
+CheckTypeSize(struct FT_Bitmap_,0, 12593, 9, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Bitmap_ on PPC64\n");
+CheckOffset(struct FT_Bitmap_,rows,0,9,64008)
+CheckOffset(struct FT_Bitmap_,width,0,9,64009)
+CheckOffset(struct FT_Bitmap_,pitch,0,9,64010)
+CheckOffset(struct FT_Bitmap_,buffer,0,9,64011)
+CheckOffset(struct FT_Bitmap_,num_grays,0,9,64012)
+CheckOffset(struct FT_Bitmap_,pixel_mode,0,9,64013)
+CheckOffset(struct FT_Bitmap_,palette_mode,0,9,64014)
+CheckOffset(struct FT_Bitmap_,palette,0,9,64015)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct FT_Bitmap_,0, 12593, 10, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Bitmap_ on S390\n");
+CheckOffset(struct FT_Bitmap_,rows,0,10,64008)
+CheckOffset(struct FT_Bitmap_,width,0,10,64009)
+CheckOffset(struct FT_Bitmap_,pitch,0,10,64010)
+CheckOffset(struct FT_Bitmap_,buffer,0,10,64011)
+CheckOffset(struct FT_Bitmap_,num_grays,0,10,64012)
+CheckOffset(struct FT_Bitmap_,pixel_mode,0,10,64013)
+CheckOffset(struct FT_Bitmap_,palette_mode,0,10,64014)
+CheckOffset(struct FT_Bitmap_,palette,0,10,64015)
+#elif defined __x86_64__
+CheckTypeSize(struct FT_Bitmap_,0, 12593, 11, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Bitmap_ on x86-64\n");
+CheckOffset(struct FT_Bitmap_,rows,0,11,64008)
+CheckOffset(struct FT_Bitmap_,width,0,11,64009)
+CheckOffset(struct FT_Bitmap_,pitch,0,11,64010)
+CheckOffset(struct FT_Bitmap_,buffer,0,11,64011)
+CheckOffset(struct FT_Bitmap_,num_grays,0,11,64012)
+CheckOffset(struct FT_Bitmap_,pixel_mode,0,11,64013)
+CheckOffset(struct FT_Bitmap_,palette_mode,0,11,64014)
+CheckOffset(struct FT_Bitmap_,palette,0,11,64015)
+#elif defined __s390x__
+CheckTypeSize(struct FT_Bitmap_,0, 12593, 12, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Bitmap_ on S390X\n");
+CheckOffset(struct FT_Bitmap_,rows,0,12,64008)
+CheckOffset(struct FT_Bitmap_,width,0,12,64009)
+CheckOffset(struct FT_Bitmap_,pitch,0,12,64010)
+CheckOffset(struct FT_Bitmap_,buffer,0,12,64011)
+CheckOffset(struct FT_Bitmap_,num_grays,0,12,64012)
+CheckOffset(struct FT_Bitmap_,pixel_mode,0,12,64013)
+CheckOffset(struct FT_Bitmap_,palette_mode,0,12,64014)
+CheckOffset(struct FT_Bitmap_,palette,0,12,64015)
+#endif
+
+#if defined __i386__
+CheckTypeSize(FT_Bitmap,0, 12594, 2, 3.2, NULL, 12593, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12593,NULL);\n",architecture,12594,0);
+Msg("Find size of FT_Bitmap (12594)\n");
+#endif
+
+#if 1
+CheckTypeSize(struct FT_Vector_,8, 16741, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Vector_ on All\n");
+CheckOffset(struct FT_Vector_,x,0,1,53960)
+CheckOffset(struct FT_Vector_,y,0,1,53961)
+#endif
+
+#if 1
+CheckTypeSize(FT_Pos,0, 16742, 1, 3.2, NULL, 8, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Vector,0, 16743, 1, 3.2, NULL, 16741, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Outline,0, 16745, 1, 3.2, NULL, 16740, NULL)
+#endif
+
 #if 1
 CheckTypeSize(FT_Glyph_Format,0, 16780, 1, 3.2, NULL, 16779, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct FT_BBox_,16, 16808, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_BBox_ on All\n");
+CheckOffset(struct FT_BBox_,xMin,0,1,54068)
+CheckOffset(struct FT_BBox_,yMin,0,1,54069)
+CheckOffset(struct FT_BBox_,xMax,0,1,54070)
+CheckOffset(struct FT_BBox_,yMax,0,1,54071)
+#endif
+
+#if 1
+CheckTypeSize(FT_BBox,0, 16809, 1, 3.2, NULL, 16808, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Raster,0, 16818, 1, 3.2, NULL, 16817, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Raster_NewFunc,0, 16821, 1, 3.2, NULL, 16820, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Raster_ResetFunc,0, 16823, 1, 3.2, NULL, 16822, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Raster_SetModeFunc,0, 16825, 1, 3.2, NULL, 16824, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Span,0, 16830, 1, 3.2, NULL, 16829, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_SpanFunc,0, 16833, 1, 3.2, NULL, 16832, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Raster_BitTest_Func,0, 16835, 1, 3.2, NULL, 16834, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Raster_BitSet_Func,0, 16837, 1, 3.2, NULL, 16836, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Raster_Params,0, 16838, 1, 3.2, NULL, 16826, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Raster_RenderFunc,0, 16841, 1, 3.2, NULL, 16840, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Raster_DoneFunc,0, 16843, 1, 3.2, NULL, 16842, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Raster_Funcs,0, 16844, 1, 3.2, NULL, 16815, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Outline_MoveToFunc,0, 16876, 1, 3.2, NULL, 16875, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Outline_LineToFunc,0, 16877, 1, 3.2, NULL, 16875, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Outline_ConicToFunc,0, 16879, 1, 3.2, NULL, 16878, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Outline_CubicToFunc,0, 16881, 1, 3.2, NULL, 16880, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Outline_Funcs,0, 16882, 1, 3.2, NULL, 16874, NULL)
 #endif
 
 #ifdef TET_TEST

@@ -39,7 +39,7 @@ struct versym libXft_so_2[] = {
 	{"XftFontCheckGlyph","",0,LSB_Graphics_Ext,0,1},
 	{"XftFontClose","",0,LSB_Graphics_Ext,0,1},
 	{"XftFontCopy","",0,LSB_Graphics_Ext,0,1},
-	{"XftFontInfoCreate","",0,LSB_Graphics_Ext,0,1},
+	{"XftFontInfoCreate","",0,LSB_Graphics_Ext,4,1},
 	{"XftFontInfoDestroy","",0,LSB_Graphics_Ext,0,1},
 	{"XftFontInfoEqual","",0,LSB_Graphics_Ext,0,1},
 	{"XftFontInfoHash","",0,LSB_Graphics_Ext,0,1},

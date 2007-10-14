@@ -25,36 +25,66 @@ Msg("Checking data structures in freetype/ftglyph.h\n");
 #endif
 
 printf("Checking data structures in freetype/ftglyph.h\n");
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_glyph_bbox_gridfit */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_glyph_bbox_pixels */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_glyph_bbox_subpixels */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_glyph_bbox_truncate */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_glyph_bbox_unscaled */
+#if 1
+CheckTypeSize(struct FT_Glyph_Class_,32, 16848, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Glyph_Class_ on All\n");
+CheckOffset(struct FT_Glyph_Class_,glyph_size,0,1,54126)
+CheckOffset(struct FT_Glyph_Class_,glyph_format,0,1,54127)
+CheckOffset(struct FT_Glyph_Class_,glyph_init,0,1,54134)
+CheckOffset(struct FT_Glyph_Class_,glyph_done,0,1,54136)
+CheckOffset(struct FT_Glyph_Class_,glyph_copy,0,1,54139)
+CheckOffset(struct FT_Glyph_Class_,glyph_transform,0,1,54143)
+CheckOffset(struct FT_Glyph_Class_,glyph_bbox,0,1,54146)
+CheckOffset(struct FT_Glyph_Class_,glyph_prepare,0,1,54149)
 #endif
 
 #if 1
-CheckTypeSize(FT_Matrix,0, 16791, 1, 3.2, NULL, 16790, NULL)
+CheckTypeSize(struct FT_GlyphRec_,20, 16849, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_GlyphRec_ on All\n");
+CheckOffset(struct FT_GlyphRec_,library,0,1,54128)
+CheckOffset(struct FT_GlyphRec_,clazz,0,1,54129)
+CheckOffset(struct FT_GlyphRec_,format,0,1,54130)
+CheckOffset(struct FT_GlyphRec_,advance,0,1,54131)
 #endif
 
 #if 1
-CheckTypeSize(FT_BBox,0, 16809, 1, 3.2, NULL, 16808, NULL)
+CheckTypeSize(FT_Glyph_Class,0, 16850, 1, 3.2, NULL, 16848, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Glyph,0, 16854, 1, 3.2, NULL, 16853, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Glyph_InitFunc,0, 16856, 1, 3.2, NULL, 16855, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Glyph_DoneFunc,0, 16858, 1, 3.2, NULL, 16857, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Glyph_CopyFunc,0, 16860, 1, 3.2, NULL, 16859, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Glyph_TransformFunc,0, 16862, 1, 3.2, NULL, 16861, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Glyph_GetBBoxFunc,0, 16864, 1, 3.2, NULL, 16863, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Glyph_PrepareFunc,0, 16865, 1, 3.2, NULL, 16855, NULL)
 #endif
 
 #if 1
 CheckTypeSize(FT_Render_Mode,0, 16900, 1, 3.2, NULL, 16899, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Glyph_BBox_Mode,0, 22170, 1, 3.2, NULL, 22169, NULL)
 #endif
 
 extern void FT_Done_Glyph_db(FT_Glyph);

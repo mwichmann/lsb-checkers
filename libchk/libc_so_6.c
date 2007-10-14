@@ -173,6 +173,27 @@ struct versym libc_so_6[] = {
 	{"__cxa_atexit","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
+	{"__cxa_finalize","GLIBC_2.1.3",0,LSB_Core,1,1},
+#endif
+#if defined __ia64__
+	{"__cxa_finalize","GLIBC_2.2",0,LSB_Core,1,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__cxa_finalize","GLIBC_2.1.3",0,LSB_Core,1,1},
+#endif
+#if defined __powerpc64__
+	{"__cxa_finalize","GLIBC_2.3",0,LSB_Core,1,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__cxa_finalize","GLIBC_2.1.3",0,LSB_Core,1,1},
+#endif
+#if defined __x86_64__
+	{"__cxa_finalize","GLIBC_2.2.5",0,LSB_Core,1,1},
+#endif
+#if defined __s390x__
+	{"__cxa_finalize","GLIBC_2.2",0,LSB_Core,1,1},
+#endif
+#if defined __i386__
 	{"__daylight","GLIBC_2.0",0,LSB_Core,4,0},
 #endif
 #if defined __ia64__
@@ -530,25 +551,25 @@ struct versym libc_so_6[] = {
 	{"__libc_current_sigrtmin","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"__libc_start_main","GLIBC_2.0",0,LSB_Core,0,1},
+	{"__libc_start_main","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"__libc_start_main","GLIBC_2.2",0,LSB_Core,0,1},
+	{"__libc_start_main","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"__libc_start_main","GLIBC_2.0",0,LSB_Core,0,1},
+	{"__libc_start_main","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"__libc_start_main","GLIBC_2.3",0,LSB_Core,0,1},
+	{"__libc_start_main","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"__libc_start_main","GLIBC_2.0",0,LSB_Core,0,1},
+	{"__libc_start_main","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"__libc_start_main","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"__libc_start_main","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"__libc_start_main","GLIBC_2.2",0,LSB_Core,0,1},
+	{"__libc_start_main","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"__lxstat","GLIBC_2.0",0,LSB_Core,4,1},

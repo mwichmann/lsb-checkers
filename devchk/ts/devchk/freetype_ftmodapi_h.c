@@ -95,44 +95,38 @@ cnt++;
 
 #endif
 
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_module_driver_has_hinter */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_module_driver_no_outlines */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_module_driver_scalable */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_module_font_driver */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_module_hinter */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_module_renderer */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for ft_module_styler */
+#if 1
+CheckTypeSize(struct FT_Module_Class_,36, 16753, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Module_Class_ on All\n");
+CheckOffset(struct FT_Module_Class_,module_flags,0,1,53974)
+CheckOffset(struct FT_Module_Class_,module_size,0,1,53975)
+CheckOffset(struct FT_Module_Class_,module_name,0,1,53976)
+CheckOffset(struct FT_Module_Class_,module_version,0,1,53977)
+CheckOffset(struct FT_Module_Class_,module_requires,0,1,53978)
+CheckOffset(struct FT_Module_Class_,module_interface,0,1,53979)
+CheckOffset(struct FT_Module_Class_,module_init,0,1,53981)
+CheckOffset(struct FT_Module_Class_,module_done,0,1,53983)
+CheckOffset(struct FT_Module_Class_,get_interface,0,1,53986)
 #endif
 
 #if 1
-CheckTypeSize(FT_Module,0, 16761, 1, 3.2, NULL, 16760, NULL)
+CheckTypeSize(FT_Module_Constructor,0, 16763, 1, 3.2, NULL, 16762, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Module_Destructor,0, 16765, 1, 3.2, NULL, 16764, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Module_Interface,0, 16767, 1, 3.2, NULL, 16766, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Module_Requester,0, 16769, 1, 3.2, NULL, 16768, NULL)
 #endif
 
 #if 1
 CheckTypeSize(FT_Module_Class,0, 16770, 1, 3.2, NULL, 16753, NULL)
-#endif
-
-#if 1
-CheckTypeSize(FT_Library,0, 16773, 1, 3.2, NULL, 16772, NULL)
 #endif
 
 #if 1
