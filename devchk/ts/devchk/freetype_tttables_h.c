@@ -26,10 +26,6 @@ Msg("Checking data structures in freetype/tttables.h\n");
 
 printf("Checking data structures in freetype/tttables.h\n");
 #if 1
-CheckTypeSize(FT_CharMap,0, 16891, 1, 3.2, NULL, 16890, NULL)
-#endif
-
-#if 1
 CheckTypeSize(FT_Sfnt_Tag,0, 16925, 1, 3.2, NULL, 16924, NULL)
 #endif
 

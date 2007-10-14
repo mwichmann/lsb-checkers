@@ -65,7 +65,37 @@ Msg("Find size of FT_UInt (11171)\n");
 #endif
 
 #if 1
+CheckTypeSize(struct FT_ListRec_,8, 16720, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_ListRec_ on All\n");
+CheckOffset(struct FT_ListRec_,head,0,1,53939)
+CheckOffset(struct FT_ListRec_,tail,0,1,53940)
+#endif
+
+#if 1
+CheckTypeSize(struct FT_ListNodeRec_,12, 16721, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_ListNodeRec_ on All\n");
+CheckOffset(struct FT_ListNodeRec_,prev,0,1,53936)
+CheckOffset(struct FT_ListNodeRec_,next,0,1,53937)
+CheckOffset(struct FT_ListNodeRec_,data,0,1,53938)
+#endif
+
+#if 1
+CheckTypeSize(FT_ListNode,0, 16723, 1, 3.2, NULL, 16722, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_List,0, 16725, 1, 3.2, NULL, 16724, NULL)
+#endif
+
+#if 1
 CheckTypeSize(FT_Error,0, 16737, 1, 3.2, NULL, 6, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct FT_Generic_,8, 16748, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Generic_ on All\n");
+CheckOffset(struct FT_Generic_,data,0,1,53967)
+CheckOffset(struct FT_Generic_,finalizer,0,1,53968)
 #endif
 
 #if 1
@@ -101,7 +131,24 @@ CheckTypeSize(FT_Pointer,0, 16766, 1, 3.2, NULL, 40, NULL)
 #endif
 
 #if 1
+CheckTypeSize(FT_ListRec,0, 16775, 1, 3.2, NULL, 16720, NULL)
+#endif
+
+#if 1
 CheckTypeSize(FT_UShort,0, 16789, 1, 3.2, NULL, 11209, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct FT_Matrix_,16, 16790, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Matrix_ on All\n");
+CheckOffset(struct FT_Matrix_,xx,0,1,54028)
+CheckOffset(struct FT_Matrix_,xy,0,1,54029)
+CheckOffset(struct FT_Matrix_,yx,0,1,54030)
+CheckOffset(struct FT_Matrix_,yy,0,1,54031)
+#endif
+
+#if 1
+CheckTypeSize(FT_Matrix,0, 16791, 1, 3.2, NULL, 16790, NULL)
 #endif
 
 #if 1
@@ -118,6 +165,10 @@ CheckTypeSize(FT_Bytes,0, 16978, 1, 3.2, NULL, 16896, NULL)
 
 #if 1
 CheckTypeSize(FT_Short,0, 16981, 1, 3.2, NULL, 11264, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_ListNodeRec,0, 22171, 1, 3.2, NULL, 16721, NULL)
 #endif
 
 #ifdef TET_TEST

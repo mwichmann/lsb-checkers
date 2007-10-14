@@ -26,38 +26,7 @@ Msg("Checking data structures in freetype/ftstroke.h\n");
 
 printf("Checking data structures in freetype/ftstroke.h\n");
 #if 1
-CheckTypeSize(FT_Vector,0, 16743, 1, 3.2, NULL, 16741, NULL)
-#endif
-
-#if 1
-CheckTypeSize(FT_Outline,0, 16745, 1, 3.2, NULL, 16740, NULL)
-#endif
-
-#if 1
-CheckTypeSize(FT_Glyph,0, 16854, 1, 3.2, NULL, 16853, NULL)
-#endif
-
-#if 1
 CheckTypeSize(FT_Angle,0, 16921, 1, 3.2, NULL, 16759, NULL)
-#endif
-
-#if 1
-CheckTypeSize(struct FT_StrokerRec_,120, 16965, 1, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_StrokerRec_ on All\n");
-CheckOffset(struct FT_StrokerRec_,angle_in,0,1,54296)
-CheckOffset(struct FT_StrokerRec_,angle_out,0,1,54297)
-CheckOffset(struct FT_StrokerRec_,center,0,1,54298)
-CheckOffset(struct FT_StrokerRec_,first_point,0,1,54299)
-CheckOffset(struct FT_StrokerRec_,subpath_open,0,1,54300)
-CheckOffset(struct FT_StrokerRec_,subpath_angle,0,1,54301)
-CheckOffset(struct FT_StrokerRec_,subpath_start,0,1,54302)
-CheckOffset(struct FT_StrokerRec_,line_cap,0,1,54306)
-CheckOffset(struct FT_StrokerRec_,line_join,0,1,54310)
-CheckOffset(struct FT_StrokerRec_,miter_limit,0,1,54311)
-CheckOffset(struct FT_StrokerRec_,radius,0,1,54312)
-CheckOffset(struct FT_StrokerRec_,valid,0,1,54313)
-CheckOffset(struct FT_StrokerRec_,borders,0,1,54322)
-CheckOffset(struct FT_StrokerRec_,memory,0,1,54323)
 #endif
 
 #if 1
