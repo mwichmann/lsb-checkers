@@ -2354,6 +2354,27 @@ struct versym libm_so_6_1[] = {
 	{"ctanl","GLIBC_2.2",0,LSB_Core,16,1},
 #endif
 #if defined __i386__
+	{"drem","GLIBC_2.0",0,LSB_Core,8,1},
+#endif
+#if defined __ia64__
+	{"drem","GLIBC_2.2",0,LSB_Core,8,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"drem","GLIBC_2.0",0,LSB_Core,8,1},
+#endif
+#if defined __powerpc64__
+	{"drem","GLIBC_2.3",0,LSB_Core,8,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"drem","GLIBC_2.0",0,LSB_Core,8,1},
+#endif
+#if defined __x86_64__
+	{"drem","GLIBC_2.2.5",0,LSB_Core,8,1},
+#endif
+#if defined __s390x__
+	{"drem","GLIBC_2.2",0,LSB_Core,8,1},
+#endif
+#if defined __i386__
 	{"dremf","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2541,6 +2562,69 @@ struct versym libm_so_6_1[] = {
 #endif
 #if defined __s390x__
 	{"exp","GLIBC_2.2",0,LSB_Core,8,1},
+#endif
+#if defined __i386__
+	{"exp10","GLIBC_2.1",0,LSB_Core,8,1},
+#endif
+#if defined __ia64__
+	{"exp10","GLIBC_2.2",0,LSB_Core,8,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"exp10","GLIBC_2.1",0,LSB_Core,8,1},
+#endif
+#if defined __powerpc64__
+	{"exp10","GLIBC_2.3",0,LSB_Core,8,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"exp10","GLIBC_2.1",0,LSB_Core,8,1},
+#endif
+#if defined __x86_64__
+	{"exp10","GLIBC_2.2.5",0,LSB_Core,8,1},
+#endif
+#if defined __s390x__
+	{"exp10","GLIBC_2.2",0,LSB_Core,8,1},
+#endif
+#if defined __i386__
+	{"exp10f","GLIBC_2.1",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"exp10f","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"exp10f","GLIBC_2.1",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"exp10f","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"exp10f","GLIBC_2.1",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"exp10f","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"exp10f","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
+	{"exp10l","GLIBC_2.1",0,LSB_Core,12,1},
+#endif
+#if defined __ia64__
+	{"exp10l","GLIBC_2.2",0,LSB_Core,16,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"exp10l","GLIBC_2.1",0,LSB_Core,8,1},
+#endif
+#if defined __powerpc64__
+	{"exp10l","GLIBC_2.3",0,LSB_Core,8,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"exp10l","GLIBC_2.1",0,LSB_Core,8,1},
+#endif
+#if defined __x86_64__
+	{"exp10l","GLIBC_2.2.5",0,LSB_Core,16,1},
+#endif
+#if defined __s390x__
+	{"exp10l","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
 	{"exp2","GLIBC_2.1",0,LSB_Core,8,1},

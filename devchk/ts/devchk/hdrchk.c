@@ -115,7 +115,6 @@ tcnt+=freetype_ftrender_h();
 tcnt+=freetype_ftsizes_h();
 tcnt+=freetype_ftsnames_h();
 tcnt+=freetype_ftstroke_h();
-tcnt+=freetype_ftsynth_h();
 tcnt+=freetype_ftsystem_h();
 tcnt+=freetype_fttrigon_h();
 tcnt+=freetype_fttypes_h();

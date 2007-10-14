@@ -26,6 +26,10 @@ Msg("Checking data structures in netinet/in.h\n");
 
 printf("Checking data structures in netinet/in.h\n");
 #if _LSB_DEFAULT_ARCH
+/* No test for netinet/in.h depends on arpa/inet.h */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef SOL_IP
 	CompareConstant(SOL_IP,0,3330,architecture,1.1,NULL)
 #else
