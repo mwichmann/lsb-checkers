@@ -8,6 +8,31 @@
 #include "symvers.h"
 #include <string.h>
 
+int
+expand_versionnames(ElfFile *file, int maxindex)
+{
+  int maxentries;
+  char **new_versionnames;
+
+  /* If we want foo[index] to work, we need index + 1 entries in foo. */
+  maxentries = maxindex + 1;
+
+  /* If we request a size less than the current size, don't do anything. */
+  if (maxentries < file->versionnames_size)
+    return 0;
+
+  new_versionnames = (char **) realloc(file->versionnames,
+                                       maxentries * sizeof(char *));
+
+  if (new_versionnames != NULL) {
+    file->versionnames = new_versionnames;
+    file->versionnames_size = maxentries;
+    return 0;
+  } else {
+    return -1;
+  }
+}
+
 void
 getSymbolVersionInfo(ElfFile *file)
 {
@@ -82,6 +107,7 @@ if( file->verd )
 		verdaux=(Elf_Verdaux *)((char *)file->verd+file->verd->vd_aux);
 		numverdaux=file->verd->vd_cnt;
 		/* Note, we only want the first (ie best) version in a list */
+		expand_versionnames(file, file->verd->vd_ndx);
 		file->versionnames[file->verd->vd_ndx]=ElfGetStringIndex(file,
 						verdaux->vda_name,
 						file->verdhdr->sh_link);
@@ -103,6 +129,7 @@ if( file->vern )
 		vernaux=(Elf_Vernaux *)((char *)file->vern+file->vern->vn_aux);
 		numvernaux=file->vern->vn_cnt;
 		/* Note, we only want the first (ie best) version in a list */
+		expand_versionnames(file, vernaux->vna_other);
 		if( !file->versionnames[vernaux->vna_other] )
 		file->versionnames[vernaux->vna_other]=ElfGetStringIndex(file,
 						vernaux->vna_name,
