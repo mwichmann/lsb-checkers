@@ -262,7 +262,8 @@ typedef	struct	{
 	Elf_Verneed	*vern; /* Array of verneed entries */
 	int	numverneed;
 
-	char	*versionnames[32]; /* arbitrary size, but big enough for now */
+	char	**versionnames;
+	size_t	versionnames_size;
 	}	ElfFile;
 
 /* util.c */
