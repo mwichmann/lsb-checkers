@@ -27,25 +27,6 @@ Msg("Checking data structures in libxml2/libxml/xmlmodule.h\n");
 
 printf("Checking data structures in libxml2/libxml/xmlmodule.h\n");
 #if defined __i386__
-CheckTypeSize(xmlModule,0, 14544, 2, 3.1, NULL, 14543, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xmlModule,0, 14544, 11, 3.1, NULL, 14543, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlModule,0, 14544, 3, 3.1, NULL, 14543, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlModule,0, 14544, 6, 3.1, NULL, 14543, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlModule,0, 14544, 9, 3.1, NULL, 14543, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xmlModule,0, 14544, 10, 3.1, NULL, 14543, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlModule,0, 14544, 12, 3.1, NULL, 14543, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14543,NULL);\n",architecture,14544,0);
-Msg("Find size of xmlModule (14544)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(xmlModulePtr,4, 14546, 2, 3.1, NULL, 14545, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlModulePtr,8, 14546, 11, 3.1, NULL, 14545, NULL)
