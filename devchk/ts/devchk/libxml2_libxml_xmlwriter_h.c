@@ -36,25 +36,6 @@ printf("Checking data structures in libxml2/libxml/xmlwriter.h\n");
 #endif
 
 #if defined __i386__
-CheckTypeSize(xmlTextWriter,0, 15077, 2, 3.1, NULL, 15076, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xmlTextWriter,0, 15077, 11, 3.1, NULL, 15076, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlTextWriter,0, 15077, 3, 3.1, NULL, 15076, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlTextWriter,0, 15077, 6, 3.1, NULL, 15076, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlTextWriter,0, 15077, 9, 3.1, NULL, 15076, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xmlTextWriter,0, 15077, 10, 3.1, NULL, 15076, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlTextWriter,0, 15077, 12, 3.1, NULL, 15076, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15076,NULL);\n",architecture,15077,0);
-Msg("Find size of xmlTextWriter (15077)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(xmlTextWriterPtr,4, 15079, 2, 3.1, NULL, 15078, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlTextWriterPtr,8, 15079, 11, 3.1, NULL, 15078, NULL)

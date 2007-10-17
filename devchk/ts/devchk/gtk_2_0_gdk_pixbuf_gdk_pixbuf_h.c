@@ -154,25 +154,6 @@ cnt++;
 #endif
 
 #if defined __i386__
-CheckTypeSize(GdkPixbuf,0, 12611, 2, 3.1, NULL, 12610, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GdkPixbuf,0, 12611, 11, 3.1, NULL, 12610, NULL)
-#elif defined __ia64__
-CheckTypeSize(GdkPixbuf,0, 12611, 3, 3.1, NULL, 12610, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GdkPixbuf,0, 12611, 6, 3.1, NULL, 12610, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GdkPixbuf,0, 12611, 9, 3.1, NULL, 12610, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GdkPixbuf,0, 12611, 10, 3.1, NULL, 12610, NULL)
-#elif defined __s390x__
-CheckTypeSize(GdkPixbuf,0, 12611, 12, 3.1, NULL, 12610, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12610,NULL);\n",architecture,12611,0);
-Msg("Find size of GdkPixbuf (12611)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(GdkPixbufSaveFunc,4, 12614, 2, 3.1, NULL, 12613, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GdkPixbufSaveFunc,8, 12614, 11, 3.1, NULL, 12613, NULL)
@@ -208,25 +189,6 @@ CheckTypeSize(GdkPixbufLoader,32, 12616, 12, 3.1, NULL, 12615, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12615,NULL);\n",architecture,12616,0);
 Msg("Find size of GdkPixbufLoader (12616)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(GdkPixbufFormat,0, 12621, 2, 3.1, NULL, 12620, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GdkPixbufFormat,0, 12621, 11, 3.1, NULL, 12620, NULL)
-#elif defined __ia64__
-CheckTypeSize(GdkPixbufFormat,0, 12621, 3, 3.1, NULL, 12620, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GdkPixbufFormat,0, 12621, 6, 3.1, NULL, 12620, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GdkPixbufFormat,0, 12621, 9, 3.1, NULL, 12620, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GdkPixbufFormat,0, 12621, 10, 3.1, NULL, 12620, NULL)
-#elif defined __s390x__
-CheckTypeSize(GdkPixbufFormat,0, 12621, 12, 3.1, NULL, 12620, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12620,NULL);\n",architecture,12621,0);
-Msg("Find size of GdkPixbufFormat (12621)\n");
 #endif
 
 #if defined __i386__
@@ -284,44 +246,6 @@ CheckTypeSize(GdkPixbufDestroyNotify,8, 12630, 12, 3.1, NULL, 12629, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12629,NULL);\n",architecture,12630,0);
 Msg("Find size of GdkPixbufDestroyNotify (12630)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 2, 3.1, NULL, 12631, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 11, 3.1, NULL, 12631, NULL)
-#elif defined __ia64__
-CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 3, 3.1, NULL, 12631, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 6, 3.1, NULL, 12631, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 9, 3.1, NULL, 12631, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 10, 3.1, NULL, 12631, NULL)
-#elif defined __s390x__
-CheckTypeSize(GdkPixbufAnimationIter,0, 12632, 12, 3.1, NULL, 12631, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12631,NULL);\n",architecture,12632,0);
-Msg("Find size of GdkPixbufAnimationIter (12632)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(GdkPixbufAnimation,0, 12637, 2, 3.1, NULL, 12636, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GdkPixbufAnimation,0, 12637, 11, 3.1, NULL, 12636, NULL)
-#elif defined __ia64__
-CheckTypeSize(GdkPixbufAnimation,0, 12637, 3, 3.1, NULL, 12636, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GdkPixbufAnimation,0, 12637, 6, 3.1, NULL, 12636, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GdkPixbufAnimation,0, 12637, 9, 3.1, NULL, 12636, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GdkPixbufAnimation,0, 12637, 10, 3.1, NULL, 12636, NULL)
-#elif defined __s390x__
-CheckTypeSize(GdkPixbufAnimation,0, 12637, 12, 3.1, NULL, 12636, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12636,NULL);\n",architecture,12637,0);
-Msg("Find size of GdkPixbufAnimation (12637)\n");
 #endif
 
 #if defined __i386__

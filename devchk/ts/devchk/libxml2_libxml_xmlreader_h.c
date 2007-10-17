@@ -29,25 +29,6 @@ Msg("Checking data structures in libxml2/libxml/xmlreader.h\n");
 
 printf("Checking data structures in libxml2/libxml/xmlreader.h\n");
 #if defined __i386__
-CheckTypeSize(xmlTextReader,0, 15059, 2, 3.1, NULL, 15058, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xmlTextReader,0, 15059, 11, 3.1, NULL, 15058, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlTextReader,0, 15059, 3, 3.1, NULL, 15058, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlTextReader,0, 15059, 6, 3.1, NULL, 15058, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlTextReader,0, 15059, 9, 3.1, NULL, 15058, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xmlTextReader,0, 15059, 10, 3.1, NULL, 15058, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlTextReader,0, 15059, 12, 3.1, NULL, 15058, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15058,NULL);\n",architecture,15059,0);
-Msg("Find size of xmlTextReader (15059)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(xmlTextReaderPtr,4, 15061, 2, 3.1, NULL, 15060, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlTextReaderPtr,8, 15061, 11, 3.1, NULL, 15060, NULL)

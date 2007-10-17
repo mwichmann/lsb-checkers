@@ -5,6 +5,9 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#include <ft2build.h>
+#include FT_FREETYPE_H
+
 #include "freetype/ftglyph.h"
 
 
@@ -80,11 +83,22 @@ CheckTypeSize(FT_Glyph_PrepareFunc,0, 16865, 1, 3.2, NULL, 16855, NULL)
 #endif
 
 #if 1
-CheckTypeSize(FT_Render_Mode,0, 16900, 1, 3.2, NULL, 16899, NULL)
+CheckTypeSize(FT_Glyph_BBox_Mode,0, 22170, 1, 3.2, NULL, 22169, NULL)
 #endif
 
 #if 1
-CheckTypeSize(FT_Glyph_BBox_Mode,0, 22170, 1, 3.2, NULL, 22169, NULL)
+CheckTypeSize(struct FT_OutlineGlyphRec_,20, 22172, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_OutlineGlyphRec_ on All\n");
+CheckOffset(struct FT_OutlineGlyphRec_,root,0,1,65063)
+CheckOffset(struct FT_OutlineGlyphRec_,outline,0,1,65064)
+#endif
+
+#if 1
+CheckTypeSize(FT_OutlineGlyph,0, 22174, 1, 3.2, NULL, 22173, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_GlyphRec,0, 22175, 1, 3.2, NULL, 16849, NULL)
 #endif
 
 extern void FT_Done_Glyph_db(FT_Glyph);

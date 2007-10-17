@@ -29,25 +29,6 @@ Msg("Checking data structures in libxml2/libxml/threads.h\n");
 
 printf("Checking data structures in libxml2/libxml/threads.h\n");
 #if defined __i386__
-CheckTypeSize(xmlRMutex,0, 14995, 2, 3.1, NULL, 14994, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xmlRMutex,0, 14995, 11, 3.1, NULL, 14994, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlRMutex,0, 14995, 3, 3.1, NULL, 14994, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlRMutex,0, 14995, 6, 3.1, NULL, 14994, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlRMutex,0, 14995, 9, 3.1, NULL, 14994, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xmlRMutex,0, 14995, 10, 3.1, NULL, 14994, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlRMutex,0, 14995, 12, 3.1, NULL, 14994, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14994,NULL);\n",architecture,14995,0);
-Msg("Find size of xmlRMutex (14995)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(xmlRMutexPtr,4, 14997, 2, 3.1, NULL, 14996, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlRMutexPtr,8, 14997, 11, 3.1, NULL, 14996, NULL)
@@ -64,25 +45,6 @@ CheckTypeSize(xmlRMutexPtr,8, 14997, 12, 3.1, NULL, 14996, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14996,NULL);\n",architecture,14997,0);
 Msg("Find size of xmlRMutexPtr (14997)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(xmlMutex,0, 14999, 2, 3.1, NULL, 14998, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xmlMutex,0, 14999, 11, 3.1, NULL, 14998, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlMutex,0, 14999, 3, 3.1, NULL, 14998, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlMutex,0, 14999, 6, 3.1, NULL, 14998, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlMutex,0, 14999, 9, 3.1, NULL, 14998, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xmlMutex,0, 14999, 10, 3.1, NULL, 14998, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlMutex,0, 14999, 12, 3.1, NULL, 14998, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14998,NULL);\n",architecture,14999,0);
-Msg("Find size of xmlMutex (14999)\n");
 #endif
 
 #if defined __i386__

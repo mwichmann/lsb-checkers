@@ -32,25 +32,6 @@ printf("Checking data structures in libxml2/libxml/hash.h\n");
 #endif
 
 #if defined __i386__
-CheckTypeSize(xmlHashTable,0, 14729, 2, 3.1, NULL, 14723, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xmlHashTable,0, 14729, 11, 3.1, NULL, 14723, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlHashTable,0, 14729, 3, 3.1, NULL, 14723, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlHashTable,0, 14729, 6, 3.1, NULL, 14723, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlHashTable,0, 14729, 9, 3.1, NULL, 14723, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xmlHashTable,0, 14729, 10, 3.1, NULL, 14723, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlHashTable,0, 14729, 12, 3.1, NULL, 14723, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14723,NULL);\n",architecture,14729,0);
-Msg("Find size of xmlHashTable (14729)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(xmlHashTablePtr,4, 14731, 2, 3.1, NULL, 14730, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlHashTablePtr,8, 14731, 11, 3.1, NULL, 14730, NULL)
