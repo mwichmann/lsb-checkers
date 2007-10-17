@@ -28,25 +28,6 @@ Msg("Checking data structures in libxml2/libxml/list.h\n");
 
 printf("Checking data structures in libxml2/libxml/list.h\n");
 #if defined __i386__
-CheckTypeSize(xmlList,0, 14552, 2, 3.1, NULL, 14551, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xmlList,0, 14552, 11, 3.1, NULL, 14551, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlList,0, 14552, 3, 3.1, NULL, 14551, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlList,0, 14552, 6, 3.1, NULL, 14551, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlList,0, 14552, 9, 3.1, NULL, 14551, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xmlList,0, 14552, 10, 3.1, NULL, 14551, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlList,0, 14552, 12, 3.1, NULL, 14551, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14551,NULL);\n",architecture,14552,0);
-Msg("Find size of xmlList (14552)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(xmlListPtr,4, 14554, 2, 3.1, NULL, 14553, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlListPtr,8, 14554, 11, 3.1, NULL, 14553, NULL)
@@ -63,25 +44,6 @@ CheckTypeSize(xmlListPtr,8, 14554, 12, 3.1, NULL, 14553, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14553,NULL);\n",architecture,14554,0);
 Msg("Find size of xmlListPtr (14554)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(xmlLink,0, 14556, 2, 3.1, NULL, 14555, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xmlLink,0, 14556, 11, 3.1, NULL, 14555, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlLink,0, 14556, 3, 3.1, NULL, 14555, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlLink,0, 14556, 6, 3.1, NULL, 14555, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlLink,0, 14556, 9, 3.1, NULL, 14555, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xmlLink,0, 14556, 10, 3.1, NULL, 14555, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlLink,0, 14556, 12, 3.1, NULL, 14555, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14555,NULL);\n",architecture,14556,0);
-Msg("Find size of xmlLink (14556)\n");
 #endif
 
 #if defined __i386__

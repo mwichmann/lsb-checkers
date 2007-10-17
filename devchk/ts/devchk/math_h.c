@@ -1044,8 +1044,6 @@ CheckInterfacedef(lroundf,lroundf_db);
 extern long int lroundl_db(long double);
 CheckInterfacedef(lroundl,lroundl_db);
 #endif		/* hack */
-extern int matherr_db(struct exception *);
-CheckInterfacedef(matherr,matherr_db);
 extern double nan_db(const char *);
 CheckInterfacedef(nan,nan_db);
 extern float nanf_db(const char *);

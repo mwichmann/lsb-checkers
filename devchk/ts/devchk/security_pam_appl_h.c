@@ -518,25 +518,6 @@ Msg("Find size of pam_conv (10352)\n");
 #endif
 
 #if defined __i386__
-CheckTypeSize(pam_handle_t,4, 10354, 2, 1.3, NULL, 10353, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(pam_handle_t,4, 10354, 10, 1.3, NULL, 10353, NULL)
-#elif defined __ia64__
-CheckTypeSize(pam_handle_t,4, 10354, 3, 1.3, NULL, 10353, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(pam_handle_t,4, 10354, 6, 1.3, NULL, 10353, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(pam_handle_t,4, 10354, 9, 2.0, NULL, 10353, NULL)
-#elif defined __s390x__
-CheckTypeSize(pam_handle_t,4, 10354, 12, 1.3, NULL, 10353, NULL)
-#elif defined __x86_64__
-CheckTypeSize(pam_handle_t,4, 10354, 11, 2.0, NULL, 10353, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10353,NULL);\n",architecture,10354,0);
-Msg("Find size of pam_handle_t (10354)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(struct pam_message,8, 10356, 2, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct pam_message,msg_style,4,2,34584)
 CheckOffset(struct pam_message,msg_style,0,2,34584)

@@ -5,6 +5,9 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#include <ft2build.h>
+#include FT_FREETYPE_H
+
 #include "freetype/fttypes.h"
 
 
@@ -157,6 +160,14 @@ CheckTypeSize(FT_Bool,0, 16796, 1, 3.2, NULL, 3, NULL)
 
 #if 1
 CheckTypeSize(FT_Byte,0, 16866, 1, 3.2, NULL, 3, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Int32,0, 16894, 1, 3.2, NULL, 6, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_UInt32,0, 16930, 1, 3.2, NULL, 7, NULL)
 #endif
 
 #if 1

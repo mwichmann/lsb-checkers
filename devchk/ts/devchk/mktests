@@ -235,7 +235,10 @@ sub displaytyperef($$$) {
         $Tid    = $$param{'Tid'};
         displaytyperef( \%type, $enableConst, $curArch );
         print TESTS "(*";
-        if ( $$param{'Tname'} =~ "fptr" ) {
+        if( $$param{'Tname'} =~ /fptr\-\d+\s/ ) {
+        	$$param{'Tname'} = "fptr";
+        }
+        elsif( $$param{'Tname'} =~ "fptr" ) {
             $$param{'Tname'} =~ s/fptr-//;
         }
         print TESTS $$param{'Tname'};
@@ -311,7 +314,7 @@ sub writetest($$) {
     $fname = $Hname;
     $fname =~ tr/\/.-/__/;
 
-	# Try to guess if we have a cpp header
+    # Try to guess if we have a cpp header
     $select = "SELECT * FROM Type ";
     $select.= "LEFT JOIN HeaderGroup ON Theadergroup=HGid ";
     $select.= "WHERE HGheader=$Hid ";
@@ -330,7 +333,7 @@ sub writetest($$) {
     print "Writing tests for $Hname to $filename\n";
 
     if ( $cth->numrows == 0 && $tth->numrows == 0 ) {
-    	print "No types to tests to write for $Hname\n";
+    	print "No type tests to write for $Hname\n";
         print TESTS "/*\n * No values in $Hname\n */\n";
         close(TESTS);
         return;
@@ -464,6 +467,7 @@ sub writetest($$) {
     }
 
     $lastid = 0;
+    $total_printed = 0;
     for ( 1 .. $tth->numrows ) {
         %tentry = $tth->fetchhash;
         if ( !$tentry{'Asymbol'} )   {
@@ -489,10 +493,12 @@ sub writetest($$) {
 			}
 		}
 
+		$idchanged = 0;
+
         # Do this before we reset the value, so we can re-use the values
         # from the last time through the loop if we need them
 		if ( $tentry{'Tid'} != $lastid ) {
-			if ( ( $lastid != 0 ) and ( not ( $Tname =~ /anon/ && $Ttype ne 'Enum') and (not ( $Tname =~ /fptr/ ) ) ) ) {
+ 			if( $lastid and $total_printed and ( ( $Tname !~ /anon/ or $Ttype eq 'Enum') and ( $Tname !~ /fptr/ ) ) ) {
 				# We have output at least one type, and now we need to
 				# put a catchall else clause
 				if ( $lastaid != 1 ) {
@@ -513,13 +519,17 @@ sub writetest($$) {
 				}
 				print TESTS "#endif\n\n";
 			}
+			$idchanged = 1;
+			$total_printed = 0;
 
-			if ( not ( $tentry{'Tname'} =~ /anon/ && $tentry{'Ttype'} ne 'Enum') and (not ( $tentry{'Tname'} =~ /fptr/ ) ) ) {
+			if( ( $tentry{'Tname'} !~ /anon/ or $tentry{'Ttype'} eq 'Enum' ) and ( $tentry{'Tname'} !~ /fptr/ ) and ( $tentry{'Ttype'} ne 'Typedef' ) ) {
 				print TESTS "#if $tentry{'Asymbol'}\n";
+				$total_printed++;
 			}
 		} else {
-			if ( not ( $tentry{'Tname'} =~ /anon/ && $tentry{'Ttype'} ne 'Enum') and (not ( $tentry{'Tname'} =~ /fptr/ ) ) ) {
+			if( ( $tentry{'Tname'} !~ /anon/ or $tentry{'Ttype'} eq 'Enum' ) and ( $tentry{'Tname'} !~ /fptr/ ) and ( $tentry{'Ttype'} ne 'Typedef' ) ) {
 				print TESTS "#elif $tentry{'Asymbol'}\n";
+				$total_printed++;
 			}
 		}
         $lastid   = $tentry{'Tid'};
@@ -555,6 +565,7 @@ sub writetest($$) {
 			$tselect .= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin > '$lsbversion') ) ";
 			$tselect .= "AND Tid=" . $tentry{'ATbasetype'};
 # 			$tselect .= " OR Tindirect='Yes')";
+			print $tselect, "\n" if $trace;
 			$ttth    = $Dbh->query($tselect) || die $Dbh->errmsg();
 			%ttentry = $ttth->fetchhash;
 			if( $ttentry{'Tid'} or ($tentry{'ATbasetype'} == 0) ) {
@@ -627,6 +638,7 @@ sub writetest($$) {
             $tselect .= "LEFT JOIN ArchType ON ATtid=Tid ";
             $tselect .= "LEFT JOIN Architecture ON Aid=ATaid ";
             $tselect .= "WHERE Tid=" . $tentry{'ATbasetype'};
+			print $tselect, "\n" if $trace;
             $ttth = $Dbh->query($tselect) || die $Dbh->errmsg();
             %ttentry = $ttth->fetchhash;
             my $typeName;
@@ -650,6 +662,7 @@ sub writetest($$) {
             $tmselect = "SELECT * FROM TypeMember ";
             $tmselect .= "WHERE TMmemberof=" . $tentry{'Tid'} . " AND TMaid in (1,$Aid) ";
             $tmselect .= " ORDER BY TMposition";
+	     print $tmselect, "\n" if $trace;
             $tmh = $Dbh->query($tmselect) || die $Dbh->errmsg();
             for ( 1 .. $tmh->numrows ) {
                 %tmentry = $tmh->fetchhash;
@@ -683,6 +696,32 @@ sub writetest($$) {
 #             $ttth    = $Dbh->query($tselect) || die $Dbh->errmsg();
 #             %ttentry = $ttth->fetchhash;
 
+			$baseselect = "SELECT Ttype, count(TMid) AS mem_cnt FROM Type ";
+			$baseselect .= "LEFT JOIN ArchType ON ATbasetype=Tid ";
+			$baseselect .= "LEFT JOIN TypeMember ON TMmemberof=Tid ";
+			$baseselect .= "WHERE ATtid=$Tid ";
+			$baseselect .= "GROUP BY Tid ";
+			print $baseselect, "\n" if $trace;
+# 			$tselect .= " OR Tindirect='Yes')";
+			$baseth = $Dbh->query($baseselect) || die $Dbh->errmsg();
+			if( $baseth->numrows ) {
+				%baseentry = $baseth->fetchhash;
+				if( ($baseentry{'Ttype'} eq 'Struct' or $baseentry{'Ttype'} eq 'Union' or $baseentry{'Ttype'} eq 'Enum')
+						and $baseentry{'mem_cnt'} == 0 ) {
+					next;
+				}
+			}
+
+			$total_printed++;
+			if( $idchanged ) {
+				if( $tentry{'Tname'} !~ /fptr/ ) {
+					print TESTS "#if $tentry{'Asymbol'}\n";
+				}
+			} else {
+				if( $tentry{'Tname'} !~ /fptr/ ) {
+					print TESTS "#elif $tentry{'Asymbol'}\n";
+				}
+			}
 # 			if ($ttentry{'Tid'}) {
 				$withdrawnin = $ATwithdrawnin ? "'$ATwithdrawnin'" : "NULL";
 				$attribute = $ATattribute ? "'$ATattribute'" : "NULL";
@@ -705,6 +744,7 @@ sub writetest($$) {
 			$tselect .= " AND (ATappearedin <> '' AND ATappearedin <= '$lsbversion' ";
 			$tselect .= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin > '$lsbversion') ) ";
 # 			$tselect .= "OR Tindirect='Yes' ) ";
+			print $tselect, "\n" if $trace;
             $ttth = $Dbh->query($tselect) || die $Dbh->errmsg();
             %ttentry = $ttth->fetchhash;
             my $typeName;
@@ -745,13 +785,14 @@ sub writetest($$) {
 		if $tentry{'Ttype'} ne 'Array';
     }
 
- 	if ( not ( $Tname =~ /anon/ && $Ttype ne 'Enum') and (not ( $Tname =~ /fptr/ ) ) ) {
-		if ( $lastid != 0 ) {
-			if ( $lastaid != 1 ) {
+ 	if( not ( $Tname =~ /anon/ && $Ttype ne 'Enum') and (not ( $Tname =~ /fptr/ ) ) ) {
+		if( $lastid and $total_printed ) {
+			if( $lastaid != 1 ) {
 				$selectGeneric = "SELECT count(*) as cnt FROM ArchType ";
 				$selectGeneric.= "WHERE ATtid=$Tid AND ATaid=1 ";
 				$selectGeneric.= "AND ATappearedin<>'' AND ATappearedin <= '$lsbversion' ";
 				$selectGeneric.= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin > '$lsbversion') ";
+				print $selectGeneric, "\n" if $trace;
 				$gth = $Dbh->query($selectGeneric) || die $Dbh->errmsg();
 				%gentry = $gth->fetchhash;
 				if ($gentry{'cnt'} > 0) {
@@ -790,10 +831,11 @@ sub writetest($$) {
 		$select .= "LEFT JOIN ArchInt ON Iid=AIint ";
 		$select .= "LEFT JOIN ArchType ON ATtid=Tid AND ATaid=AIarch ";
 		$select .= "LEFT JOIN Architecture ON AIarch=Aid ";
- 		$select .= "WHERE (Isrcbin='SrcOnly' OR (";
+ 		$select .= "WHERE (Isrcbin='SrcOnly' OR ( Isrcbin='Both' AND ";
 		$select .= "(AIappearedin <= '$lsbversion' and AIappearedin<>'') ";
 		$select .= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin >'$lsbversion') ) )";
 		$select .= "AND Hid=$Hid";
+		print $select, "\n" if $trace;
 		$sth = $Dbh->query($select) || die $Dbh->errmsg();
 
 		for ( 1 .. $sth->numrows ) {
@@ -810,6 +852,7 @@ sub writetest($$) {
 					$selectCheck ="SELECT Iid FROM Interface ";
 					$selectCheck.="LEFT JOIN ArchInt ON Iid=AIint ";
 					$selectCheck.="WHERE AIarch=1 AND Iname='$entry{'Iname'}'";
+					print $selectCheck, "\n" if $trace;
 					$sthCheck = $Dbh->query($selectCheck) || die $Dbh->errmsg();
 					if( $sthCheck->numrows ) {
 						next;
@@ -834,6 +877,7 @@ sub writetest($$) {
 					$select .= "LEFT JOIN ArchType ON ATtid=Tid ";
 					$select .= "WHERE Pint=" . $entry{'Iid'} . " AND Ptype=Tid ";
 					$select .= "GROUP BY Ppos ORDER BY Ppos";
+					print $select, "\n" if $trace;
 					$sth2 = $Dbh->query($select) || die $Dbh->errmsg();
 
 					if ( $sth2->numrows ) {
@@ -909,6 +953,7 @@ if ( $ARGV[0] ne "" ) {
 	$select.= "WHERE (Happearedin <= '$lsbversion' and Happearedin<>\'\') ";
 	$select.= "AND (Hwithdrawnin IS NULL OR Hwithdrawnin > '$lsbversion' )",
     $select .= "AND Hname='" . $ARGV[0] . "'";
+	print $select, "\n" if $trace;
     $hth = $Dbh->query($select) || die $Dbh->errmsg();
     %entry = $hth->fetchhash;
     writetest( $entry{'Hid'}, $entry{'Hname'} );
@@ -925,6 +970,7 @@ print MAKEFILE "OBJS = hdrchk.o ";
 
 $select = "SELECT DISTINCT * FROM Architecture ";
 $select .= "WHERE Aname!='All'";
+print $select, "\n" if $trace;
 
 $ath = $Dbh->query($select) || die $Dbh->errmsg();
 for ( 1 .. $ath->numrows ) {

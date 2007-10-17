@@ -85,25 +85,6 @@ Msg("Find size of xmlEntityPtr (14722)\n");
 #endif
 
 #if defined __i386__
-CheckTypeSize(xmlEntitiesTable,0, 14724, 2, 3.1, NULL, 14723, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xmlEntitiesTable,0, 14724, 11, 3.1, NULL, 14723, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlEntitiesTable,0, 14724, 3, 3.1, NULL, 14723, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlEntitiesTable,0, 14724, 6, 3.1, NULL, 14723, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlEntitiesTable,0, 14724, 9, 3.1, NULL, 14723, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xmlEntitiesTable,0, 14724, 10, 3.1, NULL, 14723, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlEntitiesTable,0, 14724, 12, 3.1, NULL, 14723, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14723,NULL);\n",architecture,14724,0);
-Msg("Find size of xmlEntitiesTable (14724)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(xmlEntitiesTablePtr,4, 14726, 2, 3.1, NULL, 14725, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlEntitiesTablePtr,8, 14726, 11, 3.1, NULL, 14725, NULL)

@@ -98,13 +98,6 @@ cnt++;
 #endif
 
 #if defined __i386__
-CheckTypeSize(XftDraw,0, 12554, 2, 3.2, NULL, 12553, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12553,NULL);\n",architecture,12554,0);
-Msg("Find size of XftDraw (12554)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(XftColor,0, 12557, 2, 3.2, NULL, 12556, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12556,NULL);\n",architecture,12557,0);
@@ -127,14 +120,6 @@ Msg("Find size of XftGlyphSpec (12576)\n");
 
 #if 1
 CheckTypeSize(XftCharSpec,0, 16995, 1, 3.2, NULL, 16994, NULL)
-#endif
-
-#if 1
-CheckTypeSize(XftFtFile,0, 17004, 1, 3.2, NULL, 17002, NULL)
-#endif
-
-#if 1
-CheckTypeSize(XftFontInfo,0, 17006, 1, 3.2, NULL, 17001, NULL)
 #endif
 
 #if 1

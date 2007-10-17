@@ -3,4 +3,3 @@ png_h.c
 pthread_h.c
 signal_h.c
 sys_shm_h.c
-wchar_h.c

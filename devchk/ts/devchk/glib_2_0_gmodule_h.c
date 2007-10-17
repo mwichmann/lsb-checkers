@@ -42,25 +42,6 @@ printf("Checking data structures in glib-2.0/gmodule.h\n");
 #endif
 
 #if defined __i386__
-CheckTypeSize(GModule,0, 12066, 2, 3.1, NULL, 12065, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GModule,0, 12066, 11, 3.1, NULL, 12065, NULL)
-#elif defined __ia64__
-CheckTypeSize(GModule,0, 12066, 3, 3.1, NULL, 12065, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GModule,0, 12066, 6, 3.1, NULL, 12065, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GModule,0, 12066, 9, 3.1, NULL, 12065, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GModule,0, 12066, 10, 3.1, NULL, 12065, NULL)
-#elif defined __s390x__
-CheckTypeSize(GModule,0, 12066, 12, 3.1, NULL, 12065, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12065,NULL);\n",architecture,12066,0);
-Msg("Find size of GModule (12066)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(GModuleFlags,4, 12069, 2, 3.1, NULL, 12068, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GModuleFlags,4, 12069, 11, 3.1, NULL, 12068, NULL)
