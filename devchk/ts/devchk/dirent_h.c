@@ -27,25 +27,6 @@ Msg("Checking data structures in dirent.h\n");
 #endif
 
 printf("Checking data structures in dirent.h\n");
-#if defined __ia64__
-CheckTypeSize(DIR,0, 10175, 3, 1.3, NULL, 10174, NULL)
-#elif defined __i386__
-CheckTypeSize(DIR,0, 10175, 2, 1.1, NULL, 10174, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(DIR,0, 10175, 6, 1.2, NULL, 10174, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(DIR,0, 10175, 10, 1.3, NULL, 10174, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(DIR,0, 10175, 9, 2.0, NULL, 10174, NULL)
-#elif defined __s390x__
-CheckTypeSize(DIR,0, 10175, 12, 1.3, NULL, 10174, NULL)
-#elif defined __x86_64__
-CheckTypeSize(DIR,0, 10175, 11, 2.0, NULL, 10174, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10174,NULL);\n",architecture,10175,0);
-Msg("Find size of DIR (10175)\n");
-#endif
-
 #if defined __i386__
 CheckTypeSize(struct dirent,268, 10178, 2, 1.1, NULL, 0, NULL)
 CheckMemberSize(struct dirent,d_ino,4,2,34177)

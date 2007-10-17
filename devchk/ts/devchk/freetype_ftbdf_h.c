@@ -5,6 +5,9 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#include <ft2build.h>
+#include FT_FREETYPE_H
+
 #include "freetype/ftbdf.h"
 
 
@@ -26,15 +29,7 @@ Msg("Checking data structures in freetype/ftbdf.h\n");
 
 printf("Checking data structures in freetype/ftbdf.h\n");
 #if 1
-CheckTypeSize(FT_Int32,0, 16894, 1, 3.2, NULL, 6, NULL)
-#endif
-
-#if 1
 CheckTypeSize(BDF_PropertyType,0, 16929, 1, 3.2, NULL, 16928, NULL)
-#endif
-
-#if 1
-CheckTypeSize(FT_UInt32,0, 16930, 1, 3.2, NULL, 7, NULL)
 #endif
 
 #if 1

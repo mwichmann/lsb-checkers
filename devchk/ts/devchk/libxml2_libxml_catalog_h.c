@@ -56,25 +56,6 @@ Msg("Find size of xmlCatalogAllow (15069)\n");
 #endif
 
 #if defined __i386__
-CheckTypeSize(xmlCatalog,0, 15071, 2, 3.1, NULL, 15070, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xmlCatalog,0, 15071, 11, 3.1, NULL, 15070, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlCatalog,0, 15071, 3, 3.1, NULL, 15070, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlCatalog,0, 15071, 6, 3.1, NULL, 15070, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlCatalog,0, 15071, 9, 3.1, NULL, 15070, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xmlCatalog,0, 15071, 10, 3.1, NULL, 15070, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlCatalog,0, 15071, 12, 3.1, NULL, 15070, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15070,NULL);\n",architecture,15071,0);
-Msg("Find size of xmlCatalog (15071)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(xmlCatalogPtr,4, 15073, 2, 3.1, NULL, 15072, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlCatalogPtr,8, 15073, 11, 3.1, NULL, 15072, NULL)

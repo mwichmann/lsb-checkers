@@ -5,6 +5,9 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#include <ft2build.h>
+#include FT_FREETYPE_H
+
 #include "freetype/freetype.h"
 
 
@@ -645,10 +648,6 @@ CheckTypeSize(FT_Library,0, 16773, 1, 3.2, NULL, 16772, NULL)
 #endif
 
 #if 1
-CheckTypeSize(FT_ModuleRec,0, 16777, 1, 3.2, NULL, 16752, NULL)
-#endif
-
-#if 1
 CheckTypeSize(FT_Renderer,0, 16782, 1, 3.2, NULL, 16781, NULL)
 #endif
 
@@ -784,6 +783,10 @@ CheckEnum("FT_RENDER_MODE_MAX",FT_RENDER_MODE_MAX,5,54214)
 #endif
 
 #if 1
+CheckTypeSize(FT_Render_Mode,0, 16900, 1, 3.2, NULL, 16899, NULL)
+#endif
+
+#if 1
 CheckTypeSize(struct FT_Parameter_,8, 16912, 1, 3.2, NULL, 0, NULL)
 Msg("Missing member data for FT_Parameter_ on All\n");
 CheckOffset(struct FT_Parameter_,tag,0,1,54239)
@@ -805,6 +808,14 @@ CheckOffset(struct FT_SizeRec_,face,0,1,54278)
 CheckOffset(struct FT_SizeRec_,generic,0,1,54279)
 CheckOffset(struct FT_SizeRec_,metrics,0,1,54288)
 CheckOffset(struct FT_SizeRec_,internal,0,1,54289)
+#endif
+
+#if 1
+CheckTypeSize(FT_Size_Metrics,0, 16953, 1, 3.2, NULL, 16952, NULL)
+#endif
+
+#if 1
+CheckTypeSize(FT_Size_Internal,0, 16956, 1, 3.2, NULL, 16955, NULL)
 #endif
 
 #if 1

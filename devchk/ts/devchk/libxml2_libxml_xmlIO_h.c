@@ -142,25 +142,6 @@ Msg("Find size of xmlValidityWarningFunc (14821)\n");
 #endif
 
 #if defined __i386__
-CheckTypeSize(xmlValidState,0, 14823, 2, 3.1, NULL, 14822, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xmlValidState,0, 14823, 11, 3.1, NULL, 14822, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlValidState,0, 14823, 3, 3.1, NULL, 14822, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlValidState,0, 14823, 6, 3.1, NULL, 14822, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlValidState,0, 14823, 9, 3.1, NULL, 14822, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xmlValidState,0, 14823, 10, 3.1, NULL, 14822, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlValidState,0, 14823, 12, 3.1, NULL, 14822, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14822,NULL);\n",architecture,14823,0);
-Msg("Find size of xmlValidState (14823)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(xmlValidCtxt,64, 14825, 2, 3.1, NULL, 14819, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlValidCtxt,112, 14825, 11, 3.1, NULL, 14819, NULL)

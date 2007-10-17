@@ -1271,25 +1271,6 @@ Msg("Find size of GdkRectangle (12753)\n");
 #endif
 
 #if defined __i386__
-CheckTypeSize(GdkRegion,0, 12755, 2, 3.1, NULL, 12754, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GdkRegion,0, 12755, 11, 3.1, NULL, 12754, NULL)
-#elif defined __ia64__
-CheckTypeSize(GdkRegion,0, 12755, 3, 3.1, NULL, 12754, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GdkRegion,0, 12755, 6, 3.1, NULL, 12754, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GdkRegion,0, 12755, 9, 3.1, NULL, 12754, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GdkRegion,0, 12755, 10, 3.1, NULL, 12754, NULL)
-#elif defined __s390x__
-CheckTypeSize(GdkRegion,0, 12755, 12, 3.1, NULL, 12754, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12754,NULL);\n",architecture,12755,0);
-Msg("Find size of GdkRegion (12755)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(GdkEventExpose,36, 12757, 2, 3.1, NULL, 12751, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GdkEventExpose,56, 12757, 11, 3.1, NULL, 12751, NULL)
@@ -1936,25 +1917,6 @@ Msg("Find size of GdkBitmap (12825)\n");
 #endif
 
 #if defined __i386__
-CheckTypeSize(GdkDisplayManager,0, 12831, 2, 3.1, NULL, 12830, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GdkDisplayManager,0, 12831, 11, 3.1, NULL, 12830, NULL)
-#elif defined __ia64__
-CheckTypeSize(GdkDisplayManager,0, 12831, 3, 3.1, NULL, 12830, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GdkDisplayManager,0, 12831, 6, 3.1, NULL, 12830, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GdkDisplayManager,0, 12831, 9, 3.1, NULL, 12830, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GdkDisplayManager,0, 12831, 10, 3.1, NULL, 12830, NULL)
-#elif defined __s390x__
-CheckTypeSize(GdkDisplayManager,0, 12831, 12, 3.1, NULL, 12830, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12830,NULL);\n",architecture,12831,0);
-Msg("Find size of GdkDisplayManager (12831)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(GdkSubwindowMode,4, 12834, 2, 3.1, NULL, 12833, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GdkSubwindowMode,4, 12834, 11, 3.1, NULL, 12833, NULL)
@@ -2028,25 +1990,6 @@ CheckTypeSize(GdkImage,88, 12840, 12, 3.1, NULL, 12837, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12837,NULL);\n",architecture,12840,0);
 Msg("Find size of GdkImage (12840)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(GdkPangoRendererPrivate,0, 12846, 2, 3.1, NULL, 12845, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GdkPangoRendererPrivate,0, 12846, 11, 3.1, NULL, 12845, NULL)
-#elif defined __ia64__
-CheckTypeSize(GdkPangoRendererPrivate,0, 12846, 3, 3.1, NULL, 12845, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GdkPangoRendererPrivate,0, 12846, 6, 3.1, NULL, 12845, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GdkPangoRendererPrivate,0, 12846, 9, 3.1, NULL, 12845, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GdkPangoRendererPrivate,0, 12846, 10, 3.1, NULL, 12845, NULL)
-#elif defined __s390x__
-CheckTypeSize(GdkPangoRendererPrivate,0, 12846, 12, 3.1, NULL, 12845, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12845,NULL);\n",architecture,12846,0);
-Msg("Find size of GdkPangoRendererPrivate (12846)\n");
 #endif
 
 #if defined __i386__
@@ -2161,25 +2104,6 @@ CheckTypeSize(GdkPoint,8, 12864, 12, 3.1, NULL, 12863, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12863,NULL);\n",architecture,12864,0);
 Msg("Find size of GdkPoint (12864)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(GdkFont,0, 12867, 2, 3.1, NULL, 12866, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GdkFont,0, 12867, 11, 3.1, NULL, 12866, NULL)
-#elif defined __ia64__
-CheckTypeSize(GdkFont,0, 12867, 3, 3.1, NULL, 12866, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GdkFont,0, 12867, 6, 3.1, NULL, 12866, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GdkFont,0, 12867, 9, 3.1, NULL, 12866, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GdkFont,0, 12867, 10, 3.1, NULL, 12866, NULL)
-#elif defined __s390x__
-CheckTypeSize(GdkFont,0, 12867, 12, 3.1, NULL, 12866, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12866,NULL);\n",architecture,12867,0);
-Msg("Find size of GdkFont (12867)\n");
 #endif
 
 #if defined __i386__
@@ -3073,44 +2997,6 @@ CheckTypeSize(GdkGCClass,192, 13029, 12, 3.1, NULL, 13025, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13025,NULL);\n",architecture,13029,0);
 Msg("Find size of GdkGCClass (13029)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(GdkDeviceClass,0, 13031, 2, 3.1, NULL, 13030, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GdkDeviceClass,0, 13031, 11, 3.1, NULL, 13030, NULL)
-#elif defined __ia64__
-CheckTypeSize(GdkDeviceClass,0, 13031, 3, 3.1, NULL, 13030, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GdkDeviceClass,0, 13031, 6, 3.1, NULL, 13030, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GdkDeviceClass,0, 13031, 9, 3.1, NULL, 13030, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GdkDeviceClass,0, 13031, 10, 3.1, NULL, 13030, NULL)
-#elif defined __s390x__
-CheckTypeSize(GdkDeviceClass,0, 13031, 12, 3.1, NULL, 13030, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13030,NULL);\n",architecture,13031,0);
-Msg("Find size of GdkDeviceClass (13031)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(GdkVisualClass,0, 13033, 2, 3.1, NULL, 13032, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GdkVisualClass,0, 13033, 11, 3.1, NULL, 13032, NULL)
-#elif defined __ia64__
-CheckTypeSize(GdkVisualClass,0, 13033, 3, 3.1, NULL, 13032, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GdkVisualClass,0, 13033, 6, 3.1, NULL, 13032, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GdkVisualClass,0, 13033, 9, 3.1, NULL, 13032, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GdkVisualClass,0, 13033, 10, 3.1, NULL, 13032, NULL)
-#elif defined __s390x__
-CheckTypeSize(GdkVisualClass,0, 13033, 12, 3.1, NULL, 13032, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13032,NULL);\n",architecture,13033,0);
-Msg("Find size of GdkVisualClass (13033)\n");
 #endif
 
 #if defined __i386__

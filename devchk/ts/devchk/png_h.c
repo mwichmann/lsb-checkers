@@ -5,10 +5,6 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#ifdef LSBCC_MODE       /* XXX hand-edit */
-struct png_struct_def{};
-struct png_info_struct{};
-#endif                  /* XXX */
 #include "png.h"
 
 
@@ -2198,25 +2194,6 @@ cnt++;
 #endif
 
 #if defined __i386__
-CheckTypeSize(png_struct,712, 11173, 2, 3.1, NULL, 11172, NULL)
-#elif defined __x86_64__
-CheckTypeSize(png_struct,1208, 11173, 11, 3.1, NULL, 11172, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(png_struct,1152, 11173, 6, 3.1, NULL, 11172, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(png_struct,1664, 11173, 9, 3.1, NULL, 11172, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(png_struct,744, 11173, 10, 3.1, NULL, 11172, NULL)
-#elif defined __s390x__
-CheckTypeSize(png_struct,1288, 11173, 12, 3.1, NULL, 11172, NULL)
-#elif defined __ia64__
-CheckTypeSize(png_struct,1712, 11173, 3, 3.1, NULL, 11172, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11172,NULL);\n",architecture,11173,0);
-Msg("Find size of png_struct (11173)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(png_structp,4, 11175, 2, 3.1, NULL, 11174, NULL)
 #elif defined __x86_64__
 CheckTypeSize(png_structp,8, 11175, 11, 3.1, NULL, 11174, NULL)
@@ -2233,25 +2210,6 @@ CheckTypeSize(png_structp,8, 11175, 12, 3.1, NULL, 11174, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11174,NULL);\n",architecture,11175,0);
 Msg("Find size of png_structp (11175)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(png_info,288, 11177, 2, 3.1, NULL, 11176, NULL)
-#elif defined __x86_64__
-CheckTypeSize(png_info,464, 11177, 11, 3.1, NULL, 11176, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(png_info,288, 11177, 6, 3.1, NULL, 11176, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(png_info,464, 11177, 9, 3.1, NULL, 11176, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(png_info,288, 11177, 10, 3.1, NULL, 11176, NULL)
-#elif defined __s390x__
-CheckTypeSize(png_info,464, 11177, 12, 3.1, NULL, 11176, NULL)
-#elif defined __ia64__
-CheckTypeSize(png_info,464, 11177, 3, 3.1, NULL, 11176, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11176,NULL);\n",architecture,11177,0);
-Msg("Find size of png_info (11177)\n");
 #endif
 
 #if defined __i386__
@@ -2919,7 +2877,7 @@ CheckTypeSize(version_1_2_8,8, 11248, 11, 3.1, NULL, 11175, NULL)
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11175,NULL);\n",architecture,11248,0);
 Msg("Find size of version_1_2_8 (11248)\n");
 #endif
-#endif
+#endif 			/* XXX hand-edit */
 
 #if defined __i386__
 CheckTypeSize(png_uint_32p,4, 16182, 2, 3.1, NULL, 11214, NULL)

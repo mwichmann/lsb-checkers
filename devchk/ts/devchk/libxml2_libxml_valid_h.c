@@ -51,25 +51,6 @@ Msg("Find size of xmlValidCtxtPtr (14937)\n");
 #endif
 
 #if defined __i386__
-CheckTypeSize(xmlAttributeTable,0, 14938, 2, 3.1, NULL, 14723, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xmlAttributeTable,0, 14938, 11, 3.1, NULL, 14723, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlAttributeTable,0, 14938, 3, 3.1, NULL, 14723, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlAttributeTable,0, 14938, 6, 3.1, NULL, 14723, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlAttributeTable,0, 14938, 9, 3.1, NULL, 14723, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xmlAttributeTable,0, 14938, 10, 3.1, NULL, 14723, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlAttributeTable,0, 14938, 12, 3.1, NULL, 14723, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14723,NULL);\n",architecture,14938,0);
-Msg("Find size of xmlAttributeTable (14938)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(xmlAttributeTablePtr,4, 14940, 2, 3.1, NULL, 14939, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlAttributeTablePtr,8, 14940, 11, 3.1, NULL, 14939, NULL)
@@ -200,25 +181,6 @@ CheckTypeSize(xmlElementPtr,8, 14953, 12, 3.1, NULL, 14952, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14952,NULL);\n",architecture,14953,0);
 Msg("Find size of xmlElementPtr (14953)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(xmlNotationTable,0, 14954, 2, 3.1, NULL, 14723, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xmlNotationTable,0, 14954, 11, 3.1, NULL, 14723, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlNotationTable,0, 14954, 3, 3.1, NULL, 14723, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlNotationTable,0, 14954, 6, 3.1, NULL, 14723, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlNotationTable,0, 14954, 9, 3.1, NULL, 14723, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xmlNotationTable,0, 14954, 10, 3.1, NULL, 14723, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlNotationTable,0, 14954, 12, 3.1, NULL, 14723, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14723,NULL);\n",architecture,14954,0);
-Msg("Find size of xmlNotationTable (14954)\n");
 #endif
 
 #if defined __i386__
@@ -355,25 +317,6 @@ Msg("Find size of xmlRefPtr (14970)\n");
 #endif
 
 #if defined __i386__
-CheckTypeSize(xmlElementTable,0, 14971, 2, 3.1, NULL, 14723, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xmlElementTable,0, 14971, 11, 3.1, NULL, 14723, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlElementTable,0, 14971, 3, 3.1, NULL, 14723, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlElementTable,0, 14971, 6, 3.1, NULL, 14723, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlElementTable,0, 14971, 9, 3.1, NULL, 14723, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xmlElementTable,0, 14971, 10, 3.1, NULL, 14723, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlElementTable,0, 14971, 12, 3.1, NULL, 14723, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14723,NULL);\n",architecture,14971,0);
-Msg("Find size of xmlElementTable (14971)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(xmlElementTablePtr,4, 14973, 2, 3.1, NULL, 14972, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlElementTablePtr,8, 14973, 11, 3.1, NULL, 14972, NULL)
@@ -393,25 +336,6 @@ Msg("Find size of xmlElementTablePtr (14973)\n");
 #endif
 
 #if defined __i386__
-CheckTypeSize(xmlIDTable,0, 14974, 2, 3.1, NULL, 14723, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xmlIDTable,0, 14974, 11, 3.1, NULL, 14723, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlIDTable,0, 14974, 3, 3.1, NULL, 14723, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlIDTable,0, 14974, 6, 3.1, NULL, 14723, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlIDTable,0, 14974, 9, 3.1, NULL, 14723, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xmlIDTable,0, 14974, 10, 3.1, NULL, 14723, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlIDTable,0, 14974, 12, 3.1, NULL, 14723, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14723,NULL);\n",architecture,14974,0);
-Msg("Find size of xmlIDTable (14974)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(xmlIDTablePtr,4, 14976, 2, 3.1, NULL, 14975, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlIDTablePtr,8, 14976, 11, 3.1, NULL, 14975, NULL)
@@ -428,25 +352,6 @@ CheckTypeSize(xmlIDTablePtr,8, 14976, 12, 3.1, NULL, 14975, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14975,NULL);\n",architecture,14976,0);
 Msg("Find size of xmlIDTablePtr (14976)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(xmlRefTable,0, 14977, 2, 3.1, NULL, 14723, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xmlRefTable,0, 14977, 11, 3.1, NULL, 14723, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlRefTable,0, 14977, 3, 3.1, NULL, 14723, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlRefTable,0, 14977, 6, 3.1, NULL, 14723, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlRefTable,0, 14977, 9, 3.1, NULL, 14723, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xmlRefTable,0, 14977, 10, 3.1, NULL, 14723, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlRefTable,0, 14977, 12, 3.1, NULL, 14723, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14723,NULL);\n",architecture,14977,0);
-Msg("Find size of xmlRefTable (14977)\n");
 #endif
 
 #if defined __i386__

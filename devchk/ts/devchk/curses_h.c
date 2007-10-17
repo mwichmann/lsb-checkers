@@ -1797,25 +1797,6 @@ Msg("Find size of chtype (8650)\n");
 #endif
 
 #if defined __i386__
-CheckTypeSize(SCREEN,0, 8653, 2, 1.2, NULL, 8652, NULL)
-#elif defined __ia64__
-CheckTypeSize(SCREEN,0, 8653, 3, 1.3, NULL, 8652, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SCREEN,0, 8653, 6, 1.2, NULL, 8652, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SCREEN,0, 8653, 10, 1.3, NULL, 8652, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(SCREEN,0, 8653, 9, 2.0, NULL, 8652, NULL)
-#elif defined __s390x__
-CheckTypeSize(SCREEN,0, 8653, 12, 1.3, NULL, 8652, NULL)
-#elif defined __x86_64__
-CheckTypeSize(SCREEN,0, 8653, 11, 2.0, NULL, 8652, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8652,NULL);\n",architecture,8653,0);
-Msg("Find size of SCREEN (8653)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(WINDOW,100, 8655, 2, 1.2, NULL, 8654, NULL)
 #elif defined __ia64__
 CheckTypeSize(WINDOW,128, 8655, 3, 1.3, NULL, 8654, NULL)
