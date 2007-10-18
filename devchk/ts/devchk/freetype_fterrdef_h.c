@@ -8,7 +8,10 @@
 #include <ft2build.h>
 #include FT_FREETYPE_H
 
+#ifdef LSBCC_MODE
+/* this header is not really supposed to be included separately anyway */
 #include "freetype/fterrdef.h"
+#endif
 
 
 
