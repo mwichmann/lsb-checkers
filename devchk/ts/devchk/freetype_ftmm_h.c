@@ -28,24 +28,39 @@ Msg("Checking data structures in freetype/ftmm.h\n");
 #endif
 
 printf("Checking data structures in freetype/ftmm.h\n");
-#if 1
-CheckTypeSize(FT_MM_Axis,0, 16936, 1, 3.2, NULL, 16935, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_MM_Axis,24, 16936, 11, 3.2, NULL, 16935, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16935,NULL);\n",architecture,16936,0);
+Msg("Find size of FT_MM_Axis (16936)\n");
 #endif
 
-#if 1
-CheckTypeSize(FT_Multi_Master,0, 16938, 1, 3.2, NULL, 16934, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_Multi_Master,104, 16938, 11, 3.2, NULL, 16934, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16934,NULL);\n",architecture,16938,0);
+Msg("Find size of FT_Multi_Master (16938)\n");
 #endif
 
-#if 1
-CheckTypeSize(FT_Var_Axis,0, 16943, 1, 3.2, NULL, 16942, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_Var_Axis,48, 16943, 11, 3.2, NULL, 16942, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16942,NULL);\n",architecture,16943,0);
+Msg("Find size of FT_Var_Axis (16943)\n");
 #endif
 
-#if 1
-CheckTypeSize(FT_Var_Named_Style,0, 16946, 1, 3.2, NULL, 16945, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_Var_Named_Style,16, 16946, 11, 3.2, NULL, 16945, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16945,NULL);\n",architecture,16946,0);
+Msg("Find size of FT_Var_Named_Style (16946)\n");
 #endif
 
-#if 1
-CheckTypeSize(FT_MM_Var,0, 16948, 1, 3.2, NULL, 16941, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_MM_Var,32, 16948, 11, 3.2, NULL, 16941, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16941, NULL);\n",architecture,16948,0);
+Msg("Find size of FT_MM_Var (16948)\n");
 #endif
 
 extern FT_Error FT_Get_Multi_Master_db(FT_Face, FT_Multi_Master *);

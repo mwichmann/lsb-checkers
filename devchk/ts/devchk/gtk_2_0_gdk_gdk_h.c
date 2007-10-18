@@ -25,7 +25,9 @@ struct _GdkAtom { };
 struct _GdkRegion { };
 struct _GdkDisplayManager { };
 struct _GdkPangoRendererPrivate { };
+#ifdef LSBCC_MODE
 struct _GdkFont {};
+#endif
 struct _GdkDeviceClass {};
 struct _GdkVisualClass {};
 #include "gtk-2.0/gdk/gdk.h"

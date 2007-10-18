@@ -60,24 +60,39 @@ printf("Checking data structures in freetype/ftrender.h\n");
 /* No test for FTRenderer_transform */
 #endif
 
-#if 1
-CheckTypeSize(FT_Renderer_RenderFunc,0, 16804, 1, 3.2, NULL, 16803, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_Renderer_RenderFunc,8, 16804, 11, 3.2, NULL, 16803, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16803,NULL);\n",architecture,16804,0);
+Msg("Find size of FT_Renderer_RenderFunc (16804)\n");
 #endif
 
-#if 1
-CheckTypeSize(FT_Renderer_TransformFunc,0, 16807, 1, 3.2, NULL, 16806, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_Renderer_TransformFunc,8, 16807, 11, 3.2, NULL, 16806, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16806,NULL);\n",architecture,16807,0);
+Msg("Find size of FT_Renderer_TransformFunc (16807)\n");
 #endif
 
-#if 1
-CheckTypeSize(FT_Renderer_GetCBoxFunc,0, 16812, 1, 3.2, NULL, 16811, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_Renderer_GetCBoxFunc,8, 16812, 11, 3.2, NULL, 16811, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16811,NULL);\n",architecture,16812,0);
+Msg("Find size of FT_Renderer_GetCBoxFunc (16812)\n");
 #endif
 
-#if 1
-CheckTypeSize(FT_Renderer_SetModeFunc,0, 16814, 1, 3.2, NULL, 16813, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_Renderer_SetModeFunc,8, 16814, 11, 3.2, NULL, 16813, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16813,NULL);\n",architecture,16814,0);
+Msg("Find size of FT_Renderer_SetModeFunc (16814)\n");
 #endif
 
-#if 1
-CheckTypeSize(FT_Renderer_Class,0, 16846, 1, 3.2, NULL, 16778, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_Renderer_Class,120, 16846, 11, 3.2, NULL, 16778, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16778, NULL);\n",architecture,16846,0);
+Msg("Find size of FT_Renderer_Class (16846)\n");
 #endif
 
 extern FT_Error FT_Set_Renderer_db(FT_Library, FT_Renderer, FT_UInt, FT_Parameter *);
