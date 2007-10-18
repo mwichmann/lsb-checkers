@@ -7,6 +7,7 @@
 #define _LSB_DEFAULT_ARCH 1
 #include <ft2build.h>
 #include FT_FREETYPE_H
+#include FT_RENDER_H
 
 #include "freetype/ftglyph.h"
 
