@@ -1003,7 +1003,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef UINT_FAST8_MAX
-	CompareConstant(UINT_FAST8_MAX,(__UINT64_C(18446744073709551615)),10723,architecture,3.2,NULL)
+	CompareConstant(UINT_FAST8_MAX,255,10723,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: UINT_FAST8_MAX\n");
 cnt++;
@@ -1137,7 +1137,7 @@ Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VA
 #endif
 #if _LSB_DEFAULT_ARCH
 #ifdef UINT_FAST64_MAX
-	CompareConstant(UINT_FAST64_MAX,(255),10726,architecture,3.2,NULL)
+	CompareConstant(UINT_FAST64_MAX,-1,10726,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: UINT_FAST64_MAX\n");
 cnt++;

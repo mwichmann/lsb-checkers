@@ -44,8 +44,11 @@ printf("Checking data structures in freetype/fttrigon.h\n");
 /* No test for FT_ANGLE_PI4 */
 #endif
 
-#if 1
-CheckTypeSize(FT_Angle,0, 16921, 1, 3.2, NULL, 16759, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_Angle,8, 16921, 11, 3.2, NULL, 16759, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16759, NULL);\n",architecture,16921,0);
+Msg("Find size of FT_Angle (16921)\n");
 #endif
 
 extern FT_Angle FT_Angle_Diff_db(FT_Angle, FT_Angle);

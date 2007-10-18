@@ -29,7 +29,7 @@ Msg("Checking data structures in freetype/ftoutln.h\n");
 
 printf("Checking data structures in freetype/ftoutln.h\n");
 #if 1
-CheckTypeSize(FT_Orientation,0, 16886, 1, 3.2, NULL, 16885, NULL)
+CheckTypeSize(FT_Orientation,4, 16886, 1, 3.2, NULL, 16885, NULL)
 #endif
 
 extern void FT_Outline_Reverse_db(FT_Outline *);

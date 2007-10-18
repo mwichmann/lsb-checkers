@@ -101,7 +101,7 @@ struct _GtkCellRendererProgressPrivate { };
 struct _GtkToolbarPrivate { };
 #ifdef LSBCC_MODE
 struct _GtkArg { };
-#endif LSBCC_MODE
+#endif
 #include "gtk-2.0/gtk/gtk.h"
 
 
