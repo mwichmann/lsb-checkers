@@ -28,12 +28,18 @@ Msg("Checking data structures in freetype/ftlist.h\n");
 #endif
 
 printf("Checking data structures in freetype/ftlist.h\n");
-#if 1
-CheckTypeSize(FT_List_Destructor,0, 16736, 1, 3.2, NULL, 16735, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_List_Destructor,8, 16736, 11, 3.2, NULL, 16735, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16735,NULL);\n",architecture,16736,0);
+Msg("Find size of FT_List_Destructor (16736)\n");
 #endif
 
-#if 1
-CheckTypeSize(FT_List_Iterator,0, 16739, 1, 3.2, NULL, 16738, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_List_Iterator,8, 16739, 11, 3.2, NULL, 16738, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16738, NULL);\n",architecture,16739,0);
+Msg("Find size of FT_List_Iterator (16739)\n");
 #endif
 
 extern void FT_List_Finalize_db(FT_List, FT_List_Destructor, FT_Memory, void *);
