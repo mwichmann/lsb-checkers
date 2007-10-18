@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define G_DISABLE_DEPRECATED
+/* #define G_DISABLE_DEPRECATED */
 #define G_ERRORCHECK_MUTEXES
 #undef GOBJECT_COMPILATION
 #undef GETTEXT_PACKAGE

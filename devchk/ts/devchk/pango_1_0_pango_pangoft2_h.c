@@ -5,11 +5,11 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define G_DISABLE_DEPRECATED
+/* #define G_DISABLE_DEPRECATED */
 #define G_ERRORCHECK_MUTEXES
 #undef GOBJECT_COMPILATION
 #undef GETTEXT_PACKAGE
-#define PANGO_DISABLE_DEPRECATED
+/* #define PANGO_DISABLE_DEPRECATED */
 
 struct _PangoFT2FontMap { };
 struct _PangoFcFont { };

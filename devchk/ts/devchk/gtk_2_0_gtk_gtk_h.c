@@ -5,14 +5,14 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define G_DISABLE_DEPRECATED
+/* #define G_DISABLE_DEPRECATED */
 #define G_ERRORCHECK_MUTEXES
 #undef GOBJECT_COMPILATION
 #undef GETTEXT_PACKAGE
-#define PANGO_DISABLE_DEPRECATED
-#define GTK_DISABLE_DEPRECATED
-#define GDK_DISABLE_DEPRECATED
-#define GDK_PIXBUF_DISABLE_DEPRECATED
+/* #define PANGO_DISABLE_DEPRECATED */
+/* #define GTK_DISABLE_DEPRECATED */
+/* #define GDK_DISABLE_DEPRECATED */
+/* #define GDK_PIXBUF_DISABLE_DEPRECATED */
 #undef GTK_FILE_SYSTEM_ENABLE_UNSUPPORTED
 #undef GTK_TEXT_USE_INTERNAL_UNSUPPORTED_API
 #undef GTK_COMPILATION
@@ -99,7 +99,9 @@ struct _GtkAlignmentPrivate { };
 struct _GtkFileChooserWidgetPrivate { };
 struct _GtkCellRendererProgressPrivate { };
 struct _GtkToolbarPrivate { };
+#ifdef LSBCC_MODE
 struct _GtkArg { };
+#endif LSBCC_MODE
 #include "gtk-2.0/gtk/gtk.h"
 
 
