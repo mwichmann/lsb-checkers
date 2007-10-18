@@ -29,19 +29,22 @@ Msg("Checking data structures in freetype/ftstroke.h\n");
 
 printf("Checking data structures in freetype/ftstroke.h\n");
 #if 1
-CheckTypeSize(FT_Stroker_LineCap,0, 16967, 1, 3.2, NULL, 16966, NULL)
+CheckTypeSize(FT_Stroker_LineCap,4, 16967, 1, 3.2, NULL, 16966, NULL)
 #endif
 
 #if 1
-CheckTypeSize(FT_Stroker_LineJoin,0, 16969, 1, 3.2, NULL, 16968, NULL)
+CheckTypeSize(FT_Stroker_LineJoin,4, 16969, 1, 3.2, NULL, 16968, NULL)
+#endif
+
+#if defined __x86_64__
+CheckTypeSize(FT_Stroker,8, 16974, 11, 3.2, NULL, 16973, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16973,NULL);\n",architecture,16974,0);
+Msg("Find size of FT_Stroker (16974)\n");
 #endif
 
 #if 1
-CheckTypeSize(FT_Stroker,0, 16974, 1, 3.2, NULL, 16973, NULL)
-#endif
-
-#if 1
-CheckTypeSize(FT_StrokerBorder,0, 16976, 1, 3.2, NULL, 16975, NULL)
+CheckTypeSize(FT_StrokerBorder,4, 16976, 1, 3.2, NULL, 16975, NULL)
 #endif
 
 extern FT_Error FT_Glyph_Stroke_db(FT_Glyph *, FT_Stroker, FT_Bool);

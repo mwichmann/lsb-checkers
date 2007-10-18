@@ -99,6 +99,8 @@ cnt++;
 
 #if defined __i386__
 CheckTypeSize(XftColor,0, 12557, 2, 3.2, NULL, 12556, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XftColor,16, 12557, 11, 3.2, NULL, 12556, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12556,NULL);\n",architecture,12557,0);
 Msg("Find size of XftColor (12557)\n");
@@ -106,6 +108,8 @@ Msg("Find size of XftColor (12557)\n");
 
 #if defined __i386__
 CheckTypeSize(XftFont,0, 12573, 2, 3.2, NULL, 12572, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XftFont,32, 12573, 11, 3.2, NULL, 12572, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12572,NULL);\n",architecture,12573,0);
 Msg("Find size of XftFont (12573)\n");
@@ -113,21 +117,32 @@ Msg("Find size of XftFont (12573)\n");
 
 #if defined __i386__
 CheckTypeSize(XftGlyphSpec,0, 12576, 2, 3.2, NULL, 12575, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XftGlyphSpec,8, 12576, 11, 3.2, NULL, 12575, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12575,NULL);\n",architecture,12576,0);
 Msg("Find size of XftGlyphSpec (12576)\n");
 #endif
 
-#if 1
-CheckTypeSize(XftCharSpec,0, 16995, 1, 3.2, NULL, 16994, NULL)
+#if defined __x86_64__
+CheckTypeSize(XftCharSpec,8, 16995, 11, 3.2, NULL, 16994, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16994,NULL);\n",architecture,16995,0);
+Msg("Find size of XftCharSpec (16995)\n");
 #endif
 
-#if 1
-CheckTypeSize(XftCharFontSpec,0, 17009, 1, 3.2, NULL, 17008, NULL)
+#if defined __x86_64__
+CheckTypeSize(XftCharFontSpec,16, 17009, 11, 3.2, NULL, 17008, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,17008,NULL);\n",architecture,17009,0);
+Msg("Find size of XftCharFontSpec (17009)\n");
 #endif
 
-#if 1
-CheckTypeSize(XftGlyphFontSpec,0, 17017, 1, 3.2, NULL, 17016, NULL)
+#if defined __x86_64__
+CheckTypeSize(XftGlyphFontSpec,16, 17017, 11, 3.2, NULL, 17016, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,17016, NULL);\n",architecture,17017,0);
+Msg("Find size of XftGlyphFontSpec (17017)\n");
 #endif
 
 #ifdef TET_TEST
