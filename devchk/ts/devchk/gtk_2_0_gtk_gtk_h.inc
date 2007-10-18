@@ -92,4 +92,6 @@ struct _GtkAlignmentPrivate { };
 struct _GtkFileChooserWidgetPrivate { };
 struct _GtkCellRendererProgressPrivate { };
 struct _GtkToolbarPrivate { };
+#ifdef LSBCC_MODE
 struct _GtkArg { };
+#endif
