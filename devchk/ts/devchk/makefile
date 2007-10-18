@@ -41,6 +41,7 @@ OBJS = hdrchk.o \
 	freetype_config_ftstdlib_h.o \
 	freetype_freetype_h.o \
 	freetype_ftbdf_h.o \
+	freetype_fterrdef_h.o \
 	freetype_fterrors_h.o \
 	freetype_ftglyph_h.o \
 	freetype_ftimage_h.o \
