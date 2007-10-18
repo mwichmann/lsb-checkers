@@ -29,19 +29,11 @@ Msg("Checking data structures in freetype/ftstroke.h\n");
 
 printf("Checking data structures in freetype/ftstroke.h\n");
 #if 1
-CheckTypeSize(FT_Angle,0, 16921, 1, 3.2, NULL, 16759, NULL)
-#endif
-
-#if 1
 CheckTypeSize(FT_Stroker_LineCap,0, 16967, 1, 3.2, NULL, 16966, NULL)
 #endif
 
 #if 1
 CheckTypeSize(FT_Stroker_LineJoin,0, 16969, 1, 3.2, NULL, 16968, NULL)
-#endif
-
-#if 1
-CheckTypeSize(FT_StrokeBorderRec,0, 16971, 1, 3.2, NULL, 16970, NULL)
 #endif
 
 #if 1
