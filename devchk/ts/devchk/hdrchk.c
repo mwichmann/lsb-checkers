@@ -100,6 +100,7 @@ tcnt+=freetype_config_ftoption_h();
 tcnt+=freetype_config_ftstdlib_h();
 tcnt+=freetype_freetype_h();
 tcnt+=freetype_ftbdf_h();
+tcnt+=freetype_fterrdef_h();
 tcnt+=freetype_fterrors_h();
 tcnt+=freetype_ftglyph_h();
 tcnt+=freetype_ftimage_h();
