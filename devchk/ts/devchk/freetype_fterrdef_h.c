@@ -8,7 +8,10 @@
 #include <ft2build.h>
 #include FT_FREETYPE_H
 
+#ifdef LSBCC_MODE
+/* actually this file isn't intended to be included standalone at all */
 #include "freetype/fterrdef.h"
+#endif
 
 
 
@@ -29,11 +32,13 @@ Msg("Checking data structures in freetype/fterrdef.h\n");
 
 printf("Checking data structures in freetype/fterrdef.h\n");
 #if _LSB_DEFAULT_ARCH
+#ifdef LSBCC_MODE
 #ifdef FT_ERR_BASE
 	CompareConstant(FT_ERR_BASE,0,10356,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: FT_ERR_BASE\n");
 cnt++;
+#endif
 #endif
 
 #endif

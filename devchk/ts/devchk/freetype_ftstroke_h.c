@@ -38,6 +38,8 @@ CheckTypeSize(FT_Stroker_LineJoin,4, 16969, 1, 3.2, NULL, 16968, NULL)
 
 #if defined __x86_64__
 CheckTypeSize(FT_Stroker,8, 16974, 11, 3.2, NULL, 16973, NULL)
+#elif defined __i386__
+CheckTypeSize(FT_Stroker,4, 16974, 2, 3.2, NULL, 16973, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16973,NULL);\n",architecture,16974,0);
 Msg("Find size of FT_Stroker (16974)\n");
