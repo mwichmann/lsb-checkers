@@ -9,6 +9,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <dirent.h>
+#include <glob.h>
 #include "../tetj/tetj.h"
 #include "check_file.h"
 #include "libraries.h"
@@ -39,41 +40,57 @@ concat_string(char *input, char *addition)
 int
 add_library_dir(const char *path, char ***list, int list_size)
 {
-  struct dirent *direntry;
-  DIR *dir = opendir(path);
-  int found_lib;
-  int count = list_size;
-  char *suffix;
+  glob_t pglob;
   char buf[PATH_MAX + 1];
+  int retval, count, index;
+  char *errmsg;
+  char *result;
 
-  if (dir == NULL) {
-    perror("could not open library dir");
+  if (strlen(path) + 10 > PATH_MAX) {
+    fprintf(stderr, "path too long: %s\n", path);
     return -1;
   }
 
-  for (direntry = readdir(dir); direntry != NULL; direntry = readdir(dir)) {
-    found_lib = 0;
+  strncpy(buf, path, PATH_MAX);
+  strncat(buf, "/*.so*", PATH_MAX);
 
-    suffix = direntry->d_name;
-    while (*suffix) suffix++;
-    suffix -= 3;
-    if (suffix < direntry->d_name)
-      continue;
-    if (strcmp(suffix, ".so") == 0)
-      found_lib = 1;
-
-    if (found_lib) {
-      strncpy(buf, path, PATH_MAX - strlen(direntry->d_name) - 1);
-      if (buf[strlen(buf) - 1] != '/')
-        strcat(buf, "/");
-      strncat(buf, direntry->d_name, PATH_MAX - strlen(path) - 1);
-
-      count++;
-      *list = realloc(*list, sizeof(char *) * count);
-      (*list)[count - 1] = strdup(buf);
+  retval = glob(buf, 0, NULL, &pglob);
+  if (retval != 0) {
+    switch (retval) {
+    case GLOB_NOSPACE:
+      errmsg = "out of memory";
+      break;
+    case GLOB_ABORTED:
+      errmsg = "read error";
+      break;
+    case GLOB_NOMATCH:
+      errmsg = "no libraries found";
+      break;
     }
+    fprintf(stderr, "could not find libraries in %s: %s\n", path, errmsg);
+    globfree(&pglob);
+    return -1;
   }
 
+  count = list_size + pglob.gl_pathc;
+  *list = realloc(*list, sizeof(char *) * count);
+  if (*list == NULL) {
+    perror("could not add libraries from directory");
+    globfree(&pglob);
+    return -1;
+  }
+
+  for (index = list_size; index < count; index++) {
+    result = strdup(pglob.gl_pathv[index - list_size]);
+    if (result == NULL) {
+      perror("error adding libraries from directory");
+      globfree(&pglob);
+      return -1;
+    }
+    (*list)[index] = result;
+  }
+
+  globfree(&pglob);
   return count;
 }
 
