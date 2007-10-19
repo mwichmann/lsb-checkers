@@ -1159,6 +1159,8 @@ cnt++;
 
 #if defined __i386__
 CheckTypeSize(Picture,0, 12562, 2, 3.2, NULL, 11186, NULL)
+#elif defined __x86_64__
+CheckTypeSize(Picture,8, 12562, 11, 3.2, NULL, 11186, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11186, NULL);\n",architecture,12562,0);
 Msg("Find size of Picture (12562)\n");

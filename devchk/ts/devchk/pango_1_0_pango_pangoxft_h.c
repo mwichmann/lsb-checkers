@@ -5,11 +5,11 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define G_DISABLE_DEPRECATED
+/* #define G_DISABLE_DEPRECATED */
 #define G_ERRORCHECK_MUTEXES
 #undef GOBJECT_COMPILATION
 #undef GETTEXT_PACKAGE
-#define PANGO_DISABLE_DEPRECATED
+/* #define PANGO_DISABLE_DEPRECATED */
 
 struct _PangoXftRendererPrivate {
 };
@@ -108,25 +108,6 @@ cnt++;
 #endif
 
 #if defined __i386__
-CheckTypeSize(PangoXftRenderer,48, 12560, 2, 3.1, NULL, 12559, NULL)
-#elif defined __x86_64__
-CheckTypeSize(PangoXftRenderer,88, 12560, 11, 3.1, NULL, 12559, NULL)
-#elif defined __ia64__
-CheckTypeSize(PangoXftRenderer,88, 12560, 3, 3.1, NULL, 12559, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(PangoXftRenderer,48, 12560, 6, 3.1, NULL, 12559, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(PangoXftRenderer,88, 12560, 9, 3.1, NULL, 12559, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(PangoXftRenderer,48, 12560, 10, 3.1, NULL, 12559, NULL)
-#elif defined __s390x__
-CheckTypeSize(PangoXftRenderer,88, 12560, 12, 3.1, NULL, 12559, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12559,NULL);\n",architecture,12560,0);
-Msg("Find size of PangoXftRenderer (12560)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(PangoXftSubstituteFunc,4, 12564, 2, 3.1, NULL, 12563, NULL)
 #elif defined __x86_64__
 CheckTypeSize(PangoXftSubstituteFunc,8, 12564, 11, 3.1, NULL, 12563, NULL)
@@ -146,25 +127,6 @@ Msg("Find size of PangoXftSubstituteFunc (12564)\n");
 #endif
 
 #if defined __i386__
-CheckTypeSize(PangoXftFontMap,0, 12566, 2, 3.1, NULL, 12565, NULL)
-#elif defined __x86_64__
-CheckTypeSize(PangoXftFontMap,0, 12566, 11, 3.1, NULL, 12565, NULL)
-#elif defined __ia64__
-CheckTypeSize(PangoXftFontMap,0, 12566, 3, 3.1, NULL, 12565, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(PangoXftFontMap,0, 12566, 6, 3.1, NULL, 12565, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(PangoXftFontMap,0, 12566, 9, 3.1, NULL, 12565, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(PangoXftFontMap,0, 12566, 10, 3.1, NULL, 12565, NULL)
-#elif defined __s390x__
-CheckTypeSize(PangoXftFontMap,0, 12566, 12, 3.1, NULL, 12565, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12565,NULL);\n",architecture,12566,0);
-Msg("Find size of PangoXftFontMap (12566)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(PangoXftRendererClass,132, 12579, 2, 3.1, NULL, 12567, NULL)
 #elif defined __x86_64__
 CheckTypeSize(PangoXftRendererClass,264, 12579, 11, 3.1, NULL, 12567, NULL)
@@ -181,82 +143,6 @@ CheckTypeSize(PangoXftRendererClass,264, 12579, 12, 3.1, NULL, 12567, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12567,NULL);\n",architecture,12579,0);
 Msg("Find size of PangoXftRendererClass (12579)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(PangoFcFontClass,0, 12581, 2, 3.1, NULL, 12580, NULL)
-#elif defined __x86_64__
-CheckTypeSize(PangoFcFontClass,0, 12581, 11, 3.1, NULL, 12580, NULL)
-#elif defined __ia64__
-CheckTypeSize(PangoFcFontClass,0, 12581, 3, 3.1, NULL, 12580, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(PangoFcFontClass,0, 12581, 6, 3.1, NULL, 12580, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(PangoFcFontClass,0, 12581, 9, 3.1, NULL, 12580, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(PangoFcFontClass,0, 12581, 10, 3.1, NULL, 12580, NULL)
-#elif defined __s390x__
-CheckTypeSize(PangoFcFontClass,0, 12581, 12, 3.1, NULL, 12580, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12580,NULL);\n",architecture,12581,0);
-Msg("Find size of PangoFcFontClass (12581)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(PangoFcFont,0, 12583, 2, 3.1, NULL, 12582, NULL)
-#elif defined __x86_64__
-CheckTypeSize(PangoFcFont,0, 12583, 11, 3.1, NULL, 12582, NULL)
-#elif defined __ia64__
-CheckTypeSize(PangoFcFont,0, 12583, 3, 3.1, NULL, 12582, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(PangoFcFont,0, 12583, 6, 3.1, NULL, 12582, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(PangoFcFont,0, 12583, 9, 3.1, NULL, 12582, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(PangoFcFont,0, 12583, 10, 3.1, NULL, 12582, NULL)
-#elif defined __s390x__
-CheckTypeSize(PangoFcFont,0, 12583, 12, 3.1, NULL, 12582, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12582,NULL);\n",architecture,12583,0);
-Msg("Find size of PangoFcFont (12583)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(PangoXftFont,0, 12585, 2, 3.1, NULL, 12584, NULL)
-#elif defined __x86_64__
-CheckTypeSize(PangoXftFont,0, 12585, 11, 3.1, NULL, 12584, NULL)
-#elif defined __ia64__
-CheckTypeSize(PangoXftFont,0, 12585, 3, 3.1, NULL, 12584, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(PangoXftFont,0, 12585, 6, 3.1, NULL, 12584, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(PangoXftFont,0, 12585, 9, 3.1, NULL, 12584, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(PangoXftFont,0, 12585, 10, 3.1, NULL, 12584, NULL)
-#elif defined __s390x__
-CheckTypeSize(PangoXftFont,0, 12585, 12, 3.1, NULL, 12584, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12584,NULL);\n",architecture,12585,0);
-Msg("Find size of PangoXftFont (12585)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(PangoXftRendererPrivate,0, 12587, 2, 3.1, NULL, 12586, NULL)
-#elif defined __x86_64__
-CheckTypeSize(PangoXftRendererPrivate,0, 12587, 11, 3.1, NULL, 12586, NULL)
-#elif defined __ia64__
-CheckTypeSize(PangoXftRendererPrivate,0, 12587, 3, 3.1, NULL, 12586, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(PangoXftRendererPrivate,0, 12587, 6, 3.1, NULL, 12586, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(PangoXftRendererPrivate,0, 12587, 9, 3.1, NULL, 12586, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(PangoXftRendererPrivate,0, 12587, 10, 3.1, NULL, 12586, NULL)
-#elif defined __s390x__
-CheckTypeSize(PangoXftRendererPrivate,0, 12587, 12, 3.1, NULL, 12586, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12586, NULL);\n",architecture,12587,0);
-Msg("Find size of PangoXftRendererPrivate (12587)\n");
 #endif
 
 extern void pango_xft_substitute_changed_db(Display *, int);

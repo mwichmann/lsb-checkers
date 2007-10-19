@@ -38,25 +38,6 @@ Msg("Checking data structures in libxml2/libxml/xmlschemas.h\n");
 
 printf("Checking data structures in libxml2/libxml/xmlschemas.h\n");
 #if defined __i386__
-CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 2, 3.1, NULL, 15026, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 11, 3.1, NULL, 15026, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 3, 3.1, NULL, 15026, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 6, 3.1, NULL, 15026, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 9, 3.1, NULL, 15026, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 10, 3.1, NULL, 15026, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlSchemaValidCtxt,0, 15027, 12, 3.1, NULL, 15026, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15026,NULL);\n",architecture,15027,0);
-Msg("Find size of xmlSchemaValidCtxt (15027)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(xmlSchemaValidCtxtPtr,4, 15029, 2, 3.1, NULL, 15028, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlSchemaValidCtxtPtr,8, 15029, 11, 3.1, NULL, 15028, NULL)
@@ -76,25 +57,6 @@ Msg("Find size of xmlSchemaValidCtxtPtr (15029)\n");
 #endif
 
 #if defined __i386__
-CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 2, 3.1, NULL, 15030, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 11, 3.1, NULL, 15030, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 3, 3.1, NULL, 15030, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 6, 3.1, NULL, 15030, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 9, 3.1, NULL, 15030, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 10, 3.1, NULL, 15030, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlSchemaSAXPlugStruct,0, 15031, 12, 3.1, NULL, 15030, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15030,NULL);\n",architecture,15031,0);
-Msg("Find size of xmlSchemaSAXPlugStruct (15031)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(xmlSchemaSAXPlugPtr,4, 15033, 2, 3.1, NULL, 15032, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlSchemaSAXPlugPtr,8, 15033, 11, 3.1, NULL, 15032, NULL)
@@ -111,25 +73,6 @@ CheckTypeSize(xmlSchemaSAXPlugPtr,8, 15033, 12, 3.1, NULL, 15032, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15032,NULL);\n",architecture,15033,0);
 Msg("Find size of xmlSchemaSAXPlugPtr (15033)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 2, 3.1, NULL, 15034, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 11, 3.1, NULL, 15034, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 3, 3.1, NULL, 15034, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 6, 3.1, NULL, 15034, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 9, 3.1, NULL, 15034, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 10, 3.1, NULL, 15034, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlSchemaParserCtxt,0, 15035, 12, 3.1, NULL, 15034, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15034,NULL);\n",architecture,15035,0);
-Msg("Find size of xmlSchemaParserCtxt (15035)\n");
 #endif
 
 #if defined __i386__
@@ -187,25 +130,6 @@ CheckTypeSize(xmlSchemaValidityWarningFunc,8, 15041, 12, 3.1, NULL, 14655, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14655,NULL);\n",architecture,15041,0);
 Msg("Find size of xmlSchemaValidityWarningFunc (15041)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(xmlSchema,84, 15044, 2, 3.1, NULL, 15043, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xmlSchema,160, 15044, 11, 3.1, NULL, 15043, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlSchema,160, 15044, 3, 3.1, NULL, 15043, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlSchema,84, 15044, 6, 3.1, NULL, 15043, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlSchema,160, 15044, 9, 3.1, NULL, 15043, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xmlSchema,84, 15044, 10, 3.1, NULL, 15043, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlSchema,160, 15044, 12, 3.1, NULL, 15043, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15043,NULL);\n",architecture,15044,0);
-Msg("Find size of xmlSchema (15044)\n");
 #endif
 
 #if defined __i386__

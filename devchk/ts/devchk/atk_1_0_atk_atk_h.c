@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define G_DISABLE_DEPRECATED
+/* #define G_DISABLE_DEPRECATED */
 #define G_ERRORCHECK_MUTEXES
 #undef GOBJECT_COMPILATION
 #undef GETTEXT_PACKAGE
@@ -575,25 +575,6 @@ printf("Checking data structures in atk-1.0/atk/atk.h\n");
 #endif
 
 #if defined __i386__
-CheckTypeSize(AtkText,0, 12076, 2, 3.1, NULL, 12075, NULL)
-#elif defined __x86_64__
-CheckTypeSize(AtkText,0, 12076, 11, 3.1, NULL, 12075, NULL)
-#elif defined __ia64__
-CheckTypeSize(AtkText,0, 12076, 3, 3.1, NULL, 12075, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(AtkText,0, 12076, 6, 3.1, NULL, 12075, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(AtkText,0, 12076, 9, 3.1, NULL, 12075, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(AtkText,0, 12076, 10, 3.1, NULL, 12075, NULL)
-#elif defined __s390x__
-CheckTypeSize(AtkText,0, 12076, 12, 3.1, NULL, 12075, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12075,NULL);\n",architecture,12076,0);
-Msg("Find size of AtkText (12076)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(AtkObject,36, 12079, 2, 3.1, NULL, 12078, NULL)
 #elif defined __x86_64__
 CheckTypeSize(AtkObject,72, 12079, 11, 3.1, NULL, 12078, NULL)
@@ -708,25 +689,6 @@ Msg("Find size of AtkPropertyChangeHandler (12092)\n");
 #endif
 
 #if defined __i386__
-CheckTypeSize(AtkImage,0, 12095, 2, 3.1, NULL, 12094, NULL)
-#elif defined __x86_64__
-CheckTypeSize(AtkImage,0, 12095, 11, 3.1, NULL, 12094, NULL)
-#elif defined __ia64__
-CheckTypeSize(AtkImage,0, 12095, 3, 3.1, NULL, 12094, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(AtkImage,0, 12095, 6, 3.1, NULL, 12094, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(AtkImage,0, 12095, 9, 3.1, NULL, 12094, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(AtkImage,0, 12095, 10, 3.1, NULL, 12094, NULL)
-#elif defined __s390x__
-CheckTypeSize(AtkImage,0, 12095, 12, 3.1, NULL, 12094, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12094,NULL);\n",architecture,12095,0);
-Msg("Find size of AtkImage (12095)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(AtkCoordType,4, 12098, 2, 3.1, NULL, 12097, NULL)
 #elif defined __x86_64__
 CheckTypeSize(AtkCoordType,4, 12098, 11, 3.1, NULL, 12097, NULL)
@@ -781,44 +743,6 @@ CheckTypeSize(AtkRelation,40, 12102, 12, 3.1, NULL, 12101, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12101,NULL);\n",architecture,12102,0);
 Msg("Find size of AtkRelation (12102)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(AtkDocument,0, 12105, 2, 3.1, NULL, 12104, NULL)
-#elif defined __x86_64__
-CheckTypeSize(AtkDocument,0, 12105, 11, 3.1, NULL, 12104, NULL)
-#elif defined __ia64__
-CheckTypeSize(AtkDocument,0, 12105, 3, 3.1, NULL, 12104, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(AtkDocument,0, 12105, 6, 3.1, NULL, 12104, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(AtkDocument,0, 12105, 9, 3.1, NULL, 12104, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(AtkDocument,0, 12105, 10, 3.1, NULL, 12104, NULL)
-#elif defined __s390x__
-CheckTypeSize(AtkDocument,0, 12105, 12, 3.1, NULL, 12104, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12104,NULL);\n",architecture,12105,0);
-Msg("Find size of AtkDocument (12105)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(AtkTable,0, 12108, 2, 3.1, NULL, 12107, NULL)
-#elif defined __x86_64__
-CheckTypeSize(AtkTable,0, 12108, 11, 3.1, NULL, 12107, NULL)
-#elif defined __ia64__
-CheckTypeSize(AtkTable,0, 12108, 3, 3.1, NULL, 12107, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(AtkTable,0, 12108, 6, 3.1, NULL, 12107, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(AtkTable,0, 12108, 9, 3.1, NULL, 12107, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(AtkTable,0, 12108, 10, 3.1, NULL, 12107, NULL)
-#elif defined __s390x__
-CheckTypeSize(AtkTable,0, 12108, 12, 3.1, NULL, 12107, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12107,NULL);\n",architecture,12108,0);
-Msg("Find size of AtkTable (12108)\n");
 #endif
 
 #if defined __i386__
@@ -898,25 +822,6 @@ Msg("Find size of AtkRegistry (12120)\n");
 #endif
 
 #if defined __i386__
-CheckTypeSize(AtkEditableText,0, 12123, 2, 3.1, NULL, 12122, NULL)
-#elif defined __x86_64__
-CheckTypeSize(AtkEditableText,0, 12123, 11, 3.1, NULL, 12122, NULL)
-#elif defined __ia64__
-CheckTypeSize(AtkEditableText,0, 12123, 3, 3.1, NULL, 12122, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(AtkEditableText,0, 12123, 6, 3.1, NULL, 12122, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(AtkEditableText,0, 12123, 9, 3.1, NULL, 12122, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(AtkEditableText,0, 12123, 10, 3.1, NULL, 12122, NULL)
-#elif defined __s390x__
-CheckTypeSize(AtkEditableText,0, 12123, 12, 3.1, NULL, 12122, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12122,NULL);\n",architecture,12123,0);
-Msg("Find size of AtkEditableText (12123)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(AtkAttributeSet,8, 12125, 2, 3.1, NULL, 11451, NULL)
 #elif defined __x86_64__
 CheckTypeSize(AtkAttributeSet,16, 12125, 11, 3.1, NULL, 11451, NULL)
@@ -933,120 +838,6 @@ CheckTypeSize(AtkAttributeSet,16, 12125, 12, 3.1, NULL, 11451, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11451,NULL);\n",architecture,12125,0);
 Msg("Find size of AtkAttributeSet (12125)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(AtkHypertext,0, 12128, 2, 3.1, NULL, 12127, NULL)
-#elif defined __x86_64__
-CheckTypeSize(AtkHypertext,0, 12128, 11, 3.1, NULL, 12127, NULL)
-#elif defined __ia64__
-CheckTypeSize(AtkHypertext,0, 12128, 3, 3.1, NULL, 12127, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(AtkHypertext,0, 12128, 6, 3.1, NULL, 12127, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(AtkHypertext,0, 12128, 9, 3.1, NULL, 12127, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(AtkHypertext,0, 12128, 10, 3.1, NULL, 12127, NULL)
-#elif defined __s390x__
-CheckTypeSize(AtkHypertext,0, 12128, 12, 3.1, NULL, 12127, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12127,NULL);\n",architecture,12128,0);
-Msg("Find size of AtkHypertext (12128)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(AtkSelection,0, 12131, 2, 3.1, NULL, 12130, NULL)
-#elif defined __x86_64__
-CheckTypeSize(AtkSelection,0, 12131, 11, 3.1, NULL, 12130, NULL)
-#elif defined __ia64__
-CheckTypeSize(AtkSelection,0, 12131, 3, 3.1, NULL, 12130, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(AtkSelection,0, 12131, 6, 3.1, NULL, 12130, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(AtkSelection,0, 12131, 9, 3.1, NULL, 12130, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(AtkSelection,0, 12131, 10, 3.1, NULL, 12130, NULL)
-#elif defined __s390x__
-CheckTypeSize(AtkSelection,0, 12131, 12, 3.1, NULL, 12130, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12130,NULL);\n",architecture,12131,0);
-Msg("Find size of AtkSelection (12131)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(AtkAction,0, 12134, 2, 3.1, NULL, 12133, NULL)
-#elif defined __x86_64__
-CheckTypeSize(AtkAction,0, 12134, 11, 3.1, NULL, 12133, NULL)
-#elif defined __ia64__
-CheckTypeSize(AtkAction,0, 12134, 3, 3.1, NULL, 12133, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(AtkAction,0, 12134, 6, 3.1, NULL, 12133, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(AtkAction,0, 12134, 9, 3.1, NULL, 12133, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(AtkAction,0, 12134, 10, 3.1, NULL, 12133, NULL)
-#elif defined __s390x__
-CheckTypeSize(AtkAction,0, 12134, 12, 3.1, NULL, 12133, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12133,NULL);\n",architecture,12134,0);
-Msg("Find size of AtkAction (12134)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(AtkComponent,0, 12137, 2, 3.1, NULL, 12136, NULL)
-#elif defined __x86_64__
-CheckTypeSize(AtkComponent,0, 12137, 11, 3.1, NULL, 12136, NULL)
-#elif defined __ia64__
-CheckTypeSize(AtkComponent,0, 12137, 3, 3.1, NULL, 12136, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(AtkComponent,0, 12137, 6, 3.1, NULL, 12136, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(AtkComponent,0, 12137, 9, 3.1, NULL, 12136, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(AtkComponent,0, 12137, 10, 3.1, NULL, 12136, NULL)
-#elif defined __s390x__
-CheckTypeSize(AtkComponent,0, 12137, 12, 3.1, NULL, 12136, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12136,NULL);\n",architecture,12137,0);
-Msg("Find size of AtkComponent (12137)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(AtkValue,0, 12140, 2, 3.1, NULL, 12139, NULL)
-#elif defined __x86_64__
-CheckTypeSize(AtkValue,0, 12140, 11, 3.1, NULL, 12139, NULL)
-#elif defined __ia64__
-CheckTypeSize(AtkValue,0, 12140, 3, 3.1, NULL, 12139, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(AtkValue,0, 12140, 6, 3.1, NULL, 12139, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(AtkValue,0, 12140, 9, 3.1, NULL, 12139, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(AtkValue,0, 12140, 10, 3.1, NULL, 12139, NULL)
-#elif defined __s390x__
-CheckTypeSize(AtkValue,0, 12140, 12, 3.1, NULL, 12139, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12139,NULL);\n",architecture,12140,0);
-Msg("Find size of AtkValue (12140)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(AtkStreamableContent,0, 12143, 2, 3.1, NULL, 12142, NULL)
-#elif defined __x86_64__
-CheckTypeSize(AtkStreamableContent,0, 12143, 11, 3.1, NULL, 12142, NULL)
-#elif defined __ia64__
-CheckTypeSize(AtkStreamableContent,0, 12143, 3, 3.1, NULL, 12142, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(AtkStreamableContent,0, 12143, 6, 3.1, NULL, 12142, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(AtkStreamableContent,0, 12143, 9, 3.1, NULL, 12142, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(AtkStreamableContent,0, 12143, 10, 3.1, NULL, 12142, NULL)
-#elif defined __s390x__
-CheckTypeSize(AtkStreamableContent,0, 12143, 12, 3.1, NULL, 12142, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12142,NULL);\n",architecture,12143,0);
-Msg("Find size of AtkStreamableContent (12143)\n");
 #endif
 
 #if defined __i386__
@@ -1275,25 +1066,6 @@ CheckTypeSize(AtkTextClipType,4, 12172, 12, 3.1, NULL, 12171, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12171,NULL);\n",architecture,12172,0);
 Msg("Find size of AtkTextClipType (12172)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(AtkImplementor,0, 12176, 2, 3.1, NULL, 12175, NULL)
-#elif defined __x86_64__
-CheckTypeSize(AtkImplementor,0, 12176, 11, 3.1, NULL, 12175, NULL)
-#elif defined __ia64__
-CheckTypeSize(AtkImplementor,0, 12176, 3, 3.1, NULL, 12175, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(AtkImplementor,0, 12176, 6, 3.1, NULL, 12175, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(AtkImplementor,0, 12176, 9, 3.1, NULL, 12175, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(AtkImplementor,0, 12176, 10, 3.1, NULL, 12175, NULL)
-#elif defined __s390x__
-CheckTypeSize(AtkImplementor,0, 12176, 12, 3.1, NULL, 12175, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12175,NULL);\n",architecture,12176,0);
-Msg("Find size of AtkImplementor (12176)\n");
 #endif
 
 #if defined __i386__

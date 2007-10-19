@@ -49,6 +49,7 @@ CheckEnum("RPC_MISMATCH",RPC_MISMATCH,0,34798)
 CheckEnum("AUTH_ERROR",AUTH_ERROR,1,34799)
 #endif
 
+#ifdef LSBCC_MODE
 #if defined __i386__
 CheckTypeSize(struct accepted_reply,24, 10417, 2, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct accepted_reply,ar_verf,12,2,34800)
@@ -131,6 +132,7 @@ CheckOffset(struct rejected_reply,ru,8,11,34813)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10423,0);
 Msg("Find size of rejected_reply (10423)\n");
+#endif
 #endif
 
 #if defined __i386__
@@ -312,14 +314,18 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architec
 Msg("Find size of rpc_msg (9984)\n");
 #endif
 
+#ifdef LSBCC_MODE
 extern bool_t xdr_accepted_reply_db(XDR *, struct accepted_reply *);
 CheckInterfacedef(xdr_accepted_reply,xdr_accepted_reply_db);
+#endif
 extern bool_t xdr_callhdr_db(XDR *, struct rpc_msg *);
 CheckInterfacedef(xdr_callhdr,xdr_callhdr_db);
 extern bool_t xdr_callmsg_db(XDR *, struct rpc_msg *);
 CheckInterfacedef(xdr_callmsg,xdr_callmsg_db);
+#ifdef LSBCC_MODE
 extern bool_t xdr_rejected_reply_db(XDR *, struct rejected_reply *);
 CheckInterfacedef(xdr_rejected_reply,xdr_rejected_reply_db);
+#endif
 extern bool_t xdr_replymsg_db(XDR *, struct rpc_msg *);
 CheckInterfacedef(xdr_replymsg,xdr_replymsg_db);
 #ifdef TET_TEST

@@ -163,7 +163,6 @@ int main(int argc, char *argv[])
     int i, j;
     int option_index = 0;
     int desktop_mode = 1; // default to all modules in cert
-    char *p;
     struct utsname unameb;
 
 /* ignore LSB_PRODUCT for LSB 3.1

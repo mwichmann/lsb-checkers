@@ -5,6 +5,9 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#include <ft2build.h>
+#include FT_FREETYPE_H
+
 #include "freetype/tttables.h"
 
 
@@ -26,7 +29,7 @@ Msg("Checking data structures in freetype/tttables.h\n");
 
 printf("Checking data structures in freetype/tttables.h\n");
 #if 1
-CheckTypeSize(FT_Sfnt_Tag,0, 16925, 1, 3.2, NULL, 16924, NULL)
+CheckTypeSize(FT_Sfnt_Tag,4, 16925, 1, 3.2, NULL, 16924, NULL)
 #endif
 
 extern FT_ULong FT_Get_CMap_Language_ID_db(FT_CharMap);
