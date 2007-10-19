@@ -34,6 +34,8 @@ CheckTypeSize(BDF_PropertyType,4, 16929, 1, 3.2, NULL, 16928, NULL)
 
 #if defined __x86_64__
 CheckTypeSize(BDF_PropertyRec,16, 16932, 11, 3.2, NULL, 16927, NULL)
+#elif defined __i386__
+CheckTypeSize(BDF_PropertyRec,8, 16932, 2, 3.2, NULL, 16927, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16927, NULL);\n",architecture,16932,0);
 Msg("Find size of BDF_PropertyRec (16932)\n");
