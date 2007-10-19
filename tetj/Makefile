@@ -1,4 +1,4 @@
-CFLAGS=-g -Wall
+CFLAGS=-g -Wall -Werror
 OBJS=tetj.o
 
 LIB=libtetj.a

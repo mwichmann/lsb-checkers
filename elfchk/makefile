@@ -1,4 +1,4 @@
-CFLAGS=-g -Wall -I../tetj
+CFLAGS=-g -Wall -Werror -I../tetj
 
 OBJS=dynamic.o elfchk.o hdr.o proghdr.o sections.o symvers.o util.o \
 	proginterp.o progbits.o note.o dumpbytes.o dwarf.o ../lsb_version.o
