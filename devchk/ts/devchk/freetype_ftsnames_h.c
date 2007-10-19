@@ -30,6 +30,8 @@ Msg("Checking data structures in freetype/ftsnames.h\n");
 printf("Checking data structures in freetype/ftsnames.h\n");
 #if defined __x86_64__
 CheckTypeSize(FT_SfntName,24, 16963, 11, 3.2, NULL, 16962, NULL)
+#elif defined __i386__
+CheckTypeSize(FT_SfntName,16, 16963, 2, 3.2, NULL, 16962, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16962, NULL);\n",architecture,16963,0);
 Msg("Find size of FT_SfntName (16963)\n");

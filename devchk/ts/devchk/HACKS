@@ -4,3 +4,4 @@ pthread_h.c
 signal_h.c
 sys_shm_h.c
 rpc_rpc_msg_h.c
+freetype_fterrdef_h.c
