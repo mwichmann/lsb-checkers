@@ -265,25 +265,6 @@ Msg("Find size of xmlDeregisterNodeFunc (14927)\n");
 #endif
 
 #if defined __i386__
-CheckTypeSize(xmlGlobalState,512, 14933, 2, 3.1, NULL, 14932, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xmlGlobalState,960, 14933, 11, 3.1, NULL, 14932, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlGlobalState,960, 14933, 3, 3.1, NULL, 14932, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlGlobalState,512, 14933, 6, 3.1, NULL, 14932, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlGlobalState,960, 14933, 9, 3.1, NULL, 14932, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xmlGlobalState,512, 14933, 10, 3.1, NULL, 14932, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlGlobalState,960, 14933, 12, 3.1, NULL, 14932, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14932,NULL);\n",architecture,14933,0);
-Msg("Find size of xmlGlobalState (14933)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(xmlGlobalStatePtr,4, 14935, 2, 3.1, NULL, 14934, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlGlobalStatePtr,8, 14935, 11, 3.1, NULL, 14934, NULL)

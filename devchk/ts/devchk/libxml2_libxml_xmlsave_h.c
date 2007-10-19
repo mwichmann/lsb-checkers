@@ -29,25 +29,6 @@ Msg("Checking data structures in libxml2/libxml/xmlsave.h\n");
 
 printf("Checking data structures in libxml2/libxml/xmlsave.h\n");
 #if defined __i386__
-CheckTypeSize(xmlSaveCtxt,0, 14836, 2, 3.1, NULL, 14835, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xmlSaveCtxt,0, 14836, 11, 3.1, NULL, 14835, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlSaveCtxt,0, 14836, 3, 3.1, NULL, 14835, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlSaveCtxt,0, 14836, 6, 3.1, NULL, 14835, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlSaveCtxt,0, 14836, 9, 3.1, NULL, 14835, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xmlSaveCtxt,0, 14836, 10, 3.1, NULL, 14835, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlSaveCtxt,0, 14836, 12, 3.1, NULL, 14835, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14835,NULL);\n",architecture,14836,0);
-Msg("Find size of xmlSaveCtxt (14836)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(xmlSaveCtxtPtr,4, 14838, 2, 3.1, NULL, 14837, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlSaveCtxtPtr,8, 14838, 11, 3.1, NULL, 14837, NULL)

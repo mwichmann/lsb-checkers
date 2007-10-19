@@ -968,25 +968,6 @@ Msg("Find size of FcBool (11078)\n");
 #endif
 
 #if defined __i386__
-CheckTypeSize(FcPattern,0, 11080, 2, 3.1, NULL, 11079, NULL)
-#elif defined __x86_64__
-CheckTypeSize(FcPattern,0, 11080, 11, 3.1, NULL, 11079, NULL)
-#elif defined __ia64__
-CheckTypeSize(FcPattern,0, 11080, 3, 3.1, NULL, 11079, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(FcPattern,0, 11080, 6, 3.1, NULL, 11079, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(FcPattern,0, 11080, 9, 3.1, NULL, 11079, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(FcPattern,0, 11080, 10, 3.1, NULL, 11079, NULL)
-#elif defined __s390x__
-CheckTypeSize(FcPattern,0, 11080, 12, 3.1, NULL, 11079, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11079,NULL);\n",architecture,11080,0);
-Msg("Find size of FcPattern (11080)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(FcType,4, 11084, 2, 3.1, NULL, 11083, NULL)
 #elif defined __x86_64__
 CheckTypeSize(FcType,4, 11084, 11, 3.1, NULL, 11083, NULL)
@@ -1044,44 +1025,6 @@ Msg("Find size of FcMatrix (11089)\n");
 #endif
 
 #if defined __i386__
-CheckTypeSize(FcCharSet,0, 11093, 2, 3.1, NULL, 11092, NULL)
-#elif defined __x86_64__
-CheckTypeSize(FcCharSet,0, 11093, 11, 3.1, NULL, 11092, NULL)
-#elif defined __ia64__
-CheckTypeSize(FcCharSet,0, 11093, 3, 3.1, NULL, 11092, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(FcCharSet,0, 11093, 6, 3.1, NULL, 11092, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(FcCharSet,0, 11093, 9, 3.1, NULL, 11092, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(FcCharSet,0, 11093, 10, 3.1, NULL, 11092, NULL)
-#elif defined __s390x__
-CheckTypeSize(FcCharSet,0, 11093, 12, 3.1, NULL, 11092, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11092,NULL);\n",architecture,11093,0);
-Msg("Find size of FcCharSet (11093)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(FcLangSet,0, 11099, 2, 3.1, NULL, 11098, NULL)
-#elif defined __x86_64__
-CheckTypeSize(FcLangSet,0, 11099, 11, 3.1, NULL, 11098, NULL)
-#elif defined __ia64__
-CheckTypeSize(FcLangSet,0, 11099, 3, 3.1, NULL, 11098, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(FcLangSet,0, 11099, 6, 3.1, NULL, 11098, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(FcLangSet,0, 11099, 9, 3.1, NULL, 11098, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(FcLangSet,0, 11099, 10, 3.1, NULL, 11098, NULL)
-#elif defined __s390x__
-CheckTypeSize(FcLangSet,0, 11099, 12, 3.1, NULL, 11098, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11098,NULL);\n",architecture,11099,0);
-Msg("Find size of FcLangSet (11099)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(FcValue,12, 11103, 2, 3.1, NULL, 11082, NULL)
 #elif defined __x86_64__
 CheckTypeSize(FcValue,16, 11103, 11, 3.1, NULL, 11082, NULL)
@@ -1098,63 +1041,6 @@ CheckTypeSize(FcValue,16, 11103, 12, 3.1, NULL, 11082, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11082,NULL);\n",architecture,11103,0);
 Msg("Find size of FcValue (11103)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(FcStrList,0, 11105, 2, 3.1, NULL, 11104, NULL)
-#elif defined __x86_64__
-CheckTypeSize(FcStrList,0, 11105, 11, 3.1, NULL, 11104, NULL)
-#elif defined __ia64__
-CheckTypeSize(FcStrList,0, 11105, 3, 3.1, NULL, 11104, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(FcStrList,0, 11105, 6, 3.1, NULL, 11104, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(FcStrList,0, 11105, 9, 3.1, NULL, 11104, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(FcStrList,0, 11105, 10, 3.1, NULL, 11104, NULL)
-#elif defined __s390x__
-CheckTypeSize(FcStrList,0, 11105, 12, 3.1, NULL, 11104, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11104,NULL);\n",architecture,11105,0);
-Msg("Find size of FcStrList (11105)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(FcConfig,0, 11108, 2, 3.1, NULL, 11107, NULL)
-#elif defined __x86_64__
-CheckTypeSize(FcConfig,0, 11108, 11, 3.1, NULL, 11107, NULL)
-#elif defined __ia64__
-CheckTypeSize(FcConfig,0, 11108, 3, 3.1, NULL, 11107, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(FcConfig,0, 11108, 6, 3.1, NULL, 11107, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(FcConfig,0, 11108, 9, 3.1, NULL, 11107, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(FcConfig,0, 11108, 10, 3.1, NULL, 11107, NULL)
-#elif defined __s390x__
-CheckTypeSize(FcConfig,0, 11108, 12, 3.1, NULL, 11107, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11107,NULL);\n",architecture,11108,0);
-Msg("Find size of FcConfig (11108)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(FcStrSet,0, 11111, 2, 3.1, NULL, 11110, NULL)
-#elif defined __x86_64__
-CheckTypeSize(FcStrSet,0, 11111, 11, 3.1, NULL, 11110, NULL)
-#elif defined __ia64__
-CheckTypeSize(FcStrSet,0, 11111, 3, 3.1, NULL, 11110, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(FcStrSet,0, 11111, 6, 3.1, NULL, 11110, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(FcStrSet,0, 11111, 9, 3.1, NULL, 11110, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(FcStrSet,0, 11111, 10, 3.1, NULL, 11110, NULL)
-#elif defined __s390x__
-CheckTypeSize(FcStrSet,0, 11111, 12, 3.1, NULL, 11110, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11110,NULL);\n",architecture,11111,0);
-Msg("Find size of FcStrSet (11111)\n");
 #endif
 
 #if defined __i386__
@@ -1234,25 +1120,6 @@ Msg("Find size of FcEndian (11121)\n");
 #endif
 
 #if defined __i386__
-CheckTypeSize(FcAtomic,0, 11124, 2, 3.1, NULL, 11123, NULL)
-#elif defined __x86_64__
-CheckTypeSize(FcAtomic,0, 11124, 11, 3.1, NULL, 11123, NULL)
-#elif defined __ia64__
-CheckTypeSize(FcAtomic,0, 11124, 3, 3.1, NULL, 11123, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(FcAtomic,0, 11124, 6, 3.1, NULL, 11123, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(FcAtomic,0, 11124, 9, 3.1, NULL, 11123, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(FcAtomic,0, 11124, 10, 3.1, NULL, 11123, NULL)
-#elif defined __s390x__
-CheckTypeSize(FcAtomic,0, 11124, 12, 3.1, NULL, 11123, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11123,NULL);\n",architecture,11124,0);
-Msg("Find size of FcAtomic (11124)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(FcConstant,12, 11127, 2, 3.1, NULL, 11126, NULL)
 #elif defined __x86_64__
 CheckTypeSize(FcConstant,24, 11127, 11, 3.1, NULL, 11126, NULL)
@@ -1310,25 +1177,6 @@ Msg("Find size of FcSetName (11135)\n");
 #endif
 
 #if defined __i386__
-CheckTypeSize(FcBlanks,0, 11139, 2, 3.1, NULL, 11138, NULL)
-#elif defined __x86_64__
-CheckTypeSize(FcBlanks,0, 11139, 11, 3.1, NULL, 11138, NULL)
-#elif defined __ia64__
-CheckTypeSize(FcBlanks,0, 11139, 3, 3.1, NULL, 11138, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(FcBlanks,0, 11139, 6, 3.1, NULL, 11138, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(FcBlanks,0, 11139, 9, 3.1, NULL, 11138, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(FcBlanks,0, 11139, 10, 3.1, NULL, 11138, NULL)
-#elif defined __s390x__
-CheckTypeSize(FcBlanks,0, 11139, 12, 3.1, NULL, 11138, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11138,NULL);\n",architecture,11139,0);
-Msg("Find size of FcBlanks (11139)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(FcResult,4, 11142, 2, 3.1, NULL, 11141, NULL)
 #elif defined __x86_64__
 CheckTypeSize(FcResult,4, 11142, 11, 3.1, NULL, 11141, NULL)
@@ -1364,25 +1212,6 @@ CheckTypeSize(FcObjectType,16, 11145, 12, 3.1, NULL, 11144, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11144,NULL);\n",architecture,11145,0);
 Msg("Find size of FcObjectType (11145)\n");
-#endif
-
-#if defined __i386__
-CheckTypeSize(FcGlobalCache,0, 11150, 2, 3.1, NULL, 11149, NULL)
-#elif defined __x86_64__
-CheckTypeSize(FcGlobalCache,0, 11150, 11, 3.1, NULL, 11149, NULL)
-#elif defined __ia64__
-CheckTypeSize(FcGlobalCache,0, 11150, 3, 3.1, NULL, 11149, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(FcGlobalCache,0, 11150, 6, 3.1, NULL, 11149, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(FcGlobalCache,0, 11150, 9, 3.1, NULL, 11149, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(FcGlobalCache,0, 11150, 10, 3.1, NULL, 11149, NULL)
-#elif defined __s390x__
-CheckTypeSize(FcGlobalCache,0, 11150, 12, 3.1, NULL, 11149, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11149,NULL);\n",architecture,11150,0);
-Msg("Find size of FcGlobalCache (11150)\n");
 #endif
 
 #if defined __i386__

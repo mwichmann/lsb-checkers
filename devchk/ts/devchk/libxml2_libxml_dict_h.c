@@ -28,25 +28,6 @@ Msg("Checking data structures in libxml2/libxml/dict.h\n");
 
 printf("Checking data structures in libxml2/libxml/dict.h\n");
 #if defined __i386__
-CheckTypeSize(xmlDict,0, 14686, 2, 3.1, NULL, 14599, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xmlDict,0, 14686, 11, 3.1, NULL, 14599, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlDict,0, 14686, 3, 3.1, NULL, 14599, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlDict,0, 14686, 6, 3.1, NULL, 14599, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlDict,0, 14686, 9, 3.1, NULL, 14599, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xmlDict,0, 14686, 10, 3.1, NULL, 14599, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlDict,0, 14686, 12, 3.1, NULL, 14599, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14599,NULL);\n",architecture,14686,0);
-Msg("Find size of xmlDict (14686)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(xmlDictPtr,4, 14688, 2, 3.1, NULL, 14687, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlDictPtr,8, 14688, 11, 3.1, NULL, 14687, NULL)

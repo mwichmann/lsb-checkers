@@ -2,7 +2,7 @@ LSBCMDCHK_VERSION=unofficial
 
 OBJS = cmdchk.o 
 
-CFLAGS=-g -I../elfchk -DLSBVERSION=\"$$LSBVERSION\" -DLSBCMDCHK_VERSION=\"$(LSBCMDCHK_VERSION)\" -Wall
+CFLAGS=-g -I../elfchk -DLSBVERSION=\"$$LSBVERSION\" -DLSBCMDCHK_VERSION=\"$(LSBCMDCHK_VERSION)\" -Wall -Werror
 
 all:: cmdchk cmdlist
 

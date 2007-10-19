@@ -48,25 +48,6 @@ printf("Checking data structures in libxml2/libxml/xpath.h\n");
 #endif
 
 #if defined __i386__
-CheckTypeSize(xmlXPathCompExpr,0, 14856, 2, 3.1, NULL, 14855, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xmlXPathCompExpr,0, 14856, 11, 3.1, NULL, 14855, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlXPathCompExpr,0, 14856, 3, 3.1, NULL, 14855, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlXPathCompExpr,0, 14856, 6, 3.1, NULL, 14855, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlXPathCompExpr,0, 14856, 9, 3.1, NULL, 14855, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xmlXPathCompExpr,0, 14856, 10, 3.1, NULL, 14855, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlXPathCompExpr,0, 14856, 12, 3.1, NULL, 14855, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14855,NULL);\n",architecture,14856,0);
-Msg("Find size of xmlXPathCompExpr (14856)\n");
-#endif
-
-#if defined __i386__
 CheckTypeSize(xmlXPathCompExprPtr,4, 14858, 2, 3.1, NULL, 14857, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlXPathCompExprPtr,8, 14858, 11, 3.1, NULL, 14857, NULL)

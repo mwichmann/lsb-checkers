@@ -5,6 +5,9 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#include <ft2build.h>
+#include FT_FREETYPE_H
+
 #include "freetype/freetype.h"
 
 
@@ -410,7 +413,7 @@ CheckOffset(struct FT_FaceRec_,ascender,0,2,64038)
 CheckOffset(struct FT_FaceRec_,descender,0,2,64039)
 CheckOffset(struct FT_FaceRec_,height,0,2,64040)
 CheckOffset(struct FT_FaceRec_,max_advance_width,0,2,64041)
-CheckOffset(struct FT_FaceRec_,max_advance_weight,0,2,64042)
+CheckOffset(struct FT_FaceRec_,max_advance_height,0,2,64042)
 CheckOffset(struct FT_FaceRec_,underline_position,0,2,64043)
 CheckOffset(struct FT_FaceRec_,underline_thickness,0,2,64044)
 CheckOffset(struct FT_FaceRec_,glyph,0,2,64045)
@@ -444,7 +447,7 @@ CheckOffset(struct FT_FaceRec_,ascender,0,3,64038)
 CheckOffset(struct FT_FaceRec_,descender,0,3,64039)
 CheckOffset(struct FT_FaceRec_,height,0,3,64040)
 CheckOffset(struct FT_FaceRec_,max_advance_width,0,3,64041)
-CheckOffset(struct FT_FaceRec_,max_advance_weight,0,3,64042)
+CheckOffset(struct FT_FaceRec_,max_advance_height,0,3,64042)
 CheckOffset(struct FT_FaceRec_,underline_position,0,3,64043)
 CheckOffset(struct FT_FaceRec_,underline_thickness,0,3,64044)
 CheckOffset(struct FT_FaceRec_,glyph,0,3,64045)
@@ -478,7 +481,7 @@ CheckOffset(struct FT_FaceRec_,ascender,0,6,64038)
 CheckOffset(struct FT_FaceRec_,descender,0,6,64039)
 CheckOffset(struct FT_FaceRec_,height,0,6,64040)
 CheckOffset(struct FT_FaceRec_,max_advance_width,0,6,64041)
-CheckOffset(struct FT_FaceRec_,max_advance_weight,0,6,64042)
+CheckOffset(struct FT_FaceRec_,max_advance_height,0,6,64042)
 CheckOffset(struct FT_FaceRec_,underline_position,0,6,64043)
 CheckOffset(struct FT_FaceRec_,underline_thickness,0,6,64044)
 CheckOffset(struct FT_FaceRec_,glyph,0,6,64045)
@@ -512,7 +515,7 @@ CheckOffset(struct FT_FaceRec_,ascender,0,9,64038)
 CheckOffset(struct FT_FaceRec_,descender,0,9,64039)
 CheckOffset(struct FT_FaceRec_,height,0,9,64040)
 CheckOffset(struct FT_FaceRec_,max_advance_width,0,9,64041)
-CheckOffset(struct FT_FaceRec_,max_advance_weight,0,9,64042)
+CheckOffset(struct FT_FaceRec_,max_advance_height,0,9,64042)
 CheckOffset(struct FT_FaceRec_,underline_position,0,9,64043)
 CheckOffset(struct FT_FaceRec_,underline_thickness,0,9,64044)
 CheckOffset(struct FT_FaceRec_,glyph,0,9,64045)
@@ -546,7 +549,7 @@ CheckOffset(struct FT_FaceRec_,ascender,0,10,64038)
 CheckOffset(struct FT_FaceRec_,descender,0,10,64039)
 CheckOffset(struct FT_FaceRec_,height,0,10,64040)
 CheckOffset(struct FT_FaceRec_,max_advance_width,0,10,64041)
-CheckOffset(struct FT_FaceRec_,max_advance_weight,0,10,64042)
+CheckOffset(struct FT_FaceRec_,max_advance_height,0,10,64042)
 CheckOffset(struct FT_FaceRec_,underline_position,0,10,64043)
 CheckOffset(struct FT_FaceRec_,underline_thickness,0,10,64044)
 CheckOffset(struct FT_FaceRec_,glyph,0,10,64045)
@@ -560,39 +563,67 @@ CheckOffset(struct FT_FaceRec_,autohint,0,10,64052)
 CheckOffset(struct FT_FaceRec_,extensions,0,10,64053)
 CheckOffset(struct FT_FaceRec_,internal,0,10,64054)
 #elif defined __x86_64__
-CheckTypeSize(struct FT_FaceRec_,0, 11166, 11, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_FaceRec_ on x86-64\n");
-CheckOffset(struct FT_FaceRec_,num_faces,0,11,64024)
-CheckOffset(struct FT_FaceRec_,face_index,0,11,64025)
-CheckOffset(struct FT_FaceRec_,face_flags,0,11,64026)
-CheckOffset(struct FT_FaceRec_,style_flags,0,11,64027)
-CheckOffset(struct FT_FaceRec_,num_glyphs,0,11,64028)
-CheckOffset(struct FT_FaceRec_,family_name,0,11,64029)
-CheckOffset(struct FT_FaceRec_,style_name,0,11,64030)
-CheckOffset(struct FT_FaceRec_,num_fixed_sizes,0,11,64031)
-CheckOffset(struct FT_FaceRec_,available_sizes,0,11,64032)
-CheckOffset(struct FT_FaceRec_,num_charmaps,0,11,64033)
-CheckOffset(struct FT_FaceRec_,charmaps,0,11,64034)
-CheckOffset(struct FT_FaceRec_,generic,0,11,64035)
-CheckOffset(struct FT_FaceRec_,bbox,0,11,64036)
-CheckOffset(struct FT_FaceRec_,units_per_EM,0,11,64037)
-CheckOffset(struct FT_FaceRec_,ascender,0,11,64038)
-CheckOffset(struct FT_FaceRec_,descender,0,11,64039)
-CheckOffset(struct FT_FaceRec_,height,0,11,64040)
-CheckOffset(struct FT_FaceRec_,max_advance_width,0,11,64041)
-CheckOffset(struct FT_FaceRec_,max_advance_weight,0,11,64042)
-CheckOffset(struct FT_FaceRec_,underline_position,0,11,64043)
-CheckOffset(struct FT_FaceRec_,underline_thickness,0,11,64044)
-CheckOffset(struct FT_FaceRec_,glyph,0,11,64045)
-CheckOffset(struct FT_FaceRec_,size,0,11,64046)
-CheckOffset(struct FT_FaceRec_,charmap,0,11,64047)
-CheckOffset(struct FT_FaceRec_,driver,0,11,64048)
-CheckOffset(struct FT_FaceRec_,memory,0,11,64049)
-CheckOffset(struct FT_FaceRec_,stream,0,11,64050)
-CheckOffset(struct FT_FaceRec_,sizes_list,0,11,64051)
-CheckOffset(struct FT_FaceRec_,autohint,0,11,64052)
-CheckOffset(struct FT_FaceRec_,extensions,0,11,64053)
-CheckOffset(struct FT_FaceRec_,internal,0,11,64054)
+CheckTypeSize(struct FT_FaceRec_,248, 11166, 11, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct FT_FaceRec_,face_index,8,11,64025)
+CheckOffset(struct FT_FaceRec_,face_index,8,11,64025)
+CheckMemberSize(struct FT_FaceRec_,face_flags,8,11,64026)
+CheckOffset(struct FT_FaceRec_,face_flags,16,11,64026)
+CheckMemberSize(struct FT_FaceRec_,style_flags,8,11,64027)
+CheckOffset(struct FT_FaceRec_,style_flags,24,11,64027)
+CheckMemberSize(struct FT_FaceRec_,num_glyphs,8,11,64028)
+CheckOffset(struct FT_FaceRec_,num_glyphs,32,11,64028)
+CheckMemberSize(struct FT_FaceRec_,family_name,8,11,64029)
+CheckOffset(struct FT_FaceRec_,family_name,40,11,64029)
+CheckMemberSize(struct FT_FaceRec_,style_name,8,11,64030)
+CheckOffset(struct FT_FaceRec_,style_name,48,11,64030)
+CheckMemberSize(struct FT_FaceRec_,num_fixed_sizes,4,11,64031)
+CheckOffset(struct FT_FaceRec_,num_fixed_sizes,56,11,64031)
+CheckMemberSize(struct FT_FaceRec_,available_sizes,8,11,64032)
+CheckOffset(struct FT_FaceRec_,available_sizes,64,11,64032)
+CheckMemberSize(struct FT_FaceRec_,num_charmaps,4,11,64033)
+CheckOffset(struct FT_FaceRec_,num_charmaps,72,11,64033)
+CheckMemberSize(struct FT_FaceRec_,charmaps,8,11,64034)
+CheckOffset(struct FT_FaceRec_,charmaps,80,11,64034)
+CheckMemberSize(struct FT_FaceRec_,generic,16,11,64035)
+CheckOffset(struct FT_FaceRec_,generic,88,11,64035)
+CheckMemberSize(struct FT_FaceRec_,bbox,32,11,64036)
+CheckOffset(struct FT_FaceRec_,bbox,104,11,64036)
+CheckMemberSize(struct FT_FaceRec_,units_per_EM,2,11,64037)
+CheckOffset(struct FT_FaceRec_,units_per_EM,136,11,64037)
+CheckMemberSize(struct FT_FaceRec_,ascender,2,11,64038)
+CheckOffset(struct FT_FaceRec_,ascender,138,11,64038)
+CheckMemberSize(struct FT_FaceRec_,descender,2,11,64039)
+CheckOffset(struct FT_FaceRec_,descender,140,11,64039)
+CheckMemberSize(struct FT_FaceRec_,height,2,11,64040)
+CheckOffset(struct FT_FaceRec_,height,142,11,64040)
+CheckMemberSize(struct FT_FaceRec_,max_advance_width,2,11,64041)
+CheckOffset(struct FT_FaceRec_,max_advance_width,144,11,64041)
+CheckMemberSize(struct FT_FaceRec_,max_advance_height,2,11,64042)
+CheckOffset(struct FT_FaceRec_,max_advance_height,146,11,64042)
+CheckMemberSize(struct FT_FaceRec_,underline_position,2,11,64043)
+CheckOffset(struct FT_FaceRec_,underline_position,148,11,64043)
+CheckMemberSize(struct FT_FaceRec_,underline_thickness,2,11,64044)
+CheckOffset(struct FT_FaceRec_,underline_thickness,150,11,64044)
+CheckMemberSize(struct FT_FaceRec_,glyph,8,11,64045)
+CheckOffset(struct FT_FaceRec_,glyph,152,11,64045)
+CheckMemberSize(struct FT_FaceRec_,size,8,11,64046)
+CheckOffset(struct FT_FaceRec_,size,160,11,64046)
+CheckMemberSize(struct FT_FaceRec_,charmap,8,11,64047)
+CheckOffset(struct FT_FaceRec_,charmap,168,11,64047)
+CheckMemberSize(struct FT_FaceRec_,driver,8,11,64048)
+CheckOffset(struct FT_FaceRec_,driver,176,11,64048)
+CheckMemberSize(struct FT_FaceRec_,memory,8,11,64049)
+CheckOffset(struct FT_FaceRec_,memory,184,11,64049)
+CheckMemberSize(struct FT_FaceRec_,stream,8,11,64050)
+CheckOffset(struct FT_FaceRec_,stream,192,11,64050)
+CheckMemberSize(struct FT_FaceRec_,sizes_list,16,11,64051)
+CheckOffset(struct FT_FaceRec_,sizes_list,200,11,64051)
+CheckMemberSize(struct FT_FaceRec_,autohint,16,11,64052)
+CheckOffset(struct FT_FaceRec_,autohint,216,11,64052)
+CheckMemberSize(struct FT_FaceRec_,extensions,8,11,64053)
+CheckOffset(struct FT_FaceRec_,extensions,232,11,64053)
+CheckMemberSize(struct FT_FaceRec_,internal,8,11,64054)
+CheckOffset(struct FT_FaceRec_,internal,240,11,64054)
 #elif defined __s390x__
 CheckTypeSize(struct FT_FaceRec_,0, 11166, 12, 3.2, NULL, 0, NULL)
 Msg("Missing member data for FT_FaceRec_ on S390X\n");
@@ -614,7 +645,7 @@ CheckOffset(struct FT_FaceRec_,ascender,0,12,64038)
 CheckOffset(struct FT_FaceRec_,descender,0,12,64039)
 CheckOffset(struct FT_FaceRec_,height,0,12,64040)
 CheckOffset(struct FT_FaceRec_,max_advance_width,0,12,64041)
-CheckOffset(struct FT_FaceRec_,max_advance_weight,0,12,64042)
+CheckOffset(struct FT_FaceRec_,max_advance_height,0,12,64042)
 CheckOffset(struct FT_FaceRec_,underline_position,0,12,64043)
 CheckOffset(struct FT_FaceRec_,underline_thickness,0,12,64044)
 CheckOffset(struct FT_FaceRec_,glyph,0,12,64045)
@@ -631,81 +662,127 @@ CheckOffset(struct FT_FaceRec_,internal,0,12,64054)
 
 #if defined __i386__
 CheckTypeSize(FT_Face,0, 11168, 2, 3.2, NULL, 11167, NULL)
+#elif defined __x86_64__
+CheckTypeSize(FT_Face,8, 11168, 11, 3.2, NULL, 11167, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11167,NULL);\n",architecture,11168,0);
 Msg("Find size of FT_Face (11168)\n");
 #endif
 
-#if 1
-CheckTypeSize(FT_Module,0, 16761, 1, 3.2, NULL, 16760, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_Module,8, 16761, 11, 3.2, NULL, 16760, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16760,NULL);\n",architecture,16761,0);
+Msg("Find size of FT_Module (16761)\n");
 #endif
 
 #if 1
-CheckTypeSize(FT_Library,0, 16773, 1, 3.2, NULL, 16772, NULL)
+CheckTypeSize(FT_Library,8, 16773, 1, 3.2, NULL, 16772, NULL)
 #endif
 
-#if 1
-CheckTypeSize(FT_ModuleRec,0, 16777, 1, 3.2, NULL, 16752, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_Renderer,8, 16782, 11, 3.2, NULL, 16781, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16781,NULL);\n",architecture,16782,0);
+Msg("Find size of FT_Renderer (16782)\n");
 #endif
 
-#if 1
-CheckTypeSize(FT_Renderer,0, 16782, 1, 3.2, NULL, 16781, NULL)
+#if defined __x86_64__
+CheckTypeSize(struct FT_GlyphSlotRec_,304, 16783, 11, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct FT_GlyphSlotRec_,face,8,11,54002)
+CheckOffset(struct FT_GlyphSlotRec_,face,8,11,54002)
+CheckMemberSize(struct FT_GlyphSlotRec_,next,8,11,54003)
+CheckOffset(struct FT_GlyphSlotRec_,next,16,11,54003)
+CheckMemberSize(struct FT_GlyphSlotRec_,reserved,4,11,54004)
+CheckOffset(struct FT_GlyphSlotRec_,reserved,24,11,54004)
+CheckMemberSize(struct FT_GlyphSlotRec_,generic,16,11,54005)
+CheckOffset(struct FT_GlyphSlotRec_,generic,32,11,54005)
+CheckMemberSize(struct FT_GlyphSlotRec_,metrics,64,11,54014)
+CheckOffset(struct FT_GlyphSlotRec_,metrics,48,11,54014)
+CheckMemberSize(struct FT_GlyphSlotRec_,linearHoriAdvance,8,11,54015)
+CheckOffset(struct FT_GlyphSlotRec_,linearHoriAdvance,112,11,54015)
+CheckMemberSize(struct FT_GlyphSlotRec_,linearVertAdvance,8,11,54016)
+CheckOffset(struct FT_GlyphSlotRec_,linearVertAdvance,120,11,54016)
+CheckMemberSize(struct FT_GlyphSlotRec_,advance,16,11,54017)
+CheckOffset(struct FT_GlyphSlotRec_,advance,128,11,54017)
+CheckMemberSize(struct FT_GlyphSlotRec_,format,4,11,54018)
+CheckOffset(struct FT_GlyphSlotRec_,format,144,11,54018)
+CheckMemberSize(struct FT_GlyphSlotRec_,bitmap,40,11,54019)
+CheckOffset(struct FT_GlyphSlotRec_,bitmap,152,11,54019)
+CheckMemberSize(struct FT_GlyphSlotRec_,bitmap_left,4,11,54020)
+CheckOffset(struct FT_GlyphSlotRec_,bitmap_left,192,11,54020)
+CheckMemberSize(struct FT_GlyphSlotRec_,bitmap_top,4,11,54021)
+CheckOffset(struct FT_GlyphSlotRec_,bitmap_top,196,11,54021)
+CheckMemberSize(struct FT_GlyphSlotRec_,outline,40,11,54022)
+CheckOffset(struct FT_GlyphSlotRec_,outline,200,11,54022)
+CheckMemberSize(struct FT_GlyphSlotRec_,num_subglyphs,4,11,54023)
+CheckOffset(struct FT_GlyphSlotRec_,num_subglyphs,240,11,54023)
+CheckMemberSize(struct FT_GlyphSlotRec_,subglyphs,8,11,54033)
+CheckOffset(struct FT_GlyphSlotRec_,subglyphs,248,11,54033)
+CheckMemberSize(struct FT_GlyphSlotRec_,control_data,8,11,54034)
+CheckOffset(struct FT_GlyphSlotRec_,control_data,256,11,54034)
+CheckMemberSize(struct FT_GlyphSlotRec_,control_len,8,11,54035)
+CheckOffset(struct FT_GlyphSlotRec_,control_len,264,11,54035)
+CheckMemberSize(struct FT_GlyphSlotRec_,lsb_delta,8,11,54036)
+CheckOffset(struct FT_GlyphSlotRec_,lsb_delta,272,11,54036)
+CheckMemberSize(struct FT_GlyphSlotRec_,rsb_delta,8,11,54037)
+CheckOffset(struct FT_GlyphSlotRec_,rsb_delta,280,11,54037)
+CheckMemberSize(struct FT_GlyphSlotRec_,other,8,11,54038)
+CheckOffset(struct FT_GlyphSlotRec_,other,288,11,54038)
+CheckMemberSize(struct FT_GlyphSlotRec_,internal,8,11,54057)
+CheckOffset(struct FT_GlyphSlotRec_,internal,296,11,54057)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16783,0);
+Msg("Find size of FT_GlyphSlotRec_ (16783)\n");
 #endif
 
-#if 1
-CheckTypeSize(struct FT_GlyphSlotRec_,160, 16783, 1, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_GlyphSlotRec_ on All\n");
-CheckOffset(struct FT_GlyphSlotRec_,library,0,1,54001)
-CheckOffset(struct FT_GlyphSlotRec_,face,0,1,54002)
-CheckOffset(struct FT_GlyphSlotRec_,next,0,1,54003)
-CheckOffset(struct FT_GlyphSlotRec_,reserved,0,1,54004)
-CheckOffset(struct FT_GlyphSlotRec_,generic,0,1,54005)
-CheckOffset(struct FT_GlyphSlotRec_,metrics,0,1,54014)
-CheckOffset(struct FT_GlyphSlotRec_,linearHoriAdvance,0,1,54015)
-CheckOffset(struct FT_GlyphSlotRec_,linearVertAdvance,0,1,54016)
-CheckOffset(struct FT_GlyphSlotRec_,advance,0,1,54017)
-CheckOffset(struct FT_GlyphSlotRec_,format,0,1,54018)
-CheckOffset(struct FT_GlyphSlotRec_,bitmap,0,1,54019)
-CheckOffset(struct FT_GlyphSlotRec_,bitmap_left,0,1,54020)
-CheckOffset(struct FT_GlyphSlotRec_,bitmap_top,0,1,54021)
-CheckOffset(struct FT_GlyphSlotRec_,outline,0,1,54022)
-CheckOffset(struct FT_GlyphSlotRec_,num_subglyphs,0,1,54023)
-CheckOffset(struct FT_GlyphSlotRec_,subglyphs,0,1,54033)
-CheckOffset(struct FT_GlyphSlotRec_,control_data,0,1,54034)
-CheckOffset(struct FT_GlyphSlotRec_,control_len,0,1,54035)
-CheckOffset(struct FT_GlyphSlotRec_,lsb_delta,0,1,54036)
-CheckOffset(struct FT_GlyphSlotRec_,rsb_delta,0,1,54037)
-CheckOffset(struct FT_GlyphSlotRec_,other,0,1,54038)
-CheckOffset(struct FT_GlyphSlotRec_,internal,0,1,54057)
+#if defined __x86_64__
+CheckTypeSize(FT_GlyphSlot,8, 16785, 11, 3.2, NULL, 16784, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16784,NULL);\n",architecture,16785,0);
+Msg("Find size of FT_GlyphSlot (16785)\n");
 #endif
 
-#if 1
-CheckTypeSize(FT_GlyphSlot,0, 16785, 1, 3.2, NULL, 16784, NULL)
+#if defined __x86_64__
+CheckTypeSize(struct FT_Glyph_Metrics_,64, 16786, 11, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct FT_Glyph_Metrics_,height,8,11,54007)
+CheckOffset(struct FT_Glyph_Metrics_,height,8,11,54007)
+CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingX,8,11,54008)
+CheckOffset(struct FT_Glyph_Metrics_,horiBearingX,16,11,54008)
+CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingY,8,11,54009)
+CheckOffset(struct FT_Glyph_Metrics_,horiBearingY,24,11,54009)
+CheckMemberSize(struct FT_Glyph_Metrics_,horiAdvance,8,11,54010)
+CheckOffset(struct FT_Glyph_Metrics_,horiAdvance,32,11,54010)
+CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingX,8,11,54011)
+CheckOffset(struct FT_Glyph_Metrics_,vertBearingX,40,11,54011)
+CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingY,8,11,54012)
+CheckOffset(struct FT_Glyph_Metrics_,vertBearingY,48,11,54012)
+CheckMemberSize(struct FT_Glyph_Metrics_,vertAdvance,8,11,54013)
+CheckOffset(struct FT_Glyph_Metrics_,vertAdvance,56,11,54013)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16786,0);
+Msg("Find size of FT_Glyph_Metrics_ (16786)\n");
 #endif
 
-#if 1
-CheckTypeSize(struct FT_Glyph_Metrics_,32, 16786, 1, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_Glyph_Metrics_ on All\n");
-CheckOffset(struct FT_Glyph_Metrics_,width,0,1,54006)
-CheckOffset(struct FT_Glyph_Metrics_,height,0,1,54007)
-CheckOffset(struct FT_Glyph_Metrics_,horiBearingX,0,1,54008)
-CheckOffset(struct FT_Glyph_Metrics_,horiBearingY,0,1,54009)
-CheckOffset(struct FT_Glyph_Metrics_,horiAdvance,0,1,54010)
-CheckOffset(struct FT_Glyph_Metrics_,vertBearingX,0,1,54011)
-CheckOffset(struct FT_Glyph_Metrics_,vertBearingY,0,1,54012)
-CheckOffset(struct FT_Glyph_Metrics_,vertAdvance,0,1,54013)
+#if defined __x86_64__
+CheckTypeSize(FT_Glyph_Metrics,64, 16787, 11, 3.2, NULL, 16786, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16786,NULL);\n",architecture,16787,0);
+Msg("Find size of FT_Glyph_Metrics (16787)\n");
 #endif
 
-#if 1
-CheckTypeSize(FT_Glyph_Metrics,0, 16787, 1, 3.2, NULL, 16786, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_SubGlyph,8, 16793, 11, 3.2, NULL, 16792, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16792,NULL);\n",architecture,16793,0);
+Msg("Find size of FT_SubGlyph (16793)\n");
 #endif
 
-#if 1
-CheckTypeSize(FT_SubGlyph,0, 16793, 1, 3.2, NULL, 16792, NULL)
-#endif
-
-#if 1
-CheckTypeSize(FT_Slot_Internal,0, 16802, 1, 3.2, NULL, 16801, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_Slot_Internal,8, 16802, 11, 3.2, NULL, 16801, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16801,NULL);\n",architecture,16802,0);
+Msg("Find size of FT_Slot_Internal (16802)\n");
 #endif
 
 #if defined __i386__
@@ -744,12 +821,13 @@ CheckOffset(struct FT_CharMapRec_,encoding,0,10,54206)
 CheckOffset(struct FT_CharMapRec_,platform_id,0,10,54207)
 CheckOffset(struct FT_CharMapRec_,encoding_id,0,10,54208)
 #elif defined __x86_64__
-CheckTypeSize(struct FT_CharMapRec_,0, 16887, 11, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_CharMapRec_ on x86-64\n");
-CheckOffset(struct FT_CharMapRec_,face,0,11,54186)
-CheckOffset(struct FT_CharMapRec_,encoding,0,11,54206)
-CheckOffset(struct FT_CharMapRec_,platform_id,0,11,54207)
-CheckOffset(struct FT_CharMapRec_,encoding_id,0,11,54208)
+CheckTypeSize(struct FT_CharMapRec_,16, 16887, 11, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct FT_CharMapRec_,encoding,4,11,54206)
+CheckOffset(struct FT_CharMapRec_,encoding,8,11,54206)
+CheckMemberSize(struct FT_CharMapRec_,platform_id,2,11,54207)
+CheckOffset(struct FT_CharMapRec_,platform_id,12,11,54207)
+CheckMemberSize(struct FT_CharMapRec_,encoding_id,2,11,54208)
+CheckOffset(struct FT_CharMapRec_,encoding_id,14,11,54208)
 #elif defined __s390x__
 CheckTypeSize(struct FT_CharMapRec_,0, 16887, 12, 3.2, NULL, 0, NULL)
 Msg("Missing member data for FT_CharMapRec_ on S390X\n");
@@ -763,15 +841,21 @@ Msg("Find size of FT_CharMapRec_ (16887)\n");
 #endif
 
 #if 1
-CheckTypeSize(FT_Encoding,0, 16889, 1, 3.2, NULL, 16888, NULL)
+CheckTypeSize(FT_Encoding,4, 16889, 1, 3.2, NULL, 16888, NULL)
 #endif
 
-#if 1
-CheckTypeSize(FT_CharMap,0, 16891, 1, 3.2, NULL, 16890, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_CharMap,8, 16891, 11, 3.2, NULL, 16890, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16890,NULL);\n",architecture,16891,0);
+Msg("Find size of FT_CharMap (16891)\n");
 #endif
 
-#if 1
-CheckTypeSize(FT_F26Dot6,0, 16897, 1, 3.2, NULL, 8, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_F26Dot6,8, 16897, 11, 3.2, NULL, 8, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,8,NULL);\n",architecture,16897,0);
+Msg("Find size of FT_F26Dot6 (16897)\n");
 #endif
 
 #if 1
@@ -784,31 +868,64 @@ CheckEnum("FT_RENDER_MODE_MAX",FT_RENDER_MODE_MAX,5,54214)
 #endif
 
 #if 1
-CheckTypeSize(struct FT_Parameter_,8, 16912, 1, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_Parameter_ on All\n");
-CheckOffset(struct FT_Parameter_,tag,0,1,54239)
-CheckOffset(struct FT_Parameter_,data,0,1,54240)
+CheckTypeSize(FT_Render_Mode,4, 16900, 1, 3.2, NULL, 16899, NULL)
 #endif
 
-#if 1
-CheckTypeSize(FT_Parameter,0, 16913, 1, 3.2, NULL, 16912, NULL)
+#if defined __x86_64__
+CheckTypeSize(struct FT_Parameter_,16, 16912, 11, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct FT_Parameter_,data,8,11,54240)
+CheckOffset(struct FT_Parameter_,data,8,11,54240)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16912,0);
+Msg("Find size of FT_Parameter_ (16912)\n");
 #endif
 
-#if 1
-CheckTypeSize(FT_Open_Args,0, 16915, 1, 3.2, NULL, 16901, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_Parameter,16, 16913, 11, 3.2, NULL, 16912, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16912,NULL);\n",architecture,16913,0);
+Msg("Find size of FT_Parameter (16913)\n");
 #endif
 
-#if 1
-CheckTypeSize(struct FT_SizeRec_,44, 16951, 1, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_SizeRec_ on All\n");
-CheckOffset(struct FT_SizeRec_,face,0,1,54278)
-CheckOffset(struct FT_SizeRec_,generic,0,1,54279)
-CheckOffset(struct FT_SizeRec_,metrics,0,1,54288)
-CheckOffset(struct FT_SizeRec_,internal,0,1,54289)
+#if defined __x86_64__
+CheckTypeSize(FT_Open_Args,64, 16915, 11, 3.2, NULL, 16901, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16901,NULL);\n",architecture,16915,0);
+Msg("Find size of FT_Open_Args (16915)\n");
 #endif
 
-#if 1
-CheckTypeSize(FT_Size,0, 16958, 1, 3.2, NULL, 16957, NULL)
+#if defined __x86_64__
+CheckTypeSize(struct FT_SizeRec_,88, 16951, 11, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct FT_SizeRec_,generic,16,11,54279)
+CheckOffset(struct FT_SizeRec_,generic,8,11,54279)
+CheckMemberSize(struct FT_SizeRec_,metrics,56,11,54288)
+CheckOffset(struct FT_SizeRec_,metrics,24,11,54288)
+CheckMemberSize(struct FT_SizeRec_,internal,8,11,54289)
+CheckOffset(struct FT_SizeRec_,internal,80,11,54289)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16951,0);
+Msg("Find size of FT_SizeRec_ (16951)\n");
+#endif
+
+#if defined __x86_64__
+CheckTypeSize(FT_Size_Metrics,56, 16953, 11, 3.2, NULL, 16952, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16952,NULL);\n",architecture,16953,0);
+Msg("Find size of FT_Size_Metrics (16953)\n");
+#endif
+
+#if defined __x86_64__
+CheckTypeSize(FT_Size_Internal,8, 16956, 11, 3.2, NULL, 16955, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16955,NULL);\n",architecture,16956,0);
+Msg("Find size of FT_Size_Internal (16956)\n");
+#endif
+
+#if defined __x86_64__
+CheckTypeSize(FT_Size,8, 16958, 11, 3.2, NULL, 16957, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16957,NULL);\n",architecture,16958,0);
+Msg("Find size of FT_Size (16958)\n");
 #endif
 
 #if defined __i386__
@@ -852,13 +969,15 @@ CheckOffset(struct FT_Bitmap_Size_,size,0,10,64021)
 CheckOffset(struct FT_Bitmap_Size_,x_ppem,0,10,64022)
 CheckOffset(struct FT_Bitmap_Size_,y_ppem,0,10,64023)
 #elif defined __x86_64__
-CheckTypeSize(struct FT_Bitmap_Size_,0, 22157, 11, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_Bitmap_Size_ on x86-64\n");
-CheckOffset(struct FT_Bitmap_Size_,height,0,11,64019)
-CheckOffset(struct FT_Bitmap_Size_,width,0,11,64020)
-CheckOffset(struct FT_Bitmap_Size_,size,0,11,64021)
-CheckOffset(struct FT_Bitmap_Size_,x_ppem,0,11,64022)
-CheckOffset(struct FT_Bitmap_Size_,y_ppem,0,11,64023)
+CheckTypeSize(struct FT_Bitmap_Size_,32, 22157, 11, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct FT_Bitmap_Size_,width,2,11,64020)
+CheckOffset(struct FT_Bitmap_Size_,width,2,11,64020)
+CheckMemberSize(struct FT_Bitmap_Size_,size,8,11,64021)
+CheckOffset(struct FT_Bitmap_Size_,size,8,11,64021)
+CheckMemberSize(struct FT_Bitmap_Size_,x_ppem,8,11,64022)
+CheckOffset(struct FT_Bitmap_Size_,x_ppem,16,11,64022)
+CheckMemberSize(struct FT_Bitmap_Size_,y_ppem,8,11,64023)
+CheckOffset(struct FT_Bitmap_Size_,y_ppem,24,11,64023)
 #elif defined __s390x__
 CheckTypeSize(struct FT_Bitmap_Size_,0, 22157, 12, 3.2, NULL, 0, NULL)
 Msg("Missing member data for FT_Bitmap_Size_ on S390X\n");
@@ -872,8 +991,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architect
 Msg("Find size of FT_Bitmap_Size_ (22157)\n");
 #endif
 
-#if 1
-CheckTypeSize(FT_Bitmap_Size,0, 22158, 1, 3.2, NULL, 22157, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_Bitmap_Size,32, 22158, 11, 3.2, NULL, 22157, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,22157,NULL);\n",architecture,22158,0);
+Msg("Find size of FT_Bitmap_Size (22158)\n");
 #endif
 
 #if defined __i386__
@@ -914,12 +1036,15 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,22164,NULL);\n",archi
 Msg("Find size of FT_Driver (22165)\n");
 #endif
 
-#if 1
-CheckTypeSize(FT_FaceRec,0, 22166, 1, 3.2, NULL, 11166, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_FaceRec,248, 22166, 11, 3.2, NULL, 11166, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11166,NULL);\n",architecture,22166,0);
+Msg("Find size of FT_FaceRec (22166)\n");
 #endif
 
 #if 1
-CheckTypeSize(FT_Kerning_Mode,0, 22168, 1, 3.2, NULL, 22167, NULL)
+CheckTypeSize(FT_Kerning_Mode,4, 22168, 1, 3.2, NULL, 22167, NULL)
 #endif
 
 extern FT_Int FT_Get_Charmap_Index_db(FT_CharMap);

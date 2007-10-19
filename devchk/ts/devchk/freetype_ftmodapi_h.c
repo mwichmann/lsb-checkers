@@ -5,6 +5,9 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#include <ft2build.h>
+#include FT_FREETYPE_H
+
 #include "freetype/ftmodapi.h"
 
 
@@ -95,42 +98,69 @@ cnt++;
 
 #endif
 
-#if 1
-CheckTypeSize(struct FT_Module_Class_,36, 16753, 1, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_Module_Class_ on All\n");
-CheckOffset(struct FT_Module_Class_,module_flags,0,1,53974)
-CheckOffset(struct FT_Module_Class_,module_size,0,1,53975)
-CheckOffset(struct FT_Module_Class_,module_name,0,1,53976)
-CheckOffset(struct FT_Module_Class_,module_version,0,1,53977)
-CheckOffset(struct FT_Module_Class_,module_requires,0,1,53978)
-CheckOffset(struct FT_Module_Class_,module_interface,0,1,53979)
-CheckOffset(struct FT_Module_Class_,module_init,0,1,53981)
-CheckOffset(struct FT_Module_Class_,module_done,0,1,53983)
-CheckOffset(struct FT_Module_Class_,get_interface,0,1,53986)
+#if defined __x86_64__
+CheckTypeSize(struct FT_Module_Class_,72, 16753, 11, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct FT_Module_Class_,module_size,8,11,53975)
+CheckOffset(struct FT_Module_Class_,module_size,8,11,53975)
+CheckMemberSize(struct FT_Module_Class_,module_name,8,11,53976)
+CheckOffset(struct FT_Module_Class_,module_name,16,11,53976)
+CheckMemberSize(struct FT_Module_Class_,module_version,8,11,53977)
+CheckOffset(struct FT_Module_Class_,module_version,24,11,53977)
+CheckMemberSize(struct FT_Module_Class_,module_requires,8,11,53978)
+CheckOffset(struct FT_Module_Class_,module_requires,32,11,53978)
+CheckMemberSize(struct FT_Module_Class_,module_interface,8,11,53979)
+CheckOffset(struct FT_Module_Class_,module_interface,40,11,53979)
+CheckMemberSize(struct FT_Module_Class_,module_init,8,11,53981)
+CheckOffset(struct FT_Module_Class_,module_init,48,11,53981)
+CheckMemberSize(struct FT_Module_Class_,module_done,8,11,53983)
+CheckOffset(struct FT_Module_Class_,module_done,56,11,53983)
+CheckMemberSize(struct FT_Module_Class_,get_interface,8,11,53986)
+CheckOffset(struct FT_Module_Class_,get_interface,64,11,53986)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16753,0);
+Msg("Find size of FT_Module_Class_ (16753)\n");
 #endif
 
-#if 1
-CheckTypeSize(FT_Module_Constructor,0, 16763, 1, 3.2, NULL, 16762, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_Module_Constructor,8, 16763, 11, 3.2, NULL, 16762, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16762,NULL);\n",architecture,16763,0);
+Msg("Find size of FT_Module_Constructor (16763)\n");
 #endif
 
-#if 1
-CheckTypeSize(FT_Module_Destructor,0, 16765, 1, 3.2, NULL, 16764, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_Module_Destructor,8, 16765, 11, 3.2, NULL, 16764, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16764,NULL);\n",architecture,16765,0);
+Msg("Find size of FT_Module_Destructor (16765)\n");
 #endif
 
-#if 1
-CheckTypeSize(FT_Module_Interface,0, 16767, 1, 3.2, NULL, 16766, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_Module_Interface,8, 16767, 11, 3.2, NULL, 16766, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16766,NULL);\n",architecture,16767,0);
+Msg("Find size of FT_Module_Interface (16767)\n");
 #endif
 
-#if 1
-CheckTypeSize(FT_Module_Requester,0, 16769, 1, 3.2, NULL, 16768, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_Module_Requester,8, 16769, 11, 3.2, NULL, 16768, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16768,NULL);\n",architecture,16769,0);
+Msg("Find size of FT_Module_Requester (16769)\n");
 #endif
 
-#if 1
-CheckTypeSize(FT_Module_Class,0, 16770, 1, 3.2, NULL, 16753, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_Module_Class,72, 16770, 11, 3.2, NULL, 16753, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16753,NULL);\n",architecture,16770,0);
+Msg("Find size of FT_Module_Class (16770)\n");
 #endif
 
-#if 1
-CheckTypeSize(FT_DebugHook_Func,0, 16868, 1, 3.2, NULL, 6988, NULL)
+#if defined __x86_64__
+CheckTypeSize(FT_DebugHook_Func,8, 16868, 11, 3.2, NULL, 6988, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,6988, NULL);\n",architecture,16868,0);
+Msg("Find size of FT_DebugHook_Func (16868)\n");
 #endif
 
 extern FT_Module FT_Get_Module_db(FT_Library, const char *);

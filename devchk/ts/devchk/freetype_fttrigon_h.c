@@ -5,6 +5,9 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#include <ft2build.h>
+#include FT_FREETYPE_H
+
 #include "freetype/fttrigon.h"
 
 
@@ -39,6 +42,13 @@ printf("Checking data structures in freetype/fttrigon.h\n");
 
 #if _LSB_DEFAULT_ARCH
 /* No test for FT_ANGLE_PI4 */
+#endif
+
+#if defined __x86_64__
+CheckTypeSize(FT_Angle,8, 16921, 11, 3.2, NULL, 16759, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16759, NULL);\n",architecture,16921,0);
+Msg("Find size of FT_Angle (16921)\n");
 #endif
 
 extern FT_Angle FT_Angle_Diff_db(FT_Angle, FT_Angle);

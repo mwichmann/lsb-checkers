@@ -5,6 +5,9 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#include <ft2build.h>
+#include FT_FREETYPE_H
+
 #include "freetype/t1tables.h"
 
 
@@ -115,12 +118,18 @@ cnt++;
 /* No test for t1_blend_underline_thickness */
 #endif
 
-#if 1
-CheckTypeSize(PS_PrivateRec,0, 16987, 1, 3.2, NULL, 16980, NULL)
+#if defined __x86_64__
+CheckTypeSize(PS_PrivateRec,224, 16987, 11, 3.2, NULL, 16980, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16980,NULL);\n",architecture,16987,0);
+Msg("Find size of PS_PrivateRec (16987)\n");
 #endif
 
-#if 1
-CheckTypeSize(PS_FontInfoRec,0, 16990, 1, 3.2, NULL, 16989, NULL)
+#if defined __x86_64__
+CheckTypeSize(PS_FontInfoRec,56, 16990, 11, 3.2, NULL, 16989, NULL)
+#else
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16989, NULL);\n",architecture,16990,0);
+Msg("Find size of PS_FontInfoRec (16990)\n");
 #endif
 
 extern FT_Int FT_Has_PS_Glyph_Names_db(FT_Face);

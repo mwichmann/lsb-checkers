@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define G_DISABLE_DEPRECATED
+/* #define G_DISABLE_DEPRECATED */
 #define G_ERRORCHECK_MUTEXES
 #undef GOBJECT_COMPILATION
 #undef GETTEXT_PACKAGE
@@ -39,25 +39,6 @@ printf("Checking data structures in glib-2.0/gmodule.h\n");
 
 #if _LSB_DEFAULT_ARCH
 /* No test for G_MODULE_EXPORT */
-#endif
-
-#if defined __i386__
-CheckTypeSize(GModule,0, 12066, 2, 3.1, NULL, 12065, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GModule,0, 12066, 11, 3.1, NULL, 12065, NULL)
-#elif defined __ia64__
-CheckTypeSize(GModule,0, 12066, 3, 3.1, NULL, 12065, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GModule,0, 12066, 6, 3.1, NULL, 12065, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GModule,0, 12066, 9, 3.1, NULL, 12065, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GModule,0, 12066, 10, 3.1, NULL, 12065, NULL)
-#elif defined __s390x__
-CheckTypeSize(GModule,0, 12066, 12, 3.1, NULL, 12065, NULL)
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12065,NULL);\n",architecture,12066,0);
-Msg("Find size of GModule (12066)\n");
 #endif
 
 #if defined __i386__
