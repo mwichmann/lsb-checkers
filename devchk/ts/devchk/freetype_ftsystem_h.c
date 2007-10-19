@@ -72,12 +72,13 @@ CheckOffset(struct FT_MemoryRec_,alloc,0,12,53944)
 CheckOffset(struct FT_MemoryRec_,free,0,12,53947)
 CheckOffset(struct FT_MemoryRec_,realloc,0,12,53952)
 #elif defined __i386__
-CheckTypeSize(struct FT_MemoryRec_,12, 16726, 2, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_MemoryRec_ on IA32\n");
-CheckOffset(struct FT_MemoryRec_,user,0,2,53941)
-CheckOffset(struct FT_MemoryRec_,alloc,0,2,53944)
-CheckOffset(struct FT_MemoryRec_,free,0,2,53947)
-CheckOffset(struct FT_MemoryRec_,realloc,0,2,53952)
+CheckTypeSize(struct FT_MemoryRec_,16, 16726, 2, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct FT_MemoryRec_,alloc,4,2,53944)
+CheckOffset(struct FT_MemoryRec_,alloc,4,2,53944)
+CheckMemberSize(struct FT_MemoryRec_,free,4,2,53947)
+CheckOffset(struct FT_MemoryRec_,free,8,2,53947)
+CheckMemberSize(struct FT_MemoryRec_,realloc,4,2,53952)
+CheckOffset(struct FT_MemoryRec_,realloc,12,2,53952)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16726,0);
 Msg("Find size of FT_MemoryRec_ (16726)\n");
@@ -85,6 +86,8 @@ Msg("Find size of FT_MemoryRec_ (16726)\n");
 
 #if defined __x86_64__
 CheckTypeSize(FT_Memory,8, 16728, 11, 3.2, NULL, 16727, NULL)
+#elif defined __i386__
+CheckTypeSize(FT_Memory,4, 16728, 2, 3.2, NULL, 16727, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16727,NULL);\n",architecture,16728,0);
 Msg("Find size of FT_Memory (16728)\n");
@@ -92,6 +95,8 @@ Msg("Find size of FT_Memory (16728)\n");
 
 #if defined __x86_64__
 CheckTypeSize(FT_Alloc_Func,8, 16730, 11, 3.2, NULL, 16729, NULL)
+#elif defined __i386__
+CheckTypeSize(FT_Alloc_Func,4, 16730, 2, 3.2, NULL, 16729, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16729,NULL);\n",architecture,16730,0);
 Msg("Find size of FT_Alloc_Func (16730)\n");
@@ -99,6 +104,8 @@ Msg("Find size of FT_Alloc_Func (16730)\n");
 
 #if defined __x86_64__
 CheckTypeSize(FT_Free_Func,8, 16732, 11, 3.2, NULL, 16731, NULL)
+#elif defined __i386__
+CheckTypeSize(FT_Free_Func,4, 16732, 2, 3.2, NULL, 16731, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16731,NULL);\n",architecture,16732,0);
 Msg("Find size of FT_Free_Func (16732)\n");
@@ -106,6 +113,8 @@ Msg("Find size of FT_Free_Func (16732)\n");
 
 #if defined __x86_64__
 CheckTypeSize(FT_Realloc_Func,8, 16734, 11, 3.2, NULL, 16733, NULL)
+#elif defined __i386__
+CheckTypeSize(FT_Realloc_Func,4, 16734, 2, 3.2, NULL, 16733, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16733,NULL);\n",architecture,16734,0);
 Msg("Find size of FT_Realloc_Func (16734)\n");
@@ -196,6 +205,26 @@ CheckOffset(struct FT_StreamRec_,close,0,12,54232)
 CheckOffset(struct FT_StreamRec_,memory,0,12,54233)
 CheckOffset(struct FT_StreamRec_,cursor,0,12,54234)
 CheckOffset(struct FT_StreamRec_,limit,0,12,54235)
+#elif defined __i386__
+CheckTypeSize(struct FT_StreamRec_,40, 16903, 2, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct FT_StreamRec_,size,4,2,54220)
+CheckOffset(struct FT_StreamRec_,size,4,2,54220)
+CheckMemberSize(struct FT_StreamRec_,pos,4,2,54221)
+CheckOffset(struct FT_StreamRec_,pos,8,2,54221)
+CheckMemberSize(struct FT_StreamRec_,descriptor,4,2,54224)
+CheckOffset(struct FT_StreamRec_,descriptor,12,2,54224)
+CheckMemberSize(struct FT_StreamRec_,pathname,4,2,54225)
+CheckOffset(struct FT_StreamRec_,pathname,16,2,54225)
+CheckMemberSize(struct FT_StreamRec_,read,4,2,54230)
+CheckOffset(struct FT_StreamRec_,read,20,2,54230)
+CheckMemberSize(struct FT_StreamRec_,close,4,2,54232)
+CheckOffset(struct FT_StreamRec_,close,24,2,54232)
+CheckMemberSize(struct FT_StreamRec_,memory,4,2,54233)
+CheckOffset(struct FT_StreamRec_,memory,28,2,54233)
+CheckMemberSize(struct FT_StreamRec_,cursor,4,2,54234)
+CheckOffset(struct FT_StreamRec_,cursor,32,2,54234)
+CheckMemberSize(struct FT_StreamRec_,limit,4,2,54235)
+CheckOffset(struct FT_StreamRec_,limit,36,2,54235)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16903,0);
 Msg("Find size of FT_StreamRec_ (16903)\n");
@@ -206,6 +235,11 @@ CheckTypeSize(union FT_StreamDesc_,8, 16904, 11, 3.2, NULL, 0, NULL)
 Msg("Missing member data for FT_StreamDesc_ on x86-64\n");
 CheckOffset(union FT_StreamDesc_,value,0,11,54222)
 CheckOffset(union FT_StreamDesc_,pointer,0,11,54223)
+#elif defined __i386__
+CheckTypeSize(union FT_StreamDesc_,4, 16904, 2, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_StreamDesc_ on IA32\n");
+CheckOffset(union FT_StreamDesc_,value,0,2,54222)
+CheckOffset(union FT_StreamDesc_,pointer,0,2,54223)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16904,0);
 Msg("Find size of FT_StreamDesc_ (16904)\n");
@@ -213,6 +247,8 @@ Msg("Find size of FT_StreamDesc_ (16904)\n");
 
 #if defined __x86_64__
 CheckTypeSize(FT_StreamDesc,8, 16905, 11, 3.2, NULL, 16904, NULL)
+#elif defined __i386__
+CheckTypeSize(FT_StreamDesc,4, 16905, 2, 3.2, NULL, 16904, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16904,NULL);\n",architecture,16905,0);
 Msg("Find size of FT_StreamDesc (16905)\n");
@@ -220,6 +256,8 @@ Msg("Find size of FT_StreamDesc (16905)\n");
 
 #if defined __x86_64__
 CheckTypeSize(FT_Stream,8, 16907, 11, 3.2, NULL, 16906, NULL)
+#elif defined __i386__
+CheckTypeSize(FT_Stream,4, 16907, 2, 3.2, NULL, 16906, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16906,NULL);\n",architecture,16907,0);
 Msg("Find size of FT_Stream (16907)\n");
@@ -227,6 +265,8 @@ Msg("Find size of FT_Stream (16907)\n");
 
 #if defined __x86_64__
 CheckTypeSize(FT_Stream_IoFunc,8, 16909, 11, 3.2, NULL, 16908, NULL)
+#elif defined __i386__
+CheckTypeSize(FT_Stream_IoFunc,4, 16909, 2, 3.2, NULL, 16908, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16908,NULL);\n",architecture,16909,0);
 Msg("Find size of FT_Stream_IoFunc (16909)\n");
@@ -234,6 +274,8 @@ Msg("Find size of FT_Stream_IoFunc (16909)\n");
 
 #if defined __x86_64__
 CheckTypeSize(FT_Stream_CloseFunc,8, 16911, 11, 3.2, NULL, 16910, NULL)
+#elif defined __i386__
+CheckTypeSize(FT_Stream_CloseFunc,4, 16911, 2, 3.2, NULL, 16910, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16910, NULL);\n",architecture,16911,0);
 Msg("Find size of FT_Stream_CloseFunc (16911)\n");
