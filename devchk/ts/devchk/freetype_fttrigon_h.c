@@ -48,6 +48,10 @@ printf("Checking data structures in freetype/fttrigon.h\n");
 CheckTypeSize(FT_Angle,8, 16921, 11, 3.2, NULL, 16759, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Angle,4, 16921, 2, 3.2, NULL, 16759, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Angle,0, 16921, 10, 3.2, NULL, 16759, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Angle,0, 16921, 12, 3.2, NULL, 16759, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16759, NULL);\n",architecture,16921,0);
 Msg("Find size of FT_Angle (16921)\n");

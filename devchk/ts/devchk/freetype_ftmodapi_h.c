@@ -134,6 +134,30 @@ CheckMemberSize(struct FT_Module_Class_,module_done,4,2,53983)
 CheckOffset(struct FT_Module_Class_,module_done,28,2,53983)
 CheckMemberSize(struct FT_Module_Class_,get_interface,4,2,53986)
 CheckOffset(struct FT_Module_Class_,get_interface,32,2,53986)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct FT_Module_Class_,0, 16753, 10, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Module_Class_ on S390\n");
+CheckOffset(struct FT_Module_Class_,module_flags,0,10,53974)
+CheckOffset(struct FT_Module_Class_,module_size,0,10,53975)
+CheckOffset(struct FT_Module_Class_,module_name,0,10,53976)
+CheckOffset(struct FT_Module_Class_,module_version,0,10,53977)
+CheckOffset(struct FT_Module_Class_,module_requires,0,10,53978)
+CheckOffset(struct FT_Module_Class_,module_interface,0,10,53979)
+CheckOffset(struct FT_Module_Class_,module_init,0,10,53981)
+CheckOffset(struct FT_Module_Class_,module_done,0,10,53983)
+CheckOffset(struct FT_Module_Class_,get_interface,0,10,53986)
+#elif defined __s390x__
+CheckTypeSize(struct FT_Module_Class_,0, 16753, 12, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Module_Class_ on S390X\n");
+CheckOffset(struct FT_Module_Class_,module_flags,0,12,53974)
+CheckOffset(struct FT_Module_Class_,module_size,0,12,53975)
+CheckOffset(struct FT_Module_Class_,module_name,0,12,53976)
+CheckOffset(struct FT_Module_Class_,module_version,0,12,53977)
+CheckOffset(struct FT_Module_Class_,module_requires,0,12,53978)
+CheckOffset(struct FT_Module_Class_,module_interface,0,12,53979)
+CheckOffset(struct FT_Module_Class_,module_init,0,12,53981)
+CheckOffset(struct FT_Module_Class_,module_done,0,12,53983)
+CheckOffset(struct FT_Module_Class_,get_interface,0,12,53986)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16753,0);
 Msg("Find size of FT_Module_Class_ (16753)\n");
@@ -143,6 +167,10 @@ Msg("Find size of FT_Module_Class_ (16753)\n");
 CheckTypeSize(FT_Module_Constructor,8, 16763, 11, 3.2, NULL, 16762, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Module_Constructor,4, 16763, 2, 3.2, NULL, 16762, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Module_Constructor,0, 16763, 10, 3.2, NULL, 16762, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Module_Constructor,0, 16763, 12, 3.2, NULL, 16762, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16762,NULL);\n",architecture,16763,0);
 Msg("Find size of FT_Module_Constructor (16763)\n");
@@ -152,6 +180,10 @@ Msg("Find size of FT_Module_Constructor (16763)\n");
 CheckTypeSize(FT_Module_Destructor,8, 16765, 11, 3.2, NULL, 16764, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Module_Destructor,4, 16765, 2, 3.2, NULL, 16764, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Module_Destructor,0, 16765, 10, 3.2, NULL, 16764, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Module_Destructor,0, 16765, 12, 3.2, NULL, 16764, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16764,NULL);\n",architecture,16765,0);
 Msg("Find size of FT_Module_Destructor (16765)\n");
@@ -161,6 +193,10 @@ Msg("Find size of FT_Module_Destructor (16765)\n");
 CheckTypeSize(FT_Module_Interface,8, 16767, 11, 3.2, NULL, 16766, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Module_Interface,4, 16767, 2, 3.2, NULL, 16766, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Module_Interface,0, 16767, 10, 3.2, NULL, 16766, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Module_Interface,0, 16767, 12, 3.2, NULL, 16766, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16766,NULL);\n",architecture,16767,0);
 Msg("Find size of FT_Module_Interface (16767)\n");
@@ -170,6 +206,10 @@ Msg("Find size of FT_Module_Interface (16767)\n");
 CheckTypeSize(FT_Module_Requester,8, 16769, 11, 3.2, NULL, 16768, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Module_Requester,4, 16769, 2, 3.2, NULL, 16768, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Module_Requester,0, 16769, 10, 3.2, NULL, 16768, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Module_Requester,0, 16769, 12, 3.2, NULL, 16768, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16768,NULL);\n",architecture,16769,0);
 Msg("Find size of FT_Module_Requester (16769)\n");
@@ -179,6 +219,10 @@ Msg("Find size of FT_Module_Requester (16769)\n");
 CheckTypeSize(FT_Module_Class,72, 16770, 11, 3.2, NULL, 16753, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Module_Class,36, 16770, 2, 3.2, NULL, 16753, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Module_Class,0, 16770, 10, 3.2, NULL, 16753, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Module_Class,0, 16770, 12, 3.2, NULL, 16753, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16753,NULL);\n",architecture,16770,0);
 Msg("Find size of FT_Module_Class (16770)\n");
@@ -188,6 +232,10 @@ Msg("Find size of FT_Module_Class (16770)\n");
 CheckTypeSize(FT_DebugHook_Func,8, 16868, 11, 3.2, NULL, 6988, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_DebugHook_Func,4, 16868, 2, 3.2, NULL, 6988, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_DebugHook_Func,0, 16868, 10, 3.2, NULL, 6988, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_DebugHook_Func,0, 16868, 12, 3.2, NULL, 6988, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,6988, NULL);\n",architecture,16868,0);
 Msg("Find size of FT_DebugHook_Func (16868)\n");
