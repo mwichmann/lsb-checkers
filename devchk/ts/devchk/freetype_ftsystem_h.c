@@ -51,11 +51,12 @@ CheckOffset(struct FT_MemoryRec_,free,0,9,53947)
 CheckOffset(struct FT_MemoryRec_,realloc,0,9,53952)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(struct FT_MemoryRec_,16, 16726, 10, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_MemoryRec_ on S390\n");
-CheckOffset(struct FT_MemoryRec_,user,0,10,53941)
-CheckOffset(struct FT_MemoryRec_,alloc,0,10,53944)
-CheckOffset(struct FT_MemoryRec_,free,0,10,53947)
-CheckOffset(struct FT_MemoryRec_,realloc,0,10,53952)
+CheckMemberSize(struct FT_MemoryRec_,alloc,4,10,53944)
+CheckOffset(struct FT_MemoryRec_,alloc,4,10,53944)
+CheckMemberSize(struct FT_MemoryRec_,free,4,10,53947)
+CheckOffset(struct FT_MemoryRec_,free,8,10,53947)
+CheckMemberSize(struct FT_MemoryRec_,realloc,4,10,53952)
+CheckOffset(struct FT_MemoryRec_,realloc,12,10,53952)
 #elif defined __x86_64__
 CheckTypeSize(struct FT_MemoryRec_,32, 16726, 11, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_MemoryRec_,alloc,8,11,53944)
@@ -66,11 +67,12 @@ CheckMemberSize(struct FT_MemoryRec_,realloc,8,11,53952)
 CheckOffset(struct FT_MemoryRec_,realloc,24,11,53952)
 #elif defined __s390x__
 CheckTypeSize(struct FT_MemoryRec_,32, 16726, 12, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_MemoryRec_ on S390X\n");
-CheckOffset(struct FT_MemoryRec_,user,0,12,53941)
-CheckOffset(struct FT_MemoryRec_,alloc,0,12,53944)
-CheckOffset(struct FT_MemoryRec_,free,0,12,53947)
-CheckOffset(struct FT_MemoryRec_,realloc,0,12,53952)
+CheckMemberSize(struct FT_MemoryRec_,alloc,8,12,53944)
+CheckOffset(struct FT_MemoryRec_,alloc,8,12,53944)
+CheckMemberSize(struct FT_MemoryRec_,free,8,12,53947)
+CheckOffset(struct FT_MemoryRec_,free,16,12,53947)
+CheckMemberSize(struct FT_MemoryRec_,realloc,8,12,53952)
+CheckOffset(struct FT_MemoryRec_,realloc,24,12,53952)
 #elif defined __i386__
 CheckTypeSize(struct FT_MemoryRec_,16, 16726, 2, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_MemoryRec_,alloc,4,2,53944)
@@ -88,6 +90,10 @@ Msg("Find size of FT_MemoryRec_ (16726)\n");
 CheckTypeSize(FT_Memory,8, 16728, 11, 3.2, NULL, 16727, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Memory,4, 16728, 2, 3.2, NULL, 16727, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Memory,0, 16728, 10, 3.2, NULL, 16727, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Memory,0, 16728, 12, 3.2, NULL, 16727, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16727,NULL);\n",architecture,16728,0);
 Msg("Find size of FT_Memory (16728)\n");
@@ -97,6 +103,10 @@ Msg("Find size of FT_Memory (16728)\n");
 CheckTypeSize(FT_Alloc_Func,8, 16730, 11, 3.2, NULL, 16729, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Alloc_Func,4, 16730, 2, 3.2, NULL, 16729, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Alloc_Func,0, 16730, 10, 3.2, NULL, 16729, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Alloc_Func,0, 16730, 12, 3.2, NULL, 16729, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16729,NULL);\n",architecture,16730,0);
 Msg("Find size of FT_Alloc_Func (16730)\n");
@@ -106,6 +116,10 @@ Msg("Find size of FT_Alloc_Func (16730)\n");
 CheckTypeSize(FT_Free_Func,8, 16732, 11, 3.2, NULL, 16731, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Free_Func,4, 16732, 2, 3.2, NULL, 16731, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Free_Func,0, 16732, 10, 3.2, NULL, 16731, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Free_Func,0, 16732, 12, 3.2, NULL, 16731, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16731,NULL);\n",architecture,16732,0);
 Msg("Find size of FT_Free_Func (16732)\n");
@@ -115,6 +129,10 @@ Msg("Find size of FT_Free_Func (16732)\n");
 CheckTypeSize(FT_Realloc_Func,8, 16734, 11, 3.2, NULL, 16733, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Realloc_Func,4, 16734, 2, 3.2, NULL, 16733, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Realloc_Func,0, 16734, 10, 3.2, NULL, 16733, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Realloc_Func,0, 16734, 12, 3.2, NULL, 16733, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16733,NULL);\n",architecture,16734,0);
 Msg("Find size of FT_Realloc_Func (16734)\n");
@@ -160,18 +178,25 @@ CheckOffset(struct FT_StreamRec_,memory,0,9,54233)
 CheckOffset(struct FT_StreamRec_,cursor,0,9,54234)
 CheckOffset(struct FT_StreamRec_,limit,0,9,54235)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct FT_StreamRec_,0, 16903, 10, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_StreamRec_ on S390\n");
-CheckOffset(struct FT_StreamRec_,base,0,10,54219)
-CheckOffset(struct FT_StreamRec_,size,0,10,54220)
-CheckOffset(struct FT_StreamRec_,pos,0,10,54221)
-CheckOffset(struct FT_StreamRec_,descriptor,0,10,54224)
-CheckOffset(struct FT_StreamRec_,pathname,0,10,54225)
-CheckOffset(struct FT_StreamRec_,read,0,10,54230)
-CheckOffset(struct FT_StreamRec_,close,0,10,54232)
-CheckOffset(struct FT_StreamRec_,memory,0,10,54233)
-CheckOffset(struct FT_StreamRec_,cursor,0,10,54234)
-CheckOffset(struct FT_StreamRec_,limit,0,10,54235)
+CheckTypeSize(struct FT_StreamRec_,40, 16903, 10, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct FT_StreamRec_,size,4,10,54220)
+CheckOffset(struct FT_StreamRec_,size,4,10,54220)
+CheckMemberSize(struct FT_StreamRec_,pos,4,10,54221)
+CheckOffset(struct FT_StreamRec_,pos,8,10,54221)
+CheckMemberSize(struct FT_StreamRec_,descriptor,4,10,54224)
+CheckOffset(struct FT_StreamRec_,descriptor,12,10,54224)
+CheckMemberSize(struct FT_StreamRec_,pathname,4,10,54225)
+CheckOffset(struct FT_StreamRec_,pathname,16,10,54225)
+CheckMemberSize(struct FT_StreamRec_,read,4,10,54230)
+CheckOffset(struct FT_StreamRec_,read,20,10,54230)
+CheckMemberSize(struct FT_StreamRec_,close,4,10,54232)
+CheckOffset(struct FT_StreamRec_,close,24,10,54232)
+CheckMemberSize(struct FT_StreamRec_,memory,4,10,54233)
+CheckOffset(struct FT_StreamRec_,memory,28,10,54233)
+CheckMemberSize(struct FT_StreamRec_,cursor,4,10,54234)
+CheckOffset(struct FT_StreamRec_,cursor,32,10,54234)
+CheckMemberSize(struct FT_StreamRec_,limit,4,10,54235)
+CheckOffset(struct FT_StreamRec_,limit,36,10,54235)
 #elif defined __x86_64__
 CheckTypeSize(struct FT_StreamRec_,80, 16903, 11, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_StreamRec_,size,8,11,54220)
@@ -193,18 +218,25 @@ CheckOffset(struct FT_StreamRec_,cursor,64,11,54234)
 CheckMemberSize(struct FT_StreamRec_,limit,8,11,54235)
 CheckOffset(struct FT_StreamRec_,limit,72,11,54235)
 #elif defined __s390x__
-CheckTypeSize(struct FT_StreamRec_,0, 16903, 12, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_StreamRec_ on S390X\n");
-CheckOffset(struct FT_StreamRec_,base,0,12,54219)
-CheckOffset(struct FT_StreamRec_,size,0,12,54220)
-CheckOffset(struct FT_StreamRec_,pos,0,12,54221)
-CheckOffset(struct FT_StreamRec_,descriptor,0,12,54224)
-CheckOffset(struct FT_StreamRec_,pathname,0,12,54225)
-CheckOffset(struct FT_StreamRec_,read,0,12,54230)
-CheckOffset(struct FT_StreamRec_,close,0,12,54232)
-CheckOffset(struct FT_StreamRec_,memory,0,12,54233)
-CheckOffset(struct FT_StreamRec_,cursor,0,12,54234)
-CheckOffset(struct FT_StreamRec_,limit,0,12,54235)
+CheckTypeSize(struct FT_StreamRec_,80, 16903, 12, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct FT_StreamRec_,size,8,12,54220)
+CheckOffset(struct FT_StreamRec_,size,8,12,54220)
+CheckMemberSize(struct FT_StreamRec_,pos,8,12,54221)
+CheckOffset(struct FT_StreamRec_,pos,16,12,54221)
+CheckMemberSize(struct FT_StreamRec_,descriptor,8,12,54224)
+CheckOffset(struct FT_StreamRec_,descriptor,24,12,54224)
+CheckMemberSize(struct FT_StreamRec_,pathname,8,12,54225)
+CheckOffset(struct FT_StreamRec_,pathname,32,12,54225)
+CheckMemberSize(struct FT_StreamRec_,read,8,12,54230)
+CheckOffset(struct FT_StreamRec_,read,40,12,54230)
+CheckMemberSize(struct FT_StreamRec_,close,8,12,54232)
+CheckOffset(struct FT_StreamRec_,close,48,12,54232)
+CheckMemberSize(struct FT_StreamRec_,memory,8,12,54233)
+CheckOffset(struct FT_StreamRec_,memory,56,12,54233)
+CheckMemberSize(struct FT_StreamRec_,cursor,8,12,54234)
+CheckOffset(struct FT_StreamRec_,cursor,64,12,54234)
+CheckMemberSize(struct FT_StreamRec_,limit,8,12,54235)
+CheckOffset(struct FT_StreamRec_,limit,72,12,54235)
 #elif defined __i386__
 CheckTypeSize(struct FT_StreamRec_,40, 16903, 2, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_StreamRec_,size,4,2,54220)
@@ -240,6 +272,16 @@ CheckTypeSize(union FT_StreamDesc_,4, 16904, 2, 3.2, NULL, 0, NULL)
 Msg("Missing member data for FT_StreamDesc_ on IA32\n");
 CheckOffset(union FT_StreamDesc_,value,0,2,54222)
 CheckOffset(union FT_StreamDesc_,pointer,0,2,54223)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(union FT_StreamDesc_,0, 16904, 10, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_StreamDesc_ on S390\n");
+CheckOffset(union FT_StreamDesc_,value,0,10,54222)
+CheckOffset(union FT_StreamDesc_,pointer,0,10,54223)
+#elif defined __s390x__
+CheckTypeSize(union FT_StreamDesc_,0, 16904, 12, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_StreamDesc_ on S390X\n");
+CheckOffset(union FT_StreamDesc_,value,0,12,54222)
+CheckOffset(union FT_StreamDesc_,pointer,0,12,54223)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16904,0);
 Msg("Find size of FT_StreamDesc_ (16904)\n");
@@ -249,6 +291,10 @@ Msg("Find size of FT_StreamDesc_ (16904)\n");
 CheckTypeSize(FT_StreamDesc,8, 16905, 11, 3.2, NULL, 16904, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_StreamDesc,4, 16905, 2, 3.2, NULL, 16904, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_StreamDesc,0, 16905, 10, 3.2, NULL, 16904, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_StreamDesc,0, 16905, 12, 3.2, NULL, 16904, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16904,NULL);\n",architecture,16905,0);
 Msg("Find size of FT_StreamDesc (16905)\n");
@@ -258,6 +304,10 @@ Msg("Find size of FT_StreamDesc (16905)\n");
 CheckTypeSize(FT_Stream,8, 16907, 11, 3.2, NULL, 16906, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Stream,4, 16907, 2, 3.2, NULL, 16906, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Stream,0, 16907, 10, 3.2, NULL, 16906, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Stream,0, 16907, 12, 3.2, NULL, 16906, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16906,NULL);\n",architecture,16907,0);
 Msg("Find size of FT_Stream (16907)\n");
@@ -267,6 +317,10 @@ Msg("Find size of FT_Stream (16907)\n");
 CheckTypeSize(FT_Stream_IoFunc,8, 16909, 11, 3.2, NULL, 16908, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Stream_IoFunc,4, 16909, 2, 3.2, NULL, 16908, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Stream_IoFunc,0, 16909, 10, 3.2, NULL, 16908, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Stream_IoFunc,0, 16909, 12, 3.2, NULL, 16908, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16908,NULL);\n",architecture,16909,0);
 Msg("Find size of FT_Stream_IoFunc (16909)\n");
@@ -276,6 +330,10 @@ Msg("Find size of FT_Stream_IoFunc (16909)\n");
 CheckTypeSize(FT_Stream_CloseFunc,8, 16911, 11, 3.2, NULL, 16910, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Stream_CloseFunc,4, 16911, 2, 3.2, NULL, 16910, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Stream_CloseFunc,0, 16911, 10, 3.2, NULL, 16910, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Stream_CloseFunc,0, 16911, 12, 3.2, NULL, 16910, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16910, NULL);\n",architecture,16911,0);
 Msg("Find size of FT_Stream_CloseFunc (16911)\n");

@@ -143,9 +143,9 @@ sub checkArchSpecific($$$$) {
 					$withdrawnin = $genentry{'ATwithdrawnin'} ? "'\"\"$genentry{'ATwithdrawnin'}\"\"'" : "NULL";
 					$attribute   = $genentry{'ATattribute'} ? "'\"\"$genentry{'ATattribute'}\"\"'" : "NULL";
 
+					print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
 					print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
 					print TESTS "%d,%d,%d,'\"\"$appearedin\"\"',$withdrawnin,$basetype,$attribute);\\n\",architecture,$Tid,0);\n";
-					print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
 					$missedCount++;
 				}
 			}
