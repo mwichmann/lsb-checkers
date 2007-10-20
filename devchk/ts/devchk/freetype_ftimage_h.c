@@ -310,16 +310,21 @@ CheckOffset(struct FT_Bitmap_,pixel_mode,0,9,64013)
 CheckOffset(struct FT_Bitmap_,palette_mode,0,9,64014)
 CheckOffset(struct FT_Bitmap_,palette,0,9,64015)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct FT_Bitmap_,0, 12593, 10, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_Bitmap_ on S390\n");
-CheckOffset(struct FT_Bitmap_,rows,0,10,64008)
-CheckOffset(struct FT_Bitmap_,width,0,10,64009)
-CheckOffset(struct FT_Bitmap_,pitch,0,10,64010)
-CheckOffset(struct FT_Bitmap_,buffer,0,10,64011)
-CheckOffset(struct FT_Bitmap_,num_grays,0,10,64012)
-CheckOffset(struct FT_Bitmap_,pixel_mode,0,10,64013)
-CheckOffset(struct FT_Bitmap_,palette_mode,0,10,64014)
-CheckOffset(struct FT_Bitmap_,palette,0,10,64015)
+CheckTypeSize(struct FT_Bitmap_,24, 12593, 10, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct FT_Bitmap_,width,4,10,64009)
+CheckOffset(struct FT_Bitmap_,width,4,10,64009)
+CheckMemberSize(struct FT_Bitmap_,pitch,4,10,64010)
+CheckOffset(struct FT_Bitmap_,pitch,8,10,64010)
+CheckMemberSize(struct FT_Bitmap_,buffer,4,10,64011)
+CheckOffset(struct FT_Bitmap_,buffer,12,10,64011)
+CheckMemberSize(struct FT_Bitmap_,num_grays,2,10,64012)
+CheckOffset(struct FT_Bitmap_,num_grays,16,10,64012)
+CheckMemberSize(struct FT_Bitmap_,pixel_mode,1,10,64013)
+CheckOffset(struct FT_Bitmap_,pixel_mode,18,10,64013)
+CheckMemberSize(struct FT_Bitmap_,palette_mode,1,10,64014)
+CheckOffset(struct FT_Bitmap_,palette_mode,19,10,64014)
+CheckMemberSize(struct FT_Bitmap_,palette,4,10,64015)
+CheckOffset(struct FT_Bitmap_,palette,20,10,64015)
 #elif defined __x86_64__
 CheckTypeSize(struct FT_Bitmap_,40, 12593, 11, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_Bitmap_,width,4,11,64009)
@@ -337,22 +342,31 @@ CheckOffset(struct FT_Bitmap_,palette_mode,27,11,64014)
 CheckMemberSize(struct FT_Bitmap_,palette,8,11,64015)
 CheckOffset(struct FT_Bitmap_,palette,32,11,64015)
 #elif defined __s390x__
-CheckTypeSize(struct FT_Bitmap_,0, 12593, 12, 3.2, NULL, 0, NULL)
-Msg("Missing member data for FT_Bitmap_ on S390X\n");
-CheckOffset(struct FT_Bitmap_,rows,0,12,64008)
-CheckOffset(struct FT_Bitmap_,width,0,12,64009)
-CheckOffset(struct FT_Bitmap_,pitch,0,12,64010)
-CheckOffset(struct FT_Bitmap_,buffer,0,12,64011)
-CheckOffset(struct FT_Bitmap_,num_grays,0,12,64012)
-CheckOffset(struct FT_Bitmap_,pixel_mode,0,12,64013)
-CheckOffset(struct FT_Bitmap_,palette_mode,0,12,64014)
-CheckOffset(struct FT_Bitmap_,palette,0,12,64015)
+CheckTypeSize(struct FT_Bitmap_,40, 12593, 12, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct FT_Bitmap_,width,4,12,64009)
+CheckOffset(struct FT_Bitmap_,width,4,12,64009)
+CheckMemberSize(struct FT_Bitmap_,pitch,4,12,64010)
+CheckOffset(struct FT_Bitmap_,pitch,8,12,64010)
+CheckMemberSize(struct FT_Bitmap_,buffer,8,12,64011)
+CheckOffset(struct FT_Bitmap_,buffer,16,12,64011)
+CheckMemberSize(struct FT_Bitmap_,num_grays,2,12,64012)
+CheckOffset(struct FT_Bitmap_,num_grays,24,12,64012)
+CheckMemberSize(struct FT_Bitmap_,pixel_mode,1,12,64013)
+CheckOffset(struct FT_Bitmap_,pixel_mode,26,12,64013)
+CheckMemberSize(struct FT_Bitmap_,palette_mode,1,12,64014)
+CheckOffset(struct FT_Bitmap_,palette_mode,27,12,64014)
+CheckMemberSize(struct FT_Bitmap_,palette,8,12,64015)
+CheckOffset(struct FT_Bitmap_,palette,32,12,64015)
 #endif
 
 #if defined __i386__
 CheckTypeSize(FT_Bitmap,24, 12594, 2, 3.2, NULL, 12593, NULL)
 #elif defined __x86_64__
 CheckTypeSize(FT_Bitmap,40, 12594, 11, 3.2, NULL, 12593, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Bitmap,0, 12594, 10, 3.2, NULL, 12593, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Bitmap,0, 12594, 12, 3.2, NULL, 12593, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12593,NULL);\n",architecture,12594,0);
 Msg("Find size of FT_Bitmap (12594)\n");
@@ -366,6 +380,16 @@ CheckOffset(struct FT_Vector_,y,8,11,53961)
 CheckTypeSize(struct FT_Vector_,8, 16741, 2, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_Vector_,y,4,2,53961)
 CheckOffset(struct FT_Vector_,y,4,2,53961)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct FT_Vector_,0, 16741, 10, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Vector_ on S390\n");
+CheckOffset(struct FT_Vector_,x,0,10,53960)
+CheckOffset(struct FT_Vector_,y,0,10,53961)
+#elif defined __s390x__
+CheckTypeSize(struct FT_Vector_,0, 16741, 12, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Vector_ on S390X\n");
+CheckOffset(struct FT_Vector_,x,0,12,53960)
+CheckOffset(struct FT_Vector_,y,0,12,53961)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16741,0);
 Msg("Find size of FT_Vector_ (16741)\n");
@@ -375,6 +399,10 @@ Msg("Find size of FT_Vector_ (16741)\n");
 CheckTypeSize(FT_Pos,8, 16742, 11, 3.2, NULL, 8, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Pos,4, 16742, 2, 3.2, NULL, 8, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Pos,0, 16742, 10, 3.2, NULL, 8, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Pos,0, 16742, 12, 3.2, NULL, 8, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,8,NULL);\n",architecture,16742,0);
 Msg("Find size of FT_Pos (16742)\n");
@@ -384,6 +412,10 @@ Msg("Find size of FT_Pos (16742)\n");
 CheckTypeSize(FT_Vector,16, 16743, 11, 3.2, NULL, 16741, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Vector,8, 16743, 2, 3.2, NULL, 16741, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Vector,0, 16743, 10, 3.2, NULL, 16741, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Vector,0, 16743, 12, 3.2, NULL, 16741, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16741,NULL);\n",architecture,16743,0);
 Msg("Find size of FT_Vector (16743)\n");
@@ -393,6 +425,10 @@ Msg("Find size of FT_Vector (16743)\n");
 CheckTypeSize(FT_Outline,40, 16745, 11, 3.2, NULL, 16740, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Outline,20, 16745, 2, 3.2, NULL, 16740, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Outline,0, 16745, 10, 3.2, NULL, 16740, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Outline,0, 16745, 12, 3.2, NULL, 16740, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16740,NULL);\n",architecture,16745,0);
 Msg("Find size of FT_Outline (16745)\n");
@@ -416,6 +452,20 @@ CheckMemberSize(struct FT_BBox_,xMax,4,2,54070)
 CheckOffset(struct FT_BBox_,xMax,8,2,54070)
 CheckMemberSize(struct FT_BBox_,yMax,4,2,54071)
 CheckOffset(struct FT_BBox_,yMax,12,2,54071)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct FT_BBox_,0, 16808, 10, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_BBox_ on S390\n");
+CheckOffset(struct FT_BBox_,xMin,0,10,54068)
+CheckOffset(struct FT_BBox_,yMin,0,10,54069)
+CheckOffset(struct FT_BBox_,xMax,0,10,54070)
+CheckOffset(struct FT_BBox_,yMax,0,10,54071)
+#elif defined __s390x__
+CheckTypeSize(struct FT_BBox_,0, 16808, 12, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_BBox_ on S390X\n");
+CheckOffset(struct FT_BBox_,xMin,0,12,54068)
+CheckOffset(struct FT_BBox_,yMin,0,12,54069)
+CheckOffset(struct FT_BBox_,xMax,0,12,54070)
+CheckOffset(struct FT_BBox_,yMax,0,12,54071)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16808,0);
 Msg("Find size of FT_BBox_ (16808)\n");
@@ -425,6 +475,10 @@ Msg("Find size of FT_BBox_ (16808)\n");
 CheckTypeSize(FT_BBox,16, 16809, 2, 3.2, NULL, 16808, NULL)
 #elif defined __x86_64__
 CheckTypeSize(FT_BBox,32, 16809, 11, 3.2, NULL, 16808, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_BBox,0, 16809, 10, 3.2, NULL, 16808, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_BBox,0, 16809, 12, 3.2, NULL, 16808, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16808,NULL);\n",architecture,16809,0);
 Msg("Find size of FT_BBox (16809)\n");
@@ -434,6 +488,10 @@ Msg("Find size of FT_BBox (16809)\n");
 CheckTypeSize(FT_Raster,8, 16818, 11, 3.2, NULL, 16817, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Raster,4, 16818, 2, 3.2, NULL, 16817, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Raster,0, 16818, 10, 3.2, NULL, 16817, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Raster,0, 16818, 12, 3.2, NULL, 16817, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16817,NULL);\n",architecture,16818,0);
 Msg("Find size of FT_Raster (16818)\n");
@@ -443,6 +501,10 @@ Msg("Find size of FT_Raster (16818)\n");
 CheckTypeSize(FT_Raster_NewFunc,8, 16821, 11, 3.2, NULL, 16820, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Raster_NewFunc,4, 16821, 2, 3.2, NULL, 16820, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Raster_NewFunc,0, 16821, 10, 3.2, NULL, 16820, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Raster_NewFunc,0, 16821, 12, 3.2, NULL, 16820, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16820,NULL);\n",architecture,16821,0);
 Msg("Find size of FT_Raster_NewFunc (16821)\n");
@@ -452,6 +514,10 @@ Msg("Find size of FT_Raster_NewFunc (16821)\n");
 CheckTypeSize(FT_Raster_ResetFunc,8, 16823, 11, 3.2, NULL, 16822, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Raster_ResetFunc,4, 16823, 2, 3.2, NULL, 16822, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Raster_ResetFunc,0, 16823, 10, 3.2, NULL, 16822, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Raster_ResetFunc,0, 16823, 12, 3.2, NULL, 16822, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16822,NULL);\n",architecture,16823,0);
 Msg("Find size of FT_Raster_ResetFunc (16823)\n");
@@ -461,6 +527,10 @@ Msg("Find size of FT_Raster_ResetFunc (16823)\n");
 CheckTypeSize(FT_Raster_SetModeFunc,8, 16825, 11, 3.2, NULL, 16824, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Raster_SetModeFunc,4, 16825, 2, 3.2, NULL, 16824, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Raster_SetModeFunc,0, 16825, 10, 3.2, NULL, 16824, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Raster_SetModeFunc,0, 16825, 12, 3.2, NULL, 16824, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16824,NULL);\n",architecture,16825,0);
 Msg("Find size of FT_Raster_SetModeFunc (16825)\n");
@@ -474,6 +544,10 @@ CheckTypeSize(FT_Span,6, 16830, 1, 3.2, NULL, 16829, NULL)
 CheckTypeSize(FT_SpanFunc,8, 16833, 11, 3.2, NULL, 16832, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_SpanFunc,4, 16833, 2, 3.2, NULL, 16832, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_SpanFunc,0, 16833, 10, 3.2, NULL, 16832, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_SpanFunc,0, 16833, 12, 3.2, NULL, 16832, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16832,NULL);\n",architecture,16833,0);
 Msg("Find size of FT_SpanFunc (16833)\n");
@@ -483,6 +557,10 @@ Msg("Find size of FT_SpanFunc (16833)\n");
 CheckTypeSize(FT_Raster_BitTest_Func,8, 16835, 11, 3.2, NULL, 16834, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Raster_BitTest_Func,4, 16835, 2, 3.2, NULL, 16834, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Raster_BitTest_Func,0, 16835, 10, 3.2, NULL, 16834, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Raster_BitTest_Func,0, 16835, 12, 3.2, NULL, 16834, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16834,NULL);\n",architecture,16835,0);
 Msg("Find size of FT_Raster_BitTest_Func (16835)\n");
@@ -492,6 +570,10 @@ Msg("Find size of FT_Raster_BitTest_Func (16835)\n");
 CheckTypeSize(FT_Raster_BitSet_Func,8, 16837, 11, 3.2, NULL, 16836, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Raster_BitSet_Func,4, 16837, 2, 3.2, NULL, 16836, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Raster_BitSet_Func,0, 16837, 10, 3.2, NULL, 16836, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Raster_BitSet_Func,0, 16837, 12, 3.2, NULL, 16836, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16836,NULL);\n",architecture,16837,0);
 Msg("Find size of FT_Raster_BitSet_Func (16837)\n");
@@ -501,6 +583,10 @@ Msg("Find size of FT_Raster_BitSet_Func (16837)\n");
 CheckTypeSize(FT_Raster_Params,96, 16838, 11, 3.2, NULL, 16826, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Raster_Params,48, 16838, 2, 3.2, NULL, 16826, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Raster_Params,0, 16838, 10, 3.2, NULL, 16826, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Raster_Params,0, 16838, 12, 3.2, NULL, 16826, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16826,NULL);\n",architecture,16838,0);
 Msg("Find size of FT_Raster_Params (16838)\n");
@@ -510,6 +596,10 @@ Msg("Find size of FT_Raster_Params (16838)\n");
 CheckTypeSize(FT_Raster_RenderFunc,8, 16841, 11, 3.2, NULL, 16840, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Raster_RenderFunc,4, 16841, 2, 3.2, NULL, 16840, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Raster_RenderFunc,0, 16841, 10, 3.2, NULL, 16840, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Raster_RenderFunc,0, 16841, 12, 3.2, NULL, 16840, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16840,NULL);\n",architecture,16841,0);
 Msg("Find size of FT_Raster_RenderFunc (16841)\n");
@@ -519,6 +609,10 @@ Msg("Find size of FT_Raster_RenderFunc (16841)\n");
 CheckTypeSize(FT_Raster_DoneFunc,8, 16843, 11, 3.2, NULL, 16842, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Raster_DoneFunc,4, 16843, 2, 3.2, NULL, 16842, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Raster_DoneFunc,0, 16843, 10, 3.2, NULL, 16842, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Raster_DoneFunc,0, 16843, 12, 3.2, NULL, 16842, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16842,NULL);\n",architecture,16843,0);
 Msg("Find size of FT_Raster_DoneFunc (16843)\n");
@@ -528,6 +622,10 @@ Msg("Find size of FT_Raster_DoneFunc (16843)\n");
 CheckTypeSize(FT_Raster_Funcs,48, 16844, 11, 3.2, NULL, 16815, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Raster_Funcs,24, 16844, 2, 3.2, NULL, 16815, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Raster_Funcs,0, 16844, 10, 3.2, NULL, 16815, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Raster_Funcs,0, 16844, 12, 3.2, NULL, 16815, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16815,NULL);\n",architecture,16844,0);
 Msg("Find size of FT_Raster_Funcs (16844)\n");
@@ -537,6 +635,10 @@ Msg("Find size of FT_Raster_Funcs (16844)\n");
 CheckTypeSize(FT_Outline_MoveToFunc,8, 16876, 11, 3.2, NULL, 16875, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Outline_MoveToFunc,4, 16876, 2, 3.2, NULL, 16875, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Outline_MoveToFunc,0, 16876, 10, 3.2, NULL, 16875, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Outline_MoveToFunc,0, 16876, 12, 3.2, NULL, 16875, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16875,NULL);\n",architecture,16876,0);
 Msg("Find size of FT_Outline_MoveToFunc (16876)\n");
@@ -546,6 +648,10 @@ Msg("Find size of FT_Outline_MoveToFunc (16876)\n");
 CheckTypeSize(FT_Outline_LineToFunc,8, 16877, 11, 3.2, NULL, 16875, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Outline_LineToFunc,4, 16877, 2, 3.2, NULL, 16875, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Outline_LineToFunc,0, 16877, 10, 3.2, NULL, 16875, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Outline_LineToFunc,0, 16877, 12, 3.2, NULL, 16875, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16875,NULL);\n",architecture,16877,0);
 Msg("Find size of FT_Outline_LineToFunc (16877)\n");
@@ -555,6 +661,10 @@ Msg("Find size of FT_Outline_LineToFunc (16877)\n");
 CheckTypeSize(FT_Outline_ConicToFunc,8, 16879, 11, 3.2, NULL, 16878, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Outline_ConicToFunc,4, 16879, 2, 3.2, NULL, 16878, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Outline_ConicToFunc,0, 16879, 10, 3.2, NULL, 16878, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Outline_ConicToFunc,0, 16879, 12, 3.2, NULL, 16878, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16878,NULL);\n",architecture,16879,0);
 Msg("Find size of FT_Outline_ConicToFunc (16879)\n");
@@ -564,6 +674,10 @@ Msg("Find size of FT_Outline_ConicToFunc (16879)\n");
 CheckTypeSize(FT_Outline_CubicToFunc,8, 16881, 11, 3.2, NULL, 16880, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Outline_CubicToFunc,4, 16881, 2, 3.2, NULL, 16880, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Outline_CubicToFunc,0, 16881, 10, 3.2, NULL, 16880, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Outline_CubicToFunc,0, 16881, 12, 3.2, NULL, 16880, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16880,NULL);\n",architecture,16881,0);
 Msg("Find size of FT_Outline_CubicToFunc (16881)\n");
@@ -573,6 +687,10 @@ Msg("Find size of FT_Outline_CubicToFunc (16881)\n");
 CheckTypeSize(FT_Outline_Funcs,48, 16882, 11, 3.2, NULL, 16874, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_Outline_Funcs,24, 16882, 2, 3.2, NULL, 16874, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Outline_Funcs,0, 16882, 10, 3.2, NULL, 16874, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_Outline_Funcs,0, 16882, 12, 3.2, NULL, 16874, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16874, NULL);\n",architecture,16882,0);
 Msg("Find size of FT_Outline_Funcs (16882)\n");
