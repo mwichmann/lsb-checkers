@@ -102,9 +102,9 @@ CheckTypeSize(XftColor,12, 12557, 2, 3.2, NULL, 12556, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XftColor,16, 12557, 11, 3.2, NULL, 12556, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XftColor,0, 12557, 10, 3.2, NULL, 12556, NULL)
+CheckTypeSize(XftColor,12, 12557, 10, 3.2, NULL, 12556, NULL)
 #elif defined __s390x__
-CheckTypeSize(XftColor,0, 12557, 12, 3.2, NULL, 12556, NULL)
+CheckTypeSize(XftColor,16, 12557, 12, 3.2, NULL, 12556, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12556,NULL);\n",architecture,12557,0);
 Msg("Find size of XftColor (12557)\n");
@@ -115,9 +115,9 @@ CheckTypeSize(XftFont,24, 12573, 2, 3.2, NULL, 12572, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XftFont,32, 12573, 11, 3.2, NULL, 12572, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XftFont,0, 12573, 10, 3.2, NULL, 12572, NULL)
+CheckTypeSize(XftFont,24, 12573, 10, 3.2, NULL, 12572, NULL)
 #elif defined __s390x__
-CheckTypeSize(XftFont,0, 12573, 12, 3.2, NULL, 12572, NULL)
+CheckTypeSize(XftFont,32, 12573, 12, 3.2, NULL, 12572, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12572,NULL);\n",architecture,12573,0);
 Msg("Find size of XftFont (12573)\n");
@@ -128,9 +128,9 @@ CheckTypeSize(XftGlyphSpec,8, 12576, 2, 3.2, NULL, 12575, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XftGlyphSpec,8, 12576, 11, 3.2, NULL, 12575, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XftGlyphSpec,0, 12576, 10, 3.2, NULL, 12575, NULL)
+CheckTypeSize(XftGlyphSpec,8, 12576, 10, 3.2, NULL, 12575, NULL)
 #elif defined __s390x__
-CheckTypeSize(XftGlyphSpec,0, 12576, 12, 3.2, NULL, 12575, NULL)
+CheckTypeSize(XftGlyphSpec,8, 12576, 12, 3.2, NULL, 12575, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12575,NULL);\n",architecture,12576,0);
 Msg("Find size of XftGlyphSpec (12576)\n");
@@ -141,9 +141,9 @@ CheckTypeSize(XftCharSpec,8, 16995, 11, 3.2, NULL, 16994, NULL)
 #elif defined __i386__
 CheckTypeSize(XftCharSpec,8, 16995, 2, 3.2, NULL, 16994, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XftCharSpec,0, 16995, 10, 3.2, NULL, 16994, NULL)
+CheckTypeSize(XftCharSpec,8, 16995, 10, 3.2, NULL, 16994, NULL)
 #elif defined __s390x__
-CheckTypeSize(XftCharSpec,0, 16995, 12, 3.2, NULL, 16994, NULL)
+CheckTypeSize(XftCharSpec,8, 16995, 12, 3.2, NULL, 16994, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16994,NULL);\n",architecture,16995,0);
 Msg("Find size of XftCharSpec (16995)\n");
@@ -154,9 +154,9 @@ CheckTypeSize(XftCharFontSpec,16, 17009, 11, 3.2, NULL, 17008, NULL)
 #elif defined __i386__
 CheckTypeSize(XftCharFontSpec,12, 17009, 2, 3.2, NULL, 17008, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XftCharFontSpec,0, 17009, 10, 3.2, NULL, 17008, NULL)
+CheckTypeSize(XftCharFontSpec,12, 17009, 10, 3.2, NULL, 17008, NULL)
 #elif defined __s390x__
-CheckTypeSize(XftCharFontSpec,0, 17009, 12, 3.2, NULL, 17008, NULL)
+CheckTypeSize(XftCharFontSpec,16, 17009, 12, 3.2, NULL, 17008, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,17008,NULL);\n",architecture,17009,0);
 Msg("Find size of XftCharFontSpec (17009)\n");
@@ -167,9 +167,9 @@ CheckTypeSize(XftGlyphFontSpec,16, 17017, 11, 3.2, NULL, 17016, NULL)
 #elif defined __i386__
 CheckTypeSize(XftGlyphFontSpec,12, 17017, 2, 3.2, NULL, 17016, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XftGlyphFontSpec,0, 17017, 10, 3.2, NULL, 17016, NULL)
+CheckTypeSize(XftGlyphFontSpec,12, 17017, 10, 3.2, NULL, 17016, NULL)
 #elif defined __s390x__
-CheckTypeSize(XftGlyphFontSpec,0, 17017, 12, 3.2, NULL, 17016, NULL)
+CheckTypeSize(XftGlyphFontSpec,16, 17017, 12, 3.2, NULL, 17016, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,17016, NULL);\n",architecture,17017,0);
 Msg("Find size of XftGlyphFontSpec (17017)\n");
