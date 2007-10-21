@@ -37,9 +37,9 @@ CheckTypeSize(BDF_PropertyRec,16, 16932, 11, 3.2, NULL, 16927, NULL)
 #elif defined __i386__
 CheckTypeSize(BDF_PropertyRec,8, 16932, 2, 3.2, NULL, 16927, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(BDF_PropertyRec,0, 16932, 10, 3.2, NULL, 16927, NULL)
+CheckTypeSize(BDF_PropertyRec,8, 16932, 10, 3.2, NULL, 16927, NULL)
 #elif defined __s390x__
-CheckTypeSize(BDF_PropertyRec,0, 16932, 12, 3.2, NULL, 16927, NULL)
+CheckTypeSize(BDF_PropertyRec,16, 16932, 12, 3.2, NULL, 16927, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16927, NULL);\n",architecture,16932,0);
 Msg("Find size of BDF_PropertyRec (16932)\n");

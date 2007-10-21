@@ -33,9 +33,9 @@ CheckTypeSize(FT_List_Destructor,8, 16736, 11, 3.2, NULL, 16735, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_List_Destructor,4, 16736, 2, 3.2, NULL, 16735, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(FT_List_Destructor,0, 16736, 10, 3.2, NULL, 16735, NULL)
+CheckTypeSize(FT_List_Destructor,4, 16736, 10, 3.2, NULL, 16735, NULL)
 #elif defined __s390x__
-CheckTypeSize(FT_List_Destructor,0, 16736, 12, 3.2, NULL, 16735, NULL)
+CheckTypeSize(FT_List_Destructor,8, 16736, 12, 3.2, NULL, 16735, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16735,NULL);\n",architecture,16736,0);
 Msg("Find size of FT_List_Destructor (16736)\n");
@@ -46,9 +46,9 @@ CheckTypeSize(FT_List_Iterator,8, 16739, 11, 3.2, NULL, 16738, NULL)
 #elif defined __i386__
 CheckTypeSize(FT_List_Iterator,4, 16739, 2, 3.2, NULL, 16738, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(FT_List_Iterator,0, 16739, 10, 3.2, NULL, 16738, NULL)
+CheckTypeSize(FT_List_Iterator,4, 16739, 10, 3.2, NULL, 16738, NULL)
 #elif defined __s390x__
-CheckTypeSize(FT_List_Iterator,0, 16739, 12, 3.2, NULL, 16738, NULL)
+CheckTypeSize(FT_List_Iterator,8, 16739, 12, 3.2, NULL, 16738, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16738, NULL);\n",architecture,16739,0);
 Msg("Find size of FT_List_Iterator (16739)\n");
