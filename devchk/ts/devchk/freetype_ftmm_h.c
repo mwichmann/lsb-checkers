@@ -37,7 +37,7 @@ CheckTypeSize(FT_MM_Axis,12, 16936, 10, 3.2, NULL, 16935, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_MM_Axis,24, 16936, 12, 3.2, NULL, 16935, NULL)
 #elif defined __ia64__
-CheckTypeSize(FT_MM_Axis,0, 16936, 3, 3.2, NULL, 16935, NULL)
+CheckTypeSize(FT_MM_Axis,24, 16936, 3, 3.2, NULL, 16935, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16935,NULL);\n",architecture,16936,0);
 Msg("Find size of FT_MM_Axis (16936)\n");
@@ -52,7 +52,7 @@ CheckTypeSize(FT_Multi_Master,56, 16938, 10, 3.2, NULL, 16934, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_Multi_Master,104, 16938, 12, 3.2, NULL, 16934, NULL)
 #elif defined __ia64__
-CheckTypeSize(FT_Multi_Master,0, 16938, 3, 3.2, NULL, 16934, NULL)
+CheckTypeSize(FT_Multi_Master,104, 16938, 3, 3.2, NULL, 16934, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16934,NULL);\n",architecture,16938,0);
 Msg("Find size of FT_Multi_Master (16938)\n");
@@ -67,7 +67,7 @@ CheckTypeSize(FT_Var_Axis,24, 16943, 10, 3.2, NULL, 16942, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_Var_Axis,48, 16943, 12, 3.2, NULL, 16942, NULL)
 #elif defined __ia64__
-CheckTypeSize(FT_Var_Axis,0, 16943, 3, 3.2, NULL, 16942, NULL)
+CheckTypeSize(FT_Var_Axis,48, 16943, 3, 3.2, NULL, 16942, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16942,NULL);\n",architecture,16943,0);
 Msg("Find size of FT_Var_Axis (16943)\n");
@@ -82,7 +82,7 @@ CheckTypeSize(FT_Var_Named_Style,8, 16946, 10, 3.2, NULL, 16945, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_Var_Named_Style,16, 16946, 12, 3.2, NULL, 16945, NULL)
 #elif defined __ia64__
-CheckTypeSize(FT_Var_Named_Style,0, 16946, 3, 3.2, NULL, 16945, NULL)
+CheckTypeSize(FT_Var_Named_Style,16, 16946, 3, 3.2, NULL, 16945, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16945,NULL);\n",architecture,16946,0);
 Msg("Find size of FT_Var_Named_Style (16946)\n");
@@ -97,7 +97,7 @@ CheckTypeSize(FT_MM_Var,20, 16948, 10, 3.2, NULL, 16941, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_MM_Var,32, 16948, 12, 3.2, NULL, 16941, NULL)
 #elif defined __ia64__
-CheckTypeSize(FT_MM_Var,0, 16948, 3, 3.2, NULL, 16941, NULL)
+CheckTypeSize(FT_MM_Var,32, 16948, 3, 3.2, NULL, 16941, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16941, NULL);\n",architecture,16948,0);
 Msg("Find size of FT_MM_Var (16948)\n");
