@@ -69,7 +69,7 @@ CheckTypeSize(FT_Renderer_RenderFunc,4, 16804, 10, 3.2, NULL, 16803, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_Renderer_RenderFunc,8, 16804, 12, 3.2, NULL, 16803, NULL)
 #elif defined __ia64__
-CheckTypeSize(FT_Renderer_RenderFunc,0, 16804, 3, 3.2, NULL, 16803, NULL)
+CheckTypeSize(FT_Renderer_RenderFunc,8, 16804, 3, 3.2, NULL, 16803, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16803,NULL);\n",architecture,16804,0);
 Msg("Find size of FT_Renderer_RenderFunc (16804)\n");
@@ -84,7 +84,7 @@ CheckTypeSize(FT_Renderer_TransformFunc,4, 16807, 10, 3.2, NULL, 16806, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_Renderer_TransformFunc,8, 16807, 12, 3.2, NULL, 16806, NULL)
 #elif defined __ia64__
-CheckTypeSize(FT_Renderer_TransformFunc,0, 16807, 3, 3.2, NULL, 16806, NULL)
+CheckTypeSize(FT_Renderer_TransformFunc,8, 16807, 3, 3.2, NULL, 16806, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16806,NULL);\n",architecture,16807,0);
 Msg("Find size of FT_Renderer_TransformFunc (16807)\n");
@@ -99,7 +99,7 @@ CheckTypeSize(FT_Renderer_GetCBoxFunc,4, 16812, 10, 3.2, NULL, 16811, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_Renderer_GetCBoxFunc,8, 16812, 12, 3.2, NULL, 16811, NULL)
 #elif defined __ia64__
-CheckTypeSize(FT_Renderer_GetCBoxFunc,0, 16812, 3, 3.2, NULL, 16811, NULL)
+CheckTypeSize(FT_Renderer_GetCBoxFunc,8, 16812, 3, 3.2, NULL, 16811, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16811,NULL);\n",architecture,16812,0);
 Msg("Find size of FT_Renderer_GetCBoxFunc (16812)\n");
@@ -114,7 +114,7 @@ CheckTypeSize(FT_Renderer_SetModeFunc,4, 16814, 10, 3.2, NULL, 16813, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_Renderer_SetModeFunc,8, 16814, 12, 3.2, NULL, 16813, NULL)
 #elif defined __ia64__
-CheckTypeSize(FT_Renderer_SetModeFunc,0, 16814, 3, 3.2, NULL, 16813, NULL)
+CheckTypeSize(FT_Renderer_SetModeFunc,8, 16814, 3, 3.2, NULL, 16813, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16813,NULL);\n",architecture,16814,0);
 Msg("Find size of FT_Renderer_SetModeFunc (16814)\n");
@@ -129,7 +129,7 @@ CheckTypeSize(FT_Renderer_Class,60, 16846, 10, 3.2, NULL, 16778, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_Renderer_Class,120, 16846, 12, 3.2, NULL, 16778, NULL)
 #elif defined __ia64__
-CheckTypeSize(FT_Renderer_Class,0, 16846, 3, 3.2, NULL, 16778, NULL)
+CheckTypeSize(FT_Renderer_Class,120, 16846, 3, 3.2, NULL, 16778, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16778, NULL);\n",architecture,16846,0);
 Msg("Find size of FT_Renderer_Class (16846)\n");
