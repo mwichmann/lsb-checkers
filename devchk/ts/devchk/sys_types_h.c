@@ -392,7 +392,7 @@ Msg("Find size of fd_mask (10131)\n");
 #if defined __i386__
 CheckTypeSize(timer_t,4, 10208, 2, 1.2, NULL, 40, NULL)
 #elif defined __ia64__
-CheckTypeSize(timer_t,4, 10208, 3, 1.3, NULL, 40, NULL)
+CheckTypeSize(timer_t,8, 10208, 3, 1.3, NULL, 40, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(timer_t,4, 10208, 6, 1.2, NULL, 40, NULL)
 #elif defined __s390__ && !defined __s390x__
