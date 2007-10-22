@@ -68,6 +68,11 @@ CheckOffset(struct FT_ListRec_,tail,4,10,53940)
 CheckTypeSize(struct FT_ListRec_,16, 16720, 12, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_ListRec_,tail,8,12,53940)
 CheckOffset(struct FT_ListRec_,tail,8,12,53940)
+#elif defined __ia64__
+CheckTypeSize(struct FT_ListRec_,0, 16720, 3, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_ListRec_ on IA64\n");
+CheckOffset(struct FT_ListRec_,head,0,3,53939)
+CheckOffset(struct FT_ListRec_,tail,0,3,53940)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16720,0);
 Msg("Find size of FT_ListRec_ (16720)\n");
@@ -97,6 +102,12 @@ CheckMemberSize(struct FT_ListNodeRec_,next,8,12,53937)
 CheckOffset(struct FT_ListNodeRec_,next,8,12,53937)
 CheckMemberSize(struct FT_ListNodeRec_,data,8,12,53938)
 CheckOffset(struct FT_ListNodeRec_,data,16,12,53938)
+#elif defined __ia64__
+CheckTypeSize(struct FT_ListNodeRec_,0, 16721, 3, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_ListNodeRec_ on IA64\n");
+CheckOffset(struct FT_ListNodeRec_,prev,0,3,53936)
+CheckOffset(struct FT_ListNodeRec_,next,0,3,53937)
+CheckOffset(struct FT_ListNodeRec_,data,0,3,53938)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16721,0);
 Msg("Find size of FT_ListNodeRec_ (16721)\n");
@@ -110,6 +121,8 @@ CheckTypeSize(FT_ListNode,8, 16723, 11, 3.2, NULL, 16722, NULL)
 CheckTypeSize(FT_ListNode,4, 16723, 10, 3.2, NULL, 16722, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_ListNode,8, 16723, 12, 3.2, NULL, 16722, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_ListNode,0, 16723, 3, 3.2, NULL, 16722, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16722,NULL);\n",architecture,16723,0);
 Msg("Find size of FT_ListNode (16723)\n");
@@ -123,6 +136,8 @@ CheckTypeSize(FT_List,8, 16725, 11, 3.2, NULL, 16724, NULL)
 CheckTypeSize(FT_List,4, 16725, 10, 3.2, NULL, 16724, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_List,8, 16725, 12, 3.2, NULL, 16724, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_List,0, 16725, 3, 3.2, NULL, 16724, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16724,NULL);\n",architecture,16725,0);
 Msg("Find size of FT_List (16725)\n");
@@ -148,6 +163,11 @@ CheckOffset(struct FT_Generic_,finalizer,4,10,53968)
 CheckTypeSize(struct FT_Generic_,16, 16748, 12, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_Generic_,finalizer,8,12,53968)
 CheckOffset(struct FT_Generic_,finalizer,8,12,53968)
+#elif defined __ia64__
+CheckTypeSize(struct FT_Generic_,0, 16748, 3, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Generic_ on IA64\n");
+CheckOffset(struct FT_Generic_,data,0,3,53967)
+CheckOffset(struct FT_Generic_,finalizer,0,3,53968)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16748,0);
 Msg("Find size of FT_Generic_ (16748)\n");
@@ -161,6 +181,8 @@ CheckTypeSize(FT_Generic_Finalizer,8, 16749, 11, 3.2, NULL, 6988, NULL)
 CheckTypeSize(FT_Generic_Finalizer,4, 16749, 10, 3.2, NULL, 6988, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_Generic_Finalizer,8, 16749, 12, 3.2, NULL, 6988, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_Generic_Finalizer,0, 16749, 3, 3.2, NULL, 6988, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,6988,NULL);\n",architecture,16749,0);
 Msg("Find size of FT_Generic_Finalizer (16749)\n");
@@ -174,6 +196,8 @@ CheckTypeSize(FT_Generic,16, 16750, 11, 3.2, NULL, 16748, NULL)
 CheckTypeSize(FT_Generic,8, 16750, 10, 3.2, NULL, 16748, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_Generic,16, 16750, 12, 3.2, NULL, 16748, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_Generic,0, 16750, 3, 3.2, NULL, 16748, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16748,NULL);\n",architecture,16750,0);
 Msg("Find size of FT_Generic (16750)\n");
@@ -191,6 +215,8 @@ CheckTypeSize(FT_ULong,4, 16754, 2, 3.2, NULL, 11186, NULL)
 CheckTypeSize(FT_ULong,4, 16754, 10, 3.2, NULL, 11186, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_ULong,8, 16754, 12, 3.2, NULL, 11186, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_ULong,0, 16754, 3, 3.2, NULL, 11186, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11186,NULL);\n",architecture,16754,0);
 Msg("Find size of FT_ULong (16754)\n");
@@ -204,6 +230,8 @@ CheckTypeSize(FT_Long,4, 16755, 2, 3.2, NULL, 8, NULL)
 CheckTypeSize(FT_Long,4, 16755, 10, 3.2, NULL, 8, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_Long,8, 16755, 12, 3.2, NULL, 8, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_Long,0, 16755, 3, 3.2, NULL, 8, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,8,NULL);\n",architecture,16755,0);
 Msg("Find size of FT_Long (16755)\n");
@@ -221,6 +249,8 @@ CheckTypeSize(FT_Fixed,4, 16759, 2, 3.2, NULL, 8, NULL)
 CheckTypeSize(FT_Fixed,4, 16759, 10, 3.2, NULL, 8, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_Fixed,8, 16759, 12, 3.2, NULL, 8, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_Fixed,0, 16759, 3, 3.2, NULL, 8, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,8,NULL);\n",architecture,16759,0);
 Msg("Find size of FT_Fixed (16759)\n");
@@ -234,6 +264,8 @@ CheckTypeSize(FT_Pointer,4, 16766, 2, 3.2, NULL, 40, NULL)
 CheckTypeSize(FT_Pointer,4, 16766, 10, 3.2, NULL, 40, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_Pointer,8, 16766, 12, 3.2, NULL, 40, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_Pointer,0, 16766, 3, 3.2, NULL, 40, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,40,NULL);\n",architecture,16766,0);
 Msg("Find size of FT_Pointer (16766)\n");
@@ -247,6 +279,8 @@ CheckTypeSize(FT_ListRec,8, 16775, 2, 3.2, NULL, 16720, NULL)
 CheckTypeSize(FT_ListRec,8, 16775, 10, 3.2, NULL, 16720, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_ListRec,16, 16775, 12, 3.2, NULL, 16720, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_ListRec,0, 16775, 3, 3.2, NULL, 16720, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16720,NULL);\n",architecture,16775,0);
 Msg("Find size of FT_ListRec (16775)\n");
@@ -288,6 +322,13 @@ CheckMemberSize(struct FT_Matrix_,yx,8,12,54030)
 CheckOffset(struct FT_Matrix_,yx,16,12,54030)
 CheckMemberSize(struct FT_Matrix_,yy,8,12,54031)
 CheckOffset(struct FT_Matrix_,yy,24,12,54031)
+#elif defined __ia64__
+CheckTypeSize(struct FT_Matrix_,0, 16790, 3, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Matrix_ on IA64\n");
+CheckOffset(struct FT_Matrix_,xx,0,3,54028)
+CheckOffset(struct FT_Matrix_,xy,0,3,54029)
+CheckOffset(struct FT_Matrix_,yx,0,3,54030)
+CheckOffset(struct FT_Matrix_,yy,0,3,54031)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16790,0);
 Msg("Find size of FT_Matrix_ (16790)\n");
@@ -301,6 +342,8 @@ CheckTypeSize(FT_Matrix,16, 16791, 2, 3.2, NULL, 16790, NULL)
 CheckTypeSize(FT_Matrix,16, 16791, 10, 3.2, NULL, 16790, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_Matrix,32, 16791, 12, 3.2, NULL, 16790, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_Matrix,0, 16791, 3, 3.2, NULL, 16790, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16790,NULL);\n",architecture,16791,0);
 Msg("Find size of FT_Matrix (16791)\n");
@@ -330,6 +373,8 @@ CheckTypeSize(FT_Bytes,4, 16978, 2, 3.2, NULL, 16896, NULL)
 CheckTypeSize(FT_Bytes,4, 16978, 10, 3.2, NULL, 16896, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_Bytes,8, 16978, 12, 3.2, NULL, 16896, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_Bytes,0, 16978, 3, 3.2, NULL, 16896, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16896,NULL);\n",architecture,16978,0);
 Msg("Find size of FT_Bytes (16978)\n");
@@ -347,6 +392,8 @@ CheckTypeSize(FT_ListNodeRec,12, 22171, 2, 3.2, NULL, 16721, NULL)
 CheckTypeSize(FT_ListNodeRec,12, 22171, 10, 3.2, NULL, 16721, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_ListNodeRec,24, 22171, 12, 3.2, NULL, 16721, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_ListNodeRec,0, 22171, 3, 3.2, NULL, 16721, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16721, NULL);\n",architecture,22171,0);
 Msg("Find size of FT_ListNodeRec (22171)\n");

@@ -170,6 +170,18 @@ CheckMemberSize(struct FT_Module_Class_,module_done,8,12,53983)
 CheckOffset(struct FT_Module_Class_,module_done,56,12,53983)
 CheckMemberSize(struct FT_Module_Class_,get_interface,8,12,53986)
 CheckOffset(struct FT_Module_Class_,get_interface,64,12,53986)
+#elif defined __ia64__
+CheckTypeSize(struct FT_Module_Class_,0, 16753, 3, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Module_Class_ on IA64\n");
+CheckOffset(struct FT_Module_Class_,module_flags,0,3,53974)
+CheckOffset(struct FT_Module_Class_,module_size,0,3,53975)
+CheckOffset(struct FT_Module_Class_,module_name,0,3,53976)
+CheckOffset(struct FT_Module_Class_,module_version,0,3,53977)
+CheckOffset(struct FT_Module_Class_,module_requires,0,3,53978)
+CheckOffset(struct FT_Module_Class_,module_interface,0,3,53979)
+CheckOffset(struct FT_Module_Class_,module_init,0,3,53981)
+CheckOffset(struct FT_Module_Class_,module_done,0,3,53983)
+CheckOffset(struct FT_Module_Class_,get_interface,0,3,53986)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16753,0);
 Msg("Find size of FT_Module_Class_ (16753)\n");
@@ -183,6 +195,8 @@ CheckTypeSize(FT_Module_Constructor,4, 16763, 2, 3.2, NULL, 16762, NULL)
 CheckTypeSize(FT_Module_Constructor,4, 16763, 10, 3.2, NULL, 16762, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_Module_Constructor,8, 16763, 12, 3.2, NULL, 16762, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_Module_Constructor,0, 16763, 3, 3.2, NULL, 16762, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16762,NULL);\n",architecture,16763,0);
 Msg("Find size of FT_Module_Constructor (16763)\n");
@@ -196,6 +210,8 @@ CheckTypeSize(FT_Module_Destructor,4, 16765, 2, 3.2, NULL, 16764, NULL)
 CheckTypeSize(FT_Module_Destructor,4, 16765, 10, 3.2, NULL, 16764, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_Module_Destructor,8, 16765, 12, 3.2, NULL, 16764, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_Module_Destructor,0, 16765, 3, 3.2, NULL, 16764, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16764,NULL);\n",architecture,16765,0);
 Msg("Find size of FT_Module_Destructor (16765)\n");
@@ -209,6 +225,8 @@ CheckTypeSize(FT_Module_Interface,4, 16767, 2, 3.2, NULL, 16766, NULL)
 CheckTypeSize(FT_Module_Interface,4, 16767, 10, 3.2, NULL, 16766, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_Module_Interface,8, 16767, 12, 3.2, NULL, 16766, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_Module_Interface,0, 16767, 3, 3.2, NULL, 16766, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16766,NULL);\n",architecture,16767,0);
 Msg("Find size of FT_Module_Interface (16767)\n");
@@ -222,6 +240,8 @@ CheckTypeSize(FT_Module_Requester,4, 16769, 2, 3.2, NULL, 16768, NULL)
 CheckTypeSize(FT_Module_Requester,4, 16769, 10, 3.2, NULL, 16768, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_Module_Requester,8, 16769, 12, 3.2, NULL, 16768, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_Module_Requester,0, 16769, 3, 3.2, NULL, 16768, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16768,NULL);\n",architecture,16769,0);
 Msg("Find size of FT_Module_Requester (16769)\n");
@@ -235,6 +255,8 @@ CheckTypeSize(FT_Module_Class,36, 16770, 2, 3.2, NULL, 16753, NULL)
 CheckTypeSize(FT_Module_Class,36, 16770, 10, 3.2, NULL, 16753, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_Module_Class,72, 16770, 12, 3.2, NULL, 16753, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_Module_Class,0, 16770, 3, 3.2, NULL, 16753, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16753,NULL);\n",architecture,16770,0);
 Msg("Find size of FT_Module_Class (16770)\n");
@@ -248,6 +270,8 @@ CheckTypeSize(FT_DebugHook_Func,4, 16868, 2, 3.2, NULL, 6988, NULL)
 CheckTypeSize(FT_DebugHook_Func,4, 16868, 10, 3.2, NULL, 6988, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_DebugHook_Func,8, 16868, 12, 3.2, NULL, 6988, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_DebugHook_Func,0, 16868, 3, 3.2, NULL, 6988, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,6988, NULL);\n",architecture,16868,0);
 Msg("Find size of FT_DebugHook_Func (16868)\n");

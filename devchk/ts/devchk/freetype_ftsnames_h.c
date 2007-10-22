@@ -36,6 +36,8 @@ CheckTypeSize(FT_SfntName,16, 16963, 2, 3.2, NULL, 16962, NULL)
 CheckTypeSize(FT_SfntName,16, 16963, 10, 3.2, NULL, 16962, NULL)
 #elif defined __s390x__
 CheckTypeSize(FT_SfntName,24, 16963, 12, 3.2, NULL, 16962, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_SfntName,0, 16963, 3, 3.2, NULL, 16962, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16962, NULL);\n",architecture,16963,0);
 Msg("Find size of FT_SfntName (16963)\n");
