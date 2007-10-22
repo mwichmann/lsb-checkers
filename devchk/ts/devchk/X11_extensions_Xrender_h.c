@@ -222,7 +222,7 @@ CheckTypeSize(XTrapezoid,40, 12569, 10, 3.2, NULL, 12568, NULL)
 #elif defined __s390x__
 CheckTypeSize(XTrapezoid,40, 12569, 12, 3.2, NULL, 12568, NULL)
 #elif defined __ia64__
-CheckTypeSize(XTrapezoid,0, 12569, 3, 3.2, NULL, 12568, NULL)
+CheckTypeSize(XTrapezoid,40, 12569, 3, 3.2, NULL, 12568, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12568,NULL);\n",architecture,12569,0);
 Msg("Find size of XTrapezoid (12569)\n");
@@ -241,7 +241,7 @@ CheckTypeSize(Glyph,4, 16633, 10, 3.2, NULL, 11186, NULL)
 #elif defined __s390x__
 CheckTypeSize(Glyph,8, 16633, 12, 3.2, NULL, 11186, NULL)
 #elif defined __ia64__
-CheckTypeSize(Glyph,0, 16633, 3, 3.2, NULL, 11186, NULL)
+CheckTypeSize(Glyph,8, 16633, 3, 3.2, NULL, 11186, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11186,NULL);\n",architecture,16633,0);
 Msg("Find size of Glyph (16633)\n");
@@ -256,7 +256,7 @@ CheckTypeSize(PictFormat,4, 16636, 10, 3.2, NULL, 11186, NULL)
 #elif defined __s390x__
 CheckTypeSize(PictFormat,8, 16636, 12, 3.2, NULL, 11186, NULL)
 #elif defined __ia64__
-CheckTypeSize(PictFormat,0, 16636, 3, 3.2, NULL, 11186, NULL)
+CheckTypeSize(PictFormat,8, 16636, 3, 3.2, NULL, 11186, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11186,NULL);\n",architecture,16636,0);
 Msg("Find size of PictFormat (16636)\n");
@@ -275,7 +275,7 @@ CheckTypeSize(XRenderPictFormat,32, 16640, 10, 3.2, NULL, 16639, NULL)
 #elif defined __s390x__
 CheckTypeSize(XRenderPictFormat,40, 16640, 12, 3.2, NULL, 16639, NULL)
 #elif defined __ia64__
-CheckTypeSize(XRenderPictFormat,0, 16640, 3, 3.2, NULL, 16639, NULL)
+CheckTypeSize(XRenderPictFormat,40, 16640, 3, 3.2, NULL, 16639, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16639,NULL);\n",architecture,16640,0);
 Msg("Find size of XRenderPictFormat (16640)\n");
@@ -290,7 +290,7 @@ CheckTypeSize(XGlyphInfo,12, 16649, 10, 3.2, NULL, 16648, NULL)
 #elif defined __s390x__
 CheckTypeSize(XGlyphInfo,12, 16649, 12, 3.2, NULL, 16648, NULL)
 #elif defined __ia64__
-CheckTypeSize(XGlyphInfo,0, 16649, 3, 3.2, NULL, 16648, NULL)
+CheckTypeSize(XGlyphInfo,12, 16649, 3, 3.2, NULL, 16648, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16648,NULL);\n",architecture,16649,0);
 Msg("Find size of XGlyphInfo (16649)\n");
@@ -305,7 +305,7 @@ CheckTypeSize(XFilters,16, 16653, 10, 3.2, NULL, 16652, NULL)
 #elif defined __s390x__
 CheckTypeSize(XFilters,32, 16653, 12, 3.2, NULL, 16652, NULL)
 #elif defined __ia64__
-CheckTypeSize(XFilters,0, 16653, 3, 3.2, NULL, 16652, NULL)
+CheckTypeSize(XFilters,32, 16653, 3, 3.2, NULL, 16652, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16652,NULL);\n",architecture,16653,0);
 Msg("Find size of XFilters (16653)\n");
@@ -324,7 +324,7 @@ CheckTypeSize(XAnimCursor,8, 16661, 10, 3.2, NULL, 16660, NULL)
 #elif defined __s390x__
 CheckTypeSize(XAnimCursor,16, 16661, 12, 3.2, NULL, 16660, NULL)
 #elif defined __ia64__
-CheckTypeSize(XAnimCursor,0, 16661, 3, 3.2, NULL, 16660, NULL)
+CheckTypeSize(XAnimCursor,16, 16661, 3, 3.2, NULL, 16660, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16660,NULL);\n",architecture,16661,0);
 Msg("Find size of XAnimCursor (16661)\n");
@@ -343,7 +343,7 @@ CheckTypeSize(XGlyphElt32,20, 16672, 10, 3.2, NULL, 16671, NULL)
 #elif defined __s390x__
 CheckTypeSize(XGlyphElt32,32, 16672, 12, 3.2, NULL, 16671, NULL)
 #elif defined __ia64__
-CheckTypeSize(XGlyphElt32,0, 16672, 3, 3.2, NULL, 16671, NULL)
+CheckTypeSize(XGlyphElt32,32, 16672, 3, 3.2, NULL, 16671, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16671,NULL);\n",architecture,16672,0);
 Msg("Find size of XGlyphElt32 (16672)\n");
@@ -358,7 +358,7 @@ CheckTypeSize(XGlyphElt8,20, 16676, 10, 3.2, NULL, 16675, NULL)
 #elif defined __s390x__
 CheckTypeSize(XGlyphElt8,32, 16676, 12, 3.2, NULL, 16675, NULL)
 #elif defined __ia64__
-CheckTypeSize(XGlyphElt8,0, 16676, 3, 3.2, NULL, 16675, NULL)
+CheckTypeSize(XGlyphElt8,32, 16676, 3, 3.2, NULL, 16675, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16675,NULL);\n",architecture,16676,0);
 Msg("Find size of XGlyphElt8 (16676)\n");
@@ -385,7 +385,7 @@ CheckTypeSize(XRenderPictureAttributes,52, 16698, 10, 3.2, NULL, 16697, NULL)
 #elif defined __s390x__
 CheckTypeSize(XRenderPictureAttributes,72, 16698, 12, 3.2, NULL, 16697, NULL)
 #elif defined __ia64__
-CheckTypeSize(XRenderPictureAttributes,0, 16698, 3, 3.2, NULL, 16697, NULL)
+CheckTypeSize(XRenderPictureAttributes,72, 16698, 3, 3.2, NULL, 16697, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16697,NULL);\n",architecture,16698,0);
 Msg("Find size of XRenderPictureAttributes (16698)\n");
@@ -404,7 +404,7 @@ CheckTypeSize(XIndexValue,12, 16708, 10, 3.2, NULL, 16707, NULL)
 #elif defined __s390x__
 CheckTypeSize(XIndexValue,16, 16708, 12, 3.2, NULL, 16707, NULL)
 #elif defined __ia64__
-CheckTypeSize(XIndexValue,0, 16708, 3, 3.2, NULL, 16707, NULL)
+CheckTypeSize(XIndexValue,16, 16708, 3, 3.2, NULL, 16707, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16707,NULL);\n",architecture,16708,0);
 Msg("Find size of XIndexValue (16708)\n");
@@ -419,7 +419,7 @@ CheckTypeSize(XGlyphElt16,20, 16713, 10, 3.2, NULL, 16710, NULL)
 #elif defined __s390x__
 CheckTypeSize(XGlyphElt16,32, 16713, 12, 3.2, NULL, 16710, NULL)
 #elif defined __ia64__
-CheckTypeSize(XGlyphElt16,0, 16713, 3, 3.2, NULL, 16710, NULL)
+CheckTypeSize(XGlyphElt16,32, 16713, 3, 3.2, NULL, 16710, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16710,NULL);\n",architecture,16713,0);
 Msg("Find size of XGlyphElt16 (16713)\n");
@@ -438,7 +438,7 @@ CheckTypeSize(GlyphSet,4, 16624, 10, 3.2, NULL, 11186, NULL)
 #elif defined __s390x__
 CheckTypeSize(GlyphSet,8, 16624, 12, 3.2, NULL, 11186, NULL)
 #elif defined __ia64__
-CheckTypeSize(GlyphSet,0, 16624, 3, 3.2, NULL, 11186, NULL)
+CheckTypeSize(GlyphSet,8, 16624, 3, 3.2, NULL, 11186, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11186,NULL);\n",architecture,16624,0);
 Msg("Find size of GlyphSet (16624)\n");
