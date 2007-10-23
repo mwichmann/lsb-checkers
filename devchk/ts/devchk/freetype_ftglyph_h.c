@@ -109,6 +109,28 @@ CheckMemberSize(struct FT_Glyph_Class_,glyph_bbox,8,3,54146)
 CheckOffset(struct FT_Glyph_Class_,glyph_bbox,48,3,54146)
 CheckMemberSize(struct FT_Glyph_Class_,glyph_prepare,8,3,54149)
 CheckOffset(struct FT_Glyph_Class_,glyph_prepare,56,3,54149)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct FT_Glyph_Class_,0, 16848, 6, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Glyph_Class_ on PPC32\n");
+CheckOffset(struct FT_Glyph_Class_,glyph_size,0,6,54126)
+CheckOffset(struct FT_Glyph_Class_,glyph_format,0,6,54127)
+CheckOffset(struct FT_Glyph_Class_,glyph_init,0,6,54134)
+CheckOffset(struct FT_Glyph_Class_,glyph_done,0,6,54136)
+CheckOffset(struct FT_Glyph_Class_,glyph_copy,0,6,54139)
+CheckOffset(struct FT_Glyph_Class_,glyph_transform,0,6,54143)
+CheckOffset(struct FT_Glyph_Class_,glyph_bbox,0,6,54146)
+CheckOffset(struct FT_Glyph_Class_,glyph_prepare,0,6,54149)
+#elif defined __powerpc64__
+CheckTypeSize(struct FT_Glyph_Class_,0, 16848, 9, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Glyph_Class_ on PPC64\n");
+CheckOffset(struct FT_Glyph_Class_,glyph_size,0,9,54126)
+CheckOffset(struct FT_Glyph_Class_,glyph_format,0,9,54127)
+CheckOffset(struct FT_Glyph_Class_,glyph_init,0,9,54134)
+CheckOffset(struct FT_Glyph_Class_,glyph_done,0,9,54136)
+CheckOffset(struct FT_Glyph_Class_,glyph_copy,0,9,54139)
+CheckOffset(struct FT_Glyph_Class_,glyph_transform,0,9,54143)
+CheckOffset(struct FT_Glyph_Class_,glyph_bbox,0,9,54146)
+CheckOffset(struct FT_Glyph_Class_,glyph_prepare,0,9,54149)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16848,0);
 Msg("Find size of FT_Glyph_Class_ (16848)\n");
@@ -154,6 +176,20 @@ CheckMemberSize(struct FT_GlyphRec_,format,4,3,54130)
 CheckOffset(struct FT_GlyphRec_,format,16,3,54130)
 CheckMemberSize(struct FT_GlyphRec_,advance,16,3,54131)
 CheckOffset(struct FT_GlyphRec_,advance,24,3,54131)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct FT_GlyphRec_,0, 16849, 6, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_GlyphRec_ on PPC32\n");
+CheckOffset(struct FT_GlyphRec_,library,0,6,54128)
+CheckOffset(struct FT_GlyphRec_,clazz,0,6,54129)
+CheckOffset(struct FT_GlyphRec_,format,0,6,54130)
+CheckOffset(struct FT_GlyphRec_,advance,0,6,54131)
+#elif defined __powerpc64__
+CheckTypeSize(struct FT_GlyphRec_,0, 16849, 9, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_GlyphRec_ on PPC64\n");
+CheckOffset(struct FT_GlyphRec_,library,0,9,54128)
+CheckOffset(struct FT_GlyphRec_,clazz,0,9,54129)
+CheckOffset(struct FT_GlyphRec_,format,0,9,54130)
+CheckOffset(struct FT_GlyphRec_,advance,0,9,54131)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16849,0);
 Msg("Find size of FT_GlyphRec_ (16849)\n");
@@ -169,6 +205,10 @@ CheckTypeSize(FT_Glyph_Class,32, 16850, 10, 3.2, NULL, 16848, NULL)
 CheckTypeSize(FT_Glyph_Class,64, 16850, 12, 3.2, NULL, 16848, NULL)
 #elif defined __ia64__
 CheckTypeSize(FT_Glyph_Class,64, 16850, 3, 3.2, NULL, 16848, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(FT_Glyph_Class,0, 16850, 6, 3.2, NULL, 16848, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(FT_Glyph_Class,0, 16850, 9, 3.2, NULL, 16848, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16848,NULL);\n",architecture,16850,0);
 Msg("Find size of FT_Glyph_Class (16850)\n");
@@ -184,6 +224,10 @@ CheckTypeSize(FT_Glyph,4, 16854, 10, 3.2, NULL, 16853, NULL)
 CheckTypeSize(FT_Glyph,8, 16854, 12, 3.2, NULL, 16853, NULL)
 #elif defined __ia64__
 CheckTypeSize(FT_Glyph,8, 16854, 3, 3.2, NULL, 16853, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(FT_Glyph,0, 16854, 6, 3.2, NULL, 16853, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(FT_Glyph,0, 16854, 9, 3.2, NULL, 16853, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16853,NULL);\n",architecture,16854,0);
 Msg("Find size of FT_Glyph (16854)\n");
@@ -199,6 +243,10 @@ CheckTypeSize(FT_Glyph_InitFunc,4, 16856, 10, 3.2, NULL, 16855, NULL)
 CheckTypeSize(FT_Glyph_InitFunc,8, 16856, 12, 3.2, NULL, 16855, NULL)
 #elif defined __ia64__
 CheckTypeSize(FT_Glyph_InitFunc,8, 16856, 3, 3.2, NULL, 16855, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(FT_Glyph_InitFunc,0, 16856, 6, 3.2, NULL, 16855, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(FT_Glyph_InitFunc,0, 16856, 9, 3.2, NULL, 16855, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16855,NULL);\n",architecture,16856,0);
 Msg("Find size of FT_Glyph_InitFunc (16856)\n");
@@ -214,6 +262,10 @@ CheckTypeSize(FT_Glyph_DoneFunc,4, 16858, 10, 3.2, NULL, 16857, NULL)
 CheckTypeSize(FT_Glyph_DoneFunc,8, 16858, 12, 3.2, NULL, 16857, NULL)
 #elif defined __ia64__
 CheckTypeSize(FT_Glyph_DoneFunc,8, 16858, 3, 3.2, NULL, 16857, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(FT_Glyph_DoneFunc,0, 16858, 6, 3.2, NULL, 16857, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(FT_Glyph_DoneFunc,0, 16858, 9, 3.2, NULL, 16857, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16857,NULL);\n",architecture,16858,0);
 Msg("Find size of FT_Glyph_DoneFunc (16858)\n");
@@ -229,6 +281,10 @@ CheckTypeSize(FT_Glyph_CopyFunc,4, 16860, 10, 3.2, NULL, 16859, NULL)
 CheckTypeSize(FT_Glyph_CopyFunc,8, 16860, 12, 3.2, NULL, 16859, NULL)
 #elif defined __ia64__
 CheckTypeSize(FT_Glyph_CopyFunc,8, 16860, 3, 3.2, NULL, 16859, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(FT_Glyph_CopyFunc,0, 16860, 6, 3.2, NULL, 16859, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(FT_Glyph_CopyFunc,0, 16860, 9, 3.2, NULL, 16859, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16859,NULL);\n",architecture,16860,0);
 Msg("Find size of FT_Glyph_CopyFunc (16860)\n");
@@ -244,6 +300,10 @@ CheckTypeSize(FT_Glyph_TransformFunc,4, 16862, 10, 3.2, NULL, 16861, NULL)
 CheckTypeSize(FT_Glyph_TransformFunc,8, 16862, 12, 3.2, NULL, 16861, NULL)
 #elif defined __ia64__
 CheckTypeSize(FT_Glyph_TransformFunc,8, 16862, 3, 3.2, NULL, 16861, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(FT_Glyph_TransformFunc,0, 16862, 6, 3.2, NULL, 16861, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(FT_Glyph_TransformFunc,0, 16862, 9, 3.2, NULL, 16861, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16861,NULL);\n",architecture,16862,0);
 Msg("Find size of FT_Glyph_TransformFunc (16862)\n");
@@ -259,6 +319,10 @@ CheckTypeSize(FT_Glyph_GetBBoxFunc,4, 16864, 10, 3.2, NULL, 16863, NULL)
 CheckTypeSize(FT_Glyph_GetBBoxFunc,8, 16864, 12, 3.2, NULL, 16863, NULL)
 #elif defined __ia64__
 CheckTypeSize(FT_Glyph_GetBBoxFunc,8, 16864, 3, 3.2, NULL, 16863, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(FT_Glyph_GetBBoxFunc,0, 16864, 6, 3.2, NULL, 16863, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(FT_Glyph_GetBBoxFunc,0, 16864, 9, 3.2, NULL, 16863, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16863,NULL);\n",architecture,16864,0);
 Msg("Find size of FT_Glyph_GetBBoxFunc (16864)\n");
@@ -274,6 +338,10 @@ CheckTypeSize(FT_Glyph_PrepareFunc,4, 16865, 10, 3.2, NULL, 16855, NULL)
 CheckTypeSize(FT_Glyph_PrepareFunc,8, 16865, 12, 3.2, NULL, 16855, NULL)
 #elif defined __ia64__
 CheckTypeSize(FT_Glyph_PrepareFunc,8, 16865, 3, 3.2, NULL, 16855, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(FT_Glyph_PrepareFunc,0, 16865, 6, 3.2, NULL, 16855, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(FT_Glyph_PrepareFunc,0, 16865, 9, 3.2, NULL, 16855, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16855,NULL);\n",architecture,16865,0);
 Msg("Find size of FT_Glyph_PrepareFunc (16865)\n");
@@ -303,6 +371,16 @@ CheckOffset(struct FT_OutlineGlyphRec_,outline,40,12,65064)
 CheckTypeSize(struct FT_OutlineGlyphRec_,80, 22172, 3, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_OutlineGlyphRec_,outline,40,3,65064)
 CheckOffset(struct FT_OutlineGlyphRec_,outline,40,3,65064)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct FT_OutlineGlyphRec_,0, 22172, 6, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_OutlineGlyphRec_ on PPC32\n");
+CheckOffset(struct FT_OutlineGlyphRec_,root,0,6,65063)
+CheckOffset(struct FT_OutlineGlyphRec_,outline,0,6,65064)
+#elif defined __powerpc64__
+CheckTypeSize(struct FT_OutlineGlyphRec_,0, 22172, 9, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_OutlineGlyphRec_ on PPC64\n");
+CheckOffset(struct FT_OutlineGlyphRec_,root,0,9,65063)
+CheckOffset(struct FT_OutlineGlyphRec_,outline,0,9,65064)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,22172,0);
 Msg("Find size of FT_OutlineGlyphRec_ (22172)\n");
@@ -318,6 +396,10 @@ CheckTypeSize(FT_OutlineGlyph,4, 22174, 10, 3.2, NULL, 22173, NULL)
 CheckTypeSize(FT_OutlineGlyph,8, 22174, 12, 3.2, NULL, 22173, NULL)
 #elif defined __ia64__
 CheckTypeSize(FT_OutlineGlyph,8, 22174, 3, 3.2, NULL, 22173, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(FT_OutlineGlyph,0, 22174, 6, 3.2, NULL, 22173, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(FT_OutlineGlyph,0, 22174, 9, 3.2, NULL, 22173, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,22173,NULL);\n",architecture,22174,0);
 Msg("Find size of FT_OutlineGlyph (22174)\n");
@@ -333,6 +415,10 @@ CheckTypeSize(FT_GlyphRec,20, 22175, 10, 3.2, NULL, 16849, NULL)
 CheckTypeSize(FT_GlyphRec,40, 22175, 12, 3.2, NULL, 16849, NULL)
 #elif defined __ia64__
 CheckTypeSize(FT_GlyphRec,40, 22175, 3, 3.2, NULL, 16849, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(FT_GlyphRec,0, 22175, 6, 3.2, NULL, 16849, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(FT_GlyphRec,0, 22175, 9, 3.2, NULL, 16849, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16849, NULL);\n",architecture,22175,0);
 Msg("Find size of FT_GlyphRec (22175)\n");
