@@ -42,6 +42,10 @@ CheckTypeSize(BDF_PropertyRec,8, 16932, 10, 3.2, NULL, 16927, NULL)
 CheckTypeSize(BDF_PropertyRec,16, 16932, 12, 3.2, NULL, 16927, NULL)
 #elif defined __ia64__
 CheckTypeSize(BDF_PropertyRec,16, 16932, 3, 3.2, NULL, 16927, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(BDF_PropertyRec,0, 16932, 6, 3.2, NULL, 16927, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(BDF_PropertyRec,0, 16932, 9, 3.2, NULL, 16927, NULL)
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16927, NULL);\n",architecture,16932,0);
 Msg("Find size of BDF_PropertyRec (16932)\n");

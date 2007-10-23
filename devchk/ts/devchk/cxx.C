@@ -4354,31 +4354,31 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architect
 
 #if defined __i386__
 #define TYPE std::basic_streambuf<wchar_t, std::char_traits<wchar_t> >
-CheckTypeSize(TYPE,288,10607,2, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,32,10607,2, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __ia64__
 #define TYPE std::basic_streambuf<wchar_t, std::char_traits<wchar_t> >
-CheckTypeSize(TYPE,520,10607,3, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,64,10607,3, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __powerpc__ && !defined __powerpc64__
 #define TYPE std::basic_streambuf<wchar_t, std::char_traits<wchar_t> >
-CheckTypeSize(TYPE,288,10607,6, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,32,10607,6, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __powerpc64__
 #define TYPE std::basic_streambuf<wchar_t, std::char_traits<wchar_t> >
-CheckTypeSize(TYPE,520,10607,9, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,64,10607,9, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __s390__ && !defined __s390x__
 #define TYPE std::basic_streambuf<wchar_t, std::char_traits<wchar_t> >
-CheckTypeSize(TYPE,288,10607,10, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,32,10607,10, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __x86_64__
 #define TYPE std::basic_streambuf<wchar_t, std::char_traits<wchar_t> >
-CheckTypeSize(TYPE,520,10607,11, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,64,10607,11, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __s390x__
 #define TYPE std::basic_streambuf<wchar_t, std::char_traits<wchar_t> >
-CheckTypeSize(TYPE,520,10607,12, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,64,10607,12, 2.0, NULL, 0, NULL)
 #undef TYPE
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10607,0);
@@ -4482,31 +4482,31 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architect
 
 #if defined __i386__
 #define TYPE std::messages_byname<wchar_t>
-CheckTypeSize(TYPE,12,10671,2, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,16,10671,2, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __ia64__
 #define TYPE std::messages_byname<wchar_t>
-CheckTypeSize(TYPE,24,10671,3, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,32,10671,3, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __powerpc__ && !defined __powerpc64__
 #define TYPE std::messages_byname<wchar_t>
-CheckTypeSize(TYPE,12,10671,6, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,16,10671,6, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __powerpc64__
 #define TYPE std::messages_byname<wchar_t>
-CheckTypeSize(TYPE,24,10671,9, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,32,10671,9, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __s390__ && !defined __s390x__
 #define TYPE std::messages_byname<wchar_t>
-CheckTypeSize(TYPE,12,10671,10, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,16,10671,10, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __x86_64__
 #define TYPE std::messages_byname<wchar_t>
-CheckTypeSize(TYPE,24,10671,11, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,32,10671,11, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __s390x__
 #define TYPE std::messages_byname<wchar_t>
-CheckTypeSize(TYPE,24,10671,12, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,32,10671,12, 2.0, NULL, 0, NULL)
 #undef TYPE
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10671,0);
@@ -4802,31 +4802,31 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architect
 
 #if defined __i386__
 #define TYPE std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,8,10764,2, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,188,10764,2, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __ia64__
 #define TYPE std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,16,10764,3, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,368,10764,3, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __powerpc__ && !defined __powerpc64__
 #define TYPE std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,8,10764,6, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,188,10764,6, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __powerpc64__
 #define TYPE std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,16,10764,9, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,368,10764,9, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __s390__ && !defined __s390x__
 #define TYPE std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,8,10764,10, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,188,10764,10, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __x86_64__
 #define TYPE std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,16,10764,11, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,368,10764,11, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __s390x__
 #define TYPE std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,16,10764,12, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,368,10764,12, 2.0, NULL, 0, NULL)
 #undef TYPE
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10764,0);
@@ -4834,31 +4834,31 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architect
 
 #if defined __i386__
 #define TYPE std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,8,10766,2, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,192,10766,2, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __ia64__
 #define TYPE std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,16,10766,3, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,368,10766,3, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __powerpc__ && !defined __powerpc64__
 #define TYPE std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,8,10766,6, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,192,10766,6, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __powerpc64__
 #define TYPE std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,16,10766,9, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,368,10766,9, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __s390__ && !defined __s390x__
 #define TYPE std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,8,10766,10, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,192,10766,10, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __x86_64__
 #define TYPE std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,16,10766,11, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,368,10766,11, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __s390x__
 #define TYPE std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >
-CheckTypeSize(TYPE,16,10766,12, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,368,10766,12, 2.0, NULL, 0, NULL)
 #undef TYPE
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10766,0);
@@ -4930,31 +4930,31 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architect
 
 #if defined __i386__
 #define TYPE std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,276,10605,2, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,180,10605,2, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __ia64__
 #define TYPE std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,512,10605,3, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,352,10605,3, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __powerpc__ && !defined __powerpc64__
 #define TYPE std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,276,10605,6, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,180,10605,6, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __powerpc64__
 #define TYPE std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,512,10605,9, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,352,10605,9, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __s390__ && !defined __s390x__
 #define TYPE std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,276,10605,10, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,180,10605,10, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __x86_64__
 #define TYPE std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,512,10605,11, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,352,10605,11, 2.0, NULL, 0, NULL)
 #undef TYPE
 #elif defined __s390x__
 #define TYPE std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char> >
-CheckTypeSize(TYPE,512,10605,12, 2.0, NULL, 0, NULL)
+CheckTypeSize(TYPE,352,10605,12, 2.0, NULL, 0, NULL)
 #undef TYPE
 #else
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10605,0);
