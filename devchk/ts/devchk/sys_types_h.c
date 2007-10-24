@@ -398,7 +398,7 @@ CheckTypeSize(timer_t,4, 10208, 6, 1.2, NULL, 40, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(timer_t,4, 10208, 10, 1.3, NULL, 40, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(timer_t,4, 10208, 9, 2.0, NULL, 40, NULL)
+CheckTypeSize(timer_t,8, 10208, 9, 2.0, NULL, 40, NULL)
 #elif defined __s390x__
 CheckTypeSize(timer_t,8, 10208, 12, 1.3, NULL, 40, NULL)
 #elif defined __x86_64__
