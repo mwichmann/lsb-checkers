@@ -40,8 +40,8 @@ CheckTypeSize(IcePoVersionRec,16, 8206, 12, 1.3, NULL, 8205, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IcePoVersionRec,16, 8206, 11, 2.0, NULL, 8205, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8205,NULL);\n",architecture,8206,0);
-Msg("Find size of IcePoVersionRec (8206)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of IcePoVersionRec (8206)\n");
+%d,%d,%d,'""2.0""',NULL,8205,NULL);\n",architecture,8206,0);
 #endif
 
 #if defined __i386__
@@ -59,8 +59,8 @@ CheckTypeSize(IcePaVersionRec,16, 8208, 12, 1.3, NULL, 8207, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IcePaVersionRec,16, 8208, 11, 2.0, NULL, 8207, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8207,NULL);\n",architecture,8208,0);
-Msg("Find size of IcePaVersionRec (8208)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of IcePaVersionRec (8208)\n");
+%d,%d,%d,'""2.0""',NULL,8207,NULL);\n",architecture,8208,0);
 #endif
 
 #if defined __i386__
@@ -78,8 +78,8 @@ CheckTypeSize(IcePointer,8, 8180, 12, 1.3, NULL, 40, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IcePointer,8, 8180, 11, 2.0, NULL, 40, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,40,NULL);\n",architecture,8180,0);
-Msg("Find size of IcePointer (8180)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of IcePointer (8180)\n");
+%d,%d,%d,'""2.0""',NULL,40,NULL);\n",architecture,8180,0);
 #endif
 
 #if defined __ia64__
@@ -97,8 +97,8 @@ CheckTypeSize(IcePoAuthStatus,4, 8734, 12, 1.3, NULL, 8733, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IcePoAuthStatus,4, 8734, 11, 2.0, NULL, 8733, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8733,NULL);\n",architecture,8734,0);
-Msg("Find size of IcePoAuthStatus (8734)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of IcePoAuthStatus (8734)\n");
+%d,%d,%d,'""2.0""',NULL,8733,NULL);\n",architecture,8734,0);
 #endif
 
 #if defined __ia64__
@@ -116,8 +116,8 @@ CheckTypeSize(IcePaAuthStatus,4, 8736, 12, 1.3, NULL, 8735, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IcePaAuthStatus,4, 8736, 11, 2.0, NULL, 8735, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8735,NULL);\n",architecture,8736,0);
-Msg("Find size of IcePaAuthStatus (8736)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of IcePaAuthStatus (8736)\n");
+%d,%d,%d,'""2.0""',NULL,8735,NULL);\n",architecture,8736,0);
 #endif
 
 #if defined __i386__
@@ -135,8 +135,8 @@ CheckTypeSize(IceConnectStatus,4, 8738, 12, 1.3, NULL, 8737, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IceConnectStatus,4, 8738, 11, 2.0, NULL, 8737, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8737,NULL);\n",architecture,8738,0);
-Msg("Find size of IceConnectStatus (8738)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of IceConnectStatus (8738)\n");
+%d,%d,%d,'""2.0""',NULL,8737,NULL);\n",architecture,8738,0);
 #endif
 
 #if defined __i386__
@@ -154,8 +154,8 @@ CheckTypeSize(IceProtocolSetupStatus,4, 8740, 12, 1.3, NULL, 8739, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IceProtocolSetupStatus,4, 8740, 11, 2.0, NULL, 8739, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8739,NULL);\n",architecture,8740,0);
-Msg("Find size of IceProtocolSetupStatus (8740)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of IceProtocolSetupStatus (8740)\n");
+%d,%d,%d,'""2.0""',NULL,8739,NULL);\n",architecture,8740,0);
 #endif
 
 #if defined __i386__
@@ -173,8 +173,8 @@ CheckTypeSize(IceAcceptStatus,4, 8742, 12, 1.3, NULL, 8741, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IceAcceptStatus,4, 8742, 11, 2.0, NULL, 8741, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8741,NULL);\n",architecture,8742,0);
-Msg("Find size of IceAcceptStatus (8742)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of IceAcceptStatus (8742)\n");
+%d,%d,%d,'""2.0""',NULL,8741,NULL);\n",architecture,8742,0);
 #endif
 
 #if defined __i386__
@@ -192,8 +192,8 @@ CheckTypeSize(IceCloseStatus,4, 8744, 12, 1.3, NULL, 8743, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IceCloseStatus,4, 8744, 11, 2.0, NULL, 8743, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8743,NULL);\n",architecture,8744,0);
-Msg("Find size of IceCloseStatus (8744)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of IceCloseStatus (8744)\n");
+%d,%d,%d,'""2.0""',NULL,8743,NULL);\n",architecture,8744,0);
 #endif
 
 #if defined __i386__
@@ -211,8 +211,8 @@ CheckTypeSize(IceProcessMessagesStatus,4, 8746, 12, 1.3, NULL, 8745, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IceProcessMessagesStatus,4, 8746, 11, 2.0, NULL, 8745, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8745,NULL);\n",architecture,8746,0);
-Msg("Find size of IceProcessMessagesStatus (8746)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of IceProcessMessagesStatus (8746)\n");
+%d,%d,%d,'""2.0""',NULL,8745,NULL);\n",architecture,8746,0);
 #endif
 
 #if defined __i386__
@@ -230,8 +230,8 @@ CheckTypeSize(IceReplyWaitInfo,24, 8196, 12, 1.3, NULL, 8195, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IceReplyWaitInfo,24, 8196, 11, 2.0, NULL, 8195, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8195,NULL);\n",architecture,8196,0);
-Msg("Find size of IceReplyWaitInfo (8196)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of IceReplyWaitInfo (8196)\n");
+%d,%d,%d,'""2.0""',NULL,8195,NULL);\n",architecture,8196,0);
 #endif
 
 #if defined __i386__
@@ -249,8 +249,8 @@ CheckTypeSize(IceWatchProc,8, 8749, 12, 1.3, NULL, 8747, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IceWatchProc,8, 8749, 11, 2.0, NULL, 8747, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8747,NULL);\n",architecture,8749,0);
-Msg("Find size of IceWatchProc (8749)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of IceWatchProc (8749)\n");
+%d,%d,%d,'""2.0""',NULL,8747,NULL);\n",architecture,8749,0);
 #endif
 
 #if defined __ia64__
@@ -268,8 +268,8 @@ CheckTypeSize(IcePoProcessMsgProc,8, 8752, 12, 1.3, NULL, 8750, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IcePoProcessMsgProc,8, 8752, 11, 2.0, NULL, 8750, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8750,NULL);\n",architecture,8752,0);
-Msg("Find size of IcePoProcessMsgProc (8752)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of IcePoProcessMsgProc (8752)\n");
+%d,%d,%d,'""2.0""',NULL,8750,NULL);\n",architecture,8752,0);
 #endif
 
 #if defined __ia64__
@@ -287,8 +287,8 @@ CheckTypeSize(IcePaProcessMsgProc,8, 8754, 12, 1.3, NULL, 8753, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IcePaProcessMsgProc,8, 8754, 11, 2.0, NULL, 8753, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8753,NULL);\n",architecture,8754,0);
-Msg("Find size of IcePaProcessMsgProc (8754)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of IcePaProcessMsgProc (8754)\n");
+%d,%d,%d,'""2.0""',NULL,8753,NULL);\n",architecture,8754,0);
 #endif
 
 #if defined __i386__
@@ -306,8 +306,8 @@ CheckTypeSize(IcePoAuthProc,8, 8756, 12, 1.3, NULL, 8755, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IcePoAuthProc,8, 8756, 11, 2.0, NULL, 8755, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8755,NULL);\n",architecture,8756,0);
-Msg("Find size of IcePoAuthProc (8756)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of IcePoAuthProc (8756)\n");
+%d,%d,%d,'""2.0""',NULL,8755,NULL);\n",architecture,8756,0);
 #endif
 
 #if defined __i386__
@@ -325,8 +325,8 @@ CheckTypeSize(IcePaAuthProc,8, 8758, 12, 1.3, NULL, 8757, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IcePaAuthProc,8, 8758, 11, 2.0, NULL, 8757, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8757,NULL);\n",architecture,8758,0);
-Msg("Find size of IcePaAuthProc (8758)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of IcePaAuthProc (8758)\n");
+%d,%d,%d,'""2.0""',NULL,8757,NULL);\n",architecture,8758,0);
 #endif
 
 #if defined __i386__
@@ -344,8 +344,8 @@ CheckTypeSize(IceHostBasedAuthProc,8, 8760, 12, 1.3, NULL, 8759, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IceHostBasedAuthProc,8, 8760, 11, 2.0, NULL, 8759, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8759,NULL);\n",architecture,8760,0);
-Msg("Find size of IceHostBasedAuthProc (8760)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of IceHostBasedAuthProc (8760)\n");
+%d,%d,%d,'""2.0""',NULL,8759,NULL);\n",architecture,8760,0);
 #endif
 
 #if defined __i386__
@@ -363,8 +363,8 @@ CheckTypeSize(IceProtocolSetupProc,8, 8762, 12, 1.3, NULL, 8761, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IceProtocolSetupProc,8, 8762, 11, 2.0, NULL, 8761, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8761,NULL);\n",architecture,8762,0);
-Msg("Find size of IceProtocolSetupProc (8762)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of IceProtocolSetupProc (8762)\n");
+%d,%d,%d,'""2.0""',NULL,8761,NULL);\n",architecture,8762,0);
 #endif
 
 #if defined __i386__
@@ -382,8 +382,8 @@ CheckTypeSize(IceProtocolActivateProc,8, 8764, 12, 1.3, NULL, 8763, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IceProtocolActivateProc,8, 8764, 11, 2.0, NULL, 8763, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8763,NULL);\n",architecture,8764,0);
-Msg("Find size of IceProtocolActivateProc (8764)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of IceProtocolActivateProc (8764)\n");
+%d,%d,%d,'""2.0""',NULL,8763,NULL);\n",architecture,8764,0);
 #endif
 
 #if defined __i386__
@@ -401,8 +401,8 @@ CheckTypeSize(IceIOErrorProc,8, 8766, 12, 1.3, NULL, 8765, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IceIOErrorProc,8, 8766, 11, 2.0, NULL, 8765, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8765,NULL);\n",architecture,8766,0);
-Msg("Find size of IceIOErrorProc (8766)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of IceIOErrorProc (8766)\n");
+%d,%d,%d,'""2.0""',NULL,8765,NULL);\n",architecture,8766,0);
 #endif
 
 #if defined __i386__
@@ -420,8 +420,8 @@ CheckTypeSize(IcePingReplyProc,8, 8768, 12, 1.3, NULL, 8767, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IcePingReplyProc,8, 8768, 11, 2.0, NULL, 8767, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8767,NULL);\n",architecture,8768,0);
-Msg("Find size of IcePingReplyProc (8768)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of IcePingReplyProc (8768)\n");
+%d,%d,%d,'""2.0""',NULL,8767,NULL);\n",architecture,8768,0);
 #endif
 
 #if defined __i386__
@@ -439,8 +439,8 @@ CheckTypeSize(IceErrorHandler,8, 8770, 12, 1.3, NULL, 8769, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IceErrorHandler,8, 8770, 11, 2.0, NULL, 8769, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8769,NULL);\n",architecture,8770,0);
-Msg("Find size of IceErrorHandler (8770)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of IceErrorHandler (8770)\n");
+%d,%d,%d,'""2.0""',NULL,8769,NULL);\n",architecture,8770,0);
 #endif
 
 #if defined __i386__
@@ -458,8 +458,8 @@ CheckTypeSize(IceIOErrorHandler,8, 8772, 12, 1.3, NULL, 8771, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IceIOErrorHandler,8, 8772, 11, 2.0, NULL, 8771, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8771,NULL);\n",architecture,8772,0);
-Msg("Find size of IceIOErrorHandler (8772)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of IceIOErrorHandler (8772)\n");
+%d,%d,%d,'""2.0""',NULL,8771,NULL);\n",architecture,8772,0);
 #endif
 
 #if defined __i386__
@@ -477,8 +477,8 @@ CheckTypeSize(IceConn,8, 8197, 12, 1.3, NULL, 7707, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IceConn,8, 8197, 11, 2.0, NULL, 7707, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7707,NULL);\n",architecture,8197,0);
-Msg("Find size of IceConn (8197)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of IceConn (8197)\n");
+%d,%d,%d,'""2.0""',NULL,7707,NULL);\n",architecture,8197,0);
 #endif
 
 #if defined __i386__
@@ -496,8 +496,8 @@ CheckTypeSize(IceListenObj,8, 8198, 12, 1.3, NULL, 7710, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IceListenObj,8, 8198, 11, 2.0, NULL, 7710, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7710, NULL);\n",architecture,8198,0);
 Msg("Find size of IceListenObj (8198)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7710, NULL);\n",architecture,8198,0);
 #endif
 
 #ifdef TET_TEST

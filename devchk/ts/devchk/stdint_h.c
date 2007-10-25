@@ -1292,8 +1292,8 @@ CheckTypeSize(int8_t,1, 6995, 12, 1.3, NULL, 10505, NULL)
 #elif defined __x86_64__
 CheckTypeSize(int8_t,1, 6995, 11, 2.0, NULL, 10505, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10505,NULL);\n",architecture,6995,0);
-Msg("Find size of int8_t (6995)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of int8_t (6995)\n");
+%d,%d,%d,'""2.0""',NULL,10505,NULL);\n",architecture,6995,0);
 #endif
 
 #if defined __i386__
@@ -1311,8 +1311,8 @@ CheckTypeSize(int16_t,2, 6996, 12, 1.3, NULL, 4, NULL)
 #elif defined __x86_64__
 CheckTypeSize(int16_t,2, 6996, 11, 2.0, NULL, 4, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,4,NULL);\n",architecture,6996,0);
-Msg("Find size of int16_t (6996)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of int16_t (6996)\n");
+%d,%d,%d,'""2.0""',NULL,4,NULL);\n",architecture,6996,0);
 #endif
 
 #if defined __i386__
@@ -1330,8 +1330,8 @@ CheckTypeSize(int32_t,4, 6997, 12, 1.3, NULL, 6, NULL)
 #elif defined __x86_64__
 CheckTypeSize(int32_t,4, 6997, 11, 2.0, NULL, 6, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,6997,0);
-Msg("Find size of int32_t (6997)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of int32_t (6997)\n");
+%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,6997,0);
 #endif
 
 #if defined __i386__
@@ -1413,8 +1413,8 @@ CheckTypeSize(uint8_t,1, 9270, 12, 1.3, NULL, 3, NULL)
 #elif defined __x86_64__
 CheckTypeSize(uint8_t,1, 9270, 11, 2.0, NULL, 3, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,3,NULL);\n",architecture,9270,0);
-Msg("Find size of uint8_t (9270)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of uint8_t (9270)\n");
+%d,%d,%d,'""2.0""',NULL,3,NULL);\n",architecture,9270,0);
 #endif
 
 #if defined __i386__
@@ -1432,8 +1432,8 @@ CheckTypeSize(uint16_t,2, 9271, 12, 1.3, NULL, 5, NULL)
 #elif defined __x86_64__
 CheckTypeSize(uint16_t,2, 9271, 11, 2.0, NULL, 5, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,5,NULL);\n",architecture,9271,0);
-Msg("Find size of uint16_t (9271)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of uint16_t (9271)\n");
+%d,%d,%d,'""2.0""',NULL,5,NULL);\n",architecture,9271,0);
 #endif
 
 #if defined __i386__
@@ -1451,8 +1451,8 @@ CheckTypeSize(uint32_t,4, 9272, 12, 1.3, NULL, 7, NULL)
 #elif defined __x86_64__
 CheckTypeSize(uint32_t,4, 9272, 11, 2.0, NULL, 7, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,9272,0);
-Msg("Find size of uint32_t (9272)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of uint32_t (9272)\n");
+%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,9272,0);
 #endif
 
 #if defined __i386__

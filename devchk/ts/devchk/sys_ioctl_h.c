@@ -268,8 +268,8 @@ CheckOffset(struct winsize,ws_xpixel,4,11,34489)
 CheckMemberSize(struct winsize,ws_ypixel,2,11,34490)
 CheckOffset(struct winsize,ws_ypixel,6,11,34490)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10301,0);
 Msg("Find size of winsize (10301)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10301,0);
 #endif
 
 extern int ioctl_db(int, unsigned long int, ...);

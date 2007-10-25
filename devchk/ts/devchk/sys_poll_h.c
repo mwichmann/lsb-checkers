@@ -128,8 +128,8 @@ CheckOffset(struct pollfd,events,4,11,34413)
 CheckMemberSize(struct pollfd,revents,2,11,34414)
 CheckOffset(struct pollfd,revents,6,11,34414)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9913,0);
-Msg("Find size of pollfd (9913)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of pollfd (9913)\n");
+%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9913,0);
 #endif
 
 #if defined __i386__
@@ -147,8 +147,8 @@ CheckTypeSize(nfds_t,8, 10978, 11, 2.0, NULL, 9, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(nfds_t,4, 10978, 10, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9, NULL);\n",architecture,10978,0);
 Msg("Find size of nfds_t (10978)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9, NULL);\n",architecture,10978,0);
 #endif
 
 #ifdef TET_TEST

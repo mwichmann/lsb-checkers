@@ -117,8 +117,8 @@ CheckEnum("_IScntrl",_IScntrl,2,53832)
 CheckEnum("_ISpunct",_ISpunct,4,53833)
 CheckEnum("_ISalnum",_ISalnum,8,53834)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,8976,0);
 Msg("Find size of anon-ctype.h-13 (8976)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,8976,0);
 #endif
 
 extern int _tolower_db(int);

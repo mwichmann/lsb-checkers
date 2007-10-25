@@ -41,8 +41,8 @@ CheckTypeSize(xmlCharEncoding,4, 14728, 10, 3.1, NULL, 14727, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlCharEncoding,4, 14728, 12, 3.1, NULL, 14727, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14727, NULL);\n",architecture,14728,0);
 Msg("Find size of xmlCharEncoding (14728)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14727, NULL);\n",architecture,14728,0);
 #endif
 
 extern const char * xmlGetCharEncodingName_db(xmlCharEncoding);

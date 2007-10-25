@@ -220,8 +220,8 @@ CheckOffset(struct tm,tm_gmtoff,40,11,33521)
 CheckMemberSize(struct tm,tm_zone,8,11,33522)
 CheckOffset(struct tm,tm_zone,48,11,33522)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,7019,0);
-Msg("Find size of tm (7019)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of tm (7019)\n");
+%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,7019,0);
 #endif
 
 #if defined __i386__
@@ -253,8 +253,8 @@ CheckTypeSize(struct itimerspec,32, 10101, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct itimerspec,it_value,16,11,33509)
 CheckOffset(struct itimerspec,it_value,16,11,33509)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10101,0);
 Msg("Find size of itimerspec (10101)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10101,0);
 #endif
 
 extern char * asctime_db(const struct tm *);

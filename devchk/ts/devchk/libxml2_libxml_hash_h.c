@@ -46,8 +46,8 @@ CheckTypeSize(xmlHashTablePtr,4, 14731, 10, 3.1, NULL, 14730, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlHashTablePtr,8, 14731, 12, 3.1, NULL, 14730, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14730,NULL);\n",architecture,14731,0);
-Msg("Find size of xmlHashTablePtr (14731)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlHashTablePtr (14731)\n");
+%d,%d,%d,'""3.1""',NULL,14730,NULL);\n",architecture,14731,0);
 #endif
 
 #if defined __i386__
@@ -65,8 +65,8 @@ CheckTypeSize(xmlHashDeallocator,4, 14733, 10, 3.1, NULL, 14732, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlHashDeallocator,8, 14733, 12, 3.1, NULL, 14732, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14732,NULL);\n",architecture,14733,0);
-Msg("Find size of xmlHashDeallocator (14733)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlHashDeallocator (14733)\n");
+%d,%d,%d,'""3.1""',NULL,14732,NULL);\n",architecture,14733,0);
 #endif
 
 #if defined __i386__
@@ -84,8 +84,8 @@ CheckTypeSize(xmlHashScannerFull,4, 14735, 10, 3.1, NULL, 14734, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlHashScannerFull,8, 14735, 12, 3.1, NULL, 14734, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14734,NULL);\n",architecture,14735,0);
-Msg("Find size of xmlHashScannerFull (14735)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlHashScannerFull (14735)\n");
+%d,%d,%d,'""3.1""',NULL,14734,NULL);\n",architecture,14735,0);
 #endif
 
 #if defined __i386__
@@ -103,8 +103,8 @@ CheckTypeSize(xmlHashCopier,4, 14737, 10, 3.1, NULL, 14736, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlHashCopier,8, 14737, 12, 3.1, NULL, 14736, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14736,NULL);\n",architecture,14737,0);
-Msg("Find size of xmlHashCopier (14737)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlHashCopier (14737)\n");
+%d,%d,%d,'""3.1""',NULL,14736,NULL);\n",architecture,14737,0);
 #endif
 
 #if defined __i386__
@@ -122,8 +122,8 @@ CheckTypeSize(xmlHashScanner,4, 14739, 10, 3.1, NULL, 14738, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlHashScanner,8, 14739, 12, 3.1, NULL, 14738, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14738, NULL);\n",architecture,14739,0);
 Msg("Find size of xmlHashScanner (14739)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14738, NULL);\n",architecture,14739,0);
 #endif
 
 extern xmlHashTablePtr xmlHashCreate_db(int);

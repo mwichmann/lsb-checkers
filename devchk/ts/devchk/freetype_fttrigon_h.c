@@ -59,8 +59,8 @@ CheckTypeSize(FT_Angle,4, 16921, 6, 3.2, NULL, 16759, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Angle,8, 16921, 9, 3.2, NULL, 16759, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16759, NULL);\n",architecture,16921,0);
 Msg("Find size of FT_Angle (16921)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16759, NULL);\n",architecture,16921,0);
 #endif
 
 extern FT_Angle FT_Angle_Diff_db(FT_Angle, FT_Angle);

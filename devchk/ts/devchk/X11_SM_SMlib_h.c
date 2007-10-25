@@ -44,8 +44,8 @@ CheckTypeSize(SmPointer,8, 8231, 12, 1.3, NULL, 8180, NULL)
 #elif defined __x86_64__
 CheckTypeSize(SmPointer,8, 8231, 11, 2.0, NULL, 8180, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8180,NULL);\n",architecture,8231,0);
-Msg("Find size of SmPointer (8231)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of SmPointer (8231)\n");
+%d,%d,%d,'""2.0""',NULL,8180,NULL);\n",architecture,8231,0);
 #endif
 
 #if defined __i386__
@@ -63,8 +63,8 @@ CheckTypeSize(SmcConn,8, 8232, 12, 1.3, NULL, 7759, NULL)
 #elif defined __x86_64__
 CheckTypeSize(SmcConn,8, 8232, 11, 2.0, NULL, 7759, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7759,NULL);\n",architecture,8232,0);
-Msg("Find size of SmcConn (8232)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of SmcConn (8232)\n");
+%d,%d,%d,'""2.0""',NULL,7759,NULL);\n",architecture,8232,0);
 #endif
 
 #if defined __i386__
@@ -82,8 +82,8 @@ CheckTypeSize(SmsConn,8, 8233, 12, 1.3, NULL, 7762, NULL)
 #elif defined __x86_64__
 CheckTypeSize(SmsConn,8, 8233, 11, 2.0, NULL, 7762, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7762,NULL);\n",architecture,8233,0);
-Msg("Find size of SmsConn (8233)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of SmsConn (8233)\n");
+%d,%d,%d,'""2.0""',NULL,7762,NULL);\n",architecture,8233,0);
 #endif
 
 #if defined __i386__
@@ -101,8 +101,8 @@ CheckTypeSize(SmcSaveYourselfPhase2Proc,8, 8790, 12, 1.3, NULL, 8789, NULL)
 #elif defined __x86_64__
 CheckTypeSize(SmcSaveYourselfPhase2Proc,8, 8790, 11, 2.0, NULL, 8789, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8789,NULL);\n",architecture,8790,0);
-Msg("Find size of SmcSaveYourselfPhase2Proc (8790)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of SmcSaveYourselfPhase2Proc (8790)\n");
+%d,%d,%d,'""2.0""',NULL,8789,NULL);\n",architecture,8790,0);
 #endif
 
 #if defined __i386__
@@ -120,8 +120,8 @@ CheckTypeSize(SmcInteractProc,8, 8792, 12, 1.3, NULL, 8791, NULL)
 #elif defined __x86_64__
 CheckTypeSize(SmcInteractProc,8, 8792, 11, 2.0, NULL, 8791, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8791,NULL);\n",architecture,8792,0);
-Msg("Find size of SmcInteractProc (8792)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of SmcInteractProc (8792)\n");
+%d,%d,%d,'""2.0""',NULL,8791,NULL);\n",architecture,8792,0);
 #endif
 
 #if defined __i386__
@@ -139,8 +139,8 @@ CheckTypeSize(SmcDieProc,8, 8794, 12, 1.3, NULL, 8793, NULL)
 #elif defined __x86_64__
 CheckTypeSize(SmcDieProc,8, 8794, 11, 2.0, NULL, 8793, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8793,NULL);\n",architecture,8794,0);
-Msg("Find size of SmcDieProc (8794)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of SmcDieProc (8794)\n");
+%d,%d,%d,'""2.0""',NULL,8793,NULL);\n",architecture,8794,0);
 #endif
 
 #if defined __i386__
@@ -158,8 +158,8 @@ CheckTypeSize(SmcShutdownCancelledProc,8, 8796, 12, 1.3, NULL, 8795, NULL)
 #elif defined __x86_64__
 CheckTypeSize(SmcShutdownCancelledProc,8, 8796, 11, 2.0, NULL, 8795, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8795,NULL);\n",architecture,8796,0);
-Msg("Find size of SmcShutdownCancelledProc (8796)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of SmcShutdownCancelledProc (8796)\n");
+%d,%d,%d,'""2.0""',NULL,8795,NULL);\n",architecture,8796,0);
 #endif
 
 #if defined __i386__
@@ -177,8 +177,8 @@ CheckTypeSize(SmcSaveCompleteProc,8, 8798, 12, 1.3, NULL, 8797, NULL)
 #elif defined __x86_64__
 CheckTypeSize(SmcSaveCompleteProc,8, 8798, 11, 2.0, NULL, 8797, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8797,NULL);\n",architecture,8798,0);
-Msg("Find size of SmcSaveCompleteProc (8798)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of SmcSaveCompleteProc (8798)\n");
+%d,%d,%d,'""2.0""',NULL,8797,NULL);\n",architecture,8798,0);
 #endif
 
 #if defined __i386__
@@ -196,8 +196,8 @@ CheckTypeSize(SmcPropReplyProc,8, 8802, 12, 1.3, NULL, 8799, NULL)
 #elif defined __x86_64__
 CheckTypeSize(SmcPropReplyProc,8, 8802, 11, 2.0, NULL, 8799, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8799,NULL);\n",architecture,8802,0);
-Msg("Find size of SmcPropReplyProc (8802)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of SmcPropReplyProc (8802)\n");
+%d,%d,%d,'""2.0""',NULL,8799,NULL);\n",architecture,8802,0);
 #endif
 
 #if defined __i386__
@@ -215,8 +215,8 @@ CheckTypeSize(SmPropValue,16, 8235, 12, 1.3, NULL, 8234, NULL)
 #elif defined __x86_64__
 CheckTypeSize(SmPropValue,16, 8235, 11, 2.0, NULL, 8234, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8234,NULL);\n",architecture,8235,0);
-Msg("Find size of SmPropValue (8235)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of SmPropValue (8235)\n");
+%d,%d,%d,'""2.0""',NULL,8234,NULL);\n",architecture,8235,0);
 #endif
 
 #if defined __i386__
@@ -234,8 +234,8 @@ CheckTypeSize(SmProp,32, 8237, 12, 1.3, NULL, 8236, NULL)
 #elif defined __x86_64__
 CheckTypeSize(SmProp,32, 8237, 11, 2.0, NULL, 8236, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8236,NULL);\n",architecture,8237,0);
-Msg("Find size of SmProp (8237)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of SmProp (8237)\n");
+%d,%d,%d,'""2.0""',NULL,8236,NULL);\n",architecture,8237,0);
 #endif
 
 #if defined __i386__
@@ -253,8 +253,8 @@ CheckTypeSize(SmcCallbacks,64, 8259, 12, 1.3, NULL, 8258, NULL)
 #elif defined __x86_64__
 CheckTypeSize(SmcCallbacks,64, 8259, 11, 2.0, NULL, 8258, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8258,NULL);\n",architecture,8259,0);
-Msg("Find size of SmcCallbacks (8259)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of SmcCallbacks (8259)\n");
+%d,%d,%d,'""2.0""',NULL,8258,NULL);\n",architecture,8259,0);
 #endif
 
 #if defined __i386__
@@ -272,8 +272,8 @@ CheckTypeSize(SmsSetPropertiesProc,8, 8818, 12, 1.3, NULL, 8817, NULL)
 #elif defined __x86_64__
 CheckTypeSize(SmsSetPropertiesProc,8, 8818, 11, 2.0, NULL, 8817, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8817,NULL);\n",architecture,8818,0);
-Msg("Find size of SmsSetPropertiesProc (8818)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of SmsSetPropertiesProc (8818)\n");
+%d,%d,%d,'""2.0""',NULL,8817,NULL);\n",architecture,8818,0);
 #endif
 
 #if defined __i386__
@@ -291,8 +291,8 @@ CheckTypeSize(SmsDeletePropertiesProc,8, 8820, 12, 1.3, NULL, 8819, NULL)
 #elif defined __x86_64__
 CheckTypeSize(SmsDeletePropertiesProc,8, 8820, 11, 2.0, NULL, 8819, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8819,NULL);\n",architecture,8820,0);
-Msg("Find size of SmsDeletePropertiesProc (8820)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of SmsDeletePropertiesProc (8820)\n");
+%d,%d,%d,'""2.0""',NULL,8819,NULL);\n",architecture,8820,0);
 #endif
 
 #if defined __i386__
@@ -310,8 +310,8 @@ CheckTypeSize(SmsGetPropertiesProc,8, 8822, 12, 1.3, NULL, 8821, NULL)
 #elif defined __x86_64__
 CheckTypeSize(SmsGetPropertiesProc,8, 8822, 11, 2.0, NULL, 8821, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8821,NULL);\n",architecture,8822,0);
-Msg("Find size of SmsGetPropertiesProc (8822)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of SmsGetPropertiesProc (8822)\n");
+%d,%d,%d,'""2.0""',NULL,8821,NULL);\n",architecture,8822,0);
 #endif
 
 #if defined __i386__
@@ -329,8 +329,8 @@ CheckTypeSize(SmsCallbacks,160, 8291, 12, 1.3, NULL, 8290, NULL)
 #elif defined __x86_64__
 CheckTypeSize(SmsCallbacks,160, 8291, 11, 2.0, NULL, 8290, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8290,NULL);\n",architecture,8291,0);
-Msg("Find size of SmsCallbacks (8291)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of SmsCallbacks (8291)\n");
+%d,%d,%d,'""2.0""',NULL,8290,NULL);\n",architecture,8291,0);
 #endif
 
 #if defined __i386__
@@ -348,8 +348,8 @@ CheckTypeSize(SmsNewClientProc,8, 8825, 12, 1.3, NULL, 8823, NULL)
 #elif defined __x86_64__
 CheckTypeSize(SmsNewClientProc,8, 8825, 11, 2.0, NULL, 8823, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8823,NULL);\n",architecture,8825,0);
-Msg("Find size of SmsNewClientProc (8825)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of SmsNewClientProc (8825)\n");
+%d,%d,%d,'""2.0""',NULL,8823,NULL);\n",architecture,8825,0);
 #endif
 
 #if defined __i386__
@@ -367,8 +367,8 @@ CheckTypeSize(SmcErrorHandler,8, 8827, 12, 1.3, NULL, 8826, NULL)
 #elif defined __x86_64__
 CheckTypeSize(SmcErrorHandler,8, 8827, 11, 2.0, NULL, 8826, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8826,NULL);\n",architecture,8827,0);
-Msg("Find size of SmcErrorHandler (8827)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of SmcErrorHandler (8827)\n");
+%d,%d,%d,'""2.0""',NULL,8826,NULL);\n",architecture,8827,0);
 #endif
 
 #if defined __i386__
@@ -386,8 +386,8 @@ CheckTypeSize(SmsErrorHandler,8, 8829, 12, 1.3, NULL, 8828, NULL)
 #elif defined __x86_64__
 CheckTypeSize(SmsErrorHandler,8, 8829, 11, 2.0, NULL, 8828, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8828,NULL);\n",architecture,8829,0);
-Msg("Find size of SmsErrorHandler (8829)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of SmsErrorHandler (8829)\n");
+%d,%d,%d,'""2.0""',NULL,8828,NULL);\n",architecture,8829,0);
 #endif
 
 #if defined __i386__
@@ -405,8 +405,8 @@ CheckTypeSize(SmcCloseStatus,4, 8786, 12, 1.3, NULL, 8785, NULL)
 #elif defined __x86_64__
 CheckTypeSize(SmcCloseStatus,4, 8786, 11, 2.0, NULL, 8785, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8785, NULL);\n",architecture,8786,0);
 Msg("Find size of SmcCloseStatus (8786)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8785, NULL);\n",architecture,8786,0);
 #endif
 
 #ifdef TET_TEST

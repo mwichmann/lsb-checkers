@@ -42,8 +42,8 @@ CheckTypeSize(xmlListPtr,4, 14554, 10, 3.1, NULL, 14553, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlListPtr,8, 14554, 12, 3.1, NULL, 14553, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14553,NULL);\n",architecture,14554,0);
-Msg("Find size of xmlListPtr (14554)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlListPtr (14554)\n");
+%d,%d,%d,'""3.1""',NULL,14553,NULL);\n",architecture,14554,0);
 #endif
 
 #if defined __i386__
@@ -61,8 +61,8 @@ CheckTypeSize(xmlLinkPtr,4, 14558, 10, 3.1, NULL, 14557, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlLinkPtr,8, 14558, 12, 3.1, NULL, 14557, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14557,NULL);\n",architecture,14558,0);
-Msg("Find size of xmlLinkPtr (14558)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlLinkPtr (14558)\n");
+%d,%d,%d,'""3.1""',NULL,14557,NULL);\n",architecture,14558,0);
 #endif
 
 #if defined __i386__
@@ -80,8 +80,8 @@ CheckTypeSize(xmlListWalker,4, 14561, 10, 3.1, NULL, 14560, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlListWalker,8, 14561, 12, 3.1, NULL, 14560, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14560,NULL);\n",architecture,14561,0);
-Msg("Find size of xmlListWalker (14561)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlListWalker (14561)\n");
+%d,%d,%d,'""3.1""',NULL,14560,NULL);\n",architecture,14561,0);
 #endif
 
 #if defined __i386__
@@ -99,8 +99,8 @@ CheckTypeSize(xmlListDeallocator,4, 14563, 10, 3.1, NULL, 14562, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlListDeallocator,8, 14563, 12, 3.1, NULL, 14562, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14562,NULL);\n",architecture,14563,0);
-Msg("Find size of xmlListDeallocator (14563)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlListDeallocator (14563)\n");
+%d,%d,%d,'""3.1""',NULL,14562,NULL);\n",architecture,14563,0);
 #endif
 
 #if defined __i386__
@@ -118,8 +118,8 @@ CheckTypeSize(xmlListDataCompare,4, 14564, 10, 3.1, NULL, 14560, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlListDataCompare,8, 14564, 12, 3.1, NULL, 14560, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14560, NULL);\n",architecture,14564,0);
 Msg("Find size of xmlListDataCompare (14564)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14560, NULL);\n",architecture,14564,0);
 #endif
 
 extern int xmlListRemoveFirst_db(xmlListPtr, void *);

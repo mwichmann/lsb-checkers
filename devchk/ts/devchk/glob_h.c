@@ -230,8 +230,8 @@ CheckTypeSize(glob_t,72, 9005, 12, 1.3, NULL, 8999, NULL)
 #elif defined __x86_64__
 CheckTypeSize(glob_t,72, 9005, 11, 2.0, NULL, 8999, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8999,NULL);\n",architecture,9005,0);
-Msg("Find size of glob_t (9005)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of glob_t (9005)\n");
+%d,%d,%d,'""2.0""',NULL,8999,NULL);\n",architecture,9005,0);
 #endif
 
 #if defined __i386__
@@ -249,8 +249,8 @@ CheckTypeSize(glob64_t,72, 9007, 12, 1.3, NULL, 9006, NULL)
 #elif defined __x86_64__
 CheckTypeSize(glob64_t,72, 9007, 11, 2.0, NULL, 9006, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9006, NULL);\n",architecture,9007,0);
 Msg("Find size of glob64_t (9007)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9006, NULL);\n",architecture,9007,0);
 #endif
 
 extern int glob_db(const char *, int, int(*__errfunc)(const char *,int)

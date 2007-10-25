@@ -670,8 +670,8 @@ CheckTypeSize(GLenum,4, 8143, 12, 1.3, NULL, 7, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GLenum,4, 8143, 11, 2.0, NULL, 7, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,8143,0);
-Msg("Find size of GLenum (8143)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GLenum (8143)\n");
+%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,8143,0);
 #endif
 
 #if defined __i386__
@@ -689,8 +689,8 @@ CheckTypeSize(GLboolean,1, 8144, 12, 1.3, NULL, 3, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GLboolean,1, 8144, 11, 2.0, NULL, 3, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,3,NULL);\n",architecture,8144,0);
-Msg("Find size of GLboolean (8144)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GLboolean (8144)\n");
+%d,%d,%d,'""2.0""',NULL,3,NULL);\n",architecture,8144,0);
 #endif
 
 #if defined __i386__
@@ -708,8 +708,8 @@ CheckTypeSize(GLbitfield,4, 8145, 12, 1.3, NULL, 7, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GLbitfield,4, 8145, 11, 2.0, NULL, 7, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,8145,0);
-Msg("Find size of GLbitfield (8145)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GLbitfield (8145)\n");
+%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,8145,0);
 #endif
 
 #if defined __ia64__
@@ -727,8 +727,8 @@ CheckTypeSize(GLvoid,1, 8146, 12, 1.3, NULL, 1, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GLvoid,1, 8146, 11, 2.0, NULL, 1, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,1,NULL);\n",architecture,8146,0);
-Msg("Find size of GLvoid (8146)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GLvoid (8146)\n");
+%d,%d,%d,'""2.0""',NULL,1,NULL);\n",architecture,8146,0);
 #endif
 
 #if defined __i386__
@@ -746,8 +746,8 @@ CheckTypeSize(GLbyte,1, 8147, 12, 1.3, NULL, 2, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GLbyte,1, 8147, 11, 2.0, NULL, 2, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,2,NULL);\n",architecture,8147,0);
-Msg("Find size of GLbyte (8147)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GLbyte (8147)\n");
+%d,%d,%d,'""2.0""',NULL,2,NULL);\n",architecture,8147,0);
 #endif
 
 #if defined __i386__
@@ -765,8 +765,8 @@ CheckTypeSize(GLshort,2, 8148, 12, 1.3, NULL, 4, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GLshort,2, 8148, 11, 2.0, NULL, 4, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,4,NULL);\n",architecture,8148,0);
-Msg("Find size of GLshort (8148)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GLshort (8148)\n");
+%d,%d,%d,'""2.0""',NULL,4,NULL);\n",architecture,8148,0);
 #endif
 
 #if defined __i386__
@@ -784,8 +784,8 @@ CheckTypeSize(GLint,4, 8149, 12, 1.3, NULL, 6, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GLint,4, 8149, 11, 2.0, NULL, 6, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,8149,0);
-Msg("Find size of GLint (8149)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GLint (8149)\n");
+%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,8149,0);
 #endif
 
 #if defined __i386__
@@ -803,8 +803,8 @@ CheckTypeSize(GLubyte,1, 8150, 12, 1.3, NULL, 3, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GLubyte,1, 8150, 11, 2.0, NULL, 3, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,3,NULL);\n",architecture,8150,0);
-Msg("Find size of GLubyte (8150)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GLubyte (8150)\n");
+%d,%d,%d,'""2.0""',NULL,3,NULL);\n",architecture,8150,0);
 #endif
 
 #if defined __i386__
@@ -822,8 +822,8 @@ CheckTypeSize(GLushort,2, 8151, 12, 1.3, NULL, 5, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GLushort,2, 8151, 11, 2.0, NULL, 5, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,5,NULL);\n",architecture,8151,0);
-Msg("Find size of GLushort (8151)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GLushort (8151)\n");
+%d,%d,%d,'""2.0""',NULL,5,NULL);\n",architecture,8151,0);
 #endif
 
 #if defined __i386__
@@ -841,8 +841,8 @@ CheckTypeSize(GLuint,4, 8152, 12, 1.3, NULL, 7, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GLuint,4, 8152, 11, 2.0, NULL, 7, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,8152,0);
-Msg("Find size of GLuint (8152)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GLuint (8152)\n");
+%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,8152,0);
 #endif
 
 #if defined __i386__
@@ -860,8 +860,8 @@ CheckTypeSize(GLsizei,4, 8153, 12, 1.3, NULL, 6, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GLsizei,4, 8153, 11, 2.0, NULL, 6, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,8153,0);
-Msg("Find size of GLsizei (8153)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GLsizei (8153)\n");
+%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,8153,0);
 #endif
 
 #if defined __i386__
@@ -879,8 +879,8 @@ CheckTypeSize(GLfloat,4, 8154, 12, 1.3, NULL, 12, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GLfloat,4, 8154, 11, 2.0, NULL, 12, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,12,NULL);\n",architecture,8154,0);
-Msg("Find size of GLfloat (8154)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GLfloat (8154)\n");
+%d,%d,%d,'""2.0""',NULL,12,NULL);\n",architecture,8154,0);
 #endif
 
 #if defined __i386__
@@ -898,8 +898,8 @@ CheckTypeSize(GLclampf,4, 8155, 12, 1.3, NULL, 12, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GLclampf,4, 8155, 11, 2.0, NULL, 12, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,12,NULL);\n",architecture,8155,0);
-Msg("Find size of GLclampf (8155)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GLclampf (8155)\n");
+%d,%d,%d,'""2.0""',NULL,12,NULL);\n",architecture,8155,0);
 #endif
 
 #if defined __i386__
@@ -917,8 +917,8 @@ CheckTypeSize(GLdouble,8, 8156, 12, 1.3, NULL, 13, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GLdouble,8, 8156, 11, 2.0, NULL, 13, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,13,NULL);\n",architecture,8156,0);
-Msg("Find size of GLdouble (8156)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GLdouble (8156)\n");
+%d,%d,%d,'""2.0""',NULL,13,NULL);\n",architecture,8156,0);
 #endif
 
 #if defined __i386__
@@ -936,8 +936,8 @@ CheckTypeSize(GLclampd,8, 8157, 12, 1.3, NULL, 13, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GLclampd,8, 8157, 11, 2.0, NULL, 13, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,13, NULL);\n",architecture,8157,0);
 Msg("Find size of GLclampd (8157)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,13, NULL);\n",architecture,8157,0);
 #endif
 
 #ifdef TET_TEST
