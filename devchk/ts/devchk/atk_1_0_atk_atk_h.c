@@ -589,8 +589,8 @@ CheckTypeSize(AtkObject,36, 12079, 10, 3.1, NULL, 12078, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkObject,72, 12079, 12, 3.1, NULL, 12078, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12078,NULL);\n",architecture,12079,0);
-Msg("Find size of AtkObject (12079)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkObject (12079)\n");
+%d,%d,%d,'""3.1""',NULL,12078,NULL);\n",architecture,12079,0);
 #endif
 
 #if defined __i386__
@@ -608,8 +608,8 @@ CheckTypeSize(AtkRole,4, 12082, 10, 3.1, NULL, 12081, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkRole,4, 12082, 12, 3.1, NULL, 12081, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12081,NULL);\n",architecture,12082,0);
-Msg("Find size of AtkRole (12082)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkRole (12082)\n");
+%d,%d,%d,'""3.1""',NULL,12081,NULL);\n",architecture,12082,0);
 #endif
 
 #if defined __i386__
@@ -627,8 +627,8 @@ CheckTypeSize(AtkRelationSet,16, 12084, 10, 3.1, NULL, 12083, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkRelationSet,32, 12084, 12, 3.1, NULL, 12083, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12083,NULL);\n",architecture,12084,0);
-Msg("Find size of AtkRelationSet (12084)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkRelationSet (12084)\n");
+%d,%d,%d,'""3.1""',NULL,12083,NULL);\n",architecture,12084,0);
 #endif
 
 #if defined __i386__
@@ -646,8 +646,8 @@ CheckTypeSize(AtkLayer,4, 12087, 10, 3.1, NULL, 12086, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkLayer,4, 12087, 12, 3.1, NULL, 12086, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12086,NULL);\n",architecture,12087,0);
-Msg("Find size of AtkLayer (12087)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkLayer (12087)\n");
+%d,%d,%d,'""3.1""',NULL,12086,NULL);\n",architecture,12087,0);
 #endif
 
 #if defined __i386__
@@ -665,8 +665,8 @@ CheckTypeSize(AtkPropertyValues,56, 12089, 10, 3.1, NULL, 12088, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkPropertyValues,56, 12089, 12, 3.1, NULL, 12088, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12088,NULL);\n",architecture,12089,0);
-Msg("Find size of AtkPropertyValues (12089)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkPropertyValues (12089)\n");
+%d,%d,%d,'""3.1""',NULL,12088,NULL);\n",architecture,12089,0);
 #endif
 
 #if defined __i386__
@@ -684,8 +684,8 @@ CheckTypeSize(AtkPropertyChangeHandler,4, 12092, 10, 3.1, NULL, 12091, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkPropertyChangeHandler,8, 12092, 12, 3.1, NULL, 12091, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12091,NULL);\n",architecture,12092,0);
-Msg("Find size of AtkPropertyChangeHandler (12092)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkPropertyChangeHandler (12092)\n");
+%d,%d,%d,'""3.1""',NULL,12091,NULL);\n",architecture,12092,0);
 #endif
 
 #if defined __i386__
@@ -703,8 +703,8 @@ CheckTypeSize(AtkCoordType,4, 12098, 10, 3.1, NULL, 12097, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkCoordType,4, 12098, 12, 3.1, NULL, 12097, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12097,NULL);\n",architecture,12098,0);
-Msg("Find size of AtkCoordType (12098)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkCoordType (12098)\n");
+%d,%d,%d,'""3.1""',NULL,12097,NULL);\n",architecture,12098,0);
 #endif
 
 #if defined __i386__
@@ -722,8 +722,8 @@ CheckTypeSize(AtkRelationType,4, 12100, 10, 3.1, NULL, 12099, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkRelationType,4, 12100, 12, 3.1, NULL, 12099, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12099,NULL);\n",architecture,12100,0);
-Msg("Find size of AtkRelationType (12100)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkRelationType (12100)\n");
+%d,%d,%d,'""3.1""',NULL,12099,NULL);\n",architecture,12100,0);
 #endif
 
 #if defined __i386__
@@ -741,8 +741,8 @@ CheckTypeSize(AtkRelation,20, 12102, 10, 3.1, NULL, 12101, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkRelation,40, 12102, 12, 3.1, NULL, 12101, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12101,NULL);\n",architecture,12102,0);
-Msg("Find size of AtkRelation (12102)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkRelation (12102)\n");
+%d,%d,%d,'""3.1""',NULL,12101,NULL);\n",architecture,12102,0);
 #endif
 
 #if defined __i386__
@@ -760,8 +760,8 @@ CheckTypeSize(AtkHyperlink,12, 12111, 10, 3.1, NULL, 12110, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkHyperlink,24, 12111, 12, 3.1, NULL, 12110, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12110,NULL);\n",architecture,12111,0);
-Msg("Find size of AtkHyperlink (12111)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkHyperlink (12111)\n");
+%d,%d,%d,'""3.1""',NULL,12110,NULL);\n",architecture,12111,0);
 #endif
 
 #if defined __i386__
@@ -779,8 +779,8 @@ CheckTypeSize(AtkStateSet,12, 12114, 10, 3.1, NULL, 12113, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkStateSet,24, 12114, 12, 3.1, NULL, 12113, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12113,NULL);\n",architecture,12114,0);
-Msg("Find size of AtkStateSet (12114)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkStateSet (12114)\n");
+%d,%d,%d,'""3.1""',NULL,12113,NULL);\n",architecture,12114,0);
 #endif
 
 #if defined __i386__
@@ -798,8 +798,8 @@ CheckTypeSize(AtkObjectFactory,12, 12117, 10, 3.1, NULL, 12116, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkObjectFactory,24, 12117, 12, 3.1, NULL, 12116, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12116,NULL);\n",architecture,12117,0);
-Msg("Find size of AtkObjectFactory (12117)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkObjectFactory (12117)\n");
+%d,%d,%d,'""3.1""',NULL,12116,NULL);\n",architecture,12117,0);
 #endif
 
 #if defined __i386__
@@ -817,8 +817,8 @@ CheckTypeSize(AtkRegistry,20, 12120, 10, 3.1, NULL, 12119, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkRegistry,40, 12120, 12, 3.1, NULL, 12119, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12119,NULL);\n",architecture,12120,0);
-Msg("Find size of AtkRegistry (12120)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkRegistry (12120)\n");
+%d,%d,%d,'""3.1""',NULL,12119,NULL);\n",architecture,12120,0);
 #endif
 
 #if defined __i386__
@@ -836,8 +836,8 @@ CheckTypeSize(AtkAttributeSet,8, 12125, 10, 3.1, NULL, 11451, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkAttributeSet,16, 12125, 12, 3.1, NULL, 11451, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11451,NULL);\n",architecture,12125,0);
-Msg("Find size of AtkAttributeSet (12125)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkAttributeSet (12125)\n");
+%d,%d,%d,'""3.1""',NULL,11451,NULL);\n",architecture,12125,0);
 #endif
 
 #if defined __i386__
@@ -855,8 +855,8 @@ CheckTypeSize(AtkEventListenerInit,4, 12145, 10, 3.1, NULL, 10318, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkEventListenerInit,8, 12145, 12, 3.1, NULL, 10318, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,10318,NULL);\n",architecture,12145,0);
-Msg("Find size of AtkEventListenerInit (12145)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkEventListenerInit (12145)\n");
+%d,%d,%d,'""3.1""',NULL,10318,NULL);\n",architecture,12145,0);
 #endif
 
 #if defined __i386__
@@ -874,8 +874,8 @@ CheckTypeSize(AtkTextAttribute,4, 12147, 10, 3.1, NULL, 12146, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkTextAttribute,4, 12147, 12, 3.1, NULL, 12146, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12146,NULL);\n",architecture,12147,0);
-Msg("Find size of AtkTextAttribute (12147)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkTextAttribute (12147)\n");
+%d,%d,%d,'""3.1""',NULL,12146,NULL);\n",architecture,12147,0);
 #endif
 
 #if defined __i386__
@@ -893,8 +893,8 @@ CheckTypeSize(AtkTextBoundary,4, 12149, 10, 3.1, NULL, 12148, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkTextBoundary,4, 12149, 12, 3.1, NULL, 12148, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12148,NULL);\n",architecture,12149,0);
-Msg("Find size of AtkTextBoundary (12149)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkTextBoundary (12149)\n");
+%d,%d,%d,'""3.1""',NULL,12148,NULL);\n",architecture,12149,0);
 #endif
 
 #if defined __i386__
@@ -912,8 +912,8 @@ CheckTypeSize(AtkStateType,4, 12151, 10, 3.1, NULL, 12150, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkStateType,4, 12151, 12, 3.1, NULL, 12150, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12150,NULL);\n",architecture,12151,0);
-Msg("Find size of AtkStateType (12151)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkStateType (12151)\n");
+%d,%d,%d,'""3.1""',NULL,12150,NULL);\n",architecture,12151,0);
 #endif
 
 #if defined __i386__
@@ -931,8 +931,8 @@ CheckTypeSize(AtkGObjectAccessible,36, 12153, 10, 3.1, NULL, 12152, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkGObjectAccessible,72, 12153, 12, 3.1, NULL, 12152, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12152,NULL);\n",architecture,12153,0);
-Msg("Find size of AtkGObjectAccessible (12153)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkGObjectAccessible (12153)\n");
+%d,%d,%d,'""3.1""',NULL,12152,NULL);\n",architecture,12153,0);
 #endif
 
 #if defined __i386__
@@ -950,8 +950,8 @@ CheckTypeSize(AtkState,8, 12155, 10, 3.1, NULL, 11621, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkState,8, 12155, 12, 3.1, NULL, 11621, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11621,NULL);\n",architecture,12155,0);
-Msg("Find size of AtkState (12155)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkState (12155)\n");
+%d,%d,%d,'""3.1""',NULL,11621,NULL);\n",architecture,12155,0);
 #endif
 
 #if defined __i386__
@@ -969,8 +969,8 @@ CheckTypeSize(AtkFocusHandler,4, 12158, 10, 3.1, NULL, 12157, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkFocusHandler,8, 12158, 12, 3.1, NULL, 12157, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12157,NULL);\n",architecture,12158,0);
-Msg("Find size of AtkFocusHandler (12158)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkFocusHandler (12158)\n");
+%d,%d,%d,'""3.1""',NULL,12157,NULL);\n",architecture,12158,0);
 #endif
 
 #if defined __i386__
@@ -988,8 +988,8 @@ CheckTypeSize(AtkKeyEventStruct,28, 12160, 10, 3.1, NULL, 12159, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkKeyEventStruct,32, 12160, 12, 3.1, NULL, 12159, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12159,NULL);\n",architecture,12160,0);
-Msg("Find size of AtkKeyEventStruct (12160)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkKeyEventStruct (12160)\n");
+%d,%d,%d,'""3.1""',NULL,12159,NULL);\n",architecture,12160,0);
 #endif
 
 #if defined __i386__
@@ -1007,8 +1007,8 @@ CheckTypeSize(AtkKeySnoopFunc,4, 12163, 10, 3.1, NULL, 12162, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkKeySnoopFunc,8, 12163, 12, 3.1, NULL, 12162, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12162,NULL);\n",architecture,12163,0);
-Msg("Find size of AtkKeySnoopFunc (12163)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkKeySnoopFunc (12163)\n");
+%d,%d,%d,'""3.1""',NULL,12162,NULL);\n",architecture,12163,0);
 #endif
 
 #if defined __i386__
@@ -1026,8 +1026,8 @@ CheckTypeSize(AtkTextRectangle,16, 12166, 10, 3.1, NULL, 12165, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkTextRectangle,16, 12166, 12, 3.1, NULL, 12165, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12165,NULL);\n",architecture,12166,0);
-Msg("Find size of AtkTextRectangle (12166)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkTextRectangle (12166)\n");
+%d,%d,%d,'""3.1""',NULL,12165,NULL);\n",architecture,12166,0);
 #endif
 
 #if defined __i386__
@@ -1045,8 +1045,8 @@ CheckTypeSize(AtkTextRange,28, 12167, 10, 3.1, NULL, 12164, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkTextRange,32, 12167, 12, 3.1, NULL, 12164, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12164,NULL);\n",architecture,12167,0);
-Msg("Find size of AtkTextRange (12167)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkTextRange (12167)\n");
+%d,%d,%d,'""3.1""',NULL,12164,NULL);\n",architecture,12167,0);
 #endif
 
 #if defined __i386__
@@ -1064,8 +1064,8 @@ CheckTypeSize(AtkTextClipType,4, 12172, 10, 3.1, NULL, 12171, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkTextClipType,4, 12172, 12, 3.1, NULL, 12171, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12171,NULL);\n",architecture,12172,0);
-Msg("Find size of AtkTextClipType (12172)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkTextClipType (12172)\n");
+%d,%d,%d,'""3.1""',NULL,12171,NULL);\n",architecture,12172,0);
 #endif
 
 #if defined __i386__
@@ -1083,8 +1083,8 @@ CheckTypeSize(AtkEventListener,4, 12179, 10, 3.1, NULL, 12178, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkEventListener,8, 12179, 12, 3.1, NULL, 12178, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12178,NULL);\n",architecture,12179,0);
-Msg("Find size of AtkEventListener (12179)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkEventListener (12179)\n");
+%d,%d,%d,'""3.1""',NULL,12178,NULL);\n",architecture,12179,0);
 #endif
 
 #if defined __i386__
@@ -1102,8 +1102,8 @@ CheckTypeSize(AtkFunction,4, 12180, 10, 3.1, NULL, 11542, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkFunction,8, 12180, 12, 3.1, NULL, 11542, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11542,NULL);\n",architecture,12180,0);
-Msg("Find size of AtkFunction (12180)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkFunction (12180)\n");
+%d,%d,%d,'""3.1""',NULL,11542,NULL);\n",architecture,12180,0);
 #endif
 
 #if defined __i386__
@@ -1121,8 +1121,8 @@ CheckTypeSize(AtkImplementorIface,12, 12183, 10, 3.1, NULL, 12181, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkImplementorIface,24, 12183, 12, 3.1, NULL, 12181, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12181,NULL);\n",architecture,12183,0);
-Msg("Find size of AtkImplementorIface (12183)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkImplementorIface (12183)\n");
+%d,%d,%d,'""3.1""',NULL,12181,NULL);\n",architecture,12183,0);
 #endif
 
 #if defined __i386__
@@ -1140,8 +1140,8 @@ CheckTypeSize(AtkRegistryClass,68, 12185, 10, 3.1, NULL, 12184, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkRegistryClass,136, 12185, 12, 3.1, NULL, 12184, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12184,NULL);\n",architecture,12185,0);
-Msg("Find size of AtkRegistryClass (12185)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkRegistryClass (12185)\n");
+%d,%d,%d,'""3.1""',NULL,12184,NULL);\n",architecture,12185,0);
 #endif
 
 #if defined __i386__
@@ -1159,8 +1159,8 @@ CheckTypeSize(AtkHypertextIface,36, 12191, 10, 3.1, NULL, 12186, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkHypertextIface,72, 12191, 12, 3.1, NULL, 12186, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12186,NULL);\n",architecture,12191,0);
-Msg("Find size of AtkHypertextIface (12191)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkHypertextIface (12191)\n");
+%d,%d,%d,'""3.1""',NULL,12186,NULL);\n",architecture,12191,0);
 #endif
 
 #if defined __i386__
@@ -1178,8 +1178,8 @@ CheckTypeSize(AtkStreamableContentIface,36, 12196, 10, 3.1, NULL, 12192, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkStreamableContentIface,72, 12196, 12, 3.1, NULL, 12192, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12192,NULL);\n",architecture,12196,0);
-Msg("Find size of AtkStreamableContentIface (12196)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkStreamableContentIface (12196)\n");
+%d,%d,%d,'""3.1""',NULL,12192,NULL);\n",architecture,12196,0);
 #endif
 
 #if defined __i386__
@@ -1197,8 +1197,8 @@ CheckTypeSize(AtkRectangle,16, 12198, 10, 3.1, NULL, 12197, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkRectangle,16, 12198, 12, 3.1, NULL, 12197, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12197,NULL);\n",architecture,12198,0);
-Msg("Find size of AtkRectangle (12198)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkRectangle (12198)\n");
+%d,%d,%d,'""3.1""',NULL,12197,NULL);\n",architecture,12198,0);
 #endif
 
 #if defined __i386__
@@ -1216,8 +1216,8 @@ CheckTypeSize(AtkStateSetClass,68, 12200, 10, 3.1, NULL, 12199, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkStateSetClass,136, 12200, 12, 3.1, NULL, 12199, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12199,NULL);\n",architecture,12200,0);
-Msg("Find size of AtkStateSetClass (12200)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkStateSetClass (12200)\n");
+%d,%d,%d,'""3.1""',NULL,12199,NULL);\n",architecture,12200,0);
 #endif
 
 #if defined __i386__
@@ -1235,8 +1235,8 @@ CheckTypeSize(AtkAttribute,8, 12202, 10, 3.1, NULL, 12201, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkAttribute,16, 12202, 12, 3.1, NULL, 12201, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12201,NULL);\n",architecture,12202,0);
-Msg("Find size of AtkAttribute (12202)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkAttribute (12202)\n");
+%d,%d,%d,'""3.1""',NULL,12201,NULL);\n",architecture,12202,0);
 #endif
 
 #if defined __i386__
@@ -1254,8 +1254,8 @@ CheckTypeSize(AtkObjectClass,176, 12221, 10, 3.1, NULL, 12203, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkObjectClass,352, 12221, 12, 3.1, NULL, 12203, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12203,NULL);\n",architecture,12221,0);
-Msg("Find size of AtkObjectClass (12221)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkObjectClass (12221)\n");
+%d,%d,%d,'""3.1""',NULL,12203,NULL);\n",architecture,12221,0);
 #endif
 
 #if defined __i386__
@@ -1273,8 +1273,8 @@ CheckTypeSize(AtkGObjectAccessibleClass,184, 12223, 10, 3.1, NULL, 12222, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkGObjectAccessibleClass,368, 12223, 12, 3.1, NULL, 12222, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12222,NULL);\n",architecture,12223,0);
-Msg("Find size of AtkGObjectAccessibleClass (12223)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkGObjectAccessibleClass (12223)\n");
+%d,%d,%d,'""3.1""',NULL,12222,NULL);\n",architecture,12223,0);
 #endif
 
 #if defined __i386__
@@ -1292,8 +1292,8 @@ CheckTypeSize(AtkObjectFactoryClass,88, 12229, 10, 3.1, NULL, 12225, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkObjectFactoryClass,176, 12229, 12, 3.1, NULL, 12225, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12225,NULL);\n",architecture,12229,0);
-Msg("Find size of AtkObjectFactoryClass (12229)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkObjectFactoryClass (12229)\n");
+%d,%d,%d,'""3.1""',NULL,12225,NULL);\n",architecture,12229,0);
 #endif
 
 #if defined __i386__
@@ -1311,8 +1311,8 @@ CheckTypeSize(AtkNoOpObjectFactoryClass,88, 12230, 10, 3.1, NULL, 12224, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkNoOpObjectFactoryClass,176, 12230, 12, 3.1, NULL, 12224, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12224,NULL);\n",architecture,12230,0);
-Msg("Find size of AtkNoOpObjectFactoryClass (12230)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkNoOpObjectFactoryClass (12230)\n");
+%d,%d,%d,'""3.1""',NULL,12224,NULL);\n",architecture,12230,0);
 #endif
 
 #if defined __i386__
@@ -1330,8 +1330,8 @@ CheckTypeSize(AtkActionIface,40, 12236, 10, 3.1, NULL, 12231, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkActionIface,80, 12236, 12, 3.1, NULL, 12231, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12231,NULL);\n",architecture,12236,0);
-Msg("Find size of AtkActionIface (12236)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkActionIface (12236)\n");
+%d,%d,%d,'""3.1""',NULL,12231,NULL);\n",architecture,12236,0);
 #endif
 
 #if defined __i386__
@@ -1349,8 +1349,8 @@ CheckTypeSize(AtkTableIface,168, 12253, 10, 3.1, NULL, 12237, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkTableIface,336, 12253, 12, 3.1, NULL, 12237, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12237,NULL);\n",architecture,12253,0);
-Msg("Find size of AtkTableIface (12253)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkTableIface (12253)\n");
+%d,%d,%d,'""3.1""',NULL,12237,NULL);\n",architecture,12253,0);
 #endif
 
 #if defined __i386__
@@ -1368,8 +1368,8 @@ CheckTypeSize(AtkValueIface,32, 12257, 10, 3.1, NULL, 12254, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkValueIface,64, 12257, 12, 3.1, NULL, 12254, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12254,NULL);\n",architecture,12257,0);
-Msg("Find size of AtkValueIface (12257)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkValueIface (12257)\n");
+%d,%d,%d,'""3.1""',NULL,12254,NULL);\n",architecture,12257,0);
 #endif
 
 #if defined __i386__
@@ -1387,8 +1387,8 @@ CheckTypeSize(AtkRelationClass,68, 12259, 10, 3.1, NULL, 12258, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkRelationClass,136, 12259, 12, 3.1, NULL, 12258, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12258,NULL);\n",architecture,12259,0);
-Msg("Find size of AtkRelationClass (12259)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkRelationClass (12259)\n");
+%d,%d,%d,'""3.1""',NULL,12258,NULL);\n",architecture,12259,0);
 #endif
 
 #if defined __i386__
@@ -1406,8 +1406,8 @@ CheckTypeSize(AtkTextIface,104, 12278, 10, 3.1, NULL, 12260, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkTextIface,208, 12278, 12, 3.1, NULL, 12260, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12260,NULL);\n",architecture,12278,0);
-Msg("Find size of AtkTextIface (12278)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkTextIface (12278)\n");
+%d,%d,%d,'""3.1""',NULL,12260,NULL);\n",architecture,12278,0);
 #endif
 
 #if defined __i386__
@@ -1425,8 +1425,8 @@ CheckTypeSize(AtkRelationSetClass,76, 12280, 10, 3.1, NULL, 12279, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkRelationSetClass,152, 12280, 12, 3.1, NULL, 12279, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12279,NULL);\n",architecture,12280,0);
-Msg("Find size of AtkRelationSetClass (12280)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkRelationSetClass (12280)\n");
+%d,%d,%d,'""3.1""',NULL,12279,NULL);\n",architecture,12280,0);
 #endif
 
 #if defined __i386__
@@ -1444,8 +1444,8 @@ CheckTypeSize(AtkSelectionIface,48, 12287, 10, 3.1, NULL, 12281, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkSelectionIface,96, 12287, 12, 3.1, NULL, 12281, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12281,NULL);\n",architecture,12287,0);
-Msg("Find size of AtkSelectionIface (12287)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkSelectionIface (12287)\n");
+%d,%d,%d,'""3.1""',NULL,12281,NULL);\n",architecture,12287,0);
 #endif
 
 #if defined __i386__
@@ -1463,8 +1463,8 @@ CheckTypeSize(AtkUtilClass,96, 12294, 10, 3.1, NULL, 12288, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkUtilClass,192, 12294, 12, 3.1, NULL, 12288, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12288,NULL);\n",architecture,12294,0);
-Msg("Find size of AtkUtilClass (12294)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkUtilClass (12294)\n");
+%d,%d,%d,'""3.1""',NULL,12288,NULL);\n",architecture,12294,0);
 #endif
 
 #if defined __i386__
@@ -1482,8 +1482,8 @@ CheckTypeSize(AtkNoOpObjectClass,176, 12296, 10, 3.1, NULL, 12295, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkNoOpObjectClass,352, 12296, 12, 3.1, NULL, 12295, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12295,NULL);\n",architecture,12296,0);
-Msg("Find size of AtkNoOpObjectClass (12296)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkNoOpObjectClass (12296)\n");
+%d,%d,%d,'""3.1""',NULL,12295,NULL);\n",architecture,12296,0);
 #endif
 
 #if defined __i386__
@@ -1501,8 +1501,8 @@ CheckTypeSize(AtkImageIface,32, 12302, 10, 3.1, NULL, 12297, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkImageIface,64, 12302, 12, 3.1, NULL, 12297, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12297,NULL);\n",architecture,12302,0);
-Msg("Find size of AtkImageIface (12302)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkImageIface (12302)\n");
+%d,%d,%d,'""3.1""',NULL,12297,NULL);\n",architecture,12302,0);
 #endif
 
 #if defined __i386__
@@ -1520,8 +1520,8 @@ CheckTypeSize(AtkComponentIface,68, 12318, 10, 3.1, NULL, 12303, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkComponentIface,136, 12318, 12, 3.1, NULL, 12303, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12303,NULL);\n",architecture,12318,0);
-Msg("Find size of AtkComponentIface (12318)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkComponentIface (12318)\n");
+%d,%d,%d,'""3.1""',NULL,12303,NULL);\n",architecture,12318,0);
 #endif
 
 #if defined __i386__
@@ -1539,8 +1539,8 @@ CheckTypeSize(AtkEditableTextIface,44, 12325, 10, 3.1, NULL, 12319, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkEditableTextIface,88, 12325, 12, 3.1, NULL, 12319, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12319,NULL);\n",architecture,12325,0);
-Msg("Find size of AtkEditableTextIface (12325)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkEditableTextIface (12325)\n");
+%d,%d,%d,'""3.1""',NULL,12319,NULL);\n",architecture,12325,0);
 #endif
 
 #if defined __i386__
@@ -1558,8 +1558,8 @@ CheckTypeSize(AtkDocumentIface,48, 12329, 10, 3.1, NULL, 12326, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkDocumentIface,96, 12329, 12, 3.1, NULL, 12326, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12326,NULL);\n",architecture,12329,0);
-Msg("Find size of AtkDocumentIface (12329)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkDocumentIface (12329)\n");
+%d,%d,%d,'""3.1""',NULL,12326,NULL);\n",architecture,12329,0);
 #endif
 
 #if defined __i386__
@@ -1577,8 +1577,8 @@ CheckTypeSize(AtkHyperlinkClass,108, 12337, 10, 3.1, NULL, 12330, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkHyperlinkClass,216, 12337, 12, 3.1, NULL, 12330, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12330,NULL);\n",architecture,12337,0);
-Msg("Find size of AtkHyperlinkClass (12337)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkHyperlinkClass (12337)\n");
+%d,%d,%d,'""3.1""',NULL,12330,NULL);\n",architecture,12337,0);
 #endif
 
 #if defined __i386__
@@ -1596,8 +1596,8 @@ CheckTypeSize(AtkKeyEventType,4, 12339, 10, 3.1, NULL, 12338, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkKeyEventType,4, 12339, 12, 3.1, NULL, 12338, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12338,NULL);\n",architecture,12339,0);
-Msg("Find size of AtkKeyEventType (12339)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkKeyEventType (12339)\n");
+%d,%d,%d,'""3.1""',NULL,12338,NULL);\n",architecture,12339,0);
 #endif
 
 #if defined __i386__
@@ -1615,8 +1615,8 @@ CheckTypeSize(AtkUtil,24, 12341, 12, 3.1, NULL, 12340, NULL)
 #elif defined __x86_64__
 CheckTypeSize(AtkUtil,24, 12341, 11, 3.1, NULL, 12340, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12340,NULL);\n",architecture,12341,0);
-Msg("Find size of AtkUtil (12341)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkUtil (12341)\n");
+%d,%d,%d,'""3.1""',NULL,12340,NULL);\n",architecture,12341,0);
 #endif
 
 #if defined __i386__
@@ -1634,8 +1634,8 @@ CheckTypeSize(AtkHyperlinkStateFlags,4, 12343, 10, 3.1, NULL, 12342, NULL)
 #elif defined __s390x__
 CheckTypeSize(AtkHyperlinkStateFlags,4, 12343, 12, 3.1, NULL, 12342, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12342,NULL);\n",architecture,12343,0);
-Msg("Find size of AtkHyperlinkStateFlags (12343)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkHyperlinkStateFlags (12343)\n");
+%d,%d,%d,'""3.1""',NULL,12342,NULL);\n",architecture,12343,0);
 #endif
 
 #if defined __i386__
@@ -1653,8 +1653,8 @@ CheckTypeSize(AtkNoOpObjectFactory,24, 12345, 12, 3.1, NULL, 12344, NULL)
 #elif defined __x86_64__
 CheckTypeSize(AtkNoOpObjectFactory,24, 12345, 11, 3.1, NULL, 12344, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12344,NULL);\n",architecture,12345,0);
-Msg("Find size of AtkNoOpObjectFactory (12345)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AtkNoOpObjectFactory (12345)\n");
+%d,%d,%d,'""3.1""',NULL,12344,NULL);\n",architecture,12345,0);
 #endif
 
 #if defined __i386__
@@ -1672,8 +1672,8 @@ CheckTypeSize(AtkNoOpObject,72, 12347, 12, 3.1, NULL, 12346, NULL)
 #elif defined __x86_64__
 CheckTypeSize(AtkNoOpObject,72, 12347, 11, 3.1, NULL, 12346, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12346, NULL);\n",architecture,12347,0);
 Msg("Find size of AtkNoOpObject (12347)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12346, NULL);\n",architecture,12347,0);
 #endif
 
 extern gchar * atk_text_get_selection_db(AtkText *, gint, gint *, gint *);

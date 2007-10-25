@@ -82,8 +82,8 @@ CheckOffset(struct tms,tms_cutime,16,11,30170)
 CheckMemberSize(struct tms,tms_cstime,8,11,30171)
 CheckOffset(struct tms,tms_cstime,24,11,30171)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,6990,0);
 Msg("Find size of tms (6990)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,6990,0);
 #endif
 
 extern clock_t times_db(struct tms *);

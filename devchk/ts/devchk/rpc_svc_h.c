@@ -84,8 +84,8 @@ CheckTypeSize(SVCXPRT,336, 10390, 12, 1.3, NULL, 9980, NULL)
 #elif defined __x86_64__
 CheckTypeSize(SVCXPRT,336, 10390, 11, 2.0, NULL, 9980, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9980,NULL);\n",architecture,10390,0);
-Msg("Find size of SVCXPRT (10390)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of SVCXPRT (10390)\n");
+%d,%d,%d,'""2.0""',NULL,9980,NULL);\n",architecture,10390,0);
 #endif
 
 #if defined __i386__
@@ -173,8 +173,8 @@ CheckOffset(struct xp_ops,xp_freeargs,32,9,32242)
 CheckMemberSize(struct xp_ops,xp_destroy,8,9,32244)
 CheckOffset(struct xp_ops,xp_destroy,40,9,32244)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9981,0);
-Msg("Find size of xp_ops (9981)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xp_ops (9981)\n");
+%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9981,0);
 #endif
 
 #if defined __i386__
@@ -192,8 +192,8 @@ CheckTypeSize(__dispatch_fn_t,8, 9997, 12, 2.0, NULL, 9995, NULL)
 #elif defined __x86_64__
 CheckTypeSize(__dispatch_fn_t,8, 9997, 11, 2.0, NULL, 9995, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9995,NULL);\n",architecture,9997,0);
-Msg("Find size of __dispatch_fn_t (9997)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of __dispatch_fn_t (9997)\n");
+%d,%d,%d,'""2.0""',NULL,9995,NULL);\n",architecture,9997,0);
 #endif
 
 #if defined __i386__
@@ -281,8 +281,8 @@ CheckOffset(struct svc_req,rq_clntcred,48,11,32256)
 CheckMemberSize(struct svc_req,rq_xprt,8,11,32257)
 CheckOffset(struct svc_req,rq_xprt,56,11,32257)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,9991,0);
 Msg("Find size of svc_req (9991)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,9991,0);
 #endif
 
 extern void svc_getreqset_db(fd_set *);

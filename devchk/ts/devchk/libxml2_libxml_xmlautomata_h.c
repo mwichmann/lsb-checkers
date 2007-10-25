@@ -43,8 +43,8 @@ CheckTypeSize(xmlAutomataStatePtr,4, 14711, 10, 3.1, NULL, 14710, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlAutomataStatePtr,8, 14711, 12, 3.1, NULL, 14710, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14710,NULL);\n",architecture,14711,0);
-Msg("Find size of xmlAutomataStatePtr (14711)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlAutomataStatePtr (14711)\n");
+%d,%d,%d,'""3.1""',NULL,14710,NULL);\n",architecture,14711,0);
 #endif
 
 #if defined __i386__
@@ -62,8 +62,8 @@ CheckTypeSize(xmlAutomataPtr,4, 14715, 10, 3.1, NULL, 14714, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlAutomataPtr,8, 14715, 12, 3.1, NULL, 14714, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14714, NULL);\n",architecture,14715,0);
 Msg("Find size of xmlAutomataPtr (14715)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14714, NULL);\n",architecture,14715,0);
 #endif
 
 extern xmlAutomataStatePtr xmlAutomataNewTransition2_db(xmlAutomataPtr, xmlAutomataStatePtr, xmlAutomataStatePtr, const xmlChar *, const xmlChar *, void *);

@@ -44,8 +44,8 @@ CheckTypeSize(xmlSchematronValidCtxtPtr,4, 14677, 10, 3.1, NULL, 14676, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlSchematronValidCtxtPtr,8, 14677, 12, 3.1, NULL, 14676, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14676,NULL);\n",architecture,14677,0);
-Msg("Find size of xmlSchematronValidCtxtPtr (14677)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlSchematronValidCtxtPtr (14677)\n");
+%d,%d,%d,'""3.1""',NULL,14676,NULL);\n",architecture,14677,0);
 #endif
 
 #if defined __i386__
@@ -63,8 +63,8 @@ CheckTypeSize(xmlSchematronPtr,4, 14681, 10, 3.1, NULL, 14680, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlSchematronPtr,8, 14681, 12, 3.1, NULL, 14680, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14680,NULL);\n",architecture,14681,0);
-Msg("Find size of xmlSchematronPtr (14681)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlSchematronPtr (14681)\n");
+%d,%d,%d,'""3.1""',NULL,14680,NULL);\n",architecture,14681,0);
 #endif
 
 #if defined __i386__
@@ -82,8 +82,8 @@ CheckTypeSize(xmlSchematronParserCtxtPtr,4, 14685, 10, 3.1, NULL, 14684, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlSchematronParserCtxtPtr,8, 14685, 12, 3.1, NULL, 14684, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14684,NULL);\n",architecture,14685,0);
-Msg("Find size of xmlSchematronParserCtxtPtr (14685)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlSchematronParserCtxtPtr (14685)\n");
+%d,%d,%d,'""3.1""',NULL,14684,NULL);\n",architecture,14685,0);
 #endif
 
 #if defined __i386__
@@ -101,8 +101,8 @@ CheckTypeSize(xmlSchematronValidOptions,4, 15084, 10, 3.1, NULL, 15083, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlSchematronValidOptions,4, 15084, 12, 3.1, NULL, 15083, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15083, NULL);\n",architecture,15084,0);
 Msg("Find size of xmlSchematronValidOptions (15084)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15083, NULL);\n",architecture,15084,0);
 #endif
 
 extern xmlSchematronValidCtxtPtr xmlSchematronNewValidCtxt_db(xmlSchematronPtr, int);

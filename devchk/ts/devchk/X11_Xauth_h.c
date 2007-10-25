@@ -40,8 +40,8 @@ CheckTypeSize(Xauth,64, 8961, 12, 1.3, NULL, 9290, NULL)
 #elif defined __x86_64__
 CheckTypeSize(Xauth,64, 8961, 11, 2.0, NULL, 9290, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9290, NULL);\n",architecture,8961,0);
 Msg("Find size of Xauth (8961)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9290, NULL);\n",architecture,8961,0);
 #endif
 
 #ifdef TET_TEST

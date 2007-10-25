@@ -41,8 +41,8 @@ CheckTypeSize(xmlModulePtr,4, 14546, 10, 3.1, NULL, 14545, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlModulePtr,8, 14546, 12, 3.1, NULL, 14545, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14545,NULL);\n",architecture,14546,0);
-Msg("Find size of xmlModulePtr (14546)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlModulePtr (14546)\n");
+%d,%d,%d,'""3.1""',NULL,14545,NULL);\n",architecture,14546,0);
 #endif
 
 #if defined __i386__
@@ -60,8 +60,8 @@ CheckTypeSize(xmlModuleOption,4, 15082, 10, 3.1, NULL, 15081, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlModuleOption,4, 15082, 12, 3.1, NULL, 15081, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15081, NULL);\n",architecture,15082,0);
 Msg("Find size of xmlModuleOption (15082)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15081, NULL);\n",architecture,15082,0);
 #endif
 
 extern int xmlModuleClose_db(xmlModulePtr);

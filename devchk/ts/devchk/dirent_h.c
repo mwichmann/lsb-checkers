@@ -96,8 +96,8 @@ CheckOffset(struct dirent,d_type,18,11,34410)
 CheckMemberSize(struct dirent,d_name,256,11,34180)
 CheckOffset(struct dirent,d_name,19,11,34180)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10178,0);
-Msg("Find size of dirent (10178)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of dirent (10178)\n");
+%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10178,0);
 #endif
 
 #if defined __ia64__
@@ -181,8 +181,8 @@ CheckOffset(struct dirent64,d_type,18,11,34184)
 CheckMemberSize(struct dirent64,d_name,256,11,34185)
 CheckOffset(struct dirent64,d_name,19,11,34185)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10179,0);
 Msg("Find size of dirent64 (10179)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10179,0);
 #endif
 
 extern int readdir64_r_db(DIR *, struct dirent64 *, struct dirent64 * *);

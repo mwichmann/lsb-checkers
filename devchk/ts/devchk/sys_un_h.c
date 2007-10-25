@@ -64,8 +64,8 @@ CheckTypeSize(struct sockaddr_un,110, 9152, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct sockaddr_un,sun_path,108,11,34486)
 CheckOffset(struct sockaddr_un,sun_path,2,11,34486)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,9152,0);
 Msg("Find size of sockaddr_un (9152)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,9152,0);
 #endif
 
 #ifdef TET_TEST

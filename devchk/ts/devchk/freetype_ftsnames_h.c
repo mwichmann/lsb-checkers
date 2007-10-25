@@ -43,8 +43,8 @@ CheckTypeSize(FT_SfntName,16, 16963, 6, 3.2, NULL, 16962, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_SfntName,24, 16963, 9, 3.2, NULL, 16962, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16962, NULL);\n",architecture,16963,0);
 Msg("Find size of FT_SfntName (16963)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16962, NULL);\n",architecture,16963,0);
 #endif
 
 extern FT_Error FT_Get_Sfnt_Name_db(FT_Face, FT_UInt, FT_SfntName *);

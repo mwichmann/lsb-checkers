@@ -43,8 +43,8 @@ CheckTypeSize(xmlRMutexPtr,4, 14997, 10, 3.1, NULL, 14996, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlRMutexPtr,8, 14997, 12, 3.1, NULL, 14996, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14996,NULL);\n",architecture,14997,0);
-Msg("Find size of xmlRMutexPtr (14997)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlRMutexPtr (14997)\n");
+%d,%d,%d,'""3.1""',NULL,14996,NULL);\n",architecture,14997,0);
 #endif
 
 #if defined __i386__
@@ -62,8 +62,8 @@ CheckTypeSize(xmlMutexPtr,4, 15001, 10, 3.1, NULL, 15000, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlMutexPtr,8, 15001, 12, 3.1, NULL, 15000, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15000, NULL);\n",architecture,15001,0);
 Msg("Find size of xmlMutexPtr (15001)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15000, NULL);\n",architecture,15001,0);
 #endif
 
 extern int xmlGetThreadId_db(void);

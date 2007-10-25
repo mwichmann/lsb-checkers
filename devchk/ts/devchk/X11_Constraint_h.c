@@ -47,8 +47,8 @@ CheckTypeSize(ConstraintWidgetClass,8, 10260, 12, 1.3, NULL, 10259, NULL)
 #elif defined __x86_64__
 CheckTypeSize(ConstraintWidgetClass,8, 10260, 11, 2.0, NULL, 10259, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10259, NULL);\n",architecture,10260,0);
 Msg("Find size of ConstraintWidgetClass (10260)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10259, NULL);\n",architecture,10260,0);
 #endif
 
 #ifdef TET_TEST

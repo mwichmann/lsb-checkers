@@ -755,8 +755,8 @@ CheckTypeSize(GdkWindow,12, 12673, 10, 3.1, NULL, 12672, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkWindow,24, 12673, 12, 3.1, NULL, 12672, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12672,NULL);\n",architecture,12673,0);
-Msg("Find size of GdkWindow (12673)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkWindow (12673)\n");
+%d,%d,%d,'""3.1""',NULL,12672,NULL);\n",architecture,12673,0);
 #endif
 
 #if defined __i386__
@@ -774,8 +774,8 @@ CheckTypeSize(GdkColor,12, 12678, 10, 3.1, NULL, 12677, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkColor,12, 12678, 12, 3.1, NULL, 12677, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12677,NULL);\n",architecture,12678,0);
-Msg("Find size of GdkColor (12678)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkColor (12678)\n");
+%d,%d,%d,'""3.1""',NULL,12677,NULL);\n",architecture,12678,0);
 #endif
 
 #if defined __i386__
@@ -793,8 +793,8 @@ CheckTypeSize(GdkVisualType,4, 12682, 10, 3.1, NULL, 12681, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkVisualType,4, 12682, 12, 3.1, NULL, 12681, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12681,NULL);\n",architecture,12682,0);
-Msg("Find size of GdkVisualType (12682)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkVisualType (12682)\n");
+%d,%d,%d,'""3.1""',NULL,12681,NULL);\n",architecture,12682,0);
 #endif
 
 #if defined __i386__
@@ -812,8 +812,8 @@ CheckTypeSize(GdkByteOrder,4, 12684, 10, 3.1, NULL, 12683, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkByteOrder,4, 12684, 12, 3.1, NULL, 12683, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12683,NULL);\n",architecture,12684,0);
-Msg("Find size of GdkByteOrder (12684)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkByteOrder (12684)\n");
+%d,%d,%d,'""3.1""',NULL,12683,NULL);\n",architecture,12684,0);
 #endif
 
 #if defined __i386__
@@ -831,8 +831,8 @@ CheckTypeSize(GdkVisual,68, 12685, 10, 3.1, NULL, 12680, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkVisual,80, 12685, 12, 3.1, NULL, 12680, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12680,NULL);\n",architecture,12685,0);
-Msg("Find size of GdkVisual (12685)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkVisual (12685)\n");
+%d,%d,%d,'""3.1""',NULL,12680,NULL);\n",architecture,12685,0);
 #endif
 
 #if defined __i386__
@@ -850,8 +850,8 @@ CheckTypeSize(GdkColormap,28, 12687, 10, 3.1, NULL, 12676, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkColormap,56, 12687, 12, 3.1, NULL, 12676, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12676,NULL);\n",architecture,12687,0);
-Msg("Find size of GdkColormap (12687)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkColormap (12687)\n");
+%d,%d,%d,'""3.1""',NULL,12676,NULL);\n",architecture,12687,0);
 #endif
 
 #if defined __i386__
@@ -869,8 +869,8 @@ CheckTypeSize(GdkGC,32, 12689, 10, 3.1, NULL, 12675, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkGC,48, 12689, 12, 3.1, NULL, 12675, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12675,NULL);\n",architecture,12689,0);
-Msg("Find size of GdkGC (12689)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkGC (12689)\n");
+%d,%d,%d,'""3.1""',NULL,12675,NULL);\n",architecture,12689,0);
 #endif
 
 #if defined __i386__
@@ -888,8 +888,8 @@ CheckTypeSize(GdkDrawable,12, 12691, 10, 3.1, NULL, 12672, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkDrawable,24, 12691, 12, 3.1, NULL, 12672, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12672,NULL);\n",architecture,12691,0);
-Msg("Find size of GdkDrawable (12691)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkDrawable (12691)\n");
+%d,%d,%d,'""3.1""',NULL,12672,NULL);\n",architecture,12691,0);
 #endif
 
 #if defined __i386__
@@ -907,8 +907,8 @@ CheckTypeSize(GdkInputSource,4, 12699, 10, 3.1, NULL, 12698, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkInputSource,4, 12699, 12, 3.1, NULL, 12698, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12698,NULL);\n",architecture,12699,0);
-Msg("Find size of GdkInputSource (12699)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkInputSource (12699)\n");
+%d,%d,%d,'""3.1""',NULL,12698,NULL);\n",architecture,12699,0);
 #endif
 
 #if defined __i386__
@@ -926,8 +926,8 @@ CheckTypeSize(GdkInputMode,4, 12701, 10, 3.1, NULL, 12700, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkInputMode,4, 12701, 12, 3.1, NULL, 12700, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12700,NULL);\n",architecture,12701,0);
-Msg("Find size of GdkInputMode (12701)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkInputMode (12701)\n");
+%d,%d,%d,'""3.1""',NULL,12700,NULL);\n",architecture,12701,0);
 #endif
 
 #if defined __i386__
@@ -945,8 +945,8 @@ CheckTypeSize(GdkAxisUse,4, 12704, 10, 3.1, NULL, 12703, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkAxisUse,4, 12704, 12, 3.1, NULL, 12703, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12703,NULL);\n",architecture,12704,0);
-Msg("Find size of GdkAxisUse (12704)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkAxisUse (12704)\n");
+%d,%d,%d,'""3.1""',NULL,12703,NULL);\n",architecture,12704,0);
 #endif
 
 #if defined __i386__
@@ -964,8 +964,8 @@ CheckTypeSize(GdkDeviceAxis,24, 12705, 10, 3.1, NULL, 12702, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkDeviceAxis,24, 12705, 12, 3.1, NULL, 12702, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12702,NULL);\n",architecture,12705,0);
-Msg("Find size of GdkDeviceAxis (12705)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkDeviceAxis (12705)\n");
+%d,%d,%d,'""3.1""',NULL,12702,NULL);\n",architecture,12705,0);
 #endif
 
 #if defined __i386__
@@ -983,8 +983,8 @@ CheckTypeSize(GdkModifierType,4, 12709, 10, 3.1, NULL, 12708, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkModifierType,4, 12709, 12, 3.1, NULL, 12708, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12708,NULL);\n",architecture,12709,0);
-Msg("Find size of GdkModifierType (12709)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkModifierType (12709)\n");
+%d,%d,%d,'""3.1""',NULL,12708,NULL);\n",architecture,12709,0);
 #endif
 
 #if defined __i386__
@@ -1002,8 +1002,8 @@ CheckTypeSize(GdkDeviceKey,8, 12710, 10, 3.1, NULL, 12707, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkDeviceKey,8, 12710, 12, 3.1, NULL, 12707, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12707,NULL);\n",architecture,12710,0);
-Msg("Find size of GdkDeviceKey (12710)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkDeviceKey (12710)\n");
+%d,%d,%d,'""3.1""',NULL,12707,NULL);\n",architecture,12710,0);
 #endif
 
 #if defined __i386__
@@ -1021,8 +1021,8 @@ CheckTypeSize(GdkDevice,44, 12712, 10, 3.1, NULL, 12697, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkDevice,72, 12712, 12, 3.1, NULL, 12697, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12697,NULL);\n",architecture,12712,0);
-Msg("Find size of GdkDevice (12712)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkDevice (12712)\n");
+%d,%d,%d,'""3.1""',NULL,12697,NULL);\n",architecture,12712,0);
 #endif
 
 #if defined __i386__
@@ -1040,8 +1040,8 @@ CheckTypeSize(GdkDisplay,80, 12715, 10, 3.1, NULL, 12693, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkDisplay,120, 12715, 12, 3.1, NULL, 12693, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12693,NULL);\n",architecture,12715,0);
-Msg("Find size of GdkDisplay (12715)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkDisplay (12715)\n");
+%d,%d,%d,'""3.1""',NULL,12693,NULL);\n",architecture,12715,0);
 #endif
 
 #if defined __i386__
@@ -1059,8 +1059,8 @@ CheckTypeSize(GdkScreen,544, 12719, 12, 3.1, NULL, 12717, NULL)
 #elif defined __ia64__
 CheckTypeSize(GdkScreen,544, 12719, 3, 3.1, NULL, 12717, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12717,NULL);\n",architecture,12719,0);
-Msg("Find size of GdkScreen (12719)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkScreen (12719)\n");
+%d,%d,%d,'""3.1""',NULL,12717,NULL);\n",architecture,12719,0);
 #endif
 
 #if defined __i386__
@@ -1078,8 +1078,8 @@ CheckTypeSize(GdkDisplayPointerHooks,12, 12726, 10, 3.1, NULL, 12714, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkDisplayPointerHooks,24, 12726, 12, 3.1, NULL, 12714, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12714,NULL);\n",architecture,12726,0);
-Msg("Find size of GdkDisplayPointerHooks (12726)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkDisplayPointerHooks (12726)\n");
+%d,%d,%d,'""3.1""',NULL,12714,NULL);\n",architecture,12726,0);
 #endif
 
 #if defined __i386__
@@ -1097,8 +1097,8 @@ CheckTypeSize(GdkEventMask,4, 12730, 10, 3.1, NULL, 12729, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkEventMask,4, 12730, 12, 3.1, NULL, 12729, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12729,NULL);\n",architecture,12730,0);
-Msg("Find size of GdkEventMask (12730)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkEventMask (12730)\n");
+%d,%d,%d,'""3.1""',NULL,12729,NULL);\n",architecture,12730,0);
 #endif
 
 #if defined __i386__
@@ -1116,8 +1116,8 @@ CheckTypeSize(GdkCursorType,4, 12733, 10, 3.1, NULL, 12732, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkCursorType,4, 12733, 12, 3.1, NULL, 12732, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12732,NULL);\n",architecture,12733,0);
-Msg("Find size of GdkCursorType (12733)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkCursorType (12733)\n");
+%d,%d,%d,'""3.1""',NULL,12732,NULL);\n",architecture,12733,0);
 #endif
 
 #if defined __i386__
@@ -1135,8 +1135,8 @@ CheckTypeSize(GdkCursor,8, 12734, 10, 3.1, NULL, 12731, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkCursor,8, 12734, 12, 3.1, NULL, 12731, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12731,NULL);\n",architecture,12734,0);
-Msg("Find size of GdkCursor (12734)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkCursor (12734)\n");
+%d,%d,%d,'""3.1""',NULL,12731,NULL);\n",architecture,12734,0);
 #endif
 
 #if defined __i386__
@@ -1154,8 +1154,8 @@ CheckTypeSize(GdkKeymap,16, 12737, 10, 3.1, NULL, 12736, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkKeymap,32, 12737, 12, 3.1, NULL, 12736, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12736,NULL);\n",architecture,12737,0);
-Msg("Find size of GdkKeymap (12737)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkKeymap (12737)\n");
+%d,%d,%d,'""3.1""',NULL,12736,NULL);\n",architecture,12737,0);
 #endif
 
 #if defined __i386__
@@ -1173,8 +1173,8 @@ CheckTypeSize(GdkAtom,4, 12741, 10, 3.1, NULL, 12740, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkAtom,8, 12741, 12, 3.1, NULL, 12740, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12740,NULL);\n",architecture,12741,0);
-Msg("Find size of GdkAtom (12741)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkAtom (12741)\n");
+%d,%d,%d,'""3.1""',NULL,12740,NULL);\n",architecture,12741,0);
 #endif
 
 #if defined __i386__
@@ -1192,8 +1192,8 @@ CheckTypeSize(GdkFilterReturn,4, 12743, 10, 3.1, NULL, 12742, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkFilterReturn,4, 12743, 12, 3.1, NULL, 12742, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12742,NULL);\n",architecture,12743,0);
-Msg("Find size of GdkFilterReturn (12743)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkFilterReturn (12743)\n");
+%d,%d,%d,'""3.1""',NULL,12742,NULL);\n",architecture,12743,0);
 #endif
 
 #if defined __i386__
@@ -1211,8 +1211,8 @@ CheckTypeSize(GdkXEvent,1, 12744, 10, 3.1, NULL, 1, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkXEvent,1, 12744, 12, 3.1, NULL, 1, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1,NULL);\n",architecture,12744,0);
-Msg("Find size of GdkXEvent (12744)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkXEvent (12744)\n");
+%d,%d,%d,'""3.1""',NULL,1,NULL);\n",architecture,12744,0);
 #endif
 
 #if defined __i386__
@@ -1230,8 +1230,8 @@ CheckTypeSize(GdkEventType,4, 12748, 10, 3.1, NULL, 12747, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkEventType,4, 12748, 12, 3.1, NULL, 12747, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12747,NULL);\n",architecture,12748,0);
-Msg("Find size of GdkEventType (12748)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkEventType (12748)\n");
+%d,%d,%d,'""3.1""',NULL,12747,NULL);\n",architecture,12748,0);
 #endif
 
 #if defined __i386__
@@ -1249,8 +1249,8 @@ CheckTypeSize(GdkEventAny,12, 12750, 10, 3.1, NULL, 12749, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkEventAny,24, 12750, 12, 3.1, NULL, 12749, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12749,NULL);\n",architecture,12750,0);
-Msg("Find size of GdkEventAny (12750)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkEventAny (12750)\n");
+%d,%d,%d,'""3.1""',NULL,12749,NULL);\n",architecture,12750,0);
 #endif
 
 #if defined __i386__
@@ -1268,8 +1268,8 @@ CheckTypeSize(GdkRectangle,16, 12753, 10, 3.1, NULL, 12752, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkRectangle,16, 12753, 12, 3.1, NULL, 12752, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12752,NULL);\n",architecture,12753,0);
-Msg("Find size of GdkRectangle (12753)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkRectangle (12753)\n");
+%d,%d,%d,'""3.1""',NULL,12752,NULL);\n",architecture,12753,0);
 #endif
 
 #if defined __i386__
@@ -1287,8 +1287,8 @@ CheckTypeSize(GdkEventExpose,36, 12757, 10, 3.1, NULL, 12751, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkEventExpose,56, 12757, 12, 3.1, NULL, 12751, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12751,NULL);\n",architecture,12757,0);
-Msg("Find size of GdkEventExpose (12757)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkEventExpose (12757)\n");
+%d,%d,%d,'""3.1""',NULL,12751,NULL);\n",architecture,12757,0);
 #endif
 
 #if defined __i386__
@@ -1306,8 +1306,8 @@ CheckTypeSize(GdkEventNoExpose,12, 12759, 10, 3.1, NULL, 12758, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkEventNoExpose,24, 12759, 12, 3.1, NULL, 12758, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12758,NULL);\n",architecture,12759,0);
-Msg("Find size of GdkEventNoExpose (12759)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkEventNoExpose (12759)\n");
+%d,%d,%d,'""3.1""',NULL,12758,NULL);\n",architecture,12759,0);
 #endif
 
 #if defined __i386__
@@ -1325,8 +1325,8 @@ CheckTypeSize(GdkVisibilityState,4, 12762, 10, 3.1, NULL, 12761, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkVisibilityState,4, 12762, 12, 3.1, NULL, 12761, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12761,NULL);\n",architecture,12762,0);
-Msg("Find size of GdkVisibilityState (12762)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkVisibilityState (12762)\n");
+%d,%d,%d,'""3.1""',NULL,12761,NULL);\n",architecture,12762,0);
 #endif
 
 #if defined __i386__
@@ -1344,8 +1344,8 @@ CheckTypeSize(GdkEventVisibility,16, 12763, 10, 3.1, NULL, 12760, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkEventVisibility,24, 12763, 12, 3.1, NULL, 12760, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12760,NULL);\n",architecture,12763,0);
-Msg("Find size of GdkEventVisibility (12763)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkEventVisibility (12763)\n");
+%d,%d,%d,'""3.1""',NULL,12760,NULL);\n",architecture,12763,0);
 #endif
 
 #if defined __i386__
@@ -1363,8 +1363,8 @@ CheckTypeSize(GdkEventMotion,64, 12766, 10, 3.1, NULL, 12764, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkEventMotion,80, 12766, 12, 3.1, NULL, 12764, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12764,NULL);\n",architecture,12766,0);
-Msg("Find size of GdkEventMotion (12766)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkEventMotion (12766)\n");
+%d,%d,%d,'""3.1""',NULL,12764,NULL);\n",architecture,12766,0);
 #endif
 
 #if defined __i386__
@@ -1382,8 +1382,8 @@ CheckTypeSize(GdkEventButton,64, 12768, 10, 3.1, NULL, 12767, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkEventButton,80, 12768, 12, 3.1, NULL, 12767, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12767,NULL);\n",architecture,12768,0);
-Msg("Find size of GdkEventButton (12768)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkEventButton (12768)\n");
+%d,%d,%d,'""3.1""',NULL,12767,NULL);\n",architecture,12768,0);
 #endif
 
 #if defined __i386__
@@ -1401,8 +1401,8 @@ CheckTypeSize(GdkScrollDirection,4, 12771, 10, 3.1, NULL, 12770, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkScrollDirection,4, 12771, 12, 3.1, NULL, 12770, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12770,NULL);\n",architecture,12771,0);
-Msg("Find size of GdkScrollDirection (12771)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkScrollDirection (12771)\n");
+%d,%d,%d,'""3.1""',NULL,12770,NULL);\n",architecture,12771,0);
 #endif
 
 #if defined __i386__
@@ -1420,8 +1420,8 @@ CheckTypeSize(GdkEventScroll,64, 12772, 10, 3.1, NULL, 12769, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkEventScroll,72, 12772, 12, 3.1, NULL, 12769, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12769,NULL);\n",architecture,12772,0);
-Msg("Find size of GdkEventScroll (12772)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkEventScroll (12772)\n");
+%d,%d,%d,'""3.1""',NULL,12769,NULL);\n",architecture,12772,0);
 #endif
 
 #if defined __i386__
@@ -1439,8 +1439,8 @@ CheckTypeSize(GdkEventKey,36, 12774, 10, 3.1, NULL, 12773, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkEventKey,56, 12774, 12, 3.1, NULL, 12773, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12773,NULL);\n",architecture,12774,0);
-Msg("Find size of GdkEventKey (12774)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkEventKey (12774)\n");
+%d,%d,%d,'""3.1""',NULL,12773,NULL);\n",architecture,12774,0);
 #endif
 
 #if defined __i386__
@@ -1458,8 +1458,8 @@ CheckTypeSize(GdkCrossingMode,4, 12777, 10, 3.1, NULL, 12776, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkCrossingMode,4, 12777, 12, 3.1, NULL, 12776, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12776,NULL);\n",architecture,12777,0);
-Msg("Find size of GdkCrossingMode (12777)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkCrossingMode (12777)\n");
+%d,%d,%d,'""3.1""',NULL,12776,NULL);\n",architecture,12777,0);
 #endif
 
 #if defined __i386__
@@ -1477,8 +1477,8 @@ CheckTypeSize(GdkNotifyType,4, 12779, 10, 3.1, NULL, 12778, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkNotifyType,4, 12779, 12, 3.1, NULL, 12778, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12778,NULL);\n",architecture,12779,0);
-Msg("Find size of GdkNotifyType (12779)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkNotifyType (12779)\n");
+%d,%d,%d,'""3.1""',NULL,12778,NULL);\n",architecture,12779,0);
 #endif
 
 #if defined __i386__
@@ -1496,8 +1496,8 @@ CheckTypeSize(GdkEventCrossing,72, 12780, 10, 3.1, NULL, 12775, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkEventCrossing,88, 12780, 12, 3.1, NULL, 12775, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12775,NULL);\n",architecture,12780,0);
-Msg("Find size of GdkEventCrossing (12780)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkEventCrossing (12780)\n");
+%d,%d,%d,'""3.1""',NULL,12775,NULL);\n",architecture,12780,0);
 #endif
 
 #if defined __i386__
@@ -1515,8 +1515,8 @@ CheckTypeSize(GdkEventFocus,12, 12782, 10, 3.1, NULL, 12781, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkEventFocus,24, 12782, 12, 3.1, NULL, 12781, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12781,NULL);\n",architecture,12782,0);
-Msg("Find size of GdkEventFocus (12782)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkEventFocus (12782)\n");
+%d,%d,%d,'""3.1""',NULL,12781,NULL);\n",architecture,12782,0);
 #endif
 
 #if defined __i386__
@@ -1534,8 +1534,8 @@ CheckTypeSize(GdkEventConfigure,28, 12784, 10, 3.1, NULL, 12783, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkEventConfigure,40, 12784, 12, 3.1, NULL, 12783, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12783,NULL);\n",architecture,12784,0);
-Msg("Find size of GdkEventConfigure (12784)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkEventConfigure (12784)\n");
+%d,%d,%d,'""3.1""',NULL,12783,NULL);\n",architecture,12784,0);
 #endif
 
 #if defined __i386__
@@ -1553,8 +1553,8 @@ CheckTypeSize(GdkEventProperty,24, 12786, 10, 3.1, NULL, 12785, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkEventProperty,40, 12786, 12, 3.1, NULL, 12785, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12785,NULL);\n",architecture,12786,0);
-Msg("Find size of GdkEventProperty (12786)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkEventProperty (12786)\n");
+%d,%d,%d,'""3.1""',NULL,12785,NULL);\n",architecture,12786,0);
 #endif
 
 #if defined __i386__
@@ -1572,8 +1572,8 @@ CheckTypeSize(GdkNativeWindow,4, 12788, 10, 3.1, NULL, 11412, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkNativeWindow,4, 12788, 12, 3.1, NULL, 11412, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11412,NULL);\n",architecture,12788,0);
-Msg("Find size of GdkNativeWindow (12788)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkNativeWindow (12788)\n");
+%d,%d,%d,'""3.1""',NULL,11412,NULL);\n",architecture,12788,0);
 #endif
 
 #if defined __i386__
@@ -1591,8 +1591,8 @@ CheckTypeSize(GdkEventSelection,32, 12789, 10, 3.1, NULL, 12787, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkEventSelection,56, 12789, 12, 3.1, NULL, 12787, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12787,NULL);\n",architecture,12789,0);
-Msg("Find size of GdkEventSelection (12789)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkEventSelection (12789)\n");
+%d,%d,%d,'""3.1""',NULL,12787,NULL);\n",architecture,12789,0);
 #endif
 
 #if defined __i386__
@@ -1610,8 +1610,8 @@ CheckTypeSize(GdkOwnerChange,4, 12792, 10, 3.1, NULL, 12791, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkOwnerChange,4, 12792, 12, 3.1, NULL, 12791, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12791,NULL);\n",architecture,12792,0);
-Msg("Find size of GdkOwnerChange (12792)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkOwnerChange (12792)\n");
+%d,%d,%d,'""3.1""',NULL,12791,NULL);\n",architecture,12792,0);
 #endif
 
 #if defined __i386__
@@ -1629,8 +1629,8 @@ CheckTypeSize(GdkEventOwnerChange,32, 12793, 10, 3.1, NULL, 12790, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkEventOwnerChange,48, 12793, 12, 3.1, NULL, 12790, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12790,NULL);\n",architecture,12793,0);
-Msg("Find size of GdkEventOwnerChange (12793)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkEventOwnerChange (12793)\n");
+%d,%d,%d,'""3.1""',NULL,12790,NULL);\n",architecture,12793,0);
 #endif
 
 #if defined __i386__
@@ -1648,8 +1648,8 @@ CheckTypeSize(GdkEventProximity,20, 12795, 10, 3.1, NULL, 12794, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkEventProximity,32, 12795, 12, 3.1, NULL, 12794, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12794,NULL);\n",architecture,12795,0);
-Msg("Find size of GdkEventProximity (12795)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkEventProximity (12795)\n");
+%d,%d,%d,'""3.1""',NULL,12794,NULL);\n",architecture,12795,0);
 #endif
 
 #if defined __i386__
@@ -1667,8 +1667,8 @@ CheckTypeSize(GdkEventClient,40, 12800, 10, 3.1, NULL, 12796, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkEventClient,80, 12800, 12, 3.1, NULL, 12796, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12796,NULL);\n",architecture,12800,0);
-Msg("Find size of GdkEventClient (12800)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkEventClient (12800)\n");
+%d,%d,%d,'""3.1""',NULL,12796,NULL);\n",architecture,12800,0);
 #endif
 
 #if defined __i386__
@@ -1686,8 +1686,8 @@ CheckTypeSize(GdkDragProtocol,4, 12804, 10, 3.1, NULL, 12803, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkDragProtocol,4, 12804, 12, 3.1, NULL, 12803, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12803,NULL);\n",architecture,12804,0);
-Msg("Find size of GdkDragProtocol (12804)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkDragProtocol (12804)\n");
+%d,%d,%d,'""3.1""',NULL,12803,NULL);\n",architecture,12804,0);
 #endif
 
 #if defined __i386__
@@ -1705,8 +1705,8 @@ CheckTypeSize(GdkDragAction,4, 12806, 10, 3.1, NULL, 12805, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkDragAction,4, 12806, 12, 3.1, NULL, 12805, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12805,NULL);\n",architecture,12806,0);
-Msg("Find size of GdkDragAction (12806)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkDragAction (12806)\n");
+%d,%d,%d,'""3.1""',NULL,12805,NULL);\n",architecture,12806,0);
 #endif
 
 #if defined __i386__
@@ -1724,8 +1724,8 @@ CheckTypeSize(GdkDragContext,52, 12807, 10, 3.1, NULL, 12802, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkDragContext,80, 12807, 12, 3.1, NULL, 12802, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12802,NULL);\n",architecture,12807,0);
-Msg("Find size of GdkDragContext (12807)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkDragContext (12807)\n");
+%d,%d,%d,'""3.1""',NULL,12802,NULL);\n",architecture,12807,0);
 #endif
 
 #if defined __i386__
@@ -1743,8 +1743,8 @@ CheckTypeSize(gshort,2, 12809, 10, 3.1, NULL, 11264, NULL)
 #elif defined __s390x__
 CheckTypeSize(gshort,2, 12809, 12, 3.1, NULL, 11264, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11264,NULL);\n",architecture,12809,0);
-Msg("Find size of gshort (12809)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of gshort (12809)\n");
+%d,%d,%d,'""3.1""',NULL,11264,NULL);\n",architecture,12809,0);
 #endif
 
 #if defined __i386__
@@ -1762,8 +1762,8 @@ CheckTypeSize(GdkEventDND,24, 12810, 10, 3.1, NULL, 12801, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkEventDND,40, 12810, 12, 3.1, NULL, 12801, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12801,NULL);\n",architecture,12810,0);
-Msg("Find size of GdkEventDND (12810)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkEventDND (12810)\n");
+%d,%d,%d,'""3.1""',NULL,12801,NULL);\n",architecture,12810,0);
 #endif
 
 #if defined __i386__
@@ -1781,8 +1781,8 @@ CheckTypeSize(GdkWindowState,4, 12813, 10, 3.1, NULL, 12812, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkWindowState,4, 12813, 12, 3.1, NULL, 12812, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12812,NULL);\n",architecture,12813,0);
-Msg("Find size of GdkWindowState (12813)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkWindowState (12813)\n");
+%d,%d,%d,'""3.1""',NULL,12812,NULL);\n",architecture,12813,0);
 #endif
 
 #if defined __i386__
@@ -1800,8 +1800,8 @@ CheckTypeSize(GdkEventWindowState,20, 12814, 10, 3.1, NULL, 12811, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkEventWindowState,32, 12814, 12, 3.1, NULL, 12811, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12811,NULL);\n",architecture,12814,0);
-Msg("Find size of GdkEventWindowState (12814)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkEventWindowState (12814)\n");
+%d,%d,%d,'""3.1""',NULL,12811,NULL);\n",architecture,12814,0);
 #endif
 
 #if defined __i386__
@@ -1819,8 +1819,8 @@ CheckTypeSize(GdkSettingAction,4, 12817, 10, 3.1, NULL, 12816, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkSettingAction,4, 12817, 12, 3.1, NULL, 12816, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12816,NULL);\n",architecture,12817,0);
-Msg("Find size of GdkSettingAction (12817)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkSettingAction (12817)\n");
+%d,%d,%d,'""3.1""',NULL,12816,NULL);\n",architecture,12817,0);
 #endif
 
 #if defined __i386__
@@ -1838,8 +1838,8 @@ CheckTypeSize(GdkEventSetting,20, 12818, 10, 3.1, NULL, 12815, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkEventSetting,32, 12818, 12, 3.1, NULL, 12815, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12815,NULL);\n",architecture,12818,0);
-Msg("Find size of GdkEventSetting (12818)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkEventSetting (12818)\n");
+%d,%d,%d,'""3.1""',NULL,12815,NULL);\n",architecture,12818,0);
 #endif
 
 #if defined __i386__
@@ -1857,8 +1857,8 @@ CheckTypeSize(GdkEvent,72, 12819, 10, 3.1, NULL, 12746, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkEvent,88, 12819, 12, 3.1, NULL, 12746, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12746,NULL);\n",architecture,12819,0);
-Msg("Find size of GdkEvent (12819)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkEvent (12819)\n");
+%d,%d,%d,'""3.1""',NULL,12746,NULL);\n",architecture,12819,0);
 #endif
 
 #if defined __i386__
@@ -1876,8 +1876,8 @@ CheckTypeSize(GdkFilterFunc,4, 12822, 10, 3.1, NULL, 12821, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkFilterFunc,8, 12822, 12, 3.1, NULL, 12821, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12821,NULL);\n",architecture,12822,0);
-Msg("Find size of GdkFilterFunc (12822)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkFilterFunc (12822)\n");
+%d,%d,%d,'""3.1""',NULL,12821,NULL);\n",architecture,12822,0);
 #endif
 
 #if defined __i386__
@@ -1895,8 +1895,8 @@ CheckTypeSize(GdkPixmap,12, 12823, 10, 3.1, NULL, 12672, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkPixmap,24, 12823, 12, 3.1, NULL, 12672, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12672,NULL);\n",architecture,12823,0);
-Msg("Find size of GdkPixmap (12823)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkPixmap (12823)\n");
+%d,%d,%d,'""3.1""',NULL,12672,NULL);\n",architecture,12823,0);
 #endif
 
 #if defined __i386__
@@ -1914,8 +1914,8 @@ CheckTypeSize(GdkBitmap,12, 12825, 10, 3.1, NULL, 12672, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkBitmap,24, 12825, 12, 3.1, NULL, 12672, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12672,NULL);\n",architecture,12825,0);
-Msg("Find size of GdkBitmap (12825)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkBitmap (12825)\n");
+%d,%d,%d,'""3.1""',NULL,12672,NULL);\n",architecture,12825,0);
 #endif
 
 #if defined __i386__
@@ -1933,8 +1933,8 @@ CheckTypeSize(GdkSubwindowMode,4, 12834, 10, 3.1, NULL, 12833, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkSubwindowMode,4, 12834, 12, 3.1, NULL, 12833, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12833,NULL);\n",architecture,12834,0);
-Msg("Find size of GdkSubwindowMode (12834)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkSubwindowMode (12834)\n");
+%d,%d,%d,'""3.1""',NULL,12833,NULL);\n",architecture,12834,0);
 #endif
 
 #if defined __i386__
@@ -1952,8 +1952,8 @@ CheckTypeSize(GdkWindowEdge,4, 12836, 10, 3.1, NULL, 12835, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkWindowEdge,4, 12836, 12, 3.1, NULL, 12835, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12835,NULL);\n",architecture,12836,0);
-Msg("Find size of GdkWindowEdge (12836)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkWindowEdge (12836)\n");
+%d,%d,%d,'""3.1""',NULL,12835,NULL);\n",architecture,12836,0);
 #endif
 
 #if defined __i386__
@@ -1971,8 +1971,8 @@ CheckTypeSize(GdkImageType,4, 12839, 10, 3.1, NULL, 12838, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkImageType,4, 12839, 12, 3.1, NULL, 12838, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12838,NULL);\n",architecture,12839,0);
-Msg("Find size of GdkImageType (12839)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkImageType (12839)\n");
+%d,%d,%d,'""3.1""',NULL,12838,NULL);\n",architecture,12839,0);
 #endif
 
 #if defined __i386__
@@ -1990,8 +1990,8 @@ CheckTypeSize(GdkImage,52, 12840, 10, 3.1, NULL, 12837, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkImage,88, 12840, 12, 3.1, NULL, 12837, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12837,NULL);\n",architecture,12840,0);
-Msg("Find size of GdkImage (12840)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkImage (12840)\n");
+%d,%d,%d,'""3.1""',NULL,12837,NULL);\n",architecture,12840,0);
 #endif
 
 #if defined __i386__
@@ -2009,8 +2009,8 @@ CheckTypeSize(GdkPangoRenderer,36, 12848, 10, 3.1, NULL, 12844, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkPangoRenderer,64, 12848, 12, 3.1, NULL, 12844, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12844,NULL);\n",architecture,12848,0);
-Msg("Find size of GdkPangoRenderer (12848)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkPangoRenderer (12848)\n");
+%d,%d,%d,'""3.1""',NULL,12844,NULL);\n",architecture,12848,0);
 #endif
 
 #if defined __i386__
@@ -2028,8 +2028,8 @@ CheckTypeSize(GdkGrabStatus,4, 12851, 10, 3.1, NULL, 12850, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkGrabStatus,4, 12851, 12, 3.1, NULL, 12850, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12850,NULL);\n",architecture,12851,0);
-Msg("Find size of GdkGrabStatus (12851)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkGrabStatus (12851)\n");
+%d,%d,%d,'""3.1""',NULL,12850,NULL);\n",architecture,12851,0);
 #endif
 
 #if defined __i386__
@@ -2047,8 +2047,8 @@ CheckTypeSize(GdkFill,4, 12853, 10, 3.1, NULL, 12852, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkFill,4, 12853, 12, 3.1, NULL, 12852, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12852,NULL);\n",architecture,12853,0);
-Msg("Find size of GdkFill (12853)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkFill (12853)\n");
+%d,%d,%d,'""3.1""',NULL,12852,NULL);\n",architecture,12853,0);
 #endif
 
 #if defined __i386__
@@ -2066,8 +2066,8 @@ CheckTypeSize(GdkWindowTypeHint,4, 12856, 10, 3.1, NULL, 12855, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkWindowTypeHint,4, 12856, 12, 3.1, NULL, 12855, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12855,NULL);\n",architecture,12856,0);
-Msg("Find size of GdkWindowTypeHint (12856)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkWindowTypeHint (12856)\n");
+%d,%d,%d,'""3.1""',NULL,12855,NULL);\n",architecture,12856,0);
 #endif
 
 #if defined __i386__
@@ -2085,8 +2085,8 @@ CheckTypeSize(GdkTimeCoord,1032, 12860, 10, 3.1, NULL, 12858, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkTimeCoord,1032, 12860, 12, 3.1, NULL, 12858, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12858,NULL);\n",architecture,12860,0);
-Msg("Find size of GdkTimeCoord (12860)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkTimeCoord (12860)\n");
+%d,%d,%d,'""3.1""',NULL,12858,NULL);\n",architecture,12860,0);
 #endif
 
 #if defined __i386__
@@ -2104,8 +2104,8 @@ CheckTypeSize(GdkPoint,8, 12864, 10, 3.1, NULL, 12863, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkPoint,8, 12864, 12, 3.1, NULL, 12863, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12863,NULL);\n",architecture,12864,0);
-Msg("Find size of GdkPoint (12864)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkPoint (12864)\n");
+%d,%d,%d,'""3.1""',NULL,12863,NULL);\n",architecture,12864,0);
 #endif
 
 #if defined __i386__
@@ -2123,8 +2123,8 @@ CheckTypeSize(GdkWMDecoration,4, 12871, 10, 3.1, NULL, 12870, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkWMDecoration,4, 12871, 12, 3.1, NULL, 12870, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12870,NULL);\n",architecture,12871,0);
-Msg("Find size of GdkWMDecoration (12871)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkWMDecoration (12871)\n");
+%d,%d,%d,'""3.1""',NULL,12870,NULL);\n",architecture,12871,0);
 #endif
 
 #if defined __i386__
@@ -2142,8 +2142,8 @@ CheckTypeSize(GdkWMFunction,4, 12873, 10, 3.1, NULL, 12872, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkWMFunction,4, 12873, 12, 3.1, NULL, 12872, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12872,NULL);\n",architecture,12873,0);
-Msg("Find size of GdkWMFunction (12873)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkWMFunction (12873)\n");
+%d,%d,%d,'""3.1""',NULL,12872,NULL);\n",architecture,12873,0);
 #endif
 
 #if defined __i386__
@@ -2161,8 +2161,8 @@ CheckTypeSize(GdkKeymapKey,12, 12876, 10, 3.1, NULL, 12875, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkKeymapKey,12, 12876, 12, 3.1, NULL, 12875, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12875,NULL);\n",architecture,12876,0);
-Msg("Find size of GdkKeymapKey (12876)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkKeymapKey (12876)\n");
+%d,%d,%d,'""3.1""',NULL,12875,NULL);\n",architecture,12876,0);
 #endif
 
 #if defined __i386__
@@ -2180,8 +2180,8 @@ CheckTypeSize(GdkRgbDither,4, 12881, 10, 3.1, NULL, 12880, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkRgbDither,4, 12881, 12, 3.1, NULL, 12880, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12880,NULL);\n",architecture,12881,0);
-Msg("Find size of GdkRgbDither (12881)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkRgbDither (12881)\n");
+%d,%d,%d,'""3.1""',NULL,12880,NULL);\n",architecture,12881,0);
 #endif
 
 #if defined __i386__
@@ -2199,8 +2199,8 @@ CheckTypeSize(GdkRgbCmap,1032, 12884, 10, 3.1, NULL, 12882, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkRgbCmap,1040, 12884, 12, 3.1, NULL, 12882, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12882,NULL);\n",architecture,12884,0);
-Msg("Find size of GdkRgbCmap (12884)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkRgbCmap (12884)\n");
+%d,%d,%d,'""3.1""',NULL,12882,NULL);\n",architecture,12884,0);
 #endif
 
 #if defined __i386__
@@ -2218,8 +2218,8 @@ CheckTypeSize(GdkFunction,4, 12890, 10, 3.1, NULL, 12889, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkFunction,4, 12890, 12, 3.1, NULL, 12889, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12889,NULL);\n",architecture,12890,0);
-Msg("Find size of GdkFunction (12890)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkFunction (12890)\n");
+%d,%d,%d,'""3.1""',NULL,12889,NULL);\n",architecture,12890,0);
 #endif
 
 #if defined __i386__
@@ -2237,8 +2237,8 @@ CheckTypeSize(GdkLineStyle,4, 12892, 10, 3.1, NULL, 12891, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkLineStyle,4, 12892, 12, 3.1, NULL, 12891, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12891,NULL);\n",architecture,12892,0);
-Msg("Find size of GdkLineStyle (12892)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkLineStyle (12892)\n");
+%d,%d,%d,'""3.1""',NULL,12891,NULL);\n",architecture,12892,0);
 #endif
 
 #if defined __i386__
@@ -2256,8 +2256,8 @@ CheckTypeSize(GdkCapStyle,4, 12894, 10, 3.1, NULL, 12893, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkCapStyle,4, 12894, 12, 3.1, NULL, 12893, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12893,NULL);\n",architecture,12894,0);
-Msg("Find size of GdkCapStyle (12894)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkCapStyle (12894)\n");
+%d,%d,%d,'""3.1""',NULL,12893,NULL);\n",architecture,12894,0);
 #endif
 
 #if defined __i386__
@@ -2275,8 +2275,8 @@ CheckTypeSize(GdkJoinStyle,4, 12896, 10, 3.1, NULL, 12895, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkJoinStyle,4, 12896, 12, 3.1, NULL, 12895, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12895,NULL);\n",architecture,12896,0);
-Msg("Find size of GdkJoinStyle (12896)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkJoinStyle (12896)\n");
+%d,%d,%d,'""3.1""',NULL,12895,NULL);\n",architecture,12896,0);
 #endif
 
 #if defined __i386__
@@ -2294,8 +2294,8 @@ CheckTypeSize(GdkGCValues,88, 12897, 10, 3.1, NULL, 12888, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkGCValues,104, 12897, 12, 3.1, NULL, 12888, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12888,NULL);\n",architecture,12897,0);
-Msg("Find size of GdkGCValues (12897)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkGCValues (12897)\n");
+%d,%d,%d,'""3.1""',NULL,12888,NULL);\n",architecture,12897,0);
 #endif
 
 #if defined __i386__
@@ -2313,8 +2313,8 @@ CheckTypeSize(GdkGCValuesMask,4, 12900, 10, 3.1, NULL, 12899, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkGCValuesMask,4, 12900, 12, 3.1, NULL, 12899, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12899,NULL);\n",architecture,12900,0);
-Msg("Find size of GdkGCValuesMask (12900)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkGCValuesMask (12900)\n");
+%d,%d,%d,'""3.1""',NULL,12899,NULL);\n",architecture,12900,0);
 #endif
 
 #if defined __i386__
@@ -2332,8 +2332,8 @@ CheckTypeSize(GdkWindowType,4, 12903, 10, 3.1, NULL, 12902, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkWindowType,4, 12903, 12, 3.1, NULL, 12902, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12902,NULL);\n",architecture,12903,0);
-Msg("Find size of GdkWindowType (12903)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkWindowType (12903)\n");
+%d,%d,%d,'""3.1""',NULL,12902,NULL);\n",architecture,12903,0);
 #endif
 
 #if defined __i386__
@@ -2351,8 +2351,8 @@ CheckTypeSize(GdkSpan,12, 12906, 10, 3.1, NULL, 12905, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkSpan,12, 12906, 12, 3.1, NULL, 12905, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12905,NULL);\n",architecture,12906,0);
-Msg("Find size of GdkSpan (12906)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkSpan (12906)\n");
+%d,%d,%d,'""3.1""',NULL,12905,NULL);\n",architecture,12906,0);
 #endif
 
 #if defined __i386__
@@ -2370,8 +2370,8 @@ CheckTypeSize(GdkSpanFunc,4, 12909, 10, 3.1, NULL, 12908, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkSpanFunc,8, 12909, 12, 3.1, NULL, 12908, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12908,NULL);\n",architecture,12909,0);
-Msg("Find size of GdkSpanFunc (12909)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkSpanFunc (12909)\n");
+%d,%d,%d,'""3.1""',NULL,12908,NULL);\n",architecture,12909,0);
 #endif
 
 #if defined __i386__
@@ -2389,8 +2389,8 @@ CheckTypeSize(GdkGravity,4, 12912, 10, 3.1, NULL, 12911, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkGravity,4, 12912, 12, 3.1, NULL, 12911, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12911,NULL);\n",architecture,12912,0);
-Msg("Find size of GdkGravity (12912)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkGravity (12912)\n");
+%d,%d,%d,'""3.1""',NULL,12911,NULL);\n",architecture,12912,0);
 #endif
 
 #if defined __i386__
@@ -2408,8 +2408,8 @@ CheckTypeSize(GdkGeometry,56, 12913, 10, 3.1, NULL, 12910, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkGeometry,56, 12913, 12, 3.1, NULL, 12910, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12910,NULL);\n",architecture,12913,0);
-Msg("Find size of GdkGeometry (12913)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkGeometry (12913)\n");
+%d,%d,%d,'""3.1""',NULL,12910,NULL);\n",architecture,12913,0);
 #endif
 
 #if defined __i386__
@@ -2427,8 +2427,8 @@ CheckTypeSize(GdkWindowHints,4, 12916, 10, 3.1, NULL, 12915, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkWindowHints,4, 12916, 12, 3.1, NULL, 12915, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12915,NULL);\n",architecture,12916,0);
-Msg("Find size of GdkWindowHints (12916)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkWindowHints (12916)\n");
+%d,%d,%d,'""3.1""',NULL,12915,NULL);\n",architecture,12916,0);
 #endif
 
 #if defined __i386__
@@ -2446,8 +2446,8 @@ CheckTypeSize(GdkEventFunc,4, 12918, 10, 3.1, NULL, 12917, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkEventFunc,8, 12918, 12, 3.1, NULL, 12917, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12917,NULL);\n",architecture,12918,0);
-Msg("Find size of GdkEventFunc (12918)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkEventFunc (12918)\n");
+%d,%d,%d,'""3.1""',NULL,12917,NULL);\n",architecture,12918,0);
 #endif
 
 #if defined __i386__
@@ -2465,8 +2465,8 @@ CheckTypeSize(GdkOverlapType,4, 12920, 10, 3.1, NULL, 12919, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkOverlapType,4, 12920, 12, 3.1, NULL, 12919, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12919,NULL);\n",architecture,12920,0);
-Msg("Find size of GdkOverlapType (12920)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkOverlapType (12920)\n");
+%d,%d,%d,'""3.1""',NULL,12919,NULL);\n",architecture,12920,0);
 #endif
 
 #if defined __i386__
@@ -2484,8 +2484,8 @@ CheckTypeSize(GdkSegment,16, 12922, 10, 3.1, NULL, 12921, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkSegment,16, 12922, 12, 3.1, NULL, 12921, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12921,NULL);\n",architecture,12922,0);
-Msg("Find size of GdkSegment (12922)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkSegment (12922)\n");
+%d,%d,%d,'""3.1""',NULL,12921,NULL);\n",architecture,12922,0);
 #endif
 
 #if defined __i386__
@@ -2503,8 +2503,8 @@ CheckTypeSize(GdkPropMode,4, 12925, 10, 3.1, NULL, 12924, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkPropMode,4, 12925, 12, 3.1, NULL, 12924, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12924,NULL);\n",architecture,12925,0);
-Msg("Find size of GdkPropMode (12925)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkPropMode (12925)\n");
+%d,%d,%d,'""3.1""',NULL,12924,NULL);\n",architecture,12925,0);
 #endif
 
 #if defined __i386__
@@ -2522,8 +2522,8 @@ CheckTypeSize(GdkWindowClass,4, 12928, 10, 3.1, NULL, 12927, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkWindowClass,4, 12928, 12, 3.1, NULL, 12927, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12927,NULL);\n",architecture,12928,0);
-Msg("Find size of GdkWindowClass (12928)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkWindowClass (12928)\n");
+%d,%d,%d,'""3.1""',NULL,12927,NULL);\n",architecture,12928,0);
 #endif
 
 #if defined __i386__
@@ -2541,8 +2541,8 @@ CheckTypeSize(GdkWindowAttr,56, 12929, 10, 3.1, NULL, 12926, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkWindowAttr,88, 12929, 12, 3.1, NULL, 12926, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12926,NULL);\n",architecture,12929,0);
-Msg("Find size of GdkWindowAttr (12929)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkWindowAttr (12929)\n");
+%d,%d,%d,'""3.1""',NULL,12926,NULL);\n",architecture,12929,0);
 #endif
 
 #if defined __i386__
@@ -2560,8 +2560,8 @@ CheckTypeSize(GdkTrapezoid,48, 12937, 10, 3.1, NULL, 12936, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkTrapezoid,48, 12937, 12, 3.1, NULL, 12936, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12936,NULL);\n",architecture,12937,0);
-Msg("Find size of GdkTrapezoid (12937)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkTrapezoid (12937)\n");
+%d,%d,%d,'""3.1""',NULL,12936,NULL);\n",architecture,12937,0);
 #endif
 
 #if defined __i386__
@@ -2579,8 +2579,8 @@ CheckTypeSize(GdkFillRule,4, 12943, 10, 3.1, NULL, 12942, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkFillRule,4, 12943, 12, 3.1, NULL, 12942, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12942,NULL);\n",architecture,12943,0);
-Msg("Find size of GdkFillRule (12943)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkFillRule (12943)\n");
+%d,%d,%d,'""3.1""',NULL,12942,NULL);\n",architecture,12943,0);
 #endif
 
 #if defined __i386__
@@ -2598,8 +2598,8 @@ CheckTypeSize(GdkPointerHooks,8, 12947, 10, 3.1, NULL, 12944, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkPointerHooks,16, 12947, 12, 3.1, NULL, 12944, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12944,NULL);\n",architecture,12947,0);
-Msg("Find size of GdkPointerHooks (12947)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkPointerHooks (12947)\n");
+%d,%d,%d,'""3.1""',NULL,12944,NULL);\n",architecture,12947,0);
 #endif
 
 #if defined __i386__
@@ -2617,8 +2617,8 @@ CheckTypeSize(GdkExtensionMode,4, 12953, 10, 3.1, NULL, 12952, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkExtensionMode,4, 12953, 12, 3.1, NULL, 12952, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12952,NULL);\n",architecture,12953,0);
-Msg("Find size of GdkExtensionMode (12953)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkExtensionMode (12953)\n");
+%d,%d,%d,'""3.1""',NULL,12952,NULL);\n",architecture,12953,0);
 #endif
 
 #if defined __i386__
@@ -2636,8 +2636,8 @@ CheckTypeSize(GdkWindowObject,88, 12955, 10, 3.1, NULL, 12954, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkWindowObject,144, 12955, 12, 3.1, NULL, 12954, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12954,NULL);\n",architecture,12955,0);
-Msg("Find size of GdkWindowObject (12955)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkWindowObject (12955)\n");
+%d,%d,%d,'""3.1""',NULL,12954,NULL);\n",architecture,12955,0);
 #endif
 
 #if defined __i386__
@@ -2655,8 +2655,8 @@ CheckTypeSize(GdkScreenClass,72, 12959, 10, 3.1, NULL, 12957, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkScreenClass,144, 12959, 12, 3.1, NULL, 12957, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12957,NULL);\n",architecture,12959,0);
-Msg("Find size of GdkScreenClass (12959)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkScreenClass (12959)\n");
+%d,%d,%d,'""3.1""',NULL,12957,NULL);\n",architecture,12959,0);
 #endif
 
 #if defined __i386__
@@ -2674,8 +2674,8 @@ CheckTypeSize(GdkWChar,4, 12960, 10, 3.1, NULL, 11412, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkWChar,4, 12960, 12, 3.1, NULL, 11412, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11412,NULL);\n",architecture,12960,0);
-Msg("Find size of GdkWChar (12960)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkWChar (12960)\n");
+%d,%d,%d,'""3.1""',NULL,11412,NULL);\n",architecture,12960,0);
 #endif
 
 #if defined __i386__
@@ -2693,8 +2693,8 @@ CheckTypeSize(GdkPixmapObject,20, 12962, 10, 3.1, NULL, 12961, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkPixmapObject,40, 12962, 12, 3.1, NULL, 12961, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12961,NULL);\n",architecture,12962,0);
-Msg("Find size of GdkPixmapObject (12962)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkPixmapObject (12962)\n");
+%d,%d,%d,'""3.1""',NULL,12961,NULL);\n",architecture,12962,0);
 #endif
 
 #if defined __i386__
@@ -2712,8 +2712,8 @@ CheckTypeSize(GdkInputCondition,4, 12964, 10, 3.1, NULL, 12963, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkInputCondition,4, 12964, 12, 3.1, NULL, 12963, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12963,NULL);\n",architecture,12964,0);
-Msg("Find size of GdkInputCondition (12964)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkInputCondition (12964)\n");
+%d,%d,%d,'""3.1""',NULL,12963,NULL);\n",architecture,12964,0);
 #endif
 
 #if defined __i386__
@@ -2731,8 +2731,8 @@ CheckTypeSize(GdkInputFunction,4, 12966, 10, 3.1, NULL, 12965, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkInputFunction,8, 12966, 12, 3.1, NULL, 12965, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12965,NULL);\n",architecture,12966,0);
-Msg("Find size of GdkInputFunction (12966)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkInputFunction (12966)\n");
+%d,%d,%d,'""3.1""',NULL,12965,NULL);\n",architecture,12966,0);
 #endif
 
 #if defined __i386__
@@ -2750,8 +2750,8 @@ CheckTypeSize(GdkImageClass,68, 12968, 10, 3.1, NULL, 12967, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkImageClass,136, 12968, 12, 3.1, NULL, 12967, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12967,NULL);\n",architecture,12968,0);
-Msg("Find size of GdkImageClass (12968)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkImageClass (12968)\n");
+%d,%d,%d,'""3.1""',NULL,12967,NULL);\n",architecture,12968,0);
 #endif
 
 #if defined __i386__
@@ -2769,8 +2769,8 @@ CheckTypeSize(GdkDestroyNotify,4, 12969, 10, 3.1, NULL, 11438, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkDestroyNotify,8, 12969, 12, 3.1, NULL, 11438, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11438,NULL);\n",architecture,12969,0);
-Msg("Find size of GdkDestroyNotify (12969)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkDestroyNotify (12969)\n");
+%d,%d,%d,'""3.1""',NULL,11438,NULL);\n",architecture,12969,0);
 #endif
 
 #if defined __i386__
@@ -2788,8 +2788,8 @@ CheckTypeSize(GdkKeymapClass,76, 12972, 10, 3.1, NULL, 12970, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkKeymapClass,152, 12972, 12, 3.1, NULL, 12970, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12970,NULL);\n",architecture,12972,0);
-Msg("Find size of GdkKeymapClass (12972)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkKeymapClass (12972)\n");
+%d,%d,%d,'""3.1""',NULL,12970,NULL);\n",architecture,12972,0);
 #endif
 
 #if defined __i386__
@@ -2807,8 +2807,8 @@ CheckTypeSize(GdkDrawableClass,224, 13000, 10, 3.1, NULL, 12973, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkDrawableClass,448, 13000, 12, 3.1, NULL, 12973, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12973,NULL);\n",architecture,13000,0);
-Msg("Find size of GdkDrawableClass (13000)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkDrawableClass (13000)\n");
+%d,%d,%d,'""3.1""',NULL,12973,NULL);\n",architecture,13000,0);
 #endif
 
 #if defined __i386__
@@ -2826,8 +2826,8 @@ CheckTypeSize(GdkPangoAttrEmbossed,16, 13002, 10, 3.1, NULL, 13001, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkPangoAttrEmbossed,24, 13002, 12, 3.1, NULL, 13001, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13001,NULL);\n",architecture,13002,0);
-Msg("Find size of GdkPangoAttrEmbossed (13002)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkPangoAttrEmbossed (13002)\n");
+%d,%d,%d,'""3.1""',NULL,13001,NULL);\n",architecture,13002,0);
 #endif
 
 #if defined __i386__
@@ -2845,8 +2845,8 @@ CheckTypeSize(GdkDisplayManagerClass,72, 13005, 10, 3.1, NULL, 13003, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkDisplayManagerClass,144, 13005, 12, 3.1, NULL, 13003, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13003,NULL);\n",architecture,13005,0);
-Msg("Find size of GdkDisplayManagerClass (13005)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkDisplayManagerClass (13005)\n");
+%d,%d,%d,'""3.1""',NULL,13003,NULL);\n",architecture,13005,0);
 #endif
 
 #if defined __i386__
@@ -2864,8 +2864,8 @@ CheckTypeSize(GdkPixmapObjectClass,224, 13007, 10, 3.1, NULL, 13006, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkPixmapObjectClass,448, 13007, 12, 3.1, NULL, 13006, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13006,NULL);\n",architecture,13007,0);
-Msg("Find size of GdkPixmapObjectClass (13007)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkPixmapObjectClass (13007)\n");
+%d,%d,%d,'""3.1""',NULL,13006,NULL);\n",architecture,13007,0);
 #endif
 
 #if defined __i386__
@@ -2883,8 +2883,8 @@ CheckTypeSize(GdkPangoRendererClass,124, 13009, 10, 3.1, NULL, 13008, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkPangoRendererClass,248, 13009, 12, 3.1, NULL, 13008, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13008,NULL);\n",architecture,13009,0);
-Msg("Find size of GdkPangoRendererClass (13009)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkPangoRendererClass (13009)\n");
+%d,%d,%d,'""3.1""',NULL,13008,NULL);\n",architecture,13009,0);
 #endif
 
 #if defined __i386__
@@ -2902,8 +2902,8 @@ CheckTypeSize(GdkDisplayClass,88, 13016, 10, 3.1, NULL, 13010, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkDisplayClass,176, 13016, 12, 3.1, NULL, 13010, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13010,NULL);\n",architecture,13016,0);
-Msg("Find size of GdkDisplayClass (13016)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkDisplayClass (13016)\n");
+%d,%d,%d,'""3.1""',NULL,13010,NULL);\n",architecture,13016,0);
 #endif
 
 #if defined __i386__
@@ -2921,8 +2921,8 @@ CheckTypeSize(GdkPangoAttrStipple,16, 13018, 10, 3.1, NULL, 13017, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkPangoAttrStipple,24, 13018, 12, 3.1, NULL, 13017, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13017,NULL);\n",architecture,13018,0);
-Msg("Find size of GdkPangoAttrStipple (13018)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkPangoAttrStipple (13018)\n");
+%d,%d,%d,'""3.1""',NULL,13017,NULL);\n",architecture,13018,0);
 #endif
 
 #if defined __i386__
@@ -2940,8 +2940,8 @@ CheckTypeSize(GdkColormapClass,68, 13020, 10, 3.1, NULL, 13019, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkColormapClass,136, 13020, 12, 3.1, NULL, 13019, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13019,NULL);\n",architecture,13020,0);
-Msg("Find size of GdkColormapClass (13020)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkColormapClass (13020)\n");
+%d,%d,%d,'""3.1""',NULL,13019,NULL);\n",architecture,13020,0);
 #endif
 
 #if defined __i386__
@@ -2959,8 +2959,8 @@ CheckTypeSize(GdkDragContextClass,68, 13022, 10, 3.1, NULL, 13021, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkDragContextClass,136, 13022, 12, 3.1, NULL, 13021, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13021,NULL);\n",architecture,13022,0);
-Msg("Find size of GdkDragContextClass (13022)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkDragContextClass (13022)\n");
+%d,%d,%d,'""3.1""',NULL,13021,NULL);\n",architecture,13022,0);
 #endif
 
 #if defined __i386__
@@ -2978,8 +2978,8 @@ CheckTypeSize(GdkWindowObjectClass,224, 13024, 10, 3.1, NULL, 13023, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkWindowObjectClass,448, 13024, 12, 3.1, NULL, 13023, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13023,NULL);\n",architecture,13024,0);
-Msg("Find size of GdkWindowObjectClass (13024)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkWindowObjectClass (13024)\n");
+%d,%d,%d,'""3.1""',NULL,13023,NULL);\n",architecture,13024,0);
 #endif
 
 #if defined __i386__
@@ -2997,8 +2997,8 @@ CheckTypeSize(GdkGCClass,96, 13029, 10, 3.1, NULL, 13025, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkGCClass,192, 13029, 12, 3.1, NULL, 13025, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13025,NULL);\n",architecture,13029,0);
-Msg("Find size of GdkGCClass (13029)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkGCClass (13029)\n");
+%d,%d,%d,'""3.1""',NULL,13025,NULL);\n",architecture,13029,0);
 #endif
 
 #if defined __i386__
@@ -3016,8 +3016,8 @@ CheckTypeSize(GdkStatus,4, 13035, 10, 3.1, NULL, 13034, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkStatus,4, 13035, 12, 3.1, NULL, 13034, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13034,NULL);\n",architecture,13035,0);
-Msg("Find size of GdkStatus (13035)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkStatus (13035)\n");
+%d,%d,%d,'""3.1""',NULL,13034,NULL);\n",architecture,13035,0);
 #endif
 
 #if defined __i386__
@@ -3035,8 +3035,8 @@ CheckTypeSize(GdkPropertyState,4, 13037, 10, 3.1, NULL, 13036, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkPropertyState,4, 13037, 12, 3.1, NULL, 13036, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13036,NULL);\n",architecture,13037,0);
-Msg("Find size of GdkPropertyState (13037)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkPropertyState (13037)\n");
+%d,%d,%d,'""3.1""',NULL,13036,NULL);\n",architecture,13037,0);
 #endif
 
 #if defined __i386__
@@ -3054,8 +3054,8 @@ CheckTypeSize(GdkWindowAttributesType,4, 13039, 10, 3.1, NULL, 13038, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkWindowAttributesType,4, 13039, 12, 3.1, NULL, 13038, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13038, NULL);\n",architecture,13039,0);
 Msg("Find size of GdkWindowAttributesType (13039)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13038, NULL);\n",architecture,13039,0);
 #endif
 
 extern void gdk_window_deiconify_db(GdkWindow *);

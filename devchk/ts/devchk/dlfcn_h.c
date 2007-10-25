@@ -90,8 +90,8 @@ CheckTypeSize(Dl_info,32, 10008, 12, 1.3, NULL, 10007, NULL)
 #elif defined __x86_64__
 CheckTypeSize(Dl_info,32, 10008, 11, 2.0, NULL, 10007, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10007, NULL);\n",architecture,10008,0);
 Msg("Find size of Dl_info (10008)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10007, NULL);\n",architecture,10008,0);
 #endif
 
 extern int dladdr_db(const void *, Dl_info *);

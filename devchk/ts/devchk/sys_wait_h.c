@@ -99,8 +99,8 @@ CheckTypeSize(idtype_t,4, 9185, 12, 1.3, NULL, 9184, NULL)
 #elif defined __x86_64__
 CheckTypeSize(idtype_t,4, 9185, 11, 2.0, NULL, 9184, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9184, NULL);\n",architecture,9185,0);
 Msg("Find size of idtype_t (9185)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9184, NULL);\n",architecture,9185,0);
 #endif
 
 extern int waitid_db(idtype_t, id_t, siginfo_t *, int);

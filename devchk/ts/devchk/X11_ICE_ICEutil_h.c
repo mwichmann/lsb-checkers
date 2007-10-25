@@ -43,8 +43,8 @@ CheckTypeSize(IceAuthFileEntry,56, 8228, 12, 1.3, NULL, 8227, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IceAuthFileEntry,56, 8228, 11, 2.0, NULL, 8227, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8227,NULL);\n",architecture,8228,0);
-Msg("Find size of IceAuthFileEntry (8228)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of IceAuthFileEntry (8228)\n");
+%d,%d,%d,'""2.0""',NULL,8227,NULL);\n",architecture,8228,0);
 #endif
 
 #if defined __i386__
@@ -62,8 +62,8 @@ CheckTypeSize(IceAuthDataEntry,40, 8230, 12, 1.3, NULL, 8229, NULL)
 #elif defined __x86_64__
 CheckTypeSize(IceAuthDataEntry,40, 8230, 11, 2.0, NULL, 8229, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8229, NULL);\n",architecture,8230,0);
 Msg("Find size of IceAuthDataEntry (8230)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8229, NULL);\n",architecture,8230,0);
 #endif
 
 #ifdef TET_TEST

@@ -42,8 +42,8 @@ CheckTypeSize(ENTRY,16, 6953, 12, 1.3, NULL, 6952, NULL)
 #elif defined __x86_64__
 CheckTypeSize(ENTRY,16, 6953, 11, 2.0, NULL, 6952, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6952,NULL);\n",architecture,6953,0);
-Msg("Find size of ENTRY (6953)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of ENTRY (6953)\n");
+%d,%d,%d,'""2.0""',NULL,6952,NULL);\n",architecture,6953,0);
 #endif
 
 #if defined __i386__
@@ -61,8 +61,8 @@ CheckTypeSize(ACTION,4, 9081, 12, 1.3, NULL, 9080, NULL)
 #elif defined __x86_64__
 CheckTypeSize(ACTION,4, 9081, 11, 2.0, NULL, 9080, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9080,NULL);\n",architecture,9081,0);
-Msg("Find size of ACTION (9081)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of ACTION (9081)\n");
+%d,%d,%d,'""2.0""',NULL,9080,NULL);\n",architecture,9081,0);
 #endif
 
 #if defined __i386__
@@ -80,8 +80,8 @@ CheckTypeSize(VISIT,4, 9085, 12, 1.3, NULL, 9084, NULL)
 #elif defined __x86_64__
 CheckTypeSize(VISIT,4, 9085, 11, 2.0, NULL, 9084, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9084,NULL);\n",architecture,9085,0);
-Msg("Find size of VISIT (9085)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of VISIT (9085)\n");
+%d,%d,%d,'""2.0""',NULL,9084,NULL);\n",architecture,9085,0);
 #endif
 
 #if defined __i386__
@@ -99,8 +99,8 @@ CheckTypeSize(__action_fn_t,8, 6956, 12, 1.3, NULL, 9086, NULL)
 #elif defined __x86_64__
 CheckTypeSize(__action_fn_t,8, 6956, 11, 2.0, NULL, 9086, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9086, NULL);\n",architecture,6956,0);
 Msg("Find size of __action_fn_t (6956)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9086, NULL);\n",architecture,6956,0);
 #endif
 
 extern int hcreate_db(size_t);

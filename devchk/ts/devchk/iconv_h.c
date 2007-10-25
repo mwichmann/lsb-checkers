@@ -40,8 +40,8 @@ CheckTypeSize(iconv_t,8, 6895, 12, 1.3, NULL, 40, NULL)
 #elif defined __x86_64__
 CheckTypeSize(iconv_t,8, 6895, 11, 2.0, NULL, 40, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,40, NULL);\n",architecture,6895,0);
 Msg("Find size of iconv_t (6895)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,40, NULL);\n",architecture,6895,0);
 #endif
 
 extern size_t iconv_db(iconv_t, char * *, size_t *, char * *, size_t *);

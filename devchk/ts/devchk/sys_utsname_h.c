@@ -120,8 +120,8 @@ CheckOffset(struct utsname,machine,260,11,30181)
 CheckMemberSize(struct utsname,domainname,65,11,34411)
 CheckOffset(struct utsname,domainname,325,11,34411)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,7013,0);
 Msg("Find size of utsname (7013)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,7013,0);
 #endif
 
 extern int uname_db(struct utsname *);

@@ -48,8 +48,8 @@ CheckTypeSize(xmlSchemaTypePtr,4, 15050, 10, 3.1, NULL, 15049, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlSchemaTypePtr,8, 15050, 12, 3.1, NULL, 15049, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15049,NULL);\n",architecture,15050,0);
-Msg("Find size of xmlSchemaTypePtr (15050)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlSchemaTypePtr (15050)\n");
+%d,%d,%d,'""3.1""',NULL,15049,NULL);\n",architecture,15050,0);
 #endif
 
 #if defined __i386__
@@ -67,8 +67,8 @@ CheckTypeSize(xmlSchemaValPtr,4, 15054, 10, 3.1, NULL, 15053, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlSchemaValPtr,8, 15054, 12, 3.1, NULL, 15053, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15053,NULL);\n",architecture,15054,0);
-Msg("Find size of xmlSchemaValPtr (15054)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlSchemaValPtr (15054)\n");
+%d,%d,%d,'""3.1""',NULL,15053,NULL);\n",architecture,15054,0);
 #endif
 
 #if defined __i386__
@@ -86,8 +86,8 @@ CheckTypeSize(xmlSchemaValType,4, 15057, 10, 3.1, NULL, 15056, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlSchemaValType,4, 15057, 12, 3.1, NULL, 15056, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15056, NULL);\n",architecture,15057,0);
 Msg("Find size of xmlSchemaValType (15057)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15056, NULL);\n",architecture,15057,0);
 #endif
 
 extern int xmlSchemaValPredefTypeNode_db(xmlSchemaTypePtr, const xmlChar *, xmlSchemaValPtr *, xmlNodePtr);

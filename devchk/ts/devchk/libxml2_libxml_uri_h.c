@@ -41,8 +41,8 @@ CheckTypeSize(xmlURI,40, 14566, 10, 3.1, NULL, 14565, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlURI,80, 14566, 12, 3.1, NULL, 14565, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14565,NULL);\n",architecture,14566,0);
-Msg("Find size of xmlURI (14566)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlURI (14566)\n");
+%d,%d,%d,'""3.1""',NULL,14565,NULL);\n",architecture,14566,0);
 #endif
 
 #if defined __i386__
@@ -60,8 +60,8 @@ CheckTypeSize(xmlURIPtr,4, 14568, 10, 3.1, NULL, 14567, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlURIPtr,8, 14568, 12, 3.1, NULL, 14567, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14567, NULL);\n",architecture,14568,0);
 Msg("Find size of xmlURIPtr (14568)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14567, NULL);\n",architecture,14568,0);
 #endif
 
 extern void xmlFreeURI_db(xmlURIPtr);

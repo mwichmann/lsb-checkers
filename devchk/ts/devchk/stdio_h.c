@@ -214,8 +214,8 @@ CheckTypeSize(fpos_t,16, 9108, 12, 1.3, NULL, 10274, NULL)
 #elif defined __x86_64__
 CheckTypeSize(fpos_t,16, 9108, 11, 2.0, NULL, 10274, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10274,NULL);\n",architecture,9108,0);
-Msg("Find size of fpos_t (9108)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of fpos_t (9108)\n");
+%d,%d,%d,'""2.0""',NULL,10274,NULL);\n",architecture,9108,0);
 #endif
 
 #if defined __i386__
@@ -233,8 +233,8 @@ CheckTypeSize(fpos64_t,16, 9109, 12, 1.3, NULL, 10275, NULL)
 #elif defined __x86_64__
 CheckTypeSize(fpos64_t,16, 9109, 11, 2.0, NULL, 10275, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10275,NULL);\n",architecture,9109,0);
-Msg("Find size of fpos64_t (9109)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of fpos64_t (9109)\n");
+%d,%d,%d,'""2.0""',NULL,10275,NULL);\n",architecture,9109,0);
 #endif
 
 #if defined __i386__
@@ -252,8 +252,8 @@ CheckTypeSize(FILE,216, 8782, 12, 1.3, NULL, 9107, NULL)
 #elif defined __x86_64__
 CheckTypeSize(FILE,216, 8782, 11, 2.0, NULL, 9107, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9107, NULL);\n",architecture,8782,0);
 Msg("Find size of FILE (8782)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9107, NULL);\n",architecture,8782,0);
 #endif
 
 extern void clearerr_db(FILE *);

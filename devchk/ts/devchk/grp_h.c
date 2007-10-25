@@ -84,8 +84,8 @@ CheckOffset(struct group,gr_gid,16,11,29794)
 CheckMemberSize(struct group,gr_mem,8,11,29795)
 CheckOffset(struct group,gr_mem,24,11,29795)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,6894,0);
 Msg("Find size of group (6894)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,6894,0);
 #endif
 
 extern void endgrent_db(void);
