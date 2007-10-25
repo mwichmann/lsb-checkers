@@ -153,8 +153,8 @@ CheckEnum("FTW_SL",FTW_SL,((((0) + 1) + 1) + 1) + 1,29751)
 CheckEnum("FTW_DP",FTW_DP,(((((0) + 1) + 1) + 1) + 1) + 1,29752)
 CheckEnum("FTW_SLN",FTW_SLN,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,29753)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,8989,0);
-Msg("Find size of anon-ftw.h-13 (8989)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of anon-ftw.h-13 (8989)\n");
+%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,8989,0);
 #endif
 
 #if defined __i386__
@@ -193,8 +193,8 @@ CheckEnum("FTW_MOUNT",FTW_MOUNT,2,29755)
 CheckEnum("FTW_CHDIR",FTW_CHDIR,4,29756)
 CheckEnum("FTW_DEPTH",FTW_DEPTH,8,29757)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,8990,0);
-Msg("Find size of anon-ftw.h-34 (8990)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of anon-ftw.h-34 (8990)\n");
+%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,8990,0);
 #endif
 
 #if defined __i386__
@@ -236,8 +236,8 @@ CheckTypeSize(struct FTW,8, 8691, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct FTW,level,4,11,29759)
 CheckOffset(struct FTW,level,4,11,29759)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,8691,0);
-Msg("Find size of FTW (8691)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FTW (8691)\n");
+%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,8691,0);
 #endif
 
 #if defined __i386__
@@ -255,8 +255,8 @@ CheckTypeSize(__ftw_func_t,8, 8992, 12, 1.3, NULL, 8991, NULL)
 #elif defined __x86_64__
 CheckTypeSize(__ftw_func_t,8, 8992, 11, 2.0, NULL, 8991, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8991,NULL);\n",architecture,8992,0);
-Msg("Find size of __ftw_func_t (8992)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of __ftw_func_t (8992)\n");
+%d,%d,%d,'""2.0""',NULL,8991,NULL);\n",architecture,8992,0);
 #endif
 
 #if defined __i386__
@@ -274,8 +274,8 @@ CheckTypeSize(__ftw64_func_t,8, 8994, 12, 1.3, NULL, 8993, NULL)
 #elif defined __x86_64__
 CheckTypeSize(__ftw64_func_t,8, 8994, 11, 2.0, NULL, 8993, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8993,NULL);\n",architecture,8994,0);
-Msg("Find size of __ftw64_func_t (8994)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of __ftw64_func_t (8994)\n");
+%d,%d,%d,'""2.0""',NULL,8993,NULL);\n",architecture,8994,0);
 #endif
 
 #if defined __i386__
@@ -293,8 +293,8 @@ CheckTypeSize(__nftw_func_t,8, 8996, 12, 1.3, NULL, 8995, NULL)
 #elif defined __x86_64__
 CheckTypeSize(__nftw_func_t,8, 8996, 11, 2.0, NULL, 8995, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8995,NULL);\n",architecture,8996,0);
-Msg("Find size of __nftw_func_t (8996)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of __nftw_func_t (8996)\n");
+%d,%d,%d,'""2.0""',NULL,8995,NULL);\n",architecture,8996,0);
 #endif
 
 #if defined __i386__
@@ -312,8 +312,8 @@ CheckTypeSize(__nftw64_func_t,8, 8998, 12, 1.3, NULL, 8997, NULL)
 #elif defined __x86_64__
 CheckTypeSize(__nftw64_func_t,8, 8998, 11, 2.0, NULL, 8997, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8997, NULL);\n",architecture,8998,0);
 Msg("Find size of __nftw64_func_t (8998)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8997, NULL);\n",architecture,8998,0);
 #endif
 
 extern int ftw_db(const char *, __ftw_func_t, int);

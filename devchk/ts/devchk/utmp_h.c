@@ -186,8 +186,8 @@ CheckTypeSize(struct exit_status,4, 10282, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct exit_status,e_exit,2,11,34454)
 CheckOffset(struct exit_status,e_exit,2,11,34454)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10282,0);
-Msg("Find size of exit_status (10282)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of exit_status (10282)\n");
+%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10282,0);
 #endif
 
 #if defined __s390x__

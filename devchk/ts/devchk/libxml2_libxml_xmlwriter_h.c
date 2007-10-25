@@ -50,8 +50,8 @@ CheckTypeSize(xmlTextWriterPtr,4, 15079, 10, 3.1, NULL, 15078, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlTextWriterPtr,8, 15079, 12, 3.1, NULL, 15078, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15078, NULL);\n",architecture,15079,0);
 Msg("Find size of xmlTextWriterPtr (15079)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15078, NULL);\n",architecture,15079,0);
 #endif
 
 extern int xmlTextWriterStartCDATA_db(xmlTextWriterPtr);

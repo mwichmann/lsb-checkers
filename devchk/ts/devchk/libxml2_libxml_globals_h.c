@@ -184,8 +184,8 @@ CheckTypeSize(xmlOutputBufferCreateFilenameFunc,4, 14917, 10, 3.1, NULL, 14916, 
 #elif defined __s390x__
 CheckTypeSize(xmlOutputBufferCreateFilenameFunc,8, 14917, 12, 3.1, NULL, 14916, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14916,NULL);\n",architecture,14917,0);
-Msg("Find size of xmlOutputBufferCreateFilenameFunc (14917)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlOutputBufferCreateFilenameFunc (14917)\n");
+%d,%d,%d,'""3.1""',NULL,14916,NULL);\n",architecture,14917,0);
 #endif
 
 #if defined __i386__
@@ -203,8 +203,8 @@ CheckTypeSize(xmlRegisterNodeFunc,4, 14920, 10, 3.1, NULL, 14919, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlRegisterNodeFunc,8, 14920, 12, 3.1, NULL, 14919, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14919,NULL);\n",architecture,14920,0);
-Msg("Find size of xmlRegisterNodeFunc (14920)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlRegisterNodeFunc (14920)\n");
+%d,%d,%d,'""3.1""',NULL,14919,NULL);\n",architecture,14920,0);
 #endif
 
 #if defined __i386__
@@ -222,8 +222,8 @@ CheckTypeSize(xmlParserInputBufferCreateFilenameFunc,4, 14922, 10, 3.1, NULL, 14
 #elif defined __s390x__
 CheckTypeSize(xmlParserInputBufferCreateFilenameFunc,8, 14922, 12, 3.1, NULL, 14921, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14921,NULL);\n",architecture,14922,0);
-Msg("Find size of xmlParserInputBufferCreateFilenameFunc (14922)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlParserInputBufferCreateFilenameFunc (14922)\n");
+%d,%d,%d,'""3.1""',NULL,14921,NULL);\n",architecture,14922,0);
 #endif
 
 #if defined __i386__
@@ -241,8 +241,8 @@ CheckTypeSize(xmlSAXHandlerV1,112, 14925, 10, 3.1, NULL, 14924, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlSAXHandlerV1,224, 14925, 12, 3.1, NULL, 14924, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14924,NULL);\n",architecture,14925,0);
-Msg("Find size of xmlSAXHandlerV1 (14925)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlSAXHandlerV1 (14925)\n");
+%d,%d,%d,'""3.1""',NULL,14924,NULL);\n",architecture,14925,0);
 #endif
 
 #if defined __i386__
@@ -260,8 +260,8 @@ CheckTypeSize(xmlDeregisterNodeFunc,4, 14927, 10, 3.1, NULL, 14919, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlDeregisterNodeFunc,8, 14927, 12, 3.1, NULL, 14919, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14919,NULL);\n",architecture,14927,0);
-Msg("Find size of xmlDeregisterNodeFunc (14927)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlDeregisterNodeFunc (14927)\n");
+%d,%d,%d,'""3.1""',NULL,14919,NULL);\n",architecture,14927,0);
 #endif
 
 #if defined __i386__
@@ -279,8 +279,8 @@ CheckTypeSize(xmlGlobalStatePtr,4, 14935, 10, 3.1, NULL, 14934, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlGlobalStatePtr,8, 14935, 12, 3.1, NULL, 14934, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14934, NULL);\n",architecture,14935,0);
 Msg("Find size of xmlGlobalStatePtr (14935)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14934, NULL);\n",architecture,14935,0);
 #endif
 
 extern int * __xmlParserDebugEntities_db(void);

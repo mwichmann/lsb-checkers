@@ -93,8 +93,8 @@ CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,5,32019)
 CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,6,32020)
 CheckEnum("AUTH_FAILED",AUTH_FAILED,7,32021)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9887,0);
-Msg("Find size of auth_stat (9887)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of auth_stat (9887)\n");
+%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9887,0);
 #endif
 
 #if defined __i386__
@@ -150,8 +150,8 @@ CheckOffset(struct opaque_auth,oa_base,8,11,32027)
 CheckMemberSize(struct opaque_auth,oa_length,4,11,32028)
 CheckOffset(struct opaque_auth,oa_length,16,11,32028)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9894,0);
-Msg("Find size of opaque_auth (9894)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of opaque_auth (9894)\n");
+%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9894,0);
 #endif
 
 #if defined __i386__
@@ -169,8 +169,8 @@ CheckTypeSize(AUTH,72, 10391, 12, 1.3, NULL, 9896, NULL)
 #elif defined __x86_64__
 CheckTypeSize(AUTH,72, 10391, 11, 2.0, NULL, 9896, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9896,NULL);\n",architecture,10391,0);
-Msg("Find size of AUTH (10391)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of AUTH (10391)\n");
+%d,%d,%d,'""2.0""',NULL,9896,NULL);\n",architecture,10391,0);
 #endif
 
 #if defined __i386__
@@ -246,8 +246,8 @@ CheckOffset(struct auth_ops,ah_refresh,24,11,32035)
 CheckMemberSize(struct auth_ops,ah_destroy,8,11,32036)
 CheckOffset(struct auth_ops,ah_destroy,32,11,32036)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9897,0);
-Msg("Find size of auth_ops (9897)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of auth_ops (9897)\n");
+%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9897,0);
 #endif
 
 #if defined __i386__
@@ -293,8 +293,8 @@ CheckOffset(union des_block,key,0,11,32024)
 CheckMemberSize(union des_block,c,8,11,32025)
 CheckOffset(union des_block,c,0,11,32025)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,9888,0);
 Msg("Find size of des_block (9888)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,9888,0);
 #endif
 
 extern struct AUTH * authnone_create_db(void);

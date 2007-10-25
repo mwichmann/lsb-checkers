@@ -81,8 +81,8 @@ CheckTypeSize(__compar_fn_t,8, 9231, 12, 1.3, NULL, 9079, NULL)
 #elif defined __x86_64__
 CheckTypeSize(__compar_fn_t,8, 9231, 11, 2.0, NULL, 9079, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9079,NULL);\n",architecture,9231,0);
-Msg("Find size of __compar_fn_t (9231)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of __compar_fn_t (9231)\n");
+%d,%d,%d,'""2.0""',NULL,9079,NULL);\n",architecture,9231,0);
 #endif
 
 #if defined __i386__
@@ -186,8 +186,8 @@ CheckOffset(struct random_data,rand_sep,32,9,40032)
 CheckMemberSize(struct random_data,end_ptr,8,9,40033)
 CheckOffset(struct random_data,end_ptr,40,9,40033)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10483,0);
-Msg("Find size of random_data (10483)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of random_data (10483)\n");
+%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10483,0);
 #endif
 
 #if defined __i386__
@@ -205,8 +205,8 @@ CheckTypeSize(div_t,8, 6973, 12, 1.3, NULL, 6972, NULL)
 #elif defined __x86_64__
 CheckTypeSize(div_t,8, 6973, 11, 2.0, NULL, 6972, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6972,NULL);\n",architecture,6973,0);
-Msg("Find size of div_t (6973)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of div_t (6973)\n");
+%d,%d,%d,'""2.0""',NULL,6972,NULL);\n",architecture,6973,0);
 #endif
 
 #if defined __i386__
@@ -224,8 +224,8 @@ CheckTypeSize(ldiv_t,16, 6975, 12, 1.3, NULL, 6974, NULL)
 #elif defined __x86_64__
 CheckTypeSize(ldiv_t,16, 6975, 11, 2.0, NULL, 6974, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6974,NULL);\n",architecture,6975,0);
-Msg("Find size of ldiv_t (6975)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of ldiv_t (6975)\n");
+%d,%d,%d,'""2.0""',NULL,6974,NULL);\n",architecture,6975,0);
 #endif
 
 #if defined __i386__
@@ -243,8 +243,8 @@ CheckTypeSize(lldiv_t,16, 6897, 12, 1.3, NULL, 6976, NULL)
 #elif defined __x86_64__
 CheckTypeSize(lldiv_t,16, 6897, 11, 2.0, NULL, 6976, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6976, NULL);\n",architecture,6897,0);
 Msg("Find size of lldiv_t (6897)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6976, NULL);\n",architecture,6897,0);
 #endif
 
 extern double __strtod_internal_db(const char *, char * *, int);

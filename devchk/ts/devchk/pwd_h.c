@@ -124,8 +124,8 @@ CheckOffset(struct passwd,pw_dir,32,11,30046)
 CheckMemberSize(struct passwd,pw_shell,8,11,30047)
 CheckOffset(struct passwd,pw_shell,40,11,30047)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,6938,0);
 Msg("Find size of passwd (6938)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,6938,0);
 #endif
 
 extern void endpwent_db(void);

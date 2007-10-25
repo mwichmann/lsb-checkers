@@ -60,8 +60,8 @@ CheckTypeSize(sem_t,32, 6960, 12, 1.3, NULL, 6958, NULL)
 #elif defined __x86_64__
 CheckTypeSize(sem_t,32, 6960, 11, 2.0, NULL, 6958, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6958, NULL);\n",architecture,6960,0);
 Msg("Find size of sem_t (6960)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6958, NULL);\n",architecture,6960,0);
 #endif
 
 extern int sem_close_db(sem_t *);

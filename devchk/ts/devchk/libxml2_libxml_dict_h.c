@@ -42,8 +42,8 @@ CheckTypeSize(xmlDictPtr,4, 14688, 10, 3.1, NULL, 14687, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlDictPtr,8, 14688, 12, 3.1, NULL, 14687, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14687, NULL);\n",architecture,14688,0);
 Msg("Find size of xmlDictPtr (14688)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14687, NULL);\n",architecture,14688,0);
 #endif
 
 extern void xmlDictFree_db(xmlDictPtr);

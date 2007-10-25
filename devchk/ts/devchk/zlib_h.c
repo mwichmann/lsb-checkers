@@ -346,8 +346,8 @@ CheckTypeSize(charf,1, 10167, 12, 2.1, NULL, 2, NULL)
 #elif defined __x86_64__
 CheckTypeSize(charf,1, 10167, 11, 2.1, NULL, 2, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.1""',NULL,2,NULL);\n",architecture,10167,0);
-Msg("Find size of charf (10167)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of charf (10167)\n");
+%d,%d,%d,'""2.1""',NULL,2,NULL);\n",architecture,10167,0);
 #endif
 
 #if defined __i386__
@@ -365,8 +365,8 @@ CheckTypeSize(intf,4, 10168, 12, 1.3, NULL, 6, NULL)
 #elif defined __x86_64__
 CheckTypeSize(intf,4, 10168, 11, 2.0, NULL, 6, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,10168,0);
-Msg("Find size of intf (10168)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of intf (10168)\n");
+%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,10168,0);
 #endif
 
 #if defined __i386__
@@ -384,8 +384,8 @@ CheckTypeSize(voidpf,8, 9868, 12, 1.3, NULL, 40, NULL)
 #elif defined __x86_64__
 CheckTypeSize(voidpf,8, 9868, 11, 2.0, NULL, 40, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,40,NULL);\n",architecture,9868,0);
-Msg("Find size of voidpf (9868)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of voidpf (9868)\n");
+%d,%d,%d,'""2.0""',NULL,40,NULL);\n",architecture,9868,0);
 #endif
 
 #if defined __i386__
@@ -403,8 +403,8 @@ CheckTypeSize(uInt,4, 9870, 12, 1.3, NULL, 7, NULL)
 #elif defined __x86_64__
 CheckTypeSize(uInt,4, 9870, 11, 2.0, NULL, 7, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,9870,0);
-Msg("Find size of uInt (9870)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of uInt (9870)\n");
+%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,9870,0);
 #endif
 
 #if defined __i386__
@@ -422,8 +422,8 @@ CheckTypeSize(uLong,8, 9878, 12, 1.3, NULL, 9, NULL)
 #elif defined __x86_64__
 CheckTypeSize(uLong,8, 9878, 11, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,9878,0);
-Msg("Find size of uLong (9878)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of uLong (9878)\n");
+%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,9878,0);
 #endif
 
 #if defined __i386__
@@ -441,8 +441,8 @@ CheckTypeSize(uLongf,8, 9883, 12, 1.3, NULL, 9878, NULL)
 #elif defined __x86_64__
 CheckTypeSize(uLongf,8, 9883, 11, 2.0, NULL, 9878, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9878,NULL);\n",architecture,9883,0);
-Msg("Find size of uLongf (9883)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of uLongf (9883)\n");
+%d,%d,%d,'""2.0""',NULL,9878,NULL);\n",architecture,9883,0);
 #endif
 
 #if defined __i386__
@@ -460,8 +460,8 @@ CheckTypeSize(voidp,8, 9885, 12, 1.3, NULL, 40, NULL)
 #elif defined __x86_64__
 CheckTypeSize(voidp,8, 9885, 11, 2.0, NULL, 40, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,40,NULL);\n",architecture,9885,0);
-Msg("Find size of voidp (9885)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of voidp (9885)\n");
+%d,%d,%d,'""2.0""',NULL,40,NULL);\n",architecture,9885,0);
 #endif
 
 #if defined __i386__
@@ -479,8 +479,8 @@ CheckTypeSize(Byte,1, 10166, 12, 1.3, NULL, 3, NULL)
 #elif defined __x86_64__
 CheckTypeSize(Byte,1, 10166, 11, 2.0, NULL, 3, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,3,NULL);\n",architecture,10166,0);
-Msg("Find size of Byte (10166)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of Byte (10166)\n");
+%d,%d,%d,'""2.0""',NULL,3,NULL);\n",architecture,10166,0);
 #endif
 
 #if defined __ia64__
@@ -498,8 +498,8 @@ CheckTypeSize(z_off_t,8, 10519, 11, 2.0, NULL, 9111, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(z_off_t,8, 10519, 9, 2.0, NULL, 9111, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9111,NULL);\n",architecture,10519,0);
-Msg("Find size of z_off_t (10519)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of z_off_t (10519)\n");
+%d,%d,%d,'""2.0""',NULL,9111,NULL);\n",architecture,10519,0);
 #endif
 
 #if defined __i386__
@@ -517,8 +517,8 @@ CheckTypeSize(voidpc,8, 10995, 12, 2.0, NULL, 10989, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(voidpc,4, 10995, 10, 2.0, NULL, 10989, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10989,NULL);\n",architecture,10995,0);
-Msg("Find size of voidpc (10995)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of voidpc (10995)\n");
+%d,%d,%d,'""2.0""',NULL,10989,NULL);\n",architecture,10995,0);
 #endif
 
 #if defined __i386__
@@ -536,8 +536,8 @@ CheckTypeSize(z_stream,112, 9880, 12, 1.3, NULL, 9875, NULL)
 #elif defined __x86_64__
 CheckTypeSize(z_stream,112, 9880, 11, 2.0, NULL, 9875, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9875,NULL);\n",architecture,9880,0);
-Msg("Find size of z_stream (9880)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of z_stream (9880)\n");
+%d,%d,%d,'""2.0""',NULL,9875,NULL);\n",architecture,9880,0);
 #endif
 
 #if defined __i386__
@@ -555,8 +555,8 @@ CheckTypeSize(z_streamp,8, 9882, 12, 1.3, NULL, 9881, NULL)
 #elif defined __x86_64__
 CheckTypeSize(z_streamp,8, 9882, 11, 2.0, NULL, 9881, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9881,NULL);\n",architecture,9882,0);
-Msg("Find size of z_streamp (9882)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of z_streamp (9882)\n");
+%d,%d,%d,'""2.0""',NULL,9881,NULL);\n",architecture,9882,0);
 #endif
 
 #if defined __i386__
@@ -574,8 +574,8 @@ CheckTypeSize(gzFile,8, 9886, 12, 1.3, NULL, 9885, NULL)
 #elif defined __x86_64__
 CheckTypeSize(gzFile,8, 9886, 11, 2.0, NULL, 9885, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9885,NULL);\n",architecture,9886,0);
-Msg("Find size of gzFile (9886)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of gzFile (9886)\n");
+%d,%d,%d,'""2.0""',NULL,9885,NULL);\n",architecture,9886,0);
 #endif
 
 #if defined __i386__
@@ -593,8 +593,8 @@ CheckTypeSize(alloc_func,8, 9871, 12, 1.3, NULL, 9869, NULL)
 #elif defined __x86_64__
 CheckTypeSize(alloc_func,8, 9871, 11, 2.0, NULL, 9869, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9869,NULL);\n",architecture,9871,0);
-Msg("Find size of alloc_func (9871)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of alloc_func (9871)\n");
+%d,%d,%d,'""2.0""',NULL,9869,NULL);\n",architecture,9871,0);
 #endif
 
 #if defined __i386__
@@ -612,8 +612,8 @@ CheckTypeSize(free_func,8, 9873, 12, 1.3, NULL, 9872, NULL)
 #elif defined __x86_64__
 CheckTypeSize(free_func,8, 9873, 11, 2.0, NULL, 9872, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9872,NULL);\n",architecture,9873,0);
-Msg("Find size of free_func (9873)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of free_func (9873)\n");
+%d,%d,%d,'""2.0""',NULL,9872,NULL);\n",architecture,9873,0);
 #endif
 
 #if defined __i386__
@@ -645,8 +645,8 @@ CheckTypeSize(struct internal_state,4, 9874, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct internal_state,dummy,4,11,34081)
 CheckOffset(struct internal_state,dummy,0,11,34081)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9874,0);
-Msg("Find size of internal_state (9874)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of internal_state (9874)\n");
+%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9874,0);
 #endif
 
 #if defined __i386__
@@ -664,8 +664,8 @@ CheckTypeSize(Bytef,1, 9876, 12, 1.3, NULL, 10166, NULL)
 #elif defined __x86_64__
 CheckTypeSize(Bytef,1, 9876, 11, 2.0, NULL, 10166, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10166,NULL);\n",architecture,9876,0);
-Msg("Find size of Bytef (9876)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of Bytef (9876)\n");
+%d,%d,%d,'""2.0""',NULL,10166,NULL);\n",architecture,9876,0);
 #endif
 
 #if defined __i386__
@@ -683,8 +683,8 @@ CheckTypeSize(uIntf,4, 10169, 12, 1.3, NULL, 9870, NULL)
 #elif defined __x86_64__
 CheckTypeSize(uIntf,4, 10169, 11, 2.0, NULL, 9870, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9870, NULL);\n",architecture,10169,0);
 Msg("Find size of uIntf (10169)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9870, NULL);\n",architecture,10169,0);
 #endif
 
 extern int gzread_db(gzFile, voidp, unsigned int);

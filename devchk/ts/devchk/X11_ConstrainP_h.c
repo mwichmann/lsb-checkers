@@ -57,8 +57,8 @@ CheckTypeSize(ConstraintPart,8, 10250, 12, 1.3, NULL, 10249, NULL)
 #elif defined __x86_64__
 CheckTypeSize(ConstraintPart,8, 10250, 11, 2.0, NULL, 10249, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10249,NULL);\n",architecture,10250,0);
-Msg("Find size of ConstraintPart (10250)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of ConstraintPart (10250)\n");
+%d,%d,%d,'""2.0""',NULL,10249,NULL);\n",architecture,10250,0);
 #endif
 
 #if defined __ia64__
@@ -76,8 +76,8 @@ CheckTypeSize(ConstraintClassPart,48, 10252, 12, 1.3, NULL, 10251, NULL)
 #elif defined __x86_64__
 CheckTypeSize(ConstraintClassPart,48, 10252, 11, 2.0, NULL, 10251, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10251,NULL);\n",architecture,10252,0);
-Msg("Find size of ConstraintClassPart (10252)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of ConstraintClassPart (10252)\n");
+%d,%d,%d,'""2.0""',NULL,10251,NULL);\n",architecture,10252,0);
 #endif
 
 #if defined __ia64__
@@ -95,8 +95,8 @@ CheckTypeSize(ConstraintClassRec,312, 10258, 12, 1.3, NULL, 10257, NULL)
 #elif defined __x86_64__
 CheckTypeSize(ConstraintClassRec,312, 10258, 11, 2.0, NULL, 10257, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10257, NULL);\n",architecture,10258,0);
 Msg("Find size of ConstraintClassRec (10258)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10257, NULL);\n",architecture,10258,0);
 #endif
 
 #ifdef TET_TEST

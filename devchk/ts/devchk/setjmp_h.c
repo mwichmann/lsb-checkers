@@ -65,8 +65,8 @@ CheckTypeSize(jmp_buf,188, 6962, 10, 1.3, NULL, 10231, NULL)
 #elif defined __x86_64__
 CheckTypeSize(jmp_buf,200, 6962, 11, 2.0, NULL, 10231, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10231,NULL);\n",architecture,6962,0);
-Msg("Find size of jmp_buf (6962)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of jmp_buf (6962)\n");
+%d,%d,%d,'""2.0""',NULL,10231,NULL);\n",architecture,6962,0);
 #endif
 
 #if defined __i386__
@@ -84,8 +84,8 @@ CheckTypeSize(sigjmp_buf,280, 6963, 12, 1.3, NULL, 6962, NULL)
 #elif defined __x86_64__
 CheckTypeSize(sigjmp_buf,200, 6963, 11, 2.0, NULL, 6962, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6962,NULL);\n",architecture,6963,0);
-Msg("Find size of sigjmp_buf (6963)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of sigjmp_buf (6963)\n");
+%d,%d,%d,'""2.0""',NULL,6962,NULL);\n",architecture,6963,0);
 #endif
 
 #if defined __i386__
@@ -145,8 +145,8 @@ CheckOffset(struct __jmp_buf_tag,__mask_was_saved,64,11,34040)
 CheckMemberSize(struct __jmp_buf_tag,__saved_mask,128,11,34041)
 CheckOffset(struct __jmp_buf_tag,__saved_mask,72,11,34041)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,6961,0);
 Msg("Find size of __jmp_buf_tag (6961)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,6961,0);
 #endif
 
 extern int __sigsetjmp_db(jmp_buf, int);

@@ -42,8 +42,8 @@ CheckTypeSize(xmlC14NIsVisibleCallback,4, 14915, 10, 3.1, NULL, 14914, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlC14NIsVisibleCallback,8, 14915, 12, 3.1, NULL, 14914, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14914, NULL);\n",architecture,14915,0);
 Msg("Find size of xmlC14NIsVisibleCallback (14915)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14914, NULL);\n",architecture,14915,0);
 #endif
 
 extern int xmlC14NDocDumpMemory_db(xmlDocPtr, xmlNodeSetPtr, int, xmlChar * *, int, xmlChar * *);

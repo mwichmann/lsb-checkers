@@ -122,8 +122,8 @@ CheckTypeSize(PangoXftSubstituteFunc,4, 12564, 10, 3.1, NULL, 12563, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoXftSubstituteFunc,8, 12564, 12, 3.1, NULL, 12563, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12563,NULL);\n",architecture,12564,0);
-Msg("Find size of PangoXftSubstituteFunc (12564)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoXftSubstituteFunc (12564)\n");
+%d,%d,%d,'""3.1""',NULL,12563,NULL);\n",architecture,12564,0);
 #endif
 
 #if defined __i386__
@@ -141,8 +141,8 @@ CheckTypeSize(PangoXftRendererClass,132, 12579, 10, 3.1, NULL, 12567, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoXftRendererClass,264, 12579, 12, 3.1, NULL, 12567, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12567,NULL);\n",architecture,12579,0);
-Msg("Find size of PangoXftRendererClass (12579)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoXftRendererClass (12579)\n");
+%d,%d,%d,'""3.1""',NULL,12567,NULL);\n",architecture,12579,0);
 #endif
 
 extern void pango_xft_substitute_changed_db(Display *, int);

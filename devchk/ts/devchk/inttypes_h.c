@@ -42,8 +42,8 @@ CheckTypeSize(imaxdiv_t,16, 6898, 12, 1.3, NULL, 6897, NULL)
 #elif defined __x86_64__
 CheckTypeSize(imaxdiv_t,16, 6898, 11, 2.0, NULL, 6897, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6897, NULL);\n",architecture,6898,0);
 Msg("Find size of imaxdiv_t (6898)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6897, NULL);\n",architecture,6898,0);
 #endif
 
 extern intmax_t strtoimax_db(const char *, char * *, int);

@@ -190,8 +190,8 @@ CheckTypeSize(rlim_t,8, 10210, 12, 1.3, NULL, 9, NULL)
 #elif defined __x86_64__
 CheckTypeSize(rlim_t,8, 10210, 11, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,10210,0);
-Msg("Find size of rlim_t (10210)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of rlim_t (10210)\n");
+%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,10210,0);
 #endif
 
 #if defined __i386__
@@ -209,8 +209,8 @@ CheckTypeSize(rlim64_t,8, 10273, 12, 1.3, NULL, 11, NULL)
 #elif defined __x86_64__
 CheckTypeSize(rlim64_t,8, 10273, 11, 2.0, NULL, 11, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,11,NULL);\n",architecture,10273,0);
-Msg("Find size of rlim64_t (10273)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of rlim64_t (10273)\n");
+%d,%d,%d,'""2.0""',NULL,11,NULL);\n",architecture,10273,0);
 #endif
 
 #if 1
@@ -250,8 +250,8 @@ CheckTypeSize(struct rlimit,16, 9120, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct rlimit,rlim_max,8,11,34263)
 CheckOffset(struct rlimit,rlim_max,8,11,34263)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9120,0);
-Msg("Find size of rlimit (9120)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of rlimit (9120)\n");
+%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9120,0);
 #endif
 
 #if defined __i386__
@@ -285,8 +285,8 @@ CheckTypeSize(struct rlimit64,16, 9122, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct rlimit64,rlim_max,8,11,34267)
 CheckOffset(struct rlimit64,rlim_max,8,11,34267)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9122,0);
-Msg("Find size of rlimit64 (9122)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of rlimit64 (9122)\n");
+%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9122,0);
 #endif
 
 #if defined __i386__
@@ -518,8 +518,8 @@ CheckOffset(struct rusage,ru_nvcsw,128,11,34260)
 CheckMemberSize(struct rusage,ru_nivcsw,8,11,34261)
 CheckOffset(struct rusage,ru_nivcsw,136,11,34261)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9125,0);
-Msg("Find size of rusage (9125)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of rusage (9125)\n");
+%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9125,0);
 #endif
 
 #if 1

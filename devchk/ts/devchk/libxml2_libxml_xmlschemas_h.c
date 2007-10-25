@@ -52,8 +52,8 @@ CheckTypeSize(xmlSchemaValidCtxtPtr,4, 15029, 10, 3.1, NULL, 15028, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlSchemaValidCtxtPtr,8, 15029, 12, 3.1, NULL, 15028, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15028,NULL);\n",architecture,15029,0);
-Msg("Find size of xmlSchemaValidCtxtPtr (15029)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlSchemaValidCtxtPtr (15029)\n");
+%d,%d,%d,'""3.1""',NULL,15028,NULL);\n",architecture,15029,0);
 #endif
 
 #if defined __i386__
@@ -71,8 +71,8 @@ CheckTypeSize(xmlSchemaSAXPlugPtr,4, 15033, 10, 3.1, NULL, 15032, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlSchemaSAXPlugPtr,8, 15033, 12, 3.1, NULL, 15032, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15032,NULL);\n",architecture,15033,0);
-Msg("Find size of xmlSchemaSAXPlugPtr (15033)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlSchemaSAXPlugPtr (15033)\n");
+%d,%d,%d,'""3.1""',NULL,15032,NULL);\n",architecture,15033,0);
 #endif
 
 #if defined __i386__
@@ -90,8 +90,8 @@ CheckTypeSize(xmlSchemaParserCtxtPtr,4, 15037, 10, 3.1, NULL, 15036, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlSchemaParserCtxtPtr,8, 15037, 12, 3.1, NULL, 15036, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15036,NULL);\n",architecture,15037,0);
-Msg("Find size of xmlSchemaParserCtxtPtr (15037)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlSchemaParserCtxtPtr (15037)\n");
+%d,%d,%d,'""3.1""',NULL,15036,NULL);\n",architecture,15037,0);
 #endif
 
 #if defined __i386__
@@ -109,8 +109,8 @@ CheckTypeSize(xmlSchemaValidityErrorFunc,4, 15039, 10, 3.1, NULL, 14655, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlSchemaValidityErrorFunc,8, 15039, 12, 3.1, NULL, 14655, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14655,NULL);\n",architecture,15039,0);
-Msg("Find size of xmlSchemaValidityErrorFunc (15039)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlSchemaValidityErrorFunc (15039)\n");
+%d,%d,%d,'""3.1""',NULL,14655,NULL);\n",architecture,15039,0);
 #endif
 
 #if defined __i386__
@@ -128,8 +128,8 @@ CheckTypeSize(xmlSchemaValidityWarningFunc,4, 15041, 10, 3.1, NULL, 14655, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlSchemaValidityWarningFunc,8, 15041, 12, 3.1, NULL, 14655, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14655,NULL);\n",architecture,15041,0);
-Msg("Find size of xmlSchemaValidityWarningFunc (15041)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlSchemaValidityWarningFunc (15041)\n");
+%d,%d,%d,'""3.1""',NULL,14655,NULL);\n",architecture,15041,0);
 #endif
 
 #if defined __i386__
@@ -147,8 +147,8 @@ CheckTypeSize(xmlSchemaPtr,4, 15046, 10, 3.1, NULL, 15045, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlSchemaPtr,8, 15046, 12, 3.1, NULL, 15045, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15045,NULL);\n",architecture,15046,0);
-Msg("Find size of xmlSchemaPtr (15046)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlSchemaPtr (15046)\n");
+%d,%d,%d,'""3.1""',NULL,15045,NULL);\n",architecture,15046,0);
 #endif
 
 #if defined __i386__
@@ -166,8 +166,8 @@ CheckTypeSize(xmlSchemaValidOption,4, 15118, 10, 3.1, NULL, 15117, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlSchemaValidOption,4, 15118, 12, 3.1, NULL, 15117, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15117, NULL);\n",architecture,15118,0);
 Msg("Find size of xmlSchemaValidOption (15118)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15117, NULL);\n",architecture,15118,0);
 #endif
 
 extern int xmlSchemaValidateFile_db(xmlSchemaValidCtxtPtr, const char *, int);

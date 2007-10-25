@@ -47,8 +47,8 @@ CheckTypeSize(BDF_PropertyRec,8, 16932, 6, 3.2, NULL, 16927, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(BDF_PropertyRec,16, 16932, 9, 3.2, NULL, 16927, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16927, NULL);\n",architecture,16932,0);
 Msg("Find size of BDF_PropertyRec (16932)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16927, NULL);\n",architecture,16932,0);
 #endif
 
 extern FT_Error FT_Get_BDF_Property_db(FT_Face, const char *, BDF_PropertyRec *);

@@ -51,8 +51,8 @@ CheckTypeSize(FT_Stroker,4, 16974, 6, 3.2, NULL, 16973, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Stroker,8, 16974, 9, 3.2, NULL, 16973, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16973,NULL);\n",architecture,16974,0);
-Msg("Find size of FT_Stroker (16974)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Stroker (16974)\n");
+%d,%d,%d,'""3.2""',NULL,16973,NULL);\n",architecture,16974,0);
 #endif
 
 #if 1

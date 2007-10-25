@@ -43,8 +43,8 @@ CheckTypeSize(xmlTextReaderPtr,4, 15061, 10, 3.1, NULL, 15060, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlTextReaderPtr,8, 15061, 12, 3.1, NULL, 15060, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15060,NULL);\n",architecture,15061,0);
-Msg("Find size of xmlTextReaderPtr (15061)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlTextReaderPtr (15061)\n");
+%d,%d,%d,'""3.1""',NULL,15060,NULL);\n",architecture,15061,0);
 #endif
 
 #if defined __i386__
@@ -62,8 +62,8 @@ CheckTypeSize(xmlParserSeverities,4, 15063, 10, 3.1, NULL, 15062, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlParserSeverities,4, 15063, 12, 3.1, NULL, 15062, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15062,NULL);\n",architecture,15063,0);
-Msg("Find size of xmlParserSeverities (15063)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlParserSeverities (15063)\n");
+%d,%d,%d,'""3.1""',NULL,15062,NULL);\n",architecture,15063,0);
 #endif
 
 #if defined __i386__
@@ -81,8 +81,8 @@ CheckTypeSize(xmlTextReaderLocatorPtr,4, 15064, 10, 3.1, NULL, 40, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlTextReaderLocatorPtr,8, 15064, 12, 3.1, NULL, 40, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,40,NULL);\n",architecture,15064,0);
-Msg("Find size of xmlTextReaderLocatorPtr (15064)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlTextReaderLocatorPtr (15064)\n");
+%d,%d,%d,'""3.1""',NULL,40,NULL);\n",architecture,15064,0);
 #endif
 
 #if defined __i386__
@@ -100,8 +100,8 @@ CheckTypeSize(xmlTextReaderErrorFunc,4, 15066, 10, 3.1, NULL, 15065, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlTextReaderErrorFunc,8, 15066, 12, 3.1, NULL, 15065, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15065,NULL);\n",architecture,15066,0);
-Msg("Find size of xmlTextReaderErrorFunc (15066)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlTextReaderErrorFunc (15066)\n");
+%d,%d,%d,'""3.1""',NULL,15065,NULL);\n",architecture,15066,0);
 #endif
 
 #if defined __i386__
@@ -119,8 +119,8 @@ CheckTypeSize(xmlParserProperties,4, 15120, 10, 3.1, NULL, 15119, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlParserProperties,4, 15120, 12, 3.1, NULL, 15119, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15119,NULL);\n",architecture,15120,0);
-Msg("Find size of xmlParserProperties (15120)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlParserProperties (15120)\n");
+%d,%d,%d,'""3.1""',NULL,15119,NULL);\n",architecture,15120,0);
 #endif
 
 #if defined __i386__
@@ -138,8 +138,8 @@ CheckTypeSize(xmlReaderTypes,4, 15122, 10, 3.1, NULL, 15121, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlReaderTypes,4, 15122, 12, 3.1, NULL, 15121, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15121,NULL);\n",architecture,15122,0);
-Msg("Find size of xmlReaderTypes (15122)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlReaderTypes (15122)\n");
+%d,%d,%d,'""3.1""',NULL,15121,NULL);\n",architecture,15122,0);
 #endif
 
 #if defined __i386__
@@ -157,8 +157,8 @@ CheckTypeSize(xmlTextReaderMode,4, 15124, 10, 3.1, NULL, 15123, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlTextReaderMode,4, 15124, 12, 3.1, NULL, 15123, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15123, NULL);\n",architecture,15124,0);
 Msg("Find size of xmlTextReaderMode (15124)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15123, NULL);\n",architecture,15124,0);
 #endif
 
 extern xmlChar * xmlTextReaderNamespaceUri_db(xmlTextReaderPtr);

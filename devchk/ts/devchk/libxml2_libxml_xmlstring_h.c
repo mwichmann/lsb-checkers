@@ -44,8 +44,8 @@ CheckTypeSize(xmlChar,1, 14547, 10, 3.1, NULL, 3, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlChar,1, 14547, 12, 3.1, NULL, 3, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,3, NULL);\n",architecture,14547,0);
 Msg("Find size of xmlChar (14547)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,3, NULL);\n",architecture,14547,0);
 #endif
 
 extern int xmlCheckUTF8_db(const unsigned char *);

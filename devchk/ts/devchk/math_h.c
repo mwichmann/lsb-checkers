@@ -566,8 +566,8 @@ CheckOffset(struct exception,arg2,24,11,32297)
 CheckMemberSize(struct exception,retval,8,11,32298)
 CheckOffset(struct exception,retval,32,11,32298)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10010,0);
 Msg("Find size of exception (10010)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10010,0);
 #endif
 
 extern int __finite_db(double);
