@@ -114,8 +114,8 @@ CheckOffset(struct option,flag,16,11,32260)
 CheckMemberSize(struct option,val,4,11,32261)
 CheckOffset(struct option,val,24,11,32261)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10000,0);
 Msg("Find size of option (10000)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10000,0);
 #endif
 
 extern int getopt_long_db(int, char *const [], const char *, const struct option *, int *);

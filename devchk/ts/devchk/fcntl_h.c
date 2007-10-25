@@ -574,8 +574,8 @@ CheckOffset(struct flock,l_len,16,11,34305)
 CheckMemberSize(struct flock,l_pid,4,11,34306)
 CheckOffset(struct flock,l_pid,24,11,34306)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10217,0);
-Msg("Find size of flock (10217)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of flock (10217)\n");
+%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10217,0);
 #endif
 
 #if defined __i386__
@@ -651,8 +651,8 @@ CheckOffset(struct flock64,l_len,16,11,34310)
 CheckMemberSize(struct flock64,l_pid,4,11,34311)
 CheckOffset(struct flock64,l_pid,24,11,34311)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10218,0);
 Msg("Find size of flock64 (10218)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10218,0);
 #endif
 
 extern int posix_fadvise_db(int, off_t, off_t, int);

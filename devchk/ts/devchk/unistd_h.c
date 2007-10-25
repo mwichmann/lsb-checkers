@@ -2743,8 +2743,8 @@ CheckTypeSize(off64_t,8, 9112, 12, 1.3, NULL, 10, NULL)
 #elif defined __x86_64__
 CheckTypeSize(off64_t,8, 9112, 11, 2.0, NULL, 10, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10, NULL);\n",architecture,9112,0);
 Msg("Find size of off64_t (9112)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10, NULL);\n",architecture,9112,0);
 #endif
 
 extern pid_t __getpgid_db(pid_t);

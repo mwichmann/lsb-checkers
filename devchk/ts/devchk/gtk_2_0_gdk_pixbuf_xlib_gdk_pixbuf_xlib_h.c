@@ -40,8 +40,8 @@ CheckTypeSize(XlibRgbDither,4, 12661, 10, 3.1, NULL, 12660, NULL)
 #elif defined __s390x__
 CheckTypeSize(XlibRgbDither,4, 12661, 12, 3.1, NULL, 12660, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12660,NULL);\n",architecture,12661,0);
-Msg("Find size of XlibRgbDither (12661)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XlibRgbDither (12661)\n");
+%d,%d,%d,'""3.1""',NULL,12660,NULL);\n",architecture,12661,0);
 #endif
 
 #if defined __i386__
@@ -59,8 +59,8 @@ CheckTypeSize(XlibRgbCmap,1280, 12666, 10, 3.1, NULL, 12663, NULL)
 #elif defined __s390x__
 CheckTypeSize(XlibRgbCmap,1280, 12666, 12, 3.1, NULL, 12663, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12663, NULL);\n",architecture,12666,0);
 Msg("Find size of XlibRgbCmap (12666)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12663, NULL);\n",architecture,12666,0);
 #endif
 
 extern void gdk_pixbuf_xlib_init_with_depth_db(Display *, int, int);

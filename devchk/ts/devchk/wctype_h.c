@@ -41,8 +41,8 @@ CheckTypeSize(wctype_t,8, 7024, 12, 1.3, NULL, 9, NULL)
 #elif defined __x86_64__
 CheckTypeSize(wctype_t,8, 7024, 11, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,7024,0);
-Msg("Find size of wctype_t (7024)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of wctype_t (7024)\n");
+%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,7024,0);
 #endif
 
 #if defined __i386__
@@ -60,8 +60,8 @@ CheckTypeSize(wint_t,4, 8980, 12, 1.3, NULL, 7, NULL)
 #elif defined __x86_64__
 CheckTypeSize(wint_t,4, 8980, 11, 2.0, NULL, 7, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,8980,0);
-Msg("Find size of wint_t (8980)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of wint_t (8980)\n");
+%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,8980,0);
 #endif
 
 #if defined __i386__
@@ -79,8 +79,8 @@ CheckTypeSize(wctrans_t,8, 9199, 12, 1.3, NULL, 10459, NULL)
 #elif defined __x86_64__
 CheckTypeSize(wctrans_t,8, 9199, 11, 2.0, NULL, 10459, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10459,NULL);\n",architecture,9199,0);
-Msg("Find size of wctrans_t (9199)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of wctrans_t (9199)\n");
+%d,%d,%d,'""2.0""',NULL,10459,NULL);\n",architecture,9199,0);
 #endif
 
 #if defined __powerpc__ && !defined __powerpc64__
@@ -98,8 +98,8 @@ CheckTypeSize(__mbstate_t,8, 10488, 11, 2.0, NULL, 9234, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(__mbstate_t,8, 10488, 9, 2.0, NULL, 9234, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9234,NULL);\n",architecture,10488,0);
-Msg("Find size of __mbstate_t (10488)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of __mbstate_t (10488)\n");
+%d,%d,%d,'""2.0""',NULL,9234,NULL);\n",architecture,10488,0);
 #endif
 
 #if defined __i386__
@@ -117,8 +117,8 @@ CheckTypeSize(mbstate_t,8, 9235, 12, 1.3, NULL, 10488, NULL)
 #elif defined __x86_64__
 CheckTypeSize(mbstate_t,8, 9235, 11, 2.0, NULL, 10488, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10488, NULL);\n",architecture,9235,0);
 Msg("Find size of mbstate_t (9235)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10488, NULL);\n",architecture,9235,0);
 #endif
 
 extern int iswblank_db(wint_t);

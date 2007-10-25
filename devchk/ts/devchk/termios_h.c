@@ -4042,8 +4042,8 @@ CheckTypeSize(speed_t,4, 9186, 12, 1.3, NULL, 7, NULL)
 #elif defined __x86_64__
 CheckTypeSize(speed_t,4, 9186, 11, 2.0, NULL, 7, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,9186,0);
-Msg("Find size of speed_t (9186)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of speed_t (9186)\n");
+%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,9186,0);
 #endif
 
 #if defined __i386__
@@ -4061,8 +4061,8 @@ CheckTypeSize(cc_t,1, 10206, 12, 1.3, NULL, 3, NULL)
 #elif defined __x86_64__
 CheckTypeSize(cc_t,1, 10206, 11, 2.0, NULL, 3, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,3,NULL);\n",architecture,10206,0);
-Msg("Find size of cc_t (10206)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of cc_t (10206)\n");
+%d,%d,%d,'""2.0""',NULL,3,NULL);\n",architecture,10206,0);
 #endif
 
 #if defined __i386__
@@ -4080,8 +4080,8 @@ CheckTypeSize(tcflag_t,4, 10207, 12, 1.3, NULL, 7, NULL)
 #elif defined __x86_64__
 CheckTypeSize(tcflag_t,4, 10207, 11, 2.0, NULL, 7, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,10207,0);
-Msg("Find size of tcflag_t (10207)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of tcflag_t (10207)\n");
+%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,10207,0);
 #endif
 
 #if defined __i386__
@@ -4199,8 +4199,8 @@ CheckOffset(struct termios,c_ispeed,52,11,34274)
 CheckMemberSize(struct termios,c_ospeed,4,11,34275)
 CheckOffset(struct termios,c_ospeed,56,11,34275)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,9187,0);
 Msg("Find size of termios (9187)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,9187,0);
 #endif
 
 extern speed_t cfgetispeed_db(const struct termios *);

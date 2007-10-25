@@ -513,8 +513,8 @@ CheckTypeSize(struct pam_conv,16, 10352, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct pam_conv,appdata_ptr,8,11,34589)
 CheckOffset(struct pam_conv,appdata_ptr,8,11,34589)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10352,0);
-Msg("Find size of pam_conv (10352)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of pam_conv (10352)\n");
+%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10352,0);
 #endif
 
 #if defined __i386__
@@ -548,8 +548,8 @@ CheckTypeSize(struct pam_message,16, 10356, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct pam_message,msg,8,11,34585)
 CheckOffset(struct pam_message,msg,8,11,34585)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10356,0);
-Msg("Find size of pam_message (10356)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of pam_message (10356)\n");
+%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10356,0);
 #endif
 
 #if defined __i386__
@@ -587,8 +587,8 @@ CheckTypeSize(struct pam_response,16, 10358, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct pam_response,resp_retcode,4,11,34587)
 CheckOffset(struct pam_response,resp_retcode,8,11,34587)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10358,0);
 Msg("Find size of pam_response (10358)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10358,0);
 #endif
 
 extern int pam_set_item_db(pam_handle_t *, int, const void *);

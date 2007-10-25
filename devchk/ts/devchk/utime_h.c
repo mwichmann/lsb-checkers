@@ -56,8 +56,8 @@ CheckTypeSize(struct utimbuf,16, 7023, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct utimbuf,modtime,8,11,30206)
 CheckOffset(struct utimbuf,modtime,8,11,30206)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,7023,0);
 Msg("Find size of utimbuf (7023)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,7023,0);
 #endif
 
 extern int utime_db(const char *, const struct utimbuf *);

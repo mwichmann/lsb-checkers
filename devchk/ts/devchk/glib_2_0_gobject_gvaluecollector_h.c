@@ -80,8 +80,8 @@ CheckEnum("G_VALUE_COLLECT_INT64",G_VALUE_COLLECT_INT64,'q',42313)
 CheckEnum("G_VALUE_COLLECT_DOUBLE",G_VALUE_COLLECT_DOUBLE,'d',42314)
 CheckEnum("G_VALUE_COLLECT_POINTER",G_VALUE_COLLECT_POINTER,'p',42315)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0, NULL);\n",architecture,12064,0);
 Msg("Find size of anonymous-gvaluecollector.h.types-0 (12064)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0, NULL);\n",architecture,12064,0);
 #endif
 
 #ifdef TET_TEST

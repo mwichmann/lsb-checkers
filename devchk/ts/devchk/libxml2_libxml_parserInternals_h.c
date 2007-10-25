@@ -189,8 +189,8 @@ CheckTypeSize(xmlEntityReferenceFunc,4, 15021, 10, 3.1, NULL, 15020, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 12, 3.1, NULL, 15020, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15020, NULL);\n",architecture,15021,0);
 Msg("Find size of xmlEntityReferenceFunc (15021)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15020, NULL);\n",architecture,15021,0);
 #endif
 
 extern int nodePush_db(xmlParserCtxtPtr, xmlNodePtr);

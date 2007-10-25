@@ -78,8 +78,8 @@ CheckTypeSize(PangoFcDecoder,12, 12597, 10, 3.1, NULL, 12596, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoFcDecoder,24, 12597, 12, 3.1, NULL, 12596, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12596,NULL);\n",architecture,12597,0);
-Msg("Find size of PangoFcDecoder (12597)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoFcDecoder (12597)\n");
+%d,%d,%d,'""3.1""',NULL,12596,NULL);\n",architecture,12597,0);
 #endif
 
 #if defined __i386__
@@ -97,8 +97,8 @@ CheckTypeSize(PangoFcDecoderClass,184, 12602, 12, 3.1, NULL, 12601, NULL)
 #elif defined __x86_64__
 CheckTypeSize(PangoFcDecoderClass,184, 12602, 11, 3.1, NULL, 12601, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12601, NULL);\n",architecture,12602,0);
 Msg("Find size of PangoFcDecoderClass (12602)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12601, NULL);\n",architecture,12602,0);
 #endif
 
 extern FcCharSet * pango_fc_decoder_get_charset_db(PangoFcDecoder *, PangoFcFont *);

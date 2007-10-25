@@ -43,8 +43,8 @@ CheckTypeSize(FT_List_Destructor,4, 16736, 6, 3.2, NULL, 16735, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_List_Destructor,8, 16736, 9, 3.2, NULL, 16735, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16735,NULL);\n",architecture,16736,0);
-Msg("Find size of FT_List_Destructor (16736)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_List_Destructor (16736)\n");
+%d,%d,%d,'""3.2""',NULL,16735,NULL);\n",architecture,16736,0);
 #endif
 
 #if defined __x86_64__
@@ -62,8 +62,8 @@ CheckTypeSize(FT_List_Iterator,4, 16739, 6, 3.2, NULL, 16738, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_List_Iterator,8, 16739, 9, 3.2, NULL, 16738, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16738, NULL);\n",architecture,16739,0);
 Msg("Find size of FT_List_Iterator (16739)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16738, NULL);\n",architecture,16739,0);
 #endif
 
 extern void FT_List_Finalize_db(FT_List, FT_List_Destructor, FT_Memory, void *);

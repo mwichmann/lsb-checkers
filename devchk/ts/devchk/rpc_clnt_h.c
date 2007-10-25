@@ -399,8 +399,8 @@ CheckEnum("RPC_UDERROR",RPC_UDERROR,23,32090)
 CheckEnum("RPC_INPROGRESS",RPC_INPROGRESS,24,32091)
 CheckEnum("RPC_STALERACHANDLE",RPC_STALERACHANDLE,25,32092)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9916,0);
-Msg("Find size of clnt_stat (9916)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of clnt_stat (9916)\n");
+%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9916,0);
 #endif
 
 #if defined __i386__
@@ -432,8 +432,8 @@ CheckTypeSize(struct rpc_err,24, 9917, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct rpc_err,ru,16,11,32102)
 CheckOffset(struct rpc_err,ru,8,11,32102)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9917,0);
-Msg("Find size of rpc_err (9917)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of rpc_err (9917)\n");
+%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9917,0);
 #endif
 
 #if defined __i386__
@@ -521,8 +521,8 @@ CheckOffset(struct clnt_ops,cl_destroy,32,11,32108)
 CheckMemberSize(struct clnt_ops,cl_control,8,11,32109)
 CheckOffset(struct clnt_ops,cl_control,40,11,32109)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9922,0);
-Msg("Find size of clnt_ops (9922)\n");
+Msg("REPLACE INTO ArchType VALUES (Msg("Find size of clnt_ops (9922)\n");
+%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9922,0);
 #endif
 
 #if defined __i386__
@@ -540,8 +540,8 @@ CheckTypeSize(CLIENT,24, 10389, 11, 2.0, NULL, 9921, NULL)
 #elif defined __s390x__
 CheckTypeSize(CLIENT,24, 10389, 12, 1.3, NULL, 9921, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9921, NULL);\n",architecture,10389,0);
 Msg("Find size of CLIENT (10389)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9921, NULL);\n",architecture,10389,0);
 #endif
 
 extern struct CLIENT * clnt_create_db(const char *, const u_long, const u_long, const char *);

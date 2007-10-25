@@ -1172,8 +1172,8 @@ CheckTypeSize(Picture,4, 12562, 6, 3.2, NULL, 11186, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(Picture,8, 12562, 9, 3.2, NULL, 11186, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11186, NULL);\n",architecture,12562,0);
 Msg("Find size of Picture (12562)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11186, NULL);\n",architecture,12562,0);
 #endif
 
 #ifdef TET_TEST

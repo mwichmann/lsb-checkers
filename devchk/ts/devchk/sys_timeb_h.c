@@ -82,8 +82,8 @@ CheckOffset(struct timeb,timezone,10,11,34300)
 CheckMemberSize(struct timeb,dstflag,2,11,34301)
 CheckOffset(struct timeb,dstflag,12,11,34301)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10216,0);
 Msg("Find size of timeb (10216)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10216,0);
 #endif
 
 extern int ftime_db(struct timeb *);

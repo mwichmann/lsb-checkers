@@ -74,8 +74,8 @@ CheckTypeSize(ExtendedVisualInfo,48, 11068, 11, 3.0, NULL, 11067, NULL)
 #elif defined __s390x__
 CheckTypeSize(ExtendedVisualInfo,48, 11068, 12, 3.0, NULL, 11067, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.0""',NULL,11067, NULL);\n",architecture,11068,0);
 Msg("Find size of ExtendedVisualInfo (11068)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.0""',NULL,11067, NULL);\n",architecture,11068,0);
 #endif
 
 #ifdef TET_TEST

@@ -88,8 +88,8 @@ CheckTypeSize(PangoFT2SubstituteFunc,4, 12591, 10, 3.1, NULL, 12563, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoFT2SubstituteFunc,8, 12591, 12, 3.1, NULL, 12563, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12563, NULL);\n",architecture,12591,0);
 Msg("Find size of PangoFT2SubstituteFunc (12591)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12563, NULL);\n",architecture,12591,0);
 #endif
 
 extern void pango_ft2_font_map_set_default_substitute_db(PangoFT2FontMap *, PangoFT2SubstituteFunc, gpointer, GDestroyNotify);

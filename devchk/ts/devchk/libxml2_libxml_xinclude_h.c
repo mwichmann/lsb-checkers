@@ -82,8 +82,8 @@ CheckTypeSize(xmlXIncludeCtxtPtr,4, 14673, 10, 3.1, NULL, 14672, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlXIncludeCtxtPtr,8, 14673, 12, 3.1, NULL, 14672, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14672, NULL);\n",architecture,14673,0);
 Msg("Find size of xmlXIncludeCtxtPtr (14673)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14672, NULL);\n",architecture,14673,0);
 #endif
 
 extern int xmlXIncludeProcess_db(xmlDocPtr);
