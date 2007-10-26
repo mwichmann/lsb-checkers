@@ -5,6 +5,13 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#ifndef LSBCC_MODE
+#include "rpc/rpc_msg.h"
+/* these don't have glibc protoypes. although in the library */
+/* have to include the header before the protos are added */
+extern bool_t	xdr_accepted_reply(XDR *, struct accepted_reply *);
+extern bool_t	xdr_rejected_reply(XDR *, struct rejected_reply *);
+#endif
 #include "rpc/rpc_msg.h"
 
 
@@ -49,7 +56,6 @@ CheckEnum("RPC_MISMATCH",RPC_MISMATCH,0,34798)
 CheckEnum("AUTH_ERROR",AUTH_ERROR,1,34799)
 #endif
 
-#ifdef LSBCC_MODE
 #if defined __i386__
 CheckTypeSize(struct accepted_reply,24, 10417, 2, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct accepted_reply,ar_verf,12,2,34800)
@@ -93,8 +99,8 @@ CheckOffset(struct accepted_reply,ar_stat,24,11,34801)
 CheckMemberSize(struct accepted_reply,ru,16,11,34830)
 CheckOffset(struct accepted_reply,ru,32,11,34830)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10417,0);
 Msg("Find size of accepted_reply (10417)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10417,0);
 #endif
 
 #if defined __i386__
@@ -130,9 +136,8 @@ CheckTypeSize(struct rejected_reply,24, 10423, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct rejected_reply,ru,16,11,34813)
 CheckOffset(struct rejected_reply,ru,8,11,34813)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10423,0);
 Msg("Find size of rejected_reply (10423)\n");
-#endif
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10423,0);
 #endif
 
 #if defined __i386__
@@ -168,8 +173,8 @@ CheckTypeSize(struct reply_body,56, 10425, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct reply_body,ru,48,11,34817)
 CheckOffset(struct reply_body,ru,8,11,34817)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10425,0);
 Msg("Find size of reply_body (10425)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10425,0);
 #endif
 
 #if defined __i386__
@@ -259,8 +264,8 @@ CheckOffset(struct call_body,cb_cred,32,11,34822)
 CheckMemberSize(struct call_body,cb_verf,24,11,34823)
 CheckOffset(struct call_body,cb_verf,56,11,34823)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10426,0);
 Msg("Find size of call_body (10426)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10426,0);
 #endif
 
 #if defined __i386__
@@ -310,22 +315,18 @@ CheckOffset(struct rpc_msg,rm_direction,8,9,34827)
 CheckMemberSize(struct rpc_msg,ru,80,9,34828)
 CheckOffset(struct rpc_msg,ru,16,9,34828)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,9984,0);
 Msg("Find size of rpc_msg (9984)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,9984,0);
 #endif
 
-#ifdef LSBCC_MODE
 extern bool_t xdr_accepted_reply_db(XDR *, struct accepted_reply *);
 CheckInterfacedef(xdr_accepted_reply,xdr_accepted_reply_db);
-#endif
 extern bool_t xdr_callhdr_db(XDR *, struct rpc_msg *);
 CheckInterfacedef(xdr_callhdr,xdr_callhdr_db);
 extern bool_t xdr_callmsg_db(XDR *, struct rpc_msg *);
 CheckInterfacedef(xdr_callmsg,xdr_callmsg_db);
-#ifdef LSBCC_MODE
 extern bool_t xdr_rejected_reply_db(XDR *, struct rejected_reply *);
 CheckInterfacedef(xdr_rejected_reply,xdr_rejected_reply_db);
-#endif
 extern bool_t xdr_replymsg_db(XDR *, struct rpc_msg *);
 CheckInterfacedef(xdr_replymsg,xdr_replymsg_db);
 #ifdef TET_TEST

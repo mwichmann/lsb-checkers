@@ -128,8 +128,8 @@ CheckOffset(struct pollfd,events,4,11,34413)
 CheckMemberSize(struct pollfd,revents,2,11,34414)
 CheckOffset(struct pollfd,revents,6,11,34414)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of pollfd (9913)\n");
-%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9913,0);
+Msg("Find size of pollfd (9913)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9913,0);
 #endif
 
 #if defined __i386__

@@ -133,8 +133,8 @@ CheckTypeSize(PS_PrivateRec,196, 16987, 6, 3.2, NULL, 16980, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(PS_PrivateRec,224, 16987, 9, 3.2, NULL, 16980, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PS_PrivateRec (16987)\n");
-%d,%d,%d,'""3.2""',NULL,16980,NULL);\n",architecture,16987,0);
+Msg("Find size of PS_PrivateRec (16987)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16980,NULL);\n",architecture,16987,0);
 #endif
 
 #if defined __x86_64__

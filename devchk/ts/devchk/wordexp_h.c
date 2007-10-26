@@ -75,8 +75,8 @@ CheckEnum("WRDE_REUSE",WRDE_REUSE,8,30224)
 CheckEnum("WRDE_SHOWERR",WRDE_SHOWERR,16,30225)
 CheckEnum("WRDE_UNDEF",WRDE_UNDEF,32,30226)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of anon-wordexp.h-7 (9200)\n");
-%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9200,0);
+Msg("Find size of anon-wordexp.h-7 (9200)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9200,0);
 #endif
 
 #if defined __i386__
@@ -94,8 +94,8 @@ CheckTypeSize(wordexp_t,24, 7029, 12, 1.3, NULL, 7028, NULL)
 #elif defined __x86_64__
 CheckTypeSize(wordexp_t,24, 7029, 11, 2.0, NULL, 7028, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of wordexp_t (7029)\n");
-%d,%d,%d,'""2.0""',NULL,7028,NULL);\n",architecture,7029,0);
+Msg("Find size of wordexp_t (7029)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7028,NULL);\n",architecture,7029,0);
 #endif
 
 #if defined __i386__

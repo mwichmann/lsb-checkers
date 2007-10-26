@@ -40,8 +40,8 @@ CheckTypeSize(XlibRgbDither,4, 12661, 10, 3.1, NULL, 12660, NULL)
 #elif defined __s390x__
 CheckTypeSize(XlibRgbDither,4, 12661, 12, 3.1, NULL, 12660, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XlibRgbDither (12661)\n");
-%d,%d,%d,'""3.1""',NULL,12660,NULL);\n",architecture,12661,0);
+Msg("Find size of XlibRgbDither (12661)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12660,NULL);\n",architecture,12661,0);
 #endif
 
 #if defined __i386__

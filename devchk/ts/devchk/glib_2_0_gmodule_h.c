@@ -56,8 +56,8 @@ CheckTypeSize(GModuleFlags,4, 12069, 10, 3.1, NULL, 12068, NULL)
 #elif defined __s390x__
 CheckTypeSize(GModuleFlags,4, 12069, 12, 3.1, NULL, 12068, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GModuleFlags (12069)\n");
-%d,%d,%d,'""3.1""',NULL,12068,NULL);\n",architecture,12069,0);
+Msg("Find size of GModuleFlags (12069)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12068,NULL);\n",architecture,12069,0);
 #endif
 
 #if defined __i386__
@@ -75,8 +75,8 @@ CheckTypeSize(GModuleUnload,4, 12071, 10, 3.1, NULL, 12070, NULL)
 #elif defined __s390x__
 CheckTypeSize(GModuleUnload,8, 12071, 12, 3.1, NULL, 12070, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GModuleUnload (12071)\n");
-%d,%d,%d,'""3.1""',NULL,12070,NULL);\n",architecture,12071,0);
+Msg("Find size of GModuleUnload (12071)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12070,NULL);\n",architecture,12071,0);
 #endif
 
 #if defined __i386__
