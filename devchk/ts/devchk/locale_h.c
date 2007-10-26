@@ -637,8 +637,8 @@ CheckOffset(struct lconv,int_p_sign_posn,92,11,34435)
 CheckMemberSize(struct lconv,int_n_sign_posn,1,11,34436)
 CheckOffset(struct lconv,int_n_sign_posn,93,11,34436)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of lconv (6919)\n");
-%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,6919,0);
+Msg("Find size of lconv (6919)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,6919,0);
 #endif
 
 #if defined __i386__
@@ -720,8 +720,8 @@ CheckOffset(struct __locale_struct,__ctype_toupper,120,9,40184)
 CheckMemberSize(struct __locale_struct,__names,104,9,40652)
 CheckOffset(struct __locale_struct,__names,128,9,40652)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of __locale_struct (10531)\n");
-%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,10531,0);
+Msg("Find size of __locale_struct (10531)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,10531,0);
 #endif
 
 #if defined __i386__
@@ -739,8 +739,8 @@ CheckTypeSize(__locale_t,8, 10533, 11, 2.0, NULL, 10532, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(__locale_t,8, 10533, 9, 2.0, NULL, 10532, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of __locale_t (10533)\n");
-%d,%d,%d,'""2.0""',NULL,10532,NULL);\n",architecture,10533,0);
+Msg("Find size of __locale_t (10533)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10532,NULL);\n",architecture,10533,0);
 #endif
 
 #if defined __i386__

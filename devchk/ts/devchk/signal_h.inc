@@ -1,0 +1,6 @@
+#ifndef LSBCC_MODE
+#define SI_MAX_SIZE __SI_MAX_SIZE
+#define SI_PAD_SIZE __SI_PAD_SIZE
+#define SIGEV_MAX_SIZE __SIGEV_MAX_SIZE
+#define SIGEV_PAD_SIZE __SIGEV_PAD_SIZE
+#endif

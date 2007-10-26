@@ -142,8 +142,8 @@ CheckOffset(struct FT_Glyph_Class_,glyph_bbox,48,9,54146)
 CheckMemberSize(struct FT_Glyph_Class_,glyph_prepare,8,9,54149)
 CheckOffset(struct FT_Glyph_Class_,glyph_prepare,56,9,54149)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Glyph_Class_ (16848)\n");
-%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16848,0);
+Msg("Find size of FT_Glyph_Class_ (16848)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16848,0);
 #endif
 
 #if defined __x86_64__
@@ -203,8 +203,8 @@ CheckOffset(struct FT_GlyphRec_,format,16,9,54130)
 CheckMemberSize(struct FT_GlyphRec_,advance,16,9,54131)
 CheckOffset(struct FT_GlyphRec_,advance,24,9,54131)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_GlyphRec_ (16849)\n");
-%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16849,0);
+Msg("Find size of FT_GlyphRec_ (16849)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16849,0);
 #endif
 
 #if defined __x86_64__
@@ -222,8 +222,8 @@ CheckTypeSize(FT_Glyph_Class,32, 16850, 6, 3.2, NULL, 16848, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Glyph_Class,64, 16850, 9, 3.2, NULL, 16848, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Glyph_Class (16850)\n");
-%d,%d,%d,'""3.2""',NULL,16848,NULL);\n",architecture,16850,0);
+Msg("Find size of FT_Glyph_Class (16850)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16848,NULL);\n",architecture,16850,0);
 #endif
 
 #if defined __x86_64__
@@ -241,8 +241,8 @@ CheckTypeSize(FT_Glyph,4, 16854, 6, 3.2, NULL, 16853, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Glyph,8, 16854, 9, 3.2, NULL, 16853, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Glyph (16854)\n");
-%d,%d,%d,'""3.2""',NULL,16853,NULL);\n",architecture,16854,0);
+Msg("Find size of FT_Glyph (16854)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16853,NULL);\n",architecture,16854,0);
 #endif
 
 #if defined __x86_64__
@@ -260,8 +260,8 @@ CheckTypeSize(FT_Glyph_InitFunc,4, 16856, 6, 3.2, NULL, 16855, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Glyph_InitFunc,8, 16856, 9, 3.2, NULL, 16855, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Glyph_InitFunc (16856)\n");
-%d,%d,%d,'""3.2""',NULL,16855,NULL);\n",architecture,16856,0);
+Msg("Find size of FT_Glyph_InitFunc (16856)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16855,NULL);\n",architecture,16856,0);
 #endif
 
 #if defined __x86_64__
@@ -279,8 +279,8 @@ CheckTypeSize(FT_Glyph_DoneFunc,4, 16858, 6, 3.2, NULL, 16857, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Glyph_DoneFunc,8, 16858, 9, 3.2, NULL, 16857, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Glyph_DoneFunc (16858)\n");
-%d,%d,%d,'""3.2""',NULL,16857,NULL);\n",architecture,16858,0);
+Msg("Find size of FT_Glyph_DoneFunc (16858)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16857,NULL);\n",architecture,16858,0);
 #endif
 
 #if defined __x86_64__
@@ -298,8 +298,8 @@ CheckTypeSize(FT_Glyph_CopyFunc,4, 16860, 6, 3.2, NULL, 16859, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Glyph_CopyFunc,8, 16860, 9, 3.2, NULL, 16859, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Glyph_CopyFunc (16860)\n");
-%d,%d,%d,'""3.2""',NULL,16859,NULL);\n",architecture,16860,0);
+Msg("Find size of FT_Glyph_CopyFunc (16860)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16859,NULL);\n",architecture,16860,0);
 #endif
 
 #if defined __x86_64__
@@ -317,8 +317,8 @@ CheckTypeSize(FT_Glyph_TransformFunc,4, 16862, 6, 3.2, NULL, 16861, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Glyph_TransformFunc,8, 16862, 9, 3.2, NULL, 16861, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Glyph_TransformFunc (16862)\n");
-%d,%d,%d,'""3.2""',NULL,16861,NULL);\n",architecture,16862,0);
+Msg("Find size of FT_Glyph_TransformFunc (16862)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16861,NULL);\n",architecture,16862,0);
 #endif
 
 #if defined __x86_64__
@@ -336,8 +336,8 @@ CheckTypeSize(FT_Glyph_GetBBoxFunc,4, 16864, 6, 3.2, NULL, 16863, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Glyph_GetBBoxFunc,8, 16864, 9, 3.2, NULL, 16863, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Glyph_GetBBoxFunc (16864)\n");
-%d,%d,%d,'""3.2""',NULL,16863,NULL);\n",architecture,16864,0);
+Msg("Find size of FT_Glyph_GetBBoxFunc (16864)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16863,NULL);\n",architecture,16864,0);
 #endif
 
 #if defined __x86_64__
@@ -355,8 +355,8 @@ CheckTypeSize(FT_Glyph_PrepareFunc,4, 16865, 6, 3.2, NULL, 16855, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Glyph_PrepareFunc,8, 16865, 9, 3.2, NULL, 16855, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Glyph_PrepareFunc (16865)\n");
-%d,%d,%d,'""3.2""',NULL,16855,NULL);\n",architecture,16865,0);
+Msg("Find size of FT_Glyph_PrepareFunc (16865)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16855,NULL);\n",architecture,16865,0);
 #endif
 
 #if 1
@@ -392,8 +392,8 @@ CheckTypeSize(struct FT_OutlineGlyphRec_,80, 22172, 9, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_OutlineGlyphRec_,outline,40,9,65064)
 CheckOffset(struct FT_OutlineGlyphRec_,outline,40,9,65064)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_OutlineGlyphRec_ (22172)\n");
-%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,22172,0);
+Msg("Find size of FT_OutlineGlyphRec_ (22172)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,22172,0);
 #endif
 
 #if defined __x86_64__
@@ -411,8 +411,8 @@ CheckTypeSize(FT_OutlineGlyph,4, 22174, 6, 3.2, NULL, 22173, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_OutlineGlyph,8, 22174, 9, 3.2, NULL, 22173, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_OutlineGlyph (22174)\n");
-%d,%d,%d,'""3.2""',NULL,22173,NULL);\n",architecture,22174,0);
+Msg("Find size of FT_OutlineGlyph (22174)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,22173,NULL);\n",architecture,22174,0);
 #endif
 
 #if defined __x86_64__

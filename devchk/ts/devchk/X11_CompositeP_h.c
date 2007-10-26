@@ -75,8 +75,8 @@ CheckTypeSize(CompositeClassPart,40, 10244, 12, 1.3, NULL, 10242, NULL)
 #elif defined __x86_64__
 CheckTypeSize(CompositeClassPart,40, 10244, 11, 2.0, NULL, 10242, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of CompositeClassPart (10244)\n");
-%d,%d,%d,'""2.0""',NULL,10242,NULL);\n",architecture,10244,0);
+Msg("Find size of CompositeClassPart (10244)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10242,NULL);\n",architecture,10244,0);
 #endif
 
 #if defined __ia64__

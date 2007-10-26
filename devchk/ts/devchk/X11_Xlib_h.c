@@ -49,8 +49,8 @@ Msg("Missing member data for _XDisplay on S390X\n");
 CheckTypeSize(struct _XDisplay,296, 7053, 11, 2.0, NULL, 0, NULL)
 Msg("Missing member data for _XDisplay on x86-64\n");
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of _XDisplay (7053)\n");
-%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,7053,0);
+Msg("Find size of _XDisplay (7053)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,7053,0);
 #endif
 
 #if defined __i386__
@@ -68,8 +68,8 @@ CheckTypeSize(XVaNestedList,8, 8540, 12, 1.3, NULL, 40, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XVaNestedList,8, 8540, 11, 2.0, NULL, 40, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XVaNestedList (8540)\n");
-%d,%d,%d,'""2.0""',NULL,40,NULL);\n",architecture,8540,0);
+Msg("Find size of XVaNestedList (8540)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,40,NULL);\n",architecture,8540,0);
 #endif
 
 #if defined __i386__
@@ -87,8 +87,8 @@ CheckTypeSize(XErrorHandler,8, 8930, 12, 1.3, NULL, 8928, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XErrorHandler,8, 8930, 11, 2.0, NULL, 8928, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XErrorHandler (8930)\n");
-%d,%d,%d,'""2.0""',NULL,8928,NULL);\n",architecture,8930,0);
+Msg("Find size of XErrorHandler (8930)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8928,NULL);\n",architecture,8930,0);
 #endif
 
 #if defined __i386__
@@ -106,8 +106,8 @@ CheckTypeSize(XIOErrorHandler,8, 8932, 12, 1.3, NULL, 8931, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XIOErrorHandler,8, 8932, 11, 2.0, NULL, 8931, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XIOErrorHandler (8932)\n");
-%d,%d,%d,'""2.0""',NULL,8931,NULL);\n",architecture,8932,0);
+Msg("Find size of XIOErrorHandler (8932)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8931,NULL);\n",architecture,8932,0);
 #endif
 
 #if defined __i386__
@@ -125,8 +125,8 @@ CheckTypeSize(XConnectionWatchProc,8, 8956, 12, 1.3, NULL, 8955, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XConnectionWatchProc,8, 8956, 11, 2.0, NULL, 8955, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XConnectionWatchProc (8956)\n");
-%d,%d,%d,'""2.0""',NULL,8955,NULL);\n",architecture,8956,0);
+Msg("Find size of XConnectionWatchProc (8956)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8955,NULL);\n",architecture,8956,0);
 #endif
 
 #if defined __i386__
@@ -144,8 +144,8 @@ CheckTypeSize(XExtData,32, 8368, 12, 1.3, NULL, 8366, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XExtData,32, 8368, 11, 2.0, NULL, 8366, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XExtData (8368)\n");
-%d,%d,%d,'""2.0""',NULL,8366,NULL);\n",architecture,8368,0);
+Msg("Find size of XExtData (8368)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8366,NULL);\n",architecture,8368,0);
 #endif
 
 #if defined __i386__
@@ -163,8 +163,8 @@ CheckTypeSize(GC,8, 8375, 12, 1.3, NULL, 7045, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GC,8, 8375, 11, 2.0, NULL, 7045, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GC (8375)\n");
-%d,%d,%d,'""2.0""',NULL,7045,NULL);\n",architecture,8375,0);
+Msg("Find size of GC (8375)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7045,NULL);\n",architecture,8375,0);
 #endif
 
 #if defined __i386__
@@ -182,8 +182,8 @@ CheckTypeSize(XImage,136, 8398, 12, 1.3, NULL, 8390, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XImage,136, 8398, 11, 2.0, NULL, 8390, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XImage (8398)\n");
-%d,%d,%d,'""2.0""',NULL,8390,NULL);\n",architecture,8398,0);
+Msg("Find size of XImage (8398)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8390,NULL);\n",architecture,8398,0);
 #endif
 
 #if defined __i386__
@@ -201,8 +201,8 @@ CheckTypeSize(XKeyPressedEvent,96, 8426, 12, 1.3, NULL, 8425, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XKeyPressedEvent,96, 8426, 11, 2.0, NULL, 8425, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XKeyPressedEvent (8426)\n");
-%d,%d,%d,'""2.0""',NULL,8425,NULL);\n",architecture,8426,0);
+Msg("Find size of XKeyPressedEvent (8426)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8425,NULL);\n",architecture,8426,0);
 #endif
 
 #if defined __i386__
@@ -220,8 +220,8 @@ CheckTypeSize(XKeyReleasedEvent,96, 8427, 12, 1.3, NULL, 8425, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XKeyReleasedEvent,96, 8427, 11, 2.0, NULL, 8425, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XKeyReleasedEvent (8427)\n");
-%d,%d,%d,'""2.0""',NULL,8425,NULL);\n",architecture,8427,0);
+Msg("Find size of XKeyReleasedEvent (8427)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8425,NULL);\n",architecture,8427,0);
 #endif
 
 #if defined __i386__
@@ -239,8 +239,8 @@ CheckTypeSize(XButtonPressedEvent,96, 8430, 12, 1.3, NULL, 8429, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XButtonPressedEvent,96, 8430, 11, 2.0, NULL, 8429, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XButtonPressedEvent (8430)\n");
-%d,%d,%d,'""2.0""',NULL,8429,NULL);\n",architecture,8430,0);
+Msg("Find size of XButtonPressedEvent (8430)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8429,NULL);\n",architecture,8430,0);
 #endif
 
 #if defined __i386__
@@ -258,8 +258,8 @@ CheckTypeSize(XButtonReleasedEvent,96, 8431, 12, 1.3, NULL, 8429, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XButtonReleasedEvent,96, 8431, 11, 2.0, NULL, 8429, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XButtonReleasedEvent (8431)\n");
-%d,%d,%d,'""2.0""',NULL,8429,NULL);\n",architecture,8431,0);
+Msg("Find size of XButtonReleasedEvent (8431)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8429,NULL);\n",architecture,8431,0);
 #endif
 
 #if defined __i386__
@@ -277,8 +277,8 @@ CheckTypeSize(XPointerMovedEvent,96, 8434, 12, 1.3, NULL, 8433, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XPointerMovedEvent,96, 8434, 11, 2.0, NULL, 8433, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XPointerMovedEvent (8434)\n");
-%d,%d,%d,'""2.0""',NULL,8433,NULL);\n",architecture,8434,0);
+Msg("Find size of XPointerMovedEvent (8434)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8433,NULL);\n",architecture,8434,0);
 #endif
 
 #if defined __i386__
@@ -296,8 +296,8 @@ CheckTypeSize(XEnterWindowEvent,104, 8437, 12, 1.3, NULL, 8436, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XEnterWindowEvent,104, 8437, 11, 2.0, NULL, 8436, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XEnterWindowEvent (8437)\n");
-%d,%d,%d,'""2.0""',NULL,8436,NULL);\n",architecture,8437,0);
+Msg("Find size of XEnterWindowEvent (8437)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8436,NULL);\n",architecture,8437,0);
 #endif
 
 #if defined __i386__
@@ -315,8 +315,8 @@ CheckTypeSize(XLeaveWindowEvent,104, 8438, 12, 1.3, NULL, 8436, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XLeaveWindowEvent,104, 8438, 11, 2.0, NULL, 8436, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XLeaveWindowEvent (8438)\n");
-%d,%d,%d,'""2.0""',NULL,8436,NULL);\n",architecture,8438,0);
+Msg("Find size of XLeaveWindowEvent (8438)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8436,NULL);\n",architecture,8438,0);
 #endif
 
 #if defined __i386__
@@ -334,8 +334,8 @@ CheckTypeSize(XFocusInEvent,48, 8441, 12, 1.3, NULL, 8440, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XFocusInEvent,48, 8441, 11, 2.0, NULL, 8440, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XFocusInEvent (8441)\n");
-%d,%d,%d,'""2.0""',NULL,8440,NULL);\n",architecture,8441,0);
+Msg("Find size of XFocusInEvent (8441)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8440,NULL);\n",architecture,8441,0);
 #endif
 
 #if defined __i386__
@@ -353,8 +353,8 @@ CheckTypeSize(XFocusOutEvent,48, 8442, 12, 1.3, NULL, 8440, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XFocusOutEvent,48, 8442, 11, 2.0, NULL, 8440, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XFocusOutEvent (8442)\n");
-%d,%d,%d,'""2.0""',NULL,8440,NULL);\n",architecture,8442,0);
+Msg("Find size of XFocusOutEvent (8442)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8440,NULL);\n",architecture,8442,0);
 #endif
 
 #if defined __i386__
@@ -372,8 +372,8 @@ CheckTypeSize(XEvent,192, 8497, 12, 1.3, NULL, 8496, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XEvent,192, 8497, 11, 2.0, NULL, 8496, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XEvent (8497)\n");
-%d,%d,%d,'""2.0""',NULL,8496,NULL);\n",architecture,8497,0);
+Msg("Find size of XEvent (8497)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8496,NULL);\n",architecture,8497,0);
 #endif
 
 #if defined __i386__
@@ -391,8 +391,8 @@ CheckTypeSize(XOM,8, 8514, 12, 1.3, NULL, 7269, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XOM,8, 8514, 11, 2.0, NULL, 7269, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XOM (8514)\n");
-%d,%d,%d,'""2.0""',NULL,7269,NULL);\n",architecture,8514,0);
+Msg("Find size of XOM (8514)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7269,NULL);\n",architecture,8514,0);
 #endif
 
 #if defined __i386__
@@ -410,8 +410,8 @@ CheckTypeSize(XOC,8, 8515, 12, 1.3, NULL, 7272, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XOC,8, 8515, 11, 2.0, NULL, 7272, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XOC (8515)\n");
-%d,%d,%d,'""2.0""',NULL,7272,NULL);\n",architecture,8515,0);
+Msg("Find size of XOC (8515)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7272,NULL);\n",architecture,8515,0);
 #endif
 
 #if defined __i386__
@@ -429,8 +429,8 @@ CheckTypeSize(XFontSet,8, 8516, 12, 1.3, NULL, 7272, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XFontSet,8, 8516, 11, 2.0, NULL, 7272, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XFontSet (8516)\n");
-%d,%d,%d,'""2.0""',NULL,7272,NULL);\n",architecture,8516,0);
+Msg("Find size of XFontSet (8516)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7272,NULL);\n",architecture,8516,0);
 #endif
 
 #if defined __i386__
@@ -448,8 +448,8 @@ CheckTypeSize(XIM,8, 8529, 12, 1.3, NULL, 7293, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XIM,8, 8529, 11, 2.0, NULL, 7293, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XIM (8529)\n");
-%d,%d,%d,'""2.0""',NULL,7293,NULL);\n",architecture,8529,0);
+Msg("Find size of XIM (8529)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7293,NULL);\n",architecture,8529,0);
 #endif
 
 #if defined __i386__
@@ -467,8 +467,8 @@ CheckTypeSize(XIC,8, 8530, 12, 1.3, NULL, 7296, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XIC,8, 8530, 11, 2.0, NULL, 7296, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XIC (8530)\n");
-%d,%d,%d,'""2.0""',NULL,7296,NULL);\n",architecture,8530,0);
+Msg("Find size of XIC (8530)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7296,NULL);\n",architecture,8530,0);
 #endif
 
 #if defined __i386__
@@ -486,8 +486,8 @@ CheckTypeSize(XIDProc,8, 8902, 12, 1.3, NULL, 8901, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XIDProc,8, 8902, 11, 2.0, NULL, 8901, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XIDProc (8902)\n");
-%d,%d,%d,'""2.0""',NULL,8901,NULL);\n",architecture,8902,0);
+Msg("Find size of XIDProc (8902)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8901,NULL);\n",architecture,8902,0);
 #endif
 
 #if defined __i386__

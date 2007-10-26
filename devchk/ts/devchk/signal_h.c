@@ -5,6 +5,12 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#ifndef LSBCC_MODE
+#define SI_MAX_SIZE __SI_MAX_SIZE
+#define SI_PAD_SIZE __SI_PAD_SIZE
+#define SIGEV_MAX_SIZE __SIGEV_MAX_SIZE
+#define SIGEV_PAD_SIZE __SIGEV_PAD_SIZE
+#endif
 #include "signal.h"
 
 
@@ -1500,8 +1506,8 @@ CheckTypeSize(sig_atomic_t,4, 9092, 12, 1.3, NULL, 6, NULL)
 #elif defined __x86_64__
 CheckTypeSize(sig_atomic_t,4, 9092, 11, 2.0, NULL, 6, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,9092,0);
 Msg("Find size of sig_atomic_t (9092)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,9092,0);
 #endif
 
 #if defined __s390x__
@@ -1587,8 +1593,8 @@ CheckTypeSize(sighandler_t,8, 9374, 12, 2.0, NULL, 9373, NULL)
 #elif defined __x86_64__
 CheckTypeSize(sighandler_t,8, 9374, 11, 2.0, NULL, 9373, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9373,NULL);\n",architecture,9374,0);
 Msg("Find size of sighandler_t (9374)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9373,NULL);\n",architecture,9374,0);
 #endif
 
 #if defined __i386__
@@ -1606,8 +1612,8 @@ CheckTypeSize(sigval_t,8, 9320, 12, 1.3, NULL, 9319, NULL)
 #elif defined __x86_64__
 CheckTypeSize(sigval_t,8, 9320, 11, 2.0, NULL, 9319, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9319,NULL);\n",architecture,9320,0);
 Msg("Find size of sigval_t (9320)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9319,NULL);\n",architecture,9320,0);
 #endif
 
 #if defined __i386__
@@ -1625,8 +1631,8 @@ CheckTypeSize(sigevent_t,64, 10190, 12, 1.3, NULL, 10188, NULL)
 #elif defined __x86_64__
 CheckTypeSize(sigevent_t,64, 10190, 11, 2.0, NULL, 10188, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10188,NULL);\n",architecture,10190,0);
 Msg("Find size of sigevent_t (10190)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10188,NULL);\n",architecture,10190,0);
 #endif
 
 #if defined __i386__
@@ -1644,8 +1650,8 @@ CheckTypeSize(siginfo_t,128, 9099, 12, 1.3, NULL, 9321, NULL)
 #elif defined __x86_64__
 CheckTypeSize(siginfo_t,128, 9099, 11, 2.0, NULL, 9321, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9321,NULL);\n",architecture,9099,0);
 Msg("Find size of siginfo_t (9099)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9321,NULL);\n",architecture,9099,0);
 #endif
 
 #if defined __i386__
@@ -1663,8 +1669,8 @@ CheckTypeSize(sigset_t,128, 10163, 11, 2.0, NULL, 9382, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(sigset_t,128, 10163, 9, 2.0, NULL, 9382, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9382,NULL);\n",architecture,10163,0);
 Msg("Find size of sigset_t (10163)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9382,NULL);\n",architecture,10163,0);
 #endif
 
 #if defined __i386__
@@ -1746,8 +1752,8 @@ CheckTypeSize(stack_t,24, 9314, 11, 2.0, NULL, 9105, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(stack_t,24, 9314, 9, 2.0, NULL, 9105, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9105,NULL);\n",architecture,9314,0);
 Msg("Find size of stack_t (9314)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9105,NULL);\n",architecture,9314,0);
 #endif
 
 #if defined __i386__

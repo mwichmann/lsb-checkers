@@ -44,8 +44,8 @@ CheckTypeSize(GLXContext,8, 8164, 12, 1.3, NULL, 7668, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GLXContext,8, 8164, 11, 2.0, NULL, 7668, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GLXContext (8164)\n");
-%d,%d,%d,'""2.0""',NULL,7668,NULL);\n",architecture,8164,0);
+Msg("Find size of GLXContext (8164)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7668,NULL);\n",architecture,8164,0);
 #endif
 
 #if defined __i386__
@@ -63,8 +63,8 @@ CheckTypeSize(GLXFBConfig,8, 8165, 12, 1.3, NULL, 7671, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GLXFBConfig,8, 8165, 11, 2.0, NULL, 7671, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GLXFBConfig (8165)\n");
-%d,%d,%d,'""2.0""',NULL,7671,NULL);\n",architecture,8165,0);
+Msg("Find size of GLXFBConfig (8165)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7671,NULL);\n",architecture,8165,0);
 #endif
 
 #if defined __i386__
@@ -82,8 +82,8 @@ CheckTypeSize(GLXContextID,8, 8717, 12, 1.3, NULL, 8171, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GLXContextID,8, 8717, 11, 2.0, NULL, 8171, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GLXContextID (8717)\n");
-%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8717,0);
+Msg("Find size of GLXContextID (8717)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8717,0);
 #endif
 
 #if defined __i386__
@@ -101,8 +101,8 @@ CheckTypeSize(GLXPixmap,8, 8718, 12, 1.3, NULL, 8171, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GLXPixmap,8, 8718, 11, 2.0, NULL, 8171, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GLXPixmap (8718)\n");
-%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8718,0);
+Msg("Find size of GLXPixmap (8718)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8718,0);
 #endif
 
 #if defined __i386__
@@ -120,8 +120,8 @@ CheckTypeSize(GLXDrawable,8, 8719, 12, 1.3, NULL, 8171, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GLXDrawable,8, 8719, 11, 2.0, NULL, 8171, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GLXDrawable (8719)\n");
-%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8719,0);
+Msg("Find size of GLXDrawable (8719)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8719,0);
 #endif
 
 #if defined __i386__
@@ -139,8 +139,8 @@ CheckTypeSize(GLXPbuffer,8, 8720, 12, 1.3, NULL, 8171, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GLXPbuffer,8, 8720, 11, 2.0, NULL, 8171, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GLXPbuffer (8720)\n");
-%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8720,0);
+Msg("Find size of GLXPbuffer (8720)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8720,0);
 #endif
 
 #if defined __i386__

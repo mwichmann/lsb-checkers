@@ -75,8 +75,8 @@ CheckTypeSize(FT_Renderer_RenderFunc,4, 16804, 6, 3.2, NULL, 16803, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Renderer_RenderFunc,8, 16804, 9, 3.2, NULL, 16803, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Renderer_RenderFunc (16804)\n");
-%d,%d,%d,'""3.2""',NULL,16803,NULL);\n",architecture,16804,0);
+Msg("Find size of FT_Renderer_RenderFunc (16804)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16803,NULL);\n",architecture,16804,0);
 #endif
 
 #if defined __x86_64__
@@ -94,8 +94,8 @@ CheckTypeSize(FT_Renderer_TransformFunc,4, 16807, 6, 3.2, NULL, 16806, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Renderer_TransformFunc,8, 16807, 9, 3.2, NULL, 16806, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Renderer_TransformFunc (16807)\n");
-%d,%d,%d,'""3.2""',NULL,16806,NULL);\n",architecture,16807,0);
+Msg("Find size of FT_Renderer_TransformFunc (16807)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16806,NULL);\n",architecture,16807,0);
 #endif
 
 #if defined __x86_64__
@@ -113,8 +113,8 @@ CheckTypeSize(FT_Renderer_GetCBoxFunc,4, 16812, 6, 3.2, NULL, 16811, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Renderer_GetCBoxFunc,8, 16812, 9, 3.2, NULL, 16811, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Renderer_GetCBoxFunc (16812)\n");
-%d,%d,%d,'""3.2""',NULL,16811,NULL);\n",architecture,16812,0);
+Msg("Find size of FT_Renderer_GetCBoxFunc (16812)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16811,NULL);\n",architecture,16812,0);
 #endif
 
 #if defined __x86_64__
@@ -132,8 +132,8 @@ CheckTypeSize(FT_Renderer_SetModeFunc,4, 16814, 6, 3.2, NULL, 16813, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Renderer_SetModeFunc,8, 16814, 9, 3.2, NULL, 16813, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Renderer_SetModeFunc (16814)\n");
-%d,%d,%d,'""3.2""',NULL,16813,NULL);\n",architecture,16814,0);
+Msg("Find size of FT_Renderer_SetModeFunc (16814)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16813,NULL);\n",architecture,16814,0);
 #endif
 
 #if defined __x86_64__

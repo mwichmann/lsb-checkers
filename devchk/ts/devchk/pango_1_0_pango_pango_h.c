@@ -362,8 +362,8 @@ CheckTypeSize(PangoWrapMode,4, 12352, 10, 3.1, NULL, 12351, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoWrapMode,4, 12352, 12, 3.1, NULL, 12351, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoWrapMode (12352)\n");
-%d,%d,%d,'""3.1""',NULL,12351,NULL);\n",architecture,12352,0);
+Msg("Find size of PangoWrapMode (12352)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12351,NULL);\n",architecture,12352,0);
 #endif
 
 #if defined __i386__
@@ -381,8 +381,8 @@ CheckTypeSize(PangoScript,4, 12360, 10, 3.1, NULL, 12359, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoScript,4, 12360, 12, 3.1, NULL, 12359, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoScript (12360)\n");
-%d,%d,%d,'""3.1""',NULL,12359,NULL);\n",architecture,12360,0);
+Msg("Find size of PangoScript (12360)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12359,NULL);\n",architecture,12360,0);
 #endif
 
 #if defined __i386__
@@ -400,8 +400,8 @@ CheckTypeSize(PangoAttrType,4, 12374, 10, 3.1, NULL, 12373, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoAttrType,4, 12374, 12, 3.1, NULL, 12373, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoAttrType (12374)\n");
-%d,%d,%d,'""3.1""',NULL,12373,NULL);\n",architecture,12374,0);
+Msg("Find size of PangoAttrType (12374)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12373,NULL);\n",architecture,12374,0);
 #endif
 
 #if defined __i386__
@@ -419,8 +419,8 @@ CheckTypeSize(PangoAttribute,12, 12375, 10, 3.1, NULL, 12371, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoAttribute,16, 12375, 12, 3.1, NULL, 12371, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoAttribute (12375)\n");
-%d,%d,%d,'""3.1""',NULL,12371,NULL);\n",architecture,12375,0);
+Msg("Find size of PangoAttribute (12375)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12371,NULL);\n",architecture,12375,0);
 #endif
 
 #if defined __i386__
@@ -438,8 +438,8 @@ CheckTypeSize(PangoAttrClass,16, 12382, 10, 3.1, NULL, 12372, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoAttrClass,32, 12382, 12, 3.1, NULL, 12372, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoAttrClass (12382)\n");
-%d,%d,%d,'""3.1""',NULL,12372,NULL);\n",architecture,12382,0);
+Msg("Find size of PangoAttrClass (12382)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12372,NULL);\n",architecture,12382,0);
 #endif
 
 #if defined __i386__
@@ -457,8 +457,8 @@ CheckTypeSize(PangoLogAttr,4, 12389, 10, 3.1, NULL, 12388, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoLogAttr,4, 12389, 12, 3.1, NULL, 12388, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoLogAttr (12389)\n");
-%d,%d,%d,'""3.1""',NULL,12388,NULL);\n",architecture,12389,0);
+Msg("Find size of PangoLogAttr (12389)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12388,NULL);\n",architecture,12389,0);
 #endif
 
 #if defined __i386__
@@ -476,8 +476,8 @@ CheckTypeSize(PangoColor,6, 12392, 10, 3.1, NULL, 12391, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoColor,6, 12392, 12, 3.1, NULL, 12391, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoColor (12392)\n");
-%d,%d,%d,'""3.1""',NULL,12391,NULL);\n",architecture,12392,0);
+Msg("Find size of PangoColor (12392)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12391,NULL);\n",architecture,12392,0);
 #endif
 
 #if defined __i386__
@@ -495,8 +495,8 @@ CheckTypeSize(PangoMatrix,48, 12395, 10, 3.1, NULL, 12394, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoMatrix,48, 12395, 12, 3.1, NULL, 12394, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoMatrix (12395)\n");
-%d,%d,%d,'""3.1""',NULL,12394,NULL);\n",architecture,12395,0);
+Msg("Find size of PangoMatrix (12395)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12394,NULL);\n",architecture,12395,0);
 #endif
 
 #if defined __i386__
@@ -514,8 +514,8 @@ CheckTypeSize(PangoAnalysis,24, 12406, 10, 3.1, NULL, 12399, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoAnalysis,48, 12406, 12, 3.1, NULL, 12399, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoAnalysis (12406)\n");
-%d,%d,%d,'""3.1""',NULL,12399,NULL);\n",architecture,12406,0);
+Msg("Find size of PangoAnalysis (12406)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12399,NULL);\n",architecture,12406,0);
 #endif
 
 #if defined __i386__
@@ -533,8 +533,8 @@ CheckTypeSize(PangoItem,36, 12407, 10, 3.1, NULL, 12398, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoItem,64, 12407, 12, 3.1, NULL, 12398, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoItem (12407)\n");
-%d,%d,%d,'""3.1""',NULL,12398,NULL);\n",architecture,12407,0);
+Msg("Find size of PangoItem (12407)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12398,NULL);\n",architecture,12407,0);
 #endif
 
 #if defined __i386__
@@ -552,8 +552,8 @@ CheckTypeSize(PangoGlyph,4, 12411, 10, 3.1, NULL, 11412, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoGlyph,4, 12411, 12, 3.1, NULL, 11412, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoGlyph (12411)\n");
-%d,%d,%d,'""3.1""',NULL,11412,NULL);\n",architecture,12411,0);
+Msg("Find size of PangoGlyph (12411)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11412,NULL);\n",architecture,12411,0);
 #endif
 
 #if defined __i386__
@@ -571,8 +571,8 @@ CheckTypeSize(PangoGlyphUnit,4, 12413, 10, 3.1, NULL, 11654, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoGlyphUnit,4, 12413, 12, 3.1, NULL, 11654, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoGlyphUnit (12413)\n");
-%d,%d,%d,'""3.1""',NULL,11654,NULL);\n",architecture,12413,0);
+Msg("Find size of PangoGlyphUnit (12413)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11654,NULL);\n",architecture,12413,0);
 #endif
 
 #if defined __i386__
@@ -590,8 +590,8 @@ CheckTypeSize(PangoGlyphGeometry,12, 12414, 10, 3.1, NULL, 12412, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoGlyphGeometry,12, 12414, 12, 3.1, NULL, 12412, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoGlyphGeometry (12414)\n");
-%d,%d,%d,'""3.1""',NULL,12412,NULL);\n",architecture,12414,0);
+Msg("Find size of PangoGlyphGeometry (12414)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12412,NULL);\n",architecture,12414,0);
 #endif
 
 #if defined __i386__
@@ -609,8 +609,8 @@ CheckTypeSize(PangoGlyphVisAttr,4, 12416, 10, 3.1, NULL, 12415, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoGlyphVisAttr,4, 12416, 12, 3.1, NULL, 12415, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoGlyphVisAttr (12416)\n");
-%d,%d,%d,'""3.1""',NULL,12415,NULL);\n",architecture,12416,0);
+Msg("Find size of PangoGlyphVisAttr (12416)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12415,NULL);\n",architecture,12416,0);
 #endif
 
 #if defined __i386__
@@ -628,8 +628,8 @@ CheckTypeSize(PangoGlyphInfo,20, 12417, 10, 3.1, NULL, 12410, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoGlyphInfo,20, 12417, 12, 3.1, NULL, 12410, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoGlyphInfo (12417)\n");
-%d,%d,%d,'""3.1""',NULL,12410,NULL);\n",architecture,12417,0);
+Msg("Find size of PangoGlyphInfo (12417)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12410,NULL);\n",architecture,12417,0);
 #endif
 
 #if defined __i386__
@@ -647,8 +647,8 @@ CheckTypeSize(PangoGlyphString,16, 12419, 10, 3.1, NULL, 12409, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoGlyphString,32, 12419, 12, 3.1, NULL, 12409, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoGlyphString (12419)\n");
-%d,%d,%d,'""3.1""',NULL,12409,NULL);\n",architecture,12419,0);
+Msg("Find size of PangoGlyphString (12419)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12409,NULL);\n",architecture,12419,0);
 #endif
 
 #if defined __i386__
@@ -666,8 +666,8 @@ CheckTypeSize(PangoGlyphItem,8, 12421, 10, 3.1, NULL, 12397, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoGlyphItem,16, 12421, 12, 3.1, NULL, 12397, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoGlyphItem (12421)\n");
-%d,%d,%d,'""3.1""',NULL,12397,NULL);\n",architecture,12421,0);
+Msg("Find size of PangoGlyphItem (12421)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12397,NULL);\n",architecture,12421,0);
 #endif
 
 #if defined __i386__
@@ -685,8 +685,8 @@ CheckTypeSize(PangoLayoutRun,8, 12422, 10, 3.1, NULL, 12421, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoLayoutRun,16, 12422, 12, 3.1, NULL, 12421, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoLayoutRun (12422)\n");
-%d,%d,%d,'""3.1""',NULL,12421,NULL);\n",architecture,12422,0);
+Msg("Find size of PangoLayoutRun (12422)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12421,NULL);\n",architecture,12422,0);
 #endif
 
 #if defined __i386__
@@ -704,8 +704,8 @@ CheckTypeSize(PangoUnderline,4, 12429, 10, 3.1, NULL, 12428, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoUnderline,4, 12429, 12, 3.1, NULL, 12428, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoUnderline (12429)\n");
-%d,%d,%d,'""3.1""',NULL,12428,NULL);\n",architecture,12429,0);
+Msg("Find size of PangoUnderline (12429)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12428,NULL);\n",architecture,12429,0);
 #endif
 
 #if defined __i386__
@@ -723,8 +723,8 @@ CheckTypeSize(PangoRenderer,32, 12433, 10, 3.1, NULL, 12427, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoRenderer,56, 12433, 12, 3.1, NULL, 12427, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoRenderer (12433)\n");
-%d,%d,%d,'""3.1""',NULL,12427,NULL);\n",architecture,12433,0);
+Msg("Find size of PangoRenderer (12433)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12427,NULL);\n",architecture,12433,0);
 #endif
 
 #if defined __i386__
@@ -742,8 +742,8 @@ CheckTypeSize(PangoRenderPart,4, 12436, 10, 3.1, NULL, 12435, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoRenderPart,4, 12436, 12, 3.1, NULL, 12435, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoRenderPart (12436)\n");
-%d,%d,%d,'""3.1""',NULL,12435,NULL);\n",architecture,12436,0);
+Msg("Find size of PangoRenderPart (12436)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12435,NULL);\n",architecture,12436,0);
 #endif
 
 #if defined __i386__
@@ -761,8 +761,8 @@ CheckTypeSize(PangoLayoutLine,20, 12441, 10, 3.1, NULL, 12440, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoLayoutLine,32, 12441, 12, 3.1, NULL, 12440, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoLayoutLine (12441)\n");
-%d,%d,%d,'""3.1""',NULL,12440,NULL);\n",architecture,12441,0);
+Msg("Find size of PangoLayoutLine (12441)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12440,NULL);\n",architecture,12441,0);
 #endif
 
 #if defined __i386__
@@ -780,8 +780,8 @@ CheckTypeSize(PangoStretch,4, 12444, 10, 3.1, NULL, 12443, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoStretch,4, 12444, 12, 3.1, NULL, 12443, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoStretch (12444)\n");
-%d,%d,%d,'""3.1""',NULL,12443,NULL);\n",architecture,12444,0);
+Msg("Find size of PangoStretch (12444)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12443,NULL);\n",architecture,12444,0);
 #endif
 
 #if defined __i386__
@@ -799,8 +799,8 @@ CheckTypeSize(PangoRectangle,16, 12446, 10, 3.1, NULL, 12445, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoRectangle,16, 12446, 12, 3.1, NULL, 12445, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoRectangle (12446)\n");
-%d,%d,%d,'""3.1""',NULL,12445,NULL);\n",architecture,12446,0);
+Msg("Find size of PangoRectangle (12446)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12445,NULL);\n",architecture,12446,0);
 #endif
 
 #if defined __i386__
@@ -818,8 +818,8 @@ CheckTypeSize(PangoTabAlign,4, 12461, 10, 3.1, NULL, 12460, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoTabAlign,4, 12461, 12, 3.1, NULL, 12460, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoTabAlign (12461)\n");
-%d,%d,%d,'""3.1""',NULL,12460,NULL);\n",architecture,12461,0);
+Msg("Find size of PangoTabAlign (12461)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12460,NULL);\n",architecture,12461,0);
 #endif
 
 #if defined __i386__
@@ -837,8 +837,8 @@ CheckTypeSize(PangoAlignment,4, 12467, 10, 3.1, NULL, 12466, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoAlignment,4, 12467, 12, 3.1, NULL, 12466, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoAlignment (12467)\n");
-%d,%d,%d,'""3.1""',NULL,12466,NULL);\n",architecture,12467,0);
+Msg("Find size of PangoAlignment (12467)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12466,NULL);\n",architecture,12467,0);
 #endif
 
 #if defined __i386__
@@ -856,8 +856,8 @@ CheckTypeSize(PangoFontMask,4, 12474, 10, 3.1, NULL, 12473, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoFontMask,4, 12474, 12, 3.1, NULL, 12473, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoFontMask (12474)\n");
-%d,%d,%d,'""3.1""',NULL,12473,NULL);\n",architecture,12474,0);
+Msg("Find size of PangoFontMask (12474)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12473,NULL);\n",architecture,12474,0);
 #endif
 
 #if defined __i386__
@@ -875,8 +875,8 @@ CheckTypeSize(PangoDirection,4, 12476, 10, 3.1, NULL, 12475, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoDirection,4, 12476, 12, 3.1, NULL, 12475, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoDirection (12476)\n");
-%d,%d,%d,'""3.1""',NULL,12475,NULL);\n",architecture,12476,0);
+Msg("Find size of PangoDirection (12476)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12475,NULL);\n",architecture,12476,0);
 #endif
 
 #if defined __i386__
@@ -894,8 +894,8 @@ CheckTypeSize(PangoEllipsizeMode,4, 12478, 10, 3.1, NULL, 12477, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoEllipsizeMode,4, 12478, 12, 3.1, NULL, 12477, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoEllipsizeMode (12478)\n");
-%d,%d,%d,'""3.1""',NULL,12477,NULL);\n",architecture,12478,0);
+Msg("Find size of PangoEllipsizeMode (12478)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12477,NULL);\n",architecture,12478,0);
 #endif
 
 #if defined __i386__
@@ -913,8 +913,8 @@ CheckTypeSize(PangoStyle,4, 12484, 10, 3.1, NULL, 12483, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoStyle,4, 12484, 12, 3.1, NULL, 12483, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoStyle (12484)\n");
-%d,%d,%d,'""3.1""',NULL,12483,NULL);\n",architecture,12484,0);
+Msg("Find size of PangoStyle (12484)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12483,NULL);\n",architecture,12484,0);
 #endif
 
 #if defined __i386__
@@ -932,8 +932,8 @@ CheckTypeSize(PangoCoverageLevel,4, 12486, 10, 3.1, NULL, 12485, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoCoverageLevel,4, 12486, 12, 3.1, NULL, 12485, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoCoverageLevel (12486)\n");
-%d,%d,%d,'""3.1""',NULL,12485,NULL);\n",architecture,12486,0);
+Msg("Find size of PangoCoverageLevel (12486)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12485,NULL);\n",architecture,12486,0);
 #endif
 
 #if defined __i386__
@@ -951,8 +951,8 @@ CheckTypeSize(PangoAttrFilterFunc,4, 12491, 10, 3.1, NULL, 12490, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoAttrFilterFunc,8, 12491, 12, 3.1, NULL, 12490, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoAttrFilterFunc (12491)\n");
-%d,%d,%d,'""3.1""',NULL,12490,NULL);\n",architecture,12491,0);
+Msg("Find size of PangoAttrFilterFunc (12491)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12490,NULL);\n",architecture,12491,0);
 #endif
 
 #if defined __i386__
@@ -970,8 +970,8 @@ CheckTypeSize(PangoWeight,4, 12500, 10, 3.1, NULL, 12499, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoWeight,4, 12500, 12, 3.1, NULL, 12499, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoWeight (12500)\n");
-%d,%d,%d,'""3.1""',NULL,12499,NULL);\n",architecture,12500,0);
+Msg("Find size of PangoWeight (12500)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12499,NULL);\n",architecture,12500,0);
 #endif
 
 #if defined __i386__
@@ -989,8 +989,8 @@ CheckTypeSize(PangoFontsetForeachFunc,4, 12507, 10, 3.1, NULL, 12506, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoFontsetForeachFunc,8, 12507, 12, 3.1, NULL, 12506, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoFontsetForeachFunc (12507)\n");
-%d,%d,%d,'""3.1""',NULL,12506,NULL);\n",architecture,12507,0);
+Msg("Find size of PangoFontsetForeachFunc (12507)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12506,NULL);\n",architecture,12507,0);
 #endif
 
 #if defined __i386__
@@ -1008,8 +1008,8 @@ CheckTypeSize(PangoVariant,4, 12509, 10, 3.1, NULL, 12508, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoVariant,4, 12509, 12, 3.1, NULL, 12508, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoVariant (12509)\n");
-%d,%d,%d,'""3.1""',NULL,12508,NULL);\n",architecture,12509,0);
+Msg("Find size of PangoVariant (12509)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12508,NULL);\n",architecture,12509,0);
 #endif
 
 #if defined __i386__
@@ -1027,8 +1027,8 @@ CheckTypeSize(PangoAttrDataCopyFunc,4, 12515, 10, 3.1, NULL, 12514, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoAttrDataCopyFunc,8, 12515, 12, 3.1, NULL, 12514, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoAttrDataCopyFunc (12515)\n");
-%d,%d,%d,'""3.1""',NULL,12514,NULL);\n",architecture,12515,0);
+Msg("Find size of PangoAttrDataCopyFunc (12515)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12514,NULL);\n",architecture,12515,0);
 #endif
 
 #if defined __i386__
@@ -1046,8 +1046,8 @@ CheckTypeSize(PangoAttrShape,56, 12517, 10, 3.1, NULL, 12516, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoAttrShape,72, 12517, 12, 3.1, NULL, 12516, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoAttrShape (12517)\n");
-%d,%d,%d,'""3.1""',NULL,12516,NULL);\n",architecture,12517,0);
+Msg("Find size of PangoAttrShape (12517)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12516,NULL);\n",architecture,12517,0);
 #endif
 
 #if defined __i386__
@@ -1065,8 +1065,8 @@ CheckTypeSize(PangoAttrString,16, 12521, 10, 3.1, NULL, 12520, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoAttrString,24, 12521, 12, 3.1, NULL, 12520, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoAttrString (12521)\n");
-%d,%d,%d,'""3.1""',NULL,12520,NULL);\n",architecture,12521,0);
+Msg("Find size of PangoAttrString (12521)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12520,NULL);\n",architecture,12521,0);
 #endif
 
 #if defined __i386__
@@ -1084,8 +1084,8 @@ CheckTypeSize(PangoAttrColor,20, 12523, 10, 3.1, NULL, 12522, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoAttrColor,24, 12523, 12, 3.1, NULL, 12522, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoAttrColor (12523)\n");
-%d,%d,%d,'""3.1""',NULL,12522,NULL);\n",architecture,12523,0);
+Msg("Find size of PangoAttrColor (12523)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12522,NULL);\n",architecture,12523,0);
 #endif
 
 #if defined __i386__
@@ -1103,8 +1103,8 @@ CheckTypeSize(PangoAttrFontDesc,16, 12525, 10, 3.1, NULL, 12524, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoAttrFontDesc,24, 12525, 12, 3.1, NULL, 12524, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoAttrFontDesc (12525)\n");
-%d,%d,%d,'""3.1""',NULL,12524,NULL);\n",architecture,12525,0);
+Msg("Find size of PangoAttrFontDesc (12525)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12524,NULL);\n",architecture,12525,0);
 #endif
 
 #if defined __i386__
@@ -1122,8 +1122,8 @@ CheckTypeSize(PangoAttrFloat,24, 12527, 10, 3.1, NULL, 12526, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoAttrFloat,24, 12527, 12, 3.1, NULL, 12526, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoAttrFloat (12527)\n");
-%d,%d,%d,'""3.1""',NULL,12526,NULL);\n",architecture,12527,0);
+Msg("Find size of PangoAttrFloat (12527)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12526,NULL);\n",architecture,12527,0);
 #endif
 
 #if defined __i386__
@@ -1141,8 +1141,8 @@ CheckTypeSize(PangoRendererClass,124, 12539, 10, 3.1, NULL, 12528, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoRendererClass,248, 12539, 12, 3.1, NULL, 12528, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoRendererClass (12539)\n");
-%d,%d,%d,'""3.1""',NULL,12528,NULL);\n",architecture,12539,0);
+Msg("Find size of PangoRendererClass (12539)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12528,NULL);\n",architecture,12539,0);
 #endif
 
 #if defined __i386__
@@ -1160,8 +1160,8 @@ CheckTypeSize(PangoAttrLanguage,16, 12541, 10, 3.1, NULL, 12540, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoAttrLanguage,24, 12541, 12, 3.1, NULL, 12540, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoAttrLanguage (12541)\n");
-%d,%d,%d,'""3.1""',NULL,12540,NULL);\n",architecture,12541,0);
+Msg("Find size of PangoAttrLanguage (12541)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12540,NULL);\n",architecture,12541,0);
 #endif
 
 #if defined __i386__
@@ -1179,8 +1179,8 @@ CheckTypeSize(PangoAttrInt,16, 12543, 10, 3.1, NULL, 12542, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoAttrInt,24, 12543, 12, 3.1, NULL, 12542, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoAttrInt (12543)\n");
-%d,%d,%d,'""3.1""',NULL,12542,NULL);\n",architecture,12543,0);
+Msg("Find size of PangoAttrInt (12543)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12542,NULL);\n",architecture,12543,0);
 #endif
 
 #if defined __i386__
@@ -1198,8 +1198,8 @@ CheckTypeSize(PangoAttrSize,20, 12545, 10, 3.1, NULL, 12544, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoAttrSize,24, 12545, 12, 3.1, NULL, 12544, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoAttrSize (12545)\n");
-%d,%d,%d,'""3.1""',NULL,12544,NULL);\n",architecture,12545,0);
+Msg("Find size of PangoAttrSize (12545)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12544,NULL);\n",architecture,12545,0);
 #endif
 
 extern GType pango_script_get_type_db(void);

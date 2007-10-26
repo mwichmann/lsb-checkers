@@ -84,8 +84,8 @@ CheckTypeSize(struct timezone,8, 9855, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct timezone,tz_dsttime,4,11,33507)
 CheckOffset(struct timezone,tz_dsttime,4,11,33507)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of timezone (9855)\n");
-%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9855,0);
+Msg("Find size of timezone (9855)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9855,0);
 #endif
 
 #if defined __i386__
@@ -117,8 +117,8 @@ CheckTypeSize(struct itimerval,32, 9861, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct itimerval,it_value,16,11,33511)
 CheckOffset(struct itimerval,it_value,16,11,33511)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of itimerval (9861)\n");
-%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9861,0);
+Msg("Find size of itimerval (9861)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9861,0);
 #endif
 
 #if 1
@@ -154,8 +154,8 @@ CheckTypeSize(struct timespec,16, 7018, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct timespec,tv_nsec,8,11,33503)
 CheckOffset(struct timespec,tv_nsec,8,11,33503)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of timespec (7018)\n");
-%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,7018,0);
+Msg("Find size of timespec (7018)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,7018,0);
 #endif
 
 #if defined __i386__

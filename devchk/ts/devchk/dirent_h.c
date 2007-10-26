@@ -96,8 +96,8 @@ CheckOffset(struct dirent,d_type,18,11,34410)
 CheckMemberSize(struct dirent,d_name,256,11,34180)
 CheckOffset(struct dirent,d_name,19,11,34180)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of dirent (10178)\n");
-%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10178,0);
+Msg("Find size of dirent (10178)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10178,0);
 #endif
 
 #if defined __ia64__

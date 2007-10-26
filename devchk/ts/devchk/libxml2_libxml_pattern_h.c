@@ -44,8 +44,8 @@ CheckTypeSize(xmlStreamCtxtPtr,4, 14899, 10, 3.1, NULL, 14898, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlStreamCtxtPtr,8, 14899, 12, 3.1, NULL, 14898, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlStreamCtxtPtr (14899)\n");
-%d,%d,%d,'""3.1""',NULL,14898,NULL);\n",architecture,14899,0);
+Msg("Find size of xmlStreamCtxtPtr (14899)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14898,NULL);\n",architecture,14899,0);
 #endif
 
 #if defined __i386__
@@ -63,8 +63,8 @@ CheckTypeSize(xmlPatternPtr,4, 14903, 10, 3.1, NULL, 14902, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlPatternPtr,8, 14903, 12, 3.1, NULL, 14902, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlPatternPtr (14903)\n");
-%d,%d,%d,'""3.1""',NULL,14902,NULL);\n",architecture,14903,0);
+Msg("Find size of xmlPatternPtr (14903)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14902,NULL);\n",architecture,14903,0);
 #endif
 
 #if defined __i386__

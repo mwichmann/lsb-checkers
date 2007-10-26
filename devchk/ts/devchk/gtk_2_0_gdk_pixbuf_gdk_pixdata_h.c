@@ -48,8 +48,8 @@ CheckTypeSize(GdkPixdata,28, 12651, 10, 3.1, NULL, 12650, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkPixdata,32, 12651, 12, 3.1, NULL, 12650, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkPixdata (12651)\n");
-%d,%d,%d,'""3.1""',NULL,12650,NULL);\n",architecture,12651,0);
+Msg("Find size of GdkPixdata (12651)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12650,NULL);\n",architecture,12651,0);
 #endif
 
 #if defined __i386__
@@ -67,8 +67,8 @@ CheckTypeSize(GdkPixdataDumpType,4, 12656, 10, 3.1, NULL, 12655, NULL)
 #elif defined __s390x__
 CheckTypeSize(GdkPixdataDumpType,4, 12656, 12, 3.1, NULL, 12655, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GdkPixdataDumpType (12656)\n");
-%d,%d,%d,'""3.1""',NULL,12655,NULL);\n",architecture,12656,0);
+Msg("Find size of GdkPixdataDumpType (12656)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12655,NULL);\n",architecture,12656,0);
 #endif
 
 #if defined __i386__

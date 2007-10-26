@@ -77,8 +77,8 @@ CheckTypeSize(ObjectPart,48, 10264, 12, 1.3, NULL, 10261, NULL)
 #elif defined __x86_64__
 CheckTypeSize(ObjectPart,48, 10264, 11, 2.0, NULL, 10261, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of ObjectPart (10264)\n");
-%d,%d,%d,'""2.0""',NULL,10261,NULL);\n",architecture,10264,0);
+Msg("Find size of ObjectPart (10264)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10261,NULL);\n",architecture,10264,0);
 #endif
 
 #if defined __i386__
@@ -96,8 +96,8 @@ CheckTypeSize(ObjectRec,48, 10263, 12, 1.3, NULL, 10262, NULL)
 #elif defined __x86_64__
 CheckTypeSize(ObjectRec,48, 10263, 11, 2.0, NULL, 10262, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of ObjectRec (10263)\n");
-%d,%d,%d,'""2.0""',NULL,10262,NULL);\n",architecture,10263,0);
+Msg("Find size of ObjectRec (10263)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10262,NULL);\n",architecture,10263,0);
 #endif
 
 #if defined __i386__
@@ -115,8 +115,8 @@ CheckTypeSize(ObjectClassPart,224, 10266, 12, 1.3, NULL, 10265, NULL)
 #elif defined __x86_64__
 CheckTypeSize(ObjectClassPart,224, 10266, 11, 2.0, NULL, 10265, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of ObjectClassPart (10266)\n");
-%d,%d,%d,'""2.0""',NULL,10265,NULL);\n",architecture,10266,0);
+Msg("Find size of ObjectClassPart (10266)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10265,NULL);\n",architecture,10266,0);
 #endif
 
 #if defined __i386__
@@ -134,8 +134,8 @@ CheckTypeSize(ObjectClassExtensionRec,48, 10268, 12, 1.3, NULL, 10267, NULL)
 #elif defined __x86_64__
 CheckTypeSize(ObjectClassExtensionRec,48, 10268, 11, 2.0, NULL, 10267, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of ObjectClassExtensionRec (10268)\n");
-%d,%d,%d,'""2.0""',NULL,10267,NULL);\n",architecture,10268,0);
+Msg("Find size of ObjectClassExtensionRec (10268)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10267,NULL);\n",architecture,10268,0);
 #endif
 
 #if defined __i386__
@@ -153,8 +153,8 @@ CheckTypeSize(ObjectClassExtension,8, 10270, 12, 1.3, NULL, 10269, NULL)
 #elif defined __x86_64__
 CheckTypeSize(ObjectClassExtension,8, 10270, 11, 2.0, NULL, 10269, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of ObjectClassExtension (10270)\n");
-%d,%d,%d,'""2.0""',NULL,10269,NULL);\n",architecture,10270,0);
+Msg("Find size of ObjectClassExtension (10270)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10269,NULL);\n",architecture,10270,0);
 #endif
 
 #if defined __i386__
@@ -172,8 +172,8 @@ CheckTypeSize(ObjectClassRec,224, 10272, 12, 1.3, NULL, 10271, NULL)
 #elif defined __x86_64__
 CheckTypeSize(ObjectClassRec,224, 10272, 11, 2.0, NULL, 10271, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of ObjectClassRec (10272)\n");
-%d,%d,%d,'""2.0""',NULL,10271,NULL);\n",architecture,10272,0);
+Msg("Find size of ObjectClassRec (10272)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10271,NULL);\n",architecture,10272,0);
 #endif
 
 #ifdef TET_TEST

@@ -110,8 +110,8 @@ CheckTypeSize(reg_syntax_t,8, 6941, 12, 1.3, NULL, 9, NULL)
 #elif defined __x86_64__
 CheckTypeSize(reg_syntax_t,8, 6941, 11, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of reg_syntax_t (6941)\n");
-%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,6941,0);
+Msg("Find size of reg_syntax_t (6941)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,6941,0);
 #endif
 
 #if 1
@@ -133,8 +133,8 @@ CheckTypeSize(regex_t,64, 6945, 12, 1.3, NULL, 6944, NULL)
 #elif defined __x86_64__
 CheckTypeSize(regex_t,64, 6945, 11, 2.0, NULL, 6944, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of regex_t (6945)\n");
-%d,%d,%d,'""2.0""',NULL,6944,NULL);\n",architecture,6945,0);
+Msg("Find size of regex_t (6945)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6944,NULL);\n",architecture,6945,0);
 #endif
 
 #if defined __i386__
@@ -152,8 +152,8 @@ CheckTypeSize(regoff_t,4, 6946, 12, 1.3, NULL, 6, NULL)
 #elif defined __x86_64__
 CheckTypeSize(regoff_t,4, 6946, 11, 2.0, NULL, 6, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of regoff_t (6946)\n");
-%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,6946,0);
+Msg("Find size of regoff_t (6946)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,6946,0);
 #endif
 
 #if defined __i386__

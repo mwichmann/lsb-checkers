@@ -54,8 +54,8 @@ CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159)
 CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160)
 CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xdr_op (9933)\n");
-%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9933,0);
+Msg("Find size of xdr_op (9933)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9933,0);
 #endif
 
 #if defined __i386__
@@ -73,8 +73,8 @@ CheckTypeSize(XDR,48, 10412, 12, 1.3, NULL, 9934, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XDR,48, 10412, 11, 2.0, NULL, 9934, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XDR (10412)\n");
-%d,%d,%d,'""2.0""',NULL,9934,NULL);\n",architecture,10412,0);
+Msg("Find size of XDR (10412)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9934,NULL);\n",architecture,10412,0);
 #endif
 
 #if defined __i386__
@@ -92,8 +92,8 @@ CheckTypeSize(xdrproc_t,8, 9948, 12, 1.3, NULL, 9947, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xdrproc_t,8, 9948, 11, 2.0, NULL, 9947, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xdrproc_t (9948)\n");
-%d,%d,%d,'""2.0""',NULL,9947,NULL);\n",architecture,9948,0);
+Msg("Find size of xdrproc_t (9948)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9947,NULL);\n",architecture,9948,0);
 #endif
 
 #if defined __i386__
@@ -241,8 +241,8 @@ CheckOffset(struct xdr_ops,x_getint32,64,11,32189)
 CheckMemberSize(struct xdr_ops,x_putint32,8,11,32192)
 CheckOffset(struct xdr_ops,x_putint32,72,11,32192)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xdr_ops (9935)\n");
-%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9935,0);
+Msg("Find size of xdr_ops (9935)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9935,0);
 #endif
 
 #if defined __i386__

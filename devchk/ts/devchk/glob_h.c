@@ -230,8 +230,8 @@ CheckTypeSize(glob_t,72, 9005, 12, 1.3, NULL, 8999, NULL)
 #elif defined __x86_64__
 CheckTypeSize(glob_t,72, 9005, 11, 2.0, NULL, 8999, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of glob_t (9005)\n");
-%d,%d,%d,'""2.0""',NULL,8999,NULL);\n",architecture,9005,0);
+Msg("Find size of glob_t (9005)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8999,NULL);\n",architecture,9005,0);
 #endif
 
 #if defined __i386__

@@ -148,8 +148,8 @@ CheckOffset(struct sembuf,sem_op,2,9,30119)
 CheckMemberSize(struct sembuf,sem_flg,2,9,30120)
 CheckOffset(struct sembuf,sem_flg,4,9,30120)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of sembuf (6982)\n");
-%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,6982,0);
+Msg("Find size of sembuf (6982)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,6982,0);
 #endif
 
 #if defined __ia64__

@@ -1792,8 +1792,8 @@ CheckTypeSize(chtype,8, 8650, 12, 1.3, NULL, 9, NULL)
 #elif defined __x86_64__
 CheckTypeSize(chtype,8, 8650, 11, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of chtype (8650)\n");
-%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,8650,0);
+Msg("Find size of chtype (8650)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,8650,0);
 #endif
 
 #if defined __i386__
@@ -1811,8 +1811,8 @@ CheckTypeSize(WINDOW,128, 8655, 12, 1.3, NULL, 8654, NULL)
 #elif defined __x86_64__
 CheckTypeSize(WINDOW,128, 8655, 11, 2.0, NULL, 8654, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of WINDOW (8655)\n");
-%d,%d,%d,'""2.0""',NULL,8654,NULL);\n",architecture,8655,0);
+Msg("Find size of WINDOW (8655)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8654,NULL);\n",architecture,8655,0);
 #endif
 
 #if defined __i386__
@@ -1830,8 +1830,8 @@ CheckTypeSize(attr_t,8, 8656, 12, 1.3, NULL, 8650, NULL)
 #elif defined __x86_64__
 CheckTypeSize(attr_t,8, 8656, 11, 2.0, NULL, 8650, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of attr_t (8656)\n");
-%d,%d,%d,'""2.0""',NULL,8650,NULL);\n",architecture,8656,0);
+Msg("Find size of attr_t (8656)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8650,NULL);\n",architecture,8656,0);
 #endif
 
 #if defined __i386__
@@ -1849,8 +1849,8 @@ CheckTypeSize(cchar_t,32, 8658, 12, 1.3, NULL, 8657, NULL)
 #elif defined __x86_64__
 CheckTypeSize(cchar_t,32, 8658, 11, 2.0, NULL, 8657, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of cchar_t (8658)\n");
-%d,%d,%d,'""2.0""',NULL,8657,NULL);\n",architecture,8658,0);
+Msg("Find size of cchar_t (8658)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8657,NULL);\n",architecture,8658,0);
 #endif
 
 #if defined __i386__
@@ -1942,8 +1942,8 @@ CheckOffset(struct pdat,_pad_bottom,8,11,29729)
 CheckMemberSize(struct pdat,_pad_right,2,11,29730)
 CheckOffset(struct pdat,_pad_right,10,11,29730)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of pdat (8663)\n");
-%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,8663,0);
+Msg("Find size of pdat (8663)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,8663,0);
 #endif
 
 #if defined __i386__
@@ -2343,8 +2343,8 @@ CheckOffset(struct _win_st,_yoffset,92,11,29732)
 CheckMemberSize(struct _win_st,_bkgrnd,32,11,34437)
 CheckOffset(struct _win_st,_bkgrnd,96,11,34437)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of _win_st (8654)\n");
-%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,8654,0);
+Msg("Find size of _win_st (8654)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,8654,0);
 #endif
 
 #if 1
