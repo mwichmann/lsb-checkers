@@ -41,8 +41,8 @@ CheckTypeSize(xmlURI,40, 14566, 10, 3.1, NULL, 14565, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlURI,80, 14566, 12, 3.1, NULL, 14565, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlURI (14566)\n");
-%d,%d,%d,'""3.1""',NULL,14565,NULL);\n",architecture,14566,0);
+Msg("Find size of xmlURI (14566)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14565,NULL);\n",architecture,14566,0);
 #endif
 
 #if defined __i386__

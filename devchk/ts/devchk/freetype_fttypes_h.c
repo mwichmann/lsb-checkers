@@ -81,8 +81,8 @@ CheckTypeSize(struct FT_ListRec_,16, 16720, 9, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_ListRec_,tail,8,9,53940)
 CheckOffset(struct FT_ListRec_,tail,8,9,53940)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_ListRec_ (16720)\n");
-%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16720,0);
+Msg("Find size of FT_ListRec_ (16720)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16720,0);
 #endif
 
 #if defined __i386__
@@ -128,8 +128,8 @@ CheckOffset(struct FT_ListNodeRec_,next,8,9,53937)
 CheckMemberSize(struct FT_ListNodeRec_,data,8,9,53938)
 CheckOffset(struct FT_ListNodeRec_,data,16,9,53938)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_ListNodeRec_ (16721)\n");
-%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16721,0);
+Msg("Find size of FT_ListNodeRec_ (16721)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16721,0);
 #endif
 
 #if defined __i386__
@@ -147,8 +147,8 @@ CheckTypeSize(FT_ListNode,4, 16723, 6, 3.2, NULL, 16722, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_ListNode,8, 16723, 9, 3.2, NULL, 16722, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_ListNode (16723)\n");
-%d,%d,%d,'""3.2""',NULL,16722,NULL);\n",architecture,16723,0);
+Msg("Find size of FT_ListNode (16723)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16722,NULL);\n",architecture,16723,0);
 #endif
 
 #if defined __i386__
@@ -166,8 +166,8 @@ CheckTypeSize(FT_List,4, 16725, 6, 3.2, NULL, 16724, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_List,8, 16725, 9, 3.2, NULL, 16724, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_List (16725)\n");
-%d,%d,%d,'""3.2""',NULL,16724,NULL);\n",architecture,16725,0);
+Msg("Find size of FT_List (16725)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16724,NULL);\n",architecture,16725,0);
 #endif
 
 #if 1
@@ -203,8 +203,8 @@ CheckTypeSize(struct FT_Generic_,16, 16748, 9, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_Generic_,finalizer,8,9,53968)
 CheckOffset(struct FT_Generic_,finalizer,8,9,53968)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Generic_ (16748)\n");
-%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16748,0);
+Msg("Find size of FT_Generic_ (16748)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16748,0);
 #endif
 
 #if defined __i386__
@@ -222,8 +222,8 @@ CheckTypeSize(FT_Generic_Finalizer,4, 16749, 6, 3.2, NULL, 6988, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Generic_Finalizer,8, 16749, 9, 3.2, NULL, 6988, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Generic_Finalizer (16749)\n");
-%d,%d,%d,'""3.2""',NULL,6988,NULL);\n",architecture,16749,0);
+Msg("Find size of FT_Generic_Finalizer (16749)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,6988,NULL);\n",architecture,16749,0);
 #endif
 
 #if defined __i386__
@@ -241,8 +241,8 @@ CheckTypeSize(FT_Generic,8, 16750, 6, 3.2, NULL, 16748, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Generic,16, 16750, 9, 3.2, NULL, 16748, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Generic (16750)\n");
-%d,%d,%d,'""3.2""',NULL,16748,NULL);\n",architecture,16750,0);
+Msg("Find size of FT_Generic (16750)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16748,NULL);\n",architecture,16750,0);
 #endif
 
 #if 1
@@ -264,8 +264,8 @@ CheckTypeSize(FT_ULong,4, 16754, 6, 3.2, NULL, 11186, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_ULong,8, 16754, 9, 3.2, NULL, 11186, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_ULong (16754)\n");
-%d,%d,%d,'""3.2""',NULL,11186,NULL);\n",architecture,16754,0);
+Msg("Find size of FT_ULong (16754)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11186,NULL);\n",architecture,16754,0);
 #endif
 
 #if defined __x86_64__
@@ -283,8 +283,8 @@ CheckTypeSize(FT_Long,4, 16755, 6, 3.2, NULL, 8, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Long,8, 16755, 9, 3.2, NULL, 8, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Long (16755)\n");
-%d,%d,%d,'""3.2""',NULL,8,NULL);\n",architecture,16755,0);
+Msg("Find size of FT_Long (16755)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,8,NULL);\n",architecture,16755,0);
 #endif
 
 #if 1
@@ -306,8 +306,8 @@ CheckTypeSize(FT_Fixed,4, 16759, 6, 3.2, NULL, 8, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Fixed,8, 16759, 9, 3.2, NULL, 8, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Fixed (16759)\n");
-%d,%d,%d,'""3.2""',NULL,8,NULL);\n",architecture,16759,0);
+Msg("Find size of FT_Fixed (16759)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,8,NULL);\n",architecture,16759,0);
 #endif
 
 #if defined __x86_64__
@@ -325,8 +325,8 @@ CheckTypeSize(FT_Pointer,4, 16766, 6, 3.2, NULL, 40, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Pointer,8, 16766, 9, 3.2, NULL, 40, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Pointer (16766)\n");
-%d,%d,%d,'""3.2""',NULL,40,NULL);\n",architecture,16766,0);
+Msg("Find size of FT_Pointer (16766)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,40,NULL);\n",architecture,16766,0);
 #endif
 
 #if defined __x86_64__
@@ -344,8 +344,8 @@ CheckTypeSize(FT_ListRec,8, 16775, 6, 3.2, NULL, 16720, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_ListRec,16, 16775, 9, 3.2, NULL, 16720, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_ListRec (16775)\n");
-%d,%d,%d,'""3.2""',NULL,16720,NULL);\n",architecture,16775,0);
+Msg("Find size of FT_ListRec (16775)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16720,NULL);\n",architecture,16775,0);
 #endif
 
 #if 1
@@ -409,8 +409,8 @@ CheckOffset(struct FT_Matrix_,yx,16,9,54030)
 CheckMemberSize(struct FT_Matrix_,yy,8,9,54031)
 CheckOffset(struct FT_Matrix_,yy,24,9,54031)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Matrix_ (16790)\n");
-%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16790,0);
+Msg("Find size of FT_Matrix_ (16790)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16790,0);
 #endif
 
 #if defined __x86_64__
@@ -428,8 +428,8 @@ CheckTypeSize(FT_Matrix,16, 16791, 6, 3.2, NULL, 16790, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Matrix,32, 16791, 9, 3.2, NULL, 16790, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Matrix (16791)\n");
-%d,%d,%d,'""3.2""',NULL,16790,NULL);\n",architecture,16791,0);
+Msg("Find size of FT_Matrix (16791)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16790,NULL);\n",architecture,16791,0);
 #endif
 
 #if 1
@@ -463,8 +463,8 @@ CheckTypeSize(FT_Bytes,4, 16978, 6, 3.2, NULL, 16896, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Bytes,8, 16978, 9, 3.2, NULL, 16896, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Bytes (16978)\n");
-%d,%d,%d,'""3.2""',NULL,16896,NULL);\n",architecture,16978,0);
+Msg("Find size of FT_Bytes (16978)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16896,NULL);\n",architecture,16978,0);
 #endif
 
 #if 1

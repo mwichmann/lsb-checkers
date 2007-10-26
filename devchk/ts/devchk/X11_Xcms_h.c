@@ -43,8 +43,8 @@ CheckTypeSize(XcmsFunctionSet,24, 8364, 12, 1.3, NULL, 8363, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XcmsFunctionSet,24, 8364, 11, 2.0, NULL, 8363, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XcmsFunctionSet (8364)\n");
-%d,%d,%d,'""2.0""',NULL,8363,NULL);\n",architecture,8364,0);
+Msg("Find size of XcmsFunctionSet (8364)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8363,NULL);\n",architecture,8364,0);
 #endif
 
 #if defined __i386__
@@ -62,8 +62,8 @@ CheckTypeSize(XcmsColorFormat,8, 8320, 12, 1.3, NULL, 9, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XcmsColorFormat,8, 8320, 11, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XcmsColorFormat (8320)\n");
-%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,8320,0);
+Msg("Find size of XcmsColorFormat (8320)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,8320,0);
 #endif
 
 #if defined __i386__
@@ -81,8 +81,8 @@ CheckTypeSize(XcmsFloat,8, 8321, 12, 1.3, NULL, 13, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XcmsFloat,8, 8321, 11, 2.0, NULL, 13, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XcmsFloat (8321)\n");
-%d,%d,%d,'""2.0""',NULL,13,NULL);\n",architecture,8321,0);
+Msg("Find size of XcmsFloat (8321)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,13,NULL);\n",architecture,8321,0);
 #endif
 
 #if defined __i386__
@@ -100,8 +100,8 @@ CheckTypeSize(XcmsRGB,6, 8323, 12, 1.3, NULL, 8322, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XcmsRGB,6, 8323, 11, 2.0, NULL, 8322, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XcmsRGB (8323)\n");
-%d,%d,%d,'""2.0""',NULL,8322,NULL);\n",architecture,8323,0);
+Msg("Find size of XcmsRGB (8323)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8322,NULL);\n",architecture,8323,0);
 #endif
 
 #if defined __i386__
@@ -119,8 +119,8 @@ CheckTypeSize(XcmsRGBi,24, 8325, 12, 1.3, NULL, 8324, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XcmsRGBi,24, 8325, 11, 2.0, NULL, 8324, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XcmsRGBi (8325)\n");
-%d,%d,%d,'""2.0""',NULL,8324,NULL);\n",architecture,8325,0);
+Msg("Find size of XcmsRGBi (8325)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8324,NULL);\n",architecture,8325,0);
 #endif
 
 #if defined __i386__
@@ -138,8 +138,8 @@ CheckTypeSize(XcmsCIEXYZ,24, 8327, 12, 1.3, NULL, 8326, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XcmsCIEXYZ,24, 8327, 11, 2.0, NULL, 8326, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XcmsCIEXYZ (8327)\n");
-%d,%d,%d,'""2.0""',NULL,8326,NULL);\n",architecture,8327,0);
+Msg("Find size of XcmsCIEXYZ (8327)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8326,NULL);\n",architecture,8327,0);
 #endif
 
 #if defined __i386__
@@ -157,8 +157,8 @@ CheckTypeSize(XcmsCIEuvY,24, 8329, 12, 1.3, NULL, 8328, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XcmsCIEuvY,24, 8329, 11, 2.0, NULL, 8328, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XcmsCIEuvY (8329)\n");
-%d,%d,%d,'""2.0""',NULL,8328,NULL);\n",architecture,8329,0);
+Msg("Find size of XcmsCIEuvY (8329)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8328,NULL);\n",architecture,8329,0);
 #endif
 
 #if defined __i386__
@@ -176,8 +176,8 @@ CheckTypeSize(XcmsCIExyY,24, 8331, 12, 1.3, NULL, 8330, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XcmsCIExyY,24, 8331, 11, 2.0, NULL, 8330, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XcmsCIExyY (8331)\n");
-%d,%d,%d,'""2.0""',NULL,8330,NULL);\n",architecture,8331,0);
+Msg("Find size of XcmsCIExyY (8331)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8330,NULL);\n",architecture,8331,0);
 #endif
 
 #if defined __i386__
@@ -195,8 +195,8 @@ CheckTypeSize(XcmsCIELab,24, 8333, 12, 1.3, NULL, 8332, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XcmsCIELab,24, 8333, 11, 2.0, NULL, 8332, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XcmsCIELab (8333)\n");
-%d,%d,%d,'""2.0""',NULL,8332,NULL);\n",architecture,8333,0);
+Msg("Find size of XcmsCIELab (8333)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8332,NULL);\n",architecture,8333,0);
 #endif
 
 #if defined __i386__
@@ -214,8 +214,8 @@ CheckTypeSize(XcmsCIELuv,24, 8335, 12, 1.3, NULL, 8334, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XcmsCIELuv,24, 8335, 11, 2.0, NULL, 8334, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XcmsCIELuv (8335)\n");
-%d,%d,%d,'""2.0""',NULL,8334,NULL);\n",architecture,8335,0);
+Msg("Find size of XcmsCIELuv (8335)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8334,NULL);\n",architecture,8335,0);
 #endif
 
 #if defined __i386__
@@ -233,8 +233,8 @@ CheckTypeSize(XcmsTekHVC,24, 8337, 12, 1.3, NULL, 8336, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XcmsTekHVC,24, 8337, 11, 2.0, NULL, 8336, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XcmsTekHVC (8337)\n");
-%d,%d,%d,'""2.0""',NULL,8336,NULL);\n",architecture,8337,0);
+Msg("Find size of XcmsTekHVC (8337)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8336,NULL);\n",architecture,8337,0);
 #endif
 
 #if defined __i386__
@@ -252,8 +252,8 @@ CheckTypeSize(XcmsPad,32, 8339, 12, 1.3, NULL, 8338, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XcmsPad,32, 8339, 11, 2.0, NULL, 8338, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XcmsPad (8339)\n");
-%d,%d,%d,'""2.0""',NULL,8338,NULL);\n",architecture,8339,0);
+Msg("Find size of XcmsPad (8339)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8338,NULL);\n",architecture,8339,0);
 #endif
 
 #if defined __i386__
@@ -271,8 +271,8 @@ CheckTypeSize(XcmsColor,48, 8342, 12, 1.3, NULL, 8341, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XcmsColor,48, 8342, 11, 2.0, NULL, 8341, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XcmsColor (8342)\n");
-%d,%d,%d,'""2.0""',NULL,8341,NULL);\n",architecture,8342,0);
+Msg("Find size of XcmsColor (8342)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8341,NULL);\n",architecture,8342,0);
 #endif
 
 #if defined __i386__
@@ -290,8 +290,8 @@ CheckTypeSize(XcmsPerScrnInfo,72, 8344, 12, 1.3, NULL, 8343, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XcmsPerScrnInfo,72, 8344, 11, 2.0, NULL, 8343, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XcmsPerScrnInfo (8344)\n");
-%d,%d,%d,'""2.0""',NULL,8343,NULL);\n",architecture,8344,0);
+Msg("Find size of XcmsPerScrnInfo (8344)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8343,NULL);\n",architecture,8344,0);
 #endif
 
 #if defined __i386__
@@ -309,8 +309,8 @@ CheckTypeSize(XcmsCompressionProc,8, 8856, 12, 1.3, NULL, 8854, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XcmsCompressionProc,8, 8856, 11, 2.0, NULL, 8854, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XcmsCompressionProc (8856)\n");
-%d,%d,%d,'""2.0""',NULL,8854,NULL);\n",architecture,8856,0);
+Msg("Find size of XcmsCompressionProc (8856)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8854,NULL);\n",architecture,8856,0);
 #endif
 
 #if defined __i386__
@@ -328,8 +328,8 @@ CheckTypeSize(XcmsWhiteAdjustProc,8, 8858, 12, 1.3, NULL, 8857, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XcmsWhiteAdjustProc,8, 8858, 11, 2.0, NULL, 8857, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XcmsWhiteAdjustProc (8858)\n");
-%d,%d,%d,'""2.0""',NULL,8857,NULL);\n",architecture,8858,0);
+Msg("Find size of XcmsWhiteAdjustProc (8858)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8857,NULL);\n",architecture,8858,0);
 #endif
 
 #if defined __i386__
@@ -347,8 +347,8 @@ CheckTypeSize(XcmsScreenInitProc,8, 8861, 12, 1.3, NULL, 8860, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XcmsScreenInitProc,8, 8861, 11, 2.0, NULL, 8860, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XcmsScreenInitProc (8861)\n");
-%d,%d,%d,'""2.0""',NULL,8860,NULL);\n",architecture,8861,0);
+Msg("Find size of XcmsScreenInitProc (8861)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8860,NULL);\n",architecture,8861,0);
 #endif
 
 #if defined __i386__
@@ -366,8 +366,8 @@ CheckTypeSize(XcmsScreenFreeProc,8, 8863, 12, 1.3, NULL, 8862, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XcmsScreenFreeProc,8, 8863, 11, 2.0, NULL, 8862, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XcmsScreenFreeProc (8863)\n");
-%d,%d,%d,'""2.0""',NULL,8862,NULL);\n",architecture,8863,0);
+Msg("Find size of XcmsScreenFreeProc (8863)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8862,NULL);\n",architecture,8863,0);
 #endif
 
 #if defined __i386__
@@ -385,8 +385,8 @@ CheckTypeSize(XcmsConversionProc,8, 8865, 12, 1.3, NULL, 8864, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XcmsConversionProc,8, 8865, 11, 2.0, NULL, 8864, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XcmsConversionProc (8865)\n");
-%d,%d,%d,'""2.0""',NULL,8864,NULL);\n",architecture,8865,0);
+Msg("Find size of XcmsConversionProc (8865)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8864,NULL);\n",architecture,8865,0);
 #endif
 
 #if defined __i386__
@@ -404,8 +404,8 @@ CheckTypeSize(XcmsParseStringProc,8, 8869, 12, 1.3, NULL, 8868, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XcmsParseStringProc,8, 8869, 11, 2.0, NULL, 8868, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XcmsParseStringProc (8869)\n");
-%d,%d,%d,'""2.0""',NULL,8868,NULL);\n",architecture,8869,0);
+Msg("Find size of XcmsParseStringProc (8869)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8868,NULL);\n",architecture,8869,0);
 #endif
 
 #if defined __i386__
@@ -423,8 +423,8 @@ CheckTypeSize(XcmsCCC,8, 8853, 12, 1.3, NULL, 8852, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XcmsCCC,8, 8853, 11, 2.0, NULL, 8852, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XcmsCCC (8853)\n");
-%d,%d,%d,'""2.0""',NULL,8852,NULL);\n",architecture,8853,0);
+Msg("Find size of XcmsCCC (8853)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8852,NULL);\n",architecture,8853,0);
 #endif
 
 #if defined __i386__
@@ -442,8 +442,8 @@ CheckTypeSize(XcmsColorSpace,48, 8362, 12, 1.3, NULL, 8361, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XcmsColorSpace,48, 8362, 11, 2.0, NULL, 8361, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XcmsColorSpace (8362)\n");
-%d,%d,%d,'""2.0""',NULL,8361,NULL);\n",architecture,8362,0);
+Msg("Find size of XcmsColorSpace (8362)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8361,NULL);\n",architecture,8362,0);
 #endif
 
 #if defined __i386__

@@ -202,8 +202,8 @@ CheckOffset(struct ifaddr,ifa_ifp,32,11,34496)
 CheckMemberSize(struct ifaddr,ifa_next,8,11,34497)
 CheckOffset(struct ifaddr,ifa_next,40,11,34497)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of ifaddr (10286)\n");
-%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10286,0);
+Msg("Find size of ifaddr (10286)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10286,0);
 #endif
 
 #if defined __i386__
@@ -235,8 +235,8 @@ CheckTypeSize(struct ifreq,40, 10290, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct ifreq,ifr_ifru,24,11,34483)
 CheckOffset(struct ifreq,ifr_ifru,16,11,34483)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of ifreq (10290)\n");
-%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10290,0);
+Msg("Find size of ifreq (10290)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10290,0);
 #endif
 
 #if defined __i386__
@@ -270,8 +270,8 @@ CheckTypeSize(struct ifconf,16, 10288, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct ifconf,ifc_ifcu,8,9,34469)
 CheckOffset(struct ifconf,ifc_ifcu,8,9,34469)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of ifconf (10288)\n");
-%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10288,0);
+Msg("Find size of ifconf (10288)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10288,0);
 #endif
 
 #if defined __i386__

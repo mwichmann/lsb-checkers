@@ -70,8 +70,8 @@ CheckTypeSize(PangoFcDecoderFindFunc,4, 12607, 10, 3.1, NULL, 12606, NULL)
 #elif defined __s390x__
 CheckTypeSize(PangoFcDecoderFindFunc,8, 12607, 12, 3.1, NULL, 12606, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of PangoFcDecoderFindFunc (12607)\n");
-%d,%d,%d,'""3.1""',NULL,12606,NULL);\n",architecture,12607,0);
+Msg("Find size of PangoFcDecoderFindFunc (12607)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12606,NULL);\n",architecture,12607,0);
 #endif
 
 extern void pango_fc_font_map_add_decoder_find_func_db(PangoFcFontMap *, PangoFcDecoderFindFunc, gpointer, GDestroyNotify);

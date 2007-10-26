@@ -40,8 +40,8 @@ CheckTypeSize(Widget,8, 9578, 11, 2.0, NULL, 9577, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(Widget,8, 9578, 9, 2.0, NULL, 9577, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of Widget (9578)\n");
-%d,%d,%d,'""2.0""',NULL,9577,NULL);\n",architecture,9578,0);
+Msg("Find size of Widget (9578)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9577,NULL);\n",architecture,9578,0);
 #endif
 
 #if defined __powerpc__ && !defined __powerpc64__
@@ -59,8 +59,8 @@ CheckTypeSize(WidgetList,8, 9580, 11, 2.0, NULL, 9579, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(WidgetList,8, 9580, 9, 2.0, NULL, 9579, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of WidgetList (9580)\n");
-%d,%d,%d,'""2.0""',NULL,9579,NULL);\n",architecture,9580,0);
+Msg("Find size of WidgetList (9580)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9579,NULL);\n",architecture,9580,0);
 #endif
 
 #if defined __i386__
@@ -78,8 +78,8 @@ CheckTypeSize(WidgetClass,8, 9583, 12, 1.3, NULL, 9582, NULL)
 #elif defined __x86_64__
 CheckTypeSize(WidgetClass,8, 9583, 11, 2.0, NULL, 9582, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of WidgetClass (9583)\n");
-%d,%d,%d,'""2.0""',NULL,9582,NULL);\n",architecture,9583,0);
+Msg("Find size of WidgetClass (9583)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9582,NULL);\n",architecture,9583,0);
 #endif
 
 #if defined __powerpc__ && !defined __powerpc64__
@@ -97,8 +97,8 @@ CheckTypeSize(CompositeWidget,8, 9586, 11, 2.0, NULL, 9585, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(CompositeWidget,8, 9586, 9, 2.0, NULL, 9585, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of CompositeWidget (9586)\n");
-%d,%d,%d,'""2.0""',NULL,9585,NULL);\n",architecture,9586,0);
+Msg("Find size of CompositeWidget (9586)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9585,NULL);\n",architecture,9586,0);
 #endif
 
 #if defined __i386__
@@ -116,8 +116,8 @@ CheckTypeSize(XtActionList,8, 9589, 11, 2.0, NULL, 9588, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XtActionList,8, 9589, 9, 2.0, NULL, 9588, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XtActionList (9589)\n");
-%d,%d,%d,'""2.0""',NULL,9588,NULL);\n",architecture,9589,0);
+Msg("Find size of XtActionList (9589)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9588,NULL);\n",architecture,9589,0);
 #endif
 
 #if defined __powerpc__ && !defined __powerpc64__
@@ -135,8 +135,8 @@ CheckTypeSize(XtEventTable,8, 9592, 11, 2.0, NULL, 9591, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XtEventTable,8, 9592, 9, 2.0, NULL, 9591, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XtEventTable (9592)\n");
-%d,%d,%d,'""2.0""',NULL,9591,NULL);\n",architecture,9592,0);
+Msg("Find size of XtEventTable (9592)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9591,NULL);\n",architecture,9592,0);
 #endif
 
 #if defined __i386__
@@ -154,8 +154,8 @@ CheckTypeSize(XtAppContext,8, 9595, 11, 2.0, NULL, 9594, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XtAppContext,8, 9595, 9, 2.0, NULL, 9594, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XtAppContext (9595)\n");
-%d,%d,%d,'""2.0""',NULL,9594,NULL);\n",architecture,9595,0);
+Msg("Find size of XtAppContext (9595)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9594,NULL);\n",architecture,9595,0);
 #endif
 
 #if defined __powerpc__ && !defined __powerpc64__
@@ -173,8 +173,8 @@ CheckTypeSize(XtValueMask,8, 9596, 11, 2.0, NULL, 9, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XtValueMask,8, 9596, 9, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XtValueMask (9596)\n");
-%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,9596,0);
+Msg("Find size of XtValueMask (9596)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,9596,0);
 #endif
 
 #if defined __i386__
@@ -192,8 +192,8 @@ CheckTypeSize(XtIntervalId,8, 9597, 11, 2.0, NULL, 9, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XtIntervalId,8, 9597, 9, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XtIntervalId (9597)\n");
-%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,9597,0);
+Msg("Find size of XtIntervalId (9597)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,9597,0);
 #endif
 
 #if defined __i386__
@@ -211,8 +211,8 @@ CheckTypeSize(XtInputId,8, 9598, 11, 2.0, NULL, 9, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XtInputId,8, 9598, 9, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XtInputId (9598)\n");
-%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,9598,0);
+Msg("Find size of XtInputId (9598)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,9598,0);
 #endif
 
 #if defined __i386__
@@ -230,8 +230,8 @@ CheckTypeSize(XtSignalId,8, 9600, 11, 2.0, NULL, 9, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XtSignalId,8, 9600, 9, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XtSignalId (9600)\n");
-%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,9600,0);
+Msg("Find size of XtSignalId (9600)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,9600,0);
 #endif
 
 #if defined __powerpc__ && !defined __powerpc64__
@@ -249,8 +249,8 @@ CheckTypeSize(XtGeometryMask,4, 9601, 11, 2.0, NULL, 7, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XtGeometryMask,4, 9601, 9, 2.0, NULL, 7, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XtGeometryMask (9601)\n");
-%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,9601,0);
+Msg("Find size of XtGeometryMask (9601)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,9601,0);
 #endif
 
 #if defined __i386__
@@ -268,8 +268,8 @@ CheckTypeSize(XtGCMask,8, 9602, 11, 2.0, NULL, 9, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XtGCMask,8, 9602, 9, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XtGCMask (9602)\n");
-%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,9602,0);
+Msg("Find size of XtGCMask (9602)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,9602,0);
 #endif
 
 #if defined __powerpc__ && !defined __powerpc64__
@@ -287,8 +287,8 @@ CheckTypeSize(Pixel,8, 9603, 11, 2.0, NULL, 9, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(Pixel,8, 9603, 9, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of Pixel (9603)\n");
-%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,9603,0);
+Msg("Find size of Pixel (9603)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,9603,0);
 #endif
 
 #if defined __i386__
@@ -306,8 +306,8 @@ CheckTypeSize(XtCacheType,4, 9604, 11, 2.0, NULL, 6, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XtCacheType,4, 9604, 9, 2.0, NULL, 6, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XtCacheType (9604)\n");
-%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,9604,0);
+Msg("Find size of XtCacheType (9604)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,9604,0);
 #endif
 
 #if defined __i386__
@@ -325,8 +325,8 @@ CheckTypeSize(Boolean,1, 9605, 11, 2.0, NULL, 2, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(Boolean,1, 9605, 9, 2.0, NULL, 2, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of Boolean (9605)\n");
-%d,%d,%d,'""2.0""',NULL,2,NULL);\n",architecture,9605,0);
+Msg("Find size of Boolean (9605)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,2,NULL);\n",architecture,9605,0);
 #endif
 
 #if defined __powerpc__ && !defined __powerpc64__
@@ -344,8 +344,8 @@ CheckTypeSize(XtArgVal,8, 9606, 11, 2.0, NULL, 8, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XtArgVal,8, 9606, 9, 2.0, NULL, 8, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XtArgVal (9606)\n");
-%d,%d,%d,'""2.0""',NULL,8,NULL);\n",architecture,9606,0);
+Msg("Find size of XtArgVal (9606)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8,NULL);\n",architecture,9606,0);
 #endif
 
 #if defined __powerpc__ && !defined __powerpc64__
@@ -363,8 +363,8 @@ CheckTypeSize(XtEnum,1, 9607, 11, 2.0, NULL, 3, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XtEnum,1, 9607, 9, 2.0, NULL, 3, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XtEnum (9607)\n");
-%d,%d,%d,'""2.0""',NULL,3,NULL);\n",architecture,9607,0);
+Msg("Find size of XtEnum (9607)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,3,NULL);\n",architecture,9607,0);
 #endif
 
 #if defined __i386__
@@ -382,8 +382,8 @@ CheckTypeSize(Cardinal,4, 9608, 12, 1.3, NULL, 7, NULL)
 #elif defined __x86_64__
 CheckTypeSize(Cardinal,4, 9608, 11, 2.0, NULL, 7, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of Cardinal (9608)\n");
-%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,9608,0);
+Msg("Find size of Cardinal (9608)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,9608,0);
 #endif
 
 #if defined __powerpc__ && !defined __powerpc64__
@@ -401,8 +401,8 @@ CheckTypeSize(Dimension,2, 9609, 11, 2.0, NULL, 5, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(Dimension,2, 9609, 9, 2.0, NULL, 5, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of Dimension (9609)\n");
-%d,%d,%d,'""2.0""',NULL,5,NULL);\n",architecture,9609,0);
+Msg("Find size of Dimension (9609)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,5,NULL);\n",architecture,9609,0);
 #endif
 
 #if defined __powerpc__ && !defined __powerpc64__
@@ -420,8 +420,8 @@ CheckTypeSize(Position,2, 9610, 11, 2.0, NULL, 4, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(Position,2, 9610, 9, 2.0, NULL, 4, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of Position (9610)\n");
-%d,%d,%d,'""2.0""',NULL,4,NULL);\n",architecture,9610,0);
+Msg("Find size of Position (9610)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,4,NULL);\n",architecture,9610,0);
 #endif
 
 #if defined __i386__
@@ -439,8 +439,8 @@ CheckTypeSize(XtPointer,8, 9611, 11, 2.0, NULL, 40, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XtPointer,8, 9611, 9, 2.0, NULL, 40, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XtPointer (9611)\n");
-%d,%d,%d,'""2.0""',NULL,40,NULL);\n",architecture,9611,0);
+Msg("Find size of XtPointer (9611)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,40,NULL);\n",architecture,9611,0);
 #endif
 
 #if defined __powerpc__ && !defined __powerpc64__

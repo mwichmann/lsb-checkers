@@ -376,8 +376,8 @@ CheckOffset(struct servent,s_port,16,11,33735)
 CheckMemberSize(struct servent,s_proto,8,11,33736)
 CheckOffset(struct servent,s_proto,24,11,33736)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of servent (10134)\n");
-%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10134,0);
+Msg("Find size of servent (10134)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10134,0);
 #endif
 
 #if defined __i386__
@@ -451,8 +451,8 @@ CheckOffset(struct hostent,h_length,20,11,33740)
 CheckMemberSize(struct hostent,h_addr_list,8,11,33741)
 CheckOffset(struct hostent,h_addr_list,24,11,33741)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of hostent (10136)\n");
-%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10136,0);
+Msg("Find size of hostent (10136)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10136,0);
 #endif
 
 #if defined __i386__
@@ -500,8 +500,8 @@ CheckOffset(struct protoent,p_aliases,8,11,33743)
 CheckMemberSize(struct protoent,p_proto,4,11,33744)
 CheckOffset(struct protoent,p_proto,16,11,33744)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of protoent (10139)\n");
-%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10139,0);
+Msg("Find size of protoent (10139)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10139,0);
 #endif
 
 #if defined __ia64__
@@ -561,8 +561,8 @@ CheckOffset(struct netent,n_addrtype,16,11,33747)
 CheckMemberSize(struct netent,n_net,4,11,33748)
 CheckOffset(struct netent,n_net,20,11,33748)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of netent (10141)\n");
-%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10141,0);
+Msg("Find size of netent (10141)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10141,0);
 #endif
 
 #if defined __ia64__

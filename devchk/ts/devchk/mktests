@@ -137,13 +137,13 @@ sub checkArchSpecific($$$$) {
 						}
 					}
 
+					print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
 					@genentry = $sthGeneric->fetchrow_array;
 					$appearedin  = $genentry{'ATappearedin'};
 					$basetype    = $genentry{'ATbasetype'};
 					$withdrawnin = $genentry{'ATwithdrawnin'} ? "'\"\"$genentry{'ATwithdrawnin'}\"\"'" : "NULL";
 					$attribute   = $genentry{'ATattribute'} ? "'\"\"$genentry{'ATattribute'}\"\"'" : "NULL";
 
-					print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
 					print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
 					print TESTS "%d,%d,%d,'\"\"$appearedin\"\"',$withdrawnin,$basetype,$attribute);\\n\",architecture,$Tid,0);\n";
 					$missedCount++;
@@ -510,10 +510,10 @@ sub writetest($$) {
 					%gentry = $gth->fetchhash;
 					if ($gentry{'cnt'} > 0) {
 						print TESTS "#else\n";
-						print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+						print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
 						$withdrawnin = $ATwithdrawnin ? "'\"\"$ATwithdrawnin\"\"'" : "NULL";
 						$attribute = $ATattribute ? "'\"\"$ATattribute\"\"'" : "NULL";
-						print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
+						print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
 						print TESTS "%d,%d,%d,'\"\"$ATappearedin\"\"',$withdrawnin,$ATbasetype,$attribute);\\n\",architecture,$Tid,0);\n";
 					}
 				}
@@ -797,9 +797,9 @@ sub writetest($$) {
 				%gentry = $gth->fetchhash;
 				if ($gentry{'cnt'} > 0) {
 					print TESTS "#else\n";
+					print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
 					$withdrawnin = $ATwithdrawnin ? "'\"\"$ATwithdrawnin\"\"'" : "NULL";
 					$attribute = $ATattribute ? "'\"\"$ATattribute\"\"'" : "NULL";
-					print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
 					print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
 					print TESTS "%d,%d,%d,'\"\"$ATappearedin\"\"',$withdrawnin,$ATbasetype, $attribute);\\n\",architecture,$Tid,0);\n";
 				}

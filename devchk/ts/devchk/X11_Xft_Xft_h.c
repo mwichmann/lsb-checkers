@@ -112,8 +112,8 @@ CheckTypeSize(XftColor,16, 12557, 3, 3.2, NULL, 12556, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XftColor,16, 12557, 9, 3.2, NULL, 12556, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XftColor (12557)\n");
-%d,%d,%d,'""3.2""',NULL,12556,NULL);\n",architecture,12557,0);
+Msg("Find size of XftColor (12557)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12556,NULL);\n",architecture,12557,0);
 #endif
 
 #if defined __i386__
@@ -131,8 +131,8 @@ CheckTypeSize(XftFont,24, 12573, 6, 3.2, NULL, 12572, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XftFont,32, 12573, 9, 3.2, NULL, 12572, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XftFont (12573)\n");
-%d,%d,%d,'""3.2""',NULL,12572,NULL);\n",architecture,12573,0);
+Msg("Find size of XftFont (12573)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12572,NULL);\n",architecture,12573,0);
 #endif
 
 #if defined __i386__
@@ -150,8 +150,8 @@ CheckTypeSize(XftGlyphSpec,8, 12576, 6, 3.2, NULL, 12575, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XftGlyphSpec,8, 12576, 9, 3.2, NULL, 12575, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XftGlyphSpec (12576)\n");
-%d,%d,%d,'""3.2""',NULL,12575,NULL);\n",architecture,12576,0);
+Msg("Find size of XftGlyphSpec (12576)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12575,NULL);\n",architecture,12576,0);
 #endif
 
 #if defined __x86_64__
@@ -169,8 +169,8 @@ CheckTypeSize(XftCharSpec,8, 16995, 6, 3.2, NULL, 16994, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XftCharSpec,8, 16995, 9, 3.2, NULL, 16994, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XftCharSpec (16995)\n");
-%d,%d,%d,'""3.2""',NULL,16994,NULL);\n",architecture,16995,0);
+Msg("Find size of XftCharSpec (16995)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16994,NULL);\n",architecture,16995,0);
 #endif
 
 #if defined __x86_64__
@@ -188,8 +188,8 @@ CheckTypeSize(XftCharFontSpec,12, 17009, 6, 3.2, NULL, 17008, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XftCharFontSpec,16, 17009, 9, 3.2, NULL, 17008, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XftCharFontSpec (17009)\n");
-%d,%d,%d,'""3.2""',NULL,17008,NULL);\n",architecture,17009,0);
+Msg("Find size of XftCharFontSpec (17009)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,17008,NULL);\n",architecture,17009,0);
 #endif
 
 #if defined __x86_64__

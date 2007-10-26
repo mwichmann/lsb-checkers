@@ -60,8 +60,8 @@ CheckTypeSize(nl_catd,8, 6923, 12, 1.3, NULL, 40, NULL)
 #elif defined __x86_64__
 CheckTypeSize(nl_catd,8, 6923, 11, 2.0, NULL, 40, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of nl_catd (6923)\n");
-%d,%d,%d,'""2.0""',NULL,40,NULL);\n",architecture,6923,0);
+Msg("Find size of nl_catd (6923)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,40,NULL);\n",architecture,6923,0);
 #endif
 
 #if defined __i386__

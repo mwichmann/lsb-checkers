@@ -963,8 +963,8 @@ CheckTypeSize(FcBool,4, 11078, 10, 3.1, NULL, 6, NULL)
 #elif defined __s390x__
 CheckTypeSize(FcBool,4, 11078, 12, 3.1, NULL, 6, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FcBool (11078)\n");
-%d,%d,%d,'""3.1""',NULL,6,NULL);\n",architecture,11078,0);
+Msg("Find size of FcBool (11078)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,6,NULL);\n",architecture,11078,0);
 #endif
 
 #if defined __i386__
@@ -982,8 +982,8 @@ CheckTypeSize(FcType,4, 11084, 10, 3.1, NULL, 11083, NULL)
 #elif defined __s390x__
 CheckTypeSize(FcType,4, 11084, 12, 3.1, NULL, 11083, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FcType (11084)\n");
-%d,%d,%d,'""3.1""',NULL,11083,NULL);\n",architecture,11084,0);
+Msg("Find size of FcType (11084)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11083,NULL);\n",architecture,11084,0);
 #endif
 
 #if defined __i386__
@@ -1001,8 +1001,8 @@ CheckTypeSize(FcChar8,1, 11085, 10, 3.1, NULL, 3, NULL)
 #elif defined __s390x__
 CheckTypeSize(FcChar8,1, 11085, 12, 3.1, NULL, 3, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FcChar8 (11085)\n");
-%d,%d,%d,'""3.1""',NULL,3,NULL);\n",architecture,11085,0);
+Msg("Find size of FcChar8 (11085)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,3,NULL);\n",architecture,11085,0);
 #endif
 
 #if defined __i386__
@@ -1020,8 +1020,8 @@ CheckTypeSize(FcMatrix,32, 11089, 10, 3.1, NULL, 11088, NULL)
 #elif defined __s390x__
 CheckTypeSize(FcMatrix,32, 11089, 12, 3.1, NULL, 11088, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FcMatrix (11089)\n");
-%d,%d,%d,'""3.1""',NULL,11088,NULL);\n",architecture,11089,0);
+Msg("Find size of FcMatrix (11089)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11088,NULL);\n",architecture,11089,0);
 #endif
 
 #if defined __i386__
@@ -1039,8 +1039,8 @@ CheckTypeSize(FcValue,16, 11103, 10, 3.1, NULL, 11082, NULL)
 #elif defined __s390x__
 CheckTypeSize(FcValue,16, 11103, 12, 3.1, NULL, 11082, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FcValue (11103)\n");
-%d,%d,%d,'""3.1""',NULL,11082,NULL);\n",architecture,11103,0);
+Msg("Find size of FcValue (11103)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11082,NULL);\n",architecture,11103,0);
 #endif
 
 #if defined __i386__
@@ -1058,8 +1058,8 @@ CheckTypeSize(FcChar32,4, 11113, 10, 3.1, NULL, 7, NULL)
 #elif defined __s390x__
 CheckTypeSize(FcChar32,4, 11113, 12, 3.1, NULL, 7, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FcChar32 (11113)\n");
-%d,%d,%d,'""3.1""',NULL,7,NULL);\n",architecture,11113,0);
+Msg("Find size of FcChar32 (11113)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,7,NULL);\n",architecture,11113,0);
 #endif
 
 #if defined __i386__
@@ -1077,8 +1077,8 @@ CheckTypeSize(FcMatchKind,4, 11116, 10, 3.1, NULL, 11115, NULL)
 #elif defined __s390x__
 CheckTypeSize(FcMatchKind,4, 11116, 12, 3.1, NULL, 11115, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FcMatchKind (11116)\n");
-%d,%d,%d,'""3.1""',NULL,11115,NULL);\n",architecture,11116,0);
+Msg("Find size of FcMatchKind (11116)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11115,NULL);\n",architecture,11116,0);
 #endif
 
 #if defined __i386__
@@ -1096,8 +1096,8 @@ CheckTypeSize(FcObjectSet,12, 11118, 10, 3.1, NULL, 11117, NULL)
 #elif defined __s390x__
 CheckTypeSize(FcObjectSet,16, 11118, 12, 3.1, NULL, 11117, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FcObjectSet (11118)\n");
-%d,%d,%d,'""3.1""',NULL,11117,NULL);\n",architecture,11118,0);
+Msg("Find size of FcObjectSet (11118)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11117,NULL);\n",architecture,11118,0);
 #endif
 
 #if defined __i386__
@@ -1115,8 +1115,8 @@ CheckTypeSize(FcEndian,4, 11121, 10, 3.1, NULL, 11120, NULL)
 #elif defined __s390x__
 CheckTypeSize(FcEndian,4, 11121, 12, 3.1, NULL, 11120, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FcEndian (11121)\n");
-%d,%d,%d,'""3.1""',NULL,11120,NULL);\n",architecture,11121,0);
+Msg("Find size of FcEndian (11121)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11120,NULL);\n",architecture,11121,0);
 #endif
 
 #if defined __i386__
@@ -1134,8 +1134,8 @@ CheckTypeSize(FcConstant,12, 11127, 10, 3.1, NULL, 11126, NULL)
 #elif defined __s390x__
 CheckTypeSize(FcConstant,24, 11127, 12, 3.1, NULL, 11126, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FcConstant (11127)\n");
-%d,%d,%d,'""3.1""',NULL,11126,NULL);\n",architecture,11127,0);
+Msg("Find size of FcConstant (11127)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11126,NULL);\n",architecture,11127,0);
 #endif
 
 #if defined __i386__
@@ -1153,8 +1153,8 @@ CheckTypeSize(FcFontSet,12, 11132, 10, 3.1, NULL, 11130, NULL)
 #elif defined __s390x__
 CheckTypeSize(FcFontSet,16, 11132, 12, 3.1, NULL, 11130, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FcFontSet (11132)\n");
-%d,%d,%d,'""3.1""',NULL,11130,NULL);\n",architecture,11132,0);
+Msg("Find size of FcFontSet (11132)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11130,NULL);\n",architecture,11132,0);
 #endif
 
 #if defined __i386__
@@ -1172,8 +1172,8 @@ CheckTypeSize(FcSetName,4, 11135, 10, 3.1, NULL, 11134, NULL)
 #elif defined __s390x__
 CheckTypeSize(FcSetName,4, 11135, 12, 3.1, NULL, 11134, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FcSetName (11135)\n");
-%d,%d,%d,'""3.1""',NULL,11134,NULL);\n",architecture,11135,0);
+Msg("Find size of FcSetName (11135)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11134,NULL);\n",architecture,11135,0);
 #endif
 
 #if defined __i386__
@@ -1191,8 +1191,8 @@ CheckTypeSize(FcResult,4, 11142, 10, 3.1, NULL, 11141, NULL)
 #elif defined __s390x__
 CheckTypeSize(FcResult,4, 11142, 12, 3.1, NULL, 11141, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FcResult (11142)\n");
-%d,%d,%d,'""3.1""',NULL,11141,NULL);\n",architecture,11142,0);
+Msg("Find size of FcResult (11142)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11141,NULL);\n",architecture,11142,0);
 #endif
 
 #if defined __i386__
@@ -1210,8 +1210,8 @@ CheckTypeSize(FcObjectType,8, 11145, 10, 3.1, NULL, 11144, NULL)
 #elif defined __s390x__
 CheckTypeSize(FcObjectType,16, 11145, 12, 3.1, NULL, 11144, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FcObjectType (11145)\n");
-%d,%d,%d,'""3.1""',NULL,11144,NULL);\n",architecture,11145,0);
+Msg("Find size of FcObjectType (11145)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11144,NULL);\n",architecture,11145,0);
 #endif
 
 #if defined __i386__
@@ -1229,8 +1229,8 @@ CheckTypeSize(FcLangResult,4, 11161, 10, 3.1, NULL, 11160, NULL)
 #elif defined __s390x__
 CheckTypeSize(FcLangResult,4, 11161, 12, 3.1, NULL, 11160, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FcLangResult (11161)\n");
-%d,%d,%d,'""3.1""',NULL,11160,NULL);\n",architecture,11161,0);
+Msg("Find size of FcLangResult (11161)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11160,NULL);\n",architecture,11161,0);
 #endif
 
 #if defined __i386__

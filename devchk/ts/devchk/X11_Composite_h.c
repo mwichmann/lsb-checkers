@@ -47,8 +47,8 @@ CheckTypeSize(XtOrderProc,8, 10245, 12, 1.3, NULL, 10246, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XtOrderProc,8, 10245, 11, 2.0, NULL, 10246, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XtOrderProc (10245)\n");
-%d,%d,%d,'""2.0""',NULL,10246,NULL);\n",architecture,10245,0);
+Msg("Find size of XtOrderProc (10245)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10246,NULL);\n",architecture,10245,0);
 #endif
 
 #if defined __ia64__

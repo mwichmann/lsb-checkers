@@ -46,8 +46,8 @@ CheckTypeSize(XSecurityAuthorization,8, 8596, 12, 1.3, NULL, 9, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XSecurityAuthorization,8, 8596, 11, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XSecurityAuthorization (8596)\n");
-%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,8596,0);
+Msg("Find size of XSecurityAuthorization (8596)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,8596,0);
 #endif
 
 #if defined __i386__
