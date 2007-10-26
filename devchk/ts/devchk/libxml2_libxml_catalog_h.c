@@ -51,8 +51,8 @@ CheckTypeSize(xmlCatalogAllow,4, 15069, 10, 3.1, NULL, 15068, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlCatalogAllow,4, 15069, 12, 3.1, NULL, 15068, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlCatalogAllow (15069)\n");
-%d,%d,%d,'""3.1""',NULL,15068,NULL);\n",architecture,15069,0);
+Msg("Find size of xmlCatalogAllow (15069)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15068,NULL);\n",architecture,15069,0);
 #endif
 
 #if defined __i386__
@@ -70,8 +70,8 @@ CheckTypeSize(xmlCatalogPtr,4, 15073, 10, 3.1, NULL, 15072, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlCatalogPtr,8, 15073, 12, 3.1, NULL, 15072, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlCatalogPtr (15073)\n");
-%d,%d,%d,'""3.1""',NULL,15072,NULL);\n",architecture,15073,0);
+Msg("Find size of xmlCatalogPtr (15073)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15072,NULL);\n",architecture,15073,0);
 #endif
 
 #if defined __i386__

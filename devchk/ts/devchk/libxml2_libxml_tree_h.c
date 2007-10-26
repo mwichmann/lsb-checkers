@@ -82,8 +82,8 @@ CheckTypeSize(xmlBufferAllocationScheme,4, 14583, 10, 3.1, NULL, 14582, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlBufferAllocationScheme,4, 14583, 12, 3.1, NULL, 14582, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlBufferAllocationScheme (14583)\n");
-%d,%d,%d,'""3.1""',NULL,14582,NULL);\n",architecture,14583,0);
+Msg("Find size of xmlBufferAllocationScheme (14583)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14582,NULL);\n",architecture,14583,0);
 #endif
 
 #if defined __i386__
@@ -101,8 +101,8 @@ CheckTypeSize(xmlBuffer,16, 14584, 10, 3.1, NULL, 14581, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlBuffer,24, 14584, 12, 3.1, NULL, 14581, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlBuffer (14584)\n");
-%d,%d,%d,'""3.1""',NULL,14581,NULL);\n",architecture,14584,0);
+Msg("Find size of xmlBuffer (14584)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14581,NULL);\n",architecture,14584,0);
 #endif
 
 #if defined __i386__
@@ -120,8 +120,8 @@ CheckTypeSize(xmlBufferPtr,4, 14586, 10, 3.1, NULL, 14585, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlBufferPtr,8, 14586, 12, 3.1, NULL, 14585, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlBufferPtr (14586)\n");
-%d,%d,%d,'""3.1""',NULL,14585,NULL);\n",architecture,14586,0);
+Msg("Find size of xmlBufferPtr (14586)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14585,NULL);\n",architecture,14586,0);
 #endif
 
 #if defined __i386__
@@ -139,8 +139,8 @@ CheckTypeSize(xmlElementType,4, 14590, 10, 3.1, NULL, 14589, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlElementType,4, 14590, 12, 3.1, NULL, 14589, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlElementType (14590)\n");
-%d,%d,%d,'""3.1""',NULL,14589,NULL);\n",architecture,14590,0);
+Msg("Find size of xmlElementType (14590)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14589,NULL);\n",architecture,14590,0);
 #endif
 
 #if defined __i386__
@@ -158,8 +158,8 @@ CheckTypeSize(xmlNsType,4, 14598, 10, 3.1, NULL, 14590, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlNsType,4, 14598, 12, 3.1, NULL, 14590, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlNsType (14598)\n");
-%d,%d,%d,'""3.1""',NULL,14590,NULL);\n",architecture,14598,0);
+Msg("Find size of xmlNsType (14598)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14590,NULL);\n",architecture,14598,0);
 #endif
 
 #if defined __i386__
@@ -177,8 +177,8 @@ CheckTypeSize(xmlNs,20, 14601, 10, 3.1, NULL, 14596, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlNs,40, 14601, 12, 3.1, NULL, 14596, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlNs (14601)\n");
-%d,%d,%d,'""3.1""',NULL,14596,NULL);\n",architecture,14601,0);
+Msg("Find size of xmlNs (14601)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14596,NULL);\n",architecture,14601,0);
 #endif
 
 #if defined __i386__
@@ -196,8 +196,8 @@ CheckTypeSize(xmlAttributeType,4, 14606, 10, 3.1, NULL, 14605, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlAttributeType,4, 14606, 12, 3.1, NULL, 14605, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlAttributeType (14606)\n");
-%d,%d,%d,'""3.1""',NULL,14605,NULL);\n",architecture,14606,0);
+Msg("Find size of xmlAttributeType (14606)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14605,NULL);\n",architecture,14606,0);
 #endif
 
 #if defined __i386__
@@ -215,8 +215,8 @@ CheckTypeSize(xmlNode,60, 14607, 10, 3.1, NULL, 14588, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlNode,120, 14607, 12, 3.1, NULL, 14588, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlNode (14607)\n");
-%d,%d,%d,'""3.1""',NULL,14588,NULL);\n",architecture,14607,0);
+Msg("Find size of xmlNode (14607)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14588,NULL);\n",architecture,14607,0);
 #endif
 
 #if defined __i386__
@@ -234,8 +234,8 @@ CheckTypeSize(xmlNodePtr,4, 14609, 10, 3.1, NULL, 14608, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlNodePtr,8, 14609, 12, 3.1, NULL, 14608, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlNodePtr (14609)\n");
-%d,%d,%d,'""3.1""',NULL,14608,NULL);\n",architecture,14609,0);
+Msg("Find size of xmlNodePtr (14609)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14608,NULL);\n",architecture,14609,0);
 #endif
 
 #if defined __i386__
@@ -253,8 +253,8 @@ CheckTypeSize(xmlDoc,88, 14610, 10, 3.1, NULL, 14592, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlDoc,168, 14610, 12, 3.1, NULL, 14592, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlDoc (14610)\n");
-%d,%d,%d,'""3.1""',NULL,14592,NULL);\n",architecture,14610,0);
+Msg("Find size of xmlDoc (14610)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14592,NULL);\n",architecture,14610,0);
 #endif
 
 #if defined __i386__
@@ -272,8 +272,8 @@ CheckTypeSize(xmlDocPtr,4, 14612, 10, 3.1, NULL, 14611, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlDocPtr,8, 14612, 12, 3.1, NULL, 14611, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlDocPtr (14612)\n");
-%d,%d,%d,'""3.1""',NULL,14611,NULL);\n",architecture,14612,0);
+Msg("Find size of xmlDocPtr (14612)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14611,NULL);\n",architecture,14612,0);
 #endif
 
 #if defined __i386__
@@ -291,8 +291,8 @@ CheckTypeSize(xmlNsPtr,4, 14613, 10, 3.1, NULL, 14602, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlNsPtr,8, 14613, 12, 3.1, NULL, 14602, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlNsPtr (14613)\n");
-%d,%d,%d,'""3.1""',NULL,14602,NULL);\n",architecture,14613,0);
+Msg("Find size of xmlNsPtr (14613)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14602,NULL);\n",architecture,14613,0);
 #endif
 
 #if defined __i386__
@@ -310,8 +310,8 @@ CheckTypeSize(xmlDtd,64, 14615, 10, 3.1, NULL, 14594, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlDtd,128, 14615, 12, 3.1, NULL, 14594, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlDtd (14615)\n");
-%d,%d,%d,'""3.1""',NULL,14594,NULL);\n",architecture,14615,0);
+Msg("Find size of xmlDtd (14615)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14594,NULL);\n",architecture,14615,0);
 #endif
 
 #if defined __i386__
@@ -329,8 +329,8 @@ CheckTypeSize(xmlDtdPtr,4, 14617, 10, 3.1, NULL, 14616, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlDtdPtr,8, 14617, 12, 3.1, NULL, 14616, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlDtdPtr (14617)\n");
-%d,%d,%d,'""3.1""',NULL,14616,NULL);\n",architecture,14617,0);
+Msg("Find size of xmlDtdPtr (14617)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14616,NULL);\n",architecture,14617,0);
 #endif
 
 #if defined __i386__
@@ -348,8 +348,8 @@ CheckTypeSize(xmlDOMWrapCtxt,4, 14619, 10, 3.1, NULL, 14618, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlDOMWrapCtxt,8, 14619, 12, 3.1, NULL, 14618, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlDOMWrapCtxt (14619)\n");
-%d,%d,%d,'""3.1""',NULL,14618,NULL);\n",architecture,14619,0);
+Msg("Find size of xmlDOMWrapCtxt (14619)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14618,NULL);\n",architecture,14619,0);
 #endif
 
 #if defined __i386__
@@ -367,8 +367,8 @@ CheckTypeSize(xmlDOMWrapCtxtPtr,4, 14621, 10, 3.1, NULL, 14620, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlDOMWrapCtxtPtr,8, 14621, 12, 3.1, NULL, 14620, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlDOMWrapCtxtPtr (14621)\n");
-%d,%d,%d,'""3.1""',NULL,14620,NULL);\n",architecture,14621,0);
+Msg("Find size of xmlDOMWrapCtxtPtr (14621)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14620,NULL);\n",architecture,14621,0);
 #endif
 
 #if defined __i386__
@@ -386,8 +386,8 @@ CheckTypeSize(xmlAttr,48, 14623, 10, 3.1, NULL, 14603, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlAttr,96, 14623, 12, 3.1, NULL, 14603, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlAttr (14623)\n");
-%d,%d,%d,'""3.1""',NULL,14603,NULL);\n",architecture,14623,0);
+Msg("Find size of xmlAttr (14623)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14603,NULL);\n",architecture,14623,0);
 #endif
 
 #if defined __i386__
@@ -405,8 +405,8 @@ CheckTypeSize(xmlAttrPtr,4, 14625, 10, 3.1, NULL, 14624, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlAttrPtr,8, 14625, 12, 3.1, NULL, 14624, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlAttrPtr (14625)\n");
-%d,%d,%d,'""3.1""',NULL,14624,NULL);\n",architecture,14625,0);
+Msg("Find size of xmlAttrPtr (14625)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14624,NULL);\n",architecture,14625,0);
 #endif
 
 #if defined __i386__
@@ -424,8 +424,8 @@ CheckTypeSize(xmlOutputWriteCallback,4, 14628, 10, 3.1, NULL, 14627, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlOutputWriteCallback,8, 14628, 12, 3.1, NULL, 14627, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlOutputWriteCallback (14628)\n");
-%d,%d,%d,'""3.1""',NULL,14627,NULL);\n",architecture,14628,0);
+Msg("Find size of xmlOutputWriteCallback (14628)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14627,NULL);\n",architecture,14628,0);
 #endif
 
 #if defined __i386__
@@ -443,8 +443,8 @@ CheckTypeSize(xmlOutputCloseCallback,4, 14630, 10, 3.1, NULL, 14629, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlOutputCloseCallback,8, 14630, 12, 3.1, NULL, 14629, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlOutputCloseCallback (14630)\n");
-%d,%d,%d,'""3.1""',NULL,14629,NULL);\n",architecture,14630,0);
+Msg("Find size of xmlOutputCloseCallback (14630)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14629,NULL);\n",architecture,14630,0);
 #endif
 
 #if defined __i386__
@@ -462,8 +462,8 @@ CheckTypeSize(xmlCharEncodingInputFunc,4, 14633, 10, 3.1, NULL, 14632, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlCharEncodingInputFunc,8, 14633, 12, 3.1, NULL, 14632, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlCharEncodingInputFunc (14633)\n");
-%d,%d,%d,'""3.1""',NULL,14632,NULL);\n",architecture,14633,0);
+Msg("Find size of xmlCharEncodingInputFunc (14633)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14632,NULL);\n",architecture,14633,0);
 #endif
 
 #if defined __i386__
@@ -481,8 +481,8 @@ CheckTypeSize(xmlCharEncodingOutputFunc,4, 14634, 10, 3.1, NULL, 14632, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlCharEncodingOutputFunc,8, 14634, 12, 3.1, NULL, 14632, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlCharEncodingOutputFunc (14634)\n");
-%d,%d,%d,'""3.1""',NULL,14632,NULL);\n",architecture,14634,0);
+Msg("Find size of xmlCharEncodingOutputFunc (14634)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14632,NULL);\n",architecture,14634,0);
 #endif
 
 #if defined __i386__
@@ -500,8 +500,8 @@ CheckTypeSize(xmlCharEncodingHandler,20, 14635, 10, 3.1, NULL, 14631, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlCharEncodingHandler,40, 14635, 12, 3.1, NULL, 14631, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlCharEncodingHandler (14635)\n");
-%d,%d,%d,'""3.1""',NULL,14631,NULL);\n",architecture,14635,0);
+Msg("Find size of xmlCharEncodingHandler (14635)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14631,NULL);\n",architecture,14635,0);
 #endif
 
 #if defined __i386__
@@ -519,8 +519,8 @@ CheckTypeSize(xmlCharEncodingHandlerPtr,4, 14637, 10, 3.1, NULL, 14636, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlCharEncodingHandlerPtr,8, 14637, 12, 3.1, NULL, 14636, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlCharEncodingHandlerPtr (14637)\n");
-%d,%d,%d,'""3.1""',NULL,14636,NULL);\n",architecture,14637,0);
+Msg("Find size of xmlCharEncodingHandlerPtr (14637)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14636,NULL);\n",architecture,14637,0);
 #endif
 
 #if defined __i386__
@@ -538,8 +538,8 @@ CheckTypeSize(xmlOutputBuffer,32, 14638, 10, 3.1, NULL, 14626, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlOutputBuffer,56, 14638, 12, 3.1, NULL, 14626, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlOutputBuffer (14638)\n");
-%d,%d,%d,'""3.1""',NULL,14626,NULL);\n",architecture,14638,0);
+Msg("Find size of xmlOutputBuffer (14638)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14626,NULL);\n",architecture,14638,0);
 #endif
 
 #if defined __i386__

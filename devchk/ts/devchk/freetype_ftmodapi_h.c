@@ -225,8 +225,8 @@ CheckOffset(struct FT_Module_Class_,module_done,56,9,53983)
 CheckMemberSize(struct FT_Module_Class_,get_interface,8,9,53986)
 CheckOffset(struct FT_Module_Class_,get_interface,64,9,53986)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Module_Class_ (16753)\n");
-%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16753,0);
+Msg("Find size of FT_Module_Class_ (16753)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16753,0);
 #endif
 
 #if defined __x86_64__
@@ -244,8 +244,8 @@ CheckTypeSize(FT_Module_Constructor,4, 16763, 6, 3.2, NULL, 16762, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Module_Constructor,8, 16763, 9, 3.2, NULL, 16762, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Module_Constructor (16763)\n");
-%d,%d,%d,'""3.2""',NULL,16762,NULL);\n",architecture,16763,0);
+Msg("Find size of FT_Module_Constructor (16763)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16762,NULL);\n",architecture,16763,0);
 #endif
 
 #if defined __x86_64__
@@ -263,8 +263,8 @@ CheckTypeSize(FT_Module_Destructor,4, 16765, 6, 3.2, NULL, 16764, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Module_Destructor,8, 16765, 9, 3.2, NULL, 16764, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Module_Destructor (16765)\n");
-%d,%d,%d,'""3.2""',NULL,16764,NULL);\n",architecture,16765,0);
+Msg("Find size of FT_Module_Destructor (16765)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16764,NULL);\n",architecture,16765,0);
 #endif
 
 #if defined __x86_64__
@@ -282,8 +282,8 @@ CheckTypeSize(FT_Module_Interface,4, 16767, 6, 3.2, NULL, 16766, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Module_Interface,8, 16767, 9, 3.2, NULL, 16766, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Module_Interface (16767)\n");
-%d,%d,%d,'""3.2""',NULL,16766,NULL);\n",architecture,16767,0);
+Msg("Find size of FT_Module_Interface (16767)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16766,NULL);\n",architecture,16767,0);
 #endif
 
 #if defined __x86_64__
@@ -301,8 +301,8 @@ CheckTypeSize(FT_Module_Requester,4, 16769, 6, 3.2, NULL, 16768, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Module_Requester,8, 16769, 9, 3.2, NULL, 16768, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Module_Requester (16769)\n");
-%d,%d,%d,'""3.2""',NULL,16768,NULL);\n",architecture,16769,0);
+Msg("Find size of FT_Module_Requester (16769)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16768,NULL);\n",architecture,16769,0);
 #endif
 
 #if defined __x86_64__
@@ -320,8 +320,8 @@ CheckTypeSize(FT_Module_Class,36, 16770, 6, 3.2, NULL, 16753, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Module_Class,72, 16770, 9, 3.2, NULL, 16753, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Module_Class (16770)\n");
-%d,%d,%d,'""3.2""',NULL,16753,NULL);\n",architecture,16770,0);
+Msg("Find size of FT_Module_Class (16770)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16753,NULL);\n",architecture,16770,0);
 #endif
 
 #if defined __x86_64__

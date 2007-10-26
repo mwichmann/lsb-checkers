@@ -44,8 +44,8 @@ CheckTypeSize(XComposeStatus,16, 8313, 12, 1.3, NULL, 8312, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XComposeStatus,16, 8313, 11, 2.0, NULL, 8312, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XComposeStatus (8313)\n");
-%d,%d,%d,'""2.0""',NULL,8312,NULL);\n",architecture,8313,0);
+Msg("Find size of XComposeStatus (8313)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8312,NULL);\n",architecture,8313,0);
 #endif
 
 #if defined __i386__
@@ -63,8 +63,8 @@ CheckTypeSize(Region,8, 8314, 12, 1.3, NULL, 7850, NULL)
 #elif defined __x86_64__
 CheckTypeSize(Region,8, 8314, 11, 2.0, NULL, 7850, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of Region (8314)\n");
-%d,%d,%d,'""2.0""',NULL,7850,NULL);\n",architecture,8314,0);
+Msg("Find size of Region (8314)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7850,NULL);\n",architecture,8314,0);
 #endif
 
 #if defined __i386__
@@ -82,8 +82,8 @@ CheckTypeSize(XContext,4, 8319, 12, 1.3, NULL, 6, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XContext,4, 8319, 11, 2.0, NULL, 6, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XContext (8319)\n");
-%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,8319,0);
+Msg("Find size of XContext (8319)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,8319,0);
 #endif
 
 #ifdef TET_TEST

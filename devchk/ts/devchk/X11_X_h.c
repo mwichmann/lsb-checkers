@@ -3470,8 +3470,8 @@ CheckTypeSize(XID,8, 8171, 12, 1.3, NULL, 9, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XID,8, 8171, 11, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of XID (8171)\n");
-%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,8171,0);
+Msg("Find size of XID (8171)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,8171,0);
 #endif
 
 #if defined __i386__
@@ -3489,8 +3489,8 @@ CheckTypeSize(Atom,8, 8173, 12, 1.3, NULL, 9, NULL)
 #elif defined __x86_64__
 CheckTypeSize(Atom,8, 8173, 11, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of Atom (8173)\n");
-%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,8173,0);
+Msg("Find size of Atom (8173)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,8173,0);
 #endif
 
 #if defined __i386__
@@ -3508,8 +3508,8 @@ CheckTypeSize(VisualID,8, 8174, 12, 1.3, NULL, 9, NULL)
 #elif defined __x86_64__
 CheckTypeSize(VisualID,8, 8174, 11, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of VisualID (8174)\n");
-%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,8174,0);
+Msg("Find size of VisualID (8174)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,8174,0);
 #endif
 
 #if defined __i386__
@@ -3527,8 +3527,8 @@ CheckTypeSize(Time,8, 8175, 12, 1.3, NULL, 9, NULL)
 #elif defined __x86_64__
 CheckTypeSize(Time,8, 8175, 11, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of Time (8175)\n");
-%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,8175,0);
+Msg("Find size of Time (8175)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,8175,0);
 #endif
 
 #if defined __i386__
@@ -3546,8 +3546,8 @@ CheckTypeSize(Window,8, 8176, 12, 1.3, NULL, 8171, NULL)
 #elif defined __x86_64__
 CheckTypeSize(Window,8, 8176, 11, 2.0, NULL, 8171, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of Window (8176)\n");
-%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8176,0);
+Msg("Find size of Window (8176)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8176,0);
 #endif
 
 #if defined __i386__
@@ -3565,8 +3565,8 @@ CheckTypeSize(Font,8, 8177, 12, 1.3, NULL, 8171, NULL)
 #elif defined __x86_64__
 CheckTypeSize(Font,8, 8177, 11, 2.0, NULL, 8171, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of Font (8177)\n");
-%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8177,0);
+Msg("Find size of Font (8177)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8177,0);
 #endif
 
 #if defined __i386__
@@ -3584,8 +3584,8 @@ CheckTypeSize(Pixmap,8, 8178, 12, 1.3, NULL, 8171, NULL)
 #elif defined __x86_64__
 CheckTypeSize(Pixmap,8, 8178, 11, 2.0, NULL, 8171, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of Pixmap (8178)\n");
-%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8178,0);
+Msg("Find size of Pixmap (8178)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8178,0);
 #endif
 
 #if defined __i386__
@@ -3603,8 +3603,8 @@ CheckTypeSize(KeyCode,1, 8179, 12, 1.3, NULL, 3, NULL)
 #elif defined __x86_64__
 CheckTypeSize(KeyCode,1, 8179, 11, 2.0, NULL, 3, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of KeyCode (8179)\n");
-%d,%d,%d,'""2.0""',NULL,3,NULL);\n",architecture,8179,0);
+Msg("Find size of KeyCode (8179)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,3,NULL);\n",architecture,8179,0);
 #endif
 
 #if defined __i386__
@@ -3622,8 +3622,8 @@ CheckTypeSize(Drawable,8, 8727, 12, 1.3, NULL, 8171, NULL)
 #elif defined __x86_64__
 CheckTypeSize(Drawable,8, 8727, 11, 2.0, NULL, 8171, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of Drawable (8727)\n");
-%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8727,0);
+Msg("Find size of Drawable (8727)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8727,0);
 #endif
 
 #if defined __i386__
@@ -3641,8 +3641,8 @@ CheckTypeSize(Cursor,8, 8728, 12, 1.3, NULL, 8171, NULL)
 #elif defined __x86_64__
 CheckTypeSize(Cursor,8, 8728, 11, 2.0, NULL, 8171, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of Cursor (8728)\n");
-%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8728,0);
+Msg("Find size of Cursor (8728)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8728,0);
 #endif
 
 #if defined __i386__
@@ -3660,8 +3660,8 @@ CheckTypeSize(Colormap,8, 8729, 12, 1.3, NULL, 8171, NULL)
 #elif defined __x86_64__
 CheckTypeSize(Colormap,8, 8729, 11, 2.0, NULL, 8171, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of Colormap (8729)\n");
-%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8729,0);
+Msg("Find size of Colormap (8729)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8729,0);
 #endif
 
 #if defined __i386__
@@ -3679,8 +3679,8 @@ CheckTypeSize(GContext,8, 8730, 12, 1.3, NULL, 8171, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GContext,8, 8730, 11, 2.0, NULL, 8171, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of GContext (8730)\n");
-%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8730,0);
+Msg("Find size of GContext (8730)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8730,0);
 #endif
 
 #if defined __i386__

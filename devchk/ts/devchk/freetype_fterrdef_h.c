@@ -32,7 +32,7 @@ Msg("Checking data structures in freetype/fterrdef.h\n");
 
 printf("Checking data structures in freetype/fterrdef.h\n");
 #if _LSB_DEFAULT_ARCH
-#ifdef LSBCC_MODE
+#ifdef LSBCC_MODE		/* XXX hand-edit */
 #ifdef FT_ERR_BASE
 	CompareConstant(FT_ERR_BASE,0,10356,architecture,3.2,NULL)
 #else

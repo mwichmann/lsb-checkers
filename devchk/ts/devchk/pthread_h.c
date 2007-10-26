@@ -94,7 +94,9 @@ Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VA
 Msg( "Error: Constant not found: __SIZEOF_PTHREAD_BARRIERATTR_T\n");
 cnt++;
 #endif
+
 #endif
+
 #if _LSB_DEFAULT_ARCH
 /* No test for PTHREAD_MUTEX_INITIALIZER */
 #endif
@@ -380,8 +382,8 @@ CheckOffset(struct _pthread_cleanup_buffer,__canceltype,16,11,40621)
 CheckMemberSize(struct _pthread_cleanup_buffer,__prev,8,11,40622)
 CheckOffset(struct _pthread_cleanup_buffer,__prev,24,11,40622)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,6931,0);
 Msg("Find size of _pthread_cleanup_buffer (6931)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,6931,0);
 #endif
 
 #if defined __i386__
@@ -399,8 +401,8 @@ CheckTypeSize(pthread_key_t,4, 9059, 12, 1.3, NULL, 7, NULL)
 #elif defined __x86_64__
 CheckTypeSize(pthread_key_t,4, 9059, 11, 2.0, NULL, 7, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,9059,0);
 Msg("Find size of pthread_key_t (9059)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,9059,0);
 #endif
 
 #if defined __i386__
@@ -418,8 +420,8 @@ CheckTypeSize(pthread_once_t,4, 9062, 12, 1.3, NULL, 6, NULL)
 #elif defined __x86_64__
 CheckTypeSize(pthread_once_t,4, 9062, 11, 2.0, NULL, 6, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,9062,0);
 Msg("Find size of pthread_once_t (9062)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,9062,0);
 #endif
 
 #ifdef LSBCC_MODE       /* XXX hand-edit */
@@ -438,8 +440,8 @@ CheckTypeSize(__pthread_cond_align_t,8, 10917, 12, 2.0, NULL, 10, NULL)
 #elif defined __x86_64__
 CheckTypeSize(__pthread_cond_align_t,8, 10917, 11, 2.0, NULL, 10, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10,NULL);\n",architecture,10917,0);
 Msg("Find size of __pthread_cond_align_t (10917)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10,NULL);\n",architecture,10917,0);
 #endif
 #endif
 
@@ -482,8 +484,8 @@ CheckTypeSize(pthread_t,8, 9040, 12, 1.3, NULL, 9, NULL)
 #elif defined __x86_64__
 CheckTypeSize(pthread_t,8, 9040, 11, 2.0, NULL, 9, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,9040,0);
 Msg("Find size of pthread_t (9040)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,9040,0);
 #endif
 
 #ifdef LSBCC_MODE       /* XXX hand-edit */
@@ -518,8 +520,8 @@ CheckTypeSize(struct _pthread_fastlock,16, 10105, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _pthread_fastlock,__spinlock,4,11,34427)
 CheckOffset(struct _pthread_fastlock,__spinlock,8,11,34427)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10105,0);
 Msg("Find size of _pthread_fastlock (10105)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10105,0);
 #endif
 #endif
 
@@ -538,8 +540,8 @@ CheckTypeSize(pthread_mutex_t,40, 9047, 12, 1.3, NULL, 10106, NULL)
 #elif defined __x86_64__
 CheckTypeSize(pthread_mutex_t,40, 9047, 11, 2.0, NULL, 10106, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10106,NULL);\n",architecture,9047,0);
 Msg("Find size of pthread_mutex_t (9047)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10106,NULL);\n",architecture,9047,0);
 #endif
 
 #if defined __i386__
@@ -557,8 +559,8 @@ CheckTypeSize(pthread_mutexattr_t,4, 9049, 12, 1.3, NULL, 10109, NULL)
 #elif defined __x86_64__
 CheckTypeSize(pthread_mutexattr_t,4, 9049, 11, 2.0, NULL, 10109, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10109,NULL);\n",architecture,9049,0);
 Msg("Find size of pthread_mutexattr_t (9049)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10109,NULL);\n",architecture,9049,0);
 #endif
 
 #if defined __i386__
@@ -576,8 +578,8 @@ CheckTypeSize(pthread_attr_t,56, 9042, 12, 1.3, NULL, 10112, NULL)
 #elif defined __x86_64__
 CheckTypeSize(pthread_attr_t,56, 9042, 11, 2.0, NULL, 10112, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10112,NULL);\n",architecture,9042,0);
 Msg("Find size of pthread_attr_t (9042)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10112,NULL);\n",architecture,9042,0);
 #endif
 
 #if defined __i386__
@@ -595,8 +597,8 @@ CheckTypeSize(pthread_cond_t,48, 9051, 12, 1.3, NULL, 10110, NULL)
 #elif defined __x86_64__
 CheckTypeSize(pthread_cond_t,48, 9051, 11, 2.0, NULL, 10110, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10110,NULL);\n",architecture,9051,0);
 Msg("Find size of pthread_cond_t (9051)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10110,NULL);\n",architecture,9051,0);
 #endif
 
 #if defined __i386__
@@ -614,8 +616,8 @@ CheckTypeSize(pthread_condattr_t,4, 9053, 12, 1.3, NULL, 10434, NULL)
 #elif defined __x86_64__
 CheckTypeSize(pthread_condattr_t,4, 9053, 11, 2.0, NULL, 10434, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10434,NULL);\n",architecture,9053,0);
 Msg("Find size of pthread_condattr_t (9053)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10434,NULL);\n",architecture,9053,0);
 #endif
 
 #ifdef LSBCC_MODE       /* XXX hand-edit */
@@ -634,8 +636,8 @@ CheckTypeSize(_pthread_descr,8, 9087, 12, 1.3, NULL, 10104, NULL)
 #elif defined __x86_64__
 CheckTypeSize(_pthread_descr,8, 9087, 11, 2.0, NULL, 10104, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10104,NULL);\n",architecture,9087,0);
 Msg("Find size of _pthread_descr (9087)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10104,NULL);\n",architecture,9087,0);
 #endif
 #endif
 
@@ -654,8 +656,8 @@ CheckTypeSize(pthread_rwlock_t,56, 9055, 12, 1.3, NULL, 10279, NULL)
 #elif defined __x86_64__
 CheckTypeSize(pthread_rwlock_t,56, 9055, 11, 2.0, NULL, 10279, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10279,NULL);\n",architecture,9055,0);
 Msg("Find size of pthread_rwlock_t (9055)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10279,NULL);\n",architecture,9055,0);
 #endif
 
 #if defined __i386__
@@ -673,8 +675,8 @@ CheckTypeSize(pthread_rwlockattr_t,8, 9057, 12, 1.3, NULL, 10280, NULL)
 #elif defined __x86_64__
 CheckTypeSize(pthread_rwlockattr_t,8, 9057, 11, 2.0, NULL, 10280, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10280, NULL);\n",architecture,9057,0);
 Msg("Find size of pthread_rwlockattr_t (9057)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10280, NULL);\n",architecture,9057,0);
 #endif
 
 extern int pthread_barrier_destroy_db(pthread_barrier_t *);

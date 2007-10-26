@@ -41,8 +41,8 @@ CheckTypeSize(xmlFreeFunc,4, 14570, 10, 3.1, NULL, 14569, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlFreeFunc,8, 14570, 12, 3.1, NULL, 14569, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlFreeFunc (14570)\n");
-%d,%d,%d,'""3.1""',NULL,14569,NULL);\n",architecture,14570,0);
+Msg("Find size of xmlFreeFunc (14570)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14569,NULL);\n",architecture,14570,0);
 #endif
 
 #if defined __i386__
@@ -60,8 +60,8 @@ CheckTypeSize(xmlMallocFunc,4, 14572, 10, 3.1, NULL, 14571, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlMallocFunc,8, 14572, 12, 3.1, NULL, 14571, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlMallocFunc (14572)\n");
-%d,%d,%d,'""3.1""',NULL,14571,NULL);\n",architecture,14572,0);
+Msg("Find size of xmlMallocFunc (14572)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14571,NULL);\n",architecture,14572,0);
 #endif
 
 #if defined __i386__
@@ -79,8 +79,8 @@ CheckTypeSize(xmlReallocFunc,4, 14574, 10, 3.1, NULL, 14573, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlReallocFunc,8, 14574, 12, 3.1, NULL, 14573, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlReallocFunc (14574)\n");
-%d,%d,%d,'""3.1""',NULL,14573,NULL);\n",architecture,14574,0);
+Msg("Find size of xmlReallocFunc (14574)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14573,NULL);\n",architecture,14574,0);
 #endif
 
 #if defined __i386__

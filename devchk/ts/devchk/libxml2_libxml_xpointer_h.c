@@ -41,8 +41,8 @@ CheckTypeSize(xmlLocationSet,12, 14911, 10, 3.1, NULL, 14910, NULL)
 #elif defined __s390x__
 CheckTypeSize(xmlLocationSet,16, 14911, 12, 3.1, NULL, 14910, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of xmlLocationSet (14911)\n");
-%d,%d,%d,'""3.1""',NULL,14910,NULL);\n",architecture,14911,0);
+Msg("Find size of xmlLocationSet (14911)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14910,NULL);\n",architecture,14911,0);
 #endif
 
 #if defined __i386__

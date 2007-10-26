@@ -85,8 +85,8 @@ CheckOffset(struct FT_MemoryRec_,free,8,2,53947)
 CheckMemberSize(struct FT_MemoryRec_,realloc,4,2,53952)
 CheckOffset(struct FT_MemoryRec_,realloc,12,2,53952)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_MemoryRec_ (16726)\n");
-%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16726,0);
+Msg("Find size of FT_MemoryRec_ (16726)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16726,0);
 #endif
 
 #if defined __x86_64__
@@ -104,8 +104,8 @@ CheckTypeSize(FT_Memory,4, 16728, 6, 3.2, NULL, 16727, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Memory,8, 16728, 9, 3.2, NULL, 16727, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Memory (16728)\n");
-%d,%d,%d,'""3.2""',NULL,16727,NULL);\n",architecture,16728,0);
+Msg("Find size of FT_Memory (16728)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16727,NULL);\n",architecture,16728,0);
 #endif
 
 #if defined __x86_64__
@@ -123,8 +123,8 @@ CheckTypeSize(FT_Alloc_Func,4, 16730, 6, 3.2, NULL, 16729, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Alloc_Func,8, 16730, 9, 3.2, NULL, 16729, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Alloc_Func (16730)\n");
-%d,%d,%d,'""3.2""',NULL,16729,NULL);\n",architecture,16730,0);
+Msg("Find size of FT_Alloc_Func (16730)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16729,NULL);\n",architecture,16730,0);
 #endif
 
 #if defined __x86_64__
@@ -142,8 +142,8 @@ CheckTypeSize(FT_Free_Func,4, 16732, 6, 3.2, NULL, 16731, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Free_Func,8, 16732, 9, 3.2, NULL, 16731, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Free_Func (16732)\n");
-%d,%d,%d,'""3.2""',NULL,16731,NULL);\n",architecture,16732,0);
+Msg("Find size of FT_Free_Func (16732)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16731,NULL);\n",architecture,16732,0);
 #endif
 
 #if defined __x86_64__
@@ -161,8 +161,8 @@ CheckTypeSize(FT_Realloc_Func,4, 16734, 6, 3.2, NULL, 16733, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Realloc_Func,8, 16734, 9, 3.2, NULL, 16733, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Realloc_Func (16734)\n");
-%d,%d,%d,'""3.2""',NULL,16733,NULL);\n",architecture,16734,0);
+Msg("Find size of FT_Realloc_Func (16734)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16733,NULL);\n",architecture,16734,0);
 #endif
 
 #if defined __ia64__
@@ -306,8 +306,8 @@ CheckOffset(struct FT_StreamRec_,cursor,32,2,54234)
 CheckMemberSize(struct FT_StreamRec_,limit,4,2,54235)
 CheckOffset(struct FT_StreamRec_,limit,36,2,54235)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_StreamRec_ (16903)\n");
-%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16903,0);
+Msg("Find size of FT_StreamRec_ (16903)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16903,0);
 #endif
 
 #if defined __x86_64__
@@ -346,8 +346,8 @@ Msg("Missing member data for FT_StreamDesc_ on PPC64\n");
 CheckOffset(union FT_StreamDesc_,value,0,9,54222)
 CheckOffset(union FT_StreamDesc_,pointer,0,9,54223)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_StreamDesc_ (16904)\n");
-%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16904,0);
+Msg("Find size of FT_StreamDesc_ (16904)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16904,0);
 #endif
 
 #if defined __x86_64__
@@ -365,8 +365,8 @@ CheckTypeSize(FT_StreamDesc,4, 16905, 6, 3.2, NULL, 16904, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_StreamDesc,8, 16905, 9, 3.2, NULL, 16904, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_StreamDesc (16905)\n");
-%d,%d,%d,'""3.2""',NULL,16904,NULL);\n",architecture,16905,0);
+Msg("Find size of FT_StreamDesc (16905)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16904,NULL);\n",architecture,16905,0);
 #endif
 
 #if defined __x86_64__
@@ -384,8 +384,8 @@ CheckTypeSize(FT_Stream,4, 16907, 6, 3.2, NULL, 16906, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Stream,8, 16907, 9, 3.2, NULL, 16906, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Stream (16907)\n");
-%d,%d,%d,'""3.2""',NULL,16906,NULL);\n",architecture,16907,0);
+Msg("Find size of FT_Stream (16907)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16906,NULL);\n",architecture,16907,0);
 #endif
 
 #if defined __x86_64__
@@ -403,8 +403,8 @@ CheckTypeSize(FT_Stream_IoFunc,4, 16909, 6, 3.2, NULL, 16908, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Stream_IoFunc,8, 16909, 9, 3.2, NULL, 16908, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of FT_Stream_IoFunc (16909)\n");
-%d,%d,%d,'""3.2""',NULL,16908,NULL);\n",architecture,16909,0);
+Msg("Find size of FT_Stream_IoFunc (16909)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16908,NULL);\n",architecture,16909,0);
 #endif
 
 #if defined __x86_64__

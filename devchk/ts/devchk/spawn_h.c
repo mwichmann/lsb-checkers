@@ -100,8 +100,8 @@ CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 11, 3.2, NULL, 16584, NULL)
 #elif defined __s390x__
 CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 12, 3.2, NULL, 16584, NULL)
 #else
-Msg("REPLACE INTO ArchType VALUES (Msg("Find size of posix_spawn_file_actions_t (16588)\n");
-%d,%d,%d,'""3.2""',NULL,16584,NULL);\n",architecture,16588,0);
+Msg("Find size of posix_spawn_file_actions_t (16588)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16584,NULL);\n",architecture,16588,0);
 #endif
 
 #if 1
