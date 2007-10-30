@@ -302,13 +302,13 @@ sub writetest($$) {
 
     # Get Types
     $select = "SELECT DISTINCT * FROM Type ";
-    $select .= "INNER JOIN HeaderGroup ON Theadergroup=HGid ";
+    $select .= "INNER JOIN HeaderGroup ON Theadgroup=HGid ";
     $select .= "LEFT JOIN ArchType ON ATtid=Tid ";
     $select .= "LEFT JOIN Architecture ON Aid=ATaid ";
     $select .= "WHERE HGheader=$Hid ";
 	$select.= "AND (ATappearedin <= '$lsbversion' AND ATappearedin<>'') ";
 	$select.= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin >'$lsbversion')";
-    $select .= "ORDER BY Theadergroup,Tid ";
+    $select .= "ORDER BY Theadgroup,Tid ";
     $tth = $Dbh->query($select) || die $Dbh->errmsg();
 
     $fname = $Hname;
@@ -316,7 +316,7 @@ sub writetest($$) {
 
     # Try to guess if we have a cpp header
     $select = "SELECT * FROM Type ";
-    $select.= "LEFT JOIN HeaderGroup ON Theadergroup=HGid ";
+    $select.= "LEFT JOIN HeaderGroup ON Theadgroup=HGid ";
     $select.= "WHERE HGheader=$Hid ";
     $select.= "AND (Ttype='Class' OR Ttype='TemplateInstance' OR Tclass>0) ";
     $classth = $Dbh->query($select) || die $Dbh->errmsg();
@@ -1159,7 +1159,7 @@ open( TESTS, "|c++filt |c++filt >cxx.C" ) || die "Can't open cxx.C for writing";
 $select = "SELECT DISTINCT * FROM Type ";
 $select .= "LEFT JOIN ArchType ON ATtid=Tid ";
 $select .= "LEFT JOIN Architecture ON Aid=ATaid ";
-$select .= "WHERE Ttype='Class' AND Theadergroup<669 ";
+$select .= "WHERE Ttype='Class' AND Theadgroup<669 ";
 $select .= "AND ATappearedin <> '' AND ATappearedin <='$lsbversion' ";
 $select .= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin >'$lsbversion') ";
 $select .= "ORDER BY Tname,ATaid";
@@ -1358,4 +1358,5 @@ print TET_HDR "\t{ NULL, 0 }\n";
 print TET_HDR "};\n";
 close(TET_HDR);
 close(SUBDEFS);
+
 
