@@ -204,14 +204,14 @@ my $version_count_q = $dbh->prepare('SELECT COUNT(*) from Version')
     or die "Couldn't prepare version_count query: ".DBI->errstr;
 
 my $write_int_header_q = $dbh->prepare(
-'SELECT Theadergroup, Tid
+'SELECT Theadgroup, Tid
 FROM  Parameter, Type
 WHERE Pint = ?
   AND Ptype = Tid'
 ) or die "Couldn't prepare write_int_header query: " . DBI->errstr;
 
 my $basetype_header_q = $dbh->prepare(
-'Select Theadergroup, ATbasetype from Type left join ArchType ON ATtid=Tid
+'Select Theadgroup, ATbasetype from Type left join ArchType ON ATtid=Tid
 	where Tid = ? ')
 	or die "Couldn't prepare basetype_header query: ".DBI->errstr;
 

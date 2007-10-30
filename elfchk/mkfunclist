@@ -28,7 +28,7 @@ for ($i = 0; $i <= $#lsbvernames; $i++) {
 }
 
 foreach $ver (@lsbversions) {
-	$select = "SELECT DISTINCT Iid,Iname,Isrcbin,Iisdeprecated,AIappearedin,AIwithdrawnin,Vname,Asymbol,Aname,Aid,Mname FROM Interface ";
+	$select = "SELECT DISTINCT Iid,Iname,Isrcbin,Ideprecatedsince,AIappearedin,AIwithdrawnin,Vname,Asymbol,Aname,Aid,Mname FROM Interface ";
 	$select.= "LEFT JOIN LGInt ON Iid=LGIint ";
 	$select.= "LEFT JOIN LibGroup ON LGid=LGIlibg ";
 	$select.= "LEFT JOIN Library ON Lid=LGlib ";
@@ -96,7 +96,7 @@ foreach $ver (@lsbversions) {
 			}
 		}
 		printf "\t{\"%s\",\"%s\",",$entry{'Iname'},$entry{'Vname'};
-		if ($entry{'Iisdeprecated'} eq 'Yes') {
+		if( $entry{'Ideprecatedsince'} and $entry{'Ideprecatedsince'} le $lsbversion ) {
 			printf "1";
 		} else {
 			printf "0";
