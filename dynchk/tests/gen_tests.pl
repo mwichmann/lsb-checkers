@@ -75,7 +75,7 @@ my $struct_q = $dbh->prepare(
 FROM HeaderGroup, Header, Type
 LEFT JOIN ArchType ON Tid=ATtid
 WHERE Ttype = "Struct"
-  AND Theadergroup = HGid
+  AND Theadgroup = HGid
   AND HGheader = Hid
   AND ( ( (ATappearedin <= \''.$lsbversion.'\' and ATappearedin<>\'\')
   AND (ATwithdrawnin IS NULL OR ATwithdrawnin >\''.$lsbversion.'\') )
@@ -134,7 +134,7 @@ my $header_q = $dbh->prepare(
   ( ( (ATappearedin <= \''.$lsbversion.'\' and ATappearedin<>\'\')
   AND (ATwithdrawnin IS NULL OR ATwithdrawnin >\''.$lsbversion.'\') )
   OR ( Tsrconly =\'Yes\' OR Tindirect = \'Yes\') )
-	and Theadergroup = HGid and HGheader=Hid
+	and Theadgroup = HGid and HGheader=Hid
 	AND (Happearedin is not NULL and Happearedin <= \''.$lsbversion.'\' and Happearedin<>\'\')
   	AND (Hwithdrawnin IS NULL OR Hwithdrawnin > \''.$lsbversion.'\')
 	GROUP BY Hname')
