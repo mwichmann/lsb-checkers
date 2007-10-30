@@ -17,7 +17,7 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 $Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
-$select = "SELECT DISTINCT Iid,Iname,Isrcbin,Iisdeprecated,Vname,Asymbol,Aname,Mname FROM Interface ";
+$select = "SELECT DISTINCT Iid,Iname,Isrcbin,Ideprecatedsince,Vname,Asymbol,Aname,Mname FROM Interface ";
 $select.= "LEFT JOIN ArchInt ON Iid=AIint ";
 $select.= "LEFT JOIN Architecture ON Aid=AIarch ";
 $select.= "LEFT JOIN Version ON Vid=AIversion ";
@@ -58,7 +58,7 @@ for(1..$sth->numrows) {
 	}
 	
 	printf "\t{\"%s\",\"%s\",",$entry{'Iname'},$entry{'Vname'};
-	if( $entry{'Iisdeprecated'} eq 'Yes' ) {
+	if( $entry{'Ideprecatedsince'} and $entry{'Ideprecatedsince'} le $lsbversion ) {
 		printf "1";
 	} else {
 		printf "0";
