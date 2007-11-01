@@ -90,8 +90,8 @@ checkRpmIdx(RpmFile * file1, RpmHdrIndex * hidx, RpmIdxTagFuncRec Tags[],
 		      ntohl(hidx[i].offset), ntohl(hidx[i].count));
 	    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 		               0, 0, 0, tmp_string);
-	    fprintf(stderr, "Error: %s\n", tmp_string);
-	    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+	    fprintf(stderr, "Warning: %s\n", tmp_string);
+	    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_WARNING);
 	    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count); 
 	}
     }
