@@ -100,7 +100,7 @@ checksymbols(ElfFile *file, int modules)
 #endif
           if(strcmp(file->versionnames[file->vers[i]],DynSyms[LSB_Version][j].vername) != 0)
           {
-            if(strlen(DynSyms[j].vername) == 0) {
+            if(strlen(DynSyms[LSB_Version][j].vername) == 0) {
               snprintf(tmp_string, TMP_STRING_LENGTH,
                        "Symbol %s has version %s expecting unversioned",
                        symbol_name,
