@@ -388,7 +388,7 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
 			}
 			snprintf(tmp_string, TMP_STRING_SIZE,
 				 "Section %s not checked",
-				 SectionInfo[i].name);
+				 SectionInfo[LSB_Version][i].name);
 			fprintf(stderr, "%s\n", tmp_string);
 			tetj_testcase_info(journal, tetj_activity_count,
 					   tetj_tp_count, 0, 0, 0,
