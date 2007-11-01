@@ -233,18 +233,63 @@ cnt++;
 /* No test for INFINITY */
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#if defined __powerpc64__
 /* No test for isnan(x) */
+#elif defined __powerpc__ && !defined __powerpc64__
+/* No test for isnan(x) */
+#elif defined __ia64__
+/* No test for isnan(x) */
+#elif defined __i386__
+/* No test for isnan(x) */
+#elif defined __s390x__
+/* No test for isnan(x) */
+#elif defined __x86_64__
+/* No test for isnan(x) */
+#elif defined __s390__ && !defined __s390x__
+/* No test for isnan(x) */
+#else
+Msg( "No definition for isnan(x) (5186, macro) in db\n");
+#ifdef isnan(x)
 #endif
-
-#if _LSB_DEFAULT_ARCH
+#endif
+#if defined __powerpc64__
 /* No test for isinf(x) */
+#elif defined __powerpc__ && !defined __powerpc64__
+/* No test for isinf(x) */
+#elif defined __ia64__
+/* No test for isinf(x) */
+#elif defined __i386__
+/* No test for isinf(x) */
+#elif defined __s390x__
+/* No test for isinf(x) */
+#elif defined __x86_64__
+/* No test for isinf(x) */
+#elif defined __s390__ && !defined __s390x__
+/* No test for isinf(x) */
+#else
+Msg( "No definition for isinf(x) (5187, macro) in db\n");
+#ifdef isinf(x)
 #endif
-
-#if _LSB_DEFAULT_ARCH
+#endif
+#if defined __powerpc64__
 /* No test for isfinite(x) */
+#elif defined __powerpc__ && !defined __powerpc64__
+/* No test for isfinite(x) */
+#elif defined __ia64__
+/* No test for isfinite(x) */
+#elif defined __i386__
+/* No test for isfinite(x) */
+#elif defined __s390x__
+/* No test for isfinite(x) */
+#elif defined __x86_64__
+/* No test for isfinite(x) */
+#elif defined __s390__ && !defined __s390x__
+/* No test for isfinite(x) */
+#else
+Msg( "No definition for isfinite(x) (5247, macro) in db\n");
+#ifdef isfinite(x)
 #endif
-
+#endif
 #if defined __powerpc64__
 /* No test for fpclassify(x) */
 #elif defined __powerpc__ && !defined __powerpc64__

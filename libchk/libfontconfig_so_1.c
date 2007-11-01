@@ -67,7 +67,7 @@ struct versym libfontconfig_so_1[] = {
 	{"FcFontSetSort","",0,LSB_Graphics_Ext,0,1},
 	{"FcFontSetSortDestroy","",0,LSB_Graphics_Ext,0,1},
 	{"FcFontSort","",0,LSB_Graphics_Ext,0,1},
-	{"FcFreeTypeCharIndex","",0,LSB_Graphics_Ext,0,1},
+	{"FcFreeTypeCharIndex","",0,LSB_Graphics_Ext,4,1},
 	{"FcFreeTypeCharSet","",0,LSB_Graphics_Ext,0,1},
 	{"FcFreeTypeCharSetAndSpacing","",0,LSB_Graphics_Ext,0,1},
 	{"FcFreeTypeQuery","",0,LSB_Graphics_Ext,0,1},
