@@ -127,6 +127,15 @@ struct versym libm_so_6[] = {
 #if defined __powerpc64__
 	{"__signbit","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
+#if defined __s390__ && !defined __s390x__
+	{"__signbit","GLIBC_2.1",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"__signbit","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__signbit","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
 #if defined __i386__
 	{"__signbitf","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
@@ -138,6 +147,15 @@ struct versym libm_so_6[] = {
 #endif
 #if defined __powerpc64__
 	{"__signbitf","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__signbitf","GLIBC_2.1",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"__signbitf","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__signbitf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"__signbitl","GLIBC_2.1",0,LSB_Core,4,1},
