@@ -100,10 +100,17 @@ checksymbols(ElfFile *file, int modules)
 #endif
           if(strcmp(file->versionnames[file->vers[i]],DynSyms[LSB_Version][j].vername) != 0)
           {
-            snprintf(tmp_string, TMP_STRING_LENGTH,
-                     "Symbol %s has version %s expecting %s",
-                     symbol_name,
-                     file->versionnames[file->vers[i]], DynSyms[LSB_Version][j].vername);
+            if(strlen(DynSyms[LSB_Version][j].vername) == 0) {
+              snprintf(tmp_string, TMP_STRING_LENGTH,
+                       "Symbol %s has version %s expecting unversioned",
+                       symbol_name,
+                       file->versionnames[file->vers[i]]);
+            } else {
+              snprintf(tmp_string, TMP_STRING_LENGTH,
+                       "Symbol %s has version %s expecting %s",
+                       symbol_name,
+                       file->versionnames[file->vers[i]], DynSyms[LSB_Version][j].vername);
+            }
             printf("%s\n", tmp_string);
             TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
                           tmp_string);

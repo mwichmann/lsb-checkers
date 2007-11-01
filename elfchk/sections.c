@@ -128,7 +128,9 @@ checkSTRTAB(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 int
 checkNOTE(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
-  return check_NOTE(file1, ((unsigned char *)(file1->addr)+hdr1->sh_offset), hdr1->sh_size, journal );
+  /* Jeff Licquia: This looks infinitely recursive to me. */
+  /* return check_NOTE(file1, ((unsigned char *)(file1->addr)+hdr1->sh_offset), hdr1->sh_size, journal ); */
+  return 0;
 }
 
 int
@@ -384,6 +386,13 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
 				fprintf( stderr, "Section [%2d] %-12.12s Not checked\n",
 						i, SectionInfo[LSB_Version][i].name );
 			}
+			snprintf(tmp_string, TMP_STRING_SIZE,
+				 "Section %s not checked",
+				 SectionInfo[LSB_Version][i].name);
+			fprintf(stderr, "%s\n", tmp_string);
+			tetj_testcase_info(journal, tetj_activity_count,
+					   tetj_tp_count, 0, 0, 0,
+					   tmp_string);
 			break;
 	      case -1: /* Fail */
 			fail = 1;
@@ -427,6 +436,13 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
 				fprintf( stderr, "Section [%2d] %-12.12s Not checked\n",
 						i, ElfGetString(file1, hdr1->sh_name));
 			}
+			snprintf(tmp_string, TMP_STRING_SIZE,
+				 "Section %s not checked",
+				 SectionType[i].name);
+			fprintf(stderr, "%s\n", tmp_string);
+			tetj_testcase_info(journal, tetj_activity_count,
+					   tetj_tp_count, 0, 0, 0,
+					   tmp_string);
 			break;
 	      case -1: /* Fail */
 			fail = 1;
