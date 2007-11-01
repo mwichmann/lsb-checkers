@@ -3,7 +3,7 @@
 struct versym libXft_so_2[] = {
 	{"XftCharExists","",0,LSB_Graphics_Ext,0,1},
 	{"XftCharFontSpecRender","",0,LSB_Graphics_Ext,0,1},
-	{"XftCharIndex","",0,LSB_Graphics_Ext,0,1},
+	{"XftCharIndex","",0,LSB_Graphics_Ext,4,1},
 	{"XftCharSpecRender","",0,LSB_Graphics_Ext,0,1},
 	{"XftColorAllocName","",0,LSB_Graphics_Ext,0,1},
 	{"XftColorAllocValue","",0,LSB_Graphics_Ext,0,1},
