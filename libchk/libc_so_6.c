@@ -5258,6 +5258,48 @@ struct versym libc_so_6[] = {
 	{"gethostbyname","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
 #if defined __i386__
+	{"gethostbyname2","GLIBC_2.1.2",0,LSB_Core,0,1},
+#endif
+#if defined __ia64__
+	{"gethostbyname2","GLIBC_2.2",0,LSB_Core,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"gethostbyname2","GLIBC_2.1.2",0,LSB_Core,0,1},
+#endif
+#if defined __powerpc64__
+	{"gethostbyname2","GLIBC_2.3",0,LSB_Core,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"gethostbyname2","GLIBC_2.1.2",0,LSB_Core,0,1},
+#endif
+#if defined __x86_64__
+	{"gethostbyname2","GLIBC_2.2.5",0,LSB_Core,0,1},
+#endif
+#if defined __s390x__
+	{"gethostbyname2","GLIBC_2.2",0,LSB_Core,0,1},
+#endif
+#if defined __i386__
+	{"gethostbyname2_r","GLIBC_2.1.2",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"gethostbyname2_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"gethostbyname2_r","GLIBC_2.1.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"gethostbyname2_r","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"gethostbyname2_r","GLIBC_2.1.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"gethostbyname2_r","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"gethostbyname2_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
 	{"gethostbyname_r","GLIBC_2.1.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
