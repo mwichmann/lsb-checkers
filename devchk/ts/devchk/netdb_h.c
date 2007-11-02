@@ -682,6 +682,8 @@ Msg("Find size of addrinfo (10125)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10125,0);
 #endif
 
+extern int gethostbyname2_r_db(const char *, int, struct hostent *, char *, size_t, struct hostent * *, int *);
+CheckInterfacedef(gethostbyname2_r,gethostbyname2_r_db);
 extern void endprotoent_db(void);
 CheckInterfacedef(endprotoent,endprotoent_db);
 extern void endservent_db(void);
@@ -696,6 +698,8 @@ extern struct hostent * gethostbyaddr_db(const void *, socklen_t, int);
 CheckInterfacedef(gethostbyaddr,gethostbyaddr_db);
 extern struct hostent * gethostbyname_db(const char *);
 CheckInterfacedef(gethostbyname,gethostbyname_db);
+extern struct hostent * gethostbyname2_db(const char *, int);
+CheckInterfacedef(gethostbyname2,gethostbyname2_db);
 extern struct protoent * getprotobyname_db(const char *);
 CheckInterfacedef(getprotobyname,getprotobyname_db);
 extern struct protoent * getprotobynumber_db(int);
