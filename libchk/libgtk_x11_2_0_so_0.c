@@ -1713,6 +1713,7 @@ struct versym libgtk_x11_2_0_so_0[] = {
 	{"gtk_toolbar_insert","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_toolbar_new","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_toolbar_set_drop_highlight_item","",0,LSB_Toolkit_Gtk,0,1},
+	{"gtk_toolbar_set_icon_size","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_toolbar_set_orientation","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_toolbar_set_show_arrow","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_toolbar_set_style","",0,LSB_Toolkit_Gtk,0,1},
