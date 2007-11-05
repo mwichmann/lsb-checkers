@@ -17760,6 +17760,8 @@ extern void gtk_paint_focus_db(GtkStyle *, GdkWindow *, GtkStateType, GdkRectang
 CheckInterfacedef(gtk_paint_focus,gtk_paint_focus_db);
 extern GtkUpdateType gtk_range_get_update_policy_db(GtkRange *);
 CheckInterfacedef(gtk_range_get_update_policy,gtk_range_get_update_policy_db);
+extern void gtk_toolbar_set_icon_size_db(GtkToolbar *, GtkIconSize);
+CheckInterfacedef(gtk_toolbar_set_icon_size,gtk_toolbar_set_icon_size_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
