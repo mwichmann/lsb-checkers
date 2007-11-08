@@ -219,7 +219,23 @@ cnt++;
 
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#if defined __powerpc64__
+#ifdef HUGE_VALL
+	CompareLongDoubleConstant(HUGE_VALL,0x1.0p2047L,5139,architecture,2.0,NULL)
+#else
+Msg( "Error: Constant not found: HUGE_VALL\n");
+cnt++;
+#endif
+
+#elif defined __powerpc__ && !defined __powerpc64__
+#ifdef HUGE_VALL
+	CompareLongDoubleConstant(HUGE_VALL,0x1.0p2047L,5139,architecture,2.0,NULL)
+#else
+Msg( "Error: Constant not found: HUGE_VALL\n");
+cnt++;
+#endif
+
+#elif defined __ia64__
 #ifdef HUGE_VALL
 	CompareLongDoubleConstant(HUGE_VALL,0x1.0p32767L,5139,architecture,2.0,NULL)
 #else
@@ -227,8 +243,43 @@ Msg( "Error: Constant not found: HUGE_VALL\n");
 cnt++;
 #endif
 
+#elif defined __i386__
+#ifdef HUGE_VALL
+	CompareLongDoubleConstant(HUGE_VALL,0x1.0p32767L,5139,architecture,2.0,NULL)
+#else
+Msg( "Error: Constant not found: HUGE_VALL\n");
+cnt++;
 #endif
 
+#elif defined __s390x__
+#ifdef HUGE_VALL
+	CompareLongDoubleConstant(HUGE_VALL,0x1.0p2047L,5139,architecture,2.0,NULL)
+#else
+Msg( "Error: Constant not found: HUGE_VALL\n");
+cnt++;
+#endif
+
+#elif defined __x86_64__
+#ifdef HUGE_VALL
+	CompareLongDoubleConstant(HUGE_VALL,0x1.0p32767L,5139,architecture,2.0,NULL)
+#else
+Msg( "Error: Constant not found: HUGE_VALL\n");
+cnt++;
+#endif
+
+#elif defined __s390__ && !defined __s390x__
+#ifdef HUGE_VALL
+	CompareLongDoubleConstant(HUGE_VALL,0x1.0p2047L,5139,architecture,2.0,NULL)
+#else
+Msg( "Error: Constant not found: HUGE_VALL\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for HUGE_VALL (5139, longdouble) in db\n");
+#ifdef HUGE_VALL
+#endif
+#endif
 #if _LSB_DEFAULT_ARCH
 /* No test for INFINITY */
 #endif
