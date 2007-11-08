@@ -2747,6 +2747,8 @@ Msg("Find size of off64_t (9112)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10, NULL);\n",architecture,9112,0);
 #endif
 
+extern int getdtablesize_db(void);
+CheckInterfacedef(getdtablesize,getdtablesize_db);
 extern pid_t __getpgid_db(pid_t);
 CheckInterfacedef(__getpgid,__getpgid_db);
 extern void _exit_db(int);
