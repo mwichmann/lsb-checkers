@@ -717,6 +717,12 @@ CheckTypeSize(fenv_t,28, 11040, 2, 3.0, NULL, 11039, NULL)
 CheckTypeSize(fenv_t,32, 11040, 11, 3.0, NULL, 11039, NULL)
 #endif
 
+extern int fedisableexcept_db(int);
+CheckInterfacedef(fedisableexcept,fedisableexcept_db);
+extern int feenableexcept_db(int);
+CheckInterfacedef(feenableexcept,feenableexcept_db);
+extern int fegetexcept_db(void);
+CheckInterfacedef(fegetexcept,fegetexcept_db);
 extern int feclearexcept_db(int);
 CheckInterfacedef(feclearexcept,feclearexcept_db);
 extern int fegetenv_db(fenv_t *);
