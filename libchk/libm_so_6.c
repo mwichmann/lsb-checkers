@@ -2948,6 +2948,48 @@ struct versym libm_so_6[] = {
 	{"feclearexcept","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
+	{"fedisableexcept","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"fedisableexcept","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"fedisableexcept","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"fedisableexcept","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"fedisableexcept","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"fedisableexcept","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"fedisableexcept","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
+	{"feenableexcept","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"feenableexcept","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"feenableexcept","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"feenableexcept","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"feenableexcept","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"feenableexcept","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"feenableexcept","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
 	{"fegetenv","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -2967,6 +3009,27 @@ struct versym libm_so_6[] = {
 #endif
 #if defined __s390x__
 	{"fegetenv","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
+	{"fegetexcept","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"fegetexcept","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"fegetexcept","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"fegetexcept","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"fegetexcept","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"fegetexcept","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"fegetexcept","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"fegetexceptflag","GLIBC_2.2",0,LSB_Core,4,1},
