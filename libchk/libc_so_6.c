@@ -8699,6 +8699,27 @@ struct versym libc_so_6[] = {
 	{"mrand48","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
+	{"mremap","GLIBC_2.0",0,LSB_Core,0,1},
+#endif
+#if defined __ia64__
+	{"mremap","GLIBC_2.2",0,LSB_Core,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"mremap","GLIBC_2.0",0,LSB_Core,0,1},
+#endif
+#if defined __powerpc64__
+	{"mremap","GLIBC_2.3",0,LSB_Core,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"mremap","GLIBC_2.0",0,LSB_Core,0,1},
+#endif
+#if defined __x86_64__
+	{"mremap","GLIBC_2.2.5",0,LSB_Core,0,1},
+#endif
+#if defined __s390x__
+	{"mremap","GLIBC_2.2",0,LSB_Core,0,1},
+#endif
+#if defined __i386__
 	{"msgctl","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__

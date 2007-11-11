@@ -36,6 +36,26 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef MREMAP_MAYMOVE
+	CompareConstant(MREMAP_MAYMOVE,1,3501,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: MREMAP_MAYMOVE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef MREMAP_FIXED
+	CompareConstant(MREMAP_FIXED,2,3502,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: MREMAP_FIXED\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef PROT_READ
 	CompareConstant(PROT_READ,0x1,3503,architecture,1.1,NULL)
 #else
@@ -279,6 +299,8 @@ cnt++;
 
 #endif
 
+extern void * mremap_db(void *, size_t, size_t, int);
+CheckInterfacedef(mremap,mremap_db);
 extern int posix_madvise_db(void *, size_t, int);
 CheckInterfacedef(posix_madvise,posix_madvise_db);
 extern int msync_db(void *, size_t, int);
