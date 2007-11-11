@@ -89,6 +89,7 @@ struct versym libpng12_so_0[] = {
 	{"png_set_swap_alpha","",0,LSB_Graphics_Ext,0,1},
 	{"png_set_tIME","",0,LSB_Graphics_Ext,0,1},
 	{"png_set_tRNS","",0,LSB_Graphics_Ext,0,1},
+	{"png_set_tRNS_to_alpha","",0,LSB_Graphics_Ext,0,1},
 	{"png_set_text","",0,LSB_Graphics_Ext,0,1},
 	{"png_set_write_fn","",0,LSB_Graphics_Ext,0,1},
 	{"png_sig_cmp","",0,LSB_Graphics_Ext,0,1},

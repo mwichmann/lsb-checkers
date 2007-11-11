@@ -3533,6 +3533,8 @@ extern void png_set_expand_db(png_structp);
 CheckInterfacedef(png_set_expand,png_set_expand_db);
 extern void png_set_oFFs_db(png_structp, png_infop, png_int_32, png_int_32, int);
 CheckInterfacedef(png_set_oFFs,png_set_oFFs_db);
+extern void png_set_tRNS_to_alpha_db(png_structp);
+CheckInterfacedef(png_set_tRNS_to_alpha,png_set_tRNS_to_alpha_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
