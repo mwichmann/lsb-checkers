@@ -11,6 +11,8 @@ LIBOBJS = \
 	libc_so_6.o \
 	libc_so_6_1.o \
 	libcrypt_so_1.o \
+	libcups_so_2.o \
+	libcupsimage_so_2.o \
 	libdl_so_2.o \
 	libfontconfig_so_1.o \
 	libfreetype_so_6.o \

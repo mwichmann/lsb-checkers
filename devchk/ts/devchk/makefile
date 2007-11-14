@@ -26,6 +26,9 @@ OBJS = hdrchk.o \
 	complex_h.o \
 	cpio_h.o \
 	ctype_h.o \
+	cups_cups_h.o \
+	cups_ppd_h.o \
+	cups_raster_h.o \
 	curses_h.o \
 	dirent_h.o \
 	dlfcn_h.o \
