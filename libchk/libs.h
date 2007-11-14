@@ -113,6 +113,10 @@ extern struct classinfo libcrypt_so_1_classinfo[];
 extern struct versym libcrypt_so_1[];
 extern struct classinfo libcrypt_so_1_classinfo[];
 #endif
+extern struct versym libcups_so_2[];
+extern struct classinfo libcups_so_2_classinfo[];
+extern struct versym libcupsimage_so_2[];
+extern struct classinfo libcupsimage_so_2_classinfo[];
 #if defined __s390x__
 extern struct versym libdl_so_2[];
 extern struct classinfo libdl_so_2_classinfo[];

@@ -38,6 +38,8 @@ extern void htmlCtxtReadDoc(void);
 extern void XRenderAddGlyphs(void);
 extern void FT_List_Insert(void);
 extern void XftInit(void);
+extern void cupsPrintFile(void);
+extern void cupsRasterOpen(void);
 
 extern void _Z10forcepointR11QTextStream(void);
 extern void _ZN10QHideEventD2Ev (void);
@@ -165,6 +167,12 @@ int main()
 
     /* libXft */
     XftInit();
+
+    /* libcups */
+    cupsPrintFile(void);
+
+    /* libcupsimage */
+    cupsRasterOpen(void);
 
     /* libQtCore */
     _Z10forcepointR11QTextStream();
