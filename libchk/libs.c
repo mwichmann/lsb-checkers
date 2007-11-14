@@ -90,6 +90,8 @@ struct modlib modlibs [] = {
 #if defined __i386__
 	{LSB_Core,"libcrypt.so.1",libcrypt_so_1,libcrypt_so_1_classinfo},
 #endif
+	{LSB_Printing,"libcups.so.2",libcups_so_2,libcups_so_2_classinfo},
+	{LSB_Printing,"libcupsimage.so.2",libcupsimage_so_2,libcupsimage_so_2_classinfo},
 #if defined __s390x__
 	{LSB_Core,"libdl.so.2",libdl_so_2,libdl_so_2_classinfo},
 #endif

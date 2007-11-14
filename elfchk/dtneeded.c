@@ -1037,6 +1037,8 @@ char *DtNeeded_LSB32[] = {
 #if defined __s390x__
 	"libcrypt.so.1",
 #endif /* defined __s390x__ */
+	"libcups.so.2",
+	"libcupsimage.so.2",
 	"libdl.so.2",
 #if defined __i386__
 	"libdl.so.2",
