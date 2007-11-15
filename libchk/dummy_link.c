@@ -169,10 +169,10 @@ int main()
     XftInit();
 
     /* libcups */
-    cupsPrintFile(void);
+    cupsPrintFile();
 
     /* libcupsimage */
-    cupsRasterOpen(void);
+    cupsRasterOpen();
 
     /* libQtCore */
     _Z10forcepointR11QTextStream();
