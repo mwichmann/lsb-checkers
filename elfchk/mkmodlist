@@ -25,7 +25,7 @@ foreach (@lsbversions) {
 
 my $dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
 
-my $sth = $dbh->query("SELECT Mname,Mmandatorysince FROM Module WHERE Mappearedin BETWEEN '1.0' AND '$lsbversion_max' 
+my $sth = $dbh->query("SELECT Mname,Mappearedin,Mmandatorysince FROM Module WHERE Mappearedin BETWEEN '1.0' AND '$lsbversion_max' 
 			AND Mwithdrawnin IS NULL ORDER BY Mname");
 my $flag = 1;
 my %defines;
@@ -57,12 +57,13 @@ for(1..$sth->numrows) {
 		$name = $row{'Mname'};
 	}
 	printf $fd "#define $name\t0x%x\n", $flag;
-	$defines{$row{'Mname'}} = $name;
 	foreach my $ver (@lsbversions) {
+		if ($ver >= $row{'Mappearedin'}) {
+			$defines{$ver}->{$row{'Mname'}} = $name;
+		}
 		if( ($row{'Mmandatorysince'} ne "") and ($row{'Mmandatorysince'} le $ver) ) {
 			if (!defined($desktop_defines{$ver})) {
-				my @temp = ();
-				$desktop_defines{$ver} = \@temp;
+				$desktop_defines{$ver} = [];
 			}
 			push (@{$desktop_defines{$ver}}, $name);
 		}
@@ -97,10 +98,10 @@ foreach (@lsbversions) {
 	print $fd "\t{\"LSB_All_Modules\",\tLSB_All_Modules},\n";
 	print $fd "\t{\"LSB_Modules\",\tLSB_Desktop_Modules_LSB$v},\n";
 	print $fd "\t{\"LSB_Core_Modules\",\tLSB_Core_Modules},\n";
-	foreach my $row (sort keys %defines) {
+	foreach my $row (sort keys %{$defines{$_}}) {
 #		my $name = pop(@defines);
 #		my $row = pop(@defines);
-		print $fd "\t{\"$row\",\t".$defines{$row}."},\n";
+		print $fd "\t{\"$row\",\t".$defines{$_}->{$row}."},\n";
 	}
 	print $fd "\t{NULL, 0},\n};\n\n";
 }
