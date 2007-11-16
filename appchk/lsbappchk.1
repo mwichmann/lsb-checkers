@@ -10,6 +10,8 @@ lsbappchk \- check LSB conformance of application or shared library
 .IR MODULE ]...
 .RB [ \-L
 .IR LIB ]...
+.RB [ \-D
+.IR DIR ]...
 .RB [ \-j
 .IR JOURNAL ]
 .RI [ long-options ]
@@ -79,6 +81,13 @@ library dependency graph.
 .br
 This option may also be used if a shared library needs to be
 checked standalone.
+.TP
+\fB\-D \fIDIR\fR, \fB--shared-libpath\fR=\fIDIR\fR
+Specify a full directory path to search for shared libraries which are
+part of the application.  Any libraries found under this path are
+treated as if they had been added with the
+.I -L
+option.
 .TP
 \fB\-j \fIJOURNAL\fR, \fB--journal\fR=\fIJOURNAL\fR
 Write the journal file to \fIJOURNAL\fR
