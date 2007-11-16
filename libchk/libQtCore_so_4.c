@@ -71,11 +71,13 @@ struct versym libQtCore_so_4[] = {
 	{"_Z5qFreePv","",0,LSB_Toolkit_Qt,0,1},
 	{"_Z5qHashRK10QByteArray","",0,LSB_Toolkit_Qt,0,1},
 	{"_Z5qHashRK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_Z5qrandv","",0,LSB_Toolkit_Qt,0,1},
 	{"_Z5resetR11QTextStream","",0,LSB_Toolkit_Qt,0,1},
 	{"_Z5rightR11QTextStream","",0,LSB_Toolkit_Qt,0,1},
 	{"_Z6centerR11QTextStream","",0,LSB_Toolkit_Qt,0,1},
 	{"_Z6qDebugPKcz","",0,LSB_Toolkit_Qt,0,1},
 	{"_Z6qFatalPKcz","",0,LSB_Toolkit_Qt,0,1},
+	{"_Z6qsrandj","",0,LSB_Toolkit_Qt,0,1},
 #if defined __i386__
 	{"_Z7qMallocj","",0,LSB_Toolkit_Qt,1,1},
 #endif
@@ -321,6 +323,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN11QMetaObject11changeGuardEPP7QObjectS1_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMetaObject11removeGuardEPP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMetaObject12invokeMethodEP7QObjectPKcN2Qt14ConnectionTypeE22QGenericReturnArgument16QGenericArgumentS7_S7_S7_S7_S7_S7_S7_S7_S7_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QMetaObject14normalizedTypeEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMetaObject16checkConnectArgsEPKcS1_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMetaObject18connectSlotsByNameEP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMetaObject19normalizedSignatureEPKc","",0,LSB_Toolkit_Qt,0,1},
@@ -510,6 +513,11 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN13QSignalMapperD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QSignalMapperD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QSignalMapperD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QSystemLocaleC1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QSystemLocaleC2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QSystemLocaleD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QSystemLocaleD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QSystemLocaleD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QReadWriteLock11lockForReadEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QReadWriteLock12lockForWriteEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QReadWriteLock14tryLockForReadEv","",0,LSB_Toolkit_Qt,0,1},
@@ -582,9 +590,11 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN16QCoreApplication11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QCoreApplication11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QCoreApplication12libraryPathsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QCoreApplication12setAttributeEN2Qt20ApplicationAttributeEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QCoreApplication13compressEventEP6QEventP7QObjectP14QPostEventList","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QCoreApplication13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QCoreApplication13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QCoreApplication13testAttributeEN2Qt20ApplicationAttributeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QCoreApplication14addLibraryPathERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QCoreApplication14setEventFilterEPFbPvPlE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QCoreApplication15applicationNameEv","",0,LSB_Toolkit_Qt,0,1},
@@ -618,6 +628,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN16QCoreApplication9loopLevelEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QCoreApplication9postEventEP7QObjectP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QCoreApplication9translateEPKcS1_S1_NS_8EncodingE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QCoreApplication9translateEPKcS1_S1_NS_8EncodingEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QCoreApplicationC1ER23QCoreApplicationPrivate","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QCoreApplicationC1ERiPPc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QCoreApplicationC2ER23QCoreApplicationPrivate","",0,LSB_Toolkit_Qt,0,1},
@@ -667,6 +678,8 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN18QAbstractItemModel18beginInsertColumnsERK11QModelIndexii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QAbstractItemModel18beginRemoveColumnsERK11QModelIndexii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QAbstractItemModel21changePersistentIndexERK11QModelIndexS2_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QAbstractItemModel22layoutAboutToBeChangedEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QAbstractItemModel23setSupportedDragActionsE6QFlagsIN2Qt10DropActionEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QAbstractItemModel25changePersistentIndexListERK5QListI11QModelIndexES4_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QAbstractItemModel4sortEiN2Qt9SortOrderE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QAbstractItemModel5resetEv","",0,LSB_Toolkit_Qt,0,1},
@@ -692,6 +705,21 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN18QAbstractListModelD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QAbstractListModelD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QAbstractListModelD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QFileSystemWatcher10removePathERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QFileSystemWatcher11fileChangedERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QFileSystemWatcher11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QFileSystemWatcher11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QFileSystemWatcher11removePathsERK11QStringList","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QFileSystemWatcher16directoryChangedERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QFileSystemWatcher7addPathERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QFileSystemWatcher8addPathsERK11QStringList","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QFileSystemWatcherC1EP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QFileSystemWatcherC1ERK11QStringListP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QFileSystemWatcherC2EP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QFileSystemWatcherC2ERK11QStringListP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QFileSystemWatcherD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QFileSystemWatcherD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QFileSystemWatcherD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QThreadStorageData3setEPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QThreadStorageData6finishEPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QThreadStorageDataC1EPFvPvE","",0,LSB_Toolkit_Qt,0,1},
@@ -779,6 +807,11 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN26QAbstractFileEngineHandlerD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN26QAbstractFileEngineHandlerD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN26QAbstractFileEngineHandlerD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN27QDynamicPropertyChangeEventC1ERK10QByteArray","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN27QDynamicPropertyChangeEventC2ERK10QByteArray","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN27QDynamicPropertyChangeEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN27QDynamicPropertyChangeEventD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN27QDynamicPropertyChangeEventD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QDir10setCurrentERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QDir10setSortingE6QFlagsINS_8SortFlagEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QDir11currentPathEv","",0,LSB_Toolkit_Qt,0,1},
@@ -788,6 +821,8 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN4QDir14setNameFiltersERK11QStringList","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QDir15setMatchAllDirsEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QDir17convertSeparatorsERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN4QDir18toNativeSeparatorsERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN4QDir20fromNativeSeparatorsERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QDir21addResourceSearchPathERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QDir21nameFiltersFromStringERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QDir2cdERK7QString","",0,LSB_Toolkit_Qt,0,1},
@@ -824,6 +859,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN4QUrl11setUserNameERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QUrl12addQueryItemERK7QStringS2_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QUrl12fromPunycodeERK10QByteArray","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN4QUrl12idnWhitelistEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QUrl12setAuthorityERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QUrl13fromLocalFileERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QUrl13setEncodedUrlERK10QByteArray","",0,LSB_Toolkit_Qt,0,1},
@@ -831,14 +867,17 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN4QUrl13setQueryItemsERK5QListI5QPairI7QStringS2_EE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QUrl15removeQueryItemERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QUrl15setEncodedQueryERK10QByteArray","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN4QUrl15setIdnWhitelistERK11QStringList","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QUrl17toPercentEncodingERK7QStringRK10QByteArrayS5_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QUrl18setQueryDelimitersEcc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QUrl19fromPercentEncodingERK10QByteArray","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QUrl19removeAllQueryItemsERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QUrl5clearEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN4QUrl5toAceERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QUrl6detachEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QUrl6setUrlERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QUrl6setUrlERK7QStringNS_11ParsingModeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN4QUrl7fromAceERK10QByteArray","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QUrl7setHostERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QUrl7setPathERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QUrl7setPortEi","",0,LSB_Toolkit_Qt,0,1},
@@ -872,6 +911,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN5QDate17julianToGregorianEjRiS0_S0_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN5QDate6setYMDEiii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN5QDate7isValidEiii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN5QDate7setDateEiii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN5QDateC1Eiii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN5QDateC2Eiii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN5QFile10decodeNameERK10QByteArray","",0,LSB_Toolkit_Qt,0,1},
@@ -990,6 +1030,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN7QLocale10setDefaultERKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QLocale15countryToStringENS_7CountryE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QLocale16languageToStringENS_8LanguageE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN7QLocale16setNumberOptionsE6QFlagsINS_12NumberOptionEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QLocale6systemEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QLocaleC1ENS_8LanguageENS_7CountryE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QLocaleC1ERK7QString","",0,LSB_Toolkit_Qt,0,1},
@@ -1060,6 +1101,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN7QString11fromRawDataEPK5QChari","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QString11shared_nullE","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZN7QString13fromLocal8BitEPKci","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN7QString14fromWCharArrayEPKwi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QString16codecForCStringsE","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZN7QString17fromLatin1_helperEPKci","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QString4chopEi","",0,LSB_Toolkit_Qt,0,1},
@@ -1097,6 +1139,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN7QString7replaceEiiPK5QChari","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QString7replaceEiiRKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QString7sprintfEPKcz","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN7QString8fromUcs4EPKji","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QString8fromUtf8EPKci","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QString8truncateEi","",0,LSB_Toolkit_Qt,0,1},
 #if defined __i386__
@@ -1133,13 +1176,16 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN7QThread8finishedEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QThread9terminateEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QThreadC1EP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN7QThreadC1ER14QThreadPrivateP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QThreadC2EP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN7QThreadC2ER14QThreadPrivateP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QThreadD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QThreadD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QThreadD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QLibrary11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QLibrary11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QLibrary11setFileNameERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN8QLibrary12setLoadHintsE6QFlagsINS_8LoadHintEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QLibrary16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZN8QLibrary21setFileNameAndVersionERK7QStringi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QLibrary4loadEv","",0,LSB_Toolkit_Qt,0,1},
@@ -1182,9 +1228,14 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN8QProcess19setWorkingDirectoryERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QProcess19waitForBytesWrittenEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QProcess20readAllStandardErrorEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN8QProcess20setStandardErrorFileERK7QString6QFlagsIN9QIODevice12OpenModeFlagEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN8QProcess20setStandardInputFileERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QProcess21readAllStandardOutputEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN8QProcess21setProcessChannelModeENS_18ProcessChannelModeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN8QProcess21setStandardOutputFileERK7QString6QFlagsIN9QIODevice12OpenModeFlagEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QProcess22readyReadStandardErrorEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QProcess23readyReadStandardOutputEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN8QProcess24setStandardOutputProcessEPS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QProcess4killEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QProcess5closeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QProcess5errorENS_12ProcessErrorE","",0,LSB_Toolkit_Qt,0,1},
@@ -1213,6 +1264,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN8QVariant6detachEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QVariant7convertENS_4TypeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QVariant7handlerE","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZN8QVariantC1EN2Qt11GlobalColorE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QVariantC1ENS_4TypeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QVariantC1EPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QVariantC1ER11QDataStream","",0,LSB_Toolkit_Qt,0,1},
@@ -1246,6 +1298,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN8QVariantC1Ej","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QVariantC1Ex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QVariantC1Ey","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN8QVariantC2EN2Qt11GlobalColorE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QVariantC2ENS_4TypeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QVariantC2EPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QVariantC2ER11QDataStream","",0,LSB_Toolkit_Qt,0,1},
@@ -1291,6 +1344,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN9QBitArrayoRERKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QDateTime10fromStringERK7QStringN2Qt10DateFormatE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QDateTime10fromStringERK7QStringS2_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QDateTime10fromTime_tEj","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QDateTime11setTimeSpecEN2Qt8TimeSpecE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QDateTime15currentDateTimeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QDateTime7setDateERK5QDate","",0,LSB_Toolkit_Qt,0,1},
@@ -1371,6 +1425,10 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN9QIODeviceD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QIODeviceD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QIODeviceD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QInternal12callFunctionENS_16InternalFunctionEPPv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QInternal16registerCallbackENS_8CallbackEPFbPPvE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QInternal17activateCallbacksENS_8CallbackEPPv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QInternal18unregisterCallbackENS_8CallbackEPFbPPvE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QListData11shared_nullE","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZN9QListData4moveEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QListData5eraseEPPv","",0,LSB_Toolkit_Qt,0,1},
@@ -1406,6 +1464,16 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN9QMimeDataD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QMimeDataD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QMimeDataD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QResource11searchPathsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QResource11setFileNameERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QResource13addSearchPathERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QResource16registerResourceERK7QStringS2_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QResource18unregisterResourceERK7QStringS2_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QResource9setLocaleERK7QLocale","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QResourceC1ERK7QStringRK7QLocale","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QResourceC2ERK7QStringRK7QLocale","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QResourceD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QResourceD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QSettings10beginGroupERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QSettings11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QSettings11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
@@ -1438,6 +1506,31 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN9QSettingsD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QSettingsD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QSettingsD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTimeLine10timerEventEP11QTimerEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTimeLine11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTimeLine11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTimeLine11setDurationEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTimeLine11setEndFrameEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTimeLine12frameChangedEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTimeLine12setDirectionENS_9DirectionE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTimeLine12setLoopCountEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTimeLine12stateChangedENS_5StateE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTimeLine12valueChangedEd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTimeLine13setCurveShapeENS_10CurveShapeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTimeLine13setFrameRangeEii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTimeLine13setStartFrameEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTimeLine14setCurrentTimeEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTimeLine15toggleDirectionEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTimeLine17setUpdateIntervalEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTimeLine4stopEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTimeLine5startEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTimeLine8finishedEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTimeLine9setPausedEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTimeLineC1EiP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTimeLineC2EiP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTimeLineD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTimeLineD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTimeLineD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QtPrivate16QStringList_joinEPK11QStringListRK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QtPrivate16QStringList_sortEP11QStringList","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QtPrivate18QStringList_filterEPK11QStringListRK7QRegExp","",0,LSB_Toolkit_Qt,0,1},
@@ -1509,6 +1602,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZNK11QMetaObject11indexOfSlotEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMetaObject11methodCountEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMetaObject12methodOffsetEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QMetaObject12userPropertyEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMetaObject13indexOfMethodEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMetaObject13indexOfSignalEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMetaObject13propertyCountEv","",0,LSB_Toolkit_Qt,0,1},
@@ -1521,9 +1615,11 @@ struct versym libQtCore_so_4[] = {
 	{"_ZNK11QMetaObject16indexOfClassInfoEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMetaObject17indexOfEnumeratorEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMetaObject2trEPKcS1_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QMetaObject2trEPKcS1_i","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMetaObject4castEP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMetaObject6methodEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMetaObject6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QMetaObject6trUtf8EPKcS1_i","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMetaObject8propertyEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMetaObject9classInfoEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTextStream10fieldWidthEv","",0,LSB_Toolkit_Qt,0,1},
@@ -1534,6 +1630,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZNK11QTextStream18realNumberNotationEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTextStream19realNumberPrecisionEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTextStream21generateByteOrderMarkEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QTextStream3posEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTextStream5atEndEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTextStream5codecEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTextStream6deviceEv","",0,LSB_Toolkit_Qt,0,1},
@@ -1543,6 +1640,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZNK11QTranslator10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTranslator7isEmptyEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTranslator9translateEPKcS1_S1_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QTranslator9translateEPKcS1_S1_i","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QFSFileEngine12isSequentialEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QFSFileEngine13caseSensitiveEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QFSFileEngine14isRelativePathEv","",0,LSB_Toolkit_Qt,0,1},
@@ -1576,7 +1674,9 @@ struct versym libQtCore_so_4[] = {
 	{"_ZNK13QMetaProperty6isUserEPK7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QMetaProperty8isStoredEPK7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QMetaProperty8typeNameEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QMetaProperty8userTypeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QPluginLoader10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QPluginLoader11errorStringEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QPluginLoader8fileNameEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QPluginLoader8isLoadedEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QSignalMapper10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
@@ -1584,6 +1684,8 @@ struct versym libQtCore_so_4[] = {
 	{"_ZNK13QSignalMapper7mappingEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QSignalMapper7mappingERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QSignalMapper7mappingEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QSystemLocale14fallbackLocaleEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QSystemLocale5queryENS_9QueryTypeE8QVariant","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK14QMetaClassInfo4nameEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK14QMetaClassInfo5valueEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK14QStringMatcher7indexInERK7QStringi","",0,LSB_Toolkit_Qt,0,1},
@@ -1602,6 +1704,8 @@ struct versym libQtCore_so_4[] = {
 	{"_ZNK18QAbstractItemModel10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK18QAbstractItemModel11hasChildrenERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK18QAbstractItemModel12canFetchMoreERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK18QAbstractItemModel19persistentIndexListEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK18QAbstractItemModel20supportedDragActionsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK18QAbstractItemModel20supportedDropActionsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK18QAbstractItemModel4spanERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK18QAbstractItemModel5buddyERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
@@ -1616,6 +1720,9 @@ struct versym libQtCore_so_4[] = {
 	{"_ZNK18QAbstractListModel11hasChildrenERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK18QAbstractListModel5indexEiiRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK18QAbstractListModel6parentERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK18QFileSystemWatcher10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK18QFileSystemWatcher11directoriesEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK18QFileSystemWatcher5filesEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK18QThreadStorageData3getEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK19QAbstractFileEngine11errorStringEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK19QAbstractFileEngine12isSequentialEv","",0,LSB_Toolkit_Qt,0,1},
@@ -1645,6 +1752,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZNK21QPersistentModelIndex3rowEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK21QPersistentModelIndex4dataEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK21QPersistentModelIndex5childEii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK21QPersistentModelIndex5flagsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK21QPersistentModelIndex5modelEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK21QPersistentModelIndex6columnEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK21QPersistentModelIndex6parentEv","",0,LSB_Toolkit_Qt,0,1},
@@ -1689,6 +1797,8 @@ struct versym libQtCore_so_4[] = {
 	{"_ZNK4QUrl10isParentOfERKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK4QUrl10isRelativeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK4QUrl10queryItemsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK4QUrl11errorStringEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK4QUrl11hasFragmentEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK4QUrl11toLocalFileEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK4QUrl12encodedQueryEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK4QUrl12hasQueryItemERK7QString","",0,LSB_Toolkit_Qt,0,1},
@@ -1706,6 +1816,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZNK4QUrl7isValidEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK4QUrl8fileNameEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK4QUrl8fragmentEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK4QUrl8hasQueryEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK4QUrl8passwordEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK4QUrl8resolvedERKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK4QUrl8toStringE6QFlagsINS_16FormattingOptionEE","",0,LSB_Toolkit_Qt,0,1},
@@ -1816,11 +1927,13 @@ struct versym libQtCore_so_4[] = {
 	{"_ZNK7QLocale11toULongLongERK7QStringPbi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QLocale12decimalPointEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QLocale12negativeSignEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK7QLocale13numberOptionsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QLocale14groupSeparatorEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QLocale4nameEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QLocale5toIntERK7QStringPbi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QLocale6toUIntERK7QStringPbi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QLocale7countryEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK7QLocale7dayNameEiNS_10FormatTypeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QLocale7percentEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QLocale7toFloatERK7QStringPb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QLocale7toShortERK7QStringPbi","",0,LSB_Toolkit_Qt,0,1},
@@ -1834,9 +1947,11 @@ struct versym libQtCore_so_4[] = {
 	{"_ZNK7QLocale8toStringEx","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QLocale8toStringEy","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QLocale8toUShortERK7QStringPbi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK7QLocale9monthNameEiNS_10FormatTypeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QLocale9zeroDigitEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QObject10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QObject10objectNameEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK7QObject20dynamicPropertyNamesEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QObject5childEPKcS1_b","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QObject6senderEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QObject6threadEv","",0,LSB_Toolkit_Qt,0,1},
@@ -1869,6 +1984,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZNK7QString11toLocal8BitEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QString11toULongLongEPbi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QString12ascii_helperEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK7QString12toWCharArrayEPw","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QString13latin1_helperEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QString13leftJustifiedEi5QCharb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QString14rightJustifiedEi5QCharb","",0,LSB_Toolkit_Qt,0,1},
@@ -1892,8 +2008,11 @@ struct versym libQtCore_so_4[] = {
 	{"_ZNK7QString5utf16Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QString6toLongEPbi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QString6toUIntEPbi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK7QString6toUcs4Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QString6toUtf8Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK7QString7compareERK13QLatin1StringN2Qt15CaseSensitivityE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QString7compareERKS_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK7QString7compareERKS_N2Qt15CaseSensitivityE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QString7indexOfE5QChariN2Qt15CaseSensitivityE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QString7indexOfERK7QRegExpi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QString7indexOfERKS_iN2Qt15CaseSensitivityE","",0,LSB_Toolkit_Qt,0,1},
@@ -1924,8 +2043,10 @@ struct versym libQtCore_so_4[] = {
 	{"_ZNK7QThread9isRunningEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QThread9stackSizeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QLibrary10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK8QLibrary11errorStringEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QLibrary8fileNameEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QLibrary8isLoadedEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK8QLibrary9loadHintsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QProcess10exitStatusEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QProcess10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QProcess11canReadLineEv","",0,LSB_Toolkit_Qt,0,1},
@@ -1936,6 +2057,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZNK8QProcess14bytesAvailableEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QProcess15readChannelModeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QProcess16workingDirectoryEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK8QProcess18processChannelModeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QProcess3pidEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QProcess5atEndEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QProcess5errorEv","",0,LSB_Toolkit_Qt,0,1},
@@ -2073,6 +2195,15 @@ struct versym libQtCore_so_4[] = {
 	{"_ZNK9QMimeData9colorDataEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QMimeData9hasFormatERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QMimeData9imageDataEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QResource12isCompressedEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QResource16absoluteFilePathEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QResource4dataEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QResource4sizeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QResource5isDirEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QResource6localeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QResource7isValidEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QResource8childrenEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QResource8fileNameEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QSettings10isWritableEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QSettings10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QSettings11childGroupsEv","",0,LSB_Toolkit_Qt,0,1},
@@ -2084,6 +2215,20 @@ struct versym libQtCore_so_4[] = {
 	{"_ZNK9QSettings8containsERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QSettings8fileNameEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QSettings9childKeysEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QTimeLine10curveShapeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QTimeLine10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QTimeLine10startFrameEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QTimeLine11currentTimeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QTimeLine12currentFrameEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QTimeLine12currentValueEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QTimeLine12frameForTimeEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QTimeLine12valueForTimeEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QTimeLine14updateIntervalEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QTimeLine5stateEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QTimeLine8durationEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QTimeLine8endFrameEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QTimeLine9directionEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QTimeLine9loopCountEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZTI10QEventLoop","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI10QTextCodec","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI11QChildEvent","",0,LSB_Toolkit_Qt,0,0},
@@ -2097,6 +2242,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZTI13QFontLaoCodec","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI13QPluginLoader","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI13QSignalMapper","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI13QSystemLocale","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI14QFactoryLoader","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI14QMetaCallEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI14QObjectPrivate","",0,LSB_Toolkit_Qt,0,0},
@@ -2110,6 +2256,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZTI17QFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI18QAbstractItemModel","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI18QAbstractListModel","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI18QFileSystemWatcher","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI19QAbstractFileEngine","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI19QAbstractTableModel","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI20QEventDispatcherUNIX","",0,LSB_Toolkit_Qt,0,0},
@@ -2118,6 +2265,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZTI24QAbstractEventDispatcher","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI26QAbstractFileEngineHandler","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI26QTextCodecFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI27QDynamicPropertyChangeEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI27QEventDispatcherUNIXPrivate","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI5QFile","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI6QEvent","",0,LSB_Toolkit_Qt,0,0},
@@ -2130,6 +2278,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZTI9QIODevice","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI9QMimeData","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI9QSettings","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI9QTimeLine","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV10QEventLoop","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV10QTextCodec","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV11QChildEvent","",0,LSB_Toolkit_Qt,0,0},
@@ -2143,6 +2292,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZTV13QFontLaoCodec","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV13QPluginLoader","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV13QSignalMapper","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV13QSystemLocale","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV14QFactoryLoader","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV14QMetaCallEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV14QObjectPrivate","",0,LSB_Toolkit_Qt,0,0},
@@ -2156,6 +2306,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZTV17QFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV18QAbstractItemModel","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV18QAbstractListModel","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV18QFileSystemWatcher","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV19QAbstractFileEngine","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV19QAbstractTableModel","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV20QEventDispatcherUNIX","",0,LSB_Toolkit_Qt,0,0},
@@ -2164,6 +2315,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZTV24QAbstractEventDispatcher","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV26QAbstractFileEngineHandler","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV26QTextCodecFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV27QDynamicPropertyChangeEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV27QEventDispatcherUNIXPrivate","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV5QFile","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV6QEvent","",0,LSB_Toolkit_Qt,0,0},
@@ -2176,6 +2328,7 @@ struct versym libQtCore_so_4[] = {
 	{"_ZTV9QIODevice","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV9QMimeData","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV9QSettings","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV9QTimeLine","",0,LSB_Toolkit_Qt,0,0},
 #if defined __ia64__
 	{"_ZThn16_N16QTextCodecPlugin6createERK7QString","",0,LSB_Toolkit_Qt,0,1},
 #endif
@@ -4576,6 +4729,209 @@ struct classinfo _Z7QThread_of_libQtCore_so_4_classinfo = {
 	_7QThread_of_libQtCore_so_4_baseinfo,
 	};
 
+char *_27QDynamicPropertyChangeEvent_of_libQtCore_so_4_typeinfo_name[] = {
+	"_ZTI6QEvent",
+	};
+
+struct classtypeinfo _27QDynamicPropertyChangeEvent_of_libQtCore_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS27QDynamicPropertyChangeEvent",
+	_27QDynamicPropertyChangeEvent_of_libQtCore_so_4_typeinfo_name,
+	};
+
+const char *_27QDynamicPropertyChangeEvent_of_libQtCore_so_4_vtable_name_0 [] = {
+	"_ZN27QDynamicPropertyChangeEventD1Ev",
+	"_ZN27QDynamicPropertyChangeEventD0Ev",
+	};
+
+struct classvtable _27QDynamicPropertyChangeEvent_of_libQtCore_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	2,	/* Number of Vfuncs */
+	"_ZTI27QDynamicPropertyChangeEvent",
+	_27QDynamicPropertyChangeEvent_of_libQtCore_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _27QDynamicPropertyChangeEvent_of_libQtCore_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z27QDynamicPropertyChangeEvent_of_libQtCore_so_4_classinfo = {
+	"_Z27QDynamicPropertyChangeEvent",
+	"_ZTV27QDynamicPropertyChangeEvent",
+	"",	/* RTTI */
+	"_ZTI6QEvent",
+	"_ZTT27QDynamicPropertyChangeEvent",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_27QDynamicPropertyChangeEvent_of_libQtCore_so_4_typeinfo,
+	_27QDynamicPropertyChangeEvent_of_libQtCore_so_4_vtable,
+	_27QDynamicPropertyChangeEvent_of_libQtCore_so_4_baseinfo,
+	};
+
+char *_18QFileSystemWatcher_of_libQtCore_so_4_typeinfo_name[] = {
+	"_ZTI7QObject",
+	};
+
+struct classtypeinfo _18QFileSystemWatcher_of_libQtCore_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS18QFileSystemWatcher",
+	_18QFileSystemWatcher_of_libQtCore_so_4_typeinfo_name,
+	};
+
+const char *_18QFileSystemWatcher_of_libQtCore_so_4_vtable_name_0 [] = {
+	"_ZNK18QFileSystemWatcher10metaObjectEv",
+	"_ZN18QFileSystemWatcher11qt_metacastEPKc",
+	"_ZN18QFileSystemWatcher11qt_metacallEN11QMetaObject4CallEiPPv",
+	"_ZN18QFileSystemWatcherD1Ev",
+	"_ZN18QFileSystemWatcherD0Ev",
+	"_ZN7QObject5eventEP6QEvent",
+	"_ZN7QObject11eventFilterEPS_P6QEvent",
+	"_ZN7QObject10timerEventEP11QTimerEvent",
+	"_ZN7QObject10childEventEP11QChildEvent",
+	"_ZN7QObject11customEventEP6QEvent",
+	"_ZN7QObject13connectNotifyEPKc",
+	"_ZN7QObject16disconnectNotifyEPKc",
+	};
+
+struct classvtable _18QFileSystemWatcher_of_libQtCore_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	12,	/* Number of Vfuncs */
+	"_ZTI18QFileSystemWatcher",
+	_18QFileSystemWatcher_of_libQtCore_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _18QFileSystemWatcher_of_libQtCore_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z18QFileSystemWatcher_of_libQtCore_so_4_classinfo = {
+	"_Z18QFileSystemWatcher",
+	"_ZTV18QFileSystemWatcher",
+	"",	/* RTTI */
+	"_ZTI7QObject",
+	"_ZTT18QFileSystemWatcher",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_18QFileSystemWatcher_of_libQtCore_so_4_typeinfo,
+	_18QFileSystemWatcher_of_libQtCore_so_4_vtable,
+	_18QFileSystemWatcher_of_libQtCore_so_4_baseinfo,
+	};
+
+char *_13QSystemLocale_of_libQtCore_so_4_typeinfo_name[] = {
+	"",
+	};
+
+struct classtypeinfo _13QSystemLocale_of_libQtCore_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS13QSystemLocale",
+	_13QSystemLocale_of_libQtCore_so_4_typeinfo_name,
+	};
+
+const char *_13QSystemLocale_of_libQtCore_so_4_vtable_name_0 [] = {
+	"_ZN13QSystemLocaleD1Ev",
+	"_ZN13QSystemLocaleD0Ev",
+	"_ZNK13QSystemLocale5queryENS_9QueryTypeE8QVariant",
+	"_ZNK13QSystemLocale14fallbackLocaleEv",
+	};
+
+struct classvtable _13QSystemLocale_of_libQtCore_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	4,	/* Number of Vfuncs */
+	"_ZTI13QSystemLocale",
+	_13QSystemLocale_of_libQtCore_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _13QSystemLocale_of_libQtCore_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z13QSystemLocale_of_libQtCore_so_4_classinfo = {
+	"_Z13QSystemLocale",
+	"_ZTV13QSystemLocale",
+	"",	/* RTTI */
+	"",
+	"_ZTT13QSystemLocale",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_13QSystemLocale_of_libQtCore_so_4_typeinfo,
+	_13QSystemLocale_of_libQtCore_so_4_vtable,
+	_13QSystemLocale_of_libQtCore_so_4_baseinfo,
+	};
+
+char *_9QTimeLine_of_libQtCore_so_4_typeinfo_name[] = {
+	"_ZTI7QObject",
+	};
+
+struct classtypeinfo _9QTimeLine_of_libQtCore_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS9QTimeLine",
+	_9QTimeLine_of_libQtCore_so_4_typeinfo_name,
+	};
+
+const char *_9QTimeLine_of_libQtCore_so_4_vtable_name_0 [] = {
+	"_ZNK9QTimeLine10metaObjectEv",
+	"_ZN9QTimeLine11qt_metacastEPKc",
+	"_ZN9QTimeLine11qt_metacallEN11QMetaObject4CallEiPPv",
+	"_ZN9QTimeLineD1Ev",
+	"_ZN9QTimeLineD0Ev",
+	"_ZN7QObject5eventEP6QEvent",
+	"_ZN7QObject11eventFilterEPS_P6QEvent",
+	"_ZN9QTimeLine10timerEventEP11QTimerEvent",
+	"_ZN7QObject10childEventEP11QChildEvent",
+	"_ZN7QObject11customEventEP6QEvent",
+	"_ZN7QObject13connectNotifyEPKc",
+	"_ZN7QObject16disconnectNotifyEPKc",
+	"_ZNK9QTimeLine12valueForTimeEi",
+	};
+
+struct classvtable _9QTimeLine_of_libQtCore_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	13,	/* Number of Vfuncs */
+	"_ZTI9QTimeLine",
+	_9QTimeLine_of_libQtCore_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _9QTimeLine_of_libQtCore_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z9QTimeLine_of_libQtCore_so_4_classinfo = {
+	"_Z9QTimeLine",
+	"_ZTV9QTimeLine",
+	"",	/* RTTI */
+	"_ZTI7QObject",
+	"_ZTT9QTimeLine",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_9QTimeLine_of_libQtCore_so_4_typeinfo,
+	_9QTimeLine_of_libQtCore_so_4_vtable,
+	_9QTimeLine_of_libQtCore_so_4_baseinfo,
+	};
+
 struct classinfo *libQtCore_so_4_classinfo[] = {
 	&_Z7QObject_of_libQtCore_so_4_classinfo,
 	&_Z15QObjectUserData_of_libQtCore_so_4_classinfo,
@@ -4613,5 +4969,9 @@ struct classinfo *libQtCore_so_4_classinfo[] = {
 	&_Z13QPluginLoader_of_libQtCore_so_4_classinfo,
 	&_Z8QLibrary_of_libQtCore_so_4_classinfo,
 	&_Z7QThread_of_libQtCore_so_4_classinfo,
+	&_Z27QDynamicPropertyChangeEvent_of_libQtCore_so_4_classinfo,
+	&_Z18QFileSystemWatcher_of_libQtCore_so_4_classinfo,
+	&_Z13QSystemLocale_of_libQtCore_so_4_classinfo,
+	&_Z9QTimeLine_of_libQtCore_so_4_classinfo,
 
 	NULL	};
