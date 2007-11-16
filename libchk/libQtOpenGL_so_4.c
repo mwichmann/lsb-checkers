@@ -49,22 +49,39 @@ struct versym libQtOpenGL_so_4[] = {
 	{"_ZN14QGLPixelBuffer20bindToDynamicTextureEj","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QGLPixelBuffer25releaseFromDynamicTextureEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QGLPixelBufferC1ERK5QSizeRK9QGLFormatP9QGLWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGLPixelBufferC1EiiRK9QGLFormatP9QGLWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QGLPixelBufferC2ERK5QSizeRK9QGLFormatP9QGLWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGLPixelBufferC2EiiRK9QGLFormatP9QGLWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QGLPixelBufferD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QGLPixelBufferD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QGLPixelBufferD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGLFramebufferObject27hasOpenGLFramebufferObjectsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGLFramebufferObject4bindEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGLFramebufferObject7releaseEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGLFramebufferObjectC1ERK5QSizej","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGLFramebufferObjectC1Eiij","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGLFramebufferObjectC2ERK5QSizej","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGLFramebufferObjectC2Eiij","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGLFramebufferObjectD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGLFramebufferObjectD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGLFramebufferObjectD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGLFormat10setOverlayEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGLFormat10setSamplesEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGLFormat10setStencilEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGLFormat13defaultFormatEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGLFormat15setDoubleBufferEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QGLFormat15setSwapIntervalEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGLFormat16setDefaultFormatERKS_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QGLFormat16setRedBufferSizeEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGLFormat16setSampleBuffersEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGLFormat17hasOpenGLOverlaysEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QGLFormat17setBlueBufferSizeEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QGLFormat18openGLVersionFlagsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGLFormat18setAccumBufferSizeEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGLFormat18setAlphaBufferSizeEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGLFormat18setDepthBufferSizeEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGLFormat18setDirectRenderingEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QGLFormat18setGreenBufferSizeEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGLFormat20defaultOverlayFormatEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGLFormat20setStencilBufferSizeEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGLFormat23setDefaultOverlayFormatERKS_","",0,LSB_Toolkit_Qt,0,1},
@@ -162,10 +179,21 @@ struct versym libQtOpenGL_so_4[] = {
 	{"_ZNK14QGLPixelBuffer6metricEN12QPaintDevice17PaintDeviceMetricE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK14QGLPixelBuffer7isValidEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK14QGLPixelBuffer7toImageEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGLFramebufferObject11paintEngineEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGLFramebufferObject4sizeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGLFramebufferObject6handleEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGLFramebufferObject6metricEN12QPaintDevice17PaintDeviceMetricE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGLFramebufferObject7isValidEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGLFramebufferObject7textureEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGLFramebufferObject7toImageEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QGLFormat10testOptionE6QFlagsIN3QGL12FormatOptionEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QGLFormat12swapIntervalEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QGLFormat13redBufferSizeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QGLFormat14blueBufferSizeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QGLFormat15accumBufferSizeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QGLFormat15alphaBufferSizeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QGLFormat15depthBufferSizeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QGLFormat15greenBufferSizeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QGLFormat17stencilBufferSizeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QGLFormat5planeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QGLFormat7samplesEv","",0,LSB_Toolkit_Qt,0,1},
@@ -184,10 +212,12 @@ struct versym libQtOpenGL_so_4[] = {
 	{"_ZTI10QGLContext","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI12QDashStroker","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI14QGLPixelBuffer","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI20QGLFramebufferObject","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI9QGLWidget","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV10QGLContext","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV12QDashStroker","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV14QGLPixelBuffer","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV20QGLFramebufferObject","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV9QGLWidget","",0,LSB_Toolkit_Qt,0,0},
 #if defined __ia64__
 	{"_ZThn16_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
@@ -604,9 +634,55 @@ struct classinfo _Z14QGLPixelBuffer_of_libQtOpenGL_so_4_classinfo = {
 	_14QGLPixelBuffer_of_libQtOpenGL_so_4_baseinfo,
 	};
 
+char *_20QGLFramebufferObject_of_libQtOpenGL_so_4_typeinfo_name[] = {
+	"",
+	};
+
+struct classtypeinfo _20QGLFramebufferObject_of_libQtOpenGL_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS20QGLFramebufferObject",
+	_20QGLFramebufferObject_of_libQtOpenGL_so_4_typeinfo_name,
+	};
+
+const char *_20QGLFramebufferObject_of_libQtOpenGL_so_4_vtable_name_0 [] = {
+	"_ZN20QGLFramebufferObjectD1Ev",
+	"_ZN20QGLFramebufferObjectD0Ev",
+	};
+
+struct classvtable _20QGLFramebufferObject_of_libQtOpenGL_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	2,	/* Number of Vfuncs */
+	"_ZTI20QGLFramebufferObject",
+	_20QGLFramebufferObject_of_libQtOpenGL_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _20QGLFramebufferObject_of_libQtOpenGL_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z20QGLFramebufferObject_of_libQtOpenGL_so_4_classinfo = {
+	"_Z20QGLFramebufferObject",
+	"",
+	"",	/* RTTI */
+	"",
+	"_ZTT20QGLFramebufferObject",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_20QGLFramebufferObject_of_libQtOpenGL_so_4_typeinfo,
+	_20QGLFramebufferObject_of_libQtOpenGL_so_4_vtable,
+	_20QGLFramebufferObject_of_libQtOpenGL_so_4_baseinfo,
+	};
+
 struct classinfo *libQtOpenGL_so_4_classinfo[] = {
 	&_Z10QGLContext_of_libQtOpenGL_so_4_classinfo,
 	&_Z9QGLWidget_of_libQtOpenGL_so_4_classinfo,
 	&_Z14QGLPixelBuffer_of_libQtOpenGL_so_4_classinfo,
+	&_Z20QGLFramebufferObject_of_libQtOpenGL_so_4_classinfo,
 
 	NULL	};
