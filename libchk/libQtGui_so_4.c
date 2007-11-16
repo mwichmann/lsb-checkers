@@ -59,8 +59,10 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN10QClipboard13connectNotifyEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QClipboard16selectionChangedEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QClipboard16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZN10QClipboard17findBufferChangedEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QClipboard5clearENS_4ModeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QClipboard5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QClipboard7changedENS_4ModeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QClipboard7setDataEP11QMimeSourceNS_4ModeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QClipboard7setTextERK7QStringNS_4ModeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QClipboard8setImageERK6QImageNS_4ModeE","",0,LSB_Toolkit_Qt,0,1},
@@ -68,6 +70,34 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN10QClipboardD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QClipboardD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QClipboardD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleter11eventFilterEP7QObjectP6QEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleter11highlightedERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleter11highlightedERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleter11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleter11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleter13setCurrentRowEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleter15setModelSortingENS_12ModelSortingE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleter17setCompletionModeENS_14CompletionModeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleter17setCompletionRoleEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleter18setCaseSensitivityEN2Qt15CaseSensitivityE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleter19setCompletionColumnEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleter19setCompletionPrefixERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleter5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleter8completeERK5QRect","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleter8setModelEP18QAbstractItemModel","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleter8setPopupEP17QAbstractItemView","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleter9activatedERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleter9activatedERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleter9setWidgetEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleterC1EP18QAbstractItemModelP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleterC1EP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleterC1ERK11QStringListP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleterC2EP18QAbstractItemModelP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleterC2EP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleterC2ERK11QStringListP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleterD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleterD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QCompleterD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QDropEvent13setDropActionEN2Qt10DropActionE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QDropEventC1ERK6QPoint6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEEN6QEvent4TypeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QDropEventC2ERK6QPoint6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEEN6QEvent4TypeE","",0,LSB_Toolkit_Qt,0,1},
@@ -177,11 +207,13 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN10QStatusBar11resizeEventEP12QResizeEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QStatusBar11showMessageERK7QStringi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QStatusBar12clearMessageEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QStatusBar12insertWidgetEiP7QWidgeti","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QStatusBar12removeWidgetEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QStatusBar14messageChangedERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QStatusBar16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZN10QStatusBar18addPermanentWidgetEP7QWidgeti","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QStatusBar18setSizeGripEnabledEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QStatusBar5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QStatusBar8reformatEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QStatusBar9addWidgetEP7QWidgeti","",0,LSB_Toolkit_Qt,0,1},
@@ -200,8 +232,10 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN10QTabWidget11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTabWidget11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTabWidget11resizeEventEP12QResizeEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QTabWidget11setIconSizeERK5QSize","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTabWidget11setTabShapeENS_8TabShapeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTabWidget11tabInsertedEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QTabWidget12setElideModeEN2Qt13TextElideModeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTabWidget13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTabWidget13setTabEnabledEib","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTabWidget13setTabToolTipEiRK7QString","",0,LSB_Toolkit_Qt,0,1},
@@ -213,9 +247,11 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN10QTabWidget15setTabWhatsThisEiRK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTabWidget16setCurrentWidgetEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTabWidget16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZN10QTabWidget20setUsesScrollButtonsEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTabWidget5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTabWidget6addTabEP7QWidgetRK5QIconRK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTabWidget6addTabEP7QWidgetRK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QTabWidget8selectedERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTabWidget9insertTabEiP7QWidgetRK5QIconRK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTabWidget9insertTabEiP7QWidgetRK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTabWidget9removeTabEi","",0,LSB_Toolkit_Qt,0,1},
@@ -245,6 +281,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN10QTableView12setRowHiddenEib","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTableView12setSelectionERK5QRect6QFlagsIN19QItemSelectionModel13SelectionFlagEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTableView12sortByColumnEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QTableView12sortByColumnEiN2Qt9SortOrderE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTableView13columnResizedEiii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTableView14setColumnWidthEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTableView15rowCountChangedEii","",0,LSB_Toolkit_Qt,0,1},
@@ -253,6 +290,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN10QTableView16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZN10QTableView16updateGeometriesEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTableView17setSelectionModelEP19QItemSelectionModel","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QTableView17setSortingEnabledEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTableView17setVerticalHeaderEP11QHeaderView","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTableView18columnCountChangedEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTableView19resizeRowToContentsEi","",0,LSB_Toolkit_Qt,0,1},
@@ -263,6 +301,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN10QTableView23verticalScrollbarActionEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTableView25horizontalScrollbarActionEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTableView7hideRowEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QTableView7setSpanEiiii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTableView7showRowEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTableView8rowMovedEiii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTableView8scrollToERK11QModelIndexN17QAbstractItemView10ScrollHintE","",0,LSB_Toolkit_Qt,0,1},
@@ -313,6 +352,44 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN10QTextTableD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTextTableD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTextTableD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoGroup11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoGroup11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoGroup11removeStackEP10QUndoStack","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoGroup12cleanChangedEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoGroup12indexChangedEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoGroup14canRedoChangedEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoGroup14canUndoChangedEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoGroup14setActiveStackEP10QUndoStack","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoGroup15redoTextChangedERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoGroup15undoTextChangedERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoGroup18activeStackChangedEP10QUndoStack","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoGroup4redoEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoGroup4undoEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoGroup8addStackEP10QUndoStack","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoGroupC1EP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoGroupC2EP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoStack10beginMacroERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoStack11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoStack11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoStack12cleanChangedEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoStack12indexChangedEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoStack14canRedoChangedEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoStack14canUndoChangedEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoStack15redoTextChangedERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoStack15undoTextChangedERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoStack4pushEP12QUndoCommand","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoStack4redoEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoStack4undoEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoStack5clearEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoStack8endMacroEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoStack8setCleanEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoStack8setIndexEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoStack9setActiveEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoStackC1EP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoStackC2EP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoStackD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoStackD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN10QUndoStackD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QValidator11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QValidator11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QValidator16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
@@ -461,6 +538,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN11QFontDialog16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZN11QFontDialog7getFontEPbP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QFontDialog7getFontEPbRK5QFontP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QFontDialog7getFontEPbRK5QFontP7QWidgetRK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QFontDialogD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QFontDialogD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QFontDialogD2Ev","",0,LSB_Toolkit_Qt,0,1},
@@ -526,6 +604,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN11QHeaderView12sectionMovedEiii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QHeaderView12setClickableEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QHeaderView12setSelectionERK5QRect6QFlagsIN19QItemSelectionModel13SelectionFlagEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QHeaderView12swapSectionsEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QHeaderView13doItemsLayoutEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QHeaderView13resizeSectionEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QHeaderView13setResizeModeENS_10ResizeModeE","",0,LSB_Toolkit_Qt,0,1},
@@ -546,6 +625,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN11QHeaderView16setSortIndicatorEiN2Qt9SortOrderE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QHeaderView16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZN11QHeaderView16updateGeometriesEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QHeaderView17geometriesChangedEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QHeaderView17headerDataChangedEN2Qt11OrientationEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QHeaderView17mouseReleaseEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QHeaderView17sectionAutoResizeEiNS_10ResizeModeE","",0,LSB_Toolkit_Qt,0,1},
@@ -557,10 +637,13 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN11QHeaderView20setHighlightSectionsEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QHeaderView21mouseDoubleClickEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QHeaderView21setDefaultSectionSizeEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QHeaderView21setMinimumSectionSizeEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QHeaderView21setSortIndicatorShownEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QHeaderView21setStretchLastSectionEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QHeaderView24sectionsAboutToBeRemovedERK11QModelIndexii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QHeaderView26sectionHandleDoubleClickedEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QHeaderView26setCascadingSectionResizesEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QHeaderView26setOffsetToSectionPositionEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QHeaderView5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QHeaderView8scrollToERK11QModelIndexN17QAbstractItemView10ScrollHintE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QHeaderView8setModelEP18QAbstractItemModel","",0,LSB_Toolkit_Qt,0,1},
@@ -617,6 +700,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN11QListWidget16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZN11QListWidget17currentRowChangedEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QListWidget17itemDoubleClickedEP15QListWidgetItem","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QListWidget17setSortingEnabledEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QListWidget18currentItemChangedEP15QListWidgetItemS1_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QListWidget18currentTextChangedERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QListWidget20itemSelectionChangedEv","",0,LSB_Toolkit_Qt,0,1},
@@ -627,6 +711,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN11QListWidget8editItemEP15QListWidgetItem","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QListWidget8setModelEP18QAbstractItemModel","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QListWidget8takeItemEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QListWidget9dropEventEP10QDropEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QListWidget9sortItemsEN2Qt9SortOrderE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QListWidgetC1EP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QListWidgetC2EP7QWidget","",0,LSB_Toolkit_Qt,0,1},
@@ -639,6 +724,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN11QMainWindow10setMenuBarEP8QMenuBar","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMainWindow11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMainWindow11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QMainWindow11setAnimatedEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMainWindow11setIconSizeERK5QSize","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMainWindow12restoreStateERK10QByteArrayi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMainWindow12setStatusBarEP10QStatusBar","",0,LSB_Toolkit_Qt,0,1},
@@ -646,6 +732,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN11QMainWindow13addDockWidgetEN2Qt14DockWidgetAreaEP11QDockWidgetNS0_11OrientationE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMainWindow13insertToolBarEP8QToolBarS1_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMainWindow13removeToolBarEP8QToolBar","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QMainWindow13setMenuWidgetEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMainWindow15addToolBarBreakEN2Qt11ToolBarAreaE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMainWindow15createPopupMenuEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMainWindow15iconSizeChangedERK5QSize","",0,LSB_Toolkit_Qt,0,1},
@@ -654,8 +741,10 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN11QMainWindow16removeDockWidgetEP11QDockWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMainWindow16setCentralWidgetEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMainWindow16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZN11QMainWindow16tabifyDockWidgetEP11QDockWidgetS1_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMainWindow18insertToolBarBreakEP8QToolBar","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMainWindow18setToolButtonStyleEN2Qt15ToolButtonStyleE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QMainWindow21setDockNestingEnabledEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMainWindow22toolButtonStyleChangedEN2Qt15ToolButtonStyleE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMainWindow5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMainWindow9setCornerEN2Qt6CornerENS0_14DockWidgetAreaE","",0,LSB_Toolkit_Qt,0,1},
@@ -668,33 +757,50 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN11QMainWindowD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBox10closeEventEP11QCloseEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBox11changeEventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBox11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBox11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBox11resizeEventEP12QResizeEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QMessageBox12removeButtonEP15QAbstractButton","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBox12standardIconENS_4IconE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBox12standardIconENS_4IconEN2Qt8GUIStyleE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBox13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBox13setButtonTextEiRK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBox13setIconPixmapERK7QPixmap","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBox13setTextFormatEN2Qt10TextFormatE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QMessageBox14setWindowTitleERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QMessageBox15setDetailedTextERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QMessageBox15setEscapeButtonEP15QAbstractButton","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QMessageBox16setDefaultButtonEP11QPushButton","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBox16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZN11QMessageBox17setWindowModalityEN2Qt14WindowModalityE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QMessageBox18setInformativeTextERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QMessageBox18setStandardButtonsE6QFlagsINS_14StandardButtonEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBox5aboutEP7QWidgetRK7QStringS4_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBox7aboutQtEP7QWidgetRK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBox7setIconENS_4IconE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBox7setTextERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QMessageBox9addButtonENS_14StandardButtonE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QMessageBox9addButtonEP15QAbstractButtonNS_10ButtonRoleE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QMessageBox9addButtonERK7QStringNS_10ButtonRoleE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBox9showEventEP10QShowEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QMessageBoxC1ENS_4IconERK7QStringS3_6QFlagsINS_14StandardButtonEEP7QWidgetS4_IN2Qt10WindowTypeEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBoxC1EP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBoxC1EP7QWidgetPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBoxC1ERK7QStringS2_NS_4IconEiiiP7QWidget6QFlagsIN2Qt10WindowTypeEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBoxC1ERK7QStringS2_NS_4IconEiiiP7QWidgetPKcb6QFlagsIN2Qt10WindowTypeEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QMessageBoxC2ENS_4IconERK7QStringS3_6QFlagsINS_14StandardButtonEEP7QWidgetS4_IN2Qt10WindowTypeEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBoxC2EP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBoxC2EP7QWidgetPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QMessageBoxC2ERK7QStringS2_NS_4IconEiiiP7QWidget6QFlagsIN2Qt10WindowTypeEE","",0,LSB_Toolkit_Qt,0,1},
@@ -812,15 +918,19 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN11QScrollArea11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QScrollArea11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QScrollArea11resizeEventEP12QResizeEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QScrollArea12setAlignmentE6QFlagsIN2Qt13AlignmentFlagEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QScrollArea13ensureVisibleEiiii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QScrollArea16scrollContentsByEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QScrollArea16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZN11QScrollArea18focusNextPrevChildEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QScrollArea18setWidgetResizableEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QScrollArea19ensureWidgetVisibleEP7QWidgetii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QScrollArea5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QScrollArea9setWidgetEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QScrollAreaC1EP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QScrollAreaC1ER18QScrollAreaPrivateP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QScrollAreaC2EP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QScrollAreaC2ER18QScrollAreaPrivateP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QScrollAreaD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QScrollAreaD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QScrollAreaD2Ev","",0,LSB_Toolkit_Qt,0,1},
@@ -831,6 +941,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN11QTextCursor10createListEN15QTextListFormat5StyleE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QTextCursor10createListERK15QTextListFormat","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QTextCursor10deleteCharEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QTextCursor10insertHtmlERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QTextCursor10insertListEN15QTextListFormat5StyleE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QTextCursor10insertListERK15QTextListFormat","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QTextCursor10insertTextERK7QString","",0,LSB_Toolkit_Qt,0,1},
@@ -840,6 +951,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN11QTextCursor11insertBlockEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QTextCursor11insertFrameERK16QTextFrameFormat","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QTextCursor11insertImageERK16QTextImageFormat","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QTextCursor11insertImageERK16QTextImageFormatN16QTextFrameFormat8PositionE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QTextCursor11insertImageERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QTextCursor11insertTableEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QTextCursor11insertTableEiiRK16QTextTableFormat","",0,LSB_Toolkit_Qt,0,1},
@@ -952,6 +1064,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN11QToolButton15mousePressEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QToolButton16setDefaultActionEP7QAction","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QToolButton16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZN11QToolButton17mouseReleaseEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QToolButton18setToolButtonStyleEN2Qt15ToolButtonStyleE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QToolButton5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QToolButton7setMenuEP5QMenu","",0,LSB_Toolkit_Qt,0,1},
@@ -1009,6 +1122,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN11QTreeWidget5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QTreeWidget8editItemEP15QTreeWidgetItemi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QTreeWidget8setModelEP18QAbstractItemModel","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN11QTreeWidget9dropEventEP10QDropEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QTreeWidget9sortItemsEiN2Qt9SortOrderE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QTreeWidgetC1EP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QTreeWidgetC2EP7QWidget","",0,LSB_Toolkit_Qt,0,1},
@@ -1084,6 +1198,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN12QApplication12setColorSpecEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication13compressEventEP6QEventP7QObjectP14QPostEventList","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication13setMainWidgetEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QApplication13setStyleSheetERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication13setWindowIconERK5QIcon","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication13startDragTimeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication14overrideCursorEv","",0,LSB_Toolkit_Qt,0,1},
@@ -1098,6 +1213,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN12QApplication15topLevelWidgetsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication15x11ProcessEventEP7_XEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication16lastWindowClosedEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QApplication16saveStateRequestER15QSessionManager","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication16setEffectEnabledEN2Qt8UIEffectEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication16setStartDragTimeEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
@@ -1105,6 +1221,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN12QApplication16x11ClientMessageEP7QWidgetP7_XEventb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication17activeModalWidgetEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication17activePopupWidgetEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QApplication17commitDataRequestER15QSessionManager","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication17keyboardModifiersEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication17setOverrideCursorERK7QCursor","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication17startDragDistanceEv","",0,LSB_Toolkit_Qt,0,1},
@@ -1112,12 +1229,14 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN12QApplication18setLayoutDirectionEN2Qt15LayoutDirectionE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication19doubleClickIntervalEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication19horizontalAlignmentE6QFlagsIN2Qt13AlignmentFlagEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QApplication19keyboardInputLocaleEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication19setWheelScrollLinesEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication20changeOverrideCursorERK7QCursor","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication20desktopSettingsAwareEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication20setStartDragDistanceEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication21keyboardInputIntervalEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication21restoreOverrideCursorEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QApplication22keyboardInputDirectionEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication22quitOnLastWindowClosedEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication22setDoubleClickIntervalEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication23setDesktopSettingsAwareEb","",0,LSB_Toolkit_Qt,0,1},
@@ -1126,6 +1245,8 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN12QApplication4beepEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication4execEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication4fontEPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QApplication4fontEPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QApplication4fontEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication4typeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication5styleEv","",0,LSB_Toolkit_Qt,0,1},
@@ -1144,15 +1265,25 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN12QApplication9colorSpecEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplication9saveStateER15QSessionManager","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplicationC1EP9_XDisplayRiPPcmm","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QApplicationC1EP9_XDisplayRiPPcmmi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplicationC1EP9_XDisplaymm","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QApplicationC1EP9_XDisplaymmi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplicationC1ERiPPc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplicationC1ERiPPcNS_4TypeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QApplicationC1ERiPPcNS_4TypeEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplicationC1ERiPPcb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QApplicationC1ERiPPcbi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QApplicationC1ERiPPci","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplicationC2EP9_XDisplayRiPPcmm","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QApplicationC2EP9_XDisplayRiPPcmmi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplicationC2EP9_XDisplaymm","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QApplicationC2EP9_XDisplaymmi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplicationC2ERiPPc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplicationC2ERiPPcNS_4TypeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QApplicationC2ERiPPcNS_4TypeEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplicationC2ERiPPcb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QApplicationC2ERiPPcbi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QApplicationC2ERiPPci","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplicationD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplicationD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QApplicationD2Ev","",0,LSB_Toolkit_Qt,0,1},
@@ -1162,6 +1293,10 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN12QButtonGroup12setExclusiveEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QButtonGroup13buttonClickedEP15QAbstractButton","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QButtonGroup13buttonClickedEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QButtonGroup13buttonPressedEP15QAbstractButton","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QButtonGroup13buttonPressedEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QButtonGroup14buttonReleasedEP15QAbstractButton","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QButtonGroup14buttonReleasedEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QButtonGroup16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZN12QButtonGroup5setIdEP15QAbstractButtoni","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QButtonGroup9addButtonEP15QAbstractButton","",0,LSB_Toolkit_Qt,0,1},
@@ -1203,6 +1338,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN12QFontMetricsD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QFontMetricsaSERKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QFontMetricseqERKS_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QImageReader10setQualityEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QImageReader11imageFormatEP9QIODevice","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QImageReader11imageFormatERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QImageReader11jumpToImageEi","",0,LSB_Toolkit_Qt,0,1},
@@ -1213,6 +1349,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN12QImageReader17setScaledClipRectERK5QRect","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QImageReader18setBackgroundColorERK6QColor","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QImageReader21supportedImageFormatsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QImageReader4readEP6QImage","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QImageReader4readEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QImageReader9setDeviceEP9QIODevice","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QImageReader9setFormatERK10QByteArray","",0,LSB_Toolkit_Qt,0,1},
@@ -1252,11 +1389,14 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN12QInputDialogD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QInputDialogD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QKeySequence10fromStringERK7QStringNS_14SequenceFormatE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QKeySequence11keyBindingsENS_11StandardKeyE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QKeySequence8mnemonicERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QKeySequenceC1ENS_11StandardKeyE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QKeySequenceC1ERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QKeySequenceC1ERKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QKeySequenceC1Eiiii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QKeySequenceC1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QKeySequenceC2ENS_11StandardKeyE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QKeySequenceC2ERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QKeySequenceC2ERKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QKeySequenceC2Eiiii","",0,LSB_Toolkit_Qt,0,1},
@@ -1320,6 +1460,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN12QPainterPath7addTextERK7QPointFRK5QFontRK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QPainterPath7cubicToERK7QPointFS2_S2_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QPainterPath9addRegionERK7QRegion","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QPainterPath9arcMoveToERK6QRectFd","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QPainterPathC1ERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QPainterPathC1ERKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QPainterPathC1Ev","",0,LSB_Toolkit_Qt,0,1},
@@ -1365,6 +1506,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN12QProgressBar5resetEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QProgressBar8setRangeEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QProgressBar8setValueEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QProgressBar9setFormatERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QProgressBarC1EP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QProgressBarC2EP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QRadioButton10paintEventEP11QPaintEvent","",0,LSB_Toolkit_Qt,0,1},
@@ -1418,6 +1560,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN12QTableWidget12removeColumnEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QTableWidget12scrollToItemEPK16QTableWidgetItemN17QAbstractItemView10ScrollHintE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QTableWidget13cellActivatedEii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QTableWidget13clearContentsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QTableWidget13itemActivatedEP16QTableWidgetItem","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QTableWidget13selectedItemsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QTableWidget13setCellWidgetEiiP7QWidget","",0,LSB_Toolkit_Qt,0,1},
@@ -1448,6 +1591,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN12QTableWidget8editItemEP16QTableWidgetItem","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QTableWidget8setModelEP18QAbstractItemModel","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QTableWidget8takeItemEii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QTableWidget9dropEventEP10QDropEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QTableWidget9insertRowEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QTableWidget9removeRowEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QTableWidget9sortItemsEiN2Qt9SortOrderE","",0,LSB_Toolkit_Qt,0,1},
@@ -1468,6 +1612,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN12QTextBrowser11highlightedERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QTextBrowser11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QTextBrowser11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QTextBrowser12clearHistoryEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QTextBrowser12loadResourceEiRK4QUrl","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QTextBrowser13anchorClickedERK4QUrl","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QTextBrowser13focusOutEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
@@ -1481,6 +1626,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN12QTextBrowser17backwardAvailableEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QTextBrowser17mouseReleaseEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QTextBrowser18focusNextPrevChildEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QTextBrowser20setOpenExternalLinksEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QTextBrowser4homeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QTextBrowser5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QTextBrowser6reloadEv","",0,LSB_Toolkit_Qt,0,1},
@@ -1494,6 +1640,18 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN12QTextBrowserD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QTextBrowserD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QTextBrowserD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QUndoCommand4redoEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QUndoCommand4undoEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QUndoCommand7setTextERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QUndoCommand9mergeWithEPKS_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QUndoCommandC1EPS_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QUndoCommandC1ERK7QStringPS_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QUndoCommandC2EPS_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QUndoCommandC2ERK7QStringPS_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QUndoCommandD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QUndoCommandD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QUndoCommandD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QDateTimeEdit10paintEventEP11QPaintEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QDateTimeEdit10wheelEventEP11QWheelEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QDateTimeEdit11dateChangedERK5QDate","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QDateTimeEdit11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
@@ -1509,14 +1667,17 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN13QDateTimeEdit14setMinimumDateERK5QDate","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QDateTimeEdit14setMinimumTimeERK5QTime","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QDateTimeEdit15dateTimeChangedERK9QDateTime","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QDateTimeEdit15mousePressEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QDateTimeEdit16clearMaximumDateEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QDateTimeEdit16clearMaximumTimeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QDateTimeEdit16clearMinimumDateEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QDateTimeEdit16clearMinimumTimeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QDateTimeEdit16setCalendarPopupEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QDateTimeEdit16setDisplayFormatERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QDateTimeEdit16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZN13QDateTimeEdit17setCurrentSectionENS_7SectionE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QDateTimeEdit18focusNextPrevChildEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QDateTimeEdit18setSelectedSectionENS_7SectionE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QDateTimeEdit5clearEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QDateTimeEdit5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QDateTimeEdit6stepByEi","",0,LSB_Toolkit_Qt,0,1},
@@ -1541,25 +1702,169 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN13QErrorMessageD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QErrorMessageD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QErrorMessageD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QFontComboBox11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QFontComboBox11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QFontComboBox14setCurrentFontERK5QFont","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QFontComboBox14setFontFiltersE6QFlagsINS_10FontFilterEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QFontComboBox16setWritingSystemEN13QFontDatabase13WritingSystemE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QFontComboBox18currentFontChangedERK5QFont","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QFontComboBox5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QFontComboBoxC1EP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QFontComboBoxC2EP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QFontComboBoxD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QFontComboBoxD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QFontComboBoxD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QFontDatabase10pointSizesERK7QStringS2_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QFontDatabase11smoothSizesERK7QStringS2_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QFontDatabase11styleStringERK5QFont","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QFontDatabase11styleStringERK9QFontInfo","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QFontDatabase13standardSizesEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QFontDatabase17writingSystemNameENS_13WritingSystemE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QFontDatabase18addApplicationFontERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QFontDatabase19writingSystemSampleENS_13WritingSystemE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QFontDatabase21removeApplicationFontEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QFontDatabase23applicationFontFamiliesEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QFontDatabase25removeAllApplicationFontsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QFontDatabase26addApplicationFontFromDataERK10QByteArray","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QFontDatabaseC1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QFontDatabaseC2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QFontMetricsFC1ERK12QFontMetrics","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QFontMetricsFC1ERK5QFont","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QFontMetricsFC1ERK5QFontP12QPaintDevice","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QFontMetricsFC1ERKS_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QFontMetricsFC2ERK12QFontMetrics","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QFontMetricsFC2ERK5QFont","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QFontMetricsFC2ERK5QFontP12QPaintDevice","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QFontMetricsFC2ERKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QFontMetricsFD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QFontMetricsFD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QFontMetricsFaSERK12QFontMetrics","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QFontMetricsFaSERKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QFontMetricsFeqERKS_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem10addToIndexEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem10clearFocusEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem10itemChangeENS_18GraphicsItemChangeERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem10sceneEventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem10setEnabledEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem10setToolTipERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem10setVisibleEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem10wheelEventEP24QGraphicsSceneWheelEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem11resetMatrixEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem11setSelectedEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem11unsetCursorEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem12focusInEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem12setExtensionENS_9ExtensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem13dragMoveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem13ensureVisibleERK6QRectFii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem13focusOutEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem13setParentItemEPS_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem14dragEnterEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem14hoverMoveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem14mouseMoveEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem14setAcceptDropsEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem15hoverEnterEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem15keyReleaseEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem15mousePressEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem15removeFromIndexEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem16inputMethodEventEP17QInputMethodEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem16sceneEventFilterEPS_P6QEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem21prepareGeometryChangeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem21setAcceptsHoverEventsEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem21setHandlesChildEventsEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem22removeSceneEventFilterEPS_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem23installSceneEventFilterEPS_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem23setAcceptedMouseButtonsE6QFlagsIN2Qt11MouseButtonEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem5scaleEdd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem5shearEdd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem6rotateEd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem6setPosERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem6updateERK6QRectF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem7advanceEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem7setDataEiRK8QVariant","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem7setFlagENS_16GraphicsItemFlagEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem8setFlagsE6QFlagsINS_16GraphicsItemFlagEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem8setFocusEN2Qt11FocusReasonE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem8setGroupEP18QGraphicsItemGroup","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem9dropEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem9setCursorERK7QCursor","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem9setMatrixERK7QMatrixb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem9setZValueEd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItem9translateEdd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItemC1EPS_P14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItemC1ER20QGraphicsItemPrivatePS_P14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItemC2EPS_P14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItemC2ER20QGraphicsItemPrivatePS_P14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItemD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItemD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsItemD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView10paintEventEP11QPaintEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView10wheelEventEP11QWheelEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView11resetMatrixEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView11resizeEventEP12QResizeEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView11setDragModeENS_8DragModeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView11updateSceneERK5QListI6QRectFE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView12focusInEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView12setAlignmentE6QFlagsIN2Qt13AlignmentFlagEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView12setCacheModeE6QFlagsINS_13CacheModeFlagEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView12setSceneRectERK6QRectF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView13dragMoveEventEP14QDragMoveEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView13ensureVisibleEPK13QGraphicsItemii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView13ensureVisibleERK6QRectFii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView13focusOutEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView13setRenderHintEN8QPainter10RenderHintEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView13setupViewportEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView13viewportEventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView14dragEnterEventEP15QDragEnterEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView14dragLeaveEventEP15QDragLeaveEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView14drawBackgroundEP8QPainterRK6QRectF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView14drawForegroundEP8QPainterRK6QRectF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView14mouseMoveEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView14setInteractiveEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView14setRenderHintsE6QFlagsIN8QPainter10RenderHintEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView15keyReleaseEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView15mousePressEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView15setResizeAnchorENS_14ViewportAnchorE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView15updateSceneRectERK6QRectF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView16contextMenuEventEP17QContextMenuEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView16inputMethodEventEP17QInputMethodEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView16scrollContentsByEii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView17mouseReleaseEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView18resetCachedContentEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView18setBackgroundBrushERK6QBrush","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView18setForegroundBrushERK6QBrush","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView21mouseDoubleClickEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView23setTransformationAnchorENS_14ViewportAnchorE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView5scaleEdd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView5shearEdd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView6renderEP8QPainterRK6QRectFRK5QRectN2Qt15AspectRatioModeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView6rotateEd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView8centerOnEPK13QGraphicsItem","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView8centerOnERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView8setSceneEP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView9drawItemsEP8QPainteriPP13QGraphicsItemPK24QStyleOptionGraphicsItem","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView9dropEventEP10QDropEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView9fitInViewEPK13QGraphicsItemN2Qt15AspectRatioModeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView9fitInViewERK6QRectFN2Qt15AspectRatioModeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView9setMatrixERK7QMatrixb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView9showEventEP10QShowEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsView9translateEdd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsViewC1EP14QGraphicsSceneP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsViewC1EP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsViewC2EP14QGraphicsSceneP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsViewC2EP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsViewD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsViewD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QGraphicsViewD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QInputContext11filterEventEPK6QEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QInputContext11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QInputContext11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
@@ -1597,6 +1902,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN13QItemDelegate11eventFilterEP7QObjectP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QItemDelegate11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QItemDelegate11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QItemDelegate11setClippingEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QItemDelegate16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZN13QItemDelegate20setItemEditorFactoryEP18QItemEditorFactory","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QItemDelegateC1EP7QObject","",0,LSB_Toolkit_Qt,0,1},
@@ -1623,16 +1929,60 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN13QSplashScreenD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QSplashScreenD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QSplashScreenD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItem10insertRowsEii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItem10removeRowsEii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItem10setEnabledEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItem10takeColumnEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItem11setEditableEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItem11setRowCountEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItem11setTristateEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItem12insertColumnEiRK5QListIPS_E","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItem12removeColumnEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItem12setCheckableEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItem12sortChildrenEiN2Qt9SortOrderE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItem13insertColumnsEii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItem13removeColumnsEii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItem13setSelectableEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItem14setColumnCountEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItem14setDragEnabledEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItem14setDropEnabledEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItem4readER11QDataStream","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItem7setDataERK8QVarianti","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItem7takeRowEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItem8setChildEiiPS_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItem8setFlagsE6QFlagsIN2Qt8ItemFlagEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItem9insertRowEiRK5QListIPS_E","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItem9removeRowEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItem9takeChildEii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItemC1ER20QStandardItemPrivate","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItemC1ERK5QIconRK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItemC1ERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItemC1ERKS_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItemC1Eii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItemC1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItemC2ER20QStandardItemPrivate","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItemC2ERK5QIconRK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItemC2ERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItemC2ERKS_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItemC2Eii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItemC2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItemD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItemD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItemD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QStandardItemaSERKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QStyleFactory4keysEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QStyleFactory6createERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QTextDocument10adjustSizeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QTextDocument11addResourceEiRK4QUrlRK8QVariant","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QTextDocument11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QTextDocument11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QTextDocument11setModifiedEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QTextDocument11setPageSizeERK6QSizeF","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QTextDocument12createObjectERK11QTextFormat","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QTextDocument12drawContentsEP8QPainterRK6QRectF","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QTextDocument12loadResourceEiRK4QUrl","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QTextDocument12setPlainTextERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QTextDocument12setTextWidthEd","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QTextDocument13redoAvailableEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QTextDocument13undoAvailableEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QTextDocument14appendUndoItemEP17QAbstractUndoItem","",0,LSB_Toolkit_Qt,0,1},
@@ -1646,18 +1996,37 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN13QTextDocument18setUndoRedoEnabledEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QTextDocument19modificationChangedEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QTextDocument19setUseDesignMetricsEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QTextDocument20setDefaultStyleSheetERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QTextDocument20setMaximumBlockCountEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QTextDocument21cursorPositionChangedERK11QTextCursor","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QTextDocument4redoEP11QTextCursor","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QTextDocument4redoEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QTextDocument4undoEP11QTextCursor","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QTextDocument4undoEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QTextDocument5clearEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QTextDocument7setHtmlERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QTextDocumentC1EP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QTextDocumentC1ER20QTextDocumentPrivateP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QTextDocumentC1ERK7QStringP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QTextDocumentC2EP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QTextDocumentC2ER20QTextDocumentPrivateP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QTextDocumentC2ERK7QStringP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QTextDocumentD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QTextDocumentD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QTextDocumentD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QWidgetAction11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QWidgetAction11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QWidgetAction12createWidgetEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QWidgetAction12deleteWidgetEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QWidgetAction13releaseWidgetEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QWidgetAction13requestWidgetEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QWidgetAction16setDefaultWidgetEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QWidgetAction5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QWidgetActionC1EP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QWidgetActionC2EP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QWidgetActionD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QWidgetActionD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN13QWidgetActionD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QWindowsStyle10timerEventEP11QTimerEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QWindowsStyle11eventFilterEP7QObjectP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QWindowsStyle11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
@@ -1712,6 +2081,62 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN14QFileOpenEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QFileOpenEventD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QFileOpenEventD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene10addEllipseERK6QRectFRK4QPenRK6QBrush","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene10addPolygonERK9QPolygonFRK4QPenRK6QBrush","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene10clearFocusEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene10removeItemEP13QGraphicsItem","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene10wheelEventEP24QGraphicsSceneWheelEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene12focusInEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene12setFocusItemEP13QGraphicsItemN2Qt11FocusReasonE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene12setSceneRectERK6QRectF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene13dragMoveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene13focusOutEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene14clearSelectionEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene14dragEnterEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene14dragLeaveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene14drawBackgroundEP8QPainterRK6QRectF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene14drawForegroundEP8QPainterRK6QRectF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene14mouseMoveEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene15createItemGroupERK5QListIP13QGraphicsItemE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene15keyReleaseEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene15mousePressEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene16contextMenuEventEP30QGraphicsSceneContextMenuEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene16destroyItemGroupEP18QGraphicsItemGroup","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene16inputMethodEventEP17QInputMethodEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene16sceneRectChangedERK6QRectF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene16setSelectionAreaERK12QPainterPath","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene17mouseReleaseEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene18setBackgroundBrushERK6QBrush","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene18setForegroundBrushERK6QBrush","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene18setItemIndexMethodENS_15ItemIndexMethodE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene6renderEP8QPainterRK6QRectFS4_N2Qt15AspectRatioModeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene6updateERK6QRectF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene7addItemEP13QGraphicsItem","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene7addLineERK6QLineFRK4QPen","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene7addPathERK12QPainterPathRK4QPenRK6QBrush","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene7addRectERK6QRectFRK4QPenRK6QBrush","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene7addTextERK7QStringRK5QFont","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene7advanceEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene7changedERK5QListI6QRectFE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene8setFocusEN2Qt11FocusReasonE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene9addPixmapERK7QPixmap","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene9drawItemsEP8QPainteriPP13QGraphicsItemPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene9dropEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsScene9helpEventEP23QGraphicsSceneHelpEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsSceneC1EP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsSceneC1ERK6QRectFP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsSceneC1EddddP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsSceneC2EP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsSceneC2ERK6QRectFP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsSceneC2EddddP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsSceneD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsSceneD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QGraphicsSceneD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QIconDragEventC1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QIconDragEventC2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QIconDragEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
@@ -1772,6 +2197,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN14QStackedWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QStackedWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QStackedWidgetD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN14QTextTableCell9setFormatERK15QTextCharFormat","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QAbstractButton10setCheckedEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QAbstractButton10timerEventEP11QTimerEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QAbstractButton11changeEventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
@@ -1793,6 +2219,8 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN15QAbstractButton16setAutoExclusiveEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QAbstractButton16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZN15QAbstractButton17mouseReleaseEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QAbstractButton18setAutoRepeatDelayEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QAbstractButton21setAutoRepeatIntervalEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QAbstractButton5clickEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QAbstractButton5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QAbstractButton6toggleEv","",0,LSB_Toolkit_Qt,0,1},
@@ -1848,6 +2276,41 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN15QAbstractSliderD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QAbstractSliderD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QAbstractSliderD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget11resizeEventEP12QResizeEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget12setDateRangeERK5QDateS2_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget12showNextYearEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget13showNextMonthEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget14setCurrentPageEii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget14setGridVisibleEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget14setMaximumDateERK5QDate","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget14setMinimumDateERK5QDate","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget15mousePressEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget15setSelectedDateERK5QDate","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget16selectionChangedEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget16setHeaderVisibleEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget16setSelectionModeENS_13SelectionModeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget16showPreviousYearEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget16showSelectedDateEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget17setDateTextFormatERK5QDateRK15QTextCharFormat","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget17setFirstDayOfWeekEN2Qt9DayOfWeekE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget17showPreviousMonthEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget18currentPageChangedEii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget19setHeaderTextFormatERK15QTextCharFormat","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget20setWeekdayTextFormatEN2Qt9DayOfWeekERK15QTextCharFormat","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget23setVerticalHeaderFormatENS_20VerticalHeaderFormatE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget25setHorizontalHeaderFormatENS_22HorizontalHeaderFormatE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget7clickedERK5QDate","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget9activatedERK5QDate","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidget9showTodayEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidgetC1EP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidgetC2EP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QCalendarWidgetD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QClipboardEventC1EP13QEventPrivate","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QClipboardEventC2EP13QEventPrivate","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QClipboardEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
@@ -1876,12 +2339,17 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN15QImageIOHandlerD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QImageIOHandlerD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QImageIOHandlerD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QLinearGradient12setFinalStopERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QLinearGradient8setStartERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QLinearGradientC1ERK7QPointFS2_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QLinearGradientC1Edddd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QLinearGradientC1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QLinearGradientC2ERK7QPointFS2_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QLinearGradientC2Edddd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QLinearGradientC2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QListWidgetItem4readER11QDataStream","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QListWidgetItem7setDataEiRK8QVariant","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QListWidgetItem8setFlagsE6QFlagsIN2Qt8ItemFlagEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QListWidgetItemC1EP11QListWidgeti","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QListWidgetItemC1ERK5QIconRK7QStringP11QListWidgeti","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QListWidgetItemC1ERK7QStringP11QListWidgeti","",0,LSB_Toolkit_Qt,0,1},
@@ -1939,10 +2407,19 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN15QProgressDialogD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QProgressDialogD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QProgressDialogD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QRadialGradient13setFocalPointERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QRadialGradient9setCenterERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QRadialGradient9setRadiusEd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QRadialGradientC1ERK7QPointFd","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QRadialGradientC1ERK7QPointFdS2_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QRadialGradientC1Eddd","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QRadialGradientC1Eddddd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QRadialGradientC1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QRadialGradientC2ERK7QPointFd","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QRadialGradientC2ERK7QPointFdS2_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QRadialGradientC2Eddd","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QRadialGradientC2Eddddd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QRadialGradientC2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QSessionManager11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QSessionManager11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QSessionManager13requestPhase2Ev","",0,LSB_Toolkit_Qt,0,1},
@@ -1981,6 +2458,25 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN15QStyleOptionTabC1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QStyleOptionTabC2Ei","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QStyleOptionTabC2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QSystemTrayIcon10setToolTipERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QSystemTrayIcon10setVisibleEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QSystemTrayIcon11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QSystemTrayIcon11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QSystemTrayIcon11showMessageERK7QStringS2_NS_11MessageIconEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QSystemTrayIcon14messageClickedEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QSystemTrayIcon14setContextMenuEP5QMenu","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QSystemTrayIcon16supportsMessagesEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QSystemTrayIcon21isSystemTrayAvailableEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QSystemTrayIcon5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QSystemTrayIcon7setIconERK5QIcon","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QSystemTrayIcon9activatedENS_16ActivationReasonE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QSystemTrayIconC1EP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QSystemTrayIconC1ERK5QIconP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QSystemTrayIconC2EP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QSystemTrayIconC2ERK5QIconP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QSystemTrayIconD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QSystemTrayIconD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QSystemTrayIconD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QTextBlockGroup11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QTextBlockGroup11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QTextBlockGroup12blockRemovedERK10QTextBlock","",0,LSB_Toolkit_Qt,0,1},
@@ -1994,6 +2490,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN15QTextBlockGroupD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QTextBlockGroupD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QTextBlockGroupD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN15QTextCharFormat17setUnderlineStyleENS_14UnderlineStyleE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QTextCharFormat7setFontERK5QFont","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QTextCharFormatC1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QTextCharFormatC2Ev","",0,LSB_Toolkit_Qt,0,1},
@@ -2046,6 +2543,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN16QAbstractSpinBox13interpretTextEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QAbstractSpinBox13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QAbstractSpinBox14mouseMoveEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QAbstractSpinBox14setAcceleratedEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QAbstractSpinBox15editingFinishedEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QAbstractSpinBox15keyReleaseEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QAbstractSpinBox15mousePressEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
@@ -2053,6 +2551,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN16QAbstractSpinBox16setButtonSymbolsENS_13ButtonSymbolsE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QAbstractSpinBox16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZN16QAbstractSpinBox17mouseReleaseEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QAbstractSpinBox17setCorrectionModeENS_14CorrectionModeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QAbstractSpinBox19setSpecialValueTextERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QAbstractSpinBox5clearEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QAbstractSpinBox5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
@@ -2070,10 +2569,54 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN16QAbstractSpinBoxD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QAbstractSpinBoxD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QAbstractSpinBoxD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QCleanlooksStyle11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QCleanlooksStyle11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QCleanlooksStyle6polishEP12QApplication","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QCleanlooksStyle6polishEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QCleanlooksStyle6polishER8QPalette","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QCleanlooksStyle8unpolishEP12QApplication","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QCleanlooksStyle8unpolishEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QCleanlooksStyleC1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QCleanlooksStyleC2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QCleanlooksStyleD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QCleanlooksStyleD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QCleanlooksStyleD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QConicalGradient8setAngleEd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QConicalGradient9setCenterERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QConicalGradientC1ERK7QPointFd","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QConicalGradientC1Eddd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QConicalGradientC1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QConicalGradientC2ERK7QPointFd","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QConicalGradientC2Eddd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QConicalGradientC2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDesktopServices15unsetUrlHandlerERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDesktopServices7openUrlERK4QUrl","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDialogButtonBox11changeEventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDialogButtonBox11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDialogButtonBox11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDialogButtonBox12removeButtonEP15QAbstractButton","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDialogButtonBox13helpRequestedEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDialogButtonBox14setOrientationEN2Qt11OrientationE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDialogButtonBox16setCenterButtonsEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDialogButtonBox18setStandardButtonsE6QFlagsINS_14StandardButtonEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDialogButtonBox5clearEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDialogButtonBox5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDialogButtonBox7clickedEP15QAbstractButton","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDialogButtonBox8acceptedEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDialogButtonBox8rejectedEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDialogButtonBox9addButtonENS_14StandardButtonE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDialogButtonBox9addButtonEP15QAbstractButtonNS_10ButtonRoleE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDialogButtonBox9addButtonERK7QStringNS_10ButtonRoleE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDialogButtonBoxC1E6QFlagsINS_14StandardButtonEEN2Qt11OrientationEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDialogButtonBoxC1EN2Qt11OrientationEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDialogButtonBoxC1EP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDialogButtonBoxC2E6QFlagsINS_14StandardButtonEEN2Qt11OrientationEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDialogButtonBoxC2EN2Qt11OrientationEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDialogButtonBoxC2EP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDialogButtonBoxD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDialogButtonBoxD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QDialogButtonBoxD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QDoubleValidator11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QDoubleValidator11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QDoubleValidator11setDecimalsEi","",0,LSB_Toolkit_Qt,0,1},
@@ -2092,6 +2635,8 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN16QDoubleValidatorD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QDoubleValidatorD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QDoubleValidatorD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QPageSetupDialog11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QPageSetupDialog11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QPageSetupDialog4execEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QPageSetupDialogC1EP8QPrinterP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QPageSetupDialogC2EP8QPrinterP7QWidget","",0,LSB_Toolkit_Qt,0,1},
@@ -2128,9 +2673,12 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN16QStyleHintReturnD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QTableWidgetItem4readER11QDataStream","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QTableWidgetItem7setDataEiRK8QVariant","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QTableWidgetItem8setFlagsE6QFlagsIN2Qt8ItemFlagEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QTableWidgetItemC1ERK5QIconRK7QStringi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QTableWidgetItemC1ERK7QStringi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QTableWidgetItemC1ERKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QTableWidgetItemC1Ei","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QTableWidgetItemC2ERK5QIconRK7QStringi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QTableWidgetItemC2ERK7QStringi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QTableWidgetItemC2ERKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QTableWidgetItemC2Ei","",0,LSB_Toolkit_Qt,0,1},
@@ -2180,10 +2728,12 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN17QAbstractItemView15editorDestroyedEP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QAbstractItemView15mousePressEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QAbstractItemView15setCurrentIndexERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QAbstractItemView15setDragDropModeENS_12DragDropModeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QAbstractItemView15setEditTriggersE6QFlagsINS_11EditTriggerEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QAbstractItemView15setItemDelegateEP21QAbstractItemDelegate","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QAbstractItemView15startAutoScrollEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QAbstractItemView15viewportEnteredEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QAbstractItemView16inputMethodEventEP17QInputMethodEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QAbstractItemView16selectionChangedERK14QItemSelectionS2_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QAbstractItemView16setSelectionModeENS_13SelectionModeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QAbstractItemView16setTextElideModeEN2Qt13TextElideModeE","",0,LSB_Toolkit_Qt,0,1},
@@ -2193,6 +2743,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN17QAbstractItemView17mouseReleaseEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QAbstractItemView17scrollDirtyRegionEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QAbstractItemView17setSelectionModelEP19QItemSelectionModel","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QAbstractItemView18focusNextPrevChildEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QAbstractItemView19setTabKeyNavigationEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QAbstractItemView20openPersistentEditorERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QAbstractItemView20rowsAboutToBeRemovedERK11QModelIndexii","",0,LSB_Toolkit_Qt,0,1},
@@ -2200,10 +2751,15 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN17QAbstractItemView21closePersistentEditorERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QAbstractItemView21mouseDoubleClickEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QAbstractItemView21setDropIndicatorShownEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QAbstractItemView21setItemDelegateForRowEiP21QAbstractItemDelegate","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QAbstractItemView21setVerticalScrollModeENS_10ScrollModeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QAbstractItemView22updateEditorGeometriesEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QAbstractItemView23setAlternatingRowColorsEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QAbstractItemView23setHorizontalScrollModeENS_10ScrollModeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QAbstractItemView23setVerticalStepsPerItemEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QAbstractItemView23verticalScrollbarActionEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QAbstractItemView24setDragDropOverwriteModeEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QAbstractItemView24setItemDelegateForColumnEiP21QAbstractItemDelegate","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QAbstractItemView25executeDelayedItemsLayoutEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QAbstractItemView25horizontalScrollbarActionEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QAbstractItemView25setHorizontalStepsPerItemEi","",0,LSB_Toolkit_Qt,0,1},
@@ -2267,11 +2823,111 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN17QContextMenuEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QContextMenuEventD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QContextMenuEventD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QDataWidgetMapper10addMappingEP7QWidgeti","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QDataWidgetMapper10toPreviousEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QDataWidgetMapper11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QDataWidgetMapper11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QDataWidgetMapper12clearMappingEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QDataWidgetMapper12setRootIndexERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QDataWidgetMapper13removeMappingEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QDataWidgetMapper14setOrientationEN2Qt11OrientationE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QDataWidgetMapper15setCurrentIndexEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QDataWidgetMapper15setItemDelegateEP21QAbstractItemDelegate","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QDataWidgetMapper15setSubmitPolicyENS_12SubmitPolicyE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QDataWidgetMapper19currentIndexChangedEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QDataWidgetMapper20setCurrentModelIndexERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QDataWidgetMapper6revertEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QDataWidgetMapper6submitEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QDataWidgetMapper6toLastEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QDataWidgetMapper6toNextEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QDataWidgetMapper7toFirstEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QDataWidgetMapper8setModelEP18QAbstractItemModel","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QDataWidgetMapperC1EP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QDataWidgetMapperC2EP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QDataWidgetMapperD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QDataWidgetMapperD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QDataWidgetMapperD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QFileIconProviderC1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QFileIconProviderC2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QFileIconProviderD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QFileIconProviderD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QFileIconProviderD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsLineItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsLineItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsLineItem6setPenERK4QPen","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsLineItem7setLineERK6QLineF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsLineItemC1EP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsLineItemC1ERK6QLineFP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsLineItemC1EddddP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsLineItemC2EP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsLineItemC2ERK6QLineFP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsLineItemC2EddddP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsLineItemD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsLineItemD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsLineItemD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsPathItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsPathItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsPathItem7setPathERK12QPainterPath","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsPathItemC1EP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsPathItemC1ERK12QPainterPathP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsPathItemC2EP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsPathItemC2ERK12QPainterPathP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsPathItemD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsPathItemD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsPathItemD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsRectItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsRectItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsRectItem7setRectERK6QRectF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsRectItemC1EP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsRectItemC1ERK6QRectFP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsRectItemC1EddddP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsRectItemC2EP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsRectItemC2ERK6QRectFP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsRectItemC2EddddP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsRectItemD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsRectItemD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsRectItemD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem10adjustSizeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem10sceneEventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem11linkHoveredERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem11setDocumentEP13QTextDocument","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem12focusInEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem12setPlainTextERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem12setTextWidthEd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem13dragMoveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem13focusOutEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem13linkActivatedERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem13setTextCursorERK11QTextCursor","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem14dragEnterEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem14hoverMoveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem14mouseMoveEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem15hoverEnterEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem15keyReleaseEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem15mousePressEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem16inputMethodEventEP17QInputMethodEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem19setDefaultTextColorERK6QColor","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem20setOpenExternalLinksEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem23setTextInteractionFlagsE6QFlagsIN2Qt19TextInteractionFlagEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem7setFontERK5QFont","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem7setHtmlERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItem9dropEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItemC1EP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItemC1ERK7QStringP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItemC2EP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItemC2ERK7QStringP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItemD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItemD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN17QGraphicsTextItemD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QIconEnginePlugin11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QIconEnginePlugin11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN17QIconEnginePlugin16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
@@ -2306,6 +2962,14 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN18QDragResponseEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QDragResponseEventD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QDragResponseEventD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QGraphicsItemGroup10addToGroupEP13QGraphicsItem","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QGraphicsItemGroup15removeFromGroupEP13QGraphicsItem","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QGraphicsItemGroup5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QGraphicsItemGroupC1EP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QGraphicsItemGroupC2EP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QGraphicsItemGroupD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QGraphicsItemGroupD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QGraphicsItemGroupD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QItemEditorFactory14defaultFactoryEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QItemEditorFactory14registerEditorEN8QVariant4TypeEP22QItemEditorCreatorBase","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QItemEditorFactory17setDefaultFactoryEPS_","",0,LSB_Toolkit_Qt,0,1},
@@ -2314,17 +2978,40 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN18QItemEditorFactoryD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QStandardItemModel10insertRowsEiiRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QStandardItemModel10removeRowsEiiRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QStandardItemModel10takeColumnEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QStandardItemModel11itemChangedEP13QStandardItem","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QStandardItemModel11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QStandardItemModel11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QStandardItemModel11setItemDataERK11QModelIndexRK4QMapIi8QVariantE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QStandardItemModel11setRowCountEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QStandardItemModel11setSortRoleEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QStandardItemModel12appendColumnERK5QListIP13QStandardItemE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QStandardItemModel12insertColumnEiRK5QListIP13QStandardItemE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QStandardItemModel13insertColumnsEiiRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QStandardItemModel13removeColumnsEiiRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QStandardItemModel13setHeaderDataEiN2Qt11OrientationERK8QVarianti","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QStandardItemModel14setColumnCountEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QStandardItemModel16setItemPrototypeEPK13QStandardItem","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QStandardItemModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZN18QStandardItemModel21setVerticalHeaderItemEiP13QStandardItem","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QStandardItemModel22takeVerticalHeaderItemEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QStandardItemModel23setHorizontalHeaderItemEiP13QStandardItem","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QStandardItemModel23setVerticalHeaderLabelsERK11QStringList","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QStandardItemModel24takeHorizontalHeaderItemEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QStandardItemModel25setHorizontalHeaderLabelsERK11QStringList","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QStandardItemModel4sortEiN2Qt9SortOrderE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QStandardItemModel5clearEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QStandardItemModel7setDataERK11QModelIndexRK8QVarianti","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QStandardItemModel7setItemEiiP13QStandardItem","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QStandardItemModel7takeRowEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QStandardItemModel8takeItemEii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QStandardItemModel9appendRowERK5QListIP13QStandardItemE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QStandardItemModel9insertRowEiRK5QListIP13QStandardItemE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QStandardItemModelC1EP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QStandardItemModelC1ER25QStandardItemModelPrivateP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QStandardItemModelC1EiiP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QStandardItemModelC2EP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QStandardItemModelC2ER25QStandardItemModelPrivateP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QStandardItemModelC2EiiP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QStandardItemModelD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QStandardItemModelD1Ev","",0,LSB_Toolkit_Qt,0,1},
@@ -2343,6 +3030,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN18QStyleOptionSliderC2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QSyntaxHighlighter11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QSyntaxHighlighter11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN18QSyntaxHighlighter11rehighlightEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QSyntaxHighlighter11setDocumentEP13QTextDocument","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QSyntaxHighlighter16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZN18QSyntaxHighlighter20setCurrentBlockStateEi","",0,LSB_Toolkit_Qt,0,1},
@@ -2380,19 +3068,26 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN19QAbstractScrollArea11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QAbstractScrollArea11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QAbstractScrollArea11resizeEventEP12QResizeEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QAbstractScrollArea11setViewportEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QAbstractScrollArea13dragMoveEventEP14QDragMoveEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QAbstractScrollArea13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QAbstractScrollArea13setupViewportEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QAbstractScrollArea13viewportEventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QAbstractScrollArea14dragEnterEventEP15QDragEnterEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QAbstractScrollArea14dragLeaveEventEP15QDragLeaveEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QAbstractScrollArea14mouseMoveEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QAbstractScrollArea15mousePressEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QAbstractScrollArea15setCornerWidgetEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QAbstractScrollArea16contextMenuEventEP17QContextMenuEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QAbstractScrollArea16scrollBarWidgetsE6QFlagsIN2Qt13AlignmentFlagEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QAbstractScrollArea16scrollContentsByEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QAbstractScrollArea16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZN19QAbstractScrollArea17mouseReleaseEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QAbstractScrollArea18addScrollBarWidgetEP7QWidget6QFlagsIN2Qt13AlignmentFlagEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QAbstractScrollArea18setViewportMarginsEiiii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QAbstractScrollArea20setVerticalScrollBarEP10QScrollBar","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QAbstractScrollArea21mouseDoubleClickEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QAbstractScrollArea22setHorizontalScrollBarEP10QScrollBar","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QAbstractScrollArea26setVerticalScrollBarPolicyEN2Qt15ScrollBarPolicyE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QAbstractScrollArea28setHorizontalScrollBarPolicyEN2Qt15ScrollBarPolicyE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QAbstractScrollArea5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
@@ -2404,6 +3099,27 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN19QAbstractScrollAreaD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QAbstractScrollAreaD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QAbstractScrollAreaD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QGraphicsPixmapItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QGraphicsPixmapItem12setShapeModeENS_9ShapeModeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QGraphicsPixmapItem21setTransformationModeEN2Qt18TransformationModeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QGraphicsPixmapItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QGraphicsPixmapItem9setOffsetERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QGraphicsPixmapItem9setPixmapERK7QPixmap","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QGraphicsPixmapItemC1EP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QGraphicsPixmapItemC1ERK7QPixmapP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QGraphicsPixmapItemC2EP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QGraphicsPixmapItemC2ERK7QPixmapP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QGraphicsPixmapItemD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QGraphicsPixmapItemD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QGraphicsPixmapItemD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QGraphicsSceneEvent9setWidgetEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QGraphicsSceneEventC1EN6QEvent4TypeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QGraphicsSceneEventC1ER26QGraphicsSceneEventPrivateN6QEvent4TypeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QGraphicsSceneEventC2EN6QEvent4TypeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QGraphicsSceneEventC2ER26QGraphicsSceneEventPrivateN6QEvent4TypeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QGraphicsSceneEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QGraphicsSceneEventD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QGraphicsSceneEventD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QInputContextPlugin11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QInputContextPlugin11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QInputContextPlugin16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
@@ -2414,6 +3130,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN19QInputContextPluginD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QItemSelectionModel11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QItemSelectionModel11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN19QItemSelectionModel14clearSelectionEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QItemSelectionModel14currentChangedERK11QModelIndexS2_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QItemSelectionModel15setCurrentIndexERK11QModelIndex6QFlagsINS_13SelectionFlagEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QItemSelectionModel16selectionChangedERK14QItemSelectionS2_","",0,LSB_Toolkit_Qt,0,1},
@@ -2471,6 +3188,8 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN19QToolBarChangeEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QToolBarChangeEventD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QToolBarChangeEventD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QAbstractPrintDialog11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QAbstractPrintDialog11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN20QAbstractPrintDialog13setPrintRangeENS_10PrintRangeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN20QAbstractPrintDialog16addEnabledOptionENS_17PrintDialogOptionE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN20QAbstractPrintDialog17setEnabledOptionsE6QFlagsINS_17PrintDialogOptionEE","",0,LSB_Toolkit_Qt,0,1},
@@ -2480,6 +3199,32 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN20QAbstractPrintDialogC1ER27QAbstractPrintDialogPrivateP8QPrinterP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN20QAbstractPrintDialogC2EP8QPrinterP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN20QAbstractPrintDialogC2ER27QAbstractPrintDialogPrivateP8QPrinterP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QAccessibleInterface12invokeMethodEN11QAccessible6MethodEiRK5QListI8QVariantE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGraphicsEllipseItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGraphicsEllipseItem12setSpanAngleEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGraphicsEllipseItem13setStartAngleEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGraphicsEllipseItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGraphicsEllipseItem7setRectERK6QRectF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGraphicsEllipseItemC1EP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGraphicsEllipseItemC1ERK6QRectFP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGraphicsEllipseItemC1EddddP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGraphicsEllipseItemC2EP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGraphicsEllipseItemC2ERK6QRectFP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGraphicsEllipseItemC2EddddP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGraphicsEllipseItemD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGraphicsEllipseItemD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGraphicsEllipseItemD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGraphicsPolygonItem10setPolygonERK9QPolygonF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGraphicsPolygonItem11setFillRuleEN2Qt8FillRuleE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGraphicsPolygonItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGraphicsPolygonItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGraphicsPolygonItemC1EP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGraphicsPolygonItemC1ERK9QPolygonFP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGraphicsPolygonItemC2EP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGraphicsPolygonItemC2ERK9QPolygonFP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGraphicsPolygonItemD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGraphicsPolygonItemD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QGraphicsPolygonItemD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN20QInputContextFactory11descriptionERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN20QInputContextFactory11displayNameERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN20QInputContextFactory4keysEv","",0,LSB_Toolkit_Qt,0,1},
@@ -2511,6 +3256,10 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN20QStyleOptionMenuItemC1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN20QStyleOptionMenuItemC2Ei","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN20QStyleOptionMenuItemC2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QStyleOptionSizeGripC1Ei","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QStyleOptionSizeGripC1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QStyleOptionSizeGripC2Ei","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN20QStyleOptionSizeGripC2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN20QStyleOptionTitleBarC1Ei","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN20QStyleOptionTitleBarC1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN20QStyleOptionTitleBarC2Ei","",0,LSB_Toolkit_Qt,0,1},
@@ -2540,9 +3289,12 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN21QSortFilterProxyModel10removeRowsEiiRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN21QSortFilterProxyModel11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN21QSortFilterProxyModel11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN21QSortFilterProxyModel11setSortRoleEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN21QSortFilterProxyModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN21QSortFilterProxyModel13filterChangedEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN21QSortFilterProxyModel13insertColumnsEiiRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN21QSortFilterProxyModel13removeColumnsEiiRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN21QSortFilterProxyModel13setFilterRoleEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN21QSortFilterProxyModel13setHeaderDataEiN2Qt11OrientationERK8QVarianti","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN21QSortFilterProxyModel14setSourceModelEP18QAbstractItemModel","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN21QSortFilterProxyModel15setFilterRegExpERK7QRegExp","",0,LSB_Toolkit_Qt,0,1},
@@ -2550,7 +3302,9 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN21QSortFilterProxyModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZN21QSortFilterProxyModel17setFilterWildcardERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN21QSortFilterProxyModel18setFilterKeyColumnEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN21QSortFilterProxyModel20setDynamicSortFilterEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN21QSortFilterProxyModel20setFilterFixedStringERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN21QSortFilterProxyModel22setSortCaseSensitivityEN2Qt15CaseSensitivityE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN21QSortFilterProxyModel24setFilterCaseSensitivityEN2Qt15CaseSensitivityE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN21QSortFilterProxyModel4sortEiN2Qt9SortOrderE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN21QSortFilterProxyModel5clearEv","",0,LSB_Toolkit_Qt,0,1},
@@ -2567,6 +3321,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN21QStyleOptionFocusRectC2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN21QTextDocumentFragment13fromPlainTextERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN21QTextDocumentFragment8fromHtmlERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN21QTextDocumentFragment8fromHtmlERK7QStringPK13QTextDocument","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN21QTextDocumentFragmentC1EPK13QTextDocument","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN21QTextDocumentFragmentC1ERK11QTextCursor","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN21QTextDocumentFragmentC1ERKS_","",0,LSB_Toolkit_Qt,0,1},
@@ -2581,6 +3336,25 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN22QAccessibleApplication8doActionEiiRK5QListI8QVariantE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN22QAccessibleApplicationC1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN22QAccessibleApplicationC2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QGraphicsItemAnimation10setScaleAtEddd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QGraphicsItemAnimation10setShearAtEddd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QGraphicsItemAnimation11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QGraphicsItemAnimation11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QGraphicsItemAnimation11setTimeLineEP9QTimeLine","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QGraphicsItemAnimation13setRotationAtEdd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QGraphicsItemAnimation16setTranslationAtEddd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QGraphicsItemAnimation18afterAnimationStepEd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QGraphicsItemAnimation19beforeAnimationStepEd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QGraphicsItemAnimation5clearEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QGraphicsItemAnimation5resetEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QGraphicsItemAnimation7setItemEP13QGraphicsItem","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QGraphicsItemAnimation7setStepEd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QGraphicsItemAnimation8setPosAtEdRK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QGraphicsItemAnimationC1EP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QGraphicsItemAnimationC2EP7QObject","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QGraphicsItemAnimationD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QGraphicsItemAnimationD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QGraphicsItemAnimationD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN22QStyleOptionDockWidgetC1Ei","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN22QStyleOptionDockWidgetC1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN22QStyleOptionDockWidgetC2Ei","",0,LSB_Toolkit_Qt,0,1},
@@ -2601,6 +3375,13 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN22QStyleOptionToolButtonC1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN22QStyleOptionToolButtonC2Ei","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN22QStyleOptionToolButtonC2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QStyleOptionViewItemV2C1ERK20QStyleOptionViewItem","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QStyleOptionViewItemV2C1Ei","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QStyleOptionViewItemV2C1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QStyleOptionViewItemV2C2ERK20QStyleOptionViewItem","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QStyleOptionViewItemV2C2Ei","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QStyleOptionViewItemV2C2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN22QStyleOptionViewItemV2aSERK20QStyleOptionViewItem","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN22QWhatsThisClickedEventC1ERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN22QWhatsThisClickedEventC2ERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN22QWhatsThisClickedEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
@@ -2614,6 +3395,24 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN23QAccessibleBridgePluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN23QAccessibleBridgePluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN23QAccessibleBridgePluginD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN23QGraphicsSceneHelpEvent11setScenePosERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN23QGraphicsSceneHelpEvent12setScreenPosERK6QPoint","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN23QGraphicsSceneHelpEventC1EN6QEvent4TypeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN23QGraphicsSceneHelpEventC2EN6QEvent4TypeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN23QGraphicsSceneHelpEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN23QGraphicsSceneHelpEventD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN23QGraphicsSceneHelpEventD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN23QGraphicsSimpleTextItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN23QGraphicsSimpleTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN23QGraphicsSimpleTextItem7setFontERK5QFont","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN23QGraphicsSimpleTextItem7setTextERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN23QGraphicsSimpleTextItemC1EP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN23QGraphicsSimpleTextItemC1ERK7QStringP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN23QGraphicsSimpleTextItemC2EP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN23QGraphicsSimpleTextItemC2ERK7QStringP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN23QGraphicsSimpleTextItemD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN23QGraphicsSimpleTextItemD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN23QGraphicsSimpleTextItemD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN23QStyleOptionProgressBarC1Ei","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN23QStyleOptionProgressBarC1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN23QStyleOptionProgressBarC2Ei","",0,LSB_Toolkit_Qt,0,1},
@@ -2636,11 +3435,53 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN23QWindowStateChangeEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN23QWindowStateChangeEventD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN23QWindowStateChangeEventD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QAbstractPageSetupDialog11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QAbstractPageSetupDialog11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN24QAbstractPageSetupDialog7printerEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN24QAbstractPageSetupDialogC1EP8QPrinterP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN24QAbstractPageSetupDialogC1ER31QAbstractPageSetupDialogPrivateP8QPrinterP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN24QAbstractPageSetupDialogC2EP8QPrinterP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN24QAbstractPageSetupDialogC2ER31QAbstractPageSetupDialogPrivateP8QPrinterP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneHoverEvent11setScenePosERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneHoverEvent12setScreenPosERK6QPoint","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneHoverEvent6setPosERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneHoverEventC1EN6QEvent4TypeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneHoverEventC2EN6QEvent4TypeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneHoverEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneHoverEventD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneHoverEventD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneMouseEvent10setButtonsE6QFlagsIN2Qt11MouseButtonEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneMouseEvent10setLastPosERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneMouseEvent11setScenePosERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneMouseEvent12setModifiersE6QFlagsIN2Qt16KeyboardModifierEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneMouseEvent12setScreenPosERK6QPoint","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneMouseEvent15setLastScenePosERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneMouseEvent16setButtonDownPosEN2Qt11MouseButtonERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneMouseEvent16setLastScreenPosERK6QPoint","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneMouseEvent21setButtonDownScenePosEN2Qt11MouseButtonERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneMouseEvent22setButtonDownScreenPosEN2Qt11MouseButtonERK6QPoint","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneMouseEvent6setPosERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneMouseEvent9setButtonEN2Qt11MouseButtonE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneMouseEventC1EN6QEvent4TypeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneMouseEventC2EN6QEvent4TypeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneMouseEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneMouseEventD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneMouseEventD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneWheelEvent10setButtonsE6QFlagsIN2Qt11MouseButtonEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneWheelEvent11setScenePosERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneWheelEvent12setModifiersE6QFlagsIN2Qt16KeyboardModifierEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneWheelEvent12setScreenPosERK6QPoint","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneWheelEvent6setPosERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneWheelEvent8setDeltaEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneWheelEventC1EN6QEvent4TypeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneWheelEventC2EN6QEvent4TypeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneWheelEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneWheelEventD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QGraphicsSceneWheelEventD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QStyleOptionGraphicsItemC1Ei","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QStyleOptionGraphicsItemC1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QStyleOptionGraphicsItemC2Ei","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN24QStyleOptionGraphicsItemC2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN24QStyleOptionQ3DockWindowC1Ei","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN24QStyleOptionQ3DockWindowC1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN24QStyleOptionQ3DockWindowC2Ei","",0,LSB_Toolkit_Qt,0,1},
@@ -2654,6 +3495,15 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN25QStyleOptionProgressBarV2C2Ei","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN25QStyleOptionProgressBarV2C2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN25QStyleOptionProgressBarV2aSERK23QStyleOptionProgressBar","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN26QAbstractGraphicsShapeItem6setPenERK4QPen","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN26QAbstractGraphicsShapeItem8setBrushERK6QBrush","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN26QAbstractGraphicsShapeItemC1EP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN26QAbstractGraphicsShapeItemC1ER33QAbstractGraphicsShapeItemPrivateP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN26QAbstractGraphicsShapeItemC2EP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN26QAbstractGraphicsShapeItemC2ER33QAbstractGraphicsShapeItemPrivateP13QGraphicsItemP14QGraphicsScene","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN26QAbstractGraphicsShapeItemD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN26QAbstractGraphicsShapeItemD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN26QAbstractGraphicsShapeItemD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN26QStyleOptionQ3ListViewItemC1Ei","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN26QStyleOptionQ3ListViewItemC1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN26QStyleOptionQ3ListViewItemC2Ei","",0,LSB_Toolkit_Qt,0,1},
@@ -2690,10 +3540,36 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN27QAbstractTextDocumentLayoutD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN27QAbstractTextDocumentLayoutD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN27QAbstractTextDocumentLayoutD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN27QGraphicsSceneDragDropEvent10setButtonsE6QFlagsIN2Qt11MouseButtonEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN27QGraphicsSceneDragDropEvent11setMimeDataEPK9QMimeData","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN27QGraphicsSceneDragDropEvent11setScenePosERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN27QGraphicsSceneDragDropEvent12setModifiersE6QFlagsIN2Qt16KeyboardModifierEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN27QGraphicsSceneDragDropEvent12setScreenPosERK6QPoint","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN27QGraphicsSceneDragDropEvent13setDropActionEN2Qt10DropActionE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN27QGraphicsSceneDragDropEvent17setProposedActionEN2Qt10DropActionE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN27QGraphicsSceneDragDropEvent18setPossibleActionsE6QFlagsIN2Qt10DropActionEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN27QGraphicsSceneDragDropEvent20acceptProposedActionEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN27QGraphicsSceneDragDropEvent6setPosERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN27QGraphicsSceneDragDropEvent9setSourceEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN27QGraphicsSceneDragDropEventC1EN6QEvent4TypeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN27QGraphicsSceneDragDropEventC2EN6QEvent4TypeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN27QGraphicsSceneDragDropEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN27QGraphicsSceneDragDropEventD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN27QGraphicsSceneDragDropEventD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN2Qt12codecForHtmlERK10QByteArray","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN2Qt15mightBeRichTextERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN2Qt20convertFromPlainTextERK7QStringNS_14WhiteSpaceModeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN2Qt6escapeERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN30QGraphicsSceneContextMenuEvent11setScenePosERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN30QGraphicsSceneContextMenuEvent12setModifiersE6QFlagsIN2Qt16KeyboardModifierEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN30QGraphicsSceneContextMenuEvent12setScreenPosERK6QPoint","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN30QGraphicsSceneContextMenuEvent6setPosERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN30QGraphicsSceneContextMenuEvent9setReasonENS_6ReasonE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN30QGraphicsSceneContextMenuEventC1EN6QEvent4TypeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN30QGraphicsSceneContextMenuEventC2EN6QEvent4TypeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN30QGraphicsSceneContextMenuEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN30QGraphicsSceneContextMenuEventD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN30QGraphicsSceneContextMenuEventD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QPen10isDetachedEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QPen11setCapStyleEN2Qt11PenCapStyleE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QPen12setJoinStyleEN2Qt12PenJoinStyleE","",0,LSB_Toolkit_Qt,0,1},
@@ -2842,6 +3718,8 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN5QMenu16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZN5QMenu17mouseReleaseEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN5QMenu17setTearOffEnabledEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN5QMenu18focusNextPrevChildEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN5QMenu24setSeparatorsCollapsibleEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN5QMenu4execE5QListIP7QActionERK6QPointS2_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN5QMenu4execERK6QPointP7QAction","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN5QMenu4execEv","",0,LSB_Toolkit_Qt,0,1},
@@ -2872,13 +3750,16 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN5QMenuD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN5QMenuD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QBrush10setTextureERK7QPixmap","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN6QBrush15setTextureImageERK6QImage","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QBrush8setColorERK6QColor","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QBrush8setStyleEN2Qt10BrushStyleE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN6QBrush9setMatrixERK7QMatrix","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QBrushC1EN2Qt10BrushStyleE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QBrushC1EN2Qt11GlobalColorENS0_10BrushStyleE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QBrushC1EN2Qt11GlobalColorERK7QPixmap","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QBrushC1ERK6QColorN2Qt10BrushStyleE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QBrushC1ERK6QColorRK7QPixmap","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN6QBrushC1ERK6QImage","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QBrushC1ERK7QPixmap","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QBrushC1ERK9QGradient","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QBrushC1ERKS_","",0,LSB_Toolkit_Qt,0,1},
@@ -2888,6 +3769,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN6QBrushC2EN2Qt11GlobalColorERK7QPixmap","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QBrushC2ERK6QColorN2Qt10BrushStyleE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QBrushC2ERK6QColorRK7QPixmap","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN6QBrushC2ERK6QImage","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QBrushC2ERK7QPixmap","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QBrushC2ERK9QGradient","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QBrushC2ERKS_","",0,LSB_Toolkit_Qt,0,1},
@@ -2925,8 +3807,10 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN6QColor9setAlphaFEd","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QColor9setGreenFEd","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QColorC1EN2Qt11GlobalColorE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN6QColorC1ENS_4SpecE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QColorC1Ej","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QColorC2EN2Qt11GlobalColorE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN6QColorC2ENS_4SpecE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QColorC2Ej","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QColoraSEN2Qt11GlobalColorE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QColoraSERKS_","",0,LSB_Toolkit_Qt,0,1},
@@ -2978,6 +3862,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN6QImage9setOffsetERK6QPoint","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QImageC1EPKPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QImageC1EPKcS1_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN6QImageC1EPKhiiNS_6FormatE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QImageC1EPhiiNS_6FormatE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QImageC1EPhiiiPKjiNS_6EndianE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QImageC1ERK5QSizeNS_6FormatE","",0,LSB_Toolkit_Qt,0,1},
@@ -2989,6 +3874,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN6QImageC1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QImageC2EPKPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QImageC2EPKcS1_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN6QImageC2EPKhiiNS_6FormatE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QImageC2EPhiiNS_6FormatE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QImageC2EPhiiiPKjiNS_6EndianE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QImageC2ERK5QSizeNS_6FormatE","",0,LSB_Toolkit_Qt,0,1},
@@ -3005,14 +3891,26 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN6QLabel10paintEventEP11QPaintEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QLabel10setPictureERK8QPicture","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QLabel11changeEventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN6QLabel11linkHoveredERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QLabel11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QLabel11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QLabel11setWordWrapEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN6QLabel12focusInEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QLabel12setAlignmentE6QFlagsIN2Qt13AlignmentFlagEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QLabel12setAlignmentEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN6QLabel13focusOutEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN6QLabel13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN6QLabel13linkActivatedERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QLabel13setTextFormatEN2Qt10TextFormatE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN6QLabel14mouseMoveEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN6QLabel15mousePressEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN6QLabel16contextMenuEventEP17QContextMenuEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QLabel16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZN6QLabel17mouseReleaseEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QLabel17setScaledContentsEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN6QLabel18focusNextPrevChildEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN6QLabel20setOpenExternalLinksEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN6QLabel23setTextInteractionFlagsE6QFlagsIN2Qt19TextInteractionFlagEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QLabel5clearEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QLabel5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QLabel6setNumEd","",0,LSB_Toolkit_Qt,0,1},
@@ -3113,11 +4011,15 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN7QAction11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QAction11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QAction11setIconTextERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN7QAction11setMenuRoleENS_8MenuRoleE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QAction11setShortcutERK12QKeySequence","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QAction12setCheckableEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QAction12setSeparatorEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN7QAction12setShortcutsEN12QKeySequence11StandardKeyE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN7QAction12setShortcutsERK5QListI12QKeySequenceE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QAction12setStatusTipERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QAction12setWhatsThisERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN7QAction13setAutoRepeatEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QAction14setActionGroupEP12QActionGroup","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QAction14showStatusTextEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QAction16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
@@ -3137,12 +4039,14 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN7QAction9triggeredEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QActionC1EP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QActionC1EP7QObjectPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN7QActionC1ER14QActionPrivateP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QActionC1ERK5QIconRK7QStringP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QActionC1ERK5QIconRK7QStringRK12QKeySequenceP7QObjectPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QActionC1ERK7QStringP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QActionC1ERK7QStringRK12QKeySequenceP7QObjectPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QActionC2EP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QActionC2EP7QObjectPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN7QActionC2ER14QActionPrivateP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QActionC2ERK5QIconRK7QStringP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QActionC2ERK5QIconRK7QStringRK12QKeySequenceP7QObjectPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QActionC2ERK7QStringP7QObject","",0,LSB_Toolkit_Qt,0,1},
@@ -3374,6 +4278,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN7QTabBar11setDrawBaseEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QTabBar11setIconSizeERK5QSize","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QTabBar11tabInsertedEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN7QTabBar12setElideModeEN2Qt13TextElideModeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QTabBar13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QTabBar13setTabEnabledEib","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QTabBar13setTabToolTipEiRK7QString","",0,LSB_Toolkit_Qt,0,1},
@@ -3386,6 +4291,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN7QTabBar15tabLayoutChangeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QTabBar16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZN7QTabBar17mouseReleaseEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN7QTabBar20setUsesScrollButtonsEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QTabBar5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QTabBar6addTabERK5QIconRK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QTabBar6addTabERK7QString","",0,LSB_Toolkit_Qt,0,1},
@@ -3417,6 +4323,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN7QWidget10wheelEventEP11QWheelEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QWidget11actionEventEP12QActionEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QWidget11changeEventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN7QWidget11createWinIdEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QWidget11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QWidget11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QWidget11resizeEventEP12QResizeEvent","",0,LSB_Toolkit_Qt,0,1},
@@ -3449,6 +4356,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN7QWidget13setFixedWidthEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QWidget13setFocusProxyEPS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QWidget13setSizePolicyE11QSizePolicy","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN7QWidget13setStyleSheetERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QWidget13setWindowIconERK5QIcon","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QWidget13setWindowRoleERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QWidget13showMaximizedEv","",0,LSB_Toolkit_Qt,0,1},
@@ -3473,6 +4381,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN7QWidget15mousePressEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QWidget15releaseKeyboardEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QWidget15releaseShortcutEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN7QWidget15restoreGeometryERK10QByteArray","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QWidget15setInputContextEP13QInputContext","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QWidget15setMaximumWidthEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QWidget15setMinimumWidthEi","",0,LSB_Toolkit_Qt,0,1},
@@ -3482,6 +4391,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN7QWidget16setMinimumHeightEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QWidget16setSizeIncrementEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QWidget16setWindowOpacityEd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN7QWidget16setWindowSurfaceEP14QWindowSurface","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QWidget16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZN7QWidget16updateMicroFocusEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QWidget17mouseReleaseEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
@@ -3504,6 +4414,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN7QWidget20unsetLayoutDirectionEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QWidget21mouseDoubleClickEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QWidget21setAutoFillBackgroundEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN7QWidget21setShortcutAutoRepeatEib","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QWidget22windowActivationChangeEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QWidget24setAccessibleDescriptionERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QWidget26customContextMenuRequestedERK6QPoint","",0,LSB_Toolkit_Qt,0,1},
@@ -3573,6 +4484,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN8QMenuBar13focusOutEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QMenuBar13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QMenuBar14mouseMoveEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN8QMenuBar15insertSeparatorEP7QAction","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QMenuBar15insertSeparatorEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QMenuBar15mousePressEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QMenuBar15setActiveActionEP7QAction","",0,LSB_Toolkit_Qt,0,1},
@@ -3602,6 +4514,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN8QPainter10drawPointsEPK6QPointi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QPainter10drawPointsEPK7QPointFi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QPainter10redirectedEPK12QPaintDeviceP6QPoint","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN8QPainter10setOpacityEd","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QPainter10strokePathERK12QPainterPathRK4QPen","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QPainter11drawEllipseERK5QRect","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QPainter11drawEllipseERK6QRectF","",0,LSB_Toolkit_Qt,0,1},
@@ -3625,6 +4538,8 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN8QPainter13setRedirectedEPK12QPaintDevicePS0_RK6QPoint","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QPainter13setRenderHintENS_10RenderHintEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QPainter14setBrushOriginERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN8QPainter14setRenderHintsE6QFlagsINS_10RenderHintEEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN8QPainter14setWorldMatrixERK7QMatrixb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QPainter15drawCubicBezierERK8QPolygoni","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QPainter15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QPainter16drawLineSegmentsERK8QPolygonii","",0,LSB_Toolkit_Qt,0,1},
@@ -3635,6 +4550,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN8QPainter17setBackgroundModeEN2Qt6BGModeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QPainter18setCompositionModeENS_15CompositionModeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QPainter18setLayoutDirectionEN2Qt15LayoutDirectionE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN8QPainter21setWorldMatrixEnabledEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QPainter23setViewTransformEnabledEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QPainter3endEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QPainter4saveEv","",0,LSB_Toolkit_Qt,0,1},
@@ -3752,6 +4668,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN8QPrinter16setCollateCopiesEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QPrinter16setOptionEnabledENS_13PrinterOptionEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QPrinter17setOutputFileNameERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN8QPrinter22setDoubleSidedPrintingEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QPrinter23setCollateCopiesEnabledEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QPrinter23setFontEmbeddingEnabledEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QPrinter25setPrinterSelectionOptionERK7QString","",0,LSB_Toolkit_Qt,0,1},
@@ -3846,8 +4763,12 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN8QToolBoxD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QToolBoxD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QToolBoxD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN8QToolTip10setPaletteERK8QPalette","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN8QToolTip4fontEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QToolTip7paletteEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN8QToolTip7setFontERK5QFont","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRect","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QCDEStyle11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QCDEStyle11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QCDEStyle16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
@@ -3882,6 +4803,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN9QColormapC2ERKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QColormapD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QColormapD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QColormapaSERKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QComboBox10insertItemEiRK5QIconRK7QStringRK8QVariant","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QComboBox10paintEventEP11QPaintEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QComboBox10removeItemEi","",0,LSB_Toolkit_Qt,0,1},
@@ -3903,6 +4825,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN9QComboBox11setMaxCountEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QComboBox11textChangedERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QComboBox12focusInEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QComboBox12setCompleterEP10QCompleter","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QComboBox12setValidatorEPK10QValidator","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QComboBox13clearEditTextEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QComboBox13focusOutEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
@@ -3940,9 +4863,11 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN9QComboBox9showPopupEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QComboBoxC1EP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QComboBoxC1EP7QWidgetPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QComboBoxC1ER16QComboBoxPrivateP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QComboBoxC1EbP7QWidgetPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QComboBoxC2EP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QComboBoxC2EP7QWidgetPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QComboBoxC2ER16QComboBoxPrivateP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QComboBoxC2EbP7QWidgetPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QComboBoxD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QComboBoxD1Ev","",0,LSB_Toolkit_Qt,0,1},
@@ -3988,6 +4913,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN9QFontInfoD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QFontInfoaSERKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGradient10setColorAtEdRK6QColor","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QGradient17setCoordinateModeENS_14CoordinateModeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGradient8setStopsERK7QVectorI5QPairId6QColorEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGradientC1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGradientC2Ev","",0,LSB_Toolkit_Qt,0,1},
@@ -4007,6 +4933,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN9QGroupBox16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZN9QGroupBox17mouseReleaseEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGroupBox5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QGroupBox7clickedEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGroupBox7setFlatEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGroupBox7toggledEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGroupBox8setTitleERK7QString","",0,LSB_Toolkit_Qt,0,1},
@@ -4021,6 +4948,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN9QGroupBoxD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGroupBoxD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGroupBoxD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QKeyEvent22createExtendedKeyEventEN6QEvent4TypeEi6QFlagsIN2Qt16KeyboardModifierEEjjjRK7QStringbt","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QKeyEventC1EN6QEvent4TypeEi6QFlagsIN2Qt16KeyboardModifierEERK7QStringbt","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QKeyEventC2EN6QEvent4TypeEi6QFlagsIN2Qt16KeyboardModifierEERK7QStringbt","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QKeyEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
@@ -4038,6 +4966,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN9QLineEdit12focusInEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QLineEdit12getSelectionEPiS0_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QLineEdit12setAlignmentE6QFlagsIN2Qt13AlignmentFlagEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QLineEdit12setCompleterEP10QCompleter","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QLineEdit12setInputMaskERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QLineEdit12setMaxLengthEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QLineEdit12setSelectionEii","",0,LSB_Toolkit_Qt,0,1},
@@ -4109,10 +5038,13 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN9QListView11setGridSizeERK5QSize","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QListView11setMovementENS_8MovementE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QListView11setViewModeENS_8ViewModeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QListView11setWordWrapEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QListView11setWrappingEb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QListView12indexesMovedERK5QListI11QModelIndexE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QListView12internalDragE6QFlagsIN2Qt10DropActionEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QListView12internalDropEP10QDropEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QListView12rowsInsertedERK11QModelIndexii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QListView12setBatchSizeEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QListView12setRootIndexERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QListView12setRowHiddenEib","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QListView12setSelectionERK5QRect6QFlagsIN19QItemSelectionModel13SelectionFlagEE","",0,LSB_Toolkit_Qt,0,1},
@@ -4145,6 +5077,8 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN9QListViewD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QListViewD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QListViewD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QMenuItem11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QMenuItem11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QMenuItemC1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QMenuItemC2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QPolygonF9translateERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
@@ -4157,6 +5091,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN9QShortcut11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QShortcut11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QShortcut12setWhatsThisERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QShortcut13setAutoRepeatEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QShortcut16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZN9QShortcut20activatedAmbiguouslyEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QShortcut5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
@@ -4222,7 +5157,9 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN9QSplitterD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QSplitterD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit10insertHtmlERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTextEdit10moveCursorEN11QTextCursor13MoveOperationENS0_8MoveModeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit10moveCursorENS_12CursorActionEN11QTextCursor8MoveModeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTextEdit10moveCursorENS_12CursorActionEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit10paintEventEP11QPaintEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit10timerEventEP11QTimerEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit10wheelEventEP11QWheelEvent","",0,LSB_Toolkit_Qt,0,1},
@@ -4254,7 +5191,9 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN9QTextEdit14mouseMoveEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit14scrollToAnchorERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit14setCurrentFontERK5QFont","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTextEdit14setCursorWidthEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit15insertPlainTextERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTextEdit15keyReleaseEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit15mousePressEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit15setLineWrapModeENS_12LineWrapModeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit15setTabStopWidthEi","",0,LSB_Toolkit_Qt,0,1},
@@ -4274,6 +5213,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN9QTextEdit18currentFontChangedERK5QFont","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit18focusNextPrevChildEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit18insertFromMimeDataEPK9QMimeData","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTextEdit18setExtraSelectionsERK5QListINS_14ExtraSelectionEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit18setTabChangesFocusEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit19currentColorChangedERK6QColor","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit19ensureCursorVisibleEv","",0,LSB_Toolkit_Qt,0,1},
@@ -4281,12 +5221,15 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN9QTextEdit21cursorPositionChangedEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit21mouseDoubleClickEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit22mergeCurrentCharFormatERK15QTextCharFormat","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTextEdit23setTextInteractionFlagsE6QFlagsIN2Qt19TextInteractionFlagEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit24currentCharFormatChangedERK15QTextCharFormat","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit24setLineWrapColumnOrWidthEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit25createStandardContextMenuEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit3cutEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit4copyEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit4findERK7QString6QFlagsIN13QTextDocument8FindFlagEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTextEdit4redoEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTextEdit4undoEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit5clearEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTextEdit5pasteEv","",0,LSB_Toolkit_Qt,0,1},
@@ -4335,20 +5278,26 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN9QTreeView10paintEventEP11QPaintEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView10showColumnEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView10timerEventEP11QTimerEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTreeView11collapseAllEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView11columnMovedEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView11dataChangedERK11QModelIndexS2_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView11rowsRemovedERK11QModelIndexii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTreeView11setAnimatedEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView11setExpandedERK11QModelIndexb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView12rowsInsertedERK11QModelIndexii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView12setRootIndexERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView12setRowHiddenEiRK11QModelIndexb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView12setSelectionERK5QRect6QFlagsIN19QItemSelectionModel13SelectionFlagEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView12sortByColumnEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTreeView12sortByColumnEiN2Qt9SortOrderE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView13columnResizedEiii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView13doItemsLayoutEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTreeView13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView14keyboardSearchERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTreeView14mouseMoveEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTreeView14setColumnWidthEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView14setIndentationEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView15mousePressEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView15setColumnHiddenEib","",0,LSB_Toolkit_Qt,0,1},
@@ -4357,6 +5306,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN9QTreeView16updateGeometriesEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView17mouseReleaseEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView17setSelectionModelEP19QItemSelectionModel","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTreeView17setSortingEnabledEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView18columnCountChangedEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView18setItemsExpandableEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView18setRootIsDecoratedEb","",0,LSB_Toolkit_Qt,0,1},
@@ -4364,6 +5314,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN9QTreeView20setUniformRowHeightsEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView21mouseDoubleClickEventEP11QMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView22resizeColumnToContentsEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTreeView22setAllColumnsShowFocusEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView25horizontalScrollbarActionEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView5resetEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView6expandERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
@@ -4373,6 +5324,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN9QTreeView8scrollToERK11QModelIndexN17QAbstractItemView10ScrollHintE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView8setModelEP18QAbstractItemModel","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView9collapsedERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QTreeView9expandAllEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView9selectAllEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeView9setHeaderEP11QHeaderView","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeViewC1EP7QWidget","",0,LSB_Toolkit_Qt,0,1},
@@ -4382,6 +5334,21 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN9QTreeViewD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeViewD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTreeViewD2Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QUndoView11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QUndoView11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QUndoView12setCleanIconERK5QIcon","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QUndoView13setEmptyLabelERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QUndoView8setGroupEP10QUndoGroup","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QUndoView8setStackEP10QUndoStack","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QUndoViewC1EP10QUndoGroupP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QUndoViewC1EP10QUndoStackP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QUndoViewC1EP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QUndoViewC2EP10QUndoGroupP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QUndoViewC2EP10QUndoStackP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QUndoViewC2EP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QUndoViewD0Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QUndoViewD1Ev","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN9QUndoViewD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QBoxLayout10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QBoxLayout11maximumSizeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QBoxLayout11minimumSizeEv","",0,LSB_Toolkit_Qt,0,1},
@@ -4396,13 +5363,32 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK10QClipboard10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QClipboard13ownsClipboardEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QClipboard13ownsSelectionEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QClipboard14ownsFindBufferEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QClipboard17supportsSelectionEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QClipboard18supportsFindBufferEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QClipboard4dataENS_4ModeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QClipboard4textENS_4ModeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QClipboard4textER7QStringNS_4ModeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QClipboard5imageENS_4ModeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QClipboard6pixmapENS_4ModeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QClipboard8mimeDataENS_4ModeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QCompleter10currentRowEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QCompleter10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QCompleter12currentIndexEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QCompleter12modelSortingEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QCompleter13pathFromIndexERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QCompleter14completionModeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QCompleter14completionRoleEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QCompleter15caseSensitivityEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QCompleter15completionCountEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QCompleter15completionModelEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QCompleter16completionColumnEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QCompleter16completionPrefixEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QCompleter17currentCompletionEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QCompleter5modelEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QCompleter5popupEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QCompleter6widgetEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QCompleter9splitPathERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QDropEvent11encodedDataEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QDropEvent6actionEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QDropEvent6formatEi","",0,LSB_Toolkit_Qt,0,1},
@@ -4441,14 +5427,18 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK10QTabWidget12tabWhatsThisEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTabWidget13currentWidgetEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTabWidget15minimumSizeHintEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QTabWidget17usesScrollButtonsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTabWidget5countEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTabWidget6tabBarEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTabWidget6widgetEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTabWidget7indexOfEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTabWidget7tabIconEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTabWidget7tabTextEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QTabWidget8iconSizeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTabWidget8sizeHintEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTabWidget8tabShapeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QTabWidget9elideModeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QTableView10columnSpanEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTableView10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTableView10visualRectERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTableView11columnWidthEi","",0,LSB_Toolkit_Qt,0,1},
@@ -4462,12 +5452,14 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK10QTableView15selectedIndexesEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTableView16horizontalHeaderEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTableView16horizontalOffsetEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QTableView16isSortingEnabledEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTableView17sizeHintForColumnEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTableView19rowViewportPositionEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTableView22columnViewportPositionEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTableView24visualRegionForSelectionERK14QItemSelection","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTableView5rowAtEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTableView7indexAtERK6QPoint","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QTableView7rowSpanEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTableView8columnAtEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTableView8showGridEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTableView9gridStyleEv","",0,LSB_Toolkit_Qt,0,1},
@@ -4510,6 +5502,29 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK10QTextTable6rowEndERK11QTextCursor","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTextTable7columnsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QTextTable8rowStartERK11QTextCursor","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QUndoGroup10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QUndoGroup11activeStackEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QUndoGroup16createRedoActionEP7QObjectRK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QUndoGroup16createUndoActionEP7QObjectRK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QUndoGroup6stacksEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QUndoGroup7canRedoEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QUndoGroup7canUndoEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QUndoGroup7isCleanEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QUndoGroup8redoTextEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QUndoGroup8undoTextEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QUndoStack10cleanIndexEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QUndoStack10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QUndoStack16createRedoActionEP7QObjectRK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QUndoStack16createUndoActionEP7QObjectRK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QUndoStack4textEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QUndoStack5countEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QUndoStack5indexEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QUndoStack7canRedoEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QUndoStack7canUndoEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QUndoStack7isCleanEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QUndoStack8isActiveEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QUndoStack8redoTextEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK10QUndoStack8undoTextEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QValidator10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QValidator5fixupER7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK10QWorkspace10backgroundEv","",0,LSB_Toolkit_Qt,0,1},
@@ -4542,6 +5557,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK11QFileDialog8viewModeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QFileDialog9directoryEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QFileDialog9labelTextENS_11DialogLabelE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QFocusEvent6reasonEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QFocusFrame10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QFocusFrame6widgetEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QFontDialog10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
@@ -4587,11 +5603,13 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK11QHeaderView17highlightSectionsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QHeaderView18defaultSectionSizeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QHeaderView18hiddenSectionCountEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QHeaderView18minimumSectionSizeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QHeaderView18sortIndicatorOrderEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QHeaderView18stretchLastSectionEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QHeaderView19stretchSectionCountEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QHeaderView20isSortIndicatorShownEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QHeaderView20sortIndicatorSectionEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QHeaderView23cascadingSectionResizesEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QHeaderView23sectionSizeFromContentsEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QHeaderView23sectionViewportPositionEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QHeaderView24visualRegionForSelectionERK14QItemSelection","",0,LSB_Toolkit_Qt,0,1},
@@ -4614,6 +5632,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK11QListWidget13selectedItemsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QListWidget14isItemSelectedEPK15QListWidgetItem","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QListWidget14visualItemRectEPK15QListWidgetItem","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QListWidget16isSortingEnabledEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QListWidget20supportedDropActionsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QListWidget3rowEPK15QListWidgetItem","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QListWidget4itemEi","",0,LSB_Toolkit_Qt,0,1},
@@ -4623,11 +5642,15 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK11QListWidget8mimeDataE5QListIP15QListWidgetItemE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QListWidget9findItemsERK7QString6QFlagsIN2Qt9MatchFlagEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QListWidget9mimeTypesEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QMainWindow10isAnimatedEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QMainWindow10menuWidgetEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMainWindow10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QMainWindow11isSeparatorERK6QPoint","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMainWindow11toolBarAreaEP8QToolBar","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMainWindow13centralWidgetEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMainWindow14dockWidgetAreaEP11QDockWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMainWindow15toolButtonStyleEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QMainWindow20isDockNestingEnabledEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMainWindow6cornerEN2Qt6CornerE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMainWindow7menuBarEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMainWindow8iconSizeEv","",0,LSB_Toolkit_Qt,0,1},
@@ -4637,8 +5660,16 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK11QMessageBox10iconPixmapEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMessageBox10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMessageBox10textFormatEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QMessageBox12detailedTextEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QMessageBox12escapeButtonEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QMessageBox13clickedButtonEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QMessageBox13defaultButtonEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QMessageBox14standardButtonEP15QAbstractButton","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QMessageBox15informativeTextEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QMessageBox15standardButtonsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMessageBox4iconEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMessageBox4textEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QMessageBox6buttonENS_14StandardButtonE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMessageBox8sizeHintEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMimeSource8providesEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMotifStyle10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
@@ -4652,6 +5683,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK11QMotifStyle16sizeFromContentsEN6QStyle12ContentsTypeEPK12QStyleOptionRK5QSizePK7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMotifStyle18drawComplexControlEN6QStyle14ComplexControlEPK19QStyleOptionComplexP8QPainterPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMotifStyle18useHighlightColorsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QMotifStyle26standardIconImplementationEN6QStyle14StandardPixmapEPK12QStyleOptionPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QMotifStyle9styleHintEN6QStyle9StyleHintEPK12QStyleOptionPK7QWidgetP16QStyleHintReturn","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QProxyModel10headerDataEiN2Qt11OrientationEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QProxyModel10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
@@ -4684,6 +5716,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK11QScrollArea15widgetResizableEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QScrollArea6widgetEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QScrollArea8sizeHintEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QScrollArea9alignmentEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QSizePolicycv8QVariantEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QSpacerItem11maximumSizeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QSpacerItem11minimumSizeEv","",0,LSB_Toolkit_Qt,0,1},
@@ -4694,8 +5727,10 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK11QTextCursor10atBlockEndEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTextCursor10charFormatEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTextCursor11blockFormatEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QTextCursor11blockNumberEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTextCursor11currentListEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTextCursor12atBlockStartEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QTextCursor12columnNumberEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTextCursor12currentFrameEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTextCursor12currentTableEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTextCursor12hasSelectionEv","",0,LSB_Toolkit_Qt,0,1},
@@ -4742,6 +5777,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK11QTextFormatcv8QVariantEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTextFormateqERKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTextLayout10drawCursorEP8QPainterRK7QPointFi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QTextLayout10drawCursorEP8QPainterRK7QPointFii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTextLayout10textOptionEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTextLayout12boundingRectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTextLayout12cacheEnabledEv","",0,LSB_Toolkit_Qt,0,1},
@@ -4779,6 +5815,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK11QToolButton8sizeHintEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QToolButton9arrowTypeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QToolButton9autoRaiseEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QToolButton9hitButtonERK6QPoint","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QToolButton9onIconSetEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QToolButton9popupModeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTreeWidget10headerItemEv","",0,LSB_Toolkit_Qt,0,1},
@@ -4797,7 +5834,9 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK11QTreeWidget14isItemSelectedEPK15QTreeWidgetItem","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTreeWidget14visualItemRectEPK15QTreeWidgetItem","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTreeWidget16isSortingEnabledEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QTreeWidget17invisibleRootItemEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTreeWidget17topLevelItemCountEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK11QTreeWidget19indexOfTopLevelItemEP15QTreeWidgetItem","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTreeWidget20supportedDropActionsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTreeWidget5itemsEPK9QMimeData","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QTreeWidget6itemAtERK6QPoint","",0,LSB_Toolkit_Qt,0,1},
@@ -4821,6 +5860,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK12QActionGroup9isVisibleEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QApplication10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QApplication10sessionKeyEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK12QApplication10styleSheetEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QApplication12inputContextEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QApplication17isSessionRestoredEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QApplication9sessionIdEv","",0,LSB_Toolkit_Qt,0,1},
@@ -4843,7 +5883,9 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK12QCommonStyle18drawComplexControlEN6QStyle14ComplexControlEPK19QStyleOptionComplexP8QPainterPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QCommonStyle19generatedIconPixmapEN5QIcon4ModeERK7QPixmapPK12QStyleOption","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QCommonStyle21hitTestComplexControlEN6QStyle14ComplexControlEPK19QStyleOptionComplexRK6QPointPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK12QCommonStyle26standardIconImplementationEN6QStyle14StandardPixmapEPK12QStyleOptionPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QCommonStyle9styleHintEN6QStyle9StyleHintEPK12QStyleOptionPK7QWidgetP16QStyleHintReturn","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK12QFontMetrics10elidedTextERK7QStringN2Qt13TextElideModeEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QFontMetrics11leftBearingE5QChar","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QFontMetrics11lineSpacingEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QFontMetrics11overlinePosEv","",0,LSB_Toolkit_Qt,0,1},
@@ -4855,6 +5897,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK12QFontMetrics12underlinePosEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QFontMetrics14minLeftBearingEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QFontMetrics15minRightBearingEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK12QFontMetrics16averageCharWidthEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QFontMetrics4sizeEiRK7QStringiPi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QFontMetrics5widthE5QChar","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QFontMetrics5widthERK7QStringi","",0,LSB_Toolkit_Qt,0,1},
@@ -4873,6 +5916,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK12QImageReader11errorStringEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QImageReader14nextImageDelayEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QImageReader14scaledClipRectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK12QImageReader14supportsOptionEN15QImageIOHandler11ImageOptionE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QImageReader15backgroundColorEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QImageReader16currentImageRectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QImageReader17supportsAnimationEv","",0,LSB_Toolkit_Qt,0,1},
@@ -4883,12 +5927,14 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK12QImageReader6deviceEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QImageReader6formatEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QImageReader7canReadEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK12QImageReader7qualityEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QImageReader8clipRectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QImageReader8fileNameEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QImageReader8textKeysEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QImageReader9loopCountEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QImageWriter11descriptionEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QImageWriter11errorStringEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK12QImageWriter14supportsOptionEN15QImageIOHandler11ImageOptionE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QImageWriter5errorEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QImageWriter5gammaEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QImageWriter6deviceEv","",0,LSB_Toolkit_Qt,0,1},
@@ -4943,6 +5989,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK12QProgressBar15minimumSizeHintEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QProgressBar4textEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QProgressBar5valueEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK12QProgressBar6formatEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QProgressBar7maximumEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QProgressBar7minimumEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QProgressBar8sizeHintEv","",0,LSB_Toolkit_Qt,0,1},
@@ -4980,7 +6027,12 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK12QTableWidget9visualRowEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QTextBrowser10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QTextBrowser11searchPathsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK12QTextBrowser17openExternalLinksEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK12QTextBrowser18isForwardAvailableEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK12QTextBrowser19isBackwardAvailableEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QTextBrowser6sourceEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK12QUndoCommand2idEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK12QUndoCommand4textEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QDateTimeEdit10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QDateTimeEdit11maximumDateEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QDateTimeEdit11maximumTimeEv","",0,LSB_Toolkit_Qt,0,1},
@@ -4988,6 +6040,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK13QDateTimeEdit11minimumTimeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QDateTimeEdit11sectionTextENS_7SectionE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QDateTimeEdit11stepEnabledEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QDateTimeEdit13calendarPopupEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QDateTimeEdit13displayFormatEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QDateTimeEdit14currentSectionEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QDateTimeEdit16dateTimeFromTextERK7QString","",0,LSB_Toolkit_Qt,0,1},
@@ -5000,8 +6053,14 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK13QDateTimeEdit8sizeHintEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QDateTimeEdit8validateER7QStringRi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QErrorMessage10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QFontComboBox10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QFontComboBox11currentFontEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QFontComboBox11fontFiltersEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QFontComboBox13writingSystemEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QFontComboBox8sizeHintEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QFontDatabase10isScalableERK7QStringS2_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QFontDatabase12isFixedPitchERK7QStringS2_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QFontDatabase14writingSystemsERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QFontDatabase14writingSystemsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QFontDatabase16isBitmapScalableERK7QStringS2_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QFontDatabase18isSmoothlyScalableERK7QStringS2_","",0,LSB_Toolkit_Qt,0,1},
@@ -5011,6 +6070,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK13QFontDatabase6stylesERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QFontDatabase6weightERK7QStringS2_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QFontDatabase8familiesENS_13WritingSystemE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QFontMetricsF10elidedTextERK7QStringN2Qt13TextElideModeEdi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QFontMetricsF11leftBearingE5QChar","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QFontMetricsF11lineSpacingEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QFontMetricsF11overlinePosEv","",0,LSB_Toolkit_Qt,0,1},
@@ -5022,6 +6082,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK13QFontMetricsF12underlinePosEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QFontMetricsF14minLeftBearingEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QFontMetricsF15minRightBearingEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QFontMetricsF16averageCharWidthEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QFontMetricsF4sizeEiRK7QStringiPi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QFontMetricsF5widthE5QChar","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QFontMetricsF5widthERK7QString","",0,LSB_Toolkit_Qt,0,1},
@@ -5034,6 +6095,97 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK13QFontMetricsF8maxWidthEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QFontMetricsF9lineWidthEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QFontMetricsFeqERKS_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem10isObscuredEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem10isSelectedEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem10mapToSceneERK12QPainterPath","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem10mapToSceneERK6QRectF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem10mapToSceneERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem10mapToSceneERK9QPolygonF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem10opaqueAreaEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem10parentItemEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem11acceptDropsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem11mapFromItemEPKS_RK12QPainterPath","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem11mapFromItemEPKS_RK6QRectF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem11mapFromItemEPKS_RK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem11mapFromItemEPKS_RK9QPolygonF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem11mapToParentERK12QPainterPath","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem11mapToParentERK6QRectF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem11mapToParentERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem11mapToParentERK9QPolygonF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem11sceneMatrixEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem12isAncestorOfEPKS_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem12isObscuredByEPKS_","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem12mapFromSceneERK12QPainterPath","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem12mapFromSceneERK6QRectF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem12mapFromSceneERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem12mapFromSceneERK9QPolygonF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem12topLevelItemEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem13mapFromParentERK12QPainterPath","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem13mapFromParentERK6QRectF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem13mapFromParentERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem13mapFromParentERK9QPolygonF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem14collidingItemsEN2Qt17ItemSelectionModeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem16collidesWithItemEPKS_N2Qt17ItemSelectionModeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem16collidesWithPathERK12QPainterPathN2Qt17ItemSelectionModeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem16inputMethodQueryEN2Qt16InputMethodQueryE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem17sceneBoundingRectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem17supportsExtensionENS_9ExtensionE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem18acceptsHoverEventsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem18handlesChildEventsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem20acceptedMouseButtonsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem20childrenBoundingRectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem3posEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem4dataEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem4typeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem5flagsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem5groupEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem5sceneEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem5shapeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem6cursorEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem6matrixEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem6zValueEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem7toolTipEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem8childrenEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem8containsERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem8hasFocusEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem8scenePosEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem9extensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem9hasCursorEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem9isEnabledEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem9isVisibleEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem9mapToItemEPKS_RK12QPainterPath","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem9mapToItemEPKS_RK6QRectF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem9mapToItemEPKS_RK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsItem9mapToItemEPKS_RK9QPolygonF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView10mapToSceneERK12QPainterPath","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView10mapToSceneERK5QRect","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView10mapToSceneERK6QPoint","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView10mapToSceneERK8QPolygon","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView11renderHintsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView12mapFromSceneERK12QPainterPath","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView12mapFromSceneERK6QRectF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView12mapFromSceneERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView12mapFromSceneERK9QPolygonF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView12resizeAnchorEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView13isInteractiveEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView15backgroundBrushEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView15foregroundBrushEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView16inputMethodQueryEN2Qt16InputMethodQueryE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView20transformationAnchorEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView5itemsERK12QPainterPathN2Qt17ItemSelectionModeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView5itemsERK5QRectN2Qt17ItemSelectionModeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView5itemsERK6QPoint","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView5itemsERK8QPolygonN2Qt17ItemSelectionModeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView5itemsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView5sceneEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView6itemAtERK6QPoint","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView6matrixEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView8dragModeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView8sizeHintEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView9alignmentEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView9cacheModeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QGraphicsView9sceneRectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QInputContext10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QInputContext11focusWidgetEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QInputContext14standardFormatENS_14StandardFormatE","",0,LSB_Toolkit_Qt,0,1},
@@ -5042,13 +6194,18 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK13QIntValidator8validateER7QStringRi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QItemDelegate10decorationERK20QStyleOptionViewItemRK8QVariant","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QItemDelegate10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QItemDelegate10setOptionsERK11QModelIndexRK20QStyleOptionViewItem","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QItemDelegate11drawDisplayEP8QPainterRK20QStyleOptionViewItemRK5QRectRK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QItemDelegate11hasClippingEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QItemDelegate12setModelDataEP7QWidgetP18QAbstractItemModelRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QItemDelegate13textRectangleEP8QPainterRK5QRectRK5QFontRK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QItemDelegate14drawBackgroundEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QItemDelegate14drawDecorationEP8QPainterRK20QStyleOptionViewItemRK5QRectRK7QPixmap","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QItemDelegate17itemEditorFactoryEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QItemDelegate20updateEditorGeometryEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QItemDelegate4rectERK20QStyleOptionViewItemRK11QModelIndexi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QItemDelegate5checkERK20QStyleOptionViewItemRK5QRectRK8QVariant","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QItemDelegate5paintEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QItemDelegate8doLayoutERK20QStyleOptionViewItemP5QRectS4_S4_b","",0,LSB_Toolkit_Qt,0,1},
@@ -5058,7 +6215,24 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK13QItemDelegate9drawFocusEP8QPainterRK20QStyleOptionViewItemRK5QRect","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QSplashScreen10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QSplashScreen6pixmapEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QStandardItem11columnCountEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QStandardItem11hasChildrenEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QStandardItem3rowEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QStandardItem4dataEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QStandardItem4typeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QStandardItem5childEii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QStandardItem5cloneEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QStandardItem5flagsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QStandardItem5indexEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QStandardItem5modelEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QStandardItem5writeER11QDataStream","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QStandardItem6columnEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QStandardItem6parentEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QStandardItem8rowCountEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QStandardItemltERKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QTextDocument10allFormatsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QTextDocument10blockCountEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QTextDocument10idealWidthEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QTextDocument10isModifiedEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QTextDocument10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QTextDocument11defaultFontEv","",0,LSB_Toolkit_Qt,0,1},
@@ -5069,10 +6243,15 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK13QTextDocument15metaInformationENS_15MetaInformationE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QTextDocument15objectForFormatERK11QTextFormat","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QTextDocument16useDesignMetricsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QTextDocument17defaultStyleSheetEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QTextDocument17isUndoRedoEnabledEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QTextDocument17maximumBlockCountEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QTextDocument3endEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QTextDocument4findERK7QRegExpRK11QTextCursor6QFlagsINS_8FindFlagEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QTextDocument4findERK7QRegExpi6QFlagsINS_8FindFlagEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QTextDocument4findERK7QStringRK11QTextCursor6QFlagsINS_8FindFlagEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QTextDocument4findERK7QStringi6QFlagsINS_8FindFlagEE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QTextDocument4sizeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QTextDocument5beginEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QTextDocument5cloneEP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QTextDocument5printEP8QPrinter","",0,LSB_Toolkit_Qt,0,1},
@@ -5086,12 +6265,16 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK13QTextDocument9findBlockEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QTextDocument9pageCountEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QTextDocument9rootFrameEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QTextDocument9textWidthEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QTextFragment10charFormatEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QTextFragment15charFormatIndexEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QTextFragment4textEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QTextFragment6lengthEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QTextFragment8containsEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QTextFragment8positionEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QWidgetAction10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QWidgetAction13defaultWidgetEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QWidgetAction14createdWidgetsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QWindowsStyle10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QWindowsStyle11drawControlEN6QStyle14ControlElementEPK12QStyleOptionP8QPainterPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QWindowsStyle11pixelMetricEN6QStyle11PixelMetricEPK12QStyleOptionPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
@@ -5100,6 +6283,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK13QWindowsStyle14subElementRectEN6QStyle10SubElementEPK12QStyleOptionPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QWindowsStyle16sizeFromContentsEN6QStyle12ContentsTypeEPK12QStyleOptionRK5QSizePK7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QWindowsStyle18drawComplexControlEN6QStyle14ComplexControlEPK19QStyleOptionComplexP8QPainterPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK13QWindowsStyle26standardIconImplementationEN6QStyle14StandardPixmapEPK12QStyleOptionPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK13QWindowsStyle9styleHintEN6QStyle9StyleHintEPK12QStyleOptionPK7QWidgetP16QStyleHintReturn","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK14QDesktopWidget10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK14QDesktopWidget10numScreensEv","",0,LSB_Toolkit_Qt,0,1},
@@ -5122,6 +6306,25 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK14QDoubleSpinBox8decimalsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK14QDoubleSpinBox8validateER7QStringRi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK14QDoubleSpinBox9cleanTextEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK14QGraphicsScene10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK14QGraphicsScene13selectedItemsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK14QGraphicsScene14collidingItemsEPK13QGraphicsItemN2Qt17ItemSelectionModeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK14QGraphicsScene15backgroundBrushEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK14QGraphicsScene15foregroundBrushEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK14QGraphicsScene15itemIndexMethodEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK14QGraphicsScene16inputMethodQueryEN2Qt16InputMethodQueryE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK14QGraphicsScene16mouseGrabberItemEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK14QGraphicsScene17itemsBoundingRectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK14QGraphicsScene5itemsERK12QPainterPathN2Qt17ItemSelectionModeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK14QGraphicsScene5itemsERK6QRectFN2Qt17ItemSelectionModeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK14QGraphicsScene5itemsERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK14QGraphicsScene5itemsERK9QPolygonFN2Qt17ItemSelectionModeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK14QGraphicsScene5itemsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK14QGraphicsScene5viewsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK14QGraphicsScene6itemAtERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK14QGraphicsScene8hasFocusEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK14QGraphicsScene9focusItemEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK14QGraphicsScene9sceneRectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK14QImageIOPlugin10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK14QItemSelection7indexesEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK14QItemSelection8containsERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
@@ -5154,6 +6357,8 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK15QAbstractButton10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QAbstractButton11isCheckableEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QAbstractButton13autoExclusiveEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QAbstractButton15autoRepeatDelayEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QAbstractButton18autoRepeatIntervalEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QAbstractButton4iconEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QAbstractButton4textEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QAbstractButton5groupEv","",0,LSB_Toolkit_Qt,0,1},
@@ -5176,6 +6381,25 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK15QAbstractSlider7maximumEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QAbstractSlider7minimumEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QAbstractSlider8pageStepEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QCalendarWidget10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QCalendarWidget10monthShownEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QCalendarWidget11maximumDateEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QCalendarWidget11minimumDateEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QCalendarWidget12selectedDateEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QCalendarWidget13isGridVisibleEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QCalendarWidget13selectionModeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QCalendarWidget14dateTextFormatERK5QDate","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QCalendarWidget14dateTextFormatEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QCalendarWidget14firstDayOfWeekEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QCalendarWidget15isHeaderVisibleEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QCalendarWidget15minimumSizeHintEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QCalendarWidget16headerTextFormatEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QCalendarWidget17weekdayTextFormatEN2Qt9DayOfWeekE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QCalendarWidget20verticalHeaderFormatEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QCalendarWidget22horizontalHeaderFormatEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QCalendarWidget8sizeHintEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QCalendarWidget9paintCellEP8QPainterRK5QRectRK5QDate","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QCalendarWidget9yearShownEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QImageIOHandler10imageCountEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QImageIOHandler14nextImageDelayEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QImageIOHandler14supportsOptionENS_11ImageOptionE","",0,LSB_Toolkit_Qt,0,1},
@@ -5197,12 +6421,14 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK15QPlastiqueStyle11drawControlEN6QStyle14ControlElementEPK12QStyleOptionP8QPainterPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QPlastiqueStyle11pixelMetricEN6QStyle11PixelMetricEPK12QStyleOptionPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QPlastiqueStyle13drawPrimitiveEN6QStyle16PrimitiveElementEPK12QStyleOptionP8QPainterPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QPlastiqueStyle14standardPixmapEN6QStyle14StandardPixmapEPK12QStyleOptionPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QPlastiqueStyle14subControlRectEN6QStyle14ComplexControlEPK19QStyleOptionComplexNS0_10SubControlEPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QPlastiqueStyle14subElementRectEN6QStyle10SubElementEPK12QStyleOptionPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QPlastiqueStyle15standardPaletteEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QPlastiqueStyle16sizeFromContentsEN6QStyle12ContentsTypeEPK12QStyleOptionRK5QSizePK7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QPlastiqueStyle18drawComplexControlEN6QStyle14ComplexControlEPK19QStyleOptionComplexP8QPainterPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QPlastiqueStyle21hitTestComplexControlEN6QStyle14ComplexControlEPK19QStyleOptionComplexRK6QPointPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QPlastiqueStyle26standardIconImplementationEN6QStyle14StandardPixmapEPK12QStyleOptionPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QPlastiqueStyle9styleHintEN6QStyle9StyleHintEPK12QStyleOptionPK7QWidgetP16QStyleHintReturn","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QProgressDialog10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QProgressDialog11wasCanceledEv","",0,LSB_Toolkit_Qt,0,1},
@@ -5230,8 +6456,14 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK15QSplitterHandle12opaqueResizeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QSplitterHandle8sizeHintEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QSplitterHandle8splitterEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QSystemTrayIcon10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QSystemTrayIcon11contextMenuEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QSystemTrayIcon4iconEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QSystemTrayIcon7toolTipEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QSystemTrayIcon9isVisibleEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QTextBlockGroup10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QTextBlockGroup9blockListEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK15QTextCharFormat13fontUnderlineEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QTextCharFormat4fontEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QTreeWidgetItem4dataEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK15QTreeWidgetItem5cloneEv","",0,LSB_Toolkit_Qt,0,1},
@@ -5241,8 +6473,11 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK16QAbstractSpinBox10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK16QAbstractSpinBox11stepEnabledEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK16QAbstractSpinBox13buttonSymbolsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QAbstractSpinBox13isAcceleratedEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QAbstractSpinBox14correctionModeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK16QAbstractSpinBox15minimumSizeHintEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK16QAbstractSpinBox16specialValueTextEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QAbstractSpinBox18hasAcceptableInputEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK16QAbstractSpinBox4textEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK16QAbstractSpinBox5fixupER7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK16QAbstractSpinBox8hasFrameEv","",0,LSB_Toolkit_Qt,0,1},
@@ -5251,10 +6486,36 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK16QAbstractSpinBox8validateER7QStringRi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK16QAbstractSpinBox8wrappingEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK16QAbstractSpinBox9alignmentEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QCleanlooksStyle10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QCleanlooksStyle11drawControlEN6QStyle14ControlElementEPK12QStyleOptionP8QPainterPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QCleanlooksStyle11pixelMetricEN6QStyle11PixelMetricEPK12QStyleOptionPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QCleanlooksStyle12drawItemTextEP8QPainterRK5QRectiRK8QPalettebRK7QStringNS5_9ColorRoleE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QCleanlooksStyle13drawPrimitiveEN6QStyle16PrimitiveElementEPK12QStyleOptionP8QPainterPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QCleanlooksStyle14drawItemPixmapEP8QPainterRK5QRectiRK7QPixmap","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QCleanlooksStyle14itemPixmapRectERK5QRectiRK7QPixmap","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QCleanlooksStyle14standardPixmapEN6QStyle14StandardPixmapEPK12QStyleOptionPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QCleanlooksStyle14subControlRectEN6QStyle14ComplexControlEPK19QStyleOptionComplexNS0_10SubControlEPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QCleanlooksStyle14subElementRectEN6QStyle10SubElementEPK12QStyleOptionPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QCleanlooksStyle15standardPaletteEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QCleanlooksStyle16sizeFromContentsEN6QStyle12ContentsTypeEPK12QStyleOptionRK5QSizePK7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QCleanlooksStyle18drawComplexControlEN6QStyle14ComplexControlEPK19QStyleOptionComplexP8QPainterPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QCleanlooksStyle19generatedIconPixmapEN5QIcon4ModeERK7QPixmapPK12QStyleOption","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QCleanlooksStyle21hitTestComplexControlEN6QStyle14ComplexControlEPK19QStyleOptionComplexRK6QPointPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QCleanlooksStyle26standardIconImplementationEN6QStyle14StandardPixmapEPK12QStyleOptionPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QCleanlooksStyle9styleHintEN6QStyle9StyleHintEPK12QStyleOptionPK7QWidgetP16QStyleHintReturn","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK16QConicalGradient5angleEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK16QConicalGradient6centerEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QDialogButtonBox10buttonRoleEP15QAbstractButton","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QDialogButtonBox10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QDialogButtonBox11orientationEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QDialogButtonBox13centerButtonsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QDialogButtonBox14standardButtonEP15QAbstractButton","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QDialogButtonBox15standardButtonsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QDialogButtonBox6buttonENS_14StandardButtonE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QDialogButtonBox7buttonsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK16QDoubleValidator10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK16QDoubleValidator8validateER7QStringRi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK16QPageSetupDialog10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK16QRegExpValidator10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK16QRegExpValidator8validateER7QStringRi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK16QStringListModel10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
@@ -5271,7 +6532,9 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK17QAbstractItemView11indexWidgetERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QAbstractItemView11viewOptionsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QAbstractItemView12currentIndexEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QAbstractItemView12dragDropModeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QAbstractItemView12editTriggersEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QAbstractItemView12itemDelegateERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QAbstractItemView12itemDelegateEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QAbstractItemView13hasAutoScrollEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QAbstractItemView13selectionModeEv","",0,LSB_Toolkit_Qt,0,1},
@@ -5279,6 +6542,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK17QAbstractItemView14selectionModelEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QAbstractItemView14sizeHintForRowEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QAbstractItemView15selectedIndexesEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QAbstractItemView16inputMethodQueryEN2Qt16InputMethodQueryE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QAbstractItemView16selectionCommandERK11QModelIndexPK6QEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QAbstractItemView16sizeHintForIndexERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QAbstractItemView16tabKeyNavigationEv","",0,LSB_Toolkit_Qt,0,1},
@@ -5286,9 +6550,14 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK17QAbstractItemView17selectionBehaviorEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QAbstractItemView17showDropIndicatorEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QAbstractItemView17sizeHintForColumnEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QAbstractItemView18itemDelegateForRowEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QAbstractItemView18verticalScrollModeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QAbstractItemView20alternatingRowColorsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QAbstractItemView20horizontalScrollModeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QAbstractItemView20verticalStepsPerItemEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QAbstractItemView21dragDropOverwriteModeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QAbstractItemView21dropIndicatorPositionEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QAbstractItemView21itemDelegateForColumnEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QAbstractItemView22horizontalStepsPerItemEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QAbstractItemView5modelEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QAbstractItemView5stateEv","",0,LSB_Toolkit_Qt,0,1},
@@ -5313,9 +6582,65 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK17QAccessibleWidget7childAtEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QAccessibleWidget8navigateEN11QAccessible12RelationFlagEiPP20QAccessibleInterface","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QContextMenuEvent5stateEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QDataWidgetMapper10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QDataWidgetMapper11orientationEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QDataWidgetMapper12currentIndexEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QDataWidgetMapper12itemDelegateEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QDataWidgetMapper12submitPolicyEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QDataWidgetMapper13mappedSectionEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QDataWidgetMapper14mappedWidgetAtEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QDataWidgetMapper5modelEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QDataWidgetMapper9rootIndexEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QFileIconProvider4iconENS_8IconTypeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QFileIconProvider4iconERK9QFileInfo","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QFileIconProvider4typeERK9QFileInfo","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsLineItem10opaqueAreaEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsLineItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsLineItem12isObscuredByEPK13QGraphicsItem","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsLineItem17supportsExtensionEN13QGraphicsItem9ExtensionE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsLineItem3penEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsLineItem4lineEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsLineItem4typeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsLineItem5shapeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsLineItem8containsERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsLineItem9extensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsPathItem10opaqueAreaEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsPathItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsPathItem12isObscuredByEPK13QGraphicsItem","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsPathItem17supportsExtensionEN13QGraphicsItem9ExtensionE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsPathItem4pathEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsPathItem4typeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsPathItem5shapeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsPathItem8containsERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsPathItem9extensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsRectItem10opaqueAreaEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsRectItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsRectItem12isObscuredByEPK13QGraphicsItem","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsRectItem17supportsExtensionEN13QGraphicsItem9ExtensionE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsRectItem4rectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsRectItem4typeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsRectItem5shapeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsRectItem8containsERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsRectItem9extensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsTextItem10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsTextItem10opaqueAreaEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsTextItem10textCursorEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsTextItem11toPlainTextEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsTextItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsTextItem16defaultTextColorEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsTextItem16inputMethodQueryEN2Qt16InputMethodQueryE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsTextItem17openExternalLinksEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsTextItem17supportsExtensionEN13QGraphicsItem9ExtensionE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsTextItem20textInteractionFlagsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsTextItem4fontEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsTextItem4typeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsTextItem5shapeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsTextItem6toHtmlEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsTextItem8containsERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsTextItem8documentEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsTextItem9extensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QGraphicsTextItem9textWidthEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QIconEnginePlugin10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QPaintEngineState10clipRegionEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QPaintEngineState11brushOriginEv","",0,LSB_Toolkit_Qt,0,1},
@@ -5329,6 +6654,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK17QPaintEngineState4fontEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QPaintEngineState5brushEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QPaintEngineState6matrixEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK17QPaintEngineState7opacityEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QPaintEngineState7painterEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QPaintEngineState8clipPathEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QTextInlineObject11formatIndexEv","",0,LSB_Toolkit_Qt,0,1},
@@ -5340,28 +6666,47 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK17QTextInlineObject6formatEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QTextInlineObject6heightEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK17QTextInlineObject7descentEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK18QGraphicsItemGroup10opaqueAreaEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK18QGraphicsItemGroup12boundingRectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK18QGraphicsItemGroup12isObscuredByEPK13QGraphicsItem","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK18QGraphicsItemGroup4typeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK18QItemEditorFactory12createEditorEN8QVariant4TypeEP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK18QItemEditorFactory17valuePropertyNameEN8QVariant4TypeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK18QStandardItemModel10headerDataEiN2Qt11OrientationEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK18QStandardItemModel10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK18QStandardItemModel11columnCountERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK18QStandardItemModel11hasChildrenERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK18QStandardItemModel13indexFromItemEPK13QStandardItem","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK18QStandardItemModel13itemFromIndexERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK18QStandardItemModel13itemPrototypeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK18QStandardItemModel17invisibleRootItemEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK18QStandardItemModel18verticalHeaderItemEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK18QStandardItemModel20horizontalHeaderItemEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK18QStandardItemModel20supportedDropActionsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK18QStandardItemModel4dataERK11QModelIndexi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK18QStandardItemModel4itemEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK18QStandardItemModel5flagsERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK18QStandardItemModel5indexEiiRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK18QStandardItemModel6parentERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK18QStandardItemModel8itemDataERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK18QStandardItemModel8rowCountERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK18QStandardItemModel8sortRoleEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK18QStandardItemModel9findItemsERK7QString6QFlagsIN2Qt9MatchFlagEEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK18QSyntaxHighlighter10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK18QSyntaxHighlighter17currentBlockStateEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK18QSyntaxHighlighter18previousBlockStateEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK18QSyntaxHighlighter20currentBlockUserDataEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK18QSyntaxHighlighter6formatEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK18QSyntaxHighlighter8documentEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK19QAbstractProxyModel10headerDataEiN2Qt11OrientationEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK19QAbstractProxyModel10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK19QAbstractProxyModel11sourceModelEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK19QAbstractProxyModel20mapSelectionToSourceERK14QItemSelection","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK19QAbstractProxyModel22mapSelectionFromSourceERK14QItemSelection","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK19QAbstractProxyModel4dataERK11QModelIndexi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK19QAbstractProxyModel5flagsERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK19QAbstractScrollArea10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK19QAbstractScrollArea12cornerWidgetEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK19QAbstractScrollArea15minimumSizeHintEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK19QAbstractScrollArea17verticalScrollBarEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK19QAbstractScrollArea19horizontalScrollBarEv","",0,LSB_Toolkit_Qt,0,1},
@@ -5370,11 +6715,27 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK19QAbstractScrollArea25horizontalScrollBarPolicyEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK19QAbstractScrollArea8sizeHintEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK19QAbstractScrollArea8viewportEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK19QGraphicsPixmapItem10opaqueAreaEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK19QGraphicsPixmapItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK19QGraphicsPixmapItem12isObscuredByEPK13QGraphicsItem","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK19QGraphicsPixmapItem17supportsExtensionEN13QGraphicsItem9ExtensionE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK19QGraphicsPixmapItem18transformationModeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK19QGraphicsPixmapItem4typeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK19QGraphicsPixmapItem5shapeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK19QGraphicsPixmapItem6offsetEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK19QGraphicsPixmapItem6pixmapEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK19QGraphicsPixmapItem8containsERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK19QGraphicsPixmapItem9extensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK19QGraphicsPixmapItem9shapeModeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK19QGraphicsSceneEvent6widgetEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK19QInputContextPlugin10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK19QItemSelectionModel10isSelectedERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK19QItemSelectionModel10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK19QItemSelectionModel12currentIndexEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK19QItemSelectionModel12hasSelectionEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK19QItemSelectionModel12selectedRowsEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK19QItemSelectionModel13isRowSelectedEiRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK19QItemSelectionModel15selectedColumnsEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK19QItemSelectionModel15selectedIndexesEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK19QItemSelectionModel16isColumnSelectedEiRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK19QItemSelectionModel22rowIntersectsSelectionEiRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
@@ -5391,6 +6752,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK19QPainterPathStroker5widthEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK19QPainterPathStroker8capStyleEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK19QPainterPathStroker9joinStyleEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QAbstractPrintDialog10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK20QAbstractPrintDialog10printRangeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK20QAbstractPrintDialog14enabledOptionsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK20QAbstractPrintDialog15isOptionEnabledENS_17PrintDialogOptionE","",0,LSB_Toolkit_Qt,0,1},
@@ -5399,12 +6761,34 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK20QAbstractPrintDialog7minPageEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK20QAbstractPrintDialog7printerEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK20QAbstractPrintDialog8fromPageEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGraphicsEllipseItem10opaqueAreaEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGraphicsEllipseItem10startAngleEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGraphicsEllipseItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGraphicsEllipseItem12isObscuredByEPK13QGraphicsItem","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGraphicsEllipseItem17supportsExtensionEN13QGraphicsItem9ExtensionE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGraphicsEllipseItem4rectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGraphicsEllipseItem4typeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGraphicsEllipseItem5shapeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGraphicsEllipseItem8containsERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGraphicsEllipseItem9extensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGraphicsEllipseItem9spanAngleEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGraphicsPolygonItem10opaqueAreaEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGraphicsPolygonItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGraphicsPolygonItem12isObscuredByEPK13QGraphicsItem","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGraphicsPolygonItem17supportsExtensionEN13QGraphicsItem9ExtensionE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGraphicsPolygonItem4typeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGraphicsPolygonItem5shapeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGraphicsPolygonItem7polygonEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGraphicsPolygonItem8containsERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGraphicsPolygonItem8fillRuleEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK20QGraphicsPolygonItem9extensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK20QPictureFormatPlugin10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK21QAbstractItemDelegate10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK21QAbstractItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK21QAbstractItemDelegate12setModelDataEP7QWidgetP18QAbstractItemModelRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK21QAbstractItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK21QAbstractItemDelegate20updateEditorGeometryEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK21QSortFilterProxyModel10filterRoleEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK21QSortFilterProxyModel10headerDataEiN2Qt11OrientationEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK21QSortFilterProxyModel10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK21QSortFilterProxyModel11columnCountERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
@@ -5415,8 +6799,11 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK21QSortFilterProxyModel13mapFromSourceERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK21QSortFilterProxyModel15filterKeyColumnEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK21QSortFilterProxyModel16filterAcceptsRowEiRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK21QSortFilterProxyModel17dynamicSortFilterEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK21QSortFilterProxyModel19filterAcceptsColumnEiRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK21QSortFilterProxyModel19sortCaseSensitivityEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK21QSortFilterProxyModel20mapSelectionToSourceERK14QItemSelection","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK21QSortFilterProxyModel20supportedDropActionsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK21QSortFilterProxyModel21filterCaseSensitivityEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK21QSortFilterProxyModel22mapSelectionFromSourceERK14QItemSelection","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK21QSortFilterProxyModel4dataERK11QModelIndexi","",0,LSB_Toolkit_Qt,0,1},
@@ -5429,7 +6816,10 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK21QSortFilterProxyModel8lessThanERK11QModelIndexS2_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK21QSortFilterProxyModel8mimeDataERK5QListI11QModelIndexE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK21QSortFilterProxyModel8rowCountERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK21QSortFilterProxyModel8sortRoleEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK21QSortFilterProxyModel9mimeTypesEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK21QTextDocumentFragment11toPlainTextEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK21QTextDocumentFragment6toHtmlERK10QByteArray","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK21QTextDocumentFragment6toHtmlEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK21QTextDocumentFragment7isEmptyEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK22QAccessibleApplication10actionTextEiN11QAccessible4TextEi","",0,LSB_Toolkit_Qt,0,1},
@@ -5442,13 +6832,78 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK22QAccessibleApplication5stateEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK22QAccessibleApplication7childAtEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK22QAccessibleApplication8navigateEN11QAccessible12RelationFlagEiPP20QAccessibleInterface","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK22QGraphicsItemAnimation10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK22QGraphicsItemAnimation10rotationAtEd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK22QGraphicsItemAnimation14xTranslationAtEd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK22QGraphicsItemAnimation14yTranslationAtEd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK22QGraphicsItemAnimation15verticalScaleAtEd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK22QGraphicsItemAnimation15verticalShearAtEd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK22QGraphicsItemAnimation17horizontalScaleAtEd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK22QGraphicsItemAnimation17horizontalShearAtEd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK22QGraphicsItemAnimation4itemEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK22QGraphicsItemAnimation5posAtEd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK22QGraphicsItemAnimation8matrixAtEd","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK22QGraphicsItemAnimation8timeLineEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK23QAccessibleBridgePlugin10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK23QGraphicsSceneHelpEvent8scenePosEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK23QGraphicsSceneHelpEvent9screenPosEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK23QGraphicsSimpleTextItem10opaqueAreaEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK23QGraphicsSimpleTextItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK23QGraphicsSimpleTextItem12isObscuredByEPK13QGraphicsItem","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK23QGraphicsSimpleTextItem17supportsExtensionEN13QGraphicsItem9ExtensionE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK23QGraphicsSimpleTextItem4fontEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK23QGraphicsSimpleTextItem4textEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK23QGraphicsSimpleTextItem4typeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK23QGraphicsSimpleTextItem5shapeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK23QGraphicsSimpleTextItem8containsERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK23QGraphicsSimpleTextItem9extensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK23QWindowStateChangeEvent10isOverrideEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK24QAbstractPageSetupDialog10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK24QGraphicsSceneHoverEvent3posEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK24QGraphicsSceneHoverEvent8scenePosEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK24QGraphicsSceneHoverEvent9screenPosEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK24QGraphicsSceneMouseEvent12lastScenePosEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK24QGraphicsSceneMouseEvent13buttonDownPosEN2Qt11MouseButtonE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK24QGraphicsSceneMouseEvent13lastScreenPosEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK24QGraphicsSceneMouseEvent18buttonDownScenePosEN2Qt11MouseButtonE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK24QGraphicsSceneMouseEvent19buttonDownScreenPosEN2Qt11MouseButtonE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK24QGraphicsSceneMouseEvent3posEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK24QGraphicsSceneMouseEvent6buttonEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK24QGraphicsSceneMouseEvent7buttonsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK24QGraphicsSceneMouseEvent7lastPosEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK24QGraphicsSceneMouseEvent8scenePosEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK24QGraphicsSceneMouseEvent9modifiersEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK24QGraphicsSceneMouseEvent9screenPosEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK24QGraphicsSceneWheelEvent3posEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK24QGraphicsSceneWheelEvent5deltaEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK24QGraphicsSceneWheelEvent7buttonsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK24QGraphicsSceneWheelEvent8scenePosEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK24QGraphicsSceneWheelEvent9modifiersEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK24QGraphicsSceneWheelEvent9screenPosEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK26QAbstractGraphicsShapeItem10opaqueAreaEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK26QAbstractGraphicsShapeItem12isObscuredByEPK13QGraphicsItem","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK26QAbstractGraphicsShapeItem3penEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK26QAbstractGraphicsShapeItem5brushEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK27QAbstractTextDocumentLayout10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK27QAbstractTextDocumentLayout11paintDeviceEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK27QAbstractTextDocumentLayout16handlerForObjectEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK27QAbstractTextDocumentLayout8anchorAtERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK27QAbstractTextDocumentLayout8documentEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK27QGraphicsSceneDragDropEvent10dropActionEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK27QGraphicsSceneDragDropEvent14proposedActionEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK27QGraphicsSceneDragDropEvent15possibleActionsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK27QGraphicsSceneDragDropEvent3posEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK27QGraphicsSceneDragDropEvent6sourceEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK27QGraphicsSceneDragDropEvent7buttonsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK27QGraphicsSceneDragDropEvent8mimeDataEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK27QGraphicsSceneDragDropEvent8scenePosEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK27QGraphicsSceneDragDropEvent9modifiersEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK27QGraphicsSceneDragDropEvent9screenPosEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK30QGraphicsSceneContextMenuEvent3posEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK30QGraphicsSceneContextMenuEvent6reasonEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK30QGraphicsSceneContextMenuEvent8scenePosEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK30QGraphicsSceneContextMenuEvent9modifiersEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK30QGraphicsSceneContextMenuEvent9screenPosEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK4QPen10miterLimitEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK4QPen11dashPatternEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK4QPen5brushEv","",0,LSB_Toolkit_Qt,0,1},
@@ -5523,10 +6978,13 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK5QMenu14actionGeometryEP7QAction","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK5QMenu16isTearOffEnabledEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK5QMenu20isTearOffMenuVisibleEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK5QMenu21separatorsCollapsibleEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK5QMenu4iconEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK5QMenu5titleEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK5QMenu7isEmptyEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK5QMenu8actionAtERK6QPoint","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK5QMenu8sizeHintEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK6QBrush12textureImageEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK6QBrush6pixmapEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK6QBrush7textureEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK6QBrush8gradientEv","",0,LSB_Toolkit_Qt,0,1},
@@ -5642,6 +7100,8 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK6QLabel14heightForWidthEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK6QLabel15minimumSizeHintEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK6QLabel17hasScaledContentsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK6QLabel17openExternalLinksEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK6QLabel20textInteractionFlagsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK6QLabel4textEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK6QLabel5buddyEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK6QLabel5movieEv","",0,LSB_Toolkit_Qt,0,1},
@@ -5665,6 +7125,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK6QMovie6formatEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK6QMovie7isValidEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK6QMovie8fileNameEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK6QMovie9cacheModeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK6QMovie9frameRectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK6QMovie9loopCountEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK6QSound10isFinishedEv","",0,LSB_Toolkit_Qt,0,1},
@@ -5680,12 +7141,14 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK6QStyle14itemPixmapRectERK5QRectiRK7QPixmap","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK6QStyle15standardPaletteEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK6QStyle26standardIconImplementationENS_14StandardPixmapEPK12QStyleOptionPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK7QAction10autoRepeatEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QAction10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QAction11actionGroupEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QAction11isCheckableEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QAction11isSeparatorEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QAction12parentWidgetEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QAction15shortcutContextEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK7QAction17associatedWidgetsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QAction4dataEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QAction4fontEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QAction4iconEv","",0,LSB_Toolkit_Qt,0,1},
@@ -5693,10 +7156,12 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK7QAction4textEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QAction7toolTipEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QAction8iconTextEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK7QAction8menuRoleEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QAction8shortcutEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QAction9isCheckedEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QAction9isEnabledEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QAction9isVisibleEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK7QAction9shortcutsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QAction9statusTipEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QAction9whatsThisEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QBitmap11transformedERK7QMatrix","",0,LSB_Toolkit_Qt,0,1},
@@ -5750,6 +7215,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK7QMatrix7mapRectERK5QRect","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QMatrix7mapRectERK6QRectF","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QMatrix8invertedEPb","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK7QMatrixcv8QVariantEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QMatrixeqERKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QMatrixmlERKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QMatrixneERKS_","",0,LSB_Toolkit_Qt,0,1},
@@ -5782,6 +7248,8 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK7QPixmap7x11InfoEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QPixmap8hasAlphaEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QPixmapcv8QVariantEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK7QRegion10intersectsERK5QRect","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK7QRegion10intersectsERKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QRegion10translatedEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QRegion12boundingRectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QRegion3eorERKS_","",0,LSB_Toolkit_Qt,0,1},
@@ -5812,6 +7280,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK7QTabBar12tabTextColorEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QTabBar12tabWhatsThisEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QTabBar15minimumSizeHintEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK7QTabBar17usesScrollButtonsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QTabBar5countEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QTabBar5shapeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QTabBar7tabDataEi","",0,LSB_Toolkit_Qt,0,1},
@@ -5821,9 +7290,11 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK7QTabBar8drawBaseEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QTabBar8iconSizeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QTabBar8sizeHintEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK7QTabBar9elideModeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QWidget10focusProxyEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QWidget10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QWidget10sizePolicyEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK7QWidget10styleSheetEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QWidget10windowIconEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QWidget10windowRoleEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QWidget11acceptDropsEv","",0,LSB_Toolkit_Qt,0,1},
@@ -5845,12 +7316,14 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK7QWidget12contentsRectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QWidget12isAncestorOfEPKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QWidget12isFullScreenEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK7QWidget12saveGeometryEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QWidget13frameGeometryEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QWidget13mapFromGlobalERK6QPoint","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QWidget13mapFromParentERK6QPoint","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QWidget13sizeIncrementEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QWidget13visibleRegionEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QWidget13windowOpacityEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK7QWidget13windowSurfaceEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QWidget14accessibleNameEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QWidget14backgroundModeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QWidget14backgroundRoleEv","",0,LSB_Toolkit_Qt,0,1},
@@ -5880,6 +7353,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK7QWidget4maskEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QWidget5mapToEPS_RK6QPoint","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QWidget5styleEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK7QWidget5winIdEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QWidget6cursorEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QWidget6handleEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK7QWidget6layoutEv","",0,LSB_Toolkit_Qt,0,1},
@@ -5917,13 +7391,16 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK8QPainter11hasClippingEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPainter11paintEngineEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPainter11renderHintsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK8QPainter11worldMatrixEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPainter12deviceMatrixEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPainter12translationXEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPainter12translationYEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPainter13matrixEnabledEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPainter14backgroundModeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK8QPainter14combinedMatrixEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPainter15compositionModeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPainter15layoutDirectionEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK8QPainter18worldMatrixEnabledEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPainter20viewTransformEnabledEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPainter3mapEiiPiS0_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPainter3penEv","",0,LSB_Toolkit_Qt,0,1},
@@ -5936,6 +7413,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK8QPainter6deviceEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPainter6matrixEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPainter6windowEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK8QPainter7opacityEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPainter8clipPathEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPainter8fontInfoEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPainter8isActiveEv","",0,LSB_Toolkit_Qt,0,1},
@@ -5944,6 +7422,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK8QPainter8xFormDevERK6QPoint","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPainter8xFormDevERK8QPolygon","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPainter8xFormDevERK8QPolygonii","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK8QPalette10isBrushSetENS_10ColorGroupENS_9ColorRoleE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPalette12serialNumberEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPalette5brushENS_10ColorGroupENS_9ColorRoleE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPalette7isEqualENS_10ColorGroupES0_","",0,LSB_Toolkit_Qt,0,1},
@@ -5975,6 +7454,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK8QPrinter13collateCopiesEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPrinter14outputFileNameEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPrinter15isOptionEnabledENS_13PrinterOptionE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK8QPrinter19doubleSidedPrintingEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPrinter20collateCopiesEnabledEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPrinter20fontEmbeddingEnabledEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QPrinter20supportedResolutionsEv","",0,LSB_Toolkit_Qt,0,1},
@@ -6011,6 +7491,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK8QToolBar12allowedAreasEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QToolBar14actionGeometryEP7QAction","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QToolBar15toolButtonStyleEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK8QToolBar15widgetForActionEP7QAction","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QToolBar16toggleViewActionEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QToolBar8actionAtERK6QPoint","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK8QToolBar8iconSizeEv","",0,LSB_Toolkit_Qt,0,1},
@@ -6030,6 +7511,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK9QCDEStyle11pixelMetricEN6QStyle11PixelMetricEPK12QStyleOptionPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QCDEStyle13drawPrimitiveEN6QStyle16PrimitiveElementEPK12QStyleOptionP8QPainterPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QCDEStyle15standardPaletteEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QCDEStyle26standardIconImplementationEN6QStyle14StandardPixmapEPK12QStyleOptionPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QCheckBox10checkStateEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QCheckBox10isTristateEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QCheckBox10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
@@ -6069,6 +7551,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK9QComboBox8lineEditEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QComboBox8maxCountEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QComboBox8sizeHintEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QComboBox9completerEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QComboBox9validatorEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QDateEdit10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QDirModel10headerDataEiN2Qt11OrientationEi","",0,LSB_Toolkit_Qt,0,1},
@@ -6110,6 +7593,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK9QFontInfo9strikeOutEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QFontInfo9styleHintEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QFontInfo9underlineEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QGradient14coordinateModeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QGradient5stopsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QGradienteqERKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QGroupBox10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
@@ -6119,6 +7603,10 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK9QGroupBox6isFlatEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QGroupBox9alignmentEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QGroupBox9isCheckedEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QKeyEvent14nativeScanCodeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QKeyEvent15nativeModifiersEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QKeyEvent16nativeVirtualKeyEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QKeyEvent7matchesEN12QKeySequence11StandardKeyE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QKeyEvent9modifiersEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QLineEdit10isModifiedEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QLineEdit10isReadOnlyEv","",0,LSB_Toolkit_Qt,0,1},
@@ -6142,6 +7630,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK9QLineEdit8hasFrameEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QLineEdit8sizeHintEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QLineEdit9alignmentEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QLineEdit9completerEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QLineEdit9inputMaskEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QLineEdit9maxLengthEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QLineEdit9validatorEv","",0,LSB_Toolkit_Qt,0,1},
@@ -6167,10 +7656,14 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK9QListView8gridSizeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QListView8movementEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QListView8viewModeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QListView8wordWrapEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QListView9batchSizeEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QMenuItem10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QMenuItem11signalValueEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QMenuItem2idEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QPolygonF12boundingRectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QPolygonF9toPolygonEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QShortcut10autoRepeatEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QShortcut10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QShortcut2idEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QShortcut3keyEv","",0,LSB_Toolkit_Qt,0,1},
@@ -6203,6 +7696,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK9QTextEdit10textCursorEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTextEdit10textFormatEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTextEdit11currentFontEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QTextEdit11cursorWidthEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTextEdit12lineWrapModeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTextEdit12tabStopWidthEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTextEdit12wordWrapModeEv","",0,LSB_Toolkit_Qt,0,1},
@@ -6211,15 +7705,18 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK9QTextEdit13overwriteModeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTextEdit14acceptRichTextEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTextEdit14autoFormattingEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QTextEdit15extraSelectionsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTextEdit15tabChangesFocusEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTextEdit16inputMethodQueryEN2Qt16InputMethodQueryE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTextEdit17currentCharFormatEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTextEdit17cursorForPositionERK6QPoint","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QTextEdit20textInteractionFlagsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTextEdit21canInsertFromMimeDataEPK9QMimeData","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTextEdit21lineWrapColumnOrWidthEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTextEdit27createMimeDataFromSelectionEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTextEdit4textEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTextEdit8anchorAtERK6QPoint","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QTextEdit8canPasteEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTextEdit8documentEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTextEdit9alignmentEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTextEdit9textColorEv","",0,LSB_Toolkit_Qt,0,1},
@@ -6240,6 +7737,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK9QTextLine6ascentEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTextLine6heightEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTextLine7descentEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QTextLine8positionEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTextLine9cursorToXEPiNS_4EdgeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTextLine9textStartEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTextLine9xToCursorEdNS_14CursorPositionE","",0,LSB_Toolkit_Qt,0,1},
@@ -6251,6 +7749,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK9QTimeEdit10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTreeView10indexAboveERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTreeView10indexBelowERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QTreeView10isAnimatedEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTreeView10isExpandedERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTreeView10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTreeView10visualRectERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
@@ -6266,16 +7765,25 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK9QTreeView15selectedIndexesEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTreeView16horizontalOffsetEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTreeView16indexRowSizeHintERK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QTreeView16isSortingEnabledEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTreeView17sizeHintForColumnEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTreeView17uniformRowHeightsEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QTreeView19allColumnsShowFocusEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTreeView22columnViewportPositionEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTreeView24visualRegionForSelectionERK14QItemSelection","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTreeView6headerEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTreeView7drawRowEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTreeView7indexAtERK6QPoint","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK9QTreeView8columnAtEi","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QTreeView8drawTreeEP8QPainterRK7QRegion","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QUndoView10emptyLabelEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QUndoView10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QUndoView5groupEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QUndoView5stackEv","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZNK9QUndoView9cleanIconEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZTI10QBoxLayout","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI10QClipboard","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI10QCompleter","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI10QDropEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI10QHelpEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI10QHideEvent","",0,LSB_Toolkit_Qt,0,0},
@@ -6288,6 +7796,8 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTI10QTableView","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI10QTextFrame","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI10QTextTable","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI10QUndoGroup","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI10QUndoStack","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI10QValidator","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI10QWorkspace","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI11QAccessible","",0,LSB_Toolkit_Qt,0,0},
@@ -6348,20 +7858,27 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTI12QTableWidget","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI12QTabletEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI12QTextBrowser","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI12QUndoCommand","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI13QDateTimeEdit","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI13QErrorMessage","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI13QFontComboBox","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI13QFontEngineFT","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI13QFramePrivate","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI13QGraphicsItem","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI13QGraphicsView","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI13QInputContext","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI13QIntValidator","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI13QItemDelegate","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI13QSplashScreen","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI13QStandardItem","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI13QTextDocument","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI13QWidgetAction","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI13QWindowsStyle","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI14QDesktopWidget","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI14QDoubleSpinBox","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI14QDragMoveEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI14QFileOpenEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI14QGraphicsScene","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI14QIconDragEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI14QImageIOPlugin","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI14QLayoutPrivate","",0,LSB_Toolkit_Qt,0,0},
@@ -6371,6 +7888,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTI14QWidgetPrivate","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI15QAbstractButton","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI15QAbstractSlider","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI15QCalendarWidget","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI15QClipboardEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI15QDragEnterEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI15QDragLeaveEvent","",0,LSB_Toolkit_Qt,0,0},
@@ -6381,10 +7899,13 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTI15QSessionManager","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI15QSplitterHandle","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI15QStatusTipEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI15QSystemTrayIcon","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI15QTextBlockGroup","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI15QTreeWidgetItem","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI15QX11EmbedWidget","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI16QAbstractSpinBox","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI16QCleanlooksStyle","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI16QDialogButtonBox","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI16QDoubleValidator","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI16QFontEngineMulti","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI16QPageSetupDialog","",0,LSB_Toolkit_Qt,0,0},
@@ -6396,13 +7917,19 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTI17QAccessiblePlugin","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI17QAccessibleWidget","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI17QContextMenuEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI17QDataWidgetMapper","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI17QFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI17QFileIconProvider","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI17QGraphicsLineItem","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI17QGraphicsPathItem","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI17QGraphicsRectItem","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI17QGraphicsTextItem","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI17QIconEnginePlugin","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI17QInputMethodEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI17QTextImageHandler","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI18QDragResponseEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI18QFontEngineMultiFT","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI18QGraphicsItemGroup","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI18QItemEditorFactory","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI18QStandardItemModel","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI18QSyntaxHighlighter","",0,LSB_Toolkit_Qt,0,0},
@@ -6411,12 +7938,16 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTI19QAbstractProxyModel","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI19QAbstractScrollArea","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI19QApplicationPrivate","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI19QGraphicsPixmapItem","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI19QGraphicsSceneEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI19QInputContextPlugin","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI19QItemSelectionModel","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI19QTextDocumentLayout","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI19QToolBarChangeEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI20QAbstractPrintDialog","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI20QAccessibleInterface","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI20QGraphicsEllipseItem","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI20QGraphicsPolygonItem","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI20QMenubarUpdatedEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI20QPictureFormatPlugin","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI20QTextFrameLayoutData","",0,LSB_Toolkit_Qt,0,0},
@@ -6425,17 +7956,26 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTI21QAbstractItemDelegate","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI21QSortFilterProxyModel","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI22QAccessibleApplication","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI22QGraphicsItemAnimation","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI22QStyleFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI22QWhatsThisClickedEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI23QAccessibleBridgePlugin","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI23QGraphicsSceneHelpEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI23QGraphicsSimpleTextItem","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI23QPictureFormatInterface","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI23QWindowStateChangeEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI24QAbstractItemViewPrivate","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI24QAbstractPageSetupDialog","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI24QGraphicsSceneWheelEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI26QAbstractGraphicsShapeItem","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI27QAbstractTextDocumentLayout","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI27QAccessibleFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI27QIconEngineFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI29QInputContextFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI30QGraphicsSceneContextMenuEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI31QImageIOHandlerFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI33QAccessibleBridgeFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI5QDial","",0,LSB_Toolkit_Qt,0,0},
@@ -6479,8 +8019,10 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTI9QTextList","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI9QTimeEdit","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI9QTreeView","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI9QUndoView","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV10QBoxLayout","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV10QClipboard","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV10QCompleter","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV10QDropEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV10QHelpEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV10QHideEvent","",0,LSB_Toolkit_Qt,0,0},
@@ -6493,6 +8035,8 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTV10QTableView","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV10QTextFrame","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV10QTextTable","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV10QUndoGroup","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV10QUndoStack","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV10QValidator","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV10QWorkspace","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV11QBmpHandler","",0,LSB_Toolkit_Qt,0,0},
@@ -6552,20 +8096,27 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTV12QTableWidget","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV12QTabletEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV12QTextBrowser","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV12QUndoCommand","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV13QDateTimeEdit","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV13QErrorMessage","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV13QFontComboBox","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV13QFontEngineFT","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV13QFramePrivate","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV13QGraphicsItem","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV13QGraphicsView","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV13QInputContext","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV13QIntValidator","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV13QItemDelegate","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV13QSplashScreen","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV13QStandardItem","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV13QTextDocument","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV13QWidgetAction","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV13QWindowsStyle","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV14QDesktopWidget","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV14QDoubleSpinBox","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV14QDragMoveEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV14QFileOpenEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV14QGraphicsScene","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV14QIconDragEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV14QImageIOPlugin","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV14QLayoutPrivate","",0,LSB_Toolkit_Qt,0,0},
@@ -6575,6 +8126,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTV14QWidgetPrivate","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV15QAbstractButton","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV15QAbstractSlider","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV15QCalendarWidget","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV15QClipboardEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV15QDragEnterEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV15QDragLeaveEvent","",0,LSB_Toolkit_Qt,0,0},
@@ -6585,10 +8137,13 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTV15QSessionManager","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV15QSplitterHandle","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV15QStatusTipEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV15QSystemTrayIcon","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV15QTextBlockGroup","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV15QTreeWidgetItem","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV15QX11EmbedWidget","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV16QAbstractSpinBox","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV16QCleanlooksStyle","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV16QDialogButtonBox","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV16QDoubleValidator","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV16QFontEngineMulti","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV16QPageSetupDialog","",0,LSB_Toolkit_Qt,0,0},
@@ -6600,13 +8155,19 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTV17QAccessiblePlugin","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV17QAccessibleWidget","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV17QContextMenuEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV17QDataWidgetMapper","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV17QFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV17QFileIconProvider","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV17QGraphicsLineItem","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV17QGraphicsPathItem","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV17QGraphicsRectItem","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV17QGraphicsTextItem","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV17QIconEnginePlugin","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV17QInputMethodEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV17QTextImageHandler","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV18QDragResponseEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV18QFontEngineMultiFT","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV18QGraphicsItemGroup","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV18QItemEditorFactory","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV18QStandardItemModel","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV18QSyntaxHighlighter","",0,LSB_Toolkit_Qt,0,0},
@@ -6615,12 +8176,16 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTV19QAbstractProxyModel","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV19QAbstractScrollArea","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV19QApplicationPrivate","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV19QGraphicsPixmapItem","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV19QGraphicsSceneEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV19QInputContextPlugin","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV19QItemSelectionModel","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV19QTextDocumentLayout","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV19QToolBarChangeEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV20QAbstractPrintDialog","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV20QAccessibleInterface","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV20QGraphicsEllipseItem","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV20QGraphicsPolygonItem","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV20QMenubarUpdatedEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV20QPictureFormatPlugin","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV20QTextFrameLayoutData","",0,LSB_Toolkit_Qt,0,0},
@@ -6629,17 +8194,26 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTV21QAbstractItemDelegate","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV21QSortFilterProxyModel","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV22QAccessibleApplication","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV22QGraphicsItemAnimation","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV22QStyleFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV22QWhatsThisClickedEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV23QAccessibleBridgePlugin","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV23QGraphicsSceneHelpEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV23QGraphicsSimpleTextItem","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV23QPictureFormatInterface","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV23QWindowStateChangeEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV24QAbstractItemViewPrivate","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV24QAbstractPageSetupDialog","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV24QGraphicsSceneWheelEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV26QAbstractGraphicsShapeItem","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV27QAbstractTextDocumentLayout","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV27QAccessibleFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV27QIconEngineFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV29QInputContextFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV30QGraphicsSceneContextMenuEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV31QImageIOHandlerFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV33QAccessibleBridgeFactoryInterface","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV5QDial","",0,LSB_Toolkit_Qt,0,0},
@@ -6683,6 +8257,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTV9QTextList","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV9QTimeEdit","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV9QTreeView","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV9QUndoView","",0,LSB_Toolkit_Qt,0,0},
 #if defined __i386__
 	{"_ZThn12_N10QDropEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
@@ -10463,6 +12038,7 @@ struct versym libQtGui_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK7QWidget7devTypeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
+	{"_Zls6QDebugP13QGraphicsItem","",0,LSB_Toolkit_Qt,0,1},
 	{"_Zls6QDebugPK6QEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_Zls6QDebugRK12QKeySequence","",0,LSB_Toolkit_Qt,0,1},
 	{"_Zls6QDebugRK19QItemSelectionRange","",0,LSB_Toolkit_Qt,0,1},
@@ -10474,15 +12050,18 @@ struct versym libQtGui_so_4[] = {
 	{"_Zls6QDebugRK8QPolygon","",0,LSB_Toolkit_Qt,0,1},
 	{"_Zls6QDebugRK9QPolygonF","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZlsR11QDataStreamRK11QColorGroup","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZlsR11QDataStreamRK11QSizePolicy","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZlsR11QDataStreamRK11QTextFormat","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZlsR11QDataStreamRK11QTextLength","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZlsR11QDataStreamRK12QKeySequence","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZlsR11QDataStreamRK12QPainterPath","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZlsR11QDataStreamRK13QStandardItem","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZlsR11QDataStreamRK15QListWidgetItem","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZlsR11QDataStreamRK15QTreeWidgetItem","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZlsR11QDataStreamRK16QTableWidgetItem","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZlsR11QDataStreamRK4QPen","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZlsR11QDataStreamRK5QFont","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZlsR11QDataStreamRK5QIcon","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZlsR11QDataStreamRK6QBrush","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZlsR11QDataStreamRK6QColor","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZlsR11QDataStreamRK6QImage","",0,LSB_Toolkit_Qt,0,1},
@@ -10496,15 +12075,18 @@ struct versym libQtGui_so_4[] = {
 	{"_ZlsR11QTextStreamRK9QSplitter","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZmlRK12QPainterPathRK7QMatrix","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZrsR11QDataStreamR11QColorGroup","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZrsR11QDataStreamR11QSizePolicy","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZrsR11QDataStreamR11QTextFormat","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZrsR11QDataStreamR11QTextLength","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZrsR11QDataStreamR12QKeySequence","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZrsR11QDataStreamR12QPainterPath","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZrsR11QDataStreamR13QStandardItem","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZrsR11QDataStreamR15QListWidgetItem","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZrsR11QDataStreamR15QTreeWidgetItem","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZrsR11QDataStreamR16QTableWidgetItem","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZrsR11QDataStreamR4QPen","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZrsR11QDataStreamR5QFont","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZrsR11QDataStreamR5QIcon","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZrsR11QDataStreamR6QBrush","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZrsR11QDataStreamR6QColor","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZrsR11QDataStreamR6QImage","",0,LSB_Toolkit_Qt,0,1},
@@ -24618,12 +26200,12 @@ const char *_11QGridLayout_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn8_N11QGridLayoutD1Ev",
 #endif
+#if defined __ia64__
+	"_ZThn16_N11QGridLayoutD1Ev",
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N11QGridLayoutD1Ev",
 #endif
-#if defined __ia64__
-	"_ZThn16_N11QGridLayoutD1Ev",
-#endif
 #if defined __powerpc64__
 	"_ZThn16_N11QGridLayoutD1Ev",
 #endif
@@ -24636,8 +26218,8 @@ const char *_11QGridLayout_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N11QGridLayoutD1Ev",
 #endif
-#if defined __powerpc64__
-	"_ZThn16_N11QGridLayoutD0Ev",
+#if defined __i386__
+	"_ZThn8_N11QGridLayoutD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn16_N11QGridLayoutD0Ev",
@@ -24645,8 +26227,8 @@ const char *_11QGridLayout_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N11QGridLayoutD0Ev",
 #endif
-#if defined __i386__
-	"_ZThn8_N11QGridLayoutD0Ev",
+#if defined __powerpc64__
+	"_ZThn16_N11QGridLayoutD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_N11QGridLayoutD0Ev",
@@ -24656,12 +26238,6 @@ const char *_11QGridLayout_of_libQtGui_so_4_vtable_name_1 [] = {
 #endif
 #if defined __s390x__
 	"_ZThn16_N11QGridLayoutD0Ev",
-#endif
-#if defined __x86_64__
-	"_ZThn16_NK11QGridLayout8sizeHintEv",
-#endif
-#if defined __s390x__
-	"_ZThn16_NK11QGridLayout8sizeHintEv",
 #endif
 #if defined __i386__
 	"_ZThn8_NK11QGridLayout8sizeHintEv",
@@ -24678,35 +26254,35 @@ const char *_11QGridLayout_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK11QGridLayout8sizeHintEv",
 #endif
+#if defined __x86_64__
+	"_ZThn16_NK11QGridLayout8sizeHintEv",
+#endif
+#if defined __s390x__
+	"_ZThn16_NK11QGridLayout8sizeHintEv",
+#endif
+#if defined __i386__
+	"_ZThn8_NK11QGridLayout11minimumSizeEv",
+#endif
 #if defined __ia64__
 	"_ZThn16_NK11QGridLayout11minimumSizeEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK11QGridLayout11minimumSizeEv",
 #endif
-#if defined __i386__
+#if defined __powerpc64__
+	"_ZThn16_NK11QGridLayout11minimumSizeEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK11QGridLayout11minimumSizeEv",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_NK11QGridLayout11minimumSizeEv",
-#endif
 #if defined __x86_64__
 	"_ZThn16_NK11QGridLayout11minimumSizeEv",
 #endif
 #if defined __s390x__
 	"_ZThn16_NK11QGridLayout11minimumSizeEv",
 #endif
-#if defined __powerpc64__
-	"_ZThn16_NK11QGridLayout11minimumSizeEv",
-#endif
 #if defined __i386__
 	"_ZThn8_NK11QGridLayout11maximumSizeEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_NK11QGridLayout11maximumSizeEv",
-#endif
-#if defined __x86_64__
-	"_ZThn16_NK11QGridLayout11maximumSizeEv",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK11QGridLayout11maximumSizeEv",
@@ -24717,38 +26293,38 @@ const char *_11QGridLayout_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK11QGridLayout11maximumSizeEv",
 #endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_NK11QGridLayout11maximumSizeEv",
+#endif
+#if defined __x86_64__
+	"_ZThn16_NK11QGridLayout11maximumSizeEv",
+#endif
 #if defined __s390x__
 	"_ZThn16_NK11QGridLayout11maximumSizeEv",
 #endif
-#if defined __x86_64__
-	"_ZThn16_NK11QGridLayout19expandingDirectionsEv",
+#if defined __i386__
+	"_ZThn8_NK11QGridLayout19expandingDirectionsEv",
 #endif
 #if defined __ia64__
-	"_ZThn16_NK11QGridLayout19expandingDirectionsEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn16_NK11QGridLayout19expandingDirectionsEv",
-#endif
-#if defined __s390x__
 	"_ZThn16_NK11QGridLayout19expandingDirectionsEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK11QGridLayout19expandingDirectionsEv",
 #endif
+#if defined __powerpc64__
+	"_ZThn16_NK11QGridLayout19expandingDirectionsEv",
+#endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK11QGridLayout19expandingDirectionsEv",
 #endif
-#if defined __i386__
-	"_ZThn8_NK11QGridLayout19expandingDirectionsEv",
-#endif
 #if defined __x86_64__
-	"_ZThn16_N11QGridLayout11setGeometryERK5QRect",
+	"_ZThn16_NK11QGridLayout19expandingDirectionsEv",
+#endif
+#if defined __s390x__
+	"_ZThn16_NK11QGridLayout19expandingDirectionsEv",
 #endif
 #if defined __i386__
 	"_ZThn8_N11QGridLayout11setGeometryERK5QRect",
-#endif
-#if defined __powerpc64__
-	"_ZThn16_N11QGridLayout11setGeometryERK5QRect",
 #endif
 #if defined __ia64__
 	"_ZThn16_N11QGridLayout11setGeometryERK5QRect",
@@ -24756,14 +26332,20 @@ const char *_11QGridLayout_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N11QGridLayout11setGeometryERK5QRect",
 #endif
+#if defined __powerpc64__
+	"_ZThn16_N11QGridLayout11setGeometryERK5QRect",
+#endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_N11QGridLayout11setGeometryERK5QRect",
+#endif
+#if defined __x86_64__
+	"_ZThn16_N11QGridLayout11setGeometryERK5QRect",
 #endif
 #if defined __s390x__
 	"_ZThn16_N11QGridLayout11setGeometryERK5QRect",
 #endif
-#if defined __s390x__
-	"_ZThn16_NK7QLayout8geometryEv",
+#if defined __i386__
+	"_ZThn8_NK7QLayout8geometryEv",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QLayout8geometryEv",
@@ -24774,26 +26356,23 @@ const char *_11QGridLayout_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QLayout8geometryEv",
 #endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_NK7QLayout8geometryEv",
+#endif
 #if defined __x86_64__
 	"_ZThn16_NK7QLayout8geometryEv",
 #endif
-#if defined __i386__
-	"_ZThn8_NK7QLayout8geometryEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_NK7QLayout8geometryEv",
+#if defined __s390x__
+	"_ZThn16_NK7QLayout8geometryEv",
 #endif
 #if defined __i386__
-	"_ZThn8_NK7QLayout7isEmptyEv",
-#endif
-#if defined __x86_64__
-	"_ZThn16_NK7QLayout7isEmptyEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QLayout7isEmptyEv",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QLayout7isEmptyEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_NK7QLayout7isEmptyEv",
 #endif
 #if defined __powerpc64__
 	"_ZThn16_NK7QLayout7isEmptyEv",
@@ -24801,65 +26380,53 @@ const char *_11QGridLayout_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK7QLayout7isEmptyEv",
 #endif
+#if defined __x86_64__
+	"_ZThn16_NK7QLayout7isEmptyEv",
+#endif
 #if defined __s390x__
 	"_ZThn16_NK7QLayout7isEmptyEv",
 #endif
 #if defined __i386__
 	"_ZThn8_NK11QGridLayout17hasHeightForWidthEv",
 #endif
-#if defined __s390x__
-	"_ZThn16_NK11QGridLayout17hasHeightForWidthEv",
-#endif
-#if defined __x86_64__
-	"_ZThn16_NK11QGridLayout17hasHeightForWidthEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_NK11QGridLayout17hasHeightForWidthEv",
-#endif
-#if defined __powerpc64__
+#if defined __ia64__
 	"_ZThn16_NK11QGridLayout17hasHeightForWidthEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK11QGridLayout17hasHeightForWidthEv",
 #endif
-#if defined __ia64__
+#if defined __powerpc64__
+	"_ZThn16_NK11QGridLayout17hasHeightForWidthEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_NK11QGridLayout17hasHeightForWidthEv",
+#endif
+#if defined __x86_64__
+	"_ZThn16_NK11QGridLayout17hasHeightForWidthEv",
+#endif
+#if defined __s390x__
 	"_ZThn16_NK11QGridLayout17hasHeightForWidthEv",
 #endif
 #if defined __i386__
 	"_ZThn8_NK11QGridLayout14heightForWidthEi",
 #endif
-#if defined __s390x__
-	"_ZThn16_NK11QGridLayout14heightForWidthEi",
-#endif
-#if defined __x86_64__
-	"_ZThn16_NK11QGridLayout14heightForWidthEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_NK11QGridLayout14heightForWidthEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn16_NK11QGridLayout14heightForWidthEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_NK11QGridLayout14heightForWidthEi",
-#endif
 #if defined __ia64__
 	"_ZThn16_NK11QGridLayout14heightForWidthEi",
 #endif
-#if defined __s390x__
-	"_ZThn16_NK11QGridLayout21minimumHeightForWidthEi",
-#endif
-#if defined __x86_64__
-	"_ZThn16_NK11QGridLayout21minimumHeightForWidthEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_NK11QGridLayout21minimumHeightForWidthEi",
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_NK11QGridLayout14heightForWidthEi",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_NK11QGridLayout21minimumHeightForWidthEi",
+	"_ZThn16_NK11QGridLayout14heightForWidthEi",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_NK11QGridLayout21minimumHeightForWidthEi",
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_NK11QGridLayout14heightForWidthEi",
+#endif
+#if defined __x86_64__
+	"_ZThn16_NK11QGridLayout14heightForWidthEi",
+#endif
+#if defined __s390x__
+	"_ZThn16_NK11QGridLayout14heightForWidthEi",
 #endif
 #if defined __i386__
 	"_ZThn8_NK11QGridLayout21minimumHeightForWidthEi",
@@ -24867,7 +26434,31 @@ const char *_11QGridLayout_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK11QGridLayout21minimumHeightForWidthEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_NK11QGridLayout21minimumHeightForWidthEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn16_NK11QGridLayout21minimumHeightForWidthEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_NK11QGridLayout21minimumHeightForWidthEi",
+#endif
+#if defined __x86_64__
+	"_ZThn16_NK11QGridLayout21minimumHeightForWidthEi",
+#endif
 #if defined __s390x__
+	"_ZThn16_NK11QGridLayout21minimumHeightForWidthEi",
+#endif
+#if defined __i386__
+	"_ZThn8_N11QGridLayout10invalidateEv",
+#endif
+#if defined __ia64__
+	"_ZThn16_N11QGridLayout10invalidateEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_N11QGridLayout10invalidateEv",
+#endif
+#if defined __powerpc64__
 	"_ZThn16_N11QGridLayout10invalidateEv",
 #endif
 #if defined __s390__ && !defined __s390x__
@@ -24876,26 +26467,11 @@ const char *_11QGridLayout_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_N11QGridLayout10invalidateEv",
 #endif
-#if defined __powerpc64__
+#if defined __s390x__
 	"_ZThn16_N11QGridLayout10invalidateEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N11QGridLayout10invalidateEv",
-#endif
-#if defined __ia64__
-	"_ZThn16_N11QGridLayout10invalidateEv",
-#endif
-#if defined __i386__
-	"_ZThn8_N11QGridLayout10invalidateEv",
 #endif
 	"_ZN11QLayoutItem6widgetEv",
-#if defined __s390x__
-	"_ZThn16_N7QLayout6layoutEv",
-#endif
-#if defined __x86_64__
-	"_ZThn16_N7QLayout6layoutEv",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __i386__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
 #if defined __ia64__
@@ -24904,10 +26480,16 @@ const char *_11QGridLayout_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
-#if defined __i386__
+#if defined __powerpc64__
+	"_ZThn16_N7QLayout6layoutEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
-#if defined __powerpc64__
+#if defined __x86_64__
+	"_ZThn16_N7QLayout6layoutEv",
+#endif
+#if defined __s390x__
 	"_ZThn16_N7QLayout6layoutEv",
 #endif
 	"_ZN11QLayoutItem10spacerItemEv",
@@ -25833,12 +27415,12 @@ const char *_11QVBoxLayout_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn8_N11QVBoxLayoutD1Ev",
 #endif
+#if defined __ia64__
+	"_ZThn16_N11QVBoxLayoutD1Ev",
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N11QVBoxLayoutD1Ev",
 #endif
-#if defined __ia64__
-	"_ZThn16_N11QVBoxLayoutD1Ev",
-#endif
 #if defined __powerpc64__
 	"_ZThn16_N11QVBoxLayoutD1Ev",
 #endif
@@ -25851,8 +27433,8 @@ const char *_11QVBoxLayout_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn16_N11QVBoxLayoutD1Ev",
 #endif
-#if defined __powerpc64__
-	"_ZThn16_N11QVBoxLayoutD0Ev",
+#if defined __i386__
+	"_ZThn8_N11QVBoxLayoutD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn16_N11QVBoxLayoutD0Ev",
@@ -25860,8 +27442,8 @@ const char *_11QVBoxLayout_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N11QVBoxLayoutD0Ev",
 #endif
-#if defined __i386__
-	"_ZThn8_N11QVBoxLayoutD0Ev",
+#if defined __powerpc64__
+	"_ZThn16_N11QVBoxLayoutD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_N11QVBoxLayoutD0Ev",
@@ -25871,12 +27453,6 @@ const char *_11QVBoxLayout_of_libQtGui_so_4_vtable_name_1 [] = {
 #endif
 #if defined __s390x__
 	"_ZThn16_N11QVBoxLayoutD0Ev",
-#endif
-#if defined __x86_64__
-	"_ZThn16_NK10QBoxLayout8sizeHintEv",
-#endif
-#if defined __s390x__
-	"_ZThn16_NK10QBoxLayout8sizeHintEv",
 #endif
 #if defined __i386__
 	"_ZThn8_NK10QBoxLayout8sizeHintEv",
@@ -25893,35 +27469,35 @@ const char *_11QVBoxLayout_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK10QBoxLayout8sizeHintEv",
 #endif
+#if defined __x86_64__
+	"_ZThn16_NK10QBoxLayout8sizeHintEv",
+#endif
+#if defined __s390x__
+	"_ZThn16_NK10QBoxLayout8sizeHintEv",
+#endif
+#if defined __i386__
+	"_ZThn8_NK10QBoxLayout11minimumSizeEv",
+#endif
 #if defined __ia64__
 	"_ZThn16_NK10QBoxLayout11minimumSizeEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK10QBoxLayout11minimumSizeEv",
 #endif
-#if defined __i386__
+#if defined __powerpc64__
+	"_ZThn16_NK10QBoxLayout11minimumSizeEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK10QBoxLayout11minimumSizeEv",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_NK10QBoxLayout11minimumSizeEv",
-#endif
 #if defined __x86_64__
 	"_ZThn16_NK10QBoxLayout11minimumSizeEv",
 #endif
 #if defined __s390x__
 	"_ZThn16_NK10QBoxLayout11minimumSizeEv",
 #endif
-#if defined __powerpc64__
-	"_ZThn16_NK10QBoxLayout11minimumSizeEv",
-#endif
 #if defined __i386__
 	"_ZThn8_NK10QBoxLayout11maximumSizeEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_NK10QBoxLayout11maximumSizeEv",
-#endif
-#if defined __x86_64__
-	"_ZThn16_NK10QBoxLayout11maximumSizeEv",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK10QBoxLayout11maximumSizeEv",
@@ -25932,38 +27508,38 @@ const char *_11QVBoxLayout_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK10QBoxLayout11maximumSizeEv",
 #endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_NK10QBoxLayout11maximumSizeEv",
+#endif
+#if defined __x86_64__
+	"_ZThn16_NK10QBoxLayout11maximumSizeEv",
+#endif
 #if defined __s390x__
 	"_ZThn16_NK10QBoxLayout11maximumSizeEv",
 #endif
-#if defined __x86_64__
-	"_ZThn16_NK10QBoxLayout19expandingDirectionsEv",
+#if defined __i386__
+	"_ZThn8_NK10QBoxLayout19expandingDirectionsEv",
 #endif
 #if defined __ia64__
-	"_ZThn16_NK10QBoxLayout19expandingDirectionsEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn16_NK10QBoxLayout19expandingDirectionsEv",
-#endif
-#if defined __s390x__
 	"_ZThn16_NK10QBoxLayout19expandingDirectionsEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK10QBoxLayout19expandingDirectionsEv",
 #endif
+#if defined __powerpc64__
+	"_ZThn16_NK10QBoxLayout19expandingDirectionsEv",
+#endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK10QBoxLayout19expandingDirectionsEv",
 #endif
-#if defined __i386__
-	"_ZThn8_NK10QBoxLayout19expandingDirectionsEv",
-#endif
 #if defined __x86_64__
-	"_ZThn16_N10QBoxLayout11setGeometryERK5QRect",
+	"_ZThn16_NK10QBoxLayout19expandingDirectionsEv",
+#endif
+#if defined __s390x__
+	"_ZThn16_NK10QBoxLayout19expandingDirectionsEv",
 #endif
 #if defined __i386__
 	"_ZThn8_N10QBoxLayout11setGeometryERK5QRect",
-#endif
-#if defined __powerpc64__
-	"_ZThn16_N10QBoxLayout11setGeometryERK5QRect",
 #endif
 #if defined __ia64__
 	"_ZThn16_N10QBoxLayout11setGeometryERK5QRect",
@@ -25971,14 +27547,20 @@ const char *_11QVBoxLayout_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N10QBoxLayout11setGeometryERK5QRect",
 #endif
+#if defined __powerpc64__
+	"_ZThn16_N10QBoxLayout11setGeometryERK5QRect",
+#endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_N10QBoxLayout11setGeometryERK5QRect",
+#endif
+#if defined __x86_64__
+	"_ZThn16_N10QBoxLayout11setGeometryERK5QRect",
 #endif
 #if defined __s390x__
 	"_ZThn16_N10QBoxLayout11setGeometryERK5QRect",
 #endif
-#if defined __s390x__
-	"_ZThn16_NK7QLayout8geometryEv",
+#if defined __i386__
+	"_ZThn8_NK7QLayout8geometryEv",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QLayout8geometryEv",
@@ -25989,26 +27571,23 @@ const char *_11QVBoxLayout_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_NK7QLayout8geometryEv",
 #endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_NK7QLayout8geometryEv",
+#endif
 #if defined __x86_64__
 	"_ZThn16_NK7QLayout8geometryEv",
 #endif
-#if defined __i386__
-	"_ZThn8_NK7QLayout8geometryEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_NK7QLayout8geometryEv",
+#if defined __s390x__
+	"_ZThn16_NK7QLayout8geometryEv",
 #endif
 #if defined __i386__
-	"_ZThn8_NK7QLayout7isEmptyEv",
-#endif
-#if defined __x86_64__
-	"_ZThn16_NK7QLayout7isEmptyEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QLayout7isEmptyEv",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QLayout7isEmptyEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_NK7QLayout7isEmptyEv",
 #endif
 #if defined __powerpc64__
 	"_ZThn16_NK7QLayout7isEmptyEv",
@@ -26016,65 +27595,53 @@ const char *_11QVBoxLayout_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK7QLayout7isEmptyEv",
 #endif
+#if defined __x86_64__
+	"_ZThn16_NK7QLayout7isEmptyEv",
+#endif
 #if defined __s390x__
 	"_ZThn16_NK7QLayout7isEmptyEv",
 #endif
 #if defined __i386__
 	"_ZThn8_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
-#if defined __s390x__
-	"_ZThn16_NK10QBoxLayout17hasHeightForWidthEv",
-#endif
-#if defined __x86_64__
-	"_ZThn16_NK10QBoxLayout17hasHeightForWidthEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_NK10QBoxLayout17hasHeightForWidthEv",
-#endif
-#if defined __powerpc64__
+#if defined __ia64__
 	"_ZThn16_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
-#if defined __ia64__
+#if defined __powerpc64__
+	"_ZThn16_NK10QBoxLayout17hasHeightForWidthEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_NK10QBoxLayout17hasHeightForWidthEv",
+#endif
+#if defined __x86_64__
+	"_ZThn16_NK10QBoxLayout17hasHeightForWidthEv",
+#endif
+#if defined __s390x__
 	"_ZThn16_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
 #if defined __i386__
 	"_ZThn8_NK10QBoxLayout14heightForWidthEi",
 #endif
-#if defined __s390x__
-	"_ZThn16_NK10QBoxLayout14heightForWidthEi",
-#endif
-#if defined __x86_64__
-	"_ZThn16_NK10QBoxLayout14heightForWidthEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_NK10QBoxLayout14heightForWidthEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn16_NK10QBoxLayout14heightForWidthEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_NK10QBoxLayout14heightForWidthEi",
-#endif
 #if defined __ia64__
 	"_ZThn16_NK10QBoxLayout14heightForWidthEi",
 #endif
-#if defined __s390x__
-	"_ZThn16_NK10QBoxLayout21minimumHeightForWidthEi",
-#endif
-#if defined __x86_64__
-	"_ZThn16_NK10QBoxLayout21minimumHeightForWidthEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_NK10QBoxLayout21minimumHeightForWidthEi",
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_NK10QBoxLayout14heightForWidthEi",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_NK10QBoxLayout21minimumHeightForWidthEi",
+	"_ZThn16_NK10QBoxLayout14heightForWidthEi",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_NK10QBoxLayout21minimumHeightForWidthEi",
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_NK10QBoxLayout14heightForWidthEi",
+#endif
+#if defined __x86_64__
+	"_ZThn16_NK10QBoxLayout14heightForWidthEi",
+#endif
+#if defined __s390x__
+	"_ZThn16_NK10QBoxLayout14heightForWidthEi",
 #endif
 #if defined __i386__
 	"_ZThn8_NK10QBoxLayout21minimumHeightForWidthEi",
@@ -26082,7 +27649,31 @@ const char *_11QVBoxLayout_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK10QBoxLayout21minimumHeightForWidthEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_NK10QBoxLayout21minimumHeightForWidthEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn16_NK10QBoxLayout21minimumHeightForWidthEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_NK10QBoxLayout21minimumHeightForWidthEi",
+#endif
+#if defined __x86_64__
+	"_ZThn16_NK10QBoxLayout21minimumHeightForWidthEi",
+#endif
 #if defined __s390x__
+	"_ZThn16_NK10QBoxLayout21minimumHeightForWidthEi",
+#endif
+#if defined __i386__
+	"_ZThn8_N10QBoxLayout10invalidateEv",
+#endif
+#if defined __ia64__
+	"_ZThn16_N10QBoxLayout10invalidateEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_N10QBoxLayout10invalidateEv",
+#endif
+#if defined __powerpc64__
 	"_ZThn16_N10QBoxLayout10invalidateEv",
 #endif
 #if defined __s390__ && !defined __s390x__
@@ -26091,26 +27682,11 @@ const char *_11QVBoxLayout_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_N10QBoxLayout10invalidateEv",
 #endif
-#if defined __powerpc64__
+#if defined __s390x__
 	"_ZThn16_N10QBoxLayout10invalidateEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N10QBoxLayout10invalidateEv",
-#endif
-#if defined __ia64__
-	"_ZThn16_N10QBoxLayout10invalidateEv",
-#endif
-#if defined __i386__
-	"_ZThn8_N10QBoxLayout10invalidateEv",
 #endif
 	"_ZN11QLayoutItem6widgetEv",
-#if defined __s390x__
-	"_ZThn16_N7QLayout6layoutEv",
-#endif
-#if defined __x86_64__
-	"_ZThn16_N7QLayout6layoutEv",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __i386__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
 #if defined __ia64__
@@ -26119,10 +27695,16 @@ const char *_11QVBoxLayout_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
-#if defined __i386__
+#if defined __powerpc64__
+	"_ZThn16_N7QLayout6layoutEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn8_N7QLayout6layoutEv",
 #endif
-#if defined __powerpc64__
+#if defined __x86_64__
+	"_ZThn16_N7QLayout6layoutEv",
+#endif
+#if defined __s390x__
 	"_ZThn16_N7QLayout6layoutEv",
 #endif
 	"_ZN11QLayoutItem10spacerItemEv",
@@ -36053,6 +37635,1710 @@ struct classinfo _Z5QDial_of_libQtGui_so_4_classinfo = {
 	_5QDial_of_libQtGui_so_4_baseinfo,
 	};
 
+char *_26QAbstractGraphicsShapeItem_of_libQtGui_so_4_typeinfo_name[] = {
+	"_ZTI13QGraphicsItem",
+	};
+
+struct classtypeinfo _26QAbstractGraphicsShapeItem_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS26QAbstractGraphicsShapeItem",
+	_26QAbstractGraphicsShapeItem_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_26QAbstractGraphicsShapeItem_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZN26QAbstractGraphicsShapeItemD1Ev",
+	"_ZN26QAbstractGraphicsShapeItemD0Ev",
+	"_ZN13QGraphicsItem7advanceEi",
+	"__cxa_pure_virtual",
+	"_ZNK13QGraphicsItem5shapeEv",
+	"_ZNK13QGraphicsItem8containsERK7QPointF",
+	"_ZNK13QGraphicsItem16collidesWithItemEPKS_N2Qt17ItemSelectionModeE",
+	"_ZNK13QGraphicsItem16collidesWithPathERK12QPainterPathN2Qt17ItemSelectionModeE",
+	"_ZNK26QAbstractGraphicsShapeItem12isObscuredByEPK13QGraphicsItem",
+	"_ZNK26QAbstractGraphicsShapeItem10opaqueAreaEv",
+	"__cxa_pure_virtual",
+	"_ZNK13QGraphicsItem4typeEv",
+	"_ZN13QGraphicsItem16sceneEventFilterEPS_P6QEvent",
+	"_ZN13QGraphicsItem10sceneEventEP6QEvent",
+	"_ZN13QGraphicsItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent",
+	"_ZN13QGraphicsItem14dragEnterEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem13dragMoveEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem9dropEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem12focusInEventEP11QFocusEvent",
+	"_ZN13QGraphicsItem13focusOutEventEP11QFocusEvent",
+	"_ZN13QGraphicsItem15hoverEnterEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem14hoverMoveEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem13keyPressEventEP9QKeyEvent",
+	"_ZN13QGraphicsItem15keyReleaseEventEP9QKeyEvent",
+	"_ZN13QGraphicsItem15mousePressEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem14mouseMoveEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem10wheelEventEP24QGraphicsSceneWheelEvent",
+	"_ZN13QGraphicsItem16inputMethodEventEP17QInputMethodEvent",
+	"_ZNK13QGraphicsItem16inputMethodQueryEN2Qt16InputMethodQueryE",
+	"_ZN13QGraphicsItem10itemChangeENS_18GraphicsItemChangeERK8QVariant",
+	"_ZNK13QGraphicsItem17supportsExtensionENS_9ExtensionE",
+	"_ZN13QGraphicsItem12setExtensionENS_9ExtensionERK8QVariant",
+	"_ZNK13QGraphicsItem9extensionERK8QVariant",
+	};
+
+struct classvtable _26QAbstractGraphicsShapeItem_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	37,	/* Number of Vfuncs */
+	"_ZTI26QAbstractGraphicsShapeItem",
+	_26QAbstractGraphicsShapeItem_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _26QAbstractGraphicsShapeItem_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z26QAbstractGraphicsShapeItem_of_libQtGui_so_4_classinfo = {
+	"_Z26QAbstractGraphicsShapeItem",
+	"_ZTV26QAbstractGraphicsShapeItem",
+	"",	/* RTTI */
+	"_ZTI13QGraphicsItem",
+	"_ZTT26QAbstractGraphicsShapeItem",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_26QAbstractGraphicsShapeItem_of_libQtGui_so_4_typeinfo,
+	_26QAbstractGraphicsShapeItem_of_libQtGui_so_4_vtable,
+	_26QAbstractGraphicsShapeItem_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_16QCleanlooksStyle_of_libQtGui_so_4_typeinfo_name[] = {
+	"_ZTI13QWindowsStyle",
+	};
+
+struct classtypeinfo _16QCleanlooksStyle_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS16QCleanlooksStyle",
+	_16QCleanlooksStyle_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_16QCleanlooksStyle_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZNK16QCleanlooksStyle10metaObjectEv",
+	"_ZN16QCleanlooksStyle11qt_metacastEPKc",
+	"_ZN16QCleanlooksStyle11qt_metacallEN11QMetaObject4CallEiPPv",
+	"_ZN16QCleanlooksStyleD1Ev",
+	"_ZN16QCleanlooksStyleD0Ev",
+	"_ZN7QObject5eventEP6QEvent",
+	"_ZN13QWindowsStyle11eventFilterEP7QObjectP6QEvent",
+	"_ZN13QWindowsStyle10timerEventEP11QTimerEvent",
+	"_ZN7QObject10childEventEP11QChildEvent",
+	"_ZN7QObject11customEventEP6QEvent",
+	"_ZN7QObject13connectNotifyEPKc",
+	"_ZN7QObject16disconnectNotifyEPKc",
+	"_ZN16QCleanlooksStyle6polishEP7QWidget",
+	"_ZN16QCleanlooksStyle8unpolishEP7QWidget",
+	"_ZN16QCleanlooksStyle6polishEP12QApplication",
+	"_ZN16QCleanlooksStyle8unpolishEP12QApplication",
+	"_ZN16QCleanlooksStyle6polishER8QPalette",
+	"_ZNK6QStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString",
+	"_ZNK16QCleanlooksStyle14itemPixmapRectERK5QRectiRK7QPixmap",
+	"_ZNK16QCleanlooksStyle12drawItemTextEP8QPainterRK5QRectiRK8QPalettebRK7QStringNS5_9ColorRoleE",
+	"_ZNK16QCleanlooksStyle14drawItemPixmapEP8QPainterRK5QRectiRK7QPixmap",
+	"_ZNK16QCleanlooksStyle15standardPaletteEv",
+	"_ZNK16QCleanlooksStyle13drawPrimitiveEN6QStyle16PrimitiveElementEPK12QStyleOptionP8QPainterPK7QWidget",
+	"_ZNK16QCleanlooksStyle11drawControlEN6QStyle14ControlElementEPK12QStyleOptionP8QPainterPK7QWidget",
+	"_ZNK16QCleanlooksStyle14subElementRectEN6QStyle10SubElementEPK12QStyleOptionPK7QWidget",
+	"_ZNK16QCleanlooksStyle18drawComplexControlEN6QStyle14ComplexControlEPK19QStyleOptionComplexP8QPainterPK7QWidget",
+	"_ZNK16QCleanlooksStyle21hitTestComplexControlEN6QStyle14ComplexControlEPK19QStyleOptionComplexRK6QPointPK7QWidget",
+	"_ZNK16QCleanlooksStyle14subControlRectEN6QStyle14ComplexControlEPK19QStyleOptionComplexNS0_10SubControlEPK7QWidget",
+	"_ZNK16QCleanlooksStyle11pixelMetricEN6QStyle11PixelMetricEPK12QStyleOptionPK7QWidget",
+	"_ZNK16QCleanlooksStyle16sizeFromContentsEN6QStyle12ContentsTypeEPK12QStyleOptionRK5QSizePK7QWidget",
+	"_ZNK16QCleanlooksStyle9styleHintEN6QStyle9StyleHintEPK12QStyleOptionPK7QWidgetP16QStyleHintReturn",
+	"_ZNK16QCleanlooksStyle14standardPixmapEN6QStyle14StandardPixmapEPK12QStyleOptionPK7QWidget",
+	"_ZNK16QCleanlooksStyle19generatedIconPixmapEN5QIcon4ModeERK7QPixmapPK12QStyleOption",
+	};
+
+struct classvtable _16QCleanlooksStyle_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	33,	/* Number of Vfuncs */
+	"_ZTI16QCleanlooksStyle",
+	_16QCleanlooksStyle_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _16QCleanlooksStyle_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z16QCleanlooksStyle_of_libQtGui_so_4_classinfo = {
+	"_Z16QCleanlooksStyle",
+	"_ZTV16QCleanlooksStyle",
+	"",	/* RTTI */
+	"_ZTI13QWindowsStyle",
+	"_ZTT16QCleanlooksStyle",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_16QCleanlooksStyle_of_libQtGui_so_4_typeinfo,
+	_16QCleanlooksStyle_of_libQtGui_so_4_vtable,
+	_16QCleanlooksStyle_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_10QCompleter_of_libQtGui_so_4_typeinfo_name[] = {
+	"_ZTI7QObject",
+	};
+
+struct classtypeinfo _10QCompleter_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS10QCompleter",
+	_10QCompleter_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_10QCompleter_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZNK10QCompleter10metaObjectEv",
+	"_ZN10QCompleter11qt_metacastEPKc",
+	"_ZN10QCompleter11qt_metacallEN11QMetaObject4CallEiPPv",
+	"_ZN10QCompleterD1Ev",
+	"_ZN10QCompleterD0Ev",
+	"_ZN10QCompleter5eventEP6QEvent",
+	"_ZN10QCompleter11eventFilterEP7QObjectP6QEvent",
+	"_ZN7QObject10timerEventEP11QTimerEvent",
+	"_ZN7QObject10childEventEP11QChildEvent",
+	"_ZN7QObject11customEventEP6QEvent",
+	"_ZN7QObject13connectNotifyEPKc",
+	"_ZN7QObject16disconnectNotifyEPKc",
+	"_ZNK10QCompleter13pathFromIndexERK11QModelIndex",
+	"_ZNK10QCompleter9splitPathERK7QString",
+	};
+
+struct classvtable _10QCompleter_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	14,	/* Number of Vfuncs */
+	"_ZTI10QCompleter",
+	_10QCompleter_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _10QCompleter_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z10QCompleter_of_libQtGui_so_4_classinfo = {
+	"_Z10QCompleter",
+	"_ZTV10QCompleter",
+	"",	/* RTTI */
+	"_ZTI7QObject",
+	"_ZTT10QCompleter",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_10QCompleter_of_libQtGui_so_4_typeinfo,
+	_10QCompleter_of_libQtGui_so_4_vtable,
+	_10QCompleter_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_17QDataWidgetMapper_of_libQtGui_so_4_typeinfo_name[] = {
+	"_ZTI7QObject",
+	};
+
+struct classtypeinfo _17QDataWidgetMapper_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS17QDataWidgetMapper",
+	_17QDataWidgetMapper_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_17QDataWidgetMapper_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZNK17QDataWidgetMapper10metaObjectEv",
+	"_ZN17QDataWidgetMapper11qt_metacastEPKc",
+	"_ZN17QDataWidgetMapper11qt_metacallEN11QMetaObject4CallEiPPv",
+	"_ZN17QDataWidgetMapperD1Ev",
+	"_ZN17QDataWidgetMapperD0Ev",
+	"_ZN7QObject5eventEP6QEvent",
+	"_ZN7QObject11eventFilterEPS_P6QEvent",
+	"_ZN7QObject10timerEventEP11QTimerEvent",
+	"_ZN7QObject10childEventEP11QChildEvent",
+	"_ZN7QObject11customEventEP6QEvent",
+	"_ZN7QObject13connectNotifyEPKc",
+	"_ZN7QObject16disconnectNotifyEPKc",
+	"_ZN17QDataWidgetMapper15setCurrentIndexEi",
+	};
+
+struct classvtable _17QDataWidgetMapper_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	13,	/* Number of Vfuncs */
+	"_ZTI17QDataWidgetMapper",
+	_17QDataWidgetMapper_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _17QDataWidgetMapper_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z17QDataWidgetMapper_of_libQtGui_so_4_classinfo = {
+	"_Z17QDataWidgetMapper",
+	"_ZTV17QDataWidgetMapper",
+	"",	/* RTTI */
+	"_ZTI7QObject",
+	"_ZTT17QDataWidgetMapper",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_17QDataWidgetMapper_of_libQtGui_so_4_typeinfo,
+	_17QDataWidgetMapper_of_libQtGui_so_4_vtable,
+	_17QDataWidgetMapper_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_20QGraphicsEllipseItem_of_libQtGui_so_4_typeinfo_name[] = {
+	"_ZTI26QAbstractGraphicsShapeItem",
+	};
+
+struct classtypeinfo _20QGraphicsEllipseItem_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS20QGraphicsEllipseItem",
+	_20QGraphicsEllipseItem_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_20QGraphicsEllipseItem_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZN20QGraphicsEllipseItemD1Ev",
+	"_ZN20QGraphicsEllipseItemD0Ev",
+	"_ZN13QGraphicsItem7advanceEi",
+	"_ZNK20QGraphicsEllipseItem12boundingRectEv",
+	"_ZNK20QGraphicsEllipseItem5shapeEv",
+	"_ZNK20QGraphicsEllipseItem8containsERK7QPointF",
+	"_ZNK13QGraphicsItem16collidesWithItemEPKS_N2Qt17ItemSelectionModeE",
+	"_ZNK13QGraphicsItem16collidesWithPathERK12QPainterPathN2Qt17ItemSelectionModeE",
+	"_ZNK20QGraphicsEllipseItem12isObscuredByEPK13QGraphicsItem",
+	"_ZNK20QGraphicsEllipseItem10opaqueAreaEv",
+	"_ZN20QGraphicsEllipseItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget",
+	"_ZNK20QGraphicsEllipseItem4typeEv",
+	"_ZN13QGraphicsItem16sceneEventFilterEPS_P6QEvent",
+	"_ZN13QGraphicsItem10sceneEventEP6QEvent",
+	"_ZN13QGraphicsItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent",
+	"_ZN13QGraphicsItem14dragEnterEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem13dragMoveEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem9dropEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem12focusInEventEP11QFocusEvent",
+	"_ZN13QGraphicsItem13focusOutEventEP11QFocusEvent",
+	"_ZN13QGraphicsItem15hoverEnterEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem14hoverMoveEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem13keyPressEventEP9QKeyEvent",
+	"_ZN13QGraphicsItem15keyReleaseEventEP9QKeyEvent",
+	"_ZN13QGraphicsItem15mousePressEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem14mouseMoveEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem10wheelEventEP24QGraphicsSceneWheelEvent",
+	"_ZN13QGraphicsItem16inputMethodEventEP17QInputMethodEvent",
+	"_ZNK13QGraphicsItem16inputMethodQueryEN2Qt16InputMethodQueryE",
+	"_ZN13QGraphicsItem10itemChangeENS_18GraphicsItemChangeERK8QVariant",
+	"_ZNK20QGraphicsEllipseItem17supportsExtensionEN13QGraphicsItem9ExtensionE",
+	"_ZN20QGraphicsEllipseItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant",
+	"_ZNK20QGraphicsEllipseItem9extensionERK8QVariant",
+	};
+
+struct classvtable _20QGraphicsEllipseItem_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	37,	/* Number of Vfuncs */
+	"_ZTI20QGraphicsEllipseItem",
+	_20QGraphicsEllipseItem_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _20QGraphicsEllipseItem_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z20QGraphicsEllipseItem_of_libQtGui_so_4_classinfo = {
+	"_Z20QGraphicsEllipseItem",
+	"_ZTV20QGraphicsEllipseItem",
+	"",	/* RTTI */
+	"_ZTI26QAbstractGraphicsShapeItem",
+	"_ZTT20QGraphicsEllipseItem",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_20QGraphicsEllipseItem_of_libQtGui_so_4_typeinfo,
+	_20QGraphicsEllipseItem_of_libQtGui_so_4_vtable,
+	_20QGraphicsEllipseItem_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_13QGraphicsItem_of_libQtGui_so_4_typeinfo_name[] = {
+	"",
+	};
+
+struct classtypeinfo _13QGraphicsItem_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS13QGraphicsItem",
+	_13QGraphicsItem_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_13QGraphicsItem_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZN13QGraphicsItemD1Ev",
+	"_ZN13QGraphicsItemD0Ev",
+	"_ZN13QGraphicsItem7advanceEi",
+	"__cxa_pure_virtual",
+	"_ZNK13QGraphicsItem5shapeEv",
+	"_ZNK13QGraphicsItem8containsERK7QPointF",
+	"_ZNK13QGraphicsItem16collidesWithItemEPKS_N2Qt17ItemSelectionModeE",
+	"_ZNK13QGraphicsItem16collidesWithPathERK12QPainterPathN2Qt17ItemSelectionModeE",
+	"_ZNK13QGraphicsItem12isObscuredByEPKS_",
+	"_ZNK13QGraphicsItem10opaqueAreaEv",
+	"__cxa_pure_virtual",
+	"_ZNK13QGraphicsItem4typeEv",
+	"_ZN13QGraphicsItem16sceneEventFilterEPS_P6QEvent",
+	"_ZN13QGraphicsItem10sceneEventEP6QEvent",
+	"_ZN13QGraphicsItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent",
+	"_ZN13QGraphicsItem14dragEnterEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem13dragMoveEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem9dropEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem12focusInEventEP11QFocusEvent",
+	"_ZN13QGraphicsItem13focusOutEventEP11QFocusEvent",
+	"_ZN13QGraphicsItem15hoverEnterEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem14hoverMoveEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem13keyPressEventEP9QKeyEvent",
+	"_ZN13QGraphicsItem15keyReleaseEventEP9QKeyEvent",
+	"_ZN13QGraphicsItem15mousePressEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem14mouseMoveEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem10wheelEventEP24QGraphicsSceneWheelEvent",
+	"_ZN13QGraphicsItem16inputMethodEventEP17QInputMethodEvent",
+	"_ZNK13QGraphicsItem16inputMethodQueryEN2Qt16InputMethodQueryE",
+	"_ZN13QGraphicsItem10itemChangeENS_18GraphicsItemChangeERK8QVariant",
+	"_ZNK13QGraphicsItem17supportsExtensionENS_9ExtensionE",
+	"_ZN13QGraphicsItem12setExtensionENS_9ExtensionERK8QVariant",
+	"_ZNK13QGraphicsItem9extensionERK8QVariant",
+	};
+
+struct classvtable _13QGraphicsItem_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	37,	/* Number of Vfuncs */
+	"_ZTI13QGraphicsItem",
+	_13QGraphicsItem_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _13QGraphicsItem_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z13QGraphicsItem_of_libQtGui_so_4_classinfo = {
+	"_Z13QGraphicsItem",
+	"_ZTV13QGraphicsItem",
+	"",	/* RTTI */
+	"",
+	"_ZTT13QGraphicsItem",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_13QGraphicsItem_of_libQtGui_so_4_typeinfo,
+	_13QGraphicsItem_of_libQtGui_so_4_vtable,
+	_13QGraphicsItem_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_22QGraphicsItemAnimation_of_libQtGui_so_4_typeinfo_name[] = {
+	"_ZTI7QObject",
+	};
+
+struct classtypeinfo _22QGraphicsItemAnimation_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS22QGraphicsItemAnimation",
+	_22QGraphicsItemAnimation_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_22QGraphicsItemAnimation_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZNK22QGraphicsItemAnimation10metaObjectEv",
+	"_ZN22QGraphicsItemAnimation11qt_metacastEPKc",
+	"_ZN22QGraphicsItemAnimation11qt_metacallEN11QMetaObject4CallEiPPv",
+	"_ZN22QGraphicsItemAnimationD1Ev",
+	"_ZN22QGraphicsItemAnimationD0Ev",
+	"_ZN7QObject5eventEP6QEvent",
+	"_ZN7QObject11eventFilterEPS_P6QEvent",
+	"_ZN7QObject10timerEventEP11QTimerEvent",
+	"_ZN7QObject10childEventEP11QChildEvent",
+	"_ZN7QObject11customEventEP6QEvent",
+	"_ZN7QObject13connectNotifyEPKc",
+	"_ZN7QObject16disconnectNotifyEPKc",
+	"_ZN22QGraphicsItemAnimation19beforeAnimationStepEd",
+	"_ZN22QGraphicsItemAnimation18afterAnimationStepEd",
+	};
+
+struct classvtable _22QGraphicsItemAnimation_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	14,	/* Number of Vfuncs */
+	"_ZTI22QGraphicsItemAnimation",
+	_22QGraphicsItemAnimation_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _22QGraphicsItemAnimation_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z22QGraphicsItemAnimation_of_libQtGui_so_4_classinfo = {
+	"_Z22QGraphicsItemAnimation",
+	"_ZTV22QGraphicsItemAnimation",
+	"",	/* RTTI */
+	"_ZTI7QObject",
+	"_ZTT22QGraphicsItemAnimation",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_22QGraphicsItemAnimation_of_libQtGui_so_4_typeinfo,
+	_22QGraphicsItemAnimation_of_libQtGui_so_4_vtable,
+	_22QGraphicsItemAnimation_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_18QGraphicsItemGroup_of_libQtGui_so_4_typeinfo_name[] = {
+	"_ZTI13QGraphicsItem",
+	};
+
+struct classtypeinfo _18QGraphicsItemGroup_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS18QGraphicsItemGroup",
+	_18QGraphicsItemGroup_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_18QGraphicsItemGroup_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZN18QGraphicsItemGroupD1Ev",
+	"_ZN18QGraphicsItemGroupD0Ev",
+	"_ZN13QGraphicsItem7advanceEi",
+	"_ZNK18QGraphicsItemGroup12boundingRectEv",
+	"_ZNK13QGraphicsItem5shapeEv",
+	"_ZNK13QGraphicsItem8containsERK7QPointF",
+	"_ZNK13QGraphicsItem16collidesWithItemEPKS_N2Qt17ItemSelectionModeE",
+	"_ZNK13QGraphicsItem16collidesWithPathERK12QPainterPathN2Qt17ItemSelectionModeE",
+	"_ZNK18QGraphicsItemGroup12isObscuredByEPK13QGraphicsItem",
+	"_ZNK18QGraphicsItemGroup10opaqueAreaEv",
+	"_ZN18QGraphicsItemGroup5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget",
+	"_ZNK18QGraphicsItemGroup4typeEv",
+	"_ZN13QGraphicsItem16sceneEventFilterEPS_P6QEvent",
+	"_ZN13QGraphicsItem10sceneEventEP6QEvent",
+	"_ZN13QGraphicsItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent",
+	"_ZN13QGraphicsItem14dragEnterEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem13dragMoveEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem9dropEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem12focusInEventEP11QFocusEvent",
+	"_ZN13QGraphicsItem13focusOutEventEP11QFocusEvent",
+	"_ZN13QGraphicsItem15hoverEnterEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem14hoverMoveEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem13keyPressEventEP9QKeyEvent",
+	"_ZN13QGraphicsItem15keyReleaseEventEP9QKeyEvent",
+	"_ZN13QGraphicsItem15mousePressEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem14mouseMoveEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem10wheelEventEP24QGraphicsSceneWheelEvent",
+	"_ZN13QGraphicsItem16inputMethodEventEP17QInputMethodEvent",
+	"_ZNK13QGraphicsItem16inputMethodQueryEN2Qt16InputMethodQueryE",
+	"_ZN13QGraphicsItem10itemChangeENS_18GraphicsItemChangeERK8QVariant",
+	"_ZNK13QGraphicsItem17supportsExtensionENS_9ExtensionE",
+	"_ZN13QGraphicsItem12setExtensionENS_9ExtensionERK8QVariant",
+	"_ZNK13QGraphicsItem9extensionERK8QVariant",
+	};
+
+struct classvtable _18QGraphicsItemGroup_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	37,	/* Number of Vfuncs */
+	"_ZTI18QGraphicsItemGroup",
+	_18QGraphicsItemGroup_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _18QGraphicsItemGroup_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z18QGraphicsItemGroup_of_libQtGui_so_4_classinfo = {
+	"_Z18QGraphicsItemGroup",
+	"_ZTV18QGraphicsItemGroup",
+	"",	/* RTTI */
+	"_ZTI13QGraphicsItem",
+	"_ZTT18QGraphicsItemGroup",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_18QGraphicsItemGroup_of_libQtGui_so_4_typeinfo,
+	_18QGraphicsItemGroup_of_libQtGui_so_4_vtable,
+	_18QGraphicsItemGroup_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_17QGraphicsLineItem_of_libQtGui_so_4_typeinfo_name[] = {
+	"_ZTI13QGraphicsItem",
+	};
+
+struct classtypeinfo _17QGraphicsLineItem_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS17QGraphicsLineItem",
+	_17QGraphicsLineItem_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_17QGraphicsLineItem_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZN17QGraphicsLineItemD1Ev",
+	"_ZN17QGraphicsLineItemD0Ev",
+	"_ZN13QGraphicsItem7advanceEi",
+	"_ZNK17QGraphicsLineItem12boundingRectEv",
+	"_ZNK17QGraphicsLineItem5shapeEv",
+	"_ZNK17QGraphicsLineItem8containsERK7QPointF",
+	"_ZNK13QGraphicsItem16collidesWithItemEPKS_N2Qt17ItemSelectionModeE",
+	"_ZNK13QGraphicsItem16collidesWithPathERK12QPainterPathN2Qt17ItemSelectionModeE",
+	"_ZNK17QGraphicsLineItem12isObscuredByEPK13QGraphicsItem",
+	"_ZNK17QGraphicsLineItem10opaqueAreaEv",
+	"_ZN17QGraphicsLineItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget",
+	"_ZNK17QGraphicsLineItem4typeEv",
+	"_ZN13QGraphicsItem16sceneEventFilterEPS_P6QEvent",
+	"_ZN13QGraphicsItem10sceneEventEP6QEvent",
+	"_ZN13QGraphicsItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent",
+	"_ZN13QGraphicsItem14dragEnterEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem13dragMoveEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem9dropEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem12focusInEventEP11QFocusEvent",
+	"_ZN13QGraphicsItem13focusOutEventEP11QFocusEvent",
+	"_ZN13QGraphicsItem15hoverEnterEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem14hoverMoveEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem13keyPressEventEP9QKeyEvent",
+	"_ZN13QGraphicsItem15keyReleaseEventEP9QKeyEvent",
+	"_ZN13QGraphicsItem15mousePressEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem14mouseMoveEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem10wheelEventEP24QGraphicsSceneWheelEvent",
+	"_ZN13QGraphicsItem16inputMethodEventEP17QInputMethodEvent",
+	"_ZNK13QGraphicsItem16inputMethodQueryEN2Qt16InputMethodQueryE",
+	"_ZN13QGraphicsItem10itemChangeENS_18GraphicsItemChangeERK8QVariant",
+	"_ZNK17QGraphicsLineItem17supportsExtensionEN13QGraphicsItem9ExtensionE",
+	"_ZN17QGraphicsLineItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant",
+	"_ZNK17QGraphicsLineItem9extensionERK8QVariant",
+	};
+
+struct classvtable _17QGraphicsLineItem_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	37,	/* Number of Vfuncs */
+	"_ZTI17QGraphicsLineItem",
+	_17QGraphicsLineItem_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _17QGraphicsLineItem_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z17QGraphicsLineItem_of_libQtGui_so_4_classinfo = {
+	"_Z17QGraphicsLineItem",
+	"_ZTV17QGraphicsLineItem",
+	"",	/* RTTI */
+	"_ZTI13QGraphicsItem",
+	"_ZTT17QGraphicsLineItem",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_17QGraphicsLineItem_of_libQtGui_so_4_typeinfo,
+	_17QGraphicsLineItem_of_libQtGui_so_4_vtable,
+	_17QGraphicsLineItem_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_17QGraphicsPathItem_of_libQtGui_so_4_typeinfo_name[] = {
+	"_ZTI26QAbstractGraphicsShapeItem",
+	};
+
+struct classtypeinfo _17QGraphicsPathItem_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS17QGraphicsPathItem",
+	_17QGraphicsPathItem_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_17QGraphicsPathItem_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZN17QGraphicsPathItemD1Ev",
+	"_ZN17QGraphicsPathItemD0Ev",
+	"_ZN13QGraphicsItem7advanceEi",
+	"_ZNK17QGraphicsPathItem12boundingRectEv",
+	"_ZNK17QGraphicsPathItem5shapeEv",
+	"_ZNK17QGraphicsPathItem8containsERK7QPointF",
+	"_ZNK13QGraphicsItem16collidesWithItemEPKS_N2Qt17ItemSelectionModeE",
+	"_ZNK13QGraphicsItem16collidesWithPathERK12QPainterPathN2Qt17ItemSelectionModeE",
+	"_ZNK17QGraphicsPathItem12isObscuredByEPK13QGraphicsItem",
+	"_ZNK17QGraphicsPathItem10opaqueAreaEv",
+	"_ZN17QGraphicsPathItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget",
+	"_ZNK17QGraphicsPathItem4typeEv",
+	"_ZN13QGraphicsItem16sceneEventFilterEPS_P6QEvent",
+	"_ZN13QGraphicsItem10sceneEventEP6QEvent",
+	"_ZN13QGraphicsItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent",
+	"_ZN13QGraphicsItem14dragEnterEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem13dragMoveEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem9dropEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem12focusInEventEP11QFocusEvent",
+	"_ZN13QGraphicsItem13focusOutEventEP11QFocusEvent",
+	"_ZN13QGraphicsItem15hoverEnterEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem14hoverMoveEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem13keyPressEventEP9QKeyEvent",
+	"_ZN13QGraphicsItem15keyReleaseEventEP9QKeyEvent",
+	"_ZN13QGraphicsItem15mousePressEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem14mouseMoveEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem10wheelEventEP24QGraphicsSceneWheelEvent",
+	"_ZN13QGraphicsItem16inputMethodEventEP17QInputMethodEvent",
+	"_ZNK13QGraphicsItem16inputMethodQueryEN2Qt16InputMethodQueryE",
+	"_ZN13QGraphicsItem10itemChangeENS_18GraphicsItemChangeERK8QVariant",
+	"_ZNK17QGraphicsPathItem17supportsExtensionEN13QGraphicsItem9ExtensionE",
+	"_ZN17QGraphicsPathItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant",
+	"_ZNK17QGraphicsPathItem9extensionERK8QVariant",
+	};
+
+struct classvtable _17QGraphicsPathItem_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	37,	/* Number of Vfuncs */
+	"_ZTI17QGraphicsPathItem",
+	_17QGraphicsPathItem_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _17QGraphicsPathItem_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z17QGraphicsPathItem_of_libQtGui_so_4_classinfo = {
+	"_Z17QGraphicsPathItem",
+	"_ZTV17QGraphicsPathItem",
+	"",	/* RTTI */
+	"_ZTI26QAbstractGraphicsShapeItem",
+	"_ZTT17QGraphicsPathItem",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_17QGraphicsPathItem_of_libQtGui_so_4_typeinfo,
+	_17QGraphicsPathItem_of_libQtGui_so_4_vtable,
+	_17QGraphicsPathItem_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_19QGraphicsPixmapItem_of_libQtGui_so_4_typeinfo_name[] = {
+	"_ZTI13QGraphicsItem",
+	};
+
+struct classtypeinfo _19QGraphicsPixmapItem_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS19QGraphicsPixmapItem",
+	_19QGraphicsPixmapItem_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_19QGraphicsPixmapItem_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZN19QGraphicsPixmapItemD1Ev",
+	"_ZN19QGraphicsPixmapItemD0Ev",
+	"_ZN13QGraphicsItem7advanceEi",
+	"_ZNK19QGraphicsPixmapItem12boundingRectEv",
+	"_ZNK19QGraphicsPixmapItem5shapeEv",
+	"_ZNK19QGraphicsPixmapItem8containsERK7QPointF",
+	"_ZNK13QGraphicsItem16collidesWithItemEPKS_N2Qt17ItemSelectionModeE",
+	"_ZNK13QGraphicsItem16collidesWithPathERK12QPainterPathN2Qt17ItemSelectionModeE",
+	"_ZNK19QGraphicsPixmapItem12isObscuredByEPK13QGraphicsItem",
+	"_ZNK19QGraphicsPixmapItem10opaqueAreaEv",
+	"_ZN19QGraphicsPixmapItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget",
+	"_ZNK19QGraphicsPixmapItem4typeEv",
+	"_ZN13QGraphicsItem16sceneEventFilterEPS_P6QEvent",
+	"_ZN13QGraphicsItem10sceneEventEP6QEvent",
+	"_ZN13QGraphicsItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent",
+	"_ZN13QGraphicsItem14dragEnterEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem13dragMoveEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem9dropEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem12focusInEventEP11QFocusEvent",
+	"_ZN13QGraphicsItem13focusOutEventEP11QFocusEvent",
+	"_ZN13QGraphicsItem15hoverEnterEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem14hoverMoveEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem13keyPressEventEP9QKeyEvent",
+	"_ZN13QGraphicsItem15keyReleaseEventEP9QKeyEvent",
+	"_ZN13QGraphicsItem15mousePressEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem14mouseMoveEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem10wheelEventEP24QGraphicsSceneWheelEvent",
+	"_ZN13QGraphicsItem16inputMethodEventEP17QInputMethodEvent",
+	"_ZNK13QGraphicsItem16inputMethodQueryEN2Qt16InputMethodQueryE",
+	"_ZN13QGraphicsItem10itemChangeENS_18GraphicsItemChangeERK8QVariant",
+	"_ZNK19QGraphicsPixmapItem17supportsExtensionEN13QGraphicsItem9ExtensionE",
+	"_ZN19QGraphicsPixmapItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant",
+	"_ZNK19QGraphicsPixmapItem9extensionERK8QVariant",
+	};
+
+struct classvtable _19QGraphicsPixmapItem_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	37,	/* Number of Vfuncs */
+	"_ZTI19QGraphicsPixmapItem",
+	_19QGraphicsPixmapItem_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _19QGraphicsPixmapItem_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z19QGraphicsPixmapItem_of_libQtGui_so_4_classinfo = {
+	"_Z19QGraphicsPixmapItem",
+	"_ZTV19QGraphicsPixmapItem",
+	"",	/* RTTI */
+	"_ZTI13QGraphicsItem",
+	"_ZTT19QGraphicsPixmapItem",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_19QGraphicsPixmapItem_of_libQtGui_so_4_typeinfo,
+	_19QGraphicsPixmapItem_of_libQtGui_so_4_vtable,
+	_19QGraphicsPixmapItem_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_20QGraphicsPolygonItem_of_libQtGui_so_4_typeinfo_name[] = {
+	"_ZTI26QAbstractGraphicsShapeItem",
+	};
+
+struct classtypeinfo _20QGraphicsPolygonItem_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS20QGraphicsPolygonItem",
+	_20QGraphicsPolygonItem_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_20QGraphicsPolygonItem_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZN20QGraphicsPolygonItemD1Ev",
+	"_ZN20QGraphicsPolygonItemD0Ev",
+	"_ZN13QGraphicsItem7advanceEi",
+	"_ZNK20QGraphicsPolygonItem12boundingRectEv",
+	"_ZNK20QGraphicsPolygonItem5shapeEv",
+	"_ZNK20QGraphicsPolygonItem8containsERK7QPointF",
+	"_ZNK13QGraphicsItem16collidesWithItemEPKS_N2Qt17ItemSelectionModeE",
+	"_ZNK13QGraphicsItem16collidesWithPathERK12QPainterPathN2Qt17ItemSelectionModeE",
+	"_ZNK20QGraphicsPolygonItem12isObscuredByEPK13QGraphicsItem",
+	"_ZNK20QGraphicsPolygonItem10opaqueAreaEv",
+	"_ZN20QGraphicsPolygonItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget",
+	"_ZNK20QGraphicsPolygonItem4typeEv",
+	"_ZN13QGraphicsItem16sceneEventFilterEPS_P6QEvent",
+	"_ZN13QGraphicsItem10sceneEventEP6QEvent",
+	"_ZN13QGraphicsItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent",
+	"_ZN13QGraphicsItem14dragEnterEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem13dragMoveEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem9dropEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem12focusInEventEP11QFocusEvent",
+	"_ZN13QGraphicsItem13focusOutEventEP11QFocusEvent",
+	"_ZN13QGraphicsItem15hoverEnterEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem14hoverMoveEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem13keyPressEventEP9QKeyEvent",
+	"_ZN13QGraphicsItem15keyReleaseEventEP9QKeyEvent",
+	"_ZN13QGraphicsItem15mousePressEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem14mouseMoveEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem10wheelEventEP24QGraphicsSceneWheelEvent",
+	"_ZN13QGraphicsItem16inputMethodEventEP17QInputMethodEvent",
+	"_ZNK13QGraphicsItem16inputMethodQueryEN2Qt16InputMethodQueryE",
+	"_ZN13QGraphicsItem10itemChangeENS_18GraphicsItemChangeERK8QVariant",
+	"_ZNK20QGraphicsPolygonItem17supportsExtensionEN13QGraphicsItem9ExtensionE",
+	"_ZN20QGraphicsPolygonItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant",
+	"_ZNK20QGraphicsPolygonItem9extensionERK8QVariant",
+	};
+
+struct classvtable _20QGraphicsPolygonItem_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	37,	/* Number of Vfuncs */
+	"_ZTI20QGraphicsPolygonItem",
+	_20QGraphicsPolygonItem_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _20QGraphicsPolygonItem_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z20QGraphicsPolygonItem_of_libQtGui_so_4_classinfo = {
+	"_Z20QGraphicsPolygonItem",
+	"_ZTV20QGraphicsPolygonItem",
+	"",	/* RTTI */
+	"_ZTI26QAbstractGraphicsShapeItem",
+	"_ZTT20QGraphicsPolygonItem",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_20QGraphicsPolygonItem_of_libQtGui_so_4_typeinfo,
+	_20QGraphicsPolygonItem_of_libQtGui_so_4_vtable,
+	_20QGraphicsPolygonItem_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_17QGraphicsRectItem_of_libQtGui_so_4_typeinfo_name[] = {
+	"_ZTI26QAbstractGraphicsShapeItem",
+	};
+
+struct classtypeinfo _17QGraphicsRectItem_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS17QGraphicsRectItem",
+	_17QGraphicsRectItem_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_17QGraphicsRectItem_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZN17QGraphicsRectItemD1Ev",
+	"_ZN17QGraphicsRectItemD0Ev",
+	"_ZN13QGraphicsItem7advanceEi",
+	"_ZNK17QGraphicsRectItem12boundingRectEv",
+	"_ZNK17QGraphicsRectItem5shapeEv",
+	"_ZNK17QGraphicsRectItem8containsERK7QPointF",
+	"_ZNK13QGraphicsItem16collidesWithItemEPKS_N2Qt17ItemSelectionModeE",
+	"_ZNK13QGraphicsItem16collidesWithPathERK12QPainterPathN2Qt17ItemSelectionModeE",
+	"_ZNK17QGraphicsRectItem12isObscuredByEPK13QGraphicsItem",
+	"_ZNK17QGraphicsRectItem10opaqueAreaEv",
+	"_ZN17QGraphicsRectItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget",
+	"_ZNK17QGraphicsRectItem4typeEv",
+	"_ZN13QGraphicsItem16sceneEventFilterEPS_P6QEvent",
+	"_ZN13QGraphicsItem10sceneEventEP6QEvent",
+	"_ZN13QGraphicsItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent",
+	"_ZN13QGraphicsItem14dragEnterEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem13dragMoveEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem9dropEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem12focusInEventEP11QFocusEvent",
+	"_ZN13QGraphicsItem13focusOutEventEP11QFocusEvent",
+	"_ZN13QGraphicsItem15hoverEnterEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem14hoverMoveEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem13keyPressEventEP9QKeyEvent",
+	"_ZN13QGraphicsItem15keyReleaseEventEP9QKeyEvent",
+	"_ZN13QGraphicsItem15mousePressEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem14mouseMoveEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem10wheelEventEP24QGraphicsSceneWheelEvent",
+	"_ZN13QGraphicsItem16inputMethodEventEP17QInputMethodEvent",
+	"_ZNK13QGraphicsItem16inputMethodQueryEN2Qt16InputMethodQueryE",
+	"_ZN13QGraphicsItem10itemChangeENS_18GraphicsItemChangeERK8QVariant",
+	"_ZNK17QGraphicsRectItem17supportsExtensionEN13QGraphicsItem9ExtensionE",
+	"_ZN17QGraphicsRectItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant",
+	"_ZNK17QGraphicsRectItem9extensionERK8QVariant",
+	};
+
+struct classvtable _17QGraphicsRectItem_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	37,	/* Number of Vfuncs */
+	"_ZTI17QGraphicsRectItem",
+	_17QGraphicsRectItem_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _17QGraphicsRectItem_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z17QGraphicsRectItem_of_libQtGui_so_4_classinfo = {
+	"_Z17QGraphicsRectItem",
+	"_ZTV17QGraphicsRectItem",
+	"",	/* RTTI */
+	"_ZTI26QAbstractGraphicsShapeItem",
+	"_ZTT17QGraphicsRectItem",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_17QGraphicsRectItem_of_libQtGui_so_4_typeinfo,
+	_17QGraphicsRectItem_of_libQtGui_so_4_vtable,
+	_17QGraphicsRectItem_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_14QGraphicsScene_of_libQtGui_so_4_typeinfo_name[] = {
+	"_ZTI7QObject",
+	};
+
+struct classtypeinfo _14QGraphicsScene_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS14QGraphicsScene",
+	_14QGraphicsScene_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_14QGraphicsScene_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZNK14QGraphicsScene10metaObjectEv",
+	"_ZN14QGraphicsScene11qt_metacastEPKc",
+	"_ZN14QGraphicsScene11qt_metacallEN11QMetaObject4CallEiPPv",
+	"_ZN14QGraphicsSceneD1Ev",
+	"_ZN14QGraphicsSceneD0Ev",
+	"_ZN14QGraphicsScene5eventEP6QEvent",
+	"_ZN7QObject11eventFilterEPS_P6QEvent",
+	"_ZN7QObject10timerEventEP11QTimerEvent",
+	"_ZN7QObject10childEventEP11QChildEvent",
+	"_ZN7QObject11customEventEP6QEvent",
+	"_ZN7QObject13connectNotifyEPKc",
+	"_ZN7QObject16disconnectNotifyEPKc",
+	"_ZNK14QGraphicsScene16inputMethodQueryEN2Qt16InputMethodQueryE",
+	"_ZN14QGraphicsScene16contextMenuEventEP30QGraphicsSceneContextMenuEvent",
+	"_ZN14QGraphicsScene14dragEnterEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN14QGraphicsScene13dragMoveEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN14QGraphicsScene14dragLeaveEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN14QGraphicsScene9dropEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN14QGraphicsScene12focusInEventEP11QFocusEvent",
+	"_ZN14QGraphicsScene13focusOutEventEP11QFocusEvent",
+	"_ZN14QGraphicsScene9helpEventEP23QGraphicsSceneHelpEvent",
+	"_ZN14QGraphicsScene13keyPressEventEP9QKeyEvent",
+	"_ZN14QGraphicsScene15keyReleaseEventEP9QKeyEvent",
+	"_ZN14QGraphicsScene15mousePressEventEP24QGraphicsSceneMouseEvent",
+	"_ZN14QGraphicsScene14mouseMoveEventEP24QGraphicsSceneMouseEvent",
+	"_ZN14QGraphicsScene17mouseReleaseEventEP24QGraphicsSceneMouseEvent",
+	"_ZN14QGraphicsScene21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent",
+	"_ZN14QGraphicsScene10wheelEventEP24QGraphicsSceneWheelEvent",
+	"_ZN14QGraphicsScene16inputMethodEventEP17QInputMethodEvent",
+	"_ZN14QGraphicsScene14drawBackgroundEP8QPainterRK6QRectF",
+	"_ZN14QGraphicsScene14drawForegroundEP8QPainterRK6QRectF",
+	"_ZN14QGraphicsScene9drawItemsEP8QPainteriPP13QGraphicsItemPK24QStyleOptionGraphicsItemP7QWidget",
+	};
+
+struct classvtable _14QGraphicsScene_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	32,	/* Number of Vfuncs */
+	"_ZTI14QGraphicsScene",
+	_14QGraphicsScene_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _14QGraphicsScene_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z14QGraphicsScene_of_libQtGui_so_4_classinfo = {
+	"_Z14QGraphicsScene",
+	"_ZTV14QGraphicsScene",
+	"",	/* RTTI */
+	"_ZTI7QObject",
+	"_ZTT14QGraphicsScene",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_14QGraphicsScene_of_libQtGui_so_4_typeinfo,
+	_14QGraphicsScene_of_libQtGui_so_4_vtable,
+	_14QGraphicsScene_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_30QGraphicsSceneContextMenuEvent_of_libQtGui_so_4_typeinfo_name[] = {
+	"_ZTI19QGraphicsSceneEvent",
+	};
+
+struct classtypeinfo _30QGraphicsSceneContextMenuEvent_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS30QGraphicsSceneContextMenuEvent",
+	_30QGraphicsSceneContextMenuEvent_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_30QGraphicsSceneContextMenuEvent_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZN30QGraphicsSceneContextMenuEventD1Ev",
+	"_ZN30QGraphicsSceneContextMenuEventD0Ev",
+	};
+
+struct classvtable _30QGraphicsSceneContextMenuEvent_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	2,	/* Number of Vfuncs */
+	"_ZTI30QGraphicsSceneContextMenuEvent",
+	_30QGraphicsSceneContextMenuEvent_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _30QGraphicsSceneContextMenuEvent_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z30QGraphicsSceneContextMenuEvent_of_libQtGui_so_4_classinfo = {
+	"_Z30QGraphicsSceneContextMenuEvent",
+	"_ZTV30QGraphicsSceneContextMenuEvent",
+	"",	/* RTTI */
+	"_ZTI19QGraphicsSceneEvent",
+	"_ZTT30QGraphicsSceneContextMenuEvent",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_30QGraphicsSceneContextMenuEvent_of_libQtGui_so_4_typeinfo,
+	_30QGraphicsSceneContextMenuEvent_of_libQtGui_so_4_vtable,
+	_30QGraphicsSceneContextMenuEvent_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_27QGraphicsSceneDragDropEvent_of_libQtGui_so_4_typeinfo_name[] = {
+	"_ZTI19QGraphicsSceneEvent",
+	};
+
+struct classtypeinfo _27QGraphicsSceneDragDropEvent_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS27QGraphicsSceneDragDropEvent",
+	_27QGraphicsSceneDragDropEvent_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_27QGraphicsSceneDragDropEvent_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZN27QGraphicsSceneDragDropEventD1Ev",
+	"_ZN27QGraphicsSceneDragDropEventD0Ev",
+	};
+
+struct classvtable _27QGraphicsSceneDragDropEvent_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	2,	/* Number of Vfuncs */
+	"_ZTI27QGraphicsSceneDragDropEvent",
+	_27QGraphicsSceneDragDropEvent_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _27QGraphicsSceneDragDropEvent_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z27QGraphicsSceneDragDropEvent_of_libQtGui_so_4_classinfo = {
+	"_Z27QGraphicsSceneDragDropEvent",
+	"_ZTV27QGraphicsSceneDragDropEvent",
+	"",	/* RTTI */
+	"_ZTI19QGraphicsSceneEvent",
+	"_ZTT27QGraphicsSceneDragDropEvent",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_27QGraphicsSceneDragDropEvent_of_libQtGui_so_4_typeinfo,
+	_27QGraphicsSceneDragDropEvent_of_libQtGui_so_4_vtable,
+	_27QGraphicsSceneDragDropEvent_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_19QGraphicsSceneEvent_of_libQtGui_so_4_typeinfo_name[] = {
+	"_ZTI6QEvent",
+	};
+
+struct classtypeinfo _19QGraphicsSceneEvent_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS19QGraphicsSceneEvent",
+	_19QGraphicsSceneEvent_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_19QGraphicsSceneEvent_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZN19QGraphicsSceneEventD1Ev",
+	"_ZN19QGraphicsSceneEventD0Ev",
+	};
+
+struct classvtable _19QGraphicsSceneEvent_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	2,	/* Number of Vfuncs */
+	"_ZTI19QGraphicsSceneEvent",
+	_19QGraphicsSceneEvent_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _19QGraphicsSceneEvent_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z19QGraphicsSceneEvent_of_libQtGui_so_4_classinfo = {
+	"_Z19QGraphicsSceneEvent",
+	"_ZTV19QGraphicsSceneEvent",
+	"",	/* RTTI */
+	"_ZTI6QEvent",
+	"_ZTT19QGraphicsSceneEvent",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_19QGraphicsSceneEvent_of_libQtGui_so_4_typeinfo,
+	_19QGraphicsSceneEvent_of_libQtGui_so_4_vtable,
+	_19QGraphicsSceneEvent_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_23QGraphicsSceneHelpEvent_of_libQtGui_so_4_typeinfo_name[] = {
+	"_ZTI19QGraphicsSceneEvent",
+	};
+
+struct classtypeinfo _23QGraphicsSceneHelpEvent_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS23QGraphicsSceneHelpEvent",
+	_23QGraphicsSceneHelpEvent_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_23QGraphicsSceneHelpEvent_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZN23QGraphicsSceneHelpEventD1Ev",
+	"_ZN23QGraphicsSceneHelpEventD0Ev",
+	};
+
+struct classvtable _23QGraphicsSceneHelpEvent_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	2,	/* Number of Vfuncs */
+	"_ZTI23QGraphicsSceneHelpEvent",
+	_23QGraphicsSceneHelpEvent_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _23QGraphicsSceneHelpEvent_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z23QGraphicsSceneHelpEvent_of_libQtGui_so_4_classinfo = {
+	"_Z23QGraphicsSceneHelpEvent",
+	"_ZTV23QGraphicsSceneHelpEvent",
+	"",	/* RTTI */
+	"_ZTI19QGraphicsSceneEvent",
+	"_ZTT23QGraphicsSceneHelpEvent",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_23QGraphicsSceneHelpEvent_of_libQtGui_so_4_typeinfo,
+	_23QGraphicsSceneHelpEvent_of_libQtGui_so_4_vtable,
+	_23QGraphicsSceneHelpEvent_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_24QGraphicsSceneHoverEvent_of_libQtGui_so_4_typeinfo_name[] = {
+	"_ZTI19QGraphicsSceneEvent",
+	};
+
+struct classtypeinfo _24QGraphicsSceneHoverEvent_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS24QGraphicsSceneHoverEvent",
+	_24QGraphicsSceneHoverEvent_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_24QGraphicsSceneHoverEvent_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZN24QGraphicsSceneHoverEventD1Ev",
+	"_ZN24QGraphicsSceneHoverEventD0Ev",
+	};
+
+struct classvtable _24QGraphicsSceneHoverEvent_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	2,	/* Number of Vfuncs */
+	"_ZTI24QGraphicsSceneHoverEvent",
+	_24QGraphicsSceneHoverEvent_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _24QGraphicsSceneHoverEvent_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z24QGraphicsSceneHoverEvent_of_libQtGui_so_4_classinfo = {
+	"_Z24QGraphicsSceneHoverEvent",
+	"_ZTV24QGraphicsSceneHoverEvent",
+	"",	/* RTTI */
+	"_ZTI19QGraphicsSceneEvent",
+	"_ZTT24QGraphicsSceneHoverEvent",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_24QGraphicsSceneHoverEvent_of_libQtGui_so_4_typeinfo,
+	_24QGraphicsSceneHoverEvent_of_libQtGui_so_4_vtable,
+	_24QGraphicsSceneHoverEvent_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_24QGraphicsSceneMouseEvent_of_libQtGui_so_4_typeinfo_name[] = {
+	"_ZTI19QGraphicsSceneEvent",
+	};
+
+struct classtypeinfo _24QGraphicsSceneMouseEvent_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS24QGraphicsSceneMouseEvent",
+	_24QGraphicsSceneMouseEvent_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_24QGraphicsSceneMouseEvent_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZN24QGraphicsSceneMouseEventD1Ev",
+	"_ZN24QGraphicsSceneMouseEventD0Ev",
+	};
+
+struct classvtable _24QGraphicsSceneMouseEvent_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	2,	/* Number of Vfuncs */
+	"_ZTI24QGraphicsSceneMouseEvent",
+	_24QGraphicsSceneMouseEvent_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _24QGraphicsSceneMouseEvent_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z24QGraphicsSceneMouseEvent_of_libQtGui_so_4_classinfo = {
+	"_Z24QGraphicsSceneMouseEvent",
+	"_ZTV24QGraphicsSceneMouseEvent",
+	"",	/* RTTI */
+	"_ZTI19QGraphicsSceneEvent",
+	"_ZTT24QGraphicsSceneMouseEvent",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_24QGraphicsSceneMouseEvent_of_libQtGui_so_4_typeinfo,
+	_24QGraphicsSceneMouseEvent_of_libQtGui_so_4_vtable,
+	_24QGraphicsSceneMouseEvent_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_24QGraphicsSceneWheelEvent_of_libQtGui_so_4_typeinfo_name[] = {
+	"_ZTI19QGraphicsSceneEvent",
+	};
+
+struct classtypeinfo _24QGraphicsSceneWheelEvent_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS24QGraphicsSceneWheelEvent",
+	_24QGraphicsSceneWheelEvent_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_24QGraphicsSceneWheelEvent_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZN24QGraphicsSceneWheelEventD1Ev",
+	"_ZN24QGraphicsSceneWheelEventD0Ev",
+	};
+
+struct classvtable _24QGraphicsSceneWheelEvent_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	2,	/* Number of Vfuncs */
+	"_ZTI24QGraphicsSceneWheelEvent",
+	_24QGraphicsSceneWheelEvent_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _24QGraphicsSceneWheelEvent_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z24QGraphicsSceneWheelEvent_of_libQtGui_so_4_classinfo = {
+	"_Z24QGraphicsSceneWheelEvent",
+	"_ZTV24QGraphicsSceneWheelEvent",
+	"",	/* RTTI */
+	"_ZTI19QGraphicsSceneEvent",
+	"_ZTT24QGraphicsSceneWheelEvent",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_24QGraphicsSceneWheelEvent_of_libQtGui_so_4_typeinfo,
+	_24QGraphicsSceneWheelEvent_of_libQtGui_so_4_vtable,
+	_24QGraphicsSceneWheelEvent_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_23QGraphicsSimpleTextItem_of_libQtGui_so_4_typeinfo_name[] = {
+	"_ZTI26QAbstractGraphicsShapeItem",
+	};
+
+struct classtypeinfo _23QGraphicsSimpleTextItem_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS23QGraphicsSimpleTextItem",
+	_23QGraphicsSimpleTextItem_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_23QGraphicsSimpleTextItem_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZN23QGraphicsSimpleTextItemD1Ev",
+	"_ZN23QGraphicsSimpleTextItemD0Ev",
+	"_ZN13QGraphicsItem7advanceEi",
+	"_ZNK23QGraphicsSimpleTextItem12boundingRectEv",
+	"_ZNK23QGraphicsSimpleTextItem5shapeEv",
+	"_ZNK23QGraphicsSimpleTextItem8containsERK7QPointF",
+	"_ZNK13QGraphicsItem16collidesWithItemEPKS_N2Qt17ItemSelectionModeE",
+	"_ZNK13QGraphicsItem16collidesWithPathERK12QPainterPathN2Qt17ItemSelectionModeE",
+	"_ZNK23QGraphicsSimpleTextItem12isObscuredByEPK13QGraphicsItem",
+	"_ZNK23QGraphicsSimpleTextItem10opaqueAreaEv",
+	"_ZN23QGraphicsSimpleTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget",
+	"_ZNK23QGraphicsSimpleTextItem4typeEv",
+	"_ZN13QGraphicsItem16sceneEventFilterEPS_P6QEvent",
+	"_ZN13QGraphicsItem10sceneEventEP6QEvent",
+	"_ZN13QGraphicsItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent",
+	"_ZN13QGraphicsItem14dragEnterEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem13dragMoveEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem9dropEventEP27QGraphicsSceneDragDropEvent",
+	"_ZN13QGraphicsItem12focusInEventEP11QFocusEvent",
+	"_ZN13QGraphicsItem13focusOutEventEP11QFocusEvent",
+	"_ZN13QGraphicsItem15hoverEnterEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem14hoverMoveEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent",
+	"_ZN13QGraphicsItem13keyPressEventEP9QKeyEvent",
+	"_ZN13QGraphicsItem15keyReleaseEventEP9QKeyEvent",
+	"_ZN13QGraphicsItem15mousePressEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem14mouseMoveEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent",
+	"_ZN13QGraphicsItem10wheelEventEP24QGraphicsSceneWheelEvent",
+	"_ZN13QGraphicsItem16inputMethodEventEP17QInputMethodEvent",
+	"_ZNK13QGraphicsItem16inputMethodQueryEN2Qt16InputMethodQueryE",
+	"_ZN13QGraphicsItem10itemChangeENS_18GraphicsItemChangeERK8QVariant",
+	"_ZNK23QGraphicsSimpleTextItem17supportsExtensionEN13QGraphicsItem9ExtensionE",
+	"_ZN23QGraphicsSimpleTextItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant",
+	"_ZNK23QGraphicsSimpleTextItem9extensionERK8QVariant",
+	};
+
+struct classvtable _23QGraphicsSimpleTextItem_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	37,	/* Number of Vfuncs */
+	"_ZTI23QGraphicsSimpleTextItem",
+	_23QGraphicsSimpleTextItem_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _23QGraphicsSimpleTextItem_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z23QGraphicsSimpleTextItem_of_libQtGui_so_4_classinfo = {
+	"_Z23QGraphicsSimpleTextItem",
+	"_ZTV23QGraphicsSimpleTextItem",
+	"",	/* RTTI */
+	"_ZTI26QAbstractGraphicsShapeItem",
+	"_ZTT23QGraphicsSimpleTextItem",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_23QGraphicsSimpleTextItem_of_libQtGui_so_4_typeinfo,
+	_23QGraphicsSimpleTextItem_of_libQtGui_so_4_vtable,
+	_23QGraphicsSimpleTextItem_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_13QStandardItem_of_libQtGui_so_4_typeinfo_name[] = {
+	"",
+	};
+
+struct classtypeinfo _13QStandardItem_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS13QStandardItem",
+	_13QStandardItem_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_13QStandardItem_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZN13QStandardItemD1Ev",
+	"_ZN13QStandardItemD0Ev",
+	"_ZNK13QStandardItem4dataEi",
+	"_ZN13QStandardItem7setDataERK8QVarianti",
+	"_ZNK13QStandardItem5cloneEv",
+	"_ZNK13QStandardItem4typeEv",
+	"_ZN13QStandardItem4readER11QDataStream",
+	"_ZNK13QStandardItem5writeER11QDataStream",
+	"_ZNK13QStandardItemltERKS_",
+	};
+
+struct classvtable _13QStandardItem_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	9,	/* Number of Vfuncs */
+	"_ZTI13QStandardItem",
+	_13QStandardItem_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _13QStandardItem_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z13QStandardItem_of_libQtGui_so_4_classinfo = {
+	"_Z13QStandardItem",
+	"_ZTV13QStandardItem",
+	"",	/* RTTI */
+	"",
+	"_ZTT13QStandardItem",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_13QStandardItem_of_libQtGui_so_4_typeinfo,
+	_13QStandardItem_of_libQtGui_so_4_vtable,
+	_13QStandardItem_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_15QSystemTrayIcon_of_libQtGui_so_4_typeinfo_name[] = {
+	"_ZTI7QObject",
+	};
+
+struct classtypeinfo _15QSystemTrayIcon_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS15QSystemTrayIcon",
+	_15QSystemTrayIcon_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_15QSystemTrayIcon_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZNK15QSystemTrayIcon10metaObjectEv",
+	"_ZN15QSystemTrayIcon11qt_metacastEPKc",
+	"_ZN15QSystemTrayIcon11qt_metacallEN11QMetaObject4CallEiPPv",
+	"_ZN15QSystemTrayIconD1Ev",
+	"_ZN15QSystemTrayIconD0Ev",
+	"_ZN15QSystemTrayIcon5eventEP6QEvent",
+	"_ZN7QObject11eventFilterEPS_P6QEvent",
+	"_ZN7QObject10timerEventEP11QTimerEvent",
+	"_ZN7QObject10childEventEP11QChildEvent",
+	"_ZN7QObject11customEventEP6QEvent",
+	"_ZN7QObject13connectNotifyEPKc",
+	"_ZN7QObject16disconnectNotifyEPKc",
+	};
+
+struct classvtable _15QSystemTrayIcon_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	12,	/* Number of Vfuncs */
+	"_ZTI15QSystemTrayIcon",
+	_15QSystemTrayIcon_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _15QSystemTrayIcon_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z15QSystemTrayIcon_of_libQtGui_so_4_classinfo = {
+	"_Z15QSystemTrayIcon",
+	"_ZTV15QSystemTrayIcon",
+	"",	/* RTTI */
+	"_ZTI7QObject",
+	"_ZTT15QSystemTrayIcon",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_15QSystemTrayIcon_of_libQtGui_so_4_typeinfo,
+	_15QSystemTrayIcon_of_libQtGui_so_4_vtable,
+	_15QSystemTrayIcon_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_12QUndoCommand_of_libQtGui_so_4_typeinfo_name[] = {
+	"",
+	};
+
+struct classtypeinfo _12QUndoCommand_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS12QUndoCommand",
+	_12QUndoCommand_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_12QUndoCommand_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZN12QUndoCommandD1Ev",
+	"_ZN12QUndoCommandD0Ev",
+	"_ZN12QUndoCommand4undoEv",
+	"_ZN12QUndoCommand4redoEv",
+	"_ZNK12QUndoCommand2idEv",
+	"_ZN12QUndoCommand9mergeWithEPKS_",
+	};
+
+struct classvtable _12QUndoCommand_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	6,	/* Number of Vfuncs */
+	"_ZTI12QUndoCommand",
+	_12QUndoCommand_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _12QUndoCommand_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z12QUndoCommand_of_libQtGui_so_4_classinfo = {
+	"_Z12QUndoCommand",
+	"_ZTV12QUndoCommand",
+	"",	/* RTTI */
+	"",
+	"_ZTT12QUndoCommand",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_12QUndoCommand_of_libQtGui_so_4_typeinfo,
+	_12QUndoCommand_of_libQtGui_so_4_vtable,
+	_12QUndoCommand_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_10QUndoStack_of_libQtGui_so_4_typeinfo_name[] = {
+	"_ZTI7QObject",
+	};
+
+struct classtypeinfo _10QUndoStack_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS10QUndoStack",
+	_10QUndoStack_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_10QUndoStack_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZNK10QUndoStack10metaObjectEv",
+	"_ZN10QUndoStack11qt_metacastEPKc",
+	"_ZN10QUndoStack11qt_metacallEN11QMetaObject4CallEiPPv",
+	"_ZN10QUndoStackD1Ev",
+	"_ZN10QUndoStackD0Ev",
+	"_ZN7QObject5eventEP6QEvent",
+	"_ZN7QObject11eventFilterEPS_P6QEvent",
+	"_ZN7QObject10timerEventEP11QTimerEvent",
+	"_ZN7QObject10childEventEP11QChildEvent",
+	"_ZN7QObject11customEventEP6QEvent",
+	"_ZN7QObject13connectNotifyEPKc",
+	"_ZN7QObject16disconnectNotifyEPKc",
+	};
+
+struct classvtable _10QUndoStack_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	12,	/* Number of Vfuncs */
+	"_ZTI10QUndoStack",
+	_10QUndoStack_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _10QUndoStack_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z10QUndoStack_of_libQtGui_so_4_classinfo = {
+	"_Z10QUndoStack",
+	"_ZTV10QUndoStack",
+	"",	/* RTTI */
+	"_ZTI7QObject",
+	"_ZTT10QUndoStack",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_10QUndoStack_of_libQtGui_so_4_typeinfo,
+	_10QUndoStack_of_libQtGui_so_4_vtable,
+	_10QUndoStack_of_libQtGui_so_4_baseinfo,
+	};
+
+char *_13QWidgetAction_of_libQtGui_so_4_typeinfo_name[] = {
+	"_ZTI7QAction",
+	};
+
+struct classtypeinfo _13QWidgetAction_of_libQtGui_so_4_typeinfo = {
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTS13QWidgetAction",
+	_13QWidgetAction_of_libQtGui_so_4_typeinfo_name,
+	};
+
+const char *_13QWidgetAction_of_libQtGui_so_4_vtable_name_0 [] = {
+	"_ZNK13QWidgetAction10metaObjectEv",
+	"_ZN13QWidgetAction11qt_metacastEPKc",
+	"_ZN13QWidgetAction11qt_metacallEN11QMetaObject4CallEiPPv",
+	"_ZN13QWidgetActionD1Ev",
+	"_ZN13QWidgetActionD0Ev",
+	"_ZN13QWidgetAction5eventEP6QEvent",
+	"_ZN7QObject11eventFilterEPS_P6QEvent",
+	"_ZN7QObject10timerEventEP11QTimerEvent",
+	"_ZN7QObject10childEventEP11QChildEvent",
+	"_ZN7QObject11customEventEP6QEvent",
+	"_ZN7QObject13connectNotifyEPKc",
+	"_ZN7QObject16disconnectNotifyEPKc",
+	"_ZN13QWidgetAction12createWidgetEP7QWidget",
+	"_ZN13QWidgetAction12deleteWidgetEP7QWidget",
+	};
+
+struct classvtable _13QWidgetAction_of_libQtGui_so_4_vtable [1] = {
+	{
+	0,
+	0,
+	1,	/* Vtable category */
+	14,	/* Number of Vfuncs */
+	"_ZTI13QWidgetAction",
+	_13QWidgetAction_of_libQtGui_so_4_vtable_name_0,
+	},
+};
+
+struct base_type_info _13QWidgetAction_of_libQtGui_so_4_baseinfo[] = {
+	};
+
+struct classinfo _Z13QWidgetAction_of_libQtGui_so_4_classinfo = {
+	"_Z13QWidgetAction",
+	"_ZTV13QWidgetAction",
+	"",	/* RTTI */
+	"_ZTI7QAction",
+	"_ZTT13QWidgetAction",	/* VTT */
+	1,
+	1,
+	0,
+	0,	/* numVTT */
+	0U,
+	&_13QWidgetAction_of_libQtGui_so_4_typeinfo,
+	_13QWidgetAction_of_libQtGui_so_4_vtable,
+	_13QWidgetAction_of_libQtGui_so_4_baseinfo,
+	};
+
 struct classinfo *libQtGui_so_4_classinfo[] = {
 	&_Z11QTextObject_of_libQtGui_so_4_classinfo,
 	&_Z15QTextBlockGroup_of_libQtGui_so_4_classinfo,
@@ -36235,5 +39521,32 @@ struct classinfo *libQtGui_so_4_classinfo[] = {
 	&_Z9QSplitter_of_libQtGui_so_4_classinfo,
 	&_Z15QSplitterHandle_of_libQtGui_so_4_classinfo,
 	&_Z5QDial_of_libQtGui_so_4_classinfo,
+	&_Z26QAbstractGraphicsShapeItem_of_libQtGui_so_4_classinfo,
+	&_Z16QCleanlooksStyle_of_libQtGui_so_4_classinfo,
+	&_Z10QCompleter_of_libQtGui_so_4_classinfo,
+	&_Z17QDataWidgetMapper_of_libQtGui_so_4_classinfo,
+	&_Z20QGraphicsEllipseItem_of_libQtGui_so_4_classinfo,
+	&_Z13QGraphicsItem_of_libQtGui_so_4_classinfo,
+	&_Z22QGraphicsItemAnimation_of_libQtGui_so_4_classinfo,
+	&_Z18QGraphicsItemGroup_of_libQtGui_so_4_classinfo,
+	&_Z17QGraphicsLineItem_of_libQtGui_so_4_classinfo,
+	&_Z17QGraphicsPathItem_of_libQtGui_so_4_classinfo,
+	&_Z19QGraphicsPixmapItem_of_libQtGui_so_4_classinfo,
+	&_Z20QGraphicsPolygonItem_of_libQtGui_so_4_classinfo,
+	&_Z17QGraphicsRectItem_of_libQtGui_so_4_classinfo,
+	&_Z14QGraphicsScene_of_libQtGui_so_4_classinfo,
+	&_Z30QGraphicsSceneContextMenuEvent_of_libQtGui_so_4_classinfo,
+	&_Z27QGraphicsSceneDragDropEvent_of_libQtGui_so_4_classinfo,
+	&_Z19QGraphicsSceneEvent_of_libQtGui_so_4_classinfo,
+	&_Z23QGraphicsSceneHelpEvent_of_libQtGui_so_4_classinfo,
+	&_Z24QGraphicsSceneHoverEvent_of_libQtGui_so_4_classinfo,
+	&_Z24QGraphicsSceneMouseEvent_of_libQtGui_so_4_classinfo,
+	&_Z24QGraphicsSceneWheelEvent_of_libQtGui_so_4_classinfo,
+	&_Z23QGraphicsSimpleTextItem_of_libQtGui_so_4_classinfo,
+	&_Z13QStandardItem_of_libQtGui_so_4_classinfo,
+	&_Z15QSystemTrayIcon_of_libQtGui_so_4_classinfo,
+	&_Z12QUndoCommand_of_libQtGui_so_4_classinfo,
+	&_Z10QUndoStack_of_libQtGui_so_4_classinfo,
+	&_Z13QWidgetAction_of_libQtGui_so_4_classinfo,
 
 	NULL	};

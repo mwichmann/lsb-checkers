@@ -5,6 +5,9 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#ifndef LSBCC_MODE
+#include <cups/language.h>
+#endif
 #include "cups/cups.h"
 
 
