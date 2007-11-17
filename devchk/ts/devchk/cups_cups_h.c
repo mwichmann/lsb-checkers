@@ -77,71 +77,146 @@ cnt++;
 #endif
 
 #if 1
-CheckTypeSize(cups_encoding_t,0, 29514, 1, 3.2, NULL, 29513, NULL)
+CheckTypeSize(cups_encoding_t,4, 29514, 1, 3.2, NULL, 29513, NULL)
+#endif
+
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(cups_lang_t,2052, 29516, 10, 3.2, NULL, 29511, NULL)
+#elif defined __x86_64__
+CheckTypeSize(cups_lang_t,4080, 29516, 11, 3.2, NULL, 29511, NULL)
+#elif defined __s390x__
+CheckTypeSize(cups_lang_t,4080, 29516, 12, 3.2, NULL, 29511, NULL)
+#elif defined __i386__
+CheckTypeSize(cups_lang_t,2052, 29516, 2, 3.2, NULL, 29511, NULL)
+#elif defined __ia64__
+CheckTypeSize(cups_lang_t,4080, 29516, 3, 3.2, NULL, 29511, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(cups_lang_t,2052, 29516, 6, 3.2, NULL, 29511, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(cups_lang_t,4080, 29516, 9, 3.2, NULL, 29511, NULL)
+#else
+Msg("Find size of cups_lang_t (29516)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29511,NULL);\n",architecture,29516,0);
 #endif
 
 #if 1
-CheckTypeSize(cups_lang_t,0, 29516, 1, 3.2, NULL, 29511, NULL)
+CheckTypeSize(http_encryption_t,4, 29519, 1, 3.2, NULL, 29518, NULL)
+#endif
+
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(cups_option_t,8, 29521, 10, 3.2, NULL, 29520, NULL)
+#elif defined __x86_64__
+CheckTypeSize(cups_option_t,16, 29521, 11, 3.2, NULL, 29520, NULL)
+#elif defined __s390x__
+CheckTypeSize(cups_option_t,16, 29521, 12, 3.2, NULL, 29520, NULL)
+#elif defined __i386__
+CheckTypeSize(cups_option_t,8, 29521, 2, 3.2, NULL, 29520, NULL)
+#elif defined __ia64__
+CheckTypeSize(cups_option_t,16, 29521, 3, 3.2, NULL, 29520, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(cups_option_t,8, 29521, 6, 3.2, NULL, 29520, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(cups_option_t,16, 29521, 9, 3.2, NULL, 29520, NULL)
+#else
+Msg("Find size of cups_option_t (29521)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29520,NULL);\n",architecture,29521,0);
+#endif
+
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(cups_dest_t,20, 29524, 10, 3.2, NULL, 29523, NULL)
+#elif defined __x86_64__
+CheckTypeSize(cups_dest_t,32, 29524, 11, 3.2, NULL, 29523, NULL)
+#elif defined __s390x__
+CheckTypeSize(cups_dest_t,32, 29524, 12, 3.2, NULL, 29523, NULL)
+#elif defined __i386__
+CheckTypeSize(cups_dest_t,20, 29524, 2, 3.2, NULL, 29523, NULL)
+#elif defined __ia64__
+CheckTypeSize(cups_dest_t,32, 29524, 3, 3.2, NULL, 29523, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(cups_dest_t,20, 29524, 6, 3.2, NULL, 29523, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(cups_dest_t,32, 29524, 9, 3.2, NULL, 29523, NULL)
+#else
+Msg("Find size of cups_dest_t (29524)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29523,NULL);\n",architecture,29524,0);
 #endif
 
 #if 1
-CheckTypeSize(http_encryption_t,0, 29519, 1, 3.2, NULL, 29518, NULL)
+CheckTypeSize(http_state_t,4, 29527, 1, 3.2, NULL, 29526, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cups_option_t,0, 29521, 1, 3.2, NULL, 29520, NULL)
+CheckTypeSize(http_status_t,4, 29529, 1, 3.2, NULL, 29528, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cups_dest_t,0, 29524, 1, 3.2, NULL, 29523, NULL)
+CheckTypeSize(http_version_t,4, 29531, 1, 3.2, NULL, 29530, NULL)
 #endif
 
 #if 1
-CheckTypeSize(http_state_t,0, 29527, 1, 3.2, NULL, 29526, NULL)
+CheckTypeSize(http_keepalive_t,4, 29533, 1, 3.2, NULL, 29532, NULL)
 #endif
 
 #if 1
-CheckTypeSize(http_status_t,0, 29529, 1, 3.2, NULL, 29528, NULL)
+CheckTypeSize(http_encoding_t,4, 29536, 1, 3.2, NULL, 29535, NULL)
 #endif
 
 #if 1
-CheckTypeSize(http_version_t,0, 29531, 1, 3.2, NULL, 29530, NULL)
+CheckTypeSize(md5_word_t,4, 29539, 1, 3.2, NULL, 7, NULL)
 #endif
 
 #if 1
-CheckTypeSize(http_keepalive_t,0, 29533, 1, 3.2, NULL, 29532, NULL)
+CheckTypeSize(md5_byte_t,1, 29542, 1, 3.2, NULL, 3, NULL)
 #endif
 
 #if 1
-CheckTypeSize(http_encoding_t,0, 29536, 1, 3.2, NULL, 29535, NULL)
+CheckTypeSize(md5_state_t,88, 29544, 1, 3.2, NULL, 29538, NULL)
 #endif
 
 #if 1
-CheckTypeSize(md5_word_t,0, 29539, 1, 3.2, NULL, 7, NULL)
+CheckTypeSize(ipp_jstate_t,4, 29551, 1, 3.2, NULL, 29550, NULL)
+#endif
+
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(cups_job_t,44, 29553, 10, 3.2, NULL, 29552, NULL)
+#elif defined __x86_64__
+CheckTypeSize(cups_job_t,80, 29553, 11, 3.2, NULL, 29552, NULL)
+#elif defined __s390x__
+CheckTypeSize(cups_job_t,80, 29553, 12, 3.2, NULL, 29552, NULL)
+#elif defined __i386__
+CheckTypeSize(cups_job_t,44, 29553, 2, 3.2, NULL, 29552, NULL)
+#elif defined __ia64__
+CheckTypeSize(cups_job_t,80, 29553, 3, 3.2, NULL, 29552, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(cups_job_t,44, 29553, 6, 3.2, NULL, 29552, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(cups_job_t,80, 29553, 9, 3.2, NULL, 29552, NULL)
+#else
+Msg("Find size of cups_job_t (29553)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29552,NULL);\n",architecture,29553,0);
 #endif
 
 #if 1
-CheckTypeSize(md5_byte_t,0, 29542, 1, 3.2, NULL, 3, NULL)
+CheckTypeSize(ipp_status_t,4, 29601, 1, 3.2, NULL, 29600, NULL)
 #endif
 
-#if 1
-CheckTypeSize(md5_state_t,0, 29544, 1, 3.2, NULL, 29538, NULL)
-#endif
-
-#if 1
-CheckTypeSize(ipp_jstate_t,0, 29551, 1, 3.2, NULL, 29550, NULL)
-#endif
-
-#if 1
-CheckTypeSize(cups_job_t,0, 29553, 1, 3.2, NULL, 29552, NULL)
-#endif
-
-#if 1
-CheckTypeSize(ipp_status_t,0, 29601, 1, 3.2, NULL, 29600, NULL)
-#endif
-
-#if 1
-CheckTypeSize(http_t,0, 29548, 1, 3.2, NULL, 29547, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(http_t,10168, 29548, 10, 3.2, NULL, 29547, NULL)
+#elif defined __x86_64__
+CheckTypeSize(http_t,10208, 29548, 11, 3.2, NULL, 29547, NULL)
+#elif defined __s390x__
+CheckTypeSize(http_t,10208, 29548, 12, 3.2, NULL, 29547, NULL)
+#elif defined __i386__
+CheckTypeSize(http_t,10168, 29548, 2, 3.2, NULL, 29547, NULL)
+#elif defined __ia64__
+CheckTypeSize(http_t,10208, 29548, 3, 3.2, NULL, 29547, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(http_t,10168, 29548, 6, 3.2, NULL, 29547, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(http_t,10208, 29548, 9, 3.2, NULL, 29547, NULL)
+#else
+Msg("Find size of http_t (29548)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29547, NULL);\n",architecture,29548,0);
 #endif
 
 extern void cupsLangFree_db(cups_lang_t *);
