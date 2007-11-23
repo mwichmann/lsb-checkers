@@ -17811,8 +17811,8 @@ struct classtypeinfo _10QUtf8Codec_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_10QUtf8Codec_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN10QUtf8CodecD1Ev",
-	"_ZN10QUtf8CodecD0Ev",
+	"NULL or _ZN10QUtf8CodecD1Ev",
+	"NULL or _ZN10QUtf8CodecD0Ev",
 	"_ZNK10QUtf8Codec4nameEv",
 	"_ZNK10QTextCodec8mimeNameEv",
 	"_ZNK10QUtf8Codec7mibEnumEv",
@@ -17869,7 +17869,7 @@ struct classtypeinfo _6QTimer_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_6QTimer_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK6QTimer10metaObjectEv",
+	"NULL or _ZNK6QTimer10metaObjectEv",
 	"_ZNK6QTimer9classNameEv",
 	"_ZN6QTimer7qt_castEPKc",
 	"_ZN6QTimer9qt_invokeEiP8QUObject",
@@ -17977,7 +17977,7 @@ struct classtypeinfo _21QObjectCleanupHandler_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_21QObjectCleanupHandler_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK21QObjectCleanupHandler10metaObjectEv",
+	"NULL or _ZNK21QObjectCleanupHandler10metaObjectEv",
 	"_ZNK21QObjectCleanupHandler9classNameEv",
 	"_ZN21QObjectCleanupHandler7qt_castEPKc",
 	"_ZN21QObjectCleanupHandler9qt_invokeEiP8QUObject",
@@ -18042,8 +18042,8 @@ struct classtypeinfo _14QPtrCollection_of_libqt_mt_so_3_typeinfo = {
 const char *_14QPtrCollection_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
-	"_ZN14QPtrCollectionD1Ev",
-	"_ZN14QPtrCollectionD0Ev",
+	"NULL or _ZN14QPtrCollectionD1Ev",
+	"NULL or _ZN14QPtrCollectionD0Ev",
 	"_ZN14QPtrCollection7newItemEPv",
 	"__cxa_pure_virtual",
 	};
@@ -18089,14 +18089,14 @@ struct classtypeinfo _5QHBox_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_5QHBox_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK5QHBox10metaObjectEv",
+	"NULL or _ZNK5QHBox10metaObjectEv",
 	"_ZNK5QHBox9classNameEv",
 	"_ZN5QHBox7qt_castEPKc",
 	"_ZN5QHBox9qt_invokeEiP8QUObject",
 	"_ZN5QHBox7qt_emitEiP8QUObject",
 	"_ZN5QHBox11qt_propertyEiiP8QVariant",
-	"_ZN5QHBoxD1Ev",
-	"_ZN5QHBoxD0Ev",
+	"NULL or _ZN5QHBoxD1Ev",
+	"NULL or _ZN5QHBoxD0Ev",
 	"_ZN7QWidget5eventEP6QEvent",
 	"_ZN7QObject11eventFilterEPS_P6QEvent",
 	"_ZN7QWidget7setNameEPKc",
@@ -18145,7 +18145,7 @@ const char *_5QHBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK5QHBox8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -18194,8 +18194,8 @@ const char *_5QHBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -18211,46 +18211,46 @@ const char *_5QHBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_5QHBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn40_N5QHBoxD1Ev",
+	"NULL or _ZThn40_N5QHBoxD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn80_N5QHBoxD1Ev",
+	"NULL or _ZThn80_N5QHBoxD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N5QHBoxD1Ev",
+	"NULL or _ZThn40_N5QHBoxD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn80_N5QHBoxD1Ev",
+	"NULL or _ZThn80_N5QHBoxD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_N5QHBoxD1Ev",
+	"NULL or _ZThn40_N5QHBoxD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N5QHBoxD1Ev",
+	"NULL or _ZThn80_N5QHBoxD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn80_N5QHBoxD1Ev",
+	"NULL or _ZThn80_N5QHBoxD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn80_N5QHBoxD0Ev",
+	"NULL or _ZThn80_N5QHBoxD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N5QHBoxD0Ev",
+	"NULL or _ZThn40_N5QHBoxD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn80_N5QHBoxD0Ev",
+	"NULL or _ZThn80_N5QHBoxD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_N5QHBoxD0Ev",
+	"NULL or _ZThn40_N5QHBoxD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N5QHBoxD0Ev",
+	"NULL or _ZThn80_N5QHBoxD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn80_N5QHBoxD0Ev",
+	"NULL or _ZThn80_N5QHBoxD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn40_N5QHBoxD0Ev",
+	"NULL or _ZThn40_N5QHBoxD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -18358,7 +18358,7 @@ struct classtypeinfo _8QGVector_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_8QGVector_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK8QGVector5countEv",
+	"NULL or _ZNK8QGVector5countEv",
 	"_ZN8QGVector5clearEv",
 	"_ZN8QGVectorD1Ev",
 	"_ZN8QGVectorD0Ev",
@@ -18410,7 +18410,7 @@ struct classtypeinfo _8QToolBar_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_8QToolBar_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK8QToolBar10metaObjectEv",
+	"NULL or _ZNK8QToolBar10metaObjectEv",
 	"_ZNK8QToolBar9classNameEv",
 	"_ZN8QToolBar7qt_castEPKc",
 	"_ZN8QToolBar9qt_invokeEiP8QUObject",
@@ -18466,7 +18466,7 @@ const char *_8QToolBar_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK11QDockWindow8sizeHintEv",
 	"_ZNK8QToolBar15minimumSizeHintEv",
@@ -18515,8 +18515,8 @@ const char *_8QToolBar_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -18540,7 +18540,7 @@ const char *_8QToolBar_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QDockWindow10setNewLineEb",
 	"_ZN11QDockWindow15setOpaqueMovingEb",
 	"_ZN11QDockWindow6undockEP7QWidget",
-	"_ZN11QDockWindow6undockEv",
+	"NULL or _ZN11QDockWindow6undockEv",
 	"_ZN11QDockWindow4dockEv",
 	"_ZN8QToolBar14setOrientationEN2Qt11OrientationE",
 	"_ZN8QToolBar20setStretchableWidgetEP7QWidget",
@@ -18697,8 +18697,8 @@ struct classtypeinfo _11QDataSource_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QDataSource_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN11QDataSourceD1Ev",
-	"_ZN11QDataSourceD0Ev",
+	"NULL or _ZN11QDataSourceD1Ev",
+	"NULL or _ZN11QDataSourceD0Ev",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"_ZNK11QDataSource10rewindableEv",
@@ -18855,14 +18855,14 @@ struct classtypeinfo _6QFrame_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_6QFrame_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK6QFrame10metaObjectEv",
+	"NULL or _ZNK6QFrame10metaObjectEv",
 	"_ZNK6QFrame9classNameEv",
 	"_ZN6QFrame7qt_castEPKc",
 	"_ZN6QFrame9qt_invokeEiP8QUObject",
 	"_ZN6QFrame7qt_emitEiP8QUObject",
 	"_ZN6QFrame11qt_propertyEiiP8QVariant",
-	"_ZN6QFrameD1Ev",
-	"_ZN6QFrameD0Ev",
+	"NULL or _ZN6QFrameD1Ev",
+	"NULL or _ZN6QFrameD0Ev",
 	"_ZN7QWidget5eventEP6QEvent",
 	"_ZN7QObject11eventFilterEPS_P6QEvent",
 	"_ZN7QWidget7setNameEPKc",
@@ -18911,7 +18911,7 @@ const char *_6QFrame_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK6QFrame8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -18960,8 +18960,8 @@ const char *_6QFrame_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -18977,46 +18977,46 @@ const char *_6QFrame_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_6QFrame_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn40_N6QFrameD1Ev",
+	"NULL or _ZThn40_N6QFrameD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn80_N6QFrameD1Ev",
+	"NULL or _ZThn80_N6QFrameD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N6QFrameD1Ev",
+	"NULL or _ZThn40_N6QFrameD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn80_N6QFrameD1Ev",
+	"NULL or _ZThn80_N6QFrameD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_N6QFrameD1Ev",
+	"NULL or _ZThn40_N6QFrameD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N6QFrameD1Ev",
+	"NULL or _ZThn80_N6QFrameD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn80_N6QFrameD1Ev",
+	"NULL or _ZThn80_N6QFrameD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn80_N6QFrameD0Ev",
+	"NULL or _ZThn80_N6QFrameD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N6QFrameD0Ev",
+	"NULL or _ZThn40_N6QFrameD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn80_N6QFrameD0Ev",
+	"NULL or _ZThn80_N6QFrameD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_N6QFrameD0Ev",
+	"NULL or _ZThn40_N6QFrameD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N6QFrameD0Ev",
+	"NULL or _ZThn80_N6QFrameD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn80_N6QFrameD0Ev",
+	"NULL or _ZThn80_N6QFrameD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn40_N6QFrameD0Ev",
+	"NULL or _ZThn40_N6QFrameD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -19124,7 +19124,7 @@ struct classtypeinfo _11QScrollView_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QScrollView_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK11QScrollView10metaObjectEv",
+	"NULL or _ZNK11QScrollView10metaObjectEv",
 	"_ZNK11QScrollView9classNameEv",
 	"_ZN11QScrollView7qt_castEPKc",
 	"_ZN11QScrollView9qt_invokeEiP8QUObject",
@@ -19180,7 +19180,7 @@ const char *_11QScrollView_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN11QScrollView6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK11QScrollView8sizeHintEv",
 	"_ZNK11QScrollView15minimumSizeHintEv",
@@ -19229,8 +19229,8 @@ const char *_11QScrollView_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN11QScrollView18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -19429,7 +19429,7 @@ struct classtypeinfo _12QTextBrowser_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_12QTextBrowser_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK12QTextBrowser10metaObjectEv",
+	"NULL or _ZNK12QTextBrowser10metaObjectEv",
 	"_ZNK12QTextBrowser9classNameEv",
 	"_ZN12QTextBrowser7qt_castEPKc",
 	"_ZN12QTextBrowser9qt_invokeEiP8QUObject",
@@ -19485,7 +19485,7 @@ const char *_12QTextBrowser_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN11QScrollView6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK9QTextEdit8sizeHintEv",
 	"_ZNK11QScrollView15minimumSizeHintEv",
@@ -19534,8 +19534,8 @@ const char *_12QTextBrowser_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN9QTextEdit18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -19601,9 +19601,9 @@ const char *_12QTextBrowser_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QTextEdit9selectAllEb",
 	"_ZN9QTextEdit15setTabStopWidthEi",
 	"_ZN9QTextEdit6zoomInEi",
-	"_ZN9QTextEdit6zoomInEv",
+	"NULL or _ZN9QTextEdit6zoomInEv",
 	"_ZN9QTextEdit7zoomOutEi",
-	"_ZN9QTextEdit7zoomOutEv",
+	"NULL or _ZN9QTextEdit7zoomOutEv",
 	"_ZN9QTextEdit6zoomToEi",
 	"_ZN9QTextEdit4syncEv",
 	"_ZN9QTextEdit11setReadOnlyEb",
@@ -19637,8 +19637,8 @@ const char *_12QTextBrowser_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QTextEdit16doKeyboardActionENS_14KeyboardActionE",
 	"_ZN9QTextEdit18removeSelectedTextEi",
 	"_ZN9QTextEdit15removeSelectionEi",
-	"_ZN9QTextEdit14setCurrentFontERK5QFont",
-	"_ZN9QTextEdit16setOverwriteModeEb",
+	"NULL or _ZN9QTextEdit14setCurrentFontERK5QFont",
+	"NULL or _ZN9QTextEdit16setOverwriteModeEb",
 	"_ZN9QTextEdit14scrollToBottomEv",
 	"_ZN9QTextEdit6insertERK7QStringbbb",
 	"_ZN9QTextEdit8insertAtERK7QStringii",
@@ -19650,7 +19650,7 @@ const char *_12QTextBrowser_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QTextEdit15createPopupMenuERK6QPoint",
 	"_ZN9QTextEdit15createPopupMenuEv",
 	"_ZN9QTextEdit16doChangeIntervalEv",
-	"_ZNK12QTextBrowser12linksEnabledEv",
+	"NULL or _ZNK12QTextBrowser12linksEnabledEv",
 	"_ZN12QTextBrowser15emitHighlightedERK7QString",
 	"_ZN12QTextBrowser15emitLinkClickedERK7QString",
 	"_ZN12QTextBrowser9setSourceERK7QString",
@@ -19876,7 +19876,7 @@ struct classtypeinfo _9QSplitter_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_9QSplitter_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK9QSplitter10metaObjectEv",
+	"NULL or _ZNK9QSplitter10metaObjectEv",
 	"_ZNK9QSplitter9classNameEv",
 	"_ZN9QSplitter7qt_castEPKc",
 	"_ZN9QSplitter9qt_invokeEiP8QUObject",
@@ -19932,7 +19932,7 @@ const char *_9QSplitter_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK9QSplitter8sizeHintEv",
 	"_ZNK9QSplitter15minimumSizeHintEv",
@@ -19981,8 +19981,8 @@ const char *_9QSplitter_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -20150,7 +20150,7 @@ struct classtypeinfo _9QLineEdit_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_9QLineEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK9QLineEdit10metaObjectEv",
+	"NULL or _ZNK9QLineEdit10metaObjectEv",
 	"_ZNK9QLineEdit9classNameEv",
 	"_ZN9QLineEdit7qt_castEPKc",
 	"_ZN9QLineEdit9qt_invokeEiP8QUObject",
@@ -20206,7 +20206,7 @@ const char *_9QLineEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK9QLineEdit8sizeHintEv",
 	"_ZNK9QLineEdit15minimumSizeHintEv",
@@ -20255,8 +20255,8 @@ const char *_9QLineEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -20440,14 +20440,14 @@ struct classtypeinfo _5QVBox_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_5QVBox_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK5QVBox10metaObjectEv",
+	"NULL or _ZNK5QVBox10metaObjectEv",
 	"_ZNK5QVBox9classNameEv",
 	"_ZN5QVBox7qt_castEPKc",
 	"_ZN5QVBox9qt_invokeEiP8QUObject",
 	"_ZN5QVBox7qt_emitEiP8QUObject",
 	"_ZN5QVBox11qt_propertyEiiP8QVariant",
-	"_ZN5QVBoxD1Ev",
-	"_ZN5QVBoxD0Ev",
+	"NULL or _ZN5QVBoxD1Ev",
+	"NULL or _ZN5QVBoxD0Ev",
 	"_ZN7QWidget5eventEP6QEvent",
 	"_ZN7QObject11eventFilterEPS_P6QEvent",
 	"_ZN7QWidget7setNameEPKc",
@@ -20496,7 +20496,7 @@ const char *_5QVBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK5QHBox8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -20545,8 +20545,8 @@ const char *_5QVBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -20562,46 +20562,46 @@ const char *_5QVBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_5QVBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn40_N5QVBoxD1Ev",
+	"NULL or _ZThn40_N5QVBoxD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn80_N5QVBoxD1Ev",
+	"NULL or _ZThn80_N5QVBoxD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N5QVBoxD1Ev",
+	"NULL or _ZThn40_N5QVBoxD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn80_N5QVBoxD1Ev",
+	"NULL or _ZThn80_N5QVBoxD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_N5QVBoxD1Ev",
+	"NULL or _ZThn40_N5QVBoxD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N5QVBoxD1Ev",
+	"NULL or _ZThn80_N5QVBoxD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn80_N5QVBoxD1Ev",
+	"NULL or _ZThn80_N5QVBoxD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn80_N5QVBoxD0Ev",
+	"NULL or _ZThn80_N5QVBoxD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N5QVBoxD0Ev",
+	"NULL or _ZThn40_N5QVBoxD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn80_N5QVBoxD0Ev",
+	"NULL or _ZThn80_N5QVBoxD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_N5QVBoxD0Ev",
+	"NULL or _ZThn40_N5QVBoxD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N5QVBoxD0Ev",
+	"NULL or _ZThn80_N5QVBoxD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn80_N5QVBoxD0Ev",
+	"NULL or _ZThn80_N5QVBoxD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn40_N5QVBoxD0Ev",
+	"NULL or _ZThn40_N5QVBoxD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -20709,8 +20709,8 @@ struct classtypeinfo _17QContextMenuEvent_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_17QContextMenuEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN17QContextMenuEventD1Ev",
-	"_ZN17QContextMenuEventD0Ev",
+	"NULL or _ZN17QContextMenuEventD1Ev",
+	"NULL or _ZN17QContextMenuEventD0Ev",
 	};
 
 struct classvtable _17QContextMenuEvent_of_libqt_mt_so_3_vtable [1] = {
@@ -20754,7 +20754,7 @@ struct classtypeinfo _8QProcess_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_8QProcess_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK8QProcess10metaObjectEv",
+	"NULL or _ZNK8QProcess10metaObjectEv",
 	"_ZNK8QProcess9classNameEv",
 	"_ZN8QProcess7qt_castEPKc",
 	"_ZN8QProcess9qt_invokeEiP8QUObject",
@@ -20876,7 +20876,7 @@ struct classtypeinfo _11QTranslator_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QTranslator_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK11QTranslator10metaObjectEv",
+	"NULL or _ZNK11QTranslator10metaObjectEv",
 	"_ZNK11QTranslator9classNameEv",
 	"_ZN11QTranslator7qt_castEPKc",
 	"_ZN11QTranslator9qt_invokeEiP8QUObject",
@@ -20986,7 +20986,7 @@ struct classtypeinfo _10QPopupMenu_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_10QPopupMenu_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK10QPopupMenu10metaObjectEv",
+	"NULL or _ZNK10QPopupMenu10metaObjectEv",
 	"_ZNK10QPopupMenu9classNameEv",
 	"_ZN10QPopupMenu7qt_castEPKc",
 	"_ZN10QPopupMenu9qt_invokeEiP8QUObject",
@@ -21042,7 +21042,7 @@ const char *_10QPopupMenu_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK10QPopupMenu8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -21091,8 +21091,8 @@ const char *_10QPopupMenu_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN10QPopupMenu18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -21492,7 +21492,7 @@ struct classtypeinfo _10QImageDrag_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_10QImageDrag_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK10QImageDrag10metaObjectEv",
+	"NULL or _ZNK10QImageDrag10metaObjectEv",
 	"_ZNK10QImageDrag9classNameEv",
 	"_ZN10QImageDrag7qt_castEPKc",
 	"_ZN10QImageDrag9qt_invokeEiP8QUObject",
@@ -21745,7 +21745,7 @@ const char *_12QListBoxText_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK12QListBoxText5widthEPK8QListBox",
 	"_ZNK12QListBoxText4rttiEv",
 	"_ZN12QListBoxText5paintEP8QPainter",
-	"_ZN12QListBoxItem7setTextERK7QString",
+	"NULL or _ZN12QListBoxItem7setTextERK7QString",
 	};
 
 struct classvtable _12QListBoxText_of_libqt_mt_so_3_vtable [1] = {
@@ -21789,7 +21789,7 @@ struct classtypeinfo _9QGroupBox_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_9QGroupBox_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK9QGroupBox10metaObjectEv",
+	"NULL or _ZNK9QGroupBox10metaObjectEv",
 	"_ZNK9QGroupBox9classNameEv",
 	"_ZN9QGroupBox7qt_castEPKc",
 	"_ZN9QGroupBox9qt_invokeEiP8QUObject",
@@ -21845,7 +21845,7 @@ const char *_9QGroupBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK9QGroupBox8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -21894,8 +21894,8 @@ const char *_9QGroupBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -22060,7 +22060,7 @@ struct classtypeinfo _8QMenuBar_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_8QMenuBar_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK8QMenuBar10metaObjectEv",
+	"NULL or _ZNK8QMenuBar10metaObjectEv",
 	"_ZNK8QMenuBar9classNameEv",
 	"_ZN8QMenuBar7qt_castEPKc",
 	"_ZN8QMenuBar9qt_invokeEiP8QUObject",
@@ -22116,7 +22116,7 @@ const char *_8QMenuBar_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK8QMenuBar8sizeHintEv",
 	"_ZNK8QMenuBar15minimumSizeHintEv",
@@ -22165,8 +22165,8 @@ const char *_8QMenuBar_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -22564,7 +22564,7 @@ struct classtypeinfo _15QProgressDialog_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_15QProgressDialog_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK15QProgressDialog10metaObjectEv",
+	"NULL or _ZNK15QProgressDialog10metaObjectEv",
 	"_ZNK15QProgressDialog9classNameEv",
 	"_ZN15QProgressDialog7qt_castEPKc",
 	"_ZN15QProgressDialog9qt_invokeEiP8QUObject",
@@ -22669,8 +22669,8 @@ const char *_15QProgressDialog_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -22828,7 +22828,7 @@ struct classtypeinfo _13QDateTimeEdit_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_13QDateTimeEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK13QDateTimeEdit10metaObjectEv",
+	"NULL or _ZNK13QDateTimeEdit10metaObjectEv",
 	"_ZNK13QDateTimeEdit9classNameEv",
 	"_ZN13QDateTimeEdit7qt_castEPKc",
 	"_ZN13QDateTimeEdit9qt_invokeEiP8QUObject",
@@ -22884,7 +22884,7 @@ const char *_13QDateTimeEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK13QDateTimeEdit8sizeHintEv",
 	"_ZNK13QDateTimeEdit15minimumSizeHintEv",
@@ -22933,8 +22933,8 @@ const char *_13QDateTimeEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -23151,7 +23151,7 @@ struct classtypeinfo _16QRegExpValidator_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_16QRegExpValidator_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK16QRegExpValidator10metaObjectEv",
+	"NULL or _ZNK16QRegExpValidator10metaObjectEv",
 	"_ZNK16QRegExpValidator9classNameEv",
 	"_ZN16QRegExpValidator7qt_castEPKc",
 	"_ZN16QRegExpValidator9qt_invokeEiP8QUObject",
@@ -23217,14 +23217,14 @@ struct classtypeinfo _15QDockAreaLayout_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_15QDockAreaLayout_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK15QDockAreaLayout10metaObjectEv",
+	"NULL or _ZNK15QDockAreaLayout10metaObjectEv",
 	"_ZNK15QDockAreaLayout9classNameEv",
 	"_ZN15QDockAreaLayout7qt_castEPKc",
 	"_ZN15QDockAreaLayout9qt_invokeEiP8QUObject",
 	"_ZN15QDockAreaLayout7qt_emitEiP8QUObject",
 	"_ZN15QDockAreaLayout11qt_propertyEiiP8QVariant",
-	"_ZN15QDockAreaLayoutD1Ev",
-	"_ZN15QDockAreaLayoutD0Ev",
+	"NULL or _ZN15QDockAreaLayoutD1Ev",
+	"NULL or _ZN15QDockAreaLayoutD0Ev",
 	"_ZN7QObject5eventEP6QEvent",
 	"_ZN7QLayout11eventFilterEP7QObjectP6QEvent",
 	"_ZN7QObject7setNameEPKc",
@@ -23244,8 +23244,8 @@ const char *_15QDockAreaLayout_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QLayout10setAutoAddEb",
 	"_ZN15QDockAreaLayout10invalidateEv",
 	"_ZNK7QLayout8geometryEv",
-	"_ZN15QDockAreaLayout7addItemEP11QLayoutItem",
-	"_ZNK15QDockAreaLayout9expandingEv",
+	"NULL or _ZN15QDockAreaLayout7addItemEP11QLayoutItem",
+	"NULL or _ZNK15QDockAreaLayout9expandingEv",
 	"_ZNK15QDockAreaLayout11minimumSizeEv",
 	"_ZNK7QLayout11maximumSizeEv",
 	"_ZN15QDockAreaLayout11setGeometryERK5QRect",
@@ -23259,46 +23259,46 @@ const char *_15QDockAreaLayout_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_15QDockAreaLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn40_N15QDockAreaLayoutD1Ev",
+	"NULL or _ZThn40_N15QDockAreaLayoutD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N15QDockAreaLayoutD1Ev",
+	"NULL or _ZThn40_N15QDockAreaLayoutD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N15QDockAreaLayoutD1Ev",
+	"NULL or _ZThn80_N15QDockAreaLayoutD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_N15QDockAreaLayoutD1Ev",
+	"NULL or _ZThn40_N15QDockAreaLayoutD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn80_N15QDockAreaLayoutD1Ev",
+	"NULL or _ZThn80_N15QDockAreaLayoutD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn80_N15QDockAreaLayoutD1Ev",
+	"NULL or _ZThn80_N15QDockAreaLayoutD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn80_N15QDockAreaLayoutD1Ev",
+	"NULL or _ZThn80_N15QDockAreaLayoutD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N15QDockAreaLayoutD0Ev",
+	"NULL or _ZThn40_N15QDockAreaLayoutD0Ev",
 #endif
 #if defined __ia64__
-	"_ZThn80_N15QDockAreaLayoutD0Ev",
+	"NULL or _ZThn80_N15QDockAreaLayoutD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn80_N15QDockAreaLayoutD0Ev",
+	"NULL or _ZThn80_N15QDockAreaLayoutD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_N15QDockAreaLayoutD0Ev",
+	"NULL or _ZThn40_N15QDockAreaLayoutD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N15QDockAreaLayoutD0Ev",
+	"NULL or _ZThn80_N15QDockAreaLayoutD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn40_N15QDockAreaLayoutD0Ev",
+	"NULL or _ZThn40_N15QDockAreaLayoutD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn80_N15QDockAreaLayoutD0Ev",
+	"NULL or _ZThn80_N15QDockAreaLayoutD0Ev",
 #endif
 #if defined __s390x__
 	"_ZThn80_NK15QDockAreaLayout8sizeHintEv",
@@ -23364,25 +23364,25 @@ const char *_15QDockAreaLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZThn40_NK7QLayout11maximumSizeEv",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK15QDockAreaLayout9expandingEv",
+	"NULL or _ZThn40_NK15QDockAreaLayout9expandingEv",
 #endif
 #if defined __powerpc64__
-	"_ZThn80_NK15QDockAreaLayout9expandingEv",
+	"NULL or _ZThn80_NK15QDockAreaLayout9expandingEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK15QDockAreaLayout9expandingEv",
+	"NULL or _ZThn40_NK15QDockAreaLayout9expandingEv",
 #endif
 #if defined __ia64__
-	"_ZThn80_NK15QDockAreaLayout9expandingEv",
+	"NULL or _ZThn80_NK15QDockAreaLayout9expandingEv",
 #endif
 #if defined __x86_64__
-	"_ZThn80_NK15QDockAreaLayout9expandingEv",
+	"NULL or _ZThn80_NK15QDockAreaLayout9expandingEv",
 #endif
 #if defined __s390x__
-	"_ZThn80_NK15QDockAreaLayout9expandingEv",
+	"NULL or _ZThn80_NK15QDockAreaLayout9expandingEv",
 #endif
 #if defined __i386__
-	"_ZThn40_NK15QDockAreaLayout9expandingEv",
+	"NULL or _ZThn40_NK15QDockAreaLayout9expandingEv",
 #endif
 #if defined __i386__
 	"_ZThn40_N15QDockAreaLayout11setGeometryERK5QRect",
@@ -23632,8 +23632,8 @@ struct classtypeinfo _15QDragLeaveEvent_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_15QDragLeaveEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN15QDragLeaveEventD1Ev",
-	"_ZN15QDragLeaveEventD0Ev",
+	"NULL or _ZN15QDragLeaveEventD1Ev",
+	"NULL or _ZN15QDragLeaveEventD0Ev",
 	};
 
 struct classvtable _15QDragLeaveEvent_of_libqt_mt_so_3_vtable [1] = {
@@ -23677,7 +23677,7 @@ struct classtypeinfo _10QLCDNumber_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_10QLCDNumber_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK10QLCDNumber10metaObjectEv",
+	"NULL or _ZNK10QLCDNumber10metaObjectEv",
 	"_ZNK10QLCDNumber9classNameEv",
 	"_ZN10QLCDNumber7qt_castEPKc",
 	"_ZN10QLCDNumber9qt_invokeEiP8QUObject",
@@ -23733,7 +23733,7 @@ const char *_10QLCDNumber_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK10QLCDNumber8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -23782,8 +23782,8 @@ const char *_10QLCDNumber_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -23953,7 +23953,7 @@ struct classtypeinfo _12QUrlOperator_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_12QUrlOperator_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK12QUrlOperator10metaObjectEv",
+	"NULL or _ZNK12QUrlOperator10metaObjectEv",
 	"_ZNK12QUrlOperator9classNameEv",
 	"_ZN12QUrlOperator7qt_castEPKc",
 	"_ZN12QUrlOperator9qt_invokeEiP8QUObject",
@@ -24230,7 +24230,7 @@ struct classtypeinfo _7QSocket_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_7QSocket_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK7QSocket10metaObjectEv",
+	"NULL or _ZNK7QSocket10metaObjectEv",
 	"_ZNK7QSocket9classNameEv",
 	"_ZN7QSocket7qt_castEPKc",
 	"_ZN7QSocket9qt_invokeEiP8QUObject",
@@ -24688,7 +24688,7 @@ struct classtypeinfo _9QGridView_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_9QGridView_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK9QGridView10metaObjectEv",
+	"NULL or _ZNK9QGridView10metaObjectEv",
 	"_ZNK9QGridView9classNameEv",
 	"_ZN9QGridView7qt_castEPKc",
 	"_ZN9QGridView9qt_invokeEiP8QUObject",
@@ -24744,7 +24744,7 @@ const char *_9QGridView_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN11QScrollView6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK11QScrollView8sizeHintEv",
 	"_ZNK11QScrollView15minimumSizeHintEv",
@@ -24793,8 +24793,8 @@ const char *_9QGridView_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN11QScrollView18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -25000,7 +25000,7 @@ struct classtypeinfo _10QBoxLayout_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_10QBoxLayout_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK10QBoxLayout10metaObjectEv",
+	"NULL or _ZNK10QBoxLayout10metaObjectEv",
 	"_ZNK10QBoxLayout9classNameEv",
 	"_ZN10QBoxLayout7qt_castEPKc",
 	"_ZN10QBoxLayout9qt_invokeEiP8QUObject",
@@ -25415,8 +25415,8 @@ struct classtypeinfo _8QIMEvent_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_8QIMEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN8QIMEventD1Ev",
-	"_ZN8QIMEventD0Ev",
+	"NULL or _ZN8QIMEventD1Ev",
+	"NULL or _ZN8QIMEventD0Ev",
 	};
 
 struct classvtable _8QIMEvent_of_libqt_mt_so_3_vtable [1] = {
@@ -25459,7 +25459,7 @@ struct classtypeinfo _7QLayout_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_7QLayout_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK7QLayout10metaObjectEv",
+	"NULL or _ZNK7QLayout10metaObjectEv",
 	"_ZNK7QLayout9classNameEv",
 	"_ZN7QLayout7qt_castEPKc",
 	"_ZN7QLayout9qt_invokeEiP8QUObject",
@@ -25793,7 +25793,7 @@ struct classtypeinfo _15QSocketNotifier_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_15QSocketNotifier_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK15QSocketNotifier10metaObjectEv",
+	"NULL or _ZNK15QSocketNotifier10metaObjectEv",
 	"_ZNK15QSocketNotifier9classNameEv",
 	"_ZN15QSocketNotifier7qt_castEPKc",
 	"_ZN15QSocketNotifier9qt_invokeEiP8QUObject",
@@ -25858,7 +25858,7 @@ struct classtypeinfo _7QButton_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_7QButton_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK7QButton10metaObjectEv",
+	"NULL or _ZNK7QButton10metaObjectEv",
 	"_ZNK7QButton9classNameEv",
 	"_ZN7QButton7qt_castEPKc",
 	"_ZN7QButton9qt_invokeEiP8QUObject",
@@ -25914,7 +25914,7 @@ const char *_7QButton_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK7QWidget8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -25963,8 +25963,8 @@ const char *_7QButton_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -26130,7 +26130,7 @@ struct classtypeinfo _13QIntValidator_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_13QIntValidator_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK13QIntValidator10metaObjectEv",
+	"NULL or _ZNK13QIntValidator10metaObjectEv",
 	"_ZNK13QIntValidator9classNameEv",
 	"_ZN13QIntValidator7qt_castEPKc",
 	"_ZN13QIntValidator9qt_invokeEiP8QUObject",
@@ -26197,7 +26197,7 @@ struct classtypeinfo _7QWizard_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_7QWizard_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK7QWizard10metaObjectEv",
+	"NULL or _ZNK7QWizard10metaObjectEv",
 	"_ZNK7QWizard9classNameEv",
 	"_ZN7QWizard7qt_castEPKc",
 	"_ZN7QWizard9qt_invokeEiP8QUObject",
@@ -26302,8 +26302,8 @@ const char *_7QWizard_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -26320,7 +26320,7 @@ const char *_7QWizard_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWizard14setNextEnabledEP7QWidgetb",
 	"_ZN7QWizard16setFinishEnabledEP7QWidgetb",
 	"_ZN7QWizard14setHelpEnabledEP7QWidgetb",
-	"_ZN7QWizard9setFinishEP7QWidgetb",
+	"NULL or _ZN7QWizard9setFinishEP7QWidgetb",
 	"_ZN7QWizard4backEv",
 	"_ZN7QWizard4nextEv",
 	"_ZN7QWizard4helpEv",
@@ -26552,36 +26552,36 @@ const char *_16QSqlSelectCursor_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK10QSqlCursor5valueERK7QString",
 	"_ZN10QSqlCursor8setValueEiRK8QVariant",
 	"_ZN10QSqlCursor8setValueERK7QStringRK8QVariant",
-	"_ZN16QSqlSelectCursor12setGeneratedERK7QStringb",
-	"_ZN16QSqlSelectCursor12setGeneratedEib",
+	"NULL or _ZN16QSqlSelectCursor12setGeneratedERK7QStringb",
+	"NULL or _ZN16QSqlSelectCursor12setGeneratedEib",
 	"_ZN10QSqlRecord7setNullEi",
 	"_ZN10QSqlRecord7setNullERK7QString",
 	"_ZN10QSqlCursor6appendERK9QSqlField",
 	"_ZN10QSqlCursor6insertEiRK9QSqlField",
-	"_ZN16QSqlSelectCursor6removeEi",
-	"_ZN16QSqlSelectCursor5clearEv",
+	"NULL or _ZN16QSqlSelectCursor6removeEi",
+	"NULL or _ZN16QSqlSelectCursor5clearEv",
 	"_ZN10QSqlRecord11clearValuesEb",
-	"_ZNK16QSqlSelectCursor8toStringERK7QStringS2_",
+	"NULL or _ZNK16QSqlSelectCursor8toStringERK7QStringS2_",
 	"_ZNK10QSqlRecord12toStringListERK7QString",
-	"_ZNK16QSqlSelectCursor12primaryIndexEb",
-	"_ZNK16QSqlSelectCursor5indexERK11QStringList",
-	"_ZN16QSqlSelectCursor15setPrimaryIndexERK9QSqlIndex",
-	"_ZN16QSqlSelectCursor6appendERK13QSqlFieldInfo",
-	"_ZN16QSqlSelectCursor6insertEiRK13QSqlFieldInfo",
-	"_ZN16QSqlSelectCursor10editBufferEb",
-	"_ZN16QSqlSelectCursor11primeInsertEv",
-	"_ZN16QSqlSelectCursor11primeUpdateEv",
-	"_ZN16QSqlSelectCursor11primeDeleteEv",
-	"_ZN16QSqlSelectCursor6insertEb",
-	"_ZN16QSqlSelectCursor6updateEb",
-	"_ZN16QSqlSelectCursor3delEb",
-	"_ZN16QSqlSelectCursor7setModeEi",
+	"NULL or _ZNK16QSqlSelectCursor12primaryIndexEb",
+	"NULL or _ZNK16QSqlSelectCursor5indexERK11QStringList",
+	"NULL or _ZN16QSqlSelectCursor15setPrimaryIndexERK9QSqlIndex",
+	"NULL or _ZN16QSqlSelectCursor6appendERK13QSqlFieldInfo",
+	"NULL or _ZN16QSqlSelectCursor6insertEiRK13QSqlFieldInfo",
+	"NULL or _ZN16QSqlSelectCursor10editBufferEb",
+	"NULL or _ZN16QSqlSelectCursor11primeInsertEv",
+	"NULL or _ZN16QSqlSelectCursor11primeUpdateEv",
+	"NULL or _ZN16QSqlSelectCursor11primeDeleteEv",
+	"NULL or _ZN16QSqlSelectCursor6insertEb",
+	"NULL or _ZN16QSqlSelectCursor6updateEb",
+	"NULL or _ZN16QSqlSelectCursor3delEb",
+	"NULL or _ZN16QSqlSelectCursor7setModeEi",
 	"_ZN10QSqlCursor13setCalculatedERK7QStringb",
 	"_ZN10QSqlCursor10setTrimmedERK7QStringb",
 	"_ZN16QSqlSelectCursor6selectERK7QStringRK9QSqlIndex",
-	"_ZN16QSqlSelectCursor7setSortERK9QSqlIndex",
-	"_ZN16QSqlSelectCursor9setFilterERK7QString",
-	"_ZN16QSqlSelectCursor7setNameERK7QStringb",
+	"NULL or _ZN16QSqlSelectCursor7setSortERK9QSqlIndex",
+	"NULL or _ZN16QSqlSelectCursor9setFilterERK7QString",
+	"NULL or _ZN16QSqlSelectCursor7setNameERK7QStringb",
 	"_ZN10QSqlCursor9afterSeekEv",
 	"_ZN16QSqlSelectCursor4execERK7QString",
 	"_ZN10QSqlCursor14calculateFieldERK7QString",
@@ -26781,7 +26781,7 @@ struct classtypeinfo _10QTabWidget_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_10QTabWidget_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK10QTabWidget10metaObjectEv",
+	"NULL or _ZNK10QTabWidget10metaObjectEv",
 	"_ZNK10QTabWidget9classNameEv",
 	"_ZN10QTabWidget7qt_castEPKc",
 	"_ZN10QTabWidget9qt_invokeEiP8QUObject",
@@ -26837,7 +26837,7 @@ const char *_10QTabWidget_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK10QTabWidget8sizeHintEv",
 	"_ZNK10QTabWidget15minimumSizeHintEv",
@@ -26886,8 +26886,8 @@ const char *_10QTabWidget_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -27136,7 +27136,7 @@ struct classtypeinfo _10QSqlDriver_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_10QSqlDriver_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK10QSqlDriver10metaObjectEv",
+	"NULL or _ZNK10QSqlDriver10metaObjectEv",
 	"_ZNK10QSqlDriver9classNameEv",
 	"_ZN10QSqlDriver7qt_castEPKc",
 	"_ZN10QSqlDriver9qt_invokeEiP8QUObject",
@@ -27327,7 +27327,7 @@ struct classtypeinfo _8QGPlugin_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_8QGPlugin_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK8QGPlugin10metaObjectEv",
+	"NULL or _ZNK8QGPlugin10metaObjectEv",
 	"_ZNK8QGPlugin9classNameEv",
 	"_ZN8QGPlugin7qt_castEPKc",
 	"_ZN8QGPlugin9qt_invokeEiP8QUObject",
@@ -27391,8 +27391,8 @@ struct classtypeinfo _13QGb18030Codec_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_13QGb18030Codec_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN13QGb18030CodecD1Ev",
-	"_ZN13QGb18030CodecD0Ev",
+	"NULL or _ZN13QGb18030CodecD1Ev",
+	"NULL or _ZN13QGb18030CodecD0Ev",
 	"_ZNK13QGb18030Codec4nameEv",
 	"_ZNK10QTextCodec8mimeNameEv",
 	"_ZNK13QGb18030Codec7mibEnumEv",
@@ -27449,7 +27449,7 @@ struct classtypeinfo _6QGList_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_6QGList_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK6QGList5countEv",
+	"NULL or _ZNK6QGList5countEv",
 	"_ZN6QGList5clearEv",
 	"_ZN6QGListD1Ev",
 	"_ZN6QGListD0Ev",
@@ -27501,14 +27501,14 @@ struct classtypeinfo _9QDataPump_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_9QDataPump_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK9QDataPump10metaObjectEv",
+	"NULL or _ZNK9QDataPump10metaObjectEv",
 	"_ZNK9QDataPump9classNameEv",
 	"_ZN9QDataPump7qt_castEPKc",
 	"_ZN9QDataPump9qt_invokeEiP8QUObject",
 	"_ZN9QDataPump7qt_emitEiP8QUObject",
 	"_ZN9QDataPump11qt_propertyEiiP8QVariant",
-	"_ZN9QDataPumpD1Ev",
-	"_ZN9QDataPumpD0Ev",
+	"NULL or _ZN9QDataPumpD1Ev",
+	"NULL or _ZN9QDataPumpD0Ev",
 	"_ZN7QObject5eventEP6QEvent",
 	"_ZN7QObject11eventFilterEPS_P6QEvent",
 	"_ZN7QObject7setNameEPKc",
@@ -27618,8 +27618,8 @@ struct classtypeinfo _15QCheckTableItem_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_15QCheckTableItem_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN15QCheckTableItemD1Ev",
-	"_ZN15QCheckTableItemD0Ev",
+	"NULL or _ZN15QCheckTableItemD1Ev",
+	"NULL or _ZN15QCheckTableItemD0Ev",
 	"_ZNK10QTableItem6pixmapEv",
 	"_ZNK10QTableItem4textEv",
 	"_ZN10QTableItem9setPixmapERK7QPixmap",
@@ -27681,7 +27681,7 @@ struct classtypeinfo _12QCommonStyle_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_12QCommonStyle_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK12QCommonStyle10metaObjectEv",
+	"NULL or _ZNK12QCommonStyle10metaObjectEv",
 	"_ZNK12QCommonStyle9classNameEv",
 	"_ZN12QCommonStyle7qt_castEPKc",
 	"_ZN12QCommonStyle9qt_invokeEiP8QUObject",
@@ -27765,7 +27765,7 @@ struct classtypeinfo _9QTextView_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_9QTextView_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK9QTextView10metaObjectEv",
+	"NULL or _ZNK9QTextView10metaObjectEv",
 	"_ZNK9QTextView9classNameEv",
 	"_ZN9QTextView7qt_castEPKc",
 	"_ZN9QTextView9qt_invokeEiP8QUObject",
@@ -27821,7 +27821,7 @@ const char *_9QTextView_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN11QScrollView6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK9QTextEdit8sizeHintEv",
 	"_ZNK11QScrollView15minimumSizeHintEv",
@@ -27870,8 +27870,8 @@ const char *_9QTextView_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN9QTextEdit18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -27937,9 +27937,9 @@ const char *_9QTextView_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QTextEdit9selectAllEb",
 	"_ZN9QTextEdit15setTabStopWidthEi",
 	"_ZN9QTextEdit6zoomInEi",
-	"_ZN9QTextEdit6zoomInEv",
+	"NULL or _ZN9QTextEdit6zoomInEv",
 	"_ZN9QTextEdit7zoomOutEi",
-	"_ZN9QTextEdit7zoomOutEv",
+	"NULL or _ZN9QTextEdit7zoomOutEv",
 	"_ZN9QTextEdit6zoomToEi",
 	"_ZN9QTextEdit4syncEv",
 	"_ZN9QTextEdit11setReadOnlyEb",
@@ -27973,8 +27973,8 @@ const char *_9QTextView_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QTextEdit16doKeyboardActionENS_14KeyboardActionE",
 	"_ZN9QTextEdit18removeSelectedTextEi",
 	"_ZN9QTextEdit15removeSelectionEi",
-	"_ZN9QTextEdit14setCurrentFontERK5QFont",
-	"_ZN9QTextEdit16setOverwriteModeEb",
+	"NULL or _ZN9QTextEdit14setCurrentFontERK5QFont",
+	"NULL or _ZN9QTextEdit16setOverwriteModeEb",
 	"_ZN9QTextEdit14scrollToBottomEv",
 	"_ZN9QTextEdit6insertERK7QStringbbb",
 	"_ZN9QTextEdit8insertAtERK7QStringii",
@@ -27986,9 +27986,9 @@ const char *_9QTextView_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QTextEdit15createPopupMenuERK6QPoint",
 	"_ZN9QTextEdit15createPopupMenuEv",
 	"_ZN9QTextEdit16doChangeIntervalEv",
-	"_ZNK9QTextEdit12linksEnabledEv",
-	"_ZN9QTextEdit15emitHighlightedERK7QString",
-	"_ZN9QTextEdit15emitLinkClickedERK7QString",
+	"NULL or _ZNK9QTextEdit12linksEnabledEv",
+	"NULL or _ZN9QTextEdit15emitHighlightedERK7QString",
+	"NULL or _ZN9QTextEdit15emitLinkClickedERK7QString",
 	};
 
 const char *_9QTextView_of_libqt_mt_so_3_vtable_name_1 [] = {
@@ -28186,14 +28186,14 @@ struct classtypeinfo _10QSemiModal_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_10QSemiModal_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK10QSemiModal10metaObjectEv",
+	"NULL or _ZNK10QSemiModal10metaObjectEv",
 	"_ZNK10QSemiModal9classNameEv",
 	"_ZN10QSemiModal7qt_castEPKc",
 	"_ZN10QSemiModal9qt_invokeEiP8QUObject",
 	"_ZN10QSemiModal7qt_emitEiP8QUObject",
 	"_ZN10QSemiModal11qt_propertyEiiP8QVariant",
-	"_ZN10QSemiModalD1Ev",
-	"_ZN10QSemiModalD0Ev",
+	"NULL or _ZN10QSemiModalD1Ev",
+	"NULL or _ZN10QSemiModalD0Ev",
 	"_ZN7QWidget5eventEP6QEvent",
 	"_ZN7QDialog11eventFilterEP7QObjectP6QEvent",
 	"_ZN7QWidget7setNameEPKc",
@@ -28291,8 +28291,8 @@ const char *_10QSemiModal_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -28303,46 +28303,46 @@ const char *_10QSemiModal_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_10QSemiModal_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn40_N10QSemiModalD1Ev",
+	"NULL or _ZThn40_N10QSemiModalD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn80_N10QSemiModalD1Ev",
+	"NULL or _ZThn80_N10QSemiModalD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N10QSemiModalD1Ev",
+	"NULL or _ZThn40_N10QSemiModalD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn80_N10QSemiModalD1Ev",
+	"NULL or _ZThn80_N10QSemiModalD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_N10QSemiModalD1Ev",
+	"NULL or _ZThn40_N10QSemiModalD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N10QSemiModalD1Ev",
+	"NULL or _ZThn80_N10QSemiModalD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn80_N10QSemiModalD1Ev",
+	"NULL or _ZThn80_N10QSemiModalD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn80_N10QSemiModalD0Ev",
+	"NULL or _ZThn80_N10QSemiModalD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N10QSemiModalD0Ev",
+	"NULL or _ZThn40_N10QSemiModalD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn80_N10QSemiModalD0Ev",
+	"NULL or _ZThn80_N10QSemiModalD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_N10QSemiModalD0Ev",
+	"NULL or _ZThn40_N10QSemiModalD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N10QSemiModalD0Ev",
+	"NULL or _ZThn80_N10QSemiModalD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn80_N10QSemiModalD0Ev",
+	"NULL or _ZThn80_N10QSemiModalD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn40_N10QSemiModalD0Ev",
+	"NULL or _ZThn40_N10QSemiModalD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -28538,7 +28538,7 @@ struct classtypeinfo _16QNetworkProtocol_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_16QNetworkProtocol_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK16QNetworkProtocol10metaObjectEv",
+	"NULL or _ZNK16QNetworkProtocol10metaObjectEv",
 	"_ZNK16QNetworkProtocol9classNameEv",
 	"_ZN16QNetworkProtocol7qt_castEPKc",
 	"_ZN16QNetworkProtocol9qt_invokeEiP8QUObject",
@@ -28708,7 +28708,7 @@ struct classtypeinfo _10QHGroupBox_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_10QHGroupBox_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK10QHGroupBox10metaObjectEv",
+	"NULL or _ZNK10QHGroupBox10metaObjectEv",
 	"_ZNK10QHGroupBox9classNameEv",
 	"_ZN10QHGroupBox7qt_castEPKc",
 	"_ZN10QHGroupBox9qt_invokeEiP8QUObject",
@@ -28764,7 +28764,7 @@ const char *_10QHGroupBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK9QGroupBox8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -28813,8 +28813,8 @@ const char *_10QHGroupBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -28980,8 +28980,8 @@ struct classtypeinfo _11QTimerEvent_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QTimerEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN11QTimerEventD1Ev",
-	"_ZN11QTimerEventD0Ev",
+	"NULL or _ZN11QTimerEventD1Ev",
+	"NULL or _ZN11QTimerEventD0Ev",
 	};
 
 struct classvtable _11QTimerEvent_of_libqt_mt_so_3_vtable [1] = {
@@ -29025,7 +29025,7 @@ struct classtypeinfo _7QHeader_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_7QHeader_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK7QHeader10metaObjectEv",
+	"NULL or _ZNK7QHeader10metaObjectEv",
 	"_ZNK7QHeader9classNameEv",
 	"_ZN7QHeader7qt_castEPKc",
 	"_ZN7QHeader9qt_invokeEiP8QUObject",
@@ -29081,7 +29081,7 @@ const char *_7QHeader_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK7QHeader8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -29130,15 +29130,15 @@ const char *_7QHeader_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
 	"_ZN7QHeader8setLabelEiRK7QStringi",
 	"_ZN7QHeader8setLabelEiRK8QIconSetRK7QStringi",
 	"_ZN7QHeader14setOrientationEN2Qt11OrientationE",
-	"_ZN7QHeader11setTrackingEb",
+	"NULL or _ZN7QHeader11setTrackingEb",
 	"_ZN7QHeader15setClickEnabledEbi",
 	"_ZN7QHeader16setResizeEnabledEbi",
 	"_ZN7QHeader16setMovingEnabledEb",
@@ -29299,8 +29299,8 @@ struct classtypeinfo _9QGbkCodec_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_9QGbkCodec_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN9QGbkCodecD1Ev",
-	"_ZN9QGbkCodecD0Ev",
+	"NULL or _ZN9QGbkCodecD1Ev",
+	"NULL or _ZN9QGbkCodecD0Ev",
 	"_ZNK9QGbkCodec4nameEv",
 	"_ZNK10QTextCodec8mimeNameEv",
 	"_ZNK9QGbkCodec7mibEnumEv",
@@ -29357,7 +29357,7 @@ struct classtypeinfo _13QSplashScreen_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_13QSplashScreen_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK13QSplashScreen10metaObjectEv",
+	"NULL or _ZNK13QSplashScreen10metaObjectEv",
 	"_ZNK13QSplashScreen9classNameEv",
 	"_ZN13QSplashScreen7qt_castEPKc",
 	"_ZN13QSplashScreen9qt_invokeEiP8QUObject",
@@ -29413,7 +29413,7 @@ const char *_13QSplashScreen_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK7QWidget8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -29462,8 +29462,8 @@ const char *_13QSplashScreen_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -29708,8 +29708,8 @@ struct classtypeinfo _9QKeyEvent_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_9QKeyEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN9QKeyEventD1Ev",
-	"_ZN9QKeyEventD0Ev",
+	"NULL or _ZN9QKeyEventD1Ev",
+	"NULL or _ZN9QKeyEventD0Ev",
 	};
 
 struct classvtable _9QKeyEvent_of_libqt_mt_so_3_vtable [1] = {
@@ -29801,7 +29801,7 @@ struct classtypeinfo _5QDial_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_5QDial_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK5QDial10metaObjectEv",
+	"NULL or _ZNK5QDial10metaObjectEv",
 	"_ZNK5QDial9classNameEv",
 	"_ZN5QDial7qt_castEPKc",
 	"_ZN5QDial9qt_invokeEiP8QUObject",
@@ -29857,7 +29857,7 @@ const char *_5QDial_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK5QDial8sizeHintEv",
 	"_ZNK5QDial15minimumSizeHintEv",
@@ -29906,8 +29906,8 @@ const char *_5QDial_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -30273,7 +30273,7 @@ struct classtypeinfo _9QListView_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_9QListView_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK9QListView10metaObjectEv",
+	"NULL or _ZNK9QListView10metaObjectEv",
 	"_ZNK9QListView9classNameEv",
 	"_ZN9QListView7qt_castEPKc",
 	"_ZN9QListView9qt_invokeEiP8QUObject",
@@ -30329,7 +30329,7 @@ const char *_9QListView_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN11QScrollView6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK9QListView8sizeHintEv",
 	"_ZNK9QListView15minimumSizeHintEv",
@@ -30378,8 +30378,8 @@ const char *_9QListView_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN11QScrollView18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -30430,7 +30430,7 @@ const char *_9QListView_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QListView15setTreeStepSizeEi",
 	"_ZN9QListView10insertItemEP13QListViewItem",
 	"_ZN9QListView8takeItemEP13QListViewItem",
-	"_ZN9QListView10removeItemEP13QListViewItem",
+	"NULL or _ZN9QListView10removeItemEP13QListViewItem",
 	"_ZN9QListView9addColumnERK7QStringi",
 	"_ZN9QListView9addColumnERK8QIconSetRK7QStringi",
 	"_ZN9QListView12removeColumnEi",
@@ -30610,7 +30610,7 @@ struct classtypeinfo _12QStylePlugin_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_12QStylePlugin_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK12QStylePlugin10metaObjectEv",
+	"NULL or _ZNK12QStylePlugin10metaObjectEv",
 	"_ZNK12QStylePlugin9classNameEv",
 	"_ZN12QStylePlugin7qt_castEPKc",
 	"_ZN12QStylePlugin9qt_invokeEiP8QUObject",
@@ -30676,7 +30676,7 @@ struct classtypeinfo _11QFileDialog_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QFileDialog_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK11QFileDialog10metaObjectEv",
+	"NULL or _ZNK11QFileDialog10metaObjectEv",
 	"_ZNK11QFileDialog9classNameEv",
 	"_ZN11QFileDialog7qt_castEPKc",
 	"_ZN11QFileDialog9qt_invokeEiP8QUObject",
@@ -30781,8 +30781,8 @@ const char *_11QFileDialog_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -30942,7 +30942,7 @@ struct classtypeinfo _13QHButtonGroup_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_13QHButtonGroup_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK13QHButtonGroup10metaObjectEv",
+	"NULL or _ZNK13QHButtonGroup10metaObjectEv",
 	"_ZNK13QHButtonGroup9classNameEv",
 	"_ZN13QHButtonGroup7qt_castEPKc",
 	"_ZN13QHButtonGroup9qt_invokeEiP8QUObject",
@@ -30998,7 +30998,7 @@ const char *_13QHButtonGroup_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK9QGroupBox8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -31047,8 +31047,8 @@ const char *_13QHButtonGroup_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -31218,14 +31218,14 @@ struct classtypeinfo _10QColorDrag_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_10QColorDrag_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK10QColorDrag10metaObjectEv",
+	"NULL or _ZNK10QColorDrag10metaObjectEv",
 	"_ZNK10QColorDrag9classNameEv",
 	"_ZN10QColorDrag7qt_castEPKc",
 	"_ZN10QColorDrag9qt_invokeEiP8QUObject",
 	"_ZN10QColorDrag7qt_emitEiP8QUObject",
 	"_ZN10QColorDrag11qt_propertyEiiP8QVariant",
-	"_ZN10QColorDragD1Ev",
-	"_ZN10QColorDragD0Ev",
+	"NULL or _ZN10QColorDragD1Ev",
+	"NULL or _ZN10QColorDragD0Ev",
 	"_ZN7QObject5eventEP6QEvent",
 	"_ZN7QObject11eventFilterEPS_P6QEvent",
 	"_ZN7QObject7setNameEPKc",
@@ -31249,46 +31249,46 @@ const char *_10QColorDrag_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_10QColorDrag_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn40_N10QColorDragD1Ev",
+	"NULL or _ZThn40_N10QColorDragD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn80_N10QColorDragD1Ev",
+	"NULL or _ZThn80_N10QColorDragD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N10QColorDragD1Ev",
+	"NULL or _ZThn40_N10QColorDragD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn80_N10QColorDragD1Ev",
+	"NULL or _ZThn80_N10QColorDragD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_N10QColorDragD1Ev",
+	"NULL or _ZThn40_N10QColorDragD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N10QColorDragD1Ev",
+	"NULL or _ZThn80_N10QColorDragD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn80_N10QColorDragD1Ev",
+	"NULL or _ZThn80_N10QColorDragD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn80_N10QColorDragD0Ev",
+	"NULL or _ZThn80_N10QColorDragD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N10QColorDragD0Ev",
+	"NULL or _ZThn40_N10QColorDragD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn80_N10QColorDragD0Ev",
+	"NULL or _ZThn80_N10QColorDragD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_N10QColorDragD0Ev",
+	"NULL or _ZThn40_N10QColorDragD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N10QColorDragD0Ev",
+	"NULL or _ZThn80_N10QColorDragD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn80_N10QColorDragD0Ev",
+	"NULL or _ZThn80_N10QColorDragD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn40_N10QColorDragD0Ev",
+	"NULL or _ZThn40_N10QColorDragD0Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_NK11QStoredDrag6formatEi",
@@ -31410,7 +31410,7 @@ struct classtypeinfo _14QDesktopWidget_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_14QDesktopWidget_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK14QDesktopWidget10metaObjectEv",
+	"NULL or _ZNK14QDesktopWidget10metaObjectEv",
 	"_ZNK14QDesktopWidget9classNameEv",
 	"_ZN14QDesktopWidget7qt_castEPKc",
 	"_ZN14QDesktopWidget9qt_invokeEiP8QUObject",
@@ -31466,7 +31466,7 @@ const char *_14QDesktopWidget_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK7QWidget8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -31515,8 +31515,8 @@ const char *_14QDesktopWidget_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -31724,8 +31724,8 @@ struct classtypeinfo _11QUtf16Codec_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QUtf16Codec_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN11QUtf16CodecD1Ev",
-	"_ZN11QUtf16CodecD0Ev",
+	"NULL or _ZN11QUtf16CodecD1Ev",
+	"NULL or _ZN11QUtf16CodecD0Ev",
 	"_ZNK11QUtf16Codec4nameEv",
 	"_ZNK10QTextCodec8mimeNameEv",
 	"_ZNK11QUtf16Codec7mibEnumEv",
@@ -31782,7 +31782,7 @@ struct classtypeinfo _7QObject_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_7QObject_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK7QObject10metaObjectEv",
+	"NULL or _ZNK7QObject10metaObjectEv",
 	"_ZNK7QObject9classNameEv",
 	"_ZN7QObject7qt_castEPKc",
 	"_ZN7QObject9qt_invokeEiP8QUObject",
@@ -31852,7 +31852,7 @@ const char *_5QFile_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN5QFile5closeEv",
 	"_ZN5QFile5flushEv",
 	"_ZNK5QFile4sizeEv",
-	"_ZNK5QFile2atEv",
+	"NULL or _ZNK5QFile2atEv",
 	"_ZN5QFile2atEm",
 	"_ZNK5QFile5atEndEv",
 	"_ZN5QFile9readBlockEPcm",
@@ -32002,7 +32002,7 @@ const char *_12QListBoxItem_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK12QListBoxItem5widthEPK8QListBox",
 	"_ZNK12QListBoxItem4rttiEv",
 	"__cxa_pure_virtual",
-	"_ZN12QListBoxItem7setTextERK7QString",
+	"NULL or _ZN12QListBoxItem7setTextERK7QString",
 	};
 
 struct classvtable _12QListBoxItem_of_libqt_mt_so_3_vtable [1] = {
@@ -32046,8 +32046,8 @@ struct classtypeinfo _18QDragResponseEvent_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_18QDragResponseEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN18QDragResponseEventD1Ev",
-	"_ZN18QDragResponseEventD0Ev",
+	"NULL or _ZN18QDragResponseEventD1Ev",
+	"NULL or _ZN18QDragResponseEventD0Ev",
 	};
 
 struct classvtable _18QDragResponseEvent_of_libqt_mt_so_3_vtable [1] = {
@@ -32175,7 +32175,7 @@ struct classtypeinfo _16QTextCodecPlugin_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_16QTextCodecPlugin_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK16QTextCodecPlugin10metaObjectEv",
+	"NULL or _ZNK16QTextCodecPlugin10metaObjectEv",
 	"_ZNK16QTextCodecPlugin9classNameEv",
 	"_ZN16QTextCodecPlugin7qt_castEPKc",
 	"_ZN16QTextCodecPlugin9qt_invokeEiP8QUObject",
@@ -32243,7 +32243,7 @@ struct classtypeinfo _13QWidgetPlugin_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_13QWidgetPlugin_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK13QWidgetPlugin10metaObjectEv",
+	"NULL or _ZNK13QWidgetPlugin10metaObjectEv",
 	"_ZNK13QWidgetPlugin9classNameEv",
 	"_ZN13QWidgetPlugin7qt_castEPKc",
 	"_ZN13QWidgetPlugin9qt_invokeEiP8QUObject",
@@ -32314,7 +32314,7 @@ struct classtypeinfo _10QScrollBar_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_10QScrollBar_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK10QScrollBar10metaObjectEv",
+	"NULL or _ZNK10QScrollBar10metaObjectEv",
 	"_ZNK10QScrollBar9classNameEv",
 	"_ZN10QScrollBar7qt_castEPKc",
 	"_ZN10QScrollBar9qt_invokeEiP8QUObject",
@@ -32370,7 +32370,7 @@ const char *_10QScrollBar_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK10QScrollBar8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -32419,13 +32419,13 @@ const char *_10QScrollBar_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
 	"_ZN10QScrollBar14setOrientationEN2Qt11OrientationE",
-	"_ZN10QScrollBar11setTrackingEb",
+	"NULL or _ZN10QScrollBar11setTrackingEb",
 	"_ZN10QScrollBar11valueChangeEv",
 	"_ZN10QScrollBar10stepChangeEv",
 	"_ZN10QScrollBar11rangeChangeEv",
@@ -32744,8 +32744,8 @@ struct classtypeinfo _7QBitmap_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_7QBitmap_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN7QBitmapD1Ev",
-	"_ZN7QBitmapD0Ev",
+	"NULL or _ZN7QBitmapD1Ev",
+	"NULL or _ZN7QBitmapD0Ev",
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
 	"_ZNK12QPaintDevice6handleEv",
@@ -32864,7 +32864,7 @@ struct classtypeinfo _8QSpinBox_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_8QSpinBox_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK8QSpinBox10metaObjectEv",
+	"NULL or _ZNK8QSpinBox10metaObjectEv",
 	"_ZNK8QSpinBox9classNameEv",
 	"_ZN8QSpinBox7qt_castEPKc",
 	"_ZN8QSpinBox9qt_invokeEiP8QUObject",
@@ -32920,7 +32920,7 @@ const char *_8QSpinBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK8QSpinBox8sizeHintEv",
 	"_ZNK8QSpinBox15minimumSizeHintEv",
@@ -32969,8 +32969,8 @@ const char *_8QSpinBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -33333,8 +33333,8 @@ struct classtypeinfo _11QEucKrCodec_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QEucKrCodec_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN11QEucKrCodecD1Ev",
-	"_ZN11QEucKrCodecD0Ev",
+	"NULL or _ZN11QEucKrCodecD1Ev",
+	"NULL or _ZN11QEucKrCodecD0Ev",
 	"_ZNK11QEucKrCodec4nameEv",
 	"_ZNK11QEucKrCodec8mimeNameEv",
 	"_ZNK11QEucKrCodec7mibEnumEv",
@@ -33391,7 +33391,7 @@ struct classtypeinfo _12QWidgetStack_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_12QWidgetStack_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK12QWidgetStack10metaObjectEv",
+	"NULL or _ZNK12QWidgetStack10metaObjectEv",
 	"_ZNK12QWidgetStack9classNameEv",
 	"_ZN12QWidgetStack7qt_castEPKc",
 	"_ZN12QWidgetStack9qt_invokeEiP8QUObject",
@@ -33447,7 +33447,7 @@ const char *_12QWidgetStack_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK12QWidgetStack8sizeHintEv",
 	"_ZNK12QWidgetStack15minimumSizeHintEv",
@@ -33496,8 +33496,8 @@ const char *_12QWidgetStack_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -33661,7 +33661,7 @@ struct classtypeinfo _6QLabel_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_6QLabel_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK6QLabel10metaObjectEv",
+	"NULL or _ZNK6QLabel10metaObjectEv",
 	"_ZNK6QLabel9classNameEv",
 	"_ZN6QLabel7qt_castEPKc",
 	"_ZN6QLabel9qt_invokeEiP8QUObject",
@@ -33717,7 +33717,7 @@ const char *_6QLabel_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK6QLabel8sizeHintEv",
 	"_ZNK6QLabel15minimumSizeHintEv",
@@ -33766,8 +33766,8 @@ const char *_6QLabel_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -33939,7 +33939,7 @@ struct classtypeinfo _11QStyleSheet_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QStyleSheet_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK11QStyleSheet10metaObjectEv",
+	"NULL or _ZNK11QStyleSheet10metaObjectEv",
 	"_ZNK11QStyleSheet9classNameEv",
 	"_ZN11QStyleSheet7qt_castEPKc",
 	"_ZN11QStyleSheet9qt_invokeEiP8QUObject",
@@ -34006,8 +34006,8 @@ struct classtypeinfo _12QCustomEvent_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_12QCustomEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN12QCustomEventD1Ev",
-	"_ZN12QCustomEventD0Ev",
+	"NULL or _ZN12QCustomEventD1Ev",
+	"NULL or _ZN12QCustomEventD0Ev",
 	};
 
 struct classvtable _12QCustomEvent_of_libqt_mt_so_3_vtable [1] = {
@@ -34054,12 +34054,12 @@ const char *_14QListBoxPixmap_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN14QListBoxPixmapD1Ev",
 	"_ZN14QListBoxPixmapD0Ev",
 	"_ZNK12QListBoxItem4textEv",
-	"_ZNK14QListBoxPixmap6pixmapEv",
+	"NULL or _ZNK14QListBoxPixmap6pixmapEv",
 	"_ZNK14QListBoxPixmap6heightEPK8QListBox",
 	"_ZNK14QListBoxPixmap5widthEPK8QListBox",
 	"_ZNK14QListBoxPixmap4rttiEv",
 	"_ZN14QListBoxPixmap5paintEP8QPainter",
-	"_ZN12QListBoxItem7setTextERK7QString",
+	"NULL or _ZN12QListBoxItem7setTextERK7QString",
 	};
 
 struct classvtable _14QListBoxPixmap_of_libqt_mt_so_3_vtable [1] = {
@@ -34103,7 +34103,7 @@ struct classtypeinfo _12QDragManager_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_12QDragManager_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK12QDragManager10metaObjectEv",
+	"NULL or _ZNK12QDragManager10metaObjectEv",
 	"_ZNK12QDragManager9classNameEv",
 	"_ZN12QDragManager7qt_castEPKc",
 	"_ZN12QDragManager9qt_invokeEiP8QUObject",
@@ -34407,9 +34407,9 @@ struct classtypeinfo _11QPointArray_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QPointArray_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN11QPointArrayD1Ev",
-	"_ZN11QPointArrayD0Ev",
-	"_ZN9QMemArrayI6QPointE6detachEv",
+	"NULL or _ZN11QPointArrayD1Ev",
+	"NULL or _ZN11QPointArrayD0Ev",
+	"NULL or _ZN9QMemArrayI6QPointE6detachEv",
 	"_ZN7QGArray7newDataEv",
 	"_ZN7QGArray10deleteDataEPNS_10array_dataE",
 	};
@@ -34455,7 +34455,7 @@ struct classtypeinfo _14QMultiLineEdit_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_14QMultiLineEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK14QMultiLineEdit10metaObjectEv",
+	"NULL or _ZNK14QMultiLineEdit10metaObjectEv",
 	"_ZNK14QMultiLineEdit9classNameEv",
 	"_ZN14QMultiLineEdit7qt_castEPKc",
 	"_ZN14QMultiLineEdit9qt_invokeEiP8QUObject",
@@ -34511,7 +34511,7 @@ const char *_14QMultiLineEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN11QScrollView6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK9QTextEdit8sizeHintEv",
 	"_ZNK11QScrollView15minimumSizeHintEv",
@@ -34560,8 +34560,8 @@ const char *_14QMultiLineEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN9QTextEdit18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -34627,9 +34627,9 @@ const char *_14QMultiLineEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QTextEdit9selectAllEb",
 	"_ZN9QTextEdit15setTabStopWidthEi",
 	"_ZN9QTextEdit6zoomInEi",
-	"_ZN9QTextEdit6zoomInEv",
+	"NULL or _ZN9QTextEdit6zoomInEv",
 	"_ZN9QTextEdit7zoomOutEi",
-	"_ZN9QTextEdit7zoomOutEv",
+	"NULL or _ZN9QTextEdit7zoomOutEv",
 	"_ZN9QTextEdit6zoomToEi",
 	"_ZN9QTextEdit4syncEv",
 	"_ZN9QTextEdit11setReadOnlyEb",
@@ -34650,7 +34650,7 @@ const char *_14QMultiLineEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QTextEdit20setVerticalAlignmentENS_17VerticalAlignmentE",
 	"_ZN14QMultiLineEdit12setAlignmentEi",
 	"_ZN9QTextEdit12setParagTypeEN15QStyleSheetItem11DisplayModeENS0_9ListStyleE",
-	"_ZN14QMultiLineEdit17setCursorPositionEii",
+	"NULL or _ZN14QMultiLineEdit17setCursorPositionEii",
 	"_ZN9QTextEdit12setSelectionEiiiii",
 	"_ZN9QTextEdit22setSelectionAttributesEiRK6QColorb",
 	"_ZN9QTextEdit11setModifiedEb",
@@ -34663,11 +34663,11 @@ const char *_14QMultiLineEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QTextEdit16doKeyboardActionENS_14KeyboardActionE",
 	"_ZN9QTextEdit18removeSelectedTextEi",
 	"_ZN9QTextEdit15removeSelectionEi",
-	"_ZN9QTextEdit14setCurrentFontERK5QFont",
-	"_ZN9QTextEdit16setOverwriteModeEb",
+	"NULL or _ZN9QTextEdit14setCurrentFontERK5QFont",
+	"NULL or _ZN9QTextEdit16setOverwriteModeEb",
 	"_ZN9QTextEdit14scrollToBottomEv",
 	"_ZN9QTextEdit6insertERK7QStringbbb",
-	"_ZN14QMultiLineEdit8insertAtERK7QStringii",
+	"NULL or _ZN14QMultiLineEdit8insertAtERK7QStringii",
 	"_ZN9QTextEdit15removeParagraphEi",
 	"_ZN9QTextEdit15insertParagraphERK7QStringi",
 	"_ZN9QTextEdit27setParagraphBackgroundColorEiRK6QColor",
@@ -34676,14 +34676,14 @@ const char *_14QMultiLineEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QTextEdit15createPopupMenuERK6QPoint",
 	"_ZN9QTextEdit15createPopupMenuEv",
 	"_ZN9QTextEdit16doChangeIntervalEv",
-	"_ZNK9QTextEdit12linksEnabledEv",
-	"_ZN9QTextEdit15emitHighlightedERK7QString",
-	"_ZN9QTextEdit15emitLinkClickedERK7QString",
+	"NULL or _ZNK9QTextEdit12linksEnabledEv",
+	"NULL or _ZN9QTextEdit15emitHighlightedERK7QString",
+	"NULL or _ZN9QTextEdit15emitLinkClickedERK7QString",
 	"_ZN14QMultiLineEdit10insertLineERK7QStringi",
 	"_ZN14QMultiLineEdit8insertAtERK7QStringiib",
 	"_ZN14QMultiLineEdit10removeLineEi",
 	"_ZN14QMultiLineEdit17setCursorPositionEiib",
-	"_ZN14QMultiLineEdit13setAutoUpdateEb",
+	"NULL or _ZN14QMultiLineEdit13setAutoUpdateEb",
 	"_ZN14QMultiLineEdit13insertAndMarkERK7QStringb",
 	"_ZN14QMultiLineEdit7newLineEv",
 	"_ZN14QMultiLineEdit8killLineEv",
@@ -34890,7 +34890,7 @@ struct classtypeinfo _11QHBoxLayout_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QHBoxLayout_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK11QHBoxLayout10metaObjectEv",
+	"NULL or _ZNK11QHBoxLayout10metaObjectEv",
 	"_ZNK11QHBoxLayout9classNameEv",
 	"_ZN11QHBoxLayout7qt_castEPKc",
 	"_ZN11QHBoxLayout9qt_invokeEiP8QUObject",
@@ -35568,7 +35568,7 @@ struct classtypeinfo _13QErrorMessage_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_13QErrorMessage_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK13QErrorMessage10metaObjectEv",
+	"NULL or _ZNK13QErrorMessage10metaObjectEv",
 	"_ZNK13QErrorMessage9classNameEv",
 	"_ZN13QErrorMessage7qt_castEPKc",
 	"_ZN13QErrorMessage9qt_invokeEiP8QUObject",
@@ -35673,8 +35673,8 @@ const char *_13QErrorMessage_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -35832,7 +35832,7 @@ struct classtypeinfo _8QListBox_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_8QListBox_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK8QListBox10metaObjectEv",
+	"NULL or _ZNK8QListBox10metaObjectEv",
 	"_ZNK8QListBox9classNameEv",
 	"_ZN8QListBox7qt_castEPKc",
 	"_ZN8QListBox9qt_invokeEiP8QUObject",
@@ -35888,7 +35888,7 @@ const char *_8QListBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN11QScrollView6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK8QListBox8sizeHintEv",
 	"_ZNK8QListBox15minimumSizeHintEv",
@@ -35937,8 +35937,8 @@ const char *_8QListBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN11QScrollView18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -36204,7 +36204,7 @@ struct classtypeinfo _9QIconDrag_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_9QIconDrag_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK9QIconDrag10metaObjectEv",
+	"NULL or _ZNK9QIconDrag10metaObjectEv",
 	"_ZNK9QIconDrag9classNameEv",
 	"_ZN9QIconDrag7qt_castEPKc",
 	"_ZN9QIconDrag9qt_invokeEiP8QUObject",
@@ -36395,7 +36395,7 @@ struct classtypeinfo _8QUriDrag_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_8QUriDrag_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK8QUriDrag10metaObjectEv",
+	"NULL or _ZNK8QUriDrag10metaObjectEv",
 	"_ZNK8QUriDrag9classNameEv",
 	"_ZN8QUriDrag7qt_castEPKc",
 	"_ZN8QUriDrag9qt_invokeEiP8QUObject",
@@ -36634,7 +36634,7 @@ struct classtypeinfo _11QVBoxLayout_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QVBoxLayout_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK11QVBoxLayout10metaObjectEv",
+	"NULL or _ZNK11QVBoxLayout10metaObjectEv",
 	"_ZNK11QVBoxLayout9classNameEv",
 	"_ZN11QVBoxLayout7qt_castEPKc",
 	"_ZN11QVBoxLayout9qt_invokeEiP8QUObject",
@@ -37137,8 +37137,8 @@ const char *_7QBuffer_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QBuffer4openEi",
 	"_ZN7QBuffer5closeEv",
 	"_ZN7QBuffer5flushEv",
-	"_ZNK7QBuffer4sizeEv",
-	"_ZNK7QBuffer2atEv",
+	"NULL or _ZNK7QBuffer4sizeEv",
+	"NULL or _ZNK7QBuffer2atEv",
 	"_ZN7QBuffer2atEm",
 	"_ZNK9QIODevice5atEndEv",
 	"_ZN7QBuffer9readBlockEPcm",
@@ -37396,7 +37396,7 @@ struct classtypeinfo _11QStoredDrag_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QStoredDrag_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK11QStoredDrag10metaObjectEv",
+	"NULL or _ZNK11QStoredDrag10metaObjectEv",
 	"_ZNK11QStoredDrag9classNameEv",
 	"_ZN11QStoredDrag7qt_castEPKc",
 	"_ZN11QStoredDrag9qt_invokeEiP8QUObject",
@@ -37588,7 +37588,7 @@ struct classtypeinfo _9QTextDrag_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_9QTextDrag_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK9QTextDrag10metaObjectEv",
+	"NULL or _ZNK9QTextDrag10metaObjectEv",
 	"_ZNK9QTextDrag9classNameEv",
 	"_ZN9QTextDrag7qt_castEPKc",
 	"_ZN9QTextDrag9qt_invokeEiP8QUObject",
@@ -37824,7 +37824,7 @@ struct classtypeinfo _12QButtonGroup_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_12QButtonGroup_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK12QButtonGroup10metaObjectEv",
+	"NULL or _ZNK12QButtonGroup10metaObjectEv",
 	"_ZNK12QButtonGroup9classNameEv",
 	"_ZN12QButtonGroup7qt_castEPKc",
 	"_ZN12QButtonGroup9qt_invokeEiP8QUObject",
@@ -37880,7 +37880,7 @@ const char *_12QButtonGroup_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK9QGroupBox8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -37929,8 +37929,8 @@ const char *_12QButtonGroup_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -38258,7 +38258,7 @@ struct classtypeinfo _9QComboBox_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_9QComboBox_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK9QComboBox10metaObjectEv",
+	"NULL or _ZNK9QComboBox10metaObjectEv",
 	"_ZNK9QComboBox9classNameEv",
 	"_ZN9QComboBox7qt_castEPKc",
 	"_ZN9QComboBox9qt_invokeEiP8QUObject",
@@ -38314,7 +38314,7 @@ const char *_9QComboBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK9QComboBox8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -38363,8 +38363,8 @@ const char *_9QComboBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -38623,7 +38623,7 @@ struct classtypeinfo _13QVButtonGroup_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_13QVButtonGroup_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK13QVButtonGroup10metaObjectEv",
+	"NULL or _ZNK13QVButtonGroup10metaObjectEv",
 	"_ZNK13QVButtonGroup9classNameEv",
 	"_ZN13QVButtonGroup7qt_castEPKc",
 	"_ZN13QVButtonGroup9qt_invokeEiP8QUObject",
@@ -38679,7 +38679,7 @@ const char *_13QVButtonGroup_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK9QGroupBox8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -38728,8 +38728,8 @@ const char *_13QVButtonGroup_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -38899,7 +38899,7 @@ struct classtypeinfo _10QClipboard_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_10QClipboard_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK10QClipboard10metaObjectEv",
+	"NULL or _ZNK10QClipboard10metaObjectEv",
 	"_ZNK10QClipboard9classNameEv",
 	"_ZN10QClipboard7qt_castEPKc",
 	"_ZN10QClipboard9qt_invokeEiP8QUObject",
@@ -39008,7 +39008,7 @@ struct classtypeinfo _11QCanvasView_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QCanvasView_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK11QCanvasView10metaObjectEv",
+	"NULL or _ZNK11QCanvasView10metaObjectEv",
 	"_ZNK11QCanvasView9classNameEv",
 	"_ZN11QCanvasView7qt_castEPKc",
 	"_ZN11QCanvasView9qt_invokeEiP8QUObject",
@@ -39064,7 +39064,7 @@ const char *_11QCanvasView_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN11QScrollView6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK11QCanvasView8sizeHintEv",
 	"_ZNK11QScrollView15minimumSizeHintEv",
@@ -39113,8 +39113,8 @@ const char *_11QCanvasView_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN11QScrollView18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -39369,14 +39369,14 @@ struct classtypeinfo _5QGrid_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_5QGrid_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK5QGrid10metaObjectEv",
+	"NULL or _ZNK5QGrid10metaObjectEv",
 	"_ZNK5QGrid9classNameEv",
 	"_ZN5QGrid7qt_castEPKc",
 	"_ZN5QGrid9qt_invokeEiP8QUObject",
 	"_ZN5QGrid7qt_emitEiP8QUObject",
 	"_ZN5QGrid11qt_propertyEiiP8QVariant",
-	"_ZN5QGridD1Ev",
-	"_ZN5QGridD0Ev",
+	"NULL or _ZN5QGridD1Ev",
+	"NULL or _ZN5QGridD0Ev",
 	"_ZN7QWidget5eventEP6QEvent",
 	"_ZN7QObject11eventFilterEPS_P6QEvent",
 	"_ZN7QWidget7setNameEPKc",
@@ -39425,7 +39425,7 @@ const char *_5QGrid_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK5QGrid8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -39474,8 +39474,8 @@ const char *_5QGrid_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -39491,46 +39491,46 @@ const char *_5QGrid_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_5QGrid_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn40_N5QGridD1Ev",
+	"NULL or _ZThn40_N5QGridD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn80_N5QGridD1Ev",
+	"NULL or _ZThn80_N5QGridD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N5QGridD1Ev",
+	"NULL or _ZThn40_N5QGridD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn80_N5QGridD1Ev",
+	"NULL or _ZThn80_N5QGridD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_N5QGridD1Ev",
+	"NULL or _ZThn40_N5QGridD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N5QGridD1Ev",
+	"NULL or _ZThn80_N5QGridD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn80_N5QGridD1Ev",
+	"NULL or _ZThn80_N5QGridD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn80_N5QGridD0Ev",
+	"NULL or _ZThn80_N5QGridD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N5QGridD0Ev",
+	"NULL or _ZThn40_N5QGridD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn80_N5QGridD0Ev",
+	"NULL or _ZThn80_N5QGridD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_N5QGridD0Ev",
+	"NULL or _ZThn40_N5QGridD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N5QGridD0Ev",
+	"NULL or _ZThn80_N5QGridD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn80_N5QGridD0Ev",
+	"NULL or _ZThn80_N5QGridD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn40_N5QGridD0Ev",
+	"NULL or _ZThn40_N5QGridD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -39638,14 +39638,14 @@ struct classtypeinfo _12QRadioButton_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_12QRadioButton_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK12QRadioButton10metaObjectEv",
+	"NULL or _ZNK12QRadioButton10metaObjectEv",
 	"_ZNK12QRadioButton9classNameEv",
 	"_ZN12QRadioButton7qt_castEPKc",
 	"_ZN12QRadioButton9qt_invokeEiP8QUObject",
 	"_ZN12QRadioButton7qt_emitEiP8QUObject",
 	"_ZN12QRadioButton11qt_propertyEiiP8QVariant",
-	"_ZN12QRadioButtonD1Ev",
-	"_ZN12QRadioButtonD0Ev",
+	"NULL or _ZN12QRadioButtonD1Ev",
+	"NULL or _ZN12QRadioButtonD0Ev",
 	"_ZN7QWidget5eventEP6QEvent",
 	"_ZN7QObject11eventFilterEPS_P6QEvent",
 	"_ZN7QWidget7setNameEPKc",
@@ -39694,7 +39694,7 @@ const char *_12QRadioButton_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK12QRadioButton8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -39743,8 +39743,8 @@ const char *_12QRadioButton_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -39764,46 +39764,46 @@ const char *_12QRadioButton_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_12QRadioButton_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn40_N12QRadioButtonD1Ev",
+	"NULL or _ZThn40_N12QRadioButtonD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn80_N12QRadioButtonD1Ev",
+	"NULL or _ZThn80_N12QRadioButtonD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N12QRadioButtonD1Ev",
+	"NULL or _ZThn40_N12QRadioButtonD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn80_N12QRadioButtonD1Ev",
+	"NULL or _ZThn80_N12QRadioButtonD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_N12QRadioButtonD1Ev",
+	"NULL or _ZThn40_N12QRadioButtonD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N12QRadioButtonD1Ev",
+	"NULL or _ZThn80_N12QRadioButtonD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn80_N12QRadioButtonD1Ev",
+	"NULL or _ZThn80_N12QRadioButtonD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn80_N12QRadioButtonD0Ev",
+	"NULL or _ZThn80_N12QRadioButtonD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N12QRadioButtonD0Ev",
+	"NULL or _ZThn40_N12QRadioButtonD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn80_N12QRadioButtonD0Ev",
+	"NULL or _ZThn80_N12QRadioButtonD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_N12QRadioButtonD0Ev",
+	"NULL or _ZThn40_N12QRadioButtonD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N12QRadioButtonD0Ev",
+	"NULL or _ZThn80_N12QRadioButtonD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn80_N12QRadioButtonD0Ev",
+	"NULL or _ZThn80_N12QRadioButtonD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn40_N12QRadioButtonD0Ev",
+	"NULL or _ZThn40_N12QRadioButtonD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -39954,7 +39954,7 @@ struct classtypeinfo _7QSlider_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_7QSlider_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK7QSlider10metaObjectEv",
+	"NULL or _ZNK7QSlider10metaObjectEv",
 	"_ZNK7QSlider9classNameEv",
 	"_ZN7QSlider7qt_castEPKc",
 	"_ZN7QSlider9qt_invokeEiP8QUObject",
@@ -40010,7 +40010,7 @@ const char *_7QSlider_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK7QSlider8sizeHintEv",
 	"_ZNK7QSlider15minimumSizeHintEv",
@@ -40059,8 +40059,8 @@ const char *_7QSlider_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -40366,8 +40366,8 @@ struct classtypeinfo _19QHttpResponseHeader_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_19QHttpResponseHeader_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN19QHttpResponseHeaderD1Ev",
-	"_ZN19QHttpResponseHeaderD0Ev",
+	"NULL or _ZN19QHttpResponseHeaderD1Ev",
+	"NULL or _ZN19QHttpResponseHeaderD0Ev",
 	"_ZNK19QHttpResponseHeader8toStringEv",
 	"_ZNK19QHttpResponseHeader12majorVersionEv",
 	"_ZNK19QHttpResponseHeader12minorVersionEv",
@@ -40507,8 +40507,8 @@ struct classtypeinfo _15QDragEnterEvent_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_15QDragEnterEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN15QDragEnterEventD1Ev",
-	"_ZN15QDragEnterEventD0Ev",
+	"NULL or _ZN15QDragEnterEventD1Ev",
+	"NULL or _ZN15QDragEnterEventD0Ev",
 	"_ZNK10QDropEvent6formatEi",
 	"_ZNK10QDropEvent11encodedDataEPKc",
 	"_ZNK10QDropEvent8providesEPKc",
@@ -40516,46 +40516,46 @@ const char *_15QDragEnterEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_15QDragEnterEvent_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn12_N15QDragEnterEventD1Ev",
+	"NULL or _ZThn12_N15QDragEnterEventD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N15QDragEnterEventD1Ev",
+	"NULL or _ZThn16_N15QDragEnterEventD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn12_N15QDragEnterEventD1Ev",
+	"NULL or _ZThn12_N15QDragEnterEventD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N15QDragEnterEventD1Ev",
+	"NULL or _ZThn16_N15QDragEnterEventD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn12_N15QDragEnterEventD1Ev",
+	"NULL or _ZThn12_N15QDragEnterEventD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N15QDragEnterEventD1Ev",
+	"NULL or _ZThn16_N15QDragEnterEventD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N15QDragEnterEventD1Ev",
+	"NULL or _ZThn16_N15QDragEnterEventD1Ev",
 #endif
 #if defined __i386__
-	"_ZThn12_N15QDragEnterEventD0Ev",
+	"NULL or _ZThn12_N15QDragEnterEventD0Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N15QDragEnterEventD0Ev",
+	"NULL or _ZThn16_N15QDragEnterEventD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn12_N15QDragEnterEventD0Ev",
+	"NULL or _ZThn12_N15QDragEnterEventD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N15QDragEnterEventD0Ev",
+	"NULL or _ZThn16_N15QDragEnterEventD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn12_N15QDragEnterEventD0Ev",
+	"NULL or _ZThn12_N15QDragEnterEventD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N15QDragEnterEventD0Ev",
+	"NULL or _ZThn16_N15QDragEnterEventD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N15QDragEnterEventD0Ev",
+	"NULL or _ZThn16_N15QDragEnterEventD0Ev",
 #endif
 #if defined __i386__
 	"_ZThn12_NK10QDropEvent6formatEi",
@@ -40697,7 +40697,7 @@ struct classtypeinfo _12QActionGroup_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_12QActionGroup_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK12QActionGroup10metaObjectEv",
+	"NULL or _ZNK12QActionGroup10metaObjectEv",
 	"_ZNK12QActionGroup9classNameEv",
 	"_ZN12QActionGroup7qt_castEPKc",
 	"_ZN12QActionGroup9qt_invokeEiP8QUObject",
@@ -40777,7 +40777,7 @@ struct classtypeinfo _10QDataTable_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_10QDataTable_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK10QDataTable10metaObjectEv",
+	"NULL or _ZNK10QDataTable10metaObjectEv",
 	"_ZNK10QDataTable9classNameEv",
 	"_ZN10QDataTable7qt_castEPKc",
 	"_ZN10QDataTable9qt_invokeEiP8QUObject",
@@ -40833,7 +40833,7 @@ const char *_10QDataTable_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN11QScrollView6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK6QTable8sizeHintEv",
 	"_ZNK11QScrollView15minimumSizeHintEv",
@@ -40882,8 +40882,8 @@ const char *_10QDataTable_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN11QScrollView18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -41193,8 +41193,8 @@ struct classtypeinfo _14QDragMoveEvent_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_14QDragMoveEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN14QDragMoveEventD1Ev",
-	"_ZN14QDragMoveEventD0Ev",
+	"NULL or _ZN14QDragMoveEventD1Ev",
+	"NULL or _ZN14QDragMoveEventD0Ev",
 	"_ZNK10QDropEvent6formatEi",
 	"_ZNK10QDropEvent11encodedDataEPKc",
 	"_ZNK10QDropEvent8providesEPKc",
@@ -41202,46 +41202,46 @@ const char *_14QDragMoveEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_14QDragMoveEvent_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn12_N14QDragMoveEventD1Ev",
+	"NULL or _ZThn12_N14QDragMoveEventD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N14QDragMoveEventD1Ev",
+	"NULL or _ZThn16_N14QDragMoveEventD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn12_N14QDragMoveEventD1Ev",
+	"NULL or _ZThn12_N14QDragMoveEventD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N14QDragMoveEventD1Ev",
+	"NULL or _ZThn16_N14QDragMoveEventD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn12_N14QDragMoveEventD1Ev",
+	"NULL or _ZThn12_N14QDragMoveEventD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N14QDragMoveEventD1Ev",
+	"NULL or _ZThn16_N14QDragMoveEventD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N14QDragMoveEventD1Ev",
+	"NULL or _ZThn16_N14QDragMoveEventD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N14QDragMoveEventD0Ev",
+	"NULL or _ZThn16_N14QDragMoveEventD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn12_N14QDragMoveEventD0Ev",
+	"NULL or _ZThn12_N14QDragMoveEventD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N14QDragMoveEventD0Ev",
+	"NULL or _ZThn16_N14QDragMoveEventD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn12_N14QDragMoveEventD0Ev",
+	"NULL or _ZThn12_N14QDragMoveEventD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N14QDragMoveEventD0Ev",
+	"NULL or _ZThn16_N14QDragMoveEventD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N14QDragMoveEventD0Ev",
+	"NULL or _ZThn16_N14QDragMoveEventD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn12_N14QDragMoveEventD0Ev",
+	"NULL or _ZThn12_N14QDragMoveEventD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK10QDropEvent6formatEi",
@@ -41451,8 +41451,8 @@ struct classtypeinfo _10QDropEvent_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_10QDropEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN10QDropEventD1Ev",
-	"_ZN10QDropEventD0Ev",
+	"NULL or _ZN10QDropEventD1Ev",
+	"NULL or _ZN10QDropEventD0Ev",
 	"_ZNK10QDropEvent6formatEi",
 	"_ZNK10QDropEvent11encodedDataEPKc",
 	"_ZNK10QDropEvent8providesEPKc",
@@ -41460,46 +41460,46 @@ const char *_10QDropEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_10QDropEvent_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn12_N10QDropEventD1Ev",
+	"NULL or _ZThn12_N10QDropEventD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N10QDropEventD1Ev",
+	"NULL or _ZThn16_N10QDropEventD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn12_N10QDropEventD1Ev",
+	"NULL or _ZThn12_N10QDropEventD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N10QDropEventD1Ev",
+	"NULL or _ZThn16_N10QDropEventD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn12_N10QDropEventD1Ev",
+	"NULL or _ZThn12_N10QDropEventD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N10QDropEventD1Ev",
+	"NULL or _ZThn16_N10QDropEventD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N10QDropEventD1Ev",
+	"NULL or _ZThn16_N10QDropEventD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N10QDropEventD0Ev",
+	"NULL or _ZThn16_N10QDropEventD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn12_N10QDropEventD0Ev",
+	"NULL or _ZThn12_N10QDropEventD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N10QDropEventD0Ev",
+	"NULL or _ZThn16_N10QDropEventD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn12_N10QDropEventD0Ev",
+	"NULL or _ZThn12_N10QDropEventD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N10QDropEventD0Ev",
+	"NULL or _ZThn16_N10QDropEventD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N10QDropEventD0Ev",
+	"NULL or _ZThn16_N10QDropEventD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn12_N10QDropEventD0Ev",
+	"NULL or _ZThn12_N10QDropEventD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK10QDropEvent6formatEi",
@@ -41663,7 +41663,7 @@ struct classtypeinfo _11QMainWindow_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QMainWindow_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK11QMainWindow10metaObjectEv",
+	"NULL or _ZNK11QMainWindow10metaObjectEv",
 	"_ZNK11QMainWindow9classNameEv",
 	"_ZN11QMainWindow7qt_castEPKc",
 	"_ZN11QMainWindow9qt_invokeEiP8QUObject",
@@ -41719,7 +41719,7 @@ const char *_11QMainWindow_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK11QMainWindow8sizeHintEv",
 	"_ZNK11QMainWindow15minimumSizeHintEv",
@@ -41768,8 +41768,8 @@ const char *_11QMainWindow_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -41948,7 +41948,7 @@ struct classtypeinfo _10QStatusBar_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_10QStatusBar_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK10QStatusBar10metaObjectEv",
+	"NULL or _ZNK10QStatusBar10metaObjectEv",
 	"_ZNK10QStatusBar9classNameEv",
 	"_ZN10QStatusBar7qt_castEPKc",
 	"_ZN10QStatusBar9qt_invokeEiP8QUObject",
@@ -42004,7 +42004,7 @@ const char *_10QStatusBar_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK7QWidget8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -42053,8 +42053,8 @@ const char *_10QStatusBar_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -42211,15 +42211,15 @@ struct classtypeinfo _8QStrList_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_8QStrList_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK8QPtrListIcE5countEv",
-	"_ZN8QPtrListIcE5clearEv",
-	"_ZN8QStrListD1Ev",
-	"_ZN8QStrListD0Ev",
-	"_ZN8QStrList7newItemEPv",
-	"_ZN8QStrList10deleteItemEPv",
-	"_ZN8QStrList12compareItemsEPvS0_",
-	"_ZN8QStrList4readER11QDataStreamRPv",
-	"_ZNK8QStrList5writeER11QDataStreamPv",
+	"NULL or _ZNK8QPtrListIcE5countEv",
+	"NULL or _ZN8QPtrListIcE5clearEv",
+	"NULL or _ZN8QStrListD1Ev",
+	"NULL or _ZN8QStrListD0Ev",
+	"NULL or _ZN8QStrList7newItemEPv",
+	"NULL or _ZN8QStrList10deleteItemEPv",
+	"NULL or _ZN8QStrList12compareItemsEPvS0_",
+	"NULL or _ZN8QStrList4readER11QDataStreamRPv",
+	"NULL or _ZNK8QStrList5writeER11QDataStreamPv",
 	};
 
 struct classvtable _8QStrList_of_libqt_mt_so_3_vtable [1] = {
@@ -42263,8 +42263,8 @@ struct classtypeinfo _11QTsciiCodec_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QTsciiCodec_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN11QTsciiCodecD1Ev",
-	"_ZN11QTsciiCodecD0Ev",
+	"NULL or _ZN11QTsciiCodecD1Ev",
+	"NULL or _ZN11QTsciiCodecD0Ev",
 	"_ZNK11QTsciiCodec4nameEv",
 	"_ZNK10QTextCodec8mimeNameEv",
 	"_ZNK11QTsciiCodec7mibEnumEv",
@@ -42321,7 +42321,7 @@ struct classtypeinfo _12QSqlDatabase_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_12QSqlDatabase_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK12QSqlDatabase10metaObjectEv",
+	"NULL or _ZNK12QSqlDatabase10metaObjectEv",
 	"_ZNK12QSqlDatabase9classNameEv",
 	"_ZN12QSqlDatabase7qt_castEPKc",
 	"_ZN12QSqlDatabase9qt_invokeEiP8QUObject",
@@ -42573,7 +42573,7 @@ struct classtypeinfo _11QMessageBox_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QMessageBox_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK11QMessageBox10metaObjectEv",
+	"NULL or _ZNK11QMessageBox10metaObjectEv",
 	"_ZNK11QMessageBox9classNameEv",
 	"_ZN11QMessageBox7qt_castEPKc",
 	"_ZN11QMessageBox9qt_invokeEiP8QUObject",
@@ -42678,8 +42678,8 @@ const char *_11QMessageBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -42837,7 +42837,7 @@ struct classtypeinfo _6QSound_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_6QSound_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK6QSound10metaObjectEv",
+	"NULL or _ZNK6QSound10metaObjectEv",
 	"_ZNK6QSound9classNameEv",
 	"_ZN6QSound7qt_castEPKc",
 	"_ZN6QSound9qt_invokeEiP8QUObject",
@@ -42901,7 +42901,7 @@ struct classtypeinfo _14QEditorFactory_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_14QEditorFactory_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK7QObject10metaObjectEv",
+	"NULL or _ZNK7QObject10metaObjectEv",
 	"_ZNK7QObject9classNameEv",
 	"_ZN7QObject7qt_castEPKc",
 	"_ZN7QObject9qt_invokeEiP8QUObject",
@@ -42966,7 +42966,7 @@ struct classtypeinfo _10QEventLoop_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_10QEventLoop_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK10QEventLoop10metaObjectEv",
+	"NULL or _ZNK10QEventLoop10metaObjectEv",
 	"_ZNK10QEventLoop9classNameEv",
 	"_ZN10QEventLoop7qt_castEPKc",
 	"_ZN10QEventLoop9qt_invokeEiP8QUObject",
@@ -43042,7 +43042,7 @@ struct classtypeinfo _7QSignal_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_7QSignal_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK7QSignal10metaObjectEv",
+	"NULL or _ZNK7QSignal10metaObjectEv",
 	"_ZNK7QSignal9classNameEv",
 	"_ZN7QSignal7qt_castEPKc",
 	"_ZN7QSignal9qt_invokeEiP8QUObject",
@@ -43106,7 +43106,7 @@ struct classtypeinfo _9QSizeGrip_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_9QSizeGrip_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK9QSizeGrip10metaObjectEv",
+	"NULL or _ZNK9QSizeGrip10metaObjectEv",
 	"_ZNK9QSizeGrip9classNameEv",
 	"_ZN9QSizeGrip7qt_castEPKc",
 	"_ZN9QSizeGrip9qt_invokeEiP8QUObject",
@@ -43162,7 +43162,7 @@ const char *_9QSizeGrip_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK9QSizeGrip8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -43211,8 +43211,8 @@ const char *_9QSizeGrip_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -43367,12 +43367,12 @@ struct classtypeinfo _11QObjectList_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QObjectList_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK8QPtrListI7QObjectE5countEv",
-	"_ZN8QPtrListI7QObjectE5clearEv",
-	"_ZN11QObjectListD1Ev",
-	"_ZN11QObjectListD0Ev",
+	"NULL or _ZNK8QPtrListI7QObjectE5countEv",
+	"NULL or _ZN8QPtrListI7QObjectE5clearEv",
+	"NULL or _ZN11QObjectListD1Ev",
+	"NULL or _ZN11QObjectListD0Ev",
 	"_ZN14QPtrCollection7newItemEPv",
-	"_ZN8QPtrListI7QObjectE10deleteItemEPv",
+	"NULL or _ZN8QPtrListI7QObjectE10deleteItemEPv",
 	"_ZN6QGList12compareItemsEPvS0_",
 	"_ZN6QGList4readER11QDataStreamRPv",
 	"_ZNK6QGList5writeER11QDataStreamPv",
@@ -43522,8 +43522,8 @@ const char *_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN18QXmlDefaultHandler21processingInstructionERK7QStringS2_",
 	"_ZN18QXmlDefaultHandler13skippedEntityERK7QString",
 	"_ZN18QXmlDefaultHandler11errorStringEv",
-	"_ZN18QXmlDefaultHandlerD1Ev",
-	"_ZN18QXmlDefaultHandlerD0Ev",
+	"NULL or _ZN18QXmlDefaultHandlerD1Ev",
+	"NULL or _ZN18QXmlDefaultHandlerD0Ev",
 	"_ZN18QXmlDefaultHandler7warningERK18QXmlParseException",
 	"_ZN18QXmlDefaultHandler5errorERK18QXmlParseException",
 	"_ZN18QXmlDefaultHandler10fatalErrorERK18QXmlParseException",
@@ -44315,8 +44315,8 @@ struct classtypeinfo _9QDataSink_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_9QDataSink_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN9QDataSinkD1Ev",
-	"_ZN9QDataSinkD0Ev",
+	"NULL or _ZN9QDataSinkD1Ev",
+	"NULL or _ZN9QDataSinkD0Ev",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
@@ -44363,7 +44363,7 @@ struct classtypeinfo _16QSqlDriverPlugin_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_16QSqlDriverPlugin_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK16QSqlDriverPlugin10metaObjectEv",
+	"NULL or _ZNK16QSqlDriverPlugin10metaObjectEv",
 	"_ZNK16QSqlDriverPlugin9classNameEv",
 	"_ZN16QSqlDriverPlugin7qt_castEPKc",
 	"_ZN16QSqlDriverPlugin9qt_invokeEiP8QUObject",
@@ -44429,7 +44429,7 @@ struct classtypeinfo _11QToolButton_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QToolButton_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK11QToolButton10metaObjectEv",
+	"NULL or _ZNK11QToolButton10metaObjectEv",
 	"_ZNK11QToolButton9classNameEv",
 	"_ZN11QToolButton7qt_castEPKc",
 	"_ZN11QToolButton9qt_invokeEiP8QUObject",
@@ -44485,7 +44485,7 @@ const char *_11QToolButton_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK11QToolButton8sizeHintEv",
 	"_ZNK11QToolButton15minimumSizeHintEv",
@@ -44534,8 +44534,8 @@ const char *_11QToolButton_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -44707,12 +44707,12 @@ struct classtypeinfo _14QWidgetIntDict_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_14QWidgetIntDict_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK8QIntDictI7QWidgetE5countEv",
-	"_ZN8QIntDictI7QWidgetE5clearEv",
-	"_ZN14QWidgetIntDictD1Ev",
-	"_ZN14QWidgetIntDictD0Ev",
+	"NULL or _ZNK8QIntDictI7QWidgetE5countEv",
+	"NULL or _ZN8QIntDictI7QWidgetE5clearEv",
+	"NULL or _ZN14QWidgetIntDictD1Ev",
+	"NULL or _ZN14QWidgetIntDictD0Ev",
 	"_ZN14QPtrCollection7newItemEPv",
-	"_ZN8QIntDictI7QWidgetE10deleteItemEPv",
+	"NULL or _ZN8QIntDictI7QWidgetE10deleteItemEPv",
 	"_ZN6QGDict4readER11QDataStreamRPv",
 	"_ZNK6QGDict5writeER11QDataStreamPv",
 	};
@@ -44758,7 +44758,7 @@ struct classtypeinfo _7QTabBar_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_7QTabBar_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK7QTabBar10metaObjectEv",
+	"NULL or _ZNK7QTabBar10metaObjectEv",
 	"_ZNK7QTabBar9classNameEv",
 	"_ZN7QTabBar7qt_castEPKc",
 	"_ZN7QTabBar9qt_invokeEiP8QUObject",
@@ -44814,7 +44814,7 @@ const char *_7QTabBar_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK7QTabBar8sizeHintEv",
 	"_ZNK7QTabBar15minimumSizeHintEv",
@@ -44863,8 +44863,8 @@ const char *_7QTabBar_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -45181,8 +45181,8 @@ struct classtypeinfo _10QHideEvent_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_10QHideEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN10QHideEventD1Ev",
-	"_ZN10QHideEventD0Ev",
+	"NULL or _ZN10QHideEventD1Ev",
+	"NULL or _ZN10QHideEventD0Ev",
 	};
 
 struct classvtable _10QHideEvent_of_libqt_mt_so_3_vtable [1] = {
@@ -45270,8 +45270,8 @@ struct classtypeinfo _12QResizeEvent_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_12QResizeEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN12QResizeEventD1Ev",
-	"_ZN12QResizeEventD0Ev",
+	"NULL or _ZN12QResizeEventD1Ev",
+	"NULL or _ZN12QResizeEventD0Ev",
 	};
 
 struct classvtable _12QResizeEvent_of_libqt_mt_so_3_vtable [1] = {
@@ -45433,8 +45433,8 @@ struct classtypeinfo _14QXmlAttributes_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_14QXmlAttributes_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN14QXmlAttributesD1Ev",
-	"_ZN14QXmlAttributesD0Ev",
+	"NULL or _ZN14QXmlAttributesD1Ev",
+	"NULL or _ZN14QXmlAttributesD0Ev",
 	};
 
 struct classvtable _14QXmlAttributes_of_libqt_mt_so_3_vtable [1] = {
@@ -45478,7 +45478,7 @@ struct classtypeinfo _7QDialog_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_7QDialog_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK7QDialog10metaObjectEv",
+	"NULL or _ZNK7QDialog10metaObjectEv",
 	"_ZNK7QDialog9classNameEv",
 	"_ZN7QDialog7qt_castEPKc",
 	"_ZN7QDialog9qt_invokeEiP8QUObject",
@@ -45583,8 +45583,8 @@ const char *_7QDialog_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -45810,8 +45810,8 @@ struct classtypeinfo _12QTabletEvent_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_12QTabletEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN12QTabletEventD1Ev",
-	"_ZN12QTabletEventD0Ev",
+	"NULL or _ZN12QTabletEventD1Ev",
+	"NULL or _ZN12QTabletEventD0Ev",
 	};
 
 struct classvtable _12QTabletEvent_of_libqt_mt_so_3_vtable [1] = {
@@ -45855,8 +45855,8 @@ struct classtypeinfo _11QWidgetItem_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QWidgetItem_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN11QWidgetItemD1Ev",
-	"_ZN11QWidgetItemD0Ev",
+	"NULL or _ZN11QWidgetItemD1Ev",
+	"NULL or _ZN11QWidgetItemD0Ev",
 	"_ZNK11QWidgetItem8sizeHintEv",
 	"_ZNK11QWidgetItem11minimumSizeEv",
 	"_ZNK11QWidgetItem11maximumSizeEv",
@@ -45917,7 +45917,7 @@ const char *_4QDir_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN4QDirD1Ev",
 	"_ZN4QDirD0Ev",
 	"_ZN4QDir7setPathERK7QString",
-	"_ZNK4QDir4pathEv",
+	"NULL or _ZNK4QDir4pathEv",
 	"_ZNK4QDir7absPathEv",
 	"_ZNK4QDir13canonicalPathEv",
 	"_ZNK4QDir7dirNameEv",
@@ -45943,7 +45943,7 @@ const char *_4QDir_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK4QDir10isRelativeEv",
 	"_ZN4QDir12convertToAbsEv",
 	"_ZNK4QDireqERKS_",
-	"_ZNK4QDirneERKS_",
+	"NULL or _ZNK4QDirneERKS_",
 	"_ZN4QDir6removeERK7QStringb",
 	"_ZN4QDir6renameERK7QStringS2_b",
 	"_ZN4QDir6existsERK7QStringb",
@@ -46147,7 +46147,7 @@ struct classtypeinfo _11QFontDialog_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QFontDialog_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK11QFontDialog10metaObjectEv",
+	"NULL or _ZNK11QFontDialog10metaObjectEv",
 	"_ZNK11QFontDialog9classNameEv",
 	"_ZN11QFontDialog7qt_castEPKc",
 	"_ZN11QFontDialog9qt_invokeEiP8QUObject",
@@ -46252,8 +46252,8 @@ const char *_11QFontDialog_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -46412,7 +46412,7 @@ struct classtypeinfo _7QGArray_of_libqt_mt_so_3_typeinfo = {
 const char *_7QGArray_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QGArrayD1Ev",
 	"_ZN7QGArrayD0Ev",
-	"_ZN7QGArray6detachEv",
+	"NULL or _ZN7QGArray6detachEv",
 	"_ZN7QGArray7newDataEv",
 	"_ZN7QGArray10deleteDataEPNS_10array_dataE",
 	};
@@ -46458,11 +46458,11 @@ struct classtypeinfo _9QBitArray_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_9QBitArray_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN9QBitArrayD1Ev",
-	"_ZN9QBitArrayD0Ev",
+	"NULL or _ZN9QBitArrayD1Ev",
+	"NULL or _ZN9QBitArrayD0Ev",
 	"_ZN9QBitArray6detachEv",
-	"_ZN9QBitArray7newDataEv",
-	"_ZN9QBitArray10deleteDataEPN7QGArray10array_dataE",
+	"NULL or _ZN9QBitArray7newDataEv",
+	"NULL or _ZN9QBitArray10deleteDataEPN7QGArray10array_dataE",
 	};
 
 struct classvtable _9QBitArray_of_libqt_mt_so_3_vtable [1] = {
@@ -46506,14 +46506,14 @@ struct classtypeinfo _9QCheckBox_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_9QCheckBox_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK9QCheckBox10metaObjectEv",
+	"NULL or _ZNK9QCheckBox10metaObjectEv",
 	"_ZNK9QCheckBox9classNameEv",
 	"_ZN9QCheckBox7qt_castEPKc",
 	"_ZN9QCheckBox9qt_invokeEiP8QUObject",
 	"_ZN9QCheckBox7qt_emitEiP8QUObject",
 	"_ZN9QCheckBox11qt_propertyEiiP8QVariant",
-	"_ZN9QCheckBoxD1Ev",
-	"_ZN9QCheckBoxD0Ev",
+	"NULL or _ZN9QCheckBoxD1Ev",
+	"NULL or _ZN9QCheckBoxD0Ev",
 	"_ZN7QWidget5eventEP6QEvent",
 	"_ZN7QObject11eventFilterEPS_P6QEvent",
 	"_ZN7QWidget7setNameEPKc",
@@ -46562,7 +46562,7 @@ const char *_9QCheckBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK9QCheckBox8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -46611,8 +46611,8 @@ const char *_9QCheckBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -46631,46 +46631,46 @@ const char *_9QCheckBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_9QCheckBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn40_N9QCheckBoxD1Ev",
+	"NULL or _ZThn40_N9QCheckBoxD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn80_N9QCheckBoxD1Ev",
+	"NULL or _ZThn80_N9QCheckBoxD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N9QCheckBoxD1Ev",
+	"NULL or _ZThn40_N9QCheckBoxD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn80_N9QCheckBoxD1Ev",
+	"NULL or _ZThn80_N9QCheckBoxD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_N9QCheckBoxD1Ev",
+	"NULL or _ZThn40_N9QCheckBoxD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N9QCheckBoxD1Ev",
+	"NULL or _ZThn80_N9QCheckBoxD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn80_N9QCheckBoxD1Ev",
+	"NULL or _ZThn80_N9QCheckBoxD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn80_N9QCheckBoxD0Ev",
+	"NULL or _ZThn80_N9QCheckBoxD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N9QCheckBoxD0Ev",
+	"NULL or _ZThn40_N9QCheckBoxD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn80_N9QCheckBoxD0Ev",
+	"NULL or _ZThn80_N9QCheckBoxD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_N9QCheckBoxD0Ev",
+	"NULL or _ZThn40_N9QCheckBoxD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N9QCheckBoxD0Ev",
+	"NULL or _ZThn80_N9QCheckBoxD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn80_N9QCheckBoxD0Ev",
+	"NULL or _ZThn80_N9QCheckBoxD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn40_N9QCheckBoxD0Ev",
+	"NULL or _ZThn40_N9QCheckBoxD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -46778,7 +46778,7 @@ struct classtypeinfo _11QDockWindow_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QDockWindow_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK11QDockWindow10metaObjectEv",
+	"NULL or _ZNK11QDockWindow10metaObjectEv",
 	"_ZNK11QDockWindow9classNameEv",
 	"_ZN11QDockWindow7qt_castEPKc",
 	"_ZN11QDockWindow9qt_invokeEiP8QUObject",
@@ -46834,7 +46834,7 @@ const char *_11QDockWindow_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK11QDockWindow8sizeHintEv",
 	"_ZNK11QDockWindow15minimumSizeHintEv",
@@ -46883,8 +46883,8 @@ const char *_11QDockWindow_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -46908,7 +46908,7 @@ const char *_11QDockWindow_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN11QDockWindow10setNewLineEb",
 	"_ZN11QDockWindow15setOpaqueMovingEb",
 	"_ZN11QDockWindow6undockEP7QWidget",
-	"_ZN11QDockWindow6undockEv",
+	"NULL or _ZN11QDockWindow6undockEv",
 	"_ZN11QDockWindow4dockEv",
 	"_ZN11QDockWindow14setOrientationEN2Qt11OrientationE",
 	};
@@ -47062,7 +47062,7 @@ struct classtypeinfo _18QImageFormatPlugin_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_18QImageFormatPlugin_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK18QImageFormatPlugin10metaObjectEv",
+	"NULL or _ZNK18QImageFormatPlugin10metaObjectEv",
 	"_ZNK18QImageFormatPlugin9classNameEv",
 	"_ZN18QImageFormatPlugin7qt_castEPKc",
 	"_ZN18QImageFormatPlugin9qt_invokeEiP8QUObject",
@@ -47187,7 +47187,7 @@ struct classtypeinfo _16QSqlResultShared_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_16QSqlResultShared_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK16QSqlResultShared10metaObjectEv",
+	"NULL or _ZNK16QSqlResultShared10metaObjectEv",
 	"_ZNK16QSqlResultShared9classNameEv",
 	"_ZN16QSqlResultShared7qt_castEPKc",
 	"_ZN16QSqlResultShared9qt_invokeEiP8QUObject",
@@ -47321,7 +47321,7 @@ struct classtypeinfo _13QServerSocket_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_13QServerSocket_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK13QServerSocket10metaObjectEv",
+	"NULL or _ZNK13QServerSocket10metaObjectEv",
 	"_ZNK13QServerSocket9classNameEv",
 	"_ZN13QServerSocket7qt_castEPKc",
 	"_ZN13QServerSocket9qt_invokeEiP8QUObject",
@@ -47441,8 +47441,8 @@ struct classtypeinfo _12QGb2312Codec_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_12QGb2312Codec_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN12QGb2312CodecD1Ev",
-	"_ZN12QGb2312CodecD0Ev",
+	"NULL or _ZN12QGb2312CodecD1Ev",
+	"NULL or _ZN12QGb2312CodecD0Ev",
 	"_ZNK12QGb2312Codec4nameEv",
 	"_ZNK10QTextCodec8mimeNameEv",
 	"_ZNK12QGb2312Codec7mibEnumEv",
@@ -47499,8 +47499,8 @@ struct classtypeinfo _11QFocusEvent_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QFocusEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN11QFocusEventD1Ev",
-	"_ZN11QFocusEventD0Ev",
+	"NULL or _ZN11QFocusEventD1Ev",
+	"NULL or _ZN11QFocusEventD0Ev",
 	};
 
 struct classvtable _11QFocusEvent_of_libqt_mt_so_3_vtable [1] = {
@@ -47544,8 +47544,8 @@ struct classtypeinfo _11QMouseEvent_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QMouseEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN11QMouseEventD1Ev",
-	"_ZN11QMouseEventD0Ev",
+	"NULL or _ZN11QMouseEventD1Ev",
+	"NULL or _ZN11QMouseEventD0Ev",
 	};
 
 struct classvtable _11QMouseEvent_of_libqt_mt_so_3_vtable [1] = {
@@ -47777,7 +47777,7 @@ struct classtypeinfo _11QSpinWidget_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QSpinWidget_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK11QSpinWidget10metaObjectEv",
+	"NULL or _ZNK11QSpinWidget10metaObjectEv",
 	"_ZNK11QSpinWidget9classNameEv",
 	"_ZN11QSpinWidget7qt_castEPKc",
 	"_ZN11QSpinWidget9qt_invokeEiP8QUObject",
@@ -47833,7 +47833,7 @@ const char *_11QSpinWidget_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK7QWidget8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -47882,8 +47882,8 @@ const char *_11QSpinWidget_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -48039,8 +48039,8 @@ struct classtypeinfo _11QChildEvent_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QChildEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN11QChildEventD1Ev",
-	"_ZN11QChildEventD0Ev",
+	"NULL or _ZN11QChildEventD1Ev",
+	"NULL or _ZN11QChildEventD0Ev",
 	};
 
 struct classvtable _11QChildEvent_of_libqt_mt_so_3_vtable [1] = {
@@ -48084,8 +48084,8 @@ struct classtypeinfo _12QTextOStream_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_12QTextOStream_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN12QTextOStreamD1Ev",
-	"_ZN12QTextOStreamD0Ev",
+	"NULL or _ZN12QTextOStreamD1Ev",
+	"NULL or _ZN12QTextOStreamD0Ev",
 	};
 
 struct classvtable _12QTextOStream_of_libqt_mt_so_3_vtable [1] = {
@@ -48129,12 +48129,12 @@ struct classtypeinfo _10QSignalVec_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_10QSignalVec_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK10QPtrVectorI15QConnectionListE5countEv",
-	"_ZN10QPtrVectorI15QConnectionListE5clearEv",
-	"_ZN10QSignalVecD1Ev",
-	"_ZN10QSignalVecD0Ev",
+	"NULL or _ZNK10QPtrVectorI15QConnectionListE5countEv",
+	"NULL or _ZN10QPtrVectorI15QConnectionListE5clearEv",
+	"NULL or _ZN10QSignalVecD1Ev",
+	"NULL or _ZN10QSignalVecD0Ev",
 	"_ZN14QPtrCollection7newItemEPv",
-	"_ZN10QPtrVectorI15QConnectionListE10deleteItemEPv",
+	"NULL or _ZN10QPtrVectorI15QConnectionListE10deleteItemEPv",
 	"_ZN8QGVector12compareItemsEPvS0_",
 	"_ZN8QGVector4readER11QDataStreamRPv",
 	"_ZNK8QGVector5writeER11QDataStreamPv",
@@ -48181,7 +48181,7 @@ struct classtypeinfo _10QValidator_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_10QValidator_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK10QValidator10metaObjectEv",
+	"NULL or _ZNK10QValidator10metaObjectEv",
 	"_ZNK10QValidator9classNameEv",
 	"_ZN10QValidator7qt_castEPKc",
 	"_ZN10QValidator9qt_invokeEiP8QUObject",
@@ -48247,7 +48247,7 @@ struct classtypeinfo _11QGridLayout_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QGridLayout_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK11QGridLayout10metaObjectEv",
+	"NULL or _ZNK11QGridLayout10metaObjectEv",
 	"_ZNK11QGridLayout9classNameEv",
 	"_ZN11QGridLayout7qt_castEPKc",
 	"_ZN11QGridLayout9qt_invokeEiP8QUObject",
@@ -48664,8 +48664,8 @@ struct classtypeinfo _12QHebrewCodec_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_12QHebrewCodec_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN12QHebrewCodecD1Ev",
-	"_ZN12QHebrewCodecD0Ev",
+	"NULL or _ZN12QHebrewCodecD1Ev",
+	"NULL or _ZN12QHebrewCodecD0Ev",
 	"_ZNK12QHebrewCodec4nameEv",
 	"_ZNK12QHebrewCodec8mimeNameEv",
 	"_ZNK12QHebrewCodec7mibEnumEv",
@@ -48722,7 +48722,7 @@ struct classtypeinfo _8QToolBox_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_8QToolBox_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK8QToolBox10metaObjectEv",
+	"NULL or _ZNK8QToolBox10metaObjectEv",
 	"_ZNK8QToolBox9classNameEv",
 	"_ZN8QToolBox7qt_castEPKc",
 	"_ZN8QToolBox9qt_invokeEiP8QUObject",
@@ -48778,7 +48778,7 @@ const char *_8QToolBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK6QFrame8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -48827,8 +48827,8 @@ const char *_8QToolBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -48993,7 +48993,7 @@ struct classtypeinfo _17QNetworkOperation_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_17QNetworkOperation_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK17QNetworkOperation10metaObjectEv",
+	"NULL or _ZNK17QNetworkOperation10metaObjectEv",
 	"_ZNK17QNetworkOperation9classNameEv",
 	"_ZN17QNetworkOperation7qt_castEPKc",
 	"_ZN17QNetworkOperation9qt_invokeEiP8QUObject",
@@ -49057,7 +49057,7 @@ struct classtypeinfo _5QHttp_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_5QHttp_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK5QHttp10metaObjectEv",
+	"NULL or _ZNK5QHttp10metaObjectEv",
 	"_ZNK5QHttp9classNameEv",
 	"_ZN5QHttp7qt_castEPKc",
 	"_ZN5QHttp9qt_invokeEiP8QUObject",
@@ -49136,7 +49136,7 @@ struct classtypeinfo _8QSqlForm_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_8QSqlForm_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK8QSqlForm10metaObjectEv",
+	"NULL or _ZNK8QSqlForm10metaObjectEv",
 	"_ZNK8QSqlForm9classNameEv",
 	"_ZN8QSqlForm7qt_castEPKc",
 	"_ZN8QSqlForm9qt_invokeEiP8QUObject",
@@ -49304,8 +49304,8 @@ struct classtypeinfo _15QIMComposeEvent_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_15QIMComposeEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN15QIMComposeEventD1Ev",
-	"_ZN15QIMComposeEventD0Ev",
+	"NULL or _ZN15QIMComposeEventD1Ev",
+	"NULL or _ZN15QIMComposeEventD0Ev",
 	};
 
 struct classvtable _15QIMComposeEvent_of_libqt_mt_so_3_vtable [1] = {
@@ -49394,7 +49394,7 @@ struct classtypeinfo _15QSessionManager_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_15QSessionManager_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK15QSessionManager10metaObjectEv",
+	"NULL or _ZNK15QSessionManager10metaObjectEv",
 	"_ZNK15QSessionManager9classNameEv",
 	"_ZN15QSessionManager7qt_castEPKc",
 	"_ZN15QSessionManager9qt_invokeEiP8QUObject",
@@ -49561,8 +49561,8 @@ struct classtypeinfo _11QSpacerItem_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QSpacerItem_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN11QSpacerItemD1Ev",
-	"_ZN11QSpacerItemD0Ev",
+	"NULL or _ZN11QSpacerItemD1Ev",
+	"NULL or _ZN11QSpacerItemD0Ev",
 	"_ZNK11QSpacerItem8sizeHintEv",
 	"_ZNK11QSpacerItem11minimumSizeEv",
 	"_ZNK11QSpacerItem11maximumSizeEv",
@@ -49621,7 +49621,7 @@ struct classtypeinfo _12QPrintDialog_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_12QPrintDialog_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK12QPrintDialog10metaObjectEv",
+	"NULL or _ZNK12QPrintDialog10metaObjectEv",
 	"_ZNK12QPrintDialog9classNameEv",
 	"_ZN12QPrintDialog7qt_castEPKc",
 	"_ZN12QPrintDialog9qt_invokeEiP8QUObject",
@@ -49726,8 +49726,8 @@ const char *_12QPrintDialog_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -49885,14 +49885,14 @@ struct classtypeinfo _12QProgressBar_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_12QProgressBar_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK12QProgressBar10metaObjectEv",
+	"NULL or _ZNK12QProgressBar10metaObjectEv",
 	"_ZNK12QProgressBar9classNameEv",
 	"_ZN12QProgressBar7qt_castEPKc",
 	"_ZN12QProgressBar9qt_invokeEiP8QUObject",
 	"_ZN12QProgressBar7qt_emitEiP8QUObject",
 	"_ZN12QProgressBar11qt_propertyEiiP8QVariant",
-	"_ZN12QProgressBarD1Ev",
-	"_ZN12QProgressBarD0Ev",
+	"NULL or _ZN12QProgressBarD1Ev",
+	"NULL or _ZN12QProgressBarD0Ev",
 	"_ZN7QWidget5eventEP6QEvent",
 	"_ZN7QObject11eventFilterEPS_P6QEvent",
 	"_ZN7QWidget7setNameEPKc",
@@ -49941,7 +49941,7 @@ const char *_12QProgressBar_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK12QProgressBar8sizeHintEv",
 	"_ZNK12QProgressBar15minimumSizeHintEv",
@@ -49990,8 +49990,8 @@ const char *_12QProgressBar_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -50010,46 +50010,46 @@ const char *_12QProgressBar_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_12QProgressBar_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn40_N12QProgressBarD1Ev",
+	"NULL or _ZThn40_N12QProgressBarD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn80_N12QProgressBarD1Ev",
+	"NULL or _ZThn80_N12QProgressBarD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N12QProgressBarD1Ev",
+	"NULL or _ZThn40_N12QProgressBarD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn80_N12QProgressBarD1Ev",
+	"NULL or _ZThn80_N12QProgressBarD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_N12QProgressBarD1Ev",
+	"NULL or _ZThn40_N12QProgressBarD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N12QProgressBarD1Ev",
+	"NULL or _ZThn80_N12QProgressBarD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn80_N12QProgressBarD1Ev",
+	"NULL or _ZThn80_N12QProgressBarD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn80_N12QProgressBarD0Ev",
+	"NULL or _ZThn80_N12QProgressBarD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N12QProgressBarD0Ev",
+	"NULL or _ZThn40_N12QProgressBarD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn80_N12QProgressBarD0Ev",
+	"NULL or _ZThn80_N12QProgressBarD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_N12QProgressBarD0Ev",
+	"NULL or _ZThn40_N12QProgressBarD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N12QProgressBarD0Ev",
+	"NULL or _ZThn80_N12QProgressBarD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn80_N12QProgressBarD0Ev",
+	"NULL or _ZThn80_N12QProgressBarD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn40_N12QProgressBarD0Ev",
+	"NULL or _ZThn40_N12QProgressBarD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -50373,11 +50373,11 @@ const char *_14QCheckListItem_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN14QCheckListItemD0Ev",
 	"_ZN13QListViewItem10insertItemEPS_",
 	"_ZN13QListViewItem8takeItemEPS_",
-	"_ZN13QListViewItem10removeItemEPS_",
+	"NULL or _ZN13QListViewItem10removeItemEPS_",
 	"_ZN13QListViewItem16invalidateHeightEv",
 	"_ZNK14QCheckListItem5widthERK12QFontMetricsPK9QListViewi",
 	"_ZN13QListViewItem7setTextEiRK7QString",
-	"_ZNK14QCheckListItem4textEi",
+	"NULL or _ZNK14QCheckListItem4textEi",
 	"_ZN13QListViewItem9setPixmapEiRK7QPixmap",
 	"_ZNK13QListViewItem6pixmapEi",
 	"_ZNK13QListViewItem3keyEib",
@@ -50453,7 +50453,7 @@ struct classtypeinfo _13QSignalMapper_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_13QSignalMapper_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK13QSignalMapper10metaObjectEv",
+	"NULL or _ZNK13QSignalMapper10metaObjectEv",
 	"_ZNK13QSignalMapper9classNameEv",
 	"_ZN13QSignalMapper7qt_castEPKc",
 	"_ZN13QSignalMapper9qt_invokeEiP8QUObject",
@@ -50519,7 +50519,7 @@ struct classtypeinfo _9QDockArea_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_9QDockArea_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK9QDockArea10metaObjectEv",
+	"NULL or _ZNK9QDockArea10metaObjectEv",
 	"_ZNK9QDockArea9classNameEv",
 	"_ZN9QDockArea7qt_castEPKc",
 	"_ZN9QDockArea9qt_invokeEiP8QUObject",
@@ -50575,7 +50575,7 @@ const char *_9QDockArea_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK7QWidget8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -50624,8 +50624,8 @@ const char *_9QDockArea_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -50782,7 +50782,7 @@ struct classtypeinfo _8QCString_of_libqt_mt_so_3_typeinfo = {
 const char *_8QCString_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN8QCStringD1Ev",
 	"_ZN8QCStringD0Ev",
-	"_ZN9QMemArrayIcE6detachEv",
+	"NULL or _ZN9QMemArrayIcE6detachEv",
 	"_ZN7QGArray7newDataEv",
 	"_ZN7QGArray10deleteDataEPNS_10array_dataE",
 	};
@@ -50828,7 +50828,7 @@ struct classtypeinfo _6QStyle_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_6QStyle_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK6QStyle10metaObjectEv",
+	"NULL or _ZNK6QStyle10metaObjectEv",
 	"_ZNK6QStyle9classNameEv",
 	"_ZN6QStyle7qt_castEPKc",
 	"_ZN6QStyle9qt_invokeEiP8QUObject",
@@ -50957,7 +50957,7 @@ struct classtypeinfo _12QColorDialog_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_12QColorDialog_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK12QColorDialog10metaObjectEv",
+	"NULL or _ZNK12QColorDialog10metaObjectEv",
 	"_ZNK12QColorDialog9classNameEv",
 	"_ZN12QColorDialog7qt_castEPKc",
 	"_ZN12QColorDialog9qt_invokeEiP8QUObject",
@@ -51062,8 +51062,8 @@ const char *_12QColorDialog_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -51220,7 +51220,7 @@ struct classtypeinfo _18QGuardedPtrPrivate_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_18QGuardedPtrPrivate_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK18QGuardedPtrPrivate10metaObjectEv",
+	"NULL or _ZNK18QGuardedPtrPrivate10metaObjectEv",
 	"_ZNK18QGuardedPtrPrivate9classNameEv",
 	"_ZN18QGuardedPtrPrivate7qt_castEPKc",
 	"_ZN18QGuardedPtrPrivate9qt_invokeEiP8QUObject",
@@ -51306,7 +51306,7 @@ struct classtypeinfo _12QApplication_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_12QApplication_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK12QApplication10metaObjectEv",
+	"NULL or _ZNK12QApplication10metaObjectEv",
 	"_ZNK12QApplication9classNameEv",
 	"_ZN12QApplication7qt_castEPKc",
 	"_ZN12QApplication9qt_invokeEiP8QUObject",
@@ -51381,7 +51381,7 @@ const char *_13QListViewItem_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN13QListViewItemD0Ev",
 	"_ZN13QListViewItem10insertItemEPS_",
 	"_ZN13QListViewItem8takeItemEPS_",
-	"_ZN13QListViewItem10removeItemEPS_",
+	"NULL or _ZN13QListViewItem10removeItemEPS_",
 	"_ZN13QListViewItem16invalidateHeightEv",
 	"_ZNK13QListViewItem5widthERK12QFontMetricsPK9QListViewi",
 	"_ZN13QListViewItem7setTextEiRK7QString",
@@ -51459,7 +51459,7 @@ struct classtypeinfo _9QIconView_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_9QIconView_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK9QIconView10metaObjectEv",
+	"NULL or _ZNK9QIconView10metaObjectEv",
 	"_ZNK9QIconView9classNameEv",
 	"_ZN9QIconView7qt_castEPKc",
 	"_ZN9QIconView9qt_invokeEiP8QUObject",
@@ -51515,7 +51515,7 @@ const char *_9QIconView_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN11QScrollView6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK9QIconView8sizeHintEv",
 	"_ZNK9QIconView15minimumSizeHintEv",
@@ -51564,8 +51564,8 @@ const char *_9QIconView_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN11QScrollView18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -51866,7 +51866,7 @@ struct classtypeinfo _7QWidget_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_7QWidget_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK7QWidget10metaObjectEv",
+	"NULL or _ZNK7QWidget10metaObjectEv",
 	"_ZNK7QWidget9classNameEv",
 	"_ZN7QWidget7qt_castEPKc",
 	"_ZN7QWidget9qt_invokeEiP8QUObject",
@@ -51922,7 +51922,7 @@ const char *_7QWidget_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK7QWidget8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -51971,8 +51971,8 @@ const char *_7QWidget_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -52149,7 +52149,7 @@ struct classtypeinfo _4QDns_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_4QDns_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK4QDns10metaObjectEv",
+	"NULL or _ZNK4QDns10metaObjectEv",
 	"_ZNK4QDns9classNameEv",
 	"_ZN4QDns7qt_castEPKc",
 	"_ZN4QDns9qt_invokeEiP8QUObject",
@@ -52381,7 +52381,7 @@ struct classtypeinfo _16QDoubleValidator_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_16QDoubleValidator_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK16QDoubleValidator10metaObjectEv",
+	"NULL or _ZNK16QDoubleValidator10metaObjectEv",
 	"_ZNK16QDoubleValidator9classNameEv",
 	"_ZN16QDoubleValidator7qt_castEPKc",
 	"_ZN16QDoubleValidator9qt_invokeEiP8QUObject",
@@ -52506,7 +52506,7 @@ struct classtypeinfo _12QInputDialog_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_12QInputDialog_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK12QInputDialog10metaObjectEv",
+	"NULL or _ZNK12QInputDialog10metaObjectEv",
 	"_ZNK12QInputDialog9classNameEv",
 	"_ZN12QInputDialog7qt_castEPKc",
 	"_ZN12QInputDialog9qt_invokeEiP8QUObject",
@@ -52611,8 +52611,8 @@ const char *_12QInputDialog_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -52770,7 +52770,7 @@ struct classtypeinfo _6QGDict_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_6QGDict_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK6QGDict5countEv",
+	"NULL or _ZNK6QGDict5countEv",
 	"_ZN6QGDict5clearEv",
 	"_ZN6QGDictD1Ev",
 	"_ZN6QGDictD0Ev",
@@ -52867,7 +52867,7 @@ struct classtypeinfo _10QWorkspace_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_10QWorkspace_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK10QWorkspace10metaObjectEv",
+	"NULL or _ZNK10QWorkspace10metaObjectEv",
 	"_ZNK10QWorkspace9classNameEv",
 	"_ZN10QWorkspace7qt_castEPKc",
 	"_ZN10QWorkspace9qt_invokeEiP8QUObject",
@@ -52923,7 +52923,7 @@ const char *_10QWorkspace_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK10QWorkspace8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -52972,8 +52972,8 @@ const char *_10QWorkspace_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -53128,7 +53128,7 @@ struct classtypeinfo _10QTabDialog_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_10QTabDialog_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK10QTabDialog10metaObjectEv",
+	"NULL or _ZNK10QTabDialog10metaObjectEv",
 	"_ZNK10QTabDialog9classNameEv",
 	"_ZN10QTabDialog7qt_castEPKc",
 	"_ZN10QTabDialog9qt_invokeEiP8QUObject",
@@ -53233,8 +53233,8 @@ const char *_10QTabDialog_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -53392,8 +53392,8 @@ struct classtypeinfo _18QHttpRequestHeader_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_18QHttpRequestHeader_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN18QHttpRequestHeaderD1Ev",
-	"_ZN18QHttpRequestHeaderD0Ev",
+	"NULL or _ZN18QHttpRequestHeaderD1Ev",
+	"NULL or _ZN18QHttpRequestHeaderD0Ev",
 	"_ZNK18QHttpRequestHeader8toStringEv",
 	"_ZNK18QHttpRequestHeader12majorVersionEv",
 	"_ZNK18QHttpRequestHeader12minorVersionEv",
@@ -53440,7 +53440,7 @@ struct classtypeinfo _11QDragObject_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QDragObject_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK11QDragObject10metaObjectEv",
+	"NULL or _ZNK11QDragObject10metaObjectEv",
 	"_ZNK11QDragObject9classNameEv",
 	"_ZN11QDragObject7qt_castEPKc",
 	"_ZN11QDragObject9qt_invokeEiP8QUObject",
@@ -53611,7 +53611,7 @@ struct classtypeinfo _13QToolTipGroup_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_13QToolTipGroup_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK13QToolTipGroup10metaObjectEv",
+	"NULL or _ZNK13QToolTipGroup10metaObjectEv",
 	"_ZNK13QToolTipGroup9classNameEv",
 	"_ZN13QToolTipGroup7qt_castEPKc",
 	"_ZN13QToolTipGroup9qt_invokeEiP8QUObject",
@@ -53675,14 +53675,14 @@ struct classtypeinfo _17QDateTimeEditBase_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_17QDateTimeEditBase_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK17QDateTimeEditBase10metaObjectEv",
+	"NULL or _ZNK17QDateTimeEditBase10metaObjectEv",
 	"_ZNK17QDateTimeEditBase9classNameEv",
 	"_ZN17QDateTimeEditBase7qt_castEPKc",
 	"_ZN17QDateTimeEditBase9qt_invokeEiP8QUObject",
 	"_ZN17QDateTimeEditBase7qt_emitEiP8QUObject",
 	"_ZN17QDateTimeEditBase11qt_propertyEiiP8QVariant",
-	"_ZN17QDateTimeEditBaseD1Ev",
-	"_ZN17QDateTimeEditBaseD0Ev",
+	"NULL or _ZN17QDateTimeEditBaseD1Ev",
+	"NULL or _ZN17QDateTimeEditBaseD0Ev",
 	"_ZN7QWidget5eventEP6QEvent",
 	"_ZN7QObject11eventFilterEPS_P6QEvent",
 	"_ZN7QWidget7setNameEPKc",
@@ -53731,7 +53731,7 @@ const char *_17QDateTimeEditBase_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK7QWidget8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -53780,8 +53780,8 @@ const char *_17QDateTimeEditBase_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -53795,46 +53795,46 @@ const char *_17QDateTimeEditBase_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_17QDateTimeEditBase_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn40_N17QDateTimeEditBaseD1Ev",
+	"NULL or _ZThn40_N17QDateTimeEditBaseD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn80_N17QDateTimeEditBaseD1Ev",
+	"NULL or _ZThn80_N17QDateTimeEditBaseD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N17QDateTimeEditBaseD1Ev",
+	"NULL or _ZThn40_N17QDateTimeEditBaseD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn80_N17QDateTimeEditBaseD1Ev",
+	"NULL or _ZThn80_N17QDateTimeEditBaseD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_N17QDateTimeEditBaseD1Ev",
+	"NULL or _ZThn40_N17QDateTimeEditBaseD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N17QDateTimeEditBaseD1Ev",
+	"NULL or _ZThn80_N17QDateTimeEditBaseD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn80_N17QDateTimeEditBaseD1Ev",
+	"NULL or _ZThn80_N17QDateTimeEditBaseD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn80_N17QDateTimeEditBaseD0Ev",
+	"NULL or _ZThn80_N17QDateTimeEditBaseD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N17QDateTimeEditBaseD0Ev",
+	"NULL or _ZThn40_N17QDateTimeEditBaseD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn80_N17QDateTimeEditBaseD0Ev",
+	"NULL or _ZThn80_N17QDateTimeEditBaseD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_N17QDateTimeEditBaseD0Ev",
+	"NULL or _ZThn40_N17QDateTimeEditBaseD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N17QDateTimeEditBaseD0Ev",
+	"NULL or _ZThn80_N17QDateTimeEditBaseD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn80_N17QDateTimeEditBaseD0Ev",
+	"NULL or _ZThn80_N17QDateTimeEditBaseD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn40_N17QDateTimeEditBaseD0Ev",
+	"NULL or _ZThn40_N17QDateTimeEditBaseD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -53990,8 +53990,8 @@ struct classtypeinfo _10QShowEvent_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_10QShowEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN10QShowEventD1Ev",
-	"_ZN10QShowEventD0Ev",
+	"NULL or _ZN10QShowEventD1Ev",
+	"NULL or _ZN10QShowEventD0Ev",
 	};
 
 struct classvtable _10QShowEvent_of_libqt_mt_so_3_vtable [1] = {
@@ -54035,7 +54035,7 @@ struct classtypeinfo _6QTable_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_6QTable_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK6QTable10metaObjectEv",
+	"NULL or _ZNK6QTable10metaObjectEv",
 	"_ZNK6QTable9classNameEv",
 	"_ZN6QTable7qt_castEPKc",
 	"_ZN6QTable9qt_invokeEiP8QUObject",
@@ -54091,7 +54091,7 @@ const char *_6QTable_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN11QScrollView6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK6QTable8sizeHintEv",
 	"_ZNK11QScrollView15minimumSizeHintEv",
@@ -54140,8 +54140,8 @@ const char *_6QTable_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN11QScrollView18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -54419,14 +54419,14 @@ struct classtypeinfo _8QLocalFs_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_8QLocalFs_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK8QLocalFs10metaObjectEv",
+	"NULL or _ZNK8QLocalFs10metaObjectEv",
 	"_ZNK8QLocalFs9classNameEv",
 	"_ZN8QLocalFs7qt_castEPKc",
 	"_ZN8QLocalFs9qt_invokeEiP8QUObject",
 	"_ZN8QLocalFs7qt_emitEiP8QUObject",
 	"_ZN8QLocalFs11qt_propertyEiiP8QVariant",
-	"_ZN8QLocalFsD1Ev",
-	"_ZN8QLocalFsD0Ev",
+	"NULL or _ZN8QLocalFsD1Ev",
+	"NULL or _ZN8QLocalFsD0Ev",
 	"_ZN7QObject5eventEP6QEvent",
 	"_ZN7QObject11eventFilterEPS_P6QEvent",
 	"_ZN7QObject7setNameEPKc",
@@ -54567,7 +54567,7 @@ struct classtypeinfo _9QDateEdit_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_9QDateEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK9QDateEdit10metaObjectEv",
+	"NULL or _ZNK9QDateEdit10metaObjectEv",
 	"_ZNK9QDateEdit9classNameEv",
 	"_ZN9QDateEdit7qt_castEPKc",
 	"_ZN9QDateEdit9qt_invokeEiP8QUObject",
@@ -54623,7 +54623,7 @@ const char *_9QDateEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK9QDateEdit8sizeHintEv",
 	"_ZNK9QDateEdit15minimumSizeHintEv",
@@ -54672,8 +54672,8 @@ const char *_9QDateEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -54686,8 +54686,8 @@ const char *_9QDateEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QDateEdit7setDateERK5QDate",
 	"_ZN9QDateEdit8setOrderENS_5OrderE",
 	"_ZN9QDateEdit14setAutoAdvanceEb",
-	"_ZN9QDateEdit11setMinValueERK5QDate",
-	"_ZN9QDateEdit11setMaxValueERK5QDate",
+	"NULL or _ZN9QDateEdit11setMinValueERK5QDate",
+	"NULL or _ZN9QDateEdit11setMaxValueERK5QDate",
 	"_ZN9QDateEdit8setRangeERK5QDateS2_",
 	"_ZN9QDateEdit12setSeparatorERK7QString",
 	"_ZN9QDateEdit7setYearEi",
@@ -54846,8 +54846,8 @@ struct classtypeinfo _11QPaintEvent_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QPaintEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN11QPaintEventD1Ev",
-	"_ZN11QPaintEventD0Ev",
+	"NULL or _ZN11QPaintEventD1Ev",
+	"NULL or _ZN11QPaintEventD0Ev",
 	};
 
 struct classvtable _11QPaintEvent_of_libqt_mt_so_3_vtable [1] = {
@@ -54891,7 +54891,7 @@ struct classtypeinfo _6QAccel_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_6QAccel_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK6QAccel10metaObjectEv",
+	"NULL or _ZNK6QAccel10metaObjectEv",
 	"_ZNK6QAccel9classNameEv",
 	"_ZN6QAccel7qt_castEPKc",
 	"_ZN6QAccel9qt_invokeEiP8QUObject",
@@ -54955,7 +54955,7 @@ struct classtypeinfo _7QCanvas_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_7QCanvas_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK7QCanvas10metaObjectEv",
+	"NULL or _ZNK7QCanvas10metaObjectEv",
 	"_ZNK7QCanvas9classNameEv",
 	"_ZN7QCanvas7qt_castEPKc",
 	"_ZN7QCanvas9qt_invokeEiP8QUObject",
@@ -55221,7 +55221,7 @@ struct classtypeinfo _11QPushButton_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QPushButton_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK11QPushButton10metaObjectEv",
+	"NULL or _ZNK11QPushButton10metaObjectEv",
 	"_ZNK11QPushButton9classNameEv",
 	"_ZN11QPushButton7qt_castEPKc",
 	"_ZN11QPushButton9qt_invokeEiP8QUObject",
@@ -55326,8 +55326,8 @@ const char *_11QPushButton_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -55344,7 +55344,7 @@ const char *_11QPushButton_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QButton8setGroupEP12QButtonGroup",
 	"_ZN11QPushButton14setAutoDefaultEb",
 	"_ZN11QPushButton10setDefaultEb",
-	"_ZN11QPushButton15setIsMenuButtonEb",
+	"NULL or _ZN11QPushButton15setIsMenuButtonEb",
 	"_ZN11QPushButton5setOnEb",
 	};
 
@@ -55497,12 +55497,12 @@ struct classtypeinfo _11QWidgetList_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QWidgetList_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK8QPtrListI7QWidgetE5countEv",
-	"_ZN8QPtrListI7QWidgetE5clearEv",
-	"_ZN11QWidgetListD1Ev",
-	"_ZN11QWidgetListD0Ev",
+	"NULL or _ZNK8QPtrListI7QWidgetE5countEv",
+	"NULL or _ZN8QPtrListI7QWidgetE5clearEv",
+	"NULL or _ZN11QWidgetListD1Ev",
+	"NULL or _ZN11QWidgetListD0Ev",
 	"_ZN14QPtrCollection7newItemEPv",
-	"_ZN8QPtrListI7QWidgetE10deleteItemEPv",
+	"NULL or _ZN8QPtrListI7QWidgetE10deleteItemEPv",
 	"_ZN6QGList12compareItemsEPvS0_",
 	"_ZN6QGList4readER11QDataStreamRPv",
 	"_ZNK6QGList5writeER11QDataStreamPv",
@@ -55600,7 +55600,7 @@ struct classtypeinfo _9QDataView_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_9QDataView_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK9QDataView10metaObjectEv",
+	"NULL or _ZNK9QDataView10metaObjectEv",
 	"_ZNK9QDataView9classNameEv",
 	"_ZN9QDataView7qt_castEPKc",
 	"_ZN9QDataView9qt_invokeEiP8QUObject",
@@ -55656,7 +55656,7 @@ const char *_9QDataView_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK7QWidget8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -55705,8 +55705,8 @@ const char *_9QDataView_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -55867,7 +55867,7 @@ struct classtypeinfo _17QSqlEditorFactory_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_17QSqlEditorFactory_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK7QObject10metaObjectEv",
+	"NULL or _ZNK7QObject10metaObjectEv",
 	"_ZNK7QObject9classNameEv",
 	"_ZN7QObject7qt_castEPKc",
 	"_ZN7QObject9qt_invokeEiP8QUObject",
@@ -55933,12 +55933,12 @@ struct classtypeinfo _15QConnectionList_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_15QConnectionList_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK8QPtrListI11QConnectionE5countEv",
-	"_ZN8QPtrListI11QConnectionE5clearEv",
-	"_ZN15QConnectionListD1Ev",
-	"_ZN15QConnectionListD0Ev",
+	"NULL or _ZNK8QPtrListI11QConnectionE5countEv",
+	"NULL or _ZN8QPtrListI11QConnectionE5clearEv",
+	"NULL or _ZN15QConnectionListD1Ev",
+	"NULL or _ZN15QConnectionListD0Ev",
 	"_ZN14QPtrCollection7newItemEPv",
-	"_ZN8QPtrListI11QConnectionE10deleteItemEPv",
+	"NULL or _ZN8QPtrListI11QConnectionE10deleteItemEPv",
 	"_ZN6QGList12compareItemsEPvS0_",
 	"_ZN6QGList4readER11QDataStreamRPv",
 	"_ZNK6QGList5writeER11QDataStreamPv",
@@ -56241,7 +56241,7 @@ struct classtypeinfo _7QAction_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_7QAction_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK7QAction10metaObjectEv",
+	"NULL or _ZNK7QAction10metaObjectEv",
 	"_ZNK7QAction9classNameEv",
 	"_ZN7QAction7qt_castEPKc",
 	"_ZN7QAction9qt_invokeEiP8QUObject",
@@ -56363,8 +56363,8 @@ struct classtypeinfo _11QWheelEvent_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QWheelEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN11QWheelEventD1Ev",
-	"_ZN11QWheelEventD0Ev",
+	"NULL or _ZN11QWheelEventD1Ev",
+	"NULL or _ZN11QWheelEventD0Ev",
 	};
 
 struct classvtable _11QWheelEvent_of_libqt_mt_so_3_vtable [1] = {
@@ -56408,7 +56408,7 @@ struct classtypeinfo _12QDataBrowser_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_12QDataBrowser_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK12QDataBrowser10metaObjectEv",
+	"NULL or _ZNK12QDataBrowser10metaObjectEv",
 	"_ZNK12QDataBrowser9classNameEv",
 	"_ZN12QDataBrowser7qt_castEPKc",
 	"_ZN12QDataBrowser9qt_invokeEiP8QUObject",
@@ -56464,7 +56464,7 @@ const char *_12QDataBrowser_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK7QWidget8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -56513,8 +56513,8 @@ const char *_12QDataBrowser_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -56697,7 +56697,7 @@ struct classtypeinfo _9QTimeEdit_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_9QTimeEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK9QTimeEdit10metaObjectEv",
+	"NULL or _ZNK9QTimeEdit10metaObjectEv",
 	"_ZNK9QTimeEdit9classNameEv",
 	"_ZN9QTimeEdit7qt_castEPKc",
 	"_ZN9QTimeEdit9qt_invokeEiP8QUObject",
@@ -56753,7 +56753,7 @@ const char *_9QTimeEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK9QTimeEdit8sizeHintEv",
 	"_ZNK9QTimeEdit15minimumSizeHintEv",
@@ -56802,8 +56802,8 @@ const char *_9QTimeEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -56815,8 +56815,8 @@ const char *_9QTimeEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QTimeEdit8stepDownEv",
 	"_ZN9QTimeEdit7setTimeERK5QTime",
 	"_ZN9QTimeEdit14setAutoAdvanceEb",
-	"_ZN9QTimeEdit11setMinValueERK5QTime",
-	"_ZN9QTimeEdit11setMaxValueERK5QTime",
+	"NULL or _ZN9QTimeEdit11setMinValueERK5QTime",
+	"NULL or _ZN9QTimeEdit11setMaxValueERK5QTime",
 	"_ZN9QTimeEdit8setRangeERK5QTimeS2_",
 	"_ZN9QTimeEdit12setSeparatorERK7QString",
 	"_ZNK9QTimeEdit10outOfRangeEiii",
@@ -57067,7 +57067,7 @@ struct classtypeinfo _4QFtp_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_4QFtp_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK4QFtp10metaObjectEv",
+	"NULL or _ZNK4QFtp10metaObjectEv",
 	"_ZNK4QFtp9classNameEv",
 	"_ZN4QFtp7qt_castEPKc",
 	"_ZN4QFtp9qt_invokeEiP8QUObject",
@@ -57205,8 +57205,8 @@ struct classtypeinfo _10QMoveEvent_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_10QMoveEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN10QMoveEventD1Ev",
-	"_ZN10QMoveEventD0Ev",
+	"NULL or _ZN10QMoveEventD1Ev",
+	"NULL or _ZN10QMoveEventD0Ev",
 	};
 
 struct classvtable _10QMoveEvent_of_libqt_mt_so_3_vtable [1] = {
@@ -57250,7 +57250,7 @@ struct classtypeinfo _9QTextEdit_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_9QTextEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK9QTextEdit10metaObjectEv",
+	"NULL or _ZNK9QTextEdit10metaObjectEv",
 	"_ZNK9QTextEdit9classNameEv",
 	"_ZN9QTextEdit7qt_castEPKc",
 	"_ZN9QTextEdit9qt_invokeEiP8QUObject",
@@ -57306,7 +57306,7 @@ const char *_9QTextEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN11QScrollView6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK9QTextEdit8sizeHintEv",
 	"_ZNK11QScrollView15minimumSizeHintEv",
@@ -57355,8 +57355,8 @@ const char *_9QTextEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN9QTextEdit18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -57422,9 +57422,9 @@ const char *_9QTextEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QTextEdit9selectAllEb",
 	"_ZN9QTextEdit15setTabStopWidthEi",
 	"_ZN9QTextEdit6zoomInEi",
-	"_ZN9QTextEdit6zoomInEv",
+	"NULL or _ZN9QTextEdit6zoomInEv",
 	"_ZN9QTextEdit7zoomOutEi",
-	"_ZN9QTextEdit7zoomOutEv",
+	"NULL or _ZN9QTextEdit7zoomOutEv",
 	"_ZN9QTextEdit6zoomToEi",
 	"_ZN9QTextEdit4syncEv",
 	"_ZN9QTextEdit11setReadOnlyEb",
@@ -57458,8 +57458,8 @@ const char *_9QTextEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QTextEdit16doKeyboardActionENS_14KeyboardActionE",
 	"_ZN9QTextEdit18removeSelectedTextEi",
 	"_ZN9QTextEdit15removeSelectionEi",
-	"_ZN9QTextEdit14setCurrentFontERK5QFont",
-	"_ZN9QTextEdit16setOverwriteModeEb",
+	"NULL or _ZN9QTextEdit14setCurrentFontERK5QFont",
+	"NULL or _ZN9QTextEdit16setOverwriteModeEb",
 	"_ZN9QTextEdit14scrollToBottomEv",
 	"_ZN9QTextEdit6insertERK7QStringbbb",
 	"_ZN9QTextEdit8insertAtERK7QStringii",
@@ -57471,9 +57471,9 @@ const char *_9QTextEdit_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QTextEdit15createPopupMenuERK6QPoint",
 	"_ZN9QTextEdit15createPopupMenuEv",
 	"_ZN9QTextEdit16doChangeIntervalEv",
-	"_ZNK9QTextEdit12linksEnabledEv",
-	"_ZN9QTextEdit15emitHighlightedERK7QString",
-	"_ZN9QTextEdit15emitLinkClickedERK7QString",
+	"NULL or _ZNK9QTextEdit12linksEnabledEv",
+	"NULL or _ZN9QTextEdit15emitHighlightedERK7QString",
+	"NULL or _ZN9QTextEdit15emitLinkClickedERK7QString",
 	};
 
 const char *_9QTextEdit_of_libqt_mt_so_3_vtable_name_1 [] = {
@@ -57625,14 +57625,14 @@ struct classtypeinfo _17QFileIconProvider_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_17QFileIconProvider_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK17QFileIconProvider10metaObjectEv",
+	"NULL or _ZNK17QFileIconProvider10metaObjectEv",
 	"_ZNK17QFileIconProvider9classNameEv",
 	"_ZN17QFileIconProvider7qt_castEPKc",
 	"_ZN17QFileIconProvider9qt_invokeEiP8QUObject",
 	"_ZN17QFileIconProvider7qt_emitEiP8QUObject",
 	"_ZN17QFileIconProvider11qt_propertyEiiP8QVariant",
-	"_ZN17QFileIconProviderD1Ev",
-	"_ZN17QFileIconProviderD0Ev",
+	"NULL or _ZN17QFileIconProviderD1Ev",
+	"NULL or _ZN17QFileIconProviderD0Ev",
 	"_ZN7QObject5eventEP6QEvent",
 	"_ZN7QObject11eventFilterEPS_P6QEvent",
 	"_ZN7QObject7setNameEPKc",
@@ -57756,7 +57756,7 @@ const char *_9QSqlField_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN9QSqlFieldD1Ev",
 	"_ZN9QSqlFieldD0Ev",
 	"_ZN9QSqlField8setValueERK8QVariant",
-	"_ZNK9QSqlField5valueEv",
+	"NULL or _ZNK9QSqlField5valueEv",
 	"_ZN9QSqlField7setNameERK7QString",
 	"_ZN9QSqlField7setNullEv",
 	"_ZN9QSqlField11setReadOnlyEb",
@@ -57803,7 +57803,7 @@ struct classtypeinfo _10QVGroupBox_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_10QVGroupBox_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZNK10QVGroupBox10metaObjectEv",
+	"NULL or _ZNK10QVGroupBox10metaObjectEv",
 	"_ZNK10QVGroupBox9classNameEv",
 	"_ZN10QVGroupBox7qt_castEPKc",
 	"_ZN10QVGroupBox9qt_invokeEiP8QUObject",
@@ -57859,7 +57859,7 @@ const char *_10QVGroupBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZN7QWidget4moveEii",
 	"_ZN7QWidget6resizeEii",
 	"_ZN7QWidget11setGeometryEiiii",
-	"_ZN7QWidget11setGeometryERK5QRect",
+	"NULL or _ZN7QWidget11setGeometryERK5QRect",
 	"_ZN7QWidget5closeEb",
 	"_ZNK9QGroupBox8sizeHintEv",
 	"_ZNK7QWidget15minimumSizeHintEv",
@@ -57908,8 +57908,8 @@ const char *_10QVGroupBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 	"_ZNK7QWidget6metricEi",
 	"_ZN7QWidget6createEmbb",
 	"_ZN7QWidget7destroyEbb",
-	"_ZN7QWidget9setWStateEj",
-	"_ZN7QWidget9setWFlagsEj",
+	"NULL or _ZN7QWidget9setWStateEj",
+	"NULL or _ZN7QWidget9setWFlagsEj",
 	"_ZN7QWidget18focusNextPrevChildEb",
 	"_ZN7QWidget17setKeyCompressionEb",
 	"_ZN7QWidget17setMicroFocusHintEiiiibP5QFont",
@@ -58075,8 +58075,8 @@ struct classtypeinfo _11QCloseEvent_of_libqt_mt_so_3_typeinfo = {
 	};
 
 const char *_11QCloseEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"_ZN11QCloseEventD1Ev",
-	"_ZN11QCloseEventD0Ev",
+	"NULL or _ZN11QCloseEventD1Ev",
+	"NULL or _ZN11QCloseEventD0Ev",
 	};
 
 struct classvtable _11QCloseEvent_of_libqt_mt_so_3_vtable [1] = {
