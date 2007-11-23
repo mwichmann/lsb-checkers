@@ -599,7 +599,7 @@ struct classtypeinfo _14QGLPixelBuffer_of_libQtOpenGL_so_4_typeinfo = {
 const char *_14QGLPixelBuffer_of_libQtOpenGL_so_4_vtable_name_0 [] = {
 	"_ZN14QGLPixelBufferD1Ev",
 	"_ZN14QGLPixelBufferD0Ev",
-	"_ZNK14QGLPixelBuffer7devTypeEv",
+	"NULL or _ZNK14QGLPixelBuffer7devTypeEv",
 	"_ZNK14QGLPixelBuffer11paintEngineEv",
 	"_ZNK14QGLPixelBuffer6metricEN12QPaintDevice17PaintDeviceMetricE",
 	};

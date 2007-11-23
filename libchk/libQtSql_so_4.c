@@ -526,8 +526,8 @@ struct classtypeinfo _26QSqlDriverFactoryInterface_of_libQtSql_so_4_typeinfo = {
 	};
 
 const char *_26QSqlDriverFactoryInterface_of_libQtSql_so_4_vtable_name_0 [] = {
-	"_ZN26QSqlDriverFactoryInterfaceD1Ev",
-	"_ZN26QSqlDriverFactoryInterfaceD0Ev",
+	"NULL or _ZN26QSqlDriverFactoryInterfaceD1Ev",
+	"NULL or _ZN26QSqlDriverFactoryInterfaceD0Ev",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	};
