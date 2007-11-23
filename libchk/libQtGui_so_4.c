@@ -13257,8 +13257,8 @@ struct classtypeinfo _17QInputMethodEvent_of_libQtGui_so_4_typeinfo = {
 	};
 
 const char *_17QInputMethodEvent_of_libQtGui_so_4_vtable_name_0 [] = {
-	"_ZN17QInputMethodEventD1Ev",
-	"_ZN17QInputMethodEventD0Ev",
+	"NULL or _ZN17QInputMethodEventD1Ev",
+	"NULL or _ZN17QInputMethodEventD0Ev",
 	};
 
 struct classvtable _17QInputMethodEvent_of_libQtGui_so_4_vtable [1] = {
@@ -14388,8 +14388,8 @@ struct classtypeinfo _20QMenubarUpdatedEvent_of_libQtGui_so_4_typeinfo = {
 	};
 
 const char *_20QMenubarUpdatedEvent_of_libQtGui_so_4_vtable_name_0 [] = {
-	"_ZN20QMenubarUpdatedEventD1Ev",
-	"_ZN20QMenubarUpdatedEventD0Ev",
+	"NULL or _ZN20QMenubarUpdatedEventD1Ev",
+	"NULL or _ZN20QMenubarUpdatedEventD0Ev",
 	};
 
 struct classvtable _20QMenubarUpdatedEvent_of_libQtGui_so_4_vtable [1] = {
@@ -14555,8 +14555,8 @@ struct classtypeinfo _20QTextObjectInterface_of_libQtGui_so_4_typeinfo = {
 	};
 
 const char *_20QTextObjectInterface_of_libQtGui_so_4_vtable_name_0 [] = {
-	"_ZN20QTextObjectInterfaceD1Ev",
-	"_ZN20QTextObjectInterfaceD0Ev",
+	"NULL or _ZN20QTextObjectInterfaceD1Ev",
+	"NULL or _ZN20QTextObjectInterfaceD0Ev",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	};
@@ -14659,7 +14659,7 @@ struct classtypeinfo _12QPaintDevice_of_libQtGui_so_4_typeinfo = {
 const char *_12QPaintDevice_of_libQtGui_so_4_vtable_name_0 [] = {
 	"_ZN12QPaintDeviceD1Ev",
 	"_ZN12QPaintDeviceD0Ev",
-	"_ZNK12QPaintDevice7devTypeEv",
+	"NULL or _ZNK12QPaintDevice7devTypeEv",
 	"__cxa_pure_virtual",
 	"_ZNK12QPaintDevice6metricENS_17PaintDeviceMetricE",
 	};
@@ -15210,8 +15210,8 @@ const char *_24QAbstractPageSetupDialog_of_libQtGui_so_4_vtable_name_0 [] = {
 	"_ZNK7QDialog10metaObjectEv",
 	"_ZN7QDialog11qt_metacastEPKc",
 	"_ZN7QDialog11qt_metacallEN11QMetaObject4CallEiPPv",
-	"_ZN24QAbstractPageSetupDialogD1Ev",
-	"_ZN24QAbstractPageSetupDialogD0Ev",
+	"NULL or _ZN24QAbstractPageSetupDialogD1Ev",
+	"NULL or _ZN24QAbstractPageSetupDialogD0Ev",
 	"_ZN7QWidget5eventEP6QEvent",
 	"_ZN7QDialog11eventFilterEP7QObjectP6QEvent",
 	"_ZN7QObject10timerEventEP11QTimerEvent",
@@ -15269,46 +15269,46 @@ const char *_24QAbstractPageSetupDialog_of_libQtGui_so_4_vtable_name_0 [] = {
 
 const char *_24QAbstractPageSetupDialog_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn8_N24QAbstractPageSetupDialogD1Ev",
+	"NULL or _ZThn8_N24QAbstractPageSetupDialogD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N24QAbstractPageSetupDialogD1Ev",
+	"NULL or _ZThn16_N24QAbstractPageSetupDialogD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N24QAbstractPageSetupDialogD1Ev",
+	"NULL or _ZThn8_N24QAbstractPageSetupDialogD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N24QAbstractPageSetupDialogD1Ev",
+	"NULL or _ZThn16_N24QAbstractPageSetupDialogD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_N24QAbstractPageSetupDialogD1Ev",
+	"NULL or _ZThn8_N24QAbstractPageSetupDialogD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N24QAbstractPageSetupDialogD1Ev",
+	"NULL or _ZThn16_N24QAbstractPageSetupDialogD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N24QAbstractPageSetupDialogD1Ev",
+	"NULL or _ZThn16_N24QAbstractPageSetupDialogD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N24QAbstractPageSetupDialogD0Ev",
+	"NULL or _ZThn16_N24QAbstractPageSetupDialogD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N24QAbstractPageSetupDialogD0Ev",
+	"NULL or _ZThn8_N24QAbstractPageSetupDialogD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N24QAbstractPageSetupDialogD0Ev",
+	"NULL or _ZThn16_N24QAbstractPageSetupDialogD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_N24QAbstractPageSetupDialogD0Ev",
+	"NULL or _ZThn8_N24QAbstractPageSetupDialogD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N24QAbstractPageSetupDialogD0Ev",
+	"NULL or _ZThn16_N24QAbstractPageSetupDialogD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N24QAbstractPageSetupDialogD0Ev",
+	"NULL or _ZThn16_N24QAbstractPageSetupDialogD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn8_N24QAbstractPageSetupDialogD0Ev",
+	"NULL or _ZThn8_N24QAbstractPageSetupDialogD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
@@ -16905,8 +16905,8 @@ const char *_20QAbstractPrintDialog_of_libQtGui_so_4_vtable_name_0 [] = {
 	"_ZNK7QDialog10metaObjectEv",
 	"_ZN7QDialog11qt_metacastEPKc",
 	"_ZN7QDialog11qt_metacallEN11QMetaObject4CallEiPPv",
-	"_ZN20QAbstractPrintDialogD1Ev",
-	"_ZN20QAbstractPrintDialogD0Ev",
+	"NULL or _ZN20QAbstractPrintDialogD1Ev",
+	"NULL or _ZN20QAbstractPrintDialogD0Ev",
 	"_ZN7QWidget5eventEP6QEvent",
 	"_ZN7QDialog11eventFilterEP7QObjectP6QEvent",
 	"_ZN7QObject10timerEventEP11QTimerEvent",
@@ -16964,46 +16964,46 @@ const char *_20QAbstractPrintDialog_of_libQtGui_so_4_vtable_name_0 [] = {
 
 const char *_20QAbstractPrintDialog_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn8_N20QAbstractPrintDialogD1Ev",
+	"NULL or _ZThn8_N20QAbstractPrintDialogD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N20QAbstractPrintDialogD1Ev",
+	"NULL or _ZThn16_N20QAbstractPrintDialogD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N20QAbstractPrintDialogD1Ev",
+	"NULL or _ZThn8_N20QAbstractPrintDialogD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N20QAbstractPrintDialogD1Ev",
+	"NULL or _ZThn16_N20QAbstractPrintDialogD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_N20QAbstractPrintDialogD1Ev",
+	"NULL or _ZThn8_N20QAbstractPrintDialogD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N20QAbstractPrintDialogD1Ev",
+	"NULL or _ZThn16_N20QAbstractPrintDialogD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N20QAbstractPrintDialogD1Ev",
+	"NULL or _ZThn16_N20QAbstractPrintDialogD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N20QAbstractPrintDialogD0Ev",
+	"NULL or _ZThn16_N20QAbstractPrintDialogD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N20QAbstractPrintDialogD0Ev",
+	"NULL or _ZThn8_N20QAbstractPrintDialogD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N20QAbstractPrintDialogD0Ev",
+	"NULL or _ZThn16_N20QAbstractPrintDialogD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_N20QAbstractPrintDialogD0Ev",
+	"NULL or _ZThn8_N20QAbstractPrintDialogD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N20QAbstractPrintDialogD0Ev",
+	"NULL or _ZThn16_N20QAbstractPrintDialogD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N20QAbstractPrintDialogD0Ev",
+	"NULL or _ZThn16_N20QAbstractPrintDialogD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn8_N20QAbstractPrintDialogD0Ev",
+	"NULL or _ZThn8_N20QAbstractPrintDialogD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
@@ -17391,8 +17391,8 @@ const char *_16QPageSetupDialog_of_libQtGui_so_4_vtable_name_0 [] = {
 	"_ZNK7QDialog10metaObjectEv",
 	"_ZN7QDialog11qt_metacastEPKc",
 	"_ZN7QDialog11qt_metacallEN11QMetaObject4CallEiPPv",
-	"_ZN16QPageSetupDialogD1Ev",
-	"_ZN16QPageSetupDialogD0Ev",
+	"NULL or _ZN16QPageSetupDialogD1Ev",
+	"NULL or _ZN16QPageSetupDialogD0Ev",
 	"_ZN7QWidget5eventEP6QEvent",
 	"_ZN7QDialog11eventFilterEP7QObjectP6QEvent",
 	"_ZN7QObject10timerEventEP11QTimerEvent",
@@ -17450,46 +17450,46 @@ const char *_16QPageSetupDialog_of_libQtGui_so_4_vtable_name_0 [] = {
 
 const char *_16QPageSetupDialog_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn8_N16QPageSetupDialogD1Ev",
+	"NULL or _ZThn8_N16QPageSetupDialogD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N16QPageSetupDialogD1Ev",
+	"NULL or _ZThn16_N16QPageSetupDialogD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N16QPageSetupDialogD1Ev",
+	"NULL or _ZThn8_N16QPageSetupDialogD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N16QPageSetupDialogD1Ev",
+	"NULL or _ZThn16_N16QPageSetupDialogD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_N16QPageSetupDialogD1Ev",
+	"NULL or _ZThn8_N16QPageSetupDialogD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N16QPageSetupDialogD1Ev",
+	"NULL or _ZThn16_N16QPageSetupDialogD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N16QPageSetupDialogD1Ev",
+	"NULL or _ZThn16_N16QPageSetupDialogD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N16QPageSetupDialogD0Ev",
+	"NULL or _ZThn16_N16QPageSetupDialogD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N16QPageSetupDialogD0Ev",
+	"NULL or _ZThn8_N16QPageSetupDialogD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N16QPageSetupDialogD0Ev",
+	"NULL or _ZThn16_N16QPageSetupDialogD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_N16QPageSetupDialogD0Ev",
+	"NULL or _ZThn8_N16QPageSetupDialogD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N16QPageSetupDialogD0Ev",
+	"NULL or _ZThn16_N16QPageSetupDialogD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N16QPageSetupDialogD0Ev",
+	"NULL or _ZThn16_N16QPageSetupDialogD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn8_N16QPageSetupDialogD0Ev",
+	"NULL or _ZThn8_N16QPageSetupDialogD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
@@ -18505,8 +18505,8 @@ struct classtypeinfo _31QImageIOHandlerFactoryInterface_of_libQtGui_so_4_typeinf
 	};
 
 const char *_31QImageIOHandlerFactoryInterface_of_libQtGui_so_4_vtable_name_0 [] = {
-	"_ZN31QImageIOHandlerFactoryInterfaceD1Ev",
-	"_ZN31QImageIOHandlerFactoryInterfaceD0Ev",
+	"NULL or _ZN31QImageIOHandlerFactoryInterfaceD1Ev",
+	"NULL or _ZN31QImageIOHandlerFactoryInterfaceD0Ev",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	};
@@ -18816,8 +18816,8 @@ struct classtypeinfo _27QIconEngineFactoryInterface_of_libQtGui_so_4_typeinfo = 
 	};
 
 const char *_27QIconEngineFactoryInterface_of_libQtGui_so_4_vtable_name_0 [] = {
-	"_ZN27QIconEngineFactoryInterfaceD1Ev",
-	"_ZN27QIconEngineFactoryInterfaceD0Ev",
+	"NULL or _ZN27QIconEngineFactoryInterfaceD1Ev",
+	"NULL or _ZN27QIconEngineFactoryInterfaceD0Ev",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	};
@@ -19119,8 +19119,8 @@ struct classtypeinfo _23QPictureFormatInterface_of_libQtGui_so_4_typeinfo = {
 	};
 
 const char *_23QPictureFormatInterface_of_libQtGui_so_4_vtable_name_0 [] = {
-	"_ZN23QPictureFormatInterfaceD1Ev",
-	"_ZN23QPictureFormatInterfaceD0Ev",
+	"NULL or _ZN23QPictureFormatInterfaceD1Ev",
+	"NULL or _ZN23QPictureFormatInterfaceD0Ev",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
@@ -19418,8 +19418,8 @@ struct classtypeinfo _12QPrintEngine_of_libQtGui_so_4_typeinfo = {
 	};
 
 const char *_12QPrintEngine_of_libQtGui_so_4_vtable_name_0 [] = {
-	"_ZN12QPrintEngineD1Ev",
-	"_ZN12QPrintEngineD0Ev",
+	"NULL or _ZN12QPrintEngineD1Ev",
+	"NULL or _ZN12QPrintEngineD0Ev",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
@@ -21930,8 +21930,8 @@ const char *_16QStringListModel_of_libQtGui_so_4_vtable_name_0 [] = {
 	"_ZNK16QStringListModel10metaObjectEv",
 	"_ZN16QStringListModel11qt_metacastEPKc",
 	"_ZN16QStringListModel11qt_metacallEN11QMetaObject4CallEiPPv",
-	"_ZN16QStringListModelD1Ev",
-	"_ZN16QStringListModelD0Ev",
+	"NULL or _ZN16QStringListModelD1Ev",
+	"NULL or _ZN16QStringListModelD0Ev",
 	"_ZN7QObject5eventEP6QEvent",
 	"_ZN7QObject11eventFilterEPS_P6QEvent",
 	"_ZN7QObject10timerEventEP11QTimerEvent",
@@ -22291,7 +22291,7 @@ const char *_15QListWidgetItem_of_libQtGui_so_4_vtable_name_0 [] = {
 	"_ZN15QListWidgetItemD1Ev",
 	"_ZN15QListWidgetItemD0Ev",
 	"_ZNK15QListWidgetItem5cloneEv",
-	"_ZN15QListWidgetItem18setBackgroundColorERK6QColor",
+	"NULL or _ZN15QListWidgetItem18setBackgroundColorERK6QColor",
 	"_ZNK15QListWidgetItem4dataEi",
 	"_ZN15QListWidgetItem7setDataEiRK8QVariant",
 	"_ZNK15QListWidgetItemltERKS_",
@@ -24720,8 +24720,8 @@ struct classtypeinfo _33QAccessibleBridgeFactoryInterface_of_libQtGui_so_4_typei
 	};
 
 const char *_33QAccessibleBridgeFactoryInterface_of_libQtGui_so_4_vtable_name_0 [] = {
-	"_ZN33QAccessibleBridgeFactoryInterfaceD1Ev",
-	"_ZN33QAccessibleBridgeFactoryInterfaceD0Ev",
+	"NULL or _ZN33QAccessibleBridgeFactoryInterfaceD1Ev",
+	"NULL or _ZN33QAccessibleBridgeFactoryInterfaceD0Ev",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	};
@@ -24926,8 +24926,8 @@ struct classtypeinfo _20QAccessibleInterface_of_libQtGui_so_4_typeinfo = {
 	};
 
 const char *_20QAccessibleInterface_of_libQtGui_so_4_vtable_name_0 [] = {
-	"_ZN20QAccessibleInterfaceD1Ev",
-	"_ZN20QAccessibleInterfaceD0Ev",
+	"NULL or _ZN20QAccessibleInterfaceD1Ev",
+	"NULL or _ZN20QAccessibleInterfaceD0Ev",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
@@ -25046,8 +25046,8 @@ struct classtypeinfo _22QAccessibleApplication_of_libQtGui_so_4_typeinfo = {
 	};
 
 const char *_22QAccessibleApplication_of_libQtGui_so_4_vtable_name_0 [] = {
-	"_ZN22QAccessibleApplicationD1Ev",
-	"_ZN22QAccessibleApplicationD0Ev",
+	"NULL or _ZN22QAccessibleApplicationD1Ev",
+	"NULL or _ZN22QAccessibleApplicationD0Ev",
 	"_ZNK17QAccessibleObject7isValidEv",
 	"_ZNK17QAccessibleObject6objectEv",
 	"_ZNK22QAccessibleApplication10childCountEv",
@@ -25165,8 +25165,8 @@ struct classtypeinfo _27QAccessibleFactoryInterface_of_libQtGui_so_4_typeinfo = 
 	};
 
 const char *_27QAccessibleFactoryInterface_of_libQtGui_so_4_vtable_name_0 [] = {
-	"_ZN27QAccessibleFactoryInterfaceD1Ev",
-	"_ZN27QAccessibleFactoryInterfaceD0Ev",
+	"NULL or _ZN27QAccessibleFactoryInterfaceD1Ev",
+	"NULL or _ZN27QAccessibleFactoryInterfaceD0Ev",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	};
@@ -25725,8 +25725,8 @@ struct classtypeinfo _11QSpacerItem_of_libQtGui_so_4_typeinfo = {
 	};
 
 const char *_11QSpacerItem_of_libQtGui_so_4_vtable_name_0 [] = {
-	"_ZN11QSpacerItemD1Ev",
-	"_ZN11QSpacerItemD0Ev",
+	"NULL or _ZN11QSpacerItemD1Ev",
+	"NULL or _ZN11QSpacerItemD0Ev",
 	"_ZNK11QSpacerItem8sizeHintEv",
 	"_ZNK11QSpacerItem11minimumSizeEv",
 	"_ZNK11QSpacerItem11maximumSizeEv",
@@ -25784,8 +25784,8 @@ struct classtypeinfo _11QWidgetItem_of_libQtGui_so_4_typeinfo = {
 	};
 
 const char *_11QWidgetItem_of_libQtGui_so_4_vtable_name_0 [] = {
-	"_ZN11QWidgetItemD1Ev",
-	"_ZN11QWidgetItemD0Ev",
+	"NULL or _ZN11QWidgetItemD1Ev",
+	"NULL or _ZN11QWidgetItemD0Ev",
 	"_ZNK11QWidgetItem8sizeHintEv",
 	"_ZNK11QWidgetItem11minimumSizeEv",
 	"_ZNK11QWidgetItem11maximumSizeEv",
@@ -28615,8 +28615,8 @@ struct classtypeinfo _22QStyleFactoryInterface_of_libQtGui_so_4_typeinfo = {
 	};
 
 const char *_22QStyleFactoryInterface_of_libQtGui_so_4_vtable_name_0 [] = {
-	"_ZN22QStyleFactoryInterfaceD1Ev",
-	"_ZN22QStyleFactoryInterfaceD0Ev",
+	"NULL or _ZN22QStyleFactoryInterfaceD1Ev",
+	"NULL or _ZN22QStyleFactoryInterfaceD0Ev",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	};
@@ -29049,8 +29049,8 @@ struct classtypeinfo _29QInputContextFactoryInterface_of_libQtGui_so_4_typeinfo 
 	};
 
 const char *_29QInputContextFactoryInterface_of_libQtGui_so_4_vtable_name_0 [] = {
-	"_ZN29QInputContextFactoryInterfaceD1Ev",
-	"_ZN29QInputContextFactoryInterfaceD0Ev",
+	"NULL or _ZN29QInputContextFactoryInterfaceD1Ev",
+	"NULL or _ZN29QInputContextFactoryInterfaceD0Ev",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
@@ -29576,8 +29576,8 @@ const char *_9QCheckBox_of_libQtGui_so_4_vtable_name_0 [] = {
 	"_ZNK9QCheckBox10metaObjectEv",
 	"_ZN9QCheckBox11qt_metacastEPKc",
 	"_ZN9QCheckBox11qt_metacallEN11QMetaObject4CallEiPPv",
-	"_ZN9QCheckBoxD1Ev",
-	"_ZN9QCheckBoxD0Ev",
+	"NULL or _ZN9QCheckBoxD1Ev",
+	"NULL or _ZN9QCheckBoxD0Ev",
 	"_ZN9QCheckBox5eventEP6QEvent",
 	"_ZN7QObject11eventFilterEPS_P6QEvent",
 	"_ZN15QAbstractButton10timerEventEP11QTimerEvent",
@@ -29634,46 +29634,46 @@ const char *_9QCheckBox_of_libQtGui_so_4_vtable_name_0 [] = {
 
 const char *_9QCheckBox_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn8_N9QCheckBoxD1Ev",
+	"NULL or _ZThn8_N9QCheckBoxD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N9QCheckBoxD1Ev",
+	"NULL or _ZThn16_N9QCheckBoxD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N9QCheckBoxD1Ev",
+	"NULL or _ZThn8_N9QCheckBoxD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N9QCheckBoxD1Ev",
+	"NULL or _ZThn16_N9QCheckBoxD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_N9QCheckBoxD1Ev",
+	"NULL or _ZThn8_N9QCheckBoxD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N9QCheckBoxD1Ev",
+	"NULL or _ZThn16_N9QCheckBoxD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N9QCheckBoxD1Ev",
+	"NULL or _ZThn16_N9QCheckBoxD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N9QCheckBoxD0Ev",
+	"NULL or _ZThn16_N9QCheckBoxD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N9QCheckBoxD0Ev",
+	"NULL or _ZThn8_N9QCheckBoxD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N9QCheckBoxD0Ev",
+	"NULL or _ZThn16_N9QCheckBoxD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_N9QCheckBoxD0Ev",
+	"NULL or _ZThn8_N9QCheckBoxD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N9QCheckBoxD0Ev",
+	"NULL or _ZThn16_N9QCheckBoxD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N9QCheckBoxD0Ev",
+	"NULL or _ZThn16_N9QCheckBoxD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn8_N9QCheckBoxD0Ev",
+	"NULL or _ZThn8_N9QCheckBoxD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
@@ -30351,8 +30351,8 @@ const char *_8QSpinBox_of_libQtGui_so_4_vtable_name_0 [] = {
 	"_ZNK8QSpinBox10metaObjectEv",
 	"_ZN8QSpinBox11qt_metacastEPKc",
 	"_ZN8QSpinBox11qt_metacallEN11QMetaObject4CallEiPPv",
-	"_ZN8QSpinBoxD1Ev",
-	"_ZN8QSpinBoxD0Ev",
+	"NULL or _ZN8QSpinBoxD1Ev",
+	"NULL or _ZN8QSpinBoxD0Ev",
 	"_ZN8QSpinBox5eventEP6QEvent",
 	"_ZN7QObject11eventFilterEPS_P6QEvent",
 	"_ZN16QAbstractSpinBox10timerEventEP11QTimerEvent",
@@ -30413,46 +30413,46 @@ const char *_8QSpinBox_of_libQtGui_so_4_vtable_name_0 [] = {
 
 const char *_8QSpinBox_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn8_N8QSpinBoxD1Ev",
+	"NULL or _ZThn8_N8QSpinBoxD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N8QSpinBoxD1Ev",
+	"NULL or _ZThn16_N8QSpinBoxD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N8QSpinBoxD1Ev",
+	"NULL or _ZThn8_N8QSpinBoxD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N8QSpinBoxD1Ev",
+	"NULL or _ZThn16_N8QSpinBoxD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_N8QSpinBoxD1Ev",
+	"NULL or _ZThn8_N8QSpinBoxD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N8QSpinBoxD1Ev",
+	"NULL or _ZThn16_N8QSpinBoxD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N8QSpinBoxD1Ev",
+	"NULL or _ZThn16_N8QSpinBoxD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N8QSpinBoxD0Ev",
+	"NULL or _ZThn16_N8QSpinBoxD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N8QSpinBoxD0Ev",
+	"NULL or _ZThn8_N8QSpinBoxD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N8QSpinBoxD0Ev",
+	"NULL or _ZThn16_N8QSpinBoxD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_N8QSpinBoxD0Ev",
+	"NULL or _ZThn8_N8QSpinBoxD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N8QSpinBoxD0Ev",
+	"NULL or _ZThn16_N8QSpinBoxD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N8QSpinBoxD0Ev",
+	"NULL or _ZThn16_N8QSpinBoxD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn8_N8QSpinBoxD0Ev",
+	"NULL or _ZThn8_N8QSpinBoxD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
@@ -30597,8 +30597,8 @@ const char *_14QDoubleSpinBox_of_libQtGui_so_4_vtable_name_0 [] = {
 	"_ZNK14QDoubleSpinBox10metaObjectEv",
 	"_ZN14QDoubleSpinBox11qt_metacastEPKc",
 	"_ZN14QDoubleSpinBox11qt_metacallEN11QMetaObject4CallEiPPv",
-	"_ZN14QDoubleSpinBoxD1Ev",
-	"_ZN14QDoubleSpinBoxD0Ev",
+	"NULL or _ZN14QDoubleSpinBoxD1Ev",
+	"NULL or _ZN14QDoubleSpinBoxD0Ev",
 	"_ZN16QAbstractSpinBox5eventEP6QEvent",
 	"_ZN7QObject11eventFilterEPS_P6QEvent",
 	"_ZN16QAbstractSpinBox10timerEventEP11QTimerEvent",
@@ -30659,46 +30659,46 @@ const char *_14QDoubleSpinBox_of_libQtGui_so_4_vtable_name_0 [] = {
 
 const char *_14QDoubleSpinBox_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn8_N14QDoubleSpinBoxD1Ev",
+	"NULL or _ZThn8_N14QDoubleSpinBoxD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N14QDoubleSpinBoxD1Ev",
+	"NULL or _ZThn16_N14QDoubleSpinBoxD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N14QDoubleSpinBoxD1Ev",
+	"NULL or _ZThn8_N14QDoubleSpinBoxD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N14QDoubleSpinBoxD1Ev",
+	"NULL or _ZThn16_N14QDoubleSpinBoxD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_N14QDoubleSpinBoxD1Ev",
+	"NULL or _ZThn8_N14QDoubleSpinBoxD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N14QDoubleSpinBoxD1Ev",
+	"NULL or _ZThn16_N14QDoubleSpinBoxD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N14QDoubleSpinBoxD1Ev",
+	"NULL or _ZThn16_N14QDoubleSpinBoxD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N14QDoubleSpinBoxD0Ev",
+	"NULL or _ZThn16_N14QDoubleSpinBoxD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N14QDoubleSpinBoxD0Ev",
+	"NULL or _ZThn8_N14QDoubleSpinBoxD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N14QDoubleSpinBoxD0Ev",
+	"NULL or _ZThn16_N14QDoubleSpinBoxD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_N14QDoubleSpinBoxD0Ev",
+	"NULL or _ZThn8_N14QDoubleSpinBoxD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N14QDoubleSpinBoxD0Ev",
+	"NULL or _ZThn16_N14QDoubleSpinBoxD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N14QDoubleSpinBoxD0Ev",
+	"NULL or _ZThn16_N14QDoubleSpinBoxD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn8_N14QDoubleSpinBoxD0Ev",
+	"NULL or _ZThn8_N14QDoubleSpinBoxD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
@@ -31803,8 +31803,8 @@ const char *_13QDateTimeEdit_of_libQtGui_so_4_vtable_name_0 [] = {
 	"_ZNK13QDateTimeEdit10metaObjectEv",
 	"_ZN13QDateTimeEdit11qt_metacastEPKc",
 	"_ZN13QDateTimeEdit11qt_metacallEN11QMetaObject4CallEiPPv",
-	"_ZN13QDateTimeEditD1Ev",
-	"_ZN13QDateTimeEditD0Ev",
+	"NULL or _ZN13QDateTimeEditD1Ev",
+	"NULL or _ZN13QDateTimeEditD0Ev",
 	"_ZN13QDateTimeEdit5eventEP6QEvent",
 	"_ZN7QObject11eventFilterEPS_P6QEvent",
 	"_ZN16QAbstractSpinBox10timerEventEP11QTimerEvent",
@@ -31865,46 +31865,46 @@ const char *_13QDateTimeEdit_of_libQtGui_so_4_vtable_name_0 [] = {
 
 const char *_13QDateTimeEdit_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn8_N13QDateTimeEditD1Ev",
+	"NULL or _ZThn8_N13QDateTimeEditD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N13QDateTimeEditD1Ev",
+	"NULL or _ZThn16_N13QDateTimeEditD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N13QDateTimeEditD1Ev",
+	"NULL or _ZThn8_N13QDateTimeEditD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N13QDateTimeEditD1Ev",
+	"NULL or _ZThn16_N13QDateTimeEditD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_N13QDateTimeEditD1Ev",
+	"NULL or _ZThn8_N13QDateTimeEditD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N13QDateTimeEditD1Ev",
+	"NULL or _ZThn16_N13QDateTimeEditD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N13QDateTimeEditD1Ev",
+	"NULL or _ZThn16_N13QDateTimeEditD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N13QDateTimeEditD0Ev",
+	"NULL or _ZThn16_N13QDateTimeEditD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N13QDateTimeEditD0Ev",
+	"NULL or _ZThn8_N13QDateTimeEditD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N13QDateTimeEditD0Ev",
+	"NULL or _ZThn16_N13QDateTimeEditD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_N13QDateTimeEditD0Ev",
+	"NULL or _ZThn8_N13QDateTimeEditD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N13QDateTimeEditD0Ev",
+	"NULL or _ZThn16_N13QDateTimeEditD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N13QDateTimeEditD0Ev",
+	"NULL or _ZThn16_N13QDateTimeEditD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn8_N13QDateTimeEditD0Ev",
+	"NULL or _ZThn8_N13QDateTimeEditD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
@@ -32049,8 +32049,8 @@ const char *_9QTimeEdit_of_libQtGui_so_4_vtable_name_0 [] = {
 	"_ZNK9QTimeEdit10metaObjectEv",
 	"_ZN9QTimeEdit11qt_metacastEPKc",
 	"_ZN9QTimeEdit11qt_metacallEN11QMetaObject4CallEiPPv",
-	"_ZN9QTimeEditD1Ev",
-	"_ZN9QTimeEditD0Ev",
+	"NULL or _ZN9QTimeEditD1Ev",
+	"NULL or _ZN9QTimeEditD0Ev",
 	"_ZN13QDateTimeEdit5eventEP6QEvent",
 	"_ZN7QObject11eventFilterEPS_P6QEvent",
 	"_ZN16QAbstractSpinBox10timerEventEP11QTimerEvent",
@@ -32111,46 +32111,46 @@ const char *_9QTimeEdit_of_libQtGui_so_4_vtable_name_0 [] = {
 
 const char *_9QTimeEdit_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn8_N9QTimeEditD1Ev",
+	"NULL or _ZThn8_N9QTimeEditD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N9QTimeEditD1Ev",
+	"NULL or _ZThn16_N9QTimeEditD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N9QTimeEditD1Ev",
+	"NULL or _ZThn8_N9QTimeEditD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N9QTimeEditD1Ev",
+	"NULL or _ZThn16_N9QTimeEditD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_N9QTimeEditD1Ev",
+	"NULL or _ZThn8_N9QTimeEditD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N9QTimeEditD1Ev",
+	"NULL or _ZThn16_N9QTimeEditD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N9QTimeEditD1Ev",
+	"NULL or _ZThn16_N9QTimeEditD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N9QTimeEditD0Ev",
+	"NULL or _ZThn16_N9QTimeEditD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N9QTimeEditD0Ev",
+	"NULL or _ZThn8_N9QTimeEditD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N9QTimeEditD0Ev",
+	"NULL or _ZThn16_N9QTimeEditD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_N9QTimeEditD0Ev",
+	"NULL or _ZThn8_N9QTimeEditD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N9QTimeEditD0Ev",
+	"NULL or _ZThn16_N9QTimeEditD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N9QTimeEditD0Ev",
+	"NULL or _ZThn16_N9QTimeEditD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn8_N9QTimeEditD0Ev",
+	"NULL or _ZThn8_N9QTimeEditD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
@@ -32295,8 +32295,8 @@ const char *_9QDateEdit_of_libQtGui_so_4_vtable_name_0 [] = {
 	"_ZNK9QDateEdit10metaObjectEv",
 	"_ZN9QDateEdit11qt_metacastEPKc",
 	"_ZN9QDateEdit11qt_metacallEN11QMetaObject4CallEiPPv",
-	"_ZN9QDateEditD1Ev",
-	"_ZN9QDateEditD0Ev",
+	"NULL or _ZN9QDateEditD1Ev",
+	"NULL or _ZN9QDateEditD0Ev",
 	"_ZN13QDateTimeEdit5eventEP6QEvent",
 	"_ZN7QObject11eventFilterEPS_P6QEvent",
 	"_ZN16QAbstractSpinBox10timerEventEP11QTimerEvent",
@@ -32357,46 +32357,46 @@ const char *_9QDateEdit_of_libQtGui_so_4_vtable_name_0 [] = {
 
 const char *_9QDateEdit_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn8_N9QDateEditD1Ev",
+	"NULL or _ZThn8_N9QDateEditD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N9QDateEditD1Ev",
+	"NULL or _ZThn16_N9QDateEditD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N9QDateEditD1Ev",
+	"NULL or _ZThn8_N9QDateEditD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N9QDateEditD1Ev",
+	"NULL or _ZThn16_N9QDateEditD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_N9QDateEditD1Ev",
+	"NULL or _ZThn8_N9QDateEditD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N9QDateEditD1Ev",
+	"NULL or _ZThn16_N9QDateEditD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N9QDateEditD1Ev",
+	"NULL or _ZThn16_N9QDateEditD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N9QDateEditD0Ev",
+	"NULL or _ZThn16_N9QDateEditD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N9QDateEditD0Ev",
+	"NULL or _ZThn8_N9QDateEditD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N9QDateEditD0Ev",
+	"NULL or _ZThn16_N9QDateEditD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_N9QDateEditD0Ev",
+	"NULL or _ZThn8_N9QDateEditD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N9QDateEditD0Ev",
+	"NULL or _ZThn16_N9QDateEditD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N9QDateEditD0Ev",
+	"NULL or _ZThn16_N9QDateEditD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn8_N9QDateEditD0Ev",
+	"NULL or _ZThn8_N9QDateEditD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
@@ -33743,8 +33743,8 @@ const char *_12QProgressBar_of_libQtGui_so_4_vtable_name_0 [] = {
 	"_ZNK12QProgressBar10metaObjectEv",
 	"_ZN12QProgressBar11qt_metacastEPKc",
 	"_ZN12QProgressBar11qt_metacallEN11QMetaObject4CallEiPPv",
-	"_ZN12QProgressBarD1Ev",
-	"_ZN12QProgressBarD0Ev",
+	"NULL or _ZN12QProgressBarD1Ev",
+	"NULL or _ZN12QProgressBarD0Ev",
 	"_ZN12QProgressBar5eventEP6QEvent",
 	"_ZN7QObject11eventFilterEPS_P6QEvent",
 	"_ZN7QObject10timerEventEP11QTimerEvent",
@@ -33799,46 +33799,46 @@ const char *_12QProgressBar_of_libQtGui_so_4_vtable_name_0 [] = {
 
 const char *_12QProgressBar_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn8_N12QProgressBarD1Ev",
+	"NULL or _ZThn8_N12QProgressBarD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N12QProgressBarD1Ev",
+	"NULL or _ZThn16_N12QProgressBarD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N12QProgressBarD1Ev",
+	"NULL or _ZThn8_N12QProgressBarD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N12QProgressBarD1Ev",
+	"NULL or _ZThn16_N12QProgressBarD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_N12QProgressBarD1Ev",
+	"NULL or _ZThn8_N12QProgressBarD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N12QProgressBarD1Ev",
+	"NULL or _ZThn16_N12QProgressBarD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N12QProgressBarD1Ev",
+	"NULL or _ZThn16_N12QProgressBarD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N12QProgressBarD0Ev",
+	"NULL or _ZThn16_N12QProgressBarD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N12QProgressBarD0Ev",
+	"NULL or _ZThn8_N12QProgressBarD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N12QProgressBarD0Ev",
+	"NULL or _ZThn16_N12QProgressBarD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_N12QProgressBarD0Ev",
+	"NULL or _ZThn8_N12QProgressBarD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N12QProgressBarD0Ev",
+	"NULL or _ZThn16_N12QProgressBarD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N12QProgressBarD0Ev",
+	"NULL or _ZThn16_N12QProgressBarD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn8_N12QProgressBarD0Ev",
+	"NULL or _ZThn8_N12QProgressBarD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
@@ -35675,8 +35675,8 @@ const char *_9QMenuItem_of_libQtGui_so_4_vtable_name_0 [] = {
 	"_ZNK7QAction10metaObjectEv",
 	"_ZN7QAction11qt_metacastEPKc",
 	"_ZN7QAction11qt_metacallEN11QMetaObject4CallEiPPv",
-	"_ZN9QMenuItemD1Ev",
-	"_ZN9QMenuItemD0Ev",
+	"NULL or _ZN9QMenuItemD1Ev",
+	"NULL or _ZN9QMenuItemD0Ev",
 	"_ZN7QAction5eventEP6QEvent",
 	"_ZN7QObject11eventFilterEPS_P6QEvent",
 	"_ZN7QObject10timerEventEP11QTimerEvent",
@@ -35730,8 +35730,8 @@ const char *_12QRadioButton_of_libQtGui_so_4_vtable_name_0 [] = {
 	"_ZNK12QRadioButton10metaObjectEv",
 	"_ZN12QRadioButton11qt_metacastEPKc",
 	"_ZN12QRadioButton11qt_metacallEN11QMetaObject4CallEiPPv",
-	"_ZN12QRadioButtonD1Ev",
-	"_ZN12QRadioButtonD0Ev",
+	"NULL or _ZN12QRadioButtonD1Ev",
+	"NULL or _ZN12QRadioButtonD0Ev",
 	"_ZN12QRadioButton5eventEP6QEvent",
 	"_ZN7QObject11eventFilterEPS_P6QEvent",
 	"_ZN15QAbstractButton10timerEventEP11QTimerEvent",
@@ -35788,46 +35788,46 @@ const char *_12QRadioButton_of_libQtGui_so_4_vtable_name_0 [] = {
 
 const char *_12QRadioButton_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn8_N12QRadioButtonD1Ev",
+	"NULL or _ZThn8_N12QRadioButtonD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N12QRadioButtonD1Ev",
+	"NULL or _ZThn16_N12QRadioButtonD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N12QRadioButtonD1Ev",
+	"NULL or _ZThn8_N12QRadioButtonD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N12QRadioButtonD1Ev",
+	"NULL or _ZThn16_N12QRadioButtonD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_N12QRadioButtonD1Ev",
+	"NULL or _ZThn8_N12QRadioButtonD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N12QRadioButtonD1Ev",
+	"NULL or _ZThn16_N12QRadioButtonD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N12QRadioButtonD1Ev",
+	"NULL or _ZThn16_N12QRadioButtonD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N12QRadioButtonD0Ev",
+	"NULL or _ZThn16_N12QRadioButtonD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N12QRadioButtonD0Ev",
+	"NULL or _ZThn8_N12QRadioButtonD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N12QRadioButtonD0Ev",
+	"NULL or _ZThn16_N12QRadioButtonD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_N12QRadioButtonD0Ev",
+	"NULL or _ZThn8_N12QRadioButtonD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N12QRadioButtonD0Ev",
+	"NULL or _ZThn16_N12QRadioButtonD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N12QRadioButtonD0Ev",
+	"NULL or _ZThn16_N12QRadioButtonD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn8_N12QRadioButtonD0Ev",
+	"NULL or _ZThn8_N12QRadioButtonD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
@@ -37170,8 +37170,8 @@ const char *_15QSplitterHandle_of_libQtGui_so_4_vtable_name_0 [] = {
 	"_ZNK15QSplitterHandle10metaObjectEv",
 	"_ZN15QSplitterHandle11qt_metacastEPKc",
 	"_ZN15QSplitterHandle11qt_metacallEN11QMetaObject4CallEiPPv",
-	"_ZN15QSplitterHandleD1Ev",
-	"_ZN15QSplitterHandleD0Ev",
+	"NULL or _ZN15QSplitterHandleD1Ev",
+	"NULL or _ZN15QSplitterHandleD0Ev",
 	"_ZN15QSplitterHandle5eventEP6QEvent",
 	"_ZN7QObject11eventFilterEPS_P6QEvent",
 	"_ZN7QObject10timerEventEP11QTimerEvent",
@@ -37225,46 +37225,46 @@ const char *_15QSplitterHandle_of_libQtGui_so_4_vtable_name_0 [] = {
 
 const char *_15QSplitterHandle_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __i386__
-	"_ZThn8_N15QSplitterHandleD1Ev",
+	"NULL or _ZThn8_N15QSplitterHandleD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N15QSplitterHandleD1Ev",
+	"NULL or _ZThn16_N15QSplitterHandleD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N15QSplitterHandleD1Ev",
+	"NULL or _ZThn8_N15QSplitterHandleD1Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N15QSplitterHandleD1Ev",
+	"NULL or _ZThn16_N15QSplitterHandleD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_N15QSplitterHandleD1Ev",
+	"NULL or _ZThn8_N15QSplitterHandleD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N15QSplitterHandleD1Ev",
+	"NULL or _ZThn16_N15QSplitterHandleD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N15QSplitterHandleD1Ev",
+	"NULL or _ZThn16_N15QSplitterHandleD1Ev",
 #endif
 #if defined __ia64__
-	"_ZThn16_N15QSplitterHandleD0Ev",
+	"NULL or _ZThn16_N15QSplitterHandleD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N15QSplitterHandleD0Ev",
+	"NULL or _ZThn8_N15QSplitterHandleD0Ev",
 #endif
 #if defined __powerpc64__
-	"_ZThn16_N15QSplitterHandleD0Ev",
+	"NULL or _ZThn16_N15QSplitterHandleD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_N15QSplitterHandleD0Ev",
+	"NULL or _ZThn8_N15QSplitterHandleD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N15QSplitterHandleD0Ev",
+	"NULL or _ZThn16_N15QSplitterHandleD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn16_N15QSplitterHandleD0Ev",
+	"NULL or _ZThn16_N15QSplitterHandleD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn8_N15QSplitterHandleD0Ev",
+	"NULL or _ZThn8_N15QSplitterHandleD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",

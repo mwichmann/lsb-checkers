@@ -3334,8 +3334,8 @@ struct classtypeinfo _17QFactoryInterface_of_libQtCore_so_4_typeinfo = {
 	};
 
 const char *_17QFactoryInterface_of_libQtCore_so_4_vtable_name_0 [] = {
-	"_ZN17QFactoryInterfaceD1Ev",
-	"_ZN17QFactoryInterfaceD0Ev",
+	"NULL or _ZN17QFactoryInterfaceD1Ev",
+	"NULL or _ZN17QFactoryInterfaceD0Ev",
 	"__cxa_pure_virtual",
 	};
 
@@ -3380,8 +3380,8 @@ struct classtypeinfo _26QTextCodecFactoryInterface_of_libQtCore_so_4_typeinfo = 
 	};
 
 const char *_26QTextCodecFactoryInterface_of_libQtCore_so_4_vtable_name_0 [] = {
-	"_ZN26QTextCodecFactoryInterfaceD1Ev",
-	"_ZN26QTextCodecFactoryInterfaceD0Ev",
+	"NULL or _ZN26QTextCodecFactoryInterfaceD1Ev",
+	"NULL or _ZN26QTextCodecFactoryInterfaceD0Ev",
 	"__cxa_pure_virtual",
 	"__cxa_pure_virtual",
 	};
