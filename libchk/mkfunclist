@@ -37,6 +37,23 @@ $intname[$Iid] = $entry{'Iname'};
 return $entry{'Iname'};
 }
 
+sub getinterfacevisibility($)
+{
+local($Iid)=@_;
+my($select,%entry);
+
+if( $Iid eq "" ) {return "";}
+
+if( $intvisibility[$Iid] ) { return $intvisibility[$Iid]; }
+
+$select = "SELECT Isrcbin FROM Interface ";
+$select.= "WHERE Iid=$Iid";
+$isth = $Dbh->query($select) || die $Dbh->errmsg();
+%entry=$isth->fetchhash;
+$intvisibility[$Iid] = $entry{'Isrcbin'};
+return $entry{'Isrcbin'};
+}
+
 sub mkclassinfo($$$)
 {
 local($LIB,$libname,$class)=@_;
@@ -127,10 +144,25 @@ for(1..$vsth->numrows) {
 				next;
 			}
 		}
+		
+		$visibility = getinterfacevisibility($entry{'VTviid'});
+		if( $visibility eq "SrcOnly" ) {
+		    print $LIB "\t\"NULL or ".getinterfacename($entry{'VTviid'})."\",\n";
+		}
+		else {
 		print $LIB "\t\"".getinterfacename($entry{'VTviid'})."\",\n";
+		}
 	} else {
 		print $LIB "#if ".$entry{'Asymbol'}."\n";
+		
+		$visibility = getinterfacevisibility($entry{'VTviid'});
+		if( $visibility eq "SrcOnly" ) {
+		    print $LIB "\t\"NULL or ".getinterfacename($entry{'VTviid'})."\",\n";
+		}
+		else {
 		print $LIB "\t\"".getinterfacename($entry{'VTviid'})."\",\n";
+		}
+		
 		print $LIB "#endif\n";
 	}
 }

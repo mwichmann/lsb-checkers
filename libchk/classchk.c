@@ -101,7 +101,7 @@ int
 check_class_info(ElfFile * file, char *libname,
 		 struct classinfo *classes[], struct tetj_handle *journal)
 {
-  int i, j, v;
+  int i, j, v, k;
   Dl_info dlainfo;
   void *dlhndl;
   void *symp;
@@ -112,6 +112,7 @@ check_class_info(ElfFile * file, char *libname,
   struct classinfo *classp;
   unsigned long vtvcalloffset, vtbaseoffset;
   const char *vttypeinfo;
+  char *expected;
   fptr *vtvirtfuncs;
   int vtableinc, vtablesize, fndvtabsize;
   int fndvttsize;
@@ -300,13 +301,10 @@ check_class_info(ElfFile * file, char *libname,
 	    }
 #endif
 
-#if 0
-            /* This code produces false positives, please read bug 1173 */
-
 	    /*
 	     * 1.4.1) Make sure we found a named symbol at all.
 	     */
-	    if (!dlainfo.dli_saddr && classp->vtable[v].virtfuncs[j][0]) {
+	    if (!dlainfo.dli_saddr && classp->vtable[v].virtfuncs[j][0] && strncmp(classp->vtable[v].virtfuncs[j], "NULL or", 7) ) {
 	      fprintf(stderr, "Class %s\n", classp->name);
 	      TETJ_REPORT_INFO
 		  ("Did not find symbol addr for Virtual table entry "
@@ -314,7 +312,6 @@ check_class_info(ElfFile * file, char *libname,
 		   classp->vtable[v].virtfuncs[j]);
 	      test_failed = 1;
 	    }
-#endif
 
 	    /*
 	     * 1.4.2) Check to see if the symbol found is an exact match
@@ -338,12 +335,10 @@ check_class_info(ElfFile * file, char *libname,
 	      test_failed = 1;
 	    }
 
-#if 0
-            /* This code produces false positives, please read bug 1173 */
 	    /*
 	     * 1.4.3) Make sure we found a named symbol at all.
 	     */
-	    if (!dlainfo.dli_sname && classp->vtable[v].virtfuncs[j][0]) {
+	    if (!dlainfo.dli_sname && classp->vtable[v].virtfuncs[j][0] && strncmp(classp->vtable[v].virtfuncs[j], "NULL or", 7) ) {
 	      fprintf(stderr, "Class %s\n", classp->name);
 	      TETJ_REPORT_INFO
 		  ("Did not find symbol name for Virtual table entry "
@@ -351,14 +346,27 @@ check_class_info(ElfFile * file, char *libname,
 		   classp->vtable[v].virtfuncs[j]);
 	      test_failed = 1;
 	    }
-#endif
 
 	    /*
 	     * 1.4.4) Check to see if the symbol name found matches what we
 	     * are expecting to find
 	     */
+	    // First, extract real symbol name - remove leading 'NULL or ', if any
+	    if( !strncmp(classp->vtable[v].virtfuncs[j], "NULL or", 7) ) {
+		expected = (char*)malloc( sizeof(char)*(strlen(classp->vtable[v].virtfuncs[j]) - 6) );
+		for( k=8; k < strlen(classp->vtable[v].virtfuncs[j]); k++ ) {
+		    expected[k-8] = classp->vtable[v].virtfuncs[j][k];
+		}
+		expected[k-8] = '\0';
+	    }
+	    else {
+		expected = (char*)malloc( sizeof(char)*(strlen(classp->vtable[v].virtfuncs[j]) + 1 ) );
+		strcpy( expected, classp->vtable[v].virtfuncs[j] );
+	    }
+	    
 	    if (((classp->vtable[v].virtfuncs[j] && dlainfo.dli_sname) &&
-		 strcmp(classp->vtable[v].virtfuncs[j], dlainfo.dli_sname))
+		 strcmp(expected, dlainfo.dli_sname))
+		 //strcmp(classp->vtable[v].virtfuncs[j], dlainfo.dli_sname))
 		|| (dlainfo.dli_sname && !classp->vtable[v].virtfuncs[j])) {
 	      fprintf(stderr, "Class %s\n", classp->name);
 	      TETJ_REPORT_INFO("Virtual Function[%d][%d] %s (expected) "
@@ -397,6 +405,8 @@ check_class_info(ElfFile * file, char *libname,
                 free(demangled_found);
               }
 	    }
+	    
+	    free( expected );
 	  }
 	  tetj_result(journal, tetj_activity_count, tetj_tp_count,
 		      test_failed ? TETJ_FAIL : TETJ_PASS);

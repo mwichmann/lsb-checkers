@@ -505,8 +505,8 @@ struct classtypeinfo _19QHttpResponseHeader_of_libQtNetwork_so_4_typeinfo = {
 	};
 
 const char *_19QHttpResponseHeader_of_libQtNetwork_so_4_vtable_name_0 [] = {
-	"_ZN19QHttpResponseHeaderD1Ev",
-	"_ZN19QHttpResponseHeaderD0Ev",
+	"NULL or _ZN19QHttpResponseHeaderD1Ev",
+	"NULL or _ZN19QHttpResponseHeaderD0Ev",
 	"_ZNK19QHttpResponseHeader8toStringEv",
 	"_ZNK19QHttpResponseHeader12majorVersionEv",
 	"_ZNK19QHttpResponseHeader12minorVersionEv",
@@ -554,8 +554,8 @@ struct classtypeinfo _18QHttpRequestHeader_of_libQtNetwork_so_4_typeinfo = {
 	};
 
 const char *_18QHttpRequestHeader_of_libQtNetwork_so_4_vtable_name_0 [] = {
-	"_ZN18QHttpRequestHeaderD1Ev",
-	"_ZN18QHttpRequestHeaderD0Ev",
+	"NULL or _ZN18QHttpRequestHeaderD1Ev",
+	"NULL or _ZN18QHttpRequestHeaderD0Ev",
 	"_ZNK18QHttpRequestHeader8toStringEv",
 	"_ZNK18QHttpRequestHeader12majorVersionEv",
 	"_ZNK18QHttpRequestHeader12minorVersionEv",
