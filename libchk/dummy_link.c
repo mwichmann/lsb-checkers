@@ -40,6 +40,7 @@ extern void FT_List_Insert(void);
 extern void XftInit(void);
 extern void cupsPrintFile(void);
 extern void cupsRasterOpen(void);
+extern void snd_ctl_open(void);
 
 extern void _Z10forcepointR11QTextStream(void);
 extern void _ZN10QHideEventD2Ev (void);
@@ -173,6 +174,9 @@ int main()
 
     /* libcupsimage */
     cupsRasterOpen();
+
+    /* libasound */
+    snd_ctl_open();
 
     /* libQtCore */
     _Z10forcepointR11QTextStream();

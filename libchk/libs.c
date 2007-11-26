@@ -27,6 +27,7 @@ struct modlib modlibs [] = {
 #if defined __x86_64__
 	{LSB_Core,"/lib64/ld-lsb-x86-64.so.3",ld_lsb_x86_64_so_3,ld_lsb_x86_64_so_3_classinfo},
 #endif
+	{LSB_Multimedia,"libasound.so.2",libasound_so_2,libasound_so_2_classinfo},
 #if defined __s390x__
 	{LSB_Toolkit_Gtk,"libatk-1.0.so.0",libatk_1_0_so_0,libatk_1_0_so_0_classinfo},
 #endif

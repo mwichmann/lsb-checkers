@@ -14599,34 +14599,28 @@ const char *_St15basic_stringbufIcSt11char_traitsIcESaIcEE_of_libstdcxx_so_6_vta
 #if defined __i386__
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPci",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPci",
+#if defined __ia64__
+	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPcl",
 #endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPci",
 #endif
 #if defined __powerpc64__
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPcl",
 #endif
+#if defined __s390__ && !defined __s390x__
+	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPci",
+#endif
 #if defined __x86_64__
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPcl",
 #endif
 #if defined __s390x__
-	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPcl",
-#endif
-#if defined __ia64__
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE6setbufEPcl",
 #endif
 #if defined __i386__
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
-#endif
-#if defined __x86_64__
-	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
-#endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -14635,28 +14629,34 @@ const char *_St15basic_stringbufIcSt11char_traitsIcESaIcEE_of_libstdcxx_so_6_vta
 #if defined __powerpc64__
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
-#if defined __ia64__
+#if defined __s390__ && !defined __s390x__
+	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekoffExSt12_Ios_SeekdirSt13_Ios_Openmode",
+#endif
+#if defined __x86_64__
+	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
+#endif
+#if defined __s390x__
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode",
 #endif
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekposESt4fposI11__mbstate_tESt13_Ios_Openmode",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE4syncEv",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE9showmanycEv",
+#if defined __i386__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci",
+#endif
 #if defined __ia64__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci",
 #endif
-#if defined __x86_64__
+#if defined __powerpc64__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci",
 #endif
-#if defined __i386__
-	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPci",
-#endif
-#if defined __powerpc64__
+#if defined __x86_64__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl",
 #endif
 #if defined __s390x__
@@ -14665,17 +14665,17 @@ const char *_St15basic_stringbufIcSt11char_traitsIcESaIcEE_of_libstdcxx_so_6_vta
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE9underflowEv",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE5uflowEv",
 	"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE9pbackfailEi",
-#if defined __powerpc64__
-	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKcl",
+#if defined __i386__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci",
 #endif
 #if defined __ia64__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKcl",
 #endif
-#if defined __i386__
-	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci",
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci",
+#endif
+#if defined __powerpc64__
+	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKcl",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKci",

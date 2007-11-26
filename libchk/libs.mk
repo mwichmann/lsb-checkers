@@ -7,6 +7,7 @@ LIBOBJS = \
 	ld_lsb_ppc64_so_3.o \
 	ld_lsb_s390x_so_3.o \
 	ld_lsb_x86_64_so_3.o \
+	libasound_so_2.o \
 	libatk_1_0_so_0.o \
 	libc_so_6.o \
 	libc_so_6_1.o \

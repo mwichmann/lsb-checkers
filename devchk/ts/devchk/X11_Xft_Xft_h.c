@@ -85,7 +85,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef XFT_REVISION
-	CompareConstant(XFT_REVISION,12,10669,architecture,3.2,NULL)
+	CompareConstant(XFT_REVISION,8,10669,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: XFT_REVISION\n");
 cnt++;
