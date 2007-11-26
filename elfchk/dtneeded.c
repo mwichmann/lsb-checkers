@@ -972,6 +972,7 @@ char *DtNeeded_LSB32[] = {
 #if defined __x86_64__
 	"/lib64/ld-lsb-x86-64.so.3",
 #endif /* defined __x86_64__ */
+	"libasound.so.2",
 	"libatk-1.0.so.0",
 #if defined __i386__
 	"libatk-1.0.so.0",

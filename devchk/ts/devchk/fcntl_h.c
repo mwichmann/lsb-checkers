@@ -663,12 +663,16 @@ extern int posix_fadvise64_db(int, off64_t, off64_t, int);
 CheckInterfacedef(posix_fadvise64,posix_fadvise64_db);
 extern int posix_fallocate64_db(int, off64_t, off64_t);
 CheckInterfacedef(posix_fallocate64,posix_fallocate64_db);
-extern int lockf64_db(int, int, off64_t);
-CheckInterfacedef(lockf64,lockf64_db);
+extern int creat_db(const char *, mode_t);
+CheckInterfacedef(creat,creat_db);
+extern int creat64_db(const char *, mode_t);
+CheckInterfacedef(creat64,creat64_db);
 extern int fcntl_db(int, int, ...);
 CheckInterfacedef(fcntl,fcntl_db);
 extern int open_db(const char *, int, ...);
 CheckInterfacedef(open,open_db);
+extern int open64_db(const char *, int, ...);
+CheckInterfacedef(open64,open64_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

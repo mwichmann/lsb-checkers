@@ -21,6 +21,29 @@ OBJS = hdrchk.o \
 	X11_extensions_render_h.o \
 	X11_extensions_security_h.o \
 	X11_extensions_sync_h.o \
+	alsa_conf_h.o \
+	alsa_control_h.o \
+	alsa_control_external_h.o \
+	alsa_error_h.o \
+	alsa_global_h.o \
+	alsa_hwdep_h.o \
+	alsa_iatomic_h.o \
+	alsa_input_h.o \
+	alsa_instr_h.o \
+	alsa_mixer_h.o \
+	alsa_mixer_abst_h.o \
+	alsa_output_h.o \
+	alsa_pcm_h.o \
+	alsa_pcm_extplug_h.o \
+	alsa_pcm_ioplug_h.o \
+	alsa_pcm_plugin_h.o \
+	alsa_pcm_rate_h.o \
+	alsa_rawmidi_h.o \
+	alsa_seq_h.o \
+	alsa_seq_event_h.o \
+	alsa_seq_midi_event_h.o \
+	alsa_seqmid_h.o \
+	alsa_timer_h.o \
 	atk_1_0_atk_atk_enum_types_h.o \
 	atk_1_0_atk_atk_h.o \
 	complex_h.o \

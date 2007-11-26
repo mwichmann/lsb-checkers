@@ -2387,29 +2387,6 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QDomNotationD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QDomNotationD2Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QDomNotationaSERKS_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QDragManager10timerEventEP11QTimerEvent","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QDragManager10updateModeEN2Qt11ButtonStateE","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QDragManager11eventFilterEP7QObjectP6QEvent","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QDragManager11qt_propertyEiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QDragManager12updateCursorEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QDragManager12updatePixmapEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QDragManager16staticMetaObjectEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QDragManager18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QDragManager2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QDragManager4dragEP11QDragObjectNS0_8DragModeE","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QDragManager4dropEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QDragManager4moveERK6QPoint","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QDragManager6cancelEb","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QDragManager6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QDragManager7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN12QDragManager7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QDragManager7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QDragManager9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QDragManagerC1Ev","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QDragManagerC2Ev","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QDragManagerD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QDragManagerD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QDragManagerD2Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QFilePreviewC1Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QFilePreviewC2Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QFontMetricsC1EPK8QPainter","",0,LSB_Toolkit_Qt3,0,1},
@@ -8402,11 +8379,6 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QTextEdit11setReadOnlyEb","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QTextEdit11setWordWrapENS_8WordWrapE","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QTextEdit11textChangedEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN9QTextEdit12UndoRedoInfo5clearEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN9QTextEdit12UndoRedoInfoC1EP13QTextDocument","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN9QTextEdit12UndoRedoInfoC2EP13QTextDocument","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN9QTextEdit12UndoRedoInfoD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN9QTextEdit12UndoRedoInfoD2Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QTextEdit12drawContentsEP8QPainter","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QTextEdit12drawContentsEP8QPainteriiii","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QTextEdit12imStartEventEP8QIMEvent","",0,LSB_Toolkit_Qt3,0,1},
@@ -9213,7 +9185,6 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZNK12QDomNotation8nodeTypeEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZNK12QDomNotation8publicIdEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZNK12QDomNotation8systemIdEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZNK12QDragManager9classNameEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZNK12QFontMetrics11leftBearingE5QChar","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZNK12QFontMetrics11lineSpacingEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZNK12QFontMetrics11overlinePosEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -11069,7 +11040,6 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZNK9QTextEdit10wrapPolicyEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZNK9QTextEdit11currentFontEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZNK9QTextEdit11paragraphAtERK6QPoint","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZNK9QTextEdit12UndoRedoInfo5validEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZNK9QTextEdit12getSelectionEPiS0_S0_S0_i","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZNK9QTextEdit12selectedTextEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZNK9QTextEdit12tabStopWidthEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -34090,70 +34060,6 @@ struct classinfo _Z14QListBoxPixmap_of_libqt_mt_so_3_classinfo = {
 	&_14QListBoxPixmap_of_libqt_mt_so_3_typeinfo,
 	_14QListBoxPixmap_of_libqt_mt_so_3_vtable,
 	_14QListBoxPixmap_of_libqt_mt_so_3_baseinfo,
-	};
-
-char *_12QDragManager_of_libqt_mt_so_3_typeinfo_name[] = {
-	"_ZTI7QObject",
-	};
-
-struct classtypeinfo _12QDragManager_of_libqt_mt_so_3_typeinfo = {
-	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTS12QDragManager",
-	_12QDragManager_of_libqt_mt_so_3_typeinfo_name,
-	};
-
-const char *_12QDragManager_of_libqt_mt_so_3_vtable_name_0 [] = {
-	"NULL or _ZNK12QDragManager10metaObjectEv",
-	"_ZNK12QDragManager9classNameEv",
-	"_ZN12QDragManager7qt_castEPKc",
-	"_ZN12QDragManager9qt_invokeEiP8QUObject",
-	"_ZN12QDragManager7qt_emitEiP8QUObject",
-	"_ZN12QDragManager11qt_propertyEiiP8QVariant",
-	"_ZN12QDragManagerD1Ev",
-	"_ZN12QDragManagerD0Ev",
-	"_ZN7QObject5eventEP6QEvent",
-	"_ZN12QDragManager11eventFilterEP7QObjectP6QEvent",
-	"_ZN7QObject7setNameEPKc",
-	"_ZN7QObject11insertChildEPS_",
-	"_ZN7QObject11removeChildEPS_",
-	"_ZN7QObject11setPropertyEPKcRK8QVariant",
-	"_ZNK7QObject8propertyEPKc",
-	"_ZN12QDragManager10timerEventEP11QTimerEvent",
-	"_ZN7QObject10childEventEP11QChildEvent",
-	"_ZN7QObject11customEventEP12QCustomEvent",
-	"_ZN7QObject13connectNotifyEPKc",
-	"_ZN7QObject16disconnectNotifyEPKc",
-	"_ZN7QObject16checkConnectArgsEPKcPKS_S1_",
-	};
-
-struct classvtable _12QDragManager_of_libqt_mt_so_3_vtable [1] = {
-	{
-	0,
-	0,
-	1,	/* Vtable category */
-	21,	/* Number of Vfuncs */
-	"_ZTI12QDragManager",
-	_12QDragManager_of_libqt_mt_so_3_vtable_name_0,
-	},
-};
-
-struct base_type_info _12QDragManager_of_libqt_mt_so_3_baseinfo[] = {
-	};
-
-struct classinfo _Z12QDragManager_of_libqt_mt_so_3_classinfo = {
-	"_Z12QDragManager",
-	"_ZTV12QDragManager",
-	"_ZTI12QDragManager",	/* RTTI */
-	"_ZTI7QObject",
-	"_ZTT12QDragManager",	/* VTT */
-	1,
-	1,
-	0,
-	0,	/* numVTT */
-	0U,
-	&_12QDragManager_of_libqt_mt_so_3_typeinfo,
-	_12QDragManager_of_libqt_mt_so_3_vtable,
-	_12QDragManager_of_libqt_mt_so_3_baseinfo,
 	};
 
 char *_8QDomAttr_of_libqt_mt_so_3_typeinfo_name[] = {
@@ -58216,7 +58122,6 @@ struct classinfo *libqt_mt_so_3_classinfo[] = {
 	&_Z11QStyleSheet_of_libqt_mt_so_3_classinfo,
 	&_Z12QCustomEvent_of_libqt_mt_so_3_classinfo,
 	&_Z14QListBoxPixmap_of_libqt_mt_so_3_classinfo,
-	&_Z12QDragManager_of_libqt_mt_so_3_classinfo,
 	&_Z8QDomAttr_of_libqt_mt_so_3_classinfo,
 	&_Z10QWhatsThis_of_libqt_mt_so_3_classinfo,
 	&_Z12QDomNodeList_of_libqt_mt_so_3_classinfo,
