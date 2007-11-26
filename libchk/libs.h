@@ -29,6 +29,8 @@ extern struct classinfo ld_lsb_s390x_so_3_classinfo[];
 extern struct versym ld_lsb_x86_64_so_3[];
 extern struct classinfo ld_lsb_x86_64_so_3_classinfo[];
 #endif
+extern struct versym libasound_so_2[];
+extern struct classinfo libasound_so_2_classinfo[];
 #if defined __s390x__
 extern struct versym libatk_1_0_so_0[];
 extern struct classinfo libatk_1_0_so_0_classinfo[];

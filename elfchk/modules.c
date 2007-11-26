@@ -36,6 +36,7 @@ struct lsb_module LSB_Modules_LSB32[] = {
 	{"LSB_Cpp",	LSB_Cpp},
 	{"LSB_Graphics",	LSB_Graphics},
 	{"LSB_Graphics_Ext",	LSB_Graphics_Ext},
+	{"LSB_Multimedia",	LSB_Multimedia},
 	{"LSB_Perl",	LSB_Perl},
 	{"LSB_Printing",	LSB_Printing},
 	{"LSB_Python",	LSB_Python},
