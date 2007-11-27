@@ -224,6 +224,18 @@ cnt++;
 
 #if defined __x86_64__
 CheckTypeSize(sm_class_basic_t,32, 27328, 11, 3.2, NULL, 26322, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(sm_class_basic_t,0, 27328, 10, 3.2, NULL, 26322, NULL)
+#elif defined __s390x__
+CheckTypeSize(sm_class_basic_t,0, 27328, 12, 3.2, NULL, 26322, NULL)
+#elif defined __i386__
+CheckTypeSize(sm_class_basic_t,0, 27328, 2, 3.2, NULL, 26322, NULL)
+#elif defined __ia64__
+CheckTypeSize(sm_class_basic_t,0, 27328, 3, 3.2, NULL, 26322, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(sm_class_basic_t,0, 27328, 6, 3.2, NULL, 26322, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(sm_class_basic_t,0, 27328, 9, 3.2, NULL, 26322, NULL)
 #else
 Msg("Find size of sm_class_basic_t (27328)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26322, NULL);\n",architecture,27328,0);
