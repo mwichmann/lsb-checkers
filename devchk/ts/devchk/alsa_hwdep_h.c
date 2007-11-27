@@ -43,6 +43,18 @@ printf("Checking data structures in alsa/hwdep.h\n");
 
 #if defined __x86_64__
 CheckTypeSize(snd_hwdep_iface_t,4, 27422, 11, 3.2, NULL, 26343, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(snd_hwdep_iface_t,0, 27422, 10, 3.2, NULL, 26343, NULL)
+#elif defined __s390x__
+CheckTypeSize(snd_hwdep_iface_t,0, 27422, 12, 3.2, NULL, 26343, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_hwdep_iface_t,0, 27422, 2, 3.2, NULL, 26343, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_hwdep_iface_t,0, 27422, 3, 3.2, NULL, 26343, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_hwdep_iface_t,0, 27422, 6, 3.2, NULL, 26343, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(snd_hwdep_iface_t,0, 27422, 9, 3.2, NULL, 26343, NULL)
 #else
 Msg("Find size of snd_hwdep_iface_t (27422)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26343,NULL);\n",architecture,27422,0);
@@ -50,6 +62,18 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26343,NULL);\n",archi
 
 #if defined __x86_64__
 CheckTypeSize(snd_hwdep_type_t,4, 27431, 11, 3.2, NULL, 26344, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(snd_hwdep_type_t,0, 27431, 10, 3.2, NULL, 26344, NULL)
+#elif defined __s390x__
+CheckTypeSize(snd_hwdep_type_t,0, 27431, 12, 3.2, NULL, 26344, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_hwdep_type_t,0, 27431, 2, 3.2, NULL, 26344, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_hwdep_type_t,0, 27431, 3, 3.2, NULL, 26344, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_hwdep_type_t,0, 27431, 6, 3.2, NULL, 26344, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(snd_hwdep_type_t,0, 27431, 9, 3.2, NULL, 26344, NULL)
 #else
 Msg("Find size of snd_hwdep_type_t (27431)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26344, NULL);\n",architecture,27431,0);

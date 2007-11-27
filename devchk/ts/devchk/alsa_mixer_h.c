@@ -35,6 +35,18 @@ Msg("Checking data structures in alsa/mixer.h\n");
 printf("Checking data structures in alsa/mixer.h\n");
 #if defined __x86_64__
 CheckTypeSize(snd_mixer_elem_type_t,4, 27466, 11, 3.2, NULL, 27489, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(snd_mixer_elem_type_t,0, 27466, 10, 3.2, NULL, 27489, NULL)
+#elif defined __s390x__
+CheckTypeSize(snd_mixer_elem_type_t,0, 27466, 12, 3.2, NULL, 27489, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_mixer_elem_type_t,0, 27466, 2, 3.2, NULL, 27489, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_mixer_elem_type_t,0, 27466, 3, 3.2, NULL, 27489, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_mixer_elem_type_t,0, 27466, 6, 3.2, NULL, 27489, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(snd_mixer_elem_type_t,0, 27466, 9, 3.2, NULL, 27489, NULL)
 #else
 Msg("Find size of snd_mixer_elem_type_t (27466)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27489,NULL);\n",architecture,27466,0);
@@ -42,6 +54,18 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27489,NULL);\n",archi
 
 #if defined __x86_64__
 CheckTypeSize(snd_mixer_compare_t,8, 27470, 11, 3.2, NULL, 25078, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(snd_mixer_compare_t,0, 27470, 10, 3.2, NULL, 25078, NULL)
+#elif defined __s390x__
+CheckTypeSize(snd_mixer_compare_t,0, 27470, 12, 3.2, NULL, 25078, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_mixer_compare_t,0, 27470, 2, 3.2, NULL, 25078, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_mixer_compare_t,0, 27470, 3, 3.2, NULL, 25078, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_mixer_compare_t,0, 27470, 6, 3.2, NULL, 25078, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(snd_mixer_compare_t,0, 27470, 9, 3.2, NULL, 25078, NULL)
 #else
 Msg("Find size of snd_mixer_compare_t (27470)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,25078,NULL);\n",architecture,27470,0);
@@ -49,6 +73,18 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,25078,NULL);\n",archi
 
 #if defined __x86_64__
 CheckTypeSize(snd_mixer_elem_callback_t,8, 27471, 11, 3.2, NULL, 25077, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(snd_mixer_elem_callback_t,0, 27471, 10, 3.2, NULL, 25077, NULL)
+#elif defined __s390x__
+CheckTypeSize(snd_mixer_elem_callback_t,0, 27471, 12, 3.2, NULL, 25077, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_mixer_elem_callback_t,0, 27471, 2, 3.2, NULL, 25077, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_mixer_elem_callback_t,0, 27471, 3, 3.2, NULL, 25077, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_mixer_elem_callback_t,0, 27471, 6, 3.2, NULL, 25077, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(snd_mixer_elem_callback_t,0, 27471, 9, 3.2, NULL, 25077, NULL)
 #else
 Msg("Find size of snd_mixer_elem_callback_t (27471)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,25077,NULL);\n",architecture,27471,0);
@@ -56,6 +92,18 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,25077,NULL);\n",archi
 
 #if defined __x86_64__
 CheckTypeSize(snd_mixer_callback_t,8, 27475, 11, 3.2, NULL, 25076, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(snd_mixer_callback_t,0, 27475, 10, 3.2, NULL, 25076, NULL)
+#elif defined __s390x__
+CheckTypeSize(snd_mixer_callback_t,0, 27475, 12, 3.2, NULL, 25076, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_mixer_callback_t,0, 27475, 2, 3.2, NULL, 25076, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_mixer_callback_t,0, 27475, 3, 3.2, NULL, 25076, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_mixer_callback_t,0, 27475, 6, 3.2, NULL, 25076, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(snd_mixer_callback_t,0, 27475, 9, 3.2, NULL, 25076, NULL)
 #else
 Msg("Find size of snd_mixer_callback_t (27475)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,25076,NULL);\n",architecture,27475,0);
@@ -63,6 +111,18 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,25076,NULL);\n",archi
 
 #if defined __x86_64__
 CheckTypeSize(snd_mixer_event_t,8, 27476, 11, 3.2, NULL, 25079, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(snd_mixer_event_t,0, 27476, 10, 3.2, NULL, 25079, NULL)
+#elif defined __s390x__
+CheckTypeSize(snd_mixer_event_t,0, 27476, 12, 3.2, NULL, 25079, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_mixer_event_t,0, 27476, 2, 3.2, NULL, 25079, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_mixer_event_t,0, 27476, 3, 3.2, NULL, 25079, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_mixer_event_t,0, 27476, 6, 3.2, NULL, 25079, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(snd_mixer_event_t,0, 27476, 9, 3.2, NULL, 25079, NULL)
 #else
 Msg("Find size of snd_mixer_event_t (27476)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,25079,NULL);\n",architecture,27476,0);
@@ -70,6 +130,18 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,25079,NULL);\n",archi
 
 #if defined __x86_64__
 CheckTypeSize(snd_mixer_selem_channel_id_t,4, 27478, 11, 3.2, NULL, 27474, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(snd_mixer_selem_channel_id_t,0, 27478, 10, 3.2, NULL, 27474, NULL)
+#elif defined __s390x__
+CheckTypeSize(snd_mixer_selem_channel_id_t,0, 27478, 12, 3.2, NULL, 27474, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_mixer_selem_channel_id_t,0, 27478, 2, 3.2, NULL, 27474, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_mixer_selem_channel_id_t,0, 27478, 3, 3.2, NULL, 27474, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_mixer_selem_channel_id_t,0, 27478, 6, 3.2, NULL, 27474, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(snd_mixer_selem_channel_id_t,0, 27478, 9, 3.2, NULL, 27474, NULL)
 #else
 Msg("Find size of snd_mixer_selem_channel_id_t (27478)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27474,NULL);\n",architecture,27478,0);
@@ -90,6 +162,54 @@ CheckMemberSize(struct snd_mixer_selem_regopt,playback_pcm,8,11,74942)
 CheckOffset(struct snd_mixer_selem_regopt,playback_pcm,16,11,74942)
 CheckMemberSize(struct snd_mixer_selem_regopt,capture_pcm,8,11,74943)
 CheckOffset(struct snd_mixer_selem_regopt,capture_pcm,24,11,74943)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct snd_mixer_selem_regopt,0, 27484, 10, 3.2, NULL, 0, NULL)
+Msg("Missing member data for snd_mixer_selem_regopt on S390\n");
+CheckOffset(struct snd_mixer_selem_regopt,ver,0,10,74939)
+CheckOffset(struct snd_mixer_selem_regopt,abstract,0,10,74940)
+CheckOffset(struct snd_mixer_selem_regopt,device,0,10,74941)
+CheckOffset(struct snd_mixer_selem_regopt,playback_pcm,0,10,74942)
+CheckOffset(struct snd_mixer_selem_regopt,capture_pcm,0,10,74943)
+#elif defined __s390x__
+CheckTypeSize(struct snd_mixer_selem_regopt,0, 27484, 12, 3.2, NULL, 0, NULL)
+Msg("Missing member data for snd_mixer_selem_regopt on S390X\n");
+CheckOffset(struct snd_mixer_selem_regopt,ver,0,12,74939)
+CheckOffset(struct snd_mixer_selem_regopt,abstract,0,12,74940)
+CheckOffset(struct snd_mixer_selem_regopt,device,0,12,74941)
+CheckOffset(struct snd_mixer_selem_regopt,playback_pcm,0,12,74942)
+CheckOffset(struct snd_mixer_selem_regopt,capture_pcm,0,12,74943)
+#elif defined __i386__
+CheckTypeSize(struct snd_mixer_selem_regopt,0, 27484, 2, 3.2, NULL, 0, NULL)
+Msg("Missing member data for snd_mixer_selem_regopt on IA32\n");
+CheckOffset(struct snd_mixer_selem_regopt,ver,0,2,74939)
+CheckOffset(struct snd_mixer_selem_regopt,abstract,0,2,74940)
+CheckOffset(struct snd_mixer_selem_regopt,device,0,2,74941)
+CheckOffset(struct snd_mixer_selem_regopt,playback_pcm,0,2,74942)
+CheckOffset(struct snd_mixer_selem_regopt,capture_pcm,0,2,74943)
+#elif defined __ia64__
+CheckTypeSize(struct snd_mixer_selem_regopt,0, 27484, 3, 3.2, NULL, 0, NULL)
+Msg("Missing member data for snd_mixer_selem_regopt on IA64\n");
+CheckOffset(struct snd_mixer_selem_regopt,ver,0,3,74939)
+CheckOffset(struct snd_mixer_selem_regopt,abstract,0,3,74940)
+CheckOffset(struct snd_mixer_selem_regopt,device,0,3,74941)
+CheckOffset(struct snd_mixer_selem_regopt,playback_pcm,0,3,74942)
+CheckOffset(struct snd_mixer_selem_regopt,capture_pcm,0,3,74943)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct snd_mixer_selem_regopt,0, 27484, 6, 3.2, NULL, 0, NULL)
+Msg("Missing member data for snd_mixer_selem_regopt on PPC32\n");
+CheckOffset(struct snd_mixer_selem_regopt,ver,0,6,74939)
+CheckOffset(struct snd_mixer_selem_regopt,abstract,0,6,74940)
+CheckOffset(struct snd_mixer_selem_regopt,device,0,6,74941)
+CheckOffset(struct snd_mixer_selem_regopt,playback_pcm,0,6,74942)
+CheckOffset(struct snd_mixer_selem_regopt,capture_pcm,0,6,74943)
+#elif defined __powerpc64__
+CheckTypeSize(struct snd_mixer_selem_regopt,0, 27484, 9, 3.2, NULL, 0, NULL)
+Msg("Missing member data for snd_mixer_selem_regopt on PPC64\n");
+CheckOffset(struct snd_mixer_selem_regopt,ver,0,9,74939)
+CheckOffset(struct snd_mixer_selem_regopt,abstract,0,9,74940)
+CheckOffset(struct snd_mixer_selem_regopt,device,0,9,74941)
+CheckOffset(struct snd_mixer_selem_regopt,playback_pcm,0,9,74942)
+CheckOffset(struct snd_mixer_selem_regopt,capture_pcm,0,9,74943)
 #else
 Msg("Find size of snd_mixer_selem_regopt (27484)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0, NULL);\n",architecture,27484,0);
