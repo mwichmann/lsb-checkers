@@ -75,6 +75,18 @@ cnt++;
 
 #if defined __x86_64__
 CheckTypeSize(snd_pcm_extplug_callback_t,48, 27527, 11, 3.2, NULL, 27526, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(snd_pcm_extplug_callback_t,0, 27527, 10, 3.2, NULL, 27526, NULL)
+#elif defined __s390x__
+CheckTypeSize(snd_pcm_extplug_callback_t,0, 27527, 12, 3.2, NULL, 27526, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_pcm_extplug_callback_t,0, 27527, 2, 3.2, NULL, 27526, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_pcm_extplug_callback_t,0, 27527, 3, 3.2, NULL, 27526, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_pcm_extplug_callback_t,0, 27527, 6, 3.2, NULL, 27526, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(snd_pcm_extplug_callback_t,0, 27527, 9, 3.2, NULL, 27526, NULL)
 #else
 Msg("Find size of snd_pcm_extplug_callback_t (27527)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27526,NULL);\n",architecture,27527,0);
@@ -82,6 +94,18 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27526,NULL);\n",archi
 
 #if defined __x86_64__
 CheckTypeSize(snd_pcm_extplug_t,72, 27530, 11, 3.2, NULL, 27525, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(snd_pcm_extplug_t,0, 27530, 10, 3.2, NULL, 27525, NULL)
+#elif defined __s390x__
+CheckTypeSize(snd_pcm_extplug_t,0, 27530, 12, 3.2, NULL, 27525, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_pcm_extplug_t,0, 27530, 2, 3.2, NULL, 27525, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_pcm_extplug_t,0, 27530, 3, 3.2, NULL, 27525, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_pcm_extplug_t,0, 27530, 6, 3.2, NULL, 27525, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(snd_pcm_extplug_t,0, 27530, 9, 3.2, NULL, 27525, NULL)
 #else
 Msg("Find size of snd_pcm_extplug_t (27530)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27525, NULL);\n",architecture,27530,0);

@@ -283,7 +283,6 @@ struct versym libasound_so_2[] = {
 	{"snd_pcm_sw_params_set_stop_threshold","ALSA_0.9",0,LSB_Multimedia,0,1},
 	{"snd_pcm_sw_params_set_tstamp_mode","ALSA_0.9",0,LSB_Multimedia,0,1},
 	{"snd_pcm_sw_params_set_xfer_align","ALSA_0.9",0,LSB_Multimedia,0,1},
-	{"snd_pcm_sw_params_set_xrun_mode","ALSA_0.9",0,LSB_Multimedia,0,1},
 	{"snd_pcm_sw_params_sizeof","ALSA_0.9",0,LSB_Multimedia,0,1},
 	{"snd_pcm_type","ALSA_0.9",0,LSB_Multimedia,0,1},
 	{"snd_pcm_wait","ALSA_0.9",0,LSB_Multimedia,0,1},
