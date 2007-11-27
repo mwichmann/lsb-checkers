@@ -81,6 +81,18 @@ cnt++;
 
 #if defined __x86_64__
 CheckTypeSize(snd_timer_type_t,4, 27846, 11, 3.2, NULL, 26405, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(snd_timer_type_t,0, 27846, 10, 3.2, NULL, 26405, NULL)
+#elif defined __s390x__
+CheckTypeSize(snd_timer_type_t,0, 27846, 12, 3.2, NULL, 26405, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_timer_type_t,0, 27846, 2, 3.2, NULL, 26405, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_timer_type_t,0, 27846, 3, 3.2, NULL, 26405, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_timer_type_t,0, 27846, 6, 3.2, NULL, 26405, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(snd_timer_type_t,0, 27846, 9, 3.2, NULL, 26405, NULL)
 #else
 Msg("Find size of snd_timer_type_t (27846)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26405, NULL);\n",architecture,27846,0);

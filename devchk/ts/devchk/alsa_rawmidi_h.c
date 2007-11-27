@@ -63,6 +63,18 @@ cnt++;
 
 #if defined __x86_64__
 CheckTypeSize(snd_rawmidi_stream_t,4, 27697, 11, 3.2, NULL, 26391, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(snd_rawmidi_stream_t,0, 27697, 10, 3.2, NULL, 26391, NULL)
+#elif defined __s390x__
+CheckTypeSize(snd_rawmidi_stream_t,0, 27697, 12, 3.2, NULL, 26391, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_rawmidi_stream_t,0, 27697, 2, 3.2, NULL, 26391, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_rawmidi_stream_t,0, 27697, 3, 3.2, NULL, 26391, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_rawmidi_stream_t,0, 27697, 6, 3.2, NULL, 26391, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(snd_rawmidi_stream_t,0, 27697, 9, 3.2, NULL, 26391, NULL)
 #else
 Msg("Find size of snd_rawmidi_stream_t (27697)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26391,NULL);\n",architecture,27697,0);
@@ -70,6 +82,18 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26391,NULL);\n",archi
 
 #if defined __x86_64__
 CheckTypeSize(snd_rawmidi_type_t,4, 27701, 11, 3.2, NULL, 26392, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(snd_rawmidi_type_t,0, 27701, 10, 3.2, NULL, 26392, NULL)
+#elif defined __s390x__
+CheckTypeSize(snd_rawmidi_type_t,0, 27701, 12, 3.2, NULL, 26392, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_rawmidi_type_t,0, 27701, 2, 3.2, NULL, 26392, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_rawmidi_type_t,0, 27701, 3, 3.2, NULL, 26392, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_rawmidi_type_t,0, 27701, 6, 3.2, NULL, 26392, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(snd_rawmidi_type_t,0, 27701, 9, 3.2, NULL, 26392, NULL)
 #else
 Msg("Find size of snd_rawmidi_type_t (27701)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26392, NULL);\n",architecture,27701,0);

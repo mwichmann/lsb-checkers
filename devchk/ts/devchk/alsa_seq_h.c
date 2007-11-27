@@ -587,6 +587,18 @@ cnt++;
 
 #if defined __x86_64__
 CheckTypeSize(snd_seq_client_type_t,4, 27719, 11, 3.2, NULL, 27718, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(snd_seq_client_type_t,0, 27719, 10, 3.2, NULL, 27718, NULL)
+#elif defined __s390x__
+CheckTypeSize(snd_seq_client_type_t,0, 27719, 12, 3.2, NULL, 27718, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_seq_client_type_t,0, 27719, 2, 3.2, NULL, 27718, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_seq_client_type_t,0, 27719, 3, 3.2, NULL, 27718, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_seq_client_type_t,0, 27719, 6, 3.2, NULL, 27718, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(snd_seq_client_type_t,0, 27719, 9, 3.2, NULL, 27718, NULL)
 #else
 Msg("Find size of snd_seq_client_type_t (27719)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27718,NULL);\n",architecture,27719,0);
@@ -594,6 +606,18 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27718,NULL);\n",archi
 
 #if defined __x86_64__
 CheckTypeSize(snd_seq_query_subs_type_t,4, 27766, 11, 3.2, NULL, 26446, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(snd_seq_query_subs_type_t,0, 27766, 10, 3.2, NULL, 26446, NULL)
+#elif defined __s390x__
+CheckTypeSize(snd_seq_query_subs_type_t,0, 27766, 12, 3.2, NULL, 26446, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_seq_query_subs_type_t,0, 27766, 2, 3.2, NULL, 26446, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_seq_query_subs_type_t,0, 27766, 3, 3.2, NULL, 26446, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_seq_query_subs_type_t,0, 27766, 6, 3.2, NULL, 26446, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(snd_seq_query_subs_type_t,0, 27766, 9, 3.2, NULL, 26446, NULL)
 #else
 Msg("Find size of snd_seq_query_subs_type_t (27766)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26446,NULL);\n",architecture,27766,0);
@@ -601,6 +625,18 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26446,NULL);\n",archi
 
 #if defined __x86_64__
 CheckTypeSize(snd_seq_queue_timer_type_t,4, 27786, 11, 3.2, NULL, 26447, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(snd_seq_queue_timer_type_t,0, 27786, 10, 3.2, NULL, 26447, NULL)
+#elif defined __s390x__
+CheckTypeSize(snd_seq_queue_timer_type_t,0, 27786, 12, 3.2, NULL, 26447, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_seq_queue_timer_type_t,0, 27786, 2, 3.2, NULL, 26447, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_seq_queue_timer_type_t,0, 27786, 3, 3.2, NULL, 26447, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_seq_queue_timer_type_t,0, 27786, 6, 3.2, NULL, 26447, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(snd_seq_queue_timer_type_t,0, 27786, 9, 3.2, NULL, 26447, NULL)
 #else
 Msg("Find size of snd_seq_queue_timer_type_t (27786)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26447,NULL);\n",architecture,27786,0);
@@ -608,6 +644,18 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26447,NULL);\n",archi
 
 #if defined __x86_64__
 CheckTypeSize(snd_seq_type_t,4, 27807, 11, 3.2, NULL, 26395, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(snd_seq_type_t,0, 27807, 10, 3.2, NULL, 26395, NULL)
+#elif defined __s390x__
+CheckTypeSize(snd_seq_type_t,0, 27807, 12, 3.2, NULL, 26395, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_seq_type_t,0, 27807, 2, 3.2, NULL, 26395, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_seq_type_t,0, 27807, 3, 3.2, NULL, 26395, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_seq_type_t,0, 27807, 6, 3.2, NULL, 26395, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(snd_seq_type_t,0, 27807, 9, 3.2, NULL, 26395, NULL)
 #else
 Msg("Find size of snd_seq_type_t (27807)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26395, NULL);\n",architecture,27807,0);
