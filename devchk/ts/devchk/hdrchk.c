@@ -96,7 +96,6 @@ tcnt+=alsa_pcm_h();
 tcnt+=alsa_pcm_extplug_h();
 tcnt+=alsa_pcm_ioplug_h();
 tcnt+=alsa_pcm_plugin_h();
-tcnt+=alsa_pcm_rate_h();
 tcnt+=alsa_rawmidi_h();
 tcnt+=alsa_seq_h();
 tcnt+=alsa_seq_event_h();
