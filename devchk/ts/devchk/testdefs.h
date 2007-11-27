@@ -36,7 +36,6 @@ extern void alsa_pcm_h();
 extern void alsa_pcm_extplug_h();
 extern void alsa_pcm_ioplug_h();
 extern void alsa_pcm_plugin_h();
-extern void alsa_pcm_rate_h();
 extern void alsa_rawmidi_h();
 extern void alsa_seq_h();
 extern void alsa_seq_event_h();

@@ -37,7 +37,6 @@ OBJS = hdrchk.o \
 	alsa_pcm_extplug_h.o \
 	alsa_pcm_ioplug_h.o \
 	alsa_pcm_plugin_h.o \
-	alsa_pcm_rate_h.o \
 	alsa_rawmidi_h.o \
 	alsa_seq_h.o \
 	alsa_seq_event_h.o \
