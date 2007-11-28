@@ -39,6 +39,7 @@ struct versym libQtSvg_so_4[] = {
 	{"_ZN16QGraphicsSvgItem11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QGraphicsSvgItem11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QGraphicsSvgItem12setElementIdERK7QString","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN16QGraphicsSvgItem16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZN16QGraphicsSvgItem17setCachingEnabledEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QGraphicsSvgItem17setSharedRendererEP12QSvgRenderer","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QGraphicsSvgItem19setMaximumCacheSizeERK5QSize","",0,LSB_Toolkit_Qt,0,1},
