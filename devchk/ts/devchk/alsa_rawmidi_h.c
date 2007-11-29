@@ -101,6 +101,10 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26392, NULL);\n",arch
 
 extern int snd_rawmidi_close_db(snd_rawmidi_t *);
 CheckInterfacedef(snd_rawmidi_close,snd_rawmidi_close_db);
+extern int snd_rawmidi_drain_db(snd_rawmidi_t *);
+CheckInterfacedef(snd_rawmidi_drain,snd_rawmidi_drain_db);
+extern int snd_rawmidi_drop_db(snd_rawmidi_t *);
+CheckInterfacedef(snd_rawmidi_drop,snd_rawmidi_drop_db);
 extern void snd_rawmidi_info_free_db(snd_rawmidi_info_t *);
 CheckInterfacedef(snd_rawmidi_info_free,snd_rawmidi_info_free_db);
 extern const char * snd_rawmidi_info_get_id_db(const snd_rawmidi_info_t *);
