@@ -117,8 +117,8 @@ check_class_info(ElfFile * file, char *libname,
   int vtableinc, vtablesize, fndvtabsize;
   int fndvttsize;
   char tmp_string[TMP_STRING_SIZE + 1];
-  char *demangled_class, *demangled_found;
-  int test_failed;
+  char *demangled_class, *demangled_found, *first_occurrence, *demangled_function;
+  int test_failed, test_warning;
 
   if (classes == NULL)
     return 0;
@@ -259,6 +259,7 @@ check_class_info(ElfFile * file, char *libname,
 	  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
 			     tmp_string);
 	  test_failed = 0;
+	  test_warning = 0;
 	  for (j = 0; j < classp->vtable[v].numvfuncs; j++) {
 /*	    printf("checking vtable[%d] %s\n", j, classp->vtable[v].virtfuncs[j]); */
 	    /*
@@ -398,9 +399,42 @@ check_class_info(ElfFile * file, char *libname,
                     TETJ_REPORT_INFO("Unmangled found function: %s", demangled_found);
                     TETJ_REPORT_INFO("Unmangled function's class matches tested class");
                     test_failed = 0;
+		     test_warning = 1;
                   }
                 }
 
+                /* Check one more possible situation - a function that was virtual in some of
+                   base classes and was implemented here may now have implementation in base
+                   class, not in this one. Here is a simple and not perfect workaround; it would be better
+                   to provide classchk with inheritance information. */
+                if( test_failed == 1 ) {
+                  if( strcmp(classp->vtable[v].virtfuncs[j], "__cxa_pure_virtual") == 0 ) {
+                    TETJ_REPORT_INFO("A pure virtual function has now implementation: %s", demangled_found);
+                    test_failed = 0;
+		    test_warning = 1;
+                  }
+                  else {
+                    demangled_function = demangle( expected );
+                    if( demangled_function == NULL ) {
+                      TETJ_REPORT_INFO("Could not demangle virtual function name");
+                    }
+                    else {
+                      first_occurrence = strrchr( demangled_function, ':' ) + 2*sizeof(char);
+                      if( first_occurrence != NULL ) {
+                        if( strstr( demangled_found, first_occurrence ) != NULL ) {
+                          TETJ_REPORT_INFO("Unmangled expected function: %s", demangled_function);
+                          TETJ_REPORT_INFO("Unmangled found function: %s", demangled_found);
+                          TETJ_REPORT_INFO("Found function name matches expected function name");
+                          test_failed = 0;
+                          test_warning = 1;
+                        }
+                      }
+
+                      free( demangled_function );
+                    }
+                  }
+                }		   
+		   
                 free(demangled_class);
                 free(demangled_found);
               }
@@ -408,8 +442,14 @@ check_class_info(ElfFile * file, char *libname,
 	    
 	    free( expected );
 	  }
-	  tetj_result(journal, tetj_activity_count, tetj_tp_count,
-		      test_failed ? TETJ_FAIL : TETJ_PASS);
+
+         if( test_warning ) {
+            tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_WARNING);
+         }
+         else {
+	    tetj_result(journal, tetj_activity_count, tetj_tp_count,
+		        test_failed ? TETJ_FAIL : TETJ_PASS);
+	  }
 	  tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
 	}
 	/*
