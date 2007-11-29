@@ -47,6 +47,8 @@ extern void snd_midi_event_init_db(snd_midi_event_t *);
 CheckInterfacedef(snd_midi_event_init,snd_midi_event_init_db);
 extern int snd_midi_event_new_db(size_t, snd_midi_event_t * *);
 CheckInterfacedef(snd_midi_event_new,snd_midi_event_new_db);
+extern void snd_midi_event_reset_decode_db(snd_midi_event_t *);
+CheckInterfacedef(snd_midi_event_reset_decode,snd_midi_event_reset_decode_db);
 extern void snd_midi_event_reset_encode_db(snd_midi_event_t *);
 CheckInterfacedef(snd_midi_event_reset_encode,snd_midi_event_reset_encode_db);
 #ifdef TET_TEST
