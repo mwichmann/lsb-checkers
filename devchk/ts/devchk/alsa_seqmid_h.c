@@ -106,6 +106,8 @@ extern int snd_seq_parse_address_db(snd_seq_t *, snd_seq_addr_t *, const char *)
 CheckInterfacedef(snd_seq_parse_address,snd_seq_parse_address_db);
 extern int snd_seq_set_client_name_db(snd_seq_t *, const char *);
 CheckInterfacedef(snd_seq_set_client_name,snd_seq_set_client_name_db);
+extern int snd_seq_sync_output_queue_db(snd_seq_t *);
+CheckInterfacedef(snd_seq_sync_output_queue,snd_seq_sync_output_queue_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
