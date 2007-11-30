@@ -40,17 +40,17 @@ printf("Checking data structures in alsa/iatomic.h\n");
 #if defined __x86_64__
 CheckTypeSize(snd_atomic_write_t,8, 27341, 11, 3.2, NULL, 26475, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(snd_atomic_write_t,0, 27341, 10, 3.2, NULL, 26475, NULL)
+CheckTypeSize(snd_atomic_write_t,8, 27341, 10, 3.2, NULL, 26475, NULL)
 #elif defined __s390x__
-CheckTypeSize(snd_atomic_write_t,0, 27341, 12, 3.2, NULL, 26475, NULL)
+CheckTypeSize(snd_atomic_write_t,8, 27341, 12, 3.2, NULL, 26475, NULL)
 #elif defined __i386__
-CheckTypeSize(snd_atomic_write_t,0, 27341, 2, 3.2, NULL, 26475, NULL)
+CheckTypeSize(snd_atomic_write_t,8, 27341, 2, 3.2, NULL, 26475, NULL)
 #elif defined __ia64__
-CheckTypeSize(snd_atomic_write_t,0, 27341, 3, 3.2, NULL, 26475, NULL)
+CheckTypeSize(snd_atomic_write_t,8, 27341, 3, 3.2, NULL, 26475, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_atomic_write_t,0, 27341, 6, 3.2, NULL, 26475, NULL)
+CheckTypeSize(snd_atomic_write_t,8, 27341, 6, 3.2, NULL, 26475, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(snd_atomic_write_t,0, 27341, 9, 3.2, NULL, 26475, NULL)
+CheckTypeSize(snd_atomic_write_t,8, 27341, 9, 3.2, NULL, 26475, NULL)
 #else
 Msg("Find size of snd_atomic_write_t (27341)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26475,NULL);\n",architecture,27341,0);
@@ -59,17 +59,17 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26475,NULL);\n",archi
 #if defined __x86_64__
 CheckTypeSize(snd_atomic_read_t,16, 27343, 11, 3.2, NULL, 26476, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(snd_atomic_read_t,0, 27343, 10, 3.2, NULL, 26476, NULL)
+CheckTypeSize(snd_atomic_read_t,8, 27343, 10, 3.2, NULL, 26476, NULL)
 #elif defined __s390x__
-CheckTypeSize(snd_atomic_read_t,0, 27343, 12, 3.2, NULL, 26476, NULL)
+CheckTypeSize(snd_atomic_read_t,16, 27343, 12, 3.2, NULL, 26476, NULL)
 #elif defined __i386__
-CheckTypeSize(snd_atomic_read_t,0, 27343, 2, 3.2, NULL, 26476, NULL)
+CheckTypeSize(snd_atomic_read_t,8, 27343, 2, 3.2, NULL, 26476, NULL)
 #elif defined __ia64__
-CheckTypeSize(snd_atomic_read_t,0, 27343, 3, 3.2, NULL, 26476, NULL)
+CheckTypeSize(snd_atomic_read_t,16, 27343, 3, 3.2, NULL, 26476, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_atomic_read_t,0, 27343, 6, 3.2, NULL, 26476, NULL)
+CheckTypeSize(snd_atomic_read_t,8, 27343, 6, 3.2, NULL, 26476, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(snd_atomic_read_t,0, 27343, 9, 3.2, NULL, 26476, NULL)
+CheckTypeSize(snd_atomic_read_t,16, 27343, 9, 3.2, NULL, 26476, NULL)
 #else
 Msg("Find size of snd_atomic_read_t (27343)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26476, NULL);\n",architecture,27343,0);
