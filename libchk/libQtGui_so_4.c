@@ -8048,7 +8048,6 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTV10QUndoStack","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV10QValidator","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV10QWorkspace","",0,LSB_Toolkit_Qt,0,0},
-	{"_ZTV11QBmpHandler","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV11QCloseEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV11QDockWidget","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV11QFileDialog","",0,LSB_Toolkit_Qt,0,0},
