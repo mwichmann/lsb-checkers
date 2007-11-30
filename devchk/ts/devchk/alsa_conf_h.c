@@ -30,17 +30,17 @@ printf("Checking data structures in alsa/conf.h\n");
 #if defined __x86_64__
 CheckTypeSize(snd_config_iterator_t,8, 27347, 11, 3.2, NULL, 26326, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(snd_config_iterator_t,0, 27347, 10, 3.2, NULL, 26326, NULL)
+CheckTypeSize(snd_config_iterator_t,4, 27347, 10, 3.2, NULL, 26326, NULL)
 #elif defined __s390x__
-CheckTypeSize(snd_config_iterator_t,0, 27347, 12, 3.2, NULL, 26326, NULL)
+CheckTypeSize(snd_config_iterator_t,8, 27347, 12, 3.2, NULL, 26326, NULL)
 #elif defined __i386__
-CheckTypeSize(snd_config_iterator_t,0, 27347, 2, 3.2, NULL, 26326, NULL)
+CheckTypeSize(snd_config_iterator_t,4, 27347, 2, 3.2, NULL, 26326, NULL)
 #elif defined __ia64__
-CheckTypeSize(snd_config_iterator_t,0, 27347, 3, 3.2, NULL, 26326, NULL)
+CheckTypeSize(snd_config_iterator_t,8, 27347, 3, 3.2, NULL, 26326, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_config_iterator_t,0, 27347, 6, 3.2, NULL, 26326, NULL)
+CheckTypeSize(snd_config_iterator_t,4, 27347, 6, 3.2, NULL, 26326, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(snd_config_iterator_t,0, 27347, 9, 3.2, NULL, 26326, NULL)
+CheckTypeSize(snd_config_iterator_t,8, 27347, 9, 3.2, NULL, 26326, NULL)
 #else
 Msg("Find size of snd_config_iterator_t (27347)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26326,NULL);\n",architecture,27347,0);
@@ -49,17 +49,17 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26326,NULL);\n",archi
 #if defined __x86_64__
 CheckTypeSize(snd_config_type_t,4, 27352, 11, 3.2, NULL, 26328, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(snd_config_type_t,0, 27352, 10, 3.2, NULL, 26328, NULL)
+CheckTypeSize(snd_config_type_t,4, 27352, 10, 3.2, NULL, 26328, NULL)
 #elif defined __s390x__
-CheckTypeSize(snd_config_type_t,0, 27352, 12, 3.2, NULL, 26328, NULL)
+CheckTypeSize(snd_config_type_t,4, 27352, 12, 3.2, NULL, 26328, NULL)
 #elif defined __i386__
-CheckTypeSize(snd_config_type_t,0, 27352, 2, 3.2, NULL, 26328, NULL)
+CheckTypeSize(snd_config_type_t,4, 27352, 2, 3.2, NULL, 26328, NULL)
 #elif defined __ia64__
-CheckTypeSize(snd_config_type_t,0, 27352, 3, 3.2, NULL, 26328, NULL)
+CheckTypeSize(snd_config_type_t,4, 27352, 3, 3.2, NULL, 26328, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_config_type_t,0, 27352, 6, 3.2, NULL, 26328, NULL)
+CheckTypeSize(snd_config_type_t,4, 27352, 6, 3.2, NULL, 26328, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(snd_config_type_t,0, 27352, 9, 3.2, NULL, 26328, NULL)
+CheckTypeSize(snd_config_type_t,4, 27352, 9, 3.2, NULL, 26328, NULL)
 #else
 Msg("Find size of snd_config_type_t (27352)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26328,NULL);\n",architecture,27352,0);
@@ -68,17 +68,17 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26328,NULL);\n",archi
 #if defined __x86_64__
 CheckTypeSize(snd_devname_t,24, 27400, 11, 3.2, NULL, 27397, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(snd_devname_t,0, 27400, 10, 3.2, NULL, 27397, NULL)
+CheckTypeSize(snd_devname_t,12, 27400, 10, 3.2, NULL, 27397, NULL)
 #elif defined __s390x__
-CheckTypeSize(snd_devname_t,0, 27400, 12, 3.2, NULL, 27397, NULL)
+CheckTypeSize(snd_devname_t,24, 27400, 12, 3.2, NULL, 27397, NULL)
 #elif defined __i386__
-CheckTypeSize(snd_devname_t,0, 27400, 2, 3.2, NULL, 27397, NULL)
+CheckTypeSize(snd_devname_t,12, 27400, 2, 3.2, NULL, 27397, NULL)
 #elif defined __ia64__
-CheckTypeSize(snd_devname_t,0, 27400, 3, 3.2, NULL, 27397, NULL)
+CheckTypeSize(snd_devname_t,24, 27400, 3, 3.2, NULL, 27397, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_devname_t,0, 27400, 6, 3.2, NULL, 27397, NULL)
+CheckTypeSize(snd_devname_t,12, 27400, 6, 3.2, NULL, 27397, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(snd_devname_t,0, 27400, 9, 3.2, NULL, 27397, NULL)
+CheckTypeSize(snd_devname_t,24, 27400, 9, 3.2, NULL, 27397, NULL)
 #else
 Msg("Find size of snd_devname_t (27400)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27397, NULL);\n",architecture,27400,0);

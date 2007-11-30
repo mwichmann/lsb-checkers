@@ -313,17 +313,17 @@ cnt++;
 #if defined __x86_64__
 CheckTypeSize(snd_instr_fm_t,1, 27444, 11, 3.2, NULL, 11, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(snd_instr_fm_t,0, 27444, 10, 3.2, NULL, 11, NULL)
+CheckTypeSize(snd_instr_fm_t,1, 27444, 10, 3.2, NULL, 11, NULL)
 #elif defined __s390x__
-CheckTypeSize(snd_instr_fm_t,0, 27444, 12, 3.2, NULL, 11, NULL)
+CheckTypeSize(snd_instr_fm_t,1, 27444, 12, 3.2, NULL, 11, NULL)
 #elif defined __i386__
-CheckTypeSize(snd_instr_fm_t,0, 27444, 2, 3.2, NULL, 11, NULL)
+CheckTypeSize(snd_instr_fm_t,1, 27444, 2, 3.2, NULL, 11, NULL)
 #elif defined __ia64__
-CheckTypeSize(snd_instr_fm_t,0, 27444, 3, 3.2, NULL, 11, NULL)
+CheckTypeSize(snd_instr_fm_t,1, 27444, 3, 3.2, NULL, 11, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_instr_fm_t,0, 27444, 6, 3.2, NULL, 11, NULL)
+CheckTypeSize(snd_instr_fm_t,1, 27444, 6, 3.2, NULL, 11, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(snd_instr_fm_t,0, 27444, 9, 3.2, NULL, 11, NULL)
+CheckTypeSize(snd_instr_fm_t,1, 27444, 9, 3.2, NULL, 11, NULL)
 #else
 Msg("Find size of snd_instr_fm_t (27444)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11,NULL);\n",architecture,27444,0);
@@ -332,17 +332,17 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11,NULL);\n",architec
 #if defined __x86_64__
 CheckTypeSize(snd_instr_iwffff_t,1, 27450, 11, 3.2, NULL, 11, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(snd_instr_iwffff_t,0, 27450, 10, 3.2, NULL, 11, NULL)
+CheckTypeSize(snd_instr_iwffff_t,1, 27450, 10, 3.2, NULL, 11, NULL)
 #elif defined __s390x__
-CheckTypeSize(snd_instr_iwffff_t,0, 27450, 12, 3.2, NULL, 11, NULL)
+CheckTypeSize(snd_instr_iwffff_t,1, 27450, 12, 3.2, NULL, 11, NULL)
 #elif defined __i386__
-CheckTypeSize(snd_instr_iwffff_t,0, 27450, 2, 3.2, NULL, 11, NULL)
+CheckTypeSize(snd_instr_iwffff_t,1, 27450, 2, 3.2, NULL, 11, NULL)
 #elif defined __ia64__
-CheckTypeSize(snd_instr_iwffff_t,0, 27450, 3, 3.2, NULL, 11, NULL)
+CheckTypeSize(snd_instr_iwffff_t,1, 27450, 3, 3.2, NULL, 11, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_instr_iwffff_t,0, 27450, 6, 3.2, NULL, 11, NULL)
+CheckTypeSize(snd_instr_iwffff_t,1, 27450, 6, 3.2, NULL, 11, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(snd_instr_iwffff_t,0, 27450, 9, 3.2, NULL, 11, NULL)
+CheckTypeSize(snd_instr_iwffff_t,1, 27450, 9, 3.2, NULL, 11, NULL)
 #else
 Msg("Find size of snd_instr_iwffff_t (27450)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11,NULL);\n",architecture,27450,0);
@@ -351,17 +351,17 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11,NULL);\n",architec
 #if defined __x86_64__
 CheckTypeSize(snd_instr_simple_t,1, 27453, 11, 3.2, NULL, 11, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(snd_instr_simple_t,0, 27453, 10, 3.2, NULL, 11, NULL)
+CheckTypeSize(snd_instr_simple_t,1, 27453, 10, 3.2, NULL, 11, NULL)
 #elif defined __s390x__
-CheckTypeSize(snd_instr_simple_t,0, 27453, 12, 3.2, NULL, 11, NULL)
+CheckTypeSize(snd_instr_simple_t,1, 27453, 12, 3.2, NULL, 11, NULL)
 #elif defined __i386__
-CheckTypeSize(snd_instr_simple_t,0, 27453, 2, 3.2, NULL, 11, NULL)
+CheckTypeSize(snd_instr_simple_t,1, 27453, 2, 3.2, NULL, 11, NULL)
 #elif defined __ia64__
-CheckTypeSize(snd_instr_simple_t,0, 27453, 3, 3.2, NULL, 11, NULL)
+CheckTypeSize(snd_instr_simple_t,1, 27453, 3, 3.2, NULL, 11, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_instr_simple_t,0, 27453, 6, 3.2, NULL, 11, NULL)
+CheckTypeSize(snd_instr_simple_t,1, 27453, 6, 3.2, NULL, 11, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(snd_instr_simple_t,0, 27453, 9, 3.2, NULL, 11, NULL)
+CheckTypeSize(snd_instr_simple_t,1, 27453, 9, 3.2, NULL, 11, NULL)
 #else
 Msg("Find size of snd_instr_simple_t (27453)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11,NULL);\n",architecture,27453,0);
