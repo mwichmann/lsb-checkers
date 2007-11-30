@@ -82,28 +82,54 @@ cnt++;
 
 #endif
 
-#if 1
-CheckTypeSize(snd_ctl_ext_callback_t,200, 27381, 1, 3.2, NULL, 27380, NULL)
+#if defined __i386__
+CheckTypeSize(snd_ctl_ext_callback_t,100, 27381, 2, 3.2, NULL, 27380, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_ctl_ext_callback_t,100, 27381, 6, 3.2, NULL, 27380, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(snd_ctl_ext_callback_t,100, 27381, 10, 3.2, NULL, 27380, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_ctl_ext_callback_t,200, 27381, 3, 3.2, NULL, 27380, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(snd_ctl_ext_callback_t,200, 27381, 9, 3.2, NULL, 27380, NULL)
+#elif defined __x86_64__
+CheckTypeSize(snd_ctl_ext_callback_t,200, 27381, 11, 3.2, NULL, 27380, NULL)
+#elif defined __s390x__
+CheckTypeSize(snd_ctl_ext_callback_t,200, 27381, 12, 3.2, NULL, 27380, NULL)
+#else
+Msg("Find size of snd_ctl_ext_callback_t (27381)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27380,NULL);\n",architecture,27381,0);
 #endif
 
-#if 1
-CheckTypeSize(snd_ctl_ext_key_t,8, 27382, 1, 3.2, NULL, 11186, NULL)
+#if defined __i386__
+CheckTypeSize(snd_ctl_ext_key_t,4, 27382, 2, 3.2, NULL, 11186, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_ctl_ext_key_t,8, 27382, 3, 3.2, NULL, 11186, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(snd_ctl_ext_key_t,8, 27382, 9, 3.2, NULL, 11186, NULL)
+#elif defined __x86_64__
+CheckTypeSize(snd_ctl_ext_key_t,8, 27382, 11, 3.2, NULL, 11186, NULL)
+#elif defined __s390x__
+CheckTypeSize(snd_ctl_ext_key_t,8, 27382, 12, 3.2, NULL, 11186, NULL)
+#else
+Msg("Find size of snd_ctl_ext_key_t (27382)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11186,NULL);\n",architecture,27382,0);
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(snd_ctl_ext_t,48, 27384, 11, 3.2, NULL, 27379, NULL)
+CheckTypeSize(snd_ctl_ext_t,272, 27384, 11, 3.2, NULL, 27379, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(snd_ctl_ext_t,0, 27384, 10, 3.2, NULL, 27379, NULL)
+CheckTypeSize(snd_ctl_ext_t,256, 27384, 10, 3.2, NULL, 27379, NULL)
 #elif defined __s390x__
-CheckTypeSize(snd_ctl_ext_t,0, 27384, 12, 3.2, NULL, 27379, NULL)
+CheckTypeSize(snd_ctl_ext_t,272, 27384, 12, 3.2, NULL, 27379, NULL)
 #elif defined __i386__
-CheckTypeSize(snd_ctl_ext_t,0, 27384, 2, 3.2, NULL, 27379, NULL)
+CheckTypeSize(snd_ctl_ext_t,256, 27384, 2, 3.2, NULL, 27379, NULL)
 #elif defined __ia64__
-CheckTypeSize(snd_ctl_ext_t,0, 27384, 3, 3.2, NULL, 27379, NULL)
+CheckTypeSize(snd_ctl_ext_t,272, 27384, 3, 3.2, NULL, 27379, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_ctl_ext_t,0, 27384, 6, 3.2, NULL, 27379, NULL)
+CheckTypeSize(snd_ctl_ext_t,256, 27384, 6, 3.2, NULL, 27379, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(snd_ctl_ext_t,0, 27384, 9, 3.2, NULL, 27379, NULL)
+CheckTypeSize(snd_ctl_ext_t,272, 27384, 9, 3.2, NULL, 27379, NULL)
 #else
 Msg("Find size of snd_ctl_ext_t (27384)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27379, NULL);\n",architecture,27384,0);
