@@ -174,6 +174,83 @@ Msg("Find size of snd_seq_addr_t (27711)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27709,NULL);\n",architecture,27711,0);
 #endif
 
+#if 1
+CheckTypeSize(snd_seq_connect_t,0, 27721, 1, 3.2, NULL, 27720, NULL)
+#endif
+
+#if 1
+CheckTypeSize(snd_seq_ev_cluster_t,0, 27723, 1, 3.2, NULL, 27722, NULL)
+#endif
+
+#if 1
+CheckTypeSize(snd_seq_ev_ctrl_t,0, 27725, 1, 3.2, NULL, 27724, NULL)
+#endif
+
+#if 1
+CheckTypeSize(snd_seq_ev_ext_t,0, 27727, 1, 3.2, NULL, 27726, NULL)
+#endif
+
+#if 1
+CheckTypeSize(snd_seq_ev_instr_begin_t,0, 27729, 1, 3.2, NULL, 27728, NULL)
+#endif
+
+#if 1
+CheckTypeSize(snd_seq_ev_loop_t,0, 27731, 1, 3.2, NULL, 27730, NULL)
+#endif
+
+#if 1
+CheckTypeSize(snd_seq_ev_note_t,0, 27733, 1, 3.2, NULL, 27732, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct snd_seq_ev_queue_control,0, 27734, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for snd_seq_ev_queue_control on All\n");
+CheckOffset(struct snd_seq_ev_queue_control,queue,0,1,75246)
+CheckOffset(struct snd_seq_ev_queue_control,unused,0,1,75247)
+CheckOffset(struct snd_seq_ev_queue_control,param,0,1,75248)
+#endif
+
+#if 1
+CheckTypeSize(snd_seq_ev_queue_control_t,0, 27735, 1, 3.2, NULL, 27734, NULL)
+#endif
+
+#if 1
+CheckTypeSize(snd_seq_ev_raw32_t,0, 27737, 1, 3.2, NULL, 27736, NULL)
+#endif
+
+#if 1
+CheckTypeSize(snd_seq_ev_raw8_t,0, 27739, 1, 3.2, NULL, 27738, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct snd_seq_ev_sample,0, 27740, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for snd_seq_ev_sample on All\n");
+CheckOffset(struct snd_seq_ev_sample,std,0,1,75263)
+CheckOffset(struct snd_seq_ev_sample,bank,0,1,75264)
+CheckOffset(struct snd_seq_ev_sample,prg,0,1,75265)
+#endif
+
+#if 1
+CheckTypeSize(snd_seq_ev_sample_control_t,0, 27742, 1, 3.2, NULL, 27741, NULL)
+#endif
+
+#if 1
+CheckTypeSize(snd_seq_ev_sample_t,0, 27743, 1, 3.2, NULL, 27740, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct snd_seq_ev_volume,0, 27744, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for snd_seq_ev_volume on All\n");
+CheckOffset(struct snd_seq_ev_volume,volume,0,1,75281)
+CheckOffset(struct snd_seq_ev_volume,lr,0,1,75282)
+CheckOffset(struct snd_seq_ev_volume,fr,0,1,75283)
+CheckOffset(struct snd_seq_ev_volume,du,0,1,75284)
+#endif
+
+#if 1
+CheckTypeSize(snd_seq_ev_volume_t,0, 27745, 1, 3.2, NULL, 27744, NULL)
+#endif
+
 #if defined __x86_64__
 CheckTypeSize(struct snd_seq_real_time,8, 27746, 11, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct snd_seq_real_time,tv_nsec,4,11,75332)
@@ -245,6 +322,10 @@ Msg("Find size of snd_seq_event_type_t (27750)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,3,NULL);\n",architecture,27750,0);
 #endif
 
+#if 1
+CheckTypeSize(snd_seq_frequency_t,0, 27751, 1, 3.2, NULL, 6, NULL)
+#endif
+
 #if defined __x86_64__
 CheckTypeSize(snd_seq_instr_cluster_t,4, 27755, 11, 3.2, NULL, 7, NULL)
 #elif defined __s390__ && !defined __s390x__
@@ -281,6 +362,14 @@ CheckTypeSize(snd_seq_instr_t,12, 27756, 9, 3.2, NULL, 27754, NULL)
 #else
 Msg("Find size of snd_seq_instr_t (27756)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27754,NULL);\n",architecture,27756,0);
+#endif
+
+#if 1
+CheckTypeSize(snd_seq_position_t,0, 27765, 1, 3.2, NULL, 7, NULL)
+#endif
+
+#if 1
+CheckTypeSize(snd_seq_queue_skew_t,0, 27776, 1, 3.2, NULL, 27775, NULL)
 #endif
 
 #if defined __x86_64__
@@ -340,6 +429,21 @@ CheckTypeSize(snd_seq_real_time_t,8, 27789, 9, 3.2, NULL, 27787, NULL)
 #else
 Msg("Find size of snd_seq_real_time_t (27789)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27787,NULL);\n",architecture,27789,0);
+#endif
+
+#if 1
+CheckTypeSize(struct snd_seq_result,0, 27793, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for snd_seq_result on All\n");
+CheckOffset(struct snd_seq_result,event,0,1,75333)
+CheckOffset(struct snd_seq_result,result,0,1,75334)
+#endif
+
+#if 1
+CheckTypeSize(snd_seq_result_t,0, 27794, 1, 3.2, NULL, 27793, NULL)
+#endif
+
+#if 1
+CheckTypeSize(snd_seq_stop_mode_t,0, 27796, 1, 3.2, NULL, 27795, NULL)
 #endif
 
 #if defined __x86_64__
