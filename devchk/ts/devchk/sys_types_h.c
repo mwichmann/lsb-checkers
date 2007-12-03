@@ -199,6 +199,10 @@ Msg("Find size of u_int32_t (7001)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,7001,0);
 #endif
 
+#if 1
+CheckTypeSize(u_int64_t,8, 7002, 1, 3.2, NULL, 11, NULL)
+#endif
+
 #if defined __i386__
 CheckTypeSize(uid_t,4, 9069, 2, 1.2, NULL, 7, NULL)
 #elif defined __ia64__
