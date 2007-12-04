@@ -35,17 +35,22 @@ print CMDS "\tchar *cmdname;\n";
 print CMDS "\tchar *cmdpath;\n";
 print CMDS "};\nstruct cmds core_cmdlist[] = {\n";
 
+# hack: move everything to core by taking out the
+# qualifier on module ID=1 (see also next change)
 $select = "SELECT DISTINCT Cid,Cname,Cpath FROM Command ";
 $select.= "LEFT JOIN ModCmd ON MCcid=Cid ";
 $select.= "WHERE (MCappearedin <= '$lsbversion' and MCappearedin<>'') ";
 $select.= "AND (MCwithdrawnin IS NULL OR MCwithdrawnin > '$lsbversion') ";
-$select.= "AND Cbuiltin!='Yes' AND MCmid=1 ";
+#$select.= "AND Cbuiltin!='Yes' AND MCmid=1 ";
+$select.= "AND Cbuiltin!='Yes' ";
 $select.= "ORDER BY Cname ";
 
 #print $select;
 
 $sth = $Dbh->query($select) || die $Dbh->errmsg();
 
+# hack: move everything to core by making the "desktop" module Id
+# impossible to match (9999)
 for(1..$sth->numrows) {
 	%entry=$sth->fetchhash;
 	print CMDS "	{\"$entry{'Cname'}\", \"$entry{'Cpath'}\"},\n";
@@ -56,7 +61,7 @@ $select = "SELECT DISTINCT Cid,Cname,Cpath FROM Command ";
 $select.= "LEFT JOIN ModCmd ON MCcid=Cid "; 
 $select.= "WHERE (MCappearedin <= '$lsbversion' and MCappearedin<>'') ";
 $select.= "AND (MCwithdrawnin IS NULL OR MCwithdrawnin > '$lsbversion') ";
-$select.= "AND Cbuiltin!='Yes' AND MCmid=6 ";
+$select.= "AND Cbuiltin!='Yes' AND MCmid=9999 ";
 $select.= "ORDER BY Cname ";
 
 #print $select;

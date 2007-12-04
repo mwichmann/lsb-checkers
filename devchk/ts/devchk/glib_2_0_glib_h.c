@@ -58,6 +58,10 @@ Msg("Checking data structures in glib-2.0/glib.h\n");
 
 printf("Checking data structures in glib-2.0/glib.h\n");
 #if _LSB_DEFAULT_ARCH
+/* No test for glib-2.0/glib.h depends on limits.h */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 /* No test for G_GNUC_EXTENSION */
 #endif
 

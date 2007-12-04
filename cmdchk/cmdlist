@@ -43,6 +43,7 @@ fgrep None
 file None
 find None
 fold None
+foomatic-rip /usr/bin
 fuser None
 gencat None
 getconf None
@@ -52,6 +53,7 @@ groupadd /usr/sbin/groupadd
 groupdel /usr/sbin/groupdel
 groupmod /usr/sbin/groupmod
 groups None
+gs /usr/bin
 gunzip /bin/gunzip
 gzip /bin/gzip
 head None
@@ -97,11 +99,13 @@ paste None
 patch None
 pathchk None
 pax None
+perl /usr/bin/perl
 pidof None
 pr None
 printf None
 ps /bin/ps
 pwd /bin/pwd
+python /usr/bin/python
 remove_initd /usr/lib/lsb/remove_initd
 renice None
 rm /bin/rm
@@ -136,3 +140,10 @@ userdel /usr/sbin/userdel
 usermod /usr/sbin/usermod
 wc None
 xargs None
+xdg-desktop-icon None
+xdg-desktop-menu None
+xdg-email None
+xdg-icon-resource None
+xdg-mime None
+xdg-open None
+xdg-screensaver None
