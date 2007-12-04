@@ -26,7 +26,7 @@ extern struct lsb_module* LSB_Modules[];
 #define LSB_Core_Modules 	(LSB_Core | LSB_Cpp)
 #define LSB_Desktop_Modules_LSB30 (LSB_Core | LSB_Cpp | LSB_Graphics)
 #define LSB_Desktop_Modules_LSB31 (LSB_Core | LSB_Cpp | LSB_Graphics | LSB_Graphics_Ext | LSB_Toolkit_Gtk | LSB_Toolkit_Qt3 | LSB_XML)
-#define LSB_Desktop_Modules_LSB32 (LSB_Core | LSB_Cpp | LSB_Graphics | LSB_Graphics_Ext | LSB_Toolkit_Gtk | LSB_Toolkit_Qt3 | LSB_XML)
+#define LSB_Desktop_Modules_LSB32 (LSB_Core | LSB_Cpp | LSB_Graphics | LSB_Graphics_Ext | LSB_Perl | LSB_Printing | LSB_Python | LSB_Toolkit_Gtk | LSB_Toolkit_Qt | LSB_Toolkit_Qt3 | LSB_XML)
 #define LSB_All_Modules 0xffff
 
 extern int LSB_Desktop_Modules[];
