@@ -1,11 +1,9 @@
 /*
  * cmdchk.c 
  *
- * Copyright (c) 2002-2006 The Free Standards Group Inc.
+ * Copyright (c) 2002-2007 Linux Foundation
  *
  * Stuart Anderson (anderson@freestandards.org)
- *
- * This is $Revision: 1.26 $
  */
 
 #include <unistd.h>

@@ -1,12 +1,10 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# (C) Copyright 2002-2006 The Free Standards Group
+# Copyright (C) 2002-2007 Linux Foundation
 #
 # Python version
 # Author: Mats Wichmann, Intel Corporation
-#
-# This is $Revision: 1.12 $
 #
 
 """
@@ -26,8 +24,8 @@ import tetj
 
 # these are phony, can't fill in these the normal way
 
-LSBCMDCHK_VERSION = '3.0unofficial'
-LSBVERSION = '3.0'
+LSBCMDCHK_VERSION = '3.2'
+LSBVERSION = '3.2'
 
 
 class Path:

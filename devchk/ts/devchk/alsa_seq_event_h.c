@@ -203,14 +203,6 @@ CheckTypeSize(snd_seq_ev_note_t,0, 27733, 1, 3.2, NULL, 27732, NULL)
 #endif
 
 #if 1
-CheckTypeSize(struct snd_seq_ev_queue_control,0, 27734, 1, 3.2, NULL, 0, NULL)
-Msg("Missing member data for snd_seq_ev_queue_control on All\n");
-CheckOffset(struct snd_seq_ev_queue_control,queue,0,1,75246)
-CheckOffset(struct snd_seq_ev_queue_control,unused,0,1,75247)
-CheckOffset(struct snd_seq_ev_queue_control,param,0,1,75248)
-#endif
-
-#if 1
 CheckTypeSize(snd_seq_ev_queue_control_t,0, 27735, 1, 3.2, NULL, 27734, NULL)
 #endif
 
@@ -366,6 +358,13 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27754,NULL);\n",archi
 
 #if 1
 CheckTypeSize(snd_seq_position_t,0, 27765, 1, 3.2, NULL, 7, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct snd_seq_queue_skew,0, 27775, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for snd_seq_queue_skew on All\n");
+CheckOffset(struct snd_seq_queue_skew,value,0,1,75329)
+CheckOffset(struct snd_seq_queue_skew,base,0,1,75330)
 #endif
 
 #if 1

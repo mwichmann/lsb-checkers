@@ -4,12 +4,16 @@ OBJS = cmdchk.o
 
 CFLAGS=-g -I../elfchk -DLSBVERSION=\"$$LSBVERSION\" -DLSBCMDCHK_VERSION=\"$(LSBCMDCHK_VERSION)\" -Wall -Werror
 
-all:: cmdchk cmdlist
+GENSRCS=cmds.h cmdlist
+
+all:: cmdchk
 
 include ../Makefile.common
 
 cmdchk: $(OBJS) ../tetj/libtetj.a
 	$(CC) $(CFLAGS) -o cmdchk $(OBJS) ../tetj/libtetj.a
+
+gensrc: $(GENSRCS)
 
 cmds.h:
 	./mkcmdlist -v `cat LSB_VERSION`

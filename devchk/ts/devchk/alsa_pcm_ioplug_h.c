@@ -119,16 +119,12 @@ Msg( "Error: Constant not found: SND_PCM_IOPLUG_VERSION_TINY\n");
 cnt++;
 #endif
 
-#elif _LSB_DEFAULT_ARCH
-#ifdef SND_PCM_IOPLUG_VERSION_TINY
-	CompareConstant(SND_PCM_IOPLUG_VERSION_TINY,1,11438,architecture,3.2,NULL)
 #else
-Msg( "Error: Constant not found: SND_PCM_IOPLUG_VERSION_TINY\n");
-cnt++;
+Msg( "No definition for SND_PCM_IOPLUG_VERSION_TINY (11438, int) in db\n");
+#ifdef SND_PCM_IOPLUG_VERSION_TINY
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,11438,%d,'""3.2""',NULL);\n", architecture, SND_PCM_IOPLUG_VERSION_TINY);
 #endif
-
 #endif
-
 #if _LSB_DEFAULT_ARCH
 #ifdef SND_PCM_IOPLUG_VERSION
 	CompareConstant(SND_PCM_IOPLUG_VERSION,((SND_PCM_IOPLUG_VERSION_MAJOR<<16) | (SND_PCM_IOPLUG_VERSION_MINOR<<8) | (SND_PCM_IOPLUG_VERSION_TINY)),11439,architecture,3.2,NULL)
