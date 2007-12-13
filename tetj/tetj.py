@@ -21,6 +21,7 @@ import sys
 import os
 import pwd
 import time
+import cStringIO
 
 TETJ_PASS = 0
 TETJ_FAIL = 1
@@ -162,21 +163,12 @@ class Journal:
                             self.testcase, result,
                             get_current_time_string(), code))
 
-    def testcase_info(
-        self,
-        context,
-        block,
-        sequence,
-        message,
-        ):
-        self.journal.append('520|%u %u %u %u %u|%s\n' % (
-            self.activity,
-            self.testcase,
-            context,
-            block,
-            sequence,
-            message,
-            ))
+    def testcase_info(self, context, block, sequence, message):
+        # in case we got a multi-line info message, split it up
+        for line in cStringIO.StringIO(str(message)):
+            self.journal.append('520|%u %u %u %u %u|%s\n' %
+                                (self.activity, self.testcase, context,
+                                 block, sequence, line.strip()))
 
     # add convenience methods for results
 
@@ -240,6 +232,10 @@ def _test():
         'foxglove': TETJ_NOTIMP,
         'alabaster': TETJ_UNAPPROVE,
         }
+
+    info = """This should be information about
+why the test case did not succeed"""
+
     try:
         journal = Journal('journal.tetjtest', 'tetjtest')
     except:
@@ -255,6 +251,8 @@ def _test():
     journal.testcase_start('foo')
     for (purpose, tpresult) in teststuff.items():
         journal.purpose_start(purpose)
+        if tpresult != TETJ_PASS:
+            journal.testcase_info(0, 0, 0, info)
         journal.result(tpresult)
         journal.purpose_end()
     journal.testcase_end('foo')
@@ -262,6 +260,8 @@ def _test():
     journal.testcase_start('bar')
     for (purpose, tpresult) in teststuff.items():
         journal.purpose_start(purpose)
+        if tpresult != TETJ_PASS:
+            journal.testcase_info(0, 0, 0, info)
         journal.result(tpresult)
         journal.purpose_end()
     journal.testcase_end('bar')
