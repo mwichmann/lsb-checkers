@@ -134,30 +134,14 @@ if __name__ == '__main__':
 
     usage = 'usage: %prog [options]'
     parser = OptionParser(usage)
-    parser.add_option(
-        '-e',
-        '--extras',
-        action='store_true',
-        dest='extras',
-        default=False,
-        help='check for extra files in target directories',
-        )
-    parser.add_option(
-        '-v',
-        '--version',
-        action='store_true',
-        dest='version',
-        default=False,
-        help='show program and LSB version',
-        )
-    parser.add_option(
-        '-n',
-        '--nojournal',
-        action='store_true',
-        dest='nojournal',
-        default=False,
-        help='do not write a journal file',
-        )
+    parser.add_option('-e', '--extras', action='store_true', dest='extras',
+                      default=False,
+                      help='check for extra files in target directories')
+    parser.add_option('-v', '--version', action='store_true', dest='version',
+                      default=False, help='show program and LSB version')
+    parser.add_option( '-n', '--nojournal', action='store_true',
+                      dest='nojournal', default=False,
+                      help='do not write a journal file')
     parser.add_option('-j', '--journal', action='store', dest='journal',
                       help='use JOURNAL as file/path for journal file')
     parser.add_option('-p', '--prefix', action='store', dest='prefix',
@@ -166,17 +150,17 @@ if __name__ == '__main__':
     if len(args):
         parser.error('incorrect number of arguments')
 
-    # setup journal file for certification
+    if opts.version:
+        print 'lsbcmdchk.py %s for LSB Specification %s'\
+             % (LSBCMDCHK_VERSION, LSBVERSION)
+
+    # setup journal file for certification, if needed
 
     journal_file = 'journal.lsbcmdchk'
     if opts.nojournal:
         journal_file = '/dev/null'
     if opts.journal:
         journal_file = opts.journal
-    if opts.version:
-        print 'lsbcmdchk.py %s for LSB Specification %s'\
-             % (LSBCMDCHK_VERSION, LSBVERSION)
-
     journal = tetj.Journal(journal_file, 'lsbcmdchk.py')
     if not journal.journal:
         sys.stderr.write('Could not open journal file')
