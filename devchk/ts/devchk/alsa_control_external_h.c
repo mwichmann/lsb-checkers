@@ -111,6 +111,10 @@ CheckTypeSize(snd_ctl_ext_key_t,8, 27382, 9, 3.2, NULL, 11186, NULL)
 CheckTypeSize(snd_ctl_ext_key_t,8, 27382, 11, 3.2, NULL, 11186, NULL)
 #elif defined __s390x__
 CheckTypeSize(snd_ctl_ext_key_t,8, 27382, 12, 3.2, NULL, 11186, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(snd_ctl_ext_key_t,4, 27382, 10, 3.2, NULL, 11186, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_ctl_ext_key_t,4, 27382, 6, 3.2, NULL, 11186, NULL)
 #else
 Msg("Find size of snd_ctl_ext_key_t (27382)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11186,NULL);\n",architecture,27382,0);
