@@ -481,6 +481,68 @@ cnt++;
 
 #endif
 
+#if defined __powerpc64__
+#ifdef O_LARGEFILE
+	CompareConstant(O_LARGEFILE,0,3020,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: O_LARGEFILE\n");
+cnt++;
+#endif
+
+#elif defined __powerpc__ && !defined __powerpc64__
+#ifdef O_LARGEFILE
+	CompareConstant(O_LARGEFILE,0100000,3020,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: O_LARGEFILE\n");
+cnt++;
+#endif
+
+#elif defined __ia64__
+#ifdef O_LARGEFILE
+	CompareConstant(O_LARGEFILE,0,3020,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: O_LARGEFILE\n");
+cnt++;
+#endif
+
+#elif defined __i386__
+#ifdef O_LARGEFILE
+	CompareConstant(O_LARGEFILE,0100000,3020,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: O_LARGEFILE\n");
+cnt++;
+#endif
+
+#elif defined __s390x__
+#ifdef O_LARGEFILE
+	CompareConstant(O_LARGEFILE,0,3020,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: O_LARGEFILE\n");
+cnt++;
+#endif
+
+#elif defined __x86_64__
+#ifdef O_LARGEFILE
+	CompareConstant(O_LARGEFILE,0,3020,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: O_LARGEFILE\n");
+cnt++;
+#endif
+
+#elif defined __s390__ && !defined __s390x__
+#ifdef O_LARGEFILE
+	CompareConstant(O_LARGEFILE,0100000,3020,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: O_LARGEFILE\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for O_LARGEFILE (3020, int) in db\n");
+#ifdef O_LARGEFILE
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3020,%d,'""3.2""',NULL);\n", architecture, O_LARGEFILE);
+#endif
+#endif
 #if _LSB_DEFAULT_ARCH
 #ifdef F_SETSIG
 	CompareConstant(F_SETSIG,10,3023,architecture,3.2,NULL)
