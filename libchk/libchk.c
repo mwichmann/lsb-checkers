@@ -998,7 +998,7 @@ main(int argc, char *argv[])
     exit(2);
   }
   
-  module = LSB_Desktop_Modules[LSB_Version];   // default to all modules in cert program
+  module = LSB_All_Modules;   // default to all modules
   if ((ptr = getenv("LIBCHK_DEBUG")) != NULL) {
     libchk_debug = strtod(ptr,NULL);
   }
