@@ -324,6 +324,7 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
   int fail = 0;
 #define TMP_STRING_SIZE (200)
   char tmp_string[TMP_STRING_SIZE+1];
+  int optional_flags;
   
   hdr1=&(file1->saddr[index]);
   if ( index == 0 ) return; /* A dummy section */
@@ -366,7 +367,12 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
       }
       if( hdr1->sh_flags != SectionInfo[LSB_Version][i].attributes )
       {
-        if( (hdr1->sh_flags|SHF_ALLOC) != SectionInfo[LSB_Version][i].attributes ) 
+	/* XXX: Optional flags should be in the database. */
+	optional_flags = SHF_ALLOC;
+	if( strncmp(SectionInfo[LSB_Version][i].name, ".rodata", 7) == 0 ) {
+	  optional_flags |= SHF_MERGE | SHF_STRINGS;
+	}
+        if( (hdr1->sh_flags|optional_flags) != SectionInfo[LSB_Version][i].attributes ) 
         {
           snprintf(tmp_string, TMP_STRING_SIZE,
                    "Section %s: sh_flags is wrong. expecting %x, got %lx",

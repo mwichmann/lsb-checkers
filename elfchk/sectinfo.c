@@ -182,8 +182,8 @@ struct SectionInfo SectionInfo_LSB30[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{".rela.sbss",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* defined __powerpc__ && !defined __powerpc64__ */
-	{".rodata",SHT_PROGBITS,SHF_ALLOC,checkPROGBITS},
-	{".rodata1",SHT_PROGBITS,SHF_ALLOC,checkPROGBITS},
+	{".rodata",SHT_PROGBITS,SHF_ALLOC+SHF_MERGE+SHF_STRINGS,checkPROGBITS},
+	{".rodata1",SHT_PROGBITS,SHF_ALLOC+SHF_MERGE+SHF_STRINGS,checkPROGBITS},
 #if defined __ia64__
 	{".sbss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE+SHF_IA_64_SHORT,checkNOBITS},
 #endif /* defined __ia64__ */
@@ -412,8 +412,8 @@ struct SectionInfo SectionInfo_LSB31[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{".rela.sbss",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* defined __powerpc__ && !defined __powerpc64__ */
-	{".rodata",SHT_PROGBITS,SHF_ALLOC,checkPROGBITS},
-	{".rodata1",SHT_PROGBITS,SHF_ALLOC,checkPROGBITS},
+	{".rodata",SHT_PROGBITS,SHF_ALLOC+SHF_MERGE+SHF_STRINGS,checkPROGBITS},
+	{".rodata1",SHT_PROGBITS,SHF_ALLOC+SHF_MERGE+SHF_STRINGS,checkPROGBITS},
 #if defined __ia64__
 	{".sbss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE+SHF_IA_64_SHORT,checkNOBITS},
 #endif /* defined __ia64__ */
@@ -642,8 +642,8 @@ struct SectionInfo SectionInfo_LSB32[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{".rela.sbss",SHT_RELA,SHF_ALLOC,checkRELA},
 #endif /* defined __powerpc__ && !defined __powerpc64__ */
-	{".rodata",SHT_PROGBITS,SHF_ALLOC,checkPROGBITS},
-	{".rodata1",SHT_PROGBITS,SHF_ALLOC,checkPROGBITS},
+	{".rodata",SHT_PROGBITS,SHF_ALLOC+SHF_MERGE+SHF_STRINGS,checkPROGBITS},
+	{".rodata1",SHT_PROGBITS,SHF_ALLOC+SHF_MERGE+SHF_STRINGS,checkPROGBITS},
 #if defined __ia64__
 	{".sbss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE+SHF_IA_64_SHORT,checkNOBITS},
 #endif /* defined __ia64__ */
