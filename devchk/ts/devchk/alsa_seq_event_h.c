@@ -175,72 +175,86 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27709,NULL);\n",archi
 #endif
 
 #if 1
-CheckTypeSize(snd_seq_connect_t,0, 27721, 1, 3.2, NULL, 27720, NULL)
+CheckTypeSize(snd_seq_connect_t,4, 27721, 1, 3.2, NULL, 27720, NULL)
 #endif
 
 #if 1
-CheckTypeSize(snd_seq_ev_cluster_t,0, 27723, 1, 3.2, NULL, 27722, NULL)
+CheckTypeSize(snd_seq_ev_cluster_t,4, 27723, 1, 3.2, NULL, 27722, NULL)
 #endif
 
 #if 1
-CheckTypeSize(snd_seq_ev_ctrl_t,0, 27725, 1, 3.2, NULL, 27724, NULL)
+CheckTypeSize(snd_seq_ev_ctrl_t,12, 27725, 1, 3.2, NULL, 27724, NULL)
+#endif
+
+#if defined __i386__
+CheckTypeSize(snd_seq_ev_ext_t,8, 27727, 2, 3.2, NULL, 27726, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_seq_ev_ext_t,12, 27727, 3, 3.2, NULL, 27726, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_seq_ev_ext_t,8, 27727, 6, 3.2, NULL, 27726, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(snd_seq_ev_ext_t,12, 27727, 9, 3.2, NULL, 27726, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(snd_seq_ev_ext_t,8, 27727, 10, 3.2, NULL, 27726, NULL)
+#elif defined __s390x__
+CheckTypeSize(snd_seq_ev_ext_t,12, 27727, 12, 3.2, NULL, 27726, NULL)
+#else
+Msg("Find size of snd_seq_ev_ext_t (27727)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27726,NULL);\n",architecture,27727,0);
 #endif
 
 #if 1
-CheckTypeSize(snd_seq_ev_ext_t,0, 27727, 1, 3.2, NULL, 27726, NULL)
+CheckTypeSize(snd_seq_ev_instr_begin_t,4, 27729, 1, 3.2, NULL, 27728, NULL)
 #endif
 
 #if 1
-CheckTypeSize(snd_seq_ev_instr_begin_t,0, 27729, 1, 3.2, NULL, 27728, NULL)
+CheckTypeSize(snd_seq_ev_loop_t,8, 27731, 1, 3.2, NULL, 27730, NULL)
 #endif
 
 #if 1
-CheckTypeSize(snd_seq_ev_loop_t,0, 27731, 1, 3.2, NULL, 27730, NULL)
+CheckTypeSize(snd_seq_ev_note_t,8, 27733, 1, 3.2, NULL, 27732, NULL)
 #endif
 
 #if 1
-CheckTypeSize(snd_seq_ev_note_t,0, 27733, 1, 3.2, NULL, 27732, NULL)
+CheckTypeSize(snd_seq_ev_queue_control_t,12, 27735, 1, 3.2, NULL, 27734, NULL)
 #endif
 
 #if 1
-CheckTypeSize(snd_seq_ev_queue_control_t,0, 27735, 1, 3.2, NULL, 27734, NULL)
+CheckTypeSize(snd_seq_ev_raw32_t,12, 27737, 1, 3.2, NULL, 27736, NULL)
 #endif
 
 #if 1
-CheckTypeSize(snd_seq_ev_raw32_t,0, 27737, 1, 3.2, NULL, 27736, NULL)
+CheckTypeSize(snd_seq_ev_raw8_t,12, 27739, 1, 3.2, NULL, 27738, NULL)
 #endif
 
 #if 1
-CheckTypeSize(snd_seq_ev_raw8_t,0, 27739, 1, 3.2, NULL, 27738, NULL)
+CheckTypeSize(struct snd_seq_ev_sample,8, 27740, 1, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct snd_seq_ev_sample,bank,2,1,75264)
+CheckOffset(struct snd_seq_ev_sample,bank,4,1,75264)
+CheckMemberSize(struct snd_seq_ev_sample,prg,2,1,75265)
+CheckOffset(struct snd_seq_ev_sample,prg,6,1,75265)
 #endif
 
 #if 1
-CheckTypeSize(struct snd_seq_ev_sample,0, 27740, 1, 3.2, NULL, 0, NULL)
-Msg("Missing member data for snd_seq_ev_sample on All\n");
-CheckOffset(struct snd_seq_ev_sample,std,0,1,75263)
-CheckOffset(struct snd_seq_ev_sample,bank,0,1,75264)
-CheckOffset(struct snd_seq_ev_sample,prg,0,1,75265)
+CheckTypeSize(snd_seq_ev_sample_control_t,12, 27742, 1, 3.2, NULL, 27741, NULL)
 #endif
 
 #if 1
-CheckTypeSize(snd_seq_ev_sample_control_t,0, 27742, 1, 3.2, NULL, 27741, NULL)
+CheckTypeSize(snd_seq_ev_sample_t,8, 27743, 1, 3.2, NULL, 27740, NULL)
 #endif
 
 #if 1
-CheckTypeSize(snd_seq_ev_sample_t,0, 27743, 1, 3.2, NULL, 27740, NULL)
+CheckTypeSize(struct snd_seq_ev_volume,8, 27744, 1, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct snd_seq_ev_volume,lr,2,1,75282)
+CheckOffset(struct snd_seq_ev_volume,lr,2,1,75282)
+CheckMemberSize(struct snd_seq_ev_volume,fr,2,1,75283)
+CheckOffset(struct snd_seq_ev_volume,fr,4,1,75283)
+CheckMemberSize(struct snd_seq_ev_volume,du,2,1,75284)
+CheckOffset(struct snd_seq_ev_volume,du,6,1,75284)
 #endif
 
 #if 1
-CheckTypeSize(struct snd_seq_ev_volume,0, 27744, 1, 3.2, NULL, 0, NULL)
-Msg("Missing member data for snd_seq_ev_volume on All\n");
-CheckOffset(struct snd_seq_ev_volume,volume,0,1,75281)
-CheckOffset(struct snd_seq_ev_volume,lr,0,1,75282)
-CheckOffset(struct snd_seq_ev_volume,fr,0,1,75283)
-CheckOffset(struct snd_seq_ev_volume,du,0,1,75284)
-#endif
-
-#if 1
-CheckTypeSize(snd_seq_ev_volume_t,0, 27745, 1, 3.2, NULL, 27744, NULL)
+CheckTypeSize(snd_seq_ev_volume_t,8, 27745, 1, 3.2, NULL, 27744, NULL)
 #endif
 
 #if defined __x86_64__
@@ -315,7 +329,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,3,NULL);\n",architect
 #endif
 
 #if 1
-CheckTypeSize(snd_seq_frequency_t,0, 27751, 1, 3.2, NULL, 6, NULL)
+CheckTypeSize(snd_seq_frequency_t,4, 27751, 1, 3.2, NULL, 6, NULL)
 #endif
 
 #if defined __x86_64__
@@ -357,18 +371,17 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27754,NULL);\n",archi
 #endif
 
 #if 1
-CheckTypeSize(snd_seq_position_t,0, 27765, 1, 3.2, NULL, 7, NULL)
+CheckTypeSize(snd_seq_position_t,4, 27765, 1, 3.2, NULL, 7, NULL)
 #endif
 
 #if 1
-CheckTypeSize(struct snd_seq_queue_skew,0, 27775, 1, 3.2, NULL, 0, NULL)
-Msg("Missing member data for snd_seq_queue_skew on All\n");
-CheckOffset(struct snd_seq_queue_skew,value,0,1,75329)
-CheckOffset(struct snd_seq_queue_skew,base,0,1,75330)
+CheckTypeSize(struct snd_seq_queue_skew,8, 27775, 1, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct snd_seq_queue_skew,base,4,1,75330)
+CheckOffset(struct snd_seq_queue_skew,base,4,1,75330)
 #endif
 
 #if 1
-CheckTypeSize(snd_seq_queue_skew_t,0, 27776, 1, 3.2, NULL, 27775, NULL)
+CheckTypeSize(snd_seq_queue_skew_t,8, 27776, 1, 3.2, NULL, 27775, NULL)
 #endif
 
 #if defined __x86_64__
@@ -431,18 +444,17 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27787,NULL);\n",archi
 #endif
 
 #if 1
-CheckTypeSize(struct snd_seq_result,0, 27793, 1, 3.2, NULL, 0, NULL)
-Msg("Missing member data for snd_seq_result on All\n");
-CheckOffset(struct snd_seq_result,event,0,1,75333)
-CheckOffset(struct snd_seq_result,result,0,1,75334)
+CheckTypeSize(struct snd_seq_result,8, 27793, 1, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct snd_seq_result,result,4,1,75334)
+CheckOffset(struct snd_seq_result,result,4,1,75334)
 #endif
 
 #if 1
-CheckTypeSize(snd_seq_result_t,0, 27794, 1, 3.2, NULL, 27793, NULL)
+CheckTypeSize(snd_seq_result_t,8, 27794, 1, 3.2, NULL, 27793, NULL)
 #endif
 
 #if 1
-CheckTypeSize(snd_seq_stop_mode_t,0, 27796, 1, 3.2, NULL, 27795, NULL)
+CheckTypeSize(snd_seq_stop_mode_t,4, 27796, 1, 3.2, NULL, 27795, NULL)
 #endif
 
 #if defined __x86_64__
