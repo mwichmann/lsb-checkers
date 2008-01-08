@@ -54,12 +54,8 @@ extern FT_Error FT_Outline_Check_db(FT_Outline *);
 CheckInterfacedef(FT_Outline_Check,FT_Outline_Check_db);
 extern FT_Error FT_Outline_Copy_db(const FT_Outline *, FT_Outline *);
 CheckInterfacedef(FT_Outline_Copy,FT_Outline_Copy_db);
-extern FT_Error FT_Outline_Done_Internal_db(FT_Memory, FT_Outline *);
-CheckInterfacedef(FT_Outline_Done_Internal,FT_Outline_Done_Internal_db);
 extern FT_Orientation FT_Outline_Get_Orientation_db(FT_Outline *);
 CheckInterfacedef(FT_Outline_Get_Orientation,FT_Outline_Get_Orientation_db);
-extern FT_Error FT_Outline_New_Internal_db(FT_Memory, FT_UInt, FT_Int, FT_Outline *);
-CheckInterfacedef(FT_Outline_New_Internal,FT_Outline_New_Internal_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
