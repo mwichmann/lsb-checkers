@@ -147,3 +147,4 @@ xdg-icon-resource None
 xdg-mime None
 xdg-open None
 xdg-screensaver None
+zcat /bin/zcat

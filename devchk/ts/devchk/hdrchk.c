@@ -94,7 +94,6 @@ tcnt+=alsa_mixer_abst_h();
 tcnt+=alsa_output_h();
 tcnt+=alsa_pcm_h();
 tcnt+=alsa_pcm_extplug_h();
-tcnt+=alsa_pcm_ioplug_h();
 tcnt+=alsa_pcm_plugin_h();
 tcnt+=alsa_rawmidi_h();
 tcnt+=alsa_seq_h();

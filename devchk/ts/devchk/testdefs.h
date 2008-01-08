@@ -34,7 +34,6 @@ extern void alsa_mixer_abst_h();
 extern void alsa_output_h();
 extern void alsa_pcm_h();
 extern void alsa_pcm_extplug_h();
-extern void alsa_pcm_ioplug_h();
 extern void alsa_pcm_plugin_h();
 extern void alsa_rawmidi_h();
 extern void alsa_seq_h();

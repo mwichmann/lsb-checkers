@@ -152,6 +152,7 @@ struct cmds core_cmdlist[] = {
 	{"xdg-mime", ""},
 	{"xdg-open", ""},
 	{"xdg-screensaver", ""},
+	{"zcat", "/bin/zcat"},
 };
 
 struct cmds desktop_cmdlist[] = {
