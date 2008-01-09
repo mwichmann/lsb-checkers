@@ -3535,6 +3535,10 @@ extern void png_set_oFFs_db(png_structp, png_infop, png_int_32, png_int_32, int)
 CheckInterfacedef(png_set_oFFs,png_set_oFFs_db);
 extern void png_set_tRNS_to_alpha_db(png_structp);
 CheckInterfacedef(png_set_tRNS_to_alpha,png_set_tRNS_to_alpha_db);
+extern void png_set_palette_to_rgb_db(png_structp);
+CheckInterfacedef(png_set_palette_to_rgb,png_set_palette_to_rgb_db);
+extern void png_set_gray_1_2_4_to_8_db(png_structp);
+CheckInterfacedef(png_set_gray_1_2_4_to_8,png_set_gray_1_2_4_to_8_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
