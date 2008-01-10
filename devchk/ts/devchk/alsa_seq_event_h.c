@@ -198,6 +198,8 @@ CheckTypeSize(snd_seq_ev_ext_t,12, 27727, 9, 3.2, NULL, 27726, NULL)
 CheckTypeSize(snd_seq_ev_ext_t,8, 27727, 10, 3.2, NULL, 27726, NULL)
 #elif defined __s390x__
 CheckTypeSize(snd_seq_ev_ext_t,12, 27727, 12, 3.2, NULL, 27726, NULL)
+#elif defined __x86_64__
+CheckTypeSize(snd_seq_ev_ext_t,12, 27727, 11, 3.2, NULL, 27726, NULL)
 #else
 Msg("Find size of snd_seq_ev_ext_t (27727)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27726,NULL);\n",architecture,27727,0);
