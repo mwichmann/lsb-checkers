@@ -483,7 +483,7 @@ cnt++;
 
 #if defined __powerpc64__
 #ifdef O_LARGEFILE
-	CompareConstant(O_LARGEFILE,0,3020,architecture,3.2,NULL)
+	CompareConstant(O_LARGEFILE,0200000,3020,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: O_LARGEFILE\n");
 cnt++;
@@ -491,7 +491,7 @@ cnt++;
 
 #elif defined __powerpc__ && !defined __powerpc64__
 #ifdef O_LARGEFILE
-	CompareConstant(O_LARGEFILE,0100000,3020,architecture,3.2,NULL)
+	CompareConstant(O_LARGEFILE,0200000,3020,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: O_LARGEFILE\n");
 cnt++;
