@@ -200,9 +200,6 @@ getlsbprofile(const char* lsb_version, int mod)
 #ifdef LSB_TUM
     mod &= ~LSB_TUM;
 #endif
-#ifdef LSB_Printing
-    mod &= ~LSB_Printing;
-#endif
 
     if (mod == LSB_Core_Modules) {
         sprintf(buf, "LSB %s (Core & C++)", lsb_version);
