@@ -23,4 +23,4 @@
 	cd ../rpmchk && $(MAKE) librpmchk.a
 
 ../lsb_version.c:
-	../mklsbver -v `cat LSB_VERSION` >../lsb_version.c
+	../mklsbver -v `cat ../LSB_VERSIONS` >../lsb_version.c
