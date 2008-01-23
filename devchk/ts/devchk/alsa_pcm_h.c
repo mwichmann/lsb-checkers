@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#include <sys/poll.h>
 #include <alsa/global.h>
 #include <alsa/output.h>
 #include <alsa/input.h>
