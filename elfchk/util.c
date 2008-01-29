@@ -138,6 +138,7 @@ ElfFile *OpenElfFileNoExit(char *name)
 void CloseElfFile(ElfFile *efile)
 {
     if (efile != NULL) {
+        munmap(efile->addr, efile->size);
         close(efile->fd);
         free(efile->versionnames);
         free(efile);
