@@ -389,6 +389,11 @@ get_dt_needed(ElfFile *file)
     }
 
     results[size] = OpenElfFile(needed_fn);
+    if ((results[size] == NULL) || (results[size] == ELFFILE_FATAL_ERROR)) {
+      fprintf(stderr, "could not open %s\n", needed_fn);
+      exit(1);
+    }
+
     results[size + 1] = NULL;
 
     init_elf_file(results[size]);
