@@ -26,6 +26,46 @@ Msg("Checking data structures in netdb.h\n");
 
 printf("Checking data structures in netdb.h\n");
 #if _LSB_DEFAULT_ARCH
+#ifdef AI_V4MAPPED
+	CompareConstant(AI_V4MAPPED,0x0008,11900,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: AI_V4MAPPED\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef AI_ALL
+	CompareConstant(AI_ALL,0x0010,11901,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: AI_ALL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef AI_ADDRCONFIG
+	CompareConstant(AI_ADDRCONFIG,0x0020,11902,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: AI_ADDRCONFIG\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef AI_NUMERICSERV
+	CompareConstant(AI_NUMERICSERV,0x0400,11903,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: AI_NUMERICSERV\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef NI_NOFQDN
 	CompareConstant(NI_NOFQDN,4,3356,architecture,1.3,NULL)
 #else
