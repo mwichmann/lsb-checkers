@@ -24,7 +24,7 @@ PROG=appchk
 printf "Running appchk on $PROG..."
 JOURNAL_FILE=journal.appchk.`basename $PROG`
 rm -f $JOURNAL_FILE
-./appchk $PROG > /dev/null 2>&1
+./appchk -j $PROG > /dev/null 2>&1
 if [ $? -ne 0 ]; then
   echo "Failed to run appchk on $PROG"
   exit 1
