@@ -29,6 +29,12 @@ if [ $? -ne 0 ]; then
   echo "Failed to run appchk on $PROG"
   exit 1
 else
+  # Check that the journal file exists.
+  if [ \! -e "$JOURNAL_FILE" ]; then
+    echo Journal file not found.
+    exit 1
+  fi
+
   # Check that the journal file is complete (it has an end marker)
   LAST_CODE=`tail -1 $JOURNAL_FILE | cut -f1 -d'|'`
   if [ "$LAST_CODE" -ne "900" ]; then
