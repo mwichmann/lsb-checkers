@@ -169,6 +169,8 @@ main(int argc, char *argv[])
     char *extra_libraries = NULL;
     char **extra_lib_list = NULL;
     int extra_lib_count = 0;
+    char **extra_module_list = NULL;
+    int extra_module_count = 0;
     char **test_binaries_list = NULL;
     int test_binaries_count = 0;
     char tmp_string[TMP_STRING_SIZE + 1];
@@ -289,8 +291,9 @@ main(int argc, char *argv[])
             }
             break;
         case 'M':
-            modules |= getmoduleval(optarg);
-            printf("also checking symbols in module %s\n", optarg);
+            extra_module_count++;
+            extra_module_list = realloc(extra_module_list, sizeof (char *)*extra_module_count);
+            extra_module_list[extra_module_count-1] = strdup(optarg);
             break;
         case 'L':
             extra_lib_count++;
@@ -421,6 +424,13 @@ main(int argc, char *argv[])
         default:
             modules |= LSB_Desktop_Modules[LSB_Version];
             break;
+    }
+
+    if (extra_module_count) {
+      for (i = 0; i < extra_module_count; i++) {
+        modules |= getmoduleval(extra_module_list[i]);
+        printf("also checking symbols in module %s\n", optarg);
+      }
     }
 
     if (extra_lib_count) {
