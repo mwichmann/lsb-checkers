@@ -11,9 +11,9 @@ printf "Running appchk with no arguments. Expect an error... "
 ./appchk > /dev/null 2>&1
 if [ $? -ne 1 ]; then
   echo "appchk did not fail with no arguments"
-	exit 1
+  exit 1
 else
-	echo "OK"
+  echo "OK"
 fi
 
 # Try running appchk on itself
@@ -24,20 +24,26 @@ PROG=appchk
 printf "Running appchk on $PROG..."
 JOURNAL_FILE=journal.appchk.`basename $PROG`
 rm -f $JOURNAL_FILE
-./appchk $PROG > /dev/null 2>&1
+./appchk -j $PROG > /dev/null 2>&1
 if [ $? -ne 0 ]; then
   echo "Failed to run appchk on $PROG"
-	exit 1
+  exit 1
 else
-		# Check that the journal file is complete (it has an end marker)
-		LAST_CODE=`tail -1 $JOURNAL_FILE | cut -f1 -d'|'`
-		if [ "$LAST_CODE" -ne "900" ]; then
-				echo Journal file is incomplete
-				exit 1
-		else
-				rm -f $JOURNAL_FILE
-				echo OK
-    fi
+  # Check that the journal file exists.
+  if [ \! -e "$JOURNAL_FILE" ]; then
+    echo Journal file not found.
+    exit 1
+  fi
+
+  # Check that the journal file is complete (it has an end marker)
+  LAST_CODE=`tail -1 $JOURNAL_FILE | cut -f1 -d'|'`
+  if [ "$LAST_CODE" -ne "900" ]; then
+    echo Journal file is incomplete
+    exit 1
+  else
+    rm -f $JOURNAL_FILE
+    echo OK
+  fi
 fi
 
 echo 
