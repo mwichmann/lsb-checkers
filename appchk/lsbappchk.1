@@ -3,7 +3,7 @@
 lsbappchk \- check LSB conformance of application or shared library
 .SH SYNOPSIS
 .B lsbappchk
-.RB [ \-hvn ]
+.RB [ \-hvnj ]
 .RB [ \-T
 .IR PRODUCT ]
 .RB [ \-M
@@ -12,19 +12,19 @@ lsbappchk \- check LSB conformance of application or shared library
 .IR LIB ]...
 .RB [ \-D
 .IR DIR ]...
-.RB [ \-j
-.IR JOURNAL ]
+.RB [ \-o
+.IR OUTPUT-FILE ]
 .RI [ long-options ]
 .I appname
 .br
 .B lsbappchk
-.RB [ \-hvn ]
+.RB [ \-hvnj ]
 .RB [ \-T
 .IR PRODUCT ]
 .RB [ \-M
 .IR MODULE ]...
-.RB [ \-j
-.IR JOURNAL ]
+.RB [ \-o
+.IR OUTPUT-FILE ]
 .RI [ long-options ]
 .B \-L
 .I LIB
@@ -53,7 +53,10 @@ Output the program version and LSB version to standard output.
 The version and LSB version are always logged to the journal
 file irrespective of this option.
 .TP
-\fB\-n\fR, \fB--nojournal\fR
+\fB\-j\fR, \fB--journal\fR
+Create a journal instead of a human-readable report.
+.TP
+\fB\-n\fR, \fB--no-journal\fR
 Do not create a journal file.
 .TP
 \fB\-r \fIVERSION\fR, \fB--lsb-version=\fIVERSION\fR
@@ -89,11 +92,12 @@ treated as if they had been added with the
 .I -L
 option.
 .TP
-\fB\-j \fIJOURNAL\fR, \fB--journal\fR=\fIJOURNAL\fR
-Write the journal file to \fIJOURNAL\fR
-instead of to the default filename in the current directory.
+\fB\-o \fIOUTPUT-FILE\fR, \fB--output-file\fR=\fIOUTPUT-FILE\fR
+Write the journal file or report to \fIOUTPUT-FILE\fR
+instead of to the default filename in the current directory
+(or to standard output for reports).
 .PP
-A journal file named 
+With the -j option, a journal file named 
 .BI journal.appchk. appname
 is created, where 
 .I appname
@@ -102,14 +106,16 @@ the test results in a format that can be submitted for LSB Certification.
 You must have write access to the current working directory
 in order to run 
 .I lsbappchk
-successfully, or use the \fB-j\fR option to
+successfully, or use the \fB-o\fR option to
 specify an alternate location for the journal.
-The journal file can be omitted by the use of the \fB\-n\fP option.
 Journal files may be examined with the
 .I tjreport
 tool, available from the LSB project as part of the
 .B lsb-tet3-lite
 package.
+.PP
+Without the -j option, a text report is printed to standard output,
+or to the file specified with the \fB-o\fR option.
 .PP
 If there are several related binaries in a package build,
 .I lsbappchk
