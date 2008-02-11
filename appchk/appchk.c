@@ -30,6 +30,26 @@ concat_string(char *input, char *addition)
     }
 }
 
+int
+append_string_to_list(char ***list, int list_size, char *newstr)
+{
+  char *newstr_copy = strdup(newstr);
+
+  if (newstr_copy != NULL) {
+    list_size++;
+    *list = realloc(*list, sizeof (char *)*list_size);
+
+    if (*list != NULL) {
+      (*list)[list_size - 1] = newstr_copy;
+      return list_size;
+    }
+  }
+
+  perror("could not save argument");
+  exit(1);
+  return -1; /* never get here */
+}
+
 /* 
  * Add all the libraries in a directory to the library list.
  * "path" is the directory's path, "list" is a list of extra libs
@@ -169,6 +189,8 @@ main(int argc, char *argv[])
     char *extra_libraries = NULL;
     char **extra_lib_list = NULL;
     int extra_lib_count = 0;
+    char **extra_module_list = NULL;
+    int extra_module_count = 0;
     char **test_binaries_list = NULL;
     int test_binaries_count = 0;
     char tmp_string[TMP_STRING_SIZE + 1];
@@ -289,13 +311,14 @@ main(int argc, char *argv[])
             }
             break;
         case 'M':
-            modules |= getmoduleval(optarg);
-            printf("also checking symbols in module %s\n", optarg);
+            extra_module_count = append_string_to_list(&extra_module_list,
+                                                       extra_module_count,
+                                                       optarg);
             break;
         case 'L':
-            extra_lib_count++;
-            extra_lib_list = realloc(extra_lib_list, sizeof(char *)*extra_lib_count);
-            extra_lib_list[extra_lib_count-1] = strdup(optarg);
+            extra_lib_count = append_string_to_list(&extra_lib_list,
+                                                    extra_lib_count,
+                                                    optarg);
             break;
         case 'D':
             for (token = strtok(optarg, ":"); token != NULL; token = strtok(NULL, ":")) {
@@ -331,9 +354,9 @@ main(int argc, char *argv[])
     }
 
     for (i = optind; i < argc; ++i) {
-        ++test_binaries_count;
-        test_binaries_list = realloc(test_binaries_list, sizeof(char *) * test_binaries_count);
-        test_binaries_list[test_binaries_count - 1] = strdup(argv[i]);
+        test_binaries_count = append_string_to_list(&test_binaries_list,
+                                                    test_binaries_count,
+                                                    argv[i]);
     }
 
     if (list_filename[0] != '\0') {
@@ -357,14 +380,10 @@ main(int argc, char *argv[])
                                         elf_type = getElfType(elffile);
                                         switch (elf_type) {
                                         case ET_EXEC:
-                                            ++test_binaries_count;
-                                            test_binaries_list = realloc(test_binaries_list, sizeof(char *) * test_binaries_count);
-                                            test_binaries_list[test_binaries_count - 1] = strdup(tmp_string);
+                                            test_binaries_count = append_string_to_list(&test_binaries_list, test_binaries_count, tmp_string);
                                             break;
                                         case ET_DYN:
-                                            ++extra_lib_count;
-                                            extra_lib_list = realloc(extra_lib_list, sizeof(char *) * extra_lib_count);
-                                            extra_lib_list[extra_lib_count - 1] = strdup(tmp_string);
+                                            extra_lib_count = append_string_to_list(&extra_lib_list, extra_lib_count, tmp_string);
                                             break;
                                         default:
                                             printf("File %s is of unsupported ELF type.\n", tmp_string);
@@ -421,6 +440,13 @@ main(int argc, char *argv[])
         default:
             modules |= LSB_Desktop_Modules[LSB_Version];
             break;
+    }
+
+    if (extra_module_count) {
+      for (i = 0; i < extra_module_count; i++) {
+        modules |= getmoduleval(extra_module_list[i]);
+        printf("also checking symbols in module %s\n", optarg);
+      }
     }
 
     if (extra_lib_count) {
