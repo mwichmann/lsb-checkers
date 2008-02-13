@@ -64,7 +64,7 @@ for(1..$sth->rows) {
 	}
 	printf $fd "#define $name\t0x%x\n", $flag;
 	foreach my $ver (@lsbversions) {
-		if ($ver >= $row{'MSMappearedin'}) {
+		if ($ver >= $row->{'MSMappearedin'}) {
 			$defines{$ver}->{$row->{'SMname'}} = $name;
 		}
 		if( ($row->{'SMmandatorysince'} ne "") and ($row->{'SMmandatorysince'} le $ver) ) {
