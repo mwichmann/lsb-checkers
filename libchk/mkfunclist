@@ -295,6 +295,7 @@ $select.= "WHERE LGlib=$lid ";
 $select .= "AND (AIappearedin <= '$lsbversion' and AIappearedin<>'') ";
 $select .= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin >'$lsbversion') ";
 $select.= "AND ( AIarch != 8 ) "; # 8 == None
+$select.= "GROUP BY Iid ";
 $select.= "ORDER BY Iname,Aid ";
 
 #print $select;
