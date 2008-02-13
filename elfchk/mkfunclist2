@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
 use CGI;
-use Mysql;
+use DBI;
 use Getopt::Long;
 
 sub usage()
@@ -15,9 +15,10 @@ if( !$lsbversion ) { usage(); }
 
 use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
-$Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
+my $dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST, $LSBUSER, $LSBDBPASSWD)
+    or die "Couldn't connect to database: ".DBI->errstr;
 
-$select = "SELECT DISTINCT Iid,Iname,Isrcbin,Ideprecatedsince,Vname,Asymbol,Aname,Mname FROM Interface ";
+$select = "SELECT DISTINCT Iid,Iname,Isrcbin,Ideprecatedsince,Vname,Asymbol,Aname,SMname FROM Interface ";
 $select.= "LEFT JOIN ArchInt ON Iid=AIint ";
 $select.= "LEFT JOIN Architecture ON Aid=AIarch ";
 $select.= "LEFT JOIN Version ON Vid=AIversion ";
@@ -25,51 +26,56 @@ $select.= "LEFT JOIN LGInt ON Iid=LGIint ";
 $select.= "LEFT JOIN LibGroup ON LGid=LGIlibg ";
 $select.= "LEFT JOIN Library ON Lid=LGlib ";
 $select.= "LEFT JOIN ModLib ON MLlid=Lid ";
-$select.= "LEFT JOIN Module ON Mid=MLmid ";
+$select.= "LEFT JOIN SubModule ON SMid=MLmid ";
 $select .= "WHERE ( (AIappearedin <= '$lsbversion' and AIappearedin<>'') ";
 $select .= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin >'$lsbversion') ) ";
-$select.= "AND Mid!=0 ";
+$select.= "AND SMid!=0 ";
 $select.= "ORDER BY Iname,Aid,Vid ";
 
 # print $select;
 
-$sth = $Dbh->query($select) || die $Dbh->errmsg();
+$sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+$sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 
 print "/* Generated file - Do Not Edit */\n";
 print "#include \"elfchk.h\"\n";
 print "struct versym DynSyms[] = {\n";
-for(1..$sth->numrows) {
-	%entry=$sth->fetchhash;
-	if ($entry{'Aname'} && $entry{'Aname'} ne "All")
-	{
-		print "#if $entry{'Asymbol'}\n";
+for(1..$sth->rows) {
+	$entry = $sth->fetchrow_hashref or die "Fetchrow failed on $select query: ".DBI->errstr;
+	if ($entry->{'Aname'} && $entry->{'Aname'} ne "All") {
+		print "#if $entry->{'Asymbol'}\n";
 	}
-	elsif ($entry{'Aname'} && $entry{'Aname'} eq "All")
-	{
+	elsif ($entry->{'Aname'} && $entry->{'Aname'} eq "All") {
 		$selectNotGeneric = "SELECT AIarch FROM ArchInt ";
-		$selectNotGeneric.= "WHERE AIint=$entry{'Iid'} AND AIarch<>1";
-		$sthNotGeneric = $Dbh->query($selectNotGeneric) || die $Dbh->errmsg();
-		
+		$selectNotGeneric.= "WHERE AIint=$entry->{'Iid'} AND AIarch<>1";
+
+		$sthNotGeneric = $dbh->prepare($selectNotGeneric)
+		    or die "Couldn't prepare $selectNotGeneric query: ".DBI->errstr;
+		$sthNotGeneric->execute or die "Couldn't execute $selectNotGeneric query: ".DBI->errstr;
+
 		# Some architecture specific records found - don't check generic information
-		if( $sthNotGeneric->numrows )
-		{
+		if( $sthNotGeneric->rows ) {
+			$sthNotGeneric->finish;
 			next;
 		}
+
+		$sthNotGeneric->finish;
 	}
-	
-	printf "\t{\"%s\",\"%s\",",$entry{'Iname'},$entry{'Vname'};
-	if( $entry{'Ideprecatedsince'} and $entry{'Ideprecatedsince'} le $lsbversion ) {
+
+	printf "\t{\"%s\",\"%s\",",$entry->{'Iname'},$entry->{'Vname'};
+	if( $entry->{'Ideprecatedsince'} and $entry->{'Ideprecatedsince'} le $lsbversion ) {
 		printf "1";
 	} else {
 		printf "0";
 	}
-	printf ",%s",$entry{'Mname'};
+	printf ",%s",$entry->{'SMname'};
 	printf "},\n";
-	if ($entry{'Aname'} && $entry{'Aname'} ne "All")
-	{
+	if ($entry->{'Aname'} && $entry->{'Aname'} ne "All") {
 		print "#endif\n";
 	}
 }
 print "\t};\n";
 print "int numDynSyms = sizeof(DynSyms)/sizeof(struct versym);\n";
 
+$sth->finish;
+$dbh->disconnect;

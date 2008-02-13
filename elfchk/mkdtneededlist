@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
 use CGI;
-use Mysql;
+use DBI;
 use Getopt::Long;
 
 use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
@@ -16,7 +16,8 @@ die;
 GetOptions("v=s" => \$lsbversion);
 if( !$lsbversion ) { usage(); }
 
-$Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
+my $dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST, $LSBUSER, $LSBDBPASSWD)
+    or die "Couldn't connect to database: ".DBI->errstr;
 
 print "/* Generated file - Do Not Edit */\n\n";
 
@@ -34,30 +35,35 @@ foreach $ver (@lsbversions) {
 	$select.= "AND (ALwithdrawnin IS NULL OR ALwithdrawnin > '$ver') ) ";
 	$select.= "AND Architecture.Aname!='None' ";
 	$select.= "ORDER BY ALrunname,Aid ";
-
+	
 	#print $select;
-
-	$sth = $Dbh->query($select) || die $Dbh->errmsg();
-
+	
+	$sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+	$sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
+	
 	$suffix = "_LSB$ver";
 	$suffix =~ s/\.//g;
 	print "char *DtNeeded".$suffix."[] = {\n";
-	for (1..$sth->numrows) {
-		%entry=$sth->fetchhash;
-		if ($entry{'ALrunname'} eq "") {
+	for (1..$sth->rows) {
+		$entry = $sth->fetchrow_hashref or die "Fetchrow failed on $select query: ".DBI->errstr;
+		if ($entry->{'ALrunname'} eq "") {
 			next;
 		}
-		if ($entry{'Aname'} ne "All") {
-	                print "#if ".$entry{'Asymbol'}."\n";
+		if ($entry->{'Aname'} ne "All") {
+	                print "#if ".$entry->{'Asymbol'}."\n";
 	    }
-		printf "\t\"%s\",\n",$entry{'ALrunname'};
-		if ($entry{'Aname'} ne "All") {
-	                print "#endif /* ".$entry{'Asymbol'}." */\n";
+		printf "\t\"%s\",\n",$entry->{'ALrunname'};
+		if ($entry->{'Aname'} ne "All") {
+	                print "#endif /* ".$entry->{'Asymbol'}." */\n";
 	    }
 	}
 	print "};\n\n";
 	print "int numDtNeeded$suffix = sizeof(DtNeeded$suffix)/sizeof(char *);\n\n";
+	
+	$sth->finish;
 }
 
 print "char** DtNeeded[] = {DtNeeded_LSB".join(", DtNeeded_LSB", @lsbvernames)."};\n";
 print "int numDtNeeded[] = {sizeof(DtNeeded_LSB".join(")/sizeof(char *), sizeof(DtNeeded_LSB", @lsbvernames).")/sizeof(char *)};\n\n";
+
+$dbh->disconnect;
