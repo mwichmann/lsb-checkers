@@ -1,11 +1,12 @@
 #!/usr/bin/perl
 
 use CGI;
-use Mysql;
+use DBI;
 
 use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
-$Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
+my $dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST, $LSBUSER, $LSBDBPASSWD)
+    or die "Couldn't connect to database: ".DBI->errstr;
 
 $select = "SELECT DISTINCT * FROM SectionTypes ";
 $select.= "LEFT JOIN Architecture ON Aid=STarch ";
@@ -14,30 +15,33 @@ $select.= "ORDER BY STname ";
 
 #print "$select\n";
 
-$sth = $Dbh->query($select) || die $Dbh->errmsg();
+$sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+$sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 
 print "/* Generated file - Do Not Edit */\n";
 print "#include \"elfchk.h\"\n";
 print "#include \"sections.h\"\n\n";
 
 print "struct SectionType SectionType[] = {\n";
-for(1..$sth->numrows) {
-	%entry=$sth->fetchhash;
-	if( $entry{'Aname'} ne "All" ) {
-		print "#if ".$entry{'Asymbol'}."\n";
+for(1..$sth->rows) {
+	$entry = $sth->fetchrow_hashref or die "Fetchrow failed on $select query: ".DBI->errstr;
+	if( $entry->{'Aname'} ne "All" ) {
+		print "#if ".$entry->{'Asymbol'}."\n";
 	}
-	printf "\t{\"%s\",",$entry{'STname'};
-	printf "%s,",$entry{'STname'};
-	@typename=split('_',$entry{'STname'},2);
+	printf "\t{\"%s\",",$entry->{'STname'};
+	printf "%s,",$entry->{'STname'};
+	@typename=split('_',$entry->{'STname'},2);
 	if( @typename[1] ) {
 		printf "check%s},\n",@typename[1];
 	} else {
 		printf "checkDUMMY},\n";
 	}
-	if( $entry{'Aname'} ne "All" ) {
-		print "#endif /* ".$entry{'Asymbol'}." */\n";
+	if( $entry->{'Aname'} ne "All" ) {
+		print "#endif /* ".$entry->{'Asymbol'}." */\n";
 	}
 }
 print "\t};\n\n";
 print "int numSectionType = sizeof(SectionType)/sizeof(struct SectionType);\n";
 
+$sth->finish;
+$dbh->disconnect;

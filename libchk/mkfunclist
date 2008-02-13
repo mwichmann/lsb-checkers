@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
 use CGI;
-use Mysql;
+use DBI;
 use Getopt::Long;
 
 use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
@@ -20,46 +20,50 @@ if( !$lsbversion ) { usage(); }
 
 sub getinterfacename($)
 {
-local($Iid)=@_;
-my($select,%entry);
+	local($Iid)=@_;
+	my($select,$entry);
 
-if( $Iid eq "" ) {return "";}
+	if( $Iid eq "" ) {return "";}
 
-if( $intname[$Iid] ) { return $intname[$Iid]; }
+	if( $intname[$Iid] ) { return $intname[$Iid]; }
 
-#print STDERR "Looking for Iname for $Iid\n";
+	#print STDERR "Looking for Iname for $Iid\n";
 
-$select = "SELECT Iname FROM Interface ";
-$select.= "WHERE Iid=$Iid";
-$isth = $Dbh->query($select) || die $Dbh->errmsg();
-%entry=$isth->fetchhash;
-$intname[$Iid] = $entry{'Iname'};
-return $entry{'Iname'};
+	$select = "SELECT Iname FROM Interface ";
+	$select.= "WHERE Iid=$Iid";
+	$isth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+	$isth->execute or die "Couldn't execute $select query: ".DBI->errstr;
+	$entry = $isth->fetchrow_hashref ;
+	$isth->finish;
+	$intname[$Iid] = $entry->{'Iname'};
+	return $entry->{'Iname'};
 }
 
 sub getinterfacevisibility($)
 {
-local($Iid)=@_;
-my($select,%entry);
+	local($Iid)=@_;
+	my($select,%entry);
 
-if( $Iid eq "" ) {return "";}
+	if( $Iid eq "" ) {return "";}
 
-if( $intvisibility[$Iid] ) { return $intvisibility[$Iid]; }
+	if( $intvisibility[$Iid] ) { return $intvisibility[$Iid]; }
 
-$select = "SELECT Isrcbin FROM Interface ";
-$select.= "WHERE Iid=$Iid";
-$isth = $Dbh->query($select) || die $Dbh->errmsg();
-%entry=$isth->fetchhash;
-$intvisibility[$Iid] = $entry{'Isrcbin'};
-return $entry{'Isrcbin'};
+	$select = "SELECT Isrcbin FROM Interface ";
+	$select.= "WHERE Iid=$Iid";
+	$isth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+	$isth->execute or die "Couldn't execute $select query: ".DBI->errstr;
+	$entry = $isth->fetchrow_hashref ;
+	$isth->finish;
+	$intvisibility[$Iid] = $entry->{'Isrcbin'};
+	return $entry->{'Isrcbin'};
 }
 
 sub mkclassinfo($$$)
 {
 local($LIB,$libname,$class)=@_;
-my($select,%entry);
+my($select,$entry);
 
-$classbase=$$class{'CIname'};
+$classbase=$class->{'CIname'};
 $classbase=~s/_Z//;
 
 # This check is not a good idea - Qt3 and Qt4 have a lot of similar classes
@@ -67,39 +71,40 @@ $classbase=~s/_Z//;
 # 	die "Already seen $classbase\n";
 # 	}
 $seenclass{$classbase}=1;
-		
+
 #
 # Output array of BaseTypes entries
 #
 $typeinfoname="_".$classbase."_of_".$libname."_typeinfo";
 
 $select = "SELECT * FROM BaseTypes ";
-$select.= "WHERE BTcid=".$$class{'CIid'}." ";
+$select.= "WHERE BTcid=".$class->{'CIid'}." ";
 $select.= "ORDER BY BTpos";
 
 #print $select;
 
 print $LIB "char *".$typeinfoname."_name[] = {\n";
-$vsth = $Dbh->query($select) || die $Dbh->errmsg();
+$vsth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+$vsth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 $numtypeinfofuns=0;
-#for(1..$$class{'CInumbasetype'}) {
-if( $$class{'CInumbasetype'} == '1' ) {
-	%entry=$vsth->fetchhash;
-	print $LIB "\t\"".getinterfacename($entry{'BTrttiid'})."\",\n";
+if( $class->{'CInumbasetype'} == '1' ) {
+	$entry = $vsth->fetchrow_hashref;
+	print $LIB "\t\"".getinterfacename($entry->{'BTbasetype'})."\",\n";
 	$numtypeinfofuns++;
 }
+$vsth->finish;
 print $LIB "\t};\n\n";
 
 #
 # Output typeinfo here.
 #
 print $LIB "struct classtypeinfo $typeinfoname = {\n";
-print $LIB "\t\"".getinterfacename($$class{'CIbasevtable'})."\",\n";
+print $LIB "\t\"".getinterfacename($class->{'CIbasevtable'})."\",\n";
 print $LIB "\t\"_ZTS".$classbase."\",\n";
 print $LIB "\t".$typeinfoname."_name,\n";
 print $LIB "\t};\n\n";
 
-foreach my $pos ( 0..$$class{'CInumvtab'}-1) {
+foreach my $pos ( 0..$class->{'CInumvtab'}-1) {
 #
 # Output array of Vtable entries
 #
@@ -109,63 +114,68 @@ $select = "SELECT Vtable.*,Architecture.*,Interface.Iid,Interface.Iname,ArchInt.
 $select.= "LEFT JOIN Architecture ON Aid=VTarch ";
 $select.= "LEFT JOIN Interface ON Iid=VTviid ";
 $select.= "LEFT JOIN ArchInt ON Iid=AIint ";
-$select.= "WHERE VTcid=".$$class{'CIid'}." ";
+$select.= "WHERE VTcid=".$class->{'CIid'}." ";
 $select.= "AND VTvtpos=$pos ";
 $select.= "AND (AIarch IS NOT NULL OR Iname IS NULL) "; # Iname here looks like a hack...
 # $select.= "AND AIarch = VTarch ";
 $select.= "ORDER BY VTpos";
 
 print $LIB "const char *".$vtablename."_name_$pos [] = {\n";
-$vsth = $Dbh->query($select) || die $Dbh->errmsg();
-for(1..$vsth->numrows) {
-	%entry=$vsth->fetchhash;
-	if( $entry{'VTarch'} != $entry{'AIarch'} ) {
+$vsth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+$vsth->execute or die "Couldn't execute $select query: ".DBI->errstr;
+for(1..$vsth->rows) {
+	$entry = $vsth->fetchrow_hashref;
+	if( $entry->{'VTarch'} != $entry->{'AIarch'} ) {
 	    # it's an arch mismatch only if the second join above worked...
-	    if( $entry{'Iname'} eq "" ) {
-			print STDERR "Interface ".$entry{'VTviid'}." referenced by ";
-			print STDERR "vtable for class ".$entry{'VTcid'}." missing\n";
+	    if( $entry->{'Iname'} eq "" ) {
+			print STDERR "Interface ".$entry->{'VTviid'}." referenced by ";
+			print STDERR "vtable for class ".$entry->{'VTcid'}." missing\n";
 	    }
 		else {
 		#   This is a normal situation, since one entry from Interface table can be assigned to more
 		#   than one architecture. Maybe it would be better to correct the 'select' above
-		#	print STDERR "Arch mismatch for class ".$entry{'VTcid'}.":".$entry{'VTarch'}."!=".$entry{'AIarch'};
-		#	print STDERR ":".$entry{'Iname'}."(".$entry{'VTviid'}.")\n";
+		#	print STDERR "Arch mismatch for class ".$entry->{'VTcid'}.":".$entry->{'VTarch'}."!=".$entry->{'AIarch'};
+		#	print STDERR ":".$entry->{'Iname'}."(".$entry->{'VTviid'}.")\n";
 			next;
 	    }
-	} 
-	if( $entry{'Aname'} eq "All" ) {
-		if( $entry{'Iid'} ) {
+	}
+	if( $entry->{'Aname'} eq "All" ) {
+		if( $entry->{'Iid'} ) {
 			$selectNotGeneric = "SELECT AIarch FROM ArchInt ";
-			$selectNotGeneric.= "WHERE AIint=$entry{'Iid'} AND AIarch<>1";
-			$sthNotGeneric = $Dbh->query($selectNotGeneric) || die $Dbh->errmsg();
-			
+			$selectNotGeneric.= "WHERE AIint=$entry->{'Iid'} AND AIarch<>1";
+			$sthNotGeneric = $dbh->prepare($selectNotGeneric)
+			    or die "Couldn't prepare $selectNotGeneric query: ".DBI->errstr;
+			$sthNotGeneric->execute or die "Couldn't execute $selectNotGeneric query: ".DBI->errstr;
+
 			# Some architecture specific records found - don't check generic information
-			if( $sthNotGeneric->numrows ) {
+			if( $sthNotGeneric->rows ) {
+				$sthNotGeneric->finish;
 				next;
 			}
+			$sthNotGeneric->finish;
 		}
-		
-		$visibility = getinterfacevisibility($entry{'VTviid'});
-		if( $visibility eq "SrcOnly" ) {
-		    print $LIB "\t\"NULL or ".getinterfacename($entry{'VTviid'})."\",\n";
-		}
-		else {
-		print $LIB "\t\"".getinterfacename($entry{'VTviid'})."\",\n";
+ 		$visibility = getinterfacevisibility($entry->{'VTviid'});
+ 		if( $visibility eq "SrcOnly" ) {
+ 		    print $LIB "\t\"NULL or ".getinterfacename($entry->{'VTviid'})."\",\n";
+ 		}
+ 		else {
+			print $LIB "\t\"".getinterfacename($entry->{'VTviid'})."\",\n";
 		}
 	} else {
-		print $LIB "#if ".$entry{'Asymbol'}."\n";
-		
-		$visibility = getinterfacevisibility($entry{'VTviid'});
-		if( $visibility eq "SrcOnly" ) {
-		    print $LIB "\t\"NULL or ".getinterfacename($entry{'VTviid'})."\",\n";
+		print $LIB "#if ".$entry->{'Asymbol'}."\n";
+
+ 		$visibility = getinterfacevisibility($entry->{'VTviid'});
+ 		if( $visibility eq "SrcOnly" ) {
+ 		    print $LIB "\t\"NULL or ".getinterfacename($entry->{'VTviid'})."\",\n";
+ 		}
+ 		else {
+			print $LIB "\t\"".getinterfacename($entry->{'VTviid'})."\",\n";
 		}
-		else {
-		print $LIB "\t\"".getinterfacename($entry{'VTviid'})."\",\n";
-		}
-		
+
 		print $LIB "#endif\n";
 	}
 }
+$vsth->finish;
 print $LIB "\t};\n\n";
 
 } # $$class{'CInumvtab'}
@@ -173,41 +183,43 @@ print $LIB "\t};\n\n";
 #
 # Output classvtable here.
 #
-print $LIB "struct classvtable $vtablename [".$$class{'CInumvtab'}."] = {\n";
+print $LIB "struct classvtable $vtablename [".$class->{'CInumvtab'}."] = {\n";
 
-foreach my $pos ( 0..$$class{'CInumvtab'}-1) {
+foreach my $pos ( 0..$class->{'CInumvtab'}-1) {
 print $LIB "\t{\n";
 
 #vcall offset are architecture sensitive
 $select = "SELECT * FROM ClassVtab ";
 $select.= "LEFT JOIN ArchClass ON CVpos=ACpos AND CVcid=ACcid ";
 $select.= "LEFT JOIN Architecture ON Aid=ACaid ";
-$select.= "WHERE ACcid=".$$class{'CIid'}." ";
+$select.= "WHERE ACcid=".$class->{'CIid'}." ";
 $select.= "AND CVpos=$pos ";
-$vsth = $Dbh->query($select) || die $Dbh->errmsg();
-die "No ClassVtabs for ".$$class{'CIid'}." at position $pos\n" if( $vsth->numrows == 0 );
+$vsth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+$vsth->execute or die "Couldn't execute $select query: ".DBI->errstr;
+die "No ClassVtabs for ".$class->{'CIid'}." at position $pos\n" if( $vsth->rows == 0 );
 $category=0;
 $rttiid=0;
-for(1..$vsth->numrows) {
-	%entry=$vsth->fetchhash;
-	if( $entry{'Aname'} eq "All" ) {
-		if( $vsth->numrows != 1 ) {
-			printf STDERR "vcall offset for All, but more than one entry: ".$$class{'CIname'}."\n";
+for(1..$vsth->rows) {
+	$entry = $vsth->fetchrow_hashref;
+	if( $entry->{'Aname'} eq "All" ) {
+		if( $vsth->rows != 1 ) {
+			printf STDERR "vcall offset for All, but more than one entry: ".$class->{'CIname'}."\n";
 		}
-		print $LIB "\t".$entry{'ACvoffset'}.",\n";
-		print $LIB "\t".$entry{'ACbaseoffset'}.",\n";
+		print $LIB "\t".$entry->{'ACvoffset'}.",\n";
+		print $LIB "\t".$entry->{'ACbaseoffset'}.",\n";
 	} else {
-		print $LIB "#if ".$entry{'Asymbol'}."\n";
-		print $LIB "\t".$entry{'ACvoffset'}.",\n";
-		print $LIB "\t".$entry{'ACbaseoffset'}.",\n";
+		print $LIB "#if ".$entry->{'Asymbol'}."\n";
+		print $LIB "\t".$entry->{'ACvoffset'}.",\n";
+		print $LIB "\t".$entry->{'ACbaseoffset'}.",\n";
 		print $LIB "#endif\n";
 	}
-	$category=$entry{'CVclass'};
-	$rttiid=$entry{'CVrtti'};
+	$category=$entry->{'CVclass'};
+	$rttiid=$entry->{'CVrtti'};
 }
+$vsth->finish;
 
 print $LIB "\t".$category.",\t/* Vtable category */\n";
-print $LIB "\t".$entry{'CVnumvtfuncs'}.",\t/* Number of Vfuncs */\n";
+print $LIB "\t".$entry->{'CVnumvtfuncs'}.",\t/* Number of Vfuncs */\n";
 print $LIB "\t\"".getinterfacename($rttiid)."\",\n";
 print $LIB "\t".$vtablename."_name_$pos,\n";
 print $LIB "\t},\n";
@@ -222,42 +234,44 @@ $baseinfoname="_".$classbase."_of_".$libname."_baseinfo";
 
 $select = "SELECT * FROM VMIBaseTypes ";
 $select.= "LEFT JOIN Architecture ON Aid=VBTaid ";
-$select.= "WHERE VBTcid=".$$class{'CIid'}." ";
+$select.= "WHERE VBTcid=".$class->{'CIid'}." ";
 $select.= "ORDER BY VBTpos";
 
 #print $select;
 
 print $LIB "struct base_type_info ".$baseinfoname."[] = {\n";
-$vsth = $Dbh->query($select) || die $Dbh->errmsg()."$select\n";
-for(1..$vsth->numrows) {
-	%entry=$vsth->fetchhash;
-	if (not $entry{'Aname'}) {
+$vsth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+$vsth->execute or die "Couldn't execute $select query: ".DBI->errstr;
+for(1..$vsth->rows) {
+	$entry = $vsth->fetchrow_hashref;
+	if (not $entry->{'Aname'}) {
 		next; # unsupported architecture found
 	}
-	
-	if( $entry{'Aname'} eq "All" ) {
-		print $LIB "\t{\"".getinterfacename($entry{'VBTbasetype'})."\",";
-		print $LIB "\t".$entry{'VBTflags'}."U},\n";
+
+	if( $entry->{'Aname'} eq "All" ) {
+		print $LIB "\t{\"".getinterfacename($entry->{'VBTbasetype'})."\",";
+		print $LIB "\t".$entry->{'VBTflags'}."U},\n";
 	} else {
-		print $LIB "#if ".$entry{'Asymbol'}."\n";
-		print $LIB "\t{\"".getinterfacename($entry{'VBTbasetype'})."\",";
-		print $LIB "\t".$entry{'VBTflags'}."U},\n";
+		print $LIB "#if ".$entry->{'Asymbol'}."\n";
+		print $LIB "\t{\"".getinterfacename($entry->{'VBTbasetype'})."\",";
+		print $LIB "\t".$entry->{'VBTflags'}."U},\n";
 		print $LIB "#endif\n";
 	}
 }
+$vsth->finish;
 print $LIB "\t};\n\n";
 
-print $LIB "struct classinfo ".$$class{'CIname'}."_of_".$libname."_classinfo = {\n";
-print $LIB "\t\"".$$class{'CIname'}."\",\n";
-print $LIB "\t\"".getinterfacename($$class{'CIvtable'})."\",\n";
-print $LIB "\t\"".getinterfacename($$class{'CIrtti'})."\",\t/* RTTI */\n";
-print $LIB "\t\"".getinterfacename($$class{'CIbase'})."\",\n";
+print $LIB "struct classinfo ".$class->{'CIname'}."_of_".$libname."_classinfo = {\n";
+print $LIB "\t\"".$class->{'CIname'}."\",\n";
+print $LIB "\t\"".getinterfacename($class->{'CIvtable'})."\",\n";
+print $LIB "\t\"".getinterfacename($class->{'CIrtti'})."\",\t/* RTTI */\n";
+print $LIB "\t\"".getinterfacename($class->{'CIbase'})."\",\n";
 print $LIB "\t\"_ZTT".$classbase."\",\t/* VTT */\n";
-print $LIB "\t".$$class{'CInumvtab'}.",\n";
+print $LIB "\t".$class->{'CInumvtab'}.",\n";
 print $LIB "\t$numtypeinfofuns,\n";
-print $LIB "\t".$$class{'CInumvmitypes'}.",\n";
-print $LIB "\t".$$class{'CInumvtt'}.",\t/* numVTT */\n";
-print $LIB "\t".$$class{'CIflags'}."U,\n";
+print $LIB "\t".$class->{'CInumvmitypes'}.",\n";
+print $LIB "\t".$class->{'CInumvtt'}.",\t/* numVTT */\n";
+print $LIB "\t".$class->{'CIflags'}."U,\n";
 print $LIB "\t&$typeinfoname,\n";
 print $LIB "\t$vtablename,\n";
 print $LIB "\t$baseinfoname,\n";
@@ -276,7 +290,7 @@ $select.= "LEFT JOIN Architecture ON Aid=AIarch ";
 $select.= "LEFT JOIN Version ON Vid=AIversion ";
 $select.= "LEFT JOIN ArchType ON ATtid=Ireturn AND ATaid=Aid ";
 $select.= "LEFT JOIN ModLib ON MLlid=LGlib ";
-$select.= "LEFT JOIN Module ON MLmid=Mid ";
+$select.= "LEFT JOIN SubModule ON MLmid=SMid ";
 $select.= "WHERE LGlib=$lid ";
 $select .= "AND (AIappearedin <= '$lsbversion' and AIappearedin<>'') ";
 $select .= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin >'$lsbversion') ";
@@ -285,7 +299,8 @@ $select.= "ORDER BY Iname,Aid ";
 
 #print $select;
 
-$lsth = $Dbh->query($select) || die $Dbh->errmsg();
+$lsth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+$lsth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 
 open(LIB,">$libname.c");
 open(TXT,">$libname.txt");
@@ -295,18 +310,18 @@ print LIB "struct versym ".$libname."[] = {\n";
 
 $numsyms=0;
 $lastname="";
-for(1..$lsth->numrows) {
-	%entry=$lsth->fetchhash;
-	if( $entry{'Iname'} ne $lastname ) {
+for(1..$lsth->rows) {
+	$entry = $lsth->fetchrow_hashref;
+	if( $entry->{'Iname'} ne $lastname ) {
 		$numsyms++;
-		$lastname=$entry{'Iname'};
+		$lastname=$entry->{'Iname'};
 		}
-	if( $entry{'ATsize'} eq "" ) { $entry{'ATsize'}=0;}
-	if( $entry{'Aid'} && $entry{'Aname'} ne 'All' ) {
-		print LIB "#if $entry{'Asymbol'}\n";
-		printf LIB "\t{\"%s\",\"%s\",",$entry{'Iname'},$entry{'Vname'};
-		printf LIB "0,%s,%s,",$entry{'Mname'},$entry{'ATsize'};
-		if( $entry{'Itype'} eq "Data" ) {
+	if( $entry->{'ATsize'} eq "" ) { $entry->{'ATsize'}=0;}
+	if( $entry->{'Aid'} && $entry->{'Aname'} ne 'All' ) {
+		print LIB "#if $entry->{'Asymbol'}\n";
+		printf LIB "\t{\"%s\",\"%s\",",$entry->{'Iname'},$entry->{'Vname'};
+		printf LIB "0,%s,%s,",$entry->{'SMname'},$entry->{'ATsize'};
+		if( $entry->{'Itype'} eq "Data" ) {
 			print LIB "0";
 		} else {
 			print LIB "1";
@@ -314,29 +329,35 @@ for(1..$lsth->numrows) {
 		printf LIB "},\n";
 		print LIB "#endif\n";
 	} else {
-		if( $entry{'Aid'} && $entry{'Aname'} eq 'All' ) {
-			if( $entry{'Iid'} ) {
+		if( $entry->{'Aid'} && $entry->{'Aname'} eq 'All' ) {
+			if( $entry->{'Iid'} ) {
 				$selectNotGeneric = "SELECT AIarch FROM ArchInt ";
-				$selectNotGeneric.= "WHERE AIint=$entry{'Iid'} AND AIarch<>1";
-				$sthNotGeneric = $Dbh->query($selectNotGeneric) || die $Dbh->errmsg();
-	
+				$selectNotGeneric.= "WHERE AIint=$entry->{'Iid'} AND AIarch<>1";
+				$sthNotGeneric = $dbh->prepare($selectNotGeneric)
+				    or die "Couldn't prepare $selectNotGeneric query: ".DBI->errstr;
+				$sthNotGeneric->execute or die "Couldn't execute $selectNotGeneric query: ".DBI->errstr;
+
 				# Some architecture specific records found - don't check generic information
-                    if ($sthNotGeneric->numrows) {
+                    		if ($sthNotGeneric->rows) {
+					$sthNotGeneric->finish;
 					next;
 				}
+				$sthNotGeneric->finish;
 			}
 		}
-		printf LIB "\t{\"%s\",\"%s\",",$entry{'Iname'},$entry{'Vname'};
-		printf LIB "0,%s,%s,",$entry{'Mname'},$entry{'ATsize'};
-		if( $entry{'Itype'} eq "Data" ) {
+		printf LIB "\t{\"%s\",\"%s\",",$entry->{'Iname'},$entry->{'Vname'};
+		printf LIB "0,%s,%s,",$entry->{'SMname'},$entry->{'ATsize'};
+		if( $entry->{'Itype'} eq "Data" ) {
 			print LIB "0";
 		} else {
 			print LIB "1";
 		}
 		printf LIB "},\n";
-		printf TXT $entry{'Iname'}."\n";
+		printf TXT $entry->{'Iname'}."\n";
 	}
 }
+$lsth->finish;
+
 print LIB "\t{0,0}};\n\n";
 
 print "$numsyms symbols\n";
@@ -357,14 +378,17 @@ $select.= "GROUP BY ACcid";
 
 #print $select."\n";
 
-$lsth = $Dbh->query($select) || die $Dbh->errmsg();
+$lsth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+$lsth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 $classinfos="";
-for(1..$lsth->numrows) {
-	%entry=$lsth->fetchhash;
-	#print $_.":".$entry{'CIname'}."\n";
-	mkclassinfo(LIB,$libname,\%entry);
-	$classinfos.=$classinfo."\t&".$entry{'CIname'}."_of_".$libname."_classinfo,\n";
+for(1..$lsth->rows) {
+	$entry = $lsth->fetchrow_hashref;
+	$CIname = $entry->{'CIname'};
+	#print $_.":".$entry->{'CIname'}."\n";
+	mkclassinfo(LIB,$libname,$entry);
+	$classinfos.=$classinfo."\t&".$CIname."_of_".$libname."_classinfo,\n";
 }
+$lsth->finish;
 
 print LIB "struct classinfo *".$libname."_classinfo[] = {\n";
 print LIB $classinfos."\n\tNULL\t};\n";
@@ -377,7 +401,8 @@ close(LIB);
 # 2) Establish connection to the database
 #
 
-$Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
+$dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST, $LSBUSER, $LSBDBPASSWD)
+    or die "Couldn't connect to database: ".DBI->errstr;
 
 #
 # 3) Get the list of libs, and process them
@@ -404,8 +429,8 @@ open(MAKE,">libs.mk");
 print MAKE "# Generated file #\n";
 print MAKE "LIBOBJS = \\\n";
 
-$select = "SELECT DISTINCT Mname,Lid,ALrunname,Asymbol,Aname FROM Module ";
-$select.= "LEFT JOIN ModLib ON MLmid=Mid ";
+$select = "SELECT DISTINCT SMname,Lid,ALrunname,Asymbol,Aname FROM SubModule ";
+$select.= "LEFT JOIN ModLib ON MLmid=SMid ";
 $select.= "LEFT JOIN Library ON Lid=MLlid ";
 $select.= "LEFT JOIN ArchLib ON ALlid=Lid ";
 $select.= "LEFT JOIN Architecture ON ALaid=Aid ";
@@ -417,16 +442,17 @@ $select.= "ORDER BY ALrunname,Aid DESC ";
 
 #print "$select\n";
 
-$sth = $Dbh->query($select) || die $Dbh->errmsg();
+$sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+$sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 
-for(1..$sth->numrows) {
-	%entry=$sth->fetchhash;
-	if( !$entry{'ALrunname'} ) {
+for(1..$sth->rows) {
+	$entry = $sth->fetchrow_hashref;
+	if( !$entry->{'ALrunname'} ) {
 		next;
 		}
-	$modname=$entry{'Mname'};
-	$libname=$entry{'ALrunname'};
-	$asym=$entry{'Asymbol'};
+	$modname=$entry->{'SMname'};
+	$libname=$entry->{'ALrunname'};
+	$asym=$entry->{'Asymbol'};
 	$libname =~ s/\./_/g;
 	$libname =~ s/-/_/g;
 	$libname =~ s/\+/x/g;
@@ -435,7 +461,7 @@ for(1..$sth->numrows) {
 	$libname = pop(@libname);
 	if( $asym != "1" ) {
 		print LIBS "#if $asym\n";
-		print LIBS "\t{$modname,\"".$entry{'ALrunname'}."\",$libname,".$libname."_classinfo},\n";
+		print LIBS "\t{$modname,\"".$entry->{'ALrunname'}."\",$libname,".$libname."_classinfo},\n";
 		print LIBS "#endif\n";
 		print LIBSH "#if $asym\n";
 		print LIBSH "extern struct versym ".$libname."[];\n";
@@ -443,7 +469,7 @@ for(1..$sth->numrows) {
 		print LIBSH "#endif\n";
 	} else {
 		if( !$seenit{$libname} ) {
-			print LIBS "\t{$modname,\"".$entry{'ALrunname'}."\",$libname,".$libname."_classinfo},\n";
+			print LIBS "\t{$modname,\"".$entry->{'ALrunname'}."\",$libname,".$libname."_classinfo},\n";
 			print LIBSH "extern struct versym ".$libname."[];\n";
 			print LIBSH "extern struct classinfo ".$libname."_classinfo[];\n";
 			}
@@ -452,12 +478,15 @@ for(1..$sth->numrows) {
 		print MAKE "\t$libname.o \\\n";
 		$seenit{$libname}=1;
 		print "Making $libname\n";
-		mklibsyms($libname,$entry{'Lid'});
+		mklibsyms($libname,$entry->{'Lid'});
 		}
 }
+$sth->finish;
 
 print LIBS "{0,NULL,NULL,NULL}\n";
 print LIBS "};\n";
 close(LIBS);
 close(LIBH);
 close(MAKE);
+
+$dbh->disconnect;

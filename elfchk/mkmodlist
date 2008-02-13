@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 use strict;
-use Mysql;
+use DBI;
 use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 use Getopt::Long;
 
@@ -23,10 +23,16 @@ foreach (@lsbversions) {
 	$lsbversion_max = $_ if (($lsbversion_max eq "") or ($lsbversion_max < $_));
 }
 
-my $dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
+my $dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST, $LSBUSER, $LSBDBPASSWD)
+    or die "Couldn't connect to database: ".DBI->errstr;
 
-my $sth = $dbh->query("SELECT Mname,Mappearedin,Mmandatorysince FROM Module WHERE Mappearedin BETWEEN '1.0' AND '$lsbversion_max' 
-			AND Mwithdrawnin IS NULL ORDER BY Mname");
+my $select = "SELECT SMname,MSMappearedin,SMmandatorysince FROM SubModule LEFT JOIN ModSMod ON SMid=MSMsmid "
+				."WHERE MSMappearedin BETWEEN '1.0' AND '$lsbversion_max' "
+				."AND MSMwithdrawnin IS NULL ORDER BY SMname";
+
+my $sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+$sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
+
 my $flag = 1;
 my %defines;
 open(my $fd, ">modules.h");
@@ -47,23 +53,24 @@ extern struct lsb_module* LSB_Modules[];
 my $count = 0;
 my %desktop_defines;
 my @versions_list;
-for(1..$sth->numrows) {
-	my %row = $sth->fetchhash;
-	$row{'Mname'}=~s/-/_/g;
+for(1..$sth->rows) {
+	my $row = $sth->fetchrow_hashref or die "Fetchrow failed on $select query: ".DBI->errstr;
+	$row->{'SMname'}=~s/-/_/g;
 	my $name;
-	if(lc(substr($row{'Mname'}, 0, 4)) == "lsb_") {
-		$name = "LSB_".ucfirst(substr($row{'Mname'},4));
+	if(lc(substr($row->{'SMname'}, 0, 4)) == "lsb_") {
+		$name = "LSB_".ucfirst(substr($row->{'SMname'},4));
 	} else {
-		$name = $row{'Mname'};
+		$name = $row->{'SMname'};
 	}
 	printf $fd "#define $name\t0x%x\n", $flag;
 	foreach my $ver (@lsbversions) {
-		if ($ver >= $row{'Mappearedin'}) {
-			$defines{$ver}->{$row{'Mname'}} = $name;
+		if ($ver >= $row{'MSMappearedin'}) {
+			$defines{$ver}->{$row->{'SMname'}} = $name;
 		}
-		if( ($row{'Mmandatorysince'} ne "") and ($row{'Mmandatorysince'} le $ver) ) {
+		if( ($row->{'SMmandatorysince'} ne "") and ($row->{'SMmandatorysince'} le $ver) ) {
 			if (!defined($desktop_defines{$ver})) {
-				$desktop_defines{$ver} = [];
+				my @temp = ();
+				$desktop_defines{$ver} = \@temp;
 			}
 			push (@{$desktop_defines{$ver}}, $name);
 		}
@@ -109,3 +116,6 @@ foreach (@lsbversions) {
 print $fd "struct lsb_module* LSB_Modules[] = {LSB_Modules".join(", LSB_Modules", @versions_list)."};\n";
 
 close($fd);
+
+$sth->finish;
+$dbh->disconnect;
