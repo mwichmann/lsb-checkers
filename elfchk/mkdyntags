@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
 use CGI;
-use Mysql;
+use DBI;
 use Getopt::Long;
 
 use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
@@ -16,7 +16,8 @@ die;
 GetOptions("v=s" => \$lsbversion);
 if( !$lsbversion ) { usage(); }
 
-$Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
+my $dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST, $LSBUSER, $LSBDBPASSWD)
+    or die "Couldn't connect to database: ".DBI->errstr;
 
 print "/* Generated file - Do Not Edit */\n";
 print "#include \"elfchk.h\"\n";
@@ -35,34 +36,39 @@ foreach $ver (@lsbversions) {
 	$select.= "WHERE (ADEappearedin <= '$ver' and ADEappearedin<>'') ";
 	$select.= "AND (ADEwithdrawnin IS NULL OR ADEwithdrawnin > '$ver') ";
 	$select.= "ORDER BY DEname,Aid ";
-
+	
 	#print $select;
-
-	$sth = $Dbh->query($select) || die $Dbh->errmsg();
-
+	
+	$sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+	$sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
+	
 	$suffix = "_LSB$ver";
 	$suffix =~ s/\.//g;
 	print "struct DynamicInfo DynamicInfo".$suffix."[] = {\n";
-	for (1..$sth->numrows) {
-		%entry=$sth->fetchhash;
-
-		if (not $entry{'Aname'}) {
+	for (1..$sth->rows) {
+		$entry = $sth->fetchrow_hashref or die "Fetchrow failed on $select query: ".DBI->errstr;
+		
+		if (not $entry->{'Aname'}) {
 			next;
 		}
 		
-		if ($entry{'Aname'} ne "All") {
-			print "#if ".$entry{'Asymbol'}."\n";
+		if ($entry->{'Aname'} ne "All") {
+			print "#if ".$entry->{'Asymbol'}."\n";
 		}
-		printf "\t{\"%s\",",$entry{'DEname'};
-		printf "%s,",$entry{'DEname'};
-		printf "check%s},\n",$entry{'DEname'};
-		if ($entry{'Aname'} ne "All") {
-			print "#endif /* ".$entry{'Asymbol'}." */\n";
+		printf "\t{\"%s\",",$entry->{'DEname'};
+		printf "%s,",$entry->{'DEname'};
+		printf "check%s},\n",$entry->{'DEname'};
+		if ($entry->{'Aname'} ne "All") {
+			print "#endif /* ".$entry->{'Asymbol'}." */\n";
 		}
 	}
 	print "};\n\n";
 	print "int numDynamicInfo$suffix = sizeof(DynamicInfo$suffix)/sizeof(struct DynamicInfo);\n\n";
+	
+	$sth->finish;
 }
 
 print "struct DynamicInfo* DynamicInfo[] = {DynamicInfo_LSB".join(", DynamicInfo_LSB", @lsbvernames)."};\n";
 print "int numDynamicInfo[] = {sizeof(DynamicInfo_LSB".join(")/sizeof(struct DynamicInfo), sizeof(DynamicInfo_LSB", @lsbvernames).")/sizeof(struct DynamicInfo)};\n\n";
+
+$dbh->disconnect;
