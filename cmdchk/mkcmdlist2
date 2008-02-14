@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
 use CGI;
-use Mysql;
+use DBI;
 use Getopt::Long;
 
 use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
@@ -22,7 +22,8 @@ if( !$lsbversion ) { usage(); }
 # 2) Establish connection to the database
 #
 
-$Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
+$dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST, $LSBUSER, $LSBDBPASSWD)
+    or die "Couldn't connect to database: ".DBI->errstr;
 
 #
 # 3) Get the list of cmds
@@ -41,16 +42,20 @@ $select.= "ORDER BY Cname ";
 
 #print $select;
 
-$sth = $Dbh->query($select) || die $Dbh->errmsg();
+$sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+$sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 
-for(1..$sth->numrows) {
-	%entry=$sth->fetchhash;
-	$cmdname=$entry{'Cname'};
-	if ($entry{'Cpath'} eq "") {
+for(1..$sth->rows) {
+	$entry = $sth->fetchrow_hashref;
+	$cmdname=$entry->{'Cname'};
+	if ($entry->{'Cpath'} eq "") {
 	    $cmdpath='None';
 	} else {
-	    $cmdpath=$entry{'Cpath'};
+	    $cmdpath=$entry->{'Cpath'};
 	}
 	print CMDS "$cmdname $cmdpath\n";
 }
+$sth->finish;
 close(CMDS);
+
+$dbh->disconnect;

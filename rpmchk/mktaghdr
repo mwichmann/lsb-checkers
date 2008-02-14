@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-use Mysql;
+use DBI;
 use Getopt::Long;
 
 use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
@@ -22,7 +22,8 @@ foreach (split(/,/, $lsbversion)) {
 	$lsbversion_max = $_ if (($lsbversion_max eq "") or ($lsbversion_max < $_));
 }
 
-$Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
+$dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST, $LSBUSER, $LSBDBPASSWD)
+    or die "Couldn't connect to database: ".DBI->errstr;
 
 sub
 dumpenum($$)
@@ -37,15 +38,18 @@ $select.= "ORDER BY Rtag ";
 
 #print "$select\n";
 
-$sth = $Dbh->query($select) || die $Dbh->errmsg();
+$sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+$sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 
 print "typedef enum {\n";
 
-for(1..$sth->numrows) {
-	%entry=$sth->fetchhash;
-	printf "\t%s\t= %d,\n", $entry{'Rname'}, $entry{'Rtag'};
+for(1..$sth->rows) {
+	$entry = $sth->fetchrow_hashref;
+	printf "\t%s\t= %d,\n", $entry->{'Rname'}, $entry->{'Rtag'};
 	}
 printf "\t} %s;\n\n", $tname;
+
+$sth->finish;
 }
 
 print "/* Generated file - Do Not Edit */\n\n";
@@ -54,3 +58,4 @@ dumpenum("Rgroup='Private'","HdrPrivIndexTag");
 dumpenum("Rgroup='Signature'","SigIndexTag");
 dumpenum("Rgroup!='Private' AND Rgroup!='Signature' AND Rgroup!='Ignore'","RpmIndexTag");
 
+$dbh->disconnect;

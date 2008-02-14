@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
 use CGI;
-use Mysql;
+use DBI;
 use Getopt::Long;
 
 use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
@@ -22,7 +22,8 @@ if( !$lsbversion ) { usage(); }
 # 2) Establish connection to the database
 #
 
-$Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
+$dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST, $LSBUSER, $LSBDBPASSWD)
+    or die "Couldn't connect to database: ".DBI->errstr;
 
 #
 # 3) Get the list of cmds
@@ -47,14 +48,16 @@ $select.= "ORDER BY Cname ";
 
 #print $select;
 
-$sth = $Dbh->query($select) || die $Dbh->errmsg();
+$sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+$sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 
 # hack: move everything to core by making the "desktop" module Id
 # impossible to match (9999)
-for(1..$sth->numrows) {
-	%entry=$sth->fetchhash;
-	print CMDS "	{\"$entry{'Cname'}\", \"$entry{'Cpath'}\"},\n";
+for(1..$sth->rows) {
+	$entry = $sth->fetchrow_hashref;
+	print CMDS "	{\"$entry->{'Cname'}\", \"$entry->{'Cpath'}\"},\n";
 }
+$sth->finish;
 print CMDS "};\n\nstruct cmds desktop_cmdlist[] = {\n";
 
 $select = "SELECT DISTINCT Cid,Cname,Cpath FROM Command ";
@@ -66,12 +69,16 @@ $select.= "ORDER BY Cname ";
 
 #print $select;
 
-$sth = $Dbh->query($select) || die $Dbh->errmsg();
+$sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+$sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 
-for(1..$sth->numrows) {
-	%entry=$sth->fetchhash;
-	print CMDS "	{\"$entry{'Cname'}\", \"$entry{'Cpath'}\"},\n";
+for(1..$sth->rows) {
+	$entry = $sth->fetchrow_hashref;
+	print CMDS "	{\"$entry->{'Cname'}\", \"$entry->{'Cpath'}\"},\n";
 }
+$sth->finish;
 print CMDS "};\n";
 
 close(CMDS);
+
+$dbh->disconnect;

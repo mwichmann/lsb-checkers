@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-use Mysql;
+use DBI;
 use Getopt::Long;
 
 use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
@@ -15,7 +15,8 @@ die;
 GetOptions("v=s" => \$lsbversion);
 if( !$lsbversion ) { usage(); }
 
-$Dbh = Mysql->connect($LSBDBHOST,$LSBDB,$LSBUSER, $LSBDBPASSWD) || die $Mysql::db_errstr;
+$dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST, $LSBUSER, $LSBDBPASSWD)
+    or die "Couldn't connect to database: ".DBI->errstr;
 
 sub
 dumptable($$$)
@@ -30,23 +31,26 @@ $select.= "ORDER BY Rgroup,Rtag ";
 
 #print "$select\n";
 
-$sth = $Dbh->query($select) || die $Dbh->errmsg();
+$sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+$sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 
 printf "RpmIdxTagFuncRec %s[] = {\n", $tname;
 
-for(1..$sth->numrows) {
-	%entry=$sth->fetchhash;
-	printf "\t{%s,\t", $entry{'Rname'};
-	printf "\"%s\",\t", $entry{'Rname'};
-	printf "%s,\t", $entry{'Rtype'};
-	printf "%s,\t", $entry{'Rcount'};
-	split('_',$entry{'Rname'});
+for(1..$sth->rows) {
+	$entry = $sth->fetchrow_hashref;
+	printf "\t{%s,\t", $entry->{'Rname'};
+	printf "\"%s\",\t", $entry->{'Rname'};
+	printf "%s,\t", $entry->{'Rtype'};
+	printf "%s,\t", $entry->{'Rcount'};
+	split('_',$entry->{'Rname'});
 	$tagname=@_[1];
 	printf "checkRpmIdx%s,\t", $tagname;
-	printf "%s,\t", $entry{'Rstatus'};
+	printf "%s,\t", $entry->{'Rstatus'};
 	printf "NotSeen},\n";
 	}
 printf "};\n\n", $tname;
+
+$sth->finish;
 }
 
 print "/* Generated file - Do Not Edit */\n\n";
@@ -78,3 +82,5 @@ foreach $ver (@lsbversions) {
 
 print "RpmIdxTagFuncRec* HdrTags[] = {HdrTags_LSB".join(", HdrTags_LSB", @lsbvernames)."};\n";
 print "int numHdrIdxTags[] = {sizeof(HdrTags_LSB".join(")/sizeof(RpmIdxTagFuncRec), sizeof(HdrTags_LSB", @lsbvernames).")/sizeof(RpmIdxTagFuncRec)};\n\n";
+
+$dbh->disconnect;
