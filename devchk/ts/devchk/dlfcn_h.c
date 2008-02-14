@@ -66,6 +66,16 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef RTLD_DEFAULT
+	CompareConstant(RTLD_DEFAULT,((void *) 0),11900,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: RTLD_DEFAULT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef RTLD_NEXT
 	CompareConstant(RTLD_NEXT,((void *) -1l),5185,architecture,2.0,NULL)
 #else

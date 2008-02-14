@@ -11743,5905 +11743,1684 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZTV9QTextEdit","",0,LSB_Toolkit_Qt3,0,0},
 	{"_ZTV9QTextView","",0,LSB_Toolkit_Qt3,0,0},
 	{"_ZTV9QTimeEdit","",0,LSB_Toolkit_Qt3,0,0},
-#if defined __i386__
-	{"_ZThn116_N10QScrollBar10stepChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn116_N10QScrollBar10stepChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn116_N10QScrollBar10stepChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn116_N10QScrollBar11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn116_N10QScrollBar11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn116_N10QScrollBar11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn116_N10QScrollBar11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn116_N10QScrollBar11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn116_N10QScrollBar11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn116_N10QScrollBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn116_N10QScrollBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn116_N10QScrollBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn116_N10QScrollBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn116_N10QScrollBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn116_N10QScrollBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn116_N5QDial11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn116_N5QDial11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn116_N5QDial11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn116_N5QDial11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn116_N5QDial11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn116_N5QDial11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn116_N5QDialD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn116_N5QDialD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn116_N5QDialD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn116_N5QDialD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn116_N5QDialD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn116_N5QDialD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn116_N7QSlider11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn116_N7QSlider11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn116_N7QSlider11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn116_N7QSlider11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn116_N7QSlider11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn116_N7QSlider11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn116_N7QSliderD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn116_N7QSliderD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn116_N7QSliderD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn116_N7QSliderD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn116_N7QSliderD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn116_N7QSliderD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn116_N8QSpinBox11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn116_N8QSpinBox11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn116_N8QSpinBox11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn116_N8QSpinBox11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn116_N8QSpinBox11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn116_N8QSpinBox11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn116_N8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn116_N8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn116_N8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn116_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn116_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn116_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn12_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn12_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn12_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn12_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn12_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn12_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn12_NK10QDropEvent11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn12_NK10QDropEvent11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn12_NK10QDropEvent11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn12_NK10QDropEvent6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn12_NK10QDropEvent6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn12_NK10QDropEvent6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn12_NK10QDropEvent8providesEPKc","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn12_NK10QDropEvent8providesEPKc","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn12_NK10QDropEvent8providesEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn148_N10QPopupMenu10updateItemEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn148_N10QPopupMenu10updateItemEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn148_N10QPopupMenu10updateItemEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn148_N10QPopupMenu12menuDelPopupEPS_","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn148_N10QPopupMenu12menuDelPopupEPS_","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn148_N10QPopupMenu12menuDelPopupEPS_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn148_N10QPopupMenu12menuInsPopupEPS_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn148_N10QPopupMenu12menuInsPopupEPS_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn148_N10QPopupMenu12menuInsPopupEPS_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn148_N10QPopupMenu14activateItemAtEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn148_N10QPopupMenu14activateItemAtEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn148_N10QPopupMenu14activateItemAtEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn148_N10QPopupMenu16menuStateChangedEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn148_N10QPopupMenu16menuStateChangedEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn148_N10QPopupMenu16menuStateChangedEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn148_N10QPopupMenu19menuContentsChangedEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn148_N10QPopupMenu19menuContentsChangedEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn148_N10QPopupMenu19menuContentsChangedEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn148_N10QPopupMenuD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn148_N10QPopupMenuD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn148_N10QPopupMenuD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn148_N10QPopupMenuD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn148_N10QPopupMenuD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn148_N10QPopupMenuD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn148_N8QMenuBar10updateItemEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn148_N8QMenuBar10updateItemEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn148_N8QMenuBar10updateItemEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn148_N8QMenuBar12menuDelPopupEP10QPopupMenu","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn148_N8QMenuBar12menuDelPopupEP10QPopupMenu","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn148_N8QMenuBar12menuDelPopupEP10QPopupMenu","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn148_N8QMenuBar12menuInsPopupEP10QPopupMenu","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn148_N8QMenuBar12menuInsPopupEP10QPopupMenu","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn148_N8QMenuBar12menuInsPopupEP10QPopupMenu","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn148_N8QMenuBar14activateItemAtEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn148_N8QMenuBar14activateItemAtEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn148_N8QMenuBar14activateItemAtEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn148_N8QMenuBar16menuStateChangedEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn148_N8QMenuBar16menuStateChangedEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn148_N8QMenuBar16menuStateChangedEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn148_N8QMenuBar19menuContentsChangedEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn148_N8QMenuBar19menuContentsChangedEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn148_N8QMenuBar19menuContentsChangedEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn148_N8QMenuBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn148_N8QMenuBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn148_N8QMenuBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn148_N8QMenuBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn148_N8QMenuBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
 	{"_ZThn148_N8QMenuBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn16_N10QSqlCursor4execERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn16_N10QSqlCursor4execERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn16_N10QSqlCursor4execERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn16_N10QSqlCursor4execERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn16_N10QSqlCursor9afterSeekEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn16_N10QSqlCursor9afterSeekEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn16_N10QSqlCursor9afterSeekEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn16_N10QSqlCursor9afterSeekEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn16_N10QSqlCursorD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn16_N10QSqlCursorD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn16_N10QSqlCursorD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn16_N10QSqlCursorD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn16_N10QSqlCursorD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn16_N10QSqlCursorD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn16_N10QSqlCursorD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn16_N10QSqlCursorD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn16_N16QSqlSelectCursor4execERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn16_N16QSqlSelectCursor4execERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn16_N16QSqlSelectCursor4execERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn16_N16QSqlSelectCursor4execERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn16_N16QSqlSelectCursorD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn16_N16QSqlSelectCursorD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn16_N16QSqlSelectCursorD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn16_N16QSqlSelectCursorD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn16_N16QSqlSelectCursorD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn16_N16QSqlSelectCursorD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn16_N16QSqlSelectCursorD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn16_N16QSqlSelectCursorD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn16_N18QXmlDefaultHandler10startCDATAEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn16_N18QXmlDefaultHandler10startCDATAEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn16_N18QXmlDefaultHandler10startCDATAEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn16_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn16_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn16_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn16_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn16_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn16_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn16_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn16_N18QXmlDefaultHandler11startEntityERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn16_N18QXmlDefaultHandler11startEntityERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
 	{"_ZThn16_N18QXmlDefaultHandler11startEntityERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn16_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn16_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn16_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn16_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
 	{"_ZThn16_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn16_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn16_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn16_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn16_N18QXmlDefaultHandler6endDTDEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn16_N18QXmlDefaultHandler6endDTDEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn16_N18QXmlDefaultHandler6endDTDEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn16_N18QXmlDefaultHandler7commentERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn16_N18QXmlDefaultHandler7commentERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn16_N18QXmlDefaultHandler7commentERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn16_N18QXmlDefaultHandler8endCDATAEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn16_N18QXmlDefaultHandler8endCDATAEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn16_N18QXmlDefaultHandler8endCDATAEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn16_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn16_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn16_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn16_N18QXmlDefaultHandler9endEntityERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn16_N18QXmlDefaultHandler9endEntityERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
 	{"_ZThn16_N18QXmlDefaultHandler9endEntityERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn16_NK10QDropEvent11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn16_NK10QDropEvent11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn16_NK10QDropEvent11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn16_NK10QDropEvent11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn16_NK10QDropEvent6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn16_NK10QDropEvent6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn16_NK10QDropEvent6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn16_NK10QDropEvent6formatEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn16_NK10QDropEvent8providesEPKc","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn16_NK10QDropEvent8providesEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn16_NK10QDropEvent8providesEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn16_NK10QDropEvent8providesEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn16_NK10QSqlCursor5valueEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn16_NK10QSqlCursor5valueEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn16_NK10QSqlCursor5valueEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn16_NK10QSqlCursor5valueEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn200_N10QScrollBar10stepChangeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn200_N10QScrollBar10stepChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn200_N10QScrollBar10stepChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn200_N10QScrollBar10stepChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn200_N10QScrollBar11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn200_N10QScrollBar11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn200_N10QScrollBar11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn200_N10QScrollBar11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn200_N10QScrollBar11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn200_N10QScrollBar11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn200_N10QScrollBar11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn200_N10QScrollBar11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn200_N10QScrollBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn200_N10QScrollBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn200_N10QScrollBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn200_N10QScrollBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn200_N10QScrollBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn200_N10QScrollBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn200_N10QScrollBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn200_N10QScrollBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn200_N5QDial11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn200_N5QDial11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn200_N5QDial11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn200_N5QDial11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn200_N5QDial11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn200_N5QDial11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn200_N5QDial11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn200_N5QDial11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn200_N5QDialD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn200_N5QDialD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn200_N5QDialD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn200_N5QDialD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn200_N5QDialD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn200_N5QDialD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn200_N5QDialD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn200_N5QDialD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn200_N7QSlider11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn200_N7QSlider11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn200_N7QSlider11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn200_N7QSlider11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn200_N7QSlider11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn200_N7QSlider11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn200_N7QSlider11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn200_N7QSlider11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn200_N7QSliderD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn200_N7QSliderD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn200_N7QSliderD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn200_N7QSliderD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn200_N7QSliderD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn200_N7QSliderD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn200_N7QSliderD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn200_N7QSliderD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn200_N8QSpinBox11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn200_N8QSpinBox11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn200_N8QSpinBox11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn200_N8QSpinBox11rangeChangeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn200_N8QSpinBox11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn200_N8QSpinBox11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn200_N8QSpinBox11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn200_N8QSpinBox11valueChangeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn200_N8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn200_N8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn200_N8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn200_N8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn200_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn200_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn200_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn200_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn20_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn20_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn20_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn20_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn20_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn20_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn20_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn20_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn20_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn20_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn20_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
 	{"_ZThn20_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn240_N10QPopupMenu10updateItemEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn240_N10QPopupMenu10updateItemEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn240_N10QPopupMenu10updateItemEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn240_N10QPopupMenu10updateItemEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn240_N10QPopupMenu12menuDelPopupEPS_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn240_N10QPopupMenu12menuDelPopupEPS_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn240_N10QPopupMenu12menuDelPopupEPS_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn240_N10QPopupMenu12menuDelPopupEPS_","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn240_N10QPopupMenu12menuInsPopupEPS_","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn240_N10QPopupMenu12menuInsPopupEPS_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn240_N10QPopupMenu12menuInsPopupEPS_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn240_N10QPopupMenu12menuInsPopupEPS_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn240_N10QPopupMenu14activateItemAtEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn240_N10QPopupMenu14activateItemAtEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn240_N10QPopupMenu14activateItemAtEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn240_N10QPopupMenu14activateItemAtEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn240_N10QPopupMenu16menuStateChangedEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn240_N10QPopupMenu16menuStateChangedEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn240_N10QPopupMenu16menuStateChangedEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn240_N10QPopupMenu16menuStateChangedEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn240_N10QPopupMenu19menuContentsChangedEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn240_N10QPopupMenu19menuContentsChangedEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn240_N10QPopupMenu19menuContentsChangedEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn240_N10QPopupMenu19menuContentsChangedEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn240_N10QPopupMenuD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn240_N10QPopupMenuD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn240_N10QPopupMenuD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn240_N10QPopupMenuD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn240_N10QPopupMenuD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn240_N10QPopupMenuD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn240_N10QPopupMenuD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn240_N10QPopupMenuD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn240_N8QMenuBar10updateItemEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn240_N8QMenuBar10updateItemEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn240_N8QMenuBar10updateItemEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn240_N8QMenuBar10updateItemEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn240_N8QMenuBar12menuDelPopupEP10QPopupMenu","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn240_N8QMenuBar12menuDelPopupEP10QPopupMenu","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn240_N8QMenuBar12menuDelPopupEP10QPopupMenu","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn240_N8QMenuBar12menuDelPopupEP10QPopupMenu","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn240_N8QMenuBar12menuInsPopupEP10QPopupMenu","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn240_N8QMenuBar12menuInsPopupEP10QPopupMenu","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn240_N8QMenuBar12menuInsPopupEP10QPopupMenu","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn240_N8QMenuBar12menuInsPopupEP10QPopupMenu","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn240_N8QMenuBar14activateItemAtEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn240_N8QMenuBar14activateItemAtEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn240_N8QMenuBar14activateItemAtEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn240_N8QMenuBar14activateItemAtEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn240_N8QMenuBar16menuStateChangedEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn240_N8QMenuBar16menuStateChangedEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn240_N8QMenuBar16menuStateChangedEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn240_N8QMenuBar16menuStateChangedEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn240_N8QMenuBar19menuContentsChangedEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn240_N8QMenuBar19menuContentsChangedEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn240_N8QMenuBar19menuContentsChangedEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn240_N8QMenuBar19menuContentsChangedEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn240_N8QMenuBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn240_N8QMenuBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn240_N8QMenuBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn240_N8QMenuBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn240_N8QMenuBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn240_N8QMenuBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn240_N8QMenuBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn240_N8QMenuBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn24_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn24_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn24_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn24_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn32_N18QXmlDefaultHandler10startCDATAEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn32_N18QXmlDefaultHandler10startCDATAEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn32_N18QXmlDefaultHandler10startCDATAEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn32_N18QXmlDefaultHandler10startCDATAEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn32_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn32_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn32_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn32_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn32_N18QXmlDefaultHandler11startEntityERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn32_N18QXmlDefaultHandler11startEntityERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn32_N18QXmlDefaultHandler11startEntityERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn32_N18QXmlDefaultHandler11startEntityERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn32_N18QXmlDefaultHandler6endDTDEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn32_N18QXmlDefaultHandler6endDTDEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn32_N18QXmlDefaultHandler6endDTDEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn32_N18QXmlDefaultHandler6endDTDEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn32_N18QXmlDefaultHandler7commentERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn32_N18QXmlDefaultHandler7commentERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn32_N18QXmlDefaultHandler7commentERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn32_N18QXmlDefaultHandler7commentERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn32_N18QXmlDefaultHandler8endCDATAEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn32_N18QXmlDefaultHandler8endCDATAEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn32_N18QXmlDefaultHandler8endCDATAEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn32_N18QXmlDefaultHandler8endCDATAEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn32_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn32_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn32_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn32_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
 	{"_ZThn32_N18QXmlDefaultHandler9endEntityERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn32_N18QXmlDefaultHandler9endEntityERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn32_N18QXmlDefaultHandler9endEntityERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn32_N18QXmlDefaultHandler9endEntityERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QBoxLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QBoxLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QBoxLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QBoxLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QBoxLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QBoxLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QBoxLayout8iteratorEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QBoxLayout8iteratorEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QBoxLayout8iteratorEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QDataTableD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QDataTableD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QDataTableD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QDataTableD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QDataTableD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QDataTableD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QHGroupBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QHGroupBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QHGroupBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QHGroupBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QHGroupBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QHGroupBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QImageDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QImageDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QImageDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QImageDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QImageDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QImageDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QLCDNumberD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QLCDNumberD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QLCDNumberD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QLCDNumberD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QLCDNumberD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QLCDNumberD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QPopupMenuD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QPopupMenuD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QPopupMenuD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QPopupMenuD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QPopupMenuD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QPopupMenuD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QScrollBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QScrollBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QScrollBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QScrollBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QScrollBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QScrollBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QStatusBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QStatusBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QStatusBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QStatusBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QStatusBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QStatusBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QTabDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QTabDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QTabDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QTabDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QTabDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QTabDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QTabWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QTabWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QTabWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QTabWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QTabWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QTabWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QVGroupBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QVGroupBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QVGroupBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QVGroupBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QVGroupBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QVGroupBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QWorkspaceD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QWorkspaceD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QWorkspaceD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N10QWorkspaceD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N10QWorkspaceD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N10QWorkspaceD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QCanvasViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QCanvasViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QCanvasViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QCanvasViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QCanvasViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QCanvasViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QDockWindowD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QDockWindowD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QDockWindowD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QDockWindowD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QDockWindowD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QDockWindowD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QDragObjectD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QDragObjectD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QDragObjectD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QDragObjectD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QDragObjectD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QDragObjectD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QFileDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QFileDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QFileDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QFileDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QFileDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QFileDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QFontDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QFontDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QFontDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QFontDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QFontDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QFontDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QGridLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QGridLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QGridLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QGridLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QGridLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QGridLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QGridLayout8iteratorEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QGridLayout8iteratorEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QGridLayout8iteratorEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QGridLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QGridLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QGridLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QGridLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QGridLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QGridLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QHBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QHBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QHBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QHBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QHBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QHBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QMainWindowD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QMainWindowD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QMainWindowD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QMainWindowD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QMainWindowD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QMainWindowD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QMessageBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QMessageBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QMessageBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QMessageBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QMessageBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QMessageBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QPushButtonD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QPushButtonD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QPushButtonD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QPushButtonD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QPushButtonD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QPushButtonD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QScrollViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QScrollViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QScrollViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QScrollViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QScrollViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QScrollViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QSpinWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QSpinWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QSpinWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QSpinWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QSpinWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QSpinWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QStoredDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QStoredDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QStoredDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QStoredDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QStoredDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QStoredDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QToolButtonD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QToolButtonD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QToolButtonD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QToolButtonD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QToolButtonD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QToolButtonD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QVBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QVBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QVBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N11QVBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N11QVBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N11QVBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N12QButtonGroupD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N12QButtonGroupD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N12QButtonGroupD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N12QButtonGroupD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N12QButtonGroupD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N12QButtonGroupD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N12QColorDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N12QColorDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N12QColorDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N12QColorDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N12QColorDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N12QColorDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N12QDataBrowserD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N12QDataBrowserD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N12QDataBrowserD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N12QDataBrowserD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N12QDataBrowserD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N12QDataBrowserD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N12QInputDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N12QInputDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N12QInputDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N12QInputDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N12QInputDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N12QInputDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N12QPrintDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N12QPrintDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N12QPrintDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N12QPrintDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N12QPrintDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N12QPrintDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N12QTextBrowserD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N12QTextBrowserD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N12QTextBrowserD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N12QTextBrowserD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N12QTextBrowserD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N12QTextBrowserD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N12QUrlOperator4cdUpEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N12QUrlOperator4cdUpEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N12QUrlOperator4cdUpEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N12QUrlOperator5parseERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N12QUrlOperator5parseERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N12QUrlOperator5parseERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N12QUrlOperator5resetEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N12QUrlOperator5resetEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N12QUrlOperator5resetEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N12QUrlOperator7setPathERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N12QUrlOperator7setPathERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N12QUrlOperator7setPathERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N12QUrlOperatorD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N12QUrlOperatorD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N12QUrlOperatorD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N12QUrlOperatorD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N12QUrlOperatorD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N12QUrlOperatorD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N12QWidgetStackD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N12QWidgetStackD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N12QWidgetStackD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N12QWidgetStackD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N12QWidgetStackD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N12QWidgetStackD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N13QDateTimeEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N13QDateTimeEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N13QDateTimeEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N13QDateTimeEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N13QDateTimeEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N13QDateTimeEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N13QErrorMessageD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N13QErrorMessageD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N13QErrorMessageD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N13QErrorMessageD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N13QErrorMessageD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N13QErrorMessageD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N13QHButtonGroupD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N13QHButtonGroupD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N13QHButtonGroupD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N13QHButtonGroupD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N13QHButtonGroupD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N13QHButtonGroupD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N13QSplashScreenD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N13QSplashScreenD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N13QSplashScreenD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N13QSplashScreenD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N13QSplashScreenD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N13QSplashScreenD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N13QVButtonGroupD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N13QVButtonGroupD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N13QVButtonGroupD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N13QVButtonGroupD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N13QVButtonGroupD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N13QVButtonGroupD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N14QDesktopWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N14QDesktopWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N14QDesktopWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N14QDesktopWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N14QDesktopWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N14QDesktopWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N14QMultiLineEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N14QMultiLineEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N14QMultiLineEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N14QMultiLineEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N14QMultiLineEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N14QMultiLineEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N15QDockAreaLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N15QDockAreaLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N15QDockAreaLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N15QDockAreaLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N15QDockAreaLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N15QDockAreaLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N15QDockAreaLayout8iteratorEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N15QDockAreaLayout8iteratorEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N15QDockAreaLayout8iteratorEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N15QProgressDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N15QProgressDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N15QProgressDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N15QProgressDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn40_N15QProgressDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
 	{"_ZThn40_N15QProgressDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn40_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn40_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn40_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn40_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn40_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn40_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn40_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn40_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn40_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn40_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn40_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn40_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
 	{"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N5QDialD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N5QDialD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N5QDialD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N5QDialD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N5QDialD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N5QDialD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N6QLabelD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N6QLabelD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N6QLabelD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N6QLabelD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N6QLabelD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N6QLabelD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N6QTableD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N6QTableD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N6QTableD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N6QTableD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N6QTableD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N6QTableD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QButtonD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QButtonD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QButtonD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QButtonD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QButtonD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QButtonD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QHeaderD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QHeaderD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QHeaderD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QHeaderD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QHeaderD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QHeaderD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QLayout6layoutEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QLayout6layoutEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QLayout6layoutEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QSliderD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QSliderD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QSliderD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QSliderD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QSliderD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QSliderD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QSocket10writeBlockEPKcm","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QSocket10writeBlockEPKcm","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QSocket10writeBlockEPKcm","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QSocket2atEm","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QSocket2atEm","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QSocket2atEm","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QSocket4openEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QSocket4openEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QSocket4openEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QSocket5closeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QSocket5closeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QSocket5closeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QSocket5flushEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QSocket5flushEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QSocket5flushEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QSocket5getchEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QSocket5getchEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QSocket5getchEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QSocket5putchEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QSocket5putchEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QSocket5putchEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QSocket7ungetchEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QSocket7ungetchEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QSocket7ungetchEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QSocket8readLineEPcm","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QSocket8readLineEPcm","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QSocket8readLineEPcm","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QSocket9readBlockEPcm","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QSocket9readBlockEPcm","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QSocket9readBlockEPcm","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QSocketD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QSocketD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QSocketD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QSocketD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QSocketD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QSocketD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QTabBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QTabBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QTabBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QTabBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QTabBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QTabBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QWizardD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QWizardD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QWizardD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N7QWizardD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N7QWizardD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N7QWizardD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N8QListBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N8QListBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N8QListBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N8QListBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N8QListBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N8QListBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N8QMenuBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N8QMenuBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N8QMenuBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N8QMenuBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N8QMenuBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N8QMenuBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N8QToolBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N8QToolBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N8QToolBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N8QToolBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N8QToolBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N8QToolBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N8QToolBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N8QToolBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N8QToolBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N8QToolBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N8QToolBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N8QToolBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N8QUriDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N8QUriDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N8QUriDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N8QUriDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N8QUriDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N8QUriDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QComboBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QComboBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QComboBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QComboBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QComboBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QComboBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QDataViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QDataViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QDataViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QDataViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QDataViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QDataViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QDateEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QDateEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QDateEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QDateEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QDateEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QDateEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QDockAreaD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QDockAreaD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QDockAreaD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QDockAreaD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QDockAreaD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QDockAreaD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QGridViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QGridViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QGridViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QGridViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QGridViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QGridViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QGroupBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QGroupBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QGroupBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QGroupBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QGroupBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QGroupBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QIconDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QIconDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QIconDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QIconDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QIconDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QIconDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QIconViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QIconViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QIconViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QIconViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QIconViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QIconViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QLineEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QLineEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QLineEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QLineEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QLineEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QLineEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QListViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QListViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QListViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QListViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QListViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QListViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QSizeGripD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QSizeGripD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QSizeGripD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QSizeGripD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QSizeGripD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QSizeGripD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QSplitterD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QSplitterD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QSplitterD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QSplitterD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QSplitterD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QSplitterD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QTextDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QTextDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QTextDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QTextDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QTextDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QTextDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QTextEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QTextEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QTextEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QTextEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QTextEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QTextEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QTextViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QTextViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QTextViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QTextViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QTextViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QTextViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QTimeEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QTimeEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QTimeEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QTimeEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QTimeEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QTimeEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QTitleBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QTitleBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QTitleBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_N9QTitleBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_N9QTitleBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_N9QTitleBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK10QBoxLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK10QBoxLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK10QBoxLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK10QBoxLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK10QBoxLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK10QBoxLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK10QBoxLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK10QBoxLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK10QBoxLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK10QBoxLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK10QBoxLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK10QBoxLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK10QBoxLayout8sizeHintEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK10QBoxLayout8sizeHintEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK10QBoxLayout8sizeHintEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK10QBoxLayout9expandingEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK10QBoxLayout9expandingEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK10QBoxLayout9expandingEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK10QImageDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK10QImageDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK10QImageDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK10QImageDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK10QImageDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK10QImageDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK11QGridLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK11QGridLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK11QGridLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK11QGridLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK11QGridLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK11QGridLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK11QGridLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK11QGridLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK11QGridLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK11QGridLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK11QGridLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK11QGridLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK11QGridLayout8sizeHintEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK11QGridLayout8sizeHintEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK11QGridLayout8sizeHintEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK11QGridLayout9expandingEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK11QGridLayout9expandingEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK11QGridLayout9expandingEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK11QStoredDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK11QStoredDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK11QStoredDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK11QStoredDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK11QStoredDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK11QStoredDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK15QDockAreaLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK15QDockAreaLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK15QDockAreaLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK15QDockAreaLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK15QDockAreaLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK15QDockAreaLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK15QDockAreaLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK15QDockAreaLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK15QDockAreaLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK15QDockAreaLayout8sizeHintEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK15QDockAreaLayout8sizeHintEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK15QDockAreaLayout8sizeHintEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK7QLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK7QLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK7QLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK7QLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK7QLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK7QLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK7QLayout7isEmptyEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK7QLayout7isEmptyEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK7QLayout7isEmptyEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK7QLayout8geometryEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK7QLayout8geometryEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK7QLayout8geometryEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK7QLayout9expandingEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK7QLayout9expandingEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK7QLayout9expandingEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK7QSocket2atEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK7QSocket2atEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK7QSocket2atEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK7QSocket4sizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK7QSocket4sizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK7QSocket4sizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK7QSocket5atEndEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK7QSocket5atEndEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK7QSocket5atEndEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK7QWidget6metricEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK7QWidget6metricEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK7QWidget6metricEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK9QIconDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK9QIconDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK9QIconDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK9QIconDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK9QIconDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK9QIconDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK9QTextDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK9QTextDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK9QTextDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn40_NK9QTextDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn40_NK9QTextDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn40_NK9QTextDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn4_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn4_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn4_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn4_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn4_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn4_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn4_N18QXmlDefaultHandler5errorERK18QXmlParseException","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn4_N18QXmlDefaultHandler5errorERK18QXmlParseException","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn4_N18QXmlDefaultHandler5errorERK18QXmlParseException","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn4_N18QXmlDefaultHandler7warningERK18QXmlParseException","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn4_N18QXmlDefaultHandler7warningERK18QXmlParseException","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
 	{"_ZThn4_N18QXmlDefaultHandler7warningERK18QXmlParseException","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N10QBoxLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QBoxLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QBoxLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N10QBoxLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N10QBoxLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QBoxLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QBoxLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N10QBoxLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N10QBoxLayout8iteratorEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QBoxLayout8iteratorEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QBoxLayout8iteratorEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N10QBoxLayout8iteratorEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N10QBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N10QBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N10QBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N10QBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N10QDataTableD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QDataTableD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QDataTableD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N10QDataTableD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N10QDataTableD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QDataTableD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QDataTableD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N10QDataTableD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N10QHGroupBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QHGroupBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QHGroupBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N10QHGroupBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N10QHGroupBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QHGroupBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QHGroupBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N10QHGroupBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N10QImageDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QImageDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QImageDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N10QImageDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N10QImageDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QImageDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QImageDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N10QImageDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N10QLCDNumberD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QLCDNumberD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QLCDNumberD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N10QLCDNumberD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N10QLCDNumberD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QLCDNumberD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QLCDNumberD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N10QLCDNumberD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N10QPopupMenuD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QPopupMenuD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QPopupMenuD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N10QPopupMenuD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N10QPopupMenuD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QPopupMenuD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QPopupMenuD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N10QPopupMenuD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N10QScrollBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QScrollBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QScrollBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N10QScrollBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N10QScrollBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QScrollBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QScrollBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N10QScrollBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N10QStatusBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QStatusBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QStatusBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N10QStatusBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N10QStatusBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QStatusBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QStatusBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N10QStatusBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N10QTabDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QTabDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QTabDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N10QTabDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N10QTabDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QTabDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QTabDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N10QTabDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N10QTabWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QTabWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QTabWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N10QTabWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N10QTabWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QTabWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QTabWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N10QTabWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N10QVGroupBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QVGroupBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QVGroupBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N10QVGroupBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N10QVGroupBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QVGroupBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QVGroupBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N10QVGroupBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N10QWorkspaceD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QWorkspaceD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QWorkspaceD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N10QWorkspaceD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N10QWorkspaceD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N10QWorkspaceD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N10QWorkspaceD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N10QWorkspaceD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N11QCanvasViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QCanvasViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QCanvasViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N11QCanvasViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N11QCanvasViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QCanvasViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QCanvasViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N11QCanvasViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N11QDockWindowD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QDockWindowD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QDockWindowD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N11QDockWindowD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N11QDockWindowD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QDockWindowD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QDockWindowD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N11QDockWindowD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N11QDragObjectD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QDragObjectD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QDragObjectD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N11QDragObjectD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N11QDragObjectD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QDragObjectD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QDragObjectD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N11QDragObjectD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N11QFileDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QFileDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QFileDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N11QFileDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N11QFileDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QFileDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QFileDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N11QFileDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N11QFontDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QFontDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QFontDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N11QFontDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N11QFontDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QFontDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QFontDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N11QFontDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N11QGridLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QGridLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QGridLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N11QGridLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N11QGridLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QGridLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QGridLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N11QGridLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N11QGridLayout8iteratorEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QGridLayout8iteratorEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QGridLayout8iteratorEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N11QGridLayout8iteratorEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N11QGridLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QGridLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QGridLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N11QGridLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N11QGridLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QGridLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QGridLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N11QGridLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N11QHBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QHBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QHBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N11QHBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N11QHBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QHBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QHBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N11QHBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N11QMainWindowD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QMainWindowD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QMainWindowD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N11QMainWindowD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N11QMainWindowD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QMainWindowD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QMainWindowD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N11QMainWindowD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N11QMessageBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QMessageBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QMessageBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N11QMessageBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N11QMessageBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QMessageBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QMessageBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N11QMessageBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N11QPushButtonD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QPushButtonD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QPushButtonD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N11QPushButtonD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N11QPushButtonD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QPushButtonD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QPushButtonD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N11QPushButtonD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N11QScrollViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QScrollViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QScrollViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N11QScrollViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N11QScrollViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QScrollViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QScrollViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N11QScrollViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N11QSpinWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QSpinWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QSpinWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N11QSpinWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N11QSpinWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QSpinWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QSpinWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N11QSpinWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N11QStoredDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QStoredDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QStoredDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N11QStoredDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N11QStoredDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QStoredDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QStoredDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N11QStoredDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N11QToolButtonD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QToolButtonD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QToolButtonD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N11QToolButtonD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N11QToolButtonD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QToolButtonD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QToolButtonD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N11QToolButtonD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N11QVBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QVBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QVBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N11QVBoxLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N11QVBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N11QVBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N11QVBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N11QVBoxLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N12QButtonGroupD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N12QButtonGroupD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N12QButtonGroupD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N12QButtonGroupD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N12QButtonGroupD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N12QButtonGroupD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N12QButtonGroupD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N12QButtonGroupD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N12QColorDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N12QColorDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N12QColorDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N12QColorDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N12QColorDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N12QColorDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N12QColorDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N12QColorDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N12QDataBrowserD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N12QDataBrowserD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N12QDataBrowserD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N12QDataBrowserD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N12QDataBrowserD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N12QDataBrowserD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N12QDataBrowserD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N12QDataBrowserD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N12QInputDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N12QInputDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N12QInputDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N12QInputDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N12QInputDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N12QInputDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N12QInputDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N12QInputDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N12QPrintDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N12QPrintDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N12QPrintDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N12QPrintDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N12QPrintDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N12QPrintDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N12QPrintDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N12QPrintDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N12QTextBrowserD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N12QTextBrowserD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N12QTextBrowserD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N12QTextBrowserD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N12QTextBrowserD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N12QTextBrowserD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N12QTextBrowserD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N12QTextBrowserD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N12QUrlOperator4cdUpEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N12QUrlOperator4cdUpEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N12QUrlOperator4cdUpEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N12QUrlOperator4cdUpEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N12QUrlOperator5parseERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N12QUrlOperator5parseERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N12QUrlOperator5parseERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N12QUrlOperator5parseERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N12QUrlOperator5resetEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N12QUrlOperator5resetEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N12QUrlOperator5resetEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N12QUrlOperator5resetEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N12QUrlOperator7setPathERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N12QUrlOperator7setPathERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N12QUrlOperator7setPathERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N12QUrlOperator7setPathERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N12QUrlOperatorD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N12QUrlOperatorD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N12QUrlOperatorD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N12QUrlOperatorD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N12QUrlOperatorD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N12QUrlOperatorD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N12QUrlOperatorD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N12QUrlOperatorD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N12QWidgetStackD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N12QWidgetStackD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N12QWidgetStackD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N12QWidgetStackD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N12QWidgetStackD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N12QWidgetStackD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N12QWidgetStackD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N12QWidgetStackD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N13QDateTimeEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N13QDateTimeEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N13QDateTimeEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N13QDateTimeEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N13QDateTimeEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N13QDateTimeEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N13QDateTimeEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N13QDateTimeEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N13QErrorMessageD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N13QErrorMessageD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N13QErrorMessageD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N13QErrorMessageD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N13QErrorMessageD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N13QErrorMessageD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N13QErrorMessageD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N13QErrorMessageD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N13QHButtonGroupD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N13QHButtonGroupD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N13QHButtonGroupD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N13QHButtonGroupD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N13QHButtonGroupD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N13QHButtonGroupD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N13QHButtonGroupD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N13QHButtonGroupD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N13QSplashScreenD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N13QSplashScreenD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N13QSplashScreenD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N13QSplashScreenD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N13QSplashScreenD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N13QSplashScreenD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N13QSplashScreenD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N13QSplashScreenD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N13QVButtonGroupD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N13QVButtonGroupD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N13QVButtonGroupD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N13QVButtonGroupD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N13QVButtonGroupD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N13QVButtonGroupD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N13QVButtonGroupD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N13QVButtonGroupD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N14QDesktopWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N14QDesktopWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N14QDesktopWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N14QDesktopWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N14QDesktopWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N14QDesktopWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N14QDesktopWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N14QDesktopWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N14QMultiLineEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N14QMultiLineEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N14QMultiLineEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N14QMultiLineEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N14QMultiLineEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N14QMultiLineEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N14QMultiLineEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N14QMultiLineEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N15QDockAreaLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N15QDockAreaLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N15QDockAreaLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N15QDockAreaLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N15QDockAreaLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N15QDockAreaLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N15QDockAreaLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N15QDockAreaLayout11setGeometryERK5QRect","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N15QDockAreaLayout8iteratorEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N15QDockAreaLayout8iteratorEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N15QDockAreaLayout8iteratorEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N15QDockAreaLayout8iteratorEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N15QProgressDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N15QProgressDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N15QProgressDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N15QProgressDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N15QProgressDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N15QProgressDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N15QProgressDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N15QProgressDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N5QDialD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N5QDialD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N5QDialD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N5QDialD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N5QDialD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N5QDialD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N5QDialD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N5QDialD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N6QLabelD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N6QLabelD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N6QLabelD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N6QLabelD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N6QLabelD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N6QLabelD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N6QLabelD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N6QLabelD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N6QTableD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N6QTableD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N6QTableD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N6QTableD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N6QTableD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N6QTableD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N6QTableD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N6QTableD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N7QButtonD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QButtonD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QButtonD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N7QButtonD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N7QButtonD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QButtonD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QButtonD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N7QButtonD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N7QDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N7QDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N7QDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N7QDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N7QHeaderD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QHeaderD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QHeaderD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N7QHeaderD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N7QHeaderD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QHeaderD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QHeaderD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N7QHeaderD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N7QLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N7QLayout10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N7QLayout6layoutEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QLayout6layoutEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QLayout6layoutEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N7QLayout6layoutEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N7QLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N7QLayoutD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N7QLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N7QLayoutD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N7QSliderD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QSliderD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QSliderD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N7QSliderD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N7QSliderD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QSliderD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QSliderD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N7QSliderD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N7QSocket10writeBlockEPKcm","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QSocket10writeBlockEPKcm","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QSocket10writeBlockEPKcm","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N7QSocket10writeBlockEPKcm","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N7QSocket2atEm","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QSocket2atEm","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QSocket2atEm","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N7QSocket2atEm","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N7QSocket4openEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QSocket4openEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QSocket4openEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N7QSocket4openEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N7QSocket5closeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QSocket5closeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QSocket5closeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N7QSocket5closeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N7QSocket5flushEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QSocket5flushEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QSocket5flushEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N7QSocket5flushEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N7QSocket5getchEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QSocket5getchEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QSocket5getchEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N7QSocket5getchEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N7QSocket5putchEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QSocket5putchEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QSocket5putchEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N7QSocket5putchEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N7QSocket7ungetchEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QSocket7ungetchEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QSocket7ungetchEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N7QSocket7ungetchEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N7QSocket8readLineEPcm","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QSocket8readLineEPcm","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QSocket8readLineEPcm","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N7QSocket8readLineEPcm","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N7QSocket9readBlockEPcm","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QSocket9readBlockEPcm","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QSocket9readBlockEPcm","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N7QSocket9readBlockEPcm","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N7QSocketD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QSocketD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QSocketD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N7QSocketD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N7QSocketD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QSocketD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QSocketD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N7QSocketD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N7QTabBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QTabBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QTabBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N7QTabBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N7QTabBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QTabBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QTabBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N7QTabBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N7QWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N7QWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N7QWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N7QWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N7QWizardD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QWizardD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QWizardD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N7QWizardD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N7QWizardD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N7QWizardD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N7QWizardD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N7QWizardD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N8QListBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N8QListBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N8QListBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N8QListBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N8QListBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N8QListBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N8QListBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N8QListBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N8QMenuBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N8QMenuBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N8QMenuBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N8QMenuBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N8QMenuBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N8QMenuBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N8QMenuBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N8QMenuBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N8QSpinBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N8QSpinBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N8QToolBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N8QToolBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N8QToolBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N8QToolBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N8QToolBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N8QToolBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N8QToolBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N8QToolBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N8QToolBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N8QToolBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N8QToolBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N8QToolBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N8QToolBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N8QToolBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N8QToolBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N8QToolBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N8QUriDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N8QUriDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N8QUriDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N8QUriDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N8QUriDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N8QUriDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N8QUriDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N8QUriDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N9QComboBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QComboBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QComboBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N9QComboBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N9QComboBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QComboBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QComboBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N9QComboBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N9QDataViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QDataViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QDataViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N9QDataViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N9QDataViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QDataViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QDataViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N9QDataViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N9QDateEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QDateEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QDateEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N9QDateEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N9QDateEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QDateEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QDateEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N9QDateEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N9QDockAreaD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QDockAreaD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QDockAreaD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N9QDockAreaD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N9QDockAreaD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QDockAreaD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QDockAreaD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N9QDockAreaD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N9QGridViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QGridViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QGridViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N9QGridViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N9QGridViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QGridViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QGridViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N9QGridViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N9QGroupBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QGroupBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QGroupBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N9QGroupBoxD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N9QGroupBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QGroupBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QGroupBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N9QGroupBoxD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N9QIconDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QIconDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QIconDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N9QIconDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N9QIconDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QIconDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QIconDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N9QIconDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N9QIconViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QIconViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QIconViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N9QIconViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N9QIconViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QIconViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QIconViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N9QIconViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N9QLineEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QLineEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QLineEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N9QLineEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N9QLineEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QLineEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QLineEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N9QLineEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N9QListViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QListViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QListViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N9QListViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N9QListViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QListViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QListViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N9QListViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N9QSizeGripD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QSizeGripD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QSizeGripD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N9QSizeGripD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N9QSizeGripD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QSizeGripD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QSizeGripD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N9QSizeGripD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N9QSplitterD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QSplitterD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QSplitterD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N9QSplitterD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N9QSplitterD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QSplitterD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QSplitterD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N9QSplitterD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N9QTextDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QTextDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QTextDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N9QTextDragD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N9QTextDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QTextDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QTextDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N9QTextDragD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N9QTextEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QTextEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QTextEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N9QTextEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N9QTextEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QTextEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QTextEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N9QTextEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N9QTextViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QTextViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QTextViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N9QTextViewD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N9QTextViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QTextViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QTextViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N9QTextViewD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N9QTimeEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QTimeEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QTimeEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N9QTimeEditD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N9QTimeEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QTimeEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QTimeEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N9QTimeEditD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_N9QTitleBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QTitleBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QTitleBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_N9QTitleBarD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_N9QTitleBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_N9QTitleBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_N9QTitleBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_N9QTitleBarD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_NK10QBoxLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_NK10QBoxLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK10QBoxLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_NK10QBoxLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_NK10QBoxLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_NK10QBoxLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK10QBoxLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_NK10QBoxLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_NK10QBoxLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_NK10QBoxLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK10QBoxLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_NK10QBoxLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_NK10QBoxLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_NK10QBoxLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK10QBoxLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_NK10QBoxLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_NK10QBoxLayout8sizeHintEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_NK10QBoxLayout8sizeHintEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK10QBoxLayout8sizeHintEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_NK10QBoxLayout8sizeHintEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_NK10QBoxLayout9expandingEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_NK10QBoxLayout9expandingEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK10QBoxLayout9expandingEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_NK10QBoxLayout9expandingEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_NK10QImageDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_NK10QImageDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK10QImageDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_NK10QImageDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_NK10QImageDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_NK10QImageDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK10QImageDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_NK10QImageDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_NK11QGridLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_NK11QGridLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK11QGridLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_NK11QGridLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_NK11QGridLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_NK11QGridLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK11QGridLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_NK11QGridLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_NK11QGridLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_NK11QGridLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK11QGridLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_NK11QGridLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_NK11QGridLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_NK11QGridLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK11QGridLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_NK11QGridLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_NK11QGridLayout8sizeHintEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_NK11QGridLayout8sizeHintEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK11QGridLayout8sizeHintEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_NK11QGridLayout8sizeHintEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_NK11QGridLayout9expandingEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_NK11QGridLayout9expandingEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK11QGridLayout9expandingEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_NK11QGridLayout9expandingEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_NK11QStoredDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_NK11QStoredDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK11QStoredDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_NK11QStoredDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_NK11QStoredDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_NK11QStoredDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK11QStoredDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_NK11QStoredDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_NK15QDockAreaLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_NK15QDockAreaLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK15QDockAreaLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_NK15QDockAreaLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_NK15QDockAreaLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_NK15QDockAreaLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK15QDockAreaLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_NK15QDockAreaLayout14heightForWidthEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_NK15QDockAreaLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_NK15QDockAreaLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK15QDockAreaLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_NK15QDockAreaLayout17hasHeightForWidthEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_NK15QDockAreaLayout8sizeHintEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_NK15QDockAreaLayout8sizeHintEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK15QDockAreaLayout8sizeHintEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_NK15QDockAreaLayout8sizeHintEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_NK7QLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_NK7QLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK7QLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_NK7QLayout11maximumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_NK7QLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_NK7QLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK7QLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_NK7QLayout11minimumSizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_NK7QLayout7isEmptyEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_NK7QLayout7isEmptyEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK7QLayout7isEmptyEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_NK7QLayout7isEmptyEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_NK7QLayout8geometryEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_NK7QLayout8geometryEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK7QLayout8geometryEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_NK7QLayout8geometryEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_NK7QLayout9expandingEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_NK7QLayout9expandingEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK7QLayout9expandingEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_NK7QLayout9expandingEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_NK7QSocket2atEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_NK7QSocket2atEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK7QSocket2atEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_NK7QSocket2atEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_NK7QSocket4sizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_NK7QSocket4sizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK7QSocket4sizeEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_NK7QSocket4sizeEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_NK7QSocket5atEndEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_NK7QSocket5atEndEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK7QSocket5atEndEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_NK7QSocket5atEndEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_NK7QWidget6metricEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_NK7QWidget6metricEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK7QWidget6metricEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_NK7QWidget6metricEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_NK9QIconDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_NK9QIconDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK9QIconDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_NK9QIconDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
-	{"_ZThn80_NK9QIconDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_NK9QIconDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK9QIconDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
 	{"_ZThn80_NK9QIconDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn80_NK9QTextDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn80_NK9QTextDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK9QTextDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_NK9QTextDrag11encodedDataEPKc","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
 	{"_ZThn80_NK9QTextDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn80_NK9QTextDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn80_NK9QTextDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn80_NK9QTextDrag6formatEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn8_N10QSqlCursor4execERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn8_N10QSqlCursor4execERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N10QSqlCursor4execERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn8_N10QSqlCursor9afterSeekEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn8_N10QSqlCursor9afterSeekEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N10QSqlCursor9afterSeekEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn8_N10QSqlCursorD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn8_N10QSqlCursorD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N10QSqlCursorD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn8_N10QSqlCursorD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn8_N10QSqlCursorD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N10QSqlCursorD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn8_N16QSqlSelectCursor4execERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn8_N16QSqlSelectCursor4execERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N16QSqlSelectCursor4execERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn8_N16QSqlSelectCursorD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZThn8_N16QSqlSelectCursorD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N16QSqlSelectCursorD0Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn8_N16QSqlSelectCursorD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N16QSqlSelectCursorD1Ev","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N16QSqlSelectCursorD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn8_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn8_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn8_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn8_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn8_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
 	{"_ZThn8_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn8_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn8_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn8_N18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
 	{"_ZThn8_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn8_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn8_N18QXmlDefaultHandler5errorERK18QXmlParseException","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn8_N18QXmlDefaultHandler5errorERK18QXmlParseException","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn8_N18QXmlDefaultHandler5errorERK18QXmlParseException","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn8_N18QXmlDefaultHandler5errorERK18QXmlParseException","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __ia64__
 	{"_ZThn8_N18QXmlDefaultHandler7warningERK18QXmlParseException","",0,LSB_Toolkit_Qt3,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn8_N18QXmlDefaultHandler7warningERK18QXmlParseException","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn8_N18QXmlDefaultHandler7warningERK18QXmlParseException","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn8_N18QXmlDefaultHandler7warningERK18QXmlParseException","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn8_NK10QSqlCursor5valueEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_NK10QSqlCursor5valueEi","",0,LSB_Toolkit_Qt3,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK10QSqlCursor5valueEi","",0,LSB_Toolkit_Qt3,0,1},
 #endif
 	{"_ZanRK9QBitArrayS1_","",0,LSB_Toolkit_Qt3,0,1},

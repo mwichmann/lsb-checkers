@@ -20,6 +20,8 @@ $(LIB): $(OBJS)
 test: test.c $(LIB) $(LIBS)
 	$(CC) -o test $(CFLAGS) test.c $(LIB) $(LIBS) -lz
 
+gensrc: $(GENSRCS)
+
 idx.o: rpmtag.h
 
 rpmtag.h:

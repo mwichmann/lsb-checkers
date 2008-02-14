@@ -1,1 +1,1 @@
-char* LSB_Version_str = "3.2";
+char* LSB_Version_str = "4.0";
