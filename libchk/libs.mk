@@ -23,6 +23,7 @@ LIBOBJS = \
 	libgdk_pixbuf_xlib_2_0_so_0.o \
 	libGL_so_1.o \
 	libglib_2_0_so_0.o \
+	libGLU_so_1.o \
 	libgmodule_2_0_so_0.o \
 	libgobject_2_0_so_0.o \
 	libgthread_2_0_so_0.o \

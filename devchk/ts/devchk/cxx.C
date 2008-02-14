@@ -1977,14 +1977,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 #endif
 
 #if 0
-#define TYPE QThread
-CheckTypeSize(TYPE,0,16377,1, 3.1, NULL, 0, NULL)
-#undef TYPE
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16377,0);
-#endif
-
-#if 0
 #define TYPE QWidget
 CheckTypeSize(TYPE,0,16494,1, 3.1, NULL, 0, NULL)
 #undef TYPE
