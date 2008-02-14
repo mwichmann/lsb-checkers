@@ -293,6 +293,8 @@ extern struct classinfo libglib_2_0_so_0_classinfo[];
 extern struct versym libglib_2_0_so_0[];
 extern struct classinfo libglib_2_0_so_0_classinfo[];
 #endif
+extern struct versym libGLU_so_1[];
+extern struct classinfo libGLU_so_1_classinfo[];
 #if defined __s390x__
 extern struct versym libgmodule_2_0_so_0[];
 extern struct classinfo libgmodule_2_0_so_0_classinfo[];

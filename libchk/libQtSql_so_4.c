@@ -401,43 +401,13 @@ struct versym libQtSql_so_4[] = {
 #if defined __ia64__
 	{"_ZThn16_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn16_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn16_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn16_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
-#endif
 #if defined __ia64__
 	{"_ZThn16_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __powerpc64__
-	{"_ZThn16_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn16_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn16_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
-#endif
 #if defined __i386__
 	{"_ZThn8_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
-#endif
 #if defined __i386__
-	{"_ZThn8_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N16QSqlDriverPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 	{"_Zls6QDebugRK10QSqlRecord","",0,LSB_Toolkit_Qt,0,1},
