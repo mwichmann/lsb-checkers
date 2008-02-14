@@ -222,6 +222,7 @@ struct modlib modlibs [] = {
 #if defined __i386__
 	{LSB_Toolkit_Gtk,"libglib-2.0.so.0",libglib_2_0_so_0,libglib_2_0_so_0_classinfo},
 #endif
+	{LSB_Graphics,"libGLU.so.1",libGLU_so_1,libGLU_so_1_classinfo},
 #if defined __s390x__
 	{LSB_Toolkit_Gtk,"libgmodule-2.0.so.0",libgmodule_2_0_so_0,libgmodule_2_0_so_0_classinfo},
 #endif
