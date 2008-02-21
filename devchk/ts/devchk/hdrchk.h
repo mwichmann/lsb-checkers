@@ -180,7 +180,7 @@ int Log(char *f, ...);
 	cnt++; \
 	if(enumname != enumvalue ) { \
 		Msg( "%s enumerator has value %d instead of expected %d\n",enumnm,enumvalue,enumname); \
-		Msg("UPDATE TypeMember Set TMarray=%d WHERE TMid=%d ;\n",enumname,tmid); \
+		Msg("UPDATE TypeMember Set TMvalue=%d WHERE TMid=%d ;\n",enumname,tmid); \
 			HDRCHKTEST_FAIL \
 	} \
 	else { \
