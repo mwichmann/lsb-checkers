@@ -666,9 +666,9 @@ sub writetest($$) {
             $tmh = $Dbh->query($tmselect) || die $Dbh->errmsg();
             for ( 1 .. $tmh->numrows ) {
                 %tmentry = $tmh->fetchhash;
-                if ( $tmentry{'TMarray'} ne '' ) {
-                    $lastvalue = "$tmentry{'TMarray'}";
-                    print TESTS "CheckEnum(\"$tmentry{'TMname'}\",$tmentry{'TMname'},$tmentry{'TMarray'},$tmentry{'TMid'})\n";
+                if ( $tmentry{'TMvalue'} ne '' ) {
+                    $lastvalue = "$tmentry{'TMvalue'}";
+                    print TESTS "CheckEnum(\"$tmentry{'TMname'}\",$tmentry{'TMname'},$tmentry{'TMvalue'},$tmentry{'TMid'})\n";
                 } else {
                     if ( $_ == 1 ) {
                         $lastvalue = "0";
