@@ -25,6 +25,62 @@ Msg("Checking data structures in ucontext.h\n");
 #endif
 
 printf("Checking data structures in ucontext.h\n");
+#if defined __ia64__
+#ifdef uc_mcontext
+	CompareConstant(uc_mcontext,_u._mc,11905,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: uc_mcontext\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for uc_mcontext (11905, int) in db\n");
+#ifdef uc_mcontext
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,11905,%d,'""3.2""',NULL);\n", architecture, uc_mcontext);
+#endif
+#endif
+#if defined __ia64__
+#ifdef uc_sigmask
+	CompareConstant(uc_sigmask,_u._mc.sc_mask,11906,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: uc_sigmask\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for uc_sigmask (11906, int) in db\n");
+#ifdef uc_sigmask
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,11906,%d,'""3.2""',NULL);\n", architecture, uc_sigmask);
+#endif
+#endif
+#if defined __ia64__
+#ifdef uc_stack
+	CompareConstant(uc_stack,_u._mc.sc_stack,11907,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: uc_stack\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for uc_stack (11907, int) in db\n");
+#ifdef uc_stack
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,11907,%d,'""3.2""',NULL);\n", architecture, uc_stack);
+#endif
+#endif
+#if defined __ia64__
+#ifdef uc_link
+	CompareConstant(uc_link,_u._uc._link,11908,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: uc_link\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for uc_link (11908, int) in db\n");
+#ifdef uc_link
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,11908,%d,'""3.2""',NULL);\n", architecture, uc_link);
+#endif
+#endif
 #if defined __powerpc64__
 #ifdef NGREG
 	CompareConstant(NGREG,48,4929,architecture,2.0,NULL)
