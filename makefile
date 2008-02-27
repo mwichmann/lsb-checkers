@@ -7,6 +7,9 @@ all:
 install:
 	for d in $(SUBDIRS);do (cd $$d && $(MAKE) install);done
 
+gensrc:
+	for d in $(SUBDIRS);do (cd $$d && $(MAKE) gensrc);done
+
 clean:
 	for d in $(SUBDIRS);do (cd $$d && $(MAKE) clean);done
 
