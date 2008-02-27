@@ -59,6 +59,7 @@ int tcnt=0;
 main()
 {
 tcnt+=GL_gl_h();
+tcnt+=GL_glu_h();
 tcnt+=GL_glx_h();
 tcnt+=X11_Composite_h();
 tcnt+=X11_CompositeP_h();

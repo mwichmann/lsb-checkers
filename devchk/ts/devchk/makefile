@@ -1,5 +1,6 @@
 OBJS = hdrchk.o \
 	GL_gl_h.o \
+	GL_glu_h.o \
 	GL_glx_h.o \
 	X11_Composite_h.o \
 	X11_CompositeP_h.o \

@@ -5711,16 +5711,16 @@ struct classinfo _ZN10__cxxabiv129__pointer_to_member_type_infoE_of_libstdcxx_so
 	_N10__cxxabiv129__pointer_to_member_type_infoE_of_libstdcxx_so_6_baseinfo,
 	};
 
-char *_N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_of_libstdcxx_so_6_typeinfo_name[] = {
+char *_N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE_of_libstdcxx_so_6_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_of_libstdcxx_so_6_typeinfo = {
+struct classtypeinfo _N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE_of_libstdcxx_so_6_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTSN9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE",
-	_N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_of_libstdcxx_so_6_typeinfo_name,
+	"_ZTSN9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE",
+	_N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE_of_libstdcxx_so_6_typeinfo_name,
 	};
 
-const char *_N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_of_libstdcxx_so_6_vtable_name_0 [] = {
+const char *_N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE_of_libstdcxx_so_6_vtable_name_0 [] = {
 	"",
 	"",
 	"_ZNSt15basic_streambufIcSt11char_traitsIcEE5imbueERKSt6locale",
@@ -5757,46 +5757,46 @@ const char *_N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_of_libstdcxx_so_6_
 	"",
 	};
 
-struct classvtable _N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_of_libstdcxx_so_6_vtable [1] = {
+struct classvtable _N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE_of_libstdcxx_so_6_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	14,	/* Number of Vfuncs */
 	"_ZTIN9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE",
-	_N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_of_libstdcxx_so_6_vtable_name_0,
+	_N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE_of_libstdcxx_so_6_vtable_name_0,
 	},
 };
 
-struct base_type_info _N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_of_libstdcxx_so_6_baseinfo[] = {
+struct base_type_info _N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE_of_libstdcxx_so_6_baseinfo[] = {
 	};
 
-struct classinfo _ZN9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_of_libstdcxx_so_6_classinfo = {
-	"_ZN9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE",
+struct classinfo _ZN9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE_of_libstdcxx_so_6_classinfo = {
+	"_ZN9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE",
 	"_ZTVN9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE",
 	"",	/* RTTI */
 	"_ZTISt13basic_filebufIcSt11char_traitsIcEE",
-	"_ZTTN9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE",	/* VTT */
+	"_ZTTN9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&_N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_of_libstdcxx_so_6_typeinfo,
-	_N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_of_libstdcxx_so_6_vtable,
-	_N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_of_libstdcxx_so_6_baseinfo,
+	&_N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE_of_libstdcxx_so_6_typeinfo,
+	_N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE_of_libstdcxx_so_6_vtable,
+	_N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE_of_libstdcxx_so_6_baseinfo,
 	};
 
-char *_N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_of_libstdcxx_so_6_typeinfo_name[] = {
+char *_N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE_of_libstdcxx_so_6_typeinfo_name[] = {
 	};
 
-struct classtypeinfo _N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_of_libstdcxx_so_6_typeinfo = {
+struct classtypeinfo _N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE_of_libstdcxx_so_6_typeinfo = {
 	"_ZTVN10__cxxabiv120__si_class_type_infoE",
-	"_ZTSN9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE",
-	_N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_of_libstdcxx_so_6_typeinfo_name,
+	"_ZTSN9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE",
+	_N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE_of_libstdcxx_so_6_typeinfo_name,
 	};
 
-const char *_N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_of_libstdcxx_so_6_vtable_name_0 [] = {
+const char *_N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE_of_libstdcxx_so_6_vtable_name_0 [] = {
 	"",
 	"",
 	"_ZNSt15basic_streambufIwSt11char_traitsIwEE5imbueERKSt6locale",
@@ -5833,34 +5833,34 @@ const char *_N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_of_libstdcxx_so_6_
 	"",
 	};
 
-struct classvtable _N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_of_libstdcxx_so_6_vtable [1] = {
+struct classvtable _N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE_of_libstdcxx_so_6_vtable [1] = {
 	{
 	0,
 	0,
 	1,	/* Vtable category */
 	14,	/* Number of Vfuncs */
 	"_ZTIN9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE",
-	_N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_of_libstdcxx_so_6_vtable_name_0,
+	_N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE_of_libstdcxx_so_6_vtable_name_0,
 	},
 };
 
-struct base_type_info _N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_of_libstdcxx_so_6_baseinfo[] = {
+struct base_type_info _N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE_of_libstdcxx_so_6_baseinfo[] = {
 	};
 
-struct classinfo _ZN9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_of_libstdcxx_so_6_classinfo = {
-	"_ZN9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE",
+struct classinfo _ZN9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE_of_libstdcxx_so_6_classinfo = {
+	"_ZN9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE",
 	"_ZTVN9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE",
 	"",	/* RTTI */
 	"_ZTISt13basic_filebufIwSt11char_traitsIwEE",
-	"_ZTTN9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE",	/* VTT */
+	"_ZTTN9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE",	/* VTT */
 	1,
 	0,
 	0,
 	0,	/* numVTT */
 	0U,
-	&_N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_of_libstdcxx_so_6_typeinfo,
-	_N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_of_libstdcxx_so_6_vtable,
-	_N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_of_libstdcxx_so_6_baseinfo,
+	&_N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE_of_libstdcxx_so_6_typeinfo,
+	_N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE_of_libstdcxx_so_6_vtable,
+	_N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE_of_libstdcxx_so_6_baseinfo,
 	};
 
 char *_NSt8ios_base7failureE_of_libstdcxx_so_6_typeinfo_name[] = {
@@ -13162,6 +13162,8 @@ struct classtypeinfo _St8ios_base_of_libstdcxx_so_6_typeinfo = {
 	};
 
 const char *_St8ios_base_of_libstdcxx_so_6_vtable_name_0 [] = {
+	"_ZNSt8ios_baseD1Ev",
+	"_ZNSt8ios_baseD0Ev",
 	};
 
 struct classvtable _St8ios_base_of_libstdcxx_so_6_vtable [1] = {
@@ -13169,7 +13171,7 @@ struct classvtable _St8ios_base_of_libstdcxx_so_6_vtable [1] = {
 	0,
 	0,
 	1,	/* Vtable category */
-	0,	/* Number of Vfuncs */
+	2,	/* Number of Vfuncs */
 	"_ZTISt8ios_base",
 	_St8ios_base_of_libstdcxx_so_6_vtable_name_0,
 	},
@@ -13180,7 +13182,7 @@ struct base_type_info _St8ios_base_of_libstdcxx_so_6_baseinfo[] = {
 
 struct classinfo _ZSt8ios_base_of_libstdcxx_so_6_classinfo = {
 	"_ZSt8ios_base",
-	"",
+	"_ZTVSt8ios_base",
 	"_ZTISt8ios_base",	/* RTTI */
 	"",
 	"_ZTTSt8ios_base",	/* VTT */
@@ -13466,8 +13468,8 @@ struct classinfo *libstdcxx_so_6_classinfo[] = {
 	&_ZN10__cxxabiv121__vmi_class_type_infoE_of_libstdcxx_so_6_classinfo,
 	&_ZN10__cxxabiv123__fundamental_type_infoE_of_libstdcxx_so_6_classinfo,
 	&_ZN10__cxxabiv129__pointer_to_member_type_infoE_of_libstdcxx_so_6_classinfo,
-	&_ZN9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE_of_libstdcxx_so_6_classinfo,
-	&_ZN9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE_of_libstdcxx_so_6_classinfo,
+	&_ZN9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE_of_libstdcxx_so_6_classinfo,
+	&_ZN9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE_of_libstdcxx_so_6_classinfo,
 	&_ZNSt8ios_base7failureE_of_libstdcxx_so_6_classinfo,
 	&_ZSt10bad_typeid_of_libstdcxx_so_6_classinfo,
 	&_ZSt11logic_error_of_libstdcxx_so_6_classinfo,
