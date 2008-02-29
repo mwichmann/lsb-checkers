@@ -1579,21 +1579,6 @@ cnt++;
 CheckTypeSize(_GLUfuncptr,0, 31634, 1, 4.0, NULL, 40, NULL)
 #endif
 
-#if 1
-CheckTypeSize(struct GLUtesselator,0, 31635, 1, 4.0, NULL, 0, NULL)
-Msg("Missing member data for GLUtesselator on All\n");
-#endif
-
-#if 1
-CheckTypeSize(struct GLUquadric,0, 31639, 1, 4.0, NULL, 0, NULL)
-Msg("Missing member data for GLUquadric on All\n");
-#endif
-
-#if 1
-CheckTypeSize(struct GLUnurbs,0, 31642, 1, 4.0, NULL, 0, NULL)
-Msg("Missing member data for GLUnurbs on All\n");
-#endif
-
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
