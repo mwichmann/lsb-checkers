@@ -112,6 +112,8 @@ extern const char * snd_rawmidi_info_get_id_db(const snd_rawmidi_info_t *);
 CheckInterfacedef(snd_rawmidi_info_get_id,snd_rawmidi_info_get_id_db);
 extern const char * snd_rawmidi_info_get_name_db(const snd_rawmidi_info_t *);
 CheckInterfacedef(snd_rawmidi_info_get_name,snd_rawmidi_info_get_name_db);
+extern const char * snd_rawmidi_info_get_subdevice_name_db(const snd_rawmidi_info_t *);
+CheckInterfacedef(snd_rawmidi_info_get_subdevice_name,snd_rawmidi_info_get_subdevice_name_db);
 extern unsigned int snd_rawmidi_info_get_subdevices_count_db(const snd_rawmidi_info_t *);
 CheckInterfacedef(snd_rawmidi_info_get_subdevices_count,snd_rawmidi_info_get_subdevices_count_db);
 extern int snd_rawmidi_info_malloc_db(snd_rawmidi_info_t * *);
@@ -122,6 +124,8 @@ extern void snd_rawmidi_info_set_stream_db(snd_rawmidi_info_t *, snd_rawmidi_str
 CheckInterfacedef(snd_rawmidi_info_set_stream,snd_rawmidi_info_set_stream_db);
 extern void snd_rawmidi_info_set_subdevice_db(snd_rawmidi_info_t *, unsigned int);
 CheckInterfacedef(snd_rawmidi_info_set_subdevice,snd_rawmidi_info_set_subdevice_db);
+extern size_t snd_rawmidi_info_sizeof_db(void);
+CheckInterfacedef(snd_rawmidi_info_sizeof,snd_rawmidi_info_sizeof_db);
 extern int snd_rawmidi_nonblock_db(snd_rawmidi_t *, int);
 CheckInterfacedef(snd_rawmidi_nonblock,snd_rawmidi_nonblock_db);
 extern int snd_rawmidi_open_db(snd_rawmidi_t * *, snd_rawmidi_t * *, const char *, int);
