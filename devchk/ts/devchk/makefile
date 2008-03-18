@@ -213,6 +213,7 @@ OBJS = hdrchk.o \
 	ucontext_h.o \
 	ulimit_h.o \
 	unistd_h.o \
+	unwind_h.o \
 	utime_h.o \
 	utmp_h.o \
 	utmpx_h.o \
