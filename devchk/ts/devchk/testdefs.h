@@ -212,6 +212,7 @@ extern void time_h();
 extern void ucontext_h();
 extern void ulimit_h();
 extern void unistd_h();
+extern void unwind_h();
 extern void utime_h();
 extern void utmp_h();
 extern void utmpx_h();

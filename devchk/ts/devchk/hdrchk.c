@@ -272,6 +272,7 @@ tcnt+=time_h();
 tcnt+=ucontext_h();
 tcnt+=ulimit_h();
 tcnt+=unistd_h();
+tcnt+=unwind_h();
 tcnt+=utime_h();
 tcnt+=utmp_h();
 tcnt+=utmpx_h();
