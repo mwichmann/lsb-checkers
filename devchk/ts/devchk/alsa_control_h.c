@@ -658,16 +658,24 @@ extern int snd_hctl_free_db(snd_hctl_t *);
 CheckInterfacedef(snd_hctl_free,snd_hctl_free_db);
 extern void * snd_hctl_get_callback_private_db(snd_hctl_t *);
 CheckInterfacedef(snd_hctl_get_callback_private,snd_hctl_get_callback_private_db);
+extern unsigned int snd_hctl_get_count_db(snd_hctl_t *);
+CheckInterfacedef(snd_hctl_get_count,snd_hctl_get_count_db);
+extern int snd_hctl_handle_events_db(snd_hctl_t *);
+CheckInterfacedef(snd_hctl_handle_events,snd_hctl_handle_events_db);
 extern snd_hctl_elem_t * snd_hctl_last_elem_db(snd_hctl_t *);
 CheckInterfacedef(snd_hctl_last_elem,snd_hctl_last_elem_db);
 extern int snd_hctl_load_db(snd_hctl_t *);
 CheckInterfacedef(snd_hctl_load,snd_hctl_load_db);
+extern int snd_hctl_nonblock_db(snd_hctl_t *, int);
+CheckInterfacedef(snd_hctl_nonblock,snd_hctl_nonblock_db);
 extern int snd_hctl_open_db(snd_hctl_t * *, const char *, int);
 CheckInterfacedef(snd_hctl_open,snd_hctl_open_db);
 extern void snd_hctl_set_callback_db(snd_hctl_t *, snd_hctl_callback_t);
 CheckInterfacedef(snd_hctl_set_callback,snd_hctl_set_callback_db);
 extern void snd_hctl_set_callback_private_db(snd_hctl_t *, void *);
 CheckInterfacedef(snd_hctl_set_callback_private,snd_hctl_set_callback_private_db);
+extern int snd_hctl_wait_db(snd_hctl_t *, int);
+CheckInterfacedef(snd_hctl_wait,snd_hctl_wait_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
