@@ -1079,9 +1079,11 @@ print TET_HDR "struct tet_testlist tet_testlist[] = {\n";
 
 open( SUBDEFS, ">testdefs.h" ) || die "Can't open testdefs.h for writing";
 
-$select = "SELECT DISTINCT * FROM Header ";
+$select = "SELECT * FROM Header ";
+$select.= "LEFT JOIN Library ON Hlib=Lid ";
 $select.= "WHERE (Happearedin is not NULL and Happearedin <= '$lsbversion' and Happearedin<>\'\') ";
 $select.= "AND (Hwithdrawnin IS NULL OR Hwithdrawnin > '$lsbversion' ) ",
+$select.= "AND Lname NOT IN ('libQtCore','libQtGui','libQtNetwork','libQtXml','libQtOpenGL','libQtSql','libQtSvg') ";
 $select .= "ORDER BY Hname ";
 
 #
@@ -1091,9 +1093,7 @@ $hth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->err
 $hth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 for ( 1 .. $hth->rows ) {
 	$entry = $hth->fetchrow_hashref;
-	if ( $entry->{'Hid'} <= 228 || $entry->{'Hid'} > 487 ) {
-		writetest( $entry->{'Hid'}, $entry->{'Hname'} );
-	}
+	writetest( $entry->{'Hid'}, $entry->{'Hname'} );
 }
 $hth->finish;
 
