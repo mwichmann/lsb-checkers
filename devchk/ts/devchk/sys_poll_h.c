@@ -26,6 +26,46 @@ Msg("Checking data structures in sys/poll.h\n");
 
 printf("Checking data structures in sys/poll.h\n");
 #if _LSB_DEFAULT_ARCH
+#ifdef POLLRDNORM
+	CompareConstant(POLLRDNORM,0x0040,12064,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POLLRDNORM\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef POLLRDBAND
+	CompareConstant(POLLRDBAND,0x0080,12065,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POLLRDBAND\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef POLLWRNORM
+	CompareConstant(POLLWRNORM,0x0100,12066,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POLLWRNORM\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef POLLWRBAND
+	CompareConstant(POLLWRBAND,0x0200,12067,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POLLWRBAND\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef POLLIN
 	CompareConstant(POLLIN,0x0001,4948,architecture,1.2,NULL)
 #else
