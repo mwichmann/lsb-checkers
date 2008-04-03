@@ -19,6 +19,13 @@ die;
 GetOptions("v=s" => \$lsbversion);
 if( !$lsbversion ) { usage(); }
 
+# Value for __LSB_VERSION__ (with dot dropped)
+$printable_lsb_version = $lsbversion;
+$printable_lsb_version =~ s/\.//;
+
+# Index to distibguish function pointer arguments
+$uniqFptrNum=0;
+
 # Temporary workarounds so hand-edited changes aren't lost
 # workaround for math functions that don't have protos on all architectures
 @mathsyms = qw/__finitel __isinfl __isnanl acoshl acosl asinhl asinl atan2l atanhl atanl cbrtl ceill copysignl coshl cosl dreml erfcl erfl expl expm1l fabsl fdiml finitel floorl fmal fmaxl fminl fmodl frexpl gammal hypotl ilogbl j0l j1l jnl ldexpl lgammal lgammal_r llrintl llroundl log10l log1pl log2l logbl logl lrintl lroundl modfl nanl nearbyintl nextafterl nexttowardl pow10l powl remainderl remquol rintl roundl scalbl scalblnl scalbnl significandl sincosl sinhl sinl sqrtl tanhl tanl tgammal truncl y0l y1l ynl/;
@@ -44,7 +51,7 @@ getBaseTypeID($)
 		if($sthBase->rows != 1) {
 			die "Couldn't determine basetype for type ".$$param{'Tid'}." on $Aid architecture";
 		}
-		
+
 		$base=$sthBase->fetchrow_hashref;
 		$basetype = $base->{'ATbasetype'};
 		$sthBase->finish;
@@ -90,7 +97,6 @@ sub checkArchSpecific($$$$) {
    	$selectArchSpecific.= "AND ATtid=$Tid ";
    	$selectArchSpecific.= "AND ( ATappearedin<>'' AND ATappearedin<='$lsbversion' ";
    	$selectArchSpecific.= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin > '$lsbversion') ) ";
-#		$selectArchSpecific.= "OR Tindirect='Yes')";
 	$sth = $dbh->prepare($selectArchSpecific) or die "Couldn't prepare $selectArchSpecific query: ".DBI->errstr;
 	$sth->execute or die "Couldn't execute $selectArchSpecific query: ".DBI->errstr;
 
@@ -115,14 +121,14 @@ sub checkArchSpecific($$$$) {
    	$selectGenericHistory.= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin > '$lsbversion') ) ";
 	$sthGeneric = $dbh->prepare($selectGenericHistory) or die "Couldn't prepare $selectGenericHistory query: ".DBI->errstr;
 	$sthGeneric->execute or die "Couldn't execute $selectGenericHistory query: ".DBI->errstr;
-	
+
 	# Get all supported architectures;
 	$selectAllArchs = "SELECT Aid,Asymbol FROM Architecture WHERE Aid<>1";
 	$ath = $dbh->prepare($selectAllArchs) or die "Couldn't prepare $selectAllArchs query: ".DBI->errstr;
 	$ath->execute or die "Couldn't execute $selectAllArchs query: ".DBI->errstr;
-	
+
 	$allNum = $ath->rows;
-	
+
 	if( not ( $Tname =~ /anon/ && $Ttype ne 'Enum') and (not ( $Tname =~ /fptr/ ) ) ) {
 		if( $allNum > $archNumber ) {
 			$missedCount=0;
@@ -164,7 +170,7 @@ sub checkArchSpecific($$$$) {
 	}
 	$ath->finish;
 	$sthGeneric->finish;
-	
+
 	return $missedCount;
 }
 
@@ -179,7 +185,7 @@ sub displaytyperef($$$) {
 		print TESTS $$param{'Tname'};
 		return;
 	}
-	
+
 	if ( $$param{'Ttype'} eq "Const" ) {
 		$basetype = getBaseTypeID($param);
 		$sth = getBaseTypeRecord($basetype,$curArch);
@@ -194,7 +200,7 @@ sub displaytyperef($$$) {
 		}
 		return;
 	}
-	
+
 	if ( $$param{'Ttype'} eq "Pointer" ) {
 		$basetype = getBaseTypeID($param);
 		$sth = getBaseTypeRecord($basetype,$curArch);
@@ -204,31 +210,31 @@ sub displaytyperef($$$) {
 		print TESTS " *";
 		return;
 	}
-	
+
 	if ( $$param{Tname} =~ "anon" ) {
 		$$param{Tname} = "";
 	}
-	
+
 	if ( $$param{'Ttype'} eq "Struct" ) {
 		print TESTS "struct " . $$param{'Tname'};
 		return;
 	}
-	
+
 	if ( $$param{'Ttype'} eq "Typedef" ) {
 		print TESTS $$param{'Tname'};
 		return;
 	}
-	
+
 	if ( $$param{'Ttype'} eq "Union" ) {
 		print TESTS "union " . $$param{'Tname'};
 		return;
 	}
-	
+
 	if ( $$param{'Ttype'} eq "Enum" ) {
 		print TESTS "enum " . $$param{'Tname'};
 		return;
 	}
-	
+
 	if ( $$param{'Ttype'} eq "Array" ) {
 		$basetype = getBaseTypeID($param);
 		$sth = getBaseTypeRecord($basetype,$curArch);
@@ -243,7 +249,7 @@ sub displaytyperef($$$) {
 		}
 		return;
 	}
-	
+
 	if ( $$param{'Ttype'} eq "FuncPtr" ) {
 		$basetype = getBaseTypeID($param);
 		$sth = getBaseTypeRecord($basetype,$curArch);
@@ -252,17 +258,21 @@ sub displaytyperef($$$) {
 		$Tid	= $$param{'Tid'};
 		displaytyperef( $type, $enableConst, $curArch );
 		print TESTS "(*";
-		if( $$param{'Tname'} =~ /fptr\-\d+\s/ ) {
-			$$param{'Tname'} = "fptr";
+		if( $$param{'Ttype'} eq 'FuncPtr' ) {
+			$$param{'Tname'} = "fptr".$uniqFptrNum;
+			$uniqFptrNum++;
 		}
-		elsif( $$param{'Tname'} =~ "fptr" ) {
-			$$param{'Tname'} =~ s/fptr-//;
-		}
+#		if( $$param{'Tname'} =~ /fptr\-\d+\s/ ) {
+#			$$param{'Tname'} = "fptr";
+#		}
+#		elsif( $$param{'Tname'} =~ "fptr" ) {
+#			$$param{'Tname'} =~ s/fptr-//;
+#		}
 		print TESTS $$param{'Tname'};
 		print TESTS ")";
-		
+
 		print TESTS "(";
-		
+
 		$tmselect = "SELECT * FROM TypeMember";
 		$tmselect .= " WHERE TMmemberof=$Tid AND TMaid in(1,$curArch)";
 		$tmselect .= " GROUP BY TMid";
@@ -282,10 +292,10 @@ sub displaytyperef($$$) {
 			$th->execute or die "Couldn't execute $tselect query: ".DBI->errstr;
 			$thentry = $th->fetchrow_hashref;
 			$th->finish;
-			
+
 			#$nameonly=1;
 			displaytyperef( $thentry, $enableConst, $curArch );
-			
+
 			#print TESTS $tmentry->{'TMname'};
 			if ( $thentry->{'Ttype'} eq 'Array' ) {
 				print TESTS "[" . $thentry->{'ATsize'} . "]";
@@ -293,16 +303,16 @@ sub displaytyperef($$$) {
 			if ( $_ != $tmh->rows ) {
 				print TESTS ",";
 			}
-			
+
 			#$nameonly=0;
 		}
 		$tmh->finish;
-		
+
 		print TESTS ")\n";
-		
+
 		return;
 	}
-	
+
 	print TESTS $$param{'Ttype'};
 }
 
@@ -378,6 +388,7 @@ sub writetest($$) {
 	print TESTS "#include \<stdio.h\>\n";
 	print TESTS "#include \<sys/types.h\>\n";
 	print TESTS "#define _LSB_DEFAULT_ARCH 1\n";
+	print TESTS "#define __LSB_VERSION__ $printable_lsb_version\n";
 
 	open( INCS, "<$fname.inc" );
 	while (<INCS>) {
@@ -406,7 +417,7 @@ sub writetest($$) {
 		$constHash{ $centry->{'Cid'} }{ $centry->{'Aid'} } = $centry;
 	}
 	$cth->finish;
-	
+
 	foreach $cid ( sort keys %constHash ) {
 		$archCount = 0;
 		foreach $archId ( reverse sort keys %{ $constHash{$cid} } ) {
@@ -708,9 +719,9 @@ sub writetest($$) {
 			$tmh->execute or die "Couldn't execute $tmselect query: ".DBI->errstr;
 			for ( 1 .. $tmh->rows ) {
 				$tmentry = $tmh->fetchrow_hashref;
-				if ( $tmentry->{'TMvalue'} ne '' ) {
-					$lastvalue = "$tmentry->{'TMvalue'}";
-					print TESTS "CheckEnum(\"$tmentry->{'TMname'}\",$tmentry->{'TMname'},$tmentry->{'TMvalue'},$tmentry->{'TMid'})\n";
+				if ( $tmentry->{'TMarray'} ne '' ) {
+					$lastvalue = "$tmentry->{'TMarray'}";
+					print TESTS "CheckEnum(\"$tmentry->{'TMname'}\",$tmentry->{'TMname'},$tmentry->{'TMarray'},$tmentry->{'TMid'})\n";
 				} else {
 					if ( $_ == 1 ) {
 						$lastvalue = "0";
@@ -862,7 +873,7 @@ sub writetest($$) {
 			print TESTS "#endif\n\n";
 		}
  	}
-	
+
 	#
 	# Interface testing
 	#
@@ -872,23 +883,23 @@ sub writetest($$) {
 
 	#print $Hname;
 	if ( $Hname =~ /GL\// || $Hname =~ /X11\// ) {
-		#print "Found GL or X11 header\n";
+		#print "Found X11 header\n";
 		$GlX11 = 1;
 	}
 	if ( $Hname =~ /math\.h/ ) {
 	#print "Found math header\n";
 	$mathhdr = 1;
 	}
-	if ( $GlX11 == 0 ) {	# ignore GL and X11 interfaces
+	if ( $GlX11 == 0 ) {	# ignore X11 interfaces
 		$select = "SELECT * FROM Interface ";
 		$select .= "LEFT JOIN Header ON Iheader=Hid ";
 		$select .= "LEFT JOIN Type ON Ireturn=Tid ";
 		$select .= "LEFT JOIN ArchInt ON Iid=AIint ";
 		$select .= "LEFT JOIN ArchType ON ATtid=Tid AND ATaid=AIarch ";
 		$select .= "LEFT JOIN Architecture ON AIarch=Aid ";
- 		$select .= "WHERE (Isrcbin='SrcOnly' OR ( Isrcbin='Both' AND ";
+ 		$select .= "WHERE Isrcbin='Both' AND ";
 		$select .= "(AIappearedin <= '$lsbversion' and AIappearedin<>'') ";
-		$select .= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin >'$lsbversion') ) )";
+		$select .= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin >'$lsbversion') ";
 		$select .= "AND Hid=$Hid";
 		print $select, "\n" if $trace;
 		$sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
@@ -903,7 +914,7 @@ sub writetest($$) {
 					print STDERR "Skipping a global function pointer!!\n";
 					next;
 				}
-				
+
 				if ( $entry->{'Aid'} && $entry->{'Aname'} ne "All" ) {
 					$selectCheck ="SELECT Iid FROM Interface ";
 					$selectCheck.="LEFT JOIN ArchInt ON Iid=AIint ";
@@ -917,7 +928,7 @@ sub writetest($$) {
 					}
 					$sthCheck->finish;
 				}
-				
+
 				if ( $entry->{'Aid'} && $entry->{'Aname'} ne "All" ) {
 					print TESTS "#if $entry->{'Asymbol'}\n";
 					print TESTS "/* $entry->{'Aname'} */\n";
@@ -925,13 +936,13 @@ sub writetest($$) {
 				elsif ( $special) {
 					print TESTS $mathstring;
 				}
-				
+
 				# Class interfaces are not checked at the moment...
  				if( $entry->{'Iclass'} == 0 ) {
 					print TESTS "extern ";
 					displaytyperef( $entry, 1, $entry->{'Aid'} );
 					print TESTS " $entry->{'Iname'}_db(";
-					
+
 					$select = "SELECT Tid,Tname,Ttype,ATbasetype,Parsize FROM Parameter,Type ";
 					$select .= "LEFT JOIN ArchType ON ATtid=Tid ";
 					$select .= "WHERE Pint=" . $entry->{'Iid'} . " AND Ptype=Tid ";
@@ -942,7 +953,7 @@ sub writetest($$) {
 					if ( $sth2->rows ) {
 						for ( 1 .. $sth2->rows ) {
 							$entry2 = $sth2->fetchrow_hashref;
-							
+
 							#print TESTS ", ";
 							displaytyperef( $entry2, 1, $entry->{'Aid'} );
 							if ( $entry2->{'Ttype'} eq "Array" ) {
@@ -961,7 +972,7 @@ sub writetest($$) {
 					print TESTS ");\n";
 					print TESTS "CheckInterfacedef($entry->{'Iname'},$entry->{'Iname'}_db);\n";
 				}
-				
+
 				if ( $entry->{'Aid'} && $entry->{'Aname'} ne "All" ) {
 					print TESTS "#endif\n";
 				}
@@ -1011,7 +1022,7 @@ if ( $ARGV[0] ne "" ) {
 	$select = "SELECT DISTINCT * FROM Header ";
 	$select.= "WHERE (Happearedin <= '$lsbversion' and Happearedin<>\'\') ";
 	$select.= "AND (Hwithdrawnin IS NULL OR Hwithdrawnin > '$lsbversion' )",
-		$select .= "AND Hname='" . $ARGV[0] . "'";
+	$select .= "AND Hname='" . $ARGV[0] . "'";
 	print $select, "\n" if $trace;
 	$hth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
 	$hth->execute or die "Couldn't execute $select query: ".DBI->errstr;
@@ -1084,7 +1095,7 @@ $select.= "LEFT JOIN Library ON Hlib=Lid ";
 $select.= "WHERE (Happearedin is not NULL and Happearedin <= '$lsbversion' and Happearedin<>\'\') ";
 $select.= "AND (Hwithdrawnin IS NULL OR Hwithdrawnin > '$lsbversion' ) ",
 $select.= "AND Lname NOT IN ('libQtCore','libQtGui','libQtNetwork','libQtXml','libQtOpenGL','libQtSql','libQtSvg') ";
-$select .= "ORDER BY Hname ";
+$select.= "ORDER BY Hname ";
 
 #
 # Dump out each header
@@ -1174,8 +1185,6 @@ for ( 1 .. $tth->rows ) {
 			#
 			$selectGeneric = "SELECT count(*) as cnt FROM ArchType ";
 			$selectGeneric.= "WHERE ATtid=$Tid AND ATaid=1 ";
-# 			$selectGeneric.= "AND ATappearedin<>'' AND ATappearedin <= '$lsbversion' ";
-# 			$selectGeneric.= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin > '$lsbversion') ";
 			$gth = $dbh->prepare($selectGeneric)
 				or die "Couldn't prepare $selectGeneric query: ".DBI->errstr;
 			$gth->execute or die "Couldn't execute $selectGeneric query: ".DBI->errstr;
@@ -1295,7 +1304,7 @@ print TESTS "printf(\"Checking C++ types\\n\");\n";
 $lastid = 0;
 for ( 1 .. $tth->rows ) {
 	$tentry = $tth->fetchrow_hashref;
-	
+
 	$condition = "elif"; # "elif"
 	if ( $tentry->{'Tid'} != $lastid ) {
 		if ( $lastid != 0 ) {
@@ -1303,7 +1312,7 @@ for ( 1 .. $tth->rows ) {
 		}
 		$condition = "if";
 	}
-	
+
 	if( $tentry->{'Aid'} == 1 ) {
 		$printedMsgs = checkArchSpecific($tentry->{'Tname'},$tentry->{'Tid'},$condition,$tentry->{'Ttype'});
 		if( $printedMsgs > 0 ) {
