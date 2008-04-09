@@ -76,20 +76,15 @@ cnt++;
 #endif
 
 #if 1
-CheckTypeSize(struct _Unwind_Context,0, 10375, 1, 1.3, NULL, 0, NULL)
-Msg("Missing member data for _Unwind_Context on All\n");
+CheckTypeSize(_Unwind_Ptr,0, 10379, 1, 1.3, NULL, 7, '((__mode__(__pointer__)))')
 #endif
 
 #if 1
-CheckTypeSize(_Unwind_Ptr,0, 10379, 1, 1.3, NULL, 40, NULL)
+CheckTypeSize(_Unwind_Word,0, 10380, 1, 1.3, NULL, 7, '((__mode__(__word__)))')
 #endif
 
 #if 1
-CheckTypeSize(_Unwind_Word,0, 10380, 1, 1.3, NULL, 7, NULL)
-#endif
-
-#if 1
-CheckTypeSize(_Unwind_Exception_Class,0, 10382, 1, 1.3, NULL, 7002, NULL)
+CheckTypeSize(_Unwind_Exception_Class,0, 10382, 1, 1.3, NULL, 7, '((__mode__(__DI__)))')
 #endif
 
 #if 1
@@ -97,7 +92,7 @@ CheckTypeSize(_Unwind_Reason_Code,0, 10388, 1, 1.3, NULL, 10381, NULL)
 #endif
 
 #if 1
-CheckTypeSize(struct _Unwind_Exception,0, 10377, 1, 1.3, NULL, 0, NULL)
+CheckTypeSize(struct _Unwind_Exception,0, 10377, 1, 1.3, NULL, 0, '(__aligned__(16))')
 Msg("Missing member data for _Unwind_Exception on All\n");
 CheckOffset(struct _Unwind_Exception,exception_class,0,1,34607)
 CheckOffset(struct _Unwind_Exception,exception_cleanup,0,1,34608)
