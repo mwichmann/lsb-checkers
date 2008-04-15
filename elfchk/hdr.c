@@ -17,6 +17,7 @@ checkElfhdr(ElfFile *file1, Elf_type expect, struct tetj_handle *journal)
   char tmp_string[TMP_STRING_SIZE+1];
 Elf_Ehdr *hdr1;
 int elf_type = ELF_UNKNOWN;
+int hdrfield_error;
 
 hdr1=(Elf_Ehdr *)file1->addr;
 
@@ -101,6 +102,7 @@ if( hdr1->member != value ) { \
         fprintf(stderr, "%s\n", tmp_string); \
         tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string); \
         tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL); \
+        hdrfield_error = 1; \
 	} \
 else \
 { \
@@ -112,8 +114,9 @@ tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count); \
 /* Check e_type */
 elf_type = hdr1->e_type;
 switch( expect ) {
-    case ELF_UNKNOWN:
-        break;
+	case ELF_ERROR:
+	case ELF_UNKNOWN:
+		break;
 	case ELF_IS_EXEC:
 		checkhdrfield( e_type, ET_EXEC )
 		break;
@@ -126,6 +129,7 @@ switch( expect ) {
 }
 
 /* Check e_machine */
+hdrfield_error = 0;
 
 #if defined(i386)
 checkhdrfield( e_machine, EM_386 )
@@ -144,6 +148,9 @@ checkhdrfield( e_machine, EM_X86_64 )
 #else
 fprintf(stderr, "e_machine not checked!!\n");
 #endif
+
+if (hdrfield_error)
+	elf_type = ELF_ERROR;
 
 /* Check e_version */
 

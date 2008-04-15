@@ -29,15 +29,17 @@ if( (ptr=getenv("ELFCHK_DEBUG")) != NULL ) {
 	}
 
 elf_type = checkElfhdr(file1, isProgram, journal);
-for(i=0;i<file1->numph;i++)
+if (elf_type != ELF_ERROR) {           /* If wrong architecture, all ELF structures are messed... */
+	for(i=0;i<file1->numph;i++)
 	{
-	checkElfproghdr(i, file1, journal);
+		checkElfproghdr(i, file1, journal);
 	}
 
-for(i=0;i<file1->numsh;i++)
+	for(i=0;i<file1->numsh;i++)
 	{
-	checkElfsection(i, file1, journal);
+		checkElfsection(i, file1, journal);
 	}
+}
 
 return elf_type;
 }

@@ -11,10 +11,11 @@
 #include "elfchk.h"
 
 typedef enum {
-    ELF_UNKNOWN = 0x0,
+	ELF_UNKNOWN = 0x0,
 	ELF_IS_EXEC = 0x1,
 	ELF_IS_DSO = 0x2,
-	ELF_IS_OBJ = 0x4
+	ELF_IS_OBJ = 0x4,
+	ELF_ERROR = 0xff
 	} Elf_type;
 
 /* Check elf header
