@@ -20,6 +20,9 @@ checksymbols(ElfFile *file, int modules)
   fprintf(stderr, "DYNSYM\n" );
 #endif /* VERBOSE */
 
+  if (!file->dynsymhdr)
+    return 0;
+
   numsyms=file->dynsymhdr->sh_size/file->dynsymhdr->sh_entsize;
 
   syms1=(Elf_Sym *)((caddr_t)file->addr+file->dynsymhdr->sh_offset);

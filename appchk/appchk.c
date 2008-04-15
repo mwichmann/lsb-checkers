@@ -606,8 +606,8 @@ main(int argc, char *argv[])
             TESTCASE_END(tetj_activity_count++, 0, "");
             continue;
         }
-        check_file(elffile, ELF_IS_EXEC);
-        checksymbols(elffile, modules);
+        if (check_file(elffile, ELF_IS_EXEC) != ELF_ERROR)    /* Protect appchk from crash */
+            checksymbols(elffile, modules);
         TESTCASE_END(tetj_activity_count++, 0, "");
         CloseElfFile(elffile);
     }
