@@ -55,6 +55,7 @@ struct versym libfontconfig_so_1[] = {
 	{"FcDirSave","",0,LSB_Graphics_Ext,0,1},
 	{"FcDirScan","",0,LSB_Graphics_Ext,0,1},
 	{"FcFileScan","",0,LSB_Graphics_Ext,0,1},
+	{"FcFini","",0,LSB_Graphics_Ext,0,1},
 	{"FcFontList","",0,LSB_Graphics_Ext,0,1},
 	{"FcFontMatch","",0,LSB_Graphics_Ext,0,1},
 	{"FcFontRenderPrepare","",0,LSB_Graphics_Ext,0,1},
