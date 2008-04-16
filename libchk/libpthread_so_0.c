@@ -487,6 +487,24 @@ struct versym libpthread_so_0[] = {
 #if defined __i386__
 	{"pthread_attr_setstack","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
+#if defined __ia64__
+	{"pthread_attr_setstack","GLIBC_2.3.3",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"pthread_attr_setstack","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"pthread_attr_setstack","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"pthread_attr_setstack","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"pthread_attr_setstack","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"pthread_attr_setstack","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
 #if defined __i386__
 	{"pthread_attr_setstackaddr","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
