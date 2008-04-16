@@ -620,7 +620,7 @@ struct base_type_info _20QGLFramebufferObject_of_libQtOpenGL_so_4_baseinfo[] = {
 
 struct classinfo _Z20QGLFramebufferObject_of_libQtOpenGL_so_4_classinfo = {
 	"_Z20QGLFramebufferObject",
-	"",
+	"_ZTV20QGLFramebufferObject",
 	"",	/* RTTI */
 	"",
 	"_ZTT20QGLFramebufferObject",	/* VTT */

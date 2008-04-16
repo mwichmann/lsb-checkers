@@ -11201,6 +11201,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZTI11QSpinWidget","",0,LSB_Toolkit_Qt3,0,0},
 	{"_ZTI11QStoredDrag","",0,LSB_Toolkit_Qt3,0,0},
 	{"_ZTI11QStyleSheet","",0,LSB_Toolkit_Qt3,0,0},
+	{"_ZTI11QTextFormat","",0,LSB_Toolkit_Qt3,0,0},
 	{"_ZTI11QTextStream","",0,LSB_Toolkit_Qt3,0,0},
 	{"_ZTI11QTimerEvent","",0,LSB_Toolkit_Qt3,0,0},
 	{"_ZTI11QToolButton","",0,LSB_Toolkit_Qt3,0,0},
@@ -13993,46 +13994,46 @@ const char *_5QHBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_5QHBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"NULL or _ZThn40_N5QHBoxD1Ev",
+	"_ZThn40_N5QHBoxD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn80_N5QHBoxD1Ev",
+	"_ZThn80_N5QHBoxD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn40_N5QHBoxD1Ev",
+	"_ZThn40_N5QHBoxD1Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn80_N5QHBoxD1Ev",
+	"_ZThn80_N5QHBoxD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn40_N5QHBoxD1Ev",
+	"_ZThn40_N5QHBoxD1Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn80_N5QHBoxD1Ev",
+	"_ZThn80_N5QHBoxD1Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn80_N5QHBoxD1Ev",
+	"_ZThn80_N5QHBoxD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn80_N5QHBoxD0Ev",
+	"_ZThn80_N5QHBoxD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn40_N5QHBoxD0Ev",
+	"_ZThn40_N5QHBoxD0Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn80_N5QHBoxD0Ev",
+	"_ZThn80_N5QHBoxD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn40_N5QHBoxD0Ev",
+	"_ZThn40_N5QHBoxD0Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn80_N5QHBoxD0Ev",
+	"_ZThn80_N5QHBoxD0Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn80_N5QHBoxD0Ev",
+	"_ZThn80_N5QHBoxD0Ev",
 #endif
 #if defined __i386__
-	"NULL or _ZThn40_N5QHBoxD0Ev",
+	"_ZThn40_N5QHBoxD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -14759,46 +14760,46 @@ const char *_6QFrame_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_6QFrame_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"NULL or _ZThn40_N6QFrameD1Ev",
+	"_ZThn40_N6QFrameD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn80_N6QFrameD1Ev",
+	"_ZThn80_N6QFrameD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn40_N6QFrameD1Ev",
+	"_ZThn40_N6QFrameD1Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn80_N6QFrameD1Ev",
+	"_ZThn80_N6QFrameD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn40_N6QFrameD1Ev",
+	"_ZThn40_N6QFrameD1Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn80_N6QFrameD1Ev",
+	"_ZThn80_N6QFrameD1Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn80_N6QFrameD1Ev",
+	"_ZThn80_N6QFrameD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn80_N6QFrameD0Ev",
+	"_ZThn80_N6QFrameD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn40_N6QFrameD0Ev",
+	"_ZThn40_N6QFrameD0Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn80_N6QFrameD0Ev",
+	"_ZThn80_N6QFrameD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn40_N6QFrameD0Ev",
+	"_ZThn40_N6QFrameD0Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn80_N6QFrameD0Ev",
+	"_ZThn80_N6QFrameD0Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn80_N6QFrameD0Ev",
+	"_ZThn80_N6QFrameD0Ev",
 #endif
 #if defined __i386__
-	"NULL or _ZThn40_N6QFrameD0Ev",
+	"_ZThn40_N6QFrameD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -16344,46 +16345,46 @@ const char *_5QVBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_5QVBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"NULL or _ZThn40_N5QVBoxD1Ev",
+	"_ZThn40_N5QVBoxD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn80_N5QVBoxD1Ev",
+	"_ZThn80_N5QVBoxD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn40_N5QVBoxD1Ev",
+	"_ZThn40_N5QVBoxD1Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn80_N5QVBoxD1Ev",
+	"_ZThn80_N5QVBoxD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn40_N5QVBoxD1Ev",
+	"_ZThn40_N5QVBoxD1Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn80_N5QVBoxD1Ev",
+	"_ZThn80_N5QVBoxD1Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn80_N5QVBoxD1Ev",
+	"_ZThn80_N5QVBoxD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn80_N5QVBoxD0Ev",
+	"_ZThn80_N5QVBoxD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn40_N5QVBoxD0Ev",
+	"_ZThn40_N5QVBoxD0Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn80_N5QVBoxD0Ev",
+	"_ZThn80_N5QVBoxD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn40_N5QVBoxD0Ev",
+	"_ZThn40_N5QVBoxD0Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn80_N5QVBoxD0Ev",
+	"_ZThn80_N5QVBoxD0Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn80_N5QVBoxD0Ev",
+	"_ZThn80_N5QVBoxD0Ev",
 #endif
 #if defined __i386__
-	"NULL or _ZThn40_N5QVBoxD0Ev",
+	"_ZThn40_N5QVBoxD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -19041,46 +19042,46 @@ const char *_15QDockAreaLayout_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_15QDockAreaLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"NULL or _ZThn40_N15QDockAreaLayoutD1Ev",
+	"_ZThn40_N15QDockAreaLayoutD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn40_N15QDockAreaLayoutD1Ev",
+	"_ZThn40_N15QDockAreaLayoutD1Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn80_N15QDockAreaLayoutD1Ev",
+	"_ZThn80_N15QDockAreaLayoutD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn40_N15QDockAreaLayoutD1Ev",
+	"_ZThn40_N15QDockAreaLayoutD1Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn80_N15QDockAreaLayoutD1Ev",
+	"_ZThn80_N15QDockAreaLayoutD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn80_N15QDockAreaLayoutD1Ev",
+	"_ZThn80_N15QDockAreaLayoutD1Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn80_N15QDockAreaLayoutD1Ev",
+	"_ZThn80_N15QDockAreaLayoutD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn40_N15QDockAreaLayoutD0Ev",
+	"_ZThn40_N15QDockAreaLayoutD0Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn80_N15QDockAreaLayoutD0Ev",
+	"_ZThn80_N15QDockAreaLayoutD0Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn80_N15QDockAreaLayoutD0Ev",
+	"_ZThn80_N15QDockAreaLayoutD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn40_N15QDockAreaLayoutD0Ev",
+	"_ZThn40_N15QDockAreaLayoutD0Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn80_N15QDockAreaLayoutD0Ev",
+	"_ZThn80_N15QDockAreaLayoutD0Ev",
 #endif
 #if defined __i386__
-	"NULL or _ZThn40_N15QDockAreaLayoutD0Ev",
+	"_ZThn40_N15QDockAreaLayoutD0Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn80_N15QDockAreaLayoutD0Ev",
+	"_ZThn80_N15QDockAreaLayoutD0Ev",
 #endif
 #if defined __s390x__
 	"_ZThn80_NK15QDockAreaLayout8sizeHintEv",
@@ -19146,25 +19147,25 @@ const char *_15QDockAreaLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZThn40_NK7QLayout11maximumSizeEv",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn40_NK15QDockAreaLayout9expandingEv",
+	"_ZThn40_NK15QDockAreaLayout9expandingEv",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn80_NK15QDockAreaLayout9expandingEv",
+	"_ZThn80_NK15QDockAreaLayout9expandingEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn40_NK15QDockAreaLayout9expandingEv",
+	"_ZThn40_NK15QDockAreaLayout9expandingEv",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn80_NK15QDockAreaLayout9expandingEv",
+	"_ZThn80_NK15QDockAreaLayout9expandingEv",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn80_NK15QDockAreaLayout9expandingEv",
+	"_ZThn80_NK15QDockAreaLayout9expandingEv",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn80_NK15QDockAreaLayout9expandingEv",
+	"_ZThn80_NK15QDockAreaLayout9expandingEv",
 #endif
 #if defined __i386__
-	"NULL or _ZThn40_NK15QDockAreaLayout9expandingEv",
+	"_ZThn40_NK15QDockAreaLayout9expandingEv",
 #endif
 #if defined __i386__
 	"_ZThn40_N15QDockAreaLayout11setGeometryERK5QRect",
@@ -24085,46 +24086,46 @@ const char *_10QSemiModal_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_10QSemiModal_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"NULL or _ZThn40_N10QSemiModalD1Ev",
+	"_ZThn40_N10QSemiModalD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn80_N10QSemiModalD1Ev",
+	"_ZThn80_N10QSemiModalD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn40_N10QSemiModalD1Ev",
+	"_ZThn40_N10QSemiModalD1Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn80_N10QSemiModalD1Ev",
+	"_ZThn80_N10QSemiModalD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn40_N10QSemiModalD1Ev",
+	"_ZThn40_N10QSemiModalD1Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn80_N10QSemiModalD1Ev",
+	"_ZThn80_N10QSemiModalD1Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn80_N10QSemiModalD1Ev",
+	"_ZThn80_N10QSemiModalD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn80_N10QSemiModalD0Ev",
+	"_ZThn80_N10QSemiModalD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn40_N10QSemiModalD0Ev",
+	"_ZThn40_N10QSemiModalD0Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn80_N10QSemiModalD0Ev",
+	"_ZThn80_N10QSemiModalD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn40_N10QSemiModalD0Ev",
+	"_ZThn40_N10QSemiModalD0Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn80_N10QSemiModalD0Ev",
+	"_ZThn80_N10QSemiModalD0Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn80_N10QSemiModalD0Ev",
+	"_ZThn80_N10QSemiModalD0Ev",
 #endif
 #if defined __i386__
-	"NULL or _ZThn40_N10QSemiModalD0Ev",
+	"_ZThn40_N10QSemiModalD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -27031,46 +27032,46 @@ const char *_10QColorDrag_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_10QColorDrag_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"NULL or _ZThn40_N10QColorDragD1Ev",
+	"_ZThn40_N10QColorDragD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn80_N10QColorDragD1Ev",
+	"_ZThn80_N10QColorDragD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn40_N10QColorDragD1Ev",
+	"_ZThn40_N10QColorDragD1Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn80_N10QColorDragD1Ev",
+	"_ZThn80_N10QColorDragD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn40_N10QColorDragD1Ev",
+	"_ZThn40_N10QColorDragD1Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn80_N10QColorDragD1Ev",
+	"_ZThn80_N10QColorDragD1Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn80_N10QColorDragD1Ev",
+	"_ZThn80_N10QColorDragD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn80_N10QColorDragD0Ev",
+	"_ZThn80_N10QColorDragD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn40_N10QColorDragD0Ev",
+	"_ZThn40_N10QColorDragD0Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn80_N10QColorDragD0Ev",
+	"_ZThn80_N10QColorDragD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn40_N10QColorDragD0Ev",
+	"_ZThn40_N10QColorDragD0Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn80_N10QColorDragD0Ev",
+	"_ZThn80_N10QColorDragD0Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn80_N10QColorDragD0Ev",
+	"_ZThn80_N10QColorDragD0Ev",
 #endif
 #if defined __i386__
-	"NULL or _ZThn40_N10QColorDragD0Ev",
+	"_ZThn40_N10QColorDragD0Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_NK11QStoredDrag6formatEi",
@@ -35209,46 +35210,46 @@ const char *_5QGrid_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_5QGrid_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"NULL or _ZThn40_N5QGridD1Ev",
+	"_ZThn40_N5QGridD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn80_N5QGridD1Ev",
+	"_ZThn80_N5QGridD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn40_N5QGridD1Ev",
+	"_ZThn40_N5QGridD1Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn80_N5QGridD1Ev",
+	"_ZThn80_N5QGridD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn40_N5QGridD1Ev",
+	"_ZThn40_N5QGridD1Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn80_N5QGridD1Ev",
+	"_ZThn80_N5QGridD1Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn80_N5QGridD1Ev",
+	"_ZThn80_N5QGridD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn80_N5QGridD0Ev",
+	"_ZThn80_N5QGridD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn40_N5QGridD0Ev",
+	"_ZThn40_N5QGridD0Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn80_N5QGridD0Ev",
+	"_ZThn80_N5QGridD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn40_N5QGridD0Ev",
+	"_ZThn40_N5QGridD0Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn80_N5QGridD0Ev",
+	"_ZThn80_N5QGridD0Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn80_N5QGridD0Ev",
+	"_ZThn80_N5QGridD0Ev",
 #endif
 #if defined __i386__
-	"NULL or _ZThn40_N5QGridD0Ev",
+	"_ZThn40_N5QGridD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -35482,46 +35483,46 @@ const char *_12QRadioButton_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_12QRadioButton_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"NULL or _ZThn40_N12QRadioButtonD1Ev",
+	"_ZThn40_N12QRadioButtonD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn80_N12QRadioButtonD1Ev",
+	"_ZThn80_N12QRadioButtonD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn40_N12QRadioButtonD1Ev",
+	"_ZThn40_N12QRadioButtonD1Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn80_N12QRadioButtonD1Ev",
+	"_ZThn80_N12QRadioButtonD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn40_N12QRadioButtonD1Ev",
+	"_ZThn40_N12QRadioButtonD1Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn80_N12QRadioButtonD1Ev",
+	"_ZThn80_N12QRadioButtonD1Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn80_N12QRadioButtonD1Ev",
+	"_ZThn80_N12QRadioButtonD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn80_N12QRadioButtonD0Ev",
+	"_ZThn80_N12QRadioButtonD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn40_N12QRadioButtonD0Ev",
+	"_ZThn40_N12QRadioButtonD0Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn80_N12QRadioButtonD0Ev",
+	"_ZThn80_N12QRadioButtonD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn40_N12QRadioButtonD0Ev",
+	"_ZThn40_N12QRadioButtonD0Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn80_N12QRadioButtonD0Ev",
+	"_ZThn80_N12QRadioButtonD0Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn80_N12QRadioButtonD0Ev",
+	"_ZThn80_N12QRadioButtonD0Ev",
 #endif
 #if defined __i386__
-	"NULL or _ZThn40_N12QRadioButtonD0Ev",
+	"_ZThn40_N12QRadioButtonD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -36234,46 +36235,46 @@ const char *_15QDragEnterEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_15QDragEnterEvent_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"NULL or _ZThn12_N15QDragEnterEventD1Ev",
+	"_ZThn12_N15QDragEnterEventD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn16_N15QDragEnterEventD1Ev",
+	"_ZThn16_N15QDragEnterEventD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn12_N15QDragEnterEventD1Ev",
+	"_ZThn12_N15QDragEnterEventD1Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn16_N15QDragEnterEventD1Ev",
+	"_ZThn16_N15QDragEnterEventD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn12_N15QDragEnterEventD1Ev",
+	"_ZThn12_N15QDragEnterEventD1Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn16_N15QDragEnterEventD1Ev",
+	"_ZThn16_N15QDragEnterEventD1Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn16_N15QDragEnterEventD1Ev",
+	"_ZThn16_N15QDragEnterEventD1Ev",
 #endif
 #if defined __i386__
-	"NULL or _ZThn12_N15QDragEnterEventD0Ev",
+	"_ZThn12_N15QDragEnterEventD0Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn16_N15QDragEnterEventD0Ev",
+	"_ZThn16_N15QDragEnterEventD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn12_N15QDragEnterEventD0Ev",
+	"_ZThn12_N15QDragEnterEventD0Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn16_N15QDragEnterEventD0Ev",
+	"_ZThn16_N15QDragEnterEventD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn12_N15QDragEnterEventD0Ev",
+	"_ZThn12_N15QDragEnterEventD0Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn16_N15QDragEnterEventD0Ev",
+	"_ZThn16_N15QDragEnterEventD0Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn16_N15QDragEnterEventD0Ev",
+	"_ZThn16_N15QDragEnterEventD0Ev",
 #endif
 #if defined __i386__
 	"_ZThn12_NK10QDropEvent6formatEi",
@@ -36920,46 +36921,46 @@ const char *_14QDragMoveEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_14QDragMoveEvent_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"NULL or _ZThn12_N14QDragMoveEventD1Ev",
+	"_ZThn12_N14QDragMoveEventD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn16_N14QDragMoveEventD1Ev",
+	"_ZThn16_N14QDragMoveEventD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn12_N14QDragMoveEventD1Ev",
+	"_ZThn12_N14QDragMoveEventD1Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn16_N14QDragMoveEventD1Ev",
+	"_ZThn16_N14QDragMoveEventD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn12_N14QDragMoveEventD1Ev",
+	"_ZThn12_N14QDragMoveEventD1Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn16_N14QDragMoveEventD1Ev",
+	"_ZThn16_N14QDragMoveEventD1Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn16_N14QDragMoveEventD1Ev",
+	"_ZThn16_N14QDragMoveEventD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn16_N14QDragMoveEventD0Ev",
+	"_ZThn16_N14QDragMoveEventD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn12_N14QDragMoveEventD0Ev",
+	"_ZThn12_N14QDragMoveEventD0Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn16_N14QDragMoveEventD0Ev",
+	"_ZThn16_N14QDragMoveEventD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn12_N14QDragMoveEventD0Ev",
+	"_ZThn12_N14QDragMoveEventD0Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn16_N14QDragMoveEventD0Ev",
+	"_ZThn16_N14QDragMoveEventD0Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn16_N14QDragMoveEventD0Ev",
+	"_ZThn16_N14QDragMoveEventD0Ev",
 #endif
 #if defined __i386__
-	"NULL or _ZThn12_N14QDragMoveEventD0Ev",
+	"_ZThn12_N14QDragMoveEventD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK10QDropEvent6formatEi",
@@ -37178,46 +37179,46 @@ const char *_10QDropEvent_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_10QDropEvent_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"NULL or _ZThn12_N10QDropEventD1Ev",
+	"_ZThn12_N10QDropEventD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn16_N10QDropEventD1Ev",
+	"_ZThn16_N10QDropEventD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn12_N10QDropEventD1Ev",
+	"_ZThn12_N10QDropEventD1Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn16_N10QDropEventD1Ev",
+	"_ZThn16_N10QDropEventD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn12_N10QDropEventD1Ev",
+	"_ZThn12_N10QDropEventD1Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn16_N10QDropEventD1Ev",
+	"_ZThn16_N10QDropEventD1Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn16_N10QDropEventD1Ev",
+	"_ZThn16_N10QDropEventD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn16_N10QDropEventD0Ev",
+	"_ZThn16_N10QDropEventD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn12_N10QDropEventD0Ev",
+	"_ZThn12_N10QDropEventD0Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn16_N10QDropEventD0Ev",
+	"_ZThn16_N10QDropEventD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn12_N10QDropEventD0Ev",
+	"_ZThn12_N10QDropEventD0Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn16_N10QDropEventD0Ev",
+	"_ZThn16_N10QDropEventD0Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn16_N10QDropEventD0Ev",
+	"_ZThn16_N10QDropEventD0Ev",
 #endif
 #if defined __i386__
-	"NULL or _ZThn12_N10QDropEventD0Ev",
+	"_ZThn12_N10QDropEventD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK10QDropEvent6formatEi",
@@ -42349,46 +42350,46 @@ const char *_9QCheckBox_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_9QCheckBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"NULL or _ZThn40_N9QCheckBoxD1Ev",
+	"_ZThn40_N9QCheckBoxD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn80_N9QCheckBoxD1Ev",
+	"_ZThn80_N9QCheckBoxD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn40_N9QCheckBoxD1Ev",
+	"_ZThn40_N9QCheckBoxD1Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn80_N9QCheckBoxD1Ev",
+	"_ZThn80_N9QCheckBoxD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn40_N9QCheckBoxD1Ev",
+	"_ZThn40_N9QCheckBoxD1Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn80_N9QCheckBoxD1Ev",
+	"_ZThn80_N9QCheckBoxD1Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn80_N9QCheckBoxD1Ev",
+	"_ZThn80_N9QCheckBoxD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn80_N9QCheckBoxD0Ev",
+	"_ZThn80_N9QCheckBoxD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn40_N9QCheckBoxD0Ev",
+	"_ZThn40_N9QCheckBoxD0Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn80_N9QCheckBoxD0Ev",
+	"_ZThn80_N9QCheckBoxD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn40_N9QCheckBoxD0Ev",
+	"_ZThn40_N9QCheckBoxD0Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn80_N9QCheckBoxD0Ev",
+	"_ZThn80_N9QCheckBoxD0Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn80_N9QCheckBoxD0Ev",
+	"_ZThn80_N9QCheckBoxD0Ev",
 #endif
 #if defined __i386__
-	"NULL or _ZThn40_N9QCheckBoxD0Ev",
+	"_ZThn40_N9QCheckBoxD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -45728,46 +45729,46 @@ const char *_12QProgressBar_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_12QProgressBar_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"NULL or _ZThn40_N12QProgressBarD1Ev",
+	"_ZThn40_N12QProgressBarD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn80_N12QProgressBarD1Ev",
+	"_ZThn80_N12QProgressBarD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn40_N12QProgressBarD1Ev",
+	"_ZThn40_N12QProgressBarD1Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn80_N12QProgressBarD1Ev",
+	"_ZThn80_N12QProgressBarD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn40_N12QProgressBarD1Ev",
+	"_ZThn40_N12QProgressBarD1Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn80_N12QProgressBarD1Ev",
+	"_ZThn80_N12QProgressBarD1Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn80_N12QProgressBarD1Ev",
+	"_ZThn80_N12QProgressBarD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn80_N12QProgressBarD0Ev",
+	"_ZThn80_N12QProgressBarD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn40_N12QProgressBarD0Ev",
+	"_ZThn40_N12QProgressBarD0Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn80_N12QProgressBarD0Ev",
+	"_ZThn80_N12QProgressBarD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn40_N12QProgressBarD0Ev",
+	"_ZThn40_N12QProgressBarD0Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn80_N12QProgressBarD0Ev",
+	"_ZThn80_N12QProgressBarD0Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn80_N12QProgressBarD0Ev",
+	"_ZThn80_N12QProgressBarD0Ev",
 #endif
 #if defined __i386__
-	"NULL or _ZThn40_N12QProgressBarD0Ev",
+	"_ZThn40_N12QProgressBarD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -49513,46 +49514,46 @@ const char *_17QDateTimeEditBase_of_libqt_mt_so_3_vtable_name_0 [] = {
 
 const char *_17QDateTimeEditBase_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
-	"NULL or _ZThn40_N17QDateTimeEditBaseD1Ev",
+	"_ZThn40_N17QDateTimeEditBaseD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn80_N17QDateTimeEditBaseD1Ev",
+	"_ZThn80_N17QDateTimeEditBaseD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn40_N17QDateTimeEditBaseD1Ev",
+	"_ZThn40_N17QDateTimeEditBaseD1Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn80_N17QDateTimeEditBaseD1Ev",
+	"_ZThn80_N17QDateTimeEditBaseD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn40_N17QDateTimeEditBaseD1Ev",
+	"_ZThn40_N17QDateTimeEditBaseD1Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn80_N17QDateTimeEditBaseD1Ev",
+	"_ZThn80_N17QDateTimeEditBaseD1Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn80_N17QDateTimeEditBaseD1Ev",
+	"_ZThn80_N17QDateTimeEditBaseD1Ev",
 #endif
 #if defined __ia64__
-	"NULL or _ZThn80_N17QDateTimeEditBaseD0Ev",
+	"_ZThn80_N17QDateTimeEditBaseD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn40_N17QDateTimeEditBaseD0Ev",
+	"_ZThn40_N17QDateTimeEditBaseD0Ev",
 #endif
 #if defined __powerpc64__
-	"NULL or _ZThn80_N17QDateTimeEditBaseD0Ev",
+	"_ZThn80_N17QDateTimeEditBaseD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn40_N17QDateTimeEditBaseD0Ev",
+	"_ZThn40_N17QDateTimeEditBaseD0Ev",
 #endif
 #if defined __x86_64__
-	"NULL or _ZThn80_N17QDateTimeEditBaseD0Ev",
+	"_ZThn80_N17QDateTimeEditBaseD0Ev",
 #endif
 #if defined __s390x__
-	"NULL or _ZThn80_N17QDateTimeEditBaseD0Ev",
+	"_ZThn80_N17QDateTimeEditBaseD0Ev",
 #endif
 #if defined __i386__
-	"NULL or _ZThn40_N17QDateTimeEditBaseD0Ev",
+	"_ZThn40_N17QDateTimeEditBaseD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
