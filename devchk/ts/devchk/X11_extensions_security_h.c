@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#define __LSB_VERSION__ 40
 #include <stdio.h>
 #include <wchar.h>
 #include <X11/X.h>
@@ -31,42 +32,206 @@ Msg("Checking data structures in X11/extensions/security.h\n");
 #endif
 
 printf("Checking data structures in X11/extensions/security.h\n");
+#if _LSB_DEFAULT_ARCH
+#ifdef XSecurityNumberEvents
+	CompareConstant(XSecurityNumberEvents,1,2390,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: XSecurityNumberEvents\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XSecurityNumberErrors
+	CompareConstant(XSecurityNumberErrors,2,2391,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: XSecurityNumberErrors\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XSecurityBadAuthorization
+	CompareConstant(XSecurityBadAuthorization,0,2392,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: XSecurityBadAuthorization\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XSecurityBadAuthorizationProtocol
+	CompareConstant(XSecurityBadAuthorizationProtocol,1,2393,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: XSecurityBadAuthorizationProtocol\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XSecurityClientTrusted
+	CompareConstant(XSecurityClientTrusted,0,2394,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: XSecurityClientTrusted\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XSecurityClientUntrusted
+	CompareConstant(XSecurityClientUntrusted,1,2395,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: XSecurityClientUntrusted\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XSecurityTimeout
+	CompareConstant(XSecurityTimeout,(1<<0),2396,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: XSecurityTimeout\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XSecurityTrustLevel
+	CompareConstant(XSecurityTrustLevel,(1<<1),2397,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: XSecurityTrustLevel\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XSecurityGroup
+	CompareConstant(XSecurityGroup,(1<<2),2398,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: XSecurityGroup\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XSecurityEventMask
+	CompareConstant(XSecurityEventMask,(1<<3),2399,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: XSecurityEventMask\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XSecurityAllAuthorizationAttributes
+	CompareConstant(XSecurityAllAuthorizationAttributes,(XSecurityTimeout | XSecurityTrustLevel | XSecurityGroup | XSecurityEventMask),2400,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: XSecurityAllAuthorizationAttributes\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XSecurityAuthorizationRevokedMask
+	CompareConstant(XSecurityAuthorizationRevokedMask,(1<<0),2401,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: XSecurityAuthorizationRevokedMask\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XSecurityAllEventMasks
+	CompareConstant(XSecurityAllEventMasks,XSecurityAuthorizationRevokedMask,2402,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: XSecurityAllEventMasks\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XSecurityAuthorizationRevoked
+	CompareConstant(XSecurityAuthorizationRevoked,0,2403,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: XSecurityAuthorizationRevoked\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XSecurityAuthorizationName
+	CompareConstant(XSecurityAuthorizationName,"XC-QUERY-SECURITY-1",2404,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: XSecurityAuthorizationName\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XSecurityAuthorizationNameLen
+	CompareConstant(XSecurityAuthorizationNameLen,19,2405,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: XSecurityAuthorizationNameLen\n");
+cnt++;
+#endif
+
+#endif
+
 #if defined __i386__
 CheckTypeSize(XSecurityAuthorization,4, 8596, 2, 1.2, NULL, 9, NULL)
 #elif defined __ia64__
-CheckTypeSize(XSecurityAuthorization,8, 8596, 3, 1.3, NULL, 9, NULL)
+CheckTypeSize(XSecurityAuthorization,8, 8596, 3, 1.2, NULL, 9, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XSecurityAuthorization,4, 8596, 6, 1.2, NULL, 9, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XSecurityAuthorization,4, 8596, 10, 1.3, NULL, 9, NULL)
+CheckTypeSize(XSecurityAuthorization,4, 8596, 10, 1.2, NULL, 9, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XSecurityAuthorization,8, 8596, 9, 2.0, NULL, 9, NULL)
+CheckTypeSize(XSecurityAuthorization,8, 8596, 9, 1.2, NULL, 9, NULL)
 #elif defined __s390x__
-CheckTypeSize(XSecurityAuthorization,8, 8596, 12, 1.3, NULL, 9, NULL)
+CheckTypeSize(XSecurityAuthorization,8, 8596, 12, 1.2, NULL, 9, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XSecurityAuthorization,8, 8596, 11, 2.0, NULL, 9, NULL)
+CheckTypeSize(XSecurityAuthorization,8, 8596, 11, 1.2, NULL, 9, NULL)
 #else
 Msg("Find size of XSecurityAuthorization (8596)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,8596,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8596,0);
 #endif
 
 #if defined __i386__
 CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 2, 1.2, NULL, 8597, NULL)
 #elif defined __ia64__
-CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 3, 1.3, NULL, 8597, NULL)
+CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 3, 1.2, NULL, 8597, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 6, 1.2, NULL, 8597, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 10, 1.3, NULL, 8597, NULL)
+CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 10, 1.2, NULL, 8597, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 9, 2.0, NULL, 8597, NULL)
+CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 9, 1.2, NULL, 8597, NULL)
 #elif defined __s390x__
-CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 12, 1.3, NULL, 8597, NULL)
+CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 12, 1.2, NULL, 8597, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 11, 2.0, NULL, 8597, NULL)
+CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 11, 1.2, NULL, 8597, NULL)
 #else
 Msg("Find size of XSecurityAuthorizationAttributes (8598)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8597, NULL);\n",architecture,8598,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8597,NULL);\n",architecture,8598,0);
+#endif
+
+#if 1
+CheckTypeSize(XSecurityAuthorizationRevokedEvent,0, 8602, 1, 1.2, NULL, 8601, NULL)
 #endif
 
 #ifdef TET_TEST

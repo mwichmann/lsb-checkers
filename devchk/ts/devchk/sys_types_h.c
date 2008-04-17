@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#define __LSB_VERSION__ 40
 #include <stdarg.h>
 #include "sys/types.h"
 
@@ -200,7 +201,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architect
 #endif
 
 #if 1
-CheckTypeSize(u_int64_t,8, 7002, 1, 3.2, NULL, 11, NULL)
+CheckTypeSize(u_int64_t,8, 7002, 1, 1.3, NULL, 11, NULL)
 #endif
 
 #if defined __i386__

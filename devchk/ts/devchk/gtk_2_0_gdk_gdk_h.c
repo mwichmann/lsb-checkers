@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#define __LSB_VERSION__ 40
 /* #define G_DISABLE_DEPRECATED */
 #define G_ERRORCHECK_MUTEXES
 #undef GOBJECT_COMPILATION
@@ -3348,7 +3349,7 @@ extern void gdk_drop_finish_db(GdkDragContext *, gboolean, guint32);
 CheckInterfacedef(gdk_drop_finish,gdk_drop_finish_db);
 extern void gdk_window_set_functions_db(GdkWindow *, GdkWMFunction);
 CheckInterfacedef(gdk_window_set_functions,gdk_window_set_functions_db);
-extern void gdk_window_invalidate_maybe_recurse_db(GdkWindow *, GdkRegion *, gboolean(*fptr_gdk_65)(GdkWindow *,gpointer)
+extern void gdk_window_invalidate_maybe_recurse_db(GdkWindow *, GdkRegion *, gboolean(*fptr5)(GdkWindow *,gpointer)
 , gpointer);
 CheckInterfacedef(gdk_window_invalidate_maybe_recurse,gdk_window_invalidate_maybe_recurse_db);
 extern gint gdk_screen_get_height_db(GdkScreen *);

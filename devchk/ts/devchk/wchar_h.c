@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#define __LSB_VERSION__ 40
 #include <stdarg.h>
 #ifndef LSBCC_MODE      /* XXX hand-edit */
 /* for native headers, must define before including wchar.h */

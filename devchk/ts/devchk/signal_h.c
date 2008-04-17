@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#define __LSB_VERSION__ 40
 #ifndef LSBCC_MODE
 #define SI_MAX_SIZE __SI_MAX_SIZE
 #define SI_PAD_SIZE __SI_PAD_SIZE

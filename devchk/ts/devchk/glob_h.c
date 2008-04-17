@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#define __LSB_VERSION__ 40
 #include "glob.h"
 
 
@@ -253,10 +254,10 @@ Msg("Find size of glob64_t (9007)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9006, NULL);\n",architecture,9007,0);
 #endif
 
-extern int glob_db(const char *, int, int(*__errfunc)(const char *,int)
+extern int glob_db(const char *, int, int(*fptr3)(const char *,int)
 , glob_t *);
 CheckInterfacedef(glob,glob_db);
-extern int glob64_db(const char *, int, int(*__errfunc)(const char *,int)
+extern int glob64_db(const char *, int, int(*fptr4)(const char *,int)
 , glob64_t *);
 CheckInterfacedef(glob64,glob64_db);
 extern void globfree_db(glob_t *);

@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#define __LSB_VERSION__ 40
 #include <wchar.h>
 #include <X11/X.h>
 #include <X11/Xlib.h>
@@ -60,42 +61,37 @@ cnt++;
 
 #endif
 
-#if defined __ia64__
-CheckTypeSize(CompositeClassPart,40, 10244, 3, 1.3, NULL, 10242, NULL)
-#elif defined __i386__
-CheckTypeSize(CompositeClassPart,20, 10244, 2, 1.2, NULL, 10242, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(CompositeClassPart,20, 10244, 6, 1.2, NULL, 10242, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(CompositeClassPart,20, 10244, 10, 1.3, NULL, 10242, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(CompositeClassPart,40, 10244, 9, 2.0, NULL, 10242, NULL)
-#elif defined __s390x__
-CheckTypeSize(CompositeClassPart,40, 10244, 12, 1.3, NULL, 10242, NULL)
-#elif defined __x86_64__
-CheckTypeSize(CompositeClassPart,40, 10244, 11, 2.0, NULL, 10242, NULL)
-#else
-Msg("Find size of CompositeClassPart (10244)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10242,NULL);\n",architecture,10244,0);
+#if 1
+CheckTypeSize(struct _CompositeClassPart,40, 100647, 1, 1.2, NULL, 0, NULL)
+Msg("Missing member data for _CompositeClassPart on All\n");
+CheckOffset(struct _CompositeClassPart,geometry_manager,0,1,78445)
+CheckOffset(struct _CompositeClassPart,change_managed,0,1,78446)
+CheckOffset(struct _CompositeClassPart,insert_child,0,1,78447)
+CheckOffset(struct _CompositeClassPart,delete_child,0,1,78448)
+CheckOffset(struct _CompositeClassPart,extension,0,1,78449)
+#endif
+
+#if 1
+CheckTypeSize(CompositeClassPart,40, 100648, 1, 1.2, NULL, 100647, NULL)
 #endif
 
 #if defined __ia64__
-CheckTypeSize(CompositeClassRec,264, 10240, 3, 1.3, NULL, 10239, NULL)
+CheckTypeSize(CompositeClassRec,264, 10240, 3, 1.2, NULL, 10239, NULL)
 #elif defined __i386__
 CheckTypeSize(CompositeClassRec,136, 10240, 2, 1.2, NULL, 10239, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(CompositeClassRec,136, 10240, 6, 1.2, NULL, 10239, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(CompositeClassRec,136, 10240, 10, 1.3, NULL, 10239, NULL)
+CheckTypeSize(CompositeClassRec,136, 10240, 10, 1.2, NULL, 10239, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(CompositeClassRec,264, 10240, 9, 2.0, NULL, 10239, NULL)
+CheckTypeSize(CompositeClassRec,264, 10240, 9, 1.2, NULL, 10239, NULL)
 #elif defined __s390x__
-CheckTypeSize(CompositeClassRec,264, 10240, 12, 1.3, NULL, 10239, NULL)
+CheckTypeSize(CompositeClassRec,264, 10240, 12, 1.2, NULL, 10239, NULL)
 #elif defined __x86_64__
-CheckTypeSize(CompositeClassRec,264, 10240, 11, 2.0, NULL, 10239, NULL)
+CheckTypeSize(CompositeClassRec,264, 10240, 11, 1.2, NULL, 10239, NULL)
 #else
 Msg("Find size of CompositeClassRec (10240)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10239, NULL);\n",architecture,10240,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10239, NULL);\n",architecture,10240,0);
 #endif
 
 #ifdef TET_TEST

@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#define __LSB_VERSION__ 40
 #ifndef LSBCC_MODE
 #include <cups/language.h>
 #endif
@@ -249,7 +250,7 @@ extern void cupsSetDests_db(int, cups_dest_t *);
 CheckInterfacedef(cupsSetDests,cupsSetDests_db);
 extern int cupsParseOptions_db(const char *, int, cups_option_t * *);
 CheckInterfacedef(cupsParseOptions,cupsParseOptions_db);
-extern void cupsSetPasswordCB_db(const char *(*fptr_cups_139)(const char *)
+extern void cupsSetPasswordCB_db(const char *(*fptr0)(const char *)
 );
 CheckInterfacedef(cupsSetPasswordCB,cupsSetPasswordCB_db);
 extern void cupsSetUser_db(const char *);

@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#define __LSB_VERSION__ 40
 struct _FcPattern {};
 struct _FcCharSet {};
 struct _FcLangSet {};
@@ -1562,6 +1563,8 @@ extern void FcPatternPrint_db(const FcPattern *);
 CheckInterfacedef(FcPatternPrint,FcPatternPrint_db);
 extern FcBlanks * FcConfigGetBlanks_db(FcConfig *);
 CheckInterfacedef(FcConfigGetBlanks,FcConfigGetBlanks_db);
+extern void FcFini_db(void);
+CheckInterfacedef(FcFini,FcFini_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

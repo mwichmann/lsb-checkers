@@ -1,26 +1,41 @@
 OBJS = hdrchk.o \
 	GL_gl_h.o \
+	GL_glext_h.o \
 	GL_glu_h.o \
 	GL_glx_h.o \
 	X11_Composite_h.o \
 	X11_CompositeP_h.o \
 	X11_ConstrainP_h.o \
 	X11_Constraint_h.o \
+	X11_ICE_ICE_h.o \
+	X11_ICE_ICEconn_h.o \
 	X11_ICE_ICElib_h.o \
+	X11_ICE_ICEmsg_h.o \
+	X11_ICE_ICEproto_h.o \
 	X11_ICE_ICEutil_h.o \
 	X11_Intrinsic_h.o \
+	X11_IntrinsicP_h.o \
 	X11_ObjectP_h.o \
+	X11_SM_SM_h.o \
 	X11_SM_SMlib_h.o \
+	X11_SM_SMproto_h.o \
 	X11_X_h.o \
+	X11_XKBlib_h.o \
 	X11_Xauth_h.o \
 	X11_Xcms_h.o \
 	X11_Xft_Xft_h.o \
 	X11_Xlib_h.o \
+	X11_Xresource_h.o \
 	X11_Xutil_h.o \
 	X11_extensions_XEVI_h.o \
+	X11_extensions_XKBgeom_h.o \
+	X11_extensions_XShm_h.o \
+	X11_extensions_Xdbe_h.o \
 	X11_extensions_Xrender_h.o \
+	X11_extensions_dpms_h.o \
 	X11_extensions_render_h.o \
 	X11_extensions_security_h.o \
+	X11_extensions_shape_h.o \
 	X11_extensions_sync_h.o \
 	alsa_conf_h.o \
 	alsa_control_h.o \
