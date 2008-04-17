@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#define __LSB_VERSION__ 40
 #include <wchar.h>
 #include <X11/X.h>
 #include <X11/Xlib.h>
@@ -28,42 +29,50 @@ Msg("Checking data structures in X11/ICE/ICEutil.h\n");
 #endif
 
 printf("Checking data structures in X11/ICE/ICEutil.h\n");
-#if defined __i386__
-CheckTypeSize(IceAuthFileEntry,28, 8228, 2, 1.2, NULL, 8227, NULL)
-#elif defined __ia64__
-CheckTypeSize(IceAuthFileEntry,56, 8228, 3, 1.3, NULL, 8227, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(IceAuthFileEntry,28, 8228, 6, 1.2, NULL, 8227, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(IceAuthFileEntry,28, 8228, 10, 1.3, NULL, 8227, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(IceAuthFileEntry,56, 8228, 9, 2.0, NULL, 8227, NULL)
-#elif defined __s390x__
-CheckTypeSize(IceAuthFileEntry,56, 8228, 12, 1.3, NULL, 8227, NULL)
-#elif defined __x86_64__
-CheckTypeSize(IceAuthFileEntry,56, 8228, 11, 2.0, NULL, 8227, NULL)
+#if _LSB_DEFAULT_ARCH
+#ifdef IceAuthLockError
+	CompareConstant(IceAuthLockError,1,13559,architecture,1.2,NULL)
 #else
-Msg("Find size of IceAuthFileEntry (8228)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8227,NULL);\n",architecture,8228,0);
+Msg( "Error: Constant not found: IceAuthLockError\n");
+cnt++;
 #endif
 
-#if defined __i386__
-CheckTypeSize(IceAuthDataEntry,20, 8230, 2, 1.2, NULL, 8229, NULL)
-#elif defined __ia64__
-CheckTypeSize(IceAuthDataEntry,40, 8230, 3, 1.3, NULL, 8229, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(IceAuthDataEntry,20, 8230, 6, 1.2, NULL, 8229, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(IceAuthDataEntry,20, 8230, 10, 1.3, NULL, 8229, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(IceAuthDataEntry,40, 8230, 9, 2.0, NULL, 8229, NULL)
-#elif defined __s390x__
-CheckTypeSize(IceAuthDataEntry,40, 8230, 12, 1.3, NULL, 8229, NULL)
-#elif defined __x86_64__
-CheckTypeSize(IceAuthDataEntry,40, 8230, 11, 2.0, NULL, 8229, NULL)
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IceAuthLockSuccess
+	CompareConstant(IceAuthLockSuccess,0,13560,architecture,1.2,NULL)
 #else
-Msg("Find size of IceAuthDataEntry (8230)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8229, NULL);\n",architecture,8230,0);
+Msg( "Error: Constant not found: IceAuthLockSuccess\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IceAuthLockTimeout
+	CompareConstant(IceAuthLockTimeout,2,13561,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: IceAuthLockTimeout\n");
+cnt++;
+#endif
+
+#endif
+
+#if 1
+CheckTypeSize(IceAuthDataEntry,40, 100171, 1, 1.2, NULL, 100170, NULL)
+#endif
+
+#if 1
+CheckTypeSize(IceAuthDataEntry *,0, 100172, 1, 1.2, NULL, 100171, NULL)
+#endif
+
+#if 1
+CheckTypeSize(IceAuthFileEntry,56, 100174, 1, 1.2, NULL, 100173, NULL)
+#endif
+
+#if 1
+CheckTypeSize(IceAuthFileEntry *,0, 100175, 1, 1.2, NULL, 100174, NULL)
 #endif
 
 #ifdef TET_TEST

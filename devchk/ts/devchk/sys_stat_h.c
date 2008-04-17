@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#define __LSB_VERSION__ 40
 #include "sys/stat.h"
 
 
@@ -899,18 +900,6 @@ extern int fchmod_db(int, mode_t);
 CheckInterfacedef(fchmod,fchmod_db);
 extern mode_t umask_db(mode_t);
 CheckInterfacedef(umask,umask_db);
-extern int stat_db(const char *, struct stat *);
-CheckInterfacedef(stat,stat_db);
-extern int fstat_db(int, struct stat *);
-CheckInterfacedef(fstat,fstat_db);
-extern int lstat_db(const char *, struct stat *);
-CheckInterfacedef(lstat,lstat_db);
-extern int stat64_db(const char *, struct stat64 *);
-CheckInterfacedef(stat64,stat64_db);
-extern int fstat64_db(int, struct stat64 *);
-CheckInterfacedef(fstat64,fstat64_db);
-extern int lstat64_db(const char *, struct stat64 *);
-CheckInterfacedef(lstat64,lstat64_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#define __LSB_VERSION__ 40
 /* #define G_DISABLE_DEPRECATED */
 #define G_ERRORCHECK_MUTEXES
 #undef GOBJECT_COMPILATION
@@ -1815,10 +1816,25 @@ cnt++;
 /* No test for G_TRYLOCK(name) */
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#if defined __powerpc64__
 /* No test for G_BREAKPOINT() */
+#elif defined __powerpc__ && !defined __powerpc64__
+/* No test for G_BREAKPOINT() */
+#elif defined __ia64__
+/* No test for G_BREAKPOINT() */
+#elif defined __i386__
+/* No test for G_BREAKPOINT() */
+#elif defined __s390x__
+/* No test for G_BREAKPOINT() */
+#elif defined __x86_64__
+/* No test for G_BREAKPOINT() */
+#elif defined __s390__ && !defined __s390x__
+/* No test for G_BREAKPOINT() */
+#else
+Msg( "No definition for G_BREAKPOINT() (6012, Unknown) in db\n");
+#ifdef G_BREAKPOINT()
 #endif
-
+#endif
 #if _LSB_DEFAULT_ARCH
 /* No test for G_MEM_ALIGN */
 #endif

@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#define __LSB_VERSION__ 40
 #include <fcntl.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -2951,8 +2952,6 @@ extern ssize_t pwrite64_db(int, const void *, size_t, off64_t);
 CheckInterfacedef(pwrite64,pwrite64_db);
 extern int ttyname_r_db(int, char *, size_t);
 CheckInterfacedef(ttyname_r,ttyname_r_db);
-extern int mknod_db(const char *, mode_t, dev_t);
-CheckInterfacedef(mknod,mknod_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

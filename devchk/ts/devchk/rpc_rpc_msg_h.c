@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#define __LSB_VERSION__ 40
 #ifndef LSBCC_MODE
 #include "rpc/rpc_msg.h"
 /* these don't have glibc protoypes. although in the library */
