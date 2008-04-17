@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#define __LSB_VERSION__ 40
 #include <ft2build.h>
 #include FT_FREETYPE_H
 
@@ -1511,15 +1512,6 @@ CheckTypeSize(FT_F26Dot6,8, 16897, 9, 3.2, NULL, 8, NULL)
 #else
 Msg("Find size of FT_F26Dot6 (16897)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,8,NULL);\n",architecture,16897,0);
-#endif
-
-#if 1
-CheckEnum("FT_RENDER_MODE_NORMAL",FT_RENDER_MODE_NORMAL,0,54209)
-CheckEnum("FT_RENDER_MODE_LIGHT",FT_RENDER_MODE_LIGHT,1,54210)
-CheckEnum("FT_RENDER_MODE_MONO",FT_RENDER_MODE_MONO,2,54211)
-CheckEnum("FT_RENDER_MODE_LCD",FT_RENDER_MODE_LCD,3,54212)
-CheckEnum("FT_RENDER_MODE_LCD_V",FT_RENDER_MODE_LCD_V,4,54213)
-CheckEnum("FT_RENDER_MODE_MAX",FT_RENDER_MODE_MAX,5,54214)
 #endif
 
 #if 1

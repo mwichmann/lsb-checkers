@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#define __LSB_VERSION__ 40
 #include "rpc/xdr.h"
 
 
@@ -328,8 +329,8 @@ extern bool_t xdr_wrapstring_db(XDR *, char * *);
 CheckInterfacedef(xdr_wrapstring,xdr_wrapstring_db);
 extern void xdrmem_create_db(XDR *, caddr_t, u_int, enum xdr_op);
 CheckInterfacedef(xdrmem_create,xdrmem_create_db);
-extern void xdrrec_create_db(XDR *, u_int, u_int, caddr_t, int(*__readit)(char *,char *,int)
-, int(*__writeit)(char *,char *,int)
+extern void xdrrec_create_db(XDR *, u_int, u_int, caddr_t, int(*fptr13)(char *,char *,int)
+, int(*fptr14)(char *,char *,int)
 );
 CheckInterfacedef(xdrrec_create,xdrrec_create_db);
 extern bool_t xdrrec_eof_db(XDR *);

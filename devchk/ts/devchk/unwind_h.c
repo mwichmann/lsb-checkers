@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#define __LSB_VERSION__ 40
 #include "unwind.h"
 
 
@@ -76,15 +77,15 @@ cnt++;
 #endif
 
 #if 1
-CheckTypeSize(_Unwind_Ptr,0, 10379, 1, 1.3, NULL, 7, '((__mode__(__pointer__)))')
+CheckTypeSize(_Unwind_Ptr,0, 10379, 1, 1.3, NULL, 7, '(__mode__(__pointer__))')
 #endif
 
 #if 1
-CheckTypeSize(_Unwind_Word,0, 10380, 1, 1.3, NULL, 7, '((__mode__(__word__)))')
+CheckTypeSize(_Unwind_Word,0, 10380, 1, 1.3, NULL, 7, '(__mode__(__word__))')
 #endif
 
 #if 1
-CheckTypeSize(_Unwind_Exception_Class,0, 10382, 1, 1.3, NULL, 7, '((__mode__(__DI__)))')
+CheckTypeSize(_Unwind_Exception_Class,0, 10382, 1, 1.3, NULL, 7, '(__mode__(__DI__))')
 #endif
 
 #if 1
@@ -92,7 +93,7 @@ CheckTypeSize(_Unwind_Reason_Code,0, 10388, 1, 1.3, NULL, 10381, NULL)
 #endif
 
 #if 1
-CheckTypeSize(struct _Unwind_Exception,0, 10377, 1, 1.3, NULL, 0, '(__aligned__(16))')
+CheckTypeSize(struct _Unwind_Exception,0, 10377, 1, 1.3, NULL, 0, '(__aligned__)')
 Msg("Missing member data for _Unwind_Exception on All\n");
 CheckOffset(struct _Unwind_Exception,exception_class,0,1,34607)
 CheckOffset(struct _Unwind_Exception,exception_cleanup,0,1,34608)
