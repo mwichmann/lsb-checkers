@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#define __LSB_VERSION__ 40
 #include "math.h"
 
 
@@ -666,6 +667,51 @@ Msg("Find size of exception (10010)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10010,0);
 #endif
 
+#if defined __i386__
+/* IA32 */
+extern long double exp2l_db(long double);
+CheckInterfacedef(exp2l,exp2l_db);
+#endif
+#if defined __i386__
+/* IA32 */
+extern int __fpclassifyl_db(long double);
+CheckInterfacedef(__fpclassifyl,__fpclassifyl_db);
+#endif
+#if defined __ia64__
+/* IA64 */
+extern long double exp2l_db(long double);
+CheckInterfacedef(exp2l,exp2l_db);
+#endif
+#if defined __ia64__
+/* IA64 */
+extern int __signbitl_db(long double);
+CheckInterfacedef(__signbitl,__signbitl_db);
+#endif
+#if defined __x86_64__
+/* x86-64 */
+extern int __signbitl_db(long double);
+CheckInterfacedef(__signbitl,__signbitl_db);
+#endif
+#if defined __i386__
+/* IA32 */
+extern int __signbitl_db(long double);
+CheckInterfacedef(__signbitl,__signbitl_db);
+#endif
+#if defined __x86_64__
+/* x86-64 */
+extern long double exp2l_db(long double);
+CheckInterfacedef(exp2l,exp2l_db);
+#endif
+#if defined __x86_64__
+/* x86-64 */
+extern int __fpclassifyl_db(long double);
+CheckInterfacedef(__fpclassifyl,__fpclassifyl_db);
+#endif
+#if defined __ia64__
+/* IA64 */
+extern int __fpclassifyl_db(long double);
+CheckInterfacedef(__fpclassifyl,__fpclassifyl_db);
+#endif
 extern int __finite_db(double);
 CheckInterfacedef(__finite,__finite_db);
 extern int __finitef_db(float);
@@ -698,21 +744,6 @@ extern int __fpclassify_db(double);
 CheckInterfacedef(__fpclassify,__fpclassify_db);
 extern int __fpclassifyf_db(float);
 CheckInterfacedef(__fpclassifyf,__fpclassifyf_db);
-#if defined __i386__
-/* IA32 */
-extern int __fpclassifyl_db(long double);
-CheckInterfacedef(__fpclassifyl,__fpclassifyl_db);
-#endif
-#if defined __ia64__
-/* IA64 */
-extern int __fpclassifyl_db(long double);
-CheckInterfacedef(__fpclassifyl,__fpclassifyl_db);
-#endif
-#if defined __x86_64__
-/* x86-64 */
-extern int __fpclassifyl_db(long double);
-CheckInterfacedef(__fpclassifyl,__fpclassifyl_db);
-#endif
 extern double copysign_db(double, double);
 CheckInterfacedef(copysign,copysign_db);
 extern int finite_db(double);
@@ -949,21 +980,6 @@ extern double exp2_db(double);
 CheckInterfacedef(exp2,exp2_db);
 extern float exp2f_db(float);
 CheckInterfacedef(exp2f,exp2f_db);
-#if defined __i386__
-/* IA32 */
-extern long double exp2l_db(long double);
-CheckInterfacedef(exp2l,exp2l_db);
-#endif
-#if defined __ia64__
-/* IA64 */
-extern long double exp2l_db(long double);
-CheckInterfacedef(exp2l,exp2l_db);
-#endif
-#if defined __x86_64__
-/* x86-64 */
-extern long double exp2l_db(long double);
-CheckInterfacedef(exp2l,exp2l_db);
-#endif
 extern float expf_db(float);
 CheckInterfacedef(expf,expf_db);
 #if ! __powerpc__ && ! __s390__	/* hack */
@@ -1298,21 +1314,6 @@ CheckInterfacedef(ynf,ynf_db);
 extern long double ynl_db(int, long double);
 CheckInterfacedef(ynl,ynl_db);
 #endif		/* hack */
-#if defined __i386__
-/* IA32 */
-extern int __signbitl_db(long double);
-CheckInterfacedef(__signbitl,__signbitl_db);
-#endif
-#if defined __ia64__
-/* IA64 */
-extern int __signbitl_db(long double);
-CheckInterfacedef(__signbitl,__signbitl_db);
-#endif
-#if defined __x86_64__
-/* x86-64 */
-extern int __signbitl_db(long double);
-CheckInterfacedef(__signbitl,__signbitl_db);
-#endif
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

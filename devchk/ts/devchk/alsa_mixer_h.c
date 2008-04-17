@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#define __LSB_VERSION__ 40
 #include <sys/poll.h>
 #include <alsa/global.h>
 #include <alsa/output.h>
@@ -150,7 +151,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27474,NULL);\n",archi
 
 #if 1
 CheckEnum("SND_MIXER_SABSTRACT_NONE",SND_MIXER_SABSTRACT_NONE,0,76240)
-CheckEnum("SND_MIXER_SABSTRACT_BASIC",SND_MIXER_SABSTRACT_BASIC,1,76241)
+CheckEnum("SND_MIXER_SABSTRACT_BASIC",SND_MIXER_SABSTRACT_BASIC,(0) + 1,76241)
 #endif
 
 #if defined __x86_64__

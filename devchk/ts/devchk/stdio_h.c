@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#define __LSB_VERSION__ 40
 #include <sys/cdefs.h>
 #include <stdio_ext.h>
 #include "stdio.h"
@@ -358,8 +359,6 @@ extern size_t fwrite_db(const void *, size_t, size_t, FILE *);
 CheckInterfacedef(fwrite,fwrite_db);
 extern int getc_db(FILE *);
 CheckInterfacedef(getc,getc_db);
-extern char * gets_db(char *);
-CheckInterfacedef(gets,gets_db);
 extern int putc_db(int, FILE *);
 CheckInterfacedef(putc,putc_db);
 extern int puts_db(const char *);

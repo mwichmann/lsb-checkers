@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#define __LSB_VERSION__ 40
 #include <stdio.h> 
 
 struct screen {
@@ -2667,7 +2668,7 @@ extern int reset_prog_mode_db(void);
 CheckInterfacedef(reset_prog_mode,reset_prog_mode_db);
 extern int reset_shell_mode_db(void);
 CheckInterfacedef(reset_shell_mode,reset_shell_mode_db);
-extern int ripoffline_db(int, int(*init)(WINDOW *,int)
+extern int ripoffline_db(int, int(*fptr1)(WINDOW *,int)
 );
 CheckInterfacedef(ripoffline,ripoffline_db);
 extern int savetty_db(void);
@@ -2746,7 +2747,7 @@ extern void use_env_db(bool);
 CheckInterfacedef(use_env,use_env_db);
 extern int vidattr_db(chtype);
 CheckInterfacedef(vidattr,vidattr_db);
-extern int vidputs_db(chtype, int(*vidputs_int)(int)
+extern int vidputs_db(chtype, int(*fptr2)(int)
 );
 CheckInterfacedef(vidputs,vidputs_db);
 extern int vline_db(chtype, int);

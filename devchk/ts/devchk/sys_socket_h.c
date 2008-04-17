@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#define __LSB_VERSION__ 40
 #include <sys/ioctl.h>
 #include <netdb.h>
 #include "sys/socket.h"
@@ -680,6 +681,16 @@ cnt++;
 	CompareConstant(MSG_WAITALL,0x100,3321,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MSG_WAITALL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef MSG_NOSIGNAL
+	CompareConstant(MSG_NOSIGNAL,0x4000,3328,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: MSG_NOSIGNAL\n");
 cnt++;
 #endif
 

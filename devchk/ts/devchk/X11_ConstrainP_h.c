@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#define __LSB_VERSION__ 40
 #include <wchar.h>
 #include <X11/X.h>
 #include <X11/Xlib.h>
@@ -43,60 +44,50 @@ cnt++;
 #endif
 
 #if defined __ia64__
-CheckTypeSize(ConstraintPart,8, 10250, 3, 1.3, NULL, 10249, NULL)
-#elif defined __i386__
-CheckTypeSize(ConstraintPart,4, 10250, 2, 1.2, NULL, 10249, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(ConstraintPart,4, 10250, 6, 1.2, NULL, 10249, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(ConstraintPart,4, 10250, 10, 1.3, NULL, 10249, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(ConstraintPart,8, 10250, 9, 2.0, NULL, 10249, NULL)
-#elif defined __s390x__
-CheckTypeSize(ConstraintPart,8, 10250, 12, 1.3, NULL, 10249, NULL)
-#elif defined __x86_64__
-CheckTypeSize(ConstraintPart,8, 10250, 11, 2.0, NULL, 10249, NULL)
-#else
-Msg("Find size of ConstraintPart (10250)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10249,NULL);\n",architecture,10250,0);
-#endif
-
-#if defined __ia64__
-CheckTypeSize(ConstraintClassPart,48, 10252, 3, 1.3, NULL, 10251, NULL)
-#elif defined __i386__
-CheckTypeSize(ConstraintClassPart,28, 10252, 2, 1.2, NULL, 10251, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(ConstraintClassPart,28, 10252, 6, 1.2, NULL, 10251, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(ConstraintClassPart,28, 10252, 10, 1.3, NULL, 10251, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(ConstraintClassPart,48, 10252, 9, 2.0, NULL, 10251, NULL)
-#elif defined __s390x__
-CheckTypeSize(ConstraintClassPart,48, 10252, 12, 1.3, NULL, 10251, NULL)
-#elif defined __x86_64__
-CheckTypeSize(ConstraintClassPart,48, 10252, 11, 2.0, NULL, 10251, NULL)
-#else
-Msg("Find size of ConstraintClassPart (10252)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10251,NULL);\n",architecture,10252,0);
-#endif
-
-#if defined __ia64__
-CheckTypeSize(ConstraintClassRec,312, 10258, 3, 1.3, NULL, 10257, NULL)
+CheckTypeSize(ConstraintClassRec,312, 10258, 3, 1.2, NULL, 10257, NULL)
 #elif defined __i386__
 CheckTypeSize(ConstraintClassRec,164, 10258, 2, 1.2, NULL, 10257, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(ConstraintClassRec,164, 10258, 6, 1.2, NULL, 10257, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(ConstraintClassRec,164, 10258, 10, 1.3, NULL, 10257, NULL)
+CheckTypeSize(ConstraintClassRec,164, 10258, 10, 1.2, NULL, 10257, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(ConstraintClassRec,312, 10258, 9, 2.0, NULL, 10257, NULL)
+CheckTypeSize(ConstraintClassRec,312, 10258, 9, 1.2, NULL, 10257, NULL)
 #elif defined __s390x__
-CheckTypeSize(ConstraintClassRec,312, 10258, 12, 1.3, NULL, 10257, NULL)
+CheckTypeSize(ConstraintClassRec,312, 10258, 12, 1.2, NULL, 10257, NULL)
 #elif defined __x86_64__
-CheckTypeSize(ConstraintClassRec,312, 10258, 11, 2.0, NULL, 10257, NULL)
+CheckTypeSize(ConstraintClassRec,312, 10258, 11, 1.2, NULL, 10257, NULL)
 #else
 Msg("Find size of ConstraintClassRec (10258)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10257, NULL);\n",architecture,10258,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10257,NULL);\n",architecture,10258,0);
+#endif
+
+#if 1
+CheckTypeSize(struct _ConstraintClassPart,48, 100649, 1, 1.2, NULL, 0, NULL)
+Msg("Missing member data for _ConstraintClassPart on All\n");
+CheckOffset(struct _ConstraintClassPart,resources,0,1,78450)
+CheckOffset(struct _ConstraintClassPart,num_resources,0,1,78451)
+CheckOffset(struct _ConstraintClassPart,constraint_size,0,1,78452)
+CheckOffset(struct _ConstraintClassPart,initialize,0,1,78453)
+CheckOffset(struct _ConstraintClassPart,destroy,0,1,78454)
+CheckOffset(struct _ConstraintClassPart,set_values,0,1,78455)
+CheckOffset(struct _ConstraintClassPart,extension,0,1,78456)
+#endif
+
+#if 1
+CheckTypeSize(ConstraintClassPart,48, 100650, 1, 1.2, NULL, 100649, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct _ConstraintClassRec,312, 100651, 1, 1.2, NULL, 0, NULL)
+Msg("Missing member data for _ConstraintClassRec on All\n");
+CheckOffset(struct _ConstraintClassRec,core_class,0,1,78457)
+CheckOffset(struct _ConstraintClassRec,composite_class,0,1,78458)
+CheckOffset(struct _ConstraintClassRec,constraint_class,0,1,78459)
+#endif
+
+#if 1
+CheckTypeSize(struct _ConstraintClassRec *,0, 100652, 1, 1.2, NULL, 100651, NULL)
 #endif
 
 #ifdef TET_TEST

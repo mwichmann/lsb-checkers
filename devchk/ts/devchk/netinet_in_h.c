@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#define __LSB_VERSION__ 40
 #include "netinet/in.h"
 
 
@@ -175,6 +176,10 @@ Msg( "Error: Constant not found: INET6_ADDRSTRLEN\n");
 cnt++;
 #endif
 
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for IN6_ARE_ADDR_EQUAL(a,b) */
 #endif
 
 #if _LSB_DEFAULT_ARCH

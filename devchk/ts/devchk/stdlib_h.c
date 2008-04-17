@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#define __LSB_VERSION__ 40
 #include <wchar.h>
 #include "stdlib.h"
 
@@ -267,9 +268,6 @@ extern void abort_db(void);
 CheckInterfacedef(abort,abort_db);
 extern int abs_db(int);
 CheckInterfacedef(abs,abs_db);
-extern int atexit_db(void(*atexit_func)(void)
-);
-CheckInterfacedef(atexit,atexit_db);
 extern double atof_db(const char *);
 CheckInterfacedef(atof,atof_db);
 extern int atoi_db(const char *);
