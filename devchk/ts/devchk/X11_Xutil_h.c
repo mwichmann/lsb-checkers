@@ -669,13 +669,7 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef XUniqueContext()
-	CompareConstant(XUniqueContext(),((XContext)XrmUniqueQuark()),2386,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: XUniqueContext()\n");
-cnt++;
-#endif
-
+/* No test for XUniqueContext() */
 #endif
 
 #if _LSB_DEFAULT_ARCH

@@ -127,13 +127,6 @@ CheckTypeSize(XrmHashTable,0, 9562, 1, 1.2, NULL, 9561, NULL)
 #endif
 
 #if defined __i386__
-CheckTypeSize(XrmSearchList,0, 9563, 2, 1.2, NULL, 9562, NULL)
-#else
-Msg("Find size of XrmSearchList (9563)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9562,NULL);\n",architecture,9563,0);
-#endif
-
-#if defined __i386__
 CheckTypeSize(XrmDatabase,4, 9564, 2, 1.2, NULL, 7107, NULL)
 #else
 Msg("Find size of XrmDatabase (9564)\n");
