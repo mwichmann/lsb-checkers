@@ -347,7 +347,7 @@ cnt++;
 #elif defined __s390__ && !defined __s390x__
 /* No test for G_GINT64_CONSTANT(val) */
 #else
-Msg( "No definition for G_GINT64_CONSTANT(val) (5839, Unknown) in db\n");
+Msg( "No definition for G_GINT64_CONSTANT(val) (5839, macro) in db\n");
 #ifdef G_GINT64_CONSTANT(val)
 #endif
 #endif
@@ -943,7 +943,7 @@ Msg( "No definition for G_MAXSIZE (5849, Unknown) in db\n");
 #elif defined __s390__ && !defined __s390x__
 /* No test for GPOINTER_TO_INT(p) */
 #else
-Msg( "No definition for GPOINTER_TO_INT(p) (5850, Unknown) in db\n");
+Msg( "No definition for GPOINTER_TO_INT(p) (5850, macro) in db\n");
 #ifdef GPOINTER_TO_INT(p)
 #endif
 #endif
@@ -962,7 +962,7 @@ Msg( "No definition for GPOINTER_TO_INT(p) (5850, Unknown) in db\n");
 #elif defined __s390__ && !defined __s390x__
 /* No test for GPOINTER_TO_UINT(p) */
 #else
-Msg( "No definition for GPOINTER_TO_UINT(p) (5851, Unknown) in db\n");
+Msg( "No definition for GPOINTER_TO_UINT(p) (5851, macro) in db\n");
 #ifdef GPOINTER_TO_UINT(p)
 #endif
 #endif
@@ -981,7 +981,7 @@ Msg( "No definition for GPOINTER_TO_UINT(p) (5851, Unknown) in db\n");
 #elif defined __s390__ && !defined __s390x__
 /* No test for GINT_TO_POINTER(i) */
 #else
-Msg( "No definition for GINT_TO_POINTER(i) (5852, Unknown) in db\n");
+Msg( "No definition for GINT_TO_POINTER(i) (5852, macro) in db\n");
 #ifdef GINT_TO_POINTER(i)
 #endif
 #endif
@@ -1000,7 +1000,7 @@ Msg( "No definition for GINT_TO_POINTER(i) (5852, Unknown) in db\n");
 #elif defined __s390__ && !defined __s390x__
 /* No test for GUINT_TO_POINTER(u) */
 #else
-Msg( "No definition for GUINT_TO_POINTER(u) (5853, Unknown) in db\n");
+Msg( "No definition for GUINT_TO_POINTER(u) (5853, macro) in db\n");
 #ifdef GUINT_TO_POINTER(u)
 #endif
 #endif
@@ -1228,7 +1228,7 @@ Msg( "No definition for G_STATIC_MUTEX_INIT (5872, Unknown) in db\n");
 #elif defined __s390__ && !defined __s390x__
 /* No test for GLONG_TO_LE(val) */
 #else
-Msg( "No definition for GLONG_TO_LE(val) (5886, Unknown) in db\n");
+Msg( "No definition for GLONG_TO_LE(val) (5886, macro) in db\n");
 #ifdef GLONG_TO_LE(val)
 #endif
 #endif
@@ -1247,7 +1247,7 @@ Msg( "No definition for GLONG_TO_LE(val) (5886, Unknown) in db\n");
 #elif defined __s390__ && !defined __s390x__
 /* No test for GULONG_TO_LE(val) */
 #else
-Msg( "No definition for GULONG_TO_LE(val) (5887, Unknown) in db\n");
+Msg( "No definition for GULONG_TO_LE(val) (5887, macro) in db\n");
 #ifdef GULONG_TO_LE(val)
 #endif
 #endif
@@ -1266,7 +1266,7 @@ Msg( "No definition for GULONG_TO_LE(val) (5887, Unknown) in db\n");
 #elif defined __s390__ && !defined __s390x__
 /* No test for GLONG_TO_BE(val) */
 #else
-Msg( "No definition for GLONG_TO_BE(val) (5888, Unknown) in db\n");
+Msg( "No definition for GLONG_TO_BE(val) (5888, macro) in db\n");
 #ifdef GLONG_TO_BE(val)
 #endif
 #endif
@@ -1285,7 +1285,7 @@ Msg( "No definition for GLONG_TO_BE(val) (5888, Unknown) in db\n");
 #elif defined __s390__ && !defined __s390x__
 /* No test for GULONG_TO_BE(val) */
 #else
-Msg( "No definition for GULONG_TO_BE(val) (5889, Unknown) in db\n");
+Msg( "No definition for GULONG_TO_BE(val) (5889, macro) in db\n");
 #ifdef GULONG_TO_BE(val)
 #endif
 #endif
@@ -1831,7 +1831,7 @@ cnt++;
 #elif defined __s390__ && !defined __s390x__
 /* No test for G_BREAKPOINT() */
 #else
-Msg( "No definition for G_BREAKPOINT() (6012, Unknown) in db\n");
+Msg( "No definition for G_BREAKPOINT() (6012, macro) in db\n");
 #ifdef G_BREAKPOINT()
 #endif
 #endif

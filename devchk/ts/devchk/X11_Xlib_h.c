@@ -1279,14 +1279,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architect
 #endif
 
 #if defined __i386__
-CheckTypeSize(struct _XrmHashBucketRec,0, 7102, 2, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XrmHashBucketRec on IA32\n");
-#else
-Msg("Find size of _XrmHashBucketRec (7102)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,7102,0);
-#endif
-
-#if defined __i386__
 CheckTypeSize(XVaNestedList,4, 8540, 2, 1.2, NULL, 40, NULL)
 #elif defined __ia64__
 CheckTypeSize(XVaNestedList,8, 8540, 3, 1.2, NULL, 40, NULL)
@@ -1651,14 +1643,6 @@ CheckOffset(struct _XImage,green_mask,0,1,32863)
 CheckOffset(struct _XImage,blue_mask,0,1,32864)
 CheckOffset(struct _XImage,obdata,0,1,32865)
 CheckOffset(struct _XImage,f,0,1,32872)
-#endif
-
-#if defined __i386__
-CheckTypeSize(struct XImagefuncs,4, 8391, 2, 1.2, NULL, 0, NULL)
-Msg("Missing member data for XImagefuncs on IA32\n");
-#else
-Msg("Find size of XImagefuncs (8391)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8391,0);
 #endif
 
 #if defined __i386__
