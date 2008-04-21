@@ -70,7 +70,7 @@ $classbase=~s/_Z//;
 # if( $seenclass{$classbase} ) {
 # 	die "Already seen $classbase\n";
 # 	}
-$seenclass{$classbase}=1;
+#$seenclass{$classbase}=1;
 
 #
 # Output array of BaseTypes entries
@@ -142,7 +142,7 @@ for(1..$vsth->rows) {
 	if( $entry->{'Aname'} eq "All" ) {
 		if( $entry->{'Iid'} ) {
 			$selectNotGeneric = "SELECT AIarch FROM ArchInt ";
-			$selectNotGeneric.= "WHERE AIint=$entry->{'Iid'} AND AIarch<>1";
+			$selectNotGeneric.= "WHERE AIint=$entry->{'Iid'} AND AIarch > 1";
 			$sthNotGeneric = $dbh->prepare($selectNotGeneric)
 			    or die "Couldn't prepare $selectNotGeneric query: ".DBI->errstr;
 			$sthNotGeneric->execute or die "Couldn't execute $selectNotGeneric query: ".DBI->errstr;
@@ -188,7 +188,7 @@ print $LIB "struct classvtable $vtablename [".$class->{'CInumvtab'}."] = {\n";
 foreach my $pos ( 0..$class->{'CInumvtab'}-1) {
 print $LIB "\t{\n";
 
-#vcall offset are architecture sensitive
+#vcall offsets are architecture sensitive
 $select = "SELECT * FROM ClassVtab ";
 $select.= "LEFT JOIN ArchClass ON CVpos=ACpos AND CVcid=ACcid ";
 $select.= "LEFT JOIN Architecture ON Aid=ACaid ";
@@ -278,26 +278,32 @@ print $LIB "\t$baseinfoname,\n";
 print $LIB "\t};\n\n";
 }
 
+sub createTmpTables()
+{
+	$create = "CREATE TEMPORARY TABLE tmp_IncludedInts_$lsbversion ";
+	$create.= "(KEY `Lid`(`Lid`,`Iid`), KEY`Iid`(`Iid`,`AIarch`)) "; 
+	$create.= "SELECT Iid, Iname, Itype, Ireturn, AIarch, AIversion, LGlib AS Lid FROM Interface ";
+	$create.= "LEFT JOIN ArchInt ON AIint=Iid ";
+	$create.= "LEFT JOIN LGInt on LGIint=AIint ";
+	$create.= "LEFT JOIN LibGroup ON LGid=LGIlibg ";
+	$create.= "WHERE AIappearedin <= '$lsbversion' AND AIappearedin >'' ";
+	$create.= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin >'$lsbversion') ";
+	$dbh->do($create) or die "Couldn't execute $create query: ".DBI->errstr;
+}
+
 sub mklibsyms($$)
 {
 local($libname,$lid)=@_;
 
-$select = "SELECT DISTINCT * FROM Interface ";
-$select.= "INNER JOIN LGInt on Iid=LGIint ";
-$select.= "INNER JOIN LibGroup ON LGIlibg=LGid ";
-$select.= "LEFT JOIN ArchInt ON AIint=Iid ";
+$select = "SELECT * FROM tmp_IncludedInts_$lsbversion ";
 $select.= "LEFT JOIN Architecture ON Aid=AIarch ";
 $select.= "LEFT JOIN Version ON Vid=AIversion ";
 $select.= "LEFT JOIN ArchType ON ATtid=Ireturn AND ATaid=Aid ";
-$select.= "LEFT JOIN ModLib ON MLlid=LGlib ";
+$select.= "LEFT JOIN ModLib ON MLlid=Lid ";
 $select.= "LEFT JOIN SubModule ON MLmid=SMid ";
-$select.= "WHERE LGlib=$lid ";
-$select .= "AND (AIappearedin <= '$lsbversion' and AIappearedin<>'') ";
-$select .= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin >'$lsbversion') ";
-$select.= "AND ( AIarch != 8 ) "; # 8 == None
+$select.= "WHERE Lid=$lid ";
 $select.= "GROUP BY Iid ";
 $select.= "ORDER BY Iname,Aid ";
-
 #print $select;
 
 $lsth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
@@ -332,8 +338,10 @@ for(1..$lsth->rows) {
 	} else {
 		if( $entry->{'Aid'} && $entry->{'Aname'} eq 'All' ) {
 			if( $entry->{'Iid'} ) {
-				$selectNotGeneric = "SELECT AIarch FROM ArchInt ";
-				$selectNotGeneric.= "WHERE AIint=$entry->{'Iid'} AND AIarch<>1";
+				$selectNotGeneric = "SELECT Iid FROM tmp_IncludedInts_$lsbversion ";
+				$selectNotGeneric.= "WHERE Iid=".$entry->{'Iid'}." AND AIarch > 1";
+# 				$selectNotGeneric = "SELECT AIarch FROM ArchInt ";
+# 				$selectNotGeneric.= "WHERE AIint=$entry->{'Iid'} AND AIarch<>1";
 				$sthNotGeneric = $dbh->prepare($selectNotGeneric)
 				    or die "Couldn't prepare $selectNotGeneric query: ".DBI->errstr;
 				$sthNotGeneric->execute or die "Couldn't execute $selectNotGeneric query: ".DBI->errstr;
@@ -364,14 +372,14 @@ print LIB "\t{0,0}};\n\n";
 print "$numsyms symbols\n";
 
 #
-# Now, look for class data that me be present
+# Now, look for class data that may be present
 #
-$select = "SELECT DISTINCT * FROM ClassInfo ";
+$select = "SELECT * FROM ClassInfo ";
 $select.= "LEFT JOIN ArchClass ON ACcid=CIid ";
 $select.= "LEFT JOIN LibGroup ON LibGroup.LGid=CIlibg ";
 $select.= "LEFT JOIN Library ON LibGroup.LGLIB=Library.Lid ";
 $select.= "WHERE Library.Lid=$lid ";
-$select.= "AND ACappearedin<>'' AND ACappearedin <= '$lsbversion' ";
+$select.= "AND ACappearedin > '' AND ACappearedin <= '$lsbversion' ";
 $select.= "AND (ACwithdrawnin IS NULL OR ACwithdrawnin > '$lsbversion') ";
 $select.= "AND CInumvtab > 0 ";
 $select.= "GROUP BY ACcid";
@@ -430,14 +438,16 @@ open(MAKE,">libs.mk");
 print MAKE "# Generated file #\n";
 print MAKE "LIBOBJS = \\\n";
 
-$select = "SELECT DISTINCT SMname,Lid,ALrunname,Asymbol,Aname FROM SubModule ";
+createTmpTables();
+
+$select = "SELECT DISTINCT SMname,ALlid AS Lid,ALrunname,Asymbol,Aname FROM SubModule ";
 $select.= "LEFT JOIN ModLib ON MLmid=SMid ";
-$select.= "LEFT JOIN Library ON Lid=MLlid ";
-$select.= "LEFT JOIN ArchLib ON ALlid=Lid ";
+$select.= "LEFT JOIN ArchLib ON ALlid=MLlid ";
 $select.= "LEFT JOIN Architecture ON ALaid=Aid ";
-$select.= "WHERE ( (ALappearedin <= '$lsbversion' and ALappearedin<>'') ";
-$select.= "AND (ALwithdrawnin IS NULL OR ALwithdrawnin > '$lsbversion') ) ";
-$select.= "AND Aname!='None' ";
+$select.= "WHERE ALappearedin <= '$lsbversion' AND ALappearedin > '' ";
+$select.= "AND (ALwithdrawnin IS NULL OR ALwithdrawnin > '$lsbversion') ";
+$select.= "AND MLappearedin <= '$lsbversion' AND MLappearedin > '' ";
+$select.= "AND (MLwithdrawnin IS NULL OR MLwithdrawnin > '$lsbversion') ";
 #$select.= "AND Lname='libstdcxx' ";
 $select.= "ORDER BY ALrunname,Aid DESC ";
 
