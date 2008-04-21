@@ -2038,7 +2038,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef GL_ATI_blend_equation_separate
-	CompareStringConstant(GL_ATI_blend_equation_separate,"1",12840,architecture,1.0,NULL)
+	CompareConstant(GL_ATI_blend_equation_separate,1,12840,architecture,1.0,NULL)
 #else
 Msg( "Error: Constant not found: GL_ATI_blend_equation_separate\n");
 cnt++;
@@ -7458,7 +7458,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef GL_ARB_multitexture
-	CompareStringConstant(GL_ARB_multitexture,"1",13382,architecture,1.0,NULL)
+	CompareConstant(GL_ARB_multitexture,1,13382,architecture,1.0,NULL)
 #else
 Msg( "Error: Constant not found: GL_ARB_multitexture\n");
 cnt++;
