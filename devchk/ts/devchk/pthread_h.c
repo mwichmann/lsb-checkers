@@ -711,15 +711,10 @@ CheckInterfacedef(pthread_barrierattr_getpshared,pthread_barrierattr_getpshared_
 #ifdef LSBCC_MODE       /* XXX hand-edit */
 extern void _pthread_cleanup_pop_db(struct _pthread_cleanup_buffer *, int);
 CheckInterfacedef(_pthread_cleanup_pop,_pthread_cleanup_pop_db);
-extern void _pthread_cleanup_push_db(struct _pthread_cleanup_buffer *, void(*__routine)(void *)
+extern void _pthread_cleanup_push_db(struct _pthread_cleanup_buffer *, void(*fptr0)(void *)
 , void *);
 CheckInterfacedef(_pthread_cleanup_push,_pthread_cleanup_push_db);
 #endif
-extern int pthread_atfork_db(void(*prepare)(void)
-, void(*parent)(void)
-, void(*child)(void)
-);
-CheckInterfacedef(pthread_atfork,pthread_atfork_db);
 extern int pthread_attr_destroy_db(pthread_attr_t *);
 CheckInterfacedef(pthread_attr_destroy,pthread_attr_destroy_db);
 extern int pthread_attr_getdetachstate_db(const pthread_attr_t *, int *);
@@ -762,7 +757,7 @@ extern int pthread_condattr_destroy_db(pthread_condattr_t *);
 CheckInterfacedef(pthread_condattr_destroy,pthread_condattr_destroy_db);
 extern int pthread_condattr_init_db(pthread_condattr_t *);
 CheckInterfacedef(pthread_condattr_init,pthread_condattr_init_db);
-extern int pthread_create_db(pthread_t *, const pthread_attr_t *, void *(*__start_routine)(void *)
+extern int pthread_create_db(pthread_t *, const pthread_attr_t *, void *(*fptr1)(void *)
 , void *);
 CheckInterfacedef(pthread_create,pthread_create_db);
 extern int pthread_detach_db(pthread_t);
@@ -777,7 +772,7 @@ extern void * pthread_getspecific_db(pthread_key_t);
 CheckInterfacedef(pthread_getspecific,pthread_getspecific_db);
 extern int pthread_join_db(pthread_t, void * *);
 CheckInterfacedef(pthread_join,pthread_join_db);
-extern int pthread_key_create_db(pthread_key_t *, void(*destr_func)(void *)
+extern int pthread_key_create_db(pthread_key_t *, void(*fptr2)(void *)
 );
 CheckInterfacedef(pthread_key_create,pthread_key_create_db);
 extern int pthread_key_delete_db(pthread_key_t);
@@ -796,7 +791,7 @@ extern int pthread_mutexattr_destroy_db(pthread_mutexattr_t *);
 CheckInterfacedef(pthread_mutexattr_destroy,pthread_mutexattr_destroy_db);
 extern int pthread_mutexattr_init_db(pthread_mutexattr_t *);
 CheckInterfacedef(pthread_mutexattr_init,pthread_mutexattr_init_db);
-extern int pthread_once_db(pthread_once_t *, void(*init_routine)(void)
+extern int pthread_once_db(pthread_once_t *, void(*fptr3)(void)
 );
 CheckInterfacedef(pthread_once,pthread_once_db);
 extern int pthread_rwlock_destroy_db(pthread_rwlock_t *);
@@ -870,9 +865,9 @@ CheckInterfacedef(pthread_rwlock_timedrdlock,pthread_rwlock_timedrdlock_db);
 extern int pthread_rwlock_timedwrlock_db(pthread_rwlock_t *, const struct timespec *);
 CheckInterfacedef(pthread_rwlock_timedwrlock,pthread_rwlock_timedwrlock_db);
 #ifdef LSBCC_MODE       /* XXX hand-edit */
-extern int __register_atfork_db(void(*prepare)(void)
-, void(*parent)(void)
-, void(*child)(void)
+extern int __register_atfork_db(void(*fptr4)(void)
+, void(*fptr5)(void)
+, void(*fptr6)(void)
 , void *);
 CheckInterfacedef(__register_atfork,__register_atfork_db);
 #endif

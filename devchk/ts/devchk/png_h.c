@@ -2194,6 +2194,85 @@ cnt++;
 /* No test for PNG_SETJMP_SUPPORTED */
 #endif
 
+#if 1
+CheckTypeSize(png_unknown_chunkp,1, 1094, 1, 3.1, NULL, 1092, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct png_sPLT_struct,1, 1096, 1, 3.1, NULL, 0, NULL)
+Msg("Missing member data for png_sPLT_struct on All\n");
+CheckOffset(struct png_sPLT_struct,name,0,1,78479)
+CheckOffset(struct png_sPLT_struct,depth,0,1,78480)
+CheckOffset(struct png_sPLT_struct,entries,0,1,78481)
+CheckOffset(struct png_sPLT_struct,nentries,0,1,78482)
+#endif
+
+#if 1
+CheckTypeSize(struct png_sPLT_entry_struct,1, 1097, 1, 3.1, NULL, 0, NULL)
+Msg("Missing member data for png_sPLT_entry_struct on All\n");
+CheckOffset(struct png_sPLT_entry_struct,red,0,1,78474)
+CheckOffset(struct png_sPLT_entry_struct,green,0,1,78475)
+CheckOffset(struct png_sPLT_entry_struct,blue,0,1,78476)
+CheckOffset(struct png_sPLT_entry_struct,alpha,0,1,78477)
+CheckOffset(struct png_sPLT_entry_struct,frequency,0,1,78478)
+#endif
+
+#if 1
+CheckTypeSize(png_sPLT_entry,1, 1098, 1, 3.1, NULL, 1097, NULL)
+#endif
+
+#if 1
+CheckTypeSize(png_sPLT_entryp,1, 1101, 1, 3.1, NULL, 1099, NULL)
+#endif
+
+#if 1
+CheckTypeSize(png_sPLT_entrypp,1, 1102, 1, 3.1, NULL, 1100, NULL)
+#endif
+
+#if 1
+CheckTypeSize(png_sPLT_t,1, 1103, 1, 3.1, NULL, 1096, NULL)
+#endif
+
+#if 1
+CheckTypeSize(png_sPLT_tp,1, 1106, 1, 3.1, NULL, 1104, NULL)
+#endif
+
+#if 1
+CheckTypeSize(png_sPLT_tpp,1, 1107, 1, 3.1, NULL, 1105, NULL)
+#endif
+
+#if 1
+CheckTypeSize(png_unknown_chunk,1, 6954, 1, 3.1, NULL, 6965, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct png_unknown_chunk_t,1, 6965, 1, 3.1, NULL, 0, NULL)
+Msg("Missing member data for png_unknown_chunk_t on All\n");
+CheckOffset(struct png_unknown_chunk_t,name,0,1,78470)
+CheckOffset(struct png_unknown_chunk_t,data,0,1,78471)
+CheckOffset(struct png_unknown_chunk_t,size,0,1,78472)
+CheckOffset(struct png_unknown_chunk_t,location,0,1,78473)
+#endif
+
+#if defined __i386__
+CheckTypeSize(png_struct,712, 11173, 2, 3.1, NULL, 11172, NULL)
+#elif defined __x86_64__
+CheckTypeSize(png_struct,1208, 11173, 11, 3.1, NULL, 11172, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(png_struct,1152, 11173, 6, 3.1, NULL, 11172, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(png_struct,1664, 11173, 9, 3.1, NULL, 11172, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(png_struct,744, 11173, 10, 3.1, NULL, 11172, NULL)
+#elif defined __s390x__
+CheckTypeSize(png_struct,1288, 11173, 12, 3.1, NULL, 11172, NULL)
+#elif defined __ia64__
+CheckTypeSize(png_struct,1712, 11173, 3, 3.1, NULL, 11172, NULL)
+#else
+Msg("Find size of png_struct (11173)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11172,NULL);\n",architecture,11173,0);
+#endif
+
 #if defined __i386__
 CheckTypeSize(png_structp,4, 11175, 2, 3.1, NULL, 11174, NULL)
 #elif defined __x86_64__
@@ -2211,6 +2290,25 @@ CheckTypeSize(png_structp,8, 11175, 12, 3.1, NULL, 11174, NULL)
 #else
 Msg("Find size of png_structp (11175)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11174,NULL);\n",architecture,11175,0);
+#endif
+
+#if defined __i386__
+CheckTypeSize(png_info,288, 11177, 2, 3.1, NULL, 11176, NULL)
+#elif defined __x86_64__
+CheckTypeSize(png_info,464, 11177, 11, 3.1, NULL, 11176, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(png_info,288, 11177, 6, 3.1, NULL, 11176, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(png_info,464, 11177, 9, 3.1, NULL, 11176, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(png_info,288, 11177, 10, 3.1, NULL, 11176, NULL)
+#elif defined __s390x__
+CheckTypeSize(png_info,464, 11177, 12, 3.1, NULL, 11176, NULL)
+#elif defined __ia64__
+CheckTypeSize(png_info,464, 11177, 3, 3.1, NULL, 11176, NULL)
+#else
+Msg("Find size of png_info (11177)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11176,NULL);\n",architecture,11177,0);
 #endif
 
 #if defined __i386__
@@ -2366,6 +2464,81 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11181,NULL);\n",archi
 #endif
 
 #if defined __i386__
+CheckTypeSize(struct png_color_8_struct,5, 11191, 2, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_color_8_struct,green,1,2,40968)
+CheckOffset(struct png_color_8_struct,green,1,2,40968)
+CheckMemberSize(struct png_color_8_struct,blue,1,2,40969)
+CheckOffset(struct png_color_8_struct,blue,2,2,40969)
+CheckMemberSize(struct png_color_8_struct,gray,1,2,40970)
+CheckOffset(struct png_color_8_struct,gray,3,2,40970)
+CheckMemberSize(struct png_color_8_struct,alpha,1,2,40971)
+CheckOffset(struct png_color_8_struct,alpha,4,2,40971)
+#elif defined __x86_64__
+CheckTypeSize(struct png_color_8_struct,5, 11191, 11, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_color_8_struct,green,1,11,40968)
+CheckOffset(struct png_color_8_struct,green,1,11,40968)
+CheckMemberSize(struct png_color_8_struct,blue,1,11,40969)
+CheckOffset(struct png_color_8_struct,blue,2,11,40969)
+CheckMemberSize(struct png_color_8_struct,gray,1,11,40970)
+CheckOffset(struct png_color_8_struct,gray,3,11,40970)
+CheckMemberSize(struct png_color_8_struct,alpha,1,11,40971)
+CheckOffset(struct png_color_8_struct,alpha,4,11,40971)
+#elif defined __ia64__
+CheckTypeSize(struct png_color_8_struct,5, 11191, 3, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_color_8_struct,green,1,3,40968)
+CheckOffset(struct png_color_8_struct,green,1,3,40968)
+CheckMemberSize(struct png_color_8_struct,blue,1,3,40969)
+CheckOffset(struct png_color_8_struct,blue,2,3,40969)
+CheckMemberSize(struct png_color_8_struct,gray,1,3,40970)
+CheckOffset(struct png_color_8_struct,gray,3,3,40970)
+CheckMemberSize(struct png_color_8_struct,alpha,1,3,40971)
+CheckOffset(struct png_color_8_struct,alpha,4,3,40971)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct png_color_8_struct,5, 11191, 6, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_color_8_struct,green,1,6,40968)
+CheckOffset(struct png_color_8_struct,green,1,6,40968)
+CheckMemberSize(struct png_color_8_struct,blue,1,6,40969)
+CheckOffset(struct png_color_8_struct,blue,2,6,40969)
+CheckMemberSize(struct png_color_8_struct,gray,1,6,40970)
+CheckOffset(struct png_color_8_struct,gray,3,6,40970)
+CheckMemberSize(struct png_color_8_struct,alpha,1,6,40971)
+CheckOffset(struct png_color_8_struct,alpha,4,6,40971)
+#elif defined __powerpc64__
+CheckTypeSize(struct png_color_8_struct,5, 11191, 9, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_color_8_struct,green,1,9,40968)
+CheckOffset(struct png_color_8_struct,green,1,9,40968)
+CheckMemberSize(struct png_color_8_struct,blue,1,9,40969)
+CheckOffset(struct png_color_8_struct,blue,2,9,40969)
+CheckMemberSize(struct png_color_8_struct,gray,1,9,40970)
+CheckOffset(struct png_color_8_struct,gray,3,9,40970)
+CheckMemberSize(struct png_color_8_struct,alpha,1,9,40971)
+CheckOffset(struct png_color_8_struct,alpha,4,9,40971)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct png_color_8_struct,5, 11191, 10, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_color_8_struct,green,1,10,40968)
+CheckOffset(struct png_color_8_struct,green,1,10,40968)
+CheckMemberSize(struct png_color_8_struct,blue,1,10,40969)
+CheckOffset(struct png_color_8_struct,blue,2,10,40969)
+CheckMemberSize(struct png_color_8_struct,gray,1,10,40970)
+CheckOffset(struct png_color_8_struct,gray,3,10,40970)
+CheckMemberSize(struct png_color_8_struct,alpha,1,10,40971)
+CheckOffset(struct png_color_8_struct,alpha,4,10,40971)
+#elif defined __s390x__
+CheckTypeSize(struct png_color_8_struct,5, 11191, 12, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_color_8_struct,green,1,12,40968)
+CheckOffset(struct png_color_8_struct,green,1,12,40968)
+CheckMemberSize(struct png_color_8_struct,blue,1,12,40969)
+CheckOffset(struct png_color_8_struct,blue,2,12,40969)
+CheckMemberSize(struct png_color_8_struct,gray,1,12,40970)
+CheckOffset(struct png_color_8_struct,gray,3,12,40970)
+CheckMemberSize(struct png_color_8_struct,alpha,1,12,40971)
+CheckOffset(struct png_color_8_struct,alpha,4,12,40971)
+#else
+Msg("Find size of png_color_8_struct (11191)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11191,0);
+#endif
+
+#if defined __i386__
 CheckTypeSize(png_color_8,5, 11192, 2, 3.1, NULL, 11191, NULL)
 #elif defined __x86_64__
 CheckTypeSize(png_color_8,5, 11192, 11, 3.1, NULL, 11191, NULL)
@@ -2515,6 +2688,81 @@ CheckTypeSize(png_bytepp,8, 11205, 12, 3.1, NULL, 11204, NULL)
 #else
 Msg("Find size of png_bytepp (11205)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11204,NULL);\n",architecture,11205,0);
+#endif
+
+#if defined __i386__
+CheckTypeSize(struct png_color_16_struct,10, 11208, 2, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_color_16_struct,red,2,2,40977)
+CheckOffset(struct png_color_16_struct,red,2,2,40977)
+CheckMemberSize(struct png_color_16_struct,green,2,2,40978)
+CheckOffset(struct png_color_16_struct,green,4,2,40978)
+CheckMemberSize(struct png_color_16_struct,blue,2,2,40979)
+CheckOffset(struct png_color_16_struct,blue,6,2,40979)
+CheckMemberSize(struct png_color_16_struct,gray,2,2,40980)
+CheckOffset(struct png_color_16_struct,gray,8,2,40980)
+#elif defined __x86_64__
+CheckTypeSize(struct png_color_16_struct,10, 11208, 11, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_color_16_struct,red,2,11,40977)
+CheckOffset(struct png_color_16_struct,red,2,11,40977)
+CheckMemberSize(struct png_color_16_struct,green,2,11,40978)
+CheckOffset(struct png_color_16_struct,green,4,11,40978)
+CheckMemberSize(struct png_color_16_struct,blue,2,11,40979)
+CheckOffset(struct png_color_16_struct,blue,6,11,40979)
+CheckMemberSize(struct png_color_16_struct,gray,2,11,40980)
+CheckOffset(struct png_color_16_struct,gray,8,11,40980)
+#elif defined __ia64__
+CheckTypeSize(struct png_color_16_struct,10, 11208, 3, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_color_16_struct,red,2,3,40977)
+CheckOffset(struct png_color_16_struct,red,2,3,40977)
+CheckMemberSize(struct png_color_16_struct,green,2,3,40978)
+CheckOffset(struct png_color_16_struct,green,4,3,40978)
+CheckMemberSize(struct png_color_16_struct,blue,2,3,40979)
+CheckOffset(struct png_color_16_struct,blue,6,3,40979)
+CheckMemberSize(struct png_color_16_struct,gray,2,3,40980)
+CheckOffset(struct png_color_16_struct,gray,8,3,40980)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct png_color_16_struct,10, 11208, 6, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_color_16_struct,red,2,6,40977)
+CheckOffset(struct png_color_16_struct,red,2,6,40977)
+CheckMemberSize(struct png_color_16_struct,green,2,6,40978)
+CheckOffset(struct png_color_16_struct,green,4,6,40978)
+CheckMemberSize(struct png_color_16_struct,blue,2,6,40979)
+CheckOffset(struct png_color_16_struct,blue,6,6,40979)
+CheckMemberSize(struct png_color_16_struct,gray,2,6,40980)
+CheckOffset(struct png_color_16_struct,gray,8,6,40980)
+#elif defined __powerpc64__
+CheckTypeSize(struct png_color_16_struct,10, 11208, 9, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_color_16_struct,red,2,9,40977)
+CheckOffset(struct png_color_16_struct,red,2,9,40977)
+CheckMemberSize(struct png_color_16_struct,green,2,9,40978)
+CheckOffset(struct png_color_16_struct,green,4,9,40978)
+CheckMemberSize(struct png_color_16_struct,blue,2,9,40979)
+CheckOffset(struct png_color_16_struct,blue,6,9,40979)
+CheckMemberSize(struct png_color_16_struct,gray,2,9,40980)
+CheckOffset(struct png_color_16_struct,gray,8,9,40980)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct png_color_16_struct,10, 11208, 10, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_color_16_struct,red,2,10,40977)
+CheckOffset(struct png_color_16_struct,red,2,10,40977)
+CheckMemberSize(struct png_color_16_struct,green,2,10,40978)
+CheckOffset(struct png_color_16_struct,green,4,10,40978)
+CheckMemberSize(struct png_color_16_struct,blue,2,10,40979)
+CheckOffset(struct png_color_16_struct,blue,6,10,40979)
+CheckMemberSize(struct png_color_16_struct,gray,2,10,40980)
+CheckOffset(struct png_color_16_struct,gray,8,10,40980)
+#elif defined __s390x__
+CheckTypeSize(struct png_color_16_struct,10, 11208, 12, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_color_16_struct,red,2,12,40977)
+CheckOffset(struct png_color_16_struct,red,2,12,40977)
+CheckMemberSize(struct png_color_16_struct,green,2,12,40978)
+CheckOffset(struct png_color_16_struct,green,4,12,40978)
+CheckMemberSize(struct png_color_16_struct,blue,2,12,40979)
+CheckOffset(struct png_color_16_struct,blue,6,12,40979)
+CheckMemberSize(struct png_color_16_struct,gray,2,12,40980)
+CheckOffset(struct png_color_16_struct,gray,8,12,40980)
+#else
+Msg("Find size of png_color_16_struct (11208)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11208,0);
 #endif
 
 #if defined __i386__
@@ -2670,6 +2918,95 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11223,NULL);\n",archi
 #endif
 
 #if defined __i386__
+CheckTypeSize(struct png_time_struct,8, 11225, 2, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_time_struct,month,1,2,40990)
+CheckOffset(struct png_time_struct,month,2,2,40990)
+CheckMemberSize(struct png_time_struct,day,1,2,40991)
+CheckOffset(struct png_time_struct,day,3,2,40991)
+CheckMemberSize(struct png_time_struct,hour,1,2,40992)
+CheckOffset(struct png_time_struct,hour,4,2,40992)
+CheckMemberSize(struct png_time_struct,minute,1,2,40993)
+CheckOffset(struct png_time_struct,minute,5,2,40993)
+CheckMemberSize(struct png_time_struct,second,1,2,40994)
+CheckOffset(struct png_time_struct,second,6,2,40994)
+#elif defined __x86_64__
+CheckTypeSize(struct png_time_struct,8, 11225, 11, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_time_struct,month,1,11,40990)
+CheckOffset(struct png_time_struct,month,2,11,40990)
+CheckMemberSize(struct png_time_struct,day,1,11,40991)
+CheckOffset(struct png_time_struct,day,3,11,40991)
+CheckMemberSize(struct png_time_struct,hour,1,11,40992)
+CheckOffset(struct png_time_struct,hour,4,11,40992)
+CheckMemberSize(struct png_time_struct,minute,1,11,40993)
+CheckOffset(struct png_time_struct,minute,5,11,40993)
+CheckMemberSize(struct png_time_struct,second,1,11,40994)
+CheckOffset(struct png_time_struct,second,6,11,40994)
+#elif defined __ia64__
+CheckTypeSize(struct png_time_struct,8, 11225, 3, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_time_struct,month,1,3,40990)
+CheckOffset(struct png_time_struct,month,2,3,40990)
+CheckMemberSize(struct png_time_struct,day,1,3,40991)
+CheckOffset(struct png_time_struct,day,3,3,40991)
+CheckMemberSize(struct png_time_struct,hour,1,3,40992)
+CheckOffset(struct png_time_struct,hour,4,3,40992)
+CheckMemberSize(struct png_time_struct,minute,1,3,40993)
+CheckOffset(struct png_time_struct,minute,5,3,40993)
+CheckMemberSize(struct png_time_struct,second,1,3,40994)
+CheckOffset(struct png_time_struct,second,6,3,40994)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct png_time_struct,8, 11225, 6, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_time_struct,month,1,6,40990)
+CheckOffset(struct png_time_struct,month,2,6,40990)
+CheckMemberSize(struct png_time_struct,day,1,6,40991)
+CheckOffset(struct png_time_struct,day,3,6,40991)
+CheckMemberSize(struct png_time_struct,hour,1,6,40992)
+CheckOffset(struct png_time_struct,hour,4,6,40992)
+CheckMemberSize(struct png_time_struct,minute,1,6,40993)
+CheckOffset(struct png_time_struct,minute,5,6,40993)
+CheckMemberSize(struct png_time_struct,second,1,6,40994)
+CheckOffset(struct png_time_struct,second,6,6,40994)
+#elif defined __powerpc64__
+CheckTypeSize(struct png_time_struct,8, 11225, 9, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_time_struct,month,1,9,40990)
+CheckOffset(struct png_time_struct,month,2,9,40990)
+CheckMemberSize(struct png_time_struct,day,1,9,40991)
+CheckOffset(struct png_time_struct,day,3,9,40991)
+CheckMemberSize(struct png_time_struct,hour,1,9,40992)
+CheckOffset(struct png_time_struct,hour,4,9,40992)
+CheckMemberSize(struct png_time_struct,minute,1,9,40993)
+CheckOffset(struct png_time_struct,minute,5,9,40993)
+CheckMemberSize(struct png_time_struct,second,1,9,40994)
+CheckOffset(struct png_time_struct,second,6,9,40994)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct png_time_struct,8, 11225, 10, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_time_struct,month,1,10,40990)
+CheckOffset(struct png_time_struct,month,2,10,40990)
+CheckMemberSize(struct png_time_struct,day,1,10,40991)
+CheckOffset(struct png_time_struct,day,3,10,40991)
+CheckMemberSize(struct png_time_struct,hour,1,10,40992)
+CheckOffset(struct png_time_struct,hour,4,10,40992)
+CheckMemberSize(struct png_time_struct,minute,1,10,40993)
+CheckOffset(struct png_time_struct,minute,5,10,40993)
+CheckMemberSize(struct png_time_struct,second,1,10,40994)
+CheckOffset(struct png_time_struct,second,6,10,40994)
+#elif defined __s390x__
+CheckTypeSize(struct png_time_struct,8, 11225, 12, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_time_struct,month,1,12,40990)
+CheckOffset(struct png_time_struct,month,2,12,40990)
+CheckMemberSize(struct png_time_struct,day,1,12,40991)
+CheckOffset(struct png_time_struct,day,3,12,40991)
+CheckMemberSize(struct png_time_struct,hour,1,12,40992)
+CheckOffset(struct png_time_struct,hour,4,12,40992)
+CheckMemberSize(struct png_time_struct,minute,1,12,40993)
+CheckOffset(struct png_time_struct,minute,5,12,40993)
+CheckMemberSize(struct png_time_struct,second,1,12,40994)
+CheckOffset(struct png_time_struct,second,6,12,40994)
+#else
+Msg("Find size of png_time_struct (11225)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11225,0);
+#endif
+
+#if defined __i386__
 CheckTypeSize(png_time,8, 11226, 2, 3.1, NULL, 11225, NULL)
 #elif defined __x86_64__
 CheckTypeSize(png_time,8, 11226, 11, 3.1, NULL, 11225, NULL)
@@ -2822,6 +3159,95 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,10124,NULL);\n",archi
 #endif
 
 #if defined __i386__
+CheckTypeSize(struct png_row_info_struct,12, 11244, 2, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_row_info_struct,rowbytes,4,2,40997)
+CheckOffset(struct png_row_info_struct,rowbytes,4,2,40997)
+CheckMemberSize(struct png_row_info_struct,color_type,1,2,40998)
+CheckOffset(struct png_row_info_struct,color_type,8,2,40998)
+CheckMemberSize(struct png_row_info_struct,bit_depth,1,2,40999)
+CheckOffset(struct png_row_info_struct,bit_depth,9,2,40999)
+CheckMemberSize(struct png_row_info_struct,channels,1,2,41000)
+CheckOffset(struct png_row_info_struct,channels,10,2,41000)
+CheckMemberSize(struct png_row_info_struct,pixel_depth,1,2,41001)
+CheckOffset(struct png_row_info_struct,pixel_depth,11,2,41001)
+#elif defined __x86_64__
+CheckTypeSize(struct png_row_info_struct,24, 11244, 11, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_row_info_struct,rowbytes,8,11,40997)
+CheckOffset(struct png_row_info_struct,rowbytes,8,11,40997)
+CheckMemberSize(struct png_row_info_struct,color_type,1,11,40998)
+CheckOffset(struct png_row_info_struct,color_type,16,11,40998)
+CheckMemberSize(struct png_row_info_struct,bit_depth,1,11,40999)
+CheckOffset(struct png_row_info_struct,bit_depth,17,11,40999)
+CheckMemberSize(struct png_row_info_struct,channels,1,11,41000)
+CheckOffset(struct png_row_info_struct,channels,18,11,41000)
+CheckMemberSize(struct png_row_info_struct,pixel_depth,1,11,41001)
+CheckOffset(struct png_row_info_struct,pixel_depth,19,11,41001)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct png_row_info_struct,12, 11244, 6, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_row_info_struct,rowbytes,4,6,40997)
+CheckOffset(struct png_row_info_struct,rowbytes,4,6,40997)
+CheckMemberSize(struct png_row_info_struct,color_type,1,6,40998)
+CheckOffset(struct png_row_info_struct,color_type,8,6,40998)
+CheckMemberSize(struct png_row_info_struct,bit_depth,1,6,40999)
+CheckOffset(struct png_row_info_struct,bit_depth,9,6,40999)
+CheckMemberSize(struct png_row_info_struct,channels,1,6,41000)
+CheckOffset(struct png_row_info_struct,channels,10,6,41000)
+CheckMemberSize(struct png_row_info_struct,pixel_depth,1,6,41001)
+CheckOffset(struct png_row_info_struct,pixel_depth,11,6,41001)
+#elif defined __powerpc64__
+CheckTypeSize(struct png_row_info_struct,24, 11244, 9, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_row_info_struct,rowbytes,8,9,40997)
+CheckOffset(struct png_row_info_struct,rowbytes,8,9,40997)
+CheckMemberSize(struct png_row_info_struct,color_type,1,9,40998)
+CheckOffset(struct png_row_info_struct,color_type,16,9,40998)
+CheckMemberSize(struct png_row_info_struct,bit_depth,1,9,40999)
+CheckOffset(struct png_row_info_struct,bit_depth,17,9,40999)
+CheckMemberSize(struct png_row_info_struct,channels,1,9,41000)
+CheckOffset(struct png_row_info_struct,channels,18,9,41000)
+CheckMemberSize(struct png_row_info_struct,pixel_depth,1,9,41001)
+CheckOffset(struct png_row_info_struct,pixel_depth,19,9,41001)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct png_row_info_struct,12, 11244, 10, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_row_info_struct,rowbytes,4,10,40997)
+CheckOffset(struct png_row_info_struct,rowbytes,4,10,40997)
+CheckMemberSize(struct png_row_info_struct,color_type,1,10,40998)
+CheckOffset(struct png_row_info_struct,color_type,8,10,40998)
+CheckMemberSize(struct png_row_info_struct,bit_depth,1,10,40999)
+CheckOffset(struct png_row_info_struct,bit_depth,9,10,40999)
+CheckMemberSize(struct png_row_info_struct,channels,1,10,41000)
+CheckOffset(struct png_row_info_struct,channels,10,10,41000)
+CheckMemberSize(struct png_row_info_struct,pixel_depth,1,10,41001)
+CheckOffset(struct png_row_info_struct,pixel_depth,11,10,41001)
+#elif defined __s390x__
+CheckTypeSize(struct png_row_info_struct,24, 11244, 12, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_row_info_struct,rowbytes,8,12,40997)
+CheckOffset(struct png_row_info_struct,rowbytes,8,12,40997)
+CheckMemberSize(struct png_row_info_struct,color_type,1,12,40998)
+CheckOffset(struct png_row_info_struct,color_type,16,12,40998)
+CheckMemberSize(struct png_row_info_struct,bit_depth,1,12,40999)
+CheckOffset(struct png_row_info_struct,bit_depth,17,12,40999)
+CheckMemberSize(struct png_row_info_struct,channels,1,12,41000)
+CheckOffset(struct png_row_info_struct,channels,18,12,41000)
+CheckMemberSize(struct png_row_info_struct,pixel_depth,1,12,41001)
+CheckOffset(struct png_row_info_struct,pixel_depth,19,12,41001)
+#elif defined __ia64__
+CheckTypeSize(struct png_row_info_struct,24, 11244, 3, 3.1, NULL, 0, NULL)
+CheckMemberSize(struct png_row_info_struct,rowbytes,8,3,40997)
+CheckOffset(struct png_row_info_struct,rowbytes,8,3,40997)
+CheckMemberSize(struct png_row_info_struct,color_type,1,3,40998)
+CheckOffset(struct png_row_info_struct,color_type,16,3,40998)
+CheckMemberSize(struct png_row_info_struct,bit_depth,1,3,40999)
+CheckOffset(struct png_row_info_struct,bit_depth,17,3,40999)
+CheckMemberSize(struct png_row_info_struct,channels,1,3,41000)
+CheckOffset(struct png_row_info_struct,channels,18,3,41000)
+CheckMemberSize(struct png_row_info_struct,pixel_depth,1,3,41001)
+CheckOffset(struct png_row_info_struct,pixel_depth,19,3,41001)
+#else
+Msg("Find size of png_row_info_struct (11244)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11244,0);
+#endif
+
+#if defined __i386__
 CheckTypeSize(png_row_info,12, 11245, 2, 3.1, NULL, 11244, NULL)
 #elif defined __x86_64__
 CheckTypeSize(png_row_info,24, 11245, 11, 3.1, NULL, 11244, NULL)
@@ -2859,7 +3285,7 @@ Msg("Find size of png_row_infop (11247)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11246,NULL);\n",architecture,11247,0);
 #endif
 
-#ifdef LSBCC_MODE       /* XXX hand-edit */
+#ifdef LSBCC_MODE		/* XXX hand-edit */
 #if defined __i386__
 CheckTypeSize(version_1_2_8,4, 11248, 2, 3.1, NULL, 11175, NULL)
 #elif defined __ia64__
@@ -2878,7 +3304,7 @@ CheckTypeSize(version_1_2_8,8, 11248, 11, 3.1, NULL, 11175, NULL)
 Msg("Find size of version_1_2_8 (11248)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11175,NULL);\n",architecture,11248,0);
 #endif
-#endif
+#endif				/* XXX hand-edit */
 
 #if defined __i386__
 CheckTypeSize(png_uint_32p,4, 16182, 2, 3.1, NULL, 11214, NULL)
@@ -3333,7 +3759,31 @@ CheckTypeSize(png_timepp,4, 16218, 10, 3.1, NULL, 11229, NULL)
 CheckTypeSize(png_timepp,8, 16218, 12, 3.1, NULL, 11229, NULL)
 #else
 Msg("Find size of png_timepp (16218)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11229, NULL);\n",architecture,16218,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11229,NULL);\n",architecture,16218,0);
+#endif
+
+#if 1
+CheckTypeSize(png_user_transform_ptr,1, 101109, 1, 3.1, NULL, 1108, NULL)
+#endif
+
+#if 1
+CheckTypeSize(png_read_status_ptr,1, 101111, 1, 3.1, NULL, 1110, NULL)
+#endif
+
+#if 1
+CheckTypeSize(png_write_status_ptr,1, 101113, 1, 3.1, NULL, 1112, NULL)
+#endif
+
+#if 1
+CheckTypeSize(png_user_chunk_ptr,1, 101115, 1, 3.1, NULL, 1114, NULL)
+#endif
+
+#if 1
+CheckTypeSize(png_malloc_ptr,1, 101117, 1, 3.1, NULL, 1116, NULL)
+#endif
+
+#if 1
+CheckTypeSize(png_free_ptr,1, 101119, 1, 3.1, NULL, 1118, NULL)
 #endif
 
 extern void png_set_gAMA_db(png_structp, png_infop, double);
