@@ -1342,15 +1342,15 @@ CheckOffset(struct _XIMStringConversionText,string,0,1,33366)
 #endif
 
 #if 1
-CheckTypeSize(XIMStringConversionPosition,0, 8557, 1, 1.2, NULL, 5, NULL)
+CheckTypeSize(XIMStringConversionPosition,2, 8557, 1, 1.2, NULL, 5, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XIMStringConversionType,0, 8558, 1, 1.2, NULL, 5, NULL)
+CheckTypeSize(XIMStringConversionType,2, 8558, 1, 1.2, NULL, 5, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XIMStringConversionOperation,0, 8559, 1, 1.2, NULL, 5, NULL)
+CheckTypeSize(XIMStringConversionOperation,2, 8559, 1, 1.2, NULL, 5, NULL)
 #endif
 
 #if 1
@@ -1625,24 +1625,12 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7045,NULL);\n",archit
 
 #if 1
 CheckTypeSize(struct _XImage,0, 8390, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XImage on All\n");
-CheckOffset(struct _XImage,width,0,1,32850)
-CheckOffset(struct _XImage,height,0,1,32851)
-CheckOffset(struct _XImage,xoffset,0,1,32852)
-CheckOffset(struct _XImage,format,0,1,32853)
-CheckOffset(struct _XImage,data,0,1,32854)
-CheckOffset(struct _XImage,byte_order,0,1,32855)
-CheckOffset(struct _XImage,bitmap_unit,0,1,32856)
-CheckOffset(struct _XImage,bitmap_bit_order,0,1,32857)
-CheckOffset(struct _XImage,bitmap_pad,0,1,32858)
-CheckOffset(struct _XImage,depth,0,1,32859)
-CheckOffset(struct _XImage,bytes_per_line,0,1,32860)
-CheckOffset(struct _XImage,bits_per_pixel,0,1,32861)
-CheckOffset(struct _XImage,red_mask,0,1,32862)
-CheckOffset(struct _XImage,green_mask,0,1,32863)
-CheckOffset(struct _XImage,blue_mask,0,1,32864)
-CheckOffset(struct _XImage,obdata,0,1,32865)
-CheckOffset(struct _XImage,f,0,1,32872)
+CheckMemberSize(struct _XImage,height,4,1,32851)
+CheckOffset(struct _XImage,height,4,1,32851)
+CheckMemberSize(struct _XImage,xoffset,4,1,32852)
+CheckOffset(struct _XImage,xoffset,8,1,32852)
+CheckMemberSize(struct _XImage,format,4,1,32853)
+CheckOffset(struct _XImage,format,12,1,32853)
 #endif
 
 #if defined __i386__

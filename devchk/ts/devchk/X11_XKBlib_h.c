@@ -346,6 +346,16 @@ CheckTypeSize(XkbKbdDpyStatePtr,0, 9518, 1, 1.2, NULL, 9517, NULL)
 
 #if defined __i386__
 CheckTypeSize(XkbInternAtomFunc,4, 9520, 2, 1.2, NULL, 9519, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(XkbInternAtomFunc,0, 9520, 10, 1.2, NULL, 9519, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XkbInternAtomFunc,0, 9520, 11, 1.2, NULL, 9519, NULL)
+#elif defined __s390x__
+CheckTypeSize(XkbInternAtomFunc,0, 9520, 12, 1.2, NULL, 9519, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XkbInternAtomFunc,0, 9520, 6, 1.2, NULL, 9519, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XkbInternAtomFunc,0, 9520, 9, 1.2, NULL, 9519, NULL)
 #else
 Msg("Find size of XkbInternAtomFunc (9520)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9519,NULL);\n",architecture,9520,0);
@@ -353,6 +363,16 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9519,NULL);\n",archit
 
 #if defined __i386__
 CheckTypeSize(XkbGetAtomNameFunc,4, 9522, 2, 1.2, NULL, 9521, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(XkbGetAtomNameFunc,0, 9522, 10, 1.2, NULL, 9521, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XkbGetAtomNameFunc,0, 9522, 11, 1.2, NULL, 9521, NULL)
+#elif defined __s390x__
+CheckTypeSize(XkbGetAtomNameFunc,0, 9522, 12, 1.2, NULL, 9521, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XkbGetAtomNameFunc,0, 9522, 6, 1.2, NULL, 9521, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XkbGetAtomNameFunc,0, 9522, 9, 1.2, NULL, 9521, NULL)
 #else
 Msg("Find size of XkbGetAtomNameFunc (9522)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9521, NULL);\n",architecture,9522,0);

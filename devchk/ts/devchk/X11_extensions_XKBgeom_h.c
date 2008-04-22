@@ -61,14 +61,13 @@ CheckTypeSize(XkbColorPtr,0, 9414, 1, 1.2, NULL, 9413, NULL)
 #endif
 
 #if 1
-CheckTypeSize(struct _XkbPoint,0, 9415, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XkbPoint on All\n");
-CheckOffset(struct _XkbPoint,x,0,1,30554)
-CheckOffset(struct _XkbPoint,y,0,1,30555)
+CheckTypeSize(struct _XkbPoint,4, 9415, 1, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XkbPoint,y,2,1,30555)
+CheckOffset(struct _XkbPoint,y,2,1,30555)
 #endif
 
 #if 1
-CheckTypeSize(XkbPointRec,0, 9416, 1, 1.2, NULL, 9415, NULL)
+CheckTypeSize(XkbPointRec,4, 9416, 1, 1.2, NULL, 9415, NULL)
 #endif
 
 #if 1
@@ -76,20 +75,31 @@ CheckTypeSize(XkbPointPtr,0, 9418, 1, 1.2, NULL, 9417, NULL)
 #endif
 
 #if 1
-CheckTypeSize(struct _XkbBounds,0, 9419, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XkbBounds on All\n");
-CheckOffset(struct _XkbBounds,x1,0,1,30560)
-CheckOffset(struct _XkbBounds,y1,0,1,30561)
-CheckOffset(struct _XkbBounds,x2,0,1,30562)
-CheckOffset(struct _XkbBounds,y2,0,1,30563)
+CheckTypeSize(struct _XkbBounds,8, 9419, 1, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XkbBounds,y1,2,1,30561)
+CheckOffset(struct _XkbBounds,y1,2,1,30561)
+CheckMemberSize(struct _XkbBounds,x2,2,1,30562)
+CheckOffset(struct _XkbBounds,x2,4,1,30562)
+CheckMemberSize(struct _XkbBounds,y2,2,1,30563)
+CheckOffset(struct _XkbBounds,y2,6,1,30563)
 #endif
 
 #if 1
-CheckTypeSize(XkbBoundsRec,0, 9420, 1, 1.2, NULL, 9419, NULL)
+CheckTypeSize(XkbBoundsRec,8, 9420, 1, 1.2, NULL, 9419, NULL)
 #endif
 
 #if defined __i386__
 CheckTypeSize(XkbBoundsPtr,4, 9422, 2, 1.2, NULL, 9421, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(XkbBoundsPtr,0, 9422, 10, 1.2, NULL, 9421, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XkbBoundsPtr,0, 9422, 11, 1.2, NULL, 9421, NULL)
+#elif defined __s390x__
+CheckTypeSize(XkbBoundsPtr,0, 9422, 12, 1.2, NULL, 9421, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XkbBoundsPtr,0, 9422, 6, 1.2, NULL, 9421, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XkbBoundsPtr,0, 9422, 9, 1.2, NULL, 9421, NULL)
 #else
 Msg("Find size of XkbBoundsPtr (9422)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9421,NULL);\n",architecture,9422,0);
@@ -97,11 +107,10 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9421,NULL);\n",archit
 
 #if 1
 CheckTypeSize(struct _XkbOutline,0, 9423, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XkbOutline on All\n");
-CheckOffset(struct _XkbOutline,num_points,0,1,30568)
-CheckOffset(struct _XkbOutline,sz_points,0,1,30569)
-CheckOffset(struct _XkbOutline,corner_radius,0,1,30570)
-CheckOffset(struct _XkbOutline,points,0,1,30571)
+CheckMemberSize(struct _XkbOutline,sz_points,2,1,30569)
+CheckOffset(struct _XkbOutline,sz_points,2,1,30569)
+CheckMemberSize(struct _XkbOutline,corner_radius,2,1,30570)
+CheckOffset(struct _XkbOutline,corner_radius,4,1,30570)
 #endif
 
 #if 1
@@ -110,6 +119,16 @@ CheckTypeSize(XkbOutlineRec,0, 9424, 1, 1.2, NULL, 9423, NULL)
 
 #if defined __i386__
 CheckTypeSize(XkbOutlinePtr,4, 9426, 2, 1.2, NULL, 9425, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(XkbOutlinePtr,0, 9426, 10, 1.2, NULL, 9425, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XkbOutlinePtr,0, 9426, 11, 1.2, NULL, 9425, NULL)
+#elif defined __s390x__
+CheckTypeSize(XkbOutlinePtr,0, 9426, 12, 1.2, NULL, 9425, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XkbOutlinePtr,0, 9426, 6, 1.2, NULL, 9425, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XkbOutlinePtr,0, 9426, 9, 1.2, NULL, 9425, NULL)
 #else
 Msg("Find size of XkbOutlinePtr (9426)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9425,NULL);\n",architecture,9426,0);
@@ -133,6 +152,16 @@ CheckTypeSize(XkbShapeRec,0, 9428, 1, 1.2, NULL, 9427, NULL)
 
 #if defined __i386__
 CheckTypeSize(XkbShapePtr,4, 9430, 2, 1.2, NULL, 9429, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(XkbShapePtr,0, 9430, 10, 1.2, NULL, 9429, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XkbShapePtr,0, 9430, 11, 1.2, NULL, 9429, NULL)
+#elif defined __s390x__
+CheckTypeSize(XkbShapePtr,0, 9430, 12, 1.2, NULL, 9429, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XkbShapePtr,0, 9430, 6, 1.2, NULL, 9429, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XkbShapePtr,0, 9430, 9, 1.2, NULL, 9429, NULL)
 #else
 Msg("Find size of XkbShapePtr (9430)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9429,NULL);\n",architecture,9430,0);
@@ -262,22 +291,33 @@ CheckTypeSize(XkbDoodadRec,0, 9452, 1, 1.2, NULL, 9451, NULL)
 
 #if defined __i386__
 CheckTypeSize(XkbDoodadPtr,4, 9454, 2, 1.2, NULL, 9453, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(XkbDoodadPtr,0, 9454, 10, 1.2, NULL, 9453, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XkbDoodadPtr,0, 9454, 11, 1.2, NULL, 9453, NULL)
+#elif defined __s390x__
+CheckTypeSize(XkbDoodadPtr,0, 9454, 12, 1.2, NULL, 9453, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XkbDoodadPtr,0, 9454, 6, 1.2, NULL, 9453, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XkbDoodadPtr,0, 9454, 9, 1.2, NULL, 9453, NULL)
 #else
 Msg("Find size of XkbDoodadPtr (9454)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9453,NULL);\n",architecture,9454,0);
 #endif
 
 #if 1
-CheckTypeSize(struct _XkbKey,0, 9455, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XkbKey on All\n");
-CheckOffset(struct _XkbKey,name,0,1,30686)
-CheckOffset(struct _XkbKey,gap,0,1,30687)
-CheckOffset(struct _XkbKey,shape_ndx,0,1,30688)
-CheckOffset(struct _XkbKey,color_ndx,0,1,30689)
+CheckTypeSize(struct _XkbKey,8, 9455, 1, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XkbKey,gap,2,1,30687)
+CheckOffset(struct _XkbKey,gap,4,1,30687)
+CheckMemberSize(struct _XkbKey,shape_ndx,1,1,30688)
+CheckOffset(struct _XkbKey,shape_ndx,6,1,30688)
+CheckMemberSize(struct _XkbKey,color_ndx,1,1,30689)
+CheckOffset(struct _XkbKey,color_ndx,7,1,30689)
 #endif
 
 #if 1
-CheckTypeSize(XkbKeyRec,0, 9457, 1, 1.2, NULL, 9455, NULL)
+CheckTypeSize(XkbKeyRec,8, 9457, 1, 1.2, NULL, 9455, NULL)
 #endif
 
 #if 1
@@ -286,14 +326,14 @@ CheckTypeSize(XkbKeyPtr,0, 9459, 1, 1.2, NULL, 9458, NULL)
 
 #if 1
 CheckTypeSize(struct _XkbRow,0, 9460, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XkbRow on All\n");
-CheckOffset(struct _XkbRow,top,0,1,30697)
-CheckOffset(struct _XkbRow,left,0,1,30698)
-CheckOffset(struct _XkbRow,num_keys,0,1,30699)
-CheckOffset(struct _XkbRow,sz_keys,0,1,30700)
-CheckOffset(struct _XkbRow,vertical,0,1,30701)
-CheckOffset(struct _XkbRow,keys,0,1,30702)
-CheckOffset(struct _XkbRow,bounds,0,1,30703)
+CheckMemberSize(struct _XkbRow,left,2,1,30698)
+CheckOffset(struct _XkbRow,left,2,1,30698)
+CheckMemberSize(struct _XkbRow,num_keys,2,1,30699)
+CheckOffset(struct _XkbRow,num_keys,4,1,30699)
+CheckMemberSize(struct _XkbRow,sz_keys,2,1,30700)
+CheckOffset(struct _XkbRow,sz_keys,6,1,30700)
+CheckMemberSize(struct _XkbRow,vertical,4,1,30701)
+CheckOffset(struct _XkbRow,vertical,8,1,30701)
 #endif
 
 #if 1
@@ -302,6 +342,16 @@ CheckTypeSize(XkbRowRec,0, 9461, 1, 1.2, NULL, 9460, NULL)
 
 #if defined __i386__
 CheckTypeSize(XkbRowPtr,4, 9463, 2, 1.2, NULL, 9462, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(XkbRowPtr,0, 9463, 10, 1.2, NULL, 9462, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XkbRowPtr,0, 9463, 11, 1.2, NULL, 9462, NULL)
+#elif defined __s390x__
+CheckTypeSize(XkbRowPtr,0, 9463, 12, 1.2, NULL, 9462, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XkbRowPtr,0, 9463, 6, 1.2, NULL, 9462, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XkbRowPtr,0, 9463, 9, 1.2, NULL, 9462, NULL)
 #else
 Msg("Find size of XkbRowPtr (9463)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9462,NULL);\n",architecture,9463,0);
@@ -346,20 +396,29 @@ CheckTypeSize(XkbSectionRec,0, 9467, 1, 1.2, NULL, 9464, NULL)
 
 #if defined __i386__
 CheckTypeSize(XkbSectionPtr,4, 9469, 2, 1.2, NULL, 9468, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(XkbSectionPtr,0, 9469, 10, 1.2, NULL, 9468, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XkbSectionPtr,0, 9469, 11, 1.2, NULL, 9468, NULL)
+#elif defined __s390x__
+CheckTypeSize(XkbSectionPtr,0, 9469, 12, 1.2, NULL, 9468, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XkbSectionPtr,0, 9469, 6, 1.2, NULL, 9468, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XkbSectionPtr,0, 9469, 9, 1.2, NULL, 9468, NULL)
 #else
 Msg("Find size of XkbSectionPtr (9469)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9468,NULL);\n",architecture,9469,0);
 #endif
 
 #if 1
-CheckTypeSize(struct _XkbOverlayKey,0, 9470, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XkbOverlayKey on All\n");
-CheckOffset(struct _XkbOverlayKey,over,0,1,30740)
-CheckOffset(struct _XkbOverlayKey,under,0,1,30741)
+CheckTypeSize(struct _XkbOverlayKey,8, 9470, 1, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XkbOverlayKey,under,4,1,30741)
+CheckOffset(struct _XkbOverlayKey,under,4,1,30741)
 #endif
 
 #if 1
-CheckTypeSize(XkbOverlayKeyRec,0, 9471, 1, 1.2, NULL, 9470, NULL)
+CheckTypeSize(XkbOverlayKeyRec,8, 9471, 1, 1.2, NULL, 9470, NULL)
 #endif
 
 #if 1
@@ -368,11 +427,10 @@ CheckTypeSize(XkbOverlayKeyPtr,0, 9473, 1, 1.2, NULL, 9472, NULL)
 
 #if 1
 CheckTypeSize(struct _XkbOverlayRow,0, 9474, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XkbOverlayRow on All\n");
-CheckOffset(struct _XkbOverlayRow,row_under,0,1,30746)
-CheckOffset(struct _XkbOverlayRow,num_keys,0,1,30747)
-CheckOffset(struct _XkbOverlayRow,sz_keys,0,1,30748)
-CheckOffset(struct _XkbOverlayRow,keys,0,1,30749)
+CheckMemberSize(struct _XkbOverlayRow,num_keys,2,1,30747)
+CheckOffset(struct _XkbOverlayRow,num_keys,2,1,30747)
+CheckMemberSize(struct _XkbOverlayRow,sz_keys,2,1,30748)
+CheckOffset(struct _XkbOverlayRow,sz_keys,4,1,30748)
 #endif
 
 #if 1
@@ -381,6 +439,16 @@ CheckTypeSize(XkbOverlayRowRec,0, 9475, 1, 1.2, NULL, 9474, NULL)
 
 #if defined __i386__
 CheckTypeSize(XkbOverlayRowPtr,4, 9477, 2, 1.2, NULL, 9476, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(XkbOverlayRowPtr,0, 9477, 10, 1.2, NULL, 9476, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XkbOverlayRowPtr,0, 9477, 11, 1.2, NULL, 9476, NULL)
+#elif defined __s390x__
+CheckTypeSize(XkbOverlayRowPtr,0, 9477, 12, 1.2, NULL, 9476, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XkbOverlayRowPtr,0, 9477, 6, 1.2, NULL, 9476, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XkbOverlayRowPtr,0, 9477, 9, 1.2, NULL, 9476, NULL)
 #else
 Msg("Find size of XkbOverlayRowPtr (9477)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9476,NULL);\n",architecture,9477,0);
@@ -392,6 +460,16 @@ CheckTypeSize(XkbOverlayRec,0, 9478, 1, 1.2, NULL, 9465, NULL)
 
 #if defined __i386__
 CheckTypeSize(XkbOverlayPtr,4, 9479, 2, 1.2, NULL, 9466, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(XkbOverlayPtr,0, 9479, 10, 1.2, NULL, 9466, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XkbOverlayPtr,0, 9479, 11, 1.2, NULL, 9466, NULL)
+#elif defined __s390x__
+CheckTypeSize(XkbOverlayPtr,0, 9479, 12, 1.2, NULL, 9466, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XkbOverlayPtr,0, 9479, 6, 1.2, NULL, 9466, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XkbOverlayPtr,0, 9479, 9, 1.2, NULL, 9466, NULL)
 #else
 Msg("Find size of XkbOverlayPtr (9479)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9466,NULL);\n",architecture,9479,0);
@@ -431,23 +509,37 @@ CheckTypeSize(XkbGeometryRec,0, 9482, 1, 1.2, NULL, 9480, NULL)
 #endif
 
 #if 1
-CheckTypeSize(struct _XkbGeometrySizes,0, 9483, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XkbGeometrySizes on All\n");
-CheckOffset(struct _XkbGeometrySizes,which,0,1,30793)
-CheckOffset(struct _XkbGeometrySizes,num_properties,0,1,30794)
-CheckOffset(struct _XkbGeometrySizes,num_colors,0,1,30795)
-CheckOffset(struct _XkbGeometrySizes,num_shapes,0,1,30796)
-CheckOffset(struct _XkbGeometrySizes,num_sections,0,1,30797)
-CheckOffset(struct _XkbGeometrySizes,num_doodads,0,1,30798)
-CheckOffset(struct _XkbGeometrySizes,num_key_aliases,0,1,30799)
+CheckTypeSize(struct _XkbGeometrySizes,16, 9483, 1, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XkbGeometrySizes,num_properties,2,1,30794)
+CheckOffset(struct _XkbGeometrySizes,num_properties,4,1,30794)
+CheckMemberSize(struct _XkbGeometrySizes,num_colors,2,1,30795)
+CheckOffset(struct _XkbGeometrySizes,num_colors,6,1,30795)
+CheckMemberSize(struct _XkbGeometrySizes,num_shapes,2,1,30796)
+CheckOffset(struct _XkbGeometrySizes,num_shapes,8,1,30796)
+CheckMemberSize(struct _XkbGeometrySizes,num_sections,2,1,30797)
+CheckOffset(struct _XkbGeometrySizes,num_sections,10,1,30797)
+CheckMemberSize(struct _XkbGeometrySizes,num_doodads,2,1,30798)
+CheckOffset(struct _XkbGeometrySizes,num_doodads,12,1,30798)
+CheckMemberSize(struct _XkbGeometrySizes,num_key_aliases,2,1,30799)
+CheckOffset(struct _XkbGeometrySizes,num_key_aliases,14,1,30799)
 #endif
 
 #if 1
-CheckTypeSize(XkbGeometrySizesRec,0, 9484, 1, 1.2, NULL, 9483, NULL)
+CheckTypeSize(XkbGeometrySizesRec,16, 9484, 1, 1.2, NULL, 9483, NULL)
 #endif
 
 #if defined __i386__
 CheckTypeSize(XkbGeometrySizesPtr,4, 9486, 2, 1.2, NULL, 9485, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(XkbGeometrySizesPtr,0, 9486, 10, 1.2, NULL, 9485, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XkbGeometrySizesPtr,0, 9486, 11, 1.2, NULL, 9485, NULL)
+#elif defined __s390x__
+CheckTypeSize(XkbGeometrySizesPtr,0, 9486, 12, 1.2, NULL, 9485, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XkbGeometrySizesPtr,0, 9486, 6, 1.2, NULL, 9485, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XkbGeometrySizesPtr,0, 9486, 9, 1.2, NULL, 9485, NULL)
 #else
 Msg("Find size of XkbGeometrySizesPtr (9486)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9485, NULL);\n",architecture,9486,0);
