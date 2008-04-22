@@ -76,69 +76,166 @@ cnt++;
 
 #endif
 
-#if 1
-CheckTypeSize(_Unwind_Ptr,0, 10379, 1, 1.3, NULL, 7, '(__mode__(__pointer__))')
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(_Unwind_Ptr,4, 10379, 10, 1.3, NULL, 7, '(__mode__(__pointer__))')
+#elif defined __i386__
+CheckTypeSize(_Unwind_Ptr,4, 10379, 2, 1.3, NULL, 7, '(__mode__(__pointer__))')
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(_Unwind_Ptr,4, 10379, 6, 1.3, NULL, 7, '(__mode__(__pointer__))')
+#elif defined __x86_64__
+CheckTypeSize(_Unwind_Ptr,8, 10379, 11, 1.3, NULL, 7, '(__mode__(__pointer__))')
+#elif defined __s390x__
+CheckTypeSize(_Unwind_Ptr,8, 10379, 12, 1.3, NULL, 7, '(__mode__(__pointer__))')
+#elif defined __ia64__
+CheckTypeSize(_Unwind_Ptr,8, 10379, 3, 1.3, NULL, 7, '(__mode__(__pointer__))')
+#elif defined __powerpc64__
+CheckTypeSize(_Unwind_Ptr,8, 10379, 9, 1.3, NULL, 7, '(__mode__(__pointer__))')
+#else
+Msg("Find size of _Unwind_Ptr (10379)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,7,'""(__mode__(__pointer__))""');\n",architecture,10379,0);
+#endif
+
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(_Unwind_Word,4, 10380, 10, 1.3, NULL, 7, '(__mode__(__word__))')
+#elif defined __i386__
+CheckTypeSize(_Unwind_Word,4, 10380, 2, 1.3, NULL, 7, '(__mode__(__word__))')
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(_Unwind_Word,4, 10380, 6, 1.3, NULL, 7, '(__mode__(__word__))')
+#elif defined __x86_64__
+CheckTypeSize(_Unwind_Word,8, 10380, 11, 1.3, NULL, 7, '(__mode__(__word__))')
+#elif defined __s390x__
+CheckTypeSize(_Unwind_Word,8, 10380, 12, 1.3, NULL, 7, '(__mode__(__word__))')
+#elif defined __ia64__
+CheckTypeSize(_Unwind_Word,8, 10380, 3, 1.3, NULL, 7, '(__mode__(__word__))')
+#elif defined __powerpc64__
+CheckTypeSize(_Unwind_Word,8, 10380, 9, 1.3, NULL, 7, '(__mode__(__word__))')
+#else
+Msg("Find size of _Unwind_Word (10380)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,7,'""(__mode__(__word__))""');\n",architecture,10380,0);
 #endif
 
 #if 1
-CheckTypeSize(_Unwind_Word,0, 10380, 1, 1.3, NULL, 7, '(__mode__(__word__))')
+CheckTypeSize(_Unwind_Exception_Class,8, 10382, 1, 1.3, NULL, 7, '(__mode__(__DI__))')
 #endif
 
 #if 1
-CheckTypeSize(_Unwind_Exception_Class,0, 10382, 1, 1.3, NULL, 7, '(__mode__(__DI__))')
+CheckTypeSize(_Unwind_Reason_Code,4, 10388, 1, 1.3, NULL, 10381, NULL)
+#endif
+
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _Unwind_Exception,24, 10377, 10, 1.3, NULL, 0, '(__aligned__)')
+CheckMemberSize(struct _Unwind_Exception,exception_cleanup,4,10,34608)
+CheckOffset(struct _Unwind_Exception,exception_cleanup,8,10,34608)
+CheckMemberSize(struct _Unwind_Exception,private_1,4,10,34609)
+CheckOffset(struct _Unwind_Exception,private_1,12,10,34609)
+CheckMemberSize(struct _Unwind_Exception,private_2,4,10,34610)
+CheckOffset(struct _Unwind_Exception,private_2,16,10,34610)
+#elif defined __x86_64__
+CheckTypeSize(struct _Unwind_Exception,32, 10377, 11, 1.3, NULL, 0, '(__aligned__)')
+CheckMemberSize(struct _Unwind_Exception,exception_cleanup,8,11,34608)
+CheckOffset(struct _Unwind_Exception,exception_cleanup,8,11,34608)
+CheckMemberSize(struct _Unwind_Exception,private_1,8,11,34609)
+CheckOffset(struct _Unwind_Exception,private_1,16,11,34609)
+CheckMemberSize(struct _Unwind_Exception,private_2,8,11,34610)
+CheckOffset(struct _Unwind_Exception,private_2,24,11,34610)
+#elif defined __s390x__
+CheckTypeSize(struct _Unwind_Exception,32, 10377, 12, 1.3, NULL, 0, '(__aligned__)')
+CheckMemberSize(struct _Unwind_Exception,exception_cleanup,8,12,34608)
+CheckOffset(struct _Unwind_Exception,exception_cleanup,8,12,34608)
+CheckMemberSize(struct _Unwind_Exception,private_1,8,12,34609)
+CheckOffset(struct _Unwind_Exception,private_1,16,12,34609)
+CheckMemberSize(struct _Unwind_Exception,private_2,8,12,34610)
+CheckOffset(struct _Unwind_Exception,private_2,24,12,34610)
+#elif defined __i386__
+CheckTypeSize(struct _Unwind_Exception,32, 10377, 2, 1.3, NULL, 0, '(__aligned__)')
+CheckMemberSize(struct _Unwind_Exception,exception_cleanup,4,2,34608)
+CheckOffset(struct _Unwind_Exception,exception_cleanup,8,2,34608)
+CheckMemberSize(struct _Unwind_Exception,private_1,4,2,34609)
+CheckOffset(struct _Unwind_Exception,private_1,12,2,34609)
+CheckMemberSize(struct _Unwind_Exception,private_2,4,2,34610)
+CheckOffset(struct _Unwind_Exception,private_2,16,2,34610)
+#elif defined __ia64__
+CheckTypeSize(struct _Unwind_Exception,32, 10377, 3, 1.3, NULL, 0, '(__aligned__)')
+CheckMemberSize(struct _Unwind_Exception,exception_cleanup,8,3,34608)
+CheckOffset(struct _Unwind_Exception,exception_cleanup,8,3,34608)
+CheckMemberSize(struct _Unwind_Exception,private_1,8,3,34609)
+CheckOffset(struct _Unwind_Exception,private_1,16,3,34609)
+CheckMemberSize(struct _Unwind_Exception,private_2,8,3,34610)
+CheckOffset(struct _Unwind_Exception,private_2,24,3,34610)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _Unwind_Exception,32, 10377, 6, 1.3, NULL, 0, '(__aligned__)')
+CheckMemberSize(struct _Unwind_Exception,exception_cleanup,4,6,34608)
+CheckOffset(struct _Unwind_Exception,exception_cleanup,8,6,34608)
+CheckMemberSize(struct _Unwind_Exception,private_1,4,6,34609)
+CheckOffset(struct _Unwind_Exception,private_1,12,6,34609)
+CheckMemberSize(struct _Unwind_Exception,private_2,4,6,34610)
+CheckOffset(struct _Unwind_Exception,private_2,16,6,34610)
+#elif defined __powerpc64__
+CheckTypeSize(struct _Unwind_Exception,32, 10377, 9, 1.3, NULL, 0, '(__aligned__)')
+CheckMemberSize(struct _Unwind_Exception,exception_cleanup,8,9,34608)
+CheckOffset(struct _Unwind_Exception,exception_cleanup,8,9,34608)
+CheckMemberSize(struct _Unwind_Exception,private_1,8,9,34609)
+CheckOffset(struct _Unwind_Exception,private_1,16,9,34609)
+CheckMemberSize(struct _Unwind_Exception,private_2,8,9,34610)
+CheckOffset(struct _Unwind_Exception,private_2,24,9,34610)
+#else
+Msg("Find size of _Unwind_Exception (10377)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,'""(__aligned__)""');\n",architecture,10377,0);
 #endif
 
 #if 1
-CheckTypeSize(_Unwind_Reason_Code,0, 10388, 1, 1.3, NULL, 10381, NULL)
+CheckTypeSize(_Unwind_Action,4, 10385, 1, 1.3, NULL, 6, NULL)
 #endif
 
-#if 1
-CheckTypeSize(struct _Unwind_Exception,0, 10377, 1, 1.3, NULL, 0, '(__aligned__)')
-Msg("Missing member data for _Unwind_Exception on All\n");
-CheckOffset(struct _Unwind_Exception,exception_class,0,1,34607)
-CheckOffset(struct _Unwind_Exception,exception_cleanup,0,1,34608)
-CheckOffset(struct _Unwind_Exception,private_1,0,1,34609)
-CheckOffset(struct _Unwind_Exception,private_2,0,1,34610)
-#endif
-
-#if 1
-CheckTypeSize(_Unwind_Action,0, 10385, 1, 1.3, NULL, 6, NULL)
-#endif
-
-#if 1
-CheckTypeSize(_Unwind_Exception_Cleanup_Fn,0, 10384, 1, 1.3, NULL, 10383, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(_Unwind_Exception_Cleanup_Fn,4, 10384, 10, 1.3, NULL, 10383, NULL)
+#elif defined __i386__
+CheckTypeSize(_Unwind_Exception_Cleanup_Fn,4, 10384, 2, 1.3, NULL, 10383, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(_Unwind_Exception_Cleanup_Fn,4, 10384, 6, 1.3, NULL, 10383, NULL)
+#elif defined __x86_64__
+CheckTypeSize(_Unwind_Exception_Cleanup_Fn,8, 10384, 11, 1.3, NULL, 10383, NULL)
+#elif defined __s390x__
+CheckTypeSize(_Unwind_Exception_Cleanup_Fn,8, 10384, 12, 1.3, NULL, 10383, NULL)
+#elif defined __ia64__
+CheckTypeSize(_Unwind_Exception_Cleanup_Fn,8, 10384, 3, 1.3, NULL, 10383, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(_Unwind_Exception_Cleanup_Fn,8, 10384, 9, 1.3, NULL, 10383, NULL)
+#else
+Msg("Find size of _Unwind_Exception_Cleanup_Fn (10384)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,10383,NULL);\n",architecture,10384,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(_Unwind_Stop_Fn,0, 11074, 12, 3.0, NULL, 11075, NULL)
+CheckTypeSize(_Unwind_Stop_Fn,8, 11074, 12, 3.0, NULL, 11075, NULL)
 #elif defined __x86_64__
-CheckTypeSize(_Unwind_Stop_Fn,0, 11074, 11, 3.0, NULL, 11075, NULL)
+CheckTypeSize(_Unwind_Stop_Fn,8, 11074, 11, 3.0, NULL, 11075, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(_Unwind_Stop_Fn,0, 11074, 10, 3.0, NULL, 11075, NULL)
+CheckTypeSize(_Unwind_Stop_Fn,4, 11074, 10, 3.0, NULL, 11075, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(_Unwind_Stop_Fn,0, 11074, 9, 3.0, NULL, 11075, NULL)
+CheckTypeSize(_Unwind_Stop_Fn,8, 11074, 9, 3.0, NULL, 11075, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(_Unwind_Stop_Fn,0, 11074, 6, 3.0, NULL, 11075, NULL)
+CheckTypeSize(_Unwind_Stop_Fn,4, 11074, 6, 3.0, NULL, 11075, NULL)
 #elif defined __ia64__
-CheckTypeSize(_Unwind_Stop_Fn,0, 11074, 3, 3.0, NULL, 11075, NULL)
+CheckTypeSize(_Unwind_Stop_Fn,8, 11074, 3, 3.0, NULL, 11075, NULL)
 #elif defined __i386__
-CheckTypeSize(_Unwind_Stop_Fn,0, 11074, 2, 3.0, NULL, 11075, NULL)
+CheckTypeSize(_Unwind_Stop_Fn,4, 11074, 2, 3.0, NULL, 11075, NULL)
 #endif
 
 #if defined __ia64__
-CheckTypeSize(_Unwind_Trace_Fn,0, 11077, 3, 3.0, NULL, 11076, NULL)
+CheckTypeSize(_Unwind_Trace_Fn,8, 11077, 3, 3.0, NULL, 11076, NULL)
 #elif defined __i386__
-CheckTypeSize(_Unwind_Trace_Fn,0, 11077, 2, 3.0, NULL, 11076, NULL)
+CheckTypeSize(_Unwind_Trace_Fn,4, 11077, 2, 3.0, NULL, 11076, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(_Unwind_Trace_Fn,0, 11077, 6, 3.0, NULL, 11076, NULL)
+CheckTypeSize(_Unwind_Trace_Fn,4, 11077, 6, 3.0, NULL, 11076, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(_Unwind_Trace_Fn,0, 11077, 9, 3.0, NULL, 11076, NULL)
+CheckTypeSize(_Unwind_Trace_Fn,8, 11077, 9, 3.0, NULL, 11076, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(_Unwind_Trace_Fn,0, 11077, 10, 3.0, NULL, 11076, NULL)
+CheckTypeSize(_Unwind_Trace_Fn,4, 11077, 10, 3.0, NULL, 11076, NULL)
 #elif defined __x86_64__
-CheckTypeSize(_Unwind_Trace_Fn,0, 11077, 11, 3.0, NULL, 11076, NULL)
+CheckTypeSize(_Unwind_Trace_Fn,8, 11077, 11, 3.0, NULL, 11076, NULL)
 #elif defined __s390x__
-CheckTypeSize(_Unwind_Trace_Fn,0, 11077, 12, 3.0, NULL, 11076, NULL)
+CheckTypeSize(_Unwind_Trace_Fn,8, 11077, 12, 3.0, NULL, 11076, NULL)
 #endif
 
 #if defined __i386__
