@@ -64,16 +64,61 @@ Msg("Find size of XdbeSwapAction (9395)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,3,NULL);\n",architecture,9395,0);
 #endif
 
-#if 1
-CheckTypeSize(XdbeSwapInfo,0, 9397, 1, 1.2, NULL, 9396, NULL)
+#if defined __x86_64__
+CheckTypeSize(XdbeSwapInfo,16, 9397, 11, 1.2, NULL, 9396, NULL)
+#elif defined __s390x__
+CheckTypeSize(XdbeSwapInfo,16, 9397, 12, 1.2, NULL, 9396, NULL)
+#elif defined __ia64__
+CheckTypeSize(XdbeSwapInfo,16, 9397, 3, 1.2, NULL, 9396, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XdbeSwapInfo,16, 9397, 9, 1.2, NULL, 9396, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(XdbeSwapInfo,8, 9397, 10, 1.2, NULL, 9396, NULL)
+#elif defined __i386__
+CheckTypeSize(XdbeSwapInfo,8, 9397, 2, 1.2, NULL, 9396, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XdbeSwapInfo,8, 9397, 6, 1.2, NULL, 9396, NULL)
+#else
+Msg("Find size of XdbeSwapInfo (9397)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9396,NULL);\n",architecture,9397,0);
 #endif
 
-#if 1
-CheckTypeSize(XdbeBackBufferAttributes,0, 9399, 1, 1.2, NULL, 9398, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(XdbeBackBufferAttributes,4, 9399, 10, 1.2, NULL, 9398, NULL)
+#elif defined __i386__
+CheckTypeSize(XdbeBackBufferAttributes,4, 9399, 2, 1.2, NULL, 9398, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XdbeBackBufferAttributes,4, 9399, 6, 1.2, NULL, 9398, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XdbeBackBufferAttributes,8, 9399, 11, 1.2, NULL, 9398, NULL)
+#elif defined __s390x__
+CheckTypeSize(XdbeBackBufferAttributes,8, 9399, 12, 1.2, NULL, 9398, NULL)
+#elif defined __ia64__
+CheckTypeSize(XdbeBackBufferAttributes,8, 9399, 3, 1.2, NULL, 9398, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XdbeBackBufferAttributes,8, 9399, 9, 1.2, NULL, 9398, NULL)
+#else
+Msg("Find size of XdbeBackBufferAttributes (9399)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9398,NULL);\n",architecture,9399,0);
 #endif
 
-#if 1
-CheckTypeSize(XdbeBufferError,0, 9401, 1, 1.2, NULL, 9400, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(XdbeBufferError,20, 9401, 10, 1.2, NULL, 9400, NULL)
+#elif defined __i386__
+CheckTypeSize(XdbeBufferError,20, 9401, 2, 1.2, NULL, 9400, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XdbeBufferError,20, 9401, 6, 1.2, NULL, 9400, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XdbeBufferError,40, 9401, 11, 1.2, NULL, 9400, NULL)
+#elif defined __s390x__
+CheckTypeSize(XdbeBufferError,40, 9401, 12, 1.2, NULL, 9400, NULL)
+#elif defined __ia64__
+CheckTypeSize(XdbeBufferError,40, 9401, 3, 1.2, NULL, 9400, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XdbeBufferError,40, 9401, 9, 1.2, NULL, 9400, NULL)
+#else
+Msg("Find size of XdbeBufferError (9401)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9400, NULL);\n",architecture,9401,0);
 #endif
 
 #ifdef TET_TEST
