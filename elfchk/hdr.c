@@ -179,12 +179,14 @@ fprintf(stderr, "e_flags not checked!!\n");
 
 #undef checkhdrfield
 
-if( hdr1->e_shstrndx != SHN_UNDEF ) {
-	file1->straddr = file1->addr+file1->saddr[hdr1->e_shstrndx].sh_offset;
+if (elf_type != ELF_ERROR) {          /* Protect appchk from crash if alien architecture. */
+	if( hdr1->e_shstrndx != SHN_UNDEF ) {
+		file1->straddr = file1->addr+file1->saddr[hdr1->e_shstrndx].sh_offset;
 	}
-file1->strndx = hdr1->e_shstrndx;
+	file1->strndx = hdr1->e_shstrndx;
 
-getSymbolVersionInfo(file1);
+	getSymbolVersionInfo(file1);
+}
 return elf_type;
 }
 
