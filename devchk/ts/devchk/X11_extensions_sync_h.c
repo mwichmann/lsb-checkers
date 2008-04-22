@@ -458,12 +458,51 @@ cnt++;
 /* No test for XSyncMinValue(pv) */
 #endif
 
-#if 1
-CheckTypeSize(struct _XSyncSystemCounter,0, 8614, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XSyncSystemCounter on All\n");
-CheckOffset(struct _XSyncSystemCounter,name,0,1,28933)
-CheckOffset(struct _XSyncSystemCounter,counter,0,1,28934)
-CheckOffset(struct _XSyncSystemCounter,resolution,0,1,28935)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _XSyncSystemCounter,16, 8614, 10, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XSyncSystemCounter,counter,4,10,28934)
+CheckOffset(struct _XSyncSystemCounter,counter,4,10,28934)
+CheckMemberSize(struct _XSyncSystemCounter,resolution,8,10,28935)
+CheckOffset(struct _XSyncSystemCounter,resolution,8,10,28935)
+#elif defined __i386__
+CheckTypeSize(struct _XSyncSystemCounter,16, 8614, 2, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XSyncSystemCounter,counter,4,2,28934)
+CheckOffset(struct _XSyncSystemCounter,counter,4,2,28934)
+CheckMemberSize(struct _XSyncSystemCounter,resolution,8,2,28935)
+CheckOffset(struct _XSyncSystemCounter,resolution,8,2,28935)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _XSyncSystemCounter,16, 8614, 6, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XSyncSystemCounter,counter,4,6,28934)
+CheckOffset(struct _XSyncSystemCounter,counter,4,6,28934)
+CheckMemberSize(struct _XSyncSystemCounter,resolution,8,6,28935)
+CheckOffset(struct _XSyncSystemCounter,resolution,8,6,28935)
+#elif defined __x86_64__
+CheckTypeSize(struct _XSyncSystemCounter,24, 8614, 11, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XSyncSystemCounter,counter,8,11,28934)
+CheckOffset(struct _XSyncSystemCounter,counter,8,11,28934)
+CheckMemberSize(struct _XSyncSystemCounter,resolution,8,11,28935)
+CheckOffset(struct _XSyncSystemCounter,resolution,16,11,28935)
+#elif defined __s390x__
+CheckTypeSize(struct _XSyncSystemCounter,24, 8614, 12, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XSyncSystemCounter,counter,8,12,28934)
+CheckOffset(struct _XSyncSystemCounter,counter,8,12,28934)
+CheckMemberSize(struct _XSyncSystemCounter,resolution,8,12,28935)
+CheckOffset(struct _XSyncSystemCounter,resolution,16,12,28935)
+#elif defined __ia64__
+CheckTypeSize(struct _XSyncSystemCounter,24, 8614, 3, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XSyncSystemCounter,counter,8,3,28934)
+CheckOffset(struct _XSyncSystemCounter,counter,8,3,28934)
+CheckMemberSize(struct _XSyncSystemCounter,resolution,8,3,28935)
+CheckOffset(struct _XSyncSystemCounter,resolution,16,3,28935)
+#elif defined __powerpc64__
+CheckTypeSize(struct _XSyncSystemCounter,24, 8614, 9, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XSyncSystemCounter,counter,8,9,28934)
+CheckOffset(struct _XSyncSystemCounter,counter,8,9,28934)
+CheckMemberSize(struct _XSyncSystemCounter,resolution,8,9,28935)
+CheckOffset(struct _XSyncSystemCounter,resolution,16,9,28935)
+#else
+Msg("Find size of _XSyncSystemCounter (8614)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8614,0);
 #endif
 
 #if defined __i386__
@@ -542,20 +581,80 @@ Msg("Find size of XSyncAlarmAttributes (8621)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8620,NULL);\n",architecture,8621,0);
 #endif
 
-#if 1
-CheckTypeSize(XSyncCounterNotifyEvent,0, 8623, 1, 1.2, NULL, 8622, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(XSyncCounterNotifyEvent,48, 8623, 10, 1.2, NULL, 8622, NULL)
+#elif defined __i386__
+CheckTypeSize(XSyncCounterNotifyEvent,48, 8623, 2, 1.2, NULL, 8622, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XSyncCounterNotifyEvent,48, 8623, 6, 1.2, NULL, 8622, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XSyncCounterNotifyEvent,72, 8623, 11, 1.2, NULL, 8622, NULL)
+#elif defined __s390x__
+CheckTypeSize(XSyncCounterNotifyEvent,72, 8623, 12, 1.2, NULL, 8622, NULL)
+#elif defined __ia64__
+CheckTypeSize(XSyncCounterNotifyEvent,72, 8623, 3, 1.2, NULL, 8622, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XSyncCounterNotifyEvent,72, 8623, 9, 1.2, NULL, 8622, NULL)
+#else
+Msg("Find size of XSyncCounterNotifyEvent (8623)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8622,NULL);\n",architecture,8623,0);
 #endif
 
-#if 1
-CheckTypeSize(XSyncAlarmNotifyEvent,0, 8625, 1, 1.2, NULL, 8624, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(XSyncAlarmNotifyEvent,44, 8625, 10, 1.2, NULL, 8624, NULL)
+#elif defined __i386__
+CheckTypeSize(XSyncAlarmNotifyEvent,44, 8625, 2, 1.2, NULL, 8624, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XSyncAlarmNotifyEvent,44, 8625, 6, 1.2, NULL, 8624, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XSyncAlarmNotifyEvent,72, 8625, 11, 1.2, NULL, 8624, NULL)
+#elif defined __s390x__
+CheckTypeSize(XSyncAlarmNotifyEvent,72, 8625, 12, 1.2, NULL, 8624, NULL)
+#elif defined __ia64__
+CheckTypeSize(XSyncAlarmNotifyEvent,72, 8625, 3, 1.2, NULL, 8624, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XSyncAlarmNotifyEvent,72, 8625, 9, 1.2, NULL, 8624, NULL)
+#else
+Msg("Find size of XSyncAlarmNotifyEvent (8625)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8624,NULL);\n",architecture,8625,0);
 #endif
 
-#if 1
-CheckTypeSize(XSyncAlarmError,0, 8627, 1, 1.2, NULL, 8626, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(XSyncAlarmError,20, 8627, 10, 1.2, NULL, 8626, NULL)
+#elif defined __i386__
+CheckTypeSize(XSyncAlarmError,20, 8627, 2, 1.2, NULL, 8626, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XSyncAlarmError,20, 8627, 6, 1.2, NULL, 8626, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XSyncAlarmError,40, 8627, 11, 1.2, NULL, 8626, NULL)
+#elif defined __s390x__
+CheckTypeSize(XSyncAlarmError,40, 8627, 12, 1.2, NULL, 8626, NULL)
+#elif defined __ia64__
+CheckTypeSize(XSyncAlarmError,40, 8627, 3, 1.2, NULL, 8626, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XSyncAlarmError,40, 8627, 9, 1.2, NULL, 8626, NULL)
+#else
+Msg("Find size of XSyncAlarmError (8627)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8626,NULL);\n",architecture,8627,0);
 #endif
 
-#if 1
-CheckTypeSize(XSyncCounterError,0, 8629, 1, 1.2, NULL, 8628, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(XSyncCounterError,20, 8629, 10, 1.2, NULL, 8628, NULL)
+#elif defined __i386__
+CheckTypeSize(XSyncCounterError,20, 8629, 2, 1.2, NULL, 8628, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XSyncCounterError,20, 8629, 6, 1.2, NULL, 8628, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XSyncCounterError,40, 8629, 11, 1.2, NULL, 8628, NULL)
+#elif defined __s390x__
+CheckTypeSize(XSyncCounterError,40, 8629, 12, 1.2, NULL, 8628, NULL)
+#elif defined __ia64__
+CheckTypeSize(XSyncCounterError,40, 8629, 3, 1.2, NULL, 8628, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XSyncCounterError,40, 8629, 9, 1.2, NULL, 8628, NULL)
+#else
+Msg("Find size of XSyncCounterError (8629)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8628,NULL);\n",architecture,8629,0);
 #endif
 
 #if defined __i386__
