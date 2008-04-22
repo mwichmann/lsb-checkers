@@ -529,8 +529,8 @@ main(int argc, char *argv[])
             TESTCASE_END(tetj_activity_count++, 0, "");
             continue;
         }
-        check_file(elffile, ELF_IS_DSO);
-        add_library_symbols(elffile, journal, modules);
+        if (check_file(elffile, ELF_IS_DSO) != ELF_ERROR)    /* Protect appchk from crash */
+            add_library_symbols(elffile, journal, modules);
         TESTCASE_END(tetj_activity_count++, 0, "");
         CloseElfFile(elffile);
     }
