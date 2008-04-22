@@ -203,12 +203,51 @@ cnt++;
 /* No test for FunctionSetOfCCC(ccc) */
 #endif
 
-#if 1
-CheckTypeSize(struct _XcmsFunctionSet,0, 8363, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XcmsFunctionSet on All\n");
-CheckOffset(struct _XcmsFunctionSet,DDColorSpaces,0,1,32736)
-CheckOffset(struct _XcmsFunctionSet,screenInitProc,0,1,32737)
-CheckOffset(struct _XcmsFunctionSet,screenFreeProc,0,1,32738)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _XcmsFunctionSet,12, 8363, 10, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsFunctionSet,screenInitProc,4,10,32737)
+CheckOffset(struct _XcmsFunctionSet,screenInitProc,4,10,32737)
+CheckMemberSize(struct _XcmsFunctionSet,screenFreeProc,4,10,32738)
+CheckOffset(struct _XcmsFunctionSet,screenFreeProc,8,10,32738)
+#elif defined __i386__
+CheckTypeSize(struct _XcmsFunctionSet,12, 8363, 2, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsFunctionSet,screenInitProc,4,2,32737)
+CheckOffset(struct _XcmsFunctionSet,screenInitProc,4,2,32737)
+CheckMemberSize(struct _XcmsFunctionSet,screenFreeProc,4,2,32738)
+CheckOffset(struct _XcmsFunctionSet,screenFreeProc,8,2,32738)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _XcmsFunctionSet,12, 8363, 6, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsFunctionSet,screenInitProc,4,6,32737)
+CheckOffset(struct _XcmsFunctionSet,screenInitProc,4,6,32737)
+CheckMemberSize(struct _XcmsFunctionSet,screenFreeProc,4,6,32738)
+CheckOffset(struct _XcmsFunctionSet,screenFreeProc,8,6,32738)
+#elif defined __x86_64__
+CheckTypeSize(struct _XcmsFunctionSet,24, 8363, 11, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsFunctionSet,screenInitProc,8,11,32737)
+CheckOffset(struct _XcmsFunctionSet,screenInitProc,8,11,32737)
+CheckMemberSize(struct _XcmsFunctionSet,screenFreeProc,8,11,32738)
+CheckOffset(struct _XcmsFunctionSet,screenFreeProc,16,11,32738)
+#elif defined __s390x__
+CheckTypeSize(struct _XcmsFunctionSet,24, 8363, 12, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsFunctionSet,screenInitProc,8,12,32737)
+CheckOffset(struct _XcmsFunctionSet,screenInitProc,8,12,32737)
+CheckMemberSize(struct _XcmsFunctionSet,screenFreeProc,8,12,32738)
+CheckOffset(struct _XcmsFunctionSet,screenFreeProc,16,12,32738)
+#elif defined __ia64__
+CheckTypeSize(struct _XcmsFunctionSet,24, 8363, 3, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsFunctionSet,screenInitProc,8,3,32737)
+CheckOffset(struct _XcmsFunctionSet,screenInitProc,8,3,32737)
+CheckMemberSize(struct _XcmsFunctionSet,screenFreeProc,8,3,32738)
+CheckOffset(struct _XcmsFunctionSet,screenFreeProc,16,3,32738)
+#elif defined __powerpc64__
+CheckTypeSize(struct _XcmsFunctionSet,24, 8363, 9, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsFunctionSet,screenInitProc,8,9,32737)
+CheckOffset(struct _XcmsFunctionSet,screenInitProc,8,9,32737)
+CheckMemberSize(struct _XcmsFunctionSet,screenFreeProc,8,9,32738)
+CheckOffset(struct _XcmsFunctionSet,screenFreeProc,16,9,32738)
+#else
+Msg("Find size of _XcmsFunctionSet (8363)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8363,0);
 #endif
 
 #if defined __i386__
@@ -458,10 +497,37 @@ Msg("Find size of XcmsColor (8342)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8341,NULL);\n",architecture,8342,0);
 #endif
 
-#if 1
-CheckTypeSize(struct _XcmsPerScrnInfo,0, 8343, 1, 1.2, NULL, 0, NULL)
-CheckMemberSize(struct _XcmsPerScrnInfo,pad,3,1,32720)
-CheckOffset(struct _XcmsPerScrnInfo,pad,0,1,32720)
+#if defined __i386__
+CheckTypeSize(struct _XcmsPerScrnInfo,52, 8343, 2, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsPerScrnInfo,pad,3,2,32720)
+CheckOffset(struct _XcmsPerScrnInfo,pad,49,2,32720)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _XcmsPerScrnInfo,56, 8343, 10, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsPerScrnInfo,pad,3,10,32720)
+CheckOffset(struct _XcmsPerScrnInfo,pad,49,10,32720)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _XcmsPerScrnInfo,56, 8343, 6, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsPerScrnInfo,pad,3,6,32720)
+CheckOffset(struct _XcmsPerScrnInfo,pad,49,6,32720)
+#elif defined __x86_64__
+CheckTypeSize(struct _XcmsPerScrnInfo,72, 8343, 11, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsPerScrnInfo,pad,3,11,32720)
+CheckOffset(struct _XcmsPerScrnInfo,pad,65,11,32720)
+#elif defined __s390x__
+CheckTypeSize(struct _XcmsPerScrnInfo,72, 8343, 12, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsPerScrnInfo,pad,3,12,32720)
+CheckOffset(struct _XcmsPerScrnInfo,pad,65,12,32720)
+#elif defined __ia64__
+CheckTypeSize(struct _XcmsPerScrnInfo,72, 8343, 3, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsPerScrnInfo,pad,3,3,32720)
+CheckOffset(struct _XcmsPerScrnInfo,pad,65,3,32720)
+#elif defined __powerpc64__
+CheckTypeSize(struct _XcmsPerScrnInfo,72, 8343, 9, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsPerScrnInfo,pad,3,9,32720)
+CheckOffset(struct _XcmsPerScrnInfo,pad,65,9,32720)
+#else
+Msg("Find size of _XcmsPerScrnInfo (8343)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8343,0);
 #endif
 
 #if defined __i386__
@@ -597,22 +663,154 @@ Msg("Find size of XcmsParseStringProc (8869)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8868,NULL);\n",architecture,8869,0);
 #endif
 
-#if 1
-CheckTypeSize(struct _XcmsCCC,0, 8345, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XcmsCCC on All\n");
-CheckOffset(struct _XcmsCCC,dpy,0,1,32721)
-CheckOffset(struct _XcmsCCC,screenNumber,0,1,32722)
-CheckOffset(struct _XcmsCCC,visual,0,1,32723)
-CheckOffset(struct _XcmsCCC,clientWhitePt,0,1,32724)
-CheckOffset(struct _XcmsCCC,gamutCompProc,0,1,32725)
-CheckOffset(struct _XcmsCCC,gamutCompClientData,0,1,32726)
-CheckOffset(struct _XcmsCCC,whitePtAdjProc,0,1,32727)
-CheckOffset(struct _XcmsCCC,whitePtAdjClientData,0,1,32728)
-CheckOffset(struct _XcmsCCC,pPerScrnInfo,0,1,32729)
+#if defined __x86_64__
+CheckTypeSize(struct _XcmsCCC,112, 8345, 11, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsCCC,screenNumber,4,11,32722)
+CheckOffset(struct _XcmsCCC,screenNumber,8,11,32722)
+CheckMemberSize(struct _XcmsCCC,visual,8,11,32723)
+CheckOffset(struct _XcmsCCC,visual,16,11,32723)
+CheckMemberSize(struct _XcmsCCC,clientWhitePt,48,11,32724)
+CheckOffset(struct _XcmsCCC,clientWhitePt,24,11,32724)
+CheckMemberSize(struct _XcmsCCC,gamutCompProc,8,11,32725)
+CheckOffset(struct _XcmsCCC,gamutCompProc,72,11,32725)
+CheckMemberSize(struct _XcmsCCC,gamutCompClientData,8,11,32726)
+CheckOffset(struct _XcmsCCC,gamutCompClientData,80,11,32726)
+CheckMemberSize(struct _XcmsCCC,whitePtAdjProc,8,11,32727)
+CheckOffset(struct _XcmsCCC,whitePtAdjProc,88,11,32727)
+CheckMemberSize(struct _XcmsCCC,whitePtAdjClientData,8,11,32728)
+CheckOffset(struct _XcmsCCC,whitePtAdjClientData,96,11,32728)
+CheckMemberSize(struct _XcmsCCC,pPerScrnInfo,8,11,32729)
+CheckOffset(struct _XcmsCCC,pPerScrnInfo,104,11,32729)
+#elif defined __s390x__
+CheckTypeSize(struct _XcmsCCC,112, 8345, 12, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsCCC,screenNumber,4,12,32722)
+CheckOffset(struct _XcmsCCC,screenNumber,8,12,32722)
+CheckMemberSize(struct _XcmsCCC,visual,8,12,32723)
+CheckOffset(struct _XcmsCCC,visual,16,12,32723)
+CheckMemberSize(struct _XcmsCCC,clientWhitePt,48,12,32724)
+CheckOffset(struct _XcmsCCC,clientWhitePt,24,12,32724)
+CheckMemberSize(struct _XcmsCCC,gamutCompProc,8,12,32725)
+CheckOffset(struct _XcmsCCC,gamutCompProc,72,12,32725)
+CheckMemberSize(struct _XcmsCCC,gamutCompClientData,8,12,32726)
+CheckOffset(struct _XcmsCCC,gamutCompClientData,80,12,32726)
+CheckMemberSize(struct _XcmsCCC,whitePtAdjProc,8,12,32727)
+CheckOffset(struct _XcmsCCC,whitePtAdjProc,88,12,32727)
+CheckMemberSize(struct _XcmsCCC,whitePtAdjClientData,8,12,32728)
+CheckOffset(struct _XcmsCCC,whitePtAdjClientData,96,12,32728)
+CheckMemberSize(struct _XcmsCCC,pPerScrnInfo,8,12,32729)
+CheckOffset(struct _XcmsCCC,pPerScrnInfo,104,12,32729)
+#elif defined __ia64__
+CheckTypeSize(struct _XcmsCCC,112, 8345, 3, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsCCC,screenNumber,4,3,32722)
+CheckOffset(struct _XcmsCCC,screenNumber,8,3,32722)
+CheckMemberSize(struct _XcmsCCC,visual,8,3,32723)
+CheckOffset(struct _XcmsCCC,visual,16,3,32723)
+CheckMemberSize(struct _XcmsCCC,clientWhitePt,48,3,32724)
+CheckOffset(struct _XcmsCCC,clientWhitePt,24,3,32724)
+CheckMemberSize(struct _XcmsCCC,gamutCompProc,8,3,32725)
+CheckOffset(struct _XcmsCCC,gamutCompProc,72,3,32725)
+CheckMemberSize(struct _XcmsCCC,gamutCompClientData,8,3,32726)
+CheckOffset(struct _XcmsCCC,gamutCompClientData,80,3,32726)
+CheckMemberSize(struct _XcmsCCC,whitePtAdjProc,8,3,32727)
+CheckOffset(struct _XcmsCCC,whitePtAdjProc,88,3,32727)
+CheckMemberSize(struct _XcmsCCC,whitePtAdjClientData,8,3,32728)
+CheckOffset(struct _XcmsCCC,whitePtAdjClientData,96,3,32728)
+CheckMemberSize(struct _XcmsCCC,pPerScrnInfo,8,3,32729)
+CheckOffset(struct _XcmsCCC,pPerScrnInfo,104,3,32729)
+#elif defined __powerpc64__
+CheckTypeSize(struct _XcmsCCC,112, 8345, 9, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsCCC,screenNumber,4,9,32722)
+CheckOffset(struct _XcmsCCC,screenNumber,8,9,32722)
+CheckMemberSize(struct _XcmsCCC,visual,8,9,32723)
+CheckOffset(struct _XcmsCCC,visual,16,9,32723)
+CheckMemberSize(struct _XcmsCCC,clientWhitePt,48,9,32724)
+CheckOffset(struct _XcmsCCC,clientWhitePt,24,9,32724)
+CheckMemberSize(struct _XcmsCCC,gamutCompProc,8,9,32725)
+CheckOffset(struct _XcmsCCC,gamutCompProc,72,9,32725)
+CheckMemberSize(struct _XcmsCCC,gamutCompClientData,8,9,32726)
+CheckOffset(struct _XcmsCCC,gamutCompClientData,80,9,32726)
+CheckMemberSize(struct _XcmsCCC,whitePtAdjProc,8,9,32727)
+CheckOffset(struct _XcmsCCC,whitePtAdjProc,88,9,32727)
+CheckMemberSize(struct _XcmsCCC,whitePtAdjClientData,8,9,32728)
+CheckOffset(struct _XcmsCCC,whitePtAdjClientData,96,9,32728)
+CheckMemberSize(struct _XcmsCCC,pPerScrnInfo,8,9,32729)
+CheckOffset(struct _XcmsCCC,pPerScrnInfo,104,9,32729)
+#elif defined __i386__
+CheckTypeSize(struct _XcmsCCC,72, 8345, 2, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsCCC,screenNumber,4,2,32722)
+CheckOffset(struct _XcmsCCC,screenNumber,4,2,32722)
+CheckMemberSize(struct _XcmsCCC,visual,4,2,32723)
+CheckOffset(struct _XcmsCCC,visual,8,2,32723)
+CheckMemberSize(struct _XcmsCCC,clientWhitePt,40,2,32724)
+CheckOffset(struct _XcmsCCC,clientWhitePt,12,2,32724)
+CheckMemberSize(struct _XcmsCCC,gamutCompProc,4,2,32725)
+CheckOffset(struct _XcmsCCC,gamutCompProc,52,2,32725)
+CheckMemberSize(struct _XcmsCCC,gamutCompClientData,4,2,32726)
+CheckOffset(struct _XcmsCCC,gamutCompClientData,56,2,32726)
+CheckMemberSize(struct _XcmsCCC,whitePtAdjProc,4,2,32727)
+CheckOffset(struct _XcmsCCC,whitePtAdjProc,60,2,32727)
+CheckMemberSize(struct _XcmsCCC,whitePtAdjClientData,4,2,32728)
+CheckOffset(struct _XcmsCCC,whitePtAdjClientData,64,2,32728)
+CheckMemberSize(struct _XcmsCCC,pPerScrnInfo,4,2,32729)
+CheckOffset(struct _XcmsCCC,pPerScrnInfo,68,2,32729)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _XcmsCCC,80, 8345, 10, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsCCC,screenNumber,4,10,32722)
+CheckOffset(struct _XcmsCCC,screenNumber,4,10,32722)
+CheckMemberSize(struct _XcmsCCC,visual,4,10,32723)
+CheckOffset(struct _XcmsCCC,visual,8,10,32723)
+CheckMemberSize(struct _XcmsCCC,clientWhitePt,40,10,32724)
+CheckOffset(struct _XcmsCCC,clientWhitePt,16,10,32724)
+CheckMemberSize(struct _XcmsCCC,gamutCompProc,4,10,32725)
+CheckOffset(struct _XcmsCCC,gamutCompProc,56,10,32725)
+CheckMemberSize(struct _XcmsCCC,gamutCompClientData,4,10,32726)
+CheckOffset(struct _XcmsCCC,gamutCompClientData,60,10,32726)
+CheckMemberSize(struct _XcmsCCC,whitePtAdjProc,4,10,32727)
+CheckOffset(struct _XcmsCCC,whitePtAdjProc,64,10,32727)
+CheckMemberSize(struct _XcmsCCC,whitePtAdjClientData,4,10,32728)
+CheckOffset(struct _XcmsCCC,whitePtAdjClientData,68,10,32728)
+CheckMemberSize(struct _XcmsCCC,pPerScrnInfo,4,10,32729)
+CheckOffset(struct _XcmsCCC,pPerScrnInfo,72,10,32729)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _XcmsCCC,80, 8345, 6, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsCCC,screenNumber,4,6,32722)
+CheckOffset(struct _XcmsCCC,screenNumber,4,6,32722)
+CheckMemberSize(struct _XcmsCCC,visual,4,6,32723)
+CheckOffset(struct _XcmsCCC,visual,8,6,32723)
+CheckMemberSize(struct _XcmsCCC,clientWhitePt,40,6,32724)
+CheckOffset(struct _XcmsCCC,clientWhitePt,16,6,32724)
+CheckMemberSize(struct _XcmsCCC,gamutCompProc,4,6,32725)
+CheckOffset(struct _XcmsCCC,gamutCompProc,56,6,32725)
+CheckMemberSize(struct _XcmsCCC,gamutCompClientData,4,6,32726)
+CheckOffset(struct _XcmsCCC,gamutCompClientData,60,6,32726)
+CheckMemberSize(struct _XcmsCCC,whitePtAdjProc,4,6,32727)
+CheckOffset(struct _XcmsCCC,whitePtAdjProc,64,6,32727)
+CheckMemberSize(struct _XcmsCCC,whitePtAdjClientData,4,6,32728)
+CheckOffset(struct _XcmsCCC,whitePtAdjClientData,68,6,32728)
+CheckMemberSize(struct _XcmsCCC,pPerScrnInfo,4,6,32729)
+CheckOffset(struct _XcmsCCC,pPerScrnInfo,72,6,32729)
+#else
+Msg("Find size of _XcmsCCC (8345)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8345,0);
 #endif
 
-#if 1
-CheckTypeSize(XcmsCCCRec,0, 8351, 1, 1.2, NULL, 8345, NULL)
+#if defined __x86_64__
+CheckTypeSize(XcmsCCCRec,112, 8351, 11, 1.2, NULL, 8345, NULL)
+#elif defined __s390x__
+CheckTypeSize(XcmsCCCRec,112, 8351, 12, 1.2, NULL, 8345, NULL)
+#elif defined __ia64__
+CheckTypeSize(XcmsCCCRec,112, 8351, 3, 1.2, NULL, 8345, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XcmsCCCRec,112, 8351, 9, 1.2, NULL, 8345, NULL)
+#elif defined __i386__
+CheckTypeSize(XcmsCCCRec,72, 8351, 2, 1.2, NULL, 8345, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(XcmsCCCRec,80, 8351, 10, 1.2, NULL, 8345, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XcmsCCCRec,80, 8351, 6, 1.2, NULL, 8345, NULL)
+#else
+Msg("Find size of XcmsCCCRec (8351)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8345,NULL);\n",architecture,8351,0);
 #endif
 
 #if defined __i386__
@@ -653,15 +851,93 @@ Msg("Find size of XcmsCCC (8853)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8852,NULL);\n",architecture,8853,0);
 #endif
 
-#if 1
-CheckTypeSize(struct _XcmsColorSpace,0, 8361, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XcmsColorSpace on All\n");
-CheckOffset(struct _XcmsColorSpace,prefix,0,1,32730)
-CheckOffset(struct _XcmsColorSpace,id,0,1,32731)
-CheckOffset(struct _XcmsColorSpace,parseString,0,1,32732)
-CheckOffset(struct _XcmsColorSpace,to_CIEXYZ,0,1,32733)
-CheckOffset(struct _XcmsColorSpace,from_CIEXYZ,0,1,32734)
-CheckOffset(struct _XcmsColorSpace,inverse_flag,0,1,32735)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _XcmsColorSpace,24, 8361, 10, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsColorSpace,id,4,10,32731)
+CheckOffset(struct _XcmsColorSpace,id,4,10,32731)
+CheckMemberSize(struct _XcmsColorSpace,parseString,4,10,32732)
+CheckOffset(struct _XcmsColorSpace,parseString,8,10,32732)
+CheckMemberSize(struct _XcmsColorSpace,to_CIEXYZ,4,10,32733)
+CheckOffset(struct _XcmsColorSpace,to_CIEXYZ,12,10,32733)
+CheckMemberSize(struct _XcmsColorSpace,from_CIEXYZ,4,10,32734)
+CheckOffset(struct _XcmsColorSpace,from_CIEXYZ,16,10,32734)
+CheckMemberSize(struct _XcmsColorSpace,inverse_flag,4,10,32735)
+CheckOffset(struct _XcmsColorSpace,inverse_flag,20,10,32735)
+#elif defined __i386__
+CheckTypeSize(struct _XcmsColorSpace,24, 8361, 2, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsColorSpace,id,4,2,32731)
+CheckOffset(struct _XcmsColorSpace,id,4,2,32731)
+CheckMemberSize(struct _XcmsColorSpace,parseString,4,2,32732)
+CheckOffset(struct _XcmsColorSpace,parseString,8,2,32732)
+CheckMemberSize(struct _XcmsColorSpace,to_CIEXYZ,4,2,32733)
+CheckOffset(struct _XcmsColorSpace,to_CIEXYZ,12,2,32733)
+CheckMemberSize(struct _XcmsColorSpace,from_CIEXYZ,4,2,32734)
+CheckOffset(struct _XcmsColorSpace,from_CIEXYZ,16,2,32734)
+CheckMemberSize(struct _XcmsColorSpace,inverse_flag,4,2,32735)
+CheckOffset(struct _XcmsColorSpace,inverse_flag,20,2,32735)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _XcmsColorSpace,24, 8361, 6, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsColorSpace,id,4,6,32731)
+CheckOffset(struct _XcmsColorSpace,id,4,6,32731)
+CheckMemberSize(struct _XcmsColorSpace,parseString,4,6,32732)
+CheckOffset(struct _XcmsColorSpace,parseString,8,6,32732)
+CheckMemberSize(struct _XcmsColorSpace,to_CIEXYZ,4,6,32733)
+CheckOffset(struct _XcmsColorSpace,to_CIEXYZ,12,6,32733)
+CheckMemberSize(struct _XcmsColorSpace,from_CIEXYZ,4,6,32734)
+CheckOffset(struct _XcmsColorSpace,from_CIEXYZ,16,6,32734)
+CheckMemberSize(struct _XcmsColorSpace,inverse_flag,4,6,32735)
+CheckOffset(struct _XcmsColorSpace,inverse_flag,20,6,32735)
+#elif defined __x86_64__
+CheckTypeSize(struct _XcmsColorSpace,48, 8361, 11, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsColorSpace,id,8,11,32731)
+CheckOffset(struct _XcmsColorSpace,id,8,11,32731)
+CheckMemberSize(struct _XcmsColorSpace,parseString,8,11,32732)
+CheckOffset(struct _XcmsColorSpace,parseString,16,11,32732)
+CheckMemberSize(struct _XcmsColorSpace,to_CIEXYZ,8,11,32733)
+CheckOffset(struct _XcmsColorSpace,to_CIEXYZ,24,11,32733)
+CheckMemberSize(struct _XcmsColorSpace,from_CIEXYZ,8,11,32734)
+CheckOffset(struct _XcmsColorSpace,from_CIEXYZ,32,11,32734)
+CheckMemberSize(struct _XcmsColorSpace,inverse_flag,4,11,32735)
+CheckOffset(struct _XcmsColorSpace,inverse_flag,40,11,32735)
+#elif defined __s390x__
+CheckTypeSize(struct _XcmsColorSpace,48, 8361, 12, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsColorSpace,id,8,12,32731)
+CheckOffset(struct _XcmsColorSpace,id,8,12,32731)
+CheckMemberSize(struct _XcmsColorSpace,parseString,8,12,32732)
+CheckOffset(struct _XcmsColorSpace,parseString,16,12,32732)
+CheckMemberSize(struct _XcmsColorSpace,to_CIEXYZ,8,12,32733)
+CheckOffset(struct _XcmsColorSpace,to_CIEXYZ,24,12,32733)
+CheckMemberSize(struct _XcmsColorSpace,from_CIEXYZ,8,12,32734)
+CheckOffset(struct _XcmsColorSpace,from_CIEXYZ,32,12,32734)
+CheckMemberSize(struct _XcmsColorSpace,inverse_flag,4,12,32735)
+CheckOffset(struct _XcmsColorSpace,inverse_flag,40,12,32735)
+#elif defined __ia64__
+CheckTypeSize(struct _XcmsColorSpace,48, 8361, 3, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsColorSpace,id,8,3,32731)
+CheckOffset(struct _XcmsColorSpace,id,8,3,32731)
+CheckMemberSize(struct _XcmsColorSpace,parseString,8,3,32732)
+CheckOffset(struct _XcmsColorSpace,parseString,16,3,32732)
+CheckMemberSize(struct _XcmsColorSpace,to_CIEXYZ,8,3,32733)
+CheckOffset(struct _XcmsColorSpace,to_CIEXYZ,24,3,32733)
+CheckMemberSize(struct _XcmsColorSpace,from_CIEXYZ,8,3,32734)
+CheckOffset(struct _XcmsColorSpace,from_CIEXYZ,32,3,32734)
+CheckMemberSize(struct _XcmsColorSpace,inverse_flag,4,3,32735)
+CheckOffset(struct _XcmsColorSpace,inverse_flag,40,3,32735)
+#elif defined __powerpc64__
+CheckTypeSize(struct _XcmsColorSpace,48, 8361, 9, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XcmsColorSpace,id,8,9,32731)
+CheckOffset(struct _XcmsColorSpace,id,8,9,32731)
+CheckMemberSize(struct _XcmsColorSpace,parseString,8,9,32732)
+CheckOffset(struct _XcmsColorSpace,parseString,16,9,32732)
+CheckMemberSize(struct _XcmsColorSpace,to_CIEXYZ,8,9,32733)
+CheckOffset(struct _XcmsColorSpace,to_CIEXYZ,24,9,32733)
+CheckMemberSize(struct _XcmsColorSpace,from_CIEXYZ,8,9,32734)
+CheckOffset(struct _XcmsColorSpace,from_CIEXYZ,32,9,32734)
+CheckMemberSize(struct _XcmsColorSpace,inverse_flag,4,9,32735)
+CheckOffset(struct _XcmsColorSpace,inverse_flag,40,9,32735)
+#else
+Msg("Find size of _XcmsColorSpace (8361)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8361,0);
 #endif
 
 #if defined __i386__

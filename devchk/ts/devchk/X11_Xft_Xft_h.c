@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 32
+#define __LSB_VERSION__ 40
 struct _XftFontInfo {};
 struct _XftFtFile {};
 #include "X11/Xft/Xft.h"
@@ -104,9 +104,6 @@ cnt++;
 CheckTypeSize(struct _XftColor,12, 12556, 2, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct _XftColor,color,8,2,63992)
 CheckOffset(struct _XftColor,color,4,2,63992)
-#elif 
-Msg("Find size of _XftColor (12556)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,12556,0);
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(struct _XftColor,0, 12556, 10, 1.2, NULL, 0, NULL)
 Msg("Missing member data for _XftColor on S390\n");
@@ -354,8 +351,23 @@ Msg("Find size of XftGlyphSpec * (12577)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,12576,NULL);\n",architecture,12577,0);
 #endif
 
-#if 1
-CheckTypeSize(const XftColor,0, 16992, 1, 1.2, NULL, 12557, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(const XftColor,12, 16992, 10, 1.2, NULL, 12557, NULL)
+#elif defined __i386__
+CheckTypeSize(const XftColor,12, 16992, 2, 1.2, NULL, 12557, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(const XftColor,12, 16992, 6, 1.2, NULL, 12557, NULL)
+#elif defined __x86_64__
+CheckTypeSize(const XftColor,16, 16992, 11, 1.2, NULL, 12557, NULL)
+#elif defined __s390x__
+CheckTypeSize(const XftColor,16, 16992, 12, 1.2, NULL, 12557, NULL)
+#elif defined __ia64__
+CheckTypeSize(const XftColor,16, 16992, 3, 1.2, NULL, 12557, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(const XftColor,16, 16992, 9, 1.2, NULL, 12557, NULL)
+#else
+Msg("Find size of const XftColor (16992)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,12557,NULL);\n",architecture,16992,0);
 #endif
 
 #if 1
@@ -448,8 +460,23 @@ Msg("Find size of XftCharFontSpec (17009)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,17008,NULL);\n",architecture,17009,0);
 #endif
 
-#if 1
-CheckTypeSize(const XftCharFontSpec,0, 17010, 1, 1.2, NULL, 17009, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(const XftCharFontSpec,12, 17010, 10, 1.2, NULL, 17009, NULL)
+#elif defined __i386__
+CheckTypeSize(const XftCharFontSpec,12, 17010, 2, 1.2, NULL, 17009, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(const XftCharFontSpec,12, 17010, 6, 1.2, NULL, 17009, NULL)
+#elif defined __x86_64__
+CheckTypeSize(const XftCharFontSpec,16, 17010, 11, 1.2, NULL, 17009, NULL)
+#elif defined __s390x__
+CheckTypeSize(const XftCharFontSpec,16, 17010, 12, 1.2, NULL, 17009, NULL)
+#elif defined __ia64__
+CheckTypeSize(const XftCharFontSpec,16, 17010, 3, 1.2, NULL, 17009, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(const XftCharFontSpec,16, 17010, 9, 1.2, NULL, 17009, NULL)
+#else
+Msg("Find size of const XftCharFontSpec (17010)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,17009,NULL);\n",architecture,17010,0);
 #endif
 
 #if 1
@@ -497,8 +524,23 @@ Msg("Find size of XftGlyphFontSpec (17017)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,17016,NULL);\n",architecture,17017,0);
 #endif
 
-#if 1
-CheckTypeSize(const XftGlyphFontSpec,0, 17018, 1, 1.2, NULL, 17017, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(const XftGlyphFontSpec,12, 17018, 10, 1.2, NULL, 17017, NULL)
+#elif defined __i386__
+CheckTypeSize(const XftGlyphFontSpec,12, 17018, 2, 1.2, NULL, 17017, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(const XftGlyphFontSpec,12, 17018, 6, 1.2, NULL, 17017, NULL)
+#elif defined __x86_64__
+CheckTypeSize(const XftGlyphFontSpec,16, 17018, 11, 1.2, NULL, 17017, NULL)
+#elif defined __s390x__
+CheckTypeSize(const XftGlyphFontSpec,16, 17018, 12, 1.2, NULL, 17017, NULL)
+#elif defined __ia64__
+CheckTypeSize(const XftGlyphFontSpec,16, 17018, 3, 1.2, NULL, 17017, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(const XftGlyphFontSpec,16, 17018, 9, 1.2, NULL, 17017, NULL)
+#else
+Msg("Find size of const XftGlyphFontSpec (17018)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,17017,NULL);\n",architecture,17018,0);
 #endif
 
 #if 1

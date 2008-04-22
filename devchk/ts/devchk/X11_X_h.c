@@ -3476,23 +3476,83 @@ cnt++;
 
 #endif
 
-#if 1
-CheckTypeSize(KeyCode *,0, 100350, 1, 1.2, NULL, 8179, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(KeyCode *,4, 100350, 10, 1.2, NULL, 8179, NULL)
+#elif defined __i386__
+CheckTypeSize(KeyCode *,4, 100350, 2, 1.2, NULL, 8179, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(KeyCode *,4, 100350, 6, 1.2, NULL, 8179, NULL)
+#elif defined __x86_64__
+CheckTypeSize(KeyCode *,8, 100350, 11, 1.2, NULL, 8179, NULL)
+#elif defined __s390x__
+CheckTypeSize(KeyCode *,8, 100350, 12, 1.2, NULL, 8179, NULL)
+#elif defined __ia64__
+CheckTypeSize(KeyCode *,8, 100350, 3, 1.2, NULL, 8179, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(KeyCode *,8, 100350, 9, 1.2, NULL, 8179, NULL)
+#else
+Msg("Find size of KeyCode * (100350)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8179,NULL);\n",architecture,100350,0);
+#endif
+
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(KeySym *,4, 100367, 10, 1.2, NULL, 8731, NULL)
+#elif defined __i386__
+CheckTypeSize(KeySym *,4, 100367, 2, 1.2, NULL, 8731, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(KeySym *,4, 100367, 6, 1.2, NULL, 8731, NULL)
+#elif defined __x86_64__
+CheckTypeSize(KeySym *,8, 100367, 11, 1.2, NULL, 8731, NULL)
+#elif defined __s390x__
+CheckTypeSize(KeySym *,8, 100367, 12, 1.2, NULL, 8731, NULL)
+#elif defined __ia64__
+CheckTypeSize(KeySym *,8, 100367, 3, 1.2, NULL, 8731, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(KeySym *,8, 100367, 9, 1.2, NULL, 8731, NULL)
+#else
+Msg("Find size of KeySym * (100367)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8731,NULL);\n",architecture,100367,0);
+#endif
+
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(Atom *,4, 100370, 10, 1.2, NULL, 8173, NULL)
+#elif defined __i386__
+CheckTypeSize(Atom *,4, 100370, 2, 1.2, NULL, 8173, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(Atom *,4, 100370, 6, 1.2, NULL, 8173, NULL)
+#elif defined __x86_64__
+CheckTypeSize(Atom *,8, 100370, 11, 1.2, NULL, 8173, NULL)
+#elif defined __s390x__
+CheckTypeSize(Atom *,8, 100370, 12, 1.2, NULL, 8173, NULL)
+#elif defined __ia64__
+CheckTypeSize(Atom *,8, 100370, 3, 1.2, NULL, 8173, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(Atom *,8, 100370, 9, 1.2, NULL, 8173, NULL)
+#else
+Msg("Find size of Atom * (100370)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8173,NULL);\n",architecture,100370,0);
 #endif
 
 #if 1
-CheckTypeSize(KeySym *,0, 100367, 1, 1.2, NULL, 8731, NULL)
 #endif
 
-#if 1
-CheckTypeSize(Atom *,0, 100370, 1, 1.2, NULL, 8173, NULL)
-#endif
-
-#if 1
-#endif
-
-#if 1
-CheckTypeSize(Time *,0, 100392, 1, 1.2, NULL, 8175, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(Time *,4, 100392, 10, 1.2, NULL, 8175, NULL)
+#elif defined __i386__
+CheckTypeSize(Time *,4, 100392, 2, 1.2, NULL, 8175, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(Time *,4, 100392, 6, 1.2, NULL, 8175, NULL)
+#elif defined __x86_64__
+CheckTypeSize(Time *,8, 100392, 11, 1.2, NULL, 8175, NULL)
+#elif defined __s390x__
+CheckTypeSize(Time *,8, 100392, 12, 1.2, NULL, 8175, NULL)
+#elif defined __ia64__
+CheckTypeSize(Time *,8, 100392, 3, 1.2, NULL, 8175, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(Time *,8, 100392, 9, 1.2, NULL, 8175, NULL)
+#else
+Msg("Find size of Time * (100392)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8175,NULL);\n",architecture,100392,0);
 #endif
 
 #if defined __i386__
@@ -3514,8 +3574,23 @@ Msg("Find size of XID (8171)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8171,0);
 #endif
 
-#if 1
-CheckTypeSize(Mask,0, 8172, 1, 1.2, NULL, 9, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(Mask,4, 8172, 10, 1.2, NULL, 9, NULL)
+#elif defined __i386__
+CheckTypeSize(Mask,4, 8172, 2, 1.2, NULL, 9, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(Mask,4, 8172, 6, 1.2, NULL, 9, NULL)
+#elif defined __x86_64__
+CheckTypeSize(Mask,8, 8172, 11, 1.2, NULL, 9, NULL)
+#elif defined __s390x__
+CheckTypeSize(Mask,8, 8172, 12, 1.2, NULL, 9, NULL)
+#elif defined __ia64__
+CheckTypeSize(Mask,8, 8172, 3, 1.2, NULL, 9, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(Mask,8, 8172, 9, 1.2, NULL, 9, NULL)
+#else
+Msg("Find size of Mask (8172)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8172,0);
 #endif
 
 #if defined __i386__
