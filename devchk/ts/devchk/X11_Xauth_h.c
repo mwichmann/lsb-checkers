@@ -127,16 +127,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9290,NULL);\n",archit
 
 #if 1
 CheckTypeSize(struct xauth,0, 9290, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for xauth on All\n");
-CheckOffset(struct xauth,family,0,1,32599)
-CheckOffset(struct xauth,address_length,0,1,32600)
-CheckOffset(struct xauth,address,0,1,32601)
-CheckOffset(struct xauth,number_length,0,1,32602)
-CheckOffset(struct xauth,number,0,1,32603)
-CheckOffset(struct xauth,name_length,0,1,32604)
-CheckOffset(struct xauth,name,0,1,32605)
-CheckOffset(struct xauth,data_length,0,1,32606)
-CheckOffset(struct xauth,data,0,1,32607)
+CheckMemberSize(struct xauth,address_length,2,1,32600)
+CheckOffset(struct xauth,address_length,2,1,32600)
 #endif
 
 #ifdef TET_TEST
