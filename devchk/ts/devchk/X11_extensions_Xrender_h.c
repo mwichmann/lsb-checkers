@@ -221,6 +221,41 @@ CheckOffset(struct _XTrapezoid,top,0,2,64004)
 CheckOffset(struct _XTrapezoid,bottom,0,2,64005)
 CheckOffset(struct _XTrapezoid,left,0,2,64006)
 CheckOffset(struct _XTrapezoid,right,0,2,64007)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _XTrapezoid,0, 12568, 10, 1.2, NULL, 0, NULL)
+Msg("Missing member data for _XTrapezoid on S390\n");
+CheckOffset(struct _XTrapezoid,top,0,10,64004)
+CheckOffset(struct _XTrapezoid,bottom,0,10,64005)
+CheckOffset(struct _XTrapezoid,left,0,10,64006)
+CheckOffset(struct _XTrapezoid,right,0,10,64007)
+#elif defined __x86_64__
+CheckTypeSize(struct _XTrapezoid,0, 12568, 11, 1.2, NULL, 0, NULL)
+Msg("Missing member data for _XTrapezoid on x86-64\n");
+CheckOffset(struct _XTrapezoid,top,0,11,64004)
+CheckOffset(struct _XTrapezoid,bottom,0,11,64005)
+CheckOffset(struct _XTrapezoid,left,0,11,64006)
+CheckOffset(struct _XTrapezoid,right,0,11,64007)
+#elif defined __s390x__
+CheckTypeSize(struct _XTrapezoid,0, 12568, 12, 1.2, NULL, 0, NULL)
+Msg("Missing member data for _XTrapezoid on S390X\n");
+CheckOffset(struct _XTrapezoid,top,0,12,64004)
+CheckOffset(struct _XTrapezoid,bottom,0,12,64005)
+CheckOffset(struct _XTrapezoid,left,0,12,64006)
+CheckOffset(struct _XTrapezoid,right,0,12,64007)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _XTrapezoid,0, 12568, 6, 1.2, NULL, 0, NULL)
+Msg("Missing member data for _XTrapezoid on PPC32\n");
+CheckOffset(struct _XTrapezoid,top,0,6,64004)
+CheckOffset(struct _XTrapezoid,bottom,0,6,64005)
+CheckOffset(struct _XTrapezoid,left,0,6,64006)
+CheckOffset(struct _XTrapezoid,right,0,6,64007)
+#elif defined __powerpc64__
+CheckTypeSize(struct _XTrapezoid,0, 12568, 9, 1.2, NULL, 0, NULL)
+Msg("Missing member data for _XTrapezoid on PPC64\n");
+CheckOffset(struct _XTrapezoid,top,0,9,64004)
+CheckOffset(struct _XTrapezoid,bottom,0,9,64005)
+CheckOffset(struct _XTrapezoid,left,0,9,64006)
+CheckOffset(struct _XTrapezoid,right,0,9,64007)
 #else
 Msg("Find size of _XTrapezoid (12568)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,12568,0);
@@ -269,14 +304,14 @@ CheckTypeSize(XRenderColor,8, 16626, 1, 1.2, NULL, 16625, NULL)
 #endif
 
 #if 1
-CheckTypeSize(const XRenderColor,0, 16627, 1, 1.2, NULL, 16626, NULL)
+CheckTypeSize(const XRenderColor,8, 16627, 1, 1.2, NULL, 16626, NULL)
 #endif
 
 #if 1
 #endif
 
 #if 1
-CheckTypeSize(const XRectangle,0, 16630, 1, 1.2, NULL, 8408, NULL)
+CheckTypeSize(const XRectangle,8, 16630, 1, 1.2, NULL, 8408, NULL)
 #endif
 
 #if 1
@@ -362,7 +397,7 @@ CheckTypeSize(const XRenderPictFormat,0, 16641, 1, 1.2, NULL, 16640, NULL)
 #endif
 
 #if 1
-CheckTypeSize(const XPointFixed,0, 16646, 1, 1.2, NULL, 16645, NULL)
+CheckTypeSize(const XPointFixed,8, 16646, 1, 1.2, NULL, 16645, NULL)
 #endif
 
 #if 1
@@ -370,13 +405,16 @@ CheckTypeSize(const XPointFixed,0, 16646, 1, 1.2, NULL, 16645, NULL)
 
 #if 1
 CheckTypeSize(struct _XGlyphInfo,12, 16648, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XGlyphInfo on All\n");
-CheckOffset(struct _XGlyphInfo,width,0,1,53871)
-CheckOffset(struct _XGlyphInfo,height,0,1,53872)
-CheckOffset(struct _XGlyphInfo,x,0,1,53873)
-CheckOffset(struct _XGlyphInfo,y,0,1,53874)
-CheckOffset(struct _XGlyphInfo,xOff,0,1,53875)
-CheckOffset(struct _XGlyphInfo,yOff,0,1,53876)
+CheckMemberSize(struct _XGlyphInfo,height,2,1,53872)
+CheckOffset(struct _XGlyphInfo,height,2,1,53872)
+CheckMemberSize(struct _XGlyphInfo,x,2,1,53873)
+CheckOffset(struct _XGlyphInfo,x,4,1,53873)
+CheckMemberSize(struct _XGlyphInfo,y,2,1,53874)
+CheckOffset(struct _XGlyphInfo,y,6,1,53874)
+CheckMemberSize(struct _XGlyphInfo,xOff,2,1,53875)
+CheckOffset(struct _XGlyphInfo,xOff,8,1,53875)
+CheckMemberSize(struct _XGlyphInfo,yOff,2,1,53876)
+CheckOffset(struct _XGlyphInfo,yOff,10,1,53876)
 #endif
 
 #if defined __x86_64__
@@ -399,7 +437,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16648,NULL);\n",archi
 #endif
 
 #if 1
-CheckTypeSize(const XGlyphInfo,0, 16650, 1, 1.2, NULL, 16649, NULL)
+CheckTypeSize(const XGlyphInfo,12, 16650, 1, 1.2, NULL, 16649, NULL)
 #endif
 
 #if 1
@@ -487,9 +525,8 @@ CheckTypeSize(XAnimCursor *,4, 16662, 1, 1.2, NULL, 16661, NULL)
 
 #if 1
 CheckTypeSize(struct _XRadialGradient,24, 16663, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XRadialGradient on All\n");
-CheckOffset(struct _XRadialGradient,inner,0,1,53887)
-CheckOffset(struct _XRadialGradient,outer,0,1,53888)
+CheckMemberSize(struct _XRadialGradient,outer,12,1,53888)
+CheckOffset(struct _XRadialGradient,outer,12,1,53888)
 #endif
 
 #if 1
@@ -497,14 +534,14 @@ CheckTypeSize(XRadialGradient,24, 16666, 1, 1.2, NULL, 16663, NULL)
 #endif
 
 #if 1
-CheckTypeSize(const XRadialGradient,0, 16667, 1, 1.2, NULL, 16666, NULL)
+CheckTypeSize(const XRadialGradient,24, 16667, 1, 1.2, NULL, 16666, NULL)
 #endif
 
 #if 1
 #endif
 
 #if 1
-CheckTypeSize(const XFixed,0, 16669, 1, 1.2, NULL, 16644, NULL)
+CheckTypeSize(const XFixed,4, 16669, 1, 1.2, NULL, 16644, NULL)
 #endif
 
 #if 1
@@ -594,7 +631,7 @@ CheckTypeSize(XConicalGradient,12, 16680, 1, 1.2, NULL, 16679, NULL)
 #endif
 
 #if 1
-CheckTypeSize(const XConicalGradient,0, 16681, 1, 1.2, NULL, 16680, NULL)
+CheckTypeSize(const XConicalGradient,12, 16681, 1, 1.2, NULL, 16680, NULL)
 #endif
 
 #if 1
@@ -619,7 +656,7 @@ CheckTypeSize(XLinearGradient,16, 16686, 1, 1.2, NULL, 16685, NULL)
 #endif
 
 #if 1
-CheckTypeSize(const XLinearGradient,0, 16687, 1, 1.2, NULL, 16686, NULL)
+CheckTypeSize(const XLinearGradient,16, 16687, 1, 1.2, NULL, 16686, NULL)
 #endif
 
 #if 1
@@ -637,7 +674,7 @@ CheckTypeSize(XPointDouble,16, 16691, 1, 1.2, NULL, 16689, NULL)
 #endif
 
 #if 1
-CheckTypeSize(const XPointDouble,0, 16692, 1, 1.2, NULL, 16691, NULL)
+CheckTypeSize(const XPointDouble,16, 16692, 1, 1.2, NULL, 16691, NULL)
 #endif
 
 #if 1
@@ -648,7 +685,7 @@ CheckTypeSize(XFixed *,4, 16694, 1, 1.2, NULL, 16644, NULL)
 #endif
 
 #if 1
-CheckTypeSize(const XTrapezoid,0, 16695, 1, 1.2, NULL, 12569, NULL)
+CheckTypeSize(const XTrapezoid,40, 16695, 1, 1.2, NULL, 12569, NULL)
 #endif
 
 #if 1
@@ -700,9 +737,8 @@ CheckTypeSize(const XRenderPictureAttributes,0, 16699, 1, 1.2, NULL, 16698, NULL
 
 #if 1
 CheckTypeSize(struct _XTrap,24, 16701, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XTrap on All\n");
-CheckOffset(struct _XTrap,top,0,1,53921)
-CheckOffset(struct _XTrap,bottom,0,1,53922)
+CheckMemberSize(struct _XTrap,bottom,12,1,53922)
+CheckOffset(struct _XTrap,bottom,12,1,53922)
 #endif
 
 #if 1
@@ -710,7 +746,7 @@ CheckTypeSize(XTrap,24, 16704, 1, 1.2, NULL, 16701, NULL)
 #endif
 
 #if 1
-CheckTypeSize(const XTrap,0, 16705, 1, 1.2, NULL, 16704, NULL)
+CheckTypeSize(const XTrap,24, 16705, 1, 1.2, NULL, 16704, NULL)
 #endif
 
 #if 1
@@ -793,10 +829,8 @@ CheckTypeSize(const XGlyphElt16,0, 16714, 1, 1.2, NULL, 16713, NULL)
 
 #if 1
 CheckTypeSize(struct _XTriangle,24, 16716, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XTriangle on All\n");
-CheckOffset(struct _XTriangle,p1,0,1,53933)
-CheckOffset(struct _XTriangle,p2,0,1,53934)
-CheckOffset(struct _XTriangle,p3,0,1,53935)
+CheckMemberSize(struct _XTriangle,p2,8,1,53934)
+CheckOffset(struct _XTriangle,p2,8,1,53934)
 #endif
 
 #if 1
@@ -804,7 +838,7 @@ CheckTypeSize(XTriangle,24, 16717, 1, 1.2, NULL, 16716, NULL)
 #endif
 
 #if 1
-CheckTypeSize(const XTriangle,0, 16718, 1, 1.2, NULL, 16717, NULL)
+CheckTypeSize(const XTriangle,24, 16718, 1, 1.2, NULL, 16717, NULL)
 #endif
 
 #if 1
@@ -831,9 +865,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",archi
 
 #if 1
 CheckTypeSize(struct _XPointFixed,8, 16643, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XPointFixed on All\n");
-CheckOffset(struct _XPointFixed,x,0,1,53869)
-CheckOffset(struct _XPointFixed,y,0,1,53870)
+CheckMemberSize(struct _XPointFixed,y,4,1,53870)
+CheckOffset(struct _XPointFixed,y,4,1,53870)
 #endif
 
 #if 1
@@ -846,10 +879,10 @@ CheckTypeSize(XPointFixed,8, 16645, 1, 1.2, NULL, 16643, NULL)
 
 #if 1
 CheckTypeSize(struct _XCircle,12, 16664, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XCircle on All\n");
-CheckOffset(struct _XCircle,x,0,1,53884)
-CheckOffset(struct _XCircle,y,0,1,53885)
-CheckOffset(struct _XCircle,radius,0,1,53886)
+CheckMemberSize(struct _XCircle,y,4,1,53885)
+CheckOffset(struct _XCircle,y,4,1,53885)
+CheckMemberSize(struct _XCircle,radius,4,1,53886)
+CheckOffset(struct _XCircle,radius,8,1,53886)
 #endif
 
 #if 1
@@ -862,10 +895,10 @@ CheckTypeSize(XDouble,8, 16690, 1, 1.2, NULL, 13, NULL)
 
 #if 1
 CheckTypeSize(struct _XSpanFix,12, 16702, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XSpanFix on All\n");
-CheckOffset(struct _XSpanFix,left,0,1,53918)
-CheckOffset(struct _XSpanFix,right,0,1,53919)
-CheckOffset(struct _XSpanFix,y,0,1,53920)
+CheckMemberSize(struct _XSpanFix,right,4,1,53919)
+CheckOffset(struct _XSpanFix,right,4,1,53919)
+CheckMemberSize(struct _XSpanFix,y,4,1,53920)
+CheckOffset(struct _XSpanFix,y,8,1,53920)
 #endif
 
 #if 1
@@ -873,7 +906,7 @@ CheckTypeSize(XSpanFix,12, 16703, 1, 1.2, NULL, 16702, NULL)
 #endif
 
 #if 1
-CheckTypeSize(struct _XLineFixed,8, 17024, 1, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XLineFixed,16, 17024, 1, 1.2, NULL, 0, NULL)
 Msg("Missing member data for _XLineFixed on All\n");
 CheckOffset(struct _XLineFixed,p1,0,1,64002)
 CheckOffset(struct _XLineFixed,p2,0,1,64003)

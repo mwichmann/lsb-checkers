@@ -32,6 +32,16 @@ Msg("Checking data structures in X11/extensions/Xdbe.h\n");
 printf("Checking data structures in X11/extensions/Xdbe.h\n");
 #if defined __i386__
 CheckTypeSize(XdbeBackBuffer,4, 9394, 2, 1.2, NULL, 8727, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(XdbeBackBuffer,0, 9394, 10, 1.2, NULL, 8727, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XdbeBackBuffer,0, 9394, 11, 1.2, NULL, 8727, NULL)
+#elif defined __s390x__
+CheckTypeSize(XdbeBackBuffer,0, 9394, 12, 1.2, NULL, 8727, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XdbeBackBuffer,0, 9394, 6, 1.2, NULL, 8727, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XdbeBackBuffer,0, 9394, 9, 1.2, NULL, 8727, NULL)
 #else
 Msg("Find size of XdbeBackBuffer (9394)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8727,NULL);\n",architecture,9394,0);
@@ -39,6 +49,16 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8727,NULL);\n",archit
 
 #if defined __i386__
 CheckTypeSize(XdbeSwapAction,1, 9395, 2, 1.2, NULL, 3, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(XdbeSwapAction,0, 9395, 10, 1.2, NULL, 3, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XdbeSwapAction,0, 9395, 11, 1.2, NULL, 3, NULL)
+#elif defined __s390x__
+CheckTypeSize(XdbeSwapAction,0, 9395, 12, 1.2, NULL, 3, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XdbeSwapAction,0, 9395, 6, 1.2, NULL, 3, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XdbeSwapAction,0, 9395, 9, 1.2, NULL, 3, NULL)
 #else
 Msg("Find size of XdbeSwapAction (9395)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,3,NULL);\n",architecture,9395,0);
