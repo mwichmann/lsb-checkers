@@ -597,10 +597,9 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",archit
 #endif
 
 #if 1
-CheckTypeSize(struct _XSyncValue,0, 8611, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XSyncValue on All\n");
-CheckOffset(struct _XSyncValue,hi,0,1,28931)
-CheckOffset(struct _XSyncValue,lo,0,1,28932)
+CheckTypeSize(struct _XSyncValue,8, 8611, 1, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XSyncValue,lo,4,1,28932)
+CheckOffset(struct _XSyncValue,lo,4,1,28932)
 #endif
 
 #if defined __i386__
