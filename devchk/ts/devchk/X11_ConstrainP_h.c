@@ -86,8 +86,23 @@ CheckOffset(struct _ConstraintClassRec,composite_class,0,1,78458)
 CheckOffset(struct _ConstraintClassRec,constraint_class,0,1,78459)
 #endif
 
-#if 1
-CheckTypeSize(struct _ConstraintClassRec *,0, 100652, 1, 1.2, NULL, 100651, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _ConstraintClassRec *,4, 100652, 10, 1.2, NULL, 100651, NULL)
+#elif defined __i386__
+CheckTypeSize(struct _ConstraintClassRec *,4, 100652, 2, 1.2, NULL, 100651, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _ConstraintClassRec *,4, 100652, 6, 1.2, NULL, 100651, NULL)
+#elif defined __x86_64__
+CheckTypeSize(struct _ConstraintClassRec *,8, 100652, 11, 1.2, NULL, 100651, NULL)
+#elif defined __s390x__
+CheckTypeSize(struct _ConstraintClassRec *,8, 100652, 12, 1.2, NULL, 100651, NULL)
+#elif defined __ia64__
+CheckTypeSize(struct _ConstraintClassRec *,8, 100652, 3, 1.2, NULL, 100651, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(struct _ConstraintClassRec *,8, 100652, 9, 1.2, NULL, 100651, NULL)
+#else
+Msg("Find size of _ConstraintClassRec * (100652)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100651, NULL);\n",architecture,100652,0);
 #endif
 
 #ifdef TET_TEST

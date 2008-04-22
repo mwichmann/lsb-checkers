@@ -216,11 +216,12 @@ cnt++;
 
 #if defined __i386__
 CheckTypeSize(struct _XTrapezoid,40, 12568, 2, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XTrapezoid on IA32\n");
-CheckOffset(struct _XTrapezoid,top,0,2,64004)
-CheckOffset(struct _XTrapezoid,bottom,0,2,64005)
-CheckOffset(struct _XTrapezoid,left,0,2,64006)
-CheckOffset(struct _XTrapezoid,right,0,2,64007)
+CheckMemberSize(struct _XTrapezoid,bottom,4,2,64005)
+CheckOffset(struct _XTrapezoid,bottom,4,2,64005)
+CheckMemberSize(struct _XTrapezoid,left,16,2,64006)
+CheckOffset(struct _XTrapezoid,left,8,2,64006)
+CheckMemberSize(struct _XTrapezoid,right,16,2,64007)
+CheckOffset(struct _XTrapezoid,right,24,2,64007)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(struct _XTrapezoid,0, 12568, 10, 1.2, NULL, 0, NULL)
 Msg("Missing member data for _XTrapezoid on S390\n");
@@ -340,8 +341,23 @@ Msg("Find size of Glyph (16633)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,16633,0);
 #endif
 
-#if 1
-CheckTypeSize(const Glyph,0, 16634, 1, 1.2, NULL, 16633, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(const Glyph,4, 16634, 10, 1.2, NULL, 16633, NULL)
+#elif defined __i386__
+CheckTypeSize(const Glyph,4, 16634, 2, 1.2, NULL, 16633, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(const Glyph,4, 16634, 6, 1.2, NULL, 16633, NULL)
+#elif defined __x86_64__
+CheckTypeSize(const Glyph,8, 16634, 11, 1.2, NULL, 16633, NULL)
+#elif defined __s390x__
+CheckTypeSize(const Glyph,8, 16634, 12, 1.2, NULL, 16633, NULL)
+#elif defined __ia64__
+CheckTypeSize(const Glyph,8, 16634, 3, 1.2, NULL, 16633, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(const Glyph,8, 16634, 9, 1.2, NULL, 16633, NULL)
+#else
+Msg("Find size of const Glyph (16634)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16633,NULL);\n",architecture,16634,0);
 #endif
 
 #if 1
@@ -389,8 +405,23 @@ Msg("Find size of XRenderPictFormat (16640)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16639,NULL);\n",architecture,16640,0);
 #endif
 
-#if 1
-CheckTypeSize(const XRenderPictFormat,0, 16641, 1, 1.2, NULL, 16640, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(const XRenderPictFormat,32, 16641, 10, 1.2, NULL, 16640, NULL)
+#elif defined __i386__
+CheckTypeSize(const XRenderPictFormat,32, 16641, 2, 1.2, NULL, 16640, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(const XRenderPictFormat,32, 16641, 6, 1.2, NULL, 16640, NULL)
+#elif defined __x86_64__
+CheckTypeSize(const XRenderPictFormat,40, 16641, 11, 1.2, NULL, 16640, NULL)
+#elif defined __s390x__
+CheckTypeSize(const XRenderPictFormat,40, 16641, 12, 1.2, NULL, 16640, NULL)
+#elif defined __ia64__
+CheckTypeSize(const XRenderPictFormat,40, 16641, 3, 1.2, NULL, 16640, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(const XRenderPictFormat,40, 16641, 9, 1.2, NULL, 16640, NULL)
+#else
+Msg("Find size of const XRenderPictFormat (16641)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16640,NULL);\n",architecture,16641,0);
 #endif
 
 #if 1
@@ -576,8 +607,23 @@ Msg("Find size of XGlyphElt32 (16672)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16671,NULL);\n",architecture,16672,0);
 #endif
 
-#if 1
-CheckTypeSize(const XGlyphElt32,0, 16673, 1, 1.2, NULL, 16672, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(const XGlyphElt32,20, 16673, 10, 1.2, NULL, 16672, NULL)
+#elif defined __i386__
+CheckTypeSize(const XGlyphElt32,20, 16673, 2, 1.2, NULL, 16672, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(const XGlyphElt32,20, 16673, 6, 1.2, NULL, 16672, NULL)
+#elif defined __x86_64__
+CheckTypeSize(const XGlyphElt32,32, 16673, 11, 1.2, NULL, 16672, NULL)
+#elif defined __s390x__
+CheckTypeSize(const XGlyphElt32,32, 16673, 12, 1.2, NULL, 16672, NULL)
+#elif defined __ia64__
+CheckTypeSize(const XGlyphElt32,32, 16673, 3, 1.2, NULL, 16672, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(const XGlyphElt32,32, 16673, 9, 1.2, NULL, 16672, NULL)
+#else
+Msg("Find size of const XGlyphElt32 (16673)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16672,NULL);\n",architecture,16673,0);
 #endif
 
 #if 1
@@ -612,8 +658,23 @@ Msg("Find size of XGlyphElt8 (16676)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16675,NULL);\n",architecture,16676,0);
 #endif
 
-#if 1
-CheckTypeSize(const XGlyphElt8,0, 16677, 1, 1.2, NULL, 16676, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(const XGlyphElt8,20, 16677, 10, 1.2, NULL, 16676, NULL)
+#elif defined __i386__
+CheckTypeSize(const XGlyphElt8,20, 16677, 2, 1.2, NULL, 16676, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(const XGlyphElt8,20, 16677, 6, 1.2, NULL, 16676, NULL)
+#elif defined __x86_64__
+CheckTypeSize(const XGlyphElt8,32, 16677, 11, 1.2, NULL, 16676, NULL)
+#elif defined __s390x__
+CheckTypeSize(const XGlyphElt8,32, 16677, 12, 1.2, NULL, 16676, NULL)
+#elif defined __ia64__
+CheckTypeSize(const XGlyphElt8,32, 16677, 3, 1.2, NULL, 16676, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(const XGlyphElt8,32, 16677, 9, 1.2, NULL, 16676, NULL)
+#else
+Msg("Find size of const XGlyphElt8 (16677)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16676,NULL);\n",architecture,16677,0);
 #endif
 
 #if 1
@@ -637,8 +698,23 @@ CheckTypeSize(const XConicalGradient,12, 16681, 1, 1.2, NULL, 16680, NULL)
 #if 1
 #endif
 
-#if 1
-CheckTypeSize(const Visual,0, 16683, 1, 1.2, NULL, 8377, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(const Visual,32, 16683, 10, 1.2, NULL, 8377, NULL)
+#elif defined __i386__
+CheckTypeSize(const Visual,32, 16683, 2, 1.2, NULL, 8377, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(const Visual,32, 16683, 6, 1.2, NULL, 8377, NULL)
+#elif defined __x86_64__
+CheckTypeSize(const Visual,56, 16683, 11, 1.2, NULL, 8377, NULL)
+#elif defined __s390x__
+CheckTypeSize(const Visual,56, 16683, 12, 1.2, NULL, 8377, NULL)
+#elif defined __ia64__
+CheckTypeSize(const Visual,56, 16683, 3, 1.2, NULL, 8377, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(const Visual,56, 16683, 9, 1.2, NULL, 8377, NULL)
+#else
+Msg("Find size of const Visual (16683)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8377,NULL);\n",architecture,16683,0);
 #endif
 
 #if 1
@@ -728,8 +804,23 @@ Msg("Find size of XRenderPictureAttributes (16698)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16697,NULL);\n",architecture,16698,0);
 #endif
 
-#if 1
-CheckTypeSize(const XRenderPictureAttributes,0, 16699, 1, 1.2, NULL, 16698, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(const XRenderPictureAttributes,52, 16699, 10, 1.2, NULL, 16698, NULL)
+#elif defined __i386__
+CheckTypeSize(const XRenderPictureAttributes,52, 16699, 2, 1.2, NULL, 16698, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(const XRenderPictureAttributes,52, 16699, 6, 1.2, NULL, 16698, NULL)
+#elif defined __x86_64__
+CheckTypeSize(const XRenderPictureAttributes,72, 16699, 11, 1.2, NULL, 16698, NULL)
+#elif defined __s390x__
+CheckTypeSize(const XRenderPictureAttributes,72, 16699, 12, 1.2, NULL, 16698, NULL)
+#elif defined __ia64__
+CheckTypeSize(const XRenderPictureAttributes,72, 16699, 3, 1.2, NULL, 16698, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(const XRenderPictureAttributes,72, 16699, 9, 1.2, NULL, 16698, NULL)
+#else
+Msg("Find size of const XRenderPictureAttributes (16699)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16698,NULL);\n",architecture,16699,0);
 #endif
 
 #if 1
@@ -820,8 +911,23 @@ Msg("Find size of XGlyphElt16 (16713)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16710,NULL);\n",architecture,16713,0);
 #endif
 
-#if 1
-CheckTypeSize(const XGlyphElt16,0, 16714, 1, 1.2, NULL, 16713, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(const XGlyphElt16,20, 16714, 10, 1.2, NULL, 16713, NULL)
+#elif defined __i386__
+CheckTypeSize(const XGlyphElt16,20, 16714, 2, 1.2, NULL, 16713, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(const XGlyphElt16,20, 16714, 6, 1.2, NULL, 16713, NULL)
+#elif defined __x86_64__
+CheckTypeSize(const XGlyphElt16,32, 16714, 11, 1.2, NULL, 16713, NULL)
+#elif defined __s390x__
+CheckTypeSize(const XGlyphElt16,32, 16714, 12, 1.2, NULL, 16713, NULL)
+#elif defined __ia64__
+CheckTypeSize(const XGlyphElt16,32, 16714, 3, 1.2, NULL, 16713, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(const XGlyphElt16,32, 16714, 9, 1.2, NULL, 16713, NULL)
+#else
+Msg("Find size of const XGlyphElt16 (16714)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16713,NULL);\n",architecture,16714,0);
 #endif
 
 #if 1

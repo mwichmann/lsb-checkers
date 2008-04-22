@@ -676,11 +676,37 @@ cnt++;
 /* No test for XStringToContext(string) */
 #endif
 
-#if 1
-CheckTypeSize(struct _XComposeStatus,0, 8312, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XComposeStatus on All\n");
-CheckOffset(struct _XComposeStatus,compose_ptr,0,1,32654)
-CheckOffset(struct _XComposeStatus,chars_matched,0,1,32655)
+#if defined __x86_64__
+CheckTypeSize(struct _XComposeStatus,16, 8312, 11, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XComposeStatus,chars_matched,4,11,32655)
+CheckOffset(struct _XComposeStatus,chars_matched,8,11,32655)
+#elif defined __s390x__
+CheckTypeSize(struct _XComposeStatus,16, 8312, 12, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XComposeStatus,chars_matched,4,12,32655)
+CheckOffset(struct _XComposeStatus,chars_matched,8,12,32655)
+#elif defined __ia64__
+CheckTypeSize(struct _XComposeStatus,16, 8312, 3, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XComposeStatus,chars_matched,4,3,32655)
+CheckOffset(struct _XComposeStatus,chars_matched,8,3,32655)
+#elif defined __powerpc64__
+CheckTypeSize(struct _XComposeStatus,16, 8312, 9, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XComposeStatus,chars_matched,4,9,32655)
+CheckOffset(struct _XComposeStatus,chars_matched,8,9,32655)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _XComposeStatus,8, 8312, 10, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XComposeStatus,chars_matched,4,10,32655)
+CheckOffset(struct _XComposeStatus,chars_matched,4,10,32655)
+#elif defined __i386__
+CheckTypeSize(struct _XComposeStatus,8, 8312, 2, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XComposeStatus,chars_matched,4,2,32655)
+CheckOffset(struct _XComposeStatus,chars_matched,4,2,32655)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _XComposeStatus,8, 8312, 6, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XComposeStatus,chars_matched,4,6,32655)
+CheckOffset(struct _XComposeStatus,chars_matched,4,6,32655)
+#else
+Msg("Find size of _XComposeStatus (8312)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8312,0);
 #endif
 
 #if defined __i386__

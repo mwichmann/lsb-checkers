@@ -197,8 +197,23 @@ Msg("Find size of XrmRepresentation (9554)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9542,NULL);\n",architecture,9554,0);
 #endif
 
-#if 1
-CheckTypeSize(XrmValue,0, 9556, 1, 1.2, NULL, 9555, NULL)
+#if defined __x86_64__
+CheckTypeSize(XrmValue,16, 9556, 11, 1.2, NULL, 9555, NULL)
+#elif defined __s390x__
+CheckTypeSize(XrmValue,16, 9556, 12, 1.2, NULL, 9555, NULL)
+#elif defined __ia64__
+CheckTypeSize(XrmValue,16, 9556, 3, 1.2, NULL, 9555, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XrmValue,16, 9556, 9, 1.2, NULL, 9555, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(XrmValue,8, 9556, 10, 1.2, NULL, 9555, NULL)
+#elif defined __i386__
+CheckTypeSize(XrmValue,8, 9556, 2, 1.2, NULL, 9555, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XrmValue,8, 9556, 6, 1.2, NULL, 9555, NULL)
+#else
+Msg("Find size of XrmValue (9556)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9555,NULL);\n",architecture,9556,0);
 #endif
 
 #if defined __i386__
@@ -218,12 +233,42 @@ Msg("Find size of XrmValuePtr (9559)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9558,NULL);\n",architecture,9559,0);
 #endif
 
-#if 1
-CheckTypeSize(XrmHashBucket,0, 9560, 1, 1.2, NULL, 7107, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(XrmHashBucket,4, 9560, 10, 1.2, NULL, 7107, NULL)
+#elif defined __i386__
+CheckTypeSize(XrmHashBucket,4, 9560, 2, 1.2, NULL, 7107, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XrmHashBucket,4, 9560, 6, 1.2, NULL, 7107, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XrmHashBucket,8, 9560, 11, 1.2, NULL, 7107, NULL)
+#elif defined __s390x__
+CheckTypeSize(XrmHashBucket,8, 9560, 12, 1.2, NULL, 7107, NULL)
+#elif defined __ia64__
+CheckTypeSize(XrmHashBucket,8, 9560, 3, 1.2, NULL, 7107, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XrmHashBucket,8, 9560, 9, 1.2, NULL, 7107, NULL)
+#else
+Msg("Find size of XrmHashBucket (9560)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7107,NULL);\n",architecture,9560,0);
 #endif
 
-#if 1
-CheckTypeSize(XrmHashTable,0, 9562, 1, 1.2, NULL, 9561, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(XrmHashTable,4, 9562, 10, 1.2, NULL, 9561, NULL)
+#elif defined __i386__
+CheckTypeSize(XrmHashTable,4, 9562, 2, 1.2, NULL, 9561, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XrmHashTable,4, 9562, 6, 1.2, NULL, 9561, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XrmHashTable,8, 9562, 11, 1.2, NULL, 9561, NULL)
+#elif defined __s390x__
+CheckTypeSize(XrmHashTable,8, 9562, 12, 1.2, NULL, 9561, NULL)
+#elif defined __ia64__
+CheckTypeSize(XrmHashTable,8, 9562, 3, 1.2, NULL, 9561, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XrmHashTable,8, 9562, 9, 1.2, NULL, 9561, NULL)
+#else
+Msg("Find size of XrmHashTable (9562)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9561,NULL);\n",architecture,9562,0);
 #endif
 
 #if defined __i386__
@@ -258,8 +303,23 @@ CheckEnum("XrmoptionSkipNArgs",XrmoptionSkipNArgs,(((((((0) + 1) + 1) + 1) + 1) 
 CheckTypeSize(XrmOptionKind,4, 9569, 1, 1.2, NULL, 9568, NULL)
 #endif
 
-#if 1
-CheckTypeSize(XrmOptionDescRec,0, 9571, 1, 1.2, NULL, 9570, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(XrmOptionDescRec,16, 9571, 10, 1.2, NULL, 9570, NULL)
+#elif defined __i386__
+CheckTypeSize(XrmOptionDescRec,16, 9571, 2, 1.2, NULL, 9570, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XrmOptionDescRec,16, 9571, 6, 1.2, NULL, 9570, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XrmOptionDescRec,32, 9571, 11, 1.2, NULL, 9570, NULL)
+#elif defined __s390x__
+CheckTypeSize(XrmOptionDescRec,32, 9571, 12, 1.2, NULL, 9570, NULL)
+#elif defined __ia64__
+CheckTypeSize(XrmOptionDescRec,32, 9571, 3, 1.2, NULL, 9570, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XrmOptionDescRec,32, 9571, 9, 1.2, NULL, 9570, NULL)
+#else
+Msg("Find size of XrmOptionDescRec (9571)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9570,NULL);\n",architecture,9571,0);
 #endif
 
 #if defined __i386__
@@ -279,8 +339,23 @@ Msg("Find size of XrmOptionDescList (9574)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9573,NULL);\n",architecture,9574,0);
 #endif
 
-#if 1
-CheckTypeSize(XrmQuark *,0, 100518, 1, 1.2, NULL, 9542, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(XrmQuark *,4, 100518, 10, 1.2, NULL, 9542, NULL)
+#elif defined __i386__
+CheckTypeSize(XrmQuark *,4, 100518, 2, 1.2, NULL, 9542, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XrmQuark *,4, 100518, 6, 1.2, NULL, 9542, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XrmQuark *,8, 100518, 11, 1.2, NULL, 9542, NULL)
+#elif defined __s390x__
+CheckTypeSize(XrmQuark *,8, 100518, 12, 1.2, NULL, 9542, NULL)
+#elif defined __ia64__
+CheckTypeSize(XrmQuark *,8, 100518, 3, 1.2, NULL, 9542, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XrmQuark *,8, 100518, 9, 1.2, NULL, 9542, NULL)
+#else
+Msg("Find size of XrmQuark * (100518)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9542, NULL);\n",architecture,100518,0);
 #endif
 
 #ifdef TET_TEST

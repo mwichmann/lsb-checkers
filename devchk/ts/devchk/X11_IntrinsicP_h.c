@@ -30,16 +30,46 @@ printf("Checking data structures in X11/IntrinsicP.h\n");
 CheckTypeSize(XrmResource,48, 100559, 1, 1.2, NULL, 100558, NULL)
 #endif
 
-#if 1
-CheckTypeSize(XrmResource *,0, 100560, 1, 1.2, NULL, 100559, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(XrmResource *,4, 100560, 10, 1.2, NULL, 100559, NULL)
+#elif defined __i386__
+CheckTypeSize(XrmResource *,4, 100560, 2, 1.2, NULL, 100559, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XrmResource *,4, 100560, 6, 1.2, NULL, 100559, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XrmResource *,8, 100560, 11, 1.2, NULL, 100559, NULL)
+#elif defined __s390x__
+CheckTypeSize(XrmResource *,8, 100560, 12, 1.2, NULL, 100559, NULL)
+#elif defined __ia64__
+CheckTypeSize(XrmResource *,8, 100560, 3, 1.2, NULL, 100559, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XrmResource *,8, 100560, 9, 1.2, NULL, 100559, NULL)
+#else
+Msg("Find size of XrmResource * (100560)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100559,NULL);\n",architecture,100560,0);
 #endif
 
 #if 1
 CheckTypeSize(XrmResourceList,8, 100561, 1, 1.2, NULL, 100560, NULL)
 #endif
 
-#if 1
-CheckTypeSize(XrmResourceList *,0, 100562, 1, 1.2, NULL, 100561, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(XrmResourceList *,4, 100562, 10, 1.2, NULL, 100561, NULL)
+#elif defined __i386__
+CheckTypeSize(XrmResourceList *,4, 100562, 2, 1.2, NULL, 100561, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XrmResourceList *,4, 100562, 6, 1.2, NULL, 100561, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XrmResourceList *,8, 100562, 11, 1.2, NULL, 100561, NULL)
+#elif defined __s390x__
+CheckTypeSize(XrmResourceList *,8, 100562, 12, 1.2, NULL, 100561, NULL)
+#elif defined __ia64__
+CheckTypeSize(XrmResourceList *,8, 100562, 3, 1.2, NULL, 100561, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XrmResourceList *,8, 100562, 9, 1.2, NULL, 100561, NULL)
+#else
+Msg("Find size of XrmResourceList * (100562)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100561,NULL);\n",architecture,100562,0);
 #endif
 
 #if 1
@@ -51,8 +81,23 @@ CheckOffset(struct _XtTMRec,current_state,0,1,78351)
 CheckOffset(struct _XtTMRec,lastEventTime,0,1,78352)
 #endif
 
-#if 1
-CheckTypeSize(struct _XtTMRec *,0, 100588, 1, 1.2, NULL, 100587, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _XtTMRec *,4, 100588, 10, 1.2, NULL, 100587, NULL)
+#elif defined __i386__
+CheckTypeSize(struct _XtTMRec *,4, 100588, 2, 1.2, NULL, 100587, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _XtTMRec *,4, 100588, 6, 1.2, NULL, 100587, NULL)
+#elif defined __x86_64__
+CheckTypeSize(struct _XtTMRec *,8, 100588, 11, 1.2, NULL, 100587, NULL)
+#elif defined __s390x__
+CheckTypeSize(struct _XtTMRec *,8, 100588, 12, 1.2, NULL, 100587, NULL)
+#elif defined __ia64__
+CheckTypeSize(struct _XtTMRec *,8, 100588, 3, 1.2, NULL, 100587, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(struct _XtTMRec *,8, 100588, 9, 1.2, NULL, 100587, NULL)
+#else
+Msg("Find size of _XtTMRec * (100588)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100587,NULL);\n",architecture,100588,0);
 #endif
 
 #if 1
@@ -63,8 +108,23 @@ CheckTypeSize(XtTM,8, 100589, 1, 1.2, NULL, 100588, NULL)
 CheckTypeSize(XtTypedArg,32, 100593, 1, 1.2, NULL, 100592, NULL)
 #endif
 
-#if 1
-CheckTypeSize(XtTypedArg *,0, 100594, 1, 1.2, NULL, 100593, NULL)
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(XtTypedArg *,4, 100594, 10, 1.2, NULL, 100593, NULL)
+#elif defined __i386__
+CheckTypeSize(XtTypedArg *,4, 100594, 2, 1.2, NULL, 100593, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XtTypedArg *,4, 100594, 6, 1.2, NULL, 100593, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XtTypedArg *,8, 100594, 11, 1.2, NULL, 100593, NULL)
+#elif defined __s390x__
+CheckTypeSize(XtTypedArg *,8, 100594, 12, 1.2, NULL, 100593, NULL)
+#elif defined __ia64__
+CheckTypeSize(XtTypedArg *,8, 100594, 3, 1.2, NULL, 100593, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XtTypedArg *,8, 100594, 9, 1.2, NULL, 100593, NULL)
+#else
+Msg("Find size of XtTypedArg * (100594)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100593,NULL);\n",architecture,100594,0);
 #endif
 
 #if 1
