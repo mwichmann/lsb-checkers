@@ -19,6 +19,12 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 my $dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST, $LSBUSER, $LSBDBPASSWD)
     or die "Couldn't connect to database: ".DBI->errstr;
 
+$newerVersion_Q = $dbh->prepare("SELECT AIint FROM ArchInt WHERE AIint= ?  AND AIarch = ? AND AIappearedin > ? ")
+    or die "Couldn't prepare 'newerVersion' query: ".DBI->errstr;
+
+$nonGeneric_Q = $dbh->prepare("SELECT AIarch FROM ArchInt WHERE AIint = ?  AND AIarch > 1 LIMIT 1 ")
+     or die "Couldn't prepare 'nonGeneric' query: ".DBI->errstr;
+
 print "/* Generated file - Do Not Edit */\n";
 print "#include \"elfchk.h\"\n\n";
 
@@ -28,26 +34,56 @@ for ($i = 0; $i <= $#lsbvernames; $i++) {
 	$lsbvernames[$i] =~ s/\.//g;
 }
 
-foreach $ver (@lsbversions) {
-	$select = "SELECT DISTINCT Iid,Iname,Isrcbin,Ideprecatedsince,AIappearedin,AIwithdrawnin,Vname,Asymbol,Aname,Aid,SMname FROM Interface ";
-	$select.= "LEFT JOIN LGInt ON Iid=LGIint ";
-	$select.= "LEFT JOIN LibGroup ON LGid=LGIlibg ";
-	$select.= "LEFT JOIN Library ON Lid=LGlib ";
-	$select.= "LEFT JOIN ModLib ON MLlid=Lid ";
-	$select.= "LEFT JOIN ArchLib ON ALlid=Lid ";
-	$select.= "LEFT JOIN SubModule ON SMid=MLmid ";
-	$select.= "LEFT OUTER JOIN ArchInt ON Iid=AIint ";
-	$select.= "LEFT OUTER JOIN Architecture ON Aid=AIarch ";
-	$select.= "LEFT OUTER JOIN Version ON Vid=AIversion ";
-	# $select.= "WHERE Interface.Iid=LGInt.LGIint ";
-	# $select.= "AND AIarch=ALaid ";
-	$select.= "WHERE ( (ALappearedin <= '$ver' and ALappearedin<>'') ";
-	$select.= "AND (ALwithdrawnin IS NULL OR ALwithdrawnin > '$ver') ) ";
-	$select.= "AND ( (AIappearedin <= '$ver' and AIappearedin<>'') ";
-	$select.= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin > '$ver') ) ";
-	$select.= "ORDER BY Iname,Aid,Vid ";
+my %deprecated_submodules;
+my %deprecated_libs;
 
-	# print $select;
+# Create lists of deprecated entries
+$select = "SELECT SMname, SMdeprecatedsince FROM SubModule WHERE SMdeprecatedsince > ''";
+$sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+$sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
+for (1..$sth->rows) {
+    $entry = $sth->fetchrow_hashref or die "Fetchrow failed on $select query: ".DBI->errstr;
+    $deprecated_submodules{$entry->{'SMname'}} = $entry->{'SMdeprecatedsince'};
+}
+
+$select = "SELECT Lid, Ldeprecatedsince FROM Library WHERE Ldeprecatedsince > ''";
+$sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+$sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
+for (1..$sth->rows) {
+    $entry = $sth->fetchrow_hashref or die "Fetchrow failed on $select query: ".DBI->errstr;
+    $deprecated_libs{$entry->{'Lid'}} = $entry->{'Ldeprecatedsince'};
+}
+
+sub createTmpTables($ )
+{
+    my ($ver) = shift;
+
+    $create = "CREATE TEMPORARY TABLE tmp_IncludedLibGroups_$ver "
+        . "(KEY `LGid`(`LGid`)) "
+        . "SELECT DISTINCT LGid, Lid, SMname FROM Library "
+        . "LEFT JOIN LibGroup ON LGlib=Lid "
+        . "LEFT JOIN ArchLib ON ALlid=Lid "
+        . "LEFT JOIN ModLib ON MLlid=Lid "
+        . "LEFT JOIN SubModule ON MLmid=SMid "
+        . "WHERE ALappearedin <= '$ver' AND ALappearedin > '' "
+        . "AND (ALwithdrawnin IS NULL OR ALwithdrawnin > '$ver') "
+        . "AND MLappearedin <= '$ver' AND MLappearedin > '' "
+        . "AND (MLwithdrawnin IS NULL OR MLwithdrawnin > '$ver') ";
+    $sth = $dbh->prepare($create) || die $dbh->errstr;
+    $sth->execute() || die $sth->errstr;
+}
+
+foreach $ver (@lsbversions) {
+    createTmpTables($ver);
+    $select = "SELECT Iid,Iname,Ideprecatedsince,AIappearedin,AIwithdrawnin,Vname,Asymbol,Aname,Aid,SMname,Lid FROM tmp_IncludedLibGroups_$ver ";
+    $select.= "LEFT JOIN LGInt ON LGIlibg=LGid ";
+    $select.= "LEFT JOIN Interface ON Iid=LGIint ";
+    $select.= "LEFT JOIN ArchInt ON Iid=AIint ";
+    $select.= "LEFT JOIN Architecture ON Aid=AIarch ";
+    $select.= "LEFT JOIN Version ON Vid=AIversion ";
+    $select.= "WHERE AIappearedin <= '$ver' AND AIappearedin > '' ";
+    $select.= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin > '$ver') ";
+	$select.= "ORDER BY Iname,Aid,Vid ";
 
 	$sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
 	$sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
@@ -62,55 +98,36 @@ foreach $ver (@lsbversions) {
 
 		if ($entry->{'AIwithdrawnin'}) {
 			# Let's check if there is an interface with newer version
-			$selectNewly = "SELECT AIint FROM ArchInt ";
-			$selectNewly.= "WHERE AIint=$entry->{'Iid'} AND AIarch=$entry->{'Aid'} ";
-			$selectNewly.= "AND AIappearedin > $entry->{'AIappearedin'} ";
+		    $newerVersion_Q->execute( $entry->{'Iid'}, $entry->{'Aid'},
+					      $entry->{'AIappearedin'} )
+		    or die "Couldn't execute 'newerVersion' query: ".DBI->errstr;
 
-			$sthNewly = $dbh->prepare($selectNewly)
-			    or die "Couldn't prepare $selectNewly query: ".DBI->errstr;
-			$sthNewly->execute or die "Couldn't execute $selectNewly query: ".DBI->errstr;
-
-			if ($sthNewly->rows) {
-				$sthNewly->finish;
+		if ($newerVersion_Q->rows) {
 				next;
 			}
-
-			$sthNewly->finish;
 		}
 
 		# There can be duplicated entries in the Interface table - skip them
 	 	if ($processed{ ($entry->{'Aname'},$entry->{'Iname'},$entry->{'SMname'}) }) {
-	 		next;
-	 	}
-	 	$processed{ ($entry->{'Aname'},$entry->{'Iname'},$entry->{'SMname'}) } = 1;
-
-		if (not $entry->{'Aname'}) {
-			next; # unsupported architecture found
+			next;
 		}
+		$processed{ ($entry->{'Aname'},$entry->{'Iname'},$entry->{'SMname'}) } = 1;
 
 		if ($entry->{'Aname'} && $entry->{'Aname'} ne "All") {
 			print "#if $entry->{'Asymbol'}\n";
 		}
 		elsif ($entry->{'Aname'} && $entry->{'Aname'} eq "All") {
-			$selectNotGeneric = "SELECT AIarch FROM ArchInt ";
-			$selectNotGeneric.= "WHERE AIint=$entry->{'Iid'} AND AIarch<>1 ";
-			# $selectNotGeneric.= "AND ( (AIappearedin <= '$ver' and AIappearedin<>'') ";
-			# $selectNotGeneric.= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin > '$ver') ) ";
-
-			$sthNotGeneric = $dbh->prepare($selectNotGeneric)
-			    or die "Couldn't prepare $selectNotGeneric query: ".DBI->errstr;
-			$sthNotGeneric->execute or die "Couldn't execute $selectNotGeneric query: ".DBI->errstr;
+			$nonGeneric_Q->execute($entry->{'Iid'}) or die "Couldn't execute 'nonGeneric' query: ".DBI->errstr;
 
 			# Some architecture specific records found - don't check generic information
-			if ($sthNotGeneric->rows) {
-				$sthNotGeneric->finish;
+			if ($nonGeneric_Q->rows) {
 				next;
 			}
-
-			$sthNotGeneric->finish;
 		}
 		printf "\t{\"%s\",\"%s\",",$entry->{'Iname'},$entry->{'Vname'};
-		if( $entry->{'Ideprecatedsince'} and $entry->{'Ideprecatedsince'} le $lsbversion ) {
+		if( ($entry->{'Ideprecatedsince'} and $entry->{'Ideprecatedsince'} le $ver)
+		    or (defined $deprecated_submodules{$entry->{'SMname'}} and $deprecated_submodules{$entry->{'SMname'}} le $ver)
+		    or (defined $deprecated_libs{$entry->{'Lid'}} and $deprecated_libs{$entry->{'Lid'}} le $ver) ) {
 			printf "1";
 		} else {
 			printf "0";
@@ -130,4 +147,6 @@ foreach $ver (@lsbversions) {
 print "struct versym* DynSyms[] = {DynSyms_LSB".join(", DynSyms_LSB", @lsbvernames)."};\n";
 print "int numDynSyms[] = {sizeof(DynSyms_LSB".join(")/sizeof(struct versym), sizeof(DynSyms_LSB", @lsbvernames).")/sizeof(struct versym)};\n";
 
+$newerVersion_Q->finish();
+$nonGeneric_Q->finish();
 $dbh->disconnect;
