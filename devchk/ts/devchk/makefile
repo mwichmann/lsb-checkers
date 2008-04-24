@@ -3,6 +3,7 @@ OBJS = hdrchk.o \
 	GL_glext_h.o \
 	GL_glu_h.o \
 	GL_glx_h.o \
+	GL_glxext_h.o \
 	X11_Composite_h.o \
 	X11_CompositeP_h.o \
 	X11_ConstrainP_h.o \

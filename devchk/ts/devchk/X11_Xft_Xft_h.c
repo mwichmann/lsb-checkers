@@ -375,10 +375,10 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,12557,NULL);\n",archi
 
 #if 1
 CheckTypeSize(struct _XftCharSpec,8, 16994, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XftCharSpec on All\n");
-CheckOffset(struct _XftCharSpec,ucs4,0,1,54360)
-CheckOffset(struct _XftCharSpec,x,0,1,54361)
-CheckOffset(struct _XftCharSpec,y,0,1,54362)
+CheckMemberSize(struct _XftCharSpec,x,2,1,54361)
+CheckOffset(struct _XftCharSpec,x,4,1,54361)
+CheckMemberSize(struct _XftCharSpec,y,2,1,54362)
+CheckOffset(struct _XftCharSpec,y,6,1,54362)
 #endif
 
 #if defined __x86_64__
