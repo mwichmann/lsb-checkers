@@ -37,6 +37,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+/* No test for IPTOS_TOS(tos) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef IPTOS_LOWDELAY
 	CompareConstant(IPTOS_LOWDELAY,0x10,5269,architecture,3.0,NULL)
 #else
@@ -94,6 +98,10 @@ Msg( "Error: Constant not found: IPTOS_PREC_MASK\n");
 cnt++;
 #endif
 
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for IPTOS_PREC(tos) */
 #endif
 
 #ifdef TET_TEST

@@ -682,9 +682,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16676,NULL);\n",archi
 
 #if 1
 CheckTypeSize(struct _XConicalGradient,12, 16679, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XConicalGradient on All\n");
-CheckOffset(struct _XConicalGradient,center,0,1,53899)
-CheckOffset(struct _XConicalGradient,angle,0,1,53900)
+CheckMemberSize(struct _XConicalGradient,angle,4,1,53900)
+CheckOffset(struct _XConicalGradient,angle,8,1,53900)
 #endif
 
 #if 1
@@ -722,9 +721,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8377,NULL);\n",archit
 
 #if 1
 CheckTypeSize(struct _XLinearGradient,16, 16685, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XLinearGradient on All\n");
-CheckOffset(struct _XLinearGradient,p1,0,1,53901)
-CheckOffset(struct _XLinearGradient,p2,0,1,53902)
+CheckMemberSize(struct _XLinearGradient,p2,8,1,53902)
+CheckOffset(struct _XLinearGradient,p2,8,1,53902)
 #endif
 
 #if 1
@@ -740,9 +738,8 @@ CheckTypeSize(const XLinearGradient,16, 16687, 1, 1.2, NULL, 16686, NULL)
 
 #if 1
 CheckTypeSize(struct _XPointDouble,16, 16689, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XPointDouble on All\n");
-CheckOffset(struct _XPointDouble,x,0,1,53903)
-CheckOffset(struct _XPointDouble,y,0,1,53904)
+CheckMemberSize(struct _XPointDouble,y,8,1,53904)
+CheckOffset(struct _XPointDouble,y,8,1,53904)
 #endif
 
 #if 1
@@ -1013,9 +1010,8 @@ CheckTypeSize(XSpanFix,12, 16703, 1, 1.2, NULL, 16702, NULL)
 
 #if 1
 CheckTypeSize(struct _XLineFixed,16, 17024, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XLineFixed on All\n");
-CheckOffset(struct _XLineFixed,p1,0,1,64002)
-CheckOffset(struct _XLineFixed,p2,0,1,64003)
+CheckMemberSize(struct _XLineFixed,p2,8,1,64003)
+CheckOffset(struct _XLineFixed,p2,8,1,64003)
 #endif
 
 #if 1

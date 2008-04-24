@@ -470,7 +470,143 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16781,NULL);\n",archi
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(struct FT_GlyphSlotRec_,304, 16783, 11, 3.2, NULL, 0, NULL)
+CheckTypeSize(struct FT_Glyph_Metrics_,64, 16783, 11, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct FT_Glyph_Metrics_,height,8,11,54007)
+CheckOffset(struct FT_Glyph_Metrics_,height,8,11,54007)
+CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingX,8,11,54008)
+CheckOffset(struct FT_Glyph_Metrics_,horiBearingX,16,11,54008)
+CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingY,8,11,54009)
+CheckOffset(struct FT_Glyph_Metrics_,horiBearingY,24,11,54009)
+CheckMemberSize(struct FT_Glyph_Metrics_,horiAdvance,8,11,54010)
+CheckOffset(struct FT_Glyph_Metrics_,horiAdvance,32,11,54010)
+CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingX,8,11,54011)
+CheckOffset(struct FT_Glyph_Metrics_,vertBearingX,40,11,54011)
+CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingY,8,11,54012)
+CheckOffset(struct FT_Glyph_Metrics_,vertBearingY,48,11,54012)
+CheckMemberSize(struct FT_Glyph_Metrics_,vertAdvance,8,11,54013)
+CheckOffset(struct FT_Glyph_Metrics_,vertAdvance,56,11,54013)
+#elif defined __i386__
+CheckTypeSize(struct FT_Glyph_Metrics_,32, 16783, 2, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct FT_Glyph_Metrics_,height,4,2,54007)
+CheckOffset(struct FT_Glyph_Metrics_,height,4,2,54007)
+CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingX,4,2,54008)
+CheckOffset(struct FT_Glyph_Metrics_,horiBearingX,8,2,54008)
+CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingY,4,2,54009)
+CheckOffset(struct FT_Glyph_Metrics_,horiBearingY,12,2,54009)
+CheckMemberSize(struct FT_Glyph_Metrics_,horiAdvance,4,2,54010)
+CheckOffset(struct FT_Glyph_Metrics_,horiAdvance,16,2,54010)
+CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingX,4,2,54011)
+CheckOffset(struct FT_Glyph_Metrics_,vertBearingX,20,2,54011)
+CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingY,4,2,54012)
+CheckOffset(struct FT_Glyph_Metrics_,vertBearingY,24,2,54012)
+CheckMemberSize(struct FT_Glyph_Metrics_,vertAdvance,4,2,54013)
+CheckOffset(struct FT_Glyph_Metrics_,vertAdvance,28,2,54013)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct FT_Glyph_Metrics_,32, 16783, 10, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct FT_Glyph_Metrics_,height,4,10,54007)
+CheckOffset(struct FT_Glyph_Metrics_,height,4,10,54007)
+CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingX,4,10,54008)
+CheckOffset(struct FT_Glyph_Metrics_,horiBearingX,8,10,54008)
+CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingY,4,10,54009)
+CheckOffset(struct FT_Glyph_Metrics_,horiBearingY,12,10,54009)
+CheckMemberSize(struct FT_Glyph_Metrics_,horiAdvance,4,10,54010)
+CheckOffset(struct FT_Glyph_Metrics_,horiAdvance,16,10,54010)
+CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingX,4,10,54011)
+CheckOffset(struct FT_Glyph_Metrics_,vertBearingX,20,10,54011)
+CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingY,4,10,54012)
+CheckOffset(struct FT_Glyph_Metrics_,vertBearingY,24,10,54012)
+CheckMemberSize(struct FT_Glyph_Metrics_,vertAdvance,4,10,54013)
+CheckOffset(struct FT_Glyph_Metrics_,vertAdvance,28,10,54013)
+#elif defined __s390x__
+CheckTypeSize(struct FT_Glyph_Metrics_,64, 16783, 12, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct FT_Glyph_Metrics_,height,8,12,54007)
+CheckOffset(struct FT_Glyph_Metrics_,height,8,12,54007)
+CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingX,8,12,54008)
+CheckOffset(struct FT_Glyph_Metrics_,horiBearingX,16,12,54008)
+CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingY,8,12,54009)
+CheckOffset(struct FT_Glyph_Metrics_,horiBearingY,24,12,54009)
+CheckMemberSize(struct FT_Glyph_Metrics_,horiAdvance,8,12,54010)
+CheckOffset(struct FT_Glyph_Metrics_,horiAdvance,32,12,54010)
+CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingX,8,12,54011)
+CheckOffset(struct FT_Glyph_Metrics_,vertBearingX,40,12,54011)
+CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingY,8,12,54012)
+CheckOffset(struct FT_Glyph_Metrics_,vertBearingY,48,12,54012)
+CheckMemberSize(struct FT_Glyph_Metrics_,vertAdvance,8,12,54013)
+CheckOffset(struct FT_Glyph_Metrics_,vertAdvance,56,12,54013)
+#elif defined __ia64__
+CheckTypeSize(struct FT_Glyph_Metrics_,64, 16783, 3, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct FT_Glyph_Metrics_,height,8,3,54007)
+CheckOffset(struct FT_Glyph_Metrics_,height,8,3,54007)
+CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingX,8,3,54008)
+CheckOffset(struct FT_Glyph_Metrics_,horiBearingX,16,3,54008)
+CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingY,8,3,54009)
+CheckOffset(struct FT_Glyph_Metrics_,horiBearingY,24,3,54009)
+CheckMemberSize(struct FT_Glyph_Metrics_,horiAdvance,8,3,54010)
+CheckOffset(struct FT_Glyph_Metrics_,horiAdvance,32,3,54010)
+CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingX,8,3,54011)
+CheckOffset(struct FT_Glyph_Metrics_,vertBearingX,40,3,54011)
+CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingY,8,3,54012)
+CheckOffset(struct FT_Glyph_Metrics_,vertBearingY,48,3,54012)
+CheckMemberSize(struct FT_Glyph_Metrics_,vertAdvance,8,3,54013)
+CheckOffset(struct FT_Glyph_Metrics_,vertAdvance,56,3,54013)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct FT_Glyph_Metrics_,32, 16783, 6, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct FT_Glyph_Metrics_,height,4,6,54007)
+CheckOffset(struct FT_Glyph_Metrics_,height,4,6,54007)
+CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingX,4,6,54008)
+CheckOffset(struct FT_Glyph_Metrics_,horiBearingX,8,6,54008)
+CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingY,4,6,54009)
+CheckOffset(struct FT_Glyph_Metrics_,horiBearingY,12,6,54009)
+CheckMemberSize(struct FT_Glyph_Metrics_,horiAdvance,4,6,54010)
+CheckOffset(struct FT_Glyph_Metrics_,horiAdvance,16,6,54010)
+CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingX,4,6,54011)
+CheckOffset(struct FT_Glyph_Metrics_,vertBearingX,20,6,54011)
+CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingY,4,6,54012)
+CheckOffset(struct FT_Glyph_Metrics_,vertBearingY,24,6,54012)
+CheckMemberSize(struct FT_Glyph_Metrics_,vertAdvance,4,6,54013)
+CheckOffset(struct FT_Glyph_Metrics_,vertAdvance,28,6,54013)
+#elif defined __powerpc64__
+CheckTypeSize(struct FT_Glyph_Metrics_,64, 16783, 9, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct FT_Glyph_Metrics_,height,8,9,54007)
+CheckOffset(struct FT_Glyph_Metrics_,height,8,9,54007)
+CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingX,8,9,54008)
+CheckOffset(struct FT_Glyph_Metrics_,horiBearingX,16,9,54008)
+CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingY,8,9,54009)
+CheckOffset(struct FT_Glyph_Metrics_,horiBearingY,24,9,54009)
+CheckMemberSize(struct FT_Glyph_Metrics_,horiAdvance,8,9,54010)
+CheckOffset(struct FT_Glyph_Metrics_,horiAdvance,32,9,54010)
+CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingX,8,9,54011)
+CheckOffset(struct FT_Glyph_Metrics_,vertBearingX,40,9,54011)
+CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingY,8,9,54012)
+CheckOffset(struct FT_Glyph_Metrics_,vertBearingY,48,9,54012)
+CheckMemberSize(struct FT_Glyph_Metrics_,vertAdvance,8,9,54013)
+CheckOffset(struct FT_Glyph_Metrics_,vertAdvance,56,9,54013)
+#else
+Msg("Find size of FT_Glyph_Metrics_ (16783)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16783,0);
+#endif
+
+#if defined __x86_64__
+CheckTypeSize(FT_GlyphSlot,8, 16785, 11, 3.2, NULL, 16784, NULL)
+#elif defined __i386__
+CheckTypeSize(FT_GlyphSlot,4, 16785, 2, 3.2, NULL, 16784, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_GlyphSlot,4, 16785, 10, 3.2, NULL, 16784, NULL)
+#elif defined __s390x__
+CheckTypeSize(FT_GlyphSlot,8, 16785, 12, 3.2, NULL, 16784, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_GlyphSlot,8, 16785, 3, 3.2, NULL, 16784, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(FT_GlyphSlot,4, 16785, 6, 3.2, NULL, 16784, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(FT_GlyphSlot,8, 16785, 9, 3.2, NULL, 16784, NULL)
+#else
+Msg("Find size of FT_GlyphSlot (16785)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16784,NULL);\n",architecture,16785,0);
+#endif
+
+#if defined __x86_64__
+CheckTypeSize(struct FT_GlyphSlotRec_,304, 16786, 11, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_GlyphSlotRec_,face,8,11,54002)
 CheckOffset(struct FT_GlyphSlotRec_,face,8,11,54002)
 CheckMemberSize(struct FT_GlyphSlotRec_,next,8,11,54003)
@@ -514,7 +650,7 @@ CheckOffset(struct FT_GlyphSlotRec_,other,288,11,54038)
 CheckMemberSize(struct FT_GlyphSlotRec_,internal,8,11,54057)
 CheckOffset(struct FT_GlyphSlotRec_,internal,296,11,54057)
 #elif defined __i386__
-CheckTypeSize(struct FT_GlyphSlotRec_,160, 16783, 2, 3.2, NULL, 0, NULL)
+CheckTypeSize(struct FT_GlyphSlotRec_,160, 16786, 2, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_GlyphSlotRec_,face,4,2,54002)
 CheckOffset(struct FT_GlyphSlotRec_,face,4,2,54002)
 CheckMemberSize(struct FT_GlyphSlotRec_,next,4,2,54003)
@@ -558,7 +694,7 @@ CheckOffset(struct FT_GlyphSlotRec_,other,152,2,54038)
 CheckMemberSize(struct FT_GlyphSlotRec_,internal,4,2,54057)
 CheckOffset(struct FT_GlyphSlotRec_,internal,156,2,54057)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct FT_GlyphSlotRec_,160, 16783, 10, 3.2, NULL, 0, NULL)
+CheckTypeSize(struct FT_GlyphSlotRec_,160, 16786, 10, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_GlyphSlotRec_,face,4,10,54002)
 CheckOffset(struct FT_GlyphSlotRec_,face,4,10,54002)
 CheckMemberSize(struct FT_GlyphSlotRec_,next,4,10,54003)
@@ -602,7 +738,7 @@ CheckOffset(struct FT_GlyphSlotRec_,other,152,10,54038)
 CheckMemberSize(struct FT_GlyphSlotRec_,internal,4,10,54057)
 CheckOffset(struct FT_GlyphSlotRec_,internal,156,10,54057)
 #elif defined __s390x__
-CheckTypeSize(struct FT_GlyphSlotRec_,304, 16783, 12, 3.2, NULL, 0, NULL)
+CheckTypeSize(struct FT_GlyphSlotRec_,304, 16786, 12, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_GlyphSlotRec_,face,8,12,54002)
 CheckOffset(struct FT_GlyphSlotRec_,face,8,12,54002)
 CheckMemberSize(struct FT_GlyphSlotRec_,next,8,12,54003)
@@ -646,7 +782,7 @@ CheckOffset(struct FT_GlyphSlotRec_,other,288,12,54038)
 CheckMemberSize(struct FT_GlyphSlotRec_,internal,8,12,54057)
 CheckOffset(struct FT_GlyphSlotRec_,internal,296,12,54057)
 #elif defined __ia64__
-CheckTypeSize(struct FT_GlyphSlotRec_,304, 16783, 3, 3.2, NULL, 0, NULL)
+CheckTypeSize(struct FT_GlyphSlotRec_,304, 16786, 3, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_GlyphSlotRec_,face,8,3,54002)
 CheckOffset(struct FT_GlyphSlotRec_,face,8,3,54002)
 CheckMemberSize(struct FT_GlyphSlotRec_,next,8,3,54003)
@@ -690,7 +826,7 @@ CheckOffset(struct FT_GlyphSlotRec_,other,288,3,54038)
 CheckMemberSize(struct FT_GlyphSlotRec_,internal,8,3,54057)
 CheckOffset(struct FT_GlyphSlotRec_,internal,296,3,54057)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct FT_GlyphSlotRec_,160, 16783, 6, 3.2, NULL, 0, NULL)
+CheckTypeSize(struct FT_GlyphSlotRec_,160, 16786, 6, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_GlyphSlotRec_,face,4,6,54002)
 CheckOffset(struct FT_GlyphSlotRec_,face,4,6,54002)
 CheckMemberSize(struct FT_GlyphSlotRec_,next,4,6,54003)
@@ -734,7 +870,7 @@ CheckOffset(struct FT_GlyphSlotRec_,other,152,6,54038)
 CheckMemberSize(struct FT_GlyphSlotRec_,internal,4,6,54057)
 CheckOffset(struct FT_GlyphSlotRec_,internal,156,6,54057)
 #elif defined __powerpc64__
-CheckTypeSize(struct FT_GlyphSlotRec_,304, 16783, 9, 3.2, NULL, 0, NULL)
+CheckTypeSize(struct FT_GlyphSlotRec_,304, 16786, 9, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_GlyphSlotRec_,face,8,9,54002)
 CheckOffset(struct FT_GlyphSlotRec_,face,8,9,54002)
 CheckMemberSize(struct FT_GlyphSlotRec_,next,8,9,54003)
@@ -778,163 +914,27 @@ CheckOffset(struct FT_GlyphSlotRec_,other,288,9,54038)
 CheckMemberSize(struct FT_GlyphSlotRec_,internal,8,9,54057)
 CheckOffset(struct FT_GlyphSlotRec_,internal,296,9,54057)
 #else
-Msg("Find size of FT_GlyphSlotRec_ (16783)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16783,0);
-#endif
-
-#if defined __x86_64__
-CheckTypeSize(FT_GlyphSlot,8, 16785, 11, 3.2, NULL, 16784, NULL)
-#elif defined __i386__
-CheckTypeSize(FT_GlyphSlot,4, 16785, 2, 3.2, NULL, 16784, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(FT_GlyphSlot,4, 16785, 10, 3.2, NULL, 16784, NULL)
-#elif defined __s390x__
-CheckTypeSize(FT_GlyphSlot,8, 16785, 12, 3.2, NULL, 16784, NULL)
-#elif defined __ia64__
-CheckTypeSize(FT_GlyphSlot,8, 16785, 3, 3.2, NULL, 16784, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(FT_GlyphSlot,4, 16785, 6, 3.2, NULL, 16784, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(FT_GlyphSlot,8, 16785, 9, 3.2, NULL, 16784, NULL)
-#else
-Msg("Find size of FT_GlyphSlot (16785)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16784,NULL);\n",architecture,16785,0);
-#endif
-
-#if defined __x86_64__
-CheckTypeSize(struct FT_Glyph_Metrics_,64, 16786, 11, 3.2, NULL, 0, NULL)
-CheckMemberSize(struct FT_Glyph_Metrics_,height,8,11,54007)
-CheckOffset(struct FT_Glyph_Metrics_,height,8,11,54007)
-CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingX,8,11,54008)
-CheckOffset(struct FT_Glyph_Metrics_,horiBearingX,16,11,54008)
-CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingY,8,11,54009)
-CheckOffset(struct FT_Glyph_Metrics_,horiBearingY,24,11,54009)
-CheckMemberSize(struct FT_Glyph_Metrics_,horiAdvance,8,11,54010)
-CheckOffset(struct FT_Glyph_Metrics_,horiAdvance,32,11,54010)
-CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingX,8,11,54011)
-CheckOffset(struct FT_Glyph_Metrics_,vertBearingX,40,11,54011)
-CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingY,8,11,54012)
-CheckOffset(struct FT_Glyph_Metrics_,vertBearingY,48,11,54012)
-CheckMemberSize(struct FT_Glyph_Metrics_,vertAdvance,8,11,54013)
-CheckOffset(struct FT_Glyph_Metrics_,vertAdvance,56,11,54013)
-#elif defined __i386__
-CheckTypeSize(struct FT_Glyph_Metrics_,32, 16786, 2, 3.2, NULL, 0, NULL)
-CheckMemberSize(struct FT_Glyph_Metrics_,height,4,2,54007)
-CheckOffset(struct FT_Glyph_Metrics_,height,4,2,54007)
-CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingX,4,2,54008)
-CheckOffset(struct FT_Glyph_Metrics_,horiBearingX,8,2,54008)
-CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingY,4,2,54009)
-CheckOffset(struct FT_Glyph_Metrics_,horiBearingY,12,2,54009)
-CheckMemberSize(struct FT_Glyph_Metrics_,horiAdvance,4,2,54010)
-CheckOffset(struct FT_Glyph_Metrics_,horiAdvance,16,2,54010)
-CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingX,4,2,54011)
-CheckOffset(struct FT_Glyph_Metrics_,vertBearingX,20,2,54011)
-CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingY,4,2,54012)
-CheckOffset(struct FT_Glyph_Metrics_,vertBearingY,24,2,54012)
-CheckMemberSize(struct FT_Glyph_Metrics_,vertAdvance,4,2,54013)
-CheckOffset(struct FT_Glyph_Metrics_,vertAdvance,28,2,54013)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct FT_Glyph_Metrics_,32, 16786, 10, 3.2, NULL, 0, NULL)
-CheckMemberSize(struct FT_Glyph_Metrics_,height,4,10,54007)
-CheckOffset(struct FT_Glyph_Metrics_,height,4,10,54007)
-CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingX,4,10,54008)
-CheckOffset(struct FT_Glyph_Metrics_,horiBearingX,8,10,54008)
-CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingY,4,10,54009)
-CheckOffset(struct FT_Glyph_Metrics_,horiBearingY,12,10,54009)
-CheckMemberSize(struct FT_Glyph_Metrics_,horiAdvance,4,10,54010)
-CheckOffset(struct FT_Glyph_Metrics_,horiAdvance,16,10,54010)
-CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingX,4,10,54011)
-CheckOffset(struct FT_Glyph_Metrics_,vertBearingX,20,10,54011)
-CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingY,4,10,54012)
-CheckOffset(struct FT_Glyph_Metrics_,vertBearingY,24,10,54012)
-CheckMemberSize(struct FT_Glyph_Metrics_,vertAdvance,4,10,54013)
-CheckOffset(struct FT_Glyph_Metrics_,vertAdvance,28,10,54013)
-#elif defined __s390x__
-CheckTypeSize(struct FT_Glyph_Metrics_,64, 16786, 12, 3.2, NULL, 0, NULL)
-CheckMemberSize(struct FT_Glyph_Metrics_,height,8,12,54007)
-CheckOffset(struct FT_Glyph_Metrics_,height,8,12,54007)
-CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingX,8,12,54008)
-CheckOffset(struct FT_Glyph_Metrics_,horiBearingX,16,12,54008)
-CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingY,8,12,54009)
-CheckOffset(struct FT_Glyph_Metrics_,horiBearingY,24,12,54009)
-CheckMemberSize(struct FT_Glyph_Metrics_,horiAdvance,8,12,54010)
-CheckOffset(struct FT_Glyph_Metrics_,horiAdvance,32,12,54010)
-CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingX,8,12,54011)
-CheckOffset(struct FT_Glyph_Metrics_,vertBearingX,40,12,54011)
-CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingY,8,12,54012)
-CheckOffset(struct FT_Glyph_Metrics_,vertBearingY,48,12,54012)
-CheckMemberSize(struct FT_Glyph_Metrics_,vertAdvance,8,12,54013)
-CheckOffset(struct FT_Glyph_Metrics_,vertAdvance,56,12,54013)
-#elif defined __ia64__
-CheckTypeSize(struct FT_Glyph_Metrics_,64, 16786, 3, 3.2, NULL, 0, NULL)
-CheckMemberSize(struct FT_Glyph_Metrics_,height,8,3,54007)
-CheckOffset(struct FT_Glyph_Metrics_,height,8,3,54007)
-CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingX,8,3,54008)
-CheckOffset(struct FT_Glyph_Metrics_,horiBearingX,16,3,54008)
-CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingY,8,3,54009)
-CheckOffset(struct FT_Glyph_Metrics_,horiBearingY,24,3,54009)
-CheckMemberSize(struct FT_Glyph_Metrics_,horiAdvance,8,3,54010)
-CheckOffset(struct FT_Glyph_Metrics_,horiAdvance,32,3,54010)
-CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingX,8,3,54011)
-CheckOffset(struct FT_Glyph_Metrics_,vertBearingX,40,3,54011)
-CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingY,8,3,54012)
-CheckOffset(struct FT_Glyph_Metrics_,vertBearingY,48,3,54012)
-CheckMemberSize(struct FT_Glyph_Metrics_,vertAdvance,8,3,54013)
-CheckOffset(struct FT_Glyph_Metrics_,vertAdvance,56,3,54013)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct FT_Glyph_Metrics_,32, 16786, 6, 3.2, NULL, 0, NULL)
-CheckMemberSize(struct FT_Glyph_Metrics_,height,4,6,54007)
-CheckOffset(struct FT_Glyph_Metrics_,height,4,6,54007)
-CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingX,4,6,54008)
-CheckOffset(struct FT_Glyph_Metrics_,horiBearingX,8,6,54008)
-CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingY,4,6,54009)
-CheckOffset(struct FT_Glyph_Metrics_,horiBearingY,12,6,54009)
-CheckMemberSize(struct FT_Glyph_Metrics_,horiAdvance,4,6,54010)
-CheckOffset(struct FT_Glyph_Metrics_,horiAdvance,16,6,54010)
-CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingX,4,6,54011)
-CheckOffset(struct FT_Glyph_Metrics_,vertBearingX,20,6,54011)
-CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingY,4,6,54012)
-CheckOffset(struct FT_Glyph_Metrics_,vertBearingY,24,6,54012)
-CheckMemberSize(struct FT_Glyph_Metrics_,vertAdvance,4,6,54013)
-CheckOffset(struct FT_Glyph_Metrics_,vertAdvance,28,6,54013)
-#elif defined __powerpc64__
-CheckTypeSize(struct FT_Glyph_Metrics_,64, 16786, 9, 3.2, NULL, 0, NULL)
-CheckMemberSize(struct FT_Glyph_Metrics_,height,8,9,54007)
-CheckOffset(struct FT_Glyph_Metrics_,height,8,9,54007)
-CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingX,8,9,54008)
-CheckOffset(struct FT_Glyph_Metrics_,horiBearingX,16,9,54008)
-CheckMemberSize(struct FT_Glyph_Metrics_,horiBearingY,8,9,54009)
-CheckOffset(struct FT_Glyph_Metrics_,horiBearingY,24,9,54009)
-CheckMemberSize(struct FT_Glyph_Metrics_,horiAdvance,8,9,54010)
-CheckOffset(struct FT_Glyph_Metrics_,horiAdvance,32,9,54010)
-CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingX,8,9,54011)
-CheckOffset(struct FT_Glyph_Metrics_,vertBearingX,40,9,54011)
-CheckMemberSize(struct FT_Glyph_Metrics_,vertBearingY,8,9,54012)
-CheckOffset(struct FT_Glyph_Metrics_,vertBearingY,48,9,54012)
-CheckMemberSize(struct FT_Glyph_Metrics_,vertAdvance,8,9,54013)
-CheckOffset(struct FT_Glyph_Metrics_,vertAdvance,56,9,54013)
-#else
-Msg("Find size of FT_Glyph_Metrics_ (16786)\n");
+Msg("Find size of FT_GlyphSlotRec_ (16786)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16786,0);
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(FT_Glyph_Metrics,64, 16787, 11, 3.2, NULL, 16786, NULL)
+CheckTypeSize(FT_Glyph_Metrics,64, 16787, 11, 3.2, NULL, 16783, NULL)
 #elif defined __i386__
-CheckTypeSize(FT_Glyph_Metrics,32, 16787, 2, 3.2, NULL, 16786, NULL)
+CheckTypeSize(FT_Glyph_Metrics,32, 16787, 2, 3.2, NULL, 16783, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(FT_Glyph_Metrics,32, 16787, 10, 3.2, NULL, 16786, NULL)
+CheckTypeSize(FT_Glyph_Metrics,32, 16787, 10, 3.2, NULL, 16783, NULL)
 #elif defined __s390x__
-CheckTypeSize(FT_Glyph_Metrics,64, 16787, 12, 3.2, NULL, 16786, NULL)
+CheckTypeSize(FT_Glyph_Metrics,64, 16787, 12, 3.2, NULL, 16783, NULL)
 #elif defined __ia64__
-CheckTypeSize(FT_Glyph_Metrics,64, 16787, 3, 3.2, NULL, 16786, NULL)
+CheckTypeSize(FT_Glyph_Metrics,64, 16787, 3, 3.2, NULL, 16783, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(FT_Glyph_Metrics,32, 16787, 6, 3.2, NULL, 16786, NULL)
+CheckTypeSize(FT_Glyph_Metrics,32, 16787, 6, 3.2, NULL, 16783, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(FT_Glyph_Metrics,64, 16787, 9, 3.2, NULL, 16786, NULL)
+CheckTypeSize(FT_Glyph_Metrics,64, 16787, 9, 3.2, NULL, 16783, NULL)
 #else
 Msg("Find size of FT_Glyph_Metrics (16787)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16786,NULL);\n",architecture,16787,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16783,NULL);\n",architecture,16787,0);
 #endif
 
 #if defined __x86_64__
@@ -1154,7 +1154,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16901,NULL);\n",archi
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(struct FT_SizeRec_,88, 16951, 11, 3.2, NULL, 0, NULL)
+CheckTypeSize(struct FT_SizeRec_,88, 16952, 11, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_SizeRec_,generic,16,11,54279)
 CheckOffset(struct FT_SizeRec_,generic,8,11,54279)
 CheckMemberSize(struct FT_SizeRec_,metrics,56,11,54288)
@@ -1162,7 +1162,7 @@ CheckOffset(struct FT_SizeRec_,metrics,24,11,54288)
 CheckMemberSize(struct FT_SizeRec_,internal,8,11,54289)
 CheckOffset(struct FT_SizeRec_,internal,80,11,54289)
 #elif defined __i386__
-CheckTypeSize(struct FT_SizeRec_,44, 16951, 2, 3.2, NULL, 0, NULL)
+CheckTypeSize(struct FT_SizeRec_,44, 16952, 2, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_SizeRec_,generic,8,2,54279)
 CheckOffset(struct FT_SizeRec_,generic,4,2,54279)
 CheckMemberSize(struct FT_SizeRec_,metrics,28,2,54288)
@@ -1170,7 +1170,7 @@ CheckOffset(struct FT_SizeRec_,metrics,12,2,54288)
 CheckMemberSize(struct FT_SizeRec_,internal,4,2,54289)
 CheckOffset(struct FT_SizeRec_,internal,40,2,54289)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct FT_SizeRec_,44, 16951, 10, 3.2, NULL, 0, NULL)
+CheckTypeSize(struct FT_SizeRec_,44, 16952, 10, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_SizeRec_,generic,8,10,54279)
 CheckOffset(struct FT_SizeRec_,generic,4,10,54279)
 CheckMemberSize(struct FT_SizeRec_,metrics,28,10,54288)
@@ -1178,7 +1178,7 @@ CheckOffset(struct FT_SizeRec_,metrics,12,10,54288)
 CheckMemberSize(struct FT_SizeRec_,internal,4,10,54289)
 CheckOffset(struct FT_SizeRec_,internal,40,10,54289)
 #elif defined __s390x__
-CheckTypeSize(struct FT_SizeRec_,88, 16951, 12, 3.2, NULL, 0, NULL)
+CheckTypeSize(struct FT_SizeRec_,88, 16952, 12, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_SizeRec_,generic,16,12,54279)
 CheckOffset(struct FT_SizeRec_,generic,8,12,54279)
 CheckMemberSize(struct FT_SizeRec_,metrics,56,12,54288)
@@ -1186,7 +1186,7 @@ CheckOffset(struct FT_SizeRec_,metrics,24,12,54288)
 CheckMemberSize(struct FT_SizeRec_,internal,8,12,54289)
 CheckOffset(struct FT_SizeRec_,internal,80,12,54289)
 #elif defined __ia64__
-CheckTypeSize(struct FT_SizeRec_,88, 16951, 3, 3.2, NULL, 0, NULL)
+CheckTypeSize(struct FT_SizeRec_,88, 16952, 3, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_SizeRec_,generic,16,3,54279)
 CheckOffset(struct FT_SizeRec_,generic,8,3,54279)
 CheckMemberSize(struct FT_SizeRec_,metrics,56,3,54288)
@@ -1194,7 +1194,7 @@ CheckOffset(struct FT_SizeRec_,metrics,24,3,54288)
 CheckMemberSize(struct FT_SizeRec_,internal,8,3,54289)
 CheckOffset(struct FT_SizeRec_,internal,80,3,54289)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct FT_SizeRec_,44, 16951, 6, 3.2, NULL, 0, NULL)
+CheckTypeSize(struct FT_SizeRec_,44, 16952, 6, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_SizeRec_,generic,8,6,54279)
 CheckOffset(struct FT_SizeRec_,generic,4,6,54279)
 CheckMemberSize(struct FT_SizeRec_,metrics,28,6,54288)
@@ -1202,7 +1202,7 @@ CheckOffset(struct FT_SizeRec_,metrics,12,6,54288)
 CheckMemberSize(struct FT_SizeRec_,internal,4,6,54289)
 CheckOffset(struct FT_SizeRec_,internal,40,6,54289)
 #elif defined __powerpc64__
-CheckTypeSize(struct FT_SizeRec_,88, 16951, 9, 3.2, NULL, 0, NULL)
+CheckTypeSize(struct FT_SizeRec_,88, 16952, 9, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_SizeRec_,generic,16,9,54279)
 CheckOffset(struct FT_SizeRec_,generic,8,9,54279)
 CheckMemberSize(struct FT_SizeRec_,metrics,56,9,54288)
@@ -1210,27 +1210,27 @@ CheckOffset(struct FT_SizeRec_,metrics,24,9,54288)
 CheckMemberSize(struct FT_SizeRec_,internal,8,9,54289)
 CheckOffset(struct FT_SizeRec_,internal,80,9,54289)
 #else
-Msg("Find size of FT_SizeRec_ (16951)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16951,0);
+Msg("Find size of FT_SizeRec_ (16952)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16952,0);
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(FT_Size_Metrics,56, 16953, 11, 3.2, NULL, 16952, NULL)
+CheckTypeSize(FT_Size_Metrics,56, 16953, 11, 3.2, NULL, 16951, NULL)
 #elif defined __i386__
-CheckTypeSize(FT_Size_Metrics,28, 16953, 2, 3.2, NULL, 16952, NULL)
+CheckTypeSize(FT_Size_Metrics,28, 16953, 2, 3.2, NULL, 16951, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(FT_Size_Metrics,28, 16953, 10, 3.2, NULL, 16952, NULL)
+CheckTypeSize(FT_Size_Metrics,28, 16953, 10, 3.2, NULL, 16951, NULL)
 #elif defined __s390x__
-CheckTypeSize(FT_Size_Metrics,56, 16953, 12, 3.2, NULL, 16952, NULL)
+CheckTypeSize(FT_Size_Metrics,56, 16953, 12, 3.2, NULL, 16951, NULL)
 #elif defined __ia64__
-CheckTypeSize(FT_Size_Metrics,56, 16953, 3, 3.2, NULL, 16952, NULL)
+CheckTypeSize(FT_Size_Metrics,56, 16953, 3, 3.2, NULL, 16951, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(FT_Size_Metrics,28, 16953, 6, 3.2, NULL, 16952, NULL)
+CheckTypeSize(FT_Size_Metrics,28, 16953, 6, 3.2, NULL, 16951, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(FT_Size_Metrics,56, 16953, 9, 3.2, NULL, 16952, NULL)
+CheckTypeSize(FT_Size_Metrics,56, 16953, 9, 3.2, NULL, 16951, NULL)
 #else
 Msg("Find size of FT_Size_Metrics (16953)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16952,NULL);\n",architecture,16953,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16951,NULL);\n",architecture,16953,0);
 #endif
 
 #if defined __x86_64__
