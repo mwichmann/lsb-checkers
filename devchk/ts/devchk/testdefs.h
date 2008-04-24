@@ -2,6 +2,7 @@ extern void GL_gl_h();
 extern void GL_glext_h();
 extern void GL_glu_h();
 extern void GL_glx_h();
+extern void GL_glxext_h();
 extern void X11_Composite_h();
 extern void X11_CompositeP_h();
 extern void X11_ConstrainP_h();

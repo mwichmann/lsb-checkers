@@ -386,6 +386,14 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+/* No test for LOG_PRI(p) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for LOG_MAKEPRI(fac, pri) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef LOG_FACMASK
 	CompareConstant(LOG_FACMASK,0x03f8,5121,architecture,2.0,NULL)
 #else
@@ -393,6 +401,10 @@ Msg( "Error: Constant not found: LOG_FACMASK\n");
 cnt++;
 #endif
 
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for LOG_FAC(p) */
 #endif
 
 extern void closelog_db(void);

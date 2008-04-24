@@ -257,6 +257,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+/* No test for h_errno */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef NETDB_INTERNAL
 	CompareConstant(NETDB_INTERNAL,-1,4433,architecture,1.2,NULL)
 #else
