@@ -1000,10 +1000,40 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_VERSION
+	CompareConstant(_POSIX_VERSION,200112L,1919,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_VERSION\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _POSIX2_VERSION
+	CompareConstant(_POSIX2_VERSION,200112L,1921,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX2_VERSION\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef _POSIX2_C_BIND
 	CompareConstant(_POSIX2_C_BIND,200112L,1922,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX2_C_BIND\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef _XOPEN_VERSION
+	CompareConstant(_XOPEN_VERSION,500,1926,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: _XOPEN_VERSION\n");
 cnt++;
 #endif
 
