@@ -1153,6 +1153,19 @@ Msg("Find size of FT_Open_Args (16915)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16901,NULL);\n",architecture,16915,0);
 #endif
 
+#if 1
+CheckTypeSize(struct FT_Size_Metrics_,28, 16951, 1, 3.2, NULL, 0, NULL)
+Msg("Missing member data for FT_Size_Metrics_ on All\n");
+CheckOffset(struct FT_Size_Metrics_,x_ppem,0,1,54280)
+CheckOffset(struct FT_Size_Metrics_,y_ppem,0,1,54281)
+CheckOffset(struct FT_Size_Metrics_,x_scale,0,1,54282)
+CheckOffset(struct FT_Size_Metrics_,y_scale,0,1,54283)
+CheckOffset(struct FT_Size_Metrics_,ascender,0,1,54284)
+CheckOffset(struct FT_Size_Metrics_,descender,0,1,54285)
+CheckOffset(struct FT_Size_Metrics_,height,0,1,54286)
+CheckOffset(struct FT_Size_Metrics_,max_advance,0,1,54287)
+#endif
+
 #if defined __x86_64__
 CheckTypeSize(struct FT_SizeRec_,88, 16952, 11, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_SizeRec_,generic,16,11,54279)

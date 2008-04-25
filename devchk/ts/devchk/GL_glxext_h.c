@@ -6,6 +6,9 @@
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
+#define GLX_GLXEXT_PROTOTYPES
+#include <GL/glx.h>
+
 #include "GL/glxext.h"
 
 
