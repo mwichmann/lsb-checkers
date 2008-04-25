@@ -151,33 +151,15 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef s6_addr
-	CompareConstant(s6_addr,in6_u.u6_addr8,4498,architecture,2.0,NULL)
-#else
-Msg( "Error: Constant not found: s6_addr\n");
-cnt++;
-#endif
-
+/* No test for s6_addr */
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef s6_addr16
-	CompareConstant(s6_addr16,in6_u.u6_addr16,4499,architecture,2.0,NULL)
-#else
-Msg( "Error: Constant not found: s6_addr16\n");
-cnt++;
-#endif
-
+/* No test for s6_addr16 */
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef s6_addr32
-	CompareConstant(s6_addr32,in6_u.u6_addr32,4500,architecture,2.0,NULL)
-#else
-Msg( "Error: Constant not found: s6_addr32\n");
-cnt++;
-#endif
-
+/* No test for s6_addr32 */
 #endif
 
 #if _LSB_DEFAULT_ARCH

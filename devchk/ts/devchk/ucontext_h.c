@@ -29,28 +29,28 @@ printf("Checking data structures in ucontext.h\n");
 #if defined __ia64__
 /* No test for uc_mcontext */
 #else
-Msg( "No definition for uc_mcontext (11905, Unknown) in db\n");
+Msg( "No definition for uc_mcontext (11905, accessor) in db\n");
 #ifdef uc_mcontext
 #endif
 #endif
 #if defined __ia64__
 /* No test for uc_sigmask */
 #else
-Msg( "No definition for uc_sigmask (11906, Unknown) in db\n");
+Msg( "No definition for uc_sigmask (11906, accessor) in db\n");
 #ifdef uc_sigmask
 #endif
 #endif
 #if defined __ia64__
 /* No test for uc_stack */
 #else
-Msg( "No definition for uc_stack (11907, Unknown) in db\n");
+Msg( "No definition for uc_stack (11907, accessor) in db\n");
 #ifdef uc_stack
 #endif
 #endif
 #if defined __ia64__
 /* No test for uc_link */
 #else
-Msg( "No definition for uc_link (11908, Unknown) in db\n");
+Msg( "No definition for uc_link (11908, accessor) in db\n");
 #ifdef uc_link
 #endif
 #endif
