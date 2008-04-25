@@ -281,45 +281,8 @@ Msg("Find size of XTrapezoid (12569)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,12568,NULL);\n",architecture,12569,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(XTrapezoid *,4, 12570, 2, 1.2, NULL, 12569, NULL)
-#elif defined __x86_64__
-CheckTypeSize(XTrapezoid *,8, 12570, 11, 1.2, NULL, 12569, NULL)
-#elif defined __ia64__
-CheckTypeSize(XTrapezoid *,8, 12570, 3, 1.2, NULL, 12569, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XTrapezoid *,4, 12570, 6, 1.2, NULL, 12569, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(XTrapezoid *,8, 12570, 9, 1.2, NULL, 12569, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XTrapezoid *,4, 12570, 10, 1.2, NULL, 12569, NULL)
-#elif defined __s390x__
-CheckTypeSize(XTrapezoid *,8, 12570, 12, 1.2, NULL, 12569, NULL)
-#else
-Msg("Find size of XTrapezoid * (12570)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,12569,NULL);\n",architecture,12570,0);
-#endif
-
 #if 1
 CheckTypeSize(XRenderColor,8, 16626, 1, 1.2, NULL, 16625, NULL)
-#endif
-
-#if 1
-CheckTypeSize(const XRenderColor,8, 16627, 1, 1.2, NULL, 16626, NULL)
-#endif
-
-#if 1
-#endif
-
-#if 1
-CheckTypeSize(const XRectangle,8, 16630, 1, 1.2, NULL, 8408, NULL)
-#endif
-
-#if 1
-#endif
-
-#if 1
-CheckTypeSize(XRenderColor *,4, 16632, 1, 1.2, NULL, 16626, NULL)
 #endif
 
 #if defined __x86_64__
@@ -339,28 +302,6 @@ CheckTypeSize(Glyph,8, 16633, 9, 1.2, NULL, 11186, NULL)
 #else
 Msg("Find size of Glyph (16633)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,16633,0);
-#endif
-
-#if defined __s390__ && !defined __s390x__
-CheckTypeSize(const Glyph,4, 16634, 10, 1.2, NULL, 16633, NULL)
-#elif defined __i386__
-CheckTypeSize(const Glyph,4, 16634, 2, 1.2, NULL, 16633, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(const Glyph,4, 16634, 6, 1.2, NULL, 16633, NULL)
-#elif defined __x86_64__
-CheckTypeSize(const Glyph,8, 16634, 11, 1.2, NULL, 16633, NULL)
-#elif defined __s390x__
-CheckTypeSize(const Glyph,8, 16634, 12, 1.2, NULL, 16633, NULL)
-#elif defined __ia64__
-CheckTypeSize(const Glyph,8, 16634, 3, 1.2, NULL, 16633, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(const Glyph,8, 16634, 9, 1.2, NULL, 16633, NULL)
-#else
-Msg("Find size of const Glyph (16634)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16633,NULL);\n",architecture,16634,0);
-#endif
-
-#if 1
 #endif
 
 #if defined __x86_64__
@@ -405,35 +346,6 @@ Msg("Find size of XRenderPictFormat (16640)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16639,NULL);\n",architecture,16640,0);
 #endif
 
-#if defined __s390__ && !defined __s390x__
-CheckTypeSize(const XRenderPictFormat,32, 16641, 10, 1.2, NULL, 16640, NULL)
-#elif defined __i386__
-CheckTypeSize(const XRenderPictFormat,32, 16641, 2, 1.2, NULL, 16640, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(const XRenderPictFormat,32, 16641, 6, 1.2, NULL, 16640, NULL)
-#elif defined __x86_64__
-CheckTypeSize(const XRenderPictFormat,40, 16641, 11, 1.2, NULL, 16640, NULL)
-#elif defined __s390x__
-CheckTypeSize(const XRenderPictFormat,40, 16641, 12, 1.2, NULL, 16640, NULL)
-#elif defined __ia64__
-CheckTypeSize(const XRenderPictFormat,40, 16641, 3, 1.2, NULL, 16640, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(const XRenderPictFormat,40, 16641, 9, 1.2, NULL, 16640, NULL)
-#else
-Msg("Find size of const XRenderPictFormat (16641)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16640,NULL);\n",architecture,16641,0);
-#endif
-
-#if 1
-#endif
-
-#if 1
-CheckTypeSize(const XPointFixed,8, 16646, 1, 1.2, NULL, 16645, NULL)
-#endif
-
-#if 1
-#endif
-
 #if 1
 CheckTypeSize(struct _XGlyphInfo,12, 16648, 1, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct _XGlyphInfo,height,2,1,53872)
@@ -468,13 +380,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16648,NULL);\n",archi
 #endif
 
 #if 1
-CheckTypeSize(const XGlyphInfo,12, 16650, 1, 1.2, NULL, 16649, NULL)
-#endif
-
-#if 1
-#endif
-
-#if 1
 CheckTypeSize(struct _XFilters,16, 16652, 1, 1.2, NULL, 0, NULL)
 Msg("Missing member data for _XFilters on All\n");
 CheckOffset(struct _XFilters,nfilter,0,1,53877)
@@ -503,14 +408,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16652,NULL);\n",archi
 #endif
 
 #if 1
-CheckTypeSize(XFilters *,4, 16654, 1, 1.2, NULL, 16653, NULL)
-#endif
-
-#if 1
-CheckTypeSize(XRenderPictFormat *,4, 16655, 1, 1.2, NULL, 16640, NULL)
-#endif
-
-#if 1
 CheckTypeSize(struct _XTransform,36, 16656, 1, 1.2, NULL, 0, NULL)
 Msg("Missing member data for _XTransform on All\n");
 CheckOffset(struct _XTransform,matrix,0,1,53881)
@@ -518,10 +415,6 @@ CheckOffset(struct _XTransform,matrix,0,1,53881)
 
 #if 1
 CheckTypeSize(XTransform,36, 16658, 1, 1.2, NULL, 16656, NULL)
-#endif
-
-#if 1
-CheckTypeSize(XTransform *,4, 16659, 1, 1.2, NULL, 16658, NULL)
 #endif
 
 #if 1
@@ -551,10 +444,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16660,NULL);\n",archi
 #endif
 
 #if 1
-CheckTypeSize(XAnimCursor *,4, 16662, 1, 1.2, NULL, 16661, NULL)
-#endif
-
-#if 1
 CheckTypeSize(struct _XRadialGradient,24, 16663, 1, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct _XRadialGradient,outer,12,1,53888)
 CheckOffset(struct _XRadialGradient,outer,12,1,53888)
@@ -562,20 +451,6 @@ CheckOffset(struct _XRadialGradient,outer,12,1,53888)
 
 #if 1
 CheckTypeSize(XRadialGradient,24, 16666, 1, 1.2, NULL, 16663, NULL)
-#endif
-
-#if 1
-CheckTypeSize(const XRadialGradient,24, 16667, 1, 1.2, NULL, 16666, NULL)
-#endif
-
-#if 1
-#endif
-
-#if 1
-CheckTypeSize(const XFixed,4, 16669, 1, 1.2, NULL, 16644, NULL)
-#endif
-
-#if 1
 #endif
 
 #if 1
@@ -607,28 +482,6 @@ Msg("Find size of XGlyphElt32 (16672)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16671,NULL);\n",architecture,16672,0);
 #endif
 
-#if defined __s390__ && !defined __s390x__
-CheckTypeSize(const XGlyphElt32,20, 16673, 10, 1.2, NULL, 16672, NULL)
-#elif defined __i386__
-CheckTypeSize(const XGlyphElt32,20, 16673, 2, 1.2, NULL, 16672, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(const XGlyphElt32,20, 16673, 6, 1.2, NULL, 16672, NULL)
-#elif defined __x86_64__
-CheckTypeSize(const XGlyphElt32,32, 16673, 11, 1.2, NULL, 16672, NULL)
-#elif defined __s390x__
-CheckTypeSize(const XGlyphElt32,32, 16673, 12, 1.2, NULL, 16672, NULL)
-#elif defined __ia64__
-CheckTypeSize(const XGlyphElt32,32, 16673, 3, 1.2, NULL, 16672, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(const XGlyphElt32,32, 16673, 9, 1.2, NULL, 16672, NULL)
-#else
-Msg("Find size of const XGlyphElt32 (16673)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16672,NULL);\n",architecture,16673,0);
-#endif
-
-#if 1
-#endif
-
 #if 1
 CheckTypeSize(struct _XGlyphElt8,20, 16675, 1, 1.2, NULL, 0, NULL)
 Msg("Missing member data for _XGlyphElt8 on All\n");
@@ -658,32 +511,11 @@ Msg("Find size of XGlyphElt8 (16676)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16675,NULL);\n",architecture,16676,0);
 #endif
 
-#if defined __s390__ && !defined __s390x__
-CheckTypeSize(const XGlyphElt8,20, 16677, 10, 1.2, NULL, 16676, NULL)
-#elif defined __i386__
-CheckTypeSize(const XGlyphElt8,20, 16677, 2, 1.2, NULL, 16676, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(const XGlyphElt8,20, 16677, 6, 1.2, NULL, 16676, NULL)
-#elif defined __x86_64__
-CheckTypeSize(const XGlyphElt8,32, 16677, 11, 1.2, NULL, 16676, NULL)
-#elif defined __s390x__
-CheckTypeSize(const XGlyphElt8,32, 16677, 12, 1.2, NULL, 16676, NULL)
-#elif defined __ia64__
-CheckTypeSize(const XGlyphElt8,32, 16677, 3, 1.2, NULL, 16676, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(const XGlyphElt8,32, 16677, 9, 1.2, NULL, 16676, NULL)
-#else
-Msg("Find size of const XGlyphElt8 (16677)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16676,NULL);\n",architecture,16677,0);
-#endif
-
-#if 1
-#endif
-
 #if 1
 CheckTypeSize(struct _XConicalGradient,12, 16679, 1, 1.2, NULL, 0, NULL)
-CheckMemberSize(struct _XConicalGradient,angle,4,1,53900)
-CheckOffset(struct _XConicalGradient,angle,8,1,53900)
+Msg("Missing member data for _XConicalGradient on All\n");
+CheckOffset(struct _XConicalGradient,center,0,1,53899)
+CheckOffset(struct _XConicalGradient,angle,0,1,53900)
 #endif
 
 #if 1
@@ -691,38 +523,10 @@ CheckTypeSize(XConicalGradient,12, 16680, 1, 1.2, NULL, 16679, NULL)
 #endif
 
 #if 1
-CheckTypeSize(const XConicalGradient,12, 16681, 1, 1.2, NULL, 16680, NULL)
-#endif
-
-#if 1
-#endif
-
-#if defined __s390__ && !defined __s390x__
-CheckTypeSize(const Visual,32, 16683, 10, 1.2, NULL, 8377, NULL)
-#elif defined __i386__
-CheckTypeSize(const Visual,32, 16683, 2, 1.2, NULL, 8377, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(const Visual,32, 16683, 6, 1.2, NULL, 8377, NULL)
-#elif defined __x86_64__
-CheckTypeSize(const Visual,56, 16683, 11, 1.2, NULL, 8377, NULL)
-#elif defined __s390x__
-CheckTypeSize(const Visual,56, 16683, 12, 1.2, NULL, 8377, NULL)
-#elif defined __ia64__
-CheckTypeSize(const Visual,56, 16683, 3, 1.2, NULL, 8377, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(const Visual,56, 16683, 9, 1.2, NULL, 8377, NULL)
-#else
-Msg("Find size of const Visual (16683)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8377,NULL);\n",architecture,16683,0);
-#endif
-
-#if 1
-#endif
-
-#if 1
 CheckTypeSize(struct _XLinearGradient,16, 16685, 1, 1.2, NULL, 0, NULL)
-CheckMemberSize(struct _XLinearGradient,p2,8,1,53902)
-CheckOffset(struct _XLinearGradient,p2,8,1,53902)
+Msg("Missing member data for _XLinearGradient on All\n");
+CheckOffset(struct _XLinearGradient,p1,0,1,53901)
+CheckOffset(struct _XLinearGradient,p2,0,1,53902)
 #endif
 
 #if 1
@@ -730,38 +534,14 @@ CheckTypeSize(XLinearGradient,16, 16686, 1, 1.2, NULL, 16685, NULL)
 #endif
 
 #if 1
-CheckTypeSize(const XLinearGradient,16, 16687, 1, 1.2, NULL, 16686, NULL)
-#endif
-
-#if 1
-#endif
-
-#if 1
 CheckTypeSize(struct _XPointDouble,16, 16689, 1, 1.2, NULL, 0, NULL)
-CheckMemberSize(struct _XPointDouble,y,8,1,53904)
-CheckOffset(struct _XPointDouble,y,8,1,53904)
+Msg("Missing member data for _XPointDouble on All\n");
+CheckOffset(struct _XPointDouble,x,0,1,53903)
+CheckOffset(struct _XPointDouble,y,0,1,53904)
 #endif
 
 #if 1
 CheckTypeSize(XPointDouble,16, 16691, 1, 1.2, NULL, 16689, NULL)
-#endif
-
-#if 1
-CheckTypeSize(const XPointDouble,16, 16692, 1, 1.2, NULL, 16691, NULL)
-#endif
-
-#if 1
-#endif
-
-#if 1
-CheckTypeSize(XFixed *,4, 16694, 1, 1.2, NULL, 16644, NULL)
-#endif
-
-#if 1
-CheckTypeSize(const XTrapezoid,40, 16695, 1, 1.2, NULL, 12569, NULL)
-#endif
-
-#if 1
 #endif
 
 #if 1
@@ -801,28 +581,6 @@ Msg("Find size of XRenderPictureAttributes (16698)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16697,NULL);\n",architecture,16698,0);
 #endif
 
-#if defined __s390__ && !defined __s390x__
-CheckTypeSize(const XRenderPictureAttributes,52, 16699, 10, 1.2, NULL, 16698, NULL)
-#elif defined __i386__
-CheckTypeSize(const XRenderPictureAttributes,52, 16699, 2, 1.2, NULL, 16698, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(const XRenderPictureAttributes,52, 16699, 6, 1.2, NULL, 16698, NULL)
-#elif defined __x86_64__
-CheckTypeSize(const XRenderPictureAttributes,72, 16699, 11, 1.2, NULL, 16698, NULL)
-#elif defined __s390x__
-CheckTypeSize(const XRenderPictureAttributes,72, 16699, 12, 1.2, NULL, 16698, NULL)
-#elif defined __ia64__
-CheckTypeSize(const XRenderPictureAttributes,72, 16699, 3, 1.2, NULL, 16698, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(const XRenderPictureAttributes,72, 16699, 9, 1.2, NULL, 16698, NULL)
-#else
-Msg("Find size of const XRenderPictureAttributes (16699)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16698,NULL);\n",architecture,16699,0);
-#endif
-
-#if 1
-#endif
-
 #if 1
 CheckTypeSize(struct _XTrap,24, 16701, 1, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct _XTrap,bottom,12,1,53922)
@@ -831,13 +589,6 @@ CheckOffset(struct _XTrap,bottom,12,1,53922)
 
 #if 1
 CheckTypeSize(XTrap,24, 16704, 1, 1.2, NULL, 16701, NULL)
-#endif
-
-#if 1
-CheckTypeSize(const XTrap,24, 16705, 1, 1.2, NULL, 16704, NULL)
-#endif
-
-#if 1
 #endif
 
 #if 1
@@ -870,10 +621,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16707,NULL);\n",archi
 #endif
 
 #if 1
-CheckTypeSize(XIndexValue *,4, 16709, 1, 1.2, NULL, 16708, NULL)
-#endif
-
-#if 1
 CheckTypeSize(struct _XGlyphElt16,20, 16710, 1, 1.2, NULL, 0, NULL)
 Msg("Missing member data for _XGlyphElt16 on All\n");
 CheckOffset(struct _XGlyphElt16,glyphset,0,1,53928)
@@ -881,12 +628,6 @@ CheckOffset(struct _XGlyphElt16,chars,0,1,53929)
 CheckOffset(struct _XGlyphElt16,nchars,0,1,53930)
 CheckOffset(struct _XGlyphElt16,xOff,0,1,53931)
 CheckOffset(struct _XGlyphElt16,yOff,0,1,53932)
-#endif
-
-#if 1
-#endif
-
-#if 1
 #endif
 
 #if defined __i386__
@@ -908,28 +649,6 @@ Msg("Find size of XGlyphElt16 (16713)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16710,NULL);\n",architecture,16713,0);
 #endif
 
-#if defined __s390__ && !defined __s390x__
-CheckTypeSize(const XGlyphElt16,20, 16714, 10, 1.2, NULL, 16713, NULL)
-#elif defined __i386__
-CheckTypeSize(const XGlyphElt16,20, 16714, 2, 1.2, NULL, 16713, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(const XGlyphElt16,20, 16714, 6, 1.2, NULL, 16713, NULL)
-#elif defined __x86_64__
-CheckTypeSize(const XGlyphElt16,32, 16714, 11, 1.2, NULL, 16713, NULL)
-#elif defined __s390x__
-CheckTypeSize(const XGlyphElt16,32, 16714, 12, 1.2, NULL, 16713, NULL)
-#elif defined __ia64__
-CheckTypeSize(const XGlyphElt16,32, 16714, 3, 1.2, NULL, 16713, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(const XGlyphElt16,32, 16714, 9, 1.2, NULL, 16713, NULL)
-#else
-Msg("Find size of const XGlyphElt16 (16714)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16713,NULL);\n",architecture,16714,0);
-#endif
-
-#if 1
-#endif
-
 #if 1
 CheckTypeSize(struct _XTriangle,24, 16716, 1, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct _XTriangle,p2,8,1,53934)
@@ -938,13 +657,6 @@ CheckOffset(struct _XTriangle,p2,8,1,53934)
 
 #if 1
 CheckTypeSize(XTriangle,24, 16717, 1, 1.2, NULL, 16716, NULL)
-#endif
-
-#if 1
-CheckTypeSize(const XTriangle,24, 16718, 1, 1.2, NULL, 16717, NULL)
-#endif
-
-#if 1
 #endif
 
 #if defined __x86_64__
@@ -1010,8 +722,9 @@ CheckTypeSize(XSpanFix,12, 16703, 1, 1.2, NULL, 16702, NULL)
 
 #if 1
 CheckTypeSize(struct _XLineFixed,16, 17024, 1, 1.2, NULL, 0, NULL)
-CheckMemberSize(struct _XLineFixed,p2,8,1,64003)
-CheckOffset(struct _XLineFixed,p2,8,1,64003)
+Msg("Missing member data for _XLineFixed on All\n");
+CheckOffset(struct _XLineFixed,p1,0,1,64002)
+CheckOffset(struct _XLineFixed,p2,0,1,64003)
 #endif
 
 #if 1
