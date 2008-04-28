@@ -5,6 +5,10 @@
 #include <stdio.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#ifndef LSBCC_MODE
+typedef void * version_1_2_8;
+#endif
+
 #include "png.h"
 
 
