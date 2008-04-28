@@ -11599,7 +11599,7 @@ struct classinfo _ZSt9basic_iosIwSt11char_traitsIwEE_of_libstdcxx_so_6_classinfo
 	"_ZSt9basic_iosIwSt11char_traitsIwEE",
 	"_ZTVSt9basic_iosIwSt11char_traitsIwEE",
 	"_ZTISt9basic_iosIwSt11char_traitsIwEE",	/* RTTI */
-	"",
+	"_ZTISt8ios_base",
 	"_ZTTSt9basic_iosIwSt11char_traitsIwEE",	/* VTT */
 	1,
 	0,
@@ -12598,7 +12598,7 @@ struct classinfo _ZSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_of_
 	"_ZSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",
 	"_ZTVSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",
 	"_ZTISt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",	/* RTTI */
-	"",
+	"_ZTINSt6locale5facetE",
 	"_ZTTSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",	/* VTT */
 	1,
 	0,
@@ -12655,7 +12655,7 @@ struct classinfo _ZSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_of_
 	"_ZSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",
 	"_ZTVSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",
 	"_ZTISt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",	/* RTTI */
-	"",
+	"_ZTINSt6locale5facetE",
 	"_ZTTSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",	/* VTT */
 	1,
 	0,
@@ -12709,7 +12709,7 @@ struct classinfo _ZSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_of_
 	"_ZSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",
 	"_ZTVSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",
 	"_ZTISt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",	/* RTTI */
-	"",
+	"_ZTINSt6locale5facetE",
 	"_ZTTSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",	/* VTT */
 	1,
 	0,
@@ -12763,7 +12763,7 @@ struct classinfo _ZSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_of_
 	"_ZSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",
 	"_ZTVSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",
 	"_ZTISt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",	/* RTTI */
-	"",
+	"_ZTINSt6locale5facetE",
 	"_ZTTSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",	/* VTT */
 	1,
 	0,
@@ -13012,7 +13012,7 @@ struct classinfo _ZSt8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_of
 	"_ZSt8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",
 	"_ZTVSt8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",
 	"_ZTISt8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",	/* RTTI */
-	"",
+	"_ZTINSt6locale5facetE",
 	"_ZTTSt8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",	/* VTT */
 	1,
 	0,
@@ -13059,7 +13059,7 @@ struct classinfo _ZSt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_of
 	"_ZSt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",
 	"_ZTVSt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",
 	"_ZTISt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",	/* RTTI */
-	"",
+	"_ZTINSt6locale5facetE",
 	"_ZTTSt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",	/* VTT */
 	1,
 	0,
@@ -13990,39 +13990,167 @@ char *_St13basic_istreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_typeinfo_name[] 
 	};
 
 struct classtypeinfo _St13basic_istreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_typeinfo = {
-	"",
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
 	"_ZTSSt13basic_istreamIcSt11char_traitsIcEE",
 	_St13basic_istreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_typeinfo_name,
 	};
 
 const char *_St13basic_istreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_vtable_name_0 [] = {
+	"_ZNSoD1Ev",
+	"_ZNSoD0Ev",
 	};
 
-struct classvtable _St13basic_istreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_vtable [1] = {
+const char *_St13basic_istreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_vtable_name_1 [] = {
+#if defined __s390x__
+	"_ZTv0_n24_NSoD1Ev",
+#endif
+#if defined __x86_64__
+	"_ZTv0_n24_NSoD1Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZTv0_n12_NSoD1Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZTv0_n12_NSoD1Ev",
+#endif
+#if defined __powerpc64__
+	"_ZTv0_n24_NSoD1Ev",
+#endif
+#if defined __i386__
+	"_ZTv0_n12_NSoD1Ev",
+#endif
+#if defined __ia64__
+	"_ZTv0_n24_NSoD1Ev",
+#endif
+#if defined __x86_64__
+	"_ZTv0_n24_NSoD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZTv0_n12_NSoD0Ev",
+#endif
+#if defined __ia64__
+	"_ZTv0_n24_NSoD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZTv0_n24_NSoD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZTv0_n12_NSoD0Ev",
+#endif
+#if defined __i386__
+	"_ZTv0_n12_NSoD0Ev",
+#endif
+#if defined __s390x__
+	"_ZTv0_n24_NSoD0Ev",
+#endif
+	};
+
+struct classvtable _St13basic_istreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_vtable [2] = {
 	{
+#if defined __i386__
+	4,
 	0,
+#endif
+#if defined __ia64__
+	8,
 	0,
-	1,	/* Vtable category */
-	0,	/* Number of Vfuncs */
-	"_ZTISi",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	4,
+	0,
+#endif
+#if defined __powerpc64__
+	8,
+	0,
+#endif
+#if defined __s390__ && !defined __s390x__
+	4,
+	0,
+#endif
+#if defined __x86_64__
+	8,
+	0,
+#endif
+#if defined __s390x__
+	8,
+	0,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
+	"_ZTISo",
 	_St13basic_istreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_vtable_name_0,
+	},
+	{
+#if defined __i386__
+	-4,
+	-4,
+#endif
+#if defined __ia64__
+	-8,
+	-8,
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	-4,
+	-4,
+#endif
+#if defined __powerpc64__
+	-8,
+	-8,
+#endif
+#if defined __s390__ && !defined __s390x__
+	-4,
+	-4,
+#endif
+#if defined __x86_64__
+	-8,
+	-8,
+#endif
+#if defined __s390x__
+	-8,
+	-8,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
+	"_ZTISo",
+	_St13basic_istreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_vtable_name_1,
 	},
 };
 
 struct base_type_info _St13basic_istreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_baseinfo[] = {
+#if defined __i386__
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
+#endif
+#if defined __ia64__
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
+#endif
+#if defined __powerpc64__
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	4294964227U},
+#endif
+#if defined __x86_64__
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
+#endif
+#if defined __s390x__
+	{"_ZTISt9basic_iosIcSt11char_traitsIcEE",	18446744073709545475U},
+#endif
 	};
 
 struct classinfo _ZSt13basic_istreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_classinfo = {
 	"_ZSt13basic_istreamIcSt11char_traitsIcEE",
-	"",
-	"_ZTISi",	/* RTTI */
-	"",
+	"_ZTVSo",
+	"",	/* RTTI */
+	"_ZTISt9basic_iosIcSt11char_traitsIcEE",
 	"_ZTTSt13basic_istreamIcSt11char_traitsIcEE",	/* VTT */
+	2,
+	0,
 	1,
-	0,
-	0,
 	0,	/* numVTT */
-	0U,
+	8U,
 	&_St13basic_istreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_typeinfo,
 	_St13basic_istreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_vtable,
 	_St13basic_istreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_baseinfo,
@@ -14032,39 +14160,167 @@ char *_St13basic_ostreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_typeinfo_name[] 
 	};
 
 struct classtypeinfo _St13basic_ostreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_typeinfo = {
-	"",
+	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
 	"_ZTSSt13basic_ostreamIcSt11char_traitsIcEE",
 	_St13basic_ostreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_typeinfo_name,
 	};
 
 const char *_St13basic_ostreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_vtable_name_0 [] = {
+	"_ZNSt13basic_istreamIwSt11char_traitsIwEED1Ev",
+	"_ZNSt13basic_istreamIwSt11char_traitsIwEED0Ev",
 	};
 
-struct classvtable _St13basic_ostreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_vtable [1] = {
+const char *_St13basic_ostreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_vtable_name_1 [] = {
+#if defined __i386__
+	"_ZTv0_n12_NSt13basic_istreamIwSt11char_traitsIwEED1Ev",
+#endif
+#if defined __ia64__
+	"_ZTv0_n24_NSt13basic_istreamIwSt11char_traitsIwEED1Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZTv0_n12_NSt13basic_istreamIwSt11char_traitsIwEED1Ev",
+#endif
+#if defined __powerpc64__
+	"_ZTv0_n24_NSt13basic_istreamIwSt11char_traitsIwEED1Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZTv0_n12_NSt13basic_istreamIwSt11char_traitsIwEED1Ev",
+#endif
+#if defined __x86_64__
+	"_ZTv0_n24_NSt13basic_istreamIwSt11char_traitsIwEED1Ev",
+#endif
+#if defined __s390x__
+	"_ZTv0_n24_NSt13basic_istreamIwSt11char_traitsIwEED1Ev",
+#endif
+#if defined __i386__
+	"_ZTv0_n12_NSt13basic_istreamIwSt11char_traitsIwEED0Ev",
+#endif
+#if defined __ia64__
+	"_ZTv0_n24_NSt13basic_istreamIwSt11char_traitsIwEED0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZTv0_n12_NSt13basic_istreamIwSt11char_traitsIwEED0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZTv0_n24_NSt13basic_istreamIwSt11char_traitsIwEED0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZTv0_n12_NSt13basic_istreamIwSt11char_traitsIwEED0Ev",
+#endif
+#if defined __x86_64__
+	"_ZTv0_n24_NSt13basic_istreamIwSt11char_traitsIwEED0Ev",
+#endif
+#if defined __s390x__
+	"_ZTv0_n24_NSt13basic_istreamIwSt11char_traitsIwEED0Ev",
+#endif
+	};
+
+struct classvtable _St13basic_ostreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_vtable [2] = {
 	{
+#if defined __i386__
+	8,
 	0,
+#endif
+#if defined __ia64__
+	16,
 	0,
-	1,	/* Vtable category */
-	0,	/* Number of Vfuncs */
-	"_ZTISo",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	8,
+	0,
+#endif
+#if defined __powerpc64__
+	16,
+	0,
+#endif
+#if defined __s390__ && !defined __s390x__
+	8,
+	0,
+#endif
+#if defined __x86_64__
+	16,
+	0,
+#endif
+#if defined __s390x__
+	16,
+	0,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
+	"_ZTISt13basic_istreamIwSt11char_traitsIwEE",
 	_St13basic_ostreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_vtable_name_0,
+	},
+	{
+#if defined __i386__
+	-8,
+	-8,
+#endif
+#if defined __ia64__
+	-16,
+	-16,
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	-8,
+	-8,
+#endif
+#if defined __powerpc64__
+	-16,
+	-16,
+#endif
+#if defined __s390__ && !defined __s390x__
+	-8,
+	-8,
+#endif
+#if defined __x86_64__
+	-16,
+	-16,
+#endif
+#if defined __s390x__
+	-16,
+	-16,
+#endif
+	2,	/* Vtable category */
+	2,	/* Number of Vfuncs */
+	"_ZTISt13basic_istreamIwSt11char_traitsIwEE",
+	_St13basic_ostreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_vtable_name_1,
 	},
 };
 
 struct base_type_info _St13basic_ostreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_baseinfo[] = {
+#if defined __i386__
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
+#endif
+#if defined __ia64__
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
+#endif
+#if defined __powerpc64__
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	4294964227U},
+#endif
+#if defined __x86_64__
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
+#endif
+#if defined __s390x__
+	{"_ZTISt9basic_iosIwSt11char_traitsIwEE",	18446744073709545475U},
+#endif
 	};
 
 struct classinfo _ZSt13basic_ostreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_classinfo = {
 	"_ZSt13basic_ostreamIcSt11char_traitsIcEE",
-	"",
-	"_ZTISo",	/* RTTI */
-	"",
+	"_ZTVSt13basic_istreamIwSt11char_traitsIwEE",
+	"",	/* RTTI */
+	"_ZTISt9basic_iosIcSt11char_traitsIcEE",
 	"_ZTTSt13basic_ostreamIcSt11char_traitsIcEE",	/* VTT */
+	2,
+	0,
 	1,
-	0,
-	0,
 	0,	/* numVTT */
-	0U,
+	8U,
 	&_St13basic_ostreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_typeinfo,
 	_St13basic_ostreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_vtable,
 	_St13basic_ostreamIcSt11char_traitsIcEE_of_libstdcxx_so_6_baseinfo,
