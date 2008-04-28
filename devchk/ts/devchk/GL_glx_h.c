@@ -1280,6 +1280,30 @@ cnt++;
 
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifdef GLX_ARB_get_proc_address
+	CompareConstant(GLX_ARB_get_proc_address,1,15490,architecture,1.3,NULL)
+#else
+Msg( "Error: Constant not found: GLX_ARB_get_proc_address\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GLX_GLXEXT_VERSION
+	CompareConstant(GLX_GLXEXT_VERSION,19,15491,architecture,1.3,NULL)
+#else
+Msg( "Error: Constant not found: GLX_GLXEXT_VERSION\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GL/glx.h depends on GL/glxext.h */
+#endif
+
 #if defined __i386__
 CheckTypeSize(GLXContext,4, 8164, 2, 1.0, NULL, 7668, NULL)
 #elif defined __ia64__

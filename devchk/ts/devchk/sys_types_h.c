@@ -28,6 +28,10 @@ Msg("Checking data structures in sys/types.h\n");
 
 printf("Checking data structures in sys/types.h\n");
 #if _LSB_DEFAULT_ARCH
+/* No test for sys/types.h depends on endian.h */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef TRUE
 	CompareConstant(TRUE,1,2507,architecture,2.0,NULL)
 #else
