@@ -6,6 +6,10 @@
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
+#if defined __ia64__ && !defined LSBCC_MODE
+int __getpagesize(void);
+#endif
+
 #include "sys/shm.h"
 
 
@@ -348,10 +352,8 @@ CheckMemberSize(struct shmid_ds,__unused5,8,11,40748)
 CheckOffset(struct shmid_ds,__unused5,104,11,40748)
 #endif
 
-#ifndef __ia64__       /* XXX hand-edit */
 extern int __getpagesize_db(void);
 CheckInterfacedef(__getpagesize,__getpagesize_db);
-#endif
 extern void * shmat_db(int, const void *, int);
 CheckInterfacedef(shmat,shmat_db);
 extern int shmctl_db(int, int, struct shmid_ds *);

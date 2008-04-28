@@ -123,6 +123,20 @@ Msg( "No definition for _SC_GR0_OFFSET (5031, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5031,%d,'""1.3""',NULL);\n", architecture, _SC_GR0_OFFSET);
 #endif
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+#ifdef ELF_NGREG
+	CompareConstant(ELF_NGREG,48,5131,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: ELF_NGREG\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for ELF_NGREG (5131, int) in db\n");
+#ifdef ELF_NGREG
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5131,%d,'""1.2""',NULL);\n", architecture, ELF_NGREG);
+#endif
+#endif
 #if defined __x86_64__
 CheckTypeSize(struct _libc_fpxreg,16, 10799, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _libc_fpxreg,significand,8,11,40467)
