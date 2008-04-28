@@ -1429,6 +1429,8 @@ print MAKEFILE "\n\n";
 print MAKEFILE "hdrchk.c:\n";
 print MAKEFILE "\t./mktests -v `cat LSB_VERSION`\n";
 print MAKEFILE "\n\n";
+print MAKEFILE "gensrc:	hdrchk.c\n";
+print MAKEFILE "\n\n";
 print MAKEFILE "install:\n";
 print MAKEFILE "\n\n";
 print MAKEFILE "clean:\n\trm -f \$\(OBJS) hdrchk\n\n";

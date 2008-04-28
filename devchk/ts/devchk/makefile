@@ -70,6 +70,7 @@ OBJS = hdrchk.o \
 	curses_h.o \
 	dirent_h.o \
 	dlfcn_h.o \
+	endian_h.o \
 	errno_h.o \
 	fcntl_h.o \
 	fenv_h.o \
@@ -209,6 +210,7 @@ OBJS = hdrchk.o \
 	sys_param_h.o \
 	sys_poll_h.o \
 	sys_resource_h.o \
+	sys_select_h.o \
 	sys_sem_h.o \
 	sys_shm_h.o \
 	sys_socket_h.o \
@@ -275,6 +277,9 @@ hdrchk.o: hdrchk.c
 
 hdrchk.c:
 	./mktests -v `cat LSB_VERSION`
+
+
+gensrc:	hdrchk.c
 
 
 install:

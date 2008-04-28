@@ -814,6 +814,25 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8345,NULL);\n",archit
 #endif
 
 #if defined __i386__
+CheckTypeSize(struct _XcmsCCC *,4, 8852, 2, 1.2, NULL, 8345, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _XcmsCCC *,4, 8852, 6, 1.2, NULL, 8345, NULL)
+#elif defined __x86_64__
+CheckTypeSize(struct _XcmsCCC *,8, 8852, 11, 1.2, NULL, 8345, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(struct _XcmsCCC *,8, 8852, 9, 1.2, NULL, 8345, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _XcmsCCC *,4, 8852, 10, 1.2, NULL, 8345, NULL)
+#elif defined __s390x__
+CheckTypeSize(struct _XcmsCCC *,8, 8852, 12, 1.2, NULL, 8345, NULL)
+#elif defined __ia64__
+CheckTypeSize(struct _XcmsCCC *,8, 8852, 3, 1.2, NULL, 8345, NULL)
+#else
+Msg("Find size of _XcmsCCC * (8852)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8345,NULL);\n",architecture,8852,0);
+#endif
+
+#if defined __i386__
 CheckTypeSize(XcmsCCC,4, 8853, 2, 1.2, NULL, 8852, NULL)
 #elif defined __ia64__
 CheckTypeSize(XcmsCCC,8, 8853, 3, 1.2, NULL, 8852, NULL)

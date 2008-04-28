@@ -156,6 +156,18 @@ cnt++;
 
 #endif
 
+#if _LSB_DEFAULT_ARCH
+/* No test for ut_name */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for ut_time */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for ut_addr */
+#endif
+
 #if defined __i386__
 CheckTypeSize(struct exit_status,4, 10282, 2, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct exit_status,e_termination,2,2,34453)
