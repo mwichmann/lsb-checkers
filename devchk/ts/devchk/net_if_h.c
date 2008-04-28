@@ -127,6 +127,14 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+/* No test for ifc_buf */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for ifc_req */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef IFNAMSIZ
 	CompareConstant(IFNAMSIZ,IF_NAMESIZE,4988,architecture,1.2,NULL)
 #else
@@ -144,6 +152,62 @@ Msg( "Error: Constant not found: IF_NAMESIZE\n");
 cnt++;
 #endif
 
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for ifr_name */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for ifr_addr */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for ifr_hwaddr */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for ifr_dstaddr */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for ifr_broadaddr */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for ifr_netmask */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for ifr_flags */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for ifr_metric */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for ifr_mtu */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for ifr_ifindex */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for ifr_bandwidth */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for ifr_qlen */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for ifr_slave */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for ifr_data */
 #endif
 
 #if defined __i386__

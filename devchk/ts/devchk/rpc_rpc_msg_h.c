@@ -33,6 +33,46 @@ Msg("Checking data structures in rpc/rpc_msg.h\n");
 #endif
 
 printf("Checking data structures in rpc/rpc_msg.h\n");
+#if _LSB_DEFAULT_ARCH
+/* No test for ar_results */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for ar_vers */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for rj_vers */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for rj_why */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for rp_acpt */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for rp_rjct */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for rm_call */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for rm_reply */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for acpted_rply */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for rjcted_rply */
+#endif
+
 #if 1
 CheckEnum("CALL",CALL,0,34788)
 CheckEnum("REPLY",REPLY,1,34789)
