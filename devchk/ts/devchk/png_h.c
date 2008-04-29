@@ -7,7 +7,7 @@
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
 #ifndef LSBCC_MODE
-typedef void * version_1_2_8;
+/* typedef void * version_1_2_8; */	/*XXX disable, didn't work */
 #endif
 
 #include "png.h"
@@ -3500,6 +3500,7 @@ Msg("Find size of png_row_infop (11247)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11246,NULL);\n",architecture,11247,0);
 #endif
 
+#ifdef LSBCC_MODE	/* XXX hand-edit */
 #if defined __i386__
 CheckTypeSize(version_1_2_8,4, 11248, 2, 3.1, NULL, 11175, NULL)
 #elif defined __ia64__
@@ -3518,6 +3519,7 @@ CheckTypeSize(version_1_2_8,8, 11248, 11, 3.1, NULL, 11175, NULL)
 Msg("Find size of version_1_2_8 (11248)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11175,NULL);\n",architecture,11248,0);
 #endif
+#endif			/* XXX hand-edit */
 
 #if defined __i386__
 CheckTypeSize(png_uint_32p,4, 16182, 2, 3.1, NULL, 11214, NULL)
