@@ -29,8 +29,7 @@ char *architecture =
 #endif
 
 char *validos = "linux";
-
-char *lanananame = NULL;
+char *lanananame;
 
 int is_noarch = 0;
 /* Ignore is_graphics and is_desktop for LSB 3.1
@@ -158,8 +157,8 @@ char	**basenames;
 char	**dirnames;
 int	numdirnames;
 int	numdirindicies;
-char	*requirename = NULL;
-char	*requireversion = NULL;
+char	*requirename;
+char	*requireversion;
 int	numrequirename;
 int	numrequireversion;
 

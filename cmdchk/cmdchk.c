@@ -28,7 +28,7 @@ char *binpaths[] = {
 };
 
 #define TMP_STRING_SIZE (PATH_MAX+20)
-char prefix[TMP_STRING_SIZE + 1];
+char *prefix;
 
 /* Real CVS revision number so we can strings it from the binary if necessary */
 static const char *__attribute((unused)) cmdchk_revision =
@@ -211,6 +211,7 @@ int main(int argc, char *argv[])
 	    snprintf(journal_filename, TMP_STRING_SIZE, optarg);
 	    break;
 	case 'p':
+	    prefix = (char *)malloc(sizeof(char) * (strlen(optarg)+1));
 	    strcpy(prefix, optarg);
 	    break;
 	case 'T':
