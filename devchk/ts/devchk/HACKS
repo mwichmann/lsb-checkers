@@ -1,2 +1,3 @@
+png_h.c
 pthread_h.c
 freetype_fterrdef_h.c
