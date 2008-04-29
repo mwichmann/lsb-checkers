@@ -635,11 +635,11 @@ struct classinfo _Z14QGLPixelBuffer_of_libQtOpenGL_so_4_classinfo = {
 	};
 
 char *_20QGLFramebufferObject_of_libQtOpenGL_so_4_typeinfo_name[] = {
-	"",
+	"_ZTI12QPaintDevice",
 	};
 
 struct classtypeinfo _20QGLFramebufferObject_of_libQtOpenGL_so_4_typeinfo = {
-	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS20QGLFramebufferObject",
 	_20QGLFramebufferObject_of_libQtOpenGL_so_4_typeinfo_name,
 	};
@@ -647,6 +647,9 @@ struct classtypeinfo _20QGLFramebufferObject_of_libQtOpenGL_so_4_typeinfo = {
 const char *_20QGLFramebufferObject_of_libQtOpenGL_so_4_vtable_name_0 [] = {
 	"_ZN20QGLFramebufferObjectD1Ev",
 	"_ZN20QGLFramebufferObjectD0Ev",
+	"NULL or _ZNK20QGLFramebufferObject7devTypeEv",
+	"_ZNK20QGLFramebufferObject11paintEngineEv",
+	"_ZNK20QGLFramebufferObject6metricEN12QPaintDevice17PaintDeviceMetricE",
 	};
 
 struct classvtable _20QGLFramebufferObject_of_libQtOpenGL_so_4_vtable [1] = {
@@ -654,7 +657,7 @@ struct classvtable _20QGLFramebufferObject_of_libQtOpenGL_so_4_vtable [1] = {
 	0,
 	0,
 	1,	/* Vtable category */
-	2,	/* Number of Vfuncs */
+	5,	/* Number of Vfuncs */
 	"_ZTI20QGLFramebufferObject",
 	_20QGLFramebufferObject_of_libQtOpenGL_so_4_vtable_name_0,
 	},
@@ -666,8 +669,8 @@ struct base_type_info _20QGLFramebufferObject_of_libQtOpenGL_so_4_baseinfo[] = {
 struct classinfo _Z20QGLFramebufferObject_of_libQtOpenGL_so_4_classinfo = {
 	"_Z20QGLFramebufferObject",
 	"",
-	"",	/* RTTI */
-	"",
+	"_ZTI20QGLFramebufferObject",	/* RTTI */
+	"_ZTI12QPaintDevice",
 	"_ZTT20QGLFramebufferObject",	/* VTT */
 	1,
 	1,
