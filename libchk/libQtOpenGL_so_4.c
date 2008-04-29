@@ -602,7 +602,7 @@ struct classtypeinfo _20QGLFramebufferObject_of_libQtOpenGL_so_4_typeinfo = {
 const char *_20QGLFramebufferObject_of_libQtOpenGL_so_4_vtable_name_0 [] = {
 	"_ZN20QGLFramebufferObjectD1Ev",
 	"_ZN20QGLFramebufferObjectD0Ev",
-	"_ZNK20QGLFramebufferObject7devTypeEv",
+	"NULL or _ZNK20QGLFramebufferObject7devTypeEv",
 	"_ZNK20QGLFramebufferObject11paintEngineEv",
 	"_ZNK20QGLFramebufferObject6metricEN12QPaintDevice17PaintDeviceMetricE",
 	};
