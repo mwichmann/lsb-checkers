@@ -628,6 +628,7 @@ sub writetest($$) {
 				$select .= "WHERE TMmemberof=$Tid AND TMaid in (1,$Aid) ";
 				$select .= "AND TMbitfield = 0 ";
  				$select .= "AND TMEaid=$Aid ";
+				$select .= "AND TMEreserved='No' ";
 				$select .= "ORDER BY TMposition ";
 				print $select, "\n" if $trace;
 				$mth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
