@@ -42,6 +42,8 @@ CheckTypeSize(XdbeBackBuffer,0, 9394, 12, 1.2, NULL, 8727, NULL)
 CheckTypeSize(XdbeBackBuffer,0, 9394, 6, 1.2, NULL, 8727, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XdbeBackBuffer,0, 9394, 9, 1.2, NULL, 8727, NULL)
+#elif defined __ia64__
+CheckTypeSize(XdbeBackBuffer,0, 9394, 3, 1.2, NULL, 8727, NULL)
 #else
 Msg("Find size of XdbeBackBuffer (9394)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8727,NULL);\n",architecture,9394,0);
@@ -59,6 +61,8 @@ CheckTypeSize(XdbeSwapAction,0, 9395, 12, 1.2, NULL, 3, NULL)
 CheckTypeSize(XdbeSwapAction,0, 9395, 6, 1.2, NULL, 3, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XdbeSwapAction,0, 9395, 9, 1.2, NULL, 3, NULL)
+#elif defined __ia64__
+CheckTypeSize(XdbeSwapAction,0, 9395, 3, 1.2, NULL, 3, NULL)
 #else
 Msg("Find size of XdbeSwapAction (9395)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,3,NULL);\n",architecture,9395,0);
