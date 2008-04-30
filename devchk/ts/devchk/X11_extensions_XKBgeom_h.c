@@ -227,6 +227,8 @@ CheckTypeSize(XkbBoundsPtr,0, 9422, 12, 1.2, NULL, 9421, NULL)
 CheckTypeSize(XkbBoundsPtr,0, 9422, 6, 1.2, NULL, 9421, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XkbBoundsPtr,0, 9422, 9, 1.2, NULL, 9421, NULL)
+#elif defined __ia64__
+CheckTypeSize(XkbBoundsPtr,0, 9422, 3, 1.2, NULL, 9421, NULL)
 #else
 Msg("Find size of XkbBoundsPtr (9422)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9421,NULL);\n",architecture,9422,0);
@@ -296,6 +298,8 @@ CheckTypeSize(XkbOutlinePtr,0, 9426, 12, 1.2, NULL, 9425, NULL)
 CheckTypeSize(XkbOutlinePtr,0, 9426, 6, 1.2, NULL, 9425, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XkbOutlinePtr,0, 9426, 9, 1.2, NULL, 9425, NULL)
+#elif defined __ia64__
+CheckTypeSize(XkbOutlinePtr,0, 9426, 3, 1.2, NULL, 9425, NULL)
 #else
 Msg("Find size of XkbOutlinePtr (9426)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9425,NULL);\n",architecture,9426,0);
@@ -435,6 +439,8 @@ CheckTypeSize(XkbShapePtr,0, 9430, 12, 1.2, NULL, 9429, NULL)
 CheckTypeSize(XkbShapePtr,0, 9430, 6, 1.2, NULL, 9429, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XkbShapePtr,0, 9430, 9, 1.2, NULL, 9429, NULL)
+#elif defined __ia64__
+CheckTypeSize(XkbShapePtr,0, 9430, 3, 1.2, NULL, 9429, NULL)
 #else
 Msg("Find size of XkbShapePtr (9430)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9429,NULL);\n",architecture,9430,0);
@@ -1349,6 +1355,8 @@ CheckTypeSize(XkbDoodadPtr,0, 9454, 12, 1.2, NULL, 9453, NULL)
 CheckTypeSize(XkbDoodadPtr,0, 9454, 6, 1.2, NULL, 9453, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XkbDoodadPtr,0, 9454, 9, 1.2, NULL, 9453, NULL)
+#elif defined __ia64__
+CheckTypeSize(XkbDoodadPtr,0, 9454, 3, 1.2, NULL, 9453, NULL)
 #else
 Msg("Find size of XkbDoodadPtr (9454)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9453,NULL);\n",architecture,9454,0);
@@ -1465,6 +1473,8 @@ CheckTypeSize(XkbRowPtr,0, 9463, 12, 1.2, NULL, 9462, NULL)
 CheckTypeSize(XkbRowPtr,0, 9463, 6, 1.2, NULL, 9462, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XkbRowPtr,0, 9463, 9, 1.2, NULL, 9462, NULL)
+#elif defined __ia64__
+CheckTypeSize(XkbRowPtr,0, 9463, 3, 1.2, NULL, 9462, NULL)
 #else
 Msg("Find size of XkbRowPtr (9463)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9462,NULL);\n",architecture,9463,0);
@@ -1833,6 +1843,8 @@ CheckTypeSize(XkbSectionPtr,0, 9469, 12, 1.2, NULL, 9468, NULL)
 CheckTypeSize(XkbSectionPtr,0, 9469, 6, 1.2, NULL, 9468, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XkbSectionPtr,0, 9469, 9, 1.2, NULL, 9468, NULL)
+#elif defined __ia64__
+CheckTypeSize(XkbSectionPtr,0, 9469, 3, 1.2, NULL, 9468, NULL)
 #else
 Msg("Find size of XkbSectionPtr (9469)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9468,NULL);\n",architecture,9469,0);
@@ -1931,6 +1943,8 @@ CheckTypeSize(XkbOverlayRowPtr,0, 9477, 12, 1.2, NULL, 9476, NULL)
 CheckTypeSize(XkbOverlayRowPtr,0, 9477, 6, 1.2, NULL, 9476, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XkbOverlayRowPtr,0, 9477, 9, 1.2, NULL, 9476, NULL)
+#elif defined __ia64__
+CheckTypeSize(XkbOverlayRowPtr,0, 9477, 3, 1.2, NULL, 9476, NULL)
 #else
 Msg("Find size of XkbOverlayRowPtr (9477)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9476,NULL);\n",architecture,9477,0);
@@ -1967,6 +1981,8 @@ CheckTypeSize(XkbOverlayPtr,0, 9479, 12, 1.2, NULL, 9466, NULL)
 CheckTypeSize(XkbOverlayPtr,0, 9479, 6, 1.2, NULL, 9466, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XkbOverlayPtr,0, 9479, 9, 1.2, NULL, 9466, NULL)
+#elif defined __ia64__
+CheckTypeSize(XkbOverlayPtr,0, 9479, 3, 1.2, NULL, 9466, NULL)
 #else
 Msg("Find size of XkbOverlayPtr (9479)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9466,NULL);\n",architecture,9479,0);
@@ -2364,6 +2380,8 @@ CheckTypeSize(XkbGeometrySizesPtr,0, 9486, 12, 1.2, NULL, 9485, NULL)
 CheckTypeSize(XkbGeometrySizesPtr,0, 9486, 6, 1.2, NULL, 9485, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XkbGeometrySizesPtr,0, 9486, 9, 1.2, NULL, 9485, NULL)
+#elif defined __ia64__
+CheckTypeSize(XkbGeometrySizesPtr,0, 9486, 3, 1.2, NULL, 9485, NULL)
 #else
 Msg("Find size of XkbGeometrySizesPtr (9486)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9485, NULL);\n",architecture,9486,0);
