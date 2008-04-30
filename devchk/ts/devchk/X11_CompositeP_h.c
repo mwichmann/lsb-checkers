@@ -61,18 +61,38 @@ cnt++;
 
 #endif
 
-#if 1
-CheckTypeSize(struct _CompositeClassPart,40, 100647, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _CompositeClassPart on All\n");
-CheckOffset(struct _CompositeClassPart,geometry_manager,0,1,78445)
-CheckOffset(struct _CompositeClassPart,change_managed,0,1,78446)
-CheckOffset(struct _CompositeClassPart,insert_child,0,1,78447)
-CheckOffset(struct _CompositeClassPart,delete_child,0,1,78448)
-CheckOffset(struct _CompositeClassPart,extension,0,1,78449)
+#if defined __i386__
+CheckTypeSize(struct _CompositeClassPart,20, 100647, 2, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _CompositeClassPart,change_managed,4,2,78446)
+CheckOffset(struct _CompositeClassPart,change_managed,4,2,78446)
+CheckMemberSize(struct _CompositeClassPart,insert_child,4,2,78447)
+CheckOffset(struct _CompositeClassPart,insert_child,8,2,78447)
+CheckMemberSize(struct _CompositeClassPart,delete_child,4,2,78448)
+CheckOffset(struct _CompositeClassPart,delete_child,12,2,78448)
+CheckMemberSize(struct _CompositeClassPart,extension,4,2,78449)
+CheckOffset(struct _CompositeClassPart,extension,16,2,78449)
+#elif defined __ia64__
+CheckTypeSize(struct _CompositeClassPart,40, 100647, 3, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _CompositeClassPart,change_managed,8,3,78446)
+CheckOffset(struct _CompositeClassPart,change_managed,8,3,78446)
+CheckMemberSize(struct _CompositeClassPart,insert_child,8,3,78447)
+CheckOffset(struct _CompositeClassPart,insert_child,16,3,78447)
+CheckMemberSize(struct _CompositeClassPart,delete_child,8,3,78448)
+CheckOffset(struct _CompositeClassPart,delete_child,24,3,78448)
+CheckMemberSize(struct _CompositeClassPart,extension,8,3,78449)
+CheckOffset(struct _CompositeClassPart,extension,32,3,78449)
+#else
+Msg("Find size of _CompositeClassPart (100647)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,100647,0);
 #endif
 
-#if 1
-CheckTypeSize(CompositeClassPart,40, 100648, 1, 1.2, NULL, 100647, NULL)
+#if defined __i386__
+CheckTypeSize(CompositeClassPart,20, 100648, 2, 1.2, NULL, 100647, NULL)
+#elif defined __ia64__
+CheckTypeSize(CompositeClassPart,40, 100648, 3, 1.2, NULL, 100647, NULL)
+#else
+Msg("Find size of CompositeClassPart (100648)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100647,NULL);\n",architecture,100648,0);
 #endif
 
 #if defined __ia64__

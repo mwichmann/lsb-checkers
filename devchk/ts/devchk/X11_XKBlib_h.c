@@ -3050,6 +3050,8 @@ CheckTypeSize(XkbInternAtomFunc,0, 9520, 12, 1.2, NULL, 9519, NULL)
 CheckTypeSize(XkbInternAtomFunc,0, 9520, 6, 1.2, NULL, 9519, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XkbInternAtomFunc,0, 9520, 9, 1.2, NULL, 9519, NULL)
+#elif defined __ia64__
+CheckTypeSize(XkbInternAtomFunc,0, 9520, 3, 1.2, NULL, 9519, NULL)
 #else
 Msg("Find size of XkbInternAtomFunc (9520)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9519,NULL);\n",architecture,9520,0);
@@ -3067,6 +3069,8 @@ CheckTypeSize(XkbGetAtomNameFunc,0, 9522, 12, 1.2, NULL, 9521, NULL)
 CheckTypeSize(XkbGetAtomNameFunc,0, 9522, 6, 1.2, NULL, 9521, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XkbGetAtomNameFunc,0, 9522, 9, 1.2, NULL, 9521, NULL)
+#elif defined __ia64__
+CheckTypeSize(XkbGetAtomNameFunc,0, 9522, 3, 1.2, NULL, 9521, NULL)
 #else
 Msg("Find size of XkbGetAtomNameFunc (9522)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9521, NULL);\n",architecture,9522,0);
