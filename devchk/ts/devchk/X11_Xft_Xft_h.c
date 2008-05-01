@@ -363,13 +363,41 @@ CheckTypeSize(struct _XftFtFile,0, 17002, 1, 1.2, NULL, 0, NULL)
 Msg("Missing member data for _XftFtFile on All\n");
 #endif
 
-#if 1
-CheckTypeSize(struct _XftCharFontSpec,12, 17008, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XftCharFontSpec on All\n");
-CheckOffset(struct _XftCharFontSpec,font,0,1,54386)
-CheckOffset(struct _XftCharFontSpec,ucs4,0,1,54387)
-CheckOffset(struct _XftCharFontSpec,x,0,1,54388)
-CheckOffset(struct _XftCharFontSpec,y,0,1,54389)
+#if defined __x86_64__
+CheckTypeSize(struct _XftCharFontSpec,16, 17008, 11, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XftCharFontSpec,ucs4,4,11,54387)
+CheckOffset(struct _XftCharFontSpec,ucs4,8,11,54387)
+CheckMemberSize(struct _XftCharFontSpec,x,2,11,54388)
+CheckOffset(struct _XftCharFontSpec,x,12,11,54388)
+CheckMemberSize(struct _XftCharFontSpec,y,2,11,54389)
+CheckOffset(struct _XftCharFontSpec,y,14,11,54389)
+#elif defined __s390x__
+CheckTypeSize(struct _XftCharFontSpec,16, 17008, 12, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XftCharFontSpec,ucs4,4,12,54387)
+CheckOffset(struct _XftCharFontSpec,ucs4,8,12,54387)
+CheckMemberSize(struct _XftCharFontSpec,x,2,12,54388)
+CheckOffset(struct _XftCharFontSpec,x,12,12,54388)
+CheckMemberSize(struct _XftCharFontSpec,y,2,12,54389)
+CheckOffset(struct _XftCharFontSpec,y,14,12,54389)
+#elif defined __ia64__
+CheckTypeSize(struct _XftCharFontSpec,16, 17008, 3, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XftCharFontSpec,ucs4,4,3,54387)
+CheckOffset(struct _XftCharFontSpec,ucs4,8,3,54387)
+CheckMemberSize(struct _XftCharFontSpec,x,2,3,54388)
+CheckOffset(struct _XftCharFontSpec,x,12,3,54388)
+CheckMemberSize(struct _XftCharFontSpec,y,2,3,54389)
+CheckOffset(struct _XftCharFontSpec,y,14,3,54389)
+#elif defined __powerpc64__
+CheckTypeSize(struct _XftCharFontSpec,16, 17008, 9, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XftCharFontSpec,ucs4,4,9,54387)
+CheckOffset(struct _XftCharFontSpec,ucs4,8,9,54387)
+CheckMemberSize(struct _XftCharFontSpec,x,2,9,54388)
+CheckOffset(struct _XftCharFontSpec,x,12,9,54388)
+CheckMemberSize(struct _XftCharFontSpec,y,2,9,54389)
+CheckOffset(struct _XftCharFontSpec,y,14,9,54389)
+#else
+Msg("Find size of _XftCharFontSpec (17008)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,17008,0);
 #endif
 
 #if defined __x86_64__
@@ -391,13 +419,41 @@ Msg("Find size of XftCharFontSpec (17009)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,17008,NULL);\n",architecture,17009,0);
 #endif
 
-#if 1
-CheckTypeSize(struct _XftGlyphFontSpec,12, 17016, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _XftGlyphFontSpec on All\n");
-CheckOffset(struct _XftGlyphFontSpec,font,0,1,54390)
-CheckOffset(struct _XftGlyphFontSpec,glyph,0,1,54391)
-CheckOffset(struct _XftGlyphFontSpec,x,0,1,54392)
-CheckOffset(struct _XftGlyphFontSpec,y,0,1,54393)
+#if defined __x86_64__
+CheckTypeSize(struct _XftGlyphFontSpec,16, 17016, 11, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XftGlyphFontSpec,glyph,4,11,54391)
+CheckOffset(struct _XftGlyphFontSpec,glyph,8,11,54391)
+CheckMemberSize(struct _XftGlyphFontSpec,x,2,11,54392)
+CheckOffset(struct _XftGlyphFontSpec,x,12,11,54392)
+CheckMemberSize(struct _XftGlyphFontSpec,y,2,11,54393)
+CheckOffset(struct _XftGlyphFontSpec,y,14,11,54393)
+#elif defined __s390x__
+CheckTypeSize(struct _XftGlyphFontSpec,16, 17016, 12, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XftGlyphFontSpec,glyph,4,12,54391)
+CheckOffset(struct _XftGlyphFontSpec,glyph,8,12,54391)
+CheckMemberSize(struct _XftGlyphFontSpec,x,2,12,54392)
+CheckOffset(struct _XftGlyphFontSpec,x,12,12,54392)
+CheckMemberSize(struct _XftGlyphFontSpec,y,2,12,54393)
+CheckOffset(struct _XftGlyphFontSpec,y,14,12,54393)
+#elif defined __ia64__
+CheckTypeSize(struct _XftGlyphFontSpec,16, 17016, 3, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XftGlyphFontSpec,glyph,4,3,54391)
+CheckOffset(struct _XftGlyphFontSpec,glyph,8,3,54391)
+CheckMemberSize(struct _XftGlyphFontSpec,x,2,3,54392)
+CheckOffset(struct _XftGlyphFontSpec,x,12,3,54392)
+CheckMemberSize(struct _XftGlyphFontSpec,y,2,3,54393)
+CheckOffset(struct _XftGlyphFontSpec,y,14,3,54393)
+#elif defined __powerpc64__
+CheckTypeSize(struct _XftGlyphFontSpec,16, 17016, 9, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XftGlyphFontSpec,glyph,4,9,54391)
+CheckOffset(struct _XftGlyphFontSpec,glyph,8,9,54391)
+CheckMemberSize(struct _XftGlyphFontSpec,x,2,9,54392)
+CheckOffset(struct _XftGlyphFontSpec,x,12,9,54392)
+CheckMemberSize(struct _XftGlyphFontSpec,y,2,9,54393)
+CheckOffset(struct _XftGlyphFontSpec,y,14,9,54393)
+#else
+Msg("Find size of _XftGlyphFontSpec (17016)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,17016,0);
 #endif
 
 #if defined __x86_64__
