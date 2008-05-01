@@ -424,6 +424,14 @@ CheckMemberSize(struct _XFilters,nalias,4,9,53879)
 CheckOffset(struct _XFilters,nalias,16,9,53879)
 CheckMemberSize(struct _XFilters,alias,8,9,53880)
 CheckOffset(struct _XFilters,alias,24,9,53880)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _XFilters,0, 16652, 6, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XFilters,filter,4,6,53878)
+CheckOffset(struct _XFilters,filter,4,6,53878)
+CheckMemberSize(struct _XFilters,nalias,4,6,53879)
+CheckOffset(struct _XFilters,nalias,8,6,53879)
+CheckMemberSize(struct _XFilters,alias,4,6,53880)
+CheckOffset(struct _XFilters,alias,12,6,53880)
 #else
 Msg("Find size of _XFilters (16652)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,16652,0);
@@ -474,6 +482,10 @@ CheckOffset(struct _XAnimCursor,delay,8,3,53883)
 CheckTypeSize(struct _XAnimCursor,16, 16660, 9, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct _XAnimCursor,delay,8,9,53883)
 CheckOffset(struct _XAnimCursor,delay,8,9,53883)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _XAnimCursor,0, 16660, 6, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XAnimCursor,delay,4,6,53883)
+CheckOffset(struct _XAnimCursor,delay,4,6,53883)
 #else
 Msg("Find size of _XAnimCursor (16660)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,16660,0);
@@ -548,6 +560,16 @@ CheckMemberSize(struct _XGlyphElt32,xOff,4,9,53892)
 CheckOffset(struct _XGlyphElt32,xOff,20,9,53892)
 CheckMemberSize(struct _XGlyphElt32,yOff,4,9,53893)
 CheckOffset(struct _XGlyphElt32,yOff,24,9,53893)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _XGlyphElt32,0, 16671, 6, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XGlyphElt32,chars,4,6,53890)
+CheckOffset(struct _XGlyphElt32,chars,4,6,53890)
+CheckMemberSize(struct _XGlyphElt32,nchars,4,6,53891)
+CheckOffset(struct _XGlyphElt32,nchars,8,6,53891)
+CheckMemberSize(struct _XGlyphElt32,xOff,4,6,53892)
+CheckOffset(struct _XGlyphElt32,xOff,12,6,53892)
+CheckMemberSize(struct _XGlyphElt32,yOff,4,6,53893)
+CheckOffset(struct _XGlyphElt32,yOff,16,6,53893)
 #else
 Msg("Find size of _XGlyphElt32 (16671)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,16671,0);
@@ -612,6 +634,16 @@ CheckMemberSize(struct _XGlyphElt8,xOff,4,9,53897)
 CheckOffset(struct _XGlyphElt8,xOff,20,9,53897)
 CheckMemberSize(struct _XGlyphElt8,yOff,4,9,53898)
 CheckOffset(struct _XGlyphElt8,yOff,24,9,53898)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _XGlyphElt8,0, 16675, 6, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XGlyphElt8,chars,4,6,53895)
+CheckOffset(struct _XGlyphElt8,chars,4,6,53895)
+CheckMemberSize(struct _XGlyphElt8,nchars,4,6,53896)
+CheckOffset(struct _XGlyphElt8,nchars,8,6,53896)
+CheckMemberSize(struct _XGlyphElt8,xOff,4,6,53897)
+CheckOffset(struct _XGlyphElt8,xOff,12,6,53897)
+CheckMemberSize(struct _XGlyphElt8,yOff,4,6,53898)
+CheckOffset(struct _XGlyphElt8,yOff,16,6,53898)
 #else
 Msg("Find size of _XGlyphElt8 (16675)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,16675,0);
@@ -771,6 +803,32 @@ CheckMemberSize(struct _XRenderPictureAttributes,dither,8,9,53916)
 CheckOffset(struct _XRenderPictureAttributes,dither,56,9,53916)
 CheckMemberSize(struct _XRenderPictureAttributes,component_alpha,4,9,53917)
 CheckOffset(struct _XRenderPictureAttributes,component_alpha,64,9,53917)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _XRenderPictureAttributes,0, 16697, 6, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XRenderPictureAttributes,alpha_map,4,6,53906)
+CheckOffset(struct _XRenderPictureAttributes,alpha_map,4,6,53906)
+CheckMemberSize(struct _XRenderPictureAttributes,alpha_x_origin,4,6,53907)
+CheckOffset(struct _XRenderPictureAttributes,alpha_x_origin,8,6,53907)
+CheckMemberSize(struct _XRenderPictureAttributes,alpha_y_origin,4,6,53908)
+CheckOffset(struct _XRenderPictureAttributes,alpha_y_origin,12,6,53908)
+CheckMemberSize(struct _XRenderPictureAttributes,clip_x_origin,4,6,53909)
+CheckOffset(struct _XRenderPictureAttributes,clip_x_origin,16,6,53909)
+CheckMemberSize(struct _XRenderPictureAttributes,clip_y_origin,4,6,53910)
+CheckOffset(struct _XRenderPictureAttributes,clip_y_origin,20,6,53910)
+CheckMemberSize(struct _XRenderPictureAttributes,clip_mask,4,6,53911)
+CheckOffset(struct _XRenderPictureAttributes,clip_mask,24,6,53911)
+CheckMemberSize(struct _XRenderPictureAttributes,graphics_exposures,4,6,53912)
+CheckOffset(struct _XRenderPictureAttributes,graphics_exposures,28,6,53912)
+CheckMemberSize(struct _XRenderPictureAttributes,subwindow_mode,4,6,53913)
+CheckOffset(struct _XRenderPictureAttributes,subwindow_mode,32,6,53913)
+CheckMemberSize(struct _XRenderPictureAttributes,poly_edge,4,6,53914)
+CheckOffset(struct _XRenderPictureAttributes,poly_edge,36,6,53914)
+CheckMemberSize(struct _XRenderPictureAttributes,poly_mode,4,6,53915)
+CheckOffset(struct _XRenderPictureAttributes,poly_mode,40,6,53915)
+CheckMemberSize(struct _XRenderPictureAttributes,dither,4,6,53916)
+CheckOffset(struct _XRenderPictureAttributes,dither,44,6,53916)
+CheckMemberSize(struct _XRenderPictureAttributes,component_alpha,4,6,53917)
+CheckOffset(struct _XRenderPictureAttributes,component_alpha,48,6,53917)
 #else
 Msg("Find size of _XRenderPictureAttributes (16697)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,16697,0);
@@ -845,6 +903,16 @@ CheckMemberSize(struct _XIndexValue,blue,2,9,53926)
 CheckOffset(struct _XIndexValue,blue,12,9,53926)
 CheckMemberSize(struct _XIndexValue,alpha,2,9,53927)
 CheckOffset(struct _XIndexValue,alpha,14,9,53927)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _XIndexValue,0, 16707, 6, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XIndexValue,red,2,6,53924)
+CheckOffset(struct _XIndexValue,red,4,6,53924)
+CheckMemberSize(struct _XIndexValue,green,2,6,53925)
+CheckOffset(struct _XIndexValue,green,6,6,53925)
+CheckMemberSize(struct _XIndexValue,blue,2,6,53926)
+CheckOffset(struct _XIndexValue,blue,8,6,53926)
+CheckMemberSize(struct _XIndexValue,alpha,2,6,53927)
+CheckOffset(struct _XIndexValue,alpha,10,6,53927)
 #else
 Msg("Find size of _XIndexValue (16707)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,16707,0);
@@ -909,6 +977,16 @@ CheckMemberSize(struct _XGlyphElt16,xOff,4,9,53931)
 CheckOffset(struct _XGlyphElt16,xOff,20,9,53931)
 CheckMemberSize(struct _XGlyphElt16,yOff,4,9,53932)
 CheckOffset(struct _XGlyphElt16,yOff,24,9,53932)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _XGlyphElt16,0, 16710, 6, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XGlyphElt16,chars,4,6,53929)
+CheckOffset(struct _XGlyphElt16,chars,4,6,53929)
+CheckMemberSize(struct _XGlyphElt16,nchars,4,6,53930)
+CheckOffset(struct _XGlyphElt16,nchars,8,6,53930)
+CheckMemberSize(struct _XGlyphElt16,xOff,4,6,53931)
+CheckOffset(struct _XGlyphElt16,xOff,12,6,53931)
+CheckMemberSize(struct _XGlyphElt16,yOff,4,6,53932)
+CheckOffset(struct _XGlyphElt16,yOff,16,6,53932)
 #else
 Msg("Find size of _XGlyphElt16 (16710)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,16710,0);
