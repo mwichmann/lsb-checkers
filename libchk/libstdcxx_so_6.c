@@ -103,6 +103,119 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZN9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEE4fileEv","GLIBCXX_3.4.2",0,LSB_Cpp,0,1},
 	{"_ZN9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEE4fileEv","GLIBCXX_3.4.2",0,LSB_Cpp,0,1},
 	{"_ZN9__gnu_cxx27__verbose_terminate_handlerEv","CXXABI_1.3",0,LSB_Cpp,0,1},
+	{"_ZN9__gnu_cxx6__poolILb0EE10_M_destroyEv","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+	{"_ZN9__gnu_cxx6__poolILb0EE13_M_initializeEv","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#if defined __i386__
+	{"_ZN9__gnu_cxx6__poolILb0EE16_M_reclaim_blockEPcj","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9__gnu_cxx6__poolILb0EE16_M_reclaim_blockEPcj","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9__gnu_cxx6__poolILb0EE16_M_reclaim_blockEPcj","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __ia64__
+	{"_ZN9__gnu_cxx6__poolILb0EE16_M_reclaim_blockEPcm","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZN9__gnu_cxx6__poolILb0EE16_M_reclaim_blockEPcm","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __x86_64__
+	{"_ZN9__gnu_cxx6__poolILb0EE16_M_reclaim_blockEPcm","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZN9__gnu_cxx6__poolILb0EE16_M_reclaim_blockEPcm","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __i386__
+	{"_ZN9__gnu_cxx6__poolILb0EE16_M_reserve_blockEjj","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9__gnu_cxx6__poolILb0EE16_M_reserve_blockEjj","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9__gnu_cxx6__poolILb0EE16_M_reserve_blockEjj","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __ia64__
+	{"_ZN9__gnu_cxx6__poolILb0EE16_M_reserve_blockEmm","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZN9__gnu_cxx6__poolILb0EE16_M_reserve_blockEmm","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __x86_64__
+	{"_ZN9__gnu_cxx6__poolILb0EE16_M_reserve_blockEmm","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZN9__gnu_cxx6__poolILb0EE16_M_reserve_blockEmm","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+	{"_ZN9__gnu_cxx6__poolILb1EE10_M_destroyEv","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+	{"_ZN9__gnu_cxx6__poolILb1EE13_M_initializeEPFvPvE","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+	{"_ZN9__gnu_cxx6__poolILb1EE13_M_initializeEv","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
+	{"_ZN9__gnu_cxx6__poolILb1EE16_M_get_thread_idEv","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#if defined __i386__
+	{"_ZN9__gnu_cxx6__poolILb1EE16_M_reclaim_blockEPcj","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9__gnu_cxx6__poolILb1EE16_M_reclaim_blockEPcj","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9__gnu_cxx6__poolILb1EE16_M_reclaim_blockEPcj","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __ia64__
+	{"_ZN9__gnu_cxx6__poolILb1EE16_M_reclaim_blockEPcm","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZN9__gnu_cxx6__poolILb1EE16_M_reclaim_blockEPcm","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __x86_64__
+	{"_ZN9__gnu_cxx6__poolILb1EE16_M_reclaim_blockEPcm","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZN9__gnu_cxx6__poolILb1EE16_M_reclaim_blockEPcm","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __i386__
+	{"_ZN9__gnu_cxx6__poolILb1EE16_M_reserve_blockEjj","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9__gnu_cxx6__poolILb1EE16_M_reserve_blockEjj","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9__gnu_cxx6__poolILb1EE16_M_reserve_blockEjj","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __ia64__
+	{"_ZN9__gnu_cxx6__poolILb1EE16_M_reserve_blockEmm","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZN9__gnu_cxx6__poolILb1EE16_M_reserve_blockEmm","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __x86_64__
+	{"_ZN9__gnu_cxx6__poolILb1EE16_M_reserve_blockEmm","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZN9__gnu_cxx6__poolILb1EE16_M_reserve_blockEmm","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+	{"_ZN9__gnu_cxx6__poolILb1EE21_M_destroy_thread_keyEPv","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#if defined __i386__
+	{"_ZN9__gnu_cxx9free_list6_M_getEj","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9__gnu_cxx9free_list6_M_getEj","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9__gnu_cxx9free_list6_M_getEj","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __ia64__
+	{"_ZN9__gnu_cxx9free_list6_M_getEm","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZN9__gnu_cxx9free_list6_M_getEm","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __x86_64__
+	{"_ZN9__gnu_cxx9free_list6_M_getEm","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZN9__gnu_cxx9free_list6_M_getEm","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
+#endif
+	{"_ZN9__gnu_cxx9free_list8_M_clearEv","GLIBCXX_3.4.4",0,LSB_Cpp,0,1},
 	{"_ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj","CXXABI_1.3",0,LSB_Cpp,0,1},
 	{"_ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE","CXXABI_1.3",0,LSB_Cpp,0,1},
 	{"_ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv","CXXABI_1.3",0,LSB_Cpp,0,1},
@@ -240,6 +353,7 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNK10__cxxabiv121__vmi_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_","CXXABI_1.3",0,LSB_Cpp,0,1},
 #endif
 	{"_ZNK10__cxxabiv129__pointer_to_member_type_info15__pointer_catchEPKNS_17__pbase_type_infoEPPvj","CXXABI_1.3",0,LSB_Cpp,0,1},
+	{"_ZNKSbIwSt11char_traitsIwESaIwEE11_M_disjunctEPKw","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
 #if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE12find_last_ofEPKwj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 #endif
@@ -409,6 +523,27 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE13find_first_ofEwm","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 #endif
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE13get_allocatorEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#if defined __i386__
+	{"_ZNKSbIwSt11char_traitsIwESaIwEE15_M_check_lengthEjjPKc","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSbIwSt11char_traitsIwESaIwEE15_M_check_lengthEjjPKc","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSbIwSt11char_traitsIwESaIwEE15_M_check_lengthEjjPKc","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __ia64__
+	{"_ZNKSbIwSt11char_traitsIwESaIwEE15_M_check_lengthEmmPKc","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSbIwSt11char_traitsIwESaIwEE15_M_check_lengthEmmPKc","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __x86_64__
+	{"_ZNKSbIwSt11char_traitsIwESaIwEE15_M_check_lengthEmmPKc","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSbIwSt11char_traitsIwESaIwEE15_M_check_lengthEmmPKc","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
 #if defined __i386__
 	{"_ZNKSbIwSt11char_traitsIwESaIwEE16find_last_not_ofEPKwj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 #endif
@@ -977,6 +1112,7 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNKSi6gcountEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNKSi6sentrycvbEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNKSo6sentrycvbEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+	{"_ZNKSs11_M_disjunctEPKc","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
 #if defined __i386__
 	{"_ZNKSs12find_last_ofEPKcj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 #endif
@@ -1146,6 +1282,27 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNKSs13find_first_ofEcm","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 #endif
 	{"_ZNKSs13get_allocatorEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#if defined __i386__
+	{"_ZNKSs15_M_check_lengthEjjPKc","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSs15_M_check_lengthEjjPKc","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSs15_M_check_lengthEjjPKc","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __ia64__
+	{"_ZNKSs15_M_check_lengthEmmPKc","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSs15_M_check_lengthEmmPKc","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __x86_64__
+	{"_ZNKSs15_M_check_lengthEmmPKc","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSs15_M_check_lengthEmmPKc","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
 #if defined __i386__
 	{"_ZNKSs16find_last_not_ofEPKcj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 #endif
@@ -1848,15 +2005,21 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNKSt13basic_filebufIcSt11char_traitsIcEE7is_openEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNKSt13basic_filebufIwSt11char_traitsIwEE7is_openEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNKSt13basic_fstreamIcSt11char_traitsIcEE5rdbufEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+	{"_ZNKSt13basic_fstreamIcSt11char_traitsIcEE7is_openEv","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
 	{"_ZNKSt13basic_fstreamIwSt11char_traitsIwEE5rdbufEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+	{"_ZNKSt13basic_fstreamIwSt11char_traitsIwEE7is_openEv","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
 	{"_ZNKSt13basic_istreamIwSt11char_traitsIwEE6gcountEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNKSt13basic_istreamIwSt11char_traitsIwEE6sentrycvbEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNKSt13basic_ostreamIwSt11char_traitsIwEE6sentrycvbEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNKSt13runtime_error4whatEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNKSt14basic_ifstreamIcSt11char_traitsIcEE5rdbufEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+	{"_ZNKSt14basic_ifstreamIcSt11char_traitsIcEE7is_openEv","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
 	{"_ZNKSt14basic_ifstreamIwSt11char_traitsIwEE5rdbufEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+	{"_ZNKSt14basic_ifstreamIwSt11char_traitsIwEE7is_openEv","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
 	{"_ZNKSt14basic_ofstreamIcSt11char_traitsIcEE5rdbufEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+	{"_ZNKSt14basic_ofstreamIcSt11char_traitsIcEE7is_openEv","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
 	{"_ZNKSt14basic_ofstreamIwSt11char_traitsIwEE5rdbufEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+	{"_ZNKSt14basic_ofstreamIwSt11char_traitsIwEE7is_openEv","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
 	{"_ZNKSt15basic_streambufIcSt11char_traitsIcEE4gptrEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNKSt15basic_streambufIcSt11char_traitsIcEE4pptrEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNKSt15basic_streambufIcSt11char_traitsIcEE5ebackEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -2593,6 +2756,27 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSbIwSt11char_traitsIwESaIwEE4_Rep13_M_set_leakedEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSbIwSt11char_traitsIwESaIwEE4_Rep15_M_set_sharableEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSbIwSt11char_traitsIwESaIwEE4_Rep20_S_empty_rep_storageE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
+#if defined __i386__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE4_Rep26_M_set_length_and_sharableEj","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE4_Rep26_M_set_length_and_sharableEj","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE4_Rep26_M_set_length_and_sharableEj","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __ia64__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE4_Rep26_M_set_length_and_sharableEm","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE4_Rep26_M_set_length_and_sharableEm","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __x86_64__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE4_Rep26_M_set_length_and_sharableEm","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE4_Rep26_M_set_length_and_sharableEm","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
 	{"_ZNSbIwSt11char_traitsIwESaIwEE4_Rep7_M_grabERKS1_S5_","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 #if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE4_Rep8_M_cloneERKS1_j","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -2964,8 +3148,50 @@ struct versym libstdcxx_so_6[] = {
 #if defined __s390x__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE6resizeEmw","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 #endif
+#if defined __i386__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE7_M_copyEPwPKwj","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE7_M_copyEPwPKwj","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE7_M_copyEPwPKwj","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __ia64__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE7_M_copyEPwPKwm","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE7_M_copyEPwPKwm","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __x86_64__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE7_M_copyEPwPKwm","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE7_M_copyEPwPKwm","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7_M_dataEPw","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7_M_leakEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#if defined __i386__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE7_M_moveEPwPKwj","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE7_M_moveEPwPKwj","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE7_M_moveEPwPKwj","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __ia64__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE7_M_moveEPwPKwm","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE7_M_moveEPwPKwm","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __x86_64__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE7_M_moveEPwPKwm","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE7_M_moveEPwPKwm","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7replaceEN9__gnu_cxx17__normal_iteratorIPwS2_EES6_NS4_IPKwS2_EES9_","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7replaceEN9__gnu_cxx17__normal_iteratorIPwS2_EES6_PKw","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7replaceEN9__gnu_cxx17__normal_iteratorIPwS2_EES6_PKwS8_","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -3139,6 +3365,27 @@ struct versym libstdcxx_so_6[] = {
 #endif
 #if defined __s390x__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE7reserveEm","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __i386__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE9_M_assignEPwjw","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE9_M_assignEPwjw","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE9_M_assignEPwjw","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __ia64__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE9_M_assignEPwmw","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE9_M_assignEPwmw","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __x86_64__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE9_M_assignEPwmw","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE9_M_assignEPwmw","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
 #endif
 #if defined __i386__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE9_M_mutateEjjj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -3474,6 +3721,15 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSi5tellgEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSi5ungetEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 #if defined __i386__
+	{"_ZNSi6ignoreEi","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSi6ignoreEi","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSi6ignoreEi","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __i386__
 	{"_ZNSi6ignoreEii","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -3481,6 +3737,18 @@ struct versym libstdcxx_so_6[] = {
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"_ZNSi6ignoreEii","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __ia64__
+	{"_ZNSi6ignoreEl","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSi6ignoreEl","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __x86_64__
+	{"_ZNSi6ignoreEl","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSi6ignoreEl","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
 #endif
 #if defined __ia64__
 	{"_ZNSi6ignoreEli","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -3494,6 +3762,7 @@ struct versym libstdcxx_so_6[] = {
 #if defined __s390x__
 	{"_ZNSi6ignoreEli","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 #endif
+	{"_ZNSi6ignoreEv","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
 	{"_ZNSi6sentryC1ERSib","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSi6sentryC2ERSib","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 #if defined __i386__
@@ -3782,6 +4051,27 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSs4_Rep13_M_set_leakedEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSs4_Rep15_M_set_sharableEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSs4_Rep20_S_empty_rep_storageE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
+#if defined __i386__
+	{"_ZNSs4_Rep26_M_set_length_and_sharableEj","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSs4_Rep26_M_set_length_and_sharableEj","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSs4_Rep26_M_set_length_and_sharableEj","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __ia64__
+	{"_ZNSs4_Rep26_M_set_length_and_sharableEm","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSs4_Rep26_M_set_length_and_sharableEm","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __x86_64__
+	{"_ZNSs4_Rep26_M_set_length_and_sharableEm","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSs4_Rep26_M_set_length_and_sharableEm","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
 	{"_ZNSs4_Rep7_M_grabERKSaIcES2_","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 #if defined __i386__
 	{"_ZNSs4_Rep8_M_cloneERKSaIcEj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -4153,8 +4443,50 @@ struct versym libstdcxx_so_6[] = {
 #if defined __s390x__
 	{"_ZNSs6resizeEmc","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 #endif
+#if defined __i386__
+	{"_ZNSs7_M_copyEPcPKcj","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSs7_M_copyEPcPKcj","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSs7_M_copyEPcPKcj","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __ia64__
+	{"_ZNSs7_M_copyEPcPKcm","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSs7_M_copyEPcPKcm","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __x86_64__
+	{"_ZNSs7_M_copyEPcPKcm","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSs7_M_copyEPcPKcm","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
 	{"_ZNSs7_M_dataEPc","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSs7_M_leakEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#if defined __i386__
+	{"_ZNSs7_M_moveEPcPKcj","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSs7_M_moveEPcPKcj","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSs7_M_moveEPcPKcj","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __ia64__
+	{"_ZNSs7_M_moveEPcPKcm","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSs7_M_moveEPcPKcm","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __x86_64__
+	{"_ZNSs7_M_moveEPcPKcm","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSs7_M_moveEPcPKcm","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
 	{"_ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_NS0_IPKcSsEES5_","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_PKc","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSs7replaceEN9__gnu_cxx17__normal_iteratorIPcSsEES2_PKcS4_","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -4328,6 +4660,27 @@ struct versym libstdcxx_so_6[] = {
 #endif
 #if defined __s390x__
 	{"_ZNSs7reserveEm","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __i386__
+	{"_ZNSs9_M_assignEPcjc","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSs9_M_assignEPcjc","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSs9_M_assignEPcjc","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __ia64__
+	{"_ZNSs9_M_assignEPcmc","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSs9_M_assignEPcmc","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __x86_64__
+	{"_ZNSs9_M_assignEPcmc","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSs9_M_assignEPcmc","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
 #endif
 #if defined __i386__
 	{"_ZNSs9_M_mutateEjjj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -5372,6 +5725,8 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt11__timepunctIwED0Ev","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt11__timepunctIwED1Ev","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt11__timepunctIwED2Ev","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+	{"_ZNSt11char_traitsIcE2eqERKcS2_","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+	{"_ZNSt11char_traitsIwE2eqERKwS2_","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
 	{"_ZNSt11logic_errorC1ERKSs","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt11logic_errorC2ERKSs","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt11logic_errorD0Ev","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -6028,6 +6383,15 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE5tellgEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE5ungetEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 #if defined __i386__
+	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE6ignoreEi","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE6ignoreEi","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE6ignoreEi","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __i386__
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE6ignoreEij","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -6035,6 +6399,18 @@ struct versym libstdcxx_so_6[] = {
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE6ignoreEij","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __ia64__
+	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE6ignoreEl","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE6ignoreEl","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __x86_64__
+	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE6ignoreEl","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE6ignoreEl","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
 #endif
 #if defined __ia64__
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE6ignoreElj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -6048,6 +6424,7 @@ struct versym libstdcxx_so_6[] = {
 #if defined __s390x__
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE6ignoreElj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 #endif
+	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE6ignoreEv","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE6sentryC1ERS2_b","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEE6sentryC2ERS2_b","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 #if defined __i386__
@@ -7291,6 +7668,7 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE7seekposESt4fposI11__mbstate_tESt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE8overflowEi","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE9pbackfailEi","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE9showmanycEv","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEE9underflowEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEEC1ERKSsSt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt15basic_stringbufIcSt11char_traitsIcESaIcEEC1ESt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -7367,6 +7745,7 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE7seekposESt4fposI11__mbstate_tESt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE8overflowEj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE9pbackfailEj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE9showmanycEv","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEE9underflowEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEEC1ERKSbIwS1_S2_ESt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt15basic_stringbufIwSt11char_traitsIwESaIwEEC1ESt13_Ios_Openmode","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -7976,6 +8355,8 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt19basic_ostringstreamIwSt11char_traitsIwESaIwEED0Ev","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt19basic_ostringstreamIwSt11char_traitsIwESaIwEED1Ev","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt19basic_ostringstreamIwSt11char_traitsIwESaIwEED2Ev","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+	{"_ZNSt19istreambuf_iteratorIcSt11char_traitsIcEEppEv","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
+	{"_ZNSt19istreambuf_iteratorIwSt11char_traitsIwEEppEv","GLIBCXX_3.4.5",0,LSB_Cpp,0,1},
 	{"_ZNSt21__numeric_limits_base10has_denormE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt21__numeric_limits_base10is_boundedE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt21__numeric_limits_base10is_integerE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
@@ -8224,6 +8605,27 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt6locale3allE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt6locale4noneE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt6locale4timeE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
+#if defined __i386__
+	{"_ZNSt6locale5_Impl16_M_install_cacheEPKNS_5facetEj","GLIBCXX_3.4.7",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt6locale5_Impl16_M_install_cacheEPKNS_5facetEj","GLIBCXX_3.4.7",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt6locale5_Impl16_M_install_cacheEPKNS_5facetEj","GLIBCXX_3.4.7",0,LSB_Cpp,0,1},
+#endif
+#if defined __ia64__
+	{"_ZNSt6locale5_Impl16_M_install_cacheEPKNS_5facetEm","GLIBCXX_3.4.7",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt6locale5_Impl16_M_install_cacheEPKNS_5facetEm","GLIBCXX_3.4.7",0,LSB_Cpp,0,1},
+#endif
+#if defined __x86_64__
+	{"_ZNSt6locale5_Impl16_M_install_cacheEPKNS_5facetEm","GLIBCXX_3.4.7",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt6locale5_Impl16_M_install_cacheEPKNS_5facetEm","GLIBCXX_3.4.7",0,LSB_Cpp,0,1},
+#endif
 	{"_ZNSt6locale5_Impl16_M_install_facetEPKNS_2idEPKNS_5facetE","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt6locale5_Impl16_M_replace_facetEPKS0_PKNS_2idE","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 #if defined __i386__
@@ -8355,6 +8757,7 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt6locale5_ImplD1Ev","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt6locale5_ImplD2Ev","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt6locale5ctypeE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
+	{"_ZNSt6locale5facet13_S_get_c_nameEv","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
 	{"_ZNSt6locale5facet15_S_get_c_localeEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt6locale5facet17_S_clone_c_localeERP15__locale_struct","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt6locale5facet18_S_create_c_localeERP15__locale_structPKcS2_","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -8927,7 +9330,9 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt8ios_base11adjustfieldE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt8ios_base13_M_grow_wordsEib","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt8ios_base15sync_with_stdioEb","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+	{"_ZNSt8ios_base17_M_call_callbacksENS_5eventE","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
 	{"_ZNSt8ios_base17register_callbackEPFvNS_5eventERS_iEi","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+	{"_ZNSt8ios_base20_M_dispose_callbacksEv","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
 	{"_ZNSt8ios_base2inE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt8ios_base3appE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt8ios_base3ateE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
@@ -9935,6 +10340,48 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZSt14set_unexpectedPFvvE","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZSt15set_new_handlerPFvvE","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZSt16__throw_bad_castv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#if defined __i386__
+	{"_ZSt17__copy_streambufsIcSt11char_traitsIcEEiPSt15basic_streambufIT_T0_ES6_","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZSt17__copy_streambufsIcSt11char_traitsIcEEiPSt15basic_streambufIT_T0_ES6_","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZSt17__copy_streambufsIcSt11char_traitsIcEEiPSt15basic_streambufIT_T0_ES6_","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
+#endif
+#if defined __ia64__
+	{"_ZSt17__copy_streambufsIcSt11char_traitsIcEElPSt15basic_streambufIT_T0_ES6_","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZSt17__copy_streambufsIcSt11char_traitsIcEElPSt15basic_streambufIT_T0_ES6_","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
+#endif
+#if defined __x86_64__
+	{"_ZSt17__copy_streambufsIcSt11char_traitsIcEElPSt15basic_streambufIT_T0_ES6_","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZSt17__copy_streambufsIcSt11char_traitsIcEElPSt15basic_streambufIT_T0_ES6_","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
+#endif
+#if defined __i386__
+	{"_ZSt17__copy_streambufsIwSt11char_traitsIwEEiPSt15basic_streambufIT_T0_ES6_","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZSt17__copy_streambufsIwSt11char_traitsIwEEiPSt15basic_streambufIT_T0_ES6_","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZSt17__copy_streambufsIwSt11char_traitsIwEEiPSt15basic_streambufIT_T0_ES6_","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
+#endif
+#if defined __ia64__
+	{"_ZSt17__copy_streambufsIwSt11char_traitsIwEElPSt15basic_streambufIT_T0_ES6_","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZSt17__copy_streambufsIwSt11char_traitsIwEElPSt15basic_streambufIT_T0_ES6_","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
+#endif
+#if defined __x86_64__
+	{"_ZSt17__copy_streambufsIwSt11char_traitsIwEElPSt15basic_streambufIT_T0_ES6_","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZSt17__copy_streambufsIwSt11char_traitsIwEElPSt15basic_streambufIT_T0_ES6_","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
+#endif
 	{"_ZSt17__throw_bad_allocv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZSt18_Rb_tree_decrementPKSt18_Rb_tree_node_base","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base","GLIBCXX_3.4",0,LSB_Cpp,0,1},
