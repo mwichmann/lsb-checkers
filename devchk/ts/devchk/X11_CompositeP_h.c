@@ -92,7 +92,7 @@ CheckOffset(struct _CompositeClassPart,delete_child,24,11,78448)
 CheckMemberSize(struct _CompositeClassPart,extension,8,11,78449)
 CheckOffset(struct _CompositeClassPart,extension,32,11,78449)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct _CompositeClassPart,0, 100647, 6, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _CompositeClassPart,20, 100647, 6, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct _CompositeClassPart,change_managed,4,6,78446)
 CheckOffset(struct _CompositeClassPart,change_managed,4,6,78446)
 CheckMemberSize(struct _CompositeClassPart,insert_child,4,6,78447)
@@ -143,7 +143,7 @@ CheckTypeSize(CompositeClassPart,40, 100648, 3, 1.2, NULL, 100647, NULL)
 #elif defined __x86_64__
 CheckTypeSize(CompositeClassPart,0, 100648, 11, 1.2, NULL, 100647, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(CompositeClassPart,0, 100648, 6, 1.2, NULL, 100647, NULL)
+CheckTypeSize(CompositeClassPart,20, 100648, 6, 1.2, NULL, 100647, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(CompositeClassPart,0, 100648, 9, 1.2, NULL, 100647, NULL)
 #elif defined __s390__ && !defined __s390x__

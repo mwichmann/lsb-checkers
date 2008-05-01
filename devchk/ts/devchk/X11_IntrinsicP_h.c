@@ -32,6 +32,8 @@ CheckTypeSize(XrmResource,28, 100559, 10, 1.2, NULL, 100558, NULL)
 CheckTypeSize(XrmResource,28, 100559, 2, 1.2, NULL, 100558, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XrmResource,28, 100559, 6, 1.2, NULL, 100558, NULL)
+#elif defined __ia64__
+CheckTypeSize(XrmResource,0, 100559, 3, 1.2, NULL, 100558, NULL)
 #else
 Msg("Find size of XrmResource (100559)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100558,NULL);\n",architecture,100559,0);
@@ -43,6 +45,8 @@ CheckTypeSize(XrmResourceList,4, 100561, 10, 1.2, NULL, 100560, NULL)
 CheckTypeSize(XrmResourceList,4, 100561, 2, 1.2, NULL, 100560, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XrmResourceList,4, 100561, 6, 1.2, NULL, 100560, NULL)
+#elif defined __ia64__
+CheckTypeSize(XrmResourceList,0, 100561, 3, 1.2, NULL, 100560, NULL)
 #else
 Msg("Find size of XrmResourceList (100561)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100560,NULL);\n",architecture,100561,0);
@@ -72,6 +76,14 @@ CheckMemberSize(struct _XtTMRec,current_state,4,6,78351)
 CheckOffset(struct _XtTMRec,current_state,8,6,78351)
 CheckMemberSize(struct _XtTMRec,lastEventTime,4,6,78352)
 CheckOffset(struct _XtTMRec,lastEventTime,12,6,78352)
+#elif defined __ia64__
+CheckTypeSize(struct _XtTMRec,0, 100587, 3, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XtTMRec,proc_table,8,3,78350)
+CheckOffset(struct _XtTMRec,proc_table,8,3,78350)
+CheckMemberSize(struct _XtTMRec,current_state,8,3,78351)
+CheckOffset(struct _XtTMRec,current_state,16,3,78351)
+CheckMemberSize(struct _XtTMRec,lastEventTime,8,3,78352)
+CheckOffset(struct _XtTMRec,lastEventTime,24,3,78352)
 #else
 Msg("Find size of _XtTMRec (100587)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,100587,0);
@@ -83,6 +95,8 @@ CheckTypeSize(XtTM,4, 100589, 10, 1.2, NULL, 100588, NULL)
 CheckTypeSize(XtTM,4, 100589, 2, 1.2, NULL, 100588, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XtTM,4, 100589, 6, 1.2, NULL, 100588, NULL)
+#elif defined __ia64__
+CheckTypeSize(XtTM,0, 100589, 3, 1.2, NULL, 100588, NULL)
 #else
 Msg("Find size of XtTM (100589)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100588,NULL);\n",architecture,100589,0);
@@ -94,6 +108,8 @@ CheckTypeSize(XtTypedArg,16, 100593, 10, 1.2, NULL, 100592, NULL)
 CheckTypeSize(XtTypedArg,16, 100593, 2, 1.2, NULL, 100592, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XtTypedArg,16, 100593, 6, 1.2, NULL, 100592, NULL)
+#elif defined __ia64__
+CheckTypeSize(XtTypedArg,0, 100593, 3, 1.2, NULL, 100592, NULL)
 #else
 Msg("Find size of XtTypedArg (100593)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100592,NULL);\n",architecture,100593,0);
@@ -105,6 +121,8 @@ CheckTypeSize(XtTypedArgList,4, 100595, 10, 1.2, NULL, 100594, NULL)
 CheckTypeSize(XtTypedArgList,4, 100595, 2, 1.2, NULL, 100594, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XtTypedArgList,4, 100595, 6, 1.2, NULL, 100594, NULL)
+#elif defined __ia64__
+CheckTypeSize(XtTypedArgList,0, 100595, 3, 1.2, NULL, 100594, NULL)
 #else
 Msg("Find size of XtTypedArgList (100595)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100594,NULL);\n",architecture,100595,0);
@@ -116,6 +134,8 @@ CheckTypeSize(XtProc,4, 100618, 10, 1.2, NULL, 20504, NULL)
 CheckTypeSize(XtProc,4, 100618, 2, 1.2, NULL, 20504, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XtProc,4, 100618, 6, 1.2, NULL, 20504, NULL)
+#elif defined __ia64__
+CheckTypeSize(XtProc,0, 100618, 3, 1.2, NULL, 20504, NULL)
 #else
 Msg("Find size of XtProc (100618)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,20504,NULL);\n",architecture,100618,0);
@@ -127,6 +147,8 @@ CheckTypeSize(XtWidgetClassProc,4, 100620, 10, 1.2, NULL, 100619, NULL)
 CheckTypeSize(XtWidgetClassProc,4, 100620, 2, 1.2, NULL, 100619, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XtWidgetClassProc,4, 100620, 6, 1.2, NULL, 100619, NULL)
+#elif defined __ia64__
+CheckTypeSize(XtWidgetClassProc,0, 100620, 3, 1.2, NULL, 100619, NULL)
 #else
 Msg("Find size of XtWidgetClassProc (100620)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100619,NULL);\n",architecture,100620,0);
@@ -138,6 +160,8 @@ CheckTypeSize(XtInitProc,4, 100622, 10, 1.2, NULL, 100621, NULL)
 CheckTypeSize(XtInitProc,4, 100622, 2, 1.2, NULL, 100621, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XtInitProc,4, 100622, 6, 1.2, NULL, 100621, NULL)
+#elif defined __ia64__
+CheckTypeSize(XtInitProc,0, 100622, 3, 1.2, NULL, 100621, NULL)
 #else
 Msg("Find size of XtInitProc (100622)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100621,NULL);\n",architecture,100622,0);
@@ -149,6 +173,8 @@ CheckTypeSize(XtArgsProc,4, 100624, 10, 1.2, NULL, 100623, NULL)
 CheckTypeSize(XtArgsProc,4, 100624, 2, 1.2, NULL, 100623, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XtArgsProc,4, 100624, 6, 1.2, NULL, 100623, NULL)
+#elif defined __ia64__
+CheckTypeSize(XtArgsProc,0, 100624, 3, 1.2, NULL, 100623, NULL)
 #else
 Msg("Find size of XtArgsProc (100624)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100623,NULL);\n",architecture,100624,0);
@@ -160,6 +186,8 @@ CheckTypeSize(XtRealizeProc,4, 100627, 10, 1.2, NULL, 100626, NULL)
 CheckTypeSize(XtRealizeProc,4, 100627, 2, 1.2, NULL, 100626, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XtRealizeProc,4, 100627, 6, 1.2, NULL, 100626, NULL)
+#elif defined __ia64__
+CheckTypeSize(XtRealizeProc,0, 100627, 3, 1.2, NULL, 100626, NULL)
 #else
 Msg("Find size of XtRealizeProc (100627)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100626,NULL);\n",architecture,100627,0);
@@ -171,6 +199,8 @@ CheckTypeSize(XtWidgetProc,4, 100629, 10, 1.2, NULL, 100628, NULL)
 CheckTypeSize(XtWidgetProc,4, 100629, 2, 1.2, NULL, 100628, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XtWidgetProc,4, 100629, 6, 1.2, NULL, 100628, NULL)
+#elif defined __ia64__
+CheckTypeSize(XtWidgetProc,0, 100629, 3, 1.2, NULL, 100628, NULL)
 #else
 Msg("Find size of XtWidgetProc (100629)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100628,NULL);\n",architecture,100629,0);
@@ -182,6 +212,8 @@ CheckTypeSize(XtExposeProc,4, 100631, 10, 1.2, NULL, 100630, NULL)
 CheckTypeSize(XtExposeProc,4, 100631, 2, 1.2, NULL, 100630, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XtExposeProc,4, 100631, 6, 1.2, NULL, 100630, NULL)
+#elif defined __ia64__
+CheckTypeSize(XtExposeProc,0, 100631, 3, 1.2, NULL, 100630, NULL)
 #else
 Msg("Find size of XtExposeProc (100631)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100630,NULL);\n",architecture,100631,0);
@@ -193,6 +225,8 @@ CheckTypeSize(XtSetValuesFunc,4, 100633, 10, 1.2, NULL, 100632, NULL)
 CheckTypeSize(XtSetValuesFunc,4, 100633, 2, 1.2, NULL, 100632, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XtSetValuesFunc,4, 100633, 6, 1.2, NULL, 100632, NULL)
+#elif defined __ia64__
+CheckTypeSize(XtSetValuesFunc,0, 100633, 3, 1.2, NULL, 100632, NULL)
 #else
 Msg("Find size of XtSetValuesFunc (100633)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100632,NULL);\n",architecture,100633,0);
@@ -204,6 +238,8 @@ CheckTypeSize(XtArgsFunc,4, 100635, 10, 1.2, NULL, 100634, NULL)
 CheckTypeSize(XtArgsFunc,4, 100635, 2, 1.2, NULL, 100634, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XtArgsFunc,4, 100635, 6, 1.2, NULL, 100634, NULL)
+#elif defined __ia64__
+CheckTypeSize(XtArgsFunc,0, 100635, 3, 1.2, NULL, 100634, NULL)
 #else
 Msg("Find size of XtArgsFunc (100635)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100634,NULL);\n",architecture,100635,0);
@@ -215,6 +251,8 @@ CheckTypeSize(XtAlmostProc,4, 100637, 10, 1.2, NULL, 100636, NULL)
 CheckTypeSize(XtAlmostProc,4, 100637, 2, 1.2, NULL, 100636, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XtAlmostProc,4, 100637, 6, 1.2, NULL, 100636, NULL)
+#elif defined __ia64__
+CheckTypeSize(XtAlmostProc,0, 100637, 3, 1.2, NULL, 100636, NULL)
 #else
 Msg("Find size of XtAlmostProc (100637)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100636,NULL);\n",architecture,100637,0);
@@ -226,6 +264,8 @@ CheckTypeSize(XtAcceptFocusProc,4, 100639, 10, 1.2, NULL, 100638, NULL)
 CheckTypeSize(XtAcceptFocusProc,4, 100639, 2, 1.2, NULL, 100638, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XtAcceptFocusProc,4, 100639, 6, 1.2, NULL, 100638, NULL)
+#elif defined __ia64__
+CheckTypeSize(XtAcceptFocusProc,0, 100639, 3, 1.2, NULL, 100638, NULL)
 #else
 Msg("Find size of XtAcceptFocusProc (100639)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100638,NULL);\n",architecture,100639,0);
@@ -237,6 +277,8 @@ CheckTypeSize(XtVersionType,4, 100640, 10, 1.2, NULL, 11186, NULL)
 CheckTypeSize(XtVersionType,4, 100640, 2, 1.2, NULL, 11186, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XtVersionType,4, 100640, 6, 1.2, NULL, 11186, NULL)
+#elif defined __ia64__
+CheckTypeSize(XtVersionType,0, 100640, 3, 1.2, NULL, 11186, NULL)
 #else
 Msg("Find size of XtVersionType (100640)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,100640,0);
@@ -248,6 +290,8 @@ CheckTypeSize(XtGeometryHandler,4, 100642, 10, 1.2, NULL, 100641, NULL)
 CheckTypeSize(XtGeometryHandler,4, 100642, 2, 1.2, NULL, 100641, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XtGeometryHandler,4, 100642, 6, 1.2, NULL, 100641, NULL)
+#elif defined __ia64__
+CheckTypeSize(XtGeometryHandler,0, 100642, 3, 1.2, NULL, 100641, NULL)
 #else
 Msg("Find size of XtGeometryHandler (100642)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100641,NULL);\n",architecture,100642,0);
@@ -259,6 +303,8 @@ CheckTypeSize(XtStringProc,4, 100644, 10, 1.2, NULL, 100643, NULL)
 CheckTypeSize(XtStringProc,4, 100644, 2, 1.2, NULL, 100643, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XtStringProc,4, 100644, 6, 1.2, NULL, 100643, NULL)
+#elif defined __ia64__
+CheckTypeSize(XtStringProc,0, 100644, 3, 1.2, NULL, 100643, NULL)
 #else
 Msg("Find size of XtStringProc (100644)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100643, NULL);\n",architecture,100644,0);
