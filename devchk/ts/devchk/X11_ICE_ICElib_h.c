@@ -160,8 +160,23 @@ Msg("Find size of IcePoVersionRec (100186)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100185,NULL);\n",architecture,100186,0);
 #endif
 
-#if 1
-CheckTypeSize(IcePoAuthProc,8, 100188, 1, 1.2, NULL, 100034, NULL)
+#if defined __i386__
+CheckTypeSize(IcePoAuthProc,4, 100188, 2, 1.2, NULL, 100034, NULL)
+#elif defined __ia64__
+CheckTypeSize(IcePoAuthProc,8, 100188, 3, 1.2, NULL, 100034, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(IcePoAuthProc,4, 100188, 6, 1.2, NULL, 100034, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(IcePoAuthProc,4, 100188, 10, 1.2, NULL, 100034, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(IcePoAuthProc,8, 100188, 9, 1.2, NULL, 100034, NULL)
+#elif defined __x86_64__
+CheckTypeSize(IcePoAuthProc,8, 100188, 11, 1.2, NULL, 100034, NULL)
+#elif defined __s390x__
+CheckTypeSize(IcePoAuthProc,8, 100188, 12, 1.2, NULL, 100034, NULL)
+#else
+Msg("Find size of IcePoAuthProc (100188)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100034,NULL);\n",architecture,100188,0);
 #endif
 
 #if defined __i386__
@@ -258,8 +273,23 @@ Msg("Find size of IceProtocolSetupProc (100206)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100055,NULL);\n",architecture,100206,0);
 #endif
 
-#if 1
-CheckTypeSize(IceProtocolActivateProc,8, 100207, 1, 1.2, NULL, 100016, NULL)
+#if defined __i386__
+CheckTypeSize(IceProtocolActivateProc,4, 100207, 2, 1.2, NULL, 100016, NULL)
+#elif defined __ia64__
+CheckTypeSize(IceProtocolActivateProc,8, 100207, 3, 1.2, NULL, 100016, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(IceProtocolActivateProc,4, 100207, 6, 1.2, NULL, 100016, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(IceProtocolActivateProc,4, 100207, 10, 1.2, NULL, 100016, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(IceProtocolActivateProc,8, 100207, 9, 1.2, NULL, 100016, NULL)
+#elif defined __x86_64__
+CheckTypeSize(IceProtocolActivateProc,8, 100207, 11, 1.2, NULL, 100016, NULL)
+#elif defined __s390x__
+CheckTypeSize(IceProtocolActivateProc,8, 100207, 12, 1.2, NULL, 100016, NULL)
+#else
+Msg("Find size of IceProtocolActivateProc (100207)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100016,NULL);\n",architecture,100207,0);
 #endif
 
 #if defined __i386__

@@ -82,7 +82,7 @@ CheckOffset(struct _CompositeClassPart,delete_child,24,3,78448)
 CheckMemberSize(struct _CompositeClassPart,extension,8,3,78449)
 CheckOffset(struct _CompositeClassPart,extension,32,3,78449)
 #elif defined __x86_64__
-CheckTypeSize(struct _CompositeClassPart,0, 100647, 11, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _CompositeClassPart,40, 100647, 11, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct _CompositeClassPart,change_managed,8,11,78446)
 CheckOffset(struct _CompositeClassPart,change_managed,8,11,78446)
 CheckMemberSize(struct _CompositeClassPart,insert_child,8,11,78447)
@@ -102,7 +102,7 @@ CheckOffset(struct _CompositeClassPart,delete_child,12,6,78448)
 CheckMemberSize(struct _CompositeClassPart,extension,4,6,78449)
 CheckOffset(struct _CompositeClassPart,extension,16,6,78449)
 #elif defined __powerpc64__
-CheckTypeSize(struct _CompositeClassPart,0, 100647, 9, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _CompositeClassPart,40, 100647, 9, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct _CompositeClassPart,change_managed,8,9,78446)
 CheckOffset(struct _CompositeClassPart,change_managed,8,9,78446)
 CheckMemberSize(struct _CompositeClassPart,insert_child,8,9,78447)
@@ -112,7 +112,7 @@ CheckOffset(struct _CompositeClassPart,delete_child,24,9,78448)
 CheckMemberSize(struct _CompositeClassPart,extension,8,9,78449)
 CheckOffset(struct _CompositeClassPart,extension,32,9,78449)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _CompositeClassPart,0, 100647, 10, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _CompositeClassPart,20, 100647, 10, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct _CompositeClassPart,change_managed,4,10,78446)
 CheckOffset(struct _CompositeClassPart,change_managed,4,10,78446)
 CheckMemberSize(struct _CompositeClassPart,insert_child,4,10,78447)
@@ -122,7 +122,7 @@ CheckOffset(struct _CompositeClassPart,delete_child,12,10,78448)
 CheckMemberSize(struct _CompositeClassPart,extension,4,10,78449)
 CheckOffset(struct _CompositeClassPart,extension,16,10,78449)
 #elif defined __s390x__
-CheckTypeSize(struct _CompositeClassPart,0, 100647, 12, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _CompositeClassPart,40, 100647, 12, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct _CompositeClassPart,change_managed,8,12,78446)
 CheckOffset(struct _CompositeClassPart,change_managed,8,12,78446)
 CheckMemberSize(struct _CompositeClassPart,insert_child,8,12,78447)
@@ -141,15 +141,15 @@ CheckTypeSize(CompositeClassPart,20, 100648, 2, 1.2, NULL, 100647, NULL)
 #elif defined __ia64__
 CheckTypeSize(CompositeClassPart,40, 100648, 3, 1.2, NULL, 100647, NULL)
 #elif defined __x86_64__
-CheckTypeSize(CompositeClassPart,0, 100648, 11, 1.2, NULL, 100647, NULL)
+CheckTypeSize(CompositeClassPart,40, 100648, 11, 1.2, NULL, 100647, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(CompositeClassPart,20, 100648, 6, 1.2, NULL, 100647, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(CompositeClassPart,0, 100648, 9, 1.2, NULL, 100647, NULL)
+CheckTypeSize(CompositeClassPart,40, 100648, 9, 1.2, NULL, 100647, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(CompositeClassPart,0, 100648, 10, 1.2, NULL, 100647, NULL)
+CheckTypeSize(CompositeClassPart,20, 100648, 10, 1.2, NULL, 100647, NULL)
 #elif defined __s390x__
-CheckTypeSize(CompositeClassPart,0, 100648, 12, 1.2, NULL, 100647, NULL)
+CheckTypeSize(CompositeClassPart,40, 100648, 12, 1.2, NULL, 100647, NULL)
 #else
 Msg("Find size of CompositeClassPart (100648)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100647,NULL);\n",architecture,100648,0);
