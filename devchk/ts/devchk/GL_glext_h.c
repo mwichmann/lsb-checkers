@@ -16835,7 +16835,7 @@ CheckTypeSize(GLintptr,8, 31669, 3, 1.0, NULL, 8, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GLintptr,4, 31669, 6, 1.0, NULL, 8, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(GLintptr,4, 31669, 9, 1.0, NULL, 8, NULL)
+CheckTypeSize(GLintptr,8, 31669, 9, 1.0, NULL, 8, NULL)
 #else
 Msg("Find size of GLintptr (31669)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8,NULL);\n",architecture,31669,0);
@@ -16862,7 +16862,7 @@ CheckTypeSize(GLsizeiptr,8, 31682, 3, 1.0, NULL, 9027, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GLsizeiptr,4, 31682, 6, 1.0, NULL, 9027, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(GLsizeiptr,4, 31682, 9, 1.0, NULL, 9027, NULL)
+CheckTypeSize(GLsizeiptr,8, 31682, 9, 1.0, NULL, 9027, NULL)
 #else
 Msg("Find size of GLsizeiptr (31682)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9027,NULL);\n",architecture,31682,0);
@@ -16881,7 +16881,7 @@ CheckTypeSize(GLsizeiptrARB,8, 31683, 3, 1.0, NULL, 9027, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GLsizeiptrARB,4, 31683, 6, 1.0, NULL, 9027, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(GLsizeiptrARB,4, 31683, 9, 1.0, NULL, 9027, NULL)
+CheckTypeSize(GLsizeiptrARB,8, 31683, 9, 1.0, NULL, 9027, NULL)
 #else
 Msg("Find size of GLsizeiptrARB (31683)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9027,NULL);\n",architecture,31683,0);
@@ -16900,7 +16900,7 @@ CheckTypeSize(GLintptrARB,8, 31685, 3, 1.0, NULL, 8, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GLintptrARB,4, 31685, 6, 1.0, NULL, 8, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(GLintptrARB,4, 31685, 9, 1.0, NULL, 8, NULL)
+CheckTypeSize(GLintptrARB,8, 31685, 9, 1.0, NULL, 8, NULL)
 #else
 Msg("Find size of GLintptrARB (31685)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8, NULL);\n",architecture,31685,0);
