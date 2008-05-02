@@ -1589,7 +1589,7 @@ CheckTypeSize(_GLUfuncptr,8, 31634, 3, 1.2, NULL, 40, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(_GLUfuncptr,4, 31634, 6, 1.2, NULL, 40, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(_GLUfuncptr,4, 31634, 9, 1.2, NULL, 40, NULL)
+CheckTypeSize(_GLUfuncptr,8, 31634, 9, 1.2, NULL, 40, NULL)
 #else
 Msg("Find size of _GLUfuncptr (31634)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,31634,0);

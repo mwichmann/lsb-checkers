@@ -1290,7 +1290,15 @@ cnt++;
 
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#if defined __powerpc64__
+#ifdef GLX_GLXEXT_VERSION
+	CompareConstant(GLX_GLXEXT_VERSION,6,15491,architecture,1.3,NULL)
+#else
+Msg( "Error: Constant not found: GLX_GLXEXT_VERSION\n");
+cnt++;
+#endif
+
+#elif _LSB_DEFAULT_ARCH
 #ifdef GLX_GLXEXT_VERSION
 	CompareConstant(GLX_GLXEXT_VERSION,19,15491,architecture,1.3,NULL)
 #else
@@ -1374,7 +1382,7 @@ CheckTypeSize(GLXEvent,192, 8170, 3, 1.0, NULL, 8169, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GLXEvent,96, 8170, 6, 1.0, NULL, 8169, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(GLXEvent,96, 8170, 9, 1.0, NULL, 8169, NULL)
+CheckTypeSize(GLXEvent,192, 8170, 9, 1.0, NULL, 8169, NULL)
 #else
 Msg("Find size of GLXEvent (8170)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8169,NULL);\n",architecture,8170,0);
@@ -1431,7 +1439,7 @@ CheckTypeSize(GLXPbufferClobberEvent,72, 8719, 3, 1.0, NULL, 8167, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GLXPbufferClobberEvent,52, 8719, 6, 1.0, NULL, 8167, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(GLXPbufferClobberEvent,52, 8719, 9, 1.0, NULL, 8167, NULL)
+CheckTypeSize(GLXPbufferClobberEvent,72, 8719, 9, 1.0, NULL, 8167, NULL)
 #else
 Msg("Find size of GLXPbufferClobberEvent (8719)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8167,NULL);\n",architecture,8719,0);
@@ -1488,7 +1496,7 @@ CheckTypeSize(GLXFBConfigID,8, 8722, 3, 1.0, NULL, 8171, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GLXFBConfigID,4, 8722, 6, 1.0, NULL, 8171, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(GLXFBConfigID,4, 8722, 9, 1.0, NULL, 8171, NULL)
+CheckTypeSize(GLXFBConfigID,8, 8722, 9, 1.0, NULL, 8171, NULL)
 #else
 Msg("Find size of GLXFBConfigID (8722)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8171,NULL);\n",architecture,8722,0);
@@ -1507,7 +1515,7 @@ CheckTypeSize(__GLXextFuncPtr,8, 31687, 3, 1.0, NULL, 8726, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(__GLXextFuncPtr,4, 31687, 6, 1.0, NULL, 8726, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(__GLXextFuncPtr,4, 31687, 9, 1.0, NULL, 8726, NULL)
+CheckTypeSize(__GLXextFuncPtr,8, 31687, 9, 1.0, NULL, 8726, NULL)
 #else
 Msg("Find size of __GLXextFuncPtr (31687)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8726, NULL);\n",architecture,31687,0);
