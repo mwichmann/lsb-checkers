@@ -10349,18 +10349,6 @@ struct versym libstdcxx_so_6[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZSt17__copy_streambufsIcSt11char_traitsIcEEiPSt15basic_streambufIT_T0_ES6_","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
 #endif
-#if defined __ia64__
-	{"_ZSt17__copy_streambufsIcSt11char_traitsIcEElPSt15basic_streambufIT_T0_ES6_","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZSt17__copy_streambufsIcSt11char_traitsIcEElPSt15basic_streambufIT_T0_ES6_","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZSt17__copy_streambufsIcSt11char_traitsIcEElPSt15basic_streambufIT_T0_ES6_","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
-#endif
-#if defined __s390x__
-	{"_ZSt17__copy_streambufsIcSt11char_traitsIcEElPSt15basic_streambufIT_T0_ES6_","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
-#endif
 #if defined __i386__
 	{"_ZSt17__copy_streambufsIwSt11char_traitsIwEEiPSt15basic_streambufIT_T0_ES6_","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
 #endif
@@ -10369,18 +10357,6 @@ struct versym libstdcxx_so_6[] = {
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"_ZSt17__copy_streambufsIwSt11char_traitsIwEEiPSt15basic_streambufIT_T0_ES6_","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
-#endif
-#if defined __ia64__
-	{"_ZSt17__copy_streambufsIwSt11char_traitsIwEElPSt15basic_streambufIT_T0_ES6_","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZSt17__copy_streambufsIwSt11char_traitsIwEElPSt15basic_streambufIT_T0_ES6_","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZSt17__copy_streambufsIwSt11char_traitsIwEElPSt15basic_streambufIT_T0_ES6_","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
-#endif
-#if defined __s390x__
-	{"_ZSt17__copy_streambufsIwSt11char_traitsIwEElPSt15basic_streambufIT_T0_ES6_","GLIBCXX_3.4.6",0,LSB_Cpp,0,1},
 #endif
 	{"_ZSt17__throw_bad_allocv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZSt18_Rb_tree_decrementPKSt18_Rb_tree_node_base","GLIBCXX_3.4",0,LSB_Cpp,0,1},
