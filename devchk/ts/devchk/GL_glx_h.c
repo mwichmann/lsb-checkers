@@ -1290,17 +1290,9 @@ cnt++;
 
 #endif
 
-#if defined __powerpc64__
+#if _LSB_DEFAULT_ARCH
 #ifdef GLX_GLXEXT_VERSION
 	CompareConstant(GLX_GLXEXT_VERSION,6,15491,architecture,1.3,NULL)
-#else
-Msg( "Error: Constant not found: GLX_GLXEXT_VERSION\n");
-cnt++;
-#endif
-
-#elif _LSB_DEFAULT_ARCH
-#ifdef GLX_GLXEXT_VERSION
-	CompareConstant(GLX_GLXEXT_VERSION,19,15491,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: GLX_GLXEXT_VERSION\n");
 cnt++;
