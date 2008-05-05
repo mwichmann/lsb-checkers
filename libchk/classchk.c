@@ -231,21 +231,31 @@ check_class_info(ElfFile * file, char *libname,
 	  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
 			     tmp_string);
 	  test_failed = 0;
-	  dladdr(vttypeinfo, &dlainfo);
-	  if ((libchk_debug & LIBCHK_DEBUG_CLASSDETAILS) &&
-	      dlainfo.dli_saddr != vttypeinfo) {
-	    TETJ_REPORT_INFO("Uhoh1. Not an exact match %p %p",
-			     dlainfo.dli_saddr, vttypeinfo);
-	    test_failed = 1;
-	  }
 
-	  if (strcmp(classp->vtable[v].typeinfo, dlainfo.dli_sname)) {
-	    fprintf(stderr, "Class %s\n", classp->name);
-	    TETJ_REPORT_INFO
-		("RTTI Name %s (expected) doesn't match %s (found)",
+          if (!dladdr(vttypeinfo, &dlainfo)) {
+            fprintf(stderr, "Class %s\n", classp->name);
+            TETJ_REPORT_INFO
+              ("Error looking for RTTI symbol; "
+               "expecting %s, got %s",
+               classp->vtable[v].typeinfo, dlainfo.dli_sname);
+            test_failed = 1;
+          }
+          else {
+	    if ((libchk_debug & LIBCHK_DEBUG_CLASSDETAILS) &&
+	        dlainfo.dli_saddr != vttypeinfo) {
+	      TETJ_REPORT_INFO("Uhoh1. Not an exact match %p %p",
+			     dlainfo.dli_saddr, vttypeinfo);
+	      test_failed = 1;
+	    }
+
+	    if (strcmp(classp->vtable[v].typeinfo, dlainfo.dli_sname)) {
+	      fprintf(stderr, "Class %s\n", classp->name);
+	      TETJ_REPORT_INFO
+	        ("RTTI Name %s (expected) doesn't match %s (found)",
 		 classp->vtable[v].typeinfo, dlainfo.dli_sname);
-	    test_failed = 1;
-	  }
+	      test_failed = 1;
+	    }
+          }
 
 	  tetj_result(journal, tetj_activity_count, tetj_tp_count,
 		      test_failed ? TETJ_FAIL : TETJ_PASS);
@@ -283,23 +293,35 @@ check_class_info(ElfFile * file, char *libname,
 		int s;
 		for (s = 0; s < 12; s++) {
 		  memset(&dlainfo2, 0, sizeof(dlainfo2));
-		  dladdr(fptr2ptrp(&vtvirtfuncs[s]), &dlainfo2);
-		  fprintf(stderr, "vtable[%d] %p %s\n", s, vtvirtfuncs[s],
-			  dlainfo2.dli_sname);
-		}
+                  if (!dladdr(fptr2ptrp(&vtvirtfuncs[s]), &dlainfo2)) {
+                    fprintf(stderr, "Error looking for symbol for vtable[%d] entry", s);
+                  }
+                  else {
+		      fprintf(stderr, "vtable[%d] %p %s\n", s, vtvirtfuncs[s],
+			    dlainfo2.dli_sname);
+		  }
+                }
 		memset(&dlainfo2, 0, sizeof(dlainfo2));
-		dladdr(symp, &dlainfo2);
 		fprintf(stderr, "Class %s\n", classp->name);
-		TETJ_REPORT_INFO("Symbol address for Virtual table entry "
-				 "[%d][%d] %s is not expected", v, j,
-				 classp->vtable[v].virtfuncs[j]);
-		fprintf(stderr,
+
+                if (!dladdr(symp, &dlainfo2)) {
+                  TETJ_REPORT_INFO
+                      ("Error looking for symbol for Virtual table entry "
+                       "[%d][%d](%p) expecting %s, got %s", v, j,
+                       fptr2ptrp(&vtvirtfuncs[j]), classp->vtable[v].virtfuncs[j], dlainfo2.dli_sname);
+                  test_failed = 1;
+                } else {
+		  TETJ_REPORT_INFO("Symbol address for Virtual table entry "
+				   "[%d][%d] %s is not expected", v, j,
+				   classp->vtable[v].virtfuncs[j]);
+		  fprintf(stderr,
 			"%p doesn't match %p which appears to be %s %p\n",
 			symp, fptr2ptrp(&vtvirtfuncs[j]),
 			dlainfo2.dli_sname, dlainfo2.dli_saddr);
-		test_failed = 1;
+		  test_failed = 1;
+	        }
 	      }
-	    }
+            }
 #endif
 
 	    /*
@@ -509,15 +531,21 @@ check_class_info(ElfFile * file, char *libname,
 		         tmp_string);
       symp = dlsym(dlhndl, classp->typeinfo->basevtable);
       if (symp + (2 * sizeof(long)) != rttip->basevtable) {
-	dladdr(rttip->basevtable - 8, &dlainfo);
-	if ((libchk_debug & LIBCHK_DEBUG_CLASSDETAILS) &&
-	    (vtablep && dlainfo.dli_saddr != vttypeinfo)) {
-	  printf("Uhoh3. Not an exact match\n");
-	}
-	TETJ_REPORT_INFO
-	    ("Base vtype for %p %s (expected) doesn't match %p %s (found)", symp,
-	     classp->typeinfo->basevtable, rttip->basevtable, dlainfo.dli_sname);
-	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+        if (!dladdr(rttip->basevtable - 8, &dlainfo)) {
+          TETJ_REPORT_INFO
+              ("Error looking for base vtype for %p %s (expected)", symp, classp->basename);
+          test_failed = 1;
+        }
+        else {
+	  if ((libchk_debug & LIBCHK_DEBUG_CLASSDETAILS) &&
+	      (vtablep && dlainfo.dli_saddr != vttypeinfo)) {
+	    printf("Uhoh3. Not an exact match\n");
+	  }
+	  TETJ_REPORT_INFO
+	      ("Base vtype for %p %s (expected) doesn't match %p %s (found)", symp,
+	       classp->typeinfo->basevtable, rttip->basevtable, dlainfo.dli_sname);
+	  tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+        }
       } else {
 	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
       }
@@ -593,8 +621,12 @@ check_class_info(ElfFile * file, char *libname,
 	 * Check the basename.
 	 */
 	symp = dlsym(dlhndl, classp->basename);
-	dladdr(si_rttip->basetype, &dlainfo);
-	if (symp != si_rttip->basetype) {
+        if (!dladdr(si_rttip->basetype, &dlainfo)) {
+          TETJ_REPORT_INFO
+              ("Error looking for basename entry; expected %p %s", symp, classp->basename);
+          test_failed = 1;
+        }
+        else if (symp != si_rttip->basetype) {
 	  TETJ_REPORT_INFO
 	      ("Base type %p %s (expected) doesn't match %p %s (found)", symp, classp->basename,
 	       si_rttip->basetype, dlainfo.dli_sname);
@@ -638,9 +670,16 @@ check_class_info(ElfFile * file, char *libname,
 	}
 	for (j = 0; j < classp->numvmitypes; j++) {
 	  btip = &(vmi_rttip->base_info[j]);
-	  dladdr(btip->base_type, &dlainfo);
 	  symp = dlsym(dlhndl, classp->btinfo[j].base_type);
-	  if (symp != btip->base_type) {
+    /* It seems that we don't use the results of this dladdr */
+/*        if (!dladdr(btip->base_type, &dlainfo)) {
+            TETJ_REPORT_INFO
+              ("Error looking for VMI basetype[%d] address %p (found) for class "
+               "%s doesn't match %p (expected)", j, symp, classp->name,
+               btip->base_type);
+            test_failed = 1;
+          }
+          else*/ if (symp != btip->base_type) {
 	    TETJ_REPORT_INFO
 		("VMI basetype[%d] address %p (found) for class "
 		 "%s doesn't match %p (expected)", j, symp, classp->name,
@@ -683,8 +722,12 @@ check_class_info(ElfFile * file, char *libname,
 	 * Check the basename.
 	 */
 	symp = dlsym(dlhndl, classp->basename);
-	dladdr(p_rttip->pointee, &dlainfo);
-	if (symp != p_rttip->pointee) {
+        if (!dladdr(p_rttip->pointee, &dlainfo)) {
+          TETJ_REPORT_INFO
+              ("Error looking for base type; expected %p %s ", symp, classp->basename);
+          test_failed = 1;
+        }
+        else if (symp != p_rttip->pointee) {
 	  TETJ_REPORT_INFO
 	      ("Base type %p %s (expected) doesn't match %p %s (found)", symp, classp->basename,
 	       p_rttip->pointee, dlainfo.dli_sname);
@@ -731,19 +774,26 @@ check_class_info(ElfFile * file, char *libname,
 			   tmp_string);
 	for (j = 0; j < classp->numbaseinfo; j++) {
 	  symp = dlsym(dlhndl, classp->typeinfo->basetypeinfo[j]);
-	  dladdr(basetypes[j] - 8, &dlainfo);
-	  if ((libchk_debug & LIBCHK_DEBUG_CLASSDETAILS) &&
-	      dlainfo.dli_saddr + 8 != basetypes[j]) {
-	    printf("Uhoh4. Not an exact match %p %p\n",
+          if (!dladdr(basetypes[j] - 8, &dlainfo)) {
+            TETJ_REPORT_INFO
+                ("Error looking for basetype[%d]; expected %p (%s)", j,
+                symp, classp->typeinfo->basetypeinfo[j]);
+            test_failed = 1;
+          }
+          else {
+	    if ((libchk_debug & LIBCHK_DEBUG_CLASSDETAILS) &&
+	        dlainfo.dli_saddr + 8 != basetypes[j]) {
+	      printf("Uhoh4. Not an exact match %p %p\n",
 		   dlainfo.dli_saddr, basetypes[j]);
-	  }
-	  if (symp != basetypes[j]) {
-	    TETJ_REPORT_INFO
+	    }
+	    if (symp != basetypes[j]) {
+	      TETJ_REPORT_INFO
 		("Basetype[%d] %p (%s) (expected) doesn't match %p (%s) (found)", j,
 		 symp, classp->typeinfo->basetypeinfo[j], basetypes[j], dlainfo.dli_sname);
-	    test_failed = 1;
+	      test_failed = 1;
+	    }
 	  }
-	}
+        }
 	tetj_result(journal, tetj_activity_count, tetj_tp_count,
 		    test_failed ? TETJ_FAIL : TETJ_PASS);
 	tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
