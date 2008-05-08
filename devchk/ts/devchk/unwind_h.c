@@ -83,16 +83,16 @@ CheckTypeSize(_Unwind_Ptr,4, 10379, 2, 1.3, NULL, 7, '(__mode__(__pointer__))')
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(_Unwind_Ptr,4, 10379, 6, 1.3, NULL, 7, '(__mode__(__pointer__))')
 #elif defined __x86_64__
-CheckTypeSize(_Unwind_Ptr,8, 10379, 11, 1.3, NULL, 7, '(__mode__(__pointer__))')
+CheckTypeSize(_Unwind_Ptr,8, 10379, 11, 2.0, NULL, 7, '(__mode__(__pointer__))')
 #elif defined __s390x__
 CheckTypeSize(_Unwind_Ptr,8, 10379, 12, 1.3, NULL, 7, '(__mode__(__pointer__))')
 #elif defined __ia64__
 CheckTypeSize(_Unwind_Ptr,8, 10379, 3, 1.3, NULL, 7, '(__mode__(__pointer__))')
 #elif defined __powerpc64__
-CheckTypeSize(_Unwind_Ptr,8, 10379, 9, 1.3, NULL, 7, '(__mode__(__pointer__))')
+CheckTypeSize(_Unwind_Ptr,8, 10379, 9, 2.0, NULL, 7, '(__mode__(__pointer__))')
 #else
 Msg("Find size of _Unwind_Ptr (10379)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,7,'""(__mode__(__pointer__))""');\n",architecture,10379,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7,'""(__mode__(__pointer__))""');\n",architecture,10379,0);
 #endif
 
 #if defined __s390__ && !defined __s390x__
@@ -102,16 +102,16 @@ CheckTypeSize(_Unwind_Word,4, 10380, 2, 1.3, NULL, 7, '(__mode__(__word__))')
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(_Unwind_Word,4, 10380, 6, 1.3, NULL, 7, '(__mode__(__word__))')
 #elif defined __x86_64__
-CheckTypeSize(_Unwind_Word,8, 10380, 11, 1.3, NULL, 7, '(__mode__(__word__))')
+CheckTypeSize(_Unwind_Word,8, 10380, 11, 2.0, NULL, 7, '(__mode__(__word__))')
 #elif defined __s390x__
 CheckTypeSize(_Unwind_Word,8, 10380, 12, 1.3, NULL, 7, '(__mode__(__word__))')
 #elif defined __ia64__
 CheckTypeSize(_Unwind_Word,8, 10380, 3, 1.3, NULL, 7, '(__mode__(__word__))')
 #elif defined __powerpc64__
-CheckTypeSize(_Unwind_Word,8, 10380, 9, 1.3, NULL, 7, '(__mode__(__word__))')
+CheckTypeSize(_Unwind_Word,8, 10380, 9, 2.0, NULL, 7, '(__mode__(__word__))')
 #else
 Msg("Find size of _Unwind_Word (10380)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,7,'""(__mode__(__word__))""');\n",architecture,10380,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7,'""(__mode__(__word__))""');\n",architecture,10380,0);
 #endif
 
 #if 1
@@ -131,7 +131,7 @@ CheckOffset(struct _Unwind_Exception,private_1,12,10,34609)
 CheckMemberSize(struct _Unwind_Exception,private_2,4,10,34610)
 CheckOffset(struct _Unwind_Exception,private_2,16,10,34610)
 #elif defined __x86_64__
-CheckTypeSize(struct _Unwind_Exception,32, 10377, 11, 1.3, NULL, 0, '(__aligned__)')
+CheckTypeSize(struct _Unwind_Exception,32, 10377, 11, 2.0, NULL, 0, '(__aligned__)')
 CheckMemberSize(struct _Unwind_Exception,exception_cleanup,8,11,34608)
 CheckOffset(struct _Unwind_Exception,exception_cleanup,8,11,34608)
 CheckMemberSize(struct _Unwind_Exception,private_1,8,11,34609)
@@ -171,7 +171,7 @@ CheckOffset(struct _Unwind_Exception,private_1,12,6,34609)
 CheckMemberSize(struct _Unwind_Exception,private_2,4,6,34610)
 CheckOffset(struct _Unwind_Exception,private_2,16,6,34610)
 #elif defined __powerpc64__
-CheckTypeSize(struct _Unwind_Exception,32, 10377, 9, 1.3, NULL, 0, '(__aligned__)')
+CheckTypeSize(struct _Unwind_Exception,32, 10377, 9, 2.0, NULL, 0, '(__aligned__)')
 CheckMemberSize(struct _Unwind_Exception,exception_cleanup,8,9,34608)
 CheckOffset(struct _Unwind_Exception,exception_cleanup,8,9,34608)
 CheckMemberSize(struct _Unwind_Exception,private_1,8,9,34609)
@@ -180,7 +180,7 @@ CheckMemberSize(struct _Unwind_Exception,private_2,8,9,34610)
 CheckOffset(struct _Unwind_Exception,private_2,24,9,34610)
 #else
 Msg("Find size of _Unwind_Exception (10377)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,'""(__aligned__)""');\n",architecture,10377,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,'""(__aligned__)""');\n",architecture,10377,0);
 #endif
 
 #if 1
@@ -194,16 +194,16 @@ CheckTypeSize(_Unwind_Exception_Cleanup_Fn,4, 10384, 2, 1.3, NULL, 10383, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(_Unwind_Exception_Cleanup_Fn,4, 10384, 6, 1.3, NULL, 10383, NULL)
 #elif defined __x86_64__
-CheckTypeSize(_Unwind_Exception_Cleanup_Fn,8, 10384, 11, 1.3, NULL, 10383, NULL)
+CheckTypeSize(_Unwind_Exception_Cleanup_Fn,8, 10384, 11, 2.0, NULL, 10383, NULL)
 #elif defined __s390x__
 CheckTypeSize(_Unwind_Exception_Cleanup_Fn,8, 10384, 12, 1.3, NULL, 10383, NULL)
 #elif defined __ia64__
 CheckTypeSize(_Unwind_Exception_Cleanup_Fn,8, 10384, 3, 1.3, NULL, 10383, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(_Unwind_Exception_Cleanup_Fn,8, 10384, 9, 1.3, NULL, 10383, NULL)
+CheckTypeSize(_Unwind_Exception_Cleanup_Fn,8, 10384, 9, 2.0, NULL, 10383, NULL)
 #else
 Msg("Find size of _Unwind_Exception_Cleanup_Fn (10384)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,10383,NULL);\n",architecture,10384,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10383,NULL);\n",architecture,10384,0);
 #endif
 
 #if defined __s390x__

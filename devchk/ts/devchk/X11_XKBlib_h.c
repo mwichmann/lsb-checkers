@@ -27,7 +27,7 @@ Msg("Checking data structures in X11/XKBlib.h\n");
 
 printf("Checking data structures in X11/XKBlib.h\n");
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _XkbAnyEvent,28, 9489, 10, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbAnyEvent,28, 9489, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbAnyEvent,serial,4,10,31392)
 CheckOffset(struct _XkbAnyEvent,serial,4,10,31392)
 CheckMemberSize(struct _XkbAnyEvent,send_event,4,10,31393)
@@ -69,7 +69,7 @@ CheckOffset(struct _XkbAnyEvent,xkb_type,20,6,31396)
 CheckMemberSize(struct _XkbAnyEvent,device,4,6,31397)
 CheckOffset(struct _XkbAnyEvent,device,24,6,31397)
 #elif defined __x86_64__
-CheckTypeSize(struct _XkbAnyEvent,48, 9489, 11, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbAnyEvent,48, 9489, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XkbAnyEvent,serial,8,11,31392)
 CheckOffset(struct _XkbAnyEvent,serial,8,11,31392)
 CheckMemberSize(struct _XkbAnyEvent,send_event,4,11,31393)
@@ -83,7 +83,7 @@ CheckOffset(struct _XkbAnyEvent,xkb_type,40,11,31396)
 CheckMemberSize(struct _XkbAnyEvent,device,4,11,31397)
 CheckOffset(struct _XkbAnyEvent,device,44,11,31397)
 #elif defined __s390x__
-CheckTypeSize(struct _XkbAnyEvent,48, 9489, 12, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbAnyEvent,48, 9489, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbAnyEvent,serial,8,12,31392)
 CheckOffset(struct _XkbAnyEvent,serial,8,12,31392)
 CheckMemberSize(struct _XkbAnyEvent,send_event,4,12,31393)
@@ -97,7 +97,7 @@ CheckOffset(struct _XkbAnyEvent,xkb_type,40,12,31396)
 CheckMemberSize(struct _XkbAnyEvent,device,4,12,31397)
 CheckOffset(struct _XkbAnyEvent,device,44,12,31397)
 #elif defined __ia64__
-CheckTypeSize(struct _XkbAnyEvent,48, 9489, 3, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbAnyEvent,48, 9489, 3, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbAnyEvent,serial,8,3,31392)
 CheckOffset(struct _XkbAnyEvent,serial,8,3,31392)
 CheckMemberSize(struct _XkbAnyEvent,send_event,4,3,31393)
@@ -111,7 +111,7 @@ CheckOffset(struct _XkbAnyEvent,xkb_type,40,3,31396)
 CheckMemberSize(struct _XkbAnyEvent,device,4,3,31397)
 CheckOffset(struct _XkbAnyEvent,device,44,3,31397)
 #elif defined __powerpc64__
-CheckTypeSize(struct _XkbAnyEvent,48, 9489, 9, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbAnyEvent,48, 9489, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XkbAnyEvent,serial,8,9,31392)
 CheckOffset(struct _XkbAnyEvent,serial,8,9,31392)
 CheckMemberSize(struct _XkbAnyEvent,send_event,4,9,31393)
@@ -126,30 +126,30 @@ CheckMemberSize(struct _XkbAnyEvent,device,4,9,31397)
 CheckOffset(struct _XkbAnyEvent,device,44,9,31397)
 #else
 Msg("Find size of _XkbAnyEvent (9489)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9489,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9489,0);
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(XkbAnyEvent,28, 9490, 10, 1.2, NULL, 9489, NULL)
+CheckTypeSize(XkbAnyEvent,28, 9490, 10, 1.3, NULL, 9489, NULL)
 #elif defined __i386__
 CheckTypeSize(XkbAnyEvent,28, 9490, 2, 1.2, NULL, 9489, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XkbAnyEvent,28, 9490, 6, 1.2, NULL, 9489, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XkbAnyEvent,48, 9490, 11, 1.2, NULL, 9489, NULL)
+CheckTypeSize(XkbAnyEvent,48, 9490, 11, 2.0, NULL, 9489, NULL)
 #elif defined __s390x__
-CheckTypeSize(XkbAnyEvent,48, 9490, 12, 1.2, NULL, 9489, NULL)
+CheckTypeSize(XkbAnyEvent,48, 9490, 12, 1.3, NULL, 9489, NULL)
 #elif defined __ia64__
-CheckTypeSize(XkbAnyEvent,48, 9490, 3, 1.2, NULL, 9489, NULL)
+CheckTypeSize(XkbAnyEvent,48, 9490, 3, 1.3, NULL, 9489, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XkbAnyEvent,48, 9490, 9, 1.2, NULL, 9489, NULL)
+CheckTypeSize(XkbAnyEvent,48, 9490, 9, 2.0, NULL, 9489, NULL)
 #else
 Msg("Find size of XkbAnyEvent (9490)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9489,NULL);\n",architecture,9490,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9489,NULL);\n",architecture,9490,0);
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _XkbNewKeyboardNotify,56, 9491, 10, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbNewKeyboardNotify,56, 9491, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbNewKeyboardNotify,serial,4,10,31399)
 CheckOffset(struct _XkbNewKeyboardNotify,serial,4,10,31399)
 CheckMemberSize(struct _XkbNewKeyboardNotify,send_event,4,10,31400)
@@ -239,7 +239,7 @@ CheckOffset(struct _XkbNewKeyboardNotify,req_major,52,6,31411)
 CheckMemberSize(struct _XkbNewKeyboardNotify,req_minor,1,6,31412)
 CheckOffset(struct _XkbNewKeyboardNotify,req_minor,53,6,31412)
 #elif defined __x86_64__
-CheckTypeSize(struct _XkbNewKeyboardNotify,80, 9491, 11, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbNewKeyboardNotify,80, 9491, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XkbNewKeyboardNotify,serial,8,11,31399)
 CheckOffset(struct _XkbNewKeyboardNotify,serial,8,11,31399)
 CheckMemberSize(struct _XkbNewKeyboardNotify,send_event,4,11,31400)
@@ -269,7 +269,7 @@ CheckOffset(struct _XkbNewKeyboardNotify,req_major,72,11,31411)
 CheckMemberSize(struct _XkbNewKeyboardNotify,req_minor,1,11,31412)
 CheckOffset(struct _XkbNewKeyboardNotify,req_minor,73,11,31412)
 #elif defined __s390x__
-CheckTypeSize(struct _XkbNewKeyboardNotify,80, 9491, 12, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbNewKeyboardNotify,80, 9491, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbNewKeyboardNotify,serial,8,12,31399)
 CheckOffset(struct _XkbNewKeyboardNotify,serial,8,12,31399)
 CheckMemberSize(struct _XkbNewKeyboardNotify,send_event,4,12,31400)
@@ -299,7 +299,7 @@ CheckOffset(struct _XkbNewKeyboardNotify,req_major,72,12,31411)
 CheckMemberSize(struct _XkbNewKeyboardNotify,req_minor,1,12,31412)
 CheckOffset(struct _XkbNewKeyboardNotify,req_minor,73,12,31412)
 #elif defined __ia64__
-CheckTypeSize(struct _XkbNewKeyboardNotify,80, 9491, 3, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbNewKeyboardNotify,80, 9491, 3, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbNewKeyboardNotify,serial,8,3,31399)
 CheckOffset(struct _XkbNewKeyboardNotify,serial,8,3,31399)
 CheckMemberSize(struct _XkbNewKeyboardNotify,send_event,4,3,31400)
@@ -329,7 +329,7 @@ CheckOffset(struct _XkbNewKeyboardNotify,req_major,72,3,31411)
 CheckMemberSize(struct _XkbNewKeyboardNotify,req_minor,1,3,31412)
 CheckOffset(struct _XkbNewKeyboardNotify,req_minor,73,3,31412)
 #elif defined __powerpc64__
-CheckTypeSize(struct _XkbNewKeyboardNotify,80, 9491, 9, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbNewKeyboardNotify,80, 9491, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XkbNewKeyboardNotify,serial,8,9,31399)
 CheckOffset(struct _XkbNewKeyboardNotify,serial,8,9,31399)
 CheckMemberSize(struct _XkbNewKeyboardNotify,send_event,4,9,31400)
@@ -360,30 +360,30 @@ CheckMemberSize(struct _XkbNewKeyboardNotify,req_minor,1,9,31412)
 CheckOffset(struct _XkbNewKeyboardNotify,req_minor,73,9,31412)
 #else
 Msg("Find size of _XkbNewKeyboardNotify (9491)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9491,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9491,0);
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(XkbNewKeyboardNotifyEvent,56, 9492, 10, 1.2, NULL, 9491, NULL)
+CheckTypeSize(XkbNewKeyboardNotifyEvent,56, 9492, 10, 1.3, NULL, 9491, NULL)
 #elif defined __i386__
 CheckTypeSize(XkbNewKeyboardNotifyEvent,56, 9492, 2, 1.2, NULL, 9491, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XkbNewKeyboardNotifyEvent,56, 9492, 6, 1.2, NULL, 9491, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XkbNewKeyboardNotifyEvent,80, 9492, 11, 1.2, NULL, 9491, NULL)
+CheckTypeSize(XkbNewKeyboardNotifyEvent,80, 9492, 11, 2.0, NULL, 9491, NULL)
 #elif defined __s390x__
-CheckTypeSize(XkbNewKeyboardNotifyEvent,80, 9492, 12, 1.2, NULL, 9491, NULL)
+CheckTypeSize(XkbNewKeyboardNotifyEvent,80, 9492, 12, 1.3, NULL, 9491, NULL)
 #elif defined __ia64__
-CheckTypeSize(XkbNewKeyboardNotifyEvent,80, 9492, 3, 1.2, NULL, 9491, NULL)
+CheckTypeSize(XkbNewKeyboardNotifyEvent,80, 9492, 3, 1.3, NULL, 9491, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XkbNewKeyboardNotifyEvent,80, 9492, 9, 1.2, NULL, 9491, NULL)
+CheckTypeSize(XkbNewKeyboardNotifyEvent,80, 9492, 9, 2.0, NULL, 9491, NULL)
 #else
 Msg("Find size of XkbNewKeyboardNotifyEvent (9492)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9491,NULL);\n",architecture,9492,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9491,NULL);\n",architecture,9492,0);
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(struct _XkbMapNotifyEvent,104, 9493, 11, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbMapNotifyEvent,104, 9493, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XkbMapNotifyEvent,serial,8,11,31414)
 CheckOffset(struct _XkbMapNotifyEvent,serial,8,11,31414)
 CheckMemberSize(struct _XkbMapNotifyEvent,send_event,4,11,31415)
@@ -435,7 +435,7 @@ CheckOffset(struct _XkbMapNotifyEvent,num_vmodmap_keys,92,11,31437)
 CheckMemberSize(struct _XkbMapNotifyEvent,vmods,4,11,31438)
 CheckOffset(struct _XkbMapNotifyEvent,vmods,96,11,31438)
 #elif defined __s390x__
-CheckTypeSize(struct _XkbMapNotifyEvent,104, 9493, 12, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbMapNotifyEvent,104, 9493, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbMapNotifyEvent,serial,8,12,31414)
 CheckOffset(struct _XkbMapNotifyEvent,serial,8,12,31414)
 CheckMemberSize(struct _XkbMapNotifyEvent,send_event,4,12,31415)
@@ -487,7 +487,7 @@ CheckOffset(struct _XkbMapNotifyEvent,num_vmodmap_keys,92,12,31437)
 CheckMemberSize(struct _XkbMapNotifyEvent,vmods,4,12,31438)
 CheckOffset(struct _XkbMapNotifyEvent,vmods,96,12,31438)
 #elif defined __ia64__
-CheckTypeSize(struct _XkbMapNotifyEvent,104, 9493, 3, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbMapNotifyEvent,104, 9493, 3, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbMapNotifyEvent,serial,8,3,31414)
 CheckOffset(struct _XkbMapNotifyEvent,serial,8,3,31414)
 CheckMemberSize(struct _XkbMapNotifyEvent,send_event,4,3,31415)
@@ -539,7 +539,7 @@ CheckOffset(struct _XkbMapNotifyEvent,num_vmodmap_keys,92,3,31437)
 CheckMemberSize(struct _XkbMapNotifyEvent,vmods,4,3,31438)
 CheckOffset(struct _XkbMapNotifyEvent,vmods,96,3,31438)
 #elif defined __powerpc64__
-CheckTypeSize(struct _XkbMapNotifyEvent,104, 9493, 9, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbMapNotifyEvent,104, 9493, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XkbMapNotifyEvent,serial,8,9,31414)
 CheckOffset(struct _XkbMapNotifyEvent,serial,8,9,31414)
 CheckMemberSize(struct _XkbMapNotifyEvent,send_event,4,9,31415)
@@ -591,7 +591,7 @@ CheckOffset(struct _XkbMapNotifyEvent,num_vmodmap_keys,92,9,31437)
 CheckMemberSize(struct _XkbMapNotifyEvent,vmods,4,9,31438)
 CheckOffset(struct _XkbMapNotifyEvent,vmods,96,9,31438)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _XkbMapNotifyEvent,80, 9493, 10, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbMapNotifyEvent,80, 9493, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbMapNotifyEvent,serial,4,10,31414)
 CheckOffset(struct _XkbMapNotifyEvent,serial,4,10,31414)
 CheckMemberSize(struct _XkbMapNotifyEvent,send_event,4,10,31415)
@@ -752,15 +752,15 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architect
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(XkbMapNotifyEvent,104, 9494, 11, 1.2, NULL, 9493, NULL)
+CheckTypeSize(XkbMapNotifyEvent,104, 9494, 11, 2.0, NULL, 9493, NULL)
 #elif defined __s390x__
-CheckTypeSize(XkbMapNotifyEvent,104, 9494, 12, 1.2, NULL, 9493, NULL)
+CheckTypeSize(XkbMapNotifyEvent,104, 9494, 12, 1.3, NULL, 9493, NULL)
 #elif defined __ia64__
-CheckTypeSize(XkbMapNotifyEvent,104, 9494, 3, 1.2, NULL, 9493, NULL)
+CheckTypeSize(XkbMapNotifyEvent,104, 9494, 3, 1.3, NULL, 9493, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XkbMapNotifyEvent,104, 9494, 9, 1.2, NULL, 9493, NULL)
+CheckTypeSize(XkbMapNotifyEvent,104, 9494, 9, 2.0, NULL, 9493, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XkbMapNotifyEvent,80, 9494, 10, 1.2, NULL, 9493, NULL)
+CheckTypeSize(XkbMapNotifyEvent,80, 9494, 10, 1.3, NULL, 9493, NULL)
 #elif defined __i386__
 CheckTypeSize(XkbMapNotifyEvent,80, 9494, 2, 1.2, NULL, 9493, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
@@ -771,7 +771,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9493,NULL);\n",archit
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(struct _XkbStateNotifyEvent,104, 9495, 11, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbStateNotifyEvent,104, 9495, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XkbStateNotifyEvent,serial,8,11,31440)
 CheckOffset(struct _XkbStateNotifyEvent,serial,8,11,31440)
 CheckMemberSize(struct _XkbStateNotifyEvent,send_event,4,11,31441)
@@ -823,7 +823,7 @@ CheckOffset(struct _XkbStateNotifyEvent,req_major,98,11,31463)
 CheckMemberSize(struct _XkbStateNotifyEvent,req_minor,1,11,31464)
 CheckOffset(struct _XkbStateNotifyEvent,req_minor,99,11,31464)
 #elif defined __s390x__
-CheckTypeSize(struct _XkbStateNotifyEvent,104, 9495, 12, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbStateNotifyEvent,104, 9495, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbStateNotifyEvent,serial,8,12,31440)
 CheckOffset(struct _XkbStateNotifyEvent,serial,8,12,31440)
 CheckMemberSize(struct _XkbStateNotifyEvent,send_event,4,12,31441)
@@ -875,7 +875,7 @@ CheckOffset(struct _XkbStateNotifyEvent,req_major,98,12,31463)
 CheckMemberSize(struct _XkbStateNotifyEvent,req_minor,1,12,31464)
 CheckOffset(struct _XkbStateNotifyEvent,req_minor,99,12,31464)
 #elif defined __ia64__
-CheckTypeSize(struct _XkbStateNotifyEvent,104, 9495, 3, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbStateNotifyEvent,104, 9495, 3, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbStateNotifyEvent,serial,8,3,31440)
 CheckOffset(struct _XkbStateNotifyEvent,serial,8,3,31440)
 CheckMemberSize(struct _XkbStateNotifyEvent,send_event,4,3,31441)
@@ -927,7 +927,7 @@ CheckOffset(struct _XkbStateNotifyEvent,req_major,98,3,31463)
 CheckMemberSize(struct _XkbStateNotifyEvent,req_minor,1,3,31464)
 CheckOffset(struct _XkbStateNotifyEvent,req_minor,99,3,31464)
 #elif defined __powerpc64__
-CheckTypeSize(struct _XkbStateNotifyEvent,104, 9495, 9, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbStateNotifyEvent,104, 9495, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XkbStateNotifyEvent,serial,8,9,31440)
 CheckOffset(struct _XkbStateNotifyEvent,serial,8,9,31440)
 CheckMemberSize(struct _XkbStateNotifyEvent,send_event,4,9,31441)
@@ -979,7 +979,7 @@ CheckOffset(struct _XkbStateNotifyEvent,req_major,98,9,31463)
 CheckMemberSize(struct _XkbStateNotifyEvent,req_minor,1,9,31464)
 CheckOffset(struct _XkbStateNotifyEvent,req_minor,99,9,31464)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _XkbStateNotifyEvent,80, 9495, 10, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbStateNotifyEvent,80, 9495, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbStateNotifyEvent,serial,4,10,31440)
 CheckOffset(struct _XkbStateNotifyEvent,serial,4,10,31440)
 CheckMemberSize(struct _XkbStateNotifyEvent,send_event,4,10,31441)
@@ -1140,15 +1140,15 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architect
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(XkbStateNotifyEvent,104, 9496, 11, 1.2, NULL, 9495, NULL)
+CheckTypeSize(XkbStateNotifyEvent,104, 9496, 11, 2.0, NULL, 9495, NULL)
 #elif defined __s390x__
-CheckTypeSize(XkbStateNotifyEvent,104, 9496, 12, 1.2, NULL, 9495, NULL)
+CheckTypeSize(XkbStateNotifyEvent,104, 9496, 12, 1.3, NULL, 9495, NULL)
 #elif defined __ia64__
-CheckTypeSize(XkbStateNotifyEvent,104, 9496, 3, 1.2, NULL, 9495, NULL)
+CheckTypeSize(XkbStateNotifyEvent,104, 9496, 3, 1.3, NULL, 9495, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XkbStateNotifyEvent,104, 9496, 9, 1.2, NULL, 9495, NULL)
+CheckTypeSize(XkbStateNotifyEvent,104, 9496, 9, 2.0, NULL, 9495, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XkbStateNotifyEvent,80, 9496, 10, 1.2, NULL, 9495, NULL)
+CheckTypeSize(XkbStateNotifyEvent,80, 9496, 10, 1.3, NULL, 9495, NULL)
 #elif defined __i386__
 CheckTypeSize(XkbStateNotifyEvent,80, 9496, 2, 1.2, NULL, 9495, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
@@ -1159,7 +1159,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9495,NULL);\n",archit
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _XkbControlsNotify,48, 9497, 10, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbControlsNotify,48, 9497, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbControlsNotify,serial,4,10,31466)
 CheckOffset(struct _XkbControlsNotify,serial,4,10,31466)
 CheckMemberSize(struct _XkbControlsNotify,send_event,4,10,31467)
@@ -1249,7 +1249,7 @@ CheckOffset(struct _XkbControlsNotify,req_major,46,6,31478)
 CheckMemberSize(struct _XkbControlsNotify,req_minor,1,6,31479)
 CheckOffset(struct _XkbControlsNotify,req_minor,47,6,31479)
 #elif defined __x86_64__
-CheckTypeSize(struct _XkbControlsNotify,72, 9497, 11, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbControlsNotify,72, 9497, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XkbControlsNotify,serial,8,11,31466)
 CheckOffset(struct _XkbControlsNotify,serial,8,11,31466)
 CheckMemberSize(struct _XkbControlsNotify,send_event,4,11,31467)
@@ -1279,7 +1279,7 @@ CheckOffset(struct _XkbControlsNotify,req_major,66,11,31478)
 CheckMemberSize(struct _XkbControlsNotify,req_minor,1,11,31479)
 CheckOffset(struct _XkbControlsNotify,req_minor,67,11,31479)
 #elif defined __s390x__
-CheckTypeSize(struct _XkbControlsNotify,72, 9497, 12, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbControlsNotify,72, 9497, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbControlsNotify,serial,8,12,31466)
 CheckOffset(struct _XkbControlsNotify,serial,8,12,31466)
 CheckMemberSize(struct _XkbControlsNotify,send_event,4,12,31467)
@@ -1309,7 +1309,7 @@ CheckOffset(struct _XkbControlsNotify,req_major,66,12,31478)
 CheckMemberSize(struct _XkbControlsNotify,req_minor,1,12,31479)
 CheckOffset(struct _XkbControlsNotify,req_minor,67,12,31479)
 #elif defined __ia64__
-CheckTypeSize(struct _XkbControlsNotify,72, 9497, 3, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbControlsNotify,72, 9497, 3, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbControlsNotify,serial,8,3,31466)
 CheckOffset(struct _XkbControlsNotify,serial,8,3,31466)
 CheckMemberSize(struct _XkbControlsNotify,send_event,4,3,31467)
@@ -1339,7 +1339,7 @@ CheckOffset(struct _XkbControlsNotify,req_major,66,3,31478)
 CheckMemberSize(struct _XkbControlsNotify,req_minor,1,3,31479)
 CheckOffset(struct _XkbControlsNotify,req_minor,67,3,31479)
 #elif defined __powerpc64__
-CheckTypeSize(struct _XkbControlsNotify,72, 9497, 9, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbControlsNotify,72, 9497, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XkbControlsNotify,serial,8,9,31466)
 CheckOffset(struct _XkbControlsNotify,serial,8,9,31466)
 CheckMemberSize(struct _XkbControlsNotify,send_event,4,9,31467)
@@ -1370,30 +1370,30 @@ CheckMemberSize(struct _XkbControlsNotify,req_minor,1,9,31479)
 CheckOffset(struct _XkbControlsNotify,req_minor,67,9,31479)
 #else
 Msg("Find size of _XkbControlsNotify (9497)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9497,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9497,0);
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(XkbControlsNotifyEvent,48, 9498, 10, 1.2, NULL, 9497, NULL)
+CheckTypeSize(XkbControlsNotifyEvent,48, 9498, 10, 1.3, NULL, 9497, NULL)
 #elif defined __i386__
 CheckTypeSize(XkbControlsNotifyEvent,48, 9498, 2, 1.2, NULL, 9497, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XkbControlsNotifyEvent,48, 9498, 6, 1.2, NULL, 9497, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XkbControlsNotifyEvent,72, 9498, 11, 1.2, NULL, 9497, NULL)
+CheckTypeSize(XkbControlsNotifyEvent,72, 9498, 11, 2.0, NULL, 9497, NULL)
 #elif defined __s390x__
-CheckTypeSize(XkbControlsNotifyEvent,72, 9498, 12, 1.2, NULL, 9497, NULL)
+CheckTypeSize(XkbControlsNotifyEvent,72, 9498, 12, 1.3, NULL, 9497, NULL)
 #elif defined __ia64__
-CheckTypeSize(XkbControlsNotifyEvent,72, 9498, 3, 1.2, NULL, 9497, NULL)
+CheckTypeSize(XkbControlsNotifyEvent,72, 9498, 3, 1.3, NULL, 9497, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XkbControlsNotifyEvent,72, 9498, 9, 1.2, NULL, 9497, NULL)
+CheckTypeSize(XkbControlsNotifyEvent,72, 9498, 9, 2.0, NULL, 9497, NULL)
 #else
 Msg("Find size of XkbControlsNotifyEvent (9498)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9497,NULL);\n",architecture,9498,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9497,NULL);\n",architecture,9498,0);
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _XkbIndicatorNotify,36, 9499, 10, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbIndicatorNotify,36, 9499, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbIndicatorNotify,serial,4,10,31481)
 CheckOffset(struct _XkbIndicatorNotify,serial,4,10,31481)
 CheckMemberSize(struct _XkbIndicatorNotify,send_event,4,10,31482)
@@ -1447,7 +1447,7 @@ CheckOffset(struct _XkbIndicatorNotify,changed,28,6,31487)
 CheckMemberSize(struct _XkbIndicatorNotify,state,4,6,31488)
 CheckOffset(struct _XkbIndicatorNotify,state,32,6,31488)
 #elif defined __x86_64__
-CheckTypeSize(struct _XkbIndicatorNotify,56, 9499, 11, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbIndicatorNotify,56, 9499, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XkbIndicatorNotify,serial,8,11,31481)
 CheckOffset(struct _XkbIndicatorNotify,serial,8,11,31481)
 CheckMemberSize(struct _XkbIndicatorNotify,send_event,4,11,31482)
@@ -1465,7 +1465,7 @@ CheckOffset(struct _XkbIndicatorNotify,changed,48,11,31487)
 CheckMemberSize(struct _XkbIndicatorNotify,state,4,11,31488)
 CheckOffset(struct _XkbIndicatorNotify,state,52,11,31488)
 #elif defined __s390x__
-CheckTypeSize(struct _XkbIndicatorNotify,56, 9499, 12, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbIndicatorNotify,56, 9499, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbIndicatorNotify,serial,8,12,31481)
 CheckOffset(struct _XkbIndicatorNotify,serial,8,12,31481)
 CheckMemberSize(struct _XkbIndicatorNotify,send_event,4,12,31482)
@@ -1483,7 +1483,7 @@ CheckOffset(struct _XkbIndicatorNotify,changed,48,12,31487)
 CheckMemberSize(struct _XkbIndicatorNotify,state,4,12,31488)
 CheckOffset(struct _XkbIndicatorNotify,state,52,12,31488)
 #elif defined __ia64__
-CheckTypeSize(struct _XkbIndicatorNotify,56, 9499, 3, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbIndicatorNotify,56, 9499, 3, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbIndicatorNotify,serial,8,3,31481)
 CheckOffset(struct _XkbIndicatorNotify,serial,8,3,31481)
 CheckMemberSize(struct _XkbIndicatorNotify,send_event,4,3,31482)
@@ -1501,7 +1501,7 @@ CheckOffset(struct _XkbIndicatorNotify,changed,48,3,31487)
 CheckMemberSize(struct _XkbIndicatorNotify,state,4,3,31488)
 CheckOffset(struct _XkbIndicatorNotify,state,52,3,31488)
 #elif defined __powerpc64__
-CheckTypeSize(struct _XkbIndicatorNotify,56, 9499, 9, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbIndicatorNotify,56, 9499, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XkbIndicatorNotify,serial,8,9,31481)
 CheckOffset(struct _XkbIndicatorNotify,serial,8,9,31481)
 CheckMemberSize(struct _XkbIndicatorNotify,send_event,4,9,31482)
@@ -1520,30 +1520,30 @@ CheckMemberSize(struct _XkbIndicatorNotify,state,4,9,31488)
 CheckOffset(struct _XkbIndicatorNotify,state,52,9,31488)
 #else
 Msg("Find size of _XkbIndicatorNotify (9499)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9499,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9499,0);
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(XkbIndicatorNotifyEvent,36, 9500, 10, 1.2, NULL, 9499, NULL)
+CheckTypeSize(XkbIndicatorNotifyEvent,36, 9500, 10, 1.3, NULL, 9499, NULL)
 #elif defined __i386__
 CheckTypeSize(XkbIndicatorNotifyEvent,36, 9500, 2, 1.2, NULL, 9499, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XkbIndicatorNotifyEvent,36, 9500, 6, 1.2, NULL, 9499, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XkbIndicatorNotifyEvent,56, 9500, 11, 1.2, NULL, 9499, NULL)
+CheckTypeSize(XkbIndicatorNotifyEvent,56, 9500, 11, 2.0, NULL, 9499, NULL)
 #elif defined __s390x__
-CheckTypeSize(XkbIndicatorNotifyEvent,56, 9500, 12, 1.2, NULL, 9499, NULL)
+CheckTypeSize(XkbIndicatorNotifyEvent,56, 9500, 12, 1.3, NULL, 9499, NULL)
 #elif defined __ia64__
-CheckTypeSize(XkbIndicatorNotifyEvent,56, 9500, 3, 1.2, NULL, 9499, NULL)
+CheckTypeSize(XkbIndicatorNotifyEvent,56, 9500, 3, 1.3, NULL, 9499, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XkbIndicatorNotifyEvent,56, 9500, 9, 1.2, NULL, 9499, NULL)
+CheckTypeSize(XkbIndicatorNotifyEvent,56, 9500, 9, 2.0, NULL, 9499, NULL)
 #else
 Msg("Find size of XkbIndicatorNotifyEvent (9500)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9499,NULL);\n",architecture,9500,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9499,NULL);\n",architecture,9500,0);
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _XkbNamesNotify,76, 9501, 10, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbNamesNotify,76, 9501, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbNamesNotify,serial,4,10,31490)
 CheckOffset(struct _XkbNamesNotify,serial,4,10,31490)
 CheckMemberSize(struct _XkbNamesNotify,send_event,4,10,31491)
@@ -1657,7 +1657,7 @@ CheckOffset(struct _XkbNamesNotify,first_key,68,6,31506)
 CheckMemberSize(struct _XkbNamesNotify,num_keys,4,6,31507)
 CheckOffset(struct _XkbNamesNotify,num_keys,72,6,31507)
 #elif defined __x86_64__
-CheckTypeSize(struct _XkbNamesNotify,96, 9501, 11, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbNamesNotify,96, 9501, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XkbNamesNotify,serial,8,11,31490)
 CheckOffset(struct _XkbNamesNotify,serial,8,11,31490)
 CheckMemberSize(struct _XkbNamesNotify,send_event,4,11,31491)
@@ -1695,7 +1695,7 @@ CheckOffset(struct _XkbNamesNotify,first_key,88,11,31506)
 CheckMemberSize(struct _XkbNamesNotify,num_keys,4,11,31507)
 CheckOffset(struct _XkbNamesNotify,num_keys,92,11,31507)
 #elif defined __s390x__
-CheckTypeSize(struct _XkbNamesNotify,96, 9501, 12, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbNamesNotify,96, 9501, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbNamesNotify,serial,8,12,31490)
 CheckOffset(struct _XkbNamesNotify,serial,8,12,31490)
 CheckMemberSize(struct _XkbNamesNotify,send_event,4,12,31491)
@@ -1733,7 +1733,7 @@ CheckOffset(struct _XkbNamesNotify,first_key,88,12,31506)
 CheckMemberSize(struct _XkbNamesNotify,num_keys,4,12,31507)
 CheckOffset(struct _XkbNamesNotify,num_keys,92,12,31507)
 #elif defined __ia64__
-CheckTypeSize(struct _XkbNamesNotify,96, 9501, 3, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbNamesNotify,96, 9501, 3, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbNamesNotify,serial,8,3,31490)
 CheckOffset(struct _XkbNamesNotify,serial,8,3,31490)
 CheckMemberSize(struct _XkbNamesNotify,send_event,4,3,31491)
@@ -1771,7 +1771,7 @@ CheckOffset(struct _XkbNamesNotify,first_key,88,3,31506)
 CheckMemberSize(struct _XkbNamesNotify,num_keys,4,3,31507)
 CheckOffset(struct _XkbNamesNotify,num_keys,92,3,31507)
 #elif defined __powerpc64__
-CheckTypeSize(struct _XkbNamesNotify,96, 9501, 9, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbNamesNotify,96, 9501, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XkbNamesNotify,serial,8,9,31490)
 CheckOffset(struct _XkbNamesNotify,serial,8,9,31490)
 CheckMemberSize(struct _XkbNamesNotify,send_event,4,9,31491)
@@ -1810,30 +1810,30 @@ CheckMemberSize(struct _XkbNamesNotify,num_keys,4,9,31507)
 CheckOffset(struct _XkbNamesNotify,num_keys,92,9,31507)
 #else
 Msg("Find size of _XkbNamesNotify (9501)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9501,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9501,0);
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(XkbNamesNotifyEvent,76, 9502, 10, 1.2, NULL, 9501, NULL)
+CheckTypeSize(XkbNamesNotifyEvent,76, 9502, 10, 1.3, NULL, 9501, NULL)
 #elif defined __i386__
 CheckTypeSize(XkbNamesNotifyEvent,76, 9502, 2, 1.2, NULL, 9501, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XkbNamesNotifyEvent,76, 9502, 6, 1.2, NULL, 9501, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XkbNamesNotifyEvent,96, 9502, 11, 1.2, NULL, 9501, NULL)
+CheckTypeSize(XkbNamesNotifyEvent,96, 9502, 11, 2.0, NULL, 9501, NULL)
 #elif defined __s390x__
-CheckTypeSize(XkbNamesNotifyEvent,96, 9502, 12, 1.2, NULL, 9501, NULL)
+CheckTypeSize(XkbNamesNotifyEvent,96, 9502, 12, 1.3, NULL, 9501, NULL)
 #elif defined __ia64__
-CheckTypeSize(XkbNamesNotifyEvent,96, 9502, 3, 1.2, NULL, 9501, NULL)
+CheckTypeSize(XkbNamesNotifyEvent,96, 9502, 3, 1.3, NULL, 9501, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XkbNamesNotifyEvent,96, 9502, 9, 1.2, NULL, 9501, NULL)
+CheckTypeSize(XkbNamesNotifyEvent,96, 9502, 9, 2.0, NULL, 9501, NULL)
 #else
 Msg("Find size of XkbNamesNotifyEvent (9502)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9501,NULL);\n",architecture,9502,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9501,NULL);\n",architecture,9502,0);
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _XkbCompatMapNotify,44, 9503, 10, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbCompatMapNotify,44, 9503, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbCompatMapNotify,serial,4,10,31509)
 CheckOffset(struct _XkbCompatMapNotify,serial,4,10,31509)
 CheckMemberSize(struct _XkbCompatMapNotify,send_event,4,10,31510)
@@ -1899,7 +1899,7 @@ CheckOffset(struct _XkbCompatMapNotify,num_si,36,6,31517)
 CheckMemberSize(struct _XkbCompatMapNotify,num_total_si,4,6,31518)
 CheckOffset(struct _XkbCompatMapNotify,num_total_si,40,6,31518)
 #elif defined __x86_64__
-CheckTypeSize(struct _XkbCompatMapNotify,64, 9503, 11, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbCompatMapNotify,64, 9503, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XkbCompatMapNotify,serial,8,11,31509)
 CheckOffset(struct _XkbCompatMapNotify,serial,8,11,31509)
 CheckMemberSize(struct _XkbCompatMapNotify,send_event,4,11,31510)
@@ -1921,7 +1921,7 @@ CheckOffset(struct _XkbCompatMapNotify,num_si,56,11,31517)
 CheckMemberSize(struct _XkbCompatMapNotify,num_total_si,4,11,31518)
 CheckOffset(struct _XkbCompatMapNotify,num_total_si,60,11,31518)
 #elif defined __s390x__
-CheckTypeSize(struct _XkbCompatMapNotify,64, 9503, 12, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbCompatMapNotify,64, 9503, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbCompatMapNotify,serial,8,12,31509)
 CheckOffset(struct _XkbCompatMapNotify,serial,8,12,31509)
 CheckMemberSize(struct _XkbCompatMapNotify,send_event,4,12,31510)
@@ -1943,7 +1943,7 @@ CheckOffset(struct _XkbCompatMapNotify,num_si,56,12,31517)
 CheckMemberSize(struct _XkbCompatMapNotify,num_total_si,4,12,31518)
 CheckOffset(struct _XkbCompatMapNotify,num_total_si,60,12,31518)
 #elif defined __ia64__
-CheckTypeSize(struct _XkbCompatMapNotify,64, 9503, 3, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbCompatMapNotify,64, 9503, 3, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbCompatMapNotify,serial,8,3,31509)
 CheckOffset(struct _XkbCompatMapNotify,serial,8,3,31509)
 CheckMemberSize(struct _XkbCompatMapNotify,send_event,4,3,31510)
@@ -1965,7 +1965,7 @@ CheckOffset(struct _XkbCompatMapNotify,num_si,56,3,31517)
 CheckMemberSize(struct _XkbCompatMapNotify,num_total_si,4,3,31518)
 CheckOffset(struct _XkbCompatMapNotify,num_total_si,60,3,31518)
 #elif defined __powerpc64__
-CheckTypeSize(struct _XkbCompatMapNotify,64, 9503, 9, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbCompatMapNotify,64, 9503, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XkbCompatMapNotify,serial,8,9,31509)
 CheckOffset(struct _XkbCompatMapNotify,serial,8,9,31509)
 CheckMemberSize(struct _XkbCompatMapNotify,send_event,4,9,31510)
@@ -1988,30 +1988,30 @@ CheckMemberSize(struct _XkbCompatMapNotify,num_total_si,4,9,31518)
 CheckOffset(struct _XkbCompatMapNotify,num_total_si,60,9,31518)
 #else
 Msg("Find size of _XkbCompatMapNotify (9503)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9503,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9503,0);
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(XkbCompatMapNotifyEvent,44, 9504, 10, 1.2, NULL, 9503, NULL)
+CheckTypeSize(XkbCompatMapNotifyEvent,44, 9504, 10, 1.3, NULL, 9503, NULL)
 #elif defined __i386__
 CheckTypeSize(XkbCompatMapNotifyEvent,44, 9504, 2, 1.2, NULL, 9503, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XkbCompatMapNotifyEvent,44, 9504, 6, 1.2, NULL, 9503, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XkbCompatMapNotifyEvent,64, 9504, 11, 1.2, NULL, 9503, NULL)
+CheckTypeSize(XkbCompatMapNotifyEvent,64, 9504, 11, 2.0, NULL, 9503, NULL)
 #elif defined __s390x__
-CheckTypeSize(XkbCompatMapNotifyEvent,64, 9504, 12, 1.2, NULL, 9503, NULL)
+CheckTypeSize(XkbCompatMapNotifyEvent,64, 9504, 12, 1.3, NULL, 9503, NULL)
 #elif defined __ia64__
-CheckTypeSize(XkbCompatMapNotifyEvent,64, 9504, 3, 1.2, NULL, 9503, NULL)
+CheckTypeSize(XkbCompatMapNotifyEvent,64, 9504, 3, 1.3, NULL, 9503, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XkbCompatMapNotifyEvent,64, 9504, 9, 1.2, NULL, 9503, NULL)
+CheckTypeSize(XkbCompatMapNotifyEvent,64, 9504, 9, 2.0, NULL, 9503, NULL)
 #else
 Msg("Find size of XkbCompatMapNotifyEvent (9504)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9503,NULL);\n",architecture,9504,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9503,NULL);\n",architecture,9504,0);
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _XkbBellNotify,60, 9505, 10, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbBellNotify,60, 9505, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbBellNotify,serial,4,10,31520)
 CheckOffset(struct _XkbBellNotify,serial,4,10,31520)
 CheckMemberSize(struct _XkbBellNotify,send_event,4,10,31521)
@@ -2101,7 +2101,7 @@ CheckOffset(struct _XkbBellNotify,window,52,6,31532)
 CheckMemberSize(struct _XkbBellNotify,event_only,4,6,31533)
 CheckOffset(struct _XkbBellNotify,event_only,56,6,31533)
 #elif defined __x86_64__
-CheckTypeSize(struct _XkbBellNotify,96, 9505, 11, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbBellNotify,96, 9505, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XkbBellNotify,serial,8,11,31520)
 CheckOffset(struct _XkbBellNotify,serial,8,11,31520)
 CheckMemberSize(struct _XkbBellNotify,send_event,4,11,31521)
@@ -2131,7 +2131,7 @@ CheckOffset(struct _XkbBellNotify,window,80,11,31532)
 CheckMemberSize(struct _XkbBellNotify,event_only,4,11,31533)
 CheckOffset(struct _XkbBellNotify,event_only,88,11,31533)
 #elif defined __s390x__
-CheckTypeSize(struct _XkbBellNotify,96, 9505, 12, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbBellNotify,96, 9505, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbBellNotify,serial,8,12,31520)
 CheckOffset(struct _XkbBellNotify,serial,8,12,31520)
 CheckMemberSize(struct _XkbBellNotify,send_event,4,12,31521)
@@ -2161,7 +2161,7 @@ CheckOffset(struct _XkbBellNotify,window,80,12,31532)
 CheckMemberSize(struct _XkbBellNotify,event_only,4,12,31533)
 CheckOffset(struct _XkbBellNotify,event_only,88,12,31533)
 #elif defined __ia64__
-CheckTypeSize(struct _XkbBellNotify,96, 9505, 3, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbBellNotify,96, 9505, 3, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbBellNotify,serial,8,3,31520)
 CheckOffset(struct _XkbBellNotify,serial,8,3,31520)
 CheckMemberSize(struct _XkbBellNotify,send_event,4,3,31521)
@@ -2191,7 +2191,7 @@ CheckOffset(struct _XkbBellNotify,window,80,3,31532)
 CheckMemberSize(struct _XkbBellNotify,event_only,4,3,31533)
 CheckOffset(struct _XkbBellNotify,event_only,88,3,31533)
 #elif defined __powerpc64__
-CheckTypeSize(struct _XkbBellNotify,96, 9505, 9, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbBellNotify,96, 9505, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XkbBellNotify,serial,8,9,31520)
 CheckOffset(struct _XkbBellNotify,serial,8,9,31520)
 CheckMemberSize(struct _XkbBellNotify,send_event,4,9,31521)
@@ -2222,30 +2222,30 @@ CheckMemberSize(struct _XkbBellNotify,event_only,4,9,31533)
 CheckOffset(struct _XkbBellNotify,event_only,88,9,31533)
 #else
 Msg("Find size of _XkbBellNotify (9505)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9505,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9505,0);
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(XkbBellNotifyEvent,60, 9506, 10, 1.2, NULL, 9505, NULL)
+CheckTypeSize(XkbBellNotifyEvent,60, 9506, 10, 1.3, NULL, 9505, NULL)
 #elif defined __i386__
 CheckTypeSize(XkbBellNotifyEvent,60, 9506, 2, 1.2, NULL, 9505, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XkbBellNotifyEvent,60, 9506, 6, 1.2, NULL, 9505, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XkbBellNotifyEvent,96, 9506, 11, 1.2, NULL, 9505, NULL)
+CheckTypeSize(XkbBellNotifyEvent,96, 9506, 11, 2.0, NULL, 9505, NULL)
 #elif defined __s390x__
-CheckTypeSize(XkbBellNotifyEvent,96, 9506, 12, 1.2, NULL, 9505, NULL)
+CheckTypeSize(XkbBellNotifyEvent,96, 9506, 12, 1.3, NULL, 9505, NULL)
 #elif defined __ia64__
-CheckTypeSize(XkbBellNotifyEvent,96, 9506, 3, 1.2, NULL, 9505, NULL)
+CheckTypeSize(XkbBellNotifyEvent,96, 9506, 3, 1.3, NULL, 9505, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XkbBellNotifyEvent,96, 9506, 9, 1.2, NULL, 9505, NULL)
+CheckTypeSize(XkbBellNotifyEvent,96, 9506, 9, 2.0, NULL, 9505, NULL)
 #else
 Msg("Find size of XkbBellNotifyEvent (9506)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9505,NULL);\n",architecture,9506,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9505,NULL);\n",architecture,9506,0);
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _XkbActionMessage,56, 9507, 10, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbActionMessage,56, 9507, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbActionMessage,serial,4,10,31535)
 CheckOffset(struct _XkbActionMessage,serial,4,10,31535)
 CheckMemberSize(struct _XkbActionMessage,send_event,4,10,31536)
@@ -2323,7 +2323,7 @@ CheckOffset(struct _XkbActionMessage,mods,44,6,31545)
 CheckMemberSize(struct _XkbActionMessage,message,7,6,31546)
 CheckOffset(struct _XkbActionMessage,message,48,6,31546)
 #elif defined __x86_64__
-CheckTypeSize(struct _XkbActionMessage,80, 9507, 11, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbActionMessage,80, 9507, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XkbActionMessage,serial,8,11,31535)
 CheckOffset(struct _XkbActionMessage,serial,8,11,31535)
 CheckMemberSize(struct _XkbActionMessage,send_event,4,11,31536)
@@ -2349,7 +2349,7 @@ CheckOffset(struct _XkbActionMessage,mods,64,11,31545)
 CheckMemberSize(struct _XkbActionMessage,message,7,11,31546)
 CheckOffset(struct _XkbActionMessage,message,68,11,31546)
 #elif defined __s390x__
-CheckTypeSize(struct _XkbActionMessage,80, 9507, 12, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbActionMessage,80, 9507, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbActionMessage,serial,8,12,31535)
 CheckOffset(struct _XkbActionMessage,serial,8,12,31535)
 CheckMemberSize(struct _XkbActionMessage,send_event,4,12,31536)
@@ -2375,7 +2375,7 @@ CheckOffset(struct _XkbActionMessage,mods,64,12,31545)
 CheckMemberSize(struct _XkbActionMessage,message,7,12,31546)
 CheckOffset(struct _XkbActionMessage,message,68,12,31546)
 #elif defined __ia64__
-CheckTypeSize(struct _XkbActionMessage,80, 9507, 3, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbActionMessage,80, 9507, 3, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbActionMessage,serial,8,3,31535)
 CheckOffset(struct _XkbActionMessage,serial,8,3,31535)
 CheckMemberSize(struct _XkbActionMessage,send_event,4,3,31536)
@@ -2401,7 +2401,7 @@ CheckOffset(struct _XkbActionMessage,mods,64,3,31545)
 CheckMemberSize(struct _XkbActionMessage,message,7,3,31546)
 CheckOffset(struct _XkbActionMessage,message,68,3,31546)
 #elif defined __powerpc64__
-CheckTypeSize(struct _XkbActionMessage,80, 9507, 9, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbActionMessage,80, 9507, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XkbActionMessage,serial,8,9,31535)
 CheckOffset(struct _XkbActionMessage,serial,8,9,31535)
 CheckMemberSize(struct _XkbActionMessage,send_event,4,9,31536)
@@ -2428,30 +2428,30 @@ CheckMemberSize(struct _XkbActionMessage,message,7,9,31546)
 CheckOffset(struct _XkbActionMessage,message,68,9,31546)
 #else
 Msg("Find size of _XkbActionMessage (9507)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9507,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9507,0);
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(XkbActionMessageEvent,56, 9508, 10, 1.2, NULL, 9507, NULL)
+CheckTypeSize(XkbActionMessageEvent,56, 9508, 10, 1.3, NULL, 9507, NULL)
 #elif defined __i386__
 CheckTypeSize(XkbActionMessageEvent,56, 9508, 2, 1.2, NULL, 9507, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XkbActionMessageEvent,56, 9508, 6, 1.2, NULL, 9507, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XkbActionMessageEvent,80, 9508, 11, 1.2, NULL, 9507, NULL)
+CheckTypeSize(XkbActionMessageEvent,80, 9508, 11, 2.0, NULL, 9507, NULL)
 #elif defined __s390x__
-CheckTypeSize(XkbActionMessageEvent,80, 9508, 12, 1.2, NULL, 9507, NULL)
+CheckTypeSize(XkbActionMessageEvent,80, 9508, 12, 1.3, NULL, 9507, NULL)
 #elif defined __ia64__
-CheckTypeSize(XkbActionMessageEvent,80, 9508, 3, 1.2, NULL, 9507, NULL)
+CheckTypeSize(XkbActionMessageEvent,80, 9508, 3, 1.3, NULL, 9507, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XkbActionMessageEvent,80, 9508, 9, 1.2, NULL, 9507, NULL)
+CheckTypeSize(XkbActionMessageEvent,80, 9508, 9, 2.0, NULL, 9507, NULL)
 #else
 Msg("Find size of XkbActionMessageEvent (9508)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9507,NULL);\n",architecture,9508,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9507,NULL);\n",architecture,9508,0);
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _XkbAccessXNotify,44, 9509, 10, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbAccessXNotify,44, 9509, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbAccessXNotify,serial,4,10,31548)
 CheckOffset(struct _XkbAccessXNotify,serial,4,10,31548)
 CheckMemberSize(struct _XkbAccessXNotify,send_event,4,10,31549)
@@ -2517,7 +2517,7 @@ CheckOffset(struct _XkbAccessXNotify,sk_delay,36,6,31556)
 CheckMemberSize(struct _XkbAccessXNotify,debounce_delay,4,6,31557)
 CheckOffset(struct _XkbAccessXNotify,debounce_delay,40,6,31557)
 #elif defined __x86_64__
-CheckTypeSize(struct _XkbAccessXNotify,64, 9509, 11, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbAccessXNotify,64, 9509, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XkbAccessXNotify,serial,8,11,31548)
 CheckOffset(struct _XkbAccessXNotify,serial,8,11,31548)
 CheckMemberSize(struct _XkbAccessXNotify,send_event,4,11,31549)
@@ -2539,7 +2539,7 @@ CheckOffset(struct _XkbAccessXNotify,sk_delay,56,11,31556)
 CheckMemberSize(struct _XkbAccessXNotify,debounce_delay,4,11,31557)
 CheckOffset(struct _XkbAccessXNotify,debounce_delay,60,11,31557)
 #elif defined __s390x__
-CheckTypeSize(struct _XkbAccessXNotify,64, 9509, 12, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbAccessXNotify,64, 9509, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbAccessXNotify,serial,8,12,31548)
 CheckOffset(struct _XkbAccessXNotify,serial,8,12,31548)
 CheckMemberSize(struct _XkbAccessXNotify,send_event,4,12,31549)
@@ -2561,7 +2561,7 @@ CheckOffset(struct _XkbAccessXNotify,sk_delay,56,12,31556)
 CheckMemberSize(struct _XkbAccessXNotify,debounce_delay,4,12,31557)
 CheckOffset(struct _XkbAccessXNotify,debounce_delay,60,12,31557)
 #elif defined __ia64__
-CheckTypeSize(struct _XkbAccessXNotify,64, 9509, 3, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbAccessXNotify,64, 9509, 3, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbAccessXNotify,serial,8,3,31548)
 CheckOffset(struct _XkbAccessXNotify,serial,8,3,31548)
 CheckMemberSize(struct _XkbAccessXNotify,send_event,4,3,31549)
@@ -2583,7 +2583,7 @@ CheckOffset(struct _XkbAccessXNotify,sk_delay,56,3,31556)
 CheckMemberSize(struct _XkbAccessXNotify,debounce_delay,4,3,31557)
 CheckOffset(struct _XkbAccessXNotify,debounce_delay,60,3,31557)
 #elif defined __powerpc64__
-CheckTypeSize(struct _XkbAccessXNotify,64, 9509, 9, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbAccessXNotify,64, 9509, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XkbAccessXNotify,serial,8,9,31548)
 CheckOffset(struct _XkbAccessXNotify,serial,8,9,31548)
 CheckMemberSize(struct _XkbAccessXNotify,send_event,4,9,31549)
@@ -2606,30 +2606,30 @@ CheckMemberSize(struct _XkbAccessXNotify,debounce_delay,4,9,31557)
 CheckOffset(struct _XkbAccessXNotify,debounce_delay,60,9,31557)
 #else
 Msg("Find size of _XkbAccessXNotify (9509)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9509,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9509,0);
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(XkbAccessXNotifyEvent,44, 9510, 10, 1.2, NULL, 9509, NULL)
+CheckTypeSize(XkbAccessXNotifyEvent,44, 9510, 10, 1.3, NULL, 9509, NULL)
 #elif defined __i386__
 CheckTypeSize(XkbAccessXNotifyEvent,44, 9510, 2, 1.2, NULL, 9509, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XkbAccessXNotifyEvent,44, 9510, 6, 1.2, NULL, 9509, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XkbAccessXNotifyEvent,64, 9510, 11, 1.2, NULL, 9509, NULL)
+CheckTypeSize(XkbAccessXNotifyEvent,64, 9510, 11, 2.0, NULL, 9509, NULL)
 #elif defined __s390x__
-CheckTypeSize(XkbAccessXNotifyEvent,64, 9510, 12, 1.2, NULL, 9509, NULL)
+CheckTypeSize(XkbAccessXNotifyEvent,64, 9510, 12, 1.3, NULL, 9509, NULL)
 #elif defined __ia64__
-CheckTypeSize(XkbAccessXNotifyEvent,64, 9510, 3, 1.2, NULL, 9509, NULL)
+CheckTypeSize(XkbAccessXNotifyEvent,64, 9510, 3, 1.3, NULL, 9509, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XkbAccessXNotifyEvent,64, 9510, 9, 1.2, NULL, 9509, NULL)
+CheckTypeSize(XkbAccessXNotifyEvent,64, 9510, 9, 2.0, NULL, 9509, NULL)
 #else
 Msg("Find size of XkbAccessXNotifyEvent (9510)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9509,NULL);\n",architecture,9510,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9509,NULL);\n",architecture,9510,0);
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _XkbExtensionDeviceNotify,64, 9511, 10, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbExtensionDeviceNotify,64, 9511, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbExtensionDeviceNotify,serial,4,10,31559)
 CheckOffset(struct _XkbExtensionDeviceNotify,serial,4,10,31559)
 CheckMemberSize(struct _XkbExtensionDeviceNotify,send_event,4,10,31560)
@@ -2725,7 +2725,7 @@ CheckOffset(struct _XkbExtensionDeviceNotify,led_class,56,6,31572)
 CheckMemberSize(struct _XkbExtensionDeviceNotify,led_id,4,6,31573)
 CheckOffset(struct _XkbExtensionDeviceNotify,led_id,60,6,31573)
 #elif defined __x86_64__
-CheckTypeSize(struct _XkbExtensionDeviceNotify,88, 9511, 11, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbExtensionDeviceNotify,88, 9511, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XkbExtensionDeviceNotify,serial,8,11,31559)
 CheckOffset(struct _XkbExtensionDeviceNotify,serial,8,11,31559)
 CheckMemberSize(struct _XkbExtensionDeviceNotify,send_event,4,11,31560)
@@ -2757,7 +2757,7 @@ CheckOffset(struct _XkbExtensionDeviceNotify,led_class,76,11,31572)
 CheckMemberSize(struct _XkbExtensionDeviceNotify,led_id,4,11,31573)
 CheckOffset(struct _XkbExtensionDeviceNotify,led_id,80,11,31573)
 #elif defined __s390x__
-CheckTypeSize(struct _XkbExtensionDeviceNotify,88, 9511, 12, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbExtensionDeviceNotify,88, 9511, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbExtensionDeviceNotify,serial,8,12,31559)
 CheckOffset(struct _XkbExtensionDeviceNotify,serial,8,12,31559)
 CheckMemberSize(struct _XkbExtensionDeviceNotify,send_event,4,12,31560)
@@ -2789,7 +2789,7 @@ CheckOffset(struct _XkbExtensionDeviceNotify,led_class,76,12,31572)
 CheckMemberSize(struct _XkbExtensionDeviceNotify,led_id,4,12,31573)
 CheckOffset(struct _XkbExtensionDeviceNotify,led_id,80,12,31573)
 #elif defined __ia64__
-CheckTypeSize(struct _XkbExtensionDeviceNotify,88, 9511, 3, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbExtensionDeviceNotify,88, 9511, 3, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbExtensionDeviceNotify,serial,8,3,31559)
 CheckOffset(struct _XkbExtensionDeviceNotify,serial,8,3,31559)
 CheckMemberSize(struct _XkbExtensionDeviceNotify,send_event,4,3,31560)
@@ -2821,7 +2821,7 @@ CheckOffset(struct _XkbExtensionDeviceNotify,led_class,76,3,31572)
 CheckMemberSize(struct _XkbExtensionDeviceNotify,led_id,4,3,31573)
 CheckOffset(struct _XkbExtensionDeviceNotify,led_id,80,3,31573)
 #elif defined __powerpc64__
-CheckTypeSize(struct _XkbExtensionDeviceNotify,88, 9511, 9, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XkbExtensionDeviceNotify,88, 9511, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XkbExtensionDeviceNotify,serial,8,9,31559)
 CheckOffset(struct _XkbExtensionDeviceNotify,serial,8,9,31559)
 CheckMemberSize(struct _XkbExtensionDeviceNotify,send_event,4,9,31560)
@@ -2854,30 +2854,30 @@ CheckMemberSize(struct _XkbExtensionDeviceNotify,led_id,4,9,31573)
 CheckOffset(struct _XkbExtensionDeviceNotify,led_id,80,9,31573)
 #else
 Msg("Find size of _XkbExtensionDeviceNotify (9511)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9511,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9511,0);
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(XkbExtensionDeviceNotifyEvent,64, 9512, 10, 1.2, NULL, 9511, NULL)
+CheckTypeSize(XkbExtensionDeviceNotifyEvent,64, 9512, 10, 1.3, NULL, 9511, NULL)
 #elif defined __i386__
 CheckTypeSize(XkbExtensionDeviceNotifyEvent,64, 9512, 2, 1.2, NULL, 9511, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XkbExtensionDeviceNotifyEvent,64, 9512, 6, 1.2, NULL, 9511, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XkbExtensionDeviceNotifyEvent,88, 9512, 11, 1.2, NULL, 9511, NULL)
+CheckTypeSize(XkbExtensionDeviceNotifyEvent,88, 9512, 11, 2.0, NULL, 9511, NULL)
 #elif defined __s390x__
-CheckTypeSize(XkbExtensionDeviceNotifyEvent,88, 9512, 12, 1.2, NULL, 9511, NULL)
+CheckTypeSize(XkbExtensionDeviceNotifyEvent,88, 9512, 12, 1.3, NULL, 9511, NULL)
 #elif defined __ia64__
-CheckTypeSize(XkbExtensionDeviceNotifyEvent,88, 9512, 3, 1.2, NULL, 9511, NULL)
+CheckTypeSize(XkbExtensionDeviceNotifyEvent,88, 9512, 3, 1.3, NULL, 9511, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XkbExtensionDeviceNotifyEvent,88, 9512, 9, 1.2, NULL, 9511, NULL)
+CheckTypeSize(XkbExtensionDeviceNotifyEvent,88, 9512, 9, 2.0, NULL, 9511, NULL)
 #else
 Msg("Find size of XkbExtensionDeviceNotifyEvent (9512)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9511,NULL);\n",architecture,9512,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9511,NULL);\n",architecture,9512,0);
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(union _XkbEvent,192, 9513, 11, 1.2, NULL, 0, NULL)
+CheckTypeSize(union _XkbEvent,192, 9513, 11, 2.0, NULL, 0, NULL)
 Msg("Missing member data for _XkbEvent on x86-64\n");
 CheckOffset(union _XkbEvent,type,0,11,31574)
 CheckOffset(union _XkbEvent,any,0,11,31575)
@@ -2894,7 +2894,7 @@ CheckOffset(union _XkbEvent,accessx,0,11,31585)
 CheckOffset(union _XkbEvent,device,0,11,31586)
 CheckOffset(union _XkbEvent,core,0,11,31587)
 #elif defined __s390x__
-CheckTypeSize(union _XkbEvent,192, 9513, 12, 1.2, NULL, 0, NULL)
+CheckTypeSize(union _XkbEvent,192, 9513, 12, 1.3, NULL, 0, NULL)
 Msg("Missing member data for _XkbEvent on S390X\n");
 CheckOffset(union _XkbEvent,type,0,12,31574)
 CheckOffset(union _XkbEvent,any,0,12,31575)
@@ -2911,7 +2911,7 @@ CheckOffset(union _XkbEvent,accessx,0,12,31585)
 CheckOffset(union _XkbEvent,device,0,12,31586)
 CheckOffset(union _XkbEvent,core,0,12,31587)
 #elif defined __ia64__
-CheckTypeSize(union _XkbEvent,192, 9513, 3, 1.2, NULL, 0, NULL)
+CheckTypeSize(union _XkbEvent,192, 9513, 3, 1.3, NULL, 0, NULL)
 Msg("Missing member data for _XkbEvent on IA64\n");
 CheckOffset(union _XkbEvent,type,0,3,31574)
 CheckOffset(union _XkbEvent,any,0,3,31575)
@@ -2928,7 +2928,7 @@ CheckOffset(union _XkbEvent,accessx,0,3,31585)
 CheckOffset(union _XkbEvent,device,0,3,31586)
 CheckOffset(union _XkbEvent,core,0,3,31587)
 #elif defined __powerpc64__
-CheckTypeSize(union _XkbEvent,192, 9513, 9, 1.2, NULL, 0, NULL)
+CheckTypeSize(union _XkbEvent,192, 9513, 9, 2.0, NULL, 0, NULL)
 Msg("Missing member data for _XkbEvent on PPC64\n");
 CheckOffset(union _XkbEvent,type,0,9,31574)
 CheckOffset(union _XkbEvent,any,0,9,31575)
@@ -2945,7 +2945,7 @@ CheckOffset(union _XkbEvent,accessx,0,9,31585)
 CheckOffset(union _XkbEvent,device,0,9,31586)
 CheckOffset(union _XkbEvent,core,0,9,31587)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(union _XkbEvent,96, 9513, 10, 1.2, NULL, 0, NULL)
+CheckTypeSize(union _XkbEvent,96, 9513, 10, 1.3, NULL, 0, NULL)
 Msg("Missing member data for _XkbEvent on S390\n");
 CheckOffset(union _XkbEvent,type,0,10,31574)
 CheckOffset(union _XkbEvent,any,0,10,31575)
@@ -3001,15 +3001,15 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architect
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(XkbEvent,192, 9514, 11, 1.2, NULL, 9513, NULL)
+CheckTypeSize(XkbEvent,192, 9514, 11, 2.0, NULL, 9513, NULL)
 #elif defined __s390x__
-CheckTypeSize(XkbEvent,192, 9514, 12, 1.2, NULL, 9513, NULL)
+CheckTypeSize(XkbEvent,192, 9514, 12, 1.3, NULL, 9513, NULL)
 #elif defined __ia64__
-CheckTypeSize(XkbEvent,192, 9514, 3, 1.2, NULL, 9513, NULL)
+CheckTypeSize(XkbEvent,192, 9514, 3, 1.3, NULL, 9513, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XkbEvent,192, 9514, 9, 1.2, NULL, 9513, NULL)
+CheckTypeSize(XkbEvent,192, 9514, 9, 2.0, NULL, 9513, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XkbEvent,96, 9514, 10, 1.2, NULL, 9513, NULL)
+CheckTypeSize(XkbEvent,96, 9514, 10, 1.3, NULL, 9513, NULL)
 #elif defined __i386__
 CheckTypeSize(XkbEvent,96, 9514, 2, 1.2, NULL, 9513, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
@@ -3020,60 +3020,60 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9513,NULL);\n",archit
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(XkbKbdDpyStatePtr,4, 9518, 10, 1.2, NULL, 9517, NULL)
+CheckTypeSize(XkbKbdDpyStatePtr,4, 9518, 10, 1.3, NULL, 9517, NULL)
 #elif defined __i386__
 CheckTypeSize(XkbKbdDpyStatePtr,4, 9518, 2, 1.2, NULL, 9517, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XkbKbdDpyStatePtr,4, 9518, 6, 1.2, NULL, 9517, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XkbKbdDpyStatePtr,8, 9518, 11, 1.2, NULL, 9517, NULL)
+CheckTypeSize(XkbKbdDpyStatePtr,8, 9518, 11, 2.0, NULL, 9517, NULL)
 #elif defined __s390x__
-CheckTypeSize(XkbKbdDpyStatePtr,8, 9518, 12, 1.2, NULL, 9517, NULL)
+CheckTypeSize(XkbKbdDpyStatePtr,8, 9518, 12, 1.3, NULL, 9517, NULL)
 #elif defined __ia64__
-CheckTypeSize(XkbKbdDpyStatePtr,8, 9518, 3, 1.2, NULL, 9517, NULL)
+CheckTypeSize(XkbKbdDpyStatePtr,8, 9518, 3, 1.3, NULL, 9517, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XkbKbdDpyStatePtr,8, 9518, 9, 1.2, NULL, 9517, NULL)
+CheckTypeSize(XkbKbdDpyStatePtr,8, 9518, 9, 2.0, NULL, 9517, NULL)
 #else
 Msg("Find size of XkbKbdDpyStatePtr (9518)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9517,NULL);\n",architecture,9518,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9517,NULL);\n",architecture,9518,0);
 #endif
 
 #if defined __i386__
 CheckTypeSize(XkbInternAtomFunc,4, 9520, 2, 1.2, NULL, 9519, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XkbInternAtomFunc,4, 9520, 10, 1.2, NULL, 9519, NULL)
+CheckTypeSize(XkbInternAtomFunc,4, 9520, 10, 1.3, NULL, 9519, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XkbInternAtomFunc,8, 9520, 11, 1.2, NULL, 9519, NULL)
+CheckTypeSize(XkbInternAtomFunc,8, 9520, 11, 2.0, NULL, 9519, NULL)
 #elif defined __s390x__
-CheckTypeSize(XkbInternAtomFunc,8, 9520, 12, 1.2, NULL, 9519, NULL)
+CheckTypeSize(XkbInternAtomFunc,8, 9520, 12, 1.3, NULL, 9519, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XkbInternAtomFunc,4, 9520, 6, 1.2, NULL, 9519, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XkbInternAtomFunc,8, 9520, 9, 1.2, NULL, 9519, NULL)
+CheckTypeSize(XkbInternAtomFunc,8, 9520, 9, 2.0, NULL, 9519, NULL)
 #elif defined __ia64__
-CheckTypeSize(XkbInternAtomFunc,8, 9520, 3, 1.2, NULL, 9519, NULL)
+CheckTypeSize(XkbInternAtomFunc,8, 9520, 3, 1.3, NULL, 9519, NULL)
 #else
 Msg("Find size of XkbInternAtomFunc (9520)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9519,NULL);\n",architecture,9520,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9519,NULL);\n",architecture,9520,0);
 #endif
 
 #if defined __i386__
 CheckTypeSize(XkbGetAtomNameFunc,4, 9522, 2, 1.2, NULL, 9521, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XkbGetAtomNameFunc,4, 9522, 10, 1.2, NULL, 9521, NULL)
+CheckTypeSize(XkbGetAtomNameFunc,4, 9522, 10, 1.3, NULL, 9521, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XkbGetAtomNameFunc,8, 9522, 11, 1.2, NULL, 9521, NULL)
+CheckTypeSize(XkbGetAtomNameFunc,8, 9522, 11, 2.0, NULL, 9521, NULL)
 #elif defined __s390x__
-CheckTypeSize(XkbGetAtomNameFunc,8, 9522, 12, 1.2, NULL, 9521, NULL)
+CheckTypeSize(XkbGetAtomNameFunc,8, 9522, 12, 1.3, NULL, 9521, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XkbGetAtomNameFunc,4, 9522, 6, 1.2, NULL, 9521, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XkbGetAtomNameFunc,8, 9522, 9, 1.2, NULL, 9521, NULL)
+CheckTypeSize(XkbGetAtomNameFunc,8, 9522, 9, 2.0, NULL, 9521, NULL)
 #elif defined __ia64__
-CheckTypeSize(XkbGetAtomNameFunc,8, 9522, 3, 1.2, NULL, 9521, NULL)
+CheckTypeSize(XkbGetAtomNameFunc,8, 9522, 3, 1.3, NULL, 9521, NULL)
 #else
 Msg("Find size of XkbGetAtomNameFunc (9522)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9521, NULL);\n",architecture,9522,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9521, NULL);\n",architecture,9522,0);
 #endif
 
 #ifdef TET_TEST
