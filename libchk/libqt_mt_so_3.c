@@ -340,7 +340,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QFocusData4homeEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QFocusData4nextEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QFocusData4prevEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN10QGLContext10currentCtxE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN10QGLContext10currentCtxE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QGLContext10currentCtxE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QGLContext10currentCtxE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QGLContext10currentCtxE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QGLContext10currentCtxE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QGLContext10currentCtxE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QGLContext10currentCtxE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN10QGLContext11doneCurrentEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QGLContext11makeCurrentEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QGLContext12chooseVisualEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -821,7 +841,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QTableItem12updateEditorEii","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QTableItem14setReplaceableEb","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QTableItem20setContentFromEditorEP7QWidget","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN10QTableItem4RTTIE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN10QTableItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QTableItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QTableItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QTableItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QTableItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QTableItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QTableItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN10QTableItem5paintEP8QPainterRK11QColorGroupRK5QRectb","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QTableItem6setColEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QTableItem6setRowEi","",0,LSB_Toolkit_Qt3,0,1},
@@ -848,8 +888,48 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QTextCodec17setCodecForLocaleEPS_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QTextCodec19fromUnicodeInternalEPK5QCharPti","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QTextCodec24simpleHeuristicNameMatchEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN10QTextCodec4cfcsE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN10QTextCodec4cftrE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN10QTextCodec4cfcsE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QTextCodec4cfcsE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QTextCodec4cfcsE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QTextCodec4cfcsE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QTextCodec4cfcsE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QTextCodec4cfcsE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QTextCodec4cfcsE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN10QTextCodec4cftrE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QTextCodec4cftrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QTextCodec4cftrE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QTextCodec4cftrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QTextCodec4cftrE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QTextCodec4cftrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QTextCodec4cftrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN10QTextCodec6localeEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QTextCodecC1Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QTextCodecC2Ev","",0,LSB_Toolkit_Qt3,0,1},
@@ -979,7 +1059,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QCanvasItem11setVelocityEdd","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QCanvasItem12changeChunksEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QCanvasItem16removeFromChunksEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN11QCanvasItem4RTTIE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN11QCanvasItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QCanvasItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QCanvasItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QCanvasItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QCanvasItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QCanvasItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QCanvasItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN11QCanvasItem4hideEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QCanvasItem4moveEdd","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QCanvasItem4showEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -993,7 +1093,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QCanvasItemD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QCanvasItemD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QCanvasItemD2Ev","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN11QCanvasLine4RTTIE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN11QCanvasLine4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QCanvasLine4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QCanvasLine4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QCanvasLine4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QCanvasLine4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QCanvasLine4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QCanvasLine4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN11QCanvasLine6moveByEdd","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QCanvasLine6setPenE4QPen","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QCanvasLine9drawShapeER8QPainter","",0,LSB_Toolkit_Qt3,0,1},
@@ -1007,7 +1127,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QCanvasText12changeChunksEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QCanvasText12setTextFlagsEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QCanvasText16removeFromChunksEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN11QCanvasText4RTTIE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN11QCanvasText4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QCanvasText4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QCanvasText4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QCanvasText4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QCanvasText4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QCanvasText4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QCanvasText4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN11QCanvasText4drawER8QPainter","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QCanvasText6moveByEdd","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QCanvasText7setFontERK5QFont","",0,LSB_Toolkit_Qt3,0,1},
@@ -1562,8 +1702,48 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QMouseEventC2EN6QEvent4TypeERK6QPointii","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QPointArray11makeEllipseEiiii","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QPointArray12cleanBuffersEv","",0,LSB_Toolkit_Qt3,0,1},
+#if defined __i386__
 	{"_ZN11QPointArray2spE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN11QPointArray5splenE","",0,LSB_Toolkit_Qt3,0,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QPointArray2spE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QPointArray2spE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QPointArray2spE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QPointArray2spE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QPointArray2spE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QPointArray2spE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN11QPointArray5splenE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QPointArray5splenE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QPointArray5splenE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QPointArray5splenE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QPointArray5splenE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QPointArray5splenE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QPointArray5splenE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN11QPointArray7makeArcEiiiiii","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QPointArray7makeArcEiiiiiiRK8QWMatrix","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QPointArray8setPointEjii","",0,LSB_Toolkit_Qt3,0,1},
@@ -2069,7 +2249,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication10create_ximEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication10enter_loopEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication10initializeEiPPc","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QApplication10loop_levelE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QApplication10loop_levelE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication10loop_levelE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication10loop_levelE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication10loop_levelE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication10loop_levelE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication10loop_levelE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication10loop_levelE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN12QApplication10setPaletteERK8QPalettebPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication10startingUpEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication11aboutToQuitEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -2082,7 +2282,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication12animate_menuE","",0,LSB_Toolkit_Qt3,0,0},
 	{"_ZN12QApplication12app_libpathsE","",0,LSB_Toolkit_Qt3,0,0},
 	{"_ZN12QApplication12app_palettesE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN12QApplication12app_trackingE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QApplication12app_trackingE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication12app_trackingE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication12app_trackingE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication12app_trackingE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication12app_trackingE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication12app_trackingE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication12app_trackingE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN12QApplication12fade_tooltipE","",0,LSB_Toolkit_Qt3,0,0},
 	{"_ZN12QApplication12focus_widgetE","",0,LSB_Toolkit_Qt3,0,0},
 	{"_ZN12QApplication12libraryPathsEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -2106,7 +2326,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication15animate_toolboxE","",0,LSB_Toolkit_Qt3,0,0},
 	{"_ZN12QApplication15animate_tooltipE","",0,LSB_Toolkit_Qt3,0,0},
 	{"_ZN12QApplication15closeAllWindowsEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QApplication15composedUnicodeE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QApplication15composedUnicodeE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication15composedUnicodeE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication15composedUnicodeE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication15composedUnicodeE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication15composedUnicodeE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication15composedUnicodeE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication15composedUnicodeE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN12QApplication15cursorFlashTimeEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication15init_precmdlineEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication15isEffectEnabledEN2Qt8UIEffectE","",0,LSB_Toolkit_Qt3,0,1},
@@ -2131,7 +2371,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication16x11ClientMessageEP7QWidgetP7_XEventb","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication17activeModalWidgetEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication17activePopupWidgetEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QApplication17cursor_flash_timeE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QApplication17cursor_flash_timeE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication17cursor_flash_timeE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication17cursor_flash_timeE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication17cursor_flash_timeE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication17cursor_flash_timeE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication17cursor_flash_timeE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication17cursor_flash_timeE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN12QApplication17installTranslatorEP11QTranslator","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication17removeLibraryPathERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication17removePostedEventEP6QEvent","",0,LSB_Toolkit_Qt3,0,1},
@@ -2142,7 +2402,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication18removePostedEventsEP7QObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication18setCursorFlashTimeEi","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QApplication18wheel_scroll_linesE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QApplication18wheel_scroll_linesE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication18wheel_scroll_linesE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication18wheel_scroll_linesE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication18wheel_scroll_linesE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication18wheel_scroll_linesE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication18wheel_scroll_linesE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication18wheel_scroll_linesE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN12QApplication18x11_apply_settingsEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication19applicationFilePathEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication19doubleClickIntervalEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -2154,7 +2434,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication21restoreOverrideCursorEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication22setDoubleClickIntervalEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication22setGlobalMouseTrackingEb","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QApplication23mouse_double_click_timeE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QApplication23mouse_double_click_timeE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication23mouse_double_click_timeE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication23mouse_double_click_timeE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication23mouse_double_click_timeE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication23mouse_double_click_timeE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication23mouse_double_click_timeE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication23mouse_double_click_timeE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN12QApplication23setDesktopSettingsAwareEb","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication4beepEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -2187,7 +2487,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication8setStyleEP6QStyle","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication8setStyleERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication8widgetAtEiib","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QApplication9app_cspecE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QApplication9app_cspecE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication9app_cspecE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication9app_cspecE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication9app_cspecE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication9app_cspecE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication9app_cspecE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication9app_cspecE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN12QApplication9app_fontsE","",0,LSB_Toolkit_Qt3,0,0},
 	{"_ZN12QApplication9app_strutE","",0,LSB_Toolkit_Qt3,0,0},
 	{"_ZN12QApplication9app_styleE","",0,LSB_Toolkit_Qt3,0,0},
@@ -2500,7 +2820,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QKeySequenceaSERKS_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QListBoxItem13setSelectableEb","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QListBoxItem21setCustomHighlightingEb","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QListBoxItem4RTTIE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QListBoxItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QListBoxItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QListBoxItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QListBoxItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QListBoxItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QListBoxItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QListBoxItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN12QListBoxItemC1EP8QListBox","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QListBoxItemC1EP8QListBoxPS_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QListBoxItemC2EP8QListBox","",0,LSB_Toolkit_Qt3,0,1},
@@ -2508,7 +2848,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QListBoxItemD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QListBoxItemD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QListBoxItemD2Ev","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QListBoxText4RTTIE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QListBoxText4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QListBoxText4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QListBoxText4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QListBoxText4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QListBoxText4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QListBoxText4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QListBoxText4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN12QListBoxText5paintEP8QPainter","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QListBoxTextC1EP8QListBoxRK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QListBoxTextC1EP8QListBoxRK7QStringP12QListBoxItem","",0,LSB_Toolkit_Qt3,0,1},
@@ -2524,28 +2884,268 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QPaintDevice10x11AppDpiXEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QPaintDevice10x11AppDpiYEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QPaintDevice10x11AppDpiYEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QPaintDevice10x_appcellsE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN12QPaintDevice10x_appdepthE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QPaintDevice10x_appcellsE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QPaintDevice10x_appcellsE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QPaintDevice10x_appcellsE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QPaintDevice10x_appcellsE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QPaintDevice10x_appcellsE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QPaintDevice10x_appcellsE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QPaintDevice10x_appcellsE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __i386__
+	{"_ZN12QPaintDevice10x_appdepthE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QPaintDevice10x_appdepthE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QPaintDevice10x_appdepthE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QPaintDevice10x_appdepthE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QPaintDevice10x_appdepthE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QPaintDevice10x_appdepthE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QPaintDevice10x_appdepthE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN12QPaintDevice11copyX11DataEPKS_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QPaintDevice11x_appscreenE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QPaintDevice11x_appscreenE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QPaintDevice11x_appscreenE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QPaintDevice11x_appscreenE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QPaintDevice11x_appscreenE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QPaintDevice11x_appscreenE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QPaintDevice11x_appscreenE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QPaintDevice11x_appscreenE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __i386__
 	{"_ZN12QPaintDevice11x_appvisualE","",0,LSB_Toolkit_Qt3,0,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QPaintDevice11x_appvisualE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QPaintDevice11x_appvisualE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QPaintDevice11x_appvisualE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QPaintDevice11x_appvisualE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QPaintDevice11x_appvisualE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QPaintDevice11x_appvisualE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QPaintDevice12cloneX11DataEPKS_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QPaintDevice12x_appdisplayE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QPaintDevice12x_appdisplayE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QPaintDevice12x_appdisplayE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QPaintDevice12x_appdisplayE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QPaintDevice12x_appdisplayE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QPaintDevice12x_appdisplayE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QPaintDevice12x_appdisplayE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QPaintDevice12x_appdisplayE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QPaintDevice13setResolutionEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QPaintDevice13x11SetAppDpiXEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QPaintDevice13x11SetAppDpiXEii","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QPaintDevice13x11SetAppDpiYEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QPaintDevice13x11SetAppDpiYEii","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QPaintDevice13x_appcolormapE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN12QPaintDevice14x_appcells_arrE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QPaintDevice13x_appcolormapE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QPaintDevice13x_appcolormapE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QPaintDevice13x_appcolormapE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QPaintDevice13x_appcolormapE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QPaintDevice13x_appcolormapE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QPaintDevice13x_appcolormapE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QPaintDevice13x_appcolormapE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN12QPaintDevice14x_appcells_arrE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QPaintDevice14x_appcells_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QPaintDevice14x_appcells_arrE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QPaintDevice14x_appcells_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QPaintDevice14x_appcells_arrE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QPaintDevice14x_appcells_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QPaintDevice14x_appcells_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QPaintDevice14x_appdefvisualE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN12QPaintDevice14x_appdepth_arrE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN12QPaintDevice15x_approotwindowE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QPaintDevice14x_appdepth_arrE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QPaintDevice14x_appdepth_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QPaintDevice14x_appdepth_arrE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QPaintDevice14x_appdepth_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QPaintDevice14x_appdepth_arrE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QPaintDevice14x_appdepth_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QPaintDevice14x_appdepth_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN12QPaintDevice15x_approotwindowE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QPaintDevice15x_approotwindowE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QPaintDevice15x_approotwindowE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QPaintDevice15x_approotwindowE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QPaintDevice15x_approotwindowE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QPaintDevice15x_approotwindowE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QPaintDevice15x_approotwindowE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
 	{"_ZN12QPaintDevice15x_appvisual_arrE","",0,LSB_Toolkit_Qt3,0,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QPaintDevice15x_appvisual_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QPaintDevice15x_appvisual_arrE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QPaintDevice15x_appvisual_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QPaintDevice15x_appvisual_arrE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QPaintDevice15x_appvisual_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QPaintDevice15x_appvisual_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QPaintDevice16x_appdefcolormapE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN12QPaintDevice17x_appcolormap_arrE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QPaintDevice17x_appcolormap_arrE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QPaintDevice17x_appcolormap_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QPaintDevice17x_appcolormap_arrE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QPaintDevice17x_appcolormap_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QPaintDevice17x_appcolormap_arrE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QPaintDevice17x_appcolormap_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QPaintDevice17x_appcolormap_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QPaintDevice18x_appdefvisual_arrE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN12QPaintDevice19x_approotwindow_arrE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QPaintDevice19x_approotwindow_arrE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QPaintDevice19x_approotwindow_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QPaintDevice19x_approotwindow_arrE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QPaintDevice19x_approotwindow_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QPaintDevice19x_approotwindow_arrE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QPaintDevice19x_approotwindow_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QPaintDevice19x_approotwindow_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QPaintDevice20x_appdefcolormap_arrE","",0,LSB_Toolkit_Qt3,0,0},
 	{"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QPaintDeviceC1Ej","",0,LSB_Toolkit_Qt3,0,1},
@@ -2885,7 +3485,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN13QCanvasPixmapD2Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QCanvasSpline10recalcPolyEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QCanvasSpline16setControlPointsE11QPointArrayb","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN13QCanvasSpline4RTTIE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN13QCanvasSpline4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN13QCanvasSpline4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN13QCanvasSpline4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN13QCanvasSpline4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN13QCanvasSpline4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN13QCanvasSpline4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN13QCanvasSpline4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN13QCanvasSplineC1EP7QCanvas","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QCanvasSplineC2EP7QCanvas","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QCanvasSplineD0Ev","",0,LSB_Toolkit_Qt3,0,1},
@@ -2896,7 +3516,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN13QCanvasSprite12changeChunksEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QCanvasSprite16removeFromChunksEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QCanvasSprite17setFrameAnimationENS_18FrameAnimationTypeEii","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN13QCanvasSprite4RTTIE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN13QCanvasSprite4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN13QCanvasSprite4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN13QCanvasSprite4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN13QCanvasSprite4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN13QCanvasSprite4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN13QCanvasSprite4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN13QCanvasSprite4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN13QCanvasSprite4drawER8QPainter","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QCanvasSprite4moveEdd","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QCanvasSprite4moveEddi","",0,LSB_Toolkit_Qt3,0,1},
@@ -3006,7 +3646,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN13QIconViewItem15removeRenameBoxEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QIconViewItem16cancelRenameItemEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QIconViewItem16setRenameEnabledEb","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN13QIconViewItem4RTTIE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN13QIconViewItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN13QIconViewItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN13QIconViewItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN13QIconViewItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN13QIconViewItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN13QIconViewItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN13QIconViewItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN13QIconViewItem4initEPS_P8QPicture","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QIconViewItem4moveERK6QPoint","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QIconViewItem4moveEii","",0,LSB_Toolkit_Qt3,0,1},
@@ -3094,7 +3754,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN13QListViewItem17ignoreDoubleClickEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QListViewItem20setMultiLinesEnabledEb","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QListViewItem26enforceSortOrderBackToRootEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN13QListViewItem4RTTIE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN13QListViewItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN13QListViewItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN13QListViewItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN13QListViewItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN13QListViewItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN13QListViewItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN13QListViewItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN13QListViewItem4initEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QListViewItem4sortEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QListViewItem5setupEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -3328,7 +4008,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN13QWidgetPluginD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QWidgetPluginD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QWidgetPluginD2Ev","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN14QCanvasEllipse4RTTIE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN14QCanvasEllipse4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN14QCanvasEllipse4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN14QCanvasEllipse4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN14QCanvasEllipse4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN14QCanvasEllipse4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN14QCanvasEllipse4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN14QCanvasEllipse4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN14QCanvasEllipse7setSizeEii","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN14QCanvasEllipse9drawShapeER8QPainter","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN14QCanvasEllipse9setAnglesEii","",0,LSB_Toolkit_Qt3,0,1},
@@ -3341,7 +4041,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN14QCanvasEllipseD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN14QCanvasEllipseD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN14QCanvasEllipseD2Ev","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN14QCanvasPolygon4RTTIE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN14QCanvasPolygon4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN14QCanvasPolygon4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN14QCanvasPolygon4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN14QCanvasPolygon4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN14QCanvasPolygon4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN14QCanvasPolygon4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN14QCanvasPolygon4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN14QCanvasPolygon6moveByEdd","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN14QCanvasPolygon9drawShapeER8QPainter","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN14QCanvasPolygon9setPointsE11QPointArray","",0,LSB_Toolkit_Qt3,0,1},
@@ -3360,7 +4080,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN14QCheckListItem15setCurrentStateENS_11ToggleStateE","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN14QCheckListItem16updateControllerEbb","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN14QCheckListItem17updateStoredStateEPv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN14QCheckListItem4RTTIE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN14QCheckListItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN14QCheckListItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN14QCheckListItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN14QCheckListItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN14QCheckListItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN14QCheckListItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN14QCheckListItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN14QCheckListItem4initEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN14QCheckListItem5setOnEb","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN14QCheckListItem5setupEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -3440,7 +4180,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN14QGListIteratorpLEj","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN14QGListIteratorppEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN14QJpUnicodeConv12newConverterEi","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN14QListBoxPixmap4RTTIE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN14QListBoxPixmap4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN14QListBoxPixmap4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN14QListBoxPixmap4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN14QListBoxPixmap4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN14QListBoxPixmap4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN14QListBoxPixmap4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN14QListBoxPixmap4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN14QListBoxPixmap5paintEP8QPainter","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN14QListBoxPixmapC1EP8QListBoxRK7QPixmap","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN14QListBoxPixmapC1EP8QListBoxRK7QPixmapP12QListBoxItem","",0,LSB_Toolkit_Qt3,0,1},
@@ -3517,7 +4277,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN15QCanvasItemList4sortEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QCheckTableItem10setCheckedEb","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QCheckTableItem20setContentFromEditorEP7QWidget","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN15QCheckTableItem4RTTIE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN15QCheckTableItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN15QCheckTableItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN15QCheckTableItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN15QCheckTableItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN15QCheckTableItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN15QCheckTableItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN15QCheckTableItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN15QCheckTableItem5paintEP8QPainterRK11QColorGroupRK5QRectb","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QCheckTableItem7setTextERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QCheckTableItemC1EP6QTableRK7QString","",0,LSB_Toolkit_Qt3,0,1},
@@ -3528,9 +4308,49 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN15QComboTableItem14setCurrentItemEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QComboTableItem15fakeComboWidgetE","",0,LSB_Toolkit_Qt3,0,0},
 	{"_ZN15QComboTableItem20setContentFromEditorEP7QWidget","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN15QComboTableItem4RTTIE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN15QComboTableItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN15QComboTableItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN15QComboTableItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN15QComboTableItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN15QComboTableItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN15QComboTableItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN15QComboTableItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN15QComboTableItem5paintEP8QPainterRK11QColorGroupRK5QRectb","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN15QComboTableItem7fakeRefE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN15QComboTableItem7fakeRefE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN15QComboTableItem7fakeRefE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN15QComboTableItem7fakeRefE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN15QComboTableItem7fakeRefE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN15QComboTableItem7fakeRefE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN15QComboTableItem7fakeRefE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN15QComboTableItem7fakeRefE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN15QComboTableItem9fakeComboE","",0,LSB_Toolkit_Qt3,0,0},
 	{"_ZN15QComboTableItemC1EP6QTableRK11QStringListb","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QComboTableItemC2EP6QTableRK11QStringListb","",0,LSB_Toolkit_Qt3,0,1},
@@ -3783,7 +4603,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN15QXmlInputSourceD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QXmlInputSourceD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QXmlInputSourceD2Ev","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN16QCanvasRectangle4RTTIE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN16QCanvasRectangle4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN16QCanvasRectangle4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN16QCanvasRectangle4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN16QCanvasRectangle4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN16QCanvasRectangle4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN16QCanvasRectangle4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN16QCanvasRectangle4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN16QCanvasRectangle7setSizeEii","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QCanvasRectangle9drawShapeER8QPainter","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QCanvasRectangleC1EP7QCanvas","",0,LSB_Toolkit_Qt3,0,1},
@@ -4293,7 +5133,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN19QPaintDeviceMetricsC2EPK12QPaintDevice","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN20QCanvasPolygonalItem10invalidateEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN20QCanvasPolygonalItem10setWindingEb","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN20QCanvasPolygonalItem4RTTIE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN20QCanvasPolygonalItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN20QCanvasPolygonalItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN20QCanvasPolygonalItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN20QCanvasPolygonalItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN20QCanvasPolygonalItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN20QCanvasPolygonalItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN20QCanvasPolygonalItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN20QCanvasPolygonalItem4drawER8QPainter","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN20QCanvasPolygonalItem6setPenE4QPen","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN20QCanvasPolygonalItem8setBrushE6QBrush","",0,LSB_Toolkit_Qt3,0,1},
@@ -6271,7 +7131,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QWidget12grabKeyboardEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QWidget12hideChildrenEb","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QWidget12imStartEventEP8QIMEvent","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN7QWidget12maxInstancesE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN7QWidget12maxInstancesE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QWidget12maxInstancesE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QWidget12maxInstancesE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QWidget12maxInstancesE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QWidget12maxInstancesE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QWidget12maxInstancesE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QWidget12maxInstancesE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN7QWidget12mouseGrabberEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QWidget12releaseMouseEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QWidget12setFixedSizeERK5QSize","",0,LSB_Toolkit_Qt3,0,1},
@@ -6306,7 +7186,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QWidget14setWindowStateEj","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QWidget14showFullScreenEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QWidget14updateGeometryEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN7QWidget15instanceCounterE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN7QWidget15instanceCounterE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QWidget15instanceCounterE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QWidget15instanceCounterE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QWidget15instanceCounterE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QWidget15instanceCounterE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QWidget15instanceCounterE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QWidget15instanceCounterE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN7QWidget15keyReleaseEventEP9QKeyEvent","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QWidget15keyboardGrabberEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QWidget15mousePressEventEP11QMouseEvent","",0,LSB_Toolkit_Qt3,0,1},
@@ -17779,17 +18679,177 @@ struct versym libqt_mt_so_3[] = {
 	{"qt_preliminary_signal_spy","",0,LSB_Toolkit_Qt3,0,0},
 	{"qt_qheader_label_return_null_strings","",0,LSB_Toolkit_Qt3,0,0},
 	{"qt_resolve_symlinks","",0,LSB_Toolkit_Qt3,0,0},
-	{"qt_sm_client_id","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"qt_sm_client_id","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"qt_sm_client_id","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"qt_sm_client_id","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"qt_sm_client_id","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"qt_sm_client_id","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"qt_sm_client_id","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390x__
+	{"qt_sm_client_id","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"qt_tab_all_widgets","",0,LSB_Toolkit_Qt3,0,0},
 	{"qt_use_native_dialogs","",0,LSB_Toolkit_Qt3,0,0},
 	{"qt_use_xrender","",0,LSB_Toolkit_Qt3,0,0},
-	{"qt_window_role","",0,LSB_Toolkit_Qt3,0,0},
-	{"qt_wm_delete_window","",0,LSB_Toolkit_Qt3,0,0},
-	{"qt_wm_protocols","",0,LSB_Toolkit_Qt3,0,0},
-	{"qt_wm_state","",0,LSB_Toolkit_Qt3,0,0},
-	{"qt_wm_take_focus","",0,LSB_Toolkit_Qt3,0,0},
-	{"qt_x_time","",0,LSB_Toolkit_Qt3,0,0},
-	{"qt_x_user_time","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"qt_window_role","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"qt_window_role","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"qt_window_role","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"qt_window_role","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"qt_window_role","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"qt_window_role","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390x__
+	{"qt_window_role","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"qt_wm_delete_window","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"qt_wm_delete_window","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"qt_wm_delete_window","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"qt_wm_delete_window","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"qt_wm_delete_window","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"qt_wm_delete_window","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390x__
+	{"qt_wm_delete_window","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"qt_wm_protocols","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"qt_wm_protocols","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"qt_wm_protocols","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"qt_wm_protocols","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"qt_wm_protocols","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"qt_wm_protocols","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390x__
+	{"qt_wm_protocols","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"qt_wm_state","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"qt_wm_state","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"qt_wm_state","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"qt_wm_state","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"qt_wm_state","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"qt_wm_state","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390x__
+	{"qt_wm_state","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"qt_wm_take_focus","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"qt_wm_take_focus","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"qt_wm_take_focus","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"qt_wm_take_focus","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"qt_wm_take_focus","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"qt_wm_take_focus","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390x__
+	{"qt_wm_take_focus","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"qt_x_time","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"qt_x_time","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"qt_x_time","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"qt_x_time","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"qt_x_time","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"qt_x_time","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390x__
+	{"qt_x_time","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"qt_x_user_time","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"qt_x_user_time","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"qt_x_user_time","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"qt_x_user_time","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"qt_x_user_time","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"qt_x_user_time","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390x__
+	{"qt_x_user_time","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"static_QUType_Null","",0,LSB_Toolkit_Qt3,0,0},
 	{"static_QUType_QString","",0,LSB_Toolkit_Qt3,0,0},
 	{"static_QUType_QVariant","",0,LSB_Toolkit_Qt3,0,0},

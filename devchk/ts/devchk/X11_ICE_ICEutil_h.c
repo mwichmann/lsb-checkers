@@ -64,18 +64,18 @@ CheckTypeSize(IceAuthDataEntry,20, 100171, 2, 1.2, NULL, 100170, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(IceAuthDataEntry,20, 100171, 6, 1.2, NULL, 100170, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(IceAuthDataEntry,20, 100171, 10, 1.2, NULL, 100170, NULL)
+CheckTypeSize(IceAuthDataEntry,20, 100171, 10, 1.3, NULL, 100170, NULL)
 #elif defined __ia64__
-CheckTypeSize(IceAuthDataEntry,40, 100171, 3, 1.2, NULL, 100170, NULL)
+CheckTypeSize(IceAuthDataEntry,40, 100171, 3, 1.3, NULL, 100170, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(IceAuthDataEntry,40, 100171, 9, 1.2, NULL, 100170, NULL)
+CheckTypeSize(IceAuthDataEntry,40, 100171, 9, 2.0, NULL, 100170, NULL)
 #elif defined __x86_64__
-CheckTypeSize(IceAuthDataEntry,40, 100171, 11, 1.2, NULL, 100170, NULL)
+CheckTypeSize(IceAuthDataEntry,40, 100171, 11, 2.0, NULL, 100170, NULL)
 #elif defined __s390x__
-CheckTypeSize(IceAuthDataEntry,40, 100171, 12, 1.2, NULL, 100170, NULL)
+CheckTypeSize(IceAuthDataEntry,40, 100171, 12, 1.3, NULL, 100170, NULL)
 #else
 Msg("Find size of IceAuthDataEntry (100171)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100170,NULL);\n",architecture,100171,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,100170,NULL);\n",architecture,100171,0);
 #endif
 
 #if defined __i386__
@@ -83,18 +83,18 @@ CheckTypeSize(IceAuthFileEntry,28, 100174, 2, 1.2, NULL, 100173, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(IceAuthFileEntry,28, 100174, 6, 1.2, NULL, 100173, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(IceAuthFileEntry,28, 100174, 10, 1.2, NULL, 100173, NULL)
+CheckTypeSize(IceAuthFileEntry,28, 100174, 10, 1.3, NULL, 100173, NULL)
 #elif defined __ia64__
-CheckTypeSize(IceAuthFileEntry,56, 100174, 3, 1.2, NULL, 100173, NULL)
+CheckTypeSize(IceAuthFileEntry,56, 100174, 3, 1.3, NULL, 100173, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(IceAuthFileEntry,56, 100174, 9, 1.2, NULL, 100173, NULL)
+CheckTypeSize(IceAuthFileEntry,56, 100174, 9, 2.0, NULL, 100173, NULL)
 #elif defined __x86_64__
-CheckTypeSize(IceAuthFileEntry,56, 100174, 11, 1.2, NULL, 100173, NULL)
+CheckTypeSize(IceAuthFileEntry,56, 100174, 11, 2.0, NULL, 100173, NULL)
 #elif defined __s390x__
-CheckTypeSize(IceAuthFileEntry,56, 100174, 12, 1.2, NULL, 100173, NULL)
+CheckTypeSize(IceAuthFileEntry,56, 100174, 12, 1.3, NULL, 100173, NULL)
 #else
 Msg("Find size of IceAuthFileEntry (100174)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100173, NULL);\n",architecture,100174,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,100173, NULL);\n",architecture,100174,0);
 #endif
 
 #ifdef TET_TEST

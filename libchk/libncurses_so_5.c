@@ -1,10 +1,90 @@
 #include <stdlib.h>
 #include "elfchk.h"
 struct versym libncurses_so_5[] = {
-	{"COLORS","",0,LSB_Core,0,0},
-	{"COLOR_PAIRS","",0,LSB_Core,0,0},
-	{"COLS","",0,LSB_Core,0,0},
-	{"LINES","",0,LSB_Core,0,0},
+#if defined __i386__
+	{"COLORS","",0,LSB_Core,4,0},
+#endif
+#if defined __ia64__
+	{"COLORS","",0,LSB_Core,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"COLORS","",0,LSB_Core,4,0},
+#endif
+#if defined __powerpc64__
+	{"COLORS","",0,LSB_Core,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"COLORS","",0,LSB_Core,4,0},
+#endif
+#if defined __x86_64__
+	{"COLORS","",0,LSB_Core,4,0},
+#endif
+#if defined __s390x__
+	{"COLORS","",0,LSB_Core,4,0},
+#endif
+#if defined __i386__
+	{"COLOR_PAIRS","",0,LSB_Core,4,0},
+#endif
+#if defined __ia64__
+	{"COLOR_PAIRS","",0,LSB_Core,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"COLOR_PAIRS","",0,LSB_Core,4,0},
+#endif
+#if defined __powerpc64__
+	{"COLOR_PAIRS","",0,LSB_Core,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"COLOR_PAIRS","",0,LSB_Core,4,0},
+#endif
+#if defined __x86_64__
+	{"COLOR_PAIRS","",0,LSB_Core,4,0},
+#endif
+#if defined __s390x__
+	{"COLOR_PAIRS","",0,LSB_Core,4,0},
+#endif
+#if defined __i386__
+	{"COLS","",0,LSB_Core,4,0},
+#endif
+#if defined __ia64__
+	{"COLS","",0,LSB_Core,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"COLS","",0,LSB_Core,4,0},
+#endif
+#if defined __powerpc64__
+	{"COLS","",0,LSB_Core,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"COLS","",0,LSB_Core,4,0},
+#endif
+#if defined __x86_64__
+	{"COLS","",0,LSB_Core,4,0},
+#endif
+#if defined __s390x__
+	{"COLS","",0,LSB_Core,4,0},
+#endif
+#if defined __i386__
+	{"LINES","",0,LSB_Core,4,0},
+#endif
+#if defined __ia64__
+	{"LINES","",0,LSB_Core,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"LINES","",0,LSB_Core,4,0},
+#endif
+#if defined __powerpc64__
+	{"LINES","",0,LSB_Core,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"LINES","",0,LSB_Core,4,0},
+#endif
+#if defined __x86_64__
+	{"LINES","",0,LSB_Core,4,0},
+#endif
+#if defined __s390x__
+	{"LINES","",0,LSB_Core,4,0},
+#endif
 	{"acs_map","",0,LSB_Core,0,0},
 	{"addch","",0,LSB_Core,0,1},
 	{"addchnstr","",0,LSB_Core,0,1},
@@ -34,9 +114,49 @@ struct versym libncurses_so_5[] = {
 	{"color_content","",0,LSB_Core,0,1},
 	{"color_set","",0,LSB_Core,0,1},
 	{"copywin","",0,LSB_Core,0,1},
-	{"cur_term","",0,LSB_Core,0,0},
+#if defined __i386__
+	{"cur_term","",0,LSB_Core,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"cur_term","",0,LSB_Core,4,0},
+#endif
+#if defined __powerpc64__
+	{"cur_term","",0,LSB_Core,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"cur_term","",0,LSB_Core,4,0},
+#endif
+#if defined __ia64__
+	{"cur_term","",0,LSB_Core,8,0},
+#endif
+#if defined __s390x__
+	{"cur_term","",0,LSB_Core,8,0},
+#endif
+#if defined __x86_64__
+	{"cur_term","",0,LSB_Core,8,0},
+#endif
 	{"curs_set","",0,LSB_Core,0,1},
-	{"curscr","",0,LSB_Core,0,0},
+#if defined __i386__
+	{"curscr","",0,LSB_Core,4,0},
+#endif
+#if defined __ia64__
+	{"curscr","",0,LSB_Core,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"curscr","",0,LSB_Core,4,0},
+#endif
+#if defined __powerpc64__
+	{"curscr","",0,LSB_Core,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"curscr","",0,LSB_Core,4,0},
+#endif
+#if defined __x86_64__
+	{"curscr","",0,LSB_Core,8,0},
+#endif
+#if defined __s390x__
+	{"curscr","",0,LSB_Core,8,0},
+#endif
 	{"def_prog_mode","",0,LSB_Core,0,1},
 	{"def_shell_mode","",0,LSB_Core,0,1},
 	{"del_curterm","",0,LSB_Core,0,1},
@@ -199,7 +319,27 @@ struct versym libncurses_so_5[] = {
 	{"standend","",0,LSB_Core,0,1},
 	{"standout","",0,LSB_Core,0,1},
 	{"start_color","",0,LSB_Core,0,1},
-	{"stdscr","",0,LSB_Core,0,0},
+#if defined __i386__
+	{"stdscr","",0,LSB_Core,4,0},
+#endif
+#if defined __ia64__
+	{"stdscr","",0,LSB_Core,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"stdscr","",0,LSB_Core,4,0},
+#endif
+#if defined __powerpc64__
+	{"stdscr","",0,LSB_Core,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"stdscr","",0,LSB_Core,4,0},
+#endif
+#if defined __x86_64__
+	{"stdscr","",0,LSB_Core,8,0},
+#endif
+#if defined __s390x__
+	{"stdscr","",0,LSB_Core,8,0},
+#endif
 	{"subpad","",0,LSB_Core,0,1},
 	{"subwin","",0,LSB_Core,0,1},
 	{"syncok","",0,LSB_Core,0,1},

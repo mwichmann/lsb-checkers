@@ -38,18 +38,18 @@ CheckTypeSize(XtDoChangeProc,4, 100410, 2, 1.2, NULL, 100409, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XtDoChangeProc,4, 100410, 6, 1.2, NULL, 100409, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtDoChangeProc,4, 100410, 10, 1.2, NULL, 100409, NULL)
+CheckTypeSize(XtDoChangeProc,4, 100410, 10, 1.3, NULL, 100409, NULL)
 #elif defined __s390x__
-CheckTypeSize(XtDoChangeProc,8, 100410, 12, 1.2, NULL, 100409, NULL)
+CheckTypeSize(XtDoChangeProc,8, 100410, 12, 1.3, NULL, 100409, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtDoChangeProc,8, 100410, 11, 1.2, NULL, 100409, NULL)
+CheckTypeSize(XtDoChangeProc,8, 100410, 11, 2.0, NULL, 100409, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtDoChangeProc,8, 100410, 9, 1.2, NULL, 100409, NULL)
+CheckTypeSize(XtDoChangeProc,8, 100410, 9, 2.0, NULL, 100409, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtDoChangeProc,8, 100410, 3, 1.2, NULL, 100409, NULL)
+CheckTypeSize(XtDoChangeProc,8, 100410, 3, 1.3, NULL, 100409, NULL)
 #else
 Msg("Find size of XtDoChangeProc (100410)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100409, NULL);\n",architecture,100410,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,100409, NULL);\n",architecture,100410,0);
 #endif
 
 #ifdef TET_TEST
