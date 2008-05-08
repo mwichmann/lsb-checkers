@@ -45,7 +45,27 @@ struct versym libgdk_x11_2_0_so_0[] = {
 	{"gdk_device_set_mode","",0,LSB_Toolkit_Gtk,0,1},
 	{"gdk_device_set_source","",0,LSB_Toolkit_Gtk,0,1},
 	{"gdk_devices_list","",0,LSB_Toolkit_Gtk,0,1},
-	{"gdk_display","",0,LSB_Toolkit_Gtk,0,0},
+#if defined __i386__
+	{"gdk_display","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __ia64__
+	{"gdk_display","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"gdk_display","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc64__
+	{"gdk_display","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"gdk_display","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __x86_64__
+	{"gdk_display","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __s390x__
+	{"gdk_display","",0,LSB_Toolkit_Gtk,8,0},
+#endif
 	{"gdk_display_add_client_message_filter","",0,LSB_Toolkit_Gtk,0,1},
 	{"gdk_display_beep","",0,LSB_Toolkit_Gtk,0,1},
 	{"gdk_display_close","",0,LSB_Toolkit_Gtk,0,1},
@@ -379,9 +399,49 @@ struct versym libgdk_x11_2_0_so_0[] = {
 	{"gdk_threads_enter","",0,LSB_Toolkit_Gtk,0,1},
 	{"gdk_threads_init","",0,LSB_Toolkit_Gtk,0,1},
 	{"gdk_threads_leave","",0,LSB_Toolkit_Gtk,0,1},
-	{"gdk_threads_lock","",0,LSB_Toolkit_Gtk,0,0},
+#if defined __i386__
+	{"gdk_threads_lock","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __ia64__
+	{"gdk_threads_lock","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"gdk_threads_lock","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc64__
+	{"gdk_threads_lock","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"gdk_threads_lock","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __x86_64__
+	{"gdk_threads_lock","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __s390x__
+	{"gdk_threads_lock","",0,LSB_Toolkit_Gtk,8,0},
+#endif
 	{"gdk_threads_set_lock_functions","",0,LSB_Toolkit_Gtk,0,1},
-	{"gdk_threads_unlock","",0,LSB_Toolkit_Gtk,0,0},
+#if defined __i386__
+	{"gdk_threads_unlock","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __ia64__
+	{"gdk_threads_unlock","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"gdk_threads_unlock","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc64__
+	{"gdk_threads_unlock","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"gdk_threads_unlock","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __x86_64__
+	{"gdk_threads_unlock","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __s390x__
+	{"gdk_threads_unlock","",0,LSB_Toolkit_Gtk,8,0},
+#endif
 	{"gdk_unicode_to_keyval","",0,LSB_Toolkit_Gtk,0,1},
 	{"gdk_utf8_to_compound_text","",0,LSB_Toolkit_Gtk,0,1},
 	{"gdk_utf8_to_compound_text_for_display","",0,LSB_Toolkit_Gtk,0,1},

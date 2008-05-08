@@ -246,6 +246,7 @@ tcnt+=pwd_h();
 tcnt+=regex_h();
 tcnt+=rpc_auth_h();
 tcnt+=rpc_clnt_h();
+tcnt+=rpc_rpc_h();
 tcnt+=rpc_rpc_msg_h();
 tcnt+=rpc_svc_h();
 tcnt+=rpc_types_h();

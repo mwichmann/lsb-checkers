@@ -223,7 +223,7 @@ CheckOffset(struct _XTrapezoid,left,8,2,64006)
 CheckMemberSize(struct _XTrapezoid,right,16,2,64007)
 CheckOffset(struct _XTrapezoid,right,24,2,64007)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _XTrapezoid,40, 12568, 10, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XTrapezoid,40, 12568, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XTrapezoid,bottom,4,10,64005)
 CheckOffset(struct _XTrapezoid,bottom,4,10,64005)
 CheckMemberSize(struct _XTrapezoid,left,16,10,64006)
@@ -231,7 +231,7 @@ CheckOffset(struct _XTrapezoid,left,8,10,64006)
 CheckMemberSize(struct _XTrapezoid,right,16,10,64007)
 CheckOffset(struct _XTrapezoid,right,24,10,64007)
 #elif defined __x86_64__
-CheckTypeSize(struct _XTrapezoid,40, 12568, 11, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XTrapezoid,40, 12568, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XTrapezoid,bottom,4,11,64005)
 CheckOffset(struct _XTrapezoid,bottom,4,11,64005)
 CheckMemberSize(struct _XTrapezoid,left,16,11,64006)
@@ -239,7 +239,7 @@ CheckOffset(struct _XTrapezoid,left,8,11,64006)
 CheckMemberSize(struct _XTrapezoid,right,16,11,64007)
 CheckOffset(struct _XTrapezoid,right,24,11,64007)
 #elif defined __s390x__
-CheckTypeSize(struct _XTrapezoid,40, 12568, 12, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XTrapezoid,40, 12568, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XTrapezoid,bottom,4,12,64005)
 CheckOffset(struct _XTrapezoid,bottom,4,12,64005)
 CheckMemberSize(struct _XTrapezoid,left,16,12,64006)
@@ -255,7 +255,7 @@ CheckOffset(struct _XTrapezoid,left,8,6,64006)
 CheckMemberSize(struct _XTrapezoid,right,16,6,64007)
 CheckOffset(struct _XTrapezoid,right,24,6,64007)
 #elif defined __powerpc64__
-CheckTypeSize(struct _XTrapezoid,40, 12568, 9, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XTrapezoid,40, 12568, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XTrapezoid,bottom,4,9,64005)
 CheckOffset(struct _XTrapezoid,bottom,4,9,64005)
 CheckMemberSize(struct _XTrapezoid,left,16,9,64006)
@@ -263,7 +263,7 @@ CheckOffset(struct _XTrapezoid,left,8,9,64006)
 CheckMemberSize(struct _XTrapezoid,right,16,9,64007)
 CheckOffset(struct _XTrapezoid,right,24,9,64007)
 #elif defined __ia64__
-CheckTypeSize(struct _XTrapezoid,40, 12568, 3, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XTrapezoid,40, 12568, 3, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XTrapezoid,bottom,4,3,64005)
 CheckOffset(struct _XTrapezoid,bottom,4,3,64005)
 CheckMemberSize(struct _XTrapezoid,left,16,3,64006)
@@ -272,26 +272,26 @@ CheckMemberSize(struct _XTrapezoid,right,16,3,64007)
 CheckOffset(struct _XTrapezoid,right,24,3,64007)
 #else
 Msg("Find size of _XTrapezoid (12568)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,12568,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,12568,0);
 #endif
 
 #if defined __i386__
 CheckTypeSize(XTrapezoid,40, 12569, 2, 1.2, NULL, 12568, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XTrapezoid,40, 12569, 11, 1.2, NULL, 12568, NULL)
+CheckTypeSize(XTrapezoid,40, 12569, 11, 2.0, NULL, 12568, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XTrapezoid,40, 12569, 10, 1.2, NULL, 12568, NULL)
+CheckTypeSize(XTrapezoid,40, 12569, 10, 1.3, NULL, 12568, NULL)
 #elif defined __s390x__
-CheckTypeSize(XTrapezoid,40, 12569, 12, 1.2, NULL, 12568, NULL)
+CheckTypeSize(XTrapezoid,40, 12569, 12, 1.3, NULL, 12568, NULL)
 #elif defined __ia64__
-CheckTypeSize(XTrapezoid,40, 12569, 3, 1.2, NULL, 12568, NULL)
+CheckTypeSize(XTrapezoid,40, 12569, 3, 1.3, NULL, 12568, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XTrapezoid,40, 12569, 6, 1.2, NULL, 12568, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XTrapezoid,40, 12569, 9, 1.2, NULL, 12568, NULL)
+CheckTypeSize(XTrapezoid,40, 12569, 9, 2.0, NULL, 12568, NULL)
 #else
 Msg("Find size of XTrapezoid (12569)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,12568,NULL);\n",architecture,12569,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,12568,NULL);\n",architecture,12569,0);
 #endif
 
 #if 1
@@ -299,41 +299,41 @@ CheckTypeSize(XRenderColor,8, 16626, 1, 1.2, NULL, 16625, NULL)
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(Glyph,8, 16633, 11, 1.2, NULL, 11186, NULL)
+CheckTypeSize(Glyph,8, 16633, 11, 2.0, NULL, 11186, NULL)
 #elif defined __i386__
 CheckTypeSize(Glyph,4, 16633, 2, 1.2, NULL, 11186, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(Glyph,4, 16633, 10, 1.2, NULL, 11186, NULL)
+CheckTypeSize(Glyph,4, 16633, 10, 1.3, NULL, 11186, NULL)
 #elif defined __s390x__
-CheckTypeSize(Glyph,8, 16633, 12, 1.2, NULL, 11186, NULL)
+CheckTypeSize(Glyph,8, 16633, 12, 1.3, NULL, 11186, NULL)
 #elif defined __ia64__
-CheckTypeSize(Glyph,8, 16633, 3, 1.2, NULL, 11186, NULL)
+CheckTypeSize(Glyph,8, 16633, 3, 1.3, NULL, 11186, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(Glyph,4, 16633, 6, 1.2, NULL, 11186, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(Glyph,8, 16633, 9, 1.2, NULL, 11186, NULL)
+CheckTypeSize(Glyph,8, 16633, 9, 2.0, NULL, 11186, NULL)
 #else
 Msg("Find size of Glyph (16633)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,16633,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,11186,NULL);\n",architecture,16633,0);
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(PictFormat,8, 16636, 11, 1.2, NULL, 11186, NULL)
+CheckTypeSize(PictFormat,8, 16636, 11, 2.0, NULL, 11186, NULL)
 #elif defined __i386__
 CheckTypeSize(PictFormat,4, 16636, 2, 1.2, NULL, 11186, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(PictFormat,4, 16636, 10, 1.2, NULL, 11186, NULL)
+CheckTypeSize(PictFormat,4, 16636, 10, 1.3, NULL, 11186, NULL)
 #elif defined __s390x__
-CheckTypeSize(PictFormat,8, 16636, 12, 1.2, NULL, 11186, NULL)
+CheckTypeSize(PictFormat,8, 16636, 12, 1.3, NULL, 11186, NULL)
 #elif defined __ia64__
-CheckTypeSize(PictFormat,8, 16636, 3, 1.2, NULL, 11186, NULL)
+CheckTypeSize(PictFormat,8, 16636, 3, 1.3, NULL, 11186, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(PictFormat,4, 16636, 6, 1.2, NULL, 11186, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(PictFormat,8, 16636, 9, 1.2, NULL, 11186, NULL)
+CheckTypeSize(PictFormat,8, 16636, 9, 2.0, NULL, 11186, NULL)
 #else
 Msg("Find size of PictFormat (16636)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,16636,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,11186,NULL);\n",architecture,16636,0);
 #endif
 
 #if 1
@@ -341,22 +341,22 @@ CheckTypeSize(XRenderDirectFormat,16, 16638, 1, 1.2, NULL, 16637, NULL)
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(XRenderPictFormat,40, 16640, 11, 1.2, NULL, 16639, NULL)
+CheckTypeSize(XRenderPictFormat,40, 16640, 11, 2.0, NULL, 16639, NULL)
 #elif defined __i386__
 CheckTypeSize(XRenderPictFormat,32, 16640, 2, 1.2, NULL, 16639, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XRenderPictFormat,32, 16640, 10, 1.2, NULL, 16639, NULL)
+CheckTypeSize(XRenderPictFormat,32, 16640, 10, 1.3, NULL, 16639, NULL)
 #elif defined __s390x__
-CheckTypeSize(XRenderPictFormat,40, 16640, 12, 1.2, NULL, 16639, NULL)
+CheckTypeSize(XRenderPictFormat,40, 16640, 12, 1.3, NULL, 16639, NULL)
 #elif defined __ia64__
-CheckTypeSize(XRenderPictFormat,40, 16640, 3, 1.2, NULL, 16639, NULL)
+CheckTypeSize(XRenderPictFormat,40, 16640, 3, 1.3, NULL, 16639, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XRenderPictFormat,32, 16640, 6, 1.2, NULL, 16639, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XRenderPictFormat,40, 16640, 9, 1.2, NULL, 16639, NULL)
+CheckTypeSize(XRenderPictFormat,40, 16640, 9, 2.0, NULL, 16639, NULL)
 #else
 Msg("Find size of XRenderPictFormat (16640)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16639,NULL);\n",architecture,16640,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,16639,NULL);\n",architecture,16640,0);
 #endif
 
 #if 1
@@ -374,26 +374,26 @@ CheckOffset(struct _XGlyphInfo,yOff,10,1,53876)
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(XGlyphInfo,12, 16649, 11, 1.2, NULL, 16648, NULL)
+CheckTypeSize(XGlyphInfo,12, 16649, 11, 2.0, NULL, 16648, NULL)
 #elif defined __i386__
 CheckTypeSize(XGlyphInfo,12, 16649, 2, 1.2, NULL, 16648, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XGlyphInfo,12, 16649, 10, 1.2, NULL, 16648, NULL)
+CheckTypeSize(XGlyphInfo,12, 16649, 10, 1.3, NULL, 16648, NULL)
 #elif defined __s390x__
-CheckTypeSize(XGlyphInfo,12, 16649, 12, 1.2, NULL, 16648, NULL)
+CheckTypeSize(XGlyphInfo,12, 16649, 12, 1.3, NULL, 16648, NULL)
 #elif defined __ia64__
-CheckTypeSize(XGlyphInfo,12, 16649, 3, 1.2, NULL, 16648, NULL)
+CheckTypeSize(XGlyphInfo,12, 16649, 3, 1.3, NULL, 16648, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XGlyphInfo,12, 16649, 6, 1.2, NULL, 16648, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XGlyphInfo,12, 16649, 9, 1.2, NULL, 16648, NULL)
+CheckTypeSize(XGlyphInfo,12, 16649, 9, 2.0, NULL, 16648, NULL)
 #else
 Msg("Find size of XGlyphInfo (16649)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16648,NULL);\n",architecture,16649,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,16648,NULL);\n",architecture,16649,0);
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(struct _XFilters,32, 16652, 11, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XFilters,32, 16652, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XFilters,filter,8,11,53878)
 CheckOffset(struct _XFilters,filter,8,11,53878)
 CheckMemberSize(struct _XFilters,nalias,4,11,53879)
@@ -401,7 +401,7 @@ CheckOffset(struct _XFilters,nalias,16,11,53879)
 CheckMemberSize(struct _XFilters,alias,8,11,53880)
 CheckOffset(struct _XFilters,alias,24,11,53880)
 #elif defined __s390x__
-CheckTypeSize(struct _XFilters,32, 16652, 12, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XFilters,32, 16652, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XFilters,filter,8,12,53878)
 CheckOffset(struct _XFilters,filter,8,12,53878)
 CheckMemberSize(struct _XFilters,nalias,4,12,53879)
@@ -409,7 +409,7 @@ CheckOffset(struct _XFilters,nalias,16,12,53879)
 CheckMemberSize(struct _XFilters,alias,8,12,53880)
 CheckOffset(struct _XFilters,alias,24,12,53880)
 #elif defined __ia64__
-CheckTypeSize(struct _XFilters,32, 16652, 3, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XFilters,32, 16652, 3, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XFilters,filter,8,3,53878)
 CheckOffset(struct _XFilters,filter,8,3,53878)
 CheckMemberSize(struct _XFilters,nalias,4,3,53879)
@@ -417,7 +417,7 @@ CheckOffset(struct _XFilters,nalias,16,3,53879)
 CheckMemberSize(struct _XFilters,alias,8,3,53880)
 CheckOffset(struct _XFilters,alias,24,3,53880)
 #elif defined __powerpc64__
-CheckTypeSize(struct _XFilters,32, 16652, 9, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XFilters,32, 16652, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XFilters,filter,8,9,53878)
 CheckOffset(struct _XFilters,filter,8,9,53878)
 CheckMemberSize(struct _XFilters,nalias,4,9,53879)
@@ -433,7 +433,7 @@ CheckOffset(struct _XFilters,nalias,8,6,53879)
 CheckMemberSize(struct _XFilters,alias,4,6,53880)
 CheckOffset(struct _XFilters,alias,12,6,53880)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _XFilters,16, 16652, 10, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XFilters,16, 16652, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XFilters,filter,4,10,53878)
 CheckOffset(struct _XFilters,filter,4,10,53878)
 CheckMemberSize(struct _XFilters,nalias,4,10,53879)
@@ -454,22 +454,22 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architect
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(XFilters,32, 16653, 11, 1.2, NULL, 16652, NULL)
+CheckTypeSize(XFilters,32, 16653, 11, 2.0, NULL, 16652, NULL)
 #elif defined __i386__
 CheckTypeSize(XFilters,16, 16653, 2, 1.2, NULL, 16652, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XFilters,16, 16653, 10, 1.2, NULL, 16652, NULL)
+CheckTypeSize(XFilters,16, 16653, 10, 1.3, NULL, 16652, NULL)
 #elif defined __s390x__
-CheckTypeSize(XFilters,32, 16653, 12, 1.2, NULL, 16652, NULL)
+CheckTypeSize(XFilters,32, 16653, 12, 1.3, NULL, 16652, NULL)
 #elif defined __ia64__
-CheckTypeSize(XFilters,32, 16653, 3, 1.2, NULL, 16652, NULL)
+CheckTypeSize(XFilters,32, 16653, 3, 1.3, NULL, 16652, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XFilters,16, 16653, 6, 1.2, NULL, 16652, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XFilters,32, 16653, 9, 1.2, NULL, 16652, NULL)
+CheckTypeSize(XFilters,32, 16653, 9, 2.0, NULL, 16652, NULL)
 #else
 Msg("Find size of XFilters (16653)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16652,NULL);\n",architecture,16653,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,16652,NULL);\n",architecture,16653,0);
 #endif
 
 #if 1
@@ -483,19 +483,19 @@ CheckTypeSize(XTransform,36, 16658, 1, 1.2, NULL, 16656, NULL)
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(struct _XAnimCursor,16, 16660, 11, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XAnimCursor,16, 16660, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XAnimCursor,delay,8,11,53883)
 CheckOffset(struct _XAnimCursor,delay,8,11,53883)
 #elif defined __s390x__
-CheckTypeSize(struct _XAnimCursor,16, 16660, 12, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XAnimCursor,16, 16660, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XAnimCursor,delay,8,12,53883)
 CheckOffset(struct _XAnimCursor,delay,8,12,53883)
 #elif defined __ia64__
-CheckTypeSize(struct _XAnimCursor,16, 16660, 3, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XAnimCursor,16, 16660, 3, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XAnimCursor,delay,8,3,53883)
 CheckOffset(struct _XAnimCursor,delay,8,3,53883)
 #elif defined __powerpc64__
-CheckTypeSize(struct _XAnimCursor,16, 16660, 9, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XAnimCursor,16, 16660, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XAnimCursor,delay,8,9,53883)
 CheckOffset(struct _XAnimCursor,delay,8,9,53883)
 #elif defined __powerpc__ && !defined __powerpc64__
@@ -503,7 +503,7 @@ CheckTypeSize(struct _XAnimCursor,8, 16660, 6, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct _XAnimCursor,delay,4,6,53883)
 CheckOffset(struct _XAnimCursor,delay,4,6,53883)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _XAnimCursor,8, 16660, 10, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XAnimCursor,8, 16660, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XAnimCursor,delay,4,10,53883)
 CheckOffset(struct _XAnimCursor,delay,4,10,53883)
 #elif defined __i386__
@@ -516,22 +516,22 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architect
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(XAnimCursor,16, 16661, 11, 1.2, NULL, 16660, NULL)
+CheckTypeSize(XAnimCursor,16, 16661, 11, 2.0, NULL, 16660, NULL)
 #elif defined __i386__
 CheckTypeSize(XAnimCursor,8, 16661, 2, 1.2, NULL, 16660, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XAnimCursor,8, 16661, 10, 1.2, NULL, 16660, NULL)
+CheckTypeSize(XAnimCursor,8, 16661, 10, 1.3, NULL, 16660, NULL)
 #elif defined __s390x__
-CheckTypeSize(XAnimCursor,16, 16661, 12, 1.2, NULL, 16660, NULL)
+CheckTypeSize(XAnimCursor,16, 16661, 12, 1.3, NULL, 16660, NULL)
 #elif defined __ia64__
-CheckTypeSize(XAnimCursor,16, 16661, 3, 1.2, NULL, 16660, NULL)
+CheckTypeSize(XAnimCursor,16, 16661, 3, 1.3, NULL, 16660, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XAnimCursor,8, 16661, 6, 1.2, NULL, 16660, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XAnimCursor,16, 16661, 9, 1.2, NULL, 16660, NULL)
+CheckTypeSize(XAnimCursor,16, 16661, 9, 2.0, NULL, 16660, NULL)
 #else
 Msg("Find size of XAnimCursor (16661)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16660,NULL);\n",architecture,16661,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,16660,NULL);\n",architecture,16661,0);
 #endif
 
 #if 1
@@ -545,7 +545,7 @@ CheckTypeSize(XRadialGradient,24, 16666, 1, 1.2, NULL, 16663, NULL)
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(struct _XGlyphElt32,32, 16671, 11, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XGlyphElt32,32, 16671, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XGlyphElt32,chars,8,11,53890)
 CheckOffset(struct _XGlyphElt32,chars,8,11,53890)
 CheckMemberSize(struct _XGlyphElt32,nchars,4,11,53891)
@@ -555,7 +555,7 @@ CheckOffset(struct _XGlyphElt32,xOff,20,11,53892)
 CheckMemberSize(struct _XGlyphElt32,yOff,4,11,53893)
 CheckOffset(struct _XGlyphElt32,yOff,24,11,53893)
 #elif defined __s390x__
-CheckTypeSize(struct _XGlyphElt32,32, 16671, 12, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XGlyphElt32,32, 16671, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XGlyphElt32,chars,8,12,53890)
 CheckOffset(struct _XGlyphElt32,chars,8,12,53890)
 CheckMemberSize(struct _XGlyphElt32,nchars,4,12,53891)
@@ -565,7 +565,7 @@ CheckOffset(struct _XGlyphElt32,xOff,20,12,53892)
 CheckMemberSize(struct _XGlyphElt32,yOff,4,12,53893)
 CheckOffset(struct _XGlyphElt32,yOff,24,12,53893)
 #elif defined __ia64__
-CheckTypeSize(struct _XGlyphElt32,32, 16671, 3, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XGlyphElt32,32, 16671, 3, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XGlyphElt32,chars,8,3,53890)
 CheckOffset(struct _XGlyphElt32,chars,8,3,53890)
 CheckMemberSize(struct _XGlyphElt32,nchars,4,3,53891)
@@ -575,7 +575,7 @@ CheckOffset(struct _XGlyphElt32,xOff,20,3,53892)
 CheckMemberSize(struct _XGlyphElt32,yOff,4,3,53893)
 CheckOffset(struct _XGlyphElt32,yOff,24,3,53893)
 #elif defined __powerpc64__
-CheckTypeSize(struct _XGlyphElt32,32, 16671, 9, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XGlyphElt32,32, 16671, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XGlyphElt32,chars,8,9,53890)
 CheckOffset(struct _XGlyphElt32,chars,8,9,53890)
 CheckMemberSize(struct _XGlyphElt32,nchars,4,9,53891)
@@ -595,7 +595,7 @@ CheckOffset(struct _XGlyphElt32,xOff,12,6,53892)
 CheckMemberSize(struct _XGlyphElt32,yOff,4,6,53893)
 CheckOffset(struct _XGlyphElt32,yOff,16,6,53893)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _XGlyphElt32,20, 16671, 10, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XGlyphElt32,20, 16671, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XGlyphElt32,chars,4,10,53890)
 CheckOffset(struct _XGlyphElt32,chars,4,10,53890)
 CheckMemberSize(struct _XGlyphElt32,nchars,4,10,53891)
@@ -620,26 +620,26 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architect
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(XGlyphElt32,32, 16672, 11, 1.2, NULL, 16671, NULL)
+CheckTypeSize(XGlyphElt32,32, 16672, 11, 2.0, NULL, 16671, NULL)
 #elif defined __i386__
 CheckTypeSize(XGlyphElt32,20, 16672, 2, 1.2, NULL, 16671, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XGlyphElt32,20, 16672, 10, 1.2, NULL, 16671, NULL)
+CheckTypeSize(XGlyphElt32,20, 16672, 10, 1.3, NULL, 16671, NULL)
 #elif defined __s390x__
-CheckTypeSize(XGlyphElt32,32, 16672, 12, 1.2, NULL, 16671, NULL)
+CheckTypeSize(XGlyphElt32,32, 16672, 12, 1.3, NULL, 16671, NULL)
 #elif defined __ia64__
-CheckTypeSize(XGlyphElt32,32, 16672, 3, 1.2, NULL, 16671, NULL)
+CheckTypeSize(XGlyphElt32,32, 16672, 3, 1.3, NULL, 16671, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XGlyphElt32,20, 16672, 6, 1.2, NULL, 16671, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XGlyphElt32,32, 16672, 9, 1.2, NULL, 16671, NULL)
+CheckTypeSize(XGlyphElt32,32, 16672, 9, 2.0, NULL, 16671, NULL)
 #else
 Msg("Find size of XGlyphElt32 (16672)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16671,NULL);\n",architecture,16672,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,16671,NULL);\n",architecture,16672,0);
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(struct _XGlyphElt8,32, 16675, 11, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XGlyphElt8,32, 16675, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XGlyphElt8,chars,8,11,53895)
 CheckOffset(struct _XGlyphElt8,chars,8,11,53895)
 CheckMemberSize(struct _XGlyphElt8,nchars,4,11,53896)
@@ -649,7 +649,7 @@ CheckOffset(struct _XGlyphElt8,xOff,20,11,53897)
 CheckMemberSize(struct _XGlyphElt8,yOff,4,11,53898)
 CheckOffset(struct _XGlyphElt8,yOff,24,11,53898)
 #elif defined __s390x__
-CheckTypeSize(struct _XGlyphElt8,32, 16675, 12, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XGlyphElt8,32, 16675, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XGlyphElt8,chars,8,12,53895)
 CheckOffset(struct _XGlyphElt8,chars,8,12,53895)
 CheckMemberSize(struct _XGlyphElt8,nchars,4,12,53896)
@@ -659,7 +659,7 @@ CheckOffset(struct _XGlyphElt8,xOff,20,12,53897)
 CheckMemberSize(struct _XGlyphElt8,yOff,4,12,53898)
 CheckOffset(struct _XGlyphElt8,yOff,24,12,53898)
 #elif defined __ia64__
-CheckTypeSize(struct _XGlyphElt8,32, 16675, 3, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XGlyphElt8,32, 16675, 3, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XGlyphElt8,chars,8,3,53895)
 CheckOffset(struct _XGlyphElt8,chars,8,3,53895)
 CheckMemberSize(struct _XGlyphElt8,nchars,4,3,53896)
@@ -669,7 +669,7 @@ CheckOffset(struct _XGlyphElt8,xOff,20,3,53897)
 CheckMemberSize(struct _XGlyphElt8,yOff,4,3,53898)
 CheckOffset(struct _XGlyphElt8,yOff,24,3,53898)
 #elif defined __powerpc64__
-CheckTypeSize(struct _XGlyphElt8,32, 16675, 9, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XGlyphElt8,32, 16675, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XGlyphElt8,chars,8,9,53895)
 CheckOffset(struct _XGlyphElt8,chars,8,9,53895)
 CheckMemberSize(struct _XGlyphElt8,nchars,4,9,53896)
@@ -689,7 +689,7 @@ CheckOffset(struct _XGlyphElt8,xOff,12,6,53897)
 CheckMemberSize(struct _XGlyphElt8,yOff,4,6,53898)
 CheckOffset(struct _XGlyphElt8,yOff,16,6,53898)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _XGlyphElt8,20, 16675, 10, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XGlyphElt8,20, 16675, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XGlyphElt8,chars,4,10,53895)
 CheckOffset(struct _XGlyphElt8,chars,4,10,53895)
 CheckMemberSize(struct _XGlyphElt8,nchars,4,10,53896)
@@ -714,22 +714,22 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architect
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(XGlyphElt8,32, 16676, 11, 1.2, NULL, 16675, NULL)
+CheckTypeSize(XGlyphElt8,32, 16676, 11, 2.0, NULL, 16675, NULL)
 #elif defined __i386__
 CheckTypeSize(XGlyphElt8,20, 16676, 2, 1.2, NULL, 16675, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XGlyphElt8,20, 16676, 10, 1.2, NULL, 16675, NULL)
+CheckTypeSize(XGlyphElt8,20, 16676, 10, 1.3, NULL, 16675, NULL)
 #elif defined __s390x__
-CheckTypeSize(XGlyphElt8,32, 16676, 12, 1.2, NULL, 16675, NULL)
+CheckTypeSize(XGlyphElt8,32, 16676, 12, 1.3, NULL, 16675, NULL)
 #elif defined __ia64__
-CheckTypeSize(XGlyphElt8,32, 16676, 3, 1.2, NULL, 16675, NULL)
+CheckTypeSize(XGlyphElt8,32, 16676, 3, 1.3, NULL, 16675, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XGlyphElt8,20, 16676, 6, 1.2, NULL, 16675, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XGlyphElt8,32, 16676, 9, 1.2, NULL, 16675, NULL)
+CheckTypeSize(XGlyphElt8,32, 16676, 9, 2.0, NULL, 16675, NULL)
 #else
 Msg("Find size of XGlyphElt8 (16676)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16675,NULL);\n",architecture,16676,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,16675,NULL);\n",architecture,16676,0);
 #endif
 
 #if 1
@@ -763,7 +763,7 @@ CheckTypeSize(XPointDouble,16, 16691, 1, 1.2, NULL, 16689, NULL)
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(struct _XRenderPictureAttributes,72, 16697, 11, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XRenderPictureAttributes,72, 16697, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XRenderPictureAttributes,alpha_map,8,11,53906)
 CheckOffset(struct _XRenderPictureAttributes,alpha_map,8,11,53906)
 CheckMemberSize(struct _XRenderPictureAttributes,alpha_x_origin,4,11,53907)
@@ -789,7 +789,7 @@ CheckOffset(struct _XRenderPictureAttributes,dither,56,11,53916)
 CheckMemberSize(struct _XRenderPictureAttributes,component_alpha,4,11,53917)
 CheckOffset(struct _XRenderPictureAttributes,component_alpha,64,11,53917)
 #elif defined __s390x__
-CheckTypeSize(struct _XRenderPictureAttributes,72, 16697, 12, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XRenderPictureAttributes,72, 16697, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XRenderPictureAttributes,alpha_map,8,12,53906)
 CheckOffset(struct _XRenderPictureAttributes,alpha_map,8,12,53906)
 CheckMemberSize(struct _XRenderPictureAttributes,alpha_x_origin,4,12,53907)
@@ -815,7 +815,7 @@ CheckOffset(struct _XRenderPictureAttributes,dither,56,12,53916)
 CheckMemberSize(struct _XRenderPictureAttributes,component_alpha,4,12,53917)
 CheckOffset(struct _XRenderPictureAttributes,component_alpha,64,12,53917)
 #elif defined __ia64__
-CheckTypeSize(struct _XRenderPictureAttributes,72, 16697, 3, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XRenderPictureAttributes,72, 16697, 3, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XRenderPictureAttributes,alpha_map,8,3,53906)
 CheckOffset(struct _XRenderPictureAttributes,alpha_map,8,3,53906)
 CheckMemberSize(struct _XRenderPictureAttributes,alpha_x_origin,4,3,53907)
@@ -841,7 +841,7 @@ CheckOffset(struct _XRenderPictureAttributes,dither,56,3,53916)
 CheckMemberSize(struct _XRenderPictureAttributes,component_alpha,4,3,53917)
 CheckOffset(struct _XRenderPictureAttributes,component_alpha,64,3,53917)
 #elif defined __powerpc64__
-CheckTypeSize(struct _XRenderPictureAttributes,72, 16697, 9, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XRenderPictureAttributes,72, 16697, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XRenderPictureAttributes,alpha_map,8,9,53906)
 CheckOffset(struct _XRenderPictureAttributes,alpha_map,8,9,53906)
 CheckMemberSize(struct _XRenderPictureAttributes,alpha_x_origin,4,9,53907)
@@ -893,7 +893,7 @@ CheckOffset(struct _XRenderPictureAttributes,dither,44,6,53916)
 CheckMemberSize(struct _XRenderPictureAttributes,component_alpha,4,6,53917)
 CheckOffset(struct _XRenderPictureAttributes,component_alpha,48,6,53917)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _XRenderPictureAttributes,52, 16697, 10, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XRenderPictureAttributes,52, 16697, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XRenderPictureAttributes,alpha_map,4,10,53906)
 CheckOffset(struct _XRenderPictureAttributes,alpha_map,4,10,53906)
 CheckMemberSize(struct _XRenderPictureAttributes,alpha_x_origin,4,10,53907)
@@ -952,20 +952,20 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architect
 #if defined __i386__
 CheckTypeSize(XRenderPictureAttributes,52, 16698, 2, 1.2, NULL, 16697, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XRenderPictureAttributes,72, 16698, 11, 1.2, NULL, 16697, NULL)
+CheckTypeSize(XRenderPictureAttributes,72, 16698, 11, 2.0, NULL, 16697, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XRenderPictureAttributes,52, 16698, 10, 1.2, NULL, 16697, NULL)
+CheckTypeSize(XRenderPictureAttributes,52, 16698, 10, 1.3, NULL, 16697, NULL)
 #elif defined __s390x__
-CheckTypeSize(XRenderPictureAttributes,72, 16698, 12, 1.2, NULL, 16697, NULL)
+CheckTypeSize(XRenderPictureAttributes,72, 16698, 12, 1.3, NULL, 16697, NULL)
 #elif defined __ia64__
-CheckTypeSize(XRenderPictureAttributes,72, 16698, 3, 1.2, NULL, 16697, NULL)
+CheckTypeSize(XRenderPictureAttributes,72, 16698, 3, 1.3, NULL, 16697, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XRenderPictureAttributes,52, 16698, 6, 1.2, NULL, 16697, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XRenderPictureAttributes,72, 16698, 9, 1.2, NULL, 16697, NULL)
+CheckTypeSize(XRenderPictureAttributes,72, 16698, 9, 2.0, NULL, 16697, NULL)
 #else
 Msg("Find size of XRenderPictureAttributes (16698)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16697,NULL);\n",architecture,16698,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,16697,NULL);\n",architecture,16698,0);
 #endif
 
 #if 1
@@ -979,7 +979,7 @@ CheckTypeSize(XTrap,24, 16704, 1, 1.2, NULL, 16701, NULL)
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(struct _XIndexValue,16, 16707, 11, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XIndexValue,16, 16707, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XIndexValue,red,2,11,53924)
 CheckOffset(struct _XIndexValue,red,8,11,53924)
 CheckMemberSize(struct _XIndexValue,green,2,11,53925)
@@ -989,7 +989,7 @@ CheckOffset(struct _XIndexValue,blue,12,11,53926)
 CheckMemberSize(struct _XIndexValue,alpha,2,11,53927)
 CheckOffset(struct _XIndexValue,alpha,14,11,53927)
 #elif defined __s390x__
-CheckTypeSize(struct _XIndexValue,16, 16707, 12, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XIndexValue,16, 16707, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XIndexValue,red,2,12,53924)
 CheckOffset(struct _XIndexValue,red,8,12,53924)
 CheckMemberSize(struct _XIndexValue,green,2,12,53925)
@@ -999,7 +999,7 @@ CheckOffset(struct _XIndexValue,blue,12,12,53926)
 CheckMemberSize(struct _XIndexValue,alpha,2,12,53927)
 CheckOffset(struct _XIndexValue,alpha,14,12,53927)
 #elif defined __ia64__
-CheckTypeSize(struct _XIndexValue,16, 16707, 3, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XIndexValue,16, 16707, 3, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XIndexValue,red,2,3,53924)
 CheckOffset(struct _XIndexValue,red,8,3,53924)
 CheckMemberSize(struct _XIndexValue,green,2,3,53925)
@@ -1009,7 +1009,7 @@ CheckOffset(struct _XIndexValue,blue,12,3,53926)
 CheckMemberSize(struct _XIndexValue,alpha,2,3,53927)
 CheckOffset(struct _XIndexValue,alpha,14,3,53927)
 #elif defined __powerpc64__
-CheckTypeSize(struct _XIndexValue,16, 16707, 9, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XIndexValue,16, 16707, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XIndexValue,red,2,9,53924)
 CheckOffset(struct _XIndexValue,red,8,9,53924)
 CheckMemberSize(struct _XIndexValue,green,2,9,53925)
@@ -1029,7 +1029,7 @@ CheckOffset(struct _XIndexValue,blue,8,6,53926)
 CheckMemberSize(struct _XIndexValue,alpha,2,6,53927)
 CheckOffset(struct _XIndexValue,alpha,10,6,53927)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _XIndexValue,12, 16707, 10, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XIndexValue,12, 16707, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XIndexValue,red,2,10,53924)
 CheckOffset(struct _XIndexValue,red,4,10,53924)
 CheckMemberSize(struct _XIndexValue,green,2,10,53925)
@@ -1054,26 +1054,26 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architect
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(XIndexValue,16, 16708, 11, 1.2, NULL, 16707, NULL)
+CheckTypeSize(XIndexValue,16, 16708, 11, 2.0, NULL, 16707, NULL)
 #elif defined __i386__
 CheckTypeSize(XIndexValue,12, 16708, 2, 1.2, NULL, 16707, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XIndexValue,12, 16708, 10, 1.2, NULL, 16707, NULL)
+CheckTypeSize(XIndexValue,12, 16708, 10, 1.3, NULL, 16707, NULL)
 #elif defined __s390x__
-CheckTypeSize(XIndexValue,16, 16708, 12, 1.2, NULL, 16707, NULL)
+CheckTypeSize(XIndexValue,16, 16708, 12, 1.3, NULL, 16707, NULL)
 #elif defined __ia64__
-CheckTypeSize(XIndexValue,16, 16708, 3, 1.2, NULL, 16707, NULL)
+CheckTypeSize(XIndexValue,16, 16708, 3, 1.3, NULL, 16707, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XIndexValue,12, 16708, 6, 1.2, NULL, 16707, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XIndexValue,16, 16708, 9, 1.2, NULL, 16707, NULL)
+CheckTypeSize(XIndexValue,16, 16708, 9, 2.0, NULL, 16707, NULL)
 #else
 Msg("Find size of XIndexValue (16708)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16707,NULL);\n",architecture,16708,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,16707,NULL);\n",architecture,16708,0);
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(struct _XGlyphElt16,32, 16710, 11, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XGlyphElt16,32, 16710, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XGlyphElt16,chars,8,11,53929)
 CheckOffset(struct _XGlyphElt16,chars,8,11,53929)
 CheckMemberSize(struct _XGlyphElt16,nchars,4,11,53930)
@@ -1083,7 +1083,7 @@ CheckOffset(struct _XGlyphElt16,xOff,20,11,53931)
 CheckMemberSize(struct _XGlyphElt16,yOff,4,11,53932)
 CheckOffset(struct _XGlyphElt16,yOff,24,11,53932)
 #elif defined __s390x__
-CheckTypeSize(struct _XGlyphElt16,32, 16710, 12, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XGlyphElt16,32, 16710, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XGlyphElt16,chars,8,12,53929)
 CheckOffset(struct _XGlyphElt16,chars,8,12,53929)
 CheckMemberSize(struct _XGlyphElt16,nchars,4,12,53930)
@@ -1093,7 +1093,7 @@ CheckOffset(struct _XGlyphElt16,xOff,20,12,53931)
 CheckMemberSize(struct _XGlyphElt16,yOff,4,12,53932)
 CheckOffset(struct _XGlyphElt16,yOff,24,12,53932)
 #elif defined __ia64__
-CheckTypeSize(struct _XGlyphElt16,32, 16710, 3, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XGlyphElt16,32, 16710, 3, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XGlyphElt16,chars,8,3,53929)
 CheckOffset(struct _XGlyphElt16,chars,8,3,53929)
 CheckMemberSize(struct _XGlyphElt16,nchars,4,3,53930)
@@ -1103,7 +1103,7 @@ CheckOffset(struct _XGlyphElt16,xOff,20,3,53931)
 CheckMemberSize(struct _XGlyphElt16,yOff,4,3,53932)
 CheckOffset(struct _XGlyphElt16,yOff,24,3,53932)
 #elif defined __powerpc64__
-CheckTypeSize(struct _XGlyphElt16,32, 16710, 9, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XGlyphElt16,32, 16710, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XGlyphElt16,chars,8,9,53929)
 CheckOffset(struct _XGlyphElt16,chars,8,9,53929)
 CheckMemberSize(struct _XGlyphElt16,nchars,4,9,53930)
@@ -1123,7 +1123,7 @@ CheckOffset(struct _XGlyphElt16,xOff,12,6,53931)
 CheckMemberSize(struct _XGlyphElt16,yOff,4,6,53932)
 CheckOffset(struct _XGlyphElt16,yOff,16,6,53932)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _XGlyphElt16,20, 16710, 10, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XGlyphElt16,20, 16710, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XGlyphElt16,chars,4,10,53929)
 CheckOffset(struct _XGlyphElt16,chars,4,10,53929)
 CheckMemberSize(struct _XGlyphElt16,nchars,4,10,53930)
@@ -1150,20 +1150,20 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architect
 #if defined __i386__
 CheckTypeSize(XGlyphElt16,20, 16713, 2, 1.2, NULL, 16710, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XGlyphElt16,32, 16713, 11, 1.2, NULL, 16710, NULL)
+CheckTypeSize(XGlyphElt16,32, 16713, 11, 2.0, NULL, 16710, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XGlyphElt16,20, 16713, 10, 1.2, NULL, 16710, NULL)
+CheckTypeSize(XGlyphElt16,20, 16713, 10, 1.3, NULL, 16710, NULL)
 #elif defined __s390x__
-CheckTypeSize(XGlyphElt16,32, 16713, 12, 1.2, NULL, 16710, NULL)
+CheckTypeSize(XGlyphElt16,32, 16713, 12, 1.3, NULL, 16710, NULL)
 #elif defined __ia64__
-CheckTypeSize(XGlyphElt16,32, 16713, 3, 1.2, NULL, 16710, NULL)
+CheckTypeSize(XGlyphElt16,32, 16713, 3, 1.3, NULL, 16710, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XGlyphElt16,20, 16713, 6, 1.2, NULL, 16710, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XGlyphElt16,32, 16713, 9, 1.2, NULL, 16710, NULL)
+CheckTypeSize(XGlyphElt16,32, 16713, 9, 2.0, NULL, 16710, NULL)
 #else
 Msg("Find size of XGlyphElt16 (16713)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16710,NULL);\n",architecture,16713,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,16710,NULL);\n",architecture,16713,0);
 #endif
 
 #if 1
@@ -1177,22 +1177,22 @@ CheckTypeSize(XTriangle,24, 16717, 1, 1.2, NULL, 16716, NULL)
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(GlyphSet,8, 16624, 11, 1.2, NULL, 11186, NULL)
+CheckTypeSize(GlyphSet,8, 16624, 11, 2.0, NULL, 11186, NULL)
 #elif defined __i386__
 CheckTypeSize(GlyphSet,4, 16624, 2, 1.2, NULL, 11186, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GlyphSet,4, 16624, 10, 1.2, NULL, 11186, NULL)
+CheckTypeSize(GlyphSet,4, 16624, 10, 1.3, NULL, 11186, NULL)
 #elif defined __s390x__
-CheckTypeSize(GlyphSet,8, 16624, 12, 1.2, NULL, 11186, NULL)
+CheckTypeSize(GlyphSet,8, 16624, 12, 1.3, NULL, 11186, NULL)
 #elif defined __ia64__
-CheckTypeSize(GlyphSet,8, 16624, 3, 1.2, NULL, 11186, NULL)
+CheckTypeSize(GlyphSet,8, 16624, 3, 1.3, NULL, 11186, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GlyphSet,4, 16624, 6, 1.2, NULL, 11186, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(GlyphSet,8, 16624, 9, 1.2, NULL, 11186, NULL)
+CheckTypeSize(GlyphSet,8, 16624, 9, 2.0, NULL, 11186, NULL)
 #else
 Msg("Find size of GlyphSet (16624)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,16624,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,11186,NULL);\n",architecture,16624,0);
 #endif
 
 #if 1

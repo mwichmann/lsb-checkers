@@ -33,51 +33,51 @@ printf("Checking data structures in X11/extensions/Xdbe.h\n");
 #if defined __i386__
 CheckTypeSize(XdbeBackBuffer,4, 9394, 2, 1.2, NULL, 8727, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XdbeBackBuffer,4, 9394, 10, 1.2, NULL, 8727, NULL)
+CheckTypeSize(XdbeBackBuffer,4, 9394, 10, 1.3, NULL, 8727, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XdbeBackBuffer,8, 9394, 11, 1.2, NULL, 8727, NULL)
+CheckTypeSize(XdbeBackBuffer,8, 9394, 11, 2.0, NULL, 8727, NULL)
 #elif defined __s390x__
-CheckTypeSize(XdbeBackBuffer,8, 9394, 12, 1.2, NULL, 8727, NULL)
+CheckTypeSize(XdbeBackBuffer,8, 9394, 12, 1.3, NULL, 8727, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XdbeBackBuffer,4, 9394, 6, 1.2, NULL, 8727, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XdbeBackBuffer,8, 9394, 9, 1.2, NULL, 8727, NULL)
+CheckTypeSize(XdbeBackBuffer,8, 9394, 9, 2.0, NULL, 8727, NULL)
 #elif defined __ia64__
-CheckTypeSize(XdbeBackBuffer,8, 9394, 3, 1.2, NULL, 8727, NULL)
+CheckTypeSize(XdbeBackBuffer,8, 9394, 3, 1.3, NULL, 8727, NULL)
 #else
 Msg("Find size of XdbeBackBuffer (9394)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8727,NULL);\n",architecture,9394,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,8727,NULL);\n",architecture,9394,0);
 #endif
 
 #if defined __i386__
 CheckTypeSize(XdbeSwapAction,1, 9395, 2, 1.2, NULL, 3, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XdbeSwapAction,1, 9395, 10, 1.2, NULL, 3, NULL)
+CheckTypeSize(XdbeSwapAction,1, 9395, 10, 1.3, NULL, 3, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XdbeSwapAction,1, 9395, 11, 1.2, NULL, 3, NULL)
+CheckTypeSize(XdbeSwapAction,1, 9395, 11, 2.0, NULL, 3, NULL)
 #elif defined __s390x__
-CheckTypeSize(XdbeSwapAction,1, 9395, 12, 1.2, NULL, 3, NULL)
+CheckTypeSize(XdbeSwapAction,1, 9395, 12, 1.3, NULL, 3, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XdbeSwapAction,1, 9395, 6, 1.2, NULL, 3, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XdbeSwapAction,1, 9395, 9, 1.2, NULL, 3, NULL)
+CheckTypeSize(XdbeSwapAction,1, 9395, 9, 2.0, NULL, 3, NULL)
 #elif defined __ia64__
-CheckTypeSize(XdbeSwapAction,1, 9395, 3, 1.2, NULL, 3, NULL)
+CheckTypeSize(XdbeSwapAction,1, 9395, 3, 1.3, NULL, 3, NULL)
 #else
 Msg("Find size of XdbeSwapAction (9395)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,3,NULL);\n",architecture,9395,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,3,NULL);\n",architecture,9395,0);
 #endif
 
 #if defined __x86_64__
-CheckTypeSize(XdbeSwapInfo,16, 9397, 11, 1.2, NULL, 9396, NULL)
+CheckTypeSize(XdbeSwapInfo,16, 9397, 11, 2.0, NULL, 9396, NULL)
 #elif defined __s390x__
-CheckTypeSize(XdbeSwapInfo,16, 9397, 12, 1.2, NULL, 9396, NULL)
+CheckTypeSize(XdbeSwapInfo,16, 9397, 12, 1.3, NULL, 9396, NULL)
 #elif defined __ia64__
-CheckTypeSize(XdbeSwapInfo,16, 9397, 3, 1.2, NULL, 9396, NULL)
+CheckTypeSize(XdbeSwapInfo,16, 9397, 3, 1.3, NULL, 9396, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XdbeSwapInfo,16, 9397, 9, 1.2, NULL, 9396, NULL)
+CheckTypeSize(XdbeSwapInfo,16, 9397, 9, 2.0, NULL, 9396, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XdbeSwapInfo,8, 9397, 10, 1.2, NULL, 9396, NULL)
+CheckTypeSize(XdbeSwapInfo,8, 9397, 10, 1.3, NULL, 9396, NULL)
 #elif defined __i386__
 CheckTypeSize(XdbeSwapInfo,8, 9397, 2, 1.2, NULL, 9396, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
@@ -88,41 +88,41 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9396,NULL);\n",archit
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(XdbeBackBufferAttributes,4, 9399, 10, 1.2, NULL, 9398, NULL)
+CheckTypeSize(XdbeBackBufferAttributes,4, 9399, 10, 1.3, NULL, 9398, NULL)
 #elif defined __i386__
 CheckTypeSize(XdbeBackBufferAttributes,4, 9399, 2, 1.2, NULL, 9398, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XdbeBackBufferAttributes,4, 9399, 6, 1.2, NULL, 9398, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XdbeBackBufferAttributes,8, 9399, 11, 1.2, NULL, 9398, NULL)
+CheckTypeSize(XdbeBackBufferAttributes,8, 9399, 11, 2.0, NULL, 9398, NULL)
 #elif defined __s390x__
-CheckTypeSize(XdbeBackBufferAttributes,8, 9399, 12, 1.2, NULL, 9398, NULL)
+CheckTypeSize(XdbeBackBufferAttributes,8, 9399, 12, 1.3, NULL, 9398, NULL)
 #elif defined __ia64__
-CheckTypeSize(XdbeBackBufferAttributes,8, 9399, 3, 1.2, NULL, 9398, NULL)
+CheckTypeSize(XdbeBackBufferAttributes,8, 9399, 3, 1.3, NULL, 9398, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XdbeBackBufferAttributes,8, 9399, 9, 1.2, NULL, 9398, NULL)
+CheckTypeSize(XdbeBackBufferAttributes,8, 9399, 9, 2.0, NULL, 9398, NULL)
 #else
 Msg("Find size of XdbeBackBufferAttributes (9399)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9398,NULL);\n",architecture,9399,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9398,NULL);\n",architecture,9399,0);
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(XdbeBufferError,20, 9401, 10, 1.2, NULL, 9400, NULL)
+CheckTypeSize(XdbeBufferError,20, 9401, 10, 1.3, NULL, 9400, NULL)
 #elif defined __i386__
 CheckTypeSize(XdbeBufferError,20, 9401, 2, 1.2, NULL, 9400, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XdbeBufferError,20, 9401, 6, 1.2, NULL, 9400, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XdbeBufferError,40, 9401, 11, 1.2, NULL, 9400, NULL)
+CheckTypeSize(XdbeBufferError,40, 9401, 11, 2.0, NULL, 9400, NULL)
 #elif defined __s390x__
-CheckTypeSize(XdbeBufferError,40, 9401, 12, 1.2, NULL, 9400, NULL)
+CheckTypeSize(XdbeBufferError,40, 9401, 12, 1.3, NULL, 9400, NULL)
 #elif defined __ia64__
-CheckTypeSize(XdbeBufferError,40, 9401, 3, 1.2, NULL, 9400, NULL)
+CheckTypeSize(XdbeBufferError,40, 9401, 3, 1.3, NULL, 9400, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XdbeBufferError,40, 9401, 9, 1.2, NULL, 9400, NULL)
+CheckTypeSize(XdbeBufferError,40, 9401, 9, 2.0, NULL, 9400, NULL)
 #else
 Msg("Find size of XdbeBufferError (9401)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9400, NULL);\n",architecture,9401,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9400, NULL);\n",architecture,9401,0);
 #endif
 
 #ifdef TET_TEST

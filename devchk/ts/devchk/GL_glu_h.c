@@ -1577,22 +1577,22 @@ cnt++;
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(_GLUfuncptr,4, 31634, 10, 1.2, NULL, 40, NULL)
+CheckTypeSize(_GLUfuncptr,4, 31634, 10, 1.3, NULL, 40, NULL)
 #elif defined __x86_64__
-CheckTypeSize(_GLUfuncptr,8, 31634, 11, 1.2, NULL, 40, NULL)
+CheckTypeSize(_GLUfuncptr,8, 31634, 11, 2.0, NULL, 40, NULL)
 #elif defined __s390x__
-CheckTypeSize(_GLUfuncptr,8, 31634, 12, 1.2, NULL, 40, NULL)
+CheckTypeSize(_GLUfuncptr,8, 31634, 12, 1.3, NULL, 40, NULL)
 #elif defined __i386__
 CheckTypeSize(_GLUfuncptr,4, 31634, 2, 1.2, NULL, 40, NULL)
 #elif defined __ia64__
-CheckTypeSize(_GLUfuncptr,8, 31634, 3, 1.2, NULL, 40, NULL)
+CheckTypeSize(_GLUfuncptr,8, 31634, 3, 1.3, NULL, 40, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(_GLUfuncptr,4, 31634, 6, 1.2, NULL, 40, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(_GLUfuncptr,8, 31634, 9, 1.2, NULL, 40, NULL)
+CheckTypeSize(_GLUfuncptr,8, 31634, 9, 2.0, NULL, 40, NULL)
 #else
 Msg("Find size of _GLUfuncptr (31634)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,31634,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,40,NULL);\n",architecture,31634,0);
 #endif
 
 #ifdef TET_TEST

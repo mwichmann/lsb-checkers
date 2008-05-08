@@ -24,7 +24,27 @@ struct versym libglib_2_0_so_0[] = {
 	{"g_ascii_strtod","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_ascii_strtoull","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_ascii_strup","",0,LSB_Toolkit_Gtk,0,1},
-	{"g_ascii_table","",0,LSB_Toolkit_Gtk,0,0},
+#if defined __i386__
+	{"g_ascii_table","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __ia64__
+	{"g_ascii_table","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"g_ascii_table","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc64__
+	{"g_ascii_table","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"g_ascii_table","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __x86_64__
+	{"g_ascii_table","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __s390x__
+	{"g_ascii_table","",0,LSB_Toolkit_Gtk,8,0},
+#endif
 	{"g_ascii_tolower","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_ascii_toupper","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_ascii_xdigit_value","",0,LSB_Toolkit_Gtk,0,1},
@@ -74,7 +94,27 @@ struct versym libglib_2_0_so_0[] = {
 	{"g_cache_value_foreach","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_child_watch_add","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_child_watch_add_full","",0,LSB_Toolkit_Gtk,0,1},
-	{"g_child_watch_funcs","",0,LSB_Toolkit_Gtk,0,0},
+#if defined __i386__
+	{"g_child_watch_funcs","",0,LSB_Toolkit_Gtk,24,0},
+#endif
+#if defined __ia64__
+	{"g_child_watch_funcs","",0,LSB_Toolkit_Gtk,48,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"g_child_watch_funcs","",0,LSB_Toolkit_Gtk,24,0},
+#endif
+#if defined __powerpc64__
+	{"g_child_watch_funcs","",0,LSB_Toolkit_Gtk,48,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"g_child_watch_funcs","",0,LSB_Toolkit_Gtk,24,0},
+#endif
+#if defined __x86_64__
+	{"g_child_watch_funcs","",0,LSB_Toolkit_Gtk,48,0},
+#endif
+#if defined __s390x__
+	{"g_child_watch_funcs","",0,LSB_Toolkit_Gtk,48,0},
+#endif
 	{"g_child_watch_source_new","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_clear_error","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_completion_add_items","",0,LSB_Toolkit_Gtk,0,1},
@@ -231,7 +271,27 @@ struct versym libglib_2_0_so_0[] = {
 	{"g_iconv_open","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_idle_add","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_idle_add_full","",0,LSB_Toolkit_Gtk,0,1},
-	{"g_idle_funcs","",0,LSB_Toolkit_Gtk,0,0},
+#if defined __i386__
+	{"g_idle_funcs","",0,LSB_Toolkit_Gtk,24,0},
+#endif
+#if defined __ia64__
+	{"g_idle_funcs","",0,LSB_Toolkit_Gtk,48,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"g_idle_funcs","",0,LSB_Toolkit_Gtk,24,0},
+#endif
+#if defined __powerpc64__
+	{"g_idle_funcs","",0,LSB_Toolkit_Gtk,48,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"g_idle_funcs","",0,LSB_Toolkit_Gtk,24,0},
+#endif
+#if defined __x86_64__
+	{"g_idle_funcs","",0,LSB_Toolkit_Gtk,48,0},
+#endif
+#if defined __s390x__
+	{"g_idle_funcs","",0,LSB_Toolkit_Gtk,48,0},
+#endif
 	{"g_idle_remove_by_data","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_idle_source_new","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_int_equal","",0,LSB_Toolkit_Gtk,0,1},
@@ -270,7 +330,27 @@ struct versym libglib_2_0_so_0[] = {
 	{"g_io_channel_write_chars","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_io_channel_write_unichar","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_io_create_watch","",0,LSB_Toolkit_Gtk,0,1},
-	{"g_io_watch_funcs","",0,LSB_Toolkit_Gtk,0,0},
+#if defined __i386__
+	{"g_io_watch_funcs","",0,LSB_Toolkit_Gtk,24,0},
+#endif
+#if defined __ia64__
+	{"g_io_watch_funcs","",0,LSB_Toolkit_Gtk,48,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"g_io_watch_funcs","",0,LSB_Toolkit_Gtk,24,0},
+#endif
+#if defined __powerpc64__
+	{"g_io_watch_funcs","",0,LSB_Toolkit_Gtk,48,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"g_io_watch_funcs","",0,LSB_Toolkit_Gtk,24,0},
+#endif
+#if defined __x86_64__
+	{"g_io_watch_funcs","",0,LSB_Toolkit_Gtk,48,0},
+#endif
+#if defined __s390x__
+	{"g_io_watch_funcs","",0,LSB_Toolkit_Gtk,48,0},
+#endif
 	{"g_key_file_error_quark","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_key_file_free","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_key_file_get_boolean","",0,LSB_Toolkit_Gtk,0,1},
@@ -729,7 +809,27 @@ struct versym libglib_2_0_so_0[] = {
 	{"g_thread_create_full","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_thread_error_quark","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_thread_exit","",0,LSB_Toolkit_Gtk,0,1},
-	{"g_thread_functions_for_glib_use","",0,LSB_Toolkit_Gtk,0,0},
+#if defined __i386__
+	{"g_thread_functions_for_glib_use","",0,LSB_Toolkit_Gtk,84,0},
+#endif
+#if defined __ia64__
+	{"g_thread_functions_for_glib_use","",0,LSB_Toolkit_Gtk,168,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"g_thread_functions_for_glib_use","",0,LSB_Toolkit_Gtk,84,0},
+#endif
+#if defined __powerpc64__
+	{"g_thread_functions_for_glib_use","",0,LSB_Toolkit_Gtk,168,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"g_thread_functions_for_glib_use","",0,LSB_Toolkit_Gtk,84,0},
+#endif
+#if defined __x86_64__
+	{"g_thread_functions_for_glib_use","",0,LSB_Toolkit_Gtk,168,0},
+#endif
+#if defined __s390x__
+	{"g_thread_functions_for_glib_use","",0,LSB_Toolkit_Gtk,168,0},
+#endif
 	{"g_thread_join","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_thread_pool_free","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_thread_pool_get_max_threads","",0,LSB_Toolkit_Gtk,0,1},
@@ -744,12 +844,72 @@ struct versym libglib_2_0_so_0[] = {
 	{"g_thread_pool_unprocessed","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_thread_self","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_thread_set_priority","",0,LSB_Toolkit_Gtk,0,1},
-	{"g_thread_use_default_impl","",0,LSB_Toolkit_Gtk,0,0},
-	{"g_threads_got_initialized","",0,LSB_Toolkit_Gtk,0,0},
+#if defined __i386__
+	{"g_thread_use_default_impl","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __ia64__
+	{"g_thread_use_default_impl","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"g_thread_use_default_impl","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc64__
+	{"g_thread_use_default_impl","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"g_thread_use_default_impl","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __x86_64__
+	{"g_thread_use_default_impl","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390x__
+	{"g_thread_use_default_impl","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __i386__
+	{"g_threads_got_initialized","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __ia64__
+	{"g_threads_got_initialized","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"g_threads_got_initialized","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc64__
+	{"g_threads_got_initialized","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"g_threads_got_initialized","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __x86_64__
+	{"g_threads_got_initialized","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390x__
+	{"g_threads_got_initialized","",0,LSB_Toolkit_Gtk,4,0},
+#endif
 	{"g_time_val_add","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_timeout_add","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_timeout_add_full","",0,LSB_Toolkit_Gtk,0,1},
-	{"g_timeout_funcs","",0,LSB_Toolkit_Gtk,0,0},
+#if defined __i386__
+	{"g_timeout_funcs","",0,LSB_Toolkit_Gtk,24,0},
+#endif
+#if defined __ia64__
+	{"g_timeout_funcs","",0,LSB_Toolkit_Gtk,48,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"g_timeout_funcs","",0,LSB_Toolkit_Gtk,24,0},
+#endif
+#if defined __powerpc64__
+	{"g_timeout_funcs","",0,LSB_Toolkit_Gtk,48,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"g_timeout_funcs","",0,LSB_Toolkit_Gtk,24,0},
+#endif
+#if defined __x86_64__
+	{"g_timeout_funcs","",0,LSB_Toolkit_Gtk,48,0},
+#endif
+#if defined __s390x__
+	{"g_timeout_funcs","",0,LSB_Toolkit_Gtk,48,0},
+#endif
 	{"g_timeout_source_new","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_timer_continue","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_timer_destroy","",0,LSB_Toolkit_Gtk,0,1},
@@ -824,7 +984,27 @@ struct versym libglib_2_0_so_0[] = {
 	{"g_utf8_offset_to_pointer","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_utf8_pointer_to_offset","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_utf8_prev_char","",0,LSB_Toolkit_Gtk,0,1},
-	{"g_utf8_skip","",0,LSB_Toolkit_Gtk,0,0},
+#if defined __i386__
+	{"g_utf8_skip","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __ia64__
+	{"g_utf8_skip","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"g_utf8_skip","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc64__
+	{"g_utf8_skip","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"g_utf8_skip","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __x86_64__
+	{"g_utf8_skip","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __s390x__
+	{"g_utf8_skip","",0,LSB_Toolkit_Gtk,8,0},
+#endif
 	{"g_utf8_strchr","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_utf8_strdown","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_utf8_strlen","",0,LSB_Toolkit_Gtk,0,1},
@@ -841,13 +1021,133 @@ struct versym libglib_2_0_so_0[] = {
 	{"g_vprintf","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_vsnprintf","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_vsprintf","",0,LSB_Toolkit_Gtk,0,1},
-	{"glib_binary_age","",0,LSB_Toolkit_Gtk,0,0},
+#if defined __i386__
+	{"glib_binary_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __ia64__
+	{"glib_binary_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"glib_binary_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc64__
+	{"glib_binary_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"glib_binary_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __x86_64__
+	{"glib_binary_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390x__
+	{"glib_binary_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
 	{"glib_check_version","",0,LSB_Toolkit_Gtk,0,1},
-	{"glib_interface_age","",0,LSB_Toolkit_Gtk,0,0},
-	{"glib_major_version","",0,LSB_Toolkit_Gtk,0,0},
-	{"glib_mem_profiler_table","",0,LSB_Toolkit_Gtk,0,0},
-	{"glib_micro_version","",0,LSB_Toolkit_Gtk,0,0},
-	{"glib_minor_version","",0,LSB_Toolkit_Gtk,0,0},
+#if defined __i386__
+	{"glib_interface_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __ia64__
+	{"glib_interface_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"glib_interface_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc64__
+	{"glib_interface_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"glib_interface_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __x86_64__
+	{"glib_interface_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390x__
+	{"glib_interface_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __i386__
+	{"glib_major_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __ia64__
+	{"glib_major_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"glib_major_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc64__
+	{"glib_major_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"glib_major_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __x86_64__
+	{"glib_major_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390x__
+	{"glib_major_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __i386__
+	{"glib_mem_profiler_table","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __ia64__
+	{"glib_mem_profiler_table","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"glib_mem_profiler_table","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc64__
+	{"glib_mem_profiler_table","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"glib_mem_profiler_table","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __x86_64__
+	{"glib_mem_profiler_table","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __s390x__
+	{"glib_mem_profiler_table","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __i386__
+	{"glib_micro_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __ia64__
+	{"glib_micro_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"glib_micro_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc64__
+	{"glib_micro_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"glib_micro_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __x86_64__
+	{"glib_micro_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390x__
+	{"glib_micro_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __i386__
+	{"glib_minor_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __ia64__
+	{"glib_minor_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"glib_minor_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc64__
+	{"glib_minor_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"glib_minor_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __x86_64__
+	{"glib_minor_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390x__
+	{"glib_minor_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
 	{0,0}};
 
 struct classinfo *libglib_2_0_so_0_classinfo[] = {

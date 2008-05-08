@@ -201,7 +201,27 @@ struct versym libQtCore_so_4[] = {
 	{"_Z9qt_assertPKcS0_i","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QByteArray10fromBase64ERKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QByteArray11fromRawDataEPKci","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN10QByteArray11shared_nullE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN10QByteArray11shared_nullE","",0,LSB_Toolkit_Qt,20,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QByteArray11shared_nullE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QByteArray11shared_nullE","",0,LSB_Toolkit_Qt,20,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QByteArray11shared_nullE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QByteArray11shared_nullE","",0,LSB_Toolkit_Qt,20,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QByteArray11shared_nullE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QByteArray11shared_nullE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN10QByteArray4chopEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QByteArray4fillEci","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QByteArray5clearEv","",0,LSB_Toolkit_Qt,0,1},
@@ -243,7 +263,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN10QEventLoop11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QEventLoop13processEventsE6QFlagsINS_17ProcessEventsFlagEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QEventLoop13processEventsE6QFlagsINS_17ProcessEventsFlagEEi","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN10QEventLoop16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN10QEventLoop16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QEventLoop16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QEventLoop16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QEventLoop16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QEventLoop16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QEventLoop16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QEventLoop16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QEventLoop4exitEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QEventLoop4quitEv","",0,LSB_Toolkit_Qt,0,1},
@@ -410,7 +450,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN11QTimerEventD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QTranslator11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QTranslator11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN11QTranslator16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN11QTranslator16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QTranslator16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QTranslator16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QTranslator16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QTranslator16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QTranslator16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QTranslator16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN11QTranslator4loadEPKhi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QTranslator4loadERK7QStringS2_S2_S2_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QTranslatorC1EP7QObject","",0,LSB_Toolkit_Qt,0,1},
@@ -420,7 +480,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN11QTranslatorD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QTranslatorD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QTranslatorD2Ev","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN11QVectorData11shared_nullE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN11QVectorData11shared_nullE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QVectorData11shared_nullE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QVectorData11shared_nullE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QVectorData11shared_nullE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QVectorData11shared_nullE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QVectorData11shared_nullE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QVectorData11shared_nullE","",0,LSB_Toolkit_Qt,16,0},
+#endif
 	{"_ZN11QVectorData4growEiiib","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QVectorData6mallocEiiiPS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QCustomEventC1EiPv","",0,LSB_Toolkit_Qt,0,1},
@@ -481,7 +561,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN13QPluginLoader11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QPluginLoader11setFileNameERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QPluginLoader15staticInstancesEv","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN13QPluginLoader16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN13QPluginLoader16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN13QPluginLoader16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN13QPluginLoader16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN13QPluginLoader16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN13QPluginLoader16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN13QPluginLoader16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN13QPluginLoader16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN13QPluginLoader4loadEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QPluginLoader6unloadEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QPluginLoader8instanceEv","",0,LSB_Toolkit_Qt,0,1},
@@ -499,7 +599,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN13QSignalMapper11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QSignalMapper11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QSignalMapper14removeMappingsEP7QObject","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN13QSignalMapper16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN13QSignalMapper16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN13QSignalMapper16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN13QSignalMapper16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN13QSignalMapper16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN13QSignalMapper16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN13QSignalMapper16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN13QSignalMapper16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN13QSignalMapper3mapEP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QSignalMapper3mapEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN13QSignalMapper6mappedEP7QObject","",0,LSB_Toolkit_Qt,0,1},
@@ -543,7 +663,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN14QTemporaryFile13setAutoRemoveEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QTemporaryFile15createLocalFileER5QFile","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QTemporaryFile15setFileTemplateERK7QString","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN14QTemporaryFile16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN14QTemporaryFile16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN14QTemporaryFile16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN14QTemporaryFile16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN14QTemporaryFile16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN14QTemporaryFile16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN14QTemporaryFile16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN14QTemporaryFile16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN14QTemporaryFile4openE6QFlagsIN9QIODevice12OpenModeFlagEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QTemporaryFileC1EP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QTemporaryFileC1ERK7QString","",0,LSB_Toolkit_Qt,0,1},
@@ -563,14 +703,54 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN14QWaitConditionC2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QWaitConditionD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QWaitConditionD2Ev","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN15QLinkedListData11shared_nullE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN15QLinkedListData11shared_nullE","",0,LSB_Toolkit_Qt,20,0},
+#endif
+#if defined __ia64__
+	{"_ZN15QLinkedListData11shared_nullE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN15QLinkedListData11shared_nullE","",0,LSB_Toolkit_Qt,20,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN15QLinkedListData11shared_nullE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN15QLinkedListData11shared_nullE","",0,LSB_Toolkit_Qt,20,0},
+#endif
+#if defined __x86_64__
+	{"_ZN15QLinkedListData11shared_nullE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN15QLinkedListData11shared_nullE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN15QObjectUserDataD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QObjectUserDataD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QObjectUserDataD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QSocketNotifier10setEnabledEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QSocketNotifier11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QSocketNotifier11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN15QSocketNotifier16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN15QSocketNotifier16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN15QSocketNotifier16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN15QSocketNotifier16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN15QSocketNotifier16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN15QSocketNotifier16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN15QSocketNotifier16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN15QSocketNotifier16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN15QSocketNotifier5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QSocketNotifier9activatedEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QSocketNotifierC1EiNS_4TypeEP7QObject","",0,LSB_Toolkit_Qt,0,1},
@@ -603,7 +783,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN16QCoreApplication16organizationNameEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QCoreApplication16removeTranslatorEP11QTranslator","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QCoreApplication16sendPostedEventsEP7QObjecti","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN16QCoreApplication16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN16QCoreApplication16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN16QCoreApplication16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN16QCoreApplication16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN16QCoreApplication16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN16QCoreApplication16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN16QCoreApplication16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN16QCoreApplication16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN16QCoreApplication17installTranslatorEP11QTranslator","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QCoreApplication17removeLibraryPathERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QCoreApplication18applicationDirPathEv","",0,LSB_Toolkit_Qt,0,1},
@@ -618,7 +818,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN16QCoreApplication4execEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QCoreApplication4exitEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QCoreApplication4quitEv","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN16QCoreApplication4selfE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN16QCoreApplication4selfE","",0,LSB_Toolkit_Qt,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN16QCoreApplication4selfE","",0,LSB_Toolkit_Qt,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN16QCoreApplication4selfE","",0,LSB_Toolkit_Qt,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN16QCoreApplication4selfE","",0,LSB_Toolkit_Qt,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN16QCoreApplication4selfE","",0,LSB_Toolkit_Qt,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN16QCoreApplication4selfE","",0,LSB_Toolkit_Qt,8,0},
+#endif
+#if defined __s390x__
+	{"_ZN16QCoreApplication4selfE","",0,LSB_Toolkit_Qt,8,0},
+#endif
 	{"_ZN16QCoreApplication5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QCoreApplication5flushEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QCoreApplication6notifyEP7QObjectP6QEvent","",0,LSB_Toolkit_Qt,0,1},
@@ -637,7 +857,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN16QCoreApplicationD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QTextCodecPlugin11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QTextCodecPlugin11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN16QTextCodecPlugin16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN16QTextCodecPlugin16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN16QTextCodecPlugin16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN16QTextCodecPlugin16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN16QTextCodecPlugin16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN16QTextCodecPlugin16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN16QTextCodecPlugin16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN16QTextCodecPlugin16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN16QTextCodecPlugin6createERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QTextCodecPluginC1EP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QTextCodecPluginC2EP7QObject","",0,LSB_Toolkit_Qt,0,1},
@@ -672,7 +912,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN18QAbstractItemModel15beginRemoveRowsERK11QModelIndexii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QAbstractItemModel16endInsertColumnsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QAbstractItemModel16endRemoveColumnsEv","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN18QAbstractItemModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN18QAbstractItemModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN18QAbstractItemModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN18QAbstractItemModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN18QAbstractItemModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN18QAbstractItemModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN18QAbstractItemModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN18QAbstractItemModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN18QAbstractItemModel17headerDataChangedEN2Qt11OrientationEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QAbstractItemModel18beginInsertColumnsERK11QModelIndexii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QAbstractItemModel18beginRemoveColumnsERK11QModelIndexii","",0,LSB_Toolkit_Qt,0,1},
@@ -696,7 +956,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN18QAbstractListModel11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QAbstractListModel11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QAbstractListModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN18QAbstractListModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN18QAbstractListModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN18QAbstractListModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN18QAbstractListModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN18QAbstractListModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN18QAbstractListModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN18QAbstractListModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN18QAbstractListModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN18QAbstractListModelC1EP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QAbstractListModelC1ER25QAbstractItemModelPrivateP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QAbstractListModelC2EP7QObject","",0,LSB_Toolkit_Qt,0,1},
@@ -710,7 +990,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN18QFileSystemWatcher11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QFileSystemWatcher11removePathsERK11QStringList","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QFileSystemWatcher16directoryChangedERK7QString","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN18QFileSystemWatcher16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN18QFileSystemWatcher16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN18QFileSystemWatcher16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN18QFileSystemWatcher16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN18QFileSystemWatcher16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN18QFileSystemWatcher16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN18QFileSystemWatcher16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN18QFileSystemWatcher16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN18QFileSystemWatcher7addPathERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QFileSystemWatcher8addPathsERK11QStringList","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN18QFileSystemWatcherC1EP7QObject","",0,LSB_Toolkit_Qt,0,1},
@@ -755,7 +1055,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN19QAbstractTableModel11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QAbstractTableModel11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QAbstractTableModel12dropMimeDataEPK9QMimeDataN2Qt10DropActionEiiRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN19QAbstractTableModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN19QAbstractTableModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN19QAbstractTableModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN19QAbstractTableModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN19QAbstractTableModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN19QAbstractTableModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN19QAbstractTableModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN19QAbstractTableModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN19QAbstractTableModelC1EP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QAbstractTableModelC1ER25QAbstractItemModelPrivateP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN19QAbstractTableModelC2EP7QObject","",0,LSB_Toolkit_Qt,0,1},
@@ -765,7 +1085,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN19QAbstractTableModelD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN21QObjectCleanupHandler11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN21QObjectCleanupHandler11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN21QObjectCleanupHandler16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN21QObjectCleanupHandler16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN21QObjectCleanupHandler16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN21QObjectCleanupHandler16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN21QObjectCleanupHandler16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN21QObjectCleanupHandler16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN21QObjectCleanupHandler16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN21QObjectCleanupHandler16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN21QObjectCleanupHandler3addEP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN21QObjectCleanupHandler5clearEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN21QObjectCleanupHandler6removeEP7QObject","",0,LSB_Toolkit_Qt,0,1},
@@ -792,7 +1132,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN24QAbstractEventDispatcher12aboutToBlockEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN24QAbstractEventDispatcher13registerTimerEiP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN24QAbstractEventDispatcher14setEventFilterEPFbPvE","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN24QAbstractEventDispatcher16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN24QAbstractEventDispatcher16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN24QAbstractEventDispatcher16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN24QAbstractEventDispatcher16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN24QAbstractEventDispatcher16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN24QAbstractEventDispatcher16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN24QAbstractEventDispatcher16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN24QAbstractEventDispatcher16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN24QAbstractEventDispatcher5awakeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN24QAbstractEventDispatcher8instanceEP7QThread","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN24QAbstractEventDispatcherC1EP7QObject","",0,LSB_Toolkit_Qt,0,1},
@@ -924,7 +1284,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN5QFile12readLineDataEPcx","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN5QFile14setPermissionsE6QFlagsINS_10PermissionEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN5QFile14setPermissionsERK7QString6QFlagsINS_10PermissionEE","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN5QFile16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN5QFile16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN5QFile16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN5QFile16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN5QFile16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN5QFile16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN5QFile16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN5QFile16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN5QFile19setDecodingFunctionEPF7QStringRK10QByteArrayE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN5QFile19setEncodingFunctionEPF10QByteArrayRK7QStringE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN5QFile4copyERK7QString","",0,LSB_Toolkit_Qt,0,1},
@@ -996,7 +1376,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN6QTimer11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QTimer11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QTimer11setIntervalEi","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN6QTimer16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN6QTimer16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN6QTimer16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN6QTimer16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN6QTimer16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN6QTimer16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN6QTimer16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN6QTimer16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN6QTimer4stopEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QTimer5startEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN6QTimer5startEib","",0,LSB_Toolkit_Qt,0,1},
@@ -1011,7 +1411,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN6QTimerD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QBuffer11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QBuffer11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN7QBuffer16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN7QBuffer16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QBuffer16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QBuffer16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QBuffer16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QBuffer16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QBuffer16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QBuffer16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN7QBuffer4openE6QFlagsIN9QIODevice12OpenModeFlagEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QBuffer4seekEx","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QBuffer5closeEv","",0,LSB_Toolkit_Qt,0,1},
@@ -1060,10 +1480,50 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN7QObject14dumpObjectTreeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QObject16disconnectNotifyEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QObject16registerUserDataEv","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN7QObject16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN7QObject16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QObject16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QObject16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QObject16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QObject16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QObject16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QObject16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN7QObject17removeEventFilterEPS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QObject18installEventFilterEPS_","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN7QObject18staticQtMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN7QObject18staticQtMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QObject18staticQtMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QObject18staticQtMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QObject18staticQtMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QObject18staticQtMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QObject18staticQtMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QObject18staticQtMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN7QObject5eventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QObject7connectEPKS_PKcS1_S3_N2Qt14ConnectionTypeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QObject9destroyedEPS_","",0,LSB_Toolkit_Qt,0,1},
@@ -1099,16 +1559,76 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN7QString10fromLatin1EPKci","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QString10setUnicodeEPK5QChari","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QString11fromRawDataEPK5QChari","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN7QString11shared_nullE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN7QString11shared_nullE","",0,LSB_Toolkit_Qt,20,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QString11shared_nullE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QString11shared_nullE","",0,LSB_Toolkit_Qt,20,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QString11shared_nullE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QString11shared_nullE","",0,LSB_Toolkit_Qt,20,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QString11shared_nullE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QString11shared_nullE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN7QString13fromLocal8BitEPKci","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QString14fromWCharArrayEPKwi","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN7QString16codecForCStringsE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN7QString16codecForCStringsE","",0,LSB_Toolkit_Qt,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QString16codecForCStringsE","",0,LSB_Toolkit_Qt,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QString16codecForCStringsE","",0,LSB_Toolkit_Qt,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QString16codecForCStringsE","",0,LSB_Toolkit_Qt,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QString16codecForCStringsE","",0,LSB_Toolkit_Qt,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QString16codecForCStringsE","",0,LSB_Toolkit_Qt,8,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QString16codecForCStringsE","",0,LSB_Toolkit_Qt,8,0},
+#endif
 	{"_ZN7QString16fromAscii_helperEPKci","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QString17fromLatin1_helperEPKci","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QString4chopEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QString4fillE5QChari","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QString4freeEPNS_4DataE","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN7QString4nullE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN7QString4nullE","",0,LSB_Toolkit_Qt,1,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QString4nullE","",0,LSB_Toolkit_Qt,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QString4nullE","",0,LSB_Toolkit_Qt,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QString4nullE","",0,LSB_Toolkit_Qt,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QString4nullE","",0,LSB_Toolkit_Qt,1,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QString4nullE","",0,LSB_Toolkit_Qt,1,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QString4nullE","",0,LSB_Toolkit_Qt,1,0},
+#endif
 	{"_ZN7QString6appendE5QChar","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QString6appendERK13QLatin1String","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QString6appendERKS_","",0,LSB_Toolkit_Qt,0,1},
@@ -1163,7 +1683,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN7QThread12setStackSizeEj","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QThread13currentThreadEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QThread15currentThreadIdEv","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN7QThread16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN7QThread16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QThread16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QThread16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QThread16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QThread16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QThread16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QThread16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN7QThread21setTerminationEnabledEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QThread4execEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN7QThread4exitEi","",0,LSB_Toolkit_Qt,0,1},
@@ -1187,7 +1727,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN8QLibrary11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QLibrary11setFileNameERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QLibrary12setLoadHintsE6QFlagsINS_8LoadHintEE","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN8QLibrary16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN8QLibrary16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN8QLibrary16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN8QLibrary16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN8QLibrary16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN8QLibrary16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN8QLibrary16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN8QLibrary16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN8QLibrary21setFileNameAndVersionERK7QStringi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QLibrary4loadEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QLibrary6unloadEv","",0,LSB_Toolkit_Qt,0,1},
@@ -1207,7 +1767,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN8QMapData10createDataEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QMapData11node_createEPPNS_4NodeEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QMapData11node_deleteEPPNS_4NodeEiS1_","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN8QMapData11shared_nullE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN8QMapData11shared_nullE","",0,LSB_Toolkit_Qt,72,0},
+#endif
+#if defined __ia64__
+	{"_ZN8QMapData11shared_nullE","",0,LSB_Toolkit_Qt,128,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN8QMapData11shared_nullE","",0,LSB_Toolkit_Qt,72,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN8QMapData11shared_nullE","",0,LSB_Toolkit_Qt,128,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN8QMapData11shared_nullE","",0,LSB_Toolkit_Qt,72,0},
+#endif
+#if defined __x86_64__
+	{"_ZN8QMapData11shared_nullE","",0,LSB_Toolkit_Qt,128,0},
+#endif
+#if defined __s390x__
+	{"_ZN8QMapData11shared_nullE","",0,LSB_Toolkit_Qt,128,0},
+#endif
 	{"_ZN8QMapData16continueFreeDataEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QProcess11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QProcess11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
@@ -1220,7 +1800,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN8QProcess15setProcessStateENS_12ProcessStateE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QProcess15waitForFinishedEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QProcess16closeReadChannelENS_14ProcessChannelE","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN8QProcess16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN8QProcess16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN8QProcess16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN8QProcess16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN8QProcess16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN8QProcess16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN8QProcess16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN8QProcess16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN8QProcess16waitForReadyReadEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QProcess17closeWriteChannelEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QProcess17setupChildProcessEv","",0,LSB_Toolkit_Qt,0,1},
@@ -1264,7 +1864,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN8QVariant6createEiPKv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QVariant6detachEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QVariant7convertENS_4TypeE","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN8QVariant7handlerE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN8QVariant7handlerE","",0,LSB_Toolkit_Qt,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN8QVariant7handlerE","",0,LSB_Toolkit_Qt,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN8QVariant7handlerE","",0,LSB_Toolkit_Qt,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN8QVariant7handlerE","",0,LSB_Toolkit_Qt,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN8QVariant7handlerE","",0,LSB_Toolkit_Qt,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN8QVariant7handlerE","",0,LSB_Toolkit_Qt,8,0},
+#endif
+#if defined __s390x__
+	{"_ZN8QVariant7handlerE","",0,LSB_Toolkit_Qt,8,0},
+#endif
 	{"_ZN8QVariantC1EN2Qt11GlobalColorE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QVariantC1ENS_4TypeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QVariantC1EPKc","",0,LSB_Toolkit_Qt,0,1},
@@ -1383,7 +2003,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN9QFileInfoD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QFileInfoaSERKS_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QFileInfoeqERKS_","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN9QHashData11shared_nullE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN9QHashData11shared_nullE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QHashData11shared_nullE","",0,LSB_Toolkit_Qt,40,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QHashData11shared_nullE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QHashData11shared_nullE","",0,LSB_Toolkit_Qt,40,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QHashData11shared_nullE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QHashData11shared_nullE","",0,LSB_Toolkit_Qt,40,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QHashData11shared_nullE","",0,LSB_Toolkit_Qt,40,0},
+#endif
 	{"_ZN9QHashData12allocateNodeEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QHashData12previousNodeEPNS_4NodeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QHashData13detach_helperEPFvPNS_4NodeEPvEi","",0,LSB_Toolkit_Qt,0,1},
@@ -1399,7 +2039,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN9QIODevice12bytesWrittenEx","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QIODevice12readLineDataEPcx","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QIODevice14setErrorStringERK7QString","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN9QIODevice16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN9QIODevice16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QIODevice16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QIODevice16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QIODevice16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QIODevice16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QIODevice16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QIODevice16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN9QIODevice16waitForReadyReadEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QIODevice18setTextModeEnabledEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QIODevice19waitForBytesWrittenEi","",0,LSB_Toolkit_Qt,0,1},
@@ -1430,7 +2090,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN9QInternal16registerCallbackENS_8CallbackEPFbPPvE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QInternal17activateCallbacksENS_8CallbackEPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QInternal18unregisterCallbackENS_8CallbackEPFbPPvE","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN9QListData11shared_nullE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN9QListData11shared_nullE","",0,LSB_Toolkit_Qt,24,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QListData11shared_nullE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QListData11shared_nullE","",0,LSB_Toolkit_Qt,24,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QListData11shared_nullE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QListData11shared_nullE","",0,LSB_Toolkit_Qt,24,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QListData11shared_nullE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QListData11shared_nullE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN9QListData4moveEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QListData5eraseEPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QListData6appendERKS_","",0,LSB_Toolkit_Qt,0,1},
@@ -1454,7 +2134,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN9QMimeData11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QMimeData12setColorDataERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QMimeData12setImageDataERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN9QMimeData16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN9QMimeData16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QMimeData16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QMimeData16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QMimeData16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QMimeData16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QMimeData16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QMimeData16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN9QMimeData5clearEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QMimeData7setDataERK7QStringRK10QByteArray","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QMimeData7setHtmlERK7QString","",0,LSB_Toolkit_Qt,0,1},
@@ -1484,7 +2184,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN9QSettings14setUserIniPathERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QSettings15beginWriteArrayERK7QStringi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QSettings16setSystemIniPathERK7QString","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN9QSettings16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN9QSettings16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QSettings16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QSettings16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QSettings16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QSettings16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QSettings16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QSettings16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN9QSettings19setFallbacksEnabledEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QSettings4syncEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QSettings5clearEv","",0,LSB_Toolkit_Qt,0,1},
@@ -1522,7 +2242,27 @@ struct versym libQtCore_so_4[] = {
 	{"_ZN9QTimeLine13setStartFrameEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTimeLine14setCurrentTimeEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTimeLine15toggleDirectionEv","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN9QTimeLine16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN9QTimeLine16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QTimeLine16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QTimeLine16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QTimeLine16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QTimeLine16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QTimeLine16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QTimeLine16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN9QTimeLine17setUpdateIntervalEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTimeLine4stopEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QTimeLine5startEv","",0,LSB_Toolkit_Qt,0,1},

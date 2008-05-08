@@ -145,7 +145,27 @@ struct versym libgtk_x11_2_0_so_0[] = {
 	{"gtk_attach_options_get_type","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_bin_get_child","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_bin_get_type","",0,LSB_Toolkit_Gtk,0,1},
-	{"gtk_binary_age","",0,LSB_Toolkit_Gtk,0,0},
+#if defined __i386__
+	{"gtk_binary_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __ia64__
+	{"gtk_binary_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"gtk_binary_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc64__
+	{"gtk_binary_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"gtk_binary_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __x86_64__
+	{"gtk_binary_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390x__
+	{"gtk_binary_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
 	{"gtk_binding_entry_add_signal","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_binding_entry_add_signall","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_binding_entry_clear","",0,LSB_Toolkit_Gtk,0,1},
@@ -414,7 +434,27 @@ struct versym libgtk_x11_2_0_so_0[] = {
 	{"gtk_curve_set_vector","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_curve_type_get_type","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_debug_flag_get_type","",0,LSB_Toolkit_Gtk,0,1},
-	{"gtk_debug_flags","",0,LSB_Toolkit_Gtk,0,0},
+#if defined __i386__
+	{"gtk_debug_flags","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __ia64__
+	{"gtk_debug_flags","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"gtk_debug_flags","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc64__
+	{"gtk_debug_flags","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"gtk_debug_flags","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __x86_64__
+	{"gtk_debug_flags","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390x__
+	{"gtk_debug_flags","",0,LSB_Toolkit_Gtk,4,0},
+#endif
 	{"gtk_delete_type_get_type","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_dest_defaults_get_type","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_dialog_add_action_widget","",0,LSB_Toolkit_Gtk,0,1},
@@ -889,7 +929,27 @@ struct versym libgtk_x11_2_0_so_0[] = {
 	{"gtk_init_with_args","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_input_dialog_get_type","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_input_dialog_new","",0,LSB_Toolkit_Gtk,0,1},
-	{"gtk_interface_age","",0,LSB_Toolkit_Gtk,0,0},
+#if defined __i386__
+	{"gtk_interface_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __ia64__
+	{"gtk_interface_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"gtk_interface_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc64__
+	{"gtk_interface_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"gtk_interface_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __x86_64__
+	{"gtk_interface_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390x__
+	{"gtk_interface_age","",0,LSB_Toolkit_Gtk,4,0},
+#endif
 	{"gtk_invisible_get_screen","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_invisible_get_type","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_invisible_new","",0,LSB_Toolkit_Gtk,0,1},
@@ -979,7 +1039,27 @@ struct versym libgtk_x11_2_0_so_0[] = {
 	{"gtk_main_iteration_do","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_main_level","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_main_quit","",0,LSB_Toolkit_Gtk,0,1},
-	{"gtk_major_version","",0,LSB_Toolkit_Gtk,0,0},
+#if defined __i386__
+	{"gtk_major_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __ia64__
+	{"gtk_major_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"gtk_major_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc64__
+	{"gtk_major_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"gtk_major_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __x86_64__
+	{"gtk_major_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390x__
+	{"gtk_major_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
 	{"gtk_match_type_get_type","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_menu_attach","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_menu_attach_to_widget","",0,LSB_Toolkit_Gtk,0,1},
@@ -1045,8 +1125,48 @@ struct versym libgtk_x11_2_0_so_0[] = {
 	{"gtk_message_dialog_set_markup","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_message_type_get_type","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_metric_type_get_type","",0,LSB_Toolkit_Gtk,0,1},
-	{"gtk_micro_version","",0,LSB_Toolkit_Gtk,0,0},
-	{"gtk_minor_version","",0,LSB_Toolkit_Gtk,0,0},
+#if defined __i386__
+	{"gtk_micro_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __ia64__
+	{"gtk_micro_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"gtk_micro_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc64__
+	{"gtk_micro_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"gtk_micro_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __x86_64__
+	{"gtk_micro_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390x__
+	{"gtk_micro_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __i386__
+	{"gtk_minor_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __ia64__
+	{"gtk_minor_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"gtk_minor_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc64__
+	{"gtk_minor_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"gtk_minor_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __x86_64__
+	{"gtk_minor_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390x__
+	{"gtk_minor_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
 	{"gtk_misc_get_alignment","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_misc_get_padding","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_misc_get_type","",0,LSB_Toolkit_Gtk,0,1},

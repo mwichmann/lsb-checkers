@@ -187,6 +187,7 @@ OBJS = hdrchk.o \
 	regex_h.o \
 	rpc_auth_h.o \
 	rpc_clnt_h.o \
+	rpc_rpc_h.o \
 	rpc_rpc_msg_h.o \
 	rpc_svc_h.o \
 	rpc_types_h.o \

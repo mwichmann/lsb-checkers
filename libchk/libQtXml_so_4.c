@@ -84,12 +84,52 @@ struct versym libQtXml_so_4[] = {
 	{"_ZN14QXmlAttributes5clearEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QXmlAttributes6appendERK7QStringS2_S2_S2_","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QXmlInputSource11fromRawDataERK10QByteArrayb","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt,2,0},
+#endif
+#if defined __ia64__
+	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt,2,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt,2,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt,2,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt,2,0},
+#endif
+#if defined __x86_64__
+	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt,2,0},
+#endif
+#if defined __s390x__
+	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt,2,0},
+#endif
 	{"_ZN15QXmlInputSource4nextEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QXmlInputSource5resetEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QXmlInputSource7setDataERK10QByteArray","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QXmlInputSource7setDataERK7QString","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt,2,0},
+#endif
+#if defined __ia64__
+	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt,2,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt,2,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt,2,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt,2,0},
+#endif
+#if defined __x86_64__
+	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt,2,0},
+#endif
+#if defined __s390x__
+	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt,2,0},
+#endif
 	{"_ZN15QXmlInputSource9fetchDataEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QXmlInputSourceC1EP9QIODevice","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QXmlInputSourceC1ER11QTextStream","",0,LSB_Toolkit_Qt,0,1},

@@ -3479,267 +3479,267 @@ cnt++;
 #if defined __i386__
 CheckTypeSize(XID,4, 8171, 2, 1.2, NULL, 9, NULL)
 #elif defined __ia64__
-CheckTypeSize(XID,8, 8171, 3, 1.2, NULL, 9, NULL)
+CheckTypeSize(XID,8, 8171, 3, 1.3, NULL, 9, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(XID,4, 8171, 6, 1.2, NULL, 9, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XID,4, 8171, 10, 1.2, NULL, 9, NULL)
+CheckTypeSize(XID,4, 8171, 10, 1.3, NULL, 9, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XID,8, 8171, 9, 1.2, NULL, 9, NULL)
+CheckTypeSize(XID,8, 8171, 9, 2.0, NULL, 9, NULL)
 #elif defined __s390x__
-CheckTypeSize(XID,8, 8171, 12, 1.2, NULL, 9, NULL)
+CheckTypeSize(XID,8, 8171, 12, 1.3, NULL, 9, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XID,8, 8171, 11, 1.2, NULL, 9, NULL)
+CheckTypeSize(XID,8, 8171, 11, 2.0, NULL, 9, NULL)
 #else
 Msg("Find size of XID (8171)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8171,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,8171,0);
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(Mask,4, 8172, 10, 1.2, NULL, 9, NULL)
+CheckTypeSize(Mask,4, 8172, 10, 1.3, NULL, 9, NULL)
 #elif defined __i386__
 CheckTypeSize(Mask,4, 8172, 2, 1.2, NULL, 9, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(Mask,4, 8172, 6, 1.2, NULL, 9, NULL)
 #elif defined __x86_64__
-CheckTypeSize(Mask,8, 8172, 11, 1.2, NULL, 9, NULL)
+CheckTypeSize(Mask,8, 8172, 11, 2.0, NULL, 9, NULL)
 #elif defined __s390x__
-CheckTypeSize(Mask,8, 8172, 12, 1.2, NULL, 9, NULL)
+CheckTypeSize(Mask,8, 8172, 12, 1.3, NULL, 9, NULL)
 #elif defined __ia64__
-CheckTypeSize(Mask,8, 8172, 3, 1.2, NULL, 9, NULL)
+CheckTypeSize(Mask,8, 8172, 3, 1.3, NULL, 9, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(Mask,8, 8172, 9, 1.2, NULL, 9, NULL)
+CheckTypeSize(Mask,8, 8172, 9, 2.0, NULL, 9, NULL)
 #else
 Msg("Find size of Mask (8172)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8172,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,8172,0);
 #endif
 
 #if defined __i386__
 CheckTypeSize(Atom,4, 8173, 2, 1.2, NULL, 9, NULL)
 #elif defined __ia64__
-CheckTypeSize(Atom,8, 8173, 3, 1.2, NULL, 9, NULL)
+CheckTypeSize(Atom,8, 8173, 3, 1.3, NULL, 9, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(Atom,4, 8173, 6, 1.2, NULL, 9, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(Atom,4, 8173, 10, 1.2, NULL, 9, NULL)
+CheckTypeSize(Atom,4, 8173, 10, 1.3, NULL, 9, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(Atom,8, 8173, 9, 1.2, NULL, 9, NULL)
+CheckTypeSize(Atom,8, 8173, 9, 2.0, NULL, 9, NULL)
 #elif defined __s390x__
-CheckTypeSize(Atom,8, 8173, 12, 1.2, NULL, 9, NULL)
+CheckTypeSize(Atom,8, 8173, 12, 1.3, NULL, 9, NULL)
 #elif defined __x86_64__
-CheckTypeSize(Atom,8, 8173, 11, 1.2, NULL, 9, NULL)
+CheckTypeSize(Atom,8, 8173, 11, 2.0, NULL, 9, NULL)
 #else
 Msg("Find size of Atom (8173)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8173,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,8173,0);
 #endif
 
 #if defined __i386__
 CheckTypeSize(VisualID,4, 8174, 2, 1.2, NULL, 9, NULL)
 #elif defined __ia64__
-CheckTypeSize(VisualID,8, 8174, 3, 1.2, NULL, 9, NULL)
+CheckTypeSize(VisualID,8, 8174, 3, 1.3, NULL, 9, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(VisualID,4, 8174, 6, 1.2, NULL, 9, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(VisualID,4, 8174, 10, 1.2, NULL, 9, NULL)
+CheckTypeSize(VisualID,4, 8174, 10, 1.3, NULL, 9, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(VisualID,8, 8174, 9, 1.2, NULL, 9, NULL)
+CheckTypeSize(VisualID,8, 8174, 9, 2.0, NULL, 9, NULL)
 #elif defined __s390x__
-CheckTypeSize(VisualID,8, 8174, 12, 1.2, NULL, 9, NULL)
+CheckTypeSize(VisualID,8, 8174, 12, 1.3, NULL, 9, NULL)
 #elif defined __x86_64__
-CheckTypeSize(VisualID,8, 8174, 11, 1.2, NULL, 9, NULL)
+CheckTypeSize(VisualID,8, 8174, 11, 2.0, NULL, 9, NULL)
 #else
 Msg("Find size of VisualID (8174)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8174,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,8174,0);
 #endif
 
 #if defined __i386__
 CheckTypeSize(Time,4, 8175, 2, 1.2, NULL, 9, NULL)
 #elif defined __ia64__
-CheckTypeSize(Time,8, 8175, 3, 1.2, NULL, 9, NULL)
+CheckTypeSize(Time,8, 8175, 3, 1.3, NULL, 9, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(Time,4, 8175, 6, 1.2, NULL, 9, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(Time,4, 8175, 10, 1.2, NULL, 9, NULL)
+CheckTypeSize(Time,4, 8175, 10, 1.3, NULL, 9, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(Time,8, 8175, 9, 1.2, NULL, 9, NULL)
+CheckTypeSize(Time,8, 8175, 9, 2.0, NULL, 9, NULL)
 #elif defined __s390x__
-CheckTypeSize(Time,8, 8175, 12, 1.2, NULL, 9, NULL)
+CheckTypeSize(Time,8, 8175, 12, 1.3, NULL, 9, NULL)
 #elif defined __x86_64__
-CheckTypeSize(Time,8, 8175, 11, 1.2, NULL, 9, NULL)
+CheckTypeSize(Time,8, 8175, 11, 2.0, NULL, 9, NULL)
 #else
 Msg("Find size of Time (8175)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8175,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,8175,0);
 #endif
 
 #if defined __i386__
 CheckTypeSize(Window,4, 8176, 2, 1.2, NULL, 8171, NULL)
 #elif defined __ia64__
-CheckTypeSize(Window,8, 8176, 3, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Window,8, 8176, 3, 1.3, NULL, 8171, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(Window,4, 8176, 6, 1.2, NULL, 8171, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(Window,4, 8176, 10, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Window,4, 8176, 10, 1.3, NULL, 8171, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(Window,8, 8176, 9, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Window,8, 8176, 9, 2.0, NULL, 8171, NULL)
 #elif defined __s390x__
-CheckTypeSize(Window,8, 8176, 12, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Window,8, 8176, 12, 1.3, NULL, 8171, NULL)
 #elif defined __x86_64__
-CheckTypeSize(Window,8, 8176, 11, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Window,8, 8176, 11, 2.0, NULL, 8171, NULL)
 #else
 Msg("Find size of Window (8176)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",architecture,8176,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8176,0);
 #endif
 
 #if defined __i386__
 CheckTypeSize(Font,4, 8177, 2, 1.2, NULL, 8171, NULL)
 #elif defined __ia64__
-CheckTypeSize(Font,8, 8177, 3, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Font,8, 8177, 3, 1.3, NULL, 8171, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(Font,4, 8177, 6, 1.2, NULL, 8171, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(Font,4, 8177, 10, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Font,4, 8177, 10, 1.3, NULL, 8171, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(Font,8, 8177, 9, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Font,8, 8177, 9, 2.0, NULL, 8171, NULL)
 #elif defined __s390x__
-CheckTypeSize(Font,8, 8177, 12, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Font,8, 8177, 12, 1.3, NULL, 8171, NULL)
 #elif defined __x86_64__
-CheckTypeSize(Font,8, 8177, 11, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Font,8, 8177, 11, 2.0, NULL, 8171, NULL)
 #else
 Msg("Find size of Font (8177)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",architecture,8177,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8177,0);
 #endif
 
 #if defined __i386__
 CheckTypeSize(Pixmap,4, 8178, 2, 1.2, NULL, 8171, NULL)
 #elif defined __ia64__
-CheckTypeSize(Pixmap,8, 8178, 3, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Pixmap,8, 8178, 3, 1.3, NULL, 8171, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(Pixmap,4, 8178, 6, 1.2, NULL, 8171, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(Pixmap,4, 8178, 10, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Pixmap,4, 8178, 10, 1.3, NULL, 8171, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(Pixmap,8, 8178, 9, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Pixmap,8, 8178, 9, 2.0, NULL, 8171, NULL)
 #elif defined __s390x__
-CheckTypeSize(Pixmap,8, 8178, 12, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Pixmap,8, 8178, 12, 1.3, NULL, 8171, NULL)
 #elif defined __x86_64__
-CheckTypeSize(Pixmap,8, 8178, 11, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Pixmap,8, 8178, 11, 2.0, NULL, 8171, NULL)
 #else
 Msg("Find size of Pixmap (8178)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",architecture,8178,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8178,0);
 #endif
 
 #if defined __i386__
 CheckTypeSize(KeyCode,1, 8179, 2, 1.2, NULL, 3, NULL)
 #elif defined __ia64__
-CheckTypeSize(KeyCode,1, 8179, 3, 1.2, NULL, 3, NULL)
+CheckTypeSize(KeyCode,1, 8179, 3, 1.3, NULL, 3, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(KeyCode,1, 8179, 6, 1.2, NULL, 3, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(KeyCode,1, 8179, 10, 1.2, NULL, 3, NULL)
+CheckTypeSize(KeyCode,1, 8179, 10, 1.3, NULL, 3, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(KeyCode,1, 8179, 9, 1.2, NULL, 3, NULL)
+CheckTypeSize(KeyCode,1, 8179, 9, 2.0, NULL, 3, NULL)
 #elif defined __s390x__
-CheckTypeSize(KeyCode,1, 8179, 12, 1.2, NULL, 3, NULL)
+CheckTypeSize(KeyCode,1, 8179, 12, 1.3, NULL, 3, NULL)
 #elif defined __x86_64__
-CheckTypeSize(KeyCode,1, 8179, 11, 1.2, NULL, 3, NULL)
+CheckTypeSize(KeyCode,1, 8179, 11, 2.0, NULL, 3, NULL)
 #else
 Msg("Find size of KeyCode (8179)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,3,NULL);\n",architecture,8179,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,3,NULL);\n",architecture,8179,0);
 #endif
 
 #if defined __i386__
 CheckTypeSize(Drawable,4, 8727, 2, 1.2, NULL, 8171, NULL)
 #elif defined __ia64__
-CheckTypeSize(Drawable,8, 8727, 3, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Drawable,8, 8727, 3, 1.3, NULL, 8171, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(Drawable,4, 8727, 6, 1.2, NULL, 8171, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(Drawable,4, 8727, 10, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Drawable,4, 8727, 10, 1.3, NULL, 8171, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(Drawable,8, 8727, 9, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Drawable,8, 8727, 9, 2.0, NULL, 8171, NULL)
 #elif defined __s390x__
-CheckTypeSize(Drawable,8, 8727, 12, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Drawable,8, 8727, 12, 1.3, NULL, 8171, NULL)
 #elif defined __x86_64__
-CheckTypeSize(Drawable,8, 8727, 11, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Drawable,8, 8727, 11, 2.0, NULL, 8171, NULL)
 #else
 Msg("Find size of Drawable (8727)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",architecture,8727,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8727,0);
 #endif
 
 #if defined __i386__
 CheckTypeSize(Cursor,4, 8728, 2, 1.2, NULL, 8171, NULL)
 #elif defined __ia64__
-CheckTypeSize(Cursor,8, 8728, 3, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Cursor,8, 8728, 3, 1.3, NULL, 8171, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(Cursor,4, 8728, 6, 1.2, NULL, 8171, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(Cursor,4, 8728, 10, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Cursor,4, 8728, 10, 1.3, NULL, 8171, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(Cursor,8, 8728, 9, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Cursor,8, 8728, 9, 2.0, NULL, 8171, NULL)
 #elif defined __s390x__
-CheckTypeSize(Cursor,8, 8728, 12, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Cursor,8, 8728, 12, 1.3, NULL, 8171, NULL)
 #elif defined __x86_64__
-CheckTypeSize(Cursor,8, 8728, 11, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Cursor,8, 8728, 11, 2.0, NULL, 8171, NULL)
 #else
 Msg("Find size of Cursor (8728)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",architecture,8728,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8728,0);
 #endif
 
 #if defined __i386__
 CheckTypeSize(Colormap,4, 8729, 2, 1.2, NULL, 8171, NULL)
 #elif defined __ia64__
-CheckTypeSize(Colormap,8, 8729, 3, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Colormap,8, 8729, 3, 1.3, NULL, 8171, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(Colormap,4, 8729, 6, 1.2, NULL, 8171, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(Colormap,4, 8729, 10, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Colormap,4, 8729, 10, 1.3, NULL, 8171, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(Colormap,8, 8729, 9, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Colormap,8, 8729, 9, 2.0, NULL, 8171, NULL)
 #elif defined __s390x__
-CheckTypeSize(Colormap,8, 8729, 12, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Colormap,8, 8729, 12, 1.3, NULL, 8171, NULL)
 #elif defined __x86_64__
-CheckTypeSize(Colormap,8, 8729, 11, 1.2, NULL, 8171, NULL)
+CheckTypeSize(Colormap,8, 8729, 11, 2.0, NULL, 8171, NULL)
 #else
 Msg("Find size of Colormap (8729)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",architecture,8729,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8729,0);
 #endif
 
 #if defined __i386__
 CheckTypeSize(GContext,4, 8730, 2, 1.2, NULL, 8171, NULL)
 #elif defined __ia64__
-CheckTypeSize(GContext,8, 8730, 3, 1.2, NULL, 8171, NULL)
+CheckTypeSize(GContext,8, 8730, 3, 1.3, NULL, 8171, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(GContext,4, 8730, 6, 1.2, NULL, 8171, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GContext,4, 8730, 10, 1.2, NULL, 8171, NULL)
+CheckTypeSize(GContext,4, 8730, 10, 1.3, NULL, 8171, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(GContext,8, 8730, 9, 1.2, NULL, 8171, NULL)
+CheckTypeSize(GContext,8, 8730, 9, 2.0, NULL, 8171, NULL)
 #elif defined __s390x__
-CheckTypeSize(GContext,8, 8730, 12, 1.2, NULL, 8171, NULL)
+CheckTypeSize(GContext,8, 8730, 12, 1.3, NULL, 8171, NULL)
 #elif defined __x86_64__
-CheckTypeSize(GContext,8, 8730, 11, 1.2, NULL, 8171, NULL)
+CheckTypeSize(GContext,8, 8730, 11, 2.0, NULL, 8171, NULL)
 #else
 Msg("Find size of GContext (8730)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",architecture,8730,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171,NULL);\n",architecture,8730,0);
 #endif
 
 #if defined __i386__
 CheckTypeSize(KeySym,4, 8731, 2, 1.2, NULL, 8171, NULL)
 #elif defined __ia64__
-CheckTypeSize(KeySym,8, 8731, 3, 1.2, NULL, 8171, NULL)
+CheckTypeSize(KeySym,8, 8731, 3, 1.3, NULL, 8171, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(KeySym,4, 8731, 6, 1.2, NULL, 8171, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(KeySym,4, 8731, 10, 1.2, NULL, 8171, NULL)
+CheckTypeSize(KeySym,4, 8731, 10, 1.3, NULL, 8171, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(KeySym,8, 8731, 9, 1.2, NULL, 8171, NULL)
+CheckTypeSize(KeySym,8, 8731, 9, 2.0, NULL, 8171, NULL)
 #elif defined __s390x__
-CheckTypeSize(KeySym,8, 8731, 12, 1.2, NULL, 8171, NULL)
+CheckTypeSize(KeySym,8, 8731, 12, 1.3, NULL, 8171, NULL)
 #elif defined __x86_64__
-CheckTypeSize(KeySym,8, 8731, 11, 1.2, NULL, 8171, NULL)
+CheckTypeSize(KeySym,8, 8731, 11, 2.0, NULL, 8171, NULL)
 #else
 Msg("Find size of KeySym (8731)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171, NULL);\n",architecture,8731,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8171, NULL);\n",architecture,8731,0);
 #endif
 
 #ifdef TET_TEST

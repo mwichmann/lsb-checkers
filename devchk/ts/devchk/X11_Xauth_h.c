@@ -109,24 +109,24 @@ cnt++;
 #if defined __i386__
 CheckTypeSize(Xauth,32, 8961, 2, 1.2, NULL, 9290, NULL)
 #elif defined __ia64__
-CheckTypeSize(Xauth,64, 8961, 3, 1.2, NULL, 9290, NULL)
+CheckTypeSize(Xauth,64, 8961, 3, 1.3, NULL, 9290, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(Xauth,32, 8961, 6, 1.2, NULL, 9290, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(Xauth,32, 8961, 10, 1.2, NULL, 9290, NULL)
+CheckTypeSize(Xauth,32, 8961, 10, 1.3, NULL, 9290, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(Xauth,64, 8961, 9, 1.2, NULL, 9290, NULL)
+CheckTypeSize(Xauth,64, 8961, 9, 2.0, NULL, 9290, NULL)
 #elif defined __s390x__
-CheckTypeSize(Xauth,64, 8961, 12, 1.2, NULL, 9290, NULL)
+CheckTypeSize(Xauth,64, 8961, 12, 1.3, NULL, 9290, NULL)
 #elif defined __x86_64__
-CheckTypeSize(Xauth,64, 8961, 11, 1.2, NULL, 9290, NULL)
+CheckTypeSize(Xauth,64, 8961, 11, 2.0, NULL, 9290, NULL)
 #else
 Msg("Find size of Xauth (8961)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9290,NULL);\n",architecture,8961,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9290,NULL);\n",architecture,8961,0);
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(struct xauth,32, 9290, 10, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct xauth,32, 9290, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct xauth,address,4,10,32601)
 CheckOffset(struct xauth,address,4,10,32601)
 CheckMemberSize(struct xauth,number_length,2,10,32602)
@@ -174,7 +174,7 @@ CheckOffset(struct xauth,data_length,24,6,32606)
 CheckMemberSize(struct xauth,data,4,6,32607)
 CheckOffset(struct xauth,data,28,6,32607)
 #elif defined __x86_64__
-CheckTypeSize(struct xauth,64, 9290, 11, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct xauth,64, 9290, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct xauth,address,8,11,32601)
 CheckOffset(struct xauth,address,8,11,32601)
 CheckMemberSize(struct xauth,number_length,2,11,32602)
@@ -190,7 +190,7 @@ CheckOffset(struct xauth,data_length,48,11,32606)
 CheckMemberSize(struct xauth,data,8,11,32607)
 CheckOffset(struct xauth,data,56,11,32607)
 #elif defined __s390x__
-CheckTypeSize(struct xauth,64, 9290, 12, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct xauth,64, 9290, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct xauth,address,8,12,32601)
 CheckOffset(struct xauth,address,8,12,32601)
 CheckMemberSize(struct xauth,number_length,2,12,32602)
@@ -206,7 +206,7 @@ CheckOffset(struct xauth,data_length,48,12,32606)
 CheckMemberSize(struct xauth,data,8,12,32607)
 CheckOffset(struct xauth,data,56,12,32607)
 #elif defined __ia64__
-CheckTypeSize(struct xauth,64, 9290, 3, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct xauth,64, 9290, 3, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct xauth,address,8,3,32601)
 CheckOffset(struct xauth,address,8,3,32601)
 CheckMemberSize(struct xauth,number_length,2,3,32602)
@@ -222,7 +222,7 @@ CheckOffset(struct xauth,data_length,48,3,32606)
 CheckMemberSize(struct xauth,data,8,3,32607)
 CheckOffset(struct xauth,data,56,3,32607)
 #elif defined __powerpc64__
-CheckTypeSize(struct xauth,64, 9290, 9, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct xauth,64, 9290, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct xauth,address,8,9,32601)
 CheckOffset(struct xauth,address,8,9,32601)
 CheckMemberSize(struct xauth,number_length,2,9,32602)
@@ -239,7 +239,7 @@ CheckMemberSize(struct xauth,data,8,9,32607)
 CheckOffset(struct xauth,data,56,9,32607)
 #else
 Msg("Find size of xauth (9290)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,9290,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,9290,0);
 #endif
 
 #ifdef TET_TEST

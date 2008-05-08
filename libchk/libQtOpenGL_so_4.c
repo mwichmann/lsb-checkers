@@ -1,7 +1,27 @@
 #include <stdlib.h>
 #include "elfchk.h"
 struct versym libQtOpenGL_so_4[] = {
-	{"_ZN10QGLContext10currentCtxE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN10QGLContext10currentCtxE","",0,LSB_Toolkit_Qt,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QGLContext10currentCtxE","",0,LSB_Toolkit_Qt,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QGLContext10currentCtxE","",0,LSB_Toolkit_Qt,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QGLContext10currentCtxE","",0,LSB_Toolkit_Qt,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QGLContext10currentCtxE","",0,LSB_Toolkit_Qt,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QGLContext10currentCtxE","",0,LSB_Toolkit_Qt,8,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QGLContext10currentCtxE","",0,LSB_Toolkit_Qt,8,0},
+#endif
 	{"_ZN10QGLContext11bindTextureERK6QImageji","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QGLContext11bindTextureERK7QPixmapji","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QGLContext11bindTextureERK7QString","",0,LSB_Toolkit_Qt,0,1},
@@ -124,7 +144,27 @@ struct versym libQtOpenGL_so_4[] = {
 	{"_ZN9QGLWidget15resizeOverlayGLEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGLWidget15updateOverlayGLEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGLWidget16setMouseTrackingEb","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN9QGLWidget16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN9QGLWidget16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QGLWidget16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QGLWidget16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QGLWidget16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QGLWidget16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QGLWidget16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QGLWidget16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN9QGLWidget17convertToGLFormatERK6QImage","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGLWidget17setAutoBufferSwapEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN9QGLWidget18makeOverlayCurrentEv","",0,LSB_Toolkit_Qt,0,1},

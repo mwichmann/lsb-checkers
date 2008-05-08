@@ -50,7 +50,27 @@ struct versym libXt_so_6[] = {
 	{"XtAppWarningMsg","",0,LSB_Graphics,0,1},
 	{"XtAugmentTranslations","",0,LSB_Graphics,0,1},
 	{"XtBuildEventMask","",0,LSB_Graphics,8,1},
-	{"XtCXtToolkitError","",0,LSB_Graphics,0,0},
+#if defined __i386__
+	{"XtCXtToolkitError","",0,LSB_Graphics,4,0},
+#endif
+#if defined __ia64__
+	{"XtCXtToolkitError","",0,LSB_Graphics,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"XtCXtToolkitError","",0,LSB_Graphics,4,0},
+#endif
+#if defined __powerpc64__
+	{"XtCXtToolkitError","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"XtCXtToolkitError","",0,LSB_Graphics,4,0},
+#endif
+#if defined __x86_64__
+	{"XtCXtToolkitError","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390x__
+	{"XtCXtToolkitError","",0,LSB_Graphics,8,0},
+#endif
 	{"XtCallAcceptFocus","",0,LSB_Graphics,1,1},
 	{"XtCallActionProc","",0,LSB_Graphics,0,1},
 	{"XtCallCallbackList","",0,LSB_Graphics,0,1},
@@ -265,9 +285,49 @@ struct versym libXt_so_6[] = {
 	{"XtSetWMColormapWindows","",0,LSB_Graphics,0,1},
 	{"XtSetWarningHandler","",0,LSB_Graphics,0,1},
 	{"XtSetWarningMsgHandler","",0,LSB_Graphics,0,1},
-	{"XtShellStrings","",0,LSB_Graphics,0,0},
+#if defined __i386__
+	{"XtShellStrings","",0,LSB_Graphics,1289,0},
+#endif
+#if defined __ia64__
+	{"XtShellStrings","",0,LSB_Graphics,1289,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"XtShellStrings","",0,LSB_Graphics,1289,0},
+#endif
+#if defined __powerpc64__
+	{"XtShellStrings","",0,LSB_Graphics,1289,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"XtShellStrings","",0,LSB_Graphics,1289,0},
+#endif
+#if defined __x86_64__
+	{"XtShellStrings","",0,LSB_Graphics,1289,0},
+#endif
+#if defined __s390x__
+	{"XtShellStrings","",0,LSB_Graphics,1289,0},
+#endif
 	{"XtStringConversionWarning","",0,LSB_Graphics,0,1},
-	{"XtStrings","",0,LSB_Graphics,0,0},
+#if defined __i386__
+	{"XtStrings","",0,LSB_Graphics,2649,0},
+#endif
+#if defined __ia64__
+	{"XtStrings","",0,LSB_Graphics,2649,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"XtStrings","",0,LSB_Graphics,2649,0},
+#endif
+#if defined __powerpc64__
+	{"XtStrings","",0,LSB_Graphics,2649,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"XtStrings","",0,LSB_Graphics,2649,0},
+#endif
+#if defined __x86_64__
+	{"XtStrings","",0,LSB_Graphics,2649,0},
+#endif
+#if defined __s390x__
+	{"XtStrings","",0,LSB_Graphics,2649,0},
+#endif
 	{"XtSuperclass","",0,LSB_Graphics,0,1},
 	{"XtToolkitInitialize","",0,LSB_Graphics,0,1},
 	{"XtToolkitThreadInitialize","",0,LSB_Graphics,1,1},
@@ -308,30 +368,310 @@ struct versym libXt_so_6[] = {
 	{"_XtInherit","",0,LSB_Graphics,0,1},
 	{"_XtInheritTranslations","",0,LSB_Graphics,0,0},
 	{"_XtIsSubclassOf","",0,LSB_Graphics,1,1},
-	{"applicationShellWidgetClass","",0,LSB_Graphics,0,0},
-	{"compositeClassRec","",0,LSB_Graphics,0,0},
-	{"compositeWidgetClass","",0,LSB_Graphics,0,0},
-	{"constraintClassRec","",0,LSB_Graphics,0,0},
-	{"constraintWidgetClass","",0,LSB_Graphics,0,0},
-	{"coreWidgetClass","",0,LSB_Graphics,0,0},
-	{"objectClass","",0,LSB_Graphics,0,0},
-	{"objectClassRec","",0,LSB_Graphics,0,0},
+#if defined __i386__
+	{"applicationShellWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __ia64__
+	{"applicationShellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"applicationShellWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __powerpc64__
+	{"applicationShellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"applicationShellWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __x86_64__
+	{"applicationShellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390x__
+	{"applicationShellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __i386__
+	{"compositeClassRec","",0,LSB_Graphics,136,0},
+#endif
+#if defined __ia64__
+	{"compositeClassRec","",0,LSB_Graphics,264,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"compositeClassRec","",0,LSB_Graphics,136,0},
+#endif
+#if defined __powerpc64__
+	{"compositeClassRec","",0,LSB_Graphics,264,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"compositeClassRec","",0,LSB_Graphics,136,0},
+#endif
+#if defined __x86_64__
+	{"compositeClassRec","",0,LSB_Graphics,264,0},
+#endif
+#if defined __s390x__
+	{"compositeClassRec","",0,LSB_Graphics,264,0},
+#endif
+#if defined __i386__
+	{"compositeWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __ia64__
+	{"compositeWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"compositeWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __powerpc64__
+	{"compositeWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"compositeWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __x86_64__
+	{"compositeWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390x__
+	{"compositeWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __i386__
+	{"constraintClassRec","",0,LSB_Graphics,164,0},
+#endif
+#if defined __ia64__
+	{"constraintClassRec","",0,LSB_Graphics,312,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"constraintClassRec","",0,LSB_Graphics,164,0},
+#endif
+#if defined __powerpc64__
+	{"constraintClassRec","",0,LSB_Graphics,312,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"constraintClassRec","",0,LSB_Graphics,164,0},
+#endif
+#if defined __x86_64__
+	{"constraintClassRec","",0,LSB_Graphics,312,0},
+#endif
+#if defined __s390x__
+	{"constraintClassRec","",0,LSB_Graphics,312,0},
+#endif
+#if defined __i386__
+	{"constraintWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __ia64__
+	{"constraintWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"constraintWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __powerpc64__
+	{"constraintWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"constraintWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __x86_64__
+	{"constraintWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390x__
+	{"constraintWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __i386__
+	{"coreWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __ia64__
+	{"coreWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"coreWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __powerpc64__
+	{"coreWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"coreWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __x86_64__
+	{"coreWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390x__
+	{"coreWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __i386__
+	{"objectClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __ia64__
+	{"objectClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"objectClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __powerpc64__
+	{"objectClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"objectClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __x86_64__
+	{"objectClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390x__
+	{"objectClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __i386__
+	{"objectClassRec","",0,LSB_Graphics,116,0},
+#endif
+#if defined __ia64__
+	{"objectClassRec","",0,LSB_Graphics,224,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"objectClassRec","",0,LSB_Graphics,116,0},
+#endif
+#if defined __powerpc64__
+	{"objectClassRec","",0,LSB_Graphics,224,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"objectClassRec","",0,LSB_Graphics,116,0},
+#endif
+#if defined __x86_64__
+	{"objectClassRec","",0,LSB_Graphics,224,0},
+#endif
+#if defined __s390x__
+	{"objectClassRec","",0,LSB_Graphics,224,0},
+#endif
 	{"overrideShellClassRec","",0,LSB_Graphics,0,0},
-	{"overrideShellWidgetClass","",0,LSB_Graphics,0,0},
+#if defined __i386__
+	{"overrideShellWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __ia64__
+	{"overrideShellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"overrideShellWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __powerpc64__
+	{"overrideShellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"overrideShellWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __x86_64__
+	{"overrideShellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390x__
+	{"overrideShellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
 	{"rectObjClass","",0,LSB_Graphics,0,0},
 	{"rectObjClassRec","",0,LSB_Graphics,0,0},
 	{"sessionShellClassRec","",0,LSB_Graphics,0,0},
-	{"sessionShellWidgetClass","",0,LSB_Graphics,0,0},
+#if defined __i386__
+	{"sessionShellWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __ia64__
+	{"sessionShellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"sessionShellWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __powerpc64__
+	{"sessionShellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"sessionShellWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __x86_64__
+	{"sessionShellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390x__
+	{"sessionShellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
 	{"shellClassRec","",0,LSB_Graphics,0,0},
-	{"shellWidgetClass","",0,LSB_Graphics,0,0},
+#if defined __i386__
+	{"shellWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __ia64__
+	{"shellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"shellWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __powerpc64__
+	{"shellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"shellWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __x86_64__
+	{"shellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390x__
+	{"shellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
 	{"topLevelShellClassRec","",0,LSB_Graphics,0,0},
-	{"topLevelShellWidgetClass","",0,LSB_Graphics,0,0},
+#if defined __i386__
+	{"topLevelShellWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __ia64__
+	{"topLevelShellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"topLevelShellWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __powerpc64__
+	{"topLevelShellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"topLevelShellWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __x86_64__
+	{"topLevelShellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390x__
+	{"topLevelShellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
 	{"transientShellClassRec","",0,LSB_Graphics,0,0},
-	{"transientShellWidgetClass","",0,LSB_Graphics,0,0},
+#if defined __i386__
+	{"transientShellWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __ia64__
+	{"transientShellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"transientShellWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __powerpc64__
+	{"transientShellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"transientShellWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __x86_64__
+	{"transientShellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390x__
+	{"transientShellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
 	{"widgetClass","",0,LSB_Graphics,0,0},
 	{"widgetClassRec","",0,LSB_Graphics,0,0},
 	{"wmShellClassRec","",0,LSB_Graphics,0,0},
-	{"wmShellWidgetClass","",0,LSB_Graphics,0,0},
+#if defined __i386__
+	{"wmShellWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __ia64__
+	{"wmShellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"wmShellWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __powerpc64__
+	{"wmShellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"wmShellWidgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __x86_64__
+	{"wmShellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390x__
+	{"wmShellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
 	{0,0}};
 
 struct classinfo *libXt_so_6_classinfo[] = {
