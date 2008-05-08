@@ -47,22 +47,22 @@ struct versym libgcc_s_so_1[] = {
 	{"_Unwind_FindEnclosingFunction","GCC_3.3",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
-	{"_Unwind_FindEnclosingFunction","GCC_3.3",0,LSB_Core,0,1},
+	{"_Unwind_FindEnclosingFunction","GCC_3.3",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_Unwind_FindEnclosingFunction","GCC_3.3",0,LSB_Core,0,1},
+	{"_Unwind_FindEnclosingFunction","GCC_3.3",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"_Unwind_FindEnclosingFunction","GCC_3.3",0,LSB_Core,0,1},
+	{"_Unwind_FindEnclosingFunction","GCC_3.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_Unwind_FindEnclosingFunction","GCC_3.3",0,LSB_Core,0,1},
+	{"_Unwind_FindEnclosingFunction","GCC_3.3",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"_Unwind_FindEnclosingFunction","GCC_3.3",0,LSB_Core,0,1},
+	{"_Unwind_FindEnclosingFunction","GCC_3.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390x__
-	{"_Unwind_FindEnclosingFunction","GCC_3.3",0,LSB_Core,0,1},
+	{"_Unwind_FindEnclosingFunction","GCC_3.3",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
 	{"_Unwind_Find_FDE","GCC_3.0",0,LSB_Core,0,1},

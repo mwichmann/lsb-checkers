@@ -5,7 +5,27 @@ struct versym libQtNetwork_so_4[] = {
 	{"_ZN10QTcpServer11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTcpServer11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTcpServer13newConnectionEv","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN10QTcpServer16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN10QTcpServer16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QTcpServer16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QTcpServer16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QTcpServer16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QTcpServer16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QTcpServer16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QTcpServer16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN10QTcpServer18incomingConnectionEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTcpServer19setSocketDescriptorEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTcpServer20waitForNewConnectionEiPb","",0,LSB_Toolkit_Qt,0,1},
@@ -21,7 +41,27 @@ struct versym libQtNetwork_so_4[] = {
 	{"_ZN10QTcpServerD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTcpSocket11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTcpSocket11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN10QTcpSocket16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN10QTcpSocket16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QTcpSocket16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QTcpSocket16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QTcpSocket16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QTcpSocket16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QTcpSocket16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QTcpSocket16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN10QTcpSocketC1EP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTcpSocketC2EP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QTcpSocketD0Ev","",0,LSB_Toolkit_Qt,0,1},
@@ -31,7 +71,27 @@ struct versym libQtNetwork_so_4[] = {
 	{"_ZN10QUdpSocket11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QUdpSocket12readDatagramEPcxP12QHostAddressPt","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QUdpSocket13writeDatagramEPKcxRK12QHostAddresst","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN10QUdpSocket16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN10QUdpSocket16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QUdpSocket16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QUdpSocket16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QUdpSocket16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QUdpSocket16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QUdpSocket16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QUdpSocket16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN10QUdpSocket4bindERK12QHostAddresst","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QUdpSocket4bindERK12QHostAddresst6QFlagsINS_8BindFlagEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QUdpSocket4bindEt","",0,LSB_Toolkit_Qt,0,1},
@@ -123,7 +183,27 @@ struct versym libQtNetwork_so_4[] = {
 	{"_ZN15QAbstractSocket14setSocketStateENS_11SocketStateE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QAbstractSocket15setLocalAddressERK12QHostAddress","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QAbstractSocket16connectionClosedEv","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN15QAbstractSocket16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN15QAbstractSocket16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN15QAbstractSocket16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN15QAbstractSocket16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN15QAbstractSocket16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN15QAbstractSocket16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN15QAbstractSocket16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN15QAbstractSocket16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN15QAbstractSocket16waitForConnectedEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QAbstractSocket16waitForReadyReadEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QAbstractSocket17setReadBufferSizeEx","",0,LSB_Toolkit_Qt,0,1},
@@ -202,7 +282,27 @@ struct versym libQtNetwork_so_4[] = {
 	{"_ZN4QFtp15commandFinishedEib","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QFtp15rawCommandReplyEiRK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QFtp15setTransferModeENS_12TransferModeE","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN4QFtp16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN4QFtp16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN4QFtp16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN4QFtp16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN4QFtp16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN4QFtp16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN4QFtp16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN4QFtp16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN4QFtp20clearPendingCommandsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QFtp20dataTransferProgressExx","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN4QFtp2cdERK7QString","",0,LSB_Toolkit_Qt,0,1},
@@ -238,7 +338,27 @@ struct versym libQtNetwork_so_4[] = {
 	{"_ZN5QHttp15requestFinishedEib","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN5QHttp16dataReadProgressEii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN5QHttp16dataSendProgressEii","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN5QHttp16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN5QHttp16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN5QHttp16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN5QHttp16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN5QHttp16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN5QHttp16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN5QHttp16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN5QHttp16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN5QHttp20clearPendingRequestsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN5QHttp22responseHeaderReceivedERK19QHttpResponseHeader","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN5QHttp3getERK7QStringP9QIODevice","",0,LSB_Toolkit_Qt,0,1},

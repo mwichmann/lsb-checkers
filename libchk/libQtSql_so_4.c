@@ -6,7 +6,27 @@ struct versym libQtSql_so_4[] = {
 	{"_ZN10QSqlDriver12setLastErrorERK9QSqlError","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QSqlDriver12setOpenErrorEb","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QSqlDriver16beginTransactionEv","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN10QSqlDriver16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN10QSqlDriver16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QSqlDriver16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QSqlDriver16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QSqlDriver16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QSqlDriver16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QSqlDriver16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QSqlDriver16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN10QSqlDriver17commitTransactionEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QSqlDriver19rollbackTransactionEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN10QSqlDriver7setOpenEb","",0,LSB_Toolkit_Qt,0,1},
@@ -66,7 +86,27 @@ struct versym libQtSql_so_4[] = {
 	{"_ZN12QSqlDatabase14removeDatabaseERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QSqlDatabase15connectionNamesEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QSqlDatabase15setDatabaseNameERK7QString","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt,8,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt,8,0},
+#endif
 	{"_ZN12QSqlDatabase17isDriverAvailableERK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QSqlDatabase17registerSqlDriverERK7QStringP21QSqlDriverCreatorBase","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QSqlDatabase17setConnectOptionsERK7QString","",0,LSB_Toolkit_Qt,0,1},
@@ -97,7 +137,27 @@ struct versym libQtSql_so_4[] = {
 	{"_ZN14QSqlQueryModel13insertColumnsEiiRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QSqlQueryModel13removeColumnsEiiRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QSqlQueryModel13setHeaderDataEiN2Qt11OrientationERK8QVarianti","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN14QSqlQueryModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN14QSqlQueryModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN14QSqlQueryModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN14QSqlQueryModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN14QSqlQueryModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN14QSqlQueryModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN14QSqlQueryModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN14QSqlQueryModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN14QSqlQueryModel5clearEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QSqlQueryModel8setQueryERK7QStringRK12QSqlDatabase","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QSqlQueryModel8setQueryERK9QSqlQuery","",0,LSB_Toolkit_Qt,0,1},
@@ -121,7 +181,27 @@ struct versym libQtSql_so_4[] = {
 	{"_ZN14QSqlTableModel13removeColumnsEiiRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QSqlTableModel13setPrimaryKeyERK9QSqlIndex","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QSqlTableModel15setEditStrategyENS_12EditStrategyE","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN14QSqlTableModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN14QSqlTableModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN14QSqlTableModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN14QSqlTableModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN14QSqlTableModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN14QSqlTableModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN14QSqlTableModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN14QSqlTableModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN14QSqlTableModel16updateRowInTableEiRK10QSqlRecord","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QSqlTableModel18deleteRowFromTableEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN14QSqlTableModel18insertRowIntoTableERK10QSqlRecord","",0,LSB_Toolkit_Qt,0,1},
@@ -148,7 +228,27 @@ struct versym libQtSql_so_4[] = {
 	{"_ZN14QSqlTableModelD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QSqlDriverPlugin11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QSqlDriverPlugin11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN16QSqlDriverPlugin16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN16QSqlDriverPlugin16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN16QSqlDriverPlugin16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN16QSqlDriverPlugin16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN16QSqlDriverPlugin16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN16QSqlDriverPlugin16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN16QSqlDriverPlugin16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN16QSqlDriverPlugin16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN16QSqlDriverPluginC1EP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QSqlDriverPluginC2EP7QObject","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN16QSqlDriverPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
@@ -158,7 +258,27 @@ struct versym libQtSql_so_4[] = {
 	{"_ZN24QSqlRelationalTableModel11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN24QSqlRelationalTableModel11setRelationEiRK12QSqlRelation","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN24QSqlRelationalTableModel13removeColumnsEiiRK11QModelIndex","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN24QSqlRelationalTableModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,0,0},
+#if defined __i386__
+	{"_ZN24QSqlRelationalTableModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __ia64__
+	{"_ZN24QSqlRelationalTableModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN24QSqlRelationalTableModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN24QSqlRelationalTableModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN24QSqlRelationalTableModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
+#endif
+#if defined __x86_64__
+	{"_ZN24QSqlRelationalTableModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
+#if defined __s390x__
+	{"_ZN24QSqlRelationalTableModel16staticMetaObjectE","",0,LSB_Toolkit_Qt,32,0},
+#endif
 	{"_ZN24QSqlRelationalTableModel16updateRowInTableEiRK10QSqlRecord","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN24QSqlRelationalTableModel18insertRowIntoTableERK10QSqlRecord","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN24QSqlRelationalTableModel5clearEv","",0,LSB_Toolkit_Qt,0,1},
