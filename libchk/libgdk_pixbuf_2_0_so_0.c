@@ -58,9 +58,69 @@ struct versym libgdk_pixbuf_2_0_so_0[] = {
 	{"gdk_pixbuf_loader_new_with_type","",0,LSB_Toolkit_Gtk,0,1},
 	{"gdk_pixbuf_loader_set_size","",0,LSB_Toolkit_Gtk,0,1},
 	{"gdk_pixbuf_loader_write","",0,LSB_Toolkit_Gtk,0,1},
-	{"gdk_pixbuf_major_version","",0,LSB_Toolkit_Gtk,0,0},
-	{"gdk_pixbuf_micro_version","",0,LSB_Toolkit_Gtk,0,0},
-	{"gdk_pixbuf_minor_version","",0,LSB_Toolkit_Gtk,0,0},
+#if defined __i386__
+	{"gdk_pixbuf_major_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __ia64__
+	{"gdk_pixbuf_major_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"gdk_pixbuf_major_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc64__
+	{"gdk_pixbuf_major_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"gdk_pixbuf_major_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __x86_64__
+	{"gdk_pixbuf_major_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390x__
+	{"gdk_pixbuf_major_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __i386__
+	{"gdk_pixbuf_micro_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __ia64__
+	{"gdk_pixbuf_micro_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"gdk_pixbuf_micro_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc64__
+	{"gdk_pixbuf_micro_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"gdk_pixbuf_micro_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __x86_64__
+	{"gdk_pixbuf_micro_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390x__
+	{"gdk_pixbuf_micro_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __i386__
+	{"gdk_pixbuf_minor_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __ia64__
+	{"gdk_pixbuf_minor_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"gdk_pixbuf_minor_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc64__
+	{"gdk_pixbuf_minor_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"gdk_pixbuf_minor_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __x86_64__
+	{"gdk_pixbuf_minor_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390x__
+	{"gdk_pixbuf_minor_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
 	{"gdk_pixbuf_new","",0,LSB_Toolkit_Gtk,0,1},
 	{"gdk_pixbuf_new_from_data","",0,LSB_Toolkit_Gtk,0,1},
 	{"gdk_pixbuf_new_from_file","",0,LSB_Toolkit_Gtk,0,1},
@@ -80,7 +140,27 @@ struct versym libgdk_pixbuf_2_0_so_0[] = {
 	{"gdk_pixbuf_savev","",0,LSB_Toolkit_Gtk,0,1},
 	{"gdk_pixbuf_scale","",0,LSB_Toolkit_Gtk,0,1},
 	{"gdk_pixbuf_scale_simple","",0,LSB_Toolkit_Gtk,0,1},
-	{"gdk_pixbuf_version","",0,LSB_Toolkit_Gtk,0,0},
+#if defined __i386__
+	{"gdk_pixbuf_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __ia64__
+	{"gdk_pixbuf_version","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __powerpc64__
+	{"gdk_pixbuf_version","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"gdk_pixbuf_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"gdk_pixbuf_version","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __s390x__
+	{"gdk_pixbuf_version","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __x86_64__
+	{"gdk_pixbuf_version","",0,LSB_Toolkit_Gtk,8,0},
+#endif
 	{"gdk_pixdata_deserialize","",0,LSB_Toolkit_Gtk,0,1},
 	{"gdk_pixdata_from_pixbuf","",0,LSB_Toolkit_Gtk,0,1},
 	{"gdk_pixdata_serialize","",0,LSB_Toolkit_Gtk,0,1},

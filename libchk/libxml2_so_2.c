@@ -31,8 +31,48 @@ struct versym libxml2_so_2[] = {
 	{"__xmlSubstituteEntitiesDefaultValue","",0,LSB_XML,0,1},
 	{"__xmlTreeIndentString","",0,LSB_XML,0,1},
 	{"docbDefaultSAXHandlerInit","",0,LSB_XML,0,1},
-	{"emptyExp","",0,LSB_XML,0,0},
-	{"forbiddenExp","",0,LSB_XML,0,0},
+#if defined __i386__
+	{"emptyExp","",0,LSB_XML,4,0},
+#endif
+#if defined __ia64__
+	{"emptyExp","",0,LSB_XML,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"emptyExp","",0,LSB_XML,4,0},
+#endif
+#if defined __powerpc64__
+	{"emptyExp","",0,LSB_XML,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"emptyExp","",0,LSB_XML,4,0},
+#endif
+#if defined __x86_64__
+	{"emptyExp","",0,LSB_XML,8,0},
+#endif
+#if defined __s390x__
+	{"emptyExp","",0,LSB_XML,8,0},
+#endif
+#if defined __i386__
+	{"forbiddenExp","",0,LSB_XML,4,0},
+#endif
+#if defined __ia64__
+	{"forbiddenExp","",0,LSB_XML,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"forbiddenExp","",0,LSB_XML,4,0},
+#endif
+#if defined __powerpc64__
+	{"forbiddenExp","",0,LSB_XML,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"forbiddenExp","",0,LSB_XML,4,0},
+#endif
+#if defined __x86_64__
+	{"forbiddenExp","",0,LSB_XML,8,0},
+#endif
+#if defined __s390x__
+	{"forbiddenExp","",0,LSB_XML,8,0},
+#endif
 	{"htmlAttrAllowed","",0,LSB_XML,0,1},
 	{"htmlAutoCloseTag","",0,LSB_XML,0,1},
 	{"htmlCreateFileParserCtxt","",0,LSB_XML,0,1},
@@ -316,7 +356,27 @@ struct versym libxml2_so_2[] = {
 	{"xmlFileOpen","",0,LSB_XML,0,1},
 	{"xmlFileRead","",0,LSB_XML,0,1},
 	{"xmlFindCharEncodingHandler","",0,LSB_XML,0,1},
-	{"xmlFree","",0,LSB_XML,0,0},
+#if defined __i386__
+	{"xmlFree","",0,LSB_XML,4,0},
+#endif
+#if defined __ia64__
+	{"xmlFree","",0,LSB_XML,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"xmlFree","",0,LSB_XML,4,0},
+#endif
+#if defined __powerpc64__
+	{"xmlFree","",0,LSB_XML,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"xmlFree","",0,LSB_XML,4,0},
+#endif
+#if defined __x86_64__
+	{"xmlFree","",0,LSB_XML,8,0},
+#endif
+#if defined __s390x__
+	{"xmlFree","",0,LSB_XML,8,0},
+#endif
 	{"xmlFreeAttributeTable","",0,LSB_XML,0,1},
 	{"xmlFreeAutomata","",0,LSB_XML,0,1},
 	{"xmlFreeCatalog","",0,LSB_XML,0,1},
@@ -468,8 +528,48 @@ struct versym libxml2_so_2[] = {
 	{"xmlLockLibrary","",0,LSB_XML,0,1},
 	{"xmlLsCountNode","",0,LSB_XML,0,1},
 	{"xmlLsOneNode","",0,LSB_XML,0,1},
-	{"xmlMalloc","",0,LSB_XML,0,0},
-	{"xmlMallocAtomic","",0,LSB_XML,0,0},
+#if defined __i386__
+	{"xmlMalloc","",0,LSB_XML,4,0},
+#endif
+#if defined __ia64__
+	{"xmlMalloc","",0,LSB_XML,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"xmlMalloc","",0,LSB_XML,4,0},
+#endif
+#if defined __powerpc64__
+	{"xmlMalloc","",0,LSB_XML,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"xmlMalloc","",0,LSB_XML,4,0},
+#endif
+#if defined __x86_64__
+	{"xmlMalloc","",0,LSB_XML,8,0},
+#endif
+#if defined __s390x__
+	{"xmlMalloc","",0,LSB_XML,8,0},
+#endif
+#if defined __i386__
+	{"xmlMallocAtomic","",0,LSB_XML,4,0},
+#endif
+#if defined __ia64__
+	{"xmlMallocAtomic","",0,LSB_XML,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"xmlMallocAtomic","",0,LSB_XML,4,0},
+#endif
+#if defined __powerpc64__
+	{"xmlMallocAtomic","",0,LSB_XML,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"xmlMallocAtomic","",0,LSB_XML,4,0},
+#endif
+#if defined __x86_64__
+	{"xmlMallocAtomic","",0,LSB_XML,8,0},
+#endif
+#if defined __s390x__
+	{"xmlMallocAtomic","",0,LSB_XML,8,0},
+#endif
 	{"xmlMallocAtomicLoc","",0,LSB_XML,0,1},
 	{"xmlMallocLoc","",0,LSB_XML,0,1},
 	{"xmlMemBlocks","",0,LSB_XML,0,1},
@@ -480,7 +580,27 @@ struct versym libxml2_so_2[] = {
 	{"xmlMemRealloc","",0,LSB_XML,0,1},
 	{"xmlMemSetup","",0,LSB_XML,0,1},
 	{"xmlMemShow","",0,LSB_XML,0,1},
-	{"xmlMemStrdup","",0,LSB_XML,0,0},
+#if defined __i386__
+	{"xmlMemStrdup","",0,LSB_XML,4,0},
+#endif
+#if defined __ia64__
+	{"xmlMemStrdup","",0,LSB_XML,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"xmlMemStrdup","",0,LSB_XML,4,0},
+#endif
+#if defined __powerpc64__
+	{"xmlMemStrdup","",0,LSB_XML,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"xmlMemStrdup","",0,LSB_XML,4,0},
+#endif
+#if defined __x86_64__
+	{"xmlMemStrdup","",0,LSB_XML,8,0},
+#endif
+#if defined __s390x__
+	{"xmlMemStrdup","",0,LSB_XML,8,0},
+#endif
 	{"xmlMemStrdupLoc","",0,LSB_XML,0,1},
 	{"xmlMemUsed","",0,LSB_XML,0,1},
 	{"xmlMemoryDump","",0,LSB_XML,0,1},
@@ -651,7 +771,27 @@ struct versym libxml2_so_2[] = {
 	{"xmlParserInputGrow","",0,LSB_XML,0,1},
 	{"xmlParserInputRead","",0,LSB_XML,0,1},
 	{"xmlParserInputShrink","",0,LSB_XML,0,1},
-	{"xmlParserMaxDepth","",0,LSB_XML,0,0},
+#if defined __i386__
+	{"xmlParserMaxDepth","",0,LSB_XML,4,0},
+#endif
+#if defined __ia64__
+	{"xmlParserMaxDepth","",0,LSB_XML,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"xmlParserMaxDepth","",0,LSB_XML,4,0},
+#endif
+#if defined __powerpc64__
+	{"xmlParserMaxDepth","",0,LSB_XML,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"xmlParserMaxDepth","",0,LSB_XML,4,0},
+#endif
+#if defined __x86_64__
+	{"xmlParserMaxDepth","",0,LSB_XML,4,0},
+#endif
+#if defined __s390x__
+	{"xmlParserMaxDepth","",0,LSB_XML,4,0},
+#endif
 	{"xmlParserPrintFileContext","",0,LSB_XML,0,1},
 	{"xmlParserPrintFileInfo","",0,LSB_XML,0,1},
 	{"xmlParserValidityError","",0,LSB_XML,0,1},
@@ -688,7 +828,27 @@ struct versym libxml2_so_2[] = {
 	{"xmlReaderNewMemory","",0,LSB_XML,0,1},
 	{"xmlReaderNewWalker","",0,LSB_XML,0,1},
 	{"xmlReaderWalker","",0,LSB_XML,0,1},
-	{"xmlRealloc","",0,LSB_XML,0,0},
+#if defined __i386__
+	{"xmlRealloc","",0,LSB_XML,4,0},
+#endif
+#if defined __ia64__
+	{"xmlRealloc","",0,LSB_XML,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"xmlRealloc","",0,LSB_XML,4,0},
+#endif
+#if defined __powerpc64__
+	{"xmlRealloc","",0,LSB_XML,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"xmlRealloc","",0,LSB_XML,4,0},
+#endif
+#if defined __x86_64__
+	{"xmlRealloc","",0,LSB_XML,8,0},
+#endif
+#if defined __s390x__
+	{"xmlRealloc","",0,LSB_XML,8,0},
+#endif
 	{"xmlReallocLoc","",0,LSB_XML,0,1},
 	{"xmlReconciliateNs","",0,LSB_XML,0,1},
 	{"xmlRecoverDoc","",0,LSB_XML,0,1},
@@ -890,14 +1050,34 @@ struct versym libxml2_so_2[] = {
 	{"xmlStreamPop","",0,LSB_XML,0,1},
 	{"xmlStreamPush","",0,LSB_XML,0,1},
 	{"xmlStreamPushAttr","",0,LSB_XML,0,1},
-	{"xmlStringComment","",0,LSB_XML,0,0},
+#if defined __i386__
+	{"xmlStringComment","",0,LSB_XML,4,0},
+#endif
+#if defined __ia64__
+	{"xmlStringComment","",0,LSB_XML,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"xmlStringComment","",0,LSB_XML,4,0},
+#endif
+#if defined __powerpc64__
+	{"xmlStringComment","",0,LSB_XML,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"xmlStringComment","",0,LSB_XML,8,0},
+#endif
+#if defined __x86_64__
+	{"xmlStringComment","",0,LSB_XML,8,0},
+#endif
+#if defined __s390x__
+	{"xmlStringComment","",0,LSB_XML,8,0},
+#endif
 	{"xmlStringCurrentChar","",0,LSB_XML,0,1},
 	{"xmlStringDecodeEntities","",0,LSB_XML,0,1},
 	{"xmlStringGetNodeList","",0,LSB_XML,0,1},
 	{"xmlStringLenDecodeEntities","",0,LSB_XML,0,1},
 	{"xmlStringLenGetNodeList","",0,LSB_XML,0,1},
-	{"xmlStringText","",0,LSB_XML,0,0},
-	{"xmlStringTextNoenc","",0,LSB_XML,0,0},
+	{"xmlStringText","",0,LSB_XML,5,0},
+	{"xmlStringTextNoenc","",0,LSB_XML,10,0},
 	{"xmlStrlen","",0,LSB_XML,0,1},
 	{"xmlStrncasecmp","",0,LSB_XML,0,1},
 	{"xmlStrncat","",0,LSB_XML,0,1},
@@ -1189,8 +1369,48 @@ struct versym libxml2_so_2[] = {
 	{"xmlXPathLocalNameFunction","",0,LSB_XML,0,1},
 	{"xmlXPathModValues","",0,LSB_XML,0,1},
 	{"xmlXPathMultValues","",0,LSB_XML,0,1},
-	{"xmlXPathNAN","",0,LSB_XML,0,0},
-	{"xmlXPathNINF","",0,LSB_XML,0,0},
+#if defined __i386__
+	{"xmlXPathNAN","",0,LSB_XML,8,0},
+#endif
+#if defined __ia64__
+	{"xmlXPathNAN","",0,LSB_XML,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"xmlXPathNAN","",0,LSB_XML,8,0},
+#endif
+#if defined __powerpc64__
+	{"xmlXPathNAN","",0,LSB_XML,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"xmlXPathNAN","",0,LSB_XML,8,0},
+#endif
+#if defined __x86_64__
+	{"xmlXPathNAN","",0,LSB_XML,8,0},
+#endif
+#if defined __s390x__
+	{"xmlXPathNAN","",0,LSB_XML,8,0},
+#endif
+#if defined __i386__
+	{"xmlXPathNINF","",0,LSB_XML,8,0},
+#endif
+#if defined __ia64__
+	{"xmlXPathNINF","",0,LSB_XML,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"xmlXPathNINF","",0,LSB_XML,8,0},
+#endif
+#if defined __powerpc64__
+	{"xmlXPathNINF","",0,LSB_XML,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"xmlXPathNINF","",0,LSB_XML,8,0},
+#endif
+#if defined __x86_64__
+	{"xmlXPathNINF","",0,LSB_XML,8,0},
+#endif
+#if defined __s390x__
+	{"xmlXPathNINF","",0,LSB_XML,8,0},
+#endif
 	{"xmlXPathNamespaceURIFunction","",0,LSB_XML,0,1},
 	{"xmlXPathNewBoolean","",0,LSB_XML,0,1},
 	{"xmlXPathNewCString","",0,LSB_XML,0,1},
@@ -1235,7 +1455,27 @@ struct versym libxml2_so_2[] = {
 	{"xmlXPathNumberFunction","",0,LSB_XML,0,1},
 	{"xmlXPathObjectCopy","",0,LSB_XML,0,1},
 	{"xmlXPathOrderDocElems","",0,LSB_XML,0,1},
-	{"xmlXPathPINF","",0,LSB_XML,0,0},
+#if defined __i386__
+	{"xmlXPathPINF","",0,LSB_XML,8,0},
+#endif
+#if defined __ia64__
+	{"xmlXPathPINF","",0,LSB_XML,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"xmlXPathPINF","",0,LSB_XML,8,0},
+#endif
+#if defined __powerpc64__
+	{"xmlXPathPINF","",0,LSB_XML,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"xmlXPathPINF","",0,LSB_XML,8,0},
+#endif
+#if defined __x86_64__
+	{"xmlXPathPINF","",0,LSB_XML,8,0},
+#endif
+#if defined __s390x__
+	{"xmlXPathPINF","",0,LSB_XML,8,0},
+#endif
 	{"xmlXPathParseNCName","",0,LSB_XML,0,1},
 	{"xmlXPathParseName","",0,LSB_XML,0,1},
 	{"xmlXPathPopBoolean","",0,LSB_XML,0,1},

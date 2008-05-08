@@ -688,7 +688,12 @@ check_size(ElfFile *file, struct versym *entry)
       if( file->syms[j].st_size != entry->size ) {
         fprintf(stderr, "size for %s doesn't match %ld vs %d\n",
                 symbol_name, (u_long)file->syms[j].st_size, entry->size );
-        return -1;
+	/*
+	 * Negative return value indicates an error.
+	 * We also need real size for correct error message generation, so
+	 * let's return negative real size.
+	 */
+        return -(u_long)file->syms[j].st_size;
       } else {
 #ifdef DEBUG
         fprintf(stderr, "size for %s does match %ld vs %d\n",
@@ -759,6 +764,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
   struct stat stat_info;
   FILE *md5_proc;
   int i;
+  int size_check_result;
 
   tetj_activity_count++;
   tetj_testcase_start(journal, tetj_activity_count, libname, "");
@@ -853,7 +859,8 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
     /* Check the symbol size, if it's an OBJT */
-    switch(check_size(file, entries+i)) {
+    size_check_result=check_size(file, entries+i);
+    switch(size_check_result) {
         case 0: /* Not an obj */
             break;
         case 1: /* Passed */
@@ -863,7 +870,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
             tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
             tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
             break;
-        case -1: /* Failed */
+        default: /* Failed */
             tetj_tp_count++;
             tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
                                tmp_string);
@@ -875,6 +882,11 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
             tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
                                0, 0, 0, tmp_string2);
 #endif
+            snprintf(tmp_string2, TMP_STRING_SIZE, "Found wrong symbol size for %s: found %ld, expected %d",
+                     tmp_string, -size_check_result, (entries+i)->size);
+            printf("%s\n", tmp_string2);
+            tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+                               0, 0, 0, tmp_string2);
             tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
             tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
      }

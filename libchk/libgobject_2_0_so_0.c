@@ -125,7 +125,27 @@ struct versym libgobject_2_0_so_0[] = {
 	{"g_param_spec_sink","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_param_spec_steal_qdata","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_param_spec_string","",0,LSB_Toolkit_Gtk,0,1},
-	{"g_param_spec_types","",0,LSB_Toolkit_Gtk,0,0},
+#if defined __i386__
+	{"g_param_spec_types","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __ia64__
+	{"g_param_spec_types","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"g_param_spec_types","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc64__
+	{"g_param_spec_types","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"g_param_spec_types","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __x86_64__
+	{"g_param_spec_types","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __s390x__
+	{"g_param_spec_types","",0,LSB_Toolkit_Gtk,8,0},
+#endif
 	{"g_param_spec_uchar","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_param_spec_uint","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_param_spec_uint64","",0,LSB_Toolkit_Gtk,0,1},

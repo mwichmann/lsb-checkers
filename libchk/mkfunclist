@@ -354,6 +354,41 @@ for(1..$lsth->rows) {
 				$sthNotGeneric->finish;
 			}
 		}
+
+		if( $entry->{'ATsize'} == 0 and $entry->{'Itype'} eq "Data" and $entry->{'Aname'} eq "All" and $entry->{'ATtid'} > 0 ) {
+			# Generic data symbol found; the size can be arch specific
+			$selectArchRetSize = "SELECT Asymbol, ATaid, ATsize FROM ArchType ";
+			$selectArchRetSize.= "JOIN Architecture ON ATaid=Aid ";
+			$selectArchRetSize.= "WHERE ATaid>1 AND ATtid=".$entry->{'ATtid'};
+			$sthArchRetSize = $dbh->prepare($selectArchRetSize);
+			$sthArchRetSize->execute or die "Can't execute $selectArchRetSize query: ".DBI->errstr;
+			if( $sthArchRetSize->rows ) {
+				if( $sthArchRetSize->rows < 7 ) {
+					print STDERR "WARNING: Found only ".$sthArchRetSize->rows." records when looking for arch-specific size of generic interface '".$entry->{'Iname'}."' (7 records expected)\n";
+				}
+
+				for(1..$sthArchRetSize->rows) {
+					$entryArchRetSize = $sthArchRetSize->fetchrow_hashref;
+					print LIB "#if ".$entryArchRetSize->{'Asymbol'}."\n";
+					print LIB "\t{\"".$entry->{'Iname'}."\",\"".$entry->{'Vname'}."\",";
+					print LIB "0,".$entry->{'SMname'}.",".$entryArchRetSize->{'ATsize'}.",0},\n";
+					print LIB "#endif\n";
+				}
+				
+				if( $sthArchRetSize->rows == 7 ) {
+					# If less then 7 records are found, then checks are printed not for all architectures
+					# Let's print in this case generic check, too, with zero size (this means that the size
+					# is not actually checked).
+					# (Surely, such situation should be considered as lack of data in the db
+					# and corrected as soon as possible)
+					# If everything is ok, generic check is not required and we may proceed to next symbol
+					print TXT $entry->{'Iname'}."\n";
+					$sthArchRetSize->finish;
+					next;
+				}
+			}
+			$sthArchRetSize->finish;
+		}
 		printf LIB "\t{\"%s\",\"%s\",",$entry->{'Iname'},$entry->{'Vname'};
 		printf LIB "0,%s,%s,",$entry->{'SMname'},$entry->{'ATsize'};
 		if( $entry->{'Itype'} eq "Data" ) {
