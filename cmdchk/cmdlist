@@ -112,6 +112,7 @@ rm /bin/rm
 rmdir /bin/rmdir
 sed /bin/sed
 sendmail /usr/sbin/sendmail
+seq None
 sh /bin/sh
 shutdown /sbin/shutdown
 sleep None
