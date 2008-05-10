@@ -31,7 +31,7 @@ install:
 
 # Distclean means will need database to rebuild
 distclean: clean
-	rm -f cmds.h cmdlist
+	rm -f $(GENSRCS)
 
 clean:
 	rm -f $(OBJS) cmdchk
