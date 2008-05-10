@@ -117,6 +117,7 @@ struct cmds core_cmdlist[] = {
 	{"rmdir", "/bin/rmdir"},
 	{"sed", "/bin/sed"},
 	{"sendmail", "/usr/sbin/sendmail"},
+	{"seq", ""},
 	{"sh", "/bin/sh"},
 	{"shutdown", "/sbin/shutdown"},
 	{"sleep", ""},
