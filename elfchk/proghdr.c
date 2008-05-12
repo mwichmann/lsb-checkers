@@ -126,66 +126,72 @@ checkPT_LOAD(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 }
 
 int
-checkPT_DYNAMIC(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
+checkPT_DYNAMIC(ElfFile * file, Elf_Phdr * hdr, struct tetj_handle *journal)
 {
-  char tmp_string[TMP_STRING_SIZE+1];
+  char tmp_string[TMP_STRING_SIZE + 1];
   int i;
-	int fail = 0;
-	
+  int fail = 0;
+
   tetj_tp_count++;
 
-  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
-                     "Check DYNAMIC program header");
+  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+		     "Check DYNAMIC program header");
 
-  for(i=0;i<file->numsh;i++) {
-	if( (file->saddr[i].sh_addr >= hdr->p_vaddr) &&
-			(file->saddr[i].sh_addr < hdr->p_vaddr+hdr->p_memsz) &&
-			(file->saddr[i].sh_flags&SHF_ALLOC) ) {
-		if(file->saddr[i].sh_type == SHT_DYNAMIC) {
-			/* See if section extends past this end of this segment */
-			if( file->saddr[i].sh_addr != hdr->p_vaddr ) {
-				snprintf(tmp_string, TMP_STRING_SIZE,
-			  	"Dynamic section address does not match Segment start address" );
-				tetj_testcase_info(journal, tetj_activity_count,
-						tetj_tp_count, 0, 0, 0, tmp_string);
-				fprintf(stderr, "%s\n", tmp_string);
-				fail = 1;
-		  	}
-			if( file->saddr[i].sh_offset != hdr->p_offset ) {
-				snprintf(tmp_string, TMP_STRING_SIZE,
-			  	"Dynamic section offset does not match Segment start address" );
-				tetj_testcase_info(journal, tetj_activity_count,
-						tetj_tp_count, 0, 0, 0, tmp_string);
-				fprintf(stderr, "%s\n", tmp_string);
-				fail = 1;
-		  	}
-			if( file->saddr[i].sh_size != hdr->p_filesz ) {
-				snprintf(tmp_string, TMP_STRING_SIZE,
-			  	"Dynamic section size does not match Segment size" );
-				tetj_testcase_info(journal, tetj_activity_count,
-						tetj_tp_count, 0, 0, 0, tmp_string);
-				fprintf(stderr, "%s\n", tmp_string);
-				fail = 1;
-		  }
-		/* Contents get checked by the section processing code */
-	} else {
-			snprintf(tmp_string, TMP_STRING_SIZE,
-			  "Non-dynamic section %s found in PT_DYNAMIC segment",
-			  ElfGetString(file,file->saddr[i].sh_name) );
-			tetj_testcase_info(journal, tetj_activity_count,
-					tetj_tp_count, 0, 0, 0, tmp_string);
-			fprintf(stderr, "%s\n", tmp_string);
-			fail = 1;
-		} 
+  for (i = 0; i < file->numsh; i++) {
+    if ((file->saddr[i].sh_addr >= hdr->p_vaddr) &&
+	(file->saddr[i].sh_addr < hdr->p_vaddr + hdr->p_memsz) &&
+	(file->saddr[i].sh_flags & SHF_ALLOC)) {
+      if (file->saddr[i].sh_type == SHT_DYNAMIC) {
+	/* See if section extends past this end of this segment */
+	if (file->saddr[i].sh_addr != hdr->p_vaddr) {
+	  snprintf(tmp_string, TMP_STRING_SIZE,
+		   "Dynamic section address does not match Segment start address: %#x vs. %#x",
+		   (unsigned int) file->saddr[i].sh_addr,
+		   (unsigned int) hdr->p_vaddr);
+	  tetj_testcase_info(journal, tetj_activity_count,
+			     tetj_tp_count, 0, 0, 0, tmp_string);
+	  fprintf(stderr, "%s\n", tmp_string);
+	  fail = 1;
 	}
+	if (file->saddr[i].sh_offset != hdr->p_offset) {
+	  snprintf(tmp_string, TMP_STRING_SIZE,
+		   "Dynamic section offset does not match Segment offset: %#x vs. %#x",
+		   (unsigned int) file->saddr[i].sh_offset,
+		   (unsigned int) hdr->p_offset);
+	  tetj_testcase_info(journal, tetj_activity_count,
+			     tetj_tp_count, 0, 0, 0, tmp_string);
+	  fprintf(stderr, "%s\n", tmp_string);
+	  fail = 1;
+	}
+	if (file->saddr[i].sh_size != hdr->p_filesz) {
+	  snprintf(tmp_string, TMP_STRING_SIZE,
+		   "Dynamic section size does not match Segment size: %#x vs. %#x",
+		   (unsigned int) file->saddr[i].sh_size,
+		   (unsigned int) hdr->p_filesz);
+	  tetj_testcase_info(journal, tetj_activity_count,
+			     tetj_tp_count, 0, 0, 0, tmp_string);
+	  fprintf(stderr, "%s\n", tmp_string);
+	  fail = 1;
+	}
+	/* Contents get checked by the section processing code */
+      } else {
+	snprintf(tmp_string, TMP_STRING_SIZE,
+		 "Non-dynamic section %s found in PT_DYNAMIC segment",
+		 ElfGetString(file, file->saddr[i].sh_name));
+	tetj_testcase_info(journal, tetj_activity_count,
+			   tetj_tp_count, 0, 0, 0, tmp_string);
+	fprintf(stderr, "%s\n", tmp_string);
+	fail = 1;
+      }
+    }
   }
 
-	tetj_result(journal, tetj_activity_count, tetj_tp_count, 
-							fail==1 ? TETJ_FAIL : TETJ_PASS);
+  tetj_result(journal, tetj_activity_count, tetj_tp_count,
+	      fail == 1 ? TETJ_FAIL : TETJ_PASS);
 
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
-  return fail==1 ? -1 : 1;
+  return fail == 1 ? -1 : 1;
 }
 
 int
@@ -215,65 +221,72 @@ checkPT_INTERP(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 }
 
 int
-checkPT_NOTE(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
+checkPT_NOTE(ElfFile * file, Elf_Phdr * hdr, struct tetj_handle *journal)
 {
-  int i,fail=0;
-  char tmp_string[TMP_STRING_SIZE+1];
-	
+  int i, fail = 0;
+  char tmp_string[TMP_STRING_SIZE + 1];
+
   tetj_tp_count++;
 
-  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
-                     "Check NOTE program header");
+  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+		     "Check NOTE program header");
 
-  for(i=0;i<file->numsh;i++) {
-		if( (file->saddr[i].sh_addr >= hdr->p_vaddr) &&
-				(file->saddr[i].sh_addr < hdr->p_vaddr+hdr->p_memsz) &&
-				(file->saddr[i].sh_flags&SHF_ALLOC) ) {
-			/* Section appears to belong to this segment */
-			if(file->saddr[i].sh_type == SHT_NOTE) {
-				/* See if section extends past this end of this segment */
-				if( file->saddr[i].sh_addr != hdr->p_vaddr ) {
-					snprintf(tmp_string, TMP_STRING_SIZE,
-			  		"NOTE section address does not match Segment start address" );
-					tetj_testcase_info(journal, tetj_activity_count,
-						tetj_tp_count, 0, 0, 0, tmp_string);
-					fprintf(stderr, "%s\n", tmp_string);
-					fail = 1;
-		  		}
-				if( file->saddr[i].sh_offset != hdr->p_offset ) {
-					snprintf(tmp_string, TMP_STRING_SIZE,
-			  		"NOTE section offset does not match Segment start address" );
-					tetj_testcase_info(journal, tetj_activity_count,
-						tetj_tp_count, 0, 0, 0, tmp_string);
-					fprintf(stderr, "%s\n", tmp_string);
-					fail = 1;
-		  		}
-				if( file->saddr[i].sh_size != hdr->p_filesz ) {
-					snprintf(tmp_string, TMP_STRING_SIZE,
-			  		"NOTE section size does not match Segment size" );
-					tetj_testcase_info(journal, tetj_activity_count,
-						tetj_tp_count, 0, 0, 0, tmp_string);
-					fprintf(stderr, "%s\n", tmp_string);
-					fail = 1;
-		  	}
-			/* Contents get checked by the section processing code */
-		} else {
-				snprintf(tmp_string, TMP_STRING_SIZE,
-				  "Section %s in PT_NOTE segment is not type SHT_NOTE",
-			  		ElfGetString(file,file->saddr[i].sh_name) );
-				tetj_testcase_info(journal, tetj_activity_count,
-					tetj_tp_count, 0, 0, 0, tmp_string);
-				fprintf(stderr, "%s\n", tmp_string);
-				fail = 1;
-			} 
-  	}
+  for (i = 0; i < file->numsh; i++) {
+    if ((file->saddr[i].sh_addr >= hdr->p_vaddr) &&
+	(file->saddr[i].sh_addr < hdr->p_vaddr + hdr->p_memsz) &&
+	(file->saddr[i].sh_flags & SHF_ALLOC)) {
+      /* Section appears to belong to this segment */
+      if (file->saddr[i].sh_type == SHT_NOTE) {
+	/* See if section extends past this end of this segment */
+	/* XXX fixme: fails on systems that combine NOTE sections (bug 2106) */
+	if (file->saddr[i].sh_addr != hdr->p_vaddr) {
+	  snprintf(tmp_string, TMP_STRING_SIZE,
+		   "NOTE section address does not match Segment start address: %#x vs. %#x",
+		   (unsigned int) file->saddr[i].sh_addr,
+		   (unsigned int) hdr->p_vaddr);
+	  tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+			     0, 0, 0, tmp_string);
+	  fprintf(stderr, "%s\n", tmp_string);
+	  fail = 1;
+	}
+	if (file->saddr[i].sh_offset != hdr->p_offset) {
+	  snprintf(tmp_string, TMP_STRING_SIZE,
+		   "NOTE section offset does not match Segment offset: %#x vs. %#x",
+		   (unsigned int) file->saddr[i].sh_offset,
+		   (unsigned int) hdr->p_offset);
+	  tetj_testcase_info(journal, tetj_activity_count,
+			     tetj_tp_count, 0, 0, 0, tmp_string);
+	  fprintf(stderr, "%s\n", tmp_string);
+	  fail = 1;
+	}
+	if (file->saddr[i].sh_size != hdr->p_filesz) {
+	  snprintf(tmp_string, TMP_STRING_SIZE,
+		   "NOTE section size does not match Segment size: %#x vs. %#x",
+		   (unsigned int) file->saddr[i].sh_size,
+		   (unsigned int) hdr->p_filesz);
+	  tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+			     0, 0, 0, tmp_string);
+	  fprintf(stderr, "%s\n", tmp_string);
+	  fail = 1;
+	}
+	/* Contents get checked by the section processing code */
+      } else {
+	snprintf(tmp_string, TMP_STRING_SIZE,
+		 "Section %s in PT_NOTE segment is not type SHT_NOTE",
+		 ElfGetString(file, file->saddr[i].sh_name));
+	tetj_testcase_info(journal, tetj_activity_count,
+			   tetj_tp_count, 0, 0, 0, tmp_string);
+	fprintf(stderr, "%s\n", tmp_string);
+	fail = 1;
+      }
+    }
   }
 
-  tetj_result(journal, tetj_activity_count, tetj_tp_count, 
-							fail==1 ? TETJ_FAIL : TETJ_PASS);
+  tetj_result(journal, tetj_activity_count, tetj_tp_count,
+	      fail == 1 ? TETJ_FAIL : TETJ_PASS);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
-  return fail==1 ? -1 : 1;
+  return fail == 1 ? -1 : 1;
 }
 
 int
@@ -325,65 +338,71 @@ return -1;
 }
 
 int
-checkPT_TLS(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
+checkPT_TLS(ElfFile * file, Elf_Phdr * hdr, struct tetj_handle *journal)
 {
-  int i,fail=0;
-  char tmp_string[TMP_STRING_SIZE+1];
-	
+  int i, fail = 0;
+  char tmp_string[TMP_STRING_SIZE + 1];
+
   tetj_tp_count++;
 
-  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
-                     "Check TLS program header");
+  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+		     "Check TLS program header");
 
-  for(i=0;i<file->numsh;i++) {
-		if( (file->saddr[i].sh_addr >= hdr->p_vaddr) &&
-				(file->saddr[i].sh_addr < hdr->p_vaddr+hdr->p_memsz) &&
-				(file->saddr[i].sh_flags&SHF_ALLOC) ) {
-			/* Section appears to belong to this segment */
-			if( !(file->saddr[i].sh_flags&SHF_TLS) ) {
-				/* See if section extends past this end of this segment */
-				if( file->saddr[i].sh_addr != hdr->p_vaddr ) {
-					snprintf(tmp_string, TMP_STRING_SIZE,
-			  		"TLS section address does not match Segment start address" );
-					tetj_testcase_info(journal, tetj_activity_count,
-						tetj_tp_count, 0, 0, 0, tmp_string);
-					fprintf(stderr, "%s\n", tmp_string);
-					fail = 1;
-		  		}
-				if( file->saddr[i].sh_offset != hdr->p_offset ) {
-					snprintf(tmp_string, TMP_STRING_SIZE,
-			  		"TLS section offset does not match Segment start address" );
-					tetj_testcase_info(journal, tetj_activity_count,
-						tetj_tp_count, 0, 0, 0, tmp_string);
-					fprintf(stderr, "%s\n", tmp_string);
-					fail = 1;
-		  		}
-				if( file->saddr[i].sh_size != hdr->p_filesz ) {
-					snprintf(tmp_string, TMP_STRING_SIZE,
-			  		"TLS section size does not match Segment size" );
-					tetj_testcase_info(journal, tetj_activity_count,
-						tetj_tp_count, 0, 0, 0, tmp_string);
-					fprintf(stderr, "%s\n", tmp_string);
-					fail = 1;
-		  	}
-			/* Contents get checked by the section processing code */
-		} else {
-				snprintf(tmp_string, TMP_STRING_SIZE,
-				  "Section %s in PT_TLS segment is not SHF_TLS",
-			  		ElfGetString(file,file->saddr[i].sh_name) );
-				tetj_testcase_info(journal, tetj_activity_count,
-					tetj_tp_count, 0, 0, 0, tmp_string);
-				fprintf(stderr, "%s\n", tmp_string);
-				fail = 1;
-			} 
-  	}
+  for (i = 0; i < file->numsh; i++) {
+    if ((file->saddr[i].sh_addr >= hdr->p_vaddr) &&
+	(file->saddr[i].sh_addr < hdr->p_vaddr + hdr->p_memsz) &&
+	(file->saddr[i].sh_flags & SHF_ALLOC)) {
+      /* Section appears to belong to this segment */
+      if (!(file->saddr[i].sh_flags & SHF_TLS)) {
+	/* See if section extends past this end of this segment */
+	if (file->saddr[i].sh_addr != hdr->p_vaddr) {
+	  snprintf(tmp_string, TMP_STRING_SIZE,
+		   "TLS section address does not match Segment start address: %#x vs. %#x",
+		   (unsigned int) file->saddr[i].sh_addr,
+		   (unsigned int) hdr->p_vaddr);
+	  tetj_testcase_info(journal, tetj_activity_count,
+			     tetj_tp_count, 0, 0, 0, tmp_string);
+	  fprintf(stderr, "%s\n", tmp_string);
+	  fail = 1;
+	}
+	if (file->saddr[i].sh_offset != hdr->p_offset) {
+	  snprintf(tmp_string, TMP_STRING_SIZE,
+		   "TLS section offset does not match Segment offset: %#x vs. %#x",
+		   (unsigned int) file->saddr[i].sh_offset,
+		   (unsigned int) hdr->p_offset);
+	  tetj_testcase_info(journal, tetj_activity_count,
+			     tetj_tp_count, 0, 0, 0, tmp_string);
+	  fprintf(stderr, "%s\n", tmp_string);
+	  fail = 1;
+	}
+	if (file->saddr[i].sh_size != hdr->p_filesz) {
+	  snprintf(tmp_string, TMP_STRING_SIZE,
+		   "TLS section size does not match Segment size: %#x vs. %#x",
+		   (unsigned int) file->saddr[i].sh_size,
+		   (unsigned int) hdr->p_filesz);
+	  tetj_testcase_info(journal, tetj_activity_count,
+			     tetj_tp_count, 0, 0, 0, tmp_string);
+	  fprintf(stderr, "%s\n", tmp_string);
+	  fail = 1;
+	}
+	/* Contents get checked by the section processing code */
+      } else {
+	snprintf(tmp_string, TMP_STRING_SIZE,
+		 "Section %s in PT_TLS segment is not SHF_TLS",
+		 ElfGetString(file, file->saddr[i].sh_name));
+	tetj_testcase_info(journal, tetj_activity_count,
+			   tetj_tp_count, 0, 0, 0, tmp_string);
+	fprintf(stderr, "%s\n", tmp_string);
+	fail = 1;
+      }
+    }
   }
 
-  tetj_result(journal, tetj_activity_count, tetj_tp_count, 
-							fail==1 ? TETJ_FAIL : TETJ_PASS);
+  tetj_result(journal, tetj_activity_count, tetj_tp_count,
+	      fail == 1 ? TETJ_FAIL : TETJ_PASS);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
-return fail==1 ? -1 : 1;
+  return fail == 1 ? -1 : 1;
 }
 
 int
