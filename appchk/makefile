@@ -16,6 +16,9 @@ $(LIB): $(OBJS)
 appchk: appchk.c $(OBJS) $(LIBS)
 	$(CC) $(CFLAGS) -o appchk appchk.c $(OBJS) $(LIBS)
 
+standalone: appchk.c $(OBJS) $(LIBS)
+	/opt/lsb/bin/lsbcc $(CFLAGS) --lsb-use-default-linker -o appchk appchk.c $(OBJS) $(LIBS)
+
 install:
 	install -d $(INSTALL_ROOT)/$(BINDIR)
 	install appchk $(INSTALL_ROOT)/$(BINDIR)/lsbappchk
