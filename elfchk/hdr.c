@@ -187,6 +187,14 @@ if (elf_type != ELF_ERROR) {          /* Protect appchk from crash if alien arch
 
 	getSymbolVersionInfo(file1);
 }
+else {
+	tetj_tp_count++;
+	tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, "");
+	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, "ELF file has wrong architecture. Further tests are skipped to avoid using of corrupted data structures.");
+	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_UNTESTED);
+	tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+}
+
 return elf_type;
 }
 
