@@ -72,22 +72,23 @@ void check_lib(ElfFile *elffile, Elf_type fileType, int modules)
   Elf_Shdr	*hdr1;
 
   /* Check all headers in extra lib */
-  checkElfhdr(elffile, fileType, journal);
+  if (checkElfhdr(elffile, fileType, journal) != ELF_ERROR) {
 
-  /* Search through program headers for the one with the dynamic
-     symbols in it. */
-  for(i=0;i<elffile->numph;i++)
-  {
-    hdr1=&(elffile->saddr[i]);
-
-    if(hdr1->sh_type == SHT_DYNSYM)
+    /* Search through program headers for the one with the dynamic
+       symbols in it. */
+    for(i=0;i<elffile->numph;i++)
     {
-      elffile->dynsymhdr=hdr1;
+      hdr1=&(elffile->saddr[i]);
+  
+      if(hdr1->sh_type == SHT_DYNSYM)
+      {
+        elffile->dynsymhdr=hdr1;
+      }
     }
-  }
 
-  /* Check dynamic symbols needed by extra lib */
-  checksymbols(elffile, modules);
+    /* Check dynamic symbols needed by extra lib */
+    checksymbols(elffile, modules);
+  }
 
   return;
 }
