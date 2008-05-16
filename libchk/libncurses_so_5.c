@@ -117,6 +117,9 @@ struct versym libncurses_so_5[] = {
 #if defined __i386__
 	{"cur_term","",0,LSB_Core,4,0},
 #endif
+#if defined __ia64__
+	{"cur_term","",0,LSB_Core,8,0},
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"cur_term","",0,LSB_Core,4,0},
 #endif
@@ -126,13 +129,10 @@ struct versym libncurses_so_5[] = {
 #if defined __s390__ && !defined __s390x__
 	{"cur_term","",0,LSB_Core,4,0},
 #endif
-#if defined __ia64__
+#if defined __x86_64__
 	{"cur_term","",0,LSB_Core,8,0},
 #endif
 #if defined __s390x__
-	{"cur_term","",0,LSB_Core,8,0},
-#endif
-#if defined __x86_64__
 	{"cur_term","",0,LSB_Core,8,0},
 #endif
 	{"curs_set","",0,LSB_Core,0,1},

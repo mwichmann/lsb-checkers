@@ -13252,7 +13252,15 @@ CheckTypeSize(GtkWidgetFlags,4, 14542, 10, 3.1, NULL, 14541, NULL)
 CheckTypeSize(GtkWidgetFlags,4, 14542, 12, 3.1, NULL, 14541, NULL)
 #else
 Msg("Find size of GtkWidgetFlags (14542)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14541, NULL);\n",architecture,14542,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14541,NULL);\n",architecture,14542,0);
+#endif
+
+#if 1
+CheckTypeSize(GtkIconViewDropPosition,0, 1000031, 1, 4.0, NULL, 1000030, NULL)
+#endif
+
+#if 1
+CheckTypeSize(GtkPackDirection,0, 1000035, 1, 4.0, NULL, 1000034, NULL)
 #endif
 
 extern GtkIconSet * gtk_icon_set_new_db(void);
@@ -17763,6 +17771,114 @@ extern GtkUpdateType gtk_range_get_update_policy_db(GtkRange *);
 CheckInterfacedef(gtk_range_get_update_policy,gtk_range_get_update_policy_db);
 extern void gtk_toolbar_set_icon_size_db(GtkToolbar *, GtkIconSize);
 CheckInterfacedef(gtk_toolbar_set_icon_size,gtk_toolbar_set_icon_size_db);
+extern GType gtk_combo_get_type_db(void);
+CheckInterfacedef(gtk_combo_get_type,gtk_combo_get_type_db);
+extern GtkType gtk_text_get_type_db(void);
+CheckInterfacedef(gtk_text_get_type,gtk_text_get_type_db);
+extern GType gtk_pack_direction_get_type_db(void);
+CheckInterfacedef(gtk_pack_direction_get_type,gtk_pack_direction_get_type_db);
+extern GdkPixmap * gtk_icon_view_create_drag_icon_db(GtkIconView *, GtkTreePath *);
+CheckInterfacedef(gtk_icon_view_create_drag_icon,gtk_icon_view_create_drag_icon_db);
+extern gboolean gtk_icon_view_get_cursor_db(GtkTreeIter *, GtkTreePath * *, GtkCellRenderer * *);
+CheckInterfacedef(gtk_icon_view_get_cursor,gtk_icon_view_get_cursor_db);
+extern void gtk_icon_view_scroll_to_path_db(GtkIconView *, GtkTreePath *, gboolean, gfloat, gfloat);
+CheckInterfacedef(gtk_icon_view_scroll_to_path,gtk_icon_view_scroll_to_path_db);
+extern void gtk_icon_view_set_cursor_db(GtkIconView *, GtkTreePath *, GtkCellRenderer *, gboolean);
+CheckInterfacedef(gtk_icon_view_set_cursor,gtk_icon_view_set_cursor_db);
+extern void gtk_icon_view_set_reorderable_db(GtkIconView *, gboolean);
+CheckInterfacedef(gtk_icon_view_set_reorderable,gtk_icon_view_set_reorderable_db);
+extern gboolean gtk_icon_view_get_reorderable_db(GtkIconView *);
+CheckInterfacedef(gtk_icon_view_get_reorderable,gtk_icon_view_get_reorderable_db);
+extern gboolean gtk_icon_view_get_item_at_pos_db(GtkIconView *, gint, gint, GtkTreePath * *, GtkCellRenderer * *);
+CheckInterfacedef(gtk_icon_view_get_item_at_pos,gtk_icon_view_get_item_at_pos_db);
+extern gboolean gtk_icon_view_get_visible_range_db(GtkIconView *, GtkTreePath * *, GtkTreePath * *);
+CheckInterfacedef(gtk_icon_view_get_visible_range,gtk_icon_view_get_visible_range_db);
+extern void gtk_icon_view_enable_model_drag_dest_db(GtkIconView *, const GtkTargetEntry *, gint, GdkDragAction *);
+CheckInterfacedef(gtk_icon_view_enable_model_drag_dest,gtk_icon_view_enable_model_drag_dest_db);
+extern void gtk_icon_view_enable_model_drag_source_db(GtkIconView *, GdkModifierType, const GtkTargetEntry *, gint, GdkDragAction);
+CheckInterfacedef(gtk_icon_view_enable_model_drag_source,gtk_icon_view_enable_model_drag_source_db);
+extern gboolean gtk_icon_view_get_dest_item_at_pos_db(GtkIconView *, gint, gint, GtkTreePath * *, GtkIconViewDropPosition *);
+CheckInterfacedef(gtk_icon_view_get_dest_item_at_pos,gtk_icon_view_get_dest_item_at_pos_db);
+extern void gtk_icon_view_get_drag_dest_item_db(GtkIconView *, GtkTreePath * *, GtkIconViewDropPosition *);
+CheckInterfacedef(gtk_icon_view_get_drag_dest_item,gtk_icon_view_get_drag_dest_item_db);
+extern void gtk_icon_view_set_drag_dest_item_db(GtkIconView *, GtkTreePath *, GtkIconViewDropPosition);
+CheckInterfacedef(gtk_icon_view_set_drag_dest_item,gtk_icon_view_set_drag_dest_item_db);
+extern void gtk_icon_view_unset_model_drag_source_db(GtkIconView *);
+CheckInterfacedef(gtk_icon_view_unset_model_drag_source,gtk_icon_view_unset_model_drag_source_db);
+extern void gtk_icon_view_unset_model_drag_dest_db(GtkIconView *);
+CheckInterfacedef(gtk_icon_view_unset_model_drag_dest,gtk_icon_view_unset_model_drag_dest_db);
+extern void gtk_drag_set_icon_name_db(GdkDragContext *, const gchar *, gint, gint);
+CheckInterfacedef(gtk_drag_set_icon_name,gtk_drag_set_icon_name_db);
+extern void gtk_drag_source_set_icon_name_db(GtkWidget *, const gchar *);
+CheckInterfacedef(gtk_drag_source_set_icon_name,gtk_drag_source_set_icon_name_db);
+extern void gtk_image_clear_db(GtkImage *);
+CheckInterfacedef(gtk_image_clear,gtk_image_clear_db);
+extern gint gtk_dialog_get_response_for_widget_db(GtkDialog *, GtkWidget *);
+CheckInterfacedef(gtk_dialog_get_response_for_widget,gtk_dialog_get_response_for_widget_db);
+extern void gtk_tool_button_set_icon_name_db(GtkToolButton *, const gchar *);
+CheckInterfacedef(gtk_tool_button_set_icon_name,gtk_tool_button_set_icon_name_db);
+extern const gchar * gtk_tool_button_get_icon_name_db(GtkWidget *);
+CheckInterfacedef(gtk_tool_button_get_icon_name,gtk_tool_button_get_icon_name_db);
+extern GtkTreeModel * gtk_tree_row_reference_get_model_db(GtkTreeRowReference *);
+CheckInterfacedef(gtk_tree_row_reference_get_model,gtk_tree_row_reference_get_model_db);
+extern void gtk_tree_view_column_queue_resize_db(GtkTreeViewColumn *);
+CheckInterfacedef(gtk_tree_view_column_queue_resize,gtk_tree_view_column_queue_resize_db);
+extern gboolean gtk_tree_view_get_visible_range_db(GtkTreeView *, GtkTreePath * *, GtkTreePath * *);
+CheckInterfacedef(gtk_tree_view_get_visible_range,gtk_tree_view_get_visible_range_db);
+extern gboolean gtk_size_group_get_ignore_hidden_db(GtkSizeGroup *);
+CheckInterfacedef(gtk_size_group_get_ignore_hidden,gtk_size_group_get_ignore_hidden_db);
+extern void gtk_size_group_set_ignore_hidden_db(GtkSizeGroup *, gboolean);
+CheckInterfacedef(gtk_size_group_set_ignore_hidden,gtk_size_group_set_ignore_hidden_db);
+extern void gtk_file_chooser_set_do_overwrite_confirmation_db(GtkFileChooser *, gboolean);
+CheckInterfacedef(gtk_file_chooser_set_do_overwrite_confirmation,gtk_file_chooser_set_do_overwrite_confirmation_db);
+extern gboolean gtk_file_chooser_get_do_overwrite_confirmation_db(GtkFileChooser *);
+CheckInterfacedef(gtk_file_chooser_get_do_overwrite_confirmation,gtk_file_chooser_get_do_overwrite_confirmation_db);
+extern gboolean gtk_entry_completion_get_popup_single_match_db(GtkEntryCompletion *);
+CheckInterfacedef(gtk_entry_completion_get_popup_single_match,gtk_entry_completion_get_popup_single_match_db);
+extern void gtk_entry_completion_set_popup_single_match_db(GtkEntryCompletion *, gboolean);
+CheckInterfacedef(gtk_entry_completion_set_popup_single_match,gtk_entry_completion_set_popup_single_match_db);
+extern gboolean gtk_entry_completion_get_popup_set_width_db(GtkEntryCompletion *);
+CheckInterfacedef(gtk_entry_completion_get_popup_set_width,gtk_entry_completion_get_popup_set_width_db);
+extern void gtk_entry_completion_set_popup_set_width_db(GtkEntryCompletion *, gboolean);
+CheckInterfacedef(gtk_entry_completion_set_popup_set_width,gtk_entry_completion_set_popup_set_width_db);
+extern void gtk_window_set_urgency_hint_db(GtkWindow *, gboolean);
+CheckInterfacedef(gtk_window_set_urgency_hint,gtk_window_set_urgency_hint_db);
+extern void gtk_window_present_with_time_db(GtkWindow *, guint32);
+CheckInterfacedef(gtk_window_present_with_time,gtk_window_present_with_time_db);
+extern gboolean gtk_window_get_urgency_hint_db(GtkWindow *);
+CheckInterfacedef(gtk_window_get_urgency_hint,gtk_window_get_urgency_hint_db);
+extern void gtk_about_dialog_set_wrap_license_db(GtkAboutDialog *, gboolean);
+CheckInterfacedef(gtk_about_dialog_set_wrap_license,gtk_about_dialog_set_wrap_license_db);
+extern gboolean gtk_about_dialog_get_wrap_license_db(GtkAboutDialog *);
+CheckInterfacedef(gtk_about_dialog_get_wrap_license,gtk_about_dialog_get_wrap_license_db);
+extern GtkPackDirection gtk_menu_bar_get_child_pack_direction_db(GtkMenuBar *);
+CheckInterfacedef(gtk_menu_bar_get_child_pack_direction,gtk_menu_bar_get_child_pack_direction_db);
+extern GtkPackDirection gtk_menu_bar_get_pack_direction_db(GtkMenuBar *);
+CheckInterfacedef(gtk_menu_bar_get_pack_direction,gtk_menu_bar_get_pack_direction_db);
+extern void gtk_menu_bar_set_child_pack_direction_db(GtkMenuBar *, GtkPackDirection);
+CheckInterfacedef(gtk_menu_bar_set_child_pack_direction,gtk_menu_bar_set_child_pack_direction_db);
+extern void gtk_menu_bar_set_pack_direction_db(GtkMenuBar *, GtkPackDirection);
+CheckInterfacedef(gtk_menu_bar_set_pack_direction,gtk_menu_bar_set_pack_direction_db);
+extern void gtk_stock_set_translate_func_db(const gchar *, GtkTranslateFunc, gpointer, GtkDestroyNotify);
+CheckInterfacedef(gtk_stock_set_translate_func,gtk_stock_set_translate_func_db);
+extern GClosure * gtk_action_get_accel_closure_db(GtkAction *);
+CheckInterfacedef(gtk_action_get_accel_closure,gtk_action_get_accel_closure_db);
+extern GtkWidget * gtk_scrolled_window_get_hscrollbar_db(GtkScrolledWindow *);
+CheckInterfacedef(gtk_scrolled_window_get_hscrollbar,gtk_scrolled_window_get_hscrollbar_db);
+extern GtkWidget * gtk_scrolled_window_get_vscrollbar_db(GtkScrolledWindow *);
+CheckInterfacedef(gtk_scrolled_window_get_vscrollbar,gtk_scrolled_window_get_vscrollbar_db);
+extern gboolean gtk_menu_shell_get_take_focus_db(GtkMenuShell *);
+CheckInterfacedef(gtk_menu_shell_get_take_focus,gtk_menu_shell_get_take_focus_db);
+extern void gtk_menu_shell_set_take_focus_db(GtkMenuShell *, gboolean);
+CheckInterfacedef(gtk_menu_shell_set_take_focus,gtk_menu_shell_set_take_focus_db);
+extern gboolean gtk_text_iter_backward_visible_line_db(GtkTextIter *);
+CheckInterfacedef(gtk_text_iter_backward_visible_line,gtk_text_iter_backward_visible_line_db);
+extern gboolean gtk_text_iter_backward_visible_lines_db(GtkTextIter *, gint);
+CheckInterfacedef(gtk_text_iter_backward_visible_lines,gtk_text_iter_backward_visible_lines_db);
+extern gboolean gtk_text_iter_forward_visible_line_db(GtkTextIter *);
+CheckInterfacedef(gtk_text_iter_forward_visible_line,gtk_text_iter_forward_visible_line_db);
+extern gboolean gtk_text_iter_forward_visible_lines_db(GtkTextIter *, gint);
+CheckInterfacedef(gtk_text_iter_forward_visible_lines,gtk_text_iter_forward_visible_lines_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

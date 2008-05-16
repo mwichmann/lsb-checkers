@@ -45,6 +45,30 @@ Msg("Checking data structures in gtk-2.0/gdk-pixbuf/gdk-pixbuf.h\n");
 
 printf("Checking data structures in gtk-2.0/gdk-pixbuf/gdk-pixbuf.h\n");
 #if _LSB_DEFAULT_ARCH
+/* No test for GDK_TYPE_PIXBUF_SIMPLE_ANIM */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GDK_PIXBUF_SIMPLE_ANIM(object) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GDK_IS_PIXBUF_SIMPLE_ANIM(object) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GDK_PIXBUF_SIMPLE_ANIM_CLASS(klass) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GDK_IS_PIXBUF_SIMPLE_ANIM_CLASS(klass) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GDK_PIXBUF_SIMPLE_ANIM_GET_CLASS(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 /* No test for GDK_PIXBUF_MAJOR */
 #endif
 
@@ -322,7 +346,7 @@ CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 10, 3.1, NULL, 12648, NULL)
 CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 12, 3.1, NULL, 12648, NULL)
 #else
 Msg("Find size of GdkPixbufAlphaMode (12649)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12648, NULL);\n",architecture,12649,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12648,NULL);\n",architecture,12649,0);
 #endif
 
 extern gboolean gdk_pixbuf_save_to_callbackv_db(GdkPixbuf *, GdkPixbufSaveFunc, gpointer, const char *, char * *, char * *, GError * *);
@@ -475,6 +499,14 @@ extern const gchar * gdk_pixbuf_get_option_db(GdkPixbuf *, const gchar *);
 CheckInterfacedef(gdk_pixbuf_get_option,gdk_pixbuf_get_option_db);
 extern int gdk_pixbuf_animation_iter_get_delay_time_db(GdkPixbufAnimationIter *);
 CheckInterfacedef(gdk_pixbuf_animation_iter_get_delay_time,gdk_pixbuf_animation_iter_get_delay_time_db);
+extern GType gdk_pixbuf_simple_anim_get_type_db(void);
+CheckInterfacedef(gdk_pixbuf_simple_anim_get_type,gdk_pixbuf_simple_anim_get_type_db);
+extern GType gdk_pixbuf_simple_anim_iter_get_type_db(void);
+CheckInterfacedef(gdk_pixbuf_simple_anim_iter_get_type,gdk_pixbuf_simple_anim_iter_get_type_db);
+extern GdkPixbufSimpleAnim * gdk_pixbuf_simple_anim_new_db(gint, gint, gfloat);
+CheckInterfacedef(gdk_pixbuf_simple_anim_new,gdk_pixbuf_simple_anim_new_db);
+extern void gdk_pixbuf_simple_anim_add_frame_db(GdkPixbufSimpleAnim *, GdkPixbuf *);
+CheckInterfacedef(gdk_pixbuf_simple_anim_add_frame,gdk_pixbuf_simple_anim_add_frame_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
