@@ -3241,19 +3241,19 @@ struct versym libstdcxx_so_6[] = {
 #if defined __ia64__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE4_Rep20_S_empty_rep_storageE","GLIBCXX_3.4",0,LSB_Cpp,32,0},
 #endif
-#if defined __powerpc64__
-	{"_ZNSbIwSt11char_traitsIwESaIwEE4_Rep20_S_empty_rep_storageE","GLIBCXX_3.4",0,LSB_Cpp,32,0},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE4_Rep20_S_empty_rep_storageE","GLIBCXX_3.4",0,LSB_Cpp,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSbIwSt11char_traitsIwESaIwEE4_Rep20_S_empty_rep_storageE","GLIBCXX_3.4",0,LSB_Cpp,32,0},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE4_Rep20_S_empty_rep_storageE","GLIBCXX_3.4",0,LSB_Cpp,16,0},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE4_Rep20_S_empty_rep_storageE","GLIBCXX_3.4",0,LSB_Cpp,32,0},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZNSbIwSt11char_traitsIwESaIwEE4_Rep20_S_empty_rep_storageE","GLIBCXX_3.4",0,LSB_Cpp,32,0},
 #endif
 #if defined __i386__
@@ -4556,19 +4556,19 @@ struct versym libstdcxx_so_6[] = {
 #if defined __ia64__
 	{"_ZNSs4_Rep20_S_empty_rep_storageE","GLIBCXX_3.4",0,LSB_Cpp,32,0},
 #endif
-#if defined __powerpc64__
-	{"_ZNSs4_Rep20_S_empty_rep_storageE","GLIBCXX_3.4",0,LSB_Cpp,32,0},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSs4_Rep20_S_empty_rep_storageE","GLIBCXX_3.4",0,LSB_Cpp,16,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSs4_Rep20_S_empty_rep_storageE","GLIBCXX_3.4",0,LSB_Cpp,32,0},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"_ZNSs4_Rep20_S_empty_rep_storageE","GLIBCXX_3.4",0,LSB_Cpp,16,0},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZNSs4_Rep20_S_empty_rep_storageE","GLIBCXX_3.4",0,LSB_Cpp,32,0},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZNSs4_Rep20_S_empty_rep_storageE","GLIBCXX_3.4",0,LSB_Cpp,32,0},
 #endif
 #if defined __i386__

@@ -2606,7 +2606,11 @@ CheckTypeSize(GStrv,4, 16220, 10, 3.1, NULL, 11485, NULL)
 CheckTypeSize(GStrv,8, 16220, 12, 3.1, NULL, 11485, NULL)
 #else
 Msg("Find size of GStrv (16220)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11485, NULL);\n",architecture,16220,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11485,NULL);\n",architecture,16220,0);
+#endif
+
+#if 1
+CheckTypeSize(GToggleNotify,0, 1000021, 1, 4.0, NULL, 1000020, NULL)
 #endif
 
 extern void g_object_set_property_db(GObject *, const gchar *, const GValue *);
@@ -3237,6 +3241,10 @@ extern void g_signal_query_db(guint, GSignalQuery *);
 CheckInterfacedef(g_signal_query,g_signal_query_db);
 extern gboolean g_type_check_instance_is_a_db(GTypeInstance *, GType);
 CheckInterfacedef(g_type_check_instance_is_a,g_type_check_instance_is_a_db);
+extern void g_object_add_toggle_ref_db(GObject *, GToggleNotify, gpointer);
+CheckInterfacedef(g_object_add_toggle_ref,g_object_add_toggle_ref_db);
+extern void g_object_remove_toggle_ref_db(GObject *, GToggleNotify, gpointer);
+CheckInterfacedef(g_object_remove_toggle_ref,g_object_remove_toggle_ref_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
