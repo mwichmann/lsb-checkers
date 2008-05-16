@@ -27,6 +27,14 @@ Msg("Checking data structures in glib-2.0/glib/gstdio.h\n");
 
 printf("Checking data structures in glib-2.0/glib/gstdio.h\n");
 #if _LSB_DEFAULT_ARCH
+/* No test for g_chmod */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for g_creat */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 /* No test for g_open */
 #endif
 
@@ -47,15 +55,7 @@ printf("Checking data structures in glib-2.0/glib/gstdio.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for g_unlink */
-#endif
-
-#if _LSB_DEFAULT_ARCH
 /* No test for g_remove */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for g_rmdir */
 #endif
 
 #if _LSB_DEFAULT_ARCH

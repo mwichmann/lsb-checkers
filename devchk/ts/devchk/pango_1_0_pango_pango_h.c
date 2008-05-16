@@ -55,6 +55,20 @@ Msg("Checking data structures in pango-1.0/pango/pango.h\n");
 
 printf("Checking data structures in pango-1.0/pango/pango.h\n");
 #if _LSB_DEFAULT_ARCH
+/* No test for PANGO_GET_UNKNOWN_GLYPH(wc) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PANGO_GLYPH_UNKNOWN_FLAG
+	CompareLongConstant(PANGO_GLYPH_UNKNOWN_FLAG,((PangoGlyph)0x10000000),15513,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: PANGO_GLYPH_UNKNOWN_FLAG\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 /* No test for PANGO_TYPE_MATRIX */
 #endif
 
@@ -1781,6 +1795,8 @@ extern PangoFontMetrics * pango_font_get_metrics_db(PangoFont *, PangoLanguage *
 CheckInterfacedef(pango_font_get_metrics,pango_font_get_metrics_db);
 extern PangoScriptIter * pango_script_iter_new_db(const char *, int);
 CheckInterfacedef(pango_script_iter_new,pango_script_iter_new_db);
+extern PangoFontMap * pango_font_get_font_map_db(PangoFont *);
+CheckInterfacedef(pango_font_get_font_map,pango_font_get_font_map_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

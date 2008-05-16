@@ -757,7 +757,11 @@ CheckTypeSize(FT_Outline_Funcs,24, 16882, 6, 3.2, NULL, 16874, NULL)
 CheckTypeSize(FT_Outline_Funcs,48, 16882, 9, 3.2, NULL, 16874, NULL)
 #else
 Msg("Find size of FT_Outline_Funcs (16882)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16874, NULL);\n",architecture,16882,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16874,NULL);\n",architecture,16882,0);
+#endif
+
+#if 1
+CheckTypeSize(FT_Pixel_Mode,0, 1000016, 1, 3.2, NULL, 1000015, NULL)
 #endif
 
 #ifdef TET_TEST
