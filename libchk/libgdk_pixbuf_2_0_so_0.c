@@ -140,6 +140,10 @@ struct versym libgdk_pixbuf_2_0_so_0[] = {
 	{"gdk_pixbuf_savev","",0,LSB_Toolkit_Gtk,0,1},
 	{"gdk_pixbuf_scale","",0,LSB_Toolkit_Gtk,0,1},
 	{"gdk_pixbuf_scale_simple","",0,LSB_Toolkit_Gtk,0,1},
+	{"gdk_pixbuf_simple_anim_add_frame","",0,LSB_Toolkit_Gtk,0,1},
+	{"gdk_pixbuf_simple_anim_get_type","",0,LSB_Toolkit_Gtk,0,1},
+	{"gdk_pixbuf_simple_anim_iter_get_type","",0,LSB_Toolkit_Gtk,0,1},
+	{"gdk_pixbuf_simple_anim_new","",0,LSB_Toolkit_Gtk,0,1},
 #if defined __i386__
 	{"gdk_pixbuf_version","",0,LSB_Toolkit_Gtk,4,0},
 #endif
