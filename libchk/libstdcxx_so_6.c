@@ -5500,19 +5500,19 @@ struct versym libstdcxx_so_6[] = {
 #if defined __ia64__
 	{"_ZNSt10money_base8_S_atomsE","GLIBCXX_3.4",0,LSB_Cpp,8,0},
 #endif
-#if defined __powerpc64__
-	{"_ZNSt10money_base8_S_atomsE","GLIBCXX_3.4",0,LSB_Cpp,8,0},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSt10money_base8_S_atomsE","GLIBCXX_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt10money_base8_S_atomsE","GLIBCXX_3.4",0,LSB_Cpp,8,0},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"_ZNSt10money_base8_S_atomsE","GLIBCXX_3.4",0,LSB_Cpp,4,0},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZNSt10money_base8_S_atomsE","GLIBCXX_3.4",0,LSB_Cpp,8,0},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZNSt10money_base8_S_atomsE","GLIBCXX_3.4",0,LSB_Cpp,8,0},
 #endif
 	{"_ZNSt10moneypunctIcLb0EE24_M_initialize_moneypunctEP15__locale_structPKc","GLIBCXX_3.4",0,LSB_Cpp,0,1},
