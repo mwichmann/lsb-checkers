@@ -2610,7 +2610,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11485,NULL);\n",archi
 #endif
 
 #if 1
-CheckTypeSize(GToggleNotify,0, 1000021, 1, 4.0, NULL, 1000020, NULL)
+CheckTypeSize(GToggleNotify,0, 1000027, 1, 4.0, NULL, 1000026, NULL)
 #endif
 
 extern void g_object_set_property_db(GObject *, const gchar *, const GValue *);
