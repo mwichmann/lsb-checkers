@@ -656,6 +656,7 @@ struct modlib modlibs [] = {
 	{LSB_XML,"libxml2.so.2",libxml2_so_2,libxml2_so_2_classinfo},
 	{LSB_Graphics_Ext,"libXrender.so.1",libXrender_so_1,libXrender_so_1_classinfo},
 	{LSB_Graphics,"libXt.so.6",libXt_so_6,libXt_so_6_classinfo},
+	{LSB_Graphics,"libXtst.so.6",libXtst_so_6,libXtst_so_6_classinfo},
 #if defined __s390x__
 	{LSB_Core,"libz.so.1",libz_so_1,libz_so_1_classinfo},
 #endif
