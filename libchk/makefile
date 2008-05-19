@@ -27,12 +27,24 @@ LIB64=$(shell case `arch` in (ppc64 | s390x | x86_64) echo 64 ;; esac)
 # add /opt/lsb/lib or /opt/lsb/lib64
 LSBLIBPATHS=-L/opt/lsb/lib$(LIB64)
 
+# extracted from link line, but getting error-prone
+# should do a sql script to build this
+LSBLIBRARIES=-lGL -lGLU -lICE -lQtCore -lQtGui -lQtNetwork -lQtOpenGL \
+        -lQtSql -lQtSvg -lQtXml -lSM -lX11 -lXext -lXft -lXi -lXrender \
+        -lXt -lXtst -latk-1.0 -lc -lcrypt -lcups -lcupsimage -ldl \
+        -lfontconfig -lfreetype -lgcc_s -lgdk-x11-2.0 -lgdk_pixbuf-2.0 \
+        -lgdk_pixbuf_xlib-2.0 -lglib-2.0 -lgmodule-2.0 -lgobject-2.0 \
+        -lgthread-2.0 -lgtk-x11-2.0 -ljpeg -lm -lncurses -lpam -lpango-1.0 \
+        -lpangoft2-1.0 -lpangoxft-1.0 -lpng12 -lpng -lpthread -lqt-mt \
+        -lrt -lutil -lxml2 -lz \
+	-lstdc++ -lasound
+
 # If you want to just link against the normal system libs instead of the
 # lsb-dev libs (like for testing against newer libstdcxx) use this instead
 #LSBLIBPATHS=-L/usr/X11R6/lib
 dummy_link: dummy_link.o makefile
-	$(CXX) -nostdlib -Wl,--dynamic-linker=$(LSB_LINKER) $(LSBLIBPATHS) dummy_link.o -lGL -lICE -lSM -lX11 -lXi -lXext -lXt -lc -lrt -lcrypt -ldl -lgcc_s -lm -lncurses -lpam -lglib-2.0 -lgobject-2.0 -lgmodule-2.0 -lgthread-2.0 -latk-1.0 -lpango-1.0 -lpangoxft-1.0 -lpangoft2-1.0 -lgdk_pixbuf-2.0 -lgdk_pixbuf_xlib-2.0 -lgdk-x11-2.0 -lgtk-x11-2.0 -lQtCore -lQtGui -lQtNetwork -lQtXml -lQtOpenGL -lQtSql -lQtSvg -lfontconfig -lpng12 -ljpeg -lxml2 -lXrender -lfreetype -lXft -lcups -lcupsimage -lasound -lpthread -lutil -lz -lstdc++ -lqt-mt -o $@
-	@echo "IGNORE \"cannot find entry symbol _start\" WARNING, dummy_link is not executable"
+	$(CXX) -nostdlib -Wl,--dynamic-linker=$(LSB_LINKER) $(LSBLIBPATHS) dummy_link.o $(LSBLIBRARIES) -o $@
+	@echo "IGNORE message: \"cannot find entry symbol _start\" WARNING, dummy_link is not executable"
 
 dummy_link.o: dummy_link.c
 	$(CC) $(CFLAGS) -fno-builtin-acos -c -o $@ dummy_link.c
