@@ -2331,6 +2331,7 @@ char *DtNeeded_LSB40[] = {
 	"libxml2.so.2",
 	"libXrender.so.1",
 	"libXt.so.6",
+	"libXtst.so.6",
 	"libz.so.1",
 #if defined __i386__
 	"libz.so.1",

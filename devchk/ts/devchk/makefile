@@ -31,6 +31,7 @@ OBJS = hdrchk.o \
 	X11_extensions_XEVI_h.o \
 	X11_extensions_XKBgeom_h.o \
 	X11_extensions_XShm_h.o \
+	X11_extensions_XTest_h.o \
 	X11_extensions_Xdbe_h.o \
 	X11_extensions_Xrender_h.o \
 	X11_extensions_dpms_h.o \
