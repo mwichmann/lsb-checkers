@@ -6012,7 +6012,7 @@ extern GTokenType g_scanner_get_next_token_db(GScanner *);
 CheckInterfacedef(g_scanner_get_next_token,g_scanner_get_next_token_db);
 extern gchar * g_strescape_db(const gchar *, const gchar *);
 CheckInterfacedef(g_strescape,g_strescape_db);
-extern void g_tree_remove_db(GTree *, gconstpointer);
+extern gboolean g_tree_remove_db(GTree *, gconstpointer);
 CheckInterfacedef(g_tree_remove,g_tree_remove_db);
 extern GFileError g_file_error_from_errno_db(gint);
 CheckInterfacedef(g_file_error_from_errno,g_file_error_from_errno_db);
@@ -6046,7 +6046,7 @@ extern GIOStatus g_io_channel_read_chars_db(GIOChannel *, gchar *, gsize, gsize 
 CheckInterfacedef(g_io_channel_read_chars,g_io_channel_read_chars_db);
 extern gint g_bit_nth_msf_db(gulong, gint);
 CheckInterfacedef(g_bit_nth_msf,g_bit_nth_msf_db);
-extern void g_tree_steal_db(GTree *, gconstpointer);
+extern gboolean g_tree_steal_db(GTree *, gconstpointer);
 CheckInterfacedef(g_tree_steal,g_tree_steal_db);
 extern gboolean g_date_valid_db(const GDate *);
 CheckInterfacedef(g_date_valid,g_date_valid_db);
