@@ -103,6 +103,10 @@ struct _GtkToolbarPrivate { };
 #ifdef LSBCC_MODE
 struct _GtkArg { };
 #endif
+#ifndef LSBCC_MODE
+#define GTK_ENABLE_BROKEN
+#include <gtk/gtktext.h>
+#endif
 #include "gtk-2.0/gtk/gtk.h"
 
 

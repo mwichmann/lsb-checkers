@@ -12742,6 +12742,7 @@ struct versym libstdcxx_so_6[] = {
 	{"__cxa_demangle","CXXABI_1.3",0,LSB_Cpp,0,1},
 	{"__cxa_end_catch","CXXABI_1.3",0,LSB_Cpp,0,1},
 	{"__cxa_free_exception","CXXABI_1.3",0,LSB_Cpp,0,1},
+	{"__cxa_get_exception_ptr","CXXABI_1.3.1",0,LSB_Cpp,0,1},
 	{"__cxa_get_globals","CXXABI_1.3",0,LSB_Cpp,0,1},
 	{"__cxa_get_globals_fast","CXXABI_1.3",0,LSB_Cpp,0,1},
 	{"__cxa_guard_abort","CXXABI_1.3",0,LSB_Cpp,0,1},

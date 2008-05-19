@@ -66,6 +66,14 @@ printf("Checking data structures in glib-2.0/glib/gstdio.h\n");
 /* No test for g_freopen */
 #endif
 
+extern int g_access_db(const gchar *, int);
+CheckInterfacedef(g_access,g_access_db);
+extern int g_chdir_db(const gchar *);
+CheckInterfacedef(g_chdir,g_chdir_db);
+extern int g_unlink_db(const gchar *);
+CheckInterfacedef(g_unlink,g_unlink_db);
+extern int g_rmdir_db(const gchar *);
+CheckInterfacedef(g_rmdir,g_rmdir_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
