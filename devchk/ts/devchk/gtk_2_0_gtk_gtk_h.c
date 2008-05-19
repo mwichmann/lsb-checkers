@@ -103,10 +103,6 @@ struct _GtkToolbarPrivate { };
 #ifdef LSBCC_MODE
 struct _GtkArg { };
 #endif
-#ifndef LSBCC_MODE
-#define GTK_ENABLE_BROKEN
-#include <gtk/gtktext.h>
-#endif
 #include "gtk-2.0/gtk/gtk.h"
 
 
@@ -15589,7 +15585,7 @@ extern GtkWidget * gtk_color_selection_new_db(void);
 CheckInterfacedef(gtk_color_selection_new,gtk_color_selection_new_db);
 extern GtkOrientation gtk_tool_item_get_orientation_db(GtkToolItem *);
 CheckInterfacedef(gtk_tool_item_get_orientation,gtk_tool_item_get_orientation_db);
-extern void gtk_text_attributes_ref_db(GtkTextAttributes *);
+extern GtkTextAttributes * gtk_text_attributes_ref_db(GtkTextAttributes *);
 CheckInterfacedef(gtk_text_attributes_ref,gtk_text_attributes_ref_db);
 extern void gtk_label_set_use_markup_db(GtkLabel *, gboolean);
 CheckInterfacedef(gtk_label_set_use_markup,gtk_label_set_use_markup_db);
@@ -17777,8 +17773,6 @@ extern void gtk_toolbar_set_icon_size_db(GtkToolbar *, GtkIconSize);
 CheckInterfacedef(gtk_toolbar_set_icon_size,gtk_toolbar_set_icon_size_db);
 extern GType gtk_combo_get_type_db(void);
 CheckInterfacedef(gtk_combo_get_type,gtk_combo_get_type_db);
-extern GtkType gtk_text_get_type_db(void);
-CheckInterfacedef(gtk_text_get_type,gtk_text_get_type_db);
 extern GType gtk_pack_direction_get_type_db(void);
 CheckInterfacedef(gtk_pack_direction_get_type,gtk_pack_direction_get_type_db);
 extern GdkPixmap * gtk_icon_view_create_drag_icon_db(GtkIconView *, GtkTreePath *);
