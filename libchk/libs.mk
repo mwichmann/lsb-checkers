@@ -58,4 +58,5 @@ LIBOBJS = \
 	libxml2_so_2.o \
 	libXrender_so_1.o \
 	libXt_so_6.o \
+	libXtst_so_6.o \
 	libz_so_1.o \
