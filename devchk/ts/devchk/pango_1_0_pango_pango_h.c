@@ -1461,7 +1461,7 @@ extern GType pango_variant_get_type_db(void);
 CheckInterfacedef(pango_variant_get_type,pango_variant_get_type_db);
 extern void pango_layout_set_spacing_db(PangoLayout *, int);
 CheckInterfacedef(pango_layout_set_spacing,pango_layout_set_spacing_db);
-extern void pango_attr_list_ref_db(PangoAttrList *);
+extern PangoAttrList * pango_attr_list_ref_db(PangoAttrList *);
 CheckInterfacedef(pango_attr_list_ref,pango_attr_list_ref_db);
 extern void pango_font_description_set_family_static_db(PangoFontDescription *, const char *);
 CheckInterfacedef(pango_font_description_set_family_static,pango_font_description_set_family_static_db);
@@ -1697,7 +1697,7 @@ extern void pango_renderer_draw_error_underline_db(PangoRenderer *, int, int, in
 CheckInterfacedef(pango_renderer_draw_error_underline,pango_renderer_draw_error_underline_db);
 extern PangoFontset * pango_context_load_fontset_db(PangoContext *, const PangoFontDescription *, PangoLanguage *);
 CheckInterfacedef(pango_context_load_fontset,pango_context_load_fontset_db);
-extern void pango_layout_line_ref_db(PangoLayoutLine *);
+extern PangoLayoutLine * pango_layout_line_ref_db(PangoLayoutLine *);
 CheckInterfacedef(pango_layout_line_ref,pango_layout_line_ref_db);
 extern void pango_font_description_set_family_db(PangoFontDescription *, const char *);
 CheckInterfacedef(pango_font_description_set_family,pango_font_description_set_family_db);
