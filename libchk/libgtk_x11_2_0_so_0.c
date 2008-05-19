@@ -1634,7 +1634,6 @@ struct versym libgtk_x11_2_0_so_0[] = {
 	{"gtk_text_child_anchor_get_widgets","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_text_child_anchor_new","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_text_direction_get_type","",0,LSB_Toolkit_Gtk,0,1},
-	{"gtk_text_get_type","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_text_iter_backward_char","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_text_iter_backward_chars","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_text_iter_backward_cursor_position","",0,LSB_Toolkit_Gtk,0,1},

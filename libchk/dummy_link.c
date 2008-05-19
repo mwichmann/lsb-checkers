@@ -8,6 +8,7 @@ extern void XActivateScreenSaver(void);
 extern void DPMSCapable(void);
 extern void XtAddActions(void);
 extern void XCloseDevice(void);
+extern void XTestQueryExtension(void);
 extern void alarm(void);
 extern void crypt(void);
 extern void dlsym(void);
@@ -79,6 +80,9 @@ int main()
 	/* libXi */
 	XCloseDevice();
 
+	/* libXtst */
+	XTestQueryExtension();
+
 	/* libc */
 	alarm();
 
@@ -115,92 +119,92 @@ int main()
 	/* libstdc++ */
 	__cxa_pure_virtual();
 
-    /* libpng12 */
-    png_free();
+	/* libpng12 */
+	png_free();
 
-    /* libjpeg */
-    jpeg_destroy();
+	/* libjpeg */
+	jpeg_destroy();
 
-    /* libfontconfig */
-    FcCharSetSubtract();
+	/* libfontconfig */
+	FcCharSetSubtract();
 
-    /* libglib */
-    g_allocator_free();
+	/* libglib */
+	g_allocator_free();
 
-    /* libgobject */
-    g_boxed_copy();
+	/* libgobject */
+	g_boxed_copy();
 
-    /* libgmodule */
-    g_module_close();
+	/* libgmodule */
+	g_module_close();
 
-    /* libatk */
-    atk_action_do_action();
+	/* libatk */
+	atk_action_do_action();
 
-    /* libpango */
-    pango_alignment_get_type();
+	/* libpango */
+	pango_alignment_get_type();
 
-    /* libpangoxft */
-    pango_xft_font_get_type();
+	/* libpangoxft */
+	pango_xft_font_get_type();
 
-    /* libpangoft */
-    pango_fc_font_lock_face();
+	/* libpangoft */
+	pango_fc_font_lock_face();
 
-    /* libgdk_pixbuf */
-    gdk_pixbuf_flip();
-    
-    /* libgdk_pixbuf_xlib */
-    xlib_draw_gray_image();
+	/* libgdk_pixbuf */
+	gdk_pixbuf_flip();
 
-    /* libgdk */
-    gdk_beep();
+	/* libgdk_pixbuf_xlib */
+	xlib_draw_gray_image();
 
-    /* libgtk-x11 */
-    gtk_accel_group_find();
+	/* libgdk */
+	gdk_beep();
 
-    /* libxml2 */
-    htmlCtxtReadDoc();
+	/* libgtk-x11 */
+	gtk_accel_group_find();
 
-    /* libXrender */
-    XRenderAddGlyphs();
+	/* libxml2 */
+	htmlCtxtReadDoc();
 
-    /* libfreetype */
-    FT_List_Insert();
+	/* libXrender */
+	XRenderAddGlyphs();
 
-    /* libXft */
-    XftInit();
+	/* libfreetype */
+	FT_List_Insert();
 
-    /* libcups */
-    cupsPrintFile();
+	/* libXft */
+	XftInit();
 
-    /* libcupsimage */
-    cupsRasterOpen();
+	/* libcups */
+	cupsPrintFile();
 
-    /* libasound */
-    snd_ctl_open();
+	/* libcupsimage */
+	cupsRasterOpen();
 
-    /* libQtCore */
-    _Z10forcepointR11QTextStream();
+	/* libasound */
+	snd_ctl_open();
 
-    /* libQtGui */
-    _ZN10QHideEventD2Ev ();
+	/* libQtCore */
+	_Z10forcepointR11QTextStream();
 
-    /* libQtNetwork */
-    _ZN10QTcpServerD1Ev();
+	/* libQtGui */
+	_ZN10QHideEventD2Ev ();
 
-    /* libQtOpenGL */
-    _ZN10QGLContext5resetEv();
+	/* libQtNetwork */
+	_ZN10QTcpServerD1Ev();
 
-    /* libQtSql */
-    _ZN10QSqlDriverD0Ev();
+	/* libQtOpenGL */
+	_ZN10QGLContext5resetEv();
 
-    /* libQtSvg */
-    _ZN10QSvgWidgetD2Ev();
+	/* libQtSql */
+	_ZN10QSqlDriverD0Ev();
 
-    /* libQtXml */
-    _ZN11QDomCommentC2Ev();
+	/* libQtSvg */
+	_ZN10QSvgWidgetD2Ev();
 
-    /* libqt-mt */
-    _ZN7QString6removeE5QChar();
+	/* libQtXml */
+	_ZN11QDomCommentC2Ev();
+
+	/* libqt-mt */
+	_ZN7QString6removeE5QChar();
 
 	exit(0);
 }
