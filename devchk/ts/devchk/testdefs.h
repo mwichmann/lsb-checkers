@@ -30,6 +30,7 @@ extern void X11_Xutil_h();
 extern void X11_extensions_XEVI_h();
 extern void X11_extensions_XKBgeom_h();
 extern void X11_extensions_XShm_h();
+extern void X11_extensions_XTest_h();
 extern void X11_extensions_Xdbe_h();
 extern void X11_extensions_Xrender_h();
 extern void X11_extensions_dpms_h();
