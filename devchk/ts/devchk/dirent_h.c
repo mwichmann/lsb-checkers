@@ -188,6 +188,8 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architec
 
 extern int readdir64_r_db(DIR *, struct dirent64 *, struct dirent64 * *);
 CheckInterfacedef(readdir64_r,readdir64_r_db);
+extern int dirfd_db(DIR *);
+CheckInterfacedef(dirfd,dirfd_db);
 extern void rewinddir_db(DIR *);
 CheckInterfacedef(rewinddir,rewinddir_db);
 extern void seekdir_db(DIR *, long int);
@@ -204,6 +206,8 @@ extern struct dirent64 * readdir64_db(DIR *);
 CheckInterfacedef(readdir64,readdir64_db);
 extern int readdir_r_db(DIR *, struct dirent *, struct dirent * *);
 CheckInterfacedef(readdir_r,readdir_r_db);
+extern DIR * fdopendir_db(int);
+CheckInterfacedef(fdopendir,fdopendir_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

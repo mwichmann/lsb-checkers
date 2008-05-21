@@ -736,6 +736,8 @@ extern int open_db(const char *, int, ...);
 CheckInterfacedef(open,open_db);
 extern int open64_db(const char *, int, ...);
 CheckInterfacedef(open64,open64_db);
+extern int openat_db(int, const char *, int, ...);
+CheckInterfacedef(openat,openat_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
