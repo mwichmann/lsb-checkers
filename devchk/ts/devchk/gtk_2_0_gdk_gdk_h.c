@@ -4074,12 +4074,6 @@ extern void gdk_window_move_region_db(GdkWindow *, GdkRegion *, gint, gint);
 CheckInterfacedef(gdk_window_move_region,gdk_window_move_region_db);
 extern void gdk_window_set_urgency_hint_db(GdkWindow *, gboolean);
 CheckInterfacedef(gdk_window_set_urgency_hint,gdk_window_set_urgency_hint_db);
-extern guint32 gdk_x11_display_get_user_time_db(GdkDisplay *);
-CheckInterfacedef(gdk_x11_display_get_user_time,gdk_x11_display_get_user_time_db);
-extern void gdk_x11_display_set_cursor_theme_db(GdkDisplay *, const gchar *, const gint);
-CheckInterfacedef(gdk_x11_display_set_cursor_theme,gdk_x11_display_set_cursor_theme_db);
-extern void gdk_x11_window_move_to_current_desktop_db(GdkWindow *);
-CheckInterfacedef(gdk_x11_window_move_to_current_desktop,gdk_x11_window_move_to_current_desktop_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
